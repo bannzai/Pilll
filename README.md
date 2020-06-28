@@ -1,4 +1,5 @@
 # Pilll
+![Test](https://github.com/bannzai/Pilll/workflows/Test/badge.svg)
 
 A new Flutter project.
 
