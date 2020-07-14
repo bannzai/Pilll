@@ -83,28 +83,30 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Container(
           width: 316,
           height: 264,
-          margin: EdgeInsets.fromLTRB(28, 0, 28, 24),
           decoration: BoxDecoration(
             border: Border.all(),
             borderRadius: BorderRadius.circular(10),
           ),
-          child: GridView.count(
-            crossAxisCount: 7,
-            children: List.generate(28, (index) {
-              return Column(
-                children: <Widget>[
-                  Text("${index + 1}"),
-                  Container(
-                    width: 20,
-                    height: 20,
-                    decoration: BoxDecoration(
-                      color: PilllColors.primary,
-                      shape: BoxShape.circle,
+          child: Padding(
+            padding: const EdgeInsets.fromLTRB(20, 44, 20, 24),
+            child: GridView.count(
+              crossAxisCount: 7,
+              children: List.generate(28, (index) {
+                return Column(
+                  children: <Widget>[
+                    Text("${index + 1}"),
+                    Container(
+                      width: 20,
+                      height: 20,
+                      decoration: BoxDecoration(
+                        color: PilllColors.primary,
+                        shape: BoxShape.circle,
+                      ),
                     ),
-                  ),
-                ],
-              );
-            }),
+                  ],
+                );
+              }),
+            ),
           ),
         ),
       ),
