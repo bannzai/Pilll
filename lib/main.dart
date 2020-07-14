@@ -64,6 +64,41 @@ class _MyHomePageState extends State<MyHomePage> {
     });
   }
 
+  int _calcIndex(int row, int line) {
+    return row + 1 + line * 7;
+  }
+
+  Widget _pillMarkLine(int line) {
+    return Container(
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: List.generate(7, (index) {
+          return _pillMarkElement(_calcIndex(index, line));
+        }),
+      ),
+    );
+  }
+
+  Widget _pillMarkElement(int index) {
+    return Column(
+      children: <Widget>[
+        Text("${index}"),
+        _pillMark(),
+      ],
+    );
+  }
+
+  Widget _pillMark() {
+    return Container(
+      width: 20,
+      height: 20,
+      decoration: BoxDecoration(
+        color: PilllColors.primary,
+        shape: BoxShape.circle,
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     // This method is rerun every time setState is called, for instance as done
@@ -89,22 +124,10 @@ class _MyHomePageState extends State<MyHomePage> {
           ),
           child: Padding(
             padding: const EdgeInsets.fromLTRB(20, 44, 20, 24),
-            child: GridView.count(
-              crossAxisCount: 7,
-              children: List.generate(28, (index) {
-                return Column(
-                  children: <Widget>[
-                    Text("${index + 1}"),
-                    Container(
-                      width: 20,
-                      height: 20,
-                      decoration: BoxDecoration(
-                        color: PilllColors.primary,
-                        shape: BoxShape.circle,
-                      ),
-                    ),
-                  ],
-                );
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: List.generate(4, (line) {
+                return _pillMarkLine(line);
               }),
             ),
           ),
