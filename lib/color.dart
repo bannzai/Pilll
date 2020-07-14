@@ -20,4 +20,5 @@ class PilllColors {
   const PilllColors();
 
   static final Color primary = HexColor.fromHex("E37474");
+  static final Color pillSheet = HexColor.fromHex("E8EBED");
 }
