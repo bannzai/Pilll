@@ -120,7 +120,6 @@ class _MyHomePageState extends State<MyHomePage> {
           height: 264,
           decoration: BoxDecoration(
             color: PilllColors.pillSheet,
-            border: Border.all(),
             borderRadius: BorderRadius.circular(10),
           ),
           child: Padding(
