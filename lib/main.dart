@@ -80,21 +80,29 @@ class _MyHomePageState extends State<MyHomePage> {
         backgroundColor: PilllColors.primary,
       ),
       body: Center(
-        // Center is a layout widget. It takes a single child and positions it
-        // in the middle of the parent.
         child: Container(
-          width: 214,
-          height: 316,
+          width: 316,
+          height: 264,
+          margin: EdgeInsets.fromLTRB(28, 0, 28, 24),
+          decoration: BoxDecoration(
+            border: Border.all(),
+            borderRadius: BorderRadius.circular(10),
+          ),
           child: GridView.count(
             crossAxisCount: 7,
-            mainAxisSpacing: 10,
-            crossAxisSpacing: 10,
             children: List.generate(28, (index) {
-              return Container(
-                decoration: BoxDecoration(
-                  color: PilllColors.primary,
-                  shape: BoxShape.circle,
-                ),
+              return Column(
+                children: <Widget>[
+                  Text("${index + 1}"),
+                  Container(
+                    width: 20,
+                    height: 20,
+                    decoration: BoxDecoration(
+                      color: PilllColors.primary,
+                      shape: BoxShape.circle,
+                    ),
+                  ),
+                ],
               );
             }),
           ),
