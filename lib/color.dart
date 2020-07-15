@@ -21,4 +21,8 @@ class PilllColors {
 
   static final Color primary = HexColor.fromHex("E37474");
   static final Color pillSheet = HexColor.fromHex("E8EBED");
+  static final Color mat = HexColor.fromHex("FAFAFA").withAlpha(80);
+  static final Color sunday = HexColor.fromHex("E17F7F");
+  static final Color saturday = HexColor.fromHex("7FB9E1");
+  static final Color weekday = HexColor.fromHex("7E7E7E");
 }
