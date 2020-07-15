@@ -2,6 +2,57 @@ import 'package:Pilll/color.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
+enum Weekday {
+  Sunday,
+  Monday,
+  Tuesday,
+  Wednesday,
+  Thursday,
+  Friday,
+  Saturday,
+}
+
+class WeekdayFunctions {
+  // Enumの値を文字列として扱えるようにする(あとで解説)
+  static String weekdayString(Weekday weekday) {
+    switch (weekday) {
+      case Weekday.Sunday:
+        return "日";
+      case Weekday.Monday:
+        return "月";
+      case Weekday.Tuesday:
+        return "火";
+      case Weekday.Wednesday:
+        return "水";
+      case Weekday.Thursday:
+        return "木";
+      case Weekday.Friday:
+        return "金";
+      case Weekday.Saturday:
+        return "土";
+    }
+  }
+
+  static Color weekdayColor(Weekday weekday) {
+    switch (weekday) {
+      case Weekday.Sunday:
+        return PilllColors.sunday;
+      case Weekday.Monday:
+        return PilllColors.weekday;
+      case Weekday.Tuesday:
+        return PilllColors.weekday;
+      case Weekday.Wednesday:
+        return PilllColors.weekday;
+      case Weekday.Thursday:
+        return PilllColors.weekday;
+      case Weekday.Friday:
+        return PilllColors.weekday;
+      case Weekday.Saturday:
+        return PilllColors.saturday;
+    }
+  }
+}
+
 void main() {
   runApp(MyApp());
 }
@@ -66,7 +117,34 @@ class _MyHomePageState extends State<MyHomePage> {
   }
 
   int _calcIndex(int row, int line) {
-    return row + 1 + line * 7;
+    return row + 1 + (line - 1) * 7;
+  }
+
+  Widget _weekdayLine() {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: List.generate(7, (index) {
+        return _weekdayElement(index);
+      }),
+    );
+  }
+
+  Widget _weekdayElement(int index) {
+    return Stack(
+      alignment: AlignmentDirectional.center,
+      children: <Widget>[
+        Container(
+            width: 20,
+            height: 30,
+            decoration: BoxDecoration(color: PilllColors.mat)),
+        Container(
+          child: Text(WeekdayFunctions.weekdayString(Weekday.values[index]),
+              textAlign: TextAlign.end,
+              style: TextStyle(
+                  color: WeekdayFunctions.weekdayColor(Weekday.values[index]))),
+        ),
+      ],
+    );
   }
 
   Widget _pillMarkLine(int line) {
@@ -141,10 +219,13 @@ class _MyHomePageState extends State<MyHomePage> {
                 child: SvgPicture.asset("images/pill_sheet_dot_line.svg"),
               ),
               Padding(
-                padding: const EdgeInsets.fromLTRB(28, 44, 28, 24),
+                padding: const EdgeInsets.fromLTRB(28, 0, 28, 24),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: List.generate(4, (line) {
+                  children: List.generate(5, (line) {
+                    if (line == 0) {
+                      return _weekdayLine();
+                    }
                     return _pillMarkLine(line);
                   }),
                 ),
