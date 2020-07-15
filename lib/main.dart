@@ -161,7 +161,7 @@ class _MyHomePageState extends State<MyHomePage> {
   Widget _pillMarkElement(int index) {
     return Column(
       children: <Widget>[
-        Text("${index}"),
+        Text("$index", style: TextStyle(color: PilllColors.weekday)),
         _pillMark(),
       ],
     );
