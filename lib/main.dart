@@ -1,5 +1,6 @@
 import 'package:Pilll/color.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 void main() {
   runApp(MyApp());
@@ -122,14 +123,33 @@ class _MyHomePageState extends State<MyHomePage> {
             color: PilllColors.pillSheet,
             borderRadius: BorderRadius.circular(10),
           ),
-          child: Padding(
-            padding: const EdgeInsets.fromLTRB(20, 44, 20, 24),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: List.generate(4, (line) {
-                return _pillMarkLine(line);
-              }),
-            ),
+          child: Stack(
+            children: <Widget>[
+              Positioned(
+                left: 38,
+                top: 84,
+                child: SvgPicture.asset("images/pill_sheet_dot_line.svg"),
+              ),
+              Positioned(
+                left: 38,
+                top: 136,
+                child: SvgPicture.asset("images/pill_sheet_dot_line.svg"),
+              ),
+              Positioned(
+                left: 38,
+                top: 190,
+                child: SvgPicture.asset("images/pill_sheet_dot_line.svg"),
+              ),
+              Padding(
+                padding: const EdgeInsets.fromLTRB(28, 44, 28, 24),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: List.generate(4, (line) {
+                    return _pillMarkLine(line);
+                  }),
+                ),
+              ),
+            ],
           ),
         ),
       ),
