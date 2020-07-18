@@ -198,8 +198,9 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       body: Center(
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.start,
           children: <Widget>[
+            SizedBox(height: 60),
             Container(
               width: 316,
               child: Row(
@@ -223,53 +224,52 @@ class _MyHomePageState extends State<MyHomePage> {
                     ),
                   ),
                   Expanded(
-                    child: Center(
-                      child: Column(
-                        children: <Widget>[
-                          Container(
-                            height: 20,
-                            width: 80,
-                            child: Center(
-                              child: Text("今日飲むピル",
-                                  style: TextStyle(
-                                      fontSize: 10,
-                                      fontWeight: FontWeight.w600,
-                                      fontFamily: PilllFontFamily.japanese)),
-                            ),
-                            decoration: BoxDecoration(
-                                border: Border.all(),
-                                borderRadius: BorderRadius.circular(20)),
+                    child: Column(
+                      children: <Widget>[
+                        Container(
+                          height: 20,
+                          width: 80,
+                          child: Center(
+                            child: Text("今日飲むピル",
+                                style: TextStyle(
+                                    fontSize: 10,
+                                    fontWeight: FontWeight.w600,
+                                    fontFamily: PilllFontFamily.japanese)),
                           ),
-                          Row(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            crossAxisAlignment: CrossAxisAlignment.baseline,
-                            textBaseline: TextBaseline.ideographic,
-                            children: <Widget>[
-                              Text(
-                                "16",
-                                style: TextStyle(
-                                  fontFamily: PilllFontFamily.number,
-                                  fontWeight: FontWeight.normal,
-                                  fontSize: 40,
-                                ),
+                          decoration: BoxDecoration(
+                              border: Border.all(),
+                              borderRadius: BorderRadius.circular(20)),
+                        ),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          crossAxisAlignment: CrossAxisAlignment.baseline,
+                          textBaseline: TextBaseline.ideographic,
+                          children: <Widget>[
+                            Text(
+                              "16",
+                              style: TextStyle(
+                                fontFamily: PilllFontFamily.number,
+                                fontWeight: FontWeight.normal,
+                                fontSize: 40,
                               ),
-                              Text(
-                                "番",
-                                style: TextStyle(
-                                  fontFamily: PilllFontFamily.japanese,
-                                  fontWeight: FontWeight.w300,
-                                  fontSize: 14,
-                                ),
+                            ),
+                            Text(
+                              "番",
+                              style: TextStyle(
+                                fontFamily: PilllFontFamily.japanese,
+                                fontWeight: FontWeight.w300,
+                                fontSize: 14,
                               ),
-                            ],
-                          )
-                        ],
-                      ),
+                            ),
+                          ],
+                        )
+                      ],
                     ),
                   ),
                 ],
               ),
             ),
+            SizedBox(height: 24),
             Container(
               width: 316,
               height: 264,
