@@ -1,5 +1,6 @@
 import 'package:Pilll/color.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 enum Weekday {
@@ -54,6 +55,7 @@ class WeekdayFunctions {
 }
 
 void main() {
+  // debugPaintSizeEnabled = true;
   runApp(MyApp());
 }
 
@@ -194,44 +196,70 @@ class _MyHomePageState extends State<MyHomePage> {
         backgroundColor: PilllColors.primary,
       ),
       body: Center(
-        child: Container(
-          width: 316,
-          height: 264,
-          decoration: BoxDecoration(
-            color: PilllColors.pillSheet,
-            borderRadius: BorderRadius.circular(10),
-          ),
-          child: Stack(
-            children: <Widget>[
-              Positioned(
-                left: 38,
-                top: 84,
-                child: SvgPicture.asset("images/pill_sheet_dot_line.svg"),
-              ),
-              Positioned(
-                left: 38,
-                top: 136,
-                child: SvgPicture.asset("images/pill_sheet_dot_line.svg"),
-              ),
-              Positioned(
-                left: 38,
-                top: 190,
-                child: SvgPicture.asset("images/pill_sheet_dot_line.svg"),
-              ),
-              Padding(
-                padding: const EdgeInsets.fromLTRB(28, 0, 28, 24),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: List.generate(5, (line) {
-                    if (line == 0) {
-                      return _weekdayLine();
-                    }
-                    return _pillMarkLine(line);
-                  }),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            Row(
+              mainAxisSize: MainAxisSize.min,
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                Text(
+                  "2020/7/21 (火)",
+                  style: TextStyle(
+                      fontFamily: "Avenier Next",
+                      fontWeight: FontWeight.normal,
+                      fontSize: 18),
                 ),
+                Container(
+                  height: 90,
+                  child: VerticalDivider(
+                    width: 30,
+                    color: PilllColors.divider,
+                  ),
+                ),
+                Text("2020/7/21"),
+              ],
+            ),
+            Container(
+              width: 316,
+              height: 264,
+              decoration: BoxDecoration(
+                color: PilllColors.pillSheet,
+                borderRadius: BorderRadius.circular(10),
               ),
-            ],
-          ),
+              child: Stack(
+                children: <Widget>[
+                  Positioned(
+                    left: 38,
+                    top: 84,
+                    child: SvgPicture.asset("images/pill_sheet_dot_line.svg"),
+                  ),
+                  Positioned(
+                    left: 38,
+                    top: 136,
+                    child: SvgPicture.asset("images/pill_sheet_dot_line.svg"),
+                  ),
+                  Positioned(
+                    left: 38,
+                    top: 190,
+                    child: SvgPicture.asset("images/pill_sheet_dot_line.svg"),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.fromLTRB(28, 0, 28, 24),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: List.generate(5, (line) {
+                        if (line == 0) {
+                          return _weekdayLine();
+                        }
+                        return _pillMarkLine(line);
+                      }),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          ],
         ),
       ),
     );
