@@ -200,64 +200,75 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: <Widget>[
-                Text(
-                  "2020/7/21 (火)",
-                  style: TextStyle(
-                      fontFamily: PilllFontFamily.number,
-                      fontWeight: FontWeight.normal,
-                      fontSize: 18),
-                ),
-                Container(
-                  height: 64,
-                  child: VerticalDivider(
-                    width: 30,
-                    color: PilllColors.divider,
-                  ),
-                ),
-                Column(
-                  children: <Widget>[
-                    Container(
-                      height: 20,
-                      width: 80,
-                      child: Center(
-                        child: Text("今日飲むピル",
-                            style: TextStyle(
-                                fontSize: 10,
-                                fontWeight: FontWeight.w600,
-                                fontFamily: PilllFontFamily.japanese)),
-                      ),
-                      decoration: BoxDecoration(
-                          border: Border.all(),
-                          borderRadius: BorderRadius.circular(20)),
-                    ),
-                    Row(
-                      crossAxisAlignment: CrossAxisAlignment.baseline,
-                      textBaseline: TextBaseline.ideographic,
-                      children: <Widget>[
-                        Text(
-                          "16",
-                          style: TextStyle(
+            Container(
+              width: 316,
+              child: Row(
+                children: <Widget>[
+                  Expanded(
+                    child: Center(
+                      child: Text(
+                        "2020/7/21 (火)",
+                        style: TextStyle(
                             fontFamily: PilllFontFamily.number,
                             fontWeight: FontWeight.normal,
-                            fontSize: 40,
+                            fontSize: 18),
+                      ),
+                    ),
+                  ),
+                  Container(
+                    height: 64,
+                    child: VerticalDivider(
+                      width: 10,
+                      color: PilllColors.divider,
+                    ),
+                  ),
+                  Expanded(
+                    child: Center(
+                      child: Column(
+                        children: <Widget>[
+                          Container(
+                            height: 20,
+                            width: 80,
+                            child: Center(
+                              child: Text("今日飲むピル",
+                                  style: TextStyle(
+                                      fontSize: 10,
+                                      fontWeight: FontWeight.w600,
+                                      fontFamily: PilllFontFamily.japanese)),
+                            ),
+                            decoration: BoxDecoration(
+                                border: Border.all(),
+                                borderRadius: BorderRadius.circular(20)),
                           ),
-                        ),
-                        Text(
-                          "番",
-                          style: TextStyle(
-                            fontFamily: PilllFontFamily.japanese,
-                            fontWeight: FontWeight.w300,
-                            fontSize: 14,
-                          ),
-                        ),
-                      ],
-                    )
-                  ],
-                ),
-              ],
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            crossAxisAlignment: CrossAxisAlignment.baseline,
+                            textBaseline: TextBaseline.ideographic,
+                            children: <Widget>[
+                              Text(
+                                "16",
+                                style: TextStyle(
+                                  fontFamily: PilllFontFamily.number,
+                                  fontWeight: FontWeight.normal,
+                                  fontSize: 40,
+                                ),
+                              ),
+                              Text(
+                                "番",
+                                style: TextStyle(
+                                  fontFamily: PilllFontFamily.japanese,
+                                  fontWeight: FontWeight.w300,
+                                  fontSize: 14,
+                                ),
+                              ),
+                            ],
+                          )
+                        ],
+                      ),
+                    ),
+                  ),
+                ],
+              ),
             ),
             Container(
               width: 316,
