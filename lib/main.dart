@@ -1,4 +1,5 @@
 import 'package:Pilll/color.dart';
+import 'package:Pilll/font.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -200,24 +201,62 @@ class _MyHomePageState extends State<MyHomePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Row(
-              mainAxisSize: MainAxisSize.min,
               mainAxisAlignment: MainAxisAlignment.center,
               children: <Widget>[
                 Text(
                   "2020/7/21 (火)",
                   style: TextStyle(
-                      fontFamily: "Avenier Next",
+                      fontFamily: PilllFontFamily.number,
                       fontWeight: FontWeight.normal,
                       fontSize: 18),
                 ),
                 Container(
-                  height: 90,
+                  height: 64,
                   child: VerticalDivider(
                     width: 30,
                     color: PilllColors.divider,
                   ),
                 ),
-                Text("2020/7/21"),
+                Column(
+                  children: <Widget>[
+                    Container(
+                      height: 20,
+                      width: 80,
+                      child: Center(
+                        child: Text("今日飲むピル",
+                            style: TextStyle(
+                                fontSize: 10,
+                                fontWeight: FontWeight.w600,
+                                fontFamily: PilllFontFamily.japanese)),
+                      ),
+                      decoration: BoxDecoration(
+                          border: Border.all(),
+                          borderRadius: BorderRadius.circular(20)),
+                    ),
+                    Row(
+                      crossAxisAlignment: CrossAxisAlignment.baseline,
+                      textBaseline: TextBaseline.ideographic,
+                      children: <Widget>[
+                        Text(
+                          "16",
+                          style: TextStyle(
+                            fontFamily: PilllFontFamily.number,
+                            fontWeight: FontWeight.normal,
+                            fontSize: 40,
+                          ),
+                        ),
+                        Text(
+                          "番",
+                          style: TextStyle(
+                            fontFamily: PilllFontFamily.japanese,
+                            fontWeight: FontWeight.w300,
+                            fontSize: 14,
+                          ),
+                        ),
+                      ],
+                    )
+                  ],
+                ),
               ],
             ),
             Container(
