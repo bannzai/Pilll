@@ -1,5 +1,6 @@
 import 'package:Pilll/color.dart';
 import 'package:Pilll/font.dart';
+import 'package:Pilll/record/model/weekday.dart';
 import 'package:Pilll/record/weekday_badge.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
@@ -77,7 +78,7 @@ class _MyHomePageState extends State<MyHomePage> {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: List.generate(7, (index) {
-        return WeekdayBadge(index: index);
+        return WeekdayBadge(weekday: Weekday.values[index]);
       }),
     );
   }
