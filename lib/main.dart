@@ -1,13 +1,8 @@
 import 'package:Pilll/color.dart';
-import 'package:Pilll/font.dart';
-import 'package:Pilll/record/model/weekday.dart';
-import 'package:Pilll/record/pill_mark.dart';
-import 'package:Pilll/record/pill_mark_with_number.dart';
+import 'package:Pilll/record/pill_sheet.dart';
 import 'package:Pilll/record/record_taken_information.dart';
-import 'package:Pilll/record/weekday_badge.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 
 void main() {
   // debugPaintSizeEnabled = true;
@@ -73,30 +68,6 @@ class _MyHomePageState extends State<MyHomePage> {
     });
   }
 
-  int _calcIndex(int row, int line) {
-    return row + 1 + (line - 1) * 7;
-  }
-
-  Widget _weekdayLine() {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      children: List.generate(7, (index) {
-        return WeekdayBadge(weekday: Weekday.values[index]);
-      }),
-    );
-  }
-
-  Widget _pillMarkLine(int line) {
-    return Container(
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: List.generate(7, (index) {
-          return PillMarkWithNumber(number: _calcIndex(index, line));
-        }),
-      ),
-    );
-  }
-
   @override
   Widget build(BuildContext context) {
     // This method is rerun every time setState is called, for instance as done
@@ -119,45 +90,7 @@ class _MyHomePageState extends State<MyHomePage> {
             SizedBox(height: 60),
             RecordTakenInformation(),
             SizedBox(height: 24),
-            Container(
-              width: 316,
-              height: 264,
-              decoration: BoxDecoration(
-                color: PilllColors.pillSheet,
-                borderRadius: BorderRadius.circular(10),
-              ),
-              child: Stack(
-                children: <Widget>[
-                  Positioned(
-                    left: 38,
-                    top: 84,
-                    child: SvgPicture.asset("images/pill_sheet_dot_line.svg"),
-                  ),
-                  Positioned(
-                    left: 38,
-                    top: 136,
-                    child: SvgPicture.asset("images/pill_sheet_dot_line.svg"),
-                  ),
-                  Positioned(
-                    left: 38,
-                    top: 190,
-                    child: SvgPicture.asset("images/pill_sheet_dot_line.svg"),
-                  ),
-                  Padding(
-                    padding: const EdgeInsets.fromLTRB(28, 0, 28, 24),
-                    child: Column(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: List.generate(5, (line) {
-                        if (line == 0) {
-                          return _weekdayLine();
-                        }
-                        return _pillMarkLine(line);
-                      }),
-                    ),
-                  ),
-                ],
-              ),
-            ),
+            PillSheet(),
             SizedBox(height: 24),
             Container(
               height: 44,
