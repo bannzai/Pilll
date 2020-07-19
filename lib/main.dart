@@ -1,6 +1,7 @@
 import 'package:Pilll/color.dart';
 import 'package:Pilll/font.dart';
 import 'package:Pilll/record/model/weekday.dart';
+import 'package:Pilll/record/pill_mark.dart';
 import 'package:Pilll/record/weekday_badge.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
@@ -98,19 +99,8 @@ class _MyHomePageState extends State<MyHomePage> {
     return Column(
       children: <Widget>[
         Text("$index", style: TextStyle(color: PilllColors.weekday)),
-        _pillMark(),
+        PillMark(),
       ],
-    );
-  }
-
-  Widget _pillMark() {
-    return Container(
-      width: 20,
-      height: 20,
-      decoration: BoxDecoration(
-        color: PilllColors.primary,
-        shape: BoxShape.circle,
-      ),
     );
   }
 
