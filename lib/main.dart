@@ -309,6 +309,27 @@ class _MyHomePageState extends State<MyHomePage> {
                 ],
               ),
             ),
+            SizedBox(height: 24),
+            Container(
+              height: 44,
+              width: 180,
+              child: RaisedButton(
+                child: Text("飲んだ"),
+                color: PilllColors.primary,
+                textColor: Colors.white,
+                onPressed: () {},
+              ),
+            ),
+            SizedBox(height: 8),
+            Container(
+              height: 44,
+              width: 180,
+              child: FlatButton(
+                child: Text("シート破棄"),
+                textColor: PilllColors.plainText,
+                onPressed: () {},
+              ),
+            ),
           ],
         ),
       ),
