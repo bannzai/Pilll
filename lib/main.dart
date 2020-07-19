@@ -2,6 +2,7 @@ import 'package:Pilll/color.dart';
 import 'package:Pilll/font.dart';
 import 'package:Pilll/record/model/weekday.dart';
 import 'package:Pilll/record/pill_mark.dart';
+import 'package:Pilll/record/pill_mark_with_number.dart';
 import 'package:Pilll/record/weekday_badge.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
@@ -89,18 +90,9 @@ class _MyHomePageState extends State<MyHomePage> {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: List.generate(7, (index) {
-          return _pillMarkElement(_calcIndex(index, line));
+          return PillMarkWithNumber(number: _calcIndex(index, line));
         }),
       ),
-    );
-  }
-
-  Widget _pillMarkElement(int index) {
-    return Column(
-      children: <Widget>[
-        Text("$index", style: TextStyle(color: PilllColors.weekday)),
-        PillMark(),
-      ],
     );
   }
 
