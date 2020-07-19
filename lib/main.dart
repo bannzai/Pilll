@@ -57,30 +57,33 @@ class _MyHomePageState extends State<MyHomePage>
           backgroundColor: PilllColors.primary,
         ),
         bottomNavigationBar: Container(
-          child: TabBar(
-            controller: _tabController,
-            labelColor: PilllColors.primary,
-            unselectedLabelColor: PilllColors.plainText,
-            tabs: <Tab>[
-              Tab(
-                  text: "ピル",
-                  icon: SvgPicture.asset("images/tab_icon_pill.svg",
-                      color: _tabController.index == 0
-                          ? PilllColors.primary
-                          : PilllColors.plainText)),
-              Tab(
-                  text: "2020/07",
-                  icon: SvgPicture.asset("images/tab_icon_calendar.svg",
-                      color: _tabController.index == 1
-                          ? PilllColors.primary
-                          : PilllColors.plainText)),
-              Tab(
-                  text: "設定",
-                  icon: SvgPicture.asset("images/tab_icon_setting.svg",
-                      color: _tabController.index == 2
-                          ? PilllColors.primary
-                          : PilllColors.plainText)),
-            ],
+          child: SafeArea(
+            child: TabBar(
+              controller: _tabController,
+              labelColor: PilllColors.primary,
+              indicatorColor: Colors.transparent,
+              unselectedLabelColor: PilllColors.plainText,
+              tabs: <Tab>[
+                Tab(
+                    text: "ピル",
+                    icon: SvgPicture.asset("images/tab_icon_pill.svg",
+                        color: _tabController.index == 0
+                            ? PilllColors.primary
+                            : PilllColors.plainText)),
+                Tab(
+                    text: "2020/07",
+                    icon: SvgPicture.asset("images/tab_icon_calendar.svg",
+                        color: _tabController.index == 1
+                            ? PilllColors.primary
+                            : PilllColors.plainText)),
+                Tab(
+                    text: "設定",
+                    icon: SvgPicture.asset("images/tab_icon_setting.svg",
+                        color: _tabController.index == 2
+                            ? PilllColors.primary
+                            : PilllColors.plainText)),
+              ],
+            ),
           ),
         ),
         body: Center(
