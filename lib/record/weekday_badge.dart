@@ -2,9 +2,9 @@ import 'package:Pilll/color.dart';
 import 'package:Pilll/record/model/weekday.dart';
 import 'package:flutter/material.dart';
 
-class WeekdayBadges extends StatelessWidget {
+class WeekdayBadge extends StatelessWidget {
   final int index;
-  const WeekdayBadges({
+  const WeekdayBadge({
     Key key,
     this.index,
   }) : super(key: key);
