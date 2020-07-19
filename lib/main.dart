@@ -1,59 +1,9 @@
 import 'package:Pilll/color.dart';
 import 'package:Pilll/font.dart';
+import 'package:Pilll/record/weekday_badge.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-
-enum Weekday {
-  Sunday,
-  Monday,
-  Tuesday,
-  Wednesday,
-  Thursday,
-  Friday,
-  Saturday,
-}
-
-class WeekdayFunctions {
-  // Enumの値を文字列として扱えるようにする(あとで解説)
-  static String weekdayString(Weekday weekday) {
-    switch (weekday) {
-      case Weekday.Sunday:
-        return "日";
-      case Weekday.Monday:
-        return "月";
-      case Weekday.Tuesday:
-        return "火";
-      case Weekday.Wednesday:
-        return "水";
-      case Weekday.Thursday:
-        return "木";
-      case Weekday.Friday:
-        return "金";
-      case Weekday.Saturday:
-        return "土";
-    }
-  }
-
-  static Color weekdayColor(Weekday weekday) {
-    switch (weekday) {
-      case Weekday.Sunday:
-        return PilllColors.sunday;
-      case Weekday.Monday:
-        return PilllColors.weekday;
-      case Weekday.Tuesday:
-        return PilllColors.weekday;
-      case Weekday.Wednesday:
-        return PilllColors.weekday;
-      case Weekday.Thursday:
-        return PilllColors.weekday;
-      case Weekday.Friday:
-        return PilllColors.weekday;
-      case Weekday.Saturday:
-        return PilllColors.saturday;
-    }
-  }
-}
 
 void main() {
   // debugPaintSizeEnabled = true;
@@ -315,33 +265,6 @@ class _MyHomePageState extends State<MyHomePage> {
           ],
         ),
       ),
-    );
-  }
-}
-
-class WeekdayBadges extends StatelessWidget {
-  final int index;
-  const WeekdayBadges({
-    Key key,
-    this.index,
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Stack(
-      alignment: AlignmentDirectional.center,
-      children: <Widget>[
-        Container(
-            width: 20,
-            height: 30,
-            decoration: BoxDecoration(color: PilllColors.mat)),
-        Container(
-          child: Text(WeekdayFunctions.weekdayString(Weekday.values[index]),
-              textAlign: TextAlign.end,
-              style: TextStyle(
-                  color: WeekdayFunctions.weekdayColor(Weekday.values[index]))),
-        ),
-      ],
     );
   }
 }
