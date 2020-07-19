@@ -127,26 +127,8 @@ class _MyHomePageState extends State<MyHomePage> {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: List.generate(7, (index) {
-        return _weekdayElement(index);
+        return WeekdayBadges(index: index);
       }),
-    );
-  }
-
-  Widget _weekdayElement(int index) {
-    return Stack(
-      alignment: AlignmentDirectional.center,
-      children: <Widget>[
-        Container(
-            width: 20,
-            height: 30,
-            decoration: BoxDecoration(color: PilllColors.mat)),
-        Container(
-          child: Text(WeekdayFunctions.weekdayString(Weekday.values[index]),
-              textAlign: TextAlign.end,
-              style: TextStyle(
-                  color: WeekdayFunctions.weekdayColor(Weekday.values[index]))),
-        ),
-      ],
     );
   }
 
@@ -333,6 +315,33 @@ class _MyHomePageState extends State<MyHomePage> {
           ],
         ),
       ),
+    );
+  }
+}
+
+class WeekdayBadges extends StatelessWidget {
+  final int index;
+  const WeekdayBadges({
+    Key key,
+    this.index,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Stack(
+      alignment: AlignmentDirectional.center,
+      children: <Widget>[
+        Container(
+            width: 20,
+            height: 30,
+            decoration: BoxDecoration(color: PilllColors.mat)),
+        Container(
+          child: Text(WeekdayFunctions.weekdayString(Weekday.values[index]),
+              textAlign: TextAlign.end,
+              style: TextStyle(
+                  color: WeekdayFunctions.weekdayColor(Weekday.values[index]))),
+        ),
+      ],
     );
   }
 }
