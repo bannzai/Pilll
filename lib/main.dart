@@ -77,7 +77,7 @@ class _MyHomePageState extends State<MyHomePage> {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: List.generate(7, (index) {
-        return WeekdayBadges(index: index);
+        return WeekdayBadge(index: index);
       }),
     );
   }
