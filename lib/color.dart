@@ -27,4 +27,8 @@ class PilllColors {
   static final Color weekday = HexColor.fromHex("7E7E7E");
   static final Color plainText = HexColor.fromHex("7E7E7E");
   static final Color divider = HexColor.fromHex("9DAFBD");
+
+  static final Color bottomBar = HexColor.fromHex("FAFAFA");
+  static final Color border = HexColor.fromHex("DADADA");
+  static final Color background = HexColor.fromHex("FFFFFF");
 }
