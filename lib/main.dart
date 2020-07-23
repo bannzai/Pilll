@@ -58,6 +58,10 @@ class _MyHomePageState extends State<MyHomePage>
           backgroundColor: PilllColors.primary,
         ),
         bottomNavigationBar: Container(
+          decoration: BoxDecoration(
+            border:
+                Border(top: BorderSide(width: 1, color: PilllColors.border)),
+          ),
           child: Ink(
             color: PilllColors.bottomBar,
             child: SafeArea(
