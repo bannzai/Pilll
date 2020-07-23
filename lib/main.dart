@@ -86,29 +86,40 @@ class _MyHomePageState extends State<MyHomePage>
             ),
           ),
         ),
-        body: Center(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.start,
-            children: <Widget>[
-              SizedBox(height: 60),
-              RecordTakenInformation(),
-              SizedBox(height: 24),
-              PillSheet(),
-              SizedBox(height: 24),
-              Container(
-                height: 44,
-                width: 180,
-                child: RaisedButton(
-                  child: Text("飲んだ"),
-                  color: PilllColors.primary,
-                  textColor: Colors.white,
-                  onPressed: () {},
-                ),
-              ),
-              SizedBox(height: 8),
-            ],
-          ),
+        body: TabBarView(
+          controller: _tabController,
+          children: <Widget>[
+            _recordView(),
+            _recordView(),
+            _recordView(),
+          ],
         ),
+      ),
+    );
+  }
+
+  Center _recordView() {
+    return Center(
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.start,
+        children: <Widget>[
+          SizedBox(height: 60),
+          RecordTakenInformation(),
+          SizedBox(height: 24),
+          PillSheet(),
+          SizedBox(height: 24),
+          Container(
+            height: 44,
+            width: 180,
+            child: RaisedButton(
+              child: Text("飲んだ"),
+              color: PilllColors.primary,
+              textColor: Colors.white,
+              onPressed: () {},
+            ),
+          ),
+          SizedBox(height: 8),
+        ],
       ),
     );
   }
