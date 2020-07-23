@@ -11,6 +11,10 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:Pilll/main.dart';
 
 void main() {
+  setUp(() {
+    WidgetsBinding.instance.renderView.configuration =
+        new TestViewConfiguration(size: const Size(375.0, 667.0));
+  });
   testWidgets('Counter increments smoke test', (WidgetTester tester) async {
     // Build our app and trigger a frame.
     await tester.pumpWidget(MyApp());
