@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       title: 'Flutter Demo',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primaryColor: PilllColors.primary,
         visualDensity: VisualDensity.adaptivePlatformDensity,
       ),
       home: MyHomePage(title: 'Flutter Demo Home Page'),
@@ -52,37 +52,41 @@ class _MyHomePageState extends State<MyHomePage>
     return DefaultTabController(
       length: 3,
       child: Scaffold(
+        backgroundColor: PilllColors.background,
         appBar: AppBar(
           title: Text('Pilll'),
           backgroundColor: PilllColors.primary,
         ),
         bottomNavigationBar: Container(
-          child: SafeArea(
-            child: TabBar(
-              controller: _tabController,
-              labelColor: PilllColors.primary,
-              indicatorColor: Colors.transparent,
-              unselectedLabelColor: PilllColors.plainText,
-              tabs: <Tab>[
-                Tab(
-                    text: "ピル",
-                    icon: SvgPicture.asset("images/tab_icon_pill.svg",
-                        color: _tabController.index == 0
-                            ? PilllColors.primary
-                            : PilllColors.plainText)),
-                Tab(
-                    text: "2020/07",
-                    icon: SvgPicture.asset("images/tab_icon_calendar.svg",
-                        color: _tabController.index == 1
-                            ? PilllColors.primary
-                            : PilllColors.plainText)),
-                Tab(
-                    text: "設定",
-                    icon: SvgPicture.asset("images/tab_icon_setting.svg",
-                        color: _tabController.index == 2
-                            ? PilllColors.primary
-                            : PilllColors.plainText)),
-              ],
+          child: Ink(
+            color: PilllColors.bottomBar,
+            child: SafeArea(
+              child: TabBar(
+                controller: _tabController,
+                labelColor: PilllColors.primary,
+                indicatorColor: Colors.transparent,
+                unselectedLabelColor: PilllColors.plainText,
+                tabs: <Tab>[
+                  Tab(
+                      text: "ピル",
+                      icon: SvgPicture.asset("images/tab_icon_pill.svg",
+                          color: _tabController.index == 0
+                              ? PilllColors.primary
+                              : PilllColors.plainText)),
+                  Tab(
+                      text: "2020/07",
+                      icon: SvgPicture.asset("images/tab_icon_calendar.svg",
+                          color: _tabController.index == 1
+                              ? PilllColors.primary
+                              : PilllColors.plainText)),
+                  Tab(
+                      text: "設定",
+                      icon: SvgPicture.asset("images/tab_icon_setting.svg",
+                          color: _tabController.index == 2
+                              ? PilllColors.primary
+                              : PilllColors.plainText)),
+                ],
+              ),
             ),
           ),
         ),
