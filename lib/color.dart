@@ -29,5 +29,6 @@ class PilllColors {
   static final Color divider = HexColor.fromHex("9DAFBD");
 
   static final Color bottomBar = HexColor.fromHex("FAFAFA");
+  static final Color border = HexColor.fromHex("DADADA");
   static final Color background = HexColor.fromHex("FFFFFF");
 }
