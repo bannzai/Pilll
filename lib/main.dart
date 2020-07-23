@@ -1,6 +1,7 @@
 import 'package:Pilll/color.dart';
 import 'package:Pilll/record/pill_sheet.dart';
 import 'package:Pilll/record/record_taken_information.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -34,12 +35,12 @@ class MyHomePage extends StatefulWidget {
 
 class _MyHomePageState extends State<MyHomePage>
     with SingleTickerProviderStateMixin {
-  TabController _tabController;
+  CupertinoTabController _tabController;
 
   @override
   void initState() {
     super.initState();
-    _tabController = TabController(length: 3, vsync: this);
+    _tabController = CupertinoTabController();
     _tabController.addListener(_handleTabSelection);
   }
 
@@ -49,59 +50,43 @@ class _MyHomePageState extends State<MyHomePage>
 
   @override
   Widget build(BuildContext context) {
-    return DefaultTabController(
-      length: 3,
-      child: Scaffold(
-        backgroundColor: PilllColors.background,
-        appBar: AppBar(
-          title: Text('Pilll'),
-          backgroundColor: PilllColors.primary,
-        ),
-        bottomNavigationBar: Container(
-          decoration: BoxDecoration(
-            border:
-                Border(top: BorderSide(width: 1, color: PilllColors.border)),
-          ),
-          child: Ink(
-            color: PilllColors.bottomBar,
-            child: SafeArea(
-              child: TabBar(
-                controller: _tabController,
-                labelColor: PilllColors.primary,
-                indicatorColor: Colors.transparent,
-                unselectedLabelColor: PilllColors.plainText,
-                tabs: <Tab>[
-                  Tab(
-                      text: "ピル",
-                      icon: SvgPicture.asset("images/tab_icon_pill.svg",
-                          color: _tabController.index == 0
-                              ? PilllColors.primary
-                              : PilllColors.plainText)),
-                  Tab(
-                      text: "2020/07",
-                      icon: SvgPicture.asset("images/tab_icon_calendar.svg",
-                          color: _tabController.index == 1
-                              ? PilllColors.primary
-                              : PilllColors.plainText)),
-                  Tab(
-                      text: "設定",
-                      icon: SvgPicture.asset("images/tab_icon_setting.svg",
-                          color: _tabController.index == 2
-                              ? PilllColors.primary
-                              : PilllColors.plainText)),
-                ],
-              ),
-            ),
-          ),
-        ),
-        body: TabBarView(
-          controller: _tabController,
-          children: <Widget>[
-            _recordView(),
-            _recordView(),
-            _recordView(),
+    return CupertinoPageScaffold(
+      backgroundColor: PilllColors.background,
+      navigationBar:
+          CupertinoNavigationBar(backgroundColor: PilllColors.primary),
+      child: CupertinoTabScaffold(
+        controller: _tabController,
+        tabBar: CupertinoTabBar(
+          backgroundColor: PilllColors.bottomBar,
+          activeColor: PilllColors.primary,
+          items: <BottomNavigationBarItem>[
+            BottomNavigationBarItem(
+                title: Text("ピル"),
+                activeIcon: SvgPicture.asset("images/tab_icon_pill.svg",
+                    color: PilllColors.primary),
+                icon: SvgPicture.asset("images/tab_icon_pill.svg",
+                    color: PilllColors.plainText)),
+            BottomNavigationBarItem(
+                title: Text("2020/07"),
+                activeIcon: SvgPicture.asset("images/tab_icon_calendar.svg",
+                    color: PilllColors.primary),
+                icon: SvgPicture.asset("images/tab_icon_calendar.svg",
+                    color: PilllColors.plainText)),
+            BottomNavigationBarItem(
+                title: Text("設定"),
+                activeIcon: SvgPicture.asset("images/tab_icon_setting.svg",
+                    color: PilllColors.primary),
+                icon: SvgPicture.asset("images/tab_icon_setting.svg",
+                    color: PilllColors.plainText)),
           ],
         ),
+        tabBuilder: (context, index) {
+          return CupertinoTabView(
+            builder: (context) {
+              return _recordView();
+            },
+          );
+        },
       ),
     );
   }
