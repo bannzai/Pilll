@@ -1,5 +1,5 @@
 import 'package:Pilll/color.dart';
-import 'package:Pilll/record/model/weekday.dart';
+import 'package:Pilll/model/weekday.dart';
 import 'package:Pilll/record/pill_mark_with_number.dart';
 import 'package:Pilll/record/weekday_badge.dart';
 import 'package:flutter/material.dart';
