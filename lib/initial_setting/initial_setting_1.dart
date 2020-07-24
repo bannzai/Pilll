@@ -19,10 +19,20 @@ class InitialSetting1 extends StatelessWidget {
         child: Center(
           child: Column(
             children: <Widget>[
+              SizedBox(height: 24),
               Text("飲んでいるピルのタイプはどれ？", style: TextStyles.title),
-              _pillSheet21(),
-              _pillSheet28_4(),
-              _pillSheet28_7()
+              SizedBox(height: 24),
+              Container(
+                height: 461,
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: <Widget>[
+                    _pillSheet21(),
+                    _pillSheet28_4(),
+                    _pillSheet28_7()
+                  ],
+                ),
+              )
             ],
           ),
         ),
