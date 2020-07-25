@@ -6,6 +6,8 @@ import 'package:Pilll/text_style.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
+import 'initial_setting2.dart';
+
 class InitialSetting1 extends StatefulWidget {
   final InitialSettingModel model;
   final InitialSettingCallback done;
@@ -17,21 +19,19 @@ class InitialSetting1 extends StatefulWidget {
 }
 
 class InitialSetting1State extends State<InitialSetting1> {
-  PillSheetType selectedPillSheetType;
-  @override
-  void initState() {
-    // TODO: implement initState
-    super.initState();
-  }
-
   Widget _pillSheet(PillSheetType type) {
     return GestureDetector(
       onTap: () {
+        Navigator.of(context)
+            .push(MaterialPageRoute(builder: (BuildContext context) {
+          return InitialSetting2(model: widget.model, done: widget.done);
+        }));
         setState(() {
-          this.selectedPillSheetType = type;
+          widget.model.pillSheetType = type;
         });
       },
-      child: PillSheet(pillSheetType: type, selected: this.selectedPillSheetType == type),
+      child: PillSheet(
+          pillSheetType: type, selected: widget.model.pillSheetType == type),
     );
   }
 
@@ -40,15 +40,16 @@ class InitialSetting1State extends State<InitialSetting1> {
     return Scaffold(
       backgroundColor: PilllColors.background,
       appBar: AppBar(
-          leading: IconButton(
-            icon: Icon(Icons.arrow_back, color: Colors.black),
-            onPressed: () => Navigator.of(context).pop(),
-          ),
-          title: Text(
-            "1/5",
-            style: TextStyle(color: PilllColors.blackText),
-          ),
-          backgroundColor: PilllColors.background),
+        leading: IconButton(
+          icon: Icon(Icons.arrow_back, color: Colors.black),
+          onPressed: () => Navigator.of(context).pop(),
+        ),
+        title: Text(
+          "1/4",
+          style: TextStyle(color: PilllColors.blackText),
+        ),
+        backgroundColor: PilllColors.background,
+      ),
       body: Container(
         child: Center(
           child: Column(
