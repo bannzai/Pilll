@@ -8,11 +8,8 @@ class InitialSetting extends StatelessWidget {
     return Scaffold(
       backgroundColor: PilllColors.background,
       appBar: AppBar(
-        title: Text(
-          "1/5",
-          style: TextStyle(color: PilllColors.blackText),
-        ),
         backgroundColor: PilllColors.background,
+        elevation: 0.0,
       ),
       body: Container(
         height: 445,
