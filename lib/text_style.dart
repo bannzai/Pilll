@@ -20,4 +20,10 @@ class TextStyles {
     fontSize: 12,
     color: PilllColors.blackText,
   );
+  static final TextStyle done = TextStyle(
+    fontFamily: PilllFontFamily.japanese,
+    fontWeight: FontWeight.w600,
+    fontSize: 16,
+    color: PilllColors.whiteText,
+  );
 }
