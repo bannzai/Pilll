@@ -29,11 +29,12 @@ class PilllColors {
   static final Color plainText = HexColor.fromHex("7E7E7E");
   static final Color blackText = Colors.black;
   static final Color whiteText = Colors.white;
-  static final Color strong = HexColor.fromHex('E65E5A');
+  static final Color enable = HexColor.fromHex('E65E5A');
   static final Color disable = HexColor.fromHex("BEC0C2");
   static final Color divider = HexColor.fromHex("9DAFBD");
 
   static final Color bottomBar = HexColor.fromHex("FAFAFA");
   static final Color border = HexColor.fromHex("DADADA");
   static final Color background = HexColor.fromHex("FFFFFF");
+  static final Color selected = HexColor.fromHex("FCF1F1");
 }

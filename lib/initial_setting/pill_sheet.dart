@@ -5,10 +5,12 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class PillSheet extends StatelessWidget {
-  PillSheetType pillSheetType;
-  PillSheet({
+  final PillSheetType pillSheetType;
+  final bool selected;
+  const PillSheet({
     Key key,
     this.pillSheetType,
+    this.selected,
   }) : super(key: key);
 
   @override
@@ -17,7 +19,10 @@ class PillSheet extends StatelessWidget {
       width: 295,
       height: 143,
       decoration: BoxDecoration(
-        border: Border.all(width: 1, color: PilllColors.plainText),
+        color: this.selected ? PilllColors.selected : PilllColors.background,
+        border: Border.all(
+            width: 1,
+            color: this.selected ? PilllColors.enable : PilllColors.disable),
         borderRadius: BorderRadius.circular(10),
       ),
       child: Row(
@@ -32,7 +37,11 @@ class PillSheet extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.start,
                 children: <Widget>[
-                  Icon(Icons.check, color: PilllColors.disable, size: 13),
+                  Icon(Icons.check,
+                      color: this.selected
+                          ? PilllColors.enable
+                          : PilllColors.disable,
+                      size: 13),
                   SizedBox(width: 8),
                   Text(this.pillSheetType.name, style: TextStyles.subTitle),
                 ],

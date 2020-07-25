@@ -6,11 +6,35 @@ import 'package:Pilll/text_style.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
-class InitialSetting1 extends StatelessWidget {
+class InitialSetting1 extends StatefulWidget {
   final InitialSettingModel model;
   final InitialSettingCallback done;
 
   const InitialSetting1({Key key, this.model, this.done}) : super(key: key);
+
+  @override
+  State<StatefulWidget> createState() => InitialSetting1State();
+}
+
+class InitialSetting1State extends State<InitialSetting1> {
+  PillSheetType selectedPillSheetType;
+  @override
+  void initState() {
+    // TODO: implement initState
+    super.initState();
+  }
+
+  Widget _pillSheet(PillSheetType type) {
+    return GestureDetector(
+      onTap: () {
+        setState(() {
+          this.selectedPillSheetType = type;
+        });
+      },
+      child: PillSheet(pillSheetType: type, selected: this.selectedPillSheetType == type),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -36,11 +60,8 @@ class InitialSetting1 extends StatelessWidget {
                 height: 461,
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: <Widget>[
-                    PillSheet(pillSheetType: PillSheetType.pillsheet_21),
-                    PillSheet(pillSheetType: PillSheetType.pillsheet_28_4),
-                    PillSheet(pillSheetType: PillSheetType.pillsheet_28_7),
-                  ],
+                  children:
+                      PillSheetType.values.map((e) => _pillSheet(e)).toList(),
                 ),
               )
             ],
