@@ -27,6 +27,9 @@ class PillMark extends StatelessWidget {
         return PilllColors.potti;
       case PillMarkState.done:
         return PilllColors.lightGray;
+      default:
+        assert(false);
+        return null;
     }
   }
 
@@ -40,6 +43,9 @@ class PillMark extends StatelessWidget {
         return null;
       case PillMarkState.done:
         return SvgPicture.asset("images/check_mark.svg");
+      default:
+        assert(false);
+        return null;
     }
   }
 
