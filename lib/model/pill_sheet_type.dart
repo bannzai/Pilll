@@ -15,6 +15,9 @@ extension PillSheetTypeFunctions on PillSheetType {
         return "28錠タイプ(4錠偽薬)";
       case PillSheetType.pillsheet_28_7:
         return "28錠タイプ(7錠偽薬)";
+      default:
+        assert(false);
+        return null;
     }
   }
 
@@ -26,6 +29,9 @@ extension PillSheetTypeFunctions on PillSheetType {
         return ["・ヤーズなど"];
       case PillSheetType.pillsheet_28_7:
         return ["・トリキュラー28", "・マーベロン28", "・アンジュ28"];
+      default:
+        assert(false);
+        return null;
     }
   }
 
@@ -37,6 +43,23 @@ extension PillSheetTypeFunctions on PillSheetType {
         return SvgPicture.asset("images/pillsheet_28_4.svg");
       case PillSheetType.pillsheet_28_7:
         return SvgPicture.asset("images/pillsheet_28_7.svg");
+      default:
+        assert(false);
+        return null;
+    }
+  }
+
+  int get beginingWithoutTakenPeriod {
+    switch (this) {
+      case PillSheetType.pillsheet_21:
+        return 22;
+      case PillSheetType.pillsheet_28_4:
+        return 25;
+      case PillSheetType.pillsheet_28_7:
+        return 22;
+      default:
+        assert(false);
+        return null;
     }
   }
 }
