@@ -1,4 +1,5 @@
 import 'package:Pilll/color.dart';
+import 'package:Pilll/initial_setting/initial_setting.dart';
 import 'package:Pilll/initial_setting/pill_sheet.dart';
 import 'package:Pilll/model/pill_sheet_type.dart';
 import 'package:Pilll/text_style.dart';
@@ -6,6 +7,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
 class InitialSetting1 extends StatelessWidget {
+  final InitialSettingModel model;
+
+  const InitialSetting1({Key key, this.model}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
