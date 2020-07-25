@@ -1,11 +1,14 @@
 import 'package:Pilll/color.dart';
 import 'package:Pilll/initial_setting/initial_setting_1.dart';
+import 'package:Pilll/model/pill_sheet_type.dart';
 import 'package:Pilll/text_style.dart';
 import 'package:flutter/material.dart';
 
 typedef InitialSettingCallback = void Function(InitialSettingModel);
 
-class InitialSettingModel {}
+class InitialSettingModel {
+  PillSheetType pillSheetType;
+}
 
 class InitialSetting extends StatelessWidget {
   final InitialSettingModel model;
