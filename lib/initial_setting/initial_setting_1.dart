@@ -8,13 +8,18 @@ import 'package:flutter_svg/svg.dart';
 
 class InitialSetting1 extends StatelessWidget {
   final InitialSettingModel model;
+  final InitialSettingCallback done;
 
-  const InitialSetting1({Key key, this.model}) : super(key: key);
+  const InitialSetting1({Key key, this.model, this.done}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: PilllColors.background,
       appBar: AppBar(
+          leading: IconButton(
+            icon: Icon(Icons.arrow_back, color: Colors.black),
+            onPressed: () => Navigator.of(context).pop(),
+          ),
           title: Text(
             "1/5",
             style: TextStyle(color: PilllColors.blackText),

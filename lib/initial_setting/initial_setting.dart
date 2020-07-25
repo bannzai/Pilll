@@ -1,12 +1,15 @@
 import 'package:Pilll/color.dart';
+import 'package:Pilll/initial_setting/initial_setting_1.dart';
 import 'package:Pilll/text_style.dart';
 import 'package:flutter/material.dart';
+
+typedef InitialSettingCallback = void Function(InitialSettingModel);
 
 class InitialSettingModel {}
 
 class InitialSetting extends StatelessWidget {
   final InitialSettingModel model;
-  final void Function(InitialSettingModel) done;
+  final InitialSettingCallback done;
 
   const InitialSetting({Key key, this.done, this.model}) : super(key: key);
   @override
@@ -46,7 +49,12 @@ class InitialSetting extends StatelessWidget {
                     style: TextStyles.done,
                   )),
                 ),
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.of(context)
+                      .push(MaterialPageRoute(builder: (BuildContext context) {
+                    return InitialSetting1(model: model, done: done);
+                  }));
+                },
               )
             ],
           ),
