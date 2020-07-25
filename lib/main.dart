@@ -1,4 +1,5 @@
 import 'package:Pilll/color.dart';
+import 'package:Pilll/initial_setting/initial_setting.dart';
 import 'package:Pilll/initial_setting/initial_setting_1.dart';
 import 'package:Pilll/record/pill_sheet.dart';
 import 'package:Pilll/record/record_taken_information.dart';
@@ -60,10 +61,10 @@ class _MyHomePageState extends State<MyHomePage>
         future: getIsDidEndInitialSettingKey(),
         builder: (BuildContext context, AsyncSnapshot<bool> snapshot) {
           if (!snapshot.hasData) {
-            return InitialSetting1();
+            return InitialSetting();
           }
           if (!snapshot.data) {
-            return InitialSetting1();
+            return InitialSetting();
           }
           return DefaultTabController(
             length: 3,
