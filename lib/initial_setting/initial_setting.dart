@@ -39,7 +39,7 @@ class InitialSetting extends StatelessWidget {
                 image: AssetImage('images/initial_setting_pill_sheet.png'),
               ),
               FlatButton(
-                color: PilllColors.strong,
+                color: PilllColors.enable,
                 child: Container(
                   width: 180,
                   height: 44,
