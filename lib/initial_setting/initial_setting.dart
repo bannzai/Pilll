@@ -3,6 +3,9 @@ import 'package:Pilll/text_style.dart';
 import 'package:flutter/material.dart';
 
 class InitialSetting extends StatelessWidget {
+  final VoidCallback done;
+
+  const InitialSetting({Key key, this.done}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
