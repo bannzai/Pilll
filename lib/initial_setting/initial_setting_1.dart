@@ -2,37 +2,32 @@ import 'package:Pilll/color.dart';
 import 'package:Pilll/initial_setting/initial_setting.dart';
 import 'package:Pilll/initial_setting/pill_sheet.dart';
 import 'package:Pilll/model/pill_sheet_type.dart';
+import 'package:Pilll/record/pill_sheet_model.dart';
 import 'package:Pilll/text_style.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:provider/provider.dart';
 
 import 'initial_setting2.dart';
 
-class InitialSetting1 extends StatefulWidget {
-  final InitialSettingModel model;
-  final InitialSettingCallback done;
-
-  const InitialSetting1({Key key, this.model, this.done}) : super(key: key);
-
-  @override
-  State<StatefulWidget> createState() => InitialSetting1State();
-}
-
-class InitialSetting1State extends State<InitialSetting1> {
+class InitialSetting1 extends StatelessWidget {
+  const InitialSetting1({Key key}) : super(key: key);
   Widget _pillSheet(PillSheetType type) {
-    return GestureDetector(
-      onTap: () {
-        Navigator.of(context)
-            .push(MaterialPageRoute(builder: (BuildContext context) {
-          return InitialSetting2(model: widget.model, done: widget.done);
-        }));
-        setState(() {
-          widget.model.pillSheetType = type;
-        });
-      },
-      child: PillSheet(
-          pillSheetType: type, selected: widget.model.pillSheetType == type),
+    return Consumer<InitialSettingModel>(
+      builder: (BuildContext context, InitialSettingModel value, Widget child) {  
+        
+return GestureDetector(
+        onTap: () {
+          Navigator.of(context)
+              .push(MaterialPageRoute(builder: (BuildContext context) {
+            return InitialSetting2(model: context.watch<InitialSettingModel>());
+          }));
+        },
+        child: PillSheet(
+            pillSheetType: type, selected: widget.model.pillSheetType == type),
+      );
     );
+
   }
 
   @override

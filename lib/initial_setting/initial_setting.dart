@@ -3,18 +3,16 @@ import 'package:Pilll/initial_setting/initial_setting_1.dart';
 import 'package:Pilll/model/pill_sheet_type.dart';
 import 'package:Pilll/text_style.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 typedef InitialSettingCallback = void Function(InitialSettingModel);
 
-class InitialSettingModel {
+class InitialSettingModel extends ChangeNotifier {
   PillSheetType pillSheetType;
 }
 
 class InitialSetting extends StatelessWidget {
-  final InitialSettingModel model;
-  final InitialSettingCallback done;
-
-  const InitialSetting({Key key, this.done, this.model}) : super(key: key);
+  const InitialSetting({Key key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -53,10 +51,19 @@ class InitialSetting extends StatelessWidget {
                   )),
                 ),
                 onPressed: () {
-                  Navigator.of(context)
-                      .push(MaterialPageRoute(builder: (BuildContext context) {
-                    return InitialSetting1(model: model, done: done);
-                  }));
+                  Navigator.of(context).push(
+                    MaterialPageRoute(
+                      builder: (BuildContext context) {
+                        return ChangeNotifierProvider<InitialSettingModel>(
+                          create: (context) => InitialSettingModel(),
+                          builder: (BuildContext context, Widget child) {
+                            return InitialSetting1(
+                                model: context.watch<InitialSettingModel>());
+                          },
+                        );
+                      },
+                    ),
+                  );
                 },
               )
             ],
