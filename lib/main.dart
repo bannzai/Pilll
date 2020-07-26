@@ -63,16 +63,10 @@ class _MyHomePageState extends State<MyHomePage>
         future: getIsDidEndInitialSettingKey(),
         builder: (BuildContext context, AsyncSnapshot<bool> snapshot) {
           if (!snapshot.hasData) {
-            return InitialSetting(
-              model: InitialSettingModel(),
-              done: (model) {},
-            );
+            return InitialSetting();
           }
           if (!snapshot.data) {
-            return InitialSetting(
-              model: InitialSettingModel(),
-              done: (model) {},
-            );
+            return InitialSetting();
           }
           return DefaultTabController(
             length: 3,

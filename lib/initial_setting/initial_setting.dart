@@ -57,8 +57,7 @@ class InitialSetting extends StatelessWidget {
                         return ChangeNotifierProvider<InitialSettingModel>(
                           create: (context) => InitialSettingModel(),
                           builder: (BuildContext context, Widget child) {
-                            return InitialSetting1(
-                                model: context.watch<InitialSettingModel>());
+                            return InitialSetting1();
                           },
                         );
                       },
