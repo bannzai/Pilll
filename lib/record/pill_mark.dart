@@ -1,62 +1,29 @@
-import 'package:Pilll/color.dart';
+import 'package:Pilll/record/pill_mark_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:flutter_svg/svg.dart';
 
 enum PillMarkState {
   none,
-  fake,
+  notTaken,
   todo,
   done,
 }
 
 class PillMark extends StatelessWidget {
-  final PillMarkState state;
+  final PillMarkModel model;
   const PillMark({
     Key key,
-    this.state,
+    this.model,
   }) : super(key: key);
-
-  Color _color() {
-    switch (this.state) {
-      case PillMarkState.none:
-        return PilllColors.potti;
-      case PillMarkState.fake:
-        return PilllColors.blank;
-      case PillMarkState.todo:
-        return PilllColors.potti;
-      case PillMarkState.done:
-        return PilllColors.lightGray;
-      default:
-        assert(false);
-        return null;
-    }
-  }
-
-  SvgPicture _image() {
-    switch (this.state) {
-      case PillMarkState.none:
-        return null;
-      case PillMarkState.fake:
-        return null;
-      case PillMarkState.todo:
-        return null;
-      case PillMarkState.done:
-        return SvgPicture.asset("images/check_mark.svg");
-      default:
-        assert(false);
-        return null;
-    }
-  }
 
   @override
   Widget build(BuildContext context) {
     return Container(
       width: 20,
       height: 20,
-      child: Center(child: _image()),
+      child: Center(child: model.image()),
       decoration: BoxDecoration(
-        color: _color(),
+        color: model.color(),
         shape: BoxShape.circle,
       ),
     );
