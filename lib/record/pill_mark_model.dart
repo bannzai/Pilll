@@ -59,7 +59,7 @@ class InitialSettingPillMarkModel extends PillMarkModel {
   @override
   Color color() {
     if (isSelected) {
-      return PilllColors.selected;
+      return PilllColors.enable;
     }
     if (index >= pillSheetType.beginingWithoutTakenPeriod) {
       return PilllColors.blank;
