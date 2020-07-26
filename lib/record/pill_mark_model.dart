@@ -50,16 +50,18 @@ class MainPillMarkModel extends PillMarkModel {
 }
 
 class InitialSettingPillMarkModel extends PillMarkModel {
+  final int index;
   final bool isSelected;
-  final bool isBlank;
-  InitialSettingPillMarkModel(this.isSelected, this.isBlank);
+  final PillSheetType pillSheetType;
+  InitialSettingPillMarkModel(
+      {this.index, this.isSelected, this.pillSheetType});
 
   @override
   Color color() {
     if (isSelected) {
       return PilllColors.selected;
     }
-    if (isBlank) {
+    if (index >= pillSheetType.beginingWithoutTakenPeriod) {
       return PilllColors.blank;
     }
     return PilllColors.lightGray;
