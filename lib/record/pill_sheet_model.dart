@@ -4,10 +4,10 @@ import 'package:Pilll/record/pill_mark_model.dart';
 import 'package:flutter/material.dart';
 
 abstract class PillSheetModel extends ChangeNotifier {
-  int _index;
-  get index => _index;
-  set index(value) {
-    _index = value;
+  int _number;
+  get number => _number;
+  set number(value) {
+    _number = value;
     regenerate();
     notifyListeners();
   }
@@ -54,7 +54,7 @@ class InitialSettingPillSheetModel extends PillSheetModel {
       28,
       (index) => InitialSettingPillMarkModel(
         index: index,
-        isSelected: index == this.index,
+        isSelected: (index + 1) == this.number,
         pillSheetType: pillSheetType,
       ),
     );

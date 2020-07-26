@@ -16,7 +16,13 @@ class TextStyles {
   );
   static final TextStyle list = TextStyle(
     fontFamily: PilllFontFamily.japanese,
-    fontWeight: FontWeight.normal,
+    fontWeight: FontWeight.w300,
+    fontSize: 12,
+    color: PilllColors.blackText,
+  );
+  static final TextStyle description = TextStyle(
+    fontFamily: PilllFontFamily.japanese,
+    fontWeight: FontWeight.w300,
     fontSize: 12,
     color: PilllColors.blackText,
   );
@@ -25,5 +31,11 @@ class TextStyles {
     fontWeight: FontWeight.w600,
     fontSize: 16,
     color: PilllColors.whiteText,
+  );
+  static final TextStyle largeNumber = TextStyle(
+    fontFamily: PilllFontFamily.number,
+    fontWeight: FontWeight.normal,
+    fontSize: 32,
+    color: PilllColors.blackText,
   );
 }

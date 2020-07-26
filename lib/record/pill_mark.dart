@@ -38,7 +38,7 @@ class PillMark extends StatelessWidget {
         ),
       ),
       onTap: () {
-        Provider.of<PillSheetModel>(context, listen: false).index = index;
+        Provider.of<PillSheetModel>(context, listen: false).number = number;
       },
     );
   }
