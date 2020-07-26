@@ -51,11 +51,10 @@ class InitialSetting2 extends StatelessWidget {
                 ExplainPillNumber(today: today()),
                 SizedBox(height: 24),
                 Consumer<PillSheetModel>(
-                  builder: (BuildContext context, model, Widget child) {
-                    return FlatButton(
-                      color: context.watch<PillSheetModel>().number == null
-                          ? PilllColors.disable
-                          : PilllColors.enable,
+                    builder: (BuildContext context, model, Widget child) {
+                  return FlatButton(
+                      disabledColor: PilllColors.disable,
+                      color: PilllColors.enable,
                       child: Container(
                         width: 180,
                         height: 44,
@@ -65,10 +64,15 @@ class InitialSetting2 extends StatelessWidget {
                           style: TextStyles.done,
                         )),
                       ),
-                      onPressed: () {},
-                    );
-                  },
-                ),
+                      onPressed: context.watch<PillSheetModel>().number == null
+                          ? null
+                          : () {
+                              Navigator.of(context).push(MaterialPageRoute(
+                                  builder: (BuildContext context) {
+                                return InitialSetting2();
+                              }));
+                            });
+                }),
               ],
             ),
           ),
