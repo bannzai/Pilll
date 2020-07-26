@@ -9,10 +9,7 @@ import 'package:provider/provider.dart';
 import 'initial_setting.dart';
 
 class InitialSetting2 extends StatelessWidget {
-  final InitialSettingModel model;
-  final InitialSettingCallback done;
-
-  const InitialSetting2({Key key, this.model, this.done}) : super(key: key);
+  const InitialSetting2({Key key}) : super(key: key);
 
   String today() {
     return DateFormat.yMd('ja').format(DateTime.now());
@@ -20,6 +17,7 @@ class InitialSetting2 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    InitialSettingModel model = context.watch();
     return Scaffold(
       backgroundColor: PilllColors.background,
       appBar: AppBar(
@@ -51,8 +49,8 @@ class InitialSetting2 extends StatelessWidget {
                 ExplainPillNumber(today: today()),
                 SizedBox(height: 24),
                 Consumer<PillSheetModel>(
-                    builder: (BuildContext context, model, Widget child) {
-                  return FlatButton(
+                  builder: (BuildContext context, model, Widget child) {
+                    return FlatButton(
                       disabledColor: PilllColors.disable,
                       color: PilllColors.enable,
                       child: Container(
@@ -67,12 +65,17 @@ class InitialSetting2 extends StatelessWidget {
                       onPressed: context.watch<PillSheetModel>().number == null
                           ? null
                           : () {
-                              Navigator.of(context).push(MaterialPageRoute(
+                              Navigator.of(context).push(
+                                MaterialPageRoute(
                                   builder: (BuildContext context) {
-                                return InitialSetting2();
-                              }));
-                            });
-                }),
+                                    return InitialSetting2();
+                                  },
+                                ),
+                              );
+                            },
+                    );
+                  },
+                ),
               ],
             ),
           ),
