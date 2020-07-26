@@ -9,6 +9,8 @@ typedef InitialSettingCallback = void Function(InitialSettingModel);
 
 class InitialSettingModel {
   PillSheetType pillSheetType;
+  int fromMenstruation;
+  int durationMenstruation;
 }
 
 class InitialSetting extends StatelessWidget {
