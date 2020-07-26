@@ -6,9 +6,11 @@ import 'package:Pilll/record/record_taken_information.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:intl/date_symbol_data_local.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 void main() {
+  initializeDateFormatting('ja_JP');
   // debugPaintSizeEnabled = true;
   runApp(MyApp());
 }
