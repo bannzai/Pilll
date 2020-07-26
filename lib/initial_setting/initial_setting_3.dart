@@ -1,5 +1,6 @@
 import 'package:Pilll/color.dart';
 import 'package:Pilll/initial_setting/initial_setting.dart';
+import 'package:Pilll/initial_setting/initial_setting_4.dart';
 import 'package:Pilll/text_style.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -188,7 +189,7 @@ class _InitialSetting3State extends State<InitialSetting3> {
                         Navigator.of(context).push(
                           MaterialPageRoute(
                             builder: (BuildContext context) {
-                              return InitialSetting3();
+                              return InitialSetting4();
                             },
                           ),
                         );
