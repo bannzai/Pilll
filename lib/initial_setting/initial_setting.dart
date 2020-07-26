@@ -7,7 +7,7 @@ import 'package:provider/provider.dart';
 
 typedef InitialSettingCallback = void Function(InitialSettingModel);
 
-class InitialSettingModel extends ChangeNotifier {
+class InitialSettingModel {
   PillSheetType pillSheetType;
 }
 
@@ -54,12 +54,7 @@ class InitialSetting extends StatelessWidget {
                   Navigator.of(context).push(
                     MaterialPageRoute(
                       builder: (BuildContext context) {
-                        return ChangeNotifierProvider<InitialSettingModel>(
-                          create: (context) => InitialSettingModel(),
-                          builder: (BuildContext context, Widget child) {
-                            return InitialSetting1();
-                          },
-                        );
+                        return InitialSetting1();
                       },
                     ),
                   );

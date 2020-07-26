@@ -10,24 +10,35 @@ import 'package:provider/provider.dart';
 
 import 'initial_setting2.dart';
 
-class InitialSetting1 extends StatelessWidget {
+class InitialSetting1 extends StatefulWidget {
   const InitialSetting1({Key key}) : super(key: key);
+
+  @override
+  _InitialSetting1State createState() => _InitialSetting1State();
+}
+
+class _InitialSetting1State extends State<InitialSetting1> {
   Widget _pillSheet(PillSheetType type) {
-    return Consumer<InitialSettingModel>(builder:
-        (BuildContext context, InitialSettingModel value, Widget child) {
-      return GestureDetector(
-        onTap: () {
-          Navigator.of(context)
-              .push(MaterialPageRoute(builder: (BuildContext context) {
-            return InitialSetting2();
-          }));
-        },
-        child: PillSheet(
-          pillSheetType: type,
-          selected: context.watch<InitialSettingModel>().pillSheetType == type,
-        ),
-      );
-    });
+    return Consumer<InitialSettingModel>(
+      builder: (BuildContext context, InitialSettingModel value, Widget child) {
+        return GestureDetector(
+          onTap: () {
+            setState(() {
+              value.pillSheetType = type;
+              Navigator.of(context)
+                  .push(MaterialPageRoute(builder: (BuildContext context) {
+                return InitialSetting2();
+              }));
+            });
+          },
+          child: PillSheet(
+            pillSheetType: type,
+            selected:
+                context.watch<InitialSettingModel>().pillSheetType == type,
+          ),
+        );
+      },
+    );
   }
 
   @override
