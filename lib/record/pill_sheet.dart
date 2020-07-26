@@ -7,28 +7,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 
 typedef PillMarkSelected = void Function(int);
 
-class PillSheet extends StatefulWidget {
-  final PillMarkStyle style;
-  final PillMarkSelected didSelect;
-  const PillSheet({
-    Key key,
-    this.didSelect, this.style,
-  }) : super(key: key);
-
-  @override
-  State<StatefulWidget> createState() => PillSheetState();
-}
-
-class PillSheetState extends State<PillSheet> {
-  int selectedPillNumber;
-
-  PillMarkState _pillMarkState(int index) {
-    if (selectedPillNumber >= index) {
-      return PillMarkState.done;
-    }
-    return PillMarkState.none;
-  }
-
+class PillSheet extends StatelessWidget {
   int _calcIndex(int row, int line) {
     return row + 1 + (line - 1) * 7;
   }
@@ -46,16 +25,7 @@ class PillSheetState extends State<PillSheet> {
     return Column(
       children: <Widget>[
         Text("$number", style: TextStyle(color: PilllColors.weekday)),
-        GestureDetector(
-          onTap: () {
-            setState(() {
-              this.selectedPillNumber = number;
-            });
-          },
-          child: PillMark(
-            state: _pillMarkState(number),
-          ),
-        ),
+        PillMark(number: number),
       ],
     );
   }
