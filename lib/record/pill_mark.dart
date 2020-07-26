@@ -1,6 +1,8 @@
 import 'package:Pilll/record/pill_mark_model.dart';
+import 'package:Pilll/record/pill_sheet_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:provider/provider.dart';
 
 enum PillMarkState {
   none,
@@ -10,22 +12,34 @@ enum PillMarkState {
 }
 
 class PillMark extends StatelessWidget {
-  final PillMarkModel model;
+  final int number;
+  int get index => number - 1;
   const PillMark({
     Key key,
-    this.model,
+    this.number,
   }) : super(key: key);
+
+  PillMarkModel model(BuildContext context) {
+    return Provider.of<PillSheetModel>(context).marks[index];
+  }
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: 20,
-      height: 20,
-      child: Center(child: model.image()),
-      decoration: BoxDecoration(
-        color: model.color(),
-        shape: BoxShape.circle,
+    return GestureDetector(
+      child: Container(
+        width: 20,
+        height: 20,
+        child: Center(
+          child: model(context).image(),
+        ),
+        decoration: BoxDecoration(
+          color: model(context).color(),
+          shape: BoxShape.circle,
+        ),
       ),
+      onTap: () {
+        Provider.of<PillSheetModel>(context, listen: false).index = index;
+      },
     );
   }
 }
