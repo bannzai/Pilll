@@ -7,10 +7,16 @@ import 'package:provider/provider.dart';
 
 typedef InitialSettingCallback = void Function(InitialSettingModel);
 
-class InitialSettingModel {
+class InitialSettingModel extends ChangeNotifier {
   PillSheetType pillSheetType;
   int fromMenstruation;
   int durationMenstruation;
+  int hour;
+  int minute;
+
+  void done() {
+    notifyListeners();
+  }
 }
 
 class InitialSetting extends StatelessWidget {
