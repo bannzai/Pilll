@@ -1,4 +1,5 @@
 import 'package:Pilll/color.dart';
+import 'package:Pilll/initial_setting/initial_setting_3.dart';
 import 'package:Pilll/record/pill_sheet.dart';
 import 'package:Pilll/record/pill_sheet_model.dart';
 import 'package:Pilll/text_style.dart';
@@ -68,7 +69,7 @@ class InitialSetting2 extends StatelessWidget {
                               Navigator.of(context).push(
                                 MaterialPageRoute(
                                   builder: (BuildContext context) {
-                                    return InitialSetting2();
+                                    return InitialSetting3();
                                   },
                                 ),
                               );

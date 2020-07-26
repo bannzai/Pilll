@@ -13,21 +13,21 @@ import 'initial_setting2.dart';
 class InitialSetting1 extends StatelessWidget {
   const InitialSetting1({Key key}) : super(key: key);
   Widget _pillSheet(PillSheetType type) {
-    return Consumer<InitialSettingModel>(
-      builder: (BuildContext context, InitialSettingModel value, Widget child) {  
-        
-return GestureDetector(
+    return Consumer<InitialSettingModel>(builder:
+        (BuildContext context, InitialSettingModel value, Widget child) {
+      return GestureDetector(
         onTap: () {
           Navigator.of(context)
               .push(MaterialPageRoute(builder: (BuildContext context) {
-            return InitialSetting2(model: context.watch<InitialSettingModel>());
+            return InitialSetting2();
           }));
         },
         child: PillSheet(
-            pillSheetType: type, selected: widget.model.pillSheetType == type),
+          pillSheetType: type,
+          selected: context.watch<InitialSettingModel>().pillSheetType == type,
+        ),
       );
-    );
-
+    });
   }
 
   @override
