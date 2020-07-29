@@ -1,4 +1,3 @@
-import 'package:Pilll/theme/color.dart';
 import 'package:flutter/material.dart';
 
 class FontFamily {
