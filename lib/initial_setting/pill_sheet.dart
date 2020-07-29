@@ -2,7 +2,6 @@ import 'package:Pilll/theme/color.dart';
 import 'package:Pilll/model/pill_sheet_type.dart';
 import 'package:Pilll/theme/text_style.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 
 class PillSheet extends StatelessWidget {
   final PillSheetType pillSheetType;
