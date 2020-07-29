@@ -4,7 +4,7 @@ import 'package:Pilll/initial_setting/initial_setting_1.dart';
 import 'package:Pilll/main/record/pill_sheet.dart';
 import 'package:Pilll/main/record/record_taken_information.dart';
 import 'package:Pilll/theme/font.dart';
-import 'package:Pilll/theme/text_style.dart';
+import 'package:Pilll/theme/text_color.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter_svg/flutter_svg.dart';
