@@ -1,7 +1,7 @@
 import 'package:Pilll/theme/color.dart';
 import 'package:Pilll/model/pill_sheet_type.dart';
 import 'package:Pilll/theme/font.dart';
-import 'package:Pilll/theme/text_style.dart';
+import 'package:Pilll/theme/text_color.dart';
 import 'package:flutter/material.dart';
 
 class PillSheet extends StatelessWidget {
