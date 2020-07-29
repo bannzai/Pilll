@@ -1,3 +1,4 @@
+import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
 extension HexColor on Color {
@@ -26,9 +27,18 @@ class PilllColors {
   static final Color saturday = HexColor.fromHex("7FB9E1");
   static final Color weekday = HexColor.fromHex("7E7E7E");
   static final Color plainText = HexColor.fromHex("7E7E7E");
+  static final Color blackText = Colors.black;
+  static final Color whiteText = Colors.white;
+  static final Color enable = HexColor.fromHex('E65E5A');
+  static final Color disable = HexColor.fromHex("BEC0C2");
   static final Color divider = HexColor.fromHex("9DAFBD");
 
   static final Color bottomBar = HexColor.fromHex("FAFAFA");
   static final Color border = HexColor.fromHex("DADADA");
   static final Color background = HexColor.fromHex("FFFFFF");
+  static final Color selected = HexColor.fromHex("FCF1F1");
+
+  static final Color blank = Colors.white;
+  static final Color potti = HexColor.fromHex("7C8E9C");
+  static final Color lightGray = HexColor.fromHex("CDCFD1");
 }
