@@ -120,17 +120,9 @@ class _InitialSetting4State extends State<InitialSetting4> {
                 ),
               ),
               SizedBox(height: 178),
-              FlatButton(
-                disabledColor: PilllColors.disable,
-                color: PilllColors.enable,
-                child: Container(
-                  width: 180,
-                  height: 44,
-                  child: Center(
-                      child: Text(
-                    "設定",
-                    style: FontType.done.merge(TextColorStyle.white),
-                  )),
+              RaisedButton(
+                child: Text(
+                  "設定",
                 ),
                 onPressed: !_canNext(context)
                     ? null

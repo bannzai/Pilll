@@ -47,16 +47,9 @@ class InitialSetting extends StatelessWidget {
               Image(
                 image: AssetImage('images/initial_setting_pill_sheet.png'),
               ),
-              FlatButton(
-                color: PilllColors.enable,
-                child: Container(
-                  width: 180,
-                  height: 44,
-                  child: Center(
-                      child: Text(
-                    "OK",
-                    style: FontType.done.merge(TextColorStyle.white),
-                  )),
+              RaisedButton(
+                child: Text(
+                  "OK",
                 ),
                 onPressed: () {
                   Navigator.of(context).push(
