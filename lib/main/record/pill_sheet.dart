@@ -1,7 +1,7 @@
 import 'package:Pilll/color.dart';
 import 'package:Pilll/model/weekday.dart';
-import 'package:Pilll/record/pill_mark.dart';
-import 'package:Pilll/record/weekday_badge.dart';
+import 'package:Pilll/main/record/pill_mark.dart';
+import 'package:Pilll/main/record/weekday_badge.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
