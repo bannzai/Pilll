@@ -90,7 +90,7 @@ class _InitialSetting4State extends State<InitialSetting4> {
               SizedBox(height: 24),
               Text(
                 "ピルの飲み忘れ通知",
-                style: FontType.title.merge(TextColorStyle.black),
+                style: FontType.title.merge(TextColorStyle.standard),
                 textAlign: TextAlign.center,
               ),
               SizedBox(height: 132),
