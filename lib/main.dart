@@ -3,6 +3,7 @@ import 'package:Pilll/initial_setting/initial_setting.dart';
 import 'package:Pilll/initial_setting/initial_setting_1.dart';
 import 'package:Pilll/main/record/pill_sheet.dart';
 import 'package:Pilll/main/record/record_taken_information.dart';
+import 'package:Pilll/theme/font.dart';
 import 'package:Pilll/theme/text_style.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
@@ -30,6 +31,14 @@ class MyApp extends StatelessWidget {
         theme: ThemeData(
           primaryColor: PilllColors.primary,
           visualDensity: VisualDensity.adaptivePlatformDensity,
+          accentColor: PilllColors.accent,
+          buttonTheme: ButtonThemeData(
+            minWidth: 180,
+            height: 44,
+            buttonColor: PilllColors.enable,
+            disabledColor: PilllColors.disable,
+            textTheme: ButtonTextTheme.primary,
+          ),
         ),
         home: MyHomePage(title: 'Flutter Demo Home Page'),
       ),
