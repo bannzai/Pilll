@@ -9,6 +9,12 @@ class TextColor {
   static final Color gray = HexColor.fromHex("7E7E7E");
 }
 
+class TextColorStyle {
+  static final TextStyle black = TextStyle(color: TextColor.black);
+  static final TextStyle white = TextStyle(color: TextColor.white);
+  static final TextStyle gray = TextStyle(color: TextColor.gray);
+}
+
 class TextStyles {
   static final TextStyle title = TextStyle(
     fontFamily: FontFamily.japanese,
