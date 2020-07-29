@@ -52,17 +52,9 @@ class InitialSetting2 extends StatelessWidget {
                 SizedBox(height: 24),
                 Consumer<PillSheetModel>(
                   builder: (BuildContext context, model, Widget child) {
-                    return FlatButton(
-                      disabledColor: PilllColors.disable,
-                      color: PilllColors.enable,
-                      child: Container(
-                        width: 180,
-                        height: 44,
-                        child: Center(
-                            child: Text(
-                          "次へ",
-                          style: FontType.done.merge(TextColorStyle.white),
-                        )),
+                    return RaisedButton(
+                      child: Text(
+                        "次へ",
                       ),
                       onPressed: context.watch<PillSheetModel>().number == null
                           ? null
