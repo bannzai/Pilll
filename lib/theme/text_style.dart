@@ -1,6 +1,13 @@
 import 'package:Pilll/theme/color.dart';
 import 'package:Pilll/theme/font.dart';
+import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+
+class TextColor {
+  static final Color black = Colors.black;
+  static final Color white = Colors.white;
+  static final Color gray = HexColor.fromHex("7E7E7E");
+}
 
 class TextStyles {
   static final TextStyle title = TextStyle(

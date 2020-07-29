@@ -26,9 +26,6 @@ class PilllColors {
   static final Color sunday = HexColor.fromHex("E17F7F");
   static final Color saturday = HexColor.fromHex("7FB9E1");
   static final Color weekday = HexColor.fromHex("7E7E7E");
-  static final Color plainText = HexColor.fromHex("7E7E7E");
-  static final Color blackText = Colors.black;
-  static final Color whiteText = Colors.white;
   static final Color enable = HexColor.fromHex('E65E5A');
   static final Color disable = HexColor.fromHex("BEC0C2");
   static final Color divider = HexColor.fromHex("9DAFBD");
