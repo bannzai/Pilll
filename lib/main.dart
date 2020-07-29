@@ -1,4 +1,4 @@
-import 'package:Pilll/color.dart';
+import 'package:Pilll/theme/color.dart';
 import 'package:Pilll/initial_setting/initial_setting.dart';
 import 'package:Pilll/initial_setting/initial_setting_1.dart';
 import 'package:Pilll/main/record/pill_sheet.dart';

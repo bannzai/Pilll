@@ -1,5 +1,5 @@
-import 'package:Pilll/color.dart';
-import 'package:Pilll/font.dart';
+import 'package:Pilll/theme/color.dart';
+import 'package:Pilll/theme/font.dart';
 import 'package:flutter/widgets.dart';
 
 class TextStyles {
