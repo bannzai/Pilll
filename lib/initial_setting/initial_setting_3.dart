@@ -1,6 +1,7 @@
 import 'package:Pilll/theme/color.dart';
 import 'package:Pilll/initial_setting/initial_setting.dart';
 import 'package:Pilll/initial_setting/initial_setting_4.dart';
+import 'package:Pilll/theme/font.dart';
 import 'package:Pilll/theme/text_style.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -121,7 +122,7 @@ class _InitialSetting3State extends State<InitialSetting3> {
               SizedBox(height: 24),
               Text(
                 "生理について教えてください",
-                style: TextStyles.title,
+                style: FontType.title.merge(TextColorStyle.standard),
                 textAlign: TextAlign.center,
               ),
               SizedBox(height: 132),
@@ -130,26 +131,34 @@ class _InitialSetting3State extends State<InitialSetting3> {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: <Widget>[
-                    Text("いつから生理がはじまる？", style: TextStyles.question),
+                    Text("いつから生理がはじまる？",
+                        style:
+                            FontType.assistingBold.merge(TextColorStyle.black)),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: <Widget>[
-                        Text("偽薬期間に入って", style: TextStyles.assisting),
+                        Text("偽薬期間に入って",
+                            style:
+                                FontType.assisting.merge(TextColorStyle.gray)),
                         GestureDetector(
                           onTap: showFromModalSheet,
                           child: Text(
                             _from(context),
-                            style: TextStyles.input.merge(
+                            style: FontType.inputNumber.merge(
                               TextStyle(
                                   decoration: TextDecoration.underline,
-                                  color: PilllColors.lightGray),
+                                  color: TextColor.lightGray),
                             ),
                           ),
                         ),
-                        Text("日後ぐらいから", style: TextStyles.assisting),
+                        Text("日後ぐらいから",
+                            style:
+                                FontType.assisting.merge(TextColorStyle.gray)),
                       ],
                     ),
-                    Text("何日間生理が続く？", style: TextStyles.question),
+                    Text("何日間生理が続く？",
+                        style:
+                            FontType.assistingBold.merge(TextColorStyle.black)),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: <Widget>[
@@ -157,14 +166,16 @@ class _InitialSetting3State extends State<InitialSetting3> {
                           onTap: showDurationModalSheet,
                           child: Text(
                             _duration(context),
-                            style: TextStyles.input.merge(
+                            style: FontType.inputNumber.merge(
                               TextStyle(
                                   decoration: TextDecoration.underline,
                                   color: PilllColors.lightGray),
                             ),
                           ),
                         ),
-                        Text("日間生理が続く", style: TextStyles.assisting),
+                        Text("日間生理が続く",
+                            style:
+                                FontType.assisting.merge(TextColorStyle.gray)),
                       ],
                     )
                   ],
@@ -180,7 +191,7 @@ class _InitialSetting3State extends State<InitialSetting3> {
                   child: Center(
                       child: Text(
                     "次へ",
-                    style: TextStyles.done,
+                    style: FontType.done.merge(TextColorStyle.white),
                   )),
                 ),
                 onPressed: !canNext(context)

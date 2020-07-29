@@ -2,6 +2,7 @@ import 'package:Pilll/theme/color.dart';
 import 'package:Pilll/initial_setting/initial_setting_3.dart';
 import 'package:Pilll/main/record/pill_sheet.dart';
 import 'package:Pilll/main/record/pill_sheet_model.dart';
+import 'package:Pilll/theme/font.dart';
 import 'package:Pilll/theme/text_style.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
@@ -41,7 +42,7 @@ class InitialSetting2 extends StatelessWidget {
                 SizedBox(height: 24),
                 Text(
                   "今日(${today()})\n飲む・飲んだピルの番号をタップ",
-                  style: TextStyles.title,
+                  style: FontType.title.merge(TextColorStyle.black),
                   textAlign: TextAlign.center,
                 ),
                 SizedBox(height: 24),
@@ -60,7 +61,7 @@ class InitialSetting2 extends StatelessWidget {
                         child: Center(
                             child: Text(
                           "次へ",
-                          style: TextStyles.done,
+                          style: FontType.done.merge(TextColorStyle.white),
                         )),
                       ),
                       onPressed: context.watch<PillSheetModel>().number == null
@@ -101,13 +102,15 @@ class ExplainPillNumber extends StatelessWidget {
         children: () {
           if (model.number == null) {
             return <Widget>[
-              Text("", style: TextStyles.largeNumber),
+              Text("", style: FontType.largeNumber.merge(TextColorStyle.black)),
             ];
           }
           return <Widget>[
-            Text("$todayに飲むピルは", style: TextStyles.description),
-            Text("${model.number}", style: TextStyles.largeNumber),
-            Text("番", style: TextStyles.description),
+            Text("$todayに飲むピルは",
+                style: FontType.description.merge(TextColorStyle.black)),
+            Text("${model.number}",
+                style: FontType.largeNumber.merge(TextColorStyle.black)),
+            Text("番", style: FontType.description.merge(TextColorStyle.black)),
           ];
         }(),
       ),

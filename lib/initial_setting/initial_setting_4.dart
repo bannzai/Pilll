@@ -1,5 +1,6 @@
 import 'package:Pilll/theme/color.dart';
 import 'package:Pilll/initial_setting/initial_setting.dart';
+import 'package:Pilll/theme/font.dart';
 import 'package:Pilll/theme/text_style.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -89,7 +90,7 @@ class _InitialSetting4State extends State<InitialSetting4> {
               SizedBox(height: 24),
               Text(
                 "ピルの飲み忘れ通知",
-                style: TextStyles.title,
+                style: FontType.title.merge(TextColorStyle.black),
                 textAlign: TextAlign.center,
               ),
               SizedBox(height: 132),
@@ -105,12 +106,14 @@ class _InitialSetting4State extends State<InitialSetting4> {
                       },
                       child: Text(
                         timeString(context),
-                        style: TextStyles.largeNumber.merge(
-                          TextStyle(
-                            decoration: TextDecoration.underline,
-                            color: PilllColors.lightGray,
-                          ),
-                        ),
+                        style: FontType.largeNumber
+                            .merge(TextColorStyle.black)
+                            .merge(
+                              TextStyle(
+                                decoration: TextDecoration.underline,
+                                color: PilllColors.lightGray,
+                              ),
+                            ),
                       ),
                     ),
                   ],
@@ -126,7 +129,7 @@ class _InitialSetting4State extends State<InitialSetting4> {
                   child: Center(
                       child: Text(
                     "設定",
-                    style: TextStyles.done,
+                    style: FontType.done.merge(TextColorStyle.white),
                   )),
                 ),
                 onPressed: !_canNext(context)

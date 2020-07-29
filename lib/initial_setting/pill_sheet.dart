@@ -1,5 +1,6 @@
 import 'package:Pilll/theme/color.dart';
 import 'package:Pilll/model/pill_sheet_type.dart';
+import 'package:Pilll/theme/font.dart';
 import 'package:Pilll/theme/text_style.dart';
 import 'package:flutter/material.dart';
 
@@ -42,7 +43,8 @@ class PillSheet extends StatelessWidget {
                           : PilllColors.disable,
                       size: 13),
                   SizedBox(width: 8),
-                  Text(this.pillSheetType.name, style: TextStyles.subTitle),
+                  Text(this.pillSheetType.name,
+                      style: FontType.title.merge(TextColorStyle.gray)),
                 ],
               ),
               SizedBox(height: 10),
@@ -55,7 +57,9 @@ class PillSheet extends StatelessWidget {
                     children: this
                         .pillSheetType
                         .examples
-                        .map((e) => Text("$e", style: TextStyles.list))
+                        .map((e) => Text("$e",
+                            style: FontType.description
+                                .merge(TextColorStyle.black)))
                         .toList(),
                   ),
                 ],
