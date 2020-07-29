@@ -1,7 +1,7 @@
 import 'package:Pilll/color.dart';
 import 'package:Pilll/initial_setting/initial_setting_3.dart';
-import 'package:Pilll/record/pill_sheet.dart';
-import 'package:Pilll/record/pill_sheet_model.dart';
+import 'package:Pilll/main/record/pill_sheet.dart';
+import 'package:Pilll/main/record/pill_sheet_model.dart';
 import 'package:Pilll/text_style.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
