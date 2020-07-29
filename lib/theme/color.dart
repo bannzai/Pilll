@@ -21,13 +21,14 @@ class PilllColors {
   const PilllColors();
 
   static final Color primary = HexColor.fromHex("E37474");
+  static final Color accent = Colors.white;
   static final Color pillSheet = HexColor.fromHex("E8EBED");
   static final Color mat = HexColor.fromHex("FAFAFA").withAlpha(80);
   static final Color sunday = HexColor.fromHex("E17F7F");
   static final Color saturday = HexColor.fromHex("7FB9E1");
   static final Color weekday = HexColor.fromHex("7E7E7E");
   static final Color enable = HexColor.fromHex('E65E5A');
-  static final Color disable = HexColor.fromHex("BEC0C2");
+  static final Color disable = HexColor.fromHex("F2F2F2");
   static final Color divider = HexColor.fromHex("9DAFBD");
 
   static final Color bottomBar = HexColor.fromHex("FAFAFA");
