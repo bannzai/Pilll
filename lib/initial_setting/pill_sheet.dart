@@ -44,7 +44,7 @@ class PillSheet extends StatelessWidget {
                       size: 13),
                   SizedBox(width: 8),
                   Text(this.pillSheetType.name,
-                      style: FontType.title.merge(TextColorStyle.gray)),
+                      style: FontType.thinTitle.merge(TextColorStyle.gray)),
                 ],
               ),
               SizedBox(height: 10),

@@ -38,11 +38,11 @@ class InitialSetting extends StatelessWidget {
               SizedBox(height: 20),
               Text(
                 "ピルシートをご準備ください",
-                style: FontType.title.merge(TextColorStyle.standard),
+                style: FontType.title.merge(TextColorStyle.black),
               ),
               Text(
                 "あなたの飲んでいるピルのタイプから\n使いはじめる準備をします",
-                style: FontType.title.merge(TextColorStyle.gray),
+                style: FontType.thinTitle.merge(TextColorStyle.gray),
               ),
               Image(
                 image: AssetImage('images/initial_setting_pill_sheet.png'),

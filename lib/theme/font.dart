@@ -24,6 +24,11 @@ class FontType {
   );
   static final TextStyle title = TextStyle(
     fontFamily: FontFamily.japanese,
+    fontWeight: FontWeight.w600,
+    fontSize: FontSize.large,
+  );
+  static final TextStyle thinTitle = TextStyle(
+    fontFamily: FontFamily.japanese,
     fontWeight: FontWeight.w300,
     fontSize: FontSize.large,
   );
