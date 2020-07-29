@@ -28,7 +28,7 @@ class InitialSetting2 extends StatelessWidget {
         ),
         title: Text(
           "2/4",
-          style: TextStyle(color: PilllColors.blackText),
+          style: TextStyle(color: TextColor.black),
         ),
         backgroundColor: PilllColors.background,
       ),

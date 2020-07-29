@@ -14,54 +14,54 @@ class TextStyles {
     fontFamily: FontFamily.japanese,
     fontWeight: FontWeight.w600,
     fontSize: 18,
-    color: PilllColors.blackText,
+    color: TextColor.black,
   );
   static final TextStyle subTitle = TextStyle(
     fontFamily: FontFamily.japanese,
     fontWeight: FontWeight.normal,
     fontSize: 17,
-    color: PilllColors.plainText,
+    color: TextColor.gray,
   );
   static final TextStyle question = TextStyle(
     fontFamily: FontFamily.japanese,
     fontWeight: FontWeight.w600,
     fontSize: 14,
-    color: PilllColors.blackText,
+    color: TextColor.black,
   );
   static final TextStyle assisting = TextStyle(
     fontFamily: FontFamily.japanese,
     fontWeight: FontWeight.w300,
     fontSize: 14,
-    color: PilllColors.plainText,
+    color: TextColor.gray,
   );
   static final TextStyle input = TextStyle(
     fontFamily: FontFamily.number,
     fontWeight: FontWeight.normal,
     fontSize: 17,
-    color: PilllColors.plainText,
+    color: TextColor.gray,
   );
   static final TextStyle list = TextStyle(
     fontFamily: FontFamily.japanese,
     fontWeight: FontWeight.w300,
     fontSize: 12,
-    color: PilllColors.blackText,
+    color: TextColor.black,
   );
   static final TextStyle description = TextStyle(
     fontFamily: FontFamily.japanese,
     fontWeight: FontWeight.w300,
     fontSize: 12,
-    color: PilllColors.blackText,
+    color: TextColor.black,
   );
   static final TextStyle done = TextStyle(
     fontFamily: FontFamily.japanese,
     fontWeight: FontWeight.w600,
     fontSize: 16,
-    color: PilllColors.whiteText,
+    color: TextColor.white,
   );
   static final TextStyle largeNumber = TextStyle(
     fontFamily: FontFamily.number,
     fontWeight: FontWeight.normal,
     fontSize: 32,
-    color: PilllColors.blackText,
+    color: TextColor.black,
   );
 }

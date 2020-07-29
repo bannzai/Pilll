@@ -3,6 +3,7 @@ import 'package:Pilll/initial_setting/initial_setting.dart';
 import 'package:Pilll/initial_setting/initial_setting_1.dart';
 import 'package:Pilll/main/record/pill_sheet.dart';
 import 'package:Pilll/main/record/record_taken_information.dart';
+import 'package:Pilll/theme/text_style.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -95,28 +96,28 @@ class _MyHomePageState extends State<MyHomePage>
                       controller: _tabController,
                       labelColor: PilllColors.primary,
                       indicatorColor: Colors.transparent,
-                      unselectedLabelColor: PilllColors.plainText,
+                      unselectedLabelColor: TextColor.gray,
                       tabs: <Tab>[
                         Tab(
                             text: "ピル",
                             icon: SvgPicture.asset("images/tab_icon_pill.svg",
                                 color: _tabController.index == 0
                                     ? PilllColors.primary
-                                    : PilllColors.plainText)),
+                                    : TextColor.gray)),
                         Tab(
                             text: "2020/07",
                             icon: SvgPicture.asset(
                                 "images/tab_icon_calendar.svg",
                                 color: _tabController.index == 1
                                     ? PilllColors.primary
-                                    : PilllColors.plainText)),
+                                    : TextColor.gray)),
                         Tab(
                             text: "設定",
                             icon: SvgPicture.asset(
                                 "images/tab_icon_setting.svg",
                                 color: _tabController.index == 2
                                     ? PilllColors.primary
-                                    : PilllColors.plainText)),
+                                    : TextColor.gray)),
                       ],
                     ),
                   ),
