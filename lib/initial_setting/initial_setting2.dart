@@ -42,7 +42,7 @@ class InitialSetting2 extends StatelessWidget {
                 SizedBox(height: 24),
                 Text(
                   "今日(${today()})\n飲む・飲んだピルの番号をタップ",
-                  style: FontType.title.merge(TextColorStyle.black),
+                  style: FontType.title.merge(TextColorStyle.standard),
                   textAlign: TextAlign.center,
                 ),
                 SizedBox(height: 24),

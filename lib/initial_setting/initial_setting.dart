@@ -38,7 +38,7 @@ class InitialSetting extends StatelessWidget {
               SizedBox(height: 20),
               Text(
                 "ピルシートをご準備ください",
-                style: FontType.title.merge(TextColorStyle.black),
+                style: FontType.title.merge(TextColorStyle.standard),
               ),
               Text(
                 "あなたの飲んでいるピルのタイプから\n使いはじめる準備をします",
