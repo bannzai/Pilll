@@ -59,7 +59,6 @@ class _InitialSetting4State extends State<InitialSetting4> {
                         listen: false);
                     model.hour = value.hour;
                     model.minute = value.minute;
-                    print(value);
                   });
                 },
               )),

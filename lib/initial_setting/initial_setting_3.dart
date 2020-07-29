@@ -94,10 +94,7 @@ class _InitialSetting3State extends State<InitialSetting3> {
   }
 
   Widget _pickerItem(String str) {
-    return Text(
-      str,
-      style: const TextStyle(fontSize: 32),
-    );
+    return Text(str);
   }
 
   @override
