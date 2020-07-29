@@ -3,8 +3,10 @@ class FontFamily {
   static final String japanese = "Hiragino Kaku Gothic ProN";
 }
 
-class PilllFontSize {
-  static final int title = 17;
-  static final int description = 14;
-  static final int 
+class FontSize {
+  static final int xHuge = 40;
+  static final int huge = 32;
+  static final int large = 17;
+  static final int normal = 14;
+  static final int small = 12;
 }
