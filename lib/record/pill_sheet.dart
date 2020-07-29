@@ -1,15 +1,13 @@
 import 'package:Pilll/color.dart';
-import 'package:Pilll/record/model/weekday.dart';
-import 'package:Pilll/record/pill_mark_with_number.dart';
+import 'package:Pilll/model/weekday.dart';
+import 'package:Pilll/record/pill_mark.dart';
 import 'package:Pilll/record/weekday_badge.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
-class PillSheet extends StatelessWidget {
-  const PillSheet({
-    Key key,
-  }) : super(key: key);
+typedef PillMarkSelected = void Function(int);
 
+class PillSheet extends StatelessWidget {
   int _calcIndex(int row, int line) {
     return row + 1 + (line - 1) * 7;
   }
@@ -23,12 +21,21 @@ class PillSheet extends StatelessWidget {
     );
   }
 
+  Widget _pillMarkWithNumber(int number) {
+    return Column(
+      children: <Widget>[
+        Text("$number", style: TextStyle(color: PilllColors.weekday)),
+        PillMark(number: number),
+      ],
+    );
+  }
+
   Widget _pillMarkLine(int line) {
     return Container(
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: List.generate(7, (index) {
-          return PillMarkWithNumber(number: _calcIndex(index, line));
+          return _pillMarkWithNumber(_calcIndex(index, line));
         }),
       ),
     );
