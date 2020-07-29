@@ -1,4 +1,8 @@
+import 'package:flutter/material.dart';
+
 class FontFamily {
+  static String get standarad => japanese;
+
   static final String number = "Avenier Next";
   static final String japanese = "Hiragino Kaku Gothic ProN";
 }
