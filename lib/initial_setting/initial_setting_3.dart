@@ -1,7 +1,8 @@
-import 'package:Pilll/color.dart';
+import 'package:Pilll/theme/color.dart';
 import 'package:Pilll/initial_setting/initial_setting.dart';
 import 'package:Pilll/initial_setting/initial_setting_4.dart';
-import 'package:Pilll/text_style.dart';
+import 'package:Pilll/theme/font.dart';
+import 'package:Pilll/theme/text_color.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -93,10 +94,7 @@ class _InitialSetting3State extends State<InitialSetting3> {
   }
 
   Widget _pickerItem(String str) {
-    return Text(
-      str,
-      style: const TextStyle(fontSize: 32),
-    );
+    return Text(str);
   }
 
   @override
@@ -110,7 +108,7 @@ class _InitialSetting3State extends State<InitialSetting3> {
         ),
         title: Text(
           "3/4",
-          style: TextStyle(color: PilllColors.blackText),
+          style: TextStyle(color: TextColor.black),
         ),
         backgroundColor: PilllColors.background,
       ),
@@ -121,7 +119,7 @@ class _InitialSetting3State extends State<InitialSetting3> {
               SizedBox(height: 24),
               Text(
                 "生理について教えてください",
-                style: TextStyles.title,
+                style: FontType.title.merge(TextColorStyle.standard),
                 textAlign: TextAlign.center,
               ),
               SizedBox(height: 132),
@@ -130,26 +128,34 @@ class _InitialSetting3State extends State<InitialSetting3> {
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: <Widget>[
-                    Text("いつから生理がはじまる？", style: TextStyles.question),
+                    Text("いつから生理がはじまる？",
+                        style:
+                            FontType.assistingBold.merge(TextColorStyle.black)),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: <Widget>[
-                        Text("偽薬期間に入って", style: TextStyles.assisting),
+                        Text("偽薬期間に入って",
+                            style:
+                                FontType.assisting.merge(TextColorStyle.gray)),
                         GestureDetector(
                           onTap: showFromModalSheet,
                           child: Text(
                             _from(context),
-                            style: TextStyles.input.merge(
+                            style: FontType.inputNumber.merge(
                               TextStyle(
                                   decoration: TextDecoration.underline,
-                                  color: PilllColors.lightGray),
+                                  color: TextColor.lightGray),
                             ),
                           ),
                         ),
-                        Text("日後ぐらいから", style: TextStyles.assisting),
+                        Text("日後ぐらいから",
+                            style:
+                                FontType.assisting.merge(TextColorStyle.gray)),
                       ],
                     ),
-                    Text("何日間生理が続く？", style: TextStyles.question),
+                    Text("何日間生理が続く？",
+                        style:
+                            FontType.assistingBold.merge(TextColorStyle.black)),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: <Widget>[
@@ -157,31 +163,25 @@ class _InitialSetting3State extends State<InitialSetting3> {
                           onTap: showDurationModalSheet,
                           child: Text(
                             _duration(context),
-                            style: TextStyles.input.merge(
+                            style: FontType.inputNumber.merge(
                               TextStyle(
                                   decoration: TextDecoration.underline,
                                   color: PilllColors.lightGray),
                             ),
                           ),
                         ),
-                        Text("日間生理が続く", style: TextStyles.assisting),
+                        Text("日間生理が続く",
+                            style:
+                                FontType.assisting.merge(TextColorStyle.gray)),
                       ],
                     )
                   ],
                 ),
               ),
               SizedBox(height: 120),
-              FlatButton(
-                disabledColor: PilllColors.disable,
-                color: PilllColors.enable,
-                child: Container(
-                  width: 180,
-                  height: 44,
-                  child: Center(
-                      child: Text(
-                    "次へ",
-                    style: TextStyles.done,
-                  )),
+              RaisedButton(
+                child: Text(
+                  "次へ",
                 ),
                 onPressed: !canNext(context)
                     ? null
