@@ -2,6 +2,7 @@ import 'package:Pilll/theme/color.dart';
 import 'package:Pilll/initial_setting/initial_setting.dart';
 import 'package:Pilll/initial_setting/pill_sheet.dart';
 import 'package:Pilll/model/pill_sheet_type.dart';
+import 'package:Pilll/theme/font.dart';
 import 'package:Pilll/theme/text_style.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -59,7 +60,8 @@ class _InitialSetting1State extends State<InitialSetting1> {
           child: Column(
             children: <Widget>[
               SizedBox(height: 24),
-              Text("飲んでいるピルのタイプはどれ？", style: TextStyles.title),
+              Text("飲んでいるピルのタイプはどれ？",
+                  style: FontType.title.merge(TextColorStyle.standard)),
               SizedBox(height: 24),
               Container(
                 height: 461,

@@ -1,6 +1,7 @@
 import 'package:Pilll/theme/color.dart';
 import 'package:Pilll/initial_setting/initial_setting_1.dart';
 import 'package:Pilll/model/pill_sheet_type.dart';
+import 'package:Pilll/theme/font.dart';
 import 'package:Pilll/theme/text_style.dart';
 import 'package:flutter/material.dart';
 
@@ -37,11 +38,11 @@ class InitialSetting extends StatelessWidget {
               SizedBox(height: 20),
               Text(
                 "ピルシートをご準備ください",
-                style: TextStyles.title,
+                style: FontType.title.merge(TextColorStyle.black),
               ),
               Text(
                 "あなたの飲んでいるピルのタイプから\n使いはじめる準備をします",
-                style: TextStyles.subTitle,
+                style: FontType.title.merge(TextColorStyle.gray),
               ),
               Image(
                 image: AssetImage('images/initial_setting_pill_sheet.png'),
@@ -54,7 +55,7 @@ class InitialSetting extends StatelessWidget {
                   child: Center(
                       child: Text(
                     "OK",
-                    style: TextStyles.done,
+                    style: FontType.done.merge(TextColorStyle.white),
                   )),
                 ),
                 onPressed: () {
