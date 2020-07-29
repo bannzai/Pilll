@@ -1,5 +1,5 @@
-import 'package:Pilll/color.dart';
-import 'package:Pilll/font.dart';
+import 'package:Pilll/theme/color.dart';
+import 'package:Pilll/theme/font.dart';
 import 'package:flutter/material.dart';
 
 class RecordTakenInformation extends StatelessWidget {
@@ -39,7 +39,7 @@ class RecordTakenInformation extends StatelessWidget {
               child: Text(
                 "${_formattedToday()} (${_todayWeekday()})",
                 style: TextStyle(
-                    fontFamily: PilllFontFamily.number,
+                    fontFamily: FontFamily.number,
                     fontWeight: FontWeight.normal,
                     fontSize: 18),
               ),
@@ -63,7 +63,7 @@ class RecordTakenInformation extends StatelessWidget {
                         style: TextStyle(
                             fontSize: 10,
                             fontWeight: FontWeight.w600,
-                            fontFamily: PilllFontFamily.japanese)),
+                            fontFamily: FontFamily.japanese)),
                   ),
                   decoration: BoxDecoration(
                       border: Border.all(),
@@ -77,7 +77,7 @@ class RecordTakenInformation extends StatelessWidget {
                     Text(
                       "${_calcTodayPillNumber()}",
                       style: TextStyle(
-                        fontFamily: PilllFontFamily.number,
+                        fontFamily: FontFamily.number,
                         fontWeight: FontWeight.normal,
                         fontSize: 40,
                       ),
@@ -85,7 +85,7 @@ class RecordTakenInformation extends StatelessWidget {
                     Text(
                       "番",
                       style: TextStyle(
-                        fontFamily: PilllFontFamily.japanese,
+                        fontFamily: FontFamily.japanese,
                         fontWeight: FontWeight.w300,
                         fontSize: 14,
                       ),

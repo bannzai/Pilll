@@ -1,8 +1,9 @@
-import 'package:Pilll/color.dart';
+import 'package:Pilll/theme/color.dart';
 import 'package:Pilll/initial_setting/initial_setting_3.dart';
-import 'package:Pilll/record/pill_sheet.dart';
-import 'package:Pilll/record/pill_sheet_model.dart';
-import 'package:Pilll/text_style.dart';
+import 'package:Pilll/main/record/pill_sheet.dart';
+import 'package:Pilll/main/record/pill_sheet_model.dart';
+import 'package:Pilll/theme/font.dart';
+import 'package:Pilll/theme/text_color.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:provider/provider.dart';
@@ -28,7 +29,7 @@ class InitialSetting2 extends StatelessWidget {
         ),
         title: Text(
           "2/4",
-          style: TextStyle(color: PilllColors.blackText),
+          style: TextStyle(color: TextColor.black),
         ),
         backgroundColor: PilllColors.background,
       ),
@@ -41,7 +42,7 @@ class InitialSetting2 extends StatelessWidget {
                 SizedBox(height: 24),
                 Text(
                   "今日(${today()})\n飲む・飲んだピルの番号をタップ",
-                  style: TextStyles.title,
+                  style: FontType.title.merge(TextColorStyle.standard),
                   textAlign: TextAlign.center,
                 ),
                 SizedBox(height: 24),
@@ -51,17 +52,9 @@ class InitialSetting2 extends StatelessWidget {
                 SizedBox(height: 24),
                 Consumer<PillSheetModel>(
                   builder: (BuildContext context, model, Widget child) {
-                    return FlatButton(
-                      disabledColor: PilllColors.disable,
-                      color: PilllColors.enable,
-                      child: Container(
-                        width: 180,
-                        height: 44,
-                        child: Center(
-                            child: Text(
-                          "次へ",
-                          style: TextStyles.done,
-                        )),
+                    return RaisedButton(
+                      child: Text(
+                        "次へ",
                       ),
                       onPressed: context.watch<PillSheetModel>().number == null
                           ? null
@@ -101,13 +94,15 @@ class ExplainPillNumber extends StatelessWidget {
         children: () {
           if (model.number == null) {
             return <Widget>[
-              Text("", style: TextStyles.largeNumber),
+              Text("", style: FontType.largeNumber.merge(TextColorStyle.black)),
             ];
           }
           return <Widget>[
-            Text("$todayに飲むピルは", style: TextStyles.description),
-            Text("${model.number}", style: TextStyles.largeNumber),
-            Text("番", style: TextStyles.description),
+            Text("$todayに飲むピルは",
+                style: FontType.description.merge(TextColorStyle.black)),
+            Text("${model.number}",
+                style: FontType.largeNumber.merge(TextColorStyle.black)),
+            Text("番", style: FontType.description.merge(TextColorStyle.black)),
           ];
         }(),
       ),

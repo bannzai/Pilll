@@ -1,5 +1,5 @@
 import 'package:flutter/widgets.dart';
-import 'package:Pilll/color.dart';
+import 'package:Pilll/theme/color.dart';
 
 enum Weekday {
   Sunday,

@@ -1,6 +1,7 @@
-import 'package:Pilll/color.dart';
+import 'package:Pilll/theme/color.dart';
 import 'package:Pilll/initial_setting/initial_setting.dart';
-import 'package:Pilll/text_style.dart';
+import 'package:Pilll/theme/font.dart';
+import 'package:Pilll/theme/text_color.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
@@ -58,7 +59,6 @@ class _InitialSetting4State extends State<InitialSetting4> {
                         listen: false);
                     model.hour = value.hour;
                     model.minute = value.minute;
-                    print(value);
                   });
                 },
               )),
@@ -78,7 +78,7 @@ class _InitialSetting4State extends State<InitialSetting4> {
         ),
         title: Text(
           "4/4",
-          style: TextStyle(color: PilllColors.blackText),
+          style: TextStyle(color: TextColor.black),
         ),
         backgroundColor: PilllColors.background,
       ),
@@ -89,7 +89,7 @@ class _InitialSetting4State extends State<InitialSetting4> {
               SizedBox(height: 24),
               Text(
                 "ピルの飲み忘れ通知",
-                style: TextStyles.title,
+                style: FontType.title.merge(TextColorStyle.standard),
                 textAlign: TextAlign.center,
               ),
               SizedBox(height: 132),
@@ -105,29 +105,23 @@ class _InitialSetting4State extends State<InitialSetting4> {
                       },
                       child: Text(
                         timeString(context),
-                        style: TextStyles.largeNumber.merge(
-                          TextStyle(
-                            decoration: TextDecoration.underline,
-                            color: PilllColors.lightGray,
-                          ),
-                        ),
+                        style: FontType.largeNumber
+                            .merge(TextColorStyle.black)
+                            .merge(
+                              TextStyle(
+                                decoration: TextDecoration.underline,
+                                color: PilllColors.lightGray,
+                              ),
+                            ),
                       ),
                     ),
                   ],
                 ),
               ),
               SizedBox(height: 178),
-              FlatButton(
-                disabledColor: PilllColors.disable,
-                color: PilllColors.enable,
-                child: Container(
-                  width: 180,
-                  height: 44,
-                  child: Center(
-                      child: Text(
-                    "設定",
-                    style: TextStyles.done,
-                  )),
+              RaisedButton(
+                child: Text(
+                  "設定",
                 ),
                 onPressed: !_canNext(context)
                     ? null

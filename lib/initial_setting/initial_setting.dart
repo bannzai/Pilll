@@ -1,9 +1,9 @@
-import 'package:Pilll/color.dart';
+import 'package:Pilll/theme/color.dart';
 import 'package:Pilll/initial_setting/initial_setting_1.dart';
 import 'package:Pilll/model/pill_sheet_type.dart';
-import 'package:Pilll/text_style.dart';
+import 'package:Pilll/theme/font.dart';
+import 'package:Pilll/theme/text_color.dart';
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
 
 typedef InitialSettingCallback = void Function(InitialSettingModel);
 
@@ -38,25 +38,18 @@ class InitialSetting extends StatelessWidget {
               SizedBox(height: 20),
               Text(
                 "ピルシートをご準備ください",
-                style: TextStyles.title,
+                style: FontType.title.merge(TextColorStyle.black),
               ),
               Text(
                 "あなたの飲んでいるピルのタイプから\n使いはじめる準備をします",
-                style: TextStyles.subTitle,
+                style: FontType.thinTitle.merge(TextColorStyle.gray),
               ),
               Image(
                 image: AssetImage('images/initial_setting_pill_sheet.png'),
               ),
-              FlatButton(
-                color: PilllColors.enable,
-                child: Container(
-                  width: 180,
-                  height: 44,
-                  child: Center(
-                      child: Text(
-                    "OK",
-                    style: TextStyles.done,
-                  )),
+              RaisedButton(
+                child: Text(
+                  "OK",
                 ),
                 onPressed: () {
                   Navigator.of(context).push(
