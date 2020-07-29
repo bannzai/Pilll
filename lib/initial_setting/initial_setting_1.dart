@@ -50,7 +50,7 @@ class _InitialSetting1State extends State<InitialSetting1> {
         ),
         title: Text(
           "1/4",
-          style: TextStyle(color: PilllColors.blackText),
+          style: TextStyle(color: TextColor.black),
         ),
         backgroundColor: PilllColors.background,
       ),
