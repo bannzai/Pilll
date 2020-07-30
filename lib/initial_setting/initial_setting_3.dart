@@ -181,7 +181,7 @@ class _InitialSetting3State extends State<InitialSetting3> {
               Spacer(),
               Wrap(
                 direction: Axis.vertical,
-                spacing: 24,
+                spacing: 8,
                 children: <Widget>[
                   RaisedButton(
                     child: Text(
@@ -208,7 +208,7 @@ class _InitialSetting3State extends State<InitialSetting3> {
               ),
               ConstrainedBox(
                   child: Container(),
-                  constraints: BoxConstraints.loose(Size(double.infinity, 40))),
+                  constraints: BoxConstraints.loose(Size(double.infinity, 34))),
             ],
           ),
         ),
