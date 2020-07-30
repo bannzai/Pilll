@@ -47,7 +47,7 @@ class InitialSetting2 extends StatelessWidget {
                 ),
                 SizedBox(height: 24),
                 PillSheet(),
-                SizedBox(height: 24),
+                Spacer(),
                 ExplainPillNumber(today: today()),
                 SizedBox(height: 24),
                 Consumer<PillSheetModel>(
@@ -70,6 +70,10 @@ class InitialSetting2 extends StatelessWidget {
                     );
                   },
                 ),
+                ConstrainedBox(
+                    child: Container(),
+                    constraints:
+                        BoxConstraints.loose(Size(double.infinity, 87))),
               ],
             ),
           ),
