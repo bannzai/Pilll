@@ -178,23 +178,37 @@ class _InitialSetting3State extends State<InitialSetting3> {
                   ],
                 ),
               ),
-              SizedBox(height: 120),
-              RaisedButton(
-                child: Text(
-                  "次へ",
-                ),
-                onPressed: !canNext(context)
-                    ? null
-                    : () {
-                        Navigator.of(context).push(
-                          MaterialPageRoute(
-                            builder: (BuildContext context) {
-                              return InitialSetting4();
-                            },
-                          ),
-                        );
-                      },
+              Spacer(),
+              Wrap(
+                direction: Axis.vertical,
+                spacing: 24,
+                children: <Widget>[
+                  RaisedButton(
+                    child: Text(
+                      "次へ",
+                    ),
+                    onPressed: !canNext(context)
+                        ? null
+                        : () {
+                            Navigator.of(context).push(
+                              MaterialPageRoute(
+                                builder: (BuildContext context) {
+                                  return InitialSetting4();
+                                },
+                              ),
+                            );
+                          },
+                  ),
+                  FlatButton(
+                    child: Text("スキップ"),
+                    textColor: TextColor.gray,
+                    onPressed: () {},
+                  ),
+                ],
               ),
+              ConstrainedBox(
+                  child: Container(),
+                  constraints: BoxConstraints.loose(Size(double.infinity, 40))),
             ],
           ),
         ),
