@@ -122,9 +122,9 @@ class _InitialSetting3State extends State<InitialSetting3> {
                 style: FontType.title.merge(TextColorStyle.standard),
                 textAlign: TextAlign.center,
               ),
-              SizedBox(height: 132),
+              Spacer(),
               Container(
-                height: 170,
+                height: 156,
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: <Widget>[
@@ -206,9 +206,7 @@ class _InitialSetting3State extends State<InitialSetting3> {
                   ),
                 ],
               ),
-              ConstrainedBox(
-                  child: Container(),
-                  constraints: BoxConstraints.loose(Size(double.infinity, 34))),
+              Spacer(),
             ],
           ),
         ),
