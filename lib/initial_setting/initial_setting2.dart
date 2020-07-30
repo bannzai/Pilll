@@ -52,7 +52,7 @@ class InitialSetting2 extends StatelessWidget {
                 SizedBox(height: 24),
                 Wrap(
                   direction: Axis.vertical,
-                  spacing: 24,
+                  spacing: 8,
                   children: <Widget>[
                     Consumer<PillSheetModel>(
                       builder: (BuildContext context, model, Widget child) {
@@ -85,7 +85,7 @@ class InitialSetting2 extends StatelessWidget {
                 ConstrainedBox(
                     child: Container(),
                     constraints:
-                        BoxConstraints.loose(Size(double.infinity, 40))),
+                        BoxConstraints.loose(Size(double.infinity, 34))),
               ],
             ),
           ),
