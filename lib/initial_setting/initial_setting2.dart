@@ -50,30 +50,42 @@ class InitialSetting2 extends StatelessWidget {
                 Spacer(),
                 ExplainPillNumber(today: today()),
                 SizedBox(height: 24),
-                Consumer<PillSheetModel>(
-                  builder: (BuildContext context, model, Widget child) {
-                    return RaisedButton(
-                      child: Text(
-                        "次へ",
-                      ),
-                      onPressed: context.watch<PillSheetModel>().number == null
-                          ? null
-                          : () {
-                              Navigator.of(context).push(
-                                MaterialPageRoute(
-                                  builder: (BuildContext context) {
-                                    return InitialSetting3();
-                                  },
-                                ),
-                              );
-                            },
-                    );
-                  },
+                Wrap(
+                  direction: Axis.vertical,
+                  spacing: 24,
+                  children: <Widget>[
+                    Consumer<PillSheetModel>(
+                      builder: (BuildContext context, model, Widget child) {
+                        return RaisedButton(
+                          child: Text(
+                            "次へ",
+                          ),
+                          onPressed:
+                              context.watch<PillSheetModel>().number == null
+                                  ? null
+                                  : () {
+                                      Navigator.of(context).push(
+                                        MaterialPageRoute(
+                                          builder: (BuildContext context) {
+                                            return InitialSetting3();
+                                          },
+                                        ),
+                                      );
+                                    },
+                        );
+                      },
+                    ),
+                    FlatButton(
+                      child: Text("スキップ"),
+                      textColor: TextColor.gray,
+                      onPressed: () {},
+                    ),
+                  ],
                 ),
                 ConstrainedBox(
                     child: Container(),
                     constraints:
-                        BoxConstraints.loose(Size(double.infinity, 87))),
+                        BoxConstraints.loose(Size(double.infinity, 40))),
               ],
             ),
           ),
