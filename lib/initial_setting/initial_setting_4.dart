@@ -92,7 +92,7 @@ class _InitialSetting4State extends State<InitialSetting4> {
                 style: FontType.title.merge(TextColorStyle.standard),
                 textAlign: TextAlign.center,
               ),
-              Spacer(),
+              SizedBox(height: 132),
               Container(
                 height: 77,
                 child: Column(
@@ -138,7 +138,9 @@ class _InitialSetting4State extends State<InitialSetting4> {
                   ),
                 ],
               ),
-              Spacer(),
+              ConstrainedBox(
+                  child: Container(),
+                  constraints: BoxConstraints.loose(Size(double.infinity, 34))),
             ],
           ),
         ),
