@@ -45,9 +45,9 @@ class InitialSetting2 extends StatelessWidget {
                   style: FontType.title.merge(TextColorStyle.standard),
                   textAlign: TextAlign.center,
                 ),
-                SizedBox(height: 24),
-                PillSheet(),
                 Spacer(),
+                PillSheet(),
+                SizedBox(height: 24),
                 ExplainPillNumber(today: today()),
                 SizedBox(height: 24),
                 Wrap(
@@ -82,10 +82,7 @@ class InitialSetting2 extends StatelessWidget {
                     ),
                   ],
                 ),
-                ConstrainedBox(
-                    child: Container(),
-                    constraints:
-                        BoxConstraints.loose(Size(double.infinity, 34))),
+                Spacer(),
               ],
             ),
           ),
