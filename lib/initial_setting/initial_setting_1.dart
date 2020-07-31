@@ -1,3 +1,4 @@
+import 'package:Pilll/initial_setting/initial_setting_2.dart';
 import 'package:Pilll/theme/color.dart';
 import 'package:Pilll/initial_setting/initial_setting.dart';
 import 'package:Pilll/initial_setting/pill_sheet.dart';
@@ -6,8 +7,6 @@ import 'package:Pilll/theme/font.dart';
 import 'package:Pilll/theme/text_color.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
-
-import 'initial_setting2.dart';
 
 class InitialSetting1 extends StatefulWidget {
   const InitialSetting1({Key key}) : super(key: key);
