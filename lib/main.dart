@@ -75,7 +75,7 @@ class _MyHomePageState extends State<MyHomePage>
     setState(() {});
   }
 
-  Future<bool> getIsDidEndInitialSettingKey() async {
+  Future<bool> getIsDidEndInitialSetting() async {
     SharedPreferences preferences = await SharedPreferences.getInstance();
     return preferences.getBool("isDidEndInitialSettingKey");
   }
@@ -83,7 +83,7 @@ class _MyHomePageState extends State<MyHomePage>
   @override
   Widget build(BuildContext context) {
     return FutureBuilder(
-        future: getIsDidEndInitialSettingKey(),
+        future: getIsDidEndInitialSetting(),
         builder: (BuildContext context, AsyncSnapshot<bool> snapshot) {
           if (!snapshot.hasData) {
             return InitialSetting();
