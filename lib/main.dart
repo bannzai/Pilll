@@ -7,6 +7,7 @@ import 'package:Pilll/theme/font.dart';
 import 'package:Pilll/theme/text_color.dart';
 import 'package:firebase_analytics/firebase_analytics.dart';
 import 'package:firebase_analytics/observer.dart';
+import 'package:Pilll/widget/shared_preference.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -75,15 +76,10 @@ class _MyHomePageState extends State<MyHomePage>
     setState(() {});
   }
 
-  Future<bool> getIsDidEndInitialSetting() async {
-    SharedPreferences preferences = await SharedPreferences.getInstance();
-    return preferences.getBool("isDidEndInitialSettingKey");
-  }
-
   @override
   Widget build(BuildContext context) {
-    return FutureBuilder(
-        future: getIsDidEndInitialSetting(),
+    return SharedPreferencesBuilder<bool>(
+        preferenceKey: "isDidEndInitialSettingKey",
         builder: (BuildContext context, AsyncSnapshot<bool> snapshot) {
           if (!snapshot.hasData) {
             return InitialSetting();
