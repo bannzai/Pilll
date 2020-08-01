@@ -122,9 +122,9 @@ class _InitialSetting3State extends State<InitialSetting3> {
                 style: FontType.title.merge(TextColorStyle.standard),
                 textAlign: TextAlign.center,
               ),
-              SizedBox(height: 132),
+              Spacer(),
               Container(
-                height: 170,
+                height: 156,
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: <Widget>[
@@ -178,23 +178,35 @@ class _InitialSetting3State extends State<InitialSetting3> {
                   ],
                 ),
               ),
-              SizedBox(height: 120),
-              RaisedButton(
-                child: Text(
-                  "次へ",
-                ),
-                onPressed: !canNext(context)
-                    ? null
-                    : () {
-                        Navigator.of(context).push(
-                          MaterialPageRoute(
-                            builder: (BuildContext context) {
-                              return InitialSetting4();
-                            },
-                          ),
-                        );
-                      },
+              Spacer(),
+              Wrap(
+                direction: Axis.vertical,
+                spacing: 8,
+                children: <Widget>[
+                  RaisedButton(
+                    child: Text(
+                      "次へ",
+                    ),
+                    onPressed: !canNext(context)
+                        ? null
+                        : () {
+                            Navigator.of(context).push(
+                              MaterialPageRoute(
+                                builder: (BuildContext context) {
+                                  return InitialSetting4();
+                                },
+                              ),
+                            );
+                          },
+                  ),
+                  FlatButton(
+                    child: Text("スキップ"),
+                    textColor: TextColor.gray,
+                    onPressed: () {},
+                  ),
+                ],
               ),
+              Spacer(),
             ],
           ),
         ),

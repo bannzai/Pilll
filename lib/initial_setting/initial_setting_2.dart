@@ -45,31 +45,44 @@ class InitialSetting2 extends StatelessWidget {
                   style: FontType.title.merge(TextColorStyle.standard),
                   textAlign: TextAlign.center,
                 ),
-                SizedBox(height: 24),
+                Spacer(),
                 PillSheet(),
                 SizedBox(height: 24),
                 ExplainPillNumber(today: today()),
                 SizedBox(height: 24),
-                Consumer<PillSheetModel>(
-                  builder: (BuildContext context, model, Widget child) {
-                    return RaisedButton(
-                      child: Text(
-                        "次へ",
-                      ),
-                      onPressed: context.watch<PillSheetModel>().number == null
-                          ? null
-                          : () {
-                              Navigator.of(context).push(
-                                MaterialPageRoute(
-                                  builder: (BuildContext context) {
-                                    return InitialSetting3();
-                                  },
-                                ),
-                              );
-                            },
-                    );
-                  },
+                Wrap(
+                  direction: Axis.vertical,
+                  spacing: 8,
+                  children: <Widget>[
+                    Consumer<PillSheetModel>(
+                      builder: (BuildContext context, model, Widget child) {
+                        return RaisedButton(
+                          child: Text(
+                            "次へ",
+                          ),
+                          onPressed:
+                              context.watch<PillSheetModel>().number == null
+                                  ? null
+                                  : () {
+                                      Navigator.of(context).push(
+                                        MaterialPageRoute(
+                                          builder: (BuildContext context) {
+                                            return InitialSetting3();
+                                          },
+                                        ),
+                                      );
+                                    },
+                        );
+                      },
+                    ),
+                    FlatButton(
+                      child: Text("スキップ"),
+                      textColor: TextColor.gray,
+                      onPressed: () {},
+                    ),
+                  ],
                 ),
+                Spacer(),
               ],
             ),
           ),
