@@ -92,7 +92,7 @@ class _InitialSetting4State extends State<InitialSetting4> {
                 style: FontType.title.merge(TextColorStyle.standard),
                 textAlign: TextAlign.center,
               ),
-              SizedBox(height: 132),
+              Spacer(),
               Container(
                 height: 77,
                 child: Column(
@@ -118,15 +118,27 @@ class _InitialSetting4State extends State<InitialSetting4> {
                   ],
                 ),
               ),
-              SizedBox(height: 178),
-              RaisedButton(
-                child: Text(
-                  "設定",
-                ),
-                onPressed: !_canNext(context)
-                    ? null
-                    : context.watch<InitialSettingModel>().done,
+              Spacer(),
+              Wrap(
+                direction: Axis.vertical,
+                spacing: 8,
+                children: <Widget>[
+                  RaisedButton(
+                    child: Text(
+                      "設定",
+                    ),
+                    onPressed: !_canNext(context)
+                        ? null
+                        : context.watch<InitialSettingModel>().done,
+                  ),
+                  FlatButton(
+                    child: Text("スキップ"),
+                    textColor: TextColor.gray,
+                    onPressed: () {},
+                  ),
+                ],
               ),
+              Spacer(),
             ],
           ),
         ),
