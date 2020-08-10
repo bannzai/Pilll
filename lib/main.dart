@@ -8,6 +8,9 @@ import 'package:Pilll/theme/text_color.dart';
 import 'package:firebase_analytics/firebase_analytics.dart';
 import 'package:firebase_analytics/observer.dart';
 import 'package:Pilll/widget/shared_preference.dart';
+import 'package:Pilll/widget/shared_preference.dart';
+import 'package:Pilll/util/shared_preference/keys.dart';
+import 'package:Pilll/util/shared_preference/shared_preference.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -79,7 +82,7 @@ class _MyHomePageState extends State<MyHomePage>
   @override
   Widget build(BuildContext context) {
     return SharedPreferencesBuilder<bool>(
-        preferenceKey: "isDidEndInitialSettingKey",
+        preferenceKey: BoolKey.didEndInitialSetting,
         builder: (BuildContext context, AsyncSnapshot<bool> snapshot) {
           if (!snapshot.hasData) {
             return InitialSetting();
