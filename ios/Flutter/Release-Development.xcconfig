@@ -1,1 +1,2 @@
-
+#include "Release.xcconfig"
+#include "Development.xcconfig"
