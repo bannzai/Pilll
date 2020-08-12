@@ -314,7 +314,6 @@
 			);
 			name = "Replace GoogleService-Info.plist";
 			outputFileListPaths = (
-				"$(SRCROOT)/Firebase/GoogleService-Info.plist",
 			);
 			outputPaths = (
 			);
