@@ -1,3 +1,5 @@
+import 'package:Pilll/main/record/pill_sheet_model.dart';
+import 'package:Pilll/model/pill_sheet_type.dart';
 import 'package:Pilll/theme/color.dart';
 import 'package:Pilll/initial_setting/initial_setting.dart';
 import 'package:Pilll/initial_setting/initial_setting_1.dart';
@@ -31,7 +33,11 @@ class MyApp extends StatelessWidget {
     return MultiProvider(
       providers: [
         ChangeNotifierProvider<InitialSettingModel>(
-            create: (_) => InitialSettingModel()),
+          create: (_) => InitialSettingModel(),
+        ),
+        ChangeNotifierProvider<PillSheetModel>(
+          create: (_) => MainPillSheetModel(PillSheetType.pillsheet_21),
+        ),
       ],
       child: MaterialApp(
         title: 'Flutter Demo',
