@@ -1,2 +1,6 @@
 #include "Pods/Target Support Files/Pods-Runner/Pods-Runner.debug.xcconfig"
 #include "Generated.xcconfig"
+
+OTHER_SWIFT_FLAGS = $(inherited) "-D" "DEBUG"
+PRODUCT_BUNDLE_IDENTIFIER=com.mizuki.Ohashi.Pilll.development
+DISPLAY_NAME=Pilll-dev
