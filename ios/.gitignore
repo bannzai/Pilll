@@ -33,4 +33,5 @@ Runner/GeneratedPluginRegistrant.*
 
 # GoogleService-Info.plist
 GoogleService-Info*.plist
+_GoogleService-Info*.plist
 
