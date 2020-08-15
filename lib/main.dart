@@ -13,7 +13,6 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:intl/date_symbol_data_local.dart';
 import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
 
 void main() {
   initializeDateFormatting('ja_JP');
@@ -25,13 +24,6 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     FirebaseAnalytics analytics = FirebaseAnalytics();
-    Firestore.instance
-        .collection('environments')
-        .document("5ue4UikEtmgagUpz9yPH")
-        .snapshots()
-        .listen((event) {
-      print(event.data.toString());
-    });
     return MultiProvider(
       providers: [
         ChangeNotifierProvider<InitialSettingModel>(
