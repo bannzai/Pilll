@@ -18,6 +18,13 @@ jobs:
     - uses: actions/setup-java@v1
       with:
         java-version: '12.x'
+		- name: Prepare firebase config
+			run: make secret
+			env:
+				FILE_FIREBASE_ANDROID_DEVELOPMENT: ${{ secrets.FILE_FIREBASE_ANDROID_DEVELOPMENT }}
+				FILE_FIREBASE_ANDROID_PRODUCTION: ${{ secrets.FILE_FIREBASE_ANDROID_PRODUCTION }}
+				FILE_FIREBASE_IOS_DEVELOPMENT: ${{ secrets.FILE_FIREBASE_IOS_DEVELOPMENT }}
+				FILE_FIREBASE_IOS_PRODUCTION: ${{ secrets.FILE_FIREBASE_IOS_PRODUCTION }}
     - uses: subosito/flutter-action@v1
       with:
         flutter-version: '1.17.3'
