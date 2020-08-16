@@ -320,7 +320,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "./scripts/prepare_firebase_config.sh\n";
+			shellScript = "DIR=${PROJECT_DIR}/Firebase\necho \"Replacing for $CONFIGURATION\"\nif [[ $CONFIGURATION == *\"Development\" ]]; then\n    cp $DIR/GoogleService-Info-Development.plist $DIR/GoogleService-Info.plist\nelif [[ $CONFIGURATION == \"Debug\"* ]]; then\n    cp $DIR/GoogleService-Info-Development.plist $DIR/GoogleService-Info.plist\nelif [[ $CONFIGURATION == *\"Production\" ]]; then\n    cp $DIR/GoogleService-Info-Production.plist $DIR/GoogleService-Info.plist\nelif [[ $CONFIGURATION == \"Release\"* ]]; then\n    cp $DIR/GoogleService-Info-Production.plist $DIR/GoogleService-Info.plist\nelse\n    echo \"configuration didn't match to Development, Production\"\n    echo $CONFIGURATION\n    exit 1\nfi\n";
 		};
 		D0248FA5F76CFF05569BD228 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
