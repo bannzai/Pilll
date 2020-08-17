@@ -36,6 +36,8 @@ target 'Runner' do
   use_frameworks!
   use_modular_headers!
 
+  pod 'FirebaseFirestore', :git => 'https://github.com/invertase/firestore-ios-sdk-frameworks.git', :tag => '6.27.0'
+
   # Flutter Pod
 
   copied_flutter_dir = File.join(__dir__, 'Flutter')
