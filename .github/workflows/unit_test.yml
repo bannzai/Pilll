@@ -18,6 +18,10 @@ jobs:
     - uses: actions/setup-java@v1
       with:
         java-version: '12.x'
+    - name: Prepare Android KeyStore File
+      run: make github-actions
+      env:
+        ANDROID_KEYSTORE_FILE: ${{ secrets.ANDROID_KEYSTORE_FILE }}
     - name: Prepare firebase config
       run: make secret
       env:
