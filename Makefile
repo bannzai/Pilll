@@ -7,6 +7,9 @@ secret:
 	echo $(FILE_FIREBASE_IOS_PRODUCTION) | base64 -D > ios/Firebase/GoogleService-Info-Production.plist
 	./android/scripts/key_properties.sh
 
+github-actions:
+	echo $(ANDROID_KEYSTORE_FILE) | base64 -D > android/key.jks
+
 secret-backup:
 	mv android/app/src/development/google-services.json android/app/src/development/_google-services.json
 	mv android/app/src/production/google-services.json android/app/src/production/_google-services.json
