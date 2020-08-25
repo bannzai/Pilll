@@ -1,5 +1,6 @@
 import 'package:Pilll/main/record/pill_sheet_model.dart';
 import 'package:Pilll/model/pill_sheet_type.dart';
+import 'package:Pilll/settings/settings.dart';
 import 'package:Pilll/theme/color.dart';
 import 'package:Pilll/initial_setting/initial_setting.dart';
 import 'package:Pilll/initial_setting/initial_setting_1.dart';
@@ -86,12 +87,13 @@ class _MyHomePageState extends State<MyHomePage>
     return SharedPreferencesBuilder<bool>(
         preferenceKey: BoolKey.didEndInitialSetting,
         builder: (BuildContext context, AsyncSnapshot<bool> snapshot) {
-          if (!snapshot.hasData) {
-            return InitialSetting();
-          }
-          if (!snapshot.data) {
-            return InitialSetting();
-          }
+          // TODO:
+          // if (!snapshot.hasData) {
+          //   return InitialSetting();
+          // }
+          // if (!snapshot.data) {
+          //   return InitialSetting();
+          // }
           return DefaultTabController(
             length: 3,
             child: Scaffold(
@@ -142,9 +144,10 @@ class _MyHomePageState extends State<MyHomePage>
               body: TabBarView(
                 controller: _tabController,
                 children: <Widget>[
-                  InitialSetting1(),
+                  Settings(),
                   _recordView(),
                   _recordView(),
+                  // Settings(),
                 ],
               ),
             ),
