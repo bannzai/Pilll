@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 
-enum SettingSection { first, second }
+enum SettingSection { pill, menstruation, notification, other }
 enum SettingRowType { title, date }
 typedef SettingsSelectedRow = void Function(SettingSection section, int row);
 
@@ -8,25 +8,64 @@ abstract class SettingListRowModel {
   Widget widget();
 }
 
-class SettingsListTitleRowModel extends SettingListRowModel {
-  final String text;
+class SettingListTitleRowModel extends SettingListRowModel {
+  final String title;
 
-  SettingsListTitleRowModel(this.text);
+  SettingListTitleRowModel({this.title});
   @override
   Widget widget() {
-    return ListTile(title: Text(text));
+    return ListTile(
+      title: Text(title),
+    );
   }
 }
 
-class SettingsListDateRowModel extends SettingListRowModel {
+class SettingListTitleAndSubTitleRowModel extends SettingListRowModel {
+  final String title;
+  final String subTitle;
+
+  SettingListTitleAndSubTitleRowModel({this.title, this.subTitle});
   @override
   Widget widget() {
-    return Text("TODO:");
+    return ListTile(
+      title: Text(title),
+      subtitle: Text(subTitle),
+    );
+  }
+}
+
+class SettingsListSwitchRowModel extends SettingListRowModel {
+  final String title;
+  bool value;
+
+  SettingsListSwitchRowModel({this.title, this.value});
+  @override
+  Widget widget() {
+    return SwitchListTile(
+      title: Text(title),
+      onChanged: (bool value) {
+        this.value = value;
+      },
+      value: this.value,
+    );
+  }
+}
+
+class SettingsListDatePickerRowModel extends SettingListRowModel {
+  final String title;
+  final String subTitle;
+
+  SettingsListDatePickerRowModel({this.title, this.subTitle});
+  @override
+  Widget widget() {
+    return ListTile(
+      title: Text(title),
+      subtitle: Text(subTitle),
+    );
   }
 }
 
 class Settings extends StatelessWidget {
-  Map<SettingSection, String> dataSource = {};
   @override
   Widget build(BuildContext context) {
     return ListView.separated(
@@ -41,16 +80,43 @@ class Settings extends StatelessWidget {
     );
   }
 
+  // ignore: missing_return
   Widget _sectionTitle(SettingSection section) {
-    return ListTile(title: Text("sectin titile $section"));
+    switch (section) {
+      case SettingSection.pill:
+        return ListTile(title: Text("ピルの設定"));
+      case SettingSection.menstruation:
+        return ListTile(title: Text("生理"));
+      case SettingSection.notification:
+        return ListTile(title: Text("通知"));
+      case SettingSection.other:
+        return ListTile(title: Text("その他"));
+    }
   }
 
+  // ignore: missing_return
   List<SettingListRowModel> _rowModels(SettingSection section) {
     switch (section) {
-      case SettingSection.first:
-        return [SettingsListTitleRowModel("abc")];
-      case SettingSection.second:
-        return [];
+      case SettingSection.pill:
+        return [
+          SettingListTitleAndSubTitleRowModel(
+              title: "種類", subTitle: "28錠タイプ(7錠偽薬)"),
+        ];
+      case SettingSection.menstruation:
+        return [
+          SettingListTitleRowModel(title: "生理について"),
+        ];
+      case SettingSection.notification:
+        return [
+          SettingsListSwitchRowModel(title: "ピルの服用通知", value: false),
+          SettingsListDatePickerRowModel(title: "通知時刻", subTitle: "02:03"),
+        ];
+      case SettingSection.other:
+        return [
+          SettingListTitleRowModel(title: "利用規約"),
+          SettingListTitleRowModel(title: "プライバシーポリシー"),
+          SettingListTitleRowModel(title: "お問い合わせ"),
+        ];
     }
   }
 
