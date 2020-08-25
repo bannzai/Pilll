@@ -1,6 +1,29 @@
 import 'package:flutter/material.dart';
 
+enum SettingSection { first, second }
+enum SettingRowType { title, date }
+typedef SettingsSelectedRow = void Function(SettingSection section, int row);
+
+abstract class SettingListRowModel {
+  Widget widget();
+}
+
+class SettingsListTitleRowModel extends SettingListRowModel {
+  @override
+  Widget widget() {
+    return Text("TODO:");
+  }
+}
+
+class SettingsListDateeRowModel extends SettingListRowModel {
+  @override
+  Widget widget() {
+    return Text("TODO:");
+  }
+}
+
 class Settings extends StatelessWidget {
+  Map<SettingSection, String> dataSource = {};
   @override
   Widget build(BuildContext context) {
     var list = [
@@ -13,20 +36,38 @@ class Settings extends StatelessWidget {
       "メッセージ",
       "メッセージ",
     ];
-    return MaterialApp(
-        home: Scaffold(
-            appBar: AppBar(
-              title: Text('ListView'),
-            ),
-            body: ListView.separated(
-              itemBuilder: (BuildContext context, int index) {
-                return _messageItem(list[index]);
-              },
-              separatorBuilder: (BuildContext context, int index) {
-                return separatorItem();
-              },
-              itemCount: list.length,
-            )));
+    return ListView.separated(
+      itemBuilder: (BuildContext context, int index) {
+        return _section(SettingSection.values[index], (section, row) {});
+      },
+      separatorBuilder: (BuildContext context, int index) {
+        return separatorItem();
+      },
+      itemCount: SettingSection.values.length,
+      addRepaintBoundaries: false,
+    );
+  }
+
+  Widget _sectionTitle(SettingSection section) {
+    return Text("sectin titile $section");
+  }
+
+  List<SettingListRowModel> _rowModels(SettingSection section) {
+    switch (section) {
+      case SettingSection.first:
+        return [];
+      case SettingSection.second:
+        return [];
+    }
+  }
+
+  Widget _section(SettingSection section, SettingsSelectedRow callback) {
+    return ListView(
+      children: [
+        _sectionTitle(section),
+        ..._rowModels(section).map((e) => e.widget()),
+      ],
+    );
   }
 
   Widget separatorItem() {
