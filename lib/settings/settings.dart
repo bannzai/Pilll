@@ -14,7 +14,7 @@ class SettingsListTitleRowModel extends SettingListRowModel {
   SettingsListTitleRowModel(this.text);
   @override
   Widget widget() {
-    return Text(text);
+    return ListTile(title: Text(text));
   }
 }
 
@@ -42,7 +42,7 @@ class Settings extends StatelessWidget {
   }
 
   Widget _sectionTitle(SettingSection section) {
-    return Text("sectin titile $section");
+    return ListTile(title: Text("sectin titile $section"));
   }
 
   List<SettingListRowModel> _rowModels(SettingSection section) {
