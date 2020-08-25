@@ -9,13 +9,16 @@ abstract class SettingListRowModel {
 }
 
 class SettingsListTitleRowModel extends SettingListRowModel {
+  final String text;
+
+  SettingsListTitleRowModel(this.text);
   @override
   Widget widget() {
-    return Text("TODO:");
+    return Text(text);
   }
 }
 
-class SettingsListDateeRowModel extends SettingListRowModel {
+class SettingsListDateRowModel extends SettingListRowModel {
   @override
   Widget widget() {
     return Text("TODO:");
@@ -26,16 +29,6 @@ class Settings extends StatelessWidget {
   Map<SettingSection, String> dataSource = {};
   @override
   Widget build(BuildContext context) {
-    var list = [
-      "メッセージ",
-      "メッセージ",
-      "メッセージ",
-      "メッセージ",
-      "メッセージ",
-      "メッセージ",
-      "メッセージ",
-      "メッセージ",
-    ];
     return ListView.separated(
       itemBuilder: (BuildContext context, int index) {
         return _section(SettingSection.values[index], (section, row) {});
@@ -55,14 +48,15 @@ class Settings extends StatelessWidget {
   List<SettingListRowModel> _rowModels(SettingSection section) {
     switch (section) {
       case SettingSection.first:
-        return [];
+        return [SettingsListTitleRowModel("abc")];
       case SettingSection.second:
         return [];
     }
   }
 
   Widget _section(SettingSection section, SettingsSelectedRow callback) {
-    return ListView(
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         _sectionTitle(section),
         ..._rowModels(section).map((e) => e.widget()),
