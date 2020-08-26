@@ -1,3 +1,4 @@
+import 'package:Pilll/main/application/router.dart';
 import 'package:Pilll/theme/color.dart';
 import 'package:Pilll/initial_setting/initial_setting.dart';
 import 'package:Pilll/theme/font.dart';
@@ -40,7 +41,9 @@ class _InitialSetting4State extends State<InitialSetting4> {
         t.year, t.month, t.day, 22, 0, t.second, t.millisecond, t.microsecond);
   }
 
-  void _done() {}
+  void _done() {
+    Router.endInitialSetting(context);
+  }
 
   void _showDurationModalSheet(BuildContext context) {
     showModalBottomSheet(
@@ -131,14 +134,12 @@ class _InitialSetting4State extends State<InitialSetting4> {
                     child: Text(
                       "設定",
                     ),
-                    onPressed: !_canNext(context)
-                        ? null
-                        : context.watch<InitialSettingModel>().done,
+                    onPressed: !_canNext(context) ? null : _done,
                   ),
                   FlatButton(
                     child: Text("スキップ"),
                     textColor: TextColor.gray,
-                    onPressed: Provider.of<InitialSettingModel>(context).done,
+                    onPressed: _done,
                   ),
                 ],
               ),
