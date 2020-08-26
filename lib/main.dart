@@ -46,9 +46,7 @@ class App extends StatelessWidget {
             textTheme: ButtonTextTheme.primary,
           ),
         ),
-        home: HomePage(),
         routes: Router.routes(),
-        initialRoute: Routes.root,
       ),
     );
   }
