@@ -18,11 +18,16 @@ class RootState extends State<Root> {
   void initState() {
     super.initState();
     SharedPreferences.getInstance().then((storage) {
-      if (storage.getBool(BoolKey.didEndInitialSetting)) {
-        Navigator.popAndPushNamed(context, Routes.main);
-      } else {
+      bool didEndInitialSetting = storage.getBool(BoolKey.didEndInitialSetting);
+      if (didEndInitialSetting == null) {
         Navigator.popAndPushNamed(context, Routes.initialSetting);
+        return;
       }
+      if (!didEndInitialSetting) {
+        Navigator.popAndPushNamed(context, Routes.initialSetting);
+        return;
+      }
+      Navigator.popAndPushNamed(context, Routes.main);
     });
   }
 
