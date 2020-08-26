@@ -80,7 +80,7 @@ class InitialSetting2 extends StatelessWidget {
                       child: Text("スキップ"),
                       textColor: TextColor.gray,
                       onPressed: () {
-                        Navigator.popAndPushNamed(context, Routes.main);
+                        Router.endInitialSetting(context);
                       },
                     ),
                   ],

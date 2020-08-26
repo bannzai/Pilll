@@ -13,13 +13,6 @@ class InitialSettingModel extends ChangeNotifier {
   int durationMenstruation;
   int hour;
   int minute;
-
-  void done() {
-    SharedPreferences.getInstance().then((storage) {
-      storage.setBool(BoolKey.didEndInitialSetting, true);
-      notifyListeners();
-    });
-  }
 }
 
 class InitialSetting extends StatelessWidget {
