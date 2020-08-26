@@ -3,8 +3,6 @@ import 'package:Pilll/main/record/record_taken_information.dart';
 import 'package:Pilll/settings/settings.dart';
 import 'package:Pilll/theme/color.dart';
 import 'package:Pilll/theme/text_color.dart';
-import 'package:Pilll/util/shared_preference/keys.dart';
-import 'package:Pilll/util/shared_preference/shared_preference.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
