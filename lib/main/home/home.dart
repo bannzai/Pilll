@@ -32,75 +32,62 @@ class _HomePageState extends State<HomePage>
 
   @override
   Widget build(BuildContext context) {
-    return SharedPreferencesBuilder<bool>(
-        preferenceKey: BoolKey.didEndInitialSetting,
-        builder: (BuildContext context, AsyncSnapshot<bool> snapshot) {
-          // TODO:
-          // if (!snapshot.hasData) {
-          //   return InitialSetting();
-          // }
-          // if (!snapshot.data) {
-          //   return InitialSetting();
-          // }
-          return DefaultTabController(
-            length: 3,
-            child: Scaffold(
-              backgroundColor: PilllColors.background,
-              appBar: AppBar(
-                title: Text('Pilll'),
-                backgroundColor: PilllColors.primary,
-              ),
-              bottomNavigationBar: Container(
-                decoration: BoxDecoration(
-                  border: Border(
-                      top: BorderSide(width: 1, color: PilllColors.border)),
-                ),
-                child: Ink(
-                  color: PilllColors.bottomBar,
-                  child: SafeArea(
-                    child: TabBar(
-                      controller: _tabController,
-                      labelColor: PilllColors.primary,
-                      indicatorColor: Colors.transparent,
-                      unselectedLabelColor: TextColor.gray,
-                      tabs: <Tab>[
-                        Tab(
-                            text: "ピル",
-                            icon: SvgPicture.asset("images/tab_icon_pill.svg",
-                                color: _tabController.index == 0
-                                    ? PilllColors.primary
-                                    : TextColor.gray)),
-                        Tab(
-                            text: "2020/07",
-                            icon: SvgPicture.asset(
-                                "images/tab_icon_calendar.svg",
-                                color: _tabController.index == 1
-                                    ? PilllColors.primary
-                                    : TextColor.gray)),
-                        Tab(
-                            text: "設定",
-                            icon: SvgPicture.asset(
-                                "images/tab_icon_setting.svg",
-                                color: _tabController.index == 2
-                                    ? PilllColors.primary
-                                    : TextColor.gray)),
-                      ],
-                    ),
-                  ),
-                ),
-              ),
-              body: TabBarView(
+    return DefaultTabController(
+      length: 3,
+      child: Scaffold(
+        backgroundColor: PilllColors.background,
+        appBar: AppBar(
+          title: Text('Pilll'),
+          backgroundColor: PilllColors.primary,
+        ),
+        bottomNavigationBar: Container(
+          decoration: BoxDecoration(
+            border:
+                Border(top: BorderSide(width: 1, color: PilllColors.border)),
+          ),
+          child: Ink(
+            color: PilllColors.bottomBar,
+            child: SafeArea(
+              child: TabBar(
                 controller: _tabController,
-                children: <Widget>[
-                  Settings(),
-                  _recordView(),
-                  _recordView(),
-                  // Settings(),
+                labelColor: PilllColors.primary,
+                indicatorColor: Colors.transparent,
+                unselectedLabelColor: TextColor.gray,
+                tabs: <Tab>[
+                  Tab(
+                      text: "ピル",
+                      icon: SvgPicture.asset("images/tab_icon_pill.svg",
+                          color: _tabController.index == 0
+                              ? PilllColors.primary
+                              : TextColor.gray)),
+                  Tab(
+                      text: "2020/07",
+                      icon: SvgPicture.asset("images/tab_icon_calendar.svg",
+                          color: _tabController.index == 1
+                              ? PilllColors.primary
+                              : TextColor.gray)),
+                  Tab(
+                      text: "設定",
+                      icon: SvgPicture.asset("images/tab_icon_setting.svg",
+                          color: _tabController.index == 2
+                              ? PilllColors.primary
+                              : TextColor.gray)),
                 ],
               ),
             ),
-          );
-        });
+          ),
+        ),
+        body: TabBarView(
+          controller: _tabController,
+          children: <Widget>[
+            Settings(),
+            _recordView(),
+            _recordView(),
+            // Settings(),
+          ],
+        ),
+      ),
+    );
   }
 
   Center _recordView() {
