@@ -20,10 +20,10 @@ import 'package:provider/provider.dart';
 void main() {
   initializeDateFormatting('ja_JP');
   // debugPaintSizeEnabled = true;
-  runApp(MyApp());
+  runApp(App());
 }
 
-class MyApp extends StatelessWidget {
+class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     FirebaseAnalytics analytics = FirebaseAnalytics();
