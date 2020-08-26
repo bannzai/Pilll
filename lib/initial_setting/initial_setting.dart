@@ -7,8 +7,6 @@ import 'package:Pilll/util/shared_preference/keys.dart';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-typedef InitialSettingCallback = void Function(InitialSettingModel);
-
 class InitialSettingModel extends ChangeNotifier {
   PillSheetType pillSheetType;
   int fromMenstruation;
