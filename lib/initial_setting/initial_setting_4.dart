@@ -42,7 +42,7 @@ class _InitialSetting4State extends State<InitialSetting4> {
   }
 
   void _done() {
-    Navigator.popAndPushNamed(context, Routes.main);
+    Router.endInitialSetting(context);
   }
 
   void _showDurationModalSheet(BuildContext context) {

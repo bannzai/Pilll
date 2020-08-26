@@ -204,7 +204,7 @@ class _InitialSetting3State extends State<InitialSetting3> {
                     child: Text("スキップ"),
                     textColor: TextColor.gray,
                     onPressed: () {
-                      Navigator.popAndPushNamed(context, Routes.main);
+                      Router.endInitialSetting(context);
                     },
                   ),
                 ],
