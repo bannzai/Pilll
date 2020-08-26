@@ -148,24 +148,4 @@ class Settings extends StatelessWidget {
       color: PilllColors.border,
     );
   }
-
-  Widget _messageItem(String title) {
-    return Container(
-      decoration: new BoxDecoration(
-          border:
-              new Border(bottom: BorderSide(width: 1.0, color: Colors.grey))),
-      child: ListTile(
-        title: Text(
-          title,
-          style: TextStyle(color: Colors.black, fontSize: 18.0),
-        ),
-        onTap: () {
-          print("onTap called.");
-        }, // タップ
-        onLongPress: () {
-          print("onLongTap called.");
-        }, // 長押し
-      ),
-    );
-  }
 }
