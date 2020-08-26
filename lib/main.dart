@@ -1,18 +1,21 @@
+import 'package:Pilll/main/record/pill_sheet_model.dart';
+import 'package:Pilll/model/pill_sheet_type.dart';
+import 'package:Pilll/settings/settings.dart';
 import 'package:Pilll/theme/color.dart';
 import 'package:Pilll/initial_setting/initial_setting.dart';
 import 'package:Pilll/initial_setting/initial_setting_1.dart';
 import 'package:Pilll/main/record/pill_sheet.dart';
 import 'package:Pilll/main/record/record_taken_information.dart';
-import 'package:Pilll/theme/font.dart';
 import 'package:Pilll/theme/text_color.dart';
 import 'package:firebase_analytics/firebase_analytics.dart';
 import 'package:firebase_analytics/observer.dart';
+import 'package:Pilll/util/shared_preference/keys.dart';
+import 'package:Pilll/util/shared_preference/shared_preference.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:intl/date_symbol_data_local.dart';
 import 'package:provider/provider.dart';
-import 'package:shared_preferences/shared_preferences.dart';
 
 void main() {
   initializeDateFormatting('ja_JP');
@@ -27,7 +30,11 @@ class MyApp extends StatelessWidget {
     return MultiProvider(
       providers: [
         ChangeNotifierProvider<InitialSettingModel>(
-            create: (_) => InitialSettingModel()),
+          create: (_) => InitialSettingModel(),
+        ),
+        ChangeNotifierProvider<PillSheetModel>(
+          create: (_) => MainPillSheetModel(PillSheetType.pillsheet_21),
+        ),
       ],
       child: MaterialApp(
         title: 'Flutter Demo',
@@ -75,22 +82,18 @@ class _MyHomePageState extends State<MyHomePage>
     setState(() {});
   }
 
-  Future<bool> getIsDidEndInitialSettingKey() async {
-    SharedPreferences preferences = await SharedPreferences.getInstance();
-    return preferences.getBool("isDidEndInitialSettingKey");
-  }
-
   @override
   Widget build(BuildContext context) {
-    return FutureBuilder(
-        future: getIsDidEndInitialSettingKey(),
+    return SharedPreferencesBuilder<bool>(
+        preferenceKey: BoolKey.didEndInitialSetting,
         builder: (BuildContext context, AsyncSnapshot<bool> snapshot) {
-          if (!snapshot.hasData) {
-            return InitialSetting();
-          }
-          if (!snapshot.data) {
-            return InitialSetting();
-          }
+          // TODO:
+          // if (!snapshot.hasData) {
+          //   return InitialSetting();
+          // }
+          // if (!snapshot.data) {
+          //   return InitialSetting();
+          // }
           return DefaultTabController(
             length: 3,
             child: Scaffold(
@@ -141,9 +144,10 @@ class _MyHomePageState extends State<MyHomePage>
               body: TabBarView(
                 controller: _tabController,
                 children: <Widget>[
-                  InitialSetting1(),
+                  Settings(),
                   _recordView(),
                   _recordView(),
+                  // Settings(),
                 ],
               ),
             ),
