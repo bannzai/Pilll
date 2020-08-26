@@ -1,3 +1,6 @@
+import 'package:Pilll/theme/color.dart';
+import 'package:Pilll/theme/font.dart';
+import 'package:Pilll/theme/text_color.dart';
 import 'package:flutter/material.dart';
 
 enum SettingSection { pill, menstruation, notification, other }
@@ -20,16 +23,16 @@ class SettingListTitleRowModel extends SettingListRowModel {
   }
 }
 
-class SettingListTitleAndSubTitleRowModel extends SettingListRowModel {
+class SettingListTitleAndContentRowModel extends SettingListRowModel {
   final String title;
-  final String subTitle;
+  final String content;
 
-  SettingListTitleAndSubTitleRowModel({this.title, this.subTitle});
+  SettingListTitleAndContentRowModel({this.title, this.content});
   @override
   Widget widget() {
     return ListTile(
       title: Text(title),
-      subtitle: Text(subTitle),
+      trailing: Text(content),
     );
   }
 }
@@ -47,20 +50,22 @@ class SettingsListSwitchRowModel extends SettingListRowModel {
         this.value = value;
       },
       value: this.value,
+      // NOTE: Alignment to ListTile
+      contentPadding: EdgeInsets.fromLTRB(14, 0, 6, 0),
     );
   }
 }
 
 class SettingsListDatePickerRowModel extends SettingListRowModel {
   final String title;
-  final String subTitle;
+  final String content;
 
-  SettingsListDatePickerRowModel({this.title, this.subTitle});
+  SettingsListDatePickerRowModel({this.title, this.content});
   @override
   Widget widget() {
     return ListTile(
       title: Text(title),
-      subtitle: Text(subTitle),
+      trailing: Text(content),
     );
   }
 }
@@ -80,18 +85,25 @@ class Settings extends StatelessWidget {
     );
   }
 
-  // ignore: missing_return
   Widget _sectionTitle(SettingSection section) {
+    String text;
     switch (section) {
       case SettingSection.pill:
-        return ListTile(title: Text("ピルの設定"));
+        text = "ピルの設定";
+        break;
       case SettingSection.menstruation:
-        return ListTile(title: Text("生理"));
+        text = "生理";
+        break;
       case SettingSection.notification:
-        return ListTile(title: Text("通知"));
+        text = "通知";
+        break;
       case SettingSection.other:
-        return ListTile(title: Text("その他"));
+        text = "その他";
+        break;
     }
+    return ListTile(
+        title:
+            Text(text, style: FontType.assisting.merge(TextColorStyle.gray)));
   }
 
   // ignore: missing_return
@@ -99,8 +111,8 @@ class Settings extends StatelessWidget {
     switch (section) {
       case SettingSection.pill:
         return [
-          SettingListTitleAndSubTitleRowModel(
-              title: "種類", subTitle: "28錠タイプ(7錠偽薬)"),
+          SettingListTitleAndContentRowModel(
+              title: "種類", content: "28錠タイプ(7錠偽薬)"),
         ];
       case SettingSection.menstruation:
         return [
@@ -109,7 +121,7 @@ class Settings extends StatelessWidget {
       case SettingSection.notification:
         return [
           SettingsListSwitchRowModel(title: "ピルの服用通知", value: false),
-          SettingsListDatePickerRowModel(title: "通知時刻", subTitle: "02:03"),
+          SettingsListDatePickerRowModel(title: "通知時刻", content: "02:03"),
         ];
       case SettingSection.other:
         return [
@@ -132,8 +144,8 @@ class Settings extends StatelessWidget {
 
   Widget separatorItem() {
     return Container(
-      height: 10,
-      color: Colors.orange,
+      height: 1,
+      color: PilllColors.border,
     );
   }
 
