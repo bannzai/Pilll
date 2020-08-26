@@ -53,20 +53,21 @@ class MyApp extends StatelessWidget {
             textTheme: ButtonTextTheme.primary,
           ),
         ),
-        home: Main(),
+        home: HomePage(),
       ),
     );
   }
 }
 
-class Main extends StatefulWidget {
-  Main({Key key}) : super(key: key);
+class HomePage extends StatefulWidget {
+  HomePage({Key key}) : super(key: key);
 
   @override
-  _MainState createState() => _MainState();
+  _HomePageState createState() => _HomePageState();
 }
 
-class _MainState extends State<Main> with SingleTickerProviderStateMixin {
+class _HomePageState extends State<HomePage>
+    with SingleTickerProviderStateMixin {
   TabController _tabController;
 
   @override
