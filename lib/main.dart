@@ -8,6 +8,7 @@ import 'package:flutter/material.dart';
 import 'package:intl/date_symbol_data_local.dart';
 import 'package:provider/provider.dart';
 
+import 'main/application/router.dart';
 import 'main/home/home.dart';
 
 void main() {
@@ -30,7 +31,6 @@ class App extends StatelessWidget {
         ),
       ],
       child: MaterialApp(
-        title: 'Flutter Demo',
         navigatorObservers: [
           FirebaseAnalyticsObserver(analytics: analytics),
         ],
@@ -47,6 +47,8 @@ class App extends StatelessWidget {
           ),
         ),
         home: HomePage(),
+        routes: Router.routes(),
+        initialRoute: Routes.root,
       ),
     );
   }
