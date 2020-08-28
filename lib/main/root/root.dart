@@ -18,18 +18,16 @@ class Root extends StatefulWidget {
 }
 
 class RootState extends State<Root> {
-  void initializeFirebase() async {
-    FirebaseApp app = await Firebase.initializeApp();
-    print("app name is $app.name");
-    context.read<user.User>().userCredential =
-        await FirebaseAuth.instance.signInAnonymously();
-  }
-
   @override
   void initState() {
-    initializeFirebase();
     super.initState();
-    SharedPreferences.getInstance().then((storage) {
+    Firebase.initializeApp().then((app) {
+      print("app name is $app.name");
+      return FirebaseAuth.instance.signInAnonymously();
+    }).then((userCredential) {
+      context.read<user.User>().userCredential = userCredential;
+      return SharedPreferences.getInstance();
+    }).then((storage) {
       bool didEndInitialSetting = storage.getBool(BoolKey.didEndInitialSetting);
       if (didEndInitialSetting == null) {
         Navigator.popAndPushNamed(context, Routes.initialSetting);
