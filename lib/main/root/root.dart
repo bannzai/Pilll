@@ -51,7 +51,12 @@ class RootState extends State<Root> {
         title: Text('Pilll'),
         backgroundColor: PilllColors.primary,
       ),
-      body: Container(),
+      body: Container(
+        child: Center(
+          child: CircularProgressIndicator(
+              valueColor: AlwaysStoppedAnimation(PilllColors.primary)),
+        ),
+      ),
     );
   }
 }
