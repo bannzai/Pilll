@@ -9,6 +9,7 @@ import 'package:intl/date_symbol_data_local.dart';
 import 'package:provider/provider.dart';
 
 import 'main/application/router.dart';
+import 'main/application/user.dart';
 import 'main/home/home.dart';
 
 void main() {
@@ -29,6 +30,8 @@ class App extends StatelessWidget {
         ChangeNotifierProvider<PillSheetModel>(
           create: (_) => MainPillSheetModel(PillSheetType.pillsheet_21),
         ),
+        ChangeNotifierProvider<User>(
+          create: (_) => User()),
       ],
       child: MaterialApp(
         navigatorObservers: [
