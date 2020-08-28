@@ -21,7 +21,7 @@ class RootState extends State<Root> {
   void initializeFirebase() async {
     FirebaseApp app = await Firebase.initializeApp();
     print("app name is $app.name");
-    context.watch<user.User>().userCredential =
+    context.read<user.User>().userCredential =
         await FirebaseAuth.instance.signInAnonymously();
   }
 
