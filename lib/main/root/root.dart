@@ -6,6 +6,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:Pilll/main/application/user.dart' as user;
+import 'package:provider/provider.dart';
 
 class Root extends StatefulWidget {
   Root({Key key}) : super(key: key);
@@ -16,12 +19,10 @@ class Root extends StatefulWidget {
 
 class RootState extends State<Root> {
   void initializeFirebase() async {
-    try {
-      await Firebase.initializeApp();
-    } catch (e) {
-      // TODO: Handling error
-      assert(e);
-    }
+    FirebaseApp app = await Firebase.initializeApp();
+    print("app name is $app.name");
+    context.watch<user.User>().userCredential =
+        await FirebaseAuth.instance.signInAnonymously();
   }
 
   @override
