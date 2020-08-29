@@ -1,9 +1,7 @@
 import 'package:Pilll/main/application/router.dart';
 import 'package:Pilll/theme/color.dart';
-import 'package:Pilll/theme/text_color.dart';
 import 'package:Pilll/util/shared_preference/keys.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_auth/firebase_auth.dart';
