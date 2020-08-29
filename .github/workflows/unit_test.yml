@@ -27,7 +27,7 @@ jobs:
         FILE_FIREBASE_IOS_PRODUCTION: ${{ secrets.FILE_FIREBASE_IOS_PRODUCTION }}
     - uses: subosito/flutter-action@v1
       with:
-        flutter-version: '1.17.3'
+        flutter-version: '1.17.5'
     - run: flutter pub get
     - run: flutter test
     - run: flutter build apk --debug --flavor development
