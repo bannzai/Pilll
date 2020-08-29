@@ -26,7 +26,7 @@ class RootState extends State<Root> {
     }).then((userCredential) {
       context.read<AuthUser>().userCredential = userCredential;
       return user.UserInterface.fetchOrCreateUser(userCredential);
-    }).then((value) {
+    }).then((user) {
       return SharedPreferences.getInstance();
     }).then((storage) {
       bool didEndInitialSetting = storage.getBool(BoolKey.didEndInitialSetting);
