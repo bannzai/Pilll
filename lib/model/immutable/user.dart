@@ -47,17 +47,13 @@ class User {
     });
   }
 
-  static Future<User> create(
-    UserCredential credential,
-    Map<String, dynamic> settings,
-  ) {
+  static Future<User> create(UserCredential credential) {
     return FirebaseFirestore.instance
         .collection(User.path)
         .add(
           {
             credential.user.uid: {
               UserPropertyKeys.anonnymouseUserID: credential.user.uid,
-              UserPropertyKeys.settings: settings,
             },
           },
         )
