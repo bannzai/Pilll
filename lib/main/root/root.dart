@@ -5,6 +5,10 @@ import 'package:Pilll/util/shared_preference/keys.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:Pilll/main/application/user.dart' as user;
+import 'package:provider/provider.dart';
 
 class Root extends StatefulWidget {
   Root({Key key}) : super(key: key);
@@ -17,7 +21,13 @@ class RootState extends State<Root> {
   @override
   void initState() {
     super.initState();
-    SharedPreferences.getInstance().then((storage) {
+    Firebase.initializeApp().then((app) {
+      print("app name is $app.name");
+      return FirebaseAuth.instance.signInAnonymously();
+    }).then((userCredential) {
+      context.read<user.User>().userCredential = userCredential;
+      return SharedPreferences.getInstance();
+    }).then((storage) {
       bool didEndInitialSetting = storage.getBool(BoolKey.didEndInitialSetting);
       if (didEndInitialSetting == null) {
         Navigator.popAndPushNamed(context, Routes.initialSetting);
@@ -39,7 +49,12 @@ class RootState extends State<Root> {
         title: Text('Pilll'),
         backgroundColor: PilllColors.primary,
       ),
-      body: Container(),
+      body: Container(
+        child: Center(
+          child: CircularProgressIndicator(
+              valueColor: AlwaysStoppedAnimation(PilllColors.primary)),
+        ),
+      ),
     );
   }
 }
