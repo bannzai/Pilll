@@ -27,9 +27,10 @@ class User {
   User._({this.anonymousUserID, this.settings});
 
   static User map(DocumentSnapshot document) {
+    Map<String, dynamic> data = document.data();
     return User._(
-      anonymousUserID: document.get(UserPropertyKeys.anonnymouseUserID),
-      settings: document.get(UserPropertyKeys.settings),
+      anonymousUserID: data[UserPropertyKeys.anonnymouseUserID],
+      settings: data[UserPropertyKeys.settings],
     );
   }
 
