@@ -67,7 +67,7 @@ extension UserInterface on User {
       if (error is UserNotFound) {
         return User.create(userCredential);
       }
-      return FormatException(
+      throw FormatException(
           "cause exception when failed fetch and create user");
     });
   }
