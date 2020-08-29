@@ -1,11 +1,20 @@
+import 'dart:async';
+import 'dart:html';
+
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flutter/material.dart';
 import 'package:meta/meta.dart';
 
 class UserNotFound implements Exception {
   toString() {
     return "user not found";
   }
+}
+
+extension UserPropertyKeys on String {
+  static final anonnymouseUserID = "anonnymouseUserID";
+  static final settings = "settings";
 }
 
 @immutable
@@ -18,21 +27,42 @@ class User {
 
   User._({this.anonymousUserID, this.settings});
 
+  static User map(DocumentSnapshot document) {
+    return User._(
+      anonymousUserID: document.get(UserPropertyKeys.anonnymouseUserID),
+      settings: document.get(UserPropertyKeys.settings),
+    );
+  }
+
   static Future<User> fetch(UserCredential credential) {
     return FirebaseFirestore.instance
         .collection(User.path)
         .doc(credential.user.uid)
         .get()
-        .then((data) {
-      if (!data.exists) {
+        .then((document) {
+      if (!document.exists) {
         throw UserNotFound();
       }
-      return data.data();
-    }).then((dic) {
-      return User._(
-        anonymousUserID: dic["anonymousUserID"],
-        settings: dic["settings"],
-      );
+      return User.map(document);
     });
+  }
+
+  static Future<User> create(
+    UserCredential credential,
+    Map<String, dynamic> settings,
+  ) {
+    return FirebaseFirestore.instance
+        .collection(User.path)
+        .add(
+          {
+            credential.user.uid: {
+              UserPropertyKeys.anonnymouseUserID: credential.user.uid,
+              UserPropertyKeys.settings: settings,
+            },
+          },
+        )
+        .then((documentReference) => documentReference.get())
+        .then((document) => User.map(document));
+    ;
   }
 }
