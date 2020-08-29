@@ -58,7 +58,6 @@ class User {
           },
         )
         .then((documentReference) => documentReference.get())
-        .then((document) => User.map(document));
-    ;
+        .then(User.map);
   }
 }
