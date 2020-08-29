@@ -81,6 +81,7 @@ target 'Runner' do
 end
 
 post_install do |installer|
+  installer.pods_project.build_settings['GCC_WARN_ABOUT_RETURN_TYPE'] = 'YES'
   installer.pods_project.targets.each do |target|
     target.build_configurations.each do |config|
       config.build_settings['ENABLE_BITCODE'] = 'NO'
