@@ -7,7 +7,7 @@ import 'package:Pilll/util/shared_preference/keys.dart';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-class InitialSettingModel extends ChangeNotifier {
+class InitialSettingModel {
   PillSheetType pillSheetType;
   int fromMenstruation;
   int durationMenstruation;
