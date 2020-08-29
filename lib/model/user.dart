@@ -1,12 +1,24 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:meta/meta.dart';
 
 @immutable
 class User {
-  final String documentID;
+  static final path = "users";
+  String get documentID => anonymousUserID;
 
-  factory User({UserCredential credential}) {
-    return User._(documentID: credential.user.uid);
+  final String anonymousUserID;
+
+  User._({this.anonymousUserID});
+
+  static Future<User> fetch(UserCredential credential) {
+    return FirebaseFirestore.instance
+        .collection(User.path)
+        .doc(credential.user.uid)
+        .get()
+        .then((data) => data.data())
+        .then((dic) {
+      return User._(anonymousUserID: dic["anonymousUserID"]);
+    });
   }
-  User._({this.documentID});
 }
