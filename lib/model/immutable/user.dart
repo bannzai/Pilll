@@ -61,3 +61,15 @@ class User {
         .then(User.map);
   }
 }
+
+extension UserInterface on User {
+  static Future<User> fetchOrCreateUser(UserCredential userCredential) {
+    return User.fetch(userCredential).catchError((error) {
+      if (error is UserNotFound) {
+        return User.create(userCredential);
+      }
+      return FormatException(
+          "cause exception when failed fetch and create user");
+    });
+  }
+}
