@@ -27,13 +27,7 @@ class RootState extends State<Root> {
       return FirebaseAuth.instance.signInAnonymously();
     }).then((userCredential) {
       context.read<AuthUser>().userCredential = userCredential;
-      return user.User.fetch(userCredential).catchError((error) {
-        if (error is user.UserNotFound) {
-          return user.User.create(userCredential);
-        }
-        return FormatException(
-            "cause exception when failed fetch and create user");
-      });
+      return user.UserInterface.fetchOrCreateUser(userCredential);
     }).then((value) {
       return SharedPreferences.getInstance();
     }).then((storage) {
