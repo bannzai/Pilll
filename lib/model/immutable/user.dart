@@ -8,8 +8,9 @@ class User {
   String get documentID => anonymousUserID;
 
   final String anonymousUserID;
+  final Map<String, dynamic> settings;
 
-  User._({this.anonymousUserID});
+  User._({this.anonymousUserID, this.settings});
 
   static Future<User> fetch(UserCredential credential) {
     return FirebaseFirestore.instance
@@ -18,7 +19,10 @@ class User {
         .get()
         .then((data) => data.data())
         .then((dic) {
-      return User._(anonymousUserID: dic["anonymousUserID"]);
+      return User._(
+        anonymousUserID: dic["anonymousUserID"],
+        settings: dic["settings"],
+      );
     });
   }
 }
