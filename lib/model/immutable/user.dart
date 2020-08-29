@@ -12,7 +12,7 @@ class UserNotFound implements Exception {
 }
 
 extension UserPropertyKeys on String {
-  static final anonnymouseUserID = "anonnymouseUserID";
+  static final anonymouseUserID = "anonymouseUserID";
   static final settings = "settings";
 }
 
@@ -29,7 +29,7 @@ class User {
   static User _map(DocumentSnapshot document) {
     Map<String, dynamic> data = document.data();
     return User._(
-      anonymousUserID: data[UserPropertyKeys.anonnymouseUserID],
+      anonymousUserID: data[UserPropertyKeys.anonymouseUserID],
       settings: data[UserPropertyKeys.settings],
     );
   }
@@ -53,7 +53,7 @@ class User {
         .add(
           {
             credential.user.uid: {
-              UserPropertyKeys.anonnymouseUserID: credential.user.uid,
+              UserPropertyKeys.anonymouseUserID: credential.user.uid,
             },
           },
         )
