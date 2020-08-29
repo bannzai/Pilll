@@ -26,7 +26,7 @@ class User {
 
   User._({this.anonymousUserID, this.settings});
 
-  static User map(DocumentSnapshot document) {
+  static User _map(DocumentSnapshot document) {
     Map<String, dynamic> data = document.data();
     return User._(
       anonymousUserID: data[UserPropertyKeys.anonnymouseUserID],
@@ -43,7 +43,7 @@ class User {
       if (!document.exists) {
         throw UserNotFound();
       }
-      return User.map(document);
+      return User._map(document);
     });
   }
 
@@ -58,7 +58,7 @@ class User {
           },
         )
         .then((documentReference) => documentReference.get())
-        .then(User.map);
+        .then(User._map);
   }
 }
 
