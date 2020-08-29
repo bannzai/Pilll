@@ -7,7 +7,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:Pilll/main/application/user.dart' as user;
+import 'package:Pilll/model/auth_user.dart';
 import 'package:provider/provider.dart';
 
 class Root extends StatefulWidget {
@@ -25,7 +25,7 @@ class RootState extends State<Root> {
       print("app name is $app.name");
       return FirebaseAuth.instance.signInAnonymously();
     }).then((userCredential) {
-      context.read<user.User>().userCredential = userCredential;
+      context.read<AuthUser>().userCredential = userCredential;
       return SharedPreferences.getInstance();
     }).then((storage) {
       bool didEndInitialSetting = storage.getBool(BoolKey.didEndInitialSetting);
