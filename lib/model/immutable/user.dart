@@ -4,6 +4,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:meta/meta.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class UserNotFound implements Exception {
   toString() {
@@ -34,10 +35,10 @@ class User {
     );
   }
 
-  static Future<User> fetch(UserCredential credential) {
+  static Future<User> fetch() {
     return FirebaseFirestore.instance
         .collection(User.path)
-        .doc(credential.user.uid)
+        .doc(FirebaseAuth.instance.currentUser.uid)
         .get()
         .then((document) {
       if (!document.exists) {
@@ -47,13 +48,14 @@ class User {
     });
   }
 
-  static Future<User> create(UserCredential credential) {
+  static Future<User> create() {
     return FirebaseFirestore.instance
         .collection(User.path)
         .add(
           {
-            credential.user.uid: {
-              UserPropertyKeys.anonymouseUserID: credential.user.uid,
+            FirebaseAuth.instance.currentUser.uid: {
+              UserPropertyKeys.anonymouseUserID:
+                  FirebaseAuth.instance.currentUser.uid,
             },
           },
         )
@@ -63,13 +65,20 @@ class User {
 }
 
 extension UserInterface on User {
-  static Future<User> fetchOrCreateUser(UserCredential userCredential) {
-    return User.fetch(userCredential).catchError((error) {
+  static Future<User> fetchOrCreateUser() {
+    return User.fetch().catchError((error) {
       if (error is UserNotFound) {
-        return User.create(userCredential);
+        return User.create();
       }
       throw FormatException(
           "cause exception when failed fetch and create user");
     });
+  }
+
+  Future<void> setSettings(Map<String, dynamic> settings) {
+    return FirebaseFirestore.instance
+        .collection(User.path)
+        .doc(documentID)
+        .set({UserPropertyKeys.settings: settings});
   }
 }
