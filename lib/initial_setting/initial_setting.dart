@@ -20,7 +20,10 @@ class InitialSettingModel {
   int minute;
   bool isOnReminder;
 
-  void register(UserCredential userCredential, BuildContext context) {
+  void register(
+    BuildContext context,
+    UserCredential userCredential,
+  ) {
     user.User.create().then((value) {
       value.setSettings({
         "beginingMenstruationFromAfterFakePeriod": fromMenstruation,

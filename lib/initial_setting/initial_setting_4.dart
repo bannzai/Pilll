@@ -134,20 +134,21 @@ class _InitialSetting4State extends State<InitialSetting4> {
                     onPressed: !_canNext(context)
                         ? null
                         : () {
-                            context.watch<InitialSettingModel>().register(
-                                  Provider.of<AuthUser>(context).userCredential,
-                                  context,
-                                );
+                            Provider.of<InitialSettingModel>(context,
+                                    listen: false)
+                                .register(
+                                    context,
+                                    Provider.of<AuthUser>(context)
+                                        .userCredential);
                           },
                   ),
                   FlatButton(
                     child: Text("スキップ"),
                     textColor: TextColor.gray,
                     onPressed: () {
-                      context.watch<InitialSettingModel>().register(
-                            Provider.of<AuthUser>(context).userCredential,
-                            context,
-                          );
+                      Provider.of<InitialSettingModel>(context, listen: false)
+                          .register(context,
+                              Provider.of<AuthUser>(context).userCredential);
                     },
                   ),
                 ],

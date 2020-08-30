@@ -81,10 +81,11 @@ class InitialSetting2 extends StatelessWidget {
                       child: Text("スキップ"),
                       textColor: TextColor.gray,
                       onPressed: () {
-                        context.watch<InitialSettingModel>().register(
-                              Provider.of<AuthUser>(context).userCredential,
-                              context,
-                            );
+                        Provider.of<InitialSettingModel>(context, listen: false)
+                            .register(
+                          context,
+                          Provider.of<AuthUser>(context).userCredential,
+                        );
                       },
                     ),
                   ],

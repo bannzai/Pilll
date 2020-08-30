@@ -22,15 +22,23 @@ class _InitialSetting3State extends State<InitialSetting3> {
       List<String>.generate(7, (index) => (index + 1).toString());
 
   String _from(BuildContext context) {
-    return context.watch<InitialSettingModel>().fromMenstruation == null
+    return Provider.of<InitialSettingModel>(context, listen: false)
+                .fromMenstruation ==
+            null
         ? _blank()
-        : context.watch<InitialSettingModel>().fromMenstruation.toString();
+        : Provider.of<InitialSettingModel>(context, listen: false)
+            .fromMenstruation
+            .toString();
   }
 
   String _duration(BuildContext context) {
-    return context.watch<InitialSettingModel>().durationMenstruation == null
+    return Provider.of<InitialSettingModel>(context, listen: false)
+                .durationMenstruation ==
+            null
         ? _blank()
-        : context.watch<InitialSettingModel>().durationMenstruation.toString();
+        : Provider.of<InitialSettingModel>(context, listen: false)
+            .durationMenstruation
+            .toString();
   }
 
   void showFromModalSheet() {
@@ -86,7 +94,8 @@ class _InitialSetting3State extends State<InitialSetting3> {
   }
 
   bool canNext(BuildContext context) {
-    InitialSettingModel model = context.watch<InitialSettingModel>();
+    InitialSettingModel model =
+        Provider.of<InitialSettingModel>(context, listen: false);
     return !(model.fromMenstruation == null ||
         model.durationMenstruation == null);
   }
@@ -205,10 +214,11 @@ class _InitialSetting3State extends State<InitialSetting3> {
                     child: Text("スキップ"),
                     textColor: TextColor.gray,
                     onPressed: () {
-                      context.watch<InitialSettingModel>().register(
-                            Provider.of<AuthUser>(context).userCredential,
-                            context,
-                          );
+                      Provider.of<InitialSettingModel>(context, listen: false)
+                          .register(
+                        context,
+                        Provider.of<AuthUser>(context).userCredential,
+                      );
                     },
                   ),
                 ],
