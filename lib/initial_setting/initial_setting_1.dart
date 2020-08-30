@@ -31,8 +31,9 @@ class _InitialSetting1State extends State<InitialSetting1> {
           },
           child: PillSheet(
             pillSheetType: type,
-            selected:
-                context.watch<InitialSettingModel>().pillSheetType == type,
+            selected: Provider.of<InitialSettingModel>(context, listen: false)
+                    .pillSheetType ==
+                type,
           ),
         );
       },
