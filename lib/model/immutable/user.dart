@@ -27,8 +27,7 @@ class User {
   User._({this.anonymousUserID, this.settings});
 
   static User _map(DocumentSnapshot document) {
-    Map<String, dynamic> data =
-        document.data()[FirebaseAuth.instance.currentUser.uid];
+    Map<String, dynamic> data = document.data();
     return User._(
       anonymousUserID: data[UserPropertyKeys.anonymouseUserID],
       settings: data[UserPropertyKeys.settings],
@@ -54,10 +53,8 @@ class User {
         .doc(FirebaseAuth.instance.currentUser.uid)
         .set(
       {
-        FirebaseAuth.instance.currentUser.uid: {
-          UserPropertyKeys.anonymouseUserID:
-              FirebaseAuth.instance.currentUser.uid,
-        },
+        UserPropertyKeys.anonymouseUserID:
+            FirebaseAuth.instance.currentUser.uid,
       },
     ).then((_) {
       return User.fetch();
@@ -72,7 +69,7 @@ extension UserInterface on User {
         return User.create();
       }
       throw FormatException(
-          "cause exception when failed fetch and create user");
+          "cause exception when failed fetch and create user for $error");
     });
   }
 
@@ -80,6 +77,6 @@ extension UserInterface on User {
     return FirebaseFirestore.instance
         .collection(User.path)
         .doc(documentID)
-        .set({UserPropertyKeys.settings: settings});
+        .set({UserPropertyKeys.settings: settings}, SetOptions(merge: true));
   }
 }
