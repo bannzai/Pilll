@@ -17,26 +17,22 @@ class InitialSetting1 extends StatefulWidget {
 
 class _InitialSetting1State extends State<InitialSetting1> {
   Widget _pillSheet(PillSheetType type) {
-    return Consumer<InitialSettingModel>(
-      builder: (BuildContext context, InitialSettingModel value, Widget child) {
-        return GestureDetector(
-          onTap: () {
-            setState(() {
-              value.pillSheetType = type;
-              Navigator.of(context)
-                  .push(MaterialPageRoute(builder: (BuildContext context) {
-                return InitialSetting2();
-              }));
-            });
-          },
-          child: PillSheet(
-            pillSheetType: type,
-            selected: Provider.of<InitialSettingModel>(context, listen: false)
-                    .pillSheetType ==
-                type,
-          ),
-        );
+    InitialSettingModel model =
+        Provider.of<InitialSettingModel>(context, listen: false);
+    return GestureDetector(
+      onTap: () {
+        setState(() {
+          model.pillSheetType = type;
+          Navigator.of(context)
+              .push(MaterialPageRoute(builder: (BuildContext context) {
+            return InitialSetting2();
+          }));
+        });
       },
+      child: PillSheet(
+        pillSheetType: type,
+        selected: model.pillSheetType == type,
+      ),
     );
   }
 
