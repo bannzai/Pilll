@@ -82,10 +82,7 @@ class InitialSetting2 extends StatelessWidget {
                       textColor: TextColor.gray,
                       onPressed: () {
                         Provider.of<InitialSettingModel>(context, listen: false)
-                            .register(
-                          context,
-                          Provider.of<AuthUser>(context).userCredential,
-                        );
+                            .register(context);
                       },
                     ),
                   ],
