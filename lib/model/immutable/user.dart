@@ -27,7 +27,8 @@ class User {
   User._({this.anonymousUserID, this.settings});
 
   static User _map(DocumentSnapshot document) {
-    Map<String, dynamic> data = document.data();
+    Map<String, dynamic> data =
+        document.data()[FirebaseAuth.instance.currentUser.uid];
     return User._(
       anonymousUserID: data[UserPropertyKeys.anonymouseUserID],
       settings: data[UserPropertyKeys.settings],
