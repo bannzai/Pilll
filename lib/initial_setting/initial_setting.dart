@@ -18,9 +18,17 @@ class InitialSettingModel {
   int durationMenstruation;
   int hour;
   int minute;
+  bool isOnReminder;
 
   void register(UserCredential userCredential, BuildContext context) {
     user.User.create().then((value) {
+      value.setSettings({
+        "beginingMenstruationFromAfterFakePeriod": fromMenstruation,
+        "menstuationPeriod": durationMenstruation,
+        "reminderTime": {"hour": hour, "minute": minute},
+        "isOnReminder": isOnReminder,
+        "pillSheetTypeRawPath": pillSheetType.name,
+      });
       SharedPreferences.getInstance().then((storage) => storage.setString(
           StringKey.firebaseAnonymousUserID, value.anonymousUserID));
     });
