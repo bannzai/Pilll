@@ -17,9 +17,7 @@ class InitialSettingModel {
   int minute;
   bool isOnReminder;
 
-  Future<void> register(
-    BuildContext context,
-  ) {
+  Future<void> register(BuildContext context) {
     return user.User.create().then((value) {
       value.setSettings({
         "beginingMenstruationFromAfterFakePeriod": fromMenstruation,
