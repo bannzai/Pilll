@@ -20,7 +20,7 @@ class InitialSettingModel {
   int minute;
 
   void register(UserCredential userCredential, BuildContext context) {
-    user.User.create(userCredential).then((value) {
+    user.User.create().then((value) {
       SharedPreferences.getInstance().then((storage) => storage.setString(
           StringKey.firebaseAnonymousUserID, value.anonymousUserID));
     });
