@@ -215,7 +215,8 @@ class _InitialSetting3State extends State<InitialSetting3> {
                     textColor: TextColor.gray,
                     onPressed: () {
                       Provider.of<InitialSettingModel>(context, listen: false)
-                          .register(context);
+                          .register(context)
+                          .then((_) => Router.endInitialSetting(context));
                     },
                   ),
                 ],
