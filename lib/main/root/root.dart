@@ -27,6 +27,10 @@ class RootState extends State<Root> {
       context.read<AuthUser>().userCredential = userCredential;
       return user.UserInterface.fetchOrCreateUser();
     }).then((user) {
+      if (user.settings == null || user.settings.isEmpty) {
+        Navigator.popAndPushNamed(context, Routes.initialSetting);
+        return null;
+      }
       return SharedPreferences.getInstance().then((storage) {
         if (!storage.getKeys().contains(StringKey.firebaseAnonymousUserID)) {
           storage.setString(
@@ -35,13 +39,7 @@ class RootState extends State<Root> {
         return storage;
       });
     }).then((storage) {
-      bool didEndMigrate = storage.getBool(BoolKey.migratedFromSwift);
-      if (didEndMigrate == null) {
-        Navigator.popAndPushNamed(context, Routes.initialSetting);
-        return;
-      }
-      if (!didEndMigrate) {
-        Navigator.popAndPushNamed(context, Routes.initialSetting);
+      if (storage == null) {
         return;
       }
       bool didEndInitialSetting = storage.getBool(BoolKey.didEndInitialSetting);
