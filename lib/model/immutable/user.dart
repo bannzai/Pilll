@@ -35,7 +35,7 @@ class User {
     );
   }
 
-  static Future<User> _fetch() {
+  static Future<User> fetch() {
     return FirebaseFirestore.instance
         .collection(User.path)
         .doc(FirebaseAuth.instance.currentUser.uid)
@@ -48,7 +48,7 @@ class User {
     });
   }
 
-  static Future<User> _create() {
+  static Future<User> create() {
     return FirebaseFirestore.instance
         .collection(User.path)
         .add(
@@ -66,9 +66,9 @@ class User {
 
 extension UserInterface on User {
   static Future<User> fetchOrCreateUser() {
-    return User._fetch().catchError((error) {
+    return User.fetch().catchError((error) {
       if (error is UserNotFound) {
-        return User._create();
+        return User.create();
       }
       throw FormatException(
           "cause exception when failed fetch and create user");
