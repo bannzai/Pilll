@@ -28,9 +28,12 @@ class InitialSettingModel {
         "reminderTime": {"hour": hour, "minute": minute},
         "isOnReminder": isOnReminder,
         "pillSheetTypeRawPath": pillSheetType.name,
+      }).then((_) {
+        return SharedPreferences.getInstance();
+      }).then((storage) {
+        storage.setString(
+            StringKey.firebaseAnonymousUserID, value.anonymousUserID);
       });
-      SharedPreferences.getInstance().then((storage) => storage.setString(
-          StringKey.firebaseAnonymousUserID, value.anonymousUserID));
     });
   }
 }
