@@ -1,4 +1,3 @@
-import 'package:Pilll/main/application/router.dart';
 import 'package:Pilll/model/immutable/user.dart';
 import 'package:Pilll/theme/color.dart';
 import 'package:Pilll/initial_setting/initial_setting_1.dart';
@@ -6,8 +5,6 @@ import 'package:Pilll/model/pill_sheet_type.dart';
 import 'package:Pilll/theme/font.dart';
 import 'package:Pilll/theme/text_color.dart';
 import 'package:Pilll/util/shared_preference/keys.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:Pilll/model/immutable/user.dart' as user;
 import 'package:shared_preferences/shared_preferences.dart';
