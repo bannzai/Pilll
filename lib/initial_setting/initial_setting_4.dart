@@ -136,10 +136,7 @@ class _InitialSetting4State extends State<InitialSetting4> {
                         : () {
                             Provider.of<InitialSettingModel>(context,
                                     listen: false)
-                                .register(
-                                    context,
-                                    Provider.of<AuthUser>(context)
-                                        .userCredential);
+                                .register(context);
                           },
                   ),
                   FlatButton(
@@ -147,8 +144,7 @@ class _InitialSetting4State extends State<InitialSetting4> {
                     textColor: TextColor.gray,
                     onPressed: () {
                       Provider.of<InitialSettingModel>(context, listen: false)
-                          .register(context,
-                              Provider.of<AuthUser>(context).userCredential);
+                          .register(context);
                     },
                   ),
                 ],

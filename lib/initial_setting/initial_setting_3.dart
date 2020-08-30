@@ -215,10 +215,7 @@ class _InitialSetting3State extends State<InitialSetting3> {
                     textColor: TextColor.gray,
                     onPressed: () {
                       Provider.of<InitialSettingModel>(context, listen: false)
-                          .register(
-                        context,
-                        Provider.of<AuthUser>(context).userCredential,
-                      );
+                          .register(context);
                     },
                   ),
                 ],
