@@ -51,16 +51,17 @@ class User {
   static Future<User> create() {
     return FirebaseFirestore.instance
         .collection(User.path)
-        .add(
-          {
-            FirebaseAuth.instance.currentUser.uid: {
-              UserPropertyKeys.anonymouseUserID:
-                  FirebaseAuth.instance.currentUser.uid,
-            },
-          },
-        )
-        .then((documentReference) => documentReference.get())
-        .then(User._map);
+        .doc(FirebaseAuth.instance.currentUser.uid)
+        .set(
+      {
+        FirebaseAuth.instance.currentUser.uid: {
+          UserPropertyKeys.anonymouseUserID:
+              FirebaseAuth.instance.currentUser.uid,
+        },
+      },
+    ).then((_) {
+      return User.fetch();
+    });
   }
 }
 
