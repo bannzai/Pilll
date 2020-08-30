@@ -35,6 +35,15 @@ class RootState extends State<Root> {
         return storage;
       });
     }).then((storage) {
+      bool didEndMigrate = storage.getBool(BoolKey.migratedFromSwift);
+      if (didEndMigrate == null) {
+        Navigator.popAndPushNamed(context, Routes.initialSetting);
+        return;
+      }
+      if (!didEndMigrate) {
+        Navigator.popAndPushNamed(context, Routes.initialSetting);
+        return;
+      }
       bool didEndInitialSetting = storage.getBool(BoolKey.didEndInitialSetting);
       if (didEndInitialSetting == null) {
         Navigator.popAndPushNamed(context, Routes.initialSetting);
