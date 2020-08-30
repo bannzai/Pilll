@@ -1,4 +1,5 @@
 import 'package:Pilll/main/application/router.dart';
+import 'package:Pilll/model/auth_user.dart';
 import 'package:Pilll/theme/color.dart';
 import 'package:Pilll/initial_setting/initial_setting_3.dart';
 import 'package:Pilll/main/record/pill_sheet.dart';
@@ -80,7 +81,10 @@ class InitialSetting2 extends StatelessWidget {
                       child: Text("スキップ"),
                       textColor: TextColor.gray,
                       onPressed: () {
-                        Router.endInitialSetting(context);
+                        context.watch<InitialSettingModel>().register(
+                              Provider.of<AuthUser>(context).userCredential,
+                              context,
+                            );
                       },
                     ),
                   ],
