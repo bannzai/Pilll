@@ -1,3 +1,4 @@
+import 'package:Pilll/initial_setting/initial_setting.dart';
 import 'package:Pilll/main/record/pill_sheet_model.dart';
 import 'package:Pilll/model/pill_sheet_type.dart';
 import 'package:Pilll/theme/color.dart';
@@ -22,6 +23,7 @@ class App extends StatelessWidget {
     FirebaseAnalytics analytics = FirebaseAnalytics();
     return MultiProvider(
       providers: [
+        Provider(create: (_) => InitialSettingModel()),
         ChangeNotifierProvider<PillSheetModel>(
           create: (_) => MainPillSheetModel(PillSheetType.pillsheet_21),
         ),
