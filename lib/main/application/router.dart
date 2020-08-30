@@ -17,7 +17,8 @@ class Router {
   static void endInitialSetting(BuildContext context) {
     SharedPreferences.getInstance().then((storage) {
       storage.setBool(BoolKey.didEndInitialSetting, true);
-      Navigator.popAndPushNamed(context, Routes.main);
+      Navigator.popUntil(context, (router) => router.isFirst);
+      Navigator.pushReplacementNamed(context, Routes.main);
     });
   }
 }
