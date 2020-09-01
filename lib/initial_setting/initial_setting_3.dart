@@ -20,47 +20,111 @@ class _InitialSetting3State extends State<InitialSetting3> {
   final List<String> _durationList =
       List<String>.generate(7, (index) => (index + 1).toString());
 
-  String _from(BuildContext context) {
-    return Provider.of<InitialSettingModel>(context, listen: false)
-                .fromMenstruation ==
-            null
-        ? _blank()
-        : Provider.of<InitialSettingModel>(context, listen: false)
-            .fromMenstruation
-            .toString();
+  Widget _from(BuildContext context) {
+    InitialSettingModel model =
+        Provider.of<InitialSettingModel>(context, listen: false);
+    bool isNotYetSetValue = model.fromMenstruation == null;
+    if (isNotYetSetValue) {
+      return Text(
+        _blank(),
+        style: FontType.inputNumber.merge(
+          TextStyle(
+              decoration: TextDecoration.underline, color: TextColor.lightGray),
+        ),
+      );
+    } else {
+      return Text(
+        model.fromMenstruation.toString(),
+        style: FontType.inputNumber.merge(
+          TextStyle(decoration: TextDecoration.underline),
+        ),
+      );
+    }
   }
 
-  String _duration(BuildContext context) {
-    return Provider.of<InitialSettingModel>(context, listen: false)
-                .durationMenstruation ==
-            null
-        ? _blank()
-        : Provider.of<InitialSettingModel>(context, listen: false)
-            .durationMenstruation
-            .toString();
+  Widget _duration(BuildContext context) {
+    InitialSettingModel model =
+        Provider.of<InitialSettingModel>(context, listen: false);
+    bool isNotYetSetValue = model.durationMenstruation == null;
+    if (isNotYetSetValue) {
+      return Text(
+        _blank(),
+        style: FontType.inputNumber.merge(
+          TextStyle(
+              decoration: TextDecoration.underline, color: TextColor.lightGray),
+        ),
+      );
+    } else {
+      return Text(
+        model.durationMenstruation.toString(),
+        style: FontType.inputNumber.merge(
+          TextStyle(decoration: TextDecoration.underline),
+        ),
+      );
+    }
+  }
+
+  Widget _toolbar(VoidCallback done) {
+    return Container(
+      height: 44,
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: <Widget>[
+          CupertinoButton(
+            child: Text('キャンセル'),
+            onPressed: () {
+              Navigator.pop(context);
+            },
+            padding: const EdgeInsets.symmetric(
+              horizontal: 16.0,
+              vertical: 5.0,
+            ),
+          ),
+          CupertinoButton(
+            child: Text('完了', style: FontType.done),
+            onPressed: () {
+              done();
+            },
+            padding: const EdgeInsets.symmetric(
+              horizontal: 16.0,
+              vertical: 5.0,
+            ),
+          )
+        ],
+      ),
+    );
   }
 
   void showFromModalSheet() {
     showModalBottomSheet(
       context: context,
       builder: (BuildContext context) {
-        return Container(
-          height: MediaQuery.of(context).size.height / 3,
-          child: GestureDetector(
-            onTap: () {
+        return Column(
+          mainAxisAlignment: MainAxisAlignment.end,
+          mainAxisSize: MainAxisSize.min,
+          children: <Widget>[
+            _toolbar(() {
               Navigator.pop(context);
-            },
-            child: CupertinoPicker(
-              itemExtent: 40,
-              children: _fromList.map(_pickerItem).toList(),
-              onSelectedItemChanged: (index) {
-                setState(() {
-                  Provider.of<InitialSettingModel>(context, listen: false)
-                      .fromMenstruation = index;
-                });
-              },
+            }),
+            Container(
+              height: 200,
+              child: GestureDetector(
+                onTap: () {
+                  Navigator.pop(context);
+                },
+                child: CupertinoPicker(
+                  itemExtent: 40,
+                  children: _fromList.map(_pickerItem).toList(),
+                  onSelectedItemChanged: (index) {
+                    setState(() {
+                      Provider.of<InitialSettingModel>(context, listen: false)
+                          .fromMenstruation = index;
+                    });
+                  },
+                ),
+              ),
             ),
-          ),
+          ],
         );
       },
     );
@@ -70,23 +134,32 @@ class _InitialSetting3State extends State<InitialSetting3> {
     showModalBottomSheet(
       context: context,
       builder: (BuildContext context) {
-        return Container(
-          height: MediaQuery.of(context).size.height / 3,
-          child: GestureDetector(
-            onTap: () {
+        return Column(
+          mainAxisAlignment: MainAxisAlignment.end,
+          mainAxisSize: MainAxisSize.min,
+          children: <Widget>[
+            _toolbar(() {
               Navigator.pop(context);
-            },
-            child: CupertinoPicker(
-              itemExtent: 40,
-              children: _durationList.map(_pickerItem).toList(),
-              onSelectedItemChanged: (index) {
-                setState(() {
-                  Provider.of<InitialSettingModel>(context, listen: false)
-                      .durationMenstruation = index + 1;
-                });
-              },
+            }),
+            Container(
+              height: MediaQuery.of(context).size.height / 3,
+              child: GestureDetector(
+                onTap: () {
+                  Navigator.pop(context);
+                },
+                child: CupertinoPicker(
+                  itemExtent: 40,
+                  children: _durationList.map(_pickerItem).toList(),
+                  onSelectedItemChanged: (index) {
+                    setState(() {
+                      Provider.of<InitialSettingModel>(context, listen: false)
+                          .durationMenstruation = index + 1;
+                    });
+                  },
+                ),
+              ),
             ),
-          ),
+          ],
         );
       },
     );
@@ -149,14 +222,7 @@ class _InitialSetting3State extends State<InitialSetting3> {
                                 FontType.assisting.merge(TextColorStyle.gray)),
                         GestureDetector(
                           onTap: showFromModalSheet,
-                          child: Text(
-                            _from(context),
-                            style: FontType.inputNumber.merge(
-                              TextStyle(
-                                  decoration: TextDecoration.underline,
-                                  color: TextColor.lightGray),
-                            ),
-                          ),
+                          child: _from(context),
                         ),
                         Text("日後ぐらいから",
                             style:
@@ -171,14 +237,7 @@ class _InitialSetting3State extends State<InitialSetting3> {
                       children: <Widget>[
                         GestureDetector(
                           onTap: showDurationModalSheet,
-                          child: Text(
-                            _duration(context),
-                            style: FontType.inputNumber.merge(
-                              TextStyle(
-                                  decoration: TextDecoration.underline,
-                                  color: PilllColors.lightGray),
-                            ),
-                          ),
+                          child: _duration(context),
                         ),
                         Text("日間生理が続く",
                             style:
