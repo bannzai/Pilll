@@ -30,6 +30,12 @@ jobs:
         flutter-version: '1.17.5'
     - run: flutter pub get
     - run: flutter test
-    - run: flutter build ios --debug --no-codesign --flavor development --verbose
+    - name: Run iOS
+      run:
+        cd ios
+        rm -rf ./Pods
+        pod install
+        cd ../
+        flutter build ios --debug --no-codesign --flavor development --verbose
     - run: flutter build apk --debug --flavor development
 
