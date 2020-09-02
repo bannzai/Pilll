@@ -1,7 +1,7 @@
+import 'package:Pilll/initial_setting/initial_setting.dart';
 import 'package:Pilll/main/record/pill_sheet_model.dart';
 import 'package:Pilll/model/pill_sheet_type.dart';
 import 'package:Pilll/theme/color.dart';
-import 'package:Pilll/initial_setting/initial_setting.dart';
 import 'package:firebase_analytics/firebase_analytics.dart';
 import 'package:firebase_analytics/observer.dart';
 import 'package:flutter/material.dart';
@@ -10,7 +10,6 @@ import 'package:provider/provider.dart';
 
 import 'main/application/router.dart';
 import 'model/auth_user.dart';
-import 'main/home/home.dart';
 
 void main() {
   initializeDateFormatting('ja_JP');
@@ -24,9 +23,7 @@ class App extends StatelessWidget {
     FirebaseAnalytics analytics = FirebaseAnalytics();
     return MultiProvider(
       providers: [
-        ChangeNotifierProvider<InitialSettingModel>(
-          create: (_) => InitialSettingModel(),
-        ),
+        Provider(create: (_) => InitialSettingModel()),
         ChangeNotifierProvider<PillSheetModel>(
           create: (_) => MainPillSheetModel(PillSheetType.pillsheet_21),
         ),

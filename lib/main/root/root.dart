@@ -25,10 +25,23 @@ class RootState extends State<Root> {
       return FirebaseAuth.instance.signInAnonymously();
     }).then((userCredential) {
       context.read<AuthUser>().userCredential = userCredential;
-      return user.UserInterface.fetchOrCreateUser(userCredential);
+      return user.UserInterface.fetchOrCreateUser();
     }).then((user) {
-      return SharedPreferences.getInstance();
+      if (user.settings == null || user.settings.isEmpty) {
+        Navigator.popAndPushNamed(context, Routes.initialSetting);
+        return null;
+      }
+      return SharedPreferences.getInstance().then((storage) {
+        if (!storage.getKeys().contains(StringKey.firebaseAnonymousUserID)) {
+          storage.setString(
+              StringKey.firebaseAnonymousUserID, user.anonymousUserID);
+        }
+        return storage;
+      });
     }).then((storage) {
+      if (storage == null) {
+        return;
+      }
       bool didEndInitialSetting = storage.getBool(BoolKey.didEndInitialSetting);
       if (didEndInitialSetting == null) {
         Navigator.popAndPushNamed(context, Routes.initialSetting);

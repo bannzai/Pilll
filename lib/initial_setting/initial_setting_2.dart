@@ -47,7 +47,9 @@ class InitialSetting2 extends StatelessWidget {
                   textAlign: TextAlign.center,
                 ),
                 Spacer(),
-                PillSheet(),
+                PillSheet(
+                  isHideWeekdayLine: true,
+                ),
                 SizedBox(height: 24),
                 ExplainPillNumber(today: today()),
                 SizedBox(height: 24),
@@ -80,7 +82,9 @@ class InitialSetting2 extends StatelessWidget {
                       child: Text("スキップ"),
                       textColor: TextColor.gray,
                       onPressed: () {
-                        Router.endInitialSetting(context);
+                        Provider.of<InitialSettingModel>(context, listen: false)
+                            .register(context)
+                            .then((_) => Router.endInitialSetting(context));
                       },
                     ),
                   ],

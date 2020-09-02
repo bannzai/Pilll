@@ -12,7 +12,7 @@ class UserNotFound implements Exception {
 }
 
 extension UserPropertyKeys on String {
-  static final anonnymouseUserID = "anonnymouseUserID";
+  static final anonymouseUserID = "anonymouseUserID";
   static final settings = "settings";
 }
 
@@ -26,50 +26,57 @@ class User {
 
   User._({this.anonymousUserID, this.settings});
 
-  static User map(DocumentSnapshot document) {
+  static User _map(DocumentSnapshot document) {
     Map<String, dynamic> data = document.data();
     return User._(
-      anonymousUserID: data[UserPropertyKeys.anonnymouseUserID],
+      anonymousUserID: data[UserPropertyKeys.anonymouseUserID],
       settings: data[UserPropertyKeys.settings],
     );
   }
 
-  static Future<User> fetch(UserCredential credential) {
+  static Future<User> fetch() {
     return FirebaseFirestore.instance
         .collection(User.path)
-        .doc(credential.user.uid)
+        .doc(FirebaseAuth.instance.currentUser.uid)
         .get()
         .then((document) {
       if (!document.exists) {
         throw UserNotFound();
       }
-      return User.map(document);
+      return User._map(document);
     });
   }
 
-  static Future<User> create(UserCredential credential) {
+  static Future<User> create() {
     return FirebaseFirestore.instance
         .collection(User.path)
-        .add(
-          {
-            credential.user.uid: {
-              UserPropertyKeys.anonnymouseUserID: credential.user.uid,
-            },
-          },
-        )
-        .then((documentReference) => documentReference.get())
-        .then(User.map);
+        .doc(FirebaseAuth.instance.currentUser.uid)
+        .set(
+      {
+        UserPropertyKeys.anonymouseUserID:
+            FirebaseAuth.instance.currentUser.uid,
+      },
+    ).then((_) {
+      return User.fetch();
+    });
   }
 }
 
 extension UserInterface on User {
-  static Future<User> fetchOrCreateUser(UserCredential userCredential) {
-    return User.fetch(userCredential).catchError((error) {
+  static Future<User> fetchOrCreateUser() {
+    return User.fetch().catchError((error) {
       if (error is UserNotFound) {
-        return User.create(userCredential);
+        return User.create();
       }
       throw FormatException(
-          "cause exception when failed fetch and create user");
+          "cause exception when failed fetch and create user for $error");
     });
+  }
+
+  Future<void> setSettings(Map<String, dynamic> settings) {
+    return FirebaseFirestore.instance
+        .collection(User.path)
+        .doc(documentID)
+        .set({UserPropertyKeys.settings: settings}, SetOptions(merge: true));
   }
 }

@@ -1,4 +1,4 @@
-import 'package:Pilll/initial_setting/pill_sheet.dart';
+import 'package:Pilll/main/record/pill_sheet.dart';
 import 'package:Pilll/main/record/record_taken_information.dart';
 import 'package:Pilll/settings/settings.dart';
 import 'package:Pilll/theme/color.dart';
@@ -96,7 +96,9 @@ class _HomePageState extends State<HomePage>
           SizedBox(height: 60),
           RecordTakenInformation(),
           SizedBox(height: 24),
-          PillSheet(),
+          PillSheet(
+            isHideWeekdayLine: false,
+          ),
           SizedBox(height: 24),
           Container(
             height: 44,
