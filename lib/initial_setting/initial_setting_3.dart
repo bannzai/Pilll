@@ -79,8 +79,7 @@ class _InitialSetting3State extends State<InitialSetting3> {
             PickerToolbar(
               done: (() {
                 setState(() {
-                  Provider.of<InitialSettingModel>(context, listen: false)
-                      .fromMenstruation = selectedFromMenstruction;
+                  model.fromMenstruation = selectedFromMenstruction;
                   Navigator.pop(context);
                 });
               }),
@@ -125,8 +124,7 @@ class _InitialSetting3State extends State<InitialSetting3> {
             PickerToolbar(
               done: (() {
                 setState(() {
-                  Provider.of<InitialSettingModel>(context, listen: false)
-                      .durationMenstruation = selectedDurationMenstruation;
+                  model.durationMenstruation = selectedDurationMenstruation;
                   Navigator.pop(context);
                 });
               }),
