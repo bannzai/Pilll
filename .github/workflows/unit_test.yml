@@ -31,7 +31,7 @@ jobs:
     - run: flutter pub get
     - run: flutter test
     - name: Run iOS
-      run:
+      run: |
         cd ios
         rm -rf ./Pods
         pod install
