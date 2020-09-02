@@ -2,10 +2,7 @@
 # Workarround for specify pub https://github.com/bannzai/Pilll/pull/23#discussion_r481963119
 .PHONY: prepare
 prepare:
-	cd ios
-	rm -rf ./Pods
-	pod install
-	cd ../
+	cd ios; rm -rf ./Pods; pod install;
 
 .PHONY: secret
 secret:
