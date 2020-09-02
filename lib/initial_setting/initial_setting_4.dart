@@ -3,12 +3,11 @@ import 'package:Pilll/theme/color.dart';
 import 'package:Pilll/initial_setting/initial_setting.dart';
 import 'package:Pilll/theme/font.dart';
 import 'package:Pilll/theme/text_color.dart';
-import 'package:Pilll/util/shared_preference/keys.dart';
+import 'package:Pilll/util/shared_preference/toolbar/picker_toolbar.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:provider/provider.dart';
-import 'package:shared_preferences/shared_preferences.dart';
 
 class InitialSetting4 extends StatefulWidget {
   @override
@@ -21,54 +20,78 @@ class _InitialSetting4State extends State<InitialSetting4> {
     return !(model.hour == null || model.minute == null);
   }
 
-  String timeString(BuildContext context) {
-    int minute = 0;
-    int hour = 22;
+  bool _notYetSetTime(InitialSettingModel model) {
+    return model.minute == null || model.hour == null;
+  }
+
+  DateTime _dateTime(BuildContext context) {
     var model = Provider.of<InitialSettingModel>(context, listen: false);
-    if (model.minute != null) {
+    int hour = 22;
+    int minute = 0;
+    if (!_notYetSetTime(model)) {
+      hour = model.hour;
       minute = model.minute;
     }
-    if (model.hour != null) {
-      hour = model.hour;
-    }
-    var formatter = NumberFormat("00");
-    return formatter.format(hour) + ":" + formatter.format(minute);
-  }
-
-  DateTime defaultDateTime() {
     var t = DateTime.now().toLocal();
-    return DateTime(
-        t.year, t.month, t.day, 22, 0, t.second, t.millisecond, t.microsecond);
+    return DateTime(t.year, t.month, t.day, hour, minute, t.second,
+        t.millisecond, t.microsecond);
   }
 
-  void _done() {
-    Router.endInitialSetting(context);
+  Widget _time(BuildContext context) {
+    var model = Provider.of<InitialSettingModel>(context, listen: false);
+    var formatter = NumberFormat("00");
+    var color = _notYetSetTime(model) ? TextColor.lightGray : TextColor.black;
+    var dateTime = _dateTime(context);
+    return Text(
+      formatter.format(dateTime.hour) + ":" + formatter.format(dateTime.minute),
+      style: FontType.largeNumber.merge(
+        TextStyle(
+          decoration: TextDecoration.underline,
+          color: color,
+        ),
+      ),
+    );
   }
 
   void _showDurationModalSheet(BuildContext context) {
+    var model = Provider.of<InitialSettingModel>(context, listen: false);
+    var selectedHour = _dateTime(context).hour;
+    var selectedMinute = _dateTime(context).minute;
     showModalBottomSheet(
       context: context,
       builder: (BuildContext context) {
-        return Container(
-          height: MediaQuery.of(context).size.height / 3,
-          child: GestureDetector(
-              onTap: () {
-                Navigator.pop(context);
-              },
-              child: CupertinoDatePicker(
-                use24hFormat: true,
-                minuteInterval: 10,
-                initialDateTime: defaultDateTime(),
-                mode: CupertinoDatePickerMode.time,
-                onDateTimeChanged: (DateTime value) {
-                  setState(() {
-                    var model = Provider.of<InitialSettingModel>(context,
-                        listen: false);
-                    model.hour = value.hour;
-                    model.minute = value.minute;
-                  });
-                },
-              )),
+        return Column(
+          mainAxisAlignment: MainAxisAlignment.end,
+          mainAxisSize: MainAxisSize.min,
+          children: <Widget>[
+            PickerToolbar(
+              done: (() {
+                setState(() {
+                  model.hour = selectedHour;
+                  model.minute = selectedMinute;
+                  Navigator.pop(context);
+                });
+              }),
+              cancel: (() => Navigator.pop(context)),
+            ),
+            Container(
+              height: MediaQuery.of(context).size.height / 3,
+              child: GestureDetector(
+                  onTap: () {
+                    Navigator.pop(context);
+                  },
+                  child: CupertinoDatePicker(
+                    use24hFormat: true,
+                    minuteInterval: 10,
+                    initialDateTime: _dateTime(context),
+                    mode: CupertinoDatePickerMode.time,
+                    onDateTimeChanged: (DateTime value) {
+                      selectedHour = value.hour;
+                      selectedMinute = value.minute;
+                    },
+                  )),
+            ),
+          ],
         );
       },
     );
@@ -110,17 +133,7 @@ class _InitialSetting4State extends State<InitialSetting4> {
                       onTap: () {
                         _showDurationModalSheet(context);
                       },
-                      child: Text(
-                        timeString(context),
-                        style: FontType.largeNumber
-                            .merge(TextColorStyle.black)
-                            .merge(
-                              TextStyle(
-                                decoration: TextDecoration.underline,
-                                color: PilllColors.lightGray,
-                              ),
-                            ),
-                      ),
+                      child: _time(context),
                     ),
                   ],
                 ),
@@ -134,12 +147,23 @@ class _InitialSetting4State extends State<InitialSetting4> {
                     child: Text(
                       "設定",
                     ),
-                    onPressed: !_canNext(context) ? null : _done,
+                    onPressed: !_canNext(context)
+                        ? null
+                        : () {
+                            Provider.of<InitialSettingModel>(context,
+                                    listen: false)
+                                .register(context)
+                                .then((_) => Router.endInitialSetting(context));
+                          },
                   ),
                   FlatButton(
                     child: Text("スキップ"),
                     textColor: TextColor.gray,
-                    onPressed: _done,
+                    onPressed: () {
+                      Provider.of<InitialSettingModel>(context, listen: false)
+                          .register(context)
+                          .then((_) => Router.endInitialSetting(context));
+                    },
                   ),
                 ],
               ),
