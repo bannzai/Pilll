@@ -32,6 +32,6 @@ jobs:
     - run: flutter test
     - name: Run iOS
       run: |
-        flutter build ios --debug --flavor development
+        flutter build ios --debug --no-codesign --flavor development
     - run: flutter build apk --debug --flavor development
 
