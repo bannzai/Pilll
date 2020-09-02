@@ -30,6 +30,6 @@ jobs:
         flutter-version: '1.17.5'
     - run: flutter pub get
     - run: flutter test
-    - run: flutter build ios --debug --no-codesign --flavor development
+    - run: flutter build ios --debug --no-codesign --flavor development --verbose
     - run: flutter build apk --debug --flavor development
 
