@@ -47,7 +47,9 @@ class InitialSetting2 extends StatelessWidget {
                   textAlign: TextAlign.center,
                 ),
                 Spacer(),
-                PillSheet(),
+                PillSheet(
+                  isHideWeekdayLine: true,
+                ),
                 SizedBox(height: 24),
                 ExplainPillNumber(today: today()),
                 SizedBox(height: 24),

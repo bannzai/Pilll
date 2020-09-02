@@ -8,8 +8,11 @@ import 'package:flutter_svg/flutter_svg.dart';
 typedef PillMarkSelected = void Function(int);
 
 class PillSheet extends StatelessWidget {
+  final bool isHideWeekdayLine;
+
+  const PillSheet({Key key, this.isHideWeekdayLine}) : super(key: key);
   int _calcIndex(int row, int line) {
-    return row + 1 + (line - 1) * 7;
+    return row + 1 + (line) * 7;
   }
 
   Widget _weekdayLine() {
@@ -54,29 +57,29 @@ class PillSheet extends StatelessWidget {
         children: <Widget>[
           Positioned(
             left: 38,
-            top: 84,
+            top: isHideWeekdayLine ? 64 : 84,
             child: SvgPicture.asset("images/pill_sheet_dot_line.svg"),
           ),
           Positioned(
             left: 38,
-            top: 136,
+            top: isHideWeekdayLine ? 124 : 136,
             child: SvgPicture.asset("images/pill_sheet_dot_line.svg"),
           ),
           Positioned(
             left: 38,
-            top: 190,
+            top: isHideWeekdayLine ? 188 : 190,
             child: SvgPicture.asset("images/pill_sheet_dot_line.svg"),
           ),
           Padding(
             padding: const EdgeInsets.fromLTRB(28, 0, 28, 24),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: List.generate(5, (line) {
-                if (line == 0) {
-                  return _weekdayLine();
-                }
-                return _pillMarkLine(line);
-              }),
+              children: [
+                if (!isHideWeekdayLine) _weekdayLine() else Container(),
+                ...List.generate(4, (line) {
+                  return _pillMarkLine(line);
+                }),
+              ],
             ),
           ),
         ],
