@@ -54,6 +54,9 @@ class _InitialSetting4State extends State<InitialSetting4> {
   }
 
   void _showDurationModalSheet(BuildContext context) {
+    var model = Provider.of<InitialSettingModel>(context, listen: false);
+    var selectedHour = _dateTime(context).hour;
+    var selectedMinute = _dateTime(context).minute;
     showModalBottomSheet(
       context: context,
       builder: (BuildContext context) {
@@ -63,8 +66,13 @@ class _InitialSetting4State extends State<InitialSetting4> {
           children: <Widget>[
             PickerToolbar(
               done: (() {
-                Navigator.pop(context);
+                setState(() {
+                  model.hour = selectedHour;
+                  model.minute = selectedMinute;
+                  Navigator.pop(context);
+                });
               }),
+              cancel: (() => Navigator.pop(context)),
             ),
             Container(
               height: MediaQuery.of(context).size.height / 3,
@@ -78,12 +86,8 @@ class _InitialSetting4State extends State<InitialSetting4> {
                     initialDateTime: _dateTime(context),
                     mode: CupertinoDatePickerMode.time,
                     onDateTimeChanged: (DateTime value) {
-                      setState(() {
-                        var model = Provider.of<InitialSettingModel>(context,
-                            listen: false);
-                        model.hour = value.hour;
-                        model.minute = value.minute;
-                      });
+                      selectedHour = value.hour;
+                      selectedMinute = value.minute;
                     },
                   )),
             ),
