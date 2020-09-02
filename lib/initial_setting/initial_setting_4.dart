@@ -3,6 +3,7 @@ import 'package:Pilll/theme/color.dart';
 import 'package:Pilll/initial_setting/initial_setting.dart';
 import 'package:Pilll/theme/font.dart';
 import 'package:Pilll/theme/text_color.dart';
+import 'package:Pilll/util/shared_preference/toolbar/picker_toolbar.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
@@ -43,26 +44,37 @@ class _InitialSetting4State extends State<InitialSetting4> {
     showModalBottomSheet(
       context: context,
       builder: (BuildContext context) {
-        return Container(
-          height: MediaQuery.of(context).size.height / 3,
-          child: GestureDetector(
-              onTap: () {
+        return Column(
+          mainAxisAlignment: MainAxisAlignment.end,
+          mainAxisSize: MainAxisSize.min,
+          children: <Widget>[
+            PickerToolbar(
+              done: (() {
                 Navigator.pop(context);
-              },
-              child: CupertinoDatePicker(
-                use24hFormat: true,
-                minuteInterval: 10,
-                initialDateTime: defaultDateTime(),
-                mode: CupertinoDatePickerMode.time,
-                onDateTimeChanged: (DateTime value) {
-                  setState(() {
-                    var model = Provider.of<InitialSettingModel>(context,
-                        listen: false);
-                    model.hour = value.hour;
-                    model.minute = value.minute;
-                  });
-                },
-              )),
+              }),
+            ),
+            Container(
+              height: MediaQuery.of(context).size.height / 3,
+              child: GestureDetector(
+                  onTap: () {
+                    Navigator.pop(context);
+                  },
+                  child: CupertinoDatePicker(
+                    use24hFormat: true,
+                    minuteInterval: 10,
+                    initialDateTime: defaultDateTime(),
+                    mode: CupertinoDatePickerMode.time,
+                    onDateTimeChanged: (DateTime value) {
+                      setState(() {
+                        var model = Provider.of<InitialSettingModel>(context,
+                            listen: false);
+                        model.hour = value.hour;
+                        model.minute = value.minute;
+                      });
+                    },
+                  )),
+            ),
+          ],
         );
       },
     );
