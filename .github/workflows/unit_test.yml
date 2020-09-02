@@ -33,6 +33,6 @@ jobs:
     - name: Run iOS
       run:
         make prepare;
-        flutter build ios --debug --no-codesign --flavor development --verbose
+        flutter build ios --debug --no-codesign --flavor development
     - run: flutter build apk --debug --flavor development
 
