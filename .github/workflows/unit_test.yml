@@ -32,10 +32,6 @@ jobs:
     - run: flutter test
     - name: Run iOS
       run: |
-        cd ios
-        rm -rf ./Pods
-        pod install
-        cd ../
         flutter build ios --debug --flavor development
     - run: flutter build apk --debug --flavor development
 
