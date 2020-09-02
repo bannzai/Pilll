@@ -32,7 +32,7 @@ jobs:
     - run: flutter test
     - name: Run iOS
       run:
-        make prepare
+        make prepare;
         flutter build ios --debug --no-codesign --flavor development --verbose
     - run: flutter build apk --debug --flavor development
 
