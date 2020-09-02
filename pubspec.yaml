@@ -29,13 +29,7 @@ dependencies:
   intl: ^0.16.1
   firebase_core: ^0.5.0
   firebase_analytics: ^6.0.0
-  # TODO: https://github.com/FirebaseExtended/flutterfire/pull/3360
-  # ^0.18.0+1
-  firebase_auth: 
-    git:
-      url: https://github.com/FirebaseExtended/flutterfire
-      path: packages/firebase_auth/firebase_auth
-      ref: 534cb2a8ebd69cb0fab9552366df2ca2d6a24914
+  firebase_auth: ^0.18.0+1
   cloud_firestore: ^0.14.0+2
 
 
