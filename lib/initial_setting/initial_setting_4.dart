@@ -20,24 +20,37 @@ class _InitialSetting4State extends State<InitialSetting4> {
     return !(model.hour == null || model.minute == null);
   }
 
-  String timeString(BuildContext context) {
-    int minute = 0;
-    int hour = 22;
-    var model = Provider.of<InitialSettingModel>(context, listen: false);
-    if (model.minute != null) {
-      minute = model.minute;
-    }
-    if (model.hour != null) {
-      hour = model.hour;
-    }
-    var formatter = NumberFormat("00");
-    return formatter.format(hour) + ":" + formatter.format(minute);
+  bool _notYetSetTime(InitialSettingModel model) {
+    return model.minute == null || model.hour == null;
   }
 
-  DateTime defaultDateTime() {
+  DateTime _dateTime(BuildContext context) {
+    var model = Provider.of<InitialSettingModel>(context, listen: false);
+    int hour = 22;
+    int minute = 0;
+    if (!_notYetSetTime(model)) {
+      hour = model.hour;
+      minute = model.minute;
+    }
     var t = DateTime.now().toLocal();
-    return DateTime(
-        t.year, t.month, t.day, 22, 0, t.second, t.millisecond, t.microsecond);
+    return DateTime(t.year, t.month, t.day, hour, minute, t.second,
+        t.millisecond, t.microsecond);
+  }
+
+  Widget _time(BuildContext context) {
+    var model = Provider.of<InitialSettingModel>(context, listen: false);
+    var formatter = NumberFormat("00");
+    var color = _notYetSetTime(model) ? TextColor.lightGray : TextColor.black;
+    var dateTime = _dateTime(context);
+    return Text(
+      formatter.format(dateTime.hour) + ":" + formatter.format(dateTime.minute),
+      style: FontType.largeNumber.merge(
+        TextStyle(
+          decoration: TextDecoration.underline,
+          color: color,
+        ),
+      ),
+    );
   }
 
   void _showDurationModalSheet(BuildContext context) {
@@ -62,7 +75,7 @@ class _InitialSetting4State extends State<InitialSetting4> {
                   child: CupertinoDatePicker(
                     use24hFormat: true,
                     minuteInterval: 10,
-                    initialDateTime: defaultDateTime(),
+                    initialDateTime: _dateTime(context),
                     mode: CupertinoDatePickerMode.time,
                     onDateTimeChanged: (DateTime value) {
                       setState(() {
@@ -116,17 +129,7 @@ class _InitialSetting4State extends State<InitialSetting4> {
                       onTap: () {
                         _showDurationModalSheet(context);
                       },
-                      child: Text(
-                        timeString(context),
-                        style: FontType.largeNumber
-                            .merge(TextColorStyle.black)
-                            .merge(
-                              TextStyle(
-                                decoration: TextDecoration.underline,
-                                color: PilllColors.lightGray,
-                              ),
-                            ),
-                      ),
+                      child: _time(context),
                     ),
                   ],
                 ),
