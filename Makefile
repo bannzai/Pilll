@@ -1,4 +1,12 @@
 
+# Workarround for specify pub https://github.com/bannzai/Pilll/pull/23#discussion_r481963119
+.PHONY: prepare
+prepare:
+	cd ios
+	rm -rf ./Pods
+	pod install
+	cd ../
+
 .PHONY: secret
 secret:
 	echo $(FILE_FIREBASE_ANDROID_DEVELOPMENT) | base64 -D > android/app/src/development/google-services.json
