@@ -126,7 +126,7 @@ packages:
       path: "packages/firebase_auth/firebase_auth"
       ref: "534cb2a8ebd69cb0fab9552366df2ca2d6a24914"
       resolved-ref: "534cb2a8ebd69cb0fab9552366df2ca2d6a24914"
-      url: "git@github.com:FirebaseExtended/flutterfire.git"
+      url: "https://github.com/FirebaseExtended/flutterfire"
     source: git
     version: "0.18.0+1"
   firebase_auth_platform_interface:
