@@ -4,8 +4,9 @@ import 'package:flutter/material.dart';
 
 class PickerToolbar extends StatelessWidget {
   final VoidCallback done;
+  final VoidCallback cancel;
 
-  const PickerToolbar({Key key, this.done}) : super(key: key);
+  const PickerToolbar({Key key, this.done, this.cancel}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -16,7 +17,7 @@ class PickerToolbar extends StatelessWidget {
           CupertinoButton(
             child: Text('キャンセル'),
             onPressed: () {
-              Navigator.pop(context);
+              cancel();
             },
             padding: const EdgeInsets.symmetric(
               horizontal: 16.0,
