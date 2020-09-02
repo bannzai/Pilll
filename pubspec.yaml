@@ -29,6 +29,8 @@ dependencies:
   intl: ^0.16.1
   firebase_core: ^0.5.0
   firebase_analytics: ^6.0.0
+  # TODO: https://github.com/FirebaseExtended/flutterfire/pull/3360
+  # ^0.18.0+1
   firebase_auth: 
 	  git: git@github.com:FirebaseExtended/flutterfire.git
 	  ref: fix-2776
