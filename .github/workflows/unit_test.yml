@@ -36,6 +36,6 @@ jobs:
         rm -rf ./Pods
         pod install
         cd ../
-        flutter build ios --debug --no-codesign --flavor development
+        flutter build ios --debug --flavor development
     - run: flutter build apk --debug --flavor development
 
