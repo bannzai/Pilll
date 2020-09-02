@@ -148,7 +148,8 @@ class _InitialSetting4State extends State<InitialSetting4> {
                         : () {
                             Provider.of<InitialSettingModel>(context,
                                     listen: false)
-                                .register(context);
+                                .register(context)
+                                .then((_) => Router.endInitialSetting(context));
                           },
                   ),
                   FlatButton(
