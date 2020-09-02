@@ -66,6 +66,9 @@ class _InitialSetting3State extends State<InitialSetting3> {
   }
 
   void showFromModalSheet() {
+    var model = Provider.of<InitialSettingModel>(context, listen: false);
+    int selectedFromMenstruction =
+        model.fromMenstruation == null ? 0 : model.fromMenstruation;
     showModalBottomSheet(
       context: context,
       builder: (BuildContext context) {
@@ -75,6 +78,13 @@ class _InitialSetting3State extends State<InitialSetting3> {
           children: <Widget>[
             PickerToolbar(
               done: (() {
+                setState(() {
+                  Provider.of<InitialSettingModel>(context, listen: false)
+                      .fromMenstruation = selectedFromMenstruction;
+                  Navigator.pop(context);
+                });
+              }),
+              cancel: (() {
                 Navigator.pop(context);
               }),
             ),
@@ -88,11 +98,10 @@ class _InitialSetting3State extends State<InitialSetting3> {
                   itemExtent: 40,
                   children: _fromList.map(_pickerItem).toList(),
                   onSelectedItemChanged: (index) {
-                    setState(() {
-                      Provider.of<InitialSettingModel>(context, listen: false)
-                          .fromMenstruation = index;
-                    });
+                    selectedFromMenstruction = index;
                   },
+                  scrollController: FixedExtentScrollController(
+                      initialItem: selectedFromMenstruction),
                 ),
               ),
             ),
@@ -103,6 +112,9 @@ class _InitialSetting3State extends State<InitialSetting3> {
   }
 
   void showDurationModalSheet() {
+    var model = Provider.of<InitialSettingModel>(context, listen: false);
+    var selectedDurationMenstruation =
+        model.durationMenstruation == null ? 1 : model.durationMenstruation;
     showModalBottomSheet(
       context: context,
       builder: (BuildContext context) {
@@ -112,6 +124,13 @@ class _InitialSetting3State extends State<InitialSetting3> {
           children: <Widget>[
             PickerToolbar(
               done: (() {
+                setState(() {
+                  Provider.of<InitialSettingModel>(context, listen: false)
+                      .durationMenstruation = selectedDurationMenstruation;
+                  Navigator.pop(context);
+                });
+              }),
+              cancel: (() {
                 Navigator.pop(context);
               }),
             ),
@@ -125,11 +144,10 @@ class _InitialSetting3State extends State<InitialSetting3> {
                   itemExtent: 40,
                   children: _durationList.map(_pickerItem).toList(),
                   onSelectedItemChanged: (index) {
-                    setState(() {
-                      Provider.of<InitialSettingModel>(context, listen: false)
-                          .durationMenstruation = index + 1;
-                    });
+                    selectedDurationMenstruation = index + 1;
                   },
+                  scrollController: FixedExtentScrollController(
+                      initialItem: selectedDurationMenstruation - 1),
                 ),
               ),
             ),
