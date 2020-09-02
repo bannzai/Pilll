@@ -4,6 +4,7 @@ import 'package:Pilll/initial_setting/initial_setting.dart';
 import 'package:Pilll/initial_setting/initial_setting_4.dart';
 import 'package:Pilll/theme/font.dart';
 import 'package:Pilll/theme/text_color.dart';
+import 'package:Pilll/util/shared_preference/toolbar/picker_toolbar.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -64,37 +65,6 @@ class _InitialSetting3State extends State<InitialSetting3> {
     }
   }
 
-  Widget _toolbar(VoidCallback done) {
-    return Container(
-      height: 44,
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: <Widget>[
-          CupertinoButton(
-            child: Text('キャンセル'),
-            onPressed: () {
-              Navigator.pop(context);
-            },
-            padding: const EdgeInsets.symmetric(
-              horizontal: 16.0,
-              vertical: 5.0,
-            ),
-          ),
-          CupertinoButton(
-            child: Text('完了', style: FontType.done),
-            onPressed: () {
-              done();
-            },
-            padding: const EdgeInsets.symmetric(
-              horizontal: 16.0,
-              vertical: 5.0,
-            ),
-          )
-        ],
-      ),
-    );
-  }
-
   void showFromModalSheet() {
     showModalBottomSheet(
       context: context,
@@ -103,9 +73,11 @@ class _InitialSetting3State extends State<InitialSetting3> {
           mainAxisAlignment: MainAxisAlignment.end,
           mainAxisSize: MainAxisSize.min,
           children: <Widget>[
-            _toolbar(() {
-              Navigator.pop(context);
-            }),
+            PickerToolbar(
+              done: (() {
+                Navigator.pop(context);
+              }),
+            ),
             Container(
               height: 200,
               child: GestureDetector(
@@ -138,9 +110,11 @@ class _InitialSetting3State extends State<InitialSetting3> {
           mainAxisAlignment: MainAxisAlignment.end,
           mainAxisSize: MainAxisSize.min,
           children: <Widget>[
-            _toolbar(() {
-              Navigator.pop(context);
-            }),
+            PickerToolbar(
+              done: (() {
+                Navigator.pop(context);
+              }),
+            ),
             Container(
               height: MediaQuery.of(context).size.height / 3,
               child: GestureDetector(
