@@ -9,7 +9,9 @@ class Settings extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListView.separated(
       itemBuilder: (BuildContext context, int index) {
-        return _section(SettingSection.values[index], (section, row) {});
+        return _section(
+          SettingSection.values[index],
+        );
       },
       separatorBuilder: (BuildContext context, int index) {
         return _separatorItem();
@@ -66,7 +68,7 @@ class Settings extends StatelessWidget {
     }
   }
 
-  Widget _section(SettingSection section, SettingsSelectedRow callback) {
+  Widget _section(SettingSection section) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
