@@ -12,7 +12,7 @@ class Settings extends StatelessWidget {
         return _section(SettingSection.values[index], (section, row) {});
       },
       separatorBuilder: (BuildContext context, int index) {
-        return separatorItem();
+        return _separatorItem();
       },
       itemCount: SettingSection.values.length,
       addRepaintBoundaries: false,
@@ -76,7 +76,7 @@ class Settings extends StatelessWidget {
     );
   }
 
-  Widget separatorItem() {
+  Widget _separatorItem() {
     return Container(
       height: 1,
       color: PilllColors.border,
