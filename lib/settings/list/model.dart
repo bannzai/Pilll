@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 
 enum SettingSection { pill, menstruation, notification, other }
 enum SettingRowType { title, date }
-typedef SettingsSelectedRow = void Function(SettingSection section, int row);
 
 abstract class SettingListRowModel {
   Widget widget();
