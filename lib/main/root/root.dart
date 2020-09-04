@@ -27,6 +27,7 @@ class RootState extends State<Root> {
       context.read<AuthUser>().userCredential = userCredential;
       return user.UserInterface.fetchOrCreateUser();
     }).then((user) {
+      context.read<AuthUser>().user = user;
       if (user.settings == null || user.settings.isEmpty) {
         Navigator.popAndPushNamed(context, Routes.initialSetting);
         return null;
