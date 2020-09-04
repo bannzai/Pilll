@@ -18,19 +18,18 @@ class InitialSettingModel {
   bool isOnReminder;
 
   Future<void> register(BuildContext context) {
-    return user.User.create().then((value) {
-      value.setSettings({
-        "beginingMenstruationFromAfterFakePeriod": fromMenstruation,
-        "menstuationPeriod": durationMenstruation,
-        "reminderTime": {"hour": hour, "minute": minute},
-        "isOnReminder": isOnReminder,
-        "pillSheetTypeRawPath": pillSheetType.name,
-      }).then((_) {
-        return SharedPreferences.getInstance();
-      }).then((storage) {
-        storage.setString(
-            StringKey.firebaseAnonymousUserID, value.anonymousUserID);
-      });
+    return user.UserInterface.fetchOrCreateUser().then((value) {
+      value
+          .setSettings({
+            "beginingMenstruationFromAfterFakePeriod": fromMenstruation,
+            "menstuationPeriod": durationMenstruation,
+            "reminderTime": {"hour": hour, "minute": minute},
+            "isOnReminder": isOnReminder,
+            "pillSheetTypeRawPath": pillSheetType.name,
+          })
+          .then((_) => SharedPreferences.getInstance())
+          .then((storage) => storage.setString(
+              StringKey.firebaseAnonymousUserID, value.anonymousUserID));
     });
   }
 }
