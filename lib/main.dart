@@ -10,6 +10,7 @@ import 'package:provider/provider.dart';
 
 import 'main/application/router.dart';
 import 'model/auth_user.dart';
+import 'model/immutable/user.dart';
 
 void main() {
   initializeDateFormatting('ja_JP');

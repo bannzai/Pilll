@@ -16,13 +16,12 @@ extension UserPropertyKeys on String {
   static final settings = "settings";
 }
 
-@immutable
 class User {
   static final path = "users";
   String get documentID => anonymousUserID;
 
   final String anonymousUserID;
-  final Map<String, dynamic> settings;
+  Map<String, dynamic> settings;
 
   User._({this.anonymousUserID, this.settings});
 
@@ -74,9 +73,8 @@ extension UserInterface on User {
   }
 
   Future<void> setSettings(Map<String, dynamic> settings) {
-    return FirebaseFirestore.instance
-        .collection(User.path)
-        .doc(documentID)
-        .set({UserPropertyKeys.settings: settings}, SetOptions(merge: true));
+    return FirebaseFirestore.instance.collection(User.path).doc(documentID).set(
+        {UserPropertyKeys.settings: settings},
+        SetOptions(merge: true)).then((_) => this.settings = settings);
   }
 }
