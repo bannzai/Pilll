@@ -1,38 +1,8 @@
-import 'package:Pilll/model/immutable/user.dart';
 import 'package:Pilll/theme/color.dart';
 import 'package:Pilll/initial_setting/initial_setting_1.dart';
-import 'package:Pilll/model/pill_sheet_type.dart';
 import 'package:Pilll/theme/font.dart';
 import 'package:Pilll/theme/text_color.dart';
-import 'package:Pilll/util/shared_preference/keys.dart';
 import 'package:flutter/material.dart';
-import 'package:Pilll/model/immutable/user.dart' as user;
-import 'package:shared_preferences/shared_preferences.dart';
-
-class InitialSettingModel {
-  PillSheetType pillSheetType;
-  int fromMenstruation;
-  int durationMenstruation;
-  int hour;
-  int minute;
-  bool isOnReminder;
-
-  Future<void> register(BuildContext context) {
-    return user.UserInterface.fetchOrCreateUser().then((value) {
-      value
-          .setSettings({
-            "beginingMenstruationFromAfterFakePeriod": fromMenstruation,
-            "menstuationPeriod": durationMenstruation,
-            "reminderTime": {"hour": hour, "minute": minute},
-            "isOnReminder": isOnReminder,
-            "pillSheetTypeRawPath": pillSheetType.name,
-          })
-          .then((_) => SharedPreferences.getInstance())
-          .then((storage) => storage.setString(
-              StringKey.firebaseAnonymousUserID, value.anonymousUserID));
-    });
-  }
-}
 
 class InitialSetting extends StatelessWidget {
   const InitialSetting({Key key}) : super(key: key);
