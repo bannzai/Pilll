@@ -1,4 +1,5 @@
 import 'package:Pilll/main/application/router.dart';
+import 'package:Pilll/model/setting.dart';
 import 'package:Pilll/theme/color.dart';
 import 'package:Pilll/initial_setting/initial_setting_3.dart';
 import 'package:Pilll/main/record/pill_sheet.dart';
@@ -20,7 +21,7 @@ class InitialSetting2 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    InitialSettingModel model = context.watch();
+    Setting model = context.watch();
     return Scaffold(
       backgroundColor: PilllColors.background,
       appBar: AppBar(
@@ -82,8 +83,8 @@ class InitialSetting2 extends StatelessWidget {
                       child: Text("スキップ"),
                       textColor: TextColor.gray,
                       onPressed: () {
-                        Provider.of<InitialSettingModel>(context, listen: false)
-                            .register(context)
+                        Provider.of<Setting>(context, listen: false)
+                            .register()
                             .then((_) => Router.endInitialSetting(context));
                       },
                     ),

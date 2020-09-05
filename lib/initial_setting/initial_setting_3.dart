@@ -1,4 +1,5 @@
 import 'package:Pilll/main/application/router.dart';
+import 'package:Pilll/model/setting.dart';
 import 'package:Pilll/theme/color.dart';
 import 'package:Pilll/initial_setting/initial_setting.dart';
 import 'package:Pilll/initial_setting/initial_setting_4.dart';
@@ -22,8 +23,7 @@ class _InitialSetting3State extends State<InitialSetting3> {
       List<String>.generate(7, (index) => (index + 1).toString());
 
   Widget _from(BuildContext context) {
-    InitialSettingModel model =
-        Provider.of<InitialSettingModel>(context, listen: false);
+    Setting model = Provider.of<Setting>(context, listen: false);
     bool isNotYetSetValue = model.fromMenstruation == null;
     if (isNotYetSetValue) {
       return Text(
@@ -44,8 +44,7 @@ class _InitialSetting3State extends State<InitialSetting3> {
   }
 
   Widget _duration(BuildContext context) {
-    InitialSettingModel model =
-        Provider.of<InitialSettingModel>(context, listen: false);
+    Setting model = Provider.of<Setting>(context, listen: false);
     bool isNotYetSetValue = model.durationMenstruation == null;
     if (isNotYetSetValue) {
       return Text(
@@ -66,7 +65,7 @@ class _InitialSetting3State extends State<InitialSetting3> {
   }
 
   void showFromModalSheet() {
-    var model = Provider.of<InitialSettingModel>(context, listen: false);
+    var model = Provider.of<Setting>(context, listen: false);
     int selectedFromMenstruction =
         model.fromMenstruation == null ? 0 : model.fromMenstruation;
     showModalBottomSheet(
@@ -111,7 +110,7 @@ class _InitialSetting3State extends State<InitialSetting3> {
   }
 
   void showDurationModalSheet() {
-    var model = Provider.of<InitialSettingModel>(context, listen: false);
+    var model = Provider.of<Setting>(context, listen: false);
     var selectedDurationMenstruation =
         model.durationMenstruation == null ? 1 : model.durationMenstruation;
     showModalBottomSheet(
@@ -156,8 +155,7 @@ class _InitialSetting3State extends State<InitialSetting3> {
   }
 
   bool canNext(BuildContext context) {
-    InitialSettingModel model =
-        Provider.of<InitialSettingModel>(context, listen: false);
+    Setting model = Provider.of<Setting>(context, listen: false);
     return !(model.fromMenstruation == null ||
         model.durationMenstruation == null);
   }
@@ -262,8 +260,8 @@ class _InitialSetting3State extends State<InitialSetting3> {
                     child: Text("スキップ"),
                     textColor: TextColor.gray,
                     onPressed: () {
-                      Provider.of<InitialSettingModel>(context, listen: false)
-                          .register(context)
+                      Provider.of<Setting>(context, listen: false)
+                          .register()
                           .then((_) => Router.endInitialSetting(context));
                     },
                   ),
