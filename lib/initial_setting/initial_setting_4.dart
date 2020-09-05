@@ -152,7 +152,7 @@ class _InitialSetting4State extends State<InitialSetting4> {
                         ? null
                         : () {
                             Provider.of<Setting>(context, listen: false)
-                                .register(context)
+                                .register()
                                 .then((_) => Router.endInitialSetting(context));
                           },
                   ),
@@ -161,7 +161,7 @@ class _InitialSetting4State extends State<InitialSetting4> {
                     textColor: TextColor.gray,
                     onPressed: () {
                       Provider.of<Setting>(context, listen: false)
-                          .register(context)
+                          .register()
                           .then((_) => Router.endInitialSetting(context));
                     },
                   ),
