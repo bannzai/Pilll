@@ -22,7 +22,7 @@ class User {
   String get documentID => anonymousUserID;
 
   final String anonymousUserID;
-  final Setting setting;
+  Setting setting;
 
   User._({this.anonymousUserID, this.setting});
 
@@ -30,7 +30,7 @@ class User {
     Map<String, dynamic> data = document.data();
     return User._(
       anonymousUserID: data[UserPropertyKeys.anonymouseUserID],
-      setting: data[UserPropertyKeys.settings],
+      setting: Setting(data[UserPropertyKeys.settings]),
     );
   }
 
@@ -73,9 +73,9 @@ extension UserInterface on User {
     });
   }
 
-  Future<void> setSettings(Map<String, dynamic> settings) {
+  Future<void> setSettings(Setting setting) {
     return FirebaseFirestore.instance.collection(User.path).doc(documentID).set(
-        {UserPropertyKeys.settings: settings},
-        SetOptions(merge: true)).then((_) => this.settings = settings);
+        {UserPropertyKeys.settings: setting.settings},
+        SetOptions(merge: true)).then((_) => this.setting = setting);
   }
 }
