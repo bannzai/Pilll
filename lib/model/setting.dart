@@ -23,6 +23,15 @@ class Setting {
   bool isOnReminder;
 
   Setting(Map<String, dynamic> rowData) {
+    Setting._(rowData);
+  }
+  Setting.empty() {
+    Setting._(null);
+  }
+  Setting._(Map<String, dynamic> rowData) {
+    if (rowData == null) {
+      return;
+    }
     fromMenstruation =
         rowData[SettingKey.beginingMenstruationFromAfterFakePeriod];
     durationMenstruation = rowData[SettingKey.durationMenstruation];

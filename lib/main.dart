@@ -10,7 +10,7 @@ import 'package:provider/provider.dart';
 
 import 'main/application/router.dart';
 import 'model/auth_user.dart';
-import 'model/immutable/user.dart';
+import 'model/setting.dart';
 
 void main() {
   initializeDateFormatting('ja_JP');
@@ -24,7 +24,7 @@ class App extends StatelessWidget {
     FirebaseAnalytics analytics = FirebaseAnalytics();
     return MultiProvider(
       providers: [
-        Provider(create: (_) => InitialSettingModel()),
+        Provider(create: (_) => Setting.empty()),
         ChangeNotifierProvider<PillSheetModel>(
           create: (_) => MainPillSheetModel(PillSheetType.pillsheet_21),
         ),
