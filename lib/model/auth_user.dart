@@ -1,6 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:Pilll/model/immutable/user.dart' as immutableUser;
+import 'package:Pilll/model/user.dart' as immutableUser;
 
 class AuthUser extends ChangeNotifier {
   UserCredential _userCredential;
