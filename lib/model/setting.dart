@@ -1,4 +1,7 @@
 import 'package:Pilll/model/pill_sheet_type.dart';
+import 'package:Pilll/model/user.dart';
+import 'package:Pilll/util/shared_preference/keys.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class SettingKey {
   static final String beginingMenstruationFromAfterFakePeriod =
@@ -45,5 +48,15 @@ class Setting {
     if (pillSheetType != null)
       settings["pillSheetTypeRawPath"] = pillSheetType.name;
     return settings;
+  }
+
+  Future<void> register() {
+    return UserInterface.fetchOrCreateUser().then((value) {
+      value
+          .registerSetting(this)
+          .then((_) => SharedPreferences.getInstance())
+          .then((storage) => storage.setString(
+              StringKey.firebaseAnonymousUserID, value.anonymousUserID));
+    });
   }
 }
