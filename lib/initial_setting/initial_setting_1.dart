@@ -1,4 +1,5 @@
 import 'package:Pilll/initial_setting/initial_setting_2.dart';
+import 'package:Pilll/main/components/pill_sheet_type_select_page.dart';
 import 'package:Pilll/theme/color.dart';
 import 'package:Pilll/initial_setting/initial_setting.dart';
 import 'package:Pilll/initial_setting/pill_sheet.dart';
@@ -18,47 +19,10 @@ class InitialSetting1 extends StatefulWidget {
 class _InitialSetting1State extends State<InitialSetting1> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: PilllColors.background,
-      appBar: AppBar(
-        leading: IconButton(
-          icon: Icon(Icons.arrow_back, color: Colors.black),
-          onPressed: () => Navigator.of(context).pop(),
-        ),
-        title: Text(
-          "1/4",
-          style: TextStyle(color: TextColor.black),
-        ),
-        backgroundColor: PilllColors.background,
-      ),
-      body: Container(
-        child: Center(
-          child: Column(
-            children: <Widget>[
-              SizedBox(height: 24),
-              Text("飲んでいるピルのタイプはどれ？",
-                  style: FontType.title.merge(TextColorStyle.standard)),
-              SizedBox(height: 24),
-              Container(
-                height: 461,
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children:
-                      PillSheetType.values.map((e) => _pillSheet(e)).toList(),
-                ),
-              )
-            ],
-          ),
-        ),
-      ),
-    );
-  }
-
-  Widget _pillSheet(PillSheetType type) {
     InitialSettingModel model =
         Provider.of<InitialSettingModel>(context, listen: false);
-    return GestureDetector(
-      onTap: () {
+    return PillSheetTypeSelectPage(
+      callback: (type) {
         setState(() {
           model.pillSheetType = type;
           Navigator.of(context)
@@ -67,10 +31,7 @@ class _InitialSetting1State extends State<InitialSetting1> {
           }));
         });
       },
-      child: PillSheet(
-        pillSheetType: type,
-        selected: model.pillSheetType == type,
-      ),
+      selectedPillSheetType: model.pillSheetType,
     );
   }
 }
