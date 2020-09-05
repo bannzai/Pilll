@@ -7,6 +7,20 @@ enum PillSheetType {
 }
 
 extension PillSheetTypeFunctions on PillSheetType {
+  static PillSheetType fromName(String name) {
+    switch (name) {
+      case "21錠タイプ":
+        return PillSheetType.pillsheet_21;
+      case "28錠タイプ(4錠偽薬)":
+        return PillSheetType.pillsheet_28_4;
+      case "28錠タイプ(7錠偽薬)":
+        return PillSheetType.pillsheet_28_7;
+      default:
+        assert(false);
+        return null;
+    }
+  }
+
   String get name {
     switch (this) {
       case PillSheetType.pillsheet_21:
