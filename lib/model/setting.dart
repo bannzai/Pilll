@@ -1,6 +1,7 @@
 import 'package:Pilll/model/pill_sheet_type.dart';
 import 'package:Pilll/model/user.dart';
 import 'package:Pilll/util/shared_preference/keys.dart';
+import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class SettingKey {
@@ -14,7 +15,7 @@ class SettingKey {
   static final String pillSheetTypeRawPath = "pillSheetTypeRawPath";
 }
 
-class Setting {
+class Setting extends ChangeNotifier {
   PillSheetType pillSheetType;
   int fromMenstruation;
   int durationMenstruation;
@@ -62,11 +63,22 @@ class Setting {
 
   Future<void> register() {
     return UserInterface.fetchOrCreateUser().then((value) {
-      value
-          .registerSetting(this)
+      save()
+          .then((value) => null)
           .then((_) => SharedPreferences.getInstance())
           .then((storage) => storage.setString(
               StringKey.firebaseAnonymousUserID, value.anonymousUserID));
     });
+  }
+
+  Future<void> save() {
+    return UserInterface.fetchOrCreateUser().then((value) {
+      value.updateSetting(this);
+    });
+  }
+
+  void notifyWith(void update(Setting setting)) {
+    update(this);
+    notifyListeners();
   }
 }
