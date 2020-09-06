@@ -5,6 +5,7 @@ import 'package:Pilll/settings/list/model.dart';
 import 'package:Pilll/theme/color.dart';
 import 'package:Pilll/theme/font.dart';
 import 'package:Pilll/theme/text_color.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:Pilll/model/pill_sheet_type.dart';
@@ -18,18 +19,25 @@ class _SettingsState extends State<Settings> {
   @override
   Widget build(BuildContext context) {
     var setting = context.watch<AuthUser>().user.setting;
-    return ListView.separated(
-      itemBuilder: (BuildContext context, int index) {
-        return _section(
-          setting,
-          SettingSection.values[index],
+    setting.addListener(() => setting.save());
+    return ChangeNotifierProvider.value(
+      value: setting,
+      child: Consumer(
+          builder: (BuildContext context, Setting setting, Widget child) {
+        return ListView.separated(
+          itemBuilder: (BuildContext context, int index) {
+            return _section(
+              setting,
+              SettingSection.values[index],
+            );
+          },
+          separatorBuilder: (BuildContext context, int index) {
+            return _separatorItem();
+          },
+          itemCount: SettingSection.values.length,
+          addRepaintBoundaries: false,
         );
-      },
-      separatorBuilder: (BuildContext context, int index) {
-        return _separatorItem();
-      },
-      itemCount: SettingSection.values.length,
-      addRepaintBoundaries: false,
+      }),
     );
   }
 
@@ -68,7 +76,8 @@ class _SettingsState extends State<Settings> {
                 return PillSheetTypeSelectPage(
                   callback: (type) {
                     Navigator.pop(context);
-                    setState(() => setting.pillSheetType = type);
+                    setting
+                        .notifyWith((setting) => setting.pillSheetType = type);
                   },
                   selectedPillSheetType: setting.pillSheetType,
                 );

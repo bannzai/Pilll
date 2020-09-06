@@ -73,7 +73,7 @@ extension UserInterface on User {
     });
   }
 
-  Future<void> registerSetting(Setting setting) {
+  Future<void> updateSetting(Setting setting) {
     return FirebaseFirestore.instance.collection(User.path).doc(documentID).set(
         {UserPropertyKeys.settings: setting.settings},
         SetOptions(merge: true)).then((_) => this.setting = setting);
