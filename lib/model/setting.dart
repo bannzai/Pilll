@@ -22,24 +22,25 @@ class Setting {
   int minute;
   bool isOnReminder;
 
-  Setting(Map<String, dynamic> rowData) {
-    Setting._(rowData);
+  factory Setting(Map<String, dynamic> rowData) {
+    return Setting._(rowData);
   }
-  Setting.empty() {
-    Setting._(null);
+  factory Setting.empty() {
+    return Setting._(null);
   }
   Setting._(Map<String, dynamic> rowData) {
     if (rowData == null) {
       return;
     }
-    fromMenstruation =
+    this.fromMenstruation =
         rowData[SettingKey.beginingMenstruationFromAfterFakePeriod];
-    durationMenstruation = rowData[SettingKey.durationMenstruation];
-    hour = rowData[SettingKey.reminderTime][SettingKey.reminderTimeHour];
-    minute = rowData[SettingKey.reminderTime][SettingKey.reminderTimeMinute];
-    isOnReminder = rowData[SettingKey.isOnReminder];
+    this.durationMenstruation = rowData[SettingKey.durationMenstruation];
+    this.hour = rowData[SettingKey.reminderTime][SettingKey.reminderTimeHour];
+    this.minute =
+        rowData[SettingKey.reminderTime][SettingKey.reminderTimeMinute];
+    this.isOnReminder = rowData[SettingKey.isOnReminder];
     String pillSheetTypeRawPath = rowData[SettingKey.pillSheetTypeRawPath];
-    pillSheetType = pillSheetTypeRawPath == null
+    this.pillSheetType = pillSheetTypeRawPath == null
         ? null
         : PillSheetTypeFunctions.fromName(pillSheetTypeRawPath);
   }
@@ -50,7 +51,7 @@ class Setting {
       settings["beginingMenstruationFromAfterFakePeriod"] = fromMenstruation;
     if (durationMenstruation != null)
       settings["menstuationPeriod"] = fromMenstruation;
-    settings["reminderTime"] = {};
+    if (hour != null || minute != null) settings["reminderTime"] = {};
     if (hour != null) settings["reminderTime"]["hour"] = hour;
     if (minute != null) settings["reminderTime"]["minute"] = minute;
     if (isOnReminder != null) settings["isOnReminder"] = isOnReminder;
