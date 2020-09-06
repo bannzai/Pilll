@@ -1,15 +1,27 @@
+import 'package:Pilll/main/components/pill_sheet_type_select_page.dart';
+import 'package:Pilll/model/auth_user.dart';
+import 'package:Pilll/model/setting.dart';
 import 'package:Pilll/settings/list/model.dart';
 import 'package:Pilll/theme/color.dart';
 import 'package:Pilll/theme/font.dart';
 import 'package:Pilll/theme/text_color.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
+import 'package:Pilll/model/pill_sheet_type.dart';
 
-class Settings extends StatelessWidget {
+class Settings extends StatefulWidget {
+  @override
+  _SettingsState createState() => _SettingsState();
+}
+
+class _SettingsState extends State<Settings> {
   @override
   Widget build(BuildContext context) {
+    var setting = context.watch<AuthUser>().user.setting;
     return ListView.separated(
       itemBuilder: (BuildContext context, int index) {
         return _section(
+          setting,
           SettingSection.values[index],
         );
       },
@@ -42,13 +54,27 @@ class Settings extends StatelessWidget {
             Text(text, style: FontType.assisting.merge(TextColorStyle.gray)));
   }
 
-  // ignore: missing_return
-  List<SettingListRowModel> _rowModels(SettingSection section) {
+  List<SettingListRowModel> _rowModels(
+      Setting setting, SettingSection section) {
     switch (section) {
       case SettingSection.pill:
         return [
           SettingListTitleAndContentRowModel(
-              title: "種類", content: "28錠タイプ(7錠偽薬)"),
+            title: "種類",
+            content: setting.pillSheetType.name,
+            onTap: () {
+              Navigator.of(context)
+                  .push(MaterialPageRoute(builder: (BuildContext context) {
+                return PillSheetTypeSelectPage(
+                  callback: (type) {
+                    Navigator.pop(context);
+                    setState(() => setting.pillSheetType = type);
+                  },
+                  selectedPillSheetType: setting.pillSheetType,
+                );
+              }));
+            },
+          ),
         ];
       case SettingSection.menstruation:
         return [
@@ -68,12 +94,12 @@ class Settings extends StatelessWidget {
     }
   }
 
-  Widget _section(SettingSection section) {
+  Widget _section(Setting setting, SettingSection section) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         _sectionTitle(section),
-        ..._rowModels(section).map((e) => e.widget()),
+        ..._rowModels(setting, section).map((e) => e.widget()),
       ],
     );
   }
