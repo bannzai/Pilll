@@ -1,6 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:Pilll/model/user.dart' as immutableUser;
+import 'package:Pilll/model/user.dart' as pilllUser;
 
 class AuthUser extends ChangeNotifier {
   UserCredential _userCredential;
@@ -10,9 +10,9 @@ class AuthUser extends ChangeNotifier {
     notifyListeners();
   }
 
-  immutableUser.User _user;
-  immutableUser.User get user => _user;
-  set user(immutableUser.User value) {
+  pilllUser.User _user;
+  pilllUser.User get user => _user;
+  set user(pilllUser.User value) {
     _user = value;
     notifyListeners();
   }
