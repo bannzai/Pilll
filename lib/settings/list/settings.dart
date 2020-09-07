@@ -12,7 +12,6 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:Pilll/model/pill_sheet_type.dart';
-import 'package:flutter_inappwebview/flutter_inappwebview.dart';
 
 class Settings extends StatefulWidget {
   @override
@@ -169,14 +168,7 @@ class _SettingsState extends State<Settings> {
         ];
       case SettingSection.other:
         return [
-          SettingListTitleRowModel(
-            title: "利用規約",
-            onTap: () {
-              ChromeSafariBrowser browser =
-                  ChromeSafariBrowser(bFallback: null);
-              browser.open(url: "https://bannzai.github.io/Pilll/Terms");
-            },
-          ),
+          SettingListTitleRowModel(title: "利用規約"),
           SettingListTitleRowModel(title: "プライバシーポリシー"),
           SettingListTitleRowModel(title: "お問い合わせ"),
         ];
