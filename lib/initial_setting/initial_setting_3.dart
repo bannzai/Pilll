@@ -22,6 +22,113 @@ class _InitialSetting3State extends State<InitialSetting3> {
   final List<String> _durationList =
       List<String>.generate(7, (index) => (index + 1).toString());
 
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: PilllColors.background,
+      appBar: AppBar(
+        leading: IconButton(
+          icon: Icon(Icons.arrow_back, color: Colors.black),
+          onPressed: () => Navigator.of(context).pop(),
+        ),
+        title: Text(
+          "3/4",
+          style: TextStyle(color: TextColor.black),
+        ),
+        backgroundColor: PilllColors.background,
+      ),
+      body: Container(
+        child: Center(
+          child: Column(
+            children: <Widget>[
+              SizedBox(height: 24),
+              Text(
+                "生理について教えてください",
+                style: FontType.title.merge(TextColorStyle.standard),
+                textAlign: TextAlign.center,
+              ),
+              Spacer(),
+              Container(
+                height: 156,
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: <Widget>[
+                    Text("いつから生理がはじまる？",
+                        style:
+                            FontType.assistingBold.merge(TextColorStyle.black)),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: <Widget>[
+                        Text("偽薬期間に入って",
+                            style:
+                                FontType.assisting.merge(TextColorStyle.gray)),
+                        GestureDetector(
+                          onTap: showFromModalSheet,
+                          child: _from(context),
+                        ),
+                        Text("日後ぐらいから",
+                            style:
+                                FontType.assisting.merge(TextColorStyle.gray)),
+                      ],
+                    ),
+                    Text("何日間生理が続く？",
+                        style:
+                            FontType.assistingBold.merge(TextColorStyle.black)),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: <Widget>[
+                        GestureDetector(
+                          onTap: showDurationModalSheet,
+                          child: _duration(context),
+                        ),
+                        Text("日間生理が続く",
+                            style:
+                                FontType.assisting.merge(TextColorStyle.gray)),
+                      ],
+                    )
+                  ],
+                ),
+              ),
+              Spacer(),
+              Wrap(
+                direction: Axis.vertical,
+                spacing: 8,
+                children: <Widget>[
+                  RaisedButton(
+                    child: Text(
+                      "次へ",
+                    ),
+                    onPressed: !canNext(context)
+                        ? null
+                        : () {
+                            Navigator.of(context).push(
+                              MaterialPageRoute(
+                                builder: (BuildContext context) {
+                                  return InitialSetting4();
+                                },
+                              ),
+                            );
+                          },
+                  ),
+                  FlatButton(
+                    child: Text("スキップ"),
+                    textColor: TextColor.gray,
+                    onPressed: () {
+                      Provider.of<Setting>(context, listen: false)
+                          .register()
+                          .then((_) => Router.endInitialSetting(context));
+                    },
+                  ),
+                ],
+              ),
+              Spacer(),
+            ],
+          ),
+        ),
+      ),
+    );
+  }
+
   Widget _from(BuildContext context) {
     Setting model = Provider.of<Setting>(context, listen: false);
     bool isNotYetSetValue = model.fromMenstruation == null;
@@ -166,112 +273,5 @@ class _InitialSetting3State extends State<InitialSetting3> {
 
   Widget _pickerItem(String str) {
     return Text(str);
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: PilllColors.background,
-      appBar: AppBar(
-        leading: IconButton(
-          icon: Icon(Icons.arrow_back, color: Colors.black),
-          onPressed: () => Navigator.of(context).pop(),
-        ),
-        title: Text(
-          "3/4",
-          style: TextStyle(color: TextColor.black),
-        ),
-        backgroundColor: PilllColors.background,
-      ),
-      body: Container(
-        child: Center(
-          child: Column(
-            children: <Widget>[
-              SizedBox(height: 24),
-              Text(
-                "生理について教えてください",
-                style: FontType.title.merge(TextColorStyle.standard),
-                textAlign: TextAlign.center,
-              ),
-              Spacer(),
-              Container(
-                height: 156,
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: <Widget>[
-                    Text("いつから生理がはじまる？",
-                        style:
-                            FontType.assistingBold.merge(TextColorStyle.black)),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: <Widget>[
-                        Text("偽薬期間に入って",
-                            style:
-                                FontType.assisting.merge(TextColorStyle.gray)),
-                        GestureDetector(
-                          onTap: showFromModalSheet,
-                          child: _from(context),
-                        ),
-                        Text("日後ぐらいから",
-                            style:
-                                FontType.assisting.merge(TextColorStyle.gray)),
-                      ],
-                    ),
-                    Text("何日間生理が続く？",
-                        style:
-                            FontType.assistingBold.merge(TextColorStyle.black)),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: <Widget>[
-                        GestureDetector(
-                          onTap: showDurationModalSheet,
-                          child: _duration(context),
-                        ),
-                        Text("日間生理が続く",
-                            style:
-                                FontType.assisting.merge(TextColorStyle.gray)),
-                      ],
-                    )
-                  ],
-                ),
-              ),
-              Spacer(),
-              Wrap(
-                direction: Axis.vertical,
-                spacing: 8,
-                children: <Widget>[
-                  RaisedButton(
-                    child: Text(
-                      "次へ",
-                    ),
-                    onPressed: !canNext(context)
-                        ? null
-                        : () {
-                            Navigator.of(context).push(
-                              MaterialPageRoute(
-                                builder: (BuildContext context) {
-                                  return InitialSetting4();
-                                },
-                              ),
-                            );
-                          },
-                  ),
-                  FlatButton(
-                    child: Text("スキップ"),
-                    textColor: TextColor.gray,
-                    onPressed: () {
-                      Provider.of<Setting>(context, listen: false)
-                          .register()
-                          .then((_) => Router.endInitialSetting(context));
-                    },
-                  ),
-                ],
-              ),
-              Spacer(),
-            ],
-          ),
-        ),
-      ),
-    );
   }
 }
