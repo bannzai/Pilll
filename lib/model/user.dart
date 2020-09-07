@@ -3,8 +3,6 @@ import 'dart:async';
 import 'package:Pilll/model/setting.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:flutter/material.dart';
-import 'package:meta/meta.dart';
 
 class UserNotFound implements Exception {
   toString() {

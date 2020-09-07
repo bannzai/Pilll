@@ -8,8 +8,6 @@ import 'package:Pilll/theme/font.dart';
 import 'package:Pilll/theme/text_color.dart';
 import 'package:Pilll/util/formatter/date_time_formatter.dart';
 import 'package:Pilll/util/shared_preference/toolbar/date_time_picker.dart';
-import 'package:Pilll/util/shared_preference/toolbar/picker_toolbar.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -131,8 +129,6 @@ class _SettingsState extends State<Settings> {
               }),
         ];
       case SettingSection.notification:
-        int selectedHour = setting.reminderHour;
-        int selectedMinute = setting.reminderMinute;
         return [
           SettingsListSwitchRowModel(
             title: "ピルの服用通知",
