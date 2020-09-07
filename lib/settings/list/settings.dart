@@ -10,8 +10,10 @@ import 'package:Pilll/util/formatter/date_time_formatter.dart';
 import 'package:Pilll/util/shared_preference/toolbar/date_time_picker.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:package_info/package_info.dart';
 import 'package:provider/provider.dart';
 import 'package:Pilll/model/pill_sheet_type.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class Settings extends StatefulWidget {
   @override
@@ -168,9 +170,28 @@ class _SettingsState extends State<Settings> {
         ];
       case SettingSection.other:
         return [
-          SettingListTitleRowModel(title: "利用規約"),
-          SettingListTitleRowModel(title: "プライバシーポリシー"),
-          SettingListTitleRowModel(title: "お問い合わせ"),
+          SettingListTitleRowModel(
+              title: "利用規約",
+              onTap: () {
+                launch("https://bannzai.github.io/Pilll/Terms",
+                    forceSafariVC: true);
+              }),
+          SettingListTitleRowModel(
+              title: "プライバシーポリシー",
+              onTap: () {
+                launch("https://bannzai.github.io/Pilll/PrivacyPolicy",
+                    forceSafariVC: true);
+              }),
+          SettingListTitleRowModel(
+              title: "お問い合わせ",
+              onTap: () {
+                PackageInfo.fromPlatform().then((value) {
+                  var version = value.version;
+                  launch(
+                      "https://docs.google.com/forms/d/e/1FAIpQLSdLX5lLdOSr2B2mwzCptH1kjsJUYy8cKFSYguxl9yvep5b7ig/viewform?usp=pp_url&entry.2066946565=$version",
+                      forceSafariVC: true);
+                });
+              }),
         ];
     }
   }
