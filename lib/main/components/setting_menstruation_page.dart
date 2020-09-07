@@ -148,7 +148,7 @@ class SettingMenstruationPage extends StatelessWidget {
   }
 
   Widget _duration() {
-    bool isNotYetSetValue = selectedFromMenstruation == null;
+    bool isNotYetSetValue = selectedDurationMenstruation == null;
     if (isNotYetSetValue) {
       return Text(
         _blank(),
@@ -168,7 +168,7 @@ class SettingMenstruationPage extends StatelessWidget {
   }
 
   void _showFromModalSheet(BuildContext context) {
-    int selectedDurationMenstruation = this.selectedDurationMenstruation ?? 0;
+    int keepSelectedDurationMenstruation = this.selectedFromMenstruation ?? 0;
     showModalBottomSheet(
       context: context,
       builder: (BuildContext context) {
@@ -178,7 +178,7 @@ class SettingMenstruationPage extends StatelessWidget {
           children: <Widget>[
             PickerToolbar(
               done: (() =>
-                  fromMenstructionDidDecide(selectedDurationMenstruation)),
+                  fromMenstructionDidDecide(keepSelectedDurationMenstruation)),
               cancel: (() {
                 Navigator.pop(context);
               }),
@@ -195,10 +195,10 @@ class SettingMenstruationPage extends StatelessWidget {
                       .map(_pickerItem)
                       .toList(),
                   onSelectedItemChanged: (index) {
-                    selectedDurationMenstruation = index;
+                    keepSelectedDurationMenstruation = index;
                   },
                   scrollController: FixedExtentScrollController(
-                      initialItem: selectedDurationMenstruation),
+                      initialItem: keepSelectedDurationMenstruation),
                 ),
               ),
             ),
@@ -209,7 +209,8 @@ class SettingMenstruationPage extends StatelessWidget {
   }
 
   void _showDurationModalSheet(BuildContext context) {
-    var selectedDurationMenstruation = this.selectedDurationMenstruation ?? 1;
+    var keepSelectedDurationMenstruation =
+        this.selectedDurationMenstruation ?? 1;
     showModalBottomSheet(
       context: context,
       builder: (BuildContext context) {
@@ -218,8 +219,8 @@ class SettingMenstruationPage extends StatelessWidget {
           mainAxisSize: MainAxisSize.min,
           children: <Widget>[
             PickerToolbar(
-              done: (() =>
-                  durationMenstructionDidDecide(selectedDurationMenstruation)),
+              done: (() => durationMenstructionDidDecide(
+                  keepSelectedDurationMenstruation)),
               cancel: (() {
                 Navigator.pop(context);
               }),
@@ -236,10 +237,10 @@ class SettingMenstruationPage extends StatelessWidget {
                       .map(_pickerItem)
                       .toList(),
                   onSelectedItemChanged: (index) {
-                    selectedDurationMenstruation = index + 1;
+                    keepSelectedDurationMenstruation = index + 1;
                   },
                   scrollController: FixedExtentScrollController(
-                      initialItem: selectedDurationMenstruation - 1),
+                      initialItem: keepSelectedDurationMenstruation - 1),
                 ),
               ),
             ),
