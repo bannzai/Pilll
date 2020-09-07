@@ -17,6 +17,7 @@ class _InitialSetting3State extends State<InitialSetting3> {
   Widget build(BuildContext context) {
     var model = Provider.of<AuthUser>(context, listen: false).user.setting;
     return SettingMenstruationPage(
+      title: "3/4",
       doneText: "次へ",
       done: () {
         Navigator.of(context).push(
