@@ -2,7 +2,6 @@ import 'package:Pilll/main/application/router.dart';
 import 'package:Pilll/model/auth_user.dart';
 import 'package:Pilll/model/setting.dart';
 import 'package:Pilll/theme/color.dart';
-import 'package:Pilll/initial_setting/initial_setting.dart';
 import 'package:Pilll/theme/font.dart';
 import 'package:Pilll/theme/text_color.dart';
 import 'package:Pilll/util/shared_preference/toolbar/picker_toolbar.dart';
@@ -17,9 +16,14 @@ class InitialSetting4 extends StatefulWidget {
 }
 
 class _InitialSetting4State extends State<InitialSetting4> {
-  bool _canNext(BuildContext context) {
+  @override
+  void initState() {
     var model = Provider.of<AuthUser>(context, listen: false).user.setting;
-    return !(model.hour == null || model.minute == null);
+    if (_notYetSetTime(model)) {
+      model.hour = 22;
+      model.minute = 0;
+    }
+    super.initState();
   }
 
   bool _notYetSetTime(Setting model) {
@@ -28,28 +32,20 @@ class _InitialSetting4State extends State<InitialSetting4> {
 
   DateTime _dateTime(BuildContext context) {
     var model = Provider.of<AuthUser>(context, listen: false).user.setting;
-    int hour = 22;
-    int minute = 0;
-    if (!_notYetSetTime(model)) {
-      hour = model.hour;
-      minute = model.minute;
-    }
     var t = DateTime.now().toLocal();
-    return DateTime(t.year, t.month, t.day, hour, minute, t.second,
+    return DateTime(t.year, t.month, t.day, model.hour, model.minute, t.second,
         t.millisecond, t.microsecond);
   }
 
   Widget _time(BuildContext context) {
-    var model = Provider.of<AuthUser>(context, listen: false).user.setting;
     var formatter = NumberFormat("00");
-    var color = _notYetSetTime(model) ? TextColor.lightGray : TextColor.black;
     var dateTime = _dateTime(context);
     return Text(
       formatter.format(dateTime.hour) + ":" + formatter.format(dateTime.minute),
       style: FontType.largeNumber.merge(
         TextStyle(
           decoration: TextDecoration.underline,
-          color: color,
+          color: TextColor.black,
         ),
       ),
     );
@@ -149,15 +145,13 @@ class _InitialSetting4State extends State<InitialSetting4> {
                     child: Text(
                       "設定",
                     ),
-                    onPressed: !_canNext(context)
-                        ? null
-                        : () {
-                            Provider.of<AuthUser>(context, listen: false)
-                                .user
-                                .setting
-                                .register()
-                                .then((_) => Router.endInitialSetting(context));
-                          },
+                    onPressed: () {
+                      Provider.of<AuthUser>(context, listen: false)
+                          .user
+                          .setting
+                          .register()
+                          .then((_) => Router.endInitialSetting(context));
+                    },
                   ),
                   FlatButton(
                     child: Text("スキップ"),
