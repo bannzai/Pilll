@@ -24,7 +24,6 @@ class App extends StatelessWidget {
     FirebaseAnalytics analytics = FirebaseAnalytics();
     return MultiProvider(
       providers: [
-        Provider(create: (_) => Setting.empty()),
         ChangeNotifierProvider<PillSheetModel>(
           create: (_) => MainPillSheetModel(PillSheetType.pillsheet_21),
         ),

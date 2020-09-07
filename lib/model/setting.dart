@@ -26,9 +26,6 @@ class Setting extends ChangeNotifier {
   factory Setting(Map<String, dynamic> rowData) {
     return Setting._(rowData);
   }
-  factory Setting.empty() {
-    return Setting._(null);
-  }
   Setting._(Map<String, dynamic> rowData) {
     if (rowData == null) {
       return;
