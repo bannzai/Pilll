@@ -77,6 +77,7 @@ class _SettingsState extends State<Settings> {
               Navigator.of(context)
                   .push(MaterialPageRoute(builder: (BuildContext context) {
                 return PillSheetTypeSelectPage(
+                  title: "種類",
                   callback: (type) {
                     Navigator.pop(context);
                     setting
@@ -96,6 +97,7 @@ class _SettingsState extends State<Settings> {
                 Navigator.of(context).push(MaterialPageRoute(
                   builder: (BuildContext context) {
                     return SettingMenstruationPage(
+                      title: "生理について",
                       selectedFromMenstruation: setting.fromMenstruation,
                       fromMenstructionDidDecide: (selectedFromMenstruction) {
                         setState(() {

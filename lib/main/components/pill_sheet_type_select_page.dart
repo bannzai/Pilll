@@ -7,12 +7,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
 class PillSheetTypeSelectPage extends StatelessWidget {
+  final String title;
   final void Function(PillSheetType type) callback;
   final PillSheetType selectedPillSheetType;
 
   const PillSheetTypeSelectPage(
-      {Key key, this.callback, this.selectedPillSheetType})
+      {Key key, this.title, this.callback, this.selectedPillSheetType})
       : super(key: key);
+
   @override
   Scaffold build(BuildContext context) {
     return Scaffold(
@@ -23,7 +25,7 @@ class PillSheetTypeSelectPage extends StatelessWidget {
           onPressed: () => Navigator.of(context).pop(),
         ),
         title: Text(
-          "1/4",
+          title,
           style: TextStyle(color: TextColor.black),
         ),
         backgroundColor: PilllColors.background,

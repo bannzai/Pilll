@@ -14,8 +14,9 @@ abstract class SettingMenstruationPageConstants {
 }
 
 class SettingMenstruationPage extends StatefulWidget {
-  final String doneText;
+  final String title;
   // NOTE: If done and skip is null, button is hidden
+  final String doneText;
   final VoidCallback done;
   final VoidCallback skip;
   int selectedFromMenstruation;
@@ -25,6 +26,7 @@ class SettingMenstruationPage extends StatefulWidget {
 
   SettingMenstruationPage(
       {Key key,
+      this.title,
       this.doneText,
       this.done,
       this.skip,
@@ -50,7 +52,7 @@ class _SettingMenstruationPageState extends State<SettingMenstruationPage> {
           onPressed: () => Navigator.of(context).pop(),
         ),
         title: Text(
-          "3/4",
+          this.widget.title,
           style: TextStyle(color: TextColor.black),
         ),
         backgroundColor: PilllColors.background,
