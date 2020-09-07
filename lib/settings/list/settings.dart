@@ -1,4 +1,5 @@
 import 'package:Pilll/main/components/pill_sheet_type_select_page.dart';
+import 'package:Pilll/main/components/setting_menstruation_page.dart';
 import 'package:Pilll/model/auth_user.dart';
 import 'package:Pilll/model/setting.dart';
 import 'package:Pilll/settings/list/model.dart';
@@ -63,7 +64,9 @@ class _SettingsState extends State<Settings> {
   }
 
   List<SettingListRowModel> _rowModels(
-      Setting setting, SettingSection section) {
+    Setting setting,
+    SettingSection section,
+  ) {
     switch (section) {
       case SettingSection.pill:
         return [
@@ -87,7 +90,35 @@ class _SettingsState extends State<Settings> {
         ];
       case SettingSection.menstruation:
         return [
-          SettingListTitleRowModel(title: "生理について"),
+          SettingListTitleRowModel(
+              title: "生理について",
+              onTap: () {
+                Navigator.of(context).push(MaterialPageRoute(
+                  builder: (BuildContext context) {
+                    return SettingMenstruationPage(
+                      selectedFromMenstruation: setting.fromMenstruation,
+                      fromMenstructionDidDecide: (selectedFromMenstruction) {
+                        setState(() {
+                          setting.notifyWith((setting) => setting
+                              .fromMenstruation = selectedFromMenstruction);
+                          Navigator.pop(context);
+                        });
+                      },
+                      selectedDurationMenstruation:
+                          setting.durationMenstruation,
+                      durationMenstructionDidDecide:
+                          (selectedDurationMenstruation) {
+                        setState(() {
+                          setting.notifyWith((setting) =>
+                              setting.durationMenstruation =
+                                  selectedDurationMenstruation);
+                          Navigator.pop(context);
+                        });
+                      },
+                    );
+                  },
+                ));
+              }),
         ];
       case SettingSection.notification:
         return [
