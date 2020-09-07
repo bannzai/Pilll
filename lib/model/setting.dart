@@ -19,8 +19,8 @@ class Setting extends ChangeNotifier {
   PillSheetType pillSheetType;
   int fromMenstruation;
   int durationMenstruation;
-  int hour;
-  int minute;
+  int reminderHour;
+  int reminderMinute;
   bool isOnReminder = false;
 
   factory Setting(Map<String, dynamic> rowData) {
@@ -33,8 +33,9 @@ class Setting extends ChangeNotifier {
     this.fromMenstruation =
         rowData[SettingKey.beginingMenstruationFromAfterFakePeriod];
     this.durationMenstruation = rowData[SettingKey.durationMenstruation];
-    this.hour = rowData[SettingKey.reminderTime][SettingKey.reminderTimeHour];
-    this.minute =
+    this.reminderHour =
+        rowData[SettingKey.reminderTime][SettingKey.reminderTimeHour];
+    this.reminderMinute =
         rowData[SettingKey.reminderTime][SettingKey.reminderTimeMinute];
     this.isOnReminder = rowData[SettingKey.isOnReminder];
     String pillSheetTypeRawPath = rowData[SettingKey.pillSheetTypeRawPath];
@@ -50,11 +51,14 @@ class Setting extends ChangeNotifier {
           fromMenstruation;
     if (durationMenstruation != null)
       settings[SettingKey.durationMenstruation] = durationMenstruation;
-    if (hour != null || minute != null) settings[SettingKey.reminderTime] = {};
-    if (hour != null)
-      settings[SettingKey.reminderTime][SettingKey.reminderTimeHour] = hour;
-    if (minute != null)
-      settings[SettingKey.reminderTime][SettingKey.reminderTimeMinute] = minute;
+    if (reminderHour != null || reminderMinute != null)
+      settings[SettingKey.reminderTime] = {};
+    if (reminderHour != null)
+      settings[SettingKey.reminderTime][SettingKey.reminderTimeHour] =
+          reminderHour;
+    if (reminderMinute != null)
+      settings[SettingKey.reminderTime][SettingKey.reminderTimeMinute] =
+          reminderMinute;
     if (isOnReminder != null) settings[SettingKey.isOnReminder] = isOnReminder;
     if (pillSheetType != null)
       settings[SettingKey.pillSheetTypeRawPath] = pillSheetType.name;
@@ -81,5 +85,11 @@ class Setting extends ChangeNotifier {
     update(this);
     notifyListeners();
     return Future.value(this);
+  }
+
+  DateTime dateTime() {
+    var t = DateTime.now().toLocal();
+    return DateTime(t.year, t.month, t.day, reminderHour, reminderMinute,
+        t.second, t.millisecond, t.microsecond);
   }
 }
