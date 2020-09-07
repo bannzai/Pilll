@@ -1,9 +1,8 @@
 import 'dart:async';
 
+import 'package:Pilll/model/setting.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:flutter/material.dart';
-import 'package:meta/meta.dart';
 
 class UserNotFound implements Exception {
   toString() {
@@ -16,21 +15,20 @@ extension UserPropertyKeys on String {
   static final settings = "settings";
 }
 
-@immutable
 class User {
   static final path = "users";
   String get documentID => anonymousUserID;
 
   final String anonymousUserID;
-  final Map<String, dynamic> settings;
+  Setting setting;
 
-  User._({this.anonymousUserID, this.settings});
+  User._({this.anonymousUserID, this.setting});
 
   static User _map(DocumentSnapshot document) {
     Map<String, dynamic> data = document.data();
     return User._(
       anonymousUserID: data[UserPropertyKeys.anonymouseUserID],
-      settings: data[UserPropertyKeys.settings],
+      setting: Setting(data[UserPropertyKeys.settings]),
     );
   }
 
@@ -73,10 +71,9 @@ extension UserInterface on User {
     });
   }
 
-  Future<void> setSettings(Map<String, dynamic> settings) {
-    return FirebaseFirestore.instance
-        .collection(User.path)
-        .doc(documentID)
-        .set({UserPropertyKeys.settings: settings}, SetOptions(merge: true));
+  Future<void> updateSetting(Setting setting) {
+    return FirebaseFirestore.instance.collection(User.path).doc(documentID).set(
+        {UserPropertyKeys.settings: setting.settings},
+        SetOptions(merge: true)).then((_) => this.setting = setting);
   }
 }
