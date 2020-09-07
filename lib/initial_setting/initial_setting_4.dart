@@ -34,7 +34,7 @@ class _InitialSetting4State extends State<InitialSetting4> {
 
   Widget _time(BuildContext context) {
     var dateTime =
-        Provider.of<AuthUser>(context, listen: false).user.setting.dateTime();
+        Provider.of<AuthUser>(context, listen: false).user.setting.reminderDateTime();
     return Text(
       DateTimeFormatter.string(dateTime),
       style: FontType.largeNumber.merge(
@@ -52,7 +52,7 @@ class _InitialSetting4State extends State<InitialSetting4> {
       context: context,
       builder: (BuildContext context) {
         return DateTimePicker(
-          initialDateTime: model.dateTime(),
+          initialDateTime: model.reminderDateTime(),
           done: (dateTime) {
             setState(() {
               model.reminderHour = dateTime.hour;
