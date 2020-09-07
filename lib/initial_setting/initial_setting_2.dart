@@ -11,8 +11,6 @@ import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 import 'package:provider/provider.dart';
 
-import 'initial_setting.dart';
-
 class InitialSetting2 extends StatelessWidget {
   const InitialSetting2({Key key}) : super(key: key);
 

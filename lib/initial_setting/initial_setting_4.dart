@@ -6,10 +6,8 @@ import 'package:Pilll/theme/font.dart';
 import 'package:Pilll/theme/text_color.dart';
 import 'package:Pilll/util/formatter/date_time_formatter.dart';
 import 'package:Pilll/util/shared_preference/toolbar/date_time_picker.dart';
-import 'package:Pilll/util/shared_preference/toolbar/picker_toolbar.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:intl/intl.dart';
 import 'package:provider/provider.dart';
 
 class InitialSetting4 extends StatefulWidget {
@@ -33,8 +31,10 @@ class _InitialSetting4State extends State<InitialSetting4> {
   }
 
   Widget _time(BuildContext context) {
-    var dateTime =
-        Provider.of<AuthUser>(context, listen: false).user.setting.reminderDateTime();
+    var dateTime = Provider.of<AuthUser>(context, listen: false)
+        .user
+        .setting
+        .reminderDateTime();
     return Text(
       DateTimeFormatter.string(dateTime),
       style: FontType.largeNumber.merge(

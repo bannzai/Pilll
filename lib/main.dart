@@ -1,4 +1,3 @@
-import 'package:Pilll/initial_setting/initial_setting.dart';
 import 'package:Pilll/main/record/pill_sheet_model.dart';
 import 'package:Pilll/model/pill_sheet_type.dart';
 import 'package:Pilll/theme/color.dart';
@@ -10,7 +9,6 @@ import 'package:provider/provider.dart';
 
 import 'main/application/router.dart';
 import 'model/auth_user.dart';
-import 'model/setting.dart';
 
 void main() {
   initializeDateFormatting('ja_JP');
