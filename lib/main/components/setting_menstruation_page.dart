@@ -1,5 +1,3 @@
-import 'package:Pilll/model/auth_user.dart';
-import 'package:Pilll/model/setting.dart';
 import 'package:Pilll/theme/color.dart';
 import 'package:Pilll/theme/font.dart';
 import 'package:Pilll/theme/text_color.dart';
@@ -7,7 +5,6 @@ import 'package:Pilll/util/shared_preference/toolbar/picker_toolbar.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:provider/provider.dart';
 
 abstract class SettingMenstruationPageConstants {
   static final List<String> fromList =
@@ -79,7 +76,7 @@ class SettingMenstruationPage extends StatelessWidget {
                                 FontType.assisting.merge(TextColorStyle.gray)),
                         GestureDetector(
                           onTap: () => _showFromModalSheet(context),
-                          child: _from(context),
+                          child: _from(),
                         ),
                         Text("日後ぐらいから",
                             style:
@@ -94,7 +91,7 @@ class SettingMenstruationPage extends StatelessWidget {
                       children: <Widget>[
                         GestureDetector(
                           onTap: () => _showDurationModalSheet(context),
-                          child: _duration(context),
+                          child: _duration(),
                         ),
                         Text("日間生理が続く",
                             style:
@@ -130,7 +127,7 @@ class SettingMenstruationPage extends StatelessWidget {
     );
   }
 
-  Widget _from(BuildContext context) {
+  Widget _from() {
     bool isNotYetSetValue = selectedFromMenstruation == null;
     if (isNotYetSetValue) {
       return Text(
@@ -150,7 +147,7 @@ class SettingMenstruationPage extends StatelessWidget {
     }
   }
 
-  Widget _duration(BuildContext context) {
+  Widget _duration() {
     bool isNotYetSetValue = selectedFromMenstruation == null;
     if (isNotYetSetValue) {
       return Text(
@@ -253,9 +250,8 @@ class SettingMenstruationPage extends StatelessWidget {
   }
 
   bool canNext(BuildContext context) {
-    Setting model = Provider.of<AuthUser>(context, listen: false).user.setting;
-    return !(model.fromMenstruation == null ||
-        model.durationMenstruation == null);
+    return !(selectedFromMenstruation == null ||
+        selectedDurationMenstruation == null);
   }
 
   String _blank() {
