@@ -159,9 +159,11 @@ class _InitialSetting4State extends State<InitialSetting4> {
                     child: Text("スキップ"),
                     textColor: TextColor.gray,
                     onPressed: () {
-                      Provider.of<AuthUser>(context, listen: false)
+                      var model = Provider.of<AuthUser>(context, listen: false)
                           .user
-                          .setting
+                          .setting;
+                      model.isOnReminder = false;
+                      model
                           .register()
                           .then((_) => Router.endInitialSetting(context));
                     },

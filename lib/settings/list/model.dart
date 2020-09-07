@@ -1,3 +1,4 @@
+import 'package:Pilll/theme/color.dart';
 import 'package:flutter/material.dart';
 
 enum SettingSection { pill, menstruation, notification, other }
@@ -48,6 +49,7 @@ class SettingsListSwitchRowModel extends SettingListRowModel {
   Widget widget() {
     return SwitchListTile(
       title: Text(title),
+      activeColor: PilllColors.primary,
       onChanged: (bool value) {
         this.onTap();
       },

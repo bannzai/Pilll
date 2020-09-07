@@ -21,7 +21,7 @@ class Setting extends ChangeNotifier {
   int durationMenstruation;
   int hour;
   int minute;
-  bool isOnReminder;
+  bool isOnReminder = false;
 
   factory Setting(Map<String, dynamic> rowData) {
     return Setting._(rowData);

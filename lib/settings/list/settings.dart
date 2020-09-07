@@ -129,7 +129,17 @@ class _SettingsState extends State<Settings> {
       case SettingSection.notification:
         return [
           SettingsListSwitchRowModel(
-              title: "ピルの服用通知", value: setting.isOnReminder),
+            title: "ピルの服用通知",
+            value: setting.isOnReminder,
+            onTap: () {
+              setState(
+                () => setting
+                    .notifyWith((setting) =>
+                        setting.isOnReminder = !setting.isOnReminder)
+                    .then((setting) => setting.save()),
+              );
+            },
+          ),
           SettingsListDatePickerRowModel(title: "通知時刻", content: "02:03"),
         ];
       case SettingSection.other:
