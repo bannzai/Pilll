@@ -6,6 +6,7 @@ import 'package:Pilll/settings/list/model.dart';
 import 'package:Pilll/theme/color.dart';
 import 'package:Pilll/theme/font.dart';
 import 'package:Pilll/theme/text_color.dart';
+import 'package:Pilll/util/formatter/date_time_formatter.dart';
 import 'package:Pilll/util/shared_preference/toolbar/date_time_picker.dart';
 import 'package:Pilll/util/shared_preference/toolbar/picker_toolbar.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
@@ -147,7 +148,7 @@ class _SettingsState extends State<Settings> {
           ),
           SettingsListDatePickerRowModel(
             title: "通知時刻",
-            content: "02:03",
+            content: DateTimeFormatter.string(setting.dateTime()),
             onTap: () {
               showModalBottomSheet(
                 context: context,
