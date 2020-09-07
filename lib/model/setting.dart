@@ -46,15 +46,18 @@ class Setting extends ChangeNotifier {
   Map<String, dynamic> get settings {
     var settings = Map<String, dynamic>();
     if (fromMenstruation != null)
-      settings["beginingMenstruationFromAfterFakePeriod"] = fromMenstruation;
+      settings[SettingKey.beginingMenstruationFromAfterFakePeriod] =
+          fromMenstruation;
     if (durationMenstruation != null)
-      settings["menstuationPeriod"] = fromMenstruation;
-    if (hour != null || minute != null) settings["reminderTime"] = {};
-    if (hour != null) settings["reminderTime"]["hour"] = hour;
-    if (minute != null) settings["reminderTime"]["minute"] = minute;
-    if (isOnReminder != null) settings["isOnReminder"] = isOnReminder;
+      settings[SettingKey.durationMenstruation] = durationMenstruation;
+    if (hour != null || minute != null) settings[SettingKey.reminderTime] = {};
+    if (hour != null)
+      settings[SettingKey.reminderTime][SettingKey.reminderTimeHour] = hour;
+    if (minute != null)
+      settings[SettingKey.reminderTime][SettingKey.reminderTimeMinute] = minute;
+    if (isOnReminder != null) settings[SettingKey.isOnReminder] = isOnReminder;
     if (pillSheetType != null)
-      settings["pillSheetTypeRawPath"] = pillSheetType.name;
+      settings[SettingKey.pillSheetTypeRawPath] = pillSheetType.name;
     return settings;
   }
 
@@ -74,8 +77,9 @@ class Setting extends ChangeNotifier {
     });
   }
 
-  void notifyWith(void update(Setting setting)) {
+  Future<Setting> notifyWith(void update(Setting setting)) {
     update(this);
     notifyListeners();
+    return Future.value(this);
   }
 }

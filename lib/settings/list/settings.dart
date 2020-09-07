@@ -20,7 +20,6 @@ class _SettingsState extends State<Settings> {
   @override
   Widget build(BuildContext context) {
     var setting = context.watch<AuthUser>().user.setting;
-    setting.addListener(() => setting.save());
     return ChangeNotifierProvider.value(
       value: setting,
       child: Consumer(
@@ -81,7 +80,8 @@ class _SettingsState extends State<Settings> {
                   callback: (type) {
                     Navigator.pop(context);
                     setting
-                        .notifyWith((setting) => setting.pillSheetType = type);
+                        .notifyWith((setting) => setting.pillSheetType = type)
+                        .then((setting) => setting.save());
                   },
                   selectedPillSheetType: setting.pillSheetType,
                 );
@@ -101,8 +101,10 @@ class _SettingsState extends State<Settings> {
                       selectedFromMenstruation: setting.fromMenstruation,
                       fromMenstructionDidDecide: (selectedFromMenstruction) {
                         setState(() {
-                          setting.notifyWith((setting) => setting
-                              .fromMenstruation = selectedFromMenstruction);
+                          setting
+                              .notifyWith((setting) => setting
+                                  .fromMenstruation = selectedFromMenstruction)
+                              .then((setting) => setting.save());
                           Navigator.pop(context);
                         });
                       },
@@ -111,9 +113,11 @@ class _SettingsState extends State<Settings> {
                       durationMenstructionDidDecide:
                           (selectedDurationMenstruation) {
                         setState(() {
-                          setting.notifyWith((setting) =>
-                              setting.durationMenstruation =
-                                  selectedDurationMenstruation);
+                          setting
+                              .notifyWith((setting) =>
+                                  setting.durationMenstruation =
+                                      selectedDurationMenstruation)
+                              .then((setting) => setting.save());
                           Navigator.pop(context);
                         });
                       },
