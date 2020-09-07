@@ -4,6 +4,7 @@ import 'package:Pilll/model/setting.dart';
 import 'package:Pilll/theme/color.dart';
 import 'package:Pilll/theme/font.dart';
 import 'package:Pilll/theme/text_color.dart';
+import 'package:Pilll/util/formatter/date_time_formatter.dart';
 import 'package:Pilll/util/shared_preference/toolbar/date_time_picker.dart';
 import 'package:Pilll/util/shared_preference/toolbar/picker_toolbar.dart';
 import 'package:flutter/cupertino.dart';
@@ -32,11 +33,10 @@ class _InitialSetting4State extends State<InitialSetting4> {
   }
 
   Widget _time(BuildContext context) {
-    var formatter = NumberFormat("00");
     var dateTime =
         Provider.of<AuthUser>(context, listen: false).user.setting.dateTime();
     return Text(
-      formatter.format(dateTime.hour) + ":" + formatter.format(dateTime.minute),
+      DateTimeFormatter.string(dateTime),
       style: FontType.largeNumber.merge(
         TextStyle(
           decoration: TextDecoration.underline,
