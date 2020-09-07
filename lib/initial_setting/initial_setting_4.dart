@@ -4,6 +4,7 @@ import 'package:Pilll/model/setting.dart';
 import 'package:Pilll/theme/color.dart';
 import 'package:Pilll/theme/font.dart';
 import 'package:Pilll/theme/text_color.dart';
+import 'package:Pilll/util/shared_preference/toolbar/date_time_picker.dart';
 import 'package:Pilll/util/shared_preference/toolbar/picker_toolbar.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -20,26 +21,20 @@ class _InitialSetting4State extends State<InitialSetting4> {
   void initState() {
     var model = Provider.of<AuthUser>(context, listen: false).user.setting;
     if (_notYetSetTime(model)) {
-      model.hour = 22;
-      model.minute = 0;
+      model.reminderHour = 22;
+      model.reminderMinute = 0;
     }
     super.initState();
   }
 
   bool _notYetSetTime(Setting model) {
-    return model.minute == null || model.hour == null;
-  }
-
-  DateTime _dateTime(BuildContext context) {
-    var model = Provider.of<AuthUser>(context, listen: false).user.setting;
-    var t = DateTime.now().toLocal();
-    return DateTime(t.year, t.month, t.day, model.hour, model.minute, t.second,
-        t.millisecond, t.microsecond);
+    return model.reminderMinute == null || model.reminderHour == null;
   }
 
   Widget _time(BuildContext context) {
     var formatter = NumberFormat("00");
-    var dateTime = _dateTime(context);
+    var dateTime =
+        Provider.of<AuthUser>(context, listen: false).user.setting.dateTime();
     return Text(
       formatter.format(dateTime.hour) + ":" + formatter.format(dateTime.minute),
       style: FontType.largeNumber.merge(
@@ -53,43 +48,18 @@ class _InitialSetting4State extends State<InitialSetting4> {
 
   void _showDurationModalSheet(BuildContext context) {
     var model = Provider.of<AuthUser>(context, listen: false).user.setting;
-    var selectedHour = _dateTime(context).hour;
-    var selectedMinute = _dateTime(context).minute;
     showModalBottomSheet(
       context: context,
       builder: (BuildContext context) {
-        return Column(
-          mainAxisAlignment: MainAxisAlignment.end,
-          mainAxisSize: MainAxisSize.min,
-          children: <Widget>[
-            PickerToolbar(
-              done: (() {
-                setState(() {
-                  model.hour = selectedHour;
-                  model.minute = selectedMinute;
-                  Navigator.pop(context);
-                });
-              }),
-              cancel: (() => Navigator.pop(context)),
-            ),
-            Container(
-              height: MediaQuery.of(context).size.height / 3,
-              child: GestureDetector(
-                  onTap: () {
-                    Navigator.pop(context);
-                  },
-                  child: CupertinoDatePicker(
-                    use24hFormat: true,
-                    minuteInterval: 10,
-                    initialDateTime: _dateTime(context),
-                    mode: CupertinoDatePickerMode.time,
-                    onDateTimeChanged: (DateTime value) {
-                      selectedHour = value.hour;
-                      selectedMinute = value.minute;
-                    },
-                  )),
-            ),
-          ],
+        return DateTimePicker(
+          initialDateTime: model.dateTime(),
+          done: (dateTime) {
+            setState(() {
+              model.reminderHour = dateTime.hour;
+              model.reminderMinute = dateTime.minute;
+              Navigator.pop(context);
+            });
+          },
         );
       },
     );
