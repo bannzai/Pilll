@@ -1,3 +1,4 @@
+import 'package:Pilll/model/auth_user.dart';
 import 'package:Pilll/model/setting.dart';
 import 'package:Pilll/theme/color.dart';
 import 'package:Pilll/theme/font.dart';
@@ -252,7 +253,7 @@ class SettingMenstruationPage extends StatelessWidget {
   }
 
   bool canNext(BuildContext context) {
-    Setting model = Provider.of<Setting>(context, listen: false);
+    Setting model = Provider.of<AuthUser>(context, listen: false).user.setting;
     return !(model.fromMenstruation == null ||
         model.durationMenstruation == null);
   }

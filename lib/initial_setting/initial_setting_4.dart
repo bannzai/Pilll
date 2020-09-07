@@ -1,4 +1,5 @@
 import 'package:Pilll/main/application/router.dart';
+import 'package:Pilll/model/auth_user.dart';
 import 'package:Pilll/model/setting.dart';
 import 'package:Pilll/theme/color.dart';
 import 'package:Pilll/initial_setting/initial_setting.dart';
@@ -17,7 +18,7 @@ class InitialSetting4 extends StatefulWidget {
 
 class _InitialSetting4State extends State<InitialSetting4> {
   bool _canNext(BuildContext context) {
-    var model = Provider.of<Setting>(context, listen: false);
+    var model = Provider.of<AuthUser>(context, listen: false).user.setting;
     return !(model.hour == null || model.minute == null);
   }
 
@@ -26,7 +27,7 @@ class _InitialSetting4State extends State<InitialSetting4> {
   }
 
   DateTime _dateTime(BuildContext context) {
-    var model = Provider.of<Setting>(context, listen: false);
+    var model = Provider.of<AuthUser>(context, listen: false).user.setting;
     int hour = 22;
     int minute = 0;
     if (!_notYetSetTime(model)) {
@@ -39,7 +40,7 @@ class _InitialSetting4State extends State<InitialSetting4> {
   }
 
   Widget _time(BuildContext context) {
-    var model = Provider.of<Setting>(context, listen: false);
+    var model = Provider.of<AuthUser>(context, listen: false).user.setting;
     var formatter = NumberFormat("00");
     var color = _notYetSetTime(model) ? TextColor.lightGray : TextColor.black;
     var dateTime = _dateTime(context);
@@ -55,7 +56,7 @@ class _InitialSetting4State extends State<InitialSetting4> {
   }
 
   void _showDurationModalSheet(BuildContext context) {
-    var model = Provider.of<Setting>(context, listen: false);
+    var model = Provider.of<AuthUser>(context, listen: false).user.setting;
     var selectedHour = _dateTime(context).hour;
     var selectedMinute = _dateTime(context).minute;
     showModalBottomSheet(
@@ -151,7 +152,9 @@ class _InitialSetting4State extends State<InitialSetting4> {
                     onPressed: !_canNext(context)
                         ? null
                         : () {
-                            Provider.of<Setting>(context, listen: false)
+                            Provider.of<AuthUser>(context, listen: false)
+                                .user
+                                .setting
                                 .register()
                                 .then((_) => Router.endInitialSetting(context));
                           },
@@ -160,7 +163,9 @@ class _InitialSetting4State extends State<InitialSetting4> {
                     child: Text("スキップ"),
                     textColor: TextColor.gray,
                     onPressed: () {
-                      Provider.of<Setting>(context, listen: false)
+                      Provider.of<AuthUser>(context, listen: false)
+                          .user
+                          .setting
                           .register()
                           .then((_) => Router.endInitialSetting(context));
                     },
