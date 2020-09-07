@@ -6,7 +6,10 @@ import 'package:Pilll/settings/list/model.dart';
 import 'package:Pilll/theme/color.dart';
 import 'package:Pilll/theme/font.dart';
 import 'package:Pilll/theme/text_color.dart';
+import 'package:Pilll/util/shared_preference/toolbar/date_time_picker.dart';
+import 'package:Pilll/util/shared_preference/toolbar/picker_toolbar.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:Pilll/model/pill_sheet_type.dart';
@@ -127,6 +130,8 @@ class _SettingsState extends State<Settings> {
               }),
         ];
       case SettingSection.notification:
+        int selectedHour = setting.reminderHour;
+        int selectedMinute = setting.reminderMinute;
         return [
           SettingsListSwitchRowModel(
             title: "ピルの服用通知",
@@ -140,7 +145,29 @@ class _SettingsState extends State<Settings> {
               );
             },
           ),
-          SettingsListDatePickerRowModel(title: "通知時刻", content: "02:03"),
+          SettingsListDatePickerRowModel(
+            title: "通知時刻",
+            content: "02:03",
+            onTap: () {
+              showModalBottomSheet(
+                context: context,
+                builder: (BuildContext context) {
+                  return DateTimePicker(
+                    initialDateTime: setting.dateTime(),
+                    done: (dateTime) {
+                      setting.notifyWith(
+                        (setting) {
+                          setting.reminderHour = dateTime.hour;
+                          setting.reminderMinute = dateTime.minute;
+                        },
+                      ).then((value) => value.save());
+                      Navigator.pop(context);
+                    },
+                  );
+                },
+              );
+            },
+          ),
         ];
       case SettingSection.other:
         return [
