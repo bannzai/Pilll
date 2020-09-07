@@ -146,9 +146,11 @@ class _InitialSetting4State extends State<InitialSetting4> {
                       "設定",
                     ),
                     onPressed: () {
-                      Provider.of<AuthUser>(context, listen: false)
+                      var model = Provider.of<AuthUser>(context, listen: false)
                           .user
-                          .setting
+                          .setting;
+                      model.isOnReminder = true;
+                      model
                           .register()
                           .then((_) => Router.endInitialSetting(context));
                     },
