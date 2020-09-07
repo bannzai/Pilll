@@ -13,17 +13,17 @@ abstract class SettingMenstruationPageConstants {
       List<String>.generate(7, (index) => (index + 1).toString());
 }
 
-class SettingMenstruationPage extends StatelessWidget {
+class SettingMenstruationPage extends StatefulWidget {
   final String doneText;
+  // NOTE: If done and skip is null, button is hidden
   final VoidCallback done;
-  // NOTE: If skip is null, SkipButton is hidden
   final VoidCallback skip;
-  final int selectedFromMenstruation;
+  int selectedFromMenstruation;
   final void Function(int from) fromMenstructionDidDecide;
-  final int selectedDurationMenstruation;
+  int selectedDurationMenstruation;
   final void Function(int duration) durationMenstructionDidDecide;
 
-  const SettingMenstruationPage(
+  SettingMenstruationPage(
       {Key key,
       this.doneText,
       this.done,
@@ -34,6 +34,12 @@ class SettingMenstruationPage extends StatelessWidget {
       this.selectedDurationMenstruation})
       : super(key: key);
 
+  @override
+  _SettingMenstruationPageState createState() =>
+      _SettingMenstruationPageState();
+}
+
+class _SettingMenstruationPageState extends State<SettingMenstruationPage> {
   @override
   Scaffold build(BuildContext context) {
     return Scaffold(
@@ -106,16 +112,17 @@ class SettingMenstruationPage extends StatelessWidget {
                 direction: Axis.vertical,
                 spacing: 8,
                 children: <Widget>[
-                  RaisedButton(
-                      child: Text(
-                        doneText,
-                      ),
-                      onPressed: !canNext(context) ? null : done),
-                  if (skip != null)
+                  if (widget.done != null)
+                    RaisedButton(
+                        child: Text(
+                          widget.doneText,
+                        ),
+                        onPressed: !canNext(context) ? null : widget.done),
+                  if (widget.skip != null)
                     FlatButton(
                       child: Text("スキップ"),
                       textColor: TextColor.gray,
-                      onPressed: skip,
+                      onPressed: widget.skip,
                     ),
                 ],
               ),
@@ -128,7 +135,7 @@ class SettingMenstruationPage extends StatelessWidget {
   }
 
   Widget _from() {
-    bool isNotYetSetValue = selectedFromMenstruation == null;
+    bool isNotYetSetValue = widget.selectedFromMenstruation == null;
     if (isNotYetSetValue) {
       return Text(
         _blank(),
@@ -139,7 +146,7 @@ class SettingMenstruationPage extends StatelessWidget {
       );
     } else {
       return Text(
-        selectedFromMenstruation.toString(),
+        widget.selectedFromMenstruation.toString(),
         style: FontType.inputNumber.merge(
           TextStyle(decoration: TextDecoration.underline),
         ),
@@ -148,7 +155,7 @@ class SettingMenstruationPage extends StatelessWidget {
   }
 
   Widget _duration() {
-    bool isNotYetSetValue = selectedDurationMenstruation == null;
+    bool isNotYetSetValue = widget.selectedDurationMenstruation == null;
     if (isNotYetSetValue) {
       return Text(
         _blank(),
@@ -159,7 +166,7 @@ class SettingMenstruationPage extends StatelessWidget {
       );
     } else {
       return Text(
-        selectedDurationMenstruation.toString(),
+        widget.selectedDurationMenstruation.toString(),
         style: FontType.inputNumber.merge(
           TextStyle(decoration: TextDecoration.underline),
         ),
@@ -168,7 +175,8 @@ class SettingMenstruationPage extends StatelessWidget {
   }
 
   void _showFromModalSheet(BuildContext context) {
-    int keepSelectedDurationMenstruation = this.selectedFromMenstruation ?? 0;
+    int keepSelectedFromMenstruation =
+        this.widget.selectedFromMenstruation ?? 0;
     showModalBottomSheet(
       context: context,
       builder: (BuildContext context) {
@@ -177,8 +185,14 @@ class SettingMenstruationPage extends StatelessWidget {
           mainAxisSize: MainAxisSize.min,
           children: <Widget>[
             PickerToolbar(
-              done: (() =>
-                  fromMenstructionDidDecide(keepSelectedDurationMenstruation)),
+              done: (() {
+                setState(() {
+                  this.widget.selectedFromMenstruation =
+                      keepSelectedFromMenstruation;
+                  widget
+                      .fromMenstructionDidDecide(keepSelectedFromMenstruation);
+                });
+              }),
               cancel: (() {
                 Navigator.pop(context);
               }),
@@ -195,10 +209,10 @@ class SettingMenstruationPage extends StatelessWidget {
                       .map(_pickerItem)
                       .toList(),
                   onSelectedItemChanged: (index) {
-                    keepSelectedDurationMenstruation = index;
+                    keepSelectedFromMenstruation = index;
                   },
                   scrollController: FixedExtentScrollController(
-                      initialItem: keepSelectedDurationMenstruation),
+                      initialItem: keepSelectedFromMenstruation),
                 ),
               ),
             ),
@@ -210,7 +224,7 @@ class SettingMenstruationPage extends StatelessWidget {
 
   void _showDurationModalSheet(BuildContext context) {
     var keepSelectedDurationMenstruation =
-        this.selectedDurationMenstruation ?? 1;
+        this.widget.selectedDurationMenstruation ?? 1;
     showModalBottomSheet(
       context: context,
       builder: (BuildContext context) {
@@ -219,8 +233,14 @@ class SettingMenstruationPage extends StatelessWidget {
           mainAxisSize: MainAxisSize.min,
           children: <Widget>[
             PickerToolbar(
-              done: (() => durationMenstructionDidDecide(
-                  keepSelectedDurationMenstruation)),
+              done: (() {
+                setState(() {
+                  this.widget.selectedDurationMenstruation =
+                      keepSelectedDurationMenstruation;
+                  widget.durationMenstructionDidDecide(
+                      keepSelectedDurationMenstruation);
+                });
+              }),
               cancel: (() {
                 Navigator.pop(context);
               }),
@@ -251,8 +271,8 @@ class SettingMenstruationPage extends StatelessWidget {
   }
 
   bool canNext(BuildContext context) {
-    return !(selectedFromMenstruation == null ||
-        selectedDurationMenstruation == null);
+    return !(widget.selectedFromMenstruation == null ||
+        widget.selectedDurationMenstruation == null);
   }
 
   String _blank() {
