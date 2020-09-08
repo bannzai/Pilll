@@ -29,17 +29,24 @@ class Calendar extends StatelessWidget {
                     ),
                   )),
         ),
-        Divider(
-          height: 1,
-        ),
+        Divider(height: 1),
         ...List.generate((_lastDay() / 7).round(), (line) {
-          return Row(
-            children: List.generate(CalendarConstants.weekdayCount, (weekday) {
-              return Expanded(
-                child: _element(Weekday.values[weekday],
-                    line * CalendarConstants.weekdayCount + weekday + 1),
-              );
-            }),
+          return Expanded(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: <Widget>[
+                Row(
+                  children:
+                      List.generate(CalendarConstants.weekdayCount, (weekday) {
+                    return Expanded(
+                      child: _element(Weekday.values[weekday],
+                          line * CalendarConstants.weekdayCount + weekday + 1),
+                    );
+                  }),
+                ),
+                Divider(height: 1),
+              ],
+            ),
           );
         }),
       ],
