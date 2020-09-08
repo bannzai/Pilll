@@ -5,6 +5,7 @@ import 'package:flutter/material.dart';
 
 abstract class CalendarConstants {
   static final int weekdayCount = 7;
+  static final double tileHeight = 60;
 }
 
 class Calendar extends StatelessWidget {
@@ -54,7 +55,7 @@ class Calendar extends StatelessWidget {
 
   Widget _element(Weekday weekday, int day) {
     return Container(
-      height: 60,
+      height: CalendarConstants.tileHeight,
       child: Column(
         children: <Widget>[
           Spacer(),
