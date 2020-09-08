@@ -37,6 +37,11 @@ class FontType {
     fontWeight: FontWeight.w600,
     fontSize: FontSize.sLarge,
   );
+  static final TextStyle calendarDay = TextStyle(
+    fontFamily: FontFamily.number,
+    fontWeight: FontWeight.w300,
+    fontSize: FontSize.sLarge,
+  );
   static final TextStyle assisting = TextStyle(
     fontFamily: FontFamily.japanese,
     fontWeight: FontWeight.w300,

@@ -1,5 +1,6 @@
 import 'package:Pilll/main/record/weekday_badge.dart';
 import 'package:Pilll/model/weekday.dart';
+import 'package:Pilll/theme/font.dart';
 import 'package:flutter/material.dart';
 
 abstract class CalendarConstants {
@@ -62,7 +63,7 @@ class Calendar extends StatelessWidget {
             textAlign: TextAlign.center,
             style: TextStyle(
               color: WeekdayFunctions.weekdayColor(weekday),
-            ),
+            ).merge(FontType.calendarDay),
           ),
           Spacer(),
         ],
