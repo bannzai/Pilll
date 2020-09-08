@@ -54,14 +54,18 @@ class Calendar extends StatelessWidget {
   Widget _element(Weekday weekday, int day) {
     return Container(
       height: 60,
-      child: Center(
-        child: Text(
-          "$day",
-          textAlign: TextAlign.center,
-          style: TextStyle(
-            color: WeekdayFunctions.weekdayColor(weekday),
+      child: Column(
+        children: <Widget>[
+          Spacer(),
+          Text(
+            "$day",
+            textAlign: TextAlign.center,
+            style: TextStyle(
+              color: WeekdayFunctions.weekdayColor(weekday),
+            ),
           ),
-        ),
+          Spacer(),
+        ],
       ),
     );
   }
