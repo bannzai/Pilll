@@ -30,23 +30,21 @@ class Calendar extends StatelessWidget {
                   )),
         ),
         Divider(height: 1),
-        ...List.generate((_lastDay() / 7).round(), (line) {
-          return Expanded(
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: <Widget>[
-                Row(
-                  children:
-                      List.generate(CalendarConstants.weekdayCount, (weekday) {
-                    return Expanded(
-                      child: _element(Weekday.values[weekday],
-                          line * CalendarConstants.weekdayCount + weekday + 1),
-                    );
-                  }),
-                ),
-                Divider(height: 1),
-              ],
-            ),
+        ...List.generate((_lastDay() / 7).floor(), (line) {
+          return Column(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: <Widget>[
+              Row(
+                children:
+                    List.generate(CalendarConstants.weekdayCount, (weekday) {
+                  return Expanded(
+                    child: _element(Weekday.values[weekday],
+                        line * CalendarConstants.weekdayCount + weekday + 1),
+                  );
+                }),
+              ),
+              Divider(height: 1),
+            ],
           );
         }),
       ],
@@ -54,11 +52,16 @@ class Calendar extends StatelessWidget {
   }
 
   Widget _element(Weekday weekday, int day) {
-    return Text(
-      "$day",
-      textAlign: TextAlign.center,
-      style: TextStyle(
-        color: WeekdayFunctions.weekdayColor(weekday),
+    return Container(
+      height: 60,
+      child: Center(
+        child: Text(
+          "$day",
+          textAlign: TextAlign.center,
+          style: TextStyle(
+            color: WeekdayFunctions.weekdayColor(weekday),
+          ),
+        ),
       ),
     );
   }
