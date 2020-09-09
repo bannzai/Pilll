@@ -12,13 +12,15 @@ class CalendarCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      children: <Widget>[
-        _header(),
-        Calendar(
-          date: date,
-        ),
-      ],
+    return Card(
+      child: Column(
+        children: <Widget>[
+          _header(),
+          Calendar(
+            date: date,
+          ),
+        ],
+      ),
     );
   }
 
