@@ -10,6 +10,7 @@ class FontFamily {
 class FontSize {
   static final double xHuge = 40;
   static final double huge = 32;
+  static final double xBig = 24;
   static final double big = 22;
   static final double large = 17;
   static final double sLarge = 16;
@@ -27,6 +28,11 @@ class FontType {
     fontFamily: FontFamily.japanese,
     fontWeight: FontWeight.w600,
     fontSize: FontSize.large,
+  );
+  static final TextStyle xBigTitle = TextStyle(
+    fontFamily: FontFamily.number,
+    fontWeight: FontWeight.w600,
+    fontSize: FontSize.xBig,
   );
   static final TextStyle cardHeader = TextStyle(
     fontFamily: FontFamily.number,
