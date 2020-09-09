@@ -1,4 +1,5 @@
 import 'package:Pilll/main/calendar/calendar.dart';
+import 'package:Pilll/main/calendar/calendar_card.dart';
 import 'package:Pilll/main/record/pill_sheet.dart';
 import 'package:Pilll/main/record/record_taken_information.dart';
 import 'package:Pilll/settings/list/settings.dart';
@@ -79,7 +80,7 @@ class _HomePageState extends State<HomePage>
         body: TabBarView(
           controller: _tabController,
           children: <Widget>[
-            Calendar(
+            CalendarCard(
               firstDayOfMonth: DateTime.now(),
             ),
             Settings(),
