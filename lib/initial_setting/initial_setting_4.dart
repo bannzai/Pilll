@@ -36,7 +36,7 @@ class _InitialSetting4State extends State<InitialSetting4> {
         .setting
         .reminderDateTime();
     return Text(
-      DateTimeFormatter.string(dateTime),
+      DateTimeFormatter.militaryTime(dateTime),
       style: FontType.largeNumber.merge(
         TextStyle(
           decoration: TextDecoration.underline,

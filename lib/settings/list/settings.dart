@@ -146,7 +146,7 @@ class _SettingsState extends State<Settings> {
           ),
           SettingsListDatePickerRowModel(
             title: "通知時刻",
-            content: DateTimeFormatter.string(setting.reminderDateTime()),
+            content: DateTimeFormatter.militaryTime(setting.reminderDateTime()),
             onTap: () {
               showModalBottomSheet(
                 context: context,
