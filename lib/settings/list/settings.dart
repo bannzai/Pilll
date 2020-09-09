@@ -24,24 +24,33 @@ class _SettingsState extends State<Settings> {
   @override
   Widget build(BuildContext context) {
     var setting = context.watch<AuthUser>().user.setting;
-    return ChangeNotifierProvider.value(
-      value: setting,
-      child: Consumer(
-          builder: (BuildContext context, Setting setting, Widget child) {
-        return ListView.separated(
-          itemBuilder: (BuildContext context, int index) {
-            return _section(
-              setting,
-              SettingSection.values[index],
+    return Scaffold(
+      backgroundColor: PilllColors.background,
+      appBar: AppBar(
+        title: Text('Pilll'),
+        backgroundColor: PilllColors.primary,
+      ),
+      body: Container(
+        child: ChangeNotifierProvider.value(
+          value: setting,
+          child: Consumer(
+              builder: (BuildContext context, Setting setting, Widget child) {
+            return ListView.separated(
+              itemBuilder: (BuildContext context, int index) {
+                return _section(
+                  setting,
+                  SettingSection.values[index],
+                );
+              },
+              separatorBuilder: (BuildContext context, int index) {
+                return _separatorItem();
+              },
+              itemCount: SettingSection.values.length,
+              addRepaintBoundaries: false,
             );
-          },
-          separatorBuilder: (BuildContext context, int index) {
-            return _separatorItem();
-          },
-          itemCount: SettingSection.values.length,
-          addRepaintBoundaries: false,
-        );
-      }),
+          }),
+        ),
+      ),
     );
   }
 

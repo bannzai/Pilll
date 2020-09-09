@@ -8,7 +8,7 @@ class TextColor {
   static final Color white = Colors.white;
   static final Color gray = HexColor.fromHex("7E7E7E");
   static final Color lightGray = HexColor.fromHex("CDCFD1");
-  static final Color noshime = HexColor.fromHex("29304D").withAlpha(87);
+  static final Color noshime = HexColor.fromHex("3D4662");
 }
 
 class TextColorStyle {
