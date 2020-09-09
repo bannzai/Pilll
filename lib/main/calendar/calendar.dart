@@ -10,13 +10,19 @@ abstract class CalendarConstants {
 
 class Calendar extends StatelessWidget {
   final DateTime firstDayOfMonth;
-  int get weekdayOffset => 0;
-
   const Calendar({Key key, this.firstDayOfMonth}) : super(key: key);
 
-  int _lastDay() {
-    return DateTime(firstDayOfMonth.year, firstDayOfMonth.month + 1, 0).day;
+  DateTime _dateTimeForFirstDayofMonth() {
+    return DateTime(firstDayOfMonth.year, firstDayOfMonth.month, 1);
   }
+
+  int _lastDay() =>
+      DateTime(firstDayOfMonth.year, firstDayOfMonth.month + 1, 0).day;
+  int _weekdayOffset() =>
+      WeekdayFunctions.weekdayFromDate(_dateTimeForFirstDayofMonth()).index;
+  int _previousMonthDayCount() => _weekdayOffset();
+  int _tileCount() => _previousMonthDayCount() + _lastDay();
+  int _lineCount() => (_tileCount() / 7).ceil();
 
   @override
   Widget build(BuildContext context) {
@@ -33,7 +39,7 @@ class Calendar extends StatelessWidget {
                   )),
         ),
         Divider(height: 1),
-        ...List.generate((_lastDay() / 7).floor(), (line) {
+        ...List.generate(_lineCount(), (line) {
           return Column(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: <Widget>[
@@ -41,7 +47,7 @@ class Calendar extends StatelessWidget {
                 children:
                     List.generate(CalendarConstants.weekdayCount, (weekday) {
                   return Expanded(
-                    child: _element(Weekday.values[weekday],
+                    child: _tile(Weekday.values[weekday],
                         line * CalendarConstants.weekdayCount + weekday + 1),
                   );
                 }),
@@ -54,7 +60,7 @@ class Calendar extends StatelessWidget {
     );
   }
 
-  Widget _element(Weekday weekday, int day) {
+  Widget _tile(Weekday weekday, int day) {
     return Container(
       height: CalendarConstants.tileHeight,
       child: Column(

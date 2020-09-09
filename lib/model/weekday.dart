@@ -12,6 +12,16 @@ enum Weekday {
 }
 
 class WeekdayFunctions {
+  static Weekday weekdayFromDate(DateTime date) {
+    var weekdayIndex = date.weekday;
+    var weekdays = Weekday.values;
+    var sunday = weekdays.first;
+    weekdays = weekdays.sublist(1)
+      ..addAll(weekdays.sublist(0, weekdays.length))
+      ..insert(0, sunday);
+    return weekdays[weekdayIndex];
+  }
+
   static String weekdayString(Weekday weekday) {
     switch (weekday) {
       case Weekday.Sunday:
