@@ -10,6 +10,7 @@ abstract class CalendarConstants {
 
 class Calendar extends StatelessWidget {
   final DateTime firstDayOfMonth;
+  int get weekdayOffset => 0;
 
   const Calendar({Key key, this.firstDayOfMonth}) : super(key: key);
 

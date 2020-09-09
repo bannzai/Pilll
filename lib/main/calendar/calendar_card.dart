@@ -6,9 +6,9 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 class CalendarCard extends StatelessWidget {
-  final DateTime firstDayOfMonth;
+  final DateTime date;
 
-  const CalendarCard({Key key, this.firstDayOfMonth}) : super(key: key);
+  const CalendarCard({Key key, this.date}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -16,7 +16,7 @@ class CalendarCard extends StatelessWidget {
       children: <Widget>[
         _header(),
         Calendar(
-          firstDayOfMonth: firstDayOfMonth,
+          firstDayOfMonth: date,
         ),
       ],
     );
@@ -29,7 +29,7 @@ class CalendarCard extends StatelessWidget {
         children: [
           SizedBox(width: 16),
           Text(
-            DateTimeFormatter.yearAndMonth(firstDayOfMonth),
+            DateTimeFormatter.yearAndMonth(date),
             textAlign: TextAlign.left,
             style: FontType.cardHeader.merge(TextColorStyle.noshime),
           ),
