@@ -9,15 +9,14 @@ abstract class CalendarConstants {
 }
 
 class Calendar extends StatelessWidget {
-  final DateTime firstDayOfMonth;
-  const Calendar({Key key, this.firstDayOfMonth}) : super(key: key);
+  final DateTime date;
+  const Calendar({Key key, this.date}) : super(key: key);
 
   DateTime _dateTimeForFirstDayofMonth() {
-    return DateTime(firstDayOfMonth.year, firstDayOfMonth.month, 1);
+    return DateTime(date.year, date.month, 1);
   }
 
-  int _lastDay() =>
-      DateTime(firstDayOfMonth.year, firstDayOfMonth.month + 1, 0).day;
+  int _lastDay() => DateTime(date.year, date.month + 1, 0).day;
   int _weekdayOffset() =>
       WeekdayFunctions.weekdayFromDate(_dateTimeForFirstDayofMonth()).index;
   int _previousMonthDayCount() => _weekdayOffset();
@@ -44,13 +43,27 @@ class Calendar extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: <Widget>[
               Row(
-                children:
-                    List.generate(CalendarConstants.weekdayCount, (weekday) {
-                  return Expanded(
-                    child: _tile(Weekday.values[weekday],
-                        line * CalendarConstants.weekdayCount + weekday + 1),
+                children: Weekday.values.map((weekday) {
+                  bool isPreviousMonth =
+                      weekday.index <= _weekdayOffset() && line == 0;
+                  if (isPreviousMonth) {
+                    return CalendarDayTile(
+                        weekday: weekday,
+                        day: _dateTimeForPreviousMonthTile(weekday).day);
+                  }
+                  int day = line * CalendarConstants.weekdayCount +
+                      weekday.index -
+                      _weekdayOffset() +
+                      1;
+                  bool isNextMonth = day > _lastDay();
+                  if (isNextMonth) {
+                    return Expanded(child: Container());
+                  }
+                  return CalendarDayTile(
+                    weekday: weekday,
+                    day: day,
                   );
-                }),
+                }).toList(),
               ),
               Divider(height: 1),
             ],
@@ -60,21 +73,47 @@ class Calendar extends StatelessWidget {
     );
   }
 
-  Widget _tile(Weekday weekday, int day) {
-    return Container(
-      height: CalendarConstants.tileHeight,
-      child: Column(
-        children: <Widget>[
-          Spacer(),
-          Text(
-            "$day",
-            textAlign: TextAlign.center,
-            style: TextStyle(
-              color: WeekdayFunctions.weekdayColor(weekday),
-            ).merge(FontType.calendarDay),
-          ),
-          Spacer(),
-        ],
+  DateTime _dateTimeForPreviousMonthTile(Weekday weekday) {
+    var dateTimeForLastDayOfPreviousMonth = DateTime(date.year, date.month, 0);
+    var offset =
+        WeekdayFunctions.weekdayFromDate(dateTimeForLastDayOfPreviousMonth)
+            .index;
+    return DateTime(
+        dateTimeForLastDayOfPreviousMonth.year,
+        dateTimeForLastDayOfPreviousMonth.month,
+        dateTimeForLastDayOfPreviousMonth.day - offset + weekday.index);
+  }
+}
+
+class CalendarDayTile extends StatelessWidget {
+  final int day;
+  final Weekday weekday;
+
+  final Widget upperWidget;
+  final Widget lowerWidget;
+
+  const CalendarDayTile(
+      {Key key, this.day, this.weekday, this.upperWidget, this.lowerWidget})
+      : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Expanded(
+      child: Container(
+        height: CalendarConstants.tileHeight,
+        child: Column(
+          children: <Widget>[
+            upperWidget ?? Spacer(),
+            Text(
+              "$day",
+              textAlign: TextAlign.center,
+              style: TextStyle(
+                color: WeekdayFunctions.weekdayColor(weekday),
+              ).merge(FontType.calendarDay),
+            ),
+            upperWidget ?? Spacer(),
+          ],
+        ),
       ),
     );
   }

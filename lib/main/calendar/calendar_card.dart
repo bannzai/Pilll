@@ -16,7 +16,7 @@ class CalendarCard extends StatelessWidget {
       children: <Widget>[
         _header(),
         Calendar(
-          firstDayOfMonth: date,
+          date: date,
         ),
       ],
     );
