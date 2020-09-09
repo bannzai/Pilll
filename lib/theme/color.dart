@@ -21,6 +21,7 @@ class PilllColors {
   const PilllColors();
 
   static final Color primary = HexColor.fromHex("E37474");
+  static final Color secondary = HexColor.fromHex("B9D7F1");
   static final Color accent = Colors.white;
   static final Color pillSheet = HexColor.fromHex("E8EBED");
   static final Color mat = HexColor.fromHex("FAFAFA").withAlpha(80);
