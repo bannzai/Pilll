@@ -81,7 +81,7 @@ class _HomePageState extends State<HomePage>
           controller: _tabController,
           children: <Widget>[
             CalendarCard(
-              firstDayOfMonth: DateTime.now(),
+              date: DateTime.now(),
             ),
             Settings(),
             _recordView(),
