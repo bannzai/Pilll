@@ -8,17 +8,19 @@ class CalendarPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        backgroundColor: PilllColors.background,
-        appBar: AppBar(
-          title: Text(
-            "こんにちは🍰",
-            style: TextColorStyle.noshime.merge(FontType.xBigTitle),
-          ),
-          backgroundColor: PilllColors.background,
+      backgroundColor: PilllColors.background,
+      appBar: AppBar(
+        title: Text(
+          "こんにちは🍰",
+          style: TextColorStyle.noshime.merge(FontType.xBigTitle),
         ),
-        body: Container(
-            child: CalendarCard(
+        backgroundColor: PilllColors.background,
+      ),
+      body: Container(
+        child: CalendarCard(
           date: DateTime.now(),
-        )));
+        ),
+      ),
+    );
   }
 }
