@@ -48,7 +48,6 @@ class CalendarPage extends StatelessWidget {
   }
 }
 
-// This is the Painter class
 class _HalfCircle extends CustomPainter {
   final Size contentSize;
 
