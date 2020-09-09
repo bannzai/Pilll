@@ -4,6 +4,7 @@ import 'package:Pilll/main/calendar/calendar_card.dart';
 import 'package:Pilll/theme/color.dart';
 import 'package:Pilll/theme/font.dart';
 import 'package:Pilll/theme/text_color.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class CalendarPage extends StatelessWidget {
@@ -12,9 +13,15 @@ class CalendarPage extends StatelessWidget {
     return Scaffold(
       backgroundColor: PilllColors.background,
       appBar: AppBar(
-        title: Text(
-          "こんにちは🍰",
-          style: TextColorStyle.noshime.merge(FontType.xBigTitle),
+        title: Row(
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: <Widget>[
+            Text(
+              "こんにちは🍰",
+              style: TextColorStyle.noshime.merge(FontType.xBigTitle),
+              textAlign: TextAlign.left,
+            ),
+          ],
         ),
         backgroundColor: Colors.transparent,
         elevation: 0,
@@ -23,8 +30,9 @@ class CalendarPage extends StatelessWidget {
       body: Column(
         children: <Widget>[
           CustomPaint(
-            painter: _HalfCircle(),
-            size: Size(MediaQuery.of(context).size.width + 100, 250),
+            painter:
+                _HalfCircle(Size(MediaQuery.of(context).size.width + 100, 250)),
+            size: Size(MediaQuery.of(context).size.width, 125),
           ),
           Center(
             child: Container(
@@ -42,14 +50,17 @@ class CalendarPage extends StatelessWidget {
 
 // This is the Painter class
 class _HalfCircle extends CustomPainter {
+  final Size contentSize;
+
+  _HalfCircle(this.contentSize);
   @override
   void paint(Canvas canvas, Size size) {
     Paint paint = Paint()..color = PilllColors.secondary;
     canvas.drawArc(
       Rect.fromCenter(
         center: Offset(size.width / 2, 0),
-        width: size.width + size.width * 0.5,
-        height: size.height,
+        width: this.contentSize.width + this.contentSize.width * 0.5,
+        height: this.contentSize.height,
       ),
       math.pi,
       -math.pi,
