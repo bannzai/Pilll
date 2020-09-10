@@ -4,10 +4,17 @@ import 'package:Pilll/main/calendar/calendar_card.dart';
 import 'package:Pilll/theme/color.dart';
 import 'package:Pilll/theme/font.dart';
 import 'package:Pilll/theme/text_color.dart';
+import 'package:Pilll/util/formatter/date_time_formatter.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
+
+abstract class CalendarPageConstants {
+  static final double halfCircleHeight = 300;
+}
 
 class CalendarPage extends StatelessWidget {
+  DateTime get today => DateTime.now();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -29,19 +36,55 @@ class CalendarPage extends StatelessWidget {
       extendBodyBehindAppBar: true,
       body: Column(
         children: <Widget>[
-          CustomPaint(
-            painter:
-                _HalfCircle(Size(MediaQuery.of(context).size.width + 100, 250)),
-            size: Size(MediaQuery.of(context).size.width, 125),
+          Stack(
+            children: [
+              CustomPaint(
+                painter: _HalfCircle(Size(
+                    MediaQuery.of(context).size.width + 100,
+                    CalendarPageConstants.halfCircleHeight)),
+                size: Size(MediaQuery.of(context).size.width, 220),
+              ),
+              Positioned(
+                left: 16,
+                top: 85,
+                width: _cardWidth(context),
+                height: 111,
+                child: _menstruationCard(),
+              ),
+            ],
           ),
           Center(
             child: Container(
-              width: MediaQuery.of(context).size.width - 32,
+              width: _cardWidth(context),
               child: CalendarCard(
-                date: DateTime.now(),
+                date: today,
               ),
             ),
           ),
+        ],
+      ),
+    );
+  }
+
+  double _cardWidth(BuildContext context) {
+    return MediaQuery.of(context).size.width - 32;
+  }
+
+  Widget _menstruationCard() {
+    return Card(
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: <Widget>[
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              SvgPicture.asset("images/menstruation_icon.svg"),
+              Text("生理予定日",
+                  style: TextColorStyle.noshime.merge(FontType.assisting)),
+            ],
+          ),
+          Text(DateTimeFormatter.monthAndYearAndWeekday(today),
+              style: TextColorStyle.gray.merge(FontType.xBigTitle)),
         ],
       ),
     );

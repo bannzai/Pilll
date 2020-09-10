@@ -11,4 +11,9 @@ class DateTimeFormatter {
   static String yearAndMonth(DateTime dateTime) {
     return DateFormat(DateFormat.YEAR_ABBR_MONTH, "ja_JP").format(dateTime);
   }
+
+  static String monthAndYearAndWeekday(DateTime dateTime) {
+    return DateFormat(DateFormat.NUM_MONTH_WEEKDAY_DAY, "ja_JP")
+        .format(dateTime);
+  }
 }
