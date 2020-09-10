@@ -45,9 +45,10 @@ class Calendar extends StatelessWidget {
               Row(
                 children: Weekday.values.map((weekday) {
                   bool isPreviousMonth =
-                      weekday.index <= _weekdayOffset() && line == 0;
+                      weekday.index < _weekdayOffset() && line == 0;
                   if (isPreviousMonth) {
                     return CalendarDayTile(
+                        disable: true,
                         weekday: weekday,
                         day: _dateTimeForPreviousMonthTile(weekday).day);
                   }
@@ -88,12 +89,18 @@ class Calendar extends StatelessWidget {
 class CalendarDayTile extends StatelessWidget {
   final int day;
   final Weekday weekday;
+  final bool disable;
 
   final Widget upperWidget;
   final Widget lowerWidget;
 
   const CalendarDayTile(
-      {Key key, this.day, this.weekday, this.upperWidget, this.lowerWidget})
+      {Key key,
+      this.day,
+      this.weekday,
+      this.upperWidget,
+      this.lowerWidget,
+      this.disable = false})
       : super(key: key);
 
   @override
@@ -108,7 +115,10 @@ class CalendarDayTile extends StatelessWidget {
               "$day",
               textAlign: TextAlign.center,
               style: TextStyle(
-                color: WeekdayFunctions.weekdayColor(weekday),
+                color: disable
+                    ? WeekdayFunctions.weekdayColor(weekday)
+                        .withAlpha((255 * 0.4).floor())
+                    : WeekdayFunctions.weekdayColor(weekday),
               ).merge(FontType.calendarDay),
             ),
             upperWidget ?? Spacer(),
