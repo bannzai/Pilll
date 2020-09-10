@@ -50,7 +50,7 @@ class CalendarPage extends StatelessWidget {
                 top: 85,
                 width: _cardWidth(context),
                 height: 111,
-                child: _menstruationCard(),
+                child: _menstruationCard(DateTime.now()),
               ),
             ],
           ),
@@ -71,7 +71,7 @@ class CalendarPage extends StatelessWidget {
     return MediaQuery.of(context).size.width - 32;
   }
 
-  Widget _menstruationCard() {
+  Widget _menstruationCard(DateTime date) {
     return Card(
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
@@ -84,7 +84,7 @@ class CalendarPage extends StatelessWidget {
                   style: TextColorStyle.noshime.merge(FontType.assisting)),
             ],
           ),
-          Text(DateTimeFormatter.monthAndYearAndWeekday(today),
+          Text(DateTimeFormatter.monthAndYearAndWeekday(date),
               style: TextColorStyle.gray.merge(FontType.xBigTitle)),
         ],
       ),
