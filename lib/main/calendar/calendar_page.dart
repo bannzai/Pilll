@@ -34,7 +34,8 @@ class CalendarPage extends StatelessWidget {
         elevation: 0,
       ),
       extendBodyBehindAppBar: true,
-      body: Column(
+      body: ListView(
+        padding: EdgeInsets.all(0),
         children: <Widget>[
           Stack(
             children: [
