@@ -19,20 +19,7 @@ class CalendarPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: PilllColors.background,
-      appBar: AppBar(
-        title: Row(
-          mainAxisAlignment: MainAxisAlignment.start,
-          children: <Widget>[
-            Text(
-              "こんにちは🍰",
-              style: TextColorStyle.noshime.merge(FontType.xBigTitle),
-              textAlign: TextAlign.left,
-            ),
-          ],
-        ),
-        backgroundColor: Colors.transparent,
-        elevation: 0,
-      ),
+      appBar: null,
       extendBodyBehindAppBar: true,
       body: ListView(
         padding: EdgeInsets.all(0),
@@ -44,6 +31,11 @@ class CalendarPage extends StatelessWidget {
                     MediaQuery.of(context).size.width + 100,
                     CalendarPageConstants.halfCircleHeight)),
                 size: Size(MediaQuery.of(context).size.width, 220),
+              ),
+              Positioned(
+                left: 16,
+                top: 44,
+                child: _title(),
               ),
               Positioned(
                 left: 16,
@@ -69,6 +61,19 @@ class CalendarPage extends StatelessWidget {
 
   double _cardWidth(BuildContext context) {
     return MediaQuery.of(context).size.width - 32;
+  }
+
+  Widget _title() {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.start,
+      children: <Widget>[
+        Text(
+          "こんにちは🍰",
+          style: TextColorStyle.noshime.merge(FontType.xBigTitle),
+          textAlign: TextAlign.left,
+        ),
+      ],
+    );
   }
 
   Widget _menstruationCard(DateTime date) {
