@@ -9,7 +9,7 @@ enum CalendarHelpPageRow {
   nextPillSheet,
   recordExists,
   sex,
-  hospital
+  // hospital
 }
 
 extension CalendarHelpPageRowFunctions on CalendarHelpPageRow {
@@ -33,10 +33,10 @@ extension CalendarHelpPageRowFunctions on CalendarHelpPageRow {
         return SvgPicture.asset(
           "images/heart.svg",
         );
-      case CalendarHelpPageRow.hospital:
-        return SvgPicture.asset(
-          "images/hospital.svg",
-        );
+      // case CalendarHelpPageRow.hospital:
+      //   return SvgPicture.asset(
+      //     "images/hospital.svg",
+      //   );
       default:
         assert(false);
         return null;
@@ -65,11 +65,11 @@ extension CalendarHelpPageRowFunctions on CalendarHelpPageRow {
           "SEX",
           style: FontType.row.merge(TextColorStyle.lightGray2),
         );
-      case CalendarHelpPageRow.hospital:
-        return Text(
-          "来院予定日",
-          style: FontType.row.merge(TextColorStyle.lightGray2),
-        );
+      // case CalendarHelpPageRow.hospital:
+      //   return Text(
+      //     "来院予定日",
+      //     style: FontType.row.merge(TextColorStyle.lightGray2),
+      //   );
       default:
         assert(false);
         return null;
