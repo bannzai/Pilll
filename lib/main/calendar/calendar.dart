@@ -1,6 +1,8 @@
+import 'package:Pilll/main/calendar/calendar_band_model.dart';
 import 'package:Pilll/main/record/weekday_badge.dart';
 import 'package:Pilll/model/weekday.dart';
 import 'package:Pilll/theme/font.dart';
+import 'package:Pilll/theme/text_color.dart';
 import 'package:flutter/material.dart';
 
 abstract class CalendarConstants {
@@ -9,8 +11,9 @@ abstract class CalendarConstants {
 }
 
 class Calendar extends StatelessWidget {
+  final List<CalendarBandModel> lineModels;
   final DateTime date;
-  const Calendar({Key key, this.date}) : super(key: key);
+  const Calendar({Key key, this.date, this.lineModels}) : super(key: key);
 
   DateTime _dateTimeForFirstDayofMonth() {
     return DateTime(date.year, date.month, 1);
@@ -39,38 +42,59 @@ class Calendar extends StatelessWidget {
         ),
         Divider(height: 1),
         ...List.generate(_lineCount(), (line) {
-          return Column(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          return Stack(
             children: <Widget>[
-              Row(
-                children: Weekday.values.map((weekday) {
-                  bool isPreviousMonth =
-                      weekday.index < _weekdayOffset() && line == 0;
-                  if (isPreviousMonth) {
-                    return CalendarDayTile(
-                        disable: true,
+              Column(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: <Widget>[
+                  Row(
+                    children: Weekday.values.map((weekday) {
+                      bool isPreviousMonth =
+                          weekday.index < _weekdayOffset() && line == 0;
+                      if (isPreviousMonth) {
+                        return CalendarDayTile(
+                            disable: true,
+                            weekday: weekday,
+                            day: _dateTimeForPreviousMonthTile(weekday).day);
+                      }
+                      int day = line * CalendarConstants.weekdayCount +
+                          weekday.index -
+                          _weekdayOffset() +
+                          1;
+                      bool isNextMonth = day > _lastDay();
+                      if (isNextMonth) {
+                        return Expanded(child: Container());
+                      }
+                      return CalendarDayTile(
+                        disable: false,
                         weekday: weekday,
-                        day: _dateTimeForPreviousMonthTile(weekday).day);
-                  }
-                  int day = line * CalendarConstants.weekdayCount +
-                      weekday.index -
-                      _weekdayOffset() +
-                      1;
-                  bool isNextMonth = day > _lastDay();
-                  if (isNextMonth) {
-                    return Expanded(child: Container());
-                  }
-                  return CalendarDayTile(
-                    weekday: weekday,
-                    day: day,
-                  );
-                }).toList(),
+                        day: day,
+                        lowerWidget:
+                            _band(CalendarNextPillSheetBandModel(null, null)),
+                      );
+                    }).toList(),
+                  ),
+                  Divider(height: 1),
+                ],
               ),
-              Divider(height: 1),
             ],
           );
         }),
       ],
+    );
+  }
+
+  Widget _band(CalendarBandModel model) {
+    return Container(
+      width: 200,
+      height: 12,
+      decoration: BoxDecoration(color: model.color),
+      child: Center(
+        child: Text(
+          model.label,
+          style: FontType.smallTitle.merge(TextColorStyle.white),
+        ),
+      ),
     );
   }
 
