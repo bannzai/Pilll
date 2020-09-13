@@ -57,7 +57,7 @@ extension CalendarHelpPageRowFunctions on CalendarHelpPageRow {
         );
       case CalendarHelpPageRow.recordExists:
         return Text(
-          "新しいシート開始",
+          "記録",
           style: FontType.row.merge(TextColorStyle.lightGray2),
         );
       case CalendarHelpPageRow.sex:
