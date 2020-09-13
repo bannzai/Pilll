@@ -12,13 +12,13 @@ class Calendar extends StatelessWidget {
   final DateTime date;
   const Calendar({Key key, this.date}) : super(key: key);
 
-  DateTime _dateTimeForFirstDayofMonth() {
+  DateTime _dateTimeForFirstDayOfMonth() {
     return DateTime(date.year, date.month, 1);
   }
 
   int _lastDay() => DateTime(date.year, date.month + 1, 0).day;
   int _weekdayOffset() =>
-      WeekdayFunctions.weekdayFromDate(_dateTimeForFirstDayofMonth()).index;
+      WeekdayFunctions.weekdayFromDate(_dateTimeForFirstDayOfMonth()).index;
   int _previousMonthDayCount() => _weekdayOffset();
   int _tileCount() => _previousMonthDayCount() + _lastDay();
   int _lineCount() => (_tileCount() / 7).ceil();
