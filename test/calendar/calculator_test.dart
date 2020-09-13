@@ -8,7 +8,7 @@ void main() {
   setUp(() {
     calculator = Calculator(date);
   });
-  group("2020/09/14", () {
+  group("2020-09-14", () {
     date = DateTime.parse("2020-09-14");
     test("#dateTimeForPreviousMonthTile", () {
       expect(calculator.dateTimeForPreviousMonthTile(Weekday.Sunday),
