@@ -1,29 +1,29 @@
 import 'package:Pilll/theme/color.dart';
 import 'package:flutter/material.dart';
 
-abstract class CalendarLineModel {
+abstract class CalendarBandModel {
   Color get color;
   String get label;
 
   final DateTime start;
   final DateTime end;
-  CalendarLineModel(this.start, this.end);
+  CalendarBandModel(this.start, this.end);
 }
 
-class CalendarMenstruationLineModel extends CalendarLineModel {
+class CalendarMenstruationBandModel extends CalendarBandModel {
   @override
   Color get color => PilllColors.menstruation;
   @override
   String get label => "";
-  CalendarMenstruationLineModel(DateTime start, DateTime end)
+  CalendarMenstruationBandModel(DateTime start, DateTime end)
       : super(start, end);
 }
 
-class CalendarNextPillSheetLineModel extends CalendarLineModel {
+class CalendarNextPillSheetBandModel extends CalendarBandModel {
   @override
   Color get color => PilllColors.duration;
   @override
   String get label => "新しいシート開始 ▶︎";
-  CalendarNextPillSheetLineModel(DateTime start, DateTime end)
+  CalendarNextPillSheetBandModel(DateTime start, DateTime end)
       : super(start, end);
 }
