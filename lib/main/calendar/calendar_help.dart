@@ -44,7 +44,36 @@ extension CalendarHelpPageRowFunctions on CalendarHelpPageRow {
   }
 
   Widget title() {
-    return Text("生理期間");
+    switch (this) {
+      case CalendarHelpPageRow.menstruation:
+        return Text(
+          "生理期間",
+          style: FontType.row.merge(TextColorStyle.lightGray2),
+        );
+      case CalendarHelpPageRow.nextPillSheet:
+        return Text(
+          "新しいシート開始",
+          style: FontType.row.merge(TextColorStyle.lightGray2),
+        );
+      case CalendarHelpPageRow.recordExists:
+        return Text(
+          "新しいシート開始",
+          style: FontType.row.merge(TextColorStyle.lightGray2),
+        );
+      case CalendarHelpPageRow.sex:
+        return Text(
+          "SEX",
+          style: FontType.row.merge(TextColorStyle.lightGray2),
+        );
+      case CalendarHelpPageRow.hospital:
+        return Text(
+          "来院予定日",
+          style: FontType.row.merge(TextColorStyle.lightGray2),
+        );
+      default:
+        assert(false);
+        return null;
+    }
   }
 }
 
@@ -68,6 +97,7 @@ class CalendarHelpPage extends StatelessWidget {
                   Column(
                     mainAxisSize: MainAxisSize.max,
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    crossAxisAlignment: CrossAxisAlignment.start,
                     children: <Widget>[
                       SizedBox(height: 16),
                       Text(
@@ -76,9 +106,17 @@ class CalendarHelpPage extends StatelessWidget {
                       ),
                       ...CalendarHelpPageRow.values.map((e) {
                         return Row(
-                          mainAxisSize: MainAxisSize.min,
+                          mainAxisAlignment: MainAxisAlignment.start,
                           children: <Widget>[
-                            e.icon(),
+                            ConstrainedBox(
+                              constraints: BoxConstraints.expand(
+                                width: 40,
+                                height: 12,
+                              ),
+                              child: Center(
+                                child: e.icon(),
+                              ),
+                            ),
                             SizedBox(width: 16),
                             e.title(),
                           ],

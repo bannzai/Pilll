@@ -6,6 +6,7 @@ class FontFamily {
   static final String number = "Avenier Next";
   static final String japanese = "Hiragino Kaku Gothic ProN";
   static final String japanese2 = "Noto Sans CJK JP";
+  static final String roboto = "Roboto";
 }
 
 class FontSize {
@@ -59,6 +60,11 @@ class FontType {
     fontFamily: FontFamily.japanese2,
     fontWeight: FontWeight.w300,
     fontSize: FontSize.sLarge,
+  );
+  static final TextStyle row = TextStyle(
+    fontFamily: FontFamily.roboto,
+    fontWeight: FontWeight.w300,
+    fontSize: FontSize.normal,
   );
   static final TextStyle assisting = TextStyle(
     fontFamily: FontFamily.japanese,
