@@ -1,3 +1,4 @@
+import 'package:Pilll/main/calendar/calculator.dart';
 import 'package:Pilll/main/calendar/calendar.dart';
 import 'package:Pilll/main/calendar/calendar_help.dart';
 import 'package:Pilll/theme/color.dart';
@@ -20,7 +21,7 @@ class CalendarCard extends StatelessWidget {
         children: <Widget>[
           _header(context),
           Calendar(
-            date: date,
+            calculator: Calculator(date),
           ),
         ],
       ),
