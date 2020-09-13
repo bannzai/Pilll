@@ -109,8 +109,10 @@ class CalendarDayTile extends StatelessWidget {
       child: Container(
         height: CalendarConstants.tileHeight,
         child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: <Widget>[
             upperWidget ?? Spacer(),
+            Spacer(),
             Text(
               "$day",
               textAlign: TextAlign.center,
@@ -121,7 +123,8 @@ class CalendarDayTile extends StatelessWidget {
                     : WeekdayFunctions.weekdayColor(weekday),
               ).merge(FontType.calendarDay),
             ),
-            upperWidget ?? Spacer(),
+            Spacer(),
+            lowerWidget ?? Spacer(),
           ],
         ),
       ),
