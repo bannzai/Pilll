@@ -10,6 +10,7 @@ class TextColor {
   static final Color lightGray = HexColor.fromHex("CDCFD1");
   static final Color lightGray2 = HexColor.fromHex("666666");
   static final Color noshime = HexColor.fromHex("3D4662");
+  static final Color primary = PilllColors.primary;
 }
 
 class TextColorStyle {
@@ -20,4 +21,5 @@ class TextColorStyle {
   static final TextStyle lightGray = TextStyle(color: TextColor.lightGray);
   static final TextStyle lightGray2 = TextStyle(color: TextColor.lightGray2);
   static final TextStyle noshime = TextStyle(color: TextColor.noshime);
+  static final TextStyle primary = TextStyle(color: TextColor.primary);
 }

@@ -56,6 +56,11 @@ class FontType {
     fontWeight: FontWeight.w600,
     fontSize: FontSize.sLarge,
   );
+  static final TextStyle close = TextStyle(
+    fontFamily: FontFamily.japanese2,
+    fontWeight: FontWeight.w600,
+    fontSize: FontSize.normal,
+  );
   static final TextStyle calendarDay = TextStyle(
     fontFamily: FontFamily.japanese2,
     fontWeight: FontWeight.w300,
