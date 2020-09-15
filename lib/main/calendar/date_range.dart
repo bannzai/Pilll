@@ -1,0 +1,19 @@
+class DateRange {
+  final DateTime begin;
+  final DateTime end;
+  int get days => end.difference(begin).inDays;
+
+  DateRange(this.begin, this.end);
+
+  static bool isSameDay(DateTime a, DateTime b) =>
+      a.year == b.year && a.month == b.month && a.day == b.day;
+  bool inRange(DateTime date) =>
+      begin.isAfter(date) && date.isBefore(end) ||
+      DateRange.isSameDay(date, begin) ||
+      DateRange.isSameDay(date, end);
+  DateRange union(DateRange range) {
+    var l = begin.isAfter(range.begin) ? begin : range.begin;
+    var r = end.isBefore(range.end) ? end : range.end;
+    return DateRange(l, r);
+  }
+}
