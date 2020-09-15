@@ -1,5 +1,6 @@
 import 'package:Pilll/main/calendar/calculator.dart';
 import 'package:Pilll/main/calendar/calendar.dart';
+import 'package:Pilll/main/calendar/calendar_band_model.dart';
 import 'package:Pilll/main/calendar/calendar_help.dart';
 import 'package:Pilll/theme/color.dart';
 import 'package:Pilll/theme/font.dart';
@@ -22,6 +23,17 @@ class CalendarCard extends StatelessWidget {
           _header(context),
           Calendar(
             calculator: Calculator(date),
+            bandModels: [
+              // TOOD:
+              CalendarMenstruationBandModel(
+                DateTime(2020, 09, 05),
+                DateTime(2020, 09, 09),
+              ),
+              CalendarNextPillSheetBandModel(
+                DateTime(2020, 09, 10),
+                DateTime(2020, 09, 16),
+              ),
+            ],
           ),
         ],
       ),
