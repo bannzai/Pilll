@@ -18,6 +18,7 @@ class FontSize {
   static final double sLarge = 16;
   static final double normal = 14;
   static final double small = 12;
+  static final double sSmall = 10;
 }
 
 class FontType {
@@ -91,9 +92,9 @@ class FontType {
     fontWeight: FontWeight.w300,
     fontSize: FontSize.small,
   );
-  static final TextStyle smallTitle = TextStyle(
+  static final TextStyle sSmallTitle = TextStyle(
     fontFamily: FontFamily.japanese2,
     fontWeight: FontWeight.w600,
-    fontSize: FontSize.small,
+    fontSize: FontSize.sSmall,
   );
 }
