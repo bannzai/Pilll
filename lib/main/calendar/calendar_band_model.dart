@@ -5,9 +5,9 @@ abstract class CalendarBandModel {
   Color get color;
   String get label;
 
-  final DateTime start;
+  final DateTime begin;
   final DateTime end;
-  CalendarBandModel(this.start, this.end);
+  CalendarBandModel(this.begin, this.end);
 }
 
 class CalendarMenstruationBandModel extends CalendarBandModel {
@@ -15,8 +15,8 @@ class CalendarMenstruationBandModel extends CalendarBandModel {
   Color get color => PilllColors.menstruation;
   @override
   String get label => "";
-  CalendarMenstruationBandModel(DateTime start, DateTime end)
-      : super(start, end);
+  CalendarMenstruationBandModel(DateTime begin, DateTime end)
+      : super(begin, end);
 }
 
 class CalendarNextPillSheetBandModel extends CalendarBandModel {
@@ -24,6 +24,6 @@ class CalendarNextPillSheetBandModel extends CalendarBandModel {
   Color get color => PilllColors.duration;
   @override
   String get label => "新しいシート開始 ▶︎";
-  CalendarNextPillSheetBandModel(DateTime start, DateTime end)
-      : super(start, end);
+  CalendarNextPillSheetBandModel(DateTime begin, DateTime end)
+      : super(begin, end);
 }
