@@ -84,16 +84,21 @@ class Calendar extends StatelessWidget {
     return bandModels
         .map((bandModel) {
           if (range.inRange(bandModel.begin) || range.inRange(bandModel.end)) {
+            bool isLineBreak = !range.inRange(bandModel.begin);
+            int start = isLineBreak
+                ? 0
+                : bandModel.begin.difference(range.begin).inDays;
+
             var length =
-                range.union(DateRange(bandModel.begin, bandModel.end)).days;
-            var tileWidth =
-                MediaQuery.of(context).size.width / Weekday.values.length;
+                range.union(DateRange(bandModel.begin, bandModel.end)).days + 1;
+            var tileWidth = (MediaQuery.of(context).size.width - 32) /
+                Weekday.values.length;
             return Positioned(
-              left: 0,
+              left: start.toDouble() * tileWidth,
               width: tileWidth * length,
               bottom: 0,
-              height: 14,
-              child: _band(bandModel),
+              height: 15,
+              child: _band(bandModel, isLineBreak),
             );
           }
           return null;
@@ -102,11 +107,12 @@ class Calendar extends StatelessWidget {
         .toList();
   }
 
-  Widget _band(CalendarBandModel model) {
+  Widget _band(CalendarBandModel model, bool isLineBreak) {
     return Container(
       decoration: BoxDecoration(color: model.color),
-      child: Center(
-        child: Text(model.label,
+      child: Container(
+        padding: EdgeInsets.only(left: 10),
+        child: Text(isLineBreak ? "" : model.label,
             style: FontType.sSmallTitle.merge(TextColorStyle.white)),
       ),
     );
