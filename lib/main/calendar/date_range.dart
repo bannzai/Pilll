@@ -16,4 +16,18 @@ class DateRange {
     var r = end.isBefore(range.end) ? end : range.end;
     return DateRange(l, r);
   }
+
+  @override
+  bool operator ==(other) {
+    if (other == null) {
+      return false;
+    }
+    if (other is! DateRange) {
+      return false;
+    }
+    return this.begin == other.begin && this.end == other.end;
+  }
+
+  @override
+  int get hashCode => super.hashCode;
 }
