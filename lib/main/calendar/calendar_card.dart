@@ -26,7 +26,7 @@ class CalendarCard extends StatelessWidget {
             bandModels: [
               // TOOD:
               CalendarMenstruationBandModel(
-                DateTime(2020, 09, 05),
+                DateTime(2020, 09, 06),
                 DateTime(2020, 09, 09),
               ),
               CalendarNextPillSheetBandModel(
