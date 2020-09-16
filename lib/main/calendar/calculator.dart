@@ -38,7 +38,22 @@ class Calculator {
   }
 
   DateRange dateRangeOfLine(int line) {
-    var beginDay = Weekday.values.length * (line - 1) + previousMonthDayCount();
+    if (line == 1) {
+      return DateRange(
+        DateTime(date.year, date.month, 1),
+        DateTime(date.year, date.month,
+            Weekday.values.length - previousMonthDayCount()),
+      );
+    }
+    if (line == lineCount()) {
+      return DateRange(
+        DateTime(date.year, date.month,
+            Weekday.values.length * (line - 1) + 1 - previousMonthDayCount()),
+        DateTime(date.year, date.month, lastDay()),
+      );
+    }
+    var beginDay =
+        Weekday.values.length * (line - 1) - previousMonthDayCount() + 1;
     var endDay = Weekday.values.length * line - previousMonthDayCount();
     return DateRange(
       DateTime(date.year, date.month, beginDay),
