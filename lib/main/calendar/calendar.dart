@@ -81,22 +81,25 @@ class Calendar extends StatelessWidget {
 
   List<Widget> _bands(BuildContext context, int line) {
     var range = calculator.dateRangeOfLine(line);
-    return bandModels.map((bandModel) {
-      if (range.inRange(bandModel.begin) || range.inRange(bandModel.end)) {
-        var length =
-            range.union(DateRange(bandModel.begin, bandModel.end)).days;
-        var tileWidth =
-            MediaQuery.of(context).size.width / Weekday.values.length;
-        return Positioned(
-          left: 0,
-          width: tileWidth * length,
-          bottom: 0,
-          height: 14,
-          child: _band(bandModel),
-        );
-      }
-      return Container();
-    }).toList();
+    return bandModels
+        .map((bandModel) {
+          if (range.inRange(bandModel.begin) || range.inRange(bandModel.end)) {
+            var length =
+                range.union(DateRange(bandModel.begin, bandModel.end)).days;
+            var tileWidth =
+                MediaQuery.of(context).size.width / Weekday.values.length;
+            return Positioned(
+              left: 0,
+              width: tileWidth * length,
+              bottom: 0,
+              height: 14,
+              child: _band(bandModel),
+            );
+          }
+          return null;
+        })
+        .where((element) => element != null)
+        .toList();
   }
 
   Widget _band(CalendarBandModel model) {
