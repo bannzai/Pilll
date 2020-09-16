@@ -34,7 +34,8 @@ class Calendar extends StatelessWidget {
                   )),
         ),
         Divider(height: 1),
-        ...List.generate(calculator.lineCount(), (line) {
+        ...List.generate(calculator.lineCount(), (_line) {
+          var line = _line + 1;
           return Column(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: <Widget>[
@@ -44,7 +45,7 @@ class Calendar extends StatelessWidget {
                     children: Weekday.values.map((weekday) {
                       bool isPreviousMonth =
                           weekday.index < calculator.weekdayOffset() &&
-                              line == 0;
+                              line == 1;
                       if (isPreviousMonth) {
                         return CalendarDayTile(
                             disable: true,
@@ -53,7 +54,7 @@ class Calendar extends StatelessWidget {
                                 .dateTimeForPreviousMonthTile(weekday)
                                 .day);
                       }
-                      int day = line * CalendarConstants.weekdayCount +
+                      int day = (line - 1) * CalendarConstants.weekdayCount +
                           weekday.index -
                           calculator.weekdayOffset() +
                           1;
