@@ -46,5 +46,12 @@ void main() {
               .days,
           4);
     });
+    test("#inRange", () {
+      expect(range.inRange(DateTime.parse("2020-09-14")), true);
+      expect(range.inRange(DateTime.parse("2020-09-13")), true);
+      expect(range.inRange(DateTime.parse("2020-09-18")), true);
+      expect(range.inRange(DateTime.parse("2020-09-12")), false);
+      expect(range.inRange(DateTime.parse("2020-09-20")), false);
+    });
   });
 }
