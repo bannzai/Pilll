@@ -24,7 +24,6 @@ class RootState extends State<Root> {
       print("app name is $app.name");
       return FirebaseAuth.instance.signInAnonymously();
     }).then((userCredential) {
-      context.read<AuthUser>().userCredential = userCredential;
       return UserInterface.fetchOrCreateUser();
     }).then((user) {
       context.read<AuthUser>().user = user;
