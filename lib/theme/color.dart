@@ -21,6 +21,7 @@ class PilllColors {
   const PilllColors();
 
   static final Color primary = HexColor.fromHex("E37474");
+  static final Color secondary = HexColor.fromHex("B9D7F1");
   static final Color accent = Colors.white;
   static final Color pillSheet = HexColor.fromHex("E8EBED");
   static final Color mat = HexColor.fromHex("FAFAFA").withAlpha(80);
@@ -33,10 +34,14 @@ class PilllColors {
 
   static final Color bottomBar = HexColor.fromHex("FAFAFA");
   static final Color border = HexColor.fromHex("DADADA");
-  static final Color background = HexColor.fromHex("FFFFFF");
+  static final Color background = HexColor.fromHex("F4F7F9");
+  static final Color modalBackground = Colors.black.withOpacity(0.5);
   static final Color selected = HexColor.fromHex("FCF1F1");
 
   static final Color blank = Colors.white;
   static final Color potti = HexColor.fromHex("7C8E9C");
   static final Color lightGray = HexColor.fromHex("CDCFD1");
+
+  static final Color menstruation = HexColor.fromHex("DCB1C4");
+  static final Color duration = HexColor.fromHex("6A7DA5");
 }

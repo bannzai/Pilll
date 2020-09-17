@@ -1,0 +1,123 @@
+import 'dart:math' as math;
+
+import 'package:Pilll/main/calendar/calendar_card.dart';
+import 'package:Pilll/theme/color.dart';
+import 'package:Pilll/theme/font.dart';
+import 'package:Pilll/theme/text_color.dart';
+import 'package:Pilll/util/formatter/date_time_formatter.dart';
+import 'package:flutter/cupertino.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
+
+abstract class CalendarPageConstants {
+  static final double halfCircleHeight = 300;
+}
+
+class CalendarPage extends StatelessWidget {
+  DateTime get today => DateTime.now();
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: PilllColors.background,
+      appBar: null,
+      extendBodyBehindAppBar: true,
+      body: ListView(
+        padding: EdgeInsets.all(0),
+        children: <Widget>[
+          Stack(
+            children: [
+              CustomPaint(
+                painter: _HalfCircle(Size(
+                    MediaQuery.of(context).size.width + 100,
+                    CalendarPageConstants.halfCircleHeight)),
+                size: Size(MediaQuery.of(context).size.width, 220),
+              ),
+              Positioned(
+                left: 16,
+                top: 44,
+                child: _title(),
+              ),
+              Positioned(
+                left: 16,
+                top: 85,
+                width: _cardWidth(context),
+                height: 111,
+                // TODO:
+                child: _menstruationCard(DateTime.now()),
+              ),
+            ],
+          ),
+          Center(
+            child: Container(
+              width: _cardWidth(context),
+              child: CalendarCard(
+                date: today,
+              ),
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+
+  double _cardWidth(BuildContext context) {
+    return MediaQuery.of(context).size.width - 32;
+  }
+
+  Widget _title() {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.start,
+      children: <Widget>[
+        Text(
+          "こんにちは🍰",
+          style: TextColorStyle.noshime.merge(FontType.xBigTitle),
+          textAlign: TextAlign.left,
+        ),
+      ],
+    );
+  }
+
+  Widget _menstruationCard(DateTime date) {
+    return Card(
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: <Widget>[
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              SvgPicture.asset("images/menstruation_icon.svg"),
+              Text("生理予定日",
+                  style: TextColorStyle.noshime.merge(FontType.assisting)),
+            ],
+          ),
+          Text(DateTimeFormatter.monthAndYearAndWeekday(date),
+              style: TextColorStyle.gray.merge(FontType.xBigTitle)),
+        ],
+      ),
+    );
+  }
+}
+
+class _HalfCircle extends CustomPainter {
+  final Size contentSize;
+
+  _HalfCircle(this.contentSize);
+  @override
+  void paint(Canvas canvas, Size size) {
+    Paint paint = Paint()..color = PilllColors.secondary;
+    canvas.drawArc(
+      Rect.fromCenter(
+        center: Offset(size.width / 2, 0),
+        width: this.contentSize.width + this.contentSize.width * 0.5,
+        height: this.contentSize.height,
+      ),
+      math.pi,
+      -math.pi,
+      false,
+      paint,
+    );
+  }
+
+  @override
+  bool shouldRepaint(CustomPainter oldDelegate) => false;
+}

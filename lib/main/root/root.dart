@@ -60,10 +60,6 @@ class RootState extends State<Root> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: PilllColors.background,
-      appBar: AppBar(
-        title: Text('Pilll'),
-        backgroundColor: PilllColors.primary,
-      ),
       body: Container(
         child: Center(
           child: CircularProgressIndicator(

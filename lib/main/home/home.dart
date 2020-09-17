@@ -1,3 +1,6 @@
+import 'package:Pilll/main/calendar/calendar.dart';
+import 'package:Pilll/main/calendar/calendar_card.dart';
+import 'package:Pilll/main/calendar/calendar_page.dart';
 import 'package:Pilll/main/record/pill_sheet.dart';
 import 'package:Pilll/main/record/record_taken_information.dart';
 import 'package:Pilll/settings/list/settings.dart';
@@ -34,10 +37,7 @@ class _HomePageState extends State<HomePage>
       length: 3,
       child: Scaffold(
         backgroundColor: PilllColors.background,
-        appBar: AppBar(
-          title: Text('Pilll'),
-          backgroundColor: PilllColors.primary,
-        ),
+        appBar: null,
         bottomNavigationBar: Container(
           decoration: BoxDecoration(
             border:
@@ -78,8 +78,8 @@ class _HomePageState extends State<HomePage>
         body: TabBarView(
           controller: _tabController,
           children: <Widget>[
+            CalendarPage(),
             Settings(),
-            _recordView(),
             _recordView(),
             // Settings(),
           ],
