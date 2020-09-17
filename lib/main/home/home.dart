@@ -94,7 +94,12 @@ class _HomePageState extends State<HomePage>
         mainAxisAlignment: MainAxisAlignment.start,
         children: <Widget>[
           SizedBox(height: 60),
-          RecordTakenInformation(),
+          // TODO: Should not use DateTime.now for beginingTakenDate and lastTakenDate
+          RecordTakenInformation(
+            today: DateTime.now(),
+            beginingTakenDate: DateTime.now(),
+            lastTakenDate: DateTime.now(),
+          ),
           SizedBox(height: 24),
           PillSheet(
             isHideWeekdayLine: false,
