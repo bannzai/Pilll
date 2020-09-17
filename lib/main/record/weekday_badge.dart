@@ -19,9 +19,9 @@ class WeekdayBadge extends StatelessWidget {
             height: 30,
             decoration: BoxDecoration(color: PilllColors.mat)),
         Container(
-          child: Text(WeekdayFunctions.weekdayString(weekday),
+          child: Text(weekday.weekdayString(),
               textAlign: TextAlign.end,
-              style: TextStyle(color: WeekdayFunctions.weekdayColor(weekday))),
+              style: TextStyle(color: weekday.weekdayColor())),
         ),
       ],
     );

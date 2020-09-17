@@ -151,9 +151,8 @@ class CalendarDayTile extends StatelessWidget {
               textAlign: TextAlign.center,
               style: TextStyle(
                 color: disable
-                    ? WeekdayFunctions.weekdayColor(weekday)
-                        .withAlpha((255 * 0.4).floor())
-                    : WeekdayFunctions.weekdayColor(weekday),
+                    ? weekday.weekdayColor().withAlpha((255 * 0.4).floor())
+                    : weekday.weekdayColor(),
               ).merge(FontType.calendarDay),
             ),
             Spacer(),
