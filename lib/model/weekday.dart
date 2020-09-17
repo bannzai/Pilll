@@ -11,7 +11,7 @@ enum Weekday {
   Saturday,
 }
 
-class WeekdayFunctions {
+extension WeekdayFunctions on Weekday {
   static Weekday weekdayFromDate(DateTime date) {
     var weekdayIndex = date.weekday;
     var weekdays = Weekday.values;
@@ -22,8 +22,8 @@ class WeekdayFunctions {
     return weekdays[weekdayIndex];
   }
 
-  static String weekdayString(Weekday weekday) {
-    switch (weekday) {
+  String weekdayString() {
+    switch (this) {
       case Weekday.Sunday:
         return "日";
       case Weekday.Monday:
@@ -38,11 +38,14 @@ class WeekdayFunctions {
         return "金";
       case Weekday.Saturday:
         return "土";
+      default:
+        assert(false);
+        return null;
     }
   }
 
-  static Color weekdayColor(Weekday weekday) {
-    switch (weekday) {
+  Color weekdayColor() {
+    switch (this) {
       case Weekday.Sunday:
         return PilllColors.sunday;
       case Weekday.Monday:
@@ -57,6 +60,9 @@ class WeekdayFunctions {
         return PilllColors.weekday;
       case Weekday.Saturday:
         return PilllColors.saturday;
+      default:
+        assert(false);
+        return null;
     }
   }
 }
