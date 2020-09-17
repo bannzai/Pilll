@@ -13,7 +13,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 class CalendarCard extends StatelessWidget {
   final DateTime date;
 
-  const CalendarCard({Key key, this.date}) : super(key: key);
+  const CalendarCard({Key key, @required this.date}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

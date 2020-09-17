@@ -17,7 +17,9 @@ class Calendar extends StatelessWidget {
   final Calculator calculator;
   final List<CalendarBandModel> bandModels;
 
-  const Calendar({Key key, this.calculator, this.bandModels}) : super(key: key);
+  const Calendar(
+      {Key key, @required this.calculator, @required this.bandModels})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -129,8 +131,8 @@ class CalendarDayTile extends StatelessWidget {
 
   const CalendarDayTile(
       {Key key,
-      this.day,
-      this.weekday,
+      @required this.day,
+      @required this.weekday,
       this.upperWidget,
       this.lowerWidget,
       this.disable = false})
