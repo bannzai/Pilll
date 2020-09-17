@@ -10,7 +10,8 @@ typedef PillMarkSelected = void Function(int);
 class PillSheet extends StatelessWidget {
   final bool isHideWeekdayLine;
 
-  const PillSheet({Key key, this.isHideWeekdayLine}) : super(key: key);
+  const PillSheet({Key key, @required this.isHideWeekdayLine})
+      : super(key: key);
   int _calcIndex(int row, int line) {
     return row + 1 + (line) * 7;
   }

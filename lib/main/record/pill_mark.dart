@@ -16,7 +16,7 @@ class PillMark extends StatelessWidget {
   int get index => number - 1;
   const PillMark({
     Key key,
-    this.number,
+    @required this.number,
   }) : super(key: key);
 
   PillMarkModel model(BuildContext context) {

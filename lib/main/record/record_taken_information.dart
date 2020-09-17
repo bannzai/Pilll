@@ -8,9 +8,9 @@ class RecordTakenInformation extends StatelessWidget {
   final DateTime lastTakenDate;
   const RecordTakenInformation({
     Key key,
-    this.today,
-    this.beginingTakenDate,
-    this.lastTakenDate,
+    @required this.today,
+    @required this.beginingTakenDate,
+    @required this.lastTakenDate,
   }) : super(key: key);
 
   String _formattedToday() {
