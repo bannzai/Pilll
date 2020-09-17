@@ -9,8 +9,8 @@ class PillSheet extends StatelessWidget {
   final bool selected;
   const PillSheet({
     Key key,
-    this.pillSheetType,
-    this.selected,
+    @required this.pillSheetType,
+    @required this.selected,
   }) : super(key: key);
 
   @override
