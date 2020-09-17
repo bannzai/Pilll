@@ -23,7 +23,7 @@ class User {
   final String anonymousUserID;
   Setting setting;
 
-  User._({@required this.anonymousUserID, this.setting});
+  User._({@required this.anonymousUserID, @required this.setting});
 
   static User _map(DocumentSnapshot document) {
     Map<String, dynamic> data = document.data();

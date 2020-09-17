@@ -6,7 +6,7 @@ class WeekdayBadge extends StatelessWidget {
   final Weekday weekday;
   const WeekdayBadge({
     Key key,
-    this.weekday,
+    @required this.weekday,
   }) : super(key: key);
 
   @override

@@ -12,7 +12,7 @@ class SettingListTitleRowModel extends SettingListRowModel {
   final String title;
   final VoidCallback onTap;
 
-  SettingListTitleRowModel({this.title, this.onTap});
+  SettingListTitleRowModel({@required this.title, @required this.onTap});
 
   @override
   Widget widget() {
@@ -28,7 +28,8 @@ class SettingListTitleAndContentRowModel extends SettingListRowModel {
   final String content;
   final VoidCallback onTap;
 
-  SettingListTitleAndContentRowModel({this.title, this.content, this.onTap});
+  SettingListTitleAndContentRowModel(
+      {@required this.title, @required this.content, @required this.onTap});
   @override
   Widget widget() {
     return ListTile(
@@ -44,7 +45,8 @@ class SettingsListSwitchRowModel extends SettingListRowModel {
   final bool value;
   final VoidCallback onTap;
 
-  SettingsListSwitchRowModel({this.title, this.value, this.onTap});
+  SettingsListSwitchRowModel(
+      {@required this.title, @required this.value, @required this.onTap});
   @override
   Widget widget() {
     return SwitchListTile(
@@ -65,7 +67,8 @@ class SettingsListDatePickerRowModel extends SettingListRowModel {
   final String content;
   final VoidCallback onTap;
 
-  SettingsListDatePickerRowModel({this.title, this.content, this.onTap});
+  SettingsListDatePickerRowModel(
+      {@required this.title, @required this.content, @required this.onTap});
   @override
   Widget widget() {
     return ListTile(
