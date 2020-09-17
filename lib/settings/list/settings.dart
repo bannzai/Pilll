@@ -205,6 +205,9 @@ class _SettingsState extends State<Settings> {
                 });
               }),
         ];
+      default:
+        assert(false);
+        return null;
     }
   }
 
