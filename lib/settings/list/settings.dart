@@ -110,6 +110,9 @@ class _SettingsState extends State<Settings> {
                 Navigator.of(context).push(MaterialPageRoute(
                   builder: (BuildContext context) {
                     return SettingMenstruationPage(
+                      done: null,
+                      doneText: null,
+                      skip: null,
                       title: "生理について",
                       selectedFromMenstruation: setting.fromMenstruation,
                       fromMenstructionDidDecide: (selectedFromMenstruction) {
