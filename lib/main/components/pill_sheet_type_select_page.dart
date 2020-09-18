@@ -12,7 +12,10 @@ class PillSheetTypeSelectPage extends StatelessWidget {
   final PillSheetType selectedPillSheetType;
 
   const PillSheetTypeSelectPage(
-      {Key key, this.title, this.callback, this.selectedPillSheetType})
+      {Key key,
+      @required this.title,
+      @required this.callback,
+      @required this.selectedPillSheetType})
       : super(key: key);
 
   @override
