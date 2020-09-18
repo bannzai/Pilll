@@ -3,7 +3,6 @@ import 'package:Pilll/main/calendar/calendar_band_model.dart';
 import 'package:Pilll/main/calendar/date_range.dart';
 import 'package:Pilll/main/record/weekday_badge.dart';
 import 'package:Pilll/model/weekday.dart';
-import 'package:Pilll/theme/color.dart';
 import 'package:Pilll/theme/font.dart';
 import 'package:Pilll/theme/text_color.dart';
 import 'package:flutter/material.dart';
@@ -17,7 +16,9 @@ class Calendar extends StatelessWidget {
   final Calculator calculator;
   final List<CalendarBandModel> bandModels;
 
-  const Calendar({Key key, this.calculator, this.bandModels}) : super(key: key);
+  const Calendar(
+      {Key key, @required this.calculator, @required this.bandModels})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -129,8 +130,8 @@ class CalendarDayTile extends StatelessWidget {
 
   const CalendarDayTile(
       {Key key,
-      this.day,
-      this.weekday,
+      @required this.day,
+      @required this.weekday,
       this.upperWidget,
       this.lowerWidget,
       this.disable = false})
@@ -151,9 +152,8 @@ class CalendarDayTile extends StatelessWidget {
               textAlign: TextAlign.center,
               style: TextStyle(
                 color: disable
-                    ? WeekdayFunctions.weekdayColor(weekday)
-                        .withAlpha((255 * 0.4).floor())
-                    : WeekdayFunctions.weekdayColor(weekday),
+                    ? weekday.weekdayColor().withAlpha((255 * 0.4).floor())
+                    : weekday.weekdayColor(),
               ).merge(FontType.calendarDay),
             ),
             Spacer(),

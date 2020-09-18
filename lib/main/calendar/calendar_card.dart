@@ -2,7 +2,6 @@ import 'package:Pilll/main/calendar/calculator.dart';
 import 'package:Pilll/main/calendar/calendar.dart';
 import 'package:Pilll/main/calendar/calendar_band_model.dart';
 import 'package:Pilll/main/calendar/calendar_help.dart';
-import 'package:Pilll/theme/color.dart';
 import 'package:Pilll/theme/font.dart';
 import 'package:Pilll/theme/text_color.dart';
 import 'package:Pilll/util/formatter/date_time_formatter.dart';
@@ -13,7 +12,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 class CalendarCard extends StatelessWidget {
   final DateTime date;
 
-  const CalendarCard({Key key, this.date}) : super(key: key);
+  const CalendarCard({Key key, @required this.date}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

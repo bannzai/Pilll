@@ -28,15 +28,6 @@ class Calculator {
   int tileCount() => previousMonthDayCount() + lastDay();
   int lineCount() => (tileCount() / 7).ceil();
 
-  int numberOfLine(int day) {
-    for (int line = 1; line <= lineCount(); line++) {
-      if (day <= (line * Weekday.values.length) - weekdayOffset()) {
-        return line;
-      }
-    }
-    assert(false, "line not found day is $day");
-  }
-
   DateRange dateRangeOfLine(int line) {
     if (line == 1) {
       return DateRange(

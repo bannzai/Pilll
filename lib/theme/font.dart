@@ -5,7 +5,6 @@ class FontFamily {
 
   static final String number = "Avenier Next";
   static final String japanese = "Hiragino Kaku Gothic ProN";
-  static final String japanese2 = "Noto Sans CJK JP";
   static final String roboto = "Roboto";
 }
 
@@ -33,12 +32,12 @@ class FontType {
     fontSize: FontSize.large,
   );
   static final TextStyle subTitle = TextStyle(
-    fontFamily: FontFamily.japanese2,
+    fontFamily: FontFamily.japanese,
     fontWeight: FontWeight.w600,
     fontSize: FontSize.sLarge,
   );
   static final TextStyle xBigTitle = TextStyle(
-    fontFamily: FontFamily.japanese2,
+    fontFamily: FontFamily.japanese,
     fontWeight: FontWeight.w600,
     fontSize: FontSize.xBig,
   );
@@ -58,12 +57,12 @@ class FontType {
     fontSize: FontSize.sLarge,
   );
   static final TextStyle close = TextStyle(
-    fontFamily: FontFamily.japanese2,
+    fontFamily: FontFamily.japanese,
     fontWeight: FontWeight.w600,
     fontSize: FontSize.normal,
   );
   static final TextStyle calendarDay = TextStyle(
-    fontFamily: FontFamily.japanese2,
+    fontFamily: FontFamily.japanese,
     fontWeight: FontWeight.w300,
     fontSize: FontSize.sLarge,
   );
@@ -93,7 +92,7 @@ class FontType {
     fontSize: FontSize.small,
   );
   static final TextStyle sSmallTitle = TextStyle(
-    fontFamily: FontFamily.japanese2,
+    fontFamily: FontFamily.japanese,
     fontWeight: FontWeight.w600,
     fontSize: FontSize.sSmall,
   );
