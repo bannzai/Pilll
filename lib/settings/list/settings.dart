@@ -71,8 +71,8 @@ class _SettingsState extends State<Settings> {
         break;
     }
     return ListTile(
-        title:
-            Text(text, style: FontType.assisting.merge(TextColorStyle.gray)));
+        title: Text(text,
+            style: FontType.assisting.merge(TextColorStyle.primary)));
   }
 
   List<SettingListRowModel> _rowModels(
