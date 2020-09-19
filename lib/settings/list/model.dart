@@ -73,7 +73,7 @@ class SettingsListDatePickerRowModel extends SettingListRowModel {
   Widget widget() {
     return ListTile(
       title: Text(title),
-      trailing: Text(content),
+      subtitle: Text(content),
       onTap: onTap,
     );
   }
