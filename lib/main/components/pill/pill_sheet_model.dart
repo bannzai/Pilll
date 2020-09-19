@@ -1,6 +1,6 @@
 import 'package:Pilll/model/pill_sheet_type.dart';
-import 'package:Pilll/main/record/pill_mark.dart';
-import 'package:Pilll/main/record/pill_mark_model.dart';
+import 'package:Pilll/main/components/pill/pill_mark.dart';
+import 'package:Pilll/main/components/pill/pill_mark_model.dart';
 import 'package:flutter/material.dart';
 
 abstract class PillSheetModel extends ChangeNotifier {
