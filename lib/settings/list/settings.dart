@@ -3,6 +3,7 @@ import 'package:Pilll/main/components/setting_menstruation_page.dart';
 import 'package:Pilll/model/auth_user.dart';
 import 'package:Pilll/model/setting.dart';
 import 'package:Pilll/settings/list/model.dart';
+import 'package:Pilll/settings/list/modifing_pill_number.dart';
 import 'package:Pilll/theme/color.dart';
 import 'package:Pilll/theme/font.dart';
 import 'package:Pilll/theme/text_color.dart';
@@ -101,7 +102,14 @@ class _SettingsState extends State<Settings> {
               }));
             },
           ),
-          SettingListTitleRowModel(title: "今日飲むピル番号の変更", onTap: () {}),
+          SettingListTitleRowModel(
+              title: "今日飲むピル番号の変更",
+              onTap: () {
+                Navigator.of(context)
+                    .push(MaterialPageRoute(builder: (BuildContext context) {
+                  return ModifingPillNumber();
+                }));
+              }),
           SettingListTitleRowModel(title: "ピルシートの破棄", onTap: () {}),
         ];
       case SettingSection.notification:
