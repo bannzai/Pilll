@@ -76,8 +76,8 @@ class _HomePageState extends State<HomePage>
         body: TabBarView(
           controller: _tabController,
           children: <Widget>[
-            CalendarPage(),
             Settings(),
+            CalendarPage(),
             _recordView(),
             // Settings(),
           ],
