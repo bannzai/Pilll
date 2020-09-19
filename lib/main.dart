@@ -1,4 +1,4 @@
-import 'package:Pilll/main/record/pill_sheet_model.dart';
+import 'package:Pilll/main/components/pill/pill_sheet_model.dart';
 import 'package:Pilll/model/pill_sheet_type.dart';
 import 'package:Pilll/theme/color.dart';
 import 'package:firebase_analytics/firebase_analytics.dart';

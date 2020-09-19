@@ -1,5 +1,5 @@
-import 'package:Pilll/main/record/pill_mark_model.dart';
-import 'package:Pilll/main/record/pill_sheet_model.dart';
+import 'package:Pilll/main/components/pill/pill_mark_model.dart';
+import 'package:Pilll/main/components/pill/pill_sheet_model.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:provider/provider.dart';

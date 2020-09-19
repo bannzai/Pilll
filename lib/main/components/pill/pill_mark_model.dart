@@ -1,6 +1,6 @@
 import 'package:Pilll/theme/color.dart';
 import 'package:Pilll/model/pill_sheet_type.dart';
-import 'package:Pilll/main/record/pill_mark.dart';
+import 'package:Pilll/main/components/pill/pill_mark.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
