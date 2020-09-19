@@ -1,4 +1,5 @@
 import 'package:Pilll/main/application/router.dart';
+import 'package:Pilll/main/components/pill/pill_mark.dart';
 import 'package:Pilll/model/auth_user.dart';
 import 'package:Pilll/model/setting.dart';
 import 'package:Pilll/theme/color.dart';
@@ -49,6 +50,10 @@ class InitialSetting2 extends StatelessWidget {
                 Spacer(),
                 PillSheet(
                   isHideWeekdayLine: true,
+                  pillMarkTypeBuilder: (number) {
+                    return PillMarkType.normal;
+                  },
+                  markSelected: (number) {},
                 ),
                 SizedBox(height: 24),
                 ExplainPillNumber(today: today()),

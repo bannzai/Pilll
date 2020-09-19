@@ -1,3 +1,4 @@
+import 'package:Pilll/main/components/pill/pill_mark.dart';
 import 'package:Pilll/main/components/pill/pill_sheet.dart';
 import 'package:Pilll/theme/color.dart';
 import 'package:Pilll/theme/font.dart';
@@ -36,6 +37,10 @@ class ModifingPillNumber extends StatelessWidget {
             Center(
               child: PillSheet(
                 isHideWeekdayLine: true,
+                pillMarkTypeBuilder: (number) {
+                  return PillMarkType.normal;
+                },
+                markSelected: (number) {},
               ),
             ),
           ],
