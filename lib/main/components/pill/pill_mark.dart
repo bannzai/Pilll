@@ -1,10 +1,7 @@
-import 'package:Pilll/main/components/pill/pill_mark_model.dart';
-import 'package:Pilll/main/components/pill/pill_sheet_model.dart';
 import 'package:Pilll/theme/color.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:provider/provider.dart';
 
 enum PillMarkType {
   normal,
