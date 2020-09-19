@@ -102,6 +102,44 @@ class _SettingsState extends State<Settings> {
             },
           ),
         ];
+      case SettingSection.notification:
+        return [
+          SettingsListSwitchRowModel(
+            title: "ピルの服用通知",
+            value: setting.isOnReminder,
+            onTap: () {
+              setState(
+                () => setting
+                    .notifyWith((setting) =>
+                        setting.isOnReminder = !setting.isOnReminder)
+                    .then((setting) => setting.save()),
+              );
+            },
+          ),
+          SettingsListDatePickerRowModel(
+            title: "通知時刻",
+            content: DateTimeFormatter.militaryTime(setting.reminderDateTime()),
+            onTap: () {
+              showModalBottomSheet(
+                context: context,
+                builder: (BuildContext context) {
+                  return DateTimePicker(
+                    initialDateTime: setting.reminderDateTime(),
+                    done: (dateTime) {
+                      setting.notifyWith(
+                        (setting) {
+                          setting.reminderHour = dateTime.hour;
+                          setting.reminderMinute = dateTime.minute;
+                        },
+                      ).then((value) => value.save());
+                      Navigator.pop(context);
+                    },
+                  );
+                },
+              );
+            },
+          ),
+        ];
       case SettingSection.menstruation:
         return [
           SettingListTitleRowModel(
@@ -141,44 +179,6 @@ class _SettingsState extends State<Settings> {
                   },
                 ));
               }),
-        ];
-      case SettingSection.notification:
-        return [
-          SettingsListSwitchRowModel(
-            title: "ピルの服用通知",
-            value: setting.isOnReminder,
-            onTap: () {
-              setState(
-                () => setting
-                    .notifyWith((setting) =>
-                        setting.isOnReminder = !setting.isOnReminder)
-                    .then((setting) => setting.save()),
-              );
-            },
-          ),
-          SettingsListDatePickerRowModel(
-            title: "通知時刻",
-            content: DateTimeFormatter.militaryTime(setting.reminderDateTime()),
-            onTap: () {
-              showModalBottomSheet(
-                context: context,
-                builder: (BuildContext context) {
-                  return DateTimePicker(
-                    initialDateTime: setting.reminderDateTime(),
-                    done: (dateTime) {
-                      setting.notifyWith(
-                        (setting) {
-                          setting.reminderHour = dateTime.hour;
-                          setting.reminderMinute = dateTime.minute;
-                        },
-                      ).then((value) => value.save());
-                      Navigator.pop(context);
-                    },
-                  );
-                },
-              );
-            },
-          ),
         ];
       case SettingSection.other:
         return [
