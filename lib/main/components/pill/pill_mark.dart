@@ -9,7 +9,7 @@ import 'package:provider/provider.dart';
 enum PillMarkType {
   normal,
   notTaken,
-  todo,
+  selected,
   done,
 }
 
@@ -20,7 +20,7 @@ extension PillMarkTypeFunctions on PillMarkType {
         return null;
       case PillMarkType.notTaken:
         return null;
-      case PillMarkType.todo:
+      case PillMarkType.selected:
         return null;
       case PillMarkType.done:
         return SvgPicture.asset("images/check_mark.svg");
@@ -37,8 +37,8 @@ extension PillMarkTypeFunctions on PillMarkType {
         return PilllColors.potti;
       case PillMarkType.notTaken:
         return PilllColors.blank;
-      case PillMarkType.todo:
-        return PilllColors.potti;
+      case PillMarkType.selected:
+        return PilllColors.enable;
       case PillMarkType.done:
         return PilllColors.lightGray;
       default:
