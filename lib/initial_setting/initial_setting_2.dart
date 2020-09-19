@@ -5,7 +5,6 @@ import 'package:Pilll/model/setting.dart';
 import 'package:Pilll/theme/color.dart';
 import 'package:Pilll/initial_setting/initial_setting_3.dart';
 import 'package:Pilll/main/components/pill/pill_sheet.dart';
-import 'package:Pilll/main/components/pill/pill_sheet_model.dart';
 import 'package:Pilll/theme/font.dart';
 import 'package:Pilll/theme/text_color.dart';
 import 'package:flutter/material.dart';
@@ -35,8 +34,8 @@ class InitialSetting2 extends StatelessWidget {
         ),
         backgroundColor: PilllColors.background,
       ),
-      body: ChangeNotifierProvider<PillSheetModel>(
-        create: (context) => InitialSettingPillSheetModel(model.pillSheetType),
+      body: ChangeNotifierProvider<Setting>.value(
+        value: model,
         child: Container(
           child: Center(
             child: Column(
@@ -62,24 +61,23 @@ class InitialSetting2 extends StatelessWidget {
                   direction: Axis.vertical,
                   spacing: 8,
                   children: <Widget>[
-                    Consumer<PillSheetModel>(
+                    Consumer<Setting>(
                       builder: (BuildContext context, model, Widget child) {
                         return RaisedButton(
                           child: Text(
                             "次へ",
                           ),
-                          onPressed:
-                              context.watch<PillSheetModel>().number == null
-                                  ? null
-                                  : () {
-                                      Navigator.of(context).push(
-                                        MaterialPageRoute(
-                                          builder: (BuildContext context) {
-                                            return InitialSetting3();
-                                          },
-                                        ),
-                                      );
-                                    },
+                          onPressed: context.watch<Setting>() == null
+                              ? null
+                              : () {
+                                  Navigator.of(context).push(
+                                    MaterialPageRoute(
+                                      builder: (BuildContext context) {
+                                        return InitialSetting3();
+                                      },
+                                    ),
+                                  );
+                                },
                         );
                       },
                     ),
