@@ -54,7 +54,7 @@ class PillMark extends StatelessWidget {
   const PillMark({
     Key key,
     @required this.type,
-    this.tapped,
+    @required this.tapped,
   }) : super(key: key);
 
   @override
