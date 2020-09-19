@@ -101,6 +101,8 @@ class _SettingsState extends State<Settings> {
               }));
             },
           ),
+          SettingListTitleRowModel(title: "今日飲むピル番号の変更", onTap: () {}),
+          SettingListTitleRowModel(title: "ピルシートの破棄", onTap: () {}),
         ];
       case SettingSection.notification:
         return [
