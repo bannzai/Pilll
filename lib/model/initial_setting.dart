@@ -58,9 +58,7 @@ class InitialSetting extends ChangeNotifier {
             pillSheetType.dosingPeriod,
       };
       rowData[PillSheetFirestoreFieldKey.creator] = {
-        PillSheetFirestoreFieldKey.creatorReference: FirebaseFirestore.instance
-            .collection(user.User.path)
-            .doc(FirebaseAuth.instance.currentUser.uid)
+        PillSheetFirestoreFieldKey.creatorReference: user.User.userReference,
       };
       rowData[PillSheetFirestoreFieldKey.beginingDate] = Timestamp.fromDate(
           today().subtract(Duration(days: todayPillNumber - 1)));

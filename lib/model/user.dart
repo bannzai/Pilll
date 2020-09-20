@@ -46,6 +46,15 @@ class User {
     });
   }
 
+  static DocumentReference userReference() {
+    if (FirebaseAuth.instance.currentUser.uid == null) {
+      throw UserNotFound();
+    }
+    return FirebaseFirestore.instance
+        .collection(User.path)
+        .doc(FirebaseAuth.instance.currentUser.uid);
+  }
+
   static Future<User> create() {
     return FirebaseFirestore.instance
         .collection(User.path)
