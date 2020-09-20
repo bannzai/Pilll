@@ -47,18 +47,17 @@ class InitialSetting extends ChangeNotifier {
   Map<String, dynamic> userPillSheetRowData() {
     var rowData = Map<String, dynamic>();
     if (pillSheetType != null) {
-      DocumentReference pillSheetTypeReference = FirebaseFirestore.instance
-          .collection(PillSheetTypeFunctions.firestoreCollectionPath)
-          .doc(pillSheetType.firestorePath);
       rowData[PillSheetFirestoreFieldKey.pillSheetTypeInfo] = {
-        PillSheetFirestoreFieldKey.pillSheetTypeInfoRef: pillSheetTypeReference,
+        PillSheetFirestoreFieldKey.pillSheetTypeInfoRef:
+            pillSheetType.documentReference,
         PillSheetFirestoreFieldKey.pillSheetTypeInfoPillCount:
             pillSheetType.totalCount,
         PillSheetFirestoreFieldKey.pillSheetTypeInfoDosingPeriod:
             pillSheetType.dosingPeriod,
       };
       rowData[PillSheetFirestoreFieldKey.creator] = {
-        PillSheetFirestoreFieldKey.creatorReference: user.User.userReference,
+        PillSheetFirestoreFieldKey.creatorReference:
+            user.User.documentReference,
       };
       rowData[PillSheetFirestoreFieldKey.beginingDate] = Timestamp.fromDate(
           today().subtract(Duration(days: todayPillNumber - 1)));
