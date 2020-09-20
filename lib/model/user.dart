@@ -21,7 +21,7 @@ class User {
 
   final String anonymousUserID;
   String get documentID => anonymousUserID;
-  Setting setting;
+  final Setting setting;
 
   User._({@required this.anonymousUserID, @required this.setting});
 
@@ -78,6 +78,6 @@ extension UserInterface on User {
   Future<void> updateSetting(Setting setting) {
     return FirebaseFirestore.instance.collection(User.path).doc(documentID).set(
         {UserPropertyKeys.settings: setting.firestoreRowData},
-        SetOptions(merge: true)).then((_) => this.setting = setting);
+        SetOptions(merge: true));
   }
 }
