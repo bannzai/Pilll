@@ -47,27 +47,30 @@ class Setting extends ChangeNotifier {
   Map<String, dynamic> get settings {
     var settings = Map<String, dynamic>();
     if (fromMenstruation != null)
-      settings[SettingKey.beginingMenstruationFromAfterFakePeriod] =
-          fromMenstruation;
+      settings[SettingFirestoreFieldyKey
+          .beginingMenstruationFromAfterFakePeriod] = fromMenstruation;
     if (durationMenstruation != null)
-      settings[SettingKey.durationMenstruation] = durationMenstruation;
+      settings[SettingFirestoreFieldyKey.durationMenstruation] =
+          durationMenstruation;
     if (reminderHour != null || reminderMinute != null)
-      settings[SettingKey.reminderTime] = {};
+      settings[SettingFirestoreFieldyKey.reminderTime] = {};
     if (reminderHour != null)
-      settings[SettingKey.reminderTime][SettingKey.reminderTimeHour] =
-          reminderHour;
+      settings[SettingFirestoreFieldyKey.reminderTime]
+          [SettingFirestoreFieldyKey.reminderTimeHour] = reminderHour;
     if (reminderMinute != null)
-      settings[SettingKey.reminderTime][SettingKey.reminderTimeMinute] =
-          reminderMinute;
-    if (isOnReminder != null) settings[SettingKey.isOnReminder] = isOnReminder;
+      settings[SettingFirestoreFieldyKey.reminderTime]
+          [SettingFirestoreFieldyKey.reminderTimeMinute] = reminderMinute;
+    if (isOnReminder != null)
+      settings[SettingFirestoreFieldyKey.isOnReminder] = isOnReminder;
     if (pillSheetType != null)
-      settings[SettingKey.pillSheetTypeRawPath] = pillSheetType.name;
+      settings[SettingFirestoreFieldyKey.pillSheetTypeRawPath] =
+          pillSheetType.name;
     return settings;
   }
 
   Future<void> register() {
     return UserInterface.fetchOrCreateUser().then((value) {
-      save()
+      return save()
           .then((value) => null)
           .then((_) => SharedPreferences.getInstance())
           .then((storage) => storage.setString(
@@ -77,7 +80,7 @@ class Setting extends ChangeNotifier {
 
   Future<void> save() {
     return UserInterface.fetchOrCreateUser().then((value) {
-      value.updateSetting(this);
+      return value.updateSetting(this);
     });
   }
 
