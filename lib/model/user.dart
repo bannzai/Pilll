@@ -12,7 +12,7 @@ class UserNotFound implements Exception {
   }
 }
 
-extension UserPropertyKeys on String {
+extension UserFirestoreFieldKeys on String {
   static final anonymouseUserID = "anonymouseUserID";
   static final settings = "settings";
   static final currentPillSheet = "pillSheet";
@@ -36,9 +36,10 @@ class User {
   static User _map(DocumentSnapshot document) {
     Map<String, dynamic> data = document.data();
     return User._(
-      anonymousUserID: data[UserPropertyKeys.anonymouseUserID],
-      setting: Setting(data[UserPropertyKeys.settings]),
-      currentPillSheet: PillSheetModel(data[UserPropertyKeys.currentPillSheet]),
+      anonymousUserID: data[UserFirestoreFieldKeys.anonymouseUserID],
+      setting: Setting(data[UserFirestoreFieldKeys.settings]),
+      currentPillSheet:
+          PillSheetModel(data[UserFirestoreFieldKeys.currentPillSheet]),
     );
   }
 
@@ -74,7 +75,7 @@ class User {
     return fetch().then((user) {
       return user.documentReference().set(
         {
-          UserPropertyKeys.anonymouseUserID:
+          UserFirestoreFieldKeys.anonymouseUserID:
               FirebaseAuth.instance.currentUser.uid,
         },
       );
@@ -97,7 +98,7 @@ extension UserInterface on User {
 
   Future<void> updateSetting(Setting setting) {
     return FirebaseFirestore.instance.collection(User.path).doc(documentID).set(
-        {UserPropertyKeys.settings: setting.firestoreRowData},
+        {UserFirestoreFieldKeys.settings: setting.firestoreRowData},
         SetOptions(merge: true));
   }
 }
