@@ -21,15 +21,36 @@ class Setting extends ChangeNotifier {
   int durationMenstruation;
   int reminderHour;
   int reminderMinute;
-  bool isOnReminder = false;
+  bool isOnReminder;
 
   factory Setting(Map<String, dynamic> firestoreRowData) {
-    return Setting._(firestoreRowData);
+    String pillSheetTypeRawPath =
+        firestoreRowData[SettingFirestoreFieldyKey.pillSheetTypeRawPath];
+    return Setting._(
+      pillSheetType: pillSheetTypeRawPath == null
+          ? null
+          : PillSheetTypeFunctions.fromName(pillSheetTypeRawPath),
+      fromMenstruation: firestoreRowData[
+          SettingFirestoreFieldyKey.beginingMenstruationFromAfterFakePeriod],
+      durationMenstruation:
+          firestoreRowData[SettingFirestoreFieldyKey.durationMenstruation],
+      reminderHour: firestoreRowData[SettingFirestoreFieldyKey.reminderTime]
+          [SettingFirestoreFieldyKey.reminderTimeHour],
+      reminderMinute: firestoreRowData[SettingFirestoreFieldyKey.reminderTime]
+          [SettingFirestoreFieldyKey.reminderTimeMinute],
+      isOnReminder:
+          firestoreRowData[SettingFirestoreFieldyKey.isOnReminder] ?? false,
+    );
   }
-  Setting._(Map<String, dynamic> firestoreRowData) {
-    if (firestoreRowData == null) {
-      return;
-    }
+  Setting._({
+    @required this.pillSheetType,
+    @required this.fromMenstruation,
+    @required this.durationMenstruation,
+    @required this.reminderHour,
+    @required this.reminderMinute,
+    @required this.isOnReminder,
+  }) {
+    assert(isOnReminder != null);
     this.fromMenstruation = firestoreRowData[
         SettingFirestoreFieldyKey.beginingMenstruationFromAfterFakePeriod];
     this.durationMenstruation =
