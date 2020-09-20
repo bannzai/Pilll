@@ -18,9 +18,9 @@ extension UserPropertyKeys on String {
 
 class User {
   static final path = "users";
-  String get documentID => anonymousUserID;
 
   final String anonymousUserID;
+  String get documentID => anonymousUserID;
   Setting setting;
 
   User._({@required this.anonymousUserID, @required this.setting});
