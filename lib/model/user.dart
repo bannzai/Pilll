@@ -18,6 +18,7 @@ extension UserPropertyKeys on String {
 
 class User {
   static final path = "users";
+  static User _cache;
 
   final String anonymousUserID;
   String get documentID => anonymousUserID;
@@ -34,6 +35,9 @@ class User {
   }
 
   static Future<User> fetch() {
+    if (_cache != null) {
+      return Future.value(_cache);
+    }
     return documentReference().get().then((document) {
       if (!document.exists) {
         throw UserNotFound();
