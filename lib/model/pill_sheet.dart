@@ -41,24 +41,4 @@ class PillSheetModel {
     @required this.beginingDate,
     @required this.lastTakenDate,
   });
-  // Map<String, dynamic> userPillSheetRowData() {
-  //   var rowData = Map<String, dynamic>();
-  //   if (pillSheetType != null) {
-  //     rowData[PillSheetFirestoreFieldKey.pillSheetTypeInfo] = {
-  //       PillSheetFirestoreFieldKey.pillSheetTypeInfoRef:
-  //           pillSheetType.documentReference,
-  //       PillSheetFirestoreFieldKey.pillSheetTypeInfoPillCount:
-  //           pillSheetType.totalCount,
-  //       PillSheetFirestoreFieldKey.pillSheetTypeInfoDosingPeriod:
-  //           pillSheetType.dosingPeriod,
-  //     };
-  //     rowData[PillSheetFirestoreFieldKey.creator] = {
-  //       PillSheetFirestoreFieldKey.creatorReference:
-  //           user.User.documentReference,
-  //     };
-  //     rowData[PillSheetFirestoreFieldKey.beginingDate] = Timestamp.fromDate(
-  //         today().subtract(Duration(days: todayPillNumber - 1)));
-  //   }
-  //   return rowData;
-  // }
 }
