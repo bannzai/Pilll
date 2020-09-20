@@ -42,36 +42,44 @@ class User {
     );
   }
 
+  static User user() {
+    if (_cache == null) throw UserNotFound();
+    return _cache;
+  }
+
   static Future<User> fetch() {
     if (_cache != null) {
       return Future.value(_cache);
     }
-    return documentReference().get().then((document) {
+    return FirebaseFirestore.instance
+        .collection(User.path)
+        .doc(FirebaseAuth.instance.currentUser.uid)
+        .get()
+        .then((document) {
       if (!document.exists) {
         throw UserNotFound();
       }
-      return User._map(document);
+      var user = User._map(document);
+      assert(_cache == null);
+      _cache = user;
+      return user;
     });
   }
 
-  static DocumentReference documentReference(
-      {bool throughUserNotFound = false}) {
-    if (!throughUserNotFound && FirebaseAuth.instance.currentUser.uid == null) {
-      throw UserNotFound();
-    }
-    return FirebaseFirestore.instance
-        .collection(User.path)
-        .doc(FirebaseAuth.instance.currentUser.uid);
+  DocumentReference documentReference() {
+    return FirebaseFirestore.instance.collection(User.path).doc(documentID);
   }
 
   static Future<User> create() {
-    return documentReference(throughUserNotFound: true).set(
-      {
-        UserPropertyKeys.anonymouseUserID:
-            FirebaseAuth.instance.currentUser.uid,
-      },
-    ).then((_) {
-      return User.fetch();
+    return fetch().then((user) {
+      return user.documentReference().set(
+        {
+          UserPropertyKeys.anonymouseUserID:
+              FirebaseAuth.instance.currentUser.uid,
+        },
+      );
+    }).then((_) {
+      return user();
     });
   }
 }

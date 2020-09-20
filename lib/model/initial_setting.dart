@@ -57,7 +57,7 @@ class InitialSettingModel extends ChangeNotifier {
       };
       rowData[PillSheetFirestoreFieldKey.creator] = {
         PillSheetFirestoreFieldKey.creatorReference:
-            user.User.documentReference,
+            user.User.user().documentReference(),
       };
       rowData[PillSheetFirestoreFieldKey.beginingDate] = Timestamp.fromDate(
           today().subtract(Duration(days: todayPillNumber - 1)));
