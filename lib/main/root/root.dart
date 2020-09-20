@@ -27,7 +27,7 @@ class RootState extends State<Root> {
       return UserInterface.fetchOrCreateUser();
     }).then((user) {
       context.read<AuthUser>().user = user;
-      if (user.setting == null || user.setting.settings.isEmpty) {
+      if (user.setting == null || user.setting.firestoreRowData.isEmpty) {
         Navigator.popAndPushNamed(context, Routes.initialSetting);
         return null;
       }
