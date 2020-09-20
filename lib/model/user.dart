@@ -34,7 +34,7 @@ class User {
   }
 
   static Future<User> fetch() {
-    return userReference().get().then((document) {
+    return documentReference().get().then((document) {
       if (!document.exists) {
         throw UserNotFound();
       }
@@ -42,7 +42,8 @@ class User {
     });
   }
 
-  static DocumentReference userReference({bool throughUserNotFound = false}) {
+  static DocumentReference documentReference(
+      {bool throughUserNotFound = false}) {
     if (!throughUserNotFound && FirebaseAuth.instance.currentUser.uid == null) {
       throw UserNotFound();
     }
@@ -52,7 +53,7 @@ class User {
   }
 
   static Future<User> create() {
-    return userReference(throughUserNotFound: true).set(
+    return documentReference(throughUserNotFound: true).set(
       {
         UserPropertyKeys.anonymouseUserID:
             FirebaseAuth.instance.currentUser.uid,
