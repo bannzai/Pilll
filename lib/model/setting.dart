@@ -56,8 +56,9 @@ class Setting extends ChangeNotifier {
         SettingFirestoreFieldyKeys.beginingMenstruationFromAfterFakePeriod];
     this.durationMenstruation =
         firestoreRowData[SettingFirestoreFieldyKeys.durationMenstruation];
-    this.reminderHour = firestoreRowData[SettingFirestoreFieldyKeys.reminderTime]
-        [SettingFirestoreFieldyKeys.reminderTimeHour];
+    this.reminderHour =
+        firestoreRowData[SettingFirestoreFieldyKeys.reminderTime]
+            [SettingFirestoreFieldyKeys.reminderTimeHour];
     this.reminderMinute =
         firestoreRowData[SettingFirestoreFieldyKeys.reminderTime]
             [SettingFirestoreFieldyKeys.reminderTimeMinute];
@@ -91,16 +92,6 @@ class Setting extends ChangeNotifier {
       rowData[SettingFirestoreFieldyKeys.pillSheetTypeRawPath] =
           pillSheetType.name;
     return rowData;
-  }
-
-  Future<void> register() {
-    return UserInterface.fetchOrCreateUser().then((value) {
-      return save()
-          .then((value) => null)
-          .then((_) => SharedPreferences.getInstance())
-          .then((storage) => storage.setString(
-              StringKey.firebaseAnonymousUserID, value.anonymousUserID));
-    });
   }
 
   Future<void> save() {
