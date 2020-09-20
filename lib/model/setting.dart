@@ -95,7 +95,7 @@ class Setting extends ChangeNotifier {
   }
 
   Future<void> save() {
-    return UserInterface.fetchOrCreateUser().then((value) {
+    return User.fetch().then((value) {
       return value.updateSetting(this);
     });
   }
