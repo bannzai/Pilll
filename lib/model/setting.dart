@@ -4,7 +4,7 @@ import 'package:Pilll/util/shared_preference/keys.dart';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-class SettingKey {
+class SettingFirestoreFieldyKey {
   static final String beginingMenstruationFromAfterFakePeriod =
       "beginingMenstruationFromAfterFakePeriod";
   static final String durationMenstruation = "durationMenstruation";
@@ -30,15 +30,17 @@ class Setting extends ChangeNotifier {
     if (rowData == null) {
       return;
     }
-    this.fromMenstruation =
-        rowData[SettingKey.beginingMenstruationFromAfterFakePeriod];
-    this.durationMenstruation = rowData[SettingKey.durationMenstruation];
-    this.reminderHour =
-        rowData[SettingKey.reminderTime][SettingKey.reminderTimeHour];
-    this.reminderMinute =
-        rowData[SettingKey.reminderTime][SettingKey.reminderTimeMinute];
-    this.isOnReminder = rowData[SettingKey.isOnReminder];
-    String pillSheetTypeRawPath = rowData[SettingKey.pillSheetTypeRawPath];
+    this.fromMenstruation = rowData[
+        SettingFirestoreFieldyKey.beginingMenstruationFromAfterFakePeriod];
+    this.durationMenstruation =
+        rowData[SettingFirestoreFieldyKey.durationMenstruation];
+    this.reminderHour = rowData[SettingFirestoreFieldyKey.reminderTime]
+        [SettingFirestoreFieldyKey.reminderTimeHour];
+    this.reminderMinute = rowData[SettingFirestoreFieldyKey.reminderTime]
+        [SettingFirestoreFieldyKey.reminderTimeMinute];
+    this.isOnReminder = rowData[SettingFirestoreFieldyKey.isOnReminder];
+    String pillSheetTypeRawPath =
+        rowData[SettingFirestoreFieldyKey.pillSheetTypeRawPath];
     this.pillSheetType = pillSheetTypeRawPath == null
         ? null
         : PillSheetTypeFunctions.fromName(pillSheetTypeRawPath);
