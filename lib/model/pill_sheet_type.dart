@@ -7,6 +7,7 @@ enum PillSheetType {
 }
 
 extension PillSheetTypeFunctions on PillSheetType {
+  static final String firestoreCollectionPath = "pill_sheet_types";
   static PillSheetType fromName(String name) {
     switch (name) {
       case "21錠タイプ":
@@ -63,6 +64,34 @@ extension PillSheetTypeFunctions on PillSheetType {
     }
   }
 
+  String get firestorePath {
+    switch (this) {
+      case PillSheetType.pillsheet_21:
+        return "pillsheet_21";
+      case PillSheetType.pillsheet_28_4:
+        return "pillsheet_28_4";
+      case PillSheetType.pillsheet_28_7:
+        return "pillsheet_28_7";
+      default:
+        assert(false);
+        return null;
+    }
+  }
+
+  int get totalCount {
+    switch (this) {
+      case PillSheetType.pillsheet_21:
+        return 28;
+      case PillSheetType.pillsheet_28_4:
+        return 28;
+      case PillSheetType.pillsheet_28_7:
+        return 28;
+      default:
+        assert(false);
+        return null;
+    }
+  }
+
   int get beginingWithoutTakenPeriod {
     switch (this) {
       case PillSheetType.pillsheet_21:
@@ -71,6 +100,20 @@ extension PillSheetTypeFunctions on PillSheetType {
         return 25;
       case PillSheetType.pillsheet_28_7:
         return 22;
+      default:
+        assert(false);
+        return null;
+    }
+  }
+
+  int get dosingPeriod {
+    switch (this) {
+      case PillSheetType.pillsheet_21:
+        return 21;
+      case PillSheetType.pillsheet_28_4:
+        return 24;
+      case PillSheetType.pillsheet_28_7:
+        return 21;
       default:
         assert(false);
         return null;
