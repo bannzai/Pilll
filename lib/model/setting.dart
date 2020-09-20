@@ -24,6 +24,7 @@ class Setting extends ChangeNotifier {
   bool isOnReminder;
 
   factory Setting(Map<String, dynamic> firestoreRowData) {
+    assert(firestoreRowData != null);
     String pillSheetTypeRawPath =
         firestoreRowData[SettingFirestoreFieldyKey.pillSheetTypeRawPath];
     return Setting._(
