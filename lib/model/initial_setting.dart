@@ -70,4 +70,11 @@ class InitialSettingModel extends ChangeNotifier {
 
   Setting buildSetting() => Setting(settingFirestoreRowData());
   PillSheetModel buildPillSheet() => PillSheetModel(userPillSheetRowData());
+
+  Future<InitialSettingModel> notifyWith(
+      void update(InitialSettingModel model)) {
+    update(this);
+    notifyListeners();
+    return Future.value(this);
+  }
 }
