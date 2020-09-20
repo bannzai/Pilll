@@ -1,3 +1,4 @@
+import 'package:Pilll/model/pill_sheet.dart';
 import 'package:Pilll/model/pill_sheet_type.dart';
 import 'package:Pilll/model/setting.dart';
 import 'package:Pilll/model/user.dart' as user;
@@ -61,20 +62,13 @@ class InitialSettingModel extends ChangeNotifier {
       };
       rowData[PillSheetFirestoreFieldKey.beginingDate] = Timestamp.fromDate(
           today().subtract(Duration(days: todayPillNumber - 1)));
+      // NOTE: when user selected taken pill number is 1, treat as user not yet take pill in current pillsheet.
+      rowData[PillSheetFirestoreFieldKey.lastTakenDate] =
+          todayPillNumber == 1 ? null : Timestamp.fromDate(today());
     }
     return rowData;
   }
 
   Setting buildSetting() => Setting(settingFirestoreRowData());
-}
-
-abstract class PillSheetFirestoreFieldKey {
-  static final String creator = "creator";
-  static final String creatorReference = "reference";
-  static final String beginingDate = "beginingDate";
-  static final String pillSheetTypeInfo = "pillSheetTypeInfo";
-  static final String pillSheetTypeInfoRef = "reference";
-  static final String pillSheetTypeInfoPillCount = "pillCount";
-  static final String pillSheetTypeInfoDosingPeriod = "dosingPeriod";
-  static final String lastTakenDate = "lastTakenDate";
+  PillSheetModel buildPillSheet() => PillSheetModel(userPillSheetRowData());
 }
