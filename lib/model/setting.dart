@@ -86,8 +86,7 @@ class Setting extends ChangeNotifier {
     if (reminderMinute != null)
       rowData[SettingFirestoreFieldyKey.reminderTime]
           [SettingFirestoreFieldyKey.reminderTimeMinute] = reminderMinute;
-    if (isOnReminder != null)
-      rowData[SettingFirestoreFieldyKey.isOnReminder] = isOnReminder;
+    rowData[SettingFirestoreFieldyKey.isOnReminder] = isOnReminder ?? false;
     if (pillSheetType != null)
       rowData[SettingFirestoreFieldyKey.pillSheetTypeRawPath] =
           pillSheetType.name;
