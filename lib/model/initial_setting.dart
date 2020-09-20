@@ -6,7 +6,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
-class InitialSetting extends ChangeNotifier {
+class InitialSettingModel extends ChangeNotifier {
   // User.Settings
   int fromMenstruation;
   int durationMenstruation;
@@ -64,6 +64,8 @@ class InitialSetting extends ChangeNotifier {
     }
     return rowData;
   }
+
+  Setting buildSetting() => Setting(settingFirestoreRowData());
 }
 
 abstract class PillSheetFirestoreFieldKey {
