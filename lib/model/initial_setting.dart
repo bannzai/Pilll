@@ -37,8 +37,7 @@ class InitialSettingModel extends ChangeNotifier {
     if (reminderMinute != null)
       settings[SettingFirestoreFieldyKey.reminderTime]
           [SettingFirestoreFieldyKey.reminderTimeMinute] = reminderMinute;
-    if (isOnReminder != null)
-      settings[SettingFirestoreFieldyKey.isOnReminder] = isOnReminder;
+    settings[SettingFirestoreFieldyKey.isOnReminder] = isOnReminder ?? false;
     if (pillSheetType != null)
       settings[SettingFirestoreFieldyKey.pillSheetTypeRawPath] =
           pillSheetType.name;
