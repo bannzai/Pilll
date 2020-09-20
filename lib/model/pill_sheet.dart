@@ -40,5 +40,8 @@ class PillSheetModel {
     @required this.dosingPeriod,
     @required this.beginingDate,
     @required this.lastTakenDate,
-  });
+  })  : assert(pillSheetTypeReference != null),
+        assert(totalCount != null),
+        assert(dosingPeriod != null),
+        assert(beginingDate != null);
 }
