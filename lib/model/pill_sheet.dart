@@ -1,7 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:meta/meta.dart';
 
-abstract class PillSheetFirestoreFieldKey {
+abstract class PillSheetFirestoreFieldKeys {
   static final String creator = "creator";
   static final String creatorReference = "reference";
   static final String beginingDate = "beginingDate";
@@ -22,16 +22,16 @@ class PillSheetModel {
   factory PillSheetModel(Map<String, dynamic> firestoreRowData) {
     return PillSheetModel._(
       pillSheetTypeReference:
-          firestoreRowData[PillSheetFirestoreFieldKey.pillSheetTypeInfo]
-              [PillSheetFirestoreFieldKey.pillSheetTypeInfoRef],
-      totalCount: firestoreRowData[PillSheetFirestoreFieldKey.pillSheetTypeInfo]
-          [PillSheetFirestoreFieldKey.pillSheetTypeInfoPillCount],
+          firestoreRowData[PillSheetFirestoreFieldKeys.pillSheetTypeInfo]
+              [PillSheetFirestoreFieldKeys.pillSheetTypeInfoRef],
+      totalCount: firestoreRowData[PillSheetFirestoreFieldKeys.pillSheetTypeInfo]
+          [PillSheetFirestoreFieldKeys.pillSheetTypeInfoPillCount],
       dosingPeriod:
-          firestoreRowData[PillSheetFirestoreFieldKey.pillSheetTypeInfo]
-              [PillSheetFirestoreFieldKey.pillSheetTypeInfoDosingPeriod],
+          firestoreRowData[PillSheetFirestoreFieldKeys.pillSheetTypeInfo]
+              [PillSheetFirestoreFieldKeys.pillSheetTypeInfoDosingPeriod],
       beginingDate:
-          firestoreRowData[PillSheetFirestoreFieldKey.beginingDate].toDate(),
-      lastTakenDate: firestoreRowData[PillSheetFirestoreFieldKey.lastTakenDate],
+          firestoreRowData[PillSheetFirestoreFieldKeys.beginingDate].toDate(),
+      lastTakenDate: firestoreRowData[PillSheetFirestoreFieldKeys.lastTakenDate],
     );
   }
   PillSheetModel._({

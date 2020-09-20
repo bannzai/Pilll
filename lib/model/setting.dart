@@ -4,7 +4,7 @@ import 'package:Pilll/util/shared_preference/keys.dart';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-class SettingFirestoreFieldyKey {
+class SettingFirestoreFieldyKeys {
   static final String beginingMenstruationFromAfterFakePeriod =
       "beginingMenstruationFromAfterFakePeriod";
   static final String durationMenstruation = "durationMenstruation";
@@ -26,21 +26,21 @@ class Setting extends ChangeNotifier {
   factory Setting(Map<String, dynamic> firestoreRowData) {
     assert(firestoreRowData != null);
     String pillSheetTypeRawPath =
-        firestoreRowData[SettingFirestoreFieldyKey.pillSheetTypeRawPath];
+        firestoreRowData[SettingFirestoreFieldyKeys.pillSheetTypeRawPath];
     return Setting._(
       pillSheetType: pillSheetTypeRawPath == null
           ? null
           : PillSheetTypeFunctions.fromName(pillSheetTypeRawPath),
       fromMenstruation: firestoreRowData[
-          SettingFirestoreFieldyKey.beginingMenstruationFromAfterFakePeriod],
+          SettingFirestoreFieldyKeys.beginingMenstruationFromAfterFakePeriod],
       durationMenstruation:
-          firestoreRowData[SettingFirestoreFieldyKey.durationMenstruation],
-      reminderHour: firestoreRowData[SettingFirestoreFieldyKey.reminderTime]
-          [SettingFirestoreFieldyKey.reminderTimeHour],
-      reminderMinute: firestoreRowData[SettingFirestoreFieldyKey.reminderTime]
-          [SettingFirestoreFieldyKey.reminderTimeMinute],
+          firestoreRowData[SettingFirestoreFieldyKeys.durationMenstruation],
+      reminderHour: firestoreRowData[SettingFirestoreFieldyKeys.reminderTime]
+          [SettingFirestoreFieldyKeys.reminderTimeHour],
+      reminderMinute: firestoreRowData[SettingFirestoreFieldyKeys.reminderTime]
+          [SettingFirestoreFieldyKeys.reminderTimeMinute],
       isOnReminder:
-          firestoreRowData[SettingFirestoreFieldyKey.isOnReminder] ?? false,
+          firestoreRowData[SettingFirestoreFieldyKeys.isOnReminder] ?? false,
     );
   }
   Setting._({
@@ -53,18 +53,18 @@ class Setting extends ChangeNotifier {
   }) {
     assert(isOnReminder != null);
     this.fromMenstruation = firestoreRowData[
-        SettingFirestoreFieldyKey.beginingMenstruationFromAfterFakePeriod];
+        SettingFirestoreFieldyKeys.beginingMenstruationFromAfterFakePeriod];
     this.durationMenstruation =
-        firestoreRowData[SettingFirestoreFieldyKey.durationMenstruation];
-    this.reminderHour = firestoreRowData[SettingFirestoreFieldyKey.reminderTime]
-        [SettingFirestoreFieldyKey.reminderTimeHour];
+        firestoreRowData[SettingFirestoreFieldyKeys.durationMenstruation];
+    this.reminderHour = firestoreRowData[SettingFirestoreFieldyKeys.reminderTime]
+        [SettingFirestoreFieldyKeys.reminderTimeHour];
     this.reminderMinute =
-        firestoreRowData[SettingFirestoreFieldyKey.reminderTime]
-            [SettingFirestoreFieldyKey.reminderTimeMinute];
+        firestoreRowData[SettingFirestoreFieldyKeys.reminderTime]
+            [SettingFirestoreFieldyKeys.reminderTimeMinute];
     this.isOnReminder =
-        firestoreRowData[SettingFirestoreFieldyKey.isOnReminder];
+        firestoreRowData[SettingFirestoreFieldyKeys.isOnReminder];
     String pillSheetTypeRawPath =
-        firestoreRowData[SettingFirestoreFieldyKey.pillSheetTypeRawPath];
+        firestoreRowData[SettingFirestoreFieldyKeys.pillSheetTypeRawPath];
     this.pillSheetType = pillSheetTypeRawPath == null
         ? null
         : PillSheetTypeFunctions.fromName(pillSheetTypeRawPath);
@@ -73,22 +73,22 @@ class Setting extends ChangeNotifier {
   Map<String, dynamic> get firestoreRowData {
     var rowData = Map<String, dynamic>();
     if (fromMenstruation != null)
-      rowData[SettingFirestoreFieldyKey
+      rowData[SettingFirestoreFieldyKeys
           .beginingMenstruationFromAfterFakePeriod] = fromMenstruation;
     if (durationMenstruation != null)
-      rowData[SettingFirestoreFieldyKey.durationMenstruation] =
+      rowData[SettingFirestoreFieldyKeys.durationMenstruation] =
           durationMenstruation;
     if (reminderHour != null || reminderMinute != null)
-      rowData[SettingFirestoreFieldyKey.reminderTime] = {};
+      rowData[SettingFirestoreFieldyKeys.reminderTime] = {};
     if (reminderHour != null)
-      rowData[SettingFirestoreFieldyKey.reminderTime]
-          [SettingFirestoreFieldyKey.reminderTimeHour] = reminderHour;
+      rowData[SettingFirestoreFieldyKeys.reminderTime]
+          [SettingFirestoreFieldyKeys.reminderTimeHour] = reminderHour;
     if (reminderMinute != null)
-      rowData[SettingFirestoreFieldyKey.reminderTime]
-          [SettingFirestoreFieldyKey.reminderTimeMinute] = reminderMinute;
-    rowData[SettingFirestoreFieldyKey.isOnReminder] = isOnReminder ?? false;
+      rowData[SettingFirestoreFieldyKeys.reminderTime]
+          [SettingFirestoreFieldyKeys.reminderTimeMinute] = reminderMinute;
+    rowData[SettingFirestoreFieldyKeys.isOnReminder] = isOnReminder ?? false;
     if (pillSheetType != null)
-      rowData[SettingFirestoreFieldyKey.pillSheetTypeRawPath] =
+      rowData[SettingFirestoreFieldyKeys.pillSheetTypeRawPath] =
           pillSheetType.name;
     return rowData;
   }

@@ -24,22 +24,22 @@ class InitialSettingModel extends ChangeNotifier {
   Map<String, dynamic> settingFirestoreRowData() {
     var settings = Map<String, dynamic>();
     if (fromMenstruation != null)
-      settings[SettingFirestoreFieldyKey
+      settings[SettingFirestoreFieldyKeys
           .beginingMenstruationFromAfterFakePeriod] = fromMenstruation;
     if (durationMenstruation != null)
-      settings[SettingFirestoreFieldyKey.durationMenstruation] =
+      settings[SettingFirestoreFieldyKeys.durationMenstruation] =
           durationMenstruation;
     if (reminderHour != null || reminderMinute != null)
-      settings[SettingFirestoreFieldyKey.reminderTime] = {};
+      settings[SettingFirestoreFieldyKeys.reminderTime] = {};
     if (reminderHour != null)
-      settings[SettingFirestoreFieldyKey.reminderTime]
-          [SettingFirestoreFieldyKey.reminderTimeHour] = reminderHour;
+      settings[SettingFirestoreFieldyKeys.reminderTime]
+          [SettingFirestoreFieldyKeys.reminderTimeHour] = reminderHour;
     if (reminderMinute != null)
-      settings[SettingFirestoreFieldyKey.reminderTime]
-          [SettingFirestoreFieldyKey.reminderTimeMinute] = reminderMinute;
-    settings[SettingFirestoreFieldyKey.isOnReminder] = isOnReminder ?? false;
+      settings[SettingFirestoreFieldyKeys.reminderTime]
+          [SettingFirestoreFieldyKeys.reminderTimeMinute] = reminderMinute;
+    settings[SettingFirestoreFieldyKeys.isOnReminder] = isOnReminder ?? false;
     if (pillSheetType != null)
-      settings[SettingFirestoreFieldyKey.pillSheetTypeRawPath] =
+      settings[SettingFirestoreFieldyKeys.pillSheetTypeRawPath] =
           pillSheetType.name;
     return settings;
   }
@@ -47,22 +47,22 @@ class InitialSettingModel extends ChangeNotifier {
   Map<String, dynamic> userPillSheetRowData() {
     var rowData = Map<String, dynamic>();
     if (pillSheetType != null) {
-      rowData[PillSheetFirestoreFieldKey.pillSheetTypeInfo] = {
-        PillSheetFirestoreFieldKey.pillSheetTypeInfoRef:
+      rowData[PillSheetFirestoreFieldKeys.pillSheetTypeInfo] = {
+        PillSheetFirestoreFieldKeys.pillSheetTypeInfoRef:
             pillSheetType.documentReference,
-        PillSheetFirestoreFieldKey.pillSheetTypeInfoPillCount:
+        PillSheetFirestoreFieldKeys.pillSheetTypeInfoPillCount:
             pillSheetType.totalCount,
-        PillSheetFirestoreFieldKey.pillSheetTypeInfoDosingPeriod:
+        PillSheetFirestoreFieldKeys.pillSheetTypeInfoDosingPeriod:
             pillSheetType.dosingPeriod,
       };
-      rowData[PillSheetFirestoreFieldKey.creator] = {
-        PillSheetFirestoreFieldKey.creatorReference:
+      rowData[PillSheetFirestoreFieldKeys.creator] = {
+        PillSheetFirestoreFieldKeys.creatorReference:
             user.User.user().documentReference(),
       };
-      rowData[PillSheetFirestoreFieldKey.beginingDate] = Timestamp.fromDate(
+      rowData[PillSheetFirestoreFieldKeys.beginingDate] = Timestamp.fromDate(
           today().subtract(Duration(days: todayPillNumber - 1)));
       // NOTE: when user selected taken pill number is 1, treat as user not yet take pill in current pillsheet.
-      rowData[PillSheetFirestoreFieldKey.lastTakenDate] =
+      rowData[PillSheetFirestoreFieldKeys.lastTakenDate] =
           todayPillNumber == 1 ? null : Timestamp.fromDate(today());
     }
     return rowData;
