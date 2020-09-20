@@ -14,8 +14,8 @@ import 'package:provider/provider.dart';
 class InitialSetting2 extends StatelessWidget {
   const InitialSetting2({Key key}) : super(key: key);
 
-  String today() {
-    return DateFormat.yMd('ja').format(DateTime.now());
+  String todayString() {
+    return DateFormat.yMd('ja').format(today());
   }
 
   @override
@@ -42,7 +42,7 @@ class InitialSetting2 extends StatelessWidget {
               children: <Widget>[
                 SizedBox(height: 24),
                 Text(
-                  "今日(${today()})\n飲む・飲んだピルの番号をタップ",
+                  "今日(${todayString()})\n飲む・飲んだピルの番号をタップ",
                   style: FontType.title.merge(TextColorStyle.standard),
                   textAlign: TextAlign.center,
                 ),
@@ -55,7 +55,7 @@ class InitialSetting2 extends StatelessWidget {
                   markSelected: (number) {},
                 ),
                 SizedBox(height: 24),
-                ExplainPillNumber(today: today()),
+                ExplainPillNumber(today: todayString()),
                 SizedBox(height: 24),
                 Wrap(
                   direction: Axis.vertical,
