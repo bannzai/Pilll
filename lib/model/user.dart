@@ -1,5 +1,6 @@
 import 'dart:async';
 
+import 'package:Pilll/model/pill_sheet.dart';
 import 'package:Pilll/model/setting.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -14,6 +15,7 @@ class UserNotFound implements Exception {
 extension UserPropertyKeys on String {
   static final anonymouseUserID = "anonymouseUserID";
   static final settings = "settings";
+  static final currentPillSheet = "pillSheet";
 }
 
 class User {
@@ -23,14 +25,20 @@ class User {
   final String anonymousUserID;
   String get documentID => anonymousUserID;
   final Setting setting;
+  final PillSheetModel currentPillSheet;
 
-  User._({@required this.anonymousUserID, @required this.setting});
+  User._({
+    @required this.anonymousUserID,
+    @required this.setting,
+    @required this.currentPillSheet,
+  });
 
   static User _map(DocumentSnapshot document) {
     Map<String, dynamic> data = document.data();
     return User._(
       anonymousUserID: data[UserPropertyKeys.anonymouseUserID],
       setting: Setting(data[UserPropertyKeys.settings]),
+      currentPillSheet: PillSheetModel(data[UserPropertyKeys.currentPillSheet]),
     );
   }
 
