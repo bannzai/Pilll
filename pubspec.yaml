@@ -34,7 +34,8 @@ dependencies:
   url_launcher: ^5.5.2
   package_info: ^0.4.3
   equatable: ^1.2.5
-  freezed: ^0.12.1
+  freezed_annotation:
+
 
 
   # The following adds the Cupertino Icons font to your application.
@@ -44,6 +45,8 @@ dependencies:
 dev_dependencies:
   flutter_test:
     sdk: flutter
+  build_runner:
+  freezed:
 
 # For information on the generic Dart part of this file, see the
 # following page: https://dart.dev/tools/pub/pubspec
