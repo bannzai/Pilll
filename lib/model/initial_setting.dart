@@ -1,6 +1,6 @@
 import 'package:Pilll/model/pill_sheet.dart';
 import 'package:Pilll/model/pill_sheet_type.dart';
-import 'package:Pilll/model/_setting.dart';
+import 'package:Pilll/model/setting.dart';
 import 'package:Pilll/model/user.dart' as user;
 import 'package:Pilll/util/shared_preference/keys.dart';
 import 'package:Pilll/util/today.dart';
