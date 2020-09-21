@@ -2,10 +2,12 @@ import 'package:Pilll/model/pill_sheet.dart';
 import 'package:Pilll/model/pill_sheet_type.dart';
 import 'package:Pilll/model/setting.dart';
 import 'package:Pilll/model/user.dart' as user;
+import 'package:Pilll/util/shared_preference/keys.dart';
 import 'package:Pilll/util/today.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class InitialSettingModel extends ChangeNotifier {
   // User.Settings
@@ -80,8 +82,9 @@ class InitialSettingModel extends ChangeNotifier {
 
   Future<void> register() {
     return user.User.fetch().then((value) {
-       this.buildSetting().save();
-      return save()
+      return this
+          .buildSetting()
+          .save()
           .then((value) => null)
           .then((_) => SharedPreferences.getInstance())
           .then((storage) => storage.setString(
