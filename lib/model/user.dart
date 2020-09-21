@@ -95,10 +95,4 @@ extension UserInterface on User {
           "cause exception when failed fetch and create user for $error");
     });
   }
-
-  Future<void> updateSetting(Setting setting) {
-    return FirebaseFirestore.instance.collection(User.path).doc(documentID).set(
-        {UserFirestoreFieldKeys.settings: setting.firestoreRowData},
-        SetOptions(merge: true));
-  }
 }

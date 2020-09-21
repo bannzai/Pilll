@@ -97,7 +97,15 @@ class Setting extends ChangeNotifier {
 
   Future<void> save() {
     return User.fetch().then((value) {
-      return value.updateSetting(this);
+      return FirebaseFirestore.instance
+          .collection(User.path)
+          .doc(value.documentID)
+          .set(
+        {
+          UserFirestoreFieldKeys.settings: firestoreRowData,
+        },
+        SetOptions(merge: true),
+      );
     });
   }
 
