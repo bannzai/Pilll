@@ -4,6 +4,7 @@ import 'package:Pilll/model/pill_sheet.dart';
 import 'package:Pilll/model/setting.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:meta/meta.dart';
 
 class UserNotFound implements Exception {
@@ -24,22 +25,27 @@ class User {
 
   final String anonymousUserID;
   String get documentID => anonymousUserID;
-  final Setting setting;
-  final PillSheetModel currentPillSheet;
+  Setting _setting;
+  Setting get setting => _setting;
+  PillSheetModel _currentPillSheet;
+  PillSheetModel get currentPillSheet => _currentPillSheet;
 
   User._({
     @required this.anonymousUserID,
-    @required this.setting,
-    @required this.currentPillSheet,
-  });
+    @required Setting setting,
+    @required PillSheetModel currentPillSheet,
+  }) {
+    _setting = setting;
+    _currentPillSheet = currentPillSheet;
+  }
 
-  static User _map(DocumentSnapshot document) {
-    Map<String, dynamic> data = document.data();
+  static User _map(Map<String, dynamic> firestoreDocumentData) {
     return User._(
-      anonymousUserID: data[UserFirestoreFieldKeys.anonymouseUserID],
-      setting: Setting(data[UserFirestoreFieldKeys.settings]),
-      currentPillSheet:
-          PillSheetModel(data[UserFirestoreFieldKeys.currentPillSheet]),
+      anonymousUserID:
+          firestoreDocumentData[UserFirestoreFieldKeys.anonymouseUserID],
+      setting: Setting(firestoreDocumentData[UserFirestoreFieldKeys.settings]),
+      currentPillSheet: PillSheetModel(
+          firestoreDocumentData[UserFirestoreFieldKeys.currentPillSheet]),
     );
   }
 
@@ -60,7 +66,7 @@ class User {
       if (!document.exists) {
         throw UserNotFound();
       }
-      var user = User._map(document);
+      var user = User._map(document.data());
       assert(_cache == null);
       _cache = user;
       return user;
