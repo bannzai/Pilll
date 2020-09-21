@@ -5,6 +5,9 @@ analyzer:
     # treat missing required parameters as a warning (not a hint)
     missing_required_param: error
     missing_return: error
+  exclude:
+    - "**/*.g.dart"
+    - "**/*.freezed.dart"
 
 linter:
   rules:
