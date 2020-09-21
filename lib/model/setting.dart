@@ -51,26 +51,7 @@ class Setting extends ChangeNotifier {
     @required this.reminderHour,
     @required this.reminderMinute,
     @required this.isOnReminder,
-  }) {
-    assert(isOnReminder != null);
-    this.fromMenstruation = firestoreRowData[
-        SettingFirestoreFieldyKeys.beginingMenstruationFromAfterFakePeriod];
-    this.durationMenstruation =
-        firestoreRowData[SettingFirestoreFieldyKeys.durationMenstruation];
-    this.reminderHour =
-        firestoreRowData[SettingFirestoreFieldyKeys.reminderTime]
-            [SettingFirestoreFieldyKeys.reminderTimeHour];
-    this.reminderMinute =
-        firestoreRowData[SettingFirestoreFieldyKeys.reminderTime]
-            [SettingFirestoreFieldyKeys.reminderTimeMinute];
-    this.isOnReminder =
-        firestoreRowData[SettingFirestoreFieldyKeys.isOnReminder];
-    String pillSheetTypeRawPath =
-        firestoreRowData[SettingFirestoreFieldyKeys.pillSheetTypeRawPath];
-    this.pillSheetType = pillSheetTypeRawPath == null
-        ? null
-        : PillSheetTypeFunctions.fromName(pillSheetTypeRawPath);
-  }
+  }) : assert(isOnReminder != null);
 
   Map<String, dynamic> get firestoreRowData {
     var rowData = Map<String, dynamic>();
