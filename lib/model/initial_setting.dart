@@ -77,4 +77,15 @@ class InitialSettingModel extends ChangeNotifier {
     notifyListeners();
     return Future.value(this);
   }
+
+  Future<void> register() {
+    return user.User.fetch().then((value) {
+       this.buildSetting().save();
+      return save()
+          .then((value) => null)
+          .then((_) => SharedPreferences.getInstance())
+          .then((storage) => storage.setString(
+              StringKey.firebaseAnonymousUserID, value.anonymousUserID));
+    });
+  }
 }
