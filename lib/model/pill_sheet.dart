@@ -1,3 +1,4 @@
+import 'package:Pilll/model/firestore_timestamp_converter.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:meta/meta.dart';
@@ -30,8 +31,16 @@ abstract class PillSheetTypeInfo with _$PillSheetTypeInfo {
 abstract class PillSheetModel with _$PillSheetModel {
   factory PillSheetModel({
     @required PillSheetTypeInfo typeInfo,
-    @required DateTime beginingDate,
-    @required DateTime lastTakenDate,
+    @JsonKey(
+        fromJson: TimestampConverter.dateTimeToTimestamp,
+        toJson: TimestampConverter.timestampToDateTime)
+    @required
+        DateTime beginingDate,
+    @JsonKey(
+        fromJson: TimestampConverter.dateTimeToTimestamp,
+        toJson: TimestampConverter.timestampToDateTime)
+    @required
+        DateTime lastTakenDate,
   }) = _PillSheetModel;
 
   factory PillSheetModel.fromJson(Map<String, dynamic> json) =>
