@@ -91,4 +91,10 @@ class InitialSettingModel extends ChangeNotifier {
     }
     return PillMarkType.normal;
   }
+
+  DateTime reminderDateTime() {
+    var t = DateTime.now().toLocal();
+    return DateTime(t.year, t.month, t.day, reminderHour, reminderMinute,
+        t.second, t.millisecond, t.microsecond);
+  }
 }

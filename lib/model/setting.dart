@@ -45,10 +45,4 @@ abstract class Setting with _$Setting {
       );
     });
   }
-
-  DateTime reminderDateTime() {
-    var t = DateTime.now().toLocal();
-    return DateTime(t.year, t.month, t.day, reminderTime.hour,
-        reminderTime.minute, t.second, t.millisecond, t.microsecond);
-  }
 }

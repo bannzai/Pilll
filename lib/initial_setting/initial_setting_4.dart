@@ -1,5 +1,6 @@
 import 'package:Pilll/main/application/router.dart';
 import 'package:Pilll/model/auth_user.dart';
+import 'package:Pilll/model/initial_setting.dart';
 import 'package:Pilll/model/setting.dart';
 import 'package:Pilll/theme/color.dart';
 import 'package:Pilll/theme/font.dart';
@@ -18,7 +19,7 @@ class InitialSetting4 extends StatefulWidget {
 class _InitialSetting4State extends State<InitialSetting4> {
   @override
   void initState() {
-    var model = Provider.of<AuthUser>(context, listen: false).user.setting;
+    var model = InitialSettingModel.read(context);
     if (_notYetSetTime(model)) {
       model.reminderHour = 22;
       model.reminderMinute = 0;
@@ -26,15 +27,12 @@ class _InitialSetting4State extends State<InitialSetting4> {
     super.initState();
   }
 
-  bool _notYetSetTime(Setting model) {
+  bool _notYetSetTime(InitialSettingModel model) {
     return model.reminderMinute == null || model.reminderHour == null;
   }
 
   Widget _time(BuildContext context) {
-    var dateTime = Provider.of<AuthUser>(context, listen: false)
-        .user
-        .setting
-        .reminderDateTime();
+    var dateTime = InitialSettingModel.read(context).reminderDateTime();
     return Text(
       DateTimeFormatter.militaryTime(dateTime),
       style: FontType.largeNumber.merge(
@@ -47,7 +45,7 @@ class _InitialSetting4State extends State<InitialSetting4> {
   }
 
   void _showDurationModalSheet(BuildContext context) {
-    var model = Provider.of<AuthUser>(context, listen: false).user.setting;
+    var model = InitialSettingModel.read(context);
     showModalBottomSheet(
       context: context,
       builder: (BuildContext context) {
@@ -116,9 +114,7 @@ class _InitialSetting4State extends State<InitialSetting4> {
                       "設定",
                     ),
                     onPressed: () {
-                      var model = Provider.of<AuthUser>(context, listen: false)
-                          .user
-                          .setting;
+                      var model = InitialSettingModel.read(context);
                       model.isOnReminder = true;
                       model
                           .register()
@@ -129,9 +125,7 @@ class _InitialSetting4State extends State<InitialSetting4> {
                     child: Text("スキップ"),
                     textColor: TextColor.gray,
                     onPressed: () {
-                      var model = Provider.of<AuthUser>(context, listen: false)
-                          .user
-                          .setting;
+                      var model = InitialSettingModel.read(context);
                       model.isOnReminder = false;
                       model
                           .register()
