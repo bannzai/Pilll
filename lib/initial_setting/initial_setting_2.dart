@@ -72,7 +72,9 @@ class InitialSetting2 extends StatelessWidget {
                           child: Text(
                             "次へ",
                           ),
-                          onPressed: context.watch<Setting>() == null
+                          onPressed: InitialSettingModel.watch(context)
+                                      .todayPillNumber ==
+                                  null
                               ? null
                               : () {
                                   Navigator.of(context).push(
