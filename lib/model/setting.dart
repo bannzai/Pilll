@@ -22,7 +22,7 @@ abstract class ReminderTime with _$ReminderTime {
 @freezed
 abstract class Setting with _$Setting {
   factory Setting({
-    @nullable @required PillSheetType pillSheetType,
+    @nullable @required String pillSheetTypeRawPath,
     @nullable @required int fromMenstruation,
     @nullable @required int durationMenstruation,
     @nullable @required ReminderTime reminderTime,
