@@ -43,8 +43,9 @@ class User {
     return User._(
       anonymousUserID:
           firestoreDocumentData[UserFirestoreFieldKeys.anonymouseUserID],
-      setting: Setting(firestoreDocumentData[UserFirestoreFieldKeys.settings]),
-      currentPillSheet: PillSheetModel(
+      setting: Setting.fromJson(
+          firestoreDocumentData[UserFirestoreFieldKeys.settings]),
+      currentPillSheet: PillSheetModel.fromJson(
           firestoreDocumentData[UserFirestoreFieldKeys.currentPillSheet]),
     );
   }
