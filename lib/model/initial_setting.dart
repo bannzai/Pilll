@@ -1,3 +1,4 @@
+import 'package:Pilll/initial_setting/initial_setting.dart';
 import 'package:Pilll/model/pill_sheet.dart';
 import 'package:Pilll/model/pill_sheet_type.dart';
 import 'package:Pilll/model/setting.dart';
@@ -7,6 +8,7 @@ import 'package:Pilll/util/today.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class InitialSettingModel extends ChangeNotifier {
@@ -68,5 +70,13 @@ class InitialSettingModel extends ChangeNotifier {
           .then((storage) => storage.setString(
               StringKey.firebaseAnonymousUserID, value.anonymousUserID));
     });
+  }
+
+  static InitialSettingModel watch(BuildContext context) {
+    return context.watch();
+  }
+
+  static InitialSettingModel read(BuildContext context) {
+    return context.read();
   }
 }
