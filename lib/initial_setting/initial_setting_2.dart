@@ -22,7 +22,6 @@ class InitialSetting2 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Setting model = context.watch<AuthUser>().user.setting;
     return Scaffold(
       backgroundColor: PilllColors.background,
       appBar: AppBar(
@@ -36,8 +35,8 @@ class InitialSetting2 extends StatelessWidget {
         ),
         backgroundColor: PilllColors.background,
       ),
-      body: ChangeNotifierProvider<Setting>.value(
-        value: model,
+      body: ChangeNotifierProvider<InitialSettingModel>.value(
+        value: InitialSettingModel.watch(context),
         child: Container(
           child: Center(
             child: Column(
@@ -52,9 +51,13 @@ class InitialSetting2 extends StatelessWidget {
                 PillSheet(
                   isHideWeekdayLine: true,
                   pillMarkTypeBuilder: (number) {
-                    return PillMarkType.normal;
+                    return InitialSettingModel.watch(context)
+                        .pillMarkTypeFor(number);
                   },
-                  markSelected: (number) {},
+                  markSelected: (number) {
+                    InitialSettingModel.watch(context)
+                        .notifyWith((model) => model.todayPillNumber = number);
+                  },
                 ),
                 SizedBox(height: 24),
                 ExplainPillNumber(today: todayString()),
@@ -87,9 +90,7 @@ class InitialSetting2 extends StatelessWidget {
                       child: Text("スキップ"),
                       textColor: TextColor.gray,
                       onPressed: () {
-                        Provider.of<AuthUser>(context, listen: false)
-                            .user
-                            .setting
+                        InitialSettingModel.read(context)
                             .register()
                             .then((_) => Router.endInitialSetting(context));
                       },

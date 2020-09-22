@@ -1,4 +1,5 @@
 import 'package:Pilll/initial_setting/initial_setting.dart';
+import 'package:Pilll/main/components/pill/pill_mark.dart';
 import 'package:Pilll/model/pill_sheet.dart';
 import 'package:Pilll/model/pill_sheet_type.dart';
 import 'package:Pilll/model/setting.dart';
@@ -78,5 +79,16 @@ class InitialSettingModel extends ChangeNotifier {
 
   static InitialSettingModel read(BuildContext context) {
     return context.read();
+  }
+
+  PillMarkType pillMarkTypeFor(int number) {
+    assert(pillSheetType != null);
+    if (todayPillNumber == number) {
+      return PillMarkType.selected;
+    }
+    if (pillSheetType.dosingPeriod >= number) {
+      return PillMarkType.notTaken;
+    }
+    return PillMarkType.normal;
   }
 }
