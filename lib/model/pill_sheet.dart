@@ -1,9 +1,10 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:meta/meta.dart';
+part 'pill_sheet.freezed.dart';
+part 'pill_sheet.g.dart';
 
 abstract class PillSheetFirestoreFieldKeys {
-  static final String creator = "creator";
-  static final String creatorReference = "reference";
   static final String beginingDate = "beginingDate";
   static final String pillSheetTypeInfo = "pillSheetTypeInfo";
   static final String pillSheetTypeInfoRef = "reference";
@@ -12,36 +13,28 @@ abstract class PillSheetFirestoreFieldKeys {
   static final String lastTakenDate = "lastTakenDate";
 }
 
-class PillSheetModel {
-  final DocumentReference pillSheetTypeReference;
-  final int totalCount;
-  final int dosingPeriod;
-  final DateTime beginingDate;
-  final DateTime lastTakenDate;
+@freezed
+abstract class PillSheetTypeInfo with _$PillSheetTypeInfo {
+  factory PillSheetTypeInfo({
+    @required String pillSheetTypeReferencePath,
+    @required int totalCount,
+    @required int dosingPeriod,
+  }) = _PillSheetTypeInfo;
 
-  factory PillSheetModel(Map<String, dynamic> firestoreRowData) {
-    return PillSheetModel._(
-      pillSheetTypeReference:
-          firestoreRowData[PillSheetFirestoreFieldKeys.pillSheetTypeInfo]
-              [PillSheetFirestoreFieldKeys.pillSheetTypeInfoRef],
-      totalCount: firestoreRowData[PillSheetFirestoreFieldKeys.pillSheetTypeInfo]
-          [PillSheetFirestoreFieldKeys.pillSheetTypeInfoPillCount],
-      dosingPeriod:
-          firestoreRowData[PillSheetFirestoreFieldKeys.pillSheetTypeInfo]
-              [PillSheetFirestoreFieldKeys.pillSheetTypeInfoDosingPeriod],
-      beginingDate:
-          firestoreRowData[PillSheetFirestoreFieldKeys.beginingDate].toDate(),
-      lastTakenDate: firestoreRowData[PillSheetFirestoreFieldKeys.lastTakenDate],
-    );
-  }
-  PillSheetModel._({
-    @required this.pillSheetTypeReference,
-    @required this.totalCount,
-    @required this.dosingPeriod,
-    @required this.beginingDate,
-    @required this.lastTakenDate,
-  })  : assert(pillSheetTypeReference != null),
-        assert(totalCount != null),
-        assert(dosingPeriod != null),
-        assert(beginingDate != null);
+  factory PillSheetTypeInfo.fromJson(Map<String, dynamic> json) =>
+      _$PillSheetTypeInfoFromJson(json);
+  Map<String, dynamic> toJson() => _$_$_PillSheetTypeInfoToJson(this);
+}
+
+@freezed
+abstract class PillSheetModel with _$PillSheetModel {
+  factory PillSheetModel({
+    @required PillSheetTypeInfo typeInfo,
+    @required DateTime beginingDate,
+    @required DateTime lastTakenDate,
+  }) = _PillSheetModel;
+
+  factory PillSheetModel.fromJson(Map<String, dynamic> json) =>
+      _$PillSheetModelFromJson(json);
+  Map<String, dynamic> toJson() => _$_$_PillSheetModelToJson(this);
 }
