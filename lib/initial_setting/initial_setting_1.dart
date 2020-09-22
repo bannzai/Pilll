@@ -1,10 +1,7 @@
-import 'package:Pilll/initial_setting/initial_setting.dart';
 import 'package:Pilll/initial_setting/initial_setting_2.dart';
 import 'package:Pilll/main/components/pill_sheet_type_select_page.dart';
-import 'package:Pilll/model/auth_user.dart';
 import 'package:Pilll/model/initial_setting.dart';
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
 
 class InitialSetting1 extends StatefulWidget {
   const InitialSetting1({Key key}) : super(key: key);
