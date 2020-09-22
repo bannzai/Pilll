@@ -37,6 +37,8 @@ extension PillSheetTypeFunctions on PillSheetType {
     }
   }
 
+  String get rawPath => name;
+
   List<String> get examples {
     switch (this) {
       case PillSheetType.pillsheet_21:

@@ -70,7 +70,12 @@ class InitialSettingModel extends ChangeNotifier {
     return rowData;
   }
 
-  Setting buildSetting() => Setting(settingFirestoreRowData());
+  Setting buildSetting() => Setting(
+        fromMenstruation: fromMenstruation,
+        durationMenstruation: durationMenstruation,
+        pillSheetTypeRawPath: pillSheetType.rawPath,
+        reminderTime: ReminderTime(hour: reminderHour, minute: reminderMinute),
+      );
   PillSheetModel buildPillSheet() => PillSheetModel(userPillSheetRowData());
 
   Future<InitialSettingModel> notifyWith(
