@@ -1,41 +1,54 @@
-import 'package:Pilll/model/pill_sheet.dart';
 import 'package:Pilll/model/pill_sheet_type.dart';
 import 'package:Pilll/model/user.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:flutter/foundation.dart';
+import 'package:json_annotation/json_annotation.dart';
 
-part 'setting.freezed.dart';
 part 'setting.g.dart';
 
-@freezed
-abstract class ReminderTime with _$ReminderTime {
-  factory ReminderTime({
-    @required int hour,
-    @required int minute,
-  }) = _Reminder;
+@JsonSerializable(nullable: false)
+class ReminderTime {
+  final int hour;
+  final int minute;
+  ReminderTime({
+    @required this.hour,
+    @required this.minute,
+  })  : assert(hour != null),
+        assert(minute != null);
 
   factory ReminderTime.fromJson(Map<String, dynamic> json) =>
       _$ReminderTimeFromJson(json);
-  Map<String, dynamic> toJson() => _$_$_ReminderToJson(this);
+  Map<String, dynamic> toJson() => _$ReminderTimeToJson(this);
 }
 
-@freezed
-abstract class Setting with _$Setting {
-  @late
-  PillSheetType get pillSheetType =>
-      PillSheetTypeFunctions.fromRawPath(pillSheetTypeRawPath);
-  factory Setting({
-    @nullable @required String pillSheetTypeRawPath,
-    @nullable @required int fromMenstruation,
-    @nullable @required int durationMenstruation,
-    @nullable @required ReminderTime reminderTime,
-    @Default(false) bool isOnReminder,
-  }) = _Setting;
+@JsonSerializable()
+class Setting {
+  final String pillSheetTypeRawPath;
+  final int fromMenstruation;
+  final int durationMenstruation;
+  final ReminderTime reminderTime;
+
+  @JsonKey(defaultValue: false)
+  bool isOnReminder = false;
+
+  Setting({
+    @required this.pillSheetTypeRawPath,
+    @required this.fromMenstruation,
+    @required this.durationMenstruation,
+    @required this.reminderTime,
+    @required this.isOnReminder,
+  })  : assert(pillSheetTypeRawPath != null),
+        assert(fromMenstruation != null),
+        assert(durationMenstruation != null),
+        assert(reminderTime != null),
+        assert(isOnReminder != null);
 
   factory Setting.fromJson(Map<String, dynamic> json) =>
       _$SettingFromJson(json);
-  Map<String, dynamic> toJson() => _$_$_SettingToJson(this);
+  Map<String, dynamic> toJson() => _$SettingToJson(this);
+
+  PillSheetType get pillSheetType =>
+      PillSheetTypeFunctions.fromRawPath(pillSheetTypeRawPath);
 
   Future<Setting> save() {
     return User.fetch().then((value) {

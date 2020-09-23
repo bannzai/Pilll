@@ -6,21 +6,21 @@ part of 'setting.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_Reminder _$_$_ReminderFromJson(Map<String, dynamic> json) {
-  return _$_Reminder(
+ReminderTime _$ReminderTimeFromJson(Map<String, dynamic> json) {
+  return ReminderTime(
     hour: json['hour'] as int,
     minute: json['minute'] as int,
   );
 }
 
-Map<String, dynamic> _$_$_ReminderToJson(_$_Reminder instance) =>
+Map<String, dynamic> _$ReminderTimeToJson(ReminderTime instance) =>
     <String, dynamic>{
       'hour': instance.hour,
       'minute': instance.minute,
     };
 
-_$_Setting _$_$_SettingFromJson(Map<String, dynamic> json) {
-  return _$_Setting(
+Setting _$SettingFromJson(Map<String, dynamic> json) {
+  return Setting(
     pillSheetTypeRawPath: json['pillSheetTypeRawPath'] as String,
     fromMenstruation: json['fromMenstruation'] as int,
     durationMenstruation: json['durationMenstruation'] as int,
@@ -31,8 +31,7 @@ _$_Setting _$_$_SettingFromJson(Map<String, dynamic> json) {
   );
 }
 
-Map<String, dynamic> _$_$_SettingToJson(_$_Setting instance) =>
-    <String, dynamic>{
+Map<String, dynamic> _$SettingToJson(Setting instance) => <String, dynamic>{
       'pillSheetTypeRawPath': instance.pillSheetTypeRawPath,
       'fromMenstruation': instance.fromMenstruation,
       'durationMenstruation': instance.durationMenstruation,
