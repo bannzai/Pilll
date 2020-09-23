@@ -31,6 +31,7 @@ class InitialSettingModel extends ChangeNotifier {
         durationMenstruation: durationMenstruation,
         pillSheetTypeRawPath: pillSheetType.rawPath,
         reminderTime: ReminderTime(hour: reminderHour, minute: reminderMinute),
+        isOnReminder: isOnReminder,
       );
   PillSheetModel buildPillSheet() => PillSheetModel(
         beginingDate: _beginingDate(),
