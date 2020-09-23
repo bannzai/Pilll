@@ -6,7 +6,7 @@ import 'package:json_annotation/json_annotation.dart';
 
 part 'setting.g.dart';
 
-@JsonSerializable(nullable: false)
+@JsonSerializable(explicitToJson: true)
 class ReminderTime {
   final int hour;
   final int minute;
@@ -21,7 +21,7 @@ class ReminderTime {
   Map<String, dynamic> toJson() => _$ReminderTimeToJson(this);
 }
 
-@JsonSerializable()
+@JsonSerializable(explicitToJson: true)
 class Setting extends ChangeNotifier {
   String pillSheetTypeRawPath;
   int fromMenstruation;

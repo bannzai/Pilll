@@ -35,6 +35,6 @@ Map<String, dynamic> _$SettingToJson(Setting instance) => <String, dynamic>{
       'pillSheetTypeRawPath': instance.pillSheetTypeRawPath,
       'fromMenstruation': instance.fromMenstruation,
       'durationMenstruation': instance.durationMenstruation,
-      'reminderTime': instance.reminderTime,
+      'reminderTime': instance.reminderTime?.toJson(),
       'isOnReminder': instance.isOnReminder,
     };
