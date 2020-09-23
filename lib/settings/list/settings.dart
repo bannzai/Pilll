@@ -2,6 +2,7 @@ import 'package:Pilll/main/components/pill_sheet_type_select_page.dart';
 import 'package:Pilll/main/components/setting_menstruation_page.dart';
 import 'package:Pilll/model/auth_user.dart';
 import 'package:Pilll/model/setting.dart';
+import 'package:Pilll/model/user.dart';
 import 'package:Pilll/settings/list/model.dart';
 import 'package:Pilll/settings/list/modifing_pill_number.dart';
 import 'package:Pilll/theme/color.dart';
@@ -32,24 +33,18 @@ class _SettingsState extends State<Settings> {
         backgroundColor: PilllColors.primary,
       ),
       body: Container(
-        child: ChangeNotifierProvider.value(
-          value: setting,
-          child: Consumer(
-              builder: (BuildContext context, Setting setting, Widget child) {
-            return ListView.separated(
-              itemBuilder: (BuildContext context, int index) {
-                return _section(
-                  setting,
-                  SettingSection.values[index],
-                );
-              },
-              separatorBuilder: (BuildContext context, int index) {
-                return _separatorItem();
-              },
-              itemCount: SettingSection.values.length,
-              addRepaintBoundaries: false,
+        child: ListView.separated(
+          itemBuilder: (BuildContext context, int index) {
+            return _section(
+              setting,
+              SettingSection.values[index],
             );
-          }),
+          },
+          separatorBuilder: (BuildContext context, int index) {
+            return _separatorItem();
+          },
+          itemCount: SettingSection.values.length,
+          addRepaintBoundaries: false,
         ),
       ),
     );
@@ -92,10 +87,13 @@ class _SettingsState extends State<Settings> {
                 return PillSheetTypeSelectPage(
                   title: "種類",
                   callback: (type) {
-                    Navigator.pop(context);
-                    setting
-                        .notifyWith((setting) => setting.pillSheetType = type)
-                        .then((setting) => setting.save());
+                    setState(() {
+                      Navigator.pop(context);
+                      setting
+                          .copyWith(pillSheetTypeRawPath: type.rawPath)
+                          .save()
+                          .then((value) => User.user().setting = value);
+                    });
                   },
                   selectedPillSheetType: setting.pillSheetType,
                 );
@@ -118,12 +116,10 @@ class _SettingsState extends State<Settings> {
             title: "ピルの服用通知",
             value: setting.isOnReminder,
             onTap: () {
-              setState(
-                () => setting
-                    .notifyWith((setting) =>
-                        setting.isOnReminder = !setting.isOnReminder)
-                    .then((setting) => setting.save()),
-              );
+              setState(() => setting
+                  .copyWith(isOnReminder: !setting.isOnReminder)
+                  .save()
+                  .then((value) => User.user().setting = value));
             },
           ),
           SettingsListDatePickerRowModel(
@@ -136,13 +132,16 @@ class _SettingsState extends State<Settings> {
                   return DateTimePicker(
                     initialDateTime: setting.reminderDateTime(),
                     done: (dateTime) {
-                      setting.notifyWith(
-                        (setting) {
-                          setting.reminderHour = dateTime.hour;
-                          setting.reminderMinute = dateTime.minute;
-                        },
-                      ).then((value) => value.save());
-                      Navigator.pop(context);
+                      setState(() {
+                        setting
+                            .copyWith(
+                              reminderTime: ReminderTime(
+                                  hour: dateTime.hour, minute: dateTime.minute),
+                            )
+                            .save()
+                            .then((value) => User.user().setting = value);
+                        Navigator.pop(context);
+                      });
                     },
                   );
                 },
@@ -166,9 +165,10 @@ class _SettingsState extends State<Settings> {
                       fromMenstructionDidDecide: (selectedFromMenstruction) {
                         setState(() {
                           setting
-                              .notifyWith((setting) => setting
-                                  .fromMenstruation = selectedFromMenstruction)
-                              .then((setting) => setting.save());
+                              .copyWith(
+                                  fromMenstruation: selectedFromMenstruction)
+                              .save()
+                              .then((value) => User.user().setting = value);
                           Navigator.pop(context);
                         });
                       },
@@ -178,10 +178,11 @@ class _SettingsState extends State<Settings> {
                           (selectedDurationMenstruation) {
                         setState(() {
                           setting
-                              .notifyWith((setting) =>
-                                  setting.durationMenstruation =
+                              .copyWith(
+                                  durationMenstruation:
                                       selectedDurationMenstruation)
-                              .then((setting) => setting.save());
+                              .save()
+                              .then((value) => User.user().setting = value);
                           Navigator.pop(context);
                         });
                       },
