@@ -13,6 +13,7 @@ class InitialSetting3 extends StatefulWidget {
 class _InitialSetting3State extends State<InitialSetting3> {
   @override
   Widget build(BuildContext context) {
+    var model = InitialSettingModel.watch(context);
     return SettingMenstruationPage(
       title: "3/4",
       doneText: "次へ",
@@ -30,21 +31,17 @@ class _InitialSetting3State extends State<InitialSetting3> {
             .register()
             .then((_) => Router.endInitialSetting(context));
       },
-      selectedFromMenstruation:
-          InitialSettingModel.watch(context).fromMenstruation,
+      selectedFromMenstruation: model.fromMenstruation,
       fromMenstructionDidDecide: (selectedFromMenstruction) {
         setState(() {
-          InitialSettingModel.watch(context).fromMenstruation =
-              selectedFromMenstruction;
+          model.fromMenstruation = selectedFromMenstruction;
           Navigator.pop(context);
         });
       },
-      selectedDurationMenstruation:
-          InitialSettingModel.watch(context).durationMenstruation,
+      selectedDurationMenstruation: model.durationMenstruation,
       durationMenstructionDidDecide: (selectedDurationMenstruation) {
         setState(() {
-          InitialSettingModel.watch(context).durationMenstruation =
-              selectedDurationMenstruation;
+          model.durationMenstruation = selectedDurationMenstruation;
           Navigator.pop(context);
         });
       },

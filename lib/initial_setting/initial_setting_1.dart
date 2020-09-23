@@ -17,7 +17,7 @@ class _InitialSetting1State extends State<InitialSetting1> {
       title: "1/4",
       callback: (type) {
         setState(() {
-          InitialSettingModel.watch(context).pillSheetType = type;
+          InitialSettingModel.read(context).pillSheetType = type;
           Navigator.of(context)
               .push(MaterialPageRoute(builder: (BuildContext context) {
             return InitialSetting2();
