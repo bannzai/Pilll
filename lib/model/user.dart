@@ -25,19 +25,14 @@ class User {
 
   final String anonymousUserID;
   String get documentID => anonymousUserID;
-  Setting _setting;
-  Setting get setting => _setting;
-  PillSheetModel _currentPillSheet;
-  PillSheetModel get currentPillSheet => _currentPillSheet;
+  Setting setting;
+  PillSheetModel currentPillSheet;
 
   User._({
     @required this.anonymousUserID,
-    @required Setting setting,
-    @required PillSheetModel currentPillSheet,
-  }) {
-    _setting = setting;
-    _currentPillSheet = currentPillSheet;
-  }
+    @required this.setting,
+    @required this.currentPillSheet,
+  });
 
   static User _map(Map<String, dynamic> firestoreDocumentData) {
     return User._(
