@@ -22,6 +22,7 @@ abstract class ReminderTime with _$ReminderTime {
 
 @freezed
 abstract class Setting with _$Setting {
+  @late
   PillSheetType get pillSheetType =>
       PillSheetTypeFunctions.fromRawPath(pillSheetTypeRawPath);
   factory Setting({
