@@ -361,9 +361,21 @@ class _$_Setting with DiagnosticableTreeMixin implements _Setting {
   @override
   final bool isOnReminder;
 
+  bool _didpillSheetType = false;
+  PillSheetType _pillSheetType;
+
+  @override
+  PillSheetType get pillSheetType {
+    if (_didpillSheetType == false) {
+      _didpillSheetType = true;
+      _pillSheetType = PillSheetTypeFunctions.fromRawPath(pillSheetTypeRawPath);
+    }
+    return _pillSheetType;
+  }
+
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'Setting(pillSheetTypeRawPath: $pillSheetTypeRawPath, fromMenstruation: $fromMenstruation, durationMenstruation: $durationMenstruation, reminderTime: $reminderTime, isOnReminder: $isOnReminder)';
+    return 'Setting(pillSheetTypeRawPath: $pillSheetTypeRawPath, fromMenstruation: $fromMenstruation, durationMenstruation: $durationMenstruation, reminderTime: $reminderTime, isOnReminder: $isOnReminder, pillSheetType: $pillSheetType)';
   }
 
   @override
@@ -375,7 +387,8 @@ class _$_Setting with DiagnosticableTreeMixin implements _Setting {
       ..add(DiagnosticsProperty('fromMenstruation', fromMenstruation))
       ..add(DiagnosticsProperty('durationMenstruation', durationMenstruation))
       ..add(DiagnosticsProperty('reminderTime', reminderTime))
-      ..add(DiagnosticsProperty('isOnReminder', isOnReminder));
+      ..add(DiagnosticsProperty('isOnReminder', isOnReminder))
+      ..add(DiagnosticsProperty('pillSheetType', pillSheetType));
   }
 
   @override

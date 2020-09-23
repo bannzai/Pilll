@@ -212,9 +212,14 @@ class _$PillSheetModelTearOff {
 
 // ignore: unused_element
   _PillSheetModel call(
-      {@required PillSheetTypeInfo typeInfo,
-      @required DateTime beginingDate,
-      @required DateTime lastTakenDate}) {
+      {@required
+          PillSheetTypeInfo typeInfo,
+      @required
+      @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
+          DateTime beginingDate,
+      @required
+      @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
+          DateTime lastTakenDate}) {
     return _PillSheetModel(
       typeInfo: typeInfo,
       beginingDate: beginingDate,
@@ -235,7 +240,13 @@ const $PillSheetModel = _$PillSheetModelTearOff();
 /// @nodoc
 mixin _$PillSheetModel {
   PillSheetTypeInfo get typeInfo;
+  @JsonKey(
+      fromJson: TimestampConverter.timestampToDateTime,
+      toJson: TimestampConverter.dateTimeToTimestamp)
   DateTime get beginingDate;
+  @JsonKey(
+      fromJson: TimestampConverter.timestampToDateTime,
+      toJson: TimestampConverter.dateTimeToTimestamp)
   DateTime get lastTakenDate;
 
   Map<String, dynamic> toJson();
@@ -249,8 +260,10 @@ abstract class $PillSheetModelCopyWith<$Res> {
       _$PillSheetModelCopyWithImpl<$Res>;
   $Res call(
       {PillSheetTypeInfo typeInfo,
-      DateTime beginingDate,
-      DateTime lastTakenDate});
+      @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
+          DateTime beginingDate,
+      @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
+          DateTime lastTakenDate});
 
   $PillSheetTypeInfoCopyWith<$Res> get typeInfo;
 }
@@ -302,8 +315,10 @@ abstract class _$PillSheetModelCopyWith<$Res>
   @override
   $Res call(
       {PillSheetTypeInfo typeInfo,
-      DateTime beginingDate,
-      DateTime lastTakenDate});
+      @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
+          DateTime beginingDate,
+      @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
+          DateTime lastTakenDate});
 
   @override
   $PillSheetTypeInfoCopyWith<$Res> get typeInfo;
@@ -344,9 +359,14 @@ class __$PillSheetModelCopyWithImpl<$Res>
 /// @nodoc
 class _$_PillSheetModel implements _PillSheetModel {
   _$_PillSheetModel(
-      {@required this.typeInfo,
-      @required this.beginingDate,
-      @required this.lastTakenDate})
+      {@required
+          this.typeInfo,
+      @required
+      @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
+          this.beginingDate,
+      @required
+      @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
+          this.lastTakenDate})
       : assert(typeInfo != null),
         assert(beginingDate != null),
         assert(lastTakenDate != null);
@@ -357,8 +377,14 @@ class _$_PillSheetModel implements _PillSheetModel {
   @override
   final PillSheetTypeInfo typeInfo;
   @override
+  @JsonKey(
+      fromJson: TimestampConverter.timestampToDateTime,
+      toJson: TimestampConverter.dateTimeToTimestamp)
   final DateTime beginingDate;
   @override
+  @JsonKey(
+      fromJson: TimestampConverter.timestampToDateTime,
+      toJson: TimestampConverter.dateTimeToTimestamp)
   final DateTime lastTakenDate;
 
   @override
@@ -400,9 +426,14 @@ class _$_PillSheetModel implements _PillSheetModel {
 
 abstract class _PillSheetModel implements PillSheetModel {
   factory _PillSheetModel(
-      {@required PillSheetTypeInfo typeInfo,
-      @required DateTime beginingDate,
-      @required DateTime lastTakenDate}) = _$_PillSheetModel;
+      {@required
+          PillSheetTypeInfo typeInfo,
+      @required
+      @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
+          DateTime beginingDate,
+      @required
+      @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
+          DateTime lastTakenDate}) = _$_PillSheetModel;
 
   factory _PillSheetModel.fromJson(Map<String, dynamic> json) =
       _$_PillSheetModel.fromJson;
@@ -410,8 +441,14 @@ abstract class _PillSheetModel implements PillSheetModel {
   @override
   PillSheetTypeInfo get typeInfo;
   @override
+  @JsonKey(
+      fromJson: TimestampConverter.timestampToDateTime,
+      toJson: TimestampConverter.dateTimeToTimestamp)
   DateTime get beginingDate;
   @override
+  @JsonKey(
+      fromJson: TimestampConverter.timestampToDateTime,
+      toJson: TimestampConverter.dateTimeToTimestamp)
   DateTime get lastTakenDate;
   @override
   _$PillSheetModelCopyWith<_PillSheetModel> get copyWith;

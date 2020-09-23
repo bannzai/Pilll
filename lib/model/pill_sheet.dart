@@ -30,15 +30,18 @@ abstract class PillSheetTypeInfo with _$PillSheetTypeInfo {
 @freezed
 abstract class PillSheetModel with _$PillSheetModel {
   factory PillSheetModel({
-    @required PillSheetTypeInfo typeInfo,
+    @required
+        PillSheetTypeInfo typeInfo,
     @JsonKey(
-        fromJson: TimestampConverter.dateTimeToTimestamp,
-        toJson: TimestampConverter.timestampToDateTime)
+      fromJson: TimestampConverter.timestampToDateTime,
+      toJson: TimestampConverter.dateTimeToTimestamp,
+    )
     @required
         DateTime beginingDate,
     @JsonKey(
-        fromJson: TimestampConverter.dateTimeToTimestamp,
-        toJson: TimestampConverter.timestampToDateTime)
+      fromJson: TimestampConverter.timestampToDateTime,
+      toJson: TimestampConverter.dateTimeToTimestamp,
+    )
     @required
         DateTime lastTakenDate,
   }) = _PillSheetModel;
