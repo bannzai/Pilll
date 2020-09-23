@@ -84,7 +84,7 @@ class InitialSettingModel extends ChangeNotifier {
     if (todayPillNumber == number) {
       return PillMarkType.selected;
     }
-    if (pillSheetType.dosingPeriod >= number) {
+    if (pillSheetType.beginingWithoutTakenPeriod <= number) {
       return PillMarkType.notTaken;
     }
     return PillMarkType.normal;

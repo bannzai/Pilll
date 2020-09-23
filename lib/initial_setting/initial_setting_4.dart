@@ -29,7 +29,7 @@ class _InitialSetting4State extends State<InitialSetting4> {
   }
 
   Widget _time(BuildContext context) {
-    var dateTime = InitialSettingModel.read(context).reminderDateTime();
+    var dateTime = InitialSettingModel.watch(context).reminderDateTime();
     return Text(
       DateTimeFormatter.militaryTime(dateTime),
       style: FontType.largeNumber.merge(
@@ -42,7 +42,7 @@ class _InitialSetting4State extends State<InitialSetting4> {
   }
 
   void _showDurationModalSheet(BuildContext context) {
-    var model = InitialSettingModel.read(context);
+    var model = InitialSettingModel.watch(context);
     showModalBottomSheet(
       context: context,
       builder: (BuildContext context) {
@@ -62,6 +62,7 @@ class _InitialSetting4State extends State<InitialSetting4> {
 
   @override
   Widget build(BuildContext context) {
+    var model = InitialSettingModel.watch(context);
     return Scaffold(
       backgroundColor: PilllColors.background,
       appBar: AppBar(
@@ -111,7 +112,6 @@ class _InitialSetting4State extends State<InitialSetting4> {
                       "設定",
                     ),
                     onPressed: () {
-                      var model = InitialSettingModel.read(context);
                       model.isOnReminder = true;
                       model
                           .register()
@@ -122,7 +122,6 @@ class _InitialSetting4State extends State<InitialSetting4> {
                     child: Text("スキップ"),
                     textColor: TextColor.gray,
                     onPressed: () {
-                      var model = InitialSettingModel.read(context);
                       model.isOnReminder = false;
                       model
                           .register()

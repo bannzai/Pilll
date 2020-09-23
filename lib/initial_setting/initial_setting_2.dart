@@ -20,6 +20,7 @@ class InitialSetting2 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    var model = InitialSettingModel.watch(context);
     return Scaffold(
       backgroundColor: PilllColors.background,
       appBar: AppBar(
@@ -34,7 +35,7 @@ class InitialSetting2 extends StatelessWidget {
         backgroundColor: PilllColors.background,
       ),
       body: ChangeNotifierProvider<InitialSettingModel>.value(
-        value: InitialSettingModel.watch(context),
+        value: model,
         child: Container(
           child: Center(
             child: Column(
@@ -49,12 +50,10 @@ class InitialSetting2 extends StatelessWidget {
                 PillSheet(
                   isHideWeekdayLine: true,
                   pillMarkTypeBuilder: (number) {
-                    return InitialSettingModel.watch(context)
-                        .pillMarkTypeFor(number);
+                    return model.pillMarkTypeFor(number);
                   },
                   markSelected: (number) {
-                    InitialSettingModel.watch(context)
-                        .notifyWith((model) => model.todayPillNumber = number);
+                    model.notifyWith((model) => model.todayPillNumber = number);
                   },
                 ),
                 SizedBox(height: 24),
@@ -64,15 +63,13 @@ class InitialSetting2 extends StatelessWidget {
                   direction: Axis.vertical,
                   spacing: 8,
                   children: <Widget>[
-                    Consumer<Setting>(
+                    Consumer<InitialSettingModel>(
                       builder: (BuildContext context, model, Widget child) {
                         return RaisedButton(
                           child: Text(
                             "次へ",
                           ),
-                          onPressed: InitialSettingModel.watch(context)
-                                      .todayPillNumber ==
-                                  null
+                          onPressed: model.todayPillNumber == null
                               ? null
                               : () {
                                   Navigator.of(context).push(
