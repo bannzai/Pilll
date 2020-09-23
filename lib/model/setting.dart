@@ -36,7 +36,7 @@ abstract class Setting with _$Setting {
       _$SettingFromJson(json);
   Map<String, dynamic> toJson() => _$_$_SettingToJson(this);
 
-  Future<void> save() {
+  Future<Setting> save() {
     return User.fetch().then((value) {
       return FirebaseFirestore.instance
           .collection(User.path)
@@ -47,6 +47,12 @@ abstract class Setting with _$Setting {
         },
         SetOptions(merge: true),
       );
-    });
+    }).then((_) => this);
+  }
+
+  DateTime reminderDateTime() {
+    var t = DateTime.now().toLocal();
+    return DateTime(t.year, t.month, t.day, reminderTime.hour,
+        reminderTime.minute, t.second, t.millisecond, t.microsecond);
   }
 }
