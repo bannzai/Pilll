@@ -1,6 +1,4 @@
 import 'package:Pilll/main/application/router.dart';
-import 'package:Pilll/main/components/pill/pill_mark.dart';
-import 'package:Pilll/model/auth_user.dart';
 import 'package:Pilll/model/initial_setting.dart';
 import 'package:Pilll/model/setting.dart';
 import 'package:Pilll/theme/color.dart';

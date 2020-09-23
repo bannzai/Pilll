@@ -1,4 +1,3 @@
-import 'package:Pilll/initial_setting/initial_setting.dart';
 import 'package:Pilll/main/components/pill/pill_mark.dart';
 import 'package:Pilll/model/pill_sheet.dart';
 import 'package:Pilll/model/pill_sheet_type.dart';
@@ -6,8 +5,6 @@ import 'package:Pilll/model/setting.dart';
 import 'package:Pilll/model/user.dart' as user;
 import 'package:Pilll/util/shared_preference/keys.dart';
 import 'package:Pilll/util/today.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';

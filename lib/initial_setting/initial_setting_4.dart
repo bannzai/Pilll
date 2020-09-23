@@ -1,7 +1,5 @@
 import 'package:Pilll/main/application/router.dart';
-import 'package:Pilll/model/auth_user.dart';
 import 'package:Pilll/model/initial_setting.dart';
-import 'package:Pilll/model/setting.dart';
 import 'package:Pilll/theme/color.dart';
 import 'package:Pilll/theme/font.dart';
 import 'package:Pilll/theme/text_color.dart';
@@ -9,7 +7,6 @@ import 'package:Pilll/util/formatter/date_time_formatter.dart';
 import 'package:Pilll/util/shared_preference/toolbar/date_time_picker.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
 
 class InitialSetting4 extends StatefulWidget {
   @override
