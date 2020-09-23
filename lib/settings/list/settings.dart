@@ -90,8 +90,9 @@ class _SettingsState extends State<Settings> {
                     setState(() {
                       Navigator.pop(context);
                       setting
-                          .copyWith(pillSheetTypeRawPath: type.rawPath)
-                          .save()
+                          .notifyWith((model) =>
+                              model.pillSheetTypeRawPath = type.rawPath)
+                          .then((value) => value.save())
                           .then((value) => User.user().setting = value);
                     });
                   },
@@ -117,8 +118,9 @@ class _SettingsState extends State<Settings> {
             value: setting.isOnReminder,
             onTap: () {
               setState(() => setting
-                  .copyWith(isOnReminder: !setting.isOnReminder)
-                  .save()
+                  .notifyWith(
+                      (model) => model.isOnReminder = !setting.isOnReminder)
+                  .then((value) => value.save())
                   .then((value) => User.user().setting = value));
             },
           ),
@@ -134,11 +136,11 @@ class _SettingsState extends State<Settings> {
                     done: (dateTime) {
                       setState(() {
                         setting
-                            .copyWith(
-                              reminderTime: ReminderTime(
+                            .notifyWith(
+                              (model) => model.reminderTime = ReminderTime(
                                   hour: dateTime.hour, minute: dateTime.minute),
                             )
-                            .save()
+                            .then((value) => value.save())
                             .then((value) => User.user().setting = value);
                         Navigator.pop(context);
                       });
@@ -165,9 +167,9 @@ class _SettingsState extends State<Settings> {
                       fromMenstructionDidDecide: (selectedFromMenstruction) {
                         setState(() {
                           setting
-                              .copyWith(
-                                  fromMenstruation: selectedFromMenstruction)
-                              .save()
+                              .notifyWith((model) => model.fromMenstruation =
+                                  selectedFromMenstruction)
+                              .then((value) => value.save())
                               .then((value) => User.user().setting = value);
                           Navigator.pop(context);
                         });
@@ -178,10 +180,10 @@ class _SettingsState extends State<Settings> {
                           (selectedDurationMenstruation) {
                         setState(() {
                           setting
-                              .copyWith(
-                                  durationMenstruation:
+                              .notifyWith((model) =>
+                                  model.durationMenstruation =
                                       selectedDurationMenstruation)
-                              .save()
+                              .then((value) => value.save())
                               .then((value) => User.user().setting = value);
                           Navigator.pop(context);
                         });

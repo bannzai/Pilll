@@ -22,11 +22,11 @@ class ReminderTime {
 }
 
 @JsonSerializable()
-class Setting {
-  final String pillSheetTypeRawPath;
-  final int fromMenstruation;
-  final int durationMenstruation;
-  final ReminderTime reminderTime;
+class Setting extends ChangeNotifier {
+  String pillSheetTypeRawPath;
+  int fromMenstruation;
+  int durationMenstruation;
+  ReminderTime reminderTime;
 
   @JsonKey(defaultValue: false)
   bool isOnReminder = false;
@@ -68,5 +68,11 @@ class Setting {
     var t = DateTime.now().toLocal();
     return DateTime(t.year, t.month, t.day, reminderTime.hour,
         reminderTime.minute, t.second, t.millisecond, t.microsecond);
+  }
+
+  Future<Setting> notifyWith(void update(Setting model)) {
+    update(this);
+    notifyListeners();
+    return Future.value(this);
   }
 }
