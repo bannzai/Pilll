@@ -1,8 +1,7 @@
 import 'package:Pilll/model/firestore_timestamp_converter.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:json_annotation/json_annotation.dart';
 import 'package:meta/meta.dart';
-part 'pill_sheet.freezed.dart';
 part 'pill_sheet.g.dart';
 
 abstract class PillSheetFirestoreFieldKeys {
@@ -14,39 +13,47 @@ abstract class PillSheetFirestoreFieldKeys {
   static final String lastTakenDate = "lastTakenDate";
 }
 
-@freezed
-abstract class PillSheetTypeInfo with _$PillSheetTypeInfo {
-  factory PillSheetTypeInfo({
-    @required String pillSheetTypeReferencePath,
-    @required int totalCount,
-    @required int dosingPeriod,
-  }) = _PillSheetTypeInfo;
+@JsonSerializable(nullable: false)
+class PillSheetTypeInfo {
+  final String pillSheetTypeReferencePath;
+  final int totalCount;
+  final int dosingPeriod;
+
+  PillSheetTypeInfo({
+    @required this.pillSheetTypeReferencePath,
+    @required this.totalCount,
+    @required this.dosingPeriod,
+  })  : assert(pillSheetTypeReferencePath != null),
+        assert(totalCount != null),
+        assert(dosingPeriod != null);
 
   factory PillSheetTypeInfo.fromJson(Map<String, dynamic> json) =>
       _$PillSheetTypeInfoFromJson(json);
-  Map<String, dynamic> toJson() => _$_$_PillSheetTypeInfoToJson(this);
+  Map<String, dynamic> toJson() => _$PillSheetTypeInfoToJson(this);
 }
 
-@freezed
-abstract class PillSheetModel with _$PillSheetModel {
-  factory PillSheetModel({
-    @required
-        PillSheetTypeInfo typeInfo,
-    @JsonKey(
-      fromJson: TimestampConverter.timestampToDateTime,
-      toJson: TimestampConverter.dateTimeToTimestamp,
-    )
-    @required
-        DateTime beginingDate,
-    @JsonKey(
-      fromJson: TimestampConverter.timestampToDateTime,
-      toJson: TimestampConverter.dateTimeToTimestamp,
-    )
-    @required
-        DateTime lastTakenDate,
-  }) = _PillSheetModel;
+@JsonSerializable(nullable: false)
+class PillSheetModel {
+  final PillSheetTypeInfo typeInfo;
+  @JsonKey(
+    fromJson: TimestampConverter.timestampToDateTime,
+    toJson: TimestampConverter.dateTimeToTimestamp,
+  )
+  final DateTime beginingDate;
+  @JsonKey(
+    fromJson: TimestampConverter.timestampToDateTime,
+    toJson: TimestampConverter.dateTimeToTimestamp,
+  )
+  final DateTime lastTakenDate;
+  PillSheetModel({
+    @required this.typeInfo,
+    @required this.beginingDate,
+    @required this.lastTakenDate,
+  })  : assert(typeInfo != null),
+        assert(beginingDate != null),
+        assert(lastTakenDate != null);
 
   factory PillSheetModel.fromJson(Map<String, dynamic> json) =>
       _$PillSheetModelFromJson(json);
-  Map<String, dynamic> toJson() => _$_$_PillSheetModelToJson(this);
+  Map<String, dynamic> toJson() => _$PillSheetModelToJson(this);
 }
