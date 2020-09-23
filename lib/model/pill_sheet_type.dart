@@ -9,8 +9,8 @@ enum PillSheetType {
 
 extension PillSheetTypeFunctions on PillSheetType {
   static final String firestoreCollectionPath = "pill_sheet_types";
-  static PillSheetType fromName(String name) {
-    switch (name) {
+  static PillSheetType fromRawPath(String rawPath) {
+    switch (rawPath) {
       case "21錠タイプ":
         return PillSheetType.pillsheet_21;
       case "28錠タイプ(4錠偽薬)":

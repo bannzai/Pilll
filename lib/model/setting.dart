@@ -1,3 +1,5 @@
+import 'package:Pilll/model/pill_sheet.dart';
+import 'package:Pilll/model/pill_sheet_type.dart';
 import 'package:Pilll/model/user.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
@@ -20,6 +22,8 @@ abstract class ReminderTime with _$ReminderTime {
 
 @freezed
 abstract class Setting with _$Setting {
+  PillSheetType get pillSheetType =>
+      PillSheetTypeFunctions.fromRawPath(pillSheetTypeRawPath);
   factory Setting({
     @nullable @required String pillSheetTypeRawPath,
     @nullable @required int fromMenstruation,
