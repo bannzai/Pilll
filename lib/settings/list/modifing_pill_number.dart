@@ -6,7 +6,7 @@ import 'package:Pilll/theme/text_color.dart';
 import 'package:Pilll/util/formatter/date_time_formatter.dart';
 import 'package:flutter/material.dart';
 
-class ModifingPillNumber extends StatelessWidget {
+class ModifingPillNumberPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

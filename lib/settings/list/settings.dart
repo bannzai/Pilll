@@ -105,7 +105,7 @@ class _SettingsState extends State<Settings> {
               onTap: () {
                 Navigator.of(context)
                     .push(MaterialPageRoute(builder: (BuildContext context) {
-                  return ModifingPillNumber();
+                  return ModifingPillNumberPage();
                 }));
               }),
           SettingListTitleRowModel(title: "ピルシートの破棄", onTap: () {}),
