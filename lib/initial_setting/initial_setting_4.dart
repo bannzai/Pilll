@@ -42,7 +42,7 @@ class _InitialSetting4State extends State<InitialSetting4> {
   }
 
   void _showDurationModalSheet(BuildContext context) {
-    var model = InitialSettingModel.watch(context);
+    var model = InitialSettingModel.read(context);
     showModalBottomSheet(
       context: context,
       builder: (BuildContext context) {
