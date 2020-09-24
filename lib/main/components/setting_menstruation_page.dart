@@ -181,7 +181,10 @@ class SettingMenstruationPage extends StatelessWidget {
           children: <Widget>[
             PickerToolbar(
               done: (() {
-                this.fromMenstructionDidDecide(keepSelectedFromMenstruation);
+                fromMenstructionDidDecide(keepSelectedFromMenstruation);
+                this.model.selectedFromMenstruation =
+                    keepSelectedFromMenstruation;
+                Navigator.pop(context);
               }),
               cancel: (() {
                 Navigator.pop(context);
@@ -225,6 +228,7 @@ class SettingMenstruationPage extends StatelessWidget {
             PickerToolbar(
               done: (() {
                 durationMenstructionDidDecide(keepSelectedDurationMenstruation);
+                Navigator.pop(context);
               }),
               cancel: (() {
                 Navigator.pop(context);

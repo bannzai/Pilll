@@ -35,14 +35,12 @@ class _InitialSetting3State extends State<InitialSetting3> {
       fromMenstructionDidDecide: (selectedFromMenstruction) {
         setState(() {
           model.fromMenstruation = selectedFromMenstruction;
-          Navigator.pop(context);
         });
       },
       selectedDurationMenstruation: model.durationMenstruation,
       durationMenstructionDidDecide: (selectedDurationMenstruation) {
         setState(() {
           model.durationMenstruation = selectedDurationMenstruation;
-          Navigator.pop(context);
         });
       },
     );
