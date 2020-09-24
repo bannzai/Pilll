@@ -6,7 +6,21 @@ import 'package:Pilll/theme/text_color.dart';
 import 'package:Pilll/util/formatter/date_time_formatter.dart';
 import 'package:flutter/material.dart';
 
-class ModifingPillNumberPage extends StatelessWidget {
+class ModifingPillNumberPage extends StatefulWidget {
+  final PillMarkTypeBuilder pillMarkTypeBuilder;
+  final PillMarkSelected markSelected;
+
+  const ModifingPillNumberPage({
+    Key key,
+    @required this.pillMarkTypeBuilder,
+    @required this.markSelected,
+  }) : super(key: key);
+
+  @override
+  _ModifingPillNumberPageState createState() => _ModifingPillNumberPageState();
+}
+
+class _ModifingPillNumberPageState extends State<ModifingPillNumberPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -37,10 +51,10 @@ class ModifingPillNumberPage extends StatelessWidget {
             Center(
               child: PillSheet(
                 isHideWeekdayLine: true,
-                pillMarkTypeBuilder: (number) {
-                  return PillMarkType.normal;
+                pillMarkTypeBuilder: widget.pillMarkTypeBuilder,
+                markSelected: (number) {
+                  setState(() => widget.markSelected(number));
                 },
-                markSelected: (number) {},
               ),
             ),
           ],
