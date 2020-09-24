@@ -65,7 +65,7 @@ class PillSheetModel {
     return today().difference(beginingDate).inDays + 1;
   }
 
-  void resetLastTakenDate(int pillNumber) {
+  void resetTodayTakenPillNumber(int pillNumber) {
     if (pillNumber == todayPillNumber) return;
     var betweenToday = pillNumber - todayPillNumber;
     _beginingDate.add(Duration(days: betweenToday));
