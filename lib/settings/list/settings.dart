@@ -108,7 +108,8 @@ class _SettingsState extends State<Settings> {
                     .push(MaterialPageRoute(builder: (BuildContext context) {
                   return ModifingPillNumberPage(
                     markSelected: (number) {
-                      user.currentPillSheet.beginingDate;
+                      setState(() => user.currentPillSheet
+                          .resetTodayTakenPillNumber(number));
                     },
                     pillMarkTypeBuilder: (number) {
                       return PillMarkType.normal;
