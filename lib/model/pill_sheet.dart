@@ -1,4 +1,5 @@
 import 'package:Pilll/model/firestore_timestamp_converter.dart';
+import 'package:Pilll/util/today.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:json_annotation/json_annotation.dart';
 import 'package:meta/meta.dart';
@@ -39,7 +40,8 @@ class PillSheetModel {
     fromJson: TimestampConverter.timestampToDateTime,
     toJson: TimestampConverter.dateTimeToTimestamp,
   )
-  final DateTime beginingDate;
+  DateTime _beginingDate;
+  DateTime get beginingDate => _beginingDate;
   @JsonKey(
     fromJson: TimestampConverter.timestampToDateTime,
     toJson: TimestampConverter.dateTimeToTimestamp,
@@ -47,13 +49,23 @@ class PillSheetModel {
   final DateTime lastTakenDate;
   PillSheetModel({
     @required this.typeInfo,
-    @required this.beginingDate,
-    @required this.lastTakenDate,
+    @required DateTime beginingDate,
+    @required this. lastTakenDate,
   })  : assert(typeInfo != null),
-        assert(beginingDate != null),
-        assert(lastTakenDate != null);
+        assert(_beginingDate != null),
+        assert(lastTakenDate != null) {
+    _beginingDate = beginingDate;
+  }
 
   factory PillSheetModel.fromJson(Map<String, dynamic> json) =>
       _$PillSheetModelFromJson(json);
   Map<String, dynamic> toJson() => _$PillSheetModelToJson(this);
+
+  int get todayPillNumber {
+    return today().difference(beginingDate).inDays + 1;
+  }
+
+  void resetLastTakenDate(int pillNumber) {
+beginingDate.difference(other)
+  }
 }
