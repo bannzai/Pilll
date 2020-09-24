@@ -19,7 +19,7 @@ extension UserFirestoreFieldKeys on String {
   static final currentPillSheet = "pillSheet";
 }
 
-class User {
+class User extends ChangeNotifier {
   static final path = "users";
   static User _cache;
 

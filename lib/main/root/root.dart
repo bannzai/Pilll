@@ -6,8 +6,6 @@ import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:Pilll/model/auth_user.dart';
-import 'package:provider/provider.dart';
 
 class Root extends StatefulWidget {
   Root({Key key}) : super(key: key);
@@ -26,7 +24,6 @@ class RootState extends State<Root> {
     }).then((userCredential) {
       return UserInterface.fetchOrCreateUser();
     }).then((user) {
-      context.read<AuthUser>().user = user;
       if (user.setting == null) {
         Navigator.popAndPushNamed(context, Routes.initialSetting);
         return null;
