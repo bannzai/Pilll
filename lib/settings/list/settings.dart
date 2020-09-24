@@ -1,6 +1,5 @@
 import 'package:Pilll/main/components/pill_sheet_type_select_page.dart';
 import 'package:Pilll/main/components/setting_menstruation_page.dart';
-import 'package:Pilll/model/auth_user.dart';
 import 'package:Pilll/model/setting.dart';
 import 'package:Pilll/model/user.dart';
 import 'package:Pilll/settings/list/model.dart';
@@ -25,7 +24,7 @@ class Settings extends StatefulWidget {
 class _SettingsState extends State<Settings> {
   @override
   Widget build(BuildContext context) {
-    var setting = context.watch<AuthUser>().user.setting;
+    var setting = context.watch<User>().setting;
     return Scaffold(
       backgroundColor: PilllColors.background,
       appBar: AppBar(
