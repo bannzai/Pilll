@@ -31,13 +31,15 @@ class _InitialSetting3State extends State<InitialSetting3> {
             .register()
             .then((_) => Router.endInitialSetting(context));
       },
-      selectedFromMenstruation: model.fromMenstruation,
+      model: SettingMenstruationPageModel(
+        selectedFromMenstruation: model.fromMenstruation,
+        selectedDurationMenstruation: model.durationMenstruation,
+      ),
       fromMenstructionDidDecide: (selectedFromMenstruction) {
         setState(() {
           model.fromMenstruation = selectedFromMenstruction;
         });
       },
-      selectedDurationMenstruation: model.durationMenstruation,
       durationMenstructionDidDecide: (selectedDurationMenstruation) {
         setState(() {
           model.durationMenstruation = selectedDurationMenstruation;

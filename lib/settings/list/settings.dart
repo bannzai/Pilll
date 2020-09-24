@@ -162,7 +162,11 @@ class _SettingsState extends State<Settings> {
                       doneText: null,
                       skip: null,
                       title: "生理について",
-                      selectedFromMenstruation: setting.fromMenstruation,
+                      model: SettingMenstruationPageModel(
+                        selectedFromMenstruation: setting.fromMenstruation,
+                        selectedDurationMenstruation:
+                            setting.durationMenstruation,
+                      ),
                       fromMenstructionDidDecide: (selectedFromMenstruction) {
                         setState(() {
                           setting
@@ -170,11 +174,8 @@ class _SettingsState extends State<Settings> {
                                   selectedFromMenstruction)
                               .then((value) => value.save())
                               .then((value) => User.user().setting = value);
-                          Navigator.pop(context);
                         });
                       },
-                      selectedDurationMenstruation:
-                          setting.durationMenstruation,
                       durationMenstructionDidDecide:
                           (selectedDurationMenstruation) {
                         setState(() {
@@ -184,7 +185,6 @@ class _SettingsState extends State<Settings> {
                                       selectedDurationMenstruation)
                               .then((value) => value.save())
                               .then((value) => User.user().setting = value);
-                          Navigator.pop(context);
                         });
                       },
                     );
