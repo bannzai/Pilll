@@ -50,7 +50,7 @@ class PillSheetModel {
   PillSheetModel({
     @required this.typeInfo,
     @required DateTime beginingDate,
-    @required this. lastTakenDate,
+    @required this.lastTakenDate,
   })  : assert(typeInfo != null),
         assert(_beginingDate != null),
         assert(lastTakenDate != null) {
@@ -66,6 +66,8 @@ class PillSheetModel {
   }
 
   void resetLastTakenDate(int pillNumber) {
-beginingDate.difference(other)
+    if (pillNumber == todayPillNumber) return;
+    var betweenToday = pillNumber - todayPillNumber;
+    _beginingDate.add(Duration(days: betweenToday));
   }
 }
