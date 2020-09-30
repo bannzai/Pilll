@@ -6,10 +6,10 @@ void injectToday(DateTime Function() closure) {
 }
 
 DateTime today() {
-  if (!Environment.isProduction) {
-    var date = _fakeToday();
-    injectToday(null);
-    return date;
+  if (Environment.isProduction) {
+    return DateTime.now();
   }
-  return DateTime.now();
+  var date = _fakeToday();
+  injectToday(null);
+  return date ?? DateTime.now();
 }
