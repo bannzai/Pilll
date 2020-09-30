@@ -1,4 +1,5 @@
 import 'package:Pilll/model/firestore_timestamp_converter.dart';
+import 'package:Pilll/model/pill_sheet_type.dart';
 import 'package:Pilll/util/today.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:json_annotation/json_annotation.dart';
@@ -61,6 +62,8 @@ class PillSheetModel {
       _$PillSheetModelFromJson(json);
   Map<String, dynamic> toJson() => _$PillSheetModelToJson(this);
 
+  PillSheetType get pillSheetType =>
+      PillSheetTypeFunctions.fromRawPath(typeInfo.pillSheetTypeReferencePath);
   int get todayPillNumber {
     return today().difference(beginingDate).inDays + 1;
   }
