@@ -32,4 +32,17 @@ void main() {
       expect(model.todayPillNumber, 6);
     });
   });
+  group("boundary value tests", () {
+    group("today: 2020-09-28, begin: 2020-09-01, end: 2020-09-28", () {
+      sheetType = PillSheetType.pillsheet_21;
+      beginingDate = DateTime.parse("2020-09-01");
+      lastTakenDate = DateTime.parse("2020-09-28");
+      injectToday(() {
+        return DateTime.parse("2020-09-28");
+      });
+      test("#todayPillNumber", () {
+        expect(model.todayPillNumber, 28);
+      });
+    });
+  });
 }
