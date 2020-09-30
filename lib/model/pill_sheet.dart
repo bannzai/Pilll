@@ -52,7 +52,7 @@ class PillSheetModel {
     @required DateTime beginingDate,
     @required this.lastTakenDate,
   })  : assert(typeInfo != null),
-        assert(_beginingDate != null),
+        assert(beginingDate != null),
         assert(lastTakenDate != null) {
     _beginingDate = beginingDate;
   }
