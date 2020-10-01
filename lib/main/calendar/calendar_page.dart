@@ -85,7 +85,7 @@ class CalendarPage extends StatelessWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              SvgPicture.asset("images/menstruation_icon.svg"),
+              SvgPicture.asset("images/menstruation_icon.svg", width: 20),
               Text("生理予定日",
                   style: TextColorStyle.noshime.merge(FontType.assisting)),
             ],
