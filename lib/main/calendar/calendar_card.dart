@@ -2,6 +2,7 @@ import 'package:Pilll/main/calendar/calculator.dart';
 import 'package:Pilll/main/calendar/calendar.dart';
 import 'package:Pilll/main/calendar/calendar_band_model.dart';
 import 'package:Pilll/main/calendar/calendar_help.dart';
+import 'package:Pilll/main/calendar/calendar_list_page.dart';
 import 'package:Pilll/style/button.dart';
 import 'package:Pilll/theme/font.dart';
 import 'package:Pilll/theme/text_color.dart';
@@ -77,7 +78,15 @@ class CalendarCard extends StatelessWidget {
         children: <Widget>[
           SecondaryButton(
             text: "もっと見る",
-            onPressed: () {},
+            onPressed: () {
+              Navigator.of(context).push(
+                MaterialPageRoute(
+                  builder: (BuildContext context) {
+                    return CalendarListPage();
+                  },
+                ),
+              );
+            },
           )
         ],
       ),
