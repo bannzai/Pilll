@@ -48,14 +48,18 @@ class PillSheetModel {
     toJson: TimestampConverter.dateTimeToTimestamp,
   )
   final DateTime lastTakenDate;
+
+  DateTime Function() _today;
   PillSheetModel({
     @required this.typeInfo,
     @required DateTime beginingDate,
     @required this.lastTakenDate,
+    DateTime Function() todayBuilder = today,
   })  : assert(typeInfo != null),
         assert(beginingDate != null),
         assert(lastTakenDate != null) {
     _beginingDate = beginingDate;
+    _today = todayBuilder;
   }
 
   factory PillSheetModel.fromJson(Map<String, dynamic> json) =>
@@ -65,7 +69,7 @@ class PillSheetModel {
   PillSheetType get pillSheetType =>
       PillSheetTypeFunctions.fromRawPath(typeInfo.pillSheetTypeReferencePath);
   int get todayPillNumber {
-    return today().difference(beginingDate).inDays + 1;
+    return _today().difference(beginingDate).inDays + 1;
   }
 
   void resetTodayTakenPillNumber(int pillNumber) {
