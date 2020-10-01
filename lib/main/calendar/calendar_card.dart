@@ -34,6 +34,7 @@ class CalendarCard extends StatelessWidget {
               ),
             ],
           ),
+          _more(context),
         ],
       ),
     );
@@ -62,6 +63,21 @@ class CalendarCard extends StatelessWidget {
             },
           ),
           SizedBox(width: 16),
+        ],
+      ),
+    );
+  }
+
+  Widget _more(BuildContext context) {
+    return ConstrainedBox(
+      constraints: BoxConstraints.expand(height: 60),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.end,
+        children: <Widget>[
+          FlatButton(
+            child: Text("もっと見る"),
+            onPressed: () {},
+          )
         ],
       ),
     );
