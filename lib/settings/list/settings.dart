@@ -120,7 +120,12 @@ class _SettingsState extends State<Settings> {
           SettingListTitleRowModel(
               title: "ピルシートの破棄",
               onTap: () {
-                _deleteCurrentPillSheet(user);
+                Navigator.of(context).push(CupertinoPageRoute(
+                  fullscreenDialog: true,
+                  builder: (context) => ConfirmDeletePillSheet(onDelete: () {
+                    _deleteCurrentPillSheet(user);
+                  }),
+                ));
               }),
         ];
       case SettingSection.notification:
@@ -256,5 +261,46 @@ class _SettingsState extends State<Settings> {
       height: 1,
       color: PilllColors.border,
     );
+  }
+}
+
+class ConfirmDeletePillSheet extends StatelessWidget {
+  final Function() onDelete;
+
+  const ConfirmDeletePillSheet({Key key, @required this.onDelete})
+      : super(key: key);
+  @override
+  Widget build(BuildContext context) {
+    return SizedBox(
+        height: 193,
+        width: 280,
+        child: Center(
+          child: Column(
+            children: <Widget>[
+              Image(image: AssetImage("images/alert_24")),
+              Text("ピルシートを破棄しますか？",
+                  style: FontType.subTitle.merge(TextColorStyle.black)),
+              Text("現在、服用記録をしているピルシートを削除します。",
+                  style: FontType.assisting.merge(TextColorStyle.lightGray)),
+              Row(
+                children: <Widget>[
+                  FlatButton(
+                    child: Text("キャンセル"),
+                    onPressed: () {
+                      Navigator.of(context).pop();
+                    },
+                  ),
+                  FlatButton(
+                    child: Text("破棄する"),
+                    onPressed: () {
+                      onDelete();
+                      Navigator.of(context).pop();
+                    },
+                  ),
+                ],
+              )
+            ],
+          ),
+        ));
   }
 }
