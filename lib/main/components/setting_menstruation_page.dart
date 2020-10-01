@@ -1,3 +1,4 @@
+import 'package:Pilll/style/button.dart';
 import 'package:Pilll/theme/color.dart';
 import 'package:Pilll/theme/font.dart';
 import 'package:Pilll/theme/text_color.dart';
@@ -124,15 +125,13 @@ class _SettingMenstruationPageState extends State<SettingMenstruationPage> {
                 spacing: 8,
                 children: <Widget>[
                   if (this.widget.done != null)
-                    RaisedButton(
-                        child: Text(
-                          this.widget.doneText,
-                        ),
-                        onPressed: !canNext(context) ? null : this.widget.done),
+                    PrimaryButton(
+                      text: this.widget.doneText,
+                      onPressed: !canNext(context) ? null : this.widget.done,
+                    ),
                   if (this.widget.skip != null)
-                    FlatButton(
-                      child: Text("スキップ"),
-                      textColor: TextColor.gray,
+                    TertiaryButton(
+                      text: "スキップ",
                       onPressed: this.widget.skip,
                     ),
                 ],
