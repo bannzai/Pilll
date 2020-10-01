@@ -1,6 +1,7 @@
 import 'package:Pilll/model/initial_setting.dart';
 import 'package:Pilll/model/user.dart';
 import 'package:Pilll/theme/color.dart';
+import 'package:Pilll/theme/text_color.dart';
 import 'package:firebase_analytics/firebase_analytics.dart';
 import 'package:firebase_analytics/observer.dart';
 import 'package:flutter/material.dart';
@@ -39,8 +40,6 @@ class App extends StatelessWidget {
           visualDensity: VisualDensity.adaptivePlatformDensity,
           accentColor: PilllColors.accent,
           buttonTheme: ButtonThemeData(
-            minWidth: 180,
-            height: 44,
             buttonColor: PilllColors.enable,
             disabledColor: PilllColors.disable,
             textTheme: ButtonTextTheme.primary,
