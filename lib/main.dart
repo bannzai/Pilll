@@ -43,6 +43,9 @@ class App extends StatelessWidget {
             buttonColor: PilllColors.enable,
             disabledColor: PilllColors.disable,
             textTheme: ButtonTextTheme.primary,
+            colorScheme: ColorScheme.light(
+              primary: PilllColors.primary,
+            ),
           ),
         ),
         routes: Router.routes(),
