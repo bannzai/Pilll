@@ -5,6 +5,7 @@ import 'package:Pilll/model/setting.dart';
 import 'package:Pilll/model/user.dart';
 import 'package:Pilll/settings/list/model.dart';
 import 'package:Pilll/settings/list/modifing_pill_number.dart';
+import 'package:Pilll/theme/button.dart';
 import 'package:Pilll/theme/color.dart';
 import 'package:Pilll/theme/font.dart';
 import 'package:Pilll/theme/text_color.dart';
@@ -12,6 +13,7 @@ import 'package:Pilll/util/formatter/date_time_formatter.dart';
 import 'package:Pilll/util/shared_preference/toolbar/date_time_picker.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:package_info/package_info.dart';
 import 'package:provider/provider.dart';
 import 'package:Pilll/model/pill_sheet_type.dart';
@@ -120,12 +122,14 @@ class _SettingsState extends State<Settings> {
           SettingListTitleRowModel(
               title: "ピルシートの破棄",
               onTap: () {
-                Navigator.of(context).push(CupertinoPageRoute(
-                  fullscreenDialog: true,
-                  builder: (context) => ConfirmDeletePillSheet(onDelete: () {
-                    _deleteCurrentPillSheet(user);
-                  }),
-                ));
+                showDialog(
+                  context: context,
+                  builder: (_) {
+                    return ConfirmDeletePillSheet(onDelete: () {
+                      _deleteCurrentPillSheet(user);
+                    });
+                  },
+                );
               }),
         ];
       case SettingSection.notification:
@@ -271,36 +275,38 @@ class ConfirmDeletePillSheet extends StatelessWidget {
       : super(key: key);
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-        height: 193,
-        width: 280,
-        child: Center(
-          child: Column(
-            children: <Widget>[
-              Image(image: AssetImage("images/alert_24")),
-              Text("ピルシートを破棄しますか？",
-                  style: FontType.subTitle.merge(TextColorStyle.black)),
-              Text("現在、服用記録をしているピルシートを削除します。",
-                  style: FontType.assisting.merge(TextColorStyle.lightGray)),
-              Row(
-                children: <Widget>[
-                  FlatButton(
-                    child: Text("キャンセル"),
-                    onPressed: () {
-                      Navigator.of(context).pop();
-                    },
-                  ),
-                  FlatButton(
-                    child: Text("破棄する"),
-                    onPressed: () {
-                      onDelete();
-                      Navigator.of(context).pop();
-                    },
-                  ),
-                ],
-              )
-            ],
-          ),
-        ));
+    return AlertDialog(
+      title: SvgPicture.asset("images/alert_24.svg"),
+      content: SizedBox(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          mainAxisSize: MainAxisSize.min,
+          children: <Widget>[
+            Text("ピルシートを破棄しますか？",
+                style: FontType.subTitle.merge(TextColorStyle.black)),
+            SizedBox(
+              height: 15,
+            ),
+            Text("現在、服用記録をしているピルシートを削除します。",
+                style: FontType.assisting.merge(TextColorStyle.lightGray)),
+          ],
+        ),
+      ),
+      actions: <Widget>[
+        FlatButton(
+          child: Text("キャンセル", style: ButtonTextStyle.alertDone),
+          onPressed: () {
+            Navigator.of(context).pop();
+          },
+        ),
+        FlatButton(
+          child: Text("破棄する", style: ButtonTextStyle.alertDone),
+          onPressed: () {
+            onDelete();
+            Navigator.of(context).pop();
+          },
+        ),
+      ],
+    );
   }
 }
