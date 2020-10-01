@@ -1,3 +1,4 @@
+import 'package:Pilll/style/button.dart';
 import 'package:Pilll/theme/button.dart';
 import 'package:Pilll/theme/color.dart';
 import 'package:Pilll/theme/font.dart';
@@ -116,8 +117,8 @@ class CalendarHelpPage extends StatelessWidget {
         ],
       ),
       actions: <Widget>[
-        FlatButton(
-          child: Text("閉じる", style: ButtonTextStyle.alertDone),
+        SecondaryButton(
+          text: "閉じる",
           onPressed: () {
             Navigator.of(context).pop();
           },
