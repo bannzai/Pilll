@@ -1,5 +1,6 @@
 import 'package:Pilll/main/calendar/calendar_page.dart';
-import 'package:Pilll/main/record/pill_sheet.dart';
+import 'package:Pilll/main/components/pill/pill_mark.dart';
+import 'package:Pilll/main/components/pill/pill_sheet.dart';
 import 'package:Pilll/main/record/record_taken_information.dart';
 import 'package:Pilll/settings/list/settings.dart';
 import 'package:Pilll/theme/color.dart';
@@ -76,8 +77,8 @@ class _HomePageState extends State<HomePage>
         body: TabBarView(
           controller: _tabController,
           children: <Widget>[
-            CalendarPage(),
             Settings(),
+            CalendarPage(),
             _recordView(),
             // Settings(),
           ],
@@ -101,6 +102,10 @@ class _HomePageState extends State<HomePage>
           SizedBox(height: 24),
           PillSheet(
             isHideWeekdayLine: false,
+            pillMarkTypeBuilder: (number) {
+              return PillMarkType.normal;
+            },
+            markSelected: (number) {},
           ),
           SizedBox(height: 24),
           Container(

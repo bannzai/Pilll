@@ -1,3 +1,4 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 enum PillSheetType {
@@ -7,8 +8,9 @@ enum PillSheetType {
 }
 
 extension PillSheetTypeFunctions on PillSheetType {
-  static PillSheetType fromName(String name) {
-    switch (name) {
+  static final String firestoreCollectionPath = "pill_sheet_types";
+  static PillSheetType fromRawPath(String rawPath) {
+    switch (rawPath) {
       case "21錠タイプ":
         return PillSheetType.pillsheet_21;
       case "28錠タイプ(4錠偽薬)":
@@ -34,6 +36,8 @@ extension PillSheetTypeFunctions on PillSheetType {
         return null;
     }
   }
+
+  String get rawPath => name;
 
   List<String> get examples {
     switch (this) {
@@ -63,6 +67,34 @@ extension PillSheetTypeFunctions on PillSheetType {
     }
   }
 
+  String get firestorePath {
+    switch (this) {
+      case PillSheetType.pillsheet_21:
+        return "pillsheet_21";
+      case PillSheetType.pillsheet_28_4:
+        return "pillsheet_28_4";
+      case PillSheetType.pillsheet_28_7:
+        return "pillsheet_28_7";
+      default:
+        assert(false);
+        return null;
+    }
+  }
+
+  int get totalCount {
+    switch (this) {
+      case PillSheetType.pillsheet_21:
+        return 28;
+      case PillSheetType.pillsheet_28_4:
+        return 28;
+      case PillSheetType.pillsheet_28_7:
+        return 28;
+      default:
+        assert(false);
+        return null;
+    }
+  }
+
   int get beginingWithoutTakenPeriod {
     switch (this) {
       case PillSheetType.pillsheet_21:
@@ -75,5 +107,25 @@ extension PillSheetTypeFunctions on PillSheetType {
         assert(false);
         return null;
     }
+  }
+
+  int get dosingPeriod {
+    switch (this) {
+      case PillSheetType.pillsheet_21:
+        return 21;
+      case PillSheetType.pillsheet_28_4:
+        return 24;
+      case PillSheetType.pillsheet_28_7:
+        return 21;
+      default:
+        assert(false);
+        return null;
+    }
+  }
+
+  DocumentReference get documentReference {
+    return FirebaseFirestore.instance
+        .collection(PillSheetTypeFunctions.firestoreCollectionPath)
+        .doc(firestorePath);
   }
 }

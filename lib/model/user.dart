@@ -1,8 +1,10 @@
 import 'dart:async';
 
+import 'package:Pilll/model/pill_sheet.dart';
 import 'package:Pilll/model/setting.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:meta/meta.dart';
 
 class UserNotFound implements Exception {
@@ -11,29 +13,55 @@ class UserNotFound implements Exception {
   }
 }
 
-extension UserPropertyKeys on String {
+extension UserFirestoreFieldKeys on String {
   static final anonymouseUserID = "anonymouseUserID";
   static final settings = "settings";
+  static final currentPillSheet = "pillSheet";
 }
 
-class User {
+class User extends ChangeNotifier {
   static final path = "users";
-  String get documentID => anonymousUserID;
+  static User _cache;
 
   final String anonymousUserID;
+  String get documentID => anonymousUserID;
   Setting setting;
+  PillSheetModel currentPillSheet;
 
-  User._({@required this.anonymousUserID, @required this.setting});
+  User._({
+    @required this.anonymousUserID,
+    @required this.setting,
+    @required this.currentPillSheet,
+  });
 
-  static User _map(DocumentSnapshot document) {
-    Map<String, dynamic> data = document.data();
+  static User _map(Map<String, dynamic> firestoreDocumentData) {
     return User._(
-      anonymousUserID: data[UserPropertyKeys.anonymouseUserID],
-      setting: Setting(data[UserPropertyKeys.settings]),
+      anonymousUserID:
+          firestoreDocumentData[UserFirestoreFieldKeys.anonymouseUserID],
+      setting: firestoreDocumentData[UserFirestoreFieldKeys.settings] != null
+          ? Setting.fromJson(
+              firestoreDocumentData[UserFirestoreFieldKeys.settings],
+            )
+          : null,
+      currentPillSheet:
+          firestoreDocumentData[UserFirestoreFieldKeys.currentPillSheet] != null
+              ? PillSheetModel.fromJson(
+                  firestoreDocumentData[
+                      UserFirestoreFieldKeys.currentPillSheet],
+                )
+              : null,
     );
   }
 
+  static User user() {
+    if (_cache == null) throw UserNotFound();
+    return _cache;
+  }
+
   static Future<User> fetch() {
+    if (_cache != null) {
+      return Future.value(_cache);
+    }
     return FirebaseFirestore.instance
         .collection(User.path)
         .doc(FirebaseAuth.instance.currentUser.uid)
@@ -42,8 +70,15 @@ class User {
       if (!document.exists) {
         throw UserNotFound();
       }
-      return User._map(document);
+      var user = User._map(document.data());
+      assert(_cache == null);
+      _cache = user;
+      return user;
     });
+  }
+
+  DocumentReference documentReference() {
+    return FirebaseFirestore.instance.collection(User.path).doc(documentID);
   }
 
   static Future<User> create() {
@@ -52,12 +87,21 @@ class User {
         .doc(FirebaseAuth.instance.currentUser.uid)
         .set(
       {
-        UserPropertyKeys.anonymouseUserID:
+        UserFirestoreFieldKeys.anonymouseUserID:
             FirebaseAuth.instance.currentUser.uid,
       },
     ).then((_) {
-      return User.fetch();
+      return User.user();
     });
+  }
+
+  Future<void> deleteCurrentPillSheet() {
+    return FirebaseFirestore.instance.collection(User.path).doc(documentID).set(
+      {
+        UserFirestoreFieldKeys.currentPillSheet: null,
+      },
+      SetOptions(merge: true),
+    ).then((_) => this.currentPillSheet = null);
   }
 }
 
@@ -70,11 +114,5 @@ extension UserInterface on User {
       throw FormatException(
           "cause exception when failed fetch and create user for $error");
     });
-  }
-
-  Future<void> updateSetting(Setting setting) {
-    return FirebaseFirestore.instance.collection(User.path).doc(documentID).set(
-        {UserPropertyKeys.settings: setting.settings},
-        SetOptions(merge: true)).then((_) => this.setting = setting);
   }
 }

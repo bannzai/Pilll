@@ -1,8 +1,11 @@
+import 'package:Pilll/main/components/pill/pill_mark.dart';
 import 'package:Pilll/main/components/pill_sheet_type_select_page.dart';
 import 'package:Pilll/main/components/setting_menstruation_page.dart';
-import 'package:Pilll/model/auth_user.dart';
 import 'package:Pilll/model/setting.dart';
+import 'package:Pilll/model/user.dart';
 import 'package:Pilll/settings/list/model.dart';
+import 'package:Pilll/settings/list/modifing_pill_number.dart';
+import 'package:Pilll/theme/button.dart';
 import 'package:Pilll/theme/color.dart';
 import 'package:Pilll/theme/font.dart';
 import 'package:Pilll/theme/text_color.dart';
@@ -10,6 +13,7 @@ import 'package:Pilll/util/formatter/date_time_formatter.dart';
 import 'package:Pilll/util/shared_preference/toolbar/date_time_picker.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:package_info/package_info.dart';
 import 'package:provider/provider.dart';
 import 'package:Pilll/model/pill_sheet_type.dart';
@@ -23,7 +27,7 @@ class Settings extends StatefulWidget {
 class _SettingsState extends State<Settings> {
   @override
   Widget build(BuildContext context) {
-    var setting = context.watch<AuthUser>().user.setting;
+    var user = context.watch<User>();
     return Scaffold(
       backgroundColor: PilllColors.background,
       appBar: AppBar(
@@ -31,24 +35,18 @@ class _SettingsState extends State<Settings> {
         backgroundColor: PilllColors.primary,
       ),
       body: Container(
-        child: ChangeNotifierProvider.value(
-          value: setting,
-          child: Consumer(
-              builder: (BuildContext context, Setting setting, Widget child) {
-            return ListView.separated(
-              itemBuilder: (BuildContext context, int index) {
-                return _section(
-                  setting,
-                  SettingSection.values[index],
-                );
-              },
-              separatorBuilder: (BuildContext context, int index) {
-                return _separatorItem();
-              },
-              itemCount: SettingSection.values.length,
-              addRepaintBoundaries: false,
+        child: ListView.separated(
+          itemBuilder: (BuildContext context, int index) {
+            return _section(
+              user,
+              SettingSection.values[index],
             );
-          }),
+          },
+          separatorBuilder: (BuildContext context, int index) {
+            return _separatorItem();
+          },
+          itemCount: SettingSection.values.length,
+          addRepaintBoundaries: false,
         ),
       ),
     );
@@ -71,12 +69,12 @@ class _SettingsState extends State<Settings> {
         break;
     }
     return ListTile(
-        title:
-            Text(text, style: FontType.assisting.merge(TextColorStyle.gray)));
+        title: Text(text,
+            style: FontType.assisting.merge(TextColorStyle.primary)));
   }
 
   List<SettingListRowModel> _rowModels(
-    Setting setting,
+    User user,
     SettingSection section,
   ) {
     switch (section) {
@@ -84,21 +82,94 @@ class _SettingsState extends State<Settings> {
         return [
           SettingListTitleAndContentRowModel(
             title: "種類",
-            content: setting.pillSheetType.name,
+            content: user.setting.pillSheetType.name,
             onTap: () {
               Navigator.of(context)
                   .push(MaterialPageRoute(builder: (BuildContext context) {
                 return PillSheetTypeSelectPage(
                   title: "種類",
                   callback: (type) {
-                    Navigator.pop(context);
-                    setting
-                        .notifyWith((setting) => setting.pillSheetType = type)
-                        .then((setting) => setting.save());
+                    setState(() {
+                      Navigator.pop(context);
+                      user.setting
+                          .notifyWith((model) =>
+                              model.pillSheetTypeRawPath = type.rawPath)
+                          .then((value) => value.save())
+                          .then((value) => user.setting = value);
+                    });
                   },
-                  selectedPillSheetType: setting.pillSheetType,
+                  selectedPillSheetType: user.setting.pillSheetType,
                 );
               }));
+            },
+          ),
+          SettingListTitleRowModel(
+              title: "今日飲むピル番号の変更",
+              onTap: () {
+                Navigator.of(context)
+                    .push(MaterialPageRoute(builder: (BuildContext context) {
+                  return ModifingPillNumberPage(
+                    markSelected: (number) {
+                      setState(() => user.currentPillSheet
+                          .resetTodayTakenPillNumber(number));
+                    },
+                    pillMarkTypeBuilder: (number) {
+                      return PillMarkType.normal;
+                    },
+                  );
+                }));
+              }),
+          SettingListTitleRowModel(
+              title: "ピルシートの破棄",
+              onTap: () {
+                showDialog(
+                  context: context,
+                  builder: (_) {
+                    return ConfirmDeletePillSheet(onDelete: () {
+                      _deleteCurrentPillSheet(user);
+                    });
+                  },
+                );
+              }),
+        ];
+      case SettingSection.notification:
+        return [
+          SettingsListSwitchRowModel(
+            title: "ピルの服用通知",
+            value: user.setting.isOnReminder,
+            onTap: () {
+              setState(() => user.setting
+                  .notifyWith((model) =>
+                      model.isOnReminder = !user.setting.isOnReminder)
+                  .then((value) => value.save())
+                  .then((value) => user.setting = value));
+            },
+          ),
+          SettingsListDatePickerRowModel(
+            title: "通知時刻",
+            content:
+                DateTimeFormatter.militaryTime(user.setting.reminderDateTime()),
+            onTap: () {
+              showModalBottomSheet(
+                context: context,
+                builder: (BuildContext context) {
+                  return DateTimePicker(
+                    initialDateTime: user.setting.reminderDateTime(),
+                    done: (dateTime) {
+                      setState(() {
+                        user.setting
+                            .notifyWith(
+                              (model) => model.reminderTime = ReminderTime(
+                                  hour: dateTime.hour, minute: dateTime.minute),
+                            )
+                            .then((value) => value.save())
+                            .then((value) => user.setting = value);
+                        Navigator.pop(context);
+                      });
+                    },
+                  );
+                },
+              );
             },
           ),
         ];
@@ -114,71 +185,35 @@ class _SettingsState extends State<Settings> {
                       doneText: null,
                       skip: null,
                       title: "生理について",
-                      selectedFromMenstruation: setting.fromMenstruation,
+                      model: SettingMenstruationPageModel(
+                        selectedFromMenstruation: user.setting.fromMenstruation,
+                        selectedDurationMenstruation:
+                            user.setting.durationMenstruation,
+                      ),
                       fromMenstructionDidDecide: (selectedFromMenstruction) {
                         setState(() {
-                          setting
-                              .notifyWith((setting) => setting
-                                  .fromMenstruation = selectedFromMenstruction)
-                              .then((setting) => setting.save());
-                          Navigator.pop(context);
+                          user.setting
+                              .notifyWith((model) => model.fromMenstruation =
+                                  selectedFromMenstruction)
+                              .then((value) => value.save())
+                              .then((value) => user.setting = value);
                         });
                       },
-                      selectedDurationMenstruation:
-                          setting.durationMenstruation,
                       durationMenstructionDidDecide:
                           (selectedDurationMenstruation) {
                         setState(() {
-                          setting
-                              .notifyWith((setting) =>
-                                  setting.durationMenstruation =
+                          user.setting
+                              .notifyWith((model) =>
+                                  model.durationMenstruation =
                                       selectedDurationMenstruation)
-                              .then((setting) => setting.save());
-                          Navigator.pop(context);
+                              .then((value) => value.save())
+                              .then((value) => user.setting = value);
                         });
                       },
                     );
                   },
                 ));
               }),
-        ];
-      case SettingSection.notification:
-        return [
-          SettingsListSwitchRowModel(
-            title: "ピルの服用通知",
-            value: setting.isOnReminder,
-            onTap: () {
-              setState(
-                () => setting
-                    .notifyWith((setting) =>
-                        setting.isOnReminder = !setting.isOnReminder)
-                    .then((setting) => setting.save()),
-              );
-            },
-          ),
-          SettingsListDatePickerRowModel(
-            title: "通知時刻",
-            content: DateTimeFormatter.militaryTime(setting.reminderDateTime()),
-            onTap: () {
-              showModalBottomSheet(
-                context: context,
-                builder: (BuildContext context) {
-                  return DateTimePicker(
-                    initialDateTime: setting.reminderDateTime(),
-                    done: (dateTime) {
-                      setting.notifyWith(
-                        (setting) {
-                          setting.reminderHour = dateTime.hour;
-                          setting.reminderMinute = dateTime.minute;
-                        },
-                      ).then((value) => value.save());
-                      Navigator.pop(context);
-                    },
-                  );
-                },
-              );
-            },
-          ),
         ];
       case SettingSection.other:
         return [
@@ -211,12 +246,16 @@ class _SettingsState extends State<Settings> {
     }
   }
 
-  Widget _section(Setting setting, SettingSection section) {
+  void _deleteCurrentPillSheet(User user) {
+    setState(() => user.deleteCurrentPillSheet());
+  }
+
+  Widget _section(User user, SettingSection section) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         _sectionTitle(section),
-        ..._rowModels(setting, section).map((e) => e.widget()),
+        ..._rowModels(user, section).map((e) => e.widget()),
       ],
     );
   }
@@ -225,6 +264,49 @@ class _SettingsState extends State<Settings> {
     return Container(
       height: 1,
       color: PilllColors.border,
+    );
+  }
+}
+
+class ConfirmDeletePillSheet extends StatelessWidget {
+  final Function() onDelete;
+
+  const ConfirmDeletePillSheet({Key key, @required this.onDelete})
+      : super(key: key);
+  @override
+  Widget build(BuildContext context) {
+    return AlertDialog(
+      title: SvgPicture.asset("images/alert_24.svg"),
+      content: SizedBox(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          mainAxisSize: MainAxisSize.min,
+          children: <Widget>[
+            Text("ピルシートを破棄しますか？",
+                style: FontType.subTitle.merge(TextColorStyle.black)),
+            SizedBox(
+              height: 15,
+            ),
+            Text("現在、服用記録をしているピルシートを削除します。",
+                style: FontType.assisting.merge(TextColorStyle.lightGray)),
+          ],
+        ),
+      ),
+      actions: <Widget>[
+        FlatButton(
+          child: Text("キャンセル", style: ButtonTextStyle.alertDone),
+          onPressed: () {
+            Navigator.of(context).pop();
+          },
+        ),
+        FlatButton(
+          child: Text("破棄する", style: ButtonTextStyle.alertDone),
+          onPressed: () {
+            onDelete();
+            Navigator.of(context).pop();
+          },
+        ),
+      ],
     );
   }
 }

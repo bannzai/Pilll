@@ -1,7 +1,7 @@
 import 'package:Pilll/theme/color.dart';
 import 'package:flutter/material.dart';
 
-enum SettingSection { pill, menstruation, notification, other }
+enum SettingSection { pill, notification, menstruation, other }
 enum SettingRowType { title, date }
 
 abstract class SettingListRowModel {
@@ -34,7 +34,7 @@ class SettingListTitleAndContentRowModel extends SettingListRowModel {
   Widget widget() {
     return ListTile(
       title: Text(title),
-      trailing: Text(content),
+      subtitle: Text(content),
       onTap: onTap,
     );
   }
@@ -73,7 +73,7 @@ class SettingsListDatePickerRowModel extends SettingListRowModel {
   Widget widget() {
     return ListTile(
       title: Text(title),
-      trailing: Text(content),
+      subtitle: Text(content),
       onTap: onTap,
     );
   }
