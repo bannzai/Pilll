@@ -75,7 +75,7 @@ class CalendarCard extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.end,
         children: <Widget>[
-          TertiaryButton(
+          SecondaryButton(
             text: "もっと見る",
             onPressed: () {},
           )
