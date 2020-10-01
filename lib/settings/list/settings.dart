@@ -117,7 +117,11 @@ class _SettingsState extends State<Settings> {
                   );
                 }));
               }),
-          SettingListTitleRowModel(title: "ピルシートの破棄", onTap: () {}),
+          SettingListTitleRowModel(
+              title: "ピルシートの破棄",
+              onTap: () {
+                _deleteCurrentPillSheet(user);
+              }),
         ];
       case SettingSection.notification:
         return [
@@ -231,6 +235,10 @@ class _SettingsState extends State<Settings> {
         assert(false);
         return null;
     }
+  }
+
+  void _deleteCurrentPillSheet(User user) {
+    setState(() => user.deleteCurrentPillSheet());
   }
 
   Widget _section(User user, SettingSection section) {

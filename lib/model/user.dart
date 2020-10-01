@@ -94,6 +94,15 @@ class User extends ChangeNotifier {
       return User.user();
     });
   }
+
+  Future<void> deleteCurrentPillSheet() {
+    return FirebaseFirestore.instance.collection(User.path).doc(documentID).set(
+      {
+        UserFirestoreFieldKeys.currentPillSheet: null,
+      },
+      SetOptions(merge: true),
+    ).then((_) => this.currentPillSheet = null);
+  }
 }
 
 extension UserInterface on User {
