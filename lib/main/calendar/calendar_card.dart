@@ -54,10 +54,11 @@ class CalendarCard extends StatelessWidget {
           IconButton(
             icon: SvgPicture.asset("images/help.svg"),
             onPressed: () {
-              Navigator.of(context).push(CupertinoPageRoute(
-                fullscreenDialog: true,
-                builder: (context) => CalendarHelpPage(),
-              ));
+              showDialog(
+                  context: context,
+                  builder: (_) {
+                    return CalendarHelpPage();
+                  });
             },
           ),
           SizedBox(width: 16),
