@@ -48,8 +48,8 @@ class RootState extends State<Root> {
         Navigator.popAndPushNamed(context, Routes.initialSetting);
         return;
       }
-      // Navigator.popAndPushNamed(context, Routes.main);
-      Navigator.popAndPushNamed(context, Routes.initialSetting);
+      Navigator.popAndPushNamed(context, Routes.main);
+      // Navigator.popAndPushNamed(context, Routes.initialSetting);
     });
   }
 
