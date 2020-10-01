@@ -1,5 +1,5 @@
-import 'package:Pilll/main/record/pill_sheet_model.dart';
-import 'package:Pilll/model/pill_sheet_type.dart';
+import 'package:Pilll/model/initial_setting.dart';
+import 'package:Pilll/model/user.dart';
 import 'package:Pilll/theme/color.dart';
 import 'package:firebase_analytics/firebase_analytics.dart';
 import 'package:firebase_analytics/observer.dart';
@@ -8,7 +8,6 @@ import 'package:intl/date_symbol_data_local.dart';
 import 'package:provider/provider.dart';
 
 import 'main/application/router.dart';
-import 'model/auth_user.dart';
 
 void main() {
   initializeDateFormatting('ja_JP');
@@ -22,10 +21,14 @@ class App extends StatelessWidget {
     FirebaseAnalytics analytics = FirebaseAnalytics();
     return MultiProvider(
       providers: [
-        ChangeNotifierProvider<PillSheetModel>(
-          create: (_) => MainPillSheetModel(PillSheetType.pillsheet_21),
+        ChangeNotifierProvider<InitialSettingModel>(
+          create: (_) => InitialSettingModel(),
+          lazy: true,
         ),
-        ChangeNotifierProvider<AuthUser>(create: (_) => AuthUser()),
+        ChangeNotifierProvider<User>(
+          create: (_) => User.user(),
+          lazy: true,
+        )
       ],
       child: MaterialApp(
         navigatorObservers: [

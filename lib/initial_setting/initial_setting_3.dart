@@ -1,10 +1,9 @@
 import 'package:Pilll/main/application/router.dart';
 import 'package:Pilll/main/components/setting_menstruation_page.dart';
-import 'package:Pilll/model/auth_user.dart';
 import 'package:Pilll/initial_setting/initial_setting_4.dart';
+import 'package:Pilll/model/initial_setting.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
 
 class InitialSetting3 extends StatefulWidget {
   @override
@@ -14,7 +13,7 @@ class InitialSetting3 extends StatefulWidget {
 class _InitialSetting3State extends State<InitialSetting3> {
   @override
   Widget build(BuildContext context) {
-    var model = Provider.of<AuthUser>(context, listen: false).user.setting;
+    var model = InitialSettingModel.watch(context);
     return SettingMenstruationPage(
       title: "3/4",
       doneText: "次へ",
@@ -28,24 +27,22 @@ class _InitialSetting3State extends State<InitialSetting3> {
         );
       },
       skip: () {
-        Provider.of<AuthUser>(context, listen: false)
-            .user
-            .setting
+        InitialSettingModel.read(context)
             .register()
             .then((_) => Router.endInitialSetting(context));
       },
-      selectedFromMenstruation: model.fromMenstruation,
+      model: SettingMenstruationPageModel(
+        selectedFromMenstruation: model.fromMenstruation,
+        selectedDurationMenstruation: model.durationMenstruation,
+      ),
       fromMenstructionDidDecide: (selectedFromMenstruction) {
         setState(() {
           model.fromMenstruation = selectedFromMenstruction;
-          Navigator.pop(context);
         });
       },
-      selectedDurationMenstruation: model.durationMenstruation,
       durationMenstructionDidDecide: (selectedDurationMenstruation) {
         setState(() {
           model.durationMenstruation = selectedDurationMenstruation;
-          Navigator.pop(context);
         });
       },
     );

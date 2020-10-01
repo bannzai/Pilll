@@ -1,17 +1,24 @@
 import 'package:Pilll/theme/color.dart';
 import 'package:Pilll/model/weekday.dart';
-import 'package:Pilll/main/record/pill_mark.dart';
+import 'package:Pilll/main/components/pill/pill_mark.dart';
 import 'package:Pilll/main/record/weekday_badge.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 typedef PillMarkSelected = void Function(int);
+typedef PillMarkTypeBuilder = PillMarkType Function(int);
 
 class PillSheet extends StatelessWidget {
   final bool isHideWeekdayLine;
+  final PillMarkTypeBuilder pillMarkTypeBuilder;
+  final PillMarkSelected markSelected;
 
-  const PillSheet({Key key, @required this.isHideWeekdayLine})
-      : super(key: key);
+  const PillSheet({
+    Key key,
+    @required this.isHideWeekdayLine,
+    @required this.pillMarkTypeBuilder,
+    @required this.markSelected,
+  }) : super(key: key);
   int _calcIndex(int row, int line) {
     return row + 1 + (line) * 7;
   }
@@ -26,10 +33,15 @@ class PillSheet extends StatelessWidget {
   }
 
   Widget _pillMarkWithNumber(int number) {
+    var type = pillMarkTypeBuilder(number);
     return Column(
       children: <Widget>[
         Text("$number", style: TextStyle(color: PilllColors.weekday)),
-        PillMark(number: number),
+        PillMark(
+            type: type,
+            tapped: () {
+              markSelected(number);
+            }),
       ],
     );
   }

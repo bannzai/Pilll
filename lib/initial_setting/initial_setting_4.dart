@@ -1,6 +1,5 @@
 import 'package:Pilll/main/application/router.dart';
-import 'package:Pilll/model/auth_user.dart';
-import 'package:Pilll/model/setting.dart';
+import 'package:Pilll/model/initial_setting.dart';
 import 'package:Pilll/theme/color.dart';
 import 'package:Pilll/theme/font.dart';
 import 'package:Pilll/theme/text_color.dart';
@@ -8,7 +7,6 @@ import 'package:Pilll/util/formatter/date_time_formatter.dart';
 import 'package:Pilll/util/shared_preference/toolbar/date_time_picker.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
 
 class InitialSetting4 extends StatefulWidget {
   @override
@@ -18,7 +16,7 @@ class InitialSetting4 extends StatefulWidget {
 class _InitialSetting4State extends State<InitialSetting4> {
   @override
   void initState() {
-    var model = Provider.of<AuthUser>(context, listen: false).user.setting;
+    var model = InitialSettingModel.read(context);
     if (_notYetSetTime(model)) {
       model.reminderHour = 22;
       model.reminderMinute = 0;
@@ -26,15 +24,12 @@ class _InitialSetting4State extends State<InitialSetting4> {
     super.initState();
   }
 
-  bool _notYetSetTime(Setting model) {
+  bool _notYetSetTime(InitialSettingModel model) {
     return model.reminderMinute == null || model.reminderHour == null;
   }
 
   Widget _time(BuildContext context) {
-    var dateTime = Provider.of<AuthUser>(context, listen: false)
-        .user
-        .setting
-        .reminderDateTime();
+    var dateTime = InitialSettingModel.watch(context).reminderDateTime();
     return Text(
       DateTimeFormatter.militaryTime(dateTime),
       style: FontType.largeNumber.merge(
@@ -47,7 +42,7 @@ class _InitialSetting4State extends State<InitialSetting4> {
   }
 
   void _showDurationModalSheet(BuildContext context) {
-    var model = Provider.of<AuthUser>(context, listen: false).user.setting;
+    var model = InitialSettingModel.read(context);
     showModalBottomSheet(
       context: context,
       builder: (BuildContext context) {
@@ -67,6 +62,7 @@ class _InitialSetting4State extends State<InitialSetting4> {
 
   @override
   Widget build(BuildContext context) {
+    var model = InitialSettingModel.watch(context);
     return Scaffold(
       backgroundColor: PilllColors.background,
       appBar: AppBar(
@@ -116,9 +112,6 @@ class _InitialSetting4State extends State<InitialSetting4> {
                       "設定",
                     ),
                     onPressed: () {
-                      var model = Provider.of<AuthUser>(context, listen: false)
-                          .user
-                          .setting;
                       model.isOnReminder = true;
                       model
                           .register()
@@ -129,9 +122,6 @@ class _InitialSetting4State extends State<InitialSetting4> {
                     child: Text("スキップ"),
                     textColor: TextColor.gray,
                     onPressed: () {
-                      var model = Provider.of<AuthUser>(context, listen: false)
-                          .user
-                          .setting;
                       model.isOnReminder = false;
                       model
                           .register()

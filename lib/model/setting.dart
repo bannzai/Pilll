@@ -1,95 +1,78 @@
 import 'package:Pilll/model/pill_sheet_type.dart';
 import 'package:Pilll/model/user.dart';
-import 'package:Pilll/util/shared_preference/keys.dart';
-import 'package:flutter/material.dart';
-import 'package:shared_preferences/shared_preferences.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:flutter/foundation.dart';
+import 'package:json_annotation/json_annotation.dart';
 
-class SettingKey {
-  static final String beginingMenstruationFromAfterFakePeriod =
-      "beginingMenstruationFromAfterFakePeriod";
-  static final String durationMenstruation = "durationMenstruation";
-  static final String reminderTime = "reminderTime";
-  static final String reminderTimeHour = "hour";
-  static final String reminderTimeMinute = "minute";
-  static final String isOnReminder = "isOnReminder";
-  static final String pillSheetTypeRawPath = "pillSheetTypeRawPath";
+part 'setting.g.dart';
+
+@JsonSerializable(explicitToJson: true)
+class ReminderTime {
+  final int hour;
+  final int minute;
+  ReminderTime({
+    @required this.hour,
+    @required this.minute,
+  })  : assert(hour != null),
+        assert(minute != null);
+
+  factory ReminderTime.fromJson(Map<String, dynamic> json) =>
+      _$ReminderTimeFromJson(json);
+  Map<String, dynamic> toJson() => _$ReminderTimeToJson(this);
 }
 
+@JsonSerializable(explicitToJson: true)
 class Setting extends ChangeNotifier {
-  PillSheetType pillSheetType;
+  String pillSheetTypeRawPath;
   int fromMenstruation;
   int durationMenstruation;
-  int reminderHour;
-  int reminderMinute;
+  ReminderTime reminderTime;
+
+  @JsonKey(defaultValue: false)
   bool isOnReminder = false;
 
-  factory Setting(Map<String, dynamic> rowData) {
-    return Setting._(rowData);
-  }
-  Setting._(Map<String, dynamic> rowData) {
-    if (rowData == null) {
-      return;
-    }
-    this.fromMenstruation =
-        rowData[SettingKey.beginingMenstruationFromAfterFakePeriod];
-    this.durationMenstruation = rowData[SettingKey.durationMenstruation];
-    this.reminderHour =
-        rowData[SettingKey.reminderTime][SettingKey.reminderTimeHour];
-    this.reminderMinute =
-        rowData[SettingKey.reminderTime][SettingKey.reminderTimeMinute];
-    this.isOnReminder = rowData[SettingKey.isOnReminder];
-    String pillSheetTypeRawPath = rowData[SettingKey.pillSheetTypeRawPath];
-    this.pillSheetType = pillSheetTypeRawPath == null
-        ? null
-        : PillSheetTypeFunctions.fromName(pillSheetTypeRawPath);
-  }
+  Setting({
+    @required this.pillSheetTypeRawPath,
+    @required this.fromMenstruation,
+    @required this.durationMenstruation,
+    @required this.reminderTime,
+    @required this.isOnReminder,
+  })  : assert(pillSheetTypeRawPath != null),
+        assert(fromMenstruation != null),
+        assert(durationMenstruation != null),
+        assert(reminderTime != null),
+        assert(isOnReminder != null);
 
-  Map<String, dynamic> get settings {
-    var settings = Map<String, dynamic>();
-    if (fromMenstruation != null)
-      settings[SettingKey.beginingMenstruationFromAfterFakePeriod] =
-          fromMenstruation;
-    if (durationMenstruation != null)
-      settings[SettingKey.durationMenstruation] = durationMenstruation;
-    if (reminderHour != null || reminderMinute != null)
-      settings[SettingKey.reminderTime] = {};
-    if (reminderHour != null)
-      settings[SettingKey.reminderTime][SettingKey.reminderTimeHour] =
-          reminderHour;
-    if (reminderMinute != null)
-      settings[SettingKey.reminderTime][SettingKey.reminderTimeMinute] =
-          reminderMinute;
-    if (isOnReminder != null) settings[SettingKey.isOnReminder] = isOnReminder;
-    if (pillSheetType != null)
-      settings[SettingKey.pillSheetTypeRawPath] = pillSheetType.name;
-    return settings;
-  }
+  factory Setting.fromJson(Map<String, dynamic> json) =>
+      _$SettingFromJson(json);
+  Map<String, dynamic> toJson() => _$SettingToJson(this);
 
-  Future<void> register() {
-    return UserInterface.fetchOrCreateUser().then((value) {
-      save()
-          .then((value) => null)
-          .then((_) => SharedPreferences.getInstance())
-          .then((storage) => storage.setString(
-              StringKey.firebaseAnonymousUserID, value.anonymousUserID));
-    });
-  }
+  PillSheetType get pillSheetType =>
+      PillSheetTypeFunctions.fromRawPath(pillSheetTypeRawPath);
 
-  Future<void> save() {
-    return UserInterface.fetchOrCreateUser().then((value) {
-      value.updateSetting(this);
-    });
-  }
-
-  Future<Setting> notifyWith(void update(Setting setting)) {
-    update(this);
-    notifyListeners();
-    return Future.value(this);
+  Future<Setting> save() {
+    return User.fetch().then((value) {
+      return FirebaseFirestore.instance
+          .collection(User.path)
+          .doc(value.documentID)
+          .set(
+        {
+          UserFirestoreFieldKeys.settings: toJson(),
+        },
+        SetOptions(merge: true),
+      );
+    }).then((_) => this);
   }
 
   DateTime reminderDateTime() {
     var t = DateTime.now().toLocal();
-    return DateTime(t.year, t.month, t.day, reminderHour, reminderMinute,
-        t.second, t.millisecond, t.microsecond);
+    return DateTime(t.year, t.month, t.day, reminderTime.hour,
+        reminderTime.minute, t.second, t.millisecond, t.microsecond);
+  }
+
+  Future<Setting> notifyWith(void update(Setting model)) {
+    update(this);
+    notifyListeners();
+    return Future.value(this);
   }
 }
