@@ -3,6 +3,7 @@ import 'package:Pilll/main/components/pill/pill_mark.dart';
 import 'package:Pilll/main/components/pill/pill_sheet.dart';
 import 'package:Pilll/main/record/record_taken_information.dart';
 import 'package:Pilll/settings/list/settings.dart';
+import 'package:Pilll/style/button.dart';
 import 'package:Pilll/theme/color.dart';
 import 'package:Pilll/theme/text_color.dart';
 import 'package:flutter/material.dart';
@@ -111,10 +112,8 @@ class _HomePageState extends State<HomePage>
           Container(
             height: 44,
             width: 180,
-            child: RaisedButton(
-              child: Text("飲んだ"),
-              color: PilllColors.primary,
-              textColor: Colors.white,
+            child: PrimaryButton(
+              text: "飲んだ",
               onPressed: () {},
             ),
           ),

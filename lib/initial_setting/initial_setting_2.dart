@@ -1,6 +1,7 @@
 import 'package:Pilll/main/application/router.dart';
 import 'package:Pilll/model/initial_setting.dart';
 import 'package:Pilll/model/setting.dart';
+import 'package:Pilll/style/button.dart';
 import 'package:Pilll/theme/color.dart';
 import 'package:Pilll/initial_setting/initial_setting_3.dart';
 import 'package:Pilll/main/components/pill/pill_sheet.dart';
@@ -65,10 +66,8 @@ class InitialSetting2 extends StatelessWidget {
                   children: <Widget>[
                     Consumer<InitialSettingModel>(
                       builder: (BuildContext context, model, Widget child) {
-                        return RaisedButton(
-                          child: Text(
-                            "次へ",
-                          ),
+                        return PrimaryButton(
+                          text: "次へ",
                           onPressed: model.todayPillNumber == null
                               ? null
                               : () {
@@ -83,9 +82,8 @@ class InitialSetting2 extends StatelessWidget {
                         );
                       },
                     ),
-                    FlatButton(
-                      child: Text("スキップ"),
-                      textColor: TextColor.gray,
+                    TertiaryButton(
+                      text: "スキップ",
                       onPressed: () {
                         InitialSettingModel.read(context)
                             .register()
