@@ -92,7 +92,7 @@ class User extends ChangeNotifier {
             FirebaseAuth.instance.currentUser.uid,
       },
     ).then((_) {
-      return User.user();
+      return User.fetch();
     });
   }
 
