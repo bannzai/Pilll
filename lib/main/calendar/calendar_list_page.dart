@@ -1,6 +1,7 @@
 import 'package:Pilll/main/calendar/calculator.dart';
 import 'package:Pilll/main/calendar/calendar.dart';
 import 'package:Pilll/main/calendar/calendar_band_model.dart';
+import 'package:Pilll/main/calendar/calendar_page.dart';
 import 'package:Pilll/theme/color.dart';
 import 'package:Pilll/theme/font.dart';
 import 'package:Pilll/theme/text_color.dart';
@@ -39,26 +40,24 @@ class CalendarListPage extends StatelessWidget {
   }
 
   List<Widget> _components(BuildContext context) {
-    var date = today();
-    var previousMonthDate = DateTime(date.year, date.month - 1, 1);
-    return [date, previousMonthDate].map((d) {
+    return models.map((model) {
       return Column(
         children: <Widget>[
-          _header(context, d),
-          _calendar(context, d),
+          _header(context, model),
+          _calendar(context, model),
         ],
       );
     }).toList();
   }
 
-  Widget _header(BuildContext context, DateTime date) {
+  Widget _header(BuildContext context, CalendarListPageModel model) {
     return ConstrainedBox(
       constraints: BoxConstraints.expand(height: 64),
       child: Row(
         children: [
           SizedBox(width: 16),
           Text(
-            DateTimeFormatter.yearAndMonth(date),
+            DateTimeFormatter.yearAndMonth(model.calculator.date),
             textAlign: TextAlign.left,
             style: FontType.cardHeader.merge(TextColorStyle.noshime),
           ),
@@ -68,7 +67,7 @@ class CalendarListPage extends StatelessWidget {
     );
   }
 
-  Widget _calendar(BuildContext context, DateTime date) {
-    return Calendar(calculator: Calculator(date), bandModels: []);
+  Widget _calendar(BuildContext context, CalendarListPageModel model) {
+    return Calendar(calculator: model.calculator, bandModels: model.bandModels);
   }
 }
