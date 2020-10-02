@@ -1,3 +1,5 @@
+import 'package:flutter/cupertino.dart';
+
 class DateRange {
   final DateTime begin;
   final DateTime end;
@@ -15,6 +17,10 @@ class DateRange {
     var l = begin.isAfter(range.begin) ? begin : range.begin;
     var r = end.isBefore(range.end) ? end : range.end;
     return DateRange(l, r);
+  }
+
+  T map<T extends dynamic>(T Function(DateRange) converter) {
+    return converter(this);
   }
 
   @override

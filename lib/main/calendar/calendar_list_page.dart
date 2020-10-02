@@ -1,5 +1,6 @@
 import 'package:Pilll/main/calendar/calculator.dart';
 import 'package:Pilll/main/calendar/calendar.dart';
+import 'package:Pilll/main/calendar/calendar_band_model.dart';
 import 'package:Pilll/theme/color.dart';
 import 'package:Pilll/theme/font.dart';
 import 'package:Pilll/theme/text_color.dart';
@@ -8,7 +9,18 @@ import 'package:Pilll/util/today.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
+class CalendarListPageModel {
+  final Calculator calculator;
+  final List<CalendarBandModel> bandModels;
+
+  CalendarListPageModel(this.calculator, this.bandModels);
+}
+
 class CalendarListPage extends StatelessWidget {
+  final List<CalendarListPageModel> models;
+
+  const CalendarListPage({Key key, @required this.models}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
