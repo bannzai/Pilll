@@ -107,18 +107,22 @@ class CalendarCard extends StatelessWidget {
     CalendarListPageModel previous =
         CalendarListPageModel(Calculator(DateTime(now.year, now.month, 1)), []);
     CalendarListPageModel current = CalendarListPageModel(Calculator(now), [
-      menstruationDateRange(user.currentPillSheet, user.setting, 0).map(
-          (dateRange) =>
-              CalendarMenstruationBandModel(dateRange.begin, dateRange.end)),
-      nextPillSheetDateRange(user.currentPillSheet, 0).map((dateRange) =>
-          CalendarNextPillSheetBandModel(dateRange.begin, dateRange.end))
+      if (user.currentPillSheet != null) ...[
+        menstruationDateRange(user.currentPillSheet, user.setting, 0).map(
+            (dateRange) =>
+                CalendarMenstruationBandModel(dateRange.begin, dateRange.end)),
+        nextPillSheetDateRange(user.currentPillSheet, 0).map((dateRange) =>
+            CalendarNextPillSheetBandModel(dateRange.begin, dateRange.end))
+      ]
     ]);
     CalendarListPageModel next = CalendarListPageModel(Calculator(now), [
-      menstruationDateRange(user.currentPillSheet, user.setting, 1).map(
-          (dateRange) =>
-              CalendarMenstruationBandModel(dateRange.begin, dateRange.end)),
-      nextPillSheetDateRange(user.currentPillSheet, 1).map((dateRange) =>
-          CalendarNextPillSheetBandModel(dateRange.begin, dateRange.end))
+      if (user.currentPillSheet != null) ...[
+        menstruationDateRange(user.currentPillSheet, user.setting, 1).map(
+            (dateRange) =>
+                CalendarMenstruationBandModel(dateRange.begin, dateRange.end)),
+        nextPillSheetDateRange(user.currentPillSheet, 1).map((dateRange) =>
+            CalendarNextPillSheetBandModel(dateRange.begin, dateRange.end))
+      ]
     ]);
     return ConstrainedBox(
       constraints: BoxConstraints.expand(height: 60),
