@@ -104,8 +104,8 @@ class CalendarCard extends StatelessWidget {
 
   Widget _more(BuildContext context, User user) {
     var now = today();
-    CalendarListPageModel previous =
-        CalendarListPageModel(Calculator(DateTime(now.year, now.month, 1)), []);
+    CalendarListPageModel previous = CalendarListPageModel(
+        Calculator(DateTime(now.year, now.month - 1, 1)), []);
     CalendarListPageModel current = CalendarListPageModel(Calculator(now), [
       if (user.currentPillSheet != null) ...[
         menstruationDateRange(user.currentPillSheet, user.setting, 0).map(
@@ -115,7 +115,8 @@ class CalendarCard extends StatelessWidget {
             CalendarNextPillSheetBandModel(dateRange.begin, dateRange.end))
       ]
     ]);
-    CalendarListPageModel next = CalendarListPageModel(Calculator(now), [
+    CalendarListPageModel next = CalendarListPageModel(
+        Calculator(DateTime(now.year, now.month + 1, 1)), [
       if (user.currentPillSheet != null) ...[
         menstruationDateRange(user.currentPillSheet, user.setting, 1).map(
             (dateRange) =>
