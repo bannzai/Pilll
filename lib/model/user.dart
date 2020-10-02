@@ -6,6 +6,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:meta/meta.dart';
+import 'package:provider/provider.dart';
 
 class UserNotFound implements Exception {
   toString() {
@@ -102,6 +103,10 @@ class User extends ChangeNotifier {
       },
       SetOptions(merge: true),
     ).then((_) => this.currentPillSheet = null);
+  }
+
+  static User watch(BuildContext context) {
+    return context.watch();
   }
 }
 
