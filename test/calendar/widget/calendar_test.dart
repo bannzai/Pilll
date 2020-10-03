@@ -39,6 +39,35 @@ void main() {
               DateRange.isSameDay(widget.model.end, model.end))),
           findsOneWidget);
     });
+    testWidgets('when showing 新しいシート開始 ▶︎ with linebreak',
+        (WidgetTester tester) async {
+      /*
+  30   31   1   2   3   4   5  
+
+   6    7   8   9  10  11  12  
+
+  13   14  15  16  17  18  19  
+                           == 
+  20   21  22  23  24  25  26  
+  =======
+  27   28  29  30  
+    */
+      var now = DateTime(2020, 09, 14);
+      var model = CalendarNextPillSheetBandModel(
+          DateTime(2020, 09, 19), DateTime(2020, 09, 21));
+      await tester.pumpWidget(
+        MaterialApp(
+          home: Calendar(calculator: Calculator(now), bandModels: [model]),
+        ),
+      );
+      expect(find.text("新しいシート開始 ▶︎"), findsOneWidget);
+      expect(find.byType(CalendarBand), findsNWidgets(2));
+      expect(
+          find.byWidgetPredicate((widget) => (widget is CalendarBand &&
+              DateRange.isSameDay(widget.model.begin, model.begin) &&
+              DateRange.isSameDay(widget.model.end, model.end))),
+          findsNWidgets(2));
+    });
     testWidgets('when showing new sheet label to next month',
         (WidgetTester tester) async {
       var now = DateTime(2020, 09, 14);
