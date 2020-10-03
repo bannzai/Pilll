@@ -1,5 +1,6 @@
 import 'package:Pilll/main/calendar/calculator.dart';
 import 'package:Pilll/main/calendar/calendar.dart';
+import 'package:Pilll/main/calendar/utility.dart';
 import 'package:Pilll/main/calendar/calendar_band_model.dart';
 import 'package:Pilll/main/calendar/calendar_help.dart';
 import 'package:Pilll/main/calendar/calendar_list_page.dart';
@@ -9,7 +10,6 @@ import 'package:Pilll/model/pill_sheet.dart';
 import 'package:Pilll/model/pill_sheet_type.dart';
 import 'package:Pilll/model/setting.dart';
 import 'package:Pilll/model/user.dart';
-import 'package:Pilll/model/weekday.dart';
 import 'package:Pilll/style/button.dart';
 import 'package:Pilll/theme/font.dart';
 import 'package:Pilll/theme/text_color.dart';
@@ -34,15 +34,13 @@ class CalendarCard extends StatelessWidget {
           Calendar(
             calculator: Calculator(date),
             bandModels: [
-              // TOOD:
-              CalendarMenstruationBandModel(
-                DateTime(2020, 09, 06),
-                DateTime(2020, 09, 09),
-              ),
-              CalendarNextPillSheetBandModel(
-                DateTime(2020, 09, 10),
-                DateTime(2020, 09, 16),
-              ),
+              if (user.currentPillSheet != null) ...[
+                menstruationDateRange(user.currentPillSheet, user.setting, 0)
+                    .map((range) =>
+                        CalendarMenstruationBandModel(range.begin, range.end)),
+                nextPillSheetDateRange(user.currentPillSheet, 0).map((range) =>
+                    CalendarNextPillSheetBandModel(range.begin, range.end)),
+              ]
             ],
           ),
           _more(context, user),
