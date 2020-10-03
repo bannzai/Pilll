@@ -4,6 +4,7 @@ import 'package:Pilll/main/calendar/calendar_band_model.dart';
 import 'package:Pilll/main/calendar/calendar_help.dart';
 import 'package:Pilll/main/calendar/calendar_list_page.dart';
 import 'package:Pilll/main/calendar/date_range.dart';
+import 'package:Pilll/main/calendar/utility.dart';
 import 'package:Pilll/model/pill_sheet.dart';
 import 'package:Pilll/model/pill_sheet_type.dart';
 import 'package:Pilll/model/setting.dart';
@@ -76,30 +77,6 @@ class CalendarCard extends StatelessWidget {
         ],
       ),
     );
-  }
-
-  DateRange menstruationDateRange(
-    PillSheetModel pillSheet,
-    Setting setting,
-    int page,
-  ) {
-    var offset = page * pillSheet.pillSheetType.totalCount;
-    var begin = pillSheet.beginingDate.add(Duration(
-        days: pillSheet.pillSheetType.dosingPeriod +
-            setting.fromMenstruation +
-            offset));
-    var end = begin.add(Duration(days: setting.durationMenstruation));
-    return DateRange(begin, end);
-  }
-
-  DateRange nextPillSheetDateRange(
-    PillSheetModel pillSheet,
-    int page,
-  ) {
-    var begin = pillSheet.beginingDate
-        .add(Duration(days: pillSheet.pillSheetType.totalCount * (page + 1)));
-    var end = begin.add(Duration(days: Weekday.values.length));
-    return DateRange(begin, end);
   }
 
   Widget _more(BuildContext context, User user) {
