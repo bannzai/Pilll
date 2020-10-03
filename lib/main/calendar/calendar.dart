@@ -87,7 +87,7 @@ class Calendar extends StatelessWidget {
           if (range.inRange(bandModel.begin) || range.inRange(bandModel.end)) {
             bool isLineBreak = !range.inRange(bandModel.begin);
             int start = isLineBreak
-                ? 0
+                ? calculator.previousMonthDayCount()
                 : bandModel.begin.difference(range.begin).inDays;
 
             var length =
