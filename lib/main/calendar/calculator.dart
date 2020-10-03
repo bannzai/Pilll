@@ -52,14 +52,14 @@ class Calculator {
     );
   }
 
-  bool isLineBreak(int line, DateTime begin) {
+  bool isLineBreaked(int line, DateTime date) {
     var range = dateRangeOfLine(line);
-    return !range.inRange(begin);
+    return !range.inRange(date);
   }
 
   int startPositionOfLine(int line, DateTime begin) {
     var range = dateRangeOfLine(line);
-    return isLineBreak(line, begin)
+    return isLineBreaked(line, begin)
         ? line == 1 ? previousMonthDayCount() : 0
         : begin.difference(range.begin).inDays;
   }
