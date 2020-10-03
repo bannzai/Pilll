@@ -105,7 +105,7 @@ void main() {
           1,
           DateTime.parse("2020-08-31"),
         ),
-        2,
+        1,
       );
       expect(
         calculator.offsetForStartPositionAtLine(
