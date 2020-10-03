@@ -60,7 +60,6 @@ class Calculator {
   }
 
   int offsetForStartPositionAtLine(int line, DateTime begin) {
-    if (line == 1) return previousMonthDayCount();
     var range = dateRangeOfLine(line);
     var isLineBreaked = notInRangeAtLine(line, begin);
     return isLineBreaked ? 0 : begin.difference(range.begin).inDays;
