@@ -52,7 +52,7 @@ class Calendar extends StatelessWidget {
                             disable: true,
                             weekday: weekday,
                             day: calculator
-                                .dateTimeForPreviousMonthTile(weekday)
+                                .dateTimeForPreviousMonthTile(weekday.index)
                                 .day);
                       }
                       int day = (line - 1) * CalendarConstants.weekdayCount +
@@ -87,7 +87,8 @@ class Calendar extends StatelessWidget {
           if (range.inRange(bandModel.begin) || range.inRange(bandModel.end)) {
             bool isLineBreaked =
                 calculator.notInRangeAtLine(line, bandModel.begin);
-            int start = calculator.offsetForStartPositionAtLine(line, bandModel.begin);
+            int start =
+                calculator.offsetForStartPositionAtLine(line, bandModel.begin);
 
             var length =
                 range.union(DateRange(bandModel.begin, bandModel.end)).days + 1;

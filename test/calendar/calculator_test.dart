@@ -23,9 +23,9 @@ void main() {
     */
     date = DateTime.parse("2020-09-14");
     test("#dateTimeForPreviousMonthTile", () {
-      expect(calculator.dateTimeForPreviousMonthTile(Weekday.Sunday),
+      expect(calculator.dateTimeForPreviousMonthTile(Weekday.Sunday.index),
           DateTime.parse("2020-08-30"));
-      expect(calculator.dateTimeForPreviousMonthTile(Weekday.Monday),
+      expect(calculator.dateTimeForPreviousMonthTile(Weekday.Monday.index),
           DateTime.parse("2020-08-31"));
     });
     test("#lastDay", () {

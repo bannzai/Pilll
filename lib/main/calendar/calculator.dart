@@ -10,15 +10,17 @@ class Calculator {
     return DateTime(date.year, date.month, 1);
   }
 
-  DateTime dateTimeForPreviousMonthTile(Weekday weekday) {
+  DateTime dateTimeForPreviousMonthTile(int offset) {
     var dateTimeForLastDayOfPreviousMonth = DateTime(date.year, date.month, 0);
-    var offset =
+    var lastDayForPreviousMonthWeekdayIndex =
         WeekdayFunctions.weekdayFromDate(dateTimeForLastDayOfPreviousMonth)
             .index;
     return DateTime(
         dateTimeForLastDayOfPreviousMonth.year,
         dateTimeForLastDayOfPreviousMonth.month,
-        dateTimeForLastDayOfPreviousMonth.day - offset + weekday.index);
+        dateTimeForLastDayOfPreviousMonth.day -
+            lastDayForPreviousMonthWeekdayIndex +
+            offset);
   }
 
   int lastDay() => DateTime(date.year, date.month + 1, 0).day;
