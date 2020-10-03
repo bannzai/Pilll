@@ -1,3 +1,4 @@
+import 'package:Pilll/style/button.dart';
 import 'package:Pilll/theme/color.dart';
 import 'package:Pilll/initial_setting/initial_setting_1.dart';
 import 'package:Pilll/theme/font.dart';
@@ -32,10 +33,8 @@ class InitialSetting extends StatelessWidget {
               Image(
                 image: AssetImage('images/initial_setting_pill_sheet.png'),
               ),
-              RaisedButton(
-                child: Text(
-                  "OK",
-                ),
+              PrimaryButton(
+                text: "OK",
                 onPressed: () {
                   Navigator.of(context).push(
                     MaterialPageRoute(
@@ -45,7 +44,7 @@ class InitialSetting extends StatelessWidget {
                     ),
                   );
                 },
-              )
+              ),
             ],
           ),
         ),

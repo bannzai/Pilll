@@ -1,5 +1,6 @@
 import 'package:Pilll/main/application/router.dart';
 import 'package:Pilll/model/initial_setting.dart';
+import 'package:Pilll/style/button.dart';
 import 'package:Pilll/theme/color.dart';
 import 'package:Pilll/theme/font.dart';
 import 'package:Pilll/theme/text_color.dart';
@@ -107,10 +108,8 @@ class _InitialSetting4State extends State<InitialSetting4> {
                 direction: Axis.vertical,
                 spacing: 8,
                 children: <Widget>[
-                  RaisedButton(
-                    child: Text(
-                      "設定",
-                    ),
+                  PrimaryButton(
+                    text: "設定",
                     onPressed: () {
                       model.isOnReminder = true;
                       model
@@ -118,9 +117,8 @@ class _InitialSetting4State extends State<InitialSetting4> {
                           .then((_) => Router.endInitialSetting(context));
                     },
                   ),
-                  FlatButton(
-                    child: Text("スキップ"),
-                    textColor: TextColor.gray,
+                  TertiaryButton(
+                    text: "スキップ",
                     onPressed: () {
                       model.isOnReminder = false;
                       model

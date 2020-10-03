@@ -10,15 +10,17 @@ class Calculator {
     return DateTime(date.year, date.month, 1);
   }
 
-  DateTime dateTimeForPreviousMonthTile(Weekday weekday) {
+  DateTime dateTimeForPreviousMonthTile(int offset) {
     var dateTimeForLastDayOfPreviousMonth = DateTime(date.year, date.month, 0);
-    var offset =
+    var lastDayForPreviousMonthWeekdayIndex =
         WeekdayFunctions.weekdayFromDate(dateTimeForLastDayOfPreviousMonth)
             .index;
     return DateTime(
         dateTimeForLastDayOfPreviousMonth.year,
         dateTimeForLastDayOfPreviousMonth.month,
-        dateTimeForLastDayOfPreviousMonth.day - offset + weekday.index);
+        dateTimeForLastDayOfPreviousMonth.day -
+            lastDayForPreviousMonthWeekdayIndex +
+            offset);
   }
 
   int lastDay() => DateTime(date.year, date.month + 1, 0).day;
@@ -31,7 +33,7 @@ class Calculator {
   DateRange dateRangeOfLine(int line) {
     if (line == 1) {
       return DateRange(
-        DateTime(date.year, date.month, 1),
+        DateTime(date.year, date.month, 1 - previousMonthDayCount()),
         DateTime(date.year, date.month,
             Weekday.values.length - previousMonthDayCount()),
       );
@@ -50,5 +52,16 @@ class Calculator {
       DateTime(date.year, date.month, beginDay),
       DateTime(date.year, date.month, endDay),
     );
+  }
+
+  bool notInRangeAtLine(int line, DateTime date) {
+    var range = dateRangeOfLine(line);
+    return !range.inRange(date);
+  }
+
+  int offsetForStartPositionAtLine(int line, DateTime begin) {
+    var range = dateRangeOfLine(line);
+    var isLineBreaked = notInRangeAtLine(line, begin);
+    return isLineBreaked ? 0 : begin.difference(range.begin).inDays;
   }
 }

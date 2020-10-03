@@ -52,7 +52,7 @@ class Calendar extends StatelessWidget {
                             disable: true,
                             weekday: weekday,
                             day: calculator
-                                .dateTimeForPreviousMonthTile(weekday)
+                                .dateTimeForPreviousMonthTile(weekday.index)
                                 .day);
                       }
                       int day = (line - 1) * CalendarConstants.weekdayCount +
@@ -85,10 +85,10 @@ class Calendar extends StatelessWidget {
     return bandModels
         .map((bandModel) {
           if (range.inRange(bandModel.begin) || range.inRange(bandModel.end)) {
-            bool isLineBreak = !range.inRange(bandModel.begin);
-            int start = isLineBreak
-                ? 0
-                : bandModel.begin.difference(range.begin).inDays;
+            bool isLineBreaked =
+                calculator.notInRangeAtLine(line, bandModel.begin);
+            int start =
+                calculator.offsetForStartPositionAtLine(line, bandModel.begin);
 
             var length =
                 range.union(DateRange(bandModel.begin, bandModel.end)).days + 1;
@@ -99,7 +99,8 @@ class Calendar extends StatelessWidget {
               width: tileWidth * length,
               bottom: 0,
               height: 15,
-              child: _band(bandModel, isLineBreak),
+              child:
+                  CalendarBand(model: bandModel, isLineBreaked: isLineBreaked),
             );
           }
           return null;
@@ -107,13 +108,25 @@ class Calendar extends StatelessWidget {
         .where((element) => element != null)
         .toList();
   }
+}
 
-  Widget _band(CalendarBandModel model, bool isLineBreak) {
+class CalendarBand extends StatelessWidget {
+  const CalendarBand({
+    Key key,
+    @required this.model,
+    @required this.isLineBreaked,
+  }) : super(key: key);
+
+  final CalendarBandModel model;
+  final bool isLineBreaked;
+
+  @override
+  Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(color: model.color),
       child: Container(
         padding: EdgeInsets.only(left: 10),
-        child: Text(isLineBreak ? "" : model.label,
+        child: Text(isLineBreaked ? "" : model.label,
             style: FontType.sSmallTitle.merge(TextColorStyle.white)),
       ),
     );
