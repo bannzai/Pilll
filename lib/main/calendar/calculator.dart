@@ -51,4 +51,16 @@ class Calculator {
       DateTime(date.year, date.month, endDay),
     );
   }
+
+  bool isLineBreak(int line, DateTime begin) {
+    var range = dateRangeOfLine(line);
+    return !range.inRange(begin);
+  }
+
+  int startPositionOfLine(int line, DateTime begin) {
+    var range = dateRangeOfLine(line);
+    return isLineBreak(line, begin)
+        ? line == 1 ? previousMonthDayCount() : 0
+        : begin.difference(range.begin).inDays;
+  }
 }
