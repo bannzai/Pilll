@@ -33,9 +33,7 @@ class Calculator {
   DateRange dateRangeOfLine(int line) {
     if (line == 1) {
       return DateRange(
-        previousMonthDayCount() == 0
-            ? DateTime(date.year, date.month, 1)
-            : dateTimeForPreviousMonthTile(previousMonthDayCount()),
+        DateTime(date.year, date.month, 1 - previousMonthDayCount()),
         DateTime(date.year, date.month,
             Weekday.values.length - previousMonthDayCount()),
       );

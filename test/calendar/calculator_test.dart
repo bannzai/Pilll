@@ -44,11 +44,11 @@ void main() {
     test("#lineCount", () {
       expect(calculator.lineCount(), 5);
     });
-    test("#dateRangeOfLine -> begin", () {
+    test("#dateRangeOfLine", () {
       expect(
         calculator.dateRangeOfLine(1),
         DateRange(
-          DateTime.parse("2020-09-01"),
+          DateTime.parse("2020-08-30"),
           DateTime.parse("2020-09-05"),
         ),
       );
