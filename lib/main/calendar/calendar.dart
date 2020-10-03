@@ -85,7 +85,8 @@ class Calendar extends StatelessWidget {
     return bandModels
         .map((bandModel) {
           if (range.inRange(bandModel.begin) || range.inRange(bandModel.end)) {
-            bool isLineBreak = calculator.isLineBreak(line, bandModel.begin);
+            bool isLineBreaked =
+                calculator.isLineBreaked(line, bandModel.begin);
             int start = calculator.startPositionOfLine(line, bandModel.begin);
 
             var length =
@@ -97,7 +98,8 @@ class Calendar extends StatelessWidget {
               width: tileWidth * length,
               bottom: 0,
               height: 15,
-              child: CalendarBand(model: bandModel, isLineBreak: isLineBreak),
+              child:
+                  CalendarBand(model: bandModel, isLineBreaked: isLineBreaked),
             );
           }
           return null;
@@ -111,11 +113,11 @@ class CalendarBand extends StatelessWidget {
   const CalendarBand({
     Key key,
     @required this.model,
-    @required this.isLineBreak,
+    @required this.isLineBreaked,
   }) : super(key: key);
 
   final CalendarBandModel model;
-  final bool isLineBreak;
+  final bool isLineBreaked;
 
   @override
   Widget build(BuildContext context) {
@@ -123,7 +125,7 @@ class CalendarBand extends StatelessWidget {
       decoration: BoxDecoration(color: model.color),
       child: Container(
         padding: EdgeInsets.only(left: 10),
-        child: Text(isLineBreak ? "" : model.label,
+        child: Text(isLineBreaked ? "" : model.label,
             style: FontType.sSmallTitle.merge(TextColorStyle.white)),
       ),
     );
