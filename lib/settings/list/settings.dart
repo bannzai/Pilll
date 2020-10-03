@@ -5,6 +5,7 @@ import 'package:Pilll/model/setting.dart';
 import 'package:Pilll/model/user.dart';
 import 'package:Pilll/settings/list/model.dart';
 import 'package:Pilll/settings/list/modifing_pill_number.dart';
+import 'package:Pilll/style/button.dart';
 import 'package:Pilll/theme/button.dart';
 import 'package:Pilll/theme/color.dart';
 import 'package:Pilll/theme/font.dart';
@@ -293,14 +294,14 @@ class ConfirmDeletePillSheet extends StatelessWidget {
         ),
       ),
       actions: <Widget>[
-        FlatButton(
-          child: Text("キャンセル", style: ButtonTextStyle.alertDone),
+        SecondaryButton(
+          text: "キャンセル",
           onPressed: () {
             Navigator.of(context).pop();
           },
         ),
-        FlatButton(
-          child: Text("破棄する", style: ButtonTextStyle.alertDone),
+        SecondaryButton(
+          text: "破棄する",
           onPressed: () {
             onDelete();
             Navigator.of(context).pop();

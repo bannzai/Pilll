@@ -10,11 +10,22 @@ void main() {
     calculator = Calculator(date);
   });
   group("2020-09-14", () {
+    /*
+  30   31   1   2   3   4   5  
+
+   6    7   8   9  10  11  12  
+
+  13   14  15  16  17  18  19  
+
+  20   21  22  23  24  25  26  
+
+  27   28  29  30
+    */
     date = DateTime.parse("2020-09-14");
     test("#dateTimeForPreviousMonthTile", () {
-      expect(calculator.dateTimeForPreviousMonthTile(Weekday.Sunday),
+      expect(calculator.dateTimeForPreviousMonthTile(Weekday.Sunday.index),
           DateTime.parse("2020-08-30"));
-      expect(calculator.dateTimeForPreviousMonthTile(Weekday.Monday),
+      expect(calculator.dateTimeForPreviousMonthTile(Weekday.Monday.index),
           DateTime.parse("2020-08-31"));
     });
     test("#lastDay", () {
@@ -33,11 +44,11 @@ void main() {
     test("#lineCount", () {
       expect(calculator.lineCount(), 5);
     });
-    test("#dateRangeOfLine -> begin", () {
+    test("#dateRangeOfLine", () {
       expect(
         calculator.dateRangeOfLine(1),
         DateRange(
-          DateTime.parse("2020-09-01"),
+          DateTime.parse("2020-08-30"),
           DateTime.parse("2020-09-05"),
         ),
       );
@@ -68,6 +79,54 @@ void main() {
           DateTime.parse("2020-09-27"),
           DateTime.parse("2020-09-30"),
         ),
+      );
+    });
+    test("#notInRangeAtLine", () {
+      expect(
+        calculator.notInRangeAtLine(1, DateTime.parse("2020-08-31")),
+        false,
+      );
+      expect(
+        calculator.notInRangeAtLine(1, DateTime.parse("2020-09-01")),
+        false,
+      );
+      expect(
+        calculator.notInRangeAtLine(4, DateTime.parse("2020-09-19")),
+        true,
+      );
+      expect(
+        calculator.notInRangeAtLine(3, DateTime.parse("2020-09-19")),
+        false,
+      );
+    });
+    test("#offsetForStartPositionAtLine", () {
+      expect(
+        calculator.offsetForStartPositionAtLine(
+          1,
+          DateTime.parse("2020-08-31"),
+        ),
+        1,
+      );
+      expect(
+        calculator.offsetForStartPositionAtLine(
+          1,
+          DateTime.parse("2020-09-01"),
+        ),
+        2,
+      );
+      expect(
+        calculator.offsetForStartPositionAtLine(
+          4,
+          DateTime.parse("2020-09-19"),
+        ),
+        0,
+      );
+      expect(
+        calculator.offsetForStartPositionAtLine(
+          3,
+          DateTime.parse("2020-09-19"),
+        ),
+        6,
       );
     });
   });

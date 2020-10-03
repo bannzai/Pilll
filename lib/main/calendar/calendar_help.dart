@@ -1,3 +1,5 @@
+import 'package:Pilll/style/button.dart';
+import 'package:Pilll/theme/button.dart';
 import 'package:Pilll/theme/color.dart';
 import 'package:Pilll/theme/font.dart';
 import 'package:Pilll/theme/text_color.dart';
@@ -80,72 +82,48 @@ extension CalendarHelpPageRowFunctions on CalendarHelpPageRow {
 class CalendarHelpPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: PilllColors.modalBackground,
-      body: Center(
-        child: Container(
-          width: 280,
-          height: 267,
-          child: Stack(
-            fit: StackFit.expand,
-            children: <Widget>[
-              Card(
-                child: Row(
+    return AlertDialog(
+      title: Text(
+        "アイコンの説明",
+        style: FontType.subTitle.merge(TextColorStyle.black),
+      ),
+      content: Column(
+        mainAxisSize: MainAxisSize.min,
+        mainAxisAlignment: MainAxisAlignment.start,
+        children: <Widget>[
+          ...CalendarHelpPageRow.values.map((e) {
+            return Column(
+              children: <Widget>[
+                SizedBox(height: 16),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
                   children: <Widget>[
-                    SizedBox(width: 16),
-                    Column(
-                      mainAxisSize: MainAxisSize.max,
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: <Widget>[
-                        SizedBox(height: 16),
-                        Text(
-                          "アイコンの説明",
-                          style: FontType.subTitle.merge(TextColorStyle.black),
-                        ),
-                        ...CalendarHelpPageRow.values.map((e) {
-                          return Row(
-                            mainAxisAlignment: MainAxisAlignment.start,
-                            children: <Widget>[
-                              ConstrainedBox(
-                                constraints: BoxConstraints.expand(
-                                  width: 40,
-                                  height: 12,
-                                ),
-                                child: Center(
-                                  child: e.icon(),
-                                ),
-                              ),
-                              SizedBox(width: 16),
-                              e.title(),
-                            ],
-                          );
-                        }),
-                        SizedBox(height: 44),
-                      ],
+                    ConstrainedBox(
+                      constraints: BoxConstraints.expand(
+                        width: 40,
+                        height: 12,
+                      ),
+                      child: Center(
+                        child: e.icon(),
+                      ),
                     ),
+                    SizedBox(width: 16),
+                    e.title(),
                   ],
                 ),
-              ),
-              Positioned(
-                right: 14,
-                bottom: 18,
-                child: ButtonTheme(
-                  minWidth: 44,
-                  height: 20,
-                  child: FlatButton(
-                    child: Text("閉じる",
-                        style: TextColorStyle.primary.merge(FontType.close)),
-                    onPressed: () {
-                      Navigator.of(context).pop();
-                    },
-                  ),
-                ),
-              ),
-            ],
-          ),
-        ),
+              ],
+            );
+          }),
+        ],
       ),
+      actions: <Widget>[
+        SecondaryButton(
+          text: "閉じる",
+          onPressed: () {
+            Navigator.of(context).pop();
+          },
+        ),
+      ],
     );
   }
 }
