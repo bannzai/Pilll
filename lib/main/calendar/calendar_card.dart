@@ -34,6 +34,8 @@ class CalendarCard extends StatelessWidget {
           Calendar(
             calculator: Calculator(date),
             bandModels: [
+              CalendarMenstruationBandModel(
+                  DateTime(2020, 10, 28), DateTime(2020, 11, 2)),
               if (user.currentPillSheet != null) ...[
                 menstruationDateRange(user.currentPillSheet, user.setting, 0)
                     .map((range) =>

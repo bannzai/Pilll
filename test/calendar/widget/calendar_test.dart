@@ -21,6 +21,7 @@ void main() {
         ),
       );
       expect(find.text("新しいシート開始 ▶︎"), findsOneWidget);
+      expect(find.byType(CalendarBand), findsWidgets);
     });
     testWidgets('when showing new sheet label to next month',
         (WidgetTester tester) async {
@@ -33,7 +34,8 @@ void main() {
           ]),
         ),
       );
-      expect(find.text("新しいシート開始 ▶︎"), isNot(findsOneWidget));
+      expect(find.text("新しいシート開始 ▶︎"), isNot(findsWidgets));
+      expect(find.byType(CalendarBand), isNot(findsWidgets));
     });
     testWidgets('when showing new sheet label to before month',
         (WidgetTester tester) async {
@@ -46,7 +48,8 @@ void main() {
           ]),
         ),
       );
-      expect(find.text("新しいシート開始 ▶︎"), isNot(findsOneWidget));
+      expect(find.text("新しいシート開始 ▶︎"), isNot(findsWidgets));
+      expect(find.byType(CalendarBand), isNot(findsWidgets));
     });
   });
 }
