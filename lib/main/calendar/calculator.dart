@@ -52,15 +52,15 @@ class Calculator {
     );
   }
 
-  bool isLineBreaked(int line, DateTime date) {
+  bool notInRangeAtLine(int line, DateTime date) {
     var range = dateRangeOfLine(line);
     return !range.inRange(date);
   }
 
-  int startPositionOfLine(int line, DateTime begin) {
+  int offsetForStartPositionAtLine(int line, DateTime begin) {
+    if (line == 1) return previousMonthDayCount();
     var range = dateRangeOfLine(line);
-    return isLineBreaked(line, begin)
-        ? line == 1 ? previousMonthDayCount() : 0
-        : begin.difference(range.begin).inDays;
+    var isLineBreaked = notInRangeAtLine(line, begin);
+    return isLineBreaked ? 0 : begin.difference(range.begin).inDays;
   }
 }
