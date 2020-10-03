@@ -83,6 +83,10 @@ void main() {
     });
     test("#notInRangeAtLine", () {
       expect(
+        calculator.notInRangeAtLine(1, DateTime.parse("2020-08-31")),
+        false,
+      );
+      expect(
         calculator.notInRangeAtLine(1, DateTime.parse("2020-09-01")),
         false,
       );
@@ -96,6 +100,13 @@ void main() {
       );
     });
     test("#offsetForStartPositionAtLine", () {
+      expect(
+        calculator.offsetForStartPositionAtLine(
+          1,
+          DateTime.parse("2020-08-31"),
+        ),
+        2,
+      );
       expect(
         calculator.offsetForStartPositionAtLine(
           1,
