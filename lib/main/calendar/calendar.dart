@@ -99,7 +99,7 @@ class Calendar extends StatelessWidget {
               width: tileWidth * length,
               bottom: 0,
               height: 15,
-              child: _band(bandModel, isLineBreak),
+              child: CalendarBand(model: bandModel, isLineBreak: isLineBreak),
             );
           }
           return null;
@@ -107,8 +107,20 @@ class Calendar extends StatelessWidget {
         .where((element) => element != null)
         .toList();
   }
+}
 
-  Widget _band(CalendarBandModel model, bool isLineBreak) {
+class CalendarBand extends StatelessWidget {
+  const CalendarBand({
+    Key key,
+    @required this.model,
+    @required this.isLineBreak,
+  }) : super(key: key);
+
+  final CalendarBandModel model;
+  final bool isLineBreak;
+
+  @override
+  Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(color: model.color),
       child: Container(
