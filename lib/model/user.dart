@@ -17,7 +17,7 @@ class UserNotFound implements Exception {
 extension UserFirestoreFieldKeys on String {
   static final anonymouseUserID = "anonymouseUserID";
   static final settings = "settings";
-  static final currentPillSheet = "pillSheet";
+  static final pillSheets = "pillSheets";
 }
 
 class User extends ChangeNotifier {
@@ -27,13 +27,13 @@ class User extends ChangeNotifier {
   final String anonymousUserID;
   String get documentID => anonymousUserID;
   Setting setting;
-  PillSheetModel currentPillSheet;
+  PillSheetModel get currentPillSheet => pillSheets.last;
+  List<PillSheetModel> pillSheets;
 
-  User._({
-    @required this.anonymousUserID,
-    @required this.setting,
-    @required this.currentPillSheet,
-  });
+  User._(
+      {@required this.anonymousUserID,
+      @required this.setting,
+      @required this.pillSheets});
 
   static User _map(Map<String, dynamic> firestoreDocumentData) {
     return User._(
@@ -44,12 +44,12 @@ class User extends ChangeNotifier {
               firestoreDocumentData[UserFirestoreFieldKeys.settings],
             )
           : null,
-      currentPillSheet:
-          firestoreDocumentData[UserFirestoreFieldKeys.currentPillSheet] != null
-              ? PillSheetModel.fromJson(
-                  firestoreDocumentData[
-                      UserFirestoreFieldKeys.currentPillSheet],
-                )
+      pillSheets:
+          firestoreDocumentData[UserFirestoreFieldKeys.pillSheets] != null
+              ? List(firestoreDocumentData[UserFirestoreFieldKeys.pillSheets])
+                  .map((value) {
+                  return PillSheetModel.fromJson(value);
+                })
               : null,
     );
   }
@@ -97,12 +97,15 @@ class User extends ChangeNotifier {
   }
 
   Future<void> deleteCurrentPillSheet() {
-    return FirebaseFirestore.instance.collection(User.path).doc(documentID).set(
-      {
-        UserFirestoreFieldKeys.currentPillSheet: null,
-      },
-      SetOptions(merge: true),
-    ).then((_) => this.currentPillSheet = null);
+    // TODO:
+    assert(false);
+    return Future.value();
+    // return FirebaseFirestore.instance.collection(User.path).doc(documentID).set(
+    //   {
+    //     UserFirestoreFieldKeys.pillSheets: null,
+    //   },
+    //   SetOptions(merge: true),
+    // ).then((_) => this.pillSheets = null);
   }
 
   static User watch(BuildContext context) {
