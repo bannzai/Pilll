@@ -1,7 +1,6 @@
 import 'package:Pilll/main/application/router.dart';
 import 'package:Pilll/model/app_state.dart';
 import 'package:Pilll/model/initial_setting.dart';
-import 'package:Pilll/model/setting.dart';
 import 'package:Pilll/style/button.dart';
 import 'package:Pilll/theme/color.dart';
 import 'package:Pilll/initial_setting/initial_setting_3.dart';

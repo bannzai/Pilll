@@ -1,8 +1,5 @@
 import 'package:Pilll/model/app_state.dart';
-import 'package:Pilll/model/initial_setting.dart';
-import 'package:Pilll/model/user.dart';
 import 'package:Pilll/theme/color.dart';
-import 'package:Pilll/theme/text_color.dart';
 import 'package:firebase_analytics/firebase_analytics.dart';
 import 'package:firebase_analytics/observer.dart';
 import 'package:flutter/material.dart';

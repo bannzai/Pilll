@@ -1,10 +1,6 @@
 import 'package:Pilll/main/calendar/calendar_page.dart';
-import 'package:Pilll/main/components/pill/pill_mark.dart';
-import 'package:Pilll/main/components/pill/pill_sheet.dart';
 import 'package:Pilll/main/record/record_page.dart';
-import 'package:Pilll/main/record/record_taken_information.dart';
 import 'package:Pilll/settings/list/settings.dart';
-import 'package:Pilll/style/button.dart';
 import 'package:Pilll/theme/color.dart';
 import 'package:Pilll/theme/text_color.dart';
 import 'package:flutter/material.dart';
