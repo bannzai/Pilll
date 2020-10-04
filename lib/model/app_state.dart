@@ -15,7 +15,8 @@ class AppState extends ChangeNotifier {
   InitialSettingModel get initialSetting => _initialSetting;
 
   User get user {
-    assert(_user != null);
+    assert(_user != null,
+        "you should call fetch and caching user before call this property. ");
     if (_user == null) throw UserNotFound();
     return _user;
   }
@@ -41,8 +42,7 @@ extension UserInterface on AppState {
   static Future<User> fetchOrCreateUser() {
     return UserInterface._fetch().catchError((error) {
       if (error is UserNotFound) {
-        return UserInterface._create().then((_) => UserInterface._fetch()
-            .then((user) => AppState.shared._user = user));
+        return UserInterface._create().then((_) => UserInterface._fetch());
       }
       throw FormatException(
           "cause exception when failed fetch and create user for $error");
@@ -50,7 +50,8 @@ extension UserInterface on AppState {
   }
 
   static Future<void> _create() {
-    assert(AppState.shared._user == null);
+    assert(AppState.shared._user == null,
+        "user already exists on process. maybe you will call fetch before create");
     if (AppState.shared._user != null) throw UserAlreadyExists();
     return FirebaseFirestore.instance
         .collection(User.path)
@@ -77,6 +78,9 @@ extension UserInterface on AppState {
         throw UserNotFound();
       }
       var user = User.map(document.data());
+      assert(AppState.shared._user == null,
+          "you should early return cached user. e.g) this function top level");
+      AppState.shared._user = user;
       return user;
     });
   }
