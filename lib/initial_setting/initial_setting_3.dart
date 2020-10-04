@@ -27,8 +27,7 @@ class _InitialSetting3State extends State<InitialSetting3> {
         );
       },
       skip: () {
-        AppState.read(context)
-            .initialSetting
+        model.initialSetting
             .register()
             .then((_) => Router.endInitialSetting(context));
       },

@@ -13,11 +13,12 @@ class InitialSetting1 extends StatefulWidget {
 class _InitialSetting1State extends State<InitialSetting1> {
   @override
   Widget build(BuildContext context) {
+    var state = AppState.watch(context);
     return PillSheetTypeSelectPage(
       title: "1/4",
       callback: (type) {
         setState(() {
-          AppState.read(context).initialSetting.pillSheetType = type;
+          state.initialSetting.pillSheetType = type;
           Navigator.of(context)
               .push(MaterialPageRoute(builder: (BuildContext context) {
             return InitialSetting2();
