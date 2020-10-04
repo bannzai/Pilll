@@ -66,40 +66,21 @@ class RecordTakenInformation extends StatelessWidget {
     return Column(
       mainAxisAlignment: MainAxisAlignment.center,
       children: <Widget>[
-        Container(
-          height: 20,
-          width: 80,
-          child: Center(
-            child: Text("今日飲むピル",
-                style: TextStyle(
-                    fontSize: 10,
-                    fontWeight: FontWeight.w600,
-                    fontFamily: FontFamily.japanese)),
-          ),
-          decoration: BoxDecoration(
-              border: Border.all(), borderRadius: BorderRadius.circular(20)),
+        Text(
+          "💊 今日飲むピル",
+          style: FontType.assisting.merge(TextColorStyle.noshime),
         ),
+        SizedBox(height: 4),
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.baseline,
           textBaseline: TextBaseline.ideographic,
           children: <Widget>[
-            Text(
-              "${_calcTodayPillNumber()}",
-              style: TextStyle(
-                fontFamily: FontFamily.number,
-                fontWeight: FontWeight.normal,
-                fontSize: 40,
-              ),
-            ),
-            Text(
-              "番",
-              style: TextStyle(
-                fontFamily: FontFamily.japanese,
-                fontWeight: FontWeight.w300,
-                fontSize: 14,
-              ),
-            ),
+            Text("${_calcTodayPillNumber()}",
+                style: FontType.xHugeNumber.merge(TextColorStyle.main)),
+            SizedBox(width: 4),
+            Text("番",
+                style: FontType.assistingBold.merge(TextColorStyle.noshime)),
           ],
         )
       ],
