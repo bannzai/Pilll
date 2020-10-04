@@ -13,7 +13,8 @@ class RecordTakenInformation extends StatelessWidget {
     @required this.today,
     @required this.beginingTakenDate,
     @required this.lastTakenDate,
-  }) : super(key: key);
+  })  : assert(today != null),
+        super(key: key);
 
   String _formattedToday() => DateTimeFormatter.monthAndDay(this.today);
 
