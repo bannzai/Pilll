@@ -69,10 +69,4 @@ class Setting extends ChangeNotifier {
     return DateTime(t.year, t.month, t.day, reminderTime.hour,
         reminderTime.minute, t.second, t.millisecond, t.microsecond);
   }
-
-  Future<Setting> notifyWith(void update(Setting model)) {
-    update(this);
-    notifyListeners();
-    return Future.value(this);
-  }
 }

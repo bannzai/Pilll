@@ -1,6 +1,7 @@
 import 'package:Pilll/main/components/pill/pill_mark.dart';
 import 'package:Pilll/main/components/pill_sheet_type_select_page.dart';
 import 'package:Pilll/main/components/setting_menstruation_page.dart';
+import 'package:Pilll/model/app_state.dart';
 import 'package:Pilll/model/setting.dart';
 import 'package:Pilll/model/user.dart';
 import 'package:Pilll/settings/list/model.dart';
@@ -28,7 +29,6 @@ class Settings extends StatefulWidget {
 class _SettingsState extends State<Settings> {
   @override
   Widget build(BuildContext context) {
-    var user = context.watch<User>();
     return Scaffold(
       backgroundColor: PilllColors.background,
       appBar: AppBar(
@@ -39,7 +39,6 @@ class _SettingsState extends State<Settings> {
         child: ListView.separated(
           itemBuilder: (BuildContext context, int index) {
             return _section(
-              user,
               SettingSection.values[index],
             );
           },
@@ -74,10 +73,9 @@ class _SettingsState extends State<Settings> {
             style: FontType.assisting.merge(TextColorStyle.primary)));
   }
 
-  List<SettingListRowModel> _rowModels(
-    User user,
-    SettingSection section,
-  ) {
+  List<SettingListRowModel> _rowModels(SettingSection section) {
+    var state = AppState.watch(context);
+    var user = state.user;
     switch (section) {
       case SettingSection.pill:
         return [
@@ -92,10 +90,10 @@ class _SettingsState extends State<Settings> {
                   callback: (type) {
                     setState(() {
                       Navigator.pop(context);
-                      user.setting
-                          .notifyWith((model) =>
-                              model.pillSheetTypeRawPath = type.rawPath)
-                          .then((value) => value.save())
+                      state
+                          .notifyWith((model) => model
+                              .user.setting.pillSheetTypeRawPath = type.rawPath)
+                          .then((value) => value.user.setting.save())
                           .then((value) => user.setting = value);
                     });
                   },
@@ -139,10 +137,10 @@ class _SettingsState extends State<Settings> {
             title: "ピルの服用通知",
             value: user.setting.isOnReminder,
             onTap: () {
-              setState(() => user.setting
-                  .notifyWith((model) =>
-                      model.isOnReminder = !user.setting.isOnReminder)
-                  .then((value) => value.save())
+              setState(() => state
+                  .notifyWith((model) => model.user.setting.isOnReminder =
+                      !user.setting.isOnReminder)
+                  .then((value) => value.user.setting.save())
                   .then((value) => user.setting = value));
             },
           ),
@@ -158,12 +156,14 @@ class _SettingsState extends State<Settings> {
                     initialDateTime: user.setting.reminderDateTime(),
                     done: (dateTime) {
                       setState(() {
-                        user.setting
+                        state
                             .notifyWith(
-                              (model) => model.reminderTime = ReminderTime(
-                                  hour: dateTime.hour, minute: dateTime.minute),
+                              (model) => model.user.setting.reminderTime =
+                                  ReminderTime(
+                                      hour: dateTime.hour,
+                                      minute: dateTime.minute),
                             )
-                            .then((value) => value.save())
+                            .then((value) => value.user.setting.save())
                             .then((value) => user.setting = value);
                         Navigator.pop(context);
                       });
@@ -193,21 +193,21 @@ class _SettingsState extends State<Settings> {
                       ),
                       fromMenstructionDidDecide: (selectedFromMenstruction) {
                         setState(() {
-                          user.setting
-                              .notifyWith((model) => model.fromMenstruation =
-                                  selectedFromMenstruction)
-                              .then((value) => value.save())
+                          state
+                              .notifyWith((model) => model.user.setting
+                                  .fromMenstruation = selectedFromMenstruction)
+                              .then((value) => value.user.setting.save())
                               .then((value) => user.setting = value);
                         });
                       },
                       durationMenstructionDidDecide:
                           (selectedDurationMenstruation) {
                         setState(() {
-                          user.setting
+                          state
                               .notifyWith((model) =>
-                                  model.durationMenstruation =
+                                  model.user.setting.durationMenstruation =
                                       selectedDurationMenstruation)
-                              .then((value) => value.save())
+                              .then((value) => value.user.setting.save())
                               .then((value) => user.setting = value);
                         });
                       },
@@ -251,12 +251,12 @@ class _SettingsState extends State<Settings> {
     setState(() => user.deleteCurrentPillSheet());
   }
 
-  Widget _section(User user, SettingSection section) {
+  Widget _section(SettingSection section) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         _sectionTitle(section),
-        ..._rowModels(user, section).map((e) => e.widget()),
+        ..._rowModels(section).map((e) => e.widget()),
       ],
     );
   }
