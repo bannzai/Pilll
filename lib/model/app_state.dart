@@ -1,5 +1,7 @@
 import 'package:Pilll/model/initial_setting.dart';
 import 'package:Pilll/model/user.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_auth/firebase_auth.dart' as auth;
 import 'package:provider/provider.dart';
 import 'package:flutter/material.dart';
 
@@ -9,10 +11,16 @@ class AppState extends ChangeNotifier {
   AppState._internal();
   static get shared => _instance;
 
-  InitialSettingModel _initialSetting = InitialSettingModel();
+  final InitialSettingModel _initialSetting = InitialSettingModel();
   InitialSettingModel get initialSetting => _initialSetting;
 
-  User get user => User.user();
+  User get user {
+    assert(_user != null);
+    if (_user == null) throw UserNotFound();
+    return _user;
+  }
+
+  User _user;
 
   static AppState watch(BuildContext context) {
     return context.watch();
@@ -26,5 +34,48 @@ class AppState extends ChangeNotifier {
     update(this);
     notifyListeners();
     return Future.value(this);
+  }
+}
+
+extension UserInterface on AppState {
+  static Future<User> fetchOrCreateUser() {
+    return UserInterface._fetch().catchError((error) {
+      if (error is UserNotFound) {
+        return UserInterface._create().then((_) => UserInterface._fetch()
+            .then((user) => AppState.shared._user = user));
+      }
+      throw FormatException(
+          "cause exception when failed fetch and create user for $error");
+    });
+  }
+
+  static Future<void> _create() {
+    return FirebaseFirestore.instance
+        .collection(User.path)
+        .doc(auth.FirebaseAuth.instance.currentUser.uid)
+        .set(
+      {
+        UserFirestoreFieldKeys.anonymouseUserID:
+            auth.FirebaseAuth.instance.currentUser.uid,
+      },
+    );
+  }
+
+  static Future<User> _fetch() {
+    if (AppState.shared._user != null) {
+      return Future.value(AppState.shared._user);
+    }
+
+    return FirebaseFirestore.instance
+        .collection(User.path)
+        .doc(auth.FirebaseAuth.instance.currentUser.uid)
+        .get()
+        .then((document) {
+      if (!document.exists) {
+        throw UserNotFound();
+      }
+      var user = User.map(document.data());
+      return user;
+    });
   }
 }
