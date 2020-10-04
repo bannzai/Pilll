@@ -6,6 +6,7 @@ import 'package:Pilll/main/calendar/calendar_help.dart';
 import 'package:Pilll/main/calendar/calendar_list_page.dart';
 import 'package:Pilll/main/calendar/date_range.dart';
 import 'package:Pilll/main/calendar/utility.dart';
+import 'package:Pilll/model/app_state.dart';
 import 'package:Pilll/model/pill_sheet.dart';
 import 'package:Pilll/model/pill_sheet_type.dart';
 import 'package:Pilll/model/setting.dart';
@@ -26,7 +27,7 @@ class CalendarCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var user = User.watch(context);
+    var user = AppState.watch(context).user;
     return Card(
       child: Column(
         children: <Widget>[

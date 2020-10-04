@@ -20,7 +20,7 @@ extension UserFirestoreFieldKeys on String {
   static final currentPillSheet = "pillSheet";
 }
 
-class User extends ChangeNotifier {
+class User {
   static final path = "users";
   static User _cache;
 
@@ -103,10 +103,6 @@ class User extends ChangeNotifier {
       },
       SetOptions(merge: true),
     ).then((_) => this.currentPillSheet = null);
-  }
-
-  static User watch(BuildContext context) {
-    return context.watch();
   }
 }
 
