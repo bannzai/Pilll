@@ -58,11 +58,15 @@ class _RecordPageState extends State<RecordPage> {
   }
 
   Widget _empty() {
-    return Stack(
-      children: <Widget>[
-        Center(child: SvgPicture.asset("images/empty_frame.svg")),
-        Center(child: Text("ピルシートを追加"))
-      ],
+    return SizedBox(
+      width: PillSheet.size.width,
+      height: PillSheet.size.height,
+      child: Stack(
+        children: <Widget>[
+          Center(child: SvgPicture.asset("images/empty_frame.svg")),
+          Center(child: Text("ピルシートを追加")),
+        ],
+      ),
     );
   }
 }

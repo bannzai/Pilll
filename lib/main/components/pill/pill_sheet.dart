@@ -1,3 +1,4 @@
+import 'package:Pilll/model/pill_sheet.dart';
 import 'package:Pilll/theme/color.dart';
 import 'package:Pilll/model/weekday.dart';
 import 'package:Pilll/main/components/pill/pill_mark.dart';
@@ -9,6 +10,7 @@ typedef PillMarkSelected = void Function(int);
 typedef PillMarkTypeBuilder = PillMarkType Function(int);
 
 class PillSheet extends StatelessWidget {
+  static Size size = Size(316, 264);
   final bool isHideWeekdayLine;
   final PillMarkTypeBuilder pillMarkTypeBuilder;
   final PillMarkSelected markSelected;
@@ -60,8 +62,8 @@ class PillSheet extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 316,
-      height: 264,
+      width: PillSheet.size.width,
+      height: PillSheet.size.height,
       decoration: BoxDecoration(
         color: PilllColors.pillSheet,
         borderRadius: BorderRadius.circular(10),
