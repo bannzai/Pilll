@@ -32,28 +32,36 @@ class RecordTakenInformation extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       height: 150,
-      child: Card(
-        child: Column(
-          children: <Widget>[
-            SizedBox(height: 54),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: <Widget>[
-                _todayWidget(),
-                SizedBox(width: 28),
-                Container(
-                  height: 64,
-                  child: VerticalDivider(
-                    width: 10,
-                    color: PilllColors.divider,
-                  ),
+      decoration: BoxDecoration(
+        color: Colors.white,
+        boxShadow: [
+          BoxShadow(
+            color: Colors.black.withOpacity(0.12),
+            blurRadius: 4,
+            offset: Offset(0, 2),
+          ),
+        ],
+      ),
+      child: Column(
+        children: <Widget>[
+          SizedBox(height: 54),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              _todayWidget(),
+              SizedBox(width: 28),
+              Container(
+                height: 64,
+                child: VerticalDivider(
+                  width: 10,
+                  color: PilllColors.divider,
                 ),
-                SizedBox(width: 28),
-                _takenWidget(),
-              ],
-            ),
-          ],
-        ),
+              ),
+              SizedBox(width: 28),
+              _takenWidget(),
+            ],
+          ),
+        ],
       ),
     );
   }
