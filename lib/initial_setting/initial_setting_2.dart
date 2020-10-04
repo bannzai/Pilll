@@ -64,11 +64,14 @@ class InitialSetting2 extends StatelessWidget {
                 direction: Axis.vertical,
                 spacing: 8,
                 children: <Widget>[
-                  Consumer<InitialSettingModel>(
-                    builder: (BuildContext context, model, Widget child) {
+                  Selector<AppState, int>(
+                    selector: (context, state) =>
+                        state.initialSetting.todayPillNumber,
+                    builder:
+                        (BuildContext context, todayPillNumber, Widget child) {
                       return PrimaryButton(
                         text: "次へ",
-                        onPressed: model.todayPillNumber == null
+                        onPressed: todayPillNumber == null
                             ? null
                             : () {
                                 Navigator.of(context).push(
