@@ -12,7 +12,7 @@ class DateTimeFormatter {
     return DateFormat(DateFormat.YEAR_ABBR_MONTH, "ja_JP").format(dateTime);
   }
 
-  static String monthAndYearAndWeekday(DateTime dateTime) {
+  static String monthAndWeekday(DateTime dateTime) {
     return DateFormat(DateFormat.NUM_MONTH_WEEKDAY_DAY, "ja_JP")
         .format(dateTime);
   }
