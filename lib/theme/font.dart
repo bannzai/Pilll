@@ -22,6 +22,11 @@ class FontSize {
 }
 
 class FontType {
+  static final TextStyle xHugeNumber = TextStyle(
+    fontFamily: FontFamily.number,
+    fontWeight: FontWeight.normal,
+    fontSize: FontSize.xHuge,
+  );
   static final TextStyle largeNumber = TextStyle(
     fontFamily: FontFamily.number,
     fontWeight: FontWeight.w300,
