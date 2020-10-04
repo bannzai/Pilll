@@ -27,9 +27,13 @@ class App extends StatelessWidget {
           create: (_) => InitialSettingModel(),
           lazy: true,
         ),
-        ChangeNotifierProvider<AppState>(
-          create: (_) => AppState(true),
+        ChangeNotifierProvider<User>(
+          create: (_) => User.user(),
           lazy: true,
+        ),
+        ChangeNotifierProvider<AppState>(
+          create: (_) => AppState(),
+          lazy: false,
         )
       ],
       child: MaterialApp(

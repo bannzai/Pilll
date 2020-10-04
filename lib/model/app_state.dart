@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
 
 class AppState extends ChangeNotifier {
-  final bool value;
-
-  AppState(this.value) {
-    print("value: $value");
-  }
+  static final AppState _instance = AppState._internal();
+  factory AppState() => _instance;
+  AppState._internal();
 }
