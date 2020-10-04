@@ -26,14 +26,11 @@ class _RecordPageState extends State<RecordPage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: <Widget>[
-            // TODO: Should not use DateTime.now for beginingTakenDate and lastTakenDate
             RecordTakenInformation(
               today: DateTime.now(),
-              beginingTakenDate: DateTime.now(),
-              lastTakenDate: DateTime.now(),
+              pillSheetModel: user.currentPillSheet,
             ),
-            if (user.currentPillSheet == null)
-              _empty(),
+            if (user.currentPillSheet == null) _empty(),
             if (user.currentPillSheet != null) ...[
               _pillSheet(),
               SizedBox(height: 24),
