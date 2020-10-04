@@ -1,3 +1,4 @@
+import 'package:Pilll/model/app_state.dart';
 import 'package:Pilll/model/initial_setting.dart';
 import 'package:Pilll/model/user.dart';
 import 'package:Pilll/theme/color.dart';
@@ -28,6 +29,10 @@ class App extends StatelessWidget {
         ),
         ChangeNotifierProvider<User>(
           create: (_) => User.user(),
+          lazy: true,
+        ),
+        ChangeNotifierProvider<AppState>(
+          create: (_) => AppState(true),
           lazy: true,
         )
       ],
