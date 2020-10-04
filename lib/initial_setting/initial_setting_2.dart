@@ -1,6 +1,5 @@
 import 'package:Pilll/main/application/router.dart';
 import 'package:Pilll/model/app_state.dart';
-import 'package:Pilll/model/initial_setting.dart';
 import 'package:Pilll/style/button.dart';
 import 'package:Pilll/theme/color.dart';
 import 'package:Pilll/initial_setting/initial_setting_3.dart';
@@ -110,14 +109,14 @@ class ExplainPillNumber extends StatelessWidget {
   const ExplainPillNumber({Key key, this.today}) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    InitialSettingModel model = Provider.of(context);
+    AppState state = AppState.watch(context);
     return Center(
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.baseline,
         textBaseline: TextBaseline.ideographic,
         children: () {
-          if (model.todayPillNumber == null) {
+          if (state.initialSetting.todayPillNumber == null) {
             return <Widget>[
               Text("", style: FontType.largeNumber.merge(TextColorStyle.black)),
             ];
@@ -125,7 +124,7 @@ class ExplainPillNumber extends StatelessWidget {
           return <Widget>[
             Text("$todayに飲むピルは",
                 style: FontType.description.merge(TextColorStyle.black)),
-            Text("${model.todayPillNumber}",
+            Text("${state.initialSetting.todayPillNumber}",
                 style: FontType.largeNumber.merge(TextColorStyle.black)),
             Text("番", style: FontType.description.merge(TextColorStyle.black)),
           ];
