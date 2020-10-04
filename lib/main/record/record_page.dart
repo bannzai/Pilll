@@ -4,6 +4,7 @@ import 'package:Pilll/main/record/record_taken_information.dart';
 import 'package:Pilll/style/button.dart';
 import 'package:Pilll/theme/color.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/svg.dart';
 
 class RecordPage extends StatefulWidget {
   @override
@@ -28,13 +29,8 @@ class _RecordPageState extends State<RecordPage> {
               lastTakenDate: DateTime.now(),
             ),
             SizedBox(height: 24),
-            PillSheet(
-              isHideWeekdayLine: false,
-              pillMarkTypeBuilder: (number) {
-                return PillMarkType.normal;
-              },
-              markSelected: (number) {},
-            ),
+            _empty(),
+            // _pillSheet(),
             SizedBox(height: 24),
             Container(
               height: 44,
@@ -48,6 +44,25 @@ class _RecordPageState extends State<RecordPage> {
           ],
         ),
       ),
+    );
+  }
+
+  PillSheet _pillSheet() {
+    return PillSheet(
+      isHideWeekdayLine: false,
+      pillMarkTypeBuilder: (number) {
+        return PillMarkType.normal;
+      },
+      markSelected: (number) {},
+    );
+  }
+
+  Widget _empty() {
+    return Stack(
+      children: <Widget>[
+        Center(child: SvgPicture.asset("images/empty_frame.svg")),
+        Center(child: Text("ピルシートを追加"))
+      ],
     );
   }
 }
