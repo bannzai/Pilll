@@ -1,4 +1,5 @@
 import 'package:Pilll/model/initial_setting.dart';
+import 'package:Pilll/model/user.dart';
 import 'package:provider/provider.dart';
 import 'package:flutter/material.dart';
 
@@ -9,6 +10,8 @@ class AppState extends ChangeNotifier {
 
   InitialSettingModel _initialSetting = InitialSettingModel();
   InitialSettingModel get initialSetting => _initialSetting;
+
+  User get user => User.user();
 
   static AppState watch(BuildContext context) {
     return context.watch();

@@ -1,6 +1,7 @@
 import 'package:Pilll/main/components/pill/pill_mark.dart';
 import 'package:Pilll/main/components/pill/pill_sheet.dart';
 import 'package:Pilll/main/record/record_taken_information.dart';
+import 'package:Pilll/model/app_state.dart';
 import 'package:Pilll/model/user.dart';
 import 'package:Pilll/style/button.dart';
 import 'package:Pilll/theme/color.dart';
@@ -17,7 +18,7 @@ class RecordPage extends StatefulWidget {
 class _RecordPageState extends State<RecordPage> {
   @override
   Widget build(BuildContext context) {
-    var user = User.watch(context);
+    var user = AppState.watch(context).user;
     return Scaffold(
       backgroundColor: PilllColors.background,
       appBar: null,
