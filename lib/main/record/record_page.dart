@@ -21,7 +21,6 @@ class _RecordPageState extends State<RecordPage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           children: <Widget>[
-            SizedBox(height: 60),
             // TODO: Should not use DateTime.now for beginingTakenDate and lastTakenDate
             RecordTakenInformation(
               today: DateTime.now(),

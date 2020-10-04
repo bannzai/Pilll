@@ -30,27 +30,37 @@ class RecordTakenInformation extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      mainAxisSize: MainAxisSize.min,
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: <Widget>[
-        _todayWidget(),
-        SizedBox(width: 28),
-        Container(
-          height: 64,
-          child: VerticalDivider(
-            width: 10,
-            color: PilllColors.divider,
-          ),
+    return Container(
+      height: 150,
+      child: Card(
+        child: Column(
+          children: <Widget>[
+            SizedBox(height: 54),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                _todayWidget(),
+                SizedBox(width: 28),
+                Container(
+                  height: 64,
+                  child: VerticalDivider(
+                    width: 10,
+                    color: PilllColors.divider,
+                  ),
+                ),
+                SizedBox(width: 28),
+                _takenWidget(),
+              ],
+            ),
+          ],
         ),
-        SizedBox(width: 28),
-        _takenWidget(),
-      ],
+      ),
     );
   }
 
   Column _takenWidget() {
     return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
       children: <Widget>[
         Container(
           height: 20,
