@@ -1,4 +1,4 @@
-import 'package:Pilll/model/app_state.dart';
+import 'package:Pilll/model/app_state+user.dart';
 import 'package:Pilll/model/pill_sheet_type.dart';
 import 'package:Pilll/model/user.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
