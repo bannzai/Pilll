@@ -22,7 +22,7 @@ class _RecordPageState extends State<RecordPage> {
       extendBodyBehindAppBar: true,
       body: Center(
         child: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: <Widget>[
             // TODO: Should not use DateTime.now for beginingTakenDate and lastTakenDate
             RecordTakenInformation(
@@ -30,7 +30,6 @@ class _RecordPageState extends State<RecordPage> {
               beginingTakenDate: DateTime.now(),
               lastTakenDate: DateTime.now(),
             ),
-            SizedBox(height: 24),
             if (user.currentPillSheet == null)
               _empty(),
             if (user.currentPillSheet != null) ...[
