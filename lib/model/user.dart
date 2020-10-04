@@ -11,6 +11,11 @@ class UserNotFound implements Exception {
     return "user not found";
   }
 }
+class UserAlreadyExists implements Exception {
+  toString() {
+    return "user already exists";
+  }
+}
 
 extension UserFirestoreFieldKeys on String {
   static final anonymouseUserID = "anonymouseUserID";

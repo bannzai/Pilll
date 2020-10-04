@@ -50,6 +50,8 @@ extension UserInterface on AppState {
   }
 
   static Future<void> _create() {
+    assert(AppState.shared._user == null);
+    if (AppState.shared._user != null) throw UserAlreadyExists();
     return FirebaseFirestore.instance
         .collection(User.path)
         .doc(auth.FirebaseAuth.instance.currentUser.uid)
