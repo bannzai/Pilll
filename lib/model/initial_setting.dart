@@ -1,8 +1,8 @@
 import 'package:Pilll/main/components/pill/pill_mark.dart';
+import 'package:Pilll/model/app_state.dart';
 import 'package:Pilll/model/pill_sheet.dart';
 import 'package:Pilll/model/pill_sheet_type.dart';
 import 'package:Pilll/model/setting.dart';
-import 'package:Pilll/model/user.dart' as user;
 import 'package:Pilll/util/shared_preference/keys.dart';
 import 'package:Pilll/util/today.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -51,7 +51,7 @@ class InitialSettingModel {
   }
 
   Future<void> register() {
-    return user.User.fetch().then((value) {
+    return UserInterface.fetchOrCreateUser().then((value) {
       return this
           .buildSetting()
           .save()

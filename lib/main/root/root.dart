@@ -1,5 +1,5 @@
 import 'package:Pilll/main/application/router.dart';
-import 'package:Pilll/model/user.dart';
+import 'package:Pilll/model/app_state.dart';
 import 'package:Pilll/theme/color.dart';
 import 'package:Pilll/util/shared_preference/keys.dart';
 import 'package:flutter/material.dart';

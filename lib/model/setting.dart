@@ -1,3 +1,4 @@
+import 'package:Pilll/model/app_state.dart';
 import 'package:Pilll/model/pill_sheet_type.dart';
 import 'package:Pilll/model/user.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
@@ -51,7 +52,7 @@ class Setting extends ChangeNotifier {
       PillSheetTypeFunctions.fromRawPath(pillSheetTypeRawPath);
 
   Future<Setting> save() {
-    return User.fetch().then((value) {
+    return UserInterface.fetchOrCreateUser().then((value) {
       return FirebaseFirestore.instance
           .collection(User.path)
           .doc(value.documentID)
