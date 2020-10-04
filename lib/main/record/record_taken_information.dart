@@ -1,5 +1,6 @@
 import 'package:Pilll/theme/color.dart';
 import 'package:Pilll/theme/font.dart';
+import 'package:Pilll/util/formatter/date_time_formatter.dart';
 import 'package:flutter/material.dart';
 
 class RecordTakenInformation extends StatelessWidget {
@@ -15,12 +16,7 @@ class RecordTakenInformation extends StatelessWidget {
 
   String _formattedToday() {
     // TODO:
-    return "07/22";
-  }
-
-  String _todayWeekday() {
-    // TODO:
-    return "火";
+    return DateTimeFormatter.monthAndWeekday(this.today);
   }
 
   int _calcTodayPillNumber() {
@@ -113,7 +109,7 @@ class RecordTakenInformation extends StatelessWidget {
   Center _todayWidget() {
     return Center(
       child: Text(
-        "${_formattedToday()} (${_todayWeekday()})",
+        "${_formattedToday()}",
         style: TextStyle(
             fontFamily: FontFamily.number,
             fontWeight: FontWeight.normal,
