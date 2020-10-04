@@ -17,6 +17,14 @@ class DateTimeFormatter {
         .format(dateTime);
   }
 
+  static String monthAndDay(DateTime dateTime) {
+    return DateFormat(DateFormat.NUM_MONTH_DAY, "ja_JP").format(dateTime);
+  }
+
+  static String weekday(DateTime dateTime) {
+    return DateFormat(DateFormat.ABBR_WEEKDAY, "ja_JP").format(dateTime);
+  }
+
   static String slashYearAndMonthAndDay(DateTime dateTime) {
     return DateFormat("yyyy/MM/dd", "ja_JP").format(dateTime);
   }
