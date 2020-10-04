@@ -72,7 +72,7 @@ class _SettingsState extends State<Settings> {
   }
 
   List<SettingListRowModel> _rowModels(SettingSection section) {
-    var state = AppState.watch(context);
+    var state = AppState.read(context);
     var user = state.user;
     switch (section) {
       case SettingSection.pill:
