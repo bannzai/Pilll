@@ -15,7 +15,7 @@ class RecordTakenInformation extends StatelessWidget {
 
   String _formattedToday() {
     // TODO:
-    return "2020/07/22";
+    return "07/22";
   }
 
   String _todayWeekday() {
@@ -30,72 +30,76 @@ class RecordTakenInformation extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: 316,
-      child: Row(
-        children: <Widget>[
-          Expanded(
-            child: Center(
-              child: Text(
-                "${_formattedToday()} (${_todayWeekday()})",
+    return Row(
+      mainAxisSize: MainAxisSize.min,
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: <Widget>[
+        _todayWidget(),
+        SizedBox(width: 28),
+        Container(
+          height: 64,
+          child: VerticalDivider(
+            width: 10,
+            color: PilllColors.divider,
+          ),
+        ),
+        SizedBox(width: 28),
+        _takenWidget(),
+      ],
+    );
+  }
+
+  Column _takenWidget() {
+    return Column(
+      children: <Widget>[
+        Container(
+          height: 20,
+          width: 80,
+          child: Center(
+            child: Text("今日飲むピル",
                 style: TextStyle(
-                    fontFamily: FontFamily.number,
-                    fontWeight: FontWeight.normal,
-                    fontSize: 18),
+                    fontSize: 10,
+                    fontWeight: FontWeight.w600,
+                    fontFamily: FontFamily.japanese)),
+          ),
+          decoration: BoxDecoration(
+              border: Border.all(), borderRadius: BorderRadius.circular(20)),
+        ),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.baseline,
+          textBaseline: TextBaseline.ideographic,
+          children: <Widget>[
+            Text(
+              "${_calcTodayPillNumber()}",
+              style: TextStyle(
+                fontFamily: FontFamily.number,
+                fontWeight: FontWeight.normal,
+                fontSize: 40,
               ),
             ),
-          ),
-          Container(
-            height: 64,
-            child: VerticalDivider(
-              width: 10,
-              color: PilllColors.divider,
+            Text(
+              "番",
+              style: TextStyle(
+                fontFamily: FontFamily.japanese,
+                fontWeight: FontWeight.w300,
+                fontSize: 14,
+              ),
             ),
-          ),
-          Expanded(
-            child: Column(
-              children: <Widget>[
-                Container(
-                  height: 20,
-                  width: 80,
-                  child: Center(
-                    child: Text("今日飲むピル",
-                        style: TextStyle(
-                            fontSize: 10,
-                            fontWeight: FontWeight.w600,
-                            fontFamily: FontFamily.japanese)),
-                  ),
-                  decoration: BoxDecoration(
-                      border: Border.all(),
-                      borderRadius: BorderRadius.circular(20)),
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  crossAxisAlignment: CrossAxisAlignment.baseline,
-                  textBaseline: TextBaseline.ideographic,
-                  children: <Widget>[
-                    Text(
-                      "${_calcTodayPillNumber()}",
-                      style: TextStyle(
-                        fontFamily: FontFamily.number,
-                        fontWeight: FontWeight.normal,
-                        fontSize: 40,
-                      ),
-                    ),
-                    Text(
-                      "番",
-                      style: TextStyle(
-                        fontFamily: FontFamily.japanese,
-                        fontWeight: FontWeight.w300,
-                        fontSize: 14,
-                      ),
-                    ),
-                  ],
-                )
-              ],
-            ),
-          ),
-        ],
+          ],
+        )
+      ],
+    );
+  }
+
+  Center _todayWidget() {
+    return Center(
+      child: Text(
+        "${_formattedToday()} (${_todayWeekday()})",
+        style: TextStyle(
+            fontFamily: FontFamily.number,
+            fontWeight: FontWeight.normal,
+            fontSize: 18),
       ),
     );
   }
