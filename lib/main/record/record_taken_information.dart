@@ -1,3 +1,4 @@
+import 'package:Pilll/model/pill_sheet.dart';
 import 'package:Pilll/theme/color.dart';
 import 'package:Pilll/theme/font.dart';
 import 'package:Pilll/theme/text_color.dart';
@@ -6,24 +7,18 @@ import 'package:flutter/material.dart';
 
 class RecordTakenInformation extends StatelessWidget {
   final DateTime today;
-  final DateTime beginingTakenDate;
-  final DateTime lastTakenDate;
+  final PillSheetModel pillSheetModel;
   const RecordTakenInformation({
     Key key,
     @required this.today,
-    @required this.beginingTakenDate,
-    @required this.lastTakenDate,
+    @required this.pillSheetModel,
   })  : assert(today != null),
         super(key: key);
 
   String _formattedToday() => DateTimeFormatter.monthAndDay(this.today);
 
   String _todayWeekday() => DateTimeFormatter.weekday(this.today);
-
-  int _calcTodayPillNumber() {
-    // TODO:
-    return 16;
-  }
+  bool get isExistsPillSheet => pillSheetModel != null;
 
   @override
   Widget build(BuildContext context) {
@@ -71,17 +66,24 @@ class RecordTakenInformation extends StatelessWidget {
           "💊 今日飲むピル",
           style: FontType.assisting.merge(TextColorStyle.noshime),
         ),
-        SizedBox(height: 4),
+        if (isExistsPillSheet) SizedBox(height: 4),
+        if (!isExistsPillSheet) SizedBox(height: 12),
         Row(
           mainAxisAlignment: MainAxisAlignment.center,
           crossAxisAlignment: CrossAxisAlignment.baseline,
           textBaseline: TextBaseline.ideographic,
           children: <Widget>[
-            Text("${_calcTodayPillNumber()}",
-                style: FontType.xHugeNumber.merge(TextColorStyle.main)),
-            SizedBox(width: 4),
-            Text("番",
-                style: FontType.assistingBold.merge(TextColorStyle.noshime)),
+            if (isExistsPillSheet) ...[
+              Text("${pillSheetModel.todayPillNumber}",
+                  style: FontType.xHugeNumber.merge(TextColorStyle.main)),
+              SizedBox(width: 4),
+              Text("番",
+                  style: FontType.assistingBold.merge(TextColorStyle.noshime)),
+            ],
+            if (!isExistsPillSheet) ...[
+              Text("-",
+                  style: FontType.assisting.merge(TextColorStyle.noshime)),
+            ],
           ],
         )
       ],
