@@ -1,6 +1,7 @@
 import 'package:Pilll/main/components/pill/pill_mark.dart';
 import 'package:Pilll/main/components/pill/pill_sheet.dart';
 import 'package:Pilll/main/record/record_taken_information.dart';
+import 'package:Pilll/model/user.dart';
 import 'package:Pilll/style/button.dart';
 import 'package:Pilll/theme/color.dart';
 import 'package:flutter/material.dart';
@@ -14,6 +15,7 @@ class RecordPage extends StatefulWidget {
 class _RecordPageState extends State<RecordPage> {
   @override
   Widget build(BuildContext context) {
+    var user = User.watch(context);
     return Scaffold(
       backgroundColor: PilllColors.background,
       appBar: null,
@@ -29,17 +31,20 @@ class _RecordPageState extends State<RecordPage> {
               lastTakenDate: DateTime.now(),
             ),
             SizedBox(height: 24),
-            _empty(),
-            // _pillSheet(),
-            SizedBox(height: 24),
-            Container(
-              height: 44,
-              width: 180,
-              child: PrimaryButton(
-                text: "飲んだ",
-                onPressed: () {},
+            if (user.currentPillSheet == null)
+              _empty(),
+            if (user.currentPillSheet != null) ...[
+              _pillSheet(),
+              SizedBox(height: 24),
+              Container(
+                height: 44,
+                width: 180,
+                child: PrimaryButton(
+                  text: "飲んだ",
+                  onPressed: () {},
+                ),
               ),
-            ),
+            ],
             SizedBox(height: 8),
           ],
         ),
