@@ -23,10 +23,6 @@ class App extends StatelessWidget {
     FirebaseAnalytics analytics = FirebaseAnalytics();
     return MultiProvider(
       providers: [
-        ChangeNotifierProvider<InitialSettingModel>(
-          create: (_) => InitialSettingModel(),
-          lazy: true,
-        ),
         ChangeNotifierProvider<User>(
           create: (_) => User.user(),
           lazy: true,

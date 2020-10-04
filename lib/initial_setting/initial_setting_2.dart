@@ -1,4 +1,5 @@
 import 'package:Pilll/main/application/router.dart';
+import 'package:Pilll/model/app_state.dart';
 import 'package:Pilll/model/initial_setting.dart';
 import 'package:Pilll/model/setting.dart';
 import 'package:Pilll/style/button.dart';
@@ -21,7 +22,7 @@ class InitialSetting2 extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var model = InitialSettingModel.watch(context);
+    var model = AppState.watch(context);
     return Scaffold(
       backgroundColor: PilllColors.background,
       appBar: AppBar(
@@ -35,66 +36,65 @@ class InitialSetting2 extends StatelessWidget {
         ),
         backgroundColor: PilllColors.background,
       ),
-      body: ChangeNotifierProvider<InitialSettingModel>.value(
-        value: model,
-        child: Container(
-          child: Center(
-            child: Column(
-              children: <Widget>[
-                SizedBox(height: 24),
-                Text(
-                  "今日(${todayString()})\n飲む・飲んだピルの番号をタップ",
-                  style: FontType.title.merge(TextColorStyle.standard),
-                  textAlign: TextAlign.center,
-                ),
-                Spacer(),
-                PillSheet(
-                  isHideWeekdayLine: true,
-                  pillMarkTypeBuilder: (number) {
-                    return model.pillMarkTypeFor(number);
-                  },
-                  markSelected: (number) {
-                    model.notifyWith((model) => model.todayPillNumber = number);
-                  },
-                ),
-                SizedBox(height: 24),
-                ExplainPillNumber(today: todayString()),
-                SizedBox(height: 24),
-                Wrap(
-                  direction: Axis.vertical,
-                  spacing: 8,
-                  children: <Widget>[
-                    Consumer<InitialSettingModel>(
-                      builder: (BuildContext context, model, Widget child) {
-                        return PrimaryButton(
-                          text: "次へ",
-                          onPressed: model.todayPillNumber == null
-                              ? null
-                              : () {
-                                  Navigator.of(context).push(
-                                    MaterialPageRoute(
-                                      builder: (BuildContext context) {
-                                        return InitialSetting3();
-                                      },
-                                    ),
-                                  );
-                                },
-                        );
-                      },
-                    ),
-                    TertiaryButton(
-                      text: "スキップ",
-                      onPressed: () {
-                        InitialSettingModel.read(context)
-                            .register()
-                            .then((_) => Router.endInitialSetting(context));
-                      },
-                    ),
-                  ],
-                ),
-                Spacer(),
-              ],
-            ),
+      body: Container(
+        child: Center(
+          child: Column(
+            children: <Widget>[
+              SizedBox(height: 24),
+              Text(
+                "今日(${todayString()})\n飲む・飲んだピルの番号をタップ",
+                style: FontType.title.merge(TextColorStyle.standard),
+                textAlign: TextAlign.center,
+              ),
+              Spacer(),
+              PillSheet(
+                isHideWeekdayLine: true,
+                pillMarkTypeBuilder: (number) {
+                  return model.initialSetting.pillMarkTypeFor(number);
+                },
+                markSelected: (number) {
+                  model.notifyWith(
+                      (model) => model.initialSetting.todayPillNumber = number);
+                },
+              ),
+              SizedBox(height: 24),
+              ExplainPillNumber(today: todayString()),
+              SizedBox(height: 24),
+              Wrap(
+                direction: Axis.vertical,
+                spacing: 8,
+                children: <Widget>[
+                  Consumer<InitialSettingModel>(
+                    builder: (BuildContext context, model, Widget child) {
+                      return PrimaryButton(
+                        text: "次へ",
+                        onPressed: model.todayPillNumber == null
+                            ? null
+                            : () {
+                                Navigator.of(context).push(
+                                  MaterialPageRoute(
+                                    builder: (BuildContext context) {
+                                      return InitialSetting3();
+                                    },
+                                  ),
+                                );
+                              },
+                      );
+                    },
+                  ),
+                  TertiaryButton(
+                    text: "スキップ",
+                    onPressed: () {
+                      AppState.read(context)
+                          .initialSetting
+                          .register()
+                          .then((_) => Router.endInitialSetting(context));
+                    },
+                  ),
+                ],
+              ),
+              Spacer(),
+            ],
           ),
         ),
       ),

@@ -1,6 +1,7 @@
 import 'package:Pilll/main/application/router.dart';
 import 'package:Pilll/main/components/setting_menstruation_page.dart';
 import 'package:Pilll/initial_setting/initial_setting_4.dart';
+import 'package:Pilll/model/app_state.dart';
 import 'package:Pilll/model/initial_setting.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -13,7 +14,7 @@ class InitialSetting3 extends StatefulWidget {
 class _InitialSetting3State extends State<InitialSetting3> {
   @override
   Widget build(BuildContext context) {
-    var model = InitialSettingModel.watch(context);
+    var model = AppState.watch(context);
     return SettingMenstruationPage(
       title: "3/4",
       doneText: "次へ",
@@ -27,22 +28,24 @@ class _InitialSetting3State extends State<InitialSetting3> {
         );
       },
       skip: () {
-        InitialSettingModel.read(context)
+        AppState.read(context)
+            .initialSetting
             .register()
             .then((_) => Router.endInitialSetting(context));
       },
       model: SettingMenstruationPageModel(
-        selectedFromMenstruation: model.fromMenstruation,
-        selectedDurationMenstruation: model.durationMenstruation,
+        selectedFromMenstruation: model.initialSetting.fromMenstruation,
+        selectedDurationMenstruation: model.initialSetting.durationMenstruation,
       ),
       fromMenstructionDidDecide: (selectedFromMenstruction) {
         setState(() {
-          model.fromMenstruation = selectedFromMenstruction;
+          model.initialSetting.fromMenstruation = selectedFromMenstruction;
         });
       },
       durationMenstructionDidDecide: (selectedDurationMenstruation) {
         setState(() {
-          model.durationMenstruation = selectedDurationMenstruation;
+          model.initialSetting.durationMenstruation =
+              selectedDurationMenstruation;
         });
       },
     );

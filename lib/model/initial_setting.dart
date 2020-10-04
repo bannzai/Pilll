@@ -9,7 +9,7 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-class InitialSettingModel extends ChangeNotifier {
+class InitialSettingModel {
   // User.Settings
   int fromMenstruation;
   int durationMenstruation;
@@ -52,13 +52,6 @@ class InitialSettingModel extends ChangeNotifier {
     );
   }
 
-  Future<InitialSettingModel> notifyWith(
-      void update(InitialSettingModel model)) {
-    update(this);
-    notifyListeners();
-    return Future.value(this);
-  }
-
   Future<void> register() {
     return user.User.fetch().then((value) {
       return this
@@ -69,14 +62,6 @@ class InitialSettingModel extends ChangeNotifier {
           .then((storage) => storage.setString(
               StringKey.firebaseAnonymousUserID, value.anonymousUserID));
     });
-  }
-
-  static InitialSettingModel watch(BuildContext context) {
-    return context.watch();
-  }
-
-  static InitialSettingModel read(BuildContext context) {
-    return context.read();
   }
 
   PillMarkType pillMarkTypeFor(int number) {
