@@ -4,6 +4,8 @@ import 'package:Pilll/main/record/record_taken_information.dart';
 import 'package:Pilll/model/user.dart';
 import 'package:Pilll/style/button.dart';
 import 'package:Pilll/theme/color.dart';
+import 'package:Pilll/theme/font.dart';
+import 'package:Pilll/theme/text_color.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
@@ -68,7 +70,15 @@ class _RecordPageState extends State<RecordPage> {
       child: Stack(
         children: <Widget>[
           Center(child: SvgPicture.asset("images/empty_frame.svg")),
-          Center(child: Text("ピルシートを追加")),
+          Center(
+              child: Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              Icon(Icons.add, color: TextColor.noshime),
+              Text("ピルシートを追加",
+                  style: FontType.assisting.merge(TextColorStyle.noshime)),
+            ],
+          )),
         ],
       ),
     );
