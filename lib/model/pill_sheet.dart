@@ -36,6 +36,8 @@ class PillSheetTypeInfo {
 
 @JsonSerializable(nullable: false)
 class PillSheetModel {
+  final String id;
+
   final PillSheetTypeInfo typeInfo;
   @JsonKey(
     fromJson: TimestampConverter.timestampToDateTime,
@@ -62,6 +64,7 @@ class PillSheetModel {
 
   DateTime Function() _today;
   PillSheetModel({
+    @required this.id,
     @required this.typeInfo,
     @required DateTime beginingDate,
     @required this.lastTakenDate,
