@@ -19,7 +19,8 @@ class PillSheetRepository extends PillSheetRepositoryInterface {
         .orderBy("createdAt")
         .limitToLast(1)
         .snapshots()
-        .listen((event) {
+        .last
+        .then((event) {
       var document = event.docs.last;
       if (!document.exists) return null;
 
@@ -29,7 +30,7 @@ class PillSheetRepository extends PillSheetRepositoryInterface {
 
       if (pillSheetModel.deletedAt != null) return null;
       return pillSheetModel;
-    }).asFuture();
+    });
   }
 
   @override
