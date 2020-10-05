@@ -18,8 +18,7 @@ class PillSheetRepository extends PillSheetRepositoryInterface {
         .collection(_path(userID))
         .orderBy("createdAt")
         .limitToLast(1)
-        .snapshots()
-        .last
+        .get()
         .then((event) {
       var document = event.docs.last;
       if (!document.exists) return null;
