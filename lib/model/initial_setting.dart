@@ -2,7 +2,7 @@ import 'package:Pilll/main/components/pill/pill_mark.dart';
 import 'package:Pilll/model/pill_sheet.dart';
 import 'package:Pilll/model/pill_sheet_type.dart';
 import 'package:Pilll/model/setting.dart';
-import 'package:Pilll/repository/user_repository.dart';
+import 'package:Pilll/repository/user.dart';
 import 'package:Pilll/util/shared_preference/keys.dart';
 import 'package:Pilll/util/today.dart';
 import 'package:shared_preferences/shared_preferences.dart';
