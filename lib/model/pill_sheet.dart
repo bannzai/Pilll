@@ -36,6 +36,7 @@ class PillSheetTypeInfo {
 
 @JsonSerializable(nullable: false)
 class PillSheetModel {
+  @JsonKey(ignore: true)
   final String id;
 
   final PillSheetTypeInfo typeInfo;
@@ -64,7 +65,7 @@ class PillSheetModel {
 
   DateTime Function() _today;
   PillSheetModel({
-    @required this.id,
+    this.id,
     @required this.typeInfo,
     @required DateTime beginingDate,
     @required this.lastTakenDate,
