@@ -20,6 +20,9 @@ class PillSheetRepository extends PillSheetRepositoryInterface {
         .snapshots()
         .listen((event) {
       var document = event.docs.last;
+      if (!document.exists) {
+        return null;
+      }
       var data = document.data();
       data["id"] = document.id;
       return PillSheetModel.fromJson(data);
