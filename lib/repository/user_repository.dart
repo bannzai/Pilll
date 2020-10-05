@@ -3,18 +3,22 @@ import 'package:Pilll/model/user.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart' as auth;
 
-extension UserInterface on AppState {
-  static Future<User> fetchOrCreateUser() {
-    return UserInterface._fetch().catchError((error) {
+abstract class UserRepositoryInterface {
+  Future<User> fetchOrCreateUser();
+}
+
+class UserRepository extends UserRepositoryInterface {
+  Future<User> fetchOrCreateUser() {
+    return _fetch().catchError((error) {
       if (error is UserNotFound) {
-        return UserInterface._create().then((_) => UserInterface._fetch());
+        return _create().then((_) => _fetch());
       }
       throw FormatException(
           "cause exception when failed fetch and create user for $error");
     });
   }
 
-  static Future<void> _create() {
+  Future<void> _create() {
     assert(AppState.shared._user == null,
         "user already exists on process. maybe you will call fetch before create");
     if (AppState.shared._user != null) throw UserAlreadyExists();
@@ -29,7 +33,7 @@ extension UserInterface on AppState {
     );
   }
 
-  static Future<User> _fetch() {
+  Future<User> _fetch() {
     if (AppState.shared._user != null) {
       return Future.value(AppState.shared._user);
     }
@@ -50,3 +54,5 @@ extension UserInterface on AppState {
     });
   }
 }
+
+final UserRepositoryInterface userRepository = UserRepository();

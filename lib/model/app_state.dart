@@ -1,9 +1,12 @@
 import 'package:Pilll/model/initial_setting.dart';
 import 'package:Pilll/model/user.dart';
+import 'package:Pilll/repository/user_repository.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_auth/firebase_auth.dart' as auth;
 import 'package:provider/provider.dart';
 import 'package:flutter/material.dart';
 
-class AppState extends ChangeNotifier {
+class AppState extends ChangeNotifier  {
   static final AppState _instance = AppState._internal();
   factory AppState() => _instance;
   AppState._internal();
