@@ -4,6 +4,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 
 abstract class PillSheetRepositoryInterface {
   Future<PillSheetModel> current(String userID);
+  Future<void> create(String userID, PillSheetModel model);
 }
 
 class PillSheetRepository extends PillSheetRepositoryInterface {
@@ -29,5 +30,28 @@ class PillSheetRepository extends PillSheetRepositoryInterface {
       if (pillSheetModel.deletedAt != null) return null;
       return pillSheetModel;
     }).asFuture();
+  }
+
+  @override
+  Future<void> create(String userID, PillSheetModel model) {
+    if (model.createdAt != null) throw PillSheetAlreadyExists();
+    if (model.deletedAt != null) throw PillSheetAlreadyDeleted();
+    model.createdAt = DateTime.now();
+
+    return FirebaseFirestore.instance
+        .collection(_path(userID))
+        .add(model.toJson().remove("id"));
+  }
+}
+
+class PillSheetAlreadyExists implements Exception {
+  toString() {
+    return "pill sheet already exists";
+  }
+}
+
+class PillSheetAlreadyDeleted implements Exception {
+  toString() {
+    return "pill sheet already deleted";
   }
 }
