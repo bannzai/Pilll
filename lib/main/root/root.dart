@@ -1,5 +1,5 @@
 import 'package:Pilll/main/application/router.dart';
-import 'package:Pilll/model/app_state+user.dart';
+import 'package:Pilll/repository/user_repository.dart';
 import 'package:Pilll/theme/color.dart';
 import 'package:Pilll/util/shared_preference/keys.dart';
 import 'package:flutter/material.dart';
@@ -22,7 +22,7 @@ class RootState extends State<Root> {
       print("app name is $app.name");
       return FirebaseAuth.instance.signInAnonymously();
     }).then((userCredential) {
-      return UserInterface.fetchOrCreateUser();
+      return userRepository.fetchOrCreateUser();
     }).then((user) {
       if (user.setting == null) {
         Navigator.popAndPushNamed(context, Routes.initialSetting);
