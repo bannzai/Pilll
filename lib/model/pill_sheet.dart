@@ -49,6 +49,17 @@ class PillSheetModel {
   )
   final DateTime lastTakenDate;
 
+  @JsonKey(
+    fromJson: TimestampConverter.timestampToDateTime,
+    toJson: TimestampConverter.dateTimeToTimestamp,
+  )
+  DateTime createdAt;
+  @JsonKey(
+    fromJson: TimestampConverter.timestampToDateTime,
+    toJson: TimestampConverter.dateTimeToTimestamp,
+  )
+  DateTime deletedAt;
+
   DateTime Function() _today;
   PillSheetModel({
     @required this.typeInfo,
