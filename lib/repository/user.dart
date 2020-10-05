@@ -8,6 +8,7 @@ abstract class UserRepositoryInterface {
 }
 
 class UserRepository extends UserRepositoryInterface {
+  @override
   Future<User> fetchOrCreateUser() {
     return _fetch().catchError((error) {
       if (error is UserNotFound) {
