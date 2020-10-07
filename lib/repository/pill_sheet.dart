@@ -39,9 +39,10 @@ class PillSheetRepository extends PillSheetRepositoryInterface {
     if (model.deletedAt != null) throw PillSheetAlreadyDeleted();
     model.createdAt = DateTime.now();
 
-    return FirebaseFirestore.instance
-        .collection(_path(userID))
-        .add(model.toJson().remove("id"));
+    var json = model.toJson();
+    json.remove("id");
+    print("json: $json");
+    return FirebaseFirestore.instance.collection(_path(userID)).add(json);
   }
 
   Future<void> delete(String userID, PillSheetModel pillSheet) {
