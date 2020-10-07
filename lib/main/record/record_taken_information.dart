@@ -1,101 +1,102 @@
+import 'package:Pilll/model/pill_sheet.dart';
 import 'package:Pilll/theme/color.dart';
 import 'package:Pilll/theme/font.dart';
+import 'package:Pilll/theme/text_color.dart';
+import 'package:Pilll/util/formatter/date_time_formatter.dart';
 import 'package:flutter/material.dart';
 
 class RecordTakenInformation extends StatelessWidget {
   final DateTime today;
-  final DateTime beginingTakenDate;
-  final DateTime lastTakenDate;
+  final PillSheetModel pillSheetModel;
   const RecordTakenInformation({
     Key key,
     @required this.today,
-    @required this.beginingTakenDate,
-    @required this.lastTakenDate,
-  }) : super(key: key);
+    @required this.pillSheetModel,
+  })  : assert(today != null),
+        super(key: key);
 
-  String _formattedToday() {
-    // TODO:
-    return "2020/07/22";
-  }
+  String _formattedToday() => DateTimeFormatter.monthAndDay(this.today);
 
-  String _todayWeekday() {
-    // TODO:
-    return "火";
-  }
-
-  int _calcTodayPillNumber() {
-    // TODO:
-    return 16;
-  }
+  String _todayWeekday() => DateTimeFormatter.weekday(this.today);
+  bool get isExistsPillSheet => pillSheetModel != null;
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 316,
-      child: Row(
-        children: <Widget>[
-          Expanded(
-            child: Center(
-              child: Text(
-                "${_formattedToday()} (${_todayWeekday()})",
-                style: TextStyle(
-                    fontFamily: FontFamily.number,
-                    fontWeight: FontWeight.normal,
-                    fontSize: 18),
-              ),
-            ),
-          ),
-          Container(
-            height: 64,
-            child: VerticalDivider(
-              width: 10,
-              color: PilllColors.divider,
-            ),
-          ),
-          Expanded(
-            child: Column(
-              children: <Widget>[
-                Container(
-                  height: 20,
-                  width: 80,
-                  child: Center(
-                    child: Text("今日飲むピル",
-                        style: TextStyle(
-                            fontSize: 10,
-                            fontWeight: FontWeight.w600,
-                            fontFamily: FontFamily.japanese)),
-                  ),
-                  decoration: BoxDecoration(
-                      border: Border.all(),
-                      borderRadius: BorderRadius.circular(20)),
-                ),
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  crossAxisAlignment: CrossAxisAlignment.baseline,
-                  textBaseline: TextBaseline.ideographic,
-                  children: <Widget>[
-                    Text(
-                      "${_calcTodayPillNumber()}",
-                      style: TextStyle(
-                        fontFamily: FontFamily.number,
-                        fontWeight: FontWeight.normal,
-                        fontSize: 40,
-                      ),
-                    ),
-                    Text(
-                      "番",
-                      style: TextStyle(
-                        fontFamily: FontFamily.japanese,
-                        fontWeight: FontWeight.w300,
-                        fontSize: 14,
-                      ),
-                    ),
-                  ],
-                )
-              ],
-            ),
+      height: 150,
+      decoration: BoxDecoration(
+        color: Colors.white,
+        boxShadow: [
+          BoxShadow(
+            color: Colors.black.withOpacity(0.12),
+            blurRadius: 4,
+            offset: Offset(0, 2),
           ),
         ],
+      ),
+      child: Column(
+        children: <Widget>[
+          SizedBox(height: 54),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              _todayWidget(),
+              SizedBox(width: 28),
+              Container(
+                height: 64,
+                child: VerticalDivider(
+                  width: 10,
+                  color: PilllColors.divider,
+                ),
+              ),
+              SizedBox(width: 28),
+              _takenWidget(),
+            ],
+          ),
+        ],
+      ),
+    );
+  }
+
+  Column _takenWidget() {
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: <Widget>[
+        Text(
+          "💊 今日飲むピル",
+          style: FontType.assisting.merge(TextColorStyle.noshime),
+        ),
+        if (isExistsPillSheet) SizedBox(height: 4),
+        if (!isExistsPillSheet) SizedBox(height: 12),
+        Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.baseline,
+          textBaseline: TextBaseline.ideographic,
+          children: <Widget>[
+            if (isExistsPillSheet) ...[
+              Text("${pillSheetModel.todayPillNumber}",
+                  style: FontType.xHugeNumber.merge(TextColorStyle.main)),
+              SizedBox(width: 4),
+              Text("番",
+                  style: FontType.assistingBold.merge(TextColorStyle.noshime)),
+            ],
+            if (!isExistsPillSheet) ...[
+              Text("-",
+                  style: FontType.assisting.merge(TextColorStyle.noshime)),
+            ],
+          ],
+        )
+      ],
+    );
+  }
+
+  Center _todayWidget() {
+    return Center(
+      child: Text(
+        "${_formattedToday()} (${_todayWeekday()})",
+        style: TextStyle().merge(
+          FontType.xBigNumber.merge(TextColorStyle.main),
+        ),
       ),
     );
   }

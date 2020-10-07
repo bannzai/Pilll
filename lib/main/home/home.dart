@@ -1,6 +1,7 @@
 import 'package:Pilll/main/calendar/calendar_page.dart';
 import 'package:Pilll/main/components/pill/pill_mark.dart';
 import 'package:Pilll/main/components/pill/pill_sheet.dart';
+import 'package:Pilll/main/record/record_page.dart';
 import 'package:Pilll/main/record/record_taken_information.dart';
 import 'package:Pilll/settings/list/settings.dart';
 import 'package:Pilll/style/button.dart';
@@ -78,47 +79,12 @@ class _HomePageState extends State<HomePage>
         body: TabBarView(
           controller: _tabController,
           children: <Widget>[
+            RecordPage(),
             CalendarPage(),
             Settings(),
-            _recordView(),
             // Settings(),
           ],
         ),
-      ),
-    );
-  }
-
-  Center _recordView() {
-    return Center(
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.start,
-        children: <Widget>[
-          SizedBox(height: 60),
-          // TODO: Should not use DateTime.now for beginingTakenDate and lastTakenDate
-          RecordTakenInformation(
-            today: DateTime.now(),
-            beginingTakenDate: DateTime.now(),
-            lastTakenDate: DateTime.now(),
-          ),
-          SizedBox(height: 24),
-          PillSheet(
-            isHideWeekdayLine: false,
-            pillMarkTypeBuilder: (number) {
-              return PillMarkType.normal;
-            },
-            markSelected: (number) {},
-          ),
-          SizedBox(height: 24),
-          Container(
-            height: 44,
-            width: 180,
-            child: PrimaryButton(
-              text: "飲んだ",
-              onPressed: () {},
-            ),
-          ),
-          SizedBox(height: 8),
-        ],
       ),
     );
   }

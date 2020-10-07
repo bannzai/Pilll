@@ -90,7 +90,7 @@ class CalendarPage extends StatelessWidget {
                   style: TextColorStyle.noshime.merge(FontType.assisting)),
             ],
           ),
-          Text(DateTimeFormatter.monthAndYearAndWeekday(date),
+          Text(DateTimeFormatter.monthAndWeekday(date),
               style: TextColorStyle.gray.merge(FontType.xBigTitle)),
         ],
       ),
