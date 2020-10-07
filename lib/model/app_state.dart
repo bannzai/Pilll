@@ -45,4 +45,9 @@ class AppState extends ChangeNotifier {
     notifyListeners();
     return Future.value(this);
   }
+
+  Future<T> updated<T>(T value, void update(AppState state, T value)) {
+    update(this, value);
+    return Future.value(value);
+  }
 }

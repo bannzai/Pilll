@@ -24,8 +24,12 @@ class _RecordPageState extends State<RecordPage> {
       appBar: null,
       extendBodyBehindAppBar: true,
       body: FutureBuilder(
-        future: pillSheetRepository.fetchLast(AppState.shared.user.documentID),
-        builder: (BuildContext context, AsyncSnapshot<PillSheetModel> model) {
+        future: pillSheetRepository
+            .fetchLast(AppState.shared.user.documentID)
+            .then((model) => AppState.shared.updated(model,
+                (state, pillSheet) => state.currentPillSheet = pillSheet)),
+        builder:
+            (BuildContext context, AsyncSnapshot<PillSheetModel> pillSheet) {
           return Center(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -34,8 +38,8 @@ class _RecordPageState extends State<RecordPage> {
                   today: DateTime.now(),
                   pillSheetModel: AppState.shared.currentPillSheet,
                 ),
-                if (AppState.shared.currentPillSheet == null) _empty(),
-                if (AppState.shared.currentPillSheet != null) ...[
+                if (pillSheet == null) _empty(),
+                if (pillSheet != null) ...[
                   _pillSheet(),
                   SizedBox(height: 24),
                   Container(
