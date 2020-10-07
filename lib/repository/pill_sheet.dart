@@ -5,6 +5,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 abstract class PillSheetRepositoryInterface {
   Future<PillSheetModel> fetchLast(String userID);
   Future<void> create(String userID, PillSheetModel model);
+  Future<void> delete(PillSheetModel pillSheet, String userID);
 }
 
 class PillSheetRepository extends PillSheetRepositoryInterface {
