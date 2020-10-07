@@ -1,3 +1,4 @@
+import 'package:Pilll/model/app_state.dart';
 import 'package:Pilll/model/pill_sheet_type.dart';
 import 'package:Pilll/model/user.dart';
 import 'package:Pilll/repository/user.dart';
@@ -52,17 +53,15 @@ class Setting {
       PillSheetTypeFunctions.fromRawPath(pillSheetTypeRawPath);
 
   Future<Setting> save() {
-    return userRepository.fetch().then((value) {
-      return FirebaseFirestore.instance
-          .collection(User.path)
-          .doc(value.documentID)
-          .set(
-        {
-          UserFirestoreFieldKeys.settings: toJson(),
-        },
-        SetOptions(merge: true),
-      );
-    }).then((_) => this);
+    return FirebaseFirestore.instance
+        .collection(User.path)
+        .doc(AppState.shared.user.documentID)
+        .set(
+      {
+        UserFirestoreFieldKeys.settings: toJson(),
+      },
+      SetOptions(merge: true),
+    ).then((_) => this);
   }
 
   DateTime reminderDateTime() {
