@@ -6,7 +6,7 @@ import 'package:json_annotation/json_annotation.dart';
 import 'package:meta/meta.dart';
 part 'pill_sheet.g.dart';
 
-@JsonSerializable(nullable: false)
+@JsonSerializable(nullable: false, explicitToJson: true)
 class PillSheetTypeInfo {
   final String pillSheetTypeReferencePath;
   final int totalCount;
@@ -25,25 +25,25 @@ class PillSheetTypeInfo {
   Map<String, dynamic> toJson() => _$PillSheetTypeInfoToJson(this);
 }
 
-@JsonSerializable(nullable: false)
+@JsonSerializable(nullable: true, explicitToJson: true)
 class PillSheetModel {
   @JsonKey(ignore: true)
   final String id;
   String get documentID => id;
 
+  @JsonKey(nullable: false)
   final PillSheetTypeInfo typeInfo;
   @JsonKey(
+    nullable: false,
     fromJson: TimestampConverter.timestampToDateTime,
     toJson: TimestampConverter.dateTimeToTimestamp,
   )
-  DateTime _beginingDate;
-  DateTime get beginingDate => _beginingDate;
+  DateTime beginingDate;
   @JsonKey(
     fromJson: TimestampConverter.timestampToDateTime,
     toJson: TimestampConverter.dateTimeToTimestamp,
   )
   final DateTime lastTakenDate;
-
   @JsonKey(
     fromJson: TimestampConverter.timestampToDateTime,
     toJson: TimestampConverter.dateTimeToTimestamp,
@@ -55,16 +55,16 @@ class PillSheetModel {
   )
   DateTime deletedAt;
 
+  @JsonKey(ignore: true)
   DateTime Function() _today;
   PillSheetModel({
     this.id,
     @required this.typeInfo,
-    @required DateTime beginingDate,
+    @required this.beginingDate,
     @required this.lastTakenDate,
     DateTime Function() todayBuilder = today,
   })  : assert(typeInfo != null),
         assert(beginingDate != null) {
-    _beginingDate = beginingDate;
     _today = todayBuilder;
   }
 
@@ -82,6 +82,6 @@ class PillSheetModel {
   void resetTodayTakenPillNumber(int pillNumber) {
     if (pillNumber == todayPillNumber) return;
     var betweenToday = pillNumber - todayPillNumber;
-    _beginingDate = _beginingDate.add(Duration(days: betweenToday));
+    beginingDate = beginingDate.add(Duration(days: betweenToday));
   }
 }
