@@ -29,6 +29,7 @@ class PillSheetTypeInfo {
 class PillSheetModel {
   @JsonKey(ignore: true)
   final String id;
+  String get documentID => id;
 
   final PillSheetTypeInfo typeInfo;
   @JsonKey(
