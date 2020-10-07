@@ -55,12 +55,7 @@ class Setting {
     return FirebaseFirestore.instance
         .collection(User.path)
         .doc(AppState.shared.user.documentID)
-        .set(
-      {
-        UserFirestoreFieldKeys.settings: toJson(),
-      },
-      SetOptions(merge: true),
-    ).then((_) => this);
+        .update({UserFirestoreFieldKeys.settings: toJson()}).then((_) => this);
   }
 
   DateTime reminderDateTime() {
