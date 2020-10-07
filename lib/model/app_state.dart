@@ -21,7 +21,7 @@ class AppState extends ChangeNotifier {
 
   set user(User user) {
     assert(_user == null, "you can set user for once. user is already exists ");
-    if (user != null) throw UserAlreadyExists();
+    if (_user != null) throw UserAlreadyExists();
     _user = user;
   }
 
