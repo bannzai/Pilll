@@ -104,7 +104,7 @@ class _SettingsState extends State<Settings> {
                     .push(MaterialPageRoute(builder: (BuildContext context) {
                   return ModifingPillNumberPage(
                     markSelected: (number) {
-                      setState(() => user.currentPillSheet
+                      setState(() => AppState.shared.currentPillSheet
                           .resetTodayTakenPillNumber(number));
                     },
                     pillMarkTypeBuilder: (number) {
