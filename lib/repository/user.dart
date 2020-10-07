@@ -5,17 +5,33 @@ import 'package:firebase_auth/firebase_auth.dart' as auth;
 
 abstract class UserRepositoryInterface {
   Future<User> fetchOrCreateUser();
+  Future<User> fetch();
 }
 
 class UserRepository extends UserRepositoryInterface {
   @override
   Future<User> fetchOrCreateUser() {
-    return _fetch().catchError((error) {
+    return fetch().catchError((error) {
       if (error is UserNotFound) {
-        return _create().then((_) => _fetch());
+        return _create().then((_) => fetch());
       }
       throw FormatException(
           "cause exception when failed fetch and create user for $error");
+    });
+  }
+
+  Future<User> fetch() {
+    return FirebaseFirestore.instance
+        .collection(User.path)
+        .doc(auth.FirebaseAuth.instance.currentUser.uid)
+        .get()
+        .then((document) {
+      if (!document.exists) {
+        throw UserNotFound();
+      }
+      var user = User.map(document.data());
+      AppState.shared.user = user;
+      return user;
     });
   }
 
@@ -32,21 +48,6 @@ class UserRepository extends UserRepositoryInterface {
             auth.FirebaseAuth.instance.currentUser.uid,
       },
     );
-  }
-
-  Future<User> _fetch() {
-    return FirebaseFirestore.instance
-        .collection(User.path)
-        .doc(auth.FirebaseAuth.instance.currentUser.uid)
-        .get()
-        .then((document) {
-      if (!document.exists) {
-        throw UserNotFound();
-      }
-      var user = User.map(document.data());
-      AppState.shared.user = user;
-      return user;
-    });
   }
 }
 
