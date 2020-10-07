@@ -1,22 +1,12 @@
 import 'package:Pilll/model/firestore_timestamp_converter.dart';
 import 'package:Pilll/model/pill_sheet_type.dart';
-import 'package:Pilll/model/user.dart';
 import 'package:Pilll/util/today.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:json_annotation/json_annotation.dart';
 import 'package:meta/meta.dart';
 part 'pill_sheet.g.dart';
 
-abstract class PillSheetFirestoreFieldKeys {
-  static final String beginingDate = "beginingDate";
-  static final String pillSheetTypeInfo = "pillSheetTypeInfo";
-  static final String pillSheetTypeInfoRef = "reference";
-  static final String pillSheetTypeInfoPillCount = "pillCount";
-  static final String pillSheetTypeInfoDosingPeriod = "dosingPeriod";
-  static final String lastTakenDate = "lastTakenDate";
-}
-
-@JsonSerializable(nullable: false)
+@JsonSerializable(nullable: false, explicitToJson: true)
 class PillSheetTypeInfo {
   final String pillSheetTypeReferencePath;
   final int totalCount;
@@ -35,31 +25,46 @@ class PillSheetTypeInfo {
   Map<String, dynamic> toJson() => _$PillSheetTypeInfoToJson(this);
 }
 
-@JsonSerializable(nullable: false)
+@JsonSerializable(nullable: true, explicitToJson: true)
 class PillSheetModel {
+  @JsonKey(ignore: true)
+  final String id;
+  String get documentID => id;
+
+  @JsonKey(nullable: false)
   final PillSheetTypeInfo typeInfo;
   @JsonKey(
+    nullable: false,
     fromJson: TimestampConverter.timestampToDateTime,
     toJson: TimestampConverter.dateTimeToTimestamp,
   )
-  DateTime _beginingDate;
-  DateTime get beginingDate => _beginingDate;
+  DateTime beginingDate;
   @JsonKey(
     fromJson: TimestampConverter.timestampToDateTime,
     toJson: TimestampConverter.dateTimeToTimestamp,
   )
   final DateTime lastTakenDate;
+  @JsonKey(
+    fromJson: TimestampConverter.timestampToDateTime,
+    toJson: TimestampConverter.dateTimeToTimestamp,
+  )
+  DateTime createdAt;
+  @JsonKey(
+    fromJson: TimestampConverter.timestampToDateTime,
+    toJson: TimestampConverter.dateTimeToTimestamp,
+  )
+  DateTime deletedAt;
 
+  @JsonKey(ignore: true)
   DateTime Function() _today;
   PillSheetModel({
+    this.id,
     @required this.typeInfo,
-    @required DateTime beginingDate,
+    @required this.beginingDate,
     @required this.lastTakenDate,
     DateTime Function() todayBuilder = today,
   })  : assert(typeInfo != null),
-        assert(beginingDate != null),
-        assert(lastTakenDate != null) {
-    _beginingDate = beginingDate;
+        assert(beginingDate != null) {
     _today = todayBuilder;
   }
 
@@ -77,6 +82,6 @@ class PillSheetModel {
   void resetTodayTakenPillNumber(int pillNumber) {
     if (pillNumber == todayPillNumber) return;
     var betweenToday = pillNumber - todayPillNumber;
-    _beginingDate = _beginingDate.add(Duration(days: betweenToday));
+    beginingDate = beginingDate.add(Duration(days: betweenToday));
   }
 }

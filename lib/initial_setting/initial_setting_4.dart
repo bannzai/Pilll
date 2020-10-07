@@ -1,4 +1,5 @@
 import 'package:Pilll/main/application/router.dart';
+import 'package:Pilll/model/app_state.dart';
 import 'package:Pilll/model/initial_setting.dart';
 import 'package:Pilll/style/button.dart';
 import 'package:Pilll/theme/color.dart';
@@ -17,10 +18,10 @@ class InitialSetting4 extends StatefulWidget {
 class _InitialSetting4State extends State<InitialSetting4> {
   @override
   void initState() {
-    var model = InitialSettingModel.read(context);
-    if (_notYetSetTime(model)) {
-      model.reminderHour = 22;
-      model.reminderMinute = 0;
+    var model = AppState.read(context);
+    if (_notYetSetTime(model.initialSetting)) {
+      model.initialSetting.reminderHour = 22;
+      model.initialSetting.reminderMinute = 0;
     }
     super.initState();
   }
@@ -30,7 +31,7 @@ class _InitialSetting4State extends State<InitialSetting4> {
   }
 
   Widget _time(BuildContext context) {
-    var dateTime = InitialSettingModel.watch(context).reminderDateTime();
+    var dateTime = AppState.watch(context).initialSetting.reminderDateTime();
     return Text(
       DateTimeFormatter.militaryTime(dateTime),
       style: FontType.largeNumber.merge(
@@ -43,16 +44,16 @@ class _InitialSetting4State extends State<InitialSetting4> {
   }
 
   void _showDurationModalSheet(BuildContext context) {
-    var model = InitialSettingModel.read(context);
+    var model = AppState.read(context);
     showModalBottomSheet(
       context: context,
       builder: (BuildContext context) {
         return DateTimePicker(
-          initialDateTime: model.reminderDateTime(),
+          initialDateTime: model.initialSetting.reminderDateTime(),
           done: (dateTime) {
             setState(() {
-              model.reminderHour = dateTime.hour;
-              model.reminderMinute = dateTime.minute;
+              model.initialSetting.reminderHour = dateTime.hour;
+              model.initialSetting.reminderMinute = dateTime.minute;
               Navigator.pop(context);
             });
           },
@@ -63,7 +64,7 @@ class _InitialSetting4State extends State<InitialSetting4> {
 
   @override
   Widget build(BuildContext context) {
-    var model = InitialSettingModel.watch(context);
+    var model = AppState.watch(context);
     return Scaffold(
       backgroundColor: PilllColors.background,
       appBar: AppBar(
@@ -111,8 +112,8 @@ class _InitialSetting4State extends State<InitialSetting4> {
                   PrimaryButton(
                     text: "設定",
                     onPressed: () {
-                      model.isOnReminder = true;
-                      model
+                      model.initialSetting.isOnReminder = true;
+                      model.initialSetting
                           .register()
                           .then((_) => Router.endInitialSetting(context));
                     },
@@ -120,8 +121,8 @@ class _InitialSetting4State extends State<InitialSetting4> {
                   TertiaryButton(
                     text: "スキップ",
                     onPressed: () {
-                      model.isOnReminder = false;
-                      model
+                      model.initialSetting.isOnReminder = false;
+                      model.initialSetting
                           .register()
                           .then((_) => Router.endInitialSetting(context));
                     },

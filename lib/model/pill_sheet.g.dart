@@ -29,14 +29,20 @@ PillSheetModel _$PillSheetModelFromJson(Map<String, dynamic> json) {
         json['beginingDate'] as Timestamp),
     lastTakenDate: TimestampConverter.timestampToDateTime(
         json['lastTakenDate'] as Timestamp),
-  );
+  )
+    ..createdAt =
+        TimestampConverter.timestampToDateTime(json['createdAt'] as Timestamp)
+    ..deletedAt =
+        TimestampConverter.timestampToDateTime(json['deletedAt'] as Timestamp);
 }
 
 Map<String, dynamic> _$PillSheetModelToJson(PillSheetModel instance) =>
     <String, dynamic>{
-      'typeInfo': instance.typeInfo,
+      'typeInfo': instance.typeInfo.toJson(),
       'beginingDate':
           TimestampConverter.dateTimeToTimestamp(instance.beginingDate),
       'lastTakenDate':
           TimestampConverter.dateTimeToTimestamp(instance.lastTakenDate),
+      'createdAt': TimestampConverter.dateTimeToTimestamp(instance.createdAt),
+      'deletedAt': TimestampConverter.dateTimeToTimestamp(instance.deletedAt),
     };

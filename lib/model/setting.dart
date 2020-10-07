@@ -1,3 +1,4 @@
+import 'package:Pilll/model/app_state.dart';
 import 'package:Pilll/model/pill_sheet_type.dart';
 import 'package:Pilll/model/user.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
@@ -22,7 +23,7 @@ class ReminderTime {
 }
 
 @JsonSerializable(explicitToJson: true)
-class Setting extends ChangeNotifier {
+class Setting {
   String pillSheetTypeRawPath;
   int fromMenstruation;
   int durationMenstruation;
@@ -51,28 +52,15 @@ class Setting extends ChangeNotifier {
       PillSheetTypeFunctions.fromRawPath(pillSheetTypeRawPath);
 
   Future<Setting> save() {
-    return User.fetch().then((value) {
-      return FirebaseFirestore.instance
-          .collection(User.path)
-          .doc(value.documentID)
-          .set(
-        {
-          UserFirestoreFieldKeys.settings: toJson(),
-        },
-        SetOptions(merge: true),
-      );
-    }).then((_) => this);
+    return FirebaseFirestore.instance
+        .collection(User.path)
+        .doc(AppState.shared.user.documentID)
+        .update({UserFirestoreFieldKeys.settings: toJson()}).then((_) => this);
   }
 
   DateTime reminderDateTime() {
     var t = DateTime.now().toLocal();
     return DateTime(t.year, t.month, t.day, reminderTime.hour,
         reminderTime.minute, t.second, t.millisecond, t.microsecond);
-  }
-
-  Future<Setting> notifyWith(void update(Setting model)) {
-    update(this);
-    notifyListeners();
-    return Future.value(this);
   }
 }
