@@ -26,10 +26,7 @@ class AppState extends ChangeNotifier {
     return _user;
   }
 
-  set user(User user) {
-    _user = user;
-  }
-
+  set user(User user) => _user = user;
   bool get userIsExists => _user != null;
 
   static AppState watch(BuildContext context) {
