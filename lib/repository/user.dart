@@ -35,10 +35,6 @@ class UserRepository extends UserRepositoryInterface {
   }
 
   Future<User> _fetch() {
-    if (AppState.shared.userIsExists) {
-      return Future.value(AppState.shared.user);
-    }
-
     return FirebaseFirestore.instance
         .collection(User.path)
         .doc(auth.FirebaseAuth.instance.currentUser.uid)
@@ -48,8 +44,6 @@ class UserRepository extends UserRepositoryInterface {
         throw UserNotFound();
       }
       var user = User.map(document.data());
-      assert(!AppState.shared.userIsExists,
-          "you should early return cached user. e.g) this function top level");
       AppState.shared.user = user;
       return user;
     });
