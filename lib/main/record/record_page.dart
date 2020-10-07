@@ -29,7 +29,8 @@ class _RecordPageState extends State<RecordPage> {
             .then((model) => AppState.shared.updated(model,
                 (state, pillSheet) => state.currentPillSheet = pillSheet)),
         builder:
-            (BuildContext context, AsyncSnapshot<PillSheetModel> pillSheet) {
+            (BuildContext context, AsyncSnapshot<PillSheetModel> snapshot) {
+          var pillSheet = snapshot.data;
           return Center(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
