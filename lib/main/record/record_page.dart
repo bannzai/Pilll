@@ -17,7 +17,6 @@ class RecordPage extends StatefulWidget {
 class _RecordPageState extends State<RecordPage> {
   @override
   Widget build(BuildContext context) {
-    var user = AppState.watch(context).user;
     return Scaffold(
       backgroundColor: PilllColors.background,
       appBar: null,
