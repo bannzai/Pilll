@@ -1,4 +1,5 @@
 import 'package:Pilll/main/application/router.dart';
+import 'package:Pilll/main/components/indicator.dart';
 import 'package:Pilll/model/app_state.dart';
 import 'package:Pilll/repository/user.dart';
 import 'package:Pilll/theme/color.dart';
@@ -58,12 +59,7 @@ class RootState extends State<Root> {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: PilllColors.background,
-      body: Container(
-        child: Center(
-          child: CircularProgressIndicator(
-              valueColor: AlwaysStoppedAnimation(PilllColors.primary)),
-        ),
-      ),
+      body: Indicator(),
     );
   }
 }
