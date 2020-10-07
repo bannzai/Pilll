@@ -6,6 +6,7 @@ import 'package:firebase_auth/firebase_auth.dart' as auth;
 abstract class UserRepositoryInterface {
   Future<User> fetchOrCreateUser();
   Future<User> fetch();
+  Future<User> subscribe();
 }
 
 class UserRepository extends UserRepositoryInterface {
@@ -33,6 +34,16 @@ class UserRepository extends UserRepositoryInterface {
       AppState.shared.user = user;
       return user;
     });
+  }
+
+  Future<User> subscribe() {
+    return FirebaseFirestore.instance
+        .collection(User.path)
+        .doc(auth.FirebaseAuth.instance.currentUser.uid)
+        .snapshots(includeMetadataChanges: true)
+        .listen((event) {
+      return User.map(event.data());
+    }).asFuture();
   }
 
   Future<void> _create() {
