@@ -52,7 +52,7 @@ class Setting extends ChangeNotifier {
       PillSheetTypeFunctions.fromRawPath(pillSheetTypeRawPath);
 
   Future<Setting> save() {
-    return userRepository.fetchOrCreateUser().then((value) {
+    return userRepository.fetch().then((value) {
       return FirebaseFirestore.instance
           .collection(User.path)
           .doc(value.documentID)
