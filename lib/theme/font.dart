@@ -22,6 +22,11 @@ class FontSize {
 }
 
 class FontType {
+  static final TextStyle xHugeNumber = TextStyle(
+    fontFamily: FontFamily.number,
+    fontWeight: FontWeight.normal,
+    fontSize: FontSize.xHuge,
+  );
   static final TextStyle largeNumber = TextStyle(
     fontFamily: FontFamily.number,
     fontWeight: FontWeight.w300,
@@ -40,6 +45,11 @@ class FontType {
   static final TextStyle xBigTitle = TextStyle(
     fontFamily: FontFamily.japanese,
     fontWeight: FontWeight.w600,
+    fontSize: FontSize.xBig,
+  );
+  static final TextStyle xBigNumber = TextStyle(
+    fontFamily: FontFamily.number,
+    fontWeight: FontWeight.w300,
     fontSize: FontSize.xBig,
   );
   static final TextStyle sBigTitle = TextStyle(
