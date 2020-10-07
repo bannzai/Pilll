@@ -3,7 +3,7 @@ import 'package:Pilll/model/user.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 
 abstract class PillSheetRepositoryInterface {
-  Future<PillSheetModel> current(String userID);
+  Future<PillSheetModel> fetchLast(String userID);
   Future<void> create(String userID, PillSheetModel model);
 }
 
@@ -13,7 +13,7 @@ class PillSheetRepository extends PillSheetRepositoryInterface {
   }
 
   @override
-  Future<PillSheetModel> current(String userID) {
+  Future<PillSheetModel> fetchLast(String userID) {
     return FirebaseFirestore.instance
         .collection(_path(userID))
         .orderBy("createdAt")
