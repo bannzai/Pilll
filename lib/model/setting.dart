@@ -23,7 +23,7 @@ class ReminderTime {
 }
 
 @JsonSerializable(explicitToJson: true)
-class Setting extends ChangeNotifier {
+class Setting {
   String pillSheetTypeRawPath;
   int fromMenstruation;
   int durationMenstruation;

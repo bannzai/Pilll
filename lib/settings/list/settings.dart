@@ -85,13 +85,12 @@ class _SettingsState extends State<Settings> {
                 return PillSheetTypeSelectPage(
                   title: "種類",
                   callback: (type) {
-                    setState(() {
-                      Navigator.pop(context);
-                      AppState.shared
-                          .notifyWith((model) => model
-                              .user.setting.pillSheetTypeRawPath = type.rawPath)
-                          .then((value) => value.user.setting.save());
-                    });
+                    Navigator.pop(context);
+                    AppState.shared
+                        .notifyWith((model) => model
+                            .user.setting.pillSheetTypeRawPath = type.rawPath)
+                        .then((value) => value.user.setting.save())
+                        .then((value) => setState(() => null));
                   },
                   selectedPillSheetType: user.setting.pillSheetType,
                 );
@@ -133,10 +132,11 @@ class _SettingsState extends State<Settings> {
             title: "ピルの服用通知",
             value: user.setting.isOnReminder,
             onTap: () {
-              setState(() => AppState.shared
+              AppState.shared
                   .notifyWith((model) => model.user.setting.isOnReminder =
                       !user.setting.isOnReminder)
-                  .then((value) => value.user.setting.save()));
+                  .then((value) => value.user.setting.save())
+                  .then((value) => setState(() => null));
             },
           ),
           SettingsListDatePickerRowModel(
@@ -150,17 +150,16 @@ class _SettingsState extends State<Settings> {
                   return DateTimePicker(
                     initialDateTime: user.setting.reminderDateTime(),
                     done: (dateTime) {
-                      setState(() {
-                        AppState.shared
-                            .notifyWith(
-                              (model) => model.user.setting.reminderTime =
-                                  ReminderTime(
-                                      hour: dateTime.hour,
-                                      minute: dateTime.minute),
-                            )
-                            .then((value) => value.user.setting.save());
-                        Navigator.pop(context);
-                      });
+                      Navigator.pop(context);
+                      AppState.shared
+                          .notifyWith(
+                            (model) => model.user.setting.reminderTime =
+                                ReminderTime(
+                                    hour: dateTime.hour,
+                                    minute: dateTime.minute),
+                          )
+                          .then((value) => value.user.setting.save())
+                          .then((value) => setState(() => null));
                     },
                   );
                 },
@@ -186,22 +185,20 @@ class _SettingsState extends State<Settings> {
                             user.setting.durationMenstruation,
                       ),
                       fromMenstructionDidDecide: (selectedFromMenstruction) {
-                        setState(() {
-                          AppState.shared
-                              .notifyWith((model) => model.user.setting
-                                  .fromMenstruation = selectedFromMenstruction)
-                              .then((value) => value.user.setting.save());
-                        });
+                        AppState.shared
+                            .notifyWith((model) => model.user.setting
+                                .fromMenstruation = selectedFromMenstruction)
+                            .then((value) => value.user.setting.save())
+                            .then((value) => setState(() => null));
                       },
                       durationMenstructionDidDecide:
                           (selectedDurationMenstruation) {
-                        setState(() {
-                          AppState.shared
-                              .notifyWith((model) =>
-                                  model.user.setting.durationMenstruation =
-                                      selectedDurationMenstruation)
-                              .then((value) => value.user.setting.save());
-                        });
+                        AppState.shared
+                            .notifyWith((model) =>
+                                model.user.setting.durationMenstruation =
+                                    selectedDurationMenstruation)
+                            .then((value) => value.user.setting.save())
+                            .then((value) => setState(() => null));
                       },
                     );
                   },
@@ -240,7 +237,7 @@ class _SettingsState extends State<Settings> {
   }
 
   void _deleteCurrentPillSheet(User user) {
-    setState(() => user.deleteCurrentPillSheet());
+    user.deleteCurrentPillSheet().then((value) => setState(() => null));
   }
 
   Widget _section(SettingSection section) {
