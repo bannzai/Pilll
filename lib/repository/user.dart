@@ -42,6 +42,7 @@ class UserRepository extends UserRepositoryInterface {
         .doc(auth.FirebaseAuth.instance.currentUser.uid)
         .snapshots(includeMetadataChanges: true)
         .listen((event) {
+      print('user: ${event.data()})');
       return User.map(event.data());
     }).asFuture();
   }
