@@ -240,7 +240,9 @@ class _SettingsState extends State<Settings> {
   void _deleteCurrentPillSheet() {
     pillSheetRepository
         .delete(
-            AppState.shared.currentPillSheet, AppState.shared.user.documentID)
+          AppState.shared.user.documentID,
+          AppState.shared.currentPillSheet,
+        )
         .then((value) => setState(() => null));
   }
 
