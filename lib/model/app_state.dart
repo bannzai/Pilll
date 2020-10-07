@@ -4,14 +4,14 @@ import 'package:provider/provider.dart';
 import 'package:flutter/material.dart';
 
 class AppState extends ChangeNotifier {
-  static final AppState _instance = AppState._internal();
-  factory AppState() => _instance;
+  static final AppState shared = AppState._internal();
+  factory AppState() => shared;
   AppState._internal();
-  static get shared => _instance;
 
   final InitialSettingModel _initialSetting = InitialSettingModel();
   InitialSettingModel get initialSetting => _initialSetting;
 
+  User _user;
   User get user {
     assert(_user != null,
         "you should call fetch and caching user before call this property. ");
@@ -19,7 +19,13 @@ class AppState extends ChangeNotifier {
     return _user;
   }
 
-  User _user;
+  set user(User user) {
+    assert(_user == null, "you can set user for once. user is already exists ");
+    if (user != null) throw UserAlreadyExists();
+    _user = user;
+  }
+
+  bool get userIsExists => _user != null;
 
   static AppState watch(BuildContext context) {
     return context.watch();
