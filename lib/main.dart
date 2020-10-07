@@ -1,7 +1,5 @@
-import 'package:Pilll/model/initial_setting.dart';
-import 'package:Pilll/model/user.dart';
+import 'package:Pilll/model/app_state.dart';
 import 'package:Pilll/theme/color.dart';
-import 'package:Pilll/theme/text_color.dart';
 import 'package:firebase_analytics/firebase_analytics.dart';
 import 'package:firebase_analytics/observer.dart';
 import 'package:flutter/material.dart';
@@ -22,13 +20,9 @@ class App extends StatelessWidget {
     FirebaseAnalytics analytics = FirebaseAnalytics();
     return MultiProvider(
       providers: [
-        ChangeNotifierProvider<InitialSettingModel>(
-          create: (_) => InitialSettingModel(),
-          lazy: true,
-        ),
-        ChangeNotifierProvider<User>(
-          create: (_) => User.user(),
-          lazy: true,
+        ChangeNotifierProvider<AppState>(
+          create: (_) => AppState(),
+          lazy: false,
         )
       ],
       child: MaterialApp(

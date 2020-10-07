@@ -1,5 +1,7 @@
 import 'package:Pilll/main/application/router.dart';
-import 'package:Pilll/model/user.dart';
+import 'package:Pilll/main/components/indicator.dart';
+import 'package:Pilll/model/app_state.dart';
+import 'package:Pilll/repository/user.dart';
 import 'package:Pilll/theme/color.dart';
 import 'package:Pilll/util/shared_preference/keys.dart';
 import 'package:flutter/material.dart';
@@ -22,7 +24,7 @@ class RootState extends State<Root> {
       print("app name is $app.name");
       return FirebaseAuth.instance.signInAnonymously();
     }).then((userCredential) {
-      return UserInterface.fetchOrCreateUser();
+      return userRepository.fetchOrCreateUser();
     }).then((user) {
       if (user.setting == null) {
         Navigator.popAndPushNamed(context, Routes.initialSetting);
@@ -50,19 +52,14 @@ class RootState extends State<Root> {
       }
       Navigator.popAndPushNamed(context, Routes.main);
       // Navigator.popAndPushNamed(context, Routes.initialSetting);
-    });
+    }).then((value) => AppState.shared.subscribe());
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: PilllColors.background,
-      body: Container(
-        child: Center(
-          child: CircularProgressIndicator(
-              valueColor: AlwaysStoppedAnimation(PilllColors.primary)),
-        ),
-      ),
+      body: Indicator(),
     );
   }
 }
