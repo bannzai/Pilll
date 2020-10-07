@@ -5,7 +5,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 abstract class PillSheetRepositoryInterface {
   Future<PillSheetModel> fetchLast(String userID);
   Future<void> create(String userID, PillSheetModel model);
-  Future<void> delete(PillSheetModel pillSheet, String userID);
+  Future<void> delete(String userID, PillSheetModel pillSheet);
 }
 
 class PillSheetRepository extends PillSheetRepositoryInterface {
@@ -44,7 +44,7 @@ class PillSheetRepository extends PillSheetRepositoryInterface {
         .add(model.toJson().remove("id"));
   }
 
-  Future<void> delete(PillSheetModel pillSheet, String userID) {
+  Future<void> delete(String userID, PillSheetModel pillSheet) {
     return FirebaseFirestore.instance
         .collection(_path(userID))
         .doc(pillSheet.documentID)
