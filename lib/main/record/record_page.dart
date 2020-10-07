@@ -28,10 +28,10 @@ class _RecordPageState extends State<RecordPage> {
           children: <Widget>[
             RecordTakenInformation(
               today: DateTime.now(),
-              pillSheetModel: user.currentPillSheet,
+              pillSheetModel: AppState.shared.currentPillSheet,
             ),
-            if (user.currentPillSheet == null) _empty(),
-            if (user.currentPillSheet != null) ...[
+            if (AppState.shared.currentPillSheet == null) _empty(),
+            if (AppState.shared.currentPillSheet != null) ...[
               _pillSheet(),
               SizedBox(height: 24),
               Container(

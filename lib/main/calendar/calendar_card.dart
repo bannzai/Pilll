@@ -32,12 +32,14 @@ class CalendarCard extends StatelessWidget {
             bandModels: [
               CalendarMenstruationBandModel(
                   DateTime(2020, 10, 28), DateTime(2020, 11, 2)),
-              if (user.currentPillSheet != null) ...[
-                menstruationDateRange(user.currentPillSheet, user.setting, 0)
+              if (AppState.shared.currentPillSheet != null) ...[
+                menstruationDateRange(
+                        AppState.shared.currentPillSheet, user.setting, 0)
                     .map((range) =>
                         CalendarMenstruationBandModel(range.begin, range.end)),
-                nextPillSheetDateRange(user.currentPillSheet, 0).map((range) =>
-                    CalendarNextPillSheetBandModel(range.begin, range.end)),
+                nextPillSheetDateRange(AppState.shared.currentPillSheet, 0).map(
+                    (range) =>
+                        CalendarNextPillSheetBandModel(range.begin, range.end)),
               ]
             ],
           ),
@@ -80,22 +82,24 @@ class CalendarCard extends StatelessWidget {
     CalendarListPageModel previous = CalendarListPageModel(
         Calculator(DateTime(now.year, now.month - 1, 1)), []);
     CalendarListPageModel current = CalendarListPageModel(Calculator(now), [
-      if (user.currentPillSheet != null) ...[
-        menstruationDateRange(user.currentPillSheet, user.setting, 0).map(
-            (dateRange) =>
+      if (AppState.shared.currentPillSheet != null) ...[
+        menstruationDateRange(AppState.shared.currentPillSheet, user.setting, 0)
+            .map((dateRange) =>
                 CalendarMenstruationBandModel(dateRange.begin, dateRange.end)),
-        nextPillSheetDateRange(user.currentPillSheet, 0).map((dateRange) =>
-            CalendarNextPillSheetBandModel(dateRange.begin, dateRange.end))
+        nextPillSheetDateRange(AppState.shared.currentPillSheet, 0).map(
+            (dateRange) =>
+                CalendarNextPillSheetBandModel(dateRange.begin, dateRange.end))
       ]
     ]);
     CalendarListPageModel next = CalendarListPageModel(
         Calculator(DateTime(now.year, now.month + 1, 1)), [
-      if (user.currentPillSheet != null) ...[
-        menstruationDateRange(user.currentPillSheet, user.setting, 1).map(
-            (dateRange) =>
+      if (AppState.shared.currentPillSheet != null) ...[
+        menstruationDateRange(AppState.shared.currentPillSheet, user.setting, 1)
+            .map((dateRange) =>
                 CalendarMenstruationBandModel(dateRange.begin, dateRange.end)),
-        nextPillSheetDateRange(user.currentPillSheet, 1).map((dateRange) =>
-            CalendarNextPillSheetBandModel(dateRange.begin, dateRange.end))
+        nextPillSheetDateRange(AppState.shared.currentPillSheet, 1).map(
+            (dateRange) =>
+                CalendarNextPillSheetBandModel(dateRange.begin, dateRange.end))
       ]
     ]);
     return ConstrainedBox(
