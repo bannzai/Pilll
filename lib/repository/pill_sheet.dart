@@ -21,8 +21,9 @@ class PillSheetRepository extends PillSheetRepositoryInterface {
         .limitToLast(1)
         .get()
         .then((event) {
+      if (event.docs.isEmpty) return null;
+      if (!event.docs.last.exists) return null;
       var document = event.docs.last;
-      if (!document.exists) return null;
 
       var data = document.data();
       data["id"] = document.id;
