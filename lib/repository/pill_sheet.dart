@@ -4,7 +4,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 
 abstract class PillSheetRepositoryInterface {
   Future<PillSheetModel> fetchLast(String userID);
-  Future<void> create(String userID, PillSheetModel model);
+  Future<void> register(String userID, PillSheetModel model);
   Future<void> delete(String userID, PillSheetModel pillSheet);
 }
 
@@ -34,7 +34,7 @@ class PillSheetRepository extends PillSheetRepositoryInterface {
   }
 
   @override
-  Future<void> create(String userID, PillSheetModel model) {
+  Future<void> register(String userID, PillSheetModel model) {
     if (model.createdAt != null) throw PillSheetAlreadyExists();
     if (model.deletedAt != null) throw PillSheetAlreadyDeleted();
     model.createdAt = DateTime.now();
