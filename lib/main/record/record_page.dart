@@ -3,11 +3,13 @@ import 'package:Pilll/main/components/pill/pill_sheet.dart';
 import 'package:Pilll/main/record/record_taken_information.dart';
 import 'package:Pilll/model/app_state.dart';
 import 'package:Pilll/model/pill_sheet.dart';
+import 'package:Pilll/model/pill_sheet_type.dart';
 import 'package:Pilll/repository/pill_sheet.dart';
 import 'package:Pilll/style/button.dart';
 import 'package:Pilll/theme/color.dart';
 import 'package:Pilll/theme/font.dart';
 import 'package:Pilll/theme/text_color.dart';
+import 'package:Pilll/util/today.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
@@ -72,23 +74,44 @@ class _RecordPageState extends State<RecordPage> {
   }
 
   Widget _empty() {
-    return SizedBox(
-      width: PillSheet.size.width,
-      height: PillSheet.size.height,
-      child: Stack(
-        children: <Widget>[
-          Center(child: SvgPicture.asset("images/empty_frame.svg")),
-          Center(
-              child: Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[
-              Icon(Icons.add, color: TextColor.noshime),
-              Text("ピルシートを追加",
-                  style: FontType.assisting.merge(TextColorStyle.noshime)),
-            ],
-          )),
-        ],
+    var progressing = false;
+    return GestureDetector(
+      child: SizedBox(
+        width: PillSheet.size.width,
+        height: PillSheet.size.height,
+        child: Stack(
+          children: <Widget>[
+            Center(child: SvgPicture.asset("images/empty_frame.svg")),
+            Center(
+                child: Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                Icon(Icons.add, color: TextColor.noshime),
+                Text("ピルシートを追加",
+                    style: FontType.assisting.merge(TextColorStyle.noshime)),
+              ],
+            )),
+          ],
+        ),
       ),
+      onTap: () {
+        if (progressing) return;
+        progressing = true;
+
+        var pillSheet = PillSheetModel(
+          typeInfo: AppState.shared.user.setting.pillSheetType.typeInfo,
+          beginingDate: today(),
+          lastTakenDate: null,
+        );
+        pillSheetRepository
+            .register(
+              AppState.shared.user.documentID,
+              pillSheet,
+            )
+            .then((_) => AppState.shared.notifyWith(
+                (model) => AppState.shared.currentPillSheet = pillSheet))
+            .then((_) => progressing = false);
+      },
     );
   }
 }

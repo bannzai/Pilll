@@ -63,8 +63,7 @@ class PillSheetModel {
     @required this.lastTakenDate,
     DateTime Function() todayBuilder = today,
   })  : assert(typeInfo != null),
-        assert(beginingDate != null),
-        assert(lastTakenDate != null) {
+        assert(beginingDate != null) {
     _beginingDate = beginingDate;
     _today = todayBuilder;
   }
