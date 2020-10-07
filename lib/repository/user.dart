@@ -20,9 +20,9 @@ class UserRepository extends UserRepositoryInterface {
   }
 
   Future<void> _create() {
-    assert(AppState.shared._user == null,
+    assert(!AppState.shared.userIsExists,
         "user already exists on process. maybe you will call fetch before create");
-    if (AppState.shared._user != null) throw UserAlreadyExists();
+    if (AppState.shared.userIsExists) throw UserAlreadyExists();
     return FirebaseFirestore.instance
         .collection(User.path)
         .doc(auth.FirebaseAuth.instance.currentUser.uid)
@@ -35,8 +35,8 @@ class UserRepository extends UserRepositoryInterface {
   }
 
   Future<User> _fetch() {
-    if (AppState.shared._user != null) {
-      return Future.value(AppState.shared._user);
+    if (AppState.shared.userIsExists) {
+      return Future.value(AppState.shared.user);
     }
 
     return FirebaseFirestore.instance
@@ -48,9 +48,9 @@ class UserRepository extends UserRepositoryInterface {
         throw UserNotFound();
       }
       var user = User.map(document.data());
-      assert(AppState.shared._user == null,
+      assert(!AppState.shared.userIsExists,
           "you should early return cached user. e.g) this function top level");
-      AppState.shared._user = user;
+      AppState.shared.user = user;
       return user;
     });
   }
