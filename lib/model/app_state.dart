@@ -1,4 +1,5 @@
 import 'package:Pilll/model/initial_setting.dart';
+import 'package:Pilll/model/pill_sheet.dart';
 import 'package:Pilll/model/user.dart';
 import 'package:Pilll/repository/user.dart';
 import 'package:provider/provider.dart';
@@ -28,6 +29,8 @@ class AppState extends ChangeNotifier {
 
   set user(User user) => _user = user;
   bool get userIsExists => _user != null;
+
+  PillSheetModel currentPillSheet;
 
   static AppState watch(BuildContext context) {
     return context.watch();
