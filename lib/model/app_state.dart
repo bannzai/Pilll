@@ -10,12 +10,6 @@ class AppState extends ChangeNotifier {
   factory AppState() => shared;
   AppState._internal();
 
-  void subscribe() {
-    userRepository
-        .subscribe()
-        .then((value) => this.notifyWith((model) => model.user = value));
-  }
-
   final InitialSettingModel _initialSetting = InitialSettingModel();
   InitialSettingModel get initialSetting => _initialSetting;
 
@@ -31,6 +25,12 @@ class AppState extends ChangeNotifier {
   bool get userIsExists => _user != null;
 
   PillSheetModel currentPillSheet;
+
+  void subscribe() {
+    userRepository
+        .subscribe()
+        .then((value) => this.notifyWith((model) => model.user = value));
+  }
 
   static AppState watch(BuildContext context) {
     return context.watch();
