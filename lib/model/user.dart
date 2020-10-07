@@ -11,6 +11,7 @@ class UserNotFound implements Exception {
     return "user not found";
   }
 }
+
 class UserAlreadyExists implements Exception {
   toString() {
     return "user already exists";
@@ -28,7 +29,7 @@ class User {
 
   final String anonymousUserID;
   String get documentID => anonymousUserID;
-  Setting setting;
+  final Setting setting;
   PillSheetModel currentPillSheet;
 
   User._({
