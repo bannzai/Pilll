@@ -3,7 +3,6 @@ import 'package:Pilll/main/components/pill_sheet_type_select_page.dart';
 import 'package:Pilll/main/components/setting_menstruation_page.dart';
 import 'package:Pilll/model/app_state.dart';
 import 'package:Pilll/model/setting.dart';
-import 'package:Pilll/model/user.dart';
 import 'package:Pilll/repository/pill_sheet.dart';
 import 'package:Pilll/settings/list/model.dart';
 import 'package:Pilll/settings/list/modifing_pill_number.dart';
