@@ -4,6 +4,7 @@ import 'package:Pilll/main/components/setting_menstruation_page.dart';
 import 'package:Pilll/model/app_state.dart';
 import 'package:Pilll/model/setting.dart';
 import 'package:Pilll/model/user.dart';
+import 'package:Pilll/repository/pill_sheet.dart';
 import 'package:Pilll/settings/list/model.dart';
 import 'package:Pilll/settings/list/modifing_pill_number.dart';
 import 'package:Pilll/style/button.dart';
@@ -120,7 +121,7 @@ class _SettingsState extends State<Settings> {
                   context: context,
                   builder: (_) {
                     return ConfirmDeletePillSheet(onDelete: () {
-                      _deleteCurrentPillSheet(user);
+                      _deleteCurrentPillSheet();
                     });
                   },
                 );
@@ -236,8 +237,11 @@ class _SettingsState extends State<Settings> {
     }
   }
 
-  void _deleteCurrentPillSheet(User user) {
-    user.deleteCurrentPillSheet().then((value) => setState(() => null));
+  void _deleteCurrentPillSheet() {
+    pillSheetRepository
+        .delete(
+            AppState.shared.currentPillSheet, AppState.shared.user.documentID)
+        .then((value) => setState(() => null));
   }
 
   Widget _section(SettingSection section) {
