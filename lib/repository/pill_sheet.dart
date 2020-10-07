@@ -42,6 +42,15 @@ class PillSheetRepository extends PillSheetRepositoryInterface {
         .collection(_path(userID))
         .add(model.toJson().remove("id"));
   }
+
+  // Future<void> deleteCurrentPillSheet() {
+  //   return FirebaseFirestore.instance.collection(User.path).doc(documentID).set(
+  //     {
+  //       UserFirestoreFieldKeys.currentPillSheet: null,
+  //     },
+  //     SetOptions(merge: true),
+  //   ).then((_) => this.currentPillSheet = null);
+  // }
 }
 
 class PillSheetAlreadyExists implements Exception {
