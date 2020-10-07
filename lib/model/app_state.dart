@@ -10,8 +10,8 @@ class AppState extends ChangeNotifier {
   factory AppState() => shared;
   AppState._internal();
 
-  Future<void> subscribe() {
-    return userRepository
+  void subscribe() {
+    userRepository
         .subscribe()
         .then((value) => this.notifyWith((model) => model.user = value));
   }
