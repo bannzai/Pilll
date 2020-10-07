@@ -1,4 +1,5 @@
 import 'package:Pilll/main/application/router.dart';
+import 'package:Pilll/model/app_state.dart';
 import 'package:Pilll/repository/user.dart';
 import 'package:Pilll/theme/color.dart';
 import 'package:Pilll/util/shared_preference/keys.dart';
@@ -50,7 +51,7 @@ class RootState extends State<Root> {
       }
       Navigator.popAndPushNamed(context, Routes.main);
       // Navigator.popAndPushNamed(context, Routes.initialSetting);
-    });
+    }).then((value) => AppState.shared.subscribe());
   }
 
   @override
