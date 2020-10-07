@@ -1,3 +1,4 @@
+import 'package:Pilll/main/components/indicator.dart';
 import 'package:Pilll/main/components/pill/pill_mark.dart';
 import 'package:Pilll/main/components/pill/pill_sheet.dart';
 import 'package:Pilll/main/record/record_taken_information.dart';
@@ -32,6 +33,8 @@ class _RecordPageState extends State<RecordPage> {
                 (state, pillSheet) => state.currentPillSheet = pillSheet)),
         builder:
             (BuildContext context, AsyncSnapshot<PillSheetModel> snapshot) {
+          if (snapshot.connectionState != ConnectionState.done)
+            return Indicator();
           var pillSheet = snapshot.data;
           return Center(
             child: Column(
