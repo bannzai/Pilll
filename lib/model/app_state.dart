@@ -1,5 +1,6 @@
 import 'package:Pilll/model/initial_setting.dart';
 import 'package:Pilll/model/user.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:provider/provider.dart';
 import 'package:flutter/material.dart';
 
@@ -7,6 +8,16 @@ class AppState extends ChangeNotifier {
   static final AppState shared = AppState._internal();
   factory AppState() => shared;
   AppState._internal();
+
+  Future<void> subscribe() {
+    return FirebaseFirestore.instance
+        .collection(User.path)
+        .doc(user.documentID)
+        .snapshots(includeMetadataChanges: true)
+        .listen((event) {
+      print(event.data());
+    }).asFuture();
+  }
 
   final InitialSettingModel _initialSetting = InitialSettingModel();
   InitialSettingModel get initialSetting => _initialSetting;
