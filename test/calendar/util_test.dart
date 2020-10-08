@@ -53,5 +53,35 @@ void main() {
         );
       },
     );
+    test(
+      "Second page with pillSheetType: pillsheet_28_4, beginingDate: 2020-09-01, fromMenstruation: 2, durationMenstruation: 3",
+      () {
+        var pillSheetType = PillSheetType.pillsheet_28_4;
+        var beginingDate = DateTime.parse("2020-09-01");
+        var fromMenstruation = 2;
+        var durationMenstruation = 3;
+        var model = PillSheetModel(
+          typeInfo: pillSheetType.typeInfo,
+          beginingDate: beginingDate,
+          lastTakenDate: null,
+        );
+        var setting = Setting(
+          pillSheetTypeRawPath: pillSheetType.rawPath,
+          fromMenstruation: fromMenstruation,
+          durationMenstruation: durationMenstruation,
+          isOnReminder: false,
+          reminderTime: ReminderTime(hour: 1, minute: 1),
+        );
+        assert(pillSheetType.dosingPeriod == 24,
+            "menstruationDateRange adding value with dosingPeriod when it will create DateRange. pillsheet_28_4 type has 24 dosingPeriod");
+        expect(
+          menstruationDateRange(model, setting, 1),
+          DateRange(
+            DateTime.parse("2020-09-27").add(Duration(days: 28)),
+            DateTime.parse("2020-09-29").add(Duration(days: 28)),
+          ),
+        );
+      },
+    );
   });
 }
