@@ -22,8 +22,9 @@ void main() {
   13   14  15  16  17  18  19  
 
   20   21  22  23  24  25  26  
-       B==>    C==>    D==>
+                   B==>        
   27   28  29  30
+  C==>     D==>    
     */
         var pillSheetType = PillSheetType.pillsheet_28_4;
         var beginingDate = DateTime.parse("2020-09-01");
@@ -41,13 +42,13 @@ void main() {
           isOnReminder: false,
           reminderTime: ReminderTime(hour: 1, minute: 1),
         );
-        assert(pillSheetType.dosingPeriod != 21,
-            "menstruationDateRange adding value with dosingPeriod when it will create DateRange. pillsheet_28_4 type has 21 dosingPeriod");
+        assert(pillSheetType.dosingPeriod == 24,
+            "menstruationDateRange adding value with dosingPeriod when it will create DateRange. pillsheet_28_4 type has 24 dosingPeriod");
         expect(
           menstruationDateRange(model, setting, 0),
           DateRange(
-            DateTime.parse("2020-09-22"),
-            DateTime.parse("2020-09-25"),
+            DateTime.parse("2020-09-27"),
+            DateTime.parse("2020-09-29"),
           ),
         );
       },
