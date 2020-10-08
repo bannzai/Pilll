@@ -12,7 +12,7 @@ DateRange menstruationDateRange(
   var offset = page * pillSheet.pillSheetType.totalCount;
   var begin = pillSheet.beginingDate.add(Duration(
       days: (pillSheet.pillSheetType.dosingPeriod - 1) +
-          (setting.fromMenstruation + 1) +
+          setting.fromMenstruation +
           offset));
   var end = begin.add(Duration(days: (setting.durationMenstruation - 1)));
   return DateRange(begin, end);
