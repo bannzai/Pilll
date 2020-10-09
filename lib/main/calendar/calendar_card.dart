@@ -22,7 +22,6 @@ class CalendarCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var user = AppState.watch(context).user;
     return Card(
       child: Column(
         children: <Widget>[
@@ -33,8 +32,8 @@ class CalendarCard extends StatelessWidget {
               CalendarMenstruationBandModel(
                   DateTime(2020, 10, 28), DateTime(2020, 11, 2)),
               if (AppState.shared.currentPillSheet != null) ...[
-                menstruationDateRange(
-                        AppState.shared.currentPillSheet, user.setting, 0)
+                menstruationDateRange(AppState.shared.currentPillSheet,
+                        AppState.shared.user.setting, 0)
                     .map((range) =>
                         CalendarMenstruationBandModel(range.begin, range.end)),
                 nextPillSheetDateRange(AppState.shared.currentPillSheet, 0).map(
@@ -43,7 +42,7 @@ class CalendarCard extends StatelessWidget {
               ]
             ],
           ),
-          _more(context, user),
+          _more(context, AppState.shared.user),
         ],
       ),
     );
