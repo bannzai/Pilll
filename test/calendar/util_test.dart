@@ -181,7 +181,7 @@ void main() {
           lastTakenDate: null,
         );
         expect(
-          nextPillSheetDateRange(model, 1),
+          nextPillSheetDateRange(model, 2),
           DateRange(
             DateTime.parse("2020-11-24"),
             DateTime.parse("2020-11-30"),
