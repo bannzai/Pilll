@@ -24,6 +24,6 @@ DateRange nextPillSheetDateRange(
 ) {
   var begin = pillSheet.beginingDate
       .add(Duration(days: pillSheet.pillSheetType.totalCount * (page + 1)));
-  var end = begin.add(Duration(days: Weekday.values.length));
+  var end = begin.add(Duration(days: Weekday.values.length - 1));
   return DateRange(begin, end);
 }
