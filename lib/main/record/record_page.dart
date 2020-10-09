@@ -49,7 +49,7 @@ class _RecordPageState extends State<RecordPage> {
                     ),
                     if (pillSheet == null) _empty(),
                     if (pillSheet != null) ...[
-                      _pillSheet(),
+                      _pillSheet(pillSheet),
                       SizedBox(height: 24),
                       Container(
                         height: 44,
@@ -79,10 +79,20 @@ class _RecordPageState extends State<RecordPage> {
         : Future.value(AppState.shared.currentPillSheet);
   }
 
-  PillSheet _pillSheet() {
+  PillSheet _pillSheet(PillSheetModel pillSheet) {
     return PillSheet(
       isHideWeekdayLine: false,
       pillMarkTypeBuilder: (number) {
+        if (number < pillSheet.lastTakenPillNumber) {
+          return PillMarkType.done;
+        }
+        if (number > pillSheet.typeInfo.dosingPeriod) {
+          return PillMarkType.notTaken;
+        }
+        if (number < pillSheet.todayPillNumber) {
+          // TODO: shoudl take
+          return PillMarkType.normal;
+        }
         return PillMarkType.normal;
       },
       markSelected: (number) {},
