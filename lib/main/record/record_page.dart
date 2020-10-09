@@ -95,9 +95,8 @@ class _RecordPageState extends State<RecordPage> {
         }
         return PillMarkType.normal;
       },
-      markSelected: (number) {
-
-      },
+      pillMakrtTypePointBuilder: null,
+      markSelected: (number) {},
     );
   }
 
