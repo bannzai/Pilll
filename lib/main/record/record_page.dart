@@ -114,11 +114,8 @@ class _RecordPageState extends State<RecordPage> {
         if (progressing) return;
         progressing = true;
 
-        var pillSheet = PillSheetModel(
-          typeInfo: AppState.shared.user.setting.pillSheetType.typeInfo,
-          beginingDate: today(),
-          lastTakenDate: null,
-        );
+        var pillSheet =
+            PillSheetModel.create(AppState.shared.user.setting.pillSheetType);
         pillSheetRepository
             .register(
               AppState.shared.user.documentID,
