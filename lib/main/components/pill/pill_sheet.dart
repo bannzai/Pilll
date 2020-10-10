@@ -53,6 +53,7 @@ class _PillSheetState extends State<PillSheet> with TickerProviderStateMixin {
           key: number == 1 ? stickyKey : null,
           type: type,
           tapped: () {
+            print("tapped: $number");
             widget.markSelected(number);
           },
         ),
