@@ -7,10 +7,10 @@ import 'package:flutter/widgets.dart';
 class PillMark extends StatefulWidget {
   final PillMarkType type;
   final VoidCallback tapped;
-  final bool shoulAnimation;
+  final bool hasRippleAnimation;
   const PillMark({
     Key key,
-    this.shoulAnimation = false,
+    this.hasRippleAnimation = false,
     @required this.type,
     @required this.tapped,
   }) : super(key: key);
@@ -24,7 +24,7 @@ class _PillMarkState extends State<PillMark> with TickerProviderStateMixin {
 
   @override
   void initState() {
-    if (widget.shoulAnimation) {
+    if (widget.hasRippleAnimation) {
       _controller = AnimationController(
         duration: const Duration(milliseconds: 2000),
         vsync: this,
@@ -35,7 +35,7 @@ class _PillMarkState extends State<PillMark> with TickerProviderStateMixin {
 
   @override
   void dispose() {
-    if (widget.shoulAnimation) {
+    if (widget.hasRippleAnimation) {
       _controller.dispose();
     }
     super.dispose();
@@ -58,7 +58,7 @@ class _PillMarkState extends State<PillMark> with TickerProviderStateMixin {
                 shape: BoxShape.circle,
               ),
             ),
-            if (widget.shoulAnimation)
+            if (widget.hasRippleAnimation)
               Positioned(
                 left: -30,
                 top: -30,

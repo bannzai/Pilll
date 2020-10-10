@@ -87,7 +87,7 @@ class PillSheetModel {
   }
 
   int get lastTakenPillNumber => lastTakenDate == null
-      ? 1
+      ? 0
       : lastTakenDate.difference(beginingDate).inDays + 1;
 
   void resetTodayTakenPillNumber(int pillNumber) {

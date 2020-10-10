@@ -88,12 +88,17 @@ class _RecordPageState extends State<RecordPage> {
           return PillMarkType.notTaken;
         }
         if (number < pillSheet.todayPillNumber) {
-          // TODO: shoudl take
           return PillMarkType.normal;
         }
         return PillMarkType.normal;
       },
-      pillMakrtTypePointBuilder: null,
+      markIsAnimated: (number) {
+        if (number > pillSheet.typeInfo.dosingPeriod) {
+          return false;
+        }
+        return number > pillSheet.lastTakenPillNumber &&
+            number <= pillSheet.todayPillNumber;
+      },
       markSelected: (number) {},
     );
   }
