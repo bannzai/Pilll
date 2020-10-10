@@ -1,18 +1,15 @@
-import 'package:Pilll/main/components/ripple.dart';
-import 'package:Pilll/model/pill_mark_type.dart';
 import 'package:Pilll/theme/color.dart';
 import 'package:Pilll/model/weekday.dart';
 import 'package:Pilll/main/components/pill/pill_mark.dart';
 import 'package:Pilll/main/record/weekday_badge.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/scheduler.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 typedef PillMarkSelected = void Function(int);
 typedef PillMarkTypeBuilder = PillMarkType Function(int);
 typedef PillMarkTypePointBuilder = bool Function(int);
 
-class PillSheet extends StatefulWidget {
+class PillSheet extends StatelessWidget {
   static Size size = Size(316, 264);
   final bool isHideWeekdayLine;
   final PillMarkTypeBuilder pillMarkTypeBuilder;
@@ -27,11 +24,6 @@ class PillSheet extends StatefulWidget {
     @required this.markSelected,
   }) : super(key: key);
 
-  @override
-  _PillSheetState createState() => _PillSheetState();
-}
-
-class _PillSheetState extends State<PillSheet> with TickerProviderStateMixin {
   int _calcIndex(int row, int line) {
     return row + 1 + (line) * 7;
   }
@@ -46,18 +38,15 @@ class _PillSheetState extends State<PillSheet> with TickerProviderStateMixin {
   }
 
   Widget _pillMarkWithNumber(int number) {
-    var type = widget.pillMarkTypeBuilder(number);
+    var type = pillMarkTypeBuilder(number);
     return Column(
       children: <Widget>[
         Text("$number", style: TextStyle(color: PilllColors.weekday)),
         PillMark(
-          key: number == 1 ? stickyKey : null,
-          type: type,
-          tapped: () {
-            print("tapped: $number");
-            widget.markSelected(number);
-          },
-        ),
+            type: type,
+            tapped: () {
+              markSelected(number);
+            }),
       ],
     );
   }
@@ -86,17 +75,17 @@ class _PillSheetState extends State<PillSheet> with TickerProviderStateMixin {
         children: <Widget>[
           Positioned(
             left: 38,
-            top: widget.isHideWeekdayLine ? 64 : 84,
+            top: isHideWeekdayLine ? 64 : 84,
             child: SvgPicture.asset("images/pill_sheet_dot_line.svg"),
           ),
           Positioned(
             left: 38,
-            top: widget.isHideWeekdayLine ? 124 : 136,
+            top: isHideWeekdayLine ? 124 : 136,
             child: SvgPicture.asset("images/pill_sheet_dot_line.svg"),
           ),
           Positioned(
             left: 38,
-            top: widget.isHideWeekdayLine ? 188 : 190,
+            top: isHideWeekdayLine ? 188 : 190,
             child: SvgPicture.asset("images/pill_sheet_dot_line.svg"),
           ),
           Padding(
@@ -104,7 +93,7 @@ class _PillSheetState extends State<PillSheet> with TickerProviderStateMixin {
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
-                if (!widget.isHideWeekdayLine) _weekdayLine() else Container(),
+                if (!isHideWeekdayLine) _weekdayLine() else Container(),
                 ...List.generate(4, (line) {
                   return _pillMarkLine(line);
                 }),
@@ -113,67 +102,6 @@ class _PillSheetState extends State<PillSheet> with TickerProviderStateMixin {
           ),
         ],
       ),
-    );
-  }
-
-  AnimationController _controller;
-
-  OverlayEntry sticky;
-
-  GlobalKey stickyKey = GlobalKey();
-
-  @override
-  void initState() {
-    if (sticky != null) {
-      sticky.remove();
-    }
-    sticky = OverlayEntry(
-      builder: (context) => stickyBuilder(context),
-    );
-
-    SchedulerBinding.instance.addPostFrameCallback((_) {
-      Overlay.of(context).insert(sticky);
-    });
-
-    _controller = AnimationController(
-      duration: const Duration(milliseconds: 2000),
-      vsync: this,
-    )..repeat();
-    super.initState();
-  }
-
-  @override
-  void dispose() {
-    sticky.remove();
-    super.dispose();
-  }
-
-  Widget stickyBuilder(BuildContext context) {
-    return AnimatedBuilder(
-      animation: _controller,
-      builder: (_, Widget child) {
-        final keyContext = stickyKey.currentContext;
-        if (keyContext != null) {
-          final box = keyContext.findRenderObject() as RenderBox;
-          final pos = box.localToGlobal(Offset.zero);
-          return Positioned(
-            top: pos.dy,
-            left: pos.dx,
-            height: box.size.height,
-            child: CustomPaint(
-              painter: CirclePainter(
-                _controller,
-                color: PilllColors.primary,
-              ),
-              child: Container(
-                width: box.size.width * 4.125,
-                height: box.size.height * 4.125,
-              ),
-            ),
-          );
-        }
-        return Container();
-      },
     );
   }
 }
