@@ -52,7 +52,7 @@ class PillSheetRepository extends PillSheetRepositoryInterface {
     return FirebaseFirestore.instance
         .collection(_path(userID))
         .doc(pillSheet.documentID)
-        .update({"deleted_at": DateTime.now()});
+        .update({"deletedAt": DateTime.now()});
   }
 
   Future<void> take(
@@ -60,7 +60,7 @@ class PillSheetRepository extends PillSheetRepositoryInterface {
     return FirebaseFirestore.instance
         .collection(_path(userID))
         .doc(pillSheet.documentID)
-        .update({"last_taken_date": takenDate});
+        .update({"lastTakenDate": takenDate});
   }
 }
 
