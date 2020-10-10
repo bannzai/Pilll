@@ -50,7 +50,7 @@ class PillSheetModel {
     fromJson: TimestampConverter.timestampToDateTime,
     toJson: TimestampConverter.dateTimeToTimestamp,
   )
-  final DateTime lastTakenDate;
+  DateTime lastTakenDate;
   @JsonKey(
     fromJson: TimestampConverter.timestampToDateTime,
     toJson: TimestampConverter.dateTimeToTimestamp,

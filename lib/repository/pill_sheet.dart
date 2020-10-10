@@ -6,7 +6,7 @@ abstract class PillSheetRepositoryInterface {
   Future<PillSheetModel> fetchLast(String userID);
   Future<void> register(String userID, PillSheetModel model);
   Future<void> delete(String userID, PillSheetModel pillSheet);
-  Future<void> take(
+  Future<PillSheetModel> drink(
       String userID, PillSheetModel pillSheet, DateTime takenDate);
 }
 
@@ -54,12 +54,13 @@ class PillSheetRepository extends PillSheetRepositoryInterface {
         .update({PillSheetFirestoreKey.deletedAt: DateTime.now()});
   }
 
-  Future<void> take(
+  Future<PillSheetModel> drink(
       String userID, PillSheetModel pillSheet, DateTime takenDate) {
     return FirebaseFirestore.instance
         .collection(_path(userID))
         .doc(pillSheet.documentID)
-        .update({PillSheetFirestoreKey.lastTakenDate: takenDate});
+        .update({PillSheetFirestoreKey.lastTakenDate: takenDate}).then(
+            (_) => pillSheet..lastTakenDate = takenDate);
   }
 }
 
