@@ -107,7 +107,7 @@ class _RecordPageState extends State<RecordPage> {
               "pillSheet.todayPillNumber - number should positive value, when todayPillNumber: ${pillSheet.todayPillNumber}, number: $number");
         }
         pillSheetRepository
-            .drink(AppState.shared.user.documentID, pillSheet,
+            .take(AppState.shared.user.documentID, pillSheet,
                 today().subtract(Duration(days: diff)))
             .then((updatedPillSheet) => AppState.shared.notifyWith(
                 (model) => model.currentPillSheet = updatedPillSheet))
