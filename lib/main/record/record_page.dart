@@ -82,7 +82,7 @@ class _RecordPageState extends State<RecordPage> {
     return PillSheet(
       isHideWeekdayLine: false,
       pillMarkTypeBuilder: (number) {
-        if (number < pillSheet.lastTakenPillNumber) {
+        if (number <= pillSheet.lastTakenPillNumber) {
           return PillMarkType.done;
         }
         if (number > pillSheet.typeInfo.dosingPeriod) {
@@ -106,8 +106,12 @@ class _RecordPageState extends State<RecordPage> {
           throw FormatException(
               "pillSheet.todayPillNumber - number should positive value, when todayPillNumber: ${pillSheet.todayPillNumber}, number: $number");
         }
-        pillSheetRepository.take(AppState.shared.user.documentID, pillSheet,
-            today().subtract(Duration(days: diff)));
+        pillSheetRepository
+            .drink(AppState.shared.user.documentID, pillSheet,
+                today().subtract(Duration(days: diff)))
+            .then((updatedPillSheet) => AppState.shared.notifyWith(
+                (model) => model.currentPillSheet = updatedPillSheet))
+            .then((_) => setState(() => null));
       },
     );
   }
