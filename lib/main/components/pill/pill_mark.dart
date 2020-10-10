@@ -79,33 +79,3 @@ class _PillMarkState extends State<PillMark> with TickerProviderStateMixin {
         onTap: widget.tapped);
   }
 }
-
-// Widget _rippleAnimation(Widget child) {
-//   return AnimatedBuilder(
-//     child: child,
-//     animation: _controller,
-//     builder: (BuildContext context, Widget child) {
-//       final keyContext = stickyKey.currentContext;
-//       if (keyContext != null) {
-//         final box = keyContext.findRenderObject() as RenderBox;
-//         final pos = box.localToGlobal(Offset.zero);
-//         return Positioned(
-//           top: pos.dy,
-//           left: pos.dx,
-//           height: box.size.height,
-//           child: CustomPaint(
-//             painter: CirclePainter(
-//               _controller,
-//               color: PilllColors.primary,
-//             ),
-//             child: Container(
-//               width: box.size.width * 4.125,
-//               height: box.size.height * 4.125,
-//             ),
-//           ),
-//         );
-//       }
-//       return Container();
-//     },
-//   );
-// }
