@@ -115,8 +115,7 @@ class CirclePainter extends CustomPainter {
     final Paint paint = Paint()
       ..color = _color
       ..style = PaintingStyle.stroke
-      ..strokeWidth = 8
-      ..isAntiAlias = true;
+      ..strokeWidth = 4;
     canvas.drawCircle(rect.center, radius, paint);
   }
 
