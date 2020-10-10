@@ -8,20 +8,20 @@ import 'package:flutter_svg/flutter_svg.dart';
 
 typedef PillMarkSelected = void Function(int);
 typedef PillMarkTypeBuilder = PillMarkType Function(int);
-typedef PillMarkTypePointBuilder = bool Function(int);
+typedef PillMarkTypeHasRippleAnimation = bool Function(int);
 
 class PillSheet extends StatelessWidget {
   static Size size = Size(316, 264);
   final bool isHideWeekdayLine;
   final PillMarkTypeBuilder pillMarkTypeBuilder;
-  final PillMarkTypePointBuilder pillMakrtTypePointBuilder;
+  final PillMarkTypeHasRippleAnimation markIsAnimated;
   final PillMarkSelected markSelected;
 
   const PillSheet({
     Key key,
     @required this.isHideWeekdayLine,
     @required this.pillMarkTypeBuilder,
-    @required this.pillMakrtTypePointBuilder,
+    @required this.markIsAnimated,
     @required this.markSelected,
   }) : super(key: key);
 
@@ -44,7 +44,8 @@ class PillSheet extends StatelessWidget {
       children: <Widget>[
         Text("$number", style: TextStyle(color: PilllColors.weekday)),
         PillMark(
-            shoulAnimation: number == 14 || number == 13 || number == 12,
+            hasRippleAnimation:
+                markIsAnimated == null ? false : markIsAnimated(number),
             type: type,
             tapped: () {
               markSelected(number);
