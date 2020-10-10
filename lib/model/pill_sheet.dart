@@ -87,6 +87,7 @@ class PillSheetModel {
 
   PillSheetType get pillSheetType =>
       PillSheetTypeFunctions.fromRawPath(typeInfo.pillSheetTypeReferencePath);
+
   int get todayPillNumber {
     var diff = _today().difference(beginingDate).inDays;
     return diff % pillSheetType.totalCount + 1;
@@ -95,6 +96,8 @@ class PillSheetModel {
   int get lastTakenPillNumber => lastTakenDate == null
       ? 0
       : lastTakenDate.difference(beginingDate).inDays + 1;
+
+  bool get allTaken => todayPillNumber == lastTakenPillNumber;
 
   void resetTodayTakenPillNumber(int pillNumber) {
     if (pillNumber == todayPillNumber) return;
