@@ -35,6 +35,7 @@ dependencies:
   package_info: ^0.4.3
   equatable: ^1.2.5
   json_annotation: ^3.0.0
+  mockito: ^4.1.1
 
 
   # The following adds the Cupertino Icons font to your application.
