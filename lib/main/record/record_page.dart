@@ -9,6 +9,7 @@ import 'package:Pilll/style/button.dart';
 import 'package:Pilll/theme/color.dart';
 import 'package:Pilll/theme/font.dart';
 import 'package:Pilll/theme/text_color.dart';
+import 'package:Pilll/util/today.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:provider/provider.dart';
@@ -99,7 +100,15 @@ class _RecordPageState extends State<RecordPage> {
         return number > pillSheet.lastTakenPillNumber &&
             number <= pillSheet.todayPillNumber;
       },
-      markSelected: (number) {},
+      markSelected: (number) {
+        var diff = pillSheet.todayPillNumber - number;
+        if (diff < 0) {
+          throw FormatException(
+              "pillSheet.todayPillNumber - number should positive value, when todayPillNumber: ${pillSheet.todayPillNumber}, number: $number");
+        }
+        pillSheetRepository.take(AppState.shared.user.documentID, pillSheet,
+            today().subtract(Duration(days: diff)));
+      },
     );
   }
 
