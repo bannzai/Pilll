@@ -60,8 +60,10 @@ class _PillMarkState extends State<PillMark> with TickerProviderStateMixin {
             ),
             if (widget.shoulAnimation)
               Positioned(
-                left: 0,
-                top: 0,
+                left: -30,
+                top: -30,
+                width: 80,
+                height: 80,
                 child: Container(
                   child: CustomPaint(
                     size: Size(80, 80),

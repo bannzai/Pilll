@@ -44,7 +44,7 @@ class PillSheet extends StatelessWidget {
       children: <Widget>[
         Text("$number", style: TextStyle(color: PilllColors.weekday)),
         PillMark(
-            shoulAnimation: number == 1,
+            shoulAnimation: number == 14 || number == 13 || number == 12,
             type: type,
             tapped: () {
               markSelected(number);
