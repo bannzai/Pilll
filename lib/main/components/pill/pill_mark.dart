@@ -1,12 +1,16 @@
+import 'package:Pilll/main/components/ripple.dart';
 import 'package:Pilll/model/pill_mark_type.dart';
+import 'package:Pilll/theme/color.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
 class PillMark extends StatefulWidget {
   final PillMarkType type;
   final VoidCallback tapped;
+  final bool shoulAnimation;
   const PillMark({
     Key key,
+    this.shoulAnimation = false,
     @required this.type,
     @required this.tapped,
   }) : super(key: key);
@@ -20,16 +24,20 @@ class _PillMarkState extends State<PillMark> with TickerProviderStateMixin {
 
   @override
   void initState() {
-    _controller = AnimationController(
-      duration: const Duration(milliseconds: 2000),
-      vsync: this,
-    )..repeat();
+    if (widget.shoulAnimation) {
+      _controller = AnimationController(
+        duration: const Duration(milliseconds: 2000),
+        vsync: this,
+      )..repeat();
+    }
     super.initState();
   }
 
   @override
   void dispose() {
-    _controller.dispose();
+    if (widget.shoulAnimation) {
+      _controller.dispose();
+    }
     super.dispose();
   }
 
@@ -37,35 +45,33 @@ class _PillMarkState extends State<PillMark> with TickerProviderStateMixin {
   Widget build(BuildContext context) {
     return GestureDetector(
         child: Stack(
+          overflow: Overflow.visible,
           children: [
-            // Positioned(
-            //   left: 0,
-            //   top: 0,
-            //   child: CustomPaint(
-            //       painter: CirclePainter(
-            //         _controller,
-            //         color: PilllColors.primary,
-            //       ),
-            //       child: Container(
-            //         width: 100,
-            //         height: 100,
-            //       )),
-            // ),
-            Positioned(
-              left: 0,
-              top: 0,
-              child: Container(
-                width: 20,
-                height: 20,
-                child: Center(
-                  child: widget.type.image(),
-                ),
-                decoration: BoxDecoration(
-                  color: widget.type.color(),
-                  shape: BoxShape.circle,
-                ),
+            Container(
+              width: 20,
+              height: 20,
+              child: Center(
+                child: widget.type.image(),
+              ),
+              decoration: BoxDecoration(
+                color: widget.type.color(),
+                shape: BoxShape.circle,
               ),
             ),
+            if (widget.shoulAnimation)
+              Positioned(
+                left: 0,
+                top: 0,
+                child: Container(
+                  child: CustomPaint(
+                    size: Size(80, 80),
+                    painter: CirclePainter(
+                      _controller,
+                      color: PilllColors.primary,
+                    ),
+                  ),
+                ),
+              ),
           ],
         ),
         onTap: widget.tapped);
