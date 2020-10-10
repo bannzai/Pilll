@@ -39,30 +39,36 @@ class _RecordPageState extends State<RecordPage> {
                 return Indicator();
               var pillSheet = snapshot.data;
               return Center(
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: <Widget>[
-                    RecordTakenInformation(
-                      today: DateTime.now(),
-                      pillSheetModel: AppState.shared.currentPillSheet,
-                    ),
-                    if (pillSheet == null) _empty(),
-                    if (pillSheet != null) ...[
-                      _pillSheet(pillSheet),
-                      SizedBox(height: 24),
-                      Container(
-                        height: 44,
-                        width: 180,
-                        child: PrimaryButton(
-                          text: "飲んだ",
-                          onPressed: () {
-                            _take(pillSheet, today());
-                          },
+                child: Selector<AppState, int>(
+                  selector: (context, state) =>
+                      state.currentPillSheet.lastTakenPillNumber,
+                  builder: (BuildContext context, int value, Widget child) {
+                    return Column(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: <Widget>[
+                        RecordTakenInformation(
+                          today: DateTime.now(),
+                          pillSheetModel: AppState.shared.currentPillSheet,
                         ),
-                      ),
-                    ],
-                    SizedBox(height: 8),
-                  ],
+                        if (pillSheet == null) _empty(),
+                        if (pillSheet != null) ...[
+                          _pillSheet(pillSheet),
+                          SizedBox(height: 24),
+                          Container(
+                            height: 44,
+                            width: 180,
+                            child: PrimaryButton(
+                              text: "飲んだ",
+                              onPressed: () {
+                                _take(pillSheet, today());
+                              },
+                            ),
+                          ),
+                        ],
+                        SizedBox(height: 8),
+                      ],
+                    );
+                  },
                 ),
               );
             },
