@@ -4,6 +4,7 @@ import 'package:Pilll/util/today.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:json_annotation/json_annotation.dart';
 import 'package:meta/meta.dart';
+import 'package:provider/provider.dart';
 part 'pill_sheet.g.dart';
 
 @JsonSerializable(nullable: false, explicitToJson: true)
@@ -68,6 +69,12 @@ class PillSheetModel {
     _today = todayBuilder;
   }
 
+  factory PillSheetModel.create(PillSheetType type) => PillSheetModel(
+        typeInfo: type.typeInfo,
+        beginingDate: today(),
+        lastTakenDate: null,
+      );
+
   factory PillSheetModel.fromJson(Map<String, dynamic> json) =>
       _$PillSheetModelFromJson(json);
   Map<String, dynamic> toJson() => _$PillSheetModelToJson(this);
@@ -78,6 +85,10 @@ class PillSheetModel {
     var diff = _today().difference(beginingDate).inDays;
     return diff % pillSheetType.totalCount + 1;
   }
+
+  int get lastTakenPillNumber => lastTakenDate == null
+      ? 1
+      : lastTakenDate.difference(beginingDate).inDays + 1;
 
   void resetTodayTakenPillNumber(int pillNumber) {
     if (pillNumber == todayPillNumber) return;
