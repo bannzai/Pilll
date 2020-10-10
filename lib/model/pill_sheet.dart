@@ -5,8 +5,13 @@ import 'package:Pilll/util/today.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:json_annotation/json_annotation.dart';
 import 'package:meta/meta.dart';
-import 'package:provider/provider.dart';
 part 'pill_sheet.g.dart';
+
+abstract class PillSheetFirestoreKey {
+  static final String createdAt = "createdAt";
+  static final String deletedAt = "deletedAt";
+  static final String lastTakenDate = "lastTakenDate";
+}
 
 @JsonSerializable(nullable: false, explicitToJson: true)
 class PillSheetTypeInfo {
