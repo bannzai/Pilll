@@ -90,7 +90,6 @@ class _RecordPageState extends State<RecordPage> {
 
   void _take(PillSheetModel pillSheet, DateTime takenDate) {
     if (pillSheet.todayPillNumber == pillSheet.lastTakenPillNumber) {
-      assert(false, "Should change state to disable button");
       return;
     }
     pillSheetRepository
