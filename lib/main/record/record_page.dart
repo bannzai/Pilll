@@ -58,10 +58,12 @@ class _RecordPageState extends State<RecordPage> {
                             height: 44,
                             width: 180,
                             child: PrimaryButton(
-                              text: "飲んだ",
-                              onPressed: () {
-                                _take(pillSheet, today());
-                              },
+                              text: pillSheet.allTaken ? "飲んでない" : "飲んだ",
+                              onPressed: pillSheet.allTaken
+                                  ? null
+                                  : () {
+                                      _take(pillSheet, today());
+                                    },
                             ),
                           ),
                         ],
