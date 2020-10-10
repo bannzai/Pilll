@@ -55,7 +55,9 @@ class _RecordPageState extends State<RecordPage> {
                         width: 180,
                         child: PrimaryButton(
                           text: "飲んだ",
-                          onPressed: () {},
+                          onPressed: () {
+                            _take(pillSheet, today());
+                          },
                         ),
                       ),
                     ],
@@ -76,6 +78,14 @@ class _RecordPageState extends State<RecordPage> {
             (model) => AppState.shared.updated(model,
                 (state, pillSheet) => state.currentPillSheet = pillSheet))
         : Future.value(AppState.shared.currentPillSheet);
+  }
+
+  Future<void> _take(PillSheetModel pillSheet, DateTime takenDate) {
+    return pillSheetRepository
+        .take(AppState.shared.user.documentID, pillSheet, takenDate)
+        .then((updatedPillSheet) => AppState.shared
+            .notifyWith((model) => model.currentPillSheet = updatedPillSheet))
+        .then((_) => setState(() => null));
   }
 
   PillSheet _pillSheet(PillSheetModel pillSheet) {
@@ -106,12 +116,8 @@ class _RecordPageState extends State<RecordPage> {
           throw FormatException(
               "pillSheet.todayPillNumber - number should positive value, when todayPillNumber: ${pillSheet.todayPillNumber}, number: $number");
         }
-        pillSheetRepository
-            .take(AppState.shared.user.documentID, pillSheet,
-                today().subtract(Duration(days: diff)))
-            .then((updatedPillSheet) => AppState.shared.notifyWith(
-                (model) => model.currentPillSheet = updatedPillSheet))
-            .then((_) => setState(() => null));
+        var takenDate = today().subtract(Duration(days: diff));
+        _take(pillSheet, takenDate);
       },
     );
   }
