@@ -80,8 +80,11 @@ class _RecordPageState extends State<RecordPage> {
         : Future.value(AppState.shared.currentPillSheet);
   }
 
-  Future<void> _take(PillSheetModel pillSheet, DateTime takenDate) {
-    return pillSheetRepository
+  void _take(PillSheetModel pillSheet, DateTime takenDate) {
+    if (pillSheet.todayPillNumber == pillSheet.lastTakenPillNumber) {
+      return;
+    }
+    pillSheetRepository
         .take(AppState.shared.user.documentID, pillSheet, takenDate)
         .then((updatedPillSheet) => AppState.shared
             .notifyWith((model) => model.currentPillSheet = updatedPillSheet))
