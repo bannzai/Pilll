@@ -1,3 +1,4 @@
+import 'package:Pilll/model/firestore_document_id_escaping_to_json.dart';
 import 'package:Pilll/model/firestore_timestamp_converter.dart';
 import 'package:Pilll/model/pill_sheet_type.dart';
 import 'package:Pilll/util/today.dart';
@@ -28,7 +29,7 @@ class PillSheetTypeInfo {
 
 @JsonSerializable(nullable: true, explicitToJson: true)
 class PillSheetModel {
-  @JsonKey(ignore: true)
+  @JsonKey(includeIfNull: false, toJson: toNull)
   final String id;
   String get documentID => id;
 
