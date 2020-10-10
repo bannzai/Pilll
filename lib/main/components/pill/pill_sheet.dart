@@ -152,24 +152,20 @@ class _PillSheetState extends State<PillSheet> with TickerProviderStateMixin {
       builder: (_, Widget child) {
         final keyContext = stickyKey.currentContext;
         if (keyContext != null) {
-          // widget is visible
-
           final box = keyContext.findRenderObject() as RenderBox;
           final pos = box.localToGlobal(Offset.zero);
           return Positioned(
             top: pos.dy,
-            left: pos.dx + box.size.width / 2,
+            left: pos.dx,
             height: box.size.height,
-            child: Material(
-              child: CustomPaint(
-                painter: CirclePainter(
-                  _controller,
-                  color: PilllColors.primary,
-                ),
-                child: SizedBox(
-                  width: box.size.width * 4.125,
-                  height: box.size.height * 4.125,
-                ),
+            child: CustomPaint(
+              painter: CirclePainter(
+                _controller,
+                color: PilllColors.primary,
+              ),
+              child: Container(
+                width: box.size.width * 4.125,
+                height: box.size.height * 4.125,
               ),
             ),
           );
