@@ -1,16 +1,14 @@
 import 'package:Pilll/main/components/indicator.dart';
-import 'package:Pilll/main/components/pill/pill_mark.dart';
 import 'package:Pilll/main/components/pill/pill_sheet.dart';
 import 'package:Pilll/main/record/record_taken_information.dart';
 import 'package:Pilll/model/app_state.dart';
+import 'package:Pilll/model/pill_mark_type.dart';
 import 'package:Pilll/model/pill_sheet.dart';
-import 'package:Pilll/model/pill_sheet_type.dart';
 import 'package:Pilll/repository/pill_sheet.dart';
 import 'package:Pilll/style/button.dart';
 import 'package:Pilll/theme/color.dart';
 import 'package:Pilll/theme/font.dart';
 import 'package:Pilll/theme/text_color.dart';
-import 'package:Pilll/util/today.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:provider/provider.dart';
@@ -49,7 +47,7 @@ class _RecordPageState extends State<RecordPage> {
                     ),
                     if (pillSheet == null) _empty(),
                     if (pillSheet != null) ...[
-                      _pillSheet(),
+                      _pillSheet(pillSheet),
                       SizedBox(height: 24),
                       Container(
                         height: 44,
@@ -79,12 +77,23 @@ class _RecordPageState extends State<RecordPage> {
         : Future.value(AppState.shared.currentPillSheet);
   }
 
-  PillSheet _pillSheet() {
+  PillSheet _pillSheet(PillSheetModel pillSheet) {
     return PillSheet(
       isHideWeekdayLine: false,
       pillMarkTypeBuilder: (number) {
+        if (number < pillSheet.lastTakenPillNumber) {
+          return PillMarkType.done;
+        }
+        if (number > pillSheet.typeInfo.dosingPeriod) {
+          return PillMarkType.notTaken;
+        }
+        if (number < pillSheet.todayPillNumber) {
+          // TODO: shoudl take
+          return PillMarkType.normal;
+        }
         return PillMarkType.normal;
       },
+      pillMakrtTypePointBuilder: null,
       markSelected: (number) {},
     );
   }
@@ -114,11 +123,8 @@ class _RecordPageState extends State<RecordPage> {
         if (progressing) return;
         progressing = true;
 
-        var pillSheet = PillSheetModel(
-          typeInfo: AppState.shared.user.setting.pillSheetType.typeInfo,
-          beginingDate: today(),
-          lastTakenDate: null,
-        );
+        var pillSheet =
+            PillSheetModel.create(AppState.shared.user.setting.pillSheetType);
         pillSheetRepository
             .register(
               AppState.shared.user.documentID,

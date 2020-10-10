@@ -50,6 +50,7 @@ class InitialSetting2 extends StatelessWidget {
                 pillMarkTypeBuilder: (number) {
                   return model.initialSetting.pillMarkTypeFor(number);
                 },
+                pillMakrtTypePointBuilder: null,
                 markSelected: (number) {
                   model.notifyWith(
                       (model) => model.initialSetting.todayPillNumber = number);
