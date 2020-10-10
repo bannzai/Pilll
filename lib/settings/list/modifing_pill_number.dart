@@ -51,7 +51,7 @@ class _ModifingPillNumberPageState extends State<ModifingPillNumberPage> {
               child: PillSheet(
                 isHideWeekdayLine: true,
                 pillMarkTypeBuilder: widget.pillMarkTypeBuilder,
-                pillMakrtTypePointBuilder: null,
+                markIsAnimated: null,
                 markSelected: (number) {
                   setState(() => widget.markSelected(number));
                 },

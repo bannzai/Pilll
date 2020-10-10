@@ -9,6 +9,7 @@ import 'package:Pilll/style/button.dart';
 import 'package:Pilll/theme/color.dart';
 import 'package:Pilll/theme/font.dart';
 import 'package:Pilll/theme/text_color.dart';
+import 'package:Pilll/util/today.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:provider/provider.dart';
@@ -38,28 +39,29 @@ class _RecordPageState extends State<RecordPage> {
                 return Indicator();
               var pillSheet = snapshot.data;
               return Center(
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: <Widget>[
-                    RecordTakenInformation(
-                      today: DateTime.now(),
-                      pillSheetModel: AppState.shared.currentPillSheet,
-                    ),
-                    if (pillSheet == null) _empty(),
-                    if (pillSheet != null) ...[
-                      _pillSheet(pillSheet),
-                      SizedBox(height: 24),
-                      Container(
-                        height: 44,
-                        width: 180,
-                        child: PrimaryButton(
-                          text: "飲んだ",
-                          onPressed: () {},
+                child: Selector<AppState, int>(
+                  selector: (context, state) =>
+                      state.currentPillSheet.lastTakenPillNumber,
+                  builder: (BuildContext context, int value, Widget child) {
+                    return Column(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: <Widget>[
+                        RecordTakenInformation(
+                          today: DateTime.now(),
+                          pillSheetModel: AppState.shared.currentPillSheet,
                         ),
-                      ),
-                    ],
-                    SizedBox(height: 8),
-                  ],
+                        if (pillSheet == null) _empty(),
+                        if (pillSheet != null) ...[
+                          _pillSheet(pillSheet),
+                          SizedBox(height: 24),
+                          pillSheet.allTaken
+                              ? _cancelTakeButton(pillSheet)
+                              : _takenButton(pillSheet),
+                        ],
+                        SizedBox(height: 8),
+                      ],
+                    );
+                  },
                 ),
               );
             },
@@ -77,24 +79,73 @@ class _RecordPageState extends State<RecordPage> {
         : Future.value(AppState.shared.currentPillSheet);
   }
 
+  Widget _takenButton(PillSheetModel pillSheet) {
+    return PrimaryButton(
+      text: "飲んだ",
+      onPressed: () => _take(pillSheet, today()),
+    );
+  }
+
+  Widget _cancelTakeButton(PillSheetModel pillSheet) {
+    return TertiaryButton(
+      text: "飲んでない",
+      onPressed: () => _cancelTake(pillSheet),
+    );
+  }
+
+  void _take(PillSheetModel pillSheet, DateTime takenDate) {
+    if (pillSheet.todayPillNumber == pillSheet.lastTakenPillNumber) {
+      return;
+    }
+    pillSheetRepository
+        .take(AppState.shared.user.documentID, pillSheet, takenDate)
+        .then((updatedPillSheet) => AppState.shared
+            .notifyWith((model) => model.currentPillSheet = updatedPillSheet));
+  }
+
+  void _cancelTake(PillSheetModel pillSheet) {
+    if (pillSheet.todayPillNumber != pillSheet.lastTakenPillNumber) {
+      throw FormatException(
+          "This statement should pillSheet.allTaken is true and build _cancelTakeButton. pillSheet.allTaken is ${pillSheet.allTaken} and lastTakenPillNumber ${pillSheet.lastTakenPillNumber}, todayPillNumber ${pillSheet.todayPillNumber}");
+    }
+    pillSheetRepository
+        .take(AppState.shared.user.documentID, pillSheet,
+            pillSheet.lastTakenDate.subtract(Duration(days: 1)))
+        .then((updatedPillSheet) => AppState.shared
+            .notifyWith((model) => model.currentPillSheet = updatedPillSheet));
+  }
+
   PillSheet _pillSheet(PillSheetModel pillSheet) {
     return PillSheet(
       isHideWeekdayLine: false,
       pillMarkTypeBuilder: (number) {
-        if (number < pillSheet.lastTakenPillNumber) {
+        if (number <= pillSheet.lastTakenPillNumber) {
           return PillMarkType.done;
         }
         if (number > pillSheet.typeInfo.dosingPeriod) {
           return PillMarkType.notTaken;
         }
         if (number < pillSheet.todayPillNumber) {
-          // TODO: shoudl take
           return PillMarkType.normal;
         }
         return PillMarkType.normal;
       },
-      pillMakrtTypePointBuilder: null,
-      markSelected: (number) {},
+      markIsAnimated: (number) {
+        if (number > pillSheet.typeInfo.dosingPeriod) {
+          return false;
+        }
+        return number > pillSheet.lastTakenPillNumber &&
+            number <= pillSheet.todayPillNumber;
+      },
+      markSelected: (number) {
+        var diff = pillSheet.todayPillNumber - number;
+        if (diff < 0) {
+          throw FormatException(
+              "pillSheet.todayPillNumber - number should positive value, when todayPillNumber: ${pillSheet.todayPillNumber}, number: $number");
+        }
+        var takenDate = today().subtract(Duration(days: diff));
+        _take(pillSheet, takenDate);
+      },
     );
   }
 

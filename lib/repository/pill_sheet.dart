@@ -6,6 +6,8 @@ abstract class PillSheetRepositoryInterface {
   Future<PillSheetModel> fetchLast(String userID);
   Future<void> register(String userID, PillSheetModel model);
   Future<void> delete(String userID, PillSheetModel pillSheet);
+  Future<PillSheetModel> take(
+      String userID, PillSheetModel pillSheet, DateTime takenDate);
 }
 
 class PillSheetRepository extends PillSheetRepositoryInterface {
@@ -17,7 +19,7 @@ class PillSheetRepository extends PillSheetRepositoryInterface {
   Future<PillSheetModel> fetchLast(String userID) {
     return FirebaseFirestore.instance
         .collection(_path(userID))
-        .orderBy("createdAt")
+        .orderBy(PillSheetFirestoreKey.createdAt)
         .limitToLast(1)
         .get()
         .then((event) {
@@ -42,7 +44,6 @@ class PillSheetRepository extends PillSheetRepositoryInterface {
 
     var json = model.toJson();
     json.remove("id");
-    print("json: $json");
     return FirebaseFirestore.instance.collection(_path(userID)).add(json);
   }
 
@@ -50,7 +51,16 @@ class PillSheetRepository extends PillSheetRepositoryInterface {
     return FirebaseFirestore.instance
         .collection(_path(userID))
         .doc(pillSheet.documentID)
-        .update({"deleted_at": DateTime.now()});
+        .update({PillSheetFirestoreKey.deletedAt: DateTime.now()});
+  }
+
+  Future<PillSheetModel> take(
+      String userID, PillSheetModel pillSheet, DateTime takenDate) {
+    return FirebaseFirestore.instance
+        .collection(_path(userID))
+        .doc(pillSheet.documentID)
+        .update({PillSheetFirestoreKey.lastTakenDate: takenDate}).then(
+            (_) => pillSheet..lastTakenDate = takenDate);
   }
 }
 

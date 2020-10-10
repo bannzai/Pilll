@@ -7,10 +7,10 @@ import 'package:flutter/widgets.dart';
 class PillMark extends StatefulWidget {
   final PillMarkType type;
   final VoidCallback tapped;
-  final bool shoulAnimation;
+  final bool hasRippleAnimation;
   const PillMark({
     Key key,
-    this.shoulAnimation = false,
+    this.hasRippleAnimation = false,
     @required this.type,
     @required this.tapped,
   }) : super(key: key);
@@ -24,7 +24,7 @@ class _PillMarkState extends State<PillMark> with TickerProviderStateMixin {
 
   @override
   void initState() {
-    if (widget.shoulAnimation) {
+    if (widget.hasRippleAnimation) {
       _controller = AnimationController(
         duration: const Duration(milliseconds: 2000),
         vsync: this,
@@ -35,7 +35,7 @@ class _PillMarkState extends State<PillMark> with TickerProviderStateMixin {
 
   @override
   void dispose() {
-    if (widget.shoulAnimation) {
+    if (widget.hasRippleAnimation) {
       _controller.dispose();
     }
     super.dispose();
@@ -58,12 +58,10 @@ class _PillMarkState extends State<PillMark> with TickerProviderStateMixin {
                 shape: BoxShape.circle,
               ),
             ),
-            if (widget.shoulAnimation)
+            if (widget.hasRippleAnimation)
               Positioned(
                 left: -30,
                 top: -30,
-                width: 80,
-                height: 80,
                 child: Container(
                   child: CustomPaint(
                     size: Size(80, 80),
@@ -79,33 +77,3 @@ class _PillMarkState extends State<PillMark> with TickerProviderStateMixin {
         onTap: widget.tapped);
   }
 }
-
-// Widget _rippleAnimation(Widget child) {
-//   return AnimatedBuilder(
-//     child: child,
-//     animation: _controller,
-//     builder: (BuildContext context, Widget child) {
-//       final keyContext = stickyKey.currentContext;
-//       if (keyContext != null) {
-//         final box = keyContext.findRenderObject() as RenderBox;
-//         final pos = box.localToGlobal(Offset.zero);
-//         return Positioned(
-//           top: pos.dy,
-//           left: pos.dx,
-//           height: box.size.height,
-//           child: CustomPaint(
-//             painter: CirclePainter(
-//               _controller,
-//               color: PilllColors.primary,
-//             ),
-//             child: Container(
-//               width: box.size.width * 4.125,
-//               height: box.size.height * 4.125,
-//             ),
-//           ),
-//         );
-//       }
-//       return Container();
-//     },
-//   );
-// }
