@@ -88,8 +88,7 @@ class _RecordPageState extends State<RecordPage> {
     pillSheetRepository
         .take(AppState.shared.user.documentID, pillSheet, takenDate)
         .then((updatedPillSheet) => AppState.shared
-            .notifyWith((model) => model.currentPillSheet = updatedPillSheet))
-        .then((_) => setState(() => null));
+            .notifyWith((model) => model.currentPillSheet = updatedPillSheet));
   }
 
   PillSheet _pillSheet(PillSheetModel pillSheet) {
