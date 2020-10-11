@@ -41,7 +41,7 @@ class _RecordPageState extends State<RecordPage> {
               return Center(
                 child: Selector<AppState, int>(
                   selector: (context, state) =>
-                      state.currentPillSheet.lastTakenPillNumber,
+                      state.currentPillSheet?.lastTakenPillNumber ?? 0,
                   builder: (BuildContext context, int value, Widget child) {
                     return Column(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
