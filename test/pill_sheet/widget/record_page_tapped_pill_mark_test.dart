@@ -1,7 +1,6 @@
 import 'package:Pilll/main/components/pill/pill_mark.dart';
 import 'package:Pilll/main/record/record_page.dart';
 import 'package:Pilll/model/app_state.dart';
-import 'package:Pilll/model/pill_mark_type.dart';
 import 'package:Pilll/model/pill_sheet.dart';
 import 'package:Pilll/model/pill_sheet_type.dart';
 import 'package:Pilll/model/user.dart';
@@ -75,23 +74,7 @@ void main() {
             widget.hasRippleAnimation,
       );
     };
-    expect(
-      animatedPillMarkFinder((widget) => widget.key == Key("PillMarkWidget_2")),
-      findsWidgets,
-    );
-    expect(
-      animatedPillMarkFinder((widget) => widget.key == Key("PillMarkWidget_3")),
-      findsWidgets,
-    );
-    expect(
-      animatedPillMarkFinder(
-        (widget) =>
-            widget.key != Key("PillMarkWidget_2") &&
-            widget.key != Key("PillMarkWidget_3"),
-      ),
-      findsNothing,
-    );
-    expect(AppState.shared.currentPillSheet.allTaken, isFalse);
+
     verify(mockPillSheetRepository.fetchLast("1"));
 
     var targetDay = today.subtract(Duration(days: 1));
@@ -99,6 +82,7 @@ void main() {
         .thenAnswer(
             (_) => Future.value(currentPillSheet..lastTakenDate = targetDay));
 
+    expect(AppState.shared.currentPillSheet.allTaken, isFalse);
     await tester.tap(animatedPillMarkFinder(
         (widget) => widget.key == Key("PillMarkWidget_2")));
     verify(mockTodayRepository.today());
