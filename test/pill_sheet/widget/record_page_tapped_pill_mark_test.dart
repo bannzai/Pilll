@@ -29,7 +29,8 @@ void main() {
   setUp(() {
     initializeDateFormatting('ja_JP');
   });
-  testWidgets('Record Page taken button pressed', (WidgetTester tester) async {
+  testWidgets('For not yet taken pill number 2 and 3. when tapped 2 pill mark ',
+      (WidgetTester tester) async {
     SupportedDeviceType.iPhone5SE2nd.binding(tester.binding.window);
 
     var mockPillSheetRepository = _MockPillSheetRepository();
