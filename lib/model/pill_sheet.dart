@@ -12,6 +12,7 @@ abstract class PillSheetFirestoreKey {
   static final String createdAt = "createdAt";
   static final String deletedAt = "deletedAt";
   static final String lastTakenDate = "lastTakenDate";
+  static final String beginingDate = "beginingDate";
 }
 
 @JsonSerializable(nullable: false, explicitToJson: true)
