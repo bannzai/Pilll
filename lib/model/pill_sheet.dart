@@ -104,9 +104,13 @@ class PillSheetModel {
 
   bool get allTaken => todayPillNumber == lastTakenPillNumber;
 
-  void resetTodayTakenPillNumber(int pillNumber) {
-    if (pillNumber == todayPillNumber) return;
+  DateTime calcBeginingDateFromNextTodayPillNumber(int pillNumber) {
+    if (pillNumber == todayPillNumber) return beginingDate;
     var betweenToday = pillNumber - todayPillNumber;
-    beginingDate = beginingDate.add(Duration(days: betweenToday));
+    return beginingDate.add(Duration(days: betweenToday));
+  }
+
+  void resetTodayTakenPillNumber(int pillNumber) {
+    beginingDate = calcBeginingDateFromNextTodayPillNumber(pillNumber);
   }
 }
