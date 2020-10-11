@@ -14,12 +14,12 @@ import 'package:provider/provider.dart';
 
 import '../../helper/supported_device.dart';
 
-class MockPillSheetRepository extends Mock
+class _MockPillSheetRepository extends Mock
     implements PillSheetRepositoryInterface {}
 
-class MockTodayRepository extends Mock implements TodayRepositoryInterface {}
+class _MockTodayRepository extends Mock implements TodayRepositoryInterface {}
 
-class FakeUser extends Fake implements User {
+class _FakeUser extends Fake implements User {
   @override
   String get documentID => "1";
 }
@@ -31,15 +31,15 @@ void main() {
   testWidgets('Record Page taken button pressed', (WidgetTester tester) async {
     SupportedDeviceType.iPhone5SE2nd.binding(tester.binding.window);
 
-    var mockPillSheetRepository = MockPillSheetRepository();
+    var mockPillSheetRepository = _MockPillSheetRepository();
     var originalPillSheetRepository = pillSheetRepository;
     pillSheetRepository = mockPillSheetRepository;
 
-    var fakeUser = FakeUser();
+    var fakeUser = _FakeUser();
     AppState.shared.user = fakeUser;
 
     var originalTodayRepository = todayRepository;
-    var mockTodayRepository = MockTodayRepository();
+    var mockTodayRepository = _MockTodayRepository();
     todayRepository = mockTodayRepository;
 
     var today = DateTime(2020, 09, 01);
@@ -90,15 +90,15 @@ void main() {
       (WidgetTester tester) async {
     SupportedDeviceType.iPhone5SE2nd.binding(tester.binding.window);
 
-    var mockPillSheetRepository = MockPillSheetRepository();
+    var mockPillSheetRepository = _MockPillSheetRepository();
     var originalPillSheetRepository = pillSheetRepository;
     pillSheetRepository = mockPillSheetRepository;
 
-    var fakeUser = FakeUser();
+    var fakeUser = _FakeUser();
     AppState.shared.user = fakeUser;
 
     var originalTodayRepository = todayRepository;
-    var mockTodayRepository = MockTodayRepository();
+    var mockTodayRepository = _MockTodayRepository();
     todayRepository = mockTodayRepository;
 
     var today = DateTime(2020, 09, 01);
