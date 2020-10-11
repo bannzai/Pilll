@@ -4,6 +4,7 @@ import 'package:Pilll/model/app_state.dart';
 import 'package:Pilll/model/pill_mark_type.dart';
 import 'package:Pilll/model/setting.dart';
 import 'package:Pilll/repository/pill_sheet.dart';
+import 'package:Pilll/repository/setting.dart';
 import 'package:Pilll/settings/list/model.dart';
 import 'package:Pilll/settings/list/modifing_pill_number.dart';
 import 'package:Pilll/style/button.dart';
@@ -89,7 +90,8 @@ class _SettingsState extends State<Settings> {
                     AppState.shared
                         .notifyWith((model) => model
                             .user.setting.pillSheetTypeRawPath = type.rawPath)
-                        .then((value) => value.user.setting.save())
+                        .then((value) =>
+                            settingRepository.save(value.user.setting))
                         .then((value) => setState(() => null));
                   },
                   selectedPillSheetType: user.setting.pillSheetType,
@@ -136,7 +138,7 @@ class _SettingsState extends State<Settings> {
               AppState.shared
                   .notifyWith((model) => model.user.setting.isOnReminder =
                       !user.setting.isOnReminder)
-                  .then((value) => value.user.setting.save())
+                  .then((value) => settingRepository.save(value.user.setting))
                   .then((value) => setState(() => null));
             },
           ),
@@ -159,7 +161,8 @@ class _SettingsState extends State<Settings> {
                                     hour: dateTime.hour,
                                     minute: dateTime.minute),
                           )
-                          .then((value) => value.user.setting.save())
+                          .then((value) =>
+                              settingRepository.save(value.user.setting))
                           .then((value) => setState(() => null));
                     },
                   );
@@ -189,7 +192,8 @@ class _SettingsState extends State<Settings> {
                         AppState.shared
                             .notifyWith((model) => model.user.setting
                                 .fromMenstruation = selectedFromMenstruction)
-                            .then((value) => value.user.setting.save())
+                            .then((value) =>
+                                settingRepository.save(value.user.setting))
                             .then((value) => setState(() => null));
                       },
                       durationMenstructionDidDecide:
@@ -198,7 +202,8 @@ class _SettingsState extends State<Settings> {
                             .notifyWith((model) =>
                                 model.user.setting.durationMenstruation =
                                     selectedDurationMenstruation)
-                            .then((value) => value.user.setting.save())
+                            .then((value) =>
+                                settingRepository.save(value.user.setting))
                             .then((value) => setState(() => null));
                       },
                     );
