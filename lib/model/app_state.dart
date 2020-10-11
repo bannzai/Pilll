@@ -40,7 +40,7 @@ class AppState extends ChangeNotifier {
     return context.read();
   }
 
-  Future<AppState> notifyWith(void update(AppState model)) {
+  Future<AppState> notifyWith(void update(AppState state)) {
     update(this);
     notifyListeners();
     return Future.value(this);

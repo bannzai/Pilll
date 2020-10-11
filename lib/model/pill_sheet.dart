@@ -8,6 +8,7 @@ import 'package:meta/meta.dart';
 part 'pill_sheet.g.dart';
 
 abstract class PillSheetFirestoreKey {
+  static final String typeInfo = "typeInfo";
   static final String createdAt = "createdAt";
   static final String deletedAt = "deletedAt";
   static final String lastTakenDate = "lastTakenDate";

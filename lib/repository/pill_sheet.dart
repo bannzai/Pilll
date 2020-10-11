@@ -1,4 +1,6 @@
+import 'package:Pilll/model/app_state.dart';
 import 'package:Pilll/model/pill_sheet.dart';
+import 'package:Pilll/model/pill_sheet_type.dart';
 import 'package:Pilll/model/user.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 
@@ -8,6 +10,7 @@ abstract class PillSheetRepositoryInterface {
   Future<void> delete(String userID, PillSheetModel pillSheet);
   Future<PillSheetModel> take(
       String userID, PillSheetModel pillSheet, DateTime takenDate);
+  Future<void> modifyType(PillSheetModel pillSheet, PillSheetType type);
 }
 
 class PillSheetRepository extends PillSheetRepositoryInterface {
@@ -62,6 +65,26 @@ class PillSheetRepository extends PillSheetRepositoryInterface {
         .update({PillSheetFirestoreKey.lastTakenDate: takenDate}).then(
             (_) => pillSheet..lastTakenDate = takenDate);
   }
+
+  Future<void> modifyType(PillSheetModel pillSheet, PillSheetType type) {
+    var pillSheetRef = FirebaseFirestore.instance
+        .collection(_path(AppState.shared.user.documentID))
+        .doc(pillSheet.documentID);
+    var userRef = FirebaseFirestore.instance
+        .collection(User.path)
+        .doc(AppState.shared.user.documentID);
+    var setting = AppState.shared.user.setting
+      ..pillSheetTypeRawPath = type.rawPath;
+    return FirebaseFirestore.instance.runTransaction((transaction) {
+      transaction.update(pillSheetRef, {
+        PillSheetFirestoreKey.typeInfo: type.typeInfo.toJson(),
+      });
+      transaction.update(userRef, {
+        UserFirestoreFieldKeys.settings: setting.toJson(),
+      });
+      return;
+    });
+  }
 }
 
 class PillSheetAlreadyExists implements Exception {
@@ -77,3 +100,5 @@ class PillSheetAlreadyDeleted implements Exception {
 }
 
 PillSheetRepositoryInterface pillSheetRepository = PillSheetRepository();
+
+abstract class Executor {}
