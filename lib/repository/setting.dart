@@ -19,3 +19,5 @@ class SettingRepository extends SettingRepositoryInterface {
             (_) => setting);
   }
 }
+
+final SettingRepositoryInterface settingRepository = SettingRepository();
