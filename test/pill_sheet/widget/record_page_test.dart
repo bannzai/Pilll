@@ -11,6 +11,8 @@ import 'package:intl/date_symbol_data_local.dart';
 import 'package:mockito/mockito.dart';
 import 'package:provider/provider.dart';
 
+import '../../helper/supported_device.dart';
+
 class MockPillSheetRepository extends Mock
     implements PillSheetRepositoryInterface {}
 
