@@ -17,17 +17,15 @@ void main() {
 class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    FirebaseAnalytics analytics = FirebaseAnalytics();
     return MultiProvider(
       providers: [
-        ChangeNotifierProvider<AppState>(
-          create: (_) => AppState(),
-          lazy: false,
+        ChangeNotifierProvider<AppState>.value(
+          value: AppState(),
         )
       ],
       child: MaterialApp(
         navigatorObservers: [
-          FirebaseAnalyticsObserver(analytics: analytics),
+          FirebaseAnalyticsObserver(analytics: FirebaseAnalytics()),
         ],
         theme: ThemeData(
           primaryColor: PilllColors.primary,

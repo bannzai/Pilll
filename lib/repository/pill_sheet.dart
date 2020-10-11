@@ -76,4 +76,4 @@ class PillSheetAlreadyDeleted implements Exception {
   }
 }
 
-final PillSheetRepositoryInterface pillSheetRepository = PillSheetRepository();
+PillSheetRepositoryInterface pillSheetRepository = PillSheetRepository();

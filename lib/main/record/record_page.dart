@@ -41,7 +41,7 @@ class _RecordPageState extends State<RecordPage> {
               return Center(
                 child: Selector<AppState, int>(
                   selector: (context, state) =>
-                      state.currentPillSheet.lastTakenPillNumber,
+                      state.currentPillSheet?.lastTakenPillNumber ?? 0,
                   builder: (BuildContext context, int value, Widget child) {
                     return Column(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -138,10 +138,13 @@ class _RecordPageState extends State<RecordPage> {
             number <= pillSheet.todayPillNumber;
       },
       markSelected: (number) {
+        if (number <= pillSheet.lastTakenPillNumber) {
+          return;
+        }
         var diff = pillSheet.todayPillNumber - number;
         if (diff < 0) {
-          throw FormatException(
-              "pillSheet.todayPillNumber - number should positive value, when todayPillNumber: ${pillSheet.todayPillNumber}, number: $number");
+          // This is in the future pill number.
+          return;
         }
         var takenDate = today().subtract(Duration(days: diff));
         _take(pillSheet, takenDate);
