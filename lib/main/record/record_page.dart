@@ -138,6 +138,9 @@ class _RecordPageState extends State<RecordPage> {
             number <= pillSheet.todayPillNumber;
       },
       markSelected: (number) {
+        if (number <= pillSheet.lastTakenPillNumber) {
+          return;
+        }
         var diff = pillSheet.todayPillNumber - number;
         if (diff < 0) {
           // This is in the future pill number.
