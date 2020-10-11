@@ -30,6 +30,7 @@ class _PillMarkState extends State<PillMark> with TickerProviderStateMixin {
         duration: const Duration(milliseconds: 2000),
         vsync: this,
       );
+      // NOTE: This statement for avoid of tester.pumpAndSettle exception about timeout
       if (!Environment.isTest) {
         _controller.repeat();
       }

@@ -6,6 +6,7 @@ import 'package:Pilll/model/pill_sheet_type.dart';
 import 'package:Pilll/model/user.dart';
 import 'package:Pilll/repository/pill_sheet.dart';
 import 'package:Pilll/repository/today.dart';
+import 'package:Pilll/util/environment.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:intl/date_symbol_data_local.dart';
@@ -27,6 +28,7 @@ class _FakeUser extends Fake implements User {
 void main() {
   setUp(() {
     initializeDateFormatting('ja_JP');
+    Environment.isTest = true;
   });
   Finder Function(bool Function(PillMark)) animatedPillMarkFinder =
       (condition) {
@@ -106,7 +108,7 @@ void main() {
     verify(mockTodayRepository.today());
     verify(mockPillSheetRepository.take("1", currentPillSheet, targetDay));
 
-    await tester.pump(Duration(milliseconds: 100));
+    await tester.pumpAndSettle();
     expect(
       animatedPillMarkFinder((widget) => widget.key == Key("PillMarkWidget_2")),
       findsNothing,
@@ -193,7 +195,7 @@ void main() {
     await tester
         .tap(pillMarkFinder((widget) => widget.key == Key("PillMarkWidget_4")));
 
-    await tester.pump(Duration(milliseconds: 100));
+    await tester.pumpAndSettle();
     verifyZeroInteractions(mockPillSheetRepository);
     expect(
       animatedPillMarkFinder((widget) => widget.key == Key("PillMarkWidget_2")),
@@ -281,7 +283,7 @@ void main() {
     await tester
         .tap(pillMarkFinder((widget) => widget.key == Key("PillMarkWidget_1")));
 
-    await tester.pump(Duration(milliseconds: 100));
+    await tester.pumpAndSettle();
     verifyZeroInteractions(mockPillSheetRepository);
     expect(
       animatedPillMarkFinder((widget) => widget.key == Key("PillMarkWidget_2")),
