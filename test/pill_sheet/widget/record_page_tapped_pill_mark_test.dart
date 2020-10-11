@@ -28,18 +28,6 @@ void main() {
   setUp(() {
     initializeDateFormatting('ja_JP');
   });
-  Finder Function(bool Function(PillMark)) animatedPillMarkFinder =
-      (condition) {
-    return find.byWidgetPredicate(
-      (widget) =>
-          widget is PillMark && condition(widget) && widget.hasRippleAnimation,
-    );
-  };
-  Finder Function(bool Function(PillMark)) pillMarkFinder = (condition) {
-    return find
-        .byWidgetPredicate((widget) => widget is PillMark && condition(widget));
-  };
-
   testWidgets('For not yet taken pill number 2 and 3. when tapped 2 pill mark ',
       (WidgetTester tester) async {
     SupportedDeviceType.iPhone5SE2nd.binding(tester.binding.window);
@@ -77,22 +65,15 @@ void main() {
     ));
     await tester.pump(Duration(milliseconds: 100));
 
-    expect(
-      animatedPillMarkFinder((widget) => widget.key == Key("PillMarkWidget_2")),
-      findsWidgets,
-    );
-    expect(
-      animatedPillMarkFinder((widget) => widget.key == Key("PillMarkWidget_3")),
-      findsWidgets,
-    );
-    expect(
-      animatedPillMarkFinder(
+    Finder Function(bool Function(PillMark)) animatedPillMarkFinder =
+        (condition) {
+      return find.byWidgetPredicate(
         (widget) =>
-            widget.key != Key("PillMarkWidget_2") &&
-            widget.key != Key("PillMarkWidget_3"),
-      ),
-      findsNothing,
-    );
+            widget is PillMark &&
+            condition(widget) &&
+            widget.hasRippleAnimation,
+      );
+    };
 
     verify(mockPillSheetRepository.fetchLast("1"));
 
@@ -101,28 +82,14 @@ void main() {
         .thenAnswer(
             (_) => Future.value(currentPillSheet..lastTakenDate = targetDay));
 
+    expect(AppState.shared.currentPillSheet.allTaken, isFalse);
     await tester.tap(animatedPillMarkFinder(
         (widget) => widget.key == Key("PillMarkWidget_2")));
     verify(mockTodayRepository.today());
     verify(mockPillSheetRepository.take("1", currentPillSheet, targetDay));
 
     await tester.pump(Duration(milliseconds: 100));
-    expect(
-      animatedPillMarkFinder((widget) => widget.key == Key("PillMarkWidget_2")),
-      findsNothing,
-    );
-    expect(
-      animatedPillMarkFinder((widget) => widget.key == Key("PillMarkWidget_3")),
-      findsWidgets,
-    );
-    expect(
-      animatedPillMarkFinder(
-        (widget) =>
-            widget.key != Key("PillMarkWidget_2") &&
-            widget.key != Key("PillMarkWidget_3"),
-      ),
-      findsNothing,
-    );
+    expect(AppState.shared.currentPillSheet.allTaken, isFalse);
 
     addTearDown(() {
       pillSheetRepository = originalPillSheetRepository;
@@ -169,48 +136,21 @@ void main() {
       ),
     ));
     await tester.pump(Duration(milliseconds: 100));
-    expect(
-      animatedPillMarkFinder((widget) => widget.key == Key("PillMarkWidget_2")),
-      findsWidgets,
-    );
-    expect(
-      animatedPillMarkFinder((widget) => widget.key == Key("PillMarkWidget_3")),
-      findsWidgets,
-    );
-    expect(
-      animatedPillMarkFinder(
-        (widget) =>
-            widget.key != Key("PillMarkWidget_2") &&
-            widget.key != Key("PillMarkWidget_3"),
-      ),
-      findsNothing,
-    );
 
+    Finder Function(bool Function(PillMark)) animatedPillMarkFinder =
+        (condition) {
+      return find.byWidgetPredicate(
+          (widget) => widget is PillMark && condition(widget));
+    };
     verify(mockPillSheetRepository.fetchLast("1"));
 
     // For verifyZeroInteractions
     mockPillSheetRepository = _MockPillSheetRepository();
-    await tester
-        .tap(pillMarkFinder((widget) => widget.key == Key("PillMarkWidget_4")));
+    await tester.tap(animatedPillMarkFinder(
+        (widget) => widget.key == Key("PillMarkWidget_4")));
 
     await tester.pump(Duration(milliseconds: 100));
     verifyZeroInteractions(mockPillSheetRepository);
-    expect(
-      animatedPillMarkFinder((widget) => widget.key == Key("PillMarkWidget_2")),
-      findsWidgets,
-    );
-    expect(
-      animatedPillMarkFinder((widget) => widget.key == Key("PillMarkWidget_3")),
-      findsWidgets,
-    );
-    expect(
-      animatedPillMarkFinder(
-        (widget) =>
-            widget.key != Key("PillMarkWidget_2") &&
-            widget.key != Key("PillMarkWidget_3"),
-      ),
-      findsNothing,
-    );
 
     addTearDown(() {
       pillSheetRepository = originalPillSheetRepository;
@@ -257,48 +197,21 @@ void main() {
       ),
     ));
     await tester.pump(Duration(milliseconds: 100));
-    expect(
-      animatedPillMarkFinder((widget) => widget.key == Key("PillMarkWidget_2")),
-      findsWidgets,
-    );
-    expect(
-      animatedPillMarkFinder((widget) => widget.key == Key("PillMarkWidget_3")),
-      findsWidgets,
-    );
-    expect(
-      animatedPillMarkFinder(
-        (widget) =>
-            widget.key != Key("PillMarkWidget_2") &&
-            widget.key != Key("PillMarkWidget_3"),
-      ),
-      findsNothing,
-    );
 
+    Finder Function(bool Function(PillMark)) animatedPillMarkFinder =
+        (condition) {
+      return find.byWidgetPredicate(
+          (widget) => widget is PillMark && condition(widget));
+    };
     verify(mockPillSheetRepository.fetchLast("1"));
 
     // For verifyZeroInteractions
     mockPillSheetRepository = _MockPillSheetRepository();
-    await tester
-        .tap(pillMarkFinder((widget) => widget.key == Key("PillMarkWidget_1")));
+    await tester.tap(animatedPillMarkFinder(
+        (widget) => widget.key == Key("PillMarkWidget_1")));
 
     await tester.pump(Duration(milliseconds: 100));
     verifyZeroInteractions(mockPillSheetRepository);
-    expect(
-      animatedPillMarkFinder((widget) => widget.key == Key("PillMarkWidget_2")),
-      findsWidgets,
-    );
-    expect(
-      animatedPillMarkFinder((widget) => widget.key == Key("PillMarkWidget_3")),
-      findsWidgets,
-    );
-    expect(
-      animatedPillMarkFinder(
-        (widget) =>
-            widget.key != Key("PillMarkWidget_2") &&
-            widget.key != Key("PillMarkWidget_3"),
-      ),
-      findsNothing,
-    );
 
     addTearDown(() {
       pillSheetRepository = originalPillSheetRepository;
