@@ -1,3 +1,5 @@
+import 'package:Pilll/repository/today.dart';
+
 DateTime today() {
-  return DateTime.now();
+  return todayRepository.today();
 }
