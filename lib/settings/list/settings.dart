@@ -265,7 +265,8 @@ class _SettingsState extends State<Settings> {
           AppState.shared.user.documentID,
           AppState.shared.currentPillSheet,
         )
-        .then((value) => AppState.shared.currentPillSheet = null)
+        .then((value) => AppState.shared
+            .notifyWith((state) => state.currentPillSheet = null))
         .then((value) => setState(() => null));
   }
 
