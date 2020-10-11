@@ -4,6 +4,7 @@ import 'package:Pilll/model/pill_sheet.dart';
 import 'package:Pilll/model/pill_sheet_type.dart';
 import 'package:Pilll/model/user.dart';
 import 'package:Pilll/repository/pill_sheet.dart';
+import 'package:Pilll/style/button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:intl/date_symbol_data_local.dart';
@@ -52,6 +53,8 @@ void main() {
 
     expect(find.text("飲んだ"), findsOneWidget);
     expect(verify(mock.fetchLast(captureAny)).captured.single, "1");
+
+    await tester.tap(find.byType(PrimaryButton));
 
     addTearDown(() {
       pillSheetRepository = original;
