@@ -1,6 +1,7 @@
 import 'package:Pilll/main/components/ripple.dart';
 import 'package:Pilll/model/pill_mark_type.dart';
 import 'package:Pilll/theme/color.dart';
+import 'package:Pilll/util/environment.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
@@ -28,7 +29,10 @@ class _PillMarkState extends State<PillMark> with TickerProviderStateMixin {
       _controller = AnimationController(
         duration: const Duration(milliseconds: 2000),
         vsync: this,
-      )..repeat();
+      );
+      if (!Environment.isTest) {
+        _controller.repeat();
+      }
     }
     super.initState();
   }
