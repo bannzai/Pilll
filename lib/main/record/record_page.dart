@@ -187,7 +187,9 @@ class _RecordPageState extends State<RecordPage> {
               AppState.shared.user.documentID,
               pillSheet,
             )
-            .then((_) => AppState.shared.notifyWith(
+            .then((_) =>
+                pillSheetRepository.fetchLast(AppState.shared.user.documentID))
+            .then((pillSheet) => AppState.shared.notifyWith(
                 (model) => AppState.shared.currentPillSheet = pillSheet))
             .then((_) => progressing = false);
       },
