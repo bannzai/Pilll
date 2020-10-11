@@ -4,7 +4,6 @@ import 'package:Pilll/theme/font.dart';
 import 'package:Pilll/theme/text_color.dart';
 import 'package:Pilll/util/formatter/date_time_formatter.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
 
 class RecordTakenInformation extends StatelessWidget {
   final DateTime today;
@@ -42,8 +41,7 @@ class RecordTakenInformation extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
               _todayWidget(),
-              ConstrainedBox(
-                  constraints: BoxConstraints(minWidth: 10, maxWidth: 28)),
+              SizedBox(width: 28),
               Container(
                 height: 64,
                 child: VerticalDivider(
@@ -51,8 +49,7 @@ class RecordTakenInformation extends StatelessWidget {
                   color: PilllColors.divider,
                 ),
               ),
-              ConstrainedBox(
-                  constraints: BoxConstraints(minWidth: 10, maxWidth: 28)),
+              SizedBox(width: 28),
               _takenWidget(),
             ],
           ),
