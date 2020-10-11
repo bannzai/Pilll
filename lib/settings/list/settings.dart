@@ -123,8 +123,17 @@ class _SettingsState extends State<Settings> {
                     return ModifingPillNumberPage(
                       markSelected: (number) {
                         Navigator.pop(context);
-                        setState(() => AppState.shared.currentPillSheet
-                            .resetTodayTakenPillNumber(number));
+                        var currentPillSheet = AppState.shared.currentPillSheet;
+                        pillSheetRepository
+                            .modifyBeginingDate(
+                                currentPillSheet,
+                                currentPillSheet
+                                    .calcBeginingDateFromNextTodayPillNumber(
+                                        number))
+                            .then((value) => AppState.shared.notifyWith(
+                                (state) => state.currentPillSheet
+                                    .resetTodayTakenPillNumber(number)))
+                            .then((_) => setState(() => null));
                       },
                       pillMarkTypeBuilder: (number) {
                         return PillMarkType.normal;
