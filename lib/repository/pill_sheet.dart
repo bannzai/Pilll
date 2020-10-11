@@ -57,7 +57,10 @@ class PillSheetRepository extends PillSheetRepositoryInterface {
     return FirebaseFirestore.instance
         .collection(_path(userID))
         .doc(pillSheet.documentID)
-        .update({PillSheetFirestoreKey.deletedAt: DateTime.now()});
+        .update({
+      PillSheetFirestoreKey.deletedAt:
+          TimestampConverter.dateTimeToTimestamp(DateTime.now())
+    });
   }
 
   Future<PillSheetModel> take(
