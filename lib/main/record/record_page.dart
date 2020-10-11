@@ -140,8 +140,8 @@ class _RecordPageState extends State<RecordPage> {
       markSelected: (number) {
         var diff = pillSheet.todayPillNumber - number;
         if (diff < 0) {
-          throw FormatException(
-              "pillSheet.todayPillNumber - number should positive value, when todayPillNumber: ${pillSheet.todayPillNumber}, number: $number");
+          // This is in the future pill number.
+          return;
         }
         var takenDate = today().subtract(Duration(days: diff));
         _take(pillSheet, takenDate);
