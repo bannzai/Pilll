@@ -65,7 +65,7 @@ class _PillMarkState extends State<PillMark> with TickerProviderStateMixin {
                 child: Container(
                   child: CustomPaint(
                     size: Size(80, 80),
-                    painter: CirclePainter(
+                    painter: Ripple(
                       _controller,
                       color: PilllColors.primary,
                     ),
