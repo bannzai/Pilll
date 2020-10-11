@@ -22,10 +22,10 @@ class FakeUser extends Fake implements User {
 void main() {
   setUp(() {
     initializeDateFormatting('ja_JP');
-    WidgetsBinding.instance.renderView.configuration =
-        new TestViewConfiguration(size: const Size(414.0, 896.0));
   });
   testWidgets('Record Page taken button pressed', (WidgetTester tester) async {
+    SupportedDeviceType.iPhone5SE2nd.binding(tester.binding.window);
+
     var mock = MockPillSheetRepository();
     var original = pillSheetRepository;
     pillSheetRepository = mock;
@@ -36,26 +36,27 @@ void main() {
     when(mock.fetchLast(fakeUser.documentID)).thenAnswer((_) =>
         Future.value(PillSheetModel.create(PillSheetType.pillsheet_28_4)));
 
-    await tester.pumpWidget(
-      MultiProvider(
-        providers: [
-          ChangeNotifierProvider<AppState>(
-            create: (_) => AppState(),
-            lazy: false,
-          )
-        ],
-        child: MaterialApp(
-          home: RecordPage(),
-        ),
+    await tester.pumpWidget(MultiProvider(
+      providers: [
+        ChangeNotifierProvider<AppState>(
+          create: (_) => AppState(),
+          lazy: false,
+        )
+      ],
+      child: MaterialApp(
+        home: RecordPage(),
       ),
-    );
-    await tester.pump(Duration(seconds: 1));
+    ));
+    await tester.pump(Duration(milliseconds: 100));
 
     expect(find.text("飲んだ"), findsOneWidget);
     expect(verify(mock.fetchLast(captureAny)).captured.single, "1");
 
-    // pillSheetRepository = original;
-    // AppState.shared.user = null;
-    // AppState.shared.currentPillSheet = null;
+    addTearDown(() {
+      pillSheetRepository = original;
+      AppState.shared.user = null;
+      AppState.shared.currentPillSheet = null;
+      tester.binding.window.clearAllTestValues();
+    });
   });
 }
