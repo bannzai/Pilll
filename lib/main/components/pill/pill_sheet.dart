@@ -44,6 +44,7 @@ class PillSheet extends StatelessWidget {
       children: <Widget>[
         Text("$number", style: TextStyle(color: PilllColors.weekday)),
         PillMark(
+            key: Key("PillMarkWidget_$number"),
             hasRippleAnimation:
                 markIsAnimated == null ? false : markIsAnimated(number),
             type: type,
