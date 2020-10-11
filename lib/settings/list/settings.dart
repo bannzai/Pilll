@@ -87,12 +87,23 @@ class _SettingsState extends State<Settings> {
                   title: "種類",
                   callback: (type) {
                     Navigator.pop(context);
-                    AppState.shared
-                        .notifyWith((model) => model
-                            .user.setting.pillSheetTypeRawPath = type.rawPath)
-                        .then((value) =>
-                            settingRepository.save(value.user.setting))
-                        .then((value) => setState(() => null));
+                    if (AppState.shared.currentPillSheet != null)
+                      pillSheetRepository
+                          .modifyType(AppState.shared.currentPillSheet, type)
+                          .then((_) => AppState.shared.user.setting
+                            ..pillSheetTypeRawPath = type.rawPath)
+                          .then((setting) => AppState.shared.notifyWith(
+                              (state) => state.user.setting
+                                ..pillSheetTypeRawPath = type.rawPath))
+                          .then((value) => setState(() => null));
+                    else
+                      settingRepository
+                          .save(AppState.shared.user.setting
+                            ..pillSheetTypeRawPath = type.rawPath)
+                          .then((setting) => AppState.shared.notifyWith(
+                              (state) => state.user.setting
+                                ..pillSheetTypeRawPath = type.rawPath))
+                          .then((value) => setState(() => null));
                   },
                   selectedPillSheetType: user.setting.pillSheetType,
                 );
