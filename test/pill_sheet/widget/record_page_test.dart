@@ -4,6 +4,7 @@ import 'package:Pilll/model/pill_sheet.dart';
 import 'package:Pilll/model/pill_sheet_type.dart';
 import 'package:Pilll/model/user.dart';
 import 'package:Pilll/repository/pill_sheet.dart';
+import 'package:Pilll/repository/today.dart';
 import 'package:Pilll/style/button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
@@ -15,6 +16,8 @@ import '../../helper/supported_device.dart';
 
 class MockPillSheetRepository extends Mock
     implements PillSheetRepositoryInterface {}
+
+class MockTodayRepository extends Mock implements TodayRepositoryInterface {}
 
 class FakeUser extends Fake implements User {
   @override
@@ -28,15 +31,16 @@ void main() {
   testWidgets('Record Page taken button pressed', (WidgetTester tester) async {
     SupportedDeviceType.iPhone5SE2nd.binding(tester.binding.window);
 
-    var mock = MockPillSheetRepository();
-    var original = pillSheetRepository;
-    pillSheetRepository = mock;
+    var mockPillSheetRepository = MockPillSheetRepository();
+    var originalPillSheetRepository = pillSheetRepository;
+    pillSheetRepository = mockPillSheetRepository;
 
     var fakeUser = FakeUser();
     AppState.shared.user = fakeUser;
 
-    when(mock.fetchLast(fakeUser.documentID)).thenAnswer((_) =>
-        Future.value(PillSheetModel.create(PillSheetType.pillsheet_28_4)));
+    var currentPillSheet = PillSheetModel.create(PillSheetType.pillsheet_28_4);
+    when(mockPillSheetRepository.fetchLast(fakeUser.documentID))
+        .thenAnswer((_) => Future.value(currentPillSheet));
 
     await tester.pumpWidget(MultiProvider(
       providers: [
@@ -52,12 +56,25 @@ void main() {
     await tester.pump(Duration(milliseconds: 100));
 
     expect(find.text("飲んだ"), findsOneWidget);
-    expect(verify(mock.fetchLast(captureAny)).captured.single, "1");
+    verify(mockPillSheetRepository.fetchLast("1"));
+
+    var originalTodayRepository = todayRepository;
+    var mockTodayRepository = MockTodayRepository();
+    todayRepository = mockTodayRepository;
+
+    var today = DateTime(2020, 09, 01);
+    when(todayRepository.today()).thenReturn(today);
+    when(mockPillSheetRepository.take("1", currentPillSheet, today)).thenAnswer(
+        (_) => Future.value(currentPillSheet..lastTakenDate = today));
 
     await tester.tap(find.byType(PrimaryButton));
 
+    verify(mockTodayRepository.today());
+    verify(mockPillSheetRepository.take("1", currentPillSheet, today));
+
     addTearDown(() {
-      pillSheetRepository = original;
+      pillSheetRepository = originalPillSheetRepository;
+      todayRepository = originalTodayRepository;
       AppState.shared.user = null;
       AppState.shared.currentPillSheet = null;
       tester.binding.window.clearAllTestValues();
