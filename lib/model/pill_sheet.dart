@@ -39,8 +39,11 @@ class PillSheetModel {
   final String id;
   String get documentID => id;
 
+  PillSheetType get sheetType =>
+      PillSheetTypeFunctions.fromRawPath(typeInfo.pillSheetTypeReferencePath);
+
   @JsonKey(nullable: false)
-  final PillSheetTypeInfo typeInfo;
+  PillSheetTypeInfo typeInfo;
   @JsonKey(
     nullable: false,
     fromJson: TimestampConverter.timestampToDateTime,

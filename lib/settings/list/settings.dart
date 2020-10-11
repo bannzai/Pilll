@@ -90,11 +90,15 @@ class _SettingsState extends State<Settings> {
                     if (AppState.shared.currentPillSheet != null)
                       pillSheetRepository
                           .modifyType(AppState.shared.currentPillSheet, type)
-                          .then((_) => AppState.shared.user.setting
-                            ..pillSheetTypeRawPath = type.rawPath)
-                          .then((setting) => AppState.shared.notifyWith(
-                              (state) => state.user.setting
-                                ..pillSheetTypeRawPath = type.rawPath))
+                          .then(
+                            (setting) => AppState.shared.notifyWith(
+                              (state) {
+                                state.user.setting.pillSheetTypeRawPath =
+                                    type.rawPath;
+                                state.currentPillSheet.typeInfo = type.typeInfo;
+                              },
+                            ),
+                          )
                           .then((value) => setState(() => null));
                     else
                       settingRepository
