@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'dart:math' as math;
 import 'package:flutter/animation.dart';
 
-class CirclePainter extends CustomPainter {
-  CirclePainter(
+class Ripple extends CustomPainter {
+  Ripple(
     this._animation, {
     @required this.color,
   }) : super(repaint: _animation);
@@ -31,5 +31,5 @@ class CirclePainter extends CustomPainter {
   }
 
   @override
-  bool shouldRepaint(CirclePainter oldDelegate) => true;
+  bool shouldRepaint(Ripple oldDelegate) => true;
 }
