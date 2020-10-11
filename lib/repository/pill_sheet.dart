@@ -21,6 +21,12 @@ class PillSheetRepository extends PillSheetRepositoryInterface {
     return "${User.path}/$userID/pill_sheets";
   }
 
+  DocumentReference _reference(PillSheetModel pillSheet) {
+    return FirebaseFirestore.instance
+        .collection(_path(AppState.shared.user.documentID))
+        .doc(pillSheet.documentID);
+  }
+
   @override
   Future<PillSheetModel> fetchLast(String userID) {
     return FirebaseFirestore.instance
