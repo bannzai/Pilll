@@ -56,10 +56,7 @@ void main() {
 
     await tester.pumpWidget(MultiProvider(
       providers: [
-        ChangeNotifierProvider<AppState>(
-          create: (_) => AppState(),
-          lazy: false,
-        )
+        ChangeNotifierProvider<AppState>.value(value: AppState.shared)
       ],
       child: MaterialApp(
         home: RecordPage(),
@@ -80,6 +77,66 @@ void main() {
     await tester.pump(Duration(milliseconds: 100));
     expect(find.text("飲んだ"), findsNothing);
     expect(AppState.shared.currentPillSheet.allTaken, isTrue);
+
+    addTearDown(() {
+      pillSheetRepository = originalPillSheetRepository;
+      todayRepository = originalTodayRepository;
+      AppState.shared.user = null;
+      AppState.shared.currentPillSheet = null;
+      tester.binding.window.clearAllTestValues();
+    });
+  });
+  testWidgets('Record Page cancel taken button pressed',
+      (WidgetTester tester) async {
+    SupportedDeviceType.iPhone5SE2nd.binding(tester.binding.window);
+
+    var mockPillSheetRepository = MockPillSheetRepository();
+    var originalPillSheetRepository = pillSheetRepository;
+    pillSheetRepository = mockPillSheetRepository;
+
+    var fakeUser = FakeUser();
+    AppState.shared.user = fakeUser;
+
+    var originalTodayRepository = todayRepository;
+    var mockTodayRepository = MockTodayRepository();
+    todayRepository = mockTodayRepository;
+
+    var today = DateTime(2020, 09, 01);
+    when(todayRepository.today()).thenReturn(today);
+
+    var currentPillSheet = PillSheetModel(
+        beginingDate: today,
+        lastTakenDate: today,
+        typeInfo: PillSheetType.pillsheet_28_4.typeInfo);
+    expect(currentPillSheet.allTaken, isTrue);
+
+    when(mockPillSheetRepository.fetchLast(fakeUser.documentID))
+        .thenAnswer((_) => Future.value(currentPillSheet));
+
+    await tester.pumpWidget(MultiProvider(
+      providers: [
+        ChangeNotifierProvider<AppState>.value(value: AppState.shared)
+      ],
+      child: MaterialApp(
+        home: RecordPage(),
+      ),
+    ));
+    await tester.pump(Duration(milliseconds: 100));
+    expect(find.text("飲んでない"), findsOneWidget);
+    verify(mockPillSheetRepository.fetchLast("1"));
+
+    var oneDayBefore = today.subtract(Duration(days: 1));
+    when(mockPillSheetRepository.take("1", currentPillSheet, oneDayBefore))
+        .thenAnswer((_) =>
+            Future.value(currentPillSheet..lastTakenDate = oneDayBefore));
+
+    await tester.tap(find.byType(TertiaryButton));
+    verify(mockTodayRepository.today());
+    verify(mockPillSheetRepository.take("1", currentPillSheet, oneDayBefore));
+
+    await tester.pump(Duration(milliseconds: 100));
+    expect(find.text("飲んでない"), findsNothing);
+    expect(AppState.shared.currentPillSheet.allTaken, isFalse);
 
     addTearDown(() {
       pillSheetRepository = originalPillSheetRepository;
