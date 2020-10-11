@@ -1,4 +1,5 @@
 import 'package:Pilll/model/app_state.dart';
+import 'package:Pilll/model/firestore_timestamp_converter.dart';
 import 'package:Pilll/model/pill_sheet.dart';
 import 'package:Pilll/model/pill_sheet_type.dart';
 import 'package:Pilll/model/user.dart';
@@ -11,6 +12,8 @@ abstract class PillSheetRepositoryInterface {
   Future<PillSheetModel> take(
       String userID, PillSheetModel pillSheet, DateTime takenDate);
   Future<void> modifyType(PillSheetModel pillSheet, PillSheetType type);
+  Future<void> modifyBeginingDate(
+      PillSheetModel pillSheet, DateTime beginingDate);
 }
 
 class PillSheetRepository extends PillSheetRepositoryInterface {
@@ -84,6 +87,16 @@ class PillSheetRepository extends PillSheetRepositoryInterface {
       });
       return;
     });
+  }
+
+  Future<void> modifyBeginingDate(
+      PillSheetModel pillSheet, DateTime beginingDate) {
+    return _reference(pillSheet).update(
+      {
+        PillSheetFirestoreKey.beginingDate:
+            TimestampConverter.dateTimeToTimestamp(beginingDate)
+      },
+    );
   }
 }
 
