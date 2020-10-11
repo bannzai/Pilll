@@ -38,7 +38,19 @@ void main() {
     var fakeUser = FakeUser();
     AppState.shared.user = fakeUser;
 
+    var originalTodayRepository = todayRepository;
+    var mockTodayRepository = MockTodayRepository();
+    todayRepository = mockTodayRepository;
+
+    var today = DateTime(2020, 09, 01);
+    when(todayRepository.today()).thenReturn(today);
+
     var currentPillSheet = PillSheetModel.create(PillSheetType.pillsheet_28_4);
+    expect(currentPillSheet.todayPillNumber, equals(1),
+        reason: "created pill sheet model should today pill number is 1");
+    expect(currentPillSheet.lastTakenPillNumber, equals(0),
+        reason: "it is not yet taken pill");
+
     when(mockPillSheetRepository.fetchLast(fakeUser.documentID))
         .thenAnswer((_) => Future.value(currentPillSheet));
 
@@ -54,23 +66,20 @@ void main() {
       ),
     ));
     await tester.pump(Duration(milliseconds: 100));
-
     expect(find.text("飲んだ"), findsOneWidget);
+    expect(AppState.shared.currentPillSheet.allTaken, isFalse);
     verify(mockPillSheetRepository.fetchLast("1"));
 
-    var originalTodayRepository = todayRepository;
-    var mockTodayRepository = MockTodayRepository();
-    todayRepository = mockTodayRepository;
-
-    var today = DateTime(2020, 09, 01);
-    when(todayRepository.today()).thenReturn(today);
     when(mockPillSheetRepository.take("1", currentPillSheet, today)).thenAnswer(
         (_) => Future.value(currentPillSheet..lastTakenDate = today));
 
     await tester.tap(find.byType(PrimaryButton));
-
     verify(mockTodayRepository.today());
     verify(mockPillSheetRepository.take("1", currentPillSheet, today));
+
+    await tester.pump(Duration(milliseconds: 100));
+    expect(find.text("飲んだ"), findsNothing);
+    expect(AppState.shared.currentPillSheet.allTaken, isTrue);
 
     addTearDown(() {
       pillSheetRepository = originalPillSheetRepository;
