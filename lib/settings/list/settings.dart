@@ -114,35 +114,37 @@ class _SettingsState extends State<Settings> {
               }));
             },
           ),
-          SettingListTitleRowModel(
-              title: "今日飲むピル番号の変更",
-              onTap: () {
-                Navigator.of(context)
-                    .push(MaterialPageRoute(builder: (BuildContext context) {
-                  return ModifingPillNumberPage(
-                    markSelected: (number) {
-                      Navigator.pop(context);
-                      setState(() => AppState.shared.currentPillSheet
-                          .resetTodayTakenPillNumber(number));
-                    },
-                    pillMarkTypeBuilder: (number) {
-                      return PillMarkType.normal;
+          if (AppState.shared.currentPillSheet != null) ...[
+            SettingListTitleRowModel(
+                title: "今日飲むピル番号の変更",
+                onTap: () {
+                  Navigator.of(context)
+                      .push(MaterialPageRoute(builder: (BuildContext context) {
+                    return ModifingPillNumberPage(
+                      markSelected: (number) {
+                        Navigator.pop(context);
+                        setState(() => AppState.shared.currentPillSheet
+                            .resetTodayTakenPillNumber(number));
+                      },
+                      pillMarkTypeBuilder: (number) {
+                        return PillMarkType.normal;
+                      },
+                    );
+                  }));
+                }),
+            SettingListTitleRowModel(
+                title: "ピルシートの破棄",
+                onTap: () {
+                  showDialog(
+                    context: context,
+                    builder: (_) {
+                      return ConfirmDeletePillSheet(onDelete: () {
+                        _deleteCurrentPillSheet();
+                      });
                     },
                   );
-                }));
-              }),
-          SettingListTitleRowModel(
-              title: "ピルシートの破棄",
-              onTap: () {
-                showDialog(
-                  context: context,
-                  builder: (_) {
-                    return ConfirmDeletePillSheet(onDelete: () {
-                      _deleteCurrentPillSheet();
-                    });
-                  },
-                );
-              }),
+                }),
+          ],
         ];
       case SettingSection.notification:
         return [
