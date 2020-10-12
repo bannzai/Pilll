@@ -43,8 +43,4 @@ class User {
           : null,
     );
   }
-
-  DocumentReference documentReference() {
-    return FirebaseFirestore.instance.collection(User.path).doc(documentID);
-  }
 }
