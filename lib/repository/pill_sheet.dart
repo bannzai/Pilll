@@ -5,7 +5,7 @@ import 'package:Pilll/model/pill_sheet_type.dart';
 import 'package:Pilll/model/user.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 
-abstract class PillSheetRepositoryInterface {
+abstract class PillSheetServiceInterface {
   Future<PillSheetModel> fetchLast(String userID);
   Future<void> register(String userID, PillSheetModel model);
   Future<void> delete(String userID, PillSheetModel pillSheet);
@@ -16,7 +16,7 @@ abstract class PillSheetRepositoryInterface {
       PillSheetModel pillSheet, DateTime beginingDate);
 }
 
-class PillSheetRepository extends PillSheetRepositoryInterface {
+class PIllSheetService extends PillSheetServiceInterface {
   String _path(String userID) {
     return "${User.path}/$userID/pill_sheets";
   }
@@ -116,6 +116,6 @@ class PillSheetAlreadyDeleted implements Exception {
   }
 }
 
-PillSheetRepositoryInterface pillSheetRepository = PillSheetRepository();
+PillSheetServiceInterface pillSheetRepository = PIllSheetService();
 
 abstract class Executor {}

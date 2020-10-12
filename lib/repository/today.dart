@@ -1,9 +1,9 @@
-abstract class TodayRepositoryInterface {
+abstract class TodayServiceInterface {
   DateTime today();
 }
 
-class TodayRepository implements TodayRepositoryInterface {
+class TodayService implements TodayServiceInterface {
   DateTime today() => DateTime.now();
 }
 
-TodayRepositoryInterface todayRepository = TodayRepository();
+TodayServiceInterface todayRepository = TodayService();
