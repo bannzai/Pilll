@@ -2,6 +2,7 @@ import 'package:Pilll/model/app_state.dart';
 import 'package:Pilll/model/user.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart' as auth;
+import 'package:riverpod/all.dart';
 
 abstract class UserServiceInterface {
   Future<User> fetchOrCreateUser();
@@ -10,6 +11,9 @@ abstract class UserServiceInterface {
 }
 
 class UserService extends UserServiceInterface {
+  final Reader reader;
+  UserService(this.reader);
+
   @override
   Future<User> fetchOrCreateUser() {
     return fetch().catchError((error) {
