@@ -2,6 +2,7 @@ import 'package:Pilll/model/pill_mark_type.dart';
 import 'package:Pilll/model/pill_sheet.dart';
 import 'package:Pilll/model/pill_sheet_type.dart';
 import 'package:Pilll/model/setting.dart';
+import 'package:Pilll/repository/setting.dart';
 import 'package:Pilll/repository/user.dart';
 import 'package:Pilll/util/shared_preference/keys.dart';
 import 'package:Pilll/util/today.dart';
@@ -52,9 +53,9 @@ class InitialSettingModel {
 
   Future<void> register() {
     return userRepository.fetchOrCreateUser().then((value) {
-      return this
-          .buildSetting()
-          .save()
+      var setting = this.buildSetting();
+      return settingRepository
+          .save(setting)
           .then((value) => null)
           .then((_) => SharedPreferences.getInstance())
           .then((storage) => storage.setString(
