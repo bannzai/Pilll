@@ -5,7 +5,7 @@ import 'package:Pilll/model/app_state.dart';
 import 'package:Pilll/model/pill_mark_type.dart';
 import 'package:Pilll/model/pill_sheet.dart';
 import 'package:Pilll/model/pill_sheet_type.dart';
-import 'package:Pilll/repository/pill_sheet.dart';
+import 'package:Pilll/service/pill_sheet.dart';
 import 'package:Pilll/style/button.dart';
 import 'package:Pilll/theme/color.dart';
 import 'package:Pilll/theme/font.dart';

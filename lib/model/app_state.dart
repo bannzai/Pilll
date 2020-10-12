@@ -1,7 +1,7 @@
 import 'package:Pilll/model/initial_setting.dart';
 import 'package:Pilll/model/pill_sheet.dart';
 import 'package:Pilll/model/user.dart';
-import 'package:Pilll/repository/user.dart';
+import 'package:Pilll/service/user.dart';
 import 'package:provider/provider.dart';
 import 'package:flutter/material.dart';
 

@@ -1,7 +1,7 @@
 import 'package:Pilll/initial_setting/initial_setting.dart';
 import 'package:Pilll/main/home/home.dart';
 import 'package:Pilll/main/root/root.dart';
-import 'package:Pilll/repository/user.dart';
+import 'package:Pilll/service/user.dart';
 import 'package:Pilll/util/shared_preference/keys.dart';
 import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
