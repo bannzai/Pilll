@@ -3,11 +3,11 @@ import 'package:Pilll/model/setting.dart';
 import 'package:Pilll/model/user.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 
-abstract class SettingRepositoryInterface {
+abstract class SettingServiceInterface {
   Future<Setting> save(Setting setting);
 }
 
-class SettingRepository extends SettingRepositoryInterface {
+class SettingService extends SettingServiceInterface {
   Future<Setting> save(Setting setting) {
     if (AppState.shared.user.documentID == null) {
       throw UserNotFound();
@@ -20,4 +20,4 @@ class SettingRepository extends SettingRepositoryInterface {
   }
 }
 
-final SettingRepositoryInterface settingRepository = SettingRepository();
+final SettingServiceInterface settingRepository = SettingService();

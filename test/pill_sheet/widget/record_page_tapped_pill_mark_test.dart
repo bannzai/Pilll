@@ -16,9 +16,9 @@ import 'package:provider/provider.dart';
 import '../../helper/supported_device.dart';
 
 class _MockPillSheetRepository extends Mock
-    implements PillSheetRepositoryInterface {}
+    implements PillSheetServiceInterface {}
 
-class _MockTodayRepository extends Mock implements TodayRepositoryInterface {}
+class _MockTodayRepository extends Mock implements TodayServiceInterface {}
 
 class _FakeUser extends Fake implements User {
   @override

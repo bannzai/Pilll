@@ -3,13 +3,13 @@ import 'package:Pilll/model/user.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart' as auth;
 
-abstract class UserRepositoryInterface {
+abstract class UserServiceInterface {
   Future<User> fetchOrCreateUser();
   Future<User> fetch();
   Future<User> subscribe();
 }
 
-class UserRepository extends UserRepositoryInterface {
+class UserService extends UserServiceInterface {
   @override
   Future<User> fetchOrCreateUser() {
     return fetch().catchError((error) {
@@ -63,4 +63,4 @@ class UserRepository extends UserRepositoryInterface {
   }
 }
 
-final UserRepositoryInterface userRepository = UserRepository();
+final UserServiceInterface userRepository = UserService();
