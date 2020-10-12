@@ -7,19 +7,19 @@ abstract class _CollectionPath {
 }
 
 class DatabaseConnection {
-  DatabaseConnection({@required this.userID})
+  DatabaseConnection(this._userID)
       : assert(
-            userID != null, 'Pill firestore request should necessary userID');
-  final String userID;
+            _userID != null, 'Pill firestore request should necessary userID');
+  final String _userID;
 
   DocumentReference userReference() =>
-      FirebaseFirestore.instance.collection(_CollectionPath.users).doc(userID);
+      FirebaseFirestore.instance.collection(_CollectionPath.users).doc(_userID);
 
-  CollectionReference pillSheetsReference() =>
-      FirebaseFirestore.instance.collection(_CollectionPath.pillSheets(userID));
+  CollectionReference pillSheetsReference() => FirebaseFirestore.instance
+      .collection(_CollectionPath.pillSheets(_userID));
 
   DocumentReference pillSheetReference(String pillSheetID) =>
       FirebaseFirestore.instance
-          .collection(_CollectionPath.pillSheets(userID))
+          .collection(_CollectionPath.pillSheets(_userID))
           .doc(pillSheetID);
 }
