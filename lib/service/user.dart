@@ -1,5 +1,7 @@
+import 'package:Pilll/database/database.dart';
 import 'package:Pilll/model/app_state.dart';
 import 'package:Pilll/model/user.dart';
+import 'package:Pilll/provider/auth.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart' as auth;
 import 'package:riverpod/all.dart';
@@ -14,6 +16,8 @@ class UserService extends UserServiceInterface {
   final Reader reader;
   UserService(this.reader);
 
+  DatabaseConnection get _database => reader(databaseProvider);
+
   @override
   Future<User> fetchOrCreateUser() {
     return fetch().catchError((error) {
@@ -26,11 +30,7 @@ class UserService extends UserServiceInterface {
   }
 
   Future<User> fetch() {
-    return FirebaseFirestore.instance
-        .collection(User.path)
-        .doc(auth.FirebaseAuth.instance.currentUser.uid)
-        .get()
-        .then((document) {
+    return _database.userReference().get().then((document) {
       if (!document.exists) {
         throw UserNotFound();
       }
@@ -41,9 +41,8 @@ class UserService extends UserServiceInterface {
   }
 
   Future<User> subscribe() {
-    return FirebaseFirestore.instance
-        .collection(User.path)
-        .doc(auth.FirebaseAuth.instance.currentUser.uid)
+    return _database
+        .userReference()
         .snapshots(includeMetadataChanges: true)
         .listen((event) {
       print('user: ${event.data()})');
@@ -55,10 +54,7 @@ class UserService extends UserServiceInterface {
     assert(!AppState.shared.userIsExists,
         "user already exists on process. maybe you will call fetch before create");
     if (AppState.shared.userIsExists) throw UserAlreadyExists();
-    return FirebaseFirestore.instance
-        .collection(User.path)
-        .doc(auth.FirebaseAuth.instance.currentUser.uid)
-        .set(
+    return _database.userReference().set(
       {
         UserFirestoreFieldKeys.anonymouseUserID:
             auth.FirebaseAuth.instance.currentUser.uid,
@@ -66,5 +62,3 @@ class UserService extends UserServiceInterface {
     );
   }
 }
-
-final UserServiceInterface userRepository = UserService();
