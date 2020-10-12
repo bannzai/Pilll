@@ -4,6 +4,7 @@ import 'package:Pilll/model/app_state.dart';
 import 'package:Pilll/model/pill_mark_type.dart';
 import 'package:Pilll/model/setting.dart';
 import 'package:Pilll/repository/pill_sheet.dart';
+import 'package:Pilll/repository/setting.dart';
 import 'package:Pilll/settings/list/model.dart';
 import 'package:Pilll/settings/list/modifing_pill_number.dart';
 import 'package:Pilll/style/button.dart';
@@ -86,46 +87,73 @@ class _SettingsState extends State<Settings> {
                   title: "種類",
                   callback: (type) {
                     Navigator.pop(context);
-                    AppState.shared
-                        .notifyWith((model) => model
-                            .user.setting.pillSheetTypeRawPath = type.rawPath)
-                        .then((value) => value.user.setting.save())
-                        .then((value) => setState(() => null));
+                    if (AppState.shared.currentPillSheet != null)
+                      pillSheetRepository
+                          .modifyType(AppState.shared.currentPillSheet, type)
+                          .then(
+                            (setting) => AppState.shared.notifyWith(
+                              (state) {
+                                state.user.setting.pillSheetTypeRawPath =
+                                    type.rawPath;
+                                state.currentPillSheet.typeInfo = type.typeInfo;
+                              },
+                            ),
+                          )
+                          .then((value) => setState(() => null));
+                    else
+                      settingRepository
+                          .save(AppState.shared.user.setting
+                            ..pillSheetTypeRawPath = type.rawPath)
+                          .then((setting) => AppState.shared.notifyWith(
+                              (state) => state.user.setting
+                                ..pillSheetTypeRawPath = type.rawPath))
+                          .then((value) => setState(() => null));
                   },
                   selectedPillSheetType: user.setting.pillSheetType,
                 );
               }));
             },
           ),
-          SettingListTitleRowModel(
-              title: "今日飲むピル番号の変更",
-              onTap: () {
-                Navigator.of(context)
-                    .push(MaterialPageRoute(builder: (BuildContext context) {
-                  return ModifingPillNumberPage(
-                    markSelected: (number) {
-                      Navigator.pop(context);
-                      setState(() => AppState.shared.currentPillSheet
-                          .resetTodayTakenPillNumber(number));
-                    },
-                    pillMarkTypeBuilder: (number) {
-                      return PillMarkType.normal;
+          if (AppState.shared.currentPillSheet != null) ...[
+            SettingListTitleRowModel(
+                title: "今日飲むピル番号の変更",
+                onTap: () {
+                  Navigator.of(context)
+                      .push(MaterialPageRoute(builder: (BuildContext context) {
+                    return ModifingPillNumberPage(
+                      markSelected: (number) {
+                        Navigator.pop(context);
+                        var currentPillSheet = AppState.shared.currentPillSheet;
+                        pillSheetRepository
+                            .modifyBeginingDate(
+                                currentPillSheet,
+                                currentPillSheet
+                                    .calcBeginingDateFromNextTodayPillNumber(
+                                        number))
+                            .then((value) => AppState.shared.notifyWith(
+                                (state) => state.currentPillSheet
+                                    .resetTodayTakenPillNumber(number)))
+                            .then((_) => setState(() => null));
+                      },
+                      pillMarkTypeBuilder: (number) {
+                        return PillMarkType.normal;
+                      },
+                    );
+                  }));
+                }),
+            SettingListTitleRowModel(
+                title: "ピルシートの破棄",
+                onTap: () {
+                  showDialog(
+                    context: context,
+                    builder: (_) {
+                      return ConfirmDeletePillSheet(onDelete: () {
+                        _deleteCurrentPillSheet();
+                      });
                     },
                   );
-                }));
-              }),
-          SettingListTitleRowModel(
-              title: "ピルシートの破棄",
-              onTap: () {
-                showDialog(
-                  context: context,
-                  builder: (_) {
-                    return ConfirmDeletePillSheet(onDelete: () {
-                      _deleteCurrentPillSheet();
-                    });
-                  },
-                );
-              }),
+                }),
+          ],
         ];
       case SettingSection.notification:
         return [
@@ -136,7 +164,7 @@ class _SettingsState extends State<Settings> {
               AppState.shared
                   .notifyWith((model) => model.user.setting.isOnReminder =
                       !user.setting.isOnReminder)
-                  .then((value) => value.user.setting.save())
+                  .then((value) => settingRepository.save(value.user.setting))
                   .then((value) => setState(() => null));
             },
           ),
@@ -159,7 +187,8 @@ class _SettingsState extends State<Settings> {
                                     hour: dateTime.hour,
                                     minute: dateTime.minute),
                           )
-                          .then((value) => value.user.setting.save())
+                          .then((value) =>
+                              settingRepository.save(value.user.setting))
                           .then((value) => setState(() => null));
                     },
                   );
@@ -189,7 +218,8 @@ class _SettingsState extends State<Settings> {
                         AppState.shared
                             .notifyWith((model) => model.user.setting
                                 .fromMenstruation = selectedFromMenstruction)
-                            .then((value) => value.user.setting.save())
+                            .then((value) =>
+                                settingRepository.save(value.user.setting))
                             .then((value) => setState(() => null));
                       },
                       durationMenstructionDidDecide:
@@ -198,7 +228,8 @@ class _SettingsState extends State<Settings> {
                             .notifyWith((model) =>
                                 model.user.setting.durationMenstruation =
                                     selectedDurationMenstruation)
-                            .then((value) => value.user.setting.save())
+                            .then((value) =>
+                                settingRepository.save(value.user.setting))
                             .then((value) => setState(() => null));
                       },
                     );
@@ -243,6 +274,8 @@ class _SettingsState extends State<Settings> {
           AppState.shared.user.documentID,
           AppState.shared.currentPillSheet,
         )
+        .then((value) => AppState.shared
+            .notifyWith((state) => state.currentPillSheet = null))
         .then((value) => setState(() => null));
   }
 

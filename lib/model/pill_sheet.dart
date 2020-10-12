@@ -8,9 +8,11 @@ import 'package:meta/meta.dart';
 part 'pill_sheet.g.dart';
 
 abstract class PillSheetFirestoreKey {
+  static final String typeInfo = "typeInfo";
   static final String createdAt = "createdAt";
   static final String deletedAt = "deletedAt";
   static final String lastTakenDate = "lastTakenDate";
+  static final String beginingDate = "beginingDate";
 }
 
 @JsonSerializable(nullable: false, explicitToJson: true)
@@ -38,8 +40,11 @@ class PillSheetModel {
   final String id;
   String get documentID => id;
 
+  PillSheetType get sheetType =>
+      PillSheetTypeFunctions.fromRawPath(typeInfo.pillSheetTypeReferencePath);
+
   @JsonKey(nullable: false)
-  final PillSheetTypeInfo typeInfo;
+  PillSheetTypeInfo typeInfo;
   @JsonKey(
     nullable: false,
     fromJson: TimestampConverter.timestampToDateTime,
@@ -99,9 +104,13 @@ class PillSheetModel {
 
   bool get allTaken => todayPillNumber == lastTakenPillNumber;
 
-  void resetTodayTakenPillNumber(int pillNumber) {
-    if (pillNumber == todayPillNumber) return;
+  DateTime calcBeginingDateFromNextTodayPillNumber(int pillNumber) {
+    if (pillNumber == todayPillNumber) return beginingDate;
     var betweenToday = pillNumber - todayPillNumber;
-    beginingDate = beginingDate.add(Duration(days: betweenToday));
+    return beginingDate.add(Duration(days: betweenToday));
+  }
+
+  void resetTodayTakenPillNumber(int pillNumber) {
+    beginingDate = calcBeginingDateFromNextTodayPillNumber(pillNumber);
   }
 }

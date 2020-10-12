@@ -4,6 +4,7 @@ import 'package:Pilll/main/record/record_taken_information.dart';
 import 'package:Pilll/model/app_state.dart';
 import 'package:Pilll/model/pill_mark_type.dart';
 import 'package:Pilll/model/pill_sheet.dart';
+import 'package:Pilll/model/pill_sheet_type.dart';
 import 'package:Pilll/repository/pill_sheet.dart';
 import 'package:Pilll/style/button.dart';
 import 'package:Pilll/theme/color.dart';
@@ -28,7 +29,9 @@ class _RecordPageState extends State<RecordPage> {
       extendBodyBehindAppBar: true,
       body: Selector<AppState, PillSheetModel>(
         selector: (context, state) => state.currentPillSheet,
-        shouldRebuild: (prev, next) => !identical(prev, next),
+        shouldRebuild: (prev, next) =>
+            !identical(prev, next) ||
+            prev.sheetType.name != next.sheetType.name,
         builder:
             (BuildContext context, PillSheetModel pillSheet, Widget child) {
           return FutureBuilder(
@@ -184,7 +187,9 @@ class _RecordPageState extends State<RecordPage> {
               AppState.shared.user.documentID,
               pillSheet,
             )
-            .then((_) => AppState.shared.notifyWith(
+            .then((_) =>
+                pillSheetRepository.fetchLast(AppState.shared.user.documentID))
+            .then((pillSheet) => AppState.shared.notifyWith(
                 (model) => AppState.shared.currentPillSheet = pillSheet))
             .then((_) => progressing = false);
       },
