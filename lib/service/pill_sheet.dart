@@ -22,9 +22,6 @@ abstract class PillSheetServiceInterface {
 class PIllSheetService extends PillSheetServiceInterface {
   final Reader reader;
   PIllSheetService(this.reader);
-  String _path(String userID) {
-    return "${User.path}/$userID/pill_sheets";
-  }
 
   DatabaseConnection get _database => reader(databaseProvider);
 
