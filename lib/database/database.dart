@@ -22,4 +22,8 @@ class DatabaseConnection {
       FirebaseFirestore.instance
           .collection(_CollectionPath.pillSheets(_userID))
           .doc(pillSheetID);
+
+  Future<T> transaction<T>(TransactionHandler<T> transactionHandler) {
+    return FirebaseFirestore.instance.runTransaction(transactionHandler);
+  }
 }

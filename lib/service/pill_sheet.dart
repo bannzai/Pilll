@@ -80,7 +80,7 @@ class PIllSheetService extends PillSheetServiceInterface {
     var userRef = _database.userReference();
     var setting = AppState.shared.user.setting
       ..pillSheetTypeRawPath = type.rawPath;
-    return FirebaseFirestore.instance.runTransaction((transaction) {
+    return _database.transaction((transaction) {
       transaction.update(pillSheetRef, {
         PillSheetFirestoreKey.typeInfo: type.typeInfo.toJson(),
       });
