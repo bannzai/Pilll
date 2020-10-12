@@ -4,6 +4,7 @@ import 'package:Pilll/model/pill_sheet.dart';
 import 'package:Pilll/model/pill_sheet_type.dart';
 import 'package:Pilll/model/user.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:riverpod/all.dart';
 
 abstract class PillSheetServiceInterface {
   Future<PillSheetModel> fetchLast(String userID);
@@ -17,6 +18,8 @@ abstract class PillSheetServiceInterface {
 }
 
 class PIllSheetService extends PillSheetServiceInterface {
+  final Reader reader;
+  PIllSheetService(this.reader);
   String _path(String userID) {
     return "${User.path}/$userID/pill_sheets";
   }
