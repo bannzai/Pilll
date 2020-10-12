@@ -1,8 +1,10 @@
+import 'package:Pilll/database/database.dart';
 import 'package:Pilll/model/app_state.dart';
 import 'package:Pilll/model/firestore_timestamp_converter.dart';
 import 'package:Pilll/model/pill_sheet.dart';
 import 'package:Pilll/model/pill_sheet_type.dart';
 import 'package:Pilll/model/user.dart';
+import 'package:Pilll/provider/auth.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:riverpod/all.dart';
 
@@ -24,16 +26,12 @@ class PIllSheetService extends PillSheetServiceInterface {
     return "${User.path}/$userID/pill_sheets";
   }
 
-  DocumentReference _reference(PillSheetModel pillSheet) {
-    return FirebaseFirestore.instance
-        .collection(_path(AppState.shared.user.documentID))
-        .doc(pillSheet.documentID);
-  }
+  DatabaseConnection get _database => reader(databaseProvider);
 
   @override
   Future<PillSheetModel> fetchLast(String userID) {
-    return FirebaseFirestore.instance
-        .collection(_path(userID))
+    return _database
+        .pillSheetsReference()
         .orderBy(PillSheetFirestoreKey.createdAt)
         .limitToLast(1)
         .get()
@@ -59,11 +57,11 @@ class PIllSheetService extends PillSheetServiceInterface {
 
     var json = model.toJson();
     json.remove("id");
-    return FirebaseFirestore.instance.collection(_path(userID)).add(json);
+    return _database.pillSheetsReference().add(json);
   }
 
   Future<void> delete(String userID, PillSheetModel pillSheet) {
-    return _reference(pillSheet).update({
+    return _database.pillSheetReference(pillSheet.documentID).update({
       PillSheetFirestoreKey.deletedAt:
           TimestampConverter.dateTimeToTimestamp(DateTime.now())
     });
@@ -71,18 +69,15 @@ class PIllSheetService extends PillSheetServiceInterface {
 
   Future<PillSheetModel> take(
       String userID, PillSheetModel pillSheet, DateTime takenDate) {
-    return _reference(pillSheet)
+    return _database
+        .pillSheetReference(pillSheet.documentID)
         .update({PillSheetFirestoreKey.lastTakenDate: takenDate}).then(
             (_) => pillSheet..lastTakenDate = takenDate);
   }
 
   Future<void> modifyType(PillSheetModel pillSheet, PillSheetType type) {
-    var pillSheetRef = FirebaseFirestore.instance
-        .collection(_path(AppState.shared.user.documentID))
-        .doc(pillSheet.documentID);
-    var userRef = FirebaseFirestore.instance
-        .collection(User.path)
-        .doc(AppState.shared.user.documentID);
+    var pillSheetRef = _database.pillSheetReference(pillSheet.documentID)
+    var userRef = _database.userReference();
     var setting = AppState.shared.user.setting
       ..pillSheetTypeRawPath = type.rawPath;
     return FirebaseFirestore.instance.runTransaction((transaction) {
@@ -98,7 +93,7 @@ class PIllSheetService extends PillSheetServiceInterface {
 
   Future<void> modifyBeginingDate(
       PillSheetModel pillSheet, DateTime beginingDate) {
-    return _reference(pillSheet).update(
+    return _database.pillSheetReference(pillSheet.documentID).update(
       {
         PillSheetFirestoreKey.beginingDate:
             TimestampConverter.dateTimeToTimestamp(beginingDate)
@@ -118,7 +113,3 @@ class PillSheetAlreadyDeleted implements Exception {
     return "pill sheet already deleted";
   }
 }
-
-PillSheetServiceInterface pillSheetRepository = PIllSheetService();
-
-abstract class Executor {}
