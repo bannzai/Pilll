@@ -73,7 +73,7 @@ class PIllSheetService extends PillSheetServiceInterface {
   }
 
   Future<void> modifyType(PillSheetModel pillSheet, PillSheetType type) {
-    var pillSheetRef = _database.pillSheetReference(pillSheet.documentID)
+    var pillSheetRef = _database.pillSheetReference(pillSheet.documentID);
     var userRef = _database.userReference();
     var setting = AppState.shared.user.setting
       ..pillSheetTypeRawPath = type.rawPath;
