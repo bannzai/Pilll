@@ -28,7 +28,7 @@ abstract class PillSheetTypeInfo with _$PillSheetTypeInfo {
 
   factory PillSheetTypeInfo.fromJson(Map<String, dynamic> json) =>
       _$PillSheetTypeInfoFromJson(json);
-  Map<String, dynamic> toJson() => _$PillSheetTypeInfoToJson(this);
+  Map<String, dynamic> toJson() => _$_$_PillSheetTypeInfoToJson(this);
 }
 
 @freezed
@@ -76,7 +76,7 @@ abstract class PillSheetModel with _$PillSheetModel {
 
   factory PillSheetModel.fromJson(Map<String, dynamic> json) =>
       _$PillSheetModelFromJson(json);
-  Map<String, dynamic> toJson() => _$PillSheetModelToJson(this);
+  Map<String, dynamic> toJson() => _$_$_PillSheetModelToJson(this);
 
   // PillSheetType get pillSheetType =>
   //     PillSheetTypeFunctions.fromRawPath(typeInfo.pillSheetTypeReferencePath);
