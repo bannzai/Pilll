@@ -62,3 +62,5 @@ class UserService extends UserServiceInterface {
     );
   }
 }
+
+UserServiceInterface userRepository = UserService(null);
