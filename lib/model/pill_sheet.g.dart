@@ -6,23 +6,24 @@ part of 'pill_sheet.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-PillSheetTypeInfo _$PillSheetTypeInfoFromJson(Map<String, dynamic> json) {
-  return PillSheetTypeInfo(
+_$_PillSheetTypeInfo _$_$_PillSheetTypeInfoFromJson(Map<String, dynamic> json) {
+  return _$_PillSheetTypeInfo(
     pillSheetTypeReferencePath: json['pillSheetTypeReferencePath'] as String,
     totalCount: json['totalCount'] as int,
     dosingPeriod: json['dosingPeriod'] as int,
   );
 }
 
-Map<String, dynamic> _$PillSheetTypeInfoToJson(PillSheetTypeInfo instance) =>
+Map<String, dynamic> _$_$_PillSheetTypeInfoToJson(
+        _$_PillSheetTypeInfo instance) =>
     <String, dynamic>{
       'pillSheetTypeReferencePath': instance.pillSheetTypeReferencePath,
       'totalCount': instance.totalCount,
       'dosingPeriod': instance.dosingPeriod,
     };
 
-PillSheetModel _$PillSheetModelFromJson(Map<String, dynamic> json) {
-  return PillSheetModel(
+_$_PillSheetModel _$_$_PillSheetModelFromJson(Map<String, dynamic> json) {
+  return _$_PillSheetModel(
     id: json['id'] as String,
     typeInfo:
         PillSheetTypeInfo.fromJson(json['typeInfo'] as Map<String, dynamic>),
@@ -30,14 +31,14 @@ PillSheetModel _$PillSheetModelFromJson(Map<String, dynamic> json) {
         json['beginingDate'] as Timestamp),
     lastTakenDate: TimestampConverter.timestampToDateTime(
         json['lastTakenDate'] as Timestamp),
-  )
-    ..createdAt =
-        TimestampConverter.timestampToDateTime(json['createdAt'] as Timestamp)
-    ..deletedAt =
-        TimestampConverter.timestampToDateTime(json['deletedAt'] as Timestamp);
+    createdAt:
+        TimestampConverter.timestampToDateTime(json['createdAt'] as Timestamp),
+    deletedAt:
+        TimestampConverter.timestampToDateTime(json['deletedAt'] as Timestamp),
+  );
 }
 
-Map<String, dynamic> _$PillSheetModelToJson(PillSheetModel instance) {
+Map<String, dynamic> _$_$_PillSheetModelToJson(_$_PillSheetModel instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
