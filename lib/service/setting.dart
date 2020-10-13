@@ -26,3 +26,5 @@ class SettingService extends SettingServiceInterface {
             (_) => setting);
   }
 }
+
+SettingServiceInterface settingRepository = SettingService(null);
