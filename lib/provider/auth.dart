@@ -12,7 +12,7 @@ final databaseProvider = Provider<DatabaseConnection>((ref) {
   final userCredential = ref.watch(signInProvider);
 
   if (userCredential.data?.value?.user?.uid != null) {
-    return DatabaseConnection(userID: userCredential.data?.value?.user?.uid);
+    return DatabaseConnection(userCredential.data?.value?.user?.uid);
   }
   return null;
 });
