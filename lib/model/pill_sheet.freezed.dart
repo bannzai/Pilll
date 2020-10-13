@@ -408,7 +408,7 @@ class __$PillSheetModelCopyWithImpl<$Res>
 @JsonSerializable(nullable: true, explicitToJson: true)
 
 /// @nodoc
-class _$_PillSheetModel implements _PillSheetModel {
+class _$_PillSheetModel extends _PillSheetModel {
   _$_PillSheetModel(
       {@JsonKey(includeIfNull: false, toJson: toNull)
           this.id,
@@ -425,7 +425,8 @@ class _$_PillSheetModel implements _PillSheetModel {
       @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
           this.deletedAt})
       : assert(typeInfo != null),
-        assert(beginingDate != null);
+        assert(beginingDate != null),
+        super._();
 
   factory _$_PillSheetModel.fromJson(Map<String, dynamic> json) =>
       _$_$_PillSheetModelFromJson(json);
@@ -506,7 +507,8 @@ class _$_PillSheetModel implements _PillSheetModel {
   }
 }
 
-abstract class _PillSheetModel implements PillSheetModel {
+abstract class _PillSheetModel extends PillSheetModel {
+  _PillSheetModel._() : super._();
   factory _PillSheetModel(
       {@JsonKey(includeIfNull: false, toJson: toNull)
           String id,
