@@ -33,10 +33,10 @@ abstract class PillSheetTypeInfo with _$PillSheetTypeInfo {
 
 @freezed
 abstract class PillSheetModel with _$PillSheetModel {
-  // String get documentID => id;
+  String get documentID => id;
 
-  // PillSheetType get sheetType =>
-  //     PillSheetTypeFunctions.fromRawPath(typeInfo.pillSheetTypeReferencePath);
+  PillSheetType get sheetType =>
+      PillSheetTypeFunctions.fromRawPath(typeInfo.pillSheetTypeReferencePath);
 
   @JsonSerializable(nullable: true, explicitToJson: true)
   factory PillSheetModel({
@@ -78,27 +78,28 @@ abstract class PillSheetModel with _$PillSheetModel {
       _$PillSheetModelFromJson(json);
   Map<String, dynamic> toJson() => _$_$_PillSheetModelToJson(this);
 
-  // PillSheetType get pillSheetType =>
-  //     PillSheetTypeFunctions.fromRawPath(typeInfo.pillSheetTypeReferencePath);
+  PillSheetType get pillSheetType =>
+      PillSheetTypeFunctions.fromRawPath(typeInfo.pillSheetTypeReferencePath);
 
-  // int get todayPillNumber {
-  //   var diff = _today().difference(beginingDate).inDays;
-  //   return diff % pillSheetType.totalCount + 1;
-  // }
+  int get todayPillNumber {
+    var diff = today().difference(beginingDate).inDays;
+    return diff % pillSheetType.totalCount + 1;
+  }
 
-  // int get lastTakenPillNumber => lastTakenDate == null
-  //     ? 0
-  //     : lastTakenDate.difference(beginingDate).inDays + 1;
+  int get lastTakenPillNumber => lastTakenDate == null
+      ? 0
+      : lastTakenDate.difference(beginingDate).inDays + 1;
 
-  // bool get allTaken => todayPillNumber == lastTakenPillNumber;
+  bool get allTaken => todayPillNumber == lastTakenPillNumber;
 
-  // DateTime calcBeginingDateFromNextTodayPillNumber(int pillNumber) {
-  //   if (pillNumber == todayPillNumber) return beginingDate;
-  //   var betweenToday = pillNumber - todayPillNumber;
-  //   return beginingDate.add(Duration(days: betweenToday));
-  // }
+  DateTime calcBeginingDateFromNextTodayPillNumber(int pillNumber) {
+    if (pillNumber == todayPillNumber) return beginingDate;
+    var betweenToday = pillNumber - todayPillNumber;
+    return beginingDate.add(Duration(days: betweenToday));
+  }
 
-  // void resetTodayTakenPillNumber(int pillNumber) {
-  //   beginingDate = calcBeginingDateFromNextTodayPillNumber(pillNumber);
-  // }
+  void resetTodayTakenPillNumber(int pillNumber) {
+    throw UnimplementedError("TODO");
+    // beginingDate = calcBeginingDateFromNextTodayPillNumber(pillNumber);
+  }
 }
