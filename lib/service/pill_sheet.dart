@@ -128,5 +128,3 @@ class PillSheetAlreadyDeleted implements Exception {
     return "pill sheet already deleted";
   }
 }
-
-PillSheetServiceInterface pillSheetRepository = PIllSheetService(null);
