@@ -9,7 +9,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:riverpod/all.dart';
 
 abstract class PillSheetServiceInterface {
-  Future<PillSheetModel> fetchLast(String userID);
+  Future<PillSheetModel> fetchLast();
   Future<void> register(String userID, PillSheetModel model);
   Future<void> delete(String userID, PillSheetModel pillSheet);
   Future<PillSheetModel> take(
@@ -19,6 +19,10 @@ abstract class PillSheetServiceInterface {
       PillSheetModel pillSheet, DateTime beginingDate);
 }
 
+final pillSheetServiceProvider = Provider((ref) => PIllSheetService(ref.read));
+final fetchLastPillSheetProvider =
+    FutureProvider((ref) => ref.watch(pillSheetServiceProvider).fetchLast());
+
 class PIllSheetService extends PillSheetServiceInterface {
   final Reader reader;
   PIllSheetService(this.reader);
@@ -26,7 +30,7 @@ class PIllSheetService extends PillSheetServiceInterface {
   DatabaseConnection get _database => reader(databaseProvider);
 
   @override
-  Future<PillSheetModel> fetchLast(String userID) {
+  Future<PillSheetModel> fetchLast() {
     return _database
         .pillSheetsReference()
         .orderBy(PillSheetFirestoreKey.createdAt)
