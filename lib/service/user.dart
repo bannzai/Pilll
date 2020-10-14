@@ -12,6 +12,8 @@ abstract class UserServiceInterface {
   Future<User> subscribe();
 }
 
+final userServiceProvider = Provider((ref) => UserService(ref.read));
+
 class UserService extends UserServiceInterface {
   final Reader reader;
   UserService(this.reader);
