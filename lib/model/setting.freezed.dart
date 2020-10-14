@@ -188,7 +188,7 @@ class _$SettingTearOff {
       @required int fromMenstruation,
       @required int durationMenstruation,
       @required DateTime reminderTime,
-      @required @JsonSerializable(explicitToJson: true) dynamic isOnReminder}) {
+      @required @JsonSerializable(explicitToJson: true) bool isOnReminder}) {
     return _Setting(
       pillSheetTypeRawPath: pillSheetTypeRawPath,
       fromMenstruation: fromMenstruation,
@@ -215,7 +215,7 @@ mixin _$Setting {
   int get durationMenstruation;
   DateTime get reminderTime;
   @JsonSerializable(explicitToJson: true)
-  dynamic get isOnReminder;
+  bool get isOnReminder;
 
   Map<String, dynamic> toJson();
   $SettingCopyWith<Setting> get copyWith;
@@ -230,7 +230,7 @@ abstract class $SettingCopyWith<$Res> {
       int fromMenstruation,
       int durationMenstruation,
       DateTime reminderTime,
-      @JsonSerializable(explicitToJson: true) dynamic isOnReminder});
+      @JsonSerializable(explicitToJson: true) bool isOnReminder});
 }
 
 /// @nodoc
@@ -262,9 +262,8 @@ class _$SettingCopyWithImpl<$Res> implements $SettingCopyWith<$Res> {
       reminderTime: reminderTime == freezed
           ? _value.reminderTime
           : reminderTime as DateTime,
-      isOnReminder: isOnReminder == freezed
-          ? _value.isOnReminder
-          : isOnReminder as dynamic,
+      isOnReminder:
+          isOnReminder == freezed ? _value.isOnReminder : isOnReminder as bool,
     ));
   }
 }
@@ -279,7 +278,7 @@ abstract class _$SettingCopyWith<$Res> implements $SettingCopyWith<$Res> {
       int fromMenstruation,
       int durationMenstruation,
       DateTime reminderTime,
-      @JsonSerializable(explicitToJson: true) dynamic isOnReminder});
+      @JsonSerializable(explicitToJson: true) bool isOnReminder});
 }
 
 /// @nodoc
@@ -313,7 +312,7 @@ class __$SettingCopyWithImpl<$Res> extends _$SettingCopyWithImpl<$Res>
           ? _value.reminderTime
           : reminderTime as DateTime,
       isOnReminder:
-          isOnReminder == freezed ? _value.isOnReminder : isOnReminder,
+          isOnReminder == freezed ? _value.isOnReminder : isOnReminder as bool,
     ));
   }
 }
@@ -348,7 +347,7 @@ class _$_Setting extends _Setting with DiagnosticableTreeMixin {
   final DateTime reminderTime;
   @override
   @JsonSerializable(explicitToJson: true)
-  final dynamic isOnReminder;
+  final bool isOnReminder;
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
@@ -420,7 +419,7 @@ abstract class _Setting extends Setting {
           DateTime reminderTime,
       @required
       @JsonSerializable(explicitToJson: true)
-          dynamic isOnReminder}) = _$_Setting;
+          bool isOnReminder}) = _$_Setting;
 
   factory _Setting.fromJson(Map<String, dynamic> json) = _$_Setting.fromJson;
 
@@ -434,7 +433,7 @@ abstract class _Setting extends Setting {
   DateTime get reminderTime;
   @override
   @JsonSerializable(explicitToJson: true)
-  dynamic get isOnReminder;
+  bool get isOnReminder;
   @override
   _$SettingCopyWith<_Setting> get copyWith;
 }

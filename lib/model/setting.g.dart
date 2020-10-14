@@ -27,7 +27,7 @@ _$_Setting _$_$_SettingFromJson(Map<String, dynamic> json) {
     reminderTime: json['reminderTime'] == null
         ? null
         : DateTime.parse(json['reminderTime'] as String),
-    isOnReminder: json['isOnReminder'],
+    isOnReminder: json['isOnReminder'] as bool,
   );
 }
 
