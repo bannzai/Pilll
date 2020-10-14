@@ -37,6 +37,8 @@ abstract class $UserStateCopyWith<$Res> {
   factory $UserStateCopyWith(UserState value, $Res Function(UserState) then) =
       _$UserStateCopyWithImpl<$Res>;
   $Res call({User entity});
+
+  $UserCopyWith<$Res> get entity;
 }
 
 /// @nodoc
@@ -55,6 +57,16 @@ class _$UserStateCopyWithImpl<$Res> implements $UserStateCopyWith<$Res> {
       entity: entity == freezed ? _value.entity : entity as User,
     ));
   }
+
+  @override
+  $UserCopyWith<$Res> get entity {
+    if (_value.entity == null) {
+      return null;
+    }
+    return $UserCopyWith<$Res>(_value.entity, (value) {
+      return _then(_value.copyWith(entity: value));
+    });
+  }
 }
 
 /// @nodoc
@@ -64,6 +76,9 @@ abstract class _$UserStateCopyWith<$Res> implements $UserStateCopyWith<$Res> {
       __$UserStateCopyWithImpl<$Res>;
   @override
   $Res call({User entity});
+
+  @override
+  $UserCopyWith<$Res> get entity;
 }
 
 /// @nodoc
