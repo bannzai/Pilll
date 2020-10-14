@@ -1,6 +1,6 @@
-import 'package:Pilll/main/application/router.dart';
-import 'package:Pilll/model/app_state.dart';
 import 'package:Pilll/model/initial_setting.dart';
+import 'package:Pilll/store/initial_setting.dart';
+import 'package:Pilll/store/setting.dart';
 import 'package:Pilll/style/button.dart';
 import 'package:Pilll/theme/color.dart';
 import 'package:Pilll/theme/font.dart';
@@ -9,31 +9,17 @@ import 'package:Pilll/util/formatter/date_time_formatter.dart';
 import 'package:Pilll/util/shared_preference/toolbar/date_time_picker.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_hooks/flutter_hooks.dart';
+import 'package:hooks_riverpod/all.dart';
 
-class InitialSetting4 extends StatefulWidget {
-  @override
-  _InitialSetting4State createState() => _InitialSetting4State();
-}
-
-class _InitialSetting4State extends State<InitialSetting4> {
-  @override
-  void initState() {
-    var model = AppState.read(context);
-    if (_notYetSetTime(model.initialSetting)) {
-      model.initialSetting.reminderHour = 22;
-      model.initialSetting.reminderMinute = 0;
-    }
-    super.initState();
-  }
-
+class InitialSetting4 extends HookWidget {
   bool _notYetSetTime(InitialSettingModel model) {
     return model.reminderMinute == null || model.reminderHour == null;
   }
 
-  Widget _time(BuildContext context) {
-    var dateTime = AppState.watch(context).initialSetting.reminderDateTime();
+  Widget _time(BuildContext context, InitialSettingModel entity) {
     return Text(
-      DateTimeFormatter.militaryTime(dateTime),
+      DateTimeFormatter.militaryTime(entity.reminderDateTime()),
       style: FontType.largeNumber.merge(
         TextStyle(
           decoration: TextDecoration.underline,
@@ -43,19 +29,22 @@ class _InitialSetting4State extends State<InitialSetting4> {
     );
   }
 
-  void _showDurationModalSheet(BuildContext context) {
-    var model = AppState.read(context);
+  void _showDurationModalSheet(
+    BuildContext context,
+    InitialSettingModel entity,
+    InitialSettingStateStore store,
+  ) {
     showModalBottomSheet(
       context: context,
       builder: (BuildContext context) {
         return DateTimePicker(
-          initialDateTime: model.initialSetting.reminderDateTime(),
+          initialDateTime: entity.reminderDateTime(),
           done: (dateTime) {
-            setState(() {
-              model.initialSetting.reminderHour = dateTime.hour;
-              model.initialSetting.reminderMinute = dateTime.minute;
-              Navigator.pop(context);
-            });
+            store.modify((model) => model
+              ..copyWith(
+                  reminderHour: dateTime.hour,
+                  reminderMinute: dateTime.minute));
+            Navigator.pop(context);
           },
         );
       },
@@ -64,7 +53,13 @@ class _InitialSetting4State extends State<InitialSetting4> {
 
   @override
   Widget build(BuildContext context) {
-    var model = AppState.watch(context);
+    final store = useProvider(initialSettingStoreProvider);
+    final state = useProvider(initialSettingStoreProvider.state);
+    if (_notYetSetTime(state.entity)) {
+      store.modify(
+          (model) => model..copyWith(reminderHour: 22, reminderMinute: 0));
+    }
+    final settingStore = useProvider(settingStoreProvider);
     return Scaffold(
       backgroundColor: PilllColors.background,
       appBar: AppBar(
@@ -97,9 +92,9 @@ class _InitialSetting4State extends State<InitialSetting4> {
                     Text("通知時刻"),
                     GestureDetector(
                       onTap: () {
-                        _showDurationModalSheet(context);
+                        _showDurationModalSheet(context, state.entity, store);
                       },
-                      child: _time(context),
+                      child: _time(context, state.entity),
                     ),
                   ],
                 ),
@@ -112,19 +107,15 @@ class _InitialSetting4State extends State<InitialSetting4> {
                   PrimaryButton(
                     text: "設定",
                     onPressed: () {
-                      model.initialSetting.isOnReminder = true;
-                      model.initialSetting
-                          .register()
-                          .then((_) => Router.endInitialSetting(context));
+                      settingStore
+                          .register(state.entity..copyWith(isOnReminder: true));
                     },
                   ),
                   TertiaryButton(
                     text: "スキップ",
                     onPressed: () {
-                      model.initialSetting.isOnReminder = false;
-                      model.initialSetting
-                          .register()
-                          .then((_) => Router.endInitialSetting(context));
+                      settingStore.register(
+                          state.entity..copyWith(isOnReminder: false));
                     },
                   ),
                 ],
