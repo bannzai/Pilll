@@ -10,9 +10,11 @@ final pillSheetStoreProvider =
 class PillSheetStateStore extends StateNotifier<PillSheetState> {
   final Reader _read;
   PillSheetServiceInterface get _service => _read(pillSheetServiceProvider);
-  PillSheetStateStore(this._read) : super(PillSheetState()) => _reset();
+  PillSheetStateStore(this._read) : super(PillSheetState()) {
+    _reset();
+  }
 
-  _reset() {
+  void _reset() {
     Future(() async {
       state = PillSheetState(
           entity: await _read(fetchLastPillSheetProvider.future));
