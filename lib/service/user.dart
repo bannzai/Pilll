@@ -7,12 +7,13 @@ import 'package:firebase_auth/firebase_auth.dart' as auth;
 import 'package:riverpod/all.dart';
 
 abstract class UserServiceInterface {
-  Future<User> fetchOrCreateUser();
   Future<User> fetch();
   Future<User> subscribe();
 }
 
 final userServiceProvider = Provider((ref) => UserService(ref.read));
+final initialUserProvider =
+    FutureProvider((ref) => ref.watch(userServiceProvider)._prepare());
 
 class UserService extends UserServiceInterface {
   final Reader reader;
@@ -20,8 +21,7 @@ class UserService extends UserServiceInterface {
 
   DatabaseConnection get _database => reader(databaseProvider);
 
-  @override
-  Future<User> fetchOrCreateUser() {
+  Future<User> _prepare() {
     return fetch().catchError((error) {
       if (error is UserNotFound) {
         return _create().then((_) => fetch());
@@ -36,9 +36,7 @@ class UserService extends UserServiceInterface {
       if (!document.exists) {
         throw UserNotFound();
       }
-      var user = User.map(document.data());
-      AppState.shared.user = user;
-      return user;
+      return User.fromJson(document.data());
     });
   }
 
@@ -47,8 +45,7 @@ class UserService extends UserServiceInterface {
         .userReference()
         .snapshots(includeMetadataChanges: true)
         .listen((event) {
-      print('user: ${event.data()})');
-      return User.map(event.data());
+      return User.fromJson(event.data());
     }).asFuture();
   }
 

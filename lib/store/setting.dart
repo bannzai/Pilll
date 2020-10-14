@@ -1,4 +1,4 @@
-import 'package:Pilll/model/setting.dart';
+import 'package:Pilll/model/user.dart';
 import 'package:Pilll/service/setting.dart';
 import 'package:Pilll/state/setting.dart';
 import 'package:riverpod/riverpod.dart';
@@ -15,8 +15,7 @@ class SettingStateStore extends StateNotifier<SettingState> {
 
   void _reset() {
     Future(() async {
-      state =
-          SettingState(entity: await _read(fetchLastSettingProvider.future));
+      state = SettingState(entity: await _read(userSettingProvider.future));
     });
   }
 }
