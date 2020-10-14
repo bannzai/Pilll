@@ -1,3 +1,5 @@
+import 'package:Pilll/initial_setting/initial_setting.dart';
+import 'package:Pilll/model/initial_setting.dart';
 import 'package:Pilll/model/user.dart';
 import 'package:Pilll/service/setting.dart';
 import 'package:Pilll/state/setting.dart';
@@ -17,5 +19,11 @@ class SettingStateStore extends StateNotifier<SettingState> {
     Future(() async {
       state = SettingState(entity: await _read(userSettingProvider.future));
     });
+  }
+
+  void register(InitialSettingModel initialSetting) {
+    _service
+        .register(initialSetting)
+        .then((entity) => state..copyWith(entity: entity));
   }
 }

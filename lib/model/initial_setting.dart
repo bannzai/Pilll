@@ -55,7 +55,7 @@ class InitialSettingModel {
     return userRepository.fetchOrCreateUser().then((value) {
       var setting = this.buildSetting();
       return settingRepository
-          .save(setting)
+          .register(setting)
           .then((value) => null)
           .then((_) => SharedPreferences.getInstance())
           .then((storage) => storage.setString(
