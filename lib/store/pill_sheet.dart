@@ -9,16 +9,23 @@ final pillSheetStoreProvider =
 
 class PillSheetStateStore extends StateNotifier<PillSheetState> {
   final Reader _read;
-  PillSheetStateStore(this._read) : super(PillSheetState()) {
+  PillSheetServiceInterface get _service => _read(pillSheetServiceProvider);
+  PillSheetStateStore(this._read) : super(PillSheetState()) => _reset();
+
+  _reset() {
     Future(() async {
       state = PillSheetState(
           entity: await _read(fetchLastPillSheetProvider.future));
     });
   }
 
-  Future<void> register(PillSheetModel model) {
-    return _read(pillSheetServiceProvider)
+  void register(PillSheetModel model) {
+    _service
         .register(model)
         .then((entity) => state = state..copyWith(entity: entity));
+  }
+
+  void delete(String userID, PillSheetModel pillSheet) {
+    _service.delete(pillSheet).then((_) => _reset());
   }
 }

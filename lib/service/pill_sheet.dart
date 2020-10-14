@@ -12,7 +12,7 @@ import 'package:riverpod/all.dart';
 abstract class PillSheetServiceInterface {
   Future<PillSheetModel> fetchLast();
   Future<PillSheetModel> register(PillSheetModel model);
-  Future<void> delete(String userID, PillSheetModel pillSheet);
+  Future<void> delete(PillSheetModel pillSheet);
   Future<PillSheetModel> take(
       String userID, PillSheetModel pillSheet, DateTime takenDate);
   Future<void> modifyType(PillSheetModel pillSheet, PillSheetType type);
@@ -69,7 +69,7 @@ class PIllSheetService extends PillSheetServiceInterface {
     });
   }
 
-  Future<void> delete(String userID, PillSheetModel pillSheet) {
+  Future<void> delete(PillSheetModel pillSheet) {
     return _database.pillSheetReference(pillSheet.documentID).update({
       PillSheetFirestoreKey.deletedAt:
           TimestampConverter.dateTimeToTimestamp(DateTime.now())
