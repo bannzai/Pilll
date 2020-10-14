@@ -13,8 +13,7 @@ abstract class PillSheetServiceInterface {
   Future<PillSheetModel> fetchLast();
   Future<PillSheetModel> register(PillSheetModel model);
   Future<void> delete(PillSheetModel pillSheet);
-  Future<PillSheetModel> take(
-      String userID, PillSheetModel pillSheet, DateTime takenDate);
+  Future<PillSheetModel> take(PillSheetModel pillSheet, DateTime takenDate);
   Future<void> modifyType(PillSheetModel pillSheet, PillSheetType type);
   Future<void> modifyBeginingDate(
       PillSheetModel pillSheet, DateTime beginingDate);
@@ -70,18 +69,18 @@ class PIllSheetService extends PillSheetServiceInterface {
   }
 
   Future<void> delete(PillSheetModel pillSheet) {
+    if (pillSheet == null) throw PillSheetIsNotExists();
     return _database.pillSheetReference(pillSheet.documentID).update({
       PillSheetFirestoreKey.deletedAt:
           TimestampConverter.dateTimeToTimestamp(DateTime.now())
     });
   }
 
-  Future<PillSheetModel> take(
-      String userID, PillSheetModel pillSheet, DateTime takenDate) {
+  Future<PillSheetModel> take(PillSheetModel pillSheet, DateTime takenDate) {
     return _database
         .pillSheetReference(pillSheet.documentID)
         .update({PillSheetFirestoreKey.lastTakenDate: takenDate}).then(
-            (_) => pillSheet..lastTakenDate = takenDate);
+            (_) => pillSheet..copyWith(lastTakenDate: takenDate));
   }
 
   Future<void> modifyType(PillSheetModel pillSheet, PillSheetType type) {
@@ -108,6 +107,12 @@ class PIllSheetService extends PillSheetServiceInterface {
             TimestampConverter.dateTimeToTimestamp(beginingDate)
       },
     );
+  }
+}
+
+class PillSheetIsNotExists implements Exception {
+  toString() {
+    return "pill sheet is not exists";
   }
 }
 
