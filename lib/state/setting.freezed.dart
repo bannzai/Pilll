@@ -38,6 +38,8 @@ abstract class $SettingStateCopyWith<$Res> {
           SettingState value, $Res Function(SettingState) then) =
       _$SettingStateCopyWithImpl<$Res>;
   $Res call({Setting entity});
+
+  $SettingCopyWith<$Res> get entity;
 }
 
 /// @nodoc
@@ -56,6 +58,16 @@ class _$SettingStateCopyWithImpl<$Res> implements $SettingStateCopyWith<$Res> {
       entity: entity == freezed ? _value.entity : entity as Setting,
     ));
   }
+
+  @override
+  $SettingCopyWith<$Res> get entity {
+    if (_value.entity == null) {
+      return null;
+    }
+    return $SettingCopyWith<$Res>(_value.entity, (value) {
+      return _then(_value.copyWith(entity: value));
+    });
+  }
 }
 
 /// @nodoc
@@ -66,6 +78,9 @@ abstract class _$SettingStateCopyWith<$Res>
       __$SettingStateCopyWithImpl<$Res>;
   @override
   $Res call({Setting entity});
+
+  @override
+  $SettingCopyWith<$Res> get entity;
 }
 
 /// @nodoc
