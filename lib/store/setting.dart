@@ -1,4 +1,6 @@
 import 'package:Pilll/model/initial_setting.dart';
+import 'package:Pilll/model/pill_sheet_type.dart';
+import 'package:Pilll/model/setting.dart';
 import 'package:Pilll/model/user.dart';
 import 'package:Pilll/service/setting.dart';
 import 'package:Pilll/state/setting.dart';
@@ -24,5 +26,37 @@ class SettingStateStore extends StateNotifier<SettingState> {
     _service
         .register(initialSetting)
         .then((entity) => state..copyWith(entity: entity));
+  }
+
+  void modifyType(PillSheetType pillSheetType) {
+    _service
+        .update(
+            state.entity.copyWith(pillSheetTypeRawPath: pillSheetType.rawPath))
+        .then((entity) => state = state..copyWith(entity: entity));
+  }
+
+  void modifyReminderTime(ReminderTime reminderTime) {
+    _service
+        .update(state.entity.copyWith(reminderTime: reminderTime))
+        .then((entity) => state = state..copyWith(entity: entity));
+  }
+
+  void modifyIsOnReminder(bool isOnReminder) {
+    _service
+        .update(state.entity.copyWith(isOnReminder: isOnReminder))
+        .then((entity) => state = state..copyWith(entity: entity));
+  }
+
+  void modifyFromMenstruation(int fromMenstruation) {
+    _service
+        .update(state.entity.copyWith(fromMenstruation: fromMenstruation))
+        .then((entity) => state = state..copyWith(entity: entity));
+  }
+
+  void modifyDurationMenstruation(int durationMenstruation) {
+    _service
+        .update(
+            state.entity.copyWith(durationMenstruation: durationMenstruation))
+        .then((entity) => state = state..copyWith(entity: entity));
   }
 }
