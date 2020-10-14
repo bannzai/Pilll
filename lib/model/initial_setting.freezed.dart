@@ -14,14 +14,14 @@ class _$InitialSettingModelTearOff {
   const _$InitialSettingModelTearOff();
 
 // ignore: unused_element
-  _InitialSettingModel call(
-      {int fromMenstruation,
-      int durationMenstruation,
-      int reminderHour,
-      int reminderMinute,
+  _InitialSettingModel empty(
+      {int fromMenstruation = null,
+      int durationMenstruation = null,
+      int reminderHour = null,
+      int reminderMinute = null,
       bool isOnReminder = false,
-      int todayPillNumber,
-      PillSheetType pillSheetType}) {
+      int todayPillNumber = null,
+      PillSheetType pillSheetType = null}) {
     return _InitialSettingModel(
       fromMenstruation: fromMenstruation,
       durationMenstruation: durationMenstruation,
@@ -47,6 +47,40 @@ mixin _$InitialSettingModel {
   bool get isOnReminder;
   int get todayPillNumber;
   PillSheetType get pillSheetType;
+
+  @optionalTypeArgs
+  Result when<Result extends Object>({
+    @required
+        Result empty(
+            int fromMenstruation,
+            int durationMenstruation,
+            int reminderHour,
+            int reminderMinute,
+            bool isOnReminder,
+            int todayPillNumber,
+            PillSheetType pillSheetType),
+  });
+  @optionalTypeArgs
+  Result maybeWhen<Result extends Object>({
+    Result empty(
+        int fromMenstruation,
+        int durationMenstruation,
+        int reminderHour,
+        int reminderMinute,
+        bool isOnReminder,
+        int todayPillNumber,
+        PillSheetType pillSheetType),
+    @required Result orElse(),
+  });
+  @optionalTypeArgs
+  Result map<Result extends Object>({
+    @required Result empty(_InitialSettingModel value),
+  });
+  @optionalTypeArgs
+  Result maybeMap<Result extends Object>({
+    Result empty(_InitialSettingModel value),
+    @required Result orElse(),
+  });
 
   $InitialSettingModelCopyWith<InitialSettingModel> get copyWith;
 }
@@ -174,35 +208,47 @@ class __$InitialSettingModelCopyWithImpl<$Res>
 /// @nodoc
 class _$_InitialSettingModel extends _InitialSettingModel {
   _$_InitialSettingModel(
-      {this.fromMenstruation,
-      this.durationMenstruation,
-      this.reminderHour,
-      this.reminderMinute,
+      {this.fromMenstruation = null,
+      this.durationMenstruation = null,
+      this.reminderHour = null,
+      this.reminderMinute = null,
       this.isOnReminder = false,
-      this.todayPillNumber,
-      this.pillSheetType})
-      : assert(isOnReminder != null),
+      this.todayPillNumber = null,
+      this.pillSheetType = null})
+      : assert(fromMenstruation != null),
+        assert(durationMenstruation != null),
+        assert(reminderHour != null),
+        assert(reminderMinute != null),
+        assert(isOnReminder != null),
+        assert(todayPillNumber != null),
+        assert(pillSheetType != null),
         super._();
 
+  @JsonKey(defaultValue: null)
   @override
   final int fromMenstruation;
+  @JsonKey(defaultValue: null)
   @override
   final int durationMenstruation;
+  @JsonKey(defaultValue: null)
   @override
   final int reminderHour;
+  @JsonKey(defaultValue: null)
   @override
   final int reminderMinute;
   @JsonKey(defaultValue: false)
   @override
   final bool isOnReminder;
+  @JsonKey(defaultValue: null)
   @override
   final int todayPillNumber;
+  @JsonKey(defaultValue: null)
   @override
   final PillSheetType pillSheetType;
 
   @override
   String toString() {
-    return 'InitialSettingModel(fromMenstruation: $fromMenstruation, durationMenstruation: $durationMenstruation, reminderHour: $reminderHour, reminderMinute: $reminderMinute, isOnReminder: $isOnReminder, todayPillNumber: $todayPillNumber, pillSheetType: $pillSheetType)';
+    return 'InitialSettingModel.empty(fromMenstruation: $fromMenstruation, durationMenstruation: $durationMenstruation, reminderHour: $reminderHour, reminderMinute: $reminderMinute, isOnReminder: $isOnReminder, todayPillNumber: $todayPillNumber, pillSheetType: $pillSheetType)';
   }
 
   @override
@@ -247,6 +293,67 @@ class _$_InitialSettingModel extends _InitialSettingModel {
   _$InitialSettingModelCopyWith<_InitialSettingModel> get copyWith =>
       __$InitialSettingModelCopyWithImpl<_InitialSettingModel>(
           this, _$identity);
+
+  @override
+  @optionalTypeArgs
+  Result when<Result extends Object>({
+    @required
+        Result empty(
+            int fromMenstruation,
+            int durationMenstruation,
+            int reminderHour,
+            int reminderMinute,
+            bool isOnReminder,
+            int todayPillNumber,
+            PillSheetType pillSheetType),
+  }) {
+    assert(empty != null);
+    return empty(fromMenstruation, durationMenstruation, reminderHour,
+        reminderMinute, isOnReminder, todayPillNumber, pillSheetType);
+  }
+
+  @override
+  @optionalTypeArgs
+  Result maybeWhen<Result extends Object>({
+    Result empty(
+        int fromMenstruation,
+        int durationMenstruation,
+        int reminderHour,
+        int reminderMinute,
+        bool isOnReminder,
+        int todayPillNumber,
+        PillSheetType pillSheetType),
+    @required Result orElse(),
+  }) {
+    assert(orElse != null);
+    if (empty != null) {
+      return empty(fromMenstruation, durationMenstruation, reminderHour,
+          reminderMinute, isOnReminder, todayPillNumber, pillSheetType);
+    }
+    return orElse();
+  }
+
+  @override
+  @optionalTypeArgs
+  Result map<Result extends Object>({
+    @required Result empty(_InitialSettingModel value),
+  }) {
+    assert(empty != null);
+    return empty(this);
+  }
+
+  @override
+  @optionalTypeArgs
+  Result maybeMap<Result extends Object>({
+    Result empty(_InitialSettingModel value),
+    @required Result orElse(),
+  }) {
+    assert(orElse != null);
+    if (empty != null) {
+      return empty(this);
+    }
+    return orElse();
+  }
 }
 
 abstract class _InitialSettingModel extends InitialSettingModel {

@@ -1,4 +1,3 @@
-import 'package:Pilll/initial_setting/initial_setting.dart';
 import 'package:Pilll/model/initial_setting.dart';
 import 'package:Pilll/model/user.dart';
 import 'package:Pilll/service/setting.dart';

@@ -14,7 +14,8 @@ class _$InitialSettingStateTearOff {
   const _$InitialSettingStateTearOff();
 
 // ignore: unused_element
-  _InitialSettingState call({InitialSettingModel entity = null}) {
+  _InitialSettingState call(
+      {InitialSettingModel entity = const InitialSettingModel()}) {
     return _InitialSettingState(
       entity: entity,
     );
@@ -38,6 +39,8 @@ abstract class $InitialSettingStateCopyWith<$Res> {
           InitialSettingState value, $Res Function(InitialSettingState) then) =
       _$InitialSettingStateCopyWithImpl<$Res>;
   $Res call({InitialSettingModel entity});
+
+  $InitialSettingModelCopyWith<$Res> get entity;
 }
 
 /// @nodoc
@@ -57,6 +60,16 @@ class _$InitialSettingStateCopyWithImpl<$Res>
       entity: entity == freezed ? _value.entity : entity as InitialSettingModel,
     ));
   }
+
+  @override
+  $InitialSettingModelCopyWith<$Res> get entity {
+    if (_value.entity == null) {
+      return null;
+    }
+    return $InitialSettingModelCopyWith<$Res>(_value.entity, (value) {
+      return _then(_value.copyWith(entity: value));
+    });
+  }
 }
 
 /// @nodoc
@@ -67,6 +80,9 @@ abstract class _$InitialSettingStateCopyWith<$Res>
       __$InitialSettingStateCopyWithImpl<$Res>;
   @override
   $Res call({InitialSettingModel entity});
+
+  @override
+  $InitialSettingModelCopyWith<$Res> get entity;
 }
 
 /// @nodoc
@@ -92,11 +108,11 @@ class __$InitialSettingStateCopyWithImpl<$Res>
 
 /// @nodoc
 class _$_InitialSettingState extends _InitialSettingState {
-  _$_InitialSettingState({this.entity = null})
+  _$_InitialSettingState({this.entity = const InitialSettingModel()})
       : assert(entity != null),
         super._();
 
-  @JsonKey(defaultValue: null)
+  @JsonKey(defaultValue: const InitialSettingModel())
   @override
   final InitialSettingModel entity;
 
