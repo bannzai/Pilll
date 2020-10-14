@@ -11,10 +11,7 @@ abstract class PillSheetServiceInterface {
   Future<PillSheetModel> fetchLast();
   Future<PillSheetModel> register(PillSheetModel model);
   Future<void> delete(PillSheetModel pillSheet);
-  Future<PillSheetModel> take(PillSheetModel pillSheet, DateTime takenDate);
-  Future<void> modifyType(PillSheetModel pillSheet, PillSheetType type);
-  Future<PillSheetModel> modifyBeginingDate(
-      PillSheetModel pillSheet, DateTime beginingDate);
+  Future<PillSheetModel> update(PillSheetModel pillSheet);
 }
 
 final pillSheetServiceProvider = Provider((ref) => PIllSheetService(ref.read));
@@ -75,37 +72,10 @@ class PIllSheetService extends PillSheetServiceInterface {
         error: error, displayedMessage: "ピルシートの削除に失敗しました。再度お試しください"));
   }
 
-  Future<PillSheetModel> take(PillSheetModel pillSheet, DateTime takenDate) {
-    return _database
-        .pillSheetReference(pillSheet.documentID)
-        .update({PillSheetFirestoreKey.lastTakenDate: takenDate}).then(
-            (_) => pillSheet..copyWith(lastTakenDate: takenDate));
-  }
-
-  Future<void> modifyType(PillSheetModel pillSheet, PillSheetType type) {
-    var pillSheetRef = _database.pillSheetReference(pillSheet.documentID);
-    var userRef = _database.userReference();
-    var setting = AppState.shared.user.setting
-      ..pillSheetTypeRawPath = type.rawPath;
-    return _database.transaction((transaction) {
-      transaction.update(pillSheetRef, {
-        PillSheetFirestoreKey.typeInfo: type.typeInfo.toJson(),
-      });
-      transaction.update(userRef, {
-        UserFirestoreFieldKeys.settings: setting.toJson(),
-      });
-      return;
-    });
-  }
-
-  Future<PillSheetModel> modifyBeginingDate(
-      PillSheetModel pillSheet, DateTime beginingDate) {
-    return _database.pillSheetReference(pillSheet.documentID).update(
-      {
-        PillSheetFirestoreKey.beginingDate:
-            TimestampConverter.dateTimeToTimestamp(beginingDate)
-      },
-    ).then((_) => pillSheet..copyWith(beginingDate: beginingDate));
+  Future<PillSheetModel> update(PillSheetModel pillSheet) {
+    var json = pillSheet.toJson();
+    json.remove("id");
+    return _database.pillSheetReference(pillSheet.documentID).update(json);
   }
 }
 
