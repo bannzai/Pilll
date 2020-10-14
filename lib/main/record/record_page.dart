@@ -1,124 +1,90 @@
-import 'package:Pilll/main/components/indicator.dart';
 import 'package:Pilll/main/components/pill/pill_sheet.dart';
 import 'package:Pilll/main/record/record_taken_information.dart';
-import 'package:Pilll/model/app_state.dart';
 import 'package:Pilll/model/pill_mark_type.dart';
 import 'package:Pilll/model/pill_sheet.dart';
 import 'package:Pilll/model/pill_sheet_type.dart';
-import 'package:Pilll/service/pill_sheet.dart';
+import 'package:Pilll/store/pill_sheet.dart';
+import 'package:Pilll/store/setting.dart';
 import 'package:Pilll/style/button.dart';
 import 'package:Pilll/theme/color.dart';
 import 'package:Pilll/theme/font.dart';
 import 'package:Pilll/theme/text_color.dart';
 import 'package:Pilll/util/today.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:provider/provider.dart';
+import 'package:hooks_riverpod/all.dart';
 
-class RecordPage extends StatefulWidget {
-  @override
-  _RecordPageState createState() => _RecordPageState();
-}
-
-class _RecordPageState extends State<RecordPage> {
+class RecordPage extends HookWidget {
   @override
   Widget build(BuildContext context) {
+    final currentPillShettState = useProvider(pillSheetStoreProvider.state);
     return Scaffold(
       backgroundColor: PilllColors.background,
       appBar: null,
       extendBodyBehindAppBar: true,
-      body: Selector<AppState, PillSheetModel>(
-        selector: (context, state) => state.currentPillSheet,
-        shouldRebuild: (prev, next) =>
-            !identical(prev, next) ||
-            prev.sheetType.name != next.sheetType.name,
-        builder:
-            (BuildContext context, PillSheetModel pillSheet, Widget child) {
-          return FutureBuilder(
-            future: _fetchPillSheet(),
-            builder:
-                (BuildContext context, AsyncSnapshot<PillSheetModel> snapshot) {
-              if (snapshot.connectionState != ConnectionState.done)
-                return Indicator();
-              var pillSheet = snapshot.data;
-              return Center(
-                child: Selector<AppState, int>(
-                  selector: (context, state) =>
-                      state.currentPillSheet?.lastTakenPillNumber ?? 0,
-                  builder: (BuildContext context, int value, Widget child) {
-                    return Column(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: <Widget>[
-                        RecordTakenInformation(
-                          today: DateTime.now(),
-                          pillSheetModel: AppState.shared.currentPillSheet,
-                        ),
-                        if (pillSheet == null) _empty(),
-                        if (pillSheet != null) ...[
-                          _pillSheet(pillSheet),
-                          SizedBox(height: 24),
-                          pillSheet.allTaken
-                              ? _cancelTakeButton(pillSheet)
-                              : _takenButton(pillSheet),
-                        ],
-                        SizedBox(height: 8),
-                      ],
-                    );
-                  },
-                ),
-              );
-            },
-          );
-        },
+      body: _body(currentPillShettState.entity),
+    );
+  }
+
+  Widget _body(PillSheetModel currentPillSheet) {
+    final store = useProvider(pillSheetStoreProvider);
+    final settingState = useProvider(settingStoreProvider.state);
+    return Center(
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: <Widget>[
+          RecordTakenInformation(
+            today: DateTime.now(),
+            pillSheetModel: currentPillSheet,
+          ),
+          if (currentPillSheet == null)
+            _empty(store, settingState.entity.pillSheetType),
+          if (currentPillSheet != null) ...[
+            _pillSheet(currentPillSheet, store),
+            SizedBox(height: 24),
+            currentPillSheet.allTaken
+                ? _cancelTakeButton(currentPillSheet, store)
+                : _takenButton(currentPillSheet, store),
+          ],
+          SizedBox(height: 8),
+        ],
       ),
     );
   }
 
-  Future<PillSheetModel> _fetchPillSheet() {
-    return AppState.shared.currentPillSheet == null
-        ? pillSheetRepository.fetchLast(AppState.shared.user.documentID).then(
-            (model) => AppState.shared.updated(model,
-                (state, pillSheet) => state.currentPillSheet = pillSheet))
-        : Future.value(AppState.shared.currentPillSheet);
-  }
-
-  Widget _takenButton(PillSheetModel pillSheet) {
+  Widget _takenButton(PillSheetModel pillSheet, PillSheetStateStore store) {
     return PrimaryButton(
       text: "飲んだ",
-      onPressed: () => _take(pillSheet, today()),
+      onPressed: () => _take(pillSheet, today(), store),
     );
   }
 
-  Widget _cancelTakeButton(PillSheetModel pillSheet) {
+  Widget _cancelTakeButton(
+      PillSheetModel pillSheet, PillSheetStateStore store) {
     return TertiaryButton(
       text: "飲んでない",
-      onPressed: () => _cancelTake(pillSheet),
+      onPressed: () => _cancelTake(pillSheet, store),
     );
   }
 
-  void _take(PillSheetModel pillSheet, DateTime takenDate) {
+  void _take(
+      PillSheetModel pillSheet, DateTime takenDate, PillSheetStateStore store) {
     if (pillSheet.todayPillNumber == pillSheet.lastTakenPillNumber) {
       return;
     }
-    pillSheetRepository
-        .take(AppState.shared.user.documentID, pillSheet, takenDate)
-        .then((updatedPillSheet) => AppState.shared
-            .notifyWith((model) => model.currentPillSheet = updatedPillSheet));
+    store.take(takenDate);
   }
 
-  void _cancelTake(PillSheetModel pillSheet) {
+  void _cancelTake(PillSheetModel pillSheet, PillSheetStateStore store) {
     if (pillSheet.todayPillNumber != pillSheet.lastTakenPillNumber) {
       throw FormatException(
           "This statement should pillSheet.allTaken is true and build _cancelTakeButton. pillSheet.allTaken is ${pillSheet.allTaken} and lastTakenPillNumber ${pillSheet.lastTakenPillNumber}, todayPillNumber ${pillSheet.todayPillNumber}");
     }
-    pillSheetRepository
-        .take(AppState.shared.user.documentID, pillSheet,
-            pillSheet.lastTakenDate.subtract(Duration(days: 1)))
-        .then((updatedPillSheet) => AppState.shared
-            .notifyWith((model) => model.currentPillSheet = updatedPillSheet));
+    store.take(pillSheet.lastTakenDate.subtract(Duration(days: 1)));
   }
 
-  PillSheet _pillSheet(PillSheetModel pillSheet) {
+  PillSheet _pillSheet(PillSheetModel pillSheet, PillSheetStateStore store) {
     return PillSheet(
       isHideWeekdayLine: false,
       pillMarkTypeBuilder: (number) {
@@ -150,12 +116,12 @@ class _RecordPageState extends State<RecordPage> {
           return;
         }
         var takenDate = today().subtract(Duration(days: diff));
-        _take(pillSheet, takenDate);
+        _take(pillSheet, takenDate, store);
       },
     );
   }
 
-  Widget _empty() {
+  Widget _empty(PillSheetStateStore store, PillSheetType pillSheetType) {
     var progressing = false;
     return GestureDetector(
       child: SizedBox(
@@ -180,18 +146,8 @@ class _RecordPageState extends State<RecordPage> {
         if (progressing) return;
         progressing = true;
 
-        var pillSheet =
-            PillSheetModel.create(AppState.shared.user.setting.pillSheetType);
-        pillSheetRepository
-            .register(
-              AppState.shared.user.documentID,
-              pillSheet,
-            )
-            .then((_) =>
-                pillSheetRepository.fetchLast(AppState.shared.user.documentID))
-            .then((pillSheet) => AppState.shared.notifyWith(
-                (model) => AppState.shared.currentPillSheet = pillSheet))
-            .then((_) => progressing = false);
+        var pillSheet = PillSheetModel.create(pillSheetType);
+        store.register(pillSheet).whenComplete(() => progressing = false);
       },
     );
   }
