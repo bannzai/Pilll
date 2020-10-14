@@ -1,24 +1,25 @@
+import 'package:Pilll/model/initial_setting.dart';
 import 'package:Pilll/state/initial_setting.dart';
 import 'package:riverpod/all.dart';
 
 final initialSettingStoreProvider =
-    StateNotifierProvider((ref) => SettingStateStore(ref.read));
+    StateNotifierProvider((ref) => InitialSettingStateStore());
 
-class SettingStateStore extends StateNotifier<InitialSettingState> {
-  final Reader _read;
-  SettingStateStore(this._read) : super(InitialSettingState()) {
-    _reset();
-  }
+class InitialSettingStateStore extends StateNotifier<InitialSettingState> {
+  InitialSettingStateStore()
+      : super(InitialSettingState(
+          InitialSettingModel.empty(
+            fromMenstruation: null,
+            durationMenstruation: null,
+            reminderHour: null,
+            reminderMinute: null,
+            isOnReminder: false,
+            todayPillNumber: null,
+            pillSheetType: null,
+          ),
+        ));
 
-  void _reset() {
-    Future(() async {
-      state = SettingState(entity: await _read(userSettingProvider.future));
-    });
-  }
-
-  void register(InitialSettingModel initialSetting) {
-    _service
-        .register(initialSetting)
-        .then((entity) => state..copyWith(entity: entity));
+  void modify(InitialSettingModel Function(InitialSettingModel model) closure) {
+    state = state..copyWith(entity: closure(state.entity));
   }
 }

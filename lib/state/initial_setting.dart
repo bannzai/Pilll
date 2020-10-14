@@ -6,7 +6,6 @@ part 'initial_setting.freezed.dart';
 @freezed
 abstract class InitialSettingState implements _$InitialSettingState {
   InitialSettingState._();
-  factory InitialSettingState(
-          {@Default(InitialSettingModel.empty()) InitialSettingModel entity}) =
+  factory InitialSettingState(InitialSettingModel entity) =
       _InitialSettingState;
 }
