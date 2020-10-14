@@ -73,7 +73,8 @@ class PIllSheetService extends PillSheetServiceInterface {
     return _database.pillSheetReference(pillSheet.documentID).update({
       PillSheetFirestoreKey.deletedAt:
           TimestampConverter.dateTimeToTimestamp(DateTime.now())
-    });
+    }).catchError((error) => UserDisplayedError(
+        error: error, displayedMessage: "ピルシートの削除に失敗しました。再度お試しください"));
   }
 
   Future<PillSheetModel> take(PillSheetModel pillSheet, DateTime takenDate) {
