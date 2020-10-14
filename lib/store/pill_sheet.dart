@@ -15,4 +15,10 @@ class PillSheetStateStore extends StateNotifier<PillSheetState> {
           entity: await _read(fetchLastPillSheetProvider.future));
     });
   }
+
+  Future<void> register(PillSheetModel model) {
+    return _read(pillSheetServiceProvider)
+        .register(model)
+        .then((entity) => state = state..copyWith(entity: entity));
+  }
 }

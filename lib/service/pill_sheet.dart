@@ -4,13 +4,14 @@ import 'package:Pilll/model/firestore_timestamp_converter.dart';
 import 'package:Pilll/model/pill_sheet.dart';
 import 'package:Pilll/model/pill_sheet_type.dart';
 import 'package:Pilll/model/user.dart';
+import 'package:Pilll/model/user_error.dart';
 import 'package:Pilll/provider/auth.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:riverpod/all.dart';
 
 abstract class PillSheetServiceInterface {
   Future<PillSheetModel> fetchLast();
-  Future<void> register(String userID, PillSheetModel model);
+  Future<PillSheetModel> register(PillSheetModel model);
   Future<void> delete(String userID, PillSheetModel pillSheet);
   Future<PillSheetModel> take(
       String userID, PillSheetModel pillSheet, DateTime takenDate);
@@ -51,14 +52,21 @@ class PIllSheetService extends PillSheetServiceInterface {
   }
 
   @override
-  Future<void> register(String userID, PillSheetModel model) {
+  Future<PillSheetModel> register(PillSheetModel model) {
     if (model.createdAt != null) throw PillSheetAlreadyExists();
     if (model.deletedAt != null) throw PillSheetAlreadyDeleted();
-    model.createdAt = DateTime.now();
+    final copied = model.copyWith(createdAt: DateTime.now());
 
-    var json = model.toJson();
+    var json = copied.toJson();
     json.remove("id");
-    return _database.pillSheetsReference().add(json);
+    return _database
+        .pillSheetsReference()
+        .add(json)
+        .then((_) => model)
+        .catchError((error) {
+      throw UserDisplayedError(
+          error: error, displayedMessage: "ピルシートの登録に失敗しました。再度お試しください");
+    });
   }
 
   Future<void> delete(String userID, PillSheetModel pillSheet) {
