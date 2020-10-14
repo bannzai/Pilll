@@ -15,7 +15,7 @@ abstract class PillSheetServiceInterface {
   Future<void> delete(PillSheetModel pillSheet);
   Future<PillSheetModel> take(PillSheetModel pillSheet, DateTime takenDate);
   Future<void> modifyType(PillSheetModel pillSheet, PillSheetType type);
-  Future<void> modifyBeginingDate(
+  Future<PillSheetModel> modifyBeginingDate(
       PillSheetModel pillSheet, DateTime beginingDate);
 }
 
@@ -100,14 +100,14 @@ class PIllSheetService extends PillSheetServiceInterface {
     });
   }
 
-  Future<void> modifyBeginingDate(
+  Future<PillSheetModel> modifyBeginingDate(
       PillSheetModel pillSheet, DateTime beginingDate) {
     return _database.pillSheetReference(pillSheet.documentID).update(
       {
         PillSheetFirestoreKey.beginingDate:
             TimestampConverter.dateTimeToTimestamp(beginingDate)
       },
-    );
+    ).then((_) => pillSheet..copyWith(beginingDate: beginingDate));
   }
 }
 

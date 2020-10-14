@@ -1,4 +1,5 @@
 import 'package:Pilll/model/pill_sheet.dart';
+import 'package:Pilll/model/pill_sheet_type.dart';
 import 'package:Pilll/provider/service.dart';
 import 'package:Pilll/service/pill_sheet.dart';
 import 'package:Pilll/state/pill_sheet.dart';
@@ -34,6 +35,16 @@ class PillSheetStateStore extends StateNotifier<PillSheetState> {
   void take(DateTime takenDate) {
     _service
         .take(state.entity, takenDate)
+        .then((entity) => state = state..copyWith(entity: entity));
+  }
+
+  void modifyType(PillSheetType type) {
+    throw UnimplementedError("TODO: after defined setting store");
+  }
+
+  void modifyBeginingDate(DateTime beginingDate) {
+    _service
+        .modifyBeginingDate(state.entity, beginingDate)
         .then((entity) => state = state..copyWith(entity: entity));
   }
 }
