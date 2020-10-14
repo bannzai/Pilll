@@ -102,7 +102,7 @@ class _SettingsState extends State<Settings> {
                           .then((value) => setState(() => null));
                     else
                       settingRepository
-                          .save(AppState.shared.user.setting
+                          .register(AppState.shared.user.setting
                             ..pillSheetTypeRawPath = type.rawPath)
                           .then((setting) => AppState.shared.notifyWith(
                               (state) => state.user.setting
@@ -164,7 +164,7 @@ class _SettingsState extends State<Settings> {
               AppState.shared
                   .notifyWith((model) => model.user.setting.isOnReminder =
                       !user.setting.isOnReminder)
-                  .then((value) => settingRepository.save(value.user.setting))
+                  .then((value) => settingRepository.register(value.user.setting))
                   .then((value) => setState(() => null));
             },
           ),
@@ -188,7 +188,7 @@ class _SettingsState extends State<Settings> {
                                     minute: dateTime.minute),
                           )
                           .then((value) =>
-                              settingRepository.save(value.user.setting))
+                              settingRepository.register(value.user.setting))
                           .then((value) => setState(() => null));
                     },
                   );
@@ -219,7 +219,7 @@ class _SettingsState extends State<Settings> {
                             .notifyWith((model) => model.user.setting
                                 .fromMenstruation = selectedFromMenstruction)
                             .then((value) =>
-                                settingRepository.save(value.user.setting))
+                                settingRepository.register(value.user.setting))
                             .then((value) => setState(() => null));
                       },
                       durationMenstructionDidDecide:
@@ -229,7 +229,7 @@ class _SettingsState extends State<Settings> {
                                 model.user.setting.durationMenstruation =
                                     selectedDurationMenstruation)
                             .then((value) =>
-                                settingRepository.save(value.user.setting))
+                                settingRepository.register(value.user.setting))
                             .then((value) => setState(() => null));
                       },
                     );

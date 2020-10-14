@@ -187,7 +187,7 @@ class _$SettingTearOff {
       {@required String pillSheetTypeRawPath,
       @required int fromMenstruation,
       @required int durationMenstruation,
-      @required DateTime reminderTime,
+      @required ReminderTime reminderTime,
       @required @JsonSerializable(explicitToJson: true) bool isOnReminder}) {
     return _Setting(
       pillSheetTypeRawPath: pillSheetTypeRawPath,
@@ -213,7 +213,7 @@ mixin _$Setting {
   String get pillSheetTypeRawPath;
   int get fromMenstruation;
   int get durationMenstruation;
-  DateTime get reminderTime;
+  ReminderTime get reminderTime;
   @JsonSerializable(explicitToJson: true)
   bool get isOnReminder;
 
@@ -229,8 +229,10 @@ abstract class $SettingCopyWith<$Res> {
       {String pillSheetTypeRawPath,
       int fromMenstruation,
       int durationMenstruation,
-      DateTime reminderTime,
+      ReminderTime reminderTime,
       @JsonSerializable(explicitToJson: true) bool isOnReminder});
+
+  $ReminderTimeCopyWith<$Res> get reminderTime;
 }
 
 /// @nodoc
@@ -261,10 +263,20 @@ class _$SettingCopyWithImpl<$Res> implements $SettingCopyWith<$Res> {
           : durationMenstruation as int,
       reminderTime: reminderTime == freezed
           ? _value.reminderTime
-          : reminderTime as DateTime,
+          : reminderTime as ReminderTime,
       isOnReminder:
           isOnReminder == freezed ? _value.isOnReminder : isOnReminder as bool,
     ));
+  }
+
+  @override
+  $ReminderTimeCopyWith<$Res> get reminderTime {
+    if (_value.reminderTime == null) {
+      return null;
+    }
+    return $ReminderTimeCopyWith<$Res>(_value.reminderTime, (value) {
+      return _then(_value.copyWith(reminderTime: value));
+    });
   }
 }
 
@@ -277,8 +289,11 @@ abstract class _$SettingCopyWith<$Res> implements $SettingCopyWith<$Res> {
       {String pillSheetTypeRawPath,
       int fromMenstruation,
       int durationMenstruation,
-      DateTime reminderTime,
+      ReminderTime reminderTime,
       @JsonSerializable(explicitToJson: true) bool isOnReminder});
+
+  @override
+  $ReminderTimeCopyWith<$Res> get reminderTime;
 }
 
 /// @nodoc
@@ -310,7 +325,7 @@ class __$SettingCopyWithImpl<$Res> extends _$SettingCopyWithImpl<$Res>
           : durationMenstruation as int,
       reminderTime: reminderTime == freezed
           ? _value.reminderTime
-          : reminderTime as DateTime,
+          : reminderTime as ReminderTime,
       isOnReminder:
           isOnReminder == freezed ? _value.isOnReminder : isOnReminder as bool,
     ));
@@ -344,7 +359,7 @@ class _$_Setting extends _Setting with DiagnosticableTreeMixin {
   @override
   final int durationMenstruation;
   @override
-  final DateTime reminderTime;
+  final ReminderTime reminderTime;
   @override
   @JsonSerializable(explicitToJson: true)
   final bool isOnReminder;
@@ -416,7 +431,7 @@ abstract class _Setting extends Setting {
       @required
           int durationMenstruation,
       @required
-          DateTime reminderTime,
+          ReminderTime reminderTime,
       @required
       @JsonSerializable(explicitToJson: true)
           bool isOnReminder}) = _$_Setting;
@@ -430,7 +445,7 @@ abstract class _Setting extends Setting {
   @override
   int get durationMenstruation;
   @override
-  DateTime get reminderTime;
+  ReminderTime get reminderTime;
   @override
   @JsonSerializable(explicitToJson: true)
   bool get isOnReminder;
