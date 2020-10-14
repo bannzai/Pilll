@@ -14,10 +14,9 @@ class _$InitialSettingStateTearOff {
   const _$InitialSettingStateTearOff();
 
 // ignore: unused_element
-  _InitialSettingState call(
-      {InitialSettingModel entity = const InitialSettingModel()}) {
+  _InitialSettingState call(InitialSettingModel entity) {
     return _InitialSettingState(
-      entity: entity,
+      entity,
     );
   }
 }
@@ -101,18 +100,17 @@ class __$InitialSettingStateCopyWithImpl<$Res>
     Object entity = freezed,
   }) {
     return _then(_InitialSettingState(
-      entity: entity == freezed ? _value.entity : entity as InitialSettingModel,
+      entity == freezed ? _value.entity : entity as InitialSettingModel,
     ));
   }
 }
 
 /// @nodoc
 class _$_InitialSettingState extends _InitialSettingState {
-  _$_InitialSettingState({this.entity = const InitialSettingModel()})
+  _$_InitialSettingState(this.entity)
       : assert(entity != null),
         super._();
 
-  @JsonKey(defaultValue: const InitialSettingModel())
   @override
   final InitialSettingModel entity;
 
@@ -141,7 +139,7 @@ class _$_InitialSettingState extends _InitialSettingState {
 
 abstract class _InitialSettingState extends InitialSettingState {
   _InitialSettingState._() : super._();
-  factory _InitialSettingState({InitialSettingModel entity}) =
+  factory _InitialSettingState(InitialSettingModel entity) =
       _$_InitialSettingState;
 
   @override
