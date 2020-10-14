@@ -1,7 +1,12 @@
+import 'package:Pilll/database/database.dart';
 import 'package:Pilll/main/components/pill_sheet_type_select_page.dart';
 import 'package:Pilll/main/components/setting_menstruation_page.dart';
 import 'package:Pilll/model/pill_mark_type.dart';
+import 'package:Pilll/model/pill_sheet.dart';
+import 'package:Pilll/model/pill_sheet_type.dart';
 import 'package:Pilll/model/setting.dart';
+import 'package:Pilll/model/user.dart';
+import 'package:Pilll/provider/auth.dart';
 import 'package:Pilll/settings/list/model.dart';
 import 'package:Pilll/settings/list/modifing_pill_number.dart';
 import 'package:Pilll/store/pill_sheet.dart';
@@ -19,6 +24,39 @@ import 'package:flutter_svg/svg.dart';
 import 'package:hooks_riverpod/all.dart';
 import 'package:package_info/package_info.dart';
 import 'package:url_launcher/url_launcher.dart';
+
+class _TransactionModifier {
+  final Reader reader;
+
+  _TransactionModifier(this.reader);
+  DatabaseConnection get _database => reader(databaseProvider);
+
+  Future<void> modifyPillSheetType(PillSheetType type) {
+    final pillSheetStore = reader(pillSheetStoreProvider);
+    final settingStore = reader(settingStoreProvider);
+    final pillSheetState = reader(pillSheetStoreProvider.state);
+    final settingState = reader(settingStoreProvider.state);
+    return _database.transaction((transaction) {
+      transaction.update(
+          _database.pillSheetReference(pillSheetState.entity.documentID), {
+        PillSheetFirestoreKey.typeInfo: type.typeInfo.toJson(),
+      });
+      transaction.update(_database.userReference(), {
+        UserFirestoreFieldKeys.settings: settingState.entity
+          ..copyWith(pillSheetTypeRawPath: type.rawPath).toJson(),
+      });
+      return;
+    }).then((_) {
+      pillSheetStore
+          .update(pillSheetState.entity..copyWith(typeInfo: type.typeInfo));
+      settingStore.update(
+          settingState.entity..copyWith(pillSheetTypeRawPath: type.rawPath));
+    });
+  }
+}
+
+final transactionModifierProvider =
+    Provider((ref) => _TransactionModifier(ref.read));
 
 class Settings extends HookWidget {
   @override
@@ -73,12 +111,13 @@ class Settings extends HookWidget {
     final pillSheetState = useProvider(pillSheetStoreProvider.state);
     final settingStore = useProvider(settingStoreProvider);
     final settingState = useProvider(settingStoreProvider.state);
+    final transactionModifier = useProvider(transactionModifierProvider);
     switch (section) {
       case SettingSection.pill:
         return [
           SettingListTitleAndContentRowModel(
             title: "種類",
-            content: user.setting.pillSheetType.name,
+            content: settingState.entity.pillSheetType.name,
             onTap: () {
               Navigator.of(context)
                   .push(MaterialPageRoute(builder: (BuildContext context) {
@@ -87,7 +126,7 @@ class Settings extends HookWidget {
                   callback: (type) {
                     Navigator.pop(context);
                     if (pillSheetState.entity != null)
-                      pillSheetStore.modifyType(type);
+                      transactionModifier.modifyPillSheetType(type);
                     else
                       settingStore.modifyType(type);
                   },

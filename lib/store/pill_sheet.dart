@@ -37,13 +37,13 @@ class PillSheetStateStore extends StateNotifier<PillSheetState> {
         .then((entity) => state = state..copyWith(entity: entity));
   }
 
-  void modifyType(PillSheetType type) {
-    throw UnimplementedError("TODO: after defined setting store");
-  }
-
   void modifyBeginingDate(DateTime beginingDate) {
     _service
         .update(state.entity..copyWith(beginingDate: beginingDate))
         .then((entity) => state = state..copyWith(entity: entity));
+  }
+
+  void update(PillSheetModel entity) {
+    state = state..copyWith(entity: entity);
   }
 }

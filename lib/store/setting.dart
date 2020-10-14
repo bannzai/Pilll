@@ -59,4 +59,8 @@ class SettingStateStore extends StateNotifier<SettingState> {
             state.entity.copyWith(durationMenstruation: durationMenstruation))
         .then((entity) => state = state..copyWith(entity: entity));
   }
+
+  void update(Setting entity) {
+    state = state..copyWith(entity: entity);
+  }
 }
