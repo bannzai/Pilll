@@ -1,12 +1,11 @@
 import 'package:Pilll/main/components/pill_sheet_type_select_page.dart';
 import 'package:Pilll/main/components/setting_menstruation_page.dart';
-import 'package:Pilll/model/app_state.dart';
 import 'package:Pilll/model/pill_mark_type.dart';
 import 'package:Pilll/model/setting.dart';
-import 'package:Pilll/service/pill_sheet.dart';
-import 'package:Pilll/service/setting.dart';
 import 'package:Pilll/settings/list/model.dart';
 import 'package:Pilll/settings/list/modifing_pill_number.dart';
+import 'package:Pilll/store/pill_sheet.dart';
+import 'package:Pilll/store/setting.dart';
 import 'package:Pilll/style/button.dart';
 import 'package:Pilll/theme/color.dart';
 import 'package:Pilll/theme/font.dart';
@@ -15,17 +14,13 @@ import 'package:Pilll/util/formatter/date_time_formatter.dart';
 import 'package:Pilll/util/shared_preference/toolbar/date_time_picker.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:hooks_riverpod/all.dart';
 import 'package:package_info/package_info.dart';
-import 'package:Pilll/model/pill_sheet_type.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-class Settings extends StatefulWidget {
-  @override
-  _SettingsState createState() => _SettingsState();
-}
-
-class _SettingsState extends State<Settings> {
+class Settings extends HookWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -72,8 +67,12 @@ class _SettingsState extends State<Settings> {
             style: FontType.assisting.merge(TextColorStyle.primary)));
   }
 
-  List<SettingListRowModel> _rowModels(SettingSection section) {
-    var user = AppState.shared.user;
+  List<SettingListRowModel> _rowModels(
+      BuildContext context, SettingSection section) {
+    final pillSheetStore = useProvider(pillSheetStoreProvider);
+    final pillSheetState = useProvider(pillSheetStoreProvider.state);
+    final settingStore = useProvider(settingStoreProvider);
+    final settingState = useProvider(settingStoreProvider.state);
     switch (section) {
       case SettingSection.pill:
         return [
@@ -87,34 +86,17 @@ class _SettingsState extends State<Settings> {
                   title: "種類",
                   callback: (type) {
                     Navigator.pop(context);
-                    if (AppState.shared.currentPillSheet != null)
-                      pillSheetRepository
-                          .modifyType(AppState.shared.currentPillSheet, type)
-                          .then(
-                            (setting) => AppState.shared.notifyWith(
-                              (state) {
-                                state.user.setting.pillSheetTypeRawPath =
-                                    type.rawPath;
-                                state.currentPillSheet.typeInfo = type.typeInfo;
-                              },
-                            ),
-                          )
-                          .then((value) => setState(() => null));
+                    if (pillSheetState.entity != null)
+                      pillSheetStore.modifyType(type);
                     else
-                      settingRepository
-                          .register(AppState.shared.user.setting
-                            ..pillSheetTypeRawPath = type.rawPath)
-                          .then((setting) => AppState.shared.notifyWith(
-                              (state) => state.user.setting
-                                ..pillSheetTypeRawPath = type.rawPath))
-                          .then((value) => setState(() => null));
+                      settingStore.modifyType(type);
                   },
-                  selectedPillSheetType: user.setting.pillSheetType,
+                  selectedPillSheetType: settingState.entity.pillSheetType,
                 );
               }));
             },
           ),
-          if (AppState.shared.currentPillSheet != null) ...[
+          if (pillSheetState.entity != null) ...[
             SettingListTitleRowModel(
                 title: "今日飲むピル番号の変更",
                 onTap: () {
@@ -123,17 +105,9 @@ class _SettingsState extends State<Settings> {
                     return ModifingPillNumberPage(
                       markSelected: (number) {
                         Navigator.pop(context);
-                        var currentPillSheet = AppState.shared.currentPillSheet;
-                        pillSheetRepository
-                            .modifyBeginingDate(
-                                currentPillSheet,
-                                currentPillSheet
-                                    .calcBeginingDateFromNextTodayPillNumber(
-                                        number))
-                            .then((value) => AppState.shared.notifyWith(
-                                (state) => state.currentPillSheet
-                                    .resetTodayTakenPillNumber(number)))
-                            .then((_) => setState(() => null));
+                        var currentPillSheet = pillSheetState.entity;
+                        pillSheetStore.modifyBeginingDate(currentPillSheet
+                            .calcBeginingDateFromNextTodayPillNumber(number));
                       },
                       pillMarkTypeBuilder: (number) {
                         return PillMarkType.normal;
@@ -148,7 +122,7 @@ class _SettingsState extends State<Settings> {
                     context: context,
                     builder: (_) {
                       return ConfirmDeletePillSheet(onDelete: () {
-                        _deleteCurrentPillSheet();
+                        pillSheetStore.delete();
                       });
                     },
                   );
@@ -159,37 +133,28 @@ class _SettingsState extends State<Settings> {
         return [
           SettingsListSwitchRowModel(
             title: "ピルの服用通知",
-            value: user.setting.isOnReminder,
+            value: settingState.entity.isOnReminder,
             onTap: () {
-              AppState.shared
-                  .notifyWith((model) => model.user.setting.isOnReminder =
-                      !user.setting.isOnReminder)
-                  .then((value) => settingRepository.register(value.user.setting))
-                  .then((value) => setState(() => null));
+              settingStore
+                  .modifyIsOnReminder(!settingState.entity.isOnReminder);
             },
           ),
           SettingsListDatePickerRowModel(
             title: "通知時刻",
-            content:
-                DateTimeFormatter.militaryTime(user.setting.reminderDateTime()),
+            content: DateTimeFormatter.militaryTime(
+                settingState.entity.reminderDateTime()),
             onTap: () {
               showModalBottomSheet(
                 context: context,
                 builder: (BuildContext context) {
                   return DateTimePicker(
-                    initialDateTime: user.setting.reminderDateTime(),
+                    initialDateTime: settingState.entity.reminderDateTime(),
                     done: (dateTime) {
                       Navigator.pop(context);
-                      AppState.shared
-                          .notifyWith(
-                            (model) => model.user.setting.reminderTime =
-                                ReminderTime(
-                                    hour: dateTime.hour,
-                                    minute: dateTime.minute),
-                          )
-                          .then((value) =>
-                              settingRepository.register(value.user.setting))
-                          .then((value) => setState(() => null));
+                      settingStore.modifyReminderTime(
+                        ReminderTime(
+                            hour: dateTime.hour, minute: dateTime.minute),
+                      );
                     },
                   );
                 },
@@ -210,28 +175,18 @@ class _SettingsState extends State<Settings> {
                       skip: null,
                       title: "生理について",
                       model: SettingMenstruationPageModel(
-                        selectedFromMenstruation: user.setting.fromMenstruation,
+                        selectedFromMenstruation:
+                            settingState.entity.fromMenstruation,
                         selectedDurationMenstruation:
-                            user.setting.durationMenstruation,
+                            settingState.entity.durationMenstruation,
                       ),
-                      fromMenstructionDidDecide: (selectedFromMenstruction) {
-                        AppState.shared
-                            .notifyWith((model) => model.user.setting
-                                .fromMenstruation = selectedFromMenstruction)
-                            .then((value) =>
-                                settingRepository.register(value.user.setting))
-                            .then((value) => setState(() => null));
-                      },
+                      fromMenstructionDidDecide: (selectedFromMenstruction) =>
+                          settingStore
+                              .modifyFromMenstruation(selectedFromMenstruction),
                       durationMenstructionDidDecide:
-                          (selectedDurationMenstruation) {
-                        AppState.shared
-                            .notifyWith((model) =>
-                                model.user.setting.durationMenstruation =
-                                    selectedDurationMenstruation)
-                            .then((value) =>
-                                settingRepository.register(value.user.setting))
-                            .then((value) => setState(() => null));
-                      },
+                          (selectedDurationMenstruation) =>
+                              settingStore.modifyDurationMenstruation(
+                                  selectedDurationMenstruation),
                     );
                   },
                 ));
@@ -266,17 +221,6 @@ class _SettingsState extends State<Settings> {
         assert(false);
         return null;
     }
-  }
-
-  void _deleteCurrentPillSheet() {
-    pillSheetRepository
-        .delete(
-          AppState.shared.user.documentID,
-          AppState.shared.currentPillSheet,
-        )
-        .then((value) => AppState.shared
-            .notifyWith((state) => state.currentPillSheet = null))
-        .then((value) => setState(() => null));
   }
 
   Widget _section(SettingSection section) {
