@@ -1,12 +1,9 @@
-import 'package:Pilll/initial_setting/initial_setting.dart';
 import 'package:Pilll/model/pill_mark_type.dart';
 import 'package:Pilll/model/pill_sheet.dart';
 import 'package:Pilll/model/pill_sheet_type.dart';
 import 'package:Pilll/model/setting.dart';
-import 'package:Pilll/util/shared_preference/keys.dart';
 import 'package:Pilll/util/today.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:shared_preferences/shared_preferences.dart';
 
 part 'initial_setting.freezed.dart';
 
