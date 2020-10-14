@@ -16,12 +16,10 @@ class Router {
   }
 
   static void endInitialSetting(BuildContext context) {
-    userRepository.fetch().then((_) {
-      return SharedPreferences.getInstance().then((storage) {
-        storage.setBool(BoolKey.didEndInitialSetting, true);
-        Navigator.popUntil(context, (router) => router.isFirst);
-        Navigator.pushReplacementNamed(context, Routes.main);
-      });
+    SharedPreferences.getInstance().then((storage) {
+      storage.setBool(BoolKey.didEndInitialSetting, true);
+      Navigator.popUntil(context, (router) => router.isFirst);
+      Navigator.pushReplacementNamed(context, Routes.main);
     });
   }
 }
