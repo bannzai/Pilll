@@ -52,18 +52,6 @@ abstract class InitialSettingModel implements _$InitialSettingModel {
     );
   }
 
-  Future<void> register() {
-    return userRepository.fetchOrCreateUser().then((value) {
-      var setting = this.buildSetting();
-      return settingRepository
-          .register(setting)
-          .then((value) => null)
-          .then((_) => SharedPreferences.getInstance())
-          .then((storage) => storage.setString(
-              StringKey.firebaseAnonymousUserID, value.anonymousUserID));
-    });
-  }
-
   PillMarkType pillMarkTypeFor(int number) {
     assert(pillSheetType != null);
     if (todayPillNumber == number) {

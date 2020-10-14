@@ -7,17 +7,19 @@ final initialSettingStoreProvider =
 
 class InitialSettingStateStore extends StateNotifier<InitialSettingState> {
   InitialSettingStateStore()
-      : super(InitialSettingState(
-          InitialSettingModel.empty(
-            fromMenstruation: null,
-            durationMenstruation: null,
-            reminderHour: null,
-            reminderMinute: null,
-            isOnReminder: false,
-            todayPillNumber: null,
-            pillSheetType: null,
+      : super(
+          InitialSettingState(
+            InitialSettingModel.empty(
+              fromMenstruation: null,
+              durationMenstruation: null,
+              reminderHour: null,
+              reminderMinute: null,
+              isOnReminder: false,
+              todayPillNumber: null,
+              pillSheetType: null,
+            ),
           ),
-        ));
+        );
 
   void modify(InitialSettingModel Function(InitialSettingModel model) closure) {
     state = state..copyWith(entity: closure(state.entity));
