@@ -21,8 +21,8 @@ class PillSheetStateStore extends StateNotifier<PillSheetState> {
     });
   }
 
-  void register(PillSheetModel model) {
-    _service
+  Future<void> register(PillSheetModel model) {
+    return _service
         .register(model)
         .then((entity) => state = state..copyWith(entity: entity));
   }
