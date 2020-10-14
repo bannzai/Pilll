@@ -1,26 +1,27 @@
+import 'package:Pilll/initial_setting/initial_setting.dart';
 import 'package:Pilll/model/pill_mark_type.dart';
 import 'package:Pilll/model/pill_sheet.dart';
 import 'package:Pilll/model/pill_sheet_type.dart';
 import 'package:Pilll/model/setting.dart';
-import 'package:Pilll/service/setting.dart';
-import 'package:Pilll/service/user.dart';
 import 'package:Pilll/util/shared_preference/keys.dart';
 import 'package:Pilll/util/today.dart';
+import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-class InitialSettingModel {
-  // User.Settings
-  int fromMenstruation;
-  int durationMenstruation;
-  int reminderHour;
-  int reminderMinute;
-  bool isOnReminder = false;
+part 'initial_setting.freezed.dart';
 
-  // User/{id}/PillSheet
-  int todayPillNumber;
-
-  // User.Settings & User/{id}/PillSheet
-  PillSheetType pillSheetType;
+@freezed
+abstract class InitialSettingModel implements _$InitialSettingModel {
+  InitialSettingModel._();
+  factory InitialSettingModel({
+    int fromMenstruation,
+    int durationMenstruation,
+    int reminderHour,
+    int reminderMinute,
+    @Default(false) bool isOnReminder,
+    int todayPillNumber,
+    PillSheetType pillSheetType,
+  }) = _InitialSettingModel;
 
   Setting buildSetting() => Setting(
         fromMenstruation: fromMenstruation,
