@@ -33,7 +33,7 @@ class PillSheetStateStore extends StateNotifier<PillSheetState> {
 
   void take(DateTime takenDate) {
     _service
-        .take(state.entity, takenDate)
+        .update(state.entity..copyWith(lastTakenDate: takenDate))
         .then((entity) => state = state..copyWith(entity: entity));
   }
 
@@ -43,7 +43,7 @@ class PillSheetStateStore extends StateNotifier<PillSheetState> {
 
   void modifyBeginingDate(DateTime beginingDate) {
     _service
-        .modifyBeginingDate(state.entity, beginingDate)
+        .update(state.entity..copyWith(beginingDate: beginingDate))
         .then((entity) => state = state..copyWith(entity: entity));
   }
 }
