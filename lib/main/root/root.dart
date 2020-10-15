@@ -1,29 +1,17 @@
 import 'package:Pilll/main/application/router.dart';
 import 'package:Pilll/main/components/indicator.dart';
+import 'package:Pilll/service/user.dart';
 import 'package:Pilll/theme/color.dart';
 import 'package:Pilll/util/shared_preference/keys.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_hooks/flutter_hooks.dart';
+import 'package:hooks_riverpod/all.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:firebase_core/firebase_core.dart';
-import 'package:firebase_auth/firebase_auth.dart';
 
-class Root extends StatefulWidget {
-  Root({Key key}) : super(key: key);
-
+class Root extends HookWidget {
   @override
-  RootState createState() => RootState();
-}
-
-class RootState extends State<Root> {
-  @override
-  void initState() {
-    super.initState();
-    Firebase.initializeApp().then((app) {
-      print("app name is $app.name");
-      return FirebaseAuth.instance.signInAnonymously();
-    }).then((userCredential) {
-      return userRepository.fetchOrCreateUser();
-    }).then((user) {
+  Widget build(BuildContext context) {
+    useProvider(initialUserProvider.future).then((user) {
       if (user.setting == null) {
         Navigator.popAndPushNamed(context, Routes.initialSetting);
         return null;
@@ -50,11 +38,8 @@ class RootState extends State<Root> {
       }
       Navigator.popAndPushNamed(context, Routes.main);
       // Navigator.popAndPushNamed(context, Routes.initialSetting);
-    }).then((value) => AppState.shared.subscribe());
-  }
+    });
 
-  @override
-  Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: PilllColors.background,
       body: Indicator(),
