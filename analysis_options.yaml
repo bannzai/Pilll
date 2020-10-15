@@ -6,8 +6,8 @@ analyzer:
     missing_required_param: error
     missing_return: error
   exclude:
-    - "**/*.g.dart"
-    - "**/*.freezed.dart"
+    - "lib/**/*.g.dart"
+    - "lib/**/*.freezed.dart"
 
 linter:
   rules:
