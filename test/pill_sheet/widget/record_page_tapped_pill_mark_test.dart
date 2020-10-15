@@ -12,12 +12,8 @@ import 'package:intl/date_symbol_data_local.dart';
 import 'package:mockito/mockito.dart';
 import 'package:provider/provider.dart';
 
+import '../../helper/mock.dart';
 import '../../helper/supported_device.dart';
-
-class _MockPillSheetRepository extends Mock
-    implements PillSheetServiceInterface {}
-
-class _MockTodayRepository extends Mock implements TodayServiceInterface {}
 
 class _FakeUser extends Fake implements User {
   @override
@@ -45,7 +41,7 @@ void main() {
       (WidgetTester tester) async {
     SupportedDeviceType.iPhone5SE2nd.binding(tester.binding.window);
 
-    var mockPillSheetRepository = _MockPillSheetRepository();
+    var mockPillSheetRepository = MockPillSheetRepository();
     var originalPillSheetRepository = pillSheetRepository;
     pillSheetRepository = mockPillSheetRepository;
 
@@ -53,7 +49,7 @@ void main() {
     AppState.shared.user = fakeUser;
 
     var originalTodayRepository = todayRepository;
-    var mockTodayRepository = _MockTodayRepository();
+    var mockTodayRepository = MockTodayRepository();
     todayRepository = mockTodayRepository;
 
     var today = DateTime(2020, 09, 01);
@@ -138,7 +134,7 @@ void main() {
       (WidgetTester tester) async {
     SupportedDeviceType.iPhone5SE2nd.binding(tester.binding.window);
 
-    var mockPillSheetRepository = _MockPillSheetRepository();
+    var mockPillSheetRepository = MockPillSheetRepository();
     var originalPillSheetRepository = pillSheetRepository;
     pillSheetRepository = mockPillSheetRepository;
 
@@ -146,7 +142,7 @@ void main() {
     AppState.shared.user = fakeUser;
 
     var originalTodayRepository = todayRepository;
-    var mockTodayRepository = _MockTodayRepository();
+    var mockTodayRepository = MockTodayRepository();
     todayRepository = mockTodayRepository;
 
     var today = DateTime(2020, 09, 01);
@@ -190,7 +186,7 @@ void main() {
     verify(mockPillSheetRepository.fetchLast("1"));
 
     // For verifyZeroInteractions
-    mockPillSheetRepository = _MockPillSheetRepository();
+    mockPillSheetRepository = MockPillSheetRepository();
     await tester
         .tap(pillMarkFinder((widget) => widget.key == Key("PillMarkWidget_4")));
 
@@ -226,7 +222,7 @@ void main() {
       (WidgetTester tester) async {
     SupportedDeviceType.iPhone5SE2nd.binding(tester.binding.window);
 
-    var mockPillSheetRepository = _MockPillSheetRepository();
+    var mockPillSheetRepository = MockPillSheetRepository();
     var originalPillSheetRepository = pillSheetRepository;
     pillSheetRepository = mockPillSheetRepository;
 
@@ -234,7 +230,7 @@ void main() {
     AppState.shared.user = fakeUser;
 
     var originalTodayRepository = todayRepository;
-    var mockTodayRepository = _MockTodayRepository();
+    var mockTodayRepository = MockTodayRepository();
     todayRepository = mockTodayRepository;
 
     var today = DateTime(2020, 09, 01);
@@ -278,7 +274,7 @@ void main() {
     verify(mockPillSheetRepository.fetchLast("1"));
 
     // For verifyZeroInteractions
-    mockPillSheetRepository = _MockPillSheetRepository();
+    mockPillSheetRepository = MockPillSheetRepository();
     await tester
         .tap(pillMarkFinder((widget) => widget.key == Key("PillMarkWidget_1")));
 
