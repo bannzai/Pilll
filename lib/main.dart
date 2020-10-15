@@ -2,6 +2,7 @@ import 'package:Pilll/theme/color.dart';
 import 'package:firebase_analytics/firebase_analytics.dart';
 import 'package:firebase_analytics/observer.dart';
 import 'package:flutter/material.dart';
+import 'package:hooks_riverpod/all.dart';
 import 'package:intl/date_symbol_data_local.dart';
 
 import 'main/application/router.dart';
@@ -9,7 +10,7 @@ import 'main/application/router.dart';
 void main() {
   initializeDateFormatting('ja_JP');
   // debugPaintSizeEnabled = true;
-  runApp(App());
+  runApp(ProviderScope(child: App()));
 }
 
 class App extends StatelessWidget {
