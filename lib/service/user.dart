@@ -48,9 +48,6 @@ class UserService extends UserServiceInterface {
   }
 
   Future<void> _create() {
-    assert(!AppState.shared.userIsExists,
-        "user already exists on process. maybe you will call fetch before create");
-    if (AppState.shared.userIsExists) throw UserAlreadyExists();
     return _database.userReference().set(
       {
         UserFirestoreFieldKeys.anonymouseUserID:
