@@ -11,8 +11,11 @@ class DatabaseConnection {
             _userID != null, 'Pill firestore request should necessary userID');
   final String _userID;
 
-  DocumentReference userReference() =>
-      FirebaseFirestore.instance.collection(_CollectionPath.users).doc(_userID);
+  DocumentReference userReference() {
+    return FirebaseFirestore.instance
+        .collection(_CollectionPath.users)
+        .doc(_userID);
+  }
 
   CollectionReference pillSheetsReference() => FirebaseFirestore.instance
       .collection(_CollectionPath.pillSheets(_userID));

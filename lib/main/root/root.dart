@@ -11,7 +11,10 @@ import 'package:shared_preferences/shared_preferences.dart';
 class Root extends HookWidget {
   @override
   Widget build(BuildContext context) {
-    useProvider(initialUserProvider.future).then((user) {
+    final future = useProvider(initialUserProvider.future);
+    Future(() async {
+      final user = await future;
+
       if (user.setting == null) {
         Navigator.popAndPushNamed(context, Routes.initialSetting);
         return null;
@@ -22,22 +25,23 @@ class Root extends HookWidget {
               StringKey.firebaseAnonymousUserID, user.anonymousUserID);
         }
         return storage;
+      }).then((storage) {
+        if (storage == null) {
+          return;
+        }
+        bool didEndInitialSetting =
+            storage.getBool(BoolKey.didEndInitialSetting);
+        if (didEndInitialSetting == null) {
+          Navigator.popAndPushNamed(context, Routes.initialSetting);
+          return;
+        }
+        if (!didEndInitialSetting) {
+          Navigator.popAndPushNamed(context, Routes.initialSetting);
+          return;
+        }
+        Navigator.popAndPushNamed(context, Routes.main);
+        // Navigator.popAndPushNamed(context, Routes.initialSetting);
       });
-    }).then((storage) {
-      if (storage == null) {
-        return;
-      }
-      bool didEndInitialSetting = storage.getBool(BoolKey.didEndInitialSetting);
-      if (didEndInitialSetting == null) {
-        Navigator.popAndPushNamed(context, Routes.initialSetting);
-        return;
-      }
-      if (!didEndInitialSetting) {
-        Navigator.popAndPushNamed(context, Routes.initialSetting);
-        return;
-      }
-      Navigator.popAndPushNamed(context, Routes.main);
-      // Navigator.popAndPushNamed(context, Routes.initialSetting);
     });
 
     return Scaffold(

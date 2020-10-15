@@ -12,6 +12,11 @@ abstract class UserServiceInterface {
 final userServiceProvider = Provider((ref) => UserService(ref.read));
 final initialUserProvider =
     FutureProvider((ref) => ref.watch(userServiceProvider)._prepare());
+// ignore: top_level_function_literal_block
+final userProvider = Provider((ref) async {
+  final user = await ref.watch(initialUserProvider.future);
+  return user;
+});
 
 class UserService extends UserServiceInterface {
   final Reader reader;
