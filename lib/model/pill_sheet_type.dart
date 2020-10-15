@@ -1,6 +1,4 @@
 import 'package:Pilll/model/pill_sheet.dart';
-import 'package:Pilll/provider/auth.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 enum PillSheetType {

@@ -6,7 +6,6 @@ import 'package:Pilll/main/calendar/calendar_help.dart';
 import 'package:Pilll/main/calendar/calendar_list_page.dart';
 import 'package:Pilll/model/pill_sheet.dart';
 import 'package:Pilll/model/setting.dart';
-import 'package:Pilll/model/user.dart';
 import 'package:Pilll/store/pill_sheet.dart';
 import 'package:Pilll/store/setting.dart';
 import 'package:Pilll/style/button.dart';
