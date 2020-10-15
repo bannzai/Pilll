@@ -71,6 +71,7 @@ class Settings extends HookWidget {
         child: ListView.separated(
           itemBuilder: (BuildContext context, int index) {
             return _section(
+              context,
               SettingSection.values[index],
             );
           },
@@ -262,12 +263,12 @@ class Settings extends HookWidget {
     }
   }
 
-  Widget _section(SettingSection section) {
+  Widget _section(BuildContext context, SettingSection section) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         _sectionTitle(section),
-        ..._rowModels(section).map((e) => e.widget()),
+        ..._rowModels(context, section).map((e) => e.widget()),
       ],
     );
   }
