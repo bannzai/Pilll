@@ -12,13 +12,14 @@ abstract class PillSheetServiceInterface {
   Future<PillSheetModel> update(PillSheetModel pillSheet);
 }
 
-final pillSheetServiceProvider = Provider((ref) => PIllSheetService(ref.read));
+final pillSheetServiceProvider =
+    Provider<PillSheetServiceInterface>((ref) => PillSheetService(ref.read));
 final fetchLastPillSheetProvider =
     FutureProvider((ref) => ref.watch(pillSheetServiceProvider).fetchLast());
 
-class PIllSheetService extends PillSheetServiceInterface {
+class PillSheetService extends PillSheetServiceInterface {
   final Reader reader;
-  PIllSheetService(this.reader);
+  PillSheetService(this.reader);
 
   DatabaseConnection get _database => reader(databaseProvider);
 

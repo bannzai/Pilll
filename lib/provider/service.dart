@@ -8,7 +8,7 @@ Provider<UserServiceInterface> userServiceProvider =
     Provider((ref) => UserService(ref.read));
 
 Provider<PillSheetServiceInterface> pillSheetService =
-    Provider((ref) => PIllSheetService(ref.read));
+    Provider((ref) => PillSheetService(ref.read));
 
 Provider<SettingServiceInterface> settingService =
     Provider((ref) => SettingService(ref.read));
