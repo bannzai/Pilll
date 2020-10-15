@@ -1,6 +1,5 @@
 import 'package:Pilll/main/components/pill/pill_mark.dart';
 import 'package:Pilll/main/record/record_page.dart';
-import 'package:Pilll/model/app_state.dart';
 import 'package:Pilll/model/pill_sheet.dart';
 import 'package:Pilll/model/pill_sheet_type.dart';
 import 'package:Pilll/model/user.dart';
