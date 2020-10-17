@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:Pilll/model/pill_sheet.dart';
 import 'package:Pilll/service/pill_sheet.dart';
 import 'package:Pilll/state/pill_sheet.dart';
@@ -16,7 +18,22 @@ class PillSheetStateStore extends StateNotifier<PillSheetState> {
   void _reset() {
     Future(() async {
       state = PillSheetState(entity: await _service.fetchLast());
+      _subscribe();
     });
+  }
+
+  StreamSubscription<PillSheetModel> canceller;
+  void _subscribe() {
+    canceller?.cancel();
+    canceller = _service.subscribeForLatestPillSheet().listen((event) {
+      state = PillSheetState(entity: event);
+    });
+  }
+
+  @override
+  void dispose() {
+    canceller?.cancel();
+    super.dispose();
   }
 
   Future<void> register(PillSheetModel model) {
