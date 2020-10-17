@@ -22,7 +22,7 @@ class Root extends HookWidget {
       return SharedPreferences.getInstance().then((storage) {
         if (!storage.getKeys().contains(StringKey.firebaseAnonymousUserID)) {
           storage.setString(
-              StringKey.firebaseAnonymousUserID, user.anonymousUserID);
+              StringKey.firebaseAnonymousUserID, user.anonymouseUserID);
         }
         return storage;
       }).then((storage) {
