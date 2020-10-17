@@ -1,5 +1,6 @@
 import 'package:Pilll/main/application/router.dart';
 import 'package:Pilll/main/components/indicator.dart';
+import 'package:Pilll/model/user.dart';
 import 'package:Pilll/service/user.dart';
 import 'package:Pilll/theme/color.dart';
 import 'package:Pilll/util/shared_preference/keys.dart';
@@ -11,15 +12,32 @@ import 'package:shared_preferences/shared_preferences.dart';
 class Root extends HookWidget {
   @override
   Widget build(BuildContext context) {
-    final future = useProvider(initialUserProvider.future);
-    Future(() async {
-      final user = await future;
+    return useProvider(initialUserProvider).when(data: (user) {
+      print("when success: $user");
+      _transition(context, user);
+      return Container();
+    }, loading: () {
+      print("loading ... ");
+      return Scaffold(
+        backgroundColor: PilllColors.background,
+        body: Indicator(),
+      );
+    }, error: (err, stack) {
+      print("err: $err");
+      return Scaffold(
+        backgroundColor: PilllColors.background,
+        body: Indicator(),
+      );
+    });
+  }
 
+  void _transition(BuildContext context, User user) {
+    Future(() async {
       if (user.setting == null) {
         Navigator.popAndPushNamed(context, Routes.initialSetting);
-        return null;
+        return Container();
       }
-      return SharedPreferences.getInstance().then((storage) {
+      SharedPreferences.getInstance().then((storage) {
         if (!storage.getKeys().contains(StringKey.firebaseAnonymousUserID)) {
           storage.setString(
               StringKey.firebaseAnonymousUserID, user.anonymouseUserID);
@@ -43,10 +61,5 @@ class Root extends HookWidget {
         // Navigator.popAndPushNamed(context, Routes.initialSetting);
       });
     });
-
-    return Scaffold(
-      backgroundColor: PilllColors.background,
-      body: Indicator(),
-    );
   }
 }
