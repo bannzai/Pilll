@@ -28,7 +28,6 @@ class InitialSetting3 extends HookWidget {
         store
             .register(state.entity)
             .then((_) => AppRouter.endInitialSetting(context));
-        ;
       },
       model: SettingMenstruationPageModel(
         selectedFromMenstruation: state.entity.fromMenstruation,

@@ -11,7 +11,7 @@ final settingStoreProvider =
 class SettingStateStore extends StateNotifier<SettingState> {
   final Reader _read;
   SettingServiceInterface get _service => _read(settingServiceProvider);
-  SettingStateStore(this._read) : super(SettingState()) {
+  SettingStateStore(this._read) : super(SettingState(null)) {
     _reset();
   }
 

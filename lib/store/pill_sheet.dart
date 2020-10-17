@@ -9,7 +9,7 @@ final pillSheetStoreProvider =
 class PillSheetStateStore extends StateNotifier<PillSheetState> {
   final Reader _read;
   PillSheetServiceInterface get _service => _read(pillSheetServiceProvider);
-  PillSheetStateStore(this._read) : super(PillSheetState()) {
+  PillSheetStateStore(this._read) : super(PillSheetState(null)) {
     _reset();
   }
 
