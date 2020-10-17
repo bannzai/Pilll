@@ -6,5 +6,5 @@ part 'setting.freezed.dart';
 @freezed
 abstract class SettingState implements _$SettingState {
   SettingState._();
-  factory SettingState(Setting entity) = _SettingState;
+  factory SettingState({Setting entity}) = _SettingState;
 }

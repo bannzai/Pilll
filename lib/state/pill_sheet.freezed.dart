@@ -14,9 +14,9 @@ class _$PillSheetStateTearOff {
   const _$PillSheetStateTearOff();
 
 // ignore: unused_element
-  _PillSheetState call(PillSheetModel entity) {
+  _PillSheetState call({PillSheetModel entity}) {
     return _PillSheetState(
-      entity,
+      entity: entity,
     );
   }
 }
@@ -100,16 +100,14 @@ class __$PillSheetStateCopyWithImpl<$Res>
     Object entity = freezed,
   }) {
     return _then(_PillSheetState(
-      entity == freezed ? _value.entity : entity as PillSheetModel,
+      entity: entity == freezed ? _value.entity : entity as PillSheetModel,
     ));
   }
 }
 
 /// @nodoc
 class _$_PillSheetState extends _PillSheetState {
-  _$_PillSheetState(this.entity)
-      : assert(entity != null),
-        super._();
+  _$_PillSheetState({this.entity}) : super._();
 
   @override
   final PillSheetModel entity;
@@ -138,7 +136,7 @@ class _$_PillSheetState extends _PillSheetState {
 
 abstract class _PillSheetState extends PillSheetState {
   _PillSheetState._() : super._();
-  factory _PillSheetState(PillSheetModel entity) = _$_PillSheetState;
+  factory _PillSheetState({PillSheetModel entity}) = _$_PillSheetState;
 
   @override
   PillSheetModel get entity;
