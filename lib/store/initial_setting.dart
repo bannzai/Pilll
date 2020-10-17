@@ -11,12 +11,7 @@ class InitialSettingStateStore extends StateNotifier<InitialSettingState> {
   InitialSettingStateStore(this._read)
       : super(
           InitialSettingState(
-            InitialSettingModel.initial(
-              reminderHour: null,
-              reminderMinute: null,
-              todayPillNumber: null,
-              pillSheetType: null,
-            ),
+            InitialSettingModel.initial(),
           ),
         );
   InitialSettingInterface get _service => _read(initialSettingServiceProvider);

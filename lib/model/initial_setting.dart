@@ -11,10 +11,10 @@ part 'initial_setting.freezed.dart';
 abstract class InitialSettingModel implements _$InitialSettingModel {
   InitialSettingModel._();
   factory InitialSettingModel.initial({
-    @Default(22) int fromMenstruation,
-    @Default(0) int durationMenstruation,
-    int reminderHour,
-    int reminderMinute,
+    int fromMenstruation,
+    int durationMenstruation,
+    @Default(22) int reminderHour,
+    @Default(0) int reminderMinute,
     @Default(false) bool isOnReminder,
     int todayPillNumber,
     PillSheetType pillSheetType,

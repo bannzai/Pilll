@@ -14,11 +14,11 @@ class _$InitialSettingModelTearOff {
   const _$InitialSettingModelTearOff();
 
 // ignore: unused_element
-  _InitialSettingModel empty(
-      {int fromMenstruation = 22,
-      int durationMenstruation = 0,
-      int reminderHour,
-      int reminderMinute,
+  _InitialSettingModel initial(
+      {int fromMenstruation,
+      int durationMenstruation,
+      int reminderHour = 22,
+      int reminderMinute = 0,
       bool isOnReminder = false,
       int todayPillNumber,
       PillSheetType pillSheetType}) {
@@ -51,7 +51,7 @@ mixin _$InitialSettingModel {
   @optionalTypeArgs
   Result when<Result extends Object>({
     @required
-        Result empty(
+        Result initial(
             int fromMenstruation,
             int durationMenstruation,
             int reminderHour,
@@ -62,7 +62,7 @@ mixin _$InitialSettingModel {
   });
   @optionalTypeArgs
   Result maybeWhen<Result extends Object>({
-    Result empty(
+    Result initial(
         int fromMenstruation,
         int durationMenstruation,
         int reminderHour,
@@ -74,11 +74,11 @@ mixin _$InitialSettingModel {
   });
   @optionalTypeArgs
   Result map<Result extends Object>({
-    @required Result empty(_InitialSettingModel value),
+    @required Result initial(_InitialSettingModel value),
   });
   @optionalTypeArgs
   Result maybeMap<Result extends Object>({
-    Result empty(_InitialSettingModel value),
+    Result initial(_InitialSettingModel value),
     @required Result orElse(),
   });
 
@@ -208,26 +208,26 @@ class __$InitialSettingModelCopyWithImpl<$Res>
 /// @nodoc
 class _$_InitialSettingModel extends _InitialSettingModel {
   _$_InitialSettingModel(
-      {this.fromMenstruation = 22,
-      this.durationMenstruation = 0,
-      this.reminderHour,
-      this.reminderMinute,
+      {this.fromMenstruation,
+      this.durationMenstruation,
+      this.reminderHour = 22,
+      this.reminderMinute = 0,
       this.isOnReminder = false,
       this.todayPillNumber,
       this.pillSheetType})
-      : assert(fromMenstruation != null),
-        assert(durationMenstruation != null),
+      : assert(reminderHour != null),
+        assert(reminderMinute != null),
         assert(isOnReminder != null),
         super._();
 
-  @JsonKey(defaultValue: 22)
   @override
   final int fromMenstruation;
-  @JsonKey(defaultValue: 0)
   @override
   final int durationMenstruation;
+  @JsonKey(defaultValue: 22)
   @override
   final int reminderHour;
+  @JsonKey(defaultValue: 0)
   @override
   final int reminderMinute;
   @JsonKey(defaultValue: false)
@@ -240,7 +240,7 @@ class _$_InitialSettingModel extends _InitialSettingModel {
 
   @override
   String toString() {
-    return 'InitialSettingModel.empty(fromMenstruation: $fromMenstruation, durationMenstruation: $durationMenstruation, reminderHour: $reminderHour, reminderMinute: $reminderMinute, isOnReminder: $isOnReminder, todayPillNumber: $todayPillNumber, pillSheetType: $pillSheetType)';
+    return 'InitialSettingModel.initial(fromMenstruation: $fromMenstruation, durationMenstruation: $durationMenstruation, reminderHour: $reminderHour, reminderMinute: $reminderMinute, isOnReminder: $isOnReminder, todayPillNumber: $todayPillNumber, pillSheetType: $pillSheetType)';
   }
 
   @override
@@ -290,7 +290,7 @@ class _$_InitialSettingModel extends _InitialSettingModel {
   @optionalTypeArgs
   Result when<Result extends Object>({
     @required
-        Result empty(
+        Result initial(
             int fromMenstruation,
             int durationMenstruation,
             int reminderHour,
@@ -299,15 +299,15 @@ class _$_InitialSettingModel extends _InitialSettingModel {
             int todayPillNumber,
             PillSheetType pillSheetType),
   }) {
-    assert(empty != null);
-    return empty(fromMenstruation, durationMenstruation, reminderHour,
+    assert(initial != null);
+    return initial(fromMenstruation, durationMenstruation, reminderHour,
         reminderMinute, isOnReminder, todayPillNumber, pillSheetType);
   }
 
   @override
   @optionalTypeArgs
   Result maybeWhen<Result extends Object>({
-    Result empty(
+    Result initial(
         int fromMenstruation,
         int durationMenstruation,
         int reminderHour,
@@ -318,8 +318,8 @@ class _$_InitialSettingModel extends _InitialSettingModel {
     @required Result orElse(),
   }) {
     assert(orElse != null);
-    if (empty != null) {
-      return empty(fromMenstruation, durationMenstruation, reminderHour,
+    if (initial != null) {
+      return initial(fromMenstruation, durationMenstruation, reminderHour,
           reminderMinute, isOnReminder, todayPillNumber, pillSheetType);
     }
     return orElse();
@@ -328,21 +328,21 @@ class _$_InitialSettingModel extends _InitialSettingModel {
   @override
   @optionalTypeArgs
   Result map<Result extends Object>({
-    @required Result empty(_InitialSettingModel value),
+    @required Result initial(_InitialSettingModel value),
   }) {
-    assert(empty != null);
-    return empty(this);
+    assert(initial != null);
+    return initial(this);
   }
 
   @override
   @optionalTypeArgs
   Result maybeMap<Result extends Object>({
-    Result empty(_InitialSettingModel value),
+    Result initial(_InitialSettingModel value),
     @required Result orElse(),
   }) {
     assert(orElse != null);
-    if (empty != null) {
-      return empty(this);
+    if (initial != null) {
+      return initial(this);
     }
     return orElse();
   }
