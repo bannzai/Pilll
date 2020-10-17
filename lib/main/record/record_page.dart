@@ -1,3 +1,4 @@
+import 'package:Pilll/main/components/indicator.dart';
 import 'package:Pilll/main/components/pill/pill_sheet.dart';
 import 'package:Pilll/main/record/record_taken_information.dart';
 import 'package:Pilll/model/pill_mark_type.dart';
@@ -30,6 +31,9 @@ class RecordPage extends HookWidget {
     final currentPillSheet = useProvider(pillSheetStoreProvider.state).entity;
     final store = useProvider(pillSheetStoreProvider);
     final settingState = useProvider(settingStoreProvider.state);
+    if (settingState.entity == null) {
+      return Indicator();
+    }
     return Center(
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
