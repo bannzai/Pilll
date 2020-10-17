@@ -39,10 +39,8 @@ class InitialSetting4 extends HookWidget {
         return DateTimePicker(
           initialDateTime: entity.reminderDateTime(),
           done: (dateTime) {
-            store.modify((model) => model
-              ..copyWith(
-                  reminderHour: dateTime.hour,
-                  reminderMinute: dateTime.minute));
+            store.modify((model) => model.copyWith(
+                reminderHour: dateTime.hour, reminderMinute: dateTime.minute));
             Navigator.pop(context);
           },
         );
@@ -105,15 +103,14 @@ class InitialSetting4 extends HookWidget {
                   PrimaryButton(
                     text: "設定",
                     onPressed: () {
-                      store
-                          .register(state.entity..copyWith(isOnReminder: true));
+                      store.register(state.entity.copyWith(isOnReminder: true));
                     },
                   ),
                   TertiaryButton(
                     text: "スキップ",
                     onPressed: () {
-                      store.register(
-                          state.entity..copyWith(isOnReminder: false));
+                      store
+                          .register(state.entity.copyWith(isOnReminder: false));
                     },
                   ),
                 ],
