@@ -17,9 +17,9 @@ class _$UserTearOff {
   const _$UserTearOff();
 
 // ignore: unused_element
-  _User call({@required String anonymousUserID, Setting setting}) {
+  _User call({@required String anonymouseUserID, Setting setting}) {
     return _User(
-      anonymousUserID: anonymousUserID,
+      anonymouseUserID: anonymouseUserID,
       setting: setting,
     );
   }
@@ -36,7 +36,7 @@ const $User = _$UserTearOff();
 
 /// @nodoc
 mixin _$User {
-  String get anonymousUserID;
+  String get anonymouseUserID;
   Setting get setting;
 
   Map<String, dynamic> toJson();
@@ -47,7 +47,7 @@ mixin _$User {
 abstract class $UserCopyWith<$Res> {
   factory $UserCopyWith(User value, $Res Function(User) then) =
       _$UserCopyWithImpl<$Res>;
-  $Res call({String anonymousUserID, Setting setting});
+  $Res call({String anonymouseUserID, Setting setting});
 
   $SettingCopyWith<$Res> get setting;
 }
@@ -62,13 +62,13 @@ class _$UserCopyWithImpl<$Res> implements $UserCopyWith<$Res> {
 
   @override
   $Res call({
-    Object anonymousUserID = freezed,
+    Object anonymouseUserID = freezed,
     Object setting = freezed,
   }) {
     return _then(_value.copyWith(
-      anonymousUserID: anonymousUserID == freezed
-          ? _value.anonymousUserID
-          : anonymousUserID as String,
+      anonymouseUserID: anonymouseUserID == freezed
+          ? _value.anonymouseUserID
+          : anonymouseUserID as String,
       setting: setting == freezed ? _value.setting : setting as Setting,
     ));
   }
@@ -89,7 +89,7 @@ abstract class _$UserCopyWith<$Res> implements $UserCopyWith<$Res> {
   factory _$UserCopyWith(_User value, $Res Function(_User) then) =
       __$UserCopyWithImpl<$Res>;
   @override
-  $Res call({String anonymousUserID, Setting setting});
+  $Res call({String anonymouseUserID, Setting setting});
 
   @override
   $SettingCopyWith<$Res> get setting;
@@ -106,13 +106,13 @@ class __$UserCopyWithImpl<$Res> extends _$UserCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object anonymousUserID = freezed,
+    Object anonymouseUserID = freezed,
     Object setting = freezed,
   }) {
     return _then(_User(
-      anonymousUserID: anonymousUserID == freezed
-          ? _value.anonymousUserID
-          : anonymousUserID as String,
+      anonymouseUserID: anonymouseUserID == freezed
+          ? _value.anonymouseUserID
+          : anonymouseUserID as String,
       setting: setting == freezed ? _value.setting : setting as Setting,
     ));
   }
@@ -122,30 +122,30 @@ class __$UserCopyWithImpl<$Res> extends _$UserCopyWithImpl<$Res>
 
 /// @nodoc
 class _$_User extends _User {
-  _$_User({@required this.anonymousUserID, this.setting})
-      : assert(anonymousUserID != null),
+  _$_User({@required this.anonymouseUserID, this.setting})
+      : assert(anonymouseUserID != null),
         super._();
 
   factory _$_User.fromJson(Map<String, dynamic> json) =>
       _$_$_UserFromJson(json);
 
   @override
-  final String anonymousUserID;
+  final String anonymouseUserID;
   @override
   final Setting setting;
 
   @override
   String toString() {
-    return 'User(anonymousUserID: $anonymousUserID, setting: $setting)';
+    return 'User(anonymouseUserID: $anonymouseUserID, setting: $setting)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other is _User &&
-            (identical(other.anonymousUserID, anonymousUserID) ||
+            (identical(other.anonymouseUserID, anonymouseUserID) ||
                 const DeepCollectionEquality()
-                    .equals(other.anonymousUserID, anonymousUserID)) &&
+                    .equals(other.anonymouseUserID, anonymouseUserID)) &&
             (identical(other.setting, setting) ||
                 const DeepCollectionEquality().equals(other.setting, setting)));
   }
@@ -153,7 +153,7 @@ class _$_User extends _User {
   @override
   int get hashCode =>
       runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(anonymousUserID) ^
+      const DeepCollectionEquality().hash(anonymouseUserID) ^
       const DeepCollectionEquality().hash(setting);
 
   @override
@@ -168,12 +168,12 @@ class _$_User extends _User {
 
 abstract class _User extends User {
   _User._() : super._();
-  factory _User({@required String anonymousUserID, Setting setting}) = _$_User;
+  factory _User({@required String anonymouseUserID, Setting setting}) = _$_User;
 
   factory _User.fromJson(Map<String, dynamic> json) = _$_User.fromJson;
 
   @override
-  String get anonymousUserID;
+  String get anonymouseUserID;
   @override
   Setting get setting;
   @override
