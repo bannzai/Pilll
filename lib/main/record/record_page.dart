@@ -18,16 +18,16 @@ import 'package:hooks_riverpod/all.dart';
 class RecordPage extends HookWidget {
   @override
   Widget build(BuildContext context) {
-    final currentPillShettState = useProvider(pillSheetStoreProvider.state);
     return Scaffold(
       backgroundColor: PilllColors.background,
       appBar: null,
       extendBodyBehindAppBar: true,
-      body: _body(currentPillShettState.entity),
+      body: _body(),
     );
   }
 
-  Widget _body(PillSheetModel currentPillSheet) {
+  Widget _body() {
+    final currentPillSheet = useProvider(pillSheetStoreProvider.state).entity;
     final store = useProvider(pillSheetStoreProvider);
     final settingState = useProvider(settingStoreProvider.state);
     return Center(
