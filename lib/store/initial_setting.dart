@@ -1,4 +1,5 @@
 import 'package:Pilll/model/initial_setting.dart';
+import 'package:Pilll/model/pill_sheet_type.dart';
 import 'package:Pilll/service/initial_setting.dart';
 import 'package:Pilll/state/initial_setting.dart';
 import 'package:riverpod/all.dart';
@@ -25,7 +26,7 @@ class InitialSettingStateStore extends StateNotifier<InitialSettingState> {
   InitialSettingInterface get _service => _read(initialSettingServiceProvider);
 
   void modify(InitialSettingModel Function(InitialSettingModel model) closure) {
-    state = state..copyWith(entity: closure(state.entity));
+    state = state.copyWith(entity: closure(state.entity));
   }
 
   void register(InitialSettingModel initialSetting) {
