@@ -15,13 +15,13 @@ class _$InitialSettingModelTearOff {
 
 // ignore: unused_element
   _InitialSettingModel empty(
-      {int fromMenstruation = null,
-      int durationMenstruation = null,
-      int reminderHour = null,
-      int reminderMinute = null,
+      {int fromMenstruation,
+      int durationMenstruation,
+      int reminderHour,
+      int reminderMinute,
       bool isOnReminder = false,
-      int todayPillNumber = null,
-      PillSheetType pillSheetType = null}) {
+      int todayPillNumber,
+      PillSheetType pillSheetType}) {
     return _InitialSettingModel(
       fromMenstruation: fromMenstruation,
       durationMenstruation: durationMenstruation,
@@ -208,41 +208,29 @@ class __$InitialSettingModelCopyWithImpl<$Res>
 /// @nodoc
 class _$_InitialSettingModel extends _InitialSettingModel {
   _$_InitialSettingModel(
-      {this.fromMenstruation = null,
-      this.durationMenstruation = null,
-      this.reminderHour = null,
-      this.reminderMinute = null,
+      {this.fromMenstruation,
+      this.durationMenstruation,
+      this.reminderHour,
+      this.reminderMinute,
       this.isOnReminder = false,
-      this.todayPillNumber = null,
-      this.pillSheetType = null})
-      : assert(fromMenstruation != null),
-        assert(durationMenstruation != null),
-        assert(reminderHour != null),
-        assert(reminderMinute != null),
-        assert(isOnReminder != null),
-        assert(todayPillNumber != null),
-        assert(pillSheetType != null),
+      this.todayPillNumber,
+      this.pillSheetType})
+      : assert(isOnReminder != null),
         super._();
 
-  @JsonKey(defaultValue: null)
   @override
   final int fromMenstruation;
-  @JsonKey(defaultValue: null)
   @override
   final int durationMenstruation;
-  @JsonKey(defaultValue: null)
   @override
   final int reminderHour;
-  @JsonKey(defaultValue: null)
   @override
   final int reminderMinute;
   @JsonKey(defaultValue: false)
   @override
   final bool isOnReminder;
-  @JsonKey(defaultValue: null)
   @override
   final int todayPillNumber;
-  @JsonKey(defaultValue: null)
   @override
   final PillSheetType pillSheetType;
 

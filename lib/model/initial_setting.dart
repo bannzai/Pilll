@@ -11,13 +11,13 @@ part 'initial_setting.freezed.dart';
 abstract class InitialSettingModel implements _$InitialSettingModel {
   InitialSettingModel._();
   factory InitialSettingModel.empty({
-    @Default(null) int fromMenstruation,
-    @Default(null) int durationMenstruation,
-    @Default(null) int reminderHour,
-    @Default(null) int reminderMinute,
+    int fromMenstruation,
+    int durationMenstruation,
+    int reminderHour,
+    int reminderMinute,
     @Default(false) bool isOnReminder,
-    @Default(null) int todayPillNumber,
-    @Default(null) PillSheetType pillSheetType,
+    int todayPillNumber,
+    PillSheetType pillSheetType,
   }) = _InitialSettingModel;
 
   Setting buildSetting() => Setting(
