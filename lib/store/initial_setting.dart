@@ -1,5 +1,4 @@
 import 'package:Pilll/model/initial_setting.dart';
-import 'package:Pilll/model/pill_sheet_type.dart';
 import 'package:Pilll/service/initial_setting.dart';
 import 'package:Pilll/state/initial_setting.dart';
 import 'package:riverpod/all.dart';
