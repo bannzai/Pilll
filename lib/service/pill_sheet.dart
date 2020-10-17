@@ -69,7 +69,10 @@ class PillSheetService extends PillSheetServiceInterface {
   Future<PillSheetModel> update(PillSheetModel pillSheet) {
     var json = pillSheet.toJson();
     json.remove("id");
-    return _database.pillSheetReference(pillSheet.documentID).update(json);
+    return _database
+        .pillSheetReference(pillSheet.documentID)
+        .update(json)
+        .then((_) => pillSheet);
   }
 }
 
