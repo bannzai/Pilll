@@ -32,7 +32,7 @@ class InitialSetting3 extends HookWidget {
       ),
       fromMenstructionDidDecide: (selectedFromMenstruction) {
         store.modify((model) =>
-            model..copyWith(fromMenstruation: selectedFromMenstruction));
+            model.copyWith(fromMenstruation: selectedFromMenstruction));
       },
       durationMenstructionDidDecide: (selectedDurationMenstruation) {
         store.modify((model) => model

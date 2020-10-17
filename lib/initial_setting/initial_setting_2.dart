@@ -54,7 +54,7 @@ class InitialSetting2 extends HookWidget {
                 markIsAnimated: null,
                 markSelected: (number) {
                   store.modify(
-                      (model) => model..copyWith(todayPillNumber: number));
+                      (model) => model.copyWith(todayPillNumber: number));
                 },
               ),
               SizedBox(height: 24),

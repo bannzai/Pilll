@@ -25,35 +25,35 @@ class SettingStateStore extends StateNotifier<SettingState> {
     _service
         .update(
             state.entity.copyWith(pillSheetTypeRawPath: pillSheetType.rawPath))
-        .then((entity) => state = state..copyWith(entity: entity));
+        .then((entity) => state = state.copyWith(entity: entity));
   }
 
   void modifyReminderTime(ReminderTime reminderTime) {
     _service
         .update(state.entity.copyWith(reminderTime: reminderTime))
-        .then((entity) => state = state..copyWith(entity: entity));
+        .then((entity) => state = state.copyWith(entity: entity));
   }
 
   void modifyIsOnReminder(bool isOnReminder) {
     _service
         .update(state.entity.copyWith(isOnReminder: isOnReminder))
-        .then((entity) => state = state..copyWith(entity: entity));
+        .then((entity) => state = state.copyWith(entity: entity));
   }
 
   void modifyFromMenstruation(int fromMenstruation) {
     _service
         .update(state.entity.copyWith(fromMenstruation: fromMenstruation))
-        .then((entity) => state = state..copyWith(entity: entity));
+        .then((entity) => state = state.copyWith(entity: entity));
   }
 
   void modifyDurationMenstruation(int durationMenstruation) {
     _service
         .update(
             state.entity.copyWith(durationMenstruation: durationMenstruation))
-        .then((entity) => state = state..copyWith(entity: entity));
+        .then((entity) => state = state.copyWith(entity: entity));
   }
 
   void update(Setting entity) {
-    state = state..copyWith(entity: entity);
+    state = state.copyWith(entity: entity);
   }
 }

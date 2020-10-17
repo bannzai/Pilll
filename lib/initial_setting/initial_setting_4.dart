@@ -56,7 +56,7 @@ class InitialSetting4 extends HookWidget {
     final state = useProvider(initialSettingStoreProvider.state);
     if (_notYetSetTime(state.entity)) {
       store.modify(
-          (model) => model..copyWith(reminderHour: 22, reminderMinute: 0));
+          (model) => model.copyWith(reminderHour: 22, reminderMinute: 0));
     }
     return Scaffold(
       backgroundColor: PilllColors.background,

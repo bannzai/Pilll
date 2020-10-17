@@ -23,7 +23,7 @@ class PillSheetStateStore extends StateNotifier<PillSheetState> {
   Future<void> register(PillSheetModel model) {
     return _service
         .register(model)
-        .then((entity) => state = state..copyWith(entity: entity));
+        .then((entity) => state = state.copyWith(entity: entity));
   }
 
   void delete() {
@@ -33,16 +33,16 @@ class PillSheetStateStore extends StateNotifier<PillSheetState> {
   void take(DateTime takenDate) {
     _service
         .update(state.entity..copyWith(lastTakenDate: takenDate))
-        .then((entity) => state = state..copyWith(entity: entity));
+        .then((entity) => state = state.copyWith(entity: entity));
   }
 
   void modifyBeginingDate(DateTime beginingDate) {
     _service
         .update(state.entity..copyWith(beginingDate: beginingDate))
-        .then((entity) => state = state..copyWith(entity: entity));
+        .then((entity) => state = state.copyWith(entity: entity));
   }
 
   void update(PillSheetModel entity) {
-    state = state..copyWith(entity: entity);
+    state = state.copyWith(entity: entity);
   }
 }
