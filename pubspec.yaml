@@ -23,22 +23,22 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  flutter_svg: ^0.17.4
-  shared_preferences: ^0.5.8
-  intl: ^0.16.1
-  firebase_core: ^0.5.0
-  firebase_analytics: ^6.0.0
-  firebase_auth: ^0.18.0+1
-  cloud_firestore: ^0.14.0+2
-  url_launcher: ^5.5.2
-  package_info: ^0.4.3
-  equatable: ^1.2.5
-  json_annotation: ^3.0.0
-  mockito: ^4.1.1
-  riverpod: ^0.11.0
+  flutter_svg:
+  shared_preferences:
+  intl:
+  firebase_core:
+  firebase_analytics:
+  firebase_auth:
+  cloud_firestore:
+  url_launcher:
+  package_info:
+  equatable:
+  json_annotation:
+  mockito:
+  riverpod:
   freezed_annotation:
-  flutter_hooks: ^0.13.2
-  hooks_riverpod: ^0.11.0
+  flutter_hooks:
+  hooks_riverpod:
 
 
   # The following adds the Cupertino Icons font to your application.
