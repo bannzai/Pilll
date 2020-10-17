@@ -74,9 +74,13 @@ class Settings extends HookWidget {
       body: Container(
         child: ListView.separated(
           itemBuilder: (BuildContext context, int index) {
-            return _section(
-              context,
-              SettingSection.values[index],
+            return HookBuilder(
+              builder: (BuildContext context) {
+                return _section(
+                  context,
+                  SettingSection.values[index],
+                );
+              },
             );
           },
           separatorBuilder: (BuildContext context, int index) {
