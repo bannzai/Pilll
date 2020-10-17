@@ -11,12 +11,9 @@ class InitialSettingStateStore extends StateNotifier<InitialSettingState> {
   InitialSettingStateStore(this._read)
       : super(
           InitialSettingState(
-            InitialSettingModel.empty(
-              fromMenstruation: null,
-              durationMenstruation: null,
+            InitialSettingModel.initial(
               reminderHour: null,
               reminderMinute: null,
-              isOnReminder: false,
               todayPillNumber: null,
               pillSheetType: null,
             ),
