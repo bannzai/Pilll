@@ -36,7 +36,9 @@ abstract class User implements _$User {
   String get documentID => anonymouseUserID;
 
   User._();
-  factory User({@required String anonymouseUserID, Setting setting}) = _User;
+  factory User(
+      {@required String anonymouseUserID,
+      @JsonKey(name: "settings") Setting setting}) = _User;
 
   factory User.fromJson(Map<String, dynamic> json) => _$UserFromJson(json);
 }
