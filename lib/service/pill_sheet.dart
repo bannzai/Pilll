@@ -3,6 +3,7 @@ import 'package:Pilll/model/firestore_timestamp_converter.dart';
 import 'package:Pilll/model/pill_sheet.dart';
 import 'package:Pilll/model/user_error.dart';
 import 'package:Pilll/provider/auth.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:riverpod/all.dart';
 
 abstract class PillSheetServiceInterface {
@@ -10,6 +11,7 @@ abstract class PillSheetServiceInterface {
   Future<PillSheetModel> register(PillSheetModel model);
   Future<void> delete(PillSheetModel pillSheet);
   Future<PillSheetModel> update(PillSheetModel pillSheet);
+  Stream<PillSheetModel> subscribeForLatestPillSheet();
 }
 
 final pillSheetServiceProvider = Provider<PillSheetServiceInterface>(
@@ -20,6 +22,19 @@ class PillSheetService extends PillSheetServiceInterface {
 
   PillSheetService(this._database);
 
+  PillSheetModel _filterForLatestPillSheet(QuerySnapshot snapshot) {
+    if (snapshot.docs.isEmpty) return null;
+    if (!snapshot.docs.last.exists) return null;
+    var document = snapshot.docs.last;
+
+    var data = document.data();
+    data["id"] = document.id;
+    var pillSheetModel = PillSheetModel.fromJson(data);
+
+    if (pillSheetModel.deletedAt != null) return null;
+    return pillSheetModel;
+  }
+
   @override
   Future<PillSheetModel> fetchLast() {
     return _database
@@ -27,18 +42,7 @@ class PillSheetService extends PillSheetServiceInterface {
         .orderBy(PillSheetFirestoreKey.createdAt)
         .limitToLast(1)
         .get()
-        .then((event) {
-      if (event.docs.isEmpty) return null;
-      if (!event.docs.last.exists) return null;
-      var document = event.docs.last;
-
-      var data = document.data();
-      data["id"] = document.id;
-      var pillSheetModel = PillSheetModel.fromJson(data);
-
-      if (pillSheetModel.deletedAt != null) return null;
-      return pillSheetModel;
-    });
+        .then((event) => _filterForLatestPillSheet(event));
   }
 
   @override
@@ -73,6 +77,13 @@ class PillSheetService extends PillSheetServiceInterface {
         .pillSheetReference(pillSheet.documentID)
         .update(json)
         .then((_) => pillSheet);
+  }
+
+  Stream<PillSheetModel> subscribeForLatestPillSheet() {
+    return _database
+        .pillSheetsReference()
+        .snapshots()
+        .map((event) => _filterForLatestPillSheet(event));
   }
 }
 
