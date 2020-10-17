@@ -5,18 +5,19 @@ import 'package:Pilll/model/user.dart';
 import 'package:Pilll/provider/auth.dart';
 import 'package:riverpod/all.dart';
 
-abstract class SettingServiceInterface {
-  Future<Setting> update(Setting setting);
+abstract class InitialSettingInterface {
+  Future<Setting> register(InitialSettingModel initialSetting);
 }
 
-final settingServiceProvider =
-    Provider((ref) => SettingService(ref.watch(databaseProvider)));
+final initialSettingServiceProvider =
+    Provider((ref) => InitialSetting(ref.watch(databaseProvider)));
 
-class SettingService extends SettingServiceInterface {
+class InitialSetting extends InitialSettingInterface {
   final DatabaseConnection _database;
-  SettingService(this._database);
+  InitialSetting(this._database);
 
-  Future<Setting> update(Setting setting) {
+  Future<Setting> register(InitialSettingModel initialSetting) {
+    var setting = initialSetting.buildSetting();
     return _database
         .userReference()
         .update({UserFirestoreFieldKeys.settings: setting.toJson()}).then(
