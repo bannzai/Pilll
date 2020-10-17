@@ -1,5 +1,4 @@
 import 'package:Pilll/database/database.dart';
-import 'package:Pilll/model/initial_setting.dart';
 import 'package:Pilll/model/setting.dart';
 import 'package:Pilll/model/user.dart';
 import 'package:Pilll/provider/auth.dart';
