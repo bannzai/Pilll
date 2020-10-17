@@ -14,9 +14,9 @@ class _$UserStateTearOff {
   const _$UserStateTearOff();
 
 // ignore: unused_element
-  _UserState call({User entity = null}) {
+  _UserState call(User entity) {
     return _UserState(
-      entity: entity,
+      entity,
     );
   }
 }
@@ -95,18 +95,17 @@ class __$UserStateCopyWithImpl<$Res> extends _$UserStateCopyWithImpl<$Res>
     Object entity = freezed,
   }) {
     return _then(_UserState(
-      entity: entity == freezed ? _value.entity : entity as User,
+      entity == freezed ? _value.entity : entity as User,
     ));
   }
 }
 
 /// @nodoc
 class _$_UserState extends _UserState {
-  _$_UserState({this.entity = null})
+  _$_UserState(this.entity)
       : assert(entity != null),
         super._();
 
-  @JsonKey(defaultValue: null)
   @override
   final User entity;
 
@@ -134,7 +133,7 @@ class _$_UserState extends _UserState {
 
 abstract class _UserState extends UserState {
   _UserState._() : super._();
-  factory _UserState({User entity}) = _$_UserState;
+  factory _UserState(User entity) = _$_UserState;
 
   @override
   User get entity;
