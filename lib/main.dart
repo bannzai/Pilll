@@ -6,7 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/all.dart';
 import 'package:intl/date_symbol_data_local.dart';
 
-import 'main/application/router.dart' as router;
+import 'main/application/router.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -35,7 +35,7 @@ class App extends StatelessWidget {
           ),
         ),
       ),
-      routes: router.Router.routes(),
+      routes: AppRouter.routes(),
     );
   }
 }
