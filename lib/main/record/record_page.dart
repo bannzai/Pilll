@@ -29,7 +29,6 @@ class RecordPage extends HookWidget {
 
   Widget _body() {
     final currentPillSheet = useProvider(pillSheetStoreProvider.state).entity;
-    final store = useProvider(pillSheetStoreProvider);
     final settingState = useProvider(settingStoreProvider.state);
     if (settingState.entity == null) {
       return Indicator();
@@ -43,13 +42,13 @@ class RecordPage extends HookWidget {
             pillSheetModel: currentPillSheet,
           ),
           if (currentPillSheet == null)
-            _empty(store, settingState.entity.pillSheetType),
+            _empty(settingState.entity.pillSheetType),
           if (currentPillSheet != null) ...[
-            _pillSheet(currentPillSheet, store),
+            _pillSheet(currentPillSheet),
             SizedBox(height: 24),
             currentPillSheet.allTaken
-                ? _cancelTakeButton(currentPillSheet, store)
-                : _takenButton(currentPillSheet, store),
+                ? _cancelTakeButton(currentPillSheet)
+                : _takenButton(currentPillSheet),
           ],
           SizedBox(height: 8),
         ],
@@ -57,15 +56,16 @@ class RecordPage extends HookWidget {
     );
   }
 
-  Widget _takenButton(PillSheetModel pillSheet, PillSheetStateStore store) {
+  Widget _takenButton(PillSheetModel pillSheet) {
+    final store = useProvider(pillSheetStoreProvider);
     return PrimaryButton(
       text: "飲んだ",
       onPressed: () => _take(pillSheet, today(), store),
     );
   }
 
-  Widget _cancelTakeButton(
-      PillSheetModel pillSheet, PillSheetStateStore store) {
+  Widget _cancelTakeButton(PillSheetModel pillSheet) {
+    final store = useProvider(pillSheetStoreProvider);
     return TertiaryButton(
       text: "飲んでない",
       onPressed: () => _cancelTake(pillSheet, store),
@@ -88,7 +88,8 @@ class RecordPage extends HookWidget {
     store.take(pillSheet.lastTakenDate.subtract(Duration(days: 1)));
   }
 
-  PillSheet _pillSheet(PillSheetModel pillSheet, PillSheetStateStore store) {
+  PillSheet _pillSheet(PillSheetModel pillSheet) {
+    final store = useProvider(pillSheetStoreProvider);
     return PillSheet(
       isHideWeekdayLine: false,
       pillMarkTypeBuilder: (number) {
@@ -125,7 +126,8 @@ class RecordPage extends HookWidget {
     );
   }
 
-  Widget _empty(PillSheetStateStore store, PillSheetType pillSheetType) {
+  Widget _empty(PillSheetType pillSheetType) {
+    final store = useProvider(pillSheetStoreProvider);
     var progressing = false;
     return GestureDetector(
       child: SizedBox(
