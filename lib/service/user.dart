@@ -9,7 +9,8 @@ abstract class UserServiceInterface {
   Future<User> subscribe();
 }
 
-final userServiceProvider = Provider((ref) => UserService(ref.read));
+final userServiceProvider =
+    Provider((ref) => UserService(ref.watch(databaseProvider)));
 final initialUserProvider =
     FutureProvider((ref) => ref.watch(userServiceProvider)._prepare());
 // ignore: top_level_function_literal_block
@@ -19,10 +20,8 @@ final userProvider = Provider((ref) async {
 });
 
 class UserService extends UserServiceInterface {
-  final Reader reader;
-  UserService(this.reader);
-
-  DatabaseConnection get _database => reader(databaseProvider);
+  final DatabaseConnection _database;
+  UserService(this._database);
 
   Future<User> _prepare() {
     return fetch().catchError((error) {

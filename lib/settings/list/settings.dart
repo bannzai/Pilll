@@ -26,10 +26,13 @@ import 'package:package_info/package_info.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class _TransactionModifier {
+  final DatabaseConnection _database;
   final Reader reader;
 
-  _TransactionModifier(this.reader);
-  DatabaseConnection get _database => reader(databaseProvider);
+  _TransactionModifier(
+    this._database, {
+    @required this.reader,
+  });
 
   Future<void> modifyPillSheetType(PillSheetType type) {
     final pillSheetStore = reader(pillSheetStoreProvider);
@@ -55,8 +58,8 @@ class _TransactionModifier {
   }
 }
 
-final transactionModifierProvider =
-    Provider((ref) => _TransactionModifier(ref.read));
+final transactionModifierProvider = Provider((ref) =>
+    _TransactionModifier(ref.watch(databaseProvider), reader: ref.read));
 
 class Settings extends HookWidget {
   @override
