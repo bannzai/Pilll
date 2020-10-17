@@ -1,6 +1,5 @@
 import 'package:Pilll/model/initial_setting.dart';
 import 'package:Pilll/store/initial_setting.dart';
-import 'package:Pilll/store/setting.dart';
 import 'package:Pilll/style/button.dart';
 import 'package:Pilll/theme/color.dart';
 import 'package:Pilll/theme/font.dart';
@@ -59,7 +58,6 @@ class InitialSetting4 extends HookWidget {
       store.modify(
           (model) => model..copyWith(reminderHour: 22, reminderMinute: 0));
     }
-    final settingStore = useProvider(settingStoreProvider);
     return Scaffold(
       backgroundColor: PilllColors.background,
       appBar: AppBar(
@@ -107,14 +105,14 @@ class InitialSetting4 extends HookWidget {
                   PrimaryButton(
                     text: "設定",
                     onPressed: () {
-                      settingStore
+                      store
                           .register(state.entity..copyWith(isOnReminder: true));
                     },
                   ),
                   TertiaryButton(
                     text: "スキップ",
                     onPressed: () {
-                      settingStore.register(
+                      store.register(
                           state.entity..copyWith(isOnReminder: false));
                     },
                   ),
