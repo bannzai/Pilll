@@ -39,6 +39,7 @@ class _TransactionModifier {
     final settingStore = reader(settingStoreProvider);
     final pillSheetState = reader(pillSheetStoreProvider.state);
     final settingState = reader(settingStoreProvider.state);
+    assert(pillSheetState.entity.documentID != null);
     return _database.transaction((transaction) {
       transaction.update(
           _database.pillSheetReference(pillSheetState.entity.documentID), {

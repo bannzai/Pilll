@@ -14,8 +14,6 @@ abstract class PillSheetServiceInterface {
 
 final pillSheetServiceProvider = Provider<PillSheetServiceInterface>(
     (ref) => PillSheetService(ref.watch(databaseProvider)));
-final fetchLastPillSheetProvider =
-    FutureProvider((ref) => ref.watch(pillSheetServiceProvider).fetchLast());
 
 class PillSheetService extends PillSheetServiceInterface {
   final DatabaseConnection _database;
