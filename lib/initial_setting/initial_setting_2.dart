@@ -1,5 +1,4 @@
 import 'package:Pilll/store/initial_setting.dart';
-import 'package:Pilll/store/setting.dart';
 import 'package:Pilll/style/button.dart';
 import 'package:Pilll/theme/color.dart';
 import 'package:Pilll/initial_setting/initial_setting_3.dart';
@@ -22,7 +21,6 @@ class InitialSetting2 extends HookWidget {
   @override
   Widget build(BuildContext context) {
     final store = useProvider(initialSettingStoreProvider);
-    final settingStore = useProvider(settingStoreProvider);
     final state = useProvider(initialSettingStoreProvider.state);
     return Scaffold(
       backgroundColor: PilllColors.background,
@@ -83,7 +81,7 @@ class InitialSetting2 extends HookWidget {
                   TertiaryButton(
                     text: "スキップ",
                     onPressed: () {
-                      settingStore.register(state.entity);
+                      store.register(state.entity);
                     },
                   ),
                 ],
