@@ -17,7 +17,9 @@ class _$UserTearOff {
   const _$UserTearOff();
 
 // ignore: unused_element
-  _User call({@required String anonymouseUserID, Setting setting}) {
+  _User call(
+      {@required String anonymouseUserID,
+      @JsonKey(name: "settings") Setting setting}) {
     return _User(
       anonymouseUserID: anonymouseUserID,
       setting: setting,
@@ -37,6 +39,7 @@ const $User = _$UserTearOff();
 /// @nodoc
 mixin _$User {
   String get anonymouseUserID;
+  @JsonKey(name: "settings")
   Setting get setting;
 
   Map<String, dynamic> toJson();
@@ -47,7 +50,8 @@ mixin _$User {
 abstract class $UserCopyWith<$Res> {
   factory $UserCopyWith(User value, $Res Function(User) then) =
       _$UserCopyWithImpl<$Res>;
-  $Res call({String anonymouseUserID, Setting setting});
+  $Res call(
+      {String anonymouseUserID, @JsonKey(name: "settings") Setting setting});
 
   $SettingCopyWith<$Res> get setting;
 }
@@ -89,7 +93,8 @@ abstract class _$UserCopyWith<$Res> implements $UserCopyWith<$Res> {
   factory _$UserCopyWith(_User value, $Res Function(_User) then) =
       __$UserCopyWithImpl<$Res>;
   @override
-  $Res call({String anonymouseUserID, Setting setting});
+  $Res call(
+      {String anonymouseUserID, @JsonKey(name: "settings") Setting setting});
 
   @override
   $SettingCopyWith<$Res> get setting;
@@ -122,7 +127,9 @@ class __$UserCopyWithImpl<$Res> extends _$UserCopyWithImpl<$Res>
 
 /// @nodoc
 class _$_User extends _User {
-  _$_User({@required this.anonymouseUserID, this.setting})
+  _$_User(
+      {@required this.anonymouseUserID,
+      @JsonKey(name: "settings") this.setting})
       : assert(anonymouseUserID != null),
         super._();
 
@@ -132,6 +139,7 @@ class _$_User extends _User {
   @override
   final String anonymouseUserID;
   @override
+  @JsonKey(name: "settings")
   final Setting setting;
 
   @override
@@ -168,13 +176,16 @@ class _$_User extends _User {
 
 abstract class _User extends User {
   _User._() : super._();
-  factory _User({@required String anonymouseUserID, Setting setting}) = _$_User;
+  factory _User(
+      {@required String anonymouseUserID,
+      @JsonKey(name: "settings") Setting setting}) = _$_User;
 
   factory _User.fromJson(Map<String, dynamic> json) = _$_User.fromJson;
 
   @override
   String get anonymouseUserID;
   @override
+  @JsonKey(name: "settings")
   Setting get setting;
   @override
   _$UserCopyWith<_User> get copyWith;
