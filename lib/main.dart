@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/all.dart';
 import 'package:intl/date_symbol_data_local.dart';
 
-import 'main/application/router.dart';
+import 'main/application/router.dart' as router;
 
 void main() {
   initializeDateFormatting('ja_JP');
@@ -33,7 +33,7 @@ class App extends StatelessWidget {
           ),
         ),
       ),
-      routes: Router.routes(),
+      routes: router.Router.routes(),
     );
   }
 }
