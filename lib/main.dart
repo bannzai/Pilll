@@ -12,7 +12,7 @@ Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   initializeDateFormatting('ja_JP');
   await Firebase.initializeApp();
-  runApp(ProviderScope(child: App()));
+  runApp(App());
 }
 
 class App extends StatelessWidget {
