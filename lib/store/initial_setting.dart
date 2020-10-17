@@ -20,7 +20,7 @@ class InitialSettingStateStore extends StateNotifier<InitialSettingState> {
     state = state.copyWith(entity: closure(state.entity));
   }
 
-  void register(InitialSettingModel initialSetting) {
-    _service.register(initialSetting);
+  Future<void> register(InitialSettingModel initialSetting) {
+    return _service.register(initialSetting);
   }
 }

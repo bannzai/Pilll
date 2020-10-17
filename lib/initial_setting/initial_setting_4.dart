@@ -1,3 +1,4 @@
+import 'package:Pilll/main/application/router.dart';
 import 'package:Pilll/model/initial_setting.dart';
 import 'package:Pilll/store/initial_setting.dart';
 import 'package:Pilll/style/button.dart';
@@ -95,14 +96,17 @@ class InitialSetting4 extends HookWidget {
                   PrimaryButton(
                     text: "設定",
                     onPressed: () {
-                      store.register(state.entity.copyWith(isOnReminder: true));
+                      store
+                          .register(state.entity.copyWith(isOnReminder: true))
+                          .then((_) => AppRouter.endInitialSetting(context));
                     },
                   ),
                   TertiaryButton(
                     text: "スキップ",
                     onPressed: () {
                       store
-                          .register(state.entity.copyWith(isOnReminder: false));
+                          .register(state.entity.copyWith(isOnReminder: false))
+                          .then((_) => AppRouter.endInitialSetting(context));
                     },
                   ),
                 ],

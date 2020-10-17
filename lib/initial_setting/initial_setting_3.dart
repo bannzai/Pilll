@@ -1,3 +1,4 @@
+import 'package:Pilll/main/application/router.dart';
 import 'package:Pilll/main/components/setting_menstruation_page.dart';
 import 'package:Pilll/initial_setting/initial_setting_4.dart';
 import 'package:Pilll/store/initial_setting.dart';
@@ -24,7 +25,10 @@ class InitialSetting3 extends HookWidget {
         );
       },
       skip: () {
-        store.register(state.entity);
+        store
+            .register(state.entity)
+            .then((_) => AppRouter.endInitialSetting(context));
+        ;
       },
       model: SettingMenstruationPageModel(
         selectedFromMenstruation: state.entity.fromMenstruation,
