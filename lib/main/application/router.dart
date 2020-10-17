@@ -6,7 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/all.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-class Router {
+class AppRouter {
   static Map<String, WidgetBuilder> routes() {
     return {
       Routes.root: (BuildContext context) => ProviderScope(child: Root()),
