@@ -49,11 +49,9 @@ class PillSheetService extends PillSheetServiceInterface {
 
     var json = copied.toJson();
     json.remove("id");
-    return _database
-        .pillSheetsReference()
-        .add(json)
-        .then((_) => model)
-        .catchError((error) {
+    return _database.pillSheetsReference().add(json).then((value) {
+      return PillSheetModel.fromJson(json..addAll({"id": value.id}));
+    }).catchError((error) {
       throw UserDisplayedError(
           error: error, displayedMessage: "ピルシートの登録に失敗しました。再度お試しください");
     });
