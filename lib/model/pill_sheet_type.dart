@@ -1,5 +1,4 @@
 import 'package:Pilll/model/pill_sheet.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 enum PillSheetType {
@@ -122,12 +121,6 @@ extension PillSheetTypeFunctions on PillSheetType {
         assert(false);
         return null;
     }
-  }
-
-  DocumentReference get documentReference {
-    return FirebaseFirestore.instance
-        .collection(PillSheetTypeFunctions.firestoreCollectionPath)
-        .doc(firestorePath);
   }
 
   PillSheetTypeInfo get typeInfo => PillSheetTypeInfo(

@@ -1,65 +1,65 @@
 import 'package:Pilll/main/application/router.dart';
 import 'package:Pilll/main/components/indicator.dart';
-import 'package:Pilll/model/app_state.dart';
-import 'package:Pilll/repository/user.dart';
+import 'package:Pilll/model/user.dart';
+import 'package:Pilll/service/user.dart';
 import 'package:Pilll/theme/color.dart';
 import 'package:Pilll/util/shared_preference/keys.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_hooks/flutter_hooks.dart';
+import 'package:hooks_riverpod/all.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:firebase_core/firebase_core.dart';
-import 'package:firebase_auth/firebase_auth.dart';
 
-class Root extends StatefulWidget {
-  Root({Key key}) : super(key: key);
-
-  @override
-  RootState createState() => RootState();
-}
-
-class RootState extends State<Root> {
-  @override
-  void initState() {
-    super.initState();
-    Firebase.initializeApp().then((app) {
-      print("app name is $app.name");
-      return FirebaseAuth.instance.signInAnonymously();
-    }).then((userCredential) {
-      return userRepository.fetchOrCreateUser();
-    }).then((user) {
-      if (user.setting == null) {
-        Navigator.popAndPushNamed(context, Routes.initialSetting);
-        return null;
-      }
-      return SharedPreferences.getInstance().then((storage) {
-        if (!storage.getKeys().contains(StringKey.firebaseAnonymousUserID)) {
-          storage.setString(
-              StringKey.firebaseAnonymousUserID, user.anonymousUserID);
-        }
-        return storage;
-      });
-    }).then((storage) {
-      if (storage == null) {
-        return;
-      }
-      bool didEndInitialSetting = storage.getBool(BoolKey.didEndInitialSetting);
-      if (didEndInitialSetting == null) {
-        Navigator.popAndPushNamed(context, Routes.initialSetting);
-        return;
-      }
-      if (!didEndInitialSetting) {
-        Navigator.popAndPushNamed(context, Routes.initialSetting);
-        return;
-      }
-      Navigator.popAndPushNamed(context, Routes.main);
-      // Navigator.popAndPushNamed(context, Routes.initialSetting);
-    }).then((value) => AppState.shared.subscribe());
-  }
-
+class Root extends HookWidget {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: PilllColors.background,
-      body: Indicator(),
-    );
+    return useProvider(initialUserProvider).when(data: (user) {
+      print("when success: $user");
+      _transition(context, user);
+      return Container();
+    }, loading: () {
+      print("loading ... ");
+      return Scaffold(
+        backgroundColor: PilllColors.background,
+        body: Indicator(),
+      );
+    }, error: (err, stack) {
+      print("err: $err");
+      return Scaffold(
+        backgroundColor: PilllColors.background,
+        body: Indicator(),
+      );
+    });
+  }
+
+  void _transition(BuildContext context, User user) {
+    Future(() async {
+      if (user.setting == null) {
+        Navigator.popAndPushNamed(context, Routes.initialSetting);
+        return Container();
+      }
+      SharedPreferences.getInstance().then((storage) {
+        if (!storage.getKeys().contains(StringKey.firebaseAnonymousUserID)) {
+          storage.setString(
+              StringKey.firebaseAnonymousUserID, user.anonymouseUserID);
+        }
+        return storage;
+      }).then((storage) {
+        if (storage == null) {
+          return;
+        }
+        bool didEndInitialSetting =
+            storage.getBool(BoolKey.didEndInitialSetting);
+        if (didEndInitialSetting == null) {
+          Navigator.popAndPushNamed(context, Routes.initialSetting);
+          return;
+        }
+        if (!didEndInitialSetting) {
+          Navigator.popAndPushNamed(context, Routes.initialSetting);
+          return;
+        }
+        Navigator.popAndPushNamed(context, Routes.main);
+        // Navigator.popAndPushNamed(context, Routes.initialSetting);
+      });
+    });
   }
 }

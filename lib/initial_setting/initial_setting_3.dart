@@ -1,19 +1,17 @@
 import 'package:Pilll/main/application/router.dart';
 import 'package:Pilll/main/components/setting_menstruation_page.dart';
 import 'package:Pilll/initial_setting/initial_setting_4.dart';
-import 'package:Pilll/model/app_state.dart';
+import 'package:Pilll/store/initial_setting.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_hooks/flutter_hooks.dart';
+import 'package:hooks_riverpod/all.dart';
 
-class InitialSetting3 extends StatefulWidget {
-  @override
-  _InitialSetting3State createState() => _InitialSetting3State();
-}
-
-class _InitialSetting3State extends State<InitialSetting3> {
+class InitialSetting3 extends HookWidget {
   @override
   Widget build(BuildContext context) {
-    var model = AppState.watch(context);
+    final store = useProvider(initialSettingStoreProvider);
+    final state = useProvider(initialSettingStoreProvider.state);
     return SettingMenstruationPage(
       title: "3/4",
       doneText: "次へ",
@@ -27,24 +25,21 @@ class _InitialSetting3State extends State<InitialSetting3> {
         );
       },
       skip: () {
-        model.initialSetting
-            .register()
-            .then((_) => Router.endInitialSetting(context));
+        store
+            .register(state.entity)
+            .then((_) => AppRouter.endInitialSetting(context));
       },
       model: SettingMenstruationPageModel(
-        selectedFromMenstruation: model.initialSetting.fromMenstruation,
-        selectedDurationMenstruation: model.initialSetting.durationMenstruation,
+        selectedFromMenstruation: state.entity.fromMenstruation,
+        selectedDurationMenstruation: state.entity.durationMenstruation,
       ),
       fromMenstructionDidDecide: (selectedFromMenstruction) {
-        setState(() {
-          model.initialSetting.fromMenstruation = selectedFromMenstruction;
-        });
+        store.modify((model) =>
+            model.copyWith(fromMenstruation: selectedFromMenstruction));
       },
       durationMenstructionDidDecide: (selectedDurationMenstruation) {
-        setState(() {
-          model.initialSetting.durationMenstruation =
-              selectedDurationMenstruation;
-        });
+        store.modify((model) =>
+            model.copyWith(durationMenstruation: selectedDurationMenstruation));
       },
     );
   }

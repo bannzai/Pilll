@@ -3,9 +3,11 @@ import 'package:Pilll/model/firestore_timestamp_converter.dart';
 import 'package:Pilll/model/pill_sheet_type.dart';
 import 'package:Pilll/util/today.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:json_annotation/json_annotation.dart';
 import 'package:meta/meta.dart';
 part 'pill_sheet.g.dart';
+part 'pill_sheet.freezed.dart';
 
 abstract class PillSheetFirestoreKey {
   static final String typeInfo = "typeInfo";
@@ -15,71 +17,58 @@ abstract class PillSheetFirestoreKey {
   static final String beginingDate = "beginingDate";
 }
 
-@JsonSerializable(nullable: false, explicitToJson: true)
-class PillSheetTypeInfo {
-  final String pillSheetTypeReferencePath;
-  final int totalCount;
-  final int dosingPeriod;
-
-  PillSheetTypeInfo({
-    @required this.pillSheetTypeReferencePath,
-    @required this.totalCount,
-    @required this.dosingPeriod,
-  })  : assert(pillSheetTypeReferencePath != null),
-        assert(totalCount != null),
-        assert(dosingPeriod != null);
+@freezed
+abstract class PillSheetTypeInfo with _$PillSheetTypeInfo {
+  @JsonSerializable(nullable: false, explicitToJson: true)
+  factory PillSheetTypeInfo({
+    @required String pillSheetTypeReferencePath,
+    @required int totalCount,
+    @required int dosingPeriod,
+  }) = _PillSheetTypeInfo;
 
   factory PillSheetTypeInfo.fromJson(Map<String, dynamic> json) =>
       _$PillSheetTypeInfoFromJson(json);
-  Map<String, dynamic> toJson() => _$PillSheetTypeInfoToJson(this);
+  Map<String, dynamic> toJson() => _$_$_PillSheetTypeInfoToJson(this);
 }
 
-@JsonSerializable(nullable: true, explicitToJson: true)
-class PillSheetModel {
-  @JsonKey(includeIfNull: false, toJson: toNull)
-  final String id;
+@freezed
+abstract class PillSheetModel implements _$PillSheetModel {
   String get documentID => id;
 
   PillSheetType get sheetType =>
       PillSheetTypeFunctions.fromRawPath(typeInfo.pillSheetTypeReferencePath);
 
-  @JsonKey(nullable: false)
-  PillSheetTypeInfo typeInfo;
-  @JsonKey(
-    nullable: false,
-    fromJson: TimestampConverter.timestampToDateTime,
-    toJson: TimestampConverter.dateTimeToTimestamp,
-  )
-  DateTime beginingDate;
-  @JsonKey(
-    fromJson: TimestampConverter.timestampToDateTime,
-    toJson: TimestampConverter.dateTimeToTimestamp,
-  )
-  DateTime lastTakenDate;
-  @JsonKey(
-    fromJson: TimestampConverter.timestampToDateTime,
-    toJson: TimestampConverter.dateTimeToTimestamp,
-  )
-  DateTime createdAt;
-  @JsonKey(
-    fromJson: TimestampConverter.timestampToDateTime,
-    toJson: TimestampConverter.dateTimeToTimestamp,
-  )
-  DateTime deletedAt;
-
-  @JsonKey(ignore: true)
-  DateTime Function() _today;
-  PillSheetModel({
-    this.id,
-    @required this.typeInfo,
-    @required this.beginingDate,
-    @required this.lastTakenDate,
-    DateTime Function() todayBuilder = today,
-  })  : assert(typeInfo != null),
-        assert(beginingDate != null) {
-    _today = todayBuilder;
-  }
-
+  PillSheetModel._();
+  @JsonSerializable(nullable: true, explicitToJson: true)
+  factory PillSheetModel({
+    @JsonKey(includeIfNull: false, toJson: toNull)
+        String id,
+    @JsonKey(nullable: false)
+    @required
+        PillSheetTypeInfo typeInfo,
+    @JsonKey(
+      nullable: false,
+      fromJson: TimestampConverter.timestampToDateTime,
+      toJson: TimestampConverter.dateTimeToTimestamp,
+    )
+    @required
+        DateTime beginingDate,
+    @JsonKey(
+      fromJson: TimestampConverter.timestampToDateTime,
+      toJson: TimestampConverter.dateTimeToTimestamp,
+    )
+        DateTime lastTakenDate,
+    @JsonKey(
+      fromJson: TimestampConverter.timestampToDateTime,
+      toJson: TimestampConverter.dateTimeToTimestamp,
+    )
+        DateTime createdAt,
+    @JsonKey(
+      fromJson: TimestampConverter.timestampToDateTime,
+      toJson: TimestampConverter.dateTimeToTimestamp,
+    )
+        DateTime deletedAt,
+  }) = _PillSheetModel;
   factory PillSheetModel.create(PillSheetType type) => PillSheetModel(
         typeInfo: type.typeInfo,
         beginingDate: today(),
@@ -88,13 +77,13 @@ class PillSheetModel {
 
   factory PillSheetModel.fromJson(Map<String, dynamic> json) =>
       _$PillSheetModelFromJson(json);
-  Map<String, dynamic> toJson() => _$PillSheetModelToJson(this);
+  Map<String, dynamic> toJson() => _$_$_PillSheetModelToJson(this);
 
   PillSheetType get pillSheetType =>
       PillSheetTypeFunctions.fromRawPath(typeInfo.pillSheetTypeReferencePath);
 
   int get todayPillNumber {
-    var diff = _today().difference(beginingDate).inDays;
+    var diff = today().difference(beginingDate).inDays;
     return diff % pillSheetType.totalCount + 1;
   }
 
@@ -111,6 +100,7 @@ class PillSheetModel {
   }
 
   void resetTodayTakenPillNumber(int pillNumber) {
-    beginingDate = calcBeginingDateFromNextTodayPillNumber(pillNumber);
+    throw UnimplementedError("TODO");
+    // beginingDate = calcBeginingDateFromNextTodayPillNumber(pillNumber);
   }
 }
