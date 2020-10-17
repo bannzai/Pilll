@@ -1,49 +1,39 @@
 import 'package:Pilll/model/pill_sheet_type.dart';
 import 'package:flutter/foundation.dart';
+import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:json_annotation/json_annotation.dart';
 
 part 'setting.g.dart';
+part 'setting.freezed.dart';
 
-@JsonSerializable(explicitToJson: true)
-class ReminderTime {
-  final int hour;
-  final int minute;
-  ReminderTime({
-    @required this.hour,
-    @required this.minute,
-  })  : assert(hour != null),
-        assert(minute != null);
+@freezed
+abstract class ReminderTime with _$ReminderTime {
+  @JsonSerializable(explicitToJson: true)
+  factory ReminderTime({
+    @required int hour,
+    @required int minute,
+  }) = _ReminderTime;
 
   factory ReminderTime.fromJson(Map<String, dynamic> json) =>
       _$ReminderTimeFromJson(json);
-  Map<String, dynamic> toJson() => _$ReminderTimeToJson(this);
+  Map<String, dynamic> toJson() => _$_$_ReminderTimeToJson(this);
 }
 
-@JsonSerializable(explicitToJson: true)
-class Setting {
-  String pillSheetTypeRawPath;
-  int fromMenstruation;
-  int durationMenstruation;
-  ReminderTime reminderTime;
-
-  @JsonKey(defaultValue: false)
-  bool isOnReminder = false;
-
-  Setting({
-    @required this.pillSheetTypeRawPath,
-    @required this.fromMenstruation,
-    @required this.durationMenstruation,
-    @required this.reminderTime,
-    @required this.isOnReminder,
-  })  : assert(pillSheetTypeRawPath != null),
-        assert(fromMenstruation != null),
-        assert(durationMenstruation != null),
-        assert(reminderTime != null),
-        assert(isOnReminder != null);
+@freezed
+abstract class Setting implements _$Setting {
+  Setting._();
+  @JsonSerializable(explicitToJson: true)
+  factory Setting({
+    @required String pillSheetTypeRawPath,
+    @required int fromMenstruation,
+    @required int durationMenstruation,
+    @required ReminderTime reminderTime,
+    @required @JsonSerializable(explicitToJson: true) bool isOnReminder,
+  }) = _Setting;
 
   factory Setting.fromJson(Map<String, dynamic> json) =>
       _$SettingFromJson(json);
-  Map<String, dynamic> toJson() => _$SettingToJson(this);
+  Map<String, dynamic> toJson() => _$_$_SettingToJson(this);
 
   PillSheetType get pillSheetType =>
       PillSheetTypeFunctions.fromRawPath(pillSheetTypeRawPath);

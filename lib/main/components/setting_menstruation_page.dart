@@ -197,12 +197,13 @@ class _SettingMenstruationPageState extends State<SettingMenstruationPage> {
           children: <Widget>[
             PickerToolbar(
               done: (() {
+                this
+                    .widget
+                    .fromMenstructionDidDecide(keepSelectedFromMenstruation);
+                Navigator.pop(context);
                 setState(() {
-                  widget
-                      .fromMenstructionDidDecide(keepSelectedFromMenstruation);
                   this.widget.model.selectedFromMenstruation =
                       keepSelectedFromMenstruation;
-                  Navigator.pop(context);
                 });
               }),
               cancel: (() {
@@ -246,12 +247,12 @@ class _SettingMenstruationPageState extends State<SettingMenstruationPage> {
           children: <Widget>[
             PickerToolbar(
               done: (() {
+                this.widget.durationMenstructionDidDecide(
+                    keepSelectedDurationMenstruation);
+                Navigator.pop(context);
                 setState(() {
-                  widget.durationMenstructionDidDecide(
-                      keepSelectedDurationMenstruation);
-                  widget.model.selectedDurationMenstruation =
+                  this.widget.model.selectedDurationMenstruation =
                       keepSelectedDurationMenstruation;
-                  Navigator.pop(context);
                 });
               }),
               cancel: (() {

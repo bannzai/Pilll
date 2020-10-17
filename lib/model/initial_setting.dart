@@ -2,25 +2,23 @@ import 'package:Pilll/model/pill_mark_type.dart';
 import 'package:Pilll/model/pill_sheet.dart';
 import 'package:Pilll/model/pill_sheet_type.dart';
 import 'package:Pilll/model/setting.dart';
-import 'package:Pilll/repository/setting.dart';
-import 'package:Pilll/repository/user.dart';
-import 'package:Pilll/util/shared_preference/keys.dart';
 import 'package:Pilll/util/today.dart';
-import 'package:shared_preferences/shared_preferences.dart';
+import 'package:freezed_annotation/freezed_annotation.dart';
 
-class InitialSettingModel {
-  // User.Settings
-  int fromMenstruation;
-  int durationMenstruation;
-  int reminderHour;
-  int reminderMinute;
-  bool isOnReminder = false;
+part 'initial_setting.freezed.dart';
 
-  // User/{id}/PillSheet
-  int todayPillNumber;
-
-  // User.Settings & User/{id}/PillSheet
-  PillSheetType pillSheetType;
+@freezed
+abstract class InitialSettingModel implements _$InitialSettingModel {
+  InitialSettingModel._();
+  factory InitialSettingModel.initial({
+    int fromMenstruation,
+    int durationMenstruation,
+    @Default(22) int reminderHour,
+    @Default(0) int reminderMinute,
+    @Default(false) bool isOnReminder,
+    int todayPillNumber,
+    PillSheetType pillSheetType,
+  }) = _InitialSettingModel;
 
   Setting buildSetting() => Setting(
         fromMenstruation: fromMenstruation,
@@ -49,18 +47,6 @@ class InitialSettingModel {
       dosingPeriod: pillSheetType.dosingPeriod,
       totalCount: pillSheetType.totalCount,
     );
-  }
-
-  Future<void> register() {
-    return userRepository.fetchOrCreateUser().then((value) {
-      var setting = this.buildSetting();
-      return settingRepository
-          .save(setting)
-          .then((value) => null)
-          .then((_) => SharedPreferences.getInstance())
-          .then((storage) => storage.setString(
-              StringKey.firebaseAnonymousUserID, value.anonymousUserID));
-    });
   }
 
   PillMarkType pillMarkTypeFor(int number) {

@@ -6,32 +6,33 @@ part of 'setting.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-ReminderTime _$ReminderTimeFromJson(Map<String, dynamic> json) {
-  return ReminderTime(
+_$_ReminderTime _$_$_ReminderTimeFromJson(Map<String, dynamic> json) {
+  return _$_ReminderTime(
     hour: json['hour'] as int,
     minute: json['minute'] as int,
   );
 }
 
-Map<String, dynamic> _$ReminderTimeToJson(ReminderTime instance) =>
+Map<String, dynamic> _$_$_ReminderTimeToJson(_$_ReminderTime instance) =>
     <String, dynamic>{
       'hour': instance.hour,
       'minute': instance.minute,
     };
 
-Setting _$SettingFromJson(Map<String, dynamic> json) {
-  return Setting(
+_$_Setting _$_$_SettingFromJson(Map<String, dynamic> json) {
+  return _$_Setting(
     pillSheetTypeRawPath: json['pillSheetTypeRawPath'] as String,
     fromMenstruation: json['fromMenstruation'] as int,
     durationMenstruation: json['durationMenstruation'] as int,
     reminderTime: json['reminderTime'] == null
         ? null
         : ReminderTime.fromJson(json['reminderTime'] as Map<String, dynamic>),
-    isOnReminder: json['isOnReminder'] as bool ?? false,
+    isOnReminder: json['isOnReminder'] as bool,
   );
 }
 
-Map<String, dynamic> _$SettingToJson(Setting instance) => <String, dynamic>{
+Map<String, dynamic> _$_$_SettingToJson(_$_Setting instance) =>
+    <String, dynamic>{
       'pillSheetTypeRawPath': instance.pillSheetTypeRawPath,
       'fromMenstruation': instance.fromMenstruation,
       'durationMenstruation': instance.durationMenstruation,

@@ -6,7 +6,6 @@ import 'package:Pilll/theme/text_color.dart';
 import 'package:flutter/material.dart';
 
 class InitialSetting extends StatelessWidget {
-  const InitialSetting({Key key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Scaffold(

@@ -1,7 +1,10 @@
 import 'package:Pilll/model/setting.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:meta/meta.dart';
+
+part 'user.g.dart';
+part 'user.freezed.dart';
 
 class UserNotFound implements Exception {
   toString() {
@@ -20,31 +23,14 @@ extension UserFirestoreFieldKeys on String {
   static final settings = "settings";
 }
 
-class User {
-  static final path = "users";
+@freezed
+abstract class User implements _$User {
+  String get documentID => anonymouseUserID;
 
-  final String anonymousUserID;
-  String get documentID => anonymousUserID;
-  final Setting setting;
+  User._();
+  factory User(
+      {@required String anonymouseUserID,
+      @JsonKey(name: "settings") Setting setting}) = _User;
 
-  User._({
-    @required this.anonymousUserID,
-    @required this.setting,
-  });
-
-  static User map(Map<String, dynamic> firestoreDocumentData) {
-    return User._(
-      anonymousUserID:
-          firestoreDocumentData[UserFirestoreFieldKeys.anonymouseUserID],
-      setting: firestoreDocumentData[UserFirestoreFieldKeys.settings] != null
-          ? Setting.fromJson(
-              firestoreDocumentData[UserFirestoreFieldKeys.settings],
-            )
-          : null,
-    );
-  }
-
-  DocumentReference documentReference() {
-    return FirebaseFirestore.instance.collection(User.path).doc(documentID);
-  }
+  factory User.fromJson(Map<String, dynamic> json) => _$UserFromJson(json);
 }
