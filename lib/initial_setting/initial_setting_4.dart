@@ -12,10 +12,6 @@ import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/all.dart';
 
 class InitialSetting4 extends HookWidget {
-  bool _notYetSetTime(InitialSettingModel model) {
-    return model.reminderMinute == null || model.reminderHour == null;
-  }
-
   Widget _time(BuildContext context, InitialSettingModel entity) {
     return Text(
       DateTimeFormatter.militaryTime(entity.reminderDateTime()),
@@ -52,10 +48,6 @@ class InitialSetting4 extends HookWidget {
   Widget build(BuildContext context) {
     final store = useProvider(initialSettingStoreProvider);
     final state = useProvider(initialSettingStoreProvider.state);
-    if (_notYetSetTime(state.entity)) {
-      store.modify(
-          (model) => model.copyWith(reminderHour: 22, reminderMinute: 0));
-    }
     return Scaffold(
       backgroundColor: PilllColors.background,
       appBar: AppBar(
