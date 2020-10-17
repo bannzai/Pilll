@@ -14,9 +14,9 @@ class _$SettingStateTearOff {
   const _$SettingStateTearOff();
 
 // ignore: unused_element
-  _SettingState call({Setting entity = null}) {
+  _SettingState call(Setting entity) {
     return _SettingState(
-      entity: entity,
+      entity,
     );
   }
 }
@@ -98,18 +98,17 @@ class __$SettingStateCopyWithImpl<$Res> extends _$SettingStateCopyWithImpl<$Res>
     Object entity = freezed,
   }) {
     return _then(_SettingState(
-      entity: entity == freezed ? _value.entity : entity as Setting,
+      entity == freezed ? _value.entity : entity as Setting,
     ));
   }
 }
 
 /// @nodoc
 class _$_SettingState extends _SettingState {
-  _$_SettingState({this.entity = null})
+  _$_SettingState(this.entity)
       : assert(entity != null),
         super._();
 
-  @JsonKey(defaultValue: null)
   @override
   final Setting entity;
 
@@ -137,7 +136,7 @@ class _$_SettingState extends _SettingState {
 
 abstract class _SettingState extends SettingState {
   _SettingState._() : super._();
-  factory _SettingState({Setting entity}) = _$_SettingState;
+  factory _SettingState(Setting entity) = _$_SettingState;
 
   @override
   Setting get entity;
