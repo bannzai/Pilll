@@ -10,13 +10,12 @@ abstract class SettingServiceInterface {
   Future<Setting> update(Setting setting);
 }
 
-final settingServiceProvider = Provider((ref) => SettingService(ref.read));
+final settingServiceProvider =
+    Provider((ref) => SettingService(ref.watch(databaseProvider)));
 
 class SettingService extends SettingServiceInterface {
-  final Reader reader;
-  SettingService(this.reader);
-
-  DatabaseConnection get _database => reader(databaseProvider);
+  final DatabaseConnection _database;
+  SettingService(this._database);
 
   Future<Setting> register(InitialSettingModel initialSetting) {
     var setting = initialSetting.buildSetting();
