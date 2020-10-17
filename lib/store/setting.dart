@@ -1,4 +1,3 @@
-import 'package:Pilll/model/initial_setting.dart';
 import 'package:Pilll/model/pill_sheet_type.dart';
 import 'package:Pilll/model/setting.dart';
 import 'package:Pilll/model/user.dart';
@@ -20,12 +19,6 @@ class SettingStateStore extends StateNotifier<SettingState> {
     Future(() async {
       state = SettingState(entity: await _read(userSettingProvider.future));
     });
-  }
-
-  void register(InitialSettingModel initialSetting) {
-    _service
-        .register(initialSetting)
-        .then((entity) => state..copyWith(entity: entity));
   }
 
   void modifyType(PillSheetType pillSheetType) {
