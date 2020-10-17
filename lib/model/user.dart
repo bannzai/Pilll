@@ -1,9 +1,7 @@
 import 'package:Pilll/model/setting.dart';
-import 'package:Pilll/service/user.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:meta/meta.dart';
-import 'package:riverpod/all.dart';
 
 part 'user.g.dart';
 part 'user.freezed.dart';
@@ -19,12 +17,6 @@ class UserAlreadyExists implements Exception {
     return "user already exists";
   }
 }
-
-// ignore: top_level_function_literal_block
-final userSettingProvider = FutureProvider((ref) async {
-  final user = await ref.watch(initialUserProvider.future);
-  return user.setting;
-});
 
 extension UserFirestoreFieldKeys on String {
   static final anonymouseUserID = "anonymouseUserID";
