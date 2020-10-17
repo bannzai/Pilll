@@ -46,14 +46,15 @@ class _TransactionModifier {
       });
       transaction.update(_database.userReference(), {
         UserFirestoreFieldKeys.settings: settingState.entity
-          ..copyWith(pillSheetTypeRawPath: type.rawPath).toJson(),
+            .copyWith(pillSheetTypeRawPath: type.rawPath)
+            .toJson(),
       });
       return;
     }).then((_) {
       pillSheetStore
-          .update(pillSheetState.entity..copyWith(typeInfo: type.typeInfo));
+          .update(pillSheetState.entity.copyWith(typeInfo: type.typeInfo));
       settingStore.update(
-          settingState.entity..copyWith(pillSheetTypeRawPath: type.rawPath));
+          settingState.entity.copyWith(pillSheetTypeRawPath: type.rawPath));
     });
   }
 }
