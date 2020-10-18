@@ -77,14 +77,39 @@ class RecordPage extends HookWidget {
   void _showTakenDialog(BuildContext context) {
     final autoDismiss = Future.delayed(Duration(seconds: 2));
     showDialog(
+        barrierColor: Colors.transparent,
         context: context,
         builder: (BuildContext context) {
           autoDismiss.then((_) => Navigator.of(context).pop());
-          return Dialog(
-            child: Container(
-              width: 200,
-              height: 200,
-              child: SvgPicture.asset('images/check_mark.svg'),
+          return Material(
+            color: Colors.transparent,
+            child: Center(
+              child: Container(
+                decoration: BoxDecoration(
+                  color: PilllColors.modalBackground,
+                  borderRadius: BorderRadius.circular(10),
+                ),
+                width: 200,
+                height: 200,
+                child: Center(
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text(
+                        "飲んだ",
+                        style: FontType.subTitle.merge(TextColorStyle.white),
+                      ),
+                      SizedBox(height: 10),
+                      SvgPicture.asset(
+                        'images/checkmark.svg',
+                        width: 54,
+                        height: 42,
+                        color: PilllColors.white,
+                      ),
+                    ],
+                  ),
+                ),
+              ),
             ),
           );
         });
