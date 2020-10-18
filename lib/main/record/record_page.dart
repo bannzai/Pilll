@@ -38,9 +38,24 @@ class RecordPage extends HookWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: <Widget>[
-          RecordTakenInformation(
-            today: DateTime.now(),
-            pillSheetModel: currentPillSheet,
+          Column(
+            children: [
+              RecordTakenInformation(
+                today: DateTime.now(),
+                pillSheetModel: currentPillSheet,
+              ),
+              ConstrainedBox(
+                constraints: BoxConstraints.expand(height: 26),
+                child: Container(
+                  height: 26,
+                  color: PilllColors.attention,
+                  child: Center(
+                    child: Text("偽薬期間中",
+                        style: FontType.assisting.merge(TextColorStyle.white)),
+                  ),
+                ),
+              ),
+            ],
           ),
           if (currentPillSheet == null)
             _empty(store, settingState.entity.pillSheetType),
