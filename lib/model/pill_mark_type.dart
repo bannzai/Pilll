@@ -19,7 +19,12 @@ extension PillMarkTypeFunctions on PillMarkType {
       case PillMarkType.selected:
         return null;
       case PillMarkType.done:
-        return SvgPicture.asset("images/check_mark.svg");
+        return SvgPicture.asset(
+          "images/checkmark.svg",
+          color: PilllColors.potti,
+          width: 11,
+          height: 8.5,
+        );
       default:
         assert(false);
         return null;
