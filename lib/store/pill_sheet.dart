@@ -15,9 +15,11 @@ class PillSheetStateStore extends StateNotifier<PillSheetState> {
     _reset();
   }
 
+  var firstLoadIsEnded = false;
   void _reset() {
     Future(() async {
       state = PillSheetState(entity: await _service.fetchLast());
+      firstLoadIsEnded = true;
       _subscribe();
     });
   }
