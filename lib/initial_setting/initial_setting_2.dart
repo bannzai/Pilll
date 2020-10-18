@@ -52,7 +52,7 @@ class InitialSetting2 extends HookWidget {
                 pillMarkTypeBuilder: (number) {
                   return state.entity.pillMarkTypeFor(number);
                 },
-                markIsAnimated: null,
+                enabledMarkAnimation: null,
                 markSelected: (number) {
                   store.modify(
                       (model) => model.copyWith(todayPillNumber: number));

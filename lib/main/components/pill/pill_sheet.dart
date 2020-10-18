@@ -14,14 +14,14 @@ class PillSheet extends StatelessWidget {
   static Size size = Size(316, 264);
   final bool isHideWeekdayLine;
   final PillMarkTypeBuilder pillMarkTypeBuilder;
-  final PillMarkTypeHasRippleAnimation markIsAnimated;
+  final PillMarkTypeHasRippleAnimation enabledMarkAnimation;
   final PillMarkSelected markSelected;
 
   const PillSheet({
     Key key,
     @required this.isHideWeekdayLine,
     @required this.pillMarkTypeBuilder,
-    @required this.markIsAnimated,
+    @required this.enabledMarkAnimation,
     @required this.markSelected,
   }) : super(key: key);
 
@@ -45,8 +45,9 @@ class PillSheet extends StatelessWidget {
         Text("$number", style: TextStyle(color: PilllColors.weekday)),
         PillMark(
             key: Key("PillMarkWidget_$number"),
-            hasRippleAnimation:
-                markIsAnimated == null ? false : markIsAnimated(number),
+            hasRippleAnimation: enabledMarkAnimation == null
+                ? false
+                : enabledMarkAnimation(number),
             type: type,
             tapped: () {
               markSelected(number);
