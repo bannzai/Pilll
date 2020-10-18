@@ -1,4 +1,5 @@
 import 'package:Pilll/theme/button.dart';
+import 'package:Pilll/theme/color.dart';
 import 'package:Pilll/theme/text_color.dart';
 import 'package:flutter/material.dart';
 
@@ -57,7 +58,8 @@ class TertiaryButton extends StatelessWidget {
       width: 180,
       height: 44,
       child: FlatButton(
-        textColor: TextColor.gray,
+        color: HexColor.fromHex("BEC0C2"),
+        textColor: TextColor.white,
         child: Text(text),
         onPressed: onPressed,
       ),
