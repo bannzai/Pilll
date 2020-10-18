@@ -103,7 +103,7 @@ class RecordPage extends HookWidget {
         }
         return PillMarkType.normal;
       },
-      markIsAnimated: (number) {
+      enabledMarkAnimation: (number) {
         if (number > pillSheet.typeInfo.dosingPeriod) {
           return false;
         }
