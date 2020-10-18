@@ -75,7 +75,7 @@ class RecordPage extends HookWidget {
   }
 
   void _showTakenDialog(BuildContext context) {
-    final autoDismiss = Future.delayed(Duration(seconds: 2));
+    final autoDismiss = Future.delayed(Duration(milliseconds: 800));
     showDialog(
         barrierColor: Colors.transparent,
         context: context,
