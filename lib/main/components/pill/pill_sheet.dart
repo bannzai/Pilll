@@ -12,14 +12,16 @@ typedef PillMarkTypeHasRippleAnimation = bool Function(int);
 
 class PillSheet extends StatelessWidget {
   static Size size = Size(316, 264);
-  final bool isHideWeekdayLine;
+  final Weekday firstWeekday;
   final PillMarkTypeBuilder pillMarkTypeBuilder;
   final PillMarkTypeHasRippleAnimation enabledMarkAnimation;
   final PillMarkSelected markSelected;
 
+  bool get isHideWeekdayLine => firstWeekday == null;
+
   const PillSheet({
     Key key,
-    @required this.isHideWeekdayLine,
+    this.firstWeekday,
     @required this.pillMarkTypeBuilder,
     @required this.enabledMarkAnimation,
     @required this.markSelected,
