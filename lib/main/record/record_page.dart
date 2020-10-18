@@ -44,17 +44,19 @@ class RecordPage extends HookWidget {
                 today: DateTime.now(),
                 pillSheetModel: currentPillSheet,
               ),
-              ConstrainedBox(
-                constraints: BoxConstraints.expand(height: 26),
-                child: Container(
-                  height: 26,
-                  color: PilllColors.attention,
-                  child: Center(
-                    child: Text("偽薬期間中",
-                        style: FontType.assisting.merge(TextColorStyle.white)),
+              if (_notificationString(currentPillSheet).isNotEmpty)
+                ConstrainedBox(
+                  constraints: BoxConstraints.expand(height: 26),
+                  child: Container(
+                    height: 26,
+                    color: PilllColors.attention,
+                    child: Center(
+                      child: Text(_notificationString(currentPillSheet),
+                          style:
+                              FontType.assisting.merge(TextColorStyle.white)),
+                    ),
                   ),
                 ),
-              ),
             ],
           ),
           if (currentPillSheet == null)
@@ -70,6 +72,31 @@ class RecordPage extends HookWidget {
         ],
       ),
     );
+  }
+
+  String _notificationString(PillSheetModel currentPillSheet) {
+    if (currentPillSheet.typeInfo.dosingPeriod <
+        currentPillSheet.todayPillNumber) {
+      switch (currentPillSheet.pillSheetType) {
+        case PillSheetType.pillsheet_21:
+          return "休薬期間中";
+        case PillSheetType.pillsheet_28_4:
+          return "偽薬期間中";
+        case PillSheetType.pillsheet_28_7:
+          return "偽薬期間中";
+      }
+    }
+
+    final threshold = 4;
+    if (currentPillSheet.typeInfo.dosingPeriod - threshold + 1 <
+        currentPillSheet.todayPillNumber) {
+      final diff = currentPillSheet.typeInfo.dosingPeriod -
+          currentPillSheet.todayPillNumber +
+          1;
+      return "あと$diff日で偽薬期間です";
+    }
+
+    return "";
   }
 
   Widget _takenButton(PillSheetModel pillSheet, PillSheetStateStore store) {
