@@ -48,7 +48,6 @@ class InitialSetting2 extends HookWidget {
               ),
               Spacer(),
               PillSheet(
-                isHideWeekdayLine: true,
                 pillMarkTypeBuilder: (number) {
                   return state.entity.pillMarkTypeFor(number);
                 },
