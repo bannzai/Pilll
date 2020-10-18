@@ -4,6 +4,7 @@ import 'package:Pilll/main/record/record_taken_information.dart';
 import 'package:Pilll/model/pill_mark_type.dart';
 import 'package:Pilll/model/pill_sheet.dart';
 import 'package:Pilll/model/pill_sheet_type.dart';
+import 'package:Pilll/model/weekday.dart';
 import 'package:Pilll/store/pill_sheet.dart';
 import 'package:Pilll/store/setting.dart';
 import 'package:Pilll/style/button.dart';
@@ -186,7 +187,9 @@ class RecordPage extends HookWidget {
     PillSheetStateStore store,
   ) {
     return PillSheet(
-      isHideWeekdayLine: false,
+      firstWeekday: pillSheet.beginingDate == null
+          ? Weekday.Sunday
+          : WeekdayFunctions.weekdayFromDate(pillSheet.beginingDate),
       pillMarkTypeBuilder: (number) {
         if (number <= pillSheet.lastTakenPillNumber) {
           return PillMarkType.done;

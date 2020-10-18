@@ -34,9 +34,11 @@ class PillSheet extends StatelessWidget {
   Widget _weekdayLine() {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      children: List.generate(7, (index) {
-        return WeekdayBadge(weekday: Weekday.values[index]);
-      }),
+      children: WeekdayFunctions.weekdaysForFirstWeekday(firstWeekday)
+          .map(
+            (weekday) => WeekdayBadge(weekday: weekday),
+          )
+          .toList(),
     );
   }
 
