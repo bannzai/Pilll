@@ -23,11 +23,11 @@ class RecordPage extends HookWidget {
       backgroundColor: PilllColors.background,
       appBar: null,
       extendBodyBehindAppBar: true,
-      body: _body(),
+      body: _body(context),
     );
   }
 
-  Widget _body() {
+  Widget _body(BuildContext context) {
     final currentPillSheet = useProvider(pillSheetStoreProvider.state).entity;
     final store = useProvider(pillSheetStoreProvider);
     final settingState = useProvider(settingStoreProvider.state);
@@ -62,16 +62,32 @@ class RecordPage extends HookWidget {
           if (currentPillSheet == null)
             _empty(store, settingState.entity.pillSheetType),
           if (currentPillSheet != null) ...[
-            _pillSheet(currentPillSheet, store),
+            _pillSheet(context, currentPillSheet, store),
             SizedBox(height: 24),
             currentPillSheet.allTaken
                 ? _cancelTakeButton(currentPillSheet, store)
-                : _takenButton(currentPillSheet, store),
+                : _takenButton(context, currentPillSheet, store),
           ],
           SizedBox(height: 8),
         ],
       ),
     );
+  }
+
+  void _showTakenDialog(BuildContext context) {
+    final autoDismiss = Future.delayed(Duration(seconds: 2));
+    showDialog(
+        context: context,
+        builder: (BuildContext context) {
+          autoDismiss.then((_) => Navigator.of(context).pop());
+          return Dialog(
+            child: Container(
+              width: 200,
+              height: 200,
+              child: SvgPicture.asset('images/check_mark.svg'),
+            ),
+          );
+        });
   }
 
   String _notificationString(PillSheetModel currentPillSheet) {
@@ -99,10 +115,14 @@ class RecordPage extends HookWidget {
     return "";
   }
 
-  Widget _takenButton(PillSheetModel pillSheet, PillSheetStateStore store) {
+  Widget _takenButton(
+    BuildContext context,
+    PillSheetModel pillSheet,
+    PillSheetStateStore store,
+  ) {
     return PrimaryButton(
       text: "飲んだ",
-      onPressed: () => _take(pillSheet, today(), store),
+      onPressed: () => _take(context, pillSheet, today(), store),
     );
   }
 
@@ -115,10 +135,15 @@ class RecordPage extends HookWidget {
   }
 
   void _take(
-      PillSheetModel pillSheet, DateTime takenDate, PillSheetStateStore store) {
+    BuildContext context,
+    PillSheetModel pillSheet,
+    DateTime takenDate,
+    PillSheetStateStore store,
+  ) {
     if (pillSheet.todayPillNumber == pillSheet.lastTakenPillNumber) {
       return;
     }
+    _showTakenDialog(context);
     store.take(takenDate);
   }
 
@@ -130,7 +155,11 @@ class RecordPage extends HookWidget {
     store.take(pillSheet.lastTakenDate.subtract(Duration(days: 1)));
   }
 
-  PillSheet _pillSheet(PillSheetModel pillSheet, PillSheetStateStore store) {
+  PillSheet _pillSheet(
+    BuildContext context,
+    PillSheetModel pillSheet,
+    PillSheetStateStore store,
+  ) {
     return PillSheet(
       isHideWeekdayLine: false,
       pillMarkTypeBuilder: (number) {
@@ -162,7 +191,7 @@ class RecordPage extends HookWidget {
           return;
         }
         var takenDate = today().subtract(Duration(days: diff));
-        _take(pillSheet, takenDate, store);
+        _take(context, pillSheet, takenDate, store);
       },
     );
   }
