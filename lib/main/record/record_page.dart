@@ -31,7 +31,7 @@ class RecordPage extends HookWidget {
     final currentPillSheet = useProvider(pillSheetStoreProvider.state).entity;
     final store = useProvider(pillSheetStoreProvider);
     final settingState = useProvider(settingStoreProvider.state);
-    if (settingState.entity == null) {
+    if (settingState.entity == null || !store.firstLoadIsEnded) {
       return Indicator();
     }
     return Center(
