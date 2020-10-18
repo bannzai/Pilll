@@ -35,7 +35,6 @@ class PilllColors {
   static final Color bottomBar = HexColor.fromHex("FAFAFA");
   static final Color border = HexColor.fromHex("DADADA");
   static final Color background = HexColor.fromHex("F4F7F9");
-  static final Color modalBackground = Colors.black.withOpacity(0.5);
   static final Color selected = HexColor.fromHex("FCF1F1");
 
   static final Color blank = Colors.white;
@@ -46,4 +45,7 @@ class PilllColors {
   static final Color duration = HexColor.fromHex("6A7DA5");
 
   static final Color attention = HexColor.fromHex("4E6287");
+  static final Color modalBackground =
+      HexColor.fromHex("333333").withAlpha((255 * 0.7).round());
+  static final Color white = Colors.white;
 }
