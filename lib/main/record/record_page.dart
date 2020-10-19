@@ -4,6 +4,7 @@ import 'package:Pilll/main/record/record_taken_information.dart';
 import 'package:Pilll/model/pill_mark_type.dart';
 import 'package:Pilll/model/pill_sheet.dart';
 import 'package:Pilll/model/pill_sheet_type.dart';
+import 'package:Pilll/model/weekday.dart';
 import 'package:Pilll/store/pill_sheet.dart';
 import 'package:Pilll/store/setting.dart';
 import 'package:Pilll/style/button.dart';
@@ -23,33 +24,50 @@ class RecordPage extends HookWidget {
       backgroundColor: PilllColors.background,
       appBar: null,
       extendBodyBehindAppBar: true,
-      body: _body(),
+      body: _body(context),
     );
   }
 
-  Widget _body() {
+  Widget _body(BuildContext context) {
     final currentPillSheet = useProvider(pillSheetStoreProvider.state).entity;
     final store = useProvider(pillSheetStoreProvider);
     final settingState = useProvider(settingStoreProvider.state);
-    if (settingState.entity == null) {
+    if (settingState.entity == null || !store.firstLoadIsEnded) {
       return Indicator();
     }
     return Center(
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: <Widget>[
-          RecordTakenInformation(
-            today: DateTime.now(),
-            pillSheetModel: currentPillSheet,
+          Column(
+            children: [
+              RecordTakenInformation(
+                today: DateTime.now(),
+                pillSheetModel: currentPillSheet,
+              ),
+              if (_notificationString(currentPillSheet).isNotEmpty)
+                ConstrainedBox(
+                  constraints: BoxConstraints.expand(height: 26),
+                  child: Container(
+                    height: 26,
+                    color: PilllColors.attention,
+                    child: Center(
+                      child: Text(_notificationString(currentPillSheet),
+                          style:
+                              FontType.assisting.merge(TextColorStyle.white)),
+                    ),
+                  ),
+                ),
+            ],
           ),
           if (currentPillSheet == null)
             _empty(store, settingState.entity.pillSheetType),
           if (currentPillSheet != null) ...[
-            _pillSheet(currentPillSheet, store),
+            _pillSheet(context, currentPillSheet, store),
             SizedBox(height: 24),
             currentPillSheet.allTaken
                 ? _cancelTakeButton(currentPillSheet, store)
-                : _takenButton(currentPillSheet, store),
+                : _takenButton(context, currentPillSheet, store),
           ],
           SizedBox(height: 8),
         ],
@@ -57,10 +75,80 @@ class RecordPage extends HookWidget {
     );
   }
 
-  Widget _takenButton(PillSheetModel pillSheet, PillSheetStateStore store) {
+  void _showTakenDialog(BuildContext context) {
+    final autoDismiss = Future.delayed(Duration(milliseconds: 800));
+    showDialog(
+        barrierColor: Colors.transparent,
+        context: context,
+        builder: (BuildContext context) {
+          autoDismiss.then((_) => Navigator.of(context).pop());
+          return Material(
+            color: Colors.transparent,
+            child: Center(
+              child: Container(
+                decoration: BoxDecoration(
+                  color: PilllColors.modalBackground,
+                  borderRadius: BorderRadius.circular(10),
+                ),
+                width: 200,
+                height: 200,
+                child: Center(
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text(
+                        "飲んだ",
+                        style: FontType.subTitle.merge(TextColorStyle.white),
+                      ),
+                      SizedBox(height: 10),
+                      SvgPicture.asset(
+                        'images/checkmark.svg',
+                        width: 54,
+                        height: 42,
+                        color: PilllColors.white,
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+            ),
+          );
+        });
+  }
+
+  String _notificationString(PillSheetModel currentPillSheet) {
+    if (currentPillSheet.typeInfo.dosingPeriod <
+        currentPillSheet.todayPillNumber) {
+      switch (currentPillSheet.pillSheetType) {
+        case PillSheetType.pillsheet_21:
+          return "休薬期間中";
+        case PillSheetType.pillsheet_28_4:
+          return "偽薬期間中";
+        case PillSheetType.pillsheet_28_7:
+          return "偽薬期間中";
+      }
+    }
+
+    final threshold = 4;
+    if (currentPillSheet.typeInfo.dosingPeriod - threshold + 1 <
+        currentPillSheet.todayPillNumber) {
+      final diff = currentPillSheet.typeInfo.dosingPeriod -
+          currentPillSheet.todayPillNumber +
+          1;
+      return "あと$diff日で偽薬期間です";
+    }
+
+    return "";
+  }
+
+  Widget _takenButton(
+    BuildContext context,
+    PillSheetModel pillSheet,
+    PillSheetStateStore store,
+  ) {
     return PrimaryButton(
       text: "飲んだ",
-      onPressed: () => _take(pillSheet, today(), store),
+      onPressed: () => _take(context, pillSheet, today(), store),
     );
   }
 
@@ -73,10 +161,15 @@ class RecordPage extends HookWidget {
   }
 
   void _take(
-      PillSheetModel pillSheet, DateTime takenDate, PillSheetStateStore store) {
+    BuildContext context,
+    PillSheetModel pillSheet,
+    DateTime takenDate,
+    PillSheetStateStore store,
+  ) {
     if (pillSheet.todayPillNumber == pillSheet.lastTakenPillNumber) {
       return;
     }
+    _showTakenDialog(context);
     store.take(takenDate);
   }
 
@@ -88,9 +181,15 @@ class RecordPage extends HookWidget {
     store.take(pillSheet.lastTakenDate.subtract(Duration(days: 1)));
   }
 
-  PillSheet _pillSheet(PillSheetModel pillSheet, PillSheetStateStore store) {
+  PillSheet _pillSheet(
+    BuildContext context,
+    PillSheetModel pillSheet,
+    PillSheetStateStore store,
+  ) {
     return PillSheet(
-      isHideWeekdayLine: false,
+      firstWeekday: pillSheet.beginingDate == null
+          ? Weekday.Sunday
+          : WeekdayFunctions.weekdayFromDate(pillSheet.beginingDate),
       pillMarkTypeBuilder: (number) {
         if (number <= pillSheet.lastTakenPillNumber) {
           return PillMarkType.done;
@@ -103,7 +202,7 @@ class RecordPage extends HookWidget {
         }
         return PillMarkType.normal;
       },
-      markIsAnimated: (number) {
+      enabledMarkAnimation: (number) {
         if (number > pillSheet.typeInfo.dosingPeriod) {
           return false;
         }
@@ -120,7 +219,7 @@ class RecordPage extends HookWidget {
           return;
         }
         var takenDate = today().subtract(Duration(days: diff));
-        _take(pillSheet, takenDate, store);
+        _take(context, pillSheet, takenDate, store);
       },
     );
   }

@@ -15,9 +15,11 @@ class PillSheetStateStore extends StateNotifier<PillSheetState> {
     _reset();
   }
 
+  var firstLoadIsEnded = false;
   void _reset() {
     Future(() async {
       state = PillSheetState(entity: await _service.fetchLast());
+      firstLoadIsEnded = true;
       _subscribe();
     });
   }
@@ -47,9 +49,7 @@ class PillSheetStateStore extends StateNotifier<PillSheetState> {
   }
 
   void take(DateTime takenDate) {
-    _service
-        .update(state.entity.copyWith(lastTakenDate: takenDate))
-        .then((entity) => state = state.copyWith(entity: entity));
+    _service.update(state.entity.copyWith(lastTakenDate: takenDate));
   }
 
   void modifyBeginingDate(DateTime beginingDate) {

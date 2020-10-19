@@ -61,7 +61,7 @@ abstract class InitialSettingModel implements _$InitialSettingModel {
   }
 
   DateTime reminderDateTime() {
-    var t = DateTime.now().toLocal();
+    var t = DateTime.now();
     return DateTime(t.year, t.month, t.day, reminderHour, reminderMinute,
         t.second, t.millisecond, t.microsecond);
   }
