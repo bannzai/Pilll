@@ -12,16 +12,18 @@ typedef PillMarkTypeHasRippleAnimation = bool Function(int);
 
 class PillSheet extends StatelessWidget {
   static Size size = Size(316, 264);
-  final bool isHideWeekdayLine;
+  final Weekday firstWeekday;
   final PillMarkTypeBuilder pillMarkTypeBuilder;
-  final PillMarkTypeHasRippleAnimation markIsAnimated;
+  final PillMarkTypeHasRippleAnimation enabledMarkAnimation;
   final PillMarkSelected markSelected;
+
+  bool get isHideWeekdayLine => firstWeekday == null;
 
   const PillSheet({
     Key key,
-    @required this.isHideWeekdayLine,
+    this.firstWeekday,
     @required this.pillMarkTypeBuilder,
-    @required this.markIsAnimated,
+    @required this.enabledMarkAnimation,
     @required this.markSelected,
   }) : super(key: key);
 
@@ -32,9 +34,11 @@ class PillSheet extends StatelessWidget {
   Widget _weekdayLine() {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      children: List.generate(7, (index) {
-        return WeekdayBadge(weekday: Weekday.values[index]);
-      }),
+      children: WeekdayFunctions.weekdaysForFirstWeekday(firstWeekday)
+          .map(
+            (weekday) => WeekdayBadge(weekday: weekday),
+          )
+          .toList(),
     );
   }
 
@@ -45,8 +49,9 @@ class PillSheet extends StatelessWidget {
         Text("$number", style: TextStyle(color: PilllColors.weekday)),
         PillMark(
             key: Key("PillMarkWidget_$number"),
-            hasRippleAnimation:
-                markIsAnimated == null ? false : markIsAnimated(number),
+            hasRippleAnimation: enabledMarkAnimation == null
+                ? false
+                : enabledMarkAnimation(number),
             type: type,
             tapped: () {
               markSelected(number);

@@ -22,6 +22,11 @@ extension WeekdayFunctions on Weekday {
     return weekdays[weekdayIndex];
   }
 
+  static List<Weekday> weekdaysForFirstWeekday(Weekday firstWeekday) {
+    return Weekday.values.sublist(firstWeekday.index)
+      ..addAll(Weekday.values.sublist(0, firstWeekday.index));
+  }
+
   String weekdayString() {
     switch (this) {
       case Weekday.Sunday:
