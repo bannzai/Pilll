@@ -187,13 +187,13 @@ class _$SettingTearOff {
       {@required String pillSheetTypeRawPath,
       @required int fromMenstruation,
       @required int durationMenstruation,
-      @required ReminderTime reminderTime,
+      @required List<ReminderTime> reminderTimes,
       @required @JsonSerializable(explicitToJson: true) bool isOnReminder}) {
     return _Setting(
       pillSheetTypeRawPath: pillSheetTypeRawPath,
       fromMenstruation: fromMenstruation,
       durationMenstruation: durationMenstruation,
-      reminderTime: reminderTime,
+      reminderTimes: reminderTimes,
       isOnReminder: isOnReminder,
     );
   }
@@ -213,7 +213,7 @@ mixin _$Setting {
   String get pillSheetTypeRawPath;
   int get fromMenstruation;
   int get durationMenstruation;
-  ReminderTime get reminderTime;
+  List<ReminderTime> get reminderTimes;
   @JsonSerializable(explicitToJson: true)
   bool get isOnReminder;
 
@@ -229,10 +229,8 @@ abstract class $SettingCopyWith<$Res> {
       {String pillSheetTypeRawPath,
       int fromMenstruation,
       int durationMenstruation,
-      ReminderTime reminderTime,
+      List<ReminderTime> reminderTimes,
       @JsonSerializable(explicitToJson: true) bool isOnReminder});
-
-  $ReminderTimeCopyWith<$Res> get reminderTime;
 }
 
 /// @nodoc
@@ -248,7 +246,7 @@ class _$SettingCopyWithImpl<$Res> implements $SettingCopyWith<$Res> {
     Object pillSheetTypeRawPath = freezed,
     Object fromMenstruation = freezed,
     Object durationMenstruation = freezed,
-    Object reminderTime = freezed,
+    Object reminderTimes = freezed,
     Object isOnReminder = freezed,
   }) {
     return _then(_value.copyWith(
@@ -261,22 +259,12 @@ class _$SettingCopyWithImpl<$Res> implements $SettingCopyWith<$Res> {
       durationMenstruation: durationMenstruation == freezed
           ? _value.durationMenstruation
           : durationMenstruation as int,
-      reminderTime: reminderTime == freezed
-          ? _value.reminderTime
-          : reminderTime as ReminderTime,
+      reminderTimes: reminderTimes == freezed
+          ? _value.reminderTimes
+          : reminderTimes as List<ReminderTime>,
       isOnReminder:
           isOnReminder == freezed ? _value.isOnReminder : isOnReminder as bool,
     ));
-  }
-
-  @override
-  $ReminderTimeCopyWith<$Res> get reminderTime {
-    if (_value.reminderTime == null) {
-      return null;
-    }
-    return $ReminderTimeCopyWith<$Res>(_value.reminderTime, (value) {
-      return _then(_value.copyWith(reminderTime: value));
-    });
   }
 }
 
@@ -289,11 +277,8 @@ abstract class _$SettingCopyWith<$Res> implements $SettingCopyWith<$Res> {
       {String pillSheetTypeRawPath,
       int fromMenstruation,
       int durationMenstruation,
-      ReminderTime reminderTime,
+      List<ReminderTime> reminderTimes,
       @JsonSerializable(explicitToJson: true) bool isOnReminder});
-
-  @override
-  $ReminderTimeCopyWith<$Res> get reminderTime;
 }
 
 /// @nodoc
@@ -310,7 +295,7 @@ class __$SettingCopyWithImpl<$Res> extends _$SettingCopyWithImpl<$Res>
     Object pillSheetTypeRawPath = freezed,
     Object fromMenstruation = freezed,
     Object durationMenstruation = freezed,
-    Object reminderTime = freezed,
+    Object reminderTimes = freezed,
     Object isOnReminder = freezed,
   }) {
     return _then(_Setting(
@@ -323,9 +308,9 @@ class __$SettingCopyWithImpl<$Res> extends _$SettingCopyWithImpl<$Res>
       durationMenstruation: durationMenstruation == freezed
           ? _value.durationMenstruation
           : durationMenstruation as int,
-      reminderTime: reminderTime == freezed
-          ? _value.reminderTime
-          : reminderTime as ReminderTime,
+      reminderTimes: reminderTimes == freezed
+          ? _value.reminderTimes
+          : reminderTimes as List<ReminderTime>,
       isOnReminder:
           isOnReminder == freezed ? _value.isOnReminder : isOnReminder as bool,
     ));
@@ -340,12 +325,12 @@ class _$_Setting extends _Setting with DiagnosticableTreeMixin {
       {@required this.pillSheetTypeRawPath,
       @required this.fromMenstruation,
       @required this.durationMenstruation,
-      @required this.reminderTime,
+      @required this.reminderTimes,
       @required @JsonSerializable(explicitToJson: true) this.isOnReminder})
       : assert(pillSheetTypeRawPath != null),
         assert(fromMenstruation != null),
         assert(durationMenstruation != null),
-        assert(reminderTime != null),
+        assert(reminderTimes != null),
         assert(isOnReminder != null),
         super._();
 
@@ -359,14 +344,14 @@ class _$_Setting extends _Setting with DiagnosticableTreeMixin {
   @override
   final int durationMenstruation;
   @override
-  final ReminderTime reminderTime;
+  final List<ReminderTime> reminderTimes;
   @override
   @JsonSerializable(explicitToJson: true)
   final bool isOnReminder;
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'Setting(pillSheetTypeRawPath: $pillSheetTypeRawPath, fromMenstruation: $fromMenstruation, durationMenstruation: $durationMenstruation, reminderTime: $reminderTime, isOnReminder: $isOnReminder)';
+    return 'Setting(pillSheetTypeRawPath: $pillSheetTypeRawPath, fromMenstruation: $fromMenstruation, durationMenstruation: $durationMenstruation, reminderTimes: $reminderTimes, isOnReminder: $isOnReminder)';
   }
 
   @override
@@ -377,7 +362,7 @@ class _$_Setting extends _Setting with DiagnosticableTreeMixin {
       ..add(DiagnosticsProperty('pillSheetTypeRawPath', pillSheetTypeRawPath))
       ..add(DiagnosticsProperty('fromMenstruation', fromMenstruation))
       ..add(DiagnosticsProperty('durationMenstruation', durationMenstruation))
-      ..add(DiagnosticsProperty('reminderTime', reminderTime))
+      ..add(DiagnosticsProperty('reminderTimes', reminderTimes))
       ..add(DiagnosticsProperty('isOnReminder', isOnReminder));
   }
 
@@ -394,9 +379,9 @@ class _$_Setting extends _Setting with DiagnosticableTreeMixin {
             (identical(other.durationMenstruation, durationMenstruation) ||
                 const DeepCollectionEquality().equals(
                     other.durationMenstruation, durationMenstruation)) &&
-            (identical(other.reminderTime, reminderTime) ||
+            (identical(other.reminderTimes, reminderTimes) ||
                 const DeepCollectionEquality()
-                    .equals(other.reminderTime, reminderTime)) &&
+                    .equals(other.reminderTimes, reminderTimes)) &&
             (identical(other.isOnReminder, isOnReminder) ||
                 const DeepCollectionEquality()
                     .equals(other.isOnReminder, isOnReminder)));
@@ -408,7 +393,7 @@ class _$_Setting extends _Setting with DiagnosticableTreeMixin {
       const DeepCollectionEquality().hash(pillSheetTypeRawPath) ^
       const DeepCollectionEquality().hash(fromMenstruation) ^
       const DeepCollectionEquality().hash(durationMenstruation) ^
-      const DeepCollectionEquality().hash(reminderTime) ^
+      const DeepCollectionEquality().hash(reminderTimes) ^
       const DeepCollectionEquality().hash(isOnReminder);
 
   @override
@@ -431,7 +416,7 @@ abstract class _Setting extends Setting {
       @required
           int durationMenstruation,
       @required
-          ReminderTime reminderTime,
+          List<ReminderTime> reminderTimes,
       @required
       @JsonSerializable(explicitToJson: true)
           bool isOnReminder}) = _$_Setting;
@@ -445,7 +430,7 @@ abstract class _Setting extends Setting {
   @override
   int get durationMenstruation;
   @override
-  ReminderTime get reminderTime;
+  List<ReminderTime> get reminderTimes;
   @override
   @JsonSerializable(explicitToJson: true)
   bool get isOnReminder;
