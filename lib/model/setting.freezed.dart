@@ -106,10 +106,11 @@ class __$ReminderTimeCopyWithImpl<$Res> extends _$ReminderTimeCopyWithImpl<$Res>
 @JsonSerializable(explicitToJson: true)
 
 /// @nodoc
-class _$_ReminderTime with DiagnosticableTreeMixin implements _ReminderTime {
+class _$_ReminderTime extends _ReminderTime with DiagnosticableTreeMixin {
   _$_ReminderTime({@required this.hour, @required this.minute})
       : assert(hour != null),
-        assert(minute != null);
+        assert(minute != null),
+        super._();
 
   factory _$_ReminderTime.fromJson(Map<String, dynamic> json) =>
       _$_$_ReminderTimeFromJson(json);
@@ -159,7 +160,8 @@ class _$_ReminderTime with DiagnosticableTreeMixin implements _ReminderTime {
   }
 }
 
-abstract class _ReminderTime implements ReminderTime {
+abstract class _ReminderTime extends ReminderTime {
+  _ReminderTime._() : super._();
   factory _ReminderTime({@required int hour, @required int minute}) =
       _$_ReminderTime;
 
