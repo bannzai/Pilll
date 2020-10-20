@@ -40,10 +40,17 @@ class ReminderTimes extends HookWidget {
   }
 
   Widget _component(Setting setting, int number) {
-    return ListTile(
-      title: Text("通知$number"),
-      subtitle:
-          Text(DateTimeFormatter.militaryTime(setting.reminderDateTime())),
+    return Dismissible(
+      key: Key("$number"),
+      onDismissed: (direction) {
+        print("delete action");
+      },
+      background: Container(color: Colors.red),
+      child: ListTile(
+        title: Text("通知$number"),
+        subtitle:
+            Text(DateTimeFormatter.militaryTime(setting.reminderDateTime())),
+      ),
     );
   }
 
