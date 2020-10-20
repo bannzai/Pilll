@@ -1,11 +1,13 @@
 import 'package:Pilll/model/setting.dart';
 import 'package:Pilll/store/setting.dart';
 import 'package:Pilll/theme/color.dart';
+import 'package:Pilll/theme/font.dart';
 import 'package:Pilll/theme/text_color.dart';
 import 'package:Pilll/util/formatter/date_time_formatter.dart';
 import 'package:Pilll/util/shared_preference/toolbar/date_time_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:hooks_riverpod/all.dart';
 
 class ReminderTimes extends HookWidget {
@@ -26,7 +28,7 @@ class ReminderTimes extends HookWidget {
       ),
       body: Container(
         child: ListView(
-          children: _components(context),
+          children: [..._components(context), _footer()],
         ),
       ),
     );
@@ -52,6 +54,24 @@ class ReminderTimes extends HookWidget {
       child: ListTile(
         title: Text("通知$number"),
         subtitle: Text(DateTimeFormatter.militaryTime(reminderTime.dateTime())),
+      ),
+    );
+  }
+
+  Widget _footer() {
+    return GestureDetector(
+      onTap: () {},
+      child: Container(
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            SvgPicture.asset("images/add.svg"),
+            Text(
+              "通知時間の追加",
+              style: FontType.assisting.merge(TextColorStyle.main),
+            )
+          ],
+        ),
       ),
     );
   }
