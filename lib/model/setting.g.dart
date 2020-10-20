@@ -24,9 +24,10 @@ _$_Setting _$_$_SettingFromJson(Map<String, dynamic> json) {
     pillSheetTypeRawPath: json['pillSheetTypeRawPath'] as String,
     fromMenstruation: json['fromMenstruation'] as int,
     durationMenstruation: json['durationMenstruation'] as int,
-    reminderTime: json['reminderTime'] == null
-        ? null
-        : ReminderTime.fromJson(json['reminderTime'] as Map<String, dynamic>),
+    reminderTimes: (json['reminderTimes'] as List)
+        ?.map((e) =>
+            e == null ? null : ReminderTime.fromJson(e as Map<String, dynamic>))
+        ?.toList(),
     isOnReminder: json['isOnReminder'] as bool,
   );
 }
@@ -36,6 +37,7 @@ Map<String, dynamic> _$_$_SettingToJson(_$_Setting instance) =>
       'pillSheetTypeRawPath': instance.pillSheetTypeRawPath,
       'fromMenstruation': instance.fromMenstruation,
       'durationMenstruation': instance.durationMenstruation,
-      'reminderTime': instance.reminderTime?.toJson(),
+      'reminderTimes':
+          instance.reminderTimes?.map((e) => e?.toJson())?.toList(),
       'isOnReminder': instance.isOnReminder,
     };
