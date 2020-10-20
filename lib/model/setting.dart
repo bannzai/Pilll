@@ -17,6 +17,12 @@ abstract class ReminderTime with _$ReminderTime {
   factory ReminderTime.fromJson(Map<String, dynamic> json) =>
       _$ReminderTimeFromJson(json);
   Map<String, dynamic> toJson() => _$_$_ReminderTimeToJson(this);
+
+  DateTime dateTime() {
+    var t = DateTime.now().toLocal();
+    return DateTime(t.year, t.month, t.day, hour, minute, t.second,
+        t.millisecond, t.microsecond);
+  }
 }
 
 @freezed
@@ -37,10 +43,4 @@ abstract class Setting implements _$Setting {
 
   PillSheetType get pillSheetType =>
       PillSheetTypeFunctions.fromRawPath(pillSheetTypeRawPath);
-
-  DateTime reminderDateTime() {
-    var t = DateTime.now().toLocal();
-    return DateTime(t.year, t.month, t.day, reminderTime.hour,
-        reminderTime.minute, t.second, t.millisecond, t.microsecond);
-  }
 }

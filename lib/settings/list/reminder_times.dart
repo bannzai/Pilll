@@ -34,12 +34,15 @@ class ReminderTimes extends HookWidget {
 
   List<Widget> _components(BuildContext context) {
     final state = useProvider(settingStoreProvider.state);
-    return [
-      _component(state.entity, 1),
-    ];
+    return state.entity.reminderTimes
+        .asMap()
+        .map((offset, reminderTime) =>
+            MapEntry(offset, _component(reminderTime, offset + 1)))
+        .values
+        .toList();
   }
 
-  Widget _component(Setting setting, int number) {
+  Widget _component(ReminderTime reminderTime, int number) {
     return Dismissible(
       key: Key("$number"),
       onDismissed: (direction) {
@@ -48,25 +51,25 @@ class ReminderTimes extends HookWidget {
       background: Container(color: Colors.red),
       child: ListTile(
         title: Text("通知$number"),
-        subtitle:
-            Text(DateTimeFormatter.militaryTime(setting.reminderDateTime())),
+        subtitle: Text(DateTimeFormatter.militaryTime(reminderTime.dateTime())),
       ),
     );
   }
 
-  void _showPicker(BuildContext context) {
+  void _showPicker(BuildContext context, int index) {
     final state = useProvider(settingStoreProvider.state);
     final store = useProvider(settingStoreProvider);
     showModalBottomSheet(
       context: context,
       builder: (BuildContext context) {
         return DateTimePicker(
-          initialDateTime: state.entity.reminderDateTime(),
+          initialDateTime: state.entity.reminderTimes[index].dateTime(),
           done: (dateTime) {
             Navigator.pop(context);
-            store.modifyReminderTime(
-              ReminderTime(hour: dateTime.hour, minute: dateTime.minute),
-            );
+            final newReminderTime =
+                ReminderTime(hour: dateTime.hour, minute: dateTime.minute);
+            store.modifyReminderTimes(
+                state.entity.reminderTimes..[index] = newReminderTime);
           },
         );
       },

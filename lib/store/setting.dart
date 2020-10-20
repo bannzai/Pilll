@@ -46,9 +46,9 @@ class SettingStateStore extends StateNotifier<SettingState> {
         .then((entity) => state = state.copyWith(entity: entity));
   }
 
-  void modifyReminderTime(ReminderTime reminderTime) {
+  void modifyReminderTimes(List<ReminderTime> reminderTimes) {
     _service
-        .update(state.entity.copyWith(reminderTime: reminderTime))
+        .update(state.entity.copyWith(reminderTimes: reminderTimes))
         .then((entity) => state = state.copyWith(entity: entity));
   }
 
