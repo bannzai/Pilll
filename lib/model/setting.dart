@@ -7,7 +7,8 @@ part 'setting.g.dart';
 part 'setting.freezed.dart';
 
 @freezed
-abstract class ReminderTime with _$ReminderTime {
+abstract class ReminderTime implements _$ReminderTime {
+  ReminderTime._();
   @JsonSerializable(explicitToJson: true)
   factory ReminderTime({
     @required int hour,
