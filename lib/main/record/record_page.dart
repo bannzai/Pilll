@@ -117,6 +117,9 @@ class RecordPage extends HookWidget {
   }
 
   String _notificationString(PillSheetModel currentPillSheet) {
+    if (currentPillSheet == null) {
+      return "";
+    }
     if (currentPillSheet.typeInfo.dosingPeriod <
         currentPillSheet.todayPillNumber) {
       switch (currentPillSheet.pillSheetType) {
