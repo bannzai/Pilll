@@ -25,7 +25,8 @@ abstract class ReminderTime implements _$ReminderTime {
         t.millisecond, t.microsecond);
   }
 
-  static final int limitCount = 3;
+  static final int maximumCount = 3;
+  static final int minimumCount = 1;
 }
 
 @freezed
