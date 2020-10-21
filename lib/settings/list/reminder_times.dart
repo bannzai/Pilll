@@ -114,14 +114,11 @@ class ReminderTimes extends HookWidget {
           done: (dateTime) {
             Navigator.pop(context);
             if (isEditing) {
-              final newReminderTime =
-                  ReminderTime(hour: dateTime.hour, minute: dateTime.minute);
-              store.modifyReminderTimes(
-                  state.entity.reminderTimes..[index] = newReminderTime);
+              store.editReminderTime(index,
+                  ReminderTime(hour: dateTime.hour, minute: dateTime.minute));
             } else {
-              store.modifyReminderTimes(state.entity.reminderTimes
-                ..add(ReminderTime(
-                    hour: dateTime.hour, minute: dateTime.minute)));
+              store.addReminderTimes(
+                  ReminderTime(hour: dateTime.hour, minute: dateTime.minute));
             }
           },
         );
