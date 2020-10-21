@@ -28,6 +28,12 @@ void main() {
         isOnReminder: false,
         pillSheetTypeRawPath: PillSheetType.pillsheet_28_4.rawPath,
       );
+
+      when(service.fetch())
+          .thenAnswer((realInvocation) => Future.value(setting));
+      when(service.subscribe())
+          .thenAnswer((realInvocation) => Stream.value(setting));
+
       final store = SettingStateStore(service);
 
       when(service.update(setting.copyWith(reminderTimes: [
@@ -42,14 +48,19 @@ void main() {
     test(
         "return exception when setting has reminderTimes count is ${ReminderTime.maximumCount}",
         () {
+      final service = MockSettingService();
       final setting = _FakeSetting([
         ReminderTime(hour: 1, minute: 0),
         ReminderTime(hour: 2, minute: 0),
         ReminderTime(hour: 3, minute: 0)
       ]);
-      final store = SettingStateStore(null);
-      // ignore: invalid_use_of_protected_member
-      store.state = SettingState(entity: setting);
+      when(service.fetch())
+          .thenAnswer((realInvocation) => Future.value(setting));
+      when(service.subscribe())
+          .thenAnswer((realInvocation) => Stream.value(setting));
+
+      final store = SettingStateStore(service);
+
       expect(() => store.addReminderTimes(ReminderTime(hour: 4, minute: 0)),
           throwsException);
     });
@@ -67,6 +78,11 @@ void main() {
         isOnReminder: false,
         pillSheetTypeRawPath: PillSheetType.pillsheet_28_4.rawPath,
       );
+      when(service.fetch())
+          .thenAnswer((realInvocation) => Future.value(setting));
+      when(service.subscribe())
+          .thenAnswer((realInvocation) => Stream.value(setting));
+
       final store = SettingStateStore(service);
 
       when(service.update(setting.copyWith(reminderTimes: [
@@ -79,10 +95,16 @@ void main() {
     test(
         "return exception when setting has remindertimes count is ${ReminderTime.minimumCount}",
         () {
+      final service = MockSettingService();
       final setting = _FakeSetting([
         ReminderTime(hour: 1, minute: 0),
       ]);
-      final store = SettingStateStore(null);
+      when(service.fetch())
+          .thenAnswer((realInvocation) => Future.value(setting));
+      when(service.subscribe())
+          .thenAnswer((realInvocation) => Stream.value(setting));
+
+      final store = SettingStateStore(service);
       // ignore: invalid_use_of_protected_member
       store.state = SettingState(entity: setting);
       expect(() => store.deleteReminderTimes(0), throwsException);
