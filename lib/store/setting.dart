@@ -48,7 +48,7 @@ class SettingStateStore extends StateNotifier<SettingState> {
   }
 
   void modifyReminderTimes(List<ReminderTime> reminderTimes) {
-    if (reminderTimes.length >= ReminderTime.limitCount) {
+    if (reminderTimes.length > ReminderTime.limitCount) {
       throw UserDisplayedError(
           error: null,
           displayedMessage:
