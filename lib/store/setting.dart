@@ -73,15 +73,7 @@ class SettingStateStore extends StateNotifier<SettingState> {
   }
 
   void deleteReminderTimes(int index) {
-    _modifyReminderTimes(state.entity.reminderTimes..remove(index));
-  }
-
-  void deleteReminderTimesImmediately(int index) {
-    state = state.copyWith(
-      entity: state.entity.copyWith(
-        reminderTimes: state.entity.reminderTimes..remove(index),
-      ),
-    );
+    _modifyReminderTimes(state.entity.reminderTimes..removeAt(index));
   }
 
   void modifyIsOnReminder(bool isOnReminder) {
