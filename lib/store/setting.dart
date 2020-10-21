@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:Pilll/model/pill_sheet_type.dart';
 import 'package:Pilll/model/setting.dart';
+import 'package:Pilll/model/user_error.dart';
 import 'package:Pilll/service/setting.dart';
 import 'package:Pilll/state/setting.dart';
 import 'package:riverpod/riverpod.dart';
@@ -47,6 +48,12 @@ class SettingStateStore extends StateNotifier<SettingState> {
   }
 
   void modifyReminderTimes(List<ReminderTime> reminderTimes) {
+    if (reminderTimes.length >= ReminderTime.limitCount) {
+      throw UserDisplayedError(
+          error: null,
+          displayedMessage:
+              "登録できる上限に達しました。${ReminderTime.limitCount}件以内に収めてください");
+    }
     _service
         .update(state.entity.copyWith(reminderTimes: reminderTimes))
         .then((entity) => state = state.copyWith(entity: entity));
