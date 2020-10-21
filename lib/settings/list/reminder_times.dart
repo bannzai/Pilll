@@ -75,7 +75,7 @@ class ReminderTimes extends HookWidget {
 
   Widget _footer(BuildContext context) {
     final state = useProvider(settingStoreProvider.state);
-    if (state.entity.reminderTimes.length >= ReminderTime.limitCount) {
+    if (state.entity.reminderTimes.length >= ReminderTime.maximumCount) {
       return Container();
     }
     final store = useProvider(settingStoreProvider);
