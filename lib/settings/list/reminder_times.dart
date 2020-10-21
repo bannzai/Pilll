@@ -1,6 +1,4 @@
-import 'package:Pilll/main/components/setting_menstruation_page.dart';
 import 'package:Pilll/model/setting.dart';
-import 'package:Pilll/model/user_error.dart';
 import 'package:Pilll/state/setting.dart';
 import 'package:Pilll/store/setting.dart';
 import 'package:Pilll/theme/color.dart';
