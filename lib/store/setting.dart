@@ -17,10 +17,11 @@ class SettingStateStore extends StateNotifier<SettingState> {
   }
 
   void _reset() {
-    Future(() async {
-      state = SettingState(entity: await _service.fetch());
-      _subscribe();
-    });
+    _service
+        .fetch()
+        .then((entity) => SettingState(entity: entity))
+        .then((state) => this.state = state)
+        .then((_) => _subscribe());
   }
 
   StreamSubscription canceller;
