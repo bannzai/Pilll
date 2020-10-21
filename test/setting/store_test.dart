@@ -35,6 +35,8 @@ void main() {
           .thenAnswer((realInvocation) => Stream.value(setting));
 
       final store = SettingStateStore(service);
+      // ignore: invalid_use_of_protected_member
+      store.state = SettingState(entity: setting);
 
       when(service.update(setting.copyWith(reminderTimes: [
         ReminderTime(hour: 1, minute: 0),
@@ -60,6 +62,8 @@ void main() {
           .thenAnswer((realInvocation) => Stream.value(setting));
 
       final store = SettingStateStore(service);
+      // ignore: invalid_use_of_protected_member
+      store.state = SettingState(entity: setting);
 
       expect(() => store.addReminderTimes(ReminderTime(hour: 4, minute: 0)),
           throwsException);
@@ -84,6 +88,8 @@ void main() {
           .thenAnswer((realInvocation) => Stream.value(setting));
 
       final store = SettingStateStore(service);
+      // ignore: invalid_use_of_protected_member
+      store.state = SettingState(entity: setting);
 
       when(service.update(setting.copyWith(reminderTimes: [
         ReminderTime(hour: 1, minute: 0),
