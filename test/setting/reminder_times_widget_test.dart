@@ -3,14 +3,18 @@ import 'package:Pilll/model/setting.dart';
 import 'package:Pilll/settings/list/reminder_times.dart';
 import 'package:Pilll/state/setting.dart';
 import 'package:Pilll/store/setting.dart';
+import 'package:Pilll/util/environment.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:hooks_riverpod/all.dart';
+import 'package:intl/date_symbol_data_local.dart';
+
+import '../helper/supported_device.dart';
 
 void main() {
   setUp(() {
-    WidgetsBinding.instance.renderView.configuration =
-        new TestViewConfiguration(size: const Size(375.0, 667.0));
+    initializeDateFormatting('ja_JP');
+    Environment.isTest = true;
   });
   group("appearance widgets dependend on reminderTimes", () {
     testWidgets(
@@ -45,10 +49,10 @@ void main() {
             findsNothing);
       });
     });
-  });
-  testWidgets('when setting has maximum count reminder times︎',
-      (WidgetTester tester) async {
-    await tester.runAsync(() async {
+    testWidgets('when setting has maximum count reminder times︎',
+        (WidgetTester tester) async {
+      SupportedDeviceType.iPhone5SE2nd.binding(tester.binding.window);
+
       final store = SettingStateStore(null);
       // ignore: invalid_use_of_protected_member
       store.state = SettingState(
@@ -76,9 +80,13 @@ void main() {
           child: MaterialApp(home: ReminderTimes()),
         ),
       );
+      await tester.pumpAndSettle();
+
       expect(find.text("通知時間の追加"), findsNothing);
-      expect(find.byWidgetPredicate((widget) => Widget is Dismissible),
-          findsNWidgets(3));
+      expect(find.byWidgetPredicate((widget) {
+        print(widget);
+        return true;
+      }), findsWidgets);
     });
   });
 }
