@@ -1,4 +1,6 @@
+import 'package:Pilll/main/components/indicator.dart';
 import 'package:Pilll/model/setting.dart';
+import 'package:Pilll/settings/list/settings.dart';
 import 'package:Pilll/state/setting.dart';
 import 'package:Pilll/store/setting.dart';
 import 'package:Pilll/theme/color.dart';
@@ -14,6 +16,10 @@ import 'package:hooks_riverpod/all.dart';
 class ReminderTimes extends HookWidget {
   @override
   Widget build(BuildContext context) {
+    final state = useProvider(settingStoreProvider.state);
+    if (state.entity == null) {
+      return Indicator();
+    }
     return Scaffold(
       backgroundColor: PilllColors.background,
       appBar: AppBar(
@@ -29,14 +35,13 @@ class ReminderTimes extends HookWidget {
       ),
       body: Container(
         child: ListView(
-          children: [..._components(context), _footer(context)],
+          children: [..._components(context, state), _footer(context)],
         ),
       ),
     );
   }
 
-  List<Widget> _components(BuildContext context) {
-    final state = useProvider(settingStoreProvider.state);
+  List<Widget> _components(BuildContext context, SettingState state) {
     return state.entity.reminderTimes
         .asMap()
         .map((offset, reminderTime) =>
