@@ -1,4 +1,5 @@
 import 'package:Pilll/model/setting.dart';
+import 'package:Pilll/model/user_error.dart';
 import 'package:Pilll/store/setting.dart';
 import 'package:Pilll/theme/color.dart';
 import 'package:Pilll/theme/font.dart';
@@ -28,7 +29,7 @@ class ReminderTimes extends HookWidget {
       ),
       body: Container(
         child: ListView(
-          children: [..._components(context), _footer()],
+          children: [..._components(context), _footer(context)],
         ),
       ),
     );
@@ -39,28 +40,44 @@ class ReminderTimes extends HookWidget {
     return state.entity.reminderTimes
         .asMap()
         .map((offset, reminderTime) =>
-            MapEntry(offset, _component(reminderTime, offset + 1)))
+            MapEntry(offset, _component(context, reminderTime, offset + 1)))
         .values
         .toList();
   }
 
-  Widget _component(ReminderTime reminderTime, int number) {
-    return Dismissible(
-      key: Key("$number"),
-      onDismissed: (direction) {
-        print("delete action");
+  Widget _component(
+    BuildContext context,
+    ReminderTime reminderTime,
+    int number,
+  ) {
+    return GestureDetector(
+      onTap: () {
+        _showPicker(context, number - 1);
       },
-      background: Container(color: Colors.red),
-      child: ListTile(
-        title: Text("通知$number"),
-        subtitle: Text(DateTimeFormatter.militaryTime(reminderTime.dateTime())),
+      child: Dismissible(
+        key: Key("$number"),
+        onDismissed: (direction) {
+          print("delete action");
+        },
+        background: Container(color: Colors.red),
+        child: ListTile(
+          title: Text("通知$number"),
+          subtitle:
+              Text(DateTimeFormatter.militaryTime(reminderTime.dateTime())),
+        ),
       ),
     );
   }
 
-  Widget _footer() {
+  Widget _footer(BuildContext context) {
+    final state = useProvider(settingStoreProvider.state);
+    if (state.entity.reminderTimes.length >= ReminderTime.limitCount) {
+      return Container();
+    }
     return GestureDetector(
-      onTap: () {},
+      onTap: () {
+        _showPicker(context, null);
+      },
       child: Container(
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -77,19 +94,28 @@ class ReminderTimes extends HookWidget {
   }
 
   void _showPicker(BuildContext context, int index) {
+    final isEditing = index != null;
     final state = useProvider(settingStoreProvider.state);
     final store = useProvider(settingStoreProvider);
     showModalBottomSheet(
       context: context,
       builder: (BuildContext context) {
         return DateTimePicker(
-          initialDateTime: state.entity.reminderTimes[index].dateTime(),
+          initialDateTime: isEditing
+              ? state.entity.reminderTimes[index].dateTime()
+              : ReminderTime(hour: 22, minute: 0).dateTime(),
           done: (dateTime) {
             Navigator.pop(context);
-            final newReminderTime =
-                ReminderTime(hour: dateTime.hour, minute: dateTime.minute);
-            store.modifyReminderTimes(
-                state.entity.reminderTimes..[index] = newReminderTime);
+            if (isEditing) {
+              final newReminderTime =
+                  ReminderTime(hour: dateTime.hour, minute: dateTime.minute);
+              store.modifyReminderTimes(
+                  state.entity.reminderTimes..[index] = newReminderTime);
+            } else {
+              store.modifyReminderTimes(state.entity.reminderTimes
+                ..add(ReminderTime(
+                    hour: dateTime.hour, minute: dateTime.minute)));
+            }
           },
         );
       },

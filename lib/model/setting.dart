@@ -24,6 +24,8 @@ abstract class ReminderTime implements _$ReminderTime {
     return DateTime(t.year, t.month, t.day, hour, minute, t.second,
         t.millisecond, t.microsecond);
   }
+
+  static final int limitCount = 3;
 }
 
 @freezed
