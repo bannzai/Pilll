@@ -63,8 +63,10 @@ class ReminderTimes extends HookWidget {
         onDismissed: state.entity.reminderTimes.length == 1
             ? null
             : (direction) {
-                store.modifyReminderTimes(
-                    state.entity.reminderTimes..remove(number - 1));
+                store.deleteReminderTimes(number - 1);
+                // NOTE: should modify resource immediately when delete on Dismissed. If it is not modify resource immediately, flutter cause exception about
+                // `Make sure to implement the onDismissed handler and to immediately remove the Dismissible widget from the application once that handler has fired`
+                store.deleteReminderTimesImmediately(number - 1);
               },
         background: Container(color: Colors.red),
         child: ListTile(
