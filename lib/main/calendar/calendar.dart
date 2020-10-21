@@ -49,7 +49,7 @@ class Calendar extends StatelessWidget {
                               line == 1;
                       if (isPreviousMonth) {
                         return CalendarDayTile(
-                            disable: true,
+                            onTap: null,
                             weekday: weekday,
                             day: calculator
                                 .dateTimeForPreviousMonthTile(weekday.index)
@@ -66,6 +66,11 @@ class Calendar extends StatelessWidget {
                       return CalendarDayTile(
                         weekday: weekday,
                         day: day,
+                        onTap: () {
+                          calculator
+                              .dateTimeForFirstDayOfMonth()
+                              .add(Duration(days: day - 1));
+                        },
                       );
                     }).toList(),
                   ),
@@ -136,7 +141,7 @@ class CalendarBand extends StatelessWidget {
 class CalendarDayTile extends StatelessWidget {
   final int day;
   final Weekday weekday;
-  final bool disable;
+  final VoidCallback onTap;
 
   final Widget upperWidget;
   final Widget lowerWidget;
@@ -147,31 +152,34 @@ class CalendarDayTile extends StatelessWidget {
       @required this.weekday,
       this.upperWidget,
       this.lowerWidget,
-      this.disable = false})
+      @required this.onTap})
       : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Expanded(
-      child: Container(
-        height: CalendarConstants.tileHeight,
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
-          children: <Widget>[
-            upperWidget ?? Spacer(),
-            Spacer(),
-            Text(
-              "$day",
-              textAlign: TextAlign.center,
-              style: TextStyle(
-                color: disable
-                    ? weekday.weekdayColor().withAlpha((255 * 0.4).floor())
-                    : weekday.weekdayColor(),
-              ).merge(FontType.calendarDay),
-            ),
-            Spacer(),
-            lowerWidget ?? Spacer(),
-          ],
+    return GestureDetector(
+      onTap: onTap,
+      child: Expanded(
+        child: Container(
+          height: CalendarConstants.tileHeight,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            children: <Widget>[
+              upperWidget ?? Spacer(),
+              Spacer(),
+              Text(
+                "$day",
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  color: onTap == null
+                      ? weekday.weekdayColor().withAlpha((255 * 0.4).floor())
+                      : weekday.weekdayColor(),
+                ).merge(FontType.calendarDay),
+              ),
+              Spacer(),
+              lowerWidget ?? Spacer(),
+            ],
+          ),
         ),
       ),
     );
