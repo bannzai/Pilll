@@ -1,5 +1,7 @@
+import 'package:Pilll/main/components/setting_menstruation_page.dart';
 import 'package:Pilll/model/setting.dart';
 import 'package:Pilll/model/user_error.dart';
+import 'package:Pilll/state/setting.dart';
 import 'package:Pilll/store/setting.dart';
 import 'package:Pilll/theme/color.dart';
 import 'package:Pilll/theme/font.dart';
@@ -50,9 +52,11 @@ class ReminderTimes extends HookWidget {
     ReminderTime reminderTime,
     int number,
   ) {
+    final state = useProvider(settingStoreProvider.state);
+    final store = useProvider(settingStoreProvider);
     return GestureDetector(
       onTap: () {
-        _showPicker(context, number - 1);
+        _showPicker(context, store, state, number - 1);
       },
       child: Dismissible(
         key: Key("$number"),
@@ -74,9 +78,10 @@ class ReminderTimes extends HookWidget {
     if (state.entity.reminderTimes.length >= ReminderTime.limitCount) {
       return Container();
     }
+    final store = useProvider(settingStoreProvider);
     return GestureDetector(
       onTap: () {
-        _showPicker(context, null);
+        _showPicker(context, store, state, null);
       },
       child: Container(
         child: Row(
@@ -93,10 +98,9 @@ class ReminderTimes extends HookWidget {
     );
   }
 
-  void _showPicker(BuildContext context, int index) {
+  void _showPicker(BuildContext context, SettingStateStore store,
+      SettingState state, int index) {
     final isEditing = index != null;
-    final state = useProvider(settingStoreProvider.state);
-    final store = useProvider(settingStoreProvider);
     showModalBottomSheet(
       context: context,
       builder: (BuildContext context) {
