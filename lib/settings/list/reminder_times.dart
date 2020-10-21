@@ -59,7 +59,7 @@ class ReminderTimes extends HookWidget {
         _showPicker(context, store, state, number - 1);
       },
       child: Dismissible(
-        key: Key("$number"),
+        key: ObjectKey(state.entity.reminderTimes[number - 1]),
         onDismissed: state.entity.reminderTimes.length == 1
             ? null
             : (direction) {
