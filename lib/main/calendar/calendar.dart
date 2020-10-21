@@ -1,6 +1,7 @@
 import 'package:Pilll/main/calendar/calculator.dart';
 import 'package:Pilll/main/calendar/calendar_band_model.dart';
 import 'package:Pilll/main/calendar/date_range.dart';
+import 'package:Pilll/main/diary/post_diary_page.dart';
 import 'package:Pilll/main/record/weekday_badge.dart';
 import 'package:Pilll/model/weekday.dart';
 import 'package:Pilll/theme/font.dart';
@@ -67,9 +68,13 @@ class Calendar extends StatelessWidget {
                         weekday: weekday,
                         day: day,
                         onTap: () {
-                          calculator
-                              .dateTimeForFirstDayOfMonth()
-                              .add(Duration(days: day - 1));
+                          Navigator.of(context).push(MaterialPageRoute(
+                            builder: (context) => PostDiaryPage(
+                              date: calculator
+                                  .dateTimeForFirstDayOfMonth()
+                                  .add(Duration(days: day - 1)),
+                            ),
+                          ));
                         },
                       );
                     }).toList(),

@@ -2,9 +2,9 @@ import 'package:Pilll/theme/color.dart';
 import 'package:Pilll/util/formatter/date_time_formatter.dart';
 import 'package:flutter/material.dart';
 
-class PostDiaries extends StatelessWidget {
+class PostDiaryPage extends StatelessWidget {
   final DateTime date;
-  const PostDiaries({Key key, this.date}) : super(key: key);
+  const PostDiaryPage({Key key, this.date}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
