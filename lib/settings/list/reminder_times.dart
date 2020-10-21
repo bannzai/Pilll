@@ -60,9 +60,12 @@ class ReminderTimes extends HookWidget {
       },
       child: Dismissible(
         key: Key("$number"),
-        onDismissed: (direction) {
-          print("delete action");
-        },
+        onDismissed: state.entity.reminderTimes.length == 1
+            ? null
+            : (direction) {
+                store.modifyReminderTimes(
+                    state.entity.reminderTimes..remove(number - 1));
+              },
         background: Container(color: Colors.red),
         child: ListTile(
           title: Text("通知$number"),
