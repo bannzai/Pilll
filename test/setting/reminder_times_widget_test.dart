@@ -93,10 +93,8 @@ void main() {
       await tester.pumpAndSettle();
 
       expect(find.text("通知時間の追加"), findsNothing);
-      expect(find.byWidgetPredicate((widget) {
-        print(widget);
-        return widget is Dismissible;
-      }), findsNWidgets(3));
+      expect(find.byWidgetPredicate((widget) => widget is Dismissible),
+          findsNWidgets(3));
     });
   });
 }
