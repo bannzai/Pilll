@@ -54,27 +54,28 @@ class ReminderTimes extends HookWidget {
   ) {
     final state = useProvider(settingStoreProvider.state);
     final store = useProvider(settingStoreProvider);
-    return GestureDetector(
+
+    Widget body = GestureDetector(
       onTap: () {
         _showPicker(context, store, state, number - 1);
       },
-      child: Dismissible(
-        key: ObjectKey(state.entity.reminderTimes[number - 1]),
-        onDismissed: state.entity.reminderTimes.length == 1
-            ? null
-            : (direction) {
-                store.deleteReminderTimes(number - 1);
-                // NOTE: should modify resource immediately when delete on Dismissed. If it is not modify resource immediately, flutter cause exception about
-                // `Make sure to implement the onDismissed handler and to immediately remove the Dismissible widget from the application once that handler has fired`
-                store.deleteReminderTimesImmediately(number - 1);
-              },
-        background: Container(color: Colors.red),
-        child: ListTile(
-          title: Text("通知$number"),
-          subtitle:
-              Text(DateTimeFormatter.militaryTime(reminderTime.dateTime())),
-        ),
+      child: ListTile(
+        title: Text("通知$number"),
+        subtitle: Text(DateTimeFormatter.militaryTime(reminderTime.dateTime())),
       ),
+    );
+    if (state.entity.reminderTimes.length == 1) {
+      return body;
+    }
+    return Dismissible(
+      key: UniqueKey(),
+      onDismissed: state.entity.reminderTimes.length == 1
+          ? null
+          : (direction) {
+              store.deleteReminderTimes(number - 1);
+            },
+      background: Container(color: Colors.red),
+      child: body,
     );
   }
 
