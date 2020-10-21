@@ -8,6 +8,7 @@ import 'package:Pilll/service/user.dart';
 import 'package:riverpod/all.dart';
 
 abstract class SettingServiceInterface {
+  Future<Setting> fetch();
   Future<Setting> update(Setting setting);
   Stream<Setting> subscribe();
 }
@@ -24,6 +25,11 @@ final userSettingProvider = FutureProvider((ref) async {
 class SettingService extends SettingServiceInterface {
   final DatabaseConnection _database;
   SettingService(this._database);
+
+  Future<Setting> fetch() {
+    return _database.userReference().get().then((event) =>
+        Setting.fromJson(event.data()[UserFirestoreFieldKeys.settings]));
+  }
 
   Stream<Setting> subscribe() {
     return _database
