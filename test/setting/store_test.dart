@@ -29,8 +29,6 @@ void main() {
         pillSheetTypeRawPath: PillSheetType.pillsheet_28_4.rawPath,
       );
       final store = SettingStateStore(service);
-      // ignore: invalid_use_of_protected_member
-      store.state = SettingState(entity: setting);
 
       when(service.update(setting.copyWith(reminderTimes: [
         ReminderTime(hour: 1, minute: 0),
@@ -70,8 +68,6 @@ void main() {
         pillSheetTypeRawPath: PillSheetType.pillsheet_28_4.rawPath,
       );
       final store = SettingStateStore(service);
-      // ignore: invalid_use_of_protected_member
-      store.state = SettingState(entity: setting);
 
       when(service.update(setting.copyWith(reminderTimes: [
         ReminderTime(hour: 1, minute: 0),
