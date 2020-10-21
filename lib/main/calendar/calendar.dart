@@ -162,9 +162,9 @@ class CalendarDayTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: onTap,
-      child: Expanded(
+    return Expanded(
+      child: GestureDetector(
+        onTap: onTap,
         child: Container(
           height: CalendarConstants.tileHeight,
           child: Column(
