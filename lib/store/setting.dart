@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:Pilll/model/pill_sheet_type.dart';
 import 'package:Pilll/model/setting.dart';
+import 'package:Pilll/model/user_error.dart';
 import 'package:Pilll/service/setting.dart';
 import 'package:Pilll/state/setting.dart';
 import 'package:riverpod/riverpod.dart';
@@ -46,10 +47,33 @@ class SettingStateStore extends StateNotifier<SettingState> {
         .then((entity) => state = state.copyWith(entity: entity));
   }
 
-  void modifyReminderTime(ReminderTime reminderTime) {
+  void _modifyReminderTimes(List<ReminderTime> reminderTimes) {
+    if (reminderTimes.length > ReminderTime.maximumCount) {
+      throw UserDisplayedError(
+          error: null,
+          displayedMessage:
+              "登録できる上限に達しました。${ReminderTime.maximumCount}件以内に収めてください");
+    }
+    if (reminderTimes.length < ReminderTime.minimumCount) {
+      throw UserDisplayedError(
+          error: null,
+          displayedMessage: "通知時刻は最低${ReminderTime.minimumCount}件必要です");
+    }
     _service
-        .update(state.entity.copyWith(reminderTime: reminderTime))
+        .update(state.entity.copyWith(reminderTimes: reminderTimes))
         .then((entity) => state = state.copyWith(entity: entity));
+  }
+
+  void addReminderTimes(ReminderTime reminderTime) {
+    _modifyReminderTimes(state.entity.reminderTimes..add(reminderTime));
+  }
+
+  void editReminderTime(int index, ReminderTime reminderTime) {
+    _modifyReminderTimes(state.entity.reminderTimes..[index] = reminderTime);
+  }
+
+  void deleteReminderTimes(int index) {
+    _modifyReminderTimes(state.entity.reminderTimes..removeAt(index));
   }
 
   void modifyIsOnReminder(bool isOnReminder) {

@@ -40,7 +40,7 @@ void main() {
           fromMenstruation: fromMenstruation,
           durationMenstruation: durationMenstruation,
           isOnReminder: false,
-          reminderTime: ReminderTime(hour: 1, minute: 1),
+          reminderTimes: [ReminderTime(hour: 1, minute: 1)],
         );
         assert(pillSheetType.dosingPeriod == 21,
             "menstruationDateRange adding value with dosingPeriod when it will create DateRange. pillsheet_28_7 type has 24 dosingPeriod");
@@ -70,7 +70,7 @@ void main() {
           fromMenstruation: fromMenstruation,
           durationMenstruation: durationMenstruation,
           isOnReminder: false,
-          reminderTime: ReminderTime(hour: 1, minute: 1),
+          reminderTimes: [ReminderTime(hour: 1, minute: 1)],
         );
         assert(pillSheetType.dosingPeriod == 21,
             "menstruationDateRange adding value with dosingPeriod when it will create DateRange. pillsheet_28_7 type has 24 dosingPeriod");
@@ -100,7 +100,7 @@ void main() {
           fromMenstruation: fromMenstruation,
           durationMenstruation: durationMenstruation,
           isOnReminder: false,
-          reminderTime: ReminderTime(hour: 1, minute: 1),
+          reminderTimes: [ReminderTime(hour: 1, minute: 1)],
         );
         assert(pillSheetType.dosingPeriod == 21,
             "menstruationDateRange adding value with dosingPeriod when it will create DateRange. pillsheet_28_7 type has 24 dosingPeriod");
