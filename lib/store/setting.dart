@@ -47,7 +47,7 @@ class SettingStateStore extends StateNotifier<SettingState> {
         .then((entity) => state = state.copyWith(entity: entity));
   }
 
-  void modifyReminderTimes(List<ReminderTime> reminderTimes) {
+  void _modifyReminderTimes(List<ReminderTime> reminderTimes) {
     if (reminderTimes.length > ReminderTime.maximumCount) {
       throw UserDisplayedError(
           error: null,
@@ -62,6 +62,26 @@ class SettingStateStore extends StateNotifier<SettingState> {
     _service
         .update(state.entity.copyWith(reminderTimes: reminderTimes))
         .then((entity) => state = state.copyWith(entity: entity));
+  }
+
+  void addReminderTimes(ReminderTime reminderTime) {
+    _modifyReminderTimes(state.entity.reminderTimes..add(reminderTime));
+  }
+
+  void editReminderTime(int index, ReminderTime reminderTime) {
+    _modifyReminderTimes(state.entity.reminderTimes..[index] = reminderTime);
+  }
+
+  void deleteReminderTimes(int index) {
+    _modifyReminderTimes(state.entity.reminderTimes..remove(index));
+  }
+
+  void deleteReminderTimesImmediately(int index) {
+    state = state.copyWith(
+      entity: state.entity.copyWith(
+        reminderTimes: state.entity.reminderTimes..remove(index),
+      ),
+    );
   }
 
   void modifyIsOnReminder(bool isOnReminder) {
