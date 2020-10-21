@@ -5,13 +5,12 @@ import 'package:Pilll/service/pill_sheet.dart';
 import 'package:Pilll/state/pill_sheet.dart';
 import 'package:riverpod/riverpod.dart';
 
-final pillSheetStoreProvider =
-    StateNotifierProvider((ref) => PillSheetStateStore(ref.read));
+final pillSheetStoreProvider = StateNotifierProvider(
+    (ref) => PillSheetStateStore(ref.watch(pillSheetServiceProvider)));
 
 class PillSheetStateStore extends StateNotifier<PillSheetState> {
-  final Reader _read;
-  PillSheetServiceInterface get _service => _read(pillSheetServiceProvider);
-  PillSheetStateStore(this._read) : super(PillSheetState()) {
+  final PillSheetServiceInterface _service;
+  PillSheetStateStore(this._service) : super(PillSheetState()) {
     _reset();
   }
 
