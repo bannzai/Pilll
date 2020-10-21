@@ -4,11 +4,11 @@ import 'package:Pilll/main/components/setting_menstruation_page.dart';
 import 'package:Pilll/model/pill_mark_type.dart';
 import 'package:Pilll/model/pill_sheet.dart';
 import 'package:Pilll/model/pill_sheet_type.dart';
-import 'package:Pilll/model/setting.dart';
 import 'package:Pilll/model/user.dart';
 import 'package:Pilll/provider/auth.dart';
 import 'package:Pilll/settings/list/model.dart';
 import 'package:Pilll/settings/list/modifing_pill_number.dart';
+import 'package:Pilll/settings/list/reminder_times.dart';
 import 'package:Pilll/store/pill_sheet.dart';
 import 'package:Pilll/store/setting.dart';
 import 'package:Pilll/style/button.dart';
@@ -16,7 +16,6 @@ import 'package:Pilll/theme/color.dart';
 import 'package:Pilll/theme/font.dart';
 import 'package:Pilll/theme/text_color.dart';
 import 'package:Pilll/util/formatter/date_time_formatter.dart';
-import 'package:Pilll/util/shared_preference/toolbar/date_time_picker.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
@@ -190,23 +189,14 @@ class Settings extends HookWidget {
           ),
           SettingsListDatePickerRowModel(
             title: "通知時刻",
-            content: DateTimeFormatter.militaryTime(
-                settingState.entity.reminderDateTime()),
+            content: settingState.entity.reminderTimes
+                .map((e) => DateTimeFormatter.militaryTime(e.dateTime()))
+                .join(", "),
             onTap: () {
-              showModalBottomSheet(
-                context: context,
-                builder: (BuildContext context) {
-                  return DateTimePicker(
-                    initialDateTime: settingState.entity.reminderDateTime(),
-                    done: (dateTime) {
-                      Navigator.pop(context);
-                      settingStore.modifyReminderTime(
-                        ReminderTime(
-                            hour: dateTime.hour, minute: dateTime.minute),
-                      );
-                    },
-                  );
-                },
+              Navigator.of(context).push(
+                MaterialPageRoute(builder: (BuildContext context) {
+                  return ReminderTimes();
+                }),
               );
             },
           ),

@@ -7,7 +7,8 @@ part 'setting.g.dart';
 part 'setting.freezed.dart';
 
 @freezed
-abstract class ReminderTime with _$ReminderTime {
+abstract class ReminderTime implements _$ReminderTime {
+  ReminderTime._();
   @JsonSerializable(explicitToJson: true)
   factory ReminderTime({
     @required int hour,
@@ -17,6 +18,15 @@ abstract class ReminderTime with _$ReminderTime {
   factory ReminderTime.fromJson(Map<String, dynamic> json) =>
       _$ReminderTimeFromJson(json);
   Map<String, dynamic> toJson() => _$_$_ReminderTimeToJson(this);
+
+  DateTime dateTime() {
+    var t = DateTime.now().toLocal();
+    return DateTime(t.year, t.month, t.day, hour, minute, t.second,
+        t.millisecond, t.microsecond);
+  }
+
+  static final int maximumCount = 3;
+  static final int minimumCount = 1;
 }
 
 @freezed
@@ -27,7 +37,7 @@ abstract class Setting implements _$Setting {
     @required String pillSheetTypeRawPath,
     @required int fromMenstruation,
     @required int durationMenstruation,
-    @required ReminderTime reminderTime,
+    @required List<ReminderTime> reminderTimes,
     @required @JsonSerializable(explicitToJson: true) bool isOnReminder,
   }) = _Setting;
 
@@ -37,10 +47,4 @@ abstract class Setting implements _$Setting {
 
   PillSheetType get pillSheetType =>
       PillSheetTypeFunctions.fromRawPath(pillSheetTypeRawPath);
-
-  DateTime reminderDateTime() {
-    var t = DateTime.now().toLocal();
-    return DateTime(t.year, t.month, t.day, reminderTime.hour,
-        reminderTime.minute, t.second, t.millisecond, t.microsecond);
-  }
 }

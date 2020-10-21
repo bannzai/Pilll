@@ -24,7 +24,9 @@ abstract class InitialSettingModel implements _$InitialSettingModel {
         fromMenstruation: fromMenstruation,
         durationMenstruation: durationMenstruation,
         pillSheetTypeRawPath: pillSheetType.rawPath,
-        reminderTime: ReminderTime(hour: reminderHour, minute: reminderMinute),
+        reminderTimes: [
+          ReminderTime(hour: reminderHour, minute: reminderMinute)
+        ],
         isOnReminder: isOnReminder,
       );
   PillSheetModel buildPillSheet() => PillSheetModel(
