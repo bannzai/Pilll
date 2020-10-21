@@ -13,7 +13,8 @@ void main() {
         new TestViewConfiguration(size: const Size(375.0, 667.0));
   });
   group("appearance widgets dependend on reminderTimes", () {
-    testWidgets('when setting has one reminder times︎',
+    testWidgets(
+        'when setting has one reminder times. one reminder times mean requires minimum count',
         (WidgetTester tester) async {
       await tester.runAsync(() async {
         final store = SettingStateStore(null);
@@ -40,7 +41,44 @@ void main() {
           ),
         );
         expect(find.text("通知時間の追加"), findsOneWidget);
+        expect(find.byWidgetPredicate((widget) => Widget is Dismissible),
+            findsNothing);
       });
+    });
+  });
+  testWidgets('when setting has maximum count reminder times︎',
+      (WidgetTester tester) async {
+    await tester.runAsync(() async {
+      final store = SettingStateStore(null);
+      // ignore: invalid_use_of_protected_member
+      store.state = SettingState(
+        entity: Setting(
+          fromMenstruation: 1,
+          durationMenstruation: 2,
+          isOnReminder: false,
+          pillSheetTypeRawPath: PillSheetType.pillsheet_21.rawPath,
+          reminderTimes: [
+            ReminderTime(hour: 10, minute: 0),
+            ReminderTime(hour: 11, minute: 0),
+            ReminderTime(hour: 12, minute: 0)
+          ],
+        ),
+      );
+      await tester.pumpWidget(
+        ProviderScope(
+          overrides: [
+            settingStoreProvider.overrideWithProvider(
+              Provider(
+                (ref) => store,
+              ),
+            )
+          ],
+          child: MaterialApp(home: ReminderTimes()),
+        ),
+      );
+      expect(find.text("通知時間の追加"), findsNothing);
+      expect(find.byWidgetPredicate((widget) => Widget is Dismissible),
+          findsNWidgets(3));
     });
   });
 }
