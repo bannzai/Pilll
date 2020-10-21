@@ -42,7 +42,9 @@ void main() {
       store.addReminderTimes(ReminderTime(hour: 3, minute: 0));
       verify(service.update(setting));
     });
-    test("return exception when ${ReminderTime.maximumCount}", () {
+    test(
+        "return exception when setting has reminderTimes count is ${ReminderTime.maximumCount}",
+        () {
       final setting = _FakeSetting([
         ReminderTime(hour: 1, minute: 0),
         ReminderTime(hour: 2, minute: 0),
@@ -53,6 +55,42 @@ void main() {
       store.state = SettingState(entity: setting);
       expect(() => store.addReminderTimes(ReminderTime(hour: 4, minute: 0)),
           throwsException);
+    });
+  });
+  group("#deleteReminderTimes", () {
+    test("when deleted reminder times ${ReminderTime.maximumCount}", () {
+      final service = MockSettingService();
+      final setting = Setting(
+        reminderTimes: [
+          ReminderTime(hour: 1, minute: 0),
+          ReminderTime(hour: 2, minute: 0),
+        ],
+        durationMenstruation: 1,
+        fromMenstruation: 1,
+        isOnReminder: false,
+        pillSheetTypeRawPath: PillSheetType.pillsheet_28_4.rawPath,
+      );
+      final store = SettingStateStore(service);
+      // ignore: invalid_use_of_protected_member
+      store.state = SettingState(entity: setting);
+
+      when(service.update(setting.copyWith(reminderTimes: [
+        ReminderTime(hour: 1, minute: 0),
+      ]))).thenAnswer((realInvocation) => Future.value(setting));
+
+      store.deleteReminderTimes(1);
+      verify(service.update(setting));
+    });
+    test(
+        "return exception when setting has remindertimes count is ${ReminderTime.minimumCount}",
+        () {
+      final setting = _FakeSetting([
+        ReminderTime(hour: 1, minute: 0),
+      ]);
+      final store = SettingStateStore(null);
+      // ignore: invalid_use_of_protected_member
+      store.state = SettingState(entity: setting);
+      expect(() => store.deleteReminderTimes(0), throwsException);
     });
   });
 }
