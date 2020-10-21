@@ -7,19 +7,18 @@ import 'package:Pilll/service/setting.dart';
 import 'package:Pilll/state/setting.dart';
 import 'package:riverpod/riverpod.dart';
 
-final settingStoreProvider =
-    StateNotifierProvider((ref) => SettingStateStore(ref.read));
+final settingStoreProvider = StateNotifierProvider(
+    (ref) => SettingStateStore(ref.watch(settingServiceProvider)));
 
 class SettingStateStore extends StateNotifier<SettingState> {
-  final Reader _read;
-  SettingServiceInterface get _service => _read(settingServiceProvider);
-  SettingStateStore(this._read) : super(SettingState()) {
+  final SettingServiceInterface _service;
+  SettingStateStore(this._service) : super(SettingState()) {
     _reset();
   }
 
   void _reset() {
     Future(() async {
-      state = SettingState(entity: await _read(userSettingProvider.future));
+      state = SettingState(entity: await _service.fetch());
       _subscribe();
     });
   }
