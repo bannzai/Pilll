@@ -28,6 +28,7 @@ class PostDiaryPage extends StatelessWidget {
             _physicalConditions(),
             Text("体調詳細"),
             _conditions(),
+            _sex(),
           ],
         ),
       ),
@@ -85,6 +86,24 @@ class PostDiaryPage extends StatelessWidget {
     return Wrap(
       spacing: 10,
       children: dataSource.map((e) => Chip(label: Text(e))).toList(),
+    );
+  }
+
+  Widget _sex() {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        Text("sex"),
+        SizedBox(width: 80),
+        Container(
+            padding: EdgeInsets.all(4),
+            width: 32,
+            height: 32,
+            decoration:
+                BoxDecoration(shape: BoxShape.circle, color: Colors.black),
+            child: SvgPicture.asset("images/heart.svg")),
+        Spacer(),
+      ],
     );
   }
 }
