@@ -25,15 +25,9 @@ class PostDiaryPage extends StatelessWidget {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(DateTimeFormatter.yearAndMonthAndDay(date)),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                Text("体調"),
-                Spacer(),
-                _physicalConditions(),
-                Spacer(),
-              ],
-            ),
+            _physicalConditions(),
+            Text("体調詳細"),
+            _conditions(),
           ],
         ),
       ),
@@ -41,26 +35,56 @@ class PostDiaryPage extends StatelessWidget {
   }
 
   Widget _physicalConditions() {
-    return Container(
-      height: 48,
-      decoration: BoxDecoration(
-        border: Border.all(
-          width: 1,
-          color: PilllColors.divider,
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
+      children: [
+        Text("体調"),
+        Spacer(),
+        Container(
+          height: 48,
+          decoration: BoxDecoration(
+            border: Border.all(
+              width: 1,
+              color: PilllColors.divider,
+            ),
+            borderRadius: BorderRadius.circular(10),
+          ),
+          child: Row(
+            children: [
+              IconButton(
+                  icon: SvgPicture.asset("images/laugh.svg"), onPressed: null),
+              Container(
+                  height: 48,
+                  child: VerticalDivider(width: 1, color: PilllColors.divider)),
+              IconButton(
+                  icon: SvgPicture.asset("images/angry.svg"), onPressed: null),
+            ],
+          ),
         ),
-        borderRadius: BorderRadius.circular(10),
-      ),
-      child: Row(
-        children: [
-          IconButton(
-              icon: SvgPicture.asset("images/laugh.svg"), onPressed: null),
-          Container(
-              height: 48,
-              child: VerticalDivider(width: 1, color: PilllColors.divider)),
-          IconButton(
-              icon: SvgPicture.asset("images/angry.svg"), onPressed: null),
-        ],
-      ),
+        Spacer(),
+      ],
+    );
+  }
+
+  Widget _conditions() {
+    // TODO: move to firestore
+    final dataSource = [
+      "頭痛",
+      "腹痛",
+      "吐き気",
+      "貧血",
+      "下痢",
+      "便秘",
+      "ほてり",
+      "眠気",
+      "腰痛",
+      "動悸",
+      "不正出血",
+      "食欲不振",
+    ];
+    return Wrap(
+      spacing: 10,
+      children: dataSource.map((e) => Chip(label: Text(e))).toList(),
     );
   }
 }
