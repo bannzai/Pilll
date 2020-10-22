@@ -1,4 +1,6 @@
 import 'package:Pilll/theme/color.dart';
+import 'package:Pilll/theme/font.dart';
+import 'package:Pilll/theme/text_color.dart';
 import 'package:Pilll/util/formatter/date_time_formatter.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
@@ -85,7 +87,13 @@ class PostDiaryPage extends StatelessWidget {
     ];
     return Wrap(
       spacing: 10,
-      children: dataSource.map((e) => Chip(label: Text(e))).toList(),
+      children: dataSource
+          .map((e) => Chip(
+                label: Text(e,
+                    style: FontType.assisting.merge(TextColorStyle.darkGray)),
+                backgroundColor: PilllColors.sheet,
+              ))
+          .toList(),
     );
   }
 
@@ -100,8 +108,9 @@ class PostDiaryPage extends StatelessWidget {
             width: 32,
             height: 32,
             decoration:
-                BoxDecoration(shape: BoxShape.circle, color: Colors.black),
-            child: SvgPicture.asset("images/heart.svg")),
+                BoxDecoration(shape: BoxShape.circle, color: PilllColors.sheet),
+            child: SvgPicture.asset("images/heart.svg",
+                color: TextColor.darkGray)),
         Spacer(),
       ],
     );

@@ -1,3 +1,4 @@
+import 'package:Pilll/store/pill_sheet.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
@@ -48,4 +49,6 @@ class PilllColors {
   static final Color modalBackground =
       HexColor.fromHex("333333").withAlpha((255 * 0.7).round());
   static final Color white = Colors.white;
+
+  static Color get sheet => PilllColors.pillSheet;
 }
