@@ -14,6 +14,7 @@ class PostDiaryPage extends StatefulWidget {
 }
 
 class _PostDiaryPageState extends State<PostDiaryPage> {
+  List<String> selectedConditions = [];
   List<String> get dataSource => [
         "頭痛",
         "腹痛",
@@ -95,10 +96,20 @@ class _PostDiaryPageState extends State<PostDiaryPage> {
       children: dataSource
           .map((e) => ChoiceChip(
                 label: Text(e),
-                labelStyle: FontType.assisting.merge(TextColorStyle.black),
+                labelStyle: FontType.assisting.merge(
+                    selectedConditions.contains(e)
+                        ? TextColorStyle.primary
+                        : TextColorStyle.darkGray),
                 disabledColor: PilllColors.disabledSheet,
                 selectedColor: PilllColors.primarySheet,
-                selected: false,
+                selected: selectedConditions.contains(e),
+                onSelected: (selected) {
+                  setState(() {
+                    selectedConditions.contains(e)
+                        ? selectedConditions.remove(e)
+                        : selectedConditions.add(e);
+                  });
+                },
               ))
           .toList(),
     );
