@@ -88,10 +88,12 @@ class PostDiaryPage extends StatelessWidget {
     return Wrap(
       spacing: 10,
       children: dataSource
-          .map((e) => Chip(
-                label: Text(e,
-                    style: FontType.assisting.merge(TextColorStyle.darkGray)),
-                backgroundColor: PilllColors.sheet,
+          .map((e) => ChoiceChip(
+                label: Text(e),
+                labelStyle: FontType.assisting.merge(TextColorStyle.black),
+                disabledColor: PilllColors.disabledSheet,
+                selectedColor: PilllColors.primarySheet,
+                selected: false,
               ))
           .toList(),
     );
@@ -107,8 +109,8 @@ class PostDiaryPage extends StatelessWidget {
             padding: EdgeInsets.all(4),
             width: 32,
             height: 32,
-            decoration:
-                BoxDecoration(shape: BoxShape.circle, color: PilllColors.sheet),
+            decoration: BoxDecoration(
+                shape: BoxShape.circle, color: PilllColors.disabledSheet),
             child: SvgPicture.asset("images/heart.svg",
                 color: TextColor.darkGray)),
         Spacer(),
