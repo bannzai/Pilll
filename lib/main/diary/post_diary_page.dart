@@ -1,8 +1,11 @@
+import 'package:Pilll/style/button.dart';
 import 'package:Pilll/theme/color.dart';
 import 'package:Pilll/theme/font.dart';
 import 'package:Pilll/theme/text_color.dart';
 import 'package:Pilll/util/formatter/date_time_formatter.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_svg/svg.dart';
 
 class PostDiaryPage extends StatefulWidget {
@@ -29,6 +32,7 @@ class _PostDiaryPageState extends State<PostDiaryPage> {
         "不正出血",
         "食欲不振",
       ];
+  FocusNode focusNode = FocusNode();
 
   @override
   Widget build(BuildContext context) {
@@ -52,6 +56,8 @@ class _PostDiaryPageState extends State<PostDiaryPage> {
             Text("体調詳細"),
             _conditions(),
             _sex(),
+            _memo(),
+            if (this.focusNode.hasFocus) _keyboardToolbar(),
           ],
         ),
       ),
@@ -132,5 +138,43 @@ class _PostDiaryPageState extends State<PostDiaryPage> {
         Spacer(),
       ],
     );
+  }
+
+  Widget _keyboardToolbar() {
+    return Container(
+        height: 44.0,
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.end,
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            SecondaryButton(
+              text: '完了',
+              onPressed: () {
+                focusNode.unfocus(); //unfocus()でフォーカスが外れる
+              },
+            )
+          ],
+        ));
+  }
+
+  Widget _memo() {
+    return TextField(
+      decoration: InputDecoration(hintText: "メモ"),
+      maxLines: null,
+      maxLength: 500,
+      keyboardType: TextInputType.multiline,
+      focusNode: this.focusNode,
+    );
+    // return ListView(
+    //   children: [
+    //     TextField(
+    //       decoration: InputDecoration(hintText: "メモ"),
+    //       maxLines: null,
+    //       maxLength: 500,
+    //       keyboardType: TextInputType.multiline,
+    //       focusNode: this.focusNode,
+    //     ),
+    //   ],
+    // );
   }
 }
