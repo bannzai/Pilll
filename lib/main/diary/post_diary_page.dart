@@ -5,9 +5,29 @@ import 'package:Pilll/util/formatter/date_time_formatter.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
-class PostDiaryPage extends StatelessWidget {
+class PostDiaryPage extends StatefulWidget {
   final DateTime date;
   const PostDiaryPage({Key key, this.date}) : super(key: key);
+
+  @override
+  _PostDiaryPageState createState() => _PostDiaryPageState();
+}
+
+class _PostDiaryPageState extends State<PostDiaryPage> {
+  List<String> get dataSource => [
+        "頭痛",
+        "腹痛",
+        "吐き気",
+        "貧血",
+        "下痢",
+        "便秘",
+        "ほてり",
+        "眠気",
+        "腰痛",
+        "動悸",
+        "不正出血",
+        "食欲不振",
+      ];
 
   @override
   Widget build(BuildContext context) {
@@ -26,7 +46,7 @@ class PostDiaryPage extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text(DateTimeFormatter.yearAndMonthAndDay(date)),
+            Text(DateTimeFormatter.yearAndMonthAndDay(widget.date)),
             _physicalConditions(),
             Text("体調詳細"),
             _conditions(),
@@ -70,21 +90,6 @@ class PostDiaryPage extends StatelessWidget {
   }
 
   Widget _conditions() {
-    // TODO: move to firestore
-    final dataSource = [
-      "頭痛",
-      "腹痛",
-      "吐き気",
-      "貧血",
-      "下痢",
-      "便秘",
-      "ほてり",
-      "眠気",
-      "腰痛",
-      "動悸",
-      "不正出血",
-      "食欲不振",
-    ];
     return Wrap(
       spacing: 10,
       children: dataSource
