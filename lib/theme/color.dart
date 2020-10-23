@@ -50,5 +50,6 @@ class PilllColors {
       HexColor.fromHex("333333").withAlpha((255 * 0.7).round());
   static final Color white = Colors.white;
 
-  static Color get sheet => PilllColors.pillSheet;
+  static Color get disabledSheet => PilllColors.pillSheet;
+  static final Color primarySheet = HexColor.fromHex("FDF2F2");
 }
