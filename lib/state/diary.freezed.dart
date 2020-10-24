@@ -10,12 +10,12 @@ part of 'diary.dart';
 T _$identity<T>(T value) => value;
 
 /// @nodoc
-class _$DiaryStateTearOff {
-  const _$DiaryStateTearOff();
+class _$DiariesStateTearOff {
+  const _$DiariesStateTearOff();
 
 // ignore: unused_element
-  _DiaryState call({List<Diary> entities = const []}) {
-    return _DiaryState(
+  _DiariesState call({List<Diary> entities = const []}) {
+    return _DiariesState(
       entities: entities,
     );
   }
@@ -23,30 +23,30 @@ class _$DiaryStateTearOff {
 
 /// @nodoc
 // ignore: unused_element
-const $DiaryState = _$DiaryStateTearOff();
+const $DiariesState = _$DiariesStateTearOff();
 
 /// @nodoc
-mixin _$DiaryState {
+mixin _$DiariesState {
   List<Diary> get entities;
 
-  $DiaryStateCopyWith<DiaryState> get copyWith;
+  $DiariesStateCopyWith<DiariesState> get copyWith;
 }
 
 /// @nodoc
-abstract class $DiaryStateCopyWith<$Res> {
-  factory $DiaryStateCopyWith(
-          DiaryState value, $Res Function(DiaryState) then) =
-      _$DiaryStateCopyWithImpl<$Res>;
+abstract class $DiariesStateCopyWith<$Res> {
+  factory $DiariesStateCopyWith(
+          DiariesState value, $Res Function(DiariesState) then) =
+      _$DiariesStateCopyWithImpl<$Res>;
   $Res call({List<Diary> entities});
 }
 
 /// @nodoc
-class _$DiaryStateCopyWithImpl<$Res> implements $DiaryStateCopyWith<$Res> {
-  _$DiaryStateCopyWithImpl(this._value, this._then);
+class _$DiariesStateCopyWithImpl<$Res> implements $DiariesStateCopyWith<$Res> {
+  _$DiariesStateCopyWithImpl(this._value, this._then);
 
-  final DiaryState _value;
+  final DiariesState _value;
   // ignore: unused_field
-  final $Res Function(DiaryState) _then;
+  final $Res Function(DiariesState) _then;
 
   @override
   $Res call({
@@ -59,37 +59,38 @@ class _$DiaryStateCopyWithImpl<$Res> implements $DiaryStateCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class _$DiaryStateCopyWith<$Res> implements $DiaryStateCopyWith<$Res> {
-  factory _$DiaryStateCopyWith(
-          _DiaryState value, $Res Function(_DiaryState) then) =
-      __$DiaryStateCopyWithImpl<$Res>;
+abstract class _$DiariesStateCopyWith<$Res>
+    implements $DiariesStateCopyWith<$Res> {
+  factory _$DiariesStateCopyWith(
+          _DiariesState value, $Res Function(_DiariesState) then) =
+      __$DiariesStateCopyWithImpl<$Res>;
   @override
   $Res call({List<Diary> entities});
 }
 
 /// @nodoc
-class __$DiaryStateCopyWithImpl<$Res> extends _$DiaryStateCopyWithImpl<$Res>
-    implements _$DiaryStateCopyWith<$Res> {
-  __$DiaryStateCopyWithImpl(
-      _DiaryState _value, $Res Function(_DiaryState) _then)
-      : super(_value, (v) => _then(v as _DiaryState));
+class __$DiariesStateCopyWithImpl<$Res> extends _$DiariesStateCopyWithImpl<$Res>
+    implements _$DiariesStateCopyWith<$Res> {
+  __$DiariesStateCopyWithImpl(
+      _DiariesState _value, $Res Function(_DiariesState) _then)
+      : super(_value, (v) => _then(v as _DiariesState));
 
   @override
-  _DiaryState get _value => super._value as _DiaryState;
+  _DiariesState get _value => super._value as _DiariesState;
 
   @override
   $Res call({
     Object entities = freezed,
   }) {
-    return _then(_DiaryState(
+    return _then(_DiariesState(
       entities: entities == freezed ? _value.entities : entities as List<Diary>,
     ));
   }
 }
 
 /// @nodoc
-class _$_DiaryState extends _DiaryState {
-  _$_DiaryState({this.entities = const []})
+class _$_DiariesState extends _DiariesState {
+  _$_DiariesState({this.entities = const []})
       : assert(entities != null),
         super._();
 
@@ -99,13 +100,13 @@ class _$_DiaryState extends _DiaryState {
 
   @override
   String toString() {
-    return 'DiaryState(entities: $entities)';
+    return 'DiariesState(entities: $entities)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _DiaryState &&
+        (other is _DiariesState &&
             (identical(other.entities, entities) ||
                 const DeepCollectionEquality()
                     .equals(other.entities, entities)));
@@ -116,16 +117,16 @@ class _$_DiaryState extends _DiaryState {
       runtimeType.hashCode ^ const DeepCollectionEquality().hash(entities);
 
   @override
-  _$DiaryStateCopyWith<_DiaryState> get copyWith =>
-      __$DiaryStateCopyWithImpl<_DiaryState>(this, _$identity);
+  _$DiariesStateCopyWith<_DiariesState> get copyWith =>
+      __$DiariesStateCopyWithImpl<_DiariesState>(this, _$identity);
 }
 
-abstract class _DiaryState extends DiaryState {
-  _DiaryState._() : super._();
-  factory _DiaryState({List<Diary> entities}) = _$_DiaryState;
+abstract class _DiariesState extends DiariesState {
+  _DiariesState._() : super._();
+  factory _DiariesState({List<Diary> entities}) = _$_DiariesState;
 
   @override
   List<Diary> get entities;
   @override
-  _$DiaryStateCopyWith<_DiaryState> get copyWith;
+  _$DiariesStateCopyWith<_DiariesState> get copyWith;
 }
