@@ -1,4 +1,5 @@
 import 'package:Pilll/model/firestore_timestamp_converter.dart';
+import 'package:Pilll/util/formatter/date_time_formatter.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'diary.g.dart';
@@ -24,6 +25,9 @@ abstract class Diary with _$Diary {
     "不正出血",
     "食欲不振",
   ];
+
+  @late
+  String get id => "Diary_${DateTimeFormatter.diaryIdentifier(date)}";
 
   @JsonSerializable(nullable: false, explicitToJson: true)
   factory Diary({
