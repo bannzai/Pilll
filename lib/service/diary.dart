@@ -6,6 +6,7 @@ import 'package:riverpod/all.dart';
 abstract class DiariesServiceInterface {
   Future<List<Diary>> fetchListForMonth(DateTime dateTimeOfMonth);
   Future<Diary> register(Diary diary);
+  Future<Diary> update(Diary diary);
   Stream<List<Diary>> subscribe();
 }
 
@@ -34,7 +35,18 @@ class DiariesService extends DiariesServiceInterface {
 
   @override
   Future<Diary> register(Diary diary) {
-    return _database.diariesReference().add(diary.toJson()).then((_) => diary);
+    return _database
+        .diaryReference(diary)
+        .update(diary.toJson())
+        .then((_) => diary);
+  }
+
+  @override
+  Future<Diary> update(Diary diary) {
+    return _database
+        .diaryReference(diary)
+        .update(diary.toJson())
+        .then((_) => diary);
   }
 
   @override

@@ -36,6 +36,13 @@ class DiariesStateStore extends StateNotifier<DiariesState> {
         .isNotEmpty) throw DiaryAleradyExists(diary);
     _service.register(diary);
   }
+
+  void update(Diary diary) {
+    if (state.entities
+        .where((element) => isSameDay(diary.date, element.date))
+        .isEmpty) throw DiaryIsNotExists(diary);
+    _service.update(diary);
+  }
 }
 
 class DiaryAleradyExists implements Exception {
@@ -44,5 +51,14 @@ class DiaryAleradyExists implements Exception {
   DiaryAleradyExists(this._diary);
   toString() {
     return "diary already exists for date ${_diary.date}";
+  }
+}
+
+class DiaryIsNotExists implements Exception {
+  final Diary _diary;
+
+  DiaryIsNotExists(this._diary);
+  toString() {
+    return "diary is not exists for date ${_diary.date}";
   }
 }
