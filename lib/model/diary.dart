@@ -10,7 +10,7 @@ abstract class DiaryFirestoreKey {
 
 @freezed
 abstract class Diary with _$Diary {
-  static final List<String> all = [
+  static final List<String> physicalConditions = [
     "頭痛",
     "腹痛",
     "吐き気",
