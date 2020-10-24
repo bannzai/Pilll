@@ -1,14 +1,21 @@
 import 'package:Pilll/database/database.dart';
 import 'package:Pilll/model/diary.dart';
+import 'package:Pilll/provider/auth.dart';
+import 'package:riverpod/all.dart';
 
-abstract class DiaryServiceInterface {
+abstract class DiariesServiceInterface {
   Future<List<Diary>> fetchListForMonth(DateTime dateTimeOfMonth);
+  Future<Diary> register(Diary diary);
+  Stream<List<Diary>> subscribe();
 }
 
-class DiaryService extends DiaryServiceInterface {
+final diariesServiceProvider = Provider<DiariesServiceInterface>(
+    (ref) => DiariesService(ref.watch(databaseProvider)));
+
+class DiariesService extends DiariesServiceInterface {
   final DatabaseConnection _database;
 
-  DiaryService(this._database);
+  DiariesService(this._database);
 
   @override
   Future<List<Diary>> fetchListForMonth(DateTime dateTimeOfMonth) {
@@ -23,5 +30,18 @@ class DiaryService extends DiaryServiceInterface {
         .get()
         .then((event) =>
             event.docs.map((doc) => Diary.fromJson(doc.data())).toList());
+  }
+
+  @override
+  Future<Diary> register(Diary diary) {
+    return _database.diariesReference().add(diary.toJson()).then((_) => diary);
+  }
+
+  @override
+  Stream<List<Diary>> subscribe() {
+    return _database
+        .diariesReference()
+        .snapshots()
+        .map((event) => event.docs.map((doc) => Diary.fromJson(doc.data())));
   }
 }
