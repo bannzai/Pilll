@@ -17,6 +17,7 @@ class PostDiaryPage extends StatefulWidget {
 }
 
 class _PostDiaryPageState extends State<PostDiaryPage> {
+  TextEditingController _controller;
   List<String> selectedConditions = [];
   List<String> get dataSource => [
         "頭痛",
@@ -35,9 +36,16 @@ class _PostDiaryPageState extends State<PostDiaryPage> {
   FocusNode focusNode = FocusNode();
 
   @override
+  void initState() {
+    _controller = TextEditingController(text: "aiueo");
+    super.initState();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: PilllColors.background,
+      resizeToAvoidBottomPadding: false,
       appBar: AppBar(
         elevation: 0.0,
         leading: IconButton(
@@ -150,7 +158,9 @@ class _PostDiaryPageState extends State<PostDiaryPage> {
             SecondaryButton(
               text: '完了',
               onPressed: () {
-                focusNode.unfocus(); //unfocus()でフォーカスが外れる
+                setState(() {
+                  focusNode.unfocus(); //unfocus()でフォーカスが外れる
+                });
               },
             )
           ],
@@ -158,23 +168,27 @@ class _PostDiaryPageState extends State<PostDiaryPage> {
   }
 
   Widget _memo() {
-    return TextField(
-      decoration: InputDecoration(hintText: "メモ"),
-      maxLines: null,
-      maxLength: 500,
-      keyboardType: TextInputType.multiline,
-      focusNode: this.focusNode,
+    return Container(
+      color: Colors.blue,
+      child: ConstrainedBox(
+        constraints: BoxConstraints(
+          minWidth: MediaQuery.of(context).size.width,
+          maxWidth: MediaQuery.of(context).size.width,
+          minHeight: 25,
+          maxHeight: 80,
+        ),
+        child: SingleChildScrollView(
+            scrollDirection: Axis.vertical,
+            reverse: true,
+            child: TextField(
+              decoration: InputDecoration(hintText: "メモ"),
+              controller: _controller,
+              maxLines: null,
+              maxLength: 500,
+              keyboardType: TextInputType.multiline,
+              focusNode: this.focusNode,
+            )),
+      ),
     );
-    // return ListView(
-    //   children: [
-    //     TextField(
-    //       decoration: InputDecoration(hintText: "メモ"),
-    //       maxLines: null,
-    //       maxLength: 500,
-    //       keyboardType: TextInputType.multiline,
-    //       focusNode: this.focusNode,
-    //     ),
-    //   ],
-    // );
   }
 }
