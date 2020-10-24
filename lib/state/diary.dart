@@ -7,4 +7,10 @@ part 'diary.freezed.dart';
 abstract class DiariesState implements _$DiariesState {
   DiariesState._();
   factory DiariesState({@Default([]) List<Diary> entities}) = _DiariesState;
+
+  List<Diary> diariesForMonth(DateTime dateTimeOfMonth) {
+    return entities.where((element) =>
+        element.date.year == dateTimeOfMonth.year &&
+        element.date.month == dateTimeOfMonth.month);
+  }
 }
