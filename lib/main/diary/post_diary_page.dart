@@ -1,3 +1,4 @@
+import 'package:Pilll/model/physical_condition.dart';
 import 'package:Pilll/style/button.dart';
 import 'package:Pilll/theme/color.dart';
 import 'package:Pilll/theme/font.dart';
@@ -19,20 +20,6 @@ class PostDiaryPage extends StatefulWidget {
 class _PostDiaryPageState extends State<PostDiaryPage> {
   TextEditingController _controller;
   List<String> selectedConditions = [];
-  List<String> get dataSource => [
-        "頭痛",
-        "腹痛",
-        "吐き気",
-        "貧血",
-        "下痢",
-        "便秘",
-        "ほてり",
-        "眠気",
-        "腰痛",
-        "動悸",
-        "不正出血",
-        "食欲不振",
-      ];
   FocusNode focusNode = FocusNode();
 
   @override
@@ -107,7 +94,7 @@ class _PostDiaryPageState extends State<PostDiaryPage> {
   Widget _conditions() {
     return Wrap(
       spacing: 10,
-      children: dataSource
+      children: PhysicalCondition.all
           .map((e) => ChoiceChip(
                 label: Text(e),
                 labelStyle: FontType.assisting.merge(
