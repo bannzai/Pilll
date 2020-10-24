@@ -1,5 +1,4 @@
 import 'package:Pilll/model/firestore_timestamp_converter.dart';
-import 'package:Pilll/model/physical_condition.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'diary.g.dart';
@@ -11,6 +10,21 @@ abstract class DiaryFirestoreKey {
 
 @freezed
 abstract class Diary with _$Diary {
+  static final List<String> all = [
+    "頭痛",
+    "腹痛",
+    "吐き気",
+    "貧血",
+    "下痢",
+    "便秘",
+    "ほてり",
+    "眠気",
+    "腰痛",
+    "動悸",
+    "不正出血",
+    "食欲不振",
+  ];
+
   @JsonSerializable(nullable: false, explicitToJson: true)
   factory Diary({
     @JsonKey(
@@ -23,7 +37,7 @@ abstract class Diary with _$Diary {
     @required
         String memo,
     @required
-        List<PhysicalCondition> physicalCondtions,
+        List<String> physicalCondtions,
     @required
         bool hasSex,
   }) = _Diary;

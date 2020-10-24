@@ -24,7 +24,7 @@ class _$DiaryTearOff {
       @required
           String memo,
       @required
-          List<PhysicalCondition> physicalCondtions,
+          List<String> physicalCondtions,
       @required
           bool hasSex}) {
     return _Diary(
@@ -53,7 +53,7 @@ mixin _$Diary {
       toJson: TimestampConverter.dateTimeToTimestamp)
   DateTime get date;
   String get memo;
-  List<PhysicalCondition> get physicalCondtions;
+  List<String> get physicalCondtions;
   bool get hasSex;
 
   Map<String, dynamic> toJson();
@@ -68,7 +68,7 @@ abstract class $DiaryCopyWith<$Res> {
       {@JsonKey(nullable: false, fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
           DateTime date,
       String memo,
-      List<PhysicalCondition> physicalCondtions,
+      List<String> physicalCondtions,
       bool hasSex});
 }
 
@@ -92,7 +92,7 @@ class _$DiaryCopyWithImpl<$Res> implements $DiaryCopyWith<$Res> {
       memo: memo == freezed ? _value.memo : memo as String,
       physicalCondtions: physicalCondtions == freezed
           ? _value.physicalCondtions
-          : physicalCondtions as List<PhysicalCondition>,
+          : physicalCondtions as List<String>,
       hasSex: hasSex == freezed ? _value.hasSex : hasSex as bool,
     ));
   }
@@ -107,7 +107,7 @@ abstract class _$DiaryCopyWith<$Res> implements $DiaryCopyWith<$Res> {
       {@JsonKey(nullable: false, fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
           DateTime date,
       String memo,
-      List<PhysicalCondition> physicalCondtions,
+      List<String> physicalCondtions,
       bool hasSex});
 }
 
@@ -132,7 +132,7 @@ class __$DiaryCopyWithImpl<$Res> extends _$DiaryCopyWithImpl<$Res>
       memo: memo == freezed ? _value.memo : memo as String,
       physicalCondtions: physicalCondtions == freezed
           ? _value.physicalCondtions
-          : physicalCondtions as List<PhysicalCondition>,
+          : physicalCondtions as List<String>,
       hasSex: hasSex == freezed ? _value.hasSex : hasSex as bool,
     ));
   }
@@ -169,7 +169,7 @@ class _$_Diary implements _Diary {
   @override
   final String memo;
   @override
-  final List<PhysicalCondition> physicalCondtions;
+  final List<String> physicalCondtions;
   @override
   final bool hasSex;
 
@@ -219,7 +219,7 @@ abstract class _Diary implements Diary {
       @required
           String memo,
       @required
-          List<PhysicalCondition> physicalCondtions,
+          List<String> physicalCondtions,
       @required
           bool hasSex}) = _$_Diary;
 
@@ -234,7 +234,7 @@ abstract class _Diary implements Diary {
   @override
   String get memo;
   @override
-  List<PhysicalCondition> get physicalCondtions;
+  List<String> get physicalCondtions;
   @override
   bool get hasSex;
   @override
