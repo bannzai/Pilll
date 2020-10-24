@@ -5,6 +5,10 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 part 'diary.g.dart';
 part 'diary.freezed.dart';
 
+abstract class DiaryFirestoreKey {
+  static final String date = "date";
+}
+
 @freezed
 abstract class Diary with _$Diary {
   @JsonSerializable(nullable: false, explicitToJson: true)
