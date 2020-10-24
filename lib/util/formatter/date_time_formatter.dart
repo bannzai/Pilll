@@ -32,4 +32,8 @@ class DateTimeFormatter {
   static String slashYearAndMonthAndDay(DateTime dateTime) {
     return DateFormat("yyyy/MM/dd", "ja_JP").format(dateTime);
   }
+
+  static String diaryIdentifier(DateTime dateTime) {
+    return DateFormat("yyyyMMdd", "ja_JP").format(dateTime);
+  }
 }
