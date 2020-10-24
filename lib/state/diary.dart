@@ -4,7 +4,7 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 part 'diary.freezed.dart';
 
 @freezed
-abstract class DiaryState implements _$DiaryState {
-  DiaryState._();
-  factory DiaryState({@Default([]) List<Diary> entities}) = _DiaryState;
+abstract class DiariesState implements _$DiariesState {
+  DiariesState._();
+  factory DiariesState({@Default([]) List<Diary> entities}) = _DiariesState;
 }
