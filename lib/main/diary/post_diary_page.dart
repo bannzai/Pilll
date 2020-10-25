@@ -1,5 +1,4 @@
 import 'package:Pilll/model/diary.dart';
-import 'package:Pilll/service/user.dart';
 import 'package:Pilll/store/diary.dart';
 import 'package:Pilll/style/button.dart';
 import 'package:Pilll/theme/color.dart';
@@ -12,32 +11,32 @@ import 'package:flutter/services.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:hooks_riverpod/all.dart';
+import 'package:riverpod/all.dart';
 
-class PostDiaryState {
-  final Diary diary;
+class PostDiaryStore extends StateNotifier<Diary> {
+  PostDiaryStore(Diary state) : super(state);
 
-  PostDiaryState(this.diary);
-}
-
-class PostDiaryStore extends StateNotifier<PostDiaryState> {
-  PostDiaryStore(PostDiaryState state) : super(state);
-
-  Diary get diary => state.diary;
+  Diary get diary => state;
 
   void removePhysicalCondition(String physicalCondition) {
-    state = PostDiaryState(
-        state.diary..physicalConditions.remove(physicalCondition));
+    state = state.copyWith(
+        physicalConditions: state
+          ..physicalConditions.remove(physicalCondition));
   }
 
-  void addPhysicalCondition(String physicalCondition) {
-    state =
-        PostDiaryState(state.diary..physicalConditions.add(physicalCondition));
+  void update(Diary Function(Diary) closure) {
+    state = closure(state.copyWith());
   }
 }
 
-final postDiaryStoreProvider = StateNotifierProvider<PostDiaryStore>((ref) {
-  final date = DateTime.parse("2020-10-07");
-  return PostDiaryStore(PostDiaryState(Diary.forPost(date)));
+final _postDiaryStoreProvider =
+    Provider.autoDispose.family<PostDiaryStore, DateTime>((ref, date) {
+  final diary =
+      ref.watch(diariesStoreProvider.state).diaryForDatetimeOrNull(date);
+  if (diary == null) {
+    return PostDiaryStore(Diary.forPost(date));
+  }
+  return PostDiaryStore(diary.copyWith());
 });
 
 class PostDiaryPage extends HookWidget {
@@ -47,7 +46,10 @@ class PostDiaryPage extends HookWidget {
 
   @override
   Widget build(BuildContext context) {
-    final store = useProvider(postDiaryStoreProvider);
+    final store = useProvider(_postDiaryStoreProvider(date));
+    final textEditingController =
+        useTextEditingController(text: store.diary.memo);
+    final focusNode = useFocusNode();
     return Scaffold(
       backgroundColor: PilllColors.background,
       resizeToAvoidBottomPadding: false,
@@ -67,9 +69,10 @@ class PostDiaryPage extends HookWidget {
             Text(DateTimeFormatter.yearAndMonthAndDay(this.date)),
             _physicalConditions(),
             Text("体調詳細"),
-            _conditions(store),
+            _conditions(),
             _sex(),
-            _memo(context, null, null),
+            _memo(context, textEditingController, focusNode),
+            if (focusNode.hasFocus) _keyboardToolbar(focusNode),
           ],
         ),
       ),
@@ -108,7 +111,8 @@ class PostDiaryPage extends HookWidget {
     );
   }
 
-  Widget _conditions(PostDiaryStore store) {
+  Widget _conditions() {
+    final store = useProvider(_postDiaryStoreProvider(date));
     final diary = store.diary;
     return Wrap(
       spacing: 10,
@@ -124,8 +128,10 @@ class PostDiaryPage extends HookWidget {
                 selected: diary.physicalConditions.contains(e),
                 onSelected: (selected) {
                   diary.physicalConditions.contains(e)
-                      ? store.removePhysicalCondition(e)
-                      : store.addPhysicalCondition(e);
+                      ? store.update(
+                          (diary) => diary..physicalConditions.remove(e))
+                      : store
+                          .update((diary) => diary..physicalConditions.add(e));
                 },
               ))
           .toList(),
