@@ -30,8 +30,8 @@ class PostDiaryStore extends StateNotifier<Diary> {
   }
 }
 
-final _postDiaryStoreProvider =
-    Provider.autoDispose.family<PostDiaryStore, DateTime>((ref, date) {
+final _postDiaryStoreProvider = StateNotifierProvider.autoDispose
+    .family<PostDiaryStore, DateTime>((ref, date) {
   final diary =
       ref.watch(diariesStoreProvider.state).diaryForDatetimeOrNull(date);
   if (diary == null) {
