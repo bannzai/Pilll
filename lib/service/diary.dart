@@ -51,9 +51,7 @@ class DiariesService extends DiariesServiceInterface {
 
   @override
   Stream<List<Diary>> subscribe() {
-    return _database
-        .diariesReference()
-        .snapshots()
-        .map((event) => event.docs.map((doc) => Diary.fromJson(doc.data())));
+    return _database.diariesReference().snapshots().map((event) =>
+        event.docs.map((doc) => Diary.fromJson(doc.data())).toList());
   }
 }
