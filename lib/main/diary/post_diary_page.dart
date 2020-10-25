@@ -20,12 +20,13 @@ class PostDiaryStore extends StateNotifier<Diary> {
 
   void removePhysicalCondition(String physicalCondition) {
     state = state.copyWith(
-        physicalConditions: state
-          ..physicalConditions.remove(physicalCondition));
+        physicalConditions: state.physicalConditions
+          ..remove(physicalCondition));
   }
 
-  void update(Diary Function(Diary) closure) {
-    state = closure(state.copyWith());
+  void addPhysicalCondition(String physicalCondition) {
+    state = state.copyWith(
+        physicalConditions: state.physicalConditions..add(physicalCondition));
   }
 }
 
@@ -128,10 +129,8 @@ class PostDiaryPage extends HookWidget {
                 selected: diary.physicalConditions.contains(e),
                 onSelected: (selected) {
                   diary.physicalConditions.contains(e)
-                      ? store.update(
-                          (diary) => diary..physicalConditions.remove(e))
-                      : store
-                          .update((diary) => diary..physicalConditions.add(e));
+                      ? store.removePhysicalCondition(e)
+                      : store.addPhysicalCondition(e);
                 },
               ))
           .toList(),
