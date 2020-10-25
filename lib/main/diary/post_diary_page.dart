@@ -25,7 +25,8 @@ class PostDiaryPage extends HookWidget {
   @override
   Widget build(BuildContext context) {
     final textEditingController = useTextEditingController();
-    Diary diary = useMemoized(() => useProvider(diaryProvider(date)));
+    Diary diary = useMemoized(
+        () => useProvider(diaryProvider(date)) ?? Diary.forPost(date));
     final focusNode = useFocusNode();
     return Scaffold(
       backgroundColor: PilllColors.background,
