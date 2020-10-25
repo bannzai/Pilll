@@ -116,7 +116,7 @@ class PostDiaryPage extends HookWidget {
     final diary = store.diary;
     return Wrap(
       spacing: 10,
-      children: Diary.physicalConditions
+      children: Diary.allPhysicalConditions
           .map((e) => ChoiceChip(
                 label: Text(e),
                 labelStyle: FontType.assisting.merge(
