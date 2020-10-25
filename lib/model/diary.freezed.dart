@@ -24,13 +24,13 @@ class _$DiaryTearOff {
       @required
           String memo,
       @required
-          List<String> physicalCondtions,
+          List<String> physicalConditions,
       @required
           bool hasSex}) {
     return _Diary(
       date: date,
       memo: memo,
-      physicalCondtions: physicalCondtions,
+      physicalConditions: physicalConditions,
       hasSex: hasSex,
     );
   }
@@ -53,7 +53,7 @@ mixin _$Diary {
       toJson: TimestampConverter.dateTimeToTimestamp)
   DateTime get date;
   String get memo;
-  List<String> get physicalCondtions;
+  List<String> get physicalConditions;
   bool get hasSex;
 
   Map<String, dynamic> toJson();
@@ -68,7 +68,7 @@ abstract class $DiaryCopyWith<$Res> {
       {@JsonKey(nullable: false, fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
           DateTime date,
       String memo,
-      List<String> physicalCondtions,
+      List<String> physicalConditions,
       bool hasSex});
 }
 
@@ -84,15 +84,15 @@ class _$DiaryCopyWithImpl<$Res> implements $DiaryCopyWith<$Res> {
   $Res call({
     Object date = freezed,
     Object memo = freezed,
-    Object physicalCondtions = freezed,
+    Object physicalConditions = freezed,
     Object hasSex = freezed,
   }) {
     return _then(_value.copyWith(
       date: date == freezed ? _value.date : date as DateTime,
       memo: memo == freezed ? _value.memo : memo as String,
-      physicalCondtions: physicalCondtions == freezed
-          ? _value.physicalCondtions
-          : physicalCondtions as List<String>,
+      physicalConditions: physicalConditions == freezed
+          ? _value.physicalConditions
+          : physicalConditions as List<String>,
       hasSex: hasSex == freezed ? _value.hasSex : hasSex as bool,
     ));
   }
@@ -107,7 +107,7 @@ abstract class _$DiaryCopyWith<$Res> implements $DiaryCopyWith<$Res> {
       {@JsonKey(nullable: false, fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
           DateTime date,
       String memo,
-      List<String> physicalCondtions,
+      List<String> physicalConditions,
       bool hasSex});
 }
 
@@ -124,15 +124,15 @@ class __$DiaryCopyWithImpl<$Res> extends _$DiaryCopyWithImpl<$Res>
   $Res call({
     Object date = freezed,
     Object memo = freezed,
-    Object physicalCondtions = freezed,
+    Object physicalConditions = freezed,
     Object hasSex = freezed,
   }) {
     return _then(_Diary(
       date: date == freezed ? _value.date : date as DateTime,
       memo: memo == freezed ? _value.memo : memo as String,
-      physicalCondtions: physicalCondtions == freezed
-          ? _value.physicalCondtions
-          : physicalCondtions as List<String>,
+      physicalConditions: physicalConditions == freezed
+          ? _value.physicalConditions
+          : physicalConditions as List<String>,
       hasSex: hasSex == freezed ? _value.hasSex : hasSex as bool,
     ));
   }
@@ -149,12 +149,12 @@ class _$_Diary implements _Diary {
       @required
           this.memo,
       @required
-          this.physicalCondtions,
+          this.physicalConditions,
       @required
           this.hasSex})
       : assert(date != null),
         assert(memo != null),
-        assert(physicalCondtions != null),
+        assert(physicalConditions != null),
         assert(hasSex != null);
 
   factory _$_Diary.fromJson(Map<String, dynamic> json) =>
@@ -169,7 +169,7 @@ class _$_Diary implements _Diary {
   @override
   final String memo;
   @override
-  final List<String> physicalCondtions;
+  final List<String> physicalConditions;
   @override
   final bool hasSex;
 
@@ -187,7 +187,7 @@ class _$_Diary implements _Diary {
 
   @override
   String toString() {
-    return 'Diary(date: $date, memo: $memo, physicalCondtions: $physicalCondtions, hasSex: $hasSex, id: $id)';
+    return 'Diary(date: $date, memo: $memo, physicalConditions: $physicalConditions, hasSex: $hasSex, id: $id)';
   }
 
   @override
@@ -198,9 +198,9 @@ class _$_Diary implements _Diary {
                 const DeepCollectionEquality().equals(other.date, date)) &&
             (identical(other.memo, memo) ||
                 const DeepCollectionEquality().equals(other.memo, memo)) &&
-            (identical(other.physicalCondtions, physicalCondtions) ||
+            (identical(other.physicalConditions, physicalConditions) ||
                 const DeepCollectionEquality()
-                    .equals(other.physicalCondtions, physicalCondtions)) &&
+                    .equals(other.physicalConditions, physicalConditions)) &&
             (identical(other.hasSex, hasSex) ||
                 const DeepCollectionEquality().equals(other.hasSex, hasSex)));
   }
@@ -210,7 +210,7 @@ class _$_Diary implements _Diary {
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(date) ^
       const DeepCollectionEquality().hash(memo) ^
-      const DeepCollectionEquality().hash(physicalCondtions) ^
+      const DeepCollectionEquality().hash(physicalConditions) ^
       const DeepCollectionEquality().hash(hasSex);
 
   @override
@@ -231,7 +231,7 @@ abstract class _Diary implements Diary {
       @required
           String memo,
       @required
-          List<String> physicalCondtions,
+          List<String> physicalConditions,
       @required
           bool hasSex}) = _$_Diary;
 
@@ -246,7 +246,7 @@ abstract class _Diary implements Diary {
   @override
   String get memo;
   @override
-  List<String> get physicalCondtions;
+  List<String> get physicalConditions;
   @override
   bool get hasSex;
   @override
