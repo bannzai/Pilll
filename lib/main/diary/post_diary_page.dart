@@ -47,9 +47,9 @@ class PostDiaryPage extends HookWidget {
 
   @override
   Widget build(BuildContext context) {
-    final store = useProvider(_postDiaryStoreProvider(date));
-    final textEditingController =
-        useTextEditingController(text: store.diary.memo);
+    // ignore: invalid_use_of_protected_member
+    final state = useProvider(_postDiaryStoreProvider(date).state);
+    final textEditingController = useTextEditingController(text: state.memo);
     final focusNode = useFocusNode();
     return Scaffold(
       backgroundColor: PilllColors.background,
@@ -114,7 +114,7 @@ class PostDiaryPage extends HookWidget {
 
   Widget _conditions() {
     final store = useProvider(_postDiaryStoreProvider(date));
-    final diary = store.diary;
+    final diary = useProvider(_postDiaryStoreProvider(date).state);
     return Wrap(
       spacing: 10,
       children: Diary.allPhysicalConditions
