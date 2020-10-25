@@ -105,13 +105,15 @@ class Calendar extends HookWidget {
                         day: day,
                         upperWidget: isExistDiary ? _diaryMarkWidget() : null,
                         onTap: () {
-                          Navigator.of(context).push(MaterialPageRoute(
-                            builder: (context) => PostDiaryPage(
-                              date: calculator
-                                  .dateTimeForFirstDayOfMonth()
-                                  .add(Duration(days: day - 1)),
-                            ),
-                          ));
+                          if (!isExistDiary) {
+                            Navigator.of(context).push(MaterialPageRoute(
+                              builder: (context) => PostDiaryPage(
+                                date: calculator
+                                    .dateTimeForFirstDayOfMonth()
+                                    .add(Duration(days: day - 1)),
+                              ),
+                            ));
+                          }
                         },
                       );
                     }).toList(),
