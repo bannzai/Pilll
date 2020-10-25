@@ -1,5 +1,4 @@
 import 'package:Pilll/model/diary.dart';
-import 'package:Pilll/model/physical_condition.dart';
 import 'package:Pilll/style/button.dart';
 import 'package:Pilll/theme/color.dart';
 import 'package:Pilll/theme/font.dart';

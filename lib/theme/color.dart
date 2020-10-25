@@ -40,6 +40,7 @@ class PilllColors {
   static final Color blank = Colors.white;
   static final Color potti = HexColor.fromHex("7C8E9C");
   static final Color lightGray = HexColor.fromHex("CDCFD1");
+  static final Color gray = HexColor.fromHex("BEC0C2");
 
   static final Color menstruation = HexColor.fromHex("DCB1C4");
   static final Color duration = HexColor.fromHex("6A7DA5");
