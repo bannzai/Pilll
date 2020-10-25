@@ -13,14 +13,24 @@ import 'package:flutter_svg/svg.dart';
 import 'package:hooks_riverpod/all.dart';
 import 'package:riverpod/all.dart';
 
-final _postDiaryProvider =
-    Provider.autoDispose.family<Diary, DateTime>((ref, date) {
+class PostDiaryStore extends StateNotifier<Diary> {
+  PostDiaryStore(Diary state) : super(state);
+
+  Diary get diary => state;
+
+  void update(Diary Function(Diary) closure) {
+    state = closure(state);
+  }
+}
+
+final _postDiaryStoreProvider =
+    Provider.autoDispose.family<PostDiaryStore, DateTime>((ref, date) {
   final diary =
       ref.watch(diariesStoreProvider.state).diaryForDatetimeOrNull(date);
   if (diary == null) {
-    return Diary.forPost(date);
+    return PostDiaryStore(Diary.forPost(date));
   }
-  return diary.copyWith();
+  return PostDiaryStore(diary.copyWith());
 });
 
 class PostDiaryPage extends HookWidget {
@@ -30,9 +40,9 @@ class PostDiaryPage extends HookWidget {
 
   @override
   Widget build(BuildContext context) {
-    final providedDiary = useProvider(_postDiaryProvider(date));
-    final diary = useMemoized(() => providedDiary);
-    final textEditingController = useTextEditingController(text: diary.memo);
+    final store = useProvider(_postDiaryStoreProvider(date));
+    final textEditingController =
+        useTextEditingController(text: store.diary.memo);
     final focusNode = useFocusNode();
     return Scaffold(
       backgroundColor: PilllColors.background,
@@ -53,7 +63,7 @@ class PostDiaryPage extends HookWidget {
             Text(DateTimeFormatter.yearAndMonthAndDay(this.date)),
             _physicalConditions(),
             Text("体調詳細"),
-            _conditions(diary),
+            _conditions(),
             _sex(),
             _memo(context, textEditingController, focusNode),
             if (focusNode.hasFocus) _keyboardToolbar(focusNode),
@@ -95,7 +105,9 @@ class PostDiaryPage extends HookWidget {
     );
   }
 
-  Widget _conditions(Diary diary) {
+  Widget _conditions() {
+    final store = useProvider(_postDiaryStoreProvider(date));
+    final diary = store.diary;
     return Wrap(
       spacing: 10,
       children: Diary.physicalConditions
@@ -110,8 +122,10 @@ class PostDiaryPage extends HookWidget {
                 selected: diary.physicalCondtions.contains(e),
                 onSelected: (selected) {
                   diary.physicalCondtions.contains(e)
-                      ? diary.physicalCondtions.remove(e)
-                      : diary.physicalCondtions.add(e);
+                      ? store
+                          .update((diary) => diary..physicalCondtions.remove(e))
+                      : store
+                          .update((diary) => diary..physicalCondtions.add(e));
                 },
               ))
           .toList(),
