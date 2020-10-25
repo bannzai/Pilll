@@ -13,9 +13,15 @@ import 'package:flutter_svg/svg.dart';
 import 'package:hooks_riverpod/all.dart';
 import 'package:riverpod/all.dart';
 
-final diaryProvider = Provider.autoDispose.family<Diary, DateTime>((ref,
-        date) =>
-    ref.watch(diariesStoreProvider.state).diaryForDatetime(date).copyWith());
+final _postDiaryProvider =
+    Provider.autoDispose.family<Diary, DateTime>((ref, date) {
+  final diary =
+      ref.watch(diariesStoreProvider.state).diaryForDatetimeOrNull(date);
+  if (diary == null) {
+    return Diary.forPost(date);
+  }
+  return diary.copyWith();
+});
 
 class PostDiaryPage extends HookWidget {
   final DateTime date;
@@ -24,9 +30,9 @@ class PostDiaryPage extends HookWidget {
 
   @override
   Widget build(BuildContext context) {
-    final textEditingController = useTextEditingController();
-    Diary diary = useMemoized(
-        () => useProvider(diaryProvider(date)) ?? Diary.forPost(date));
+    final providedDiary = useProvider(_postDiaryProvider(date));
+    final diary = useMemoized(() => providedDiary);
+    final textEditingController = useTextEditingController(text: diary.memo);
     final focusNode = useFocusNode();
     return Scaffold(
       backgroundColor: PilllColors.background,
