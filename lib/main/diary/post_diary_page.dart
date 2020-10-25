@@ -1,4 +1,5 @@
 import 'package:Pilll/model/diary.dart';
+import 'package:Pilll/store/diary.dart';
 import 'package:Pilll/style/button.dart';
 import 'package:Pilll/theme/color.dart';
 import 'package:Pilll/theme/font.dart';
@@ -7,29 +8,25 @@ import 'package:Pilll/util/formatter/date_time_formatter.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:hooks_riverpod/all.dart';
+import 'package:riverpod/all.dart';
 
-class PostDiaryPage extends StatefulWidget {
+final diaryProvider = Provider.autoDispose.family<Diary, DateTime>((ref,
+        date) =>
+    ref.watch(diariesStoreProvider.state).diaryForDatetime(date).copyWith());
+
+class PostDiaryPage extends HookWidget {
   final DateTime date;
-  const PostDiaryPage({Key key, this.date}) : super(key: key);
 
-  @override
-  _PostDiaryPageState createState() => _PostDiaryPageState();
-}
-
-class _PostDiaryPageState extends State<PostDiaryPage> {
-  TextEditingController _controller;
-  List<String> selectedConditions = [];
-  FocusNode focusNode = FocusNode();
-
-  @override
-  void initState() {
-    _controller = TextEditingController(text: "aiueo");
-    super.initState();
-  }
+  PostDiaryPage(this.date);
 
   @override
   Widget build(BuildContext context) {
+    final textEditingController = useTextEditingController();
+    Diary diary = useMemoized(() => useProvider(diaryProvider(date)));
+    final focusNode = useFocusNode();
     return Scaffold(
       backgroundColor: PilllColors.background,
       resizeToAvoidBottomPadding: false,
@@ -46,13 +43,13 @@ class _PostDiaryPageState extends State<PostDiaryPage> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text(DateTimeFormatter.yearAndMonthAndDay(widget.date)),
+            Text(DateTimeFormatter.yearAndMonthAndDay(this.date)),
             _physicalConditions(),
             Text("体調詳細"),
-            _conditions(),
+            _conditions(diary),
             _sex(),
-            _memo(),
-            if (this.focusNode.hasFocus) _keyboardToolbar(),
+            _memo(context, textEditingController, focusNode),
+            if (focusNode.hasFocus) _keyboardToolbar(focusNode),
           ],
         ),
       ),
@@ -91,25 +88,23 @@ class _PostDiaryPageState extends State<PostDiaryPage> {
     );
   }
 
-  Widget _conditions() {
+  Widget _conditions(Diary diary) {
     return Wrap(
       spacing: 10,
       children: Diary.physicalConditions
           .map((e) => ChoiceChip(
                 label: Text(e),
                 labelStyle: FontType.assisting.merge(
-                    selectedConditions.contains(e)
+                    diary.physicalCondtions.contains(e)
                         ? TextColorStyle.primary
                         : TextColorStyle.darkGray),
                 disabledColor: PilllColors.disabledSheet,
                 selectedColor: PilllColors.primarySheet,
-                selected: selectedConditions.contains(e),
+                selected: diary.physicalCondtions.contains(e),
                 onSelected: (selected) {
-                  setState(() {
-                    selectedConditions.contains(e)
-                        ? selectedConditions.remove(e)
-                        : selectedConditions.add(e);
-                  });
+                  diary.physicalCondtions.contains(e)
+                      ? diary.physicalCondtions.remove(e)
+                      : diary.physicalCondtions.add(e);
                 },
               ))
           .toList(),
@@ -135,7 +130,7 @@ class _PostDiaryPageState extends State<PostDiaryPage> {
     );
   }
 
-  Widget _keyboardToolbar() {
+  Widget _keyboardToolbar(FocusNode focusNode) {
     return Container(
         height: 44.0,
         child: Row(
@@ -145,16 +140,18 @@ class _PostDiaryPageState extends State<PostDiaryPage> {
             SecondaryButton(
               text: '完了',
               onPressed: () {
-                setState(() {
-                  focusNode.unfocus(); //unfocus()でフォーカスが外れる
-                });
+                focusNode.unfocus(); //unfocus()でフォーカスが外れる
               },
             )
           ],
         ));
   }
 
-  Widget _memo() {
+  Widget _memo(
+    BuildContext context,
+    TextEditingController textEditingController,
+    FocusNode focusNode,
+  ) {
     return Container(
       color: Colors.blue,
       child: ConstrainedBox(
@@ -169,11 +166,11 @@ class _PostDiaryPageState extends State<PostDiaryPage> {
             reverse: true,
             child: TextField(
               decoration: InputDecoration(hintText: "メモ"),
-              controller: _controller,
+              controller: textEditingController,
               maxLines: null,
               maxLength: 500,
               keyboardType: TextInputType.multiline,
-              focusNode: this.focusNode,
+              focusNode: focusNode,
             )),
       ),
     );
