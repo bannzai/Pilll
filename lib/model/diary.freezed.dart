@@ -173,9 +173,21 @@ class _$_Diary implements _Diary {
   @override
   final bool hasSex;
 
+  bool _didid = false;
+  String _id;
+
+  @override
+  String get id {
+    if (_didid == false) {
+      _didid = true;
+      _id = "Diary_${DateTimeFormatter.diaryIdentifier(date)}";
+    }
+    return _id;
+  }
+
   @override
   String toString() {
-    return 'Diary(date: $date, memo: $memo, physicalCondtions: $physicalCondtions, hasSex: $hasSex)';
+    return 'Diary(date: $date, memo: $memo, physicalCondtions: $physicalCondtions, hasSex: $hasSex, id: $id)';
   }
 
   @override

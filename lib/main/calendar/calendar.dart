@@ -1,19 +1,37 @@
 import 'package:Pilll/main/calendar/calculator.dart';
 import 'package:Pilll/main/calendar/calendar_band_model.dart';
 import 'package:Pilll/main/calendar/date_range.dart';
+import 'package:Pilll/main/components/indicator.dart';
 import 'package:Pilll/main/diary/post_diary_page.dart';
 import 'package:Pilll/main/record/weekday_badge.dart';
+import 'package:Pilll/main/utility/utility.dart';
+import 'package:Pilll/model/diary.dart';
 import 'package:Pilll/model/weekday.dart';
+import 'package:Pilll/service/diary.dart';
+import 'package:Pilll/store/diary.dart';
+import 'package:Pilll/theme/color.dart';
 import 'package:Pilll/theme/font.dart';
 import 'package:Pilll/theme/text_color.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_hooks/flutter_hooks.dart';
+import 'package:hooks_riverpod/all.dart';
 
 abstract class CalendarConstants {
   static final int weekdayCount = 7;
   static final double tileHeight = 60;
 }
 
-class Calendar extends StatelessWidget {
+final calendarDiariesProvider = FutureProvider.autoDispose
+    .family<List<Diary>, DateTime>((ref, DateTime dateTimeOfMonth) {
+  final state = ref.watch(diariesStoreProvider.state);
+  if (state.entities.isNotEmpty) {
+    return Future.value(state.entities);
+  }
+  final diaries = ref.watch(diariesServiceProvider);
+  return diaries.fetchListForMonth(dateTimeOfMonth);
+});
+
+class Calendar extends HookWidget {
   final Calculator calculator;
   final List<CalendarBandModel> bandModels;
 
@@ -23,6 +41,18 @@ class Calendar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final futureCalendarDiaries =
+        useProvider(calendarDiariesProvider(calculator.date));
+    return futureCalendarDiaries.when(
+      data: (value) {
+        return _body(context, value);
+      },
+      loading: () => Indicator(),
+      error: (error, trace) => Indicator(),
+    );
+  }
+
+  Column _body(BuildContext context, List<Diary> diaries) {
     return Column(
       children: <Widget>[
         Row(
@@ -64,9 +94,16 @@ class Calendar extends StatelessWidget {
                       if (isNextMonth) {
                         return Expanded(child: Container());
                       }
+                      bool isExistDiary = diaries
+                          .where((element) => isSameDay(
+                              element.date,
+                              DateTime(calculator.date.year,
+                                  calculator.date.month, day)))
+                          .isNotEmpty;
                       return CalendarDayTile(
                         weekday: weekday,
                         day: day,
+                        upperWidget: isExistDiary ? _diaryMarkWidget() : null,
                         onTap: () {
                           Navigator.of(context).push(MaterialPageRoute(
                             builder: (context) => PostDiaryPage(
@@ -87,6 +124,15 @@ class Calendar extends StatelessWidget {
           );
         }),
       ],
+    );
+  }
+
+  Widget _diaryMarkWidget() {
+    return Container(
+      width: 8,
+      height: 8,
+      decoration: BoxDecoration(
+          color: PilllColors.gray, borderRadius: BorderRadius.circular(4)),
     );
   }
 
