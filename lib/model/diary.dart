@@ -46,6 +46,9 @@ abstract class Diary with _$Diary {
     @required
         bool hasSex,
   }) = _Diary;
+
+  factory Diary.forPost(DateTime date) =>
+      Diary(date: date, memo: "", physicalCondtions: [], hasSex: false);
   factory Diary.fromJson(Map<String, dynamic> json) => _$DiaryFromJson(json);
   Map<String, dynamic> toJson() => _$_$_DiaryToJson(this);
 }

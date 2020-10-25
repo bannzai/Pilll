@@ -108,7 +108,7 @@ class Calendar extends HookWidget {
                           if (!isExistDiary) {
                             Navigator.of(context).push(MaterialPageRoute(
                               builder: (context) => PostDiaryPage(
-                                date: calculator
+                                calculator
                                     .dateTimeForFirstDayOfMonth()
                                     .add(Duration(days: day - 1)),
                               ),
