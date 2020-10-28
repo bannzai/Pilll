@@ -1,5 +1,5 @@
 import 'package:Pilll/model/diary.dart';
-import 'package:Pilll/store/diary.dart';
+import 'package:Pilll/store/diaries.dart';
 import 'package:Pilll/style/button.dart';
 import 'package:Pilll/theme/color.dart';
 import 'package:Pilll/theme/font.dart';
