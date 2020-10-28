@@ -57,8 +57,6 @@ class PostDiaryPage extends HookWidget {
                 style: FontType.sBigTitle.merge(TextColorStyle.main)),
             ...[
               _physicalConditions(),
-              Text("体調詳細",
-                  style: FontType.componentTitle.merge(TextColorStyle.black)),
               _physicalConditionDetails(),
               _sex(),
               _memo(context, textEditingController, focusNode),
@@ -152,25 +150,33 @@ class PostDiaryPage extends HookWidget {
   Widget _physicalConditionDetails() {
     final store = useProvider(_postDiaryStoreProvider(date));
     final diary = useProvider(_postDiaryStoreProvider(date).state).entity;
-    return Wrap(
-      spacing: 10,
-      children: Diary.allPhysicalConditions
-          .map((e) => ChoiceChip(
-                label: Text(e),
-                labelStyle: FontType.assisting.merge(
-                    diary.physicalConditions.contains(e)
-                        ? TextColorStyle.primary
-                        : TextColorStyle.darkGray),
-                disabledColor: PilllColors.disabledSheet,
-                selectedColor: PilllColors.primarySheet,
-                selected: diary.physicalConditions.contains(e),
-                onSelected: (selected) {
-                  diary.physicalConditions.contains(e)
-                      ? store.removePhysicalCondition(e)
-                      : store.addPhysicalCondition(e);
-                },
-              ))
-          .toList(),
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Text("体調詳細",
+            style: FontType.componentTitle.merge(TextColorStyle.black)),
+        SizedBox(height: 8),
+        Wrap(
+          spacing: 10,
+          children: Diary.allPhysicalConditions
+              .map((e) => ChoiceChip(
+                    label: Text(e),
+                    labelStyle: FontType.assisting.merge(
+                        diary.physicalConditions.contains(e)
+                            ? TextColorStyle.primary
+                            : TextColorStyle.darkGray),
+                    disabledColor: PilllColors.disabledSheet,
+                    selectedColor: PilllColors.primarySheet,
+                    selected: diary.physicalConditions.contains(e),
+                    onSelected: (selected) {
+                      diary.physicalConditions.contains(e)
+                          ? store.removePhysicalCondition(e)
+                          : store.addPhysicalCondition(e);
+                    },
+                  ))
+              .toList(),
+        ),
+      ],
     );
   }
 
