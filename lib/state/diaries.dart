@@ -2,7 +2,7 @@ import 'package:Pilll/main/utility/utility.dart';
 import 'package:Pilll/model/diary.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-part 'diary.freezed.dart';
+part 'diaries.freezed.dart';
 
 @freezed
 abstract class DiariesState implements _$DiariesState {
