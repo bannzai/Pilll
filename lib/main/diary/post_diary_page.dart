@@ -50,8 +50,7 @@ class PostDiaryPage extends HookWidget {
       ),
       body: Padding(
         padding: const EdgeInsets.all(16.0),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
+        child: ListView(
           children: [
             Text(DateTimeFormatter.yearAndMonthAndDay(this.date),
                 style: FontType.sBigTitle.merge(TextColorStyle.main)),
