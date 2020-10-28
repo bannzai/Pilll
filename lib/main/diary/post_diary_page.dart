@@ -1,4 +1,5 @@
 import 'package:Pilll/model/diary.dart';
+import 'package:Pilll/state/diary.dart';
 import 'package:Pilll/store/diaries.dart';
 import 'package:Pilll/store/post_diary.dart';
 import 'package:Pilll/style/button.dart';
@@ -19,9 +20,9 @@ final _postDiaryStoreProvider = StateNotifierProvider.autoDispose
   final diary =
       ref.watch(diariesStoreProvider.state).diaryForDatetimeOrNull(date);
   if (diary == null) {
-    return PostDiaryStore(Diary.forPost(date));
+    return PostDiaryStore(DiaryState(entity: Diary.forPost(date)));
   }
-  return PostDiaryStore(diary.copyWith());
+  return PostDiaryStore(DiaryState(entity: diary.copyWith()));
 });
 
 class PostDiaryPage extends HookWidget {
@@ -33,7 +34,8 @@ class PostDiaryPage extends HookWidget {
   Widget build(BuildContext context) {
     // ignore: invalid_use_of_protected_member
     final state = useProvider(_postDiaryStoreProvider(date).state);
-    final textEditingController = useTextEditingController(text: state.memo);
+    final textEditingController =
+        useTextEditingController(text: state.entity.memo);
     final focusNode = useFocusNode();
     return Scaffold(
       backgroundColor: PilllColors.background,
@@ -109,7 +111,7 @@ class PostDiaryPage extends HookWidget {
 
   Widget _physicalConditionDetails() {
     final store = useProvider(_postDiaryStoreProvider(date));
-    final diary = useProvider(_postDiaryStoreProvider(date).state);
+    final diary = useProvider(_postDiaryStoreProvider(date).state).entity;
     return Wrap(
       spacing: 10,
       children: Diary.allPhysicalConditions
