@@ -21,17 +21,19 @@ class _$DiaryTearOff {
       {@required
       @JsonKey(nullable: false, fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
           DateTime date,
-      @required
-          String memo,
+      PhysicalConditionStatus physicalConditionStatus,
       @required
           List<String> physicalConditions,
       @required
-          bool hasSex}) {
+          bool hasSex,
+      @required
+          String memo}) {
     return _Diary(
       date: date,
-      memo: memo,
+      physicalConditionStatus: physicalConditionStatus,
       physicalConditions: physicalConditions,
       hasSex: hasSex,
+      memo: memo,
     );
   }
 
@@ -52,9 +54,10 @@ mixin _$Diary {
       fromJson: TimestampConverter.timestampToDateTime,
       toJson: TimestampConverter.dateTimeToTimestamp)
   DateTime get date;
-  String get memo;
+  PhysicalConditionStatus get physicalConditionStatus;
   List<String> get physicalConditions;
   bool get hasSex;
+  String get memo;
 
   Map<String, dynamic> toJson();
   $DiaryCopyWith<Diary> get copyWith;
@@ -67,9 +70,10 @@ abstract class $DiaryCopyWith<$Res> {
   $Res call(
       {@JsonKey(nullable: false, fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
           DateTime date,
-      String memo,
+      PhysicalConditionStatus physicalConditionStatus,
       List<String> physicalConditions,
-      bool hasSex});
+      bool hasSex,
+      String memo});
 }
 
 /// @nodoc
@@ -83,17 +87,21 @@ class _$DiaryCopyWithImpl<$Res> implements $DiaryCopyWith<$Res> {
   @override
   $Res call({
     Object date = freezed,
-    Object memo = freezed,
+    Object physicalConditionStatus = freezed,
     Object physicalConditions = freezed,
     Object hasSex = freezed,
+    Object memo = freezed,
   }) {
     return _then(_value.copyWith(
       date: date == freezed ? _value.date : date as DateTime,
-      memo: memo == freezed ? _value.memo : memo as String,
+      physicalConditionStatus: physicalConditionStatus == freezed
+          ? _value.physicalConditionStatus
+          : physicalConditionStatus as PhysicalConditionStatus,
       physicalConditions: physicalConditions == freezed
           ? _value.physicalConditions
           : physicalConditions as List<String>,
       hasSex: hasSex == freezed ? _value.hasSex : hasSex as bool,
+      memo: memo == freezed ? _value.memo : memo as String,
     ));
   }
 }
@@ -106,9 +114,10 @@ abstract class _$DiaryCopyWith<$Res> implements $DiaryCopyWith<$Res> {
   $Res call(
       {@JsonKey(nullable: false, fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
           DateTime date,
-      String memo,
+      PhysicalConditionStatus physicalConditionStatus,
       List<String> physicalConditions,
-      bool hasSex});
+      bool hasSex,
+      String memo});
 }
 
 /// @nodoc
@@ -123,17 +132,21 @@ class __$DiaryCopyWithImpl<$Res> extends _$DiaryCopyWithImpl<$Res>
   @override
   $Res call({
     Object date = freezed,
-    Object memo = freezed,
+    Object physicalConditionStatus = freezed,
     Object physicalConditions = freezed,
     Object hasSex = freezed,
+    Object memo = freezed,
   }) {
     return _then(_Diary(
       date: date == freezed ? _value.date : date as DateTime,
-      memo: memo == freezed ? _value.memo : memo as String,
+      physicalConditionStatus: physicalConditionStatus == freezed
+          ? _value.physicalConditionStatus
+          : physicalConditionStatus as PhysicalConditionStatus,
       physicalConditions: physicalConditions == freezed
           ? _value.physicalConditions
           : physicalConditions as List<String>,
       hasSex: hasSex == freezed ? _value.hasSex : hasSex as bool,
+      memo: memo == freezed ? _value.memo : memo as String,
     ));
   }
 }
@@ -146,16 +159,17 @@ class _$_Diary implements _Diary {
       {@required
       @JsonKey(nullable: false, fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
           this.date,
-      @required
-          this.memo,
+      this.physicalConditionStatus,
       @required
           this.physicalConditions,
       @required
-          this.hasSex})
+          this.hasSex,
+      @required
+          this.memo})
       : assert(date != null),
-        assert(memo != null),
         assert(physicalConditions != null),
-        assert(hasSex != null);
+        assert(hasSex != null),
+        assert(memo != null);
 
   factory _$_Diary.fromJson(Map<String, dynamic> json) =>
       _$_$_DiaryFromJson(json);
@@ -167,11 +181,13 @@ class _$_Diary implements _Diary {
       toJson: TimestampConverter.dateTimeToTimestamp)
   final DateTime date;
   @override
-  final String memo;
+  final PhysicalConditionStatus physicalConditionStatus;
   @override
   final List<String> physicalConditions;
   @override
   final bool hasSex;
+  @override
+  final String memo;
 
   bool _didid = false;
   String _id;
@@ -187,7 +203,7 @@ class _$_Diary implements _Diary {
 
   @override
   String toString() {
-    return 'Diary(date: $date, memo: $memo, physicalConditions: $physicalConditions, hasSex: $hasSex, id: $id)';
+    return 'Diary(date: $date, physicalConditionStatus: $physicalConditionStatus, physicalConditions: $physicalConditions, hasSex: $hasSex, memo: $memo, id: $id)';
   }
 
   @override
@@ -196,22 +212,27 @@ class _$_Diary implements _Diary {
         (other is _Diary &&
             (identical(other.date, date) ||
                 const DeepCollectionEquality().equals(other.date, date)) &&
-            (identical(other.memo, memo) ||
-                const DeepCollectionEquality().equals(other.memo, memo)) &&
+            (identical(
+                    other.physicalConditionStatus, physicalConditionStatus) ||
+                const DeepCollectionEquality().equals(
+                    other.physicalConditionStatus, physicalConditionStatus)) &&
             (identical(other.physicalConditions, physicalConditions) ||
                 const DeepCollectionEquality()
                     .equals(other.physicalConditions, physicalConditions)) &&
             (identical(other.hasSex, hasSex) ||
-                const DeepCollectionEquality().equals(other.hasSex, hasSex)));
+                const DeepCollectionEquality().equals(other.hasSex, hasSex)) &&
+            (identical(other.memo, memo) ||
+                const DeepCollectionEquality().equals(other.memo, memo)));
   }
 
   @override
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(date) ^
-      const DeepCollectionEquality().hash(memo) ^
+      const DeepCollectionEquality().hash(physicalConditionStatus) ^
       const DeepCollectionEquality().hash(physicalConditions) ^
-      const DeepCollectionEquality().hash(hasSex);
+      const DeepCollectionEquality().hash(hasSex) ^
+      const DeepCollectionEquality().hash(memo);
 
   @override
   _$DiaryCopyWith<_Diary> get copyWith =>
@@ -228,12 +249,13 @@ abstract class _Diary implements Diary {
       {@required
       @JsonKey(nullable: false, fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
           DateTime date,
-      @required
-          String memo,
+      PhysicalConditionStatus physicalConditionStatus,
       @required
           List<String> physicalConditions,
       @required
-          bool hasSex}) = _$_Diary;
+          bool hasSex,
+      @required
+          String memo}) = _$_Diary;
 
   factory _Diary.fromJson(Map<String, dynamic> json) = _$_Diary.fromJson;
 
@@ -244,11 +266,13 @@ abstract class _Diary implements Diary {
       toJson: TimestampConverter.dateTimeToTimestamp)
   DateTime get date;
   @override
-  String get memo;
+  PhysicalConditionStatus get physicalConditionStatus;
   @override
   List<String> get physicalConditions;
   @override
   bool get hasSex;
+  @override
+  String get memo;
   @override
   _$DiaryCopyWith<_Diary> get copyWith;
 }

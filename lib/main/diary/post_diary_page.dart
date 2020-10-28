@@ -29,7 +29,7 @@ class PostDiaryStore extends StateNotifier<Diary> {
         physicalConditions: state.physicalConditions..add(physicalCondition));
   }
 
-  void switchingPhysicalCondition(PhysicalConditionType type) {
+  void switchingPhysicalCondition(PhysicalConditionStatus type) {
 // TODO:
   }
 }

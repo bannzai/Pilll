@@ -10,7 +10,12 @@ abstract class DiaryFirestoreKey {
   static final String date = "date";
 }
 
-enum PhysicalConditionType { fine, bad }
+enum PhysicalConditionStatus {
+  @JsonKey(name: "Fine")
+  fine,
+  @JsonKey(name: "Bad")
+  bad
+}
 
 @freezed
 abstract class Diary with _$Diary {
@@ -41,12 +46,13 @@ abstract class Diary with _$Diary {
     )
     @required
         DateTime date,
-    @required
-        String memo,
+    PhysicalConditionStatus physicalConditionStatus,
     @required
         List<String> physicalConditions,
     @required
         bool hasSex,
+    @required
+        String memo,
   }) = _Diary;
 
   factory Diary.forPost(DateTime date) =>
