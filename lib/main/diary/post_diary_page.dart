@@ -71,6 +71,7 @@ class PostDiaryPage extends HookWidget {
   Widget _physicalConditions() {
     final store = useProvider(_postDiaryStoreProvider(date));
     final state = useProvider(_postDiaryStoreProvider(date).state);
+    final border = BorderSide(width: 1, color: PilllColors.divider);
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
@@ -87,29 +88,51 @@ class PostDiaryPage extends HookWidget {
           ),
           child: Row(
             children: [
-              IconButton(
-                  icon: SvgPicture.asset("images/laugh.svg",
-                      color: state.hasPhysicalConditionStatus(
-                              PhysicalConditionStatus.fine)
-                          ? PilllColors.primary
-                          : TextColor.darkGray),
-                  onPressed: () {
-                    store.switchingPhysicalCondition(
-                        PhysicalConditionStatus.fine);
-                  }),
+              Container(
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.only(
+                      topLeft: Radius.circular(8),
+                      bottomLeft: Radius.circular(8)),
+                  color: state.hasPhysicalConditionStatus(
+                          PhysicalConditionStatus.fine)
+                      ? PilllColors.primarySheet
+                      : Colors.transparent,
+                ),
+                child: IconButton(
+                    icon: SvgPicture.asset("images/laugh.svg",
+                        color: state.hasPhysicalConditionStatus(
+                                PhysicalConditionStatus.fine)
+                            ? PilllColors.primary
+                            : TextColor.darkGray),
+                    onPressed: () {
+                      store.switchingPhysicalCondition(
+                          PhysicalConditionStatus.fine);
+                    }),
+              ),
               Container(
                   height: 48,
                   child: VerticalDivider(width: 1, color: PilllColors.divider)),
-              IconButton(
-                  icon: SvgPicture.asset("images/angry.svg",
-                      color: state.hasPhysicalConditionStatus(
-                              PhysicalConditionStatus.bad)
-                          ? PilllColors.primary
-                          : TextColor.darkGray),
-                  onPressed: () {
-                    store.switchingPhysicalCondition(
-                        PhysicalConditionStatus.bad);
-                  }),
+              Container(
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.only(
+                      topRight: Radius.circular(8),
+                      bottomRight: Radius.circular(8)),
+                  color: state.hasPhysicalConditionStatus(
+                          PhysicalConditionStatus.bad)
+                      ? PilllColors.primarySheet
+                      : Colors.transparent,
+                ),
+                child: IconButton(
+                    icon: SvgPicture.asset("images/angry.svg",
+                        color: state.hasPhysicalConditionStatus(
+                                PhysicalConditionStatus.bad)
+                            ? PilllColors.primary
+                            : TextColor.darkGray),
+                    onPressed: () {
+                      store.switchingPhysicalCondition(
+                          PhysicalConditionStatus.bad);
+                    }),
+              ),
             ],
           ),
         ),
