@@ -183,7 +183,10 @@ class PostDiaryPage extends HookWidget {
               width: 32,
               height: 32,
               decoration: BoxDecoration(
-                  shape: BoxShape.circle, color: PilllColors.disabledSheet),
+                  shape: BoxShape.circle,
+                  color: state.entity.hasSex
+                      ? PilllColors.primarySheet
+                      : PilllColors.disabledSheet),
               child: SvgPicture.asset("images/heart.svg",
                   color: state.entity.hasSex
                       ? PilllColors.primary
