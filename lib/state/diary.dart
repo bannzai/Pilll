@@ -6,5 +6,5 @@ part 'diary.freezed.dart';
 @freezed
 abstract class DiaryState implements _$DiaryState {
   DiaryState._();
-  factory DiaryState({@Default([]) List<Diary> entities}) = _DiaryState;
+  factory DiaryState({Diary entity}) = _DiaryState;
 }
