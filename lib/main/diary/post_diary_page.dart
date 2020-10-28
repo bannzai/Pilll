@@ -144,19 +144,28 @@ class PostDiaryPage extends HookWidget {
   }
 
   Widget _sex() {
+    final store = useProvider(_postDiaryStoreProvider(date));
+    final state = useProvider(_postDiaryStoreProvider(date).state);
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Text("sex", style: FontType.componentTitle.merge(TextColorStyle.black)),
         SizedBox(width: 80),
-        Container(
-            padding: EdgeInsets.all(4),
-            width: 32,
-            height: 32,
-            decoration: BoxDecoration(
-                shape: BoxShape.circle, color: PilllColors.disabledSheet),
-            child: SvgPicture.asset("images/heart.svg",
-                color: TextColor.darkGray)),
+        GestureDetector(
+          onTap: () {
+            store.toggleHasSex();
+          },
+          child: Container(
+              padding: EdgeInsets.all(4),
+              width: 32,
+              height: 32,
+              decoration: BoxDecoration(
+                  shape: BoxShape.circle, color: PilllColors.disabledSheet),
+              child: SvgPicture.asset("images/heart.svg",
+                  color: state.entity.hasSex
+                      ? PilllColors.primary
+                      : TextColor.darkGray)),
+        ),
         Spacer(),
       ],
     );
