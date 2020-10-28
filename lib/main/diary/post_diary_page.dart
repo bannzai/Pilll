@@ -1,5 +1,6 @@
 import 'package:Pilll/model/diary.dart';
 import 'package:Pilll/store/diaries.dart';
+import 'package:Pilll/store/post_diary.dart';
 import 'package:Pilll/style/button.dart';
 import 'package:Pilll/theme/color.dart';
 import 'package:Pilll/theme/font.dart';
@@ -12,29 +13,6 @@ import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:hooks_riverpod/all.dart';
 import 'package:riverpod/all.dart';
-
-class PostDiaryStore extends StateNotifier<Diary> {
-  PostDiaryStore(Diary state) : super(state);
-
-  void removePhysicalCondition(String physicalCondition) {
-    state = state.copyWith(
-        physicalConditions: state.physicalConditions
-          ..remove(physicalCondition));
-  }
-
-  void addPhysicalCondition(String physicalCondition) {
-    state = state.copyWith(
-        physicalConditions: state.physicalConditions..add(physicalCondition));
-  }
-
-  void switchingPhysicalCondition(PhysicalConditionStatus type) {
-    if (type == state.physicalConditionStatus) {
-      state = state.copyWith(physicalConditionStatus: null);
-      return;
-    }
-    state = state.copyWith(physicalConditionStatus: type);
-  }
-}
 
 final _postDiaryStoreProvider = StateNotifierProvider.autoDispose
     .family<PostDiaryStore, DateTime>((ref, date) {
