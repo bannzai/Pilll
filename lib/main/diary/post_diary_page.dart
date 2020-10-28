@@ -16,8 +16,6 @@ import 'package:riverpod/all.dart';
 class PostDiaryStore extends StateNotifier<Diary> {
   PostDiaryStore(Diary state) : super(state);
 
-  Diary get diary => state;
-
   void removePhysicalCondition(String physicalCondition) {
     state = state.copyWith(
         physicalConditions: state.physicalConditions
