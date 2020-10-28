@@ -48,21 +48,25 @@ class PostDiaryPage extends HookWidget {
         ),
         backgroundColor: PilllColors.background,
       ),
-      body: Padding(
-        padding: const EdgeInsets.all(16.0),
-        child: ListView(
-          children: [
-            Text(DateTimeFormatter.yearAndMonthAndDay(this.date),
-                style: FontType.sBigTitle.merge(TextColorStyle.main)),
-            ...[
-              _physicalConditions(),
-              _physicalConditionDetails(),
-              _sex(),
-              _memo(context, textEditingController, focusNode),
-            ].map((e) => _withContentSpacer(e)),
-            if (focusNode.hasFocus) _keyboardToolbar(focusNode),
-          ],
-        ),
+      body: Stack(
+        children: [
+          Padding(
+            padding: const EdgeInsets.all(16.0),
+            child: ListView(
+              children: [
+                Text(DateTimeFormatter.yearAndMonthAndDay(this.date),
+                    style: FontType.sBigTitle.merge(TextColorStyle.main)),
+                ...[
+                  _physicalConditions(),
+                  _physicalConditionDetails(),
+                  _sex(),
+                  _memo(context, textEditingController, focusNode),
+                ].map((e) => _withContentSpacer(e)),
+              ],
+            ),
+          ),
+          if (focusNode.hasFocus) _keyboardToolbar(context, focusNode),
+        ],
       ),
     );
   }
@@ -210,21 +214,17 @@ class PostDiaryPage extends HookWidget {
     );
   }
 
-  Widget _keyboardToolbar(FocusNode focusNode) {
-    return Container(
-        height: 44.0,
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.end,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            SecondaryButton(
-              text: '完了',
-              onPressed: () {
-                focusNode.unfocus();
-              },
-            )
-          ],
-        ));
+  Widget _keyboardToolbar(BuildContext context, FocusNode focusNode) {
+    return Positioned(
+      bottom: MediaQuery.of(context).viewInsets.bottom,
+      left: 0,
+      right: 0,
+      child: Container(
+        height: 50,
+        child: Text("Hiiiii"),
+        decoration: BoxDecoration(color: Colors.pink),
+      ),
+    );
   }
 
   Widget _memo(
@@ -241,20 +241,17 @@ class PostDiaryPage extends HookWidget {
           minHeight: 40,
           maxHeight: 200,
         ),
-        child: SingleChildScrollView(
-            scrollDirection: Axis.vertical,
-            reverse: true,
-            child: TextFormField(
-              decoration: InputDecoration(
-                hintText: "メモ",
-                border: OutlineInputBorder(),
-              ),
-              controller: textEditingController,
-              maxLines: null,
-              maxLength: textLength,
-              keyboardType: TextInputType.multiline,
-              focusNode: focusNode,
-            )),
+        child: TextFormField(
+          decoration: InputDecoration(
+            hintText: "メモ",
+            border: OutlineInputBorder(),
+          ),
+          controller: textEditingController,
+          maxLines: null,
+          maxLength: textLength,
+          keyboardType: TextInputType.multiline,
+          focusNode: focusNode,
+        ),
       ),
     );
   }
