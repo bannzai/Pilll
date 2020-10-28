@@ -168,7 +168,7 @@ class PostDiaryPage extends HookWidget {
             SecondaryButton(
               text: '完了',
               onPressed: () {
-                focusNode.unfocus(); //unfocus()でフォーカスが外れる
+                focusNode.unfocus();
               },
             )
           ],
