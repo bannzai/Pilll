@@ -28,6 +28,10 @@ class PostDiaryStore extends StateNotifier<Diary> {
     state = state.copyWith(
         physicalConditions: state.physicalConditions..add(physicalCondition));
   }
+
+  void switchingPhysicalCondition(PhysicalConditionType type) {
+// TODO:
+  }
 }
 
 final _postDiaryStoreProvider = StateNotifierProvider.autoDispose
@@ -72,7 +76,7 @@ class PostDiaryPage extends HookWidget {
             _physicalConditions(),
             Text("体調詳細",
                 style: FontType.componentTitle.merge(TextColorStyle.black)),
-            _conditions(),
+            _physicalConditionDetails(),
             _sex(),
             _memo(context, textEditingController, focusNode),
             if (focusNode.hasFocus) _keyboardToolbar(focusNode),
@@ -83,6 +87,7 @@ class PostDiaryPage extends HookWidget {
   }
 
   Widget _physicalConditions() {
+    final store = useProvider(_postDiaryStoreProvider(date));
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
@@ -100,12 +105,19 @@ class PostDiaryPage extends HookWidget {
           child: Row(
             children: [
               IconButton(
-                  icon: SvgPicture.asset("images/laugh.svg"), onPressed: null),
+                  icon: SvgPicture.asset("images/laugh.svg"),
+                  onPressed: () {
+                    store
+                        .switchingPhysicalCondition(PhysicalConditionType.fine);
+                  }),
               Container(
                   height: 48,
                   child: VerticalDivider(width: 1, color: PilllColors.divider)),
               IconButton(
-                  icon: SvgPicture.asset("images/angry.svg"), onPressed: null),
+                  icon: SvgPicture.asset("images/angry.svg"),
+                  onPressed: () {
+                    store.switchingPhysicalCondition(PhysicalConditionType.bad);
+                  }),
             ],
           ),
         ),
@@ -114,7 +126,7 @@ class PostDiaryPage extends HookWidget {
     );
   }
 
-  Widget _conditions() {
+  Widget _physicalConditionDetails() {
     final store = useProvider(_postDiaryStoreProvider(date));
     final diary = useProvider(_postDiaryStoreProvider(date).state);
     return Wrap(
