@@ -178,23 +178,26 @@ class PostDiaryPage extends HookWidget {
     TextEditingController textEditingController,
     FocusNode focusNode,
   ) {
+    final textLength = 120;
     return Container(
-      color: Colors.blue,
       child: ConstrainedBox(
         constraints: BoxConstraints(
           minWidth: MediaQuery.of(context).size.width,
           maxWidth: MediaQuery.of(context).size.width,
-          minHeight: 25,
-          maxHeight: 80,
+          minHeight: 40,
+          maxHeight: 200,
         ),
         child: SingleChildScrollView(
             scrollDirection: Axis.vertical,
             reverse: true,
-            child: TextField(
-              decoration: InputDecoration(hintText: "メモ"),
+            child: TextFormField(
+              decoration: InputDecoration(
+                hintText: "メモ",
+                border: OutlineInputBorder(),
+              ),
               controller: textEditingController,
               maxLines: null,
-              maxLength: 500,
+              maxLength: textLength,
               keyboardType: TextInputType.multiline,
               focusNode: focusNode,
             )),
