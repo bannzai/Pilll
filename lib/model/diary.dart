@@ -10,6 +10,8 @@ abstract class DiaryFirestoreKey {
   static final String date = "date";
 }
 
+enum PhysicalConditionType { fine, bad }
+
 @freezed
 abstract class Diary with _$Diary {
   static final List<String> allPhysicalConditions = [
