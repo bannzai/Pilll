@@ -28,4 +28,9 @@ class PostDiaryStore extends StateNotifier<DiaryState> {
     state = state.copyWith(
         entity: state.entity.copyWith(physicalConditionStatus: status));
   }
+
+  void toggleHasSex() {
+    state = state.copyWith(
+        entity: state.entity.copyWith(hasSex: !state.entity.hasSex));
+  }
 }
