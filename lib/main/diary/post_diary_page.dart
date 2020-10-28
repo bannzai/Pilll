@@ -70,6 +70,7 @@ class PostDiaryPage extends HookWidget {
 
   Widget _physicalConditions() {
     final store = useProvider(_postDiaryStoreProvider(date));
+    final state = useProvider(_postDiaryStoreProvider(date).state);
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
@@ -87,7 +88,11 @@ class PostDiaryPage extends HookWidget {
           child: Row(
             children: [
               IconButton(
-                  icon: SvgPicture.asset("images/laugh.svg"),
+                  icon: SvgPicture.asset("images/laugh.svg",
+                      color: state.hasPhysicalConditionStatus(
+                              PhysicalConditionStatus.fine)
+                          ? PilllColors.primary
+                          : TextColor.darkGray),
                   onPressed: () {
                     store.switchingPhysicalCondition(
                         PhysicalConditionStatus.fine);
@@ -96,7 +101,11 @@ class PostDiaryPage extends HookWidget {
                   height: 48,
                   child: VerticalDivider(width: 1, color: PilllColors.divider)),
               IconButton(
-                  icon: SvgPicture.asset("images/angry.svg"),
+                  icon: SvgPicture.asset("images/angry.svg",
+                      color: state.hasPhysicalConditionStatus(
+                              PhysicalConditionStatus.bad)
+                          ? PilllColors.primary
+                          : TextColor.darkGray),
                   onPressed: () {
                     store.switchingPhysicalCondition(
                         PhysicalConditionStatus.bad);

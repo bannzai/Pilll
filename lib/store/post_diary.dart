@@ -25,7 +25,7 @@ class PostDiaryStore extends StateNotifier<DiaryState> {
           entity: state.entity.copyWith(physicalConditionStatus: null));
       return;
     }
-    state.copyWith(
+    state = state.copyWith(
         entity: state.entity.copyWith(physicalConditionStatus: status));
   }
 }
