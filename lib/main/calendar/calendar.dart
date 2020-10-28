@@ -227,7 +227,7 @@ class CalendarDayTile extends StatelessWidget {
                   color: onTap == null
                       ? weekday.weekdayColor().withAlpha((255 * 0.4).floor())
                       : weekday.weekdayColor(),
-                ).merge(FontType.calendarDay),
+                ).merge(FontType.componentTitle),
               ),
               Spacer(),
               lowerWidget ?? Spacer(),

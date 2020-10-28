@@ -67,9 +67,11 @@ class PostDiaryPage extends HookWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text(DateTimeFormatter.yearAndMonthAndDay(this.date)),
+            Text(DateTimeFormatter.yearAndMonthAndDay(this.date),
+                style: FontType.sBigTitle.merge(TextColorStyle.main)),
             _physicalConditions(),
-            Text("体調詳細"),
+            Text("体調詳細",
+                style: FontType.componentTitle.merge(TextColorStyle.black)),
             _conditions(),
             _sex(),
             _memo(context, textEditingController, focusNode),
@@ -84,7 +86,7 @@ class PostDiaryPage extends HookWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        Text("体調"),
+        Text("体調", style: FontType.componentTitle.merge(TextColorStyle.black)),
         Spacer(),
         Container(
           height: 48,
@@ -141,7 +143,7 @@ class PostDiaryPage extends HookWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
-        Text("sex"),
+        Text("sex", style: FontType.componentTitle.merge(TextColorStyle.black)),
         SizedBox(width: 80),
         Container(
             padding: EdgeInsets.all(4),
