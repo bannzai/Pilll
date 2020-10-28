@@ -71,7 +71,6 @@ class PostDiaryPage extends HookWidget {
   Widget _physicalConditions() {
     final store = useProvider(_postDiaryStoreProvider(date));
     final state = useProvider(_postDiaryStoreProvider(date).state);
-    final border = BorderSide(width: 1, color: PilllColors.divider);
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
