@@ -30,7 +30,11 @@ class PostDiaryStore extends StateNotifier<Diary> {
   }
 
   void switchingPhysicalCondition(PhysicalConditionStatus type) {
-// TODO:
+    if (type == state.physicalConditionStatus) {
+      state = state.copyWith(physicalConditionStatus: null);
+      return;
+    }
+    state = state.copyWith(physicalConditionStatus: type);
   }
 }
 
@@ -107,8 +111,8 @@ class PostDiaryPage extends HookWidget {
               IconButton(
                   icon: SvgPicture.asset("images/laugh.svg"),
                   onPressed: () {
-                    store
-                        .switchingPhysicalCondition(PhysicalConditionType.fine);
+                    store.switchingPhysicalCondition(
+                        PhysicalConditionStatus.fine);
                   }),
               Container(
                   height: 48,
@@ -116,7 +120,8 @@ class PostDiaryPage extends HookWidget {
               IconButton(
                   icon: SvgPicture.asset("images/angry.svg"),
                   onPressed: () {
-                    store.switchingPhysicalCondition(PhysicalConditionType.bad);
+                    store.switchingPhysicalCondition(
+                        PhysicalConditionStatus.bad);
                   }),
             ],
           ),
