@@ -55,16 +55,25 @@ class PostDiaryPage extends HookWidget {
           children: [
             Text(DateTimeFormatter.yearAndMonthAndDay(this.date),
                 style: FontType.sBigTitle.merge(TextColorStyle.main)),
-            _physicalConditions(),
-            Text("体調詳細",
-                style: FontType.componentTitle.merge(TextColorStyle.black)),
-            _physicalConditionDetails(),
-            _sex(),
-            _memo(context, textEditingController, focusNode),
+            ...[
+              _physicalConditions(),
+              Text("体調詳細",
+                  style: FontType.componentTitle.merge(TextColorStyle.black)),
+              _physicalConditionDetails(),
+              _sex(),
+              _memo(context, textEditingController, focusNode),
+            ].map((e) => _withContentSpacer(e)),
             if (focusNode.hasFocus) _keyboardToolbar(focusNode),
           ],
         ),
       ),
+    );
+  }
+
+  Widget _withContentSpacer(Widget content) {
+    return Container(
+      child: content,
+      padding: EdgeInsets.only(top: 10, bottom: 10),
     );
   }
 
