@@ -1,9 +1,11 @@
 import 'package:Pilll/model/diary.dart';
+import 'package:Pilll/service/diary.dart';
 import 'package:Pilll/state/diary.dart';
 import 'package:hooks_riverpod/all.dart';
 
 class PostDiaryStore extends StateNotifier<DiaryState> {
-  PostDiaryStore(DiaryState state) : super(state);
+  final DiariesService _service;
+  PostDiaryStore(this._service, DiaryState state) : super(state);
 
   void removePhysicalCondition(String physicalCondition) {
     state = state.copyWith(
@@ -32,5 +34,9 @@ class PostDiaryStore extends StateNotifier<DiaryState> {
   void toggleHasSex() {
     state = state.copyWith(
         entity: state.entity.copyWith(hasSex: !state.entity.hasSex));
+  }
+
+  Future<Diary> register() {
+    return _service.register(state.entity);
   }
 }
