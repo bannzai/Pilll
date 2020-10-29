@@ -36,6 +36,10 @@ class PostDiaryStore extends StateNotifier<DiaryState> {
         entity: state.entity.copyWith(hasSex: !state.entity.hasSex));
   }
 
+  void editedMemo(String text) {
+    state = state.copyWith(entity: state.entity.copyWith(memo: text));
+  }
+
   Future<Diary> register() {
     return _service.register(state.entity);
   }

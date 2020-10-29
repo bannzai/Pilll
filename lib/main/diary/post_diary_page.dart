@@ -253,6 +253,7 @@ class PostDiaryPage extends HookWidget {
     FocusNode focusNode,
   ) {
     final textLength = 120;
+    final store = useProvider(_postDiaryStoreProvider(date));
     return Container(
       child: ConstrainedBox(
         constraints: BoxConstraints(
@@ -262,6 +263,9 @@ class PostDiaryPage extends HookWidget {
           maxHeight: 200,
         ),
         child: TextFormField(
+          onChanged: (text) {
+            store.editedMemo(text);
+          },
           decoration: InputDecoration(
             hintText: "メモ",
             border: OutlineInputBorder(),
