@@ -27,7 +27,7 @@ final calendarDiariesProvider = FutureProvider.autoDispose
   if (state.entities.isNotEmpty) {
     return Future.value(state.entities);
   }
-  final diaries = ref.watch(diariesServiceProvider);
+  final diaries = ref.watch(diaryServiceProvider);
   return diaries.fetchListForMonth(dateTimeOfMonth);
 });
 
