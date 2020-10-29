@@ -10,13 +10,13 @@ abstract class DiariesServiceInterface {
   Stream<List<Diary>> subscribe();
 }
 
-final diariesServiceProvider = Provider<DiariesServiceInterface>(
-    (ref) => DiariesService(ref.watch(databaseProvider)));
+final diaryServiceProvider = Provider<DiariesServiceInterface>(
+    (ref) => DiaryService(ref.watch(databaseProvider)));
 
-class DiariesService extends DiariesServiceInterface {
+class DiaryService extends DiariesServiceInterface {
   final DatabaseConnection _database;
 
-  DiariesService(this._database);
+  DiaryService(this._database);
 
   @override
   Future<List<Diary>> fetchListForMonth(DateTime dateTimeOfMonth) {

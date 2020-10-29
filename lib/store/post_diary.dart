@@ -4,7 +4,7 @@ import 'package:Pilll/state/diary.dart';
 import 'package:hooks_riverpod/all.dart';
 
 class PostDiaryStore extends StateNotifier<DiaryState> {
-  final DiariesService _service;
+  final DiaryService _service;
   PostDiaryStore(this._service, DiaryState state) : super(state);
 
   void removePhysicalCondition(String physicalCondition) {

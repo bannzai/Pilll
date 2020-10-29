@@ -7,7 +7,7 @@ import 'package:Pilll/state/diaries.dart';
 import 'package:riverpod/all.dart';
 
 final diariesStoreProvider = StateNotifierProvider(
-    (ref) => DiariesStateStore(ref.watch(diariesServiceProvider)));
+    (ref) => DiariesStateStore(ref.watch(diaryServiceProvider)));
 
 class DiariesStateStore extends StateNotifier<DiariesState> {
   final DiariesServiceInterface _service;
