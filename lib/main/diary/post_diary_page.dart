@@ -217,12 +217,21 @@ class PostDiaryPage extends HookWidget {
   Widget _keyboardToolbar(BuildContext context, FocusNode focusNode) {
     return Positioned(
       bottom: MediaQuery.of(context).viewInsets.bottom,
-      left: 0,
-      right: 0,
       child: Container(
-        height: 50,
-        child: Text("Hiiiii"),
-        decoration: BoxDecoration(color: Colors.pink),
+        height: 44,
+        width: MediaQuery.of(context).size.width,
+        child: Row(
+          children: [
+            Spacer(),
+            SecondaryButton(
+              text: '完了',
+              onPressed: () {
+                focusNode.unfocus();
+              },
+            ),
+          ],
+        ),
+        decoration: BoxDecoration(color: PilllColors.white),
       ),
     );
   }
