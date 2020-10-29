@@ -1,4 +1,5 @@
 import 'package:Pilll/model/diary.dart';
+import 'package:Pilll/service/diary.dart';
 import 'package:Pilll/state/diary.dart';
 import 'package:Pilll/store/diaries.dart';
 import 'package:Pilll/store/post_diary.dart';
@@ -19,10 +20,11 @@ final _postDiaryStoreProvider = StateNotifierProvider.autoDispose
     .family<PostDiaryStore, DateTime>((ref, date) {
   final diary =
       ref.watch(diariesStoreProvider.state).diaryForDatetimeOrNull(date);
+  final service = ref.watch(diariesServiceProvider);
   if (diary == null) {
-    return PostDiaryStore(DiaryState(entity: Diary.forPost(date)));
+    return PostDiaryStore(service, DiaryState(entity: Diary.forPost(date)));
   }
-  return PostDiaryStore(DiaryState(entity: diary.copyWith()));
+  return PostDiaryStore(service, DiaryState(entity: diary.copyWith()));
 });
 
 class PostDiaryPage extends HookWidget {
@@ -37,6 +39,7 @@ class PostDiaryPage extends HookWidget {
     final textEditingController =
         useTextEditingController(text: state.entity.memo);
     final focusNode = useFocusNode();
+    final store = useProvider(_postDiaryStoreProvider(date));
     return Scaffold(
       backgroundColor: PilllColors.background,
       resizeToAvoidBottomPadding: false,
@@ -46,6 +49,14 @@ class PostDiaryPage extends HookWidget {
           icon: Icon(Icons.close, color: Colors.black),
           onPressed: () => Navigator.of(context).pop(),
         ),
+        actions: [
+          SecondaryButton(
+            text: "保存",
+            onPressed: () => store.register().then((value) {
+              Navigator.of(context).pop();
+            }),
+          ),
+        ],
         backgroundColor: PilllColors.background,
       ),
       body: Stack(
