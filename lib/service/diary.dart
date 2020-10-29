@@ -1,6 +1,7 @@
 import 'package:Pilll/database/database.dart';
 import 'package:Pilll/model/diary.dart';
 import 'package:Pilll/provider/auth.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:riverpod/all.dart';
 
 abstract class DiariesServiceInterface {
@@ -37,7 +38,7 @@ class DiaryService extends DiariesServiceInterface {
   Future<Diary> register(Diary diary) {
     return _database
         .diaryReference(diary)
-        .update(diary.toJson())
+        .set(diary.toJson(), SetOptions(merge: true))
         .then((_) => diary);
   }
 
