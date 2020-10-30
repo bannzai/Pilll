@@ -30,6 +30,9 @@ abstract class DiariesState implements _$DiariesState {
     return filtered.last;
   }
 
+  Diary diaryForDateTime(DateTime dateTime) =>
+      entities.lastWhere((element) => isSameDay(element.date, dateTime));
+
   List<Diary> merged(List<Diary> diaries) {
     if (entities.isEmpty) {
       diaries.sort(_sort);
