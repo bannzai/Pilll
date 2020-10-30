@@ -19,10 +19,10 @@ final _confirmDiaryProvider = StateNotifierProvider.autoDispose
   return PostDiaryStore(service, DiaryState(entity: diary.copyWith()));
 });
 
-class EditDiarySheet extends HookWidget {
+class ConfirmDiarySheet extends HookWidget {
   final DateTime date;
 
-  EditDiarySheet(this.date);
+  ConfirmDiarySheet(this.date);
   @override
   Widget build(BuildContext context) {
     return Container(
