@@ -26,15 +26,33 @@ class ConfirmDiarySheet extends HookWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      child: Column(
-        children: [
-          Text(DateTimeFormatter.yearAndMonthAndDay(this.date),
-              style: FontType.sBigTitle.merge(TextColorStyle.main)),
-          _physicalCondition(),
-          _physicalConditionDetails(),
-          _sex(),
-        ],
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.only(
+          topLeft: Radius.circular(10),
+          topRight: Radius.circular(10),
+        ),
+        color: PilllColors.white,
       ),
+      padding: EdgeInsets.fromLTRB(16, 20, 16, 20),
+      child: Column(
+          mainAxisSize: MainAxisSize.min,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text(DateTimeFormatter.yearAndMonthAndDay(this.date),
+                style: FontType.sBigTitle.merge(TextColorStyle.main)),
+            ...[
+              _physicalCondition(),
+              _physicalConditionDetails(),
+              _sex(),
+            ].map((e) => _withContentSpacer(e)),
+          ]),
+    );
+  }
+
+  Widget _withContentSpacer(Widget content) {
+    return Container(
+      child: content,
+      padding: EdgeInsets.only(top: 10, bottom: 10),
     );
   }
 
@@ -52,7 +70,6 @@ class ConfirmDiarySheet extends HookWidget {
   Widget _physicalCondition() {
     final state = useProvider(_confirmDiaryProvider(date).state);
     return Row(
-      mainAxisAlignment: MainAxisAlignment.center,
       children: [
         Text("体調", style: FontType.componentTitle.merge(TextColorStyle.black)),
         SizedBox(width: 16),
