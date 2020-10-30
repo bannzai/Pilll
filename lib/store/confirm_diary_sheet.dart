@@ -44,6 +44,7 @@ class ConfirmDiarySheet extends HookWidget {
               _physicalCondition(),
               _physicalConditionDetails(),
               _sex(),
+              _memo(),
             ].map((e) => _withContentSpacer(e)),
           ]),
     );
@@ -83,9 +84,6 @@ class ConfirmDiarySheet extends HookWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text("体調詳細",
-            style: FontType.componentTitle.merge(TextColorStyle.black)),
-        SizedBox(height: 8),
         Wrap(
           spacing: 10,
           children: diary.physicalConditions
@@ -115,6 +113,14 @@ class ConfirmDiarySheet extends HookWidget {
               : PilllColors.disabledSheet),
       child: SvgPicture.asset("images/heart.svg",
           color: diary.hasSex ? PilllColors.primary : TextColor.darkGray),
+    );
+  }
+
+  Widget _memo() {
+    final diary = useProvider(_confirmDiaryProvider(date).state).entity;
+    return Text(
+      diary.memo,
+      maxLines: 2,
     );
   }
 }
