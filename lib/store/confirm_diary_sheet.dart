@@ -1,3 +1,4 @@
+import 'package:Pilll/main/diary/post_diary_page.dart';
 import 'package:Pilll/model/diary.dart';
 import 'package:Pilll/service/diary.dart';
 import 'package:Pilll/state/diary.dart';
@@ -38,8 +39,7 @@ class ConfirmDiarySheet extends HookWidget {
           mainAxisSize: MainAxisSize.min,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text(DateTimeFormatter.yearAndMonthAndDay(this.date),
-                style: FontType.sBigTitle.merge(TextColorStyle.main)),
+            _title(context),
             ...[
               _physicalCondition(),
               _physicalConditionDetails(),
@@ -54,6 +54,34 @@ class ConfirmDiarySheet extends HookWidget {
     return Container(
       child: content,
       padding: EdgeInsets.only(top: 10, bottom: 10),
+    );
+  }
+
+  Widget _title(BuildContext context) {
+    final store = useProvider(_confirmDiaryProvider(date));
+    return Row(
+      mainAxisSize: MainAxisSize.max,
+      children: [
+        Text(DateTimeFormatter.yearAndMonthAndDay(this.date),
+            style: FontType.sBigTitle.merge(TextColorStyle.main)),
+        Spacer(),
+        IconButton(
+          icon: SvgPicture.asset("images/edit.svg"),
+          onPressed: () {
+            Navigator.of(context).push(MaterialPageRoute(
+              builder: (context) => PostDiaryPage(date),
+            ));
+          },
+        ),
+        SizedBox(width: 20),
+        IconButton(
+          icon: SvgPicture.asset("images/trash.svg"),
+          onPressed: () {
+            store.delete().then((value) => Navigator.of(context).pop());
+          },
+        ),
+        SizedBox(width: 20),
+      ],
     );
   }
 

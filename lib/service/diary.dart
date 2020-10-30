@@ -8,6 +8,7 @@ abstract class DiariesServiceInterface {
   Future<List<Diary>> fetchListForMonth(DateTime dateTimeOfMonth);
   Future<Diary> register(Diary diary);
   Future<Diary> update(Diary diary);
+  Future<Diary> delete(Diary diary);
   Stream<List<Diary>> subscribe();
 }
 
@@ -48,6 +49,11 @@ class DiaryService extends DiariesServiceInterface {
         .diaryReference(diary)
         .update(diary.toJson())
         .then((_) => diary);
+  }
+
+  @override
+  Future<Diary> delete(Diary diary) {
+    return _database.diaryReference(diary).delete().then((_) => diary);
   }
 
   @override
