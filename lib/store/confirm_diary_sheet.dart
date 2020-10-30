@@ -82,7 +82,8 @@ class ConfirmDiarySheet extends HookWidget {
                 context: context,
                 builder: (context) {
                   return ConfirmDeleteDiary(onDelete: () {
-                    store.delete().then((value) => Navigator.of(context).pop());
+                    store.delete().then((value) => Navigator.of(context)
+                        .popUntil((route) => route.isFirst));
                   });
                 });
           },
@@ -195,7 +196,6 @@ class ConfirmDeleteDiary extends StatelessWidget {
           text: "削除する",
           onPressed: () {
             onDelete();
-            Navigator.of(context).pop();
           },
         ),
       ],
