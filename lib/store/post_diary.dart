@@ -43,4 +43,8 @@ class PostDiaryStore extends StateNotifier<DiaryState> {
   Future<Diary> register() {
     return _service.register(state.entity);
   }
+
+  Future<void> delete() {
+    return _service.delete(state.entity);
+  }
 }
