@@ -114,9 +114,11 @@ class Calendar extends HookWidget {
                               builder: (context) => PostDiaryPage(date),
                             ));
                           } else {
-                            showBottomSheet(
-                                context: context,
-                                builder: (context) => ConfirmDiarySheet(date));
+                            showModalBottomSheet(
+                              context: context,
+                              builder: (context) => ConfirmDiarySheet(date),
+                              backgroundColor: Colors.transparent,
+                            );
                           }
                         },
                       );
