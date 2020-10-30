@@ -8,6 +8,7 @@ import 'package:Pilll/main/utility/utility.dart';
 import 'package:Pilll/model/diary.dart';
 import 'package:Pilll/model/weekday.dart';
 import 'package:Pilll/service/diary.dart';
+import 'package:Pilll/store/confirm_diary_sheet.dart';
 import 'package:Pilll/store/diaries.dart';
 import 'package:Pilll/theme/color.dart';
 import 'package:Pilll/theme/font.dart';
@@ -105,14 +106,17 @@ class Calendar extends HookWidget {
                         day: day,
                         upperWidget: isExistDiary ? _diaryMarkWidget() : null,
                         onTap: () {
+                          final date = calculator
+                              .dateTimeForFirstDayOfMonth()
+                              .add(Duration(days: day - 1));
                           if (!isExistDiary) {
                             Navigator.of(context).push(MaterialPageRoute(
-                              builder: (context) => PostDiaryPage(
-                                calculator
-                                    .dateTimeForFirstDayOfMonth()
-                                    .add(Duration(days: day - 1)),
-                              ),
+                              builder: (context) => PostDiaryPage(date),
                             ));
+                          } else {
+                            showBottomSheet(
+                                context: context,
+                                builder: (context) => ConfirmDiarySheet(date));
                           }
                         },
                       );
