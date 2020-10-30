@@ -4,6 +4,7 @@ import 'package:Pilll/service/diary.dart';
 import 'package:Pilll/state/diary.dart';
 import 'package:Pilll/store/diaries.dart';
 import 'package:Pilll/store/post_diary.dart';
+import 'package:Pilll/style/button.dart';
 import 'package:Pilll/theme/color.dart';
 import 'package:Pilll/theme/font.dart';
 import 'package:Pilll/theme/text_color.dart';
@@ -77,7 +78,13 @@ class ConfirmDiarySheet extends HookWidget {
         IconButton(
           icon: SvgPicture.asset("images/trash.svg"),
           onPressed: () {
-            store.delete().then((value) => Navigator.of(context).pop());
+            showDialog(
+                context: context,
+                builder: (context) {
+                  return ConfirmDeleteDiary(onDelete: () {
+                    store.delete().then((value) => Navigator.of(context).pop());
+                  });
+                });
           },
         ),
         SizedBox(width: 20),
@@ -149,6 +156,49 @@ class ConfirmDiarySheet extends HookWidget {
     return Text(
       diary.memo,
       maxLines: 2,
+    );
+  }
+}
+
+class ConfirmDeleteDiary extends StatelessWidget {
+  final Function() onDelete;
+
+  const ConfirmDeleteDiary({Key key, @required this.onDelete})
+      : super(key: key);
+  @override
+  Widget build(BuildContext context) {
+    return AlertDialog(
+      title: SvgPicture.asset("images/alert_24.svg"),
+      content: SizedBox(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          mainAxisSize: MainAxisSize.min,
+          children: <Widget>[
+            Text("日記を削除します",
+                style: FontType.subTitle.merge(TextColorStyle.black)),
+            SizedBox(
+              height: 15,
+            ),
+            Text("削除された日記は復元ができません",
+                style: FontType.assisting.merge(TextColorStyle.lightGray)),
+          ],
+        ),
+      ),
+      actions: <Widget>[
+        SecondaryButton(
+          text: "キャンセル",
+          onPressed: () {
+            Navigator.of(context).pop();
+          },
+        ),
+        SecondaryButton(
+          text: "削除する",
+          onPressed: () {
+            onDelete();
+            Navigator.of(context).pop();
+          },
+        ),
+      ],
     );
   }
 }
