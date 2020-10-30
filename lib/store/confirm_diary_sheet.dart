@@ -31,6 +31,8 @@ class ConfirmDiarySheet extends HookWidget {
           Text(DateTimeFormatter.yearAndMonthAndDay(this.date),
               style: FontType.sBigTitle.merge(TextColorStyle.main)),
           _physicalCondition(),
+          _physicalConditionDetails(),
+          _sex(),
         ],
       ),
     );
@@ -56,6 +58,46 @@ class ConfirmDiarySheet extends HookWidget {
         SizedBox(width: 16),
         _physicalConditionImage(state.entity.physicalConditionStatus),
       ],
+    );
+  }
+
+  Widget _physicalConditionDetails() {
+    final diary = useProvider(_confirmDiaryProvider(date).state).entity;
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
+      children: [
+        Text("体調詳細",
+            style: FontType.componentTitle.merge(TextColorStyle.black)),
+        SizedBox(height: 8),
+        Wrap(
+          spacing: 10,
+          children: diary.physicalConditions
+              .map((e) => ChoiceChip(
+                    label: Text(e),
+                    labelStyle:
+                        FontType.assisting.merge(TextColorStyle.primary),
+                    selectedColor: PilllColors.primarySheet,
+                    selected: true,
+                  ))
+              .toList(),
+        ),
+      ],
+    );
+  }
+
+  Widget _sex() {
+    final diary = useProvider(_confirmDiaryProvider(date).state).entity;
+    return Container(
+      padding: EdgeInsets.all(4),
+      width: 32,
+      height: 32,
+      decoration: BoxDecoration(
+          shape: BoxShape.circle,
+          color: diary.hasSex
+              ? PilllColors.primarySheet
+              : PilllColors.disabledSheet),
+      child: SvgPicture.asset("images/heart.svg",
+          color: diary.hasSex ? PilllColors.primary : TextColor.darkGray),
     );
   }
 }
