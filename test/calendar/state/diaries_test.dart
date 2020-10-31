@@ -22,6 +22,22 @@ void main() {
       expect(result, equals([subject]));
       expect(result.length, equals(1));
     });
+    test("for bugfix", () {
+      List<Diary> entities = [
+        Diary.fromDate(DateTime(2020, 10, 14)),
+        Diary.fromDate(DateTime(2020, 10, 21)),
+        Diary.fromDate(DateTime(2020, 10, 22)),
+      ];
+      final state = DiariesState(entities: entities);
+      final result = state.reduced([Diary.fromDate(DateTime(2020, 10, 21))]);
+      expect(
+        result,
+        equals([
+          Diary.fromDate(DateTime(2020, 10, 14)),
+          Diary.fromDate(DateTime(2020, 10, 22)),
+        ]),
+      );
+    });
   });
   group("#merged", () {
     test("add elements to last", () {

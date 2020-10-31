@@ -15,28 +15,19 @@ class DiariesStateStore extends StateNotifier<DiariesState> {
     _subscribe();
   }
 
-  StreamSubscription modifiedStreamCanceller;
-  StreamSubscription deletedStreamCanceller;
+  StreamSubscription canceller;
   void _subscribe() {
-    modifiedStreamCanceller?.cancel();
-    modifiedStreamCanceller = _service.modifiedStream().listen((entities) {
+    canceller?.cancel();
+    canceller = _service.subscribe().listen((entities) {
       assert(entities != null, "Diary could not null on subscribe");
       if (entities == null) return;
-      state = state.copyWith(entities: state.merged(entities));
-    });
-
-    deletedStreamCanceller?.cancel();
-    deletedStreamCanceller = _service.deletedStream().listen((entities) {
-      assert(entities != null, "Diary could not null on subscribe");
-      if (entities == null) return;
-      state = state.copyWith(entities: state.reduced(entities));
+      state = state.copyWith(entities: entities);
     });
   }
 
   @override
   void dispose() {
-    modifiedStreamCanceller?.cancel();
-    deletedStreamCanceller?.cancel();
+    canceller?.cancel();
     super.dispose();
   }
 
