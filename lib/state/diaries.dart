@@ -66,7 +66,7 @@ abstract class DiariesState implements _$DiariesState {
     }
 
     final elementNotFound = -1;
-    List<Diary> result = entities;
+    List<Diary> result = [];
     result.sort(_sort);
     diaries.forEach((diary) {
       final indexForDelete = entities
