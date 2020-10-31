@@ -98,9 +98,4 @@ abstract class PillSheetModel implements _$PillSheetModel {
     var betweenToday = pillNumber - todayPillNumber;
     return beginingDate.add(Duration(days: betweenToday));
   }
-
-  void resetTodayTakenPillNumber(int pillNumber) {
-    throw UnimplementedError("TODO");
-    // beginingDate = calcBeginingDateFromNextTodayPillNumber(pillNumber);
-  }
 }
