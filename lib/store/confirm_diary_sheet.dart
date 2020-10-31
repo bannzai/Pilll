@@ -75,7 +75,7 @@ class ConfirmDiarySheet extends HookWidget {
             ));
           },
         ),
-        SizedBox(width: 20),
+        SizedBox(width: 12),
         IconButton(
           icon: SvgPicture.asset("images/trash.svg"),
           onPressed: () {
@@ -89,7 +89,6 @@ class ConfirmDiarySheet extends HookWidget {
                 });
           },
         ),
-        SizedBox(width: 20),
       ],
     );
   }
