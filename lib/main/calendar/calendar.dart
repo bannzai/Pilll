@@ -13,6 +13,7 @@ import 'package:Pilll/store/diaries.dart';
 import 'package:Pilll/theme/color.dart';
 import 'package:Pilll/theme/font.dart';
 import 'package:Pilll/theme/text_color.dart';
+import 'package:Pilll/util/today.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/all.dart';
@@ -109,7 +110,7 @@ class Calendar extends HookWidget {
                           final date = calculator
                               .dateTimeForFirstDayOfMonth()
                               .add(Duration(days: day - 1));
-                          if (calculator.date.isBefore(date)) {
+                          if (date.isAfter(today())) {
                             return;
                           }
                           if (!isExistDiary) {
