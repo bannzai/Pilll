@@ -27,6 +27,7 @@ class ConfirmDiarySheet extends HookWidget {
   ConfirmDiarySheet(this.date);
   @override
   Widget build(BuildContext context) {
+    final state = useProvider(_confirmDiaryProvider(date).state);
     return Container(
       decoration: BoxDecoration(
         borderRadius: BorderRadius.only(
@@ -42,7 +43,7 @@ class ConfirmDiarySheet extends HookWidget {
           children: [
             _title(context),
             ...[
-              _physicalCondition(),
+              if (state.hasPhysicalConditionStatus()) _physicalCondition(),
               _physicalConditionDetails(),
               _sex(),
               _memo(),

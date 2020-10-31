@@ -113,14 +113,14 @@ class PostDiaryPage extends HookWidget {
                   borderRadius: BorderRadius.only(
                       topLeft: Radius.circular(8),
                       bottomLeft: Radius.circular(8)),
-                  color: state.hasPhysicalConditionStatus(
+                  color: state.hasPhysicalConditionStatusFor(
                           PhysicalConditionStatus.fine)
                       ? PilllColors.primarySheet
                       : Colors.transparent,
                 ),
                 child: IconButton(
                     icon: SvgPicture.asset("images/laugh.svg",
-                        color: state.hasPhysicalConditionStatus(
+                        color: state.hasPhysicalConditionStatusFor(
                                 PhysicalConditionStatus.fine)
                             ? PilllColors.primary
                             : TextColor.darkGray),
@@ -137,14 +137,14 @@ class PostDiaryPage extends HookWidget {
                   borderRadius: BorderRadius.only(
                       topRight: Radius.circular(8),
                       bottomRight: Radius.circular(8)),
-                  color: state.hasPhysicalConditionStatus(
+                  color: state.hasPhysicalConditionStatusFor(
                           PhysicalConditionStatus.bad)
                       ? PilllColors.primarySheet
                       : Colors.transparent,
                 ),
                 child: IconButton(
                     icon: SvgPicture.asset("images/angry.svg",
-                        color: state.hasPhysicalConditionStatus(
+                        color: state.hasPhysicalConditionStatusFor(
                                 PhysicalConditionStatus.bad)
                             ? PilllColors.primary
                             : TextColor.darkGray),
