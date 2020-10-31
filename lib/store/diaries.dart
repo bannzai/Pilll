@@ -25,11 +25,11 @@ class DiariesStateStore extends StateNotifier<DiariesState> {
       state = state.copyWith(entities: state.merged(entities));
     });
 
-    deletedStreamCanceller.cancel();
+    deletedStreamCanceller?.cancel();
     deletedStreamCanceller = _service.deletedStream().listen((entities) {
       assert(entities != null, "Diary could not null on subscribe");
       if (entities == null) return;
-      state = state.copyWith(entities: state.merged(entities));
+      state = state.copyWith(entities: state.reduced(entities));
     });
   }
 
