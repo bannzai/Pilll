@@ -22,7 +22,7 @@ class PostDiaryStore extends StateNotifier<DiaryState> {
   }
 
   void switchingPhysicalCondition(PhysicalConditionStatus status) {
-    if (state.hasPhysicalConditionStatus(status)) {
+    if (state.hasPhysicalConditionStatusFor(status)) {
       state = state.copyWith(
           entity: state.entity.copyWith(physicalConditionStatus: null));
       return;
