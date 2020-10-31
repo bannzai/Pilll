@@ -57,4 +57,26 @@ abstract class DiariesState implements _$DiariesState {
     });
     return result;
   }
+
+  List<Diary> reduced(List<Diary> diaries) {
+    if (entities.isEmpty) {
+      assert(false, "unexpected source diaries is empty");
+      diaries.sort(_sort);
+      return diaries;
+    }
+
+    final elementNotFound = -1;
+    List<Diary> result = entities;
+    result.sort(_sort);
+    diaries.forEach((diary) {
+      final indexForDelete = entities
+          .lastIndexWhere((element) => isSameDay(diary.date, element.date));
+      if (indexForDelete != elementNotFound) {
+        return;
+      }
+      assert(false, "unexpected deleted index not found ${diary.date}");
+      result.add(diary);
+    });
+    return result;
+  }
 }
