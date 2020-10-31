@@ -68,7 +68,7 @@ class DiaryService extends DiariesServiceInterface {
         .toList();
   }
 
-u  @override
+  @override
   Stream<List<Diary>> subscribe() {
     return _database
         .diariesReference()
