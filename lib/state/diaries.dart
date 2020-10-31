@@ -42,18 +42,19 @@ abstract class DiariesState implements _$DiariesState {
     List<Diary> result = entities;
     result.sort(_sort);
     diaries.forEach((diary) {
+      final indexForReplace =
+          entities.indexWhere((element) => isSameDay(diary.date, element.date));
+      if (indexForReplace != elementNotFound) {
+        result[indexForReplace] = diary;
+        return;
+      }
       final indexForInsert = entities
           .lastIndexWhere((element) => diary.date.isBefore(element.date));
       if (indexForInsert != elementNotFound) {
         result.insert(indexForInsert, diary);
         return;
       }
-      final indexForReplace =
-          entities.indexWhere((element) => isSameDay(diary.date, element.date));
-      if (indexForReplace != elementNotFound) {
-        result[indexForReplace] = diary;
-      }
-      result.insert(0, diary);
+      result.add(diary);
     });
     return result;
   }
@@ -65,18 +66,10 @@ abstract class DiariesState implements _$DiariesState {
       return diaries;
     }
 
-    final elementNotFound = -1;
-    List<Diary> result = [];
-    result.sort(_sort);
-    diaries.forEach((diary) {
-      final indexForDelete = entities
-          .lastIndexWhere((element) => isSameDay(diary.date, element.date));
-      if (indexForDelete != elementNotFound) {
-        return;
-      }
-      assert(false, "unexpected deleted index not found ${diary.date}");
-      result.add(diary);
-    });
-    return result;
+    return entities
+        .where((source) => diaries
+            .where((diary) => isSameDay(source.date, diary.date))
+            .isEmpty)
+        .toList();
   }
 }
