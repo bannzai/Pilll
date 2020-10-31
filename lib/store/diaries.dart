@@ -32,8 +32,9 @@ class DiariesStateStore extends StateNotifier<DiariesState> {
   }
 
   void fetchListForMonth(DateTime dateTimeOfMonth) {
-    _service.fetchListForMonth(dateTimeOfMonth).then(
-        (entities) => state = state.copyWith(entities: state.merged(entities)));
+    _service
+        .fetchListForMonth(dateTimeOfMonth)
+        .then((entities) => state = state.copyWith(entities: entities));
   }
 
   void register(Diary diary) {
