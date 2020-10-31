@@ -77,7 +77,7 @@ class FontType {
     fontWeight: FontWeight.w600,
     fontSize: FontSize.normal,
   );
-  static final TextStyle calendarDay = TextStyle(
+  static final TextStyle componentTitle = TextStyle(
     fontFamily: FontFamily.japanese,
     fontWeight: FontWeight.w300,
     fontSize: FontSize.sLarge,

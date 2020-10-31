@@ -1,18 +1,39 @@
 import 'package:Pilll/main/calendar/calculator.dart';
 import 'package:Pilll/main/calendar/calendar_band_model.dart';
 import 'package:Pilll/main/calendar/date_range.dart';
+import 'package:Pilll/main/components/indicator.dart';
+import 'package:Pilll/main/diary/post_diary_page.dart';
 import 'package:Pilll/main/record/weekday_badge.dart';
+import 'package:Pilll/main/utility/utility.dart';
+import 'package:Pilll/model/diary.dart';
 import 'package:Pilll/model/weekday.dart';
+import 'package:Pilll/service/diary.dart';
+import 'package:Pilll/store/confirm_diary_sheet.dart';
+import 'package:Pilll/store/diaries.dart';
+import 'package:Pilll/theme/color.dart';
 import 'package:Pilll/theme/font.dart';
 import 'package:Pilll/theme/text_color.dart';
+import 'package:Pilll/util/today.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_hooks/flutter_hooks.dart';
+import 'package:hooks_riverpod/all.dart';
 
 abstract class CalendarConstants {
   static final int weekdayCount = 7;
   static final double tileHeight = 60;
 }
 
-class Calendar extends StatelessWidget {
+final calendarDiariesProvider = FutureProvider.autoDispose
+    .family<List<Diary>, DateTime>((ref, DateTime dateTimeOfMonth) {
+  final state = ref.watch(diariesStoreProvider.state);
+  if (state.entities.isNotEmpty) {
+    return Future.value(state.entities);
+  }
+  final diaries = ref.watch(diaryServiceProvider);
+  return diaries.fetchListForMonth(dateTimeOfMonth);
+});
+
+class Calendar extends HookWidget {
   final Calculator calculator;
   final List<CalendarBandModel> bandModels;
 
@@ -22,6 +43,18 @@ class Calendar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final futureCalendarDiaries =
+        useProvider(calendarDiariesProvider(calculator.date));
+    return futureCalendarDiaries.when(
+      data: (value) {
+        return _body(context, value);
+      },
+      loading: () => Indicator(),
+      error: (error, trace) => Indicator(),
+    );
+  }
+
+  Column _body(BuildContext context, List<Diary> diaries) {
     return Column(
       children: <Widget>[
         Row(
@@ -49,7 +82,7 @@ class Calendar extends StatelessWidget {
                               line == 1;
                       if (isPreviousMonth) {
                         return CalendarDayTile(
-                            disable: true,
+                            onTap: null,
                             weekday: weekday,
                             day: calculator
                                 .dateTimeForPreviousMonthTile(weekday.index)
@@ -63,9 +96,35 @@ class Calendar extends StatelessWidget {
                       if (isNextMonth) {
                         return Expanded(child: Container());
                       }
+                      bool isExistDiary = diaries
+                          .where((element) => isSameDay(
+                              element.date,
+                              DateTime(calculator.date.year,
+                                  calculator.date.month, day)))
+                          .isNotEmpty;
                       return CalendarDayTile(
                         weekday: weekday,
                         day: day,
+                        upperWidget: isExistDiary ? _diaryMarkWidget() : null,
+                        onTap: () {
+                          final date = calculator
+                              .dateTimeForFirstDayOfMonth()
+                              .add(Duration(days: day - 1));
+                          if (date.isAfter(today())) {
+                            return;
+                          }
+                          if (!isExistDiary) {
+                            Navigator.of(context).push(MaterialPageRoute(
+                              builder: (context) => PostDiaryPage(date),
+                            ));
+                          } else {
+                            showModalBottomSheet(
+                              context: context,
+                              builder: (context) => ConfirmDiarySheet(date),
+                              backgroundColor: Colors.transparent,
+                            );
+                          }
+                        },
                       );
                     }).toList(),
                   ),
@@ -77,6 +136,15 @@ class Calendar extends StatelessWidget {
           );
         }),
       ],
+    );
+  }
+
+  Widget _diaryMarkWidget() {
+    return Container(
+      width: 8,
+      height: 8,
+      decoration: BoxDecoration(
+          color: PilllColors.gray, borderRadius: BorderRadius.circular(4)),
     );
   }
 
@@ -136,7 +204,7 @@ class CalendarBand extends StatelessWidget {
 class CalendarDayTile extends StatelessWidget {
   final int day;
   final Weekday weekday;
-  final bool disable;
+  final VoidCallback onTap;
 
   final Widget upperWidget;
   final Widget lowerWidget;
@@ -147,31 +215,50 @@ class CalendarDayTile extends StatelessWidget {
       @required this.weekday,
       this.upperWidget,
       this.lowerWidget,
-      this.disable = false})
+      @required this.onTap})
       : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Expanded(
-      child: Container(
-        height: CalendarConstants.tileHeight,
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
-          children: <Widget>[
-            upperWidget ?? Spacer(),
-            Spacer(),
-            Text(
-              "$day",
-              textAlign: TextAlign.center,
-              style: TextStyle(
-                color: disable
-                    ? weekday.weekdayColor().withAlpha((255 * 0.4).floor())
-                    : weekday.weekdayColor(),
-              ).merge(FontType.calendarDay),
-            ),
-            Spacer(),
-            lowerWidget ?? Spacer(),
-          ],
+      child: GestureDetector(
+        onTap: onTap,
+        child: Container(
+          height: CalendarConstants.tileHeight,
+          child: Stack(
+            children: <Widget>[
+              if (upperWidget != null) ...[
+                Positioned.fill(
+                  top: 8,
+                  child:
+                      Align(alignment: Alignment.topCenter, child: upperWidget),
+                )
+              ],
+              Positioned.fill(
+                child: Align(
+                  alignment: Alignment.center,
+                  child: Text(
+                    "$day",
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      color: onTap == null
+                          ? weekday
+                              .weekdayColor()
+                              .withAlpha((255 * 0.4).floor())
+                          : weekday.weekdayColor(),
+                    ).merge(FontType.componentTitle),
+                  ),
+                ),
+              ),
+              if (lowerWidget != null) ...[
+                Positioned.fill(
+                  top: 8,
+                  child:
+                      Align(alignment: Alignment.topCenter, child: lowerWidget),
+                )
+              ],
+            ],
+          ),
         ),
       ),
     );

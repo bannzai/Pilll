@@ -40,6 +40,7 @@ class PilllColors {
   static final Color blank = Colors.white;
   static final Color potti = HexColor.fromHex("7C8E9C");
   static final Color lightGray = HexColor.fromHex("CDCFD1");
+  static final Color gray = HexColor.fromHex("BEC0C2");
 
   static final Color menstruation = HexColor.fromHex("DCB1C4");
   static final Color duration = HexColor.fromHex("6A7DA5");
@@ -48,4 +49,7 @@ class PilllColors {
   static final Color modalBackground =
       HexColor.fromHex("333333").withAlpha((255 * 0.7).round());
   static final Color white = Colors.white;
+
+  static Color get disabledSheet => PilllColors.pillSheet;
+  static final Color primarySheet = HexColor.fromHex("FDF2F2");
 }
