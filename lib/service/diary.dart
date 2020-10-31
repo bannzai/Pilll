@@ -9,7 +9,8 @@ abstract class DiariesServiceInterface {
   Future<Diary> register(Diary diary);
   Future<Diary> update(Diary diary);
   Future<Diary> delete(Diary diary);
-  Stream<List<Diary>> subscribe();
+  Stream<List<Diary>> modifiedStream();
+  Stream<List<Diary>> deletedStream();
 }
 
 final diaryServiceProvider = Provider<DiariesServiceInterface>(
@@ -56,9 +57,28 @@ class DiaryService extends DiariesServiceInterface {
     return _database.diaryReference(diary).delete().then((_) => diary);
   }
 
+  List<DocumentChange> _filteredDeletedEventTypes(QuerySnapshot event) {
+    return event.docChanges
+        .where((element) => element.type == DocumentChangeType.removed);
+  }
+
   @override
-  Stream<List<Diary>> subscribe() {
-    return _database.diariesReference().snapshots().map((event) =>
-        event.docs.map((doc) => Diary.fromJson(doc.data())).toList());
+  Stream<List<Diary>> modifiedStream() {
+    return _database
+        .diariesReference()
+        .snapshots()
+        .where((element) => _filteredDeletedEventTypes(element).isEmpty)
+        .map((event) =>
+            event.docs.map((doc) => Diary.fromJson(doc.data())).toList());
+  }
+
+  @override
+  Stream<List<Diary>> deletedStream() {
+    return _database
+        .diariesReference()
+        .snapshots()
+        .where((element) => _filteredDeletedEventTypes(element).isNotEmpty)
+        .map((event) =>
+            event.docs.map((doc) => Diary.fromJson(doc.data())).toList());
   }
 }
