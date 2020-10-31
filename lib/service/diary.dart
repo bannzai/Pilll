@@ -59,7 +59,8 @@ class DiaryService extends DiariesServiceInterface {
 
   List<DocumentChange> _filteredDeletedEventTypes(QuerySnapshot event) {
     return event.docChanges
-        .where((element) => element.type == DocumentChangeType.removed);
+        .where((element) => element.type == DocumentChangeType.removed)
+        .toList();
   }
 
   @override
