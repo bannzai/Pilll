@@ -83,8 +83,9 @@ class ConfirmDiarySheet extends HookWidget {
                 context: context,
                 builder: (context) {
                   return ConfirmDeleteDiary(onDelete: () {
-                    store.delete().then((value) => Navigator.of(context)
-                        .popUntil((route) => route.isFirst));
+                    int counter = 0;
+                    store.delete().then((value) =>
+                        Navigator.popUntil(context, (route) => counter++ >= 2));
                   });
                 });
           },
