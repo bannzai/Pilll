@@ -9,10 +9,10 @@ part of 'diary.dart';
 _$_Diary _$_$_DiaryFromJson(Map<String, dynamic> json) {
   return _$_Diary(
     date: TimestampConverter.timestampToDateTime(json['date'] as Timestamp),
-    physicalConditionStatus: _$enumDecode(
+    physicalConditionStatus: _$enumDecodeNullable(
         _$PhysicalConditionStatusEnumMap, json['physicalConditionStatus']),
     physicalConditions:
-        (json['physicalConditions'] as List).map((e) => e as String).toList(),
+        (json['physicalConditions'] as List)?.map((e) => e as String)?.toList(),
     hasSex: json['hasSex'] as bool,
     memo: json['memo'] as String,
   );
@@ -46,6 +46,17 @@ T _$enumDecode<T>(
         '${enumValues.values.join(', ')}');
   }
   return value ?? unknownValue;
+}
+
+T _$enumDecodeNullable<T>(
+  Map<T, dynamic> enumValues,
+  dynamic source, {
+  T unknownValue,
+}) {
+  if (source == null) {
+    return null;
+  }
+  return _$enumDecode<T>(enumValues, source, unknownValue: unknownValue);
 }
 
 const _$PhysicalConditionStatusEnumMap = {
