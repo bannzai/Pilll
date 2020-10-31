@@ -35,8 +35,6 @@ class CalendarCard extends HookWidget {
           Calendar(
             calculator: Calculator(date),
             bandModels: [
-              CalendarMenstruationBandModel(
-                  DateTime(2020, 10, 28), DateTime(2020, 11, 2)),
               if (currentPillSheetState.entity != null) ...[
                 menstruationDateRange(
                         currentPillSheetState.entity, settingState.entity, 0)

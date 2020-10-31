@@ -58,7 +58,7 @@ class TertiaryButton extends StatelessWidget {
       width: 180,
       height: 44,
       child: FlatButton(
-        color: HexColor.fromHex("BEC0C2"),
+        color: PilllColors.gray,
         textColor: TextColor.white,
         child: Text(text),
         onPressed: onPressed,
