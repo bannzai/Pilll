@@ -22,7 +22,7 @@ final _postDiaryStoreProvider = StateNotifierProvider.autoDispose
       ref.watch(diariesStoreProvider.state).diaryForDatetimeOrNull(date);
   final service = ref.watch(diaryServiceProvider);
   if (diary == null) {
-    return PostDiaryStore(service, DiaryState(entity: Diary.forPost(date)));
+    return PostDiaryStore(service, DiaryState(entity: Diary.fromDate(date)));
   }
   return PostDiaryStore(service, DiaryState(entity: diary.copyWith()));
 });
