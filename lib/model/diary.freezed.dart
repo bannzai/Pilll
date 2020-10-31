@@ -151,7 +151,7 @@ class __$DiaryCopyWithImpl<$Res> extends _$DiaryCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable(nullable: false, explicitToJson: true)
+@JsonSerializable(explicitToJson: true)
 
 /// @nodoc
 class _$_Diary implements _Diary {
