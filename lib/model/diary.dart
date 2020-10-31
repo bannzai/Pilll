@@ -37,7 +37,7 @@ abstract class Diary with _$Diary {
   @late
   String get id => "Diary_${DateTimeFormatter.diaryIdentifier(date)}";
 
-  @JsonSerializable(nullable: false, explicitToJson: true)
+  @JsonSerializable(explicitToJson: true)
   factory Diary({
     @JsonKey(
       nullable: false,
