@@ -221,22 +221,38 @@ class CalendarDayTile extends StatelessWidget {
         onTap: onTap,
         child: Container(
           height: CalendarConstants.tileHeight,
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
+          child: Stack(
             children: <Widget>[
-              upperWidget ?? Spacer(),
-              Spacer(),
-              Text(
-                "$day",
-                textAlign: TextAlign.center,
-                style: TextStyle(
-                  color: onTap == null
-                      ? weekday.weekdayColor().withAlpha((255 * 0.4).floor())
-                      : weekday.weekdayColor(),
-                ).merge(FontType.componentTitle),
+              if (upperWidget != null) ...[
+                Positioned.fill(
+                  top: 8,
+                  child:
+                      Align(alignment: Alignment.topCenter, child: upperWidget),
+                )
+              ],
+              Positioned.fill(
+                child: Align(
+                  alignment: Alignment.center,
+                  child: Text(
+                    "$day",
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                      color: onTap == null
+                          ? weekday
+                              .weekdayColor()
+                              .withAlpha((255 * 0.4).floor())
+                          : weekday.weekdayColor(),
+                    ).merge(FontType.componentTitle),
+                  ),
+                ),
               ),
-              Spacer(),
-              lowerWidget ?? Spacer(),
+              if (lowerWidget != null) ...[
+                Positioned.fill(
+                  top: 8,
+                  child:
+                      Align(alignment: Alignment.topCenter, child: lowerWidget),
+                )
+              ],
             ],
           ),
         ),
