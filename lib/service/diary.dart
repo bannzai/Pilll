@@ -62,18 +62,11 @@ class DiaryService extends DiariesServiceInterface {
     return _database.diaryReference(diary).delete().then((_) => diary);
   }
 
-  List<DocumentChange> _filterDeleteEventType(QuerySnapshot event) {
-    return event.docChanges
-        .where((element) => element.type == DocumentChangeType.removed)
-        .toList();
-  }
-
   @override
   Stream<List<Diary>> subscribe() {
     return _database
         .diariesReference()
         .snapshots()
-        .where((element) => _filterDeleteEventType(element).isEmpty)
         .map((event) =>
             event.docs.map((doc) => Diary.fromJson(doc.data())).toList())
         .map((diaries) => sortedDiaries(diaries));
