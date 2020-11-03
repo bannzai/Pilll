@@ -1,7 +1,7 @@
 import 'package:Pilll/application/router.dart';
 import 'package:Pilll/entity/initial_setting.dart';
 import 'package:Pilll/store/initial_setting.dart';
-import 'package:Pilll/style/button.dart';
+import 'package:Pilll/components/atoms/buttons.dart';
 import 'package:Pilll/components/atoms/color.dart';
 import 'package:Pilll/components/atoms/font.dart';
 import 'package:Pilll/components/atoms/text_color.dart';

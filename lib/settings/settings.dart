@@ -11,7 +11,7 @@ import 'package:Pilll/settings/modifing_pill_number.dart';
 import 'package:Pilll/settings/reminder_times.dart';
 import 'package:Pilll/store/pill_sheet.dart';
 import 'package:Pilll/store/setting.dart';
-import 'package:Pilll/style/button.dart';
+import 'package:Pilll/components/atoms/buttons.dart';
 import 'package:Pilll/components/atoms/color.dart';
 import 'package:Pilll/components/atoms/font.dart';
 import 'package:Pilll/components/atoms/text_color.dart';

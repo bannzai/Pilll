@@ -4,7 +4,7 @@ import 'package:Pilll/service/diary.dart';
 import 'package:Pilll/state/diary.dart';
 import 'package:Pilll/store/diaries.dart';
 import 'package:Pilll/store/post_diary.dart';
-import 'package:Pilll/style/button.dart';
+import 'package:Pilll/components/atoms/buttons.dart';
 import 'package:Pilll/components/atoms/color.dart';
 import 'package:Pilll/components/atoms/font.dart';
 import 'package:Pilll/components/atoms/text_color.dart';

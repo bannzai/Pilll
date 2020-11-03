@@ -1,4 +1,4 @@
-import 'package:Pilll/style/button.dart';
+import 'package:Pilll/components/atoms/buttons.dart';
 import 'package:Pilll/components/atoms/color.dart';
 import 'package:Pilll/initial_setting/initial_setting_1.dart';
 import 'package:Pilll/components/atoms/font.dart';
