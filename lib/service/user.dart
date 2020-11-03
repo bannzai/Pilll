@@ -1,6 +1,5 @@
 import 'package:Pilll/database/database.dart';
 import 'package:Pilll/entity/user.dart';
-import 'package:Pilll/auth/auth.dart/';
 import 'package:firebase_auth/firebase_auth.dart' as auth;
 import 'package:riverpod/all.dart';
 
