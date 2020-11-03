@@ -1,4 +1,4 @@
-import 'package:Pilll/model/setting.dart';
+import 'package:Pilll/entity/setting.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:meta/meta.dart';

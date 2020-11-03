@@ -1,4 +1,4 @@
-import 'package:Pilll/model/pill_sheet.dart';
+import 'package:Pilll/entity/pill_sheet.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 enum PillSheetType {

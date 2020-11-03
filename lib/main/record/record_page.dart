@@ -1,10 +1,10 @@
 import 'package:Pilll/main/components/indicator.dart';
 import 'package:Pilll/main/components/pill/pill_sheet.dart';
 import 'package:Pilll/main/record/record_taken_information.dart';
-import 'package:Pilll/model/pill_mark_type.dart';
-import 'package:Pilll/model/pill_sheet.dart';
-import 'package:Pilll/model/pill_sheet_type.dart';
-import 'package:Pilll/model/weekday.dart';
+import 'package:Pilll/entity/pill_mark_type.dart';
+import 'package:Pilll/entity/pill_sheet.dart';
+import 'package:Pilll/entity/pill_sheet_type.dart';
+import 'package:Pilll/entity/weekday.dart';
 import 'package:Pilll/store/pill_sheet.dart';
 import 'package:Pilll/store/setting.dart';
 import 'package:Pilll/style/button.dart';

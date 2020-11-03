@@ -1,7 +1,7 @@
-import 'package:Pilll/model/pill_mark_type.dart';
-import 'package:Pilll/model/pill_sheet.dart';
-import 'package:Pilll/model/pill_sheet_type.dart';
-import 'package:Pilll/model/setting.dart';
+import 'package:Pilll/entity/pill_mark_type.dart';
+import 'package:Pilll/entity/pill_sheet.dart';
+import 'package:Pilll/entity/pill_sheet_type.dart';
+import 'package:Pilll/entity/setting.dart';
 import 'package:Pilll/util/today.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 

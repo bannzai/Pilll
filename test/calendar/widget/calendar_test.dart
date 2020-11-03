@@ -2,7 +2,7 @@ import 'package:Pilll/main/calendar/calculator.dart';
 import 'package:Pilll/main/calendar/calendar.dart';
 import 'package:Pilll/main/calendar/calendar_band_model.dart';
 import 'package:Pilll/main/calendar/date_range.dart';
-import 'package:Pilll/model/diary.dart';
+import 'package:Pilll/entity/diary.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:hooks_riverpod/all.dart';

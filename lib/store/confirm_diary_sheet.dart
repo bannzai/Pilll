@@ -1,5 +1,5 @@
 import 'package:Pilll/main/diary/post_diary_page.dart';
-import 'package:Pilll/model/diary.dart';
+import 'package:Pilll/entity/diary.dart';
 import 'package:Pilll/service/diary.dart';
 import 'package:Pilll/state/diary.dart';
 import 'package:Pilll/store/diaries.dart';
