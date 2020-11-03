@@ -1,4 +1,4 @@
-import 'package:Pilll/main/diary/post_diary_page.dart';
+import 'package:Pilll/lib/diary/post_diary_page.dart';
 import 'package:Pilll/entity/diary.dart';
 import 'package:Pilll/service/diary.dart';
 import 'package:Pilll/state/diary.dart';
