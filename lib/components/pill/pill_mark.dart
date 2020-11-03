@@ -1,6 +1,6 @@
 import 'package:Pilll/components/ripple.dart';
 import 'package:Pilll/entity/pill_mark_type.dart';
-import 'package:Pilll/theme/color.dart';
+import 'package:Pilll/components/atoms/color.dart';
 import 'package:Pilll/util/environment.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
