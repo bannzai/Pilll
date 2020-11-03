@@ -1,4 +1,4 @@
-import 'package:Pilll/domain/initial_setting/initial_setting_2.dart';
+import 'package:Pilll/domain/initial_setting/initial_setting_2_page.dart';
 import 'package:Pilll/components/organisms/pill/pill_sheet_type_select_page.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';

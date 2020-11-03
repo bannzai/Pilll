@@ -9,11 +9,11 @@ abstract class InitialSettingInterface {
 }
 
 final initialSettingServiceProvider =
-    Provider((ref) => InitialSetting(ref.watch(databaseProvider)));
+    Provider((ref) => InitialSettingPage(ref.watch(databaseProvider)));
 
-class InitialSetting extends InitialSettingInterface {
+class InitialSettingPage extends InitialSettingInterface {
   final DatabaseConnection _database;
-  InitialSetting(this._database);
+  InitialSettingPage(this._database);
 
   Future<Setting> register(InitialSettingModel initialSetting) {
     var setting = initialSetting.buildSetting();
