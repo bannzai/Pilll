@@ -5,7 +5,7 @@ import 'package:Pilll/store/setting.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
 
-import '../helper/mock.dart';
+import '../../helper/mock.dart';
 
 class _FakeSetting extends Fake implements Setting {
   final List<ReminderTime> fakeReminderTimes;
