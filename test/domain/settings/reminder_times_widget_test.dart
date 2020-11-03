@@ -9,8 +9,8 @@ import 'package:hooks_riverpod/all.dart';
 import 'package:intl/date_symbol_data_local.dart';
 import 'package:mockito/mockito.dart';
 
-import '../helper/mock.dart';
-import '../helper/supported_device.dart';
+import '../../helper/mock.dart';
+import '../../helper/supported_device.dart';
 
 void main() {
   setUp(() {
