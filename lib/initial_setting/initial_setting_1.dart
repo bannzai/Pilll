@@ -1,5 +1,5 @@
 import 'package:Pilll/initial_setting/initial_setting_2.dart';
-import 'package:Pilll/application/components/pill_sheet_type_select_page.dart';
+import 'package:Pilll/components/pill_sheet_type_select_page.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:Pilll/store/initial_setting.dart';

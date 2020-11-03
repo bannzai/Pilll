@@ -3,7 +3,7 @@ import 'package:Pilll/store/initial_setting.dart';
 import 'package:Pilll/style/button.dart';
 import 'package:Pilll/theme/color.dart';
 import 'package:Pilll/initial_setting/initial_setting_3.dart';
-import 'package:Pilll/application/components/pill/pill_sheet.dart';
+import 'package:Pilll/components/pill/pill_sheet.dart';
 import 'package:Pilll/theme/font.dart';
 import 'package:Pilll/theme/text_color.dart';
 import 'package:Pilll/util/today.dart';

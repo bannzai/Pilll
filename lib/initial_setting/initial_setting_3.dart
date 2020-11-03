@@ -1,5 +1,5 @@
 import 'package:Pilll/application/router.dart';
-import 'package:Pilll/application/components/setting_menstruation_page.dart';
+import 'package:Pilll/components/setting_menstruation_page.dart';
 import 'package:Pilll/initial_setting/initial_setting_4.dart';
 import 'package:Pilll/store/initial_setting.dart';
 import 'package:flutter/cupertino.dart';
