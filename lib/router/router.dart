@@ -1,4 +1,4 @@
-import 'package:Pilll/domain/initial_setting/initial_setting.dart';
+import 'package:Pilll/domain/initial_setting/initial_setting_page.dart';
 import 'package:Pilll/domain/home/home_page.dart';
 import 'package:Pilll/domain/root/root.dart';
 import 'package:Pilll/util/shared_preference/keys.dart';
@@ -11,7 +11,7 @@ class AppRouter {
     return {
       Routes.root: (BuildContext context) => ProviderScope(child: Root()),
       Routes.initialSetting: (BuildContext context) =>
-          ProviderScope(child: InitialSetting()),
+          ProviderScope(child: InitialSettingPage()),
       Routes.main: (BuildContext context) => ProviderScope(child: HomePage()),
     };
   }
