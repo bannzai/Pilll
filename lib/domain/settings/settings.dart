@@ -5,7 +5,7 @@ import 'package:Pilll/entity/pill_mark_type.dart';
 import 'package:Pilll/entity/pill_sheet.dart';
 import 'package:Pilll/entity/pill_sheet_type.dart';
 import 'package:Pilll/entity/user.dart';
-import 'package:Pilll/provider/auth.dart';
+import 'package:Pilll/auth/auth.dart/';
 import 'package:Pilll/domain/settings/model.dart';
 import 'package:Pilll/domain/settings/modifing_pill_number.dart';
 import 'package:Pilll/domain/settings/reminder_times.dart';
