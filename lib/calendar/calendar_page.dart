@@ -1,6 +1,6 @@
 import 'dart:math' as math;
 
-import 'package:Pilll/main/calendar/calendar_card.dart';
+import 'package:Pilll/calendar/calendar_card.dart';
 import 'package:Pilll/theme/color.dart';
 import 'package:Pilll/theme/font.dart';
 import 'package:Pilll/theme/text_color.dart';

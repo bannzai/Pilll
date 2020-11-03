@@ -1,4 +1,4 @@
-import 'package:Pilll/main/calendar/calendar_page.dart';
+import 'package:Pilll/calendar/calendar_page.dart';
 import 'package:Pilll/main/record/record_page.dart';
 import 'package:Pilll/settings/list/settings.dart';
 import 'package:Pilll/theme/color.dart';
