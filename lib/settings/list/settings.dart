@@ -1,6 +1,6 @@
 import 'package:Pilll/database/database.dart';
-import 'package:Pilll/components/pill_sheet_type_select_page.dart';
-import 'package:Pilll/components/setting_menstruation_page.dart';
+import 'package:Pilll/application/components/pill_sheet_type_select_page.dart';
+import 'package:Pilll/application/components/setting_menstruation_page.dart';
 import 'package:Pilll/entity/pill_mark_type.dart';
 import 'package:Pilll/entity/pill_sheet.dart';
 import 'package:Pilll/entity/pill_sheet_type.dart';

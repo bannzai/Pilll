@@ -1,4 +1,4 @@
-import 'package:Pilll/components/pill/pill_sheet.dart';
+import 'package:Pilll/application/components/pill/pill_sheet.dart';
 import 'package:Pilll/theme/color.dart';
 import 'package:Pilll/theme/font.dart';
 import 'package:Pilll/theme/text_color.dart';

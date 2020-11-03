@@ -1,7 +1,7 @@
 import 'package:Pilll/calendar/calculator.dart';
 import 'package:Pilll/calendar/calendar_band_model.dart';
 import 'package:Pilll/calendar/date_range.dart';
-import 'package:Pilll/components/indicator.dart';
+import 'package:Pilll/application/components/indicator.dart';
 import 'package:Pilll/lib/diary/post_diary_page.dart';
 import 'package:Pilll/main/record/weekday_badge.dart';
 import 'package:Pilll/main/utility/utility.dart';
