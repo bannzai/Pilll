@@ -2,7 +2,7 @@ import 'package:Pilll/application/router.dart';
 import 'package:Pilll/components/indicator.dart';
 import 'package:Pilll/entity/user.dart';
 import 'package:Pilll/service/user.dart';
-import 'package:Pilll/theme/color.dart';
+import 'package:Pilll/components/atoms/color.dart';
 import 'package:Pilll/util/shared_preference/keys.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';

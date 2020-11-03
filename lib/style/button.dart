@@ -1,6 +1,6 @@
-import 'package:Pilll/theme/button.dart';
-import 'package:Pilll/theme/color.dart';
-import 'package:Pilll/theme/text_color.dart';
+import 'package:Pilll/components/atoms/button.dart';
+import 'package:Pilll/components/atoms/color.dart';
+import 'package:Pilll/components/atoms/text_color.dart';
 import 'package:flutter/material.dart';
 
 class PrimaryButton extends StatelessWidget {

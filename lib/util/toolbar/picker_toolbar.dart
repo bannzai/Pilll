@@ -1,4 +1,4 @@
-import 'package:Pilll/theme/font.dart';
+import 'package:Pilll/components/atoms/font.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 

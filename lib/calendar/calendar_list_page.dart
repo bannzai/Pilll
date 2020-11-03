@@ -1,9 +1,9 @@
 import 'package:Pilll/calendar/calculator.dart';
 import 'package:Pilll/calendar/calendar.dart';
 import 'package:Pilll/calendar/calendar_band_model.dart';
-import 'package:Pilll/theme/color.dart';
-import 'package:Pilll/theme/font.dart';
-import 'package:Pilll/theme/text_color.dart';
+import 'package:Pilll/components/atoms/color.dart';
+import 'package:Pilll/components/atoms/font.dart';
+import 'package:Pilll/components/atoms/text_color.dart';
 import 'package:Pilll/util/formatter/date_time_formatter.dart';
 import 'package:flutter/material.dart';
 

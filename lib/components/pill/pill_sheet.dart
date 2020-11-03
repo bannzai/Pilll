@@ -1,5 +1,5 @@
 import 'package:Pilll/entity/pill_mark_type.dart';
-import 'package:Pilll/theme/color.dart';
+import 'package:Pilll/components/atoms/color.dart';
 import 'package:Pilll/entity/weekday.dart';
 import 'package:Pilll/components/pill/pill_mark.dart';
 import 'package:Pilll/record/weekday_badge.dart';
