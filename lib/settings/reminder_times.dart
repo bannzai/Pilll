@@ -1,4 +1,4 @@
-import 'package:Pilll/components/indicator.dart';
+import 'package:Pilll/components/molecules/indicator.dart';
 import 'package:Pilll/entity/setting.dart';
 import 'package:Pilll/state/setting.dart';
 import 'package:Pilll/store/setting.dart';
