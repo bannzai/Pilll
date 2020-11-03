@@ -1,6 +1,6 @@
 import 'package:Pilll/calendar/calendar_page.dart';
 import 'package:Pilll/record/record_page.dart';
-import 'package:Pilll/settings/list/settings.dart';
+import 'package:Pilll/settings/settings.dart';
 import 'package:Pilll/theme/color.dart';
 import 'package:Pilll/theme/text_color.dart';
 import 'package:flutter/material.dart';
