@@ -12,7 +12,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/all.dart';
 
-class InitialSetting4 extends HookWidget {
+class InitialSetting4Page extends HookWidget {
   Widget _time(BuildContext context, InitialSettingModel entity) {
     return Text(
       DateTimeFormatter.militaryTime(entity.reminderDateTime()),

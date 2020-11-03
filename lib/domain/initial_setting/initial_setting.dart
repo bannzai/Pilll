@@ -38,7 +38,7 @@ class InitialSetting extends StatelessWidget {
                   Navigator.of(context).push(
                     MaterialPageRoute(
                       builder: (BuildContext context) {
-                        return InitialSetting1();
+                        return InitialSetting1Page();
                       },
                     ),
                   );

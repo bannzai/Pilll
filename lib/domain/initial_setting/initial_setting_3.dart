@@ -7,7 +7,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/all.dart';
 
-class InitialSetting3 extends HookWidget {
+class InitialSetting3Page extends HookWidget {
   @override
   Widget build(BuildContext context) {
     final store = useProvider(initialSettingStoreProvider);
@@ -19,7 +19,7 @@ class InitialSetting3 extends HookWidget {
         Navigator.of(context).push(
           MaterialPageRoute(
             builder: (BuildContext context) {
-              return InitialSetting4();
+              return InitialSetting4Page();
             },
           ),
         );
