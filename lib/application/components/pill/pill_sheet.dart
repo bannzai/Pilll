@@ -2,7 +2,7 @@ import 'package:Pilll/entity/pill_mark_type.dart';
 import 'package:Pilll/theme/color.dart';
 import 'package:Pilll/entity/weekday.dart';
 import 'package:Pilll/application/components/pill/pill_mark.dart';
-import 'package:Pilll/main/record/weekday_badge.dart';
+import 'package:Pilll/record/weekday_badge.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
