@@ -1,4 +1,4 @@
-import 'package:Pilll/application/router.dart';
+import 'package:Pilll/router/router.dart';
 import 'package:Pilll/components/molecules/indicator.dart';
 import 'package:Pilll/entity/user.dart';
 import 'package:Pilll/service/user.dart';
