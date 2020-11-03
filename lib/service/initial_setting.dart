@@ -2,7 +2,7 @@ import 'package:Pilll/database/database.dart';
 import 'package:Pilll/entity/initial_setting.dart';
 import 'package:Pilll/entity/setting.dart';
 import 'package:Pilll/entity/user.dart';
-import 'package:Pilll/provider/auth.dart';
+import 'package:Pilll/auth/auth.dart/';
 import 'package:riverpod/all.dart';
 
 abstract class InitialSettingInterface {
