@@ -1,6 +1,5 @@
 import 'package:Pilll/database/database.dart';
 import 'package:Pilll/entity/diary.dart';
-import 'package:Pilll/auth/auth.dart/';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:riverpod/all.dart';
 
