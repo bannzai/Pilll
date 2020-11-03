@@ -8,7 +8,7 @@ import 'package:Pilll/entity/pill_sheet.dart';
 import 'package:Pilll/entity/setting.dart';
 import 'package:Pilll/store/pill_sheet.dart';
 import 'package:Pilll/store/setting.dart';
-import 'package:Pilll/style/button.dart';
+import 'package:Pilll/components/atoms/buttons.dart';
 import 'package:Pilll/components/atoms/font.dart';
 import 'package:Pilll/components/atoms/text_color.dart';
 import 'package:Pilll/util/formatter/date_time_formatter.dart';
