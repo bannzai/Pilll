@@ -1,6 +1,6 @@
 import 'package:Pilll/components/molecules/indicator.dart';
 import 'package:Pilll/components/organisms/pill/pill_sheet.dart';
-import 'package:Pilll/record/record_taken_information.dart';
+import 'package:Pilll/domain/record/record_taken_information.dart';
 import 'package:Pilll/entity/pill_mark_type.dart';
 import 'package:Pilll/entity/pill_sheet.dart';
 import 'package:Pilll/entity/pill_sheet_type.dart';

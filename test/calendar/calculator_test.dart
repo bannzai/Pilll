@@ -1,5 +1,5 @@
-import 'package:Pilll/calendar/calculator.dart';
-import 'package:Pilll/calendar/date_range.dart';
+import 'package:Pilll/domain/calendar/calculator.dart';
+import 'package:Pilll/domain/calendar/date_range.dart';
 import 'package:Pilll/entity/weekday.dart';
 import 'package:flutter_test/flutter_test.dart';
 

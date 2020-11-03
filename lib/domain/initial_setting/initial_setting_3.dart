@@ -1,6 +1,6 @@
 import 'package:Pilll/router/router.dart';
 import 'package:Pilll/components/organisms/setting/setting_menstruation_page.dart';
-import 'package:Pilll/initial_setting/initial_setting_4.dart';
+import 'package:Pilll/domain/initial_setting/initial_setting_4.dart';
 import 'package:Pilll/store/initial_setting.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';

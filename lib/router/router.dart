@@ -1,6 +1,6 @@
-import 'package:Pilll/initial_setting/initial_setting.dart';
-import 'package:Pilll/home/home.dart';
-import 'package:Pilll/root/root.dart';
+import 'package:Pilll/domain/initial_setting/initial_setting.dart';
+import 'package:Pilll/domain/home/home.dart';
+import 'package:Pilll/domain/root/root.dart';
 import 'package:Pilll/util/shared_preference/keys.dart';
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/all.dart';

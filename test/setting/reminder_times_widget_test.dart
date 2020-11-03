@@ -1,6 +1,6 @@
 import 'package:Pilll/entity/pill_sheet_type.dart';
 import 'package:Pilll/entity/setting.dart';
-import 'package:Pilll/settings/reminder_times.dart';
+import 'package:Pilll/domain/settings/reminder_times.dart';
 import 'package:Pilll/store/setting.dart';
 import 'package:Pilll/util/environment.dart';
 import 'package:flutter/material.dart';
