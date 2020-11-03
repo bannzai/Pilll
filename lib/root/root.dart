@@ -1,4 +1,4 @@
-import 'package:Pilll/main/application/router.dart';
+import 'package:Pilll/application/router.dart';
 import 'package:Pilll/application/components/indicator.dart';
 import 'package:Pilll/entity/user.dart';
 import 'package:Pilll/service/user.dart';
