@@ -1,4 +1,4 @@
-import 'package:Pilll/theme/color.dart';
+import 'package:Pilll/components/atoms/color.dart';
 import 'package:firebase_analytics/firebase_analytics.dart';
 import 'package:firebase_analytics/observer.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -6,7 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/all.dart';
 import 'package:intl/date_symbol_data_local.dart';
 
-import 'main/application/router.dart';
+import 'router/router.dart';
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();

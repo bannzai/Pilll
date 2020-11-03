@@ -1,5 +1,5 @@
-import 'package:Pilll/model/pill_sheet.dart';
-import 'package:Pilll/model/pill_sheet_type.dart';
+import 'package:Pilll/entity/pill_sheet.dart';
+import 'package:Pilll/entity/pill_sheet_type.dart';
 import 'package:Pilll/service/today.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
