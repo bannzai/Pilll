@@ -12,8 +12,8 @@ import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/all.dart';
 import 'package:intl/intl.dart';
 
-class InitialSetting2 extends HookWidget {
-  const InitialSetting2({Key key}) : super(key: key);
+class InitialSetting2Page extends HookWidget {
+  const InitialSetting2Page({Key key}) : super(key: key);
 
   String todayString() {
     return DateFormat.yMd('ja').format(today());
@@ -72,7 +72,7 @@ class InitialSetting2 extends HookWidget {
                             Navigator.of(context).push(
                               MaterialPageRoute(
                                 builder: (BuildContext context) {
-                                  return InitialSetting3();
+                                  return InitialSetting3Page();
                                 },
                               ),
                             );
