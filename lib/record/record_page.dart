@@ -1,6 +1,6 @@
 import 'package:Pilll/application/components/indicator.dart';
 import 'package:Pilll/application/components/pill/pill_sheet.dart';
-import 'package:Pilll/main/record/record_taken_information.dart';
+import 'package:Pilll/record/record_taken_information.dart';
 import 'package:Pilll/entity/pill_mark_type.dart';
 import 'package:Pilll/entity/pill_sheet.dart';
 import 'package:Pilll/entity/pill_sheet_type.dart';
