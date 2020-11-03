@@ -1,5 +1,5 @@
 import 'package:Pilll/main/components/ripple.dart';
-import 'package:Pilll/model/pill_mark_type.dart';
+import 'package:Pilll/entity/pill_mark_type.dart';
 import 'package:Pilll/theme/color.dart';
 import 'package:Pilll/util/environment.dart';
 import 'package:flutter/material.dart';

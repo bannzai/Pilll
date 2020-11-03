@@ -1,5 +1,5 @@
-import 'package:Pilll/model/pill_sheet_type.dart';
-import 'package:Pilll/model/setting.dart';
+import 'package:Pilll/entity/pill_sheet_type.dart';
+import 'package:Pilll/entity/setting.dart';
 import 'package:Pilll/state/setting.dart';
 import 'package:Pilll/store/setting.dart';
 import 'package:flutter_test/flutter_test.dart';

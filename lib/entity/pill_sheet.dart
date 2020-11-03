@@ -1,6 +1,6 @@
-import 'package:Pilll/model/firestore_document_id_escaping_to_json.dart';
-import 'package:Pilll/model/firestore_timestamp_converter.dart';
-import 'package:Pilll/model/pill_sheet_type.dart';
+import 'package:Pilll/entity/firestore_document_id_escaping_to_json.dart';
+import 'package:Pilll/entity/firestore_timestamp_converter.dart';
+import 'package:Pilll/entity/pill_sheet_type.dart';
 import 'package:Pilll/util/today.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';

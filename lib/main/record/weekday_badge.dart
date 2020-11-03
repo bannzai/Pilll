@@ -1,5 +1,5 @@
 import 'package:Pilll/theme/color.dart';
-import 'package:Pilll/model/weekday.dart';
+import 'package:Pilll/entity/weekday.dart';
 import 'package:flutter/material.dart';
 
 class WeekdayBadge extends StatelessWidget {

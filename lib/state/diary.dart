@@ -1,4 +1,4 @@
-import 'package:Pilll/model/diary.dart';
+import 'package:Pilll/entity/diary.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'diary.freezed.dart';

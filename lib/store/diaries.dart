@@ -1,7 +1,7 @@
 import 'dart:async';
 
 import 'package:Pilll/main/utility/utility.dart';
-import 'package:Pilll/model/diary.dart';
+import 'package:Pilll/entity/diary.dart';
 import 'package:Pilll/service/diary.dart';
 import 'package:Pilll/state/diaries.dart';
 import 'package:riverpod/all.dart';

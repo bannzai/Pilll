@@ -1,4 +1,4 @@
-import 'package:Pilll/model/initial_setting.dart';
+import 'package:Pilll/entity/initial_setting.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'initial_setting.freezed.dart';

@@ -1,7 +1,7 @@
 import 'package:Pilll/database/database.dart';
-import 'package:Pilll/model/initial_setting.dart';
-import 'package:Pilll/model/setting.dart';
-import 'package:Pilll/model/user.dart';
+import 'package:Pilll/entity/initial_setting.dart';
+import 'package:Pilll/entity/setting.dart';
+import 'package:Pilll/entity/user.dart';
 import 'package:Pilll/provider/auth.dart';
 import 'package:riverpod/all.dart';
 

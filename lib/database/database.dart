@@ -1,4 +1,4 @@
-import 'package:Pilll/model/diary.dart';
+import 'package:Pilll/entity/diary.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 
 abstract class _CollectionPath {

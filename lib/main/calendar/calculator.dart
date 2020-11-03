@@ -1,5 +1,5 @@
 import 'package:Pilll/main/calendar/date_range.dart';
-import 'package:Pilll/model/weekday.dart';
+import 'package:Pilll/entity/weekday.dart';
 
 class Calculator {
   final DateTime date;
