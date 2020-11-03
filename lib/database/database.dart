@@ -1,5 +1,16 @@
-import 'package:Pilll/model/diary.dart';
+import 'package:Pilll/auth/auth.dart';
+import 'package:Pilll/entity/diary.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:hooks_riverpod/all.dart';
+
+final databaseProvider = Provider<DatabaseConnection>((ref) {
+  final userCredential = ref.watch(signInProvider);
+
+  if (userCredential.data?.value?.user?.uid != null) {
+    return DatabaseConnection(userCredential.data?.value?.user?.uid);
+  }
+  return null;
+});
 
 abstract class _CollectionPath {
   static final String users = "users";
