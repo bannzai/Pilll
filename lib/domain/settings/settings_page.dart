@@ -61,7 +61,7 @@ class _TransactionModifier {
 final transactionModifierProvider = Provider((ref) =>
     _TransactionModifier(ref.watch(databaseProvider), reader: ref.read));
 
-class Settings extends HookWidget {
+class SettingsPage extends HookWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
