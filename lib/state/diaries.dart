@@ -1,4 +1,4 @@
-import 'package:Pilll/utility/utility.dart';
+import 'package:Pilll/util/datetime/date_compare.dart';
 import 'package:Pilll/entity/diary.dart';
 import 'package:Pilll/service/diary.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
