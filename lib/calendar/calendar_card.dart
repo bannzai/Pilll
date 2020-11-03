@@ -1,9 +1,9 @@
-import 'package:Pilll/main/calendar/calculator.dart';
-import 'package:Pilll/main/calendar/calendar.dart';
-import 'package:Pilll/main/calendar/utility.dart';
-import 'package:Pilll/main/calendar/calendar_band_model.dart';
-import 'package:Pilll/main/calendar/calendar_help.dart';
-import 'package:Pilll/main/calendar/calendar_list_page.dart';
+import 'package:Pilll/calendar/calculator.dart';
+import 'package:Pilll/calendar/calendar.dart';
+import 'package:Pilll/calendar/utility.dart';
+import 'package:Pilll/calendar/calendar_band_model.dart';
+import 'package:Pilll/calendar/calendar_help.dart';
+import 'package:Pilll/calendar/calendar_list_page.dart';
 import 'package:Pilll/entity/pill_sheet.dart';
 import 'package:Pilll/entity/setting.dart';
 import 'package:Pilll/store/pill_sheet.dart';
