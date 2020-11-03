@@ -1,4 +1,4 @@
-import 'package:Pilll/components/ripple.dart';
+import 'package:Pilll/components/molecules/ripple.dart';
 import 'package:Pilll/entity/pill_mark_type.dart';
 import 'package:Pilll/components/atoms/color.dart';
 import 'package:Pilll/util/environment.dart';
