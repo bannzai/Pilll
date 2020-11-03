@@ -1,4 +1,4 @@
-import 'package:Pilll/main/application/router.dart';
+import 'package:Pilll/application/router.dart';
 import 'package:Pilll/store/initial_setting.dart';
 import 'package:Pilll/style/button.dart';
 import 'package:Pilll/theme/color.dart';
