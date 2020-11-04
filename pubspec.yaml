@@ -29,6 +29,7 @@ dependencies:
   firebase_core:
   firebase_analytics:
   firebase_auth:
+  firebase_messaging:
   cloud_firestore:
   url_launcher:
   package_info:
