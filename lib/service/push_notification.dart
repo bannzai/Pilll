@@ -12,8 +12,7 @@ Future<void> initNotification() async {
       onMessage: (Map<String, dynamic> message) async {
         print('onMessage: $message');
       },
-      onBackgroundMessage:
-          Platform.isAndroid ? myBackgroundMessageHandler : null,
+      onBackgroundMessage: Platform.isAndroid ? onBackgroundMessage : null,
       onLaunch: (Map<String, dynamic> message) async {
         print('onLaunch: $message');
       },
@@ -23,7 +22,7 @@ Future<void> initNotification() async {
     );
 }
 
-Future<dynamic> myBackgroundMessageHandler(Map<String, dynamic> message) async {
+Future<dynamic> onBackgroundMessage(Map<String, dynamic> message) async {
   if (message.containsKey('data')) {
     // データメッセージをハンドリング
     final data = message['data'];

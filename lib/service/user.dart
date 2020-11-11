@@ -4,20 +4,22 @@ import 'package:firebase_auth/firebase_auth.dart' as auth;
 import 'package:riverpod/all.dart';
 
 abstract class UserServiceInterface {
+  Future<User> prepare();
   Future<User> fetch();
   Future<User> subscribe();
+  Future<void> registerRemoteNotificationToken(String token);
 }
 
 final userServiceProvider =
     Provider((ref) => UserService(ref.watch(databaseProvider)));
 final initialUserProvider =
-    FutureProvider((ref) => ref.watch(userServiceProvider)._prepare());
+    FutureProvider((ref) => ref.watch(userServiceProvider).prepare());
 
 class UserService extends UserServiceInterface {
   final DatabaseConnection _database;
   UserService(this._database);
 
-  Future<User> _prepare() {
+  Future<User> prepare() {
     return fetch().catchError((error) {
       if (error is UserNotFound) {
         return _create().then((_) => fetch());
