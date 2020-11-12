@@ -58,6 +58,7 @@ class UserService extends UserServiceInterface {
 
   Future<void> registerRemoteNotificationToken(String token) {
     print("token: $token");
-    return _database.userReference().update({"fcmToken": token});
+    return _database.userReference().update(
+        {UserFirestoreFieldKeys.private: UserPrivate.create(fcmToken: token)});
   }
 }
