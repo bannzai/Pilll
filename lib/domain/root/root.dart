@@ -6,6 +6,7 @@ import 'package:Pilll/service/push_notification.dart';
 import 'package:Pilll/service/user.dart';
 import 'package:Pilll/components/atoms/color.dart';
 import 'package:Pilll/util/shared_preference/keys.dart';
+import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/all.dart';
@@ -18,12 +19,12 @@ class RootStore extends StateNotifier<RootState> {
   RootStore(this.userService) : super(RootState.notYetLoad);
 
   Future<User> initialize() async {
-    return Future.wait([initNotification(), auth()])
+    return Future.wait([listenNotificationEvents(), auth()])
         .then(
           (_) => userService.prepare(),
         )
         .then(
-          (user) => firebaseMessaging
+          (user) => FirebaseMessaging()
               .getToken()
               .then(
                 (token) => userService.registerRemoteNotificationToken(token),
