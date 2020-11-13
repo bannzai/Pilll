@@ -16,8 +16,6 @@ class RootStore extends StateNotifier<RootState> {
   final UserServiceInterface userService;
   RootStore(this.userService) : super(RootState.notYetLoad);
 
-  RootState current() => state;
-
   Future<User> initialize() {
     return initNotification()
         .then(
