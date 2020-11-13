@@ -2,12 +2,14 @@ import 'dart:io';
 
 import 'package:firebase_messaging/firebase_messaging.dart';
 
-FirebaseMessaging firebaseMessaging;
-
-Future<void> initNotification() async {
-  firebaseMessaging = FirebaseMessaging()
+Future<void> requestNotificationPermissions() async {
+  return FirebaseMessaging()
     ..requestNotificationPermissions()
-    ..onIosSettingsRegistered.listen((IosNotificationSettings settings) {})
+    ..onIosSettingsRegistered.listen((IosNotificationSettings settings) {});
+}
+
+Future<void> listenNotificationEvents() async {
+  return FirebaseMessaging()
     ..configure(
       onMessage: (Map<String, dynamic> message) async {
         print('onMessage: $message');
