@@ -1,3 +1,4 @@
+import 'package:Pilll/auth/auth.dart';
 import 'package:Pilll/router/router.dart';
 import 'package:Pilll/components/molecules/indicator.dart';
 import 'package:Pilll/entity/user.dart';
@@ -16,8 +17,8 @@ class RootStore extends StateNotifier<RootState> {
   final UserServiceInterface userService;
   RootStore(this.userService) : super(RootState.notYetLoad);
 
-  Future<User> initialize() {
-    return initNotification()
+  Future<User> initialize() async {
+    return Future.wait([initNotification(), auth()])
         .then(
           (_) => userService.prepare(),
         )
