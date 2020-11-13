@@ -4,10 +4,10 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:hooks_riverpod/all.dart';
 
 final databaseProvider = Provider<DatabaseConnection>((ref) {
-  final userCredential = ref.watch(signInProvider);
+  final authInfo = ref.watch(signInProvider);
 
-  if (userCredential.data?.value?.user?.uid != null) {
-    return DatabaseConnection(userCredential.data?.value?.user?.uid);
+  if (authInfo.data?.value?.uid != null) {
+    return DatabaseConnection(authInfo.data?.value?.uid);
   }
   return null;
 });
