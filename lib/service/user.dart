@@ -1,5 +1,6 @@
 import 'package:Pilll/database/database.dart';
 import 'package:Pilll/entity/user.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart' as auth;
 import 'package:riverpod/all.dart';
 
@@ -53,14 +54,18 @@ class UserService extends UserServiceInterface {
         UserFirestoreFieldKeys.anonymouseUserID:
             auth.FirebaseAuth.instance.currentUser.uid,
       },
+      SetOptions(merge: true),
     );
   }
 
   Future<void> registerRemoteNotificationToken(String token) {
     print("token: $token");
-    return _database.userReference().update({
-      UserFirestoreFieldKeys.private:
-          UserPrivate.create(fcmToken: token).toJson()
-    });
+    return _database.userPrivateReference().set(
+      {
+        UserFirestoreFieldKeys.private:
+            UserPrivate.create(fcmToken: token).toJson()
+      },
+      SetOptions(merge: true),
+    );
   }
 }
