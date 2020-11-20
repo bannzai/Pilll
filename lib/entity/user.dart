@@ -18,10 +18,8 @@ class UserAlreadyExists implements Exception {
   }
 }
 
-extension UserFirestoreFieldKeys on String {
-  static final anonymouseUserID = "anonymouseUserID";
-  static final settings = "settings";
-  static final private = "private";
+extension UserPrivateFirestoreFieldKeys on String {
+  static final fcmToken = 'fcmToken';
 }
 
 @freezed
@@ -33,6 +31,11 @@ abstract class UserPrivate implements _$UserPrivate {
 
   factory UserPrivate.fromJson(Map<String, dynamic> json) =>
       _$UserPrivateFromJson(json);
+}
+
+extension UserFirestoreFieldKeys on String {
+  static final anonymouseUserID = "anonymouseUserID";
+  static final settings = "settings";
 }
 
 @freezed
