@@ -161,12 +161,10 @@ class _$UserTearOff {
 // ignore: unused_element
   _User call(
       {@required String anonymouseUserID,
-      @JsonKey(name: "settings") Setting setting,
-      UserPrivate private}) {
+      @JsonKey(name: "settings") Setting setting}) {
     return _User(
       anonymouseUserID: anonymouseUserID,
       setting: setting,
-      private: private,
     );
   }
 
@@ -185,7 +183,6 @@ mixin _$User {
   String get anonymouseUserID;
   @JsonKey(name: "settings")
   Setting get setting;
-  UserPrivate get private;
 
   Map<String, dynamic> toJson();
   $UserCopyWith<User> get copyWith;
@@ -196,12 +193,9 @@ abstract class $UserCopyWith<$Res> {
   factory $UserCopyWith(User value, $Res Function(User) then) =
       _$UserCopyWithImpl<$Res>;
   $Res call(
-      {String anonymouseUserID,
-      @JsonKey(name: "settings") Setting setting,
-      UserPrivate private});
+      {String anonymouseUserID, @JsonKey(name: "settings") Setting setting});
 
   $SettingCopyWith<$Res> get setting;
-  $UserPrivateCopyWith<$Res> get private;
 }
 
 /// @nodoc
@@ -216,14 +210,12 @@ class _$UserCopyWithImpl<$Res> implements $UserCopyWith<$Res> {
   $Res call({
     Object anonymouseUserID = freezed,
     Object setting = freezed,
-    Object private = freezed,
   }) {
     return _then(_value.copyWith(
       anonymouseUserID: anonymouseUserID == freezed
           ? _value.anonymouseUserID
           : anonymouseUserID as String,
       setting: setting == freezed ? _value.setting : setting as Setting,
-      private: private == freezed ? _value.private : private as UserPrivate,
     ));
   }
 
@@ -236,16 +228,6 @@ class _$UserCopyWithImpl<$Res> implements $UserCopyWith<$Res> {
       return _then(_value.copyWith(setting: value));
     });
   }
-
-  @override
-  $UserPrivateCopyWith<$Res> get private {
-    if (_value.private == null) {
-      return null;
-    }
-    return $UserPrivateCopyWith<$Res>(_value.private, (value) {
-      return _then(_value.copyWith(private: value));
-    });
-  }
 }
 
 /// @nodoc
@@ -254,14 +236,10 @@ abstract class _$UserCopyWith<$Res> implements $UserCopyWith<$Res> {
       __$UserCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String anonymouseUserID,
-      @JsonKey(name: "settings") Setting setting,
-      UserPrivate private});
+      {String anonymouseUserID, @JsonKey(name: "settings") Setting setting});
 
   @override
   $SettingCopyWith<$Res> get setting;
-  @override
-  $UserPrivateCopyWith<$Res> get private;
 }
 
 /// @nodoc
@@ -277,14 +255,12 @@ class __$UserCopyWithImpl<$Res> extends _$UserCopyWithImpl<$Res>
   $Res call({
     Object anonymouseUserID = freezed,
     Object setting = freezed,
-    Object private = freezed,
   }) {
     return _then(_User(
       anonymouseUserID: anonymouseUserID == freezed
           ? _value.anonymouseUserID
           : anonymouseUserID as String,
       setting: setting == freezed ? _value.setting : setting as Setting,
-      private: private == freezed ? _value.private : private as UserPrivate,
     ));
   }
 }
@@ -295,8 +271,7 @@ class __$UserCopyWithImpl<$Res> extends _$UserCopyWithImpl<$Res>
 class _$_User extends _User {
   _$_User(
       {@required this.anonymouseUserID,
-      @JsonKey(name: "settings") this.setting,
-      this.private})
+      @JsonKey(name: "settings") this.setting})
       : assert(anonymouseUserID != null),
         super._();
 
@@ -308,12 +283,10 @@ class _$_User extends _User {
   @override
   @JsonKey(name: "settings")
   final Setting setting;
-  @override
-  final UserPrivate private;
 
   @override
   String toString() {
-    return 'User(anonymouseUserID: $anonymouseUserID, setting: $setting, private: $private)';
+    return 'User(anonymouseUserID: $anonymouseUserID, setting: $setting)';
   }
 
   @override
@@ -324,18 +297,14 @@ class _$_User extends _User {
                 const DeepCollectionEquality()
                     .equals(other.anonymouseUserID, anonymouseUserID)) &&
             (identical(other.setting, setting) ||
-                const DeepCollectionEquality()
-                    .equals(other.setting, setting)) &&
-            (identical(other.private, private) ||
-                const DeepCollectionEquality().equals(other.private, private)));
+                const DeepCollectionEquality().equals(other.setting, setting)));
   }
 
   @override
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(anonymouseUserID) ^
-      const DeepCollectionEquality().hash(setting) ^
-      const DeepCollectionEquality().hash(private);
+      const DeepCollectionEquality().hash(setting);
 
   @override
   _$UserCopyWith<_User> get copyWith =>
@@ -351,8 +320,7 @@ abstract class _User extends User {
   _User._() : super._();
   factory _User(
       {@required String anonymouseUserID,
-      @JsonKey(name: "settings") Setting setting,
-      UserPrivate private}) = _$_User;
+      @JsonKey(name: "settings") Setting setting}) = _$_User;
 
   factory _User.fromJson(Map<String, dynamic> json) = _$_User.fromJson;
 
@@ -361,8 +329,6 @@ abstract class _User extends User {
   @override
   @JsonKey(name: "settings")
   Setting get setting;
-  @override
-  UserPrivate get private;
   @override
   _$UserCopyWith<_User> get copyWith;
 }
