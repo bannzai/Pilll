@@ -1,4 +1,5 @@
 import 'package:Pilll/components/atoms/color.dart';
+import 'package:Pilll/service/push_notification.dart';
 import 'package:firebase_analytics/firebase_analytics.dart';
 import 'package:firebase_analytics/observer.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -12,6 +13,7 @@ Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
   initializeDateFormatting('ja_JP');
   await Firebase.initializeApp();
+  requestNotificationPermissions();
   runApp(ProviderScope(child: App()));
 }
 
