@@ -3,13 +3,20 @@ import 'package:Pilll/entity/diary.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:hooks_riverpod/all.dart';
 
-final databaseProvider = Provider<DatabaseConnection>((ref) {
+final userIDProvider = Provider<String>((ref) {
   final authInfo = ref.watch(signInProvider);
-
   if (authInfo.data?.value?.uid != null) {
-    return DatabaseConnection(authInfo.data?.value?.uid);
+    return authInfo.data?.value?.uid;
   }
   return null;
+});
+
+final databaseProvider = Provider<DatabaseConnection>((ref) {
+  final userID = ref.watch(userIDProvider);
+  if (userID == null) {
+    return null;
+  }
+  return DatabaseConnection(userID);
 });
 
 abstract class _CollectionPath {
