@@ -19,6 +19,9 @@ PODS:
   - Firebase/Firestore (6.26.0):
     - Firebase/CoreOnly
     - FirebaseFirestore (~> 1.15.0)
+  - Firebase/Messaging (6.26.0):
+    - Firebase/CoreOnly
+    - FirebaseMessaging (~> 4.4.1)
   - firebase_analytics (6.0.2):
     - Firebase/Analytics (~> 6.26.0)
     - Firebase/CoreOnly (~> 6.26.0)
@@ -38,6 +41,11 @@ PODS:
     - Flutter
   - firebase_core_web (0.1.0):
     - Flutter
+  - firebase_messaging (7.0.3):
+    - Firebase/CoreOnly (~> 6.26.0)
+    - Firebase/Messaging (~> 6.26.0)
+    - firebase_core
+    - Flutter
   - FirebaseAnalytics (6.6.0):
     - FirebaseCore (~> 6.7)
     - FirebaseInstallations (~> 1.3)
@@ -47,6 +55,7 @@ PODS:
     - GoogleUtilities/Network (~> 6.0)
     - "GoogleUtilities/NSData+zlib (~> 6.0)"
     - nanopb (~> 1.30905.0)
+  - FirebaseAnalyticsInterop (1.5.0)
   - FirebaseAuth (6.5.3):
     - FirebaseAuthInterop (~> 1.0)
     - FirebaseCore (~> 6.6)
@@ -71,6 +80,20 @@ PODS:
     - GoogleUtilities/Environment (~> 6.6)
     - GoogleUtilities/UserDefaults (~> 6.6)
     - PromisesObjC (~> 1.2)
+  - FirebaseInstanceID (4.3.4):
+    - FirebaseCore (~> 6.6)
+    - FirebaseInstallations (~> 1.0)
+    - GoogleUtilities/Environment (~> 6.5)
+    - GoogleUtilities/UserDefaults (~> 6.5)
+  - FirebaseMessaging (4.4.1):
+    - FirebaseAnalyticsInterop (~> 1.5)
+    - FirebaseCore (~> 6.6)
+    - FirebaseInstanceID (~> 4.3)
+    - GoogleUtilities/AppDelegateSwizzler (~> 6.5)
+    - GoogleUtilities/Environment (~> 6.5)
+    - GoogleUtilities/Reachability (~> 6.5)
+    - GoogleUtilities/UserDefaults (~> 6.5)
+    - Protobuf (>= 3.9.2, ~> 3.9)
   - Flutter (1.0.0)
   - GoogleAppMeasurement (6.6.0):
     - GoogleUtilities/AppDelegateSwizzler (~> 6.0)
@@ -112,6 +135,7 @@ PODS:
   - path_provider_windows (0.0.1):
     - Flutter
   - PromisesObjC (1.2.10)
+  - Protobuf (3.13.0)
   - shared_preferences (0.0.1):
     - Flutter
   - shared_preferences_linux (0.0.1):
@@ -142,6 +166,7 @@ DEPENDENCIES:
   - firebase_auth_web (from `.symlinks/plugins/firebase_auth_web/ios`)
   - firebase_core (from `.symlinks/plugins/firebase_core/ios`)
   - firebase_core_web (from `.symlinks/plugins/firebase_core_web/ios`)
+  - firebase_messaging (from `.symlinks/plugins/firebase_messaging/ios`)
   - FirebaseFirestore (from `https://github.com/invertase/firestore-ios-sdk-frameworks.git`, tag `6.26.0`)
   - Flutter (from `Flutter`)
   - package_info (from `.symlinks/plugins/package_info/ios`)
@@ -162,18 +187,22 @@ SPEC REPOS:
   trunk:
     - Firebase
     - FirebaseAnalytics
+    - FirebaseAnalyticsInterop
     - FirebaseAuth
     - FirebaseAuthInterop
     - FirebaseCore
     - FirebaseCoreDiagnostics
     - FirebaseCoreDiagnosticsInterop
     - FirebaseInstallations
+    - FirebaseInstanceID
+    - FirebaseMessaging
     - GoogleAppMeasurement
     - GoogleDataTransport
     - GoogleUtilities
     - GTMSessionFetcher
     - nanopb
     - PromisesObjC
+    - Protobuf
 
 EXTERNAL SOURCES:
   cloud_firestore:
@@ -192,6 +221,8 @@ EXTERNAL SOURCES:
     :path: ".symlinks/plugins/firebase_core/ios"
   firebase_core_web:
     :path: ".symlinks/plugins/firebase_core_web/ios"
+  firebase_messaging:
+    :path: ".symlinks/plugins/firebase_messaging/ios"
   FirebaseFirestore:
     :git: https://github.com/invertase/firestore-ios-sdk-frameworks.git
     :tag: 6.26.0
@@ -239,7 +270,9 @@ SPEC CHECKSUMS:
   firebase_auth_web: 0955c07bcc06e84af76b9d4e32e6f31518f2d7de
   firebase_core: 00e54a4744164a6b5a250b96dd1ad5afaba7a342
   firebase_core_web: d501d8b946b60c8af265428ce483b0fff5ad52d1
+  firebase_messaging: 666d9994651b1ecf8c582b52dd913f3fa58c17ef
   FirebaseAnalytics: 96634d356482d4f3af8fe459a0ebf19a99c71b75
+  FirebaseAnalyticsInterop: 3f86269c38ae41f47afeb43ebf32a001f58fcdae
   FirebaseAuth: 7047aec89c0b17ecd924a550c853f0c27ac6015e
   FirebaseAuthInterop: a0f37ae05833af156e72028f648d313f7e7592e9
   FirebaseCore: f42e5e5f382cdcf6b617ed737bf6c871a6947b17
@@ -247,6 +280,8 @@ SPEC CHECKSUMS:
   FirebaseCoreDiagnosticsInterop: 296e2c5f5314500a850ad0b83e9e7c10b011a850
   FirebaseFirestore: 2cf6944bc538e57c94d8332bae501178edb70727
   FirebaseInstallations: 6f5f680e65dc374397a483c32d1799ba822a395b
+  FirebaseInstanceID: cef67c4967c7cecb56ea65d8acbb4834825c587b
+  FirebaseMessaging: 29543feb343b09546ab3aa04d008ee8595b43c44
   Flutter: 0e3d915762c693b495b44d77113d4970485de6ec
   GoogleAppMeasurement: 67458367830514fb20fd9e233496f1eef9d90185
   GoogleDataTransport: 672fb0ce96fe7f7f31d43672fca62ad2c9c86f7b
@@ -257,6 +292,7 @@ SPEC CHECKSUMS:
   path_provider_linux: 4d630dc393e1f20364f3e3b4a2ff41d9674a84e4
   path_provider_windows: a2b81600c677ac1959367280991971cb9a1edb3b
   PromisesObjC: b14b1c6b68e306650688599de8a45e49fae81151
+  Protobuf: 3dac39b34a08151c6d949560efe3f86134a3f748
   shared_preferences: af6bfa751691cdc24be3045c43ec037377ada40d
   shared_preferences_linux: afefbfe8d921e207f01ede8b60373d9e3b566b78
   shared_preferences_macos: f3f29b71ccbb56bf40c9dd6396c9acf15e214087

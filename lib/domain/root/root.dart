@@ -1,18 +1,50 @@
+import 'package:Pilll/auth/auth.dart';
 import 'package:Pilll/router/router.dart';
 import 'package:Pilll/components/molecules/indicator.dart';
 import 'package:Pilll/entity/user.dart';
+import 'package:Pilll/service/push_notification.dart';
 import 'package:Pilll/service/user.dart';
 import 'package:Pilll/components/atoms/color.dart';
 import 'package:Pilll/util/shared_preference/keys.dart';
+import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/all.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
+enum RootState { notYetLoad, loading, loaded }
+
+class RootStore extends StateNotifier<RootState> {
+  final UserServiceInterface userService;
+  RootStore(this.userService) : super(RootState.notYetLoad);
+
+  Future<User> initialize() async {
+    return Future.wait([listenNotificationEvents(), auth()])
+        .then(
+          (_) => userService.prepare(),
+        )
+        .then(
+          (user) => FirebaseMessaging()
+              .getToken()
+              .then(
+                (token) => userService.registerRemoteNotificationToken(token),
+              )
+              .then(
+                (_) => userService.prepare(),
+              ),
+        );
+  }
+}
+
+final rootStoreProvider =
+    StateNotifierProvider((ref) => RootStore(ref.watch(userServiceProvider)));
+final initializeProvider =
+    FutureProvider((ref) => ref.watch(rootStoreProvider).initialize());
+
 class Root extends HookWidget {
   @override
   Widget build(BuildContext context) {
-    return useProvider(initialUserProvider).when(data: (user) {
+    return useProvider(initializeProvider).when(data: (user) {
       print("when success: $user");
       _transition(context, user);
       return Container();

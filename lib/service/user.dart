@@ -1,28 +1,26 @@
 import 'package:Pilll/database/database.dart';
 import 'package:Pilll/entity/user.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart' as auth;
 import 'package:riverpod/all.dart';
 
 abstract class UserServiceInterface {
+  Future<User> prepare();
   Future<User> fetch();
   Future<User> subscribe();
+  Future<void> registerRemoteNotificationToken(String token);
 }
 
 final userServiceProvider =
     Provider((ref) => UserService(ref.watch(databaseProvider)));
 final initialUserProvider =
-    FutureProvider((ref) => ref.watch(userServiceProvider)._prepare());
-// ignore: top_level_function_literal_block
-final userProvider = Provider((ref) async {
-  final user = await ref.watch(initialUserProvider.future);
-  return user;
-});
+    FutureProvider((ref) => ref.watch(userServiceProvider).prepare());
 
 class UserService extends UserServiceInterface {
   final DatabaseConnection _database;
   UserService(this._database);
 
-  Future<User> _prepare() {
+  Future<User> prepare() {
     return fetch().catchError((error) {
       if (error is UserNotFound) {
         return _create().then((_) => fetch());
@@ -56,6 +54,15 @@ class UserService extends UserServiceInterface {
         UserFirestoreFieldKeys.anonymouseUserID:
             auth.FirebaseAuth.instance.currentUser.uid,
       },
+      SetOptions(merge: true),
+    );
+  }
+
+  Future<void> registerRemoteNotificationToken(String token) {
+    print("token: $token");
+    return _database.userPrivateReference().set(
+      {UserPrivateFirestoreFieldKeys.fcmToken: token},
+      SetOptions(merge: true),
     );
   }
 }

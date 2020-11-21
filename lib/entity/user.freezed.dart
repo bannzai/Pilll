@@ -8,6 +8,148 @@ part of 'user.dart';
 // **************************************************************************
 
 T _$identity<T>(T value) => value;
+UserPrivate _$UserPrivateFromJson(Map<String, dynamic> json) {
+  return _UserPrivate.fromJson(json);
+}
+
+/// @nodoc
+class _$UserPrivateTearOff {
+  const _$UserPrivateTearOff();
+
+// ignore: unused_element
+  _UserPrivate call({String fcmToken}) {
+    return _UserPrivate(
+      fcmToken: fcmToken,
+    );
+  }
+
+// ignore: unused_element
+  UserPrivate fromJson(Map<String, Object> json) {
+    return UserPrivate.fromJson(json);
+  }
+}
+
+/// @nodoc
+// ignore: unused_element
+const $UserPrivate = _$UserPrivateTearOff();
+
+/// @nodoc
+mixin _$UserPrivate {
+  String get fcmToken;
+
+  Map<String, dynamic> toJson();
+  $UserPrivateCopyWith<UserPrivate> get copyWith;
+}
+
+/// @nodoc
+abstract class $UserPrivateCopyWith<$Res> {
+  factory $UserPrivateCopyWith(
+          UserPrivate value, $Res Function(UserPrivate) then) =
+      _$UserPrivateCopyWithImpl<$Res>;
+  $Res call({String fcmToken});
+}
+
+/// @nodoc
+class _$UserPrivateCopyWithImpl<$Res> implements $UserPrivateCopyWith<$Res> {
+  _$UserPrivateCopyWithImpl(this._value, this._then);
+
+  final UserPrivate _value;
+  // ignore: unused_field
+  final $Res Function(UserPrivate) _then;
+
+  @override
+  $Res call({
+    Object fcmToken = freezed,
+  }) {
+    return _then(_value.copyWith(
+      fcmToken: fcmToken == freezed ? _value.fcmToken : fcmToken as String,
+    ));
+  }
+}
+
+/// @nodoc
+abstract class _$UserPrivateCopyWith<$Res>
+    implements $UserPrivateCopyWith<$Res> {
+  factory _$UserPrivateCopyWith(
+          _UserPrivate value, $Res Function(_UserPrivate) then) =
+      __$UserPrivateCopyWithImpl<$Res>;
+  @override
+  $Res call({String fcmToken});
+}
+
+/// @nodoc
+class __$UserPrivateCopyWithImpl<$Res> extends _$UserPrivateCopyWithImpl<$Res>
+    implements _$UserPrivateCopyWith<$Res> {
+  __$UserPrivateCopyWithImpl(
+      _UserPrivate _value, $Res Function(_UserPrivate) _then)
+      : super(_value, (v) => _then(v as _UserPrivate));
+
+  @override
+  _UserPrivate get _value => super._value as _UserPrivate;
+
+  @override
+  $Res call({
+    Object fcmToken = freezed,
+  }) {
+    return _then(_UserPrivate(
+      fcmToken: fcmToken == freezed ? _value.fcmToken : fcmToken as String,
+    ));
+  }
+}
+
+@JsonSerializable()
+
+/// @nodoc
+class _$_UserPrivate extends _UserPrivate {
+  _$_UserPrivate({this.fcmToken}) : super._();
+
+  factory _$_UserPrivate.fromJson(Map<String, dynamic> json) =>
+      _$_$_UserPrivateFromJson(json);
+
+  @override
+  final String fcmToken;
+
+  @override
+  String toString() {
+    return 'UserPrivate(fcmToken: $fcmToken)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other is _UserPrivate &&
+            (identical(other.fcmToken, fcmToken) ||
+                const DeepCollectionEquality()
+                    .equals(other.fcmToken, fcmToken)));
+  }
+
+  @override
+  int get hashCode =>
+      runtimeType.hashCode ^ const DeepCollectionEquality().hash(fcmToken);
+
+  @override
+  _$UserPrivateCopyWith<_UserPrivate> get copyWith =>
+      __$UserPrivateCopyWithImpl<_UserPrivate>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$_$_UserPrivateToJson(this);
+  }
+}
+
+abstract class _UserPrivate extends UserPrivate {
+  _UserPrivate._() : super._();
+  factory _UserPrivate({String fcmToken}) = _$_UserPrivate;
+
+  factory _UserPrivate.fromJson(Map<String, dynamic> json) =
+      _$_UserPrivate.fromJson;
+
+  @override
+  String get fcmToken;
+  @override
+  _$UserPrivateCopyWith<_UserPrivate> get copyWith;
+}
+
 User _$UserFromJson(Map<String, dynamic> json) {
   return _User.fromJson(json);
 }
