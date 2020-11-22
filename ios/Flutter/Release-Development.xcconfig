@@ -1,2 +1,3 @@
-#include "Release.xcconfig"
+PRODUCT_BUNDLE_IDENTIFIER=com.mizuki.Ohashi.Pilll.AdHoc
+DISPLAY_NAME=Pilll.AdHoc
 #include "Development.xcconfig"
