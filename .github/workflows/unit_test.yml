@@ -28,7 +28,7 @@ jobs:
         flutter-version: '1.22.2'
     - run: flutter pub get
     - name: Run iOS
-      run: flutter build ios --debug --no-codesign --flavor development --target main.dev.dart
+      run: flutter build ios --debug --no-codesign --flavor development --target lib/main.dev.dart
   build-android-debug:
     runs-on: macos-latest
     steps:
@@ -45,7 +45,7 @@ jobs:
       with:
         flutter-version: '1.22.2'
     - run: flutter pub get
-    - run: flutter build apk --debug --flavor development --target main.dev.dart
+    - run: flutter build apk --debug --flavor development --target lib/main.dev.dart
   test:
     runs-on: macos-latest
     steps:
