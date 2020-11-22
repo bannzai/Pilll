@@ -8,7 +8,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 
-import 'package:Pilll/main.dart';
+import 'package:Pilll/entrypoint.dart';
 
 void main() {
   setUp(() {
