@@ -90,18 +90,23 @@ class SettingsPage extends HookWidget {
               if (Environment.isProduction) {
                 return Container();
               }
-              final contents = [
-                "DEBUG INFO",
-                "env: ${Environment.isProduction ? "production" : "development"}",
-                "user id: $userID",
-                "pillSheetState.entity: ${pillSheetState.entity == null ? "null" : pillSheetState.entity.toJson()}",
-                "settingState.entity: ${settingState.entity == null ? "null" : settingState.entity.toJson()}",
-              ];
               return Padding(
                 padding: const EdgeInsets.all(10),
                 child: FlatButton(
                   child: Text("COPY DEBUG INFO"),
-                  onPressed: () {
+                  onPressed: () async {
+                    final package = await PackageInfo.fromPlatform();
+                    final appName = package.appName;
+                    final packageName = package.packageName;
+                    final contents = [
+                      "DEBUG INFO",
+                      "appName: $appName",
+                      "packageName: $packageName",
+                      "env: ${Environment.isProduction ? "production" : "development"}",
+                      "user id: $userID",
+                      "pillSheetState.entity: ${pillSheetState.entity == null ? "null" : pillSheetState.entity.toJson()}",
+                      "settingState.entity: ${settingState.entity == null ? "null" : settingState.entity.toJson()}",
+                    ];
                     Clipboard.setData(ClipboardData(text: contents.join("\n")));
                   },
                 ),
