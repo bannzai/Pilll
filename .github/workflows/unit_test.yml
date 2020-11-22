@@ -11,7 +11,25 @@ on:
     branches: [ master ]
 
 jobs:
-  build:
+  build-ios-debug:
+    runs-on: macos-latest
+    steps:
+    - uses: actions/checkout@v1
+    - uses: actions/setup-java@v1
+      with:
+        java-version: '12.x'
+    - name: Prepare firebase config
+      run: make secret
+      env:
+        FILE_FIREBASE_IOS_DEVELOPMENT: ${{ secrets.FILE_FIREBASE_IOS_DEVELOPMENT }}
+        FILE_FIREBASE_IOS_PRODUCTION: ${{ secrets.FILE_FIREBASE_IOS_PRODUCTION }}
+    - uses: subosito/flutter-action@v1
+      with:
+        flutter-version: '1.22.2'
+    - run: flutter pub get
+    - name: Run iOS
+      run: flutter build ios --debug --no-codesign --flavor development
+  build-android-debug:
     runs-on: macos-latest
     steps:
     - uses: actions/checkout@v1
@@ -23,15 +41,20 @@ jobs:
       env:
         FILE_FIREBASE_ANDROID_DEVELOPMENT: ${{ secrets.FILE_FIREBASE_ANDROID_DEVELOPMENT }}
         FILE_FIREBASE_ANDROID_PRODUCTION: ${{ secrets.FILE_FIREBASE_ANDROID_PRODUCTION }}
-        FILE_FIREBASE_IOS_DEVELOPMENT: ${{ secrets.FILE_FIREBASE_IOS_DEVELOPMENT }}
-        FILE_FIREBASE_IOS_PRODUCTION: ${{ secrets.FILE_FIREBASE_IOS_PRODUCTION }}
+    - uses: subosito/flutter-action@v1
+      with:
+        flutter-version: '1.22.2'
+    - run: flutter pub get
+    - run: flutter build apk --debug --flavor development
+  test:
+    runs-on: macos-latest
+    steps:
+    - uses: actions/checkout@v1
+    - uses: actions/setup-java@v1
+      with:
+        java-version: '12.x'
     - uses: subosito/flutter-action@v1
       with:
         flutter-version: '1.22.2'
     - run: flutter pub get
     - run: flutter test
-    - name: Run iOS
-      run: |
-        flutter build ios --debug --no-codesign --flavor development
-    - run: flutter build apk --debug --flavor development
-
