@@ -186,9 +186,7 @@ class SettingsPage extends HookWidget {
                     return ModifingPillNumberPage(
                       markSelected: (number) {
                         Navigator.pop(context);
-                        var currentPillSheet = pillSheetState.entity;
-                        pillSheetStore.modifyBeginingDate(currentPillSheet
-                            .calcBeginingDateFromNextTodayPillNumber(number));
+                        pillSheetStore.modifyBeginingDate(number);
                       },
                       pillMarkTypeBuilder: (number) {
                         return PillMarkType.normal;

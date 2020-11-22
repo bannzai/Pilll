@@ -9,3 +9,5 @@ class MockPillSheetRepository extends Mock
 class MockTodayRepository extends Mock implements TodayServiceInterface {}
 
 class MockSettingService extends Mock implements SettingService {}
+
+class MockPillSheetService extends Mock implements PillSheetService {}
