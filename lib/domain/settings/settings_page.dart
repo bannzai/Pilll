@@ -8,15 +8,19 @@ import 'package:Pilll/entity/user.dart';
 import 'package:Pilll/domain/settings/row_model.dart';
 import 'package:Pilll/domain/settings/modifing_pill_number.dart';
 import 'package:Pilll/domain/settings/reminder_times.dart';
+import 'package:Pilll/state/pill_sheet.dart';
+import 'package:Pilll/state/setting.dart';
 import 'package:Pilll/store/pill_sheet.dart';
 import 'package:Pilll/store/setting.dart';
 import 'package:Pilll/components/atoms/buttons.dart';
 import 'package:Pilll/components/atoms/color.dart';
 import 'package:Pilll/components/atoms/font.dart';
 import 'package:Pilll/components/atoms/text_color.dart';
+import 'package:Pilll/util/environment.dart';
 import 'package:Pilll/util/formatter/date_time_formatter.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:hooks_riverpod/all.dart';
@@ -62,8 +66,17 @@ final transactionModifierProvider = Provider((ref) =>
     _TransactionModifier(ref.watch(databaseProvider), reader: ref.read));
 
 class SettingsPage extends HookWidget {
+  static final int itemCount = SettingSection.values.length + 1;
   @override
   Widget build(BuildContext context) {
+    String userID;
+    SettingState settingState;
+    PillSheetState pillSheetState;
+    if (Environment.isDevelopment) {
+      userID = useProvider(userIDProvider);
+      pillSheetState = useProvider(pillSheetStoreProvider.state);
+      settingState = useProvider(settingStoreProvider.state);
+    }
     return Scaffold(
       backgroundColor: PilllColors.background,
       appBar: AppBar(
@@ -73,6 +86,27 @@ class SettingsPage extends HookWidget {
       body: Container(
         child: ListView.separated(
           itemBuilder: (BuildContext context, int index) {
+            if ((index + 1) == SettingsPage.itemCount) {
+              if (Environment.isProduction) {
+                return Container();
+              }
+              final contents = [
+                "DEBUG INFO",
+                "env: ${Environment.isProduction ? "production" : "development"}",
+                "user id: $userID",
+                "pillSheetState.entity: ${pillSheetState.entity == null ? "null" : pillSheetState.entity.toJson()}",
+                "settingState.entity: ${settingState.entity == null ? "null" : settingState.entity.toJson()}",
+              ];
+              return Padding(
+                padding: const EdgeInsets.all(10),
+                child: FlatButton(
+                  child: Text("COPY DEBUG INFO"),
+                  onPressed: () {
+                    Clipboard.setData(ClipboardData(text: contents.join("\n")));
+                  },
+                ),
+              );
+            }
             return HookBuilder(
               builder: (BuildContext context) {
                 return _section(
@@ -85,7 +119,7 @@ class SettingsPage extends HookWidget {
           separatorBuilder: (BuildContext context, int index) {
             return _separatorItem();
           },
-          itemCount: SettingSection.values.length,
+          itemCount: SettingsPage.itemCount,
           addRepaintBoundaries: false,
         ),
       ),
