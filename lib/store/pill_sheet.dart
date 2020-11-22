@@ -54,9 +54,8 @@ class PillSheetStateStore extends StateNotifier<PillSheetState> {
   DateTime calcBeginingDateFromNextTodayPillNumber(int pillNumber) {
     if (pillNumber == state.entity.todayPillNumber)
       return state.entity.beginingDate;
-    final betweenToday = pillNumber - state.entity.todayPillNumber;
-    final date = state.entity.beginingDate.add(Duration(days: betweenToday));
-    return date;
+    final diff = pillNumber - state.entity.todayPillNumber;
+    return state.entity.beginingDate.subtract(Duration(days: diff));
   }
 
   void modifyBeginingDate(int pillNumber) {
