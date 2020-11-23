@@ -121,4 +121,56 @@ void main() {
       expect(store.markFor(4), PillMarkType.normal);
     });
   });
+  group("#shouldPillMarkAnimation", () {
+    test("it is alredy taken all", () async {
+      final mockTodayRepository = MockTodayRepository();
+      todayRepository = mockTodayRepository;
+      when(todayRepository.today()).thenReturn(DateTime.parse("2020-11-23"));
+
+      final pillSheetEntity =
+          PillSheetModel.create(PillSheetType.pillsheet_21).copyWith(
+        beginingDate: DateTime.parse("2020-11-21"),
+        lastTakenDate: DateTime.parse("2020-11-23"),
+        createdAt: DateTime.parse("2020-11-21"),
+      );
+      final state = PillSheetState(entity: pillSheetEntity);
+
+      final service = MockPillSheetService();
+      when(service.fetchLast())
+          .thenAnswer((realInvocation) => Future.value(state.entity));
+      when(service.subscribeForLatestPillSheet())
+          .thenAnswer((realInvocation) => Stream.empty());
+
+      final store = PillSheetStateStore(service);
+      await Future.delayed(Duration(milliseconds: 100));
+      expect(state.entity.allTaken, isTrue);
+      for (int i = 1; i <= pillSheetEntity.pillSheetType.totalCount; i++) {
+        expect(store.shouldPillMarkAnimation(i), isFalse);
+      }
+    });
+    test("it is not taken all", () async {
+      final mockTodayRepository = MockTodayRepository();
+      todayRepository = mockTodayRepository;
+      when(todayRepository.today()).thenReturn(DateTime.parse("2020-11-23"));
+
+      final pillSheetEntity =
+          PillSheetModel.create(PillSheetType.pillsheet_21).copyWith(
+        beginingDate: DateTime.parse("2020-11-21"),
+        lastTakenDate: DateTime.parse("2020-11-22"),
+        createdAt: DateTime.parse("2020-11-21"),
+      );
+      final state = PillSheetState(entity: pillSheetEntity);
+
+      final service = MockPillSheetService();
+      when(service.fetchLast())
+          .thenAnswer((realInvocation) => Future.value(state.entity));
+      when(service.subscribeForLatestPillSheet())
+          .thenAnswer((realInvocation) => Stream.empty());
+
+      final store = PillSheetStateStore(service);
+      await Future.delayed(Duration(milliseconds: 100));
+      expect(state.entity.allTaken, isFalse);
+      expect(store.shouldPillMarkAnimation(3), isTrue);
+    });
+  });
 }
