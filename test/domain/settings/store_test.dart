@@ -45,7 +45,11 @@ void main() {
       ]))).thenAnswer((realInvocation) => Future.value(setting));
 
       store.addReminderTimes(ReminderTime(hour: 3, minute: 0));
-      verify(service.update(setting));
+      verify(service.update(setting.copyWith(reminderTimes: [
+        ReminderTime(hour: 1, minute: 0),
+        ReminderTime(hour: 2, minute: 0),
+        ReminderTime(hour: 3, minute: 0),
+      ])));
     });
     test(
         "return exception when setting has reminderTimes count is ${ReminderTime.maximumCount}",
@@ -96,7 +100,9 @@ void main() {
       ]))).thenAnswer((realInvocation) => Future.value(setting));
 
       store.deleteReminderTimes(1);
-      verify(service.update(setting));
+      verify(service.update(setting.copyWith(reminderTimes: [
+        ReminderTime(hour: 1, minute: 0),
+      ])));
     });
     test(
         "return exception when setting has remindertimes count is ${ReminderTime.minimumCount}",
