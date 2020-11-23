@@ -1,3 +1,4 @@
+import 'package:Pilll/entity/pill_mark_type.dart';
 import 'package:Pilll/entity/pill_sheet.dart';
 import 'package:Pilll/entity/pill_sheet_type.dart';
 import 'package:Pilll/service/today.dart';
@@ -63,5 +64,113 @@ void main() {
     final expected = DateTime.parse("2020-11-22");
     final actual = store.calcBeginingDateFromNextTodayPillNumber(2);
     expect(isSameDay(expected, actual), isTrue);
+  });
+  group("#markFor", () {
+    test("it is alredy taken all", () async {
+      final mockTodayRepository = MockTodayRepository();
+      todayRepository = mockTodayRepository;
+      when(todayRepository.today()).thenReturn(DateTime.parse("2020-11-23"));
+
+      final pillSheetEntity =
+          PillSheetModel.create(PillSheetType.pillsheet_21).copyWith(
+        beginingDate: DateTime.parse("2020-11-21"),
+        lastTakenDate: DateTime.parse("2020-11-23"),
+        createdAt: DateTime.parse("2020-11-21"),
+      );
+      final state = PillSheetState(entity: pillSheetEntity);
+
+      final service = MockPillSheetService();
+      when(service.fetchLast())
+          .thenAnswer((realInvocation) => Future.value(state.entity));
+      when(service.subscribeForLatestPillSheet())
+          .thenAnswer((realInvocation) => Stream.empty());
+
+      final store = PillSheetStateStore(service);
+      await Future.delayed(Duration(milliseconds: 100));
+      expect(state.entity.allTaken, isTrue);
+      expect(store.markFor(1), PillMarkType.done);
+      expect(store.markFor(2), PillMarkType.done);
+      expect(store.markFor(3), PillMarkType.done);
+      expect(store.markFor(4), PillMarkType.normal);
+    });
+    test("it is not taken all", () async {
+      final mockTodayRepository = MockTodayRepository();
+      todayRepository = mockTodayRepository;
+      when(todayRepository.today()).thenReturn(DateTime.parse("2020-11-23"));
+
+      final pillSheetEntity =
+          PillSheetModel.create(PillSheetType.pillsheet_21).copyWith(
+        beginingDate: DateTime.parse("2020-11-21"),
+        lastTakenDate: DateTime.parse("2020-11-22"),
+        createdAt: DateTime.parse("2020-11-21"),
+      );
+      final state = PillSheetState(entity: pillSheetEntity);
+
+      final service = MockPillSheetService();
+      when(service.fetchLast())
+          .thenAnswer((realInvocation) => Future.value(state.entity));
+      when(service.subscribeForLatestPillSheet())
+          .thenAnswer((realInvocation) => Stream.empty());
+
+      final store = PillSheetStateStore(service);
+      await Future.delayed(Duration(milliseconds: 100));
+      expect(state.entity.allTaken, isFalse);
+      expect(store.markFor(1), PillMarkType.done);
+      expect(store.markFor(2), PillMarkType.done);
+      expect(store.markFor(3), PillMarkType.normal);
+      expect(store.markFor(4), PillMarkType.normal);
+    });
+  });
+  group("#shouldPillMarkAnimation", () {
+    test("it is alredy taken all", () async {
+      final mockTodayRepository = MockTodayRepository();
+      todayRepository = mockTodayRepository;
+      when(todayRepository.today()).thenReturn(DateTime.parse("2020-11-23"));
+
+      final pillSheetEntity =
+          PillSheetModel.create(PillSheetType.pillsheet_21).copyWith(
+        beginingDate: DateTime.parse("2020-11-21"),
+        lastTakenDate: DateTime.parse("2020-11-23"),
+        createdAt: DateTime.parse("2020-11-21"),
+      );
+      final state = PillSheetState(entity: pillSheetEntity);
+
+      final service = MockPillSheetService();
+      when(service.fetchLast())
+          .thenAnswer((realInvocation) => Future.value(state.entity));
+      when(service.subscribeForLatestPillSheet())
+          .thenAnswer((realInvocation) => Stream.empty());
+
+      final store = PillSheetStateStore(service);
+      await Future.delayed(Duration(milliseconds: 100));
+      expect(state.entity.allTaken, isTrue);
+      for (int i = 1; i <= pillSheetEntity.pillSheetType.totalCount; i++) {
+        expect(store.shouldPillMarkAnimation(i), isFalse);
+      }
+    });
+    test("it is not taken all", () async {
+      final mockTodayRepository = MockTodayRepository();
+      todayRepository = mockTodayRepository;
+      when(todayRepository.today()).thenReturn(DateTime.parse("2020-11-23"));
+
+      final pillSheetEntity =
+          PillSheetModel.create(PillSheetType.pillsheet_21).copyWith(
+        beginingDate: DateTime.parse("2020-11-21"),
+        lastTakenDate: DateTime.parse("2020-11-22"),
+        createdAt: DateTime.parse("2020-11-21"),
+      );
+      final state = PillSheetState(entity: pillSheetEntity);
+
+      final service = MockPillSheetService();
+      when(service.fetchLast())
+          .thenAnswer((realInvocation) => Future.value(state.entity));
+      when(service.subscribeForLatestPillSheet())
+          .thenAnswer((realInvocation) => Stream.empty());
+
+      final store = PillSheetStateStore(service);
+      await Future.delayed(Duration(milliseconds: 100));
+      expect(state.entity.allTaken, isFalse);
+      expect(store.shouldPillMarkAnimation(3), isTrue);
+    });
   });
 }
