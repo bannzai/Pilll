@@ -11,8 +11,8 @@ part 'initial_setting.freezed.dart';
 abstract class InitialSettingModel implements _$InitialSettingModel {
   InitialSettingModel._();
   factory InitialSettingModel.initial({
-    int fromMenstruation,
-    int durationMenstruation,
+    @Default(2) int fromMenstruation,
+    @Default(4) int durationMenstruation,
     @Default(22) int reminderHour,
     @Default(0) int reminderMinute,
     @Default(false) bool isOnReminder,
@@ -29,11 +29,13 @@ abstract class InitialSettingModel implements _$InitialSettingModel {
         ],
         isOnReminder: isOnReminder,
       );
-  PillSheetModel buildPillSheet() => todayPillNumber != null ? PillSheetModel(
-        beginingDate: _beginingDate(),
-        lastTakenDate: _lastTakenDate(),
-        typeInfo: _typeInfo(),
-      ) : null;
+  PillSheetModel buildPillSheet() => todayPillNumber != null
+      ? PillSheetModel(
+          beginingDate: _beginingDate(),
+          lastTakenDate: _lastTakenDate(),
+          typeInfo: _typeInfo(),
+        )
+      : null;
 
   DateTime _beginingDate() {
     return today().subtract(Duration(days: todayPillNumber - 1));

@@ -15,8 +15,8 @@ class _$InitialSettingModelTearOff {
 
 // ignore: unused_element
   _InitialSettingModel initial(
-      {int fromMenstruation,
-      int durationMenstruation,
+      {int fromMenstruation = 2,
+      int durationMenstruation = 4,
       int reminderHour = 22,
       int reminderMinute = 0,
       bool isOnReminder = false,
@@ -208,20 +208,24 @@ class __$InitialSettingModelCopyWithImpl<$Res>
 /// @nodoc
 class _$_InitialSettingModel extends _InitialSettingModel {
   _$_InitialSettingModel(
-      {this.fromMenstruation,
-      this.durationMenstruation,
+      {this.fromMenstruation = 2,
+      this.durationMenstruation = 4,
       this.reminderHour = 22,
       this.reminderMinute = 0,
       this.isOnReminder = false,
       this.todayPillNumber,
       this.pillSheetType})
-      : assert(reminderHour != null),
+      : assert(fromMenstruation != null),
+        assert(durationMenstruation != null),
+        assert(reminderHour != null),
         assert(reminderMinute != null),
         assert(isOnReminder != null),
         super._();
 
+  @JsonKey(defaultValue: 2)
   @override
   final int fromMenstruation;
+  @JsonKey(defaultValue: 4)
   @override
   final int durationMenstruation;
   @JsonKey(defaultValue: 22)
