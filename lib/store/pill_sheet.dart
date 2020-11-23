@@ -1,5 +1,6 @@
 import 'dart:async';
 
+import 'package:Pilll/entity/pill_mark_type.dart';
 import 'package:Pilll/entity/pill_sheet.dart';
 import 'package:Pilll/service/pill_sheet.dart';
 import 'package:Pilll/state/pill_sheet.dart';
@@ -67,5 +68,18 @@ class PillSheetStateStore extends StateNotifier<PillSheetState> {
 
   void update(PillSheetModel entity) {
     state = state.copyWith(entity: entity);
+  }
+
+  PillMarkType markFor(int number) {
+    if (number <= state.entity.lastTakenPillNumber) {
+      return PillMarkType.done;
+    }
+    if (number > state.entity.typeInfo.dosingPeriod) {
+      return PillMarkType.notTaken;
+    }
+    if (number < state.entity.todayPillNumber) {
+      return PillMarkType.normal;
+    }
+    return PillMarkType.normal;
   }
 }
