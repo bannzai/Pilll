@@ -9,7 +9,7 @@ import 'package:intl/date_symbol_data_local.dart';
 
 import 'router/router.dart';
 
-Future<void> main() async {
+Future<void> entrypoint() async {
   WidgetsFlutterBinding.ensureInitialized();
   initializeDateFormatting('ja_JP');
   await Firebase.initializeApp();
