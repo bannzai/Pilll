@@ -25,16 +25,15 @@ class _PillMarkState extends State<PillMark> with TickerProviderStateMixin {
 
   @override
   void initState() {
-    if (widget.hasRippleAnimation) {
-      _controller = AnimationController(
-        duration: const Duration(milliseconds: 2000),
-        vsync: this,
-      );
-      // NOTE: This statement for avoid of tester.pumpAndSettle exception about timeout
-      if (!Environment.isTest) {
-        _controller.repeat();
-      }
+    _controller = AnimationController(
+      duration: const Duration(milliseconds: 2000),
+      vsync: this,
+    );
+    // NOTE: This statement for avoid of tester.pumpAndSettle exception about timeout
+    if (!Environment.isTest) {
+      _controller.repeat();
     }
+
     super.initState();
   }
 
