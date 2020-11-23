@@ -1,3 +1,4 @@
+TRACK_WIDGET_CREATION=
 PRODUCT_BUNDLE_IDENTIFIER=com.mizuki.Ohashi.Pilll.adhoc
 DISPLAY_NAME=Pilll.AdHoc
 #include "Development.xcconfig"
