@@ -65,15 +65,21 @@ class SettingStateStore extends StateNotifier<SettingState> {
   }
 
   void addReminderTimes(ReminderTime reminderTime) {
-    _modifyReminderTimes(state.entity.reminderTimes..add(reminderTime));
+    List<ReminderTime> copied = [...state.entity.reminderTimes];
+    copied.add(reminderTime);
+    _modifyReminderTimes(copied);
   }
 
   void editReminderTime(int index, ReminderTime reminderTime) {
-    _modifyReminderTimes(state.entity.reminderTimes..[index] = reminderTime);
+    List<ReminderTime> copied = [...state.entity.reminderTimes];
+    copied[index] = reminderTime;
+    _modifyReminderTimes(copied);
   }
 
   void deleteReminderTimes(int index) {
-    _modifyReminderTimes(state.entity.reminderTimes..removeAt(index));
+    List<ReminderTime> copied = [...state.entity.reminderTimes];
+    copied.removeAt(index);
+    _modifyReminderTimes(copied);
   }
 
   void modifyIsOnReminder(bool isOnReminder) {

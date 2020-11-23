@@ -14,7 +14,7 @@ class InitialSettingStateStore extends StateNotifier<InitialSettingState> {
             InitialSettingModel.initial(),
           ),
         );
-  InitialSettingInterface get _service => _read(initialSettingServiceProvider);
+  InitialSettingServiceInterface get _service => _read(initialSettingServiceProvider);
 
   void modify(InitialSettingModel Function(InitialSettingModel model) closure) {
     state = state.copyWith(entity: closure(state.entity));
