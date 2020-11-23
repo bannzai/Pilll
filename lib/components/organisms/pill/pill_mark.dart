@@ -40,10 +40,8 @@ class _PillMarkState extends State<PillMark> with TickerProviderStateMixin {
 
   @override
   void dispose() {
-    if (widget.hasRippleAnimation) {
-      _controller?.dispose();
-      _controller = null;
-    }
+    _controller?.dispose();
+    _controller = null;
     super.dispose();
   }
 
