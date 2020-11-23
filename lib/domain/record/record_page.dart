@@ -12,6 +12,8 @@ import 'package:Pilll/components/atoms/color.dart';
 import 'package:Pilll/components/atoms/font.dart';
 import 'package:Pilll/components/atoms/text_color.dart';
 import 'package:Pilll/util/datetime/today.dart';
+import 'package:Pilll/util/toolbar/picker_toolbar.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:flutter_svg/svg.dart';
@@ -44,6 +46,50 @@ class RecordPage extends HookWidget {
               RecordTakenInformation(
                 today: DateTime.now(),
                 pillSheetModel: currentPillSheet,
+                onPressed: () {
+                  showModalBottomSheet(
+                    context: context,
+                    builder: (BuildContext context) {
+                      var selectedTodayPillNumber =
+                          currentPillSheet.todayPillNumber;
+                      return Column(
+                        mainAxisAlignment: MainAxisAlignment.end,
+                        mainAxisSize: MainAxisSize.min,
+                        children: <Widget>[
+                          PickerToolbar(
+                            done: (() {
+                              store.modifyBeginingDate(selectedTodayPillNumber);
+                              Navigator.pop(context);
+                            }),
+                            cancel: (() {
+                              Navigator.pop(context);
+                            }),
+                          ),
+                          Container(
+                            height: 200,
+                            child: GestureDetector(
+                              onTap: () {
+                                Navigator.pop(context);
+                              },
+                              child: CupertinoPicker(
+                                itemExtent: 40,
+                                children: List.generate(
+                                    currentPillSheet.typeInfo.totalCount,
+                                    (index) => Text("${index + 1}")),
+                                onSelectedItemChanged: (index) {
+                                  selectedTodayPillNumber = index + 1;
+                                },
+                                scrollController: FixedExtentScrollController(
+                                  initialItem: selectedTodayPillNumber - 1,
+                                ),
+                              ),
+                            ),
+                          ),
+                        ],
+                      );
+                    },
+                  );
+                },
               ),
               if (_notificationString(currentPillSheet).isNotEmpty)
                 ConstrainedBox(
