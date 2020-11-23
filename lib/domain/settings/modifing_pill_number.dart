@@ -1,17 +1,17 @@
+import 'package:Pilll/components/atoms/buttons.dart';
 import 'package:Pilll/components/organisms/pill/pill_sheet.dart';
 import 'package:Pilll/components/atoms/color.dart';
 import 'package:Pilll/components/atoms/font.dart';
 import 'package:Pilll/components/atoms/text_color.dart';
+import 'package:Pilll/entity/pill_mark_type.dart';
 import 'package:Pilll/util/formatter/date_time_formatter.dart';
 import 'package:flutter/material.dart';
 
 class ModifingPillNumberPage extends StatefulWidget {
-  final PillMarkTypeBuilder pillMarkTypeBuilder;
   final PillMarkSelected markSelected;
 
   const ModifingPillNumberPage({
     Key key,
-    @required this.pillMarkTypeBuilder,
     @required this.markSelected,
   }) : super(key: key);
 
@@ -20,6 +20,7 @@ class ModifingPillNumberPage extends StatefulWidget {
 }
 
 class _ModifingPillNumberPageState extends State<ModifingPillNumberPage> {
+  int selectedPillMarkNumber;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -49,13 +50,23 @@ class _ModifingPillNumberPageState extends State<ModifingPillNumberPage> {
             SizedBox(height: 56),
             Center(
               child: PillSheet(
-                pillMarkTypeBuilder: widget.pillMarkTypeBuilder,
+                pillMarkTypeBuilder: (number) {
+                  if (selectedPillMarkNumber == number) {
+                    return PillMarkType.selected;
+                  }
+                  return PillMarkType.normal;
+                },
                 enabledMarkAnimation: null,
                 markSelected: (number) {
-                  setState(() => widget.markSelected(number));
+                  setState(() => selectedPillMarkNumber = number);
                 },
               ),
             ),
+            SizedBox(height: 20),
+            PrimaryButton(
+              onPressed: () => widget.markSelected(selectedPillMarkNumber),
+              text: "変更する",
+            )
           ],
         ),
       ),
