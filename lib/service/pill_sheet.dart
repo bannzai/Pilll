@@ -81,6 +81,8 @@ class PillSheetService extends PillSheetServiceInterface {
   Stream<PillSheetModel> subscribeForLatestPillSheet() {
     return _database
         .pillSheetsReference()
+        .orderBy(PillSheetFirestoreKey.createdAt)
+        .limitToLast(1)
         .snapshots()
         .map((event) => _filterForLatestPillSheet(event));
   }
