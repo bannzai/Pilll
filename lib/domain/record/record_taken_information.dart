@@ -8,10 +8,12 @@ import 'package:flutter/material.dart';
 class RecordTakenInformation extends StatelessWidget {
   final DateTime today;
   final PillSheetModel pillSheetModel;
+  final VoidCallback onPressed;
   const RecordTakenInformation({
     Key key,
     @required this.today,
     @required this.pillSheetModel,
+    @required this.onPressed,
   })  : assert(today != null),
         super(key: key);
 
@@ -58,35 +60,44 @@ class RecordTakenInformation extends StatelessWidget {
     );
   }
 
-  Column _takenWidget() {
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.center,
-      children: <Widget>[
-        Text(
-          "💊 今日飲むピル",
-          style: FontType.assisting.merge(TextColorStyle.noshime),
-        ),
-        if (isExistsPillSheet) SizedBox(height: 4),
-        if (!isExistsPillSheet) SizedBox(height: 12),
-        Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          crossAxisAlignment: CrossAxisAlignment.baseline,
-          textBaseline: TextBaseline.ideographic,
-          children: <Widget>[
-            if (isExistsPillSheet) ...[
-              Text("${pillSheetModel.todayPillNumber}",
-                  style: FontType.xHugeNumber.merge(TextColorStyle.main)),
-              SizedBox(width: 4),
-              Text("番",
-                  style: FontType.assistingBold.merge(TextColorStyle.noshime)),
+  Widget _takenWidget() {
+    return GestureDetector(
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: <Widget>[
+          Text(
+            "💊 今日飲むピル",
+            style: FontType.assisting.merge(TextColorStyle.noshime),
+          ),
+          if (isExistsPillSheet) SizedBox(height: 4),
+          if (!isExistsPillSheet) SizedBox(height: 12),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.baseline,
+            textBaseline: TextBaseline.ideographic,
+            children: <Widget>[
+              if (isExistsPillSheet) ...[
+                Text("${pillSheetModel.todayPillNumber}",
+                    style: FontType.xHugeNumber.merge(TextColorStyle.main)),
+                SizedBox(width: 4),
+                Text("番",
+                    style:
+                        FontType.assistingBold.merge(TextColorStyle.noshime)),
+              ],
+              if (!isExistsPillSheet) ...[
+                Text("-",
+                    style: FontType.assisting.merge(TextColorStyle.noshime)),
+              ],
             ],
-            if (!isExistsPillSheet) ...[
-              Text("-",
-                  style: FontType.assisting.merge(TextColorStyle.noshime)),
-            ],
-          ],
-        )
-      ],
+          )
+        ],
+      ),
+      onTap: () {
+        if (!isExistsPillSheet) {
+          return;
+        }
+        this.onPressed();
+      },
     );
   }
 
