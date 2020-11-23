@@ -34,12 +34,16 @@ class PillSheetService extends PillSheetServiceInterface {
     return pillSheetModel;
   }
 
-  @override
-  Future<PillSheetModel> fetchLast() {
+  Query _queryOfFetchLastPillSheet() {
     return _database
         .pillSheetsReference()
         .orderBy(PillSheetFirestoreKey.createdAt)
-        .limitToLast(1)
+        .limitToLast(1);
+  }
+
+  @override
+  Future<PillSheetModel> fetchLast() {
+    return _queryOfFetchLastPillSheet()
         .get()
         .then((event) => _filterForLatestPillSheet(event));
   }
@@ -79,10 +83,7 @@ class PillSheetService extends PillSheetServiceInterface {
   }
 
   Stream<PillSheetModel> subscribeForLatestPillSheet() {
-    return _database
-        .pillSheetsReference()
-        .orderBy(PillSheetFirestoreKey.createdAt)
-        .limitToLast(1)
+    return _queryOfFetchLastPillSheet()
         .snapshots()
         .map((event) => _filterForLatestPillSheet(event));
   }
