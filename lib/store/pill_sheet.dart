@@ -82,4 +82,12 @@ class PillSheetStateStore extends StateNotifier<PillSheetState> {
     }
     return PillMarkType.normal;
   }
+
+  bool shouldPillMarkAnimation(int number) {
+    if (number > state.entity.typeInfo.dosingPeriod) {
+      return false;
+    }
+    return number > state.entity.lastTakenPillNumber &&
+        number <= state.entity.todayPillNumber;
+  }
 }
