@@ -239,13 +239,7 @@ class RecordPage extends HookWidget {
           ? Weekday.Sunday
           : WeekdayFunctions.weekdayFromDate(pillSheet.beginingDate),
       pillMarkTypeBuilder: (number) => store.markFor(number),
-      enabledMarkAnimation: (number) {
-        if (number > pillSheet.typeInfo.dosingPeriod) {
-          return false;
-        }
-        return number > pillSheet.lastTakenPillNumber &&
-            number <= pillSheet.todayPillNumber;
-      },
+      enabledMarkAnimation: (number) => store.shouldPillMarkAnimation(number),
       markSelected: (number) {
         if (number <= pillSheet.lastTakenPillNumber) {
           return;
