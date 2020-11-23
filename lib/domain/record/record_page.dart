@@ -1,7 +1,6 @@
 import 'package:Pilll/components/molecules/indicator.dart';
 import 'package:Pilll/components/organisms/pill/pill_sheet.dart';
 import 'package:Pilll/domain/record/record_taken_information.dart';
-import 'package:Pilll/entity/pill_mark_type.dart';
 import 'package:Pilll/entity/pill_sheet.dart';
 import 'package:Pilll/entity/pill_sheet_type.dart';
 import 'package:Pilll/entity/weekday.dart';
@@ -239,25 +238,8 @@ class RecordPage extends HookWidget {
       firstWeekday: pillSheet.beginingDate == null
           ? Weekday.Sunday
           : WeekdayFunctions.weekdayFromDate(pillSheet.beginingDate),
-      pillMarkTypeBuilder: (number) {
-        if (number <= pillSheet.lastTakenPillNumber) {
-          return PillMarkType.done;
-        }
-        if (number > pillSheet.typeInfo.dosingPeriod) {
-          return PillMarkType.notTaken;
-        }
-        if (number < pillSheet.todayPillNumber) {
-          return PillMarkType.normal;
-        }
-        return PillMarkType.normal;
-      },
-      enabledMarkAnimation: (number) {
-        if (number > pillSheet.typeInfo.dosingPeriod) {
-          return false;
-        }
-        return number > pillSheet.lastTakenPillNumber &&
-            number <= pillSheet.todayPillNumber;
-      },
+      pillMarkTypeBuilder: (number) => store.markFor(number),
+      enabledMarkAnimation: (number) => store.shouldPillMarkAnimation(number),
       markSelected: (number) {
         if (number <= pillSheet.lastTakenPillNumber) {
           return;
