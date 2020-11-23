@@ -29,11 +29,11 @@ abstract class InitialSettingModel implements _$InitialSettingModel {
         ],
         isOnReminder: isOnReminder,
       );
-  PillSheetModel buildPillSheet() => PillSheetModel(
+  PillSheetModel buildPillSheet() => todayPillNumber != null ? PillSheetModel(
         beginingDate: _beginingDate(),
         lastTakenDate: _lastTakenDate(),
         typeInfo: _typeInfo(),
-      );
+      ) : null;
 
   DateTime _beginingDate() {
     return today().subtract(Duration(days: todayPillNumber - 1));
