@@ -94,7 +94,7 @@ class InitialSetting4Page extends HookWidget {
                 spacing: 8,
                 children: <Widget>[
                   PrimaryButton(
-                    text: "設定",
+                    text: "完了",
                     onPressed: () {
                       store
                           .register(state.entity.copyWith(isOnReminder: true))
