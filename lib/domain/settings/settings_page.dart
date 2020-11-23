@@ -193,9 +193,6 @@ class SettingsPage extends HookWidget {
                         Navigator.pop(context);
                         pillSheetStore.modifyBeginingDate(number);
                       },
-                      pillMarkTypeBuilder: (number) {
-                        return PillMarkType.normal;
-                      },
                     );
                   }));
                 }),
