@@ -64,7 +64,9 @@ class _ModifingPillNumberPageState extends State<ModifingPillNumberPage> {
             ),
             SizedBox(height: 20),
             PrimaryButton(
-              onPressed: () => widget.markSelected(selectedPillMarkNumber),
+              onPressed: selectedPillMarkNumber != null
+                  ? () => widget.markSelected(selectedPillMarkNumber)
+                  : null,
               text: "変更する",
             )
           ],
