@@ -152,26 +152,27 @@ class Calendar extends HookWidget {
     var range = calculator.dateRangeOfLine(line);
     return bandModels
         .map((bandModel) {
-          if (range.inRange(bandModel.begin) || range.inRange(bandModel.end)) {
-            bool isLineBreaked =
-                calculator.notInRangeAtLine(line, bandModel.begin);
-            int start =
-                calculator.offsetForStartPositionAtLine(line, bandModel.begin);
-
-            var length =
-                range.union(DateRange(bandModel.begin, bandModel.end)).days + 1;
-            var tileWidth = (MediaQuery.of(context).size.width - 32) /
-                Weekday.values.length;
-            return Positioned(
-              left: start.toDouble() * tileWidth,
-              width: tileWidth * length,
-              bottom: 0,
-              height: 15,
-              child:
-                  CalendarBand(model: bandModel, isLineBreaked: isLineBreaked),
-            );
+          final isInRange =
+              range.inRange(bandModel.begin) || range.inRange(bandModel.end);
+          if (!isInRange) {
+            return null;
           }
-          return null;
+          bool isLineBreaked =
+              calculator.notInRangeAtLine(line, bandModel.begin);
+          int start =
+              calculator.offsetForStartPositionAtLine(line, bandModel.begin);
+
+          var length =
+              range.union(DateRange(bandModel.begin, bandModel.end)).days + 1;
+          var tileWidth =
+              (MediaQuery.of(context).size.width - 32) / Weekday.values.length;
+          return Positioned(
+            left: start.toDouble() * tileWidth,
+            width: tileWidth * length,
+            bottom: 0,
+            height: 15,
+            child: CalendarBand(model: bandModel, isLineBreaked: isLineBreaked),
+          );
         })
         .where((element) => element != null)
         .toList();
