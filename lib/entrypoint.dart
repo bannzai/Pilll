@@ -18,11 +18,12 @@ Future<void> entrypoint() async {
 }
 
 class App extends StatelessWidget {
+  final analytics = FirebaseAnalytics();
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       navigatorObservers: [
-        FirebaseAnalyticsObserver(analytics: FirebaseAnalytics()),
+        FirebaseAnalyticsObserver(analytics: analytics),
       ],
       theme: ThemeData(
         primaryColor: PilllColors.primary,
