@@ -1,5 +1,6 @@
 import 'package:Pilll/domain/calendar/date_range.dart';
 import 'package:Pilll/entity/weekday.dart';
+import 'package:Pilll/util/datetime/day.dart';
 
 class Calculator {
   final DateTime date;
@@ -56,12 +57,14 @@ class Calculator {
 
   bool notInRangeAtLine(int line, DateTime date) {
     var range = dateRangeOfLine(line);
-    return !range.inRange(date);
+    return !range.inRange(date.date());
   }
 
   int offsetForStartPositionAtLine(int line, DateTime begin) {
     var range = dateRangeOfLine(line);
     var isLineBreaked = notInRangeAtLine(line, begin);
-    return isLineBreaked ? 0 : begin.difference(range.begin).inDays;
+    return isLineBreaked
+        ? 0
+        : begin.date().difference(range.begin.date()).inDays;
   }
 }

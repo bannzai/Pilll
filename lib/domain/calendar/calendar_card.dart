@@ -11,8 +11,8 @@ import 'package:Pilll/store/setting.dart';
 import 'package:Pilll/components/atoms/buttons.dart';
 import 'package:Pilll/components/atoms/font.dart';
 import 'package:Pilll/components/atoms/text_color.dart';
+import 'package:Pilll/util/datetime/day.dart';
 import 'package:Pilll/util/formatter/date_time_formatter.dart';
-import 'package:Pilll/util/datetime/today.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
@@ -45,6 +45,7 @@ class CalendarCard extends HookWidget {
                         CalendarNextPillSheetBandModel(range.begin, range.end)),
               ]
             ],
+            horizontalPadding: 16,
           ),
           _more(context, settingState.entity, currentPillSheetState.entity),
         ],
@@ -87,15 +88,19 @@ class CalendarCard extends HookWidget {
         Calculator(DateTime(now.year, now.month - 1, 1)), []);
     CalendarListPageModel current = CalendarListPageModel(Calculator(now), [
       if (currentPillSheet != null) ...[
-        menstruationDateRange(currentPillSheet, setting, 0).map((dateRange) =>
-            CalendarMenstruationBandModel(dateRange.begin, dateRange.end)),
-        nextPillSheetDateRange(currentPillSheet, 0).map((dateRange) =>
-            CalendarNextPillSheetBandModel(dateRange.begin, dateRange.end))
+        menstruationDateRange(currentPillSheet, setting, 0).map(
+            (range) => CalendarMenstruationBandModel(range.begin, range.end)),
+        nextPillSheetDateRange(currentPillSheet, 0).map(
+            (range) => CalendarNextPillSheetBandModel(range.begin, range.end)),
       ]
     ]);
     CalendarListPageModel next = CalendarListPageModel(
         Calculator(DateTime(now.year, now.month + 1, 1)), [
       if (currentPillSheet != null) ...[
+        menstruationDateRange(currentPillSheet, setting, 0).map(
+            (range) => CalendarMenstruationBandModel(range.begin, range.end)),
+        nextPillSheetDateRange(currentPillSheet, 0).map(
+            (range) => CalendarNextPillSheetBandModel(range.begin, range.end)),
         menstruationDateRange(currentPillSheet, setting, 1).map((dateRange) =>
             CalendarMenstruationBandModel(dateRange.begin, dateRange.end)),
         nextPillSheetDateRange(currentPillSheet, 1).map((dateRange) =>
