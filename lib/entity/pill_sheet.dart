@@ -83,13 +83,13 @@ abstract class PillSheetModel implements _$PillSheetModel {
       PillSheetTypeFunctions.fromRawPath(typeInfo.pillSheetTypeReferencePath);
 
   int get todayPillNumber {
-    var diff = today().difference(beginingDate).inDays;
+    var diff = today().difference(beginingDate.date()).inDays;
     return diff % pillSheetType.totalCount + 1;
   }
 
   int get lastTakenPillNumber => lastTakenDate == null
       ? 0
-      : lastTakenDate.difference(beginingDate).inDays + 1;
+      : lastTakenDate.date().difference(beginingDate.date()).inDays + 1;
 
   bool get allTaken => todayPillNumber == lastTakenPillNumber;
 }
