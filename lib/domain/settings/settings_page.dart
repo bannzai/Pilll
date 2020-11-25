@@ -103,6 +103,7 @@ class SettingsPage extends HookWidget {
                       "packageName: $packageName",
                       "env: ${Environment.isProduction ? "production" : "development"}",
                       "user id: $userID",
+                      "pillSheet.entity.id: ${pillSheetState.entity?.id}",
                       "pillSheetState.entity: ${pillSheetState.entity == null ? "null" : pillSheetState.entity.toJson()}",
                       "settingState.entity: ${settingState.entity == null ? "null" : settingState.entity.toJson()}",
                     ];
