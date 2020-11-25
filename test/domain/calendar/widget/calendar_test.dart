@@ -38,7 +38,11 @@ void main() {
             )
           ],
           child: MaterialApp(
-            home: Calendar(calculator: Calculator(now), bandModels: [model]),
+            home: Calendar(
+              calculator: Calculator(now),
+              bandModels: [model],
+              horizontalPadding: 16,
+            ),
           ),
         ),
       );
@@ -77,7 +81,11 @@ void main() {
             )
           ],
           child: MaterialApp(
-            home: Calendar(calculator: Calculator(now), bandModels: [model]),
+            home: Calendar(
+              calculator: Calculator(now),
+              bandModels: [model],
+              horizontalPadding: 16,
+            ),
           ),
         ),
       );
@@ -97,10 +105,14 @@ void main() {
       await tester.pumpWidget(
         ProviderScope(
           child: MaterialApp(
-            home: Calendar(calculator: Calculator(now), bandModels: [
-              CalendarNextPillSheetBandModel(
-                  DateTime(2020, 10, 15), DateTime(2020, 10, 18)),
-            ]),
+            home: Calendar(
+              calculator: Calculator(now),
+              bandModels: [
+                CalendarNextPillSheetBandModel(
+                    DateTime(2020, 10, 15), DateTime(2020, 10, 18)),
+              ],
+              horizontalPadding: 16,
+            ),
           ),
         ),
       );
@@ -113,10 +125,14 @@ void main() {
       await tester.pumpWidget(
         ProviderScope(
           child: MaterialApp(
-            home: Calendar(calculator: Calculator(now), bandModels: [
-              CalendarNextPillSheetBandModel(
-                  DateTime(2020, 08, 15), DateTime(2020, 08, 18)),
-            ]),
+            home: Calendar(
+              calculator: Calculator(now),
+              bandModels: [
+                CalendarNextPillSheetBandModel(
+                    DateTime(2020, 08, 15), DateTime(2020, 08, 18)),
+              ],
+              horizontalPadding: 16,
+            ),
           ),
         ),
       );
