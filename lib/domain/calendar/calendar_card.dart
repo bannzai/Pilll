@@ -87,15 +87,19 @@ class CalendarCard extends HookWidget {
         Calculator(DateTime(now.year, now.month - 1, 1)), []);
     CalendarListPageModel current = CalendarListPageModel(Calculator(now), [
       if (currentPillSheet != null) ...[
-        menstruationDateRange(currentPillSheet, setting, 0).map((dateRange) =>
-            CalendarMenstruationBandModel(dateRange.begin, dateRange.end)),
-        nextPillSheetDateRange(currentPillSheet, 0).map((dateRange) =>
-            CalendarNextPillSheetBandModel(dateRange.begin, dateRange.end))
+        menstruationDateRange(currentPillSheet, setting, 0).map(
+            (range) => CalendarMenstruationBandModel(range.begin, range.end)),
+        nextPillSheetDateRange(currentPillSheet, 0).map(
+            (range) => CalendarNextPillSheetBandModel(range.begin, range.end)),
       ]
     ]);
     CalendarListPageModel next = CalendarListPageModel(
         Calculator(DateTime(now.year, now.month + 1, 1)), [
       if (currentPillSheet != null) ...[
+        menstruationDateRange(currentPillSheet, setting, 0).map(
+            (range) => CalendarMenstruationBandModel(range.begin, range.end)),
+        nextPillSheetDateRange(currentPillSheet, 0).map(
+            (range) => CalendarNextPillSheetBandModel(range.begin, range.end)),
         menstruationDateRange(currentPillSheet, setting, 1).map((dateRange) =>
             CalendarMenstruationBandModel(dateRange.begin, dateRange.end)),
         nextPillSheetDateRange(currentPillSheet, 1).map((dateRange) =>
