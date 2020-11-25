@@ -10,7 +10,7 @@ import 'package:Pilll/components/atoms/buttons.dart';
 import 'package:Pilll/components/atoms/color.dart';
 import 'package:Pilll/components/atoms/font.dart';
 import 'package:Pilll/components/atoms/text_color.dart';
-import 'package:Pilll/util/datetime/today.dart';
+import 'package:Pilll/util/datetime/day.dart';
 import 'package:Pilll/util/toolbar/picker_toolbar.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';

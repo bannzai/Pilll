@@ -1,7 +1,7 @@
 import 'package:Pilll/entity/firestore_document_id_escaping_to_json.dart';
 import 'package:Pilll/entity/firestore_timestamp_converter.dart';
 import 'package:Pilll/entity/pill_sheet_type.dart';
-import 'package:Pilll/util/datetime/today.dart';
+import 'package:Pilll/util/datetime/day.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:json_annotation/json_annotation.dart';
@@ -83,13 +83,13 @@ abstract class PillSheetModel implements _$PillSheetModel {
       PillSheetTypeFunctions.fromRawPath(typeInfo.pillSheetTypeReferencePath);
 
   int get todayPillNumber {
-    var diff = today().difference(beginingDate).inDays;
+    var diff = today().difference(beginingDate.date()).inDays;
     return diff % pillSheetType.totalCount + 1;
   }
 
   int get lastTakenPillNumber => lastTakenDate == null
       ? 0
-      : lastTakenDate.difference(beginingDate).inDays + 1;
+      : lastTakenDate.date().difference(beginingDate.date()).inDays + 1;
 
   bool get allTaken => todayPillNumber == lastTakenPillNumber;
 }

@@ -65,6 +65,10 @@ class CalendarListPage extends StatelessWidget {
   }
 
   Widget _calendar(BuildContext context, CalendarListPageModel model) {
-    return Calendar(calculator: model.calculator, bandModels: model.bandModels);
+    return Calendar(
+      calculator: model.calculator,
+      bandModels: model.bandModels,
+      horizontalPadding: 0,
+    );
   }
 }

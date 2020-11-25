@@ -8,7 +8,7 @@ import 'package:Pilll/util/formatter/date_time_formatter.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:Pilll/util/datetime/today.dart' as utility;
+import 'package:Pilll/util/datetime/day.dart' as utility;
 
 abstract class CalendarPageConstants {
   static final double halfCircleHeight = 300;
@@ -41,7 +41,7 @@ class CalendarPage extends StatelessWidget {
               Positioned(
                 left: 16,
                 top: 85,
-                width: _cardWidth(context),
+                width: MediaQuery.of(context).size.width - 32,
                 height: 111,
                 child: _menstruationCard(today),
               ),
@@ -49,19 +49,17 @@ class CalendarPage extends StatelessWidget {
           ),
           Center(
             child: Container(
-              width: _cardWidth(context),
-              child: CalendarCard(
-                date: today,
+              child: Padding(
+                padding: const EdgeInsets.only(left: 16, right: 16),
+                child: CalendarCard(
+                  date: today,
+                ),
               ),
             ),
           ),
         ],
       ),
     );
-  }
-
-  double _cardWidth(BuildContext context) {
-    return MediaQuery.of(context).size.width - 32;
   }
 
   Widget _title() {

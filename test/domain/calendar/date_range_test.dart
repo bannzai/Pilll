@@ -54,4 +54,13 @@ void main() {
       expect(range.inRange(DateTime.parse("2020-09-20")), false);
     });
   });
+
+  group("#days", () {
+    final begin = DateTime(2020, 10, 1, 23, 59);
+    final end = DateTime(2020, 10, 2, 0, 1);
+    final range = DateRange(begin, end);
+    test("test boundary test", () {
+      expect(range.days, equals(1));
+    });
+  });
 }
