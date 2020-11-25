@@ -1,9 +1,14 @@
+import 'package:Pilll/util/datetime/day.dart';
+
 class DateRange {
-  final DateTime begin;
-  final DateTime end;
+  DateTime begin;
+  DateTime end;
   int get days => end.difference(begin).inDays;
 
-  DateRange(this.begin, this.end);
+  DateRange(DateTime begin, DateTime end) {
+    this.begin = begin.date();
+    this.end = end.date();
+  }
 
   static bool isSameDay(DateTime a, DateTime b) =>
       a.year == b.year && a.month == b.month && a.day == b.day;
