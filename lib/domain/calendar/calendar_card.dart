@@ -45,6 +45,7 @@ class CalendarCard extends HookWidget {
                         CalendarNextPillSheetBandModel(range.begin, range.end)),
               ]
             ],
+            horizontalPadding: 16,
           ),
           _more(context, settingState.entity, currentPillSheetState.entity),
         ],

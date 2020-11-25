@@ -36,10 +36,14 @@ final calendarDiariesProvider = FutureProvider.autoDispose
 class Calendar extends HookWidget {
   final Calculator calculator;
   final List<CalendarBandModel> bandModels;
+  final double horizontalPadding;
 
-  const Calendar(
-      {Key key, @required this.calculator, @required this.bandModels})
-      : super(key: key);
+  const Calendar({
+    Key key,
+    @required this.calculator,
+    @required this.bandModels,
+    @required this.horizontalPadding,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -162,10 +166,11 @@ class Calendar extends HookWidget {
           int start =
               calculator.offsetForStartPositionAtLine(line, bandModel.begin);
 
-          var length =
+          final length =
               range.union(DateRange(bandModel.begin, bandModel.end)).days + 1;
           var tileWidth =
-              (MediaQuery.of(context).size.width - 32) / Weekday.values.length;
+              (MediaQuery.of(context).size.width - horizontalPadding * 2) /
+                  Weekday.values.length;
           return Positioned(
             left: start.toDouble() * tileWidth,
             width: tileWidth * length,
