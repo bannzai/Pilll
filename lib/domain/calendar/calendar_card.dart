@@ -1,5 +1,6 @@
 import 'package:Pilll/domain/calendar/calculator.dart';
 import 'package:Pilll/domain/calendar/calendar.dart';
+import 'package:Pilll/domain/calendar/date_range.dart';
 import 'package:Pilll/domain/calendar/utility.dart';
 import 'package:Pilll/domain/calendar/calendar_band_model.dart';
 import 'package:Pilll/domain/calendar/calendar_help.dart';
@@ -94,6 +95,24 @@ class CalendarCard extends HookWidget {
             (range) => CalendarNextPillSheetBandModel(range.begin, range.end)),
       ]
     ]);
+    List<CalendarBandModel> satisfyNextMonthDateRanges =
+        List.generate(12, (index) {
+      return [
+        menstruationDateRange(currentPillSheet, setting, 0).map(
+            (range) => CalendarMenstruationBandModel(range.begin, range.end)),
+        nextPillSheetDateRange(currentPillSheet, 0).map(
+            (range) => CalendarNextPillSheetBandModel(range.begin, range.end)),
+      ];
+    }).expand((element) => element).toList();
+    List.generate(
+      6,
+      (index) {
+        return CalendarListPageModel(
+            Calculator(DateTime(now.year, now.month + index + 1, 1)),
+            [if (currentPillSheet != null) ...satisfyNextMonthDateRanges]);
+      },
+    );
+
     CalendarListPageModel next = CalendarListPageModel(
         Calculator(DateTime(now.year, now.month + 1, 1)), [
       if (currentPillSheet != null) ...[
