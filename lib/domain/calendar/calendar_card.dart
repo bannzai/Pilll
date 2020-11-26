@@ -97,13 +97,13 @@ class CalendarCard extends HookWidget {
     List<CalendarBandModel> satisfyNextMonthDateRanges =
         List.generate(12, (index) {
       return [
-        menstruationDateRange(currentPillSheet, setting, 0).map(
+        menstruationDateRange(currentPillSheet, setting, index).map(
             (range) => CalendarMenstruationBandModel(range.begin, range.end)),
-        nextPillSheetDateRange(currentPillSheet, 0).map(
+        nextPillSheetDateRange(currentPillSheet, index).map(
             (range) => CalendarNextPillSheetBandModel(range.begin, range.end)),
       ];
     }).expand((element) => element).toList();
-    List.generate(
+    final nextCalendars = List.generate(
       6,
       (index) {
         return CalendarListPageModel(
@@ -112,19 +112,6 @@ class CalendarCard extends HookWidget {
       },
     );
 
-    CalendarListPageModel next = CalendarListPageModel(
-        Calculator(DateTime(now.year, now.month + 1, 1)), [
-      if (currentPillSheet != null) ...[
-        menstruationDateRange(currentPillSheet, setting, 0).map(
-            (range) => CalendarMenstruationBandModel(range.begin, range.end)),
-        nextPillSheetDateRange(currentPillSheet, 0).map(
-            (range) => CalendarNextPillSheetBandModel(range.begin, range.end)),
-        menstruationDateRange(currentPillSheet, setting, 1).map((dateRange) =>
-            CalendarMenstruationBandModel(dateRange.begin, dateRange.end)),
-        nextPillSheetDateRange(currentPillSheet, 1).map((dateRange) =>
-            CalendarNextPillSheetBandModel(dateRange.begin, dateRange.end))
-      ]
-    ]);
     return ConstrainedBox(
       constraints: BoxConstraints.expand(height: 60),
       child: Row(
@@ -139,7 +126,7 @@ class CalendarCard extends HookWidget {
                     return CalendarListPage(models: [
                       previous,
                       current,
-                      next,
+                      ...nextCalendars,
                     ]);
                   },
                 ),
