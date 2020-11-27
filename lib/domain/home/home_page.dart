@@ -3,6 +3,8 @@ import 'package:Pilll/domain/record/record_page.dart';
 import 'package:Pilll/domain/settings/settings_page.dart';
 import 'package:Pilll/components/atoms/color.dart';
 import 'package:Pilll/components/atoms/text_color.dart';
+import 'package:Pilll/util/datetime/day.dart';
+import 'package:Pilll/util/formatter/date_time_formatter.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
@@ -56,7 +58,7 @@ class _HomePageState extends State<HomePage>
                               ? PilllColors.primary
                               : TextColor.gray)),
                   Tab(
-                      text: "2020/07",
+                      text: DateTimeFormatter.slashYearAndMonth(today()),
                       icon: SvgPicture.asset("images/tab_icon_calendar.svg",
                           color: _tabController.index == 1
                               ? PilllColors.primary
