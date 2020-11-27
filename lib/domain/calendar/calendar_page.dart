@@ -4,11 +4,16 @@ import 'package:Pilll/domain/calendar/calendar_card.dart';
 import 'package:Pilll/components/atoms/color.dart';
 import 'package:Pilll/components/atoms/font.dart';
 import 'package:Pilll/components/atoms/text_color.dart';
+import 'package:Pilll/domain/calendar/utility.dart';
+import 'package:Pilll/store/pill_sheet.dart';
+import 'package:Pilll/store/setting.dart';
 import 'package:Pilll/util/formatter/date_time_formatter.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:Pilll/util/datetime/day.dart' as utility;
+import 'package:hooks_riverpod/all.dart';
 
 abstract class CalendarPageConstants {
   static final double halfCircleHeight = 300;
@@ -43,7 +48,7 @@ class CalendarPage extends StatelessWidget {
                 top: 85,
                 width: MediaQuery.of(context).size.width - 32,
                 height: 111,
-                child: _menstruationCard(today),
+                child: _menstruationCard(),
               ),
             ],
           ),
@@ -75,7 +80,20 @@ class CalendarPage extends StatelessWidget {
     );
   }
 
-  Widget _menstruationCard(DateTime date) {
+  Widget _menstruationCard() {
+    return MenstruationCard();
+  }
+}
+
+class MenstruationCard extends HookWidget {
+  const MenstruationCard({
+    Key key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    final pillSheetState = useProvider(pillSheetStoreProvider.state);
+    final settingState = useProvider(settingStoreProvider.state);
     return Card(
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
@@ -88,7 +106,10 @@ class CalendarPage extends StatelessWidget {
                   style: TextColorStyle.noshime.merge(FontType.assisting)),
             ],
           ),
-          Text(DateTimeFormatter.monthAndWeekday(date),
+          Text(
+              DateTimeFormatter.monthAndWeekday(menstruationDateRange(
+                      pillSheetState.entity, settingState.entity, 0)
+                  .begin),
               style: TextColorStyle.gray.merge(FontType.xBigTitle)),
         ],
       ),
