@@ -58,7 +58,7 @@ class _HomePageState extends State<HomePage>
                               ? PilllColors.primary
                               : TextColor.gray)),
                   Tab(
-                      text: DateTimeFormatter.slashYearAndMonthAndDay(today()),
+                      text: DateTimeFormatter.slashYearAndMonth(today()),
                       icon: SvgPicture.asset("images/tab_icon_calendar.svg",
                           color: _tabController.index == 1
                               ? PilllColors.primary
