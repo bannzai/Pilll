@@ -18,7 +18,7 @@ class Root extends HookWidget {
   Widget build(BuildContext context) {
     listenNotificationEvents();
     return useProvider(authStateChangesProvider).when(data: (authInfo) {
-      print("when success: $authInfo");
+      print("when success: ${authInfo.uid}");
       final userService = UserService(DatabaseConnection(authInfo.uid));
       userService.prepare().then((_) {
         return FirebaseMessaging()
@@ -53,32 +53,26 @@ class Root extends HookWidget {
     });
   }
 
-  void _transition(BuildContext context, User user) {
+  void _transition(BuildContext context, User user) async {
     if (user.setting == null) {
       Navigator.popAndPushNamed(context, Routes.initialSetting);
       return;
     }
-    SharedPreferences.getInstance().then((storage) {
-      if (!storage.getKeys().contains(StringKey.firebaseAnonymousUserID)) {
-        storage.setString(
-            StringKey.firebaseAnonymousUserID, user.anonymouseUserID);
-      }
-      return storage;
-    }).then((storage) {
-      if (storage == null) {
-        return;
-      }
-      bool didEndInitialSetting = storage.getBool(BoolKey.didEndInitialSetting);
-      if (didEndInitialSetting == null) {
-        Navigator.popAndPushNamed(context, Routes.initialSetting);
-        return;
-      }
-      if (!didEndInitialSetting) {
-        Navigator.popAndPushNamed(context, Routes.initialSetting);
-        return;
-      }
-      Navigator.popAndPushNamed(context, Routes.main);
-      // Navigator.popAndPushNamed(context, Routes.initialSetting);
-    });
+    final storage = await SharedPreferences.getInstance();
+    if (!storage.getKeys().contains(StringKey.firebaseAnonymousUserID)) {
+      storage.setString(
+          StringKey.firebaseAnonymousUserID, user.anonymouseUserID);
+    }
+    bool didEndInitialSetting = storage.getBool(BoolKey.didEndInitialSetting);
+    if (didEndInitialSetting == null) {
+      Navigator.popAndPushNamed(context, Routes.initialSetting);
+      return;
+    }
+    if (!didEndInitialSetting) {
+      Navigator.popAndPushNamed(context, Routes.initialSetting);
+      return;
+    }
+    Navigator.popAndPushNamed(context, Routes.main);
+    // Navigator.popAndPushNamed(context, Routes.initialSetting);
   }
 }
