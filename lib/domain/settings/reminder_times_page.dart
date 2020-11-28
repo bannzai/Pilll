@@ -12,7 +12,7 @@ import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:hooks_riverpod/all.dart';
 
-class ReminderTimes extends HookWidget {
+class ReminderTimesPage extends HookWidget {
   @override
   Widget build(BuildContext context) {
     final state = useProvider(settingStoreProvider.state);
@@ -128,6 +128,15 @@ class ReminderTimes extends HookWidget {
           },
         );
       },
+    );
+  }
+}
+
+extension ReminderTimesPageRoute on ReminderTimesPage {
+  static Route<dynamic> route() {
+    return MaterialPageRoute(
+      settings: RouteSettings(name: "ReminderTimesPageRoute"),
+      builder: (_) => ReminderTimesPage(),
     );
   }
 }

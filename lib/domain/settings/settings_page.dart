@@ -6,7 +6,7 @@ import 'package:Pilll/entity/pill_sheet_type.dart';
 import 'package:Pilll/entity/user.dart';
 import 'package:Pilll/domain/settings/row_model.dart';
 import 'package:Pilll/domain/settings/modifing_pill_number_page.dart';
-import 'package:Pilll/domain/settings/reminder_times.dart';
+import 'package:Pilll/domain/settings/reminder_times_page.dart';
 import 'package:Pilll/state/pill_sheet.dart';
 import 'package:Pilll/state/setting.dart';
 import 'package:Pilll/store/pill_sheet.dart';
@@ -224,11 +224,7 @@ class SettingsPage extends HookWidget {
                 .map((e) => DateTimeFormatter.militaryTime(e.dateTime()))
                 .join(", "),
             onTap: () {
-              Navigator.of(context).push(
-                MaterialPageRoute(builder: (BuildContext context) {
-                  return ReminderTimes();
-                }),
-              );
+              Navigator.of(context).push(ReminderTimesPageRoute.route());
             },
           ),
         ];
@@ -237,28 +233,24 @@ class SettingsPage extends HookWidget {
           SettingListTitleRowModel(
               title: "生理について",
               onTap: () {
-                Navigator.of(context).push(MaterialPageRoute(
-                  builder: (BuildContext context) {
-                    return SettingMenstruationPage(
-                      done: null,
-                      doneText: null,
-                      skip: null,
-                      title: "生理について",
-                      model: SettingMenstruationPageModel(
-                        selectedFromMenstruation:
-                            settingState.entity.fromMenstruation,
-                        selectedDurationMenstruation:
-                            settingState.entity.durationMenstruation,
-                      ),
-                      fromMenstructionDidDecide: (selectedFromMenstruction) =>
-                          settingStore
-                              .modifyFromMenstruation(selectedFromMenstruction),
-                      durationMenstructionDidDecide:
-                          (selectedDurationMenstruation) =>
-                              settingStore.modifyDurationMenstruation(
-                                  selectedDurationMenstruation),
-                    );
-                  },
+                Navigator.of(context).push(SettingMenstruationPageRoute.route(
+                  done: null,
+                  doneText: null,
+                  skip: null,
+                  title: "生理について",
+                  model: SettingMenstruationPageModel(
+                    selectedFromMenstruation:
+                        settingState.entity.fromMenstruation,
+                    selectedDurationMenstruation:
+                        settingState.entity.durationMenstruation,
+                  ),
+                  fromMenstructionDidDecide: (selectedFromMenstruction) =>
+                      settingStore
+                          .modifyFromMenstruation(selectedFromMenstruction),
+                  durationMenstructionDidDecide:
+                      (selectedDurationMenstruation) =>
+                          settingStore.modifyDurationMenstruation(
+                              selectedDurationMenstruation),
                 ));
               }),
         ];
