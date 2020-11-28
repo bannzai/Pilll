@@ -92,4 +92,7 @@ abstract class PillSheetModel implements _$PillSheetModel {
       : lastTakenDate.date().difference(beginingDate.date()).inDays + 1;
 
   bool get allTaken => todayPillNumber == lastTakenPillNumber;
+  bool get ended =>
+      today().difference(beginingDate.date()).inDays + 1 >
+      pillSheetType.totalCount;
 }
