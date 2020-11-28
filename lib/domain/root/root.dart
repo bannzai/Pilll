@@ -1,4 +1,5 @@
 import 'package:Pilll/auth/auth.dart';
+import 'package:Pilll/database/database.dart';
 import 'package:Pilll/router/router.dart';
 import 'package:Pilll/components/molecules/indicator.dart';
 import 'package:Pilll/entity/user.dart';
@@ -12,32 +13,24 @@ import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/all.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-enum RootState { notYetLoad, loading, loaded }
-
-class RootStore extends StateNotifier<RootState> {
-  final UserServiceInterface userService;
-  RootStore(this.userService) : super(RootState.notYetLoad);
-
+class RootStore {
   Future<User> initialize() async {
-    return Future.wait([listenNotificationEvents(), auth()])
+    listenNotificationEvents();
+    final authInfo = await auth();
+    final userService = UserService(DatabaseConnection(authInfo.uid));
+    await userService.prepare();
+    return FirebaseMessaging()
+        .getToken()
         .then(
-          (_) => userService.prepare(),
+          (token) => userService.registerRemoteNotificationToken(token),
         )
         .then(
-          (user) => FirebaseMessaging()
-              .getToken()
-              .then(
-                (token) => userService.registerRemoteNotificationToken(token),
-              )
-              .then(
-                (_) => userService.prepare(),
-              ),
+          (_) => userService.fetch(),
         );
   }
 }
 
-final rootStoreProvider =
-    StateNotifierProvider((ref) => RootStore(ref.watch(userServiceProvider)));
+final rootStoreProvider = Provider((ref) => RootStore());
 final initializeProvider =
     FutureProvider((ref) => ref.watch(rootStoreProvider).initialize());
 
