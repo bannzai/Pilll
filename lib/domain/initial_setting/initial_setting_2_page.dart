@@ -127,3 +127,12 @@ class ExplainPillNumber extends HookWidget {
     );
   }
 }
+
+extension InitialSetting2PageRoute on InitialSetting2Page {
+  static Route<dynamic> route() {
+    return MaterialPageRoute(
+      settings: RouteSettings(name: "InitialSetting2PageRoute"),
+      builder: (_) => InitialSetting2Page(),
+    );
+  }
+}
