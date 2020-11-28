@@ -58,34 +58,31 @@ class Root extends HookWidget {
   }
 
   void _transition(BuildContext context, User user) {
-    Future(() async {
-      if (user.setting == null) {
-        Navigator.popAndPushNamed(context, Routes.initialSetting);
-        return Container();
+    if (user.setting == null) {
+      Navigator.popAndPushNamed(context, Routes.initialSetting);
+      return;
+    }
+    SharedPreferences.getInstance().then((storage) {
+      if (!storage.getKeys().contains(StringKey.firebaseAnonymousUserID)) {
+        storage.setString(
+            StringKey.firebaseAnonymousUserID, user.anonymouseUserID);
       }
-      SharedPreferences.getInstance().then((storage) {
-        if (!storage.getKeys().contains(StringKey.firebaseAnonymousUserID)) {
-          storage.setString(
-              StringKey.firebaseAnonymousUserID, user.anonymouseUserID);
-        }
-        return storage;
-      }).then((storage) {
-        if (storage == null) {
-          return;
-        }
-        bool didEndInitialSetting =
-            storage.getBool(BoolKey.didEndInitialSetting);
-        if (didEndInitialSetting == null) {
-          Navigator.popAndPushNamed(context, Routes.initialSetting);
-          return;
-        }
-        if (!didEndInitialSetting) {
-          Navigator.popAndPushNamed(context, Routes.initialSetting);
-          return;
-        }
-        Navigator.popAndPushNamed(context, Routes.main);
-        // Navigator.popAndPushNamed(context, Routes.initialSetting);
-      });
+      return storage;
+    }).then((storage) {
+      if (storage == null) {
+        return;
+      }
+      bool didEndInitialSetting = storage.getBool(BoolKey.didEndInitialSetting);
+      if (didEndInitialSetting == null) {
+        Navigator.popAndPushNamed(context, Routes.initialSetting);
+        return;
+      }
+      if (!didEndInitialSetting) {
+        Navigator.popAndPushNamed(context, Routes.initialSetting);
+        return;
+      }
+      Navigator.popAndPushNamed(context, Routes.main);
+      // Navigator.popAndPushNamed(context, Routes.initialSetting);
     });
   }
 }
