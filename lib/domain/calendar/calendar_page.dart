@@ -107,9 +107,11 @@ class MenstruationCard extends HookWidget {
             ],
           ),
           Text(
-              DateTimeFormatter.monthAndWeekday(menstruationDateRange(
-                      pillSheetState.entity, settingState.entity, 0)
-                  .begin),
+              pillSheetState.entity != null
+                  ? DateTimeFormatter.monthAndWeekday(menstruationDateRange(
+                          pillSheetState.entity, settingState.entity, 0)
+                      .begin)
+                  : "",
               style: TextColorStyle.gray.merge(FontType.xBigTitle)),
         ],
       ),
