@@ -2,5 +2,3 @@
 #include "Generated.xcconfig"
 
 TRACK_WIDGET_CREATION=
-PRODUCT_BUNDLE_IDENTIFIER=com.mizuki.Ohashi.Pilll
-DISPLAY_NAME=Pilll
