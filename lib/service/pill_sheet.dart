@@ -31,7 +31,7 @@ class PillSheetService extends PillSheetServiceInterface {
     var pillSheetModel = PillSheetModel.fromJson(data);
 
     if (pillSheetModel.deletedAt != null) return null;
-    if (pillSheetModel.ended) return null;
+    if (pillSheetModel.isEnded) return null;
     return pillSheetModel;
   }
 
