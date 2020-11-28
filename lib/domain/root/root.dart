@@ -1,5 +1,7 @@
 import 'package:Pilll/auth/auth.dart';
 import 'package:Pilll/database/database.dart';
+import 'package:Pilll/domain/home/home_page.dart';
+import 'package:Pilll/domain/initial_setting/initial_setting_page.dart';
 import 'package:Pilll/router/router.dart';
 import 'package:Pilll/components/molecules/indicator.dart';
 import 'package:Pilll/entity/user.dart';
@@ -38,12 +40,29 @@ final initializeProvider =
 class Root extends HookWidget {
   @override
   Widget build(BuildContext context) {
-    return useProvider(initializeProvider).when(data: (user) {
-      print("when success: $user");
-      _transition(context, user);
-      return Container();
+    return useProvider(authStateChangesProvider).when(data: (authInfo) {
+      print("when success: $authInfo");
+      final userService = UserService(DatabaseConnection(authInfo.uid));
+      userService.prepare().then((_) {
+        return FirebaseMessaging()
+            .getToken()
+            .then(
+              (token) => userService.registerRemoteNotificationToken(token),
+            )
+            .then(
+              (_) => userService.fetch(),
+            )
+            .then((user) {
+          _transition(context, user);
+        });
+      });
+      return Scaffold(
+        backgroundColor: PilllColors.background,
+        body: Indicator(),
+      );
     }, loading: () {
       print("loading ... ");
+      auth();
       return Scaffold(
         backgroundColor: PilllColors.background,
         body: Indicator(),
