@@ -165,8 +165,12 @@ class Calendar extends HookWidget {
           int start =
               calculator.offsetForStartPositionAtLine(line, bandModel.begin);
 
-          final length =
-              range.union(DateRange(bandModel.begin, bandModel.end)).days + 1;
+          final length = range
+                  .union(DateRange(
+                      isLineBreaked ? bandModel.begin : range.begin,
+                      bandModel.end))
+                  .days +
+              1;
           var tileWidth =
               (MediaQuery.of(context).size.width - horizontalPadding * 2) /
                   Weekday.values.length;
