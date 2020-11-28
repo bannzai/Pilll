@@ -196,7 +196,7 @@ class RecordPage extends HookWidget {
   ) {
     return PrimaryButton(
       text: "飲んだ",
-      onPressed: () => _take(context, pillSheet, today(), store),
+      onPressed: () => _take(context, pillSheet, now(), store),
     );
   }
 
@@ -249,7 +249,7 @@ class RecordPage extends HookWidget {
           // This is in the future pill number.
           return;
         }
-        var takenDate = today().subtract(Duration(days: diff));
+        var takenDate = now().subtract(Duration(days: diff));
         _take(context, pillSheet, takenDate, store);
       },
     );
