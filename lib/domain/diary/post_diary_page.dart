@@ -284,7 +284,7 @@ class PostDiaryPage extends HookWidget {
 extension PostDiaryPageRoute on PostDiaryPage {
   static Route<dynamic> route(DateTime date) {
     return MaterialPageRoute(
-      settings: RouteSettings(name: "PostDiaryPageRoute"),
+      settings: RouteSettings(name: "PostDiaryPage"),
       builder: (_) => PostDiaryPage(date),
     );
   }

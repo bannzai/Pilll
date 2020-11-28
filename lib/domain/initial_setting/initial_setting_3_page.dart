@@ -42,7 +42,7 @@ class InitialSetting3Page extends HookWidget {
 extension InitialSetting3PageRoute on InitialSetting3Page {
   static Route<dynamic> route() {
     return MaterialPageRoute(
-      settings: RouteSettings(name: "InitialSetting3PageRoute"),
+      settings: RouteSettings(name: "InitialSetting3Page"),
       builder: (_) => InitialSetting3Page(),
     );
   }

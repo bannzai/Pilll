@@ -81,7 +81,7 @@ class _ModifingPillNumberPageState extends State<ModifingPillNumberPage> {
 extension ModifingPillNumberPageRoute on ModifingPillNumberPage {
   static Route<dynamic> route({@required PillMarkSelected markSelected}) {
     return MaterialPageRoute(
-      settings: RouteSettings(name: "ModifingPillNumberPageRoute"),
+      settings: RouteSettings(name: "ModifingPillNumberPage"),
       builder: (_) => ModifingPillNumberPage(markSelected: markSelected),
     );
   }
