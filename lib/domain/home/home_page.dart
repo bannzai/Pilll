@@ -1,3 +1,4 @@
+import 'package:Pilll/analytics.dart';
 import 'package:Pilll/domain/calendar/calendar_page.dart';
 import 'package:Pilll/domain/record/record_page.dart';
 import 'package:Pilll/domain/settings/settings_page.dart';
@@ -16,18 +17,16 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage>
-    with SingleTickerProviderStateMixin {
+    with SingleTickerProviderStateMixin, RouteAware {
   TabController _tabController;
+  int _selectedIndex = 0;
 
   @override
   void initState() {
     super.initState();
-    _tabController = TabController(length: 3, vsync: this);
+    _tabController =
+        TabController(length: 3, vsync: this, initialIndex: _selectedIndex);
     _tabController.addListener(_handleTabSelection);
-  }
-
-  void _handleTabSelection() {
-    setState(() {});
   }
 
   @override
@@ -85,5 +84,60 @@ class _HomePageState extends State<HomePage>
         ),
       ),
     );
+  }
+
+  void _handleTabSelection() {
+    setState(() {
+      if (_selectedIndex != _tabController.index) {
+        _selectedIndex = _tabController.index;
+        _screenTracking();
+      }
+    });
+  }
+
+  @override
+  void didPush() {
+    _screenTracking();
+    super.didPush();
+  }
+
+  @override
+  void didPop() {
+    _screenTracking();
+    super.didPop();
+  }
+
+  void _screenTracking() {
+    analytics.setCurrentScreen(
+      screenName: "${HomePageTab.values[_tabController.index].screenName}",
+    );
+  }
+}
+
+enum HomePageTab { record, calendar, settings }
+
+extension HomePageTabFunctions on HomePageTab {
+  Widget widget() {
+    switch (this) {
+      case HomePageTab.record:
+        return RecordPage();
+      case HomePageTab.calendar:
+        return CalendarPage();
+      case HomePageTab.settings:
+        return SettingsPage();
+    }
+    throw ArgumentError.notNull("HomePageTabFunctions#widget");
+  }
+
+  String get screenName {
+    switch (this) {
+      case HomePageTab.record:
+        return "RecordPage";
+      case HomePageTab.calendar:
+        return "CalendarPage";
+      case HomePageTab.settings:
+        return "SettingsPage";
+    }
+    throw ArgumentError.notNull("HomePageTabFunctions#screenName");
   }
 }
