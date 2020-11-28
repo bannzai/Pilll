@@ -13,36 +13,33 @@ import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/all.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-class RootStore {
-  Future<User> initialize() async {
-    listenNotificationEvents();
-    final authInfo = await auth();
-    final userService = UserService(DatabaseConnection(authInfo.uid));
-    await userService.prepare();
-    return FirebaseMessaging()
-        .getToken()
-        .then(
-          (token) => userService.registerRemoteNotificationToken(token),
-        )
-        .then(
-          (_) => userService.fetch(),
-        );
-  }
-}
-
-final rootStoreProvider = Provider((ref) => RootStore());
-final initializeProvider =
-    FutureProvider((ref) => ref.watch(rootStoreProvider).initialize());
-
 class Root extends HookWidget {
   @override
   Widget build(BuildContext context) {
-    return useProvider(initializeProvider).when(data: (user) {
-      print("when success: $user");
-      _transition(context, user);
-      return Container();
+    listenNotificationEvents();
+    return useProvider(authStateChangesProvider).when(data: (authInfo) {
+      print("when success: ${authInfo.uid}");
+      final userService = UserService(DatabaseConnection(authInfo.uid));
+      userService.prepare().then((_) {
+        return FirebaseMessaging()
+            .getToken()
+            .then(
+              (token) => userService.registerRemoteNotificationToken(token),
+            )
+            .then(
+              (_) => userService.fetch(),
+            )
+            .then((user) {
+          _transition(context, user);
+        });
+      });
+      return Scaffold(
+        backgroundColor: PilllColors.background,
+        body: Indicator(),
+      );
     }, loading: () {
       print("loading ... ");
+      auth();
       return Scaffold(
         backgroundColor: PilllColors.background,
         body: Indicator(),
@@ -56,35 +53,26 @@ class Root extends HookWidget {
     });
   }
 
-  void _transition(BuildContext context, User user) {
-    Future(() async {
-      if (user.setting == null) {
-        Navigator.popAndPushNamed(context, Routes.initialSetting);
-        return Container();
-      }
-      SharedPreferences.getInstance().then((storage) {
-        if (!storage.getKeys().contains(StringKey.firebaseAnonymousUserID)) {
-          storage.setString(
-              StringKey.firebaseAnonymousUserID, user.anonymouseUserID);
-        }
-        return storage;
-      }).then((storage) {
-        if (storage == null) {
-          return;
-        }
-        bool didEndInitialSetting =
-            storage.getBool(BoolKey.didEndInitialSetting);
-        if (didEndInitialSetting == null) {
-          Navigator.popAndPushNamed(context, Routes.initialSetting);
-          return;
-        }
-        if (!didEndInitialSetting) {
-          Navigator.popAndPushNamed(context, Routes.initialSetting);
-          return;
-        }
-        Navigator.popAndPushNamed(context, Routes.main);
-        // Navigator.popAndPushNamed(context, Routes.initialSetting);
-      });
-    });
+  void _transition(BuildContext context, User user) async {
+    if (user.setting == null) {
+      Navigator.popAndPushNamed(context, Routes.initialSetting);
+      return;
+    }
+    final storage = await SharedPreferences.getInstance();
+    if (!storage.getKeys().contains(StringKey.firebaseAnonymousUserID)) {
+      storage.setString(
+          StringKey.firebaseAnonymousUserID, user.anonymouseUserID);
+    }
+    bool didEndInitialSetting = storage.getBool(BoolKey.didEndInitialSetting);
+    if (didEndInitialSetting == null) {
+      Navigator.popAndPushNamed(context, Routes.initialSetting);
+      return;
+    }
+    if (!didEndInitialSetting) {
+      Navigator.popAndPushNamed(context, Routes.initialSetting);
+      return;
+    }
+    Navigator.popAndPushNamed(context, Routes.main);
+    // Navigator.popAndPushNamed(context, Routes.initialSetting);
   }
 }
