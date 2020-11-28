@@ -118,9 +118,8 @@ class Calendar extends HookWidget {
                             return;
                           }
                           if (!isExistDiary) {
-                            Navigator.of(context).push(MaterialPageRoute(
-                              builder: (context) => PostDiaryPage(date),
-                            ));
+                            Navigator.of(context)
+                                .push(PostDiaryPageRoute.route(date));
                           } else {
                             showModalBottomSheet(
                               context: context,

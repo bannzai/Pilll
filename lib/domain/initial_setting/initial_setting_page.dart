@@ -35,13 +35,7 @@ class InitialSettingPage extends StatelessWidget {
               PrimaryButton(
                 text: "OK",
                 onPressed: () {
-                  Navigator.of(context).push(
-                    MaterialPageRoute(
-                      builder: (BuildContext context) {
-                        return InitialSetting1Page();
-                      },
-                    ),
-                  );
+                  Navigator.of(context).push(InitialSetting1PageRoute.route());
                 },
               ),
             ],

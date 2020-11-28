@@ -16,13 +16,7 @@ class InitialSetting3Page extends HookWidget {
       title: "3/4",
       doneText: "次へ",
       done: () {
-        Navigator.of(context).push(
-          MaterialPageRoute(
-            builder: (BuildContext context) {
-              return InitialSetting4Page();
-            },
-          ),
-        );
+        Navigator.of(context).push(InitialSetting4PageRoute.route());
       },
       skip: () {
         store
