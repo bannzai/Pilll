@@ -1,7 +1,5 @@
 import 'package:Pilll/auth/auth.dart';
 import 'package:Pilll/database/database.dart';
-import 'package:Pilll/domain/home/home_page.dart';
-import 'package:Pilll/domain/initial_setting/initial_setting_page.dart';
 import 'package:Pilll/router/router.dart';
 import 'package:Pilll/components/molecules/indicator.dart';
 import 'package:Pilll/entity/user.dart';
@@ -15,31 +13,10 @@ import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/all.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-class RootStore {
-  Future<User> initialize() async {
-    listenNotificationEvents();
-    final authInfo = await auth();
-    final userService = UserService(DatabaseConnection(authInfo.uid));
-    return userService.prepare().then((_) {
-      return FirebaseMessaging()
-          .getToken()
-          .then(
-            (token) => userService.registerRemoteNotificationToken(token),
-          )
-          .then(
-            (_) => userService.fetch(),
-          );
-    });
-  }
-}
-
-final rootStoreProvider = Provider((ref) => RootStore());
-final initializeProvider =
-    FutureProvider((ref) => ref.watch(rootStoreProvider).initialize());
-
 class Root extends HookWidget {
   @override
   Widget build(BuildContext context) {
+    listenNotificationEvents();
     return useProvider(authStateChangesProvider).when(data: (authInfo) {
       print("when success: $authInfo");
       final userService = UserService(DatabaseConnection(authInfo.uid));
