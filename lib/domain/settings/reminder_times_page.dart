@@ -135,7 +135,7 @@ class ReminderTimesPage extends HookWidget {
 extension ReminderTimesPageRoute on ReminderTimesPage {
   static Route<dynamic> route() {
     return MaterialPageRoute(
-      settings: RouteSettings(name: "ReminderTimesPageRoute"),
+      settings: RouteSettings(name: "ReminderTimesPage"),
       builder: (_) => ReminderTimesPage(),
     );
   }

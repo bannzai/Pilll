@@ -309,7 +309,7 @@ extension SettingMenstruationPageRoute on SettingMenstruationPage {
     @required void Function(int duration) durationMenstructionDidDecide,
   }) {
     return MaterialPageRoute(
-      settings: RouteSettings(name: "SettingMenstruationPageRoute"),
+      settings: RouteSettings(name: "SettingMenstruationPage"),
       builder: (_) => SettingMenstruationPage(
         title: title,
         doneText: doneText,

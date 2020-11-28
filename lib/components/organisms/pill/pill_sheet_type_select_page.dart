@@ -76,7 +76,7 @@ extension PillSheetTypeSelectPageRoute on PillSheetTypeSelectPage {
     @required PillSheetType selectedPillSheetType,
   }) {
     return MaterialPageRoute(
-      settings: RouteSettings(name: "PillSheetTypeSelectPageRoute"),
+      settings: RouteSettings(name: "PillSheetTypeSelectPage"),
       builder: (_) => PillSheetTypeSelectPage(
         title: title,
         callback: callback,
