@@ -72,3 +72,12 @@ class CalendarListPage extends StatelessWidget {
     );
   }
 }
+
+extension CalendarListPageRoute on CalendarListPage {
+  static Route<dynamic> route(List<CalendarListPageModel> models) {
+    return MaterialPageRoute(
+      settings: RouteSettings(name: "CalendarListPage"),
+      builder: (_) => CalendarListPage(models: models),
+    );
+  }
+}
