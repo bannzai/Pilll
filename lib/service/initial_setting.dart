@@ -9,8 +9,9 @@ abstract class InitialSettingServiceInterface {
   }
 }
 
-final initialSettingServiceProvider = Provider((ref) => InitialSettingService(
-    ref.watch(settingServiceProvider), ref.watch(pillSheetServiceProvider)));
+final initialSettingServiceProvider = Provider<InitialSettingServiceInterface>(
+    (ref) => InitialSettingService(ref.watch(settingServiceProvider),
+        ref.watch(pillSheetServiceProvider)));
 
 class InitialSettingService extends InitialSettingServiceInterface {
   final SettingServiceInterface settingService;
