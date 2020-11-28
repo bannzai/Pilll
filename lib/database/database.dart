@@ -4,7 +4,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:hooks_riverpod/all.dart';
 
 final userIDProvider = Provider<String>((ref) {
-  final authInfo = ref.watch(signInProvider);
+  final authInfo = ref.watch(authStateChangesProvider);
   if (authInfo.data?.value?.uid != null) {
     return authInfo.data?.value?.uid;
   }
