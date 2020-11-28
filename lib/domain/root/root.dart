@@ -18,15 +18,16 @@ class RootStore {
     listenNotificationEvents();
     final authInfo = await auth();
     final userService = UserService(DatabaseConnection(authInfo.uid));
-    await userService.prepare();
-    return FirebaseMessaging()
-        .getToken()
-        .then(
-          (token) => userService.registerRemoteNotificationToken(token),
-        )
-        .then(
-          (_) => userService.fetch(),
-        );
+    return userService.prepare().then((_) {
+      return FirebaseMessaging()
+          .getToken()
+          .then(
+            (token) => userService.registerRemoteNotificationToken(token),
+          )
+          .then(
+            (_) => userService.fetch(),
+          );
+    });
   }
 }
 
