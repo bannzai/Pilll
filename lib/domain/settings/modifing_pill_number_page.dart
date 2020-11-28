@@ -77,3 +77,12 @@ class _ModifingPillNumberPageState extends State<ModifingPillNumberPage> {
 
   String _today() => DateTimeFormatter.slashYearAndMonthAndDay(DateTime.now());
 }
+
+extension ModifingPillNumberPageRoute on ModifingPillNumberPage {
+  static Route<dynamic> route({@required PillMarkSelected markSelected}) {
+    return MaterialPageRoute(
+      settings: RouteSettings(name: "ModifingPillNumberPageRoute"),
+      builder: (_) => ModifingPillNumberPage(markSelected: markSelected),
+    );
+  }
+}

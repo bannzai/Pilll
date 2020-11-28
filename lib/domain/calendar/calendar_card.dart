@@ -121,15 +121,11 @@ class CalendarCard extends HookWidget {
             text: "もっと見る",
             onPressed: () {
               Navigator.of(context).push(
-                MaterialPageRoute(
-                  builder: (BuildContext context) {
-                    return CalendarListPage(models: [
-                      previous,
-                      current,
-                      ...nextCalendars,
-                    ]);
-                  },
-                ),
+                CalendarListPageRoute.route([
+                  previous,
+                  current,
+                  ...nextCalendars,
+                ]),
               );
             },
           )
