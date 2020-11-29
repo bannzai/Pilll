@@ -26,7 +26,7 @@ class _PillMarkState extends State<PillMark> with TickerProviderStateMixin {
   @override
   void initState() {
     _controller = AnimationController(
-      duration: const Duration(milliseconds: 2000),
+      duration: const Duration(milliseconds: 1500),
       vsync: this,
     );
     // NOTE: This statement for avoid of tester.pumpAndSettle exception about timeout
