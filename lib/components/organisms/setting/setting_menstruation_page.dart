@@ -297,3 +297,28 @@ class _SettingMenstruationPageState extends State<SettingMenstruationPage> {
     return Text(str);
   }
 }
+
+extension SettingMenstruationPageRoute on SettingMenstruationPage {
+  static Route<dynamic> route({
+    @required String title,
+    @required String doneText,
+    @required VoidCallback done,
+    @required VoidCallback skip,
+    @required SettingMenstruationPageModel model,
+    @required void Function(int from) fromMenstructionDidDecide,
+    @required void Function(int duration) durationMenstructionDidDecide,
+  }) {
+    return MaterialPageRoute(
+      settings: RouteSettings(name: "SettingMenstruationPage"),
+      builder: (_) => SettingMenstruationPage(
+        title: title,
+        doneText: doneText,
+        done: done,
+        skip: skip,
+        model: model,
+        fromMenstructionDidDecide: fromMenstructionDidDecide,
+        durationMenstructionDidDecide: durationMenstructionDidDecide,
+      ),
+    );
+  }
+}

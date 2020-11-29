@@ -92,55 +92,52 @@ class CalendarCard extends HookWidget {
             text: "もっと見る",
             onPressed: () {
               Navigator.of(context).push(
-                MaterialPageRoute(
-                  builder: (BuildContext context) {
-                    var now = today();
-                    CalendarListPageModel previous = CalendarListPageModel(
-                        Calculator(DateTime(now.year, now.month - 1, 1)), []);
-                    CalendarListPageModel current =
-                        CalendarListPageModel(Calculator(now), [
-                      if (currentPillSheet != null) ...[
-                        menstruationDateRange(currentPillSheet, setting, 0).map(
-                            (range) => CalendarMenstruationBandModel(
+                () {
+                  var now = today();
+                  CalendarListPageModel previous = CalendarListPageModel(
+                      Calculator(DateTime(now.year, now.month - 1, 1)), []);
+                  CalendarListPageModel current =
+                      CalendarListPageModel(Calculator(now), [
+                    if (currentPillSheet != null) ...[
+                      menstruationDateRange(currentPillSheet, setting, 0).map(
+                          (range) => CalendarMenstruationBandModel(
+                              range.begin, range.end)),
+                      nextPillSheetDateRange(currentPillSheet, 0).map((range) =>
+                          CalendarNextPillSheetBandModel(
+                              range.begin, range.end)),
+                    ]
+                  ]);
+                  List<CalendarBandModel> satisfyNextMonthDateRanges = [];
+                  if (currentPillSheet != null) {
+                    satisfyNextMonthDateRanges = List.generate(12, (index) {
+                      return [
+                        menstruationDateRange(currentPillSheet, setting, index)
+                            .map((range) => CalendarMenstruationBandModel(
                                 range.begin, range.end)),
-                        nextPillSheetDateRange(currentPillSheet, 0).map(
+                        nextPillSheetDateRange(currentPillSheet, index).map(
                             (range) => CalendarNextPillSheetBandModel(
                                 range.begin, range.end)),
-                      ]
-                    ]);
-                    List<CalendarBandModel> satisfyNextMonthDateRanges = [];
-                    if (currentPillSheet != null) {
-                      satisfyNextMonthDateRanges = List.generate(12, (index) {
-                        return [
-                          menstruationDateRange(
-                                  currentPillSheet, setting, index)
-                              .map((range) => CalendarMenstruationBandModel(
-                                  range.begin, range.end)),
-                          nextPillSheetDateRange(currentPillSheet, index).map(
-                              (range) => CalendarNextPillSheetBandModel(
-                                  range.begin, range.end)),
-                        ];
-                      }).expand((element) => element).toList();
-                    }
-                    final nextCalendars = List.generate(
-                      6,
-                      (index) {
-                        return CalendarListPageModel(
-                            Calculator(
-                                DateTime(now.year, now.month + index + 1, 1)),
-                            [
-                              if (currentPillSheet != null)
-                                ...satisfyNextMonthDateRanges
-                            ]);
-                      },
-                    );
-                    return CalendarListPage(models: [
-                      previous,
-                      current,
-                      ...nextCalendars,
-                    ]);
-                  },
-                ),
+                      ];
+                    }).expand((element) => element).toList();
+                  }
+                  final nextCalendars = List.generate(
+                    6,
+                    (index) {
+                      return CalendarListPageModel(
+                          Calculator(
+                              DateTime(now.year, now.month + index + 1, 1)),
+                          [
+                            if (currentPillSheet != null)
+                              ...satisfyNextMonthDateRanges
+                          ]);
+                    },
+                  );
+                  return CalendarListPageRoute.route([
+                    previous,
+                    current,
+                    ...nextCalendars,
+                  ]);
+                }(),
               );
             },
           )

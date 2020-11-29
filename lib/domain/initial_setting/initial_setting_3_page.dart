@@ -16,13 +16,7 @@ class InitialSetting3Page extends HookWidget {
       title: "3/4",
       doneText: "次へ",
       done: () {
-        Navigator.of(context).push(
-          MaterialPageRoute(
-            builder: (BuildContext context) {
-              return InitialSetting4Page();
-            },
-          ),
-        );
+        Navigator.of(context).push(InitialSetting4PageRoute.route());
       },
       skip: () {
         store
@@ -41,6 +35,15 @@ class InitialSetting3Page extends HookWidget {
         store.modify((model) =>
             model.copyWith(durationMenstruation: selectedDurationMenstruation));
       },
+    );
+  }
+}
+
+extension InitialSetting3PageRoute on InitialSetting3Page {
+  static Route<dynamic> route() {
+    return MaterialPageRoute(
+      settings: RouteSettings(name: "InitialSetting3Page"),
+      builder: (_) => InitialSetting3Page(),
     );
   }
 }

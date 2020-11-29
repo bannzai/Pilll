@@ -5,8 +5,8 @@ import 'package:Pilll/entity/pill_sheet.dart';
 import 'package:Pilll/entity/pill_sheet_type.dart';
 import 'package:Pilll/entity/user.dart';
 import 'package:Pilll/domain/settings/row_model.dart';
-import 'package:Pilll/domain/settings/modifing_pill_number.dart';
-import 'package:Pilll/domain/settings/reminder_times.dart';
+import 'package:Pilll/domain/settings/modifing_pill_number_page.dart';
+import 'package:Pilll/domain/settings/reminder_times_page.dart';
 import 'package:Pilll/state/pill_sheet.dart';
 import 'package:Pilll/state/setting.dart';
 import 'package:Pilll/store/pill_sheet.dart';
@@ -166,9 +166,8 @@ class SettingsPage extends HookWidget {
             title: "種類",
             content: settingState.entity.pillSheetType.name,
             onTap: () {
-              Navigator.of(context)
-                  .push(MaterialPageRoute(builder: (BuildContext context) {
-                return PillSheetTypeSelectPage(
+              Navigator.of(context).push(
+                PillSheetTypeSelectPageRoute.route(
                   title: "種類",
                   callback: (type) {
                     Navigator.pop(context);
@@ -178,23 +177,22 @@ class SettingsPage extends HookWidget {
                       settingStore.modifyType(type);
                   },
                   selectedPillSheetType: settingState.entity.pillSheetType,
-                );
-              }));
+                ),
+              );
             },
           ),
           if (pillSheetState.entity != null) ...[
             SettingListTitleRowModel(
                 title: "今日飲むピル番号の変更",
                 onTap: () {
-                  Navigator.of(context)
-                      .push(MaterialPageRoute(builder: (BuildContext context) {
-                    return ModifingPillNumberPage(
+                  Navigator.of(context).push(
+                    ModifingPillNumberPageRoute.route(
                       markSelected: (number) {
                         Navigator.pop(context);
                         pillSheetStore.modifyBeginingDate(number);
                       },
-                    );
-                  }));
+                    ),
+                  );
                 }),
             SettingListTitleRowModel(
                 title: "ピルシートの破棄",
@@ -226,11 +224,7 @@ class SettingsPage extends HookWidget {
                 .map((e) => DateTimeFormatter.militaryTime(e.dateTime()))
                 .join(", "),
             onTap: () {
-              Navigator.of(context).push(
-                MaterialPageRoute(builder: (BuildContext context) {
-                  return ReminderTimes();
-                }),
-              );
+              Navigator.of(context).push(ReminderTimesPageRoute.route());
             },
           ),
         ];
@@ -239,28 +233,24 @@ class SettingsPage extends HookWidget {
           SettingListTitleRowModel(
               title: "生理について",
               onTap: () {
-                Navigator.of(context).push(MaterialPageRoute(
-                  builder: (BuildContext context) {
-                    return SettingMenstruationPage(
-                      done: null,
-                      doneText: null,
-                      skip: null,
-                      title: "生理について",
-                      model: SettingMenstruationPageModel(
-                        selectedFromMenstruation:
-                            settingState.entity.fromMenstruation,
-                        selectedDurationMenstruation:
-                            settingState.entity.durationMenstruation,
-                      ),
-                      fromMenstructionDidDecide: (selectedFromMenstruction) =>
-                          settingStore
-                              .modifyFromMenstruation(selectedFromMenstruction),
-                      durationMenstructionDidDecide:
-                          (selectedDurationMenstruation) =>
-                              settingStore.modifyDurationMenstruation(
-                                  selectedDurationMenstruation),
-                    );
-                  },
+                Navigator.of(context).push(SettingMenstruationPageRoute.route(
+                  done: null,
+                  doneText: null,
+                  skip: null,
+                  title: "生理について",
+                  model: SettingMenstruationPageModel(
+                    selectedFromMenstruation:
+                        settingState.entity.fromMenstruation,
+                    selectedDurationMenstruation:
+                        settingState.entity.durationMenstruation,
+                  ),
+                  fromMenstructionDidDecide: (selectedFromMenstruction) =>
+                      settingStore
+                          .modifyFromMenstruation(selectedFromMenstruction),
+                  durationMenstructionDidDecide:
+                      (selectedDurationMenstruation) =>
+                          settingStore.modifyDurationMenstruation(
+                              selectedDurationMenstruation),
                 ));
               }),
         ];

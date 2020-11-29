@@ -119,3 +119,12 @@ class InitialSetting4Page extends HookWidget {
     );
   }
 }
+
+extension InitialSetting4PageRoute on InitialSetting4Page {
+  static Route<dynamic> route() {
+    return MaterialPageRoute(
+      settings: RouteSettings(name: "InitialSetting4Page"),
+      builder: (_) => InitialSetting4Page(),
+    );
+  }
+}

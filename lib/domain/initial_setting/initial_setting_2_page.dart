@@ -69,13 +69,8 @@ class InitialSetting2Page extends HookWidget {
                     onPressed: state.entity.todayPillNumber == null
                         ? null
                         : () {
-                            Navigator.of(context).push(
-                              MaterialPageRoute(
-                                builder: (BuildContext context) {
-                                  return InitialSetting3Page();
-                                },
-                              ),
-                            );
+                            Navigator.of(context)
+                                .push(InitialSetting3PageRoute.route());
                           },
                   ),
                   TertiaryButton(
@@ -124,6 +119,15 @@ class ExplainPillNumber extends HookWidget {
           ];
         }(),
       ),
+    );
+  }
+}
+
+extension InitialSetting2PageRoute on InitialSetting2Page {
+  static Route<dynamic> route() {
+    return MaterialPageRoute(
+      settings: RouteSettings(name: "InitialSetting2Page"),
+      builder: (_) => InitialSetting2Page(),
     );
   }
 }
