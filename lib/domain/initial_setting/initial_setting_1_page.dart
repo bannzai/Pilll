@@ -14,12 +14,18 @@ class InitialSetting1Page extends HookWidget {
       title: "1/4",
       callback: (type) {
         store.modify((model) => model.copyWith(pillSheetType: type));
-        Navigator.of(context)
-            .push(MaterialPageRoute(builder: (BuildContext context) {
-          return InitialSetting2Page();
-        }));
+        Navigator.of(context).push(InitialSetting2PageRoute.route());
       },
       selectedPillSheetType: state.entity.pillSheetType,
+    );
+  }
+}
+
+extension InitialSetting1PageRoute on InitialSetting1Page {
+  static Route<dynamic> route() {
+    return MaterialPageRoute(
+      settings: RouteSettings(name: "InitialSetting1Page"),
+      builder: (_) => InitialSetting1Page(),
     );
   }
 }

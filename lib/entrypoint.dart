@@ -1,6 +1,6 @@
+import 'package:Pilll/analytics.dart';
 import 'package:Pilll/components/atoms/color.dart';
 import 'package:Pilll/service/push_notification.dart';
-import 'package:firebase_analytics/firebase_analytics.dart';
 import 'package:firebase_analytics/observer.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
@@ -22,7 +22,7 @@ class App extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       navigatorObservers: [
-        FirebaseAnalyticsObserver(analytics: FirebaseAnalytics()),
+        FirebaseAnalyticsObserver(analytics: analytics),
       ],
       theme: ThemeData(
         primaryColor: PilllColors.primary,

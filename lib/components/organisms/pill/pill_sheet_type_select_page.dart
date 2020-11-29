@@ -68,3 +68,20 @@ class PillSheetTypeSelectPage extends StatelessWidget {
     );
   }
 }
+
+extension PillSheetTypeSelectPageRoute on PillSheetTypeSelectPage {
+  static Route<dynamic> route({
+    @required String title,
+    @required void Function(PillSheetType type) callback,
+    @required PillSheetType selectedPillSheetType,
+  }) {
+    return MaterialPageRoute(
+      settings: RouteSettings(name: "PillSheetTypeSelectPage"),
+      builder: (_) => PillSheetTypeSelectPage(
+        title: title,
+        callback: callback,
+        selectedPillSheetType: selectedPillSheetType,
+      ),
+    );
+  }
+}
