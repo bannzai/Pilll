@@ -9,6 +9,7 @@ part of 'pill_sheet.dart';
 _$_PillSheetTypeInfo _$_$_PillSheetTypeInfoFromJson(Map<String, dynamic> json) {
   return _$_PillSheetTypeInfo(
     pillSheetTypeReferencePath: json['pillSheetTypeReferencePath'] as String,
+    name: json['name'] as String,
     totalCount: json['totalCount'] as int,
     dosingPeriod: json['dosingPeriod'] as int,
   );
@@ -18,6 +19,7 @@ Map<String, dynamic> _$_$_PillSheetTypeInfoToJson(
         _$_PillSheetTypeInfo instance) =>
     <String, dynamic>{
       'pillSheetTypeReferencePath': instance.pillSheetTypeReferencePath,
+      'name': instance.name,
       'totalCount': instance.totalCount,
       'dosingPeriod': instance.dosingPeriod,
     };

@@ -19,10 +19,12 @@ class _$PillSheetTypeInfoTearOff {
 // ignore: unused_element
   _PillSheetTypeInfo call(
       {@required String pillSheetTypeReferencePath,
+      @required String name,
       @required int totalCount,
       @required int dosingPeriod}) {
     return _PillSheetTypeInfo(
       pillSheetTypeReferencePath: pillSheetTypeReferencePath,
+      name: name,
       totalCount: totalCount,
       dosingPeriod: dosingPeriod,
     );
@@ -41,6 +43,7 @@ const $PillSheetTypeInfo = _$PillSheetTypeInfoTearOff();
 /// @nodoc
 mixin _$PillSheetTypeInfo {
   String get pillSheetTypeReferencePath;
+  String get name;
   int get totalCount;
   int get dosingPeriod;
 
@@ -54,7 +57,10 @@ abstract class $PillSheetTypeInfoCopyWith<$Res> {
           PillSheetTypeInfo value, $Res Function(PillSheetTypeInfo) then) =
       _$PillSheetTypeInfoCopyWithImpl<$Res>;
   $Res call(
-      {String pillSheetTypeReferencePath, int totalCount, int dosingPeriod});
+      {String pillSheetTypeReferencePath,
+      String name,
+      int totalCount,
+      int dosingPeriod});
 }
 
 /// @nodoc
@@ -69,6 +75,7 @@ class _$PillSheetTypeInfoCopyWithImpl<$Res>
   @override
   $Res call({
     Object pillSheetTypeReferencePath = freezed,
+    Object name = freezed,
     Object totalCount = freezed,
     Object dosingPeriod = freezed,
   }) {
@@ -76,6 +83,7 @@ class _$PillSheetTypeInfoCopyWithImpl<$Res>
       pillSheetTypeReferencePath: pillSheetTypeReferencePath == freezed
           ? _value.pillSheetTypeReferencePath
           : pillSheetTypeReferencePath as String,
+      name: name == freezed ? _value.name : name as String,
       totalCount: totalCount == freezed ? _value.totalCount : totalCount as int,
       dosingPeriod:
           dosingPeriod == freezed ? _value.dosingPeriod : dosingPeriod as int,
@@ -91,7 +99,10 @@ abstract class _$PillSheetTypeInfoCopyWith<$Res>
       __$PillSheetTypeInfoCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String pillSheetTypeReferencePath, int totalCount, int dosingPeriod});
+      {String pillSheetTypeReferencePath,
+      String name,
+      int totalCount,
+      int dosingPeriod});
 }
 
 /// @nodoc
@@ -108,6 +119,7 @@ class __$PillSheetTypeInfoCopyWithImpl<$Res>
   @override
   $Res call({
     Object pillSheetTypeReferencePath = freezed,
+    Object name = freezed,
     Object totalCount = freezed,
     Object dosingPeriod = freezed,
   }) {
@@ -115,6 +127,7 @@ class __$PillSheetTypeInfoCopyWithImpl<$Res>
       pillSheetTypeReferencePath: pillSheetTypeReferencePath == freezed
           ? _value.pillSheetTypeReferencePath
           : pillSheetTypeReferencePath as String,
+      name: name == freezed ? _value.name : name as String,
       totalCount: totalCount == freezed ? _value.totalCount : totalCount as int,
       dosingPeriod:
           dosingPeriod == freezed ? _value.dosingPeriod : dosingPeriod as int,
@@ -128,9 +141,11 @@ class __$PillSheetTypeInfoCopyWithImpl<$Res>
 class _$_PillSheetTypeInfo implements _PillSheetTypeInfo {
   _$_PillSheetTypeInfo(
       {@required this.pillSheetTypeReferencePath,
+      @required this.name,
       @required this.totalCount,
       @required this.dosingPeriod})
       : assert(pillSheetTypeReferencePath != null),
+        assert(name != null),
         assert(totalCount != null),
         assert(dosingPeriod != null);
 
@@ -140,13 +155,15 @@ class _$_PillSheetTypeInfo implements _PillSheetTypeInfo {
   @override
   final String pillSheetTypeReferencePath;
   @override
+  final String name;
+  @override
   final int totalCount;
   @override
   final int dosingPeriod;
 
   @override
   String toString() {
-    return 'PillSheetTypeInfo(pillSheetTypeReferencePath: $pillSheetTypeReferencePath, totalCount: $totalCount, dosingPeriod: $dosingPeriod)';
+    return 'PillSheetTypeInfo(pillSheetTypeReferencePath: $pillSheetTypeReferencePath, name: $name, totalCount: $totalCount, dosingPeriod: $dosingPeriod)';
   }
 
   @override
@@ -158,6 +175,8 @@ class _$_PillSheetTypeInfo implements _PillSheetTypeInfo {
                 const DeepCollectionEquality().equals(
                     other.pillSheetTypeReferencePath,
                     pillSheetTypeReferencePath)) &&
+            (identical(other.name, name) ||
+                const DeepCollectionEquality().equals(other.name, name)) &&
             (identical(other.totalCount, totalCount) ||
                 const DeepCollectionEquality()
                     .equals(other.totalCount, totalCount)) &&
@@ -170,6 +189,7 @@ class _$_PillSheetTypeInfo implements _PillSheetTypeInfo {
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(pillSheetTypeReferencePath) ^
+      const DeepCollectionEquality().hash(name) ^
       const DeepCollectionEquality().hash(totalCount) ^
       const DeepCollectionEquality().hash(dosingPeriod);
 
@@ -186,6 +206,7 @@ class _$_PillSheetTypeInfo implements _PillSheetTypeInfo {
 abstract class _PillSheetTypeInfo implements PillSheetTypeInfo {
   factory _PillSheetTypeInfo(
       {@required String pillSheetTypeReferencePath,
+      @required String name,
       @required int totalCount,
       @required int dosingPeriod}) = _$_PillSheetTypeInfo;
 
@@ -194,6 +215,8 @@ abstract class _PillSheetTypeInfo implements PillSheetTypeInfo {
 
   @override
   String get pillSheetTypeReferencePath;
+  @override
+  String get name;
   @override
   int get totalCount;
   @override
