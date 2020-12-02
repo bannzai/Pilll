@@ -160,11 +160,17 @@ class _$UserTearOff {
 
 // ignore: unused_element
   _User call(
-      {@required String anonymouseUserID,
-      @JsonKey(name: "settings") Setting setting}) {
+      {@required
+          String anonymouseUserID,
+      @JsonKey(name: "settings")
+          Setting setting,
+      @required
+      @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
+          DateTime createdAt}) {
     return _User(
       anonymouseUserID: anonymouseUserID,
       setting: setting,
+      createdAt: createdAt,
     );
   }
 
@@ -183,6 +189,10 @@ mixin _$User {
   String get anonymouseUserID;
   @JsonKey(name: "settings")
   Setting get setting;
+  @JsonKey(
+      fromJson: TimestampConverter.timestampToDateTime,
+      toJson: TimestampConverter.dateTimeToTimestamp)
+  DateTime get createdAt;
 
   Map<String, dynamic> toJson();
   $UserCopyWith<User> get copyWith;
@@ -193,7 +203,11 @@ abstract class $UserCopyWith<$Res> {
   factory $UserCopyWith(User value, $Res Function(User) then) =
       _$UserCopyWithImpl<$Res>;
   $Res call(
-      {String anonymouseUserID, @JsonKey(name: "settings") Setting setting});
+      {String anonymouseUserID,
+      @JsonKey(name: "settings")
+          Setting setting,
+      @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
+          DateTime createdAt});
 
   $SettingCopyWith<$Res> get setting;
 }
@@ -210,12 +224,15 @@ class _$UserCopyWithImpl<$Res> implements $UserCopyWith<$Res> {
   $Res call({
     Object anonymouseUserID = freezed,
     Object setting = freezed,
+    Object createdAt = freezed,
   }) {
     return _then(_value.copyWith(
       anonymouseUserID: anonymouseUserID == freezed
           ? _value.anonymouseUserID
           : anonymouseUserID as String,
       setting: setting == freezed ? _value.setting : setting as Setting,
+      createdAt:
+          createdAt == freezed ? _value.createdAt : createdAt as DateTime,
     ));
   }
 
@@ -236,7 +253,11 @@ abstract class _$UserCopyWith<$Res> implements $UserCopyWith<$Res> {
       __$UserCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String anonymouseUserID, @JsonKey(name: "settings") Setting setting});
+      {String anonymouseUserID,
+      @JsonKey(name: "settings")
+          Setting setting,
+      @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
+          DateTime createdAt});
 
   @override
   $SettingCopyWith<$Res> get setting;
@@ -255,12 +276,15 @@ class __$UserCopyWithImpl<$Res> extends _$UserCopyWithImpl<$Res>
   $Res call({
     Object anonymouseUserID = freezed,
     Object setting = freezed,
+    Object createdAt = freezed,
   }) {
     return _then(_User(
       anonymouseUserID: anonymouseUserID == freezed
           ? _value.anonymouseUserID
           : anonymouseUserID as String,
       setting: setting == freezed ? _value.setting : setting as Setting,
+      createdAt:
+          createdAt == freezed ? _value.createdAt : createdAt as DateTime,
     ));
   }
 }
@@ -270,9 +294,15 @@ class __$UserCopyWithImpl<$Res> extends _$UserCopyWithImpl<$Res>
 /// @nodoc
 class _$_User extends _User {
   _$_User(
-      {@required this.anonymouseUserID,
-      @JsonKey(name: "settings") this.setting})
+      {@required
+          this.anonymouseUserID,
+      @JsonKey(name: "settings")
+          this.setting,
+      @required
+      @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
+          this.createdAt})
       : assert(anonymouseUserID != null),
+        assert(createdAt != null),
         super._();
 
   factory _$_User.fromJson(Map<String, dynamic> json) =>
@@ -283,10 +313,15 @@ class _$_User extends _User {
   @override
   @JsonKey(name: "settings")
   final Setting setting;
+  @override
+  @JsonKey(
+      fromJson: TimestampConverter.timestampToDateTime,
+      toJson: TimestampConverter.dateTimeToTimestamp)
+  final DateTime createdAt;
 
   @override
   String toString() {
-    return 'User(anonymouseUserID: $anonymouseUserID, setting: $setting)';
+    return 'User(anonymouseUserID: $anonymouseUserID, setting: $setting, createdAt: $createdAt)';
   }
 
   @override
@@ -297,14 +332,19 @@ class _$_User extends _User {
                 const DeepCollectionEquality()
                     .equals(other.anonymouseUserID, anonymouseUserID)) &&
             (identical(other.setting, setting) ||
-                const DeepCollectionEquality().equals(other.setting, setting)));
+                const DeepCollectionEquality()
+                    .equals(other.setting, setting)) &&
+            (identical(other.createdAt, createdAt) ||
+                const DeepCollectionEquality()
+                    .equals(other.createdAt, createdAt)));
   }
 
   @override
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(anonymouseUserID) ^
-      const DeepCollectionEquality().hash(setting);
+      const DeepCollectionEquality().hash(setting) ^
+      const DeepCollectionEquality().hash(createdAt);
 
   @override
   _$UserCopyWith<_User> get copyWith =>
@@ -319,8 +359,13 @@ class _$_User extends _User {
 abstract class _User extends User {
   _User._() : super._();
   factory _User(
-      {@required String anonymouseUserID,
-      @JsonKey(name: "settings") Setting setting}) = _$_User;
+      {@required
+          String anonymouseUserID,
+      @JsonKey(name: "settings")
+          Setting setting,
+      @required
+      @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
+          DateTime createdAt}) = _$_User;
 
   factory _User.fromJson(Map<String, dynamic> json) = _$_User.fromJson;
 
@@ -329,6 +374,11 @@ abstract class _User extends User {
   @override
   @JsonKey(name: "settings")
   Setting get setting;
+  @override
+  @JsonKey(
+      fromJson: TimestampConverter.timestampToDateTime,
+      toJson: TimestampConverter.dateTimeToTimestamp)
+  DateTime get createdAt;
   @override
   _$UserCopyWith<_User> get copyWith;
 }

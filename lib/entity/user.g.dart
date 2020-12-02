@@ -23,10 +23,13 @@ _$_User _$_$_UserFromJson(Map<String, dynamic> json) {
     setting: json['settings'] == null
         ? null
         : Setting.fromJson(json['settings'] as Map<String, dynamic>),
+    createdAt:
+        TimestampConverter.timestampToDateTime(json['createdAt'] as Timestamp),
   );
 }
 
 Map<String, dynamic> _$_$_UserToJson(_$_User instance) => <String, dynamic>{
       'anonymouseUserID': instance.anonymouseUserID,
       'settings': instance.setting,
+      'createdAt': TimestampConverter.dateTimeToTimestamp(instance.createdAt),
     };
