@@ -21,6 +21,7 @@ class UserAlreadyExists implements Exception {
 
 extension UserPrivateFirestoreFieldKeys on String {
   static final fcmToken = 'fcmToken';
+  static final id = 'id';
 }
 
 @freezed
@@ -43,6 +44,8 @@ extension UserFirestoreFieldKeys on String {
 @freezed
 abstract class User implements _$User {
   String get documentID => anonymouseUserID;
+  String get privateDocumentID =>
+      documentID + "_${createdAt.toUtc().millisecondsSinceEpoch}";
 
   User._();
   factory User({

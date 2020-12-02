@@ -1,5 +1,6 @@
 import 'package:Pilll/auth/auth.dart';
 import 'package:Pilll/entity/diary.dart';
+import 'package:Pilll/entity/user.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:hooks_riverpod/all.dart';
 
@@ -52,9 +53,10 @@ class DatabaseConnection {
       .collection(_CollectionPath.diaries(_userID))
       .doc(diary.id);
 
-  DocumentReference userPrivateReference() => FirebaseFirestore.instance
-      .collection(_CollectionPath.userPrivates(_userID))
-      .doc(_userID);
+  DocumentReference userPrivateReference(User user) =>
+      FirebaseFirestore.instance
+          .collection(_CollectionPath.userPrivates(_userID))
+          .doc(user.privateDocumentID);
 
   Future<T> transaction<T>(TransactionHandler<T> transactionHandler) {
     return FirebaseFirestore.instance.runTransaction(transactionHandler);
