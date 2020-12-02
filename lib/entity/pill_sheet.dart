@@ -22,6 +22,7 @@ abstract class PillSheetTypeInfo with _$PillSheetTypeInfo {
   @JsonSerializable(nullable: false, explicitToJson: true)
   factory PillSheetTypeInfo({
     @required String pillSheetTypeReferencePath,
+    @required String name,
     @required int totalCount,
     @required int dosingPeriod,
   }) = _PillSheetTypeInfo;
