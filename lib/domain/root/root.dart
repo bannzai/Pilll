@@ -20,11 +20,12 @@ class Root extends HookWidget {
     return useProvider(authStateChangesProvider).when(data: (authInfo) {
       print("when success: ${authInfo.uid}");
       final userService = UserService(DatabaseConnection(authInfo.uid));
-      userService.prepare().then((_) {
+      userService.prepare().then((user) {
         return FirebaseMessaging()
             .getToken()
             .then(
-              (token) => userService.registerRemoteNotificationToken(token),
+              (token) =>
+                  userService.registerRemoteNotificationToken(user, token),
             )
             .then(
               (_) => userService.fetch(),

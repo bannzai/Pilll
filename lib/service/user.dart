@@ -8,7 +8,7 @@ abstract class UserServiceInterface {
   Future<User> prepare();
   Future<User> fetch();
   Future<User> subscribe();
-  Future<void> registerRemoteNotificationToken(String token);
+  Future<void> registerRemoteNotificationToken(User user, String token);
 }
 
 final userServiceProvider =
@@ -49,18 +49,29 @@ class UserService extends UserServiceInterface {
   }
 
   Future<void> _create() {
-    return _database.userReference().set(
-      {
-        UserFirestoreFieldKeys.anonymouseUserID:
-            auth.FirebaseAuth.instance.currentUser.uid,
-      },
-      SetOptions(merge: true),
-    );
+    return _database
+        .userReference()
+        .set(
+          {
+            UserFirestoreFieldKeys.anonymouseUserID:
+                auth.FirebaseAuth.instance.currentUser.uid,
+            UserFirestoreFieldKeys.createdAt: DateTime.now(),
+          },
+          SetOptions(merge: true),
+        )
+        .then((_) => fetch())
+        .then((user) {
+          return _database.userPrivateReference(user).set(
+            {
+              UserPrivateFirestoreFieldKeys.id: user.privateDocumentID,
+            },
+            SetOptions(merge: true),
+          );
+        });
   }
 
-  Future<void> registerRemoteNotificationToken(String token) {
-    print("token: $token");
-    return _database.userPrivateReference().set(
+  Future<void> registerRemoteNotificationToken(User user, String token) {
+    return _database.userPrivateReference(user).set(
       {UserPrivateFirestoreFieldKeys.fcmToken: token},
       SetOptions(merge: true),
     );
