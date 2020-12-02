@@ -11,11 +11,11 @@ extension PillSheetTypeFunctions on PillSheetType {
   static final String firestoreCollectionPath = "pill_sheet_types";
   static PillSheetType fromRawPath(String rawPath) {
     switch (rawPath) {
-      case "21錠タイプ":
+      case "pillsheet_21":
         return PillSheetType.pillsheet_21;
-      case "28錠タイプ(4錠偽薬)":
+      case "pillsheet_28_4":
         return PillSheetType.pillsheet_28_4;
-      case "28錠タイプ(7錠偽薬)":
+      case "pillsheet_28_7":
         return PillSheetType.pillsheet_28_7;
       default:
         assert(false);
@@ -37,7 +37,19 @@ extension PillSheetTypeFunctions on PillSheetType {
     }
   }
 
-  String get rawPath => name;
+  String get rawPath {
+    switch (this) {
+      case PillSheetType.pillsheet_21:
+        return "pillsheet_21";
+      case PillSheetType.pillsheet_28_4:
+        return "pillsheet_28_4";
+      case PillSheetType.pillsheet_28_7:
+        return "pillsheet_28_7";
+      default:
+        throw ArgumentError.notNull(
+            "unexpected null value for PillSheetType.rawPath");
+    }
+  }
 
   List<String> get examples {
     switch (this) {
@@ -125,6 +137,7 @@ extension PillSheetTypeFunctions on PillSheetType {
 
   PillSheetTypeInfo get typeInfo => PillSheetTypeInfo(
       pillSheetTypeReferencePath: rawPath,
+      name: name,
       totalCount: totalCount,
       dosingPeriod: dosingPeriod);
 }

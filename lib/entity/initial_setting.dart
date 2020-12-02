@@ -48,6 +48,7 @@ abstract class InitialSettingModel implements _$InitialSettingModel {
   PillSheetTypeInfo _typeInfo() {
     return PillSheetTypeInfo(
       pillSheetTypeReferencePath: pillSheetType.rawPath,
+      name: pillSheetType.name,
       dosingPeriod: pillSheetType.dosingPeriod,
       totalCount: pillSheetType.totalCount,
     );
