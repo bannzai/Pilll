@@ -1,3 +1,4 @@
+import 'package:Pilll/entity/firestore_timestamp_converter.dart';
 import 'package:Pilll/entity/setting.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
@@ -45,8 +46,16 @@ abstract class User implements _$User {
 
   User._();
   factory User({
-    @required String anonymouseUserID,
-    @JsonKey(name: "settings") Setting setting,
+    @required
+        String anonymouseUserID,
+    @JsonKey(name: "settings")
+        Setting setting,
+    @JsonKey(
+      fromJson: TimestampConverter.timestampToDateTime,
+      toJson: TimestampConverter.dateTimeToTimestamp,
+    )
+    @required
+        DateTime createdAt,
   }) = _User;
 
   factory User.fromJson(Map<String, dynamic> json) => _$UserFromJson(json);
