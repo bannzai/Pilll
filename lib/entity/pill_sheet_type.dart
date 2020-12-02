@@ -137,6 +137,7 @@ extension PillSheetTypeFunctions on PillSheetType {
 
   PillSheetTypeInfo get typeInfo => PillSheetTypeInfo(
       pillSheetTypeReferencePath: rawPath,
+      name: name,
       totalCount: totalCount,
       dosingPeriod: dosingPeriod);
 }
