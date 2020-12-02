@@ -20,6 +20,7 @@ class UserAlreadyExists implements Exception {
 
 extension UserPrivateFirestoreFieldKeys on String {
   static final fcmToken = 'fcmToken';
+  static final createdAt = "createdAt";
 }
 
 @freezed
@@ -36,7 +37,6 @@ abstract class UserPrivate implements _$UserPrivate {
 extension UserFirestoreFieldKeys on String {
   static final anonymouseUserID = "anonymouseUserID";
   static final settings = "settings";
-  static final createdAt = "createdAt";
 }
 
 @freezed
