@@ -42,7 +42,7 @@ abstract class InitialSettingModel implements _$InitialSettingModel {
   }
 
   DateTime _lastTakenDate() {
-    return todayPillNumber == 1 ? null : today();
+    return todayPillNumber == 1 ? null : today().subtract(Duration(days: 1));
   }
 
   PillSheetTypeInfo _typeInfo() {
