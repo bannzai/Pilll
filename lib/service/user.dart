@@ -53,6 +53,7 @@ class UserService extends UserServiceInterface {
       {
         UserFirestoreFieldKeys.anonymouseUserID:
             auth.FirebaseAuth.instance.currentUser.uid,
+        UserFirestoreFieldKeys.createdAt: DateTime.now(),
       },
       SetOptions(merge: true),
     );
