@@ -4,7 +4,6 @@ import 'package:Pilll/entity/user.dart';
 import 'package:Pilll/error_log.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart' as auth;
-import 'package:firebase_crashlytics/firebase_crashlytics.dart';
 import 'package:riverpod/all.dart';
 
 abstract class UserServiceInterface {
