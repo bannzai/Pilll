@@ -46,7 +46,7 @@ class _HomePageState extends State<HomePage>
             child: SafeArea(
               child: TabBar(
                 controller: _tabController,
-                labelColor: PilllColors.primary,
+                labelColor: PilllColors.selected,
                 indicatorColor: Colors.transparent,
                 unselectedLabelColor: TextColor.gray,
                 tabs: <Tab>[
@@ -54,19 +54,19 @@ class _HomePageState extends State<HomePage>
                       text: "ピル",
                       icon: SvgPicture.asset("images/tab_icon_pill.svg",
                           color: _tabController.index == 0
-                              ? PilllColors.primary
+                              ? PilllColors.selected
                               : TextColor.gray)),
                   Tab(
                       text: DateTimeFormatter.slashYearAndMonth(today()),
                       icon: SvgPicture.asset("images/tab_icon_calendar.svg",
                           color: _tabController.index == 1
-                              ? PilllColors.primary
+                              ? PilllColors.selected
                               : TextColor.gray)),
                   Tab(
                       text: "設定",
                       icon: SvgPicture.asset("images/tab_icon_setting.svg",
                           color: _tabController.index == 2
-                              ? PilllColors.primary
+                              ? PilllColors.selected
                               : TextColor.gray)),
                 ],
               ),

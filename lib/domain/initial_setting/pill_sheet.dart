@@ -19,7 +19,7 @@ class PillSheet extends StatelessWidget {
       width: 295,
       height: 143,
       decoration: BoxDecoration(
-        color: this.selected ? PilllColors.selected : PilllColors.background,
+        color: this.selected ? PilllColors.selected2 : PilllColors.background,
         border: Border.all(
             width: 1,
             color: this.selected ? PilllColors.enable : PilllColors.disable),
