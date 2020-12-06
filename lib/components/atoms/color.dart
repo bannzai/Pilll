@@ -42,7 +42,7 @@ class PilllColors {
   static final Color lightGray = HexColor.fromHex("CDCFD1");
   static final Color gray = HexColor.fromHex("BEC0C2");
 
-  static final Color menstruation = HexColor.fromHex("DCB1C4");
+  static final Color menstruation = HexColor.fromHex("E3B4B4");
   static final Color duration = HexColor.fromHex("6A7DA5");
 
   static final Color attention = HexColor.fromHex("4E6287");
