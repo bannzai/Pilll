@@ -1,8 +1,11 @@
+import 'dart:async';
+
 import 'package:Pilll/analytics.dart';
 import 'package:Pilll/components/atoms/color.dart';
 import 'package:Pilll/service/push_notification.dart';
 import 'package:firebase_analytics/observer.dart';
 import 'package:firebase_core/firebase_core.dart';
+import 'package:firebase_crashlytics/firebase_crashlytics.dart';
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/all.dart';
 import 'package:intl/date_symbol_data_local.dart';
@@ -13,8 +16,12 @@ Future<void> entrypoint() async {
   WidgetsFlutterBinding.ensureInitialized();
   initializeDateFormatting('ja_JP');
   await Firebase.initializeApp();
+  // MEMO: FirebaseCrashlytics#recordFlutterError called dumpErrorToConsole in function.
+  FlutterError.onError = FirebaseCrashlytics.instance.recordFlutterError;
   requestNotificationPermissions();
-  runApp(ProviderScope(child: App()));
+  runZonedGuarded(() {
+    runApp(ProviderScope(child: App()));
+  }, (error, stack) => FirebaseCrashlytics.instance.recordError(error, stack));
 }
 
 class App extends StatelessWidget {
