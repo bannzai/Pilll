@@ -13,6 +13,8 @@ import 'package:intl/date_symbol_data_local.dart';
 import 'router/router.dart';
 
 Future<void> entrypoint() async {
+  // MEMO: FirebaseCrashlytics#recordFlutterError called dumpErrorToConsole in function.
+  FlutterError.onError = FirebaseCrashlytics.instance.recordFlutterError;
   WidgetsFlutterBinding.ensureInitialized();
   initializeDateFormatting('ja_JP');
   await Firebase.initializeApp();
