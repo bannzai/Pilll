@@ -1,7 +1,10 @@
+import 'package:Pilll/analytics.dart';
 import 'package:Pilll/database/database.dart';
 import 'package:Pilll/entity/user.dart';
+import 'package:Pilll/error_log.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart' as auth;
+import 'package:firebase_crashlytics/firebase_crashlytics.dart';
 import 'package:riverpod/all.dart';
 
 abstract class UserServiceInterface {
@@ -49,13 +52,19 @@ class UserService extends UserServiceInterface {
   }
 
   Future<void> _create() {
-    return _database.userReference().set(
-      {
-        UserFirestoreFieldKeys.anonymouseUserID:
-            auth.FirebaseAuth.instance.currentUser.uid,
-      },
-      SetOptions(merge: true),
-    );
+    return _database
+        .userReference()
+        .set(
+          {
+            UserFirestoreFieldKeys.anonymouseUserID:
+                auth.FirebaseAuth.instance.currentUser.uid,
+          },
+          SetOptions(merge: true),
+        )
+        .then((_) => errorLogger
+            .setUserIdentifier(auth.FirebaseAuth.instance.currentUser.uid))
+        .then((_) =>
+            analytics.setUserId(auth.FirebaseAuth.instance.currentUser.uid));
   }
 
   Future<void> registerRemoteNotificationToken(String token) {
