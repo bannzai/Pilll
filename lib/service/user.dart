@@ -57,6 +57,7 @@ class UserService extends UserServiceInterface {
           {
             UserFirestoreFieldKeys.anonymouseUserID:
                 auth.FirebaseAuth.instance.currentUser.uid,
+            UserFirestoreFieldKeys.migratedFlutter: true,
           },
           SetOptions(merge: true),
         )
