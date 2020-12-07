@@ -31,13 +31,6 @@ abstract class ReminderTime implements _$ReminderTime {
 
 @freezed
 abstract class Setting implements _$Setting {
-  static final requiredFirestoreKeys = [
-    "pillSheetTypeRawPath",
-    "fromMenstruation",
-    "durationMenstruation",
-    "reminderTimes",
-    "isOnReminder"
-  ];
   Setting._();
   @JsonSerializable(explicitToJson: true)
   factory Setting({
