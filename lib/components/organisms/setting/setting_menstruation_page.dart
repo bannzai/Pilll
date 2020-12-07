@@ -6,6 +6,7 @@ import 'package:Pilll/util/toolbar/picker_toolbar.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:flutter_hooks/flutter_hooks.dart';
 
 abstract class SettingMenstruationPageConstants {
   static final List<String> fromList =
@@ -52,6 +53,17 @@ class SettingMenstruationPage extends StatefulWidget {
 }
 
 class _SettingMenstruationPageState extends State<SettingMenstruationPage> {
+  TextEditingController _fromTextController;
+  TextEditingController _durationTextController;
+  @override
+  void initState() {
+    _fromTextController = TextEditingController(
+        text: this.widget.model.selectedFromMenstruation.toString());
+    _durationTextController = TextEditingController(
+        text: this.widget.model.selectedDurationMenstruation.toString());
+    super.initState();
+  }
+
   @override
   Scaffold build(BuildContext context) {
     return Scaffold(
@@ -90,10 +102,15 @@ class _SettingMenstruationPageState extends State<SettingMenstruationPage> {
                       children: <Widget>[
                         Text("偽薬期間に入って",
                             style:
-                                FontType.assisting.merge(TextColorStyle.gray)),
-                        GestureDetector(
-                          onTap: () => _showFromModalSheet(context),
-                          child: _from(),
+                                FontType.assisting.merge(TextColorStyle.main)),
+                        Container(
+                          width: 48,
+                          height: 48,
+                          child: CupertinoTextField(
+                            controller: _fromTextController,
+                            textAlignVertical: TextAlignVertical.center,
+                            onTap: () => _showFromModalSheet(context),
+                          ),
                         ),
                         Text("日後ぐらいから",
                             style:
