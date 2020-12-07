@@ -43,7 +43,7 @@ class InitialSetting2Page extends HookWidget {
               SizedBox(height: 24),
               Text(
                 "今日(${todayString()})\n飲む・飲んだピルの番号をタップ",
-                style: FontType.title.merge(TextColorStyle.standard),
+                style: FontType.sBigTitle.merge(TextColorStyle.main),
                 textAlign: TextAlign.center,
               ),
               Spacer(),
