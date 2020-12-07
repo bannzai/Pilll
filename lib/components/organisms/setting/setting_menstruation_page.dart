@@ -88,14 +88,14 @@ class _SettingMenstruationPageState extends State<SettingMenstruationPage> {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: <Widget>[
-                        Text("偽薬期間に入って",
+                        Text("偽薬期間に入って ",
                             style:
                                 FontType.assisting.merge(TextColorStyle.gray)),
                         GestureDetector(
                           onTap: () => _showFromModalSheet(context),
                           child: _from(),
                         ),
-                        Text("日後ぐらいから",
+                        Text(" 日後ぐらいから",
                             style:
                                 FontType.assisting.merge(TextColorStyle.main)),
                       ],
@@ -110,7 +110,7 @@ class _SettingMenstruationPageState extends State<SettingMenstruationPage> {
                           onTap: () => _showDurationModalSheet(context),
                           child: _duration(),
                         ),
-                        Text("日間生理が続く",
+                        Text(" 日間生理が続く",
                             style:
                                 FontType.assisting.merge(TextColorStyle.main)),
                       ],
@@ -144,44 +144,41 @@ class _SettingMenstruationPageState extends State<SettingMenstruationPage> {
   }
 
   Widget _from() {
-    bool isNotYetSetValue = this.widget.model.selectedFromMenstruation == null;
-    if (isNotYetSetValue) {
-      return Text(
-        _blank(),
-        style: FontType.inputNumber.merge(
-          TextStyle(
-              decoration: TextDecoration.underline, color: TextColor.lightGray),
+    return Container(
+      width: 48,
+      height: 48,
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.all(Radius.circular(4)),
+        border: Border.all(
+          width: 1,
+          color: PilllColors.border,
         ),
-      );
-    } else {
-      return Text(
-        this.widget.model.selectedFromMenstruation.toString(),
-        style: FontType.inputNumber.merge(
-          TextStyle(decoration: TextDecoration.underline),
-        ),
-      );
-    }
+      ),
+      child: Center(
+        child: Text(
+            this.widget.model.selectedFromMenstruation?.toString() ?? "",
+            style: FontType.inputNumber.merge(TextColorStyle.gray)),
+      ),
+    );
   }
 
   Widget _duration() {
-    bool isNotYetSetValue =
-        this.widget.model.selectedDurationMenstruation == null;
-    if (isNotYetSetValue) {
-      return Text(
-        _blank(),
-        style: FontType.inputNumber.merge(
-          TextStyle(
-              decoration: TextDecoration.underline, color: TextColor.lightGray),
+    return Container(
+      width: 48,
+      height: 48,
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.all(Radius.circular(4)),
+        border: Border.all(
+          width: 1,
+          color: PilllColors.border,
         ),
-      );
-    } else {
-      return Text(
-        this.widget.model.selectedDurationMenstruation.toString(),
-        style: FontType.inputNumber.merge(
-          TextStyle(decoration: TextDecoration.underline),
-        ),
-      );
-    }
+      ),
+      child: Center(
+        child: Text(
+            this.widget.model.selectedDurationMenstruation?.toString() ?? "",
+            style: FontType.inputNumber.merge(TextColorStyle.gray)),
+      ),
+    );
   }
 
   void _showFromModalSheet(BuildContext context) {
@@ -286,10 +283,6 @@ class _SettingMenstruationPageState extends State<SettingMenstruationPage> {
   bool canNext(BuildContext context) {
     return !(this.widget.model.selectedFromMenstruation == null ||
         this.widget.model.selectedDurationMenstruation == null);
-  }
-
-  String _blank() {
-    return "    ";
   }
 
   Widget _pickerItem(String str) {
