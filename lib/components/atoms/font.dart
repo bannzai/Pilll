@@ -98,9 +98,9 @@ class FontType {
     fontSize: FontSize.normal,
   );
   static final TextStyle inputNumber = TextStyle(
-    fontFamily: FontFamily.number,
-    fontWeight: FontWeight.w300,
-    fontSize: FontSize.large,
+    fontFamily: FontFamily.japanese,
+    fontWeight: FontWeight.w700,
+    fontSize: FontSize.sLarge,
   );
   static final TextStyle description = TextStyle(
     fontFamily: FontFamily.japanese,
