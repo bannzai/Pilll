@@ -39,7 +39,7 @@ class PillSheetTypeSelectPage extends StatelessWidget {
             children: <Widget>[
               SizedBox(height: 24),
               Text("飲んでいるピルのタイプはどれ？",
-                  style: FontType.title.merge(TextColorStyle.standard)),
+                  style: FontType.sBigTitle.merge(TextColorStyle.main)),
               SizedBox(height: 24),
               Container(
                 height: 461,
