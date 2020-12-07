@@ -11,6 +11,7 @@ abstract class UserServiceInterface {
   Future<User> fetch();
   Future<User> subscribe();
   Future<void> deleteSettings();
+  Future<void> setFlutterMigrationFlag();
   Future<void> registerRemoteNotificationToken(String token);
 }
 
@@ -55,6 +56,13 @@ class UserService extends UserServiceInterface {
     return _database
         .userReference()
         .update({UserFirestoreFieldKeys.settings: FieldValue.delete()});
+  }
+
+  Future<void> setFlutterMigrationFlag() {
+    return _database.userReference().set(
+      {UserFirestoreFieldKeys.migratedFlutter: true},
+      SetOptions(merge: true),
+    );
   }
 
   Future<void> _create() {
