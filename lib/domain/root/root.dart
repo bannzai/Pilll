@@ -30,7 +30,7 @@ class Root extends HookWidget {
               (_) => userService.fetch(),
             )
             .then((user) {
-          _transition(context, user);
+          _transition(context, user, userService);
         });
       });
       return Scaffold(
@@ -53,9 +53,14 @@ class Root extends HookWidget {
     });
   }
 
-  void _transition(BuildContext context, User user) async {
-    if (user.setting == null) {
-      Navigator.popAndPushNamed(context, Routes.initialSetting);
+  void _transition(
+      BuildContext context, User user, UserServiceInterface service) async {
+    if (!user.migratedFlutter) {
+      service
+          .deleteSettings()
+          .then((_) => service.setFlutterMigrationFlag())
+          .then(
+              (_) => Navigator.popAndPushNamed(context, Routes.initialSetting));
       return;
     }
     final storage = await SharedPreferences.getInstance();
