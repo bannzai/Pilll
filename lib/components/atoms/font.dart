@@ -4,7 +4,7 @@ class FontFamily {
   static String get standarad => japanese;
 
   static final String number = "Avenier Next";
-  static final String japanese = "Hiragino Kaku Gothic ProN";
+  static final String japanese = "Noto Sans CJK JP";
   static final String roboto = "Roboto";
 }
 
@@ -65,7 +65,7 @@ class FontType {
   static final TextStyle thinTitle = TextStyle(
     fontFamily: FontFamily.japanese,
     fontWeight: FontWeight.w300,
-    fontSize: FontSize.large,
+    fontSize: FontSize.sLarge,
   );
   static final TextStyle done = TextStyle(
     fontFamily: FontFamily.japanese,
