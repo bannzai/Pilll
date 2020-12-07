@@ -74,7 +74,7 @@ class _SettingMenstruationPageState extends State<SettingMenstruationPage> {
               SizedBox(height: 24),
               Text(
                 "生理について教えてください",
-                style: FontType.title.merge(TextColorStyle.standard),
+                style: FontType.sBigTitle.merge(TextColorStyle.main),
                 textAlign: TextAlign.center,
               ),
               Spacer(),
@@ -84,8 +84,7 @@ class _SettingMenstruationPageState extends State<SettingMenstruationPage> {
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: <Widget>[
                     Text("いつから生理がはじまる？",
-                        style:
-                            FontType.assistingBold.merge(TextColorStyle.black)),
+                        style: FontType.subTitle.merge(TextColorStyle.main)),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: <Widget>[
@@ -98,12 +97,12 @@ class _SettingMenstruationPageState extends State<SettingMenstruationPage> {
                         ),
                         Text("日後ぐらいから",
                             style:
-                                FontType.assisting.merge(TextColorStyle.gray)),
+                                FontType.assisting.merge(TextColorStyle.main)),
                       ],
                     ),
                     Text("何日間生理が続く？",
                         style:
-                            FontType.assistingBold.merge(TextColorStyle.black)),
+                            FontType.assistingBold.merge(TextColorStyle.main)),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: <Widget>[
@@ -113,7 +112,7 @@ class _SettingMenstruationPageState extends State<SettingMenstruationPage> {
                         ),
                         Text("日間生理が続く",
                             style:
-                                FontType.assisting.merge(TextColorStyle.gray)),
+                                FontType.assisting.merge(TextColorStyle.main)),
                       ],
                     )
                   ],
