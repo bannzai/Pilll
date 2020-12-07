@@ -49,9 +49,9 @@ mixin _$InitialSettingModel {
   PillSheetType get pillSheetType;
 
   @optionalTypeArgs
-  Result when<Result extends Object>({
+  TResult when<TResult extends Object>({
     @required
-        Result initial(
+        TResult initial(
             int fromMenstruation,
             int durationMenstruation,
             int reminderHour,
@@ -61,8 +61,8 @@ mixin _$InitialSettingModel {
             PillSheetType pillSheetType),
   });
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result initial(
+  TResult maybeWhen<TResult extends Object>({
+    TResult initial(
         int fromMenstruation,
         int durationMenstruation,
         int reminderHour,
@@ -70,16 +70,16 @@ mixin _$InitialSettingModel {
         bool isOnReminder,
         int todayPillNumber,
         PillSheetType pillSheetType),
-    @required Result orElse(),
+    @required TResult orElse(),
   });
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result initial(_InitialSettingModel value),
+  TResult map<TResult extends Object>({
+    @required TResult initial(_InitialSettingModel value),
   });
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result initial(_InitialSettingModel value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult initial(_InitialSettingModel value),
+    @required TResult orElse(),
   });
 
   $InitialSettingModelCopyWith<InitialSettingModel> get copyWith;
@@ -292,9 +292,9 @@ class _$_InitialSettingModel extends _InitialSettingModel {
 
   @override
   @optionalTypeArgs
-  Result when<Result extends Object>({
+  TResult when<TResult extends Object>({
     @required
-        Result initial(
+        TResult initial(
             int fromMenstruation,
             int durationMenstruation,
             int reminderHour,
@@ -310,8 +310,8 @@ class _$_InitialSettingModel extends _InitialSettingModel {
 
   @override
   @optionalTypeArgs
-  Result maybeWhen<Result extends Object>({
-    Result initial(
+  TResult maybeWhen<TResult extends Object>({
+    TResult initial(
         int fromMenstruation,
         int durationMenstruation,
         int reminderHour,
@@ -319,7 +319,7 @@ class _$_InitialSettingModel extends _InitialSettingModel {
         bool isOnReminder,
         int todayPillNumber,
         PillSheetType pillSheetType),
-    @required Result orElse(),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (initial != null) {
@@ -331,8 +331,8 @@ class _$_InitialSettingModel extends _InitialSettingModel {
 
   @override
   @optionalTypeArgs
-  Result map<Result extends Object>({
-    @required Result initial(_InitialSettingModel value),
+  TResult map<TResult extends Object>({
+    @required TResult initial(_InitialSettingModel value),
   }) {
     assert(initial != null);
     return initial(this);
@@ -340,9 +340,9 @@ class _$_InitialSettingModel extends _InitialSettingModel {
 
   @override
   @optionalTypeArgs
-  Result maybeMap<Result extends Object>({
-    Result initial(_InitialSettingModel value),
-    @required Result orElse(),
+  TResult maybeMap<TResult extends Object>({
+    TResult initial(_InitialSettingModel value),
+    @required TResult orElse(),
   }) {
     assert(orElse != null);
     if (initial != null) {
