@@ -20,11 +20,11 @@ class PillSheet extends StatelessWidget {
       height: 143,
       decoration: BoxDecoration(
         color: this.selected
-            ? PilllColors.selected.withOpacity(0.08)
+            ? PilllColors.secondary.withOpacity(0.08)
             : PilllColors.background,
         border: Border.all(
             width: 1,
-            color: this.selected ? PilllColors.selected : PilllColors.disable),
+            color: this.selected ? PilllColors.secondary : PilllColors.disable),
         borderRadius: BorderRadius.circular(10),
       ),
       child: Row(
@@ -41,7 +41,7 @@ class PillSheet extends StatelessWidget {
                 children: <Widget>[
                   Icon(Icons.check,
                       color: this.selected
-                          ? PilllColors.selected
+                          ? PilllColors.secondary
                           : PilllColors.disable,
                       size: 13),
                   SizedBox(width: 8),
