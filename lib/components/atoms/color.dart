@@ -22,6 +22,7 @@ class PilllColors {
 
   static final Color primary = HexColor.fromHex("E56A45");
   static final Color secondary = HexColor.fromHex("B9D7F1");
+  static final Color calendarHeader = HexColor.fromHex("B9D7F1");
   static final Color accent = Colors.white;
   static final Color pillSheet = HexColor.fromHex("E8EBED");
   static final Color mat = HexColor.fromHex("FAFAFA").withAlpha(80);
