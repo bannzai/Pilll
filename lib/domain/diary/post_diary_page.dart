@@ -177,10 +177,10 @@ class PostDiaryPage extends HookWidget {
                     label: Text(e),
                     labelStyle: FontType.assisting.merge(
                         diary.physicalConditions.contains(e)
-                            ? TextColorStyle.primary
+                            ? TextColorStyle.white
                             : TextColorStyle.darkGray),
                     disabledColor: PilllColors.disabledSheet,
-                    selectedColor: PilllColors.thinSecondary,
+                    selectedColor: PilllColors.secondary,
                     selected: diary.physicalConditions.contains(e),
                     onSelected: (selected) {
                       diary.physicalConditions.contains(e)
@@ -217,7 +217,7 @@ class PostDiaryPage extends HookWidget {
                       : PilllColors.disabledSheet),
               child: SvgPicture.asset("images/heart.svg",
                   color: state.entity.hasSex
-                      ? PilllColors.primary
+                      ? PilllColors.secondary
                       : TextColor.darkGray)),
         ),
         Spacer(),
