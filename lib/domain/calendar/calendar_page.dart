@@ -125,7 +125,7 @@ class _HalfCircle extends CustomPainter {
   _HalfCircle(this.contentSize);
   @override
   void paint(Canvas canvas, Size size) {
-    Paint paint = Paint()..color = PilllColors.secondary;
+    Paint paint = Paint()..color = PilllColors.calendarHeader;
     canvas.drawArc(
       Rect.fromCenter(
         center: Offset(size.width / 2, 0),
