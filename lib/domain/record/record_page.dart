@@ -95,7 +95,7 @@ class RecordPage extends HookWidget {
                   constraints: BoxConstraints.expand(height: 26),
                   child: Container(
                     height: 26,
-                    color: PilllColors.attention,
+                    color: PilllColors.secondary,
                     child: Center(
                       child: Text(_notificationString(currentPillSheet),
                           style:
