@@ -31,7 +31,7 @@ class PilllColors {
   static final Color weekday = HexColor.fromHex("7E7E7E");
   static final Color enable = HexColor.fromHex('E56A45');
   static final Color disable = HexColor.fromHex("F2F2F2");
-  static final Color divider = HexColor.fromHex("9DAFBD");
+  static final Color divider = HexColor.fromHex("000000").withAlpha(30);
 
   static final Color bottomBar = HexColor.fromHex("FAFAFA");
   static final Color border = HexColor.fromHex("DADADA");

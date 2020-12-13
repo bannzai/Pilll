@@ -6,7 +6,7 @@ class TextColor {
   static Color get standard => black;
   static final Color black = Colors.black;
   static final Color white = Colors.white;
-  static final Color darkGray = HexColor.fromHex("939393");
+  static final Color darkGray = HexColor.fromHex("000000").withAlpha(96);
   static final Color gray = HexColor.fromHex("7E7E7E");
   static final Color lightGray = HexColor.fromHex("CDCFD1");
   static final Color lightGray2 = HexColor.fromHex("666666");
