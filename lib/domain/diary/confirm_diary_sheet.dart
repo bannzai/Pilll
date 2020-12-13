@@ -98,7 +98,7 @@ class ConfirmDiarySheet extends HookWidget {
         return SvgPicture.asset("images/laugh.svg",
             color: PilllColors.secondary);
       case PhysicalConditionStatus.bad:
-        return SvgPicture.asset("images/laugh.svg",
+        return SvgPicture.asset("images/angry.svg",
             color: PilllColors.secondary);
       default:
         return Container();
