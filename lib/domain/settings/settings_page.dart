@@ -79,8 +79,8 @@ class SettingsPage extends HookWidget {
     return Scaffold(
       backgroundColor: PilllColors.background,
       appBar: AppBar(
-        title: Text('Pilll'),
-        backgroundColor: PilllColors.primary,
+        title: Text('Pilll', style: TextColorStyle.main),
+        backgroundColor: PilllColors.white,
       ),
       body: Container(
         child: ListView.separated(
