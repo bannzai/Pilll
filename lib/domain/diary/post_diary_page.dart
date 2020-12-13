@@ -122,7 +122,7 @@ class PostDiaryPage extends HookWidget {
                     icon: SvgPicture.asset("images/laugh.svg",
                         color: state.hasPhysicalConditionStatusFor(
                                 PhysicalConditionStatus.fine)
-                            ? PilllColors.primary
+                            ? PilllColors.secondary
                             : TextColor.darkGray),
                     onPressed: () {
                       store.switchingPhysicalCondition(
@@ -146,7 +146,7 @@ class PostDiaryPage extends HookWidget {
                     icon: SvgPicture.asset("images/angry.svg",
                         color: state.hasPhysicalConditionStatusFor(
                                 PhysicalConditionStatus.bad)
-                            ? PilllColors.primary
+                            ? PilllColors.secondary
                             : TextColor.darkGray),
                     onPressed: () {
                       store.switchingPhysicalCondition(
