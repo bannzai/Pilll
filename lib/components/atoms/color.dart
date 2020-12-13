@@ -36,7 +36,6 @@ class PilllColors {
   static final Color bottomBar = HexColor.fromHex("FAFAFA");
   static final Color border = HexColor.fromHex("DADADA");
   static final Color background = HexColor.fromHex("F4F7F9");
-  static final Color selected2 = HexColor.fromHex("FCF1F1");
 
   static final Color blank = Colors.white;
   static final Color potti = HexColor.fromHex("7C8E9C");
