@@ -126,7 +126,7 @@ class ConfirmDiarySheet extends HookWidget {
                     label: Text(e),
                     labelStyle:
                         FontType.assisting.merge(TextColorStyle.primary),
-                    selectedColor: PilllColors.primarySheet,
+                    selectedColor: PilllColors.thinSecondary,
                     selected: true,
                   ))
               .toList(),
@@ -144,7 +144,7 @@ class ConfirmDiarySheet extends HookWidget {
       decoration: BoxDecoration(
           shape: BoxShape.circle,
           color: diary.hasSex
-              ? PilllColors.primarySheet
+              ? PilllColors.thinSecondary
               : PilllColors.disabledSheet),
       child: SvgPicture.asset("images/heart.svg",
           color: diary.hasSex ? PilllColors.primary : TextColor.darkGray),

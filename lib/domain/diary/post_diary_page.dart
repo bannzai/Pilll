@@ -115,7 +115,7 @@ class PostDiaryPage extends HookWidget {
                       bottomLeft: Radius.circular(8)),
                   color: state.hasPhysicalConditionStatusFor(
                           PhysicalConditionStatus.fine)
-                      ? PilllColors.primarySheet
+                      ? PilllColors.thinSecondary
                       : Colors.transparent,
                 ),
                 child: IconButton(
@@ -139,7 +139,7 @@ class PostDiaryPage extends HookWidget {
                       bottomRight: Radius.circular(8)),
                   color: state.hasPhysicalConditionStatusFor(
                           PhysicalConditionStatus.bad)
-                      ? PilllColors.primarySheet
+                      ? PilllColors.thinSecondary
                       : Colors.transparent,
                 ),
                 child: IconButton(
@@ -180,7 +180,7 @@ class PostDiaryPage extends HookWidget {
                             ? TextColorStyle.primary
                             : TextColorStyle.darkGray),
                     disabledColor: PilllColors.disabledSheet,
-                    selectedColor: PilllColors.primarySheet,
+                    selectedColor: PilllColors.thinSecondary,
                     selected: diary.physicalConditions.contains(e),
                     onSelected: (selected) {
                       diary.physicalConditions.contains(e)
@@ -213,7 +213,7 @@ class PostDiaryPage extends HookWidget {
               decoration: BoxDecoration(
                   shape: BoxShape.circle,
                   color: state.entity.hasSex
-                      ? PilllColors.primarySheet
+                      ? PilllColors.thinSecondary
                       : PilllColors.disabledSheet),
               child: SvgPicture.asset("images/heart.svg",
                   color: state.entity.hasSex
