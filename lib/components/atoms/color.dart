@@ -21,7 +21,7 @@ class PilllColors {
   const PilllColors();
 
   static final Color primary = HexColor.fromHex("E56A45");
-  static final Color secondary = HexColor.fromHex("B9D7F1");
+  static final Color secondary = HexColor.fromHex("4E6287");
   static final Color calendarHeader = HexColor.fromHex("B9D7F1");
   static final Color accent = Colors.white;
   static final Color pillSheet = HexColor.fromHex("E8EBED");
@@ -36,7 +36,6 @@ class PilllColors {
   static final Color bottomBar = HexColor.fromHex("FAFAFA");
   static final Color border = HexColor.fromHex("DADADA");
   static final Color background = HexColor.fromHex("F4F7F9");
-  static final Color selected = HexColor.fromHex("4E6287");
   static final Color selected2 = HexColor.fromHex("FCF1F1");
 
   static final Color blank = Colors.white;
