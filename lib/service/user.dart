@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:Pilll/analytics.dart';
 import 'package:Pilll/database/database.dart';
 import 'package:Pilll/entity/user.dart';
@@ -13,6 +15,7 @@ abstract class UserServiceInterface {
   Future<void> deleteSettings();
   Future<void> setFlutterMigrationFlag();
   Future<void> registerRemoteNotificationToken(String token);
+  Future<void> setLatestOS();
 }
 
 final userServiceProvider =
@@ -87,5 +90,18 @@ class UserService extends UserServiceInterface {
       {UserPrivateFirestoreFieldKeys.fcmToken: token},
       SetOptions(merge: true),
     );
+  }
+
+  Future<void> setLatestOS() {
+    String os = "unknown";
+    if (Platform.isAndroid) {
+      os = 'android';
+    }
+    if (Platform.isIOS) {
+      os = 'ios';
+    }
+    return _database
+        .userReference()
+        .set({UserFirestoreFieldKeys.latestOS: os}, SetOptions(merge: true));
   }
 }
