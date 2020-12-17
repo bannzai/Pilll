@@ -4,6 +4,7 @@ import 'dart:io';
 import 'package:Pilll/analytics.dart';
 import 'package:Pilll/components/atoms/color.dart';
 import 'package:Pilll/service/push_notification.dart';
+import 'package:Pilll/util/environment.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_analytics/observer.dart';
 import 'package:firebase_core/firebase_core.dart';
@@ -19,7 +20,9 @@ Future<void> entrypoint() async {
   initializeDateFormatting('ja_JP');
   await Firebase.initializeApp();
   // MEMO: FirebaseCrashlytics#recordFlutterError called dumpErrorToConsole in function.
-  connectToEmulator();
+  if (Environment.isLocal) {
+    connectToEmulator();
+  }
   FlutterError.onError = FirebaseCrashlytics.instance.recordFlutterError;
   requestNotificationPermissions();
   runZonedGuarded(() {
@@ -41,6 +44,7 @@ class App extends StatelessWidget {
         FirebaseAnalyticsObserver(analytics: analytics),
       ],
       theme: ThemeData(
+        appBarTheme: AppBarTheme(brightness: Brightness.light),
         primaryColor: PilllColors.primary,
         visualDensity: VisualDensity.adaptivePlatformDensity,
         accentColor: PilllColors.accent,
