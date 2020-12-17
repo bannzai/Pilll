@@ -30,6 +30,7 @@ class Root extends HookWidget {
               (_) => userService.fetch(),
             )
             .then((user) {
+          userService.setLatestOS();
           _transition(context, user, userService);
         });
       });
