@@ -12,7 +12,9 @@ abstract class LaunchInfo implements _$LaunchInfo {
   LaunchInfo._();
   factory LaunchInfo({
     @required String latestOS,
+    @required String appName,
     @required String appVersion,
+    @required String buildNumber,
   }) = _LaunchInfo;
 
   factory LaunchInfo.fromJson(Map<String, dynamic> json) =>
