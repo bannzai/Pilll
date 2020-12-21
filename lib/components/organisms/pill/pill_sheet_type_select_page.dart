@@ -9,6 +9,7 @@ import 'package:flutter/widgets.dart';
 
 class PillSheetTypeSelectPage extends StatelessWidget {
   final String title;
+  final bool backButtonIsHidden;
   final void Function(PillSheetType type) selected;
   final VoidCallback done;
   final PillSheetType selectedPillSheetType;
@@ -16,6 +17,7 @@ class PillSheetTypeSelectPage extends StatelessWidget {
   const PillSheetTypeSelectPage(
       {Key key,
       @required this.title,
+      @required this.backButtonIsHidden,
       @required this.selected,
       @required this.done,
       @required this.selectedPillSheetType})
@@ -26,10 +28,12 @@ class PillSheetTypeSelectPage extends StatelessWidget {
     return Scaffold(
       backgroundColor: PilllColors.background,
       appBar: AppBar(
-        leading: IconButton(
-          icon: Icon(Icons.arrow_back, color: Colors.black),
-          onPressed: () => Navigator.of(context).pop(),
-        ),
+        leading: backButtonIsHidden
+            ? null
+            : IconButton(
+                icon: Icon(Icons.arrow_back, color: Colors.black),
+                onPressed: () => Navigator.of(context).pop(),
+              ),
         title: Text(
           title,
           style: TextStyle(color: TextColor.black),
@@ -80,6 +84,7 @@ class PillSheetTypeSelectPage extends StatelessWidget {
 extension PillSheetTypeSelectPageRoute on PillSheetTypeSelectPage {
   static Route<dynamic> route({
     @required String title,
+    @required bool backButtonIsHidden,
     @required void Function(PillSheetType type) selected,
     @required VoidCallback done,
     @required PillSheetType selectedPillSheetType,
@@ -88,6 +93,7 @@ extension PillSheetTypeSelectPageRoute on PillSheetTypeSelectPage {
       settings: RouteSettings(name: "PillSheetTypeSelectPage"),
       builder: (_) => PillSheetTypeSelectPage(
         title: title,
+        backButtonIsHidden: backButtonIsHidden,
         selected: selected,
         done: done,
         selectedPillSheetType: selectedPillSheetType,
