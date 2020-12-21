@@ -8,13 +8,15 @@ import 'package:flutter/widgets.dart';
 
 class PillSheetTypeSelectPage extends StatelessWidget {
   final String title;
-  final void Function(PillSheetType type) callback;
+  final void Function(PillSheetType type) selected;
+  final VoidCallback done;
   final PillSheetType selectedPillSheetType;
 
   const PillSheetTypeSelectPage(
       {Key key,
       @required this.title,
-      @required this.callback,
+      @required this.selected,
+      @required this.done,
       @required this.selectedPillSheetType})
       : super(key: key);
 
@@ -59,7 +61,7 @@ class PillSheetTypeSelectPage extends StatelessWidget {
   Widget _pillSheet(PillSheetType type) {
     return GestureDetector(
       onTap: () {
-        callback(type);
+        selected(type);
       },
       child: PillSheet(
         pillSheetType: type,
@@ -72,14 +74,16 @@ class PillSheetTypeSelectPage extends StatelessWidget {
 extension PillSheetTypeSelectPageRoute on PillSheetTypeSelectPage {
   static Route<dynamic> route({
     @required String title,
-    @required void Function(PillSheetType type) callback,
+    @required void Function(PillSheetType type) selected,
+    @required VoidCallback done,
     @required PillSheetType selectedPillSheetType,
   }) {
     return MaterialPageRoute(
       settings: RouteSettings(name: "PillSheetTypeSelectPage"),
       builder: (_) => PillSheetTypeSelectPage(
         title: title,
-        callback: callback,
+        selected: selected,
+        done: done,
         selectedPillSheetType: selectedPillSheetType,
       ),
     );

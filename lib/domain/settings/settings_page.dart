@@ -169,12 +169,14 @@ class SettingsPage extends HookWidget {
               Navigator.of(context).push(
                 PillSheetTypeSelectPageRoute.route(
                   title: "種類",
-                  callback: (type) {
-                    Navigator.pop(context);
+                  selected: (type) {
                     if (pillSheetState.entity != null)
                       transactionModifier.modifyPillSheetType(type);
                     else
                       settingStore.modifyType(type);
+                  },
+                  done: () {
+                    Navigator.pop(context);
                   },
                   selectedPillSheetType: settingState.entity.pillSheetType,
                 ),
