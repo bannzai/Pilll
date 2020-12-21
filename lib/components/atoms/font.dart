@@ -10,7 +10,7 @@ class FontFamily {
 
 class FontSize {
   static final double xHuge = 40;
-  static final double huge = 32;
+  static final double huge = 34;
   static final double xBig = 24;
   static final double big = 22;
   static final double sBig = 20;
@@ -28,8 +28,8 @@ class FontType {
     fontSize: FontSize.xHuge,
   );
   static final TextStyle largeNumber = TextStyle(
-    fontFamily: FontFamily.number,
-    fontWeight: FontWeight.w300,
+    fontFamily: FontFamily.japanese,
+    fontWeight: FontWeight.w500,
     fontSize: FontSize.huge,
   );
   static final TextStyle title = TextStyle(
