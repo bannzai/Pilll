@@ -238,7 +238,6 @@ class SettingsPage extends HookWidget {
                 Navigator.of(context).push(SettingMenstruationPageRoute.route(
                   done: null,
                   doneText: null,
-                  skip: null,
                   title: "生理について",
                   model: SettingMenstruationPageModel(
                     selectedFromMenstruation:

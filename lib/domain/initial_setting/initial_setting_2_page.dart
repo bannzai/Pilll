@@ -73,14 +73,6 @@ class InitialSetting2Page extends HookWidget {
                                 .push(InitialSetting3PageRoute.route());
                           },
                   ),
-                  TertiaryButton(
-                    text: "スキップ",
-                    onPressed: () {
-                      store
-                          .register(state.entity)
-                          .then((_) => AppRouter.endInitialSetting(context));
-                    },
-                  ),
                 ],
               ),
               Spacer(),

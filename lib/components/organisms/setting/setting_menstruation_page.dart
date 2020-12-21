@@ -29,7 +29,6 @@ class SettingMenstruationPage extends StatefulWidget {
   // NOTE: If done and skip is null, button is hidden
   final String doneText;
   final VoidCallback done;
-  final VoidCallback skip;
   final SettingMenstruationPageModel model;
   final void Function(int from) fromMenstructionDidDecide;
   final void Function(int duration) durationMenstructionDidDecide;
@@ -39,7 +38,6 @@ class SettingMenstruationPage extends StatefulWidget {
     @required this.title,
     @required this.doneText,
     @required this.done,
-    @required this.skip,
     @required this.model,
     @required this.fromMenstructionDidDecide,
     @required this.durationMenstructionDidDecide,
@@ -127,11 +125,6 @@ class _SettingMenstruationPageState extends State<SettingMenstruationPage> {
                     PrimaryButton(
                       text: this.widget.doneText,
                       onPressed: !canNext(context) ? null : this.widget.done,
-                    ),
-                  if (this.widget.skip != null)
-                    TertiaryButton(
-                      text: "スキップ",
-                      onPressed: this.widget.skip,
                     ),
                 ],
               ),
@@ -295,7 +288,6 @@ extension SettingMenstruationPageRoute on SettingMenstruationPage {
     @required String title,
     @required String doneText,
     @required VoidCallback done,
-    @required VoidCallback skip,
     @required SettingMenstruationPageModel model,
     @required void Function(int from) fromMenstructionDidDecide,
     @required void Function(int duration) durationMenstructionDidDecide,
@@ -306,7 +298,6 @@ extension SettingMenstruationPageRoute on SettingMenstruationPage {
         title: title,
         doneText: doneText,
         done: done,
-        skip: skip,
         model: model,
         fromMenstructionDidDecide: fromMenstructionDidDecide,
         durationMenstructionDidDecide: durationMenstructionDidDecide,

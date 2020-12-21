@@ -101,14 +101,6 @@ class InitialSetting4Page extends HookWidget {
                           .then((_) => AppRouter.endInitialSetting(context));
                     },
                   ),
-                  TertiaryButton(
-                    text: "スキップ",
-                    onPressed: () {
-                      store
-                          .register(state.entity.copyWith(isOnReminder: false))
-                          .then((_) => AppRouter.endInitialSetting(context));
-                    },
-                  ),
                 ],
               ),
               Spacer(),
