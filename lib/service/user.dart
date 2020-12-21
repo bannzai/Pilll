@@ -1,9 +1,13 @@
+import 'dart:io';
+
 import 'package:Pilll/analytics.dart';
 import 'package:Pilll/database/database.dart';
+import 'package:Pilll/entity/launch_info.dart';
 import 'package:Pilll/entity/user.dart';
 import 'package:Pilll/error_log.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart' as auth;
+import 'package:package_info/package_info.dart';
 import 'package:riverpod/all.dart';
 
 abstract class UserServiceInterface {
@@ -13,6 +17,7 @@ abstract class UserServiceInterface {
   Future<void> deleteSettings();
   Future<void> setFlutterMigrationFlag();
   Future<void> registerRemoteNotificationToken(String token);
+  Future<void> saveLaunchInfo();
 }
 
 final userServiceProvider =
@@ -87,5 +92,19 @@ class UserService extends UserServiceInterface {
       {UserPrivateFirestoreFieldKeys.fcmToken: token},
       SetOptions(merge: true),
     );
+  }
+
+  Future<void> saveLaunchInfo() {
+    final os = Platform.operatingSystem;
+    return PackageInfo.fromPlatform().then((packageInfo) {
+      final launchInfo = LaunchInfo(
+          latestOS: os,
+          appName: packageInfo.appName,
+          buildNumber: packageInfo.buildNumber,
+          appVersion: packageInfo.version);
+      return _database.userReference().set(
+          {UserFirestoreFieldKeys.launchInfo: launchInfo.toJson()},
+          SetOptions(merge: true));
+    });
   }
 }
