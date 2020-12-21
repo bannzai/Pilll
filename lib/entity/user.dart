@@ -37,7 +37,7 @@ extension UserFirestoreFieldKeys on String {
   static final anonymouseUserID = "anonymouseUserID";
   static final settings = "settings";
   static final migratedFlutter = "migratedFlutter";
-  static final latestOS = "latestOS";
+  static final launchInfo = "launchInfo";
 }
 
 @freezed
