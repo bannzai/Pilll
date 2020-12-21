@@ -169,6 +169,7 @@ class SettingsPage extends HookWidget {
               Navigator.of(context).push(
                 PillSheetTypeSelectPageRoute.route(
                   title: "種類",
+                  backButtonIsHidden: false,
                   selected: (type) {
                     if (pillSheetState.entity != null)
                       transactionModifier.modifyPillSheetType(type);
