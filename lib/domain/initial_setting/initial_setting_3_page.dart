@@ -1,4 +1,3 @@
-import 'package:Pilll/router/router.dart';
 import 'package:Pilll/components/organisms/setting/setting_menstruation_page.dart';
 import 'package:Pilll/domain/initial_setting/initial_setting_4_page.dart';
 import 'package:Pilll/store/initial_setting.dart';
@@ -17,11 +16,6 @@ class InitialSetting3Page extends HookWidget {
       doneText: "次へ",
       done: () {
         Navigator.of(context).push(InitialSetting4PageRoute.route());
-      },
-      skip: () {
-        store
-            .register(state.entity)
-            .then((_) => AppRouter.endInitialSetting(context));
       },
       model: SettingMenstruationPageModel(
         selectedFromMenstruation: state.entity.fromMenstruation,
