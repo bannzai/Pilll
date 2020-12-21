@@ -49,7 +49,7 @@ class App extends StatelessWidget {
         visualDensity: VisualDensity.adaptivePlatformDensity,
         accentColor: PilllColors.accent,
         buttonTheme: ButtonThemeData(
-          buttonColor: PilllColors.enable,
+          buttonColor: PilllColors.secondary,
           disabledColor: PilllColors.disable,
           textTheme: ButtonTextTheme.primary,
           colorScheme: ColorScheme.light(
