@@ -15,7 +15,7 @@ abstract class UserServiceInterface {
   Future<void> deleteSettings();
   Future<void> setFlutterMigrationFlag();
   Future<void> registerRemoteNotificationToken(String token);
-  Future<void> setLatestOS();
+  Future<void> saveLaunchInfo();
 }
 
 final userServiceProvider =
@@ -92,7 +92,7 @@ class UserService extends UserServiceInterface {
     );
   }
 
-  Future<void> setLatestOS() {
+  Future<void> saveLaunchInfo() {
     String os = "unknown";
     if (Platform.isAndroid) {
       os = 'android';
@@ -102,6 +102,6 @@ class UserService extends UserServiceInterface {
     }
     return _database
         .userReference()
-        .set({UserFirestoreFieldKeys.latestOS: os}, SetOptions(merge: true));
+        .set({UserFirestoreFieldKeys.launchInfo: LaunchInfo}, SetOptions(merge: true));
   }
 }
