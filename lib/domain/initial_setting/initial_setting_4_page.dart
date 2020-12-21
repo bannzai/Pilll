@@ -69,7 +69,7 @@ class InitialSetting4Page extends HookWidget {
               SizedBox(height: 24),
               Text(
                 "ピルの飲み忘れ通知",
-                style: FontType.title.merge(TextColorStyle.standard),
+                style: FontType.title.merge(TextColorStyle.main),
                 textAlign: TextAlign.center,
               ),
               Spacer(),
