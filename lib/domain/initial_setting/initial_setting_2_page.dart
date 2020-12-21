@@ -16,7 +16,7 @@ class InitialSetting2Page extends HookWidget {
   const InitialSetting2Page({Key key}) : super(key: key);
 
   String todayString() {
-    return DateFormat.yMd('ja').format(today());
+    return DateFormat.yMEd('ja').format(today());
   }
 
   @override
