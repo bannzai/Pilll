@@ -1,4 +1,3 @@
-import 'package:Pilll/router/router.dart';
 import 'package:Pilll/store/initial_setting.dart';
 import 'package:Pilll/components/atoms/buttons.dart';
 import 'package:Pilll/components/atoms/color.dart';
@@ -99,15 +98,15 @@ class ExplainPillNumber extends HookWidget {
         children: () {
           if (state.entity.todayPillNumber == null) {
             return <Widget>[
-              Text("", style: FontType.largeNumber.merge(TextColorStyle.black)),
+              Text("", style: FontType.largeNumber.merge(TextColorStyle.main)),
             ];
           }
           return <Widget>[
             Text("$todayに飲むピルは",
-                style: FontType.description.merge(TextColorStyle.black)),
+                style: FontType.description.merge(TextColorStyle.main)),
             Text("${state.entity.todayPillNumber}",
-                style: FontType.largeNumber.merge(TextColorStyle.black)),
-            Text("番", style: FontType.description.merge(TextColorStyle.black)),
+                style: FontType.largeNumber.merge(TextColorStyle.main)),
+            Text("番", style: FontType.description.merge(TextColorStyle.main)),
           ];
         }(),
       ),
