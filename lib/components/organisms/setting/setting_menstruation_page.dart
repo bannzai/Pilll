@@ -88,7 +88,7 @@ class _SettingMenstruationPageState extends State<SettingMenstruationPage> {
                       children: <Widget>[
                         Text("偽薬期間に入って ",
                             style:
-                                FontType.assisting.merge(TextColorStyle.gray)),
+                                FontType.assisting.merge(TextColorStyle.main)),
                         GestureDetector(
                           onTap: () => _showFromModalSheet(context),
                           child: _from(),
