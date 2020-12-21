@@ -15,9 +15,11 @@ class InitialSetting1Page extends HookWidget {
       selected: (type) {
         store.modify((model) => model.copyWith(pillSheetType: type));
       },
-      done: () {
-        Navigator.of(context).push(InitialSetting2PageRoute.route());
-      },
+      done: state.entity.pillSheetType == null
+          ? null
+          : () {
+              Navigator.of(context).push(InitialSetting2PageRoute.route());
+            },
       selectedPillSheetType: state.entity.pillSheetType,
     );
   }

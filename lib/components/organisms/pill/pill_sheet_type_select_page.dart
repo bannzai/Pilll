@@ -1,3 +1,4 @@
+import 'package:Pilll/components/atoms/buttons.dart';
 import 'package:Pilll/domain/initial_setting/pill_sheet.dart';
 import 'package:Pilll/entity/pill_sheet_type.dart';
 import 'package:Pilll/components/atoms/color.dart';
@@ -50,7 +51,12 @@ class PillSheetTypeSelectPage extends StatelessWidget {
                   children:
                       PillSheetType.values.map((e) => _pillSheet(e)).toList(),
                 ),
-              )
+              ),
+              SizedBox(height: 24),
+              PrimaryButton(
+                text: "次へ",
+                onPressed: done,
+              ),
             ],
           ),
         ),
