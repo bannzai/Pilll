@@ -60,7 +60,7 @@ abstract class InitialSettingModel implements _$InitialSettingModel {
       return PillMarkType.selected;
     }
     if (pillSheetType.beginingWithoutTakenPeriod <= number) {
-      return PillMarkType.notTaken;
+      return PillMarkType.fake;
     }
     return PillMarkType.normal;
   }
