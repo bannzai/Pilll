@@ -75,7 +75,7 @@ class PillSheetStateStore extends StateNotifier<PillSheetState> {
       return PillMarkType.done;
     }
     if (number > state.entity.typeInfo.dosingPeriod) {
-      return PillMarkType.notTaken;
+      return PillMarkType.fake;
     }
     if (number < state.entity.todayPillNumber) {
       return PillMarkType.normal;

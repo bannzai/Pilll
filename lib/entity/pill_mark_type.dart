@@ -4,7 +4,8 @@ import 'package:flutter_svg/svg.dart';
 
 enum PillMarkType {
   normal,
-  notTaken,
+  fake,
+  rest,
   selected,
   done,
 }
@@ -14,7 +15,9 @@ extension PillMarkTypeFunctions on PillMarkType {
     switch (this) {
       case PillMarkType.normal:
         return null;
-      case PillMarkType.notTaken:
+      case PillMarkType.rest:
+        return null;
+      case PillMarkType.fake:
         return null;
       case PillMarkType.selected:
         return null;
@@ -35,7 +38,9 @@ extension PillMarkTypeFunctions on PillMarkType {
     switch (this) {
       case PillMarkType.normal:
         return PilllColors.potti;
-      case PillMarkType.notTaken:
+      case PillMarkType.rest:
+        return PilllColors.blank;
+      case PillMarkType.fake:
         return PilllColors.blank;
       case PillMarkType.selected:
         return PilllColors.enable;
