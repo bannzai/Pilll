@@ -13,6 +13,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:hooks_riverpod/all.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class InitialSetting4Page extends HookWidget {
   void _showDurationModalSheet(
@@ -135,7 +136,9 @@ class InitialSetting4Page extends HookWidget {
                           style: FontType.mini.merge(TextColorStyle.link),
                           recognizer: TapGestureRecognizer()
                             ..onTap = () {
-                              print("tapped privacy policy");
+                              launch(
+                                  "https://bannzai.github.io/Pilll/PrivacyPolicy",
+                                  forceSafariVC: true);
                             },
                         ),
                         TextSpan(
@@ -147,7 +150,8 @@ class InitialSetting4Page extends HookWidget {
                           style: FontType.mini.merge(TextColorStyle.link),
                           recognizer: TapGestureRecognizer()
                             ..onTap = () {
-                              print("tapped terms");
+                              launch("https://bannzai.github.io/Pilll/Terms",
+                                  forceSafariVC: true);
                             },
                         ),
                         TextSpan(
