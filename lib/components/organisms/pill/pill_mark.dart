@@ -54,11 +54,11 @@ class _PillMarkState extends State<PillMark> with TickerProviderStateMixin {
           children: [
             PillMarkTypeFunctions.create(widget.isDone, widget.type),
             if (widget.hasRippleAnimation)
-              // NOTE: pill mark size is 20px. dot border size is 1px. Ripple view final size is 80px.
-              // Positined ripple animation equal to (80px - 20px) / 2(to center) - 1px * 2 = 28;
+              // NOTE: pill mark size is 20px. Ripple view final size is 80px.
+              // Positined ripple animation equal to (80px - 20px) / 2(to center) = 28;
               Positioned(
-                left: -28,
-                top: -28,
+                left: -30,
+                top: -30,
                 child: Container(
                   child: CustomPaint(
                     size: Size(80, 80),
