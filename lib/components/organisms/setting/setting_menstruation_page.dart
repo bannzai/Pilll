@@ -117,18 +117,13 @@ class _SettingMenstruationPageState extends State<SettingMenstruationPage> {
                 ),
               ),
               Spacer(),
-              Wrap(
-                direction: Axis.vertical,
-                spacing: 8,
-                children: <Widget>[
-                  if (this.widget.done != null)
-                    PrimaryButton(
-                      text: this.widget.doneText,
-                      onPressed: !canNext(context) ? null : this.widget.done,
-                    ),
-                ],
-              ),
-              Spacer(),
+              if (this.widget.done != null) ...[
+                PrimaryButton(
+                  text: this.widget.doneText,
+                  onPressed: !canNext(context) ? null : this.widget.done,
+                ),
+                SizedBox(height: 35),
+              ]
             ],
           ),
         ),

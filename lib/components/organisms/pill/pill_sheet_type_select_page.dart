@@ -56,11 +56,12 @@ class PillSheetTypeSelectPage extends StatelessWidget {
                       PillSheetType.values.map((e) => _pillSheet(e)).toList(),
                 ),
               ),
-              SizedBox(height: 24),
+              Spacer(),
               PrimaryButton(
                 text: "次へ",
                 onPressed: done,
               ),
+              SizedBox(height: 35),
             ],
           ),
         ),
