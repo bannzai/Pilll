@@ -58,7 +58,9 @@ abstract class InitialSettingModel implements _$InitialSettingModel {
       return PillMarkType.selected;
     }
     if (pillSheetType.beginingWithoutTakenPeriod <= number) {
-      return PillMarkType.fake;
+      return pillSheetType == PillSheetType.pillsheet_21
+          ? PillMarkType.rest
+          : PillMarkType.fake;
     }
     return PillMarkType.normal;
   }
