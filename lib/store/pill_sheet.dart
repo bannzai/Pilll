@@ -72,13 +72,13 @@ class PillSheetStateStore extends StateNotifier<PillSheetState> {
   }
 
   PillMarkType markFor(int number) {
-    if (number <= state.entity.lastTakenPillNumber) {
-      return PillMarkType.done;
-    }
     if (number > state.entity.typeInfo.dosingPeriod) {
       return state.entity.pillSheetType == PillSheetType.pillsheet_21
           ? PillMarkType.rest
           : PillMarkType.fake;
+    }
+    if (number <= state.entity.lastTakenPillNumber) {
+      return PillMarkType.done;
     }
     if (number < state.entity.todayPillNumber) {
       return PillMarkType.normal;
