@@ -10,11 +10,11 @@ part 'initial_setting.freezed.dart';
 @freezed
 abstract class InitialSettingModel implements _$InitialSettingModel {
   InitialSettingModel._();
+  @JsonSerializable(explicitToJson: true)
   factory InitialSettingModel.initial({
     @Default(2) int fromMenstruation,
     @Default(4) int durationMenstruation,
-    @Default(22) int reminderHour,
-    @Default(0) int reminderMinute,
+    @Default([]) List<ReminderTime> reminderTimes,
     @Default(false) bool isOnReminder,
     int todayPillNumber,
     PillSheetType pillSheetType,
