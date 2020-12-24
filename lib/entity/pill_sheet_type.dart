@@ -140,4 +140,17 @@ extension PillSheetTypeFunctions on PillSheetType {
       name: name,
       totalCount: totalCount,
       dosingPeriod: dosingPeriod);
+
+  String get notTakenWord {
+    switch (this) {
+      case PillSheetType.pillsheet_21:
+        return "休薬";
+      case PillSheetType.pillsheet_28_4:
+        return "偽薬";
+      case PillSheetType.pillsheet_28_7:
+        return "偽薬";
+      default:
+        throw Exception("unexpected null receiverr when get notTakenWord");
+    }
+  }
 }
