@@ -50,6 +50,9 @@ class InitialSetting2Page extends HookWidget {
                 pillMarkTypeBuilder: (number) {
                   return state.entity.pillMarkTypeFor(number);
                 },
+                doneStateBuilder: (number) {
+                  return false;
+                },
                 enabledMarkAnimation: null,
                 markSelected: (number) {
                   store.modify(

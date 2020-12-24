@@ -7,6 +7,7 @@ import 'package:flutter/widgets.dart';
 
 class PillMark extends StatefulWidget {
   final PillMarkType type;
+  final bool isDone;
   final VoidCallback tapped;
   final bool hasRippleAnimation;
   const PillMark({
@@ -14,6 +15,7 @@ class PillMark extends StatefulWidget {
     this.hasRippleAnimation = false,
     @required this.type,
     @required this.tapped,
+    @required this.isDone,
   }) : super(key: key);
 
   @override
@@ -50,17 +52,7 @@ class _PillMarkState extends State<PillMark> with TickerProviderStateMixin {
         child: Stack(
           overflow: Overflow.visible,
           children: [
-            Container(
-              width: 20,
-              height: 20,
-              child: Center(
-                child: widget.type.image(),
-              ),
-              decoration: BoxDecoration(
-                color: widget.type.color(),
-                shape: BoxShape.circle,
-              ),
-            ),
+            PillMarkTypeFunctions.create(widget.isDone, widget.type),
             if (widget.hasRippleAnimation)
               Positioned(
                 left: -30,
