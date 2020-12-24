@@ -23,6 +23,9 @@ extension PillMarkTypeFunctions on PillMarkType {
 
   static Widget create(bool isDone, PillMarkType type) {
     return DottedBorder(
+      borderType: BorderType.RRect,
+      radius: Radius.circular(10),
+      padding: EdgeInsets.zero,
       color: type == PillMarkType.rest ? PilllColors.gray : Colors.transparent,
       strokeWidth: type == PillMarkType.rest ? 1 : 0,
       child: Container(
