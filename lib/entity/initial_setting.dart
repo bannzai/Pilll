@@ -24,9 +24,7 @@ abstract class InitialSettingModel implements _$InitialSettingModel {
         fromMenstruation: fromMenstruation,
         durationMenstruation: durationMenstruation,
         pillSheetTypeRawPath: pillSheetType.rawPath,
-        reminderTimes: [
-          ReminderTime(hour: reminderHour, minute: reminderMinute)
-        ],
+        reminderTimes: reminderTimes,
         isOnReminder: isOnReminder,
       );
   PillSheetModel buildPillSheet() => todayPillNumber != null
@@ -65,9 +63,10 @@ abstract class InitialSettingModel implements _$InitialSettingModel {
     return PillMarkType.normal;
   }
 
-  DateTime reminderDateTime() {
+  DateTime reminderDateTime(int index) {
     var t = DateTime.now();
-    return DateTime(t.year, t.month, t.day, reminderHour, reminderMinute,
-        t.second, t.millisecond, t.microsecond);
+    final reminderTime = reminderTimes[index];
+    return DateTime(t.year, t.month, t.day, reminderTime.hour,
+        reminderTime.minute, t.second, t.millisecond, t.microsecond);
   }
 }
