@@ -21,6 +21,7 @@ class InitialSetting1Page extends HookWidget {
           : () {
               Navigator.of(context).push(InitialSetting2PageRoute.route());
             },
+      doneButtonText: "次へ",
       selectedPillSheetType: state.entity.pillSheetType,
     );
   }

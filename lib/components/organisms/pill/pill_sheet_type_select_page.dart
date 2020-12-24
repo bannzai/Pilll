@@ -12,16 +12,18 @@ class PillSheetTypeSelectPage extends StatelessWidget {
   final bool backButtonIsHidden;
   final void Function(PillSheetType type) selected;
   final VoidCallback done;
+  final String doneButtonText;
   final PillSheetType selectedPillSheetType;
 
-  const PillSheetTypeSelectPage(
-      {Key key,
-      @required this.title,
-      @required this.backButtonIsHidden,
-      @required this.selected,
-      @required this.done,
-      @required this.selectedPillSheetType})
-      : super(key: key);
+  const PillSheetTypeSelectPage({
+    Key key,
+    @required this.title,
+    @required this.backButtonIsHidden,
+    @required this.selected,
+    @required this.done,
+    @required this.doneButtonText,
+    @required this.selectedPillSheetType,
+  }) : super(key: key);
 
   @override
   Scaffold build(BuildContext context) {
@@ -58,7 +60,7 @@ class PillSheetTypeSelectPage extends StatelessWidget {
               ),
               Spacer(),
               PrimaryButton(
-                text: "次へ",
+                text: doneButtonText,
                 onPressed: done,
               ),
               SizedBox(height: 35),
@@ -88,6 +90,7 @@ extension PillSheetTypeSelectPageRoute on PillSheetTypeSelectPage {
     @required bool backButtonIsHidden,
     @required void Function(PillSheetType type) selected,
     @required VoidCallback done,
+    @required String doneButtonText,
     @required PillSheetType selectedPillSheetType,
   }) {
     return MaterialPageRoute(
@@ -97,6 +100,7 @@ extension PillSheetTypeSelectPageRoute on PillSheetTypeSelectPage {
         backButtonIsHidden: backButtonIsHidden,
         selected: selected,
         done: done,
+        doneButtonText: doneButtonText,
         selectedPillSheetType: selectedPillSheetType,
       ),
     );
