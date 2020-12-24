@@ -1,10 +1,12 @@
 import 'package:Pilll/router/router.dart';
 import 'package:Pilll/entity/initial_setting.dart';
+import 'package:Pilll/state/initial_setting.dart';
 import 'package:Pilll/store/initial_setting.dart';
 import 'package:Pilll/components/atoms/buttons.dart';
 import 'package:Pilll/components/atoms/color.dart';
 import 'package:Pilll/components/atoms/font.dart';
 import 'package:Pilll/components/atoms/text_color.dart';
+import 'package:Pilll/util/datetime/day.dart';
 import 'package:Pilll/util/formatter/date_time_formatter.dart';
 import 'package:Pilll/util/toolbar/date_time_picker.dart';
 import 'package:flutter/cupertino.dart';
@@ -15,31 +17,24 @@ import 'package:flutter_svg/svg.dart';
 import 'package:hooks_riverpod/all.dart';
 
 class InitialSetting4Page extends HookWidget {
-  Widget _time(BuildContext context, InitialSettingModel entity) {
-    return Text(
-      DateTimeFormatter.militaryTime(entity.reminderDateTime()),
-      style: FontType.largeNumber.merge(
-        TextStyle(
-          decoration: TextDecoration.underline,
-          color: TextColor.black,
-        ),
-      ),
-    );
-  }
-
   void _showDurationModalSheet(
     BuildContext context,
+    int index,
     InitialSettingModel entity,
     InitialSettingStateStore store,
   ) {
+    final n = now();
+    DateTime initialDateTime = DateTime(n.year, n.month, n.day, 22, 0, 0);
+    if (index < entity.reminderTimes.length) {
+      initialDateTime = entity.reminderDateTime(index);
+    }
     showModalBottomSheet(
       context: context,
       builder: (BuildContext context) {
         return DateTimePicker(
-          initialDateTime: entity.reminderDateTime(),
+          initialDateTime: initialDateTime,
           done: (dateTime) {
-            store.modify((model) => model.copyWith(
-                reminderHour: dateTime.hour, reminderMinute: dateTime.minute));
+            store.setReminderTime(index, dateTime.hour, dateTime.minute);
             Navigator.pop(context);
           },
         );
@@ -47,7 +42,17 @@ class InitialSetting4Page extends HookWidget {
     );
   }
 
-  Widget _form(int index) {
+  Widget _form(
+    BuildContext context,
+    InitialSettingStateStore store,
+    InitialSettingState state,
+    int index,
+  ) {
+    String formValue = "--:--";
+    if (index < state.entity.reminderTimes.length) {
+      formValue =
+          DateTimeFormatter.militaryTime(state.entity.reminderDateTime(index));
+    }
     return Padding(
       padding: const EdgeInsets.fromLTRB(10, 0, 10, 0),
       child: Column(
@@ -61,19 +66,23 @@ class InitialSetting4Page extends HookWidget {
             ],
           ),
           SizedBox(height: 8),
-          Container(
-            width: 81,
-            height: 48,
-            decoration: BoxDecoration(
-              borderRadius: BorderRadius.all(Radius.circular(4)),
-              border: Border.all(
-                width: 1,
-                color: PilllColors.border,
+          GestureDetector(
+            onTap: () =>
+                _showDurationModalSheet(context, index, state.entity, store),
+            child: Container(
+              width: 81,
+              height: 48,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.all(Radius.circular(4)),
+                border: Border.all(
+                  width: 1,
+                  color: PilllColors.border,
+                ),
               ),
-            ),
-            child: Center(
-              child: Text("22:00",
-                  style: FontType.inputNumber.merge(TextColorStyle.gray)),
+              child: Center(
+                child: Text(formValue,
+                    style: FontType.inputNumber.merge(TextColorStyle.gray)),
+              ),
             ),
           )
         ],
@@ -116,7 +125,7 @@ class InitialSetting4Page extends HookWidget {
                     child: Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: List.generate(3, (index) {
-                          return _form(index);
+                          return _form(context, store, state, index);
                         })),
                   ),
                   Text("複数設定しておく事で飲み忘れを防げます",
