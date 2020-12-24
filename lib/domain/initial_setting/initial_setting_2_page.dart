@@ -61,7 +61,15 @@ class InitialSetting2Page extends HookWidget {
               ),
               SizedBox(height: 24),
               ExplainPillNumber(today: todayString()),
-              SizedBox(height: 24),
+              SizedBox(height: 16),
+              InconspicuousButton(
+                  onPressed: () {
+                    store.modify(
+                        (model) => model.copyWith(todayPillNumber: null));
+                    Navigator.of(context)
+                        .push(InitialSetting3PageRoute.route());
+                  },
+                  text: "まだ分からない"),
               Spacer(),
               PrimaryButton(
                 text: "次へ",
