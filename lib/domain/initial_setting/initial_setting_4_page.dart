@@ -1,12 +1,10 @@
 import 'package:Pilll/router/router.dart';
-import 'package:Pilll/entity/initial_setting.dart';
 import 'package:Pilll/state/initial_setting.dart';
 import 'package:Pilll/store/initial_setting.dart';
 import 'package:Pilll/components/atoms/buttons.dart';
 import 'package:Pilll/components/atoms/color.dart';
 import 'package:Pilll/components/atoms/font.dart';
 import 'package:Pilll/components/atoms/text_color.dart';
-import 'package:Pilll/util/datetime/day.dart';
 import 'package:Pilll/util/formatter/date_time_formatter.dart';
 import 'package:Pilll/util/toolbar/date_time_picker.dart';
 import 'package:flutter/cupertino.dart';
@@ -20,14 +18,10 @@ class InitialSetting4Page extends HookWidget {
   void _showDurationModalSheet(
     BuildContext context,
     int index,
-    InitialSettingModel entity,
+    InitialSettingState state,
     InitialSettingStateStore store,
   ) {
-    final n = now();
-    DateTime initialDateTime = DateTime(n.year, n.month, n.day, 22, 0, 0);
-    if (index < entity.reminderTimes.length) {
-      initialDateTime = entity.reminderDateTime(index);
-    }
+    DateTime initialDateTime = state.reminderTimeOrDefault(index);
     showModalBottomSheet(
       context: context,
       builder: (BuildContext context) {
@@ -48,11 +42,10 @@ class InitialSetting4Page extends HookWidget {
     InitialSettingState state,
     int index,
   ) {
-    String formValue = "--:--";
-    if (index < state.entity.reminderTimes.length) {
-      formValue =
-          DateTimeFormatter.militaryTime(state.entity.reminderDateTime(index));
-    }
+    final reminderTime = state.reminderTimeOrDefault(index);
+    final formValue = reminderTime == null
+        ? "--:--"
+        : DateTimeFormatter.militaryTime(reminderTime);
     return Padding(
       padding: const EdgeInsets.fromLTRB(10, 0, 10, 0),
       child: Column(
@@ -67,8 +60,7 @@ class InitialSetting4Page extends HookWidget {
           ),
           SizedBox(height: 8),
           GestureDetector(
-            onTap: () =>
-                _showDurationModalSheet(context, index, state.entity, store),
+            onTap: () => _showDurationModalSheet(context, index, state, store),
             child: Container(
               width: 81,
               height: 48,
