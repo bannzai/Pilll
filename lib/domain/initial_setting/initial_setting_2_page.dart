@@ -59,22 +59,17 @@ class InitialSetting2Page extends HookWidget {
               SizedBox(height: 24),
               ExplainPillNumber(today: todayString()),
               SizedBox(height: 24),
-              Wrap(
-                direction: Axis.vertical,
-                spacing: 8,
-                children: <Widget>[
-                  PrimaryButton(
-                    text: "次へ",
-                    onPressed: state.entity.todayPillNumber == null
-                        ? null
-                        : () {
-                            Navigator.of(context)
-                                .push(InitialSetting3PageRoute.route());
-                          },
-                  ),
-                ],
-              ),
               Spacer(),
+              PrimaryButton(
+                text: "次へ",
+                onPressed: state.entity.todayPillNumber == null
+                    ? null
+                    : () {
+                        Navigator.of(context)
+                            .push(InitialSetting3PageRoute.route());
+                      },
+              ),
+              SizedBox(height: 35),
             ],
           ),
         ),
