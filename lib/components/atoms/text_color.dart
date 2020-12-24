@@ -13,6 +13,7 @@ class TextColor {
   static final Color noshime = HexColor.fromHex("3D4662");
   static final Color primary = PilllColors.primary;
   static final Color main = HexColor.fromHex("454B64");
+  static final Color link = primary;
 }
 
 class TextColorStyle {
@@ -26,4 +27,5 @@ class TextColorStyle {
   static final TextStyle noshime = TextStyle(color: TextColor.noshime);
   static final TextStyle primary = TextStyle(color: TextColor.primary);
   static final TextStyle main = TextStyle(color: TextColor.main);
+  static final TextStyle link = TextStyle(color: TextColor.link);
 }

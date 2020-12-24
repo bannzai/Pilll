@@ -8,8 +8,10 @@ import 'package:Pilll/components/atoms/text_color.dart';
 import 'package:Pilll/util/formatter/date_time_formatter.dart';
 import 'package:Pilll/util/toolbar/date_time_picker.dart';
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:hooks_riverpod/all.dart';
 
 class InitialSetting4Page extends HookWidget {
@@ -45,6 +47,40 @@ class InitialSetting4Page extends HookWidget {
     );
   }
 
+  Widget _form(int index) {
+    return Padding(
+      padding: const EdgeInsets.fromLTRB(10, 0, 10, 0),
+      child: Column(
+        children: [
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              SvgPicture.asset("images/alerm.svg"),
+              Text("通知${index + 1}",
+                  style: FontType.assisting.merge(TextColorStyle.main))
+            ],
+          ),
+          SizedBox(height: 8),
+          Container(
+            width: 81,
+            height: 48,
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.all(Radius.circular(4)),
+              border: Border.all(
+                width: 1,
+                color: PilllColors.border,
+              ),
+            ),
+            child: Center(
+              child: Text("22:00",
+                  style: FontType.inputNumber.merge(TextColorStyle.gray)),
+            ),
+          )
+        ],
+      ),
+    );
+  }
+
   @override
   Widget build(BuildContext context) {
     final store = useProvider(initialSettingStoreProvider);
@@ -73,28 +109,57 @@ class InitialSetting4Page extends HookWidget {
                 textAlign: TextAlign.center,
               ),
               Spacer(),
-              Container(
-                height: 77,
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: <Widget>[
-                    Text("通知時刻"),
-                    GestureDetector(
-                      onTap: () {
-                        _showDurationModalSheet(context, state.entity, store);
-                      },
-                      child: _time(context, state.entity),
-                    ),
-                  ],
-                ),
+              Column(
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.only(bottom: 36),
+                    child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: List.generate(3, (index) {
+                          return _form(index);
+                        })),
+                  ),
+                  Text("複数設定しておく事で飲み忘れを防げます",
+                      style: FontType.assisting.merge(TextColorStyle.main)),
+                ],
               ),
               Spacer(),
-              Wrap(
-                direction: Axis.vertical,
-                spacing: 8,
-                children: <Widget>[
+              Column(
+                children: [
+                  RichText(
+                    text: TextSpan(
+                      // プライバシーポリシーと利用規約を同意の上、お進みください
+                      children: [
+                        TextSpan(
+                          text: "プライバシーポリシー",
+                          style: FontType.mini.merge(TextColorStyle.link),
+                          recognizer: TapGestureRecognizer()
+                            ..onTap = () {
+                              print("tapped privacy policy");
+                            },
+                        ),
+                        TextSpan(
+                          text: "と",
+                          style: FontType.mini.merge(TextColorStyle.gray),
+                        ),
+                        TextSpan(
+                          text: "利用規約",
+                          style: FontType.mini.merge(TextColorStyle.link),
+                          recognizer: TapGestureRecognizer()
+                            ..onTap = () {
+                              print("tapped terms");
+                            },
+                        ),
+                        TextSpan(
+                          text: "を同意の上、お進みください",
+                          style: FontType.mini.merge(TextColorStyle.gray),
+                        ),
+                      ],
+                    ),
+                  ),
+                  SizedBox(height: 24),
                   PrimaryButton(
-                    text: "完了",
+                    text: "設定完了",
                     onPressed: () {
                       store
                           .register(state.entity.copyWith(isOnReminder: true))
@@ -103,7 +168,7 @@ class InitialSetting4Page extends HookWidget {
                   ),
                 ],
               ),
-              Spacer(),
+              SizedBox(height: 35),
             ],
           ),
         ),
