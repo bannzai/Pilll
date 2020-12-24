@@ -88,7 +88,7 @@ class RecordTakenInformation extends StatelessWidget {
               ],
               if (pillSheetModel.inNotTakenDuration) ...[
                 Text(
-                  "${pillSheetModel.pillSheetType.notTakenWord}${pillSheetModel.lastTakenPillNumber - pillSheetModel.typeInfo.dosingPeriod}日目",
+                  "${pillSheetModel.pillSheetType.notTakenWord}${pillSheetModel.todayPillNumber - pillSheetModel.typeInfo.dosingPeriod}日目",
                   style: FontType.assistingBold.merge(TextColorStyle.main),
                 ),
               ],
