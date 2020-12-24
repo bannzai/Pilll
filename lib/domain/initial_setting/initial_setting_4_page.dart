@@ -129,7 +129,6 @@ class InitialSetting4Page extends HookWidget {
                 children: [
                   RichText(
                     text: TextSpan(
-                      // プライバシーポリシーと利用規約を同意の上、お進みください
                       children: [
                         TextSpan(
                           text: "プライバシーポリシー",
@@ -152,7 +151,7 @@ class InitialSetting4Page extends HookWidget {
                             },
                         ),
                         TextSpan(
-                          text: "を同意の上、お進みください",
+                          text: "を読んで、利用をはじめてください",
                           style: FontType.mini.merge(TextColorStyle.gray),
                         ),
                       ],
