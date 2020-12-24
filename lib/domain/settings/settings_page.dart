@@ -176,11 +176,10 @@ class SettingsPage extends HookWidget {
                         transactionModifier.modifyPillSheetType(type);
                       else
                         settingStore.modifyType(type);
-                    },
-                    done: () {
                       Navigator.pop(context);
                     },
-                    doneButtonText: "変更",
+                    done: null,
+                    doneButtonText: "",
                     selectedPillSheetType: settingState.entity.pillSheetType,
                   ),
                 );

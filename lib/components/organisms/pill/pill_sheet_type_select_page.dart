@@ -59,10 +59,11 @@ class PillSheetTypeSelectPage extends StatelessWidget {
                 ),
               ),
               Spacer(),
-              PrimaryButton(
-                text: doneButtonText,
-                onPressed: done,
-              ),
+              if (done != null)
+                PrimaryButton(
+                  text: doneButtonText,
+                  onPressed: done,
+                ),
               SizedBox(height: 35),
             ],
           ),
