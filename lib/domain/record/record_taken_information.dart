@@ -85,12 +85,12 @@ class RecordTakenInformation extends StatelessWidget {
                       style:
                           FontType.assistingBold.merge(TextColorStyle.noshime)),
                 ],
-              ],
-              if (pillSheetModel.inNotTakenDuration) ...[
-                Text(
-                  "${pillSheetModel.pillSheetType.notTakenWord}${pillSheetModel.todayPillNumber - pillSheetModel.typeInfo.dosingPeriod}日目",
-                  style: FontType.assistingBold.merge(TextColorStyle.main),
-                ),
+                if (pillSheetModel.inNotTakenDuration) ...[
+                  Text(
+                    "${pillSheetModel.pillSheetType.notTakenWord}${pillSheetModel.todayPillNumber - pillSheetModel.typeInfo.dosingPeriod}日目",
+                    style: FontType.assistingBold.merge(TextColorStyle.main),
+                  ),
+                ],
               ],
               if (!isExistsPillSheet) ...[
                 Text("-",
