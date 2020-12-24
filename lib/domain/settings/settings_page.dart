@@ -162,28 +162,31 @@ class SettingsPage extends HookWidget {
     switch (section) {
       case SettingSection.pill:
         return [
-          SettingListTitleAndContentRowModel(
-            title: "種類",
-            content: settingState.entity.pillSheetType.name,
-            onTap: () {
-              Navigator.of(context).push(
-                PillSheetTypeSelectPageRoute.route(
-                  title: "種類",
-                  backButtonIsHidden: false,
-                  selected: (type) {
-                    if (pillSheetState.entity != null)
-                      transactionModifier.modifyPillSheetType(type);
-                    else
-                      settingStore.modifyType(type);
-                  },
-                  done: () {
-                    Navigator.pop(context);
-                  },
-                  selectedPillSheetType: settingState.entity.pillSheetType,
-                ),
-              );
-            },
-          ),
+          () {
+            return SettingListTitleAndContentRowModel(
+              title: "種類",
+              content: settingState.entity.pillSheetType.name,
+              onTap: () {
+                Navigator.of(context).push(
+                  PillSheetTypeSelectPageRoute.route(
+                    title: "種類",
+                    backButtonIsHidden: false,
+                    selected: (type) {
+                      if (pillSheetState.entity != null)
+                        transactionModifier.modifyPillSheetType(type);
+                      else
+                        settingStore.modifyType(type);
+                    },
+                    done: () {
+                      Navigator.pop(context);
+                    },
+                    doneButtonText: "変更",
+                    selectedPillSheetType: settingState.entity.pillSheetType,
+                  ),
+                );
+              },
+            );
+          }(),
           if (pillSheetState.entity != null) ...[
             SettingListTitleRowModel(
                 title: "今日飲むピル番号の変更",
