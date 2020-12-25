@@ -47,20 +47,23 @@ class PillSheet extends StatelessWidget {
 
   Widget _pillMarkWithNumber(int number) {
     var type = pillMarkTypeBuilder(number);
-    return Column(
-      children: <Widget>[
-        Text("$number", style: TextStyle(color: PilllColors.weekday)),
-        PillMark(
+    return GestureDetector(
+      onTap: () {
+        markSelected(number);
+      },
+      child: Column(
+        children: <Widget>[
+          Text("$number", style: TextStyle(color: PilllColors.weekday)),
+          PillMark(
             key: Key("PillMarkWidget_$number"),
             hasRippleAnimation: enabledMarkAnimation == null
                 ? false
                 : enabledMarkAnimation(number),
             isDone: doneStateBuilder(number),
             type: type,
-            tapped: () {
-              markSelected(number);
-            }),
-      ],
+          ),
+        ],
+      ),
     );
   }
 
