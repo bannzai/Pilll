@@ -17,7 +17,11 @@ class _$InitialSettingModelTearOff {
   _InitialSettingModel initial(
       {int fromMenstruation = 2,
       int durationMenstruation = 4,
-      List<ReminderTime> reminderTimes = const [],
+      List<ReminderTime> reminderTimes = const [
+        ReminderTime(hour: 21, minute: 0),
+        ReminderTime(hour: 22, minute: 0),
+        null
+      ],
       bool isOnReminder = false,
       int todayPillNumber,
       PillSheetType pillSheetType}) {
@@ -192,14 +196,16 @@ class __$InitialSettingModelCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable(explicitToJson: true)
-
 /// @nodoc
 class _$_InitialSettingModel extends _InitialSettingModel {
   _$_InitialSettingModel(
       {this.fromMenstruation = 2,
       this.durationMenstruation = 4,
-      this.reminderTimes = const [],
+      this.reminderTimes = const [
+        ReminderTime(hour: 21, minute: 0),
+        ReminderTime(hour: 22, minute: 0),
+        null
+      ],
       this.isOnReminder = false,
       this.todayPillNumber,
       this.pillSheetType})
@@ -215,7 +221,11 @@ class _$_InitialSettingModel extends _InitialSettingModel {
   @JsonKey(defaultValue: 4)
   @override
   final int durationMenstruation;
-  @JsonKey(defaultValue: const [])
+  @JsonKey(defaultValue: const [
+    ReminderTime(hour: 21, minute: 0),
+    ReminderTime(hour: 22, minute: 0),
+    null
+  ])
   @override
   final List<ReminderTime> reminderTimes;
   @JsonKey(defaultValue: false)

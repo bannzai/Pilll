@@ -5,6 +5,7 @@ import 'package:Pilll/components/atoms/buttons.dart';
 import 'package:Pilll/components/atoms/color.dart';
 import 'package:Pilll/components/atoms/font.dart';
 import 'package:Pilll/components/atoms/text_color.dart';
+import 'package:Pilll/util/datetime/day.dart';
 import 'package:Pilll/util/formatter/date_time_formatter.dart';
 import 'package:Pilll/util/toolbar/date_time_picker.dart';
 import 'package:flutter/cupertino.dart';
@@ -22,7 +23,11 @@ class InitialSetting4Page extends HookWidget {
     InitialSettingState state,
     InitialSettingStateStore store,
   ) {
-    DateTime initialDateTime = state.reminderTimeOrDefault(index);
+    final reminderDateTime = state.entity.reminderDateTime(index);
+    final n = now();
+    DateTime initialDateTime = reminderDateTime != null
+        ? reminderDateTime
+        : DateTime(n.year, n.month, n.day, 22, 0, 0);
     showModalBottomSheet(
       context: context,
       builder: (BuildContext context) {
@@ -43,7 +48,7 @@ class InitialSetting4Page extends HookWidget {
     InitialSettingState state,
     int index,
   ) {
-    final reminderTime = state.reminderTimeOrDefault(index);
+    final reminderTime = state.entity.reminderDateTime(index);
     final formValue = reminderTime == null
         ? "--:--"
         : DateTimeFormatter.militaryTime(reminderTime);
