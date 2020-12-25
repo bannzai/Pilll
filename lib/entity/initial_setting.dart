@@ -10,11 +10,15 @@ part 'initial_setting.freezed.dart';
 @freezed
 abstract class InitialSettingModel implements _$InitialSettingModel {
   InitialSettingModel._();
-  @JsonSerializable(explicitToJson: true)
   factory InitialSettingModel.initial({
     @Default(2) int fromMenstruation,
     @Default(4) int durationMenstruation,
-    @Default([]) List<ReminderTime> reminderTimes,
+    @Default([
+      ReminderTime(hour: 21, minute: 0),
+      ReminderTime(hour: 22, minute: 0),
+      null
+    ])
+        List<ReminderTime> reminderTimes,
     @Default(false) bool isOnReminder,
     int todayPillNumber,
     PillSheetType pillSheetType,
@@ -68,6 +72,9 @@ abstract class InitialSettingModel implements _$InitialSettingModel {
   DateTime reminderDateTime(int index) {
     var t = DateTime.now();
     final reminderTime = reminderTimes[index];
+    if (reminderTime == null) {
+      return null;
+    }
     return DateTime(t.year, t.month, t.day, reminderTime.hour,
         reminderTime.minute, t.second, t.millisecond, t.microsecond);
   }
