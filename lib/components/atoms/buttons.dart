@@ -66,3 +66,27 @@ class TertiaryButton extends StatelessWidget {
     );
   }
 }
+
+class InconspicuousButton extends StatelessWidget {
+  final String text;
+  final Function() onPressed;
+
+  const InconspicuousButton({
+    Key key,
+    @required this.onPressed,
+    @required this.text,
+  }) : super(key: key);
+
+  Widget build(BuildContext context) {
+    return SizedBox(
+      width: 180,
+      height: 44,
+      child: FlatButton(
+        color: Colors.transparent,
+        textColor: TextColor.gray,
+        child: Text(text),
+        onPressed: onPressed,
+      ),
+    );
+  }
+}

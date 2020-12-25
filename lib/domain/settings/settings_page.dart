@@ -79,8 +79,8 @@ class SettingsPage extends HookWidget {
     return Scaffold(
       backgroundColor: PilllColors.background,
       appBar: AppBar(
-        title: Text('Pilll'),
-        backgroundColor: PilllColors.primary,
+        title: Text('Pilll', style: TextColorStyle.main),
+        backgroundColor: PilllColors.white,
       ),
       body: Container(
         child: ListView.separated(
@@ -162,25 +162,30 @@ class SettingsPage extends HookWidget {
     switch (section) {
       case SettingSection.pill:
         return [
-          SettingListTitleAndContentRowModel(
-            title: "種類",
-            content: settingState.entity.pillSheetType.name,
-            onTap: () {
-              Navigator.of(context).push(
-                PillSheetTypeSelectPageRoute.route(
-                  title: "種類",
-                  callback: (type) {
-                    Navigator.pop(context);
-                    if (pillSheetState.entity != null)
-                      transactionModifier.modifyPillSheetType(type);
-                    else
-                      settingStore.modifyType(type);
-                  },
-                  selectedPillSheetType: settingState.entity.pillSheetType,
-                ),
-              );
-            },
-          ),
+          () {
+            return SettingListTitleAndContentRowModel(
+              title: "種類",
+              content: settingState.entity.pillSheetType.name,
+              onTap: () {
+                Navigator.of(context).push(
+                  PillSheetTypeSelectPageRoute.route(
+                    title: "種類",
+                    backButtonIsHidden: false,
+                    selected: (type) {
+                      if (pillSheetState.entity != null)
+                        transactionModifier.modifyPillSheetType(type);
+                      else
+                        settingStore.modifyType(type);
+                      Navigator.pop(context);
+                    },
+                    done: null,
+                    doneButtonText: "",
+                    selectedPillSheetType: settingState.entity.pillSheetType,
+                  ),
+                );
+              },
+            );
+          }(),
           if (pillSheetState.entity != null) ...[
             SettingListTitleRowModel(
                 title: "今日飲むピル番号の変更",
@@ -236,7 +241,6 @@ class SettingsPage extends HookWidget {
                 Navigator.of(context).push(SettingMenstruationPageRoute.route(
                   done: null,
                   doneText: null,
-                  skip: null,
                   title: "生理について",
                   model: SettingMenstruationPageModel(
                     selectedFromMenstruation:

@@ -2,6 +2,7 @@ import 'package:Pilll/entity/pill_sheet.dart';
 import 'package:Pilll/components/atoms/color.dart';
 import 'package:Pilll/components/atoms/font.dart';
 import 'package:Pilll/components/atoms/text_color.dart';
+import 'package:Pilll/entity/pill_sheet_type.dart';
 import 'package:Pilll/util/formatter/date_time_formatter.dart';
 import 'package:flutter/material.dart';
 
@@ -77,12 +78,19 @@ class RecordTakenInformation extends StatelessWidget {
             textBaseline: TextBaseline.ideographic,
             children: <Widget>[
               if (isExistsPillSheet) ...[
-                Text("${pillSheetModel.todayPillNumber}",
-                    style: FontType.xHugeNumber.merge(TextColorStyle.main)),
-                SizedBox(width: 4),
-                Text("番",
-                    style:
-                        FontType.assistingBold.merge(TextColorStyle.noshime)),
+                if (!pillSheetModel.inNotTakenDuration) ...[
+                  Text("${pillSheetModel.todayPillNumber}",
+                      style: FontType.xHugeNumber.merge(TextColorStyle.main)),
+                  Text("番",
+                      style:
+                          FontType.assistingBold.merge(TextColorStyle.noshime)),
+                ],
+                if (pillSheetModel.inNotTakenDuration) ...[
+                  Text(
+                    "${pillSheetModel.pillSheetType.notTakenWord}${pillSheetModel.todayPillNumber - pillSheetModel.typeInfo.dosingPeriod}日目",
+                    style: FontType.assistingBold.merge(TextColorStyle.main),
+                  ),
+                ],
               ],
               if (!isExistsPillSheet) ...[
                 Text("-",
@@ -106,7 +114,7 @@ class RecordTakenInformation extends StatelessWidget {
       child: Text(
         "${_formattedToday()} (${_todayWeekday()})",
         style: TextStyle().merge(
-          FontType.xBigNumber.merge(TextColorStyle.main),
+          FontType.xBigNumber.merge(TextColorStyle.gray),
         ),
       ),
     );

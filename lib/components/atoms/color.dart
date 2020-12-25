@@ -20,36 +20,35 @@ extension HexColor on Color {
 class PilllColors {
   const PilllColors();
 
-  static final Color primary = HexColor.fromHex("E37474");
-  static final Color secondary = HexColor.fromHex("B9D7F1");
+  static final Color primary = HexColor.fromHex("E56A45");
+  static final Color secondary = HexColor.fromHex("4E6287");
+  static final Color calendarHeader = HexColor.fromHex("B9D7F1");
   static final Color accent = Colors.white;
   static final Color pillSheet = HexColor.fromHex("E8EBED");
   static final Color mat = HexColor.fromHex("FAFAFA").withAlpha(80);
   static final Color sunday = HexColor.fromHex("E17F7F");
   static final Color saturday = HexColor.fromHex("7FB9E1");
   static final Color weekday = HexColor.fromHex("7E7E7E");
-  static final Color enable = HexColor.fromHex('E65E5A');
+  static final Color enable = HexColor.fromHex('E56A45');
   static final Color disable = HexColor.fromHex("F2F2F2");
-  static final Color divider = HexColor.fromHex("9DAFBD");
+  static final Color divider = HexColor.fromHex("000000").withAlpha(30);
 
   static final Color bottomBar = HexColor.fromHex("FAFAFA");
   static final Color border = HexColor.fromHex("DADADA");
   static final Color background = HexColor.fromHex("F4F7F9");
-  static final Color selected = HexColor.fromHex("FCF1F1");
 
   static final Color blank = Colors.white;
   static final Color potti = HexColor.fromHex("7C8E9C");
   static final Color lightGray = HexColor.fromHex("CDCFD1");
   static final Color gray = HexColor.fromHex("BEC0C2");
 
-  static final Color menstruation = HexColor.fromHex("DCB1C4");
+  static final Color menstruation = HexColor.fromHex("E3B4B4");
   static final Color duration = HexColor.fromHex("6A7DA5");
 
-  static final Color attention = HexColor.fromHex("4E6287");
   static final Color modalBackground =
       HexColor.fromHex("333333").withAlpha((255 * 0.7).round());
   static final Color white = Colors.white;
 
   static Color get disabledSheet => PilllColors.pillSheet;
-  static final Color primarySheet = HexColor.fromHex("FDF2F2");
+  static final Color thinSecondary = HexColor.fromHex("4E6287").withAlpha(20);
 }

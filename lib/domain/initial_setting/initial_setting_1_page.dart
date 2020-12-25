@@ -12,10 +12,16 @@ class InitialSetting1Page extends HookWidget {
     final state = useProvider(initialSettingStoreProvider.state);
     return PillSheetTypeSelectPage(
       title: "1/4",
-      callback: (type) {
+      backButtonIsHidden: true,
+      selected: (type) {
         store.modify((model) => model.copyWith(pillSheetType: type));
-        Navigator.of(context).push(InitialSetting2PageRoute.route());
       },
+      done: state.entity.pillSheetType == null
+          ? null
+          : () {
+              Navigator.of(context).push(InitialSetting2PageRoute.route());
+            },
+      doneButtonText: "次へ",
       selectedPillSheetType: state.entity.pillSheetType,
     );
   }

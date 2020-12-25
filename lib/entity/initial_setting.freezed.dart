@@ -17,16 +17,17 @@ class _$InitialSettingModelTearOff {
   _InitialSettingModel initial(
       {int fromMenstruation = 2,
       int durationMenstruation = 4,
-      int reminderHour = 22,
-      int reminderMinute = 0,
+      List<ReminderTime> reminderTimes = const [
+        const ReminderTime(hour: 21, minute: 0),
+        const ReminderTime(hour: 22, minute: 0)
+      ],
       bool isOnReminder = false,
       int todayPillNumber,
       PillSheetType pillSheetType}) {
     return _InitialSettingModel(
       fromMenstruation: fromMenstruation,
       durationMenstruation: durationMenstruation,
-      reminderHour: reminderHour,
-      reminderMinute: reminderMinute,
+      reminderTimes: reminderTimes,
       isOnReminder: isOnReminder,
       todayPillNumber: todayPillNumber,
       pillSheetType: pillSheetType,
@@ -42,8 +43,7 @@ const $InitialSettingModel = _$InitialSettingModelTearOff();
 mixin _$InitialSettingModel {
   int get fromMenstruation;
   int get durationMenstruation;
-  int get reminderHour;
-  int get reminderMinute;
+  List<ReminderTime> get reminderTimes;
   bool get isOnReminder;
   int get todayPillNumber;
   PillSheetType get pillSheetType;
@@ -54,8 +54,7 @@ mixin _$InitialSettingModel {
         TResult initial(
             int fromMenstruation,
             int durationMenstruation,
-            int reminderHour,
-            int reminderMinute,
+            List<ReminderTime> reminderTimes,
             bool isOnReminder,
             int todayPillNumber,
             PillSheetType pillSheetType),
@@ -65,8 +64,7 @@ mixin _$InitialSettingModel {
     TResult initial(
         int fromMenstruation,
         int durationMenstruation,
-        int reminderHour,
-        int reminderMinute,
+        List<ReminderTime> reminderTimes,
         bool isOnReminder,
         int todayPillNumber,
         PillSheetType pillSheetType),
@@ -93,8 +91,7 @@ abstract class $InitialSettingModelCopyWith<$Res> {
   $Res call(
       {int fromMenstruation,
       int durationMenstruation,
-      int reminderHour,
-      int reminderMinute,
+      List<ReminderTime> reminderTimes,
       bool isOnReminder,
       int todayPillNumber,
       PillSheetType pillSheetType});
@@ -113,8 +110,7 @@ class _$InitialSettingModelCopyWithImpl<$Res>
   $Res call({
     Object fromMenstruation = freezed,
     Object durationMenstruation = freezed,
-    Object reminderHour = freezed,
-    Object reminderMinute = freezed,
+    Object reminderTimes = freezed,
     Object isOnReminder = freezed,
     Object todayPillNumber = freezed,
     Object pillSheetType = freezed,
@@ -126,11 +122,9 @@ class _$InitialSettingModelCopyWithImpl<$Res>
       durationMenstruation: durationMenstruation == freezed
           ? _value.durationMenstruation
           : durationMenstruation as int,
-      reminderHour:
-          reminderHour == freezed ? _value.reminderHour : reminderHour as int,
-      reminderMinute: reminderMinute == freezed
-          ? _value.reminderMinute
-          : reminderMinute as int,
+      reminderTimes: reminderTimes == freezed
+          ? _value.reminderTimes
+          : reminderTimes as List<ReminderTime>,
       isOnReminder:
           isOnReminder == freezed ? _value.isOnReminder : isOnReminder as bool,
       todayPillNumber: todayPillNumber == freezed
@@ -153,8 +147,7 @@ abstract class _$InitialSettingModelCopyWith<$Res>
   $Res call(
       {int fromMenstruation,
       int durationMenstruation,
-      int reminderHour,
-      int reminderMinute,
+      List<ReminderTime> reminderTimes,
       bool isOnReminder,
       int todayPillNumber,
       PillSheetType pillSheetType});
@@ -175,8 +168,7 @@ class __$InitialSettingModelCopyWithImpl<$Res>
   $Res call({
     Object fromMenstruation = freezed,
     Object durationMenstruation = freezed,
-    Object reminderHour = freezed,
-    Object reminderMinute = freezed,
+    Object reminderTimes = freezed,
     Object isOnReminder = freezed,
     Object todayPillNumber = freezed,
     Object pillSheetType = freezed,
@@ -188,11 +180,9 @@ class __$InitialSettingModelCopyWithImpl<$Res>
       durationMenstruation: durationMenstruation == freezed
           ? _value.durationMenstruation
           : durationMenstruation as int,
-      reminderHour:
-          reminderHour == freezed ? _value.reminderHour : reminderHour as int,
-      reminderMinute: reminderMinute == freezed
-          ? _value.reminderMinute
-          : reminderMinute as int,
+      reminderTimes: reminderTimes == freezed
+          ? _value.reminderTimes
+          : reminderTimes as List<ReminderTime>,
       isOnReminder:
           isOnReminder == freezed ? _value.isOnReminder : isOnReminder as bool,
       todayPillNumber: todayPillNumber == freezed
@@ -210,15 +200,16 @@ class _$_InitialSettingModel extends _InitialSettingModel {
   _$_InitialSettingModel(
       {this.fromMenstruation = 2,
       this.durationMenstruation = 4,
-      this.reminderHour = 22,
-      this.reminderMinute = 0,
+      this.reminderTimes = const [
+        const ReminderTime(hour: 21, minute: 0),
+        const ReminderTime(hour: 22, minute: 0)
+      ],
       this.isOnReminder = false,
       this.todayPillNumber,
       this.pillSheetType})
       : assert(fromMenstruation != null),
         assert(durationMenstruation != null),
-        assert(reminderHour != null),
-        assert(reminderMinute != null),
+        assert(reminderTimes != null),
         assert(isOnReminder != null),
         super._();
 
@@ -228,12 +219,12 @@ class _$_InitialSettingModel extends _InitialSettingModel {
   @JsonKey(defaultValue: 4)
   @override
   final int durationMenstruation;
-  @JsonKey(defaultValue: 22)
+  @JsonKey(defaultValue: const [
+    const ReminderTime(hour: 21, minute: 0),
+    const ReminderTime(hour: 22, minute: 0)
+  ])
   @override
-  final int reminderHour;
-  @JsonKey(defaultValue: 0)
-  @override
-  final int reminderMinute;
+  final List<ReminderTime> reminderTimes;
   @JsonKey(defaultValue: false)
   @override
   final bool isOnReminder;
@@ -244,7 +235,7 @@ class _$_InitialSettingModel extends _InitialSettingModel {
 
   @override
   String toString() {
-    return 'InitialSettingModel.initial(fromMenstruation: $fromMenstruation, durationMenstruation: $durationMenstruation, reminderHour: $reminderHour, reminderMinute: $reminderMinute, isOnReminder: $isOnReminder, todayPillNumber: $todayPillNumber, pillSheetType: $pillSheetType)';
+    return 'InitialSettingModel.initial(fromMenstruation: $fromMenstruation, durationMenstruation: $durationMenstruation, reminderTimes: $reminderTimes, isOnReminder: $isOnReminder, todayPillNumber: $todayPillNumber, pillSheetType: $pillSheetType)';
   }
 
   @override
@@ -257,12 +248,9 @@ class _$_InitialSettingModel extends _InitialSettingModel {
             (identical(other.durationMenstruation, durationMenstruation) ||
                 const DeepCollectionEquality().equals(
                     other.durationMenstruation, durationMenstruation)) &&
-            (identical(other.reminderHour, reminderHour) ||
+            (identical(other.reminderTimes, reminderTimes) ||
                 const DeepCollectionEquality()
-                    .equals(other.reminderHour, reminderHour)) &&
-            (identical(other.reminderMinute, reminderMinute) ||
-                const DeepCollectionEquality()
-                    .equals(other.reminderMinute, reminderMinute)) &&
+                    .equals(other.reminderTimes, reminderTimes)) &&
             (identical(other.isOnReminder, isOnReminder) ||
                 const DeepCollectionEquality()
                     .equals(other.isOnReminder, isOnReminder)) &&
@@ -279,8 +267,7 @@ class _$_InitialSettingModel extends _InitialSettingModel {
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(fromMenstruation) ^
       const DeepCollectionEquality().hash(durationMenstruation) ^
-      const DeepCollectionEquality().hash(reminderHour) ^
-      const DeepCollectionEquality().hash(reminderMinute) ^
+      const DeepCollectionEquality().hash(reminderTimes) ^
       const DeepCollectionEquality().hash(isOnReminder) ^
       const DeepCollectionEquality().hash(todayPillNumber) ^
       const DeepCollectionEquality().hash(pillSheetType);
@@ -297,15 +284,14 @@ class _$_InitialSettingModel extends _InitialSettingModel {
         TResult initial(
             int fromMenstruation,
             int durationMenstruation,
-            int reminderHour,
-            int reminderMinute,
+            List<ReminderTime> reminderTimes,
             bool isOnReminder,
             int todayPillNumber,
             PillSheetType pillSheetType),
   }) {
     assert(initial != null);
-    return initial(fromMenstruation, durationMenstruation, reminderHour,
-        reminderMinute, isOnReminder, todayPillNumber, pillSheetType);
+    return initial(fromMenstruation, durationMenstruation, reminderTimes,
+        isOnReminder, todayPillNumber, pillSheetType);
   }
 
   @override
@@ -314,8 +300,7 @@ class _$_InitialSettingModel extends _InitialSettingModel {
     TResult initial(
         int fromMenstruation,
         int durationMenstruation,
-        int reminderHour,
-        int reminderMinute,
+        List<ReminderTime> reminderTimes,
         bool isOnReminder,
         int todayPillNumber,
         PillSheetType pillSheetType),
@@ -323,8 +308,8 @@ class _$_InitialSettingModel extends _InitialSettingModel {
   }) {
     assert(orElse != null);
     if (initial != null) {
-      return initial(fromMenstruation, durationMenstruation, reminderHour,
-          reminderMinute, isOnReminder, todayPillNumber, pillSheetType);
+      return initial(fromMenstruation, durationMenstruation, reminderTimes,
+          isOnReminder, todayPillNumber, pillSheetType);
     }
     return orElse();
   }
@@ -357,8 +342,7 @@ abstract class _InitialSettingModel extends InitialSettingModel {
   factory _InitialSettingModel(
       {int fromMenstruation,
       int durationMenstruation,
-      int reminderHour,
-      int reminderMinute,
+      List<ReminderTime> reminderTimes,
       bool isOnReminder,
       int todayPillNumber,
       PillSheetType pillSheetType}) = _$_InitialSettingModel;
@@ -368,9 +352,7 @@ abstract class _InitialSettingModel extends InitialSettingModel {
   @override
   int get durationMenstruation;
   @override
-  int get reminderHour;
-  @override
-  int get reminderMinute;
+  List<ReminderTime> get reminderTimes;
   @override
   bool get isOnReminder;
   @override
