@@ -45,7 +45,7 @@ class ConfirmDiarySheet extends HookWidget {
             ...[
               if (state.hasPhysicalConditionStatus()) _physicalCondition(),
               _physicalConditionDetails(),
-              _sex(),
+              if (state.entity.hasSex) _sex(),
               _memo(),
             ].map((e) => _withContentSpacer(e)),
           ]),
@@ -138,18 +138,13 @@ class ConfirmDiarySheet extends HookWidget {
   }
 
   Widget _sex() {
-    final diary = useProvider(_confirmDiaryProvider(date).state).entity;
     return Container(
       padding: EdgeInsets.all(4),
       width: 32,
       height: 32,
       decoration: BoxDecoration(
-          shape: BoxShape.circle,
-          color: diary.hasSex
-              ? PilllColors.thinSecondary
-              : PilllColors.disabledSheet),
-      child: SvgPicture.asset("images/heart.svg",
-          color: diary.hasSex ? PilllColors.secondary : TextColor.darkGray),
+          shape: BoxShape.circle, color: PilllColors.thinSecondary),
+      child: SvgPicture.asset("images/heart.svg", color: PilllColors.secondary),
     );
   }
 

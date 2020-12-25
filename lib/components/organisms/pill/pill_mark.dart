@@ -8,13 +8,11 @@ import 'package:flutter/widgets.dart';
 class PillMark extends StatefulWidget {
   final PillMarkType type;
   final bool isDone;
-  final VoidCallback tapped;
   final bool hasRippleAnimation;
   const PillMark({
     Key key,
     this.hasRippleAnimation = false,
     @required this.type,
-    @required this.tapped,
     @required this.isDone,
   }) : super(key: key);
 
@@ -48,29 +46,27 @@ class _PillMarkState extends State<PillMark> with TickerProviderStateMixin {
 
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
-        child: Stack(
-          overflow: Overflow.visible,
-          children: [
-            PillMarkTypeFunctions.create(widget.isDone, widget.type),
-            if (widget.hasRippleAnimation)
-              // NOTE: pill mark size is 20px. Ripple view final size is 80px.
-              // Positined ripple animation equal to (80px - 20px) / 2(to center) = 28;
-              Positioned(
-                left: -30,
-                top: -30,
-                child: Container(
-                  child: CustomPaint(
-                    size: Size(80, 80),
-                    painter: Ripple(
-                      _controller,
-                      color: PilllColors.primary,
-                    ),
-                  ),
+    return Stack(
+      overflow: Overflow.visible,
+      children: [
+        PillMarkTypeFunctions.create(widget.isDone, widget.type),
+        if (widget.hasRippleAnimation)
+          // NOTE: pill mark size is 20px. Ripple view final size is 80px.
+          // Positined ripple animation equal to (80px - 20px) / 2(to center) = 28;
+          Positioned(
+            left: -30,
+            top: -30,
+            child: Container(
+              child: CustomPaint(
+                size: Size(80, 80),
+                painter: Ripple(
+                  _controller,
+                  color: PilllColors.primary,
                 ),
               ),
-          ],
-        ),
-        onTap: widget.tapped);
+            ),
+          ),
+      ],
+    );
   }
 }
