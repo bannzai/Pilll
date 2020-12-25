@@ -23,7 +23,7 @@ class InitialSetting4Page extends HookWidget {
     InitialSettingState state,
     InitialSettingStateStore store,
   ) {
-    final reminderDateTime = state.entity.reminderDateTime(index);
+    final reminderDateTime = state.reminderTimeOrDefault(index);
     final n = now();
     DateTime initialDateTime = reminderDateTime != null
         ? reminderDateTime
@@ -48,7 +48,7 @@ class InitialSetting4Page extends HookWidget {
     InitialSettingState state,
     int index,
   ) {
-    final reminderTime = state.entity.reminderDateTime(index);
+    final reminderTime = state.reminderTimeOrDefault(index);
     final formValue = reminderTime == null
         ? "--:--"
         : DateTimeFormatter.militaryTime(reminderTime);
