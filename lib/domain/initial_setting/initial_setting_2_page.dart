@@ -1,4 +1,3 @@
-import 'package:Pilll/router/router.dart';
 import 'package:Pilll/store/initial_setting.dart';
 import 'package:Pilll/components/atoms/buttons.dart';
 import 'package:Pilll/components/atoms/color.dart';
@@ -16,7 +15,7 @@ class InitialSetting2Page extends HookWidget {
   const InitialSetting2Page({Key key}) : super(key: key);
 
   String todayString() {
-    return DateFormat.yMd('ja').format(today());
+    return DateFormat.yMEd('ja').format(today());
   }
 
   @override
@@ -43,13 +42,16 @@ class InitialSetting2Page extends HookWidget {
               SizedBox(height: 24),
               Text(
                 "今日(${todayString()})\n飲む・飲んだピルの番号をタップ",
-                style: FontType.title.merge(TextColorStyle.standard),
+                style: FontType.sBigTitle.merge(TextColorStyle.main),
                 textAlign: TextAlign.center,
               ),
               Spacer(),
               PillSheet(
                 pillMarkTypeBuilder: (number) {
                   return state.entity.pillMarkTypeFor(number);
+                },
+                doneStateBuilder: (number) {
+                  return false;
                 },
                 enabledMarkAnimation: null,
                 markSelected: (number) {
@@ -59,31 +61,26 @@ class InitialSetting2Page extends HookWidget {
               ),
               SizedBox(height: 24),
               ExplainPillNumber(today: todayString()),
-              SizedBox(height: 24),
-              Wrap(
-                direction: Axis.vertical,
-                spacing: 8,
-                children: <Widget>[
-                  PrimaryButton(
-                    text: "次へ",
-                    onPressed: state.entity.todayPillNumber == null
-                        ? null
-                        : () {
-                            Navigator.of(context)
-                                .push(InitialSetting3PageRoute.route());
-                          },
-                  ),
-                  TertiaryButton(
-                    text: "スキップ",
-                    onPressed: () {
-                      store
-                          .register(state.entity)
-                          .then((_) => AppRouter.endInitialSetting(context));
-                    },
-                  ),
-                ],
-              ),
+              SizedBox(height: 16),
+              InconspicuousButton(
+                  onPressed: () {
+                    store.modify(
+                        (model) => model.copyWith(todayPillNumber: null));
+                    Navigator.of(context)
+                        .push(InitialSetting3PageRoute.route());
+                  },
+                  text: "まだ分からない"),
               Spacer(),
+              PrimaryButton(
+                text: "次へ",
+                onPressed: state.entity.todayPillNumber == null
+                    ? null
+                    : () {
+                        Navigator.of(context)
+                            .push(InitialSetting3PageRoute.route());
+                      },
+              ),
+              SizedBox(height: 35),
             ],
           ),
         ),
@@ -107,15 +104,15 @@ class ExplainPillNumber extends HookWidget {
         children: () {
           if (state.entity.todayPillNumber == null) {
             return <Widget>[
-              Text("", style: FontType.largeNumber.merge(TextColorStyle.black)),
+              Text("", style: FontType.largeNumber.merge(TextColorStyle.main)),
             ];
           }
           return <Widget>[
             Text("$todayに飲むピルは",
-                style: FontType.description.merge(TextColorStyle.black)),
+                style: FontType.description.merge(TextColorStyle.main)),
             Text("${state.entity.todayPillNumber}",
-                style: FontType.largeNumber.merge(TextColorStyle.black)),
-            Text("番", style: FontType.description.merge(TextColorStyle.black)),
+                style: FontType.largeNumber.merge(TextColorStyle.main)),
+            Text("番", style: FontType.description.merge(TextColorStyle.main)),
           ];
         }(),
       ),

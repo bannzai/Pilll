@@ -4,13 +4,13 @@ class FontFamily {
   static String get standarad => japanese;
 
   static final String number = "Avenier Next";
-  static final String japanese = "Hiragino Kaku Gothic ProN";
+  static final String japanese = "Noto Sans CJK JP";
   static final String roboto = "Roboto";
 }
 
 class FontSize {
   static final double xHuge = 40;
-  static final double huge = 32;
+  static final double huge = 34;
   static final double xBig = 24;
   static final double big = 22;
   static final double sBig = 20;
@@ -19,6 +19,7 @@ class FontSize {
   static final double normal = 14;
   static final double small = 12;
   static final double sSmall = 10;
+  static final double mini = 8;
 }
 
 class FontType {
@@ -28,8 +29,8 @@ class FontType {
     fontSize: FontSize.xHuge,
   );
   static final TextStyle largeNumber = TextStyle(
-    fontFamily: FontFamily.number,
-    fontWeight: FontWeight.w300,
+    fontFamily: FontFamily.japanese,
+    fontWeight: FontWeight.w500,
     fontSize: FontSize.huge,
   );
   static final TextStyle title = TextStyle(
@@ -65,7 +66,7 @@ class FontType {
   static final TextStyle thinTitle = TextStyle(
     fontFamily: FontFamily.japanese,
     fontWeight: FontWeight.w300,
-    fontSize: FontSize.large,
+    fontSize: FontSize.sLarge,
   );
   static final TextStyle done = TextStyle(
     fontFamily: FontFamily.japanese,
@@ -98,9 +99,9 @@ class FontType {
     fontSize: FontSize.normal,
   );
   static final TextStyle inputNumber = TextStyle(
-    fontFamily: FontFamily.number,
-    fontWeight: FontWeight.w300,
-    fontSize: FontSize.large,
+    fontFamily: FontFamily.japanese,
+    fontWeight: FontWeight.w700,
+    fontSize: FontSize.sLarge,
   );
   static final TextStyle description = TextStyle(
     fontFamily: FontFamily.japanese,
@@ -111,5 +112,10 @@ class FontType {
     fontFamily: FontFamily.japanese,
     fontWeight: FontWeight.w600,
     fontSize: FontSize.sSmall,
+  );
+  static final TextStyle mini = TextStyle(
+    fontFamily: FontFamily.japanese,
+    fontWeight: FontWeight.w300,
+    fontSize: FontSize.mini,
   );
 }

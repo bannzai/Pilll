@@ -19,10 +19,12 @@ class PillSheet extends StatelessWidget {
       width: 295,
       height: 143,
       decoration: BoxDecoration(
-        color: this.selected ? PilllColors.selected : PilllColors.background,
+        color: this.selected
+            ? PilllColors.secondary.withOpacity(0.08)
+            : PilllColors.background,
         border: Border.all(
             width: 1,
-            color: this.selected ? PilllColors.enable : PilllColors.disable),
+            color: this.selected ? PilllColors.secondary : PilllColors.disable),
         borderRadius: BorderRadius.circular(10),
       ),
       child: Row(
@@ -39,12 +41,12 @@ class PillSheet extends StatelessWidget {
                 children: <Widget>[
                   Icon(Icons.check,
                       color: this.selected
-                          ? PilllColors.enable
+                          ? PilllColors.secondary
                           : PilllColors.disable,
                       size: 13),
                   SizedBox(width: 8),
                   Text(this.pillSheetType.name,
-                      style: FontType.thinTitle.merge(TextColorStyle.gray)),
+                      style: FontType.thinTitle.merge(TextColorStyle.main)),
                 ],
               ),
               SizedBox(height: 10),
@@ -58,8 +60,8 @@ class PillSheet extends StatelessWidget {
                         .pillSheetType
                         .examples
                         .map((e) => Text("$e",
-                            style: FontType.description
-                                .merge(TextColorStyle.black)))
+                            style:
+                                FontType.assisting.merge(TextColorStyle.main)))
                         .toList(),
                   ),
                 ],

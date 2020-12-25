@@ -9,11 +9,13 @@ import 'package:flutter_svg/flutter_svg.dart';
 typedef PillMarkSelected = void Function(int);
 typedef PillMarkTypeBuilder = PillMarkType Function(int);
 typedef PillMarkTypeHasRippleAnimation = bool Function(int);
+typedef DoneStateBuilder = bool Function(int);
 
 class PillSheet extends StatelessWidget {
   static Size size = Size(316, 264);
   final Weekday firstWeekday;
   final PillMarkTypeBuilder pillMarkTypeBuilder;
+  final DoneStateBuilder doneStateBuilder;
   final PillMarkTypeHasRippleAnimation enabledMarkAnimation;
   final PillMarkSelected markSelected;
 
@@ -25,6 +27,7 @@ class PillSheet extends StatelessWidget {
     @required this.pillMarkTypeBuilder,
     @required this.enabledMarkAnimation,
     @required this.markSelected,
+    @required this.doneStateBuilder,
   }) : super(key: key);
 
   int _calcIndex(int row, int line) {
@@ -52,6 +55,7 @@ class PillSheet extends StatelessWidget {
             hasRippleAnimation: enabledMarkAnimation == null
                 ? false
                 : enabledMarkAnimation(number),
+            isDone: doneStateBuilder(number),
             type: type,
             tapped: () {
               markSelected(number);

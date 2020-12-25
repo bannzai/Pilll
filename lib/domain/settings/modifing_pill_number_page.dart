@@ -56,6 +56,9 @@ class _ModifingPillNumberPageState extends State<ModifingPillNumberPage> {
                   }
                   return PillMarkType.normal;
                 },
+                doneStateBuilder: (_) {
+                  return false;
+                },
                 enabledMarkAnimation: null,
                 markSelected: (number) {
                   setState(() => selectedPillMarkNumber = number);

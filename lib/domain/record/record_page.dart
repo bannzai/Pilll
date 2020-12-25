@@ -95,7 +95,7 @@ class RecordPage extends HookWidget {
                   constraints: BoxConstraints.expand(height: 26),
                   child: Container(
                     height: 26,
-                    color: PilllColors.attention,
+                    color: PilllColors.secondary,
                     child: Center(
                       child: Text(_notificationString(currentPillSheet),
                           style:
@@ -238,6 +238,9 @@ class RecordPage extends HookWidget {
       firstWeekday: pillSheet.beginingDate == null
           ? Weekday.Sunday
           : WeekdayFunctions.weekdayFromDate(pillSheet.beginingDate),
+      doneStateBuilder: (number) {
+        return number <= pillSheet.todayPillNumber;
+      },
       pillMarkTypeBuilder: (number) => store.markFor(number),
       enabledMarkAnimation: (number) => store.shouldPillMarkAnimation(number),
       markSelected: (number) {

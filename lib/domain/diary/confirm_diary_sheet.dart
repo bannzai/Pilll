@@ -95,9 +95,11 @@ class ConfirmDiarySheet extends HookWidget {
   Widget _physicalConditionImage(PhysicalConditionStatus status) {
     switch (status) {
       case PhysicalConditionStatus.fine:
-        return SvgPicture.asset("images/laugh.svg", color: PilllColors.primary);
+        return SvgPicture.asset("images/laugh.svg",
+            color: PilllColors.secondary);
       case PhysicalConditionStatus.bad:
-        return SvgPicture.asset("images/laugh.svg", color: PilllColors.primary);
+        return SvgPicture.asset("images/angry.svg",
+            color: PilllColors.secondary);
       default:
         return Container();
     }
@@ -124,10 +126,10 @@ class ConfirmDiarySheet extends HookWidget {
           children: diary.physicalConditions
               .map((e) => ChoiceChip(
                     label: Text(e),
-                    labelStyle:
-                        FontType.assisting.merge(TextColorStyle.primary),
-                    selectedColor: PilllColors.primarySheet,
+                    labelStyle: FontType.assisting.merge(TextColorStyle.white),
+                    selectedColor: PilllColors.secondary,
                     selected: true,
+                    onSelected: (selected) {},
                   ))
               .toList(),
         ),
@@ -144,10 +146,10 @@ class ConfirmDiarySheet extends HookWidget {
       decoration: BoxDecoration(
           shape: BoxShape.circle,
           color: diary.hasSex
-              ? PilllColors.primarySheet
+              ? PilllColors.thinSecondary
               : PilllColors.disabledSheet),
       child: SvgPicture.asset("images/heart.svg",
-          color: diary.hasSex ? PilllColors.primary : TextColor.darkGray),
+          color: diary.hasSex ? PilllColors.secondary : TextColor.darkGray),
     );
   }
 

@@ -96,4 +96,5 @@ abstract class PillSheetModel implements _$PillSheetModel {
   bool get isEnded =>
       today().difference(beginingDate.date()).inDays + 1 >
       pillSheetType.totalCount;
+  bool get inNotTakenDuration => todayPillNumber > typeInfo.dosingPeriod;
 }

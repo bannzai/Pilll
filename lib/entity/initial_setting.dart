@@ -11,11 +11,17 @@ part 'initial_setting.freezed.dart';
 abstract class InitialSettingModel implements _$InitialSettingModel {
   InitialSettingModel._();
   factory InitialSettingModel.initial({
-    @Default(2) int fromMenstruation,
-    @Default(4) int durationMenstruation,
-    @Default(22) int reminderHour,
-    @Default(0) int reminderMinute,
-    @Default(false) bool isOnReminder,
+    @Default(2)
+        int fromMenstruation,
+    @Default(4)
+        int durationMenstruation,
+    @Default([
+      ReminderTime(hour: 21, minute: 0),
+      ReminderTime(hour: 22, minute: 0),
+    ])
+        List<ReminderTime> reminderTimes,
+    @Default(false)
+        bool isOnReminder,
     int todayPillNumber,
     PillSheetType pillSheetType,
   }) = _InitialSettingModel;
@@ -24,9 +30,7 @@ abstract class InitialSettingModel implements _$InitialSettingModel {
         fromMenstruation: fromMenstruation,
         durationMenstruation: durationMenstruation,
         pillSheetTypeRawPath: pillSheetType.rawPath,
-        reminderTimes: [
-          ReminderTime(hour: reminderHour, minute: reminderMinute)
-        ],
+        reminderTimes: reminderTimes,
         isOnReminder: isOnReminder,
       );
   PillSheetModel buildPillSheet() => todayPillNumber != null
@@ -60,14 +64,17 @@ abstract class InitialSettingModel implements _$InitialSettingModel {
       return PillMarkType.selected;
     }
     if (pillSheetType.beginingWithoutTakenPeriod <= number) {
-      return PillMarkType.notTaken;
+      return pillSheetType == PillSheetType.pillsheet_21
+          ? PillMarkType.rest
+          : PillMarkType.fake;
     }
     return PillMarkType.normal;
   }
 
-  DateTime reminderDateTime() {
+  DateTime reminderDateTime(int index) {
     var t = DateTime.now();
-    return DateTime(t.year, t.month, t.day, reminderHour, reminderMinute,
-        t.second, t.millisecond, t.microsecond);
+    final reminderTime = reminderTimes[index];
+    return DateTime(t.year, t.month, t.day, reminderTime.hour,
+        reminderTime.minute, t.second, t.millisecond, t.microsecond);
   }
 }
