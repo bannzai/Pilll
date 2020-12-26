@@ -83,6 +83,12 @@ class FontType {
     fontWeight: FontWeight.w300,
     fontSize: FontSize.sLarge,
   );
+  static final TextStyle gridElement = TextStyle(
+    fontFamily: FontFamily.japanese,
+    fontWeight: FontWeight.w600,
+    fontSize: FontSize.sLarge,
+  );
+
   static final TextStyle row = TextStyle(
     fontFamily: FontFamily.roboto,
     fontWeight: FontWeight.w300,
