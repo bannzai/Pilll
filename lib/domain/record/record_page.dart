@@ -111,9 +111,14 @@ class RecordPage extends HookWidget {
           if (currentPillSheet != null) ...[
             _pillSheet(context, currentPillSheet, store),
             SizedBox(height: 40),
-            currentPillSheet.allTaken
-                ? _cancelTakeButton(currentPillSheet, store)
-                : _takenButton(context, currentPillSheet, store),
+            if (currentPillSheet.inNotTakenDuration)
+              _notTakenButton(context, currentPillSheet, store),
+            if (!currentPillSheet.inNotTakenDuration &&
+                currentPillSheet.allTaken)
+              _cancelTakeButton(currentPillSheet, store),
+            if (!currentPillSheet.allTaken &&
+                !currentPillSheet.inNotTakenDuration)
+              _takenButton(context, currentPillSheet, store),
           ],
           Spacer(),
         ],
@@ -206,6 +211,17 @@ class RecordPage extends HookWidget {
     return TertiaryButton(
       text: "飲んでない",
       onPressed: () => _cancelTake(pillSheet, store),
+    );
+  }
+
+  Widget _notTakenButton(
+    BuildContext context,
+    PillSheetModel pillSheet,
+    PillSheetStateStore store,
+  ) {
+    return TertiaryButton(
+      text: _notificationString(pillSheet),
+      onPressed: () {},
     );
   }
 
