@@ -134,6 +134,7 @@ class InitialSetting4Page extends HookWidget {
               Column(
                 children: [
                   RichText(
+                    textAlign: TextAlign.center,
                     text: TextSpan(
                       children: [
                         TextSpan(
@@ -163,7 +164,7 @@ class InitialSetting4Page extends HookWidget {
                             },
                         ),
                         TextSpan(
-                          text: "\nを読んで、利用をはじめてください",
+                          text: "を読んで\n利用をはじめてください",
                           style: FontType.sSmallSentence
                               .merge(TextColorStyle.gray),
                         ),
