@@ -105,16 +105,17 @@ class RecordPage extends HookWidget {
                 ),
             ],
           ),
+          SizedBox(height: 97),
           if (currentPillSheet == null)
             _empty(store, settingState.entity.pillSheetType),
           if (currentPillSheet != null) ...[
             _pillSheet(context, currentPillSheet, store),
-            SizedBox(height: 24),
+            SizedBox(height: 40),
             currentPillSheet.allTaken
                 ? _cancelTakeButton(currentPillSheet, store)
                 : _takenButton(context, currentPillSheet, store),
           ],
-          SizedBox(height: 8),
+          Spacer(),
         ],
       ),
     );
