@@ -71,12 +71,29 @@ class ReminderTimesPage extends HookWidget {
     }
     return Dismissible(
       key: UniqueKey(),
+      direction: DismissDirection.endToStart,
       onDismissed: state.entity.reminderTimes.length == 1
           ? null
           : (direction) {
               store.deleteReminderTimes(number - 1);
             },
-      background: Container(color: Colors.red),
+      background: Container(
+        color: Colors.red,
+        child: Container(
+          width: 40,
+          child: Padding(
+            padding: const EdgeInsets.all(20.0),
+            child: Align(
+              alignment: Alignment.centerRight,
+              child: Text(
+                "削除",
+                style: FontType.assistingBold.merge(TextColorStyle.white),
+                textAlign: TextAlign.right,
+              ),
+            ),
+          ),
+        ),
+      ),
       child: body,
     );
   }
