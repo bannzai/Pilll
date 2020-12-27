@@ -138,7 +138,8 @@ class InitialSetting4Page extends HookWidget {
                       children: [
                         TextSpan(
                           text: "プライバシーポリシー",
-                          style: FontType.mini.merge(TextColorStyle.link),
+                          style: FontType.sSmallSentence
+                              .merge(TextColorStyle.link),
                           recognizer: TapGestureRecognizer()
                             ..onTap = () {
                               launch(
@@ -148,11 +149,13 @@ class InitialSetting4Page extends HookWidget {
                         ),
                         TextSpan(
                           text: "と",
-                          style: FontType.mini.merge(TextColorStyle.gray),
+                          style: FontType.sSmallSentence
+                              .merge(TextColorStyle.gray),
                         ),
                         TextSpan(
                           text: "利用規約",
-                          style: FontType.mini.merge(TextColorStyle.link),
+                          style: FontType.sSmallSentence
+                              .merge(TextColorStyle.link),
                           recognizer: TapGestureRecognizer()
                             ..onTap = () {
                               launch("https://bannzai.github.io/Pilll/Terms",
@@ -160,8 +163,9 @@ class InitialSetting4Page extends HookWidget {
                             },
                         ),
                         TextSpan(
-                          text: "を読んで、利用をはじめてください",
-                          style: FontType.mini.merge(TextColorStyle.gray),
+                          text: "\nを読んで、利用をはじめてください",
+                          style: FontType.sSmallSentence
+                              .merge(TextColorStyle.gray),
                         ),
                       ],
                     ),
