@@ -255,7 +255,7 @@ class CalendarDayTile extends StatelessWidget {
                               .weekdayColor()
                               .withAlpha((255 * 0.4).floor())
                           : weekday.weekdayColor(),
-                    ).merge(FontType.componentTitle),
+                    ).merge(FontType.gridElement),
                   ),
                 ),
               ),
