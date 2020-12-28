@@ -18,7 +18,7 @@ class PrimaryButton extends StatelessWidget {
       width: 180,
       height: 44,
       child: RaisedButton(
-        child: Text(text),
+        child: Text(text, style: ButtonTextStyle.main),
         onPressed: onPressed,
       ),
     );
