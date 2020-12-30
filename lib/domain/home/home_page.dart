@@ -51,23 +51,23 @@ class _HomePageState extends State<HomePage>
                 unselectedLabelColor: TextColor.gray,
                 tabs: <Tab>[
                   Tab(
-                      text: "ピル",
-                      icon: SvgPicture.asset("images/tab_icon_pill.svg",
-                          color: _tabController.index == 0
-                              ? PilllColors.secondary
-                              : TextColor.gray)),
+                    text: "ピル",
+                    icon: SvgPicture.asset(_tabController.index == 0
+                        ? "images/tab_icon_pill_enable.svg"
+                        : "images/tab_icon_pill_disable.svg"),
+                  ),
                   Tab(
-                      text: DateTimeFormatter.slashYearAndMonth(today()),
-                      icon: SvgPicture.asset("images/tab_icon_calendar.svg",
-                          color: _tabController.index == 1
-                              ? PilllColors.secondary
-                              : TextColor.gray)),
+                    text: DateTimeFormatter.slashYearAndMonth(today()),
+                    icon: SvgPicture.asset(_tabController.index == 1
+                        ? "images/tab_icon_calendar_enable.svg"
+                        : "images/tab_icon_calendar_disable.svg"),
+                  ),
                   Tab(
-                      text: "設定",
-                      icon: SvgPicture.asset("images/tab_icon_setting.svg",
-                          color: _tabController.index == 2
-                              ? PilllColors.secondary
-                              : TextColor.gray)),
+                    text: "設定",
+                    icon: SvgPicture.asset(_tabController.index == 2
+                        ? "images/tab_icon_setting_enable.svg"
+                        : "images/tab_icon_setting_disable.svg"),
+                  ),
                 ],
               ),
             ),
