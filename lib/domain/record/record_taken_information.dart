@@ -70,7 +70,7 @@ class RecordTakenInformation extends StatelessWidget {
             "💊 今日飲むピル",
             style: FontType.assisting.merge(TextColorStyle.noshime),
           ),
-          if (isExistsPillSheet) SizedBox(height: 4),
+          if (isExistsPillSheet) SizedBox(height: 10),
           if (!isExistsPillSheet) SizedBox(height: 12),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
