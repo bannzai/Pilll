@@ -1,8 +1,8 @@
 import 'package:Pilll/database/database.dart';
 import 'package:Pilll/entity/firestore_timestamp_converter.dart';
 import 'package:Pilll/entity/pill_sheet.dart';
+import 'package:Pilll/entity/user.dart';
 import 'package:Pilll/entity/user_error.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:riverpod/all.dart';
 
 abstract class PillSheetServiceInterface {
@@ -20,33 +20,13 @@ class PillSheetService extends PillSheetServiceInterface {
   final DatabaseConnection _database;
 
   PillSheetService(this._database);
-
-  PillSheetModel _filterForLatestPillSheet(QuerySnapshot snapshot) {
-    if (snapshot.docs.isEmpty) return null;
-    if (!snapshot.docs.last.exists) return null;
-    var document = snapshot.docs.last;
-
-    var data = document.data();
-    data["id"] = document.id;
-    var pillSheetModel = PillSheetModel.fromJson(data);
-
-    if (pillSheetModel.deletedAt != null) return null;
-    if (pillSheetModel.isEnded) return null;
-    return pillSheetModel;
-  }
-
-  Query _queryOfFetchLastPillSheet() {
-    return _database
-        .pillSheetsReference()
-        .orderBy(PillSheetFirestoreKey.createdAt)
-        .limitToLast(1);
-  }
-
   @override
   Future<PillSheetModel> fetchLast() {
-    return _queryOfFetchLastPillSheet()
+    return _database
+        .userReference()
         .get()
-        .then((event) => _filterForLatestPillSheet(event));
+        .then((value) => User.fromJson(value.data()))
+        .then((user) => user.latestPillSheet);
   }
 
   @override
@@ -84,9 +64,10 @@ class PillSheetService extends PillSheetServiceInterface {
   }
 
   Stream<PillSheetModel> subscribeForLatestPillSheet() {
-    return _queryOfFetchLastPillSheet()
+    return _database
+        .userReference()
         .snapshots()
-        .map((event) => _filterForLatestPillSheet(event));
+        .map((event) => User.fromJson(event.data()).latestPillSheet);
   }
 }
 
