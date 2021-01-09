@@ -1,13 +1,13 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'launch_info.dart';
+part of 'package.dart';
 
 // **************************************************************************
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_LaunchInfo _$_$_LaunchInfoFromJson(Map<String, dynamic> json) {
-  return _$_LaunchInfo(
+_$_Package _$_$_PackageFromJson(Map<String, dynamic> json) {
+  return _$_Package(
     latestOS: json['latestOS'] as String,
     appName: json['appName'] as String,
     appVersion: json['appVersion'] as String,
@@ -15,7 +15,7 @@ _$_LaunchInfo _$_$_LaunchInfoFromJson(Map<String, dynamic> json) {
   );
 }
 
-Map<String, dynamic> _$_$_LaunchInfoToJson(_$_LaunchInfo instance) =>
+Map<String, dynamic> _$_$_PackageToJson(_$_Package instance) =>
     <String, dynamic>{
       'latestOS': instance.latestOS,
       'appName': instance.appName,
