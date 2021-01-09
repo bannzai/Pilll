@@ -95,11 +95,10 @@ class UserService extends UserServiceInterface {
   }
 
   Future<void> saveLaunchInfo() {
-    final os = Platform.operatingSystem;
     return PackageInfo.fromPlatform().then((packageInfo) {
       final launchInfo = LaunchInfo(
-          latestOS: os,
-          appName: packageInfo.appName,
+          latestOS: Platform.operatingSystem,
+          appName: packageInfo.appName ?? 'unknown',
           buildNumber: packageInfo.buildNumber,
           appVersion: packageInfo.version);
       return _database.userReference().set(
