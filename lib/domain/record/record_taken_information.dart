@@ -23,7 +23,7 @@ class RecordTakenInformation extends StatelessWidget {
   String _formattedToday() => DateTimeFormatter.monthAndDay(this.today);
 
   String _todayWeekday() => DateTimeFormatter.weekday(this.today);
-  bool get pillSheetIsValid => pillSheetModel != null || !state.isHidden;
+  bool get pillSheetIsValid => pillSheetModel != null && !state.isHidden;
 
   @override
   Widget build(BuildContext context) {
