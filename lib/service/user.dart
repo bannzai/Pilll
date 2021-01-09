@@ -2,7 +2,7 @@ import 'dart:io';
 
 import 'package:Pilll/analytics.dart';
 import 'package:Pilll/database/database.dart';
-import 'package:Pilll/entity/launch_info.dart';
+import 'package:Pilll/entity/package.dart';
 import 'package:Pilll/entity/user.dart';
 import 'package:Pilll/error_log.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
@@ -96,14 +96,14 @@ class UserService extends UserServiceInterface {
 
   Future<void> saveLaunchInfo() {
     final os = Platform.operatingSystem;
-    return PackageInfo.fromPlatform().then((packageInfo) {
-      final launchInfo = LaunchInfo(
+    return PackageInfo.fromPlatform().then((info) {
+      final packageInfo = Package(
           latestOS: os,
-          appName: packageInfo.appName,
-          buildNumber: packageInfo.buildNumber,
-          appVersion: packageInfo.version);
+          appName: info.appName,
+          buildNumber: info.buildNumber,
+          appVersion: info.version);
       return _database.userReference().set(
-          {UserFirestoreFieldKeys.launchInfo: launchInfo.toJson()},
+          {UserFirestoreFieldKeys.packageInfo: packageInfo.toJson()},
           SetOptions(merge: true));
     });
   }
