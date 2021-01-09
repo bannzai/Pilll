@@ -172,7 +172,7 @@ class SettingsPage extends HookWidget {
                     title: "種類",
                     backButtonIsHidden: false,
                     selected: (type) {
-                      if (pillSheetState.entity != null)
+                      if (!pillSheetState.isHidden)
                         transactionModifier.modifyPillSheetType(type);
                       else
                         settingStore.modifyType(type);
