@@ -186,7 +186,7 @@ class SettingsPage extends HookWidget {
               },
             );
           }(),
-          if (pillSheetState.entity != null) ...[
+          if (!pillSheetState.isHidden) ...[
             SettingListTitleRowModel(
                 title: "今日飲むピル番号の変更",
                 onTap: () {
