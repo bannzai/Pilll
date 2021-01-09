@@ -1,28 +1,28 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
 
-part of 'launch_info.dart';
+part of 'package.dart';
 
 // **************************************************************************
 // FreezedGenerator
 // **************************************************************************
 
 T _$identity<T>(T value) => value;
-LaunchInfo _$LaunchInfoFromJson(Map<String, dynamic> json) {
-  return _LaunchInfo.fromJson(json);
+Package _$PackageFromJson(Map<String, dynamic> json) {
+  return _Package.fromJson(json);
 }
 
 /// @nodoc
-class _$LaunchInfoTearOff {
-  const _$LaunchInfoTearOff();
+class _$PackageTearOff {
+  const _$PackageTearOff();
 
 // ignore: unused_element
-  _LaunchInfo call(
+  _Package call(
       {@required String latestOS,
       @required String appName,
       @required String appVersion,
       @required String buildNumber}) {
-    return _LaunchInfo(
+    return _Package(
       latestOS: latestOS,
       appName: appName,
       appVersion: appVersion,
@@ -31,42 +31,41 @@ class _$LaunchInfoTearOff {
   }
 
 // ignore: unused_element
-  LaunchInfo fromJson(Map<String, Object> json) {
-    return LaunchInfo.fromJson(json);
+  Package fromJson(Map<String, Object> json) {
+    return Package.fromJson(json);
   }
 }
 
 /// @nodoc
 // ignore: unused_element
-const $LaunchInfo = _$LaunchInfoTearOff();
+const $Package = _$PackageTearOff();
 
 /// @nodoc
-mixin _$LaunchInfo {
+mixin _$Package {
   String get latestOS;
   String get appName;
   String get appVersion;
   String get buildNumber;
 
   Map<String, dynamic> toJson();
-  $LaunchInfoCopyWith<LaunchInfo> get copyWith;
+  $PackageCopyWith<Package> get copyWith;
 }
 
 /// @nodoc
-abstract class $LaunchInfoCopyWith<$Res> {
-  factory $LaunchInfoCopyWith(
-          LaunchInfo value, $Res Function(LaunchInfo) then) =
-      _$LaunchInfoCopyWithImpl<$Res>;
+abstract class $PackageCopyWith<$Res> {
+  factory $PackageCopyWith(Package value, $Res Function(Package) then) =
+      _$PackageCopyWithImpl<$Res>;
   $Res call(
       {String latestOS, String appName, String appVersion, String buildNumber});
 }
 
 /// @nodoc
-class _$LaunchInfoCopyWithImpl<$Res> implements $LaunchInfoCopyWith<$Res> {
-  _$LaunchInfoCopyWithImpl(this._value, this._then);
+class _$PackageCopyWithImpl<$Res> implements $PackageCopyWith<$Res> {
+  _$PackageCopyWithImpl(this._value, this._then);
 
-  final LaunchInfo _value;
+  final Package _value;
   // ignore: unused_field
-  final $Res Function(LaunchInfo) _then;
+  final $Res Function(Package) _then;
 
   @override
   $Res call({
@@ -87,24 +86,22 @@ class _$LaunchInfoCopyWithImpl<$Res> implements $LaunchInfoCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class _$LaunchInfoCopyWith<$Res> implements $LaunchInfoCopyWith<$Res> {
-  factory _$LaunchInfoCopyWith(
-          _LaunchInfo value, $Res Function(_LaunchInfo) then) =
-      __$LaunchInfoCopyWithImpl<$Res>;
+abstract class _$PackageCopyWith<$Res> implements $PackageCopyWith<$Res> {
+  factory _$PackageCopyWith(_Package value, $Res Function(_Package) then) =
+      __$PackageCopyWithImpl<$Res>;
   @override
   $Res call(
       {String latestOS, String appName, String appVersion, String buildNumber});
 }
 
 /// @nodoc
-class __$LaunchInfoCopyWithImpl<$Res> extends _$LaunchInfoCopyWithImpl<$Res>
-    implements _$LaunchInfoCopyWith<$Res> {
-  __$LaunchInfoCopyWithImpl(
-      _LaunchInfo _value, $Res Function(_LaunchInfo) _then)
-      : super(_value, (v) => _then(v as _LaunchInfo));
+class __$PackageCopyWithImpl<$Res> extends _$PackageCopyWithImpl<$Res>
+    implements _$PackageCopyWith<$Res> {
+  __$PackageCopyWithImpl(_Package _value, $Res Function(_Package) _then)
+      : super(_value, (v) => _then(v as _Package));
 
   @override
-  _LaunchInfo get _value => super._value as _LaunchInfo;
+  _Package get _value => super._value as _Package;
 
   @override
   $Res call({
@@ -113,7 +110,7 @@ class __$LaunchInfoCopyWithImpl<$Res> extends _$LaunchInfoCopyWithImpl<$Res>
     Object appVersion = freezed,
     Object buildNumber = freezed,
   }) {
-    return _then(_LaunchInfo(
+    return _then(_Package(
       latestOS: latestOS == freezed ? _value.latestOS : latestOS as String,
       appName: appName == freezed ? _value.appName : appName as String,
       appVersion:
@@ -127,8 +124,8 @@ class __$LaunchInfoCopyWithImpl<$Res> extends _$LaunchInfoCopyWithImpl<$Res>
 @JsonSerializable()
 
 /// @nodoc
-class _$_LaunchInfo extends _LaunchInfo {
-  _$_LaunchInfo(
+class _$_Package extends _Package {
+  _$_Package(
       {@required this.latestOS,
       @required this.appName,
       @required this.appVersion,
@@ -139,8 +136,8 @@ class _$_LaunchInfo extends _LaunchInfo {
         assert(buildNumber != null),
         super._();
 
-  factory _$_LaunchInfo.fromJson(Map<String, dynamic> json) =>
-      _$_$_LaunchInfoFromJson(json);
+  factory _$_Package.fromJson(Map<String, dynamic> json) =>
+      _$_$_PackageFromJson(json);
 
   @override
   final String latestOS;
@@ -153,13 +150,13 @@ class _$_LaunchInfo extends _LaunchInfo {
 
   @override
   String toString() {
-    return 'LaunchInfo(latestOS: $latestOS, appName: $appName, appVersion: $appVersion, buildNumber: $buildNumber)';
+    return 'Package(latestOS: $latestOS, appName: $appName, appVersion: $appVersion, buildNumber: $buildNumber)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _LaunchInfo &&
+        (other is _Package &&
             (identical(other.latestOS, latestOS) ||
                 const DeepCollectionEquality()
                     .equals(other.latestOS, latestOS)) &&
@@ -183,25 +180,24 @@ class _$_LaunchInfo extends _LaunchInfo {
       const DeepCollectionEquality().hash(buildNumber);
 
   @override
-  _$LaunchInfoCopyWith<_LaunchInfo> get copyWith =>
-      __$LaunchInfoCopyWithImpl<_LaunchInfo>(this, _$identity);
+  _$PackageCopyWith<_Package> get copyWith =>
+      __$PackageCopyWithImpl<_Package>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_LaunchInfoToJson(this);
+    return _$_$_PackageToJson(this);
   }
 }
 
-abstract class _LaunchInfo extends LaunchInfo {
-  _LaunchInfo._() : super._();
-  factory _LaunchInfo(
+abstract class _Package extends Package {
+  _Package._() : super._();
+  factory _Package(
       {@required String latestOS,
       @required String appName,
       @required String appVersion,
-      @required String buildNumber}) = _$_LaunchInfo;
+      @required String buildNumber}) = _$_Package;
 
-  factory _LaunchInfo.fromJson(Map<String, dynamic> json) =
-      _$_LaunchInfo.fromJson;
+  factory _Package.fromJson(Map<String, dynamic> json) = _$_Package.fromJson;
 
   @override
   String get latestOS;
@@ -212,5 +208,5 @@ abstract class _LaunchInfo extends LaunchInfo {
   @override
   String get buildNumber;
   @override
-  _$LaunchInfoCopyWith<_LaunchInfo> get copyWith;
+  _$PackageCopyWith<_Package> get copyWith;
 }

@@ -161,7 +161,7 @@ class _$UserTearOff {
 // ignore: unused_element
   _User call(
       {@required String anonymouseUserID,
-      @JsonKey(name: 'settings') Setting setting,
+      @JsonKey(name: "settings") Setting setting,
       bool migratedFlutter = false}) {
     return _User(
       anonymouseUserID: anonymouseUserID,
@@ -183,7 +183,7 @@ const $User = _$UserTearOff();
 /// @nodoc
 mixin _$User {
   String get anonymouseUserID;
-  @JsonKey(name: 'settings')
+  @JsonKey(name: "settings")
   Setting get setting;
   bool get migratedFlutter;
 
@@ -197,7 +197,7 @@ abstract class $UserCopyWith<$Res> {
       _$UserCopyWithImpl<$Res>;
   $Res call(
       {String anonymouseUserID,
-      @JsonKey(name: 'settings') Setting setting,
+      @JsonKey(name: "settings") Setting setting,
       bool migratedFlutter});
 
   $SettingCopyWith<$Res> get setting;
@@ -246,7 +246,7 @@ abstract class _$UserCopyWith<$Res> implements $UserCopyWith<$Res> {
   @override
   $Res call(
       {String anonymouseUserID,
-      @JsonKey(name: 'settings') Setting setting,
+      @JsonKey(name: "settings") Setting setting,
       bool migratedFlutter});
 
   @override
@@ -286,7 +286,7 @@ class __$UserCopyWithImpl<$Res> extends _$UserCopyWithImpl<$Res>
 class _$_User extends _User {
   _$_User(
       {@required this.anonymouseUserID,
-      @JsonKey(name: 'settings') this.setting,
+      @JsonKey(name: "settings") this.setting,
       this.migratedFlutter = false})
       : assert(anonymouseUserID != null),
         assert(migratedFlutter != null),
@@ -298,7 +298,7 @@ class _$_User extends _User {
   @override
   final String anonymouseUserID;
   @override
-  @JsonKey(name: 'settings')
+  @JsonKey(name: "settings")
   final Setting setting;
   @JsonKey(defaultValue: false)
   @override
@@ -345,7 +345,7 @@ abstract class _User extends User {
   _User._() : super._();
   factory _User(
       {@required String anonymouseUserID,
-      @JsonKey(name: 'settings') Setting setting,
+      @JsonKey(name: "settings") Setting setting,
       bool migratedFlutter}) = _$_User;
 
   factory _User.fromJson(Map<String, dynamic> json) = _$_User.fromJson;
@@ -353,7 +353,7 @@ abstract class _User extends User {
   @override
   String get anonymouseUserID;
   @override
-  @JsonKey(name: 'settings')
+  @JsonKey(name: "settings")
   Setting get setting;
   @override
   bool get migratedFlutter;
