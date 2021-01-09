@@ -108,8 +108,7 @@ class RecordPage extends HookWidget {
             ],
           ),
           SizedBox(height: 97),
-          if (currentPillSheet == null)
-            _empty(store, settingState.entity.pillSheetType),
+          if (state.isInvalid) _empty(store, settingState.entity.pillSheetType),
           if (!state.isInvalid) ...[
             _pillSheet(context, currentPillSheet, store),
             SizedBox(height: 40),
