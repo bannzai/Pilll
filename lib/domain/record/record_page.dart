@@ -110,7 +110,7 @@ class RecordPage extends HookWidget {
           SizedBox(height: 97),
           if (currentPillSheet == null)
             _empty(store, settingState.entity.pillSheetType),
-          if (!state.isHidden) ...[
+          if (!state.isInvalid) ...[
             _pillSheet(context, currentPillSheet, store),
             SizedBox(height: 40),
             if (currentPillSheet.inNotTakenDuration)
@@ -170,7 +170,7 @@ class RecordPage extends HookWidget {
   }
 
   String _notificationString(PillSheetState state) {
-    if (state.isHidden) {
+    if (state.isInvalid) {
       return "";
     }
     final pillSheet = state.entity;

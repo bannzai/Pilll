@@ -172,7 +172,7 @@ class SettingsPage extends HookWidget {
                     title: "種類",
                     backButtonIsHidden: false,
                     selected: (type) {
-                      if (!pillSheetState.isHidden)
+                      if (!pillSheetState.isInvalid)
                         transactionModifier.modifyPillSheetType(type);
                       else
                         settingStore.modifyType(type);
@@ -186,7 +186,7 @@ class SettingsPage extends HookWidget {
               },
             );
           }(),
-          if (!pillSheetState.isHidden) ...[
+          if (!pillSheetState.isInvalid) ...[
             SettingListTitleRowModel(
                 title: "今日飲むピル番号の変更",
                 onTap: () {
