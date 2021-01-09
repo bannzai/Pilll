@@ -23,7 +23,7 @@ class RecordTakenInformation extends StatelessWidget {
   String _formattedToday() => DateTimeFormatter.monthAndDay(this.today);
 
   String _todayWeekday() => DateTimeFormatter.weekday(this.today);
-  bool get pillSheetIsHidden => pillSheetModel != null || state.isHidden;
+  bool get pillSheetIsValid => pillSheetModel != null || !state.isHidden;
 
   @override
   Widget build(BuildContext context) {
@@ -72,14 +72,14 @@ class RecordTakenInformation extends StatelessWidget {
             "💊 今日飲むピル",
             style: FontType.assisting.merge(TextColorStyle.noshime),
           ),
-          if (pillSheetIsHidden) SizedBox(height: 10),
-          if (!pillSheetIsHidden) SizedBox(height: 12),
+          if (pillSheetIsValid) SizedBox(height: 10),
+          if (!pillSheetIsValid) SizedBox(height: 12),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.baseline,
             textBaseline: TextBaseline.ideographic,
             children: <Widget>[
-              if (pillSheetIsHidden) ...[
+              if (pillSheetIsValid) ...[
                 if (!pillSheetModel.inNotTakenDuration) ...[
                   Text("${pillSheetModel.todayPillNumber}",
                       style: FontType.xHugeNumber.merge(TextColorStyle.main)),
@@ -94,7 +94,7 @@ class RecordTakenInformation extends StatelessWidget {
                   ),
                 ],
               ],
-              if (!pillSheetIsHidden) ...[
+              if (!pillSheetIsValid) ...[
                 Text("-",
                     style: FontType.assisting.merge(TextColorStyle.noshime)),
               ],
@@ -103,7 +103,7 @@ class RecordTakenInformation extends StatelessWidget {
         ],
       ),
       onTap: () {
-        if (!pillSheetIsHidden) {
+        if (!pillSheetIsValid) {
           return;
         }
         this.onPressed();
