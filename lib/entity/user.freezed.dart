@@ -162,10 +162,12 @@ class _$UserTearOff {
   _User call(
       {@required String anonymouseUserID,
       @JsonKey(name: "settings") Setting setting,
+      PillSheetModel latestPillSheet,
       bool migratedFlutter = false}) {
     return _User(
       anonymouseUserID: anonymouseUserID,
       setting: setting,
+      latestPillSheet: latestPillSheet,
       migratedFlutter: migratedFlutter,
     );
   }
@@ -185,6 +187,7 @@ mixin _$User {
   String get anonymouseUserID;
   @JsonKey(name: "settings")
   Setting get setting;
+  PillSheetModel get latestPillSheet;
   bool get migratedFlutter;
 
   Map<String, dynamic> toJson();
@@ -198,9 +201,11 @@ abstract class $UserCopyWith<$Res> {
   $Res call(
       {String anonymouseUserID,
       @JsonKey(name: "settings") Setting setting,
+      PillSheetModel latestPillSheet,
       bool migratedFlutter});
 
   $SettingCopyWith<$Res> get setting;
+  $PillSheetModelCopyWith<$Res> get latestPillSheet;
 }
 
 /// @nodoc
@@ -215,6 +220,7 @@ class _$UserCopyWithImpl<$Res> implements $UserCopyWith<$Res> {
   $Res call({
     Object anonymouseUserID = freezed,
     Object setting = freezed,
+    Object latestPillSheet = freezed,
     Object migratedFlutter = freezed,
   }) {
     return _then(_value.copyWith(
@@ -222,6 +228,9 @@ class _$UserCopyWithImpl<$Res> implements $UserCopyWith<$Res> {
           ? _value.anonymouseUserID
           : anonymouseUserID as String,
       setting: setting == freezed ? _value.setting : setting as Setting,
+      latestPillSheet: latestPillSheet == freezed
+          ? _value.latestPillSheet
+          : latestPillSheet as PillSheetModel,
       migratedFlutter: migratedFlutter == freezed
           ? _value.migratedFlutter
           : migratedFlutter as bool,
@@ -237,6 +246,16 @@ class _$UserCopyWithImpl<$Res> implements $UserCopyWith<$Res> {
       return _then(_value.copyWith(setting: value));
     });
   }
+
+  @override
+  $PillSheetModelCopyWith<$Res> get latestPillSheet {
+    if (_value.latestPillSheet == null) {
+      return null;
+    }
+    return $PillSheetModelCopyWith<$Res>(_value.latestPillSheet, (value) {
+      return _then(_value.copyWith(latestPillSheet: value));
+    });
+  }
 }
 
 /// @nodoc
@@ -247,10 +266,13 @@ abstract class _$UserCopyWith<$Res> implements $UserCopyWith<$Res> {
   $Res call(
       {String anonymouseUserID,
       @JsonKey(name: "settings") Setting setting,
+      PillSheetModel latestPillSheet,
       bool migratedFlutter});
 
   @override
   $SettingCopyWith<$Res> get setting;
+  @override
+  $PillSheetModelCopyWith<$Res> get latestPillSheet;
 }
 
 /// @nodoc
@@ -266,6 +288,7 @@ class __$UserCopyWithImpl<$Res> extends _$UserCopyWithImpl<$Res>
   $Res call({
     Object anonymouseUserID = freezed,
     Object setting = freezed,
+    Object latestPillSheet = freezed,
     Object migratedFlutter = freezed,
   }) {
     return _then(_User(
@@ -273,6 +296,9 @@ class __$UserCopyWithImpl<$Res> extends _$UserCopyWithImpl<$Res>
           ? _value.anonymouseUserID
           : anonymouseUserID as String,
       setting: setting == freezed ? _value.setting : setting as Setting,
+      latestPillSheet: latestPillSheet == freezed
+          ? _value.latestPillSheet
+          : latestPillSheet as PillSheetModel,
       migratedFlutter: migratedFlutter == freezed
           ? _value.migratedFlutter
           : migratedFlutter as bool,
@@ -287,6 +313,7 @@ class _$_User extends _User {
   _$_User(
       {@required this.anonymouseUserID,
       @JsonKey(name: "settings") this.setting,
+      this.latestPillSheet,
       this.migratedFlutter = false})
       : assert(anonymouseUserID != null),
         assert(migratedFlutter != null),
@@ -300,13 +327,15 @@ class _$_User extends _User {
   @override
   @JsonKey(name: "settings")
   final Setting setting;
+  @override
+  final PillSheetModel latestPillSheet;
   @JsonKey(defaultValue: false)
   @override
   final bool migratedFlutter;
 
   @override
   String toString() {
-    return 'User(anonymouseUserID: $anonymouseUserID, setting: $setting, migratedFlutter: $migratedFlutter)';
+    return 'User(anonymouseUserID: $anonymouseUserID, setting: $setting, latestPillSheet: $latestPillSheet, migratedFlutter: $migratedFlutter)';
   }
 
   @override
@@ -319,6 +348,9 @@ class _$_User extends _User {
             (identical(other.setting, setting) ||
                 const DeepCollectionEquality()
                     .equals(other.setting, setting)) &&
+            (identical(other.latestPillSheet, latestPillSheet) ||
+                const DeepCollectionEquality()
+                    .equals(other.latestPillSheet, latestPillSheet)) &&
             (identical(other.migratedFlutter, migratedFlutter) ||
                 const DeepCollectionEquality()
                     .equals(other.migratedFlutter, migratedFlutter)));
@@ -329,6 +361,7 @@ class _$_User extends _User {
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(anonymouseUserID) ^
       const DeepCollectionEquality().hash(setting) ^
+      const DeepCollectionEquality().hash(latestPillSheet) ^
       const DeepCollectionEquality().hash(migratedFlutter);
 
   @override
@@ -346,6 +379,7 @@ abstract class _User extends User {
   factory _User(
       {@required String anonymouseUserID,
       @JsonKey(name: "settings") Setting setting,
+      PillSheetModel latestPillSheet,
       bool migratedFlutter}) = _$_User;
 
   factory _User.fromJson(Map<String, dynamic> json) = _$_User.fromJson;
@@ -355,6 +389,8 @@ abstract class _User extends User {
   @override
   @JsonKey(name: "settings")
   Setting get setting;
+  @override
+  PillSheetModel get latestPillSheet;
   @override
   bool get migratedFlutter;
   @override
