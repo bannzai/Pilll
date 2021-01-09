@@ -23,6 +23,10 @@ _$_User _$_$_UserFromJson(Map<String, dynamic> json) {
     setting: json['settings'] == null
         ? null
         : Setting.fromJson(json['settings'] as Map<String, dynamic>),
+    latestPillSheet: json['latestPillSheet'] == null
+        ? null
+        : PillSheetModel.fromJson(
+            json['latestPillSheet'] as Map<String, dynamic>),
     migratedFlutter: json['migratedFlutter'] as bool ?? false,
   );
 }
@@ -30,5 +34,6 @@ _$_User _$_$_UserFromJson(Map<String, dynamic> json) {
 Map<String, dynamic> _$_$_UserToJson(_$_User instance) => <String, dynamic>{
       'anonymouseUserID': instance.anonymouseUserID,
       'settings': instance.setting,
+      'latestPillSheet': instance.latestPillSheet,
       'migratedFlutter': instance.migratedFlutter,
     };

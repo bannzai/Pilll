@@ -4,6 +4,7 @@ import 'package:Pilll/domain/record/record_taken_information.dart';
 import 'package:Pilll/entity/pill_sheet.dart';
 import 'package:Pilll/entity/pill_sheet_type.dart';
 import 'package:Pilll/entity/weekday.dart';
+import 'package:Pilll/state/pill_sheet.dart';
 import 'package:Pilll/store/pill_sheet.dart';
 import 'package:Pilll/store/setting.dart';
 import 'package:Pilll/components/atoms/buttons.dart';
@@ -30,7 +31,8 @@ class RecordPage extends HookWidget {
   }
 
   Widget _body(BuildContext context) {
-    final currentPillSheet = useProvider(pillSheetStoreProvider.state).entity;
+    final state = useProvider(pillSheetStoreProvider.state);
+    final currentPillSheet = state.entity;
     final store = useProvider(pillSheetStoreProvider);
     final settingState = useProvider(settingStoreProvider.state);
     if (settingState.entity == null || !store.firstLoadIsEnded) {
@@ -44,7 +46,7 @@ class RecordPage extends HookWidget {
             children: [
               RecordTakenInformation(
                 today: DateTime.now(),
-                pillSheetModel: currentPillSheet,
+                state: state,
                 onPressed: () {
                   showModalBottomSheet(
                     context: context,
@@ -90,14 +92,14 @@ class RecordPage extends HookWidget {
                   );
                 },
               ),
-              if (_notificationString(currentPillSheet).isNotEmpty)
+              if (_notificationString(state).isNotEmpty)
                 ConstrainedBox(
                   constraints: BoxConstraints.expand(height: 26),
                   child: Container(
                     height: 26,
                     color: PilllColors.secondary,
                     child: Center(
-                      child: Text(_notificationString(currentPillSheet),
+                      child: Text(_notificationString(state),
                           style:
                               FontType.assisting.merge(TextColorStyle.white)),
                     ),
@@ -106,13 +108,12 @@ class RecordPage extends HookWidget {
             ],
           ),
           SizedBox(height: 97),
-          if (currentPillSheet == null)
-            _empty(store, settingState.entity.pillSheetType),
-          if (currentPillSheet != null) ...[
+          if (state.isInvalid) _empty(store, settingState.entity.pillSheetType),
+          if (!state.isInvalid) ...[
             _pillSheet(context, currentPillSheet, store),
             SizedBox(height: 40),
             if (currentPillSheet.inNotTakenDuration)
-              _notTakenButton(context, currentPillSheet, store),
+              _notTakenButton(context, state, store),
             if (!currentPillSheet.inNotTakenDuration &&
                 currentPillSheet.allTaken)
               _cancelTakeButton(currentPillSheet, store),
@@ -167,13 +168,16 @@ class RecordPage extends HookWidget {
         });
   }
 
-  String _notificationString(PillSheetModel currentPillSheet) {
-    if (currentPillSheet == null) {
+  String _notificationString(PillSheetState state) {
+    if (state.isInvalid) {
       return "";
     }
-    if (currentPillSheet.typeInfo.dosingPeriod <
-        currentPillSheet.todayPillNumber) {
-      switch (currentPillSheet.pillSheetType) {
+    final pillSheet = state.entity;
+    if (pillSheet == null) {
+      return "";
+    }
+    if (pillSheet.typeInfo.dosingPeriod < pillSheet.todayPillNumber) {
+      switch (pillSheet.pillSheetType) {
         case PillSheetType.pillsheet_21:
           return "休薬期間中";
         case PillSheetType.pillsheet_28_4:
@@ -184,11 +188,10 @@ class RecordPage extends HookWidget {
     }
 
     final threshold = 4;
-    if (currentPillSheet.typeInfo.dosingPeriod - threshold + 1 <
-        currentPillSheet.todayPillNumber) {
-      final diff = currentPillSheet.typeInfo.dosingPeriod -
-          currentPillSheet.todayPillNumber +
-          1;
+    if (pillSheet.typeInfo.dosingPeriod - threshold + 1 <
+        pillSheet.todayPillNumber) {
+      final diff =
+          pillSheet.typeInfo.dosingPeriod - pillSheet.todayPillNumber + 1;
       return "あと$diff日で偽薬期間です";
     }
 
@@ -216,11 +219,11 @@ class RecordPage extends HookWidget {
 
   Widget _notTakenButton(
     BuildContext context,
-    PillSheetModel pillSheet,
+    PillSheetState state,
     PillSheetStateStore store,
   ) {
     return TertiaryButton(
-      text: _notificationString(pillSheet),
+      text: _notificationString(state),
       onPressed: () {},
     );
   }

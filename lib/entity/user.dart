@@ -1,3 +1,4 @@
+import 'package:Pilll/entity/pill_sheet.dart';
 import 'package:Pilll/entity/setting.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
@@ -48,6 +49,7 @@ abstract class User implements _$User {
   factory User({
     @required String anonymouseUserID,
     @JsonKey(name: "settings") Setting setting,
+    PillSheetModel latestPillSheet,
     @Default(false) bool migratedFlutter,
   }) = _User;
 
