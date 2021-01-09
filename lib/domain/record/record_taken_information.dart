@@ -3,17 +3,19 @@ import 'package:Pilll/components/atoms/color.dart';
 import 'package:Pilll/components/atoms/font.dart';
 import 'package:Pilll/components/atoms/text_color.dart';
 import 'package:Pilll/entity/pill_sheet_type.dart';
+import 'package:Pilll/state/pill_sheet.dart';
 import 'package:Pilll/util/formatter/date_time_formatter.dart';
 import 'package:flutter/material.dart';
 
 class RecordTakenInformation extends StatelessWidget {
   final DateTime today;
-  final PillSheetModel pillSheetModel;
+  final PillSheetState state;
+  PillSheetModel get pillSheetModel => state.entity;
   final VoidCallback onPressed;
   const RecordTakenInformation({
     Key key,
     @required this.today,
-    @required this.pillSheetModel,
+    @required this.state,
     @required this.onPressed,
   })  : assert(today != null),
         super(key: key);
@@ -21,7 +23,7 @@ class RecordTakenInformation extends StatelessWidget {
   String _formattedToday() => DateTimeFormatter.monthAndDay(this.today);
 
   String _todayWeekday() => DateTimeFormatter.weekday(this.today);
-  bool get isExistsPillSheet => pillSheetModel != null;
+  bool get pillSheetIsValid => pillSheetModel != null && !state.isInvalid;
 
   @override
   Widget build(BuildContext context) {
@@ -70,14 +72,14 @@ class RecordTakenInformation extends StatelessWidget {
             "💊 今日飲むピル",
             style: FontType.assisting.merge(TextColorStyle.noshime),
           ),
-          if (isExistsPillSheet) SizedBox(height: 10),
-          if (!isExistsPillSheet) SizedBox(height: 12),
+          if (pillSheetIsValid) SizedBox(height: 10),
+          if (!pillSheetIsValid) SizedBox(height: 12),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             crossAxisAlignment: CrossAxisAlignment.baseline,
             textBaseline: TextBaseline.ideographic,
             children: <Widget>[
-              if (isExistsPillSheet) ...[
+              if (pillSheetIsValid) ...[
                 if (!pillSheetModel.inNotTakenDuration) ...[
                   Text("${pillSheetModel.todayPillNumber}",
                       style: FontType.xHugeNumber.merge(TextColorStyle.main)),
@@ -92,7 +94,7 @@ class RecordTakenInformation extends StatelessWidget {
                   ),
                 ],
               ],
-              if (!isExistsPillSheet) ...[
+              if (!pillSheetIsValid) ...[
                 Text("-",
                     style: FontType.assisting.merge(TextColorStyle.noshime)),
               ],
@@ -101,7 +103,7 @@ class RecordTakenInformation extends StatelessWidget {
         ],
       ),
       onTap: () {
-        if (!isExistsPillSheet) {
+        if (!pillSheetIsValid) {
           return;
         }
         this.onPressed();

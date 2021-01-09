@@ -106,13 +106,21 @@ class MenstruationCard extends HookWidget {
                   style: TextColorStyle.noshime.merge(FontType.assisting)),
             ],
           ),
-          Text(
-              pillSheetState.entity != null
-                  ? DateTimeFormatter.monthAndWeekday(menstruationDateRange(
-                          pillSheetState.entity, settingState.entity, 0)
-                      .begin)
-                  : "",
-              style: TextColorStyle.gray.merge(FontType.xBigTitle)),
+          Text(() {
+            if (pillSheetState.entity == null) {
+              return "";
+            }
+
+            for (int i = 0; i < 12; i += 1) {
+              final begin = menstruationDateRange(
+                      pillSheetState.entity, settingState.entity, i)
+                  .begin;
+              if (begin.isAfter(utility.today())) {
+                return DateTimeFormatter.monthAndWeekday(begin);
+              }
+            }
+            return "";
+          }(), style: TextColorStyle.gray.merge(FontType.xBigTitle)),
         ],
       ),
     );
