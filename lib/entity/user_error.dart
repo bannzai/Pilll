@@ -1,7 +1,9 @@
 import 'package:flutter/foundation.dart';
 
-class UserDisplayedError implements Exception {
-  final dynamic error;
+class UserDisplayedError extends Error {
   final String displayedMessage;
-  UserDisplayedError({@required this.error, @required this.displayedMessage});
+  UserDisplayedError({@required this.displayedMessage});
+
+  @override
+  String toString() => displayedMessage;
 }
