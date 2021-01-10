@@ -31,24 +31,24 @@ class DiariesStateStore extends StateNotifier<DiariesState> {
     super.dispose();
   }
 
-  void fetchListForMonth(DateTime dateTimeOfMonth) {
-    _service
+  Future<void> fetchListForMonth(DateTime dateTimeOfMonth) {
+    return _service
         .fetchListForMonth(dateTimeOfMonth)
         .then((entities) => state = state.copyWith(entities: entities));
   }
 
-  void register(Diary diary) {
+  Future<void> register(Diary diary) {
     if (state.entities
         .where((element) => isSameDay(diary.date, element.date))
         .isNotEmpty) throw DiaryAleradyExists(diary);
-    _service.register(diary);
+    return _service.register(diary);
   }
 
-  void update(Diary diary) {
+  Future<void> update(Diary diary) {
     if (state.entities
         .where((element) => isSameDay(diary.date, element.date))
         .isEmpty) throw DiaryIsNotExists(diary);
-    _service.update(diary);
+    return _service.update(diary);
   }
 }
 
