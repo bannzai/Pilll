@@ -16,7 +16,6 @@ import 'package:intl/date_symbol_data_local.dart';
 import 'router/router.dart';
 
 Future<void> entrypoint() async {
-  WidgetsFlutterBinding.ensureInitialized();
   initializeDateFormatting('ja_JP');
   await Firebase.initializeApp();
   // MEMO: FirebaseCrashlytics#recordFlutterError called dumpErrorToConsole in function.
@@ -26,6 +25,7 @@ Future<void> entrypoint() async {
   FlutterError.onError = FirebaseCrashlytics.instance.recordFlutterError;
   requestNotificationPermissions();
   runZonedGuarded(() {
+    WidgetsFlutterBinding.ensureInitialized();
     runApp(ProviderScope(child: App()));
   }, (error, stack) => FirebaseCrashlytics.instance.recordError(error, stack));
 }
