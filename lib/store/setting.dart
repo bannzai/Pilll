@@ -50,13 +50,11 @@ class SettingStateStore extends StateNotifier<SettingState> {
   void _modifyReminderTimes(List<ReminderTime> reminderTimes) {
     if (reminderTimes.length > ReminderTime.maximumCount) {
       throw UserDisplayedError(
-          error: null,
           displayedMessage:
               "登録できる上限に達しました。${ReminderTime.maximumCount}件以内に収めてください");
     }
     if (reminderTimes.length < ReminderTime.minimumCount) {
       throw UserDisplayedError(
-          error: null,
           displayedMessage: "通知時刻は最低${ReminderTime.minimumCount}件必要です");
     }
     _service

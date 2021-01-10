@@ -31,8 +31,8 @@ class PillSheetService extends PillSheetServiceInterface {
 
   @override
   Future<PillSheetModel> register(PillSheetModel model) {
-    if (model.createdAt != null) throw PillSheetAlreadyExists();
-    if (model.deletedAt != null) throw PillSheetAlreadyDeleted();
+    if (model.createdAt != null) return Future.error(PillSheetAlreadyExists());
+    if (model.deletedAt != null) return Future.error(PillSheetAlreadyDeleted());
     final copied = model.copyWith(createdAt: DateTime.now());
 
     var json = copied.toJson();
@@ -40,18 +40,17 @@ class PillSheetService extends PillSheetServiceInterface {
     return _database.pillSheetsReference().add(json).then((value) {
       return PillSheetModel.fromJson(json..addAll({"id": value.id}));
     }).catchError((error) {
-      throw UserDisplayedError(
-          error: error, displayedMessage: "ピルシートの登録に失敗しました。再度お試しください");
+      return UserDisplayedError(displayedMessage: "ピルシートの登録に失敗しました。再度お試しください");
     });
   }
 
   Future<void> delete(PillSheetModel pillSheet) {
-    if (pillSheet == null) throw PillSheetIsNotExists();
+    if (pillSheet == null) return Future.error(PillSheetIsNotExists());
     return _database.pillSheetReference(pillSheet.documentID).update({
       PillSheetFirestoreKey.deletedAt:
           TimestampConverter.dateTimeToTimestamp(DateTime.now())
-    }).catchError((error) => UserDisplayedError(
-        error: error, displayedMessage: "ピルシートの削除に失敗しました。再度お試しください"));
+    }).catchError((error) =>
+        UserDisplayedError(displayedMessage: "ピルシートの削除に失敗しました。再度お試しください"));
   }
 
   Future<PillSheetModel> update(PillSheetModel pillSheet) {
@@ -71,20 +70,23 @@ class PillSheetService extends PillSheetServiceInterface {
   }
 }
 
-class PillSheetIsNotExists implements Exception {
+class PillSheetIsNotExists extends Error {
+  @override
   toString() {
     return "pill sheet is not exists";
   }
 }
 
-class PillSheetAlreadyExists implements Exception {
+class PillSheetAlreadyExists extends Error {
+  @override
   toString() {
     return "pill sheet already exists";
   }
 }
 
-class PillSheetAlreadyDeleted implements Exception {
-  toString() {
+class PillSheetAlreadyDeleted extends Error {
+  @override
+  String toString() {
     return "pill sheet already deleted";
   }
 }
