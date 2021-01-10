@@ -10,7 +10,9 @@ import 'package:shared_preferences/shared_preferences.dart';
 class AppRouter {
   static Map<String, WidgetBuilder> routes() {
     return {
-      Routes.root: (BuildContext context) => ProviderScope(child: Root()),
+      Routes.root: (BuildContext context) => ProviderScope(
+            child: Root(key: rootKey),
+          ),
       Routes.initialSetting: (BuildContext context) =>
           ProviderScope(child: InitialSetting1Page()),
       Routes.main: (BuildContext context) => ProviderScope(child: HomePage()),
@@ -20,9 +22,9 @@ class AppRouter {
   static void endInitialSetting(BuildContext context) {
     SharedPreferences.getInstance().then((storage) {
       storage.setBool(BoolKey.didEndInitialSetting, true);
-      requestNotificationPermissions();
-      Navigator.popUntil(context, (router) => router.isFirst);
-      Navigator.pushReplacementNamed(context, Routes.main);
+      requestNotificationPermissions().then((_) {
+        rootKey.currentState.showHome();
+      });
     });
   }
 }
