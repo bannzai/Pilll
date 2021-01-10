@@ -243,8 +243,7 @@ class RecordPage extends HookWidget {
 
   void _cancelTake(PillSheetModel pillSheet, PillSheetStateStore store) {
     if (pillSheet.todayPillNumber != pillSheet.lastTakenPillNumber) {
-      throw FormatException(
-          "This statement should pillSheet.allTaken is true and build _cancelTakeButton. pillSheet.allTaken is ${pillSheet.allTaken} and lastTakenPillNumber ${pillSheet.lastTakenPillNumber}, todayPillNumber ${pillSheet.todayPillNumber}");
+      return;
     }
     store.take(pillSheet.lastTakenDate.subtract(Duration(days: 1)));
   }
