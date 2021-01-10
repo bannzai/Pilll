@@ -16,6 +16,14 @@ import 'package:intl/date_symbol_data_local.dart';
 import '../../helper/mock.dart';
 
 void main() {
+  Setting _anySetting() => Setting(
+        fromMenstruation: 1,
+        durationMenstruation: 2,
+        isOnReminder: false,
+        pillSheetTypeRawPath: PillSheetType.pillsheet_21.rawPath,
+        reminderTimes: [],
+      );
+
   setUp(() {
     initializeDateFormatting('ja_JP');
     Environment.isTest = true;
@@ -24,11 +32,11 @@ void main() {
   });
   group('appearance taken button type', () {
     testWidgets('today pill not taken', (WidgetTester tester) async {
-      var originalTodayRepository = todayRepository;
-      var mockTodayRepository = MockTodayRepository();
+      final originalTodayRepository = todayRepository;
+      final mockTodayRepository = MockTodayRepository();
       todayRepository = mockTodayRepository;
 
-      var today = DateTime(2020, 09, 01);
+      final today = DateTime(2020, 09, 01);
       when(todayRepository.today()).thenReturn(today);
 
       final pillSheet = PillSheetModel.create(PillSheetType.pillsheet_21);
@@ -46,13 +54,7 @@ void main() {
           .thenAnswer((realInvocation) => Stream.value(pillSheet));
 
       final settingService = MockSettingService();
-      final setting = Setting(
-        fromMenstruation: 1,
-        durationMenstruation: 2,
-        isOnReminder: false,
-        pillSheetTypeRawPath: PillSheetType.pillsheet_21.rawPath,
-        reminderTimes: [],
-      );
+      final setting = _anySetting();
       when(settingService.fetch())
           .thenAnswer((realInvocation) => Future.value(setting));
       when(settingService.subscribe())
@@ -86,11 +88,11 @@ void main() {
     });
   });
   testWidgets('today pill is already taken', (WidgetTester tester) async {
-    var originalTodayRepository = todayRepository;
-    var mockTodayRepository = MockTodayRepository();
+    final originalTodayRepository = todayRepository;
+    final mockTodayRepository = MockTodayRepository();
     todayRepository = mockTodayRepository;
 
-    var today = DateTime(2020, 09, 01);
+    final today = DateTime(2020, 09, 01);
     when(todayRepository.today()).thenReturn(today);
 
     var pillSheet = PillSheetModel.create(PillSheetType.pillsheet_21);
@@ -109,13 +111,7 @@ void main() {
         .thenAnswer((realInvocation) => Stream.value(pillSheet));
 
     final settingService = MockSettingService();
-    final setting = Setting(
-      fromMenstruation: 1,
-      durationMenstruation: 2,
-      isOnReminder: false,
-      pillSheetTypeRawPath: PillSheetType.pillsheet_21.rawPath,
-      reminderTimes: [],
-    );
+    final setting = _anySetting();
     when(settingService.fetch())
         .thenAnswer((realInvocation) => Future.value(setting));
     when(settingService.subscribe())
@@ -146,5 +142,64 @@ void main() {
     await tester.pumpAndSettle(Duration(milliseconds: 500));
 
     expect(find.text("飲んでない"), findsOneWidget);
+  });
+  testWidgets('today pill number into rest duration for pill_sheet_21',
+      (WidgetTester tester) async {
+    final originalTodayRepository = todayRepository;
+    final mockTodayRepository = MockTodayRepository();
+    todayRepository = mockTodayRepository;
+
+    final today = DateTime(2020, 09, 01);
+    when(todayRepository.today()).thenReturn(today);
+
+    final pillSheet = PillSheetModel(
+      beginingDate: today.subtract(Duration(days: 24)),
+      typeInfo: PillSheetType.pillsheet_21.typeInfo,
+      lastTakenDate: todayRepository.today(),
+      createdAt: today.subtract(Duration(days: 24)),
+    );
+    expect(pillSheet.todayPillNumber, equals(25));
+    expect(pillSheet.lastTakenPillNumber, equals(25),
+        reason: "in rest duration behavior for automatically taken pill");
+    final pillSheetService = MockPillSheetService();
+    final pillSheetStore = PillSheetStateStore(pillSheetService);
+
+    when(pillSheetService.fetchLast())
+        .thenAnswer((_) => Future.value(pillSheet));
+    when(pillSheetService.subscribeForLatestPillSheet())
+        .thenAnswer((realInvocation) => Stream.value(pillSheet));
+
+    final settingService = MockSettingService();
+    final setting = _anySetting();
+    when(settingService.fetch())
+        .thenAnswer((realInvocation) => Future.value(setting));
+    when(settingService.subscribe())
+        .thenAnswer((realInvocation) => Stream.value(setting));
+    final settingStore = SettingStateStore(settingService);
+
+    addTearDown(() {
+      todayRepository = originalTodayRepository;
+      tester.binding.window.clearAllTestValues();
+    });
+
+    await tester.pumpWidget(
+      ProviderScope(
+        overrides: [
+          pillSheetStoreProvider
+              .overrideWithProvider(Provider((ref) => pillSheetStore)),
+          settingStoreProvider.overrideWithProvider(
+            Provider(
+              (ref) => settingStore,
+            ),
+          )
+        ],
+        child: MaterialApp(
+          home: RecordPage(),
+        ),
+      ),
+    );
+    await tester.pumpAndSettle(Duration(milliseconds: 500));
+
+    expect(find.text("休薬期間中"), findsWidgets);
   });
 }
