@@ -3,6 +3,7 @@ import 'dart:io';
 
 import 'package:Pilll/analytics.dart';
 import 'package:Pilll/components/atoms/color.dart';
+import 'package:Pilll/error/universal_error_page.dart';
 import 'package:Pilll/service/push_notification.dart';
 import 'package:Pilll/util/environment.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
@@ -16,16 +17,19 @@ import 'package:intl/date_symbol_data_local.dart';
 import 'router/router.dart';
 
 Future<void> entrypoint() async {
+  WidgetsFlutterBinding.ensureInitialized();
   initializeDateFormatting('ja_JP');
   await Firebase.initializeApp();
   // MEMO: FirebaseCrashlytics#recordFlutterError called dumpErrorToConsole in function.
   if (Environment.isLocal) {
     connectToEmulator();
   }
+  ErrorWidget.builder = (FlutterErrorDetails details) {
+    return UniversalErrorPage();
+  };
   FlutterError.onError = FirebaseCrashlytics.instance.recordFlutterError;
-  requestNotificationPermissions();
+  listenNotificationEvents();
   runZonedGuarded(() {
-    WidgetsFlutterBinding.ensureInitialized();
     runApp(ProviderScope(child: App()));
   }, (error, stack) => FirebaseCrashlytics.instance.recordError(error, stack));
 }
