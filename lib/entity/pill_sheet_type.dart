@@ -150,7 +150,8 @@ extension PillSheetTypeFunctions on PillSheetType {
       case PillSheetType.pillsheet_28_7:
         return "偽薬";
       default:
-        throw Exception("unexpected null receiverr when get notTakenWord");
+        throw ArgumentError.notNull(
+            "unexpected null receiverr when get notTakenWord");
     }
   }
 }
