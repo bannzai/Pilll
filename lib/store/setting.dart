@@ -49,17 +49,13 @@ class SettingStateStore extends StateNotifier<SettingState> {
 
   Future<void> _modifyReminderTimes(List<ReminderTime> reminderTimes) {
     if (reminderTimes.length > ReminderTime.maximumCount) {
-      return Future.error(
-        UserDisplayedError(
-            displayedMessage:
-                "登録できる上限に達しました。${ReminderTime.maximumCount}件以内に収めてください"),
-      );
+      throw UserDisplayedError(
+          displayedMessage:
+              "登録できる上限に達しました。${ReminderTime.maximumCount}件以内に収めてください");
     }
     if (reminderTimes.length < ReminderTime.minimumCount) {
-      return Future.error(
-        UserDisplayedError(
-            displayedMessage: "通知時刻は最低${ReminderTime.minimumCount}件必要です"),
-      );
+      throw UserDisplayedError(
+          displayedMessage: "通知時刻は最低${ReminderTime.minimumCount}件必要です");
     }
     return _service
         .update(state.entity.copyWith(reminderTimes: reminderTimes))
