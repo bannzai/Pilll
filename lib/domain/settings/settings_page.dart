@@ -8,6 +8,7 @@ import 'package:Pilll/domain/settings/row_model.dart';
 import 'package:Pilll/domain/settings/modifing_pill_number_page.dart';
 import 'package:Pilll/domain/settings/reminder_times_page.dart';
 import 'package:Pilll/error/error_alert.dart';
+import 'package:Pilll/inquiry/inquiry.dart';
 import 'package:Pilll/service/pill_sheet.dart';
 import 'package:Pilll/state/pill_sheet.dart';
 import 'package:Pilll/state/setting.dart';
@@ -281,12 +282,7 @@ class SettingsPage extends HookWidget {
           SettingListTitleRowModel(
               title: "お問い合わせ",
               onTap: () {
-                PackageInfo.fromPlatform().then((value) {
-                  var version = value.version;
-                  launch(
-                      "https://docs.google.com/forms/d/e/1FAIpQLSdLX5lLdOSr2B2mwzCptH1kjsJUYy8cKFSYguxl9yvep5b7ig/viewform?usp=pp_url&entry.2066946565=$version",
-                      forceSafariVC: true);
-                });
+                inquiry();
               }),
         ];
       default:
