@@ -31,41 +31,43 @@ class DiariesStateStore extends StateNotifier<DiariesState> {
     super.dispose();
   }
 
-  void fetchListForMonth(DateTime dateTimeOfMonth) {
-    _service
+  Future<void> fetchListForMonth(DateTime dateTimeOfMonth) {
+    return _service
         .fetchListForMonth(dateTimeOfMonth)
         .then((entities) => state = state.copyWith(entities: entities));
   }
 
-  void register(Diary diary) {
+  Future<void> register(Diary diary) {
     if (state.entities
         .where((element) => isSameDay(diary.date, element.date))
         .isNotEmpty) throw DiaryAleradyExists(diary);
-    _service.register(diary);
+    return _service.register(diary);
   }
 
-  void update(Diary diary) {
+  Future<void> update(Diary diary) {
     if (state.entities
         .where((element) => isSameDay(diary.date, element.date))
         .isEmpty) throw DiaryIsNotExists(diary);
-    _service.update(diary);
+    return _service.update(diary);
   }
 }
 
-class DiaryAleradyExists implements Exception {
+class DiaryAleradyExists extends Error {
   final Diary _diary;
 
   DiaryAleradyExists(this._diary);
+  @override
   toString() {
-    return "diary already exists for date ${_diary.date}";
+    return "${_diary.date}の日付の日記のデータが既に存在しています。";
   }
 }
 
-class DiaryIsNotExists implements Exception {
+class DiaryIsNotExists extends Error {
   final Diary _diary;
 
   DiaryIsNotExists(this._diary);
+  @override
   toString() {
-    return "diary is not exists for date ${_diary.date}";
+    return "${_diary.date} の日付の日記のデータが存在しません。";
   }
 }
