@@ -25,6 +25,8 @@ class AppRouter {
       requestNotificationPermissions().then((_) {
         rootKey.currentState.showHome();
       });
+      Navigator.popUntil(context, (router) => router.isFirst);
+      Navigator.pushReplacementNamed(context, Routes.main);
     });
   }
 }
