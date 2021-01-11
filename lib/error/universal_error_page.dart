@@ -16,6 +16,7 @@ class UniversalErrorPage extends StatelessWidget {
     return Scaffold(
       body: Center(
         child: Container(
+          width: 300,
           child: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
