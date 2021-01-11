@@ -1,10 +1,9 @@
 import 'package:Pilll/components/atoms/font.dart';
 import 'package:Pilll/components/atoms/text_color.dart';
-import 'package:Pilll/entity/user_error.dart';
 import 'package:flutter/material.dart';
 
 class UniversalErrorPage extends StatelessWidget {
-  final UserDisplayedError error;
+  final Error error;
   final Widget child;
 
   const UniversalErrorPage({Key key, @required this.error, this.child})
