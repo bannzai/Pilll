@@ -47,7 +47,7 @@ class SettingStateStore extends StateNotifier<SettingState> {
         .then((entity) => state = state.copyWith(entity: entity));
   }
 
-  Future<void> _modifyReminderTimes(List<ReminderTime> reminderTimes) {
+  void _modifyReminderTimes(List<ReminderTime> reminderTimes) {
     if (reminderTimes.length > ReminderTime.maximumCount) {
       throw UserDisplayedError(
           displayedMessage:
@@ -57,27 +57,27 @@ class SettingStateStore extends StateNotifier<SettingState> {
       throw UserDisplayedError(
           displayedMessage: "通知時刻は最低${ReminderTime.minimumCount}件必要です");
     }
-    return _service
+    _service
         .update(state.entity.copyWith(reminderTimes: reminderTimes))
         .then((entity) => state = state.copyWith(entity: entity));
   }
 
-  Future<void> addReminderTimes(ReminderTime reminderTime) {
+  void addReminderTimes(ReminderTime reminderTime) {
     List<ReminderTime> copied = [...state.entity.reminderTimes];
     copied.add(reminderTime);
-    return _modifyReminderTimes(copied);
+    _modifyReminderTimes(copied);
   }
 
-  Future<void> editReminderTime(int index, ReminderTime reminderTime) {
+  void editReminderTime(int index, ReminderTime reminderTime) {
     List<ReminderTime> copied = [...state.entity.reminderTimes];
     copied[index] = reminderTime;
-    return _modifyReminderTimes(copied);
+    _modifyReminderTimes(copied);
   }
 
-  Future<void> deleteReminderTimes(int index) {
+  void deleteReminderTimes(int index) {
     List<ReminderTime> copied = [...state.entity.reminderTimes];
     copied.removeAt(index);
-    return _modifyReminderTimes(copied);
+    _modifyReminderTimes(copied);
   }
 
   Future<void> modifyIsOnReminder(bool isOnReminder) {
