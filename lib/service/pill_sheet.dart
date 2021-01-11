@@ -30,8 +30,8 @@ class PillSheetService extends PillSheetServiceInterface {
 
   @override
   Future<PillSheetModel> register(PillSheetModel model) {
-    if (model.createdAt != null) return Future.error(PillSheetAlreadyExists());
-    if (model.deletedAt != null) return Future.error(PillSheetAlreadyDeleted());
+    if (model.createdAt != null) throw PillSheetAlreadyExists();
+    if (model.deletedAt != null) throw PillSheetAlreadyDeleted();
     final copied = model.copyWith(createdAt: DateTime.now());
 
     var json = copied.toJson();
@@ -42,7 +42,7 @@ class PillSheetService extends PillSheetServiceInterface {
   }
 
   Future<void> delete(PillSheetModel pillSheet) {
-    if (pillSheet == null) return Future.error(PillSheetIsNotExists());
+    if (pillSheet == null) throw PillSheetIsNotExists();
     return _database.pillSheetReference(pillSheet.documentID).update({
       PillSheetFirestoreKey.deletedAt:
           TimestampConverter.dateTimeToTimestamp(DateTime.now())
@@ -69,20 +69,20 @@ class PillSheetService extends PillSheetServiceInterface {
 class PillSheetIsNotExists extends Error {
   @override
   toString() {
-    return "ピルシートのが存在しません";
+    return "ピルシートが存在しません。";
   }
 }
 
 class PillSheetAlreadyExists extends Error {
   @override
   toString() {
-    return "pill sheet already exists";
+    return "ピルシートがすでに存在しています。";
   }
 }
 
 class PillSheetAlreadyDeleted extends Error {
   @override
   String toString() {
-    return "pill sheet already deleted";
+    return "ピルシートはすでに削除されています。";
   }
 }
