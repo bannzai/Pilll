@@ -307,7 +307,7 @@ class RecordPage extends HookWidget {
 
         var pillSheet = PillSheetModel.create(pillSheetType);
         store.register(pillSheet).catchError((error) {
-          showErrorAlert(context, message: "ピルシートの作成に失敗しました。再度お試しください");
+          showErrorAlert(context, message: "ピルシートの作成に失敗しました。通信環境を確かめ再度お試しください");
         }).whenComplete(() => progressing = false);
       },
     );
