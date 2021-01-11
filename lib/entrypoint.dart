@@ -4,6 +4,7 @@ import 'dart:io';
 import 'package:Pilll/analytics.dart';
 import 'package:Pilll/components/atoms/color.dart';
 import 'package:Pilll/error/universal_error_page.dart';
+import 'package:Pilll/router/router.dart';
 import 'package:Pilll/service/push_notification.dart';
 import 'package:Pilll/util/environment.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
