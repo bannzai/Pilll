@@ -2,7 +2,6 @@ import 'dart:async';
 
 import 'package:Pilll/entity/pill_sheet_type.dart';
 import 'package:Pilll/entity/setting.dart';
-import 'package:Pilll/entity/user_error.dart';
 import 'package:Pilll/service/setting.dart';
 import 'package:Pilll/state/setting.dart';
 import 'package:riverpod/riverpod.dart';
