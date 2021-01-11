@@ -34,11 +34,12 @@ class ErrorAlert extends StatelessWidget {
 void showErrorAlert(BuildContext context,
     {String title, @required String message}) {
   showDialog(
-      context: context,
-      builder: (_) {
-        return ErrorAlert(
-          title: title,
-          errorMessage: message,
-        );
-      });
+    context: context,
+    builder: (_) {
+      return ErrorAlert(
+        title: title,
+        errorMessage: message,
+      );
+    },
+  );
 }

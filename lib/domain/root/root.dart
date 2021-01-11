@@ -4,6 +4,7 @@ import 'package:Pilll/domain/home/home_page.dart';
 import 'package:Pilll/domain/initial_setting/initial_setting_1_page.dart';
 import 'package:Pilll/entity/user_error.dart';
 import 'package:Pilll/components/molecules/indicator.dart';
+import 'package:Pilll/error/template.dart';
 import 'package:Pilll/error/universal_error_page.dart';
 import 'package:Pilll/service/user.dart';
 import 'package:Pilll/util/shared_preference/keys.dart';
@@ -81,8 +82,7 @@ class RootState extends State<Root> {
         this.screenType = screenType;
       });
     }).catchError((error) {
-      onError(UserDisplayedError(
-          displayedMessage: "通信環境が不安定のようです。時間をおいて再度お試しください"));
+      onError(UserDisplayedError(displayedMessage: ErrorMessages.connection));
     });
     super.initState();
   }
@@ -103,8 +103,8 @@ class RootState extends State<Root> {
           case ScreenType.initialSetting:
             return InitialSetting1Page();
           default:
-            onError(UserDisplayedError(
-                displayedMessage: "通信環境が不安定のようです。時間をおいて再度お試しください"));
+            onError(
+                UserDisplayedError(displayedMessage: ErrorMessages.connection));
             return ScaffoldIndicator();
         }
       }, loading: () {
@@ -112,8 +112,8 @@ class RootState extends State<Root> {
       }, error: (error, stacktrace) {
         print(error);
         print(stacktrace);
-        final displayedError = UserDisplayedError(
-            displayedMessage: "通信環境が不安定のようです。時間をおいて再度お試しください");
+        final displayedError =
+            UserDisplayedError(displayedMessage: ErrorMessages.connection);
         return UniversalErrorPage(error: displayedError);
       });
     });
