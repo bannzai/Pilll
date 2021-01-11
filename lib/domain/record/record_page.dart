@@ -4,6 +4,8 @@ import 'package:Pilll/domain/record/record_taken_information.dart';
 import 'package:Pilll/entity/pill_sheet.dart';
 import 'package:Pilll/entity/pill_sheet_type.dart';
 import 'package:Pilll/entity/weekday.dart';
+import 'package:Pilll/error/error_alert.dart';
+import 'package:Pilll/service/pill_sheet.dart';
 import 'package:Pilll/state/pill_sheet.dart';
 import 'package:Pilll/store/pill_sheet.dart';
 import 'package:Pilll/store/setting.dart';
@@ -108,7 +110,8 @@ class RecordPage extends HookWidget {
             ],
           ),
           SizedBox(height: 97),
-          if (state.isInvalid) _empty(store, settingState.entity.pillSheetType),
+          if (state.isInvalid)
+            _empty(context, store, settingState.entity.pillSheetType),
           if (!state.isInvalid) ...[
             _pillSheet(context, currentPillSheet, store),
             SizedBox(height: 40),
@@ -243,8 +246,7 @@ class RecordPage extends HookWidget {
 
   void _cancelTake(PillSheetModel pillSheet, PillSheetStateStore store) {
     if (pillSheet.todayPillNumber != pillSheet.lastTakenPillNumber) {
-      throw FormatException(
-          "This statement should pillSheet.allTaken is true and build _cancelTakeButton. pillSheet.allTaken is ${pillSheet.allTaken} and lastTakenPillNumber ${pillSheet.lastTakenPillNumber}, todayPillNumber ${pillSheet.todayPillNumber}");
+      return;
     }
     store.take(pillSheet.lastTakenDate.subtract(Duration(days: 1)));
   }
@@ -278,7 +280,8 @@ class RecordPage extends HookWidget {
     );
   }
 
-  Widget _empty(PillSheetStateStore store, PillSheetType pillSheetType) {
+  Widget _empty(BuildContext context, PillSheetStateStore store,
+      PillSheetType pillSheetType) {
     var progressing = false;
     return GestureDetector(
       child: SizedBox(
@@ -304,7 +307,18 @@ class RecordPage extends HookWidget {
         progressing = true;
 
         var pillSheet = PillSheetModel.create(pillSheetType);
-        store.register(pillSheet).whenComplete(() => progressing = false);
+        store.register(pillSheet).catchError((error) {
+          showErrorAlert(
+            context,
+            message: "ピルシートがすでに存在しています。表示等に問題がある場合は設定タブから「お問い合わせ」ください",
+          );
+        }, test: (e) => e is PillSheetAlreadyExists).catchError((error) {
+          showErrorAlert(
+            context,
+            message: "ピルシートの作成に失敗しました。時間をおいて再度お試しください",
+          );
+        }, test: (e) => e is PillSheetAlreadyDeleted).whenComplete(
+            () => progressing = false);
       },
     );
   }

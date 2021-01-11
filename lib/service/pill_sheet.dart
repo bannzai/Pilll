@@ -2,7 +2,6 @@ import 'package:Pilll/database/database.dart';
 import 'package:Pilll/entity/firestore_timestamp_converter.dart';
 import 'package:Pilll/entity/pill_sheet.dart';
 import 'package:Pilll/entity/user.dart';
-import 'package:Pilll/entity/user_error.dart';
 import 'package:riverpod/all.dart';
 
 abstract class PillSheetServiceInterface {
@@ -39,9 +38,6 @@ class PillSheetService extends PillSheetServiceInterface {
     json.remove("id");
     return _database.pillSheetsReference().add(json).then((value) {
       return PillSheetModel.fromJson(json..addAll({"id": value.id}));
-    }).catchError((error) {
-      throw UserDisplayedError(
-          error: error, displayedMessage: "ピルシートの登録に失敗しました。再度お試しください");
     });
   }
 
@@ -50,8 +46,7 @@ class PillSheetService extends PillSheetServiceInterface {
     return _database.pillSheetReference(pillSheet.documentID).update({
       PillSheetFirestoreKey.deletedAt:
           TimestampConverter.dateTimeToTimestamp(DateTime.now())
-    }).catchError((error) => UserDisplayedError(
-        error: error, displayedMessage: "ピルシートの削除に失敗しました。再度お試しください"));
+    });
   }
 
   Future<PillSheetModel> update(PillSheetModel pillSheet) {
@@ -71,20 +66,23 @@ class PillSheetService extends PillSheetServiceInterface {
   }
 }
 
-class PillSheetIsNotExists implements Exception {
+class PillSheetIsNotExists extends Error {
+  @override
   toString() {
-    return "pill sheet is not exists";
+    return "ピルシートが存在しません。";
   }
 }
 
-class PillSheetAlreadyExists implements Exception {
+class PillSheetAlreadyExists extends Error {
+  @override
   toString() {
-    return "pill sheet already exists";
+    return "ピルシートがすでに存在しています。";
   }
 }
 
-class PillSheetAlreadyDeleted implements Exception {
-  toString() {
-    return "pill sheet already deleted";
+class PillSheetAlreadyDeleted extends Error {
+  @override
+  String toString() {
+    return "ピルシートはすでに削除されています。";
   }
 }

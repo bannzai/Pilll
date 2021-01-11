@@ -2,7 +2,6 @@ import 'dart:async';
 
 import 'package:Pilll/entity/pill_sheet_type.dart';
 import 'package:Pilll/entity/setting.dart';
-import 'package:Pilll/entity/user_error.dart';
 import 'package:Pilll/service/setting.dart';
 import 'package:Pilll/state/setting.dart';
 import 'package:riverpod/riverpod.dart';
@@ -40,8 +39,8 @@ class SettingStateStore extends StateNotifier<SettingState> {
     super.dispose();
   }
 
-  void modifyType(PillSheetType pillSheetType) {
-    _service
+  Future<void> modifyType(PillSheetType pillSheetType) {
+    return _service
         .update(
             state.entity.copyWith(pillSheetTypeRawPath: pillSheetType.rawPath))
         .then((entity) => state = state.copyWith(entity: entity));
@@ -49,15 +48,10 @@ class SettingStateStore extends StateNotifier<SettingState> {
 
   void _modifyReminderTimes(List<ReminderTime> reminderTimes) {
     if (reminderTimes.length > ReminderTime.maximumCount) {
-      throw UserDisplayedError(
-          error: null,
-          displayedMessage:
-              "登録できる上限に達しました。${ReminderTime.maximumCount}件以内に収めてください");
+      throw Exception("登録できる上限に達しました。${ReminderTime.maximumCount}件以内に収めてください");
     }
     if (reminderTimes.length < ReminderTime.minimumCount) {
-      throw UserDisplayedError(
-          error: null,
-          displayedMessage: "通知時刻は最低${ReminderTime.minimumCount}件必要です");
+      throw Exception("通知時刻は最低${ReminderTime.minimumCount}件必要です");
     }
     _service
         .update(state.entity.copyWith(reminderTimes: reminderTimes))
@@ -82,20 +76,20 @@ class SettingStateStore extends StateNotifier<SettingState> {
     _modifyReminderTimes(copied);
   }
 
-  void modifyIsOnReminder(bool isOnReminder) {
-    _service
+  Future<void> modifyIsOnReminder(bool isOnReminder) {
+    return _service
         .update(state.entity.copyWith(isOnReminder: isOnReminder))
         .then((entity) => state = state.copyWith(entity: entity));
   }
 
-  void modifyFromMenstruation(int fromMenstruation) {
-    _service
+  Future<void> modifyFromMenstruation(int fromMenstruation) {
+    return _service
         .update(state.entity.copyWith(fromMenstruation: fromMenstruation))
         .then((entity) => state = state.copyWith(entity: entity));
   }
 
-  void modifyDurationMenstruation(int durationMenstruation) {
-    _service
+  Future<void> modifyDurationMenstruation(int durationMenstruation) {
+    return _service
         .update(
             state.entity.copyWith(durationMenstruation: durationMenstruation))
         .then((entity) => state = state.copyWith(entity: entity));

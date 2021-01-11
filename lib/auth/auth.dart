@@ -7,11 +7,16 @@ class AuthInfo {
   AuthInfo(this.uid);
 }
 
-final authStateChangesProvider = StreamProvider<AuthInfo>((ref) => FirebaseAuth
-    .instance
-    .authStateChanges()
-    .map((event) => AuthInfo(event.uid)));
+AuthInfo _authInfoCache;
+final authStateProvider = FutureProvider<AuthInfo>((ref) {
+  if (_authInfoCache != null) {
+    return Future.value(_authInfoCache);
+  }
+  return auth();
+});
 
-Future<AuthInfo> auth() => FirebaseAuth.instance
-    .signInAnonymously()
-    .then((value) => AuthInfo(value.user.uid));
+Future<AuthInfo> auth() =>
+    FirebaseAuth.instance.signInAnonymously().then((value) {
+      _authInfoCache = AuthInfo(value.user.uid);
+      return _authInfoCache;
+    });

@@ -3,6 +3,9 @@ import 'dart:io';
 
 import 'package:Pilll/analytics.dart';
 import 'package:Pilll/components/atoms/color.dart';
+import 'package:Pilll/entity/user_error.dart';
+import 'package:Pilll/error/universal_error_page.dart';
+import 'package:Pilll/router/router.dart';
 import 'package:Pilll/service/push_notification.dart';
 import 'package:Pilll/util/environment.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
@@ -23,8 +26,15 @@ Future<void> entrypoint() async {
   if (Environment.isLocal) {
     connectToEmulator();
   }
+  ErrorWidget.builder = (FlutterErrorDetails details) {
+    return UniversalErrorPage(
+      error: UserDisplayedError(
+        displayedMessage: details.exception.toString(),
+      ),
+    );
+  };
   FlutterError.onError = FirebaseCrashlytics.instance.recordFlutterError;
-  requestNotificationPermissions();
+  listenNotificationEvents();
   runZonedGuarded(() {
     runApp(ProviderScope(child: App()));
   }, (error, stack) => FirebaseCrashlytics.instance.recordError(error, stack));
