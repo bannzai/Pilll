@@ -1,5 +1,7 @@
+import 'package:Pilll/components/atoms/buttons.dart';
 import 'package:Pilll/components/atoms/font.dart';
 import 'package:Pilll/components/atoms/text_color.dart';
+import 'package:Pilll/domain/root/root.dart';
 import 'package:flutter/material.dart';
 
 class UniversalErrorPage extends StatelessWidget {
@@ -28,6 +30,12 @@ class UniversalErrorPage extends StatelessWidget {
               SizedBox(height: 25),
               Text(error.toString(),
                   style: FontType.assisting.merge(TextColorStyle.main)),
+              SizedBox(height: 25),
+              SecondaryButton(
+                  onPressed: () {
+                    rootKey.currentState.reloadRoot();
+                  },
+                  text: "画面を再読み込み")
             ],
           ),
         ),

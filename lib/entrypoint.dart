@@ -29,7 +29,7 @@ Future<void> entrypoint() async {
   ErrorWidget.builder = (FlutterErrorDetails details) {
     return UniversalErrorPage(
       error: UserDisplayedError(
-        displayedMessage: details.exceptionAsString(),
+        displayedMessage: details.exception.toString(),
       ),
     );
   };
