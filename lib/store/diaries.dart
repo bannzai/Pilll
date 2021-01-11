@@ -40,31 +40,33 @@ class DiariesStateStore extends StateNotifier<DiariesState> {
   Future<void> register(Diary diary) {
     if (state.entities
         .where((element) => isSameDay(diary.date, element.date))
-        .isNotEmpty) throw DiaryAleradyExists(diary);
+        .isNotEmpty) return Future.error(DiaryAleradyExists(diary));
     return _service.register(diary);
   }
 
   Future<void> update(Diary diary) {
     if (state.entities
         .where((element) => isSameDay(diary.date, element.date))
-        .isEmpty) throw DiaryIsNotExists(diary);
+        .isEmpty) return Future.error(DiaryIsNotExists(diary));
     return _service.update(diary);
   }
 }
 
-class DiaryAleradyExists implements Exception {
+class DiaryAleradyExists extends Error {
   final Diary _diary;
 
   DiaryAleradyExists(this._diary);
+  @override
   toString() {
     return "diary already exists for date ${_diary.date}";
   }
 }
 
-class DiaryIsNotExists implements Exception {
+class DiaryIsNotExists extends Error {
   final Diary _diary;
 
   DiaryIsNotExists(this._diary);
+  @override
   toString() {
     return "diary is not exists for date ${_diary.date}";
   }
