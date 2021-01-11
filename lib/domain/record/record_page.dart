@@ -4,6 +4,7 @@ import 'package:Pilll/domain/record/record_taken_information.dart';
 import 'package:Pilll/entity/pill_sheet.dart';
 import 'package:Pilll/entity/pill_sheet_type.dart';
 import 'package:Pilll/entity/weekday.dart';
+import 'package:Pilll/error/error_alert.dart';
 import 'package:Pilll/state/pill_sheet.dart';
 import 'package:Pilll/store/pill_sheet.dart';
 import 'package:Pilll/store/setting.dart';
@@ -108,7 +109,8 @@ class RecordPage extends HookWidget {
             ],
           ),
           SizedBox(height: 97),
-          if (state.isInvalid) _empty(store, settingState.entity.pillSheetType),
+          if (state.isInvalid)
+            _empty(context, store, settingState.entity.pillSheetType),
           if (!state.isInvalid) ...[
             _pillSheet(context, currentPillSheet, store),
             SizedBox(height: 40),
@@ -277,7 +279,8 @@ class RecordPage extends HookWidget {
     );
   }
 
-  Widget _empty(PillSheetStateStore store, PillSheetType pillSheetType) {
+  Widget _empty(BuildContext context, PillSheetStateStore store,
+      PillSheetType pillSheetType) {
     var progressing = false;
     return GestureDetector(
       child: SizedBox(
@@ -303,7 +306,9 @@ class RecordPage extends HookWidget {
         progressing = true;
 
         var pillSheet = PillSheetModel.create(pillSheetType);
-        store.register(pillSheet).whenComplete(() => progressing = false);
+        store.register(pillSheet).catchError((error) {
+          showErrorAlert(context, message: "ピルシートの作成に失敗しました。再度お試しください");
+        }).whenComplete(() => progressing = false);
       },
     );
   }
