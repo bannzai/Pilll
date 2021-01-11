@@ -5,6 +5,7 @@ import 'package:Pilll/entity/pill_sheet.dart';
 import 'package:Pilll/entity/pill_sheet_type.dart';
 import 'package:Pilll/entity/weekday.dart';
 import 'package:Pilll/error/error_alert.dart';
+import 'package:Pilll/service/pill_sheet.dart';
 import 'package:Pilll/state/pill_sheet.dart';
 import 'package:Pilll/store/pill_sheet.dart';
 import 'package:Pilll/store/setting.dart';
@@ -307,8 +308,17 @@ class RecordPage extends HookWidget {
 
         var pillSheet = PillSheetModel.create(pillSheetType);
         store.register(pillSheet).catchError((error) {
-          showErrorAlert(context, message: "ピルシートの作成に失敗しました。通信環境を確かめ再度お試しください");
-        }).whenComplete(() => progressing = false);
+          showErrorAlert(
+            context,
+            message: "ピルシートがすでに存在しています。表示等に問題がある場合は設定タブから「お問い合わせ」ください",
+          );
+        }, test: (e) => e is PillSheetAlreadyExists).catchError((error) {
+          showErrorAlert(
+            context,
+            message: "ピルシートの作成に失敗しました。時間をおいて再度お試しください",
+          );
+        }, test: (e) => e is PillSheetAlreadyDeleted).whenComplete(
+            () => progressing = false);
       },
     );
   }

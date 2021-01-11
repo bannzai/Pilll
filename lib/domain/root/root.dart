@@ -25,8 +25,8 @@ class Root extends StatefulWidget {
 enum ScreenType { home, initialSetting }
 
 class RootState extends State<Root> {
-  UserDisplayedError error;
-  onError(UserDisplayedError error) {
+  Error error;
+  onError(Error error) {
     setState(() {
       this.error = error;
     });

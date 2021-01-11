@@ -4,7 +4,6 @@ import 'dart:io';
 import 'package:Pilll/analytics.dart';
 import 'package:Pilll/components/atoms/color.dart';
 import 'package:Pilll/entity/user_error.dart';
-import 'package:Pilll/error/template.dart';
 import 'package:Pilll/error/universal_error_page.dart';
 import 'package:Pilll/router/router.dart';
 import 'package:Pilll/service/push_notification.dart';
@@ -29,7 +28,10 @@ Future<void> entrypoint() async {
   }
   ErrorWidget.builder = (FlutterErrorDetails details) {
     return UniversalErrorPage(
-        error: UserDisplayedError(displayedMessage: ErrorMessages.unknown));
+      error: UserDisplayedError(
+        displayedMessage: details.exceptionAsString(),
+      ),
+    );
   };
   FlutterError.onError = FirebaseCrashlytics.instance.recordFlutterError;
   listenNotificationEvents();
