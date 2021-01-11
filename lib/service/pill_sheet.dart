@@ -2,7 +2,6 @@ import 'package:Pilll/database/database.dart';
 import 'package:Pilll/entity/firestore_timestamp_converter.dart';
 import 'package:Pilll/entity/pill_sheet.dart';
 import 'package:Pilll/entity/user.dart';
-import 'package:Pilll/entity/user_error.dart';
 import 'package:riverpod/all.dart';
 
 abstract class PillSheetServiceInterface {
@@ -39,7 +38,7 @@ class PillSheetService extends PillSheetServiceInterface {
     json.remove("id");
     return _database.pillSheetsReference().add(json).then((value) {
       return PillSheetModel.fromJson(json..addAll({"id": value.id}));
-    };
+    });
   }
 
   Future<void> delete(PillSheetModel pillSheet) {
