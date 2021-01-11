@@ -40,60 +40,64 @@ class SettingStateStore extends StateNotifier<SettingState> {
     super.dispose();
   }
 
-  void modifyType(PillSheetType pillSheetType) {
-    _service
+  Future<void> modifyType(PillSheetType pillSheetType) {
+    return _service
         .update(
             state.entity.copyWith(pillSheetTypeRawPath: pillSheetType.rawPath))
         .then((entity) => state = state.copyWith(entity: entity));
   }
 
-  void _modifyReminderTimes(List<ReminderTime> reminderTimes) {
+  Future<void> _modifyReminderTimes(List<ReminderTime> reminderTimes) {
     if (reminderTimes.length > ReminderTime.maximumCount) {
-      throw UserDisplayedError(
-          displayedMessage:
-              "登録できる上限に達しました。${ReminderTime.maximumCount}件以内に収めてください");
+      return Future.error(
+        UserDisplayedError(
+            displayedMessage:
+                "登録できる上限に達しました。${ReminderTime.maximumCount}件以内に収めてください"),
+      );
     }
     if (reminderTimes.length < ReminderTime.minimumCount) {
-      throw UserDisplayedError(
-          displayedMessage: "通知時刻は最低${ReminderTime.minimumCount}件必要です");
+      return Future.error(
+        UserDisplayedError(
+            displayedMessage: "通知時刻は最低${ReminderTime.minimumCount}件必要です"),
+      );
     }
-    _service
+    return _service
         .update(state.entity.copyWith(reminderTimes: reminderTimes))
         .then((entity) => state = state.copyWith(entity: entity));
   }
 
-  void addReminderTimes(ReminderTime reminderTime) {
+  Future<void> addReminderTimes(ReminderTime reminderTime) {
     List<ReminderTime> copied = [...state.entity.reminderTimes];
     copied.add(reminderTime);
-    _modifyReminderTimes(copied);
+    return _modifyReminderTimes(copied);
   }
 
-  void editReminderTime(int index, ReminderTime reminderTime) {
+  Future<void> editReminderTime(int index, ReminderTime reminderTime) {
     List<ReminderTime> copied = [...state.entity.reminderTimes];
     copied[index] = reminderTime;
-    _modifyReminderTimes(copied);
+    return _modifyReminderTimes(copied);
   }
 
-  void deleteReminderTimes(int index) {
+  Future<void> deleteReminderTimes(int index) {
     List<ReminderTime> copied = [...state.entity.reminderTimes];
     copied.removeAt(index);
-    _modifyReminderTimes(copied);
+    return _modifyReminderTimes(copied);
   }
 
-  void modifyIsOnReminder(bool isOnReminder) {
-    _service
+  Future<void> modifyIsOnReminder(bool isOnReminder) {
+    return _service
         .update(state.entity.copyWith(isOnReminder: isOnReminder))
         .then((entity) => state = state.copyWith(entity: entity));
   }
 
-  void modifyFromMenstruation(int fromMenstruation) {
-    _service
+  Future<void> modifyFromMenstruation(int fromMenstruation) {
+    return _service
         .update(state.entity.copyWith(fromMenstruation: fromMenstruation))
         .then((entity) => state = state.copyWith(entity: entity));
   }
 
-  void modifyDurationMenstruation(int durationMenstruation) {
-    _service
+  Future<void> modifyDurationMenstruation(int durationMenstruation) {
+    return _service
         .update(
             state.entity.copyWith(durationMenstruation: durationMenstruation))
         .then((entity) => state = state.copyWith(entity: entity));
