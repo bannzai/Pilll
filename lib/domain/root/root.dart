@@ -45,8 +45,51 @@ class RootState extends State<Root> {
     });
   }
 
+  reloadRoot() {
+    setState(() {
+      screenType = null;
+      error = null;
+      _auth();
+    });
+  }
+
   @override
   void initState() {
+    _auth();
+    super.initState();
+  }
+
+  @override
+  Widget build(BuildContext context) {
+    if (error != null) {
+      return UniversalErrorPage(error: error);
+    }
+    if (screenType == null) {
+      return ScaffoldIndicator();
+    }
+    return Consumer(builder: (context, watch, child) {
+      return watch(authStateProvider).when(data: (snapshot) {
+        switch (screenType) {
+          case ScreenType.home:
+            return HomePage();
+          case ScreenType.initialSetting:
+            return InitialSetting1Page();
+          default:
+            return ScaffoldIndicator();
+        }
+      }, loading: () {
+        return ScaffoldIndicator();
+      }, error: (error, stacktrace) {
+        print(error);
+        print(stacktrace);
+        final displayedError =
+            UserDisplayedError(displayedMessage: ErrorMessages.connection);
+        return UniversalErrorPage(error: displayedError);
+      });
+    });
+  }
+
+  _auth() {
     auth().then((authInfo) {
       final userService = UserService(DatabaseConnection(authInfo.uid));
       return userService.prepare().then((_) async {
@@ -83,39 +126,6 @@ class RootState extends State<Root> {
       });
     }).catchError((error) {
       onError(UserDisplayedError(displayedMessage: ErrorMessages.connection));
-    });
-    super.initState();
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    if (error != null) {
-      return UniversalErrorPage(error: error);
-    }
-    if (screenType == null) {
-      return ScaffoldIndicator();
-    }
-    return Consumer(builder: (context, watch, child) {
-      return watch(authStateProvider).when(data: (snapshot) {
-        switch (screenType) {
-          case ScreenType.home:
-            return HomePage();
-          case ScreenType.initialSetting:
-            return InitialSetting1Page();
-          default:
-            onError(
-                UserDisplayedError(displayedMessage: ErrorMessages.connection));
-            return ScaffoldIndicator();
-        }
-      }, loading: () {
-        return ScaffoldIndicator();
-      }, error: (error, stacktrace) {
-        print(error);
-        print(stacktrace);
-        final displayedError =
-            UserDisplayedError(displayedMessage: ErrorMessages.connection);
-        return UniversalErrorPage(error: displayedError);
-      });
     });
   }
 }
