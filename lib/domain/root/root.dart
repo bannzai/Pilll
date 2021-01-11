@@ -4,6 +4,7 @@ import 'package:Pilll/domain/home/home_page.dart';
 import 'package:Pilll/domain/initial_setting/initial_setting_1_page.dart';
 import 'package:Pilll/entity/user_error.dart';
 import 'package:Pilll/components/molecules/indicator.dart';
+import 'package:Pilll/error/universal_error_page.dart';
 import 'package:Pilll/service/user.dart';
 import 'package:Pilll/util/shared_preference/keys.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
@@ -88,11 +89,11 @@ class RootState extends State<Root> {
 
   @override
   Widget build(BuildContext context) {
+    if (error != null) {
+      return UniversalErrorPage(error: error);
+    }
     if (screenType == null) {
       return ScaffoldIndicator();
-    }
-    if (error != null) {
-      return ErrorWidget(error);
     }
     return Consumer(builder: (context, watch, child) {
       return watch(authStateProvider).when(data: (snapshot) {
@@ -111,7 +112,9 @@ class RootState extends State<Root> {
       }, error: (error, stacktrace) {
         print(error);
         print(stacktrace);
-        return ErrorWidget(error.toString());
+        final displayedError = UserDisplayedError(
+            displayedMessage: "通信環境が不安定のようです。時間をおいて再度お試しください");
+        return UniversalErrorPage(error: displayedError);
       });
     });
   }
