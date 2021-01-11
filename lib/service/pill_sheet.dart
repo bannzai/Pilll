@@ -39,9 +39,7 @@ class PillSheetService extends PillSheetServiceInterface {
     json.remove("id");
     return _database.pillSheetsReference().add(json).then((value) {
       return PillSheetModel.fromJson(json..addAll({"id": value.id}));
-    }).catchError((error) {
-      return UserDisplayedError(displayedMessage: "ピルシートの登録に失敗しました。再度お試しください");
-    });
+    };
   }
 
   Future<void> delete(PillSheetModel pillSheet) {
