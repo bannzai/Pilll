@@ -5,10 +5,10 @@ import 'package:Pilll/domain/initial_setting/initial_setting_1_page.dart';
 import 'package:Pilll/entity/user_error.dart';
 import 'package:Pilll/components/molecules/indicator.dart';
 import 'package:Pilll/service/user.dart';
-import 'package:Pilll/components/atoms/color.dart';
 import 'package:Pilll/util/shared_preference/keys.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
+import 'package:hooks_riverpod/all.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 GlobalKey<RootState> rootKey = GlobalKey();
@@ -89,27 +89,30 @@ class RootState extends State<Root> {
   @override
   Widget build(BuildContext context) {
     if (screenType == null) {
-      return _indicator();
+      return ScaffoldIndicator();
     }
     if (error != null) {
       return ErrorWidget(error);
     }
-    switch (screenType) {
-      case ScreenType.home:
-        return HomePage();
-      case ScreenType.initialSetting:
-        return InitialSetting1Page();
-      default:
-        onError(UserDisplayedError(
-            displayedMessage: "通信環境が不安定のようです。時間をおいて再度お試しください"));
-        return _indicator();
-    }
-  }
-
-  Widget _indicator() {
-    return Scaffold(
-      backgroundColor: PilllColors.background,
-      body: Indicator(),
-    );
+    return Consumer(builder: (context, watch, child) {
+      return watch(authStateProvider).when(data: (snapshot) {
+        switch (screenType) {
+          case ScreenType.home:
+            return HomePage();
+          case ScreenType.initialSetting:
+            return InitialSetting1Page();
+          default:
+            onError(UserDisplayedError(
+                displayedMessage: "通信環境が不安定のようです。時間をおいて再度お試しください"));
+            return ScaffoldIndicator();
+        }
+      }, loading: () {
+        return ScaffoldIndicator();
+      }, error: (error, stacktrace) {
+        print(error);
+        print(stacktrace);
+        return ErrorWidget(error.toString());
+      });
+    });
   }
 }
