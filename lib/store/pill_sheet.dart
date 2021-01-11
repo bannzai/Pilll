@@ -45,8 +45,8 @@ class PillSheetStateStore extends StateNotifier<PillSheetState> {
         .then((entity) => state = state.copyWith(entity: entity));
   }
 
-  void delete() {
-    _service.delete(state.entity).then((_) => _reset());
+  Future<void> delete() {
+    return _service.delete(state.entity).then((_) => _reset());
   }
 
   void take(DateTime takenDate) {

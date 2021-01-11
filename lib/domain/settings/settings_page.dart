@@ -206,7 +206,16 @@ class SettingsPage extends HookWidget {
                     context: context,
                     builder: (_) {
                       return ConfirmDeletePillSheet(onDelete: () {
-                        pillSheetStore.delete();
+                        pillSheetStore.delete().catchError((error) {
+                          if (error is PillSheetIsNotExists) {
+                            showErrorAlert(context,
+                                message:
+                                    "ピルシートがすでに削除されています。表示等に問題がある場合は設定タブから「お問い合わせ」ください");
+                            return;
+                          }
+                          showErrorAlert(context,
+                              message: "ピルシートの削除に失敗しました。再度お試しください");
+                        });
                       });
                     },
                   );
