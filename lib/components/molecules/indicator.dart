@@ -16,3 +16,13 @@ class Indicator extends StatelessWidget {
     );
   }
 }
+
+class ScaffoldIndicator extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: PilllColors.background,
+      body: Indicator(),
+    );
+  }
+}
