@@ -28,6 +28,7 @@ class CalendarPage extends StatelessWidget {
       appBar: null,
       extendBodyBehindAppBar: true,
       body: SafeArea(
+        top: false,
         child: ListView(
           padding: EdgeInsets.all(0),
           children: <Widget>[
