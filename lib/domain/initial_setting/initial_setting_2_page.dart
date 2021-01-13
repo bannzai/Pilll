@@ -49,8 +49,9 @@ class InitialSetting2Page extends HookWidget {
                         style: FontType.sBigTitle.merge(TextColorStyle.main),
                         textAlign: TextAlign.center,
                       ),
-                      Spacer(),
-                      PillSheet(
+                      SizedBox(height: 44),
+                      Align(
+                          child: PillSheet(
                         pillMarkTypeBuilder: (number) {
                           return state.entity.pillMarkTypeFor(number);
                         },
@@ -62,7 +63,7 @@ class InitialSetting2Page extends HookWidget {
                           store.modify((model) =>
                               model.copyWith(todayPillNumber: number));
                         },
-                      ),
+                      )),
                       SizedBox(height: 24),
                       ExplainPillNumber(today: todayString()),
                       SizedBox(height: 16),

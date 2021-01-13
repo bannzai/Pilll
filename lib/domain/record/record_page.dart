@@ -106,9 +106,11 @@ class RecordPage extends HookWidget {
             ),
           SizedBox(height: 97),
           if (state.isInvalid)
-            _empty(context, store, settingState.entity.pillSheetType),
+            Align(
+                child:
+                    _empty(context, store, settingState.entity.pillSheetType)),
           if (!state.isInvalid) ...[
-            _pillSheet(context, currentPillSheet, store),
+            Align(child: _pillSheet(context, currentPillSheet, store)),
             SizedBox(height: 40),
             if (currentPillSheet.inNotTakenDuration)
               Align(child: _notTakenButton(context, state, store)),
