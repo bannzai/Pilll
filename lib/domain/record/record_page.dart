@@ -33,6 +33,7 @@ class RecordPage extends HookWidget {
   }
 
   Widget _body(BuildContext context) {
+    hideIndicator();
     final state = useProvider(pillSheetStoreProvider.state);
     final currentPillSheet = state.entity;
     final store = useProvider(pillSheetStoreProvider);
@@ -130,47 +131,6 @@ class RecordPage extends HookWidget {
     );
   }
 
-  void _showTakenDialog(BuildContext context) {
-    final autoDismiss = Future.delayed(Duration(milliseconds: 800));
-    showDialog(
-        barrierColor: Colors.transparent,
-        context: context,
-        builder: (BuildContext context) {
-          autoDismiss.then((_) => Navigator.of(context).pop());
-          return Material(
-            color: Colors.transparent,
-            child: Center(
-              child: Container(
-                decoration: BoxDecoration(
-                  color: PilllColors.modalBackground,
-                  borderRadius: BorderRadius.circular(10),
-                ),
-                width: 200,
-                height: 200,
-                child: Center(
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Text(
-                        "飲んだ",
-                        style: FontType.subTitle.merge(TextColorStyle.white),
-                      ),
-                      SizedBox(height: 10),
-                      SvgPicture.asset(
-                        'images/checkmark.svg',
-                        width: 54,
-                        height: 42,
-                        color: PilllColors.white,
-                      ),
-                    ],
-                  ),
-                ),
-              ),
-            ),
-          );
-        });
-  }
-
   String _notificationString(PillSheetState state) {
     if (state.isInvalid) {
       return "";
@@ -240,7 +200,6 @@ class RecordPage extends HookWidget {
     if (pillSheet.todayPillNumber == pillSheet.lastTakenPillNumber) {
       return;
     }
-    _showTakenDialog(context);
     store.take(takenDate);
   }
 
