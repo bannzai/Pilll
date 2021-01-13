@@ -50,11 +50,7 @@ class PillSheetStateStore extends StateNotifier<PillSheetState> {
   }
 
   void take(DateTime takenDate) {
-    // NOTE: updated ui immediately after request is success. Because firebase fucntions => firestore connection is slow ready that means user.latestPillSheet does not update immediately.
-    final updated = state.entity.copyWith(lastTakenDate: takenDate);
-    _service
-        .update(updated)
-        .then((value) => state = state.copyWith(entity: updated));
+    _service.update(state.entity.copyWith(lastTakenDate: takenDate));
   }
 
   DateTime calcBeginingDateFromNextTodayPillNumber(int pillNumber) {
