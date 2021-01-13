@@ -42,74 +42,68 @@ class RecordPage extends HookWidget {
       return Indicator();
     }
     return Center(
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: <Widget>[
-          Column(
-            children: [
-              RecordTakenInformation(
-                today: DateTime.now(),
-                state: state,
-                onPressed: () {
-                  showModalBottomSheet(
-                    context: context,
-                    builder: (BuildContext context) {
-                      var selectedTodayPillNumber =
-                          currentPillSheet.todayPillNumber;
-                      return Column(
-                        mainAxisAlignment: MainAxisAlignment.end,
-                        mainAxisSize: MainAxisSize.min,
-                        children: <Widget>[
-                          PickerToolbar(
-                            done: (() {
-                              store.modifyBeginingDate(selectedTodayPillNumber);
-                              Navigator.pop(context);
-                            }),
-                            cancel: (() {
-                              Navigator.pop(context);
-                            }),
-                          ),
-                          Container(
-                            height: 200,
-                            child: GestureDetector(
-                              onTap: () {
-                                Navigator.pop(context);
-                              },
-                              child: CupertinoPicker(
-                                itemExtent: 40,
-                                children: List.generate(
-                                    currentPillSheet.typeInfo.totalCount,
-                                    (index) => Text("${index + 1}")),
-                                onSelectedItemChanged: (index) {
-                                  selectedTodayPillNumber = index + 1;
-                                },
-                                scrollController: FixedExtentScrollController(
-                                  initialItem: selectedTodayPillNumber - 1,
-                                ),
-                              ),
+      child: ListView(
+        children: [
+          RecordTakenInformation(
+            today: DateTime.now(),
+            state: state,
+            onPressed: () {
+              showModalBottomSheet(
+                context: context,
+                builder: (BuildContext context) {
+                  var selectedTodayPillNumber =
+                      currentPillSheet.todayPillNumber;
+                  return Column(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    mainAxisSize: MainAxisSize.min,
+                    children: <Widget>[
+                      PickerToolbar(
+                        done: (() {
+                          store.modifyBeginingDate(selectedTodayPillNumber);
+                          Navigator.pop(context);
+                        }),
+                        cancel: (() {
+                          Navigator.pop(context);
+                        }),
+                      ),
+                      Container(
+                        height: 200,
+                        child: GestureDetector(
+                          onTap: () {
+                            Navigator.pop(context);
+                          },
+                          child: CupertinoPicker(
+                            itemExtent: 40,
+                            children: List.generate(
+                                currentPillSheet.typeInfo.totalCount,
+                                (index) => Text("${index + 1}")),
+                            onSelectedItemChanged: (index) {
+                              selectedTodayPillNumber = index + 1;
+                            },
+                            scrollController: FixedExtentScrollController(
+                              initialItem: selectedTodayPillNumber - 1,
                             ),
                           ),
-                        ],
-                      );
-                    },
+                        ),
+                      ),
+                    ],
                   );
                 },
-              ),
-              if (_notificationString(state).isNotEmpty)
-                ConstrainedBox(
-                  constraints: BoxConstraints.expand(height: 26),
-                  child: Container(
-                    height: 26,
-                    color: PilllColors.secondary,
-                    child: Center(
-                      child: Text(_notificationString(state),
-                          style:
-                              FontType.assisting.merge(TextColorStyle.white)),
-                    ),
-                  ),
-                ),
-            ],
+              );
+            },
           ),
+          if (_notificationString(state).isNotEmpty)
+            ConstrainedBox(
+              constraints: BoxConstraints.expand(height: 26),
+              child: Container(
+                height: 26,
+                color: PilllColors.secondary,
+                child: Center(
+                  child: Text(_notificationString(state),
+                      style: FontType.assisting.merge(TextColorStyle.white)),
+                ),
+              ),
+            ),
           SizedBox(height: 97),
           if (state.isInvalid)
             _empty(context, store, settingState.entity.pillSheetType),
@@ -117,15 +111,14 @@ class RecordPage extends HookWidget {
             _pillSheet(context, currentPillSheet, store),
             SizedBox(height: 40),
             if (currentPillSheet.inNotTakenDuration)
-              _notTakenButton(context, state, store),
+              Align(child: _notTakenButton(context, state, store)),
             if (!currentPillSheet.inNotTakenDuration &&
                 currentPillSheet.allTaken)
-              _cancelTakeButton(currentPillSheet, store),
+              Align(child: _cancelTakeButton(currentPillSheet, store)),
             if (!currentPillSheet.allTaken &&
                 !currentPillSheet.inNotTakenDuration)
-              _takenButton(context, currentPillSheet, store),
+              Align(child: _takenButton(context, currentPillSheet, store)),
           ],
-          Spacer(),
         ],
       ),
     );
