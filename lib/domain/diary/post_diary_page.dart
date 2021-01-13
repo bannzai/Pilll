@@ -59,25 +59,27 @@ class PostDiaryPage extends HookWidget {
         ],
         backgroundColor: PilllColors.background,
       ),
-      body: Stack(
-        children: [
-          Padding(
-            padding: const EdgeInsets.all(16.0),
-            child: ListView(
-              children: [
-                Text(DateTimeFormatter.yearAndMonthAndDay(this.date),
-                    style: FontType.sBigTitle.merge(TextColorStyle.main)),
-                ...[
-                  _physicalConditions(),
-                  _physicalConditionDetails(),
-                  _sex(),
-                  _memo(context, textEditingController, focusNode),
-                ].map((e) => _withContentSpacer(e)),
-              ],
+      body: SafeArea(
+        child: Stack(
+          children: [
+            Padding(
+              padding: const EdgeInsets.all(16.0),
+              child: ListView(
+                children: [
+                  Text(DateTimeFormatter.yearAndMonthAndDay(this.date),
+                      style: FontType.sBigTitle.merge(TextColorStyle.main)),
+                  ...[
+                    _physicalConditions(),
+                    _physicalConditionDetails(),
+                    _sex(),
+                    _memo(context, textEditingController, focusNode),
+                  ].map((e) => _withContentSpacer(e)),
+                ],
+              ),
             ),
-          ),
-          if (focusNode.hasFocus) _keyboardToolbar(context, focusNode),
-        ],
+            if (focusNode.hasFocus) _keyboardToolbar(context, focusNode),
+          ],
+        ),
       ),
     );
   }

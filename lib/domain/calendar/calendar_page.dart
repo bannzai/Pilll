@@ -27,42 +27,45 @@ class CalendarPage extends StatelessWidget {
       backgroundColor: PilllColors.background,
       appBar: null,
       extendBodyBehindAppBar: true,
-      body: ListView(
-        padding: EdgeInsets.all(0),
-        children: <Widget>[
-          Stack(
-            children: [
-              CustomPaint(
-                painter: _HalfCircle(Size(
-                    MediaQuery.of(context).size.width + 100,
-                    CalendarPageConstants.halfCircleHeight)),
-                size: Size(MediaQuery.of(context).size.width, 220),
-              ),
-              Positioned(
-                left: 16,
-                top: 44,
-                child: _title(),
-              ),
-              Positioned(
-                left: 16,
-                top: 85,
-                width: MediaQuery.of(context).size.width - 32,
-                height: 111,
-                child: _menstruationCard(),
-              ),
-            ],
-          ),
-          Center(
-            child: Container(
-              child: Padding(
-                padding: const EdgeInsets.only(left: 16, right: 16),
-                child: CalendarCard(
-                  date: today,
+      body: SafeArea(
+        top: false,
+        child: ListView(
+          padding: EdgeInsets.all(0),
+          children: <Widget>[
+            Stack(
+              children: [
+                CustomPaint(
+                  painter: _HalfCircle(Size(
+                      MediaQuery.of(context).size.width + 100,
+                      CalendarPageConstants.halfCircleHeight)),
+                  size: Size(MediaQuery.of(context).size.width, 220),
+                ),
+                Positioned(
+                  left: 16,
+                  top: 44,
+                  child: _title(),
+                ),
+                Positioned(
+                  left: 16,
+                  top: 85,
+                  width: MediaQuery.of(context).size.width - 32,
+                  height: 111,
+                  child: _menstruationCard(),
+                ),
+              ],
+            ),
+            Center(
+              child: Container(
+                child: Padding(
+                  padding: const EdgeInsets.only(left: 16, right: 16),
+                  child: CalendarCard(
+                    date: today,
+                  ),
                 ),
               ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }
