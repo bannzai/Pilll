@@ -97,20 +97,9 @@ class SettingsPage extends HookWidget {
                 child: FlatButton(
                   child: Text("COPY DEBUG INFO"),
                   onPressed: () async {
-                    final package = await PackageInfo.fromPlatform();
-                    final appName = package.appName;
-                    final packageName = package.packageName;
-                    final contents = [
-                      "DEBUG INFO",
-                      "appName: $appName",
-                      "packageName: $packageName",
-                      "env: ${Environment.isProduction ? "production" : "development"}",
-                      "user id: $userID",
-                      "pillSheet.entity.id: ${pillSheetState.entity?.id}",
-                      "pillSheetState.entity: ${pillSheetState.entity == null ? "null" : pillSheetState.entity.toJson()}",
-                      "settingState.entity: ${settingState.entity == null ? "null" : settingState.entity.toJson()}",
-                    ];
-                    Clipboard.setData(ClipboardData(text: contents.join("\n")));
+                    ;
+                    Clipboard.setData(
+                        ClipboardData(text: await debugInfo("\n")));
                   },
                 ),
               );
