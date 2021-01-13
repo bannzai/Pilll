@@ -57,7 +57,7 @@ class RootState extends State<Root> {
   List<IndicatorType> _indicatorTypes = [];
   showIndicator() {
     _indicatorTypes.add(IndicatorType.shown);
-    Future.delayed(Duration(milliseconds: 300)).then((value) {
+    Future.delayed(Duration(milliseconds: 200)).then((value) {
       if (_indicatorTypes.last == IndicatorType.hidden) {
         return;
       }
