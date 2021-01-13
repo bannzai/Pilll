@@ -49,9 +49,9 @@ class DialogIndicator extends StatelessWidget {
 }
 
 showIndicator() {
-  rootKey.currentState.showIndicator();
+  rootKey.currentState?.showIndicator();
 }
 
 hideIndicator() {
-  rootKey.currentState.hideIndicator();
+  rootKey.currentState?.hideIndicator();
 }
