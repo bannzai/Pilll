@@ -10,8 +10,6 @@ import 'package:Pilll/domain/settings/reminder_times_page.dart';
 import 'package:Pilll/error/error_alert.dart';
 import 'package:Pilll/inquiry/inquiry.dart';
 import 'package:Pilll/service/pill_sheet.dart';
-import 'package:Pilll/state/pill_sheet.dart';
-import 'package:Pilll/state/setting.dart';
 import 'package:Pilll/store/pill_sheet.dart';
 import 'package:Pilll/store/setting.dart';
 import 'package:Pilll/components/atoms/buttons.dart';
@@ -26,7 +24,6 @@ import 'package:flutter/services.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:hooks_riverpod/all.dart';
-import 'package:package_info/package_info.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class _TransactionModifier {
@@ -71,14 +68,6 @@ class SettingsPage extends HookWidget {
   static final int itemCount = SettingSection.values.length + 1;
   @override
   Widget build(BuildContext context) {
-    String userID;
-    SettingState settingState;
-    PillSheetState pillSheetState;
-    if (Environment.isDevelopment) {
-      userID = useProvider(userIDProvider);
-      pillSheetState = useProvider(pillSheetStoreProvider.state);
-      settingState = useProvider(settingStoreProvider.state);
-    }
     return Scaffold(
       backgroundColor: PilllColors.background,
       appBar: AppBar(
@@ -97,20 +86,8 @@ class SettingsPage extends HookWidget {
                 child: FlatButton(
                   child: Text("COPY DEBUG INFO"),
                   onPressed: () async {
-                    final package = await PackageInfo.fromPlatform();
-                    final appName = package.appName;
-                    final packageName = package.packageName;
-                    final contents = [
-                      "DEBUG INFO",
-                      "appName: $appName",
-                      "packageName: $packageName",
-                      "env: ${Environment.isProduction ? "production" : "development"}",
-                      "user id: $userID",
-                      "pillSheet.entity.id: ${pillSheetState.entity?.id}",
-                      "pillSheetState.entity: ${pillSheetState.entity == null ? "null" : pillSheetState.entity.toJson()}",
-                      "settingState.entity: ${settingState.entity == null ? "null" : settingState.entity.toJson()}",
-                    ];
-                    Clipboard.setData(ClipboardData(text: contents.join("\n")));
+                    Clipboard.setData(
+                        ClipboardData(text: await debugInfo("\n")));
                   },
                 ),
               );
