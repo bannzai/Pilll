@@ -48,8 +48,9 @@ class PillSheetTypeSelectPage extends StatelessWidget {
             Expanded(
               child: ListView(children: [
                 SizedBox(height: 24),
-                Text("飲んでいるピルのタイプはどれ？",
-                    style: FontType.sBigTitle.merge(TextColorStyle.main)),
+                Align(
+                    child: Text("飲んでいるピルのタイプはどれ？",
+                        style: FontType.sBigTitle.merge(TextColorStyle.main))),
                 SizedBox(height: 24),
                 ...PillSheetType.values
                     .map((e) => Padding(
