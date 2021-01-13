@@ -37,43 +37,45 @@ class _ModifingPillNumberPageState extends State<ModifingPillNumberPage> {
         backgroundColor: PilllColors.background,
       ),
       body: SafeArea(
-              child: Container(
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: <Widget>[
-              SizedBox(height: 20),
-              ConstrainedBox(
-                constraints: BoxConstraints(
-                    maxWidth: MediaQuery.of(context).size.width - 32),
-                child: Text("今日${_today()}に飲む・飲んだピル番号をタップ",
-                    style: FontType.sBigTitle.merge(TextColorStyle.main)),
-              ),
-              SizedBox(height: 56),
-              Center(
-                child: PillSheet(
-                  pillMarkTypeBuilder: (number) {
-                    if (selectedPillMarkNumber == number) {
-                      return PillMarkType.selected;
-                    }
-                    return PillMarkType.normal;
-                  },
-                  doneStateBuilder: (_) {
-                    return false;
-                  },
-                  enabledMarkAnimation: null,
-                  markSelected: (number) {
-                    setState(() => selectedPillMarkNumber = number);
-                  },
+        child: SingleChildScrollView(
+          child: Container(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: <Widget>[
+                SizedBox(height: 20),
+                ConstrainedBox(
+                  constraints: BoxConstraints(
+                      maxWidth: MediaQuery.of(context).size.width - 32),
+                  child: Text("今日${_today()}に飲む・飲んだピル番号をタップ",
+                      style: FontType.sBigTitle.merge(TextColorStyle.main)),
                 ),
-              ),
-              SizedBox(height: 20),
-              PrimaryButton(
-                onPressed: selectedPillMarkNumber != null
-                    ? () => widget.markSelected(selectedPillMarkNumber)
-                    : null,
-                text: "変更する",
-              )
-            ],
+                SizedBox(height: 56),
+                Center(
+                  child: PillSheet(
+                    pillMarkTypeBuilder: (number) {
+                      if (selectedPillMarkNumber == number) {
+                        return PillMarkType.selected;
+                      }
+                      return PillMarkType.normal;
+                    },
+                    doneStateBuilder: (_) {
+                      return false;
+                    },
+                    enabledMarkAnimation: null,
+                    markSelected: (number) {
+                      setState(() => selectedPillMarkNumber = number);
+                    },
+                  ),
+                ),
+                SizedBox(height: 20),
+                PrimaryButton(
+                  onPressed: selectedPillMarkNumber != null
+                      ? () => widget.markSelected(selectedPillMarkNumber)
+                      : null,
+                  text: "変更する",
+                )
+              ],
+            ),
           ),
         ),
       ),
