@@ -23,6 +23,7 @@ class Root extends StatefulWidget {
 }
 
 enum ScreenType { home, initialSetting }
+enum IndicatorType { shown, hidden }
 
 class RootState extends State<Root> {
   Error error;
@@ -51,6 +52,29 @@ class RootState extends State<Root> {
       error = null;
       _auth();
     });
+  }
+
+  List<IndicatorType> _indicatorTypes = [];
+  showIndicator() {
+    _indicatorTypes.add(IndicatorType.shown);
+    Future.delayed(Duration(milliseconds: 200)).then((value) {
+      if (_indicatorTypes.last == IndicatorType.hidden) {
+        return;
+      }
+      showDialog(
+          barrierColor: Colors.transparent,
+          context: context,
+          builder: (BuildContext context) {
+            return DialogIndicator();
+          });
+    });
+  }
+
+  hideIndicator() {
+    _indicatorTypes.add(IndicatorType.hidden);
+    if (Navigator.of(context).canPop()) {
+      Navigator.of(context).pop();
+    }
   }
 
   @override
