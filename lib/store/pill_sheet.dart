@@ -1,5 +1,6 @@
 import 'dart:async';
 
+import 'package:Pilll/components/molecules/indicator.dart';
 import 'package:Pilll/entity/pill_mark_type.dart';
 import 'package:Pilll/entity/pill_sheet.dart';
 import 'package:Pilll/entity/pill_sheet_type.dart';
@@ -50,6 +51,7 @@ class PillSheetStateStore extends StateNotifier<PillSheetState> {
   }
 
   void take(DateTime takenDate) {
+    showIndicator();
     _service.update(state.entity.copyWith(lastTakenDate: takenDate));
   }
 
