@@ -71,6 +71,9 @@ class RootState extends State<Root> {
   }
 
   hideIndicator() {
+    if (_indicatorTypes.last == IndicatorType.shown) {
+      return;
+    }
     _indicatorTypes.add(IndicatorType.hidden);
     if (Navigator.of(context).canPop()) {
       Navigator.of(context).pop();
