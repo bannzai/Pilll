@@ -28,7 +28,7 @@ class RecordPage extends HookWidget {
       backgroundColor: PilllColors.background,
       appBar: null,
       extendBodyBehindAppBar: true,
-      body: _body(context),
+      body: SafeArea(child: _body(context)),
     );
   }
 
@@ -272,7 +272,7 @@ class RecordPage extends HookWidget {
         var diff = pillSheet.todayPillNumber - number;
         if (diff < 0) {
           // This is in the future pill number.
-          return;
+
         }
         var takenDate = now().subtract(Duration(days: diff));
         _take(context, pillSheet, takenDate, store);

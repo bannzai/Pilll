@@ -105,85 +105,87 @@ class InitialSetting4Page extends HookWidget {
         ),
         backgroundColor: PilllColors.background,
       ),
-      body: Container(
-        child: Center(
-          child: Column(
-            children: <Widget>[
-              SizedBox(height: 24),
-              Text(
-                "ピルの飲み忘れ通知",
-                style: FontType.title.merge(TextColorStyle.main),
-                textAlign: TextAlign.center,
-              ),
-              Spacer(),
-              Column(
-                children: [
-                  Padding(
-                    padding: const EdgeInsets.only(bottom: 36),
-                    child: Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: List.generate(3, (index) {
-                          return _form(context, store, state, index);
-                        })),
-                  ),
-                  Text("複数設定しておく事で飲み忘れを防げます",
-                      style: FontType.assisting.merge(TextColorStyle.main)),
-                ],
-              ),
-              Spacer(),
-              Column(
-                children: [
-                  RichText(
-                    textAlign: TextAlign.center,
-                    text: TextSpan(
-                      children: [
-                        TextSpan(
-                          text: "プライバシーポリシー",
-                          style: FontType.sSmallSentence
-                              .merge(TextColorStyle.link),
-                          recognizer: TapGestureRecognizer()
-                            ..onTap = () {
-                              launch(
-                                  "https://bannzai.github.io/Pilll/PrivacyPolicy",
-                                  forceSafariVC: true);
-                            },
-                        ),
-                        TextSpan(
-                          text: "と",
-                          style: FontType.sSmallSentence
-                              .merge(TextColorStyle.gray),
-                        ),
-                        TextSpan(
-                          text: "利用規約",
-                          style: FontType.sSmallSentence
-                              .merge(TextColorStyle.link),
-                          recognizer: TapGestureRecognizer()
-                            ..onTap = () {
-                              launch("https://bannzai.github.io/Pilll/Terms",
-                                  forceSafariVC: true);
-                            },
-                        ),
-                        TextSpan(
-                          text: "を読んで\n利用をはじめてください",
-                          style: FontType.sSmallSentence
-                              .merge(TextColorStyle.gray),
-                        ),
-                      ],
+      body: SafeArea(
+        child: Container(
+          child: Center(
+            child: Column(
+              children: <Widget>[
+                SizedBox(height: 24),
+                Text(
+                  "ピルの飲み忘れ通知",
+                  style: FontType.title.merge(TextColorStyle.main),
+                  textAlign: TextAlign.center,
+                ),
+                Spacer(),
+                Column(
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.only(bottom: 36),
+                      child: Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: List.generate(3, (index) {
+                            return _form(context, store, state, index);
+                          })),
                     ),
-                  ),
-                  SizedBox(height: 24),
-                  PrimaryButton(
-                    text: "設定完了",
-                    onPressed: () {
-                      store
-                          .register(state.entity.copyWith(isOnReminder: true))
-                          .then((_) => AppRouter.endInitialSetting(context));
-                    },
-                  ),
-                ],
-              ),
-              SizedBox(height: 35),
-            ],
+                    Text("複数設定しておく事で飲み忘れを防げます",
+                        style: FontType.assisting.merge(TextColorStyle.main)),
+                  ],
+                ),
+                Spacer(),
+                Column(
+                  children: [
+                    RichText(
+                      textAlign: TextAlign.center,
+                      text: TextSpan(
+                        children: [
+                          TextSpan(
+                            text: "プライバシーポリシー",
+                            style: FontType.sSmallSentence
+                                .merge(TextColorStyle.link),
+                            recognizer: TapGestureRecognizer()
+                              ..onTap = () {
+                                launch(
+                                    "https://bannzai.github.io/Pilll/PrivacyPolicy",
+                                    forceSafariVC: true);
+                              },
+                          ),
+                          TextSpan(
+                            text: "と",
+                            style: FontType.sSmallSentence
+                                .merge(TextColorStyle.gray),
+                          ),
+                          TextSpan(
+                            text: "利用規約",
+                            style: FontType.sSmallSentence
+                                .merge(TextColorStyle.link),
+                            recognizer: TapGestureRecognizer()
+                              ..onTap = () {
+                                launch("https://bannzai.github.io/Pilll/Terms",
+                                    forceSafariVC: true);
+                              },
+                          ),
+                          TextSpan(
+                            text: "を読んで\n利用をはじめてください",
+                            style: FontType.sSmallSentence
+                                .merge(TextColorStyle.gray),
+                          ),
+                        ],
+                      ),
+                    ),
+                    SizedBox(height: 24),
+                    PrimaryButton(
+                      text: "設定完了",
+                      onPressed: () {
+                        store
+                            .register(state.entity.copyWith(isOnReminder: true))
+                            .then((_) => AppRouter.endInitialSetting(context));
+                      },
+                    ),
+                  ],
+                ),
+                SizedBox(height: 35),
+              ],
+            ),
           ),
         ),
       ),

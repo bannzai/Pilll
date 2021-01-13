@@ -32,9 +32,11 @@ class ReminderTimesPage extends HookWidget {
         ),
         backgroundColor: PilllColors.background,
       ),
-      body: Container(
-        child: ListView(
-          children: [..._components(context, state), _footer(context)],
+      body: SafeArea(
+        child: Container(
+          child: ListView(
+            children: [..._components(context, state), _footer(context)],
+          ),
         ),
       ),
     );
