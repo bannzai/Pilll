@@ -13,7 +13,7 @@ import 'package:Pilll/store/diaries.dart';
 import 'package:Pilll/components/atoms/color.dart';
 import 'package:Pilll/components/atoms/font.dart';
 import 'package:Pilll/components/atoms/text_color.dart';
-import 'package:Pilll/util/datetime/day.dart';
+import 'package:Pilll/util/datetime/day.dart' as utility;
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/all.dart';
@@ -86,6 +86,7 @@ class Calendar extends HookWidget {
                               line == 1;
                       if (isPreviousMonth) {
                         return CalendarDayTile(
+                            isToday: false,
                             onTap: null,
                             weekday: weekday,
                             day: calculator
@@ -106,7 +107,10 @@ class Calendar extends HookWidget {
                               DateTime(calculator.date.year,
                                   calculator.date.month, day)))
                           .isNotEmpty;
+                      final today = utility.today();
                       return CalendarDayTile(
+                        isToday: isSameDay(
+                            today, DateTime(today.year, today.month, day)),
                         weekday: weekday,
                         day: day,
                         upperWidget: isExistDiary ? _diaryMarkWidget() : null,
@@ -114,7 +118,7 @@ class Calendar extends HookWidget {
                           final date = calculator
                               .dateTimeForFirstDayOfMonth()
                               .add(Duration(days: day - 1));
-                          if (date.isAfter(today())) {
+                          if (date.isAfter(utility.today())) {
                             return;
                           }
                           if (!isExistDiary) {
@@ -212,20 +216,22 @@ class CalendarBand extends StatelessWidget {
 
 class CalendarDayTile extends StatelessWidget {
   final int day;
+  final bool isToday;
   final Weekday weekday;
   final VoidCallback onTap;
 
   final Widget upperWidget;
   final Widget lowerWidget;
 
-  const CalendarDayTile(
-      {Key key,
-      @required this.day,
-      @required this.weekday,
-      this.upperWidget,
-      this.lowerWidget,
-      @required this.onTap})
-      : super(key: key);
+  const CalendarDayTile({
+    Key key,
+    @required this.day,
+    @required this.weekday,
+    @required this.isToday,
+    this.upperWidget,
+    this.lowerWidget,
+    @required this.onTap,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -243,22 +249,46 @@ class CalendarDayTile extends StatelessWidget {
                       Align(alignment: Alignment.topCenter, child: upperWidget),
                 )
               ],
-              Positioned.fill(
-                child: Align(
-                  alignment: Alignment.center,
-                  child: Text(
-                    "$day",
-                    textAlign: TextAlign.center,
-                    style: TextStyle(
-                      color: onTap == null
-                          ? weekday
-                              .weekdayColor()
-                              .withAlpha((255 * 0.4).floor())
-                          : weekday.weekdayColor(),
-                    ).merge(FontType.gridElement),
+              if (!isToday)
+                Positioned.fill(
+                  child: Align(
+                    alignment: Alignment.center,
+                    child: Text(
+                      "$day",
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        color: onTap == null
+                            ? weekday
+                                .weekdayColor()
+                                .withAlpha((255 * 0.4).floor())
+                            : weekday.weekdayColor(),
+                      ).merge(FontType.gridElement),
+                    ),
                   ),
                 ),
-              ),
+              if (isToday)
+                Positioned.fill(
+                  child: Align(
+                    alignment: Alignment.center,
+                    child: Container(
+                      width: 32,
+                      height: 32,
+                      decoration: BoxDecoration(
+                        color: PilllColors.secondary,
+                        borderRadius: BorderRadius.circular(16),
+                      ),
+                      child: Center(
+                        child: Text(
+                          "$day",
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                            color: PilllColors.white,
+                          ).merge(FontType.gridElement),
+                        ),
+                      ),
+                    ),
+                  ),
+                ),
               if (lowerWidget != null) ...[
                 Positioned.fill(
                   top: 8,
