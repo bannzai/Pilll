@@ -40,46 +40,57 @@ class InitialSetting2Page extends HookWidget {
           child: Center(
             child: Column(
               children: <Widget>[
-                SizedBox(height: 24),
-                Text(
-                  "今日(${todayString()})\n飲む・飲んだピルの番号をタップ",
-                  style: FontType.sBigTitle.merge(TextColorStyle.main),
-                  textAlign: TextAlign.center,
-                ),
-                Spacer(),
-                PillSheet(
-                  pillMarkTypeBuilder: (number) {
-                    return state.entity.pillMarkTypeFor(number);
-                  },
-                  doneStateBuilder: (number) {
-                    return false;
-                  },
-                  enabledMarkAnimation: null,
-                  markSelected: (number) {
-                    store.modify(
-                        (model) => model.copyWith(todayPillNumber: number));
-                  },
-                ),
-                SizedBox(height: 24),
-                ExplainPillNumber(today: todayString()),
-                SizedBox(height: 16),
-                InconspicuousButton(
-                    onPressed: () {
-                      store.modify(
-                          (model) => model.copyWith(todayPillNumber: null));
-                      Navigator.of(context)
-                          .push(InitialSetting3PageRoute.route());
-                    },
-                    text: "まだ分からない"),
-                Spacer(),
-                PrimaryButton(
-                  text: "次へ",
-                  onPressed: state.entity.todayPillNumber == null
-                      ? null
-                      : () {
+                Expanded(
+                  child: ListView(
+                    children: [
+                      SizedBox(height: 24),
+                      Text(
+                        "今日(${todayString()})\n飲む・飲んだピルの番号をタップ",
+                        style: FontType.sBigTitle.merge(TextColorStyle.main),
+                        textAlign: TextAlign.center,
+                      ),
+                      SizedBox(height: 44),
+                      Align(
+                          child: PillSheet(
+                        pillMarkTypeBuilder: (number) {
+                          return state.entity.pillMarkTypeFor(number);
+                        },
+                        doneStateBuilder: (number) {
+                          return false;
+                        },
+                        enabledMarkAnimation: null,
+                        markSelected: (number) {
+                          store.modify((model) =>
+                              model.copyWith(todayPillNumber: number));
+                        },
+                      )),
+                      SizedBox(height: 24),
+                      ExplainPillNumber(today: todayString()),
+                      SizedBox(height: 16),
+                      InconspicuousButton(
+                        onPressed: () {
+                          store.modify(
+                              (model) => model.copyWith(todayPillNumber: null));
                           Navigator.of(context)
                               .push(InitialSetting3PageRoute.route());
                         },
+                        text: "まだ分からない",
+                      ),
+                    ],
+                  ),
+                ),
+                SizedBox(height: 10),
+                Align(
+                  alignment: Alignment.bottomCenter,
+                  child: PrimaryButton(
+                    text: "次へ",
+                    onPressed: state.entity.todayPillNumber == null
+                        ? null
+                        : () {
+                            Navigator.of(context)
+                                .push(InitialSetting3PageRoute.route());
+                          },
+                  ),
                 ),
                 SizedBox(height: 35),
               ],
