@@ -119,6 +119,7 @@ class RecordPage extends HookWidget {
                 !currentPillSheet.inNotTakenDuration)
               Align(child: _takenButton(context, currentPillSheet, store)),
           ],
+          SizedBox(height: 60),
         ],
       ),
     );
