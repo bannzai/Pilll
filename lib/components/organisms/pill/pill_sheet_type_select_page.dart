@@ -45,24 +45,25 @@ class PillSheetTypeSelectPage extends StatelessWidget {
       body: SafeArea(
         child: Column(
           children: <Widget>[
-            SizedBox(height: 24),
-            Text("飲んでいるピルのタイプはどれ？",
-                style: FontType.sBigTitle.merge(TextColorStyle.main)),
-            SizedBox(height: 24),
             Expanded(
-              child: ListView(
-                children: PillSheetType.values
+              child: ListView(children: [
+                SizedBox(height: 24),
+                Text("飲んでいるピルのタイプはどれ？",
+                    style: FontType.sBigTitle.merge(TextColorStyle.main)),
+                SizedBox(height: 24),
+                ...PillSheetType.values
                     .map((e) => Padding(
                           padding: const EdgeInsets.only(
                               top: 10, left: 20, right: 20),
                           child: _pillSheet(e),
                         ))
                     .toList(),
-              ),
+              ]),
             ),
             SizedBox(height: 10),
             if (done != null)
-              Container(
+              Align(
+                alignment: Alignment.bottomCenter,
                 child: PrimaryButton(
                   text: doneButtonText,
                   onPressed: done,
