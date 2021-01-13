@@ -30,8 +30,10 @@ class CalendarListPage extends StatelessWidget {
         backgroundColor: PilllColors.background,
       ),
       backgroundColor: PilllColors.background,
-      body: ListView(
-        children: _components(context),
+      body: SafeArea(
+        child: ListView(
+          children: _components(context),
+        ),
       ),
     );
   }

@@ -42,30 +42,32 @@ class PillSheetTypeSelectPage extends StatelessWidget {
         ),
         backgroundColor: PilllColors.background,
       ),
-      body: Container(
-        child: Center(
-          child: Column(
-            children: <Widget>[
-              SizedBox(height: 24),
-              Text("飲んでいるピルのタイプはどれ？",
-                  style: FontType.sBigTitle.merge(TextColorStyle.main)),
-              SizedBox(height: 24),
-              Container(
-                height: 461,
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children:
-                      PillSheetType.values.map((e) => _pillSheet(e)).toList(),
+      body: SafeArea(
+        child: Container(
+          child: Center(
+            child: Column(
+              children: <Widget>[
+                SizedBox(height: 24),
+                Text("飲んでいるピルのタイプはどれ？",
+                    style: FontType.sBigTitle.merge(TextColorStyle.main)),
+                SizedBox(height: 24),
+                Container(
+                  height: 461,
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children:
+                        PillSheetType.values.map((e) => _pillSheet(e)).toList(),
+                  ),
                 ),
-              ),
-              Spacer(),
-              if (done != null)
-                PrimaryButton(
-                  text: doneButtonText,
-                  onPressed: done,
-                ),
-              SizedBox(height: 35),
-            ],
+                Spacer(),
+                if (done != null)
+                  PrimaryButton(
+                    text: doneButtonText,
+                    onPressed: done,
+                  ),
+                SizedBox(height: 35),
+              ],
+            ),
           ),
         ),
       ),
