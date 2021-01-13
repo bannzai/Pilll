@@ -58,6 +58,9 @@ class RootState extends State<Root> {
   showIndicator() {
     _indicatorTypes.add(IndicatorType.shown);
     Future.delayed(Duration(milliseconds: 200)).then((value) {
+      if (_indicatorTypes.isEmpty) {
+        return;
+      }
       if (_indicatorTypes.last == IndicatorType.hidden) {
         return;
       }
@@ -71,6 +74,12 @@ class RootState extends State<Root> {
   }
 
   hideIndicator() {
+    if (_indicatorTypes.isEmpty) {
+      return;
+    }
+    if (_indicatorTypes.last == IndicatorType.shown) {
+      return;
+    }
     _indicatorTypes.add(IndicatorType.hidden);
     if (Navigator.of(context).canPop()) {
       Navigator.of(context).pop();
