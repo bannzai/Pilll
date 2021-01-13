@@ -66,66 +66,69 @@ class _SettingMenstruationPageState extends State<SettingMenstruationPage> {
         backgroundColor: PilllColors.background,
       ),
       body: SafeArea(
-        child: Container(
-          child: Center(
-            child: Column(
-              children: <Widget>[
-                SizedBox(height: 24),
-                Text(
-                  "生理について教えてください",
-                  style: FontType.sBigTitle.merge(TextColorStyle.main),
-                  textAlign: TextAlign.center,
-                ),
-                Spacer(),
-                Container(
-                  height: 156,
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: <Widget>[
-                      Text("いつから生理がはじまる？",
-                          style: FontType.subTitle.merge(TextColorStyle.main)),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: <Widget>[
-                          Text("偽薬期間に入って ",
-                              style: FontType.assisting
-                                  .merge(TextColorStyle.main)),
-                          GestureDetector(
-                            onTap: () => _showFromModalSheet(context),
-                            child: _from(),
-                          ),
-                          Text(" 日後ぐらいから",
-                              style: FontType.assisting
-                                  .merge(TextColorStyle.main)),
-                        ],
-                      ),
-                      Text("何日間生理が続く？",
-                          style: FontType.assistingBold
-                              .merge(TextColorStyle.main)),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: <Widget>[
-                          GestureDetector(
-                            onTap: () => _showDurationModalSheet(context),
-                            child: _duration(),
-                          ),
-                          Text(" 日間生理が続く",
-                              style: FontType.assisting
-                                  .merge(TextColorStyle.main)),
-                        ],
-                      )
-                    ],
+        child: SingleChildScrollView(
+          child: Container(
+            child: Center(
+              child: Column(
+                children: <Widget>[
+                  SizedBox(height: 24),
+                  Text(
+                    "生理について教えてください",
+                    style: FontType.sBigTitle.merge(TextColorStyle.main),
+                    textAlign: TextAlign.center,
                   ),
-                ),
-                Spacer(),
-                if (this.widget.done != null) ...[
-                  PrimaryButton(
-                    text: this.widget.doneText,
-                    onPressed: !canNext(context) ? null : this.widget.done,
+                  Spacer(),
+                  Container(
+                    height: 156,
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: <Widget>[
+                        Text("いつから生理がはじまる？",
+                            style:
+                                FontType.subTitle.merge(TextColorStyle.main)),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: <Widget>[
+                            Text("偽薬期間に入って ",
+                                style: FontType.assisting
+                                    .merge(TextColorStyle.main)),
+                            GestureDetector(
+                              onTap: () => _showFromModalSheet(context),
+                              child: _from(),
+                            ),
+                            Text(" 日後ぐらいから",
+                                style: FontType.assisting
+                                    .merge(TextColorStyle.main)),
+                          ],
+                        ),
+                        Text("何日間生理が続く？",
+                            style: FontType.assistingBold
+                                .merge(TextColorStyle.main)),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.center,
+                          children: <Widget>[
+                            GestureDetector(
+                              onTap: () => _showDurationModalSheet(context),
+                              child: _duration(),
+                            ),
+                            Text(" 日間生理が続く",
+                                style: FontType.assisting
+                                    .merge(TextColorStyle.main)),
+                          ],
+                        )
+                      ],
+                    ),
                   ),
-                  SizedBox(height: 35),
-                ]
-              ],
+                  Spacer(),
+                  if (this.widget.done != null) ...[
+                    PrimaryButton(
+                      text: this.widget.doneText,
+                      onPressed: !canNext(context) ? null : this.widget.done,
+                    ),
+                    SizedBox(height: 35),
+                  ]
+                ],
+              ),
             ),
           ),
         ),
