@@ -28,7 +28,7 @@ class RecordPage extends HookWidget {
       backgroundColor: PilllColors.background,
       appBar: null,
       extendBodyBehindAppBar: true,
-      body: SafeArea(child: _body(context)),
+      body: SafeArea(top: false, child: _body(context)),
     );
   }
 
