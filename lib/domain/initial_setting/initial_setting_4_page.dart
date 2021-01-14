@@ -7,6 +7,7 @@ import 'package:Pilll/components/atoms/font.dart';
 import 'package:Pilll/components/atoms/text_color.dart';
 import 'package:Pilll/util/datetime/day.dart';
 import 'package:Pilll/util/formatter/date_time_formatter.dart';
+import 'package:Pilll/util/time_zone_offset.dart';
 import 'package:Pilll/util/toolbar/date_time_picker.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/gestures.dart';
@@ -34,7 +35,8 @@ class InitialSetting4Page extends HookWidget {
         return DateTimePicker(
           initialDateTime: initialDateTime,
           done: (dateTime) {
-            store.setReminderTime(index, dateTime.hour, dateTime.minute);
+            store.setReminderTime(
+                index, timeZoneOffsetHour(dateTime.hour), dateTime.minute);
             Navigator.pop(context);
           },
         );

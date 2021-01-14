@@ -135,16 +135,19 @@ class ReminderTimesPage extends HookWidget {
         return DateTimePicker(
           initialDateTime: isEditing
               ? state.entity.reminderTimes[index].dateTime()
-              : ReminderTime(hour: timeZoneOffsetHour(22), minute: 0)
-                  .dateTime(),
+              : ReminderTime(hour: 22, minute: 0).dateTime(),
           done: (dateTime) {
             Navigator.pop(context);
             if (isEditing) {
-              store.editReminderTime(index,
-                  ReminderTime(hour: dateTime.hour, minute: dateTime.minute));
+              store.editReminderTime(
+                  index,
+                  ReminderTime(
+                      hour: timeZoneOffsetHour(dateTime.hour),
+                      minute: dateTime.minute));
             } else {
-              store.addReminderTimes(
-                  ReminderTime(hour: dateTime.hour, minute: dateTime.minute));
+              store.addReminderTimes(ReminderTime(
+                  hour: timeZoneOffsetHour(dateTime.hour),
+                  minute: dateTime.minute));
             }
           },
         );
