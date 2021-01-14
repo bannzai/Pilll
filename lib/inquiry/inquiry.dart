@@ -1,3 +1,5 @@
+import 'dart:convert';
+
 import 'package:Pilll/auth/auth.dart';
 import 'package:Pilll/database/database.dart';
 import 'package:Pilll/entity/pill_sheet.dart';
@@ -11,7 +13,8 @@ import 'package:url_launcher/url_launcher.dart';
 inquiry() {
   PackageInfo.fromPlatform().then((value) => debugInfo(", ")).then((info) {
     launch(
-        "https://docs.google.com/forms/d/e/1FAIpQLSddEpE641jIKEL9cxgiKaRytmBtsP7PXnDdXonEyE-n62JMWQ/viewform?usp=pp_url&entry.2066946565=$info",
+        Uri.encodeFull(
+            "https://docs.google.com/forms/d/e/1FAIpQLSddEpE641jIKEL9cxgiKaRytmBtsP7PXnDdXonEyE-n62JMWQ/viewform?usp=pp_url&entry.2066946565=$info"),
         forceSafariVC: true);
   });
 }
