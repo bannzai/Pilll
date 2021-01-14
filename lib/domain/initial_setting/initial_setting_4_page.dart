@@ -53,7 +53,7 @@ class InitialSetting4Page extends HookWidget {
     final reminderTime = state.reminderTimeOrDefault(index);
     final formValue = reminderTime == null
         ? "--:--"
-        : DateTimeFormatter.militaryTime(reminderTime);
+        : DateTimeFormatter.militaryTimeWithTimeZoneOffsetHour(reminderTime);
     return Padding(
       padding: const EdgeInsets.fromLTRB(10, 0, 10, 0),
       child: Column(

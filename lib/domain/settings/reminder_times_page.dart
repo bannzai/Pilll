@@ -66,7 +66,8 @@ class ReminderTimesPage extends HookWidget {
       },
       child: ListTile(
         title: Text("通知$number"),
-        subtitle: Text(DateTimeFormatter.militaryTime(reminderTime.dateTime())),
+        subtitle: Text(DateTimeFormatter.militaryTimeWithTimeZoneOffsetHour(
+            reminderTime.dateTime())),
       ),
     );
     if (state.entity.reminderTimes.length == 1) {

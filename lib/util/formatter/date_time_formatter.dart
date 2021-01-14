@@ -1,9 +1,11 @@
+import 'package:Pilll/util/time_zone_offset.dart';
 import 'package:intl/intl.dart';
 
+
 class DateTimeFormatter {
-  static String militaryTime(DateTime dateTime) {
+  static String militaryTimeWithTimeZoneOffsetHour(DateTime dateTime) {
     var formatter = NumberFormat("00");
-    return formatter.format(dateTime.hour) +
+    return formatter.format(timeZoneOffsetHour(dateTime.hour)) +
         ":" +
         formatter.format(dateTime.minute);
   }

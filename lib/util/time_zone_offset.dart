@@ -3,7 +3,7 @@ int timeZoneOffsetHour(int jstHour) {
   if (date.timeZoneName == "JST") {
     return jstHour;
   }
-  final jstoOffset = 9;
+  final jstOffset = 9;
   final offset = date.timeZoneOffset.inHours;
-  return DateTime(2020, 1, 1, jstHour + jstoOffset + offset).hour;
+  return DateTime(2020, 1, 1, jstHour + jstOffset - offset).hour;
 }

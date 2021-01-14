@@ -19,12 +19,6 @@ abstract class ReminderTime implements _$ReminderTime {
       _$ReminderTimeFromJson(json);
   Map<String, dynamic> toJson() => _$_$_ReminderTimeToJson(this);
 
-  DateTime dateTime() {
-    var t = DateTime.now().toLocal();
-    return DateTime(t.year, t.month, t.day, hour, minute, t.second,
-        t.millisecond, t.microsecond);
-  }
-
   static final int maximumCount = 3;
   static final int minimumCount = 1;
 }

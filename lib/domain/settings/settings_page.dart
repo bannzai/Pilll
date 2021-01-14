@@ -210,7 +210,7 @@ class SettingsPage extends HookWidget {
           SettingsListDatePickerRowModel(
             title: "通知時刻",
             content: settingState.entity.reminderTimes
-                .map((e) => DateTimeFormatter.militaryTime(e.dateTime()))
+                .map((e) => DateTimeFormatter.militaryTimeWithTimeZoneOffsetHour(e.dateTime()))
                 .join(", "),
             onTap: () {
               Navigator.of(context).push(ReminderTimesPageRoute.route());
