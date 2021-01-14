@@ -6,6 +6,7 @@ import 'package:Pilll/components/atoms/color.dart';
 import 'package:Pilll/components/atoms/font.dart';
 import 'package:Pilll/components/atoms/text_color.dart';
 import 'package:Pilll/util/formatter/date_time_formatter.dart';
+import 'package:Pilll/util/time_zone_offset.dart';
 import 'package:Pilll/util/toolbar/date_time_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
@@ -134,7 +135,8 @@ class ReminderTimesPage extends HookWidget {
         return DateTimePicker(
           initialDateTime: isEditing
               ? state.entity.reminderTimes[index].dateTime()
-              : ReminderTime(hour: 22, minute: 0).dateTime(),
+              : ReminderTime(hour: timeZoneOffsetHour(22), minute: 0)
+                  .dateTime(),
           done: (dateTime) {
             Navigator.pop(context);
             if (isEditing) {
