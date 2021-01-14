@@ -77,7 +77,7 @@ class RootState extends State<Root> {
     if (_indicatorTypes.isEmpty) {
       return;
     }
-    if (_indicatorTypes.last == IndicatorType.shown) {
+    if (_indicatorTypes.last != IndicatorType.shown) {
       return;
     }
     _indicatorTypes.add(IndicatorType.hidden);
