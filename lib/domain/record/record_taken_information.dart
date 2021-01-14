@@ -28,7 +28,7 @@ class RecordTakenInformation extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 150,
+      height: 130,
       decoration: BoxDecoration(
         color: Colors.white,
         boxShadow: [
@@ -41,7 +41,7 @@ class RecordTakenInformation extends StatelessWidget {
       ),
       child: Column(
         children: <Widget>[
-          SizedBox(height: 54),
+          SizedBox(height: 34),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[

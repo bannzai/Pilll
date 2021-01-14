@@ -24,11 +24,65 @@ import 'package:hooks_riverpod/all.dart';
 class RecordPage extends HookWidget {
   @override
   Widget build(BuildContext context) {
+    final state = useProvider(pillSheetStoreProvider.state);
+    final store = useProvider(pillSheetStoreProvider);
+    final currentPillSheet = state.entity;
     return Scaffold(
       backgroundColor: PilllColors.background,
-      appBar: null,
+      appBar: AppBar(
+        titleSpacing: 0,
+        backgroundColor: PilllColors.white,
+        toolbarHeight: 130,
+        title: RecordTakenInformation(
+          today: DateTime.now(),
+          state: state,
+          onPressed: () {
+            showModalBottomSheet(
+              context: context,
+              builder: (BuildContext context) {
+                var selectedTodayPillNumber = currentPillSheet.todayPillNumber;
+                return Column(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  mainAxisSize: MainAxisSize.min,
+                  children: <Widget>[
+                    PickerToolbar(
+                      done: (() {
+                        store.modifyBeginingDate(selectedTodayPillNumber);
+                        Navigator.pop(context);
+                      }),
+                      cancel: (() {
+                        Navigator.pop(context);
+                      }),
+                    ),
+                    Container(
+                      height: 200,
+                      child: GestureDetector(
+                        onTap: () {
+                          Navigator.pop(context);
+                        },
+                        child: CupertinoPicker(
+                          itemExtent: 40,
+                          children: List.generate(
+                              currentPillSheet.typeInfo.totalCount,
+                              (index) => Text("${index + 1}")),
+                          onSelectedItemChanged: (index) {
+                            selectedTodayPillNumber = index + 1;
+                          },
+                          scrollController: FixedExtentScrollController(
+                            initialItem: selectedTodayPillNumber - 1,
+                          ),
+                        ),
+                      ),
+                    ),
+                  ],
+                );
+              },
+            );
+          },
+        ),
+      ),
       extendBodyBehindAppBar: true,
-      body: SafeArea(top: false, child: _body(context)),
+      body: _body(context),
     );
   }
 
@@ -44,54 +98,6 @@ class RecordPage extends HookWidget {
     return Center(
       child: ListView(
         children: [
-          RecordTakenInformation(
-            today: DateTime.now(),
-            state: state,
-            onPressed: () {
-              showModalBottomSheet(
-                context: context,
-                builder: (BuildContext context) {
-                  var selectedTodayPillNumber =
-                      currentPillSheet.todayPillNumber;
-                  return Column(
-                    mainAxisAlignment: MainAxisAlignment.end,
-                    mainAxisSize: MainAxisSize.min,
-                    children: <Widget>[
-                      PickerToolbar(
-                        done: (() {
-                          store.modifyBeginingDate(selectedTodayPillNumber);
-                          Navigator.pop(context);
-                        }),
-                        cancel: (() {
-                          Navigator.pop(context);
-                        }),
-                      ),
-                      Container(
-                        height: 200,
-                        child: GestureDetector(
-                          onTap: () {
-                            Navigator.pop(context);
-                          },
-                          child: CupertinoPicker(
-                            itemExtent: 40,
-                            children: List.generate(
-                                currentPillSheet.typeInfo.totalCount,
-                                (index) => Text("${index + 1}")),
-                            onSelectedItemChanged: (index) {
-                              selectedTodayPillNumber = index + 1;
-                            },
-                            scrollController: FixedExtentScrollController(
-                              initialItem: selectedTodayPillNumber - 1,
-                            ),
-                          ),
-                        ),
-                      ),
-                    ],
-                  );
-                },
-              );
-            },
-          ),
           if (_notificationString(state).isNotEmpty)
             ConstrainedBox(
               constraints: BoxConstraints.expand(height: 26),
