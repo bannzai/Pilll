@@ -115,9 +115,7 @@ class RecordTakenInformation extends StatelessWidget {
     return Center(
       child: Text(
         "${_formattedToday()} (${_todayWeekday()})",
-        style: TextStyle().merge(
-          FontType.xBigNumber.merge(TextColorStyle.gray),
-        ),
+        style: FontType.xBigNumber.merge(TextColorStyle.gray),
       ),
     );
   }
