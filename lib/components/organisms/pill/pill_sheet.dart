@@ -1,3 +1,4 @@
+import 'package:Pilll/components/atoms/font.dart';
 import 'package:Pilll/entity/pill_mark_type.dart';
 import 'package:Pilll/components/atoms/color.dart';
 import 'package:Pilll/entity/weekday.dart';
@@ -53,7 +54,9 @@ class PillSheet extends StatelessWidget {
       },
       child: Column(
         children: <Widget>[
-          Text("$number", style: TextStyle(color: PilllColors.weekday)),
+          Text("$number",
+              style: FontType.smallTitle
+                  .merge(TextStyle(color: PilllColors.weekday))),
           PillMark(
             key: Key("PillMarkWidget_$number"),
             hasRippleAnimation: enabledMarkAnimation == null
