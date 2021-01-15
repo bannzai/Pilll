@@ -1,4 +1,5 @@
 import 'package:Pilll/components/atoms/color.dart';
+import 'package:Pilll/components/atoms/font.dart';
 import 'package:Pilll/entity/weekday.dart';
 import 'package:flutter/material.dart';
 
@@ -17,11 +18,12 @@ class WeekdayBadge extends StatelessWidget {
         Container(
             width: 20,
             height: 30,
-            decoration: BoxDecoration(color: PilllColors.mat)),
+            decoration: BoxDecoration(color: PilllColors.white)),
         Container(
           child: Text(weekday.weekdayString(),
               textAlign: TextAlign.end,
-              style: TextStyle(color: weekday.weekdayColor())),
+              style: FontType.sSmallTitle
+                  .merge(TextStyle(color: weekday.weekdayColor()))),
         ),
       ],
     );
