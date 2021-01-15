@@ -27,9 +27,9 @@ class CalendarListPage extends StatelessWidget {
           icon: Icon(Icons.arrow_back, color: Colors.black),
           onPressed: () => Navigator.of(context).pop(),
         ),
-        backgroundColor: PilllColors.background,
+        backgroundColor: PilllColors.white,
       ),
-      backgroundColor: PilllColors.background,
+      backgroundColor: PilllColors.white,
       body: SafeArea(
         child: ListView(
           children: _components(context),
