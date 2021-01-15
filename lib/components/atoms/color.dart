@@ -44,6 +44,7 @@ class PilllColors {
 
   static final Color menstruation = HexColor.fromHex("E3B4B4");
   static final Color duration = HexColor.fromHex("6A7DA5");
+  static final Color overlay = primary.withAlpha(20);
 
   static final Color modalBackground =
       HexColor.fromHex("333333").withAlpha((255 * 0.7).round());
