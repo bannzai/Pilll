@@ -89,6 +89,13 @@ class PillSheet extends StatelessWidget {
       decoration: BoxDecoration(
         color: PilllColors.pillSheet,
         borderRadius: BorderRadius.circular(10),
+        boxShadow: [
+          BoxShadow(
+            color: Colors.black26,
+            blurRadius: 6.0,
+            offset: Offset(0, 2),
+          ),
+        ],
       ),
       child: Stack(
         children: <Widget>[
