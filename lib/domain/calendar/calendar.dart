@@ -107,10 +107,10 @@ class Calendar extends HookWidget {
                               DateTime(calculator.date.year,
                                   calculator.date.month, day)))
                           .isNotEmpty;
-                      final today = utility.today();
+                      final targetMonth = calculator.date;
                       return CalendarDayTile(
-                        isToday: isSameDay(
-                            today, DateTime(today.year, today.month, day)),
+                        isToday: isSameDay(utility.today(),
+                            DateTime(targetMonth.year, targetMonth.month, day)),
                         weekday: weekday,
                         day: day,
                         upperWidget: isExistDiary ? _diaryMarkWidget() : null,
