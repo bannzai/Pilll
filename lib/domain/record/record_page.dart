@@ -172,9 +172,9 @@ class RecordPage extends HookWidget {
     return PrimaryButton(
       text: "飲んだ",
       onPressed: () {
-        analytics.logEvent(name: "takenButtonPressed", parameters: {
-          "lastTakenDate": pillSheet.lastTakenPillNumber,
-          "todayPillNumber": pillSheet.todayPillNumber,
+        analytics.logEvent(name: "taken_button_pressed", parameters: {
+          "last_taken_pill_number": pillSheet.lastTakenPillNumber,
+          "today_pill_number": pillSheet.todayPillNumber,
         });
         _take(context, pillSheet, now(), store);
       },
@@ -186,9 +186,9 @@ class RecordPage extends HookWidget {
     return TertiaryButton(
       text: "飲んでない",
       onPressed: () {
-        analytics.logEvent(name: "cancelTakenButtonPressed", parameters: {
-          "lastTakenDate": pillSheet.lastTakenPillNumber,
-          "todayPillNumber": pillSheet.todayPillNumber,
+        analytics.logEvent(name: "cancel_taken_button_pressed", parameters: {
+          "last_taken_pill_number": pillSheet.lastTakenPillNumber,
+          "today_pill_number": pillSheet.todayPillNumber,
         });
         _cancelTake(pillSheet, store);
       },
@@ -240,10 +240,10 @@ class RecordPage extends HookWidget {
       pillMarkTypeBuilder: (number) => store.markFor(number),
       enabledMarkAnimation: (number) => store.shouldPillMarkAnimation(number),
       markSelected: (number) {
-        analytics.logEvent(name: "pillMarkTapped", parameters: {
+        analytics.logEvent(name: "pill_mark_tapped", parameters: {
           "number": number,
-          "lastTakenDate": pillSheet.lastTakenPillNumber,
-          "todayPillNumber": pillSheet.todayPillNumber,
+          "last_taken_pill_number": pillSheet.lastTakenPillNumber,
+          "today_pill_number": pillSheet.todayPillNumber,
         });
         if (number <= pillSheet.lastTakenPillNumber) {
           return;
