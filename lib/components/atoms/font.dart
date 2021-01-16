@@ -49,7 +49,7 @@ class FontType {
   );
   static final TextStyle xBigNumber = TextStyle(
     fontFamily: FontFamily.number,
-    fontWeight: FontWeight.w300,
+    fontWeight: FontWeight.w600,
     fontSize: FontSize.xBig,
   );
   static final TextStyle sBigTitle = TextStyle(
