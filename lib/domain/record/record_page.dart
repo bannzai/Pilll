@@ -1,3 +1,4 @@
+import 'package:Pilll/analytics.dart';
 import 'package:Pilll/components/molecules/indicator.dart';
 import 'package:Pilll/components/organisms/pill/pill_sheet.dart';
 import 'package:Pilll/domain/record/record_taken_information.dart';
@@ -170,7 +171,13 @@ class RecordPage extends HookWidget {
   ) {
     return PrimaryButton(
       text: "飲んだ",
-      onPressed: () => _take(context, pillSheet, now(), store),
+      onPressed: () {
+        analytics.logEvent(name: "taken_button_pressed", parameters: {
+          "last_taken_pill_number": pillSheet.lastTakenPillNumber,
+          "today_pill_number": pillSheet.todayPillNumber,
+        });
+        _take(context, pillSheet, now(), store);
+      },
     );
   }
 
@@ -178,7 +185,13 @@ class RecordPage extends HookWidget {
       PillSheetModel pillSheet, PillSheetStateStore store) {
     return TertiaryButton(
       text: "飲んでない",
-      onPressed: () => _cancelTake(pillSheet, store),
+      onPressed: () {
+        analytics.logEvent(name: "cancel_taken_button_pressed", parameters: {
+          "last_taken_pill_number": pillSheet.lastTakenPillNumber,
+          "today_pill_number": pillSheet.todayPillNumber,
+        });
+        _cancelTake(pillSheet, store);
+      },
     );
   }
 
@@ -227,6 +240,11 @@ class RecordPage extends HookWidget {
       pillMarkTypeBuilder: (number) => store.markFor(number),
       enabledMarkAnimation: (number) => store.shouldPillMarkAnimation(number),
       markSelected: (number) {
+        analytics.logEvent(name: "pill_mark_tapped", parameters: {
+          "number": number,
+          "last_taken_pill_number": pillSheet.lastTakenPillNumber,
+          "today_pill_number": pillSheet.todayPillNumber,
+        });
         if (number <= pillSheet.lastTakenPillNumber) {
           return;
         }
