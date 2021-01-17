@@ -13,7 +13,7 @@ import 'package:riverpod/all.dart';
 abstract class UserServiceInterface {
   Future<User> prepare();
   Future<User> fetch();
-  Stream<User> subscribe();
+  Future<User> subscribe();
   Future<void> deleteSettings();
   Future<void> setFlutterMigrationFlag();
   Future<void> registerRemoteNotificationToken(String token);
@@ -48,13 +48,13 @@ class UserService extends UserServiceInterface {
     });
   }
 
-  Stream<User> subscribe() {
+  Future<User> subscribe() {
     return _database
         .userReference()
         .snapshots(includeMetadataChanges: true)
-        .map((event) {
+        .listen((event) {
       return User.fromJson(event.data());
-    });
+    }).asFuture();
   }
 
   Future<void> deleteSettings() {
