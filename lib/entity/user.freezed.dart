@@ -161,14 +161,18 @@ class _$UserTearOff {
 // ignore: unused_element
   _User call(
       {@required String anonymouseUserID,
-      @JsonKey(name: "settings") Setting setting,
+      @JsonKey(name: 'settings') Setting setting,
       PillSheetModel latestPillSheet,
-      bool migratedFlutter = false}) {
+      bool migratedFlutter = false,
+      bool isSubscribed = false,
+      dynamic j}) {
     return _User(
       anonymouseUserID: anonymouseUserID,
       setting: setting,
       latestPillSheet: latestPillSheet,
       migratedFlutter: migratedFlutter,
+      isSubscribed: isSubscribed,
+      j: j,
     );
   }
 
@@ -185,10 +189,12 @@ const $User = _$UserTearOff();
 /// @nodoc
 mixin _$User {
   String get anonymouseUserID;
-  @JsonKey(name: "settings")
+  @JsonKey(name: 'settings')
   Setting get setting;
   PillSheetModel get latestPillSheet;
   bool get migratedFlutter;
+  bool get isSubscribed;
+  dynamic get j;
 
   Map<String, dynamic> toJson();
   $UserCopyWith<User> get copyWith;
@@ -200,9 +206,11 @@ abstract class $UserCopyWith<$Res> {
       _$UserCopyWithImpl<$Res>;
   $Res call(
       {String anonymouseUserID,
-      @JsonKey(name: "settings") Setting setting,
+      @JsonKey(name: 'settings') Setting setting,
       PillSheetModel latestPillSheet,
-      bool migratedFlutter});
+      bool migratedFlutter,
+      bool isSubscribed,
+      dynamic j});
 
   $SettingCopyWith<$Res> get setting;
   $PillSheetModelCopyWith<$Res> get latestPillSheet;
@@ -222,6 +230,8 @@ class _$UserCopyWithImpl<$Res> implements $UserCopyWith<$Res> {
     Object setting = freezed,
     Object latestPillSheet = freezed,
     Object migratedFlutter = freezed,
+    Object isSubscribed = freezed,
+    Object j = freezed,
   }) {
     return _then(_value.copyWith(
       anonymouseUserID: anonymouseUserID == freezed
@@ -234,6 +244,9 @@ class _$UserCopyWithImpl<$Res> implements $UserCopyWith<$Res> {
       migratedFlutter: migratedFlutter == freezed
           ? _value.migratedFlutter
           : migratedFlutter as bool,
+      isSubscribed:
+          isSubscribed == freezed ? _value.isSubscribed : isSubscribed as bool,
+      j: j == freezed ? _value.j : j as dynamic,
     ));
   }
 
@@ -265,9 +278,11 @@ abstract class _$UserCopyWith<$Res> implements $UserCopyWith<$Res> {
   @override
   $Res call(
       {String anonymouseUserID,
-      @JsonKey(name: "settings") Setting setting,
+      @JsonKey(name: 'settings') Setting setting,
       PillSheetModel latestPillSheet,
-      bool migratedFlutter});
+      bool migratedFlutter,
+      bool isSubscribed,
+      dynamic j});
 
   @override
   $SettingCopyWith<$Res> get setting;
@@ -290,6 +305,8 @@ class __$UserCopyWithImpl<$Res> extends _$UserCopyWithImpl<$Res>
     Object setting = freezed,
     Object latestPillSheet = freezed,
     Object migratedFlutter = freezed,
+    Object isSubscribed = freezed,
+    Object j = freezed,
   }) {
     return _then(_User(
       anonymouseUserID: anonymouseUserID == freezed
@@ -302,6 +319,9 @@ class __$UserCopyWithImpl<$Res> extends _$UserCopyWithImpl<$Res>
       migratedFlutter: migratedFlutter == freezed
           ? _value.migratedFlutter
           : migratedFlutter as bool,
+      isSubscribed:
+          isSubscribed == freezed ? _value.isSubscribed : isSubscribed as bool,
+      j: j == freezed ? _value.j : j,
     ));
   }
 }
@@ -312,11 +332,14 @@ class __$UserCopyWithImpl<$Res> extends _$UserCopyWithImpl<$Res>
 class _$_User extends _User {
   _$_User(
       {@required this.anonymouseUserID,
-      @JsonKey(name: "settings") this.setting,
+      @JsonKey(name: 'settings') this.setting,
       this.latestPillSheet,
-      this.migratedFlutter = false})
+      this.migratedFlutter = false,
+      this.isSubscribed = false,
+      this.j})
       : assert(anonymouseUserID != null),
         assert(migratedFlutter != null),
+        assert(isSubscribed != null),
         super._();
 
   factory _$_User.fromJson(Map<String, dynamic> json) =>
@@ -325,17 +348,22 @@ class _$_User extends _User {
   @override
   final String anonymouseUserID;
   @override
-  @JsonKey(name: "settings")
+  @JsonKey(name: 'settings')
   final Setting setting;
   @override
   final PillSheetModel latestPillSheet;
   @JsonKey(defaultValue: false)
   @override
   final bool migratedFlutter;
+  @JsonKey(defaultValue: false)
+  @override
+  final bool isSubscribed;
+  @override
+  final dynamic j;
 
   @override
   String toString() {
-    return 'User(anonymouseUserID: $anonymouseUserID, setting: $setting, latestPillSheet: $latestPillSheet, migratedFlutter: $migratedFlutter)';
+    return 'User(anonymouseUserID: $anonymouseUserID, setting: $setting, latestPillSheet: $latestPillSheet, migratedFlutter: $migratedFlutter, isSubscribed: $isSubscribed, j: $j)';
   }
 
   @override
@@ -353,7 +381,12 @@ class _$_User extends _User {
                     .equals(other.latestPillSheet, latestPillSheet)) &&
             (identical(other.migratedFlutter, migratedFlutter) ||
                 const DeepCollectionEquality()
-                    .equals(other.migratedFlutter, migratedFlutter)));
+                    .equals(other.migratedFlutter, migratedFlutter)) &&
+            (identical(other.isSubscribed, isSubscribed) ||
+                const DeepCollectionEquality()
+                    .equals(other.isSubscribed, isSubscribed)) &&
+            (identical(other.j, j) ||
+                const DeepCollectionEquality().equals(other.j, j)));
   }
 
   @override
@@ -362,7 +395,9 @@ class _$_User extends _User {
       const DeepCollectionEquality().hash(anonymouseUserID) ^
       const DeepCollectionEquality().hash(setting) ^
       const DeepCollectionEquality().hash(latestPillSheet) ^
-      const DeepCollectionEquality().hash(migratedFlutter);
+      const DeepCollectionEquality().hash(migratedFlutter) ^
+      const DeepCollectionEquality().hash(isSubscribed) ^
+      const DeepCollectionEquality().hash(j);
 
   @override
   _$UserCopyWith<_User> get copyWith =>
@@ -378,21 +413,27 @@ abstract class _User extends User {
   _User._() : super._();
   factory _User(
       {@required String anonymouseUserID,
-      @JsonKey(name: "settings") Setting setting,
+      @JsonKey(name: 'settings') Setting setting,
       PillSheetModel latestPillSheet,
-      bool migratedFlutter}) = _$_User;
+      bool migratedFlutter,
+      bool isSubscribed,
+      dynamic j}) = _$_User;
 
   factory _User.fromJson(Map<String, dynamic> json) = _$_User.fromJson;
 
   @override
   String get anonymouseUserID;
   @override
-  @JsonKey(name: "settings")
+  @JsonKey(name: 'settings')
   Setting get setting;
   @override
   PillSheetModel get latestPillSheet;
   @override
   bool get migratedFlutter;
+  @override
+  bool get isSubscribed;
+  @override
+  dynamic get j;
   @override
   _$UserCopyWith<_User> get copyWith;
 }
