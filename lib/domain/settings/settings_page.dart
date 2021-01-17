@@ -17,6 +17,7 @@ import 'package:Pilll/components/atoms/buttons.dart';
 import 'package:Pilll/components/atoms/color.dart';
 import 'package:Pilll/components/atoms/font.dart';
 import 'package:Pilll/components/atoms/text_color.dart';
+import 'package:Pilll/store/user.dart';
 import 'package:Pilll/util/environment.dart';
 import 'package:Pilll/util/formatter/date_time_formatter.dart';
 import 'package:flutter/cupertino.dart';
@@ -140,6 +141,7 @@ class SettingsPage extends HookWidget {
     final settingStore = useProvider(settingStoreProvider);
     final settingState = useProvider(settingStoreProvider.state);
     final transactionModifier = useProvider(transactionModifierProvider);
+    final userState = useProvider(userStoreProvider.state);
     switch (section) {
       case SettingSection.pill:
         return [
@@ -238,6 +240,28 @@ class SettingsPage extends HookWidget {
                   .modifyIsOnReminder(!settingState.entity.isOnReminder);
             },
           ),
+          if (userState.entity.isSubscribed &&
+              settingState.entity.isAutomaticallyCreatePillSheet)
+            SettingsListSwitchRowModel(
+              title: "自動でピルシートを作成",
+              value: settingState.entity.isOnReminder,
+              onTap: () {
+                analytics.logEvent(
+                    name:
+                        "setting_did_select_toggle_automatically_create_pill_sheet",
+                    parameters: {
+                      "current_pill_sheet_type":
+                          settingState.entity.pillSheetType.rawPath,
+                      "is_automatically_create_pill_sheet":
+                          settingState.entity.isAutomaticallyCreatePillSheet,
+                      "today_pill_number":
+                          pillSheetState.entity.todayPillNumber,
+                      "is_on_reminder": settingState.entity.isOnReminder,
+                    });
+                settingStore.modifyIsAutomaticallyCreatePillSheet(
+                    !settingState.entity.isAutomaticallyCreatePillSheet);
+              },
+            ),
           SettingsListDatePickerRowModel(
             title: "通知時刻",
             content: settingState.entity.reminderTimes
