@@ -39,6 +39,7 @@ extension UserFirestoreFieldKeys on String {
   static final settings = "settings";
   static final migratedFlutter = "migratedFlutter";
   static final packageInfo = "packageInfo";
+  static final isSubscribed = "isSubscribed";
 }
 
 @freezed
@@ -46,12 +47,13 @@ abstract class User implements _$User {
   String get documentID => anonymouseUserID;
 
   User._();
-  factory User({
-    @required String anonymouseUserID,
-    @JsonKey(name: "settings") Setting setting,
-    PillSheetModel latestPillSheet,
-    @Default(false) bool migratedFlutter,
-  }) = _User;
+  factory User(
+      {@required String anonymouseUserID,
+      @JsonKey(name: "settings") Setting setting,
+      PillSheetModel latestPillSheet,
+      @Default(false) bool migratedFlutter,
+      @Default(false) bool isSubscribed,
+      j}) = _User;
 
   factory User.fromJson(Map<String, dynamic> json) => _$UserFromJson(json);
 }
