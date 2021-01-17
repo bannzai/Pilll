@@ -82,14 +82,6 @@ class SettingStateStore extends StateNotifier<SettingState> {
         .then((entity) => state = state.copyWith(entity: entity));
   }
 
-  Future<void> modifyIsAutomaticallyCreatePillSheet(
-      bool isAutomaticallyCreatePillSheet) {
-    return _service
-        .update(state.entity.copyWith(
-            isAutomaticallyCreatePillSheet: isAutomaticallyCreatePillSheet))
-        .then((entity) => state = state.copyWith(entity: entity));
-  }
-
   Future<void> modifyFromMenstruation(int fromMenstruation) {
     return _service
         .update(state.entity.copyWith(fromMenstruation: fromMenstruation))
