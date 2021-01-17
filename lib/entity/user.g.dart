@@ -28,6 +28,8 @@ _$_User _$_$_UserFromJson(Map<String, dynamic> json) {
         : PillSheetModel.fromJson(
             json['latestPillSheet'] as Map<String, dynamic>),
     migratedFlutter: json['migratedFlutter'] as bool ?? false,
+    isSubscribed: json['isSubscribed'] as bool ?? false,
+    j: json['j'],
   );
 }
 
@@ -36,4 +38,6 @@ Map<String, dynamic> _$_$_UserToJson(_$_User instance) => <String, dynamic>{
       'settings': instance.setting,
       'latestPillSheet': instance.latestPillSheet,
       'migratedFlutter': instance.migratedFlutter,
+      'isSubscribed': instance.isSubscribed,
+      'j': instance.j,
     };
