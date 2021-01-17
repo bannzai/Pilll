@@ -240,11 +240,10 @@ class SettingsPage extends HookWidget {
                   .modifyIsOnReminder(!settingState.entity.isOnReminder);
             },
           ),
-          if (userState.entity.isSubscribed &&
-              settingState.entity.isAutomaticallyCreatePillSheet)
+          if (userState.entity.isSubscribed)
             SettingsListSwitchRowModel(
               title: "自動でピルシートを作成",
-              value: settingState.entity.isOnReminder,
+              value: settingState.entity.isAutomaticallyCreatePillSheet,
               onTap: () {
                 analytics.logEvent(
                     name:
