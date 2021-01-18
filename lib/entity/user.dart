@@ -49,7 +49,6 @@ abstract class User implements _$User {
   factory User({
     @required String anonymouseUserID,
     @JsonKey(name: "settings") Setting setting,
-    PillSheetModel latestPillSheet,
     @Default(false) bool migratedFlutter,
   }) = _User;
 

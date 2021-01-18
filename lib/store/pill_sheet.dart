@@ -52,7 +52,11 @@ class PillSheetStateStore extends StateNotifier<PillSheetState> {
 
   void take(DateTime takenDate) {
     showIndicator();
-    _service.update(state.entity.copyWith(lastTakenDate: takenDate));
+    final updated = state.entity.copyWith(lastTakenDate: takenDate);
+    _service.update(updated).then((value) {
+      hideIndicator();
+      state = state.copyWith(entity: updated);
+    });
   }
 
   DateTime calcBeginingDateFromNextTodayPillNumber(int pillNumber) {
