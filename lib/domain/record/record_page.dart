@@ -88,7 +88,6 @@ class RecordPage extends HookWidget {
   }
 
   Widget _body(BuildContext context) {
-    hideIndicator();
     final state = useProvider(pillSheetStoreProvider.state);
     final currentPillSheet = state.entity;
     final store = useProvider(pillSheetStoreProvider);
