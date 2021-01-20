@@ -65,6 +65,7 @@ extension AppDelegate {
             switch response.actionIdentifier {
             case "RECORD_PILL":
                 // NOTE: call flutter record function
+                print(response.actionIdentifier)
                 break
             default:
                 break
