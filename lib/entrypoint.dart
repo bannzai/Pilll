@@ -5,6 +5,7 @@ import 'package:Pilll/analytics.dart';
 import 'package:Pilll/components/atoms/color.dart';
 import 'package:Pilll/entity/user_error.dart';
 import 'package:Pilll/error/universal_error_page.dart';
+import 'package:Pilll/global_method_channel.dart';
 import 'package:Pilll/router/router.dart';
 import 'package:Pilll/service/push_notification.dart';
 import 'package:Pilll/util/environment.dart';
@@ -35,6 +36,7 @@ Future<void> entrypoint() async {
   };
   FlutterError.onError = FirebaseCrashlytics.instance.recordFlutterError;
   listenNotificationEvents();
+  definedChannel();
   runZonedGuarded(() {
     runApp(ProviderScope(child: App()));
   }, (error, stack) => FirebaseCrashlytics.instance.recordError(error, stack));
