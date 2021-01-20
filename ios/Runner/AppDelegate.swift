@@ -21,7 +21,7 @@ import Flutter
 
 // MARK: - Notification
 extension AppDelegate {
-    private func swizzleNotificationCenterDelegateMethod() {
+    func swizzleNotificationCenterDelegateMethod() {
         guard let fromMethod = class_getInstanceMethod(type(of: self), #selector(AppDelegate.userNotificationCenter(_:didReceive:withCompletionHandler:))) else {
             fatalError()
         }
@@ -32,7 +32,7 @@ extension AppDelegate {
         method_exchangeImplementations(fromMethod, toMethod)
     }
 
-    private func configureNotificationActionableButtons() {
+    func configureNotificationActionableButtons() {
         let recordAction = UNNotificationAction(identifier: "RECORD_PILL",
                                                 title: "飲んだ",
                                                 options: UNNotificationActionOptions(rawValue: 0))
@@ -52,10 +52,11 @@ extension AppDelegate {
             let completionHandlerWrapper = {
                 isCompleted = true
                 completionHandler()
+                UIApplication.shared.applicationIconBadgeNumber = 0
             }
             userNotificationCenter_methodSwizzling(center, didReceive: response, withCompletionHandler: completionHandlerWrapper)
             if !isCompleted {
-                completionHandler()
+                completionHandlerWrapper()
             }
         }
         switch extractCategory(userInfo: response.notification.request.content.userInfo) {
@@ -64,8 +65,12 @@ extension AppDelegate {
         case .pillReminder:
             switch response.actionIdentifier {
             case "RECORD_PILL":
-                // NOTE: call flutter record function
-                print(response.actionIdentifier)
+                let viewController = window?.rootViewController as! FlutterViewController
+                let channel = FlutterMethodChannel(
+                    name: "method.channel.MizukiOhashi.Pilll",
+                    binaryMessenger: viewController.binaryMessenger
+                )
+                channel.invokeMethod("recordPill", arguments: nil)
                 break
             default:
                 break
@@ -77,8 +82,8 @@ extension AppDelegate {
         case pillReminder = "PILL_REMINDER"
     }
 
-    private func extractCategory(userInfo: [AnyHashable: Any]) -> Category? {
-        guard let apns = userInfo["apns"] as? [String: Any], let category = apns["category"] as? String else {
+    func extractCategory(userInfo: [AnyHashable: Any]) -> Category? {
+        guard let apns = userInfo["aps"] as? [String: Any], let category = apns["category"] as? String else {
             return nil
         }
         return Category(rawValue: category)
