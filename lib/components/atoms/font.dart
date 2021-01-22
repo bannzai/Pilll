@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 class FontFamily {
   static String get standarad => japanese;
 
-  static final String number = "Avenier Next";
+  static final String number = "Avenir Next";
   static final String japanese = "Noto Sans CJK JP";
   static final String roboto = "Roboto";
 }
