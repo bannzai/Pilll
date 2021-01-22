@@ -38,7 +38,7 @@ class RecordPage extends HookWidget {
           today: DateTime.now(),
           state: state,
           onPressed: () {
-            analytics.logEvent(name: "show_modify_today_pill_picker_tapped");
+            analytics.logEvent(name: "tapped_record_information_header");
             showModalBottomSheet(
               context: context,
               builder: (BuildContext context) {
