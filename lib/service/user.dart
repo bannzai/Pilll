@@ -122,9 +122,11 @@ class UserService extends UserServiceInterface {
       }
       return beginingVersion;
     }).then((version) {
-      return _database
-          .userReference()
-          .set({"beginingVersion": version}, SetOptions(merge: true));
+      return _database.userReference().set({
+        "stats": {
+          "beginingVersion": versionj,
+        }
+      }, SetOptions(merge: true));
     });
   }
 }
