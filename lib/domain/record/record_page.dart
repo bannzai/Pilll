@@ -169,6 +169,8 @@ class RecordPage extends HookWidget {
     PillSheetModel pillSheet,
     PillSheetStateStore store,
   ) {
+    if (pillSheet.todayPillNumber == 1)
+      analytics.logEvent(name: "user_taken_first_day_pill");
     return PrimaryButton(
       text: "飲んだ",
       onPressed: () {
