@@ -39,7 +39,8 @@ class ReminderTimesPage extends HookWidget {
               ..._components(context, state).map((e) {
                 return [e, _separator()];
               }).expand((element) => element),
-              _footer(context)
+              _footer(context),
+              _separator(),
             ],
           ),
         ),
@@ -126,6 +127,7 @@ class ReminderTimesPage extends HookWidget {
         _showPicker(context, store, state, null);
       },
       child: Container(
+        height: 64,
         child: Row(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
