@@ -60,7 +60,7 @@ class TertiaryButton extends StatelessWidget {
       child: FlatButton(
         color: PilllColors.gray,
         textColor: TextColor.white,
-        child: Text(text),
+        child: Text(text, style: ButtonTextStyle.main),
         onPressed: onPressed,
       ),
     );

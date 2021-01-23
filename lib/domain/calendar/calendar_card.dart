@@ -1,3 +1,4 @@
+import 'package:Pilll/components/atoms/color.dart';
 import 'package:Pilll/domain/calendar/calculator.dart';
 import 'package:Pilll/domain/calendar/calendar.dart';
 import 'package:Pilll/domain/calendar/utility.dart';
@@ -28,7 +29,18 @@ class CalendarCard extends HookWidget {
   Widget build(BuildContext context) {
     final currentPillSheetState = useProvider(pillSheetStoreProvider.state);
     final settingState = useProvider(settingStoreProvider.state);
-    return Card(
+    return Container(
+      decoration: BoxDecoration(
+        color: PilllColors.white,
+        borderRadius: BorderRadius.circular(12),
+        boxShadow: [
+          BoxShadow(
+            color: PilllColors.shadow,
+            blurRadius: 6.0,
+            offset: Offset(0, 2),
+          ),
+        ],
+      ),
       child: Column(
         children: <Widget>[
           _header(context),

@@ -76,7 +76,7 @@ class SettingsPage extends HookWidget {
         backgroundColor: PilllColors.white,
       ),
       body: Container(
-        child: ListView.separated(
+        child: ListView.builder(
           itemBuilder: (BuildContext context, int index) {
             if ((index + 1) == SettingsPage.itemCount) {
               if (Environment.isProduction) {
@@ -101,9 +101,6 @@ class SettingsPage extends HookWidget {
                 );
               },
             );
-          },
-          separatorBuilder: (BuildContext context, int index) {
-            return _separatorItem();
           },
           itemCount: SettingsPage.itemCount,
           addRepaintBoundaries: false,
@@ -327,15 +324,20 @@ class SettingsPage extends HookWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         _sectionTitle(section),
-        ..._rowModels(context, section).map((e) => e.widget()),
+        ..._rowModels(context, section).map((e) {
+          return [e.widget(), _separatorItem()];
+        }).expand((element) => element),
       ],
     );
   }
 
   Widget _separatorItem() {
-    return Container(
-      height: 1,
-      color: PilllColors.border,
+    return Padding(
+      padding: const EdgeInsets.only(left: 15, right: 15),
+      child: Container(
+        height: 1,
+        color: PilllColors.border,
+      ),
     );
   }
 }
@@ -355,12 +357,12 @@ class ConfirmDeletePillSheet extends StatelessWidget {
           mainAxisSize: MainAxisSize.min,
           children: <Widget>[
             Text("ピルシートを破棄しますか？",
-                style: FontType.subTitle.merge(TextColorStyle.black)),
+                style: FontType.subTitle.merge(TextColorStyle.main)),
             SizedBox(
               height: 15,
             ),
             Text("現在、服用記録をしているピルシートを削除します。",
-                style: FontType.assisting.merge(TextColorStyle.lightGray)),
+                style: FontType.assisting.merge(TextColorStyle.main)),
           ],
         ),
       ),

@@ -35,7 +35,12 @@ class ReminderTimesPage extends HookWidget {
       body: SafeArea(
         child: Container(
           child: ListView(
-            children: [..._components(context, state), _footer(context)],
+            children: [
+              ..._components(context, state).map((e) {
+                return [e, _separator()];
+              }).expand((element) => element),
+              _footer(context)
+            ],
           ),
         ),
       ),
@@ -97,6 +102,16 @@ class ReminderTimesPage extends HookWidget {
         ),
       ),
       child: body,
+    );
+  }
+
+  Widget _separator() {
+    return Padding(
+      padding: const EdgeInsets.only(left: 15, right: 15),
+      child: Container(
+        height: 1,
+        color: PilllColors.border,
+      ),
     );
   }
 
