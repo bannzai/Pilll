@@ -5,12 +5,16 @@ import 'package:Pilll/service/today.dart';
 import 'package:Pilll/state/pill_sheet.dart';
 import 'package:Pilll/store/pill_sheet.dart';
 import 'package:Pilll/util/datetime/date_compare.dart';
+import 'package:flutter/widgets.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
 
 import '../helper/mock.dart';
 
 void main() {
+  setUp(() {
+    WidgetsFlutterBinding.ensureInitialized();
+  });
   group("#calcBeginingDateFromNextTodayPillNumber", () {
     test("pill number changed to future", () async {
       final mockTodayRepository = MockTodayRepository();
