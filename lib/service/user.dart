@@ -9,6 +9,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart' as auth;
 import 'package:package_info/package_info.dart';
 import 'package:riverpod/all.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 abstract class UserServiceInterface {
   Future<User> prepare();
@@ -18,6 +19,7 @@ abstract class UserServiceInterface {
   Future<void> setFlutterMigrationFlag();
   Future<void> registerRemoteNotificationToken(String token);
   Future<void> saveLaunchInfo();
+  Future<void> saveStats();
 }
 
 final userServiceProvider =
@@ -105,6 +107,26 @@ class UserService extends UserServiceInterface {
       return _database.userReference().set(
           {UserFirestoreFieldKeys.packageInfo: packageInfo.toJson()},
           SetOptions(merge: true));
+    });
+  }
+
+  Future<void> saveStats() {
+    const beginingVersionKey = "beginingVersion";
+    return SharedPreferences.getInstance().then((store) async {
+      String beginingVersion = store.getString(beginingVersionKey);
+      if (beginingVersion == null) {
+        final v =
+            await PackageInfo.fromPlatform().then((value) => value.version);
+        store.setString(beginingVersionKey, beginingVersion);
+        return v;
+      }
+      return beginingVersion;
+    }).then((version) {
+      return _database.userReference().set({
+        "stats": {
+          "beginingVersion": versionj,
+        }
+      }, SetOptions(merge: true));
     });
   }
 }
