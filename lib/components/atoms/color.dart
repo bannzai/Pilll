@@ -51,4 +51,5 @@ class PilllColors {
 
   static Color get disabledSheet => PilllColors.pillSheet;
   static final Color thinSecondary = HexColor.fromHex("4E6287").withAlpha(20);
+  static final Color shadow = HexColor.fromHex("212121").withOpacity(0.14);
 }

@@ -57,7 +57,8 @@ class CalendarPage extends StatelessWidget {
             Center(
               child: Container(
                 child: Padding(
-                  padding: const EdgeInsets.only(left: 16, right: 16),
+                  padding:
+                      const EdgeInsets.only(left: 16, right: 16, bottom: 16),
                   child: CalendarCard(
                     date: today,
                   ),
