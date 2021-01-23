@@ -1,6 +1,5 @@
 import 'dart:async';
 
-import 'package:Pilll/analytics.dart';
 import 'package:Pilll/components/molecules/indicator.dart';
 import 'package:Pilll/entity/pill_mark_type.dart';
 import 'package:Pilll/entity/pill_sheet.dart';
@@ -22,9 +21,6 @@ class PillSheetStateStore extends StateNotifier<PillSheetState> {
   void _reset() {
     Future(() async {
       state = PillSheetState(entity: await _service.fetchLast());
-      analytics.logEvent(name: "count_of_remaining_pill", parameters: {
-        "count": state.entity.todayPillNumber - state.entity.lastTakenPillNumber
-      });
       firstLoadIsEnded = true;
       _subscribe();
     });
