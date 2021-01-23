@@ -124,7 +124,7 @@ class UserService extends UserServiceInterface {
     }).then((version) {
       return _database.userReference().set({
         "stats": {
-          "beginingVersion": versionj,
+          "beginingVersion": version,
         }
       }, SetOptions(merge: true));
     });
