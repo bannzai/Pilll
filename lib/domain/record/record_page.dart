@@ -183,7 +183,6 @@ class RecordPage extends HookWidget {
           "today_pill_number": pillSheet.todayPillNumber,
         });
         _take(context, pillSheet, now(), store);
-        _requestInAppReview();
       },
     );
   }
@@ -223,6 +222,7 @@ class RecordPage extends HookWidget {
       return;
     }
     store.take(takenDate);
+    _requestInAppReview();
   }
 
   void _cancelTake(PillSheetModel pillSheet, PillSheetStateStore store) {
