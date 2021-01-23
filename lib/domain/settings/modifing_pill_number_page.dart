@@ -31,13 +31,13 @@ class _ModifingPillNumberPageState extends State<ModifingPillNumberPage> {
           onPressed: () => Navigator.of(context).pop(),
         ),
         title: Text(
-          "番号変更",
+          "ピル番号の変更",
           style: TextStyle(color: TextColor.black),
         ),
         backgroundColor: PilllColors.background,
       ),
       body: SafeArea(
-              child: Container(
+        child: Container(
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: <Widget>[
@@ -45,7 +45,7 @@ class _ModifingPillNumberPageState extends State<ModifingPillNumberPage> {
               ConstrainedBox(
                 constraints: BoxConstraints(
                     maxWidth: MediaQuery.of(context).size.width - 32),
-                child: Text("今日${_today()}に飲む・飲んだピル番号をタップ",
+                child: Text("今日(${_today()})に飲む・飲んだピル番号をタップ",
                     style: FontType.sBigTitle.merge(TextColorStyle.main)),
               ),
               SizedBox(height: 56),
@@ -80,7 +80,9 @@ class _ModifingPillNumberPageState extends State<ModifingPillNumberPage> {
     );
   }
 
-  String _today() => DateTimeFormatter.slashYearAndMonthAndDay(DateTime.now());
+  String _today() {
+    return "${DateTimeFormatter.slashYearAndMonthAndDay(DateTime.now())}(${DateTimeFormatter.weekday(DateTime.now())})";
+  }
 }
 
 extension ModifingPillNumberPageRoute on ModifingPillNumberPage {
