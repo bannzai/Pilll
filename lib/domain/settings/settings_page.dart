@@ -244,6 +244,22 @@ class SettingsPage extends HookWidget {
               Navigator.of(context).push(ReminderTimesPageRoute.route());
             },
           ),
+          SettingsListSwitchRowModel(
+            title: "${pillSheetState.entity.pillSheetType.notTakenWord}期間の通知",
+            value: settingState.entity.isOnReminder,
+            onTap: () {
+              analytics.logEvent(
+                  name: "setting_did_select_toggle_reminder",
+                  parameters: {
+                    "current_pill_sheet_type":
+                        settingState.entity.pillSheetType.rawPath,
+                    "is_on_reminder": settingState.entity.isOnReminder,
+                    "today_pill_number": pillSheetState.entity.todayPillNumber,
+                  });
+              settingStore
+                  .modifyIsOnReminder(!settingState.entity.isOnReminder);
+            },
+          ),
         ];
       case SettingSection.menstruation:
         return [
