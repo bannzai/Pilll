@@ -355,12 +355,12 @@ class ConfirmDeletePillSheet extends StatelessWidget {
           mainAxisSize: MainAxisSize.min,
           children: <Widget>[
             Text("ピルシートを破棄しますか？",
-                style: FontType.subTitle.merge(TextColorStyle.black)),
+                style: FontType.subTitle.merge(TextColorStyle.main)),
             SizedBox(
               height: 15,
             ),
             Text("現在、服用記録をしているピルシートを削除します。",
-                style: FontType.assisting.merge(TextColorStyle.lightGray)),
+                style: FontType.assisting.merge(TextColorStyle.main)),
           ],
         ),
       ),
