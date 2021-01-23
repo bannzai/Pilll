@@ -129,7 +129,6 @@ class RootState extends State<Root> {
         final token = await FirebaseMessaging().getToken();
         await userService.registerRemoteNotificationToken(token);
         userService.saveLaunchInfo();
-        userService.saveStats();
         final user = await userService.fetch();
         if (!user.migratedFlutter) {
           await userService.deleteSettings();
