@@ -53,7 +53,7 @@ class App extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       navigatorObservers: [
-        FirebaseAnalyticsObserver(analytics: analytics),
+        FirebaseAnalyticsObserver(analytics: firebaseAnalytics),
       ],
       theme: ThemeData(
         appBarTheme:

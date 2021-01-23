@@ -12,7 +12,7 @@ import 'package:mockito/mockito.dart';
 import '../helper/mock.dart';
 
 void main() {
-  setUp(() {
+  setUp(() async {
     WidgetsFlutterBinding.ensureInitialized();
   });
   group("#calcBeginingDateFromNextTodayPillNumber", () {
