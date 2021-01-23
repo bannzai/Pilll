@@ -1,3 +1,4 @@
+import 'package:Pilll/analytics.dart';
 import 'package:Pilll/entity/pill_mark_type.dart';
 import 'package:Pilll/entity/pill_sheet.dart';
 import 'package:Pilll/entity/pill_sheet_type.dart';
@@ -14,6 +15,7 @@ import '../helper/mock.dart';
 void main() {
   setUp(() async {
     WidgetsFlutterBinding.ensureInitialized();
+    analytics = MockAnalytics();
   });
   group("#calcBeginingDateFromNextTodayPillNumber", () {
     test("pill number changed to future", () async {
