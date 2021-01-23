@@ -38,7 +38,6 @@ class RecordPage extends HookWidget {
           today: DateTime.now(),
           state: state,
           onPressed: () {
-            analytics.logEvent(name: "tapped_record_information_header");
             showModalBottomSheet(
               context: context,
               builder: (BuildContext context) {
@@ -169,8 +168,6 @@ class RecordPage extends HookWidget {
     PillSheetModel pillSheet,
     PillSheetStateStore store,
   ) {
-    if (pillSheet.todayPillNumber == 1)
-      analytics.logEvent(name: "user_taken_first_day_pill");
     return PrimaryButton(
       text: "飲んだ",
       onPressed: () {
