@@ -107,7 +107,8 @@ class RecordPage extends HookWidget {
                 color: PilllColors.secondary,
                 child: Center(
                   child: Text(_notificationString(state),
-                      style: FontType.assisting.merge(TextColorStyle.white)),
+                      style:
+                          FontType.assistingBold.merge(TextColorStyle.white)),
                 ),
               ),
             ),
