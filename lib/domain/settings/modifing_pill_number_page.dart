@@ -45,7 +45,7 @@ class _ModifingPillNumberPageState extends State<ModifingPillNumberPage> {
               ConstrainedBox(
                 constraints: BoxConstraints(
                     maxWidth: MediaQuery.of(context).size.width - 32),
-                child: Text("今日(${_today()})に飲む・飲んだピル番号をタップ",
+                child: Text("今日${_today()}に飲む・飲んだピル番号をタップ",
                     style: FontType.sBigTitle.merge(TextColorStyle.main)),
               ),
               SizedBox(height: 56),
