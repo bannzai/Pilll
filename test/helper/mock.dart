@@ -1,3 +1,4 @@
+import 'package:Pilll/analytics.dart';
 import 'package:Pilll/service/pill_sheet.dart';
 import 'package:Pilll/service/setting.dart';
 import 'package:Pilll/service/today.dart';
@@ -11,3 +12,5 @@ class MockTodayRepository extends Mock implements TodayServiceInterface {}
 class MockSettingService extends Mock implements SettingService {}
 
 class MockPillSheetService extends Mock implements PillSheetService {}
+
+class MockAnalytics extends Mock implements AbstractAnalytics {}

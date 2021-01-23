@@ -26,4 +26,4 @@ class Analytics extends AbstractAnalytics {
   }
 }
 
-final analytics = Analytics();
+AbstractAnalytics analytics = Analytics();
