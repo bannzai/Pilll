@@ -29,6 +29,8 @@ _$_Setting _$_$_SettingFromJson(Map<String, dynamic> json) {
             e == null ? null : ReminderTime.fromJson(e as Map<String, dynamic>))
         ?.toList(),
     isOnReminder: json['isOnReminder'] as bool,
+    isOnNotifyInNotTakenDuration:
+        json['isOnNotifyInNotTakenDuration'] as bool ?? true,
   );
 }
 
@@ -40,4 +42,5 @@ Map<String, dynamic> _$_$_SettingToJson(_$_Setting instance) =>
       'reminderTimes':
           instance.reminderTimes?.map((e) => e?.toJson())?.toList(),
       'isOnReminder': instance.isOnReminder,
+      'isOnNotifyInNotTakenDuration': instance.isOnNotifyInNotTakenDuration,
     };
