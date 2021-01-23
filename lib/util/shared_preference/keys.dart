@@ -5,3 +5,7 @@ extension BoolKey on String {
 extension StringKey on String {
   static final String firebaseAnonymousUserID = "firebaseAnonymousUserID";
 }
+
+extension IntKey on String {
+  static final String totalPillCount = "totalPillCount";
+}

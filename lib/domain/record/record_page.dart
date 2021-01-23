@@ -15,12 +15,15 @@ import 'package:Pilll/components/atoms/color.dart';
 import 'package:Pilll/components/atoms/font.dart';
 import 'package:Pilll/components/atoms/text_color.dart';
 import 'package:Pilll/util/datetime/day.dart';
+import 'package:Pilll/util/shared_preference/keys.dart';
 import 'package:Pilll/util/toolbar/picker_toolbar.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:hooks_riverpod/all.dart';
+import 'package:in_app_review/in_app_review.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class RecordPage extends HookWidget {
   @override
@@ -219,6 +222,7 @@ class RecordPage extends HookWidget {
       return;
     }
     store.take(takenDate);
+    _requestInAppReview();
   }
 
   void _cancelTake(PillSheetModel pillSheet, PillSheetStateStore store) {
@@ -303,5 +307,23 @@ class RecordPage extends HookWidget {
             () => progressing = false);
       },
     );
+  }
+
+  _requestInAppReview() {
+    SharedPreferences.getInstance().then((store) async {
+      final key = IntKey.totalPillCount;
+      int value = store.getInt(key);
+      if (value == null) {
+        value = 0;
+      }
+      value += 1;
+      store.setInt(key, value);
+      if (value < 3) {
+        return;
+      }
+      if (await InAppReview.instance.isAvailable()) {
+        await InAppReview.instance.requestReview();
+      }
+    });
   }
 }
