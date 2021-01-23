@@ -146,11 +146,8 @@ class SettingsPage extends HookWidget {
               content: settingState.entity.pillSheetType.name,
               onTap: () {
                 analytics.logEvent(
-                    name: "setting_did_select_changing_pill_sheet_type",
-                    parameters: {
-                      "current_pill_sheet_type":
-                          settingState.entity.pillSheetType.rawPath
-                    });
+                  name: "setting_did_select_changing_pill_sheet_type",
+                );
                 Navigator.of(context).push(
                   PillSheetTypeSelectPageRoute.route(
                     title: "種類",
@@ -175,13 +172,8 @@ class SettingsPage extends HookWidget {
                 title: "今日飲むピル番号の変更",
                 onTap: () {
                   analytics.logEvent(
-                      name: "setting_did_select_changing_pill_number",
-                      parameters: {
-                        "current_pill_sheet_type":
-                            settingState.entity.pillSheetType.rawPath,
-                        "today_pill_number":
-                            pillSheetState.entity.todayPillNumber,
-                      });
+                    name: "setting_did_select_changing_pill_number",
+                  );
                   Navigator.of(context).push(
                     ModifingPillNumberPageRoute.route(
                       markSelected: (number) {
@@ -195,13 +187,8 @@ class SettingsPage extends HookWidget {
                 title: "ピルシートの破棄",
                 onTap: () {
                   analytics.logEvent(
-                      name: "setting_did_select_removing_pill_sheet",
-                      parameters: {
-                        "current_pill_sheet_type":
-                            settingState.entity.pillSheetType.rawPath,
-                        "today_pill_number":
-                            pillSheetState.entity.todayPillNumber,
-                      });
+                    name: "setting_did_select_removing_pill_sheet",
+                  );
                   showDialog(
                     context: context,
                     builder: (_) {
@@ -224,13 +211,8 @@ class SettingsPage extends HookWidget {
             value: settingState.entity.isOnReminder,
             onTap: () {
               analytics.logEvent(
-                  name: "setting_did_select_toggle_reminder",
-                  parameters: {
-                    "current_pill_sheet_type":
-                        settingState.entity.pillSheetType.rawPath,
-                    "is_on_reminder": settingState.entity.isOnReminder,
-                    "today_pill_number": pillSheetState.entity.todayPillNumber,
-                  });
+                name: "setting_did_select_toggle_reminder",
+              );
               settingStore
                   .modifyIsOnReminder(!settingState.entity.isOnReminder);
             },
@@ -242,13 +224,8 @@ class SettingsPage extends HookWidget {
                 .join(", "),
             onTap: () {
               analytics.logEvent(
-                  name: "setting_did_select_changing_reminder_times",
-                  parameters: {
-                    "current_pill_sheet_type":
-                        settingState.entity.pillSheetType.rawPath,
-                    "is_on_reminder": settingState.entity.isOnReminder,
-                    "today_pill_number": pillSheetState.entity.todayPillNumber,
-                  });
+                name: "setting_did_select_changing_reminder_times",
+              );
               Navigator.of(context).push(ReminderTimesPageRoute.route());
             },
           ),
@@ -259,14 +236,8 @@ class SettingsPage extends HookWidget {
               title: "生理について",
               onTap: () {
                 analytics.logEvent(
-                    name: "setting_did_select_changing_about_menstruation",
-                    parameters: {
-                      "from_menstruation": settingState.entity.fromMenstruation,
-                      "duration_menstruation":
-                          settingState.entity.durationMenstruation,
-                      "today_pill_number":
-                          pillSheetState.entity.todayPillNumber,
-                    });
+                  name: "setting_did_select_changing_about_menstruation",
+                );
                 Navigator.of(context).push(SettingMenstruationPageRoute.route(
                   done: null,
                   doneText: null,
