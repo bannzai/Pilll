@@ -85,7 +85,7 @@ class UserService extends UserServiceInterface {
         .then((_) => errorLogger
             .setUserIdentifier(auth.FirebaseAuth.instance.currentUser.uid))
         .then((_) =>
-            analytics.setUserId(auth.FirebaseAuth.instance.currentUser.uid));
+            firebaseAnalytics.setUserId(auth.FirebaseAuth.instance.currentUser.uid));
   }
 
   Future<void> registerRemoteNotificationToken(String token) {
