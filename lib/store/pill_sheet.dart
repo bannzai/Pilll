@@ -23,7 +23,9 @@ class PillSheetStateStore extends StateNotifier<PillSheetState> {
     Future(() async {
       state = PillSheetState(entity: await _service.fetchLast());
       analytics.logEvent(name: "count_of_remaining_pill", parameters: {
-        "count": state.entity.todayPillNumber - state.entity.lastTakenPillNumber
+        "count": state.entity == null
+            ? 0
+            : (state.entity.todayPillNumber - state.entity.lastTakenPillNumber)
       });
       firstLoadIsEnded = true;
       _subscribe();
