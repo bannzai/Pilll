@@ -115,7 +115,7 @@ class RecordPage extends HookWidget {
                 ),
               ),
             ),
-          SizedBox(height: 97),
+          SizedBox(height: 67),
           if (state.isInvalid)
             Align(
                 child:
