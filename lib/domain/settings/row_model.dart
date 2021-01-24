@@ -1,4 +1,5 @@
 import 'package:Pilll/components/atoms/color.dart';
+import 'package:Pilll/components/atoms/font.dart';
 import 'package:flutter/material.dart';
 
 enum SettingSection { pill, notification, menstruation, other }
@@ -17,7 +18,7 @@ class SettingListTitleRowModel extends SettingListRowModel {
   @override
   Widget widget() {
     return ListTile(
-      title: Text(title),
+      title: Text(title, style: FontType.listRow),
       onTap: onTap,
     );
   }
@@ -33,7 +34,7 @@ class SettingListTitleAndContentRowModel extends SettingListRowModel {
   @override
   Widget widget() {
     return ListTile(
-      title: Text(title),
+      title: Text(title, style: FontType.listRow),
       subtitle: Text(content),
       onTap: onTap,
     );
@@ -50,7 +51,7 @@ class SettingsListSwitchRowModel extends SettingListRowModel {
   @override
   Widget widget() {
     return SwitchListTile(
-      title: Text(title),
+      title: Text(title, style: FontType.listRow),
       activeColor: PilllColors.secondary,
       onChanged: (bool value) {
         this.onTap();
@@ -72,7 +73,7 @@ class SettingsListDatePickerRowModel extends SettingListRowModel {
   @override
   Widget widget() {
     return ListTile(
-      title: Text(title),
+      title: Text(title, style: FontType.listRow),
       subtitle: Text(content),
       onTap: onTap,
     );

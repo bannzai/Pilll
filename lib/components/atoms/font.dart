@@ -88,10 +88,15 @@ class FontType {
     fontSize: FontSize.sLarge,
   );
 
-  static final TextStyle row = TextStyle(
+  static final TextStyle helpRow = TextStyle(
     fontFamily: FontFamily.roboto,
     fontWeight: FontWeight.w300,
     fontSize: FontSize.normal,
+  );
+  static final TextStyle listRow = TextStyle(
+    fontFamily: FontFamily.roboto,
+    fontWeight: FontWeight.w300,
+    fontSize: FontSize.sLarge,
   );
   static final TextStyle assisting = TextStyle(
     fontFamily: FontFamily.japanese,
