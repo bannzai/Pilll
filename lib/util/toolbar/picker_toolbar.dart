@@ -1,4 +1,5 @@
 import 'package:Pilll/components/atoms/font.dart';
+import 'package:Pilll/components/atoms/text_color.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
@@ -16,7 +17,7 @@ class PickerToolbar extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: <Widget>[
           CupertinoButton(
-            child: Text('キャンセル'),
+            child: Text('キャンセル', style: TextColorStyle.primary),
             onPressed: () {
               cancel();
             },
@@ -26,7 +27,8 @@ class PickerToolbar extends StatelessWidget {
             ),
           ),
           CupertinoButton(
-            child: Text('完了', style: FontType.done),
+            child:
+                Text('完了', style: FontType.done.merge(TextColorStyle.primary)),
             onPressed: () {
               done();
             },
