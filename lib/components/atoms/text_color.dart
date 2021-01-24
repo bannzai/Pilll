@@ -12,7 +12,7 @@ class TextColor {
   static final Color lightGray2 = HexColor.fromHex("666666");
   static final Color noshime = HexColor.fromHex("3D4662");
   static final Color primary = PilllColors.primary;
-  static final Color main = HexColor.fromHex("454B64");
+  static final Color main = HexColor.fromHex("29304D");
   static final Color link = primary;
 }
 
