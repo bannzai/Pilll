@@ -1,15 +1,18 @@
 import 'package:Pilll/domain/initial_setting/initial_setting_2_page.dart';
 import 'package:Pilll/components/organisms/pill/pill_sheet_type_select_page.dart';
+import 'package:Pilll/domain/initial_setting/release_note.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:Pilll/store/initial_setting.dart';
 import 'package:flutter/material.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class InitialSetting1Page extends HookWidget {
   @override
   Widget build(BuildContext context) {
     final store = useProvider(initialSettingStoreProvider);
     final state = useProvider(initialSettingStoreProvider.state);
+    _showReleaseNoteModal(context);
     return PillSheetTypeSelectPage(
       title: "1/4",
       backButtonIsHidden: true,
@@ -24,6 +27,26 @@ class InitialSetting1Page extends HookWidget {
       doneButtonText: "次へ",
       selectedPillSheetType: state.entity.pillSheetType,
     );
+  }
+
+  void _showReleaseNoteModal(BuildContext context) {
+    final key = "release_notes_shown_renewal";
+    SharedPreferences.getInstance().then((storage) {
+      if (storage.getBool(key) ?? false) {
+        return;
+      }
+      showDialog(
+          context: context,
+          barrierColor: Colors.white,
+          builder: (context) {
+            return ReleaseNote(
+              onClose: () {
+                storage.setBool(key, true);
+                Navigator.of(context).pop();
+              },
+            );
+          });
+    });
   }
 }
 
