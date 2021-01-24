@@ -49,22 +49,22 @@ extension CalendarHelpPageRowFunctions on CalendarHelpPageRow {
       case CalendarHelpPageRow.menstruation:
         return Text(
           "生理期間",
-          style: FontType.row.merge(TextColorStyle.lightGray2),
+          style: FontType.helpRow.merge(TextColorStyle.lightGray2),
         );
       case CalendarHelpPageRow.nextPillSheet:
         return Text(
           "新しいシート開始",
-          style: FontType.row.merge(TextColorStyle.lightGray2),
+          style: FontType.helpRow.merge(TextColorStyle.lightGray2),
         );
       case CalendarHelpPageRow.recordExists:
         return Text(
           "記録",
-          style: FontType.row.merge(TextColorStyle.lightGray2),
+          style: FontType.helpRow.merge(TextColorStyle.lightGray2),
         );
       case CalendarHelpPageRow.sex:
         return Text(
           "SEX",
-          style: FontType.row.merge(TextColorStyle.lightGray2),
+          style: FontType.helpRow.merge(TextColorStyle.lightGray2),
         );
       // case CalendarHelpPageRow.hospital:
       //   return Text(

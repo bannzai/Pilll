@@ -41,19 +41,23 @@ class CalendarPage extends StatelessWidget {
                   size: Size(MediaQuery.of(context).size.width, 220),
                 ),
                 Positioned(
-                  left: 16,
-                  top: 44,
-                  child: _title(),
-                ),
-                Positioned(
-                  left: 16,
-                  top: 85,
-                  width: MediaQuery.of(context).size.width - 32,
-                  height: 111,
-                  child: _menstruationCard(),
-                ),
+                    left: 16,
+                    top: 44,
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        _title(),
+                        SizedBox(height: 24),
+                        Container(
+                          width: MediaQuery.of(context).size.width - 32,
+                          height: 111,
+                          child: _menstruationCard(),
+                        ),
+                      ],
+                    )),
               ],
             ),
+            SizedBox(height: 24),
             Center(
               child: Container(
                 child: Padding(
