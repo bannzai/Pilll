@@ -28,13 +28,16 @@ public class PilllFirebaseMessagingService: FirebaseMessagingService() {
         val snoozePendingIntent: PendingIntent =
                 PendingIntent.getBroadcast(this, 0, snoozeIntent, 0)
 
+        val title = data["title"]
+        val body = data["body"]
         val builder = NotificationCompat.Builder(this, "PILL_REMINDER")
                 .setSmallIcon(R.mipmap.ic_launcher)
-                .setContentTitle("My notification")
-                .setContentText(data.toString())
-                .setPriority(NotificationCompat.PRIORITY_HIGH)
-                .addAction(R.drawable.common_google_signin_btn_icon_dark, "ORE NO ACTION",
-                        snoozePendingIntent)
+                .setContentTitle(title)
+                .setContentText(body)
+                .setPriority(NotificationCompat.PRIORITY_DEFAULT)
+                .addAction(0, "飲んだ",
+                        snoozePendingIntent
+                )
         with(NotificationManagerCompat.from(this)) {
             // notificationId is a unique int for each notification that you must define
             notify(0, builder.build())
