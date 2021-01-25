@@ -26,7 +26,6 @@ class MainActivity: FlutterActivity() {
         super.onStart()
         Log.d("android message: ", "onStart")
         createNotificationChannel();
-        register()
     }
     private fun createNotificationChannel() {
         // Create the NotificationChannel, but only on API 26+ because
@@ -41,29 +40,5 @@ class MainActivity: FlutterActivity() {
                     getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
             notificationManager.createNotificationChannel(channel)
         }
-    }
-    private fun register() {
-//        this.registerReceiver(BroadCastActionReceiver(), IntentFilter("PILL_REMINDER"))
-        this.registerReceiver(broadcastReceiver, IntentFilter("PILL_REMINDER"))
-    }
-
-    var broadcastReceiver: BroadcastReceiver = object: BroadcastReceiver() {
-        override fun onReceive(p0: Context?, p1: Intent?) {
-            Log.d("android message:", "BroadcastReceiver.onReceive")
-            callRecordPill()
-        }
-    }
-
-    private fun methodChannel(): MethodChannel {
-        val flutterEngine = FlutterEngine(this)
-        flutterEngine
-                .dartExecutor
-                .executeDartEntrypoint(
-                        DartExecutor.DartEntrypoint.createDefault()
-                )
-        return MethodChannel(flutterEngine.dartExecutor.binaryMessenger, "method.channel.MizukiOhashi.Pilll")
-    }
-    private fun callRecordPill() {
-        methodChannel().invokeMethod("recordPill", "")
     }
 }
