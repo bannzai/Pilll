@@ -12,6 +12,9 @@ import com.google.firebase.messaging.RemoteMessage
 import com.mizuki.Ohashi.Pilll.R
 
 public class PilllFirebaseMessagingService: FirebaseMessagingService() {
+    companion object {
+        val pillReminderID = 1
+    }
     override fun onMessageReceived(remoteMessage: RemoteMessage) {
         super.onMessageReceived(remoteMessage)
         Log.d("android message: ", "onMessageReceived")
@@ -40,7 +43,7 @@ public class PilllFirebaseMessagingService: FirebaseMessagingService() {
                 )
         with(NotificationManagerCompat.from(this)) {
             // notificationId is a unique int for each notification that you must define
-            notify(0, builder.build())
+            notify(pillReminderID, builder.build())
         }
     }
 }
