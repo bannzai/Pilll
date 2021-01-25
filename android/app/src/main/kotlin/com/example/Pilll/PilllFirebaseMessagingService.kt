@@ -41,6 +41,7 @@ public class PilllFirebaseMessagingService: FirebaseMessagingService() {
                 .addAction(0, "飲んだ",
                         snoozePendingIntent
                 )
+                .setAutoCancel(true)
         with(NotificationManagerCompat.from(this)) {
             // notificationId is a unique int for each notification that you must define
             notify(pillReminderID, builder.build())
