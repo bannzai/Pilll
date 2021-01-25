@@ -14,8 +14,11 @@ public class BroadCastActionReceiver: BroadcastReceiver() {
         Log.d("android message: ", "onReceive")
         callRecordPill(context)
     }
-    private fun methodChannel(context: Context?): MethodChannel {
-        val flutterEngine = FlutterEngine(context!!)
+    private fun methodChannel(context: Context?): MethodChannel? {
+        if (context == null) {
+            return null;
+        }
+        val flutterEngine = FlutterEngine(context)
         flutterEngine
                 .dartExecutor
                 .executeDartEntrypoint(
@@ -24,6 +27,6 @@ public class BroadCastActionReceiver: BroadcastReceiver() {
         return MethodChannel(flutterEngine.dartExecutor.binaryMessenger, "method.channel.MizukiOhashi.Pilll")
     }
     private fun callRecordPill(context: Context?) {
-        methodChannel(context).invokeMethod("recordPill", "")
+        methodChannel(context)?.invokeMethod("recordPill", "")
     }
 }
