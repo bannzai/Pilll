@@ -146,7 +146,7 @@ class SettingsPage extends HookWidget {
               content: settingState.entity.pillSheetType.name,
               onTap: () {
                 analytics.logEvent(
-                  name: "setting_did_select_changing_pill_sheet_type",
+                  name: "did_select_changing_pill_sheet_type",
                 );
                 Navigator.of(context).push(
                   PillSheetTypeSelectPageRoute.route(
@@ -172,7 +172,7 @@ class SettingsPage extends HookWidget {
                 title: "今日飲むピル番号の変更",
                 onTap: () {
                   analytics.logEvent(
-                    name: "setting_did_select_changing_pill_number",
+                    name: "did_select_changing_pill_number",
                   );
                   Navigator.of(context).push(
                     ModifingPillNumberPageRoute.route(
@@ -187,7 +187,7 @@ class SettingsPage extends HookWidget {
                 title: "ピルシートの破棄",
                 onTap: () {
                   analytics.logEvent(
-                    name: "setting_did_select_removing_pill_sheet",
+                    name: "did_select_removing_pill_sheet",
                   );
                   showDialog(
                     context: context,
@@ -211,7 +211,7 @@ class SettingsPage extends HookWidget {
             value: settingState.entity.isOnReminder,
             onTap: () {
               analytics.logEvent(
-                name: "setting_did_select_toggle_reminder",
+                name: "did_select_toggle_reminder",
               );
               settingStore
                   .modifyIsOnReminder(!settingState.entity.isOnReminder);
@@ -224,7 +224,7 @@ class SettingsPage extends HookWidget {
                 .join(", "),
             onTap: () {
               analytics.logEvent(
-                name: "setting_did_select_changing_reminder_times",
+                name: "did_select_changing_reminder_times",
               );
               Navigator.of(context).push(ReminderTimesPageRoute.route());
             },
@@ -236,7 +236,7 @@ class SettingsPage extends HookWidget {
               title: "生理について",
               onTap: () {
                 analytics.logEvent(
-                  name: "setting_did_select_changing_about_menstruation",
+                  name: "did_select_changing_about_menstruation",
                 );
                 Navigator.of(context).push(SettingMenstruationPageRoute.route(
                   done: null,
@@ -264,7 +264,7 @@ class SettingsPage extends HookWidget {
               title: "利用規約",
               onTap: () {
                 analytics
-                    .logEvent(name: "setting_did_select_terms", parameters: {});
+                    .logEvent(name: "did_select_terms", parameters: {});
                 launch("https://bannzai.github.io/Pilll/Terms",
                     forceSafariVC: true);
               }),
@@ -272,7 +272,7 @@ class SettingsPage extends HookWidget {
               title: "プライバシーポリシー",
               onTap: () {
                 analytics.logEvent(
-                    name: "setting_did_select_privacy_policy", parameters: {});
+                    name: "did_select_privacy_policy", parameters: {});
                 launch("https://bannzai.github.io/Pilll/PrivacyPolicy",
                     forceSafariVC: true);
               }),
@@ -280,7 +280,7 @@ class SettingsPage extends HookWidget {
               title: "お問い合わせ",
               onTap: () {
                 analytics.logEvent(
-                    name: "setting_did_select_inquiry", parameters: {});
+                    name: "did_select_inquiry", parameters: {});
                 inquiry();
               }),
         ];
