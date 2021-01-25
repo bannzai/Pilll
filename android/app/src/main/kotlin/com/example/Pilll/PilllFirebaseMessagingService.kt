@@ -22,7 +22,7 @@ public class PilllFirebaseMessagingService: FirebaseMessagingService() {
         Log.d("android message: ", "send")
 
         // Create an explicit intent for an Activity in your app
-        val snoozeIntent = Intent().apply {
+        val snoozeIntent = Intent(this, BroadCastActionReceiver::class.java).apply {
             action = "PILL_REMINDER"
         }
         val snoozePendingIntent: PendingIntent =
