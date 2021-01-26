@@ -31,14 +31,17 @@ class UserService extends UserServiceInterface {
   final DatabaseConnection _database;
   UserService(this._database);
 
-  Future<User> prepare() {
-    return fetch().catchError((error) {
+  Future<User> prepare() async {
+    final user = await fetch().catchError((error) {
       if (error is UserNotFound) {
         return _create().then((_) => fetch());
       }
       throw FormatException(
           "cause exception when failed fetch and create user for $error");
     });
+    errorLogger.setUserIdentifier(auth.FirebaseAuth.instance.currentUser.uid);
+    firebaseAnalytics.setUserId(auth.FirebaseAuth.instance.currentUser.uid);
+    return user;
   }
 
   Future<User> fetch() {
@@ -73,19 +76,13 @@ class UserService extends UserServiceInterface {
   }
 
   Future<void> _create() {
-    return _database
-        .userReference()
-        .set(
-          {
-            UserFirestoreFieldKeys.anonymouseUserID:
-                auth.FirebaseAuth.instance.currentUser.uid,
-          },
-          SetOptions(merge: true),
-        )
-        .then((_) => errorLogger
-            .setUserIdentifier(auth.FirebaseAuth.instance.currentUser.uid))
-        .then((_) =>
-            firebaseAnalytics.setUserId(auth.FirebaseAuth.instance.currentUser.uid));
+    return _database.userReference().set(
+      {
+        UserFirestoreFieldKeys.anonymouseUserID:
+            auth.FirebaseAuth.instance.currentUser.uid,
+      },
+      SetOptions(merge: true),
+    );
   }
 
   Future<void> registerRemoteNotificationToken(String token) {
