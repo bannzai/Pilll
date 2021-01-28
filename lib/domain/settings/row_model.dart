@@ -52,7 +52,7 @@ class SettingsListSwitchRowModel extends SettingListRowModel {
   Widget widget() {
     return SwitchListTile(
       title: Text(title, style: FontType.listRow),
-      activeColor: PilllColors.secondary,
+      activeColor: PilllColors.primary,
       onChanged: (bool value) {
         this.onTap();
       },
