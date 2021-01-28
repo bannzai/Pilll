@@ -76,7 +76,7 @@ class SettingStateStore extends StateNotifier<SettingState> {
     _modifyReminderTimes(copied);
   }
 
-  Future<void> modifyIsOnReminder(bool isOnReminder) {
+  Future<SettingState> modifyIsOnReminder(bool isOnReminder) {
     return _service
         .update(state.entity.copyWith(isOnReminder: isOnReminder))
         .then((entity) => state = state.copyWith(entity: entity));
