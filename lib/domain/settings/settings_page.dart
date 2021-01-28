@@ -213,8 +213,19 @@ class SettingsPage extends HookWidget {
               analytics.logEvent(
                 name: "did_select_toggle_reminder",
               );
+              Scaffold.of(context).hideCurrentSnackBar();
               settingStore
-                  .modifyIsOnReminder(!settingState.entity.isOnReminder);
+                  .modifyIsOnReminder(!settingState.entity.isOnReminder)
+                  .then((state) {
+                Scaffold.of(context).showSnackBar(
+                  SnackBar(
+                    duration: Duration(seconds: 1),
+                    content: Text(
+                      "ピルの服用通知を${state.entity.isOnReminder ? "ON" : "OFF"}にしました",
+                    ),
+                  ),
+                );
+              });
             },
           ),
           SettingsListDatePickerRowModel(
@@ -263,8 +274,7 @@ class SettingsPage extends HookWidget {
           SettingListTitleRowModel(
               title: "利用規約",
               onTap: () {
-                analytics
-                    .logEvent(name: "did_select_terms", parameters: {});
+                analytics.logEvent(name: "did_select_terms", parameters: {});
                 launch("https://bannzai.github.io/Pilll/Terms",
                     forceSafariVC: true);
               }),
@@ -279,8 +289,7 @@ class SettingsPage extends HookWidget {
           SettingListTitleRowModel(
               title: "お問い合わせ",
               onTap: () {
-                analytics.logEvent(
-                    name: "did_select_inquiry", parameters: {});
+                analytics.logEvent(name: "did_select_inquiry", parameters: {});
                 inquiry();
               }),
         ];
