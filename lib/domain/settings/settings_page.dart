@@ -221,7 +221,7 @@ class SettingsPage extends HookWidget {
                   SnackBar(
                     duration: Duration(seconds: 1),
                     content: Text(
-                      "ピルの服用通知を${state.entity.isOnReminder ? "ON" : "OFF"}にしました",
+                      "服用通知を${state.entity.isOnReminder ? "ON" : "OFF"}にしました",
                     ),
                   ),
                 );
