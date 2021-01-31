@@ -1,4 +1,3 @@
-import 'package:Pilll/components/atoms/color.dart';
 import 'package:Pilll/components/molecules/app_card.dart';
 import 'package:Pilll/domain/calendar/calculator.dart';
 import 'package:Pilll/domain/calendar/calendar.dart';
