@@ -27,6 +27,10 @@ final _postDiaryStoreProvider = StateNotifierProvider.autoDispose
   return PostDiaryStore(service, DiaryState(entity: diary.copyWith()));
 });
 
+abstract class PostDiaryPageConst {
+  static double keyboardToobarHeight = 44;
+}
+
 class PostDiaryPage extends HookWidget {
   final DateTime date;
 
@@ -40,6 +44,25 @@ class PostDiaryPage extends HookWidget {
         useTextEditingController(text: state.entity.memo);
     final focusNode = useFocusNode();
     final store = useProvider(_postDiaryStoreProvider(date));
+    final scrollController = useScrollController();
+
+    focusNode.addListener(() {
+      if (focusNode.hasFocus) {
+        // NOTE: The final keyboard height cannot be got at the moment of focus via MediaQuery.of(context).viewInsets.bottom. so it is delayed.
+        Future.delayed(Duration(milliseconds: 100)).then((_) {
+          final overwrapHeight = focusNode.rect.bottom -
+              (MediaQuery.of(context).viewInsets.bottom +
+                  PostDiaryPageConst.keyboardToobarHeight);
+          if (overwrapHeight > 0) {
+            scrollController.animateTo(overwrapHeight,
+                duration: Duration(milliseconds: 300), curve: Curves.easeInOut);
+          }
+        });
+      } else {
+        scrollController.animateTo(scrollController.position.minScrollExtent,
+            duration: Duration(milliseconds: 300), curve: Curves.easeInOut);
+      }
+    });
     return Scaffold(
       backgroundColor: PilllColors.background,
       resizeToAvoidBottomPadding: false,
@@ -62,19 +85,29 @@ class PostDiaryPage extends HookWidget {
       body: SafeArea(
         child: Stack(
           children: [
-            Padding(
-              padding: const EdgeInsets.all(16.0),
-              child: ListView(
-                children: [
-                  Text(DateTimeFormatter.yearAndMonthAndDay(this.date),
-                      style: FontType.sBigTitle.merge(TextColorStyle.main)),
-                  ...[
-                    _physicalConditions(),
-                    _physicalConditionDetails(),
-                    _sex(),
-                    _memo(context, textEditingController, focusNode),
-                  ].map((e) => _withContentSpacer(e)),
-                ],
+            Container(
+              height: MediaQuery.of(context).size.height,
+              width: MediaQuery.of(context).size.width,
+              child: Padding(
+                padding: const EdgeInsets.all(16.0),
+                child: ListView(
+                  controller: scrollController,
+                  children: [
+                    Text(DateTimeFormatter.yearAndMonthAndDay(this.date),
+                        style: FontType.sBigTitle.merge(TextColorStyle.main)),
+                    ...[
+                      _physicalConditions(),
+                      _physicalConditionDetails(),
+                      _sex(),
+                      _memo(context, textEditingController, focusNode),
+                    ].map((e) => _withContentSpacer(e)),
+                    SizedBox(
+                      height: MediaQuery.of(context).viewInsets.bottom +
+                          PostDiaryPageConst.keyboardToobarHeight +
+                          60,
+                    ),
+                  ],
+                ),
               ),
             ),
             if (focusNode.hasFocus) _keyboardToolbar(context, focusNode),
@@ -231,7 +264,7 @@ class PostDiaryPage extends HookWidget {
     return Positioned(
       bottom: MediaQuery.of(context).viewInsets.bottom,
       child: Container(
-        height: 44,
+        height: PostDiaryPageConst.keyboardToobarHeight,
         width: MediaQuery.of(context).size.width,
         child: Row(
           children: [
