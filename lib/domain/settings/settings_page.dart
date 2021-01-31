@@ -246,6 +246,8 @@ class SettingsPage extends HookWidget {
           ),
           SettingsListSwitchRowModel(
             title: "${pillSheetState.entity.pillSheetType.notTakenWord}期間の通知",
+            subtitle:
+                "オフの場合は、${pillSheetState.entity.pillSheetType.notTakenWord}期間の服用記録も自動で付けられます",
             value: settingState.entity.isOnNotifyInNotTakenDuration,
             onTap: () {
               analytics.logEvent(
