@@ -64,7 +64,8 @@ class SettingsListSwitchRowModel extends SettingListRowModel {
       },
       value: this.value,
       // NOTE: Alignment to ListTile
-      contentPadding: EdgeInsets.fromLTRB(14, 0, 6, 0),
+      contentPadding: EdgeInsets.fromLTRB(
+          14, subtitle == null ? 0 : 8, 6, subtitle == null ? 0 : 8),
     );
   }
 }
