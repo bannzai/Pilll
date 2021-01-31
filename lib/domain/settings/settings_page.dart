@@ -72,7 +72,7 @@ class SettingsPage extends HookWidget {
     return Scaffold(
       backgroundColor: PilllColors.background,
       appBar: AppBar(
-        title: Text('Pilll', style: TextColorStyle.main),
+        title: Text('設定', style: TextColorStyle.main),
         backgroundColor: PilllColors.white,
       ),
       body: Container(
@@ -125,9 +125,13 @@ class SettingsPage extends HookWidget {
         text = "その他";
         break;
     }
-    return ListTile(
-        title: Text(text,
-            style: FontType.assisting.merge(TextColorStyle.primary)));
+    return Container(
+      padding: EdgeInsets.only(top: 16, left: 15, right: 16),
+      child: Text(
+        text,
+        style: FontType.assisting.merge(TextColorStyle.primary),
+      ),
+    );
   }
 
   List<SettingListRowModel> _rowModels(
@@ -304,9 +308,11 @@ class SettingsPage extends HookWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         _sectionTitle(section),
-        ..._rowModels(context, section).map((e) {
-          return [e.widget(), _separatorItem()];
-        }).expand((element) => element),
+        ...[
+          ..._rowModels(context, section).map((e) {
+            return [e.widget(), _separatorItem()];
+          }).expand((element) => element)
+        ]..add(SizedBox(height: 16)),
       ],
     );
   }
