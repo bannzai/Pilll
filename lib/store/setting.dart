@@ -82,6 +82,12 @@ class SettingStateStore extends StateNotifier<SettingState> {
         .then((entity) => state = state.copyWith(entity: entity));
   }
 
+  Future<SettingState> modifyIsOnNotifyInNotTakenDuration(bool isOn) {
+    return _service
+        .update(state.entity.copyWith(isOnNotifyInNotTakenDuration: isOn))
+        .then((entity) => state = state.copyWith(entity: entity));
+  }
+
   Future<void> modifyFromMenstruation(int fromMenstruation) {
     return _service
         .update(state.entity.copyWith(fromMenstruation: fromMenstruation))

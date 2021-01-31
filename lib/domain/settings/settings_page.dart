@@ -249,14 +249,9 @@ class SettingsPage extends HookWidget {
             value: settingState.entity.isOnNotifyInNotTakenDuration,
             onTap: () {
               analytics.logEvent(
-                  name: "setting_did_select_toggle_reminder",
-                  parameters: {
-                    "current_pill_sheet_type":
-                        settingState.entity.pillSheetType.rawPath,
-                    "is_on": settingState.entity.isOnNotifyInNotTakenDuration,
-                    "today_pill_number": pillSheetState.entity.todayPillNumber,
-                  });
-              settingStore.modifyIsOnReminder(
+                name: "toggle_notify_not_taken_duration",
+              );
+              settingStore.modifyIsOnNotifyInNotTakenDuration(
                   !settingState.entity.isOnNotifyInNotTakenDuration);
             },
           ),
