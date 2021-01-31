@@ -43,11 +43,15 @@ class SettingListTitleAndContentRowModel extends SettingListRowModel {
 
 class SettingsListSwitchRowModel extends SettingListRowModel {
   final String title;
+  final String subtitle;
   final bool value;
   final VoidCallback onTap;
 
   SettingsListSwitchRowModel(
-      {@required this.title, @required this.value, @required this.onTap});
+      {@required this.title,
+      this.subtitle,
+      @required this.value,
+      @required this.onTap});
   @override
   Widget widget() {
     return SwitchListTile(
