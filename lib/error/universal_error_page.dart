@@ -1,3 +1,4 @@
+import 'package:Pilll/analytics.dart';
 import 'package:Pilll/components/atoms/color.dart';
 import 'package:Pilll/components/atoms/font.dart';
 import 'package:Pilll/components/atoms/text_color.dart';
@@ -41,6 +42,7 @@ class UniversalErrorPage extends StatelessWidget {
                 ),
                 label: Text("画面を再読み込み", style: FontType.assisting),
                 onPressed: () {
+                  analytics.logEvent(name: "reload_button_pressed");
                   rootKey.currentState.reloadRoot();
                 },
               ),
@@ -52,6 +54,7 @@ class UniversalErrorPage extends StatelessWidget {
                 ),
                 label: Text("解決しない場合はこちら", style: FontType.assisting),
                 onPressed: () {
+                  analytics.logEvent(name: "problem_unresolved_button_pressed");
                   inquiry();
                 },
               )
