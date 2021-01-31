@@ -54,6 +54,7 @@ class UniversalErrorPage extends StatelessWidget {
                 ),
                 label: Text("解決しない場合はこちら", style: FontType.assisting),
                 onPressed: () {
+                  analytics.logEvent(name: "problem_unresolved_button_pressed");
                   inquiry();
                 },
               )
