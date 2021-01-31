@@ -63,7 +63,7 @@ class SettingsListSwitchRowModel extends SettingListRowModel {
         this.onTap();
       },
       value: this.value,
-      // NOTE: Alignment to ListTile
+      // NOTE: when configured subtitle, the space between elements becomes very narrow
       contentPadding: EdgeInsets.fromLTRB(
           14, subtitle == null ? 0 : 8, 6, subtitle == null ? 0 : 8),
     );
