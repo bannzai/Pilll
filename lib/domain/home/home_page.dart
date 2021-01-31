@@ -6,7 +6,6 @@ import 'package:Pilll/domain/record/record_page.dart';
 import 'package:Pilll/domain/settings/settings_page.dart';
 import 'package:Pilll/components/atoms/color.dart';
 import 'package:Pilll/components/atoms/text_color.dart';
-import 'package:Pilll/error_log.dart';
 import 'package:Pilll/service/setting.dart';
 import 'package:Pilll/util/datetime/day.dart';
 import 'package:Pilll/util/formatter/date_time_formatter.dart';
