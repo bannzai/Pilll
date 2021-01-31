@@ -1,5 +1,6 @@
 import 'dart:math' as math;
 
+import 'package:Pilll/components/molecules/app_card.dart';
 import 'package:Pilll/domain/calendar/calendar_card.dart';
 import 'package:Pilll/components/atoms/color.dart';
 import 'package:Pilll/components/atoms/font.dart';
@@ -102,7 +103,7 @@ class MenstruationCard extends HookWidget {
   Widget build(BuildContext context) {
     final pillSheetState = useProvider(pillSheetStoreProvider.state);
     final settingState = useProvider(settingStoreProvider.state);
-    return Card(
+    return AppCard(
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
