@@ -246,18 +246,18 @@ class SettingsPage extends HookWidget {
           ),
           SettingsListSwitchRowModel(
             title: "${pillSheetState.entity.pillSheetType.notTakenWord}期間の通知",
-            value: settingState.entity.isOnReminder,
+            value: settingState.entity.isOnNotifyInNotTakenDuration,
             onTap: () {
               analytics.logEvent(
                   name: "setting_did_select_toggle_reminder",
                   parameters: {
                     "current_pill_sheet_type":
                         settingState.entity.pillSheetType.rawPath,
-                    "is_on_reminder": settingState.entity.isOnReminder,
+                    "is_on": settingState.entity.isOnNotifyInNotTakenDuration,
                     "today_pill_number": pillSheetState.entity.todayPillNumber,
                   });
-              settingStore
-                  .modifyIsOnReminder(!settingState.entity.isOnReminder);
+              settingStore.modifyIsOnReminder(
+                  !settingState.entity.isOnNotifyInNotTakenDuration);
             },
           ),
         ];
