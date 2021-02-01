@@ -253,8 +253,20 @@ class SettingsPage extends HookWidget {
               analytics.logEvent(
                 name: "toggle_notify_not_taken_duration",
               );
-              settingStore.modifyIsOnNotifyInNotTakenDuration(
-                  !settingState.entity.isOnNotifyInNotTakenDuration);
+              Scaffold.of(context).hideCurrentSnackBar();
+              settingStore
+                  .modifyIsOnNotifyInNotTakenDuration(
+                      !settingState.entity.isOnNotifyInNotTakenDuration)
+                  .then((state) {
+                Scaffold.of(context).showSnackBar(
+                  SnackBar(
+                    duration: Duration(seconds: 1),
+                    content: Text(
+                      "${pillSheetState.entity.pillSheetType.notTakenWord}期間の通知を${state.entity.isOnNotifyInNotTakenDuration ? "ON" : "OFF"}にしました",
+                    ),
+                  ),
+                );
+              });
             },
           ),
         ];
