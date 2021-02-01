@@ -123,8 +123,6 @@ class RecordPage extends HookWidget {
           if (!state.isInvalid) ...[
             Align(child: _pillSheet(context, currentPillSheet, store)),
             SizedBox(height: 40),
-            if (currentPillSheet.inNotTakenDuration)
-              Align(child: _notTakenButton(context, state, store)),
             if (!currentPillSheet.inNotTakenDuration &&
                 currentPillSheet.allTaken)
               Align(child: _cancelTakeButton(currentPillSheet, store)),
@@ -198,17 +196,6 @@ class RecordPage extends HookWidget {
         });
         _cancelTake(pillSheet, store);
       },
-    );
-  }
-
-  Widget _notTakenButton(
-    BuildContext context,
-    PillSheetState state,
-    PillSheetStateStore store,
-  ) {
-    return TertiaryButton(
-      text: _notificationString(state),
-      onPressed: () {},
     );
   }
 
