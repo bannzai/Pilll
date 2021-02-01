@@ -318,7 +318,7 @@ class RecordPage extends HookWidget {
       }
       value += 1;
       store.setInt(key, value);
-      if (value < 3) {
+      if (value % 10 == 0) {
         return;
       }
       if (await InAppReview.instance.isAvailable()) {
