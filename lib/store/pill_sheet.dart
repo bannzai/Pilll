@@ -99,9 +99,6 @@ class PillSheetStateStore extends StateNotifier<PillSheetState> {
   }
 
   bool shouldPillMarkAnimation(int number) {
-    if (number > state.entity.typeInfo.dosingPeriod) {
-      return false;
-    }
     return number > state.entity.lastTakenPillNumber &&
         number <= state.entity.todayPillNumber;
   }
