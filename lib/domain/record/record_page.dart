@@ -123,13 +123,9 @@ class RecordPage extends HookWidget {
           if (!state.isInvalid) ...[
             Align(child: _pillSheet(context, currentPillSheet, store)),
             SizedBox(height: 40),
-            if (currentPillSheet.inNotTakenDuration)
-              Align(child: _notTakenButton(context, state, store)),
-            if (!currentPillSheet.inNotTakenDuration &&
-                currentPillSheet.allTaken)
+            if (currentPillSheet.allTaken)
               Align(child: _cancelTakeButton(currentPillSheet, store)),
-            if (!currentPillSheet.allTaken &&
-                !currentPillSheet.inNotTakenDuration)
+            if (!currentPillSheet.allTaken)
               Align(child: _takenButton(context, currentPillSheet, store)),
           ],
           SizedBox(height: 60),
@@ -201,17 +197,6 @@ class RecordPage extends HookWidget {
     );
   }
 
-  Widget _notTakenButton(
-    BuildContext context,
-    PillSheetState state,
-    PillSheetStateStore store,
-  ) {
-    return TertiaryButton(
-      text: _notificationString(state),
-      onPressed: () {},
-    );
-  }
-
   void _take(
     BuildContext context,
     PillSheetModel pillSheet,
@@ -242,7 +227,7 @@ class RecordPage extends HookWidget {
           ? Weekday.Sunday
           : WeekdayFunctions.weekdayFromDate(pillSheet.beginingDate),
       doneStateBuilder: (number) {
-        return number <= pillSheet.todayPillNumber;
+        return number <= pillSheet.lastTakenPillNumber;
       },
       pillMarkTypeBuilder: (number) => store.markFor(number),
       enabledMarkAnimation: (number) => store.shouldPillMarkAnimation(number),

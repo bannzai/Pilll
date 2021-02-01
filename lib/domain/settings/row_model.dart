@@ -43,22 +43,29 @@ class SettingListTitleAndContentRowModel extends SettingListRowModel {
 
 class SettingsListSwitchRowModel extends SettingListRowModel {
   final String title;
+  final String subtitle;
   final bool value;
   final VoidCallback onTap;
 
   SettingsListSwitchRowModel(
-      {@required this.title, @required this.value, @required this.onTap});
+      {@required this.title,
+      this.subtitle,
+      @required this.value,
+      @required this.onTap});
   @override
   Widget widget() {
     return SwitchListTile(
       title: Text(title, style: FontType.listRow),
+      subtitle:
+          subtitle != null ? Text(subtitle, style: FontType.assisting) : null,
       activeColor: PilllColors.primary,
       onChanged: (bool value) {
         this.onTap();
       },
       value: this.value,
-      // NOTE: Alignment to ListTile
-      contentPadding: EdgeInsets.fromLTRB(14, 0, 6, 0),
+      // NOTE: when configured subtitle, the space between elements becomes very narrow
+      contentPadding: EdgeInsets.fromLTRB(
+          14, subtitle == null ? 0 : 8, 6, subtitle == null ? 0 : 8),
     );
   }
 }
