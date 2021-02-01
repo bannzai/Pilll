@@ -227,7 +227,7 @@ class RecordPage extends HookWidget {
           ? Weekday.Sunday
           : WeekdayFunctions.weekdayFromDate(pillSheet.beginingDate),
       doneStateBuilder: (number) {
-        return number <= pillSheet.todayPillNumber;
+        return number <= pillSheet.lastTakenPillNumber;
       },
       pillMarkTypeBuilder: (number) => store.markFor(number),
       enabledMarkAnimation: (number) => store.shouldPillMarkAnimation(number),
