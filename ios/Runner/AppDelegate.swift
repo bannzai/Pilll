@@ -9,7 +9,9 @@ import Flutter
         _ application: UIApplication,
         didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?
     ) -> Bool {
-        migrateFrom_1_3_2()
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+            self.migrateFrom_1_3_2()
+        }
         swizzleNotificationCenterDelegateMethod()
         configureNotificationActionableButtons()
         UNUserNotificationCenter.current().removeDeliveredNotifications(withIdentifiers: ["repeat_notification_for_taken_pill", "remind_notification_for_taken_pill"])
@@ -28,7 +30,7 @@ extension AppDelegate {
             name: "method.channel.MizukiOhashi.Pilll",
             binaryMessenger: viewController.binaryMessenger
         )
-        channel.invokeMethod(method, arguments: nil)
+        channel.invokeMethod(method, arguments: arguments)
     }
 }
 
@@ -37,7 +39,7 @@ extension AppDelegate {
 extension AppDelegate {
     func migrateFrom_1_3_2() {
         if let salvagedValue = UserDefaults.standard.string(forKey: "startSavedDate") {
-            call(method: "salvagedOldStartTakenDate", arguments: ["startSavedDate": salvagedValue])
+            call(method: "salvagedOldStartTakenDate", arguments: ["salvagedOldStartTakenDate": salvagedValue])
         }
     }
     func swizzleNotificationCenterDelegateMethod() {

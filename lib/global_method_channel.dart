@@ -2,7 +2,6 @@ import 'package:Pilll/database/database.dart';
 import 'package:Pilll/service/pill_sheet.dart';
 import 'package:Pilll/util/datetime/day.dart';
 import 'package:flutter/services.dart';
-import 'package:intl/intl.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import 'auth/auth.dart';
@@ -14,7 +13,8 @@ definedChannel() {
       case 'recordPill':
         return recordPill();
       case "salvagedOldStartTakenDate":
-        return salvagedOldStartTakenDate(call.arguments);
+        return salvagedOldStartTakenDate(call.arguments)
+            .catchError((error) => print(error));
       default:
         break;
     }
@@ -32,7 +32,7 @@ Future<void> salvagedOldStartTakenDate(dynamic arguments) async {
   if (arguments == null) {
     return Future.value();
   }
-  final dic = arguments as Map<String, dynamic>;
+  final dic = arguments as Map<dynamic, dynamic>;
   if (dic == null) {
     return Future.value();
   }
