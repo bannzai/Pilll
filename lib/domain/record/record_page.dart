@@ -26,13 +26,20 @@ import 'package:hooks_riverpod/all.dart';
 import 'package:in_app_review/in_app_review.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
+bool isAlreadyShowModal = false;
+
 class RecordPage extends HookWidget {
   @override
   Widget build(BuildContext context) {
     final state = useProvider(pillSheetStoreProvider.state);
     final store = useProvider(pillSheetStoreProvider);
     final currentPillSheet = state.entity;
-    _showMigrateInfo(context);
+    if (!isAlreadyShowModal) {
+      isAlreadyShowModal = true;
+      Future.delayed(Duration(seconds: 1)).then((_) {
+        _showMigrateInfo(context);
+      });
+    }
     return Scaffold(
       backgroundColor: PilllColors.background,
       appBar: AppBar(
@@ -94,7 +101,7 @@ class RecordPage extends HookWidget {
   }
 
   _showMigrateInfo(BuildContext context) {
-    final key = "migrate_from_132_is_shown_7";
+    final key = "migrate_from_132_is_shown_9";
     SharedPreferences.getInstance().then((storage) {
       if (storage.getBool(key) ?? false) {
         return;
