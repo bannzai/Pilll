@@ -14,7 +14,7 @@ class _$SettingStateTearOff {
   const _$SettingStateTearOff();
 
 // ignore: unused_element
-  _SettingState call({Setting entity, bool userIsUpdatedFrom132}) {
+  _SettingState call({Setting entity, bool userIsUpdatedFrom132 = false}) {
     return _SettingState(
       entity: entity,
       userIsUpdatedFrom132: userIsUpdatedFrom132,
@@ -115,10 +115,13 @@ class __$SettingStateCopyWithImpl<$Res> extends _$SettingStateCopyWithImpl<$Res>
 
 /// @nodoc
 class _$_SettingState extends _SettingState {
-  _$_SettingState({this.entity, this.userIsUpdatedFrom132}) : super._();
+  _$_SettingState({this.entity, this.userIsUpdatedFrom132 = false})
+      : assert(userIsUpdatedFrom132 != null),
+        super._();
 
   @override
   final Setting entity;
+  @JsonKey(defaultValue: false)
   @override
   final bool userIsUpdatedFrom132;
 
