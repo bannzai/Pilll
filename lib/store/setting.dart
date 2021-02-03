@@ -4,7 +4,9 @@ import 'package:Pilll/entity/pill_sheet_type.dart';
 import 'package:Pilll/entity/setting.dart';
 import 'package:Pilll/service/setting.dart';
 import 'package:Pilll/state/setting.dart';
+import 'package:Pilll/util/shared_preference/keys.dart';
 import 'package:riverpod/riverpod.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 final settingStoreProvider = StateNotifierProvider(
     (ref) => SettingStateStore(ref.watch(settingServiceProvider)));
@@ -16,11 +18,16 @@ class SettingStateStore extends StateNotifier<SettingState> {
   }
 
   void _reset() {
-    _service
-        .fetch()
-        .then((entity) => SettingState(entity: entity))
-        .then((state) => this.state = state)
-        .then((_) => _subscribe());
+    Future(() async {
+      final storage = await SharedPreferences.getInstance();
+      final userIsMigratedFrom132 =
+          storage.containsKey(StringKey.salvagedOldStartTakenDate) &&
+              storage.containsKey(StringKey.salvagedOldLastTakenDate);
+      final entity = await _service.fetch();
+      this.state = SettingState(
+          entity: entity, userIsUpdatedFrom132: userIsMigratedFrom132);
+      _subscribe();
+    });
   }
 
   StreamSubscription canceller;
