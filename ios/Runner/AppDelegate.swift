@@ -4,23 +4,44 @@ import Flutter
 
 @UIApplicationMain
 @objc class AppDelegate: FlutterAppDelegate {
-  override func application(
-    _ application: UIApplication,
-    didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?
-  ) -> Bool {
-    swizzleNotificationCenterDelegateMethod()
-    configureNotificationActionableButtons()
-    UNUserNotificationCenter.current().removeDeliveredNotifications(withIdentifiers: ["repeat_notification_for_taken_pill", "remind_notification_for_taken_pill"])
-    UNUserNotificationCenter.current().removePendingNotificationRequests(withIdentifiers: ["repeat_notification_for_taken_pill", "remind_notification_for_taken_pill"])
-    UNUserNotificationCenter.current().delegate = self as UNUserNotificationCenterDelegate
-    GeneratedPluginRegistrant.register(with: self)
-    return super.application(application, didFinishLaunchingWithOptions: launchOptions)
-  }
+    let channelName = "method.channel.MizukiOhashi.Pilll"
+    override func application(
+        _ application: UIApplication,
+        didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?
+    ) -> Bool {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
+            self.migrateFrom_1_3_2()
+        }
+        swizzleNotificationCenterDelegateMethod()
+        configureNotificationActionableButtons()
+        UNUserNotificationCenter.current().removeDeliveredNotifications(withIdentifiers: ["repeat_notification_for_taken_pill", "remind_notification_for_taken_pill"])
+        UNUserNotificationCenter.current().removePendingNotificationRequests(withIdentifiers: ["repeat_notification_for_taken_pill", "remind_notification_for_taken_pill"])
+        UNUserNotificationCenter.current().delegate = self as UNUserNotificationCenterDelegate
+        GeneratedPluginRegistrant.register(with: self)
+        return super.application(application, didFinishLaunchingWithOptions: launchOptions)
+    }
+}
+
+// MARK: - Internal
+extension AppDelegate {
+    func call(method: String, arguments: [String: Any]?) {
+        let viewController = window?.rootViewController as! FlutterViewController
+        let channel = FlutterMethodChannel(
+            name: "method.channel.MizukiOhashi.Pilll",
+            binaryMessenger: viewController.binaryMessenger
+        )
+        channel.invokeMethod(method, arguments: arguments)
+    }
 }
 
 
 // MARK: - Notification
 extension AppDelegate {
+    func migrateFrom_1_3_2() {
+        if let salvagedValue = UserDefaults.standard.string(forKey: "startSavedDate"), let lastTakenDate = UserDefaults.standard.string(forKey: "savedDate") {
+            call(method: "salvagedOldStartTakenDate", arguments: ["salvagedOldStartTakenDate": salvagedValue, "salvagedOldLastTakenDate": lastTakenDate])
+        }
+    }
     func swizzleNotificationCenterDelegateMethod() {
         guard let fromMethod = class_getInstanceMethod(type(of: self), #selector(AppDelegate.userNotificationCenter(_:didReceive:withCompletionHandler:))) else {
             fatalError()
@@ -65,12 +86,7 @@ extension AppDelegate {
         case .pillReminder:
             switch response.actionIdentifier {
             case "RECORD_PILL":
-                let viewController = window?.rootViewController as! FlutterViewController
-                let channel = FlutterMethodChannel(
-                    name: "method.channel.MizukiOhashi.Pilll",
-                    binaryMessenger: viewController.binaryMessenger
-                )
-                channel.invokeMethod("recordPill", arguments: nil)
+                call(method: "recordPill", arguments: nil)
                 break
             default:
                 break

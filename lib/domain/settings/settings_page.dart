@@ -2,6 +2,7 @@ import 'package:Pilll/analytics.dart';
 import 'package:Pilll/database/database.dart';
 import 'package:Pilll/components/organisms/pill/pill_sheet_type_select_page.dart';
 import 'package:Pilll/components/organisms/setting/setting_menstruation_page.dart';
+import 'package:Pilll/domain/settings/information_for_before_major_update.dart';
 import 'package:Pilll/entity/pill_sheet.dart';
 import 'package:Pilll/entity/pill_sheet_type.dart';
 import 'package:Pilll/entity/user.dart';
@@ -19,12 +20,14 @@ import 'package:Pilll/components/atoms/font.dart';
 import 'package:Pilll/components/atoms/text_color.dart';
 import 'package:Pilll/util/environment.dart';
 import 'package:Pilll/util/formatter/date_time_formatter.dart';
+import 'package:Pilll/util/shared_preference/keys.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:hooks_riverpod/all.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class _TransactionModifier {
@@ -300,6 +303,24 @@ class SettingsPage extends HookWidget {
         ];
       case SettingSection.other:
         return [
+          if (settingState.userIsUpdatedFrom132)
+            SettingListTitleRowModel(
+                title: "大型アップデート前の情報",
+                onTap: () {
+                  analytics
+                      .logEvent(name: "did_select_migrate_132", parameters: {});
+                  SharedPreferences.getInstance().then((storage) {
+                    final salvagedOldStartTakenDate =
+                        storage.getString(StringKey.salvagedOldStartTakenDate);
+                    final salvagedOldLastTakenDate =
+                        storage.getString(StringKey.salvagedOldLastTakenDate);
+                    Navigator.of(context)
+                        .push(InformationForBeforeMigrate132Route.route(
+                      salvagedOldStartTakenDate: salvagedOldStartTakenDate,
+                      salvagedOldLastTakenDate: salvagedOldLastTakenDate,
+                    ));
+                  });
+                }),
           SettingListTitleRowModel(
               title: "利用規約",
               onTap: () {
