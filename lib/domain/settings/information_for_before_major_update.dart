@@ -39,6 +39,7 @@ class InformationForBeforeMigrate132 extends StatelessWidget {
       body: SingleChildScrollView(
         child: Center(
           child: Container(
+            padding: EdgeInsets.only(left: 15, right: 15),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -49,10 +50,10 @@ class InformationForBeforeMigrate132 extends StatelessWidget {
                 ),
                 SizedBox(height: 32),
                 Text(
-                  "下記の情報はversion 2.0.0以前のアプリの情報です",
+                  "下記の情報はversion 2.0.0以前のアプリの情報になります。例えば「最後に飲んだ日」は大型アップデート前のアプリで最後にピルの服用記録をつけた日になっています",
                   style: FontType.assistingBold.merge(TextColorStyle.main),
                 ),
-                SizedBox(height: 12),
+                SizedBox(height: 8),
                 Text(
                   "最後に飲んだ日: ${this.salvagedOldLastTakenDate}",
                   style: FontType.listRow.merge(TextColorStyle.main),
