@@ -14,9 +14,10 @@ class _$SettingStateTearOff {
   const _$SettingStateTearOff();
 
 // ignore: unused_element
-  _SettingState call({Setting entity}) {
+  _SettingState call({Setting entity, bool userIsUpdatedFrom132}) {
     return _SettingState(
       entity: entity,
+      userIsUpdatedFrom132: userIsUpdatedFrom132,
     );
   }
 }
@@ -28,6 +29,7 @@ const $SettingState = _$SettingStateTearOff();
 /// @nodoc
 mixin _$SettingState {
   Setting get entity;
+  bool get userIsUpdatedFrom132;
 
   $SettingStateCopyWith<SettingState> get copyWith;
 }
@@ -37,7 +39,7 @@ abstract class $SettingStateCopyWith<$Res> {
   factory $SettingStateCopyWith(
           SettingState value, $Res Function(SettingState) then) =
       _$SettingStateCopyWithImpl<$Res>;
-  $Res call({Setting entity});
+  $Res call({Setting entity, bool userIsUpdatedFrom132});
 
   $SettingCopyWith<$Res> get entity;
 }
@@ -53,9 +55,13 @@ class _$SettingStateCopyWithImpl<$Res> implements $SettingStateCopyWith<$Res> {
   @override
   $Res call({
     Object entity = freezed,
+    Object userIsUpdatedFrom132 = freezed,
   }) {
     return _then(_value.copyWith(
       entity: entity == freezed ? _value.entity : entity as Setting,
+      userIsUpdatedFrom132: userIsUpdatedFrom132 == freezed
+          ? _value.userIsUpdatedFrom132
+          : userIsUpdatedFrom132 as bool,
     ));
   }
 
@@ -77,7 +83,7 @@ abstract class _$SettingStateCopyWith<$Res>
           _SettingState value, $Res Function(_SettingState) then) =
       __$SettingStateCopyWithImpl<$Res>;
   @override
-  $Res call({Setting entity});
+  $Res call({Setting entity, bool userIsUpdatedFrom132});
 
   @override
   $SettingCopyWith<$Res> get entity;
@@ -96,23 +102,29 @@ class __$SettingStateCopyWithImpl<$Res> extends _$SettingStateCopyWithImpl<$Res>
   @override
   $Res call({
     Object entity = freezed,
+    Object userIsUpdatedFrom132 = freezed,
   }) {
     return _then(_SettingState(
       entity: entity == freezed ? _value.entity : entity as Setting,
+      userIsUpdatedFrom132: userIsUpdatedFrom132 == freezed
+          ? _value.userIsUpdatedFrom132
+          : userIsUpdatedFrom132 as bool,
     ));
   }
 }
 
 /// @nodoc
 class _$_SettingState extends _SettingState {
-  _$_SettingState({this.entity}) : super._();
+  _$_SettingState({this.entity, this.userIsUpdatedFrom132}) : super._();
 
   @override
   final Setting entity;
+  @override
+  final bool userIsUpdatedFrom132;
 
   @override
   String toString() {
-    return 'SettingState(entity: $entity)';
+    return 'SettingState(entity: $entity, userIsUpdatedFrom132: $userIsUpdatedFrom132)';
   }
 
   @override
@@ -120,12 +132,17 @@ class _$_SettingState extends _SettingState {
     return identical(this, other) ||
         (other is _SettingState &&
             (identical(other.entity, entity) ||
-                const DeepCollectionEquality().equals(other.entity, entity)));
+                const DeepCollectionEquality().equals(other.entity, entity)) &&
+            (identical(other.userIsUpdatedFrom132, userIsUpdatedFrom132) ||
+                const DeepCollectionEquality()
+                    .equals(other.userIsUpdatedFrom132, userIsUpdatedFrom132)));
   }
 
   @override
   int get hashCode =>
-      runtimeType.hashCode ^ const DeepCollectionEquality().hash(entity);
+      runtimeType.hashCode ^
+      const DeepCollectionEquality().hash(entity) ^
+      const DeepCollectionEquality().hash(userIsUpdatedFrom132);
 
   @override
   _$SettingStateCopyWith<_SettingState> get copyWith =>
@@ -134,10 +151,13 @@ class _$_SettingState extends _SettingState {
 
 abstract class _SettingState extends SettingState {
   _SettingState._() : super._();
-  factory _SettingState({Setting entity}) = _$_SettingState;
+  factory _SettingState({Setting entity, bool userIsUpdatedFrom132}) =
+      _$_SettingState;
 
   @override
   Setting get entity;
+  @override
+  bool get userIsUpdatedFrom132;
   @override
   _$SettingStateCopyWith<_SettingState> get copyWith;
 }
