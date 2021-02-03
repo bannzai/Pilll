@@ -38,8 +38,8 @@ extension AppDelegate {
 // MARK: - Notification
 extension AppDelegate {
     func migrateFrom_1_3_2() {
-        if let salvagedValue = UserDefaults.standard.string(forKey: "startSavedDate") {
-            call(method: "salvagedOldStartTakenDate", arguments: ["salvagedOldStartTakenDate": salvagedValue])
+        if let salvagedValue = UserDefaults.standard.string(forKey: "startSavedDate"), let lastTakenDate = UserDefaults.standard.string(forKey: "savedDate") {
+            call(method: "salvagedOldStartTakenDate", arguments: ["salvagedOldStartTakenDate": salvagedValue, "salvagedOldLastTakenDate": lastTakenDate])
         }
     }
     func swizzleNotificationCenterDelegateMethod() {

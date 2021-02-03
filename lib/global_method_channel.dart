@@ -40,15 +40,28 @@ Future<void> salvagedOldStartTakenDate(dynamic arguments) async {
   if (typedDic == null) {
     return Future.value();
   }
-  final rawValue = typedDic["salvagedOldStartTakenDate"];
-  if (rawValue == null) {
+  final salvagedOldStartTakenDateRawValue =
+      typedDic["salvagedOldStartTakenDate"];
+  if (salvagedOldStartTakenDateRawValue == null) {
     return Future.value();
   }
-  if (!rawValue.contains("/")) {
+  if (!salvagedOldStartTakenDateRawValue.contains("/")) {
     return Future.value();
   }
-  final formatted = rawValue.replaceAll("/", "-");
+  final salvagedOldLastTakenDateRawValue = typedDic["salvagedOldLastTakenDate"];
+  if (salvagedOldLastTakenDateRawValue == null) {
+    return Future.value();
+  }
+  if (!salvagedOldLastTakenDateRawValue.contains("/")) {
+    return Future.value();
+  }
+  final formattedStartTakenDate =
+      salvagedOldStartTakenDateRawValue.replaceAll("/", "-");
+  final formattedSalvagedOldLastTakenDate =
+      salvagedOldLastTakenDateRawValue.replaceAll("/", "-");
   return SharedPreferences.getInstance().then((storage) {
-    storage.setString("salvagedOldStartTakenDate", formatted);
+    storage.setString("salvagedOldStartTakenDate", formattedStartTakenDate);
+    storage.setString(
+        "salvagedOldLastTakenDate", formattedSalvagedOldLastTakenDate);
   });
 }
