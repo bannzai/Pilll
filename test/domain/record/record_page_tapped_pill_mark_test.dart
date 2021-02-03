@@ -12,6 +12,7 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:hooks_riverpod/all.dart';
 import 'package:mockito/mockito.dart';
 import 'package:intl/date_symbol_data_local.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 import '../../helper/mock.dart';
 
@@ -29,6 +30,7 @@ void main() {
     Environment.isTest = true;
     WidgetsBinding.instance.renderView.configuration =
         new TestViewConfiguration(size: const Size(375.0, 667.0));
+    SharedPreferences.setMockInitialValues({});
   });
   group('appearance taken button type', () {
     testWidgets('today pill not taken', (WidgetTester tester) async {
