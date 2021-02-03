@@ -94,7 +94,7 @@ class RecordPage extends HookWidget {
   }
 
   _showMigrateInfo(BuildContext context) {
-    final key = "migrate_from_132_is_shown";
+    final key = "migrate_from_132_is_shown_5";
     SharedPreferences.getInstance().then((storage) {
       if (storage.getBool(key) ?? false) {
         return;
