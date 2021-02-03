@@ -18,8 +18,8 @@ class _$InitialSettingModelTearOff {
       {int fromMenstruation = 2,
       int durationMenstruation = 4,
       List<ReminderTime> reminderTimes = const [
-        const ReminderTime(hour: 21, minute: 0),
-        const ReminderTime(hour: 22, minute: 0)
+        ReminderTime(hour: 21, minute: 0),
+        ReminderTime(hour: 22, minute: 0)
       ],
       bool isOnReminder = false,
       int todayPillNumber,
@@ -201,8 +201,8 @@ class _$_InitialSettingModel extends _InitialSettingModel {
       {this.fromMenstruation = 2,
       this.durationMenstruation = 4,
       this.reminderTimes = const [
-        const ReminderTime(hour: 21, minute: 0),
-        const ReminderTime(hour: 22, minute: 0)
+        ReminderTime(hour: 21, minute: 0),
+        ReminderTime(hour: 22, minute: 0)
       ],
       this.isOnReminder = false,
       this.todayPillNumber,
@@ -220,8 +220,8 @@ class _$_InitialSettingModel extends _InitialSettingModel {
   @override
   final int durationMenstruation;
   @JsonKey(defaultValue: const [
-    const ReminderTime(hour: 21, minute: 0),
-    const ReminderTime(hour: 22, minute: 0)
+    ReminderTime(hour: 21, minute: 0),
+    ReminderTime(hour: 22, minute: 0)
   ])
   @override
   final List<ReminderTime> reminderTimes;

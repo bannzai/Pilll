@@ -1,6 +1,7 @@
 import 'package:Pilll/analytics.dart';
 import 'package:Pilll/components/molecules/indicator.dart';
 import 'package:Pilll/components/organisms/pill/pill_sheet.dart';
+import 'package:Pilll/domain/initial_setting/migrate_info.dart';
 import 'package:Pilll/domain/record/record_taken_information.dart';
 import 'package:Pilll/entity/pill_sheet.dart';
 import 'package:Pilll/entity/pill_sheet_type.dart';
@@ -25,12 +26,20 @@ import 'package:hooks_riverpod/all.dart';
 import 'package:in_app_review/in_app_review.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
+bool isAlreadyShowModal = false;
+
 class RecordPage extends HookWidget {
   @override
   Widget build(BuildContext context) {
     final state = useProvider(pillSheetStoreProvider.state);
     final store = useProvider(pillSheetStoreProvider);
     final currentPillSheet = state.entity;
+    if (!isAlreadyShowModal) {
+      isAlreadyShowModal = true;
+      Future.delayed(Duration(seconds: 1)).then((_) {
+        _showMigrateInfo(context);
+      });
+    }
     return Scaffold(
       backgroundColor: PilllColors.background,
       appBar: AppBar(
@@ -89,6 +98,32 @@ class RecordPage extends HookWidget {
       extendBodyBehindAppBar: true,
       body: _body(context),
     );
+  }
+
+  _showMigrateInfo(BuildContext context) {
+    final key = "migrate_from_132_is_shown_9";
+    SharedPreferences.getInstance().then((storage) {
+      if (storage.getBool(key) ?? false) {
+        return;
+      }
+      if (!storage.containsKey(StringKey.salvagedOldStartTakenDate)) {
+        return;
+      }
+      if (!storage.containsKey(StringKey.salvagedOldLastTakenDate)) {
+        return;
+      }
+      showDialog(
+          context: context,
+          barrierColor: Colors.white,
+          builder: (context) {
+            return MigrateInfo(
+              onClose: () {
+                storage.setBool(key, true);
+                Navigator.of(context).pop();
+              },
+            );
+          });
+    });
   }
 
   Widget _body(BuildContext context) {

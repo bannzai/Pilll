@@ -8,6 +8,7 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:hooks_riverpod/all.dart';
 import 'package:intl/date_symbol_data_local.dart';
 import 'package:mockito/mockito.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 import '../../helper/mock.dart';
 import '../../helper/supported_device.dart';
@@ -15,6 +16,7 @@ import '../../helper/supported_device.dart';
 void main() {
   setUp(() {
     initializeDateFormatting('ja_JP');
+    SharedPreferences.setMockInitialValues({});
     Environment.isTest = true;
   });
   group("appearance widgets dependend on reminderTimes", () {
