@@ -36,7 +36,8 @@ class SettingStateStore extends StateNotifier<SettingState> {
     canceller = _service.subscribe().listen((event) {
       assert(event != null, "Setting could not null on subscribe");
       if (event == null) return;
-      state = SettingState(entity: event);
+      state = SettingState(
+          entity: event, userIsUpdatedFrom132: state.userIsUpdatedFrom132);
     });
   }
 
