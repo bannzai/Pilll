@@ -27,9 +27,26 @@ class MigrateInfo extends StatelessWidget {
                   style: FontType.sBigTitle.merge(TextColorStyle.main),
                 ),
                 SizedBox(height: 32),
-                Text(
-                  "今回のアップデートにより大型リニューアル前のアプリでピルシートを服用していたときのデータを参照できるようにしました。 設定 > 大型アップデート前の情報 から表示されます。",
-                  style: FontType.assistingBold.merge(TextColorStyle.main),
+                RichText(
+                  textAlign: TextAlign.start,
+                  text: TextSpan(
+                    children: [
+                      TextSpan(
+                        text:
+                            "今回のアップデートにより大型リニューアル前のアプリでピルシートを服用していたときのデータを参照できるようにしました。",
+                        style: FontType.assisting.merge(TextColorStyle.main),
+                      ),
+                      TextSpan(
+                        text: "設定 > 大型アップデート前の情報 ",
+                        style:
+                            FontType.assistingBold.merge(TextColorStyle.main),
+                      ),
+                      TextSpan(
+                        text: "から表示されます。",
+                        style: FontType.assisting.merge(TextColorStyle.main),
+                      ),
+                    ],
+                  ),
                 ),
                 SizedBox(height: 10),
                 Text(
