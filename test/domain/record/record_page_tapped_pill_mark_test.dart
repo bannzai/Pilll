@@ -27,10 +27,10 @@ void main() {
 
   setUp(() {
     initializeDateFormatting('ja_JP');
+    SharedPreferences.setMockInitialValues({});
     Environment.isTest = true;
     WidgetsBinding.instance.renderView.configuration =
         new TestViewConfiguration(size: const Size(375.0, 667.0));
-    SharedPreferences.setMockInitialValues({});
   });
   group('appearance taken button type', () {
     testWidgets('today pill not taken', (WidgetTester tester) async {
