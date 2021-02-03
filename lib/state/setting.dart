@@ -6,6 +6,7 @@ part 'setting.freezed.dart';
 @freezed
 abstract class SettingState implements _$SettingState {
   SettingState._();
-  factory SettingState({Setting entity, bool userIsUpdatedFrom132}) =
-      _SettingState;
+  factory SettingState(
+      {Setting entity,
+      @Default(false) bool userIsUpdatedFrom132}) = _SettingState;
 }
