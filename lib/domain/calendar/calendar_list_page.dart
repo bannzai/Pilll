@@ -4,6 +4,7 @@ import 'package:Pilll/domain/calendar/calendar_band_model.dart';
 import 'package:Pilll/components/atoms/color.dart';
 import 'package:Pilll/components/atoms/font.dart';
 import 'package:Pilll/components/atoms/text_color.dart';
+import 'package:Pilll/util/datetime/date_compare.dart';
 import 'package:Pilll/util/datetime/day.dart';
 import 'package:Pilll/util/formatter/date_time_formatter.dart';
 import 'package:flutter/material.dart';
@@ -22,8 +23,9 @@ abstract class CalendarListPageConst {
 
 class CalendarListPage extends HookWidget {
   final List<CalendarListPageModel> models;
+  final GlobalKey currentMonthKey = GlobalKey();
 
-  const CalendarListPage({Key key, @required this.models}) : super(key: key);
+  CalendarListPage({Key key, @required this.models}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -35,8 +37,13 @@ class CalendarListPage extends HookWidget {
       }
     };
     final components = _components(context, sideEffect);
-    final scrollController =
-        useScrollController(initialScrollOffset: initialOffset);
+    final scrollController = useScrollController();
+
+    Future(() async {
+      await Future.delayed(Duration(seconds: 1));
+      await scrollController.animateTo(initialOffset,
+          duration: Duration(milliseconds: 300), curve: Curves.easeInOut);
+    });
 
     return Scaffold(
       appBar: AppBar(
@@ -91,6 +98,7 @@ class CalendarListPage extends HookWidget {
 
   Calendar _calendar(BuildContext context, CalendarListPageModel model) {
     return Calendar(
+      key: isSameMonth(model.calculator.date, today()) ? currentMonthKey : null,
       calculator: model.calculator,
       bandModels: model.bandModels,
       horizontalPadding: 0,
