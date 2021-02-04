@@ -39,6 +39,8 @@ class CalendarListPage extends HookWidget {
     final components = _components(context, sideEffect);
     final scrollController = useScrollController();
 
+// FIXME: ListView won't render non-visible items. Meaning that target most likely will not be build at all.
+// See also: https://stackoverflow.com/questions/49153087/flutter-scrolling-to-a-widget-in-listview
     Future(() async {
       await Future.delayed(Duration(seconds: 1));
       await scrollController.animateTo(initialOffset,
