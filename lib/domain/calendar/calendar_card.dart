@@ -95,8 +95,14 @@ class CalendarCard extends HookWidget {
               Navigator.of(context).push(
                 () {
                   var now = today();
-                  CalendarListPageModel previous = CalendarListPageModel(
-                      Calculator(DateTime(now.year, now.month - 1, 1)), []);
+                  final previouses = List.generate(6, (index) => index + 1)
+                      .reversed
+                      .map((number) {
+                    CalendarListPageModel previous = CalendarListPageModel(
+                        Calculator(DateTime(now.year, now.month - number, 1)),
+                        []);
+                    return previous;
+                  });
                   CalendarListPageModel current =
                       CalendarListPageModel(Calculator(now), [
                     if (latestPillSheet != null) ...[
@@ -134,7 +140,7 @@ class CalendarCard extends HookWidget {
                     },
                   );
                   return CalendarListPageRoute.route([
-                    previous,
+                    ...previouses,
                     current,
                     ...nextCalendars,
                   ]);

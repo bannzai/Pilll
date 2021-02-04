@@ -58,6 +58,10 @@ class Calendar extends HookWidget {
     );
   }
 
+  DateTime date() => calculator.date;
+  double height() =>
+      calculator.lineCount().toDouble() * CalendarConstants.tileHeight;
+
   Column _body(BuildContext context, List<Diary> diaries) {
     return Column(
       children: <Widget>[
