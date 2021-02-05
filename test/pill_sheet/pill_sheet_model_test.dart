@@ -8,8 +8,10 @@ import 'package:shared_preferences/shared_preferences.dart';
 import '../helper/mock.dart';
 
 void main() {
-  TestWidgetsFlutterBinding.ensureInitialized();
-  SharedPreferences.setMockInitialValues({});
+  setUp(() {
+    TestWidgetsFlutterBinding.ensureInitialized();
+    SharedPreferences.setMockInitialValues({});
+  });
   group("#todayPillNumber", () {
     test("today: 2020-09-19, begin: 2020-09-14, end: 2020-09-18", () {
       var mockTodayRepository = MockTodayRepository();

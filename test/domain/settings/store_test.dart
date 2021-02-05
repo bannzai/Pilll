@@ -16,8 +16,10 @@ class _FakeSetting extends Fake implements Setting {
 }
 
 void main() {
-  TestWidgetsFlutterBinding.ensureInitialized();
-  SharedPreferences.setMockInitialValues({});
+  setUp(() {
+    TestWidgetsFlutterBinding.ensureInitialized();
+    SharedPreferences.setMockInitialValues({});
+  });
   group("#addReminderTimes", () {
     test("when added reminder times ${ReminderTime.maximumCount}", () {
       final service = MockSettingService();
