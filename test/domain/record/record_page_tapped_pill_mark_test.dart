@@ -26,8 +26,9 @@ void main() {
       );
 
   setUp(() {
-    initializeDateFormatting('ja_JP');
+    TestWidgetsFlutterBinding.ensureInitialized();
     SharedPreferences.setMockInitialValues({});
+    initializeDateFormatting('ja_JP');
     Environment.isTest = true;
     WidgetsBinding.instance.renderView.configuration =
         new TestViewConfiguration(size: const Size(375.0, 667.0));

@@ -4,6 +4,7 @@ import 'package:Pilll/state/setting.dart';
 import 'package:Pilll/store/setting.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 import '../../helper/mock.dart';
 
@@ -15,6 +16,10 @@ class _FakeSetting extends Fake implements Setting {
 }
 
 void main() {
+  setUp(() {
+    TestWidgetsFlutterBinding.ensureInitialized();
+    SharedPreferences.setMockInitialValues({});
+  });
   group("#addReminderTimes", () {
     test("when added reminder times ${ReminderTime.maximumCount}", () {
       final service = MockSettingService();

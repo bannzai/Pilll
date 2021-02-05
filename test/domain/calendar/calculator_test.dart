@@ -2,11 +2,14 @@ import 'package:Pilll/domain/calendar/calculator.dart';
 import 'package:Pilll/domain/calendar/date_range.dart';
 import 'package:Pilll/entity/weekday.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 void main() {
   Calculator calculator;
   DateTime date;
   setUp(() {
+    TestWidgetsFlutterBinding.ensureInitialized();
+    SharedPreferences.setMockInitialValues({});
     calculator = Calculator(date);
   });
   group("2020-09-14", () {
