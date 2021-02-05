@@ -1,11 +1,14 @@
 import 'package:Pilll/domain/calendar/date_range.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 void main() {
   DateRange range;
   DateTime begin;
   DateTime end;
   setUp(() {
+    TestWidgetsFlutterBinding.ensureInitialized();
+    SharedPreferences.setMockInitialValues({});
     range = DateRange(begin, end);
   });
 

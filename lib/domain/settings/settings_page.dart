@@ -215,6 +215,7 @@ class SettingsPage extends HookWidget {
         return [
           SettingsListSwitchRowModel(
             title: "ピルの服用通知",
+            subtitle: "通知時間までに服用した場合は通知はきません",
             value: settingState.entity.isOnReminder,
             onTap: () {
               analytics.logEvent(
