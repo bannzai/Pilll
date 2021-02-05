@@ -15,9 +15,9 @@ import '../../helper/supported_device.dart';
 
 void main() {
   TestWidgetsFlutterBinding.ensureInitialized();
+  SharedPreferences.setMockInitialValues({});
   setUp(() {
     initializeDateFormatting('ja_JP');
-    SharedPreferences.setMockInitialValues({});
     Environment.isTest = true;
   });
   group("appearance widgets dependend on reminderTimes", () {

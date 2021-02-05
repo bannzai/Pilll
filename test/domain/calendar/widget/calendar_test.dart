@@ -6,9 +6,11 @@ import 'package:Pilll/entity/diary.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:hooks_riverpod/all.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 void main() {
   TestWidgetsFlutterBinding.ensureInitialized();
+  SharedPreferences.setMockInitialValues({});
   setUp(() {
     WidgetsBinding.instance.renderView.configuration =
         new TestViewConfiguration(size: const Size(375.0, 667.0));

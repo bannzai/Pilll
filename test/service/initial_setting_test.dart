@@ -3,11 +3,13 @@ import 'package:Pilll/entity/pill_sheet_type.dart';
 import 'package:Pilll/service/initial_setting.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 import '../helper/mock.dart';
 
 void main() {
   TestWidgetsFlutterBinding.ensureInitialized();
+  SharedPreferences.setMockInitialValues({});
   group("#register", () {
     test("when today pill number is not null", () async {
       final initialSetting = InitialSettingModel.initial(

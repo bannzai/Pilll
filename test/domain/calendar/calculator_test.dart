@@ -2,9 +2,11 @@ import 'package:Pilll/domain/calendar/calculator.dart';
 import 'package:Pilll/domain/calendar/date_range.dart';
 import 'package:Pilll/entity/weekday.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 void main() {
   TestWidgetsFlutterBinding.ensureInitialized();
+  SharedPreferences.setMockInitialValues({});
   Calculator calculator;
   DateTime date;
   setUp(() {
