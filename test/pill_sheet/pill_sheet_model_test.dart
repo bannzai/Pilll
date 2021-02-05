@@ -3,11 +3,13 @@ import 'package:Pilll/entity/pill_sheet_type.dart';
 import 'package:Pilll/service/today.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 import '../helper/mock.dart';
 
 void main() {
   TestWidgetsFlutterBinding.ensureInitialized();
+  SharedPreferences.setMockInitialValues({});
   group("#todayPillNumber", () {
     test("today: 2020-09-19, begin: 2020-09-14, end: 2020-09-18", () {
       var mockTodayRepository = MockTodayRepository();

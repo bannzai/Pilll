@@ -18,6 +18,7 @@ import '../../helper/mock.dart';
 
 void main() {
   TestWidgetsFlutterBinding.ensureInitialized();
+  SharedPreferences.setMockInitialValues({});
   Setting _anySetting() => Setting(
         fromMenstruation: 1,
         durationMenstruation: 2,
@@ -28,7 +29,6 @@ void main() {
 
   setUp(() {
     initializeDateFormatting('ja_JP');
-    SharedPreferences.setMockInitialValues({});
     Environment.isTest = true;
     WidgetsBinding.instance.renderView.configuration =
         new TestViewConfiguration(size: const Size(375.0, 667.0));
