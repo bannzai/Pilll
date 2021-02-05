@@ -7,6 +7,7 @@ import 'package:mockito/mockito.dart';
 import '../helper/mock.dart';
 
 void main() {
+  TestWidgetsFlutterBinding.ensureInitialized();
   group("#register", () {
     test("when today pill number is not null", () async {
       final initialSetting = InitialSettingModel.initial(
