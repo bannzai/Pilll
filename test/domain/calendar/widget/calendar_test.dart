@@ -8,6 +8,7 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:hooks_riverpod/all.dart';
 
 void main() {
+  TestWidgetsFlutterBinding.ensureInitialized();
   setUp(() {
     WidgetsBinding.instance.renderView.configuration =
         new TestViewConfiguration(size: const Size(375.0, 667.0));

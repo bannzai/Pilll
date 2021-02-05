@@ -2,6 +2,7 @@ import 'package:Pilll/domain/calendar/date_range.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 void main() {
+  TestWidgetsFlutterBinding.ensureInitialized();
   DateRange range;
   DateTime begin;
   DateTime end;

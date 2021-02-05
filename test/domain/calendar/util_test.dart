@@ -6,6 +6,7 @@ import 'package:Pilll/entity/setting.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 void main() {
+  TestWidgetsFlutterBinding.ensureInitialized();
   group("#menstruationDateRange", () {
     test(
       "First page with pillSheetType: pillsheet_28_7, beginingDate: 2020-09-01, fromMenstruation: 2, durationMenstruation: 3",

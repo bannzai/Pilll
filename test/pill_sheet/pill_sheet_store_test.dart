@@ -13,8 +13,8 @@ import 'package:mockito/mockito.dart';
 import '../helper/mock.dart';
 
 void main() {
+  TestWidgetsFlutterBinding.ensureInitialized();
   setUp(() async {
-    WidgetsFlutterBinding.ensureInitialized();
     analytics = MockAnalytics();
   });
   group("#calcBeginingDateFromNextTodayPillNumber", () {

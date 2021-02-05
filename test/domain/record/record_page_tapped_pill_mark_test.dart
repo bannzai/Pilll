@@ -17,6 +17,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 import '../../helper/mock.dart';
 
 void main() {
+  TestWidgetsFlutterBinding.ensureInitialized();
   Setting _anySetting() => Setting(
         fromMenstruation: 1,
         durationMenstruation: 2,
