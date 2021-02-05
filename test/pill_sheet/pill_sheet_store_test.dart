@@ -13,9 +13,9 @@ import 'package:shared_preferences/shared_preferences.dart';
 import '../helper/mock.dart';
 
 void main() {
-  TestWidgetsFlutterBinding.ensureInitialized();
-  SharedPreferences.setMockInitialValues({});
   setUp(() async {
+    TestWidgetsFlutterBinding.ensureInitialized();
+    SharedPreferences.setMockInitialValues({});
     analytics = MockAnalytics();
   });
   group("#calcBeginingDateFromNextTodayPillNumber", () {

@@ -14,9 +14,9 @@ import '../../helper/mock.dart';
 import '../../helper/supported_device.dart';
 
 void main() {
-  TestWidgetsFlutterBinding.ensureInitialized();
-  SharedPreferences.setMockInitialValues({});
   setUp(() {
+    TestWidgetsFlutterBinding.ensureInitialized();
+    SharedPreferences.setMockInitialValues({});
     initializeDateFormatting('ja_JP');
     Environment.isTest = true;
   });
