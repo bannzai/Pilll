@@ -68,7 +68,7 @@ extension AppDelegate {
     }
 
     @objc func userNotificationCenter_methodSwizzling(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
-        defer {
+        func end(delay: TimeInterval = 0) {
             var isCompleted: Bool = false
             let completionHandlerWrapper = {
                 isCompleted = true
@@ -79,7 +79,7 @@ extension AppDelegate {
             // ちなみにリミットは30秒以内にcompletionを呼ぶ:  https://developer.apple.com/documentation/usernotifications/setting_up_a_remote_notification_server/pushing_background_updates_to_your_app
             // なおバッジはすぐに消しても良いと判断して消した
             UIApplication.shared.applicationIconBadgeNumber = 0
-            DispatchQueue.main.asyncAfter(deadline: .now() + 10) {
+            DispatchQueue.main.asyncAfter(deadline: .now() + delay) {
                 self.userNotificationCenter_methodSwizzling(center, didReceive: response, withCompletionHandler: completionHandlerWrapper)
                 if !isCompleted {
                     completionHandlerWrapper()
@@ -93,9 +93,9 @@ extension AppDelegate {
             switch response.actionIdentifier {
             case "RECORD_PILL":
                 call(method: "recordPill", arguments: nil)
-                break
+                end(delay: 10)
             default:
-                break
+                end()
             }
         }
     }
