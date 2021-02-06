@@ -73,11 +73,17 @@ extension AppDelegate {
             let completionHandlerWrapper = {
                 isCompleted = true
                 completionHandler()
-                UIApplication.shared.applicationIconBadgeNumber = 0
             }
-            userNotificationCenter_methodSwizzling(center, didReceive: response, withCompletionHandler: completionHandlerWrapper)
-            if !isCompleted {
-                completionHandlerWrapper()
+            // NOTE: すぐにcallbackした場合、Flutterからfirestoreにリクエストを送っている途中でプロセスが終了している疑惑がある。
+            // それで、雑だけど10秒くらいあとにcompletionHandlerを呼ぶことにした
+            // ちなみにリミットは30秒以内にcompletionを呼ぶ:  https://developer.apple.com/documentation/usernotifications/setting_up_a_remote_notification_server/pushing_background_updates_to_your_app
+            // なおバッジはすぐに消しても良いと判断して消した
+            UIApplication.shared.applicationIconBadgeNumber = 0
+            DispatchQueue.main.asyncAfter(deadline: .now() + 10) {
+                self.userNotificationCenter_methodSwizzling(center, didReceive: response, withCompletionHandler: completionHandlerWrapper)
+                if !isCompleted {
+                    completionHandlerWrapper()
+                }
             }
         }
         switch extractCategory(userInfo: response.notification.request.content.userInfo) {
