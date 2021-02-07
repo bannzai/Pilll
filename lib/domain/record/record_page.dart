@@ -186,7 +186,7 @@ class RecordPage extends HookWidget {
         pillSheet.todayPillNumber) {
       final diff =
           pillSheet.typeInfo.dosingPeriod - pillSheet.todayPillNumber + 1;
-      return "あと$diff日で偽薬期間です";
+      return "あと$diff日で${pillSheet.pillSheetType.notTakenWord}期間です";
     }
 
     return "";
