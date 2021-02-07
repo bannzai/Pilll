@@ -7,7 +7,7 @@ Future<void> requestNotificationPermissions() async {
   return Future.value();
 }
 
-Future<void> listenNotificationEvents() async {
+void listenNotificationEvents() {
   FirebaseMessaging()
     ..configure(
       onMessage: (Map<String, dynamic> message) async {
