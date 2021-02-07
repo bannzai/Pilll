@@ -23,6 +23,7 @@ class AppRouter {
     SharedPreferences.getInstance().then((storage) {
       storage.setBool(BoolKey.didEndInitialSetting, true);
       requestNotificationPermissions().then((value) {
+        listenNotificationEvents();
         Navigator.popUntil(context, (router) => router.isFirst);
         Navigator.pushReplacementNamed(context, Routes.main);
       });
