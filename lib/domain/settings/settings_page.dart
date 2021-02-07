@@ -287,6 +287,7 @@ class SettingsPage extends HookWidget {
                   doneText: null,
                   title: "生理について",
                   model: SettingMenstruationPageModel(
+                    pillSheetType: pillSheetState.entity.pillSheetType,
                     selectedFromMenstruation:
                         settingState.entity.fromMenstruation,
                     selectedDurationMenstruation:
