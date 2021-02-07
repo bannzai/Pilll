@@ -3,8 +3,9 @@ import 'dart:io';
 import 'package:firebase_messaging/firebase_messaging.dart';
 
 Future<void> requestNotificationPermissions() async {
-  await FirebaseMessaging().requestNotificationPermissions();
-  return listenNotificationEvents();
+  return FirebaseMessaging()
+    ..requestNotificationPermissions()
+    ..onIosSettingsRegistered.listen((IosNotificationSettings settings) {});
 }
 
 Future<void> listenNotificationEvents() async {
