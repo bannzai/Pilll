@@ -1,9 +1,20 @@
 import 'dart:io';
 
+import 'package:Pilll/auth/auth.dart';
+import 'package:Pilll/database/database.dart';
+import 'package:Pilll/service/user.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 
 Future<void> requestNotificationPermissions() async {
   await FirebaseMessaging().requestNotificationPermissions();
+  callRegisterRemoteNotification();
+  auth().then((auth) {
+    final userService = UserService(DatabaseConnection(auth.uid));
+    userService.fetch().then((_) async {
+      final token = await FirebaseMessaging().getToken();
+      await userService.registerRemoteNotificationToken(token);
+    });
+  });
   return Future.value();
 }
 
@@ -21,6 +32,14 @@ void listenNotificationEvents() {
         print('onResume: $message');
       },
     );
+}
+
+void callRegisterRemoteNotification() {
+  if (Platform.isIOS) {
+    // NOTE: FirebaseMessaging.configure call [UIApplication registerForRemoteNotifcation] from native library.
+    // Reason for calling listenNotificationEvents, I won't overwrite defined to receive event via FirebaseMessaging().configure.
+    listenNotificationEvents();
+  }
 }
 
 Future<dynamic> onBackgroundMessage(Map<String, dynamic> message) async {
