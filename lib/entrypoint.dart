@@ -35,7 +35,6 @@ Future<void> entrypoint() async {
     );
   };
   FlutterError.onError = FirebaseCrashlytics.instance.recordFlutterError;
-  listenNotificationEvents();
   definedChannel();
   runZonedGuarded(() {
     runApp(ProviderScope(child: App()));
