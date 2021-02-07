@@ -7,7 +7,6 @@ import 'package:Pilll/entity/user_error.dart';
 import 'package:Pilll/error/universal_error_page.dart';
 import 'package:Pilll/global_method_channel.dart';
 import 'package:Pilll/router/router.dart';
-import 'package:Pilll/service/push_notification.dart';
 import 'package:Pilll/util/environment.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_analytics/observer.dart';
