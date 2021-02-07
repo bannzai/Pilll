@@ -22,9 +22,11 @@ class AppRouter {
   static void endInitialSetting(BuildContext context) {
     SharedPreferences.getInstance().then((storage) {
       storage.setBool(BoolKey.didEndInitialSetting, true);
-      requestNotificationPermissions();
-      Navigator.popUntil(context, (router) => router.isFirst);
-      Navigator.pushReplacementNamed(context, Routes.main);
+      requestNotificationPermissions().then((value) {
+        listenNotificationEvents();
+        Navigator.popUntil(context, (router) => router.isFirst);
+        Navigator.pushReplacementNamed(context, Routes.main);
+      });
     });
   }
 }

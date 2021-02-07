@@ -8,7 +8,6 @@ import 'package:Pilll/error/template.dart';
 import 'package:Pilll/error/universal_error_page.dart';
 import 'package:Pilll/service/user.dart';
 import 'package:Pilll/util/shared_preference/keys.dart';
-import 'package:firebase_messaging/firebase_messaging.dart';
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/all.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -126,8 +125,6 @@ class RootState extends State<Root> {
     auth().then((authInfo) {
       final userService = UserService(DatabaseConnection(authInfo.uid));
       return userService.prepare().then((_) async {
-        final token = await FirebaseMessaging().getToken();
-        await userService.registerRemoteNotificationToken(token);
         userService.saveLaunchInfo();
         userService.saveStats();
         final user = await userService.fetch();

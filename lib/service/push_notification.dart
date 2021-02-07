@@ -1,15 +1,25 @@
 import 'dart:io';
 
+import 'package:Pilll/auth/auth.dart';
+import 'package:Pilll/database/database.dart';
+import 'package:Pilll/service/user.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 
 Future<void> requestNotificationPermissions() async {
-  return FirebaseMessaging()
-    ..requestNotificationPermissions()
-    ..onIosSettingsRegistered.listen((IosNotificationSettings settings) {});
+  await FirebaseMessaging().requestNotificationPermissions();
+  callRegisterRemoteNotification();
+  auth().then((auth) {
+    final userService = UserService(DatabaseConnection(auth.uid));
+    userService.fetch().then((_) async {
+      final token = await FirebaseMessaging().getToken();
+      await userService.registerRemoteNotificationToken(token);
+    });
+  });
+  return Future.value();
 }
 
-Future<void> listenNotificationEvents() async {
-  return FirebaseMessaging()
+void listenNotificationEvents() {
+  FirebaseMessaging()
     ..configure(
       onMessage: (Map<String, dynamic> message) async {
         print('onMessage: $message');
@@ -22,6 +32,14 @@ Future<void> listenNotificationEvents() async {
         print('onResume: $message');
       },
     );
+}
+
+void callRegisterRemoteNotification() {
+  if (Platform.isIOS) {
+    // NOTE: FirebaseMessaging.configure call [UIApplication registerForRemoteNotifcation] from native library.
+    // Reason for calling listenNotificationEvents, I won't overwrite defined to receive event via FirebaseMessaging().configure.
+    listenNotificationEvents();
+  }
 }
 
 Future<dynamic> onBackgroundMessage(Map<String, dynamic> message) async {
