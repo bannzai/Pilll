@@ -2,6 +2,7 @@ import 'package:Pilll/components/atoms/buttons.dart';
 import 'package:Pilll/components/atoms/color.dart';
 import 'package:Pilll/components/atoms/font.dart';
 import 'package:Pilll/components/atoms/text_color.dart';
+import 'package:Pilll/entity/pill_sheet_type.dart';
 import 'package:Pilll/util/toolbar/picker_toolbar.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -15,10 +16,12 @@ abstract class SettingMenstruationPageConstants {
 }
 
 class SettingMenstruationPageModel {
+  final PillSheetType pillSheetType;
   int selectedFromMenstruation;
   int selectedDurationMenstruation;
 
   SettingMenstruationPageModel({
+    @required this.pillSheetType,
     @required this.selectedFromMenstruation,
     @required this.selectedDurationMenstruation,
   });
@@ -87,7 +90,8 @@ class _SettingMenstruationPageState extends State<SettingMenstruationPage> {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: <Widget>[
-                          Text("偽薬期間に入って ",
+                          Text(
+                              "${this.widget.model.pillSheetType.notTakenWord}期間に入って ",
                               style: FontType.assisting
                                   .merge(TextColorStyle.main)),
                           GestureDetector(
