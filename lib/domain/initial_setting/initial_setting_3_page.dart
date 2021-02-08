@@ -18,6 +18,7 @@ class InitialSetting3Page extends HookWidget {
         Navigator.of(context).push(InitialSetting4PageRoute.route());
       },
       model: SettingMenstruationPageModel(
+        pillSheetType: state.entity.pillSheetType,
         selectedFromMenstruation: state.entity.fromMenstruation,
         selectedDurationMenstruation: state.entity.durationMenstruation,
       ),

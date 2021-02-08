@@ -178,14 +178,7 @@ class RecordPage extends HookWidget {
       return "";
     }
     if (pillSheet.typeInfo.dosingPeriod < pillSheet.todayPillNumber) {
-      switch (pillSheet.pillSheetType) {
-        case PillSheetType.pillsheet_21:
-          return "休薬期間中";
-        case PillSheetType.pillsheet_28_4:
-          return "偽薬期間中";
-        case PillSheetType.pillsheet_28_7:
-          return "偽薬期間中";
-      }
+      return "${pillSheet.pillSheetType.notTakenWord}期間中";
     }
 
     final threshold = 4;
@@ -193,7 +186,7 @@ class RecordPage extends HookWidget {
         pillSheet.todayPillNumber) {
       final diff =
           pillSheet.typeInfo.dosingPeriod - pillSheet.todayPillNumber + 1;
-      return "あと$diff日で偽薬期間です";
+      return "あと$diff日で${pillSheet.pillSheetType.notTakenWord}期間です";
     }
 
     return "";
