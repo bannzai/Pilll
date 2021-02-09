@@ -36,36 +36,10 @@ class PillSheet extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
               SizedBox(height: 20),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.start,
-                children: <Widget>[
-                  Icon(Icons.check,
-                      color: this.selected
-                          ? PilllColors.secondary
-                          : PilllColors.disable,
-                      size: 13),
-                  SizedBox(width: 8),
-                  Text(this.pillSheetType.name,
-                      style: FontType.thinTitle.merge(TextColorStyle.main)),
-                ],
-              ),
+              Text(this.pillSheetType.name,
+                  style: FontType.thinTitle.merge(TextColorStyle.main)),
               SizedBox(height: 10),
-              Row(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: <Widget>[
-                  this.pillSheetType.image,
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: this
-                        .pillSheetType
-                        .examples
-                        .map((e) => Text("$e",
-                            style:
-                                FontType.assisting.merge(TextColorStyle.main)))
-                        .toList(),
-                  ),
-                ],
-              ),
+              this.pillSheetType.image,
             ],
           ),
         ],
