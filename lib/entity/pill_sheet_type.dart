@@ -123,23 +123,6 @@ extension PillSheetTypeFunctions on PillSheetType {
     }
   }
 
-  int get beginingWithoutTakenPeriod {
-    switch (this) {
-      case PillSheetType.pillsheet_21:
-        return 22;
-      case PillSheetType.pillsheet_28_4:
-        return 25;
-      case PillSheetType.pillsheet_28_7:
-        return 22;
-      case PillSheetType.pillsheet_28_0:
-        // TODO: remove this getter property
-        return null;
-      default:
-        assert(false);
-        return null;
-    }
-  }
-
   int get dosingPeriod {
     switch (this) {
       case PillSheetType.pillsheet_21:
