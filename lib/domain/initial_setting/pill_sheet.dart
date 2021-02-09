@@ -36,7 +36,7 @@ class PillSheet extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
               SizedBox(height: 20),
-              Text(this.pillSheetType.name,
+              Text(this.pillSheetType.fullName,
                   style: FontType.thinTitle.merge(TextColorStyle.main)),
               SizedBox(height: 10),
               this.pillSheetType.image,

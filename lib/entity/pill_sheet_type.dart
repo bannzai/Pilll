@@ -23,7 +23,7 @@ extension PillSheetTypeFunctions on PillSheetType {
     }
   }
 
-  String get name {
+  String get fullName {
     switch (this) {
       case PillSheetType.pillsheet_21:
         return "21錠タイプ";
@@ -137,7 +137,7 @@ extension PillSheetTypeFunctions on PillSheetType {
 
   PillSheetTypeInfo get typeInfo => PillSheetTypeInfo(
       pillSheetTypeReferencePath: rawPath,
-      name: name,
+      name: fullName,
       totalCount: totalCount,
       dosingPeriod: dosingPeriod);
 

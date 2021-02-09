@@ -150,7 +150,7 @@ class SettingsPage extends HookWidget {
           () {
             return SettingListTitleAndContentRowModel(
               title: "種類",
-              content: settingState.entity.pillSheetType.name,
+              content: settingState.entity.pillSheetType.fullName,
               onTap: () {
                 analytics.logEvent(
                   name: "did_select_changing_pill_sheet_type",
