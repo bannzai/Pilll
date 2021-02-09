@@ -58,23 +58,6 @@ extension PillSheetTypeFunctions on PillSheetType {
     }
   }
 
-  List<String> get examples {
-    switch (this) {
-      case PillSheetType.pillsheet_21:
-        return ["・トリキュラー21", "・マーベロン21", "・アンジュ21", "・ルナベルなど"];
-      case PillSheetType.pillsheet_28_4:
-        return ["・ヤーズなど"];
-      case PillSheetType.pillsheet_28_7:
-        return ["・トリキュラー28", "・マーベロン28", "・アンジュ28"];
-      case PillSheetType.pillsheet_28_0:
-        assert(false);
-        return null;
-      default:
-        assert(false);
-        return null;
-    }
-  }
-
   SvgPicture get image {
     switch (this) {
       case PillSheetType.pillsheet_21:
