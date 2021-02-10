@@ -53,13 +53,7 @@ class PillSheetTypeSelectPage extends StatelessWidget {
               child: GridView.count(
                 crossAxisCount: 2,
                 children: [
-                  ...PillSheetType.values
-                      .map((e) => Padding(
-                            padding: const EdgeInsets.only(
-                                top: 10, left: 20, right: 20),
-                            child: _pillSheet(e),
-                          ))
-                      .toList(),
+                  ...PillSheetType.values.map((e) => _pillSheet(e)).toList(),
                 ],
               ),
             ),
