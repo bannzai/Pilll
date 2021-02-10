@@ -15,34 +15,38 @@ class PillSheet extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      width: 295,
-      height: 143,
-      decoration: BoxDecoration(
-        color: this.selected
-            ? PilllColors.secondary.withOpacity(0.08)
-            : PilllColors.background,
-        border: Border.all(
-            width: 1,
-            color: this.selected ? PilllColors.secondary : PilllColors.border),
-        borderRadius: BorderRadius.circular(10),
-      ),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.start,
-        children: <Widget>[
-          SizedBox(width: 16),
-          Column(
-            mainAxisAlignment: MainAxisAlignment.start,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: <Widget>[
-              SizedBox(height: 20),
-              Text(this.pillSheetType.fullName,
-                  style: FontType.thinTitle.merge(TextColorStyle.main)),
-              SizedBox(height: 10),
-              this.pillSheetType.image,
-            ],
-          ),
-        ],
+    return Padding(
+      padding: const EdgeInsets.only(top: 10, left: 20, right: 20),
+      child: Container(
+        width: 146,
+        height: 129,
+        decoration: BoxDecoration(
+          color: this.selected
+              ? PilllColors.secondary.withOpacity(0.08)
+              : PilllColors.background,
+          border: Border.all(
+              width: 1,
+              color:
+                  this.selected ? PilllColors.secondary : PilllColors.border),
+          borderRadius: BorderRadius.circular(10),
+        ),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: <Widget>[
+            SizedBox(width: 16),
+            Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: <Widget>[
+                SizedBox(height: 20),
+                Text("${this.pillSheetType.dosingPeriod}錠",
+                    style: FontType.thinTitle.merge(TextColorStyle.main)),
+                SizedBox(height: 10),
+                this.pillSheetType.image,
+              ],
+            ),
+          ],
+        ),
       ),
     );
   }
