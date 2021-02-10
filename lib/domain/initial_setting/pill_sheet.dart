@@ -23,7 +23,7 @@ class PillSheet extends StatelessWidget {
             ? PilllColors.secondary.withOpacity(0.08)
             : PilllColors.background,
         border: Border.all(
-            width: 1,
+            width: this.selected ? 2 : 1,
             color: this.selected ? PilllColors.secondary : PilllColors.border),
         borderRadius: BorderRadius.circular(10),
       ),
