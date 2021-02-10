@@ -177,6 +177,9 @@ class RecordPage extends HookWidget {
     if (pillSheet == null) {
       return "";
     }
+    if (pillSheet.pillSheetType.isNotExistsNotTakenDuration) {
+      return "";
+    }
     if (pillSheet.typeInfo.dosingPeriod < pillSheet.todayPillNumber) {
       return "${pillSheet.pillSheetType.notTakenWord}期間中";
     }
@@ -185,9 +188,6 @@ class RecordPage extends HookWidget {
     if (pillSheet.typeInfo.dosingPeriod - threshold + 1 <
         pillSheet.todayPillNumber) {
       final diff = pillSheet.typeInfo.dosingPeriod - pillSheet.todayPillNumber;
-      if (diff == 0) {
-        return "";
-      }
       return "あと${diff + 1}日で${pillSheet.pillSheetType.notTakenWord}期間です";
     }
 
