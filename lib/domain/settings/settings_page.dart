@@ -150,7 +150,7 @@ class SettingsPage extends HookWidget {
           () {
             return SettingListTitleAndContentRowModel(
               title: "種類",
-              content: settingState.entity.pillSheetType.name,
+              content: settingState.entity.pillSheetType.fullName,
               onTap: () {
                 analytics.logEvent(
                   name: "did_select_changing_pill_sheet_type",
@@ -248,31 +248,32 @@ class SettingsPage extends HookWidget {
               Navigator.of(context).push(ReminderTimesPageRoute.route());
             },
           ),
-          SettingsListSwitchRowModel(
-            title: "${pillSheetState.entity.pillSheetType.notTakenWord}期間の通知",
-            subtitle:
-                "通知オフの場合は、${pillSheetState.entity.pillSheetType.notTakenWord}期間の服用記録も自動で付けられます",
-            value: settingState.entity.isOnNotifyInNotTakenDuration,
-            onTap: () {
-              analytics.logEvent(
-                name: "toggle_notify_not_taken_duration",
-              );
-              Scaffold.of(context).hideCurrentSnackBar();
-              settingStore
-                  .modifyIsOnNotifyInNotTakenDuration(
-                      !settingState.entity.isOnNotifyInNotTakenDuration)
-                  .then((state) {
-                Scaffold.of(context).showSnackBar(
-                  SnackBar(
-                    duration: Duration(seconds: 1),
-                    content: Text(
-                      "${pillSheetState.entity.pillSheetType.notTakenWord}期間の通知を${state.entity.isOnNotifyInNotTakenDuration ? "ON" : "OFF"}にしました",
-                    ),
-                  ),
+          if (!pillSheetState.entity.pillSheetType.isNotExistsNotTakenDuration)
+            SettingsListSwitchRowModel(
+              title: "${pillSheetState.entity.pillSheetType.notTakenWord}期間の通知",
+              subtitle:
+                  "通知オフの場合は、${pillSheetState.entity.pillSheetType.notTakenWord}期間の服用記録も自動で付けられます",
+              value: settingState.entity.isOnNotifyInNotTakenDuration,
+              onTap: () {
+                analytics.logEvent(
+                  name: "toggle_notify_not_taken_duration",
                 );
-              });
-            },
-          ),
+                Scaffold.of(context).hideCurrentSnackBar();
+                settingStore
+                    .modifyIsOnNotifyInNotTakenDuration(
+                        !settingState.entity.isOnNotifyInNotTakenDuration)
+                    .then((state) {
+                  Scaffold.of(context).showSnackBar(
+                    SnackBar(
+                      duration: Duration(seconds: 1),
+                      content: Text(
+                        "${pillSheetState.entity.pillSheetType.notTakenWord}期間の通知を${state.entity.isOnNotifyInNotTakenDuration ? "ON" : "OFF"}にしました",
+                      ),
+                    ),
+                  );
+                });
+              },
+            ),
         ];
       case SettingSection.menstruation:
         return [
