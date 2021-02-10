@@ -184,9 +184,11 @@ class RecordPage extends HookWidget {
     final threshold = 4;
     if (pillSheet.typeInfo.dosingPeriod - threshold + 1 <
         pillSheet.todayPillNumber) {
-      final diff =
-          pillSheet.typeInfo.dosingPeriod - pillSheet.todayPillNumber + 1;
-      return "あと$diff日で${pillSheet.pillSheetType.notTakenWord}期間です";
+      final diff = pillSheet.typeInfo.dosingPeriod - pillSheet.todayPillNumber;
+      if (diff == 0) {
+        return "";
+      }
+      return "あと${diff + 1}日で${pillSheet.pillSheetType.notTakenWord}期間です";
     }
 
     return "";
