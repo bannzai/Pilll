@@ -51,6 +51,10 @@ class PillSheetTypeSelectPage extends StatelessWidget {
             SizedBox(height: 24),
             Expanded(
               child: GridView.count(
+                mainAxisSpacing: 16,
+                crossAxisSpacing: 16,
+                padding: EdgeInsets.only(left: 34, right: 34),
+                childAspectRatio: 146 / 129,
                 crossAxisCount: 2,
                 children: [
                   ...PillSheetType.values.map((e) => _pillSheet(e)).toList(),
