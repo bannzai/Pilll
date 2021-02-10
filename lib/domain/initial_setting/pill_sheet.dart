@@ -1,4 +1,5 @@
 import 'package:Pilll/components/atoms/color.dart';
+import 'package:Pilll/entity/pill_sheet.dart';
 import 'package:Pilll/entity/pill_sheet_type.dart';
 import 'package:Pilll/components/atoms/font.dart';
 import 'package:Pilll/components/atoms/text_color.dart';
@@ -39,8 +40,10 @@ class PillSheet extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
                 SizedBox(height: 20),
-                Text("${this.pillSheetType.dosingPeriod}錠",
-                    style: FontType.thinTitle.merge(TextColorStyle.main)),
+                Text("${pillSheetType.dosingPeriod}錠",
+                    style: FontType.subTitle.merge(TextColorStyle.main)),
+                Text("${_subtitle(pillSheetType)}",
+                    style: FontType.assisting.merge(TextColorStyle.main)),
                 SizedBox(height: 10),
                 this.pillSheetType.image,
               ],
@@ -49,5 +52,21 @@ class PillSheet extends StatelessWidget {
         ),
       ),
     );
+  }
+
+  String _subtitle(PillSheetType pillSheetType) {
+    switch (pillSheetType) {
+      case PillSheetType.pillsheet_21:
+        return "＋7日休薬";
+      case PillSheetType.pillsheet_28_4:
+        return "4錠偽薬";
+      case PillSheetType.pillsheet_28_7:
+        return "7錠偽薬";
+      case PillSheetType.pillsheet_28_0:
+        return "すべて実薬";
+      default:
+        throw ArgumentError.notNull(
+            "Maybe pillSheetType is null. actually: $pillSheetType");
+    }
   }
 }
