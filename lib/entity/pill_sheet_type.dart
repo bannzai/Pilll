@@ -128,6 +128,10 @@ extension PillSheetTypeFunctions on PillSheetType {
       totalCount: totalCount,
       dosingPeriod: dosingPeriod);
 
+  bool get isNotExistsNotTakenDuration {
+    return this.totalCount == this.dosingPeriod;
+  }
+
   String get notTakenWord {
     switch (this) {
       case PillSheetType.pillsheet_21:
