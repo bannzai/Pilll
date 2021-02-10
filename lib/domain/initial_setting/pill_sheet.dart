@@ -36,7 +36,7 @@ class PillSheet extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
               SizedBox(height: 20),
-              Text("${pillSheetType.dosingPeriod}錠",
+              Text("${_title(pillSheetType)}",
                   style: FontType.subTitle.merge(TextColorStyle.main)),
               Text("${_subtitle(pillSheetType)}",
                   style: FontType.assisting.merge(TextColorStyle.main)),
@@ -47,6 +47,22 @@ class PillSheet extends StatelessWidget {
         ],
       ),
     );
+  }
+
+  String _title(PillSheetType pillSheetType) {
+    switch (pillSheetType) {
+      case PillSheetType.pillsheet_21:
+        return "21錠";
+      case PillSheetType.pillsheet_28_4:
+        return "28錠";
+      case PillSheetType.pillsheet_28_7:
+        return "28錠";
+      case PillSheetType.pillsheet_28_0:
+        return "28錠";
+      default:
+        throw ArgumentError.notNull(
+            "Maybe pillSheetType is null. actually: $pillSheetType");
+    }
   }
 
   String _subtitle(PillSheetType pillSheetType) {
