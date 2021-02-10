@@ -16,15 +16,15 @@ class PillSheet extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 295,
-      height: 143,
+      width: 146,
+      height: 129,
       decoration: BoxDecoration(
         color: this.selected
             ? PilllColors.secondary.withOpacity(0.08)
             : PilllColors.background,
         border: Border.all(
-            width: 1,
-            color: this.selected ? PilllColors.secondary : PilllColors.disable),
+            width: this.selected ? 2 : 1,
+            color: this.selected ? PilllColors.secondary : PilllColors.border),
         borderRadius: BorderRadius.circular(10),
       ),
       child: Row(
@@ -35,41 +35,49 @@ class PillSheet extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
-              SizedBox(height: 20),
-              Row(
-                mainAxisAlignment: MainAxisAlignment.start,
-                children: <Widget>[
-                  Icon(Icons.check,
-                      color: this.selected
-                          ? PilllColors.secondary
-                          : PilllColors.disable,
-                      size: 13),
-                  SizedBox(width: 8),
-                  Text(this.pillSheetType.name,
-                      style: FontType.thinTitle.merge(TextColorStyle.main)),
-                ],
-              ),
               SizedBox(height: 10),
-              Row(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: <Widget>[
-                  this.pillSheetType.image,
-                  Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: this
-                        .pillSheetType
-                        .examples
-                        .map((e) => Text("$e",
-                            style:
-                                FontType.assisting.merge(TextColorStyle.main)))
-                        .toList(),
-                  ),
-                ],
-              ),
+              Text("${_title(pillSheetType)}",
+                  style: FontType.thinTitle.merge(TextColorStyle.main)),
+              Text("${_subtitle(pillSheetType)}",
+                  style: FontType.assisting.merge(TextColorStyle.main)),
+              SizedBox(height: 8),
+              this.pillSheetType.image,
             ],
           ),
         ],
       ),
     );
+  }
+
+  String _title(PillSheetType pillSheetType) {
+    switch (pillSheetType) {
+      case PillSheetType.pillsheet_21:
+        return "21錠";
+      case PillSheetType.pillsheet_28_4:
+        return "28錠";
+      case PillSheetType.pillsheet_28_7:
+        return "28錠";
+      case PillSheetType.pillsheet_28_0:
+        return "28錠";
+      default:
+        throw ArgumentError.notNull(
+            "Maybe pillSheetType is null. actually: $pillSheetType");
+    }
+  }
+
+  String _subtitle(PillSheetType pillSheetType) {
+    switch (pillSheetType) {
+      case PillSheetType.pillsheet_21:
+        return "＋7日休薬";
+      case PillSheetType.pillsheet_28_4:
+        return "4錠偽薬";
+      case PillSheetType.pillsheet_28_7:
+        return "7錠偽薬";
+      case PillSheetType.pillsheet_28_0:
+        return "すべて実薬";
+      default:
+        throw ArgumentError.notNull(
+            "Maybe pillSheetType is null. actually: $pillSheetType");
+    }
   }
 }
