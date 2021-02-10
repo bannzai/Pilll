@@ -24,7 +24,7 @@ class PillSheet extends StatelessWidget {
             : PilllColors.background,
         border: Border.all(
             width: 1,
-            color: this.selected ? PilllColors.secondary : PilllColors.disable),
+            color: this.selected ? PilllColors.secondary : PilllColors.border),
         borderRadius: BorderRadius.circular(10),
       ),
       child: Row(
