@@ -7,6 +7,7 @@ import 'package:Pilll/domain/calendar/calendar_help.dart';
 import 'package:Pilll/domain/calendar/calendar_list_page.dart';
 import 'package:Pilll/entity/pill_sheet.dart';
 import 'package:Pilll/entity/setting.dart';
+import 'package:Pilll/entity/pill_sheet_type.dart';
 import 'package:Pilll/store/pill_sheet.dart';
 import 'package:Pilll/store/setting.dart';
 import 'package:Pilll/components/atoms/buttons.dart';
@@ -35,17 +36,8 @@ class CalendarCard extends HookWidget {
           _header(context),
           Calendar(
             calculator: Calculator(date),
-            bandModels: [
-              if (currentPillSheetState.entity != null) ...[
-                menstruationDateRange(
-                        currentPillSheetState.entity, settingState.entity, 0)
-                    .map((range) =>
-                        CalendarMenstruationBandModel(range.begin, range.end)),
-                nextPillSheetDateRange(currentPillSheetState.entity, 0).map(
-                    (range) =>
-                        CalendarNextPillSheetBandModel(range.begin, range.end)),
-              ]
-            ],
+            bandModels: buildBandModels(
+                currentPillSheetState.entity, settingState.entity, 0),
             horizontalPadding: 16,
           ),
           _more(context, settingState.entity, currentPillSheetState.entity),
@@ -103,28 +95,14 @@ class CalendarCard extends HookWidget {
                         []);
                     return previous;
                   });
-                  CalendarListPageModel current =
-                      CalendarListPageModel(Calculator(now), [
-                    if (latestPillSheet != null) ...[
-                      menstruationDateRange(latestPillSheet, setting, 0).map(
-                          (range) => CalendarMenstruationBandModel(
-                              range.begin, range.end)),
-                      nextPillSheetDateRange(latestPillSheet, 0).map((range) =>
-                          CalendarNextPillSheetBandModel(
-                              range.begin, range.end)),
-                    ]
-                  ]);
+                  CalendarListPageModel current = CalendarListPageModel(
+                    Calculator(now),
+                    buildBandModels(latestPillSheet, setting, 0),
+                  );
                   List<CalendarBandModel> satisfyNextMonthDateRanges = [];
                   if (latestPillSheet != null) {
                     satisfyNextMonthDateRanges = List.generate(12, (index) {
-                      return [
-                        menstruationDateRange(latestPillSheet, setting, index)
-                            .map((range) => CalendarMenstruationBandModel(
-                                range.begin, range.end)),
-                        nextPillSheetDateRange(latestPillSheet, index).map(
-                            (range) => CalendarNextPillSheetBandModel(
-                                range.begin, range.end)),
-                      ];
+                      return buildBandModels(latestPillSheet, setting, index);
                     }).expand((element) => element).toList();
                   }
                   final nextCalendars = List.generate(
