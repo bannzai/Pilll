@@ -9,6 +9,9 @@ DateRange menstruationDateRange(
   Setting setting,
   int page,
 ) {
+  if (pillSheet.pillSheetType.isNotExistsNotTakenDuration) {
+    return null;
+  }
   var offset = page * pillSheet.pillSheetType.totalCount;
   var begin = pillSheet.beginingDate.add(Duration(
       days: (pillSheet.pillSheetType.dosingPeriod - 1) +
