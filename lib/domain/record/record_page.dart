@@ -356,7 +356,7 @@ class RecordPage extends HookWidget {
     final currentVersionString =
         await PackageInfo.fromPlatform().then((value) => value.version);
     final currentVersion = Version.parse(currentVersionString);
-    if (beginingVersion >= currentVersion) {
+    if (beginingVersion < currentVersion) {
       return;
     }
     final key = ReleaseNoteKey.version2_2_0;
