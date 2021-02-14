@@ -103,7 +103,7 @@ class RootState extends State<Root> {
       return watch(authStateProvider).when(data: (snapshot) {
         switch (screenType) {
           case ScreenType.home:
-            return HomePage();
+            return HomePage(key: homeKey);
           case ScreenType.initialSetting:
             return InitialSetting1Page();
           default:

@@ -13,8 +13,10 @@ import 'package:Pilll/util/formatter/date_time_formatter.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
+GlobalKey<_HomePageState> homeKey = GlobalKey();
+
 class HomePage extends StatefulWidget {
-  HomePage({Key key}) : super(key: key);
+  HomePage({@required Key key}) : super(key: key);
 
   @override
   _HomePageState createState() => _HomePageState();

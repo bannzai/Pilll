@@ -15,7 +15,8 @@ class AppRouter {
           ),
       Routes.initialSetting: (BuildContext context) =>
           ProviderScope(child: InitialSetting1Page()),
-      Routes.main: (BuildContext context) => ProviderScope(child: HomePage()),
+      Routes.main: (BuildContext context) =>
+          ProviderScope(child: HomePage(key: homeKey)),
     };
   }
 
