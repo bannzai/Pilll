@@ -23,6 +23,7 @@ _$_Setting _$_$_SettingFromJson(Map<String, dynamic> json) {
   return _$_Setting(
     pillSheetTypeRawPath: json['pillSheetTypeRawPath'] as String,
     fromMenstruation: json['fromMenstruation'] as int,
+    pillNumberForFromMenstruation: json['pillNumberForFromMenstruation'] as int,
     durationMenstruation: json['durationMenstruation'] as int,
     reminderTimes: (json['reminderTimes'] as List)
         ?.map((e) =>
@@ -38,6 +39,7 @@ Map<String, dynamic> _$_$_SettingToJson(_$_Setting instance) =>
     <String, dynamic>{
       'pillSheetTypeRawPath': instance.pillSheetTypeRawPath,
       'fromMenstruation': instance.fromMenstruation,
+      'pillNumberForFromMenstruation': instance.pillNumberForFromMenstruation,
       'durationMenstruation': instance.durationMenstruation,
       'reminderTimes':
           instance.reminderTimes?.map((e) => e?.toJson())?.toList(),
