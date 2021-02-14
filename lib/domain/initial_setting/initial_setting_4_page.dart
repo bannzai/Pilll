@@ -103,7 +103,7 @@ class InitialSetting4Page extends HookWidget {
           "4/4",
           style: TextStyle(color: TextColor.black),
         ),
-        backgroundColor: PilllColors.background,
+        backgroundColor: PilllColors.white,
       ),
       body: SafeArea(
         child: Container(
