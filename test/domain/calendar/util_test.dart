@@ -1,3 +1,4 @@
+import 'package:Pilll/domain/calendar/calendar_band_model.dart';
 import 'package:Pilll/domain/calendar/date_range.dart';
 import 'package:Pilll/domain/calendar/utility.dart';
 import 'package:Pilll/entity/pill_sheet.dart';
@@ -258,6 +259,44 @@ void main() {
             DateTime.parse("2020-10-05"),
           ),
         );
+      },
+    );
+  });
+  group("#bandLength", () {
+    test(
+      "range: DateRange(2021-02-07, 2021-02-13), bandMode: (2021-02-10, 2021-02-13), isLineBreaked: false",
+      () {
+        expect(
+            bandLength(
+              DateRange(
+                DateTime.parse("2021-02-07"),
+                DateTime.parse("2021-02-13"),
+              ),
+              CalendarMenstruationBandModel(
+                DateTime.parse("2021-02-10"),
+                DateTime.parse("2021-02-13"),
+              ),
+              false,
+            ),
+            4);
+      },
+    );
+    test(
+      "range: DateRange(2021-02-08, 2021-02-14), bandMode: (2021-02-14, 2021-02-20), isLineBreaked: false",
+      () {
+        expect(
+            bandLength(
+              DateRange(
+                DateTime.parse("2021-02-08"),
+                DateTime.parse("2021-02-14"),
+              ),
+              CalendarMenstruationBandModel(
+                DateTime.parse("2021-02-14"),
+                DateTime.parse("2021-02-20"),
+              ),
+              true,
+            ),
+            1);
       },
     );
   });

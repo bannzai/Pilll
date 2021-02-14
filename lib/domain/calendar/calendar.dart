@@ -176,7 +176,7 @@ class Calendar extends HookWidget {
           final length = bandLength(range, bandModel, isLineBreaked);
           if (bandModel.label == "") {
             print(
-                "length: ${length}, bandModel.begin: ${bandModel.begin}, bandModel.end: ${bandModel.end}, isLineBreaked: ${isLineBreaked}, range.begin: ${range.begin}, range.end: ${range.end}");
+                "length: $length, isLineBreaked: $isLineBreaked, bandModel.begin: ${bandModel.begin}, bandModel.end: ${bandModel.end},  range.begin: ${range.begin}, range.end: ${range.end}");
           }
           var tileWidth =
               (MediaQuery.of(context).size.width - horizontalPadding * 2) /
