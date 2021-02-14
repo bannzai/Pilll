@@ -66,7 +66,7 @@ class _SettingMenstruationPageState extends State<SettingMenstruationPage> {
           this.widget.title,
           style: TextStyle(color: TextColor.black),
         ),
-        backgroundColor: PilllColors.background,
+        backgroundColor: PilllColors.white,
       ),
       body: SafeArea(
         child: Container(

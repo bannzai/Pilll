@@ -54,8 +54,10 @@ class App extends StatelessWidget {
         FirebaseAnalyticsObserver(analytics: firebaseAnalytics),
       ],
       theme: ThemeData(
-        appBarTheme:
-            AppBarTheme(brightness: Brightness.light, centerTitle: true),
+        appBarTheme: AppBarTheme(
+            brightness: Brightness.light,
+            centerTitle: true,
+            color: PilllColors.white),
         primaryColor: PilllColors.primary,
         visualDensity: VisualDensity.adaptivePlatformDensity,
         accentColor: PilllColors.accent,
