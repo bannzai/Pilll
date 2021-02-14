@@ -11,7 +11,7 @@ part 'initial_setting.freezed.dart';
 abstract class InitialSettingModel implements _$InitialSettingModel {
   InitialSettingModel._();
   factory InitialSettingModel.initial({
-    @Default(2)
+    @Default(23)
         int fromMenstruation,
     @Default(4)
         int durationMenstruation,
@@ -27,7 +27,7 @@ abstract class InitialSettingModel implements _$InitialSettingModel {
   }) = _InitialSettingModel;
 
   Setting buildSetting() => Setting(
-        fromMenstruation: fromMenstruation,
+        pillNumberForFromMenstruation: fromMenstruation,
         durationMenstruation: durationMenstruation,
         pillSheetTypeRawPath: pillSheetType.rawPath,
         reminderTimes: reminderTimes,
