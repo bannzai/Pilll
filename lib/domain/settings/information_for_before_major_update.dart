@@ -36,6 +36,7 @@ class InformationForBeforeMigrate132 extends StatelessWidget {
           onPressed: () => Navigator.of(context).pop(),
         ),
       ),
+      backgroundColor: PilllColors.background,
       body: SingleChildScrollView(
         child: Center(
           child: Container(

@@ -33,7 +33,7 @@ class InitialSetting2Page extends HookWidget {
           "2/4",
           style: TextStyle(color: TextColor.black),
         ),
-        backgroundColor: PilllColors.background,
+        backgroundColor: PilllColors.white,
       ),
       body: SafeArea(
         child: Container(

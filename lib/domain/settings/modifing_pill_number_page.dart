@@ -34,7 +34,7 @@ class _ModifingPillNumberPageState extends State<ModifingPillNumberPage> {
           "ピル番号の変更",
           style: TextStyle(color: TextColor.black),
         ),
-        backgroundColor: PilllColors.background,
+        backgroundColor: PilllColors.white,
       ),
       body: SafeArea(
         child: Container(

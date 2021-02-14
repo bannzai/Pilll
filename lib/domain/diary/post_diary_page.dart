@@ -80,7 +80,7 @@ class PostDiaryPage extends HookWidget {
             }),
           ),
         ],
-        backgroundColor: PilllColors.background,
+        backgroundColor: PilllColors.white,
       ),
       body: SafeArea(
         child: Stack(
