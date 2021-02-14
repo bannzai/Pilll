@@ -237,9 +237,12 @@ class RecordPage extends HookWidget {
     if (pillSheet.todayPillNumber == pillSheet.lastTakenPillNumber) {
       return;
     }
-    store.take(takenDate);
-    _requestInAppReview();
-    _showReleaseNote(context);
+    store.take(takenDate).then((value) {
+      _requestInAppReview();
+      Future.delayed(Duration(seconds: 1)).then((_) {
+        _showReleaseNote(context);
+      });
+    });
   }
 
   void _cancelTake(PillSheetModel pillSheet, PillSheetStateStore store) {
@@ -347,13 +350,12 @@ class RecordPage extends HookWidget {
   _showReleaseNote(BuildContext context) async {
     final key = ReleaseNoteKey.version2_2_0;
     final storage = await SharedPreferences.getInstance();
-    if (storage.getBool(key) ?? false) {
-      return;
-    }
+    // if (storage.getBool(key) ?? false) {
+    //   return;
+    // }
     storage.setBool(key, true);
     showDialog(
         context: context,
-        barrierColor: Colors.white,
         builder: (context) {
           return ReleaseNote220();
         });
