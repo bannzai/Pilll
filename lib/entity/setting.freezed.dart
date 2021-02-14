@@ -187,7 +187,6 @@ class _$SettingTearOff {
 // ignore: unused_element
   _Setting call(
       {@required String pillSheetTypeRawPath,
-      @deprecated int fromMenstruation,
       @required int pillNumberForFromMenstruation,
       @required int durationMenstruation,
       @required List<ReminderTime> reminderTimes,
@@ -195,7 +194,6 @@ class _$SettingTearOff {
       bool isOnNotifyInNotTakenDuration = false}) {
     return _Setting(
       pillSheetTypeRawPath: pillSheetTypeRawPath,
-      fromMenstruation: fromMenstruation,
       pillNumberForFromMenstruation: pillNumberForFromMenstruation,
       durationMenstruation: durationMenstruation,
       reminderTimes: reminderTimes,
@@ -217,8 +215,6 @@ const $Setting = _$SettingTearOff();
 /// @nodoc
 mixin _$Setting {
   String get pillSheetTypeRawPath;
-  @deprecated
-  int get fromMenstruation;
   int get pillNumberForFromMenstruation;
   int get durationMenstruation;
   List<ReminderTime> get reminderTimes;
@@ -236,7 +232,6 @@ abstract class $SettingCopyWith<$Res> {
       _$SettingCopyWithImpl<$Res>;
   $Res call(
       {String pillSheetTypeRawPath,
-      @deprecated int fromMenstruation,
       int pillNumberForFromMenstruation,
       int durationMenstruation,
       List<ReminderTime> reminderTimes,
@@ -255,7 +250,6 @@ class _$SettingCopyWithImpl<$Res> implements $SettingCopyWith<$Res> {
   @override
   $Res call({
     Object pillSheetTypeRawPath = freezed,
-    Object fromMenstruation = freezed,
     Object pillNumberForFromMenstruation = freezed,
     Object durationMenstruation = freezed,
     Object reminderTimes = freezed,
@@ -266,9 +260,6 @@ class _$SettingCopyWithImpl<$Res> implements $SettingCopyWith<$Res> {
       pillSheetTypeRawPath: pillSheetTypeRawPath == freezed
           ? _value.pillSheetTypeRawPath
           : pillSheetTypeRawPath as String,
-      fromMenstruation: fromMenstruation == freezed
-          ? _value.fromMenstruation
-          : fromMenstruation as int,
       pillNumberForFromMenstruation: pillNumberForFromMenstruation == freezed
           ? _value.pillNumberForFromMenstruation
           : pillNumberForFromMenstruation as int,
@@ -294,7 +285,6 @@ abstract class _$SettingCopyWith<$Res> implements $SettingCopyWith<$Res> {
   @override
   $Res call(
       {String pillSheetTypeRawPath,
-      @deprecated int fromMenstruation,
       int pillNumberForFromMenstruation,
       int durationMenstruation,
       List<ReminderTime> reminderTimes,
@@ -314,7 +304,6 @@ class __$SettingCopyWithImpl<$Res> extends _$SettingCopyWithImpl<$Res>
   @override
   $Res call({
     Object pillSheetTypeRawPath = freezed,
-    Object fromMenstruation = freezed,
     Object pillNumberForFromMenstruation = freezed,
     Object durationMenstruation = freezed,
     Object reminderTimes = freezed,
@@ -325,9 +314,6 @@ class __$SettingCopyWithImpl<$Res> extends _$SettingCopyWithImpl<$Res>
       pillSheetTypeRawPath: pillSheetTypeRawPath == freezed
           ? _value.pillSheetTypeRawPath
           : pillSheetTypeRawPath as String,
-      fromMenstruation: fromMenstruation == freezed
-          ? _value.fromMenstruation
-          : fromMenstruation as int,
       pillNumberForFromMenstruation: pillNumberForFromMenstruation == freezed
           ? _value.pillNumberForFromMenstruation
           : pillNumberForFromMenstruation as int,
@@ -352,7 +338,6 @@ class __$SettingCopyWithImpl<$Res> extends _$SettingCopyWithImpl<$Res>
 class _$_Setting extends _Setting with DiagnosticableTreeMixin {
   _$_Setting(
       {@required this.pillSheetTypeRawPath,
-      @deprecated this.fromMenstruation,
       @required this.pillNumberForFromMenstruation,
       @required this.durationMenstruation,
       @required this.reminderTimes,
@@ -372,9 +357,6 @@ class _$_Setting extends _Setting with DiagnosticableTreeMixin {
   @override
   final String pillSheetTypeRawPath;
   @override
-  @deprecated
-  final int fromMenstruation;
-  @override
   final int pillNumberForFromMenstruation;
   @override
   final int durationMenstruation;
@@ -389,7 +371,7 @@ class _$_Setting extends _Setting with DiagnosticableTreeMixin {
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'Setting(pillSheetTypeRawPath: $pillSheetTypeRawPath, fromMenstruation: $fromMenstruation, pillNumberForFromMenstruation: $pillNumberForFromMenstruation, durationMenstruation: $durationMenstruation, reminderTimes: $reminderTimes, isOnReminder: $isOnReminder, isOnNotifyInNotTakenDuration: $isOnNotifyInNotTakenDuration)';
+    return 'Setting(pillSheetTypeRawPath: $pillSheetTypeRawPath, pillNumberForFromMenstruation: $pillNumberForFromMenstruation, durationMenstruation: $durationMenstruation, reminderTimes: $reminderTimes, isOnReminder: $isOnReminder, isOnNotifyInNotTakenDuration: $isOnNotifyInNotTakenDuration)';
   }
 
   @override
@@ -398,7 +380,6 @@ class _$_Setting extends _Setting with DiagnosticableTreeMixin {
     properties
       ..add(DiagnosticsProperty('type', 'Setting'))
       ..add(DiagnosticsProperty('pillSheetTypeRawPath', pillSheetTypeRawPath))
-      ..add(DiagnosticsProperty('fromMenstruation', fromMenstruation))
       ..add(DiagnosticsProperty(
           'pillNumberForFromMenstruation', pillNumberForFromMenstruation))
       ..add(DiagnosticsProperty('durationMenstruation', durationMenstruation))
@@ -415,9 +396,6 @@ class _$_Setting extends _Setting with DiagnosticableTreeMixin {
             (identical(other.pillSheetTypeRawPath, pillSheetTypeRawPath) ||
                 const DeepCollectionEquality().equals(
                     other.pillSheetTypeRawPath, pillSheetTypeRawPath)) &&
-            (identical(other.fromMenstruation, fromMenstruation) ||
-                const DeepCollectionEquality()
-                    .equals(other.fromMenstruation, fromMenstruation)) &&
             (identical(other.pillNumberForFromMenstruation,
                     pillNumberForFromMenstruation) ||
                 const DeepCollectionEquality().equals(
@@ -443,7 +421,6 @@ class _$_Setting extends _Setting with DiagnosticableTreeMixin {
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(pillSheetTypeRawPath) ^
-      const DeepCollectionEquality().hash(fromMenstruation) ^
       const DeepCollectionEquality().hash(pillNumberForFromMenstruation) ^
       const DeepCollectionEquality().hash(durationMenstruation) ^
       const DeepCollectionEquality().hash(reminderTimes) ^
@@ -464,7 +441,6 @@ abstract class _Setting extends Setting {
   _Setting._() : super._();
   factory _Setting(
       {@required String pillSheetTypeRawPath,
-      @deprecated int fromMenstruation,
       @required int pillNumberForFromMenstruation,
       @required int durationMenstruation,
       @required List<ReminderTime> reminderTimes,
@@ -475,9 +451,6 @@ abstract class _Setting extends Setting {
 
   @override
   String get pillSheetTypeRawPath;
-  @override
-  @deprecated
-  int get fromMenstruation;
   @override
   int get pillNumberForFromMenstruation;
   @override
