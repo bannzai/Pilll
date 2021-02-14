@@ -3,6 +3,7 @@ import 'package:Pilll/components/molecules/indicator.dart';
 import 'package:Pilll/components/organisms/pill/pill_sheet.dart';
 import 'package:Pilll/domain/initial_setting/migrate_info.dart';
 import 'package:Pilll/domain/record/record_taken_information.dart';
+import 'package:Pilll/domain/release_note/release_note_220.dart';
 import 'package:Pilll/entity/pill_sheet.dart';
 import 'package:Pilll/entity/pill_sheet_type.dart';
 import 'package:Pilll/entity/weekday.dart';
@@ -236,8 +237,12 @@ class RecordPage extends HookWidget {
     if (pillSheet.todayPillNumber == pillSheet.lastTakenPillNumber) {
       return;
     }
-    store.take(takenDate);
-    _requestInAppReview();
+    store.take(takenDate).then((value) {
+      _requestInAppReview();
+      Future.delayed(Duration(milliseconds: 500)).then((_) {
+        _showReleaseNote(context);
+      });
+    });
   }
 
   void _cancelTake(PillSheetModel pillSheet, PillSheetStateStore store) {
@@ -340,5 +345,19 @@ class RecordPage extends HookWidget {
         await InAppReview.instance.requestReview();
       }
     });
+  }
+
+  _showReleaseNote(BuildContext context) async {
+    final key = ReleaseNoteKey.version2_2_0;
+    final storage = await SharedPreferences.getInstance();
+    if (storage.getBool(key) ?? false) {
+      return;
+    }
+    storage.setBool(key, true);
+    showDialog(
+        context: context,
+        builder: (context) {
+          return ReleaseNote220();
+        });
   }
 }

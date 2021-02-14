@@ -56,10 +56,10 @@ class PillSheetStateStore extends StateNotifier<PillSheetState> {
     return _service.delete(state.entity).then((_) => _reset());
   }
 
-  void take(DateTime takenDate) {
+  Future<dynamic> take(DateTime takenDate) {
     showIndicator();
     final updated = state.entity.copyWith(lastTakenDate: takenDate);
-    _service.update(updated).then((value) {
+    return _service.update(updated).then((value) {
       hideIndicator();
       state = state.copyWith(entity: updated);
     });

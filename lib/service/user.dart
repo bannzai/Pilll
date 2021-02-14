@@ -5,6 +5,7 @@ import 'package:Pilll/database/database.dart';
 import 'package:Pilll/entity/package.dart';
 import 'package:Pilll/entity/user.dart';
 import 'package:Pilll/error_log.dart';
+import 'package:Pilll/util/shared_preference/keys.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart' as auth;
 import 'package:package_info/package_info.dart';
@@ -108,13 +109,12 @@ class UserService extends UserServiceInterface {
   }
 
   Future<void> saveStats() {
-    const beginingVersionKey = "beginingVersion";
     return SharedPreferences.getInstance().then((store) async {
-      String beginingVersion = store.getString(beginingVersionKey);
+      String beginingVersion = store.getString(StringKey.beginingVersionKey);
       if (beginingVersion == null) {
         final v =
             await PackageInfo.fromPlatform().then((value) => value.version);
-        store.setString(beginingVersionKey, beginingVersion);
+        await store.setString(StringKey.beginingVersionKey, v);
         return v;
       }
       return beginingVersion;
