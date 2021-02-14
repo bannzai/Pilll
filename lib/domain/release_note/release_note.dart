@@ -15,6 +15,7 @@ class ReleaseNote extends StatelessWidget {
         elevation: 0.0,
         backgroundColor: PilllColors.white,
       ),
+      backgroundColor: PilllColors.background,
       body: Center(
         child: Container(
           width: 272,

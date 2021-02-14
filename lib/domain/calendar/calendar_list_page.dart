@@ -53,7 +53,7 @@ class CalendarListPage extends HookWidget {
           icon: Icon(Icons.arrow_back, color: Colors.black),
           onPressed: () => Navigator.of(context).pop(),
         ),
-        backgroundColor: PilllColors.white,
+        backgroundColor: PilllColors.background,
       ),
       backgroundColor: PilllColors.white,
       body: SafeArea(
