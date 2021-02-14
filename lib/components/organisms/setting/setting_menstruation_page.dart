@@ -90,8 +90,7 @@ class _SettingMenstruationPageState extends State<SettingMenstruationPage> {
                       Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: <Widget>[
-                          Text(
-                              "${this.widget.model.pillSheetType.notTakenWord}期間に入って ",
+                          Text("ピル番号 ",
                               style: FontType.assisting
                                   .merge(TextColorStyle.main)),
                           GestureDetector(
