@@ -22,10 +22,15 @@ class HomePage extends StatefulWidget {
   _HomePageState createState() => _HomePageState();
 }
 
+enum HomePageTabType { record, calendar, setting }
+
 class _HomePageState extends State<HomePage>
     with SingleTickerProviderStateMixin, RouteAware {
   TabController _tabController;
   int _selectedIndex = 0;
+  HomePageTabType get _selectedTab {
+    return HomePageTabType.values[_selectedIndex];
+  }
 
   @override
   void initState() {
@@ -107,6 +112,13 @@ class _HomePageState extends State<HomePage>
         _screenTracking();
       }
     });
+  }
+
+  selectTab(HomePageTabType tab) {
+    if (_selectedTab == tab) {
+      return;
+    }
+    _tabController.animateTo(tab.index);
   }
 
   @override

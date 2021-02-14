@@ -2,6 +2,7 @@ import 'package:Pilll/components/atoms/buttons.dart';
 import 'package:Pilll/components/atoms/color.dart';
 import 'package:Pilll/components/atoms/font.dart';
 import 'package:Pilll/components/atoms/text_color.dart';
+import 'package:Pilll/domain/home/home_page.dart';
 import 'package:flutter/material.dart';
 
 class ReleaseNote220 extends StatelessWidget {
@@ -45,7 +46,12 @@ class ReleaseNote220 extends StatelessWidget {
                 child: Container(
                     width: 230,
                     child: PrimaryButton(
-                        onPressed: () => print("TODO"), text: "設定を見てみる")),
+                        onPressed: () {
+                          Navigator.of(context).pop();
+                          homeKey.currentState
+                              ?.selectTab(HomePageTabType.setting);
+                        },
+                        text: "設定を見てみる")),
               ),
             ],
           ),
