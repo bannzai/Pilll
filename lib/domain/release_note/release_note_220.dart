@@ -9,43 +9,46 @@ class ReleaseNote220 extends StatelessWidget {
   const ReleaseNote220({Key key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        leading: IconButton(
-          icon: Icon(Icons.arrow_back, color: Colors.black),
-          onPressed: () => Navigator.of(context).pop(),
-        ),
-        elevation: 0.0,
-        backgroundColor: PilllColors.white,
-      ),
-      body: Center(
+    return Material(
+      type: MaterialType.transparency,
+      child: Center(
         child: Container(
+          decoration: BoxDecoration(
+            color: PilllColors.white,
+            borderRadius: BorderRadius.circular(4),
+          ),
+          padding: EdgeInsets.only(left: 10, right: 10, bottom: 10, top: 10),
           width: 304,
           height: 302,
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
-            crossAxisAlignment: CrossAxisAlignment.start,
+            crossAxisAlignment: CrossAxisAlignment.center,
             children: [
               Text(
                 "新機能・機能改善のお知らせ✨",
-                style: FontType.sBigTitle.merge(TextColorStyle.main),
+                style: FontType.subTitle.merge(TextColorStyle.black),
               ),
               SizedBox(height: 32),
-              Text(
-                "28錠(すべて実薬)タイプを追加しました！",
-                style: FontType.assistingBold.merge(TextColorStyle.main),
-              ),
-              SizedBox(height: 20),
-              Text(
-                "ヤーズフレックスなど、28錠偽薬なしをお使いの方、ご活用ください🙌",
-                style: FontType.assistingBold.merge(TextColorStyle.main),
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  Text(
+                    "28錠(すべて実薬)タイプを追加しました！",
+                    style: FontType.assisting.merge(TextColorStyle.main),
+                  ),
+                  SizedBox(height: 20),
+                  Text(
+                    "ヤーズフレックスなど、28錠偽薬なしをお使いの方、ご活用ください🙌",
+                    style: FontType.assisting.merge(TextColorStyle.main),
+                  ),
+                ],
               ),
               SizedBox(height: 20),
               Align(
                 alignment: Alignment.center,
                 child: Container(
                     width: 230,
-                    child: PrimaryButton(
+                    child: SecondaryButton(
                         onPressed: () {
                           Navigator.of(context).pop();
                           homeKey.currentState
