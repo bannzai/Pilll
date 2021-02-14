@@ -98,7 +98,8 @@ class SettingStateStore extends StateNotifier<SettingState> {
 
   Future<void> modifyFromMenstruation(int fromMenstruation) {
     return _service
-        .update(state.entity.copyWith(fromMenstruation: fromMenstruation))
+        .update(state.entity
+            .copyWith(pillNumberForFromMenstruation: fromMenstruation))
         .then((entity) => state = state.copyWith(entity: entity));
   }
 
