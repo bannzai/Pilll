@@ -191,7 +191,7 @@ class _$SettingTearOff {
       @required int durationMenstruation,
       @required List<ReminderTime> reminderTimes,
       @required @JsonSerializable(explicitToJson: true) bool isOnReminder,
-      bool isOnNotifyInNotTakenDuration = false}) {
+      bool isOnNotifyInNotTakenDuration = true}) {
     return _Setting(
       pillSheetTypeRawPath: pillSheetTypeRawPath,
       pillNumberForFromMenstruation: pillNumberForFromMenstruation,
@@ -342,7 +342,7 @@ class _$_Setting extends _Setting with DiagnosticableTreeMixin {
       @required this.durationMenstruation,
       @required this.reminderTimes,
       @required @JsonSerializable(explicitToJson: true) this.isOnReminder,
-      this.isOnNotifyInNotTakenDuration = false})
+      this.isOnNotifyInNotTakenDuration = true})
       : assert(pillSheetTypeRawPath != null),
         assert(pillNumberForFromMenstruation != null),
         assert(durationMenstruation != null),
@@ -365,7 +365,7 @@ class _$_Setting extends _Setting with DiagnosticableTreeMixin {
   @override
   @JsonSerializable(explicitToJson: true)
   final bool isOnReminder;
-  @JsonKey(defaultValue: false)
+  @JsonKey(defaultValue: true)
   @override
   final bool isOnNotifyInNotTakenDuration;
 
