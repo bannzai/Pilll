@@ -239,7 +239,7 @@ class RecordPage extends HookWidget {
     }
     store.take(takenDate).then((value) {
       _requestInAppReview();
-      Future.delayed(Duration(seconds: 1)).then((_) {
+      Future.delayed(Duration(milliseconds: 500)).then((_) {
         _showReleaseNote(context);
       });
     });
