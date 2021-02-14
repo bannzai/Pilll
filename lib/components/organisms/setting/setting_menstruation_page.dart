@@ -9,8 +9,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
 abstract class SettingMenstruationPageConstants {
-  static final List<String> fromList =
-      List<String>.generate(8, (index) => index.toString());
   static final List<String> durationList =
       List<String>.generate(7, (index) => (index + 1).toString());
 }
@@ -32,6 +30,7 @@ class SettingMenstruationPage extends StatefulWidget {
   // NOTE: If done and skip is null, button is hidden
   final String doneText;
   final VoidCallback done;
+  final int pillSheetTotalCount;
   final SettingMenstruationPageModel model;
   final void Function(int from) fromMenstructionDidDecide;
   final void Function(int duration) durationMenstructionDidDecide;
@@ -41,6 +40,7 @@ class SettingMenstruationPage extends StatefulWidget {
     @required this.title,
     @required this.doneText,
     @required this.done,
+    @required this.pillSheetTotalCount,
     @required this.model,
     @required this.fromMenstructionDidDecide,
     @required this.durationMenstructionDidDecide,
@@ -177,7 +177,7 @@ class _SettingMenstruationPageState extends State<SettingMenstruationPage> {
 
   void _showFromModalSheet(BuildContext context) {
     int keepSelectedFromMenstruation =
-        this.widget.model.selectedFromMenstruation ?? 0;
+        this.widget.model.selectedFromMenstruation ?? 1;
     showModalBottomSheet(
       context: context,
       builder: (BuildContext context) {
@@ -208,14 +208,16 @@ class _SettingMenstruationPageState extends State<SettingMenstruationPage> {
                 },
                 child: CupertinoPicker(
                   itemExtent: 40,
-                  children: SettingMenstruationPageConstants.fromList
+                  children: List.generate(
+                          this.widget.pillSheetTotalCount, (index) => index + 1)
+                      .map((number) => number.toString())
                       .map(_pickerItem)
                       .toList(),
                   onSelectedItemChanged: (index) {
-                    keepSelectedFromMenstruation = index;
+                    keepSelectedFromMenstruation = index + 1;
                   },
                   scrollController: FixedExtentScrollController(
-                      initialItem: keepSelectedFromMenstruation),
+                      initialItem: keepSelectedFromMenstruation - 1),
                 ),
               ),
             ),
@@ -289,6 +291,7 @@ extension SettingMenstruationPageRoute on SettingMenstruationPage {
     @required String title,
     @required String doneText,
     @required VoidCallback done,
+    @required int pillSheetTotalCount,
     @required SettingMenstruationPageModel model,
     @required void Function(int from) fromMenstructionDidDecide,
     @required void Function(int duration) durationMenstructionDidDecide,
@@ -299,6 +302,7 @@ extension SettingMenstruationPageRoute on SettingMenstruationPage {
         title: title,
         doneText: doneText,
         done: done,
+        pillSheetTotalCount: pillSheetTotalCount,
         model: model,
         fromMenstructionDidDecide: fromMenstructionDidDecide,
         durationMenstructionDidDecide: durationMenstructionDidDecide,
