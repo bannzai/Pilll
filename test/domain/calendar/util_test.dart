@@ -13,7 +13,7 @@ void main() {
   });
   group("#menstruationDateRange", () {
     test(
-      "First page with pillSheetType: pillsheet_28_7, beginingDate: 2020-09-01, fromMenstruation: 2, durationMenstruation: 3",
+      "First page with pillSheetType: pillsheet_28_7, beginingDate: 2020-09-01, fromMenstruation: 23, durationMenstruation: 3",
       () {
         /*
         A = Start
@@ -33,7 +33,7 @@ void main() {
     */
         var pillSheetType = PillSheetType.pillsheet_28_7;
         var beginingDate = DateTime.parse("2020-09-01");
-        var fromMenstruation = 2;
+        var fromMenstruation = 23;
         var durationMenstruation = 3;
         var model = PillSheetModel(
           typeInfo: pillSheetType.typeInfo,
@@ -42,7 +42,7 @@ void main() {
         );
         var setting = Setting(
           pillSheetTypeRawPath: pillSheetType.rawPath,
-          fromMenstruation: fromMenstruation,
+          pillNumberForFromMenstruation: fromMenstruation,
           durationMenstruation: durationMenstruation,
           isOnReminder: false,
           reminderTimes: [ReminderTime(hour: 1, minute: 1)],
@@ -59,11 +59,11 @@ void main() {
       },
     );
     test(
-      "Second page with pillSheetType: pillsheet_28_7, beginingDate: 2020-09-01, fromMenstruation: 2, durationMenstruation: 3",
+      "Second page with pillSheetType: pillsheet_28_7, beginingDate: 2020-09-01, fromMenstruation: 23, durationMenstruation: 3",
       () {
         var pillSheetType = PillSheetType.pillsheet_28_7;
         var beginingDate = DateTime.parse("2020-09-01");
-        var fromMenstruation = 2;
+        var fromMenstruation = 23;
         var durationMenstruation = 3;
         var model = PillSheetModel(
           typeInfo: pillSheetType.typeInfo,
@@ -72,7 +72,7 @@ void main() {
         );
         var setting = Setting(
           pillSheetTypeRawPath: pillSheetType.rawPath,
-          fromMenstruation: fromMenstruation,
+          pillNumberForFromMenstruation: fromMenstruation,
           durationMenstruation: durationMenstruation,
           isOnReminder: false,
           reminderTimes: [ReminderTime(hour: 1, minute: 1)],
@@ -89,11 +89,11 @@ void main() {
       },
     );
     test(
-      "Third page with pillSheetType: pillsheet_28_7, beginingDate: 2020-09-01, fromMenstruation: 2, durationMenstruation: 3",
+      "Third page with pillSheetType: pillsheet_28_7, beginingDate: 2020-09-01, fromMenstruation: 23, durationMenstruation: 3",
       () {
         var pillSheetType = PillSheetType.pillsheet_28_7;
         var beginingDate = DateTime.parse("2020-09-01");
-        var fromMenstruation = 2;
+        var fromMenstruation = 23;
         var durationMenstruation = 3;
         var model = PillSheetModel(
           typeInfo: pillSheetType.typeInfo,
@@ -102,7 +102,7 @@ void main() {
         );
         var setting = Setting(
           pillSheetTypeRawPath: pillSheetType.rawPath,
-          fromMenstruation: fromMenstruation,
+          pillNumberForFromMenstruation: fromMenstruation,
           durationMenstruation: durationMenstruation,
           isOnReminder: false,
           reminderTimes: [ReminderTime(hour: 1, minute: 1)],
@@ -119,7 +119,7 @@ void main() {
       },
     );
     test(
-      "First page with pillSheetType: pillsheet_28_0(that means pill sheet is not exists not taken duration and totalCount == dosingPerod), beginingDate: 2020-09-01, fromMenstruation: 2, durationMenstruation: 3",
+      "First page with pillSheetType: pillsheet_28_0(that means pill sheet is not exists not taken duration and totalCount == dosingPerod), beginingDate: 2020-09-01, fromMenstruation: 23, durationMenstruation: 3",
       () {
         /*
         A = Start
@@ -139,7 +139,7 @@ void main() {
     */
         var pillSheetType = PillSheetType.pillsheet_28_0;
         var beginingDate = DateTime.parse("2020-09-01");
-        var fromMenstruation = 2;
+        var fromMenstruation = 23;
         var durationMenstruation = 3;
         var model = PillSheetModel(
           typeInfo: pillSheetType.typeInfo,
@@ -148,7 +148,7 @@ void main() {
         );
         var setting = Setting(
           pillSheetTypeRawPath: pillSheetType.rawPath,
-          fromMenstruation: fromMenstruation,
+          pillNumberForFromMenstruation: fromMenstruation,
           durationMenstruation: durationMenstruation,
           isOnReminder: false,
           reminderTimes: [ReminderTime(hour: 1, minute: 1)],
