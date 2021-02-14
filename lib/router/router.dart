@@ -15,13 +15,15 @@ class AppRouter {
           ),
       Routes.initialSetting: (BuildContext context) =>
           ProviderScope(child: InitialSetting1Page()),
-      Routes.main: (BuildContext context) => ProviderScope(child: HomePage()),
+      Routes.main: (BuildContext context) =>
+          ProviderScope(child: HomePage(key: homeKey)),
     };
   }
 
   static void endInitialSetting(BuildContext context) {
     SharedPreferences.getInstance().then((storage) {
       storage.setBool(BoolKey.didEndInitialSetting, true);
+      storage.setBool(ReleaseNoteKey.version2_2_0, true);
       requestNotificationPermissions().then((value) {
         listenNotificationEvents();
         Navigator.popUntil(context, (router) => router.isFirst);
