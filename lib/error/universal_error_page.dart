@@ -18,6 +18,7 @@ class UniversalErrorPage extends StatelessWidget {
       return child;
     }
     return Scaffold(
+      backgroundColor: PilllColors.background,
       body: Center(
         child: Container(
           width: 300,

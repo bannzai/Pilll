@@ -1,4 +1,5 @@
 import 'package:Pilll/components/atoms/buttons.dart';
+import 'package:Pilll/components/atoms/color.dart';
 import 'package:Pilll/components/atoms/font.dart';
 import 'package:Pilll/components/atoms/text_color.dart';
 import 'package:flutter/material.dart';
@@ -10,6 +11,7 @@ class MigrateInfo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: PilllColors.background,
       body: SingleChildScrollView(
         child: Center(
           child: Container(
