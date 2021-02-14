@@ -1,7 +1,7 @@
 import 'package:Pilll/domain/calendar/calculator.dart';
 import 'package:Pilll/domain/calendar/calendar_band_model.dart';
-import 'package:Pilll/domain/calendar/date_range.dart';
 import 'package:Pilll/components/molecules/indicator.dart';
+import 'package:Pilll/domain/calendar/utility.dart';
 import 'package:Pilll/domain/diary/post_diary_page.dart';
 import 'package:Pilll/domain/record/weekday_badge.dart';
 import 'package:Pilll/util/datetime/date_compare.dart';
@@ -173,12 +173,11 @@ class Calendar extends HookWidget {
           int start =
               calculator.offsetForStartPositionAtLine(line, bandModel.begin);
 
-          final length = range
-                  .union(DateRange(
-                      isLineBreaked ? bandModel.begin : range.begin,
-                      bandModel.end))
-                  .days +
-              1;
+          final length = bandLength(range, bandModel, isLineBreaked);
+          if (bandModel.label == "") {
+            print(
+                "length: $length, isLineBreaked: $isLineBreaked, range.begin: ${range.begin}, range.end: ${range.end}, bandModel.begin: ${bandModel.begin}, bandModel.end: ${bandModel.end} ");
+          }
           var tileWidth =
               (MediaQuery.of(context).size.width - horizontalPadding * 2) /
                   Weekday.values.length;

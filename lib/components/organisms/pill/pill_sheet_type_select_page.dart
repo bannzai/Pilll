@@ -40,7 +40,7 @@ class PillSheetTypeSelectPage extends StatelessWidget {
           title,
           style: TextStyle(color: TextColor.black),
         ),
-        backgroundColor: PilllColors.background,
+        backgroundColor: PilllColors.white,
       ),
       body: SafeArea(
         child: Column(

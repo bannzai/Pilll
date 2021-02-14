@@ -66,7 +66,7 @@ class _SettingMenstruationPageState extends State<SettingMenstruationPage> {
           this.widget.title,
           style: TextStyle(color: TextColor.black),
         ),
-        backgroundColor: PilllColors.background,
+        backgroundColor: PilllColors.white,
       ),
       body: SafeArea(
         child: Container(
@@ -97,7 +97,7 @@ class _SettingMenstruationPageState extends State<SettingMenstruationPage> {
                             onTap: () => _showFromModalSheet(context),
                             child: _from(),
                           ),
-                          Text(" 日後ぐらいから",
+                          Text(" 番目ぐらいから",
                               style: FontType.assisting
                                   .merge(TextColorStyle.main)),
                         ],
