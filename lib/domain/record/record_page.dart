@@ -350,9 +350,9 @@ class RecordPage extends HookWidget {
   _showReleaseNote(BuildContext context) async {
     final key = ReleaseNoteKey.version2_2_0;
     final storage = await SharedPreferences.getInstance();
-    // if (storage.getBool(key) ?? false) {
-    //   return;
-    // }
+    if (storage.getBool(key) ?? false) {
+      return;
+    }
     storage.setBool(key, true);
     showDialog(
         context: context,
