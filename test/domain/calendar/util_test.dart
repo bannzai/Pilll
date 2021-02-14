@@ -282,17 +282,17 @@ void main() {
       },
     );
     test(
-      "range: DateRange(2021-02-08, 2021-02-14), bandMode: (2021-02-14, 2021-02-20), isLineBreaked: false",
+      "range: DateRange(2021-02-14, 2021-02-20), bandMode: (2021-02-08, 2021-02-14), isLineBreaked: false",
       () {
         expect(
             bandLength(
               DateRange(
-                DateTime.parse("2021-02-08"),
-                DateTime.parse("2021-02-14"),
-              ),
-              CalendarMenstruationBandModel(
                 DateTime.parse("2021-02-14"),
                 DateTime.parse("2021-02-20"),
+              ),
+              CalendarMenstruationBandModel(
+                DateTime.parse("2021-02-08"),
+                DateTime.parse("2021-02-14"),
               ),
               true,
             ),
