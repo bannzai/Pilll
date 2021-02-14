@@ -114,7 +114,7 @@ class UserService extends UserServiceInterface {
       if (beginingVersion == null) {
         final v =
             await PackageInfo.fromPlatform().then((value) => value.version);
-        store.setString(StringKey.beginingVersionKey, beginingVersion);
+        await store.setString(StringKey.beginingVersionKey, v);
         return v;
       }
       return beginingVersion;
