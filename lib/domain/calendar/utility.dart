@@ -27,6 +27,15 @@ DateRange nextPillSheetDateRange(
   return DateRange(begin, end);
 }
 
+int bandLength(
+    DateRange range, CalendarBandModel bandModel, bool isLineBreaked) {
+  return range
+          .union(DateRange(
+              isLineBreaked ? bandModel.begin : range.begin, bandModel.end))
+          .days +
+      1;
+}
+
 List<CalendarBandModel> buildBandModels(
   PillSheetModel pillSheet,
   Setting setting,
