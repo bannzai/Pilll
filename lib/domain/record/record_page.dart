@@ -347,30 +347,17 @@ class RecordPage extends HookWidget {
   }
 
   _showReleaseNote(BuildContext context) async {
-    final storage = await SharedPreferences.getInstance();
-    final versionString = storage.getString(StringKey.beginingVersionKey);
-    if (versionString == null) {
-      return;
-    }
-    final beginingVersion = Version.parse(versionString);
-    final currentVersionString =
-        await PackageInfo.fromPlatform().then((value) => value.version);
-    final currentVersion = Version.parse(currentVersionString);
-    if (beginingVersion < currentVersion) {
-      return;
-    }
     final key = ReleaseNoteKey.version2_2_0;
-    SharedPreferences.getInstance().then((storage) {
-      if (storage.getBool(key) ?? false) {
-        return;
-      }
-      storage.setBool(key, true);
-      showDialog(
-          context: context,
-          barrierColor: Colors.white,
-          builder: (context) {
-            return ReleaseNote220();
-          });
-    });
+    final storage = await SharedPreferences.getInstance();
+    if (storage.getBool(key) ?? false) {
+      return;
+    }
+    storage.setBool(key, true);
+    showDialog(
+        context: context,
+        barrierColor: Colors.white,
+        builder: (context) {
+          return ReleaseNote220();
+        });
   }
 }
