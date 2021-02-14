@@ -21,7 +21,7 @@ class PillSheet extends StatelessWidget {
       decoration: BoxDecoration(
         color: this.selected
             ? PilllColors.secondary.withOpacity(0.08)
-            : PilllColors.background,
+            : PilllColors.white,
         border: Border.all(
             width: this.selected ? 2 : 1,
             color: this.selected ? PilllColors.secondary : PilllColors.border),
