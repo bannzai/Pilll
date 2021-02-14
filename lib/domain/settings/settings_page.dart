@@ -248,32 +248,31 @@ class SettingsPage extends HookWidget {
               Navigator.of(context).push(ReminderTimesPageRoute.route());
             },
           ),
-          if (!pillSheetState.entity.pillSheetType.isNotExistsNotTakenDuration)
-            SettingsListSwitchRowModel(
-              title: "${pillSheetState.entity.pillSheetType.notTakenWord}期間の通知",
-              subtitle:
-                  "通知オフの場合は、${pillSheetState.entity.pillSheetType.notTakenWord}期間の服用記録も自動で付けられます",
-              value: settingState.entity.isOnNotifyInNotTakenDuration,
-              onTap: () {
-                analytics.logEvent(
-                  name: "toggle_notify_not_taken_duration",
-                );
-                Scaffold.of(context).hideCurrentSnackBar();
-                settingStore
-                    .modifyIsOnNotifyInNotTakenDuration(
-                        !settingState.entity.isOnNotifyInNotTakenDuration)
-                    .then((state) {
-                  Scaffold.of(context).showSnackBar(
-                    SnackBar(
-                      duration: Duration(seconds: 1),
-                      content: Text(
-                        "${pillSheetState.entity.pillSheetType.notTakenWord}期間の通知を${state.entity.isOnNotifyInNotTakenDuration ? "ON" : "OFF"}にしました",
-                      ),
+          SettingsListSwitchRowModel(
+            title: "${pillSheetState.entity.pillSheetType.notTakenWord}期間の通知",
+            subtitle:
+                "通知オフの場合は、${pillSheetState.entity.pillSheetType.notTakenWord}期間の服用記録も自動で付けられます",
+            value: settingState.entity.isOnNotifyInNotTakenDuration,
+            onTap: () {
+              analytics.logEvent(
+                name: "toggle_notify_not_taken_duration",
+              );
+              Scaffold.of(context).hideCurrentSnackBar();
+              settingStore
+                  .modifyIsOnNotifyInNotTakenDuration(
+                      !settingState.entity.isOnNotifyInNotTakenDuration)
+                  .then((state) {
+                Scaffold.of(context).showSnackBar(
+                  SnackBar(
+                    duration: Duration(seconds: 1),
+                    content: Text(
+                      "${pillSheetState.entity.pillSheetType.notTakenWord}期間の通知を${state.entity.isOnNotifyInNotTakenDuration ? "ON" : "OFF"}にしました",
                     ),
-                  );
-                });
-              },
-            ),
+                  ),
+                );
+              });
+            },
+          ),
         ];
       case SettingSection.menstruation:
         return [
@@ -287,10 +286,12 @@ class SettingsPage extends HookWidget {
                   done: null,
                   doneText: null,
                   title: "生理について",
+                  pillSheetTotalCount:
+                      settingState.entity.pillSheetType.totalCount,
                   model: SettingMenstruationPageModel(
                     pillSheetType: pillSheetState.entity.pillSheetType,
                     selectedFromMenstruation:
-                        settingState.entity.fromMenstruation,
+                        settingState.entity.pillNumberForFromMenstruation,
                     selectedDurationMenstruation:
                         settingState.entity.durationMenstruation,
                   ),

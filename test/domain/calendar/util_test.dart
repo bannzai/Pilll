@@ -13,7 +13,7 @@ void main() {
   });
   group("#menstruationDateRange", () {
     test(
-      "First page with pillSheetType: pillsheet_28_7, beginingDate: 2020-09-01, fromMenstruation: 2, durationMenstruation: 3",
+      "First page with pillSheetType: pillsheet_28_7, beginingDate: 2020-09-01, fromMenstruation: 23, durationMenstruation: 3",
       () {
         /*
         A = Start
@@ -33,7 +33,7 @@ void main() {
     */
         var pillSheetType = PillSheetType.pillsheet_28_7;
         var beginingDate = DateTime.parse("2020-09-01");
-        var fromMenstruation = 2;
+        var fromMenstruation = 23;
         var durationMenstruation = 3;
         var model = PillSheetModel(
           typeInfo: pillSheetType.typeInfo,
@@ -42,7 +42,7 @@ void main() {
         );
         var setting = Setting(
           pillSheetTypeRawPath: pillSheetType.rawPath,
-          fromMenstruation: fromMenstruation,
+          pillNumberForFromMenstruation: fromMenstruation,
           durationMenstruation: durationMenstruation,
           isOnReminder: false,
           reminderTimes: [ReminderTime(hour: 1, minute: 1)],
@@ -59,11 +59,11 @@ void main() {
       },
     );
     test(
-      "Second page with pillSheetType: pillsheet_28_7, beginingDate: 2020-09-01, fromMenstruation: 2, durationMenstruation: 3",
+      "Second page with pillSheetType: pillsheet_28_7, beginingDate: 2020-09-01, fromMenstruation: 23, durationMenstruation: 3",
       () {
         var pillSheetType = PillSheetType.pillsheet_28_7;
         var beginingDate = DateTime.parse("2020-09-01");
-        var fromMenstruation = 2;
+        var fromMenstruation = 23;
         var durationMenstruation = 3;
         var model = PillSheetModel(
           typeInfo: pillSheetType.typeInfo,
@@ -72,7 +72,7 @@ void main() {
         );
         var setting = Setting(
           pillSheetTypeRawPath: pillSheetType.rawPath,
-          fromMenstruation: fromMenstruation,
+          pillNumberForFromMenstruation: fromMenstruation,
           durationMenstruation: durationMenstruation,
           isOnReminder: false,
           reminderTimes: [ReminderTime(hour: 1, minute: 1)],
@@ -89,11 +89,11 @@ void main() {
       },
     );
     test(
-      "Third page with pillSheetType: pillsheet_28_7, beginingDate: 2020-09-01, fromMenstruation: 2, durationMenstruation: 3",
+      "Third page with pillSheetType: pillsheet_28_7, beginingDate: 2020-09-01, fromMenstruation: 23, durationMenstruation: 3",
       () {
         var pillSheetType = PillSheetType.pillsheet_28_7;
         var beginingDate = DateTime.parse("2020-09-01");
-        var fromMenstruation = 2;
+        var fromMenstruation = 23;
         var durationMenstruation = 3;
         var model = PillSheetModel(
           typeInfo: pillSheetType.typeInfo,
@@ -102,7 +102,7 @@ void main() {
         );
         var setting = Setting(
           pillSheetTypeRawPath: pillSheetType.rawPath,
-          fromMenstruation: fromMenstruation,
+          pillNumberForFromMenstruation: fromMenstruation,
           durationMenstruation: durationMenstruation,
           isOnReminder: false,
           reminderTimes: [ReminderTime(hour: 1, minute: 1)],
@@ -190,6 +190,42 @@ void main() {
           DateRange(
             DateTime.parse("2020-11-24"),
             DateTime.parse("2020-11-30"),
+          ),
+        );
+      },
+    );
+    test(
+      "First page with pillSheetType: pillsheet_28_0(that means pill sheet is not exists not taken duration and totalCount == dosingPerod), beginingDate: 2020-09-01",
+      () {
+        /*
+        A = Current Pill Sheett Start
+        B = Next Pill Sheet Start
+        C = End of Next Pill Sheet Band
+  30   31   1   2   3   4   5  
+            A==>
+   6    7   8   9  10  11  12  
+
+  13   14  15  16  17  18  19  
+
+  20   21  22  23  24  25  26  
+       
+  27   28  29  30   1   2   3
+           B==>
+   4    5   6   7   8   9  10
+        C  
+    */
+        var pillSheetType = PillSheetType.pillsheet_28_0;
+        var beginingDate = DateTime.parse("2020-09-01");
+        var model = PillSheetModel(
+          typeInfo: pillSheetType.typeInfo,
+          beginingDate: beginingDate,
+          lastTakenDate: null,
+        );
+        expect(
+          nextPillSheetDateRange(model, 0),
+          DateRange(
+            DateTime.parse("2020-09-29"),
+            DateTime.parse("2020-10-05"),
           ),
         );
       },
