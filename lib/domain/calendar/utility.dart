@@ -35,13 +35,10 @@ List<CalendarBandModel> buildBandModels(
   if (pillSheet == null) {
     return [];
   }
-  List<CalendarBandModel> bandModels = [];
-  final menstruation = menstruationDateRange(pillSheet, setting, 0);
-  if (menstruation != null) {
-    bandModels.add(menstruation
-        .map((range) => CalendarMenstruationBandModel(range.begin, range.end)));
-  }
-  bandModels.add(nextPillSheetDateRange(pillSheet, 0)
-      .map((range) => CalendarNextPillSheetBandModel(range.begin, range.end)));
-  return bandModels;
+  return [
+    menstruationDateRange(pillSheet, setting, page)
+        .map((range) => CalendarMenstruationBandModel(range.begin, range.end)),
+    nextPillSheetDateRange(pillSheet, page)
+        .map((range) => CalendarNextPillSheetBandModel(range.begin, range.end))
+  ];
 }
