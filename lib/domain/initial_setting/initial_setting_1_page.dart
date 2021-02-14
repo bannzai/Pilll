@@ -1,6 +1,7 @@
 import 'package:Pilll/domain/initial_setting/initial_setting_2_page.dart';
 import 'package:Pilll/components/organisms/pill/pill_sheet_type_select_page.dart';
-import 'package:Pilll/domain/initial_setting/release_note.dart';
+import 'package:Pilll/domain/release_note/release_note.dart';
+import 'package:Pilll/util/shared_preference/keys.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:Pilll/store/initial_setting.dart';
@@ -30,7 +31,7 @@ class InitialSetting1Page extends HookWidget {
   }
 
   void _showReleaseNoteModal(BuildContext context) {
-    final key = "release_notes_shown_renewal";
+    final key = ReleaseNoteKey.renewal;
     SharedPreferences.getInstance().then((storage) {
       if (storage.getBool(key) ?? false) {
         return;
