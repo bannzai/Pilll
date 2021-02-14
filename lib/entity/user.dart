@@ -33,6 +33,19 @@ abstract class UserPrivate implements _$UserPrivate {
       _$UserPrivateFromJson(json);
 }
 
+extension UserStatsKeys on String {
+  static final beginingVersion = "beginingVersion";
+}
+
+@freezed
+abstract class UserStats implements _$UserPrivate {
+  UserStats._();
+  factory UserStats({String beginingVersion}) = _UserStats;
+
+  factory UserStats.fromJson(Map<String, dynamic> json) =>
+      _$UserStatsFromJson(json);
+}
+
 extension UserFirestoreFieldKeys on String {
   static final anonymouseUserID = "anonymouseUserID";
   static final settings = "settings";
@@ -49,6 +62,7 @@ abstract class User implements _$User {
     @required String anonymouseUserID,
     @JsonKey(name: "settings") Setting setting,
     @Default(false) bool migratedFlutter,
+    @JsonKey(name: "stats") UserStats stats;
   }) = _User;
 
   factory User.fromJson(Map<String, dynamic> json) => _$UserFromJson(json);
