@@ -18,7 +18,7 @@ import '../../helper/mock.dart';
 
 void main() {
   Setting _anySetting() => Setting(
-        fromMenstruation: 1,
+        pillNumberForFromMenstruation: 22,
         durationMenstruation: 2,
         isOnReminder: false,
         pillSheetTypeRawPath: PillSheetType.pillsheet_21.rawPath,
