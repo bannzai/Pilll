@@ -28,7 +28,7 @@ void main() {
 
       final service = MockSettingService();
       final entity = Setting(
-        fromMenstruation: 1,
+        pillNumberForFromMenstruation: 22,
         durationMenstruation: 2,
         isOnReminder: false,
         pillSheetTypeRawPath: PillSheetType.pillsheet_21.rawPath,
@@ -66,7 +66,7 @@ void main() {
 
       final service = MockSettingService();
       final entity = Setting(
-        fromMenstruation: 1,
+        pillNumberForFromMenstruation: 22,
         durationMenstruation: 2,
         isOnReminder: false,
         pillSheetTypeRawPath: PillSheetType.pillsheet_21.rawPath,
