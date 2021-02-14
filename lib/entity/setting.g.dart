@@ -30,7 +30,7 @@ _$_Setting _$_$_SettingFromJson(Map<String, dynamic> json) {
         ?.toList(),
     isOnReminder: json['isOnReminder'] as bool,
     isOnNotifyInNotTakenDuration:
-        json['isOnNotifyInNotTakenDuration'] as bool ?? false,
+        json['isOnNotifyInNotTakenDuration'] as bool ?? true,
   );
 }
 
