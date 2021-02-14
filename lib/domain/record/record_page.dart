@@ -3,6 +3,7 @@ import 'package:Pilll/components/molecules/indicator.dart';
 import 'package:Pilll/components/organisms/pill/pill_sheet.dart';
 import 'package:Pilll/domain/initial_setting/migrate_info.dart';
 import 'package:Pilll/domain/record/record_taken_information.dart';
+import 'package:Pilll/domain/release_note/release_note_220.dart';
 import 'package:Pilll/entity/pill_sheet.dart';
 import 'package:Pilll/entity/pill_sheet_type.dart';
 import 'package:Pilll/entity/weekday.dart';
@@ -24,7 +25,9 @@ import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:hooks_riverpod/all.dart';
 import 'package:in_app_review/in_app_review.dart';
+import 'package:package_info/package_info.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:version/version.dart';
 
 bool isAlreadyShowModal = false;
 
@@ -238,6 +241,7 @@ class RecordPage extends HookWidget {
     }
     store.take(takenDate);
     _requestInAppReview();
+    _showReleaseNote(context);
   }
 
   void _cancelTake(PillSheetModel pillSheet, PillSheetStateStore store) {
@@ -339,6 +343,34 @@ class RecordPage extends HookWidget {
       if (await InAppReview.instance.isAvailable()) {
         await InAppReview.instance.requestReview();
       }
+    });
+  }
+
+  _showReleaseNote(BuildContext context) async {
+    final storage = await SharedPreferences.getInstance();
+    final versionString = storage.getString(StringKey.beginingVersionKey);
+    if (versionString == null) {
+      return;
+    }
+    final beginingVersion = Version.parse(versionString);
+    final currentVersionString =
+        await PackageInfo.fromPlatform().then((value) => value.version);
+    final currentVersion = Version.parse(currentVersionString);
+    if (beginingVersion >= currentVersion) {
+      return;
+    }
+    final key = ReleaseNoteKey.version2_2_0;
+    SharedPreferences.getInstance().then((storage) {
+      if (storage.getBool(key) ?? false) {
+        return;
+      }
+      storage.setBool(key, true);
+      showDialog(
+          context: context,
+          barrierColor: Colors.white,
+          builder: (context) {
+            return ReleaseNote220();
+          });
     });
   }
 }
