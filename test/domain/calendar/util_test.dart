@@ -118,49 +118,6 @@ void main() {
         );
       },
     );
-    test(
-      "First page with pillSheetType: pillsheet_28_0(that means pill sheet is not exists not taken duration and totalCount == dosingPerod), beginingDate: 2020-09-01, fromMenstruation: 23, durationMenstruation: 3",
-      () {
-        /*
-        A = Start
-        B = A with dosingPeriod
-        C = B with fromMenstruation
-        D = C with durationMenstruation
-  30   31   1   2   3   4   5  
-            A==>
-   6    7   8   9  10  11  12  
-
-  13   14  15  16  17  18  19  
-
-  20   21  22  23  24  25  26  
-       B       C,D
-  27   28  29  30
-       
-    */
-        var pillSheetType = PillSheetType.pillsheet_28_0;
-        var beginingDate = DateTime.parse("2020-09-01");
-        var fromMenstruation = 23;
-        var durationMenstruation = 3;
-        var model = PillSheetModel(
-          typeInfo: pillSheetType.typeInfo,
-          beginingDate: beginingDate,
-          lastTakenDate: null,
-        );
-        var setting = Setting(
-          pillSheetTypeRawPath: pillSheetType.rawPath,
-          pillNumberForFromMenstruation: fromMenstruation,
-          durationMenstruation: durationMenstruation,
-          isOnReminder: false,
-          reminderTimes: [ReminderTime(hour: 1, minute: 1)],
-        );
-        assert(pillSheetType.dosingPeriod == 28,
-            "menstruationDateRange adding value with dosingPeriod when it will create DateRange. pillsheet_28_0 type has 28 dosingPeriod");
-        expect(
-          menstruationDateRange(model, setting, 0),
-          null,
-        );
-      },
-    );
   });
   group("#nextPillSheetDateRange", () {
     test(
