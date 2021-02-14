@@ -97,7 +97,7 @@ class _SettingMenstruationPageState extends State<SettingMenstruationPage> {
                             onTap: () => _showFromModalSheet(context),
                             child: _from(),
                           ),
-                          Text(" 日後ぐらいから",
+                          Text(" 番目ぐらいから",
                               style: FontType.assisting
                                   .merge(TextColorStyle.main)),
                         ],
