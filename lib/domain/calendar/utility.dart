@@ -30,8 +30,12 @@ DateRange nextPillSheetDateRange(
 int bandLength(
     DateRange range, CalendarBandModel bandModel, bool isLineBreaked) {
   return range
-          .union(DateRange(
-              isLineBreaked ? bandModel.begin : range.begin, bandModel.end))
+          .union(
+            DateRange(
+              isLineBreaked ? range.begin : bandModel.begin,
+              bandModel.end,
+            ),
+          )
           .days +
       1;
 }
