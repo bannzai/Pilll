@@ -290,7 +290,7 @@ class SettingsPage extends HookWidget {
                   model: SettingMenstruationPageModel(
                     pillSheetType: pillSheetState.entity.pillSheetType,
                     selectedFromMenstruation:
-                        settingState.entity.fromMenstruation,
+                        settingState.entity.pillNumberForFromMenstruation,
                     selectedDurationMenstruation:
                         settingState.entity.durationMenstruation,
                   ),
