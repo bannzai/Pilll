@@ -55,7 +55,7 @@ class CalendarListPage extends HookWidget {
         ),
         backgroundColor: PilllColors.white,
       ),
-      backgroundColor: PilllColors.background,
+      backgroundColor: PilllColors.white,
       body: SafeArea(
         child: ListView(
           controller: scrollController,
