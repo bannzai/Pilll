@@ -12,7 +12,7 @@ inquiry() {
   PackageInfo.fromPlatform().then((value) => debugInfo(", ")).then((info) {
     launch(
         Uri.encodeFull(
-            "https://docs.google.com/forms/d/e/1FAIpQLSddEpE641jIKEL9cxgiKaRytmBtsP7PXnDdXonEyE-n62JMWQ/viewform?usp=pp_url&entry.2066946565=$info"),
+            "https://form.run/@pilll-reminder-app-1613749422?_field_14=$info"),
         forceSafariVC: true);
   });
 }
