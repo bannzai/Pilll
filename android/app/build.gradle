@@ -75,7 +75,7 @@ android {
     buildTypes {
         release {
             ndk {
-              debugSymbolLevel = SYMBOL_TABLE
+              debugSymbolLevel 'SYMBOL_TABLE'
             }
             signingConfig signingConfigs.release
         }
