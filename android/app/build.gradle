@@ -80,6 +80,7 @@ android {
             signingConfig signingConfigs.release
         }
     }
+    ndkVersion '22.0.7026061'
 }
 
 flutter {
