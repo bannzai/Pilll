@@ -60,12 +60,6 @@ android {
             storePassword keystoreProperties['storePassword']
         }
     }
-    buildTypes {
-        release {
-            signingConfig signingConfigs.release
-        }
-    }
-
     flavorDimensions "flavor-type"
 
     productFlavors {
@@ -76,6 +70,11 @@ android {
         }
         production {
             dimension "flavor-type"
+        }
+    }
+    buildTypes {
+        release {
+            signingConfig signingConfigs.release
         }
     }
 }
