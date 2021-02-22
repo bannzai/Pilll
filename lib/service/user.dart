@@ -121,6 +121,7 @@ class UserService extends UserServiceInterface {
     }).then((version) {
       return _database.userReference().set({
         "stats": {
+          "lastLoginAt": DateTime.now(),
           "beginingVersion": version,
         }
       }, SetOptions(merge: true));
