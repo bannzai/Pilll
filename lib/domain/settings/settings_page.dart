@@ -291,7 +291,6 @@ class SettingsPage extends HookWidget {
                   pillSheetTotalCount:
                       settingState.entity.pillSheetType.totalCount,
                   model: SettingMenstruationPageModel(
-                    pillSheetType: pillSheetState.entity.pillSheetType,
                     selectedFromMenstruation:
                         settingState.entity.pillNumberForFromMenstruation,
                     selectedDurationMenstruation:
