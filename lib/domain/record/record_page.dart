@@ -1,3 +1,5 @@
+import 'dart:io' show Platform;
+
 import 'package:Pilll/analytics.dart';
 import 'package:Pilll/components/molecules/indicator.dart';
 import 'package:Pilll/components/organisms/pill/pill_sheet.dart';
@@ -102,6 +104,9 @@ class RecordPage extends HookWidget {
   }
 
   _showMigrateInfo(BuildContext context) {
+    if (!Platform.isIOS) {
+      return;
+    }
     final key = "migrate_from_132_is_shown_9";
     SharedPreferences.getInstance().then((storage) {
       if (storage.getBool(key) ?? false) {
