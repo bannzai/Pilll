@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:Pilll/domain/initial_setting/initial_setting_2_page.dart';
 import 'package:Pilll/components/organisms/pill/pill_sheet_type_select_page.dart';
 import 'package:Pilll/domain/release_note/release_note.dart';
@@ -31,6 +33,9 @@ class InitialSetting1Page extends HookWidget {
   }
 
   void _showReleaseNoteModal(BuildContext context) {
+    if (!Platform.isIOS) {
+      return;
+    }
     final key = ReleaseNoteKey.renewal;
     SharedPreferences.getInstance().then((storage) {
       if (storage.getBool(key) ?? false) {
