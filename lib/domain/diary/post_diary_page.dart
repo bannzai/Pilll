@@ -149,30 +149,6 @@ class PostDiaryPage extends HookWidget {
                       topLeft: Radius.circular(8),
                       bottomLeft: Radius.circular(8)),
                   color: state.hasPhysicalConditionStatusFor(
-                          PhysicalConditionStatus.fine)
-                      ? PilllColors.thinSecondary
-                      : Colors.transparent,
-                ),
-                child: IconButton(
-                    icon: SvgPicture.asset("images/laugh.svg",
-                        color: state.hasPhysicalConditionStatusFor(
-                                PhysicalConditionStatus.fine)
-                            ? PilllColors.secondary
-                            : TextColor.darkGray),
-                    onPressed: () {
-                      store.switchingPhysicalCondition(
-                          PhysicalConditionStatus.fine);
-                    }),
-              ),
-              Container(
-                  height: 48,
-                  child: VerticalDivider(width: 1, color: PilllColors.divider)),
-              Container(
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.only(
-                      topRight: Radius.circular(8),
-                      bottomRight: Radius.circular(8)),
-                  color: state.hasPhysicalConditionStatusFor(
                           PhysicalConditionStatus.bad)
                       ? PilllColors.thinSecondary
                       : Colors.transparent,
@@ -186,6 +162,30 @@ class PostDiaryPage extends HookWidget {
                     onPressed: () {
                       store.switchingPhysicalCondition(
                           PhysicalConditionStatus.bad);
+                    }),
+              ),
+              Container(
+                  height: 48,
+                  child: VerticalDivider(width: 1, color: PilllColors.divider)),
+              Container(
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.only(
+                      topRight: Radius.circular(8),
+                      bottomRight: Radius.circular(8)),
+                  color: state.hasPhysicalConditionStatusFor(
+                          PhysicalConditionStatus.fine)
+                      ? PilllColors.thinSecondary
+                      : Colors.transparent,
+                ),
+                child: IconButton(
+                    icon: SvgPicture.asset("images/laugh.svg",
+                        color: state.hasPhysicalConditionStatusFor(
+                                PhysicalConditionStatus.fine)
+                            ? PilllColors.secondary
+                            : TextColor.darkGray),
+                    onPressed: () {
+                      store.switchingPhysicalCondition(
+                          PhysicalConditionStatus.fine);
                     }),
               ),
             ],
