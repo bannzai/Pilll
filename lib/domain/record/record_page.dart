@@ -157,11 +157,11 @@ class RecordPage extends HookWidget {
               ),
             ),
           SizedBox(height: 67),
-          if (state.isInvalid)
+          if (state.latestIsInvalid)
             Align(
                 child:
                     _empty(context, store, settingState.entity.pillSheetType)),
-          if (!state.isInvalid) ...[
+          if (!state.latestIsInvalid) ...[
             Align(child: _pillSheet(context, currentPillSheet, store)),
             SizedBox(height: 40),
             if (currentPillSheet.allTaken)
@@ -176,7 +176,7 @@ class RecordPage extends HookWidget {
   }
 
   String _notificationString(PillSheetState state) {
-    if (state.isInvalid) {
+    if (state.latestIsInvalid) {
       return "";
     }
     final pillSheet = state.latestPillSheet;

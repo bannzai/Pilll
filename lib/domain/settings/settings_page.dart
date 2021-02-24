@@ -160,7 +160,7 @@ class SettingsPage extends HookWidget {
                     title: "種類",
                     backButtonIsHidden: false,
                     selected: (type) {
-                      if (!pillSheetState.isInvalid)
+                      if (!pillSheetState.latestIsInvalid)
                         transactionModifier.modifyPillSheetType(type);
                       else
                         settingStore.modifyType(type);
@@ -174,7 +174,7 @@ class SettingsPage extends HookWidget {
               },
             );
           }(),
-          if (!pillSheetState.isInvalid) ...[
+          if (!pillSheetState.latestIsInvalid) ...[
             SettingListTitleRowModel(
                 title: "今日飲むピル番号の変更",
                 onTap: () {
@@ -248,7 +248,7 @@ class SettingsPage extends HookWidget {
               Navigator.of(context).push(ReminderTimesPageRoute.route());
             },
           ),
-          if (!pillSheetState.isInvalid &&
+          if (!pillSheetState.latestIsInvalid &&
               !pillSheetState.latestPillSheet.pillSheetType.isNotExistsNotTakenDuration)
             SettingsListSwitchRowModel(
               title: "${pillSheetState.latestPillSheet.pillSheetType.notTakenWord}期間の通知",
