@@ -14,4 +14,13 @@ abstract class PillSheetState implements _$PillSheetState {
       latestPillSheet == null ||
       latestPillSheet.isDeleted ||
       latestPillSheet.isEnded;
+
+  PillSheetState copyWithLatestPillSheet(PillSheetModel entity) {
+    if (this.entities.isEmpty) {
+      return copyWith(entities: [entity]);
+    }
+    var entities = this.entities;
+    entities[0] = entity;
+    return copyWith(entities: entities);
+  }
 }
