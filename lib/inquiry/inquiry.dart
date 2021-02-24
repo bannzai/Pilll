@@ -21,7 +21,7 @@ Future<String> debugInfo(String separator) async {
   String userID = (await auth()).uid;
   DatabaseConnection databaseConnection = DatabaseConnection(userID);
   PillSheetModel pillSheet =
-      await PillSheetService(databaseConnection).fetchLatests();
+      await PillSheetService(databaseConnection).fetchLatest();
   Setting setting = await SettingService(databaseConnection).fetch();
   final package = await PackageInfo.fromPlatform();
   final appName = package.appName;

@@ -5,11 +5,12 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:riverpod/all.dart';
 
 abstract class PillSheetServiceInterface {
-  Future<List<PillSheetModel>> fetchLatests(int limit);
+  Future<PillSheetModel> fetchLatest();
+  Future<List<PillSheetModel>> fetchList(int limit);
   Future<PillSheetModel> register(PillSheetModel model);
   Future<void> delete(PillSheetModel pillSheet);
   Future<PillSheetModel> update(PillSheetModel pillSheet);
-  Stream<List<PillSheetModel>> subscribeForLatestPillSheet();
+  Stream<PillSheetModel> subscribeForLatestPillSheet();
 }
 
 final pillSheetServiceProvider = Provider<PillSheetServiceInterface>(
@@ -40,10 +41,17 @@ class PillSheetService extends PillSheetServiceInterface {
 
   PillSheetService(this._database);
   @override
-  Future<List<PillSheetModel>> fetchLatests(int limit) {
+  Future<List<PillSheetModel>> fetchList(int limit) {
     return _queryOfFetchLastPillSheet(limit)
         .get()
         .then((event) => event.docs.map((doc) => _mapPillSheet(doc)).toList());
+  }
+
+  @override
+  Future<PillSheetModel> fetchLatest() {
+    return _queryOfFetchLastPillSheet(1)
+        .get()
+        .then((event) => _mapPillSheet(event.docs.last));
   }
 
   @override
@@ -76,10 +84,10 @@ class PillSheetService extends PillSheetServiceInterface {
         .then((_) => pillSheet);
   }
 
-  Stream<List<PillSheetModel>> subscribeForLatestPillSheet() {
+  Stream<PillSheetModel> subscribeForLatestPillSheet() {
     return _queryOfFetchLastPillSheet(1)
         .snapshots()
-        .map((event) => event.docs.map((doc) => _mapPillSheet(doc)).toList());
+        .map((event) => _mapPillSheet(event.docs.last));
   }
 }
 

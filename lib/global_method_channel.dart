@@ -24,7 +24,7 @@ definedChannel() {
 Future<void> recordPill() async {
   final authInfo = await auth();
   final service = PillSheetService(DatabaseConnection(authInfo.uid));
-  final entity = await service.fetchLatests();
+  final entity = await service.fetchLatest();
   await service.update(entity.copyWith(lastTakenDate: now()));
 }
 
