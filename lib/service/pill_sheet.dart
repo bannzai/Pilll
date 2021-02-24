@@ -18,7 +18,7 @@ final pillSheetServiceProvider = Provider<PillSheetServiceInterface>(
 class PillSheetService extends PillSheetServiceInterface {
   final DatabaseConnection _database;
 
-  PillSheetModel _filterForLatestPillSheet(QuerySnapshot snapshot) {
+  PillSheetModel _mapPillSheet(QuerySnapshot snapshot) {
     if (snapshot.docs.isEmpty) return null;
     if (!snapshot.docs.last.exists) return null;
     var document = snapshot.docs.last;
@@ -30,19 +30,19 @@ class PillSheetService extends PillSheetServiceInterface {
     return pillSheetModel;
   }
 
-  Query _queryOfFetchLastPillSheet() {
+  Query _queryOfFetchLastPillSheet(int limit) {
     return _database
         .pillSheetsReference()
         .orderBy(PillSheetFirestoreKey.createdAt)
-        .limitToLast(1);
+        .limitToLast(limit);
   }
 
   PillSheetService(this._database);
   @override
   Future<PillSheetModel> fetchLast() {
-    return _queryOfFetchLastPillSheet()
+    return _queryOfFetchLastPillSheet(1)
         .get()
-        .then((event) => _filterForLatestPillSheet(event));
+        .then((event) => _mapPillSheet(event));
   }
 
   @override
@@ -76,9 +76,9 @@ class PillSheetService extends PillSheetServiceInterface {
   }
 
   Stream<PillSheetModel> subscribeForLatestPillSheet() {
-    return _queryOfFetchLastPillSheet()
+    return _queryOfFetchLastPillSheet(1)
         .snapshots()
-        .map((event) => _filterForLatestPillSheet(event));
+        .map((event) => _mapPillSheet(event));
   }
 }
 
