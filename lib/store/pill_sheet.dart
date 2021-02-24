@@ -51,7 +51,7 @@ class PillSheetStateStore extends StateNotifier<PillSheetState> {
   Future<void> register(PillSheetModel model) {
     return _service
         .register(model)
-        .then((entity) => state = state.copyWith(latestPillSheet: entity));
+        .then((entity) => state = state.copyWithLatestPillSheet(entity));
   }
 
   Future<void> delete() {
@@ -63,7 +63,7 @@ class PillSheetStateStore extends StateNotifier<PillSheetState> {
     final updated = state.latestPillSheet.copyWith(lastTakenDate: takenDate);
     return _service.update(updated).then((value) {
       hideIndicator();
-      state = state.copyWith(latestPillSheet: updated);
+      state = state.copyWithLatestPillSheet(updated);
     });
   }
 
@@ -78,11 +78,11 @@ class PillSheetStateStore extends StateNotifier<PillSheetState> {
     _service
         .update(state.latestPillSheet.copyWith(
             beginingDate: calcBeginingDateFromNextTodayPillNumber(pillNumber)))
-        .then((entity) => state = state.copyWith(latestPillSheet: entity));
+        .then((entity) => state = state.copyWithLatestPillSheet(entity));
   }
 
   void update(PillSheetModel entity) {
-    state = state.copyWith(latestPillSheet: entity);
+    state = state.copyWithLatestPillSheet(entity);
   }
 
   PillMarkType markFor(int number) {
