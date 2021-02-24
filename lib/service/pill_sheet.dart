@@ -5,11 +5,11 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:riverpod/all.dart';
 
 abstract class PillSheetServiceInterface {
-  Future<PillSheetModel> fetchLast();
+  Future<List<PillSheetModel>> fetchLatests(int limit);
   Future<PillSheetModel> register(PillSheetModel model);
   Future<void> delete(PillSheetModel pillSheet);
   Future<PillSheetModel> update(PillSheetModel pillSheet);
-  Stream<PillSheetModel> subscribeForLatestPillSheet();
+  Stream<List<PillSheetModel>> subscribeForLatestPillSheet();
 }
 
 final pillSheetServiceProvider = Provider<PillSheetServiceInterface>(
@@ -18,13 +18,14 @@ final pillSheetServiceProvider = Provider<PillSheetServiceInterface>(
 class PillSheetService extends PillSheetServiceInterface {
   final DatabaseConnection _database;
 
-  PillSheetModel _mapPillSheet(QuerySnapshot snapshot) {
-    if (snapshot.docs.isEmpty) return null;
-    if (!snapshot.docs.last.exists) return null;
-    var document = snapshot.docs.last;
+  PillSheetModel _mapPillSheet(QueryDocumentSnapshot snapshot) {
+    assert(snapshot == null);
+    if (snapshot == null) {
+      return null;
+    }
 
-    var data = document.data();
-    data["id"] = document.id;
+    var data = snapshot.data();
+    data["id"] = snapshot.id;
     var pillSheetModel = PillSheetModel.fromJson(data);
 
     return pillSheetModel;
@@ -39,10 +40,10 @@ class PillSheetService extends PillSheetServiceInterface {
 
   PillSheetService(this._database);
   @override
-  Future<PillSheetModel> fetchLast() {
-    return _queryOfFetchLastPillSheet(1)
+  Future<List<PillSheetModel>> fetchLatests(int limit) {
+    return _queryOfFetchLastPillSheet(limit)
         .get()
-        .then((event) => _mapPillSheet(event));
+        .then((event) => event.docs.map((doc) => _mapPillSheet(doc)).toList());
   }
 
   @override
@@ -75,10 +76,10 @@ class PillSheetService extends PillSheetServiceInterface {
         .then((_) => pillSheet);
   }
 
-  Stream<PillSheetModel> subscribeForLatestPillSheet() {
+  Stream<List<PillSheetModel>> subscribeForLatestPillSheet() {
     return _queryOfFetchLastPillSheet(1)
         .snapshots()
-        .map((event) => _mapPillSheet(event));
+        .map((event) => event.docs.map((doc) => _mapPillSheet(doc)).toList());
   }
 }
 
