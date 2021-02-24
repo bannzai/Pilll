@@ -36,10 +36,10 @@ class CalendarCard extends HookWidget {
           Calendar(
             calculator: Calculator(date),
             bandModels: buildBandModels(
-                currentPillSheetState.entity, settingState.entity, 0),
+                currentPillSheetState.latestPillSheet, settingState.entity, 0),
             horizontalPadding: 16,
           ),
-          _more(context, settingState.entity, currentPillSheetState.entity),
+          _more(context, settingState.entity, currentPillSheetState.latestPillSheet),
         ],
       ),
     );

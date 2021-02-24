@@ -36,7 +36,7 @@ class RecordPage extends HookWidget {
   Widget build(BuildContext context) {
     final state = useProvider(pillSheetStoreProvider.state);
     final store = useProvider(pillSheetStoreProvider);
-    final currentPillSheet = state.entity;
+    final currentPillSheet = state.latestPillSheet;
     if (!isAlreadyShowModal) {
       isAlreadyShowModal = true;
       Future.delayed(Duration(seconds: 1)).then((_) {
@@ -134,7 +134,7 @@ class RecordPage extends HookWidget {
 
   Widget _body(BuildContext context) {
     final state = useProvider(pillSheetStoreProvider.state);
-    final currentPillSheet = state.entity;
+    final currentPillSheet = state.latestPillSheet;
     final store = useProvider(pillSheetStoreProvider);
     final settingState = useProvider(settingStoreProvider.state);
     if (settingState.entity == null || !store.firstLoadIsEnded) {
@@ -179,7 +179,7 @@ class RecordPage extends HookWidget {
     if (state.isInvalid) {
       return "";
     }
-    final pillSheet = state.entity;
+    final pillSheet = state.latestPillSheet;
     if (pillSheet == null) {
       return "";
     }

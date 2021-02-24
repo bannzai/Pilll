@@ -10,7 +10,7 @@ import 'package:flutter/material.dart';
 class RecordTakenInformation extends StatelessWidget {
   final DateTime today;
   final PillSheetState state;
-  PillSheetModel get pillSheetModel => state.entity;
+  PillSheetModel get pillSheetModel => state.latestPillSheet;
   final VoidCallback onPressed;
   const RecordTakenInformation({
     Key key,

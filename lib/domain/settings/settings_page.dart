@@ -44,10 +44,10 @@ class _TransactionModifier {
     final settingStore = reader(settingStoreProvider);
     final pillSheetState = reader(pillSheetStoreProvider.state);
     final settingState = reader(settingStoreProvider.state);
-    assert(pillSheetState.entity.documentID != null);
+    assert(pillSheetState.latestPillSheet.documentID != null);
     return _database.transaction((transaction) {
       transaction.update(
-          _database.pillSheetReference(pillSheetState.entity.documentID), {
+          _database.pillSheetReference(pillSheetState.latestPillSheet.documentID), {
         PillSheetFirestoreKey.typeInfo: type.typeInfo.toJson(),
       });
       transaction.update(_database.userReference(), {
@@ -58,7 +58,7 @@ class _TransactionModifier {
       return;
     }).then((_) {
       pillSheetStore
-          .update(pillSheetState.entity.copyWith(typeInfo: type.typeInfo));
+          .update(pillSheetState.latestPillSheet.copyWith(typeInfo: type.typeInfo));
       settingStore.update(
           settingState.entity.copyWith(pillSheetTypeRawPath: type.rawPath));
     });
@@ -249,11 +249,11 @@ class SettingsPage extends HookWidget {
             },
           ),
           if (!pillSheetState.isInvalid &&
-              !pillSheetState.entity.pillSheetType.isNotExistsNotTakenDuration)
+              !pillSheetState.latestPillSheet.pillSheetType.isNotExistsNotTakenDuration)
             SettingsListSwitchRowModel(
-              title: "${pillSheetState.entity.pillSheetType.notTakenWord}期間の通知",
+              title: "${pillSheetState.latestPillSheet.pillSheetType.notTakenWord}期間の通知",
               subtitle:
-                  "通知オフの場合は、${pillSheetState.entity.pillSheetType.notTakenWord}期間の服用記録も自動で付けられます",
+                  "通知オフの場合は、${pillSheetState.latestPillSheet.pillSheetType.notTakenWord}期間の服用記録も自動で付けられます",
               value: settingState.entity.isOnNotifyInNotTakenDuration,
               onTap: () {
                 analytics.logEvent(
@@ -268,7 +268,7 @@ class SettingsPage extends HookWidget {
                     SnackBar(
                       duration: Duration(seconds: 1),
                       content: Text(
-                        "${pillSheetState.entity.pillSheetType.notTakenWord}期間の通知を${state.entity.isOnNotifyInNotTakenDuration ? "ON" : "OFF"}にしました",
+                        "${pillSheetState.latestPillSheet.pillSheetType.notTakenWord}期間の通知を${state.entity.isOnNotifyInNotTakenDuration ? "ON" : "OFF"}にしました",
                       ),
                     ),
                   );

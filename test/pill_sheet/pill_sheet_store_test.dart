@@ -29,17 +29,17 @@ void main() {
         beginingDate: DateTime.parse("2020-11-22"),
         createdAt: DateTime.parse("2020-11-22"),
       );
-      final state = PillSheetState(entity: pillSheetEntity);
+      final state = PillSheetState(latestPillSheet: pillSheetEntity);
 
       final service = MockPillSheetService();
       when(service.fetchLatests())
-          .thenAnswer((realInvocation) => Future.value(state.entity));
+          .thenAnswer((realInvocation) => Future.value(state.latestPillSheet));
       when(service.subscribeForLatestPillSheet())
           .thenAnswer((realInvocation) => Stream.empty());
 
       final store = PillSheetStateStore(service);
       await Future.delayed(Duration(milliseconds: 100));
-      expect(state.entity.todayPillNumber, equals(1));
+      expect(state.latestPillSheet.todayPillNumber, equals(1));
 
       final expected = DateTime.parse("2020-11-13");
       final actual = store.calcBeginingDateFromNextTodayPillNumber(10);
@@ -56,17 +56,17 @@ void main() {
       beginingDate: DateTime.parse("2020-11-21"),
       createdAt: DateTime.parse("2020-11-21"),
     );
-    final state = PillSheetState(entity: pillSheetEntity);
+    final state = PillSheetState(latestPillSheet: pillSheetEntity);
 
     final service = MockPillSheetService();
     when(service.fetchLatests())
-        .thenAnswer((realInvocation) => Future.value(state.entity));
+        .thenAnswer((realInvocation) => Future.value(state.latestPillSheet));
     when(service.subscribeForLatestPillSheet())
         .thenAnswer((realInvocation) => Stream.empty());
 
     final store = PillSheetStateStore(service);
     await Future.delayed(Duration(milliseconds: 100));
-    expect(state.entity.todayPillNumber, equals(3));
+    expect(state.latestPillSheet.todayPillNumber, equals(3));
 
     final expected = DateTime.parse("2020-11-22");
     final actual = store.calcBeginingDateFromNextTodayPillNumber(2);
@@ -84,17 +84,17 @@ void main() {
         lastTakenDate: DateTime.parse("2020-11-23"),
         createdAt: DateTime.parse("2020-11-21"),
       );
-      final state = PillSheetState(entity: pillSheetEntity);
+      final state = PillSheetState(latestPillSheet: pillSheetEntity);
 
       final service = MockPillSheetService();
       when(service.fetchLatests())
-          .thenAnswer((realInvocation) => Future.value(state.entity));
+          .thenAnswer((realInvocation) => Future.value(state.latestPillSheet));
       when(service.subscribeForLatestPillSheet())
           .thenAnswer((realInvocation) => Stream.empty());
 
       final store = PillSheetStateStore(service);
       await Future.delayed(Duration(milliseconds: 100));
-      expect(state.entity.allTaken, isTrue);
+      expect(state.latestPillSheet.allTaken, isTrue);
       expect(store.markFor(1), PillMarkType.done);
       expect(store.markFor(2), PillMarkType.done);
       expect(store.markFor(3), PillMarkType.done);
@@ -111,17 +111,17 @@ void main() {
         lastTakenDate: DateTime.parse("2020-11-22"),
         createdAt: DateTime.parse("2020-11-21"),
       );
-      final state = PillSheetState(entity: pillSheetEntity);
+      final state = PillSheetState(latestPillSheet: pillSheetEntity);
 
       final service = MockPillSheetService();
       when(service.fetchLatests())
-          .thenAnswer((realInvocation) => Future.value(state.entity));
+          .thenAnswer((realInvocation) => Future.value(state.latestPillSheet));
       when(service.subscribeForLatestPillSheet())
           .thenAnswer((realInvocation) => Stream.empty());
 
       final store = PillSheetStateStore(service);
       await Future.delayed(Duration(milliseconds: 100));
-      expect(state.entity.allTaken, isFalse);
+      expect(state.latestPillSheet.allTaken, isFalse);
       expect(store.markFor(1), PillMarkType.done);
       expect(store.markFor(2), PillMarkType.done);
       expect(store.markFor(3), PillMarkType.normal);
@@ -140,17 +140,17 @@ void main() {
         lastTakenDate: DateTime.parse("2020-11-23"),
         createdAt: DateTime.parse("2020-11-21"),
       );
-      final state = PillSheetState(entity: pillSheetEntity);
+      final state = PillSheetState(latestPillSheet: pillSheetEntity);
 
       final service = MockPillSheetService();
       when(service.fetchLatests())
-          .thenAnswer((realInvocation) => Future.value(state.entity));
+          .thenAnswer((realInvocation) => Future.value(state.latestPillSheet));
       when(service.subscribeForLatestPillSheet())
           .thenAnswer((realInvocation) => Stream.empty());
 
       final store = PillSheetStateStore(service);
       await Future.delayed(Duration(milliseconds: 100));
-      expect(state.entity.allTaken, isTrue);
+      expect(state.latestPillSheet.allTaken, isTrue);
       for (int i = 1; i <= pillSheetEntity.pillSheetType.totalCount; i++) {
         expect(store.shouldPillMarkAnimation(i), isFalse);
       }
@@ -166,17 +166,17 @@ void main() {
         lastTakenDate: DateTime.parse("2020-11-22"),
         createdAt: DateTime.parse("2020-11-21"),
       );
-      final state = PillSheetState(entity: pillSheetEntity);
+      final state = PillSheetState(latestPillSheet: pillSheetEntity);
 
       final service = MockPillSheetService();
       when(service.fetchLatests())
-          .thenAnswer((realInvocation) => Future.value(state.entity));
+          .thenAnswer((realInvocation) => Future.value(state.latestPillSheet));
       when(service.subscribeForLatestPillSheet())
           .thenAnswer((realInvocation) => Stream.empty());
 
       final store = PillSheetStateStore(service);
       await Future.delayed(Duration(milliseconds: 100));
-      expect(state.entity.allTaken, isFalse);
+      expect(state.latestPillSheet.allTaken, isFalse);
       expect(store.shouldPillMarkAnimation(3), isTrue);
     });
   });
