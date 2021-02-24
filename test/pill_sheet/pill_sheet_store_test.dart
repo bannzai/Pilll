@@ -29,7 +29,7 @@ void main() {
         beginingDate: DateTime.parse("2020-11-22"),
         createdAt: DateTime.parse("2020-11-22"),
       );
-      final state = PillSheetState(latestPillSheet: pillSheetEntity);
+      final state = PillSheetState.one(latestPillSheet: pillSheetEntity);
 
       final service = MockPillSheetService();
       when(service.fetchLatest())
@@ -56,7 +56,7 @@ void main() {
       beginingDate: DateTime.parse("2020-11-21"),
       createdAt: DateTime.parse("2020-11-21"),
     );
-    final state = PillSheetState(latestPillSheet: pillSheetEntity);
+    final state = PillSheetState.one(latestPillSheet: pillSheetEntity);
 
     final service = MockPillSheetService();
     when(service.fetchLatest())
@@ -84,7 +84,7 @@ void main() {
         lastTakenDate: DateTime.parse("2020-11-23"),
         createdAt: DateTime.parse("2020-11-21"),
       );
-      final state = PillSheetState(latestPillSheet: pillSheetEntity);
+      final state = PillSheetState.one(latestPillSheet: pillSheetEntity);
 
       final service = MockPillSheetService();
       when(service.fetchLatest())
@@ -111,7 +111,7 @@ void main() {
         lastTakenDate: DateTime.parse("2020-11-22"),
         createdAt: DateTime.parse("2020-11-21"),
       );
-      final state = PillSheetState(latestPillSheet: pillSheetEntity);
+      final state = PillSheetState.one(latestPillSheet: pillSheetEntity);
 
       final service = MockPillSheetService();
       when(service.fetchLatest())
@@ -140,7 +140,7 @@ void main() {
         lastTakenDate: DateTime.parse("2020-11-23"),
         createdAt: DateTime.parse("2020-11-21"),
       );
-      final state = PillSheetState(latestPillSheet: pillSheetEntity);
+      final state = PillSheetState.one(latestPillSheet: pillSheetEntity);
 
       final service = MockPillSheetService();
       when(service.fetchLatest())
@@ -166,7 +166,7 @@ void main() {
         lastTakenDate: DateTime.parse("2020-11-22"),
         createdAt: DateTime.parse("2020-11-21"),
       );
-      final state = PillSheetState(latestPillSheet: pillSheetEntity);
+      final state = PillSheetState.one(latestPillSheet: pillSheetEntity);
 
       final service = MockPillSheetService();
       when(service.fetchLatest())

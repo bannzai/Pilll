@@ -21,11 +21,13 @@ class PillSheetStateStore extends StateNotifier<PillSheetState> {
   var firstLoadIsEnded = false;
   void _reset() {
     Future(() async {
-      state = PillSheetState(latestPillSheet: (await _service.fetchLatest()));
+      state =
+          PillSheetState.one(latestPillSheet: (await _service.fetchLatest()));
       analytics.logEvent(name: "count_of_remaining_pill", parameters: {
         "count": state.latestPillSheet == null
             ? 0
-            : (state.latestPillSheet.todayPillNumber - state.latestPillSheet.lastTakenPillNumber)
+            : (state.latestPillSheet.todayPillNumber -
+                state.latestPillSheet.lastTakenPillNumber)
       });
       firstLoadIsEnded = true;
       _subscribe();
@@ -36,7 +38,7 @@ class PillSheetStateStore extends StateNotifier<PillSheetState> {
   void _subscribe() {
     canceller?.cancel();
     canceller = _service.subscribeForLatestPillSheet().listen((event) {
-      state = PillSheetState(latestPillSheet: event);
+      state = PillSheetState.one(latestPillSheet: event);
     });
   }
 
