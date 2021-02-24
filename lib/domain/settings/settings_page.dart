@@ -248,7 +248,8 @@ class SettingsPage extends HookWidget {
               Navigator.of(context).push(ReminderTimesPageRoute.route());
             },
           ),
-          if (!pillSheetState.entity.pillSheetType.isNotExistsNotTakenDuration)
+          if (!pillSheetState.isInvalid &&
+              !pillSheetState.entity.pillSheetType.isNotExistsNotTakenDuration)
             SettingsListSwitchRowModel(
               title: "${pillSheetState.entity.pillSheetType.notTakenWord}期間の通知",
               subtitle:
@@ -290,7 +291,6 @@ class SettingsPage extends HookWidget {
                   pillSheetTotalCount:
                       settingState.entity.pillSheetType.totalCount,
                   model: SettingMenstruationPageModel(
-                    pillSheetType: pillSheetState.entity.pillSheetType,
                     selectedFromMenstruation:
                         settingState.entity.pillNumberForFromMenstruation,
                     selectedDurationMenstruation:
