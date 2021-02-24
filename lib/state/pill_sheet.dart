@@ -7,6 +7,8 @@ part 'pill_sheet.freezed.dart';
 abstract class PillSheetState implements _$PillSheetState {
   PillSheetState._();
   factory PillSheetState({List<PillSheetModel> entities}) = _PillSheetState;
+  factory PillSheetState.one({PillSheetModel latestPillSheet}) =>
+      PillSheetState(entities: [latestPillSheet]);
 
   PillSheetModel get latestPillSheet => entities.last;
 
