@@ -6,11 +6,13 @@ part 'pill_sheet.freezed.dart';
 @freezed
 abstract class PillSheetState implements _$PillSheetState {
   PillSheetState._();
-  factory PillSheetState({List<PillSheetModel> entities}) = _PillSheetState;
+  factory PillSheetState({@required List<PillSheetModel> entities}) =
+      _PillSheetState;
   factory PillSheetState.one({PillSheetModel latestPillSheet}) =>
-      PillSheetState(entities: [latestPillSheet]);
+      PillSheetState(
+          entities: latestPillSheet != null ? [latestPillSheet] : []);
 
-  PillSheetModel get latestPillSheet => entities.last;
+  PillSheetModel get latestPillSheet => entities.isEmpty ? null : entities.last;
 
   bool get latestIsInvalid =>
       latestPillSheet == null ||
