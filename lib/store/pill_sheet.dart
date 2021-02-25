@@ -39,7 +39,7 @@ class PillSheetStateStore extends StateNotifier<PillSheetState> {
   void _subscribe() {
     canceller?.cancel();
     canceller = _service.subscribeForLatestPillSheet().listen((event) {
-      state = PillSheetState.one(latestPillSheet: event);
+      state = state.copyWithLatestPillSheet(event);
     });
   }
 
