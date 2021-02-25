@@ -111,3 +111,7 @@ class PillSheetAlreadyDeleted extends Error {
     return "ピルシートはすでに削除されています。";
   }
 }
+
+PillSheetModel extractLatestPillSheet(List<PillSheetModel> pillSheets) {
+  return pillSheets.first;
+}

@@ -7,6 +7,7 @@ import 'package:Pilll/domain/calendar/calendar_help.dart';
 import 'package:Pilll/domain/calendar/calendar_list_page.dart';
 import 'package:Pilll/entity/pill_sheet.dart';
 import 'package:Pilll/entity/setting.dart';
+import 'package:Pilll/service/pill_sheet.dart';
 import 'package:Pilll/store/pill_sheet.dart';
 import 'package:Pilll/store/setting.dart';
 import 'package:Pilll/components/atoms/buttons.dart';
@@ -86,7 +87,7 @@ class CalendarCard extends HookWidget {
               Navigator.of(context).push(
                 () {
                   var now = today();
-                  final latestPillSheet = pillSheets.first;
+                  final latestPillSheet = extractLatestPillSheet(pillSheets);
                   final previousBands = List.generate(6, (index) => index + 1)
                       .reversed
                       .map((number) {
