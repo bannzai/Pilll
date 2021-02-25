@@ -5,7 +5,6 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:riverpod/all.dart';
 
 abstract class PillSheetServiceInterface {
-  Future<PillSheetModel> fetchLatest();
   Future<List<PillSheetModel>> fetchList(int limit);
   Future<PillSheetModel> register(PillSheetModel model);
   Future<void> delete(PillSheetModel pillSheet);
@@ -35,8 +34,8 @@ class PillSheetService extends PillSheetServiceInterface {
   Query _queryOfFetchLastPillSheet(int limit) {
     return _database
         .pillSheetsReference()
-        .orderBy(PillSheetFirestoreKey.createdAt)
-        .limitToLast(limit);
+        .orderBy(PillSheetFirestoreKey.createdAt, descending: true)
+        .limit(limit);
   }
 
   PillSheetService(this._database);
@@ -45,13 +44,6 @@ class PillSheetService extends PillSheetServiceInterface {
     return _queryOfFetchLastPillSheet(limit)
         .get()
         .then((event) => event.docs.map((doc) => _mapPillSheet(doc)).toList());
-  }
-
-  @override
-  Future<PillSheetModel> fetchLatest() {
-    return _queryOfFetchLastPillSheet(1)
-        .get()
-        .then((event) => _mapPillSheet(event.docs.last));
   }
 
   @override

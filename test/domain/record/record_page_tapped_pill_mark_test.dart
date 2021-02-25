@@ -51,8 +51,8 @@ void main() {
       final pillSheetService = MockPillSheetService();
       final pillSheetStore = PillSheetStateStore(pillSheetService);
 
-      when(pillSheetService.fetchLatest())
-          .thenAnswer((_) => Future.value(pillSheet));
+      when(pillSheetService.fetchList(1))
+          .thenAnswer((_) => Future.value([pillSheet]));
       when(pillSheetService.subscribeForLatestPillSheet())
           .thenAnswer((realInvocation) => Stream.value(pillSheet));
 
@@ -108,8 +108,8 @@ void main() {
     final pillSheetService = MockPillSheetService();
     final pillSheetStore = PillSheetStateStore(pillSheetService);
 
-    when(pillSheetService.fetchLatest())
-        .thenAnswer((_) => Future.value(pillSheet));
+    when(pillSheetService.fetchList(1))
+        .thenAnswer((_) => Future.value([pillSheet]));
     when(pillSheetService.subscribeForLatestPillSheet())
         .thenAnswer((realInvocation) => Stream.value(pillSheet));
 
@@ -167,8 +167,8 @@ void main() {
     final pillSheetService = MockPillSheetService();
     final pillSheetStore = PillSheetStateStore(pillSheetService);
 
-    when(pillSheetService.fetchLatest())
-        .thenAnswer((_) => Future.value(pillSheet));
+    when(pillSheetService.fetchList(1))
+        .thenAnswer((_) => Future.value([pillSheet]));
     when(pillSheetService.subscribeForLatestPillSheet())
         .thenAnswer((realInvocation) => Stream.value(pillSheet));
 
