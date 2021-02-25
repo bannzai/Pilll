@@ -21,14 +21,14 @@ class PillSheetStateStore extends StateNotifier<PillSheetState> {
   var firstLoadIsEnded = false;
   void _reset() {
     Future(() async {
-      state =
-          PillSheetState.one(latestPillSheet: (await _service.fetchLatest()));
+      state = PillSheetState(entities: (await _service.fetchList(2)));
       analytics.logEvent(name: "count_of_remaining_pill", parameters: {
         "count": state.latestPillSheet == null
             ? 0
             : (state.latestPillSheet.todayPillNumber -
                 state.latestPillSheet.lastTakenPillNumber)
       });
+      print("state.entities:${state.entities}");
       firstLoadIsEnded = true;
       _subscribe();
     });

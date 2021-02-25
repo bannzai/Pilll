@@ -32,8 +32,8 @@ void main() {
       final state = PillSheetState.one(latestPillSheet: pillSheetEntity);
 
       final service = MockPillSheetService();
-      when(service.fetchLatest())
-          .thenAnswer((realInvocation) => Future.value(state.latestPillSheet));
+      when(service.fetchList(1)).thenAnswer(
+          (realInvocation) => Future.value([state.latestPillSheet]));
       when(service.subscribeForLatestPillSheet())
           .thenAnswer((realInvocation) => Stream.empty());
 
@@ -59,8 +59,8 @@ void main() {
     final state = PillSheetState.one(latestPillSheet: pillSheetEntity);
 
     final service = MockPillSheetService();
-    when(service.fetchLatest())
-        .thenAnswer((realInvocation) => Future.value(state.latestPillSheet));
+    when(service.fetchList(1))
+        .thenAnswer((realInvocation) => Future.value([state.latestPillSheet]));
     when(service.subscribeForLatestPillSheet())
         .thenAnswer((realInvocation) => Stream.empty());
 
@@ -87,8 +87,8 @@ void main() {
       final state = PillSheetState.one(latestPillSheet: pillSheetEntity);
 
       final service = MockPillSheetService();
-      when(service.fetchLatest())
-          .thenAnswer((realInvocation) => Future.value(state.latestPillSheet));
+      when(service.fetchList(1)).thenAnswer(
+          (realInvocation) => Future.value([state.latestPillSheet]));
       when(service.subscribeForLatestPillSheet())
           .thenAnswer((realInvocation) => Stream.empty());
 
@@ -114,8 +114,8 @@ void main() {
       final state = PillSheetState.one(latestPillSheet: pillSheetEntity);
 
       final service = MockPillSheetService();
-      when(service.fetchLatest())
-          .thenAnswer((realInvocation) => Future.value(state.latestPillSheet));
+      when(service.fetchList(1)).thenAnswer(
+          (realInvocation) => Future.value([state.latestPillSheet]));
       when(service.subscribeForLatestPillSheet())
           .thenAnswer((realInvocation) => Stream.empty());
 
@@ -143,8 +143,8 @@ void main() {
       final state = PillSheetState.one(latestPillSheet: pillSheetEntity);
 
       final service = MockPillSheetService();
-      when(service.fetchLatest())
-          .thenAnswer((realInvocation) => Future.value(state.latestPillSheet));
+      when(service.fetchList(1)).thenAnswer(
+          (realInvocation) => Future.value([state.latestPillSheet]));
       when(service.subscribeForLatestPillSheet())
           .thenAnswer((realInvocation) => Stream.empty());
 
@@ -169,8 +169,8 @@ void main() {
       final state = PillSheetState.one(latestPillSheet: pillSheetEntity);
 
       final service = MockPillSheetService();
-      when(service.fetchLatest())
-          .thenAnswer((realInvocation) => Future.value(state.latestPillSheet));
+      when(service.fetchList(1)).thenAnswer(
+          (realInvocation) => Future.value([state.latestPillSheet]));
       when(service.subscribeForLatestPillSheet())
           .thenAnswer((realInvocation) => Stream.empty());
 

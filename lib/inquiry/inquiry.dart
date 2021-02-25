@@ -1,6 +1,5 @@
 import 'package:Pilll/auth/auth.dart';
 import 'package:Pilll/database/database.dart';
-import 'package:Pilll/entity/pill_sheet.dart';
 import 'package:Pilll/entity/setting.dart';
 import 'package:Pilll/service/pill_sheet.dart';
 import 'package:Pilll/service/setting.dart';
@@ -20,8 +19,8 @@ inquiry() {
 Future<String> debugInfo(String separator) async {
   String userID = (await auth()).uid;
   DatabaseConnection databaseConnection = DatabaseConnection(userID);
-  PillSheetModel pillSheet =
-      await PillSheetService(databaseConnection).fetchLatest();
+  final pillSheets = await PillSheetService(databaseConnection).fetchList(1);
+  final pillSheet = extractLatestPillSheet(pillSheets);
   Setting setting = await SettingService(databaseConnection).fetch();
   final package = await PackageInfo.fromPlatform();
   final appName = package.appName;
