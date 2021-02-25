@@ -14,7 +14,7 @@ class _$PillSheetStateTearOff {
   const _$PillSheetStateTearOff();
 
 // ignore: unused_element
-  _PillSheetState call({List<PillSheetModel> entities}) {
+  _PillSheetState call({@required List<PillSheetModel> entities}) {
     return _PillSheetState(
       entities: entities,
     );
@@ -96,7 +96,9 @@ class __$PillSheetStateCopyWithImpl<$Res>
 
 /// @nodoc
 class _$_PillSheetState extends _PillSheetState {
-  _$_PillSheetState({this.entities}) : super._();
+  _$_PillSheetState({@required this.entities})
+      : assert(entities != null),
+        super._();
 
   @override
   final List<PillSheetModel> entities;
@@ -126,7 +128,8 @@ class _$_PillSheetState extends _PillSheetState {
 
 abstract class _PillSheetState extends PillSheetState {
   _PillSheetState._() : super._();
-  factory _PillSheetState({List<PillSheetModel> entities}) = _$_PillSheetState;
+  factory _PillSheetState({@required List<PillSheetModel> entities}) =
+      _$_PillSheetState;
 
   @override
   List<PillSheetModel> get entities;
