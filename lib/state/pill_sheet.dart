@@ -8,9 +8,6 @@ abstract class PillSheetState implements _$PillSheetState {
   PillSheetState._();
   factory PillSheetState({@required List<PillSheetModel> entities}) =
       _PillSheetState;
-  factory PillSheetState.one({PillSheetModel latestPillSheet}) =>
-      PillSheetState(
-          entities: latestPillSheet != null ? [latestPillSheet] : []);
 
   PillSheetModel get latestPillSheet => entities.isEmpty ? null : entities.last;
 
