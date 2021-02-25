@@ -20,7 +20,7 @@ class PillSheetService extends PillSheetServiceInterface {
   final DatabaseConnection _database;
 
   PillSheetModel _mapPillSheet(QueryDocumentSnapshot snapshot) {
-    assert(snapshot == null);
+    assert(snapshot != null);
     if (snapshot == null) {
       return null;
     }
