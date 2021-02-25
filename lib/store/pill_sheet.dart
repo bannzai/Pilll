@@ -21,6 +21,7 @@ class PillSheetStateStore extends StateNotifier<PillSheetState> {
   var firstLoadIsEnded = false;
   void _reset() {
     Future(() async {
+      // Because arguments of 2, in calendar_page want to show menstruation band
       state = PillSheetState(entities: (await _service.fetchList(2)));
       analytics.logEvent(name: "count_of_remaining_pill", parameters: {
         "count": state.latestPillSheet == null
