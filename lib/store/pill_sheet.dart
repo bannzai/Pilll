@@ -22,14 +22,15 @@ class PillSheetStateStore extends StateNotifier<PillSheetState> {
   void _reset() {
     Future(() async {
       // Because arguments of 2, in calendar_page want to show menstruation band
-      state = PillSheetState(entities: (await _service.fetchList(2)));
+      final entities = await _service.fetchList(2);
+      print("entities:$entities");
+      state = PillSheetState(entities: entities);
       analytics.logEvent(name: "count_of_remaining_pill", parameters: {
         "count": state.latestPillSheet == null
             ? 0
             : (state.latestPillSheet.todayPillNumber -
                 state.latestPillSheet.lastTakenPillNumber)
       });
-      print("state.entities:${state.entities}");
       firstLoadIsEnded = true;
       _subscribe();
     });
@@ -39,6 +40,7 @@ class PillSheetStateStore extends StateNotifier<PillSheetState> {
   void _subscribe() {
     canceller?.cancel();
     canceller = _service.subscribeForLatestPillSheet().listen((event) {
+      print("event:$event");
       state = state.copyWithLatestPillSheet(event);
     });
   }
