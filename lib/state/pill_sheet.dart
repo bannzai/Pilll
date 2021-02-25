@@ -1,4 +1,5 @@
 import 'package:Pilll/entity/pill_sheet.dart';
+import 'package:Pilll/service/pill_sheet.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'pill_sheet.freezed.dart';
@@ -9,7 +10,8 @@ abstract class PillSheetState implements _$PillSheetState {
   factory PillSheetState({@required List<PillSheetModel> entities}) =
       _PillSheetState;
 
-  PillSheetModel get latestPillSheet => entities.isEmpty ? null : entities.last;
+  PillSheetModel get latestPillSheet =>
+      entities.isEmpty ? null : extractLatestPillSheet(entities);
 
   bool get latestIsInvalid =>
       latestPillSheet == null ||
