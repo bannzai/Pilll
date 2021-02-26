@@ -24,9 +24,8 @@ definedChannel() {
 Future<void> recordPill() async {
   final authInfo = await auth();
   final service = PillSheetService(DatabaseConnection(authInfo.uid));
-  final pillSheets = await service.fetchList(1);
-  final latestPillSheet = extractLatestPillSheet(pillSheets);
-  await service.update(latestPillSheet.copyWith(lastTakenDate: now()));
+  final entity = await service.fetchLast();
+  await service.update(entity.copyWith(lastTakenDate: now()));
 }
 
 Future<void> salvagedOldStartTakenDate(dynamic arguments) async {
