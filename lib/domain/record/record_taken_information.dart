@@ -10,7 +10,7 @@ import 'package:flutter/material.dart';
 class RecordTakenInformation extends StatelessWidget {
   final DateTime today;
   final PillSheetState state;
-  PillSheetModel get pillSheetModel => state.entity;
+  PillSheetModel get pillSheetModel => state.latestPillSheet;
   final VoidCallback onPressed;
   const RecordTakenInformation({
     Key key,
@@ -23,7 +23,7 @@ class RecordTakenInformation extends StatelessWidget {
   String _formattedToday() => DateTimeFormatter.monthAndDay(this.today);
 
   String _todayWeekday() => DateTimeFormatter.weekday(this.today);
-  bool get pillSheetIsValid => pillSheetModel != null && !state.isInvalid;
+  bool get pillSheetIsValid => pillSheetModel != null && !state.latestIsInvalid;
 
   @override
   Widget build(BuildContext context) {
