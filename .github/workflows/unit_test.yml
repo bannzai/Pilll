@@ -13,6 +13,7 @@ on:
 jobs:
   build-ios-debug:
     runs-on: macos-latest
+    if: ${{ !contains(github.event.pull_request.title, '[skip ci]') }}
     steps:
     - uses: actions/checkout@v1
     - uses: actions/setup-java@v1
@@ -31,6 +32,7 @@ jobs:
       run: flutter build ios --debug --no-codesign --flavor development --target lib/main.dev.dart
   build-android-debug:
     runs-on: macos-latest
+    if: ${{ !contains(github.event.pull_request.title, '[skip ci]') }}
     steps:
     - uses: actions/checkout@v1
     - uses: actions/setup-java@v1
@@ -48,6 +50,7 @@ jobs:
     - run: flutter build apk --debug --flavor development --target lib/main.dev.dart
   test:
     runs-on: macos-latest
+    if: ${{ !contains(github.event.pull_request.title, '[skip ci]') }}
     steps:
     - uses: actions/checkout@v1
     - uses: actions/setup-java@v1
