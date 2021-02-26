@@ -7,7 +7,6 @@ import 'package:Pilll/domain/calendar/calendar_help.dart';
 import 'package:Pilll/domain/calendar/calendar_list_page.dart';
 import 'package:Pilll/entity/pill_sheet.dart';
 import 'package:Pilll/entity/setting.dart';
-import 'package:Pilll/service/pill_sheet.dart';
 import 'package:Pilll/store/pill_sheet.dart';
 import 'package:Pilll/store/setting.dart';
 import 'package:Pilll/components/atoms/buttons.dart';
@@ -37,10 +36,10 @@ class CalendarCard extends HookWidget {
           Calendar(
             calculator: Calculator(date),
             bandModels: buildBandModels(
-                currentPillSheetState.latestPillSheet, settingState.entity, 0),
+                currentPillSheetState.entity, settingState.entity, 0),
             horizontalPadding: 16,
           ),
-          _more(context, settingState.entity, currentPillSheetState.entities),
+          _more(context, settingState.entity, currentPillSheetState.entity),
         ],
       ),
     );
@@ -75,7 +74,7 @@ class CalendarCard extends HookWidget {
   }
 
   Widget _more(
-      BuildContext context, Setting setting, List<PillSheetModel> pillSheets) {
+      BuildContext context, Setting setting, PillSheetModel latestPillSheet) {
     return ConstrainedBox(
       constraints: BoxConstraints.expand(height: 60),
       child: Row(
@@ -87,8 +86,7 @@ class CalendarCard extends HookWidget {
               Navigator.of(context).push(
                 () {
                   var now = today();
-                  final latestPillSheet = extractLatestPillSheet(pillSheets);
-                  final previousBands = List.generate(6, (index) => index + 1)
+                  final previouses = List.generate(6, (index) => index + 1)
                       .reversed
                       .map((number) {
                     CalendarListPageModel previous = CalendarListPageModel(
@@ -96,18 +94,17 @@ class CalendarCard extends HookWidget {
                         []);
                     return previous;
                   });
-                  final currentBands =
-                      pillSheets.map((e) => CalendarListPageModel(
-                            Calculator(now),
-                            buildBandModels(e, setting, 0),
-                          ));
+                  CalendarListPageModel current = CalendarListPageModel(
+                    Calculator(now),
+                    buildBandModels(latestPillSheet, setting, 0),
+                  );
                   List<CalendarBandModel> satisfyNextMonthDateRanges = [];
                   if (latestPillSheet != null) {
                     satisfyNextMonthDateRanges = List.generate(12, (index) {
                       return buildBandModels(latestPillSheet, setting, index);
                     }).expand((element) => element).toList();
                   }
-                  final nextBands = List.generate(
+                  final nextCalendars = List.generate(
                     6,
                     (index) {
                       return CalendarListPageModel(
@@ -120,9 +117,9 @@ class CalendarCard extends HookWidget {
                     },
                   );
                   return CalendarListPageRoute.route([
-                    ...previousBands,
-                    ...currentBands,
-                    ...nextBands,
+                    ...previouses,
+                    current,
+                    ...nextCalendars,
                   ]);
                 }(),
               );

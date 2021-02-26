@@ -116,13 +116,13 @@ class MenstruationCard extends HookWidget {
             ],
           ),
           Text(() {
-            if (pillSheetState.latestPillSheet == null) {
+            if (pillSheetState.entity == null) {
               return "";
             }
 
             for (int i = 0; i < 12; i += 1) {
               final begin = menstruationDateRange(
-                      pillSheetState.latestPillSheet, settingState.entity, i)
+                      pillSheetState.entity, settingState.entity, i)
                   .begin;
               if (begin.isAfter(utility.today())) {
                 return DateTimeFormatter.monthAndWeekday(begin);

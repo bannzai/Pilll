@@ -5,7 +5,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:riverpod/all.dart';
 
 abstract class PillSheetServiceInterface {
-  Future<List<PillSheetModel>> fetchList(int limit);
+  Future<PillSheetModel> fetchLast();
   Future<PillSheetModel> register(PillSheetModel model);
   Future<void> delete(PillSheetModel pillSheet);
   Future<PillSheetModel> update(PillSheetModel pillSheet);
@@ -18,32 +18,31 @@ final pillSheetServiceProvider = Provider<PillSheetServiceInterface>(
 class PillSheetService extends PillSheetServiceInterface {
   final DatabaseConnection _database;
 
-  PillSheetModel _mapPillSheet(QueryDocumentSnapshot snapshot) {
-    assert(snapshot != null);
-    if (snapshot == null) {
-      return null;
-    }
+  PillSheetModel _filterForLatestPillSheet(QuerySnapshot snapshot) {
+    if (snapshot.docs.isEmpty) return null;
+    if (!snapshot.docs.last.exists) return null;
+    var document = snapshot.docs.last;
 
-    var data = snapshot.data();
-    data["id"] = snapshot.id;
+    var data = document.data();
+    data["id"] = document.id;
     var pillSheetModel = PillSheetModel.fromJson(data);
 
     return pillSheetModel;
   }
 
-  Query _queryOfFetchLastPillSheet(int limit) {
+  Query _queryOfFetchLastPillSheet() {
     return _database
         .pillSheetsReference()
-        .orderBy(PillSheetFirestoreKey.createdAt, descending: true)
-        .limit(limit);
+        .orderBy(PillSheetFirestoreKey.createdAt)
+        .limitToLast(1);
   }
 
   PillSheetService(this._database);
   @override
-  Future<List<PillSheetModel>> fetchList(int limit) {
-    return _queryOfFetchLastPillSheet(limit)
+  Future<PillSheetModel> fetchLast() {
+    return _queryOfFetchLastPillSheet()
         .get()
-        .then((event) => event.docs.map((doc) => _mapPillSheet(doc)).toList());
+        .then((event) => _filterForLatestPillSheet(event));
   }
 
   @override
@@ -77,9 +76,9 @@ class PillSheetService extends PillSheetServiceInterface {
   }
 
   Stream<PillSheetModel> subscribeForLatestPillSheet() {
-    return _queryOfFetchLastPillSheet(1)
+    return _queryOfFetchLastPillSheet()
         .snapshots()
-        .map((event) => _mapPillSheet(event.docs.last));
+        .map((event) => _filterForLatestPillSheet(event));
   }
 }
 
@@ -102,8 +101,4 @@ class PillSheetAlreadyDeleted extends Error {
   String toString() {
     return "ピルシートはすでに削除されています。";
   }
-}
-
-PillSheetModel extractLatestPillSheet(List<PillSheetModel> pillSheets) {
-  return pillSheets.first;
 }
