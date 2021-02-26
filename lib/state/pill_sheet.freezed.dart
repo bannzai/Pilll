@@ -14,9 +14,9 @@ class _$PillSheetStateTearOff {
   const _$PillSheetStateTearOff();
 
 // ignore: unused_element
-  _PillSheetState call({@required List<PillSheetModel> entities}) {
+  _PillSheetState call({PillSheetModel entity}) {
     return _PillSheetState(
-      entities: entities,
+      entity: entity,
     );
   }
 }
@@ -27,7 +27,7 @@ const $PillSheetState = _$PillSheetStateTearOff();
 
 /// @nodoc
 mixin _$PillSheetState {
-  List<PillSheetModel> get entities;
+  PillSheetModel get entity;
 
   $PillSheetStateCopyWith<PillSheetState> get copyWith;
 }
@@ -37,7 +37,9 @@ abstract class $PillSheetStateCopyWith<$Res> {
   factory $PillSheetStateCopyWith(
           PillSheetState value, $Res Function(PillSheetState) then) =
       _$PillSheetStateCopyWithImpl<$Res>;
-  $Res call({List<PillSheetModel> entities});
+  $Res call({PillSheetModel entity});
+
+  $PillSheetModelCopyWith<$Res> get entity;
 }
 
 /// @nodoc
@@ -51,13 +53,21 @@ class _$PillSheetStateCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object entities = freezed,
+    Object entity = freezed,
   }) {
     return _then(_value.copyWith(
-      entities: entities == freezed
-          ? _value.entities
-          : entities as List<PillSheetModel>,
+      entity: entity == freezed ? _value.entity : entity as PillSheetModel,
     ));
+  }
+
+  @override
+  $PillSheetModelCopyWith<$Res> get entity {
+    if (_value.entity == null) {
+      return null;
+    }
+    return $PillSheetModelCopyWith<$Res>(_value.entity, (value) {
+      return _then(_value.copyWith(entity: value));
+    });
   }
 }
 
@@ -68,7 +78,10 @@ abstract class _$PillSheetStateCopyWith<$Res>
           _PillSheetState value, $Res Function(_PillSheetState) then) =
       __$PillSheetStateCopyWithImpl<$Res>;
   @override
-  $Res call({List<PillSheetModel> entities});
+  $Res call({PillSheetModel entity});
+
+  @override
+  $PillSheetModelCopyWith<$Res> get entity;
 }
 
 /// @nodoc
@@ -84,42 +97,37 @@ class __$PillSheetStateCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object entities = freezed,
+    Object entity = freezed,
   }) {
     return _then(_PillSheetState(
-      entities: entities == freezed
-          ? _value.entities
-          : entities as List<PillSheetModel>,
+      entity: entity == freezed ? _value.entity : entity as PillSheetModel,
     ));
   }
 }
 
 /// @nodoc
 class _$_PillSheetState extends _PillSheetState {
-  _$_PillSheetState({@required this.entities})
-      : assert(entities != null),
-        super._();
+  _$_PillSheetState({this.entity}) : super._();
 
   @override
-  final List<PillSheetModel> entities;
+  final PillSheetModel entity;
 
   @override
   String toString() {
-    return 'PillSheetState(entities: $entities)';
+    return 'PillSheetState(entity: $entity)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other is _PillSheetState &&
-            (identical(other.entities, entities) ||
-                const DeepCollectionEquality()
-                    .equals(other.entities, entities)));
+            (identical(other.entity, entity) ||
+                const DeepCollectionEquality().equals(other.entity, entity)));
   }
 
   @override
   int get hashCode =>
-      runtimeType.hashCode ^ const DeepCollectionEquality().hash(entities);
+      runtimeType.hashCode ^ const DeepCollectionEquality().hash(entity);
 
   @override
   _$PillSheetStateCopyWith<_PillSheetState> get copyWith =>
@@ -128,11 +136,10 @@ class _$_PillSheetState extends _PillSheetState {
 
 abstract class _PillSheetState extends PillSheetState {
   _PillSheetState._() : super._();
-  factory _PillSheetState({@required List<PillSheetModel> entities}) =
-      _$_PillSheetState;
+  factory _PillSheetState({PillSheetModel entity}) = _$_PillSheetState;
 
   @override
-  List<PillSheetModel> get entities;
+  PillSheetModel get entity;
   @override
   _$PillSheetStateCopyWith<_PillSheetState> get copyWith;
 }
