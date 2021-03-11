@@ -58,9 +58,8 @@ class TertiaryButton extends StatelessWidget {
       width: 180,
       height: 44,
       child: TextButton(
-        color: PilllColors.gray,
-        textColor: TextColor.white,
-        child: Text(text, style: ButtonTextStyle.main),
+        style: TextButton.styleFrom(backgroundColor: PilllColors.gray),
+        child: Text(text, style: ButtonTextStyle.main.merge(TextColorStyle.white)),
         onPressed: onPressed,
       ),
     );
@@ -82,9 +81,8 @@ class InconspicuousButton extends StatelessWidget {
       width: 180,
       height: 44,
       child: TextButton(
-        color: Colors.transparent,
-        textColor: TextColor.gray,
-        child: Text(text),
+        style: TextButton.styleFrom(backgroundColor: Colors.transparent),
+        child: Text(text, style: TextColorStyle.gray),
         onPressed: onPressed,
       ),
     );
