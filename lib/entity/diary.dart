@@ -34,13 +34,11 @@ abstract class Diary with _$Diary {
     "食欲不振",
   ];
 
-  @late
   String get id => "Diary_${DateTimeFormatter.diaryIdentifier(date)}";
 
   @JsonSerializable(explicitToJson: true)
   factory Diary({
     @JsonKey(
-      nullable: false,
       fromJson: TimestampConverter.timestampToDateTime,
       toJson: TimestampConverter.dateTimeToTimestamp,
     )
