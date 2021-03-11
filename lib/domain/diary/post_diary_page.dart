@@ -65,7 +65,7 @@ class PostDiaryPage extends HookWidget {
     });
     return Scaffold(
       backgroundColor: PilllColors.white,
-      resizeToAvoidBottomPadding: false,
+      resizeToAvoidBottomInset: false,
       appBar: AppBar(
         elevation: 0.0,
         leading: IconButton(
