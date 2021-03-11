@@ -17,7 +17,7 @@ class PrimaryButton extends StatelessWidget {
     return SizedBox(
       width: 180,
       height: 44,
-      child: RaisedButton(
+      child: ElevatedButton(
         child: Text(text, style: ButtonTextStyle.main),
         onPressed: onPressed,
       ),
@@ -36,7 +36,7 @@ class SecondaryButton extends StatelessWidget {
   }) : super(key: key);
 
   Widget build(BuildContext context) {
-    return FlatButton(
+    return TextButton(
       child: Text(text, style: ButtonTextStyle.alert),
       onPressed: onPressed,
     );
@@ -57,7 +57,7 @@ class TertiaryButton extends StatelessWidget {
     return SizedBox(
       width: 180,
       height: 44,
-      child: FlatButton(
+      child: TextButton(
         color: PilllColors.gray,
         textColor: TextColor.white,
         child: Text(text, style: ButtonTextStyle.main),
@@ -81,7 +81,7 @@ class InconspicuousButton extends StatelessWidget {
     return SizedBox(
       width: 180,
       height: 44,
-      child: FlatButton(
+      child: TextButton(
         color: Colors.transparent,
         textColor: TextColor.gray,
         child: Text(text),

@@ -87,7 +87,7 @@ class SettingsPage extends HookWidget {
               }
               return Padding(
                 padding: const EdgeInsets.all(10),
-                child: FlatButton(
+                child: TextButton(
                   child: Text("COPY DEBUG INFO"),
                   onPressed: () async {
                     Clipboard.setData(

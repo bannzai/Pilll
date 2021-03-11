@@ -35,7 +35,7 @@ class UniversalErrorPage extends StatelessWidget {
               Text(error.toString(),
                   style: FontType.assisting.merge(TextColorStyle.main)),
               SizedBox(height: 25),
-              FlatButton.icon(
+              TextButton.icon(
                 textColor: PilllColors.primary,
                 icon: const Icon(
                   Icons.refresh,
@@ -47,7 +47,7 @@ class UniversalErrorPage extends StatelessWidget {
                   rootKey.currentState.reloadRoot();
                 },
               ),
-              FlatButton.icon(
+              TextButton.icon(
                 textColor: PilllColors.secondary,
                 icon: const Icon(
                   Icons.mail,
