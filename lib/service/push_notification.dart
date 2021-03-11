@@ -1,9 +1,9 @@
 import 'dart:io';
 
-import 'package:Pilll/analytics.dart';
-import 'package:Pilll/auth/auth.dart';
-import 'package:Pilll/database/database.dart';
-import 'package:Pilll/service/user.dart';
+import 'package:pilll/analytics.dart';
+import 'package:pilll/auth/auth.dart';
+import 'package:pilll/database/database.dart';
+import 'package:pilll/service/user.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 
 Future<void> requestNotificationPermissions() async {

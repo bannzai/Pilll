@@ -1,6 +1,6 @@
-import 'package:Pilll/domain/calendar/date_range.dart';
-import 'package:Pilll/entity/weekday.dart';
-import 'package:Pilll/util/datetime/day.dart';
+import 'package:pilll/domain/calendar/date_range.dart';
+import 'package:pilll/entity/weekday.dart';
+import 'package:pilll/util/datetime/day.dart';
 
 class Calculator {
   final DateTime date;

@@ -1,10 +1,10 @@
-import 'package:Pilll/entity/pill_sheet.dart';
-import 'package:Pilll/components/atoms/color.dart';
-import 'package:Pilll/components/atoms/font.dart';
-import 'package:Pilll/components/atoms/text_color.dart';
-import 'package:Pilll/entity/pill_sheet_type.dart';
-import 'package:Pilll/state/pill_sheet.dart';
-import 'package:Pilll/util/formatter/date_time_formatter.dart';
+import 'package:pilll/entity/pill_sheet.dart';
+import 'package:pilll/components/atoms/color.dart';
+import 'package:pilll/components/atoms/font.dart';
+import 'package:pilll/components/atoms/text_color.dart';
+import 'package:pilll/entity/pill_sheet_type.dart';
+import 'package:pilll/state/pill_sheet.dart';
+import 'package:pilll/util/formatter/date_time_formatter.dart';
 import 'package:flutter/material.dart';
 
 class RecordTakenInformation extends StatelessWidget {

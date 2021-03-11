@@ -1,7 +1,7 @@
-import 'package:Pilll/components/atoms/color.dart';
-import 'package:Pilll/components/atoms/font.dart';
-import 'package:Pilll/components/atoms/text_color.dart';
-import 'package:Pilll/util/datetime/day.dart';
+import 'package:pilll/components/atoms/color.dart';
+import 'package:pilll/components/atoms/font.dart';
+import 'package:pilll/components/atoms/text_color.dart';
+import 'package:pilll/util/datetime/day.dart';
 import 'package:flutter/material.dart';
 
 class InformationForBeforeMigrate132 extends StatelessWidget {

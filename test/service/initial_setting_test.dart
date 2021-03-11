@@ -1,6 +1,6 @@
-import 'package:Pilll/entity/initial_setting.dart';
-import 'package:Pilll/entity/pill_sheet_type.dart';
-import 'package:Pilll/service/initial_setting.dart';
+import 'package:pilll/entity/initial_setting.dart';
+import 'package:pilll/entity/pill_sheet_type.dart';
+import 'package:pilll/service/initial_setting.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
 import 'package:shared_preferences/shared_preferences.dart';

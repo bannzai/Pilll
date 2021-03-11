@@ -1,4 +1,4 @@
-import 'package:Pilll/entity/user.dart';
+import 'package:pilll/entity/user.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'user.freezed.dart';
