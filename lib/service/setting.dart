@@ -8,7 +8,7 @@ import 'package:riverpod/riverpod.dart';
 
 abstract class SettingServiceInterface {
   Future<Setting> fetch();
-  Future<Setting> update(Setting setting);
+  Future<Setting> update(Setting? setting);
   Stream<Setting> subscribe();
 }
 
@@ -22,27 +22,27 @@ final userSettingProvider = FutureProvider((ref) async {
 });
 
 class SettingService extends SettingServiceInterface {
-  final DatabaseConnection _database;
+  final DatabaseConnection? _database;
   SettingService(this._database);
 
   Future<Setting> fetch() {
-    return _database.userReference().get().then((event) =>
-        Setting.fromJson(event.data()[UserFirestoreFieldKeys.settings]));
+    return _database!.userReference().get().then((event) =>
+        Setting.fromJson(event.data()![UserFirestoreFieldKeys.settings]));
   }
 
   Stream<Setting> subscribe() {
-    return _database
+    return _database!
         .userReference()
         .snapshots()
         .map((event) =>
-            Setting.fromJson(event.data()[UserFirestoreFieldKeys.settings]))
+            Setting.fromJson(event.data()![UserFirestoreFieldKeys.settings]))
         .where((event) => event != null);
   }
 
-  Future<Setting> update(Setting setting) {
-    return _database
+  Future<Setting> update(Setting? setting) {
+    return _database!
         .userReference()
-        .update({UserFirestoreFieldKeys.settings: setting.toJson()}).then(
+        .update({UserFirestoreFieldKeys.settings: setting!.toJson()}).then(
             (_) => setting);
   }
 }

@@ -5,23 +5,23 @@ import 'package:pilll/util/datetime/day.dart';
 import 'package:flutter/material.dart';
 
 class InformationForBeforeMigrate132 extends StatelessWidget {
-  final String salvagedOldStartTakenDate;
-  final String salvagedOldLastTakenDate;
+  final String? salvagedOldStartTakenDate;
+  final String? salvagedOldLastTakenDate;
 
   const InformationForBeforeMigrate132(
-      {Key key,
-      @required this.salvagedOldStartTakenDate,
-      @required this.salvagedOldLastTakenDate})
+      {Key? key,
+      required this.salvagedOldStartTakenDate,
+      required this.salvagedOldLastTakenDate})
       : super(key: key);
 
   int _latestPillNumber() {
-    final last = DateTime.parse(this.salvagedOldLastTakenDate);
-    final start = DateTime.parse(this.salvagedOldStartTakenDate);
+    final last = DateTime.parse(this.salvagedOldLastTakenDate!);
+    final start = DateTime.parse(this.salvagedOldStartTakenDate!);
     return last.difference(start).inDays % 28 + 1;
   }
 
   int _todayPillNumber() {
-    final start = DateTime.parse(this.salvagedOldStartTakenDate);
+    final start = DateTime.parse(this.salvagedOldStartTakenDate!);
     return today().difference(start).inDays % 28 + 1;
   }
 
@@ -97,8 +97,8 @@ class InformationForBeforeMigrate132 extends StatelessWidget {
 extension InformationForBeforeMigrate132Route
     on InformationForBeforeMigrate132 {
   static Route<dynamic> route(
-      {@required String salvagedOldStartTakenDate,
-      @required String salvagedOldLastTakenDate}) {
+      {required String? salvagedOldStartTakenDate,
+      required String? salvagedOldLastTakenDate}) {
     return MaterialPageRoute(
       settings: RouteSettings(name: "ModifingPillNumberPage"),
       builder: (_) => InformationForBeforeMigrate132(

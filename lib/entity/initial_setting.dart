@@ -12,18 +12,18 @@ abstract class InitialSettingModel implements _$InitialSettingModel {
   InitialSettingModel._();
   factory InitialSettingModel.initial({
     @Default(23)
-        int fromMenstruation,
+        required int fromMenstruation,
     @Default(4)
-        int durationMenstruation,
+        required int durationMenstruation,
     @Default([
       ReminderTime(hour: 21, minute: 0),
       ReminderTime(hour: 22, minute: 0),
     ])
-        List<ReminderTime> reminderTimes,
+        required List<ReminderTime> reminderTimes,
     @Default(false)
-        bool isOnReminder,
-    int todayPillNumber,
-    PillSheetType pillSheetType,
+        required bool isOnReminder,
+    int? todayPillNumber,
+    PillSheetType? pillSheetType,
   }) = _InitialSettingModel;
 
   Setting buildSetting() => Setting(
@@ -33,7 +33,7 @@ abstract class InitialSettingModel implements _$InitialSettingModel {
         reminderTimes: reminderTimes,
         isOnReminder: isOnReminder,
       );
-  PillSheetModel buildPillSheet() => todayPillNumber != null
+  PillSheetModel? buildPillSheet() => todayPillNumber != null
       ? PillSheetModel(
           beginingDate: _beginingDate(),
           lastTakenDate: _lastTakenDate(),
@@ -42,19 +42,19 @@ abstract class InitialSettingModel implements _$InitialSettingModel {
       : null;
 
   DateTime _beginingDate() {
-    return today().subtract(Duration(days: todayPillNumber - 1));
+    return today().subtract(Duration(days: todayPillNumber! - 1));
   }
 
-  DateTime _lastTakenDate() {
+  DateTime? _lastTakenDate() {
     return todayPillNumber == 1 ? null : today().subtract(Duration(days: 1));
   }
 
   PillSheetTypeInfo _typeInfo() {
     return PillSheetTypeInfo(
       pillSheetTypeReferencePath: pillSheetType.rawPath,
-      name: pillSheetType.fullName,
-      dosingPeriod: pillSheetType.dosingPeriod,
-      totalCount: pillSheetType.totalCount,
+      name: pillSheetType.fullName!,
+      dosingPeriod: pillSheetType.dosingPeriod!,
+      totalCount: pillSheetType.totalCount!,
     );
   }
 
@@ -63,7 +63,7 @@ abstract class InitialSettingModel implements _$InitialSettingModel {
     if (todayPillNumber == number) {
       return PillMarkType.selected;
     }
-    if (pillSheetType.dosingPeriod < number) {
+    if (pillSheetType.dosingPeriod! < number) {
       return pillSheetType == PillSheetType.pillsheet_21
           ? PillMarkType.rest
           : PillMarkType.fake;

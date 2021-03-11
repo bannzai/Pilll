@@ -27,7 +27,7 @@ extension WeekdayFunctions on Weekday {
       ..addAll(Weekday.values.sublist(0, firstWeekday.index));
   }
 
-  String weekdayString() {
+  String? weekdayString() {
     switch (this) {
       case Weekday.Sunday:
         return "日";
@@ -49,7 +49,7 @@ extension WeekdayFunctions on Weekday {
     }
   }
 
-  Color weekdayColor() {
+  Color? weekdayColor() {
     switch (this) {
       case Weekday.Sunday:
         return PilllColors.sunday;

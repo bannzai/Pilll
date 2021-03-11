@@ -11,18 +11,18 @@ class PillSheetTypeSelectPage extends StatelessWidget {
   final String title;
   final bool backButtonIsHidden;
   final void Function(PillSheetType type) selected;
-  final VoidCallback done;
+  final VoidCallback? done;
   final String doneButtonText;
-  final PillSheetType selectedPillSheetType;
+  final PillSheetType? selectedPillSheetType;
 
   const PillSheetTypeSelectPage({
-    Key key,
-    @required this.title,
-    @required this.backButtonIsHidden,
-    @required this.selected,
-    @required this.done,
-    @required this.doneButtonText,
-    @required this.selectedPillSheetType,
+    Key? key,
+    required this.title,
+    required this.backButtonIsHidden,
+    required this.selected,
+    required this.done,
+    required this.doneButtonText,
+    required this.selectedPillSheetType,
   }) : super(key: key);
 
   @override
@@ -92,12 +92,12 @@ class PillSheetTypeSelectPage extends StatelessWidget {
 
 extension PillSheetTypeSelectPageRoute on PillSheetTypeSelectPage {
   static Route<dynamic> route({
-    @required String title,
-    @required bool backButtonIsHidden,
-    @required void Function(PillSheetType type) selected,
-    @required VoidCallback done,
-    @required String doneButtonText,
-    @required PillSheetType selectedPillSheetType,
+    required String title,
+    required bool backButtonIsHidden,
+    required void Function(PillSheetType type) selected,
+    required VoidCallback? done,
+    required String doneButtonText,
+    required PillSheetType? selectedPillSheetType,
   }) {
     return MaterialPageRoute(
       settings: RouteSettings(name: "PillSheetTypeSelectPage"),

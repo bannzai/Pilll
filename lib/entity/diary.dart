@@ -34,7 +34,7 @@ abstract class Diary with _$Diary {
     "食欲不振",
   ];
 
-  String get id => "Diary_${DateTimeFormatter.diaryIdentifier(date)}";
+  String? get id => "Diary_${DateTimeFormatter.diaryIdentifier(date)}";
 
   @JsonSerializable(explicitToJson: true)
   factory Diary({
@@ -42,19 +42,19 @@ abstract class Diary with _$Diary {
       fromJson: TimestampConverter.timestampToDateTime,
       toJson: TimestampConverter.dateTimeToTimestamp,
     )
-    @required
+    required
         DateTime date,
-    PhysicalConditionStatus physicalConditionStatus,
-    @required
+    PhysicalConditionStatus? physicalConditionStatus,
+    required
         List<String> physicalConditions,
-    @required
+    required
         bool hasSex,
-    @required
+    required
         String memo,
   }) = _Diary;
 
   factory Diary.fromDate(DateTime date) =>
       Diary(date: date, memo: "", physicalConditions: [], hasSex: false);
   factory Diary.fromJson(Map<String, dynamic> json) => _$DiaryFromJson(json);
-  Map<String, dynamic> toJson() => _$_$_DiaryToJson(this);
+  Map<String, dynamic> toJson() => _$_$_DiaryToJson(this as _$_Diary);
 }

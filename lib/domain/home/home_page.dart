@@ -16,7 +16,7 @@ import 'package:flutter_svg/svg.dart';
 GlobalKey<_HomePageState> homeKey = GlobalKey();
 
 class HomePage extends StatefulWidget {
-  HomePage({@required Key key}) : super(key: key);
+  HomePage({required Key key}) : super(key: key);
 
   @override
   _HomePageState createState() => _HomePageState();
@@ -26,7 +26,7 @@ enum HomePageTabType { record, calendar, setting }
 
 class _HomePageState extends State<HomePage>
     with SingleTickerProviderStateMixin, RouteAware {
-  TabController _tabController;
+  TabController? _tabController;
   int _selectedIndex = 0;
   HomePageTabType get _selectedTab {
     return HomePageTabType.values[_selectedIndex];
@@ -37,7 +37,7 @@ class _HomePageState extends State<HomePage>
     super.initState();
     _tabController =
         TabController(length: 3, vsync: this, initialIndex: _selectedIndex);
-    _tabController.addListener(_handleTabSelection);
+    _tabController!.addListener(_handleTabSelection);
     auth().then((auth) {
       requestNotificationPermissions();
       SettingService(DatabaseConnection(auth.uid)).fetch().then((setting) {
@@ -71,19 +71,19 @@ class _HomePageState extends State<HomePage>
                 tabs: <Tab>[
                   Tab(
                     text: "ピル",
-                    icon: SvgPicture.asset(_tabController.index == 0
+                    icon: SvgPicture.asset(_tabController!.index == 0
                         ? "images/tab_icon_pill_enable.svg"
                         : "images/tab_icon_pill_disable.svg"),
                   ),
                   Tab(
                     text: DateTimeFormatter.slashYearAndMonth(today()),
-                    icon: SvgPicture.asset(_tabController.index == 1
+                    icon: SvgPicture.asset(_tabController!.index == 1
                         ? "images/tab_icon_calendar_enable.svg"
                         : "images/tab_icon_calendar_disable.svg"),
                   ),
                   Tab(
                     text: "設定",
-                    icon: SvgPicture.asset(_tabController.index == 2
+                    icon: SvgPicture.asset(_tabController!.index == 2
                         ? "images/tab_icon_setting_enable.svg"
                         : "images/tab_icon_setting_disable.svg"),
                   ),
@@ -107,8 +107,8 @@ class _HomePageState extends State<HomePage>
 
   void _handleTabSelection() {
     setState(() {
-      if (_selectedIndex != _tabController.index) {
-        _selectedIndex = _tabController.index;
+      if (_selectedIndex != _tabController!.index) {
+        _selectedIndex = _tabController!.index;
         _screenTracking();
       }
     });
@@ -118,7 +118,7 @@ class _HomePageState extends State<HomePage>
     if (_selectedTab == tab) {
       return;
     }
-    _tabController.animateTo(tab.index);
+    _tabController!.animateTo(tab.index);
   }
 
   @override
@@ -135,7 +135,7 @@ class _HomePageState extends State<HomePage>
 
   void _screenTracking() {
     analytics.setCurrentScreen(
-      screenName: "${HomePageTab.values[_tabController.index].screenName}",
+      screenName: "${HomePageTab.values[_tabController!.index].screenName}",
     );
   }
 }

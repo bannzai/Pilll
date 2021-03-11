@@ -57,7 +57,7 @@ class RecordPage extends HookWidget {
             showModalBottomSheet(
               context: context,
               builder: (BuildContext context) {
-                var selectedTodayPillNumber = currentPillSheet.todayPillNumber;
+                var selectedTodayPillNumber = currentPillSheet!.todayPillNumber;
                 return Column(
                   mainAxisAlignment: MainAxisAlignment.end,
                   mainAxisSize: MainAxisSize.min,
@@ -160,9 +160,9 @@ class RecordPage extends HookWidget {
           if (state.isInvalid)
             Align(
                 child:
-                    _empty(context, store, settingState.entity.pillSheetType)),
+                    _empty(context, store, settingState.entity!.pillSheetType)),
           if (!state.isInvalid) ...[
-            Align(child: _pillSheet(context, currentPillSheet, store)),
+            Align(child: _pillSheet(context, currentPillSheet!, store)),
             SizedBox(height: 40),
             if (currentPillSheet.allTaken)
               Align(child: _cancelTakeButton(currentPillSheet, store)),
@@ -220,12 +220,12 @@ class RecordPage extends HookWidget {
   }
 
   Widget _cancelTakeButton(
-      PillSheetModel pillSheet, PillSheetStateStore store) {
+      PillSheetModel? pillSheet, PillSheetStateStore store) {
     return TertiaryButton(
       text: "飲んでない",
       onPressed: () {
         analytics.logEvent(name: "cancel_taken_button_pressed", parameters: {
-          "last_taken_pill_number": pillSheet.lastTakenPillNumber,
+          "last_taken_pill_number": pillSheet!.lastTakenPillNumber,
           "today_pill_number": pillSheet.todayPillNumber,
         });
         _cancelTake(pillSheet, store);
@@ -254,7 +254,7 @@ class RecordPage extends HookWidget {
     if (pillSheet.todayPillNumber != pillSheet.lastTakenPillNumber) {
       return;
     }
-    store.take(pillSheet.lastTakenDate.subtract(Duration(days: 1)));
+    store.take(pillSheet.lastTakenDate!.subtract(Duration(days: 1)));
   }
 
   PillSheet _pillSheet(
@@ -292,7 +292,7 @@ class RecordPage extends HookWidget {
   }
 
   Widget _empty(BuildContext context, PillSheetStateStore store,
-      PillSheetType pillSheetType) {
+      PillSheetType? pillSheetType) {
     var progressing = false;
     return GestureDetector(
       child: SizedBox(
@@ -337,7 +337,7 @@ class RecordPage extends HookWidget {
   _requestInAppReview() {
     SharedPreferences.getInstance().then((store) async {
       final key = IntKey.totalPillCount;
-      int value = store.getInt(key);
+      int? value = store.getInt(key);
       if (value == null) {
         value = 0;
       }

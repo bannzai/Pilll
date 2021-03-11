@@ -5,12 +5,12 @@ import 'package:flutter/material.dart';
 
 class PrimaryButton extends StatelessWidget {
   final String text;
-  final Function() onPressed;
+  final Function()? onPressed;
 
   const PrimaryButton({
-    Key key,
-    @required this.onPressed,
-    @required this.text,
+    Key? key,
+    required this.onPressed,
+    required this.text,
   }) : super(key: key);
 
   Widget build(BuildContext context) {
@@ -27,12 +27,12 @@ class PrimaryButton extends StatelessWidget {
 
 class SecondaryButton extends StatelessWidget {
   final String text;
-  final Function() onPressed;
+  final Function()? onPressed;
 
   const SecondaryButton({
-    Key key,
-    @required this.onPressed,
-    @required this.text,
+    Key? key,
+    required this.onPressed,
+    required this.text,
   }) : super(key: key);
 
   Widget build(BuildContext context) {
@@ -45,12 +45,12 @@ class SecondaryButton extends StatelessWidget {
 
 class TertiaryButton extends StatelessWidget {
   final String text;
-  final Function() onPressed;
+  final Function()? onPressed;
 
   const TertiaryButton({
-    Key key,
-    @required this.onPressed,
-    @required this.text,
+    Key? key,
+    required this.onPressed,
+    required this.text,
   }) : super(key: key);
 
   Widget build(BuildContext context) {
@@ -69,12 +69,12 @@ class TertiaryButton extends StatelessWidget {
 
 class InconspicuousButton extends StatelessWidget {
   final String text;
-  final Function() onPressed;
+  final Function()? onPressed;
 
   const InconspicuousButton({
-    Key key,
-    @required this.onPressed,
-    @required this.text,
+    Key? key,
+    required this.onPressed,
+    required this.text,
   }) : super(key: key);
 
   Widget build(BuildContext context) {
