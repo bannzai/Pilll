@@ -1,7 +1,7 @@
 import 'package:Pilll/database/database.dart';
 import 'package:Pilll/entity/diary.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:riverpod/all.dart';
+import 'package:riverpod/riverpod.dart';
 
 abstract class DiariesServiceInterface {
   Future<List<Diary>> fetchListForMonth(DateTime dateTimeOfMonth);

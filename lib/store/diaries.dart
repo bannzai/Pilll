@@ -4,7 +4,7 @@ import 'package:Pilll/util/datetime/date_compare.dart';
 import 'package:Pilll/entity/diary.dart';
 import 'package:Pilll/service/diary.dart';
 import 'package:Pilll/state/diaries.dart';
-import 'package:riverpod/all.dart';
+import 'package:riverpod/riverpod.dart';
 
 final diariesStoreProvider = StateNotifierProvider(
     (ref) => DiariesStateStore(ref.watch(diaryServiceProvider)));
