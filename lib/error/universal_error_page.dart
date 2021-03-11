@@ -36,24 +36,24 @@ class UniversalErrorPage extends StatelessWidget {
                   style: FontType.assisting.merge(TextColorStyle.main)),
               SizedBox(height: 25),
               TextButton.icon(
-                textColor: PilllColors.primary,
                 icon: const Icon(
                   Icons.refresh,
                   size: 20,
                 ),
-                label: Text("画面を再読み込み", style: FontType.assisting),
+                label: Text("画面を再読み込み",
+                    style: FontType.assisting.merge(TextColorStyle.primary)),
                 onPressed: () {
                   analytics.logEvent(name: "reload_button_pressed");
                   rootKey.currentState.reloadRoot();
                 },
               ),
               TextButton.icon(
-                textColor: PilllColors.secondary,
                 icon: const Icon(
                   Icons.mail,
                   size: 20,
                 ),
-                label: Text("解決しない場合はこちら", style: FontType.assisting),
+                label: Text("解決しない場合はこちら",
+                    style: FontType.assisting.merge(TextColorStyle.white)),
                 onPressed: () {
                   analytics.logEvent(name: "problem_unresolved_button_pressed");
                   inquiry();
