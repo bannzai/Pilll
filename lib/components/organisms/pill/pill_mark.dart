@@ -47,7 +47,7 @@ class _PillMarkState extends State<PillMark> with TickerProviderStateMixin {
   @override
   Widget build(BuildContext context) {
     return Stack(
-      overflow: Overflow.visible,
+      clipBehavior: Clip.none,
       children: [
         PillMarkTypeFunctions.create(widget.isDone, widget.type),
         if (widget.hasRippleAnimation)
