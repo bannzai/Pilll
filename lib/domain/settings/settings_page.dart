@@ -221,11 +221,11 @@ class SettingsPage extends HookWidget {
               analytics.logEvent(
                 name: "did_select_toggle_reminder",
               );
-              Scaffold.of(context).hideCurrentSnackBar();
+              ScaffoldMessenger.of(context).hideCurrentSnackBar();
               settingStore
                   .modifyIsOnReminder(!settingState.entity.isOnReminder)
                   .then((state) {
-                Scaffold.of(context).showSnackBar(
+                ScaffoldMessenger.of(context).showSnackBar(
                   SnackBar(
                     duration: Duration(seconds: 1),
                     content: Text(
@@ -259,12 +259,12 @@ class SettingsPage extends HookWidget {
                 analytics.logEvent(
                   name: "toggle_notify_not_taken_duration",
                 );
-                Scaffold.of(context).hideCurrentSnackBar();
+                ScaffoldMessenger.of(context).hideCurrentSnackBar();
                 settingStore
                     .modifyIsOnNotifyInNotTakenDuration(
                         !settingState.entity.isOnNotifyInNotTakenDuration)
                     .then((state) {
-                  Scaffold.of(context).showSnackBar(
+                  ScaffoldMessenger.of(context).showSnackBar(
                     SnackBar(
                       duration: Duration(seconds: 1),
                       content: Text(
