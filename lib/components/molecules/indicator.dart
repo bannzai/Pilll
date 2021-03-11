@@ -1,5 +1,5 @@
-import 'package:Pilll/components/atoms/color.dart';
-import 'package:Pilll/domain/root/root.dart';
+import 'package:pilll/components/atoms/color.dart';
+import 'package:pilll/domain/root/root.dart';
 import 'package:flutter/material.dart';
 
 class Indicator extends StatelessWidget {

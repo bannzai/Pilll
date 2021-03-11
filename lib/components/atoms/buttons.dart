@@ -1,6 +1,6 @@
-import 'package:Pilll/components/atoms/button.dart';
-import 'package:Pilll/components/atoms/color.dart';
-import 'package:Pilll/components/atoms/text_color.dart';
+import 'package:pilll/components/atoms/button.dart';
+import 'package:pilll/components/atoms/color.dart';
+import 'package:pilll/components/atoms/text_color.dart';
 import 'package:flutter/material.dart';
 
 class PrimaryButton extends StatelessWidget {
@@ -59,7 +59,8 @@ class TertiaryButton extends StatelessWidget {
       height: 44,
       child: TextButton(
         style: TextButton.styleFrom(backgroundColor: PilllColors.gray),
-        child: Text(text, style: ButtonTextStyle.main.merge(TextColorStyle.white)),
+        child:
+            Text(text, style: ButtonTextStyle.main.merge(TextColorStyle.white)),
         onPressed: onPressed,
       ),
     );

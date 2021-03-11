@@ -1,6 +1,6 @@
-import 'package:Pilll/components/atoms/color.dart';
-import 'package:Pilll/components/atoms/font.dart';
-import 'package:Pilll/entity/weekday.dart';
+import 'package:pilll/components/atoms/color.dart';
+import 'package:pilll/components/atoms/font.dart';
+import 'package:pilll/entity/weekday.dart';
 import 'package:flutter/material.dart';
 
 class WeekdayBadge extends StatelessWidget {

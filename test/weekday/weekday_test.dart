@@ -1,4 +1,4 @@
-import 'package:Pilll/entity/weekday.dart';
+import 'package:pilll/entity/weekday.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 void main() {
