@@ -4,7 +4,7 @@ import 'package:Pilll/database/database.dart';
 import 'package:Pilll/entity/setting.dart';
 import 'package:Pilll/entity/user.dart';
 import 'package:Pilll/service/user.dart';
-import 'package:riverpod/all.dart';
+import 'package:riverpod/riverpod.dart';
 
 abstract class SettingServiceInterface {
   Future<Setting> fetch();

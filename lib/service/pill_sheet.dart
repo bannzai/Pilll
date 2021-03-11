@@ -2,7 +2,7 @@ import 'package:Pilll/database/database.dart';
 import 'package:Pilll/entity/firestore_timestamp_converter.dart';
 import 'package:Pilll/entity/pill_sheet.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:riverpod/all.dart';
+import 'package:riverpod/riverpod.dart';
 
 abstract class PillSheetServiceInterface {
   Future<PillSheetModel> fetchLast();
