@@ -1,7 +1,7 @@
 import 'package:Pilll/auth/auth.dart';
 import 'package:Pilll/entity/diary.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:hooks_riverpod/all.dart';
+import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 final userIDProvider = Provider<String>((ref) {
   final authInfo = ref.watch(authStateProvider);
