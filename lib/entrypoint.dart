@@ -1,13 +1,13 @@
 import 'dart:async';
 import 'dart:io';
 
-import 'package:Pilll/analytics.dart';
-import 'package:Pilll/components/atoms/color.dart';
-import 'package:Pilll/entity/user_error.dart';
-import 'package:Pilll/error/universal_error_page.dart';
-import 'package:Pilll/global_method_channel.dart';
-import 'package:Pilll/router/router.dart';
-import 'package:Pilll/util/environment.dart';
+import 'package:pilll/analytics.dart';
+import 'package:pilll/components/atoms/color.dart';
+import 'package:pilll/entity/user_error.dart';
+import 'package:pilll/error/universal_error_page.dart';
+import 'package:pilll/global_method_channel.dart';
+import 'package:pilll/router/router.dart';
+import 'package:pilll/util/environment.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_analytics/observer.dart';
 import 'package:firebase_core/firebase_core.dart';

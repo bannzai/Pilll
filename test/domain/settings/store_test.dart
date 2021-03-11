@@ -1,7 +1,7 @@
-import 'package:Pilll/entity/pill_sheet_type.dart';
-import 'package:Pilll/entity/setting.dart';
-import 'package:Pilll/state/setting.dart';
-import 'package:Pilll/store/setting.dart';
+import 'package:pilll/entity/pill_sheet_type.dart';
+import 'package:pilll/entity/setting.dart';
+import 'package:pilll/state/setting.dart';
+import 'package:pilll/store/setting.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
 import 'package:shared_preferences/shared_preferences.dart';
