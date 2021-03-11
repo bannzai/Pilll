@@ -1,5 +1,5 @@
-import 'package:pilll/entity/initial_setting.dart';
-import 'package:pilll/util/datetime/day.dart';
+import 'package:Pilll/entity/initial_setting.dart';
+import 'package:Pilll/util/datetime/day.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'initial_setting.freezed.dart';

@@ -1,4 +1,4 @@
-import 'package:pilll/entity/pill_sheet_type.dart';
+import 'package:Pilll/entity/pill_sheet_type.dart';
 import 'package:flutter/foundation.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:json_annotation/json_annotation.dart';

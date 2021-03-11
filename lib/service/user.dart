@@ -1,11 +1,11 @@
 import 'dart:io';
 
-import 'package:pilll/analytics.dart';
-import 'package:pilll/database/database.dart';
-import 'package:pilll/entity/package.dart';
-import 'package:pilll/entity/user.dart';
-import 'package:pilll/error_log.dart';
-import 'package:pilll/util/shared_preference/keys.dart';
+import 'package:Pilll/analytics.dart';
+import 'package:Pilll/database/database.dart';
+import 'package:Pilll/entity/package.dart';
+import 'package:Pilll/entity/user.dart';
+import 'package:Pilll/error_log.dart';
+import 'package:Pilll/util/shared_preference/keys.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart' as auth;
 import 'package:package_info/package_info.dart';

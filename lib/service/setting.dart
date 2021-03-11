@@ -1,9 +1,9 @@
 import 'dart:async';
 
-import 'package:pilll/database/database.dart';
-import 'package:pilll/entity/setting.dart';
-import 'package:pilll/entity/user.dart';
-import 'package:pilll/service/user.dart';
+import 'package:Pilll/database/database.dart';
+import 'package:Pilll/entity/setting.dart';
+import 'package:Pilll/entity/user.dart';
+import 'package:Pilll/service/user.dart';
 import 'package:riverpod/riverpod.dart';
 
 abstract class SettingServiceInterface {
