@@ -19,7 +19,7 @@ abstract class PillSheetFirestoreKey {
 
 @freezed
 abstract class PillSheetTypeInfo with _$PillSheetTypeInfo {
-  @JsonSerializable(nullable: false, explicitToJson: true)
+  @JsonSerializable(explicitToJson: true)
   factory PillSheetTypeInfo({
     @required String pillSheetTypeReferencePath,
     @required String name,
@@ -40,15 +40,14 @@ abstract class PillSheetModel implements _$PillSheetModel {
       PillSheetTypeFunctions.fromRawPath(typeInfo.pillSheetTypeReferencePath);
 
   PillSheetModel._();
-  @JsonSerializable(nullable: true, explicitToJson: true)
+  @JsonSerializable(explicitToJson: true)
   factory PillSheetModel({
     @JsonKey(includeIfNull: false, toJson: toNull)
         String id,
-    @JsonKey(nullable: false)
+    @JsonKey()
     @required
         PillSheetTypeInfo typeInfo,
     @JsonKey(
-      nullable: false,
       fromJson: TimestampConverter.timestampToDateTime,
       toJson: TimestampConverter.dateTimeToTimestamp,
     )
