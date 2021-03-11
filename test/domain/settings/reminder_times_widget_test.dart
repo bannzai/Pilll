@@ -1,8 +1,8 @@
-import 'package:Pilll/entity/pill_sheet_type.dart';
-import 'package:Pilll/entity/setting.dart';
-import 'package:Pilll/domain/settings/reminder_times_page.dart';
-import 'package:Pilll/store/setting.dart';
-import 'package:Pilll/util/environment.dart';
+import 'package:pilll/entity/pill_sheet_type.dart';
+import 'package:pilll/entity/setting.dart';
+import 'package:pilll/domain/settings/reminder_times_page.dart';
+import 'package:pilll/store/setting.dart';
+import 'package:pilll/util/environment.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';

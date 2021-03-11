@@ -1,10 +1,10 @@
 import 'dart:async';
 
-import 'package:Pilll/entity/pill_sheet_type.dart';
-import 'package:Pilll/entity/setting.dart';
-import 'package:Pilll/service/setting.dart';
-import 'package:Pilll/state/setting.dart';
-import 'package:Pilll/util/shared_preference/keys.dart';
+import 'package:pilll/entity/pill_sheet_type.dart';
+import 'package:pilll/entity/setting.dart';
+import 'package:pilll/service/setting.dart';
+import 'package:pilll/state/setting.dart';
+import 'package:pilll/util/shared_preference/keys.dart';
 import 'package:riverpod/riverpod.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
