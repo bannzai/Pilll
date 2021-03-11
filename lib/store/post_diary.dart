@@ -1,7 +1,7 @@
 import 'package:Pilll/entity/diary.dart';
 import 'package:Pilll/service/diary.dart';
 import 'package:Pilll/state/diary.dart';
-import 'package:hooks_riverpod/all.dart';
+import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 class PostDiaryStore extends StateNotifier<DiaryState> {
   final DiaryService _service;

@@ -16,7 +16,7 @@ import 'package:Pilll/components/atoms/text_color.dart';
 import 'package:Pilll/util/datetime/day.dart' as utility;
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
-import 'package:hooks_riverpod/all.dart';
+import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 abstract class CalendarConstants {
   static final int weekdayCount = 7;

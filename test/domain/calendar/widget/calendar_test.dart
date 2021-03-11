@@ -5,7 +5,7 @@ import 'package:Pilll/domain/calendar/date_range.dart';
 import 'package:Pilll/entity/diary.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:hooks_riverpod/all.dart';
+import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 void main() {

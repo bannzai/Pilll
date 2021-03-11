@@ -4,7 +4,7 @@ import 'package:Pilll/domain/root/root.dart';
 import 'package:Pilll/service/push_notification.dart';
 import 'package:Pilll/util/shared_preference/keys.dart';
 import 'package:flutter/material.dart';
-import 'package:hooks_riverpod/all.dart';
+import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class AppRouter {
