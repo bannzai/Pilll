@@ -11,13 +11,13 @@ abstract class ReminderTime implements _$ReminderTime {
   const ReminderTime._();
   @JsonSerializable(explicitToJson: true)
   const factory ReminderTime({
-    @required int hour,
-    @required int minute,
+    required int hour,
+    required int minute,
   }) = _ReminderTime;
 
   factory ReminderTime.fromJson(Map<String, dynamic> json) =>
       _$ReminderTimeFromJson(json);
-  Map<String, dynamic> toJson() => _$_$_ReminderTimeToJson(this);
+  Map<String, dynamic> toJson() => _$_$_ReminderTimeToJson(this as _$_ReminderTime);
 
   DateTime dateTime() {
     var t = DateTime.now().toLocal();
@@ -34,18 +34,18 @@ abstract class Setting implements _$Setting {
   Setting._();
   @JsonSerializable(explicitToJson: true)
   factory Setting({
-    @required String pillSheetTypeRawPath,
-    @required int pillNumberForFromMenstruation,
-    @required int durationMenstruation,
-    @required List<ReminderTime> reminderTimes,
-    @required @JsonSerializable(explicitToJson: true) bool isOnReminder,
-    @Default(true) bool isOnNotifyInNotTakenDuration,
+    required String pillSheetTypeRawPath,
+    required int pillNumberForFromMenstruation,
+    required int durationMenstruation,
+    required List<ReminderTime> reminderTimes,
+    @JsonSerializable(explicitToJson: true) required bool isOnReminder,
+    @Default(true) required bool isOnNotifyInNotTakenDuration,
   }) = _Setting;
 
   factory Setting.fromJson(Map<String, dynamic> json) =>
       _$SettingFromJson(json);
-  Map<String, dynamic> toJson() => _$_$_SettingToJson(this);
+  Map<String, dynamic> toJson() => _$_$_SettingToJson(this as _$_Setting);
 
-  PillSheetType get pillSheetType =>
+  PillSheetType? get pillSheetType =>
       PillSheetTypeFunctions.fromRawPath(pillSheetTypeRawPath);
 }

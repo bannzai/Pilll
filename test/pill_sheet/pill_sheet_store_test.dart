@@ -24,7 +24,7 @@ void main() {
       todayRepository = mockTodayRepository;
       when(todayRepository.today()).thenReturn(DateTime.parse("2020-11-22"));
 
-      final pillSheetEntity =
+      final PillSheetModel? pillSheetEntity =
           PillSheetModel.create(PillSheetType.pillsheet_21).copyWith(
         beginingDate: DateTime.parse("2020-11-22"),
         createdAt: DateTime.parse("2020-11-22"),
@@ -39,7 +39,7 @@ void main() {
 
       final store = PillSheetStateStore(service);
       await Future.delayed(Duration(milliseconds: 100));
-      expect(state.entity.todayPillNumber, equals(1));
+      expect(state.entity!.todayPillNumber, equals(1));
 
       final expected = DateTime.parse("2020-11-13");
       final actual = store.calcBeginingDateFromNextTodayPillNumber(10);
@@ -51,7 +51,7 @@ void main() {
     todayRepository = mockTodayRepository;
     when(todayRepository.today()).thenReturn(DateTime.parse("2020-11-23"));
 
-    final pillSheetEntity =
+    final PillSheetModel? pillSheetEntity =
         PillSheetModel.create(PillSheetType.pillsheet_21).copyWith(
       beginingDate: DateTime.parse("2020-11-21"),
       createdAt: DateTime.parse("2020-11-21"),
@@ -66,7 +66,7 @@ void main() {
 
     final store = PillSheetStateStore(service);
     await Future.delayed(Duration(milliseconds: 100));
-    expect(state.entity.todayPillNumber, equals(3));
+    expect(state.entity!.todayPillNumber, equals(3));
 
     final expected = DateTime.parse("2020-11-22");
     final actual = store.calcBeginingDateFromNextTodayPillNumber(2);
@@ -78,7 +78,7 @@ void main() {
       todayRepository = mockTodayRepository;
       when(todayRepository.today()).thenReturn(DateTime.parse("2020-11-23"));
 
-      final pillSheetEntity =
+      final PillSheetModel? pillSheetEntity =
           PillSheetModel.create(PillSheetType.pillsheet_21).copyWith(
         beginingDate: DateTime.parse("2020-11-21"),
         lastTakenDate: DateTime.parse("2020-11-23"),
@@ -94,7 +94,7 @@ void main() {
 
       final store = PillSheetStateStore(service);
       await Future.delayed(Duration(milliseconds: 100));
-      expect(state.entity.allTaken, isTrue);
+      expect(state.entity!.allTaken, isTrue);
       expect(store.markFor(1), PillMarkType.done);
       expect(store.markFor(2), PillMarkType.done);
       expect(store.markFor(3), PillMarkType.done);
@@ -105,7 +105,7 @@ void main() {
       todayRepository = mockTodayRepository;
       when(todayRepository.today()).thenReturn(DateTime.parse("2020-11-23"));
 
-      final pillSheetEntity =
+      final PillSheetModel? pillSheetEntity =
           PillSheetModel.create(PillSheetType.pillsheet_21).copyWith(
         beginingDate: DateTime.parse("2020-11-21"),
         lastTakenDate: DateTime.parse("2020-11-22"),
@@ -121,7 +121,7 @@ void main() {
 
       final store = PillSheetStateStore(service);
       await Future.delayed(Duration(milliseconds: 100));
-      expect(state.entity.allTaken, isFalse);
+      expect(state.entity!.allTaken, isFalse);
       expect(store.markFor(1), PillMarkType.done);
       expect(store.markFor(2), PillMarkType.done);
       expect(store.markFor(3), PillMarkType.normal);
@@ -150,8 +150,8 @@ void main() {
 
       final store = PillSheetStateStore(service);
       await Future.delayed(Duration(milliseconds: 100));
-      expect(state.entity.allTaken, isTrue);
-      for (int i = 1; i <= pillSheetEntity.pillSheetType.totalCount; i++) {
+      expect(state.entity!.allTaken, isTrue);
+      for (int i = 1; i <= pillSheetEntity.pillSheetType.totalCount!; i++) {
         expect(store.shouldPillMarkAnimation(i), isFalse);
       }
     });
@@ -160,7 +160,7 @@ void main() {
       todayRepository = mockTodayRepository;
       when(todayRepository.today()).thenReturn(DateTime.parse("2020-11-23"));
 
-      final pillSheetEntity =
+      final PillSheetModel? pillSheetEntity =
           PillSheetModel.create(PillSheetType.pillsheet_21).copyWith(
         beginingDate: DateTime.parse("2020-11-21"),
         lastTakenDate: DateTime.parse("2020-11-22"),
@@ -176,7 +176,7 @@ void main() {
 
       final store = PillSheetStateStore(service);
       await Future.delayed(Duration(milliseconds: 100));
-      expect(state.entity.allTaken, isFalse);
+      expect(state.entity!.allTaken, isFalse);
       expect(store.shouldPillMarkAnimation(3), isTrue);
     });
   });

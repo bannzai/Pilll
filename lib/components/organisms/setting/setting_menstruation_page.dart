@@ -17,30 +17,30 @@ class SettingMenstruationPageModel {
   int selectedDurationMenstruation;
 
   SettingMenstruationPageModel({
-    @required this.selectedFromMenstruation,
-    @required this.selectedDurationMenstruation,
+    required this.selectedFromMenstruation,
+    required this.selectedDurationMenstruation,
   });
 }
 
 class SettingMenstruationPage extends StatefulWidget {
   final String title;
   // NOTE: If done and skip is null, button is hidden
-  final String doneText;
-  final VoidCallback done;
-  final int pillSheetTotalCount;
+  final String? doneText;
+  final VoidCallback? done;
+  final int? pillSheetTotalCount;
   final SettingMenstruationPageModel model;
   final void Function(int from) fromMenstructionDidDecide;
   final void Function(int duration) durationMenstructionDidDecide;
 
   const SettingMenstruationPage({
-    Key key,
-    @required this.title,
-    @required this.doneText,
-    @required this.done,
-    @required this.pillSheetTotalCount,
-    @required this.model,
-    @required this.fromMenstructionDidDecide,
-    @required this.durationMenstructionDidDecide,
+    Key? key,
+    required this.title,
+    required this.doneText,
+    required this.done,
+    required this.pillSheetTotalCount,
+    required this.model,
+    required this.fromMenstructionDidDecide,
+    required this.durationMenstructionDidDecide,
   })  : assert(model != null),
         super(key: key);
 
@@ -120,7 +120,7 @@ class _SettingMenstruationPageState extends State<SettingMenstruationPage> {
                 Spacer(),
                 if (this.widget.done != null) ...[
                   PrimaryButton(
-                    text: this.widget.doneText,
+                    text: this.widget.doneText!,
                     onPressed: !canNext(context) ? null : this.widget.done,
                   ),
                   SizedBox(height: 35),
@@ -205,7 +205,7 @@ class _SettingMenstruationPageState extends State<SettingMenstruationPage> {
                 child: CupertinoPicker(
                   itemExtent: 40,
                   children: List.generate(
-                          this.widget.pillSheetTotalCount, (index) => index + 1)
+                          this.widget.pillSheetTotalCount!, (index) => index + 1)
                       .map((number) => number.toString())
                       .map(_pickerItem)
                       .toList(),
@@ -284,13 +284,13 @@ class _SettingMenstruationPageState extends State<SettingMenstruationPage> {
 
 extension SettingMenstruationPageRoute on SettingMenstruationPage {
   static Route<dynamic> route({
-    @required String title,
-    @required String doneText,
-    @required VoidCallback done,
-    @required int pillSheetTotalCount,
-    @required SettingMenstruationPageModel model,
-    @required void Function(int from) fromMenstructionDidDecide,
-    @required void Function(int duration) durationMenstructionDidDecide,
+    required String title,
+    required String? doneText,
+    required VoidCallback? done,
+    required int? pillSheetTotalCount,
+    required SettingMenstruationPageModel model,
+    required void Function(int from) fromMenstructionDidDecide,
+    required void Function(int duration) durationMenstructionDidDecide,
   }) {
     return MaterialPageRoute(
       settings: RouteSettings(name: "SettingMenstruationPage"),

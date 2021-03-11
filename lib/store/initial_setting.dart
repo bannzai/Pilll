@@ -7,7 +7,7 @@ import 'package:riverpod/riverpod.dart';
 final initialSettingStoreProvider = StateNotifierProvider((ref) =>
     InitialSettingStateStore(ref.watch(initialSettingServiceProvider)));
 
-class InitialSettingStateStore extends StateNotifier<InitialSettingState> {
+class InitialSettingStateStore extends StateNotifier<InitialSettingState?> {
   final InitialSettingServiceInterface _service;
   InitialSettingStateStore(this._service)
       : super(
@@ -16,7 +16,7 @@ class InitialSettingStateStore extends StateNotifier<InitialSettingState> {
           ),
         );
 
-  void modify(InitialSettingModel Function(InitialSettingModel model) closure) {
+  void modify(InitialSettingModel? Function(InitialSettingModel model) closure) {
     state = state.copyWith(entity: closure(state.entity));
   }
 
@@ -30,7 +30,7 @@ class InitialSettingStateStore extends StateNotifier<InitialSettingState> {
     modify((model) => model.copyWith(reminderTimes: copied));
   }
 
-  Future<void> register(InitialSettingModel initialSetting) {
+  Future<void> register(InitialSettingModel? initialSetting) {
     return _service.register(initialSetting);
   }
 }
