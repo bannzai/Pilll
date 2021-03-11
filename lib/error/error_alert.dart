@@ -1,6 +1,6 @@
-import 'package:pilll/components/atoms/buttons.dart';
-import 'package:pilll/components/atoms/font.dart';
-import 'package:pilll/components/atoms/text_color.dart';
+import 'package:Pilll/components/atoms/buttons.dart';
+import 'package:Pilll/components/atoms/font.dart';
+import 'package:Pilll/components/atoms/text_color.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 

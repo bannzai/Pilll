@@ -1,7 +1,7 @@
-import 'package:pilll/entity/initial_setting.dart';
-import 'package:pilll/entity/setting.dart';
-import 'package:pilll/service/initial_setting.dart';
-import 'package:pilll/state/initial_setting.dart';
+import 'package:Pilll/entity/initial_setting.dart';
+import 'package:Pilll/entity/setting.dart';
+import 'package:Pilll/service/initial_setting.dart';
+import 'package:Pilll/state/initial_setting.dart';
 import 'package:riverpod/riverpod.dart';
 
 final initialSettingStoreProvider = StateNotifierProvider((ref) =>

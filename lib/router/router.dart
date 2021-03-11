@@ -1,8 +1,8 @@
-import 'package:pilll/domain/initial_setting/initial_setting_1_page.dart';
-import 'package:pilll/domain/home/home_page.dart';
-import 'package:pilll/domain/root/root.dart';
-import 'package:pilll/service/push_notification.dart';
-import 'package:pilll/util/shared_preference/keys.dart';
+import 'package:Pilll/domain/initial_setting/initial_setting_1_page.dart';
+import 'package:Pilll/domain/home/home_page.dart';
+import 'package:Pilll/domain/root/root.dart';
+import 'package:Pilll/service/push_notification.dart';
+import 'package:Pilll/util/shared_preference/keys.dart';
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:shared_preferences/shared_preferences.dart';

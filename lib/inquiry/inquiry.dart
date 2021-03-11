@@ -1,10 +1,10 @@
-import 'package:pilll/auth/auth.dart';
-import 'package:pilll/database/database.dart';
-import 'package:pilll/entity/pill_sheet.dart';
-import 'package:pilll/entity/setting.dart';
-import 'package:pilll/service/pill_sheet.dart';
-import 'package:pilll/service/setting.dart';
-import 'package:pilll/util/environment.dart';
+import 'package:Pilll/auth/auth.dart';
+import 'package:Pilll/database/database.dart';
+import 'package:Pilll/entity/pill_sheet.dart';
+import 'package:Pilll/entity/setting.dart';
+import 'package:Pilll/service/pill_sheet.dart';
+import 'package:Pilll/service/setting.dart';
+import 'package:Pilll/util/environment.dart';
 import 'package:package_info/package_info.dart';
 import 'package:url_launcher/url_launcher.dart';
 
