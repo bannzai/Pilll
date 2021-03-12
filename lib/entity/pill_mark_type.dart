@@ -45,8 +45,7 @@ extension PillMarkTypeFunctions on PillMarkType {
               case PillMarkType.done:
                 return isDone ? _checkImage() : null;
               default:
-                assert(false);
-                return null;
+                throw ArgumentError.notNull("");
             }
           }(),
         ),
@@ -64,8 +63,7 @@ extension PillMarkTypeFunctions on PillMarkType {
               case PillMarkType.done:
                 return PilllColors.lightGray;
               default:
-                assert(false);
-                return null;
+                throw ArgumentError.notNull("");
             }
           }(),
           shape: BoxShape.circle,

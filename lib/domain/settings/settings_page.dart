@@ -45,7 +45,8 @@ class _TransactionModifier {
     final pillSheetState = reader(pillSheetStoreProvider.state);
     final settingState = reader(settingStoreProvider.state);
     assert(pillSheetState.entity!.documentID != null);
-    return _database!.transaction((transaction) {
+    return _database!
+        .transaction((transaction) {
       transaction.update(
           _database!.pillSheetReference(pillSheetState.entity!.documentID!), {
         PillSheetFirestoreKey.typeInfo: type.typeInfo.toJson(),
@@ -56,7 +57,8 @@ class _TransactionModifier {
             .toJson(),
       });
       return;
-    } as Future<_> Function(Transaction)).then((_) {
+    } as Future<_> Function(Transaction))
+        .then((_) {
       pillSheetStore
           .update(pillSheetState.entity!.copyWith(typeInfo: type.typeInfo));
       settingStore.update(
@@ -65,8 +67,9 @@ class _TransactionModifier {
   }
 }
 
-final transactionModifierProvider = Provider((ref) =>
-    _TransactionModifier(ref.watch(databaseProvider), reader: ref.read as T Function<T>(RootProvider<Object, T>)));
+final transactionModifierProvider = Provider((ref) => _TransactionModifier(
+    ref.watch(databaseProvider),
+    reader: ref.read as T Function<T>(RootProvider<Object, T>)));
 
 class SettingsPage extends HookWidget {
   static final int itemCount = SettingSection.values.length + 1;
@@ -251,7 +254,8 @@ class SettingsPage extends HookWidget {
           if (!pillSheetState.isInvalid &&
               !pillSheetState.entity!.pillSheetType.isNotExistsNotTakenDuration)
             SettingsListSwitchRowModel(
-              title: "${pillSheetState.entity!.pillSheetType.notTakenWord}期間の通知",
+              title:
+                  "${pillSheetState.entity!.pillSheetType.notTakenWord}期間の通知",
               subtitle:
                   "通知オフの場合は、${pillSheetState.entity!.pillSheetType.notTakenWord}期間の服用記録も自動で付けられます",
               value: settingState.entity!.isOnNotifyInNotTakenDuration,
@@ -349,8 +353,7 @@ class SettingsPage extends HookWidget {
               }),
         ];
       default:
-        assert(false);
-        return null;
+        throw ArgumentError.notNull("");
     }
   }
 

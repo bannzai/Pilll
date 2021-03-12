@@ -39,8 +39,7 @@ extension CalendarHelpPageRowFunctions on CalendarHelpPageRow {
       //     "images/hospital.svg",
       //   );
       default:
-        assert(false);
-        return null;
+        throw ArgumentError.notNull("");
     }
   }
 
@@ -72,8 +71,7 @@ extension CalendarHelpPageRowFunctions on CalendarHelpPageRow {
       //     style: FontType.row.merge(TextColorStyle.lightGray2),
       //   );
       default:
-        assert(false);
-        return null;
+        throw ArgumentError.notNull("");
     }
   }
 }
