@@ -13,17 +13,17 @@ abstract class PillSheetServiceInterface {
 }
 
 final pillSheetServiceProvider = Provider<PillSheetServiceInterface>(
-    (ref) => PillSheetService(ref.watch(databaseProvider)));
+    (ref) => PillSheetService(ref.watch(databaseProvider as AlwaysAliveProviderBase<Object?, DatabaseConnection>)));
 
 class PillSheetService extends PillSheetServiceInterface {
   final DatabaseConnection _database;
 
-  PillSheetModel _filterForLatestPillSheet(QuerySnapshot snapshot) {
+  PillSheetModel? _filterForLatestPillSheet(QuerySnapshot snapshot) {
     if (snapshot.docs.isEmpty) return null;
     if (!snapshot.docs.last.exists) return null;
     var document = snapshot.docs.last;
 
-    var data = document.data();
+    var data = document.data()!;
     data["id"] = document.id;
     var pillSheetModel = PillSheetModel.fromJson(data);
 
@@ -42,7 +42,7 @@ class PillSheetService extends PillSheetServiceInterface {
   Future<PillSheetModel> fetchLast() {
     return _queryOfFetchLastPillSheet()
         .get()
-        .then((event) => _filterForLatestPillSheet(event));
+        .then((event) => _filterForLatestPillSheet(event)!);
   }
 
   @override
@@ -60,7 +60,7 @@ class PillSheetService extends PillSheetServiceInterface {
 
   Future<void> delete(PillSheetModel pillSheet) {
     if (pillSheet == null) throw PillSheetIsNotExists();
-    return _database.pillSheetReference(pillSheet.documentID).update({
+    return _database.pillSheetReference(pillSheet.documentID!).update({
       PillSheetFirestoreKey.deletedAt:
           TimestampConverter.dateTimeToTimestamp(DateTime.now())
     });
@@ -70,7 +70,7 @@ class PillSheetService extends PillSheetServiceInterface {
     var json = pillSheet.toJson();
     json.remove("id");
     return _database
-        .pillSheetReference(pillSheet.documentID)
+        .pillSheetReference(pillSheet.documentID!)
         .update(json)
         .then((_) => pillSheet);
   }
@@ -78,7 +78,7 @@ class PillSheetService extends PillSheetServiceInterface {
   Stream<PillSheetModel> subscribeForLatestPillSheet() {
     return _queryOfFetchLastPillSheet()
         .snapshots()
-        .map((event) => _filterForLatestPillSheet(event));
+        .map(((event) => _filterForLatestPillSheet(event)!) as PillSheetModel Function(QuerySnapshot));
   }
 }
 

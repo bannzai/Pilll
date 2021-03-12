@@ -12,7 +12,7 @@ abstract class DiariesServiceInterface {
 }
 
 final diaryServiceProvider = Provider<DiariesServiceInterface>(
-    (ref) => DiaryService(ref.watch(databaseProvider)));
+    (ref) => DiaryService(ref.watch(databaseProvider as AlwaysAliveProviderBase<Object?, DatabaseConnection>)));
 
 int sortDiary(Diary a, Diary b) => a.date.compareTo(b.date);
 List<Diary> sortedDiaries(List<Diary> diaries) {
@@ -37,7 +37,7 @@ class DiaryService extends DiariesServiceInterface {
         .orderBy(DiaryFirestoreKey.date)
         .get()
         .then((event) =>
-            event.docs.map((doc) => Diary.fromJson(doc.data())).toList());
+            event.docs.map((doc) => Diary.fromJson(doc.data()!)).toList());
   }
 
   @override
@@ -67,7 +67,7 @@ class DiaryService extends DiariesServiceInterface {
         .diariesReference()
         .snapshots()
         .map((event) =>
-            event.docs.map((doc) => Diary.fromJson(doc.data())).toList())
+            event.docs.map((doc) => Diary.fromJson(doc.data()!)).toList())
         .map((diaries) => sortedDiaries(diaries));
   }
 }

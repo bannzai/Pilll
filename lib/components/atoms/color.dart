@@ -9,7 +9,7 @@ extension HexColor on Color {
     return Color(int.parse(buffer.toString(), radix: 16));
   }
 
-  static String toHex({Color color, bool leadingHashSign = true}) =>
+  static String toHex({required Color color, bool leadingHashSign = true}) =>
       '${leadingHashSign ? '#' : ''}'
       '${color.alpha.toRadixString(16).padLeft(2, '0')}'
       '${color.red.toRadixString(16).padLeft(2, '0')}'

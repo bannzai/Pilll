@@ -15,7 +15,7 @@ class DiariesStateStore extends StateNotifier<DiariesState> {
     _subscribe();
   }
 
-  StreamSubscription canceller;
+  StreamSubscription? canceller;
   void _subscribe() {
     canceller?.cancel();
     canceller = _service.subscribe().listen((entities) {

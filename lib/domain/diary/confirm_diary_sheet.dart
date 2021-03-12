@@ -14,11 +14,11 @@ import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
-final _confirmDiaryProvider = StateNotifierProvider.autoDispose
+final AutoDisposeStateNotifierProviderFamily<PostDiaryStore, DateTime>? _confirmDiaryProvider = StateNotifierProvider.autoDispose
     .family<PostDiaryStore, DateTime>((ref, date) {
   final diary = ref.watch(diariesStoreProvider.state).diaryForDateTime(date);
   final service = ref.watch(diaryServiceProvider);
-  return PostDiaryStore(service, DiaryState(entity: diary.copyWith()));
+  return PostDiaryStore(service as DiaryService, DiaryState(entity: diary.copyWith()));
 });
 
 class ConfirmDiarySheet extends HookWidget {
@@ -27,7 +27,7 @@ class ConfirmDiarySheet extends HookWidget {
   ConfirmDiarySheet(this.date);
   @override
   Widget build(BuildContext context) {
-    final state = useProvider(_confirmDiaryProvider(date).state);
+    final state = useProvider(_confirmDiaryProvider!(date).state);
     return Container(
       decoration: BoxDecoration(
         borderRadius: BorderRadius.only(
@@ -45,7 +45,7 @@ class ConfirmDiarySheet extends HookWidget {
             ...[
               if (state.hasPhysicalConditionStatus()) _physicalCondition(),
               _physicalConditionDetails(),
-              if (state.entity.hasSex) _sex(),
+              if (state.entity!.hasSex) _sex(),
               _memo(),
             ].map((e) => _withContentSpacer(e)),
           ]),
@@ -60,7 +60,7 @@ class ConfirmDiarySheet extends HookWidget {
   }
 
   Widget _title(BuildContext context) {
-    final store = useProvider(_confirmDiaryProvider(date));
+    final store = useProvider(_confirmDiaryProvider!(date));
     return Row(
       mainAxisSize: MainAxisSize.max,
       children: [
@@ -92,7 +92,7 @@ class ConfirmDiarySheet extends HookWidget {
     );
   }
 
-  Widget _physicalConditionImage(PhysicalConditionStatus status) {
+  Widget _physicalConditionImage(PhysicalConditionStatus? status) {
     switch (status) {
       case PhysicalConditionStatus.fine:
         return SvgPicture.asset("images/laugh.svg",
@@ -106,18 +106,18 @@ class ConfirmDiarySheet extends HookWidget {
   }
 
   Widget _physicalCondition() {
-    final state = useProvider(_confirmDiaryProvider(date).state);
+    final state = useProvider(_confirmDiaryProvider!(date).state);
     return Row(
       children: [
         Text("体調", style: FontType.componentTitle.merge(TextColorStyle.black)),
         SizedBox(width: 16),
-        _physicalConditionImage(state.entity.physicalConditionStatus),
+        _physicalConditionImage(state.entity!.physicalConditionStatus),
       ],
     );
   }
 
   Widget _physicalConditionDetails() {
-    final diary = useProvider(_confirmDiaryProvider(date).state).entity;
+    final diary = useProvider(_confirmDiaryProvider!(date).state).entity!;
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -149,7 +149,7 @@ class ConfirmDiarySheet extends HookWidget {
   }
 
   Widget _memo() {
-    final diary = useProvider(_confirmDiaryProvider(date).state).entity;
+    final diary = useProvider(_confirmDiaryProvider!(date).state).entity!;
     return Text(
       diary.memo,
       maxLines: 2,
@@ -160,7 +160,7 @@ class ConfirmDiarySheet extends HookWidget {
 class ConfirmDeleteDiary extends StatelessWidget {
   final Function() onDelete;
 
-  const ConfirmDeleteDiary({Key key, @required this.onDelete})
+  const ConfirmDeleteDiary({Key? key, required this.onDelete})
       : super(key: key);
   @override
   Widget build(BuildContext context) {

@@ -10,7 +10,7 @@ abstract class InitialSettingState implements _$InitialSettingState {
   factory InitialSettingState(InitialSettingModel entity) =
       _InitialSettingState;
 
-  DateTime reminderTimeOrDefault(int index) {
+  DateTime? reminderTimeOrDefault(int index) {
     if (index < entity.reminderTimes.length) {
       return entity.reminderDateTime(index);
     }

@@ -13,7 +13,7 @@ abstract class SettingServiceInterface {
 }
 
 final settingServiceProvider =
-    Provider((ref) => SettingService(ref.watch(databaseProvider)));
+    Provider((ref) => SettingService(ref.watch(databaseProvider as AlwaysAliveProviderBase<Object?, DatabaseConnection>)));
 
 // ignore: top_level_function_literal_block
 final userSettingProvider = FutureProvider((ref) async {
@@ -27,7 +27,7 @@ class SettingService extends SettingServiceInterface {
 
   Future<Setting> fetch() {
     return _database.userReference().get().then((event) =>
-        Setting.fromJson(event.data()[UserFirestoreFieldKeys.settings]));
+        Setting.fromJson(event.data()![UserFirestoreFieldKeys.settings]));
   }
 
   Stream<Setting> subscribe() {
@@ -35,7 +35,7 @@ class SettingService extends SettingServiceInterface {
         .userReference()
         .snapshots()
         .map((event) =>
-            Setting.fromJson(event.data()[UserFirestoreFieldKeys.settings]))
+            Setting.fromJson(event.data()![UserFirestoreFieldKeys.settings]))
         .where((event) => event != null);
   }
 

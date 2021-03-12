@@ -3,9 +3,9 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 void main() {
-  DateRange range;
-  DateTime begin;
-  DateTime end;
+  late DateRange range;
+  late DateTime begin;
+  late DateTime end;
   setUp(() {
     TestWidgetsFlutterBinding.ensureInitialized();
     SharedPreferences.setMockInitialValues({});

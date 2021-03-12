@@ -23,7 +23,7 @@ abstract class CalendarConstants {
   static final double tileHeight = 60;
 }
 
-final calendarDiariesProvider = FutureProvider.autoDispose
+final AutoDisposeFutureProviderFamily<List<Diary>, DateTime>? calendarDiariesProvider = FutureProvider.autoDispose
     .family<List<Diary>, DateTime>((ref, DateTime dateTimeOfMonth) {
   final state = ref.watch(diariesStoreProvider.state);
   if (state.entities.isNotEmpty) {
@@ -39,16 +39,16 @@ class Calendar extends HookWidget {
   final double horizontalPadding;
 
   const Calendar({
-    Key key,
-    @required this.calculator,
-    @required this.bandModels,
-    @required this.horizontalPadding,
+    Key? key,
+    required this.calculator,
+    required this.bandModels,
+    required this.horizontalPadding,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     final futureCalendarDiaries =
-        useProvider(calendarDiariesProvider(calculator.date));
+        useProvider(calendarDiariesProvider!(calculator.date));
     return futureCalendarDiaries.when(
       data: (value) {
         return _body(context, value);
@@ -190,15 +190,15 @@ class Calendar extends HookWidget {
           );
         })
         .where((element) => element != null)
-        .toList();
+        .toList() as List<Widget>;
   }
 }
 
 class CalendarBand extends StatelessWidget {
   const CalendarBand({
-    Key key,
-    @required this.model,
-    @required this.isLineBreaked,
+    Key? key,
+    required this.model,
+    required this.isLineBreaked,
   }) : super(key: key);
 
   final CalendarBandModel model;
@@ -221,19 +221,19 @@ class CalendarDayTile extends StatelessWidget {
   final int day;
   final bool isToday;
   final Weekday weekday;
-  final VoidCallback onTap;
+  final VoidCallback? onTap;
 
-  final Widget upperWidget;
-  final Widget lowerWidget;
+  final Widget? upperWidget;
+  final Widget? lowerWidget;
 
   const CalendarDayTile({
-    Key key,
-    @required this.day,
-    @required this.weekday,
-    @required this.isToday,
+    Key? key,
+    required this.day,
+    required this.weekday,
+    required this.isToday,
     this.upperWidget,
     this.lowerWidget,
-    @required this.onTap,
+    required this.onTap,
   }) : super(key: key);
 
   @override
