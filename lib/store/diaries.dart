@@ -11,7 +11,7 @@ final diariesStoreProvider = StateNotifierProvider(
 
 class DiariesStateStore extends StateNotifier<DiariesState> {
   final DiariesServiceInterface _service;
-  DiariesStateStore(this._service) : super(DiariesState()) {
+  DiariesStateStore(this._service) : super(DiariesState(entities: [])) {
     _subscribe();
   }
 
