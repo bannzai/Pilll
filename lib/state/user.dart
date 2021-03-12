@@ -6,5 +6,5 @@ part 'user.freezed.dart';
 @freezed
 abstract class UserState implements _$UserState {
   UserState._();
-  factory UserState({required User entity}) = _UserState;
+  factory UserState({required User? entity}) = _UserState;
 }

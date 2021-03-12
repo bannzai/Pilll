@@ -32,6 +32,7 @@ abstract class InitialSettingModel implements _$InitialSettingModel {
         pillSheetTypeRawPath: pillSheetType.rawPath,
         reminderTimes: reminderTimes,
         isOnReminder: isOnReminder,
+        isOnNotifyInNotTakenDuration: true,
       );
   PillSheetModel? buildPillSheet() => todayPillNumber != null
       ? PillSheetModel(

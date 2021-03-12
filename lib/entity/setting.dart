@@ -17,7 +17,8 @@ abstract class ReminderTime implements _$ReminderTime {
 
   factory ReminderTime.fromJson(Map<String, dynamic> json) =>
       _$ReminderTimeFromJson(json);
-  Map<String, dynamic> toJson() => _$_$_ReminderTimeToJson(this as _$_ReminderTime);
+  Map<String, dynamic> toJson() =>
+      _$_$_ReminderTimeToJson(this as _$_ReminderTime);
 
   DateTime dateTime() {
     var t = DateTime.now().toLocal();

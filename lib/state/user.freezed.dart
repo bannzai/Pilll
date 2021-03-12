@@ -16,7 +16,7 @@ final _privateConstructorUsedError = UnsupportedError(
 class _$UserStateTearOff {
   const _$UserStateTearOff();
 
-  _UserState call({required User entity}) {
+  _UserState call({required User? entity}) {
     return _UserState(
       entity: entity,
     );
@@ -28,7 +28,7 @@ const $UserState = _$UserStateTearOff();
 
 /// @nodoc
 mixin _$UserState {
-  User get entity => throw _privateConstructorUsedError;
+  User? get entity => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $UserStateCopyWith<UserState> get copyWith =>
@@ -39,9 +39,9 @@ mixin _$UserState {
 abstract class $UserStateCopyWith<$Res> {
   factory $UserStateCopyWith(UserState value, $Res Function(UserState) then) =
       _$UserStateCopyWithImpl<$Res>;
-  $Res call({User entity});
+  $Res call({User? entity});
 
-  $UserCopyWith<$Res> get entity;
+  $UserCopyWith<$Res>? get entity;
 }
 
 /// @nodoc
@@ -60,13 +60,17 @@ class _$UserStateCopyWithImpl<$Res> implements $UserStateCopyWith<$Res> {
       entity: entity == freezed
           ? _value.entity
           : entity // ignore: cast_nullable_to_non_nullable
-              as User,
+              as User?,
     ));
   }
 
   @override
-  $UserCopyWith<$Res> get entity {
-    return $UserCopyWith<$Res>(_value.entity, (value) {
+  $UserCopyWith<$Res>? get entity {
+    if (_value.entity == null) {
+      return null;
+    }
+
+    return $UserCopyWith<$Res>(_value.entity!, (value) {
       return _then(_value.copyWith(entity: value));
     });
   }
@@ -78,10 +82,10 @@ abstract class _$UserStateCopyWith<$Res> implements $UserStateCopyWith<$Res> {
           _UserState value, $Res Function(_UserState) then) =
       __$UserStateCopyWithImpl<$Res>;
   @override
-  $Res call({User entity});
+  $Res call({User? entity});
 
   @override
-  $UserCopyWith<$Res> get entity;
+  $UserCopyWith<$Res>? get entity;
 }
 
 /// @nodoc
@@ -101,7 +105,7 @@ class __$UserStateCopyWithImpl<$Res> extends _$UserStateCopyWithImpl<$Res>
       entity: entity == freezed
           ? _value.entity
           : entity // ignore: cast_nullable_to_non_nullable
-              as User,
+              as User?,
     ));
   }
 }
@@ -111,7 +115,7 @@ class _$_UserState extends _UserState {
   _$_UserState({required this.entity}) : super._();
 
   @override
-  final User entity;
+  final User? entity;
 
   @override
   String toString() {
@@ -137,11 +141,11 @@ class _$_UserState extends _UserState {
 }
 
 abstract class _UserState extends UserState {
-  factory _UserState({required User entity}) = _$_UserState;
+  factory _UserState({required User? entity}) = _$_UserState;
   _UserState._() : super._();
 
   @override
-  User get entity => throw _privateConstructorUsedError;
+  User? get entity => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$UserStateCopyWith<_UserState> get copyWith =>
