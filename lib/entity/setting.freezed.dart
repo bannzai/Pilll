@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
 
 part of 'setting.dart';
 
@@ -8,6 +8,10 @@ part of 'setting.dart';
 // **************************************************************************
 
 T _$identity<T>(T value) => value;
+
+final _privateConstructorUsedError = UnsupportedError(
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+
 ReminderTime _$ReminderTimeFromJson(Map<String, dynamic> json) {
   return _ReminderTime.fromJson(json);
 }
@@ -16,31 +20,30 @@ ReminderTime _$ReminderTimeFromJson(Map<String, dynamic> json) {
 class _$ReminderTimeTearOff {
   const _$ReminderTimeTearOff();
 
-// ignore: unused_element
-  _ReminderTime call({@required int hour, @required int minute}) {
+  _ReminderTime call({required int hour, required int minute}) {
     return _ReminderTime(
       hour: hour,
       minute: minute,
     );
   }
 
-// ignore: unused_element
   ReminderTime fromJson(Map<String, Object> json) {
     return ReminderTime.fromJson(json);
   }
 }
 
 /// @nodoc
-// ignore: unused_element
 const $ReminderTime = _$ReminderTimeTearOff();
 
 /// @nodoc
 mixin _$ReminderTime {
-  int get hour;
-  int get minute;
+  int get hour => throw _privateConstructorUsedError;
+  int get minute => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
-  $ReminderTimeCopyWith<ReminderTime> get copyWith;
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $ReminderTimeCopyWith<ReminderTime> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -61,12 +64,18 @@ class _$ReminderTimeCopyWithImpl<$Res> implements $ReminderTimeCopyWith<$Res> {
 
   @override
   $Res call({
-    Object hour = freezed,
-    Object minute = freezed,
+    Object? hour = freezed,
+    Object? minute = freezed,
   }) {
     return _then(_value.copyWith(
-      hour: hour == freezed ? _value.hour : hour as int,
-      minute: minute == freezed ? _value.minute : minute as int,
+      hour: hour == freezed
+          ? _value.hour
+          : hour // ignore: cast_nullable_to_non_nullable
+              as int,
+      minute: minute == freezed
+          ? _value.minute
+          : minute // ignore: cast_nullable_to_non_nullable
+              as int,
     ));
   }
 }
@@ -93,12 +102,18 @@ class __$ReminderTimeCopyWithImpl<$Res> extends _$ReminderTimeCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object hour = freezed,
-    Object minute = freezed,
+    Object? hour = freezed,
+    Object? minute = freezed,
   }) {
     return _then(_ReminderTime(
-      hour: hour == freezed ? _value.hour : hour as int,
-      minute: minute == freezed ? _value.minute : minute as int,
+      hour: hour == freezed
+          ? _value.hour
+          : hour // ignore: cast_nullable_to_non_nullable
+              as int,
+      minute: minute == freezed
+          ? _value.minute
+          : minute // ignore: cast_nullable_to_non_nullable
+              as int,
     ));
   }
 }
@@ -107,10 +122,7 @@ class __$ReminderTimeCopyWithImpl<$Res> extends _$ReminderTimeCopyWithImpl<$Res>
 
 /// @nodoc
 class _$_ReminderTime extends _ReminderTime with DiagnosticableTreeMixin {
-  const _$_ReminderTime({@required this.hour, @required this.minute})
-      : assert(hour != null),
-        assert(minute != null),
-        super._();
+  const _$_ReminderTime({required this.hour, required this.minute}) : super._();
 
   factory _$_ReminderTime.fromJson(Map<String, dynamic> json) =>
       _$_$_ReminderTimeFromJson(json);
@@ -150,6 +162,7 @@ class _$_ReminderTime extends _ReminderTime with DiagnosticableTreeMixin {
       const DeepCollectionEquality().hash(hour) ^
       const DeepCollectionEquality().hash(minute);
 
+  @JsonKey(ignore: true)
   @override
   _$ReminderTimeCopyWith<_ReminderTime> get copyWith =>
       __$ReminderTimeCopyWithImpl<_ReminderTime>(this, _$identity);
@@ -161,19 +174,21 @@ class _$_ReminderTime extends _ReminderTime with DiagnosticableTreeMixin {
 }
 
 abstract class _ReminderTime extends ReminderTime {
-  const _ReminderTime._() : super._();
-  const factory _ReminderTime({@required int hour, @required int minute}) =
+  const factory _ReminderTime({required int hour, required int minute}) =
       _$_ReminderTime;
+  const _ReminderTime._() : super._();
 
   factory _ReminderTime.fromJson(Map<String, dynamic> json) =
       _$_ReminderTime.fromJson;
 
   @override
-  int get hour;
+  int get hour => throw _privateConstructorUsedError;
   @override
-  int get minute;
+  int get minute => throw _privateConstructorUsedError;
   @override
-  _$ReminderTimeCopyWith<_ReminderTime> get copyWith;
+  @JsonKey(ignore: true)
+  _$ReminderTimeCopyWith<_ReminderTime> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 Setting _$SettingFromJson(Map<String, dynamic> json) {
@@ -184,14 +199,13 @@ Setting _$SettingFromJson(Map<String, dynamic> json) {
 class _$SettingTearOff {
   const _$SettingTearOff();
 
-// ignore: unused_element
   _Setting call(
-      {@required String pillSheetTypeRawPath,
-      @required int pillNumberForFromMenstruation,
-      @required int durationMenstruation,
-      @required List<ReminderTime> reminderTimes,
-      @required @JsonSerializable(explicitToJson: true) bool isOnReminder,
-      bool isOnNotifyInNotTakenDuration = true}) {
+      {required String pillSheetTypeRawPath,
+      required int pillNumberForFromMenstruation,
+      required int durationMenstruation,
+      required List<ReminderTime> reminderTimes,
+      @JsonSerializable(explicitToJson: true) required bool isOnReminder,
+      required bool isOnNotifyInNotTakenDuration = true}) {
     return _Setting(
       pillSheetTypeRawPath: pillSheetTypeRawPath,
       pillNumberForFromMenstruation: pillNumberForFromMenstruation,
@@ -202,28 +216,27 @@ class _$SettingTearOff {
     );
   }
 
-// ignore: unused_element
   Setting fromJson(Map<String, Object> json) {
     return Setting.fromJson(json);
   }
 }
 
 /// @nodoc
-// ignore: unused_element
 const $Setting = _$SettingTearOff();
 
 /// @nodoc
 mixin _$Setting {
-  String get pillSheetTypeRawPath;
-  int get pillNumberForFromMenstruation;
-  int get durationMenstruation;
-  List<ReminderTime> get reminderTimes;
+  String get pillSheetTypeRawPath => throw _privateConstructorUsedError;
+  int get pillNumberForFromMenstruation => throw _privateConstructorUsedError;
+  int get durationMenstruation => throw _privateConstructorUsedError;
+  List<ReminderTime> get reminderTimes => throw _privateConstructorUsedError;
   @JsonSerializable(explicitToJson: true)
-  bool get isOnReminder;
-  bool get isOnNotifyInNotTakenDuration;
+  bool get isOnReminder => throw _privateConstructorUsedError;
+  bool get isOnNotifyInNotTakenDuration => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
-  $SettingCopyWith<Setting> get copyWith;
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $SettingCopyWith<Setting> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -249,31 +262,38 @@ class _$SettingCopyWithImpl<$Res> implements $SettingCopyWith<$Res> {
 
   @override
   $Res call({
-    Object pillSheetTypeRawPath = freezed,
-    Object pillNumberForFromMenstruation = freezed,
-    Object durationMenstruation = freezed,
-    Object reminderTimes = freezed,
-    Object isOnReminder = freezed,
-    Object isOnNotifyInNotTakenDuration = freezed,
+    Object? pillSheetTypeRawPath = freezed,
+    Object? pillNumberForFromMenstruation = freezed,
+    Object? durationMenstruation = freezed,
+    Object? reminderTimes = freezed,
+    Object? isOnReminder = freezed,
+    Object? isOnNotifyInNotTakenDuration = freezed,
   }) {
     return _then(_value.copyWith(
       pillSheetTypeRawPath: pillSheetTypeRawPath == freezed
           ? _value.pillSheetTypeRawPath
-          : pillSheetTypeRawPath as String,
+          : pillSheetTypeRawPath // ignore: cast_nullable_to_non_nullable
+              as String,
       pillNumberForFromMenstruation: pillNumberForFromMenstruation == freezed
           ? _value.pillNumberForFromMenstruation
-          : pillNumberForFromMenstruation as int,
+          : pillNumberForFromMenstruation // ignore: cast_nullable_to_non_nullable
+              as int,
       durationMenstruation: durationMenstruation == freezed
           ? _value.durationMenstruation
-          : durationMenstruation as int,
+          : durationMenstruation // ignore: cast_nullable_to_non_nullable
+              as int,
       reminderTimes: reminderTimes == freezed
           ? _value.reminderTimes
-          : reminderTimes as List<ReminderTime>,
-      isOnReminder:
-          isOnReminder == freezed ? _value.isOnReminder : isOnReminder as bool,
+          : reminderTimes // ignore: cast_nullable_to_non_nullable
+              as List<ReminderTime>,
+      isOnReminder: isOnReminder == freezed
+          ? _value.isOnReminder
+          : isOnReminder // ignore: cast_nullable_to_non_nullable
+              as bool,
       isOnNotifyInNotTakenDuration: isOnNotifyInNotTakenDuration == freezed
           ? _value.isOnNotifyInNotTakenDuration
-          : isOnNotifyInNotTakenDuration as bool,
+          : isOnNotifyInNotTakenDuration // ignore: cast_nullable_to_non_nullable
+              as bool,
     ));
   }
 }
@@ -303,31 +323,38 @@ class __$SettingCopyWithImpl<$Res> extends _$SettingCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object pillSheetTypeRawPath = freezed,
-    Object pillNumberForFromMenstruation = freezed,
-    Object durationMenstruation = freezed,
-    Object reminderTimes = freezed,
-    Object isOnReminder = freezed,
-    Object isOnNotifyInNotTakenDuration = freezed,
+    Object? pillSheetTypeRawPath = freezed,
+    Object? pillNumberForFromMenstruation = freezed,
+    Object? durationMenstruation = freezed,
+    Object? reminderTimes = freezed,
+    Object? isOnReminder = freezed,
+    Object? isOnNotifyInNotTakenDuration = freezed,
   }) {
     return _then(_Setting(
       pillSheetTypeRawPath: pillSheetTypeRawPath == freezed
           ? _value.pillSheetTypeRawPath
-          : pillSheetTypeRawPath as String,
+          : pillSheetTypeRawPath // ignore: cast_nullable_to_non_nullable
+              as String,
       pillNumberForFromMenstruation: pillNumberForFromMenstruation == freezed
           ? _value.pillNumberForFromMenstruation
-          : pillNumberForFromMenstruation as int,
+          : pillNumberForFromMenstruation // ignore: cast_nullable_to_non_nullable
+              as int,
       durationMenstruation: durationMenstruation == freezed
           ? _value.durationMenstruation
-          : durationMenstruation as int,
+          : durationMenstruation // ignore: cast_nullable_to_non_nullable
+              as int,
       reminderTimes: reminderTimes == freezed
           ? _value.reminderTimes
-          : reminderTimes as List<ReminderTime>,
-      isOnReminder:
-          isOnReminder == freezed ? _value.isOnReminder : isOnReminder as bool,
+          : reminderTimes // ignore: cast_nullable_to_non_nullable
+              as List<ReminderTime>,
+      isOnReminder: isOnReminder == freezed
+          ? _value.isOnReminder
+          : isOnReminder // ignore: cast_nullable_to_non_nullable
+              as bool,
       isOnNotifyInNotTakenDuration: isOnNotifyInNotTakenDuration == freezed
           ? _value.isOnNotifyInNotTakenDuration
-          : isOnNotifyInNotTakenDuration as bool,
+          : isOnNotifyInNotTakenDuration // ignore: cast_nullable_to_non_nullable
+              as bool,
     ));
   }
 }
@@ -337,19 +364,13 @@ class __$SettingCopyWithImpl<$Res> extends _$SettingCopyWithImpl<$Res>
 /// @nodoc
 class _$_Setting extends _Setting with DiagnosticableTreeMixin {
   _$_Setting(
-      {@required this.pillSheetTypeRawPath,
-      @required this.pillNumberForFromMenstruation,
-      @required this.durationMenstruation,
-      @required this.reminderTimes,
-      @required @JsonSerializable(explicitToJson: true) this.isOnReminder,
-      this.isOnNotifyInNotTakenDuration = true})
-      : assert(pillSheetTypeRawPath != null),
-        assert(pillNumberForFromMenstruation != null),
-        assert(durationMenstruation != null),
-        assert(reminderTimes != null),
-        assert(isOnReminder != null),
-        assert(isOnNotifyInNotTakenDuration != null),
-        super._();
+      {required this.pillSheetTypeRawPath,
+      required this.pillNumberForFromMenstruation,
+      required this.durationMenstruation,
+      required this.reminderTimes,
+      @JsonSerializable(explicitToJson: true) required this.isOnReminder,
+      required this.isOnNotifyInNotTakenDuration = true})
+      : super._();
 
   factory _$_Setting.fromJson(Map<String, dynamic> json) =>
       _$_$_SettingFromJson(json);
@@ -427,6 +448,7 @@ class _$_Setting extends _Setting with DiagnosticableTreeMixin {
       const DeepCollectionEquality().hash(isOnReminder) ^
       const DeepCollectionEquality().hash(isOnNotifyInNotTakenDuration);
 
+  @JsonKey(ignore: true)
   @override
   _$SettingCopyWith<_Setting> get copyWith =>
       __$SettingCopyWithImpl<_Setting>(this, _$identity);
@@ -438,30 +460,32 @@ class _$_Setting extends _Setting with DiagnosticableTreeMixin {
 }
 
 abstract class _Setting extends Setting {
-  _Setting._() : super._();
   factory _Setting(
-      {@required String pillSheetTypeRawPath,
-      @required int pillNumberForFromMenstruation,
-      @required int durationMenstruation,
-      @required List<ReminderTime> reminderTimes,
-      @required @JsonSerializable(explicitToJson: true) bool isOnReminder,
-      bool isOnNotifyInNotTakenDuration}) = _$_Setting;
+      {required String pillSheetTypeRawPath,
+      required int pillNumberForFromMenstruation,
+      required int durationMenstruation,
+      required List<ReminderTime> reminderTimes,
+      @JsonSerializable(explicitToJson: true) required bool isOnReminder,
+      required bool isOnNotifyInNotTakenDuration}) = _$_Setting;
+  _Setting._() : super._();
 
   factory _Setting.fromJson(Map<String, dynamic> json) = _$_Setting.fromJson;
 
   @override
-  String get pillSheetTypeRawPath;
+  String get pillSheetTypeRawPath => throw _privateConstructorUsedError;
   @override
-  int get pillNumberForFromMenstruation;
+  int get pillNumberForFromMenstruation => throw _privateConstructorUsedError;
   @override
-  int get durationMenstruation;
+  int get durationMenstruation => throw _privateConstructorUsedError;
   @override
-  List<ReminderTime> get reminderTimes;
+  List<ReminderTime> get reminderTimes => throw _privateConstructorUsedError;
   @override
   @JsonSerializable(explicitToJson: true)
-  bool get isOnReminder;
+  bool get isOnReminder => throw _privateConstructorUsedError;
   @override
-  bool get isOnNotifyInNotTakenDuration;
+  bool get isOnNotifyInNotTakenDuration => throw _privateConstructorUsedError;
   @override
-  _$SettingCopyWith<_Setting> get copyWith;
+  @JsonKey(ignore: true)
+  _$SettingCopyWith<_Setting> get copyWith =>
+      throw _privateConstructorUsedError;
 }
