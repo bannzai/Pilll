@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
 
 part of 'user.dart';
 
@@ -8,6 +8,10 @@ part of 'user.dart';
 // **************************************************************************
 
 T _$identity<T>(T value) => value;
+
+final _privateConstructorUsedError = UnsupportedError(
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+
 UserPrivate _$UserPrivateFromJson(Map<String, dynamic> json) {
   return _UserPrivate.fromJson(json);
 }
@@ -16,29 +20,28 @@ UserPrivate _$UserPrivateFromJson(Map<String, dynamic> json) {
 class _$UserPrivateTearOff {
   const _$UserPrivateTearOff();
 
-// ignore: unused_element
-  _UserPrivate call({String fcmToken}) {
+  _UserPrivate call({String? fcmToken}) {
     return _UserPrivate(
       fcmToken: fcmToken,
     );
   }
 
-// ignore: unused_element
   UserPrivate fromJson(Map<String, Object> json) {
     return UserPrivate.fromJson(json);
   }
 }
 
 /// @nodoc
-// ignore: unused_element
 const $UserPrivate = _$UserPrivateTearOff();
 
 /// @nodoc
 mixin _$UserPrivate {
-  String get fcmToken;
+  String? get fcmToken => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
-  $UserPrivateCopyWith<UserPrivate> get copyWith;
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $UserPrivateCopyWith<UserPrivate> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -46,7 +49,7 @@ abstract class $UserPrivateCopyWith<$Res> {
   factory $UserPrivateCopyWith(
           UserPrivate value, $Res Function(UserPrivate) then) =
       _$UserPrivateCopyWithImpl<$Res>;
-  $Res call({String fcmToken});
+  $Res call({String? fcmToken});
 }
 
 /// @nodoc
@@ -59,10 +62,13 @@ class _$UserPrivateCopyWithImpl<$Res> implements $UserPrivateCopyWith<$Res> {
 
   @override
   $Res call({
-    Object fcmToken = freezed,
+    Object? fcmToken = freezed,
   }) {
     return _then(_value.copyWith(
-      fcmToken: fcmToken == freezed ? _value.fcmToken : fcmToken as String,
+      fcmToken: fcmToken == freezed
+          ? _value.fcmToken
+          : fcmToken // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 }
@@ -74,7 +80,7 @@ abstract class _$UserPrivateCopyWith<$Res>
           _UserPrivate value, $Res Function(_UserPrivate) then) =
       __$UserPrivateCopyWithImpl<$Res>;
   @override
-  $Res call({String fcmToken});
+  $Res call({String? fcmToken});
 }
 
 /// @nodoc
@@ -89,10 +95,13 @@ class __$UserPrivateCopyWithImpl<$Res> extends _$UserPrivateCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object fcmToken = freezed,
+    Object? fcmToken = freezed,
   }) {
     return _then(_UserPrivate(
-      fcmToken: fcmToken == freezed ? _value.fcmToken : fcmToken as String,
+      fcmToken: fcmToken == freezed
+          ? _value.fcmToken
+          : fcmToken // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 }
@@ -107,7 +116,7 @@ class _$_UserPrivate extends _UserPrivate {
       _$_$_UserPrivateFromJson(json);
 
   @override
-  final String fcmToken;
+  final String? fcmToken;
 
   @override
   String toString() {
@@ -127,6 +136,7 @@ class _$_UserPrivate extends _UserPrivate {
   int get hashCode =>
       runtimeType.hashCode ^ const DeepCollectionEquality().hash(fcmToken);
 
+  @JsonKey(ignore: true)
   @override
   _$UserPrivateCopyWith<_UserPrivate> get copyWith =>
       __$UserPrivateCopyWithImpl<_UserPrivate>(this, _$identity);
@@ -138,16 +148,18 @@ class _$_UserPrivate extends _UserPrivate {
 }
 
 abstract class _UserPrivate extends UserPrivate {
+  factory _UserPrivate({String? fcmToken}) = _$_UserPrivate;
   _UserPrivate._() : super._();
-  factory _UserPrivate({String fcmToken}) = _$_UserPrivate;
 
   factory _UserPrivate.fromJson(Map<String, dynamic> json) =
       _$_UserPrivate.fromJson;
 
   @override
-  String get fcmToken;
+  String? get fcmToken => throw _privateConstructorUsedError;
   @override
-  _$UserPrivateCopyWith<_UserPrivate> get copyWith;
+  @JsonKey(ignore: true)
+  _$UserPrivateCopyWith<_UserPrivate> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 User _$UserFromJson(Map<String, dynamic> json) {
@@ -158,11 +170,10 @@ User _$UserFromJson(Map<String, dynamic> json) {
 class _$UserTearOff {
   const _$UserTearOff();
 
-// ignore: unused_element
   _User call(
-      {@required String anonymouseUserID,
-      @JsonKey(name: 'settings') Setting setting,
-      bool migratedFlutter = false}) {
+      {required String anonymouseUserID,
+      @JsonKey(name: "settings") Setting? setting,
+      required bool migratedFlutter = false}) {
     return _User(
       anonymouseUserID: anonymouseUserID,
       setting: setting,
@@ -170,25 +181,24 @@ class _$UserTearOff {
     );
   }
 
-// ignore: unused_element
   User fromJson(Map<String, Object> json) {
     return User.fromJson(json);
   }
 }
 
 /// @nodoc
-// ignore: unused_element
 const $User = _$UserTearOff();
 
 /// @nodoc
 mixin _$User {
-  String get anonymouseUserID;
-  @JsonKey(name: 'settings')
-  Setting get setting;
-  bool get migratedFlutter;
+  String get anonymouseUserID => throw _privateConstructorUsedError;
+  @JsonKey(name: "settings")
+  Setting? get setting => throw _privateConstructorUsedError;
+  bool get migratedFlutter => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
-  $UserCopyWith<User> get copyWith;
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $UserCopyWith<User> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -197,10 +207,10 @@ abstract class $UserCopyWith<$Res> {
       _$UserCopyWithImpl<$Res>;
   $Res call(
       {String anonymouseUserID,
-      @JsonKey(name: 'settings') Setting setting,
+      @JsonKey(name: "settings") Setting? setting,
       bool migratedFlutter});
 
-  $SettingCopyWith<$Res> get setting;
+  $SettingCopyWith<$Res>? get setting;
 }
 
 /// @nodoc
@@ -213,27 +223,33 @@ class _$UserCopyWithImpl<$Res> implements $UserCopyWith<$Res> {
 
   @override
   $Res call({
-    Object anonymouseUserID = freezed,
-    Object setting = freezed,
-    Object migratedFlutter = freezed,
+    Object? anonymouseUserID = freezed,
+    Object? setting = freezed,
+    Object? migratedFlutter = freezed,
   }) {
     return _then(_value.copyWith(
       anonymouseUserID: anonymouseUserID == freezed
           ? _value.anonymouseUserID
-          : anonymouseUserID as String,
-      setting: setting == freezed ? _value.setting : setting as Setting,
+          : anonymouseUserID // ignore: cast_nullable_to_non_nullable
+              as String,
+      setting: setting == freezed
+          ? _value.setting
+          : setting // ignore: cast_nullable_to_non_nullable
+              as Setting?,
       migratedFlutter: migratedFlutter == freezed
           ? _value.migratedFlutter
-          : migratedFlutter as bool,
+          : migratedFlutter // ignore: cast_nullable_to_non_nullable
+              as bool,
     ));
   }
 
   @override
-  $SettingCopyWith<$Res> get setting {
+  $SettingCopyWith<$Res>? get setting {
     if (_value.setting == null) {
       return null;
     }
-    return $SettingCopyWith<$Res>(_value.setting, (value) {
+
+    return $SettingCopyWith<$Res>(_value.setting!, (value) {
       return _then(_value.copyWith(setting: value));
     });
   }
@@ -246,11 +262,11 @@ abstract class _$UserCopyWith<$Res> implements $UserCopyWith<$Res> {
   @override
   $Res call(
       {String anonymouseUserID,
-      @JsonKey(name: 'settings') Setting setting,
+      @JsonKey(name: "settings") Setting? setting,
       bool migratedFlutter});
 
   @override
-  $SettingCopyWith<$Res> get setting;
+  $SettingCopyWith<$Res>? get setting;
 }
 
 /// @nodoc
@@ -264,18 +280,23 @@ class __$UserCopyWithImpl<$Res> extends _$UserCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object anonymouseUserID = freezed,
-    Object setting = freezed,
-    Object migratedFlutter = freezed,
+    Object? anonymouseUserID = freezed,
+    Object? setting = freezed,
+    Object? migratedFlutter = freezed,
   }) {
     return _then(_User(
       anonymouseUserID: anonymouseUserID == freezed
           ? _value.anonymouseUserID
-          : anonymouseUserID as String,
-      setting: setting == freezed ? _value.setting : setting as Setting,
+          : anonymouseUserID // ignore: cast_nullable_to_non_nullable
+              as String,
+      setting: setting == freezed
+          ? _value.setting
+          : setting // ignore: cast_nullable_to_non_nullable
+              as Setting?,
       migratedFlutter: migratedFlutter == freezed
           ? _value.migratedFlutter
-          : migratedFlutter as bool,
+          : migratedFlutter // ignore: cast_nullable_to_non_nullable
+              as bool,
     ));
   }
 }
@@ -285,12 +306,10 @@ class __$UserCopyWithImpl<$Res> extends _$UserCopyWithImpl<$Res>
 /// @nodoc
 class _$_User extends _User {
   _$_User(
-      {@required this.anonymouseUserID,
-      @JsonKey(name: 'settings') this.setting,
-      this.migratedFlutter = false})
-      : assert(anonymouseUserID != null),
-        assert(migratedFlutter != null),
-        super._();
+      {required this.anonymouseUserID,
+      @JsonKey(name: "settings") this.setting,
+      required this.migratedFlutter = false})
+      : super._();
 
   factory _$_User.fromJson(Map<String, dynamic> json) =>
       _$_$_UserFromJson(json);
@@ -298,8 +317,8 @@ class _$_User extends _User {
   @override
   final String anonymouseUserID;
   @override
-  @JsonKey(name: 'settings')
-  final Setting setting;
+  @JsonKey(name: "settings")
+  final Setting? setting;
   @JsonKey(defaultValue: false)
   @override
   final bool migratedFlutter;
@@ -331,6 +350,7 @@ class _$_User extends _User {
       const DeepCollectionEquality().hash(setting) ^
       const DeepCollectionEquality().hash(migratedFlutter);
 
+  @JsonKey(ignore: true)
   @override
   _$UserCopyWith<_User> get copyWith =>
       __$UserCopyWithImpl<_User>(this, _$identity);
@@ -342,21 +362,22 @@ class _$_User extends _User {
 }
 
 abstract class _User extends User {
-  _User._() : super._();
   factory _User(
-      {@required String anonymouseUserID,
-      @JsonKey(name: 'settings') Setting setting,
-      bool migratedFlutter}) = _$_User;
+      {required String anonymouseUserID,
+      @JsonKey(name: "settings") Setting? setting,
+      required bool migratedFlutter}) = _$_User;
+  _User._() : super._();
 
   factory _User.fromJson(Map<String, dynamic> json) = _$_User.fromJson;
 
   @override
-  String get anonymouseUserID;
+  String get anonymouseUserID => throw _privateConstructorUsedError;
   @override
-  @JsonKey(name: 'settings')
-  Setting get setting;
+  @JsonKey(name: "settings")
+  Setting? get setting => throw _privateConstructorUsedError;
   @override
-  bool get migratedFlutter;
+  bool get migratedFlutter => throw _privateConstructorUsedError;
   @override
-  _$UserCopyWith<_User> get copyWith;
+  @JsonKey(ignore: true)
+  _$UserCopyWith<_User> get copyWith => throw _privateConstructorUsedError;
 }

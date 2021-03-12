@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
 
 part of 'diaries.dart';
 
@@ -9,12 +9,14 @@ part of 'diaries.dart';
 
 T _$identity<T>(T value) => value;
 
+final _privateConstructorUsedError = UnsupportedError(
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+
 /// @nodoc
 class _$DiariesStateTearOff {
   const _$DiariesStateTearOff();
 
-// ignore: unused_element
-  _DiariesState call({List<Diary> entities = const []}) {
+  _DiariesState call({required List<Diary> entities = const []}) {
     return _DiariesState(
       entities: entities,
     );
@@ -22,14 +24,15 @@ class _$DiariesStateTearOff {
 }
 
 /// @nodoc
-// ignore: unused_element
 const $DiariesState = _$DiariesStateTearOff();
 
 /// @nodoc
 mixin _$DiariesState {
-  List<Diary> get entities;
+  List<Diary> get entities => throw _privateConstructorUsedError;
 
-  $DiariesStateCopyWith<DiariesState> get copyWith;
+  @JsonKey(ignore: true)
+  $DiariesStateCopyWith<DiariesState> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -50,10 +53,13 @@ class _$DiariesStateCopyWithImpl<$Res> implements $DiariesStateCopyWith<$Res> {
 
   @override
   $Res call({
-    Object entities = freezed,
+    Object? entities = freezed,
   }) {
     return _then(_value.copyWith(
-      entities: entities == freezed ? _value.entities : entities as List<Diary>,
+      entities: entities == freezed
+          ? _value.entities
+          : entities // ignore: cast_nullable_to_non_nullable
+              as List<Diary>,
     ));
   }
 }
@@ -80,19 +86,20 @@ class __$DiariesStateCopyWithImpl<$Res> extends _$DiariesStateCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object entities = freezed,
+    Object? entities = freezed,
   }) {
     return _then(_DiariesState(
-      entities: entities == freezed ? _value.entities : entities as List<Diary>,
+      entities: entities == freezed
+          ? _value.entities
+          : entities // ignore: cast_nullable_to_non_nullable
+              as List<Diary>,
     ));
   }
 }
 
 /// @nodoc
 class _$_DiariesState extends _DiariesState {
-  _$_DiariesState({this.entities = const []})
-      : assert(entities != null),
-        super._();
+  _$_DiariesState({required this.entities = const []}) : super._();
 
   @JsonKey(defaultValue: const [])
   @override
@@ -116,17 +123,20 @@ class _$_DiariesState extends _DiariesState {
   int get hashCode =>
       runtimeType.hashCode ^ const DeepCollectionEquality().hash(entities);
 
+  @JsonKey(ignore: true)
   @override
   _$DiariesStateCopyWith<_DiariesState> get copyWith =>
       __$DiariesStateCopyWithImpl<_DiariesState>(this, _$identity);
 }
 
 abstract class _DiariesState extends DiariesState {
+  factory _DiariesState({required List<Diary> entities}) = _$_DiariesState;
   _DiariesState._() : super._();
-  factory _DiariesState({List<Diary> entities}) = _$_DiariesState;
 
   @override
-  List<Diary> get entities;
+  List<Diary> get entities => throw _privateConstructorUsedError;
   @override
-  _$DiariesStateCopyWith<_DiariesState> get copyWith;
+  @JsonKey(ignore: true)
+  _$DiariesStateCopyWith<_DiariesState> get copyWith =>
+      throw _privateConstructorUsedError;
 }

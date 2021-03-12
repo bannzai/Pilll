@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
 
 part of 'pill_sheet.dart';
 
@@ -8,6 +8,10 @@ part of 'pill_sheet.dart';
 // **************************************************************************
 
 T _$identity<T>(T value) => value;
+
+final _privateConstructorUsedError = UnsupportedError(
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+
 PillSheetTypeInfo _$PillSheetTypeInfoFromJson(Map<String, dynamic> json) {
   return _PillSheetTypeInfo.fromJson(json);
 }
@@ -16,12 +20,11 @@ PillSheetTypeInfo _$PillSheetTypeInfoFromJson(Map<String, dynamic> json) {
 class _$PillSheetTypeInfoTearOff {
   const _$PillSheetTypeInfoTearOff();
 
-// ignore: unused_element
   _PillSheetTypeInfo call(
-      {@required String pillSheetTypeReferencePath,
-      @required String name,
-      @required int totalCount,
-      @required int dosingPeriod}) {
+      {required String pillSheetTypeReferencePath,
+      required String name,
+      required int totalCount,
+      required int dosingPeriod}) {
     return _PillSheetTypeInfo(
       pillSheetTypeReferencePath: pillSheetTypeReferencePath,
       name: name,
@@ -30,25 +33,25 @@ class _$PillSheetTypeInfoTearOff {
     );
   }
 
-// ignore: unused_element
   PillSheetTypeInfo fromJson(Map<String, Object> json) {
     return PillSheetTypeInfo.fromJson(json);
   }
 }
 
 /// @nodoc
-// ignore: unused_element
 const $PillSheetTypeInfo = _$PillSheetTypeInfoTearOff();
 
 /// @nodoc
 mixin _$PillSheetTypeInfo {
-  String get pillSheetTypeReferencePath;
-  String get name;
-  int get totalCount;
-  int get dosingPeriod;
+  String get pillSheetTypeReferencePath => throw _privateConstructorUsedError;
+  String get name => throw _privateConstructorUsedError;
+  int get totalCount => throw _privateConstructorUsedError;
+  int get dosingPeriod => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
-  $PillSheetTypeInfoCopyWith<PillSheetTypeInfo> get copyWith;
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $PillSheetTypeInfoCopyWith<PillSheetTypeInfo> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -74,19 +77,28 @@ class _$PillSheetTypeInfoCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object pillSheetTypeReferencePath = freezed,
-    Object name = freezed,
-    Object totalCount = freezed,
-    Object dosingPeriod = freezed,
+    Object? pillSheetTypeReferencePath = freezed,
+    Object? name = freezed,
+    Object? totalCount = freezed,
+    Object? dosingPeriod = freezed,
   }) {
     return _then(_value.copyWith(
       pillSheetTypeReferencePath: pillSheetTypeReferencePath == freezed
           ? _value.pillSheetTypeReferencePath
-          : pillSheetTypeReferencePath as String,
-      name: name == freezed ? _value.name : name as String,
-      totalCount: totalCount == freezed ? _value.totalCount : totalCount as int,
-      dosingPeriod:
-          dosingPeriod == freezed ? _value.dosingPeriod : dosingPeriod as int,
+          : pillSheetTypeReferencePath // ignore: cast_nullable_to_non_nullable
+              as String,
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String,
+      totalCount: totalCount == freezed
+          ? _value.totalCount
+          : totalCount // ignore: cast_nullable_to_non_nullable
+              as int,
+      dosingPeriod: dosingPeriod == freezed
+          ? _value.dosingPeriod
+          : dosingPeriod // ignore: cast_nullable_to_non_nullable
+              as int,
     ));
   }
 }
@@ -118,36 +130,41 @@ class __$PillSheetTypeInfoCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object pillSheetTypeReferencePath = freezed,
-    Object name = freezed,
-    Object totalCount = freezed,
-    Object dosingPeriod = freezed,
+    Object? pillSheetTypeReferencePath = freezed,
+    Object? name = freezed,
+    Object? totalCount = freezed,
+    Object? dosingPeriod = freezed,
   }) {
     return _then(_PillSheetTypeInfo(
       pillSheetTypeReferencePath: pillSheetTypeReferencePath == freezed
           ? _value.pillSheetTypeReferencePath
-          : pillSheetTypeReferencePath as String,
-      name: name == freezed ? _value.name : name as String,
-      totalCount: totalCount == freezed ? _value.totalCount : totalCount as int,
-      dosingPeriod:
-          dosingPeriod == freezed ? _value.dosingPeriod : dosingPeriod as int,
+          : pillSheetTypeReferencePath // ignore: cast_nullable_to_non_nullable
+              as String,
+      name: name == freezed
+          ? _value.name
+          : name // ignore: cast_nullable_to_non_nullable
+              as String,
+      totalCount: totalCount == freezed
+          ? _value.totalCount
+          : totalCount // ignore: cast_nullable_to_non_nullable
+              as int,
+      dosingPeriod: dosingPeriod == freezed
+          ? _value.dosingPeriod
+          : dosingPeriod // ignore: cast_nullable_to_non_nullable
+              as int,
     ));
   }
 }
 
-@JsonSerializable(nullable: false, explicitToJson: true)
+@JsonSerializable(explicitToJson: true)
 
 /// @nodoc
 class _$_PillSheetTypeInfo implements _PillSheetTypeInfo {
   _$_PillSheetTypeInfo(
-      {@required this.pillSheetTypeReferencePath,
-      @required this.name,
-      @required this.totalCount,
-      @required this.dosingPeriod})
-      : assert(pillSheetTypeReferencePath != null),
-        assert(name != null),
-        assert(totalCount != null),
-        assert(dosingPeriod != null);
+      {required this.pillSheetTypeReferencePath,
+      required this.name,
+      required this.totalCount,
+      required this.dosingPeriod});
 
   factory _$_PillSheetTypeInfo.fromJson(Map<String, dynamic> json) =>
       _$_$_PillSheetTypeInfoFromJson(json);
@@ -193,6 +210,7 @@ class _$_PillSheetTypeInfo implements _PillSheetTypeInfo {
       const DeepCollectionEquality().hash(totalCount) ^
       const DeepCollectionEquality().hash(dosingPeriod);
 
+  @JsonKey(ignore: true)
   @override
   _$PillSheetTypeInfoCopyWith<_PillSheetTypeInfo> get copyWith =>
       __$PillSheetTypeInfoCopyWithImpl<_PillSheetTypeInfo>(this, _$identity);
@@ -205,24 +223,26 @@ class _$_PillSheetTypeInfo implements _PillSheetTypeInfo {
 
 abstract class _PillSheetTypeInfo implements PillSheetTypeInfo {
   factory _PillSheetTypeInfo(
-      {@required String pillSheetTypeReferencePath,
-      @required String name,
-      @required int totalCount,
-      @required int dosingPeriod}) = _$_PillSheetTypeInfo;
+      {required String pillSheetTypeReferencePath,
+      required String name,
+      required int totalCount,
+      required int dosingPeriod}) = _$_PillSheetTypeInfo;
 
   factory _PillSheetTypeInfo.fromJson(Map<String, dynamic> json) =
       _$_PillSheetTypeInfo.fromJson;
 
   @override
-  String get pillSheetTypeReferencePath;
+  String get pillSheetTypeReferencePath => throw _privateConstructorUsedError;
   @override
-  String get name;
+  String get name => throw _privateConstructorUsedError;
   @override
-  int get totalCount;
+  int get totalCount => throw _privateConstructorUsedError;
   @override
-  int get dosingPeriod;
+  int get dosingPeriod => throw _privateConstructorUsedError;
   @override
-  _$PillSheetTypeInfoCopyWith<_PillSheetTypeInfo> get copyWith;
+  @JsonKey(ignore: true)
+  _$PillSheetTypeInfoCopyWith<_PillSheetTypeInfo> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 PillSheetModel _$PillSheetModelFromJson(Map<String, dynamic> json) {
@@ -233,22 +253,19 @@ PillSheetModel _$PillSheetModelFromJson(Map<String, dynamic> json) {
 class _$PillSheetModelTearOff {
   const _$PillSheetModelTearOff();
 
-// ignore: unused_element
   _PillSheetModel call(
       {@JsonKey(includeIfNull: false, toJson: toNull)
-          String id,
-      @required
-      @JsonKey(nullable: false)
-          PillSheetTypeInfo typeInfo,
-      @required
-      @JsonKey(nullable: false, fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
-          DateTime beginingDate,
+          String? id,
+      @JsonKey()
+          required PillSheetTypeInfo typeInfo,
       @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
-          DateTime lastTakenDate,
+          required DateTime beginingDate,
       @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
-          DateTime createdAt,
+          DateTime? lastTakenDate,
       @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
-          DateTime deletedAt}) {
+          DateTime? createdAt,
+      @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
+          DateTime? deletedAt}) {
     return _PillSheetModel(
       id: id,
       typeInfo: typeInfo,
@@ -259,42 +276,41 @@ class _$PillSheetModelTearOff {
     );
   }
 
-// ignore: unused_element
   PillSheetModel fromJson(Map<String, Object> json) {
     return PillSheetModel.fromJson(json);
   }
 }
 
 /// @nodoc
-// ignore: unused_element
 const $PillSheetModel = _$PillSheetModelTearOff();
 
 /// @nodoc
 mixin _$PillSheetModel {
   @JsonKey(includeIfNull: false, toJson: toNull)
-  String get id;
-  @JsonKey(nullable: false)
-  PillSheetTypeInfo get typeInfo;
-  @JsonKey(
-      nullable: false,
-      fromJson: TimestampConverter.timestampToDateTime,
-      toJson: TimestampConverter.dateTimeToTimestamp)
-  DateTime get beginingDate;
+  String? get id => throw _privateConstructorUsedError;
+  @JsonKey()
+  PillSheetTypeInfo get typeInfo => throw _privateConstructorUsedError;
   @JsonKey(
       fromJson: TimestampConverter.timestampToDateTime,
       toJson: TimestampConverter.dateTimeToTimestamp)
-  DateTime get lastTakenDate;
+  DateTime get beginingDate => throw _privateConstructorUsedError;
   @JsonKey(
       fromJson: TimestampConverter.timestampToDateTime,
       toJson: TimestampConverter.dateTimeToTimestamp)
-  DateTime get createdAt;
+  DateTime? get lastTakenDate => throw _privateConstructorUsedError;
   @JsonKey(
       fromJson: TimestampConverter.timestampToDateTime,
       toJson: TimestampConverter.dateTimeToTimestamp)
-  DateTime get deletedAt;
+  DateTime? get createdAt => throw _privateConstructorUsedError;
+  @JsonKey(
+      fromJson: TimestampConverter.timestampToDateTime,
+      toJson: TimestampConverter.dateTimeToTimestamp)
+  DateTime? get deletedAt => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
-  $PillSheetModelCopyWith<PillSheetModel> get copyWith;
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $PillSheetModelCopyWith<PillSheetModel> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -304,17 +320,17 @@ abstract class $PillSheetModelCopyWith<$Res> {
       _$PillSheetModelCopyWithImpl<$Res>;
   $Res call(
       {@JsonKey(includeIfNull: false, toJson: toNull)
-          String id,
-      @JsonKey(nullable: false)
+          String? id,
+      @JsonKey()
           PillSheetTypeInfo typeInfo,
-      @JsonKey(nullable: false, fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
+      @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
           DateTime beginingDate,
       @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
-          DateTime lastTakenDate,
+          DateTime? lastTakenDate,
       @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
-          DateTime createdAt,
+          DateTime? createdAt,
       @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
-          DateTime deletedAt});
+          DateTime? deletedAt});
 
   $PillSheetTypeInfoCopyWith<$Res> get typeInfo;
 }
@@ -330,35 +346,43 @@ class _$PillSheetModelCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object id = freezed,
-    Object typeInfo = freezed,
-    Object beginingDate = freezed,
-    Object lastTakenDate = freezed,
-    Object createdAt = freezed,
-    Object deletedAt = freezed,
+    Object? id = freezed,
+    Object? typeInfo = freezed,
+    Object? beginingDate = freezed,
+    Object? lastTakenDate = freezed,
+    Object? createdAt = freezed,
+    Object? deletedAt = freezed,
   }) {
     return _then(_value.copyWith(
-      id: id == freezed ? _value.id : id as String,
-      typeInfo:
-          typeInfo == freezed ? _value.typeInfo : typeInfo as PillSheetTypeInfo,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      typeInfo: typeInfo == freezed
+          ? _value.typeInfo
+          : typeInfo // ignore: cast_nullable_to_non_nullable
+              as PillSheetTypeInfo,
       beginingDate: beginingDate == freezed
           ? _value.beginingDate
-          : beginingDate as DateTime,
+          : beginingDate // ignore: cast_nullable_to_non_nullable
+              as DateTime,
       lastTakenDate: lastTakenDate == freezed
           ? _value.lastTakenDate
-          : lastTakenDate as DateTime,
-      createdAt:
-          createdAt == freezed ? _value.createdAt : createdAt as DateTime,
-      deletedAt:
-          deletedAt == freezed ? _value.deletedAt : deletedAt as DateTime,
+          : lastTakenDate // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
+      createdAt: createdAt == freezed
+          ? _value.createdAt
+          : createdAt // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
+      deletedAt: deletedAt == freezed
+          ? _value.deletedAt
+          : deletedAt // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
     ));
   }
 
   @override
   $PillSheetTypeInfoCopyWith<$Res> get typeInfo {
-    if (_value.typeInfo == null) {
-      return null;
-    }
     return $PillSheetTypeInfoCopyWith<$Res>(_value.typeInfo, (value) {
       return _then(_value.copyWith(typeInfo: value));
     });
@@ -374,17 +398,17 @@ abstract class _$PillSheetModelCopyWith<$Res>
   @override
   $Res call(
       {@JsonKey(includeIfNull: false, toJson: toNull)
-          String id,
-      @JsonKey(nullable: false)
+          String? id,
+      @JsonKey()
           PillSheetTypeInfo typeInfo,
-      @JsonKey(nullable: false, fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
+      @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
           DateTime beginingDate,
       @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
-          DateTime lastTakenDate,
+          DateTime? lastTakenDate,
       @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
-          DateTime createdAt,
+          DateTime? createdAt,
       @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
-          DateTime deletedAt});
+          DateTime? deletedAt});
 
   @override
   $PillSheetTypeInfoCopyWith<$Res> get typeInfo;
@@ -403,66 +427,72 @@ class __$PillSheetModelCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object id = freezed,
-    Object typeInfo = freezed,
-    Object beginingDate = freezed,
-    Object lastTakenDate = freezed,
-    Object createdAt = freezed,
-    Object deletedAt = freezed,
+    Object? id = freezed,
+    Object? typeInfo = freezed,
+    Object? beginingDate = freezed,
+    Object? lastTakenDate = freezed,
+    Object? createdAt = freezed,
+    Object? deletedAt = freezed,
   }) {
     return _then(_PillSheetModel(
-      id: id == freezed ? _value.id : id as String,
-      typeInfo:
-          typeInfo == freezed ? _value.typeInfo : typeInfo as PillSheetTypeInfo,
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
+      typeInfo: typeInfo == freezed
+          ? _value.typeInfo
+          : typeInfo // ignore: cast_nullable_to_non_nullable
+              as PillSheetTypeInfo,
       beginingDate: beginingDate == freezed
           ? _value.beginingDate
-          : beginingDate as DateTime,
+          : beginingDate // ignore: cast_nullable_to_non_nullable
+              as DateTime,
       lastTakenDate: lastTakenDate == freezed
           ? _value.lastTakenDate
-          : lastTakenDate as DateTime,
-      createdAt:
-          createdAt == freezed ? _value.createdAt : createdAt as DateTime,
-      deletedAt:
-          deletedAt == freezed ? _value.deletedAt : deletedAt as DateTime,
+          : lastTakenDate // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
+      createdAt: createdAt == freezed
+          ? _value.createdAt
+          : createdAt // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
+      deletedAt: deletedAt == freezed
+          ? _value.deletedAt
+          : deletedAt // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
     ));
   }
 }
 
-@JsonSerializable(nullable: true, explicitToJson: true)
+@JsonSerializable(explicitToJson: true)
 
 /// @nodoc
 class _$_PillSheetModel extends _PillSheetModel {
   _$_PillSheetModel(
       {@JsonKey(includeIfNull: false, toJson: toNull)
           this.id,
-      @required
-      @JsonKey(nullable: false)
-          this.typeInfo,
-      @required
-      @JsonKey(nullable: false, fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
-          this.beginingDate,
+      @JsonKey()
+          required this.typeInfo,
+      @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
+          required this.beginingDate,
       @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
           this.lastTakenDate,
       @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
           this.createdAt,
       @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
           this.deletedAt})
-      : assert(typeInfo != null),
-        assert(beginingDate != null),
-        super._();
+      : super._();
 
   factory _$_PillSheetModel.fromJson(Map<String, dynamic> json) =>
       _$_$_PillSheetModelFromJson(json);
 
   @override
   @JsonKey(includeIfNull: false, toJson: toNull)
-  final String id;
+  final String? id;
   @override
-  @JsonKey(nullable: false)
+  @JsonKey()
   final PillSheetTypeInfo typeInfo;
   @override
   @JsonKey(
-      nullable: false,
       fromJson: TimestampConverter.timestampToDateTime,
       toJson: TimestampConverter.dateTimeToTimestamp)
   final DateTime beginingDate;
@@ -470,17 +500,17 @@ class _$_PillSheetModel extends _PillSheetModel {
   @JsonKey(
       fromJson: TimestampConverter.timestampToDateTime,
       toJson: TimestampConverter.dateTimeToTimestamp)
-  final DateTime lastTakenDate;
+  final DateTime? lastTakenDate;
   @override
   @JsonKey(
       fromJson: TimestampConverter.timestampToDateTime,
       toJson: TimestampConverter.dateTimeToTimestamp)
-  final DateTime createdAt;
+  final DateTime? createdAt;
   @override
   @JsonKey(
       fromJson: TimestampConverter.timestampToDateTime,
       toJson: TimestampConverter.dateTimeToTimestamp)
-  final DateTime deletedAt;
+  final DateTime? deletedAt;
 
   @override
   String toString() {
@@ -520,6 +550,7 @@ class _$_PillSheetModel extends _PillSheetModel {
       const DeepCollectionEquality().hash(createdAt) ^
       const DeepCollectionEquality().hash(deletedAt);
 
+  @JsonKey(ignore: true)
   @override
   _$PillSheetModelCopyWith<_PillSheetModel> get copyWith =>
       __$PillSheetModelCopyWithImpl<_PillSheetModel>(this, _$identity);
@@ -531,53 +562,52 @@ class _$_PillSheetModel extends _PillSheetModel {
 }
 
 abstract class _PillSheetModel extends PillSheetModel {
-  _PillSheetModel._() : super._();
   factory _PillSheetModel(
       {@JsonKey(includeIfNull: false, toJson: toNull)
-          String id,
-      @required
-      @JsonKey(nullable: false)
-          PillSheetTypeInfo typeInfo,
-      @required
-      @JsonKey(nullable: false, fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
-          DateTime beginingDate,
+          String? id,
+      @JsonKey()
+          required PillSheetTypeInfo typeInfo,
       @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
-          DateTime lastTakenDate,
+          required DateTime beginingDate,
       @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
-          DateTime createdAt,
+          DateTime? lastTakenDate,
       @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
-          DateTime deletedAt}) = _$_PillSheetModel;
+          DateTime? createdAt,
+      @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
+          DateTime? deletedAt}) = _$_PillSheetModel;
+  _PillSheetModel._() : super._();
 
   factory _PillSheetModel.fromJson(Map<String, dynamic> json) =
       _$_PillSheetModel.fromJson;
 
   @override
   @JsonKey(includeIfNull: false, toJson: toNull)
-  String get id;
+  String? get id => throw _privateConstructorUsedError;
   @override
-  @JsonKey(nullable: false)
-  PillSheetTypeInfo get typeInfo;
-  @override
-  @JsonKey(
-      nullable: false,
-      fromJson: TimestampConverter.timestampToDateTime,
-      toJson: TimestampConverter.dateTimeToTimestamp)
-  DateTime get beginingDate;
+  @JsonKey()
+  PillSheetTypeInfo get typeInfo => throw _privateConstructorUsedError;
   @override
   @JsonKey(
       fromJson: TimestampConverter.timestampToDateTime,
       toJson: TimestampConverter.dateTimeToTimestamp)
-  DateTime get lastTakenDate;
+  DateTime get beginingDate => throw _privateConstructorUsedError;
   @override
   @JsonKey(
       fromJson: TimestampConverter.timestampToDateTime,
       toJson: TimestampConverter.dateTimeToTimestamp)
-  DateTime get createdAt;
+  DateTime? get lastTakenDate => throw _privateConstructorUsedError;
   @override
   @JsonKey(
       fromJson: TimestampConverter.timestampToDateTime,
       toJson: TimestampConverter.dateTimeToTimestamp)
-  DateTime get deletedAt;
+  DateTime? get createdAt => throw _privateConstructorUsedError;
   @override
-  _$PillSheetModelCopyWith<_PillSheetModel> get copyWith;
+  @JsonKey(
+      fromJson: TimestampConverter.timestampToDateTime,
+      toJson: TimestampConverter.dateTimeToTimestamp)
+  DateTime? get deletedAt => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(ignore: true)
+  _$PillSheetModelCopyWith<_PillSheetModel> get copyWith =>
+      throw _privateConstructorUsedError;
 }

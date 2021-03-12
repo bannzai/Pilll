@@ -11,7 +11,7 @@ final diariesStoreProvider = StateNotifierProvider(
 
 class DiariesStateStore extends StateNotifier<DiariesState?> {
   final DiariesServiceInterface _service;
-  DiariesStateStore(this._service) : super(DiariesState()) {
+  DiariesStateStore(this._service) : super(DiariesState(entities: [])) {
     _subscribe();
   }
 
@@ -19,8 +19,6 @@ class DiariesStateStore extends StateNotifier<DiariesState?> {
   void _subscribe() {
     canceller?.cancel();
     canceller = _service.subscribe().listen((entities) {
-      assert(entities != null, "Diary could not null on subscribe");
-      if (entities == null) return;
       state = state.copyWith(entities: entities);
     });
   }
@@ -38,7 +36,7 @@ class DiariesStateStore extends StateNotifier<DiariesState?> {
   }
 
   Future<void> register(Diary diary) {
-    if (state.entities
+    if (state!.entities
         .where((element) => isSameDay(diary.date, element.date))
         .isNotEmpty) throw DiaryAleradyExists(diary);
     return _service.register(diary);
