@@ -137,7 +137,8 @@ class RecordPage extends HookWidget {
     final currentPillSheet = state.entity;
     final store = useProvider(pillSheetStoreProvider);
     final settingState = useProvider(settingStoreProvider.state);
-    if (settingState.entity == null || !store.firstLoadIsEnded) {
+    final settingEntity = settingState.entity;
+    if (settingEntity == null || !store.firstLoadIsEnded) {
       return Indicator();
     }
     return Center(
@@ -158,9 +159,7 @@ class RecordPage extends HookWidget {
             ),
           SizedBox(height: 67),
           if (state.isInvalid)
-            Align(
-                child:
-                    _empty(context, store, settingState.entity?.pillSheetType)),
+            Align(child: _empty(context, store, settingEntity.pillSheetType)),
           if (!state.isInvalid) ...[
             Align(child: _pillSheet(context, currentPillSheet!, store)),
             SizedBox(height: 40),
@@ -263,9 +262,7 @@ class RecordPage extends HookWidget {
     PillSheetStateStore store,
   ) {
     return PillSheet(
-      firstWeekday: pillSheet.beginingDate == null
-          ? Weekday.Sunday
-          : WeekdayFunctions.weekdayFromDate(pillSheet.beginingDate),
+      firstWeekday: WeekdayFunctions.weekdayFromDate(pillSheet.beginingDate),
       doneStateBuilder: (number) {
         return number <= pillSheet.lastTakenPillNumber;
       },
