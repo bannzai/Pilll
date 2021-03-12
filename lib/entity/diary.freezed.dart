@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
 
 part of 'diary.dart';
 
@@ -8,6 +8,10 @@ part of 'diary.dart';
 // **************************************************************************
 
 T _$identity<T>(T value) => value;
+
+final _privateConstructorUsedError = UnsupportedError(
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+
 Diary _$DiaryFromJson(Map<String, dynamic> json) {
   return _Diary.fromJson(json);
 }
@@ -16,18 +20,13 @@ Diary _$DiaryFromJson(Map<String, dynamic> json) {
 class _$DiaryTearOff {
   const _$DiaryTearOff();
 
-// ignore: unused_element
   _Diary call(
-      {@required
-      @JsonKey(nullable: false, fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
-          DateTime date,
-      PhysicalConditionStatus physicalConditionStatus,
-      @required
-          List<String> physicalConditions,
-      @required
-          bool hasSex,
-      @required
-          String memo}) {
+      {@JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+          required DateTime date,
+      PhysicalConditionStatus? physicalConditionStatus,
+      required List<String> physicalConditions,
+      required bool hasSex,
+      required String memo}) {
     return _Diary(
       date: date,
       physicalConditionStatus: physicalConditionStatus,
@@ -37,30 +36,29 @@ class _$DiaryTearOff {
     );
   }
 
-// ignore: unused_element
   Diary fromJson(Map<String, Object> json) {
     return Diary.fromJson(json);
   }
 }
 
 /// @nodoc
-// ignore: unused_element
 const $Diary = _$DiaryTearOff();
 
 /// @nodoc
 mixin _$Diary {
   @JsonKey(
-      nullable: false,
-      fromJson: TimestampConverter.timestampToDateTime,
-      toJson: TimestampConverter.dateTimeToTimestamp)
-  DateTime get date;
-  PhysicalConditionStatus get physicalConditionStatus;
-  List<String> get physicalConditions;
-  bool get hasSex;
-  String get memo;
+      fromJson: NonNullTimestampConverter.timestampToDateTime,
+      toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+  DateTime get date => throw _privateConstructorUsedError;
+  PhysicalConditionStatus? get physicalConditionStatus =>
+      throw _privateConstructorUsedError;
+  List<String> get physicalConditions => throw _privateConstructorUsedError;
+  bool get hasSex => throw _privateConstructorUsedError;
+  String get memo => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
-  $DiaryCopyWith<Diary> get copyWith;
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $DiaryCopyWith<Diary> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -68,9 +66,9 @@ abstract class $DiaryCopyWith<$Res> {
   factory $DiaryCopyWith(Diary value, $Res Function(Diary) then) =
       _$DiaryCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(nullable: false, fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
+      {@JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
           DateTime date,
-      PhysicalConditionStatus physicalConditionStatus,
+      PhysicalConditionStatus? physicalConditionStatus,
       List<String> physicalConditions,
       bool hasSex,
       String memo});
@@ -86,22 +84,33 @@ class _$DiaryCopyWithImpl<$Res> implements $DiaryCopyWith<$Res> {
 
   @override
   $Res call({
-    Object date = freezed,
-    Object physicalConditionStatus = freezed,
-    Object physicalConditions = freezed,
-    Object hasSex = freezed,
-    Object memo = freezed,
+    Object? date = freezed,
+    Object? physicalConditionStatus = freezed,
+    Object? physicalConditions = freezed,
+    Object? hasSex = freezed,
+    Object? memo = freezed,
   }) {
     return _then(_value.copyWith(
-      date: date == freezed ? _value.date : date as DateTime,
+      date: date == freezed
+          ? _value.date
+          : date // ignore: cast_nullable_to_non_nullable
+              as DateTime,
       physicalConditionStatus: physicalConditionStatus == freezed
           ? _value.physicalConditionStatus
-          : physicalConditionStatus as PhysicalConditionStatus,
+          : physicalConditionStatus // ignore: cast_nullable_to_non_nullable
+              as PhysicalConditionStatus?,
       physicalConditions: physicalConditions == freezed
           ? _value.physicalConditions
-          : physicalConditions as List<String>,
-      hasSex: hasSex == freezed ? _value.hasSex : hasSex as bool,
-      memo: memo == freezed ? _value.memo : memo as String,
+          : physicalConditions // ignore: cast_nullable_to_non_nullable
+              as List<String>,
+      hasSex: hasSex == freezed
+          ? _value.hasSex
+          : hasSex // ignore: cast_nullable_to_non_nullable
+              as bool,
+      memo: memo == freezed
+          ? _value.memo
+          : memo // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -112,9 +121,9 @@ abstract class _$DiaryCopyWith<$Res> implements $DiaryCopyWith<$Res> {
       __$DiaryCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(nullable: false, fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
+      {@JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
           DateTime date,
-      PhysicalConditionStatus physicalConditionStatus,
+      PhysicalConditionStatus? physicalConditionStatus,
       List<String> physicalConditions,
       bool hasSex,
       String memo});
@@ -131,22 +140,33 @@ class __$DiaryCopyWithImpl<$Res> extends _$DiaryCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object date = freezed,
-    Object physicalConditionStatus = freezed,
-    Object physicalConditions = freezed,
-    Object hasSex = freezed,
-    Object memo = freezed,
+    Object? date = freezed,
+    Object? physicalConditionStatus = freezed,
+    Object? physicalConditions = freezed,
+    Object? hasSex = freezed,
+    Object? memo = freezed,
   }) {
     return _then(_Diary(
-      date: date == freezed ? _value.date : date as DateTime,
+      date: date == freezed
+          ? _value.date
+          : date // ignore: cast_nullable_to_non_nullable
+              as DateTime,
       physicalConditionStatus: physicalConditionStatus == freezed
           ? _value.physicalConditionStatus
-          : physicalConditionStatus as PhysicalConditionStatus,
+          : physicalConditionStatus // ignore: cast_nullable_to_non_nullable
+              as PhysicalConditionStatus?,
       physicalConditions: physicalConditions == freezed
           ? _value.physicalConditions
-          : physicalConditions as List<String>,
-      hasSex: hasSex == freezed ? _value.hasSex : hasSex as bool,
-      memo: memo == freezed ? _value.memo : memo as String,
+          : physicalConditions // ignore: cast_nullable_to_non_nullable
+              as List<String>,
+      hasSex: hasSex == freezed
+          ? _value.hasSex
+          : hasSex // ignore: cast_nullable_to_non_nullable
+              as bool,
+      memo: memo == freezed
+          ? _value.memo
+          : memo // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -154,34 +174,26 @@ class __$DiaryCopyWithImpl<$Res> extends _$DiaryCopyWithImpl<$Res>
 @JsonSerializable(explicitToJson: true)
 
 /// @nodoc
-class _$_Diary implements _Diary {
+class _$_Diary extends _Diary {
   _$_Diary(
-      {@required
-      @JsonKey(nullable: false, fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
-          this.date,
+      {@JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+          required this.date,
       this.physicalConditionStatus,
-      @required
-          this.physicalConditions,
-      @required
-          this.hasSex,
-      @required
-          this.memo})
-      : assert(date != null),
-        assert(physicalConditions != null),
-        assert(hasSex != null),
-        assert(memo != null);
+      required this.physicalConditions,
+      required this.hasSex,
+      required this.memo})
+      : super._();
 
   factory _$_Diary.fromJson(Map<String, dynamic> json) =>
       _$_$_DiaryFromJson(json);
 
   @override
   @JsonKey(
-      nullable: false,
-      fromJson: TimestampConverter.timestampToDateTime,
-      toJson: TimestampConverter.dateTimeToTimestamp)
+      fromJson: NonNullTimestampConverter.timestampToDateTime,
+      toJson: NonNullTimestampConverter.dateTimeToTimestamp)
   final DateTime date;
   @override
-  final PhysicalConditionStatus physicalConditionStatus;
+  final PhysicalConditionStatus? physicalConditionStatus;
   @override
   final List<String> physicalConditions;
   @override
@@ -189,21 +201,9 @@ class _$_Diary implements _Diary {
   @override
   final String memo;
 
-  bool _didid = false;
-  String _id;
-
-  @override
-  String get id {
-    if (_didid == false) {
-      _didid = true;
-      _id = "Diary_${DateTimeFormatter.diaryIdentifier(date)}";
-    }
-    return _id;
-  }
-
   @override
   String toString() {
-    return 'Diary(date: $date, physicalConditionStatus: $physicalConditionStatus, physicalConditions: $physicalConditions, hasSex: $hasSex, memo: $memo, id: $id)';
+    return 'Diary(date: $date, physicalConditionStatus: $physicalConditionStatus, physicalConditions: $physicalConditions, hasSex: $hasSex, memo: $memo)';
   }
 
   @override
@@ -234,6 +234,7 @@ class _$_Diary implements _Diary {
       const DeepCollectionEquality().hash(hasSex) ^
       const DeepCollectionEquality().hash(memo);
 
+  @JsonKey(ignore: true)
   @override
   _$DiaryCopyWith<_Diary> get copyWith =>
       __$DiaryCopyWithImpl<_Diary>(this, _$identity);
@@ -244,35 +245,33 @@ class _$_Diary implements _Diary {
   }
 }
 
-abstract class _Diary implements Diary {
+abstract class _Diary extends Diary {
   factory _Diary(
-      {@required
-      @JsonKey(nullable: false, fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
-          DateTime date,
-      PhysicalConditionStatus physicalConditionStatus,
-      @required
-          List<String> physicalConditions,
-      @required
-          bool hasSex,
-      @required
-          String memo}) = _$_Diary;
+      {@JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+          required DateTime date,
+      PhysicalConditionStatus? physicalConditionStatus,
+      required List<String> physicalConditions,
+      required bool hasSex,
+      required String memo}) = _$_Diary;
+  _Diary._() : super._();
 
   factory _Diary.fromJson(Map<String, dynamic> json) = _$_Diary.fromJson;
 
   @override
   @JsonKey(
-      nullable: false,
-      fromJson: TimestampConverter.timestampToDateTime,
-      toJson: TimestampConverter.dateTimeToTimestamp)
-  DateTime get date;
+      fromJson: NonNullTimestampConverter.timestampToDateTime,
+      toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+  DateTime get date => throw _privateConstructorUsedError;
   @override
-  PhysicalConditionStatus get physicalConditionStatus;
+  PhysicalConditionStatus? get physicalConditionStatus =>
+      throw _privateConstructorUsedError;
   @override
-  List<String> get physicalConditions;
+  List<String> get physicalConditions => throw _privateConstructorUsedError;
   @override
-  bool get hasSex;
+  bool get hasSex => throw _privateConstructorUsedError;
   @override
-  String get memo;
+  String get memo => throw _privateConstructorUsedError;
   @override
-  _$DiaryCopyWith<_Diary> get copyWith;
+  @JsonKey(ignore: true)
+  _$DiaryCopyWith<_Diary> get copyWith => throw _privateConstructorUsedError;
 }
