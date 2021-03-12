@@ -17,13 +17,13 @@ class _$InitialSettingModelTearOff {
   const _$InitialSettingModelTearOff();
 
   _InitialSettingModel initial(
-      {required int fromMenstruation = 23,
-      required int durationMenstruation = 4,
-      required List<ReminderTime> reminderTimes = const [
+      {int fromMenstruation = 23,
+      int durationMenstruation = 4,
+      List<ReminderTime> reminderTimes = const [
         const ReminderTime(hour: 21, minute: 0),
         const ReminderTime(hour: 22, minute: 0)
       ],
-      required bool isOnReminder = false,
+      bool isOnReminder = false,
       int? todayPillNumber,
       PillSheetType? pillSheetType}) {
     return _InitialSettingModel(
@@ -220,13 +220,13 @@ class __$InitialSettingModelCopyWithImpl<$Res>
 /// @nodoc
 class _$_InitialSettingModel extends _InitialSettingModel {
   _$_InitialSettingModel(
-      {required this.fromMenstruation = 23,
-      required this.durationMenstruation = 4,
-      required this.reminderTimes = const [
+      {this.fromMenstruation = 23,
+      this.durationMenstruation = 4,
+      this.reminderTimes = const [
         const ReminderTime(hour: 21, minute: 0),
         const ReminderTime(hour: 22, minute: 0)
       ],
-      required this.isOnReminder = false,
+      this.isOnReminder = false,
       this.todayPillNumber,
       this.pillSheetType})
       : super._();
@@ -355,10 +355,10 @@ class _$_InitialSettingModel extends _InitialSettingModel {
 
 abstract class _InitialSettingModel extends InitialSettingModel {
   factory _InitialSettingModel(
-      {required int fromMenstruation,
-      required int durationMenstruation,
-      required List<ReminderTime> reminderTimes,
-      required bool isOnReminder,
+      {int fromMenstruation,
+      int durationMenstruation,
+      List<ReminderTime> reminderTimes,
+      bool isOnReminder,
       int? todayPillNumber,
       PillSheetType? pillSheetType}) = _$_InitialSettingModel;
   _InitialSettingModel._() : super._();
