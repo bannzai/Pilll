@@ -48,20 +48,26 @@ class _TransactionModifier {
     final settingStore = reader(settingStoreProvider);
     final pillSheetState = reader(pillSheetStoreProvider.state);
     final settingState = reader(settingStoreProvider.state);
-    assert(pillSheetState.entity.documentID != null);
+    final pillSheetEntity = pillSheetState.entity;
+    final settingEntity = settingState.entity;
+    if (pillSheetEntity == null) {
+      throw FormatException("pillSheetEntity is necessary");
+    }
+    if (settingEntity == null) {
+      throw FormatException("settingEntity is necessary");
+    }
     return database.transaction((transaction) {
       return Future.wait(
         [
           transaction
-              .get(database
-                  .pillSheetReference(pillSheetState.entity.documentID!))
+              .get(database.pillSheetReference(pillSheetEntity.documentID!))
               .then((pillSheetDocument) {
             transaction.update(pillSheetDocument.reference,
                 {PillSheetFirestoreKey.typeInfo: type.typeInfo.toJson()});
           }),
           transaction.get(database.userReference()).then((userDocument) {
             transaction.update(userDocument.reference, {
-              UserFirestoreFieldKeys.settings: settingState.entity
+              UserFirestoreFieldKeys.settings: settingEntity
                   .copyWith(pillSheetTypeRawPath: type.rawPath)
                   .toJson(),
             });
@@ -69,10 +75,9 @@ class _TransactionModifier {
         ],
       );
     }).then((_) {
-      pillSheetStore
-          .update(pillSheetState.entity!.copyWith(typeInfo: type.typeInfo));
-      settingStore.update(
-          settingState.entity.copyWith(pillSheetTypeRawPath: type.rawPath));
+      pillSheetStore.update(pillSheetEntity.copyWith(typeInfo: type.typeInfo));
+      settingStore
+          .update(settingEntity.copyWith(pillSheetTypeRawPath: type.rawPath));
     });
   }
 }
