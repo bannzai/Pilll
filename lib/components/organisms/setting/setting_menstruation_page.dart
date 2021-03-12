@@ -41,7 +41,7 @@ class SettingMenstruationPage extends StatefulWidget {
     required this.model,
     required this.fromMenstructionDidDecide,
     required this.durationMenstructionDidDecide,
-  })  : assert(model != null),
+  })   : assert(model != null),
         super(key: key);
 
   @override
@@ -145,8 +145,7 @@ class _SettingMenstruationPageState extends State<SettingMenstruationPage> {
         ),
       ),
       child: Center(
-        child: Text(
-            this.widget.model.selectedFromMenstruation?.toString() ?? "",
+        child: Text(this.widget.model.selectedFromMenstruation.toString(),
             style: FontType.inputNumber.merge(TextColorStyle.gray)),
       ),
     );
