@@ -40,36 +40,45 @@ class _TransactionModifier {
   });
 
   Future<void> modifyPillSheetType(PillSheetType type) {
+    final database = _database;
+    if (database == null) {
+      throw FormatException("_database is necessary");
+    }
     final pillSheetStore = reader(pillSheetStoreProvider);
     final settingStore = reader(settingStoreProvider);
     final pillSheetState = reader(pillSheetStoreProvider.state);
     final settingState = reader(settingStoreProvider.state);
-    assert(pillSheetState.entity!.documentID != null);
-    return _database!
-        .transaction((transaction) {
-      transaction.update(
-          _database!.pillSheetReference(pillSheetState.entity!.documentID!), {
-        PillSheetFirestoreKey.typeInfo: type.typeInfo.toJson(),
-      });
-      transaction.update(_database!.userReference(), {
-        UserFirestoreFieldKeys.settings: settingState.entity!
-            .copyWith(pillSheetTypeRawPath: type.rawPath)
-            .toJson(),
-      });
-      return;
-    } as Future<_> Function(Transaction))
-        .then((_) {
+    assert(pillSheetState.entity.documentID != null);
+    return database.transaction((transaction) {
+      return Future.wait(
+        [
+          transaction
+              .get(database
+                  .pillSheetReference(pillSheetState.entity.documentID!))
+              .then((pillSheetDocument) {
+            transaction.update(pillSheetDocument.reference,
+                {PillSheetFirestoreKey.typeInfo: type.typeInfo.toJson()});
+          }),
+          transaction.get(database.userReference()).then((userDocument) {
+            transaction.update(userDocument.reference, {
+              UserFirestoreFieldKeys.settings: settingState.entity
+                  .copyWith(pillSheetTypeRawPath: type.rawPath)
+                  .toJson(),
+            });
+          })
+        ],
+      );
+    }).then((_) {
       pillSheetStore
           .update(pillSheetState.entity!.copyWith(typeInfo: type.typeInfo));
       settingStore.update(
-          settingState.entity!.copyWith(pillSheetTypeRawPath: type.rawPath));
+          settingState.entity.copyWith(pillSheetTypeRawPath: type.rawPath));
     });
   }
 }
 
-final transactionModifierProvider = Provider((ref) => _TransactionModifier(
-    ref.watch(databaseProvider),
-    reader: ref.read as T Function<T>(RootProvider<Object, T>)));
+final transactionModifierProvider = Provider((ref) =>
+    _TransactionModifier(ref.watch(databaseProvider), reader: ref.read));
 
 class SettingsPage extends HookWidget {
   static final int itemCount = SettingSection.values.length + 1;
