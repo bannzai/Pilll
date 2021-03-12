@@ -154,13 +154,19 @@ class SettingsPage extends HookWidget {
     );
   }
 
-  List<SettingListRowModel>? _rowModels(
+  List<SettingListRowModel> _rowModels(
       BuildContext context, SettingSection section) {
     final pillSheetStore = useProvider(pillSheetStoreProvider);
     final pillSheetState = useProvider(pillSheetStoreProvider.state);
     final settingStore = useProvider(settingStoreProvider);
     final settingState = useProvider(settingStoreProvider.state);
     final transactionModifier = useProvider(transactionModifierProvider);
+    final settingEntity = settingState.entity;
+    final isShowNotifyInRestDuration = !pillSheetState.isInvalid &&
+        !pillSheetState.entity!.pillSheetType.isNotExistsNotTakenDuration;
+    if (settingEntity == null) {
+      return [];
+    }
     switch (section) {
       case SettingSection.pill:
         return [
@@ -185,7 +191,7 @@ class SettingsPage extends HookWidget {
                     },
                     done: null,
                     doneButtonText: "",
-                    selectedPillSheetType: settingState.entity?.pillSheetType,
+                    selectedPillSheetType: settingEntity.pillSheetType,
                   ),
                 );
               },
@@ -233,20 +239,20 @@ class SettingsPage extends HookWidget {
           SettingsListSwitchRowModel(
             title: "ピルの服用通知",
             subtitle: "通知時間までに服用した場合は通知はきません",
-            value: settingState.entity?.isOnReminder,
+            value: settingEntity.isOnReminder,
             onTap: () {
               analytics.logEvent(
                 name: "did_select_toggle_reminder",
               );
               ScaffoldMessenger.of(context).hideCurrentSnackBar();
               settingStore
-                  .modifyIsOnReminder(!settingState.entity?.isOnReminder)
+                  .modifyIsOnReminder(!settingEntity.isOnReminder)
                   .then((state) {
                 ScaffoldMessenger.of(context).showSnackBar(
                   SnackBar(
                     duration: Duration(seconds: 1),
                     content: Text(
-                      "服用通知を${state.entity?.isOnReminder ? "ON" : "OFF"}にしました",
+                      "服用通知を${settingEntity.isOnReminder ? "ON" : "OFF"}にしました",
                     ),
                   ),
                 );
@@ -255,7 +261,7 @@ class SettingsPage extends HookWidget {
           ),
           SettingsListDatePickerRowModel(
             title: "通知時刻",
-            content: settingState.entity?.reminderTimes
+            content: settingEntity.reminderTimes
                 .map((e) => DateTimeFormatter.militaryTime(e.dateTime()))
                 .join(", "),
             onTap: () {
@@ -265,14 +271,13 @@ class SettingsPage extends HookWidget {
               Navigator.of(context).push(ReminderTimesPageRoute.route());
             },
           ),
-          if (!pillSheetState.isInvalid &&
-              !pillSheetState.entity?.pillSheetType.isNotExistsNotTakenDuration)
+          if (isShowNotifyInRestDuration)
             SettingsListSwitchRowModel(
               title:
-                  "${pillSheetState.entity?.pillSheetType.notTakenWord}期間の通知",
+                  "${pillSheetState.entity!.pillSheetType.notTakenWord}期間の通知",
               subtitle:
-                  "通知オフの場合は、${pillSheetState.entity?.pillSheetType.notTakenWord}期間の服用記録も自動で付けられます",
-              value: settingState.entity?.isOnNotifyInNotTakenDuration,
+                  "通知オフの場合は、${pillSheetState.entity!.pillSheetType.notTakenWord}期間の服用記録も自動で付けられます",
+              value: settingEntity.isOnNotifyInNotTakenDuration,
               onTap: () {
                 analytics.logEvent(
                   name: "toggle_notify_not_taken_duration",
@@ -280,13 +285,13 @@ class SettingsPage extends HookWidget {
                 ScaffoldMessenger.of(context).hideCurrentSnackBar();
                 settingStore
                     .modifyIsOnNotifyInNotTakenDuration(
-                        !settingState.entity?.isOnNotifyInNotTakenDuration)
+                        !settingEntity.isOnNotifyInNotTakenDuration)
                     .then((state) {
                   ScaffoldMessenger.of(context).showSnackBar(
                     SnackBar(
                       duration: Duration(seconds: 1),
                       content: Text(
-                        "${pillSheetState.entity?.pillSheetType.notTakenWord}期間の通知を${state.entity?.isOnNotifyInNotTakenDuration ? "ON" : "OFF"}にしました",
+                        "${pillSheetState.entity!.pillSheetType.notTakenWord}期間の通知を${settingEntity.isOnNotifyInNotTakenDuration ? "ON" : "OFF"}にしました",
                       ),
                     ),
                   );
