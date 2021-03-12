@@ -8,5 +8,5 @@ abstract class PillSheetState implements _$PillSheetState {
   PillSheetState._();
   factory PillSheetState({required PillSheetModel? entity}) = _PillSheetState;
 
-  bool get isInvalid => entity == null || entity!.isDeleted || entity!.isEnded;
+  bool get isInvalid => entity == null || entity?.isDeleted || entity?.isEnded;
 }

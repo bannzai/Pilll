@@ -41,7 +41,7 @@ class PostDiaryPage extends HookWidget {
     // ignore: invalid_use_of_protected_member
     final state = useProvider(_postDiaryStoreProvider!(date).state);
     final TextEditingController? textEditingController =
-        useTextEditingController(text: state.entity!.memo);
+        useTextEditingController(text: state.entity?.memo);
     final focusNode = useFocusNode();
     final store = useProvider(_postDiaryStoreProvider!(date));
     final scrollController = useScrollController();
@@ -198,7 +198,7 @@ class PostDiaryPage extends HookWidget {
 
   Widget _physicalConditionDetails() {
     final store = useProvider(_postDiaryStoreProvider!(date));
-    final diary = useProvider(_postDiaryStoreProvider!(date).state).entity!;
+    final diary = useProvider(_postDiaryStoreProvider!(date).state).entity?;
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -247,11 +247,11 @@ class PostDiaryPage extends HookWidget {
               height: 32,
               decoration: BoxDecoration(
                   shape: BoxShape.circle,
-                  color: state.entity!.hasSex
+                  color: state.entity?.hasSex
                       ? PilllColors.thinSecondary
                       : PilllColors.disabledSheet),
               child: SvgPicture.asset("images/heart.svg",
-                  color: state.entity!.hasSex
+                  color: state.entity?.hasSex
                       ? PilllColors.secondary
                       : TextColor.darkGray)),
         ),

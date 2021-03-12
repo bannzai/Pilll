@@ -39,7 +39,7 @@ class CalendarCard extends HookWidget {
                 currentPillSheetState.entity, settingState.entity, 0),
             horizontalPadding: 16,
           ),
-          _more(context, settingState.entity!, currentPillSheetState.entity),
+          _more(context, settingState.entity?, currentPillSheetState.entity),
         ],
       ),
     );
