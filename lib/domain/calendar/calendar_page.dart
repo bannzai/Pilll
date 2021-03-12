@@ -1,5 +1,4 @@
 import 'dart:math' as math;
-
 import 'package:pilll/components/molecules/app_card.dart';
 import 'package:pilll/domain/calendar/calendar_card.dart';
 import 'package:pilll/components/atoms/color.dart';
@@ -103,6 +102,8 @@ class MenstruationCard extends HookWidget {
   Widget build(BuildContext context) {
     final pillSheetState = useProvider(pillSheetStoreProvider.state);
     final settingState = useProvider(settingStoreProvider.state);
+    final pillSheetEntity = pillSheetState.entity;
+    final settingEntity = settingState.entity;
     return AppCard(
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
@@ -116,14 +117,16 @@ class MenstruationCard extends HookWidget {
             ],
           ),
           Text(() {
-            if (pillSheetState.entity == null) {
+            if (pillSheetEntity == null) {
               return "";
             }
-
+            if (settingEntity == null) {
+              return "";
+            }
             for (int i = 0; i < 12; i += 1) {
-              final begin = menstruationDateRange(
-                      pillSheetState.entity?, settingState.entity?, i)
-                  .begin;
+              final begin =
+                  menstruationDateRange(pillSheetEntity, settingEntity, i)
+                      .begin;
               if (begin.isAfter(utility.today())) {
                 return DateTimeFormatter.monthAndWeekday(begin);
               }
