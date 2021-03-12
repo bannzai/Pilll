@@ -14,11 +14,12 @@ import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
-final  _confirmDiaryProvider = StateNotifierProvider.autoDispose
+final _confirmDiaryProvider = StateNotifierProvider.autoDispose
     .family<PostDiaryStore, DateTime>((ref, date) {
   final diary = ref.watch(diariesStoreProvider.state).diaryForDateTime(date);
   final service = ref.watch(diaryServiceProvider);
-  return PostDiaryStore(service as DiaryService, DiaryState(entity: diary.copyWith()));
+  return PostDiaryStore(
+      service as DiaryService, DiaryState(entity: diary.copyWith()));
 });
 
 class ConfirmDiarySheet extends HookWidget {
@@ -60,7 +61,7 @@ class ConfirmDiarySheet extends HookWidget {
   }
 
   Widget _title(BuildContext context) {
-    final store = useProvider(_confirmDiaryProvider!(date));
+    final store = useProvider(_confirmDiaryProvider(date));
     return Row(
       mainAxisSize: MainAxisSize.max,
       children: [
@@ -106,18 +107,18 @@ class ConfirmDiarySheet extends HookWidget {
   }
 
   Widget _physicalCondition() {
-    final state = useProvider(_confirmDiaryProvider!(date).state);
+    final state = useProvider(_confirmDiaryProvider(date).state);
     return Row(
       children: [
         Text("体調", style: FontType.componentTitle.merge(TextColorStyle.black)),
         SizedBox(width: 16),
-        _physicalConditionImage(state.entity?.physicalConditionStatus),
+        _physicalConditionImage(state.entity.physicalConditionStatus),
       ],
     );
   }
 
   Widget _physicalConditionDetails() {
-    final diary = useProvider(_confirmDiaryProvider!(date).state).entity?;
+    final diary = useProvider(_confirmDiaryProvider(date).state).entity;
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -149,7 +150,7 @@ class ConfirmDiarySheet extends HookWidget {
   }
 
   Widget _memo() {
-    final diary = useProvider(_confirmDiaryProvider!(date).state).entity?;
+    final diary = useProvider(_confirmDiaryProvider(date).state).entity;
     return Text(
       diary.memo,
       maxLines: 2,
