@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
+// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
 
 part of 'initial_setting.dart';
 
@@ -9,13 +9,11 @@ part of 'initial_setting.dart';
 
 T _$identity<T>(T value) => value;
 
-final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
-
 /// @nodoc
 class _$InitialSettingStateTearOff {
   const _$InitialSettingStateTearOff();
 
+// ignore: unused_element
   _InitialSettingState call(InitialSettingModel entity) {
     return _InitialSettingState(
       entity,
@@ -24,15 +22,14 @@ class _$InitialSettingStateTearOff {
 }
 
 /// @nodoc
+// ignore: unused_element
 const $InitialSettingState = _$InitialSettingStateTearOff();
 
 /// @nodoc
 mixin _$InitialSettingState {
-  InitialSettingModel get entity => throw _privateConstructorUsedError;
+  InitialSettingModel get entity;
 
-  @JsonKey(ignore: true)
-  $InitialSettingStateCopyWith<InitialSettingState> get copyWith =>
-      throw _privateConstructorUsedError;
+  $InitialSettingStateCopyWith<InitialSettingState> get copyWith;
 }
 
 /// @nodoc
@@ -56,18 +53,18 @@ class _$InitialSettingStateCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object? entity = freezed,
+    Object entity = freezed,
   }) {
     return _then(_value.copyWith(
-      entity: entity == freezed
-          ? _value.entity
-          : entity // ignore: cast_nullable_to_non_nullable
-              as InitialSettingModel,
+      entity: entity == freezed ? _value.entity : entity as InitialSettingModel,
     ));
   }
 
   @override
   $InitialSettingModelCopyWith<$Res> get entity {
+    if (_value.entity == null) {
+      return null;
+    }
     return $InitialSettingModelCopyWith<$Res>(_value.entity, (value) {
       return _then(_value.copyWith(entity: value));
     });
@@ -100,20 +97,19 @@ class __$InitialSettingStateCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object? entity = freezed,
+    Object entity = freezed,
   }) {
     return _then(_InitialSettingState(
-      entity == freezed
-          ? _value.entity
-          : entity // ignore: cast_nullable_to_non_nullable
-              as InitialSettingModel,
+      entity == freezed ? _value.entity : entity as InitialSettingModel,
     ));
   }
 }
 
 /// @nodoc
 class _$_InitialSettingState extends _InitialSettingState {
-  _$_InitialSettingState(this.entity) : super._();
+  _$_InitialSettingState(this.entity)
+      : assert(entity != null),
+        super._();
 
   @override
   final InitialSettingModel entity;
@@ -135,7 +131,6 @@ class _$_InitialSettingState extends _InitialSettingState {
   int get hashCode =>
       runtimeType.hashCode ^ const DeepCollectionEquality().hash(entity);
 
-  @JsonKey(ignore: true)
   @override
   _$InitialSettingStateCopyWith<_InitialSettingState> get copyWith =>
       __$InitialSettingStateCopyWithImpl<_InitialSettingState>(
@@ -143,14 +138,12 @@ class _$_InitialSettingState extends _InitialSettingState {
 }
 
 abstract class _InitialSettingState extends InitialSettingState {
+  _InitialSettingState._() : super._();
   factory _InitialSettingState(InitialSettingModel entity) =
       _$_InitialSettingState;
-  _InitialSettingState._() : super._();
 
   @override
-  InitialSettingModel get entity => throw _privateConstructorUsedError;
+  InitialSettingModel get entity;
   @override
-  @JsonKey(ignore: true)
-  _$InitialSettingStateCopyWith<_InitialSettingState> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$InitialSettingStateCopyWith<_InitialSettingState> get copyWith;
 }
