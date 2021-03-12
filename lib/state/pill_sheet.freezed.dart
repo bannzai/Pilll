@@ -16,7 +16,7 @@ final _privateConstructorUsedError = UnsupportedError(
 class _$PillSheetStateTearOff {
   const _$PillSheetStateTearOff();
 
-  _PillSheetState call({required PillSheetModel entity}) {
+  _PillSheetState call({required PillSheetModel? entity}) {
     return _PillSheetState(
       entity: entity,
     );
@@ -28,7 +28,7 @@ const $PillSheetState = _$PillSheetStateTearOff();
 
 /// @nodoc
 mixin _$PillSheetState {
-  PillSheetModel get entity => throw _privateConstructorUsedError;
+  PillSheetModel? get entity => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $PillSheetStateCopyWith<PillSheetState> get copyWith =>
@@ -40,9 +40,9 @@ abstract class $PillSheetStateCopyWith<$Res> {
   factory $PillSheetStateCopyWith(
           PillSheetState value, $Res Function(PillSheetState) then) =
       _$PillSheetStateCopyWithImpl<$Res>;
-  $Res call({PillSheetModel entity});
+  $Res call({PillSheetModel? entity});
 
-  $PillSheetModelCopyWith<$Res> get entity;
+  $PillSheetModelCopyWith<$Res>? get entity;
 }
 
 /// @nodoc
@@ -62,13 +62,17 @@ class _$PillSheetStateCopyWithImpl<$Res>
       entity: entity == freezed
           ? _value.entity
           : entity // ignore: cast_nullable_to_non_nullable
-              as PillSheetModel,
+              as PillSheetModel?,
     ));
   }
 
   @override
-  $PillSheetModelCopyWith<$Res> get entity {
-    return $PillSheetModelCopyWith<$Res>(_value.entity, (value) {
+  $PillSheetModelCopyWith<$Res>? get entity {
+    if (_value.entity == null) {
+      return null;
+    }
+
+    return $PillSheetModelCopyWith<$Res>(_value.entity!, (value) {
       return _then(_value.copyWith(entity: value));
     });
   }
@@ -81,10 +85,10 @@ abstract class _$PillSheetStateCopyWith<$Res>
           _PillSheetState value, $Res Function(_PillSheetState) then) =
       __$PillSheetStateCopyWithImpl<$Res>;
   @override
-  $Res call({PillSheetModel entity});
+  $Res call({PillSheetModel? entity});
 
   @override
-  $PillSheetModelCopyWith<$Res> get entity;
+  $PillSheetModelCopyWith<$Res>? get entity;
 }
 
 /// @nodoc
@@ -106,7 +110,7 @@ class __$PillSheetStateCopyWithImpl<$Res>
       entity: entity == freezed
           ? _value.entity
           : entity // ignore: cast_nullable_to_non_nullable
-              as PillSheetModel,
+              as PillSheetModel?,
     ));
   }
 }
@@ -116,7 +120,7 @@ class _$_PillSheetState extends _PillSheetState {
   _$_PillSheetState({required this.entity}) : super._();
 
   @override
-  final PillSheetModel entity;
+  final PillSheetModel? entity;
 
   @override
   String toString() {
@@ -142,11 +146,12 @@ class _$_PillSheetState extends _PillSheetState {
 }
 
 abstract class _PillSheetState extends PillSheetState {
-  factory _PillSheetState({required PillSheetModel entity}) = _$_PillSheetState;
+  factory _PillSheetState({required PillSheetModel? entity}) =
+      _$_PillSheetState;
   _PillSheetState._() : super._();
 
   @override
-  PillSheetModel get entity => throw _privateConstructorUsedError;
+  PillSheetModel? get entity => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$PillSheetStateCopyWith<_PillSheetState> get copyWith =>

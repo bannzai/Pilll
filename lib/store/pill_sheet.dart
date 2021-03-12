@@ -25,7 +25,8 @@ class PillSheetStateStore extends StateNotifier<PillSheetState> {
       analytics.logEvent(name: "count_of_remaining_pill", parameters: {
         "count": state.entity == null
             ? 0
-            : (state.entity!.todayPillNumber - state.entity!.lastTakenPillNumber)
+            : (state.entity!.todayPillNumber -
+                state.entity!.lastTakenPillNumber)
       });
       firstLoadIsEnded = true;
       _subscribe();
@@ -79,7 +80,7 @@ class PillSheetStateStore extends StateNotifier<PillSheetState> {
         .then((entity) => state = state.copyWith(entity: entity));
   }
 
-  void update(PillSheetModel? entity) {
+  void update(PillSheetModel entity) {
     state = state.copyWith(entity: entity);
   }
 

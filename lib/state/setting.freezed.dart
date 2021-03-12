@@ -17,7 +17,7 @@ class _$SettingStateTearOff {
   const _$SettingStateTearOff();
 
   _SettingState call(
-      {required Setting entity, required bool userIsUpdatedFrom132 = false}) {
+      {required Setting? entity, required bool userIsUpdatedFrom132 = false}) {
     return _SettingState(
       entity: entity,
       userIsUpdatedFrom132: userIsUpdatedFrom132,
@@ -30,7 +30,7 @@ const $SettingState = _$SettingStateTearOff();
 
 /// @nodoc
 mixin _$SettingState {
-  Setting get entity => throw _privateConstructorUsedError;
+  Setting? get entity => throw _privateConstructorUsedError;
   bool get userIsUpdatedFrom132 => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
@@ -43,9 +43,9 @@ abstract class $SettingStateCopyWith<$Res> {
   factory $SettingStateCopyWith(
           SettingState value, $Res Function(SettingState) then) =
       _$SettingStateCopyWithImpl<$Res>;
-  $Res call({Setting entity, bool userIsUpdatedFrom132});
+  $Res call({Setting? entity, bool userIsUpdatedFrom132});
 
-  $SettingCopyWith<$Res> get entity;
+  $SettingCopyWith<$Res>? get entity;
 }
 
 /// @nodoc
@@ -65,7 +65,7 @@ class _$SettingStateCopyWithImpl<$Res> implements $SettingStateCopyWith<$Res> {
       entity: entity == freezed
           ? _value.entity
           : entity // ignore: cast_nullable_to_non_nullable
-              as Setting,
+              as Setting?,
       userIsUpdatedFrom132: userIsUpdatedFrom132 == freezed
           ? _value.userIsUpdatedFrom132
           : userIsUpdatedFrom132 // ignore: cast_nullable_to_non_nullable
@@ -74,8 +74,12 @@ class _$SettingStateCopyWithImpl<$Res> implements $SettingStateCopyWith<$Res> {
   }
 
   @override
-  $SettingCopyWith<$Res> get entity {
-    return $SettingCopyWith<$Res>(_value.entity, (value) {
+  $SettingCopyWith<$Res>? get entity {
+    if (_value.entity == null) {
+      return null;
+    }
+
+    return $SettingCopyWith<$Res>(_value.entity!, (value) {
       return _then(_value.copyWith(entity: value));
     });
   }
@@ -88,10 +92,10 @@ abstract class _$SettingStateCopyWith<$Res>
           _SettingState value, $Res Function(_SettingState) then) =
       __$SettingStateCopyWithImpl<$Res>;
   @override
-  $Res call({Setting entity, bool userIsUpdatedFrom132});
+  $Res call({Setting? entity, bool userIsUpdatedFrom132});
 
   @override
-  $SettingCopyWith<$Res> get entity;
+  $SettingCopyWith<$Res>? get entity;
 }
 
 /// @nodoc
@@ -113,7 +117,7 @@ class __$SettingStateCopyWithImpl<$Res> extends _$SettingStateCopyWithImpl<$Res>
       entity: entity == freezed
           ? _value.entity
           : entity // ignore: cast_nullable_to_non_nullable
-              as Setting,
+              as Setting?,
       userIsUpdatedFrom132: userIsUpdatedFrom132 == freezed
           ? _value.userIsUpdatedFrom132
           : userIsUpdatedFrom132 // ignore: cast_nullable_to_non_nullable
@@ -129,7 +133,7 @@ class _$_SettingState extends _SettingState {
       : super._();
 
   @override
-  final Setting entity;
+  final Setting? entity;
   @JsonKey(defaultValue: false)
   @override
   final bool userIsUpdatedFrom132;
@@ -164,12 +168,12 @@ class _$_SettingState extends _SettingState {
 
 abstract class _SettingState extends SettingState {
   factory _SettingState(
-      {required Setting entity,
+      {required Setting? entity,
       required bool userIsUpdatedFrom132}) = _$_SettingState;
   _SettingState._() : super._();
 
   @override
-  Setting get entity => throw _privateConstructorUsedError;
+  Setting? get entity => throw _privateConstructorUsedError;
   @override
   bool get userIsUpdatedFrom132 => throw _privateConstructorUsedError;
   @override
