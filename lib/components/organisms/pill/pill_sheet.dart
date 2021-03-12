@@ -14,7 +14,7 @@ typedef DoneStateBuilder = bool Function(int);
 
 class PillSheet extends StatelessWidget {
   static Size size = Size(316, 264);
-  final Weekday firstWeekday;
+  final Weekday? firstWeekday;
   final PillMarkTypeBuilder pillMarkTypeBuilder;
   final DoneStateBuilder doneStateBuilder;
   final PillMarkTypeHasRippleAnimation? enabledMarkAnimation;
