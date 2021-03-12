@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
 
 part of 'initial_setting.dart';
 
@@ -9,21 +9,23 @@ part of 'initial_setting.dart';
 
 T _$identity<T>(T value) => value;
 
+final _privateConstructorUsedError = UnsupportedError(
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+
 /// @nodoc
 class _$InitialSettingModelTearOff {
   const _$InitialSettingModelTearOff();
 
-// ignore: unused_element
   _InitialSettingModel initial(
-      {int fromMenstruation = 23,
-      int durationMenstruation = 4,
-      List<ReminderTime> reminderTimes = const [
-        ReminderTime(hour: 21, minute: 0),
-        ReminderTime(hour: 22, minute: 0)
+      {required int fromMenstruation = 23,
+      required int durationMenstruation = 4,
+      required List<ReminderTime> reminderTimes = const [
+        const ReminderTime(hour: 21, minute: 0),
+        const ReminderTime(hour: 22, minute: 0)
       ],
-      bool isOnReminder = false,
-      int todayPillNumber,
-      PillSheetType pillSheetType}) {
+      required bool isOnReminder = false,
+      int? todayPillNumber,
+      PillSheetType? pillSheetType}) {
     return _InitialSettingModel(
       fromMenstruation: fromMenstruation,
       durationMenstruation: durationMenstruation,
@@ -36,51 +38,57 @@ class _$InitialSettingModelTearOff {
 }
 
 /// @nodoc
-// ignore: unused_element
 const $InitialSettingModel = _$InitialSettingModelTearOff();
 
 /// @nodoc
 mixin _$InitialSettingModel {
-  int get fromMenstruation;
-  int get durationMenstruation;
-  List<ReminderTime> get reminderTimes;
-  bool get isOnReminder;
-  int get todayPillNumber;
-  PillSheetType get pillSheetType;
+  int get fromMenstruation => throw _privateConstructorUsedError;
+  int get durationMenstruation => throw _privateConstructorUsedError;
+  List<ReminderTime> get reminderTimes => throw _privateConstructorUsedError;
+  bool get isOnReminder => throw _privateConstructorUsedError;
+  int? get todayPillNumber => throw _privateConstructorUsedError;
+  PillSheetType? get pillSheetType => throw _privateConstructorUsedError;
 
   @optionalTypeArgs
-  TResult when<TResult extends Object>({
-    @required
-        TResult initial(
+  TResult when<TResult extends Object?>({
+    required TResult Function(
             int fromMenstruation,
             int durationMenstruation,
             List<ReminderTime> reminderTimes,
             bool isOnReminder,
-            int todayPillNumber,
-            PillSheetType pillSheetType),
-  });
+            int? todayPillNumber,
+            PillSheetType? pillSheetType)
+        initial,
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object>({
-    TResult initial(
-        int fromMenstruation,
-        int durationMenstruation,
-        List<ReminderTime> reminderTimes,
-        bool isOnReminder,
-        int todayPillNumber,
-        PillSheetType pillSheetType),
-    @required TResult orElse(),
-  });
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(
+            int fromMenstruation,
+            int durationMenstruation,
+            List<ReminderTime> reminderTimes,
+            bool isOnReminder,
+            int? todayPillNumber,
+            PillSheetType? pillSheetType)?
+        initial,
+    required TResult orElse(),
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
-  TResult map<TResult extends Object>({
-    @required TResult initial(_InitialSettingModel value),
-  });
+  TResult map<TResult extends Object?>({
+    required TResult Function(_InitialSettingModel value) initial,
+  }) =>
+      throw _privateConstructorUsedError;
   @optionalTypeArgs
-  TResult maybeMap<TResult extends Object>({
-    TResult initial(_InitialSettingModel value),
-    @required TResult orElse(),
-  });
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_InitialSettingModel value)? initial,
+    required TResult orElse(),
+  }) =>
+      throw _privateConstructorUsedError;
 
-  $InitialSettingModelCopyWith<InitialSettingModel> get copyWith;
+  @JsonKey(ignore: true)
+  $InitialSettingModelCopyWith<InitialSettingModel> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -93,8 +101,8 @@ abstract class $InitialSettingModelCopyWith<$Res> {
       int durationMenstruation,
       List<ReminderTime> reminderTimes,
       bool isOnReminder,
-      int todayPillNumber,
-      PillSheetType pillSheetType});
+      int? todayPillNumber,
+      PillSheetType? pillSheetType});
 }
 
 /// @nodoc
@@ -108,31 +116,38 @@ class _$InitialSettingModelCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object fromMenstruation = freezed,
-    Object durationMenstruation = freezed,
-    Object reminderTimes = freezed,
-    Object isOnReminder = freezed,
-    Object todayPillNumber = freezed,
-    Object pillSheetType = freezed,
+    Object? fromMenstruation = freezed,
+    Object? durationMenstruation = freezed,
+    Object? reminderTimes = freezed,
+    Object? isOnReminder = freezed,
+    Object? todayPillNumber = freezed,
+    Object? pillSheetType = freezed,
   }) {
     return _then(_value.copyWith(
       fromMenstruation: fromMenstruation == freezed
           ? _value.fromMenstruation
-          : fromMenstruation as int,
+          : fromMenstruation // ignore: cast_nullable_to_non_nullable
+              as int,
       durationMenstruation: durationMenstruation == freezed
           ? _value.durationMenstruation
-          : durationMenstruation as int,
+          : durationMenstruation // ignore: cast_nullable_to_non_nullable
+              as int,
       reminderTimes: reminderTimes == freezed
           ? _value.reminderTimes
-          : reminderTimes as List<ReminderTime>,
-      isOnReminder:
-          isOnReminder == freezed ? _value.isOnReminder : isOnReminder as bool,
+          : reminderTimes // ignore: cast_nullable_to_non_nullable
+              as List<ReminderTime>,
+      isOnReminder: isOnReminder == freezed
+          ? _value.isOnReminder
+          : isOnReminder // ignore: cast_nullable_to_non_nullable
+              as bool,
       todayPillNumber: todayPillNumber == freezed
           ? _value.todayPillNumber
-          : todayPillNumber as int,
+          : todayPillNumber // ignore: cast_nullable_to_non_nullable
+              as int?,
       pillSheetType: pillSheetType == freezed
           ? _value.pillSheetType
-          : pillSheetType as PillSheetType,
+          : pillSheetType // ignore: cast_nullable_to_non_nullable
+              as PillSheetType?,
     ));
   }
 }
@@ -149,8 +164,8 @@ abstract class _$InitialSettingModelCopyWith<$Res>
       int durationMenstruation,
       List<ReminderTime> reminderTimes,
       bool isOnReminder,
-      int todayPillNumber,
-      PillSheetType pillSheetType});
+      int? todayPillNumber,
+      PillSheetType? pillSheetType});
 }
 
 /// @nodoc
@@ -166,31 +181,38 @@ class __$InitialSettingModelCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object fromMenstruation = freezed,
-    Object durationMenstruation = freezed,
-    Object reminderTimes = freezed,
-    Object isOnReminder = freezed,
-    Object todayPillNumber = freezed,
-    Object pillSheetType = freezed,
+    Object? fromMenstruation = freezed,
+    Object? durationMenstruation = freezed,
+    Object? reminderTimes = freezed,
+    Object? isOnReminder = freezed,
+    Object? todayPillNumber = freezed,
+    Object? pillSheetType = freezed,
   }) {
     return _then(_InitialSettingModel(
       fromMenstruation: fromMenstruation == freezed
           ? _value.fromMenstruation
-          : fromMenstruation as int,
+          : fromMenstruation // ignore: cast_nullable_to_non_nullable
+              as int,
       durationMenstruation: durationMenstruation == freezed
           ? _value.durationMenstruation
-          : durationMenstruation as int,
+          : durationMenstruation // ignore: cast_nullable_to_non_nullable
+              as int,
       reminderTimes: reminderTimes == freezed
           ? _value.reminderTimes
-          : reminderTimes as List<ReminderTime>,
-      isOnReminder:
-          isOnReminder == freezed ? _value.isOnReminder : isOnReminder as bool,
+          : reminderTimes // ignore: cast_nullable_to_non_nullable
+              as List<ReminderTime>,
+      isOnReminder: isOnReminder == freezed
+          ? _value.isOnReminder
+          : isOnReminder // ignore: cast_nullable_to_non_nullable
+              as bool,
       todayPillNumber: todayPillNumber == freezed
           ? _value.todayPillNumber
-          : todayPillNumber as int,
+          : todayPillNumber // ignore: cast_nullable_to_non_nullable
+              as int?,
       pillSheetType: pillSheetType == freezed
           ? _value.pillSheetType
-          : pillSheetType as PillSheetType,
+          : pillSheetType // ignore: cast_nullable_to_non_nullable
+              as PillSheetType?,
     ));
   }
 }
@@ -198,20 +220,16 @@ class __$InitialSettingModelCopyWithImpl<$Res>
 /// @nodoc
 class _$_InitialSettingModel extends _InitialSettingModel {
   _$_InitialSettingModel(
-      {this.fromMenstruation = 23,
-      this.durationMenstruation = 4,
-      this.reminderTimes = const [
-        ReminderTime(hour: 21, minute: 0),
-        ReminderTime(hour: 22, minute: 0)
+      {required this.fromMenstruation = 23,
+      required this.durationMenstruation = 4,
+      required this.reminderTimes = const [
+        const ReminderTime(hour: 21, minute: 0),
+        const ReminderTime(hour: 22, minute: 0)
       ],
-      this.isOnReminder = false,
+      required this.isOnReminder = false,
       this.todayPillNumber,
       this.pillSheetType})
-      : assert(fromMenstruation != null),
-        assert(durationMenstruation != null),
-        assert(reminderTimes != null),
-        assert(isOnReminder != null),
-        super._();
+      : super._();
 
   @JsonKey(defaultValue: 23)
   @override
@@ -220,8 +238,8 @@ class _$_InitialSettingModel extends _InitialSettingModel {
   @override
   final int durationMenstruation;
   @JsonKey(defaultValue: const [
-    ReminderTime(hour: 21, minute: 0),
-    ReminderTime(hour: 22, minute: 0)
+    const ReminderTime(hour: 21, minute: 0),
+    const ReminderTime(hour: 22, minute: 0)
   ])
   @override
   final List<ReminderTime> reminderTimes;
@@ -229,9 +247,9 @@ class _$_InitialSettingModel extends _InitialSettingModel {
   @override
   final bool isOnReminder;
   @override
-  final int todayPillNumber;
+  final int? todayPillNumber;
   @override
-  final PillSheetType pillSheetType;
+  final PillSheetType? pillSheetType;
 
   @override
   String toString() {
@@ -272,6 +290,7 @@ class _$_InitialSettingModel extends _InitialSettingModel {
       const DeepCollectionEquality().hash(todayPillNumber) ^
       const DeepCollectionEquality().hash(pillSheetType);
 
+  @JsonKey(ignore: true)
   @override
   _$InitialSettingModelCopyWith<_InitialSettingModel> get copyWith =>
       __$InitialSettingModelCopyWithImpl<_InitialSettingModel>(
@@ -279,34 +298,33 @@ class _$_InitialSettingModel extends _InitialSettingModel {
 
   @override
   @optionalTypeArgs
-  TResult when<TResult extends Object>({
-    @required
-        TResult initial(
+  TResult when<TResult extends Object?>({
+    required TResult Function(
             int fromMenstruation,
             int durationMenstruation,
             List<ReminderTime> reminderTimes,
             bool isOnReminder,
-            int todayPillNumber,
-            PillSheetType pillSheetType),
+            int? todayPillNumber,
+            PillSheetType? pillSheetType)
+        initial,
   }) {
-    assert(initial != null);
     return initial(fromMenstruation, durationMenstruation, reminderTimes,
         isOnReminder, todayPillNumber, pillSheetType);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeWhen<TResult extends Object>({
-    TResult initial(
-        int fromMenstruation,
-        int durationMenstruation,
-        List<ReminderTime> reminderTimes,
-        bool isOnReminder,
-        int todayPillNumber,
-        PillSheetType pillSheetType),
-    @required TResult orElse(),
+  TResult maybeWhen<TResult extends Object?>({
+    TResult Function(
+            int fromMenstruation,
+            int durationMenstruation,
+            List<ReminderTime> reminderTimes,
+            bool isOnReminder,
+            int? todayPillNumber,
+            PillSheetType? pillSheetType)?
+        initial,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (initial != null) {
       return initial(fromMenstruation, durationMenstruation, reminderTimes,
           isOnReminder, todayPillNumber, pillSheetType);
@@ -316,20 +334,18 @@ class _$_InitialSettingModel extends _InitialSettingModel {
 
   @override
   @optionalTypeArgs
-  TResult map<TResult extends Object>({
-    @required TResult initial(_InitialSettingModel value),
+  TResult map<TResult extends Object?>({
+    required TResult Function(_InitialSettingModel value) initial,
   }) {
-    assert(initial != null);
     return initial(this);
   }
 
   @override
   @optionalTypeArgs
-  TResult maybeMap<TResult extends Object>({
-    TResult initial(_InitialSettingModel value),
-    @required TResult orElse(),
+  TResult maybeMap<TResult extends Object?>({
+    TResult Function(_InitialSettingModel value)? initial,
+    required TResult orElse(),
   }) {
-    assert(orElse != null);
     if (initial != null) {
       return initial(this);
     }
@@ -338,27 +354,29 @@ class _$_InitialSettingModel extends _InitialSettingModel {
 }
 
 abstract class _InitialSettingModel extends InitialSettingModel {
-  _InitialSettingModel._() : super._();
   factory _InitialSettingModel(
-      {int fromMenstruation,
-      int durationMenstruation,
-      List<ReminderTime> reminderTimes,
-      bool isOnReminder,
-      int todayPillNumber,
-      PillSheetType pillSheetType}) = _$_InitialSettingModel;
+      {required int fromMenstruation,
+      required int durationMenstruation,
+      required List<ReminderTime> reminderTimes,
+      required bool isOnReminder,
+      int? todayPillNumber,
+      PillSheetType? pillSheetType}) = _$_InitialSettingModel;
+  _InitialSettingModel._() : super._();
 
   @override
-  int get fromMenstruation;
+  int get fromMenstruation => throw _privateConstructorUsedError;
   @override
-  int get durationMenstruation;
+  int get durationMenstruation => throw _privateConstructorUsedError;
   @override
-  List<ReminderTime> get reminderTimes;
+  List<ReminderTime> get reminderTimes => throw _privateConstructorUsedError;
   @override
-  bool get isOnReminder;
+  bool get isOnReminder => throw _privateConstructorUsedError;
   @override
-  int get todayPillNumber;
+  int? get todayPillNumber => throw _privateConstructorUsedError;
   @override
-  PillSheetType get pillSheetType;
+  PillSheetType? get pillSheetType => throw _privateConstructorUsedError;
   @override
-  _$InitialSettingModelCopyWith<_InitialSettingModel> get copyWith;
+  @JsonKey(ignore: true)
+  _$InitialSettingModelCopyWith<_InitialSettingModel> get copyWith =>
+      throw _privateConstructorUsedError;
 }
