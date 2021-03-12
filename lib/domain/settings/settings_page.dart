@@ -311,13 +311,12 @@ class SettingsPage extends HookWidget {
                   done: null,
                   doneText: null,
                   title: "生理について",
-                  pillSheetTotalCount:
-                      settingState.entity?.pillSheetType.totalCount,
+                  pillSheetTotalCount: settingEntity.pillSheetType.totalCount,
                   model: SettingMenstruationPageModel(
                     selectedFromMenstruation:
-                        settingState.entity?.pillNumberForFromMenstruation,
+                        settingEntity.pillNumberForFromMenstruation,
                     selectedDurationMenstruation:
-                        settingState.entity?.durationMenstruation,
+                        settingEntity.durationMenstruation,
                   ),
                   fromMenstructionDidDecide: (selectedFromMenstruction) =>
                       settingStore
@@ -382,7 +381,7 @@ class SettingsPage extends HookWidget {
       children: [
         _sectionTitle(section),
         ...[
-          ..._rowModels(context, section)!.map((e) {
+          ..._rowModels(context, section).map((e) {
             return [e.widget(), _separatorItem()];
           }).expand((element) => element)
         ]..add(SizedBox(height: 16)),
