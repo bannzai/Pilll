@@ -29,7 +29,8 @@ abstract class PillSheetTypeInfo with _$PillSheetTypeInfo {
 
   factory PillSheetTypeInfo.fromJson(Map<String, dynamic> json) =>
       _$PillSheetTypeInfoFromJson(json);
-  Map<String, dynamic> toJson() => _$_$_PillSheetTypeInfoToJson(this as _$_PillSheetTypeInfo);
+  Map<String, dynamic> toJson() =>
+      _$_$_PillSheetTypeInfoToJson(this as _$_PillSheetTypeInfo);
 }
 
 @freezed
@@ -45,14 +46,12 @@ abstract class PillSheetModel implements _$PillSheetModel {
     @JsonKey(includeIfNull: false, toJson: toNull)
         String? id,
     @JsonKey()
-    required
-        PillSheetTypeInfo typeInfo,
+        required PillSheetTypeInfo typeInfo,
     @JsonKey(
-      fromJson: TimestampConverter.timestampToDateTime,
-      toJson: TimestampConverter.dateTimeToTimestamp,
+      fromJson: NonNullTimestampConverter.timestampToDateTime,
+      toJson: NonNullTimestampConverter.dateTimeToTimestamp,
     )
-    required
-        DateTime beginingDate,
+        required DateTime beginingDate,
     @JsonKey(
       fromJson: TimestampConverter.timestampToDateTime,
       toJson: TimestampConverter.dateTimeToTimestamp,
@@ -62,7 +61,7 @@ abstract class PillSheetModel implements _$PillSheetModel {
       fromJson: TimestampConverter.timestampToDateTime,
       toJson: TimestampConverter.dateTimeToTimestamp,
     )
-        required DateTime createdAt,
+        required DateTime? createdAt,
     @JsonKey(
       fromJson: TimestampConverter.timestampToDateTime,
       toJson: TimestampConverter.dateTimeToTimestamp,
@@ -77,7 +76,8 @@ abstract class PillSheetModel implements _$PillSheetModel {
 
   factory PillSheetModel.fromJson(Map<String, dynamic> json) =>
       _$PillSheetModelFromJson(json);
-  Map<String, dynamic> toJson() => _$_$_PillSheetModelToJson(this as _$_PillSheetModel);
+  Map<String, dynamic> toJson() =>
+      _$_$_PillSheetModelToJson(this as _$_PillSheetModel);
 
   PillSheetType get pillSheetType =>
       PillSheetTypeFunctions.fromRawPath(typeInfo.pillSheetTypeReferencePath);
