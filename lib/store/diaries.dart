@@ -9,13 +9,13 @@ import 'package:riverpod/riverpod.dart';
 final diariesStoreProvider = StateNotifierProvider(
     (ref) => DiariesStateStore(ref.watch(diaryServiceProvider)));
 
-class DiariesStateStore extends StateNotifier<DiariesState?> {
+class DiariesStateStore extends StateNotifier<DiariesState> {
   final DiariesServiceInterface _service;
   DiariesStateStore(this._service) : super(DiariesState()) {
     _subscribe();
   }
 
-  StreamSubscription? canceller;
+  StreamSubscription canceller;
   void _subscribe() {
     canceller?.cancel();
     canceller = _service.subscribe().listen((entities) {

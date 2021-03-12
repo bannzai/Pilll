@@ -25,7 +25,7 @@ class CalendarListPage extends HookWidget {
   final List<CalendarListPageModel> models;
   final GlobalKey currentMonthKey = GlobalKey();
 
-  CalendarListPage({Key? key, required this.models}) : super(key: key);
+  CalendarListPage({Key key, @required this.models}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

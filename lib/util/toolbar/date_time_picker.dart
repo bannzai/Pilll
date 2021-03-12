@@ -7,7 +7,7 @@ class DateTimePicker extends StatelessWidget {
   final void Function(DateTime datetime) done;
 
   const DateTimePicker(
-      {Key? key, required this.done, required this.initialDateTime})
+      {Key key, @required this.done, @required this.initialDateTime})
       : super(key: key);
   @override
   Widget build(BuildContext context) {

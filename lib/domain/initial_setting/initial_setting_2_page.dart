@@ -12,7 +12,7 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:intl/intl.dart';
 
 class InitialSetting2Page extends HookWidget {
-  const InitialSetting2Page({Key? key}) : super(key: key);
+  const InitialSetting2Page({Key key}) : super(key: key);
 
   String todayString() {
     return DateFormat.yMEd('ja').format(today());
@@ -103,9 +103,9 @@ class InitialSetting2Page extends HookWidget {
 }
 
 class ExplainPillNumber extends HookWidget {
-  final String? today;
+  final String today;
 
-  const ExplainPillNumber({Key? key, this.today}) : super(key: key);
+  const ExplainPillNumber({Key key, this.today}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     final state = useProvider(initialSettingStoreProvider.state);

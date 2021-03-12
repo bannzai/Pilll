@@ -3,7 +3,7 @@ import 'package:pilll/entity/diary.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
-final userIDProvider = Provider<String?>((ref) {
+final userIDProvider = Provider<String>((ref) {
   final authInfo = ref.watch(authStateProvider);
   if (authInfo.data?.value?.uid != null) {
     return authInfo.data?.value?.uid;
@@ -11,7 +11,7 @@ final userIDProvider = Provider<String?>((ref) {
   return null;
 });
 
-final databaseProvider = Provider<DatabaseConnection?>((ref) {
+final databaseProvider = Provider<DatabaseConnection>((ref) {
   final userID = ref.watch(userIDProvider);
   if (userID == null) {
     return null;

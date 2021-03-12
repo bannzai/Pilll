@@ -21,13 +21,13 @@ List<Diary> sortedDiaries(List<Diary> diaries) {
 }
 
 class DiaryService extends DiariesServiceInterface {
-  final DatabaseConnection? _database;
+  final DatabaseConnection _database;
 
   DiaryService(this._database);
 
   @override
   Future<List<Diary>> fetchListForMonth(DateTime dateTimeOfMonth) {
-    return _database!
+    return _database
         .diariesReference()
         .where(DiaryFirestoreKey.date,
             isLessThanOrEqualTo:
@@ -37,12 +37,12 @@ class DiaryService extends DiariesServiceInterface {
         .orderBy(DiaryFirestoreKey.date)
         .get()
         .then((event) =>
-            event.docs.map((doc) => Diary.fromJson(doc.data()!)).toList());
+            event.docs.map((doc) => Diary.fromJson(doc.data())).toList());
   }
 
   @override
   Future<Diary> register(Diary diary) {
-    return _database!
+    return _database
         .diaryReference(diary)
         .set(diary.toJson(), SetOptions(merge: true))
         .then((_) => diary);
@@ -50,7 +50,7 @@ class DiaryService extends DiariesServiceInterface {
 
   @override
   Future<Diary> update(Diary diary) {
-    return _database!
+    return _database
         .diaryReference(diary)
         .update(diary.toJson())
         .then((_) => diary);
@@ -58,16 +58,16 @@ class DiaryService extends DiariesServiceInterface {
 
   @override
   Future<Diary> delete(Diary diary) {
-    return _database!.diaryReference(diary).delete().then((_) => diary);
+    return _database.diaryReference(diary).delete().then((_) => diary);
   }
 
   @override
   Stream<List<Diary>> subscribe() {
-    return _database!
+    return _database
         .diariesReference()
         .snapshots()
         .map((event) =>
-            event.docs.map((doc) => Diary.fromJson(doc.data()!)).toList())
+            event.docs.map((doc) => Diary.fromJson(doc.data())).toList())
         .map((diaries) => sortedDiaries(diaries));
   }
 }

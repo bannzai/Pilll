@@ -8,9 +8,9 @@ enum PillSheetType {
   pillsheet_28_0,
 }
 
-extension PillSheetTypeFunctions on PillSheetType? {
+extension PillSheetTypeFunctions on PillSheetType {
   static final String firestoreCollectionPath = "pill_sheet_types";
-  static PillSheetType? fromRawPath(String rawPath) {
+  static PillSheetType fromRawPath(String rawPath) {
     switch (rawPath) {
       case "pillsheet_21":
         return PillSheetType.pillsheet_21;
@@ -26,7 +26,7 @@ extension PillSheetTypeFunctions on PillSheetType? {
     }
   }
 
-  String? get fullName {
+  String get fullName {
     switch (this) {
       case PillSheetType.pillsheet_21:
         return "21錠タイプ";
@@ -58,7 +58,7 @@ extension PillSheetTypeFunctions on PillSheetType? {
     }
   }
 
-  SvgPicture? get image {
+  SvgPicture get image {
     switch (this) {
       case PillSheetType.pillsheet_21:
         return SvgPicture.asset("images/pillsheet_21.svg");
@@ -74,7 +74,7 @@ extension PillSheetTypeFunctions on PillSheetType? {
     }
   }
 
-  String? get firestorePath {
+  String get firestorePath {
     switch (this) {
       case PillSheetType.pillsheet_21:
         return "pillsheet_21";
@@ -90,7 +90,7 @@ extension PillSheetTypeFunctions on PillSheetType? {
     }
   }
 
-  int? get totalCount {
+  int get totalCount {
     switch (this) {
       case PillSheetType.pillsheet_21:
         return 28;
@@ -106,7 +106,7 @@ extension PillSheetTypeFunctions on PillSheetType? {
     }
   }
 
-  int? get dosingPeriod {
+  int get dosingPeriod {
     switch (this) {
       case PillSheetType.pillsheet_21:
         return 21;
@@ -124,9 +124,9 @@ extension PillSheetTypeFunctions on PillSheetType? {
 
   PillSheetTypeInfo get typeInfo => PillSheetTypeInfo(
       pillSheetTypeReferencePath: rawPath,
-      name: fullName!,
-      totalCount: totalCount!,
-      dosingPeriod: dosingPeriod!);
+      name: fullName,
+      totalCount: totalCount,
+      dosingPeriod: dosingPeriod);
 
   bool get isNotExistsNotTakenDuration {
     return this.totalCount == this.dosingPeriod;

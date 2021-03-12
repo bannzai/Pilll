@@ -29,7 +29,7 @@ final initialUserProvider =
     FutureProvider((ref) => ref.watch(userServiceProvider).prepare());
 
 class UserService extends UserServiceInterface {
-  final DatabaseConnection? _database;
+  final DatabaseConnection _database;
   UserService(this._database);
 
   Future<User> prepare() async {
@@ -40,55 +40,55 @@ class UserService extends UserServiceInterface {
       throw FormatException(
           "cause exception when failed fetch and create user for $error");
     });
-    errorLogger.setUserIdentifier(auth.FirebaseAuth.instance.currentUser!.uid);
-    firebaseAnalytics.setUserId(auth.FirebaseAuth.instance.currentUser!.uid);
+    errorLogger.setUserIdentifier(auth.FirebaseAuth.instance.currentUser.uid);
+    firebaseAnalytics.setUserId(auth.FirebaseAuth.instance.currentUser.uid);
     return user;
   }
 
   Future<User> fetch() {
-    return _database!.userReference().get().then((document) {
+    return _database.userReference().get().then((document) {
       if (!document.exists) {
         throw UserNotFound();
       }
-      return User.fromJson(document.data()!);
+      return User.fromJson(document.data());
     });
   }
 
   Future<User> subscribe() {
-    return _database!
+    return _database
         .userReference()
         .snapshots(includeMetadataChanges: true)
         .listen((event) {
-      return User.fromJson(event.data()!);
+      return User.fromJson(event.data());
     }).asFuture();
   }
 
   Future<void> deleteSettings() {
-    return _database!
+    return _database
         .userReference()
         .update({UserFirestoreFieldKeys.settings: FieldValue.delete()});
   }
 
   Future<void> setFlutterMigrationFlag() {
-    return _database!.userReference().set(
+    return _database.userReference().set(
       {UserFirestoreFieldKeys.migratedFlutter: true},
       SetOptions(merge: true),
     );
   }
 
   Future<void> _create() {
-    return _database!.userReference().set(
+    return _database.userReference().set(
       {
         UserFirestoreFieldKeys.anonymouseUserID:
-            auth.FirebaseAuth.instance.currentUser!.uid,
+            auth.FirebaseAuth.instance.currentUser.uid,
       },
       SetOptions(merge: true),
     );
   }
 
-  Future<void> registerRemoteNotificationToken(String? token) {
+  Future<void> registerRemoteNotificationToken(String token) {
     print("token: $token");
-    return _database!.userPrivateReference().set(
+    return _database.userPrivateReference().set(
       {UserPrivateFirestoreFieldKeys.fcmToken: token},
       SetOptions(merge: true),
     );
@@ -102,7 +102,7 @@ class UserService extends UserServiceInterface {
           appName: info.appName,
           buildNumber: info.buildNumber,
           appVersion: info.version);
-      return _database!.userReference().set(
+      return _database.userReference().set(
           {UserFirestoreFieldKeys.packageInfo: packageInfo.toJson()},
           SetOptions(merge: true));
     });
@@ -110,7 +110,7 @@ class UserService extends UserServiceInterface {
 
   Future<void> saveStats() {
     return SharedPreferences.getInstance().then((store) async {
-      String? beginingVersion = store.getString(StringKey.beginingVersionKey);
+      String beginingVersion = store.getString(StringKey.beginingVersionKey);
       if (beginingVersion == null) {
         final v =
             await PackageInfo.fromPlatform().then((value) => value.version);
@@ -119,7 +119,7 @@ class UserService extends UserServiceInterface {
       }
       return beginingVersion;
     }).then((version) {
-      return _database!.userReference().set({
+      return _database.userReference().set({
         "stats": {
           "lastLoginAt": DateTime.now(),
           "beginingVersion": version,

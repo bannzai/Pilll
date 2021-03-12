@@ -15,7 +15,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 GlobalKey<RootState> rootKey = GlobalKey();
 
 class Root extends StatefulWidget {
-  Root({Key? key}) : super(key: key);
+  Root({Key key}) : super(key: key);
 
   @override
   RootState createState() => RootState();
@@ -25,14 +25,14 @@ enum ScreenType { home, initialSetting }
 enum IndicatorType { shown, hidden }
 
 class RootState extends State<Root> {
-  Error? error;
+  Error error;
   onError(Error error) {
     setState(() {
       this.error = error;
     });
   }
 
-  ScreenType? screenType;
+  ScreenType screenType;
   showHome() {
     setState(() {
       screenType = ScreenType.home;
@@ -118,7 +118,7 @@ class RootState extends State<Root> {
             UserDisplayedError(displayedMessage: ErrorMessages.connection);
         return UniversalErrorPage(error: displayedError);
       });
-    } as Widget Function(BuildContext, T Function<T>(ProviderBase<Object?, T>), Widget?));
+    });
   }
 
   _auth() {
@@ -141,7 +141,7 @@ class RootState extends State<Root> {
           storage.setString(
               StringKey.firebaseAnonymousUserID, user.anonymouseUserID);
         }
-        bool? didEndInitialSetting =
+        bool didEndInitialSetting =
             storage.getBool(BoolKey.didEndInitialSetting);
         if (didEndInitialSetting == null) {
           return ScreenType.initialSetting;

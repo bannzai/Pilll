@@ -8,7 +8,7 @@ part 'diaries.freezed.dart';
 @freezed
 abstract class DiariesState implements _$DiariesState {
   DiariesState._();
-  factory DiariesState({@Default([]) required List<Diary> entities}) = _DiariesState;
+  factory DiariesState({@Default([]) List<Diary> entities}) = _DiariesState;
 
   List<Diary> diariesForMonth(DateTime dateTimeOfMonth) {
     entities
@@ -20,7 +20,7 @@ abstract class DiariesState implements _$DiariesState {
     return entities;
   }
 
-  Diary? diaryForDatetimeOrNull(DateTime dateTime) {
+  Diary diaryForDatetimeOrNull(DateTime dateTime) {
     final filtered =
         entities.where((element) => isSameDay(element.date, dateTime));
     if (filtered.isEmpty) {

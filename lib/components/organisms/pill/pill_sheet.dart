@@ -14,21 +14,21 @@ typedef DoneStateBuilder = bool Function(int);
 
 class PillSheet extends StatelessWidget {
   static Size size = Size(316, 264);
-  final Weekday? firstWeekday;
+  final Weekday firstWeekday;
   final PillMarkTypeBuilder pillMarkTypeBuilder;
   final DoneStateBuilder doneStateBuilder;
-  final PillMarkTypeHasRippleAnimation? enabledMarkAnimation;
+  final PillMarkTypeHasRippleAnimation enabledMarkAnimation;
   final PillMarkSelected markSelected;
 
   bool get isHideWeekdayLine => firstWeekday == null;
 
   const PillSheet({
-    Key? key,
+    Key key,
     this.firstWeekday,
-    required this.pillMarkTypeBuilder,
-    required this.enabledMarkAnimation,
-    required this.markSelected,
-    required this.doneStateBuilder,
+    @required this.pillMarkTypeBuilder,
+    @required this.enabledMarkAnimation,
+    @required this.markSelected,
+    @required this.doneStateBuilder,
   }) : super(key: key);
 
   int _calcIndex(int row, int line) {
@@ -38,7 +38,7 @@ class PillSheet extends StatelessWidget {
   Widget _weekdayLine() {
     return Row(
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      children: WeekdayFunctions.weekdaysForFirstWeekday(firstWeekday!)
+      children: WeekdayFunctions.weekdaysForFirstWeekday(firstWeekday)
           .map(
             (weekday) => WeekdayBadge(weekday: weekday),
           )
@@ -61,7 +61,7 @@ class PillSheet extends StatelessWidget {
             key: Key("PillMarkWidget_$number"),
             hasRippleAnimation: enabledMarkAnimation == null
                 ? false
-                : enabledMarkAnimation!(number),
+                : enabledMarkAnimation(number),
             isDone: doneStateBuilder(number),
             type: type,
           ),
