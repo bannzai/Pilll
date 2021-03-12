@@ -24,7 +24,7 @@ class PillSheet extends StatelessWidget {
 
   const PillSheet({
     Key? key,
-    required this.firstWeekday,
+    this.firstWeekday,
     required this.pillMarkTypeBuilder,
     required this.enabledMarkAnimation,
     required this.markSelected,
@@ -37,13 +37,19 @@ class PillSheet extends StatelessWidget {
 
   Widget _weekdayLine() {
     return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      children: WeekdayFunctions.weekdaysForFirstWeekday(firstWeekday)
-          .map(
-            (weekday) => WeekdayBadge(weekday: weekday),
-          )
-          .toList(),
-    );
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: () {
+          final firstWeekday = this.firstWeekday;
+          if (firstWeekday == null) {
+            return <Widget>[];
+          }
+
+          return WeekdayFunctions.weekdaysForFirstWeekday(firstWeekday)
+              .map(
+                (weekday) => WeekdayBadge(weekday: weekday),
+              )
+              .toList();
+        }());
   }
 
   Widget _pillMarkWithNumber(int number) {
