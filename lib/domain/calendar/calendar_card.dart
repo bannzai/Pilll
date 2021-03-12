@@ -1,3 +1,4 @@
+import 'package:pilll/components/molecules/indicator.dart';
 import 'package:pilll/components/molecules/app_card.dart';
 import 'package:pilll/domain/calendar/calculator.dart';
 import 'package:pilll/domain/calendar/calendar.dart';
@@ -29,6 +30,10 @@ class CalendarCard extends HookWidget {
   Widget build(BuildContext context) {
     final currentPillSheetState = useProvider(pillSheetStoreProvider.state);
     final settingState = useProvider(settingStoreProvider.state);
+    final settingEntity = settingState.entity;
+    if (settingEntity == null) {
+      return ScaffoldIndicator();
+    }
     return AppCard(
       child: Column(
         children: <Widget>[
@@ -39,7 +44,7 @@ class CalendarCard extends HookWidget {
                 currentPillSheetState.entity, settingState.entity, 0),
             horizontalPadding: 16,
           ),
-          _more(context, settingState.entity?, currentPillSheetState.entity),
+          _more(context, settingEntity, currentPillSheetState.entity),
         ],
       ),
     );

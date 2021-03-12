@@ -14,7 +14,7 @@ import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
-final AutoDisposeStateNotifierProviderFamily<PostDiaryStore, DateTime>? _confirmDiaryProvider = StateNotifierProvider.autoDispose
+final  _confirmDiaryProvider = StateNotifierProvider.autoDispose
     .family<PostDiaryStore, DateTime>((ref, date) {
   final diary = ref.watch(diariesStoreProvider.state).diaryForDateTime(date);
   final service = ref.watch(diaryServiceProvider);
@@ -27,7 +27,7 @@ class ConfirmDiarySheet extends HookWidget {
   ConfirmDiarySheet(this.date);
   @override
   Widget build(BuildContext context) {
-    final state = useProvider(_confirmDiaryProvider!(date).state);
+    final state = useProvider(_confirmDiaryProvider(date).state);
     return Container(
       decoration: BoxDecoration(
         borderRadius: BorderRadius.only(
@@ -45,7 +45,7 @@ class ConfirmDiarySheet extends HookWidget {
             ...[
               if (state.hasPhysicalConditionStatus()) _physicalCondition(),
               _physicalConditionDetails(),
-              if (state.entity?.hasSex) _sex(),
+              if (state.entity.hasSex) _sex(),
               _memo(),
             ].map((e) => _withContentSpacer(e)),
           ]),
