@@ -26,7 +26,7 @@ enum HomePageTabType { record, calendar, setting }
 
 class _HomePageState extends State<HomePage>
     with SingleTickerProviderStateMixin, RouteAware {
-  TabController _tabController;
+  late TabController _tabController;
   int _selectedIndex = 0;
   HomePageTabType get _selectedTab {
     return HomePageTabType.values[_selectedIndex];
