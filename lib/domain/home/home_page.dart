@@ -152,7 +152,6 @@ extension HomePageTabFunctions on HomePageTab {
       case HomePageTab.settings:
         return SettingsPage();
     }
-    throw ArgumentError.notNull("HomePageTabFunctions#widget");
   }
 
   String get screenName {
@@ -164,6 +163,5 @@ extension HomePageTabFunctions on HomePageTab {
       case HomePageTab.settings:
         return "SettingsPage";
     }
-    throw ArgumentError.notNull("HomePageTabFunctions#screenName");
   }
 }
