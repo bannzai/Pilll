@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
+// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
 
 part of 'setting.dart';
 
@@ -9,15 +9,12 @@ part of 'setting.dart';
 
 T _$identity<T>(T value) => value;
 
-final _privateConstructorUsedError = UnsupportedError(
-    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
-
 /// @nodoc
 class _$SettingStateTearOff {
   const _$SettingStateTearOff();
 
-  _SettingState call(
-      {Setting? entity, required bool userIsUpdatedFrom132 = false}) {
+// ignore: unused_element
+  _SettingState call({Setting entity, bool userIsUpdatedFrom132 = false}) {
     return _SettingState(
       entity: entity,
       userIsUpdatedFrom132: userIsUpdatedFrom132,
@@ -26,16 +23,15 @@ class _$SettingStateTearOff {
 }
 
 /// @nodoc
+// ignore: unused_element
 const $SettingState = _$SettingStateTearOff();
 
 /// @nodoc
 mixin _$SettingState {
-  Setting? get entity => throw _privateConstructorUsedError;
-  bool get userIsUpdatedFrom132 => throw _privateConstructorUsedError;
+  Setting get entity;
+  bool get userIsUpdatedFrom132;
 
-  @JsonKey(ignore: true)
-  $SettingStateCopyWith<SettingState> get copyWith =>
-      throw _privateConstructorUsedError;
+  $SettingStateCopyWith<SettingState> get copyWith;
 }
 
 /// @nodoc
@@ -43,9 +39,9 @@ abstract class $SettingStateCopyWith<$Res> {
   factory $SettingStateCopyWith(
           SettingState value, $Res Function(SettingState) then) =
       _$SettingStateCopyWithImpl<$Res>;
-  $Res call({Setting? entity, bool userIsUpdatedFrom132});
+  $Res call({Setting entity, bool userIsUpdatedFrom132});
 
-  $SettingCopyWith<$Res>? get entity;
+  $SettingCopyWith<$Res> get entity;
 }
 
 /// @nodoc
@@ -58,28 +54,23 @@ class _$SettingStateCopyWithImpl<$Res> implements $SettingStateCopyWith<$Res> {
 
   @override
   $Res call({
-    Object? entity = freezed,
-    Object? userIsUpdatedFrom132 = freezed,
+    Object entity = freezed,
+    Object userIsUpdatedFrom132 = freezed,
   }) {
     return _then(_value.copyWith(
-      entity: entity == freezed
-          ? _value.entity
-          : entity // ignore: cast_nullable_to_non_nullable
-              as Setting?,
+      entity: entity == freezed ? _value.entity : entity as Setting,
       userIsUpdatedFrom132: userIsUpdatedFrom132 == freezed
           ? _value.userIsUpdatedFrom132
-          : userIsUpdatedFrom132 // ignore: cast_nullable_to_non_nullable
-              as bool,
+          : userIsUpdatedFrom132 as bool,
     ));
   }
 
   @override
-  $SettingCopyWith<$Res>? get entity {
+  $SettingCopyWith<$Res> get entity {
     if (_value.entity == null) {
       return null;
     }
-
-    return $SettingCopyWith<$Res>(_value.entity!, (value) {
+    return $SettingCopyWith<$Res>(_value.entity, (value) {
       return _then(_value.copyWith(entity: value));
     });
   }
@@ -92,10 +83,10 @@ abstract class _$SettingStateCopyWith<$Res>
           _SettingState value, $Res Function(_SettingState) then) =
       __$SettingStateCopyWithImpl<$Res>;
   @override
-  $Res call({Setting? entity, bool userIsUpdatedFrom132});
+  $Res call({Setting entity, bool userIsUpdatedFrom132});
 
   @override
-  $SettingCopyWith<$Res>? get entity;
+  $SettingCopyWith<$Res> get entity;
 }
 
 /// @nodoc
@@ -110,29 +101,26 @@ class __$SettingStateCopyWithImpl<$Res> extends _$SettingStateCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object? entity = freezed,
-    Object? userIsUpdatedFrom132 = freezed,
+    Object entity = freezed,
+    Object userIsUpdatedFrom132 = freezed,
   }) {
     return _then(_SettingState(
-      entity: entity == freezed
-          ? _value.entity
-          : entity // ignore: cast_nullable_to_non_nullable
-              as Setting?,
+      entity: entity == freezed ? _value.entity : entity as Setting,
       userIsUpdatedFrom132: userIsUpdatedFrom132 == freezed
           ? _value.userIsUpdatedFrom132
-          : userIsUpdatedFrom132 // ignore: cast_nullable_to_non_nullable
-              as bool,
+          : userIsUpdatedFrom132 as bool,
     ));
   }
 }
 
 /// @nodoc
 class _$_SettingState extends _SettingState {
-  _$_SettingState({this.entity, required this.userIsUpdatedFrom132 = false})
-      : super._();
+  _$_SettingState({this.entity, this.userIsUpdatedFrom132 = false})
+      : assert(userIsUpdatedFrom132 != null),
+        super._();
 
   @override
-  final Setting? entity;
+  final Setting entity;
   @JsonKey(defaultValue: false)
   @override
   final bool userIsUpdatedFrom132;
@@ -159,23 +147,20 @@ class _$_SettingState extends _SettingState {
       const DeepCollectionEquality().hash(entity) ^
       const DeepCollectionEquality().hash(userIsUpdatedFrom132);
 
-  @JsonKey(ignore: true)
   @override
   _$SettingStateCopyWith<_SettingState> get copyWith =>
       __$SettingStateCopyWithImpl<_SettingState>(this, _$identity);
 }
 
 abstract class _SettingState extends SettingState {
-  factory _SettingState({Setting? entity, required bool userIsUpdatedFrom132}) =
-      _$_SettingState;
   _SettingState._() : super._();
+  factory _SettingState({Setting entity, bool userIsUpdatedFrom132}) =
+      _$_SettingState;
 
   @override
-  Setting? get entity => throw _privateConstructorUsedError;
+  Setting get entity;
   @override
-  bool get userIsUpdatedFrom132 => throw _privateConstructorUsedError;
+  bool get userIsUpdatedFrom132;
   @override
-  @JsonKey(ignore: true)
-  _$SettingStateCopyWith<_SettingState> get copyWith =>
-      throw _privateConstructorUsedError;
+  _$SettingStateCopyWith<_SettingState> get copyWith;
 }
