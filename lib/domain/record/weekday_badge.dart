@@ -6,8 +6,8 @@ import 'package:flutter/material.dart';
 class WeekdayBadge extends StatelessWidget {
   final Weekday weekday;
   const WeekdayBadge({
-    Key key,
-    @required this.weekday,
+    Key? key,
+    required this.weekday,
   }) : super(key: key);
 
   @override

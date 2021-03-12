@@ -30,7 +30,7 @@ void main() {
     SharedPreferences.setMockInitialValues({});
     initializeDateFormatting('ja_JP');
     Environment.isTest = true;
-    WidgetsBinding.instance.renderView.configuration =
+    WidgetsBinding.instance!.renderView.configuration =
         new TestViewConfiguration(size: const Size(375.0, 667.0));
   });
   group('appearance taken button type', () {

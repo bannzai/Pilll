@@ -23,14 +23,14 @@ void main() {
 
       final pillSheetEntity = initialSetting.buildPillSheet();
       final pillSheetService = MockPillSheetService();
-      when(pillSheetService.register(any))
+      when(pillSheetService.register(any!))
           .thenAnswer((realInvocation) => Future.value(pillSheetEntity));
 
       final service = InitialSettingService(settingService, pillSheetService);
       await service.register(initialSetting);
 
       verify(settingService.update(settingEntity));
-      verify(pillSheetService.register(any));
+      verify(pillSheetService.register(any!));
     });
     test("when today pill number is null", () async {
       final initialSetting = InitialSettingModel.initial(
@@ -44,14 +44,14 @@ void main() {
 
       final pillSheetEntity = initialSetting.buildPillSheet();
       final pillSheetService = MockPillSheetService();
-      when(pillSheetService.register(any))
+      when(pillSheetService.register(any!))
           .thenAnswer((realInvocation) => Future.value(pillSheetEntity));
 
       final service = InitialSettingService(settingService, pillSheetService);
       await service.register(initialSetting);
 
       verify(settingService.update(settingEntity));
-      verifyNever(pillSheetService.register(any));
+      verifyNever(pillSheetService.register(any!));
     });
   });
 }

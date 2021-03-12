@@ -5,10 +5,10 @@ import 'package:flutter/animation.dart';
 class Ripple extends CustomPainter {
   Ripple(
     this._animation, {
-    @required this.color,
+    required this.color,
   }) : super(repaint: _animation);
   final Color color;
-  final Animation<double> _animation;
+  final Animation<double>? _animation;
   void circle(Canvas canvas, Rect rect, double value) {
     final double opacity = (1.0 - (value / 2.0)).clamp(0.0, 1.0);
     final Color _color = color.withOpacity(opacity);
@@ -28,7 +28,7 @@ class Ripple extends CustomPainter {
     for (int wave = 3; wave >= 0; wave--) {
       final animationValue = _animation?.value;
       if (animationValue == null) break;
-      circle(canvas, rect, wave + _animation.value);
+      circle(canvas, rect, wave + _animation!.value);
     }
   }
 

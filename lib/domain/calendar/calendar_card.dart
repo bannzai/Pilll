@@ -23,7 +23,7 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 class CalendarCard extends HookWidget {
   final DateTime date;
 
-  const CalendarCard({Key key, @required this.date}) : super(key: key);
+  const CalendarCard({Key? key, required this.date}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -39,7 +39,7 @@ class CalendarCard extends HookWidget {
                 currentPillSheetState.entity, settingState.entity, 0),
             horizontalPadding: 16,
           ),
-          _more(context, settingState.entity, currentPillSheetState.entity),
+          _more(context, settingState.entity!, currentPillSheetState.entity),
         ],
       ),
     );
@@ -74,7 +74,7 @@ class CalendarCard extends HookWidget {
   }
 
   Widget _more(
-      BuildContext context, Setting setting, PillSheetModel latestPillSheet) {
+      BuildContext context, Setting setting, PillSheetModel? latestPillSheet) {
     return ConstrainedBox(
       constraints: BoxConstraints.expand(height: 60),
       child: Row(

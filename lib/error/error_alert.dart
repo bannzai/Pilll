@@ -5,10 +5,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
 class ErrorAlert extends StatelessWidget {
-  final String title;
+  final String? title;
   final String errorMessage;
 
-  const ErrorAlert({Key key, this.title, @required this.errorMessage})
+  const ErrorAlert({Key? key, this.title, required this.errorMessage})
       : super(key: key);
   @override
   Widget build(BuildContext context) {
@@ -32,7 +32,7 @@ class ErrorAlert extends StatelessWidget {
 }
 
 void showErrorAlert(BuildContext context,
-    {String title, @required String message}) {
+    {String? title, required String message}) {
   showDialog(
     context: context,
     builder: (_) {

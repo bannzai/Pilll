@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 
 class Indicator extends StatelessWidget {
   const Indicator({
-    Key key,
+    Key? key,
   }) : super(key: key);
 
   @override

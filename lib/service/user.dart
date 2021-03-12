@@ -24,7 +24,7 @@ abstract class UserServiceInterface {
 }
 
 final userServiceProvider =
-    Provider((ref) => UserService(ref.watch(databaseProvider)));
+    Provider((ref) => UserService(ref.watch(databaseProvider as AlwaysAliveProviderBase<Object?, DatabaseConnection>)));
 final initialUserProvider =
     FutureProvider((ref) => ref.watch(userServiceProvider).prepare());
 
@@ -40,8 +40,8 @@ class UserService extends UserServiceInterface {
       throw FormatException(
           "cause exception when failed fetch and create user for $error");
     });
-    errorLogger.setUserIdentifier(auth.FirebaseAuth.instance.currentUser.uid);
-    firebaseAnalytics.setUserId(auth.FirebaseAuth.instance.currentUser.uid);
+    errorLogger.setUserIdentifier(auth.FirebaseAuth.instance.currentUser!.uid);
+    firebaseAnalytics.setUserId(auth.FirebaseAuth.instance.currentUser!.uid);
     return user;
   }
 
@@ -50,7 +50,7 @@ class UserService extends UserServiceInterface {
       if (!document.exists) {
         throw UserNotFound();
       }
-      return User.fromJson(document.data());
+      return User.fromJson(document.data()!);
     });
   }
 
@@ -59,7 +59,7 @@ class UserService extends UserServiceInterface {
         .userReference()
         .snapshots(includeMetadataChanges: true)
         .listen((event) {
-      return User.fromJson(event.data());
+      return User.fromJson(event.data()!);
     }).asFuture();
   }
 
@@ -80,13 +80,13 @@ class UserService extends UserServiceInterface {
     return _database.userReference().set(
       {
         UserFirestoreFieldKeys.anonymouseUserID:
-            auth.FirebaseAuth.instance.currentUser.uid,
+            auth.FirebaseAuth.instance.currentUser!.uid,
       },
       SetOptions(merge: true),
     );
   }
 
-  Future<void> registerRemoteNotificationToken(String token) {
+  Future<void> registerRemoteNotificationToken(String? token) {
     print("token: $token");
     return _database.userPrivateReference().set(
       {UserPrivateFirestoreFieldKeys.fcmToken: token},
@@ -110,7 +110,7 @@ class UserService extends UserServiceInterface {
 
   Future<void> saveStats() {
     return SharedPreferences.getInstance().then((store) async {
-      String beginingVersion = store.getString(StringKey.beginingVersionKey);
+      String? beginingVersion = store.getString(StringKey.beginingVersionKey);
       if (beginingVersion == null) {
         final v =
             await PackageInfo.fromPlatform().then((value) => value.version);

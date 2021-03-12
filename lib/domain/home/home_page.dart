@@ -16,7 +16,7 @@ import 'package:flutter_svg/svg.dart';
 GlobalKey<_HomePageState> homeKey = GlobalKey();
 
 class HomePage extends StatefulWidget {
-  HomePage({@required Key key}) : super(key: key);
+  HomePage({required Key key}) : super(key: key);
 
   @override
   _HomePageState createState() => _HomePageState();
