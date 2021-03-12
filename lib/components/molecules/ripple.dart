@@ -5,7 +5,7 @@ import 'package:flutter/animation.dart';
 class Ripple extends CustomPainter {
   Ripple(
     this._animation, {
-    required this.color,
+    @required this.color,
   }) : super(repaint: _animation);
   final Color color;
   final Animation<double> _animation;

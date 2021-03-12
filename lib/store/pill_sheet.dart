@@ -12,7 +12,7 @@ import 'package:riverpod/riverpod.dart';
 final pillSheetStoreProvider = StateNotifierProvider(
     (ref) => PillSheetStateStore(ref.watch(pillSheetServiceProvider)));
 
-class PillSheetStateStore extends StateNotifier<PillSheetState?> {
+class PillSheetStateStore extends StateNotifier<PillSheetState> {
   final PillSheetServiceInterface _service;
   PillSheetStateStore(this._service) : super(PillSheetState()) {
     _reset();
@@ -25,14 +25,14 @@ class PillSheetStateStore extends StateNotifier<PillSheetState?> {
       analytics.logEvent(name: "count_of_remaining_pill", parameters: {
         "count": state.entity == null
             ? 0
-            : (state.entity!.todayPillNumber - state.entity!.lastTakenPillNumber)
+            : (state.entity.todayPillNumber - state.entity.lastTakenPillNumber)
       });
       firstLoadIsEnded = true;
       _subscribe();
     });
   }
 
-  StreamSubscription<PillSheetModel?>? canceller;
+  StreamSubscription<PillSheetModel> canceller;
   void _subscribe() {
     canceller?.cancel();
     canceller = _service.subscribeForLatestPillSheet().listen((event) {
@@ -58,7 +58,7 @@ class PillSheetStateStore extends StateNotifier<PillSheetState?> {
 
   Future<dynamic> take(DateTime takenDate) {
     showIndicator();
-    final PillSheetModel? updated = state.entity!.copyWith(lastTakenDate: takenDate);
+    final updated = state.entity.copyWith(lastTakenDate: takenDate);
     return _service.update(updated).then((value) {
       hideIndicator();
       state = state.copyWith(entity: updated);
@@ -66,40 +66,40 @@ class PillSheetStateStore extends StateNotifier<PillSheetState?> {
   }
 
   DateTime calcBeginingDateFromNextTodayPillNumber(int pillNumber) {
-    if (pillNumber == state.entity!.todayPillNumber)
-      return state.entity!.beginingDate;
-    final diff = pillNumber - state.entity!.todayPillNumber;
-    return state.entity!.beginingDate.subtract(Duration(days: diff));
+    if (pillNumber == state.entity.todayPillNumber)
+      return state.entity.beginingDate;
+    final diff = pillNumber - state.entity.todayPillNumber;
+    return state.entity.beginingDate.subtract(Duration(days: diff));
   }
 
   void modifyBeginingDate(int pillNumber) {
     _service
-        .update(state.entity!.copyWith(
+        .update(state.entity.copyWith(
             beginingDate: calcBeginingDateFromNextTodayPillNumber(pillNumber)))
         .then((entity) => state = state.copyWith(entity: entity));
   }
 
-  void update(PillSheetModel? entity) {
+  void update(PillSheetModel entity) {
     state = state.copyWith(entity: entity);
   }
 
   PillMarkType markFor(int number) {
-    if (number > state.entity!.typeInfo.dosingPeriod) {
-      return state.entity!.pillSheetType == PillSheetType.pillsheet_21
+    if (number > state.entity.typeInfo.dosingPeriod) {
+      return state.entity.pillSheetType == PillSheetType.pillsheet_21
           ? PillMarkType.rest
           : PillMarkType.fake;
     }
-    if (number <= state.entity!.lastTakenPillNumber) {
+    if (number <= state.entity.lastTakenPillNumber) {
       return PillMarkType.done;
     }
-    if (number < state.entity!.todayPillNumber) {
+    if (number < state.entity.todayPillNumber) {
       return PillMarkType.normal;
     }
     return PillMarkType.normal;
   }
 
   bool shouldPillMarkAnimation(int number) {
-    return number > state.entity!.lastTakenPillNumber &&
-        number <= state.entity!.todayPillNumber;
+    return number > state.entity.lastTakenPillNumber &&
+        number <= state.entity.todayPillNumber;
   }
 }

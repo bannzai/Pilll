@@ -13,7 +13,7 @@ class SettingListTitleRowModel extends SettingListRowModel {
   final String title;
   final VoidCallback onTap;
 
-  SettingListTitleRowModel({required this.title, required this.onTap});
+  SettingListTitleRowModel({@required this.title, @required this.onTap});
 
   @override
   Widget widget() {
@@ -26,16 +26,16 @@ class SettingListTitleRowModel extends SettingListRowModel {
 
 class SettingListTitleAndContentRowModel extends SettingListRowModel {
   final String title;
-  final String? content;
+  final String content;
   final VoidCallback onTap;
 
   SettingListTitleAndContentRowModel(
-      {required this.title, required this.content, required this.onTap});
+      {@required this.title, @required this.content, @required this.onTap});
   @override
   Widget widget() {
     return ListTile(
       title: Text(title, style: FontType.listRow),
-      subtitle: Text(content!),
+      subtitle: Text(content),
       onTap: onTap,
     );
   }
@@ -43,21 +43,21 @@ class SettingListTitleAndContentRowModel extends SettingListRowModel {
 
 class SettingsListSwitchRowModel extends SettingListRowModel {
   final String title;
-  final String? subtitle;
+  final String subtitle;
   final bool value;
   final VoidCallback onTap;
 
   SettingsListSwitchRowModel(
-      {required this.title,
+      {@required this.title,
       this.subtitle,
-      required this.value,
-      required this.onTap});
+      @required this.value,
+      @required this.onTap});
   @override
   Widget widget() {
     return SwitchListTile(
       title: Text(title, style: FontType.listRow),
       subtitle:
-          subtitle != null ? Text(subtitle!, style: FontType.assisting) : null,
+          subtitle != null ? Text(subtitle, style: FontType.assisting) : null,
       activeColor: PilllColors.primary,
       onChanged: (bool value) {
         this.onTap();
@@ -76,7 +76,7 @@ class SettingsListDatePickerRowModel extends SettingListRowModel {
   final VoidCallback onTap;
 
   SettingsListDatePickerRowModel(
-      {required this.title, required this.content, required this.onTap});
+      {@required this.title, @required this.content, @required this.onTap});
   @override
   Widget widget() {
     return ListTile(

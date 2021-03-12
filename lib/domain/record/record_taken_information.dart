@@ -10,13 +10,13 @@ import 'package:flutter/material.dart';
 class RecordTakenInformation extends StatelessWidget {
   final DateTime today;
   final PillSheetState state;
-  PillSheetModel? get pillSheetModel => state.entity;
+  PillSheetModel get pillSheetModel => state.entity;
   final VoidCallback onPressed;
   const RecordTakenInformation({
-    Key? key,
-    required this.today,
-    required this.state,
-    required this.onPressed,
+    Key key,
+    @required this.today,
+    @required this.state,
+    @required this.onPressed,
   })  : assert(today != null),
         super(key: key);
 
@@ -80,16 +80,16 @@ class RecordTakenInformation extends StatelessWidget {
             textBaseline: TextBaseline.ideographic,
             children: <Widget>[
               if (pillSheetIsValid) ...[
-                if (!pillSheetModel!.inNotTakenDuration) ...[
-                  Text("${pillSheetModel!.todayPillNumber}",
+                if (!pillSheetModel.inNotTakenDuration) ...[
+                  Text("${pillSheetModel.todayPillNumber}",
                       style: FontType.xHugeNumber.merge(TextColorStyle.main)),
                   Text("番",
                       style:
                           FontType.assistingBold.merge(TextColorStyle.noshime)),
                 ],
-                if (pillSheetModel!.inNotTakenDuration) ...[
+                if (pillSheetModel.inNotTakenDuration) ...[
                   Text(
-                    "${pillSheetModel!.pillSheetType.notTakenWord}${pillSheetModel!.todayPillNumber - pillSheetModel!.typeInfo.dosingPeriod}日目",
+                    "${pillSheetModel.pillSheetType.notTakenWord}${pillSheetModel.todayPillNumber - pillSheetModel.typeInfo.dosingPeriod}日目",
                     style: FontType.assistingBold.merge(TextColorStyle.main),
                   ),
                 ],

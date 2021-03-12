@@ -7,7 +7,7 @@ import 'package:flutter/material.dart';
 class MigrateInfo extends StatelessWidget {
   final VoidCallback onClose;
 
-  const MigrateInfo({Key? key, required this.onClose}) : super(key: key);
+  const MigrateInfo({Key key, @required this.onClose}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Scaffold(

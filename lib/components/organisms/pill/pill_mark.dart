@@ -10,10 +10,10 @@ class PillMark extends StatefulWidget {
   final bool isDone;
   final bool hasRippleAnimation;
   const PillMark({
-    Key? key,
+    Key key,
     this.hasRippleAnimation = false,
-    required this.type,
-    required this.isDone,
+    @required this.type,
+    @required this.isDone,
   }) : super(key: key);
 
   @override
@@ -21,7 +21,7 @@ class PillMark extends StatefulWidget {
 }
 
 class _PillMarkState extends State<PillMark> with TickerProviderStateMixin {
-  AnimationController? _controller;
+  AnimationController _controller;
 
   @override
   void initState() {
@@ -31,7 +31,7 @@ class _PillMarkState extends State<PillMark> with TickerProviderStateMixin {
     );
     // NOTE: This statement for avoid of tester.pumpAndSettle exception about timeout
     if (!Environment.isTest) {
-      _controller!.repeat();
+      _controller.repeat();
     }
 
     super.initState();
@@ -60,7 +60,7 @@ class _PillMarkState extends State<PillMark> with TickerProviderStateMixin {
               child: CustomPaint(
                 size: Size(80, 80),
                 painter: Ripple(
-                  _controller!,
+                  _controller,
                   color: PilllColors.primary,
                 ),
               ),

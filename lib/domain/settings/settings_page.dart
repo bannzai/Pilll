@@ -31,12 +31,12 @@ import 'package:shared_preferences/shared_preferences.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class _TransactionModifier {
-  final DatabaseConnection? _database;
+  final DatabaseConnection _database;
   final Reader reader;
 
   _TransactionModifier(
     this._database, {
-    required this.reader,
+    @required this.reader,
   });
 
   Future<void> modifyPillSheetType(PillSheetType type) {
@@ -44,29 +44,29 @@ class _TransactionModifier {
     final settingStore = reader(settingStoreProvider);
     final pillSheetState = reader(pillSheetStoreProvider.state);
     final settingState = reader(settingStoreProvider.state);
-    assert(pillSheetState.entity!.documentID != null);
-    return _database!.transaction((transaction) {
+    assert(pillSheetState.entity.documentID != null);
+    return _database.transaction((transaction) {
       transaction.update(
-          _database!.pillSheetReference(pillSheetState.entity!.documentID!), {
+          _database.pillSheetReference(pillSheetState.entity.documentID), {
         PillSheetFirestoreKey.typeInfo: type.typeInfo.toJson(),
       });
-      transaction.update(_database!.userReference(), {
-        UserFirestoreFieldKeys.settings: settingState.entity!
+      transaction.update(_database.userReference(), {
+        UserFirestoreFieldKeys.settings: settingState.entity
             .copyWith(pillSheetTypeRawPath: type.rawPath)
             .toJson(),
       });
       return;
-    } as Future<_> Function(Transaction)).then((_) {
+    }).then((_) {
       pillSheetStore
-          .update(pillSheetState.entity!.copyWith(typeInfo: type.typeInfo));
+          .update(pillSheetState.entity.copyWith(typeInfo: type.typeInfo));
       settingStore.update(
-          settingState.entity!.copyWith(pillSheetTypeRawPath: type.rawPath));
+          settingState.entity.copyWith(pillSheetTypeRawPath: type.rawPath));
     });
   }
 }
 
 final transactionModifierProvider = Provider((ref) =>
-    _TransactionModifier(ref.watch(databaseProvider), reader: ref.read as T Function<T>(RootProvider<Object, T>)));
+    _TransactionModifier(ref.watch(databaseProvider), reader: ref.read));
 
 class SettingsPage extends HookWidget {
   static final int itemCount = SettingSection.values.length + 1;
@@ -113,7 +113,7 @@ class SettingsPage extends HookWidget {
   }
 
   Widget _sectionTitle(SettingSection section) {
-    late String text;
+    String text;
     switch (section) {
       case SettingSection.pill:
         text = "ピルの設定";
@@ -137,7 +137,7 @@ class SettingsPage extends HookWidget {
     );
   }
 
-  List<SettingListRowModel>? _rowModels(
+  List<SettingListRowModel> _rowModels(
       BuildContext context, SettingSection section) {
     final pillSheetStore = useProvider(pillSheetStoreProvider);
     final pillSheetState = useProvider(pillSheetStoreProvider.state);
@@ -150,7 +150,7 @@ class SettingsPage extends HookWidget {
           () {
             return SettingListTitleAndContentRowModel(
               title: "種類",
-              content: settingState.entity!.pillSheetType.fullName,
+              content: settingState.entity.pillSheetType.fullName,
               onTap: () {
                 analytics.logEvent(
                   name: "did_select_changing_pill_sheet_type",
@@ -168,7 +168,7 @@ class SettingsPage extends HookWidget {
                     },
                     done: null,
                     doneButtonText: "",
-                    selectedPillSheetType: settingState.entity!.pillSheetType,
+                    selectedPillSheetType: settingState.entity.pillSheetType,
                   ),
                 );
               },
@@ -216,20 +216,20 @@ class SettingsPage extends HookWidget {
           SettingsListSwitchRowModel(
             title: "ピルの服用通知",
             subtitle: "通知時間までに服用した場合は通知はきません",
-            value: settingState.entity!.isOnReminder,
+            value: settingState.entity.isOnReminder,
             onTap: () {
               analytics.logEvent(
                 name: "did_select_toggle_reminder",
               );
               ScaffoldMessenger.of(context).hideCurrentSnackBar();
               settingStore
-                  .modifyIsOnReminder(!settingState.entity!.isOnReminder)
+                  .modifyIsOnReminder(!settingState.entity.isOnReminder)
                   .then((state) {
                 ScaffoldMessenger.of(context).showSnackBar(
                   SnackBar(
                     duration: Duration(seconds: 1),
                     content: Text(
-                      "服用通知を${state.entity!.isOnReminder ? "ON" : "OFF"}にしました",
+                      "服用通知を${state.entity.isOnReminder ? "ON" : "OFF"}にしました",
                     ),
                   ),
                 );
@@ -238,7 +238,7 @@ class SettingsPage extends HookWidget {
           ),
           SettingsListDatePickerRowModel(
             title: "通知時刻",
-            content: settingState.entity!.reminderTimes
+            content: settingState.entity.reminderTimes
                 .map((e) => DateTimeFormatter.militaryTime(e.dateTime()))
                 .join(", "),
             onTap: () {
@@ -249,12 +249,12 @@ class SettingsPage extends HookWidget {
             },
           ),
           if (!pillSheetState.isInvalid &&
-              !pillSheetState.entity!.pillSheetType.isNotExistsNotTakenDuration)
+              !pillSheetState.entity.pillSheetType.isNotExistsNotTakenDuration)
             SettingsListSwitchRowModel(
-              title: "${pillSheetState.entity!.pillSheetType.notTakenWord}期間の通知",
+              title: "${pillSheetState.entity.pillSheetType.notTakenWord}期間の通知",
               subtitle:
-                  "通知オフの場合は、${pillSheetState.entity!.pillSheetType.notTakenWord}期間の服用記録も自動で付けられます",
-              value: settingState.entity!.isOnNotifyInNotTakenDuration,
+                  "通知オフの場合は、${pillSheetState.entity.pillSheetType.notTakenWord}期間の服用記録も自動で付けられます",
+              value: settingState.entity.isOnNotifyInNotTakenDuration,
               onTap: () {
                 analytics.logEvent(
                   name: "toggle_notify_not_taken_duration",
@@ -262,13 +262,13 @@ class SettingsPage extends HookWidget {
                 ScaffoldMessenger.of(context).hideCurrentSnackBar();
                 settingStore
                     .modifyIsOnNotifyInNotTakenDuration(
-                        !settingState.entity!.isOnNotifyInNotTakenDuration)
+                        !settingState.entity.isOnNotifyInNotTakenDuration)
                     .then((state) {
                   ScaffoldMessenger.of(context).showSnackBar(
                     SnackBar(
                       duration: Duration(seconds: 1),
                       content: Text(
-                        "${pillSheetState.entity!.pillSheetType.notTakenWord}期間の通知を${state.entity!.isOnNotifyInNotTakenDuration ? "ON" : "OFF"}にしました",
+                        "${pillSheetState.entity.pillSheetType.notTakenWord}期間の通知を${state.entity.isOnNotifyInNotTakenDuration ? "ON" : "OFF"}にしました",
                       ),
                     ),
                   );
@@ -289,12 +289,12 @@ class SettingsPage extends HookWidget {
                   doneText: null,
                   title: "生理について",
                   pillSheetTotalCount:
-                      settingState.entity!.pillSheetType.totalCount,
+                      settingState.entity.pillSheetType.totalCount,
                   model: SettingMenstruationPageModel(
                     selectedFromMenstruation:
-                        settingState.entity!.pillNumberForFromMenstruation,
+                        settingState.entity.pillNumberForFromMenstruation,
                     selectedDurationMenstruation:
-                        settingState.entity!.durationMenstruation,
+                        settingState.entity.durationMenstruation,
                   ),
                   fromMenstructionDidDecide: (selectedFromMenstruction) =>
                       settingStore
@@ -360,7 +360,7 @@ class SettingsPage extends HookWidget {
       children: [
         _sectionTitle(section),
         ...[
-          ..._rowModels(context, section)!.map((e) {
+          ..._rowModels(context, section).map((e) {
             return [e.widget(), _separatorItem()];
           }).expand((element) => element)
         ]..add(SizedBox(height: 16)),
@@ -382,7 +382,7 @@ class SettingsPage extends HookWidget {
 class ConfirmDeletePillSheet extends StatelessWidget {
   final Function() onDelete;
 
-  const ConfirmDeletePillSheet({Key? key, required this.onDelete})
+  const ConfirmDeletePillSheet({Key key, @required this.onDelete})
       : super(key: key);
   @override
   Widget build(BuildContext context) {

@@ -8,9 +8,9 @@ class PillSheet extends StatelessWidget {
   final PillSheetType pillSheetType;
   final bool selected;
   const PillSheet({
-    Key? key,
-    required this.pillSheetType,
-    required this.selected,
+    Key key,
+    @required this.pillSheetType,
+    @required this.selected,
   }) : super(key: key);
 
   @override
@@ -34,7 +34,7 @@ class PillSheet extends StatelessWidget {
           Column(
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.start,
-            (children: <Widget?>[
+            children: <Widget>[
               SizedBox(height: 10),
               Text("${_title(pillSheetType)}",
                   style: FontType.thinTitle.merge(TextColorStyle.main)),
@@ -42,7 +42,7 @@ class PillSheet extends StatelessWidget {
                   style: FontType.assisting.merge(TextColorStyle.main)),
               SizedBox(height: 8),
               this.pillSheetType.image,
-            ]) as List<Widget>,
+            ],
           ),
         ],
       ),

@@ -6,7 +6,7 @@ part 'pill_sheet.freezed.dart';
 @freezed
 abstract class PillSheetState implements _$PillSheetState {
   PillSheetState._();
-  factory PillSheetState({PillSheetModel? entity}) = _PillSheetState;
+  factory PillSheetState({PillSheetModel entity}) = _PillSheetState;
 
-  bool get isInvalid => entity == null || entity!.isDeleted || entity!.isEnded;
+  bool get isInvalid => entity == null || entity.isDeleted || entity.isEnded;
 }

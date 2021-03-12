@@ -7,7 +7,7 @@ import 'package:flutter/material.dart';
 class ReleaseNote extends StatelessWidget {
   final VoidCallback onClose;
 
-  const ReleaseNote({Key? key, required this.onClose}) : super(key: key);
+  const ReleaseNote({Key key, @required this.onClose}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Scaffold(

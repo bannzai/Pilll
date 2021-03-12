@@ -49,7 +49,7 @@ class ReminderTimesPage extends HookWidget {
   }
 
   List<Widget> _components(BuildContext context, SettingState state) {
-    return state.entity!.reminderTimes
+    return state.entity.reminderTimes
         .asMap()
         .map((offset, reminderTime) =>
             MapEntry(offset, _component(context, reminderTime, offset + 1)))
@@ -74,13 +74,13 @@ class ReminderTimesPage extends HookWidget {
         subtitle: Text(DateTimeFormatter.militaryTime(reminderTime.dateTime())),
       ),
     );
-    if (state.entity!.reminderTimes.length == 1) {
+    if (state.entity.reminderTimes.length == 1) {
       return body;
     }
     return Dismissible(
       key: UniqueKey(),
       direction: DismissDirection.endToStart,
-      onDismissed: state.entity!.reminderTimes.length == 1
+      onDismissed: state.entity.reminderTimes.length == 1
           ? null
           : (direction) {
               store.deleteReminderTimes(number - 1);
@@ -118,7 +118,7 @@ class ReminderTimesPage extends HookWidget {
 
   Widget _footer(BuildContext context) {
     final state = useProvider(settingStoreProvider.state);
-    if (state.entity!.reminderTimes.length >= ReminderTime.maximumCount) {
+    if (state.entity.reminderTimes.length >= ReminderTime.maximumCount) {
       return Container();
     }
     final store = useProvider(settingStoreProvider);
@@ -143,19 +143,19 @@ class ReminderTimesPage extends HookWidget {
   }
 
   void _showPicker(BuildContext context, SettingStateStore store,
-      SettingState state, int? index) {
+      SettingState state, int index) {
     final isEditing = index != null;
     showModalBottomSheet(
       context: context,
       builder: (BuildContext context) {
         return DateTimePicker(
           initialDateTime: isEditing
-              ? state.entity!.reminderTimes[index!].dateTime()
+              ? state.entity.reminderTimes[index].dateTime()
               : ReminderTime(hour: 22, minute: 0).dateTime(),
           done: (dateTime) {
             Navigator.pop(context);
             if (isEditing) {
-              store.editReminderTime(index!,
+              store.editReminderTime(index,
                   ReminderTime(hour: dateTime.hour, minute: dateTime.minute));
             } else {
               store.addReminderTimes(

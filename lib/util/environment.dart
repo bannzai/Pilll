@@ -10,5 +10,5 @@ abstract class Environment {
       flavor == Flavor.DEVELOP || flavor == Flavor.LOCAL;
   static bool get isLocal => flavor == Flavor.LOCAL;
   static bool isTest = false;
-  static Flavor? flavor;
+  static Flavor flavor;
 }

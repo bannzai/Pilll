@@ -10,7 +10,7 @@ DateRange menstruationDateRange(
   Setting setting,
   int page,
 ) {
-  var offset = page * pillSheet.pillSheetType.totalCount!;
+  var offset = page * pillSheet.pillSheetType.totalCount;
   var begin = pillSheet.beginingDate.add(
       Duration(days: (setting.pillNumberForFromMenstruation - 1) + offset));
   var end = begin.add(Duration(days: (setting.durationMenstruation - 1)));
@@ -22,7 +22,7 @@ DateRange nextPillSheetDateRange(
   int page,
 ) {
   var begin = pillSheet.beginingDate
-      .add(Duration(days: pillSheet.pillSheetType.totalCount! * (page + 1)));
+      .add(Duration(days: pillSheet.pillSheetType.totalCount * (page + 1)));
   var end = begin.add(Duration(days: Weekday.values.length - 1));
   return DateRange(begin, end);
 }
@@ -41,7 +41,7 @@ int bandLength(
 }
 
 List<CalendarBandModel> buildBandModels(
-  PillSheetModel? pillSheet,
+  PillSheetModel pillSheet,
   Setting setting,
   int page,
 ) {

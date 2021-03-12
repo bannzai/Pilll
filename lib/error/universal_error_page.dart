@@ -7,15 +7,15 @@ import 'package:pilll/inquiry/inquiry.dart';
 import 'package:flutter/material.dart';
 
 class UniversalErrorPage extends StatelessWidget {
-  final Error? error;
-  final Widget? child;
+  final Error error;
+  final Widget child;
 
-  const UniversalErrorPage({Key? key, required this.error, this.child})
+  const UniversalErrorPage({Key key, @required this.error, this.child})
       : super(key: key);
   @override
   Widget build(BuildContext context) {
     if (this.error == null && this.child != null) {
-      return child!;
+      return child;
     }
     return Scaffold(
       backgroundColor: PilllColors.background,
@@ -44,7 +44,7 @@ class UniversalErrorPage extends StatelessWidget {
                     style: FontType.assisting.merge(TextColorStyle.primary)),
                 onPressed: () {
                   analytics.logEvent(name: "reload_button_pressed");
-                  rootKey.currentState!.reloadRoot();
+                  rootKey.currentState.reloadRoot();
                 },
               ),
               TextButton.icon(

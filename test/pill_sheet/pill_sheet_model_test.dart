@@ -23,9 +23,9 @@ void main() {
         beginingDate: DateTime.parse("2020-09-14"),
         lastTakenDate: DateTime.parse("2020-09-18"),
         typeInfo: PillSheetTypeInfo(
-          dosingPeriod: sheetType.dosingPeriod!,
-          name: sheetType.fullName!,
-          totalCount: sheetType.totalCount!,
+          dosingPeriod: sheetType.dosingPeriod,
+          name: sheetType.fullName,
+          totalCount: sheetType.totalCount,
           pillSheetTypeReferencePath: sheetType.rawPath,
         ),
       );
@@ -41,9 +41,9 @@ void main() {
         beginingDate: DateTime.parse("2020-09-01"),
         lastTakenDate: DateTime.parse("2020-09-28"),
         typeInfo: PillSheetTypeInfo(
-          dosingPeriod: sheetType.dosingPeriod!,
-          name: sheetType.fullName!,
-          totalCount: sheetType.totalCount!,
+          dosingPeriod: sheetType.dosingPeriod,
+          name: sheetType.fullName,
+          totalCount: sheetType.totalCount,
           pillSheetTypeReferencePath: sheetType.rawPath,
         ),
       );
@@ -59,9 +59,9 @@ void main() {
         beginingDate: DateTime.parse("2020-09-01"),
         lastTakenDate: DateTime.parse("2020-09-28"),
         typeInfo: PillSheetTypeInfo(
-          dosingPeriod: sheetType.dosingPeriod!,
-          name: sheetType.fullName!,
-          totalCount: sheetType.totalCount!,
+          dosingPeriod: sheetType.dosingPeriod,
+          name: sheetType.fullName,
+          totalCount: sheetType.totalCount,
           pillSheetTypeReferencePath: sheetType.rawPath,
         ),
       );
@@ -77,9 +77,9 @@ void main() {
         beginingDate: DateTime.parse("2020-09-01"),
         lastTakenDate: DateTime.parse("2020-09-28"),
         typeInfo: PillSheetTypeInfo(
-          dosingPeriod: sheetType.dosingPeriod!,
-          name: sheetType.fullName!,
-          totalCount: sheetType.totalCount!,
+          dosingPeriod: sheetType.dosingPeriod,
+          name: sheetType.fullName,
+          totalCount: sheetType.totalCount,
           pillSheetTypeReferencePath: sheetType.rawPath,
         ),
       );

@@ -25,8 +25,8 @@ extension UserPrivateFirestoreFieldKeys on String {
 @freezed
 abstract class UserPrivate implements _$UserPrivate {
   UserPrivate._();
-  factory UserPrivate({String? fcmToken}) = _UserPrivate;
-  factory UserPrivate.create({required String fcmToken}) =>
+  factory UserPrivate({String fcmToken}) = _UserPrivate;
+  factory UserPrivate.create({@required String fcmToken}) =>
       UserPrivate(fcmToken: fcmToken);
 
   factory UserPrivate.fromJson(Map<String, dynamic> json) =>
@@ -46,9 +46,9 @@ abstract class User implements _$User {
 
   User._();
   factory User({
-    required String anonymouseUserID,
-    @JsonKey(name: "settings") Setting? setting,
-    @Default(false) required bool migratedFlutter,
+    @required String anonymouseUserID,
+    @JsonKey(name: "settings") Setting setting,
+    @Default(false) bool migratedFlutter,
   }) = _User;
 
   factory User.fromJson(Map<String, dynamic> json) => _$UserFromJson(json);

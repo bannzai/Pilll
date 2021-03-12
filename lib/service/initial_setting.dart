@@ -4,7 +4,7 @@ import 'package:pilll/service/setting.dart';
 import 'package:riverpod/riverpod.dart';
 
 abstract class InitialSettingServiceInterface {
-  Future<void> register(InitialSettingModel? initialSetting) {
+  Future<void> register(InitialSettingModel initialSetting) {
     throw new UnimplementedError("Should call subclass");
   }
 }
@@ -19,8 +19,8 @@ class InitialSettingService extends InitialSettingServiceInterface {
 
   InitialSettingService(this.settingService, this.pillSheetService);
 
-  Future<void> register(InitialSettingModel? initialSetting) {
-    var setting = initialSetting!.buildSetting();
+  Future<void> register(InitialSettingModel initialSetting) {
+    var setting = initialSetting.buildSetting();
     return settingService.update(setting).then((_) {
       final pillSheet = initialSetting.buildPillSheet();
       if (pillSheet == null) {
