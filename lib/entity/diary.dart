@@ -1,3 +1,4 @@
+import 'package:Pilll/entity/firestore_timestamp_converter.dart';
 import 'package:pilll/entity/firestore_timestamp_converter.dart';
 import 'package:pilll/util/formatter/date_time_formatter.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
@@ -39,19 +40,16 @@ abstract class Diary with _$Diary {
   @JsonSerializable(explicitToJson: true)
   factory Diary({
     @JsonKey(
-      fromJson: TimestampConverter.timestampToDateTime,
-      toJson: TimestampConverter.dateTimeToTimestamp,
+      fromJson: NonNullTimestampConverter.timestampToDateTime,
+      toJson: NonNullTimestampConverter.dateTimeToTimestamp,
     )
-    required
-        DateTime date,
+        required DateTime date,
     PhysicalConditionStatus? physicalConditionStatus,
-    required
-        List<String> physicalConditions,
-    required
-        bool hasSex,
-    required
-        String memo,
+    required List<String> physicalConditions,
+    required bool hasSex,
+    required String memo,
   }) = _Diary;
+  Diary._();
 
   factory Diary.fromDate(DateTime date) =>
       Diary(date: date, memo: "", physicalConditions: [], hasSex: false);

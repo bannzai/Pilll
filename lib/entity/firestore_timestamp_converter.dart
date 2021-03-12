@@ -6,3 +6,10 @@ abstract class TimestampConverter {
   static DateTime? timestampToDateTime(Timestamp? timestamp) =>
       timestamp == null ? null : timestamp.toDate();
 }
+
+abstract class NonNullTimestampConverter {
+  static Timestamp dateTimeToTimestamp(DateTime dateTime) =>
+      Timestamp.fromDate(dateTime);
+  static DateTime timestampToDateTime(Timestamp timestamp) =>
+      timestamp.toDate();
+}
