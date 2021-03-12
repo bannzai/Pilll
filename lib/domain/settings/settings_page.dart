@@ -167,7 +167,7 @@ class SettingsPage extends HookWidget {
           () {
             return SettingListTitleAndContentRowModel(
               title: "種類",
-              content: settingState.entity!.pillSheetType.fullName,
+              content: settingState.entity?.pillSheetType.fullName,
               onTap: () {
                 analytics.logEvent(
                   name: "did_select_changing_pill_sheet_type",
@@ -185,7 +185,7 @@ class SettingsPage extends HookWidget {
                     },
                     done: null,
                     doneButtonText: "",
-                    selectedPillSheetType: settingState.entity!.pillSheetType,
+                    selectedPillSheetType: settingState.entity?.pillSheetType,
                   ),
                 );
               },
@@ -233,20 +233,20 @@ class SettingsPage extends HookWidget {
           SettingsListSwitchRowModel(
             title: "ピルの服用通知",
             subtitle: "通知時間までに服用した場合は通知はきません",
-            value: settingState.entity!.isOnReminder,
+            value: settingState.entity?.isOnReminder,
             onTap: () {
               analytics.logEvent(
                 name: "did_select_toggle_reminder",
               );
               ScaffoldMessenger.of(context).hideCurrentSnackBar();
               settingStore
-                  .modifyIsOnReminder(!settingState.entity!.isOnReminder)
+                  .modifyIsOnReminder(!settingState.entity?.isOnReminder)
                   .then((state) {
                 ScaffoldMessenger.of(context).showSnackBar(
                   SnackBar(
                     duration: Duration(seconds: 1),
                     content: Text(
-                      "服用通知を${state.entity!.isOnReminder ? "ON" : "OFF"}にしました",
+                      "服用通知を${state.entity?.isOnReminder ? "ON" : "OFF"}にしました",
                     ),
                   ),
                 );
@@ -255,7 +255,7 @@ class SettingsPage extends HookWidget {
           ),
           SettingsListDatePickerRowModel(
             title: "通知時刻",
-            content: settingState.entity!.reminderTimes
+            content: settingState.entity?.reminderTimes
                 .map((e) => DateTimeFormatter.militaryTime(e.dateTime()))
                 .join(", "),
             onTap: () {
@@ -266,13 +266,13 @@ class SettingsPage extends HookWidget {
             },
           ),
           if (!pillSheetState.isInvalid &&
-              !pillSheetState.entity!.pillSheetType.isNotExistsNotTakenDuration)
+              !pillSheetState.entity?.pillSheetType.isNotExistsNotTakenDuration)
             SettingsListSwitchRowModel(
               title:
-                  "${pillSheetState.entity!.pillSheetType.notTakenWord}期間の通知",
+                  "${pillSheetState.entity?.pillSheetType.notTakenWord}期間の通知",
               subtitle:
-                  "通知オフの場合は、${pillSheetState.entity!.pillSheetType.notTakenWord}期間の服用記録も自動で付けられます",
-              value: settingState.entity!.isOnNotifyInNotTakenDuration,
+                  "通知オフの場合は、${pillSheetState.entity?.pillSheetType.notTakenWord}期間の服用記録も自動で付けられます",
+              value: settingState.entity?.isOnNotifyInNotTakenDuration,
               onTap: () {
                 analytics.logEvent(
                   name: "toggle_notify_not_taken_duration",
@@ -280,13 +280,13 @@ class SettingsPage extends HookWidget {
                 ScaffoldMessenger.of(context).hideCurrentSnackBar();
                 settingStore
                     .modifyIsOnNotifyInNotTakenDuration(
-                        !settingState.entity!.isOnNotifyInNotTakenDuration)
+                        !settingState.entity?.isOnNotifyInNotTakenDuration)
                     .then((state) {
                   ScaffoldMessenger.of(context).showSnackBar(
                     SnackBar(
                       duration: Duration(seconds: 1),
                       content: Text(
-                        "${pillSheetState.entity!.pillSheetType.notTakenWord}期間の通知を${state.entity!.isOnNotifyInNotTakenDuration ? "ON" : "OFF"}にしました",
+                        "${pillSheetState.entity?.pillSheetType.notTakenWord}期間の通知を${state.entity?.isOnNotifyInNotTakenDuration ? "ON" : "OFF"}にしました",
                       ),
                     ),
                   );
@@ -307,12 +307,12 @@ class SettingsPage extends HookWidget {
                   doneText: null,
                   title: "生理について",
                   pillSheetTotalCount:
-                      settingState.entity!.pillSheetType.totalCount,
+                      settingState.entity?.pillSheetType.totalCount,
                   model: SettingMenstruationPageModel(
                     selectedFromMenstruation:
-                        settingState.entity!.pillNumberForFromMenstruation,
+                        settingState.entity?.pillNumberForFromMenstruation,
                     selectedDurationMenstruation:
-                        settingState.entity!.durationMenstruation,
+                        settingState.entity?.durationMenstruation,
                   ),
                   fromMenstructionDidDecide: (selectedFromMenstruction) =>
                       settingStore

@@ -25,8 +25,8 @@ class PillSheetStateStore extends StateNotifier<PillSheetState> {
       analytics.logEvent(name: "count_of_remaining_pill", parameters: {
         "count": state.entity == null
             ? 0
-            : (state.entity!.todayPillNumber -
-                state.entity!.lastTakenPillNumber)
+            : (state.entity?.todayPillNumber -
+                state.entity?.lastTakenPillNumber)
       });
       firstLoadIsEnded = true;
       _subscribe();
@@ -54,12 +54,12 @@ class PillSheetStateStore extends StateNotifier<PillSheetState> {
   }
 
   Future<void> delete() {
-    return _service.delete(state.entity!).then((_) => _reset());
+    return _service.delete(state.entity?).then((_) => _reset());
   }
 
   Future<dynamic> take(DateTime takenDate) {
     showIndicator();
-    final updated = state.entity!.copyWith(lastTakenDate: takenDate);
+    final updated = state.entity?.copyWith(lastTakenDate: takenDate);
     return _service.update(updated).then((value) {
       hideIndicator();
       state = state.copyWith(entity: updated);
@@ -67,15 +67,15 @@ class PillSheetStateStore extends StateNotifier<PillSheetState> {
   }
 
   DateTime calcBeginingDateFromNextTodayPillNumber(int pillNumber) {
-    if (pillNumber == state.entity!.todayPillNumber)
-      return state.entity!.beginingDate;
-    final diff = pillNumber - state.entity!.todayPillNumber;
-    return state.entity!.beginingDate.subtract(Duration(days: diff));
+    if (pillNumber == state.entity?.todayPillNumber)
+      return state.entity?.beginingDate;
+    final diff = pillNumber - state.entity?.todayPillNumber;
+    return state.entity?.beginingDate.subtract(Duration(days: diff));
   }
 
   void modifyBeginingDate(int pillNumber) {
     _service
-        .update(state.entity!.copyWith(
+        .update(state.entity?.copyWith(
             beginingDate: calcBeginingDateFromNextTodayPillNumber(pillNumber)))
         .then((entity) => state = state.copyWith(entity: entity));
   }
@@ -85,22 +85,22 @@ class PillSheetStateStore extends StateNotifier<PillSheetState> {
   }
 
   PillMarkType markFor(int number) {
-    if (number > state.entity!.typeInfo.dosingPeriod) {
-      return state.entity!.pillSheetType == PillSheetType.pillsheet_21
+    if (number > state.entity?.typeInfo.dosingPeriod) {
+      return state.entity?.pillSheetType == PillSheetType.pillsheet_21
           ? PillMarkType.rest
           : PillMarkType.fake;
     }
-    if (number <= state.entity!.lastTakenPillNumber) {
+    if (number <= state.entity?.lastTakenPillNumber) {
       return PillMarkType.done;
     }
-    if (number < state.entity!.todayPillNumber) {
+    if (number < state.entity?.todayPillNumber) {
       return PillMarkType.normal;
     }
     return PillMarkType.normal;
   }
 
   bool shouldPillMarkAnimation(int number) {
-    return number > state.entity!.lastTakenPillNumber &&
-        number <= state.entity!.todayPillNumber;
+    return number > state.entity?.lastTakenPillNumber &&
+        number <= state.entity?.todayPillNumber;
   }
 }

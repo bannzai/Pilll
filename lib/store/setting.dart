@@ -50,7 +50,7 @@ class SettingStateStore extends StateNotifier<SettingState> {
   Future<void> modifyType(PillSheetType pillSheetType) {
     return _service
         .update(
-            state.entity!.copyWith(pillSheetTypeRawPath: pillSheetType.rawPath))
+            state.entity?.copyWith(pillSheetTypeRawPath: pillSheetType.rawPath))
         .then((entity) => state = state.copyWith(entity: entity));
   }
 
@@ -62,43 +62,43 @@ class SettingStateStore extends StateNotifier<SettingState> {
       throw Exception("通知時刻は最低${ReminderTime.minimumCount}件必要です");
     }
     _service
-        .update(state.entity!.copyWith(reminderTimes: reminderTimes))
+        .update(state.entity?.copyWith(reminderTimes: reminderTimes))
         .then((entity) => state = state.copyWith(entity: entity));
   }
 
   void addReminderTimes(ReminderTime reminderTime) {
-    List<ReminderTime> copied = [...state.entity!.reminderTimes];
+    List<ReminderTime> copied = [...state.entity?.reminderTimes];
     copied.add(reminderTime);
     _modifyReminderTimes(copied);
   }
 
   void editReminderTime(int index, ReminderTime reminderTime) {
-    List<ReminderTime> copied = [...state.entity!.reminderTimes];
+    List<ReminderTime> copied = [...state.entity?.reminderTimes];
     copied[index] = reminderTime;
     _modifyReminderTimes(copied);
   }
 
   void deleteReminderTimes(int index) {
-    List<ReminderTime> copied = [...state.entity!.reminderTimes];
+    List<ReminderTime> copied = [...state.entity?.reminderTimes];
     copied.removeAt(index);
     _modifyReminderTimes(copied);
   }
 
   Future<SettingState> modifyIsOnReminder(bool isOnReminder) {
     return _service
-        .update(state.entity!.copyWith(isOnReminder: isOnReminder))
+        .update(state.entity?.copyWith(isOnReminder: isOnReminder))
         .then((entity) => state = state.copyWith(entity: entity));
   }
 
   Future<SettingState> modifyIsOnNotifyInNotTakenDuration(bool isOn) {
     return _service
-        .update(state.entity!.copyWith(isOnNotifyInNotTakenDuration: isOn))
+        .update(state.entity?.copyWith(isOnNotifyInNotTakenDuration: isOn))
         .then((entity) => state = state.copyWith(entity: entity));
   }
 
   Future<void> modifyFromMenstruation(int fromMenstruation) {
     return _service
-        .update(state.entity!
+        .update(state.entity?
             .copyWith(pillNumberForFromMenstruation: fromMenstruation))
         .then((entity) => state = state.copyWith(entity: entity));
   }
@@ -106,7 +106,7 @@ class SettingStateStore extends StateNotifier<SettingState> {
   Future<void> modifyDurationMenstruation(int durationMenstruation) {
     return _service
         .update(
-            state.entity!.copyWith(durationMenstruation: durationMenstruation))
+            state.entity?.copyWith(durationMenstruation: durationMenstruation))
         .then((entity) => state = state.copyWith(entity: entity));
   }
 

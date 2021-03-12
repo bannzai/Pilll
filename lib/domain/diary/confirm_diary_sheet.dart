@@ -45,7 +45,7 @@ class ConfirmDiarySheet extends HookWidget {
             ...[
               if (state.hasPhysicalConditionStatus()) _physicalCondition(),
               _physicalConditionDetails(),
-              if (state.entity!.hasSex) _sex(),
+              if (state.entity?.hasSex) _sex(),
               _memo(),
             ].map((e) => _withContentSpacer(e)),
           ]),
@@ -111,13 +111,13 @@ class ConfirmDiarySheet extends HookWidget {
       children: [
         Text("体調", style: FontType.componentTitle.merge(TextColorStyle.black)),
         SizedBox(width: 16),
-        _physicalConditionImage(state.entity!.physicalConditionStatus),
+        _physicalConditionImage(state.entity?.physicalConditionStatus),
       ],
     );
   }
 
   Widget _physicalConditionDetails() {
-    final diary = useProvider(_confirmDiaryProvider!(date).state).entity!;
+    final diary = useProvider(_confirmDiaryProvider!(date).state).entity?;
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -149,7 +149,7 @@ class ConfirmDiarySheet extends HookWidget {
   }
 
   Widget _memo() {
-    final diary = useProvider(_confirmDiaryProvider!(date).state).entity!;
+    final diary = useProvider(_confirmDiaryProvider!(date).state).entity?;
     return Text(
       diary.memo,
       maxLines: 2,
