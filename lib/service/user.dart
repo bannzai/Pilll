@@ -23,8 +23,8 @@ abstract class UserServiceInterface {
   Future<void> saveStats();
 }
 
-final userServiceProvider =
-    Provider((ref) => UserService(ref.watch(databaseProvider as AlwaysAliveProviderBase<Object?, DatabaseConnection>)));
+final userServiceProvider = Provider((ref) => UserService(ref.watch(
+    databaseProvider as AlwaysAliveProviderBase<Object?, DatabaseConnection>)));
 final initialUserProvider =
     FutureProvider((ref) => ref.watch(userServiceProvider).prepare());
 
@@ -58,9 +58,8 @@ class UserService extends UserServiceInterface {
     return _database
         .userReference()
         .snapshots(includeMetadataChanges: true)
-        .listen((event) {
-      return User.fromJson(event.data()!);
-    }).asFuture();
+        .listen((event) => User.fromJson(event.data()!))
+        .asFuture();
   }
 
   Future<void> deleteSettings() {
