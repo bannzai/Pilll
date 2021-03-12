@@ -40,7 +40,7 @@ abstract class Setting implements _$Setting {
     required int durationMenstruation,
     required List<ReminderTime> reminderTimes,
     @JsonSerializable(explicitToJson: true) required bool isOnReminder,
-    @Default(true) required bool isOnNotifyInNotTakenDuration,
+    @Default(true) bool isOnNotifyInNotTakenDuration,
   }) = _Setting;
 
   factory Setting.fromJson(Map<String, dynamic> json) =>

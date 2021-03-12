@@ -205,7 +205,7 @@ class _$SettingTearOff {
       required int durationMenstruation,
       required List<ReminderTime> reminderTimes,
       @JsonSerializable(explicitToJson: true) required bool isOnReminder,
-      required bool isOnNotifyInNotTakenDuration = true}) {
+      bool isOnNotifyInNotTakenDuration = true}) {
     return _Setting(
       pillSheetTypeRawPath: pillSheetTypeRawPath,
       pillNumberForFromMenstruation: pillNumberForFromMenstruation,
@@ -369,7 +369,7 @@ class _$_Setting extends _Setting with DiagnosticableTreeMixin {
       required this.durationMenstruation,
       required this.reminderTimes,
       @JsonSerializable(explicitToJson: true) required this.isOnReminder,
-      required this.isOnNotifyInNotTakenDuration = true})
+      this.isOnNotifyInNotTakenDuration = true})
       : super._();
 
   factory _$_Setting.fromJson(Map<String, dynamic> json) =>
@@ -466,7 +466,7 @@ abstract class _Setting extends Setting {
       required int durationMenstruation,
       required List<ReminderTime> reminderTimes,
       @JsonSerializable(explicitToJson: true) required bool isOnReminder,
-      required bool isOnNotifyInNotTakenDuration}) = _$_Setting;
+      bool isOnNotifyInNotTakenDuration}) = _$_Setting;
   _Setting._() : super._();
 
   factory _Setting.fromJson(Map<String, dynamic> json) = _$_Setting.fromJson;

@@ -12,16 +12,16 @@ abstract class InitialSettingModel implements _$InitialSettingModel {
   InitialSettingModel._();
   factory InitialSettingModel.initial({
     @Default(23)
-        required int fromMenstruation,
+        int fromMenstruation,
     @Default(4)
-        required int durationMenstruation,
+        int durationMenstruation,
     @Default([
       ReminderTime(hour: 21, minute: 0),
       ReminderTime(hour: 22, minute: 0),
     ])
-        required List<ReminderTime> reminderTimes,
+        List<ReminderTime> reminderTimes,
     @Default(false)
-        required bool isOnReminder,
+        bool isOnReminder,
     int? todayPillNumber,
     PillSheetType? pillSheetType,
   }) = _InitialSettingModel;
@@ -32,7 +32,6 @@ abstract class InitialSettingModel implements _$InitialSettingModel {
         pillSheetTypeRawPath: pillSheetType.rawPath,
         reminderTimes: reminderTimes,
         isOnReminder: isOnReminder,
-        isOnNotifyInNotTakenDuration: true,
       );
   PillSheetModel? buildPillSheet() => todayPillNumber != null
       ? PillSheetModel(
