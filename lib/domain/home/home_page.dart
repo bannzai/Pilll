@@ -1,10 +1,7 @@
-// @dart=2.9
-
 import 'package:pilll/analytics.dart';
 import 'package:pilll/auth/auth.dart';
 import 'package:pilll/database/database.dart';
 import 'package:pilll/domain/calendar/calendar_page.dart';
-import 'package:pilll/domain/home/home_tab.dart';
 import 'package:pilll/domain/record/record_page.dart';
 import 'package:pilll/domain/settings/settings_page.dart';
 import 'package:pilll/components/atoms/color.dart';
@@ -19,7 +16,7 @@ import 'package:flutter_svg/svg.dart';
 GlobalKey<_HomePageState> homeKey = GlobalKey();
 
 class HomePage extends StatefulWidget {
-  HomePage({@required Key key}) : super(key: key);
+  HomePage({required Key key}) : super(key: key);
 
   @override
   _HomePageState createState() => _HomePageState();
@@ -29,7 +26,7 @@ enum HomePageTabType { record, calendar, setting }
 
 class _HomePageState extends State<HomePage>
     with SingleTickerProviderStateMixin, RouteAware {
-  TabController _tabController;
+  late TabController _tabController;
   int _selectedIndex = 0;
   HomePageTabType get _selectedTab {
     return HomePageTabType.values[_selectedIndex];
@@ -140,5 +137,31 @@ class _HomePageState extends State<HomePage>
     analytics.setCurrentScreen(
       screenName: "${HomePageTab.values[_tabController.index].screenName}",
     );
+  }
+}
+
+enum HomePageTab { record, calendar, settings }
+
+extension HomePageTabFunctions on HomePageTab {
+  Widget widget() {
+    switch (this) {
+      case HomePageTab.record:
+        return RecordPage();
+      case HomePageTab.calendar:
+        return CalendarPage();
+      case HomePageTab.settings:
+        return SettingsPage();
+    }
+  }
+
+  String get screenName {
+    switch (this) {
+      case HomePageTab.record:
+        return "RecordPage";
+      case HomePageTab.calendar:
+        return "CalendarPage";
+      case HomePageTab.settings:
+        return "SettingsPage";
+    }
   }
 }
