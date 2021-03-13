@@ -118,7 +118,7 @@ class PillSheetStateStore extends StateNotifier<PillSheetState> {
   }
 
   bool shouldPillMarkAnimation(int number) {
-        final entity = state.entity;
+    final entity = state.entity;
     if (entity == null) {
       throw FormatException("pill sheet not found");
     }

@@ -9,7 +9,7 @@ abstract class DiaryState implements _$DiaryState {
   factory DiaryState({required Diary entity}) = _DiaryState;
 
   bool hasPhysicalConditionStatusFor(PhysicalConditionStatus status) =>
-      entity?.physicalConditionStatus == status;
+      entity.physicalConditionStatus == status;
 
-  bool hasPhysicalConditionStatus() => entity?.physicalConditionStatus != null;
+  bool hasPhysicalConditionStatus() => entity.physicalConditionStatus != null;
 }

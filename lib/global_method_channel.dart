@@ -32,14 +32,18 @@ Future<void> salvagedOldStartTakenDate(dynamic arguments) async {
   if (arguments == null) {
     return Future.value();
   }
-  final dic = arguments as Map<dynamic, dynamic>;
+  final dic = arguments as Map<dynamic, dynamic>?;
   if (dic == null) {
     return Future.value();
   }
-  final typedDic = dic.cast<String, String>();
-  if (typedDic == null) {
+
+  Map<String, String> typedDic;
+  try {
+    typedDic = dic.cast<String, String>();
+  } catch (error) {
     return Future.value();
   }
+
   final salvagedOldStartTakenDateRawValue =
       typedDic["salvagedOldStartTakenDate"];
   if (salvagedOldStartTakenDateRawValue == null) {

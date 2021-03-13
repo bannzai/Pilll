@@ -41,8 +41,7 @@ class SettingMenstruationPage extends StatefulWidget {
     required this.model,
     required this.fromMenstructionDidDecide,
     required this.durationMenstructionDidDecide,
-  })   : assert(model != null),
-        super(key: key);
+  }) : super(key: key);
 
   @override
   _SettingMenstruationPageState createState() =>
@@ -121,7 +120,7 @@ class _SettingMenstruationPageState extends State<SettingMenstruationPage> {
                 if (this.widget.done != null) ...[
                   PrimaryButton(
                     text: this.widget.doneText!,
-                    onPressed: !canNext(context) ? null : this.widget.done,
+                    onPressed: this.widget.done,
                   ),
                   SizedBox(height: 35),
                 ]
@@ -163,8 +162,7 @@ class _SettingMenstruationPageState extends State<SettingMenstruationPage> {
         ),
       ),
       child: Center(
-        child: Text(
-            this.widget.model.selectedDurationMenstruation?.toString() ?? "",
+        child: Text(this.widget.model.selectedDurationMenstruation.toString(),
             style: FontType.inputNumber.merge(TextColorStyle.gray)),
       ),
     );
@@ -172,7 +170,7 @@ class _SettingMenstruationPageState extends State<SettingMenstruationPage> {
 
   void _showFromModalSheet(BuildContext context) {
     int keepSelectedFromMenstruation =
-        this.widget.model.selectedFromMenstruation ?? 1;
+        this.widget.model.selectedFromMenstruation;
     showModalBottomSheet(
       context: context,
       builder: (BuildContext context) {
@@ -224,7 +222,7 @@ class _SettingMenstruationPageState extends State<SettingMenstruationPage> {
 
   void _showDurationModalSheet(BuildContext context) {
     var keepSelectedDurationMenstruation =
-        this.widget.model.selectedDurationMenstruation ?? 1;
+        this.widget.model.selectedDurationMenstruation;
     showModalBottomSheet(
       context: context,
       builder: (BuildContext context) {
@@ -269,11 +267,6 @@ class _SettingMenstruationPageState extends State<SettingMenstruationPage> {
         );
       },
     );
-  }
-
-  bool canNext(BuildContext context) {
-    return !(this.widget.model.selectedFromMenstruation == null ||
-        this.widget.model.selectedDurationMenstruation == null);
   }
 
   Widget _pickerItem(String str) {

@@ -42,6 +42,8 @@ abstract class InitialSettingModel implements _$InitialSettingModel {
       : null;
 
   DateTime _beginingDate() {
+      print(Stream.value(1).cast<String>().listen((e) => print("cast $e")));
+
     return today().subtract(Duration(days: todayPillNumber! - 1));
   }
 

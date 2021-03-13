@@ -17,8 +17,7 @@ class RecordTakenInformation extends StatelessWidget {
     required this.today,
     required this.state,
     required this.onPressed,
-  })  : assert(today != null),
-        super(key: key);
+  }) : super(key: key);
 
   String _formattedToday() => DateTimeFormatter.monthAndDay(this.today);
 
