@@ -3,21 +3,25 @@ import 'package:pilll/entity/diary.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
-final userIDProvider = Provider<String?>((ref) {
-  final authInfo = ref.watch(authStateProvider);
-  if (authInfo.data?.value.uid != null) {
-    return authInfo.data?.value.uid;
-  }
-  return null;
+final userIDProvider = FutureProvider<String>((ref) async {
+  final authInfo = await ref.watch(authStateProvider.future);
+  return authInfo.uid;
 });
 
-final databaseProvider = Provider<DatabaseConnection?>((ref) {
-  final userID = ref.watch(userIDProvider);
-  if (userID == null) {
-    return null;
-  }
+final _databaseProvider = FutureProvider<DatabaseConnection>((ref) async {
+  final userID = await ref.watch(userIDProvider.future);
   return DatabaseConnection(userID);
 });
+
+final databaseProvider = Provider<DatabaseConnection>((ref) {
+  return database;
+});
+
+late DatabaseConnection database;
+Future<void> setupDatabase() async {
+  final container = ProviderContainer();
+  database = await container.read(_databaseProvider.future);
+}
 
 abstract class _CollectionPath {
   static final String users = "users";

@@ -3,6 +3,7 @@ import 'dart:io';
 
 import 'package:pilll/analytics.dart';
 import 'package:pilll/components/atoms/color.dart';
+import 'package:pilll/database/database.dart';
 import 'package:pilll/entity/user_error.dart';
 import 'package:pilll/error/universal_error_page.dart';
 import 'package:pilll/global_method_channel.dart';
@@ -22,10 +23,13 @@ Future<void> entrypoint() async {
   WidgetsFlutterBinding.ensureInitialized();
   initializeDateFormatting('ja_JP');
   await Firebase.initializeApp();
+
   // MEMO: FirebaseCrashlytics#recordFlutterError called dumpErrorToConsole in function.
   if (Environment.isLocal) {
     connectToEmulator();
   }
+  await setupDatabase();
+
   ErrorWidget.builder = (FlutterErrorDetails details) {
     return UniversalErrorPage(
       error: UserDisplayedError(
