@@ -17,7 +17,7 @@ class _$SettingStateTearOff {
   const _$SettingStateTearOff();
 
   _SettingState call(
-      {required Setting? entity, required bool userIsUpdatedFrom132 = false}) {
+      {required Setting? entity, bool userIsUpdatedFrom132 = false}) {
     return _SettingState(
       entity: entity,
       userIsUpdatedFrom132: userIsUpdatedFrom132,
@@ -128,8 +128,7 @@ class __$SettingStateCopyWithImpl<$Res> extends _$SettingStateCopyWithImpl<$Res>
 
 /// @nodoc
 class _$_SettingState extends _SettingState {
-  _$_SettingState(
-      {required this.entity, required this.userIsUpdatedFrom132 = false})
+  _$_SettingState({required this.entity, this.userIsUpdatedFrom132 = false})
       : super._();
 
   @override
@@ -167,9 +166,8 @@ class _$_SettingState extends _SettingState {
 }
 
 abstract class _SettingState extends SettingState {
-  factory _SettingState(
-      {required Setting? entity,
-      required bool userIsUpdatedFrom132}) = _$_SettingState;
+  factory _SettingState({required Setting? entity, bool userIsUpdatedFrom132}) =
+      _$_SettingState;
   _SettingState._() : super._();
 
   @override

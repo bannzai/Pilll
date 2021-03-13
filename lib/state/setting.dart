@@ -8,5 +8,5 @@ abstract class SettingState implements _$SettingState {
   SettingState._();
   factory SettingState(
       {required Setting? entity,
-      @Default(false) required bool userIsUpdatedFrom132}) = _SettingState;
+      @Default(false) bool userIsUpdatedFrom132}) = _SettingState;
 }
