@@ -34,9 +34,9 @@ Future<String> debugInfo(String separator) async {
     "buildNumber: $buildNumber",
     "env: ${Environment.isProduction ? "production" : "development"}",
     "user id: $userID",
-    "pillSheet.entity.id: ${pillSheet?.id}",
-    "pillSheetState.entity: ${pillSheet == null ? "null" : pillSheet.toJson()}",
-    "settingState.entity: ${setting == null ? "null" : setting.toJson()}",
+    "pillSheet.entity.id: ${pillSheet.id}",
+    "pillSheetState.entity: ${pillSheet.toJson()}",
+    "settingState.entity: ${setting.toJson()}",
   ];
   return contents.join(separator);
 }

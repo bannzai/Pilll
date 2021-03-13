@@ -19,8 +19,6 @@ class DiariesStateStore extends StateNotifier<DiariesState> {
   void _subscribe() {
     canceller?.cancel();
     canceller = _service.subscribe().listen((entities) {
-      assert(entities != null, "Diary could not null on subscribe");
-      if (entities == null) return;
       state = state.copyWith(entities: entities);
     });
   }

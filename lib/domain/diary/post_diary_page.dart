@@ -22,11 +22,9 @@ final _postDiaryStoreProvider = StateNotifierProvider.autoDispose
       ref.watch(diariesStoreProvider.state).diaryForDatetimeOrNull(date);
   final service = ref.watch(diaryServiceProvider);
   if (diary == null) {
-    return PostDiaryStore(
-        service as DiaryService, DiaryState(entity: Diary.fromDate(date)));
+    return PostDiaryStore(service, DiaryState(entity: Diary.fromDate(date)));
   }
-  return PostDiaryStore(
-      service as DiaryService, DiaryState(entity: diary.copyWith()));
+  return PostDiaryStore(service, DiaryState(entity: diary.copyWith()));
 });
 
 abstract class PostDiaryPageConst {
@@ -41,11 +39,11 @@ class PostDiaryPage extends HookWidget {
   @override
   Widget build(BuildContext context) {
     // ignore: invalid_use_of_protected_member
-    final state = useProvider(_postDiaryStoreProvider!(date).state);
+    final state = useProvider(_postDiaryStoreProvider(date).state);
     final TextEditingController? textEditingController =
         useTextEditingController(text: state.entity.memo);
     final focusNode = useFocusNode();
-    final store = useProvider(_postDiaryStoreProvider!(date));
+    final store = useProvider(_postDiaryStoreProvider(date));
     final scrollController = useScrollController();
 
     focusNode.addListener(() {
@@ -127,8 +125,8 @@ class PostDiaryPage extends HookWidget {
   }
 
   Widget _physicalConditions() {
-    final store = useProvider(_postDiaryStoreProvider!(date));
-    final state = useProvider(_postDiaryStoreProvider!(date).state);
+    final store = useProvider(_postDiaryStoreProvider(date));
+    final state = useProvider(_postDiaryStoreProvider(date).state);
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
@@ -199,8 +197,8 @@ class PostDiaryPage extends HookWidget {
   }
 
   Widget _physicalConditionDetails() {
-    final store = useProvider(_postDiaryStoreProvider!(date));
-    final diary = useProvider(_postDiaryStoreProvider!(date).state).entity;
+    final store = useProvider(_postDiaryStoreProvider(date));
+    final diary = useProvider(_postDiaryStoreProvider(date).state).entity;
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -232,8 +230,8 @@ class PostDiaryPage extends HookWidget {
   }
 
   Widget _sex() {
-    final store = useProvider(_postDiaryStoreProvider!(date));
-    final state = useProvider(_postDiaryStoreProvider!(date).state);
+    final store = useProvider(_postDiaryStoreProvider(date));
+    final state = useProvider(_postDiaryStoreProvider(date).state);
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
@@ -290,7 +288,7 @@ class PostDiaryPage extends HookWidget {
     FocusNode focusNode,
   ) {
     final textLength = 120;
-    final store = useProvider(_postDiaryStoreProvider!(date));
+    final store = useProvider(_postDiaryStoreProvider(date));
     return Container(
       child: ConstrainedBox(
         constraints: BoxConstraints(

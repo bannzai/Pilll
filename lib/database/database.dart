@@ -5,8 +5,8 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 final userIDProvider = Provider<String?>((ref) {
   final authInfo = ref.watch(authStateProvider);
-  if (authInfo.data?.value?.uid != null) {
-    return authInfo.data?.value?.uid;
+  if (authInfo.data?.value.uid != null) {
+    return authInfo.data?.value.uid;
   }
   return null;
 });
@@ -27,9 +27,7 @@ abstract class _CollectionPath {
 }
 
 class DatabaseConnection {
-  DatabaseConnection(this._userID)
-      : assert(
-            _userID != null, 'Pill firestore request should necessary userID');
+  DatabaseConnection(this._userID);
   final String _userID;
 
   DocumentReference userReference() {

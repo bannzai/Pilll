@@ -12,8 +12,9 @@ abstract class PillSheetServiceInterface {
   Stream<PillSheetModel> subscribeForLatestPillSheet();
 }
 
-final pillSheetServiceProvider = Provider<PillSheetServiceInterface>(
-    (ref) => PillSheetService(ref.watch(databaseProvider as AlwaysAliveProviderBase<Object?, DatabaseConnection>)));
+final pillSheetServiceProvider = Provider<PillSheetServiceInterface>((ref) =>
+    PillSheetService(ref.watch(databaseProvider
+        as AlwaysAliveProviderBase<Object?, DatabaseConnection>)));
 
 class PillSheetService extends PillSheetServiceInterface {
   final DatabaseConnection _database;
@@ -59,7 +60,6 @@ class PillSheetService extends PillSheetServiceInterface {
   }
 
   Future<void> delete(PillSheetModel pillSheet) {
-    if (pillSheet == null) throw PillSheetIsNotExists();
     return _database.pillSheetReference(pillSheet.documentID!).update({
       PillSheetFirestoreKey.deletedAt:
           TimestampConverter.dateTimeToTimestamp(DateTime.now())
@@ -78,7 +78,8 @@ class PillSheetService extends PillSheetServiceInterface {
   Stream<PillSheetModel> subscribeForLatestPillSheet() {
     return _queryOfFetchLastPillSheet()
         .snapshots()
-        .map(((event) => _filterForLatestPillSheet(event)!) as PillSheetModel Function(QuerySnapshot));
+        .map(((event) => _filterForLatestPillSheet(event)))
+        .cast();
   }
 }
 

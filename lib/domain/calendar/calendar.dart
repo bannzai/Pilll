@@ -23,8 +23,9 @@ abstract class CalendarConstants {
   static final double tileHeight = 60;
 }
 
-final AutoDisposeFutureProviderFamily<List<Diary>, DateTime>? calendarDiariesProvider = FutureProvider.autoDispose
-    .family<List<Diary>, DateTime>((ref, DateTime dateTimeOfMonth) {
+final AutoDisposeFutureProviderFamily<List<Diary>, DateTime>?
+    calendarDiariesProvider = FutureProvider.autoDispose
+        .family<List<Diary>, DateTime>((ref, DateTime dateTimeOfMonth) {
   final state = ref.watch(diariesStoreProvider.state);
   if (state.entities.isNotEmpty) {
     return Future.value(state.entities);
@@ -190,7 +191,8 @@ class Calendar extends HookWidget {
           );
         })
         .where((element) => element != null)
-        .toList() as List<Widget>;
+        .toList()
+        .cast();
   }
 }
 

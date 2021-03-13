@@ -1,7 +1,5 @@
 import 'package:pilll/entity/setting.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:meta/meta.dart';
 
 part 'user.g.dart';
 part 'user.freezed.dart';
