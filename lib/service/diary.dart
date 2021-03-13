@@ -12,7 +12,7 @@ abstract class DiariesServiceInterface {
 }
 
 final diaryServiceProvider = Provider<DiariesServiceInterface>(
-    (ref) => DiaryService(ref.watch(databaseProvider as AlwaysAliveProviderBase<Object?, DatabaseConnection>)));
+    (ref) => DiaryService(ref.watch(databaseProvider)));
 
 int sortDiary(Diary a, Diary b) => a.date.compareTo(b.date);
 List<Diary> sortedDiaries(List<Diary> diaries) {

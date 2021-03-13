@@ -23,8 +23,8 @@ abstract class UserServiceInterface {
   Future<void> saveStats();
 }
 
-final userServiceProvider = Provider((ref) => UserService(ref.watch(
-    databaseProvider as AlwaysAliveProviderBase<Object?, DatabaseConnection>)));
+final userServiceProvider =
+    Provider((ref) => UserService(ref.watch(databaseProvider)));
 final initialUserProvider =
     FutureProvider((ref) => ref.watch(userServiceProvider).prepare());
 
