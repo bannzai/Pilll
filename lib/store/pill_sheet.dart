@@ -14,19 +14,17 @@ final pillSheetStoreProvider = StateNotifierProvider(
 
 class PillSheetStateStore extends StateNotifier<PillSheetState> {
   final PillSheetServiceInterface _service;
-  PillSheetStateStore(this._service) : super(PillSheetState()) {
+  PillSheetStateStore(this._service) : super(PillSheetState(entity: null)) {
     _reset();
   }
 
   var firstLoadIsEnded = false;
   void _reset() {
     Future(() async {
-      state = PillSheetState(entity: await _service.fetchLast());
+      final entity = await _service.fetchLast();
+      state = PillSheetState(entity: entity);
       analytics.logEvent(name: "count_of_remaining_pill", parameters: {
-        "count": state.entity == null
-            ? 0
-            : (state.entity?.todayPillNumber -
-                state.entity?.lastTakenPillNumber)
+        "count": (entity.todayPillNumber - entity.lastTakenPillNumber)
       });
       firstLoadIsEnded = true;
       _subscribe();
@@ -54,12 +52,20 @@ class PillSheetStateStore extends StateNotifier<PillSheetState> {
   }
 
   Future<void> delete() {
-    return _service.delete(state.entity?).then((_) => _reset());
+    final entity = state.entity;
+    if (entity == null) {
+      throw FormatException("pill sheet not found");
+    }
+    return _service.delete(entity).then((_) => _reset());
   }
 
   Future<dynamic> take(DateTime takenDate) {
+    final entity = state.entity;
+    if (entity == null) {
+      throw FormatException("pill sheet not found");
+    }
+    final updated = entity.copyWith(lastTakenDate: takenDate);
     showIndicator();
-    final updated = state.entity?.copyWith(lastTakenDate: takenDate);
     return _service.update(updated).then((value) {
       hideIndicator();
       state = state.copyWith(entity: updated);
@@ -67,15 +73,23 @@ class PillSheetStateStore extends StateNotifier<PillSheetState> {
   }
 
   DateTime calcBeginingDateFromNextTodayPillNumber(int pillNumber) {
-    if (pillNumber == state.entity?.todayPillNumber)
-      return state.entity?.beginingDate;
-    final diff = pillNumber - state.entity?.todayPillNumber;
-    return state.entity?.beginingDate.subtract(Duration(days: diff));
+    final entity = state.entity;
+    if (entity == null) {
+      throw FormatException("pill sheet not found");
+    }
+    if (pillNumber == entity.todayPillNumber) return entity.beginingDate;
+    final diff = pillNumber - entity.todayPillNumber;
+    return entity.beginingDate.subtract(Duration(days: diff));
   }
 
   void modifyBeginingDate(int pillNumber) {
+    final entity = state.entity;
+    if (entity == null) {
+      throw FormatException("pill sheet not found");
+    }
+
     _service
-        .update(state.entity?.copyWith(
+        .update(entity.copyWith(
             beginingDate: calcBeginingDateFromNextTodayPillNumber(pillNumber)))
         .then((entity) => state = state.copyWith(entity: entity));
   }
@@ -85,22 +99,30 @@ class PillSheetStateStore extends StateNotifier<PillSheetState> {
   }
 
   PillMarkType markFor(int number) {
-    if (number > state.entity?.typeInfo.dosingPeriod) {
+    final entity = state.entity;
+    if (entity == null) {
+      throw FormatException("pill sheet not found");
+    }
+    if (number > entity.typeInfo.dosingPeriod) {
       return state.entity?.pillSheetType == PillSheetType.pillsheet_21
           ? PillMarkType.rest
           : PillMarkType.fake;
     }
-    if (number <= state.entity?.lastTakenPillNumber) {
+    if (number <= entity.lastTakenPillNumber) {
       return PillMarkType.done;
     }
-    if (number < state.entity?.todayPillNumber) {
+    if (number < entity.todayPillNumber) {
       return PillMarkType.normal;
     }
     return PillMarkType.normal;
   }
 
   bool shouldPillMarkAnimation(int number) {
-    return number > state.entity?.lastTakenPillNumber &&
-        number <= state.entity?.todayPillNumber;
+        final entity = state.entity;
+    if (entity == null) {
+      throw FormatException("pill sheet not found");
+    }
+    return number > entity.lastTakenPillNumber &&
+        number <= entity.todayPillNumber;
   }
 }
