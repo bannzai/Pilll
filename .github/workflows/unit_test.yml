@@ -26,7 +26,7 @@ jobs:
         FILE_FIREBASE_IOS_PRODUCTION: ${{ secrets.FILE_FIREBASE_IOS_PRODUCTION }}
     - uses: subosito/flutter-action@v1
       with:
-        flutter-version: '1.22.2'
+        flutter-version: '2.0.1'
     - run: flutter pub get
     - name: Run iOS
       run: flutter build ios --debug --no-codesign --flavor development --target lib/main.dev.dart
@@ -45,7 +45,7 @@ jobs:
         FILE_FIREBASE_ANDROID_PRODUCTION: ${{ secrets.FILE_FIREBASE_ANDROID_PRODUCTION }}
     - uses: subosito/flutter-action@v1
       with:
-        flutter-version: '1.22.2'
+        flutter-version: '2.0.1'
     - run: flutter pub get
     - run: flutter build apk --debug --flavor development --target lib/main.dev.dart
   test:
@@ -58,6 +58,6 @@ jobs:
         java-version: '12.x'
     - uses: subosito/flutter-action@v1
       with:
-        flutter-version: '1.22.2'
+        flutter-version: '2.0.1'
     - run: flutter pub get
     - run: flutter test
