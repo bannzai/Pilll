@@ -12,9 +12,8 @@ abstract class PillSheetServiceInterface {
   Stream<PillSheetModel> subscribeForLatestPillSheet();
 }
 
-final pillSheetServiceProvider = Provider<PillSheetServiceInterface>((ref) =>
-    PillSheetService(ref.watch(databaseProvider
-        as AlwaysAliveProviderBase<Object?, DatabaseConnection>)));
+final pillSheetServiceProvider = Provider<PillSheetServiceInterface>(
+    (ref) => PillSheetService(ref.watch(databaseProvider)));
 
 class PillSheetService extends PillSheetServiceInterface {
   final DatabaseConnection _database;

@@ -12,8 +12,8 @@ abstract class SettingServiceInterface {
   Stream<Setting> subscribe();
 }
 
-final settingServiceProvider = Provider((ref) => SettingService(ref.watch(
-    databaseProvider as AlwaysAliveProviderBase<Object?, DatabaseConnection>)));
+final settingServiceProvider =
+    Provider((ref) => SettingService(ref.watch(databaseProvider)));
 
 // ignore: top_level_function_literal_block
 final userSettingProvider = FutureProvider((ref) async {
