@@ -8,14 +8,12 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:pilll/store/initial_setting.dart';
 import 'package:flutter/material.dart';
-import 'package:shared_preferences/shared_preferences.dart';
 
 class InitialSetting1Page extends HookWidget {
   @override
   Widget build(BuildContext context) {
     final store = useProvider(initialSettingStoreProvider);
     final state = useProvider(initialSettingStoreProvider.state);
-    _showReleaseNoteModal(context);
     return PillSheetTypeSelectPage(
       title: "1/4",
       backButtonIsHidden: true,
@@ -30,29 +28,6 @@ class InitialSetting1Page extends HookWidget {
       doneButtonText: "次へ",
       selectedPillSheetType: state.entity.pillSheetType,
     );
-  }
-
-  void _showReleaseNoteModal(BuildContext context) {
-    if (!Platform.isIOS) {
-      return;
-    }
-    final key = ReleaseNoteKey.renewal;
-    SharedPreferences.getInstance().then((storage) {
-      if (storage.getBool(key) ?? false) {
-        return;
-      }
-      showDialog(
-          context: context,
-          barrierColor: Colors.white,
-          builder: (context) {
-            return ReleaseNote(
-              onClose: () {
-                storage.setBool(key, true);
-                Navigator.of(context).pop();
-              },
-            );
-          });
-    });
   }
 }
 
