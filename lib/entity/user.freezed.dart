@@ -173,7 +173,7 @@ class _$UserTearOff {
   _User call(
       {required String anonymouseUserID,
       @JsonKey(name: "settings") Setting? setting,
-      required bool migratedFlutter = false}) {
+      bool migratedFlutter = false}) {
     return _User(
       anonymouseUserID: anonymouseUserID,
       setting: setting,
@@ -308,7 +308,7 @@ class _$_User extends _User {
   _$_User(
       {required this.anonymouseUserID,
       @JsonKey(name: "settings") this.setting,
-      required this.migratedFlutter = false})
+      this.migratedFlutter = false})
       : super._();
 
   factory _$_User.fromJson(Map<String, dynamic> json) =>
@@ -365,7 +365,7 @@ abstract class _User extends User {
   factory _User(
       {required String anonymouseUserID,
       @JsonKey(name: "settings") Setting? setting,
-      required bool migratedFlutter}) = _$_User;
+      bool migratedFlutter}) = _$_User;
   _User._() : super._();
 
   factory _User.fromJson(Map<String, dynamic> json) = _$_User.fromJson;

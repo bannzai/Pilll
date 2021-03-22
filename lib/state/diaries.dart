@@ -8,7 +8,7 @@ part 'diaries.freezed.dart';
 @freezed
 abstract class DiariesState implements _$DiariesState {
   DiariesState._();
-  factory DiariesState({@Default([]) required List<Diary> entities}) = _DiariesState;
+  factory DiariesState({@Default([]) List<Diary> entities}) = _DiariesState;
 
   List<Diary> diariesForMonth(DateTime dateTimeOfMonth) {
     entities

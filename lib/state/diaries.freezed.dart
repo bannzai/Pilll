@@ -16,7 +16,7 @@ final _privateConstructorUsedError = UnsupportedError(
 class _$DiariesStateTearOff {
   const _$DiariesStateTearOff();
 
-  _DiariesState call({required List<Diary> entities = const []}) {
+  _DiariesState call({List<Diary> entities = const []}) {
     return _DiariesState(
       entities: entities,
     );
@@ -99,7 +99,7 @@ class __$DiariesStateCopyWithImpl<$Res> extends _$DiariesStateCopyWithImpl<$Res>
 
 /// @nodoc
 class _$_DiariesState extends _DiariesState {
-  _$_DiariesState({required this.entities = const []}) : super._();
+  _$_DiariesState({this.entities = const []}) : super._();
 
   @JsonKey(defaultValue: const [])
   @override
@@ -130,7 +130,7 @@ class _$_DiariesState extends _DiariesState {
 }
 
 abstract class _DiariesState extends DiariesState {
-  factory _DiariesState({required List<Diary> entities}) = _$_DiariesState;
+  factory _DiariesState({List<Diary> entities}) = _$_DiariesState;
   _DiariesState._() : super._();
 
   @override

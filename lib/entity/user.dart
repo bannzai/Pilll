@@ -46,7 +46,7 @@ abstract class User implements _$User {
   factory User({
     required String anonymouseUserID,
     @JsonKey(name: "settings") Setting? setting,
-    @Default(false) required bool migratedFlutter,
+    @Default(false) bool migratedFlutter,
   }) = _User;
 
   factory User.fromJson(Map<String, dynamic> json) => _$UserFromJson(json);
