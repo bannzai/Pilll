@@ -9,7 +9,6 @@ abstract class PackageFirestoreKey {
 
 @freezed
 abstract class Package implements _$Package {
-  Package._();
   factory Package({
     required String latestOS,
     required String appName,
