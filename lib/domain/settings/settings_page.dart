@@ -408,7 +408,7 @@ class ConfirmDeletePillSheet extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AlertDialog(
-      title: SvgPicture.asset("images/alert_24.svg"),
+      title: SvgPicture.asset("images/alert_24.svg", width: 24, height: 24),
       content: SizedBox(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
