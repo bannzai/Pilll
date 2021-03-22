@@ -105,7 +105,7 @@ class SettingsPage extends HookWidget {
               return Padding(
                 padding: const EdgeInsets.all(10),
                 child: TextButton(
-                  child: Text("COPY DEBUG INFO"),
+                  child: Text("COPY DEBUG INFO", style: TextColorStyle.primary),
                   onPressed: () async {
                     Clipboard.setData(
                         ClipboardData(text: await debugInfo("\n")));
