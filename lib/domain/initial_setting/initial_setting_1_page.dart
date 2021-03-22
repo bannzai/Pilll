@@ -1,9 +1,5 @@
-import 'dart:io';
-
 import 'package:pilll/domain/initial_setting/initial_setting_2_page.dart';
 import 'package:pilll/components/organisms/pill/pill_sheet_type_select_page.dart';
-import 'package:pilll/domain/release_note/release_note.dart';
-import 'package:pilll/util/shared_preference/keys.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:pilll/store/initial_setting.dart';
