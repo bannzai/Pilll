@@ -118,7 +118,7 @@ class RootState extends State<Root> {
             UserDisplayedError(displayedMessage: ErrorMessages.connection);
         return UniversalErrorPage(error: displayedError);
       });
-    } as Widget Function(BuildContext, T Function<T>(ProviderBase<Object?, T>), Widget?));
+    });
   }
 
   _auth() {
