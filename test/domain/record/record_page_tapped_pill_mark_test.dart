@@ -1,3 +1,4 @@
+import 'package:pilll/analytics.dart';
 import 'package:pilll/domain/record/record_page.dart';
 import 'package:pilll/entity/pill_sheet.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
@@ -30,6 +31,7 @@ void main() {
     SharedPreferences.setMockInitialValues({});
     initializeDateFormatting('ja_JP');
     Environment.isTest = true;
+    analytics = MockAnalytics();
     WidgetsBinding.instance!.renderView.configuration =
         new TestViewConfiguration(size: const Size(375.0, 667.0));
   });
