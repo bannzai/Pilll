@@ -32,26 +32,5 @@ void main() {
       verify(settingService.update(settingEntity));
       verify(pillSheetService.register(pillSheetEntity));
     });
-    test("when today pill number is null", () async {
-      final initialSetting = InitialSettingModel.initial(
-        todayPillNumber: null,
-        pillSheetType: PillSheetType.pillsheet_21,
-      );
-      final settingService = MockSettingService();
-      final settingEntity = initialSetting.buildSetting();
-      when(settingService.update(settingEntity))
-          .thenAnswer((realInvocation) => Future.value(settingEntity));
-
-      final pillSheetEntity = initialSetting.buildPillSheet();
-      final pillSheetService = MockPillSheetService();
-      when(pillSheetService.register(pillSheetEntity!))
-          .thenAnswer((realInvocation) => Future.value(pillSheetEntity));
-
-      final service = InitialSettingService(settingService, pillSheetService);
-      await service.register(initialSetting);
-
-      verify(settingService.update(settingEntity));
-      verifyNever(pillSheetService.register(pillSheetEntity));
-    });
   });
 }
