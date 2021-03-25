@@ -10,6 +10,7 @@ import 'package:pilll/entity/weekday.dart';
 import 'package:pilll/util/datetime/date_compare.dart';
 import 'package:pilll/util/datetime/day.dart';
 import 'package:pilll/util/formatter/date_time_formatter.dart';
+import 'package:scrollable_positioned_list/scrollable_positioned_list.dart';
 
 const double _horizontalPadding = 10;
 
@@ -43,16 +44,19 @@ class MenstruationPage extends HookWidget {
                 child: Padding(
                   padding: const EdgeInsets.only(
                       left: _horizontalPadding, right: _horizontalPadding),
-                  child: ListView.builder(
+                  child: ScrollablePositionedList.builder(
+                    initialScrollIndex: dataSource.length ~/ 2,
                     physics: PageScrollPhysics(),
                     scrollDirection: Axis.horizontal,
                     itemBuilder: (context, index) {
+                      final data = dataSource[index];
                       return _WeekdayLine(
-                          begin: today(),
+                          days: data,
                           onTap: (e) {
-                            print(e);
+                            print("e:$e");
                           });
                     },
+                    itemCount: dataSource.length,
                   ),
                 ),
               ),
@@ -66,48 +70,41 @@ class MenstruationPage extends HookWidget {
   List<List<DateTime>> _dataSource() {
     final base = today();
     var begin = base.subtract(Duration(days: 180));
-    final beginWeekdayOffset =
-        WeekdayFunctions.weekdayFromDate(begin).index - Weekday.Sunday.index;
+    final beginWeekdayOffset = WeekdayFunctions.weekdayFromDate(begin).index;
     begin = begin.subtract(Duration(days: beginWeekdayOffset));
 
     var end = base.add(Duration(days: 180));
     final endWeekdayOffset =
-        WeekdayFunctions.weekdayFromDate(end).index - Weekday.Saturday.index;
-    end = end.subtract(Duration(days: endWeekdayOffset));
+        Weekday.values.last.index - WeekdayFunctions.weekdayFromDate(end).index;
+    end = end.add(Duration(days: endWeekdayOffset));
 
     final diffDay = DateTimeRange(start: begin, end: end).duration.inDays;
     List<DateTime> days = [];
-    for (int i = 0; i < diffDay; i++) {
-      days.add(begin.add(Duration(days: i + 1)));
+    for (int i = 0; i < diffDay + 1; i++) {
+      days.add(begin.add(Duration(days: i)));
     }
-    final line = (diffDay / Weekday.values.length).round();
-    List<List<DateTime>> weekdayLine = [];
-    for (int i = 0; i < line; i++) {
-      final slice =
-          days.sublist(i * Weekday.values.length, Weekday.values.length);
-      weekdayLine.add(slice);
-    }
-    return List.generate(line,
-        (i) => days.sublist(i * Weekday.values.length, Weekday.values.length));
+    return List.generate(
+        (diffDay / Weekday.values.length).round(),
+        (i) => days.sublist(i * Weekday.values.length,
+            i * Weekday.values.length + Weekday.values.length));
   }
 }
 
 class _WeekdayLine extends StatelessWidget {
-  final DateTime begin;
-  final Function(Weekday) onTap;
+  final List<DateTime> days;
+  final Function(DateTime) onTap;
 
   const _WeekdayLine({
     Key? key,
-    required this.begin,
+    required this.days,
     required this.onTap,
   }) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Row(
-      children: Weekday.values
-          .map((e) => begin.add(Duration(days: e.index)))
+      children: days
           .map((e) => _Tile(
-              day: e.day,
+              date: e,
               isToday: isSameDay(today(), e),
               weekday: WeekdayFunctions.weekdayFromDate(e),
               onTap: onTap))
@@ -117,14 +114,14 @@ class _WeekdayLine extends StatelessWidget {
 }
 
 class _Tile extends StatelessWidget {
-  final int day;
+  final DateTime date;
   final bool isToday;
   final Weekday weekday;
-  final Function(Weekday) onTap;
+  final Function(DateTime) onTap;
 
   const _Tile({
     Key? key,
-    required this.day,
+    required this.date,
     required this.isToday,
     required this.weekday,
     required this.onTap,
@@ -133,13 +130,13 @@ class _Tile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () => onTap(weekday),
+      onTap: () => onTap(date),
       child: Container(
           width: (MediaQuery.of(context).size.width - _horizontalPadding * 2) /
               Weekday.values.length,
           height: 40,
           child: Text(
-            "$day",
+            "${date.day}",
             textAlign: TextAlign.center,
             style: TextStyle(
               color: weekday.weekdayColor(),
