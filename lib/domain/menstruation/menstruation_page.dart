@@ -76,7 +76,7 @@ class _WeekdayLine extends StatelessWidget {
           .map((e) => _Tile(
               day: e.day,
               isToday: isSameDay(today(), e),
-              weekday: Weekday.values[e.weekday],
+              weekday: WeekdayFunctions.weekdayFromDate(e),
               onTap: onTap))
           .toList(),
     );
