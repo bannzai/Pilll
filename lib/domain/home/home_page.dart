@@ -71,21 +71,31 @@ class _HomePageState extends State<HomePage>
                 tabs: <Tab>[
                   Tab(
                     text: "ピル",
-                    icon: SvgPicture.asset(_tabController.index == 0
-                        ? "images/tab_icon_pill_enable.svg"
-                        : "images/tab_icon_pill_disable.svg"),
+                    icon: SvgPicture.asset(
+                        _tabController.index == HomePageTabType.record.index
+                            ? "images/tab_icon_pill_enable.svg"
+                            : "images/tab_icon_pill_disable.svg"),
+                  ),
+                  Tab(
+                    text: "生理",
+                    icon: SvgPicture.asset(_tabController.index ==
+                            HomePageTabType.menstruation.index
+                        ? "images/heart.svg"
+                        : "images/heart.svg"),
                   ),
                   Tab(
                     text: DateTimeFormatter.slashYearAndMonth(today()),
-                    icon: SvgPicture.asset(_tabController.index == 1
-                        ? "images/tab_icon_calendar_enable.svg"
-                        : "images/tab_icon_calendar_disable.svg"),
+                    icon: SvgPicture.asset(
+                        _tabController.index == HomePageTabType.calendar.index
+                            ? "images/tab_icon_calendar_enable.svg"
+                            : "images/tab_icon_calendar_disable.svg"),
                   ),
                   Tab(
                     text: "設定",
-                    icon: SvgPicture.asset(_tabController.index == 2
-                        ? "images/tab_icon_setting_enable.svg"
-                        : "images/tab_icon_setting_disable.svg"),
+                    icon: SvgPicture.asset(
+                        _tabController.index == HomePageTabType.setting.index
+                            ? "images/tab_icon_setting_enable.svg"
+                            : "images/tab_icon_setting_disable.svg"),
                   ),
                 ],
               ),
