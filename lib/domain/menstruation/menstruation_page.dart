@@ -49,7 +49,7 @@ class MenstruationPageState extends State<MenstruationPage> {
                   child: ListView.builder(
                     physics: PageScrollPhysics(),
                     scrollDirection: Axis.horizontal,
-                    itemBuilder: (context, int) {
+                    itemBuilder: (context, index) {
                       return _WeekdayLine(
                           begin: today(),
                           onTap: (e) {
@@ -64,6 +64,34 @@ class MenstruationPageState extends State<MenstruationPage> {
         ),
       ),
     );
+  }
+
+  List<List<DateTime>> _dataSource() {
+    final base = today();
+    var begin = base.subtract(Duration(days: 180));
+    final beginWeekdayOffset =
+        WeekdayFunctions.weekdayFromDate(begin).index - Weekday.Sunday.index;
+    begin = begin.subtract(Duration(days: beginWeekdayOffset));
+
+    var end = base.add(Duration(days: 180));
+    final endWeekdayOffset =
+        WeekdayFunctions.weekdayFromDate(end).index - Weekday.Saturday.index;
+    end = end.subtract(Duration(days: endWeekdayOffset));
+
+    final diffDay = DateTimeRange(start: begin, end: end).duration.inDays;
+    List<DateTime> days = [];
+    for (int i = 0; i < diffDay; i++) {
+      days.add(begin.add(Duration(days: i + 1)));
+    }
+    final line = (diffDay / Weekday.values.length).round();
+    List<List<DateTime>> weekdayLine = [];
+    for (int i = 0; i < line; i++) {
+      final slice =
+          days.sublist(i * Weekday.values.length, Weekday.values.length);
+      weekdayLine.add(slice);
+    }
+    return List.generate(line,
+        (i) => days.sublist(i * Weekday.values.length, Weekday.values.length));
   }
 }
 
