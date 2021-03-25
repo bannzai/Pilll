@@ -42,6 +42,7 @@ class MenstruationPageState extends State<MenstruationPage> {
                 height: 62,
                 color: PilllColors.white,
                 child: ListView.builder(
+                  physics: PageScrollPhysics(),
                   scrollDirection: Axis.horizontal,
                   itemBuilder: (context, int) {
                     return _WeekdayLine(
