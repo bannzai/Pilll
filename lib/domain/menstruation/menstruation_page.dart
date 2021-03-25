@@ -69,11 +69,11 @@ class MenstruationPage extends HookWidget {
 
   List<List<DateTime>> _dataSource() {
     final base = today();
-    var begin = base.subtract(Duration(days: 180));
+    var begin = base.subtract(Duration(days: 90));
     final beginWeekdayOffset = WeekdayFunctions.weekdayFromDate(begin).index;
     begin = begin.subtract(Duration(days: beginWeekdayOffset));
 
-    var end = base.add(Duration(days: 180));
+    var end = base.add(Duration(days: 90));
     final endWeekdayOffset =
         Weekday.values.last.index - WeekdayFunctions.weekdayFromDate(end).index;
     end = end.add(Duration(days: endWeekdayOffset));
