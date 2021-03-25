@@ -17,7 +17,7 @@ class DateTimeFormatter {
   }
 
   static String jaMonth(DateTime dateTime) {
-    return DateFormat(DateFormat.NUM_MONTH, "ja_JP").format(dateTime) + "月";
+    return DateFormat(DateFormat.NUM_MONTH, "ja_JP").format(dateTime);
   }
 
   static String monthAndWeekday(DateTime dateTime) {
