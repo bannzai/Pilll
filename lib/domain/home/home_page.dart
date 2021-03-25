@@ -36,8 +36,10 @@ class _HomePageState extends State<HomePage>
   @override
   void initState() {
     super.initState();
-    _tabController =
-        TabController(length: 3, vsync: this, initialIndex: _selectedIndex);
+    _tabController = TabController(
+        length: HomePageTabType.values.length,
+        vsync: this,
+        initialIndex: _selectedIndex);
     _tabController.addListener(_handleTabSelection);
     auth().then((auth) {
       requestNotificationPermissions();
@@ -52,7 +54,7 @@ class _HomePageState extends State<HomePage>
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
-      length: 3,
+      length: HomePageTabType.values.length,
       child: Scaffold(
         backgroundColor: PilllColors.background,
         appBar: null,
