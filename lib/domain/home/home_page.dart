@@ -150,9 +150,7 @@ class _HomePageState extends State<HomePage>
   }
 }
 
-enum HomePageTab { record, calendar, settings }
-
-extension HomePageTabFunctions on HomePageTab {
+extension HomePageTabFunctions on HomePageTabType {
   Widget widget() {
     switch (this) {
       case HomePageTab.record:
