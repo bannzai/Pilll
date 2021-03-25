@@ -160,7 +160,7 @@ extension HomePageTabFunctions on HomePageTabType {
         return MenstruationPage();
       case HomePageTabType.calendar:
         return CalendarPage();
-      case HomePageTabType.settings:
+      case HomePageTabType.setting:
         return SettingsPage();
     }
   }
@@ -173,7 +173,7 @@ extension HomePageTabFunctions on HomePageTabType {
         return "MenstruationPage";
       case HomePageTabType.calendar:
         return "CalendarPage";
-      case HomePageTabType.settings:
+      case HomePageTabType.setting:
         return "SettingsPage";
     }
   }
