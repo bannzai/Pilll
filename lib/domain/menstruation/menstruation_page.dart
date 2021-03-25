@@ -41,7 +41,7 @@ class MenstruationPageState extends State<MenstruationPage> {
             children: [
               Container(
                 width: MediaQuery.of(context).size.width,
-                height: 62,
+                height: 65,
                 color: PilllColors.white,
                 child: Padding(
                   padding: const EdgeInsets.only(
