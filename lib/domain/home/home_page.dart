@@ -22,7 +22,7 @@ class HomePage extends StatefulWidget {
   _HomePageState createState() => _HomePageState();
 }
 
-enum HomePageTabType { record, calendar, setting }
+enum HomePageTabType { record, menstruation, calendar, setting }
 
 class _HomePageState extends State<HomePage>
     with SingleTickerProviderStateMixin, RouteAware {
