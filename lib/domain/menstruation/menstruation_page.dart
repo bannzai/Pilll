@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/widgets.dart';
+import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:pilll/components/atoms/buttons.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
@@ -15,6 +16,7 @@ const double _horizontalPadding = 10;
 class MenstruationPage extends HookWidget {
   @override
   Scaffold build(BuildContext context) {
+    final dataSource = useMemoized(() => _dataSource());
     return Scaffold(
       backgroundColor: PilllColors.background,
       appBar: AppBar(
