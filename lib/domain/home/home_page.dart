@@ -109,6 +109,7 @@ class _HomePageState extends State<HomePage>
           controller: _tabController,
           children: <Widget>[
             RecordPage(),
+            MenstruationPage(),
             CalendarPage(),
             SettingsPage(),
             // SettingsPage(),
