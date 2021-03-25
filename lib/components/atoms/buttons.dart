@@ -91,3 +91,25 @@ class InconspicuousButton extends StatelessWidget {
     );
   }
 }
+
+class AppBarTextActionButton extends StatelessWidget {
+  final String text;
+  final Function() onPressed;
+
+  const AppBarTextActionButton({
+    Key? key,
+    required this.onPressed,
+    required this.text,
+  }) : super(key: key);
+
+  Widget build(BuildContext context) {
+    return SizedBox(
+      height: 44,
+      child: TextButton(
+        style: TextButton.styleFrom(backgroundColor: Colors.transparent),
+        child: Text(text, style: TextColorStyle.primary),
+        onPressed: onPressed,
+      ),
+    );
+  }
+}

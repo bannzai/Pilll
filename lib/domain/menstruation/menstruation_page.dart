@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:pilll/components/atoms/buttons.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/util/datetime/day.dart';
@@ -17,10 +18,7 @@ class MenstruationPageState extends State<MenstruationPage> {
       backgroundColor: PilllColors.background,
       appBar: AppBar(
         actions: [
-          IconButton(
-            icon: Icon(Icons.arrow_back, color: Colors.black),
-            onPressed: () => Navigator.of(context).pop(),
-          )
+          AppBarTextActionButton(onPressed: () {}, text: "今日"),
         ],
         title: Text(
           DateTimeFormatter.jaMonth(today()),
