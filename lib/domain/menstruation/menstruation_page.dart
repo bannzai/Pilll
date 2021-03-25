@@ -10,14 +10,9 @@ import 'package:pilll/util/datetime/date_compare.dart';
 import 'package:pilll/util/datetime/day.dart';
 import 'package:pilll/util/formatter/date_time_formatter.dart';
 
-class MenstruationPage extends StatefulWidget {
-  @override
-  MenstruationPageState createState() => MenstruationPageState();
-}
-
 const double _horizontalPadding = 10;
 
-class MenstruationPageState extends State<MenstruationPage> {
+class MenstruationPage extends HookWidget {
   @override
   Scaffold build(BuildContext context) {
     return Scaffold(
