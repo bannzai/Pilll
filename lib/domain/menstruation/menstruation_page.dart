@@ -15,6 +15,8 @@ class MenstruationPage extends StatefulWidget {
   MenstruationPageState createState() => MenstruationPageState();
 }
 
+const double _horizontalPadding = 10;
+
 class MenstruationPageState extends State<MenstruationPage> {
   @override
   Scaffold build(BuildContext context) {
@@ -41,16 +43,20 @@ class MenstruationPageState extends State<MenstruationPage> {
                 width: MediaQuery.of(context).size.width,
                 height: 62,
                 color: PilllColors.white,
-                child: ListView.builder(
-                  physics: PageScrollPhysics(),
-                  scrollDirection: Axis.horizontal,
-                  itemBuilder: (context, int) {
-                    return _WeekdayLine(
-                        begin: today(),
-                        onTap: (e) {
-                          print(e);
-                        });
-                  },
+                child: Padding(
+                  padding: const EdgeInsets.only(
+                      left: _horizontalPadding, right: _horizontalPadding),
+                  child: ListView.builder(
+                    physics: PageScrollPhysics(),
+                    scrollDirection: Axis.horizontal,
+                    itemBuilder: (context, int) {
+                      return _WeekdayLine(
+                          begin: today(),
+                          onTap: (e) {
+                            print(e);
+                          });
+                    },
+                  ),
                 ),
               ),
             ],
@@ -104,7 +110,8 @@ class _Tile extends StatelessWidget {
     return GestureDetector(
       onTap: () => onTap(weekday),
       child: Container(
-          width: MediaQuery.of(context).size.width / Weekday.values.length,
+          width: (MediaQuery.of(context).size.width - _horizontalPadding * 2) /
+              Weekday.values.length,
           height: 40,
           child: Text(
             "$day",
