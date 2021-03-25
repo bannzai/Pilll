@@ -38,6 +38,7 @@ class MenstruationPageState extends State<MenstruationPage> {
           child: Column(
             children: [
               Container(
+                width: MediaQuery.of(context).size.width,
                 height: 62,
                 color: PilllColors.white,
                 child: ListView.builder(
