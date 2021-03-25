@@ -145,7 +145,7 @@ class _HomePageState extends State<HomePage>
 
   void _screenTracking() {
     analytics.setCurrentScreen(
-      screenName: "${HomePageTab.values[_tabController.index].screenName}",
+      screenName: "${HomePageTabType.values[_tabController.index].screenName}",
     );
   }
 }
@@ -153,22 +153,26 @@ class _HomePageState extends State<HomePage>
 extension HomePageTabFunctions on HomePageTabType {
   Widget widget() {
     switch (this) {
-      case HomePageTab.record:
+      case HomePageTabType.record:
         return RecordPage();
-      case HomePageTab.calendar:
+      case HomePageTabType.menstruation:
+        return MenstruationPage();
+      case HomePageTabType.calendar:
         return CalendarPage();
-      case HomePageTab.settings:
+      case HomePageTabType.settings:
         return SettingsPage();
     }
   }
 
   String get screenName {
     switch (this) {
-      case HomePageTab.record:
+      case HomePageTabType.record:
         return "RecordPage";
-      case HomePageTab.calendar:
+      case HomePageTabType.menstruation:
+        return "MenstruationPage";
+      case HomePageTabType.calendar:
         return "CalendarPage";
-      case HomePageTab.settings:
+      case HomePageTabType.settings:
         return "SettingsPage";
     }
   }
