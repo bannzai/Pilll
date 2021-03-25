@@ -1,11 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 import 'package:flutter/widgets.dart';
 import 'package:pilll/components/atoms/buttons.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
-import 'package:pilll/domain/record/weekday_badge.dart';
 import 'package:pilll/entity/weekday.dart';
+import 'package:pilll/util/datetime/date_compare.dart';
 import 'package:pilll/util/datetime/day.dart';
 import 'package:pilll/util/formatter/date_time_formatter.dart';
 
@@ -37,15 +38,19 @@ class MenstruationPageState extends State<MenstruationPage> {
           child: Column(
             children: [
               Container(
-                  height: 62,
-                  color: PilllColors.white,
-                  child: ListView.builder(
-                    itemBuilder: (context, int) {
-return _Tile(day: day, isToday: isToday, weekday: weekday, onTap: onTap)
+                height: 62,
+                color: PilllColors.white,
+                child: ListView.builder(
+                  scrollDirection: Axis.horizontal,
+                  itemBuilder: (context, int) {
+                    return _WeekdayLine(
+                        begin: today(),
+                        onTap: (e) {
+                          print(e);
+                        });
                   },
-                  itemCount: Weekday.values.length,
-                  )
-
+                ),
+              ),
             ],
           ),
         ),
@@ -54,11 +59,35 @@ return _Tile(day: day, isToday: isToday, weekday: weekday, onTap: onTap)
   }
 }
 
+class _WeekdayLine extends StatelessWidget {
+  final DateTime begin;
+  final Function(Weekday) onTap;
+
+  const _WeekdayLine({
+    Key? key,
+    required this.begin,
+    required this.onTap,
+  }) : super(key: key);
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      children: Weekday.values
+          .map((e) => begin.add(Duration(days: e.index)))
+          .map((e) => _Tile(
+              day: e.day,
+              isToday: isSameDay(today(), e),
+              weekday: Weekday.values[e.weekday],
+              onTap: onTap))
+          .toList(),
+    );
+  }
+}
+
 class _Tile extends StatelessWidget {
   final int day;
   final bool isToday;
   final Weekday weekday;
-  final VoidCallback? onTap;
+  final Function(Weekday) onTap;
 
   const _Tile({
     Key? key,
@@ -70,15 +99,16 @@ class _Tile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-        child: Text(
-      "$day",
-      textAlign: TextAlign.center,
-      style: TextStyle(
-        color: onTap == null
-            ? weekday.weekdayColor().withAlpha((255 * 0.4).floor())
-            : weekday.weekdayColor(),
-      ).merge(FontType.gridElement),
-    ));
+    return GestureDetector(
+      onTap: () => onTap(weekday),
+      child: Container(
+          child: Text(
+        "$day",
+        textAlign: TextAlign.center,
+        style: TextStyle(
+          color: weekday.weekdayColor(),
+        ).merge(FontType.gridElement),
+      )),
+    );
   }
 }
