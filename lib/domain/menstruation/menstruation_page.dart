@@ -104,13 +104,15 @@ class _Tile extends StatelessWidget {
     return GestureDetector(
       onTap: () => onTap(weekday),
       child: Container(
+          width: MediaQuery.of(context).size.width / Weekday.values.length,
+          height: 40,
           child: Text(
-        "$day",
-        textAlign: TextAlign.center,
-        style: TextStyle(
-          color: weekday.weekdayColor(),
-        ).merge(FontType.gridElement),
-      )),
+            "$day",
+            textAlign: TextAlign.center,
+            style: TextStyle(
+              color: weekday.weekdayColor(),
+            ).merge(FontType.gridElement),
+          )),
     );
   }
 }
