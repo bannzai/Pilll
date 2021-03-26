@@ -81,10 +81,10 @@ class PillSheet extends StatelessWidget {
   }
 
   Widget _pillMarkLine(int lineIndex) {
-    final line = lineIndex + 1;
+    final lineNumber = lineIndex + 1;
     int countOfPillMarksInLine = Weekday.values.length;
-    if (line * Weekday.values.length > pillSheetType.totalCount) {
-      int diff = line * Weekday.values.length - pillSheetType.totalCount;
+    if (lineNumber * Weekday.values.length > pillSheetType.totalCount) {
+      int diff = pillSheetType.totalCount - lineIndex * Weekday.values.length;
       countOfPillMarksInLine = diff;
     }
     return Container(
