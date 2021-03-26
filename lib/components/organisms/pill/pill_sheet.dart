@@ -80,19 +80,21 @@ class PillSheet extends StatelessWidget {
     );
   }
 
-  Widget _pillMarkLine(int line) {
-    final maximumPillsInLine =
-        pillSheetType.totalCount ~/ Weekday.values.length;
+  Widget _pillMarkLine(int lineIndex) {
+    final line = lineIndex + 1;
     int countOfPillMarksInLine = Weekday.values.length;
-    if (line * maximumPillsInLine > pillSheetType.totalCount) {
-      int diff = line * maximumPillsInLine - pillSheetType.totalCount;
+    if (line * Weekday.values.length > pillSheetType.totalCount) {
+      int diff = line * Weekday.values.length - pillSheetType.totalCount;
       countOfPillMarksInLine = diff;
     }
     return Container(
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: List.generate(countOfPillMarksInLine, (index) {
-          return _pillMarkWithNumber(_calcIndex(index, line));
+        children: List.generate(Weekday.values.length, (index) {
+          if (index >= countOfPillMarksInLine) {
+            return Container(width: PillMarkConst.edge);
+          }
+          return _pillMarkWithNumber(_calcIndex(index, lineIndex));
         }),
       ),
     );
