@@ -206,6 +206,7 @@ class SettingsPage extends HookWidget {
                   );
                   Navigator.of(context).push(
                     ModifingPillNumberPageRoute.route(
+                      pillSheetType: pillSheetState.entity!.pillSheetType,
                       markSelected: (number) {
                         Navigator.pop(context);
                         pillSheetStore.modifyBeginingDate(number);

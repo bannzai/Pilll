@@ -7,6 +7,8 @@ import 'package:pilll/domain/record/weekday_badge.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
+import 'package:pilll/entity/pill_sheet_type.dart';
+
 typedef PillMarkSelected = void Function(int);
 typedef PillMarkTypeBuilder = PillMarkType Function(int);
 typedef PillMarkTypeHasRippleAnimation = bool Function(int);
@@ -15,6 +17,7 @@ typedef DoneStateBuilder = bool Function(int);
 class PillSheet extends StatelessWidget {
   static Size size = Size(316, 264);
   final Weekday? firstWeekday;
+  final PillSheetType pillSheetType;
   final PillMarkTypeBuilder pillMarkTypeBuilder;
   final DoneStateBuilder doneStateBuilder;
   final PillMarkTypeHasRippleAnimation? enabledMarkAnimation;
@@ -25,6 +28,7 @@ class PillSheet extends StatelessWidget {
   const PillSheet({
     Key? key,
     this.firstWeekday,
+    required this.pillSheetType,
     required this.pillMarkTypeBuilder,
     required this.enabledMarkAnimation,
     required this.markSelected,
@@ -77,10 +81,17 @@ class PillSheet extends StatelessWidget {
   }
 
   Widget _pillMarkLine(int line) {
+    final maximumPillsInLine =
+        pillSheetType.totalCount ~/ Weekday.values.length;
+    int countOfPillMarksInLine = Weekday.values.length;
+    if (line * maximumPillsInLine > pillSheetType.totalCount) {
+      int diff = line * maximumPillsInLine - pillSheetType.totalCount;
+      countOfPillMarksInLine = diff;
+    }
     return Container(
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: List.generate(7, (index) {
+        children: List.generate(countOfPillMarksInLine, (index) {
           return _pillMarkWithNumber(_calcIndex(index, line));
         }),
       ),
