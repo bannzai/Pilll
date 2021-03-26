@@ -52,6 +52,7 @@ class InitialSetting2Page extends HookWidget {
                       SizedBox(height: 44),
                       Align(
                           child: PillSheet(
+                        pillSheetType: state.entity.pillSheetType!,
                         pillMarkTypeBuilder: (number) {
                           return state.entity.pillMarkTypeFor(number);
                         },

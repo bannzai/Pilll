@@ -263,6 +263,7 @@ class RecordPage extends HookWidget {
   ) {
     return PillSheet(
       firstWeekday: WeekdayFunctions.weekdayFromDate(pillSheet.beginingDate),
+      pillSheetType: pillSheet.pillSheetType,
       doneStateBuilder: (number) {
         return number <= pillSheet.lastTakenPillNumber;
       },
