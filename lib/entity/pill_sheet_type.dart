@@ -10,7 +10,7 @@ enum PillSheetType {
   pillsheet_21_0,
 }
 
-extension PillSheetTypeFunctions on PillSheetType? {
+extension PillSheetTypeFunctions on PillSheetType {
   static final String firestoreCollectionPath = "pill_sheet_types";
   static PillSheetType fromRawPath(String rawPath) {
     switch (rawPath) {
