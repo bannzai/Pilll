@@ -6,6 +6,8 @@ enum PillSheetType {
   pillsheet_28_4,
   pillsheet_28_7,
   pillsheet_28_0,
+  pillsheet_24_0,
+  pillsheet_21_0,
 }
 
 extension PillSheetTypeFunctions on PillSheetType? {
