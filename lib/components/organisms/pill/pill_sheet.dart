@@ -139,7 +139,9 @@ class PillSheet extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 if (!isHideWeekdayLine) _weekdayLine() else Container(),
-                ...List.generate(4, (line) {
+                ...List.generate(
+                    (pillSheetType.totalCount / Weekday.values.length).ceil(),
+                    (line) {
                   return _pillMarkLine(line);
                 }),
               ],
