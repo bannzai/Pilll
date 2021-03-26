@@ -13,7 +13,7 @@ class Analytics extends AbstractAnalytics {
   @override
   Future<void> logEvent(
       {required String name, Map<String, dynamic>? parameters}) async {
-    return firebaseAnalytics.logEvent(name: name, parameters: parameters!);
+    return firebaseAnalytics.logEvent(name: name, parameters: parameters);
   }
 
   @override
