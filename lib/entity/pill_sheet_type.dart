@@ -22,6 +22,10 @@ extension PillSheetTypeFunctions on PillSheetType {
         return PillSheetType.pillsheet_28_7;
       case "pillsheet_28_0":
         return PillSheetType.pillsheet_28_0;
+      case "pillsheet_24_0":
+        return PillSheetType.pillsheet_24_0;
+      case "pillsheet_21_0":
+        return PillSheetType.pillsheet_21_0;
       default:
         throw ArgumentError.notNull("");
     }
@@ -37,8 +41,10 @@ extension PillSheetTypeFunctions on PillSheetType {
         return "28錠タイプ(7錠偽薬)";
       case PillSheetType.pillsheet_28_0:
         return "28錠タイプ(すべて実薬)";
-      default:
-        throw ArgumentError.notNull("");
+      case PillSheetType.pillsheet_24_0:
+        return "24錠タイプ(すべて実薬)";
+      case PillSheetType.pillsheet_21_0:
+        return "21錠タイプ(すべて実薬)";
     }
   }
 
@@ -52,9 +58,10 @@ extension PillSheetTypeFunctions on PillSheetType {
         return "pillsheet_28_7";
       case PillSheetType.pillsheet_28_0:
         return "pillsheet_28_0";
-      default:
-        throw ArgumentError.notNull(
-            "unexpected null value for PillSheetType.rawPath");
+      case PillSheetType.pillsheet_24_0:
+        return "pillsheet_24_0";
+      case PillSheetType.pillsheet_21_0:
+        return "pillsheet_21_0";
     }
   }
 
@@ -68,8 +75,10 @@ extension PillSheetTypeFunctions on PillSheetType {
         return SvgPicture.asset("images/pillsheet_28_7.svg");
       case PillSheetType.pillsheet_28_0:
         return SvgPicture.asset("images/pillsheet_28_0.svg");
-      default:
-        throw ArgumentError.notNull("");
+      case PillSheetType.pillsheet_24_0:
+        return SvgPicture.asset("images/pillsheet_24_0.svg");
+      case PillSheetType.pillsheet_21_0:
+        return SvgPicture.asset("images/pillsheet_21_0.svg");
     }
   }
 
@@ -83,8 +92,10 @@ extension PillSheetTypeFunctions on PillSheetType {
         return "pillsheet_28_7";
       case PillSheetType.pillsheet_28_0:
         return "pillsheet_28_0";
-      default:
-        throw ArgumentError.notNull("");
+      case PillSheetType.pillsheet_24_0:
+        return "pillsheet_24_0";
+      case PillSheetType.pillsheet_21_0:
+        return "pillsheet_21_0";
     }
   }
 
@@ -98,8 +109,10 @@ extension PillSheetTypeFunctions on PillSheetType {
         return 28;
       case PillSheetType.pillsheet_28_0:
         return 28;
-      default:
-        throw ArgumentError.notNull("");
+      case PillSheetType.pillsheet_24_0:
+        return 24;
+      case PillSheetType.pillsheet_21_0:
+        return 21;
     }
   }
 
@@ -113,8 +126,10 @@ extension PillSheetTypeFunctions on PillSheetType {
         return 21;
       case PillSheetType.pillsheet_28_0:
         return 28;
-      default:
-        throw ArgumentError.notNull("");
+      case PillSheetType.pillsheet_24_0:
+        return 24;
+      case PillSheetType.pillsheet_21_0:
+        return 21;
     }
   }
 
@@ -138,9 +153,10 @@ extension PillSheetTypeFunctions on PillSheetType {
         return "偽薬";
       case PillSheetType.pillsheet_28_0:
         return "";
-      default:
-        throw ArgumentError.notNull(
-            "unexpected null receiverr when get notTakenWord");
+      case PillSheetType.pillsheet_24_0:
+        return "";
+      case PillSheetType.pillsheet_21_0:
+        return "";
     }
   }
 }
