@@ -3,6 +3,10 @@ import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/entity/weekday.dart';
 import 'package:flutter/material.dart';
 
+abstract class WeekdayBadgeConst {
+  static final double height = 30;
+}
+
 class WeekdayBadge extends StatelessWidget {
   final Weekday weekday;
   const WeekdayBadge({
@@ -17,7 +21,7 @@ class WeekdayBadge extends StatelessWidget {
       children: <Widget>[
         Container(
             width: 20,
-            height: 30,
+            height: WeekdayBadgeConst.height,
             decoration: BoxDecoration(color: PilllColors.white)),
         Container(
           child: Text(weekday.weekdayString(),
