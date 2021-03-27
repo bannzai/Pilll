@@ -196,11 +196,11 @@ class SettingsPage extends HookWidget {
                               return ConfirmDeletePillSheet(
                                   title: "現在のピルシートが削除されます",
                                   message: '''
-現在${entity.todayPillNumber}番までピルシートが進んでいます。
-選択したピルシートのピルの数が${type.totalCount}番までなので、選択したピルシートの種類に変更する場合は現在のピルシートが削除されます。
-現在のピルシートを削除してピルシートの種類を変更してもよろしいですか？
+選択したピルシート(${entity.pillSheetType.fullName})に変更する場合、現在のピルシートは削除されます。削除後、ピル画面から新しいピルシートを作成すると${entity.pillSheetType.fullName}で開始されます。
+現在のピルシートを削除してピルのタイプを変更しますか？
                               ''',
-                                  onDelete: () {
+                                  doneButtonText: "変更する",
+                                  done: () {
                                     callProcess();
                                   });
                             },
@@ -250,7 +250,8 @@ class SettingsPage extends HookWidget {
                       return ConfirmDeletePillSheet(
                           title: "ピルシートを破棄しますか？",
                           message: "現在、服用記録をしているピルシートを削除します。",
-                          onDelete: () {
+                          doneButtonText: "破棄する",
+                          done: () {
                             pillSheetStore.delete().catchError((error) {
                               showErrorAlert(context,
                                   message:
@@ -431,13 +432,15 @@ class SettingsPage extends HookWidget {
 class ConfirmDeletePillSheet extends StatelessWidget {
   final String title;
   final String message;
-  final Function() onDelete;
+  final String doneButtonText;
+  final Function() done;
 
   const ConfirmDeletePillSheet({
     Key? key,
     required this.title,
     required this.message,
-    required this.onDelete,
+    required this.doneButtonText,
+    required this.done,
   }) : super(key: key);
   @override
   Widget build(BuildContext context) {
@@ -464,9 +467,9 @@ class ConfirmDeletePillSheet extends StatelessWidget {
           },
         ),
         SecondaryButton(
-          text: "破棄する",
+          text: doneButtonText,
           onPressed: () {
-            onDelete();
+            done();
             Navigator.of(context).pop();
           },
         ),
