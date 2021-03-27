@@ -172,7 +172,7 @@ class SettingsPage extends HookWidget {
         return [
           () {
             return SettingListTitleAndContentRowModel(
-              title: "種類",
+              title: "ピルタイプ",
               content: settingState.entity?.pillSheetType.fullName ?? "",
               onTap: () {
                 analytics.logEvent(
@@ -180,7 +180,7 @@ class SettingsPage extends HookWidget {
                 );
                 Navigator.of(context).push(
                   PillSheetTypeSelectPageRoute.route(
-                    title: "種類",
+                    title: "ピルタイプ",
                     backButtonIsHidden: false,
                     selected: (type) {
                       if (!pillSheetState.isInvalid) {
