@@ -317,7 +317,7 @@ class SettingsPage extends HookWidget {
                     SnackBar(
                       duration: Duration(seconds: 1),
                       content: Text(
-                        "${pillSheetState.entity!.pillSheetType.notTakenWord}期間の通知を${settingEntity.isOnNotifyInNotTakenDuration ? "ON" : "OFF"}にしました",
+                        "${pillSheetState.entity!.pillSheetType.notTakenWord}期間の通知を${state.entity!.isOnNotifyInNotTakenDuration ? "ON" : "OFF"}にしました",
                       ),
                     ),
                   );
