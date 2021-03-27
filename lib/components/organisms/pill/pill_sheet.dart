@@ -133,21 +133,6 @@ class PillSheet extends StatelessWidget {
               child: SvgPicture.asset("images/pill_sheet_dot_line.svg"),
             );
           }),
-          // Positioned(
-          //   left: 38,
-          //   top: isHideWeekdayLine ? 64 : 84,
-          //   child: SvgPicture.asset("images/pill_sheet_dot_line.svg"),
-          // ),
-          // Positioned(
-          //   left: 38,
-          //   top: isHideWeekdayLine ? 124 : 136,
-          //   child: SvgPicture.asset("images/pill_sheet_dot_line.svg"),
-          // ),
-          // Positioned(
-          //   left: 38,
-          //   top: isHideWeekdayLine ? 188 : 190,
-          //   child: SvgPicture.asset("images/pill_sheet_dot_line.svg"),
-          // ),
           Padding(
             padding: const EdgeInsets.fromLTRB(28, 0, 28, 24),
             child: Column(
