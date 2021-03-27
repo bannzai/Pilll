@@ -1,5 +1,6 @@
 import 'package:pilll/entity/pill_sheet.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:pilll/entity/weekday.dart';
 
 enum PillSheetType {
   pillsheet_21,
@@ -159,4 +160,7 @@ extension PillSheetTypeFunctions on PillSheetType {
         return "";
     }
   }
+
+  int get numberOfLineInPillSheet =>
+      (totalCount / Weekday.values.length).ceil();
 }

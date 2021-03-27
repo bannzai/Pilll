@@ -295,7 +295,7 @@ class RecordPage extends HookWidget {
     return GestureDetector(
       child: SizedBox(
         width: PillSheet.width,
-        height: PillSheet.fullHeight,
+        height: PillSheet.lineHeight * pillSheetType.numberOfLineInPillSheet,
         child: Stack(
           children: <Widget>[
             Center(child: SvgPicture.asset("images/empty_frame.svg")),
