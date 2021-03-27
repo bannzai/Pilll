@@ -27,6 +27,7 @@ import 'package:flutter/services.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:pilll/util/ui/alert.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -183,11 +184,35 @@ class SettingsPage extends HookWidget {
                     title: "種類",
                     backButtonIsHidden: false,
                     selected: (type) {
-                      if (!pillSheetState.isInvalid)
-                        transactionModifier.modifyPillSheetType(type);
-                      else
+                      if (!pillSheetState.isInvalid) {
+                        final entity = pillSheetState.entity!;
+                        final callProcess = () {
+                          transactionModifier.modifyPillSheetType(type);
+                          Navigator.pop(context);
+                        };
+                        if (entity.todayPillNumber > type.totalCount) {
+                          showSimpleAlert(
+                            context,
+                            title: "現在のピルシートが削除されます",
+                            message: '''
+現在${entity.todayPillNumber}番までピルシートが進んでいます。
+選択したピルシートのピルの数が${type.totalCount}番までなので、選択したピルシートの種類に変更する場合は現在のピルシートが削除されます。
+現在のピルシートを削除してピルシートの種類を変更してもよろしいですか？
+                              ''',
+                            doneText: "はい",
+                            cancelText: "いいえ",
+                            done: () {
+                              Navigator.pop(context);
+                              callProcess();
+                            },
+                          );
+                        } else {
+                          callProcess();
+                        }
+                      } else {
                         settingStore.modifyType(type);
-                      Navigator.pop(context);
+                        Navigator.pop(context);
+                      }
                     },
                     done: null,
                     doneButtonText: "",
