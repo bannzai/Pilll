@@ -190,19 +190,19 @@ class SettingsPage extends HookWidget {
                           Navigator.pop(context);
                         };
                         if (entity.todayPillNumber > type.totalCount) {
-                          showSimpleAlert(
-                            context,
-                            title: "現在のピルシートが削除されます",
-                            message: '''
+                          showDialog(
+                            context: context,
+                            builder: (_) {
+                              return ConfirmDeletePillSheet(
+                                  title: "現在のピルシートが削除されます",
+                                  message: '''
 現在${entity.todayPillNumber}番までピルシートが進んでいます。
 選択したピルシートのピルの数が${type.totalCount}番までなので、選択したピルシートの種類に変更する場合は現在のピルシートが削除されます。
 現在のピルシートを削除してピルシートの種類を変更してもよろしいですか？
                               ''',
-                            doneText: "はい",
-                            cancelText: "いいえ",
-                            done: () {
-                              Navigator.pop(context);
-                              callProcess();
+                                  onDelete: () {
+                                    callProcess();
+                                  });
                             },
                           );
                         } else {
