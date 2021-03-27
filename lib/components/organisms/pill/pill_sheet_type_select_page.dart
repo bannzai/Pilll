@@ -46,7 +46,7 @@ class PillSheetTypeSelectPage extends StatelessWidget {
         child: Column(
           children: <Widget>[
             SizedBox(height: 24),
-            Text("飲んでいるピルのタイプはどれ？",
+            Text("飲んでいるピルシートのタイプはどれ？",
                 style: FontType.sBigTitle.merge(TextColorStyle.main)),
             SizedBox(height: 24),
             Expanded(
