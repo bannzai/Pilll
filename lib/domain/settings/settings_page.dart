@@ -172,7 +172,7 @@ class SettingsPage extends HookWidget {
         return [
           () {
             return SettingListTitleAndContentRowModel(
-              title: "種類",
+              title: "ピルシートタイプ",
               content: settingState.entity?.pillSheetType.fullName ?? "",
               onTap: () {
                 analytics.logEvent(
@@ -180,14 +180,38 @@ class SettingsPage extends HookWidget {
                 );
                 Navigator.of(context).push(
                   PillSheetTypeSelectPageRoute.route(
-                    title: "種類",
+                    title: "ピルシートタイプ",
                     backButtonIsHidden: false,
                     selected: (type) {
-                      if (!pillSheetState.isInvalid)
-                        transactionModifier.modifyPillSheetType(type);
-                      else
+                      if (!pillSheetState.isInvalid) {
+                        final entity = pillSheetState.entity!;
+                        final callProcess = () {
+                          transactionModifier.modifyPillSheetType(type);
+                          Navigator.pop(context);
+                        };
+                        if (entity.todayPillNumber > type.totalCount) {
+                          showDialog(
+                            context: context,
+                            builder: (_) {
+                              return ConfirmDeletePillSheet(
+                                  title: "現在のピルシートが削除されます",
+                                  message: '''
+選択したピルシート(${entity.pillSheetType.fullName})に変更する場合、現在のピルシートは削除されます。削除後、ピル画面から新しいピルシートを作成すると${entity.pillSheetType.fullName}で開始されます。
+現在のピルシートを削除してピルシートのタイプを変更しますか？
+                              ''',
+                                  doneButtonText: "変更する",
+                                  done: () {
+                                    callProcess();
+                                  });
+                            },
+                          );
+                        } else {
+                          callProcess();
+                        }
+                      } else {
                         settingStore.modifyType(type);
-                      Navigator.pop(context);
+                        Navigator.pop(context);
+                      }
                     },
                     done: null,
                     doneButtonText: "",
@@ -206,6 +230,7 @@ class SettingsPage extends HookWidget {
                   );
                   Navigator.of(context).push(
                     ModifingPillNumberPageRoute.route(
+                      pillSheetType: pillSheetState.entity!.pillSheetType,
                       markSelected: (number) {
                         Navigator.pop(context);
                         pillSheetStore.modifyBeginingDate(number);
@@ -222,13 +247,17 @@ class SettingsPage extends HookWidget {
                   showDialog(
                     context: context,
                     builder: (_) {
-                      return ConfirmDeletePillSheet(onDelete: () {
-                        pillSheetStore.delete().catchError((error) {
-                          showErrorAlert(context,
-                              message:
-                                  "ピルシートがすでに削除されています。表示等に問題がある場合は設定タブから「お問い合わせ」ください");
-                        }, test: (error) => error is PillSheetIsNotExists);
-                      });
+                      return ConfirmDeletePillSheet(
+                          title: "ピルシートを破棄しますか？",
+                          message: "現在、服用記録をしているピルシートを削除します。",
+                          doneButtonText: "破棄する",
+                          done: () {
+                            pillSheetStore.delete().catchError((error) {
+                              showErrorAlert(context,
+                                  message:
+                                      "ピルシートがすでに削除されています。表示等に問題がある場合は設定タブから「お問い合わせ」ください");
+                            }, test: (error) => error is PillSheetIsNotExists);
+                          });
                     },
                   );
                 }),
@@ -291,7 +320,7 @@ class SettingsPage extends HookWidget {
                     SnackBar(
                       duration: Duration(seconds: 1),
                       content: Text(
-                        "${pillSheetState.entity!.pillSheetType.notTakenWord}期間の通知を${settingEntity.isOnNotifyInNotTakenDuration ? "ON" : "OFF"}にしました",
+                        "${pillSheetState.entity!.pillSheetType.notTakenWord}期間の通知を${state.entity!.isOnNotifyInNotTakenDuration ? "ON" : "OFF"}にしました",
                       ),
                     ),
                   );
@@ -401,10 +430,18 @@ class SettingsPage extends HookWidget {
 }
 
 class ConfirmDeletePillSheet extends StatelessWidget {
-  final Function() onDelete;
+  final String title;
+  final String message;
+  final String doneButtonText;
+  final Function() done;
 
-  const ConfirmDeletePillSheet({Key? key, required this.onDelete})
-      : super(key: key);
+  const ConfirmDeletePillSheet({
+    Key? key,
+    required this.title,
+    required this.message,
+    required this.doneButtonText,
+    required this.done,
+  }) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return AlertDialog(
@@ -414,13 +451,11 @@ class ConfirmDeletePillSheet extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           mainAxisSize: MainAxisSize.min,
           children: <Widget>[
-            Text("ピルシートを破棄しますか？",
-                style: FontType.subTitle.merge(TextColorStyle.main)),
+            Text(title, style: FontType.subTitle.merge(TextColorStyle.main)),
             SizedBox(
               height: 15,
             ),
-            Text("現在、服用記録をしているピルシートを削除します。",
-                style: FontType.assisting.merge(TextColorStyle.main)),
+            Text(message, style: FontType.assisting.merge(TextColorStyle.main)),
           ],
         ),
       ),
@@ -432,9 +467,9 @@ class ConfirmDeletePillSheet extends StatelessWidget {
           },
         ),
         SecondaryButton(
-          text: "破棄する",
+          text: doneButtonText,
           onPressed: () {
-            onDelete();
+            done();
             Navigator.of(context).pop();
           },
         ),

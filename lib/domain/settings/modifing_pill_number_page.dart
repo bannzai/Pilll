@@ -7,11 +7,15 @@ import 'package:pilll/entity/pill_mark_type.dart';
 import 'package:pilll/util/formatter/date_time_formatter.dart';
 import 'package:flutter/material.dart';
 
+import '../../entity/pill_sheet_type.dart';
+
 class ModifingPillNumberPage extends StatefulWidget {
+  final PillSheetType pillSheetType;
   final PillMarkSelected markSelected;
 
   const ModifingPillNumberPage({
     Key? key,
+    required this.pillSheetType,
     required this.markSelected,
   }) : super(key: key);
 
@@ -51,6 +55,7 @@ class _ModifingPillNumberPageState extends State<ModifingPillNumberPage> {
               SizedBox(height: 56),
               Center(
                 child: PillSheet(
+                  pillSheetType: widget.pillSheetType,
                   pillMarkTypeBuilder: (number) {
                     if (selectedPillMarkNumber == number) {
                       return PillMarkType.selected;
@@ -86,10 +91,13 @@ class _ModifingPillNumberPageState extends State<ModifingPillNumberPage> {
 }
 
 extension ModifingPillNumberPageRoute on ModifingPillNumberPage {
-  static Route<dynamic> route({required PillMarkSelected markSelected}) {
+  static Route<dynamic> route(
+      {required PillSheetType pillSheetType,
+      required PillMarkSelected markSelected}) {
     return MaterialPageRoute(
       settings: RouteSettings(name: "ModifingPillNumberPage"),
-      builder: (_) => ModifingPillNumberPage(markSelected: markSelected),
+      builder: (_) => ModifingPillNumberPage(
+          pillSheetType: pillSheetType, markSelected: markSelected),
     );
   }
 }

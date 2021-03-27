@@ -7,24 +7,40 @@ import 'package:pilll/domain/record/weekday_badge.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
+import 'package:pilll/entity/pill_sheet_type.dart';
+
 typedef PillMarkSelected = void Function(int);
 typedef PillMarkTypeBuilder = PillMarkType Function(int);
 typedef PillMarkTypeHasRippleAnimation = bool Function(int);
 typedef DoneStateBuilder = bool Function(int);
 
 class PillSheet extends StatelessWidget {
-  static Size size = Size(316, 264);
+  static final double width = 316;
+  static final double lineHeight = 49.5;
+  static final double topSpace = 12;
+  static final double bottomSpace = 24;
   final Weekday? firstWeekday;
+  final PillSheetType pillSheetType;
   final PillMarkTypeBuilder pillMarkTypeBuilder;
   final DoneStateBuilder doneStateBuilder;
   final PillMarkTypeHasRippleAnimation? enabledMarkAnimation;
   final PillMarkSelected markSelected;
 
   bool get isHideWeekdayLine => firstWeekday == null;
+  int get _numberOfLine => pillSheetType.numberOfLineInPillSheet;
+  double get _height {
+    final verticalSpacing = PillSheet.topSpace + PillSheet.bottomSpace;
+    final pillMarkListHeight =
+        PillSheet.lineHeight * _numberOfLine + verticalSpacing;
+    return isHideWeekdayLine
+        ? pillMarkListHeight
+        : pillMarkListHeight + WeekdayBadgeConst.height;
+  }
 
   const PillSheet({
     Key? key,
     this.firstWeekday,
+    required this.pillSheetType,
     required this.pillMarkTypeBuilder,
     required this.enabledMarkAnimation,
     required this.markSelected,
@@ -76,12 +92,21 @@ class PillSheet extends StatelessWidget {
     );
   }
 
-  Widget _pillMarkLine(int line) {
+  Widget _pillMarkLine(int lineIndex) {
+    final lineNumber = lineIndex + 1;
+    int countOfPillMarksInLine = Weekday.values.length;
+    if (lineNumber * Weekday.values.length > pillSheetType.totalCount) {
+      int diff = pillSheetType.totalCount - lineIndex * Weekday.values.length;
+      countOfPillMarksInLine = diff;
+    }
     return Container(
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: List.generate(7, (index) {
-          return _pillMarkWithNumber(_calcIndex(index, line));
+        children: List.generate(Weekday.values.length, (index) {
+          if (index >= countOfPillMarksInLine) {
+            return Container(width: PillMarkConst.edge);
+          }
+          return _pillMarkWithNumber(_calcIndex(index, lineIndex));
         }),
       ),
     );
@@ -90,8 +115,8 @@ class PillSheet extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: PillSheet.size.width,
-      height: PillSheet.size.height,
+      width: PillSheet.width,
+      height: _height,
       decoration: BoxDecoration(
         color: PilllColors.pillSheet,
         borderRadius: BorderRadius.circular(10),
@@ -103,36 +128,31 @@ class PillSheet extends StatelessWidget {
           ),
         ],
       ),
-      child: Stack(
-        children: <Widget>[
-          Positioned(
-            left: 38,
-            top: isHideWeekdayLine ? 64 : 84,
-            child: SvgPicture.asset("images/pill_sheet_dot_line.svg"),
-          ),
-          Positioned(
-            left: 38,
-            top: isHideWeekdayLine ? 124 : 136,
-            child: SvgPicture.asset("images/pill_sheet_dot_line.svg"),
-          ),
-          Positioned(
-            left: 38,
-            top: isHideWeekdayLine ? 188 : 190,
-            child: SvgPicture.asset("images/pill_sheet_dot_line.svg"),
-          ),
-          Padding(
-            padding: const EdgeInsets.fromLTRB(28, 0, 28, 24),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                if (!isHideWeekdayLine) _weekdayLine() else Container(),
-                ...List.generate(4, (line) {
-                  return _pillMarkLine(line);
-                }),
-              ],
+      child: Padding(
+        padding: EdgeInsets.fromLTRB(28, 0, 28, PillSheet.bottomSpace),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: [
+            if (!isHideWeekdayLine) _weekdayLine(),
+            SizedBox(height: PillSheet.topSpace),
+            Expanded(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  ...List.generate(_numberOfLine, (line) {
+                    if (line + 1 == _numberOfLine) {
+                      return [_pillMarkLine(line)];
+                    }
+                    return [
+                      _pillMarkLine(line),
+                      SvgPicture.asset("images/pill_sheet_dot_line.svg"),
+                    ];
+                  }).expand((element) => element).toList(),
+                ],
+              ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }

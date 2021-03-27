@@ -263,6 +263,7 @@ class RecordPage extends HookWidget {
   ) {
     return PillSheet(
       firstWeekday: WeekdayFunctions.weekdayFromDate(pillSheet.beginingDate),
+      pillSheetType: pillSheet.pillSheetType,
       doneStateBuilder: (number) {
         return number <= pillSheet.lastTakenPillNumber;
       },
@@ -293,8 +294,8 @@ class RecordPage extends HookWidget {
     var progressing = false;
     return GestureDetector(
       child: SizedBox(
-        width: PillSheet.size.width,
-        height: PillSheet.size.height,
+        width: PillSheet.width,
+        height: PillSheet.lineHeight * pillSheetType.numberOfLineInPillSheet,
         child: Stack(
           children: <Widget>[
             Center(child: SvgPicture.asset("images/empty_frame.svg")),
