@@ -1,10 +1,10 @@
-import 'package:Pilll/components/atoms/color.dart';
+import 'package:pilll/components/atoms/color.dart';
 import 'package:flutter/material.dart';
 
 class AppCard extends StatelessWidget {
-  final Widget child;
+  final Widget? child;
 
-  const AppCard({Key key, this.child}) : super(key: key);
+  const AppCard({Key? key, this.child}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Container(

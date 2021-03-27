@@ -1,31 +1,31 @@
 import 'dart:io' show Platform;
 
-import 'package:Pilll/analytics.dart';
-import 'package:Pilll/components/molecules/indicator.dart';
-import 'package:Pilll/components/organisms/pill/pill_sheet.dart';
-import 'package:Pilll/domain/initial_setting/migrate_info.dart';
-import 'package:Pilll/domain/record/record_taken_information.dart';
-import 'package:Pilll/domain/release_note/release_note_220.dart';
-import 'package:Pilll/entity/pill_sheet.dart';
-import 'package:Pilll/entity/pill_sheet_type.dart';
-import 'package:Pilll/entity/weekday.dart';
-import 'package:Pilll/error/error_alert.dart';
-import 'package:Pilll/service/pill_sheet.dart';
-import 'package:Pilll/state/pill_sheet.dart';
-import 'package:Pilll/store/pill_sheet.dart';
-import 'package:Pilll/store/setting.dart';
-import 'package:Pilll/components/atoms/buttons.dart';
-import 'package:Pilll/components/atoms/color.dart';
-import 'package:Pilll/components/atoms/font.dart';
-import 'package:Pilll/components/atoms/text_color.dart';
-import 'package:Pilll/util/datetime/day.dart';
-import 'package:Pilll/util/shared_preference/keys.dart';
-import 'package:Pilll/util/toolbar/picker_toolbar.dart';
+import 'package:pilll/analytics.dart';
+import 'package:pilll/components/molecules/indicator.dart';
+import 'package:pilll/components/organisms/pill/pill_sheet.dart';
+import 'package:pilll/domain/initial_setting/migrate_info.dart';
+import 'package:pilll/domain/record/record_taken_information.dart';
+import 'package:pilll/domain/release_note/release_note_220.dart';
+import 'package:pilll/entity/pill_sheet.dart';
+import 'package:pilll/entity/pill_sheet_type.dart';
+import 'package:pilll/entity/weekday.dart';
+import 'package:pilll/error/error_alert.dart';
+import 'package:pilll/service/pill_sheet.dart';
+import 'package:pilll/state/pill_sheet.dart';
+import 'package:pilll/store/pill_sheet.dart';
+import 'package:pilll/store/setting.dart';
+import 'package:pilll/components/atoms/buttons.dart';
+import 'package:pilll/components/atoms/color.dart';
+import 'package:pilll/components/atoms/font.dart';
+import 'package:pilll/components/atoms/text_color.dart';
+import 'package:pilll/util/datetime/day.dart';
+import 'package:pilll/util/shared_preference/keys.dart';
+import 'package:pilll/util/toolbar/picker_toolbar.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:hooks_riverpod/all.dart';
+import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:in_app_review/in_app_review.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -57,7 +57,7 @@ class RecordPage extends HookWidget {
             showModalBottomSheet(
               context: context,
               builder: (BuildContext context) {
-                var selectedTodayPillNumber = currentPillSheet.todayPillNumber;
+                var selectedTodayPillNumber = currentPillSheet!.todayPillNumber;
                 return Column(
                   mainAxisAlignment: MainAxisAlignment.end,
                   mainAxisSize: MainAxisSize.min,
@@ -137,7 +137,8 @@ class RecordPage extends HookWidget {
     final currentPillSheet = state.entity;
     final store = useProvider(pillSheetStoreProvider);
     final settingState = useProvider(settingStoreProvider.state);
-    if (settingState.entity == null || !store.firstLoadIsEnded) {
+    final settingEntity = settingState.entity;
+    if (settingEntity == null || !store.firstLoadIsEnded) {
       return Indicator();
     }
     return Center(
@@ -158,11 +159,9 @@ class RecordPage extends HookWidget {
             ),
           SizedBox(height: 67),
           if (state.isInvalid)
-            Align(
-                child:
-                    _empty(context, store, settingState.entity.pillSheetType)),
+            Align(child: _empty(context, store, settingEntity.pillSheetType)),
           if (!state.isInvalid) ...[
-            Align(child: _pillSheet(context, currentPillSheet, store)),
+            Align(child: _pillSheet(context, currentPillSheet!, store)),
             SizedBox(height: 40),
             if (currentPillSheet.allTaken)
               Align(child: _cancelTakeButton(currentPillSheet, store)),
@@ -220,12 +219,12 @@ class RecordPage extends HookWidget {
   }
 
   Widget _cancelTakeButton(
-      PillSheetModel pillSheet, PillSheetStateStore store) {
+      PillSheetModel? pillSheet, PillSheetStateStore store) {
     return TertiaryButton(
       text: "飲んでない",
       onPressed: () {
         analytics.logEvent(name: "cancel_taken_button_pressed", parameters: {
-          "last_taken_pill_number": pillSheet.lastTakenPillNumber,
+          "last_taken_pill_number": pillSheet!.lastTakenPillNumber,
           "today_pill_number": pillSheet.todayPillNumber,
         });
         _cancelTake(pillSheet, store);
@@ -254,7 +253,7 @@ class RecordPage extends HookWidget {
     if (pillSheet.todayPillNumber != pillSheet.lastTakenPillNumber) {
       return;
     }
-    store.take(pillSheet.lastTakenDate.subtract(Duration(days: 1)));
+    store.take(pillSheet.lastTakenDate!.subtract(Duration(days: 1)));
   }
 
   PillSheet _pillSheet(
@@ -263,9 +262,7 @@ class RecordPage extends HookWidget {
     PillSheetStateStore store,
   ) {
     return PillSheet(
-      firstWeekday: pillSheet.beginingDate == null
-          ? Weekday.Sunday
-          : WeekdayFunctions.weekdayFromDate(pillSheet.beginingDate),
+      firstWeekday: WeekdayFunctions.weekdayFromDate(pillSheet.beginingDate),
       doneStateBuilder: (number) {
         return number <= pillSheet.lastTakenPillNumber;
       },
@@ -337,7 +334,7 @@ class RecordPage extends HookWidget {
   _requestInAppReview() {
     SharedPreferences.getInstance().then((store) async {
       final key = IntKey.totalPillCount;
-      int value = store.getInt(key);
+      int? value = store.getInt(key);
       if (value == null) {
         value = 0;
       }

@@ -1,18 +1,18 @@
-import 'package:Pilll/store/initial_setting.dart';
-import 'package:Pilll/components/atoms/buttons.dart';
-import 'package:Pilll/components/atoms/color.dart';
-import 'package:Pilll/domain/initial_setting/initial_setting_3_page.dart';
-import 'package:Pilll/components/organisms/pill/pill_sheet.dart';
-import 'package:Pilll/components/atoms/font.dart';
-import 'package:Pilll/components/atoms/text_color.dart';
-import 'package:Pilll/util/datetime/day.dart';
+import 'package:pilll/store/initial_setting.dart';
+import 'package:pilll/components/atoms/buttons.dart';
+import 'package:pilll/components/atoms/color.dart';
+import 'package:pilll/domain/initial_setting/initial_setting_3_page.dart';
+import 'package:pilll/components/organisms/pill/pill_sheet.dart';
+import 'package:pilll/components/atoms/font.dart';
+import 'package:pilll/components/atoms/text_color.dart';
+import 'package:pilll/util/datetime/day.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
-import 'package:hooks_riverpod/all.dart';
+import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:intl/intl.dart';
 
 class InitialSetting2Page extends HookWidget {
-  const InitialSetting2Page({Key key}) : super(key: key);
+  const InitialSetting2Page({Key? key}) : super(key: key);
 
   String todayString() {
     return DateFormat.yMEd('ja').format(today());
@@ -105,7 +105,7 @@ class InitialSetting2Page extends HookWidget {
 class ExplainPillNumber extends HookWidget {
   final String today;
 
-  const ExplainPillNumber({Key key, this.today}) : super(key: key);
+  const ExplainPillNumber({Key? key, required this.today}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     final state = useProvider(initialSettingStoreProvider.state);

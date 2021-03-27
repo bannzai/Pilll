@@ -1,11 +1,10 @@
-import 'package:Pilll/entity/firestore_document_id_escaping_to_json.dart';
-import 'package:Pilll/entity/firestore_timestamp_converter.dart';
-import 'package:Pilll/entity/pill_sheet_type.dart';
-import 'package:Pilll/util/datetime/day.dart';
+import 'package:pilll/entity/firestore_document_id_escaping_to_json.dart';
+import 'package:pilll/entity/firestore_timestamp_converter.dart';
+import 'package:pilll/entity/pill_sheet_type.dart';
+import 'package:pilll/util/datetime/day.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:json_annotation/json_annotation.dart';
-import 'package:meta/meta.dart';
 part 'pill_sheet.g.dart';
 part 'pill_sheet.freezed.dart';
 
@@ -19,56 +18,54 @@ abstract class PillSheetFirestoreKey {
 
 @freezed
 abstract class PillSheetTypeInfo with _$PillSheetTypeInfo {
-  @JsonSerializable(nullable: false, explicitToJson: true)
+  @JsonSerializable(explicitToJson: true)
   factory PillSheetTypeInfo({
-    @required String pillSheetTypeReferencePath,
-    @required String name,
-    @required int totalCount,
-    @required int dosingPeriod,
+    required String pillSheetTypeReferencePath,
+    required String name,
+    required int totalCount,
+    required int dosingPeriod,
   }) = _PillSheetTypeInfo;
 
   factory PillSheetTypeInfo.fromJson(Map<String, dynamic> json) =>
       _$PillSheetTypeInfoFromJson(json);
-  Map<String, dynamic> toJson() => _$_$_PillSheetTypeInfoToJson(this);
+  Map<String, dynamic> toJson() =>
+      _$_$_PillSheetTypeInfoToJson(this as _$_PillSheetTypeInfo);
 }
 
 @freezed
 abstract class PillSheetModel implements _$PillSheetModel {
-  String get documentID => id;
+  String? get documentID => id;
 
   PillSheetType get sheetType =>
       PillSheetTypeFunctions.fromRawPath(typeInfo.pillSheetTypeReferencePath);
 
   PillSheetModel._();
-  @JsonSerializable(nullable: true, explicitToJson: true)
+  @JsonSerializable(explicitToJson: true)
   factory PillSheetModel({
     @JsonKey(includeIfNull: false, toJson: toNull)
-        String id,
-    @JsonKey(nullable: false)
-    @required
-        PillSheetTypeInfo typeInfo,
+        String? id,
+    @JsonKey()
+        required PillSheetTypeInfo typeInfo,
     @JsonKey(
-      nullable: false,
-      fromJson: TimestampConverter.timestampToDateTime,
-      toJson: TimestampConverter.dateTimeToTimestamp,
+      fromJson: NonNullTimestampConverter.timestampToDateTime,
+      toJson: NonNullTimestampConverter.dateTimeToTimestamp,
     )
-    @required
-        DateTime beginingDate,
+        required DateTime beginingDate,
     @JsonKey(
       fromJson: TimestampConverter.timestampToDateTime,
       toJson: TimestampConverter.dateTimeToTimestamp,
     )
-        DateTime lastTakenDate,
+        DateTime? lastTakenDate,
     @JsonKey(
       fromJson: TimestampConverter.timestampToDateTime,
       toJson: TimestampConverter.dateTimeToTimestamp,
     )
-        DateTime createdAt,
+        DateTime? createdAt,
     @JsonKey(
       fromJson: TimestampConverter.timestampToDateTime,
       toJson: TimestampConverter.dateTimeToTimestamp,
     )
-        DateTime deletedAt,
+        DateTime? deletedAt,
   }) = _PillSheetModel;
   factory PillSheetModel.create(PillSheetType type) => PillSheetModel(
         typeInfo: type.typeInfo,
@@ -78,7 +75,8 @@ abstract class PillSheetModel implements _$PillSheetModel {
 
   factory PillSheetModel.fromJson(Map<String, dynamic> json) =>
       _$PillSheetModelFromJson(json);
-  Map<String, dynamic> toJson() => _$_$_PillSheetModelToJson(this);
+  Map<String, dynamic> toJson() =>
+      _$_$_PillSheetModelToJson(this as _$_PillSheetModel);
 
   PillSheetType get pillSheetType =>
       PillSheetTypeFunctions.fromRawPath(typeInfo.pillSheetTypeReferencePath);
@@ -90,7 +88,7 @@ abstract class PillSheetModel implements _$PillSheetModel {
 
   int get lastTakenPillNumber => lastTakenDate == null
       ? 0
-      : lastTakenDate.date().difference(beginingDate.date()).inDays + 1;
+      : lastTakenDate!.date().difference(beginingDate.date()).inDays + 1;
 
   bool get allTaken => todayPillNumber == lastTakenPillNumber;
   bool get isEnded =>

@@ -1,11 +1,11 @@
-import 'package:Pilll/analytics.dart';
-import 'package:Pilll/entity/pill_mark_type.dart';
-import 'package:Pilll/entity/pill_sheet.dart';
-import 'package:Pilll/entity/pill_sheet_type.dart';
-import 'package:Pilll/service/today.dart';
-import 'package:Pilll/state/pill_sheet.dart';
-import 'package:Pilll/store/pill_sheet.dart';
-import 'package:Pilll/util/datetime/date_compare.dart';
+import 'package:pilll/analytics.dart';
+import 'package:pilll/entity/pill_mark_type.dart';
+import 'package:pilll/entity/pill_sheet.dart';
+import 'package:pilll/entity/pill_sheet_type.dart';
+import 'package:pilll/service/today.dart';
+import 'package:pilll/state/pill_sheet.dart';
+import 'package:pilll/store/pill_sheet.dart';
+import 'package:pilll/util/datetime/date_compare.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -39,7 +39,7 @@ void main() {
 
       final store = PillSheetStateStore(service);
       await Future.delayed(Duration(milliseconds: 100));
-      expect(state.entity.todayPillNumber, equals(1));
+      expect(state.entity?.todayPillNumber, equals(1));
 
       final expected = DateTime.parse("2020-11-13");
       final actual = store.calcBeginingDateFromNextTodayPillNumber(10);
@@ -66,7 +66,7 @@ void main() {
 
     final store = PillSheetStateStore(service);
     await Future.delayed(Duration(milliseconds: 100));
-    expect(state.entity.todayPillNumber, equals(3));
+    expect(state.entity?.todayPillNumber, equals(3));
 
     final expected = DateTime.parse("2020-11-22");
     final actual = store.calcBeginingDateFromNextTodayPillNumber(2);
@@ -94,7 +94,7 @@ void main() {
 
       final store = PillSheetStateStore(service);
       await Future.delayed(Duration(milliseconds: 100));
-      expect(state.entity.allTaken, isTrue);
+      expect(state.entity?.allTaken, isTrue);
       expect(store.markFor(1), PillMarkType.done);
       expect(store.markFor(2), PillMarkType.done);
       expect(store.markFor(3), PillMarkType.done);
@@ -121,7 +121,7 @@ void main() {
 
       final store = PillSheetStateStore(service);
       await Future.delayed(Duration(milliseconds: 100));
-      expect(state.entity.allTaken, isFalse);
+      expect(state.entity?.allTaken, isFalse);
       expect(store.markFor(1), PillMarkType.done);
       expect(store.markFor(2), PillMarkType.done);
       expect(store.markFor(3), PillMarkType.normal);
@@ -150,7 +150,7 @@ void main() {
 
       final store = PillSheetStateStore(service);
       await Future.delayed(Duration(milliseconds: 100));
-      expect(state.entity.allTaken, isTrue);
+      expect(state.entity?.allTaken, isTrue);
       for (int i = 1; i <= pillSheetEntity.pillSheetType.totalCount; i++) {
         expect(store.shouldPillMarkAnimation(i), isFalse);
       }
@@ -176,7 +176,7 @@ void main() {
 
       final store = PillSheetStateStore(service);
       await Future.delayed(Duration(milliseconds: 100));
-      expect(state.entity.allTaken, isFalse);
+      expect(state.entity?.allTaken, isFalse);
       expect(store.shouldPillMarkAnimation(3), isTrue);
     });
   });

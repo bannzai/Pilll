@@ -1,4 +1,4 @@
-import 'package:Pilll/entity/pill_sheet.dart';
+import 'package:pilll/entity/pill_sheet.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 enum PillSheetType {
@@ -8,7 +8,7 @@ enum PillSheetType {
   pillsheet_28_0,
 }
 
-extension PillSheetTypeFunctions on PillSheetType {
+extension PillSheetTypeFunctions on PillSheetType? {
   static final String firestoreCollectionPath = "pill_sheet_types";
   static PillSheetType fromRawPath(String rawPath) {
     switch (rawPath) {
@@ -21,8 +21,7 @@ extension PillSheetTypeFunctions on PillSheetType {
       case "pillsheet_28_0":
         return PillSheetType.pillsheet_28_0;
       default:
-        assert(false);
-        return null;
+        throw ArgumentError.notNull("");
     }
   }
 
@@ -37,8 +36,7 @@ extension PillSheetTypeFunctions on PillSheetType {
       case PillSheetType.pillsheet_28_0:
         return "28錠タイプ(すべて実薬)";
       default:
-        assert(false);
-        return null;
+        throw ArgumentError.notNull("");
     }
   }
 
@@ -69,8 +67,7 @@ extension PillSheetTypeFunctions on PillSheetType {
       case PillSheetType.pillsheet_28_0:
         return SvgPicture.asset("images/pillsheet_28_0.svg");
       default:
-        assert(false);
-        return null;
+        throw ArgumentError.notNull("");
     }
   }
 
@@ -85,8 +82,7 @@ extension PillSheetTypeFunctions on PillSheetType {
       case PillSheetType.pillsheet_28_0:
         return "pillsheet_28_0";
       default:
-        assert(false);
-        return null;
+        throw ArgumentError.notNull("");
     }
   }
 
@@ -101,8 +97,7 @@ extension PillSheetTypeFunctions on PillSheetType {
       case PillSheetType.pillsheet_28_0:
         return 28;
       default:
-        assert(false);
-        return null;
+        throw ArgumentError.notNull("");
     }
   }
 
@@ -117,8 +112,7 @@ extension PillSheetTypeFunctions on PillSheetType {
       case PillSheetType.pillsheet_28_0:
         return 28;
       default:
-        assert(false);
-        return null;
+        throw ArgumentError.notNull("");
     }
   }
 

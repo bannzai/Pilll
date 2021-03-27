@@ -1,15 +1,16 @@
-import 'package:Pilll/domain/record/record_page.dart';
-import 'package:Pilll/entity/pill_sheet.dart';
-import 'package:Pilll/entity/pill_sheet_type.dart';
-import 'package:Pilll/entity/setting.dart';
-import 'package:Pilll/service/today.dart';
-import 'package:Pilll/store/pill_sheet.dart';
-import 'package:Pilll/store/setting.dart';
-import 'package:Pilll/util/environment.dart';
+import 'package:pilll/analytics.dart';
+import 'package:pilll/domain/record/record_page.dart';
+import 'package:pilll/entity/pill_sheet.dart';
+import 'package:pilll/entity/pill_sheet_type.dart';
+import 'package:pilll/entity/setting.dart';
+import 'package:pilll/service/today.dart';
+import 'package:pilll/store/pill_sheet.dart';
+import 'package:pilll/store/setting.dart';
+import 'package:pilll/util/environment.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:hooks_riverpod/all.dart';
+import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:mockito/mockito.dart';
 import 'package:intl/date_symbol_data_local.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -30,7 +31,8 @@ void main() {
     SharedPreferences.setMockInitialValues({});
     initializeDateFormatting('ja_JP');
     Environment.isTest = true;
-    WidgetsBinding.instance.renderView.configuration =
+    analytics = MockAnalytics();
+    WidgetsBinding.instance!.renderView.configuration =
         new TestViewConfiguration(size: const Size(375.0, 667.0));
   });
   group('appearance taken button type', () {

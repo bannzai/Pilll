@@ -1,16 +1,16 @@
-import 'package:Pilll/components/atoms/color.dart';
-import 'package:Pilll/entity/pill_sheet_type.dart';
-import 'package:Pilll/components/atoms/font.dart';
-import 'package:Pilll/components/atoms/text_color.dart';
+import 'package:pilll/components/atoms/color.dart';
+import 'package:pilll/entity/pill_sheet_type.dart';
+import 'package:pilll/components/atoms/font.dart';
+import 'package:pilll/components/atoms/text_color.dart';
 import 'package:flutter/material.dart';
 
 class PillSheet extends StatelessWidget {
   final PillSheetType pillSheetType;
   final bool selected;
   const PillSheet({
-    Key key,
-    @required this.pillSheetType,
-    @required this.selected,
+    Key? key,
+    required this.pillSheetType,
+    required this.selected,
   }) : super(key: key);
 
   @override

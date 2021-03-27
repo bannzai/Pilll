@@ -26,17 +26,17 @@ Map<String, dynamic> _$_$_PillSheetTypeInfoToJson(
 
 _$_PillSheetModel _$_$_PillSheetModelFromJson(Map<String, dynamic> json) {
   return _$_PillSheetModel(
-    id: json['id'] as String,
+    id: json['id'] as String?,
     typeInfo:
         PillSheetTypeInfo.fromJson(json['typeInfo'] as Map<String, dynamic>),
-    beginingDate: TimestampConverter.timestampToDateTime(
+    beginingDate: NonNullTimestampConverter.timestampToDateTime(
         json['beginingDate'] as Timestamp),
     lastTakenDate: TimestampConverter.timestampToDateTime(
-        json['lastTakenDate'] as Timestamp),
+        json['lastTakenDate'] as Timestamp?),
     createdAt:
-        TimestampConverter.timestampToDateTime(json['createdAt'] as Timestamp),
+        TimestampConverter.timestampToDateTime(json['createdAt'] as Timestamp?),
     deletedAt:
-        TimestampConverter.timestampToDateTime(json['deletedAt'] as Timestamp),
+        TimestampConverter.timestampToDateTime(json['deletedAt'] as Timestamp?),
   );
 }
 
@@ -52,7 +52,7 @@ Map<String, dynamic> _$_$_PillSheetModelToJson(_$_PillSheetModel instance) {
   writeNotNull('id', toNull(instance.id));
   val['typeInfo'] = instance.typeInfo.toJson();
   val['beginingDate'] =
-      TimestampConverter.dateTimeToTimestamp(instance.beginingDate);
+      NonNullTimestampConverter.dateTimeToTimestamp(instance.beginingDate);
   val['lastTakenDate'] =
       TimestampConverter.dateTimeToTimestamp(instance.lastTakenDate);
   val['createdAt'] = TimestampConverter.dateTimeToTimestamp(instance.createdAt);

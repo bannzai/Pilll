@@ -1,9 +1,9 @@
-import 'package:Pilll/components/atoms/buttons.dart';
-import 'package:Pilll/domain/initial_setting/pill_sheet.dart';
-import 'package:Pilll/entity/pill_sheet_type.dart';
-import 'package:Pilll/components/atoms/color.dart';
-import 'package:Pilll/components/atoms/font.dart';
-import 'package:Pilll/components/atoms/text_color.dart';
+import 'package:pilll/components/atoms/buttons.dart';
+import 'package:pilll/domain/initial_setting/pill_sheet.dart';
+import 'package:pilll/entity/pill_sheet_type.dart';
+import 'package:pilll/components/atoms/color.dart';
+import 'package:pilll/components/atoms/font.dart';
+import 'package:pilll/components/atoms/text_color.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
@@ -11,18 +11,18 @@ class PillSheetTypeSelectPage extends StatelessWidget {
   final String title;
   final bool backButtonIsHidden;
   final void Function(PillSheetType type) selected;
-  final VoidCallback done;
+  final VoidCallback? done;
   final String doneButtonText;
-  final PillSheetType selectedPillSheetType;
+  final PillSheetType? selectedPillSheetType;
 
   const PillSheetTypeSelectPage({
-    Key key,
-    @required this.title,
-    @required this.backButtonIsHidden,
-    @required this.selected,
-    @required this.done,
-    @required this.doneButtonText,
-    @required this.selectedPillSheetType,
+    Key? key,
+    required this.title,
+    required this.backButtonIsHidden,
+    required this.selected,
+    required this.done,
+    required this.doneButtonText,
+    required this.selectedPillSheetType,
   }) : super(key: key);
 
   @override
@@ -92,12 +92,12 @@ class PillSheetTypeSelectPage extends StatelessWidget {
 
 extension PillSheetTypeSelectPageRoute on PillSheetTypeSelectPage {
   static Route<dynamic> route({
-    @required String title,
-    @required bool backButtonIsHidden,
-    @required void Function(PillSheetType type) selected,
-    @required VoidCallback done,
-    @required String doneButtonText,
-    @required PillSheetType selectedPillSheetType,
+    required String title,
+    required bool backButtonIsHidden,
+    required void Function(PillSheetType type) selected,
+    required VoidCallback? done,
+    required String doneButtonText,
+    required PillSheetType selectedPillSheetType,
   }) {
     return MaterialPageRoute(
       settings: RouteSettings(name: "PillSheetTypeSelectPage"),

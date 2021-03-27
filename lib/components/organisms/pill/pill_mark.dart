@@ -1,7 +1,7 @@
-import 'package:Pilll/components/molecules/ripple.dart';
-import 'package:Pilll/entity/pill_mark_type.dart';
-import 'package:Pilll/components/atoms/color.dart';
-import 'package:Pilll/util/environment.dart';
+import 'package:pilll/components/molecules/ripple.dart';
+import 'package:pilll/entity/pill_mark_type.dart';
+import 'package:pilll/components/atoms/color.dart';
+import 'package:pilll/util/environment.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
@@ -10,10 +10,10 @@ class PillMark extends StatefulWidget {
   final bool isDone;
   final bool hasRippleAnimation;
   const PillMark({
-    Key key,
+    Key? key,
     this.hasRippleAnimation = false,
-    @required this.type,
-    @required this.isDone,
+    required this.type,
+    required this.isDone,
   }) : super(key: key);
 
   @override
@@ -21,7 +21,7 @@ class PillMark extends StatefulWidget {
 }
 
 class _PillMarkState extends State<PillMark> with TickerProviderStateMixin {
-  AnimationController _controller;
+  AnimationController? _controller;
 
   @override
   void initState() {
@@ -31,7 +31,7 @@ class _PillMarkState extends State<PillMark> with TickerProviderStateMixin {
     );
     // NOTE: This statement for avoid of tester.pumpAndSettle exception about timeout
     if (!Environment.isTest) {
-      _controller.repeat();
+      _controller!.repeat();
     }
 
     super.initState();
@@ -47,7 +47,7 @@ class _PillMarkState extends State<PillMark> with TickerProviderStateMixin {
   @override
   Widget build(BuildContext context) {
     return Stack(
-      overflow: Overflow.visible,
+      clipBehavior: Clip.none,
       children: [
         PillMarkTypeFunctions.create(widget.isDone, widget.type),
         if (widget.hasRippleAnimation)

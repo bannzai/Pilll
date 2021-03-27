@@ -1,5 +1,5 @@
 import 'package:flutter/widgets.dart';
-import 'package:Pilll/components/atoms/color.dart';
+import 'package:pilll/components/atoms/color.dart';
 
 enum Weekday {
   Sunday,
@@ -44,8 +44,7 @@ extension WeekdayFunctions on Weekday {
       case Weekday.Saturday:
         return "土";
       default:
-        assert(false);
-        return null;
+        throw ArgumentError.notNull("");
     }
   }
 
@@ -66,8 +65,7 @@ extension WeekdayFunctions on Weekday {
       case Weekday.Saturday:
         return PilllColors.saturday;
       default:
-        assert(false);
-        return null;
+        throw ArgumentError.notNull("");
     }
   }
 }

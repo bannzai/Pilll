@@ -1,5 +1,5 @@
-import 'package:Pilll/entity/firestore_timestamp_converter.dart';
-import 'package:Pilll/util/formatter/date_time_formatter.dart';
+import 'package:pilll/entity/firestore_timestamp_converter.dart';
+import 'package:pilll/util/formatter/date_time_formatter.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 
@@ -34,29 +34,24 @@ abstract class Diary with _$Diary {
     "食欲不振",
   ];
 
-  @late
   String get id => "Diary_${DateTimeFormatter.diaryIdentifier(date)}";
 
   @JsonSerializable(explicitToJson: true)
   factory Diary({
     @JsonKey(
-      nullable: false,
-      fromJson: TimestampConverter.timestampToDateTime,
-      toJson: TimestampConverter.dateTimeToTimestamp,
+      fromJson: NonNullTimestampConverter.timestampToDateTime,
+      toJson: NonNullTimestampConverter.dateTimeToTimestamp,
     )
-    @required
-        DateTime date,
-    PhysicalConditionStatus physicalConditionStatus,
-    @required
-        List<String> physicalConditions,
-    @required
-        bool hasSex,
-    @required
-        String memo,
+        required DateTime date,
+    PhysicalConditionStatus? physicalConditionStatus,
+    required List<String> physicalConditions,
+    required bool hasSex,
+    required String memo,
   }) = _Diary;
+  Diary._();
 
   factory Diary.fromDate(DateTime date) =>
       Diary(date: date, memo: "", physicalConditions: [], hasSex: false);
   factory Diary.fromJson(Map<String, dynamic> json) => _$DiaryFromJson(json);
-  Map<String, dynamic> toJson() => _$_$_DiaryToJson(this);
+  Map<String, dynamic> toJson() => _$_$_DiaryToJson(this as _$_Diary);
 }

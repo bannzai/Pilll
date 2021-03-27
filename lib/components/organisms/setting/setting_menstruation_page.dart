@@ -1,8 +1,8 @@
-import 'package:Pilll/components/atoms/buttons.dart';
-import 'package:Pilll/components/atoms/color.dart';
-import 'package:Pilll/components/atoms/font.dart';
-import 'package:Pilll/components/atoms/text_color.dart';
-import 'package:Pilll/util/toolbar/picker_toolbar.dart';
+import 'package:pilll/components/atoms/buttons.dart';
+import 'package:pilll/components/atoms/color.dart';
+import 'package:pilll/components/atoms/font.dart';
+import 'package:pilll/components/atoms/text_color.dart';
+import 'package:pilll/util/toolbar/picker_toolbar.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
@@ -17,32 +17,31 @@ class SettingMenstruationPageModel {
   int selectedDurationMenstruation;
 
   SettingMenstruationPageModel({
-    @required this.selectedFromMenstruation,
-    @required this.selectedDurationMenstruation,
+    required this.selectedFromMenstruation,
+    required this.selectedDurationMenstruation,
   });
 }
 
 class SettingMenstruationPage extends StatefulWidget {
   final String title;
   // NOTE: If done and skip is null, button is hidden
-  final String doneText;
-  final VoidCallback done;
+  final String? doneText;
+  final VoidCallback? done;
   final int pillSheetTotalCount;
   final SettingMenstruationPageModel model;
   final void Function(int from) fromMenstructionDidDecide;
   final void Function(int duration) durationMenstructionDidDecide;
 
   const SettingMenstruationPage({
-    Key key,
-    @required this.title,
-    @required this.doneText,
-    @required this.done,
-    @required this.pillSheetTotalCount,
-    @required this.model,
-    @required this.fromMenstructionDidDecide,
-    @required this.durationMenstructionDidDecide,
-  })  : assert(model != null),
-        super(key: key);
+    Key? key,
+    required this.title,
+    required this.doneText,
+    required this.done,
+    required this.pillSheetTotalCount,
+    required this.model,
+    required this.fromMenstructionDidDecide,
+    required this.durationMenstructionDidDecide,
+  }) : super(key: key);
 
   @override
   _SettingMenstruationPageState createState() =>
@@ -120,8 +119,8 @@ class _SettingMenstruationPageState extends State<SettingMenstruationPage> {
                 Spacer(),
                 if (this.widget.done != null) ...[
                   PrimaryButton(
-                    text: this.widget.doneText,
-                    onPressed: !canNext(context) ? null : this.widget.done,
+                    text: this.widget.doneText!,
+                    onPressed: this.widget.done,
                   ),
                   SizedBox(height: 35),
                 ]
@@ -145,8 +144,7 @@ class _SettingMenstruationPageState extends State<SettingMenstruationPage> {
         ),
       ),
       child: Center(
-        child: Text(
-            this.widget.model.selectedFromMenstruation?.toString() ?? "",
+        child: Text(this.widget.model.selectedFromMenstruation.toString(),
             style: FontType.inputNumber.merge(TextColorStyle.gray)),
       ),
     );
@@ -164,8 +162,7 @@ class _SettingMenstruationPageState extends State<SettingMenstruationPage> {
         ),
       ),
       child: Center(
-        child: Text(
-            this.widget.model.selectedDurationMenstruation?.toString() ?? "",
+        child: Text(this.widget.model.selectedDurationMenstruation.toString(),
             style: FontType.inputNumber.merge(TextColorStyle.gray)),
       ),
     );
@@ -173,7 +170,7 @@ class _SettingMenstruationPageState extends State<SettingMenstruationPage> {
 
   void _showFromModalSheet(BuildContext context) {
     int keepSelectedFromMenstruation =
-        this.widget.model.selectedFromMenstruation ?? 1;
+        this.widget.model.selectedFromMenstruation;
     showModalBottomSheet(
       context: context,
       builder: (BuildContext context) {
@@ -225,7 +222,7 @@ class _SettingMenstruationPageState extends State<SettingMenstruationPage> {
 
   void _showDurationModalSheet(BuildContext context) {
     var keepSelectedDurationMenstruation =
-        this.widget.model.selectedDurationMenstruation ?? 1;
+        this.widget.model.selectedDurationMenstruation;
     showModalBottomSheet(
       context: context,
       builder: (BuildContext context) {
@@ -272,11 +269,6 @@ class _SettingMenstruationPageState extends State<SettingMenstruationPage> {
     );
   }
 
-  bool canNext(BuildContext context) {
-    return !(this.widget.model.selectedFromMenstruation == null ||
-        this.widget.model.selectedDurationMenstruation == null);
-  }
-
   Widget _pickerItem(String str) {
     return Text(str);
   }
@@ -284,13 +276,13 @@ class _SettingMenstruationPageState extends State<SettingMenstruationPage> {
 
 extension SettingMenstruationPageRoute on SettingMenstruationPage {
   static Route<dynamic> route({
-    @required String title,
-    @required String doneText,
-    @required VoidCallback done,
-    @required int pillSheetTotalCount,
-    @required SettingMenstruationPageModel model,
-    @required void Function(int from) fromMenstructionDidDecide,
-    @required void Function(int duration) durationMenstructionDidDecide,
+    required String title,
+    required String? doneText,
+    required VoidCallback? done,
+    required int pillSheetTotalCount,
+    required SettingMenstruationPageModel model,
+    required void Function(int from) fromMenstructionDidDecide,
+    required void Function(int duration) durationMenstructionDidDecide,
   }) {
     return MaterialPageRoute(
       settings: RouteSettings(name: "SettingMenstruationPage"),

@@ -1,5 +1,5 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
 
 part of 'package.dart';
 
@@ -8,6 +8,10 @@ part of 'package.dart';
 // **************************************************************************
 
 T _$identity<T>(T value) => value;
+
+final _privateConstructorUsedError = UnsupportedError(
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+
 Package _$PackageFromJson(Map<String, dynamic> json) {
   return _Package.fromJson(json);
 }
@@ -16,12 +20,11 @@ Package _$PackageFromJson(Map<String, dynamic> json) {
 class _$PackageTearOff {
   const _$PackageTearOff();
 
-// ignore: unused_element
   _Package call(
-      {@required String latestOS,
-      @required String appName,
-      @required String appVersion,
-      @required String buildNumber}) {
+      {required String latestOS,
+      required String appName,
+      required String appVersion,
+      required String buildNumber}) {
     return _Package(
       latestOS: latestOS,
       appName: appName,
@@ -30,25 +33,24 @@ class _$PackageTearOff {
     );
   }
 
-// ignore: unused_element
   Package fromJson(Map<String, Object> json) {
     return Package.fromJson(json);
   }
 }
 
 /// @nodoc
-// ignore: unused_element
 const $Package = _$PackageTearOff();
 
 /// @nodoc
 mixin _$Package {
-  String get latestOS;
-  String get appName;
-  String get appVersion;
-  String get buildNumber;
+  String get latestOS => throw _privateConstructorUsedError;
+  String get appName => throw _privateConstructorUsedError;
+  String get appVersion => throw _privateConstructorUsedError;
+  String get buildNumber => throw _privateConstructorUsedError;
 
-  Map<String, dynamic> toJson();
-  $PackageCopyWith<Package> get copyWith;
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $PackageCopyWith<Package> get copyWith => throw _privateConstructorUsedError;
 }
 
 /// @nodoc
@@ -69,18 +71,28 @@ class _$PackageCopyWithImpl<$Res> implements $PackageCopyWith<$Res> {
 
   @override
   $Res call({
-    Object latestOS = freezed,
-    Object appName = freezed,
-    Object appVersion = freezed,
-    Object buildNumber = freezed,
+    Object? latestOS = freezed,
+    Object? appName = freezed,
+    Object? appVersion = freezed,
+    Object? buildNumber = freezed,
   }) {
     return _then(_value.copyWith(
-      latestOS: latestOS == freezed ? _value.latestOS : latestOS as String,
-      appName: appName == freezed ? _value.appName : appName as String,
-      appVersion:
-          appVersion == freezed ? _value.appVersion : appVersion as String,
-      buildNumber:
-          buildNumber == freezed ? _value.buildNumber : buildNumber as String,
+      latestOS: latestOS == freezed
+          ? _value.latestOS
+          : latestOS // ignore: cast_nullable_to_non_nullable
+              as String,
+      appName: appName == freezed
+          ? _value.appName
+          : appName // ignore: cast_nullable_to_non_nullable
+              as String,
+      appVersion: appVersion == freezed
+          ? _value.appVersion
+          : appVersion // ignore: cast_nullable_to_non_nullable
+              as String,
+      buildNumber: buildNumber == freezed
+          ? _value.buildNumber
+          : buildNumber // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -105,18 +117,28 @@ class __$PackageCopyWithImpl<$Res> extends _$PackageCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object latestOS = freezed,
-    Object appName = freezed,
-    Object appVersion = freezed,
-    Object buildNumber = freezed,
+    Object? latestOS = freezed,
+    Object? appName = freezed,
+    Object? appVersion = freezed,
+    Object? buildNumber = freezed,
   }) {
     return _then(_Package(
-      latestOS: latestOS == freezed ? _value.latestOS : latestOS as String,
-      appName: appName == freezed ? _value.appName : appName as String,
-      appVersion:
-          appVersion == freezed ? _value.appVersion : appVersion as String,
-      buildNumber:
-          buildNumber == freezed ? _value.buildNumber : buildNumber as String,
+      latestOS: latestOS == freezed
+          ? _value.latestOS
+          : latestOS // ignore: cast_nullable_to_non_nullable
+              as String,
+      appName: appName == freezed
+          ? _value.appName
+          : appName // ignore: cast_nullable_to_non_nullable
+              as String,
+      appVersion: appVersion == freezed
+          ? _value.appVersion
+          : appVersion // ignore: cast_nullable_to_non_nullable
+              as String,
+      buildNumber: buildNumber == freezed
+          ? _value.buildNumber
+          : buildNumber // ignore: cast_nullable_to_non_nullable
+              as String,
     ));
   }
 }
@@ -124,17 +146,12 @@ class __$PackageCopyWithImpl<$Res> extends _$PackageCopyWithImpl<$Res>
 @JsonSerializable()
 
 /// @nodoc
-class _$_Package extends _Package {
+class _$_Package implements _Package {
   _$_Package(
-      {@required this.latestOS,
-      @required this.appName,
-      @required this.appVersion,
-      @required this.buildNumber})
-      : assert(latestOS != null),
-        assert(appName != null),
-        assert(appVersion != null),
-        assert(buildNumber != null),
-        super._();
+      {required this.latestOS,
+      required this.appName,
+      required this.appVersion,
+      required this.buildNumber});
 
   factory _$_Package.fromJson(Map<String, dynamic> json) =>
       _$_$_PackageFromJson(json);
@@ -179,6 +196,7 @@ class _$_Package extends _Package {
       const DeepCollectionEquality().hash(appVersion) ^
       const DeepCollectionEquality().hash(buildNumber);
 
+  @JsonKey(ignore: true)
   @override
   _$PackageCopyWith<_Package> get copyWith =>
       __$PackageCopyWithImpl<_Package>(this, _$identity);
@@ -189,24 +207,25 @@ class _$_Package extends _Package {
   }
 }
 
-abstract class _Package extends Package {
-  _Package._() : super._();
+abstract class _Package implements Package {
   factory _Package(
-      {@required String latestOS,
-      @required String appName,
-      @required String appVersion,
-      @required String buildNumber}) = _$_Package;
+      {required String latestOS,
+      required String appName,
+      required String appVersion,
+      required String buildNumber}) = _$_Package;
 
   factory _Package.fromJson(Map<String, dynamic> json) = _$_Package.fromJson;
 
   @override
-  String get latestOS;
+  String get latestOS => throw _privateConstructorUsedError;
   @override
-  String get appName;
+  String get appName => throw _privateConstructorUsedError;
   @override
-  String get appVersion;
+  String get appVersion => throw _privateConstructorUsedError;
   @override
-  String get buildNumber;
+  String get buildNumber => throw _privateConstructorUsedError;
   @override
-  _$PackageCopyWith<_Package> get copyWith;
+  @JsonKey(ignore: true)
+  _$PackageCopyWith<_Package> get copyWith =>
+      throw _privateConstructorUsedError;
 }

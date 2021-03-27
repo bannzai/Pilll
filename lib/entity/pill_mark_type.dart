@@ -1,4 +1,4 @@
-import 'package:Pilll/components/atoms/color.dart';
+import 'package:pilll/components/atoms/color.dart';
 import 'package:dotted_border/dotted_border.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
@@ -45,8 +45,7 @@ extension PillMarkTypeFunctions on PillMarkType {
               case PillMarkType.done:
                 return isDone ? _checkImage() : null;
               default:
-                assert(false);
-                return null;
+                throw ArgumentError.notNull("");
             }
           }(),
         ),
@@ -64,8 +63,7 @@ extension PillMarkTypeFunctions on PillMarkType {
               case PillMarkType.done:
                 return PilllColors.lightGray;
               default:
-                assert(false);
-                return null;
+                throw ArgumentError.notNull("");
             }
           }(),
           shape: BoxShape.circle,

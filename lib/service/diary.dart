@@ -1,7 +1,7 @@
-import 'package:Pilll/database/database.dart';
-import 'package:Pilll/entity/diary.dart';
+import 'package:pilll/database/database.dart';
+import 'package:pilll/entity/diary.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:riverpod/all.dart';
+import 'package:riverpod/riverpod.dart';
 
 abstract class DiariesServiceInterface {
   Future<List<Diary>> fetchListForMonth(DateTime dateTimeOfMonth);
@@ -37,7 +37,7 @@ class DiaryService extends DiariesServiceInterface {
         .orderBy(DiaryFirestoreKey.date)
         .get()
         .then((event) =>
-            event.docs.map((doc) => Diary.fromJson(doc.data())).toList());
+            event.docs.map((doc) => Diary.fromJson(doc.data()!)).toList());
   }
 
   @override
@@ -67,7 +67,7 @@ class DiaryService extends DiariesServiceInterface {
         .diariesReference()
         .snapshots()
         .map((event) =>
-            event.docs.map((doc) => Diary.fromJson(doc.data())).toList())
+            event.docs.map((doc) => Diary.fromJson(doc.data()!)).toList())
         .map((diaries) => sortedDiaries(diaries));
   }
 }

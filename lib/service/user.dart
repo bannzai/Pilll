@@ -1,15 +1,15 @@
 import 'dart:io';
 
-import 'package:Pilll/analytics.dart';
-import 'package:Pilll/database/database.dart';
-import 'package:Pilll/entity/package.dart';
-import 'package:Pilll/entity/user.dart';
-import 'package:Pilll/error_log.dart';
-import 'package:Pilll/util/shared_preference/keys.dart';
+import 'package:pilll/analytics.dart';
+import 'package:pilll/database/database.dart';
+import 'package:pilll/entity/package.dart';
+import 'package:pilll/entity/user.dart';
+import 'package:pilll/error_log.dart';
+import 'package:pilll/util/shared_preference/keys.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart' as auth;
 import 'package:package_info/package_info.dart';
-import 'package:riverpod/all.dart';
+import 'package:riverpod/riverpod.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 abstract class UserServiceInterface {
@@ -40,8 +40,8 @@ class UserService extends UserServiceInterface {
       throw FormatException(
           "cause exception when failed fetch and create user for $error");
     });
-    errorLogger.setUserIdentifier(auth.FirebaseAuth.instance.currentUser.uid);
-    firebaseAnalytics.setUserId(auth.FirebaseAuth.instance.currentUser.uid);
+    errorLogger.setUserIdentifier(auth.FirebaseAuth.instance.currentUser!.uid);
+    firebaseAnalytics.setUserId(auth.FirebaseAuth.instance.currentUser!.uid);
     return user;
   }
 
@@ -50,7 +50,7 @@ class UserService extends UserServiceInterface {
       if (!document.exists) {
         throw UserNotFound();
       }
-      return User.fromJson(document.data());
+      return User.fromJson(document.data()!);
     });
   }
 
@@ -58,9 +58,8 @@ class UserService extends UserServiceInterface {
     return _database
         .userReference()
         .snapshots(includeMetadataChanges: true)
-        .listen((event) {
-      return User.fromJson(event.data());
-    }).asFuture();
+        .listen((event) => User.fromJson(event.data()!))
+        .asFuture();
   }
 
   Future<void> deleteSettings() {
@@ -80,13 +79,13 @@ class UserService extends UserServiceInterface {
     return _database.userReference().set(
       {
         UserFirestoreFieldKeys.anonymouseUserID:
-            auth.FirebaseAuth.instance.currentUser.uid,
+            auth.FirebaseAuth.instance.currentUser!.uid,
       },
       SetOptions(merge: true),
     );
   }
 
-  Future<void> registerRemoteNotificationToken(String token) {
+  Future<void> registerRemoteNotificationToken(String? token) {
     print("token: $token");
     return _database.userPrivateReference().set(
       {UserPrivateFirestoreFieldKeys.fcmToken: token},
@@ -110,7 +109,7 @@ class UserService extends UserServiceInterface {
 
   Future<void> saveStats() {
     return SharedPreferences.getInstance().then((store) async {
-      String beginingVersion = store.getString(StringKey.beginingVersionKey);
+      String? beginingVersion = store.getString(StringKey.beginingVersionKey);
       if (beginingVersion == null) {
         final v =
             await PackageInfo.fromPlatform().then((value) => value.version);

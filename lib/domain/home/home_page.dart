@@ -1,22 +1,22 @@
-import 'package:Pilll/analytics.dart';
-import 'package:Pilll/auth/auth.dart';
-import 'package:Pilll/database/database.dart';
-import 'package:Pilll/domain/calendar/calendar_page.dart';
-import 'package:Pilll/domain/record/record_page.dart';
-import 'package:Pilll/domain/settings/settings_page.dart';
-import 'package:Pilll/components/atoms/color.dart';
-import 'package:Pilll/components/atoms/text_color.dart';
-import 'package:Pilll/service/push_notification.dart';
-import 'package:Pilll/service/setting.dart';
-import 'package:Pilll/util/datetime/day.dart';
-import 'package:Pilll/util/formatter/date_time_formatter.dart';
+import 'package:pilll/analytics.dart';
+import 'package:pilll/auth/auth.dart';
+import 'package:pilll/database/database.dart';
+import 'package:pilll/domain/calendar/calendar_page.dart';
+import 'package:pilll/domain/record/record_page.dart';
+import 'package:pilll/domain/settings/settings_page.dart';
+import 'package:pilll/components/atoms/color.dart';
+import 'package:pilll/components/atoms/text_color.dart';
+import 'package:pilll/service/push_notification.dart';
+import 'package:pilll/service/setting.dart';
+import 'package:pilll/util/datetime/day.dart';
+import 'package:pilll/util/formatter/date_time_formatter.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
 GlobalKey<_HomePageState> homeKey = GlobalKey();
 
 class HomePage extends StatefulWidget {
-  HomePage({@required Key key}) : super(key: key);
+  HomePage({required Key key}) : super(key: key);
 
   @override
   _HomePageState createState() => _HomePageState();
@@ -26,7 +26,7 @@ enum HomePageTabType { record, calendar, setting }
 
 class _HomePageState extends State<HomePage>
     with SingleTickerProviderStateMixin, RouteAware {
-  TabController _tabController;
+  late TabController _tabController;
   int _selectedIndex = 0;
   HomePageTabType get _selectedTab {
     return HomePageTabType.values[_selectedIndex];
@@ -152,7 +152,6 @@ extension HomePageTabFunctions on HomePageTab {
       case HomePageTab.settings:
         return SettingsPage();
     }
-    throw ArgumentError.notNull("HomePageTabFunctions#widget");
   }
 
   String get screenName {
@@ -164,6 +163,5 @@ extension HomePageTabFunctions on HomePageTab {
       case HomePageTab.settings:
         return "SettingsPage";
     }
-    throw ArgumentError.notNull("HomePageTabFunctions#screenName");
   }
 }

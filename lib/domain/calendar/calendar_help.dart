@@ -1,7 +1,7 @@
-import 'package:Pilll/components/atoms/buttons.dart';
-import 'package:Pilll/components/atoms/color.dart';
-import 'package:Pilll/components/atoms/font.dart';
-import 'package:Pilll/components/atoms/text_color.dart';
+import 'package:pilll/components/atoms/buttons.dart';
+import 'package:pilll/components/atoms/color.dart';
+import 'package:pilll/components/atoms/font.dart';
+import 'package:pilll/components/atoms/text_color.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -39,8 +39,7 @@ extension CalendarHelpPageRowFunctions on CalendarHelpPageRow {
       //     "images/hospital.svg",
       //   );
       default:
-        assert(false);
-        return null;
+        throw ArgumentError.notNull("");
     }
   }
 
@@ -72,8 +71,7 @@ extension CalendarHelpPageRowFunctions on CalendarHelpPageRow {
       //     style: FontType.row.merge(TextColorStyle.lightGray2),
       //   );
       default:
-        assert(false);
-        return null;
+        throw ArgumentError.notNull("");
     }
   }
 }

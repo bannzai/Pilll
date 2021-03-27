@@ -1,4 +1,4 @@
-import 'package:Pilll/components/atoms/color.dart';
+import 'package:pilll/components/atoms/color.dart';
 import 'package:flutter/material.dart';
 
 abstract class CalendarBandModel {

@@ -1,4 +1,4 @@
-import 'package:Pilll/entity/setting.dart';
+import 'package:pilll/entity/setting.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'setting.freezed.dart';
@@ -7,6 +7,6 @@ part 'setting.freezed.dart';
 abstract class SettingState implements _$SettingState {
   SettingState._();
   factory SettingState(
-      {Setting entity,
+      {required Setting? entity,
       @Default(false) bool userIsUpdatedFrom132}) = _SettingState;
 }

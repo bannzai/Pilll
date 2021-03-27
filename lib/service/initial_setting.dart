@@ -1,7 +1,7 @@
-import 'package:Pilll/entity/initial_setting.dart';
-import 'package:Pilll/service/pill_sheet.dart';
-import 'package:Pilll/service/setting.dart';
-import 'package:riverpod/all.dart';
+import 'package:pilll/entity/initial_setting.dart';
+import 'package:pilll/service/pill_sheet.dart';
+import 'package:pilll/service/setting.dart';
+import 'package:riverpod/riverpod.dart';
 
 abstract class InitialSettingServiceInterface {
   Future<void> register(InitialSettingModel initialSetting) {

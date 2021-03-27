@@ -1,10 +1,10 @@
 import 'dart:async';
 
-import 'package:Pilll/database/database.dart';
-import 'package:Pilll/entity/setting.dart';
-import 'package:Pilll/entity/user.dart';
-import 'package:Pilll/service/user.dart';
-import 'package:riverpod/all.dart';
+import 'package:pilll/database/database.dart';
+import 'package:pilll/entity/setting.dart';
+import 'package:pilll/entity/user.dart';
+import 'package:pilll/service/user.dart';
+import 'package:riverpod/riverpod.dart';
 
 abstract class SettingServiceInterface {
   Future<Setting> fetch();
@@ -27,16 +27,18 @@ class SettingService extends SettingServiceInterface {
 
   Future<Setting> fetch() {
     return _database.userReference().get().then((event) =>
-        Setting.fromJson(event.data()[UserFirestoreFieldKeys.settings]));
+        Setting.fromJson(event.data()![UserFirestoreFieldKeys.settings]));
   }
 
   Stream<Setting> subscribe() {
     return _database
         .userReference()
         .snapshots()
+        .map((event) => event.data())
+        .where((event) => event != null)
         .map((event) =>
-            Setting.fromJson(event.data()[UserFirestoreFieldKeys.settings]))
-        .where((event) => event != null);
+            Setting.fromJson(event![UserFirestoreFieldKeys.settings]))
+        .cast();
   }
 
   Future<Setting> update(Setting setting) {

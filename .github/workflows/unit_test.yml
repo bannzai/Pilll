@@ -26,10 +26,10 @@ jobs:
         FILE_FIREBASE_IOS_PRODUCTION: ${{ secrets.FILE_FIREBASE_IOS_PRODUCTION }}
     - uses: subosito/flutter-action@v1
       with:
-        flutter-version: '1.22.2'
+        flutter-version: '2.0.1'
     - run: flutter pub get
     - name: Run iOS
-      run: flutter build ios --debug --no-codesign --flavor development --target lib/main.dev.dart
+      run: flutter build ios --debug --no-codesign --flavor development --target lib/main.dev.dart --no-sound-null-safety
   build-android-debug:
     runs-on: macos-latest
     if: ${{ !contains(github.event.pull_request.title, '[Skip CI]') }}
@@ -45,9 +45,9 @@ jobs:
         FILE_FIREBASE_ANDROID_PRODUCTION: ${{ secrets.FILE_FIREBASE_ANDROID_PRODUCTION }}
     - uses: subosito/flutter-action@v1
       with:
-        flutter-version: '1.22.2'
+        flutter-version: '2.0.1'
     - run: flutter pub get
-    - run: flutter build apk --debug --flavor development --target lib/main.dev.dart
+    - run: flutter build apk --debug --flavor development --target lib/main.dev.dart --no-sound-null-safety
   test:
     runs-on: macos-latest
     if: ${{ !contains(github.event.pull_request.title, '[Skip CI]') }}
@@ -58,6 +58,6 @@ jobs:
         java-version: '12.x'
     - uses: subosito/flutter-action@v1
       with:
-        flutter-version: '1.22.2'
+        flutter-version: '2.0.1'
     - run: flutter pub get
-    - run: flutter test
+    - run: flutter test --no-sound-null-safety

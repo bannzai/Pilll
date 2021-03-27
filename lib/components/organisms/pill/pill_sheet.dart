@@ -1,9 +1,9 @@
-import 'package:Pilll/components/atoms/font.dart';
-import 'package:Pilll/entity/pill_mark_type.dart';
-import 'package:Pilll/components/atoms/color.dart';
-import 'package:Pilll/entity/weekday.dart';
-import 'package:Pilll/components/organisms/pill/pill_mark.dart';
-import 'package:Pilll/domain/record/weekday_badge.dart';
+import 'package:pilll/components/atoms/font.dart';
+import 'package:pilll/entity/pill_mark_type.dart';
+import 'package:pilll/components/atoms/color.dart';
+import 'package:pilll/entity/weekday.dart';
+import 'package:pilll/components/organisms/pill/pill_mark.dart';
+import 'package:pilll/domain/record/weekday_badge.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -14,21 +14,21 @@ typedef DoneStateBuilder = bool Function(int);
 
 class PillSheet extends StatelessWidget {
   static Size size = Size(316, 264);
-  final Weekday firstWeekday;
+  final Weekday? firstWeekday;
   final PillMarkTypeBuilder pillMarkTypeBuilder;
   final DoneStateBuilder doneStateBuilder;
-  final PillMarkTypeHasRippleAnimation enabledMarkAnimation;
+  final PillMarkTypeHasRippleAnimation? enabledMarkAnimation;
   final PillMarkSelected markSelected;
 
   bool get isHideWeekdayLine => firstWeekday == null;
 
   const PillSheet({
-    Key key,
+    Key? key,
     this.firstWeekday,
-    @required this.pillMarkTypeBuilder,
-    @required this.enabledMarkAnimation,
-    @required this.markSelected,
-    @required this.doneStateBuilder,
+    required this.pillMarkTypeBuilder,
+    required this.enabledMarkAnimation,
+    required this.markSelected,
+    required this.doneStateBuilder,
   }) : super(key: key);
 
   int _calcIndex(int row, int line) {
@@ -37,13 +37,19 @@ class PillSheet extends StatelessWidget {
 
   Widget _weekdayLine() {
     return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      children: WeekdayFunctions.weekdaysForFirstWeekday(firstWeekday)
-          .map(
-            (weekday) => WeekdayBadge(weekday: weekday),
-          )
-          .toList(),
-    );
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: () {
+          final firstWeekday = this.firstWeekday;
+          if (firstWeekday == null) {
+            return <Widget>[];
+          }
+
+          return WeekdayFunctions.weekdaysForFirstWeekday(firstWeekday)
+              .map(
+                (weekday) => WeekdayBadge(weekday: weekday),
+              )
+              .toList();
+        }());
   }
 
   Widget _pillMarkWithNumber(int number) {
@@ -61,7 +67,7 @@ class PillSheet extends StatelessWidget {
             key: Key("PillMarkWidget_$number"),
             hasRippleAnimation: enabledMarkAnimation == null
                 ? false
-                : enabledMarkAnimation(number),
+                : enabledMarkAnimation!(number),
             isDone: doneStateBuilder(number),
             type: type,
           ),
