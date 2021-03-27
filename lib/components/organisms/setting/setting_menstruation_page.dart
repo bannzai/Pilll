@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:pilll/components/atoms/buttons.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
@@ -169,8 +171,9 @@ class _SettingMenstruationPageState extends State<SettingMenstruationPage> {
   }
 
   void _showFromModalSheet(BuildContext context) {
-    int keepSelectedFromMenstruation =
-        this.widget.model.selectedFromMenstruation;
+    int keepSelectedFromMenstruation = min(
+        this.widget.model.selectedFromMenstruation,
+        this.widget.pillSheetTotalCount);
     showModalBottomSheet(
       context: context,
       builder: (BuildContext context) {
