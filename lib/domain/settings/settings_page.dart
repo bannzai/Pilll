@@ -248,13 +248,16 @@ class SettingsPage extends HookWidget {
                   showDialog(
                     context: context,
                     builder: (_) {
-                      return ConfirmDeletePillSheet(onDelete: () {
-                        pillSheetStore.delete().catchError((error) {
-                          showErrorAlert(context,
-                              message:
-                                  "ピルシートがすでに削除されています。表示等に問題がある場合は設定タブから「お問い合わせ」ください");
-                        }, test: (error) => error is PillSheetIsNotExists);
-                      });
+                      return ConfirmDeletePillSheet(
+                          title: "ピルシートを破棄しますか？",
+                          message: "現在、服用記録をしているピルシートを削除します。",
+                          onDelete: () {
+                            pillSheetStore.delete().catchError((error) {
+                              showErrorAlert(context,
+                                  message:
+                                      "ピルシートがすでに削除されています。表示等に問題がある場合は設定タブから「お問い合わせ」ください");
+                            }, test: (error) => error is PillSheetIsNotExists);
+                          });
                     },
                   );
                 }),
@@ -427,10 +430,16 @@ class SettingsPage extends HookWidget {
 }
 
 class ConfirmDeletePillSheet extends StatelessWidget {
+  final String title;
+  final String message;
   final Function() onDelete;
 
-  const ConfirmDeletePillSheet({Key? key, required this.onDelete})
-      : super(key: key);
+  const ConfirmDeletePillSheet({
+    Key? key,
+    required this.title,
+    required this.message,
+    required this.onDelete,
+  }) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return AlertDialog(
@@ -440,13 +449,11 @@ class ConfirmDeletePillSheet extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           mainAxisSize: MainAxisSize.min,
           children: <Widget>[
-            Text("ピルシートを破棄しますか？",
-                style: FontType.subTitle.merge(TextColorStyle.main)),
+            Text(title, style: FontType.subTitle.merge(TextColorStyle.main)),
             SizedBox(
               height: 15,
             ),
-            Text("現在、服用記録をしているピルシートを削除します。",
-                style: FontType.assisting.merge(TextColorStyle.main)),
+            Text(message, style: FontType.assisting.merge(TextColorStyle.main)),
           ],
         ),
       ),
