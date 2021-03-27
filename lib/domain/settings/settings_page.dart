@@ -196,7 +196,7 @@ class SettingsPage extends HookWidget {
                               return ConfirmDeletePillSheet(
                                   title: "現在のピルシートが削除されます",
                                   message: '''
-選択したピルシート(${entity.pillSheetType.fullName})に変更する場合、現在のピルシートは削除されます。削除後、ピル画面から新しいピルシートを作成すると${entity.pillSheetType.fullName}で開始されます。
+選択したピルシート(${entity.pillSheetType.fullName})に変更する場合、現在のピルシートは削除されます。削除後、ピル画面から新しいピルシートを作成すると${type.fullName}で開始されます。
 現在のピルシートを削除してピルシートのタイプを変更しますか？
                               ''',
                                   doneButtonText: "変更する",
