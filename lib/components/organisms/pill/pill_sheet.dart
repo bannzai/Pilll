@@ -15,7 +15,8 @@ typedef PillMarkTypeHasRippleAnimation = bool Function(int);
 typedef DoneStateBuilder = bool Function(int);
 
 class PillSheet extends StatelessWidget {
-  static Size size = Size(316, 264);
+  static final double width = 316;
+  static final double fullHeight = 264;
   final Weekday? firstWeekday;
   final PillSheetType pillSheetType;
   final PillMarkTypeBuilder pillMarkTypeBuilder;
@@ -102,9 +103,12 @@ class PillSheet extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final line = (pillSheetType.totalCount / Weekday.values.length).ceil();
     return Container(
-      width: PillSheet.size.width,
-      height: PillSheet.size.height,
+      width: PillSheet.width,
+      height: isHideWeekdayLine
+          ? PillSheet.fullHeight - WeekdayBadgeConst.height
+          : PillSheet.fullHeight,
       decoration: BoxDecoration(
         color: PilllColors.pillSheet,
         borderRadius: BorderRadius.circular(10),
@@ -118,30 +122,39 @@ class PillSheet extends StatelessWidget {
       ),
       child: Stack(
         children: <Widget>[
-          Positioned(
-            left: 38,
-            top: isHideWeekdayLine ? 64 : 84,
-            child: SvgPicture.asset("images/pill_sheet_dot_line.svg"),
-          ),
-          Positioned(
-            left: 38,
-            top: isHideWeekdayLine ? 124 : 136,
-            child: SvgPicture.asset("images/pill_sheet_dot_line.svg"),
-          ),
-          Positioned(
-            left: 38,
-            top: isHideWeekdayLine ? 188 : 190,
-            child: SvgPicture.asset("images/pill_sheet_dot_line.svg"),
-          ),
+          ...List.generate(line - 1, (line) {
+            final double top = 54;
+            final double offset = 54;
+            final double weekdayHeaderHeight =
+                isHideWeekdayLine ? 0 : WeekdayBadgeConst.height;
+            return Positioned(
+              left: 38,
+              top: top + offset * line + weekdayHeaderHeight,
+              child: SvgPicture.asset("images/pill_sheet_dot_line.svg"),
+            );
+          }),
+          // Positioned(
+          //   left: 38,
+          //   top: isHideWeekdayLine ? 64 : 84,
+          //   child: SvgPicture.asset("images/pill_sheet_dot_line.svg"),
+          // ),
+          // Positioned(
+          //   left: 38,
+          //   top: isHideWeekdayLine ? 124 : 136,
+          //   child: SvgPicture.asset("images/pill_sheet_dot_line.svg"),
+          // ),
+          // Positioned(
+          //   left: 38,
+          //   top: isHideWeekdayLine ? 188 : 190,
+          //   child: SvgPicture.asset("images/pill_sheet_dot_line.svg"),
+          // ),
           Padding(
             padding: const EdgeInsets.fromLTRB(28, 0, 28, 24),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 if (!isHideWeekdayLine) _weekdayLine() else Container(),
-                ...List.generate(
-                    (pillSheetType.totalCount / Weekday.values.length).ceil(),
-                    (line) {
+                ...List.generate(line, (line) {
                   return _pillMarkLine(line);
                 }),
               ],
