@@ -128,39 +128,31 @@ class PillSheet extends StatelessWidget {
           ),
         ],
       ),
-      child: Stack(
-        children: <Widget>[
-          ...List.generate(_numberOfLine - 1, (line) {
-            final double topPadding =
-                (isHideWeekdayLine ? 0 : WeekdayBadgeConst.height) +
-                    PillSheet.topSpace;
-            return Positioned(
-              left: 38,
-              top: topPadding + PillSheet.lineHeight * (line + 1) - 6,
-              child: SvgPicture.asset("images/pill_sheet_dot_line.svg"),
-            );
-          }),
-          Padding(
-            padding: EdgeInsets.fromLTRB(28, 0, 28, PillSheet.bottomSpace),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.start,
-              children: [
-                if (!isHideWeekdayLine) _weekdayLine(),
-                SizedBox(height: PillSheet.topSpace),
-                Expanded(
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      ...List.generate(_numberOfLine, (line) {
-                        return _pillMarkLine(line);
-                      }),
-                    ],
-                  ),
-                ),
-              ],
+      child: Padding(
+        padding: EdgeInsets.fromLTRB(28, 0, 28, PillSheet.bottomSpace),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: [
+            if (!isHideWeekdayLine) _weekdayLine(),
+            SizedBox(height: PillSheet.topSpace),
+            Expanded(
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  ...List.generate(_numberOfLine, (line) {
+                    if (line + 1 == _numberOfLine) {
+                      return [_pillMarkLine(line)];
+                    }
+                    return [
+                      _pillMarkLine(line),
+                      SvgPicture.asset("images/pill_sheet_dot_line.svg"),
+                    ];
+                  }).expand((element) => element).toList(),
+                ],
+              ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }
