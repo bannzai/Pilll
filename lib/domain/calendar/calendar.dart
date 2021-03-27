@@ -1,30 +1,31 @@
-import 'package:Pilll/domain/calendar/calculator.dart';
-import 'package:Pilll/domain/calendar/calendar_band_model.dart';
-import 'package:Pilll/components/molecules/indicator.dart';
-import 'package:Pilll/domain/calendar/utility.dart';
-import 'package:Pilll/domain/diary/post_diary_page.dart';
-import 'package:Pilll/domain/record/weekday_badge.dart';
-import 'package:Pilll/util/datetime/date_compare.dart';
-import 'package:Pilll/entity/diary.dart';
-import 'package:Pilll/entity/weekday.dart';
-import 'package:Pilll/service/diary.dart';
-import 'package:Pilll/domain/diary/confirm_diary_sheet.dart';
-import 'package:Pilll/store/diaries.dart';
-import 'package:Pilll/components/atoms/color.dart';
-import 'package:Pilll/components/atoms/font.dart';
-import 'package:Pilll/components/atoms/text_color.dart';
-import 'package:Pilll/util/datetime/day.dart' as utility;
+import 'package:pilll/domain/calendar/calculator.dart';
+import 'package:pilll/domain/calendar/calendar_band_model.dart';
+import 'package:pilll/components/molecules/indicator.dart';
+import 'package:pilll/domain/calendar/utility.dart';
+import 'package:pilll/domain/diary/post_diary_page.dart';
+import 'package:pilll/domain/record/weekday_badge.dart';
+import 'package:pilll/util/datetime/date_compare.dart';
+import 'package:pilll/entity/diary.dart';
+import 'package:pilll/entity/weekday.dart';
+import 'package:pilll/service/diary.dart';
+import 'package:pilll/domain/diary/confirm_diary_sheet.dart';
+import 'package:pilll/store/diaries.dart';
+import 'package:pilll/components/atoms/color.dart';
+import 'package:pilll/components/atoms/font.dart';
+import 'package:pilll/components/atoms/text_color.dart';
+import 'package:pilll/util/datetime/day.dart' as utility;
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
-import 'package:hooks_riverpod/all.dart';
+import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 abstract class CalendarConstants {
   static final int weekdayCount = 7;
   static final double tileHeight = 60;
 }
 
-final calendarDiariesProvider = FutureProvider.autoDispose
-    .family<List<Diary>, DateTime>((ref, DateTime dateTimeOfMonth) {
+final AutoDisposeFutureProviderFamily<List<Diary>, DateTime>?
+    calendarDiariesProvider = FutureProvider.autoDispose
+        .family<List<Diary>, DateTime>((ref, DateTime dateTimeOfMonth) {
   final state = ref.watch(diariesStoreProvider.state);
   if (state.entities.isNotEmpty) {
     return Future.value(state.entities);
@@ -39,16 +40,16 @@ class Calendar extends HookWidget {
   final double horizontalPadding;
 
   const Calendar({
-    Key key,
-    @required this.calculator,
-    @required this.bandModels,
-    @required this.horizontalPadding,
+    Key? key,
+    required this.calculator,
+    required this.bandModels,
+    required this.horizontalPadding,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     final futureCalendarDiaries =
-        useProvider(calendarDiariesProvider(calculator.date));
+        useProvider(calendarDiariesProvider!(calculator.date));
     return futureCalendarDiaries.when(
       data: (value) {
         return _body(context, value);
@@ -190,15 +191,16 @@ class Calendar extends HookWidget {
           );
         })
         .where((element) => element != null)
-        .toList();
+        .toList()
+        .cast();
   }
 }
 
 class CalendarBand extends StatelessWidget {
   const CalendarBand({
-    Key key,
-    @required this.model,
-    @required this.isLineBreaked,
+    Key? key,
+    required this.model,
+    required this.isLineBreaked,
   }) : super(key: key);
 
   final CalendarBandModel model;
@@ -221,19 +223,19 @@ class CalendarDayTile extends StatelessWidget {
   final int day;
   final bool isToday;
   final Weekday weekday;
-  final VoidCallback onTap;
+  final VoidCallback? onTap;
 
-  final Widget upperWidget;
-  final Widget lowerWidget;
+  final Widget? upperWidget;
+  final Widget? lowerWidget;
 
   const CalendarDayTile({
-    Key key,
-    @required this.day,
-    @required this.weekday,
-    @required this.isToday,
+    Key? key,
+    required this.day,
+    required this.weekday,
+    required this.isToday,
     this.upperWidget,
     this.lowerWidget,
-    @required this.onTap,
+    required this.onTap,
   }) : super(key: key);
 
   @override

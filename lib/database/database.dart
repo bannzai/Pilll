@@ -1,23 +1,27 @@
-import 'package:Pilll/auth/auth.dart';
-import 'package:Pilll/entity/diary.dart';
+import 'package:pilll/auth/auth.dart';
+import 'package:pilll/entity/diary.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:hooks_riverpod/all.dart';
+import 'package:hooks_riverpod/hooks_riverpod.dart';
 
-final userIDProvider = Provider<String>((ref) {
-  final authInfo = ref.watch(authStateProvider);
-  if (authInfo.data?.value?.uid != null) {
-    return authInfo.data?.value?.uid;
-  }
-  return null;
+final userIDProvider = FutureProvider<String>((ref) async {
+  final authInfo = await ref.watch(authStateProvider.future);
+  return authInfo.uid;
+});
+
+final _databaseProvider = FutureProvider<DatabaseConnection>((ref) async {
+  final userID = await ref.watch(userIDProvider.future);
+  return DatabaseConnection(userID);
 });
 
 final databaseProvider = Provider<DatabaseConnection>((ref) {
-  final userID = ref.watch(userIDProvider);
-  if (userID == null) {
-    return null;
-  }
-  return DatabaseConnection(userID);
+  return database;
 });
+
+late DatabaseConnection database;
+Future<void> setupDatabase() async {
+  final container = ProviderContainer();
+  database = await container.read(_databaseProvider.future);
+}
 
 abstract class _CollectionPath {
   static final String users = "users";
@@ -27,9 +31,7 @@ abstract class _CollectionPath {
 }
 
 class DatabaseConnection {
-  DatabaseConnection(this._userID)
-      : assert(
-            _userID != null, 'Pill firestore request should necessary userID');
+  DatabaseConnection(this._userID);
   final String _userID;
 
   DocumentReference userReference() {

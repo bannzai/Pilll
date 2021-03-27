@@ -1,26 +1,24 @@
 import 'dart:async';
 
-import 'package:Pilll/util/datetime/date_compare.dart';
-import 'package:Pilll/entity/diary.dart';
-import 'package:Pilll/service/diary.dart';
-import 'package:Pilll/state/diaries.dart';
-import 'package:riverpod/all.dart';
+import 'package:pilll/util/datetime/date_compare.dart';
+import 'package:pilll/entity/diary.dart';
+import 'package:pilll/service/diary.dart';
+import 'package:pilll/state/diaries.dart';
+import 'package:riverpod/riverpod.dart';
 
 final diariesStoreProvider = StateNotifierProvider(
     (ref) => DiariesStateStore(ref.watch(diaryServiceProvider)));
 
 class DiariesStateStore extends StateNotifier<DiariesState> {
   final DiariesServiceInterface _service;
-  DiariesStateStore(this._service) : super(DiariesState()) {
+  DiariesStateStore(this._service) : super(DiariesState(entities: [])) {
     _subscribe();
   }
 
-  StreamSubscription canceller;
+  StreamSubscription? canceller;
   void _subscribe() {
     canceller?.cancel();
     canceller = _service.subscribe().listen((entities) {
-      assert(entities != null, "Diary could not null on subscribe");
-      if (entities == null) return;
       state = state.copyWith(entities: entities);
     });
   }

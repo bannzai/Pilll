@@ -1,17 +1,18 @@
 import 'dart:io';
 
-import 'package:Pilll/auth/auth.dart';
-import 'package:Pilll/database/database.dart';
-import 'package:Pilll/service/user.dart';
+import 'package:pilll/analytics.dart';
+import 'package:pilll/auth/auth.dart';
+import 'package:pilll/database/database.dart';
+import 'package:pilll/service/user.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 
 Future<void> requestNotificationPermissions() async {
-  await FirebaseMessaging().requestNotificationPermissions();
+  await FirebaseMessaging.instance.requestPermission();
   callRegisterRemoteNotification();
   auth().then((auth) {
     final userService = UserService(DatabaseConnection(auth.uid));
     userService.fetch().then((_) async {
-      final token = await FirebaseMessaging().getToken();
+      final token = await FirebaseMessaging.instance.getToken();
       await userService.registerRemoteNotificationToken(token);
     });
   });
@@ -19,19 +20,17 @@ Future<void> requestNotificationPermissions() async {
 }
 
 void listenNotificationEvents() {
-  FirebaseMessaging()
-    ..configure(
-      onMessage: (Map<String, dynamic> message) async {
-        print('onMessage: $message');
-      },
-      onBackgroundMessage: Platform.isAndroid ? onBackgroundMessage : null,
-      onLaunch: (Map<String, dynamic> message) async {
-        print('onLaunch: $message');
-      },
-      onResume: (Map<String, dynamic> message) async {
-        print('onResume: $message');
-      },
-    );
+  FirebaseMessaging.onMessage.listen((event) {
+    print('onMessage: $event');
+  });
+  if (Platform.isAndroid) {
+    FirebaseMessaging.onBackgroundMessage(
+        (message) => onBackgroundMessage(message.data));
+  }
+  FirebaseMessaging.onMessageOpenedApp.listen((event) {
+    analytics.logEvent(name: "opened_from_notification_on_background");
+    print("onMessageOpenedApp: $event");
+  });
 }
 
 void callRegisterRemoteNotification() {

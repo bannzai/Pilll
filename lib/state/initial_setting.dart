@@ -1,5 +1,5 @@
-import 'package:Pilll/entity/initial_setting.dart';
-import 'package:Pilll/util/datetime/day.dart';
+import 'package:pilll/entity/initial_setting.dart';
+import 'package:pilll/util/datetime/day.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'initial_setting.freezed.dart';
@@ -10,7 +10,7 @@ abstract class InitialSettingState implements _$InitialSettingState {
   factory InitialSettingState(InitialSettingModel entity) =
       _InitialSettingState;
 
-  DateTime reminderTimeOrDefault(int index) {
+  DateTime? reminderTimeOrDefault(int index) {
     if (index < entity.reminderTimes.length) {
       return entity.reminderDateTime(index);
     }

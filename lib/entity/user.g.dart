@@ -8,7 +8,7 @@ part of 'user.dart';
 
 _$_UserPrivate _$_$_UserPrivateFromJson(Map<String, dynamic> json) {
   return _$_UserPrivate(
-    fcmToken: json['fcmToken'] as String,
+    fcmToken: json['fcmToken'] as String?,
   );
 }
 
@@ -23,7 +23,7 @@ _$_User _$_$_UserFromJson(Map<String, dynamic> json) {
     setting: json['settings'] == null
         ? null
         : Setting.fromJson(json['settings'] as Map<String, dynamic>),
-    migratedFlutter: json['migratedFlutter'] as bool ?? false,
+    migratedFlutter: json['migratedFlutter'] as bool? ?? false,
   );
 }
 

@@ -1,7 +1,5 @@
-import 'package:Pilll/entity/setting.dart';
-import 'package:flutter/cupertino.dart';
+import 'package:pilll/entity/setting.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:meta/meta.dart';
 
 part 'user.g.dart';
 part 'user.freezed.dart';
@@ -25,8 +23,8 @@ extension UserPrivateFirestoreFieldKeys on String {
 @freezed
 abstract class UserPrivate implements _$UserPrivate {
   UserPrivate._();
-  factory UserPrivate({String fcmToken}) = _UserPrivate;
-  factory UserPrivate.create({@required String fcmToken}) =>
+  factory UserPrivate({String? fcmToken}) = _UserPrivate;
+  factory UserPrivate.create({required String fcmToken}) =>
       UserPrivate(fcmToken: fcmToken);
 
   factory UserPrivate.fromJson(Map<String, dynamic> json) =>
@@ -46,8 +44,8 @@ abstract class User implements _$User {
 
   User._();
   factory User({
-    @required String anonymouseUserID,
-    @JsonKey(name: "settings") Setting setting,
+    required String anonymouseUserID,
+    @JsonKey(name: "settings") Setting? setting,
     @Default(false) bool migratedFlutter,
   }) = _User;
 

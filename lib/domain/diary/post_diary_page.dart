@@ -1,20 +1,20 @@
-import 'package:Pilll/entity/diary.dart';
-import 'package:Pilll/service/diary.dart';
-import 'package:Pilll/state/diary.dart';
-import 'package:Pilll/store/diaries.dart';
-import 'package:Pilll/store/post_diary.dart';
-import 'package:Pilll/components/atoms/buttons.dart';
-import 'package:Pilll/components/atoms/color.dart';
-import 'package:Pilll/components/atoms/font.dart';
-import 'package:Pilll/components/atoms/text_color.dart';
-import 'package:Pilll/util/formatter/date_time_formatter.dart';
+import 'package:pilll/entity/diary.dart';
+import 'package:pilll/service/diary.dart';
+import 'package:pilll/state/diary.dart';
+import 'package:pilll/store/diaries.dart';
+import 'package:pilll/store/post_diary.dart';
+import 'package:pilll/components/atoms/buttons.dart';
+import 'package:pilll/components/atoms/color.dart';
+import 'package:pilll/components/atoms/font.dart';
+import 'package:pilll/components/atoms/text_color.dart';
+import 'package:pilll/util/formatter/date_time_formatter.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:hooks_riverpod/all.dart';
-import 'package:riverpod/all.dart';
+import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:riverpod/riverpod.dart';
 
 final _postDiaryStoreProvider = StateNotifierProvider.autoDispose
     .family<PostDiaryStore, DateTime>((ref, date) {
@@ -40,7 +40,7 @@ class PostDiaryPage extends HookWidget {
   Widget build(BuildContext context) {
     // ignore: invalid_use_of_protected_member
     final state = useProvider(_postDiaryStoreProvider(date).state);
-    final textEditingController =
+    final TextEditingController? textEditingController =
         useTextEditingController(text: state.entity.memo);
     final focusNode = useFocusNode();
     final store = useProvider(_postDiaryStoreProvider(date));
@@ -65,7 +65,7 @@ class PostDiaryPage extends HookWidget {
     });
     return Scaffold(
       backgroundColor: PilllColors.white,
-      resizeToAvoidBottomPadding: false,
+      resizeToAvoidBottomInset: false,
       appBar: AppBar(
         elevation: 0.0,
         leading: IconButton(
@@ -284,7 +284,7 @@ class PostDiaryPage extends HookWidget {
 
   Widget _memo(
     BuildContext context,
-    TextEditingController textEditingController,
+    TextEditingController? textEditingController,
     FocusNode focusNode,
   ) {
     final textLength = 120;

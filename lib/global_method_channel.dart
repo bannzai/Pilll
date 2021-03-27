@@ -1,6 +1,6 @@
-import 'package:Pilll/database/database.dart';
-import 'package:Pilll/service/pill_sheet.dart';
-import 'package:Pilll/util/datetime/day.dart';
+import 'package:pilll/database/database.dart';
+import 'package:pilll/service/pill_sheet.dart';
+import 'package:pilll/util/datetime/day.dart';
 import 'package:flutter/services.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -32,14 +32,18 @@ Future<void> salvagedOldStartTakenDate(dynamic arguments) async {
   if (arguments == null) {
     return Future.value();
   }
-  final dic = arguments as Map<dynamic, dynamic>;
+  final dic = arguments as Map<dynamic, dynamic>?;
   if (dic == null) {
     return Future.value();
   }
-  final typedDic = dic.cast<String, String>();
-  if (typedDic == null) {
+
+  Map<String, String> typedDic;
+  try {
+    typedDic = dic.cast<String, String>();
+  } catch (error) {
     return Future.value();
   }
+
   final salvagedOldStartTakenDateRawValue =
       typedDic["salvagedOldStartTakenDate"];
   if (salvagedOldStartTakenDateRawValue == null) {

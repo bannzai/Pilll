@@ -1,66 +1,83 @@
-import 'package:Pilll/analytics.dart';
-import 'package:Pilll/database/database.dart';
-import 'package:Pilll/components/organisms/pill/pill_sheet_type_select_page.dart';
-import 'package:Pilll/components/organisms/setting/setting_menstruation_page.dart';
-import 'package:Pilll/domain/settings/information_for_before_major_update.dart';
-import 'package:Pilll/entity/pill_sheet.dart';
-import 'package:Pilll/entity/pill_sheet_type.dart';
-import 'package:Pilll/entity/user.dart';
-import 'package:Pilll/domain/settings/row_model.dart';
-import 'package:Pilll/domain/settings/modifing_pill_number_page.dart';
-import 'package:Pilll/domain/settings/reminder_times_page.dart';
-import 'package:Pilll/error/error_alert.dart';
-import 'package:Pilll/inquiry/inquiry.dart';
-import 'package:Pilll/service/pill_sheet.dart';
-import 'package:Pilll/store/pill_sheet.dart';
-import 'package:Pilll/store/setting.dart';
-import 'package:Pilll/components/atoms/buttons.dart';
-import 'package:Pilll/components/atoms/color.dart';
-import 'package:Pilll/components/atoms/font.dart';
-import 'package:Pilll/components/atoms/text_color.dart';
-import 'package:Pilll/util/environment.dart';
-import 'package:Pilll/util/formatter/date_time_formatter.dart';
-import 'package:Pilll/util/shared_preference/keys.dart';
+import 'package:pilll/analytics.dart';
+import 'package:pilll/database/database.dart';
+import 'package:pilll/components/organisms/pill/pill_sheet_type_select_page.dart';
+import 'package:pilll/components/organisms/setting/setting_menstruation_page.dart';
+import 'package:pilll/domain/settings/information_for_before_major_update.dart';
+import 'package:pilll/entity/pill_sheet.dart';
+import 'package:pilll/entity/pill_sheet_type.dart';
+import 'package:pilll/entity/user.dart';
+import 'package:pilll/domain/settings/row_model.dart';
+import 'package:pilll/domain/settings/modifing_pill_number_page.dart';
+import 'package:pilll/domain/settings/reminder_times_page.dart';
+import 'package:pilll/error/error_alert.dart';
+import 'package:pilll/inquiry/inquiry.dart';
+import 'package:pilll/service/pill_sheet.dart';
+import 'package:pilll/store/pill_sheet.dart';
+import 'package:pilll/store/setting.dart';
+import 'package:pilll/components/atoms/buttons.dart';
+import 'package:pilll/components/atoms/color.dart';
+import 'package:pilll/components/atoms/font.dart';
+import 'package:pilll/components/atoms/text_color.dart';
+import 'package:pilll/util/environment.dart';
+import 'package:pilll/util/formatter/date_time_formatter.dart';
+import 'package:pilll/util/shared_preference/keys.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:hooks_riverpod/all.dart';
+import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class _TransactionModifier {
-  final DatabaseConnection _database;
+  final DatabaseConnection? _database;
   final Reader reader;
 
   _TransactionModifier(
     this._database, {
-    @required this.reader,
+    required this.reader,
   });
 
   Future<void> modifyPillSheetType(PillSheetType type) {
+    final database = _database;
+    if (database == null) {
+      throw FormatException("_database is necessary");
+    }
     final pillSheetStore = reader(pillSheetStoreProvider);
     final settingStore = reader(settingStoreProvider);
     final pillSheetState = reader(pillSheetStoreProvider.state);
     final settingState = reader(settingStoreProvider.state);
-    assert(pillSheetState.entity.documentID != null);
-    return _database.transaction((transaction) {
-      transaction.update(
-          _database.pillSheetReference(pillSheetState.entity.documentID), {
-        PillSheetFirestoreKey.typeInfo: type.typeInfo.toJson(),
-      });
-      transaction.update(_database.userReference(), {
-        UserFirestoreFieldKeys.settings: settingState.entity
-            .copyWith(pillSheetTypeRawPath: type.rawPath)
-            .toJson(),
-      });
-      return;
+    final pillSheetEntity = pillSheetState.entity;
+    final settingEntity = settingState.entity;
+    if (pillSheetEntity == null) {
+      throw FormatException("pillSheetEntity is necessary");
+    }
+    if (settingEntity == null) {
+      throw FormatException("settingEntity is necessary");
+    }
+    return database.transaction((transaction) {
+      return Future.wait(
+        [
+          transaction
+              .get(database.pillSheetReference(pillSheetEntity.documentID!))
+              .then((pillSheetDocument) {
+            transaction.update(pillSheetDocument.reference,
+                {PillSheetFirestoreKey.typeInfo: type.typeInfo.toJson()});
+          }),
+          transaction.get(database.userReference()).then((userDocument) {
+            transaction.update(userDocument.reference, {
+              UserFirestoreFieldKeys.settings: settingEntity
+                  .copyWith(pillSheetTypeRawPath: type.rawPath)
+                  .toJson(),
+            });
+          })
+        ],
+      );
     }).then((_) {
-      pillSheetStore
-          .update(pillSheetState.entity.copyWith(typeInfo: type.typeInfo));
-      settingStore.update(
-          settingState.entity.copyWith(pillSheetTypeRawPath: type.rawPath));
+      pillSheetStore.update(pillSheetEntity.copyWith(typeInfo: type.typeInfo));
+      settingStore
+          .update(settingEntity.copyWith(pillSheetTypeRawPath: type.rawPath));
     });
   }
 }
@@ -87,8 +104,8 @@ class SettingsPage extends HookWidget {
               }
               return Padding(
                 padding: const EdgeInsets.all(10),
-                child: FlatButton(
-                  child: Text("COPY DEBUG INFO"),
+                child: TextButton(
+                  child: Text("COPY DEBUG INFO", style: TextColorStyle.primary),
                   onPressed: () async {
                     Clipboard.setData(
                         ClipboardData(text: await debugInfo("\n")));
@@ -113,7 +130,7 @@ class SettingsPage extends HookWidget {
   }
 
   Widget _sectionTitle(SettingSection section) {
-    String text;
+    late String text;
     switch (section) {
       case SettingSection.pill:
         text = "ピルの設定";
@@ -144,13 +161,19 @@ class SettingsPage extends HookWidget {
     final settingStore = useProvider(settingStoreProvider);
     final settingState = useProvider(settingStoreProvider.state);
     final transactionModifier = useProvider(transactionModifierProvider);
+    final settingEntity = settingState.entity;
+    final isShowNotifyInRestDuration = !pillSheetState.isInvalid &&
+        !pillSheetState.entity!.pillSheetType.isNotExistsNotTakenDuration;
+    if (settingEntity == null) {
+      return [];
+    }
     switch (section) {
       case SettingSection.pill:
         return [
           () {
             return SettingListTitleAndContentRowModel(
               title: "種類",
-              content: settingState.entity.pillSheetType.fullName,
+              content: settingState.entity?.pillSheetType.fullName ?? "",
               onTap: () {
                 analytics.logEvent(
                   name: "did_select_changing_pill_sheet_type",
@@ -168,7 +191,7 @@ class SettingsPage extends HookWidget {
                     },
                     done: null,
                     doneButtonText: "",
-                    selectedPillSheetType: settingState.entity.pillSheetType,
+                    selectedPillSheetType: settingEntity.pillSheetType,
                   ),
                 );
               },
@@ -216,20 +239,20 @@ class SettingsPage extends HookWidget {
           SettingsListSwitchRowModel(
             title: "ピルの服用通知",
             subtitle: "通知時間までに服用した場合は通知はきません",
-            value: settingState.entity.isOnReminder,
+            value: settingEntity.isOnReminder,
             onTap: () {
               analytics.logEvent(
                 name: "did_select_toggle_reminder",
               );
-              Scaffold.of(context).hideCurrentSnackBar();
+              ScaffoldMessenger.of(context).hideCurrentSnackBar();
               settingStore
-                  .modifyIsOnReminder(!settingState.entity.isOnReminder)
+                  .modifyIsOnReminder(!settingEntity.isOnReminder)
                   .then((state) {
-                Scaffold.of(context).showSnackBar(
+                ScaffoldMessenger.of(context).showSnackBar(
                   SnackBar(
                     duration: Duration(seconds: 1),
                     content: Text(
-                      "服用通知を${state.entity.isOnReminder ? "ON" : "OFF"}にしました",
+                      "服用通知を${settingEntity.isOnReminder ? "ON" : "OFF"}にしました",
                     ),
                   ),
                 );
@@ -238,7 +261,7 @@ class SettingsPage extends HookWidget {
           ),
           SettingsListDatePickerRowModel(
             title: "通知時刻",
-            content: settingState.entity.reminderTimes
+            content: settingEntity.reminderTimes
                 .map((e) => DateTimeFormatter.militaryTime(e.dateTime()))
                 .join(", "),
             onTap: () {
@@ -248,27 +271,27 @@ class SettingsPage extends HookWidget {
               Navigator.of(context).push(ReminderTimesPageRoute.route());
             },
           ),
-          if (!pillSheetState.isInvalid &&
-              !pillSheetState.entity.pillSheetType.isNotExistsNotTakenDuration)
+          if (isShowNotifyInRestDuration)
             SettingsListSwitchRowModel(
-              title: "${pillSheetState.entity.pillSheetType.notTakenWord}期間の通知",
+              title:
+                  "${pillSheetState.entity!.pillSheetType.notTakenWord}期間の通知",
               subtitle:
-                  "通知オフの場合は、${pillSheetState.entity.pillSheetType.notTakenWord}期間の服用記録も自動で付けられます",
-              value: settingState.entity.isOnNotifyInNotTakenDuration,
+                  "通知オフの場合は、${pillSheetState.entity!.pillSheetType.notTakenWord}期間の服用記録も自動で付けられます",
+              value: settingEntity.isOnNotifyInNotTakenDuration,
               onTap: () {
                 analytics.logEvent(
                   name: "toggle_notify_not_taken_duration",
                 );
-                Scaffold.of(context).hideCurrentSnackBar();
+                ScaffoldMessenger.of(context).hideCurrentSnackBar();
                 settingStore
                     .modifyIsOnNotifyInNotTakenDuration(
-                        !settingState.entity.isOnNotifyInNotTakenDuration)
+                        !settingEntity.isOnNotifyInNotTakenDuration)
                     .then((state) {
-                  Scaffold.of(context).showSnackBar(
+                  ScaffoldMessenger.of(context).showSnackBar(
                     SnackBar(
                       duration: Duration(seconds: 1),
                       content: Text(
-                        "${pillSheetState.entity.pillSheetType.notTakenWord}期間の通知を${state.entity.isOnNotifyInNotTakenDuration ? "ON" : "OFF"}にしました",
+                        "${pillSheetState.entity!.pillSheetType.notTakenWord}期間の通知を${settingEntity.isOnNotifyInNotTakenDuration ? "ON" : "OFF"}にしました",
                       ),
                     ),
                   );
@@ -288,13 +311,12 @@ class SettingsPage extends HookWidget {
                   done: null,
                   doneText: null,
                   title: "生理について",
-                  pillSheetTotalCount:
-                      settingState.entity.pillSheetType.totalCount,
+                  pillSheetTotalCount: settingEntity.pillSheetType.totalCount,
                   model: SettingMenstruationPageModel(
                     selectedFromMenstruation:
-                        settingState.entity.pillNumberForFromMenstruation,
+                        settingEntity.pillNumberForFromMenstruation,
                     selectedDurationMenstruation:
-                        settingState.entity.durationMenstruation,
+                        settingEntity.durationMenstruation,
                   ),
                   fromMenstructionDidDecide: (selectedFromMenstruction) =>
                       settingStore
@@ -349,8 +371,7 @@ class SettingsPage extends HookWidget {
               }),
         ];
       default:
-        assert(false);
-        return null;
+        throw ArgumentError.notNull("");
     }
   }
 
@@ -382,12 +403,12 @@ class SettingsPage extends HookWidget {
 class ConfirmDeletePillSheet extends StatelessWidget {
   final Function() onDelete;
 
-  const ConfirmDeletePillSheet({Key key, @required this.onDelete})
+  const ConfirmDeletePillSheet({Key? key, required this.onDelete})
       : super(key: key);
   @override
   Widget build(BuildContext context) {
     return AlertDialog(
-      title: SvgPicture.asset("images/alert_24.svg"),
+      title: SvgPicture.asset("images/alert_24.svg", width: 24, height: 24),
       content: SizedBox(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,

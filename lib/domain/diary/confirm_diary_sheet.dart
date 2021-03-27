@@ -1,18 +1,18 @@
-import 'package:Pilll/domain/diary/post_diary_page.dart';
-import 'package:Pilll/entity/diary.dart';
-import 'package:Pilll/service/diary.dart';
-import 'package:Pilll/state/diary.dart';
-import 'package:Pilll/store/diaries.dart';
-import 'package:Pilll/store/post_diary.dart';
-import 'package:Pilll/components/atoms/buttons.dart';
-import 'package:Pilll/components/atoms/color.dart';
-import 'package:Pilll/components/atoms/font.dart';
-import 'package:Pilll/components/atoms/text_color.dart';
-import 'package:Pilll/util/formatter/date_time_formatter.dart';
+import 'package:pilll/domain/diary/post_diary_page.dart';
+import 'package:pilll/entity/diary.dart';
+import 'package:pilll/service/diary.dart';
+import 'package:pilll/state/diary.dart';
+import 'package:pilll/store/diaries.dart';
+import 'package:pilll/store/post_diary.dart';
+import 'package:pilll/components/atoms/buttons.dart';
+import 'package:pilll/components/atoms/color.dart';
+import 'package:pilll/components/atoms/font.dart';
+import 'package:pilll/components/atoms/text_color.dart';
+import 'package:pilll/util/formatter/date_time_formatter.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:hooks_riverpod/all.dart';
+import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 final _confirmDiaryProvider = StateNotifierProvider.autoDispose
     .family<PostDiaryStore, DateTime>((ref, date) {
@@ -92,7 +92,7 @@ class ConfirmDiarySheet extends HookWidget {
     );
   }
 
-  Widget _physicalConditionImage(PhysicalConditionStatus status) {
+  Widget _physicalConditionImage(PhysicalConditionStatus? status) {
     switch (status) {
       case PhysicalConditionStatus.fine:
         return SvgPicture.asset("images/laugh.svg",
@@ -160,7 +160,7 @@ class ConfirmDiarySheet extends HookWidget {
 class ConfirmDeleteDiary extends StatelessWidget {
   final Function() onDelete;
 
-  const ConfirmDeleteDiary({Key key, @required this.onDelete})
+  const ConfirmDeleteDiary({Key? key, required this.onDelete})
       : super(key: key);
   @override
   Widget build(BuildContext context) {

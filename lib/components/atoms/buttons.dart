@@ -1,24 +1,26 @@
-import 'package:Pilll/components/atoms/button.dart';
-import 'package:Pilll/components/atoms/color.dart';
-import 'package:Pilll/components/atoms/text_color.dart';
+import 'package:pilll/components/atoms/button.dart';
+import 'package:pilll/components/atoms/color.dart';
+import 'package:pilll/components/atoms/text_color.dart';
 import 'package:flutter/material.dart';
 
 class PrimaryButton extends StatelessWidget {
   final String text;
-  final Function() onPressed;
+  final Function()? onPressed;
 
   const PrimaryButton({
-    Key key,
-    @required this.onPressed,
-    @required this.text,
+    Key? key,
+    required this.onPressed,
+    required this.text,
   }) : super(key: key);
 
   Widget build(BuildContext context) {
     return SizedBox(
       width: 180,
       height: 44,
-      child: RaisedButton(
+      child: ElevatedButton(
         child: Text(text, style: ButtonTextStyle.main),
+        style: ButtonStyle(
+            backgroundColor: MaterialStateProperty.all(PilllColors.secondary)),
         onPressed: onPressed,
       ),
     );
@@ -30,13 +32,13 @@ class SecondaryButton extends StatelessWidget {
   final Function() onPressed;
 
   const SecondaryButton({
-    Key key,
-    @required this.onPressed,
-    @required this.text,
+    Key? key,
+    required this.onPressed,
+    required this.text,
   }) : super(key: key);
 
   Widget build(BuildContext context) {
-    return FlatButton(
+    return TextButton(
       child: Text(text, style: ButtonTextStyle.alert),
       onPressed: onPressed,
     );
@@ -48,19 +50,19 @@ class TertiaryButton extends StatelessWidget {
   final Function() onPressed;
 
   const TertiaryButton({
-    Key key,
-    @required this.onPressed,
-    @required this.text,
+    Key? key,
+    required this.onPressed,
+    required this.text,
   }) : super(key: key);
 
   Widget build(BuildContext context) {
     return SizedBox(
       width: 180,
       height: 44,
-      child: FlatButton(
-        color: PilllColors.gray,
-        textColor: TextColor.white,
-        child: Text(text, style: ButtonTextStyle.main),
+      child: TextButton(
+        style: TextButton.styleFrom(backgroundColor: PilllColors.gray),
+        child:
+            Text(text, style: ButtonTextStyle.main.merge(TextColorStyle.white)),
         onPressed: onPressed,
       ),
     );
@@ -72,19 +74,18 @@ class InconspicuousButton extends StatelessWidget {
   final Function() onPressed;
 
   const InconspicuousButton({
-    Key key,
-    @required this.onPressed,
-    @required this.text,
+    Key? key,
+    required this.onPressed,
+    required this.text,
   }) : super(key: key);
 
   Widget build(BuildContext context) {
     return SizedBox(
       width: 180,
       height: 44,
-      child: FlatButton(
-        color: Colors.transparent,
-        textColor: TextColor.gray,
-        child: Text(text),
+      child: TextButton(
+        style: TextButton.styleFrom(backgroundColor: Colors.transparent),
+        child: Text(text, style: TextColorStyle.gray),
         onPressed: onPressed,
       ),
     );

@@ -1,21 +1,21 @@
-import 'package:Pilll/auth/auth.dart';
-import 'package:Pilll/database/database.dart';
-import 'package:Pilll/domain/home/home_page.dart';
-import 'package:Pilll/domain/initial_setting/initial_setting_1_page.dart';
-import 'package:Pilll/entity/user_error.dart';
-import 'package:Pilll/components/molecules/indicator.dart';
-import 'package:Pilll/error/template.dart';
-import 'package:Pilll/error/universal_error_page.dart';
-import 'package:Pilll/service/user.dart';
-import 'package:Pilll/util/shared_preference/keys.dart';
+import 'package:pilll/auth/auth.dart';
+import 'package:pilll/database/database.dart';
+import 'package:pilll/domain/home/home_page.dart';
+import 'package:pilll/domain/initial_setting/initial_setting_1_page.dart';
+import 'package:pilll/entity/user_error.dart';
+import 'package:pilll/components/molecules/indicator.dart';
+import 'package:pilll/error/template.dart';
+import 'package:pilll/error/universal_error_page.dart';
+import 'package:pilll/service/user.dart';
+import 'package:pilll/util/shared_preference/keys.dart';
 import 'package:flutter/material.dart';
-import 'package:hooks_riverpod/all.dart';
+import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 GlobalKey<RootState> rootKey = GlobalKey();
 
 class Root extends StatefulWidget {
-  Root({Key key}) : super(key: key);
+  Root({Key? key}) : super(key: key);
 
   @override
   RootState createState() => RootState();
@@ -25,14 +25,14 @@ enum ScreenType { home, initialSetting }
 enum IndicatorType { shown, hidden }
 
 class RootState extends State<Root> {
-  Error error;
+  Error? error;
   onError(Error error) {
     setState(() {
       this.error = error;
     });
   }
 
-  ScreenType screenType;
+  ScreenType? screenType;
   showHome() {
     setState(() {
       screenType = ScreenType.home;
@@ -141,7 +141,7 @@ class RootState extends State<Root> {
           storage.setString(
               StringKey.firebaseAnonymousUserID, user.anonymouseUserID);
         }
-        bool didEndInitialSetting =
+        bool? didEndInitialSetting =
             storage.getBool(BoolKey.didEndInitialSetting);
         if (didEndInitialSetting == null) {
           return ScreenType.initialSetting;

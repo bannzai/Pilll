@@ -1,8 +1,8 @@
-import 'package:Pilll/database/database.dart';
-import 'package:Pilll/entity/firestore_timestamp_converter.dart';
-import 'package:Pilll/entity/pill_sheet.dart';
+import 'package:pilll/database/database.dart';
+import 'package:pilll/entity/firestore_timestamp_converter.dart';
+import 'package:pilll/entity/pill_sheet.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:riverpod/all.dart';
+import 'package:riverpod/riverpod.dart';
 
 abstract class PillSheetServiceInterface {
   Future<PillSheetModel> fetchLast();
@@ -18,12 +18,12 @@ final pillSheetServiceProvider = Provider<PillSheetServiceInterface>(
 class PillSheetService extends PillSheetServiceInterface {
   final DatabaseConnection _database;
 
-  PillSheetModel _filterForLatestPillSheet(QuerySnapshot snapshot) {
+  PillSheetModel? _filterForLatestPillSheet(QuerySnapshot snapshot) {
     if (snapshot.docs.isEmpty) return null;
     if (!snapshot.docs.last.exists) return null;
     var document = snapshot.docs.last;
 
-    var data = document.data();
+    var data = document.data()!;
     data["id"] = document.id;
     var pillSheetModel = PillSheetModel.fromJson(data);
 
@@ -42,7 +42,7 @@ class PillSheetService extends PillSheetServiceInterface {
   Future<PillSheetModel> fetchLast() {
     return _queryOfFetchLastPillSheet()
         .get()
-        .then((event) => _filterForLatestPillSheet(event));
+        .then((event) => _filterForLatestPillSheet(event)!);
   }
 
   @override
@@ -59,8 +59,7 @@ class PillSheetService extends PillSheetServiceInterface {
   }
 
   Future<void> delete(PillSheetModel pillSheet) {
-    if (pillSheet == null) throw PillSheetIsNotExists();
-    return _database.pillSheetReference(pillSheet.documentID).update({
+    return _database.pillSheetReference(pillSheet.documentID!).update({
       PillSheetFirestoreKey.deletedAt:
           TimestampConverter.dateTimeToTimestamp(DateTime.now())
     });
@@ -70,7 +69,7 @@ class PillSheetService extends PillSheetServiceInterface {
     var json = pillSheet.toJson();
     json.remove("id");
     return _database
-        .pillSheetReference(pillSheet.documentID)
+        .pillSheetReference(pillSheet.documentID!)
         .update(json)
         .then((_) => pillSheet);
   }
@@ -78,7 +77,8 @@ class PillSheetService extends PillSheetServiceInterface {
   Stream<PillSheetModel> subscribeForLatestPillSheet() {
     return _queryOfFetchLastPillSheet()
         .snapshots()
-        .map((event) => _filterForLatestPillSheet(event));
+        .map(((event) => _filterForLatestPillSheet(event)))
+        .cast();
   }
 }
 

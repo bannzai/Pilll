@@ -1,14 +1,13 @@
-import 'package:Pilll/util/datetime/day.dart';
+import 'package:pilll/util/datetime/day.dart';
 
 class DateRange {
-  DateTime begin;
-  DateTime end;
+  final DateTime _begin;
+  final DateTime _end;
+  DateTime get begin => _begin.date();
+  DateTime get end => _end.date();
   int get days => end.difference(begin).inDays;
 
-  DateRange(DateTime begin, DateTime end) {
-    this.begin = begin.date();
-    this.end = end.date();
-  }
+  DateRange(this._begin, this._end);
 
   static bool isSameDay(DateTime a, DateTime b) =>
       a.year == b.year && a.month == b.month && a.day == b.day;
@@ -28,9 +27,6 @@ class DateRange {
 
   @override
   bool operator ==(other) {
-    if (other == null) {
-      return false;
-    }
     if (other is! DateRange) {
       return false;
     }

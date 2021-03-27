@@ -1,8 +1,8 @@
-import 'package:Pilll/entity/pill_mark_type.dart';
-import 'package:Pilll/entity/pill_sheet.dart';
-import 'package:Pilll/entity/pill_sheet_type.dart';
-import 'package:Pilll/entity/setting.dart';
-import 'package:Pilll/util/datetime/day.dart';
+import 'package:pilll/entity/pill_mark_type.dart';
+import 'package:pilll/entity/pill_sheet.dart';
+import 'package:pilll/entity/pill_sheet_type.dart';
+import 'package:pilll/entity/setting.dart';
+import 'package:pilll/util/datetime/day.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'initial_setting.freezed.dart';
@@ -22,8 +22,8 @@ abstract class InitialSettingModel implements _$InitialSettingModel {
         List<ReminderTime> reminderTimes,
     @Default(false)
         bool isOnReminder,
-    int todayPillNumber,
-    PillSheetType pillSheetType,
+    int? todayPillNumber,
+    PillSheetType? pillSheetType,
   }) = _InitialSettingModel;
 
   Setting buildSetting() => Setting(
@@ -33,7 +33,7 @@ abstract class InitialSettingModel implements _$InitialSettingModel {
         reminderTimes: reminderTimes,
         isOnReminder: isOnReminder,
       );
-  PillSheetModel buildPillSheet() => todayPillNumber != null
+  PillSheetModel? buildPillSheet() => todayPillNumber != null
       ? PillSheetModel(
           beginingDate: _beginingDate(),
           lastTakenDate: _lastTakenDate(),
@@ -42,10 +42,10 @@ abstract class InitialSettingModel implements _$InitialSettingModel {
       : null;
 
   DateTime _beginingDate() {
-    return today().subtract(Duration(days: todayPillNumber - 1));
+    return today().subtract(Duration(days: todayPillNumber! - 1));
   }
 
-  DateTime _lastTakenDate() {
+  DateTime? _lastTakenDate() {
     return todayPillNumber == 1 ? null : today().subtract(Duration(days: 1));
   }
 

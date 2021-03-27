@@ -1,6 +1,6 @@
-import 'package:Pilll/util/datetime/date_compare.dart';
-import 'package:Pilll/entity/diary.dart';
-import 'package:Pilll/service/diary.dart';
+import 'package:pilll/util/datetime/date_compare.dart';
+import 'package:pilll/entity/diary.dart';
+import 'package:pilll/service/diary.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'diaries.freezed.dart';
@@ -20,7 +20,7 @@ abstract class DiariesState implements _$DiariesState {
     return entities;
   }
 
-  Diary diaryForDatetimeOrNull(DateTime dateTime) {
+  Diary? diaryForDatetimeOrNull(DateTime dateTime) {
     final filtered =
         entities.where((element) => isSameDay(element.date, dateTime));
     if (filtered.isEmpty) {

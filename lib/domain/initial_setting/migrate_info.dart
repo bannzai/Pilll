@@ -1,13 +1,13 @@
-import 'package:Pilll/components/atoms/buttons.dart';
-import 'package:Pilll/components/atoms/color.dart';
-import 'package:Pilll/components/atoms/font.dart';
-import 'package:Pilll/components/atoms/text_color.dart';
+import 'package:pilll/components/atoms/buttons.dart';
+import 'package:pilll/components/atoms/color.dart';
+import 'package:pilll/components/atoms/font.dart';
+import 'package:pilll/components/atoms/text_color.dart';
 import 'package:flutter/material.dart';
 
 class MigrateInfo extends StatelessWidget {
   final VoidCallback onClose;
 
-  const MigrateInfo({Key key, @required this.onClose}) : super(key: key);
+  const MigrateInfo({Key? key, required this.onClose}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Scaffold(

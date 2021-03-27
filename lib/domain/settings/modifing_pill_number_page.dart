@@ -1,18 +1,18 @@
-import 'package:Pilll/components/atoms/buttons.dart';
-import 'package:Pilll/components/organisms/pill/pill_sheet.dart';
-import 'package:Pilll/components/atoms/color.dart';
-import 'package:Pilll/components/atoms/font.dart';
-import 'package:Pilll/components/atoms/text_color.dart';
-import 'package:Pilll/entity/pill_mark_type.dart';
-import 'package:Pilll/util/formatter/date_time_formatter.dart';
+import 'package:pilll/components/atoms/buttons.dart';
+import 'package:pilll/components/organisms/pill/pill_sheet.dart';
+import 'package:pilll/components/atoms/color.dart';
+import 'package:pilll/components/atoms/font.dart';
+import 'package:pilll/components/atoms/text_color.dart';
+import 'package:pilll/entity/pill_mark_type.dart';
+import 'package:pilll/util/formatter/date_time_formatter.dart';
 import 'package:flutter/material.dart';
 
 class ModifingPillNumberPage extends StatefulWidget {
   final PillMarkSelected markSelected;
 
   const ModifingPillNumberPage({
-    Key key,
-    @required this.markSelected,
+    Key? key,
+    required this.markSelected,
   }) : super(key: key);
 
   @override
@@ -20,7 +20,7 @@ class ModifingPillNumberPage extends StatefulWidget {
 }
 
 class _ModifingPillNumberPageState extends State<ModifingPillNumberPage> {
-  int selectedPillMarkNumber;
+  int? selectedPillMarkNumber;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -69,7 +69,7 @@ class _ModifingPillNumberPageState extends State<ModifingPillNumberPage> {
               SizedBox(height: 20),
               PrimaryButton(
                 onPressed: selectedPillMarkNumber != null
-                    ? () => widget.markSelected(selectedPillMarkNumber)
+                    ? () => widget.markSelected(selectedPillMarkNumber!)
                     : null,
                 text: "変更する",
               )
@@ -86,7 +86,7 @@ class _ModifingPillNumberPageState extends State<ModifingPillNumberPage> {
 }
 
 extension ModifingPillNumberPageRoute on ModifingPillNumberPage {
-  static Route<dynamic> route({@required PillMarkSelected markSelected}) {
+  static Route<dynamic> route({required PillMarkSelected markSelected}) {
     return MaterialPageRoute(
       settings: RouteSettings(name: "ModifingPillNumberPage"),
       builder: (_) => ModifingPillNumberPage(markSelected: markSelected),
