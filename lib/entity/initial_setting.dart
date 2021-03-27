@@ -29,7 +29,7 @@ abstract class InitialSettingModel implements _$InitialSettingModel {
   Setting buildSetting() => Setting(
         pillNumberForFromMenstruation: fromMenstruation,
         durationMenstruation: durationMenstruation,
-        pillSheetTypeRawPath: pillSheetType.rawPath,
+        pillSheetTypeRawPath: pillSheetType!.rawPath,
         reminderTimes: reminderTimes,
         isOnReminder: isOnReminder,
       );
@@ -51,15 +51,18 @@ abstract class InitialSettingModel implements _$InitialSettingModel {
 
   PillSheetTypeInfo _typeInfo() {
     return PillSheetTypeInfo(
-      pillSheetTypeReferencePath: pillSheetType.rawPath,
-      name: pillSheetType.fullName,
-      dosingPeriod: pillSheetType.dosingPeriod,
-      totalCount: pillSheetType.totalCount,
+      pillSheetTypeReferencePath: pillSheetType!.rawPath,
+      name: pillSheetType!.fullName,
+      dosingPeriod: pillSheetType!.dosingPeriod,
+      totalCount: pillSheetType!.totalCount,
     );
   }
 
   PillMarkType pillMarkTypeFor(int number) {
-    assert(pillSheetType != null);
+    final pillSheetType = this.pillSheetType;
+    if (pillSheetType == null) {
+      throw ArgumentError.notNull("pill sheet type not allowed null");
+    }
     if (todayPillNumber == number) {
       return PillMarkType.selected;
     }

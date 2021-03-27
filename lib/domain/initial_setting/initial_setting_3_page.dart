@@ -18,7 +18,7 @@ class InitialSetting3Page extends HookWidget {
       done: () {
         Navigator.of(context).push(InitialSetting4PageRoute.route());
       },
-      pillSheetTotalCount: state.entity.pillSheetType.totalCount,
+      pillSheetTotalCount: state.entity.pillSheetType!.totalCount,
       model: SettingMenstruationPageModel(
         selectedFromMenstruation: state.entity.fromMenstruation,
         selectedDurationMenstruation: state.entity.durationMenstruation,

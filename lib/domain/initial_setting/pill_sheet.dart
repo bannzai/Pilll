@@ -59,25 +59,27 @@ class PillSheet extends StatelessWidget {
         return "28錠";
       case PillSheetType.pillsheet_28_0:
         return "28錠";
-      default:
-        throw ArgumentError.notNull(
-            "Maybe pillSheetType is null. actually: $pillSheetType");
+      case PillSheetType.pillsheet_24_0:
+        return "24錠";
+      case PillSheetType.pillsheet_21_0:
+        return "21錠";
     }
   }
 
   String _subtitle(PillSheetType pillSheetType) {
     switch (pillSheetType) {
       case PillSheetType.pillsheet_21:
-        return "＋7日休薬";
+        return "21錠＋7日休薬";
       case PillSheetType.pillsheet_28_4:
-        return "4錠偽薬";
+        return "24錠＋4錠偽薬";
       case PillSheetType.pillsheet_28_7:
-        return "7錠偽薬";
+        return "21錠＋7錠偽薬";
       case PillSheetType.pillsheet_28_0:
         return "すべて実薬";
-      default:
-        throw ArgumentError.notNull(
-            "Maybe pillSheetType is null. actually: $pillSheetType");
+      case PillSheetType.pillsheet_24_0:
+        return "すべて実薬";
+      case PillSheetType.pillsheet_21_0:
+        return "すべて実薬";
     }
   }
 }
