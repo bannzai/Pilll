@@ -12,7 +12,7 @@ class MenstruationService {
   Future<List<Menstruation>> fetchAll() {
     return _database
         .menstruationsReference()
-        .where(MenstruationFirestoreKey.deletedAt, isNull: false)
+        .where(MenstruationFirestoreKey.deletedAt, isEqualTo: null)
         .orderBy(MenstruationFirestoreKey.beginDate)
         .get()
         .then((event) => event.docs
@@ -23,7 +23,7 @@ class MenstruationService {
   Stream<List<Menstruation>> subscribeAll() {
     return _database
         .menstruationsReference()
-        .where(MenstruationFirestoreKey.deletedAt, isNull: false)
+        .where(MenstruationFirestoreKey.deletedAt, isEqualTo: null)
         .orderBy(MenstruationFirestoreKey.beginDate)
         .snapshots()
         .map((event) => event.docs

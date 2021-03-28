@@ -18,11 +18,11 @@ class _$MenstruationStateTearOff {
 
   _MenstruationState call(
       {bool isNotYetLoaded = true,
-      required DateTime targetDate,
+      int currentCalendarIndex = 0,
       List<Menstruation> entities = const []}) {
     return _MenstruationState(
       isNotYetLoaded: isNotYetLoaded,
-      targetDate: targetDate,
+      currentCalendarIndex: currentCalendarIndex,
       entities: entities,
     );
   }
@@ -34,7 +34,7 @@ const $MenstruationState = _$MenstruationStateTearOff();
 /// @nodoc
 mixin _$MenstruationState {
   bool get isNotYetLoaded => throw _privateConstructorUsedError;
-  DateTime get targetDate => throw _privateConstructorUsedError;
+  int get currentCalendarIndex => throw _privateConstructorUsedError;
   List<Menstruation> get entities => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
@@ -48,7 +48,9 @@ abstract class $MenstruationStateCopyWith<$Res> {
           MenstruationState value, $Res Function(MenstruationState) then) =
       _$MenstruationStateCopyWithImpl<$Res>;
   $Res call(
-      {bool isNotYetLoaded, DateTime targetDate, List<Menstruation> entities});
+      {bool isNotYetLoaded,
+      int currentCalendarIndex,
+      List<Menstruation> entities});
 }
 
 /// @nodoc
@@ -63,7 +65,7 @@ class _$MenstruationStateCopyWithImpl<$Res>
   @override
   $Res call({
     Object? isNotYetLoaded = freezed,
-    Object? targetDate = freezed,
+    Object? currentCalendarIndex = freezed,
     Object? entities = freezed,
   }) {
     return _then(_value.copyWith(
@@ -71,10 +73,10 @@ class _$MenstruationStateCopyWithImpl<$Res>
           ? _value.isNotYetLoaded
           : isNotYetLoaded // ignore: cast_nullable_to_non_nullable
               as bool,
-      targetDate: targetDate == freezed
-          ? _value.targetDate
-          : targetDate // ignore: cast_nullable_to_non_nullable
-              as DateTime,
+      currentCalendarIndex: currentCalendarIndex == freezed
+          ? _value.currentCalendarIndex
+          : currentCalendarIndex // ignore: cast_nullable_to_non_nullable
+              as int,
       entities: entities == freezed
           ? _value.entities
           : entities // ignore: cast_nullable_to_non_nullable
@@ -91,7 +93,9 @@ abstract class _$MenstruationStateCopyWith<$Res>
       __$MenstruationStateCopyWithImpl<$Res>;
   @override
   $Res call(
-      {bool isNotYetLoaded, DateTime targetDate, List<Menstruation> entities});
+      {bool isNotYetLoaded,
+      int currentCalendarIndex,
+      List<Menstruation> entities});
 }
 
 /// @nodoc
@@ -108,7 +112,7 @@ class __$MenstruationStateCopyWithImpl<$Res>
   @override
   $Res call({
     Object? isNotYetLoaded = freezed,
-    Object? targetDate = freezed,
+    Object? currentCalendarIndex = freezed,
     Object? entities = freezed,
   }) {
     return _then(_MenstruationState(
@@ -116,10 +120,10 @@ class __$MenstruationStateCopyWithImpl<$Res>
           ? _value.isNotYetLoaded
           : isNotYetLoaded // ignore: cast_nullable_to_non_nullable
               as bool,
-      targetDate: targetDate == freezed
-          ? _value.targetDate
-          : targetDate // ignore: cast_nullable_to_non_nullable
-              as DateTime,
+      currentCalendarIndex: currentCalendarIndex == freezed
+          ? _value.currentCalendarIndex
+          : currentCalendarIndex // ignore: cast_nullable_to_non_nullable
+              as int,
       entities: entities == freezed
           ? _value.entities
           : entities // ignore: cast_nullable_to_non_nullable
@@ -132,22 +136,23 @@ class __$MenstruationStateCopyWithImpl<$Res>
 class _$_MenstruationState extends _MenstruationState {
   _$_MenstruationState(
       {this.isNotYetLoaded = true,
-      required this.targetDate,
+      this.currentCalendarIndex = 0,
       this.entities = const []})
       : super._();
 
   @JsonKey(defaultValue: true)
   @override
   final bool isNotYetLoaded;
+  @JsonKey(defaultValue: 0)
   @override
-  final DateTime targetDate;
+  final int currentCalendarIndex;
   @JsonKey(defaultValue: const [])
   @override
   final List<Menstruation> entities;
 
   @override
   String toString() {
-    return 'MenstruationState(isNotYetLoaded: $isNotYetLoaded, targetDate: $targetDate, entities: $entities)';
+    return 'MenstruationState(isNotYetLoaded: $isNotYetLoaded, currentCalendarIndex: $currentCalendarIndex, entities: $entities)';
   }
 
   @override
@@ -157,9 +162,9 @@ class _$_MenstruationState extends _MenstruationState {
             (identical(other.isNotYetLoaded, isNotYetLoaded) ||
                 const DeepCollectionEquality()
                     .equals(other.isNotYetLoaded, isNotYetLoaded)) &&
-            (identical(other.targetDate, targetDate) ||
-                const DeepCollectionEquality()
-                    .equals(other.targetDate, targetDate)) &&
+            (identical(other.currentCalendarIndex, currentCalendarIndex) ||
+                const DeepCollectionEquality().equals(
+                    other.currentCalendarIndex, currentCalendarIndex)) &&
             (identical(other.entities, entities) ||
                 const DeepCollectionEquality()
                     .equals(other.entities, entities)));
@@ -169,7 +174,7 @@ class _$_MenstruationState extends _MenstruationState {
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(isNotYetLoaded) ^
-      const DeepCollectionEquality().hash(targetDate) ^
+      const DeepCollectionEquality().hash(currentCalendarIndex) ^
       const DeepCollectionEquality().hash(entities);
 
   @JsonKey(ignore: true)
@@ -181,14 +186,14 @@ class _$_MenstruationState extends _MenstruationState {
 abstract class _MenstruationState extends MenstruationState {
   factory _MenstruationState(
       {bool isNotYetLoaded,
-      required DateTime targetDate,
+      int currentCalendarIndex,
       List<Menstruation> entities}) = _$_MenstruationState;
   _MenstruationState._() : super._();
 
   @override
   bool get isNotYetLoaded => throw _privateConstructorUsedError;
   @override
-  DateTime get targetDate => throw _privateConstructorUsedError;
+  int get currentCalendarIndex => throw _privateConstructorUsedError;
   @override
   List<Menstruation> get entities => throw _privateConstructorUsedError;
   @override
