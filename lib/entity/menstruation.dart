@@ -1,4 +1,5 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:pilll/entity/firestore_timestamp_converter.dart';
 part 'menstruation.g.dart';
 part 'menstruation.freezed.dart';
 
@@ -10,9 +11,16 @@ abstract class Menstruation with _$Menstruation {
       _$_$_MenstruationToJson(this as _$_Menstruation);
   @JsonSerializable(explicitToJson: true)
   factory Menstruation({
-    required DateTime date,
-    required List<String> physicalConditions,
-    required bool hasSex,
-    required String memo,
+    @JsonKey(
+      fromJson: NonNullTimestampConverter.timestampToDateTime,
+      toJson: NonNullTimestampConverter.dateTimeToTimestamp,
+    )
+        required DateTime begin,
+    @JsonKey(
+      fromJson: NonNullTimestampConverter.timestampToDateTime,
+      toJson: NonNullTimestampConverter.dateTimeToTimestamp,
+    )
+        required DateTime end,
+    required bool isPreview,
   }) = _Menstruation;
 }

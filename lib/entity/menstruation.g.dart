@@ -8,19 +8,17 @@ part of 'menstruation.dart';
 
 _$_Menstruation _$_$_MenstruationFromJson(Map<String, dynamic> json) {
   return _$_Menstruation(
-    date: DateTime.parse(json['date'] as String),
-    physicalConditions: (json['physicalConditions'] as List<dynamic>)
-        .map((e) => e as String)
-        .toList(),
-    hasSex: json['hasSex'] as bool,
-    memo: json['memo'] as String,
+    begin: NonNullTimestampConverter.timestampToDateTime(
+        json['begin'] as Timestamp),
+    end:
+        NonNullTimestampConverter.timestampToDateTime(json['end'] as Timestamp),
+    isPreview: json['isPreview'] as bool,
   );
 }
 
 Map<String, dynamic> _$_$_MenstruationToJson(_$_Menstruation instance) =>
     <String, dynamic>{
-      'date': instance.date.toIso8601String(),
-      'physicalConditions': instance.physicalConditions,
-      'hasSex': instance.hasSex,
-      'memo': instance.memo,
+      'begin': NonNullTimestampConverter.dateTimeToTimestamp(instance.begin),
+      'end': NonNullTimestampConverter.dateTimeToTimestamp(instance.end),
+      'isPreview': instance.isPreview,
     };
