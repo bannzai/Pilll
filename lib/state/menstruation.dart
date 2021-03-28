@@ -22,7 +22,6 @@ abstract class MenstruationState implements _$MenstruationState {
   DateTime _targetEndDayOfWeekday() {
     final diff = currentCalendarIndex - todayCalendarIndex;
     final base = today().add(Duration(days: diff * Weekday.values.length));
-    print("base: $base, end: ${endDayOfWeekday(base)}, diff: $diff");
     return endDayOfWeekday(base);
   }
 
