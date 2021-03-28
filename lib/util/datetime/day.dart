@@ -1,4 +1,4 @@
-import 'package:pilll/service/today.dart';
+import 'package:pilll/service/day.dart';
 
 DateTime today() {
   return todayRepository.today();
