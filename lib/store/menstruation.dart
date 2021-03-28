@@ -12,8 +12,7 @@ final menstruationsStoreProvider = StateNotifierProvider.autoDispose(
 class MenstruationStore extends StateNotifier<MenstruationState> {
   final MenstruationService _service;
   MenstruationStore(this._service)
-      : super(MenstruationState(
-            targetDate: today().subtract(Duration(days: today().weekday)))) {
+      : super(MenstruationState(targetDate: firstDayOfWeekday(today()))) {
     _reset();
   }
 
@@ -34,6 +33,9 @@ class MenstruationStore extends StateNotifier<MenstruationState> {
   }
 
   void updateDisplayedDate(DateTimeRange range) {
+    if (state.targetDate.month == range.end.month) {
+      return;
+    }
     state = state.copyWith(targetDate: range.end);
   }
 }
