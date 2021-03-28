@@ -2,12 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
+import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/components/atoms/buttons.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/domain/record/weekday_badge.dart';
 import 'package:pilll/entity/weekday.dart';
+import 'package:pilll/store/menstruation.dart';
 import 'package:pilll/util/datetime/date_compare.dart';
 import 'package:pilll/util/datetime/day.dart';
 import 'package:pilll/util/formatter/date_time_formatter.dart';
@@ -19,6 +21,8 @@ class MenstruationPage extends HookWidget {
   @override
   Scaffold build(BuildContext context) {
     final dataSource = useMemoized(() => _dataSource());
+    final store = useProvider(menstruationsStoreProvider);
+    final state = useProvider(menstruationsStoreProvider.state);
     return Scaffold(
       backgroundColor: PilllColors.background,
       appBar: AppBar(
@@ -27,7 +31,7 @@ class MenstruationPage extends HookWidget {
         ],
         title: SizedBox(
           child: Text(
-            DateTimeFormatter.jaMonth(today()),
+            state.displayMonth,
             style: TextStyle(color: TextColor.black),
           ),
         ),
@@ -54,6 +58,14 @@ class MenstruationPage extends HookWidget {
                           physics: PageScrollPhysics(),
                           scrollDirection: Axis.horizontal,
                           itemBuilder: (context, index) {
+                            final base = today().add(
+                                Duration(days: index * Weekday.values.length));
+                            store.updateDisplayedDate(
+                              DateTimeRange(
+                                start: firstDayOfWeekday(base),
+                                end: endDayOfWeekday(base),
+                              ),
+                            );
                             final data = dataSource[index];
                             return _DateLine(
                                 days: data,
