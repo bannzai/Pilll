@@ -2,7 +2,7 @@ import 'package:pilll/analytics.dart';
 import 'package:pilll/entity/pill_mark_type.dart';
 import 'package:pilll/entity/pill_sheet.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
-import 'package:pilll/service/today.dart';
+import 'package:pilll/service/day.dart';
 import 'package:pilll/state/pill_sheet.dart';
 import 'package:pilll/store/pill_sheet.dart';
 import 'package:pilll/util/datetime/date_compare.dart';
