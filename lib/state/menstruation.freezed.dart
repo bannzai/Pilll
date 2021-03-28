@@ -17,8 +17,11 @@ class _$MenstruationStateTearOff {
   const _$MenstruationStateTearOff();
 
   _MenstruationState call(
-      {required DateTime targetDate, List<Menstruation> entities = const []}) {
+      {bool isNotYetLoaded = true,
+      required DateTime targetDate,
+      List<Menstruation> entities = const []}) {
     return _MenstruationState(
+      isNotYetLoaded: isNotYetLoaded,
       targetDate: targetDate,
       entities: entities,
     );
@@ -30,6 +33,7 @@ const $MenstruationState = _$MenstruationStateTearOff();
 
 /// @nodoc
 mixin _$MenstruationState {
+  bool get isNotYetLoaded => throw _privateConstructorUsedError;
   DateTime get targetDate => throw _privateConstructorUsedError;
   List<Menstruation> get entities => throw _privateConstructorUsedError;
 
@@ -43,7 +47,8 @@ abstract class $MenstruationStateCopyWith<$Res> {
   factory $MenstruationStateCopyWith(
           MenstruationState value, $Res Function(MenstruationState) then) =
       _$MenstruationStateCopyWithImpl<$Res>;
-  $Res call({DateTime targetDate, List<Menstruation> entities});
+  $Res call(
+      {bool isNotYetLoaded, DateTime targetDate, List<Menstruation> entities});
 }
 
 /// @nodoc
@@ -57,10 +62,15 @@ class _$MenstruationStateCopyWithImpl<$Res>
 
   @override
   $Res call({
+    Object? isNotYetLoaded = freezed,
     Object? targetDate = freezed,
     Object? entities = freezed,
   }) {
     return _then(_value.copyWith(
+      isNotYetLoaded: isNotYetLoaded == freezed
+          ? _value.isNotYetLoaded
+          : isNotYetLoaded // ignore: cast_nullable_to_non_nullable
+              as bool,
       targetDate: targetDate == freezed
           ? _value.targetDate
           : targetDate // ignore: cast_nullable_to_non_nullable
@@ -80,7 +90,8 @@ abstract class _$MenstruationStateCopyWith<$Res>
           _MenstruationState value, $Res Function(_MenstruationState) then) =
       __$MenstruationStateCopyWithImpl<$Res>;
   @override
-  $Res call({DateTime targetDate, List<Menstruation> entities});
+  $Res call(
+      {bool isNotYetLoaded, DateTime targetDate, List<Menstruation> entities});
 }
 
 /// @nodoc
@@ -96,10 +107,15 @@ class __$MenstruationStateCopyWithImpl<$Res>
 
   @override
   $Res call({
+    Object? isNotYetLoaded = freezed,
     Object? targetDate = freezed,
     Object? entities = freezed,
   }) {
     return _then(_MenstruationState(
+      isNotYetLoaded: isNotYetLoaded == freezed
+          ? _value.isNotYetLoaded
+          : isNotYetLoaded // ignore: cast_nullable_to_non_nullable
+              as bool,
       targetDate: targetDate == freezed
           ? _value.targetDate
           : targetDate // ignore: cast_nullable_to_non_nullable
@@ -114,9 +130,15 @@ class __$MenstruationStateCopyWithImpl<$Res>
 
 /// @nodoc
 class _$_MenstruationState extends _MenstruationState {
-  _$_MenstruationState({required this.targetDate, this.entities = const []})
+  _$_MenstruationState(
+      {this.isNotYetLoaded = true,
+      required this.targetDate,
+      this.entities = const []})
       : super._();
 
+  @JsonKey(defaultValue: true)
+  @override
+  final bool isNotYetLoaded;
   @override
   final DateTime targetDate;
   @JsonKey(defaultValue: const [])
@@ -125,13 +147,16 @@ class _$_MenstruationState extends _MenstruationState {
 
   @override
   String toString() {
-    return 'MenstruationState(targetDate: $targetDate, entities: $entities)';
+    return 'MenstruationState(isNotYetLoaded: $isNotYetLoaded, targetDate: $targetDate, entities: $entities)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other is _MenstruationState &&
+            (identical(other.isNotYetLoaded, isNotYetLoaded) ||
+                const DeepCollectionEquality()
+                    .equals(other.isNotYetLoaded, isNotYetLoaded)) &&
             (identical(other.targetDate, targetDate) ||
                 const DeepCollectionEquality()
                     .equals(other.targetDate, targetDate)) &&
@@ -143,6 +168,7 @@ class _$_MenstruationState extends _MenstruationState {
   @override
   int get hashCode =>
       runtimeType.hashCode ^
+      const DeepCollectionEquality().hash(isNotYetLoaded) ^
       const DeepCollectionEquality().hash(targetDate) ^
       const DeepCollectionEquality().hash(entities);
 
@@ -154,10 +180,13 @@ class _$_MenstruationState extends _MenstruationState {
 
 abstract class _MenstruationState extends MenstruationState {
   factory _MenstruationState(
-      {required DateTime targetDate,
+      {bool isNotYetLoaded,
+      required DateTime targetDate,
       List<Menstruation> entities}) = _$_MenstruationState;
   _MenstruationState._() : super._();
 
+  @override
+  bool get isNotYetLoaded => throw _privateConstructorUsedError;
   @override
   DateTime get targetDate => throw _privateConstructorUsedError;
   @override
