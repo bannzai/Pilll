@@ -6,6 +6,7 @@ import 'package:pilll/components/atoms/buttons.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
+import 'package:pilll/domain/record/weekday_badge.dart';
 import 'package:pilll/entity/weekday.dart';
 import 'package:pilll/util/datetime/date_compare.dart';
 import 'package:pilll/util/datetime/day.dart';
@@ -44,19 +45,24 @@ class MenstruationPage extends HookWidget {
                 child: Padding(
                   padding: const EdgeInsets.only(
                       left: _horizontalPadding, right: _horizontalPadding),
-                  child: ScrollablePositionedList.builder(
-                    initialScrollIndex: dataSource.length ~/ 2,
-                    physics: PageScrollPhysics(),
-                    scrollDirection: Axis.horizontal,
-                    itemBuilder: (context, index) {
-                      final data = dataSource[index];
-                      return _WeekdayLine(
-                          days: data,
-                          onTap: (e) {
-                            print("e:$e");
-                          });
-                    },
-                    itemCount: dataSource.length,
+                  child: Column(
+                    children: [
+                      _WeekdayLine(),
+                      ScrollablePositionedList.builder(
+                        initialScrollIndex: dataSource.length ~/ 2,
+                        physics: PageScrollPhysics(),
+                        scrollDirection: Axis.horizontal,
+                        itemBuilder: (context, index) {
+                          final data = dataSource[index];
+                          return _DateLine(
+                              days: data,
+                              onTap: (e) {
+                                print("e:$e");
+                              });
+                        },
+                        itemCount: dataSource.length,
+                      ),
+                    ],
                   ),
                 ),
               ),
@@ -91,10 +97,26 @@ class MenstruationPage extends HookWidget {
 }
 
 class _WeekdayLine extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.start,
+      children: List.generate(
+          Weekday.values.length,
+          (index) => Expanded(
+                child: WeekdayBadge(
+                  weekday: Weekday.values[index],
+                ),
+              )),
+    );
+  }
+}
+
+class _DateLine extends StatelessWidget {
   final List<DateTime> days;
   final Function(DateTime) onTap;
 
-  const _WeekdayLine({
+  const _DateLine({
     Key? key,
     required this.days,
     required this.onTap,
