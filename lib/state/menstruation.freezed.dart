@@ -17,10 +17,9 @@ class _$MenstruationStateTearOff {
   const _$MenstruationStateTearOff();
 
   _MenstruationState call(
-      {required int displayMonthOffset,
-      List<Menstruation> entities = const []}) {
+      {required DateTime targetDate, List<Menstruation> entities = const []}) {
     return _MenstruationState(
-      displayMonthOffset: displayMonthOffset,
+      targetDate: targetDate,
       entities: entities,
     );
   }
@@ -31,7 +30,7 @@ const $MenstruationState = _$MenstruationStateTearOff();
 
 /// @nodoc
 mixin _$MenstruationState {
-  int get displayMonthOffset => throw _privateConstructorUsedError;
+  DateTime get targetDate => throw _privateConstructorUsedError;
   List<Menstruation> get entities => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
@@ -44,7 +43,7 @@ abstract class $MenstruationStateCopyWith<$Res> {
   factory $MenstruationStateCopyWith(
           MenstruationState value, $Res Function(MenstruationState) then) =
       _$MenstruationStateCopyWithImpl<$Res>;
-  $Res call({int displayMonthOffset, List<Menstruation> entities});
+  $Res call({DateTime targetDate, List<Menstruation> entities});
 }
 
 /// @nodoc
@@ -58,14 +57,14 @@ class _$MenstruationStateCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object? displayMonthOffset = freezed,
+    Object? targetDate = freezed,
     Object? entities = freezed,
   }) {
     return _then(_value.copyWith(
-      displayMonthOffset: displayMonthOffset == freezed
-          ? _value.displayMonthOffset
-          : displayMonthOffset // ignore: cast_nullable_to_non_nullable
-              as int,
+      targetDate: targetDate == freezed
+          ? _value.targetDate
+          : targetDate // ignore: cast_nullable_to_non_nullable
+              as DateTime,
       entities: entities == freezed
           ? _value.entities
           : entities // ignore: cast_nullable_to_non_nullable
@@ -81,7 +80,7 @@ abstract class _$MenstruationStateCopyWith<$Res>
           _MenstruationState value, $Res Function(_MenstruationState) then) =
       __$MenstruationStateCopyWithImpl<$Res>;
   @override
-  $Res call({int displayMonthOffset, List<Menstruation> entities});
+  $Res call({DateTime targetDate, List<Menstruation> entities});
 }
 
 /// @nodoc
@@ -97,14 +96,14 @@ class __$MenstruationStateCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object? displayMonthOffset = freezed,
+    Object? targetDate = freezed,
     Object? entities = freezed,
   }) {
     return _then(_MenstruationState(
-      displayMonthOffset: displayMonthOffset == freezed
-          ? _value.displayMonthOffset
-          : displayMonthOffset // ignore: cast_nullable_to_non_nullable
-              as int,
+      targetDate: targetDate == freezed
+          ? _value.targetDate
+          : targetDate // ignore: cast_nullable_to_non_nullable
+              as DateTime,
       entities: entities == freezed
           ? _value.entities
           : entities // ignore: cast_nullable_to_non_nullable
@@ -115,28 +114,27 @@ class __$MenstruationStateCopyWithImpl<$Res>
 
 /// @nodoc
 class _$_MenstruationState extends _MenstruationState {
-  _$_MenstruationState(
-      {required this.displayMonthOffset, this.entities = const []})
+  _$_MenstruationState({required this.targetDate, this.entities = const []})
       : super._();
 
   @override
-  final int displayMonthOffset;
+  final DateTime targetDate;
   @JsonKey(defaultValue: const [])
   @override
   final List<Menstruation> entities;
 
   @override
   String toString() {
-    return 'MenstruationState(displayMonthOffset: $displayMonthOffset, entities: $entities)';
+    return 'MenstruationState(targetDate: $targetDate, entities: $entities)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other is _MenstruationState &&
-            (identical(other.displayMonthOffset, displayMonthOffset) ||
+            (identical(other.targetDate, targetDate) ||
                 const DeepCollectionEquality()
-                    .equals(other.displayMonthOffset, displayMonthOffset)) &&
+                    .equals(other.targetDate, targetDate)) &&
             (identical(other.entities, entities) ||
                 const DeepCollectionEquality()
                     .equals(other.entities, entities)));
@@ -145,7 +143,7 @@ class _$_MenstruationState extends _MenstruationState {
   @override
   int get hashCode =>
       runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(displayMonthOffset) ^
+      const DeepCollectionEquality().hash(targetDate) ^
       const DeepCollectionEquality().hash(entities);
 
   @JsonKey(ignore: true)
@@ -156,12 +154,12 @@ class _$_MenstruationState extends _MenstruationState {
 
 abstract class _MenstruationState extends MenstruationState {
   factory _MenstruationState(
-      {required int displayMonthOffset,
+      {required DateTime targetDate,
       List<Menstruation> entities}) = _$_MenstruationState;
   _MenstruationState._() : super._();
 
   @override
-  int get displayMonthOffset => throw _privateConstructorUsedError;
+  DateTime get targetDate => throw _privateConstructorUsedError;
   @override
   List<Menstruation> get entities => throw _privateConstructorUsedError;
   @override

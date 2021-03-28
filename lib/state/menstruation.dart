@@ -9,12 +9,9 @@ part 'menstruation.freezed.dart';
 abstract class MenstruationState implements _$MenstruationState {
   MenstruationState._();
   factory MenstruationState({
-    required int displayMonthOffset,
+    required DateTime targetDate,
     @Default([]) List<Menstruation> entities,
   }) = _MenstruationState;
-  String get displayMonth {
-    final today = util.today();
-    return DateTimeFormatter.jaMonth(
-        DateTime(today.year, today.month + displayMonthOffset, today.day));
-  }
+
+  String get displayMonth => DateTimeFormatter.jaMonth(targetDate);
 }
