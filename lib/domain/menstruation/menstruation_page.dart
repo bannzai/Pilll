@@ -27,12 +27,20 @@ class MenstruationPage extends HookWidget {
       final index = itemPositionsListener.itemPositions.value.last.index;
       store.updateCurrentCalendarIndex(index);
     });
+    final ItemScrollController itemScrollController = ItemScrollController();
 
     return Scaffold(
       backgroundColor: PilllColors.background,
       appBar: AppBar(
         actions: [
-          AppBarTextActionButton(onPressed: () {}, text: "今日"),
+          AppBarTextActionButton(
+              onPressed: () {
+                store.updateCurrentCalendarIndex(state.todayCalendarIndex);
+                itemScrollController.scrollTo(
+                    index: state.todayCalendarIndex,
+                    duration: Duration(milliseconds: 300));
+              },
+              text: "今日"),
         ],
         title: SizedBox(
           child: Text(
@@ -59,6 +67,7 @@ class MenstruationPage extends HookWidget {
                       _WeekdayLine(),
                       Expanded(
                         child: ScrollablePositionedList.builder(
+                          itemScrollController: itemScrollController,
                           initialScrollIndex: state.currentCalendarIndex,
                           physics: PageScrollPhysics(),
                           scrollDirection: Axis.horizontal,
