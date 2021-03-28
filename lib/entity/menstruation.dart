@@ -3,6 +3,11 @@ import 'package:pilll/entity/firestore_timestamp_converter.dart';
 part 'menstruation.g.dart';
 part 'menstruation.freezed.dart';
 
+abstract class MenstruationFirestoreKey {
+  static final String beginDate = "beginDate";
+  static final String deletedAt = "deletedAt";
+}
+
 @freezed
 abstract class Menstruation with _$Menstruation {
   factory Menstruation.fromJson(Map<String, dynamic> json) =>
