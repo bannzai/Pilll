@@ -147,12 +147,22 @@ class _Tile extends StatelessWidget {
           width: (MediaQuery.of(context).size.width - _horizontalPadding * 2) /
               Weekday.values.length,
           height: 40,
-          child: Text(
-            "${date.day}",
-            textAlign: TextAlign.center,
-            style: TextStyle(
-              color: weekday.weekdayColor(),
-            ).merge(FontType.gridElement),
+          child: Container(
+            width: 32,
+            height: 32,
+            decoration: BoxDecoration(
+              color: isToday ? PilllColors.secondary : Colors.transparent,
+              shape: BoxShape.circle,
+            ),
+            child: Center(
+              child: Text(
+                "${date.day}",
+                textAlign: TextAlign.center,
+                style: TextStyle(
+                  color: isToday ? Colors.white : weekday.weekdayColor(),
+                ).merge(FontType.gridElement),
+              ),
+            ),
           )),
     );
   }
