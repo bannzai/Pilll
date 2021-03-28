@@ -19,7 +19,6 @@ import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 abstract class CalendarConstants {
-  static final int weekdayCount = 7;
   static final double tileHeight = 60;
 }
 
@@ -69,7 +68,7 @@ class Calendar extends HookWidget {
         Row(
           mainAxisAlignment: MainAxisAlignment.start,
           children: List.generate(
-              CalendarConstants.weekdayCount,
+              Weekday.values.length,
               (index) => Expanded(
                     child: WeekdayBadge(
                       weekday: Weekday.values[index],
@@ -98,7 +97,7 @@ class Calendar extends HookWidget {
                                 .dateTimeForPreviousMonthTile(weekday.index)
                                 .day);
                       }
-                      int day = (line - 1) * CalendarConstants.weekdayCount +
+                      int day = (line - 1) * Weekday.values.length +
                           weekday.index -
                           calculator.weekdayOffset() +
                           1;
