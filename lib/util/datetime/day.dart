@@ -10,12 +10,12 @@ DateTime now() {
 }
 
 DateTime firstDayOfWeekday(DateTime day) {
-  return day.subtract(Duration(days: day.weekday));
+  return day.subtract(Duration(days: day.weekday == 7 ? 0 : day.weekday));
 }
 
 DateTime endDayOfWeekday(DateTime day) {
   return day
-      .subtract(Duration(days: day.weekday))
+      .subtract(Duration(days: day.weekday == 7 ? 0 : day.weekday))
       .add(Duration(days: Weekday.values.length - 1));
 }
 

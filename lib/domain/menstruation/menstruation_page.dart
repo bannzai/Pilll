@@ -12,7 +12,6 @@ import 'package:pilll/entity/weekday.dart';
 import 'package:pilll/store/menstruation.dart';
 import 'package:pilll/util/datetime/date_compare.dart';
 import 'package:pilll/util/datetime/day.dart';
-import 'package:pilll/util/formatter/date_time_formatter.dart';
 import 'package:scrollable_positioned_list/scrollable_positioned_list.dart';
 
 const double _horizontalPadding = 10;
@@ -20,9 +19,15 @@ const double _horizontalPadding = 10;
 class MenstruationPage extends HookWidget {
   @override
   Scaffold build(BuildContext context) {
-    final dataSource = useMemoized(() => _dataSource());
     final store = useProvider(menstruationsStoreProvider);
     final state = useProvider(menstruationsStoreProvider.state);
+    final ItemPositionsListener itemPositionsListener =
+        ItemPositionsListener.create();
+    itemPositionsListener.itemPositions.addListener(() {
+      final index = itemPositionsListener.itemPositions.value.last.index;
+      store.updateCurrentCalendarIndex(index);
+    });
+
     return Scaffold(
       backgroundColor: PilllColors.background,
       appBar: AppBar(
@@ -54,26 +59,19 @@ class MenstruationPage extends HookWidget {
                       _WeekdayLine(),
                       Expanded(
                         child: ScrollablePositionedList.builder(
-                          initialScrollIndex: dataSource.length ~/ 2,
+                          initialScrollIndex: state.currentCalendarIndex,
                           physics: PageScrollPhysics(),
                           scrollDirection: Axis.horizontal,
+                          itemPositionsListener: itemPositionsListener,
                           itemBuilder: (context, index) {
-                            final base = today().add(
-                                Duration(days: index * Weekday.values.length));
-                            store.updateDisplayedDate(
-                              DateTimeRange(
-                                start: firstDayOfWeekday(base),
-                                end: endDayOfWeekday(base),
-                              ),
-                            );
-                            final data = dataSource[index];
+                            final data = state.calendarDataSource[index];
                             return _DateLine(
                                 days: data,
                                 onTap: (e) {
                                   print("e:$e");
                                 });
                           },
-                          itemCount: dataSource.length,
+                          itemCount: state.calendarDataSource.length,
                         ),
                       ),
                     ],
@@ -85,28 +83,6 @@ class MenstruationPage extends HookWidget {
         ),
       ),
     );
-  }
-
-  List<List<DateTime>> _dataSource() {
-    final base = today();
-    var begin = base.subtract(Duration(days: 90));
-    final beginWeekdayOffset = WeekdayFunctions.weekdayFromDate(begin).index;
-    begin = begin.subtract(Duration(days: beginWeekdayOffset));
-
-    var end = base.add(Duration(days: 90));
-    final endWeekdayOffset =
-        Weekday.values.last.index - WeekdayFunctions.weekdayFromDate(end).index;
-    end = end.add(Duration(days: endWeekdayOffset));
-
-    final diffDay = DateTimeRange(start: begin, end: end).duration.inDays;
-    List<DateTime> days = [];
-    for (int i = 0; i < diffDay + 1; i++) {
-      days.add(begin.add(Duration(days: i)));
-    }
-    return List.generate(
-        (diffDay / Weekday.values.length).round(),
-        (i) => days.sublist(i * Weekday.values.length,
-            i * Weekday.values.length + Weekday.values.length));
   }
 }
 
