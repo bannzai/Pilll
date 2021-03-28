@@ -8,17 +8,26 @@ part of 'menstruation.dart';
 
 _$_Menstruation _$_$_MenstruationFromJson(Map<String, dynamic> json) {
   return _$_Menstruation(
-    begin: NonNullTimestampConverter.timestampToDateTime(
-        json['begin'] as Timestamp),
-    end:
-        NonNullTimestampConverter.timestampToDateTime(json['end'] as Timestamp),
+    beginDate: NonNullTimestampConverter.timestampToDateTime(
+        json['beginDate'] as Timestamp),
+    endDate: NonNullTimestampConverter.timestampToDateTime(
+        json['endDate'] as Timestamp),
     isPreview: json['isPreview'] as bool,
+    deletedAt:
+        TimestampConverter.timestampToDateTime(json['deletedAt'] as Timestamp?),
+    createdAt: NonNullTimestampConverter.timestampToDateTime(
+        json['createdAt'] as Timestamp),
   );
 }
 
 Map<String, dynamic> _$_$_MenstruationToJson(_$_Menstruation instance) =>
     <String, dynamic>{
-      'begin': NonNullTimestampConverter.dateTimeToTimestamp(instance.begin),
-      'end': NonNullTimestampConverter.dateTimeToTimestamp(instance.end),
+      'beginDate':
+          NonNullTimestampConverter.dateTimeToTimestamp(instance.beginDate),
+      'endDate':
+          NonNullTimestampConverter.dateTimeToTimestamp(instance.endDate),
       'isPreview': instance.isPreview,
+      'deletedAt': TimestampConverter.dateTimeToTimestamp(instance.deletedAt),
+      'createdAt':
+          NonNullTimestampConverter.dateTimeToTimestamp(instance.createdAt),
     };
