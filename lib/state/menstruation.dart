@@ -1,6 +1,5 @@
 import 'package:pilll/entity/menstruation.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:pilll/util/datetime/day.dart' as util;
 import 'package:pilll/util/formatter/date_time_formatter.dart';
 
 part 'menstruation.freezed.dart';
