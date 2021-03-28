@@ -28,6 +28,7 @@ abstract class _CollectionPath {
   static String pillSheets(String userID) => "$users/$userID/pill_sheets";
   static String diaries(String userID) => "$users/$userID/diaries";
   static String userPrivates(String userID) => "$users/$userID/privates";
+  static String menstruations(String userID) => "$users/$userID/menstruations";
 }
 
 class DatabaseConnection {
@@ -58,6 +59,8 @@ class DatabaseConnection {
       .collection(_CollectionPath.userPrivates(_userID))
       .doc(_userID);
 
+  CollectionReference menstruationsReference() => FirebaseFirestore.instance
+      .collection(_CollectionPath.menstruations(_userID));
   Future<T> transaction<T>(TransactionHandler<T> transactionHandler) {
     return FirebaseFirestore.instance.runTransaction(transactionHandler);
   }
