@@ -34,11 +34,15 @@ class CalendarPage extends StatelessWidget {
           children: <Widget>[
             Stack(
               children: [
-                CustomPaint(
-                  painter: _HalfCircle(Size(
-                      MediaQuery.of(context).size.width + 100,
-                      CalendarPageConstants.halfCircleHeight)),
-                  size: Size(MediaQuery.of(context).size.width, 220),
+                Container(
+                  clipBehavior: Clip.antiAliasWithSaveLayer,
+                  decoration: BoxDecoration(),
+                  child: CustomPaint(
+                    painter: _HalfCircle(Size(
+                        MediaQuery.of(context).size.width + 100,
+                        CalendarPageConstants.halfCircleHeight)),
+                    size: Size(MediaQuery.of(context).size.width, 220),
+                  ),
                 ),
                 Positioned(
                     left: 16,
