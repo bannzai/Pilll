@@ -19,4 +19,15 @@ class MenstruationService {
             .map((doc) => Menstruation.fromJson(doc.data()!))
             .toList());
   }
+
+  Stream<List<Menstruation>> subscribeAll() {
+    return _database
+        .menstruationsReference()
+        .where(MenstruationFirestoreKey.deletedAt, isNull: false)
+        .orderBy(MenstruationFirestoreKey.beginDate)
+        .snapshots()
+        .map((event) => event.docs
+            .map((doc) => Menstruation.fromJson(doc.data()!))
+            .toList());
+  }
 }
