@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/service/menstruation.dart';
@@ -11,7 +13,25 @@ class MenstruationStore extends StateNotifier<MenstruationState> {
   final MenstruationService _service;
   MenstruationStore(this._service)
       : super(MenstruationState(
-            targetDate: today().subtract(Duration(days: today().weekday))));
+            targetDate: today().subtract(Duration(days: today().weekday)))) {
+    _reset();
+  }
+
+  void _reset() {
+    Future(() async {
+      final entities = await _service.fetchAll();
+      state = state.copyWith(entities: entities, isNotYetLoaded: false);
+      _subscribe();
+    });
+  }
+
+  StreamSubscription? canceller;
+  void _subscribe() {
+    canceller?.cancel();
+    canceller = _service.subscribeAll().listen((entities) {
+      state = state.copyWith(entities: entities);
+    });
+  }
 
   void updateDisplayedDate(DateTimeRange range) {
     state = state.copyWith(targetDate: range.end);

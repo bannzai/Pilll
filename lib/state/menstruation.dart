@@ -8,6 +8,7 @@ part 'menstruation.freezed.dart';
 abstract class MenstruationState implements _$MenstruationState {
   MenstruationState._();
   factory MenstruationState({
+    @Default(true) bool isNotYetLoaded,
     required DateTime targetDate,
     @Default([]) List<Menstruation> entities,
   }) = _MenstruationState;
