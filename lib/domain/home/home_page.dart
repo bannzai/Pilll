@@ -106,6 +106,7 @@ class _HomePageState extends State<HomePage>
           ),
         ),
         body: TabBarView(
+          physics: NeverScrollableScrollPhysics(),
           controller: _tabController,
           children: <Widget>[
             RecordPage(),
