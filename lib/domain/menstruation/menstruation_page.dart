@@ -48,19 +48,21 @@ class MenstruationPage extends HookWidget {
                   child: Column(
                     children: [
                       _WeekdayLine(),
-                      ScrollablePositionedList.builder(
-                        initialScrollIndex: dataSource.length ~/ 2,
-                        physics: PageScrollPhysics(),
-                        scrollDirection: Axis.horizontal,
-                        itemBuilder: (context, index) {
-                          final data = dataSource[index];
-                          return _DateLine(
-                              days: data,
-                              onTap: (e) {
-                                print("e:$e");
-                              });
-                        },
-                        itemCount: dataSource.length,
+                      Expanded(
+                        child: ScrollablePositionedList.builder(
+                          initialScrollIndex: dataSource.length ~/ 2,
+                          physics: PageScrollPhysics(),
+                          scrollDirection: Axis.horizontal,
+                          itemBuilder: (context, index) {
+                            final data = dataSource[index];
+                            return _DateLine(
+                                days: data,
+                                onTap: (e) {
+                                  print("e:$e");
+                                });
+                          },
+                          itemCount: dataSource.length,
+                        ),
                       ),
                     ],
                   ),
