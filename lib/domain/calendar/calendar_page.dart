@@ -97,6 +97,7 @@ class CalendarPage extends StatelessWidget {
   }
 }
 
+// TODO: remote card from Calendar
 class _MenstruationCard extends HookWidget {
   const _MenstruationCard({
     Key? key,
