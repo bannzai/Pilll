@@ -7,6 +7,8 @@ import 'package:pilll/components/atoms/buttons.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
+import 'package:pilll/domain/menstruation/menstruation_card.dart';
+import 'package:pilll/domain/menstruation/menstruation_card_state.dart';
 import 'package:pilll/domain/record/weekday_badge.dart';
 import 'package:pilll/entity/weekday.dart';
 import 'package:pilll/store/menstruation.dart';
@@ -15,6 +17,10 @@ import 'package:pilll/util/datetime/day.dart';
 import 'package:scrollable_positioned_list/scrollable_positioned_list.dart';
 
 const double _horizontalPadding = 10;
+
+abstract class MenstruationPageConst {
+  static final double calendarHeaderHeight = 65;
+}
 
 class MenstruationPage extends HookWidget {
   @override
@@ -57,8 +63,18 @@ class MenstruationPage extends HookWidget {
             children: [
               Container(
                 width: MediaQuery.of(context).size.width,
-                height: 65,
-                color: PilllColors.white,
+                height: MenstruationPageConst.calendarHeaderHeight,
+                decoration: BoxDecoration(
+                  color: PilllColors.white,
+                  borderRadius: BorderRadius.circular(12),
+                  boxShadow: [
+                    BoxShadow(
+                      color: PilllColors.shadow,
+                      blurRadius: 6.0,
+                      offset: Offset(0, 2),
+                    ),
+                  ],
+                ),
                 child: Padding(
                   padding: const EdgeInsets.only(
                       left: _horizontalPadding, right: _horizontalPadding),
@@ -83,14 +99,23 @@ class MenstruationPage extends HookWidget {
                           itemCount: state.calendarDataSource.length,
                         ),
                       ),
-                      Expanded(
-                        child: ListView.builder(
-                          itemBuilder: (context, index) {
-                            return Container();
-                          },
-                        ),
-                      ),
                     ],
+                  ),
+                ),
+              ),
+              Expanded(
+                child: Container(
+                  color: PilllColors.background,
+                  child: ListView.builder(
+                    padding: EdgeInsets.only(top: 16),
+                    itemCount: 1,
+                    scrollDirection: Axis.vertical,
+                    itemBuilder: (context, index) {
+                      return MenstruationCard(
+                        MenstruationCardState(
+                            scheduleDate: today(), countdownString: "あと1日"),
+                      );
+                    },
                   ),
                 ),
               ),

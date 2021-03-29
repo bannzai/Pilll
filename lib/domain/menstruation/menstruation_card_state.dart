@@ -1,5 +1,4 @@
 import 'package:pilll/entity/menstruation.dart';
-import 'package:pilll/entity/user.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 part 'menstruation_card_state.freezed.dart';
