@@ -93,12 +93,12 @@ class CalendarPage extends StatelessWidget {
   }
 
   Widget _menstruationCard() {
-    return MenstruationCard();
+    return _MenstruationCard();
   }
 }
 
-class MenstruationCard extends HookWidget {
-  const MenstruationCard({
+class _MenstruationCard extends HookWidget {
+  const _MenstruationCard({
     Key? key,
   }) : super(key: key);
 
