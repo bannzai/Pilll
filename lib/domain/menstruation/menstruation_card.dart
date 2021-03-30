@@ -1,3 +1,4 @@
+import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/molecules/app_card.dart';
 import 'package:pilll/domain/menstruation/menstruation_card_state.dart';
 import 'package:pilll/util/formatter/date_time_formatter.dart';
@@ -19,20 +20,37 @@ class MenstruationCard extends StatelessWidget {
       child: AppCard(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
+          children: [
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                SvgPicture.asset("images/menstruation_icon.svg", width: 20),
-                Text("生理予定日",
-                    style: TextColorStyle.noshime.merge(FontType.assisting)),
+              children: <Widget>[
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    SvgPicture.asset("images/menstruation_icon.svg", width: 20),
+                    Text("生理予定日",
+                        style:
+                            TextColorStyle.noshime.merge(FontType.assisting)),
+                  ],
+                ),
+                SizedBox(width: 12),
+                Text(
+                  DateTimeFormatter.monthAndWeekday(state.scheduleDate),
+                  style: TextColorStyle.gray.merge(
+                    FontType.xBigTitle,
+                  ),
+                ),
               ],
             ),
-            Text(
-              DateTimeFormatter.monthAndWeekday(state.scheduleDate),
-              style: TextColorStyle.gray.merge(
-                FontType.xBigTitle,
+            SizedBox(height: 8),
+            Container(
+              padding: EdgeInsets.only(left: 32, right: 32, top: 2, bottom: 2),
+              decoration: BoxDecoration(
+                color: PilllColors.secondary,
+                borderRadius: BorderRadius.circular(30),
               ),
+              child: Text(state.countdownString,
+                  style: TextColorStyle.white.merge(FontType.assistingBold)),
             ),
           ],
         ),
