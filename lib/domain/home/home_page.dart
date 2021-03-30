@@ -83,8 +83,8 @@ class _HomePageState extends State<HomePage>
                     text: "生理",
                     icon: SvgPicture.asset(_tabController.index ==
                             HomePageTabType.menstruation.index
-                        ? "images/heart.svg"
-                        : "images/heart.svg"),
+                        ? "images/menstruation.svg"
+                        : "images/menstruation_disable.svg"),
                   ),
                   Tab(
                     text: DateTimeFormatter.slashYearAndMonth(today()),
