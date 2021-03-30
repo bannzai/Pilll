@@ -43,8 +43,8 @@ class FontType {
     fontSize: FontSize.sLarge,
   );
   static final TextStyle xBigTitle = TextStyle(
-    fontFamily: FontFamily.japanese,
-    fontWeight: FontWeight.w600,
+    fontFamily: FontFamily.number,
+    fontWeight: FontWeight.w500,
     fontSize: FontSize.xBig,
   );
   static final TextStyle xBigNumber = TextStyle(
