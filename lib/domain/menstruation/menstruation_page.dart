@@ -19,7 +19,9 @@ import 'package:scrollable_positioned_list/scrollable_positioned_list.dart';
 const double _horizontalPadding = 10;
 
 abstract class MenstruationPageConst {
-  static final double calendarHeaderHeight = 65;
+  static final double calendarHeaderHeight =
+      86 + calendarHeaderDropShadowOffset;
+  static const double calendarHeaderDropShadowOffset = 2;
 }
 
 class MenstruationPage extends HookWidget {
@@ -62,45 +64,52 @@ class MenstruationPage extends HookWidget {
           child: Column(
             children: [
               Container(
+                padding: const EdgeInsets.only(
+                  left: _horizontalPadding,
+                  right: _horizontalPadding,
+                ),
+                margin: const EdgeInsets.only(
+                  bottom: MenstruationPageConst.calendarHeaderDropShadowOffset,
+                ),
                 width: MediaQuery.of(context).size.width,
                 height: MenstruationPageConst.calendarHeaderHeight,
                 decoration: BoxDecoration(
                   color: PilllColors.white,
-                  borderRadius: BorderRadius.circular(12),
                   boxShadow: [
                     BoxShadow(
                       color: PilllColors.shadow,
-                      blurRadius: 6.0,
-                      offset: Offset(0, 2),
+                      blurRadius: 4.0,
+                      offset: Offset(0,
+                          MenstruationPageConst.calendarHeaderDropShadowOffset),
                     ),
                   ],
                 ),
-                child: Padding(
-                  padding: const EdgeInsets.only(
-                      left: _horizontalPadding, right: _horizontalPadding),
-                  child: Column(
-                    children: [
-                      _WeekdayLine(),
-                      Expanded(
-                        child: ScrollablePositionedList.builder(
-                          itemScrollController: itemScrollController,
-                          initialScrollIndex: state.currentCalendarIndex,
-                          physics: PageScrollPhysics(),
-                          scrollDirection: Axis.horizontal,
-                          itemPositionsListener: itemPositionsListener,
-                          itemBuilder: (context, index) {
-                            final data = state.calendarDataSource[index];
-                            return _DateLine(
-                                days: data,
-                                onTap: (e) {
-                                  print("e:$e");
-                                });
-                          },
-                          itemCount: state.calendarDataSource.length,
-                        ),
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: [
+                    _WeekdayLine(),
+                    LimitedBox(
+                      maxHeight: MenstruationPageConst.calendarHeaderHeight -
+                          WeekdayBadgeConst.height,
+                      child: ScrollablePositionedList.builder(
+                        itemScrollController: itemScrollController,
+                        initialScrollIndex: state.currentCalendarIndex,
+                        physics: PageScrollPhysics(),
+                        scrollDirection: Axis.horizontal,
+                        itemPositionsListener: itemPositionsListener,
+                        itemBuilder: (context, index) {
+                          final data = state.calendarDataSource[index];
+                          return _DateLine(
+                              days: data,
+                              onTap: (e) {
+                                print("e:$e");
+                              });
+                        },
+                        itemCount: state.calendarDataSource.length,
                       ),
-                    ],
-                  ),
+                    ),
+                    Spacer(),
+                  ],
                 ),
               ),
               Expanded(
@@ -131,14 +140,18 @@ class _WeekdayLine extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(
-      mainAxisAlignment: MainAxisAlignment.start,
-      children: List.generate(
-          Weekday.values.length,
-          (index) => Expanded(
-                child: WeekdayBadge(
-                  weekday: Weekday.values[index],
-                ),
-              )),
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: List.generate(Weekday.values.length, (index) {
+        final weekday = Weekday.values[index];
+        return Expanded(
+          child: Container(
+            child: Text(weekday.weekdayString(),
+                textAlign: TextAlign.center,
+                style: FontType.sSmallTitle
+                    .merge(TextStyle(color: weekday.weekdayColor()))),
+          ),
+        );
+      }),
     );
   }
 }
@@ -187,10 +200,10 @@ class _Tile extends StatelessWidget {
       child: Container(
           width: (MediaQuery.of(context).size.width - _horizontalPadding * 2) /
               Weekday.values.length,
-          height: 40,
+          height: 30,
           child: Container(
-            width: 32,
-            height: 32,
+            width: 24,
+            height: 24,
             decoration: BoxDecoration(
               color: isToday ? PilllColors.secondary : Colors.transparent,
               shape: BoxShape.circle,
