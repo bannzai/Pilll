@@ -116,7 +116,8 @@ class _MenstruationCard extends HookWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              SvgPicture.asset("images/menstruation_icon.svg", width: 20),
+              SvgPicture.asset("images/menstruation.svg",
+                  width: 24, color: PilllColors.red),
               Text("生理予定日",
                   style: TextColorStyle.noshime.merge(FontType.assisting)),
             ],
