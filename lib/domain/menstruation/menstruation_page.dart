@@ -27,13 +27,13 @@ abstract class MenstruationPageConst {
 class MenstruationPage extends HookWidget {
   @override
   Scaffold build(BuildContext context) {
-    final store = useProvider(menstruationsStoreProvider);
-    final state = useProvider(menstruationsStoreProvider.state);
+    final menstruationStore = useProvider(menstruationsStoreProvider);
+    final menstruationState = useProvider(menstruationsStoreProvider.state);
     final ItemPositionsListener itemPositionsListener =
         ItemPositionsListener.create();
     itemPositionsListener.itemPositions.addListener(() {
       final index = itemPositionsListener.itemPositions.value.last.index;
-      store.updateCurrentCalendarIndex(index);
+      menstruationStore.updateCurrentCalendarIndex(index);
     });
     final ItemScrollController itemScrollController = ItemScrollController();
 
@@ -43,16 +43,16 @@ class MenstruationPage extends HookWidget {
         actions: [
           AppBarTextActionButton(
               onPressed: () {
-                store.updateCurrentCalendarIndex(state.todayCalendarIndex);
+                menstruationStore.updateCurrentCalendarIndex(menstruationState.todayCalendarIndex);
                 itemScrollController.scrollTo(
-                    index: state.todayCalendarIndex,
+                    index: menstruationState.todayCalendarIndex,
                     duration: Duration(milliseconds: 300));
               },
               text: "今日"),
         ],
         title: SizedBox(
           child: Text(
-            state.displayMonth,
+            menstruationState.displayMonth,
             style: TextStyle(color: TextColor.black),
           ),
         ),
@@ -93,19 +93,19 @@ class MenstruationPage extends HookWidget {
                           WeekdayBadgeConst.height,
                       child: ScrollablePositionedList.builder(
                         itemScrollController: itemScrollController,
-                        initialScrollIndex: state.currentCalendarIndex,
+                        initialScrollIndex: menstruationState.currentCalendarIndex,
                         physics: PageScrollPhysics(),
                         scrollDirection: Axis.horizontal,
                         itemPositionsListener: itemPositionsListener,
                         itemBuilder: (context, index) {
-                          final data = state.calendarDataSource[index];
+                          final data = menstruationState.calendarDataSource[index];
                           return _DateLine(
                               days: data,
                               onTap: (e) {
                                 print("e:$e");
                               });
                         },
-                        itemCount: state.calendarDataSource.length,
+                        itemCount: menstruationState.calendarDataSource.length,
                       ),
                     ),
                     Spacer(),
