@@ -10,16 +10,20 @@ DateTime _firstDayOfMonth(DateTime date) {
 
 abstract class CalendarState {
   DateRange get dateRange;
+
   bool shouldGrayOutTile(Weekday weekday);
-  bool shouldFillEmptyTile(Weekday weekday, int day);
-  bool shouldShowDiaryMark(List<Diary> diaries, int day);
-  int targetDay(Weekday weekday);
+  bool shouldFillEmptyTile(Weekday weekday, DateTime date);
+  bool shouldShowDiaryMark(List<Diary> diaries, DateTime date);
+  bool isNecessaryLineBreak(DateTime date);
+
+  int offsetForStartPositionAtLine(DateTime begin);
+
   DateTime? dateTimeForGrayoutTile(Weekday weekday);
-  bool isToday(int day);
   DateTime buildDate(Weekday weekday);
 
-  bool isNecessaryLineBreak(DateTime date);
-  int offsetForStartPositionAtLine(DateTime begin);
+  int targetDay(Weekday weekday) {
+    return dateRange.begin.add(Duration(days: weekday.index + 1)).day;
+  }
 }
 
 class MonthlyCalendarState {
@@ -71,18 +75,9 @@ class WeeklyCalendarState extends CalendarState {
   DateTime? dateTimeForGrayoutTile(Weekday weekday) => null;
   WeeklyCalendarState(this.dateRange);
   bool shouldGrayOutTile(Weekday weekday) => false;
-  bool shouldFillEmptyTile(Weekday weekday, int day) => false;
-  bool shouldShowDiaryMark(List<Diary> diaries, int day) {
+  bool shouldFillEmptyTile(Weekday weekday, DateTime date) => false;
+  bool shouldShowDiaryMark(List<Diary> diaries, DateTime date) {
     throw UnimplementedError();
-  }
-
-  bool isToday(int day) => dateRange
-      .list()
-      .map((e) => isSameDay(DateTime(e.year, e.month, day), e))
-      .contains(true);
-
-  int targetDay(Weekday weekday) {
-    return Weekday.values.length + weekday.index - 1;
   }
 
   DateTime buildDate(Weekday weekday) {
@@ -133,26 +128,14 @@ class WeeklyCalendarStateForMonth extends CalendarState {
         : begin.date().difference(dateRange.begin.date()).inDays;
   }
 
-  int _lastDay() =>
-      DateTime(targetDateOfMonth.year, targetDateOfMonth.month + 1, 0).day;
-
   bool shouldGrayOutTile(Weekday weekday) =>
       weekday.index <
       WeekdayFunctions.weekdayFromDate(_firstDayOfMonth(targetDateOfMonth))
           .index;
-  bool shouldFillEmptyTile(Weekday weekday, int day) => day > _lastDay();
-  bool shouldShowDiaryMark(List<Diary> diaries, int day) {
-    return diaries
-        .where((element) => isSameDay(element.date,
-            DateTime(targetDateOfMonth.year, targetDateOfMonth.month, day)))
-        .isNotEmpty;
-  }
-
-  bool isToday(int day) => isSameDay(
-      today(), DateTime(targetDateOfMonth.year, targetDateOfMonth.month, day));
-
-  int targetDay(Weekday weekday) {
-    return dateRange.begin.add(Duration(days: weekday.index + 1)).day;
+  bool shouldFillEmptyTile(Weekday weekday, DateTime date) =>
+      date.isAfter(dateRange.end);
+  bool shouldShowDiaryMark(List<Diary> diaries, DateTime date) {
+    return diaries.where((element) => isSameDay(element.date, date)).isNotEmpty;
   }
 
   DateTime buildDate(Weekday weekday) {
