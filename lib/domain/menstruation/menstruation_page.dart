@@ -12,6 +12,7 @@ import 'package:pilll/domain/menstruation/menstruation_card_state.dart';
 import 'package:pilll/domain/record/weekday_badge.dart';
 import 'package:pilll/entity/weekday.dart';
 import 'package:pilll/store/menstruation.dart';
+import 'package:pilll/store/pill_sheet.dart';
 import 'package:pilll/util/datetime/date_compare.dart';
 import 'package:pilll/util/datetime/day.dart';
 import 'package:scrollable_positioned_list/scrollable_positioned_list.dart';
@@ -29,6 +30,8 @@ class MenstruationPage extends HookWidget {
   Scaffold build(BuildContext context) {
     final menstruationStore = useProvider(menstruationsStoreProvider);
     final menstruationState = useProvider(menstruationsStoreProvider.state);
+    final pillSheetStore = useProvider(pillSheetStoreProvider);
+    final pillSheetState = useProvider(pillSheetStoreProvider.state);
     final ItemPositionsListener itemPositionsListener =
         ItemPositionsListener.create();
     itemPositionsListener.itemPositions.addListener(() {
@@ -43,7 +46,8 @@ class MenstruationPage extends HookWidget {
         actions: [
           AppBarTextActionButton(
               onPressed: () {
-                menstruationStore.updateCurrentCalendarIndex(menstruationState.todayCalendarIndex);
+                menstruationStore.updateCurrentCalendarIndex(
+                    menstruationState.todayCalendarIndex);
                 itemScrollController.scrollTo(
                     index: menstruationState.todayCalendarIndex,
                     duration: Duration(milliseconds: 300));
@@ -93,12 +97,14 @@ class MenstruationPage extends HookWidget {
                           WeekdayBadgeConst.height,
                       child: ScrollablePositionedList.builder(
                         itemScrollController: itemScrollController,
-                        initialScrollIndex: menstruationState.currentCalendarIndex,
+                        initialScrollIndex:
+                            menstruationState.currentCalendarIndex,
                         physics: PageScrollPhysics(),
                         scrollDirection: Axis.horizontal,
                         itemPositionsListener: itemPositionsListener,
                         itemBuilder: (context, index) {
-                          final data = menstruationState.calendarDataSource[index];
+                          final data =
+                              menstruationState.calendarDataSource[index];
                           return _DateLine(
                               days: data,
                               onTap: (e) {
