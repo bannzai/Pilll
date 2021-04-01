@@ -133,13 +133,13 @@ class WeeklyCalendarStateForMonth extends CalendarState {
         : begin.date().difference(dateRange.begin.date()).inDays;
   }
 
-  int _weekdayOffset() =>
-      WeekdayFunctions.weekdayFromDate(_firstDayOfMonth(targetDateOfMonth))
-          .index;
   int _lastDay() =>
       DateTime(targetDateOfMonth.year, targetDateOfMonth.month + 1, 0).day;
 
-  bool shouldGrayOutTile(Weekday weekday) => weekday.index < _weekdayOffset();
+  bool shouldGrayOutTile(Weekday weekday) =>
+      weekday.index <
+      WeekdayFunctions.weekdayFromDate(_firstDayOfMonth(targetDateOfMonth))
+          .index;
   bool shouldFillEmptyTile(Weekday weekday, int day) => day > _lastDay();
   bool shouldShowDiaryMark(List<Diary> diaries, int day) {
     return diaries
