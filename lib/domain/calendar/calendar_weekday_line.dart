@@ -16,7 +16,7 @@ class CalendarWeekdayLine extends StatelessWidget {
   final BuildContext context;
   final int line;
   final List<Diary> diaries;
-  final MonthlyCalendarState calendarState;
+  final CalendarState calendarState;
   final List<CalendarBandModel> bandModels;
   final double horizontalPadding;
 
@@ -96,11 +96,11 @@ class CalendarWeekdayLine extends StatelessWidget {
   List<Widget> _bands(
     BuildContext context,
     List<CalendarBandModel> bandModels,
-    MonthlyCalendarState calculator,
+    CalendarState calendarState,
     double horizontalPadding,
     int line,
   ) {
-    var range = calculator.dateRangeOfLine(line);
+    var range = calendarState.dateRangeOfLine(line);
     return bandModels
         .map((bandModel) {
           final isInRange =
@@ -109,9 +109,9 @@ class CalendarWeekdayLine extends StatelessWidget {
             return null;
           }
           bool isLineBreaked =
-              calculator.notInRangeAtLine(line, bandModel.begin);
+              calendarState.notInRangeAtLine(line, bandModel.begin);
           int start =
-              calculator.offsetForStartPositionAtLine(line, bandModel.begin);
+              calendarState.offsetForStartPositionAtLine(line, bandModel.begin);
 
           final length = bandLength(range, bandModel, isLineBreaked);
           var tileWidth =
