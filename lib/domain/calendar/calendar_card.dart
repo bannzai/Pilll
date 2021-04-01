@@ -1,6 +1,6 @@
 import 'package:pilll/components/molecules/indicator.dart';
 import 'package:pilll/components/molecules/app_card.dart';
-import 'package:pilll/domain/calendar/calculator.dart';
+import 'package:pilll/domain/calendar/calendar_state.dart';
 import 'package:pilll/domain/calendar/calendar.dart';
 import 'package:pilll/domain/calendar/utility.dart';
 import 'package:pilll/domain/calendar/calendar_band_model.dart';
@@ -39,7 +39,7 @@ class CalendarCard extends HookWidget {
         children: <Widget>[
           _header(context),
           Calendar(
-            calculator: Calculator(date),
+            calculator: CalendarState(date),
             bandModels: buildBandModels(
                 currentPillSheetState.entity, settingState.entity, 0),
             horizontalPadding: 16,
@@ -95,12 +95,12 @@ class CalendarCard extends HookWidget {
                       .reversed
                       .map((number) {
                     CalendarListPageModel previous = CalendarListPageModel(
-                        Calculator(DateTime(now.year, now.month - number, 1)),
+                        CalendarState(DateTime(now.year, now.month - number, 1)),
                         []);
                     return previous;
                   });
                   CalendarListPageModel current = CalendarListPageModel(
-                    Calculator(now),
+                    CalendarState(now),
                     buildBandModels(latestPillSheet, setting, 0),
                   );
                   List<CalendarBandModel> satisfyNextMonthDateRanges = [];
@@ -113,7 +113,7 @@ class CalendarCard extends HookWidget {
                     6,
                     (index) {
                       return CalendarListPageModel(
-                          Calculator(
+                          CalendarState(
                               DateTime(now.year, now.month + index + 1, 1)),
                           [
                             if (latestPillSheet != null)

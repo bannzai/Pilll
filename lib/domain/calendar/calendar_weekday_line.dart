@@ -1,10 +1,11 @@
 import 'package:pilll/components/atoms/color.dart';
+import 'package:pilll/domain/calendar/calendar_band.dart';
 import 'package:pilll/domain/calendar/calendar_band_model.dart';
 import 'package:pilll/domain/calendar/calendar_day_tile.dart';
 import 'package:pilll/domain/calendar/utility.dart';
 import 'package:pilll/domain/diary/post_diary_page.dart';
 import 'package:flutter/material.dart';
-import 'package:pilll/domain/calendar/calculator.dart';
+import 'package:pilll/domain/calendar/calendar_state.dart';
 import 'package:pilll/entity/diary.dart';
 import 'package:pilll/entity/weekday.dart';
 import 'package:pilll/util/datetime/date_compare.dart';
@@ -15,7 +16,7 @@ class CalendarWeekdayLine extends StatelessWidget {
   final BuildContext context;
   final int line;
   final List<Diary> diaries;
-  final Calculator calculator;
+  final CalendarState calculator;
   final List<CalendarBandModel> bandModels;
   final double horizontalPadding;
 
@@ -84,7 +85,7 @@ class CalendarWeekdayLine extends StatelessWidget {
             );
           }).toList(),
         ),
-        ...bands(context, bandModels, calculator, horizontalPadding, line)
+        ..._bands(context, bandModels, calculator, horizontalPadding, line)
       ],
     );
   }
@@ -96,5 +97,42 @@ class CalendarWeekdayLine extends StatelessWidget {
       decoration: BoxDecoration(
           color: PilllColors.gray, borderRadius: BorderRadius.circular(4)),
     );
+  }
+
+  List<Widget> _bands(
+    BuildContext context,
+    List<CalendarBandModel> bandModels,
+    CalendarState calculator,
+    double horizontalPadding,
+    int line,
+  ) {
+    var range = calculator.dateRangeOfLine(line);
+    return bandModels
+        .map((bandModel) {
+          final isInRange =
+              range.inRange(bandModel.begin) || range.inRange(bandModel.end);
+          if (!isInRange) {
+            return null;
+          }
+          bool isLineBreaked =
+              calculator.notInRangeAtLine(line, bandModel.begin);
+          int start =
+              calculator.offsetForStartPositionAtLine(line, bandModel.begin);
+
+          final length = bandLength(range, bandModel, isLineBreaked);
+          var tileWidth =
+              (MediaQuery.of(context).size.width - horizontalPadding * 2) /
+                  Weekday.values.length;
+          return Positioned(
+            left: start.toDouble() * tileWidth,
+            width: tileWidth * length,
+            bottom: 0,
+            height: 15,
+            child: CalendarBand(model: bandModel, isLineBreaked: isLineBreaked),
+          );
+        })
+        .where((element) => element != null)
+        .toList()
+        .cast();
   }
 }

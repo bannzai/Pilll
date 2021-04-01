@@ -1,4 +1,4 @@
-import 'package:pilll/domain/calendar/calculator.dart';
+import 'package:pilll/domain/calendar/calendar_state.dart';
 import 'package:pilll/domain/calendar/calendar.dart';
 import 'package:pilll/domain/calendar/calendar_band.dart';
 import 'package:pilll/domain/calendar/calendar_band_model.dart';
@@ -43,7 +43,7 @@ void main() {
           ],
           child: MaterialApp(
             home: Calendar(
-              calculator: Calculator(now),
+              calculator: CalendarState(now),
               bandModels: [model],
               horizontalPadding: 16,
             ),
@@ -86,7 +86,7 @@ void main() {
           ],
           child: MaterialApp(
             home: Calendar(
-              calculator: Calculator(now),
+              calculator: CalendarState(now),
               bandModels: [model],
               horizontalPadding: 16,
             ),
@@ -110,7 +110,7 @@ void main() {
         ProviderScope(
           child: MaterialApp(
             home: Calendar(
-              calculator: Calculator(now),
+              calculator: CalendarState(now),
               bandModels: [
                 CalendarNextPillSheetBandModel(
                     DateTime(2020, 10, 15), DateTime(2020, 10, 18)),
@@ -130,7 +130,7 @@ void main() {
         ProviderScope(
           child: MaterialApp(
             home: Calendar(
-              calculator: Calculator(now),
+              calculator: CalendarState(now),
               bandModels: [
                 CalendarNextPillSheetBandModel(
                     DateTime(2020, 08, 15), DateTime(2020, 08, 18)),
