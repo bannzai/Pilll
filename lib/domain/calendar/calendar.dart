@@ -161,29 +161,6 @@ class Calendar extends HookWidget {
   }
 }
 
-class CalendarBand extends StatelessWidget {
-  const CalendarBand({
-    Key? key,
-    required this.model,
-    required this.isLineBreaked,
-  }) : super(key: key);
-
-  final CalendarBandModel model;
-  final bool isLineBreaked;
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      decoration: BoxDecoration(color: model.color),
-      child: Container(
-        padding: EdgeInsets.only(left: 10),
-        child: Text(isLineBreaked ? "" : model.label,
-            style: FontType.sSmallTitle.merge(TextColorStyle.white)),
-      ),
-    );
-  }
-}
-
 class CalendarDayTile extends StatelessWidget {
   final int day;
   final bool isToday;
