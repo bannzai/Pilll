@@ -35,30 +35,24 @@ class CalendarWeekdayLine extends StatelessWidget {
       children: [
         Row(
           children: Weekday.values.map((weekday) {
-            if (calendarState.shouldGrayOutTile(weekday, line)) {
+            final previousDate =
+                calendarState.dateTimeForPreviousMonthTile(weekday, line);
+            if (previousDate != null) {
               return CalendarDayTile(
                 isToday: false,
                 onTap: null,
                 weekday: weekday,
-                date: DateTime(
-                    calendarState.date.year,
-                    calendarState.date.month,
-                    calendarState
-                        .dateTimeForPreviousMonthTile(weekday.index)
-                        .day),
+                date: previousDate,
               );
             }
             int day = calendarState.targetDay(weekday, line);
             if (calendarState.shouldFillEmptyTile(weekday, day)) {
               return Expanded(child: Container());
             }
-            final targetMonth = calendarState.date;
             return CalendarDayTile(
-              isToday: isSameDay(utility.today(),
-                  DateTime(targetMonth.year, targetMonth.month, day)),
+              isToday: calendarState.isToday(day),
               weekday: weekday,
-              date: DateTime(
-                  calendarState.date.year, calendarState.date.month, day),
+              date: calendarState.buildDate(weekday),
               upperWidget: calendarState.shouldShowDiaryMark(diaries, day)
                   ? _diaryMarkWidget()
                   : null,
