@@ -1,5 +1,6 @@
 import 'package:pilll/domain/calendar/monthly_calendar_state.dart';
 import 'package:pilll/domain/calendar/date_range.dart';
+import 'package:pilll/domain/calendar/weekly_calendar_state.dart';
 import 'package:pilll/entity/weekday.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -25,12 +26,6 @@ void main() {
   27   28  29  30
     */
     date = DateTime.parse("2020-09-14");
-    test("#dateTimeForPreviousMonthTile", () {
-      expect(calendarState.dateTimeForGrayoutTile(Weekday.Sunday.index),
-          DateTime.parse("2020-08-30"));
-      expect(calendarState.dateTimeForGrayoutTile(Weekday.Monday.index),
-          DateTime.parse("2020-08-31"));
-    });
 
     test("#lineCount", () {
       expect(calendarState.lineCount(), 5);
@@ -70,54 +65,6 @@ void main() {
           DateTime.parse("2020-09-27"),
           DateTime.parse("2020-09-30"),
         ),
-      );
-    });
-    test("#notInRangeAtLine", () {
-      expect(
-        calendarState.isNecessaryLineBreak(1, DateTime.parse("2020-08-31")),
-        false,
-      );
-      expect(
-        calendarState.isNecessaryLineBreak(1, DateTime.parse("2020-09-01")),
-        false,
-      );
-      expect(
-        calendarState.isNecessaryLineBreak(4, DateTime.parse("2020-09-19")),
-        true,
-      );
-      expect(
-        calendarState.isNecessaryLineBreak(3, DateTime.parse("2020-09-19")),
-        false,
-      );
-    });
-    test("#offsetForStartPositionAtLine", () {
-      expect(
-        calendarState.offsetForStartPositionAtLine(
-          1,
-          DateTime.parse("2020-08-31"),
-        ),
-        1,
-      );
-      expect(
-        calendarState.offsetForStartPositionAtLine(
-          1,
-          DateTime.parse("2020-09-01"),
-        ),
-        2,
-      );
-      expect(
-        calendarState.offsetForStartPositionAtLine(
-          4,
-          DateTime.parse("2020-09-19"),
-        ),
-        0,
-      );
-      expect(
-        calendarState.offsetForStartPositionAtLine(
-          3,
-          DateTime.parse("2020-09-19"),
-        ),
-        6,
       );
     });
   });

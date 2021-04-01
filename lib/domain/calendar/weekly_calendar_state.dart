@@ -44,7 +44,7 @@ class MultilineCalendarState extends WeeklyCalendarState {
   MultilineCalendarState(this.dateRange, this.targetDateOfMonth);
 
   DateTime? dateTimeForGrayoutTile(DateTime date) {
-    if (_shouldGrayOutTile(date)) {
+    if (isSameMonth(date, targetDateOfMonth)) {
       return null;
     }
     final offset = WeekdayFunctions.weekdayFromDate(date).index;
@@ -61,8 +61,6 @@ class MultilineCalendarState extends WeeklyCalendarState {
             offset);
   }
 
-  bool _shouldGrayOutTile(DateTime date) =>
-      isSameMonth(date, targetDateOfMonth);
   bool shouldShowDiaryMark(List<Diary> diaries, DateTime date) {
     return diaries.where((element) => isSameDay(element.date, date)).isNotEmpty;
   }
