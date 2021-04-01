@@ -31,13 +31,7 @@ void main() {
       expect(calendarState.dateTimeForPreviousMonthTile(Weekday.Monday.index),
           DateTime.parse("2020-08-31"));
     });
-    test("#lastDay", () {
-      expect(calendarState.lastDay(), DateTime.parse("2020-09-30").day);
-    });
 
-    test("#tileCount", () {
-      expect(calendarState.tileCount(), 2 + 30);
-    });
     test("#lineCount", () {
       expect(calendarState.lineCount(), 5);
     });
