@@ -1,4 +1,4 @@
-import 'package:pilll/domain/calendar/calculator.dart';
+import 'package:pilll/domain/calendar/calendar_state.dart';
 import 'package:pilll/domain/calendar/calendar_band_model.dart';
 import 'package:pilll/components/molecules/indicator.dart';
 import 'package:pilll/domain/calendar/calendar_weekday_line.dart';
@@ -27,7 +27,7 @@ final AutoDisposeFutureProviderFamily<List<Diary>, DateTime>?
 });
 
 class Calendar extends HookWidget {
-  final Calculator calculator;
+  final CalendarState calculator;
   final List<CalendarBandModel> bandModels;
   final double horizontalPadding;
 

@@ -1,6 +1,3 @@
-import 'package:flutter/material.dart';
-import 'package:pilll/domain/calendar/calculator.dart';
-import 'package:pilll/domain/calendar/calendar_band.dart';
 import 'package:pilll/domain/calendar/calendar_band_model.dart';
 import 'package:pilll/domain/calendar/date_range.dart';
 import 'package:pilll/entity/pill_sheet.dart';
@@ -57,40 +54,4 @@ List<CalendarBandModel> buildBandModels(
     nextPillSheetDateRange(pillSheet, page)
         .map((range) => CalendarNextPillSheetBandModel(range.begin, range.end))
   ];
-}
-
-List<Widget> bands(
-  BuildContext context,
-  List<CalendarBandModel> bandModels,
-  Calculator calculator,
-  double horizontalPadding,
-  int line,
-) {
-  var range = calculator.dateRangeOfLine(line);
-  return bandModels
-      .map((bandModel) {
-        final isInRange =
-            range.inRange(bandModel.begin) || range.inRange(bandModel.end);
-        if (!isInRange) {
-          return null;
-        }
-        bool isLineBreaked = calculator.notInRangeAtLine(line, bandModel.begin);
-        int start =
-            calculator.offsetForStartPositionAtLine(line, bandModel.begin);
-
-        final length = bandLength(range, bandModel, isLineBreaked);
-        var tileWidth =
-            (MediaQuery.of(context).size.width - horizontalPadding * 2) /
-                Weekday.values.length;
-        return Positioned(
-          left: start.toDouble() * tileWidth,
-          width: tileWidth * length,
-          bottom: 0,
-          height: 15,
-          child: CalendarBand(model: bandModel, isLineBreaked: isLineBreaked),
-        );
-      })
-      .where((element) => element != null)
-      .toList()
-      .cast();
 }
