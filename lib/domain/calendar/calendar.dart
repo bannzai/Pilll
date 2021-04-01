@@ -1,6 +1,7 @@
 import 'package:pilll/domain/calendar/calculator.dart';
 import 'package:pilll/domain/calendar/calendar_band_model.dart';
 import 'package:pilll/components/molecules/indicator.dart';
+import 'package:pilll/domain/calendar/calendar_day_tile.dart';
 import 'package:pilll/domain/calendar/utility.dart';
 import 'package:pilll/domain/diary/post_diary_page.dart';
 import 'package:pilll/domain/record/weekday_badge.dart';
@@ -11,8 +12,6 @@ import 'package:pilll/service/diary.dart';
 import 'package:pilll/domain/diary/confirm_diary_sheet.dart';
 import 'package:pilll/store/diaries.dart';
 import 'package:pilll/components/atoms/color.dart';
-import 'package:pilll/components/atoms/font.dart';
-import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/util/datetime/day.dart' as utility;
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
