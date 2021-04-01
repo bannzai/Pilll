@@ -6,7 +6,6 @@ import 'package:pilll/domain/calendar/utility.dart';
 import 'package:pilll/domain/calendar/weekly_calendar_state.dart';
 import 'package:pilll/domain/diary/post_diary_page.dart';
 import 'package:flutter/material.dart';
-import 'package:pilll/domain/calendar/monthly_calendar_state.dart';
 import 'package:pilll/entity/diary.dart';
 import 'package:pilll/entity/weekday.dart';
 import 'package:pilll/domain/diary/confirm_diary_sheet.dart';
