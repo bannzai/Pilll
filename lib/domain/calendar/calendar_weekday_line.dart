@@ -16,7 +16,7 @@ class CalendarWeekdayLine extends StatelessWidget {
   final BuildContext context;
   final int line;
   final List<Diary> diaries;
-  final CalendarState calendarState;
+  final MonthlyCalendarState calendarState;
   final List<CalendarBandModel> bandModels;
   final double horizontalPadding;
 
@@ -102,7 +102,7 @@ class CalendarWeekdayLine extends StatelessWidget {
   List<Widget> _bands(
     BuildContext context,
     List<CalendarBandModel> bandModels,
-    CalendarState calculator,
+    MonthlyCalendarState calculator,
     double horizontalPadding,
     int line,
   ) {

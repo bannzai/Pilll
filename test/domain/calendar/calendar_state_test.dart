@@ -5,12 +5,12 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 void main() {
-  late CalendarState calendarState;
+  late MonthlyCalendarState calendarState;
   late DateTime date;
   setUp(() {
     TestWidgetsFlutterBinding.ensureInitialized();
     SharedPreferences.setMockInitialValues({});
-    calendarState = CalendarState(date);
+    calendarState = MonthlyCalendarState(date);
   });
   group("2020-09-14", () {
     /*
