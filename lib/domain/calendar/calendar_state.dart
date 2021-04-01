@@ -16,7 +16,7 @@ abstract class CalendarState {
 
   int offsetForStartPositionAtLine(DateTime begin);
 
-  DateTime? dateTimeForGrayoutTile(Weekday weekday);
+  DateTime? dateTimeForGrayoutTile(DateTime date);
   DateTime buildDate(Weekday weekday) {
     return dateRange.begin.add(Duration(days: weekday.index));
   }
@@ -57,7 +57,8 @@ class MonthlyCalendarState {
   int _weekdayOffset() =>
       WeekdayFunctions.weekdayFromDate(_firstDayOfMonth(date)).index;
   int _previousMonthDayCount() => _weekdayOffset();
-  int lineCount() => 5;
+  int _tileCount() => _previousMonthDayCount() + _lastDay();
+  int lineCount() => (_tileCount() / Weekday.values.length).ceil();
 
   MonthlyCalendarState(this.date);
 
@@ -72,7 +73,7 @@ class MonthlyCalendarState {
 class WeeklyCalendarState extends CalendarState {
   final DateRange dateRange;
 
-  DateTime? dateTimeForGrayoutTile(Weekday weekday) => null;
+  DateTime? dateTimeForGrayoutTile(DateTime date) => null;
   WeeklyCalendarState(this.dateRange);
   bool shouldShowDiaryMark(List<Diary> diaries, DateTime date) {
     throw UnimplementedError();
@@ -93,11 +94,11 @@ class WeeklyCalendarStateForMonth extends CalendarState {
 
   WeeklyCalendarStateForMonth(this.dateRange, this.targetDateOfMonth);
 
-  DateTime? dateTimeForGrayoutTile(Weekday weekday) {
-    if (!_shouldGrayOutTile(weekday)) {
+  DateTime? dateTimeForGrayoutTile(DateTime date) {
+    if (_shouldGrayOutTile(date)) {
       return null;
     }
-    int offset = weekday.index;
+    final offset = WeekdayFunctions.weekdayFromDate(date).index;
     var dateTimeForLastDayOfPreviousMonth =
         DateTime(targetDateOfMonth.year, targetDateOfMonth.month, 0);
     var lastDayForPreviousMonthWeekdayIndex =
@@ -122,10 +123,8 @@ class WeeklyCalendarStateForMonth extends CalendarState {
         : begin.date().difference(dateRange.begin.date()).inDays;
   }
 
-  bool _shouldGrayOutTile(Weekday weekday) =>
-      weekday.index <
-      WeekdayFunctions.weekdayFromDate(_firstDayOfMonth(targetDateOfMonth))
-          .index;
+  bool _shouldGrayOutTile(DateTime date) =>
+      isSameMonth(date, targetDateOfMonth);
   bool shouldShowDiaryMark(List<Diary> diaries, DateTime date) {
     return diaries.where((element) => isSameDay(element.date, date)).isNotEmpty;
   }
