@@ -4,13 +4,9 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 void main() {
-  late MultilineCalendarState calendarState;
-  late DateTime date;
   setUp(() {
     TestWidgetsFlutterBinding.ensureInitialized();
     SharedPreferences.setMockInitialValues({});
-    calendarState = MultilineCalendarState(
-        DateRange(date, date.add(Duration(days: 6))), date);
   });
   group("2020-09-14", () {
     /*
@@ -24,8 +20,11 @@ void main() {
 
   27   28  29  30
     */
-    date = DateTime.parse("2020-09-14");
     test("#dateTimeForPreviousMonthTile", () {
+      final date = DateTime.parse("2020-09-14");
+      final anyDate = date;
+      final calendarState = MultilineCalendarState(
+          DateRange(anyDate, anyDate.add(Duration(days: 6))), date);
       expect(calendarState.dateTimeForGrayoutTile(DateTime.parse("2020-08-30")),
           DateTime.parse("2020-08-30"));
       expect(calendarState.dateTimeForGrayoutTile(DateTime.parse("2020-08-31")),
@@ -34,49 +33,51 @@ void main() {
           null);
     });
 
-    test("#isNecessaryLineBreak", () {
-      expect(
-        calendarState.isNecessaryLineBreak(DateTime.parse("2020-08-31")),
-        false,
-      );
-      expect(
-        calendarState.isNecessaryLineBreak(DateTime.parse("2020-09-01")),
-        false,
-      );
-      expect(
-        calendarState.isNecessaryLineBreak(DateTime.parse("2020-09-19")),
-        true,
-      );
-      expect(
-        calendarState.isNecessaryLineBreak(DateTime.parse("2020-09-19")),
-        false,
-      );
+    group("#isNecessaryLineBreak", () {
+      test("2020-08-30 ~ 2020-09-05", () {
+        final date = DateTime.parse("2020-09-14");
+        final begin = DateTime.parse("2020-08-30");
+        final end = DateTime.parse("2020-09-05");
+        final calendarState =
+            MultilineCalendarState(DateRange(begin, end), date);
+        expect(
+          calendarState.isNecessaryLineBreak(DateTime.parse("2020-08-31")),
+          false,
+        );
+        expect(
+          calendarState.isNecessaryLineBreak(DateTime.parse("2020-09-01")),
+          false,
+        );
+        expect(
+          calendarState.isNecessaryLineBreak(DateTime.parse("2020-09-06")),
+          true,
+        );
+        expect(
+          calendarState.isNecessaryLineBreak(DateTime.parse("2020-09-19")),
+          true,
+        );
+      });
     });
-    test("#offsetForStartPositionAtLine", () {
-      expect(
-        calendarState.offsetForStartPositionAtLine(
-          DateTime.parse("2020-08-31"),
-        ),
-        1,
-      );
-      expect(
-        calendarState.offsetForStartPositionAtLine(
-          DateTime.parse("2020-09-01"),
-        ),
-        2,
-      );
-      expect(
-        calendarState.offsetForStartPositionAtLine(
-          DateTime.parse("2020-09-19"),
-        ),
-        0,
-      );
-      expect(
-        calendarState.offsetForStartPositionAtLine(
-          DateTime.parse("2020-09-19"),
-        ),
-        6,
-      );
+    group("#offsetForStartPositionAtLine", () {
+      test("2020-08-30 ~ 2020-09-05", () {
+        final date = DateTime.parse("2020-09-14");
+        final begin = DateTime.parse("2020-08-30");
+        final end = DateTime.parse("2020-09-05");
+        final calendarState =
+            MultilineCalendarState(DateRange(begin, end), date);
+        expect(
+          calendarState.offsetForStartPositionAtLine(
+            DateTime.parse("2020-08-31"),
+          ),
+          1,
+        );
+        expect(
+          calendarState.offsetForStartPositionAtLine(
+            DateTime.parse("2020-09-01"),
+          ),
+          2,
+        );
+      });
     });
   });
 }
