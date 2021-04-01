@@ -16,7 +16,7 @@ class CalendarWeekdayLine extends StatelessWidget {
   final BuildContext context;
   final int line;
   final List<Diary> diaries;
-  final CalendarState calculator;
+  final CalendarState calendarState;
   final List<CalendarBandModel> bandModels;
   final double horizontalPadding;
 
@@ -25,7 +25,7 @@ class CalendarWeekdayLine extends StatelessWidget {
     required this.context,
     required this.line,
     required this.diaries,
-    required this.calculator,
+    required this.calendarState,
     required this.bandModels,
     required this.horizontalPadding,
   }) : super(key: key);
@@ -36,29 +36,29 @@ class CalendarWeekdayLine extends StatelessWidget {
         Row(
           children: Weekday.values.map((weekday) {
             bool isPreviousMonth =
-                weekday.index < calculator.weekdayOffset() && line == 1;
+                weekday.index < calendarState.weekdayOffset() && line == 1;
             if (isPreviousMonth) {
               return CalendarDayTile(
                   isToday: false,
                   onTap: null,
                   weekday: weekday,
-                  day: calculator
+                  day: calendarState
                       .dateTimeForPreviousMonthTile(weekday.index)
                       .day);
             }
             int day = (line - 1) * Weekday.values.length +
                 weekday.index -
-                calculator.weekdayOffset() +
+                calendarState.weekdayOffset() +
                 1;
-            bool isNextMonth = day > calculator.lastDay();
+            bool isNextMonth = day > calendarState.lastDay();
             if (isNextMonth) {
               return Expanded(child: Container());
             }
             bool isExistDiary = diaries
                 .where((element) => isSameDay(element.date,
-                    DateTime(calculator.date.year, calculator.date.month, day)))
+                    DateTime(calendarState.date.year, calendarState.date.month, day)))
                 .isNotEmpty;
-            final targetMonth = calculator.date;
+            final targetMonth = calendarState.date;
             return CalendarDayTile(
               isToday: isSameDay(utility.today(),
                   DateTime(targetMonth.year, targetMonth.month, day)),
@@ -66,7 +66,7 @@ class CalendarWeekdayLine extends StatelessWidget {
               day: day,
               upperWidget: isExistDiary ? _diaryMarkWidget() : null,
               onTap: () {
-                final date = calculator
+                final date = calendarState
                     .dateTimeForFirstDayOfMonth()
                     .add(Duration(days: day - 1));
                 if (date.isAfter(utility.today())) {
@@ -85,7 +85,7 @@ class CalendarWeekdayLine extends StatelessWidget {
             );
           }).toList(),
         ),
-        ..._bands(context, bandModels, calculator, horizontalPadding, line)
+        ..._bands(context, bandModels, calendarState, horizontalPadding, line)
       ],
     );
   }

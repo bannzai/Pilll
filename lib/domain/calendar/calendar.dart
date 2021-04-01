@@ -27,13 +27,13 @@ final AutoDisposeFutureProviderFamily<List<Diary>, DateTime>?
 });
 
 class Calendar extends HookWidget {
-  final CalendarState calculator;
+  final CalendarState calendarState;
   final List<CalendarBandModel> bandModels;
   final double horizontalPadding;
 
   const Calendar({
     Key? key,
-    required this.calculator,
+    required this.calendarState,
     required this.bandModels,
     required this.horizontalPadding,
   }) : super(key: key);
@@ -41,7 +41,7 @@ class Calendar extends HookWidget {
   @override
   Widget build(BuildContext context) {
     final futureCalendarDiaries =
-        useProvider(calendarDiariesProvider!(calculator.date));
+        useProvider(calendarDiariesProvider!(calendarState.date));
     return futureCalendarDiaries.when(
       data: (value) {
         return _body(context, value);
@@ -51,9 +51,9 @@ class Calendar extends HookWidget {
     );
   }
 
-  DateTime date() => calculator.date;
+  DateTime date() => calendarState.date;
   double height() =>
-      calculator.lineCount().toDouble() * CalendarConstants.tileHeight;
+      calendarState.lineCount().toDouble() * CalendarConstants.tileHeight;
 
   Column _body(BuildContext context, List<Diary> diaries) {
     return Column(
@@ -69,7 +69,7 @@ class Calendar extends HookWidget {
                   )),
         ),
         Divider(height: 1),
-        ...List.generate(calculator.lineCount(), (_line) {
+        ...List.generate(calendarState.lineCount(), (_line) {
           var line = _line + 1;
           return Column(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -78,7 +78,7 @@ class Calendar extends HookWidget {
                 context: context,
                 line: line,
                 diaries: diaries,
-                calculator: calculator,
+                calendarState: calendarState,
                 bandModels: bandModels,
                 horizontalPadding: horizontalPadding,
               ),

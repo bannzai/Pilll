@@ -39,7 +39,7 @@ class CalendarCard extends HookWidget {
         children: <Widget>[
           _header(context),
           Calendar(
-            calculator: CalendarState(date),
+            calendarState: CalendarState(date),
             bandModels: buildBandModels(
                 currentPillSheetState.entity, settingState.entity, 0),
             horizontalPadding: 16,
