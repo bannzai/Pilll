@@ -35,12 +35,6 @@ void main() {
       expect(calendarState.lastDay(), DateTime.parse("2020-09-30").day);
     });
 
-    test("#weekdayOffset", () {
-      expect(calendarState.weekdayOffset(), 2);
-    });
-    test("#previousMonthDayCount", () {
-      expect(calendarState.previousMonthDayCount(), 2);
-    });
     test("#tileCount", () {
       expect(calendarState.tileCount(), 2 + 30);
     });
