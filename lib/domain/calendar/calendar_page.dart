@@ -130,9 +130,9 @@ class _MenstruationCard extends HookWidget {
               return "";
             }
             for (int i = 0; i < 12; i += 1) {
-              final begin =
-                  menstruationScheduleDateRange(pillSheetEntity, settingEntity, i)
-                      .begin;
+              final begin = scheduledMenstruationDateRange(
+                      pillSheetEntity, settingEntity, i)
+                  .begin;
               if (begin.isAfter(utility.today())) {
                 return DateTimeFormatter.monthAndWeekday(begin);
               }
