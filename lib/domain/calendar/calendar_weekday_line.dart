@@ -8,13 +8,11 @@ import 'package:flutter/material.dart';
 import 'package:pilll/domain/calendar/calendar_state.dart';
 import 'package:pilll/entity/diary.dart';
 import 'package:pilll/entity/weekday.dart';
-import 'package:pilll/util/datetime/date_compare.dart';
 import 'package:pilll/domain/diary/confirm_diary_sheet.dart';
 import 'package:pilll/util/datetime/day.dart' as utility;
 
 class CalendarWeekdayLine extends StatelessWidget {
   final BuildContext context;
-  final int line;
   final List<Diary> diaries;
   final CalendarState calendarState;
   final List<CalendarBandModel> bandModels;
@@ -23,7 +21,6 @@ class CalendarWeekdayLine extends StatelessWidget {
   const CalendarWeekdayLine({
     Key? key,
     required this.context,
-    required this.line,
     required this.diaries,
     required this.calendarState,
     required this.bandModels,
@@ -94,11 +91,10 @@ class CalendarWeekdayLine extends StatelessWidget {
     double horizontalPadding,
     int line,
   ) {
-    var range = calendarState.dateRangeOfLine(line);
     return bandModels
         .map((bandModel) {
-          final isInRange =
-              range.inRange(bandModel.begin) || range.inRange(bandModel.end);
+          final isInRange = calendarState.dateRange.inRange(bandModel.begin) ||
+              calendarState.dateRange.inRange(bandModel.end);
           if (!isInRange) {
             return null;
           }
@@ -107,7 +103,8 @@ class CalendarWeekdayLine extends StatelessWidget {
           int start =
               calendarState.offsetForStartPositionAtLine(line, bandModel.begin);
 
-          final length = bandLength(range, bandModel, isLineBreaked);
+          final length =
+              bandLength(calendarState.dateRange, bandModel, isLineBreaked);
           var tileWidth =
               (MediaQuery.of(context).size.width - horizontalPadding * 2) /
                   Weekday.values.length;
