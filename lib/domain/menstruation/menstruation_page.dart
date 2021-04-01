@@ -7,6 +7,10 @@ import 'package:pilll/components/atoms/buttons.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
+import 'package:pilll/domain/calendar/calendar.dart';
+import 'package:pilll/domain/calendar/calendar_weekday_line.dart';
+import 'package:pilll/domain/calendar/date_range.dart';
+import 'package:pilll/domain/calendar/weekly_calendar_state.dart';
 import 'package:pilll/domain/menstruation/menstruation_card.dart';
 import 'package:pilll/domain/menstruation/menstruation_card_state.dart';
 import 'package:pilll/domain/record/weekday_badge.dart';
@@ -173,14 +177,16 @@ class _DateLine extends StatelessWidget {
   }) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    return Row(
-      children: days
-          .map((e) => _Tile(
-              date: e,
-              isToday: isSameDay(today(), e),
-              weekday: WeekdayFunctions.weekdayFromDate(e),
-              onTap: onTap))
-          .toList(),
+    return Container(
+      width: MediaQuery.of(context).size.width - _horizontalPadding * 2,
+      height: CalendarConstants.tileHeight,
+      child: CalendarWeekdayLine(
+        diaries: [],
+        calendarState:
+            SinglelineWeeklyCalendarState(DateRange(days.first, days.last)),
+        bandModels: [],
+        horizontalPadding: _horizontalPadding,
+      ),
     );
   }
 }
