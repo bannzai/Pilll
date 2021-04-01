@@ -5,17 +5,17 @@ import 'package:pilll/domain/calendar/calendar.dart';
 import 'package:pilll/entity/weekday.dart';
 
 class CalendarDayTile extends StatelessWidget {
-  final int day;
+  final DateTime date;
   final bool isToday;
   final Weekday weekday;
-  final VoidCallback? onTap;
+  final Function(DateTime)? onTap;
 
   final Widget? upperWidget;
   final Widget? lowerWidget;
 
   const CalendarDayTile({
     Key? key,
-    required this.day,
+    required this.date,
     required this.weekday,
     required this.isToday,
     this.upperWidget,
@@ -27,7 +27,7 @@ class CalendarDayTile extends StatelessWidget {
   Widget build(BuildContext context) {
     return Expanded(
       child: RawMaterialButton(
-        onPressed: onTap,
+        onPressed: () => onTap != null ? onTap!(date) : null,
         child: Container(
           height: CalendarConstants.tileHeight,
           child: Stack(
@@ -44,7 +44,7 @@ class CalendarDayTile extends StatelessWidget {
                   child: Align(
                     alignment: Alignment.center,
                     child: Text(
-                      "$day",
+                      "${date.day}",
                       textAlign: TextAlign.center,
                       style: TextStyle(
                         color: onTap == null
@@ -69,7 +69,7 @@ class CalendarDayTile extends StatelessWidget {
                       ),
                       child: Center(
                         child: Text(
-                          "$day",
+                          "${date.day}",
                           textAlign: TextAlign.center,
                           style: TextStyle(
                             color: PilllColors.white,
