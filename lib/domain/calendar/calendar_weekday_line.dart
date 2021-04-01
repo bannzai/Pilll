@@ -9,7 +9,9 @@ import 'package:pilll/domain/calendar/calendar_state.dart';
 import 'package:pilll/entity/diary.dart';
 import 'package:pilll/entity/weekday.dart';
 import 'package:pilll/domain/diary/confirm_diary_sheet.dart';
+import 'package:pilll/util/datetime/date_compare.dart';
 import 'package:pilll/util/datetime/day.dart' as utility;
+import 'package:pilll/util/datetime/day.dart';
 
 class CalendarWeekdayLine extends StatelessWidget {
   final BuildContext context;
@@ -41,22 +43,22 @@ class CalendarWeekdayLine extends StatelessWidget {
                 date: grayOutTile,
               );
             }
-            int day = calendarState.targetDay(weekday);
-            if (calendarState.shouldFillEmptyTile(weekday, day)) {
+            final date = calendarState.buildDate(weekday);
+            if (calendarState.shouldFillEmptyTile(weekday, date)) {
               return Expanded(child: Container());
             }
             return CalendarDayTile(
-              isToday: calendarState.isToday(day),
+              isToday: isSameDay(today(), date),
               weekday: weekday,
               date: calendarState.buildDate(weekday),
-              upperWidget: calendarState.shouldShowDiaryMark(diaries, day)
+              upperWidget: calendarState.shouldShowDiaryMark(diaries, date)
                   ? _diaryMarkWidget()
                   : null,
               onTap: (date) {
                 if (date.isAfter(utility.today())) {
                   return;
                 }
-                if (!calendarState.shouldShowDiaryMark(diaries, day)) {
+                if (!calendarState.shouldShowDiaryMark(diaries, date)) {
                   Navigator.of(context).push(PostDiaryPageRoute.route(date));
                 } else {
                   showModalBottomSheet(
@@ -96,7 +98,8 @@ class CalendarWeekdayLine extends StatelessWidget {
           if (!isInRange) {
             return null;
           }
-          bool isLineBreaked = calendarState.isNecessaryLineBreak(bandModel.begin);
+          bool isLineBreaked =
+              calendarState.isNecessaryLineBreak(bandModel.begin);
           int start =
               calendarState.offsetForStartPositionAtLine(bandModel.begin);
 
