@@ -35,14 +35,14 @@ class CalendarWeekdayLine extends StatelessWidget {
       children: [
         Row(
           children: Weekday.values.map((weekday) {
-            final previousDate =
-                calendarState.dateTimeForPreviousMonthTile(weekday, line);
-            if (previousDate != null) {
+            final grayOutTile =
+                calendarState.dateTimeForGrayoutTile(weekday, line);
+            if (grayOutTile != null) {
               return CalendarDayTile(
                 isToday: false,
                 onTap: null,
                 weekday: weekday,
-                date: previousDate,
+                date: grayOutTile,
               );
             }
             int day = calendarState.targetDay(weekday, line);

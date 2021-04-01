@@ -11,7 +11,7 @@ abstract class CalendarState {
   bool shouldFillEmptyTile(Weekday weekday, int day);
   bool shouldShowDiaryMark(List<Diary> diaries, int day);
   int targetDay(Weekday weekday, int line);
-  DateTime? dateTimeForPreviousMonthTile(Weekday weekday, int line);
+  DateTime? dateTimeForGrayoutTile(Weekday weekday, int line);
   bool isToday(int day);
   DateTime buildDate(Weekday weekday);
 
@@ -26,7 +26,7 @@ class MonthlyCalendarState extends CalendarState {
     return DateTime(date.year, date.month, 1);
   }
 
-  DateTime? dateTimeForPreviousMonthTile(Weekday weekday, int line) {
+  DateTime? dateTimeForGrayoutTile(Weekday weekday, int line) {
     if (!shouldGrayOutTile(weekday, line)) {
       return null;
     }
@@ -116,7 +116,7 @@ class MonthlyCalendarState extends CalendarState {
 class WeeklyCalendarState extends CalendarState {
   final DateRange dateRange;
 
-  DateTime? dateTimeForPreviousMonthTile(Weekday weekday, int line) => null;
+  DateTime? dateTimeForGrayoutTile(Weekday weekday, int line) => null;
   WeeklyCalendarState(this.dateRange);
   bool shouldGrayOutTile(Weekday weekday, int line) => false;
   bool shouldFillEmptyTile(Weekday weekday, int day) => false;
