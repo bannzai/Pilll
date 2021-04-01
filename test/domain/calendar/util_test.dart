@@ -12,7 +12,7 @@ void main() {
     TestWidgetsFlutterBinding.ensureInitialized();
     SharedPreferences.setMockInitialValues({});
   });
-  group("#menstruationDateRange", () {
+  group("#menstruationScheduleDateRange", () {
     test(
       "First page with pillSheetType: pillsheet_28_7, beginingDate: 2020-09-01, fromMenstruation: 23, durationMenstruation: 3",
       () {
@@ -49,9 +49,9 @@ void main() {
           reminderTimes: [ReminderTime(hour: 1, minute: 1)],
         );
         assert(pillSheetType.dosingPeriod == 21,
-            "menstruationDateRange adding value with dosingPeriod when it will create DateRange. pillsheet_28_7 type has 24 dosingPeriod");
+            "menstruationScheduleDateRange adding value with dosingPeriod when it will create DateRange. pillsheet_28_7 type has 24 dosingPeriod");
         expect(
-          menstruationDateRange(model, setting, 0),
+          menstruationScheduleDateRange(model, setting, 0),
           DateRange(
             DateTime.parse("2020-09-23"),
             DateTime.parse("2020-09-25"),
@@ -79,9 +79,9 @@ void main() {
           reminderTimes: [ReminderTime(hour: 1, minute: 1)],
         );
         assert(pillSheetType.dosingPeriod == 28,
-            "menstruationDateRange adding value with dosingPeriod when it will create DateRange. pillsheet_28_7 type has 24 dosingPeriod");
+            "menstruationScheduleDateRange adding value with dosingPeriod when it will create DateRange. pillsheet_28_7 type has 24 dosingPeriod");
         expect(
-          menstruationDateRange(model, setting, 0),
+          menstruationScheduleDateRange(model, setting, 0),
           DateRange(
             DateTime.parse("2021-02-09"),
             DateTime.parse("2021-02-11"),
@@ -109,9 +109,9 @@ void main() {
           reminderTimes: [ReminderTime(hour: 1, minute: 1)],
         );
         assert(pillSheetType.dosingPeriod == 21,
-            "menstruationDateRange adding value with dosingPeriod when it will create DateRange. pillsheet_28_7 type has 24 dosingPeriod");
+            "menstruationScheduleDateRange adding value with dosingPeriod when it will create DateRange. pillsheet_28_7 type has 24 dosingPeriod");
         expect(
-          menstruationDateRange(model, setting, 1),
+          menstruationScheduleDateRange(model, setting, 1),
           DateRange(
             DateTime.parse("2020-10-21"),
             DateTime.parse("2020-10-23"),
@@ -139,9 +139,9 @@ void main() {
           reminderTimes: [ReminderTime(hour: 1, minute: 1)],
         );
         assert(pillSheetType.dosingPeriod == 21,
-            "menstruationDateRange adding value with dosingPeriod when it will create DateRange. pillsheet_28_7 type has 24 dosingPeriod");
+            "menstruationScheduleDateRange adding value with dosingPeriod when it will create DateRange. pillsheet_28_7 type has 24 dosingPeriod");
         expect(
-          menstruationDateRange(model, setting, 2),
+          menstruationScheduleDateRange(model, setting, 2),
           DateRange(
             DateTime.parse("2020-11-18"),
             DateTime.parse("2020-11-20"),

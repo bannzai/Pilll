@@ -8,7 +8,7 @@ import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/entity/setting.dart';
 import 'package:pilll/entity/weekday.dart';
 
-DateRange menstruationDateRange(
+DateRange menstruationScheduleDateRange(
   PillSheetModel pillSheet,
   Setting setting,
   int page,
@@ -52,7 +52,7 @@ List<CalendarBandModel> buildBandModels(
     return [];
   }
   return [
-    menstruationDateRange(pillSheet, setting!, page)
+    menstruationScheduleDateRange(pillSheet, setting!, page)
         .map((range) => CalendarMenstruationBandModel(range.begin, range.end)),
     nextPillSheetDateRange(pillSheet, page)
         .map((range) => CalendarNextPillSheetBandModel(range.begin, range.end))
