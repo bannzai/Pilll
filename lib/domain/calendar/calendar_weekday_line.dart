@@ -32,8 +32,7 @@ class CalendarWeekdayLine extends StatelessWidget {
       children: [
         Row(
           children: Weekday.values.map((weekday) {
-            final grayOutTile =
-                calendarState.dateTimeForGrayoutTile(weekday, line);
+            final grayOutTile = calendarState.dateTimeForGrayoutTile(weekday);
             if (grayOutTile != null) {
               return CalendarDayTile(
                 isToday: false,
@@ -42,7 +41,7 @@ class CalendarWeekdayLine extends StatelessWidget {
                 date: grayOutTile,
               );
             }
-            int day = calendarState.targetDay(weekday, line);
+            int day = calendarState.targetDay(weekday);
             if (calendarState.shouldFillEmptyTile(weekday, day)) {
               return Expanded(child: Container());
             }
@@ -70,7 +69,7 @@ class CalendarWeekdayLine extends StatelessWidget {
             );
           }).toList(),
         ),
-        ..._bands(context, bandModels, calendarState, horizontalPadding, line)
+        ..._bands(context, bandModels, calendarState, horizontalPadding)
       ],
     );
   }
@@ -89,7 +88,6 @@ class CalendarWeekdayLine extends StatelessWidget {
     List<CalendarBandModel> bandModels,
     CalendarState calendarState,
     double horizontalPadding,
-    int line,
   ) {
     return bandModels
         .map((bandModel) {
@@ -98,10 +96,9 @@ class CalendarWeekdayLine extends StatelessWidget {
           if (!isInRange) {
             return null;
           }
-          bool isLineBreaked =
-              calendarState.notInRangeAtLine(line, bandModel.begin);
+          bool isLineBreaked = calendarState.notInRangeAtLine(bandModel.begin);
           int start =
-              calendarState.offsetForStartPositionAtLine(line, bandModel.begin);
+              calendarState.offsetForStartPositionAtLine(bandModel.begin);
 
           final length =
               bandLength(calendarState.dateRange, bandModel, isLineBreaked);

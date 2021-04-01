@@ -10,16 +10,16 @@ DateTime _firstDayOfMonth(DateTime date) {
 
 abstract class CalendarState {
   DateRange get dateRange;
-  bool shouldGrayOutTile(Weekday weekday, int line);
+  bool shouldGrayOutTile(Weekday weekday);
   bool shouldFillEmptyTile(Weekday weekday, int day);
   bool shouldShowDiaryMark(List<Diary> diaries, int day);
-  int targetDay(Weekday weekday, int line);
-  DateTime? dateTimeForGrayoutTile(Weekday weekday, int line);
+  int targetDay(Weekday weekday);
+  DateTime? dateTimeForGrayoutTile(Weekday weekday);
   bool isToday(int day);
   DateTime buildDate(Weekday weekday);
 
-  bool notInRangeAtLine(int line, DateTime date);
-  int offsetForStartPositionAtLine(int line, DateTime begin);
+  bool notInRangeAtLine(DateTime date);
+  int offsetForStartPositionAtLine(DateTime begin);
 }
 
 class MonthlyCalendarState {
@@ -49,19 +49,6 @@ class MonthlyCalendarState {
     );
   }
 
-  bool notInRangeAtLine(int line, DateTime date) {
-    var range = dateRangeOfLine(line);
-    return !range.inRange(date.date());
-  }
-
-  int offsetForStartPositionAtLine(int line, DateTime begin) {
-    var range = dateRangeOfLine(line);
-    var isLineBreaked = notInRangeAtLine(line, begin);
-    return isLineBreaked
-        ? 0
-        : begin.date().difference(range.begin.date()).inDays;
-  }
-
   int _lastDay() => DateTime(date.year, date.month + 1, 0).day;
   int _weekdayOffset() =>
       WeekdayFunctions.weekdayFromDate(_firstDayOfMonth(date)).index;
@@ -69,29 +56,6 @@ class MonthlyCalendarState {
   int lineCount() => 5;
 
   MonthlyCalendarState(this.date);
-  bool shouldGrayOutTile(Weekday weekday, int line) =>
-      weekday.index < _weekdayOffset() && line == 1;
-  bool shouldFillEmptyTile(Weekday weekday, int day) => day > _lastDay();
-  bool shouldShowDiaryMark(List<Diary> diaries, int day) {
-    return diaries
-        .where((element) =>
-            isSameDay(element.date, DateTime(date.year, date.month, day)))
-        .isNotEmpty;
-  }
-
-  bool isToday(int day) =>
-      isSameDay(today(), DateTime(date.year, date.month, day));
-
-  int targetDay(Weekday weekday, int line) {
-    return (line - 1) * Weekday.values.length +
-        weekday.index -
-        _weekdayOffset() +
-        1;
-  }
-
-  DateTime buildDate(Weekday weekday) {
-    return DateTime(date.year, date.month, targetDay(weekday, 1));
-  }
 
   CalendarState weeklyCalendarState(int line) {
     return WeeklyCalendarStateForMonth(
@@ -104,9 +68,9 @@ class MonthlyCalendarState {
 class WeeklyCalendarState extends CalendarState {
   final DateRange dateRange;
 
-  DateTime? dateTimeForGrayoutTile(Weekday weekday, int line) => null;
+  DateTime? dateTimeForGrayoutTile(Weekday weekday) => null;
   WeeklyCalendarState(this.dateRange);
-  bool shouldGrayOutTile(Weekday weekday, int line) => false;
+  bool shouldGrayOutTile(Weekday weekday) => false;
   bool shouldFillEmptyTile(Weekday weekday, int day) => false;
   bool shouldShowDiaryMark(List<Diary> diaries, int day) {
     throw UnimplementedError();
@@ -117,7 +81,7 @@ class WeeklyCalendarState extends CalendarState {
       .map((e) => isSameDay(DateTime(e.year, e.month, day), e))
       .contains(true);
 
-  int targetDay(Weekday weekday, int line) {
+  int targetDay(Weekday weekday) {
     return Weekday.values.length + weekday.index - 1;
   }
 
@@ -125,11 +89,11 @@ class WeeklyCalendarState extends CalendarState {
     return dateRange.list()[weekday.index];
   }
 
-  bool notInRangeAtLine(int line, DateTime date) {
+  bool notInRangeAtLine(DateTime date) {
     throw UnimplementedError();
   }
 
-  int offsetForStartPositionAtLine(int line, DateTime begin) {
+  int offsetForStartPositionAtLine(DateTime begin) {
     throw UnimplementedError();
   }
 }
@@ -140,8 +104,8 @@ class WeeklyCalendarStateForMonth extends CalendarState {
 
   WeeklyCalendarStateForMonth(this.dateRange, this.targetDateOfMonth);
 
-  DateTime? dateTimeForGrayoutTile(Weekday weekday, int line) {
-    if (!shouldGrayOutTile(weekday, line)) {
+  DateTime? dateTimeForGrayoutTile(Weekday weekday) {
+    if (!shouldGrayOutTile(weekday)) {
       return null;
     }
     int offset = weekday.index;
@@ -158,12 +122,12 @@ class WeeklyCalendarStateForMonth extends CalendarState {
             offset);
   }
 
-  bool notInRangeAtLine(int line, DateTime date) {
+  bool notInRangeAtLine(DateTime date) {
     return !dateRange.inRange(date.date());
   }
 
-  int offsetForStartPositionAtLine(int line, DateTime begin) {
-    var isLineBreaked = notInRangeAtLine(line, begin);
+  int offsetForStartPositionAtLine(DateTime begin) {
+    var isLineBreaked = notInRangeAtLine(begin);
     return isLineBreaked
         ? 0
         : begin.date().difference(dateRange.begin.date()).inDays;
@@ -175,8 +139,7 @@ class WeeklyCalendarStateForMonth extends CalendarState {
   int _lastDay() =>
       DateTime(targetDateOfMonth.year, targetDateOfMonth.month + 1, 0).day;
 
-  bool shouldGrayOutTile(Weekday weekday, int line) =>
-      weekday.index < _weekdayOffset() && line == 1;
+  bool shouldGrayOutTile(Weekday weekday) => weekday.index < _weekdayOffset();
   bool shouldFillEmptyTile(Weekday weekday, int day) => day > _lastDay();
   bool shouldShowDiaryMark(List<Diary> diaries, int day) {
     return diaries
@@ -188,15 +151,12 @@ class WeeklyCalendarStateForMonth extends CalendarState {
   bool isToday(int day) => isSameDay(
       today(), DateTime(targetDateOfMonth.year, targetDateOfMonth.month, day));
 
-  int targetDay(Weekday weekday, int line) {
-    return (line - 1) * Weekday.values.length +
-        weekday.index -
-        _weekdayOffset() +
-        1;
+  int targetDay(Weekday weekday) {
+    return dateRange.begin.add(Duration(days: weekday.index + 1)).day;
   }
 
   DateTime buildDate(Weekday weekday) {
     return DateTime(
-        targetDateOfMonth.year, targetDateOfMonth.month, targetDay(weekday, 1));
+        targetDateOfMonth.year, targetDateOfMonth.month, targetDay(weekday));
   }
 }
