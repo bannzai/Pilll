@@ -34,8 +34,13 @@ class CalendarWeekdayLine extends StatelessWidget {
       children: [
         Row(
           children: Weekday.values.map((weekday) {
-            final grayOutTileDate =
-                calendarState.dateTimeForGrayoutTile(weekday);
+            final date = calendarState.buildDate(weekday);
+            final isOutOfBoundsInLine = !calendarState.dateRange.inRange(date);
+            if (isOutOfBoundsInLine) {
+              return Expanded(child: Container());
+            }
+
+            final grayOutTileDate = calendarState.dateTimeForGrayoutTile(date);
             if (grayOutTileDate != null) {
               return CalendarDayTile(
                 isToday: false,
@@ -43,11 +48,6 @@ class CalendarWeekdayLine extends StatelessWidget {
                 weekday: weekday,
                 date: grayOutTileDate,
               );
-            }
-            final date = calendarState.buildDate(weekday);
-            final isOutOfBoundsInLine = !calendarState.dateRange.inRange(date);
-            if (isOutOfBoundsInLine) {
-              return Expanded(child: Container());
             }
             return CalendarDayTile(
               isToday: isSameDay(today(), date),
