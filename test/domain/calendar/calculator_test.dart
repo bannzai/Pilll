@@ -5,12 +5,12 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 void main() {
-  late CalendarState calculator;
+  late CalendarState calendarState;
   late DateTime date;
   setUp(() {
     TestWidgetsFlutterBinding.ensureInitialized();
     SharedPreferences.setMockInitialValues({});
-    calculator = CalendarState(date);
+    calendarState = CalendarState(date);
   });
   group("2020-09-14", () {
     /*
@@ -26,58 +26,58 @@ void main() {
     */
     date = DateTime.parse("2020-09-14");
     test("#dateTimeForPreviousMonthTile", () {
-      expect(calculator.dateTimeForPreviousMonthTile(Weekday.Sunday.index),
+      expect(calendarState.dateTimeForPreviousMonthTile(Weekday.Sunday.index),
           DateTime.parse("2020-08-30"));
-      expect(calculator.dateTimeForPreviousMonthTile(Weekday.Monday.index),
+      expect(calendarState.dateTimeForPreviousMonthTile(Weekday.Monday.index),
           DateTime.parse("2020-08-31"));
     });
     test("#lastDay", () {
-      expect(calculator.lastDay(), DateTime.parse("2020-09-30").day);
+      expect(calendarState.lastDay(), DateTime.parse("2020-09-30").day);
     });
 
     test("#weekdayOffset", () {
-      expect(calculator.weekdayOffset(), 2);
+      expect(calendarState.weekdayOffset(), 2);
     });
     test("#previousMonthDayCount", () {
-      expect(calculator.previousMonthDayCount(), 2);
+      expect(calendarState.previousMonthDayCount(), 2);
     });
     test("#tileCount", () {
-      expect(calculator.tileCount(), 2 + 30);
+      expect(calendarState.tileCount(), 2 + 30);
     });
     test("#lineCount", () {
-      expect(calculator.lineCount(), 5);
+      expect(calendarState.lineCount(), 5);
     });
     test("#dateRangeOfLine", () {
       expect(
-        calculator.dateRangeOfLine(1),
+        calendarState.dateRangeOfLine(1),
         DateRange(
           DateTime.parse("2020-08-30"),
           DateTime.parse("2020-09-05"),
         ),
       );
       expect(
-        calculator.dateRangeOfLine(2),
+        calendarState.dateRangeOfLine(2),
         DateRange(
           DateTime.parse("2020-09-06"),
           DateTime.parse("2020-09-12"),
         ),
       );
       expect(
-        calculator.dateRangeOfLine(3),
+        calendarState.dateRangeOfLine(3),
         DateRange(
           DateTime.parse("2020-09-13"),
           DateTime.parse("2020-09-19"),
         ),
       );
       expect(
-        calculator.dateRangeOfLine(4),
+        calendarState.dateRangeOfLine(4),
         DateRange(
           DateTime.parse("2020-09-20"),
           DateTime.parse("2020-09-26"),
         ),
       );
       expect(
-        calculator.dateRangeOfLine(5),
+        calendarState.dateRangeOfLine(5),
         DateRange(
           DateTime.parse("2020-09-27"),
           DateTime.parse("2020-09-30"),
@@ -86,46 +86,46 @@ void main() {
     });
     test("#notInRangeAtLine", () {
       expect(
-        calculator.notInRangeAtLine(1, DateTime.parse("2020-08-31")),
+        calendarState.notInRangeAtLine(1, DateTime.parse("2020-08-31")),
         false,
       );
       expect(
-        calculator.notInRangeAtLine(1, DateTime.parse("2020-09-01")),
+        calendarState.notInRangeAtLine(1, DateTime.parse("2020-09-01")),
         false,
       );
       expect(
-        calculator.notInRangeAtLine(4, DateTime.parse("2020-09-19")),
+        calendarState.notInRangeAtLine(4, DateTime.parse("2020-09-19")),
         true,
       );
       expect(
-        calculator.notInRangeAtLine(3, DateTime.parse("2020-09-19")),
+        calendarState.notInRangeAtLine(3, DateTime.parse("2020-09-19")),
         false,
       );
     });
     test("#offsetForStartPositionAtLine", () {
       expect(
-        calculator.offsetForStartPositionAtLine(
+        calendarState.offsetForStartPositionAtLine(
           1,
           DateTime.parse("2020-08-31"),
         ),
         1,
       );
       expect(
-        calculator.offsetForStartPositionAtLine(
+        calendarState.offsetForStartPositionAtLine(
           1,
           DateTime.parse("2020-09-01"),
         ),
         2,
       );
       expect(
-        calculator.offsetForStartPositionAtLine(
+        calendarState.offsetForStartPositionAtLine(
           4,
           DateTime.parse("2020-09-19"),
         ),
         0,
       );
       expect(
-        calculator.offsetForStartPositionAtLine(
+        calendarState.offsetForStartPositionAtLine(
           3,
           DateTime.parse("2020-09-19"),
         ),
