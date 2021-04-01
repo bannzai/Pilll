@@ -3,9 +3,10 @@ import 'package:pilll/domain/calendar/calendar_band.dart';
 import 'package:pilll/domain/calendar/calendar_band_model.dart';
 import 'package:pilll/domain/calendar/calendar_day_tile.dart';
 import 'package:pilll/domain/calendar/utility.dart';
+import 'package:pilll/domain/calendar/weekly_calendar_state.dart';
 import 'package:pilll/domain/diary/post_diary_page.dart';
 import 'package:flutter/material.dart';
-import 'package:pilll/domain/calendar/calendar_state.dart';
+import 'package:pilll/domain/calendar/monthly_calendar_state.dart';
 import 'package:pilll/entity/diary.dart';
 import 'package:pilll/entity/weekday.dart';
 import 'package:pilll/domain/diary/confirm_diary_sheet.dart';
@@ -16,7 +17,7 @@ import 'package:pilll/util/datetime/day.dart';
 class CalendarWeekdayLine extends StatelessWidget {
   final BuildContext context;
   final List<Diary> diaries;
-  final CalendarState calendarState;
+  final WeeklyCalendarState calendarState;
   final List<CalendarBandModel> bandModels;
   final double horizontalPadding;
 
@@ -90,7 +91,7 @@ class CalendarWeekdayLine extends StatelessWidget {
   List<Widget> _bands(
     BuildContext context,
     List<CalendarBandModel> bandModels,
-    CalendarState calendarState,
+    WeeklyCalendarState calendarState,
     double horizontalPadding,
   ) {
     return bandModels
