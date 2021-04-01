@@ -22,7 +22,7 @@ class DateRange {
   }
 
   List<DateTime> list() =>
-      List.generate(days, (index) => _begin.add(Duration(days: index)));
+      List.generate(days + 1, (index) => _begin.add(Duration(days: index)));
 
   T map<T extends dynamic>(T Function(DateRange) converter) {
     return converter(this);

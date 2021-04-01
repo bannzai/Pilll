@@ -11,15 +11,15 @@ DateTime _firstDayOfMonth(DateTime date) {
 abstract class CalendarState {
   DateRange get dateRange;
 
-  bool shouldGrayOutTile(Weekday weekday);
-  bool shouldFillEmptyTile(Weekday weekday, DateTime date);
   bool shouldShowDiaryMark(List<Diary> diaries, DateTime date);
   bool isNecessaryLineBreak(DateTime date);
 
   int offsetForStartPositionAtLine(DateTime begin);
 
   DateTime? dateTimeForGrayoutTile(Weekday weekday);
-  DateTime buildDate(Weekday weekday);
+  DateTime buildDate(Weekday weekday) {
+    return dateRange.begin.add(Duration(days: weekday.index));
+  }
 
   int targetDay(Weekday weekday) {
     return dateRange.begin.add(Duration(days: weekday.index + 1)).day;
@@ -74,14 +74,8 @@ class WeeklyCalendarState extends CalendarState {
 
   DateTime? dateTimeForGrayoutTile(Weekday weekday) => null;
   WeeklyCalendarState(this.dateRange);
-  bool shouldGrayOutTile(Weekday weekday) => false;
-  bool shouldFillEmptyTile(Weekday weekday, DateTime date) => false;
   bool shouldShowDiaryMark(List<Diary> diaries, DateTime date) {
     throw UnimplementedError();
-  }
-
-  DateTime buildDate(Weekday weekday) {
-    return dateRange.list()[weekday.index];
   }
 
   bool isNecessaryLineBreak(DateTime date) {
@@ -100,7 +94,7 @@ class WeeklyCalendarStateForMonth extends CalendarState {
   WeeklyCalendarStateForMonth(this.dateRange, this.targetDateOfMonth);
 
   DateTime? dateTimeForGrayoutTile(Weekday weekday) {
-    if (!shouldGrayOutTile(weekday)) {
+    if (!_shouldGrayOutTile(weekday)) {
       return null;
     }
     int offset = weekday.index;
@@ -128,18 +122,11 @@ class WeeklyCalendarStateForMonth extends CalendarState {
         : begin.date().difference(dateRange.begin.date()).inDays;
   }
 
-  bool shouldGrayOutTile(Weekday weekday) =>
+  bool _shouldGrayOutTile(Weekday weekday) =>
       weekday.index <
       WeekdayFunctions.weekdayFromDate(_firstDayOfMonth(targetDateOfMonth))
           .index;
-  bool shouldFillEmptyTile(Weekday weekday, DateTime date) =>
-      date.isAfter(dateRange.end);
   bool shouldShowDiaryMark(List<Diary> diaries, DateTime date) {
     return diaries.where((element) => isSameDay(element.date, date)).isNotEmpty;
-  }
-
-  DateTime buildDate(Weekday weekday) {
-    return DateTime(
-        targetDateOfMonth.year, targetDateOfMonth.month, targetDay(weekday));
   }
 }
