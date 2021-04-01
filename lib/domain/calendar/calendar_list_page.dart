@@ -11,10 +11,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 
 class CalendarListPageModel {
-  final CalendarState calculator;
+  final CalendarState calendarState;
   final List<CalendarBandModel> bandModels;
 
-  CalendarListPageModel(this.calculator, this.bandModels);
+  CalendarListPageModel(this.calendarState, this.bandModels);
 }
 
 abstract class CalendarListPageConst {
@@ -88,7 +88,7 @@ class CalendarListPage extends HookWidget {
         children: [
           SizedBox(width: 16),
           Text(
-            DateTimeFormatter.yearAndMonth(model.calculator.date),
+            DateTimeFormatter.yearAndMonth(model.calendarState.date),
             textAlign: TextAlign.left,
             style: FontType.cardHeader.merge(TextColorStyle.noshime),
           ),
@@ -100,8 +100,10 @@ class CalendarListPage extends HookWidget {
 
   Calendar _calendar(BuildContext context, CalendarListPageModel model) {
     return Calendar(
-      key: isSameMonth(model.calculator.date, today()) ? currentMonthKey : null,
-      calculator: model.calculator,
+      key: isSameMonth(model.calendarState.date, today())
+          ? currentMonthKey
+          : null,
+      calendarState: model.calendarState,
       bandModels: model.bandModels,
       horizontalPadding: 0,
     );
