@@ -1,12 +1,15 @@
-import 'dart:isolate';
-
 import 'package:pilll/domain/calendar/date_range.dart';
 import 'package:pilll/entity/diary.dart';
 import 'package:pilll/entity/weekday.dart';
 import 'package:pilll/util/datetime/date_compare.dart';
 import 'package:pilll/util/datetime/day.dart';
 
+DateTime _firstDayOfMonth(DateTime date) {
+  return DateTime(date.year, date.month, 1);
+}
+
 abstract class CalendarState {
+  DateRange get dateRange;
   bool shouldGrayOutTile(Weekday weekday, int line);
   bool shouldFillEmptyTile(Weekday weekday, int day);
   bool shouldShowDiaryMark(List<Diary> diaries, int day);
@@ -15,33 +18,12 @@ abstract class CalendarState {
   bool isToday(int day);
   DateTime buildDate(Weekday weekday);
 
-  DateRange dateRangeOfLine(int line);
   bool notInRangeAtLine(int line, DateTime date);
   int offsetForStartPositionAtLine(int line, DateTime begin);
 }
 
-class MonthlyCalendarState extends CalendarState {
+class MonthlyCalendarState {
   final DateTime date;
-  DateTime dateTimeForFirstDayOfMonth() {
-    return DateTime(date.year, date.month, 1);
-  }
-
-  DateTime? dateTimeForGrayoutTile(Weekday weekday, int line) {
-    if (!shouldGrayOutTile(weekday, line)) {
-      return null;
-    }
-    int offset = weekday.index;
-    var dateTimeForLastDayOfPreviousMonth = DateTime(date.year, date.month, 0);
-    var lastDayForPreviousMonthWeekdayIndex =
-        WeekdayFunctions.weekdayFromDate(dateTimeForLastDayOfPreviousMonth)
-            .index;
-    return DateTime(
-        dateTimeForLastDayOfPreviousMonth.year,
-        dateTimeForLastDayOfPreviousMonth.month,
-        dateTimeForLastDayOfPreviousMonth.day -
-            lastDayForPreviousMonthWeekdayIndex +
-            offset);
-  }
 
   DateRange dateRangeOfLine(int line) {
     if (line == 1) {
@@ -82,10 +64,9 @@ class MonthlyCalendarState extends CalendarState {
 
   int _lastDay() => DateTime(date.year, date.month + 1, 0).day;
   int _weekdayOffset() =>
-      WeekdayFunctions.weekdayFromDate(dateTimeForFirstDayOfMonth()).index;
+      WeekdayFunctions.weekdayFromDate(_firstDayOfMonth(date)).index;
   int _previousMonthDayCount() => _weekdayOffset();
-  int _tileCount() => _previousMonthDayCount() + _lastDay();
-  int lineCount() => (_tileCount() / 7).ceil();
+  int lineCount() => 5;
 
   MonthlyCalendarState(this.date);
   bool shouldGrayOutTile(Weekday weekday, int line) =>
@@ -110,6 +91,13 @@ class MonthlyCalendarState extends CalendarState {
 
   DateTime buildDate(Weekday weekday) {
     return DateTime(date.year, date.month, targetDay(weekday, 1));
+  }
+
+  CalendarState weeklyCalendarState(int line) {
+    return WeeklyCalendarStateForMonth(
+      dateRangeOfLine(line),
+      date,
+    );
   }
 }
 
@@ -137,15 +125,78 @@ class WeeklyCalendarState extends CalendarState {
     return dateRange.list()[weekday.index];
   }
 
-  DateRange dateRangeOfLine(int line) {
-    throw UnimplementedError();
-  }
-
   bool notInRangeAtLine(int line, DateTime date) {
     throw UnimplementedError();
   }
 
   int offsetForStartPositionAtLine(int line, DateTime begin) {
     throw UnimplementedError();
+  }
+}
+
+class WeeklyCalendarStateForMonth extends CalendarState {
+  final DateRange dateRange;
+  final DateTime targetDateOfMonth;
+
+  WeeklyCalendarStateForMonth(this.dateRange, this.targetDateOfMonth);
+
+  DateTime? dateTimeForGrayoutTile(Weekday weekday, int line) {
+    if (!shouldGrayOutTile(weekday, line)) {
+      return null;
+    }
+    int offset = weekday.index;
+    var dateTimeForLastDayOfPreviousMonth =
+        DateTime(targetDateOfMonth.year, targetDateOfMonth.month, 0);
+    var lastDayForPreviousMonthWeekdayIndex =
+        WeekdayFunctions.weekdayFromDate(dateTimeForLastDayOfPreviousMonth)
+            .index;
+    return DateTime(
+        dateTimeForLastDayOfPreviousMonth.year,
+        dateTimeForLastDayOfPreviousMonth.month,
+        dateTimeForLastDayOfPreviousMonth.day -
+            lastDayForPreviousMonthWeekdayIndex +
+            offset);
+  }
+
+  bool notInRangeAtLine(int line, DateTime date) {
+    return !dateRange.inRange(date.date());
+  }
+
+  int offsetForStartPositionAtLine(int line, DateTime begin) {
+    var isLineBreaked = notInRangeAtLine(line, begin);
+    return isLineBreaked
+        ? 0
+        : begin.date().difference(dateRange.begin.date()).inDays;
+  }
+
+  int _weekdayOffset() =>
+      WeekdayFunctions.weekdayFromDate(_firstDayOfMonth(targetDateOfMonth))
+          .index;
+  int _lastDay() =>
+      DateTime(targetDateOfMonth.year, targetDateOfMonth.month + 1, 0).day;
+
+  bool shouldGrayOutTile(Weekday weekday, int line) =>
+      weekday.index < _weekdayOffset() && line == 1;
+  bool shouldFillEmptyTile(Weekday weekday, int day) => day > _lastDay();
+  bool shouldShowDiaryMark(List<Diary> diaries, int day) {
+    return diaries
+        .where((element) => isSameDay(element.date,
+            DateTime(targetDateOfMonth.year, targetDateOfMonth.month, day)))
+        .isNotEmpty;
+  }
+
+  bool isToday(int day) => isSameDay(
+      today(), DateTime(targetDateOfMonth.year, targetDateOfMonth.month, day));
+
+  int targetDay(Weekday weekday, int line) {
+    return (line - 1) * Weekday.values.length +
+        weekday.index -
+        _weekdayOffset() +
+        1;
+  }
+
+  DateTime buildDate(Weekday weekday) {
+    return DateTime(
+        targetDateOfMonth.year, targetDateOfMonth.month, targetDay(weekday, 1));
   }
 }
