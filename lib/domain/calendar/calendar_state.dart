@@ -24,12 +24,12 @@ abstract class CalendarState {
             offset);
   }
 
-  int lastDay() => DateTime(date.year, date.month + 1, 0).day;
+  int _lastDay() => DateTime(date.year, date.month + 1, 0).day;
   int _weekdayOffset() =>
       WeekdayFunctions.weekdayFromDate(dateTimeForFirstDayOfMonth()).index;
   int _previousMonthDayCount() => _weekdayOffset();
-  int tileCount() => _previousMonthDayCount() + lastDay();
-  int lineCount() => (tileCount() / 7).ceil();
+  int _tileCount() => _previousMonthDayCount() + _lastDay();
+  int lineCount() => (_tileCount() / 7).ceil();
 
   DateRange dateRangeOfLine(int line) {
     if (line == 1) {
@@ -43,7 +43,7 @@ abstract class CalendarState {
       return DateRange(
         DateTime(date.year, date.month,
             Weekday.values.length * (line - 1) + 1 - _previousMonthDayCount()),
-        DateTime(date.year, date.month, lastDay()),
+        DateTime(date.year, date.month, _lastDay()),
       );
     }
     var beginDay =
@@ -80,7 +80,7 @@ class MonthlyCalendarState extends CalendarState {
   MonthlyCalendarState(this.date);
   bool shouldGrayOutTile(Weekday weekday, int line) =>
       weekday.index < _weekdayOffset() && line == 1;
-  bool shouldFillEmptyTile(Weekday weekday, int day) => day > lastDay();
+  bool shouldFillEmptyTile(Weekday weekday, int day) => day > _lastDay();
   bool shouldShowDiaryMark(List<Diary> diaries, int day) {
     return diaries
         .where((element) =>
