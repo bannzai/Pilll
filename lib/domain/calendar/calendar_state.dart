@@ -1,5 +1,7 @@
 import 'package:pilll/domain/calendar/date_range.dart';
+import 'package:pilll/entity/diary.dart';
 import 'package:pilll/entity/weekday.dart';
+import 'package:pilll/util/datetime/date_compare.dart';
 import 'package:pilll/util/datetime/day.dart';
 
 abstract class CalendarState {
@@ -65,10 +67,23 @@ abstract class CalendarState {
         ? 0
         : begin.date().difference(range.begin.date()).inDays;
   }
+
+  bool shouldGrayOutTile(Weekday weekday, int line);
+  bool shouldFillEmptyTile(Weekday weekday, int day);
+  bool shouldShowDiaryMark(List<Diary> diaries, int day);
 }
 
 class MonthlyCalendarState extends CalendarState {
   final DateTime date;
 
   MonthlyCalendarState(this.date);
+  bool shouldGrayOutTile(Weekday weekday, int line) =>
+      weekday.index < weekdayOffset() && line == 1;
+  bool shouldFillEmptyTile(Weekday weekday, int day) => day > lastDay();
+  bool shouldShowDiaryMark(List<Diary> diaries, int day) {
+    return diaries
+        .where((element) =>
+            isSameDay(element.date, DateTime(date.year, date.month, day)))
+        .isNotEmpty;
+  }
 }

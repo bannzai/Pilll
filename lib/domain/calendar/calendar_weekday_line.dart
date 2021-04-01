@@ -35,44 +35,41 @@ class CalendarWeekdayLine extends StatelessWidget {
       children: [
         Row(
           children: Weekday.values.map((weekday) {
-            bool isPreviousMonth =
-                weekday.index < calendarState.weekdayOffset() && line == 1;
-            if (isPreviousMonth) {
+            if (calendarState.shouldGrayOutTile(weekday, line)) {
               return CalendarDayTile(
-                  isToday: false,
-                  onTap: null,
-                  weekday: weekday,
-                  day: calendarState
-                      .dateTimeForPreviousMonthTile(weekday.index)
-                      .day);
+                isToday: false,
+                onTap: null,
+                weekday: weekday,
+                date: DateTime(
+                    calendarState.date.year,
+                    calendarState.date.month,
+                    calendarState
+                        .dateTimeForPreviousMonthTile(weekday.index)
+                        .day),
+              );
             }
             int day = (line - 1) * Weekday.values.length +
                 weekday.index -
                 calendarState.weekdayOffset() +
                 1;
-            bool isNextMonth = day > calendarState.lastDay();
-            if (isNextMonth) {
+            if (calendarState.shouldFillEmptyTile(weekday, day)) {
               return Expanded(child: Container());
             }
-            bool isExistDiary = diaries
-                .where((element) => isSameDay(element.date,
-                    DateTime(calendarState.date.year, calendarState.date.month, day)))
-                .isNotEmpty;
             final targetMonth = calendarState.date;
             return CalendarDayTile(
               isToday: isSameDay(utility.today(),
                   DateTime(targetMonth.year, targetMonth.month, day)),
               weekday: weekday,
-              day: day,
-              upperWidget: isExistDiary ? _diaryMarkWidget() : null,
-              onTap: () {
-                final date = calendarState
-                    .dateTimeForFirstDayOfMonth()
-                    .add(Duration(days: day - 1));
+              date: DateTime(
+                  calendarState.date.year, calendarState.date.month, day),
+              upperWidget: calendarState.shouldShowDiaryMark(diaries, day)
+                  ? _diaryMarkWidget()
+                  : null,
+              onTap: (date) {
                 if (date.isAfter(utility.today())) {
                   return;
                 }
-                if (!isExistDiary) {
+                if (!calendarState.shouldShowDiaryMark(diaries, day)) {
                   Navigator.of(context).push(PostDiaryPageRoute.route(date));
                 } else {
                   showModalBottomSheet(
