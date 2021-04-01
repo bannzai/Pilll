@@ -2,10 +2,8 @@ import 'package:pilll/domain/calendar/date_range.dart';
 import 'package:pilll/entity/weekday.dart';
 import 'package:pilll/util/datetime/day.dart';
 
-class MonthlyCalendarState {
-  final DateTime date;
-
-  MonthlyCalendarState(this.date);
+abstract class CalendarState {
+  DateTime get date;
 
   DateTime dateTimeForFirstDayOfMonth() {
     return DateTime(date.year, date.month, 1);
@@ -67,4 +65,10 @@ class MonthlyCalendarState {
         ? 0
         : begin.date().difference(range.begin.date()).inDays;
   }
+}
+
+class MonthlyCalendarState extends CalendarState {
+  final DateTime date;
+
+  MonthlyCalendarState(this.date);
 }
