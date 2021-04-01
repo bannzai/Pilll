@@ -25,30 +25,30 @@ abstract class CalendarState {
   }
 
   int lastDay() => DateTime(date.year, date.month + 1, 0).day;
-  int weekdayOffset() =>
+  int _weekdayOffset() =>
       WeekdayFunctions.weekdayFromDate(dateTimeForFirstDayOfMonth()).index;
-  int previousMonthDayCount() => weekdayOffset();
-  int tileCount() => previousMonthDayCount() + lastDay();
+  int _previousMonthDayCount() => _weekdayOffset();
+  int tileCount() => _previousMonthDayCount() + lastDay();
   int lineCount() => (tileCount() / 7).ceil();
 
   DateRange dateRangeOfLine(int line) {
     if (line == 1) {
       return DateRange(
-        DateTime(date.year, date.month, 1 - previousMonthDayCount()),
+        DateTime(date.year, date.month, 1 - _previousMonthDayCount()),
         DateTime(date.year, date.month,
-            Weekday.values.length - previousMonthDayCount()),
+            Weekday.values.length - _previousMonthDayCount()),
       );
     }
     if (line == lineCount()) {
       return DateRange(
         DateTime(date.year, date.month,
-            Weekday.values.length * (line - 1) + 1 - previousMonthDayCount()),
+            Weekday.values.length * (line - 1) + 1 - _previousMonthDayCount()),
         DateTime(date.year, date.month, lastDay()),
       );
     }
     var beginDay =
-        Weekday.values.length * (line - 1) - previousMonthDayCount() + 1;
-    var endDay = Weekday.values.length * line - previousMonthDayCount();
+        Weekday.values.length * (line - 1) - _previousMonthDayCount() + 1;
+    var endDay = Weekday.values.length * line - _previousMonthDayCount();
     return DateRange(
       DateTime(date.year, date.month, beginDay),
       DateTime(date.year, date.month, endDay),
@@ -71,6 +71,7 @@ abstract class CalendarState {
   bool shouldGrayOutTile(Weekday weekday, int line);
   bool shouldFillEmptyTile(Weekday weekday, int day);
   bool shouldShowDiaryMark(List<Diary> diaries, int day);
+  int targetDay(Weekday weekday, int line);
 }
 
 class MonthlyCalendarState extends CalendarState {
@@ -78,12 +79,19 @@ class MonthlyCalendarState extends CalendarState {
 
   MonthlyCalendarState(this.date);
   bool shouldGrayOutTile(Weekday weekday, int line) =>
-      weekday.index < weekdayOffset() && line == 1;
+      weekday.index < _weekdayOffset() && line == 1;
   bool shouldFillEmptyTile(Weekday weekday, int day) => day > lastDay();
   bool shouldShowDiaryMark(List<Diary> diaries, int day) {
     return diaries
         .where((element) =>
             isSameDay(element.date, DateTime(date.year, date.month, day)))
         .isNotEmpty;
+  }
+
+  int targetDay(Weekday weekday, int line) {
+    return (line - 1) * Weekday.values.length +
+        weekday.index -
+        _weekdayOffset() +
+        1;
   }
 }

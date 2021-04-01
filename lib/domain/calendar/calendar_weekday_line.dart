@@ -48,10 +48,7 @@ class CalendarWeekdayLine extends StatelessWidget {
                         .day),
               );
             }
-            int day = (line - 1) * Weekday.values.length +
-                weekday.index -
-                calendarState.weekdayOffset() +
-                1;
+            int day = calendarState.targetDay(weekday, line);
             if (calendarState.shouldFillEmptyTile(weekday, day)) {
               return Expanded(child: Container());
             }
