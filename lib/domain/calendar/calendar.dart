@@ -70,7 +70,7 @@ class Calendar extends HookWidget {
         ),
         Divider(height: 1),
         ...List.generate(calendarState.lineCount(), (_line) {
-          var line = _line + 1;
+          final line = _line + 1;
           return Column(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: <Widget>[
