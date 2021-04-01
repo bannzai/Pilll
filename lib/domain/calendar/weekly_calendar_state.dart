@@ -8,9 +8,16 @@ abstract class WeeklyCalendarState {
   DateRange get dateRange;
 
   bool shouldShowDiaryMark(List<Diary> diaries, DateTime date);
-  bool isNecessaryLineBreak(DateTime date);
+  bool isNecessaryLineBreak(DateTime date) {
+    return !dateRange.inRange(date.date());
+  }
 
-  int offsetForStartPositionAtLine(DateTime begin);
+  int offsetForStartPositionAtLine(DateTime begin) {
+    var isLineBreaked = isNecessaryLineBreak(begin);
+    return isLineBreaked
+        ? 0
+        : begin.date().difference(dateRange.begin.date()).inDays;
+  }
 
   DateTime? dateTimeForGrayoutTile(DateTime date);
   DateTime buildDate(Weekday weekday) {
@@ -27,17 +34,7 @@ class SinglelineWeeklyCalendarState extends WeeklyCalendarState {
 
   DateTime? dateTimeForGrayoutTile(DateTime date) => null;
   SinglelineWeeklyCalendarState(this.dateRange);
-  bool shouldShowDiaryMark(List<Diary> diaries, DateTime date) {
-    throw UnimplementedError();
-  }
-
-  bool isNecessaryLineBreak(DateTime date) {
-    throw UnimplementedError();
-  }
-
-  int offsetForStartPositionAtLine(DateTime begin) {
-    throw UnimplementedError();
-  }
+  bool shouldShowDiaryMark(List<Diary> diaries, DateTime date) => false;
 }
 
 class MultilineCalendarState extends WeeklyCalendarState {
@@ -62,17 +59,6 @@ class MultilineCalendarState extends WeeklyCalendarState {
         dateTimeForLastDayOfPreviousMonth.day -
             lastDayForPreviousMonthWeekdayIndex +
             offset);
-  }
-
-  bool isNecessaryLineBreak(DateTime date) {
-    return !dateRange.inRange(date.date());
-  }
-
-  int offsetForStartPositionAtLine(DateTime begin) {
-    var isLineBreaked = isNecessaryLineBreak(begin);
-    return isLineBreaked
-        ? 0
-        : begin.date().difference(dateRange.begin.date()).inDays;
   }
 
   bool _shouldGrayOutTile(DateTime date) =>
