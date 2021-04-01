@@ -4,11 +4,7 @@ import 'package:pilll/entity/weekday.dart';
 import 'package:pilll/util/datetime/date_compare.dart';
 import 'package:pilll/util/datetime/day.dart';
 
-DateTime _firstDayOfMonth(DateTime date) {
-  return DateTime(date.year, date.month, 1);
-}
-
-abstract class CalendarState {
+abstract class WeeklyCalendarState {
   DateRange get dateRange;
 
   bool shouldShowDiaryMark(List<Diary> diaries, DateTime date);
@@ -26,55 +22,11 @@ abstract class CalendarState {
   }
 }
 
-class MonthlyCalendarState {
-  final DateTime date;
-
-  DateRange dateRangeOfLine(int line) {
-    if (line == 1) {
-      return DateRange(
-        DateTime(date.year, date.month, 1 - _previousMonthDayCount()),
-        DateTime(date.year, date.month,
-            Weekday.values.length - _previousMonthDayCount()),
-      );
-    }
-    if (line == lineCount()) {
-      return DateRange(
-        DateTime(date.year, date.month,
-            Weekday.values.length * (line - 1) + 1 - _previousMonthDayCount()),
-        DateTime(date.year, date.month, _lastDay()),
-      );
-    }
-    var beginDay =
-        Weekday.values.length * (line - 1) - _previousMonthDayCount() + 1;
-    var endDay = Weekday.values.length * line - _previousMonthDayCount();
-    return DateRange(
-      DateTime(date.year, date.month, beginDay),
-      DateTime(date.year, date.month, endDay),
-    );
-  }
-
-  int _lastDay() => DateTime(date.year, date.month + 1, 0).day;
-  int _weekdayOffset() =>
-      WeekdayFunctions.weekdayFromDate(_firstDayOfMonth(date)).index;
-  int _previousMonthDayCount() => _weekdayOffset();
-  int _tileCount() => _previousMonthDayCount() + _lastDay();
-  int lineCount() => (_tileCount() / Weekday.values.length).ceil();
-
-  MonthlyCalendarState(this.date);
-
-  CalendarState weeklyCalendarState(int line) {
-    return WeeklyCalendarStateForMonth(
-      dateRangeOfLine(line),
-      date,
-    );
-  }
-}
-
-class WeeklyCalendarState extends CalendarState {
+class SinglelineWeeklyCalendarState extends WeeklyCalendarState {
   final DateRange dateRange;
 
   DateTime? dateTimeForGrayoutTile(DateTime date) => null;
-  WeeklyCalendarState(this.dateRange);
+  SinglelineWeeklyCalendarState(this.dateRange);
   bool shouldShowDiaryMark(List<Diary> diaries, DateTime date) {
     throw UnimplementedError();
   }
@@ -88,11 +40,11 @@ class WeeklyCalendarState extends CalendarState {
   }
 }
 
-class WeeklyCalendarStateForMonth extends CalendarState {
+class MultilineCalendarState extends WeeklyCalendarState {
   final DateRange dateRange;
   final DateTime targetDateOfMonth;
 
-  WeeklyCalendarStateForMonth(this.dateRange, this.targetDateOfMonth);
+  MultilineCalendarState(this.dateRange, this.targetDateOfMonth);
 
   DateTime? dateTimeForGrayoutTile(DateTime date) {
     if (_shouldGrayOutTile(date)) {
