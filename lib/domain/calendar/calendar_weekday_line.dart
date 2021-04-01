@@ -96,7 +96,7 @@ class CalendarWeekdayLine extends StatelessWidget {
           if (!isInRange) {
             return null;
           }
-          bool isLineBreaked = calendarState.notInRangeAtLine(bandModel.begin);
+          bool isLineBreaked = calendarState.isNecessaryLineBreak(bandModel.begin);
           int start =
               calendarState.offsetForStartPositionAtLine(bandModel.begin);
 
