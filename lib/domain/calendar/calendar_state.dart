@@ -18,7 +18,7 @@ abstract class CalendarState {
   bool isToday(int day);
   DateTime buildDate(Weekday weekday);
 
-  bool notInRangeAtLine(DateTime date);
+  bool isNecessaryLineBreak(DateTime date);
   int offsetForStartPositionAtLine(DateTime begin);
 }
 
@@ -89,7 +89,7 @@ class WeeklyCalendarState extends CalendarState {
     return dateRange.list()[weekday.index];
   }
 
-  bool notInRangeAtLine(DateTime date) {
+  bool isNecessaryLineBreak(DateTime date) {
     throw UnimplementedError();
   }
 
@@ -122,12 +122,12 @@ class WeeklyCalendarStateForMonth extends CalendarState {
             offset);
   }
 
-  bool notInRangeAtLine(DateTime date) {
+  bool isNecessaryLineBreak(DateTime date) {
     return !dateRange.inRange(date.date());
   }
 
   int offsetForStartPositionAtLine(DateTime begin) {
-    var isLineBreaked = notInRangeAtLine(begin);
+    var isLineBreaked = isNecessaryLineBreak(begin);
     return isLineBreaked
         ? 0
         : begin.date().difference(dateRange.begin.date()).inDays;

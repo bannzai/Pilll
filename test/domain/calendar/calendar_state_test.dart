@@ -74,19 +74,19 @@ void main() {
     });
     test("#notInRangeAtLine", () {
       expect(
-        calendarState.notInRangeAtLine(1, DateTime.parse("2020-08-31")),
+        calendarState.isNecessaryLineBreak(1, DateTime.parse("2020-08-31")),
         false,
       );
       expect(
-        calendarState.notInRangeAtLine(1, DateTime.parse("2020-09-01")),
+        calendarState.isNecessaryLineBreak(1, DateTime.parse("2020-09-01")),
         false,
       );
       expect(
-        calendarState.notInRangeAtLine(4, DateTime.parse("2020-09-19")),
+        calendarState.isNecessaryLineBreak(4, DateTime.parse("2020-09-19")),
         true,
       );
       expect(
-        calendarState.notInRangeAtLine(3, DateTime.parse("2020-09-19")),
+        calendarState.isNecessaryLineBreak(3, DateTime.parse("2020-09-19")),
         false,
       );
     });
