@@ -13,8 +13,7 @@ abstract class WeeklyCalendarState {
   }
 
   int offsetForStartPositionAtLine(DateTime begin) {
-    var isLineBreaked = isNecessaryLineBreak(begin);
-    return isLineBreaked
+    return isNecessaryLineBreak(begin)
         ? 0
         : begin.date().difference(dateRange.begin.date()).inDays;
   }
