@@ -10,7 +10,7 @@ void main() {
   setUp(() {
     TestWidgetsFlutterBinding.ensureInitialized();
     SharedPreferences.setMockInitialValues({});
-    calendarState = CalendarState(date);
+    calendarState = CalendarState(date, CalendarStateType.month);
   });
   group("2020-09-14", () {
     /*

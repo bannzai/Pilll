@@ -2,10 +2,13 @@ import 'package:pilll/domain/calendar/date_range.dart';
 import 'package:pilll/entity/weekday.dart';
 import 'package:pilll/util/datetime/day.dart';
 
+enum CalendarStateType { month, week }
+
 class CalendarState {
   final DateTime date;
+  final CalendarStateType type;
 
-  CalendarState(this.date);
+  CalendarState(this.date, this.type);
 
   DateTime dateTimeForFirstDayOfMonth() {
     return DateTime(date.year, date.month, 1);
