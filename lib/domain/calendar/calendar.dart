@@ -139,7 +139,8 @@ class Calendar extends HookWidget {
                       );
                     }).toList(),
                   ),
-                  ..._bands(context, line)
+                  ...bands(
+                      context, bandModels, calculator, horizontalPadding, line)
                 ],
               ),
               Divider(height: 1),
@@ -157,37 +158,6 @@ class Calendar extends HookWidget {
       decoration: BoxDecoration(
           color: PilllColors.gray, borderRadius: BorderRadius.circular(4)),
     );
-  }
-
-  List<Widget> _bands(BuildContext context, int line) {
-    var range = calculator.dateRangeOfLine(line);
-    return bandModels
-        .map((bandModel) {
-          final isInRange =
-              range.inRange(bandModel.begin) || range.inRange(bandModel.end);
-          if (!isInRange) {
-            return null;
-          }
-          bool isLineBreaked =
-              calculator.notInRangeAtLine(line, bandModel.begin);
-          int start =
-              calculator.offsetForStartPositionAtLine(line, bandModel.begin);
-
-          final length = bandLength(range, bandModel, isLineBreaked);
-          var tileWidth =
-              (MediaQuery.of(context).size.width - horizontalPadding * 2) /
-                  Weekday.values.length;
-          return Positioned(
-            left: start.toDouble() * tileWidth,
-            width: tileWidth * length,
-            bottom: 0,
-            height: 15,
-            child: CalendarBand(model: bandModel, isLineBreaked: isLineBreaked),
-          );
-        })
-        .where((element) => element != null)
-        .toList()
-        .cast();
   }
 }
 
