@@ -75,7 +75,6 @@ class Calendar extends HookWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: <Widget>[
               CalendarWeekdayLine(
-                context: context,
                 diaries: diaries,
                 calendarState: calendarState.weeklyCalendarState(line),
                 bandModels: bandModels,

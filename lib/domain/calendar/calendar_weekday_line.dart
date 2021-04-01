@@ -14,7 +14,6 @@ import 'package:pilll/util/datetime/day.dart' as utility;
 import 'package:pilll/util/datetime/day.dart';
 
 class CalendarWeekdayLine extends StatelessWidget {
-  final BuildContext context;
   final List<Diary> diaries;
   final WeeklyCalendarState calendarState;
   final List<CalendarBandModel> bandModels;
@@ -22,7 +21,6 @@ class CalendarWeekdayLine extends StatelessWidget {
 
   const CalendarWeekdayLine({
     Key? key,
-    required this.context,
     required this.diaries,
     required this.calendarState,
     required this.bandModels,
