@@ -26,9 +26,9 @@ void main() {
     */
     date = DateTime.parse("2020-09-14");
     test("#dateTimeForPreviousMonthTile", () {
-      expect(calendarState.dateTimeForPreviousMonthTile(Weekday.Sunday.index),
+      expect(calendarState.dateTimeForGrayoutTile(Weekday.Sunday.index),
           DateTime.parse("2020-08-30"));
-      expect(calendarState.dateTimeForPreviousMonthTile(Weekday.Monday.index),
+      expect(calendarState.dateTimeForGrayoutTile(Weekday.Monday.index),
           DateTime.parse("2020-08-31"));
     });
 
