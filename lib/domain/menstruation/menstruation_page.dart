@@ -17,7 +17,6 @@ import 'package:pilll/domain/record/weekday_badge.dart';
 import 'package:pilll/entity/weekday.dart';
 import 'package:pilll/store/menstruation.dart';
 import 'package:pilll/store/pill_sheet.dart';
-import 'package:pilll/util/datetime/date_compare.dart';
 import 'package:pilll/util/datetime/day.dart';
 import 'package:scrollable_positioned_list/scrollable_positioned_list.dart';
 
