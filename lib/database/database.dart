@@ -61,6 +61,11 @@ class DatabaseConnection {
 
   CollectionReference menstruationsReference() => FirebaseFirestore.instance
       .collection(_CollectionPath.menstruations(_userID));
+  DocumentReference menstruationReference(String menstruationID) =>
+      FirebaseFirestore.instance
+          .collection(_CollectionPath.menstruations(_userID))
+          .doc(menstruationID);
+
   Future<T> transaction<T>(TransactionHandler<T> transactionHandler) {
     return FirebaseFirestore.instance.runTransaction(transactionHandler);
   }
