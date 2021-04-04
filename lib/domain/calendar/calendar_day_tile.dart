@@ -11,7 +11,6 @@ class CalendarDayTile extends StatelessWidget {
   final Function(DateTime)? onTap;
 
   final Widget? diaryMark;
-  final Widget? lowerWidget;
 
   const CalendarDayTile({
     Key? key,
@@ -19,7 +18,6 @@ class CalendarDayTile extends StatelessWidget {
     required this.weekday,
     required this.isToday,
     this.diaryMark,
-    this.lowerWidget,
     required this.onTap,
   }) : super(key: key);
 
@@ -79,13 +77,6 @@ class CalendarDayTile extends StatelessWidget {
                     ),
                   ),
                 ),
-              if (lowerWidget != null) ...[
-                Positioned.fill(
-                  top: 8,
-                  child:
-                      Align(alignment: Alignment.topCenter, child: lowerWidget),
-                )
-              ],
             ],
           ),
         ),
