@@ -8,7 +8,7 @@ class CalendarDayTile extends StatelessWidget {
   final DateTime date;
   final Weekday weekday;
   final bool isToday;
-  final bool showsDiaryMark;
+  final bool hasDiary;
   final Function(DateTime)? onTap;
 
   const CalendarDayTile({
@@ -16,7 +16,7 @@ class CalendarDayTile extends StatelessWidget {
     required this.date,
     required this.weekday,
     required this.isToday,
-    required this.showsDiaryMark,
+    required this.hasDiary,
     required this.onTap,
   }) : super(key: key);
 
@@ -29,7 +29,7 @@ class CalendarDayTile extends StatelessWidget {
           height: CalendarConstants.tileHeight,
           child: Stack(
             children: <Widget>[
-              if (showsDiaryMark) ...[
+              if (hasDiary) ...[
                 Positioned.fill(
                   top: 8,
                   child: Align(
