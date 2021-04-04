@@ -31,8 +31,9 @@ class MenstruationEditPage extends HookWidget {
             controller: scrollController,
             children: [
               Padding(
-                padding: const EdgeInsets.only(top: 24.0, left: 16, right: 16),
+                padding: const EdgeInsets.only(top: 21.0, left: 16, right: 16),
                 child: Row(
+                  crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
                     Text("生理期間を選択・編集",
                         style: FontType.sBigTitle.merge(TextColorStyle.main)),
