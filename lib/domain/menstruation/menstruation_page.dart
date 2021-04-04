@@ -195,11 +195,13 @@ class _DateLine extends StatelessWidget {
       width: MediaQuery.of(context).size.width - _horizontalPadding * 2,
       height: CalendarConstants.tileHeight,
       child: CalendarWeekdayLine(
-        diaries: [],
+        diaries: diaries,
         calendarState:
             SinglelineWeeklyCalendarState(DateRange(days.first, days.last)),
         bandModels: [],
         horizontalPadding: _horizontalPadding,
+        onTap: (weeklyCalendarState, date) =>
+            transitionToPostDiary(context, weeklyCalendarState, date, diaries),
       ),
     );
   }
