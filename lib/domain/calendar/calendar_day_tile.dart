@@ -96,38 +96,6 @@ class CalendarDayTile extends StatelessWidget {
     return weekday.weekdayColor();
   }
 
-  Widget _number() {
-    if (isToday) {
-      return Container(
-        width: 32,
-        height: 32,
-        decoration: BoxDecoration(
-          color: PilllColors.secondary,
-          borderRadius: BorderRadius.circular(16),
-        ),
-        child: Center(
-          child: Text(
-            "${date.day}",
-            textAlign: TextAlign.center,
-            style: TextStyle(
-              color: PilllColors.white,
-            ).merge(FontType.gridElement),
-          ),
-        ),
-      );
-    } else {
-      return Text(
-        "${date.day}",
-        textAlign: TextAlign.center,
-        style: TextStyle(
-          color: onTap == null
-              ? weekday.weekdayColor().withAlpha((255 * 0.4).floor())
-              : weekday.weekdayColor(),
-        ).merge(FontType.gridElement),
-      );
-    }
-  }
-
   Widget _diaryMarkWidget() {
     return Container(
       width: 8,
