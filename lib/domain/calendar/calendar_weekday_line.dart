@@ -51,7 +51,7 @@ class CalendarWeekdayLine extends StatelessWidget {
               isToday: isSameDay(today(), date),
               weekday: weekday,
               date: date,
-              upperWidget: calendarState.shouldShowDiaryMark(diaries, date)
+              diaryMark: calendarState.shouldShowDiaryMark(diaries, date)
                   ? _diaryMarkWidget()
                   : null,
               onTap: (date) {
