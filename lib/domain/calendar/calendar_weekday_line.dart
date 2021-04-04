@@ -1,4 +1,3 @@
-import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/domain/calendar/calendar_band.dart';
 import 'package:pilll/domain/calendar/calendar_band_model.dart';
 import 'package:pilll/domain/calendar/calendar_day_tile.dart';
@@ -43,6 +42,7 @@ class CalendarWeekdayLine extends StatelessWidget {
                 isToday: false,
                 onTap: null,
                 weekday: weekday,
+                showsDiaryMark: false,
                 date: date,
               );
             }
@@ -50,9 +50,7 @@ class CalendarWeekdayLine extends StatelessWidget {
               isToday: isSameDay(today(), date),
               weekday: weekday,
               date: date,
-              diaryMark: calendarState.shouldShowDiaryMark(diaries, date)
-                  ? _diaryMarkWidget()
-                  : null,
+              showsDiaryMark: calendarState.shouldShowDiaryMark(diaries, date),
               onTap: (date) {
                 if (date.isAfter(utility.today())) {
                   return;
@@ -72,15 +70,6 @@ class CalendarWeekdayLine extends StatelessWidget {
         ),
         ..._bands(context, bandModels, calendarState, horizontalPadding)
       ],
-    );
-  }
-
-  Widget _diaryMarkWidget() {
-    return Container(
-      width: 8,
-      height: 8,
-      decoration: BoxDecoration(
-          color: PilllColors.gray, borderRadius: BorderRadius.circular(4)),
     );
   }
 

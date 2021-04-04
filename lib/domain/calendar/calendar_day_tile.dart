@@ -6,18 +6,17 @@ import 'package:pilll/entity/weekday.dart';
 
 class CalendarDayTile extends StatelessWidget {
   final DateTime date;
-  final bool isToday;
   final Weekday weekday;
+  final bool isToday;
+  final bool showsDiaryMark;
   final Function(DateTime)? onTap;
-
-  final Widget? diaryMark;
 
   const CalendarDayTile({
     Key? key,
     required this.date,
     required this.weekday,
     required this.isToday,
-    this.diaryMark,
+    required this.showsDiaryMark,
     required this.onTap,
   }) : super(key: key);
 
@@ -30,11 +29,12 @@ class CalendarDayTile extends StatelessWidget {
           height: CalendarConstants.tileHeight,
           child: Stack(
             children: <Widget>[
-              if (diaryMark != null) ...[
+              if (showsDiaryMark) ...[
                 Positioned.fill(
                   top: 8,
-                  child:
-                      Align(alignment: Alignment.topCenter, child: diaryMark),
+                  child: Align(
+                      alignment: Alignment.topCenter,
+                      child: _diaryMarkWidget()),
                 )
               ],
               if (!isToday)
@@ -81,6 +81,15 @@ class CalendarDayTile extends StatelessWidget {
           ),
         ),
       ),
+    );
+  }
+
+  Widget _diaryMarkWidget() {
+    return Container(
+      width: 8,
+      height: 8,
+      decoration: BoxDecoration(
+          color: PilllColors.gray, borderRadius: BorderRadius.circular(4)),
     );
   }
 }
