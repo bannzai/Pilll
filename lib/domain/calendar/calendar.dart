@@ -27,7 +27,7 @@ final AutoDisposeFutureProviderFamily<List<Diary>, DateTime>?
 });
 
 class Calendar extends HookWidget {
-  final MonthlyCalendarState calendarState;
+  final CalendarTabState calendarState;
   final List<CalendarBandModel> bandModels;
   final double horizontalPadding;
 

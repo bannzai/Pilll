@@ -57,3 +57,14 @@ class MultilineWeeklyCalendarState extends WeeklyCalendarState {
     return diaries.where((element) => isSameDay(element.date, date)).isNotEmpty;
   }
 }
+
+class MenstruationEditWeeklyCalendarState extends WeeklyCalendarState {
+  final DateRange dateRange;
+  final DateTime targetDateOfMonth;
+
+  MenstruationEditWeeklyCalendarState(this.dateRange, this.targetDateOfMonth);
+
+  bool shouldGrayoutTile(DateTime date) =>
+      date._isPreviousMonth(targetDateOfMonth);
+  bool shouldShowDiaryMark(List<Diary> diaries, DateTime date) => false;
+}
