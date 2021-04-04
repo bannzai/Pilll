@@ -53,3 +53,15 @@ class CalendarTabState extends MonthlyCalendarState {
     );
   }
 }
+
+class MenstruationEditCalendarState extends MonthlyCalendarState {
+  final DateTime dateForMonth;
+  MenstruationEditCalendarState(this.dateForMonth);
+
+  WeeklyCalendarState weeklyCalendarState(int line) {
+    return MenstruationEditWeeklyCalendarState(
+      dateRangeOfLine(line),
+      dateForMonth,
+    );
+  }
+}
