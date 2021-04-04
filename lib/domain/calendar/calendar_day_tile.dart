@@ -74,8 +74,7 @@ class CalendarDayTile extends StatelessWidget {
                     child: Text(
                       "${date.day}",
                       textAlign: TextAlign.center,
-                      style: TextStyle(color: _textColor())
-                          .merge(FontType.gridElement),
+                      style: TextStyle(color: _textColor()).merge(_font()),
                     )),
               ),
             ],
@@ -85,15 +84,39 @@ class CalendarDayTile extends StatelessWidget {
     );
   }
 
+  TextStyle _font() {
+    if (isIntoMenstruationDuration) {
+      return FontType.gridElementBold;
+    } else {
+      return FontType.gridElement;
+    }
+  }
+
   Color _textColor() {
     if (isToday) {
       return PilllColors.white;
     }
+    final weekdayColor = () {
+      switch (weekday) {
+        case Weekday.Sunday:
+          return weekday.weekdayColor();
+        case Weekday.Monday:
+          return PilllColors.black;
+        case Weekday.Tuesday:
+          return PilllColors.black;
+        case Weekday.Wednesday:
+          return PilllColors.black;
+        case Weekday.Thursday:
+          return PilllColors.black;
+        case Weekday.Friday:
+          return PilllColors.black;
+        case Weekday.Saturday:
+          return weekday.weekdayColor();
+      }
+    }();
     final onTap = this.onTap;
-    if (onTap == null) {
-      return weekday.weekdayColor().withAlpha((255 * 0.4).floor());
-    }
-    return weekday.weekdayColor();
+    final alpha = (255 * (onTap != null ? 1 : 0.4)).floor();
+    return weekdayColor.withAlpha(alpha);
   }
 
   Widget _diaryMarkWidget() {
