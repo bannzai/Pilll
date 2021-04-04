@@ -54,7 +54,7 @@ class FontType {
   );
   static final TextStyle sBigTitle = TextStyle(
     fontFamily: FontFamily.japanese,
-    fontWeight: FontWeight.w500,
+    fontWeight: FontWeight.w600,
     fontSize: FontSize.sBig,
   );
   static final TextStyle cardHeader = TextStyle(
