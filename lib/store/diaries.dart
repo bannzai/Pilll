@@ -10,7 +10,7 @@ final diariesStoreProvider = StateNotifierProvider(
     (ref) => DiariesStateStore(ref.watch(diaryServiceProvider)));
 
 class DiariesStateStore extends StateNotifier<DiariesState> {
-  final DiariesServiceInterface _service;
+  final DiaryService _service;
   DiariesStateStore(this._service) : super(DiariesState(entities: [])) {
     _subscribe();
   }
