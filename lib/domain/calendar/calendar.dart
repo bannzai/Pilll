@@ -41,7 +41,7 @@ class Calendar extends HookWidget {
   @override
   Widget build(BuildContext context) {
     final futureCalendarDiaries =
-        useProvider(calendarDiariesProvider!(calendarState.date));
+        useProvider(calendarDiariesProvider!(calendarState.dateForMonth));
     return futureCalendarDiaries.when(
       data: (value) {
         return _body(context, value);
@@ -51,7 +51,7 @@ class Calendar extends HookWidget {
     );
   }
 
-  DateTime date() => calendarState.date;
+  DateTime date() => calendarState.dateForMonth;
   double height() =>
       calendarState.lineCount().toDouble() * CalendarConstants.tileHeight;
 

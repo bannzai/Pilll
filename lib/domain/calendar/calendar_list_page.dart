@@ -67,7 +67,7 @@ class CalendarListPage extends HookWidget {
       eachCalendar(calendar);
       return Column(
         children: <Widget>[
-          CalendarDateHeader(date: model.calendarState.date),
+          CalendarDateHeader(date: model.calendarState.dateForMonth),
           calendar,
         ],
       );
@@ -77,7 +77,7 @@ class CalendarListPage extends HookWidget {
 
   Calendar _calendar(BuildContext context, CalendarListPageModel model) {
     return Calendar(
-      key: isSameMonth(model.calendarState.date, today())
+      key: isSameMonth(model.calendarState.dateForMonth, today())
           ? currentMonthKey
           : null,
       calendarState: model.calendarState,
