@@ -4,6 +4,15 @@ import 'package:pilll/entity/weekday.dart';
 import 'package:pilll/util/datetime/date_compare.dart';
 import 'package:pilll/util/datetime/day.dart';
 
+extension DateTimeForCalnedarState on DateTime {
+  bool _isPreviousMonth(DateTime date) {
+    if (isSameMonth(date, this)) {
+      return false;
+    }
+    return this.isBefore(date);
+  }
+}
+
 abstract class WeeklyCalendarState {
   DateRange get dateRange;
 
@@ -18,7 +27,7 @@ abstract class WeeklyCalendarState {
         : begin.date().difference(dateRange.begin.date()).inDays;
   }
 
-  DateTime? dateTimeForGrayoutTile(DateTime date);
+  bool shouldGrayoutTile(DateTime date);
   DateTime buildDate(Weekday weekday) {
     return dateRange.begin.add(Duration(days: weekday.index));
   }
@@ -31,7 +40,7 @@ abstract class WeeklyCalendarState {
 class SinglelineWeeklyCalendarState extends WeeklyCalendarState {
   final DateRange dateRange;
 
-  DateTime? dateTimeForGrayoutTile(DateTime date) => null;
+  bool shouldGrayoutTile(DateTime date) => false;
   SinglelineWeeklyCalendarState(this.dateRange);
   bool shouldShowDiaryMark(List<Diary> diaries, DateTime date) => false;
 }
@@ -42,24 +51,8 @@ class MultilineWeeklyCalendarState extends WeeklyCalendarState {
 
   MultilineWeeklyCalendarState(this.dateRange, this.targetDateOfMonth);
 
-  DateTime? dateTimeForGrayoutTile(DateTime date) {
-    if (isSameMonth(date, targetDateOfMonth)) {
-      return null;
-    }
-    final offset = WeekdayFunctions.weekdayFromDate(date).index;
-    var dateTimeForLastDayOfPreviousMonth =
-        DateTime(targetDateOfMonth.year, targetDateOfMonth.month, 0);
-    var lastDayForPreviousMonthWeekdayIndex =
-        WeekdayFunctions.weekdayFromDate(dateTimeForLastDayOfPreviousMonth)
-            .index;
-    return DateTime(
-        dateTimeForLastDayOfPreviousMonth.year,
-        dateTimeForLastDayOfPreviousMonth.month,
-        dateTimeForLastDayOfPreviousMonth.day -
-            lastDayForPreviousMonthWeekdayIndex +
-            offset);
-  }
-
+  bool shouldGrayoutTile(DateTime date) =>
+      date._isPreviousMonth(targetDateOfMonth);
   bool shouldShowDiaryMark(List<Diary> diaries, DateTime date) {
     return diaries.where((element) => isSameDay(element.date, date)).isNotEmpty;
   }
