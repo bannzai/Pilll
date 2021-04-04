@@ -11,6 +11,7 @@ abstract class MonthlyCalendarState {
 
 class CalendarTabState extends MonthlyCalendarState {
   final DateTime date;
+  CalendarTabState(this.date);
 
   DateRange dateRangeOfLine(int line) {
     if (line == 1) {
@@ -42,8 +43,6 @@ class CalendarTabState extends MonthlyCalendarState {
   int _previousMonthDayCount() => _weekdayOffset();
   int _tileCount() => _previousMonthDayCount() + _lastDay();
   int lineCount() => (_tileCount() / Weekday.values.length).ceil();
-
-  CalendarTabState(this.date);
 
   WeeklyCalendarState weeklyCalendarState(int line) {
     return MultilineWeeklyCalendarState(
