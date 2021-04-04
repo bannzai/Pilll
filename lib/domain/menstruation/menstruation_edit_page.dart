@@ -34,7 +34,7 @@ class MenstruationEditPage extends HookWidget {
                 padding: const EdgeInsets.only(top: 24.0, left: 16, right: 16),
                 child: Row(
                   children: [
-                    Text("生理日を選択・編集",
+                    Text("生理期間を選択・編集",
                         style: FontType.sBigTitle.merge(TextColorStyle.main)),
                     Spacer(),
                     SecondaryButton(
