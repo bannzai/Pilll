@@ -9,6 +9,7 @@ class CalendarDayTile extends StatelessWidget {
   final bool isToday;
   final Weekday weekday;
   final Function(DateTime)? onTap;
+  final double horizontalPadding;
 
   final Widget? diaryMark;
 
@@ -17,68 +18,53 @@ class CalendarDayTile extends StatelessWidget {
     required this.date,
     required this.weekday,
     required this.isToday,
+    required this.horizontalPadding,
     this.diaryMark,
     required this.onTap,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    return Expanded(
+    return Container(
+      width: (MediaQuery.of(context).size.width - horizontalPadding * 2) /
+          Weekday.values.length,
+      height: CalendarConstants.tileHeight,
       child: RawMaterialButton(
         onPressed: () => onTap != null ? onTap!(date) : null,
-        child: Container(
-          height: CalendarConstants.tileHeight,
-          child: Stack(
-            children: <Widget>[
-              if (diaryMark != null) ...[
-                Positioned.fill(
-                  top: 8,
-                  child:
-                      Align(alignment: Alignment.topCenter, child: diaryMark),
-                )
-              ],
-              if (!isToday)
-                Positioned.fill(
-                  child: Align(
-                    alignment: Alignment.center,
-                    child: Text(
-                      "${date.day}",
-                      textAlign: TextAlign.center,
-                      style: TextStyle(
-                        color: onTap == null
-                            ? weekday
-                                .weekdayColor()
-                                .withAlpha((255 * 0.4).floor())
-                            : weekday.weekdayColor(),
-                      ).merge(FontType.gridElement),
-                    ),
-                  ),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            if (diaryMark != null) diaryMark!,
+            Container(
+              width: 32,
+              height: 32,
+              decoration: isToday
+                  ? BoxDecoration(
+                      color: PilllColors.secondary,
+                      borderRadius: BorderRadius.circular(16),
+                    )
+                  : null,
+              child: Center(
+                child: Text(
+                  "${date.day}",
+                  textAlign: TextAlign.center,
+                  style: () {
+                    if (isToday) {
+                      return TextStyle(color: PilllColors.white)
+                          .merge(FontType.gridElement);
+                    }
+                    return TextStyle(
+                            color: onTap == null
+                                ? weekday
+                                    .weekdayColor()
+                                    .withAlpha((255 * 0.4).floor())
+                                : weekday.weekdayColor())
+                        .merge(FontType.gridElement);
+                  }(),
                 ),
-              if (isToday)
-                Positioned.fill(
-                  child: Align(
-                    alignment: Alignment.center,
-                    child: Container(
-                      width: 32,
-                      height: 32,
-                      decoration: BoxDecoration(
-                        color: PilllColors.secondary,
-                        borderRadius: BorderRadius.circular(16),
-                      ),
-                      child: Center(
-                        child: Text(
-                          "${date.day}",
-                          textAlign: TextAlign.center,
-                          style: TextStyle(
-                            color: PilllColors.white,
-                          ).merge(FontType.gridElement),
-                        ),
-                      ),
-                    ),
-                  ),
-                ),
-            ],
-          ),
+              ),
+            ),
+          ],
         ),
       ),
     );

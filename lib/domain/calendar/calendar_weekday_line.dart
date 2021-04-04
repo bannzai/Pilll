@@ -45,6 +45,7 @@ class CalendarWeekdayLine extends StatelessWidget {
                 onTap: null,
                 weekday: weekday,
                 date: grayOutTileDate,
+                horizontalPadding: horizontalPadding,
               );
             }
             return CalendarDayTile(
@@ -54,6 +55,7 @@ class CalendarWeekdayLine extends StatelessWidget {
               diaryMark: calendarState.shouldShowDiaryMark(diaries, date)
                   ? _diaryMarkWidget()
                   : null,
+              horizontalPadding: horizontalPadding,
               onTap: (date) {
                 if (date.isAfter(utility.today())) {
                   return;
