@@ -36,11 +36,11 @@ class SinglelineWeeklyCalendarState extends WeeklyCalendarState {
   bool shouldShowDiaryMark(List<Diary> diaries, DateTime date) => false;
 }
 
-class MultilineCalendarState extends WeeklyCalendarState {
+class MultilineWeeklyCalendarState extends WeeklyCalendarState {
   final DateRange dateRange;
   final DateTime targetDateOfMonth;
 
-  MultilineCalendarState(this.dateRange, this.targetDateOfMonth);
+  MultilineWeeklyCalendarState(this.dateRange, this.targetDateOfMonth);
 
   DateTime? dateTimeForGrayoutTile(DateTime date) {
     if (isSameMonth(date, targetDateOfMonth)) {

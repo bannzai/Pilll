@@ -39,7 +39,7 @@ class MonthlyCalendarState {
   MonthlyCalendarState(this.date);
 
   WeeklyCalendarState weeklyCalendarState(int line) {
-    return MultilineCalendarState(
+    return MultilineWeeklyCalendarState(
       dateRangeOfLine(line),
       date,
     );
