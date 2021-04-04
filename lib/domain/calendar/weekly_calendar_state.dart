@@ -42,7 +42,9 @@ class SinglelineWeeklyCalendarState extends WeeklyCalendarState {
 
   bool shouldGrayoutTile(DateTime date) => false;
   SinglelineWeeklyCalendarState(this.dateRange);
-  bool shouldShowDiaryMark(List<Diary> diaries, DateTime date) => false;
+  bool shouldShowDiaryMark(List<Diary> diaries, DateTime date) {
+    return diaries.where((element) => isSameDay(element.date, date)).isNotEmpty;
+  }
 }
 
 class MultilineWeeklyCalendarState extends WeeklyCalendarState {
