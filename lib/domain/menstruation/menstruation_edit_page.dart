@@ -1,7 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
+import 'package:pilll/components/atoms/buttons.dart';
 import 'package:pilll/components/atoms/color.dart';
+import 'package:pilll/components/atoms/font.dart';
+import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/domain/calendar/calendar.dart';
 import 'package:pilll/domain/calendar/calendar_date_header.dart';
 import 'package:pilll/domain/calendar/monthly_calendar_state.dart';
@@ -27,6 +30,22 @@ class MenstruationEditPage extends HookWidget {
           child: ListView(
             controller: scrollController,
             children: [
+              Padding(
+                padding: const EdgeInsets.only(top: 24.0, left: 16, right: 16),
+                child: Row(
+                  children: [
+                    Text("生理日を選択・編集",
+                        style: FontType.sBigTitle.merge(TextColorStyle.main)),
+                    Spacer(),
+                    SecondaryButton(
+                      onPressed: () {
+                        Navigator.of(context).pop();
+                      },
+                      text: "保存",
+                    )
+                  ],
+                ),
+              ),
               CalendarDateHeader(date: currentMonth),
               Calendar(
                 calendarState: MonthlyCalendarState(currentMonth),
