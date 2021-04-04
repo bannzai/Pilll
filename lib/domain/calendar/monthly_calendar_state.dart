@@ -9,7 +9,12 @@ DateTime _firstDayOfMonth(DateTime date) {
 abstract class MonthlyCalendarState {
   DateTime get dateForMonth;
   DateRange dateRangeOfLine(int line);
-  int lineCount();
+  int _lastDay() => DateTime(dateForMonth.year, dateForMonth.month + 1, 0).day;
+  int _weekdayOffset() =>
+      WeekdayFunctions.weekdayFromDate(_firstDayOfMonth(dateForMonth)).index;
+  int _previousMonthDayCount() => _weekdayOffset();
+  int _tileCount() => _previousMonthDayCount() + _lastDay();
+  int lineCount() => (_tileCount() / Weekday.values.length).ceil();
   WeeklyCalendarState weeklyCalendarState(int line);
 }
 
@@ -41,13 +46,6 @@ class CalendarTabState extends MonthlyCalendarState {
       DateTime(dateForMonth.year, dateForMonth.month, endDay),
     );
   }
-
-  int _lastDay() => DateTime(dateForMonth.year, dateForMonth.month + 1, 0).day;
-  int _weekdayOffset() =>
-      WeekdayFunctions.weekdayFromDate(_firstDayOfMonth(dateForMonth)).index;
-  int _previousMonthDayCount() => _weekdayOffset();
-  int _tileCount() => _previousMonthDayCount() + _lastDay();
-  int lineCount() => (_tileCount() / Weekday.values.length).ceil();
 
   WeeklyCalendarState weeklyCalendarState(int line) {
     return MultilineWeeklyCalendarState(
