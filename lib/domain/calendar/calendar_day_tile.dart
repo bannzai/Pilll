@@ -9,6 +9,7 @@ class CalendarDayTile extends StatelessWidget {
   final Weekday weekday;
   final bool isToday;
   final bool hasDiary;
+  final bool isIntoMenstruationDuration;
   final Function(DateTime)? onTap;
 
   const CalendarDayTile({
@@ -17,6 +18,7 @@ class CalendarDayTile extends StatelessWidget {
     required this.weekday,
     required this.isToday,
     required this.hasDiary,
+    required this.isIntoMenstruationDuration,
     required this.onTap,
   }) : super(key: key);
 

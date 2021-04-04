@@ -43,6 +43,7 @@ class CalendarWeekdayLine extends StatelessWidget {
                 onTap: null,
                 weekday: weekday,
                 hasDiary: false,
+                isIntoMenstruationDuration: false,
                 date: date,
               );
             }
@@ -51,6 +52,7 @@ class CalendarWeekdayLine extends StatelessWidget {
               weekday: weekday,
               date: date,
               hasDiary: calendarState.shouldShowDiaryMark(diaries, date),
+              isIntoMenstruationDuration: false,
               onTap: (date) {
                 if (date.isAfter(utility.today())) {
                   return;
