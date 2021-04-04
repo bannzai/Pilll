@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
+import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/domain/calendar/calendar.dart';
 import 'package:pilll/entity/weekday.dart';
 
@@ -39,20 +40,17 @@ class CalendarDayTile extends StatelessWidget {
                       child: _diaryMarkWidget()),
                 )
               ],
-              if (!isToday)
+              if (isIntoMenstruationDuration)
                 Positioned.fill(
                   child: Align(
                     alignment: Alignment.center,
-                    child: Text(
-                      "${date.day}",
-                      textAlign: TextAlign.center,
-                      style: TextStyle(
-                        color: onTap == null
-                            ? weekday
-                                .weekdayColor()
-                                .withAlpha((255 * 0.4).floor())
-                            : weekday.weekdayColor(),
-                      ).merge(FontType.gridElement),
+                    child: Container(
+                      width: 40,
+                      height: 40,
+                      decoration: BoxDecoration(
+                        color: PilllColors.menstruation,
+                        borderRadius: BorderRadius.circular(16),
+                      ),
                     ),
                   ),
                 ),
@@ -67,23 +65,67 @@ class CalendarDayTile extends StatelessWidget {
                         color: PilllColors.secondary,
                         borderRadius: BorderRadius.circular(16),
                       ),
-                      child: Center(
-                        child: Text(
-                          "${date.day}",
-                          textAlign: TextAlign.center,
-                          style: TextStyle(
-                            color: PilllColors.white,
-                          ).merge(FontType.gridElement),
-                        ),
-                      ),
                     ),
                   ),
                 ),
+              Positioned.fill(
+                child: Align(
+                    alignment: Alignment.center,
+                    child: Text(
+                      "${date.day}",
+                      textAlign: TextAlign.center,
+                      style: TextStyle(color: _textColor())
+                          .merge(FontType.gridElement),
+                    )),
+              ),
             ],
           ),
         ),
       ),
     );
+  }
+
+  Color _textColor() {
+    if (isToday) {
+      return PilllColors.white;
+    }
+    final onTap = this.onTap;
+    if (onTap == null) {
+      return weekday.weekdayColor().withAlpha((255 * 0.4).floor());
+    }
+    return weekday.weekdayColor();
+  }
+
+  Widget _number() {
+    if (isToday) {
+      return Container(
+        width: 32,
+        height: 32,
+        decoration: BoxDecoration(
+          color: PilllColors.secondary,
+          borderRadius: BorderRadius.circular(16),
+        ),
+        child: Center(
+          child: Text(
+            "${date.day}",
+            textAlign: TextAlign.center,
+            style: TextStyle(
+              color: PilllColors.white,
+            ).merge(FontType.gridElement),
+          ),
+        ),
+      );
+    } else {
+      return Text(
+        "${date.day}",
+        textAlign: TextAlign.center,
+        style: TextStyle(
+          color: onTap == null
+              ? weekday.weekdayColor().withAlpha((255 * 0.4).floor())
+              : weekday.weekdayColor(),
+        ).merge(FontType.gridElement),
+      );
+    }
   }
 
   Widget _diaryMarkWidget() {
