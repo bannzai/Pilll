@@ -17,6 +17,7 @@ class CalendarWeekdayLine extends StatelessWidget {
   final WeeklyCalendarState calendarState;
   final List<CalendarBandModel> bandModels;
   final double horizontalPadding;
+  final Function(WeeklyCalendarState, DateTime) onTap;
 
   const CalendarWeekdayLine({
     Key? key,
@@ -24,6 +25,7 @@ class CalendarWeekdayLine extends StatelessWidget {
     required this.calendarState,
     required this.bandModels,
     required this.horizontalPadding,
+    required this.onTap,
   }) : super(key: key);
   @override
   Widget build(BuildContext context) {
@@ -53,20 +55,7 @@ class CalendarWeekdayLine extends StatelessWidget {
               date: date,
               hasDiary: calendarState.shouldShowDiaryMark(diaries, date),
               isIntoMenstruationDuration: false,
-              onTap: (date) {
-                if (date.isAfter(utility.today())) {
-                  return;
-                }
-                if (!calendarState.shouldShowDiaryMark(diaries, date)) {
-                  Navigator.of(context).push(PostDiaryPageRoute.route(date));
-                } else {
-                  showModalBottomSheet(
-                    context: context,
-                    builder: (context) => ConfirmDiarySheet(date),
-                    backgroundColor: Colors.transparent,
-                  );
-                }
-              },
+              onTap: (date) => onTap(calendarState, date),
             );
           }).toList(),
         ),
@@ -109,5 +98,25 @@ class CalendarWeekdayLine extends StatelessWidget {
         .where((element) => element != null)
         .toList()
         .cast();
+  }
+}
+
+void transitionToPostDiary(
+  BuildContext context,
+  WeeklyCalendarState weeklyCalendarState,
+  DateTime date,
+  List<Diary> diaries,
+) {
+  if (date.isAfter(today())) {
+    return;
+  }
+  if (!weeklyCalendarState.shouldShowDiaryMark(diaries, date)) {
+    Navigator.of(context).push(PostDiaryPageRoute.route(date));
+  } else {
+    showModalBottomSheet(
+      context: context,
+      builder: (context) => ConfirmDiarySheet(date),
+      backgroundColor: Colors.transparent,
+    );
   }
 }

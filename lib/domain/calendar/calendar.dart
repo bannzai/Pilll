@@ -79,6 +79,8 @@ class Calendar extends HookWidget {
                 calendarState: calendarState.weeklyCalendarState(line),
                 bandModels: bandModels,
                 horizontalPadding: horizontalPadding,
+                onTap: (weeklyCalendarState, date) => transitionToPostDiary(
+                    context, weeklyCalendarState, date, diaries),
               ),
               Divider(height: 1),
             ],
