@@ -15,6 +15,7 @@ import 'package:pilll/domain/menstruation/menstruation_card.dart';
 import 'package:pilll/domain/menstruation/menstruation_card_state.dart';
 import 'package:pilll/domain/menstruation/menstruation_edit_page.dart';
 import 'package:pilll/domain/record/weekday_badge.dart';
+import 'package:pilll/entity/diary.dart';
 import 'package:pilll/entity/weekday.dart';
 import 'package:pilll/store/menstruation.dart';
 import 'package:pilll/store/pill_sheet.dart';
@@ -111,6 +112,7 @@ class MenstruationPage extends HookWidget {
                               menstruationState.calendarDataSource[index];
                           return _DateLine(
                               days: data,
+                              diaries: menstruationState.diaries,
                               onTap: (e) {
                                 print("e:$e");
                               });
@@ -182,11 +184,13 @@ class _WeekdayLine extends StatelessWidget {
 
 class _DateLine extends StatelessWidget {
   final List<DateTime> days;
+  final List<Diary> diaries;
   final Function(DateTime) onTap;
 
   const _DateLine({
     Key? key,
     required this.days,
+    required this.diaries,
     required this.onTap,
   }) : super(key: key);
   @override
