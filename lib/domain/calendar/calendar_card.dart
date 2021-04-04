@@ -39,7 +39,7 @@ class CalendarCard extends HookWidget {
         children: <Widget>[
           _header(context),
           Calendar(
-            calendarState: MonthlyCalendarState(date),
+            calendarState: CalendarTabState(date),
             bandModels: buildBandModels(
                 currentPillSheetState.entity, settingState.entity, 0),
             horizontalPadding: 16,
@@ -95,12 +95,12 @@ class CalendarCard extends HookWidget {
                       .reversed
                       .map((number) {
                     CalendarListPageModel previous = CalendarListPageModel(
-                        MonthlyCalendarState(DateTime(now.year, now.month - number, 1)),
+                        CalendarTabState(DateTime(now.year, now.month - number, 1)),
                         []);
                     return previous;
                   });
                   CalendarListPageModel current = CalendarListPageModel(
-                    MonthlyCalendarState(now),
+                    CalendarTabState(now),
                     buildBandModels(latestPillSheet, setting, 0),
                   );
                   List<CalendarBandModel> satisfyNextMonthDateRanges = [];
@@ -113,7 +113,7 @@ class CalendarCard extends HookWidget {
                     6,
                     (index) {
                       return CalendarListPageModel(
-                          MonthlyCalendarState(
+                          CalendarTabState(
                               DateTime(now.year, now.month + index + 1, 1)),
                           [
                             if (latestPillSheet != null)

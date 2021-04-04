@@ -49,13 +49,13 @@ class MenstruationEditPage extends HookWidget {
               ),
               CalendarDateHeader(date: currentMonth),
               Calendar(
-                calendarState: MonthlyCalendarState(currentMonth),
+                calendarState: CalendarTabState(currentMonth),
                 bandModels: [],
                 horizontalPadding: 0,
               ),
               CalendarDateHeader(date: nextMonth),
               Calendar(
-                calendarState: MonthlyCalendarState(nextMonth),
+                calendarState: CalendarTabState(nextMonth),
                 bandModels: [],
                 horizontalPadding: 0,
               ),

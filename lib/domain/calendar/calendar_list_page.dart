@@ -9,7 +9,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 
 class CalendarListPageModel {
-  final MonthlyCalendarState calendarState;
+  final CalendarTabState calendarState;
   final List<CalendarBandModel> bandModels;
 
   CalendarListPageModel(this.calendarState, this.bandModels);
