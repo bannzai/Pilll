@@ -38,13 +38,12 @@ class CalendarWeekdayLine extends StatelessWidget {
               return Expanded(child: Container());
             }
 
-            final grayOutTileDate = calendarState.dateTimeForGrayoutTile(date);
-            if (grayOutTileDate != null) {
+            if (calendarState.shouldGrayoutTile(date)) {
               return CalendarDayTile(
                 isToday: false,
                 onTap: null,
                 weekday: weekday,
-                date: grayOutTileDate,
+                date: date,
               );
             }
             return CalendarDayTile(
