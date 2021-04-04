@@ -23,7 +23,7 @@ void main() {
     test("#dateTimeForPreviousMonthTile", () {
       final date = DateTime.parse("2020-09-14");
       final anyDate = date;
-      final calendarState = MultilineCalendarState(
+      final calendarState = MultilineWeeklyCalendarState(
           DateRange(anyDate, anyDate.add(Duration(days: 6))), date);
       expect(calendarState.dateTimeForGrayoutTile(DateTime.parse("2020-08-30")),
           DateTime.parse("2020-08-30"));
@@ -39,7 +39,7 @@ void main() {
         final begin = DateTime.parse("2020-08-30");
         final end = DateTime.parse("2020-09-05");
         final calendarState =
-            MultilineCalendarState(DateRange(begin, end), date);
+            MultilineWeeklyCalendarState(DateRange(begin, end), date);
         expect(
           calendarState.isNecessaryLineBreak(DateTime.parse("2020-08-31")),
           false,
@@ -64,7 +64,7 @@ void main() {
         final begin = DateTime.parse("2020-08-30");
         final end = DateTime.parse("2020-09-05");
         final calendarState =
-            MultilineCalendarState(DateRange(begin, end), date);
+            MultilineWeeklyCalendarState(DateRange(begin, end), date);
         expect(
           calendarState.offsetForStartPositionAtLine(
             DateTime.parse("2020-08-31"),
