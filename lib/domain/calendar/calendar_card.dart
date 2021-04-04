@@ -95,7 +95,8 @@ class CalendarCard extends HookWidget {
                       .reversed
                       .map((number) {
                     CalendarListPageModel previous = CalendarListPageModel(
-                        CalendarTabState(DateTime(now.year, now.month - number, 1)),
+                        CalendarTabState(
+                            DateTime(now.year, now.month - number, 1)),
                         []);
                     return previous;
                   });

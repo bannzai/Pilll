@@ -19,10 +19,12 @@ class _$MenstruationStateTearOff {
   _MenstruationState call(
       {bool isNotYetLoaded = true,
       int currentCalendarIndex = 0,
+      List<Diary> diaries = const [],
       List<Menstruation> entities = const []}) {
     return _MenstruationState(
       isNotYetLoaded: isNotYetLoaded,
       currentCalendarIndex: currentCalendarIndex,
+      diaries: diaries,
       entities: entities,
     );
   }
@@ -35,6 +37,7 @@ const $MenstruationState = _$MenstruationStateTearOff();
 mixin _$MenstruationState {
   bool get isNotYetLoaded => throw _privateConstructorUsedError;
   int get currentCalendarIndex => throw _privateConstructorUsedError;
+  List<Diary> get diaries => throw _privateConstructorUsedError;
   List<Menstruation> get entities => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
@@ -50,6 +53,7 @@ abstract class $MenstruationStateCopyWith<$Res> {
   $Res call(
       {bool isNotYetLoaded,
       int currentCalendarIndex,
+      List<Diary> diaries,
       List<Menstruation> entities});
 }
 
@@ -66,6 +70,7 @@ class _$MenstruationStateCopyWithImpl<$Res>
   $Res call({
     Object? isNotYetLoaded = freezed,
     Object? currentCalendarIndex = freezed,
+    Object? diaries = freezed,
     Object? entities = freezed,
   }) {
     return _then(_value.copyWith(
@@ -77,6 +82,10 @@ class _$MenstruationStateCopyWithImpl<$Res>
           ? _value.currentCalendarIndex
           : currentCalendarIndex // ignore: cast_nullable_to_non_nullable
               as int,
+      diaries: diaries == freezed
+          ? _value.diaries
+          : diaries // ignore: cast_nullable_to_non_nullable
+              as List<Diary>,
       entities: entities == freezed
           ? _value.entities
           : entities // ignore: cast_nullable_to_non_nullable
@@ -95,6 +104,7 @@ abstract class _$MenstruationStateCopyWith<$Res>
   $Res call(
       {bool isNotYetLoaded,
       int currentCalendarIndex,
+      List<Diary> diaries,
       List<Menstruation> entities});
 }
 
@@ -113,6 +123,7 @@ class __$MenstruationStateCopyWithImpl<$Res>
   $Res call({
     Object? isNotYetLoaded = freezed,
     Object? currentCalendarIndex = freezed,
+    Object? diaries = freezed,
     Object? entities = freezed,
   }) {
     return _then(_MenstruationState(
@@ -124,6 +135,10 @@ class __$MenstruationStateCopyWithImpl<$Res>
           ? _value.currentCalendarIndex
           : currentCalendarIndex // ignore: cast_nullable_to_non_nullable
               as int,
+      diaries: diaries == freezed
+          ? _value.diaries
+          : diaries // ignore: cast_nullable_to_non_nullable
+              as List<Diary>,
       entities: entities == freezed
           ? _value.entities
           : entities // ignore: cast_nullable_to_non_nullable
@@ -137,6 +152,7 @@ class _$_MenstruationState extends _MenstruationState {
   _$_MenstruationState(
       {this.isNotYetLoaded = true,
       this.currentCalendarIndex = 0,
+      this.diaries = const [],
       this.entities = const []})
       : super._();
 
@@ -148,11 +164,14 @@ class _$_MenstruationState extends _MenstruationState {
   final int currentCalendarIndex;
   @JsonKey(defaultValue: const [])
   @override
+  final List<Diary> diaries;
+  @JsonKey(defaultValue: const [])
+  @override
   final List<Menstruation> entities;
 
   @override
   String toString() {
-    return 'MenstruationState(isNotYetLoaded: $isNotYetLoaded, currentCalendarIndex: $currentCalendarIndex, entities: $entities)';
+    return 'MenstruationState(isNotYetLoaded: $isNotYetLoaded, currentCalendarIndex: $currentCalendarIndex, diaries: $diaries, entities: $entities)';
   }
 
   @override
@@ -165,6 +184,9 @@ class _$_MenstruationState extends _MenstruationState {
             (identical(other.currentCalendarIndex, currentCalendarIndex) ||
                 const DeepCollectionEquality().equals(
                     other.currentCalendarIndex, currentCalendarIndex)) &&
+            (identical(other.diaries, diaries) ||
+                const DeepCollectionEquality()
+                    .equals(other.diaries, diaries)) &&
             (identical(other.entities, entities) ||
                 const DeepCollectionEquality()
                     .equals(other.entities, entities)));
@@ -175,6 +197,7 @@ class _$_MenstruationState extends _MenstruationState {
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(isNotYetLoaded) ^
       const DeepCollectionEquality().hash(currentCalendarIndex) ^
+      const DeepCollectionEquality().hash(diaries) ^
       const DeepCollectionEquality().hash(entities);
 
   @JsonKey(ignore: true)
@@ -187,6 +210,7 @@ abstract class _MenstruationState extends MenstruationState {
   factory _MenstruationState(
       {bool isNotYetLoaded,
       int currentCalendarIndex,
+      List<Diary> diaries,
       List<Menstruation> entities}) = _$_MenstruationState;
   _MenstruationState._() : super._();
 
@@ -194,6 +218,8 @@ abstract class _MenstruationState extends MenstruationState {
   bool get isNotYetLoaded => throw _privateConstructorUsedError;
   @override
   int get currentCalendarIndex => throw _privateConstructorUsedError;
+  @override
+  List<Diary> get diaries => throw _privateConstructorUsedError;
   @override
   List<Menstruation> get entities => throw _privateConstructorUsedError;
   @override
