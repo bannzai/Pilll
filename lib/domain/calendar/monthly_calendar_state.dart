@@ -2,7 +2,14 @@ import 'package:pilll/domain/calendar/date_range.dart';
 import 'package:pilll/domain/calendar/weekly_calendar_state.dart';
 import 'package:pilll/entity/weekday.dart';
 
-class CalendarTabState {
+abstract class MonthlyCalendarState {
+  DateTime get date;
+  DateRange dateRangeOfLine(int line);
+  int lineCount();
+  WeeklyCalendarState weeklyCalendarState(int line);
+}
+
+class CalendarTabState extends MonthlyCalendarState {
   final DateTime date;
 
   DateRange dateRangeOfLine(int line) {
