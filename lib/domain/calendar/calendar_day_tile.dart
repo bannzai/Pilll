@@ -49,7 +49,7 @@ class CalendarDayTile extends StatelessWidget {
                       height: 40,
                       decoration: BoxDecoration(
                         color: PilllColors.menstruation,
-                        borderRadius: BorderRadius.circular(16),
+                        borderRadius: BorderRadius.circular(20),
                       ),
                     ),
                   ),
