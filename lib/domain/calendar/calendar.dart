@@ -15,17 +15,6 @@ abstract class CalendarConstants {
   static final double tileHeight = 60;
 }
 
-final AutoDisposeFutureProviderFamily<List<Diary>, DateTime>?
-    calendarDiariesProvider = FutureProvider.autoDispose
-        .family<List<Diary>, DateTime>((ref, DateTime dateTimeOfMonth) {
-  final state = ref.watch(diariesStoreProvider.state);
-  if (state.entities.isNotEmpty) {
-    return Future.value(state.entities);
-  }
-  final diaries = ref.watch(diaryServiceProvider);
-  return diaries.fetchListForMonth(dateTimeOfMonth);
-});
-
 class Calendar extends HookWidget {
   final MonthlyCalendarState calendarState;
   final List<CalendarBandModel> bandModels;
@@ -42,15 +31,9 @@ class Calendar extends HookWidget {
 
   @override
   Widget build(BuildContext context) {
-    final futureCalendarDiaries =
-        useProvider(calendarDiariesProvider!(calendarState.dateForMonth));
-    return futureCalendarDiaries.when(
-      data: (value) {
-        return _body(context, value);
-      },
-      loading: () => Indicator(),
-      error: (error, trace) => Indicator(),
-    );
+    final state = useProvider(
+        monthlyDiariesStoreProvider(calendarState.dateForMonth).state);
+    return _body(context, state.entities);
   }
 
   DateTime date() => calendarState.dateForMonth;
