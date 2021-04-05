@@ -16,7 +16,8 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 final _confirmDiaryProvider = StateNotifierProvider.autoDispose
     .family<PostDiaryStore, DateTime>((ref, date) {
-  final diary = ref.watch(diariesStoreProvider.state).diaryForDateTime(date);
+  final diary =
+      ref.watch(monthlyDiariesStoreProvider(date).state).diaryForDateTime(date);
   final service = ref.watch(diaryServiceProvider);
   return PostDiaryStore(service, DiaryState(entity: diary.copyWith()));
 });
