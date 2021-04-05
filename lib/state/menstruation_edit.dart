@@ -9,7 +9,7 @@ part 'menstruation_edit.freezed.dart';
 abstract class MenstruationEditState implements _$MenstruationEditState {
   MenstruationEditState._();
   factory MenstruationEditState({
-    required Menstruation menstruation,
+    required Menstruation? menstruation,
   }) = _MenstruationEditState;
 
   List<DateTime> dates() {
