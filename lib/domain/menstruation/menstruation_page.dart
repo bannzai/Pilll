@@ -153,8 +153,8 @@ class MenstruationPage extends HookWidget {
                     showModalBottomSheet(
                       context: context,
                       builder: (context) => MenstruationEditPage(
-                          menstruation: menstruation,
-                          ),
+                        menstruation: menstruation,
+                      ),
                       backgroundColor: Colors.transparent,
                       isScrollControlled: true,
                     );
@@ -213,7 +213,7 @@ class _DateLine extends StatelessWidget {
         bandModels: [],
         horizontalPadding: _horizontalPadding,
         onTap: (weeklyCalendarState, date) =>
-            transitionToPostDiary(context, weeklyCalendarState, date, diaries),
+            transitionToPostDiary(context, date, diaries),
       ),
     );
   }

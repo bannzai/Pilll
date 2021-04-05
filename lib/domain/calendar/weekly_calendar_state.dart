@@ -13,6 +13,10 @@ extension DateTimeForCalnedarState on DateTime {
   }
 }
 
+bool isPostedDiary(Diary diary, DateTime date) => isSameDay(diary.date, date);
+bool isExistsPostedDiary(List<Diary> diaries, DateTime date) =>
+    diaries.where((element) => isPostedDiary(element, date)).isNotEmpty;
+
 abstract class WeeklyCalendarState {
   DateRange get dateRange;
 
@@ -42,9 +46,8 @@ class SinglelineWeeklyCalendarState extends WeeklyCalendarState {
 
   bool shouldGrayoutTile(DateTime date) => false;
   SinglelineWeeklyCalendarState(this.dateRange);
-  bool shouldShowDiaryMark(List<Diary> diaries, DateTime date) {
-    return diaries.where((element) => isSameDay(element.date, date)).isNotEmpty;
-  }
+  bool shouldShowDiaryMark(List<Diary> diaries, DateTime date) =>
+      isExistsPostedDiary(diaries, date);
 }
 
 class MultilineWeeklyCalendarState extends WeeklyCalendarState {
@@ -55,9 +58,8 @@ class MultilineWeeklyCalendarState extends WeeklyCalendarState {
 
   bool shouldGrayoutTile(DateTime date) =>
       date._isPreviousMonth(targetDateOfMonth);
-  bool shouldShowDiaryMark(List<Diary> diaries, DateTime date) {
-    return diaries.where((element) => isSameDay(element.date, date)).isNotEmpty;
-  }
+  bool shouldShowDiaryMark(List<Diary> diaries, DateTime date) =>
+      isExistsPostedDiary(diaries, date);
 }
 
 class MenstruationEditWeeklyCalendarState extends WeeklyCalendarState {

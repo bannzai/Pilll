@@ -103,14 +103,13 @@ class CalendarWeekdayLine extends StatelessWidget {
 
 void transitionToPostDiary(
   BuildContext context,
-  WeeklyCalendarState weeklyCalendarState,
   DateTime date,
   List<Diary> diaries,
 ) {
   if (date.isAfter(today())) {
     return;
   }
-  if (!weeklyCalendarState.shouldShowDiaryMark(diaries, date)) {
+  if (!isExistsPostedDiary(diaries, date)) {
     Navigator.of(context).push(PostDiaryPageRoute.route(date));
   } else {
     showModalBottomSheet(
