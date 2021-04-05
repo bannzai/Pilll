@@ -13,7 +13,7 @@ import 'package:pilll/entity/menstruation.dart';
 import 'package:pilll/store/menstruation_edit.dart';
 
 class MenstruationEditPage extends HookWidget {
-  final Menstruation menstruation;
+  final Menstruation? menstruation;
   MenstruationEditPage(this.menstruation);
 
   @override
