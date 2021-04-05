@@ -59,19 +59,6 @@ class MenstruationEditStore extends StateNotifier<MenstruationEditState> {
       return;
     }
 
-    if (isSameDay(menstruation.beginDate, date)) {
-      state = state.copyWith(
-          menstruation:
-              menstruation.copyWith(beginDate: date.add(Duration(days: 1))));
-      return;
-    }
-    if (isSameDay(menstruation.endDate, date)) {
-      state = state.copyWith(
-          menstruation:
-              menstruation.copyWith(endDate: date.subtract(Duration(days: 1))));
-      return;
-    }
-
     if (date.isBefore(menstruation.beginDate)) {
       state =
           state.copyWith(menstruation: menstruation.copyWith(beginDate: date));
@@ -83,10 +70,18 @@ class MenstruationEditStore extends StateNotifier<MenstruationEditState> {
       return;
     }
 
-    if (date.isAfter(menstruation.beginDate) &&
+    if ((isSameDay(menstruation.beginDate, date) ||
+            date.isAfter(menstruation.beginDate)) &&
         date.isBefore(menstruation.endDate)) {
       state =
           state.copyWith(menstruation: menstruation.copyWith(endDate: date));
+      return;
+    }
+
+    if (isSameDay(menstruation.endDate, date)) {
+      state = state.copyWith(
+          menstruation:
+              menstruation.copyWith(endDate: date.subtract(Duration(days: 1))));
       return;
     }
   }
