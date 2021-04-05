@@ -119,8 +119,14 @@ void main() {
     testWidgets('when showing new sheet label to next month',
         (WidgetTester tester) async {
       var now = DateTime(2020, 09, 14);
+      final mock = MockDiariesStateStore();
+      when(mock.fetchListForMonth(now)).thenAnswer((_) => Future.value([]));
       await tester.pumpWidget(
         ProviderScope(
+          overrides: [
+            monthlyDiariesStoreProvider
+                .overrideWithProvider((ref, param) => mock)
+          ],
           child: MaterialApp(
             home: Calendar(
               calendarState: CalendarTabState(now),
@@ -140,8 +146,14 @@ void main() {
     testWidgets('when showing new sheet label to before month',
         (WidgetTester tester) async {
       var now = DateTime(2020, 09, 14);
+      final mock = MockDiariesStateStore();
+      when(mock.fetchListForMonth(now)).thenAnswer((_) => Future.value([]));
       await tester.pumpWidget(
         ProviderScope(
+          overrides: [
+            monthlyDiariesStoreProvider
+                .overrideWithProvider((ref, param) => mock)
+          ],
           child: MaterialApp(
             home: Calendar(
               calendarState: CalendarTabState(now),
