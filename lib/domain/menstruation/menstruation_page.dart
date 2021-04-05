@@ -152,7 +152,9 @@ class MenstruationPage extends HookWidget {
                         : menstruationState.entities.last;
                     showModalBottomSheet(
                       context: context,
-                      builder: (context) => MenstruationEditPage(menstruation),
+                      builder: (context) => MenstruationEditPage(
+                          menstruation: menstruation,
+                          ),
                       backgroundColor: Colors.transparent,
                       isScrollControlled: true,
                     );

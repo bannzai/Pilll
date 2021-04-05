@@ -14,11 +14,13 @@ import 'package:pilll/store/menstruation_edit.dart';
 
 class MenstruationEditPage extends HookWidget {
   final Menstruation? menstruation;
-  MenstruationEditPage(this.menstruation);
+  MenstruationEditPage({
+    required this.menstruation,
+  });
 
   @override
   Widget build(BuildContext context) {
-    // final store = useProvider(menstruationEditProvider(entity));
+    final store = useProvider(menstruationEditProvider(menstruation));
     final state = useProvider(menstruationEditProvider(menstruation).state);
     return DraggableScrollableSheet(
       initialChildSize: 0.7,
@@ -42,9 +44,13 @@ class MenstruationEditPage extends HookWidget {
                         style: FontType.sBigTitle.merge(TextColorStyle.main)),
                     Spacer(),
                     SecondaryButton(
-                      onPressed: () {
-                        Navigator.of(context).pop();
-                      },
+                      onPressed: menstruation != null
+                          ? () {
+                              store
+                                  .save()
+                                  .then((value) => Navigator.of(context).pop());
+                            }
+                          : null,
                       text: "保存",
                     )
                   ],
