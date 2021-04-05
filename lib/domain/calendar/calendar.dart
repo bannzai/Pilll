@@ -29,12 +29,14 @@ final AutoDisposeFutureProviderFamily<List<Diary>, DateTime>?
 class Calendar extends HookWidget {
   final MonthlyCalendarState calendarState;
   final List<CalendarBandModel> bandModels;
+  final Function(DateTime, List<Diary>) onTap;
   final double horizontalPadding;
 
   const Calendar({
     Key? key,
     required this.calendarState,
     required this.bandModels,
+    required this.onTap,
     required this.horizontalPadding,
   }) : super(key: key);
 
@@ -75,13 +77,11 @@ class Calendar extends HookWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: <Widget>[
               CalendarWeekdayLine(
-                diaries: diaries,
-                calendarState: calendarState.weeklyCalendarState(line),
-                bandModels: bandModels,
-                horizontalPadding: horizontalPadding,
-                onTap: (weeklyCalendarState, date) =>
-                    transitionToPostDiary(context, date, diaries),
-              ),
+                  diaries: diaries,
+                  calendarState: calendarState.weeklyCalendarState(line),
+                  bandModels: bandModels,
+                  horizontalPadding: horizontalPadding,
+                  onTap: (weeklyCalendarState, date) => onTap(date, diaries)),
               Divider(height: 1),
             ],
           );

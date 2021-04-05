@@ -8,6 +8,7 @@ import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/domain/calendar/calendar.dart';
 import 'package:pilll/domain/calendar/calendar_date_header.dart';
+import 'package:pilll/domain/calendar/calendar_weekday_line.dart';
 import 'package:pilll/domain/calendar/monthly_calendar_state.dart';
 import 'package:pilll/entity/menstruation.dart';
 import 'package:pilll/store/menstruation_edit.dart';
@@ -58,7 +59,7 @@ class MenstruationEditPage extends HookWidget {
               ),
               ...state
                   .dates()
-                  .map((e) => _calendar(e))
+                  .map((e) => _calendar(context, e))
                   .expand((element) => element)
                   .toList(),
             ],
@@ -68,12 +69,13 @@ class MenstruationEditPage extends HookWidget {
     );
   }
 
-  List<Widget> _calendar(DateTime date) {
+  List<Widget> _calendar(BuildContext context, DateTime date) {
     return [
       CalendarDateHeader(date: date),
       Calendar(
         calendarState: MenstruationEditCalendarState(date),
         bandModels: [],
+        onTap: (date, diaries) => transitionToPostDiary(context, date, diaries),
         horizontalPadding: 0,
       ),
     ];
