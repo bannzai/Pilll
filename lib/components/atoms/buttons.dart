@@ -29,7 +29,7 @@ class PrimaryButton extends StatelessWidget {
 
 class SecondaryButton extends StatelessWidget {
   final String text;
-  final Function() onPressed;
+  final VoidCallback? onPressed;
 
   const SecondaryButton({
     Key? key,

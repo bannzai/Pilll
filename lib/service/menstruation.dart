@@ -29,6 +29,22 @@ class MenstruationService {
         .then((event) => event.docs.map(_map).toList());
   }
 
+  Future<Menstruation> create(Menstruation menstruation) {
+    return _database
+        .menstruationsReference()
+        .add(menstruation.toJson())
+        .then((event) => event.get())
+        .then((value) => _map(value));
+  }
+
+  Future<Menstruation> update(String id, Menstruation menstruation) {
+    return _database
+        .menstruationsReference()
+        .doc(id)
+        .update(menstruation.toJson())
+        .then((event) => menstruation);
+  }
+
   Stream<List<Menstruation>> subscribeAll() {
     return _database
         .menstruationsReference()
