@@ -40,12 +40,6 @@ class DiariesStateStore extends StateNotifier<DiariesState> {
     super.dispose();
   }
 
-  Future<void> _fetchListForMonth(DateTime dateTimeOfMonth) {
-    return _service
-        .fetchListForMonth(dateTimeOfMonth)
-        .then((entities) => state = state.copyWith(entities: entities));
-  }
-
   Future<void> register(Diary diary) {
     if (state.entities
         .where((element) => isSameDay(diary.date, element.date))
