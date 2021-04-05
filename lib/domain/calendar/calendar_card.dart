@@ -1,5 +1,6 @@
 import 'package:pilll/components/molecules/indicator.dart';
 import 'package:pilll/components/molecules/app_card.dart';
+import 'package:pilll/domain/calendar/calendar_weekday_line.dart';
 import 'package:pilll/domain/calendar/monthly_calendar_state.dart';
 import 'package:pilll/domain/calendar/calendar.dart';
 import 'package:pilll/domain/calendar/utility.dart';
@@ -42,6 +43,8 @@ class CalendarCard extends HookWidget {
             calendarState: CalendarTabState(date),
             bandModels: buildBandModels(
                 currentPillSheetState.entity, settingState.entity, 0),
+            onTap: (date, diaries) =>
+                transitionToPostDiary(context, date, diaries),
             horizontalPadding: 16,
           ),
           _more(context, settingEntity, currentPillSheetState.entity),

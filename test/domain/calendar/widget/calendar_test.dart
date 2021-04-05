@@ -1,3 +1,4 @@
+import 'package:pilll/domain/calendar/calendar_weekday_line.dart';
 import 'package:pilll/domain/calendar/monthly_calendar_state.dart';
 import 'package:pilll/domain/calendar/calendar.dart';
 import 'package:pilll/domain/calendar/calendar_band.dart';
@@ -45,6 +46,7 @@ void main() {
             home: Calendar(
               calendarState: CalendarTabState(now),
               bandModels: [model],
+              onTap: (date, diaries) => () {},
               horizontalPadding: 16,
             ),
           ),
@@ -88,6 +90,7 @@ void main() {
             home: Calendar(
               calendarState: CalendarTabState(now),
               bandModels: [model],
+              onTap: (date, diaries) => () {},
               horizontalPadding: 16,
             ),
           ),
@@ -115,6 +118,7 @@ void main() {
                 CalendarNextPillSheetBandModel(
                     DateTime(2020, 10, 15), DateTime(2020, 10, 18)),
               ],
+              onTap: (date, diaries) => () {},
               horizontalPadding: 16,
             ),
           ),
@@ -135,6 +139,7 @@ void main() {
                 CalendarNextPillSheetBandModel(
                     DateTime(2020, 08, 15), DateTime(2020, 08, 18)),
               ],
+              onTap: (date, diaries) => () {},
               horizontalPadding: 16,
             ),
           ),
