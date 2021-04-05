@@ -52,6 +52,13 @@ class MenstruationEditStore extends StateNotifier<MenstruationEditState> {
       );
       return;
     }
+
+    if (isSameDay(menstruation.beginDate, date) &&
+        isSameDay(menstruation.endDate, date)) {
+      state = state.copyWith(menstruation: null);
+      return;
+    }
+
     if (isSameDay(menstruation.beginDate, date)) {
       state = state.copyWith(
           menstruation:
