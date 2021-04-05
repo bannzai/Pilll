@@ -16,7 +16,7 @@ final _privateConstructorUsedError = UnsupportedError(
 class _$MenstruationEditStateTearOff {
   const _$MenstruationEditStateTearOff();
 
-  _MenstruationEditState call({required Menstruation? menstruation}) {
+  _MenstruationEditState call({required Menstruation menstruation}) {
     return _MenstruationEditState(
       menstruation: menstruation,
     );
@@ -28,7 +28,7 @@ const $MenstruationEditState = _$MenstruationEditStateTearOff();
 
 /// @nodoc
 mixin _$MenstruationEditState {
-  Menstruation? get menstruation => throw _privateConstructorUsedError;
+  Menstruation get menstruation => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $MenstruationEditStateCopyWith<MenstruationEditState> get copyWith =>
@@ -40,9 +40,9 @@ abstract class $MenstruationEditStateCopyWith<$Res> {
   factory $MenstruationEditStateCopyWith(MenstruationEditState value,
           $Res Function(MenstruationEditState) then) =
       _$MenstruationEditStateCopyWithImpl<$Res>;
-  $Res call({Menstruation? menstruation});
+  $Res call({Menstruation menstruation});
 
-  $MenstruationCopyWith<$Res>? get menstruation;
+  $MenstruationCopyWith<$Res> get menstruation;
 }
 
 /// @nodoc
@@ -62,17 +62,13 @@ class _$MenstruationEditStateCopyWithImpl<$Res>
       menstruation: menstruation == freezed
           ? _value.menstruation
           : menstruation // ignore: cast_nullable_to_non_nullable
-              as Menstruation?,
+              as Menstruation,
     ));
   }
 
   @override
-  $MenstruationCopyWith<$Res>? get menstruation {
-    if (_value.menstruation == null) {
-      return null;
-    }
-
-    return $MenstruationCopyWith<$Res>(_value.menstruation!, (value) {
+  $MenstruationCopyWith<$Res> get menstruation {
+    return $MenstruationCopyWith<$Res>(_value.menstruation, (value) {
       return _then(_value.copyWith(menstruation: value));
     });
   }
@@ -85,10 +81,10 @@ abstract class _$MenstruationEditStateCopyWith<$Res>
           $Res Function(_MenstruationEditState) then) =
       __$MenstruationEditStateCopyWithImpl<$Res>;
   @override
-  $Res call({Menstruation? menstruation});
+  $Res call({Menstruation menstruation});
 
   @override
-  $MenstruationCopyWith<$Res>? get menstruation;
+  $MenstruationCopyWith<$Res> get menstruation;
 }
 
 /// @nodoc
@@ -110,7 +106,7 @@ class __$MenstruationEditStateCopyWithImpl<$Res>
       menstruation: menstruation == freezed
           ? _value.menstruation
           : menstruation // ignore: cast_nullable_to_non_nullable
-              as Menstruation?,
+              as Menstruation,
     ));
   }
 }
@@ -120,7 +116,7 @@ class _$_MenstruationEditState extends _MenstruationEditState {
   _$_MenstruationEditState({required this.menstruation}) : super._();
 
   @override
-  final Menstruation? menstruation;
+  final Menstruation menstruation;
 
   @override
   String toString() {
@@ -148,12 +144,12 @@ class _$_MenstruationEditState extends _MenstruationEditState {
 }
 
 abstract class _MenstruationEditState extends MenstruationEditState {
-  factory _MenstruationEditState({required Menstruation? menstruation}) =
+  factory _MenstruationEditState({required Menstruation menstruation}) =
       _$_MenstruationEditState;
   _MenstruationEditState._() : super._();
 
   @override
-  Menstruation? get menstruation => throw _privateConstructorUsedError;
+  Menstruation get menstruation => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$MenstruationEditStateCopyWith<_MenstruationEditState> get copyWith =>
