@@ -1,5 +1,6 @@
 import 'package:pilll/domain/calendar/date_range.dart';
 import 'package:pilll/entity/diary.dart';
+import 'package:pilll/entity/menstruation.dart';
 import 'package:pilll/entity/weekday.dart';
 import 'package:pilll/util/datetime/date_compare.dart';
 import 'package:pilll/util/datetime/day.dart';
@@ -20,7 +21,10 @@ bool isExistsPostedDiary(List<Diary> diaries, DateTime date) =>
 abstract class WeeklyCalendarState {
   DateRange get dateRange;
 
+  bool shouldGrayoutTile(DateTime date);
   bool shouldShowDiaryMark(List<Diary> diaries, DateTime date);
+  bool isIntoMenstruationDuration(DateTime date);
+
   bool isNecessaryLineBreak(DateTime date) {
     return !dateRange.inRange(date.date());
   }
@@ -31,7 +35,6 @@ abstract class WeeklyCalendarState {
         : begin.date().difference(dateRange.begin.date()).inDays;
   }
 
-  bool shouldGrayoutTile(DateTime date);
   DateTime buildDate(Weekday weekday) {
     return dateRange.begin.add(Duration(days: weekday.index));
   }
@@ -43,11 +46,12 @@ abstract class WeeklyCalendarState {
 
 class SinglelineWeeklyCalendarState extends WeeklyCalendarState {
   final DateRange dateRange;
+  SinglelineWeeklyCalendarState(this.dateRange);
 
   bool shouldGrayoutTile(DateTime date) => false;
-  SinglelineWeeklyCalendarState(this.dateRange);
   bool shouldShowDiaryMark(List<Diary> diaries, DateTime date) =>
       isExistsPostedDiary(diaries, date);
+  bool isIntoMenstruationDuration(DateTime date) => false;
 }
 
 class MultilineWeeklyCalendarState extends WeeklyCalendarState {
@@ -60,15 +64,26 @@ class MultilineWeeklyCalendarState extends WeeklyCalendarState {
       date._isPreviousMonth(targetDateOfMonth);
   bool shouldShowDiaryMark(List<Diary> diaries, DateTime date) =>
       isExistsPostedDiary(diaries, date);
+  bool isIntoMenstruationDuration(DateTime date) => false;
 }
 
 class MenstruationEditWeeklyCalendarState extends WeeklyCalendarState {
   final DateRange dateRange;
   final DateTime targetDateOfMonth;
+  final Menstruation? menstruation;
 
-  MenstruationEditWeeklyCalendarState(this.dateRange, this.targetDateOfMonth);
+  MenstruationEditWeeklyCalendarState(
+      this.dateRange, this.targetDateOfMonth, this.menstruation);
 
   bool shouldGrayoutTile(DateTime date) =>
       date._isPreviousMonth(targetDateOfMonth);
   bool shouldShowDiaryMark(List<Diary> diaries, DateTime date) => false;
+  bool isIntoMenstruationDuration(DateTime date) {
+    final menstruation = this.menstruation;
+    if (menstruation == null) {
+      return false;
+    }
+    return DateRange(menstruation.beginDate, menstruation.endDate)
+        .inRange(date);
+  }
 }

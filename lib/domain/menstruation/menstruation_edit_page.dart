@@ -62,8 +62,8 @@ class MenstruationEditPage extends HookWidget {
                     return [
                       CalendarDateHeader(date: dateForMonth),
                       Calendar(
-                        calendarState:
-                            MenstruationEditCalendarState(dateForMonth),
+                        calendarState: MenstruationEditCalendarState(
+                            dateForMonth, state.menstruation),
                         bandModels: [],
                         onTap: (date, diaries) => store.tappedDate(date),
                         horizontalPadding: 0,
