@@ -132,7 +132,7 @@ void main() {
     test("it is alredy taken all", () async {
       final mockTodayRepository = MockTodayRepository();
       todayRepository = mockTodayRepository;
-      when(todayRepository.today()).thenReturn(DateTime.parse("2020-11-23"));
+      when(mockTodayRepository.today()).thenReturn(DateTime.parse("2020-11-23"));
 
       final pillSheetEntity =
           PillSheetModel.create(PillSheetType.pillsheet_21).copyWith(

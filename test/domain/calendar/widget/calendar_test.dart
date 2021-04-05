@@ -38,7 +38,9 @@ void main() {
       var model = CalendarNextPillSheetBandModel(
           DateTime(2020, 09, 15), DateTime(2020, 09, 18));
       final diaries = [Diary.fromDate(now)];
-      final mock = MockDiariesStateStore(DiariesState(entities: diaries));
+      final mock = MockDiariesStateStore();
+      // ignore: invalid_use_of_protected_member
+      when(mock.state).thenReturn(DiariesState(entities: diaries));
 
       await tester.pumpWidget(
         ProviderScope(
@@ -84,7 +86,9 @@ void main() {
       var model = CalendarNextPillSheetBandModel(
           DateTime(2020, 09, 19), DateTime(2020, 09, 21));
       final diaries = [Diary.fromDate(now)];
-      final mock = MockDiariesStateStore(DiariesState(entities: diaries));
+      final mock = MockDiariesStateStore();
+      // ignore: invalid_use_of_protected_member
+      when(mock.state).thenReturn(DiariesState(entities: diaries));
 
       await tester.pumpWidget(
         ProviderScope(
@@ -116,7 +120,9 @@ void main() {
     testWidgets('when showing new sheet label to next month',
         (WidgetTester tester) async {
       var now = DateTime(2020, 09, 14);
-      final mock = MockDiariesStateStore(DiariesState(entities: []));
+      final mock = MockDiariesStateStore();
+      // ignore: invalid_use_of_protected_member
+      when(mock.state).thenReturn(DiariesState(entities: []));
 
       await tester.pumpWidget(
         ProviderScope(
@@ -143,7 +149,9 @@ void main() {
     testWidgets('when showing new sheet label to before month',
         (WidgetTester tester) async {
       var now = DateTime(2020, 09, 14);
-      final mock = MockDiariesStateStore(DiariesState(entities: []));
+      final mock = MockDiariesStateStore();
+      // ignore: invalid_use_of_protected_member
+      when(mock.state).thenReturn(DiariesState(entities: []));
 
       await tester.pumpWidget(
         ProviderScope(

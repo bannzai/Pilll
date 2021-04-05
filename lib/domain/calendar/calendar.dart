@@ -29,9 +29,10 @@ class Calendar extends HookWidget {
 
   @override
   Widget build(BuildContext context) {
-    final state = useProvider(
-        monthlyDiariesStoreProvider(calendarState.dateForMonth).state);
-    return _body(context, state.entities);
+    final store =
+        useProvider(monthlyDiariesStoreProvider(calendarState.dateForMonth));
+    // ignore: invalid_use_of_protected_member
+    return _body(context, store.state.entities);
   }
 
   DateTime date() => calendarState.dateForMonth;
