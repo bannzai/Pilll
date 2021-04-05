@@ -8,6 +8,7 @@ import 'package:pilll/entity/diary.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:pilll/state/diaries.dart';
 import 'package:pilll/store/diaries.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -37,15 +38,13 @@ void main() {
       var model = CalendarNextPillSheetBandModel(
           DateTime(2020, 09, 15), DateTime(2020, 09, 18));
       final diaries = [Diary.fromDate(now)];
-      final mock = MockDiariesStateStore();
-      when(mock.fetchListForMonth(now))
-          .thenAnswer((_) => Future.value(diaries));
+      final mock = MockDiariesStateStore(DiariesState(entities: diaries));
 
       await tester.pumpWidget(
         ProviderScope(
           overrides: [
             monthlyDiariesStoreProvider.overrideWithProvider(
-              (ref, parameters) => MockDiariesStateStore(),
+              (ref, parameters) => mock,
             )
           ],
           child: MaterialApp(
@@ -84,16 +83,14 @@ void main() {
       var now = DateTime(2020, 09, 14);
       var model = CalendarNextPillSheetBandModel(
           DateTime(2020, 09, 19), DateTime(2020, 09, 21));
-      final mock = MockDiariesStateStore();
       final diaries = [Diary.fromDate(now)];
-      when(mock.fetchListForMonth(now))
-          .thenAnswer((_) => Future.value(diaries));
+      final mock = MockDiariesStateStore(DiariesState(entities: diaries));
 
       await tester.pumpWidget(
         ProviderScope(
           overrides: [
             monthlyDiariesStoreProvider.overrideWithProvider(
-              (ref, parameters) => MockDiariesStateStore(),
+              (ref, parameters) => mock,
             )
           ],
           child: MaterialApp(
@@ -119,8 +116,8 @@ void main() {
     testWidgets('when showing new sheet label to next month',
         (WidgetTester tester) async {
       var now = DateTime(2020, 09, 14);
-      final mock = MockDiariesStateStore();
-      when(mock.fetchListForMonth(now)).thenAnswer((_) => Future.value([]));
+      final mock = MockDiariesStateStore(DiariesState(entities: []));
+
       await tester.pumpWidget(
         ProviderScope(
           overrides: [
@@ -146,8 +143,8 @@ void main() {
     testWidgets('when showing new sheet label to before month',
         (WidgetTester tester) async {
       var now = DateTime(2020, 09, 14);
-      final mock = MockDiariesStateStore();
-      when(mock.fetchListForMonth(now)).thenAnswer((_) => Future.value([]));
+      final mock = MockDiariesStateStore(DiariesState(entities: []));
+
       await tester.pumpWidget(
         ProviderScope(
           overrides: [

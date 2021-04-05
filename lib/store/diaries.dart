@@ -15,7 +15,7 @@ class DiariesStateStore extends StateNotifier<DiariesState> {
   final DateTime dateForMonth;
   DiariesStateStore(this._service, this.dateForMonth)
       : super(DiariesState(entities: [])) {
-    _subscribe();
+    _reset();
   }
 
   void _reset() {
@@ -40,7 +40,7 @@ class DiariesStateStore extends StateNotifier<DiariesState> {
     super.dispose();
   }
 
-  Future<void> fetchListForMonth(DateTime dateTimeOfMonth) {
+  Future<void> _fetchListForMonth(DateTime dateTimeOfMonth) {
     return _service
         .fetchListForMonth(dateTimeOfMonth)
         .then((entities) => state = state.copyWith(entities: entities));
