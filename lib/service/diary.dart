@@ -1,7 +1,6 @@
 import 'package:pilll/database/database.dart';
 import 'package:pilll/entity/diary.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:pilll/util/datetime/day.dart';
 import 'package:riverpod/riverpod.dart';
 
 final diaryServiceProvider =
