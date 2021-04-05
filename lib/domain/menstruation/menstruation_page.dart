@@ -144,9 +144,6 @@ class MenstruationPage extends HookWidget {
                 padding: const EdgeInsets.only(bottom: 20.0),
                 child: PrimaryButton(
                   onPressed: () {
-                    if (menstruationState.entities.isEmpty) {
-                      return;
-                    }
                     final menstruation = menstruationState.entities.isEmpty
                         ? null
                         : menstruationState.entities.last;
