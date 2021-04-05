@@ -69,13 +69,15 @@ class MenstruationEditPage extends HookWidget {
     );
   }
 
-  List<Widget> _calendar(BuildContext context, DateTime date) {
+  List<Widget> _calendar(BuildContext context, DateTime dateForMonth) {
     return [
-      CalendarDateHeader(date: date),
+      CalendarDateHeader(date: dateForMonth),
       Calendar(
-        calendarState: MenstruationEditCalendarState(date),
+        calendarState: MenstruationEditCalendarState(dateForMonth),
         bandModels: [],
-        onTap: (date, diaries) => transitionToPostDiary(context, date, diaries),
+        onTap: (date, diaries) {
+
+        },
         horizontalPadding: 0,
       ),
     ];
