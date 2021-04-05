@@ -27,7 +27,7 @@ class MenstruationEditStore extends StateNotifier<MenstruationEditState> {
       return;
     }
     Future(() async {
-      state = state.copyWith(entity: await service.fetch(documentID));
+      state = state.copyWith(menstruation: await service.fetch(documentID));
     });
   }
 }

@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
+import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/components/atoms/buttons.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
@@ -8,15 +9,17 @@ import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/domain/calendar/calendar.dart';
 import 'package:pilll/domain/calendar/calendar_date_header.dart';
 import 'package:pilll/domain/calendar/monthly_calendar_state.dart';
-import 'package:pilll/util/datetime/day.dart';
+import 'package:pilll/entity/menstruation.dart';
+import 'package:pilll/store/menstruation_edit.dart';
 
 class MenstruationEditPage extends HookWidget {
+  final Menstruation menstruation;
+  MenstruationEditPage(this.menstruation);
+
   @override
   Widget build(BuildContext context) {
     // final store = useProvider(menstruationEditProvider(entity));
-    // final state = useProvider(menstruationEditProvider(entity).state);
-    final currentMonth = today();
-    final nextMonth = DateTime(today().year, today().month + 1, today().day);
+    final state = useProvider(menstruationEditProvider(menstruation).state);
     return DraggableScrollableSheet(
       initialChildSize: 0.7,
       builder: (context, scrollController) {
@@ -47,22 +50,26 @@ class MenstruationEditPage extends HookWidget {
                   ],
                 ),
               ),
-              CalendarDateHeader(date: currentMonth),
-              Calendar(
-                calendarState: MenstruationEditCalendarState(currentMonth),
-                bandModels: [],
-                horizontalPadding: 0,
-              ),
-              CalendarDateHeader(date: nextMonth),
-              Calendar(
-                calendarState: MenstruationEditCalendarState(nextMonth),
-                bandModels: [],
-                horizontalPadding: 0,
-              ),
+              ...state
+                  .dates()
+                  .map((e) => _calendar(e))
+                  .expand((element) => element)
+                  .toList(),
             ],
           ),
         );
       },
     );
+  }
+
+  List<Widget> _calendar(DateTime date) {
+    return [
+      CalendarDateHeader(date: date),
+      Calendar(
+        calendarState: MenstruationEditCalendarState(date),
+        bandModels: [],
+        horizontalPadding: 0,
+      ),
+    ];
   }
 }

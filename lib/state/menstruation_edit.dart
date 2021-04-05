@@ -11,4 +11,11 @@ abstract class MenstruationEditState implements _$MenstruationEditState {
   factory MenstruationEditState({
     required Menstruation menstruation,
   }) = _MenstruationEditState;
+
+  List<DateTime> dates() {
+    return [
+      menstruation.beginDate,
+      DateTime(menstruation.beginDate.year, menstruation.beginDate.month + 1, 1)
+    ];
+  }
 }

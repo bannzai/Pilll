@@ -144,9 +144,13 @@ class MenstruationPage extends HookWidget {
                 padding: const EdgeInsets.only(bottom: 20.0),
                 child: PrimaryButton(
                   onPressed: () {
+                    if (menstruationState.entities.isEmpty) {
+                      return;
+                    }
                     showModalBottomSheet(
                       context: context,
-                      builder: (context) => MenstruationEditPage(),
+                      builder: (context) =>
+                          MenstruationEditPage(menstruationState.entities.last),
                       backgroundColor: Colors.transparent,
                       isScrollControlled: true,
                     );
