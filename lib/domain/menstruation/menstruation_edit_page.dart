@@ -59,7 +59,18 @@ class MenstruationEditPage extends HookWidget {
               ),
               ...state
                   .dates()
-                  .map((e) => _calendar(context, e))
+                  .map((dateForMonth) {
+                    return [
+                      CalendarDateHeader(date: dateForMonth),
+                      Calendar(
+                        calendarState:
+                            MenstruationEditCalendarState(dateForMonth),
+                        bandModels: [],
+                        onTap: (date, diaries) {},
+                        horizontalPadding: 0,
+                      ),
+                    ];
+                  })
                   .expand((element) => element)
                   .toList(),
             ],
@@ -67,19 +78,5 @@ class MenstruationEditPage extends HookWidget {
         );
       },
     );
-  }
-
-  List<Widget> _calendar(BuildContext context, DateTime dateForMonth) {
-    return [
-      CalendarDateHeader(date: dateForMonth),
-      Calendar(
-        calendarState: MenstruationEditCalendarState(dateForMonth),
-        bandModels: [],
-        onTap: (date, diaries) {
-
-        },
-        horizontalPadding: 0,
-      ),
-    ];
   }
 }
