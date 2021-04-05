@@ -8,6 +8,7 @@ DateTime _firstDayOfMonth(DateTime date) {
 
 abstract class MonthlyCalendarState {
   DateTime get dateForMonth;
+
   DateRange dateRangeOfLine(int line) {
     if (line == 1) {
       return DateRange(
@@ -39,6 +40,7 @@ abstract class MonthlyCalendarState {
   int _previousMonthDayCount() => _weekdayOffset();
   int _tileCount() => _previousMonthDayCount() + _lastDay();
   int lineCount() => (_tileCount() / Weekday.values.length).ceil();
+
   WeeklyCalendarState weeklyCalendarState(int line);
 }
 
