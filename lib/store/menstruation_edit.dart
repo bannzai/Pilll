@@ -17,7 +17,7 @@ class MenstruationEditStore extends StateNotifier<MenstruationEditState> {
   MenstruationEditStore({
     required this.menstruation,
     required this.service,
-  }) : super(MenstruationEditState()) {
+  }) : super(MenstruationEditState(menstruation: menstruation)) {
     _reset();
   }
 
