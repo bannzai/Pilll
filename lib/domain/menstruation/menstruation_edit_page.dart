@@ -8,7 +8,6 @@ import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/domain/calendar/calendar.dart';
 import 'package:pilll/domain/calendar/calendar_date_header.dart';
-import 'package:pilll/domain/calendar/calendar_weekday_line.dart';
 import 'package:pilll/domain/calendar/monthly_calendar_state.dart';
 import 'package:pilll/entity/menstruation.dart';
 import 'package:pilll/store/menstruation_edit.dart';
@@ -66,7 +65,7 @@ class MenstruationEditPage extends HookWidget {
                         calendarState:
                             MenstruationEditCalendarState(dateForMonth),
                         bandModels: [],
-                        onTap: (date, diaries) {},
+                        onTap: (date, diaries) => store.tappedDate(date),
                         horizontalPadding: 0,
                       ),
                     ];
