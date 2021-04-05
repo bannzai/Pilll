@@ -20,17 +20,17 @@ void main() {
 
   27   28  29  30
     */
-    test("#dateTimeForPreviousMonthTile", () {
+    test("#shouldGrayoutTile", () {
       final date = DateTime.parse("2020-09-14");
       final anyDate = date;
       final calendarState = MultilineWeeklyCalendarState(
           DateRange(anyDate, anyDate.add(Duration(days: 6))), date);
-      expect(calendarState.dateTimeForGrayoutTile(DateTime.parse("2020-08-30")),
-          DateTime.parse("2020-08-30"));
-      expect(calendarState.dateTimeForGrayoutTile(DateTime.parse("2020-08-31")),
-          DateTime.parse("2020-08-31"));
-      expect(calendarState.dateTimeForGrayoutTile(DateTime.parse("2020-09-01")),
-          null);
+      expect(calendarState.shouldGrayoutTile(DateTime.parse("2020-08-30")),
+          true);
+      expect(calendarState.shouldGrayoutTile(DateTime.parse("2020-08-31")),
+          true);
+      expect(calendarState.shouldGrayoutTile(DateTime.parse("2020-09-01")),
+          false);
     });
 
     group("#isNecessaryLineBreak", () {
