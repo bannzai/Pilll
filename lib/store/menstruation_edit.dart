@@ -37,6 +37,9 @@ class MenstruationEditStore extends StateNotifier<MenstruationEditState> {
   }
 
   tappedDate(DateTime date) {
+    if (date.isAfter(today())) {
+      return;
+    }
     final menstruation = state.menstruation;
     if (menstruation == null) {
       state = state.copyWith(
