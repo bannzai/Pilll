@@ -25,7 +25,7 @@ abstract class MenstruationCardState implements _$MenstruationCardState {
   }) =>
       MenstruationCardState(
         scheduleDate: menstruation.beginDate,
-        countdownString: menstruation.isPreview
+        countdownString: menstruation.isNotYetUserEdited
             ? "生理予定${today.difference(menstruation.beginDate).inDays}日目"
             : "${today.difference(menstruation.beginDate).inDays}日目",
       );

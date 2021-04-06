@@ -46,7 +46,7 @@ class MenstruationEditStore extends StateNotifier<MenstruationEditState> {
         menstruation: Menstruation(
           beginDate: date,
           endDate: date,
-          isPreview: false,
+          isNotYetUserEdited: false,
           createdAt: now(),
         ),
       );
