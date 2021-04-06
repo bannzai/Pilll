@@ -13,7 +13,7 @@ _$_Menstruation _$_$_MenstruationFromJson(Map<String, dynamic> json) {
         json['beginDate'] as Timestamp),
     endDate: NonNullTimestampConverter.timestampToDateTime(
         json['endDate'] as Timestamp),
-    isNotYetUserEdited: json['isNotYetUserEdited'] as bool? ?? false,
+    isNotYetUserEdited: json['isNotYetUserEdited'] as bool,
     deletedAt:
         TimestampConverter.timestampToDateTime(json['deletedAt'] as Timestamp?),
     createdAt: NonNullTimestampConverter.timestampToDateTime(
