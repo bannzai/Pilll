@@ -13,7 +13,7 @@ _$_Menstruation _$_$_MenstruationFromJson(Map<String, dynamic> json) {
         json['beginDate'] as Timestamp),
     endDate: NonNullTimestampConverter.timestampToDateTime(
         json['endDate'] as Timestamp),
-    isPreview: json['isPreview'] as bool,
+    isNotYetUserEdited: json['isNotYetUserEdited'] as bool? ?? false,
     deletedAt:
         TimestampConverter.timestampToDateTime(json['deletedAt'] as Timestamp?),
     createdAt: NonNullTimestampConverter.timestampToDateTime(
@@ -35,7 +35,7 @@ Map<String, dynamic> _$_$_MenstruationToJson(_$_Menstruation instance) {
       NonNullTimestampConverter.dateTimeToTimestamp(instance.beginDate);
   val['endDate'] =
       NonNullTimestampConverter.dateTimeToTimestamp(instance.endDate);
-  val['isPreview'] = instance.isPreview;
+  val['isNotYetUserEdited'] = instance.isNotYetUserEdited;
   val['deletedAt'] = TimestampConverter.dateTimeToTimestamp(instance.deletedAt);
   val['createdAt'] =
       NonNullTimestampConverter.dateTimeToTimestamp(instance.createdAt);
