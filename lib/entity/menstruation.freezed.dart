@@ -27,7 +27,7 @@ class _$MenstruationTearOff {
           required DateTime beginDate,
       @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
           required DateTime endDate,
-      required bool isPreview,
+      bool isNotYetUserEdited = false,
       @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
           DateTime? deletedAt,
       @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
@@ -36,7 +36,7 @@ class _$MenstruationTearOff {
       id: id,
       beginDate: beginDate,
       endDate: endDate,
-      isPreview: isPreview,
+      isNotYetUserEdited: isNotYetUserEdited,
       deletedAt: deletedAt,
       createdAt: createdAt,
     );
@@ -62,7 +62,7 @@ mixin _$Menstruation {
       fromJson: NonNullTimestampConverter.timestampToDateTime,
       toJson: NonNullTimestampConverter.dateTimeToTimestamp)
   DateTime get endDate => throw _privateConstructorUsedError;
-  bool get isPreview => throw _privateConstructorUsedError;
+  bool get isNotYetUserEdited => throw _privateConstructorUsedError;
   @JsonKey(
       fromJson: TimestampConverter.timestampToDateTime,
       toJson: TimestampConverter.dateTimeToTimestamp)
@@ -90,7 +90,7 @@ abstract class $MenstruationCopyWith<$Res> {
           DateTime beginDate,
       @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
           DateTime endDate,
-      bool isPreview,
+      bool isNotYetUserEdited,
       @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
           DateTime? deletedAt,
       @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
@@ -110,7 +110,7 @@ class _$MenstruationCopyWithImpl<$Res> implements $MenstruationCopyWith<$Res> {
     Object? id = freezed,
     Object? beginDate = freezed,
     Object? endDate = freezed,
-    Object? isPreview = freezed,
+    Object? isNotYetUserEdited = freezed,
     Object? deletedAt = freezed,
     Object? createdAt = freezed,
   }) {
@@ -127,9 +127,9 @@ class _$MenstruationCopyWithImpl<$Res> implements $MenstruationCopyWith<$Res> {
           ? _value.endDate
           : endDate // ignore: cast_nullable_to_non_nullable
               as DateTime,
-      isPreview: isPreview == freezed
-          ? _value.isPreview
-          : isPreview // ignore: cast_nullable_to_non_nullable
+      isNotYetUserEdited: isNotYetUserEdited == freezed
+          ? _value.isNotYetUserEdited
+          : isNotYetUserEdited // ignore: cast_nullable_to_non_nullable
               as bool,
       deletedAt: deletedAt == freezed
           ? _value.deletedAt
@@ -157,7 +157,7 @@ abstract class _$MenstruationCopyWith<$Res>
           DateTime beginDate,
       @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
           DateTime endDate,
-      bool isPreview,
+      bool isNotYetUserEdited,
       @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
           DateTime? deletedAt,
       @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
@@ -179,7 +179,7 @@ class __$MenstruationCopyWithImpl<$Res> extends _$MenstruationCopyWithImpl<$Res>
     Object? id = freezed,
     Object? beginDate = freezed,
     Object? endDate = freezed,
-    Object? isPreview = freezed,
+    Object? isNotYetUserEdited = freezed,
     Object? deletedAt = freezed,
     Object? createdAt = freezed,
   }) {
@@ -196,9 +196,9 @@ class __$MenstruationCopyWithImpl<$Res> extends _$MenstruationCopyWithImpl<$Res>
           ? _value.endDate
           : endDate // ignore: cast_nullable_to_non_nullable
               as DateTime,
-      isPreview: isPreview == freezed
-          ? _value.isPreview
-          : isPreview // ignore: cast_nullable_to_non_nullable
+      isNotYetUserEdited: isNotYetUserEdited == freezed
+          ? _value.isNotYetUserEdited
+          : isNotYetUserEdited // ignore: cast_nullable_to_non_nullable
               as bool,
       deletedAt: deletedAt == freezed
           ? _value.deletedAt
@@ -223,7 +223,7 @@ class _$_Menstruation extends _Menstruation {
           required this.beginDate,
       @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
           required this.endDate,
-      required this.isPreview,
+      this.isNotYetUserEdited = false,
       @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
           this.deletedAt,
       @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
@@ -246,8 +246,9 @@ class _$_Menstruation extends _Menstruation {
       fromJson: NonNullTimestampConverter.timestampToDateTime,
       toJson: NonNullTimestampConverter.dateTimeToTimestamp)
   final DateTime endDate;
+  @JsonKey(defaultValue: false)
   @override
-  final bool isPreview;
+  final bool isNotYetUserEdited;
   @override
   @JsonKey(
       fromJson: TimestampConverter.timestampToDateTime,
@@ -261,7 +262,7 @@ class _$_Menstruation extends _Menstruation {
 
   @override
   String toString() {
-    return 'Menstruation(id: $id, beginDate: $beginDate, endDate: $endDate, isPreview: $isPreview, deletedAt: $deletedAt, createdAt: $createdAt)';
+    return 'Menstruation(id: $id, beginDate: $beginDate, endDate: $endDate, isNotYetUserEdited: $isNotYetUserEdited, deletedAt: $deletedAt, createdAt: $createdAt)';
   }
 
   @override
@@ -276,9 +277,9 @@ class _$_Menstruation extends _Menstruation {
             (identical(other.endDate, endDate) ||
                 const DeepCollectionEquality()
                     .equals(other.endDate, endDate)) &&
-            (identical(other.isPreview, isPreview) ||
+            (identical(other.isNotYetUserEdited, isNotYetUserEdited) ||
                 const DeepCollectionEquality()
-                    .equals(other.isPreview, isPreview)) &&
+                    .equals(other.isNotYetUserEdited, isNotYetUserEdited)) &&
             (identical(other.deletedAt, deletedAt) ||
                 const DeepCollectionEquality()
                     .equals(other.deletedAt, deletedAt)) &&
@@ -293,7 +294,7 @@ class _$_Menstruation extends _Menstruation {
       const DeepCollectionEquality().hash(id) ^
       const DeepCollectionEquality().hash(beginDate) ^
       const DeepCollectionEquality().hash(endDate) ^
-      const DeepCollectionEquality().hash(isPreview) ^
+      const DeepCollectionEquality().hash(isNotYetUserEdited) ^
       const DeepCollectionEquality().hash(deletedAt) ^
       const DeepCollectionEquality().hash(createdAt);
 
@@ -316,7 +317,7 @@ abstract class _Menstruation extends Menstruation {
           required DateTime beginDate,
       @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
           required DateTime endDate,
-      required bool isPreview,
+      bool isNotYetUserEdited,
       @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
           DateTime? deletedAt,
       @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
@@ -340,7 +341,7 @@ abstract class _Menstruation extends Menstruation {
       toJson: NonNullTimestampConverter.dateTimeToTimestamp)
   DateTime get endDate => throw _privateConstructorUsedError;
   @override
-  bool get isPreview => throw _privateConstructorUsedError;
+  bool get isNotYetUserEdited => throw _privateConstructorUsedError;
   @override
   @JsonKey(
       fromJson: TimestampConverter.timestampToDateTime,
