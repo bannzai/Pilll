@@ -42,6 +42,13 @@ class MenstruationStore extends StateNotifier<MenstruationState> {
     });
   }
 
+  @override
+  void dispose() {
+    _canceller?.cancel();
+    _diaryCanceller?.cancel();
+    super.dispose();
+  }
+
   void updateCurrentCalendarIndex(int index) {
     if (state.currentCalendarIndex == index) {
       return;
