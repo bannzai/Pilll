@@ -6,6 +6,10 @@ import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/domain/calendar/utility.dart';
+import 'package:pilll/entity/menstruation.dart';
+import 'package:pilll/entity/pill_sheet.dart';
+import 'package:pilll/entity/setting.dart';
+import 'package:pilll/state/calendar_page.dart';
 import 'package:pilll/store/calendar_page.dart';
 import 'package:pilll/store/pill_sheet.dart';
 import 'package:pilll/store/setting.dart';
@@ -61,7 +65,11 @@ class CalendarPage extends HookWidget {
                         Container(
                           width: MediaQuery.of(context).size.width - 32,
                           height: 111,
-                          child: _menstruationCard(),
+                          child: _MenstruationCard(
+                            latestPillSheet: state.latestPillSheet,
+                            setting: settingEntity,
+                            menstruations: state.menstruations,
+                          ),
                         ),
                       ],
                     )),
@@ -100,24 +108,22 @@ class CalendarPage extends HookWidget {
       ],
     );
   }
-
-  Widget _menstruationCard() {
-    return _MenstruationCard();
-  }
 }
 
 // TODO: remote card from Calendar
-class _MenstruationCard extends HookWidget {
+class _MenstruationCard extends StatelessWidget {
+  final PillSheetModel? latestPillSheet;
+  final Setting? setting;
+  final List<Menstruation> menstruations;
+
   const _MenstruationCard({
     Key? key,
+    required this.latestPillSheet,
+    required this.setting,
+    required this.menstruations,
   }) : super(key: key);
-
   @override
   Widget build(BuildContext context) {
-    final pillSheetState = useProvider(pillSheetStoreProvider.state);
-    final settingState = useProvider(settingStoreProvider.state);
-    final pillSheetEntity = pillSheetState.entity;
-    final settingEntity = settingState.entity;
     return AppCard(
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
@@ -132,15 +138,17 @@ class _MenstruationCard extends HookWidget {
             ],
           ),
           Text(() {
-            if (pillSheetEntity == null) {
+            final latestPillSheet = this.latestPillSheet;
+            if (latestPillSheet == null) {
               return "";
             }
-            if (settingEntity == null) {
+            final setting = this.setting;
+            if (setting == null) {
               return "";
             }
             for (int i = 0; i < 12; i += 1) {
               final begin = scheduledMenstruationDateRanges(
-                      pillSheetEntity, settingEntity, i)
+                      latestPillSheet, setting, menstruations, i)
                   .begin;
               if (begin.isAfter(today())) {
                 return DateTimeFormatter.monthAndWeekday(begin);
