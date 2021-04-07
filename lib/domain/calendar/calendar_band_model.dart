@@ -21,7 +21,7 @@ class CalendarScheduledMenstruationBandModel extends CalendarBandModel {
 
 class CalendarMenstruationBandModel extends CalendarBandModel {
   @override
-  Color get color => PilllColors.menstruation;
+  Color get color => PilllColors.red;
   @override
   String get label => "";
   CalendarMenstruationBandModel(DateTime begin, DateTime end)
