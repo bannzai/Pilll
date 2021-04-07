@@ -57,13 +57,15 @@ List<CalendarBandModel> buildBandModels(
   PillSheetModel? pillSheet,
   Setting? setting,
   List<Menstruation> menstruations,
-  int page,
+  int maxPageCount,
 ) {
   return [
     if (pillSheet != null) ...[
-      scheduledMenstruationDateRanges(pillSheet, setting!, page).map(
-          (range) => CalendarMenstruationBandModel(range.begin, range.end)),
-      nextPillSheetDateRanges(pillSheet, page).map(
+      ...scheduledMenstruationDateRanges(
+              pillSheet, setting!, menstruations, maxPageCount)
+          .map(
+              (range) => CalendarMenstruationBandModel(range.begin, range.end)),
+      ...nextPillSheetDateRanges(pillSheet, maxPageCount).map(
           (range) => CalendarNextPillSheetBandModel(range.begin, range.end))
     ]
   ];
