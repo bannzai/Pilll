@@ -12,15 +12,14 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:pilll/util/datetime/day.dart' as utility;
+import 'package:pilll/util/datetime/day.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 abstract class CalendarPageConstants {
   static final double halfCircleHeight = 300;
 }
 
-class CalendarPage extends StatelessWidget {
-  DateTime get today => utility.today();
+class CalendarPage extends HookWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -68,7 +67,7 @@ class CalendarPage extends StatelessWidget {
                   padding:
                       const EdgeInsets.only(left: 16, right: 16, bottom: 16),
                   child: CalendarCard(
-                    date: today,
+                    date: today(),
                   ),
                 ),
               ),
@@ -133,7 +132,7 @@ class _MenstruationCard extends HookWidget {
               final begin = scheduledMenstruationDateRanges(
                       pillSheetEntity, settingEntity, i)
                   .begin;
-              if (begin.isAfter(utility.today())) {
+              if (begin.isAfter(today())) {
                 return DateTimeFormatter.monthAndWeekday(begin);
               }
             }
