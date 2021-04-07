@@ -30,14 +30,12 @@ class PillSheetService {
   }
 
   PillSheetService(this._database);
-  @override
   Future<PillSheetModel> fetchLast() {
     return _queryOfFetchLastPillSheet()
         .get()
         .then((event) => _filterForLatestPillSheet(event)!);
   }
 
-  @override
   Future<PillSheetModel> register(PillSheetModel model) {
     if (model.createdAt != null) throw PillSheetAlreadyExists();
     if (model.deletedAt != null) throw PillSheetAlreadyDeleted();

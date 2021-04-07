@@ -18,7 +18,6 @@ import 'package:pilll/domain/record/weekday_badge.dart';
 import 'package:pilll/entity/diary.dart';
 import 'package:pilll/entity/weekday.dart';
 import 'package:pilll/store/menstruation.dart';
-import 'package:pilll/store/pill_sheet.dart';
 import 'package:pilll/util/datetime/day.dart';
 import 'package:scrollable_positioned_list/scrollable_positioned_list.dart';
 
@@ -35,8 +34,6 @@ class MenstruationPage extends HookWidget {
   Scaffold build(BuildContext context) {
     final menstruationStore = useProvider(menstruationsStoreProvider);
     final menstruationState = useProvider(menstruationsStoreProvider.state);
-    final pillSheetStore = useProvider(pillSheetStoreProvider);
-    final pillSheetState = useProvider(pillSheetStoreProvider.state);
     final ItemPositionsListener itemPositionsListener =
         ItemPositionsListener.create();
     itemPositionsListener.itemPositions.addListener(() {
