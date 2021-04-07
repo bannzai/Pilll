@@ -12,7 +12,7 @@ void main() {
     TestWidgetsFlutterBinding.ensureInitialized();
     SharedPreferences.setMockInitialValues({});
   });
-  group("#scheduledMenstruationDateRange", () {
+  group("#scheduledMenstruationDateRanges", () {
     test(
       "First page with pillSheetType: pillsheet_28_7, beginingDate: 2020-09-01, fromMenstruation: 23, durationMenstruation: 3",
       () {
@@ -158,7 +158,7 @@ void main() {
       },
     );
   });
-  group("#nextPillSheetDateRange", () {
+  group("#nextPillSheetDateRanges", () {
     test(
       "First page with pillSheetType: pillsheet_28_7, beginingDate: 2020-09-01",
       () {
@@ -188,10 +188,12 @@ void main() {
         );
         expect(
           nextPillSheetDateRanges(model, 0),
-          DateRange(
-            DateTime.parse("2020-09-29"),
-            DateTime.parse("2020-10-05"),
-          ),
+          [
+            DateRange(
+              DateTime.parse("2020-09-29"),
+              DateTime.parse("2020-10-05"),
+            )
+          ],
         );
       },
     );
@@ -207,10 +209,12 @@ void main() {
         );
         expect(
           nextPillSheetDateRanges(model, 1),
-          DateRange(
-            DateTime.parse("2020-10-27"),
-            DateTime.parse("2020-11-02"),
-          ),
+          [
+            DateRange(
+              DateTime.parse("2020-10-27"),
+              DateTime.parse("2020-11-02"),
+            )
+          ],
         );
       },
     );
@@ -226,10 +230,12 @@ void main() {
         );
         expect(
           nextPillSheetDateRanges(model, 2),
-          DateRange(
-            DateTime.parse("2020-11-24"),
-            DateTime.parse("2020-11-30"),
-          ),
+          [
+            DateRange(
+              DateTime.parse("2020-11-24"),
+              DateTime.parse("2020-11-30"),
+            )
+          ],
         );
       },
     );
@@ -262,10 +268,12 @@ void main() {
         );
         expect(
           nextPillSheetDateRanges(model, 0),
-          DateRange(
-            DateTime.parse("2020-09-29"),
-            DateTime.parse("2020-10-05"),
-          ),
+          [
+            DateRange(
+              DateTime.parse("2020-09-29"),
+              DateTime.parse("2020-10-05"),
+            )
+          ],
         );
       },
     );
