@@ -107,10 +107,8 @@ class CalendarCard extends StatelessWidget {
                   );
                   List<CalendarBandModel> satisfyNextMonthDateRanges = [];
                   if (latestPillSheet != null) {
-                    satisfyNextMonthDateRanges = List.generate(12, (index) {
-                      return buildBandModels(
-                          latestPillSheet, setting, menstruations, index);
-                    }).expand((element) => element).toList();
+                    satisfyNextMonthDateRanges = buildBandModels(
+                        latestPillSheet, setting, menstruations, 12);
                   }
                   final nextCalendars = List.generate(
                     6,
