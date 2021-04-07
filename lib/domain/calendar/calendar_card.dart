@@ -41,7 +41,7 @@ class CalendarCard extends StatelessWidget {
           Calendar(
             calendarState: CalendarTabState(date),
             bandModels:
-                buildBandModels(latestPillSheet, setting, menstruations, 0),
+                buildBandModels(latestPillSheet, setting, menstruations, 1),
             onTap: (date, diaries) =>
                 transitionToPostDiary(context, date, diaries),
             horizontalPadding: 16,
@@ -103,7 +103,7 @@ class CalendarCard extends StatelessWidget {
                   });
                   CalendarListPageModel current = CalendarListPageModel(
                     CalendarTabState(now),
-                    buildBandModels(latestPillSheet, setting, menstruations, 0),
+                    buildBandModels(latestPillSheet, setting, menstruations, 1),
                   );
                   List<CalendarBandModel> satisfyNextMonthDateRanges = [];
                   if (latestPillSheet != null) {
