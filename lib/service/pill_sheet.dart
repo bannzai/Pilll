@@ -4,18 +4,10 @@ import 'package:pilll/entity/pill_sheet.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:riverpod/riverpod.dart';
 
-abstract class PillSheetServiceInterface {
-  Future<PillSheetModel> fetchLast();
-  Future<PillSheetModel> register(PillSheetModel model);
-  Future<void> delete(PillSheetModel pillSheet);
-  Future<PillSheetModel> update(PillSheetModel pillSheet);
-  Stream<PillSheetModel> subscribeForLatestPillSheet();
-}
-
-final pillSheetServiceProvider = Provider<PillSheetServiceInterface>(
+final pillSheetServiceProvider = Provider<PillSheetService>(
     (ref) => PillSheetService(ref.watch(databaseProvider)));
 
-class PillSheetService extends PillSheetServiceInterface {
+class PillSheetService {
   final DatabaseConnection _database;
 
   PillSheetModel? _filterForLatestPillSheet(QuerySnapshot snapshot) {
