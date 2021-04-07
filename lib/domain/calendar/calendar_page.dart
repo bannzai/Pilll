@@ -146,13 +146,14 @@ class _MenstruationCard extends StatelessWidget {
             if (setting == null) {
               return "";
             }
-            for (int i = 0; i < 12; i += 1) {
-              final begin = scheduledMenstruationDateRanges(
-                      latestPillSheet, setting, menstruations, i)
-                  .begin;
-              if (begin.isAfter(today())) {
-                return DateTimeFormatter.monthAndWeekday(begin);
-              }
+            final matchedScheduledMenstruation =
+                scheduledMenstruationDateRanges(
+                        latestPillSheet, setting, menstruations, 12)
+                    .where((element) => element.begin.isAfter(today()));
+
+            if (matchedScheduledMenstruation.isNotEmpty) {
+              return DateTimeFormatter.monthAndWeekday(
+                  matchedScheduledMenstruation.first.begin);
             }
             return "";
           }(), style: TextColorStyle.gray.merge(FontType.xBigTitle)),
