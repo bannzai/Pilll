@@ -9,7 +9,6 @@ import 'package:pilll/entity/diary.dart';
 import 'package:pilll/entity/weekday.dart';
 import 'package:pilll/domain/diary/confirm_diary_sheet.dart';
 import 'package:pilll/util/datetime/date_compare.dart';
-import 'package:pilll/util/datetime/day.dart' as utility;
 import 'package:pilll/util/datetime/day.dart';
 
 class CalendarWeekdayLine extends StatelessWidget {

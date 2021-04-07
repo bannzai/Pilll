@@ -2,7 +2,6 @@ import 'package:pilll/analytics.dart';
 import 'package:pilll/auth/auth.dart';
 import 'package:pilll/database/database.dart';
 import 'package:pilll/domain/calendar/calendar_page.dart';
-import 'package:pilll/domain/menstruation/menstruation_edit_page.dart';
 import 'package:pilll/domain/menstruation/menstruation_page.dart';
 import 'package:pilll/domain/record/record_page.dart';
 import 'package:pilll/domain/settings/settings_page.dart';
