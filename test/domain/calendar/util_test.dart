@@ -51,11 +51,13 @@ void main() {
         assert(pillSheetType.dosingPeriod == 21,
             "scheduledMenstruationDateRange adding value with dosingPeriod when it will create DateRange. pillsheet_28_7 type has 24 dosingPeriod");
         expect(
-          scheduledMenstruationDateRanges(model, setting, 0),
-          DateRange(
-            DateTime.parse("2020-09-23"),
-            DateTime.parse("2020-09-25"),
-          ),
+          scheduledMenstruationDateRanges(model, setting, [], 0),
+          [
+            DateRange(
+              DateTime.parse("2020-09-23"),
+              DateTime.parse("2020-09-25"),
+            )
+          ],
         );
       },
     );
@@ -81,11 +83,13 @@ void main() {
         assert(pillSheetType.dosingPeriod == 28,
             "scheduledMenstruationDateRange adding value with dosingPeriod when it will create DateRange. pillsheet_28_7 type has 24 dosingPeriod");
         expect(
-          scheduledMenstruationDateRanges(model, setting, 0),
-          DateRange(
-            DateTime.parse("2021-02-09"),
-            DateTime.parse("2021-02-11"),
-          ),
+          scheduledMenstruationDateRanges(model, setting, [], 0),
+          [
+            DateRange(
+              DateTime.parse("2021-02-09"),
+              DateTime.parse("2021-02-11"),
+            )
+          ],
         );
       },
     );
@@ -111,11 +115,13 @@ void main() {
         assert(pillSheetType.dosingPeriod == 21,
             "scheduledMenstruationDateRange adding value with dosingPeriod when it will create DateRange. pillsheet_28_7 type has 24 dosingPeriod");
         expect(
-          scheduledMenstruationDateRanges(model, setting, 1),
-          DateRange(
-            DateTime.parse("2020-10-21"),
-            DateTime.parse("2020-10-23"),
-          ),
+          scheduledMenstruationDateRanges(model, setting, [], 1),
+          [
+            DateRange(
+              DateTime.parse("2020-10-21"),
+              DateTime.parse("2020-10-23"),
+            )
+          ],
         );
       },
     );
@@ -141,11 +147,13 @@ void main() {
         assert(pillSheetType.dosingPeriod == 21,
             "scheduledMenstruationDateRange adding value with dosingPeriod when it will create DateRange. pillsheet_28_7 type has 24 dosingPeriod");
         expect(
-          scheduledMenstruationDateRanges(model, setting, 2),
-          DateRange(
-            DateTime.parse("2020-11-18"),
-            DateTime.parse("2020-11-20"),
-          ),
+          scheduledMenstruationDateRanges(model, setting, [], 2),
+          [
+            DateRange(
+              DateTime.parse("2020-11-18"),
+              DateTime.parse("2020-11-20"),
+            )
+          ],
         );
       },
     );
