@@ -1,10 +1,12 @@
 import 'dart:math' as math;
 import 'package:pilll/components/molecules/app_card.dart';
+import 'package:pilll/components/molecules/indicator.dart';
 import 'package:pilll/domain/calendar/calendar_card.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/domain/calendar/utility.dart';
+import 'package:pilll/store/calendar_page.dart';
 import 'package:pilll/store/pill_sheet.dart';
 import 'package:pilll/store/setting.dart';
 import 'package:pilll/util/formatter/date_time_formatter.dart';
@@ -22,6 +24,11 @@ abstract class CalendarPageConstants {
 class CalendarPage extends HookWidget {
   @override
   Widget build(BuildContext context) {
+    final state = useProvider(calendarPageStateProvider.state);
+    final settingEntity = state.setting;
+    if (settingEntity == null) {
+      return ScaffoldIndicator();
+    }
     return Scaffold(
       backgroundColor: PilllColors.background,
       appBar: null,
@@ -68,6 +75,9 @@ class CalendarPage extends HookWidget {
                       const EdgeInsets.only(left: 16, right: 16, bottom: 16),
                   child: CalendarCard(
                     date: today(),
+                    latestPillSheet: state.latestPillSheet,
+                    setting: settingEntity,
+                    menstruations: state.menstruations,
                   ),
                 ),
               ),

@@ -1,19 +1,17 @@
 import 'dart:async';
 
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:pilll/entity/menstruation.dart';
 import 'package:pilll/service/menstruation.dart';
 import 'package:pilll/service/pill_sheet.dart';
 import 'package:pilll/service/setting.dart';
 import 'package:pilll/state/calendar_page.dart';
 
-final calendarPageStateProvider = StateNotifierProvider.family
-    .autoDispose<CalendarPageStateStore, Menstruation?>(
-        (ref, menstruation) => CalendarPageStateStore(
-              ref.watch(menstruationServiceProvider),
-              ref.watch(settingServiceProvider),
-              ref.watch(pillSheetServiceProvider),
-            ));
+final calendarPageStateProvider = StateNotifierProvider<CalendarPageStateStore>(
+    (ref) => CalendarPageStateStore(
+          ref.watch(menstruationServiceProvider),
+          ref.watch(settingServiceProvider),
+          ref.watch(pillSheetServiceProvider),
+        ));
 
 class CalendarPageStateStore extends StateNotifier<CalendarPageState> {
   final MenstruationService _menstruationService;
