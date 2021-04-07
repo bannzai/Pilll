@@ -9,6 +9,7 @@ import 'package:pilll/entity/weekday.dart';
 List<DateRange> scheduledMenstruationDateRanges(
   PillSheetModel pillSheet,
   Setting setting,
+  List<Menstruation> menstruations,
   int maxPageCount,
 ) {
   return List.generate(maxPageCount + 1, (pageIndex) {
@@ -16,8 +17,15 @@ List<DateRange> scheduledMenstruationDateRanges(
     final begin = pillSheet.beginingDate.add(
         Duration(days: (setting.pillNumberForFromMenstruation - 1) + offset));
     final end = begin.add(Duration(days: (setting.durationMenstruation - 1)));
+    final isContained = menstruations
+        .where((element) =>
+            element.dateRange.inRange(begin) || element.dateRange.inRange(end))
+        .isNotEmpty;
+    if (isContained) {
+      return null;
+    }
     return DateRange(begin, end);
-  });
+  }).where((element) => element != null).toList().cast();
 }
 
 List<DateRange> nextPillSheetDateRanges(
