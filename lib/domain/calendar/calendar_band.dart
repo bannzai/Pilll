@@ -4,6 +4,10 @@ import 'package:pilll/components/atoms/text_color.dart';
 
 import 'calendar_band_model.dart';
 
+abstract class CalendarBandConst {
+  static const double height = 13;
+}
+
 class CalendarBand extends StatelessWidget {
   const CalendarBand({
     Key? key,
@@ -17,6 +21,7 @@ class CalendarBand extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
+      height: CalendarBandConst.height,
       decoration: BoxDecoration(color: model.color),
       child: Container(
         padding: EdgeInsets.only(left: 10),
