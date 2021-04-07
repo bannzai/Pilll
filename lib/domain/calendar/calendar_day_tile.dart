@@ -54,7 +54,7 @@ class CalendarDayTile extends StatelessWidget {
                   ),
                 ),
               if (isToday)
-                Positioned.fill(
+                Positioned(
                   child: Align(
                     alignment: Alignment.center,
                     child: Container(
@@ -67,7 +67,7 @@ class CalendarDayTile extends StatelessWidget {
                     ),
                   ),
                 ),
-              Positioned.fill(
+              Positioned(
                 child: Align(
                     alignment: Alignment.center,
                     child: Text(

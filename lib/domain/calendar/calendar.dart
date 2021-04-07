@@ -10,7 +10,7 @@ import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 abstract class CalendarConstants {
-  static final double tileHeight = 60;
+  static final double tileHeight = 66;
 }
 
 class Calendar extends HookWidget {
