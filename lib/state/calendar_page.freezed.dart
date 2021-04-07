@@ -19,7 +19,7 @@ class _$CalendarPageStateTearOff {
   _CalendarPageState call(
       {required List<Menstruation> menstruations,
       Setting? setting,
-      PillSheet? latestPillSheet}) {
+      PillSheetModel? latestPillSheet}) {
     return _CalendarPageState(
       menstruations: menstruations,
       setting: setting,
@@ -35,7 +35,7 @@ const $CalendarPageState = _$CalendarPageStateTearOff();
 mixin _$CalendarPageState {
   List<Menstruation> get menstruations => throw _privateConstructorUsedError;
   Setting? get setting => throw _privateConstructorUsedError;
-  PillSheet? get latestPillSheet => throw _privateConstructorUsedError;
+  PillSheetModel? get latestPillSheet => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $CalendarPageStateCopyWith<CalendarPageState> get copyWith =>
@@ -50,9 +50,10 @@ abstract class $CalendarPageStateCopyWith<$Res> {
   $Res call(
       {List<Menstruation> menstruations,
       Setting? setting,
-      PillSheet? latestPillSheet});
+      PillSheetModel? latestPillSheet});
 
   $SettingCopyWith<$Res>? get setting;
+  $PillSheetModelCopyWith<$Res>? get latestPillSheet;
 }
 
 /// @nodoc
@@ -82,7 +83,7 @@ class _$CalendarPageStateCopyWithImpl<$Res>
       latestPillSheet: latestPillSheet == freezed
           ? _value.latestPillSheet
           : latestPillSheet // ignore: cast_nullable_to_non_nullable
-              as PillSheet?,
+              as PillSheetModel?,
     ));
   }
 
@@ -94,6 +95,17 @@ class _$CalendarPageStateCopyWithImpl<$Res>
 
     return $SettingCopyWith<$Res>(_value.setting!, (value) {
       return _then(_value.copyWith(setting: value));
+    });
+  }
+
+  @override
+  $PillSheetModelCopyWith<$Res>? get latestPillSheet {
+    if (_value.latestPillSheet == null) {
+      return null;
+    }
+
+    return $PillSheetModelCopyWith<$Res>(_value.latestPillSheet!, (value) {
+      return _then(_value.copyWith(latestPillSheet: value));
     });
   }
 }
@@ -108,10 +120,12 @@ abstract class _$CalendarPageStateCopyWith<$Res>
   $Res call(
       {List<Menstruation> menstruations,
       Setting? setting,
-      PillSheet? latestPillSheet});
+      PillSheetModel? latestPillSheet});
 
   @override
   $SettingCopyWith<$Res>? get setting;
+  @override
+  $PillSheetModelCopyWith<$Res>? get latestPillSheet;
 }
 
 /// @nodoc
@@ -143,7 +157,7 @@ class __$CalendarPageStateCopyWithImpl<$Res>
       latestPillSheet: latestPillSheet == freezed
           ? _value.latestPillSheet
           : latestPillSheet // ignore: cast_nullable_to_non_nullable
-              as PillSheet?,
+              as PillSheetModel?,
     ));
   }
 }
@@ -159,7 +173,7 @@ class _$_CalendarPageState extends _CalendarPageState {
   @override
   final Setting? setting;
   @override
-  final PillSheet? latestPillSheet;
+  final PillSheetModel? latestPillSheet;
 
   @override
   String toString() {
@@ -198,7 +212,7 @@ abstract class _CalendarPageState extends CalendarPageState {
   factory _CalendarPageState(
       {required List<Menstruation> menstruations,
       Setting? setting,
-      PillSheet? latestPillSheet}) = _$_CalendarPageState;
+      PillSheetModel? latestPillSheet}) = _$_CalendarPageState;
   _CalendarPageState._() : super._();
 
   @override
@@ -206,7 +220,7 @@ abstract class _CalendarPageState extends CalendarPageState {
   @override
   Setting? get setting => throw _privateConstructorUsedError;
   @override
-  PillSheet? get latestPillSheet => throw _privateConstructorUsedError;
+  PillSheetModel? get latestPillSheet => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$CalendarPageStateCopyWith<_CalendarPageState> get copyWith =>

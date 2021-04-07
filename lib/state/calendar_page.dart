@@ -1,6 +1,6 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:pilll/domain/initial_setting/pill_sheet.dart';
 import 'package:pilll/entity/menstruation.dart';
+import 'package:pilll/entity/pill_sheet.dart';
 import 'package:pilll/entity/setting.dart';
 
 part 'calendar_page.freezed.dart';
@@ -11,6 +11,6 @@ abstract class CalendarPageState implements _$CalendarPageState {
   factory CalendarPageState({
     required List<Menstruation> menstruations,
     Setting? setting,
-    PillSheet? latestPillSheet,
+    PillSheetModel? latestPillSheet,
   }) = _CalendarPageState;
 }
