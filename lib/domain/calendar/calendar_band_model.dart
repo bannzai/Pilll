@@ -19,6 +19,15 @@ class CalendarScheduledMenstruationBandModel extends CalendarBandModel {
       : super(begin, end);
 }
 
+class CalendarMenstruationBandModel extends CalendarBandModel {
+  @override
+  Color get color => PilllColors.menstruation;
+  @override
+  String get label => "";
+  CalendarMenstruationBandModel(DateTime begin, DateTime end)
+      : super(begin, end);
+}
+
 class CalendarNextPillSheetBandModel extends CalendarBandModel {
   @override
   Color get color => PilllColors.duration;
