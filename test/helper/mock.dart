@@ -5,8 +5,7 @@ import 'package:pilll/service/day.dart';
 import 'package:mockito/mockito.dart';
 import 'package:pilll/store/diaries.dart';
 
-class MockPillSheetRepository extends Mock
-    implements PillSheetServiceInterface {}
+class MockPillSheetRepository extends Mock implements PillSheetService {}
 
 class MockTodayRepository extends Mock implements TodayServiceInterface {}
 
