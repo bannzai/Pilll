@@ -272,7 +272,7 @@ void main() {
                 DateTime.parse("2021-02-07"),
                 DateTime.parse("2021-02-13"),
               ),
-              CalendarMenstruationBandModel(
+              CalendarScheduledMenstruationBandModel(
                 DateTime.parse("2021-02-10"),
                 DateTime.parse("2021-02-13"),
               ),
@@ -290,7 +290,7 @@ void main() {
                 DateTime.parse("2021-02-14"),
                 DateTime.parse("2021-02-20"),
               ),
-              CalendarMenstruationBandModel(
+              CalendarScheduledMenstruationBandModel(
                 DateTime.parse("2021-02-08"),
                 DateTime.parse("2021-02-14"),
               ),

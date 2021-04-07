@@ -10,12 +10,12 @@ abstract class CalendarBandModel {
   CalendarBandModel(this.begin, this.end);
 }
 
-class CalendarMenstruationBandModel extends CalendarBandModel {
+class CalendarScheduledMenstruationBandModel extends CalendarBandModel {
   @override
   Color get color => PilllColors.menstruation;
   @override
   String get label => "";
-  CalendarMenstruationBandModel(DateTime begin, DateTime end)
+  CalendarScheduledMenstruationBandModel(DateTime begin, DateTime end)
       : super(begin, end);
 }
 
