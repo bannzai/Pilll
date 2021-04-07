@@ -12,6 +12,7 @@ List<DateRange> scheduledMenstruationDateRanges(
   List<Menstruation> menstruations,
   int maxPageCount,
 ) {
+  assert(maxPageCount > 0);
   return List.generate(maxPageCount + 1, (pageIndex) {
     final offset = pageIndex + pillSheet.pillSheetType.totalCount;
     final begin = pillSheet.beginingDate.add(
@@ -32,6 +33,7 @@ List<DateRange> nextPillSheetDateRanges(
   PillSheetModel pillSheet,
   int maxPageCount,
 ) {
+  assert(maxPageCount > 0);
   return List.generate(maxPageCount, (pageIndex) {
     final begin = pillSheet.beginingDate.add(
         Duration(days: pillSheet.pillSheetType.totalCount * (pageIndex + 1)));
@@ -59,6 +61,7 @@ List<CalendarBandModel> buildBandModels(
   List<Menstruation> menstruations,
   int maxPageCount,
 ) {
+  assert(maxPageCount > 0);
   return [
     ...menstruations
         .map((e) => e.dateRange)
