@@ -118,7 +118,6 @@ class MenstruationPage extends HookWidget {
                         itemCount: menstruationState.calendarDataSource.length,
                       ),
                     ),
-                    Spacer(),
                   ],
                 ),
               ),
