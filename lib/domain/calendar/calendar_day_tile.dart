@@ -39,46 +39,63 @@ class CalendarDayTile extends StatelessWidget {
                       child: _diaryMarkWidget()),
                 )
               ],
-              if (shouldShowMenstruationMark)
-                Positioned.fill(
-                  child: Align(
-                    alignment: Alignment.center,
-                    child: Container(
-                      width: 40,
-                      height: 40,
-                      decoration: BoxDecoration(
-                        color: PilllColors.menstruation,
-                        borderRadius: BorderRadius.circular(20),
-                      ),
-                    ),
-                  ),
-                ),
-              if (isToday)
-                Positioned(
-                  child: Align(
-                    alignment: Alignment.center,
-                    child: Container(
-                      width: 32,
-                      height: 32,
-                      decoration: BoxDecoration(
-                        color: PilllColors.secondary,
-                        borderRadius: BorderRadius.circular(16),
-                      ),
-                    ),
-                  ),
-                ),
               Positioned(
                 child: Align(
-                    alignment: Alignment.center,
-                    child: Text(
-                      "${date.day}",
-                      textAlign: TextAlign.center,
-                      style: TextStyle(color: _textColor()).merge(_font()),
-                    )),
+                  alignment: Alignment.topCenter,
+                  child: _content(),
+                ),
               ),
             ],
           ),
         ),
+      ),
+    );
+  }
+
+  Widget _content() {
+    return Container(
+      width: 40,
+      height: 40,
+      child: Stack(
+        children: [
+          if (shouldShowMenstruationMark)
+            Positioned.fill(
+              child: Align(
+                alignment: Alignment.center,
+                child: Container(
+                  width: 40,
+                  height: 40,
+                  decoration: BoxDecoration(
+                    color: PilllColors.menstruation,
+                    borderRadius: BorderRadius.circular(20),
+                  ),
+                ),
+              ),
+            ),
+          if (isToday)
+            Positioned(
+              child: Align(
+                alignment: Alignment.center,
+                child: Container(
+                  width: 32,
+                  height: 32,
+                  decoration: BoxDecoration(
+                    color: PilllColors.secondary,
+                    borderRadius: BorderRadius.circular(16),
+                  ),
+                ),
+              ),
+            ),
+          Positioned(
+            child: Align(
+                alignment: Alignment.center,
+                child: Text(
+                  "${date.day}",
+                  textAlign: TextAlign.center,
+                  style: TextStyle(color: _textColor()).merge(_font()),
+                )),
+          ),
+        ],
       ),
     );
   }
