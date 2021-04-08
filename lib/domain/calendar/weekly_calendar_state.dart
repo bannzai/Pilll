@@ -23,7 +23,7 @@ abstract class WeeklyCalendarState {
 
   bool shouldGrayoutTile(DateTime date);
   bool shouldShowDiaryMark(List<Diary> diaries, DateTime date);
-  bool isIntoMenstruationDuration(DateTime date);
+  bool shouldShowMenstruationMark(DateTime date);
 
   bool isNecessaryLineBreak(DateTime date) {
     return !dateRange.inRange(date.date());
@@ -51,7 +51,7 @@ class SinglelineWeeklyCalendarState extends WeeklyCalendarState {
   bool shouldGrayoutTile(DateTime date) => false;
   bool shouldShowDiaryMark(List<Diary> diaries, DateTime date) =>
       isExistsPostedDiary(diaries, date);
-  bool isIntoMenstruationDuration(DateTime date) => false;
+  bool shouldShowMenstruationMark(DateTime date) => false;
 }
 
 class MultilineWeeklyCalendarState extends WeeklyCalendarState {
@@ -64,7 +64,7 @@ class MultilineWeeklyCalendarState extends WeeklyCalendarState {
       date._isPreviousMonth(targetDateOfMonth);
   bool shouldShowDiaryMark(List<Diary> diaries, DateTime date) =>
       isExistsPostedDiary(diaries, date);
-  bool isIntoMenstruationDuration(DateTime date) => false;
+  bool shouldShowMenstruationMark(DateTime date) => false;
 }
 
 class MenstruationEditWeeklyCalendarState extends WeeklyCalendarState {
@@ -78,7 +78,7 @@ class MenstruationEditWeeklyCalendarState extends WeeklyCalendarState {
   bool shouldGrayoutTile(DateTime date) =>
       date._isPreviousMonth(targetDateOfMonth);
   bool shouldShowDiaryMark(List<Diary> diaries, DateTime date) => false;
-  bool isIntoMenstruationDuration(DateTime date) {
+  bool shouldShowMenstruationMark(DateTime date) {
     final menstruation = this.menstruation;
     if (menstruation == null) {
       return false;
