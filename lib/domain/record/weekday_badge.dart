@@ -16,20 +16,16 @@ class WeekdayBadge extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Stack(
-      alignment: AlignmentDirectional.center,
-      children: <Widget>[
-        Container(
-            width: 20,
-            height: WeekdayBadgeConst.height,
-            decoration: BoxDecoration(color: PilllColors.white)),
-        Container(
-          child: Text(weekday.weekdayString(),
-              textAlign: TextAlign.end,
-              style: FontType.sSmallTitle
-                  .merge(TextStyle(color: weekday.weekdayColor()))),
-        ),
-      ],
+    return Container(
+      width: 20,
+      height: WeekdayBadgeConst.height,
+      decoration: BoxDecoration(color: PilllColors.white),
+      child: Center(
+        child: Text(weekday.weekdayString(),
+            textAlign: TextAlign.end,
+            style: FontType.sSmallTitle
+                .merge(TextStyle(color: weekday.weekdayColor()))),
+      ),
     );
   }
 }
