@@ -10,13 +10,14 @@ import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/domain/calendar/calendar.dart';
 import 'package:pilll/domain/calendar/calendar_weekday_line.dart';
 import 'package:pilll/domain/calendar/date_range.dart';
+import 'package:pilll/domain/calendar/utility.dart';
 import 'package:pilll/domain/calendar/weekly_calendar_state.dart';
 import 'package:pilll/domain/menstruation/menstruation_card.dart';
 import 'package:pilll/domain/menstruation/menstruation_card_state.dart';
 import 'package:pilll/domain/menstruation/menstruation_edit_page.dart';
 import 'package:pilll/domain/record/weekday_badge.dart';
-import 'package:pilll/entity/diary.dart';
 import 'package:pilll/entity/weekday.dart';
+import 'package:pilll/state/menstruation.dart';
 import 'package:pilll/store/menstruation.dart';
 import 'package:pilll/util/datetime/day.dart';
 import 'package:scrollable_positioned_list/scrollable_positioned_list.dart';
@@ -25,7 +26,7 @@ const double _horizontalPadding = 10;
 
 abstract class MenstruationPageConst {
   static final double calendarHeaderHeight =
-      86 + calendarHeaderDropShadowOffset;
+      92 + calendarHeaderDropShadowOffset;
   static const double calendarHeaderDropShadowOffset = 2;
 }
 
@@ -109,7 +110,7 @@ class MenstruationPage extends HookWidget {
                               menstruationState.calendarDataSource[index];
                           return _DateLine(
                               days: data,
-                              diaries: menstruationState.diaries,
+                              state: menstruationState,
                               onTap: (e) {
                                 print("e:$e");
                               });
@@ -186,13 +187,13 @@ class _WeekdayLine extends StatelessWidget {
 
 class _DateLine extends StatelessWidget {
   final List<DateTime> days;
-  final List<Diary> diaries;
+  final MenstruationState state;
   final Function(DateTime) onTap;
 
   const _DateLine({
     Key? key,
     required this.days,
-    required this.diaries,
+    required this.state,
     required this.onTap,
   }) : super(key: key);
   @override
@@ -201,13 +202,14 @@ class _DateLine extends StatelessWidget {
       width: MediaQuery.of(context).size.width - _horizontalPadding * 2,
       height: CalendarConstants.tileHeight,
       child: CalendarWeekdayLine(
-        diaries: diaries,
+        diaries: state.diaries,
         calendarState:
             SinglelineWeeklyCalendarState(DateRange(days.first, days.last)),
-        bandModels: [],
+        bandModels: buildBandModels(
+            state.latestPillSheet, state.setting, state.entities, 12),
         horizontalPadding: _horizontalPadding,
         onTap: (weeklyCalendarState, date) =>
-            transitionToPostDiary(context, date, diaries),
+            transitionToPostDiary(context, date, state.diaries),
       ),
     );
   }
