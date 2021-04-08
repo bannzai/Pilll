@@ -8,6 +8,7 @@ import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/domain/calendar/calendar.dart';
+import 'package:pilll/domain/calendar/calendar_band.dart';
 import 'package:pilll/domain/calendar/calendar_weekday_line.dart';
 import 'package:pilll/domain/calendar/date_range.dart';
 import 'package:pilll/domain/calendar/utility.dart';
@@ -25,8 +26,12 @@ import 'package:scrollable_positioned_list/scrollable_positioned_list.dart';
 const double _horizontalPadding = 10;
 
 abstract class MenstruationPageConst {
+  static final double tileHeight = CalendarConstants.tileHeight -
+      CalendarBandConst.height +
+      calendarHeaderDropShadowOffset +
+      1;
   static final double calendarHeaderHeight =
-      92 + calendarHeaderDropShadowOffset;
+      WeekdayBadgeConst.height + tileHeight;
   static const double calendarHeaderDropShadowOffset = 2;
 }
 
@@ -190,7 +195,7 @@ class _DateLine extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: MediaQuery.of(context).size.width - _horizontalPadding * 2,
-      height: CalendarConstants.tileHeight,
+      height: MenstruationPageConst.tileHeight,
       child: CalendarWeekdayLine(
         diaries: state.diaries,
         calendarState:
