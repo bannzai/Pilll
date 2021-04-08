@@ -28,7 +28,8 @@ class CalendarBand extends StatelessWidget {
       child: Stack(
         children: [
           CustomPaint(
-            painter: DiagonalStripedLine(model.color),
+            painter: DiagonalStripedLine(
+                color: model.color, isNecessaryBorder: model.isNecessaryBorder),
             size: Size(width, CalendarBandConst.height),
           ),
           Container(

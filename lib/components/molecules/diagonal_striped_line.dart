@@ -3,12 +3,16 @@ import 'package:flutter/material.dart';
 class DiagonalStripedLine extends CustomPainter {
   final double _blockWidth = 8;
   final Color color;
+  final bool isNecessaryBorder;
 
-  DiagonalStripedLine(this.color);
+  DiagonalStripedLine({required this.color, required this.isNecessaryBorder});
   @override
   void paint(Canvas canvas, Size size) {
-    final paint = Paint()..color = color;
-    canvas.drawRect(Rect.fromLTWH(0, 0, size.width, size.height), paint);
+    canvas.drawRect(
+        Rect.fromLTWH(0, 0, size.width, size.height), Paint()..color = color);
+    if (!isNecessaryBorder) {
+      return;
+    }
 
     final emptyWidth = _blockWidth * 0.25;
     final emptyOffset = 10.0;
