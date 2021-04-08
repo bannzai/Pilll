@@ -6,6 +6,7 @@ abstract class CalendarBandModel {
   Color get color;
   String get label;
   double get bottom;
+  bool get isNecessaryBorder;
 
   final DateTime begin;
   final DateTime end;
@@ -19,6 +20,8 @@ class CalendarScheduledMenstruationBandModel extends CalendarBandModel {
   String get label => "";
   @override
   double get bottom => CalendarBandConst.height;
+  @override
+  bool get isNecessaryBorder => false;
 
   CalendarScheduledMenstruationBandModel(DateTime begin, DateTime end)
       : super(begin, end);
@@ -26,11 +29,13 @@ class CalendarScheduledMenstruationBandModel extends CalendarBandModel {
 
 class CalendarMenstruationBandModel extends CalendarBandModel {
   @override
-  Color get color => PilllColors.red;
+  Color get color => PilllColors.menstruation;
   @override
   String get label => "";
   @override
   double get bottom => CalendarBandConst.height;
+  @override
+  bool get isNecessaryBorder => true;
   CalendarMenstruationBandModel(DateTime begin, DateTime end)
       : super(begin, end);
 }
@@ -42,6 +47,8 @@ class CalendarNextPillSheetBandModel extends CalendarBandModel {
   String get label => "新しいシート開始 ▶︎";
   @override
   double get bottom => 0;
+  @override
+  bool get isNecessaryBorder => false;
   CalendarNextPillSheetBandModel(DateTime begin, DateTime end)
       : super(begin, end);
 }
