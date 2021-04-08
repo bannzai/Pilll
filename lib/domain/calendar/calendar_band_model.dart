@@ -21,7 +21,7 @@ class CalendarScheduledMenstruationBandModel extends CalendarBandModel {
   @override
   double get bottom => 0;
   @override
-  bool get isNecessaryBorder => false;
+  bool get isNecessaryBorder => true;
 
   CalendarScheduledMenstruationBandModel(DateTime begin, DateTime end)
       : super(begin, end);
@@ -35,7 +35,7 @@ class CalendarMenstruationBandModel extends CalendarBandModel {
   @override
   double get bottom => 0;
   @override
-  bool get isNecessaryBorder => true;
+  bool get isNecessaryBorder => false;
   CalendarMenstruationBandModel(DateTime begin, DateTime end)
       : super(begin, end);
 }
