@@ -3,6 +3,8 @@ import 'dart:async';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/service/diary.dart';
 import 'package:pilll/service/menstruation.dart';
+import 'package:pilll/service/pill_sheet.dart';
+import 'package:pilll/service/setting.dart';
 import 'package:pilll/state/menstruation.dart';
 import 'package:pilll/util/datetime/day.dart';
 
@@ -11,40 +13,64 @@ final menstruationsStoreProvider = StateNotifierProvider.autoDispose((ref) =>
         ref.watch(diaryServiceProvider)));
 
 class MenstruationStore extends StateNotifier<MenstruationState> {
-  final MenstruationService _service;
-  final DiaryService _diaryService;
-  MenstruationStore(this._service, this._diaryService)
-      : super(MenstruationState()) {
+  final MenstruationService menstruationService;
+  final DiaryService diaryService;
+  final SettingService settingService;
+  final PillSheetService pillSheetService;
+  MenstruationStore({
+    required this.menstruationService,
+    required this.diaryService,
+    required this.settingService,
+    required this.pillSheetService,
+  }) : super(MenstruationState()) {
     _reset();
   }
 
   void _reset() {
     state = state.copyWith(currentCalendarIndex: state.todayCalendarIndex);
     Future(() async {
-      final entities = await _service.fetchAll();
-      final diaries = await _diaryService.fetchListAround90Days(today());
+      final menstruations = await menstruationService.fetchAll();
+      final diaries = await diaryService.fetchListAround90Days(today());
+      final setting = await settingService.fetch();
+      final latestPillSheet = await pillSheetService.fetchLast();
       state = state.copyWith(
-          entities: entities, diaries: diaries, isNotYetLoaded: false);
+          entities: menstruations,
+          diaries: diaries,
+          isNotYetLoaded: false,
+          setting: setting,
+          latestPillSheet: latestPillSheet);
       _subscribe();
     });
   }
 
-  StreamSubscription? _canceller;
+  StreamSubscription? _menstruationCanceller;
   StreamSubscription? _diaryCanceller;
+  StreamSubscription? _settingCanceller;
+  StreamSubscription? _pillSheetCanceller;
   void _subscribe() {
-    _canceller?.cancel();
-    _canceller = _service.subscribeAll().listen((entities) {
+    _menstruationCanceller?.cancel();
+    _menstruationCanceller =
+        menstruationService.subscribeAll().listen((entities) {
       state = state.copyWith(entities: entities);
     });
     _diaryCanceller?.cancel();
-    _diaryCanceller = _diaryService.subscribe().listen((entities) {
+    _diaryCanceller = diaryService.subscribe().listen((entities) {
       state = state.copyWith(diaries: entities);
+    });
+    _settingCanceller?.cancel();
+    _settingCanceller = settingService.subscribe().listen((setting) {
+      state = state.copyWith(setting: setting);
+    });
+    _pillSheetCanceller?.cancel();
+    _pillSheetCanceller =
+        pillSheetService.subscribeForLatestPillSheet().listen((pillSheet) {
+      state = state.copyWith(latestPillSheet: pillSheet);
     });
   }
 
   @override
   void dispose() {
-    _canceller?.cancel();
+    _menstruationCanceller?.cancel();
     _diaryCanceller?.cancel();
     super.dispose();
   }
