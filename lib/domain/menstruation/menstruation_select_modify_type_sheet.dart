@@ -82,6 +82,22 @@ class _MenstruationSelectModifyTypeSheetState
   }
 
   Widget _tile(_CellType type) {
+    // TODO:
+    //     return SizedBox(
+    //   height: 48,
+    //   child: ListTile(
+    //     title: Text(
+    //       type.title,
+    //       style: FontType.assisting.merge(selectedCellType == type
+    //           ? TextColorStyle.main
+    //           : TextColorStyle.gray),
+    //     ),
+    //     leading: type.icon(selectedCellType == type),
+    //     selected: selectedCellType == type,
+    //     selectedTileColor: PilllColors.secondary.withOpacity(0.08),
+    //     onTap: () => setState(() => selectedCellType = type),
+    //   ),
+    // );
     return SizedBox(
       height: 48,
       child: GestureDetector(
