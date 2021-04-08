@@ -15,6 +15,7 @@ import 'package:pilll/domain/calendar/weekly_calendar_state.dart';
 import 'package:pilll/domain/menstruation/menstruation_card.dart';
 import 'package:pilll/domain/menstruation/menstruation_card_state.dart';
 import 'package:pilll/domain/menstruation/menstruation_edit_page.dart';
+import 'package:pilll/domain/menstruation/menstruation_select_modify_type_sheet.dart';
 import 'package:pilll/domain/record/weekday_badge.dart';
 import 'package:pilll/entity/weekday.dart';
 import 'package:pilll/state/menstruation.dart';
@@ -141,17 +142,19 @@ class MenstruationPage extends HookWidget {
                 padding: const EdgeInsets.only(bottom: 20.0),
                 child: PrimaryButton(
                   onPressed: () {
-                    final menstruation = menstruationState.entities.isEmpty
-                        ? null
-                        : menstruationState.entities.last;
-                    showModalBottomSheet(
-                      context: context,
-                      builder: (context) => MenstruationEditPage(
-                        menstruation: menstruation,
-                      ),
-                      backgroundColor: Colors.transparent,
-                      isScrollControlled: true,
-                    );
+                    presentMenstruationSelectModify(context);
+                    // TODO:
+                    // final menstruation = menstruationState.entities.isEmpty
+                    //     ? null
+                    //     : menstruationState.entities.last;
+                    // showModalBottomSheet(
+                    //   context: context,
+                    //   builder: (context) => MenstruationEditPage(
+                    //     menstruation: menstruation,
+                    //   ),
+                    //   backgroundColor: Colors.transparent,
+                    //   isScrollControlled: true,
+                    // );
                   },
                   text: "生理期間を編集",
                 ),
