@@ -1,3 +1,4 @@
+import 'package:flutter/material.dart';
 import 'package:pilll/domain/calendar/date_range.dart';
 import 'package:pilll/entity/diary.dart';
 import 'package:pilll/entity/menstruation.dart';
@@ -24,6 +25,7 @@ abstract class WeeklyCalendarState {
   bool shouldGrayoutTile(DateTime date);
   bool shouldShowDiaryMark(List<Diary> diaries, DateTime date);
   bool shouldShowMenstruationMark(DateTime date);
+  Alignment get contentAlignment;
 
   bool isNecessaryLineBreak(DateTime date) {
     return !dateRange.inRange(date.date());
@@ -52,6 +54,7 @@ class SinglelineWeeklyCalendarState extends WeeklyCalendarState {
   bool shouldShowDiaryMark(List<Diary> diaries, DateTime date) =>
       isExistsPostedDiary(diaries, date);
   bool shouldShowMenstruationMark(DateTime date) => false;
+  Alignment get contentAlignment => Alignment.topCenter;
 }
 
 class MultilineWeeklyCalendarState extends WeeklyCalendarState {
@@ -65,6 +68,7 @@ class MultilineWeeklyCalendarState extends WeeklyCalendarState {
   bool shouldShowDiaryMark(List<Diary> diaries, DateTime date) =>
       isExistsPostedDiary(diaries, date);
   bool shouldShowMenstruationMark(DateTime date) => false;
+  Alignment get contentAlignment => Alignment.center;
 }
 
 class MenstruationEditWeeklyCalendarState extends WeeklyCalendarState {
@@ -86,4 +90,6 @@ class MenstruationEditWeeklyCalendarState extends WeeklyCalendarState {
     return DateRange(menstruation.beginDate, menstruation.endDate)
         .inRange(date);
   }
+
+  Alignment get contentAlignment => Alignment.center;
 }

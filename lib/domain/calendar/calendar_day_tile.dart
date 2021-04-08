@@ -10,6 +10,7 @@ class CalendarDayTile extends StatelessWidget {
   final bool isToday;
   final bool hasDiary;
   final bool shouldShowMenstruationMark;
+  final Alignment contentAlignment;
   final Function(DateTime)? onTap;
 
   const CalendarDayTile({
@@ -19,6 +20,7 @@ class CalendarDayTile extends StatelessWidget {
     required this.isToday,
     required this.hasDiary,
     required this.shouldShowMenstruationMark,
+    required this.contentAlignment,
     required this.onTap,
   }) : super(key: key);
 
@@ -41,7 +43,7 @@ class CalendarDayTile extends StatelessWidget {
               ],
               Positioned(
                 child: Align(
-                  alignment: Alignment.topCenter,
+                  alignment: contentAlignment,
                   child: _content(),
                 ),
               ),
