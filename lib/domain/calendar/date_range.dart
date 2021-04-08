@@ -38,4 +38,9 @@ class DateRange {
 
   @override
   int get hashCode => super.hashCode;
+
+  @override
+  String toString() {
+    return "begin: $_begin, end: $_end";
+  }
 }
