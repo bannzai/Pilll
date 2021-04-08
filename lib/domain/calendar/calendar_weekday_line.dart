@@ -92,7 +92,11 @@ class CalendarWeekdayLine extends StatelessWidget {
             left: start.toDouble() * tileWidth,
             width: tileWidth * length,
             bottom: bandModel.bottom,
-            child: CalendarBand(model: bandModel, isLineBreaked: isLineBreaked),
+            child: CalendarBand(
+              model: bandModel,
+              isLineBreaked: isLineBreaked,
+              width: tileWidth * length,
+            ),
           );
         })
         .where((element) => element != null)

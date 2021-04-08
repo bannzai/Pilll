@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
+import 'package:pilll/components/molecules/diagonal_striped_line.dart';
 
 import 'calendar_band_model.dart';
 
@@ -13,20 +14,29 @@ class CalendarBand extends StatelessWidget {
     Key? key,
     required this.model,
     required this.isLineBreaked,
+    required this.width,
   }) : super(key: key);
 
   final CalendarBandModel model;
   final bool isLineBreaked;
+  final double width;
 
   @override
   Widget build(BuildContext context) {
     return Container(
       height: CalendarBandConst.height,
-      decoration: BoxDecoration(color: model.color),
-      child: Container(
-        padding: EdgeInsets.only(left: 10),
-        child: Text(isLineBreaked ? "" : model.label,
-            style: FontType.sSmallTitle.merge(TextColorStyle.white)),
+      child: Stack(
+        children: [
+          CustomPaint(
+            painter: DiagonalStripedLine(model.color),
+            size: Size(width, CalendarBandConst.height),
+          ),
+          Container(
+            padding: EdgeInsets.only(left: 10),
+            child: Text(isLineBreaked ? "" : model.label,
+                style: FontType.sSmallTitle.merge(TextColorStyle.white)),
+          ),
+        ],
       ),
     );
   }
