@@ -9,6 +9,7 @@ import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/domain/calendar/calendar.dart';
 import 'package:pilll/domain/calendar/calendar_band.dart';
+import 'package:pilll/domain/calendar/calendar_band_model.dart';
 import 'package:pilll/domain/calendar/calendar_weekday_line.dart';
 import 'package:pilll/domain/calendar/date_range.dart';
 import 'package:pilll/domain/calendar/utility.dart';
@@ -26,13 +27,11 @@ import 'package:scrollable_positioned_list/scrollable_positioned_list.dart';
 const double _horizontalPadding = 10;
 
 abstract class MenstruationPageConst {
-  static final double tileHeight = CalendarConstants.tileHeight -
-      CalendarBandConst.height +
-      calendarHeaderDropShadowOffset +
-      1;
+  static const double calendarHeaderDropShadowOffset = 2;
+  static final double tileHeight =
+      CalendarConstants.tileHeight + calendarHeaderDropShadowOffset;
   static final double calendarHeaderHeight =
       WeekdayBadgeConst.height + tileHeight;
-  static const double calendarHeaderDropShadowOffset = 2;
 }
 
 class MenstruationPage extends HookWidget {
@@ -201,7 +200,9 @@ class _DateLine extends StatelessWidget {
         calendarState:
             SinglelineWeeklyCalendarState(DateRange(days.first, days.last)),
         bandModels: buildBandModels(
-            state.latestPillSheet, state.setting, state.entities, 12),
+                state.latestPillSheet, state.setting, state.entities, 12)
+            .where((element) => !(element is CalendarNextPillSheetBandModel))
+            .toList(),
         horizontalPadding: _horizontalPadding,
         onTap: (weeklyCalendarState, date) =>
             transitionToPostDiary(context, date, state.diaries),
