@@ -92,12 +92,10 @@ class MenstruationPage extends HookWidget {
                   ],
                 ),
                 child: Column(
-                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: [
                     _WeekdayLine(),
                     LimitedBox(
-                      maxHeight: MenstruationPageConst.calendarHeaderHeight -
-                          WeekdayBadgeConst.height,
+                      maxHeight: MenstruationPageConst.tileHeight,
                       child: ScrollablePositionedList.builder(
                         itemScrollController: itemScrollController,
                         initialScrollIndex:
@@ -168,18 +166,11 @@ class _WeekdayLine extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      children: List.generate(Weekday.values.length, (index) {
-        final weekday = Weekday.values[index];
-        return Expanded(
-          child: Container(
-            child: Text(weekday.weekdayString(),
-                textAlign: TextAlign.center,
-                style: FontType.sSmallTitle
-                    .merge(TextStyle(color: weekday.weekdayColor()))),
-          ),
-        );
-      }),
+      mainAxisAlignment: MainAxisAlignment.start,
+      children: List.generate(
+          Weekday.values.length,
+          (index) =>
+              Expanded(child: WeekdayBadge(weekday: Weekday.values[index]))),
     );
   }
 }
