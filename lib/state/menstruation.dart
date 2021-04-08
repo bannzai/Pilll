@@ -1,6 +1,8 @@
 import 'package:pilll/entity/diary.dart';
 import 'package:pilll/entity/menstruation.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:pilll/entity/pill_sheet.dart';
+import 'package:pilll/entity/setting.dart';
 import 'package:pilll/util/formatter/date_time_formatter.dart';
 import 'package:flutter/material.dart';
 import 'package:pilll/entity/weekday.dart';
@@ -16,6 +18,8 @@ abstract class MenstruationState implements _$MenstruationState {
     @Default(0) int currentCalendarIndex,
     @Default([]) List<Diary> diaries,
     @Default([]) List<Menstruation> entities,
+    Setting? setting,
+    PillSheetModel? latestPillSheet,
   }) = _MenstruationState;
 
   late final List<List<DateTime>> calendarDataSource = _calendarDataSource();
