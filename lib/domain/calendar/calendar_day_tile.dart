@@ -9,7 +9,7 @@ class CalendarDayTile extends StatelessWidget {
   final Weekday weekday;
   final bool isToday;
   final bool hasDiary;
-  final bool isIntoMenstruationDuration;
+  final bool shouldShowMenstruationMark;
   final Function(DateTime)? onTap;
 
   const CalendarDayTile({
@@ -18,7 +18,7 @@ class CalendarDayTile extends StatelessWidget {
     required this.weekday,
     required this.isToday,
     required this.hasDiary,
-    required this.isIntoMenstruationDuration,
+    required this.shouldShowMenstruationMark,
     required this.onTap,
   }) : super(key: key);
 
@@ -39,7 +39,7 @@ class CalendarDayTile extends StatelessWidget {
                       child: _diaryMarkWidget()),
                 )
               ],
-              if (isIntoMenstruationDuration)
+              if (shouldShowMenstruationMark)
                 Positioned.fill(
                   child: Align(
                     alignment: Alignment.center,
@@ -84,7 +84,7 @@ class CalendarDayTile extends StatelessWidget {
   }
 
   TextStyle _font() {
-    if (isIntoMenstruationDuration) {
+    if (shouldShowMenstruationMark) {
       return FontType.gridElementBold;
     } else {
       return FontType.gridElement;
