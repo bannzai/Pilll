@@ -1,23 +1,29 @@
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/entity/menstruation.dart';
 import 'package:pilll/service/menstruation.dart';
+import 'package:pilll/service/setting.dart';
 import 'package:pilll/state/menstruation_edit.dart';
 import 'package:pilll/util/datetime/date_compare.dart';
 import 'package:pilll/util/datetime/day.dart';
 
 final menstruationEditProvider = StateNotifierProvider.family
-    .autoDispose<MenstruationEditStore, Menstruation?>((ref, menstruation) =>
-        MenstruationEditStore(
-            menstruation: menstruation,
-            service: ref.watch(menstruationServiceProvider)));
+    .autoDispose<MenstruationEditStore, Menstruation?>(
+  (ref, menstruation) => MenstruationEditStore(
+    menstruation: menstruation,
+    service: ref.watch(menstruationServiceProvider),
+    settingService: ref.watch(settingServiceProvider),
+  ),
+);
 
 class MenstruationEditStore extends StateNotifier<MenstruationEditState> {
   final MenstruationService service;
+  final SettingService settingService;
   late String? menstruationDocumentID;
   bool get isNotExistsDB => menstruationDocumentID == null;
   MenstruationEditStore({
     Menstruation? menstruation,
     required this.service,
+    required this.settingService,
   }) : super(MenstruationEditState(menstruation: menstruation)) {
     menstruationDocumentID = state.menstruation?.documentID;
   }
@@ -38,14 +44,16 @@ class MenstruationEditStore extends StateNotifier<MenstruationEditState> {
   tappedDate(DateTime date) {
     final menstruation = state.menstruation;
     if (menstruation == null) {
-      state = state.copyWith(
-        menstruation: Menstruation(
-          beginDate: date,
-          endDate: date,
-          isNotYetUserEdited: false,
-          createdAt: now(),
-        ),
-      );
+      settingService.fetch().then((setting) {
+        state = state.copyWith(
+          menstruation: Menstruation(
+            beginDate: date,
+            endDate: date.add(Duration(days: setting.durationMenstruation - 1)),
+            isNotYetUserEdited: false,
+            createdAt: now(),
+          ),
+        );
+      });
       return;
     }
 
