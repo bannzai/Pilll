@@ -17,6 +17,7 @@ import 'package:pilll/domain/menstruation/menstruation_card_state.dart';
 import 'package:pilll/domain/menstruation/menstruation_edit_page.dart';
 import 'package:pilll/domain/menstruation/menstruation_select_modify_type_sheet.dart';
 import 'package:pilll/domain/record/weekday_badge.dart';
+import 'package:pilll/entity/menstruation.dart';
 import 'package:pilll/entity/weekday.dart';
 import 'package:pilll/state/menstruation.dart';
 import 'package:pilll/store/menstruation.dart';
@@ -142,6 +143,16 @@ class MenstruationPage extends HookWidget {
                 padding: const EdgeInsets.only(bottom: 20.0),
                 child: PrimaryButton(
                   onPressed: () {
+                    final latestMenstruation =
+                        menstruationState.entities.isEmpty
+                            ? null
+                            : menstruationState.entities.last;
+                    if (latestMenstruation != null &&
+                        latestMenstruation.dateRange.inRange(today())) {
+                      _showEditPage(context, latestMenstruation);
+                      return;
+                    }
+
                     showModalBottomSheet(
                       context: context,
                       builder: (context) =>
@@ -154,22 +165,11 @@ class MenstruationPage extends HookWidget {
                             Navigator.of(context).pop();
                             return menstruationStore.recordFromYesterday();
                           case MenstruationSelectModifyType.begin:
-                            // TODO: Handle this case.
-                            break;
+                            Navigator.of(context).pop();
+                            return _showEditPage(context, null);
                           case MenstruationSelectModifyType.edit:
                             Navigator.of(context).pop();
-                            final menstruation =
-                                menstruationState.entities.isEmpty
-                                    ? null
-                                    : menstruationState.entities.last;
-                            showModalBottomSheet(
-                              context: context,
-                              builder: (context) => MenstruationEditPage(
-                                menstruation: menstruation,
-                              ),
-                              backgroundColor: Colors.transparent,
-                              isScrollControlled: true,
-                            );
+                            return _showEditPage(context, latestMenstruation);
                         }
                       }),
                     );
@@ -181,6 +181,17 @@ class MenstruationPage extends HookWidget {
           ),
         ),
       ),
+    );
+  }
+
+  void _showEditPage(BuildContext context, Menstruation? menstruation) {
+    showModalBottomSheet(
+      context: context,
+      builder: (context) => MenstruationEditPage(
+        menstruation: menstruation,
+      ),
+      backgroundColor: Colors.transparent,
+      isScrollControlled: true,
     );
   }
 }
