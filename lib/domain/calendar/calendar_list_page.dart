@@ -1,24 +1,20 @@
-import 'package:pilll/domain/calendar/calculator.dart';
+import 'package:pilll/analytics.dart';
+import 'package:pilll/domain/calendar/calendar_date_header.dart';
+import 'package:pilll/domain/calendar/calendar_weekday_line.dart';
+import 'package:pilll/domain/calendar/monthly_calendar_state.dart';
 import 'package:pilll/domain/calendar/calendar.dart';
 import 'package:pilll/domain/calendar/calendar_band_model.dart';
 import 'package:pilll/components/atoms/color.dart';
-import 'package:pilll/components/atoms/font.dart';
-import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/util/datetime/date_compare.dart';
 import 'package:pilll/util/datetime/day.dart';
-import 'package:pilll/util/formatter/date_time_formatter.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 
 class CalendarListPageModel {
-  final Calculator calculator;
+  final CalendarTabState calendarState;
   final List<CalendarBandModel> bandModels;
 
-  CalendarListPageModel(this.calculator, this.bandModels);
-}
-
-abstract class CalendarListPageConst {
-  static double headerHeight = 64;
+  CalendarListPageModel(this.calendarState, this.bandModels);
 }
 
 class CalendarListPage extends HookWidget {
@@ -33,7 +29,8 @@ class CalendarListPage extends HookWidget {
     final previousMonth = DateTime(today().year, today().month, 0);
     Function(Calendar) sideEffect = (calendar) {
       if (calendar.date().isBefore(previousMonth)) {
-        initialOffset += calendar.height() + CalendarListPageConst.headerHeight;
+        initialOffset +=
+            calendar.height() + CalendarDateHeaderConst.headerHeight;
       }
     };
     final components = _components(context, sideEffect);
@@ -72,7 +69,7 @@ class CalendarListPage extends HookWidget {
       eachCalendar(calendar);
       return Column(
         children: <Widget>[
-          _header(context, model),
+          CalendarDateHeader(date: model.calendarState.dateForMonth),
           calendar,
         ],
       );
@@ -80,29 +77,17 @@ class CalendarListPage extends HookWidget {
     return components;
   }
 
-  Widget _header(BuildContext context, CalendarListPageModel model) {
-    return ConstrainedBox(
-      constraints:
-          BoxConstraints.expand(height: CalendarListPageConst.headerHeight),
-      child: Row(
-        children: [
-          SizedBox(width: 16),
-          Text(
-            DateTimeFormatter.yearAndMonth(model.calculator.date),
-            textAlign: TextAlign.left,
-            style: FontType.cardHeader.merge(TextColorStyle.noshime),
-          ),
-          SizedBox(width: 16),
-        ],
-      ),
-    );
-  }
-
   Calendar _calendar(BuildContext context, CalendarListPageModel model) {
     return Calendar(
-      key: isSameMonth(model.calculator.date, today()) ? currentMonthKey : null,
-      calculator: model.calculator,
+      key: isSameMonth(model.calendarState.dateForMonth, today())
+          ? currentMonthKey
+          : null,
+      calendarState: model.calendarState,
       bandModels: model.bandModels,
+      onTap: (date, diaries) {
+        analytics.logEvent(name: "did_select_day_tile_on_calendar_list");
+        transitionToPostDiary(context, date, diaries);
+      },
       horizontalPadding: 0,
     );
   }

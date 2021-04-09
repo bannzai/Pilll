@@ -3,16 +3,8 @@ import 'package:pilll/entity/diary.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:riverpod/riverpod.dart';
 
-abstract class DiariesServiceInterface {
-  Future<List<Diary>> fetchListForMonth(DateTime dateTimeOfMonth);
-  Future<Diary> register(Diary diary);
-  Future<Diary> update(Diary diary);
-  Future<Diary> delete(Diary diary);
-  Stream<List<Diary>> subscribe();
-}
-
-final diaryServiceProvider = Provider<DiariesServiceInterface>(
-    (ref) => DiaryService(ref.watch(databaseProvider)));
+final diaryServiceProvider =
+    Provider<DiaryService>((ref) => DiaryService(ref.watch(databaseProvider)));
 
 int sortDiary(Diary a, Diary b) => a.date.compareTo(b.date);
 List<Diary> sortedDiaries(List<Diary> diaries) {
@@ -20,12 +12,23 @@ List<Diary> sortedDiaries(List<Diary> diaries) {
   return diaries;
 }
 
-class DiaryService extends DiariesServiceInterface {
+class DiaryService {
   final DatabaseConnection _database;
 
   DiaryService(this._database);
 
-  @override
+  Future<List<Diary>> fetchListAround90Days(DateTime base) {
+    return _database
+        .diariesReference()
+        .where(DiaryFirestoreKey.date,
+            isLessThanOrEqualTo: DateTime(base.year, base.month, 90),
+            isGreaterThanOrEqualTo: DateTime(base.year, base.month, 90))
+        .orderBy(DiaryFirestoreKey.date)
+        .get()
+        .then((event) =>
+            event.docs.map((doc) => Diary.fromJson(doc.data()!)).toList());
+  }
+
   Future<List<Diary>> fetchListForMonth(DateTime dateTimeOfMonth) {
     return _database
         .diariesReference()
@@ -40,7 +43,6 @@ class DiaryService extends DiariesServiceInterface {
             event.docs.map((doc) => Diary.fromJson(doc.data()!)).toList());
   }
 
-  @override
   Future<Diary> register(Diary diary) {
     return _database
         .diaryReference(diary)
@@ -48,7 +50,6 @@ class DiaryService extends DiariesServiceInterface {
         .then((_) => diary);
   }
 
-  @override
   Future<Diary> update(Diary diary) {
     return _database
         .diaryReference(diary)
@@ -56,12 +57,10 @@ class DiaryService extends DiariesServiceInterface {
         .then((_) => diary);
   }
 
-  @override
   Future<Diary> delete(Diary diary) {
     return _database.diaryReference(diary).delete().then((_) => diary);
   }
 
-  @override
   Stream<List<Diary>> subscribe() {
     return _database
         .diariesReference()

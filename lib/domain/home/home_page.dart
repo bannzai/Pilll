@@ -2,6 +2,7 @@ import 'package:pilll/analytics.dart';
 import 'package:pilll/auth/auth.dart';
 import 'package:pilll/database/database.dart';
 import 'package:pilll/domain/calendar/calendar_page.dart';
+import 'package:pilll/domain/menstruation/menstruation_page.dart';
 import 'package:pilll/domain/record/record_page.dart';
 import 'package:pilll/domain/settings/settings_page.dart';
 import 'package:pilll/components/atoms/color.dart';
@@ -22,7 +23,7 @@ class HomePage extends StatefulWidget {
   _HomePageState createState() => _HomePageState();
 }
 
-enum HomePageTabType { record, calendar, setting }
+enum HomePageTabType { record, menstruation, calendar, setting }
 
 class _HomePageState extends State<HomePage>
     with SingleTickerProviderStateMixin, RouteAware {
@@ -35,8 +36,10 @@ class _HomePageState extends State<HomePage>
   @override
   void initState() {
     super.initState();
-    _tabController =
-        TabController(length: 3, vsync: this, initialIndex: _selectedIndex);
+    _tabController = TabController(
+        length: HomePageTabType.values.length,
+        vsync: this,
+        initialIndex: _selectedIndex);
     _tabController.addListener(_handleTabSelection);
     auth().then((auth) {
       requestNotificationPermissions();
@@ -51,7 +54,7 @@ class _HomePageState extends State<HomePage>
   @override
   Widget build(BuildContext context) {
     return DefaultTabController(
-      length: 3,
+      length: HomePageTabType.values.length,
       child: Scaffold(
         backgroundColor: PilllColors.background,
         appBar: null,
@@ -71,21 +74,31 @@ class _HomePageState extends State<HomePage>
                 tabs: <Tab>[
                   Tab(
                     text: "ピル",
-                    icon: SvgPicture.asset(_tabController.index == 0
-                        ? "images/tab_icon_pill_enable.svg"
-                        : "images/tab_icon_pill_disable.svg"),
+                    icon: SvgPicture.asset(
+                        _tabController.index == HomePageTabType.record.index
+                            ? "images/tab_icon_pill_enable.svg"
+                            : "images/tab_icon_pill_disable.svg"),
+                  ),
+                  Tab(
+                    text: "生理",
+                    icon: SvgPicture.asset(_tabController.index ==
+                            HomePageTabType.menstruation.index
+                        ? "images/menstruation.svg"
+                        : "images/menstruation_disable.svg"),
                   ),
                   Tab(
                     text: DateTimeFormatter.slashYearAndMonth(today()),
-                    icon: SvgPicture.asset(_tabController.index == 1
-                        ? "images/tab_icon_calendar_enable.svg"
-                        : "images/tab_icon_calendar_disable.svg"),
+                    icon: SvgPicture.asset(
+                        _tabController.index == HomePageTabType.calendar.index
+                            ? "images/tab_icon_calendar_enable.svg"
+                            : "images/tab_icon_calendar_disable.svg"),
                   ),
                   Tab(
                     text: "設定",
-                    icon: SvgPicture.asset(_tabController.index == 2
-                        ? "images/tab_icon_setting_enable.svg"
-                        : "images/tab_icon_setting_disable.svg"),
+                    icon: SvgPicture.asset(
+                        _tabController.index == HomePageTabType.setting.index
+                            ? "images/tab_icon_setting_enable.svg"
+                            : "images/tab_icon_setting_disable.svg"),
                   ),
                 ],
               ),
@@ -93,9 +106,11 @@ class _HomePageState extends State<HomePage>
           ),
         ),
         body: TabBarView(
+          physics: NeverScrollableScrollPhysics(),
           controller: _tabController,
           children: <Widget>[
             RecordPage(),
+            MenstruationPage(),
             CalendarPage(),
             SettingsPage(),
             // SettingsPage(),
@@ -135,32 +150,34 @@ class _HomePageState extends State<HomePage>
 
   void _screenTracking() {
     analytics.setCurrentScreen(
-      screenName: "${HomePageTab.values[_tabController.index].screenName}",
+      screenName: "${HomePageTabType.values[_tabController.index].screenName}",
     );
   }
 }
 
-enum HomePageTab { record, calendar, settings }
-
-extension HomePageTabFunctions on HomePageTab {
+extension HomePageTabFunctions on HomePageTabType {
   Widget widget() {
     switch (this) {
-      case HomePageTab.record:
+      case HomePageTabType.record:
         return RecordPage();
-      case HomePageTab.calendar:
+      case HomePageTabType.menstruation:
+        return MenstruationPage();
+      case HomePageTabType.calendar:
         return CalendarPage();
-      case HomePageTab.settings:
+      case HomePageTabType.setting:
         return SettingsPage();
     }
   }
 
   String get screenName {
     switch (this) {
-      case HomePageTab.record:
+      case HomePageTabType.record:
         return "RecordPage";
-      case HomePageTab.calendar:
+      case HomePageTabType.menstruation:
+        return "MenstruationPage";
+      case HomePageTabType.calendar:
         return "CalendarPage";
-      case HomePageTab.settings:
+      case HomePageTabType.setting:
         return "SettingsPage";
     }
   }

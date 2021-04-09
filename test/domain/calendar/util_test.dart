@@ -12,7 +12,7 @@ void main() {
     TestWidgetsFlutterBinding.ensureInitialized();
     SharedPreferences.setMockInitialValues({});
   });
-  group("#menstruationDateRange", () {
+  group("#scheduledMenstruationDateRanges", () {
     test(
       "First page with pillSheetType: pillsheet_28_7, beginingDate: 2020-09-01, fromMenstruation: 23, durationMenstruation: 3",
       () {
@@ -49,43 +49,15 @@ void main() {
           reminderTimes: [ReminderTime(hour: 1, minute: 1)],
         );
         assert(pillSheetType.dosingPeriod == 21,
-            "menstruationDateRange adding value with dosingPeriod when it will create DateRange. pillsheet_28_7 type has 24 dosingPeriod");
+            "scheduledMenstruationDateRange adding value with dosingPeriod when it will create DateRange. pillsheet_28_7 type has 24 dosingPeriod");
         expect(
-          menstruationDateRange(model, setting, 0),
-          DateRange(
-            DateTime.parse("2020-09-23"),
-            DateTime.parse("2020-09-25"),
-          ),
-        );
-      },
-    );
-    test(
-      "First page with pillSheetType: pillsheet_28_0, beginingDate: 2021-01-18, fromMenstruation: 23, durationMenstruation: 3",
-      () {
-        var pillSheetType = PillSheetType.pillsheet_28_0;
-        var beginingDate = DateTime.parse("2021-01-18");
-        var fromMenstruation = 23;
-        var durationMenstruation = 3;
-        var model = PillSheetModel(
-          typeInfo: pillSheetType.typeInfo,
-          beginingDate: beginingDate,
-          lastTakenDate: null,
-        );
-        var setting = Setting(
-          pillSheetTypeRawPath: pillSheetType.rawPath,
-          pillNumberForFromMenstruation: fromMenstruation,
-          durationMenstruation: durationMenstruation,
-          isOnReminder: false,
-          reminderTimes: [ReminderTime(hour: 1, minute: 1)],
-        );
-        assert(pillSheetType.dosingPeriod == 28,
-            "menstruationDateRange adding value with dosingPeriod when it will create DateRange. pillsheet_28_7 type has 24 dosingPeriod");
-        expect(
-          menstruationDateRange(model, setting, 0),
-          DateRange(
-            DateTime.parse("2021-02-09"),
-            DateTime.parse("2021-02-11"),
-          ),
+          scheduledMenstruationDateRanges(model, setting, [], 1),
+          [
+            DateRange(
+              DateTime.parse("2020-09-23"),
+              DateTime.parse("2020-09-25"),
+            )
+          ],
         );
       },
     );
@@ -109,13 +81,19 @@ void main() {
           reminderTimes: [ReminderTime(hour: 1, minute: 1)],
         );
         assert(pillSheetType.dosingPeriod == 21,
-            "menstruationDateRange adding value with dosingPeriod when it will create DateRange. pillsheet_28_7 type has 24 dosingPeriod");
+            "scheduledMenstruationDateRange adding value with dosingPeriod when it will create DateRange. pillsheet_28_7 type has 24 dosingPeriod");
         expect(
-          menstruationDateRange(model, setting, 1),
-          DateRange(
-            DateTime.parse("2020-10-21"),
-            DateTime.parse("2020-10-23"),
-          ),
+          scheduledMenstruationDateRanges(model, setting, [], 2),
+          [
+            DateRange(
+              DateTime.parse("2020-09-23"),
+              DateTime.parse("2020-09-25"),
+            ),
+            DateRange(
+              DateTime.parse("2020-10-21"),
+              DateTime.parse("2020-10-23"),
+            ),
+          ],
         );
       },
     );
@@ -139,18 +117,60 @@ void main() {
           reminderTimes: [ReminderTime(hour: 1, minute: 1)],
         );
         assert(pillSheetType.dosingPeriod == 21,
-            "menstruationDateRange adding value with dosingPeriod when it will create DateRange. pillsheet_28_7 type has 24 dosingPeriod");
+            "scheduledMenstruationDateRange adding value with dosingPeriod when it will create DateRange. pillsheet_28_7 type has 24 dosingPeriod");
         expect(
-          menstruationDateRange(model, setting, 2),
-          DateRange(
-            DateTime.parse("2020-11-18"),
-            DateTime.parse("2020-11-20"),
-          ),
+          scheduledMenstruationDateRanges(model, setting, [], 3),
+          [
+            DateRange(
+              DateTime.parse("2020-09-23"),
+              DateTime.parse("2020-09-25"),
+            ),
+            DateRange(
+              DateTime.parse("2020-10-21"),
+              DateTime.parse("2020-10-23"),
+            ),
+            DateRange(
+              DateTime.parse("2020-11-18"),
+              DateTime.parse("2020-11-20"),
+            )
+          ],
+        );
+      },
+    );
+    test(
+      "First page with pillSheetType: pillsheet_28_0, beginingDate: 2021-01-18, fromMenstruation: 23, durationMenstruation: 3",
+      () {
+        var pillSheetType = PillSheetType.pillsheet_28_0;
+        var beginingDate = DateTime.parse("2021-01-18");
+        var fromMenstruation = 23;
+        var durationMenstruation = 3;
+        var model = PillSheetModel(
+          typeInfo: pillSheetType.typeInfo,
+          beginingDate: beginingDate,
+          lastTakenDate: null,
+        );
+        var setting = Setting(
+          pillSheetTypeRawPath: pillSheetType.rawPath,
+          pillNumberForFromMenstruation: fromMenstruation,
+          durationMenstruation: durationMenstruation,
+          isOnReminder: false,
+          reminderTimes: [ReminderTime(hour: 1, minute: 1)],
+        );
+        assert(pillSheetType.dosingPeriod == 28,
+            "scheduledMenstruationDateRange adding value with dosingPeriod when it will create DateRange. pillsheet_28_7 type has 24 dosingPeriod");
+        expect(
+          scheduledMenstruationDateRanges(model, setting, [], 1),
+          [
+            DateRange(
+              DateTime.parse("2021-02-09"),
+              DateTime.parse("2021-02-11"),
+            )
+          ],
         );
       },
     );
   });
-  group("#nextPillSheetDateRange", () {
+  group("#nextPillSheetDateRanges", () {
     test(
       "First page with pillSheetType: pillsheet_28_7, beginingDate: 2020-09-01",
       () {
@@ -179,11 +199,13 @@ void main() {
           lastTakenDate: null,
         );
         expect(
-          nextPillSheetDateRange(model, 0),
-          DateRange(
-            DateTime.parse("2020-09-29"),
-            DateTime.parse("2020-10-05"),
-          ),
+          nextPillSheetDateRanges(model, 1),
+          [
+            DateRange(
+              DateTime.parse("2020-09-29"),
+              DateTime.parse("2020-10-05"),
+            ),
+          ],
         );
       },
     );
@@ -198,11 +220,17 @@ void main() {
           lastTakenDate: null,
         );
         expect(
-          nextPillSheetDateRange(model, 1),
-          DateRange(
-            DateTime.parse("2020-10-27"),
-            DateTime.parse("2020-11-02"),
-          ),
+          nextPillSheetDateRanges(model, 2),
+          [
+            DateRange(
+              DateTime.parse("2020-09-29"),
+              DateTime.parse("2020-10-05"),
+            ),
+            DateRange(
+              DateTime.parse("2020-10-27"),
+              DateTime.parse("2020-11-02"),
+            ),
+          ],
         );
       },
     );
@@ -217,11 +245,21 @@ void main() {
           lastTakenDate: null,
         );
         expect(
-          nextPillSheetDateRange(model, 2),
-          DateRange(
-            DateTime.parse("2020-11-24"),
-            DateTime.parse("2020-11-30"),
-          ),
+          nextPillSheetDateRanges(model, 3),
+          [
+            DateRange(
+              DateTime.parse("2020-09-29"),
+              DateTime.parse("2020-10-05"),
+            ),
+            DateRange(
+              DateTime.parse("2020-10-27"),
+              DateTime.parse("2020-11-02"),
+            ),
+            DateRange(
+              DateTime.parse("2020-11-24"),
+              DateTime.parse("2020-11-30"),
+            ),
+          ],
         );
       },
     );
@@ -253,11 +291,13 @@ void main() {
           lastTakenDate: null,
         );
         expect(
-          nextPillSheetDateRange(model, 0),
-          DateRange(
-            DateTime.parse("2020-09-29"),
-            DateTime.parse("2020-10-05"),
-          ),
+          nextPillSheetDateRanges(model, 1),
+          [
+            DateRange(
+              DateTime.parse("2020-09-29"),
+              DateTime.parse("2020-10-05"),
+            )
+          ],
         );
       },
     );
@@ -272,7 +312,7 @@ void main() {
                 DateTime.parse("2021-02-07"),
                 DateTime.parse("2021-02-13"),
               ),
-              CalendarMenstruationBandModel(
+              CalendarScheduledMenstruationBandModel(
                 DateTime.parse("2021-02-10"),
                 DateTime.parse("2021-02-13"),
               ),
@@ -290,7 +330,7 @@ void main() {
                 DateTime.parse("2021-02-14"),
                 DateTime.parse("2021-02-20"),
               ),
-              CalendarMenstruationBandModel(
+              CalendarScheduledMenstruationBandModel(
                 DateTime.parse("2021-02-08"),
                 DateTime.parse("2021-02-14"),
               ),

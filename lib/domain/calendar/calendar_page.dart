@@ -1,28 +1,35 @@
 import 'dart:math' as math;
 import 'package:pilll/components/molecules/app_card.dart';
+import 'package:pilll/components/molecules/indicator.dart';
 import 'package:pilll/domain/calendar/calendar_card.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/domain/calendar/utility.dart';
-import 'package:pilll/store/pill_sheet.dart';
-import 'package:pilll/store/setting.dart';
+import 'package:pilll/entity/menstruation.dart';
+import 'package:pilll/entity/pill_sheet.dart';
+import 'package:pilll/entity/setting.dart';
+import 'package:pilll/store/calendar_page.dart';
 import 'package:pilll/util/formatter/date_time_formatter.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:pilll/util/datetime/day.dart' as utility;
+import 'package:pilll/util/datetime/day.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 abstract class CalendarPageConstants {
   static final double halfCircleHeight = 300;
 }
 
-class CalendarPage extends StatelessWidget {
-  DateTime get today => utility.today();
+class CalendarPage extends HookWidget {
   @override
   Widget build(BuildContext context) {
+    final state = useProvider(calendarPageStateProvider.state);
+    final settingEntity = state.setting;
+    if (settingEntity == null) {
+      return ScaffoldIndicator();
+    }
     return Scaffold(
       backgroundColor: PilllColors.background,
       appBar: null,
@@ -34,11 +41,15 @@ class CalendarPage extends StatelessWidget {
           children: <Widget>[
             Stack(
               children: [
-                CustomPaint(
-                  painter: _HalfCircle(Size(
-                      MediaQuery.of(context).size.width + 100,
-                      CalendarPageConstants.halfCircleHeight)),
-                  size: Size(MediaQuery.of(context).size.width, 220),
+                Container(
+                  clipBehavior: Clip.antiAliasWithSaveLayer,
+                  decoration: BoxDecoration(),
+                  child: CustomPaint(
+                    painter: _HalfCircle(Size(
+                        MediaQuery.of(context).size.width + 100,
+                        CalendarPageConstants.halfCircleHeight)),
+                    size: Size(MediaQuery.of(context).size.width, 220),
+                  ),
                 ),
                 Positioned(
                     left: 16,
@@ -51,7 +62,11 @@ class CalendarPage extends StatelessWidget {
                         Container(
                           width: MediaQuery.of(context).size.width - 32,
                           height: 111,
-                          child: _menstruationCard(),
+                          child: _MenstruationCard(
+                            latestPillSheet: state.latestPillSheet,
+                            setting: settingEntity,
+                            menstruations: state.menstruations,
+                          ),
                         ),
                       ],
                     )),
@@ -64,7 +79,10 @@ class CalendarPage extends StatelessWidget {
                   padding:
                       const EdgeInsets.only(left: 16, right: 16, bottom: 16),
                   child: CalendarCard(
-                    date: today,
+                    date: today(),
+                    latestPillSheet: state.latestPillSheet,
+                    setting: settingEntity,
+                    menstruations: state.menstruations,
                   ),
                 ),
               ),
@@ -87,23 +105,22 @@ class CalendarPage extends StatelessWidget {
       ],
     );
   }
-
-  Widget _menstruationCard() {
-    return MenstruationCard();
-  }
 }
 
-class MenstruationCard extends HookWidget {
-  const MenstruationCard({
-    Key? key,
-  }) : super(key: key);
+// TODO: remote card from Calendar
+class _MenstruationCard extends StatelessWidget {
+  final PillSheetModel? latestPillSheet;
+  final Setting? setting;
+  final List<Menstruation> menstruations;
 
+  const _MenstruationCard({
+    Key? key,
+    required this.latestPillSheet,
+    required this.setting,
+    required this.menstruations,
+  }) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    final pillSheetState = useProvider(pillSheetStoreProvider.state);
-    final settingState = useProvider(settingStoreProvider.state);
-    final pillSheetEntity = pillSheetState.entity;
-    final settingEntity = settingState.entity;
     return AppCard(
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
@@ -111,25 +128,29 @@ class MenstruationCard extends HookWidget {
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              SvgPicture.asset("images/menstruation_icon.svg", width: 20),
+              SvgPicture.asset("images/menstruation.svg",
+                  width: 24, color: PilllColors.red),
               Text("生理予定日",
                   style: TextColorStyle.noshime.merge(FontType.assisting)),
             ],
           ),
           Text(() {
-            if (pillSheetEntity == null) {
+            final latestPillSheet = this.latestPillSheet;
+            if (latestPillSheet == null) {
               return "";
             }
-            if (settingEntity == null) {
+            final setting = this.setting;
+            if (setting == null) {
               return "";
             }
-            for (int i = 0; i < 12; i += 1) {
-              final begin =
-                  menstruationDateRange(pillSheetEntity, settingEntity, i)
-                      .begin;
-              if (begin.isAfter(utility.today())) {
-                return DateTimeFormatter.monthAndWeekday(begin);
-              }
+            final matchedScheduledMenstruation =
+                scheduledMenstruationDateRanges(
+                        latestPillSheet, setting, menstruations, 12)
+                    .where((element) => element.begin.isAfter(today()));
+
+            if (matchedScheduledMenstruation.isNotEmpty) {
+              return DateTimeFormatter.monthAndWeekday(
+                  matchedScheduledMenstruation.first.begin);
             }
             return "";
           }(), style: TextColorStyle.gray.merge(FontType.xBigTitle)),

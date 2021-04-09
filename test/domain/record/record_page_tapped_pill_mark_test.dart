@@ -3,7 +3,7 @@ import 'package:pilll/domain/record/record_page.dart';
 import 'package:pilll/entity/pill_sheet.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/entity/setting.dart';
-import 'package:pilll/service/today.dart';
+import 'package:pilll/service/day.dart';
 import 'package:pilll/store/pill_sheet.dart';
 import 'package:pilll/store/setting.dart';
 import 'package:pilll/util/environment.dart';

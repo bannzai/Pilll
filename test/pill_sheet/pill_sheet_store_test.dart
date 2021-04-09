@@ -2,7 +2,7 @@ import 'package:pilll/analytics.dart';
 import 'package:pilll/entity/pill_mark_type.dart';
 import 'package:pilll/entity/pill_sheet.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
-import 'package:pilll/service/today.dart';
+import 'package:pilll/service/day.dart';
 import 'package:pilll/state/pill_sheet.dart';
 import 'package:pilll/store/pill_sheet.dart';
 import 'package:pilll/util/datetime/date_compare.dart';
@@ -132,7 +132,7 @@ void main() {
     test("it is alredy taken all", () async {
       final mockTodayRepository = MockTodayRepository();
       todayRepository = mockTodayRepository;
-      when(todayRepository.today()).thenReturn(DateTime.parse("2020-11-23"));
+      when(mockTodayRepository.today()).thenReturn(DateTime.parse("2020-11-23"));
 
       final pillSheetEntity =
           PillSheetModel.create(PillSheetType.pillsheet_21).copyWith(

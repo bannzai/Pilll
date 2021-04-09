@@ -13,7 +13,7 @@ final pillSheetStoreProvider = StateNotifierProvider(
     (ref) => PillSheetStateStore(ref.watch(pillSheetServiceProvider)));
 
 class PillSheetStateStore extends StateNotifier<PillSheetState> {
-  final PillSheetServiceInterface _service;
+  final PillSheetService _service;
   PillSheetStateStore(this._service) : super(PillSheetState(entity: null)) {
     _reset();
   }

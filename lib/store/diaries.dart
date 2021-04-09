@@ -6,13 +6,24 @@ import 'package:pilll/service/diary.dart';
 import 'package:pilll/state/diaries.dart';
 import 'package:riverpod/riverpod.dart';
 
-final diariesStoreProvider = StateNotifierProvider(
-    (ref) => DiariesStateStore(ref.watch(diaryServiceProvider)));
+final monthlyDiariesStoreProvider =
+    StateNotifierProvider.family<DiariesStateStore, DateTime>((ref, date) =>
+        DiariesStateStore(ref.watch(diaryServiceProvider), date));
 
 class DiariesStateStore extends StateNotifier<DiariesState> {
-  final DiariesServiceInterface _service;
-  DiariesStateStore(this._service) : super(DiariesState(entities: [])) {
-    _subscribe();
+  final DiaryService _service;
+  final DateTime dateForMonth;
+  DiariesStateStore(this._service, this.dateForMonth)
+      : super(DiariesState(entities: [])) {
+    _reset();
+  }
+
+  void _reset() {
+    Future(() async {
+      state = state.copyWith(
+          entities: await _service.fetchListForMonth(dateForMonth));
+      _subscribe();
+    });
   }
 
   StreamSubscription? canceller;
@@ -27,12 +38,6 @@ class DiariesStateStore extends StateNotifier<DiariesState> {
   void dispose() {
     canceller?.cancel();
     super.dispose();
-  }
-
-  Future<void> fetchListForMonth(DateTime dateTimeOfMonth) {
-    return _service
-        .fetchListForMonth(dateTimeOfMonth)
-        .then((entities) => state = state.copyWith(entities: entities));
   }
 
   Future<void> register(Diary diary) {

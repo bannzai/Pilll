@@ -38,11 +38,13 @@ class PilllColors {
   static final Color background = HexColor.fromHex("F6F9FB");
 
   static final Color blank = Colors.white;
+  static final Color black = HexColor.fromHex("333333");
+  static final Color red = HexColor.fromHex("EB5757");
   static final Color potti = HexColor.fromHex("7C8E9C");
   static final Color lightGray = HexColor.fromHex("CDCFD1");
   static final Color gray = HexColor.fromHex("BEC0C2");
 
-  static final Color menstruation = HexColor.fromHex("E3B4B4");
+  static final Color menstruation = HexColor.fromHex("E3BFC2");
   static final Color duration = HexColor.fromHex("6A7DA5");
   static final Color overlay = primary.withAlpha(20);
 
