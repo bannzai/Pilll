@@ -15,8 +15,12 @@ import 'package:pilll/store/menstruation_edit.dart';
 
 class MenstruationEditPage extends HookWidget {
   final Menstruation? menstruation;
+  final Function(Menstruation) didEndSave;
+  final VoidCallback didEndDelete;
   MenstruationEditPage({
     required this.menstruation,
+    required this.didEndSave,
+    required this.didEndDelete,
   });
 
   @override
