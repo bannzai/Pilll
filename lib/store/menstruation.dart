@@ -10,7 +10,7 @@ import 'package:pilll/service/setting.dart';
 import 'package:pilll/state/menstruation.dart';
 import 'package:pilll/util/datetime/day.dart';
 
-final menstruationsStoreProvider = StateNotifierProvider.autoDispose((ref) =>
+final menstruationsStoreProvider = StateNotifierProvider((ref) =>
     MenstruationStore(
         menstruationService: ref.watch(menstruationServiceProvider),
         diaryService: ref.watch(diaryServiceProvider),
@@ -77,6 +77,8 @@ class MenstruationStore extends StateNotifier<MenstruationState> {
   void dispose() {
     _menstruationCanceller?.cancel();
     _diaryCanceller?.cancel();
+    _settingCanceller?.cancel();
+    _pillSheetCanceller?.cancel();
     super.dispose();
   }
 
