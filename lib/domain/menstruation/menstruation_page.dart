@@ -142,19 +142,35 @@ class MenstruationPage extends HookWidget {
                 padding: const EdgeInsets.only(bottom: 20.0),
                 child: PrimaryButton(
                   onPressed: () {
-                    presentMenstruationSelectModify(context);
-                    // TODO:
-                    // final menstruation = menstruationState.entities.isEmpty
-                    //     ? null
-                    //     : menstruationState.entities.last;
-                    // showModalBottomSheet(
-                    //   context: context,
-                    //   builder: (context) => MenstruationEditPage(
-                    //     menstruation: menstruation,
-                    //   ),
-                    //   backgroundColor: Colors.transparent,
-                    //   isScrollControlled: true,
-                    // );
+                    showModalBottomSheet(
+                      context: context,
+                      builder: (context) =>
+                          MenstruationSelectModifyTypeSheet(onTap: (type) {
+                        switch (type) {
+                          case MenstruationSelectModifyType.today:
+                            return menstruationStore.recordFromToday();
+                          case MenstruationSelectModifyType.yesterday:
+                            return menstruationStore.recordFromYesterday();
+                          case MenstruationSelectModifyType.begin:
+                            // TODO: Handle this case.
+                            break;
+                          case MenstruationSelectModifyType.edit:
+                            Navigator.of(context).pop();
+                            final menstruation =
+                                menstruationState.entities.isEmpty
+                                    ? null
+                                    : menstruationState.entities.last;
+                            showModalBottomSheet(
+                              context: context,
+                              builder: (context) => MenstruationEditPage(
+                                menstruation: menstruation,
+                              ),
+                              backgroundColor: Colors.transparent,
+                              isScrollControlled: true,
+                            );
+                        }
+                      }),
+                    );
                   },
                   text: "生理期間を編集",
                 ),
