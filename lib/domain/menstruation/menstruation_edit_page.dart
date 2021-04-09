@@ -57,15 +57,12 @@ class MenstruationEditPage extends HookWidget {
                               title: "生理期間を削除しますか？",
                               message: "",
                               doneButtonText: "削除する",
-                              done: () => store
-                                  .delete()
-                                  .then((value) => Navigator.of(context).pop()),
+                              done: () =>
+                                  store.delete().then((_) => didEndDelete()),
                             ),
                           );
                         } else {
-                          store
-                              .save()
-                              .then((value) => Navigator.of(context).pop());
+                          store.save().then((value) => didEndSave(value));
                         }
                       },
                       text: "保存",

@@ -146,7 +146,28 @@ class MenstruationPage extends HookWidget {
                         menstruationState.latestMenstruation;
                     if (latestMenstruation != null &&
                         latestMenstruation.dateRange.inRange(today())) {
-                      _showEditPage(context, latestMenstruation);
+                      _showEditPage(
+                        context,
+                        latestMenstruation,
+                        didEndSave: (menstruation) {
+                          Navigator.of(context).pop();
+                          ScaffoldMessenger.of(context).showSnackBar(
+                            SnackBar(
+                              duration: Duration(seconds: 1),
+                              content: Text("生理期間を編集しました"),
+                            ),
+                          );
+                        },
+                        didEndDelete: () {
+                          Navigator.of(context).pop();
+                          ScaffoldMessenger.of(context).showSnackBar(
+                            SnackBar(
+                              duration: Duration(seconds: 1),
+                              content: Text("生理期間を削除しました"),
+                            ),
+                          );
+                        },
+                      );
                       return;
                     }
 
@@ -181,10 +202,49 @@ class MenstruationPage extends HookWidget {
                             return;
                           case MenstruationSelectModifyType.begin:
                             Navigator.of(context).pop();
-                            return _showEditPage(context, null);
+                            return _showEditPage(context, null,
+                                didEndSave: (menstruation) {
+                              Navigator.of(context).pop();
+                              ScaffoldMessenger.of(context).showSnackBar(
+                                SnackBar(
+                                  duration: Duration(seconds: 1),
+                                  content: Text(
+                                      "${DateTimeFormatter.monthAndDay(menstruation.beginDate)}から生理開始で記録しました"),
+                                ),
+                              );
+                            }, didEndDelete: () {
+                              Navigator.of(context).pop();
+                              ScaffoldMessenger.of(context).showSnackBar(
+                                SnackBar(
+                                  duration: Duration(seconds: 1),
+                                  content: Text("生理期間を削除しました"),
+                                ),
+                              );
+                            });
                           case MenstruationSelectModifyType.edit:
                             Navigator.of(context).pop();
-                            return _showEditPage(context, null);
+                            return _showEditPage(
+                              context,
+                              null,
+                              didEndSave: (menstruation) {
+                                Navigator.of(context).pop();
+                                ScaffoldMessenger.of(context).showSnackBar(
+                                  SnackBar(
+                                    duration: Duration(seconds: 1),
+                                    content: Text("生理期間を編集しました"),
+                                  ),
+                                );
+                              },
+                              didEndDelete: () {
+                                Navigator.of(context).pop();
+                                ScaffoldMessenger.of(context).showSnackBar(
+                                  SnackBar(
+                                    duration: Duration(seconds: 1),
+                                    content: Text("生理期間を削除しました"),
+                                  ),
+                                );
+                              },
+                            );
                         }
                       }),
                     );
@@ -201,29 +261,17 @@ class MenstruationPage extends HookWidget {
 
   void _showEditPage(
     BuildContext context,
-    Menstruation? menstruation,
-  ) {
+    Menstruation? menstruation, {
+    required Function(Menstruation) didEndSave,
+    required VoidCallback didEndDelete,
+  }) {
     showModalBottomSheet(
       context: context,
       builder: (context) => MenstruationEditPage(
-          menstruation: menstruation,
-          didEndSave: (menstruation) {
-            ScaffoldMessenger.of(context).showSnackBar(
-              SnackBar(
-                duration: Duration(seconds: 1),
-                content: Text(
-                    "${DateTimeFormatter.monthAndDay(menstruation.beginDate)}から生理開始で記録しました"),
-              ),
-            );
-          },
-          didEndDelete: () {
-            ScaffoldMessenger.of(context).showSnackBar(
-              SnackBar(
-                duration: Duration(seconds: 1),
-                content: Text("生理期間を削除しました"),
-              ),
-            );
-          }),
+        menstruation: menstruation,
+        didEndSave: didEndSave,
+        didEndDelete: didEndDelete,
+      ),
       backgroundColor: Colors.transparent,
       isScrollControlled: true,
     );
