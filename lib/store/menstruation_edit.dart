@@ -42,6 +42,10 @@ class MenstruationEditStore extends StateNotifier<MenstruationEditState> {
       throw FormatException(
           "menstruation is not exists document id from db when delete");
     }
+    if (state.menstruation != null) {
+      throw FormatException(
+          "missing condition about state.menstruation is exists when delete. state.menstruation should flushed on edit page");
+    }
     return service.update(
         documentID, initialMenstruation.copyWith(deletedAt: now()));
   }
