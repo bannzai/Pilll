@@ -38,17 +38,13 @@ abstract class MenstruationPageConst {
 class MenstruationPage extends HookWidget {
   @override
   Scaffold build(BuildContext context) {
-    final store = useProvider(menstruationsStoreProvider);
-    final state = useProvider(menstruationsStoreProvider.state);
-    final bandModels = buildBandModels(
-            state.latestPillSheet, state.setting, state.entities, 12)
-        .where((element) => !(element is CalendarNextPillSheetBandModel))
-        .toList();
+    final menstruationStore = useProvider(menstruationsStoreProvider);
+    final menstruationState = useProvider(menstruationsStoreProvider.state);
     final ItemPositionsListener itemPositionsListener =
         ItemPositionsListener.create();
     itemPositionsListener.itemPositions.addListener(() {
       final index = itemPositionsListener.itemPositions.value.last.index;
-      store.updateCurrentCalendarIndex(index);
+      menstruationStore.updateCurrentCalendarIndex(index);
     });
     final ItemScrollController itemScrollController = ItemScrollController();
 
@@ -58,16 +54,17 @@ class MenstruationPage extends HookWidget {
         actions: [
           AppBarTextActionButton(
               onPressed: () {
-                store.updateCurrentCalendarIndex(state.todayCalendarIndex);
+                menstruationStore.updateCurrentCalendarIndex(
+                    menstruationState.todayCalendarIndex);
                 itemScrollController.scrollTo(
-                    index: state.todayCalendarIndex,
+                    index: menstruationState.todayCalendarIndex,
                     duration: Duration(milliseconds: 300));
               },
               text: "今日"),
         ],
         title: SizedBox(
           child: Text(
-            state.displayMonth,
+            menstruationState.displayMonth,
             style: TextStyle(color: TextColor.black),
           ),
         ),
@@ -106,19 +103,20 @@ class MenstruationPage extends HookWidget {
                       maxHeight: MenstruationPageConst.tileHeight,
                       child: ScrollablePositionedList.builder(
                         itemScrollController: itemScrollController,
-                        initialScrollIndex: state.currentCalendarIndex,
+                        initialScrollIndex:
+                            menstruationState.currentCalendarIndex,
                         physics: PageScrollPhysics(),
                         scrollDirection: Axis.horizontal,
                         itemPositionsListener: itemPositionsListener,
                         itemBuilder: (context, index) {
-                          final data = state.calendarDataSource[index];
+                          final data =
+                              menstruationState.calendarDataSource[index];
                           return _DateLine(
                             days: data,
-                            state: state,
-                            bandModels: bandModels,
+                            state: menstruationState,
                           );
                         },
-                        itemCount: state.calendarDataSource.length,
+                        itemCount: menstruationState.calendarDataSource.length,
                       ),
                     ),
                   ],
@@ -132,7 +130,7 @@ class MenstruationPage extends HookWidget {
                     itemCount: 1,
                     scrollDirection: Axis.vertical,
                     itemBuilder: (context, index) {
-                      final cardState = store.cardState();
+                      final cardState = menstruationStore.cardState();
                       if (cardState == null) {
                         return Container();
                       }
@@ -146,7 +144,8 @@ class MenstruationPage extends HookWidget {
                 child: PrimaryButton(
                   onPressed: () {
                     analytics.logEvent(name: "pressed_menstruation_record");
-                    final latestMenstruation = state.latestMenstruation;
+                    final latestMenstruation =
+                        menstruationState.latestMenstruation;
                     if (latestMenstruation != null &&
                         latestMenstruation.dateRange.inRange(today())) {
                       _showEditPage(
@@ -183,7 +182,8 @@ class MenstruationPage extends HookWidget {
                             analytics.logEvent(
                                 name: "tapped_menstruation_record_today");
                             Navigator.of(context).pop();
-                            final created = await store.recordFromToday();
+                            final created =
+                                await menstruationStore.recordFromToday();
                             ScaffoldMessenger.of(context).showSnackBar(
                               SnackBar(
                                 duration: Duration(seconds: 1),
@@ -196,7 +196,8 @@ class MenstruationPage extends HookWidget {
                             analytics.logEvent(
                                 name: "tapped_menstruation_record_yesterday");
                             Navigator.of(context).pop();
-                            final created = await store.recordFromYesterday();
+                            final created =
+                                await menstruationStore.recordFromYesterday();
                             ScaffoldMessenger.of(context).showSnackBar(
                               SnackBar(
                                 duration: Duration(seconds: 1),
@@ -258,7 +259,7 @@ class MenstruationPage extends HookWidget {
                       }),
                     );
                   },
-                  text: state.buttonString,
+                  text: menstruationState.buttonString,
                 ),
               ),
             ],
@@ -303,13 +304,11 @@ class _WeekdayLine extends StatelessWidget {
 class _DateLine extends StatelessWidget {
   final List<DateTime> days;
   final MenstruationState state;
-  final List<CalendarBandModel> bandModels;
 
   const _DateLine({
     Key? key,
     required this.days,
     required this.state,
-    required this.bandModels,
   }) : super(key: key);
   @override
   Widget build(BuildContext context) {
@@ -320,7 +319,10 @@ class _DateLine extends StatelessWidget {
         diaries: state.diaries,
         calendarState:
             SinglelineWeeklyCalendarState(DateRange(days.first, days.last)),
-        bandModels: bandModels,
+        bandModels: buildBandModels(
+                state.latestPillSheet, state.setting, state.entities, 12)
+            .where((element) => !(element is CalendarNextPillSheetBandModel))
+            .toList(),
         horizontalPadding: _horizontalPadding,
         onTap: (weeklyCalendarState, date) {
           analytics.logEvent(name: "did_select_day_tile_on_menstruation");
