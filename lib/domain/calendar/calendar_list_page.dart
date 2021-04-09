@@ -1,3 +1,4 @@
+import 'package:pilll/analytics.dart';
 import 'package:pilll/domain/calendar/calendar_date_header.dart';
 import 'package:pilll/domain/calendar/calendar_weekday_line.dart';
 import 'package:pilll/domain/calendar/monthly_calendar_state.dart';
@@ -83,7 +84,10 @@ class CalendarListPage extends HookWidget {
           : null,
       calendarState: model.calendarState,
       bandModels: model.bandModels,
-      onTap: (date, diaries) => transitionToPostDiary(context, date, diaries),
+      onTap: (date, diaries) {
+        analytics.logEvent(name: "did_select_day_tile_on_calendar_list");
+        transitionToPostDiary(context, date, diaries);
+      },
       horizontalPadding: 0,
     );
   }

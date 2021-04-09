@@ -1,3 +1,4 @@
+import 'package:pilll/analytics.dart';
 import 'package:pilll/components/molecules/app_card.dart';
 import 'package:pilll/domain/calendar/calendar_weekday_line.dart';
 import 'package:pilll/domain/calendar/monthly_calendar_state.dart';
@@ -42,8 +43,10 @@ class CalendarCard extends StatelessWidget {
             calendarState: CalendarTabState(date),
             bandModels:
                 buildBandModels(latestPillSheet, setting, menstruations, 1),
-            onTap: (date, diaries) =>
-                transitionToPostDiary(context, date, diaries),
+            onTap: (date, diaries) {
+              analytics.logEvent(name: "did_select_day_tile_on_calendar_card");
+              transitionToPostDiary(context, date, diaries);
+            },
             horizontalPadding: 16,
           ),
           _more(context),
