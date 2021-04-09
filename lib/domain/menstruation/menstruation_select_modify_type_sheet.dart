@@ -4,18 +4,18 @@ import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 
-enum _CellType { today, yesterday, begin, edit }
+enum MenstruationSelectModifyType { today, yesterday, begin, edit }
 
-extension _CellTypeFunction on _CellType {
+extension _CellTypeFunction on MenstruationSelectModifyType {
   String get title {
     switch (this) {
-      case _CellType.today:
+      case MenstruationSelectModifyType.today:
         return "今日から生理";
-      case _CellType.yesterday:
+      case MenstruationSelectModifyType.yesterday:
         return "昨日から生理";
-      case _CellType.begin:
+      case MenstruationSelectModifyType.begin:
         return "開始日を日付から選択";
-      case _CellType.edit:
+      case MenstruationSelectModifyType.edit:
         return "生理期間を編集";
     }
   }
@@ -23,13 +23,13 @@ extension _CellTypeFunction on _CellType {
   Widget icon(bool isSelected) {
     String name() {
       switch (this) {
-        case _CellType.today:
+        case MenstruationSelectModifyType.today:
           return "images/menstruation_record_icon.svg";
-        case _CellType.yesterday:
+        case MenstruationSelectModifyType.yesterday:
           return "images/menstruation_record_icon.svg";
-        case _CellType.begin:
+        case MenstruationSelectModifyType.begin:
           return "images/menstruation_begin_record_icon.svg";
-        case _CellType.edit:
+        case MenstruationSelectModifyType.edit:
           return "images/menstruation_edit_duration_icon.svg";
       }
     }
@@ -40,6 +40,10 @@ extension _CellTypeFunction on _CellType {
 }
 
 class MenstruationSelectModifyTypeSheet extends StatefulWidget {
+  final Function(MenstruationSelectModifyType) onTap;
+
+  const MenstruationSelectModifyTypeSheet({Key? key, required this.onTap})
+      : super(key: key);
   @override
   _MenstruationSelectModifyTypeSheetState createState() =>
       _MenstruationSelectModifyTypeSheetState();
@@ -47,7 +51,7 @@ class MenstruationSelectModifyTypeSheet extends StatefulWidget {
 
 class _MenstruationSelectModifyTypeSheetState
     extends State<MenstruationSelectModifyTypeSheet> {
-  _CellType? selectedCellType;
+  MenstruationSelectModifyType? selectedCellType;
 
   @override
   Widget build(BuildContext context) {
@@ -68,7 +72,7 @@ class _MenstruationSelectModifyTypeSheetState
               height: 192,
               child: ListView(
                 physics: NeverScrollableScrollPhysics(),
-                children: _CellType.values
+                children: MenstruationSelectModifyType.values
                     .map(
                       (e) => _tile(e),
                     )
@@ -81,7 +85,7 @@ class _MenstruationSelectModifyTypeSheetState
     );
   }
 
-  Widget _tile(_CellType type) {
+  Widget _tile(MenstruationSelectModifyType type) {
     return SizedBox(
       height: 48,
       child: ListTile(
@@ -94,17 +98,11 @@ class _MenstruationSelectModifyTypeSheetState
         leading: type.icon(selectedCellType == type),
         selected: selectedCellType == type,
         selectedTileColor: PilllColors.secondary.withOpacity(0.08),
-        onTap: () => setState(() => selectedCellType = type),
+        onTap: () {
+          setState(() => selectedCellType = type);
+          widget.onTap(type);
+        },
       ),
     );
   }
-}
-
-void presentMenstruationSelectModify(
-  BuildContext context,
-) {
-  showModalBottomSheet(
-    context: context,
-    builder: (context) => MenstruationSelectModifyTypeSheet(),
-  );
 }
