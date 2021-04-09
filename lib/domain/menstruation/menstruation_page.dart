@@ -142,37 +142,36 @@ class MenstruationPage extends HookWidget {
                 padding: const EdgeInsets.only(bottom: 20.0),
                 child: PrimaryButton(
                   onPressed: () {
-                    final menstruation = menstruationState.entities.isEmpty
-                        ? null
-                        : menstruationState.entities.last;
                     showModalBottomSheet(
                       context: context,
-                      builder: (context) => MenstruationSelectModifyTypeSheet(
-                          appearanceTypes: filteredMenstruationSelectModifyType(
-                              menstruation),
-                          onTap: (type) {
-                            switch (type) {
-                              case MenstruationSelectModifyType.today:
-                                Navigator.of(context).pop();
-                                return menstruationStore.recordFromToday();
-                              case MenstruationSelectModifyType.yesterday:
-                                Navigator.of(context).pop();
-                                return menstruationStore.recordFromYesterday();
-                              case MenstruationSelectModifyType.begin:
-                                // TODO: Handle this case.
-                                break;
-                              case MenstruationSelectModifyType.edit:
-                                Navigator.of(context).pop();
-                                showModalBottomSheet(
-                                  context: context,
-                                  builder: (context) => MenstruationEditPage(
-                                    menstruation: menstruation,
-                                  ),
-                                  backgroundColor: Colors.transparent,
-                                  isScrollControlled: true,
-                                );
-                            }
-                          }),
+                      builder: (context) =>
+                          MenstruationSelectModifyTypeSheet(onTap: (type) {
+                        switch (type) {
+                          case MenstruationSelectModifyType.today:
+                            Navigator.of(context).pop();
+                            return menstruationStore.recordFromToday();
+                          case MenstruationSelectModifyType.yesterday:
+                            Navigator.of(context).pop();
+                            return menstruationStore.recordFromYesterday();
+                          case MenstruationSelectModifyType.begin:
+                            // TODO: Handle this case.
+                            break;
+                          case MenstruationSelectModifyType.edit:
+                            Navigator.of(context).pop();
+                            final menstruation =
+                                menstruationState.entities.isEmpty
+                                    ? null
+                                    : menstruationState.entities.last;
+                            showModalBottomSheet(
+                              context: context,
+                              builder: (context) => MenstruationEditPage(
+                                menstruation: menstruation,
+                              ),
+                              backgroundColor: Colors.transparent,
+                              isScrollControlled: true,
+                            );
+                        }
+                      }),
                     );
                   },
                   text: "生理期間を編集",
