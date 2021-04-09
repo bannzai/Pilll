@@ -54,7 +54,7 @@ class SinglelineWeeklyCalendarState extends WeeklyCalendarState {
   bool shouldShowDiaryMark(List<Diary> diaries, DateTime date) =>
       isExistsPostedDiary(diaries, date);
   bool shouldShowMenstruationMark(DateTime date) => false;
-  Alignment get contentAlignment => Alignment.topCenter;
+  Alignment get contentAlignment => Alignment.center;
 }
 
 class MultilineWeeklyCalendarState extends WeeklyCalendarState {
