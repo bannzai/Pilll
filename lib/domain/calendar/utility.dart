@@ -13,7 +13,7 @@ List<DateRange> scheduledMenstruationDateRanges(
   int maxPageCount,
 ) {
   assert(maxPageCount > 0);
-  return List.generate(maxPageCount + 1, (pageIndex) {
+  return List.generate(maxPageCount, (pageIndex) {
     final offset = pageIndex * pillSheet.pillSheetType.totalCount;
     final begin = pillSheet.beginingDate.add(
         Duration(days: (setting.pillNumberForFromMenstruation - 1) + offset));
