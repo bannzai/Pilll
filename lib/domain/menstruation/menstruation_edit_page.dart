@@ -6,6 +6,7 @@ import 'package:pilll/components/atoms/buttons.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
+import 'package:pilll/components/page/discard_dialog.dart';
 import 'package:pilll/domain/calendar/calendar.dart';
 import 'package:pilll/domain/calendar/calendar_date_header.dart';
 import 'package:pilll/domain/calendar/monthly_calendar_state.dart';
@@ -44,13 +45,23 @@ class MenstruationEditPage extends HookWidget {
                         style: FontType.sBigTitle.merge(TextColorStyle.main)),
                     Spacer(),
                     SecondaryButton(
-                      onPressed: state.menstruation != null
-                          ? () {
-                              store
-                                  .save()
-                                  .then((value) => Navigator.of(context).pop());
-                            }
-                          : null,
+                      onPressed: () {
+                        if (store.shouldShowDiscardDialog()) {
+                          showDialog(
+                            context: context,
+                            builder: (_) => DiscardDialog(
+                              title: "生理期間を削除しますか？",
+                              message: "",
+                              doneButtonText: "削除する",
+                              done: () => store.delete(),
+                            ),
+                          );
+                        } else {
+                          store
+                              .save()
+                              .then((value) => Navigator.of(context).pop());
+                        }
+                      },
                       text: "保存",
                     )
                   ],

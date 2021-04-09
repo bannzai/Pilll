@@ -21,18 +21,18 @@ class DiscardDialog extends StatelessWidget {
   Widget build(BuildContext context) {
     return AlertDialog(
       title: SvgPicture.asset("images/alert_24.svg", width: 24, height: 24),
-      content: SizedBox(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          mainAxisSize: MainAxisSize.min,
-          children: <Widget>[
+      content: Column(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        mainAxisSize: MainAxisSize.min,
+        children: <Widget>[
+          if (title.isNotEmpty) ...[
             Text(title, style: FontType.subTitle.merge(TextColorStyle.main)),
             SizedBox(
               height: 15,
             ),
-            Text(message, style: FontType.assisting.merge(TextColorStyle.main)),
           ],
-        ),
+          Text(message, style: FontType.assisting.merge(TextColorStyle.main)),
+        ],
       ),
       actions: <Widget>[
         SecondaryButton(
