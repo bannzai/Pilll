@@ -16,24 +16,42 @@ final menstruationEditProvider = StateNotifierProvider.family
 );
 
 class MenstruationEditStore extends StateNotifier<MenstruationEditState> {
+  late Menstruation? initialMenstruation;
   final MenstruationService service;
   final SettingService settingService;
-  late String? menstruationDocumentID;
-  bool get isNotExistsDB => menstruationDocumentID == null;
+  bool get isExistsDB => initialMenstruation != null;
   MenstruationEditStore({
     Menstruation? menstruation,
     required this.service,
     required this.settingService,
   }) : super(MenstruationEditState(menstruation: menstruation)) {
-    menstruationDocumentID = state.menstruation?.documentID;
+    initialMenstruation = menstruation;
+  }
+
+  bool shouldShowDiscardDialog() {
+    return (state.menstruation == null && isExistsDB);
+  }
+
+  Future<void> delete() {
+    final initialMenstruation = this.initialMenstruation;
+    if (initialMenstruation == null) {
+      throw FormatException("menstruation is not exists from db when delete");
+    }
+    final documentID = initialMenstruation.documentID;
+    if (documentID == null) {
+      throw FormatException(
+          "menstruation is not exists document id from db when delete");
+    }
+    return service.update(
+        documentID, initialMenstruation.copyWith(deletedAt: now()));
   }
 
   Future<void> save() {
-    final menstruation = this.state.menstruation;
+    final menstruation = state.menstruation;
     if (menstruation == null) {
       throw FormatException("menstruation is not exists when save");
     }
-    final documentID = menstruationDocumentID;
+    final documentID = initialMenstruation?.documentID;
     if (documentID == null) {
       return service.create(menstruation);
     } else {
