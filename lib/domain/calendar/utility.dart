@@ -69,6 +69,11 @@ List<CalendarBandModel> buildBandModels(
     if (pillSheet != null) ...[
       ...scheduledMenstruationDateRanges(
               pillSheet, setting!, menstruations, maxPageCount)
+          .where((bandRange) => menstruations
+              .where((menstruation) =>
+                  bandRange.inRange(menstruation.beginDate) ||
+                  bandRange.inRange(menstruation.endDate))
+              .isEmpty)
           .map((range) =>
               CalendarScheduledMenstruationBandModel(range.begin, range.end)),
       ...nextPillSheetDateRanges(pillSheet, maxPageCount).map(
