@@ -324,8 +324,10 @@ class _DateLine extends StatelessWidget {
             .where((element) => !(element is CalendarNextPillSheetBandModel))
             .toList(),
         horizontalPadding: _horizontalPadding,
-        onTap: (weeklyCalendarState, date) =>
-            transitionToPostDiary(context, date, state.diaries),
+        onTap: (weeklyCalendarState, date) {
+          analytics.logEvent(name: "did_select_day_tile_on_menstruation");
+          transitionToPostDiary(context, date, state.diaries);
+        },
       ),
     );
   }
