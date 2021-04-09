@@ -99,4 +99,18 @@ class MenstruationStore extends StateNotifier<MenstruationState> {
         createdAt: now());
     menstruationService.create(menstruation);
   }
+
+  void recordFromYesterday() {
+    final duration = state.setting?.durationMenstruation;
+    if (duration == null) {
+      return;
+    }
+    final begin = today().subtract(Duration(days: 1));
+    final menstruation = Menstruation(
+        beginDate: begin,
+        endDate: begin.add(Duration(days: duration - 1)),
+        isNotYetUserEdited: false,
+        createdAt: now());
+    menstruationService.create(menstruation);
+  }
 }
