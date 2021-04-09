@@ -111,11 +111,9 @@ class MenstruationPage extends HookWidget {
                           final data =
                               menstruationState.calendarDataSource[index];
                           return _DateLine(
-                              days: data,
-                              state: menstruationState,
-                              onTap: (e) {
-                                print("e:$e");
-                              });
+                            days: data,
+                            state: menstruationState,
+                          );
                         },
                         itemCount: menstruationState.calendarDataSource.length,
                       ),
@@ -211,13 +209,11 @@ class _WeekdayLine extends StatelessWidget {
 class _DateLine extends StatelessWidget {
   final List<DateTime> days;
   final MenstruationState state;
-  final Function(DateTime) onTap;
 
   const _DateLine({
     Key? key,
     required this.days,
     required this.state,
-    required this.onTap,
   }) : super(key: key);
   @override
   Widget build(BuildContext context) {
