@@ -3,6 +3,7 @@ import 'package:flutter/rendering.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:pilll/analytics.dart';
 import 'package:pilll/components/atoms/buttons.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/text_color.dart';
@@ -142,6 +143,7 @@ class MenstruationPage extends HookWidget {
                 padding: const EdgeInsets.only(bottom: 20.0),
                 child: PrimaryButton(
                   onPressed: () {
+                    analytics.logEvent(name: "pressed_menstruation_record");
                     final latestMenstruation =
                         menstruationState.latestMenstruation;
                     if (latestMenstruation != null &&
@@ -177,6 +179,8 @@ class MenstruationPage extends HookWidget {
                           onTap: (type) async {
                         switch (type) {
                           case MenstruationSelectModifyType.today:
+                            analytics.logEvent(
+                                name: "tapped_menstruation_record_today");
                             Navigator.of(context).pop();
                             final created =
                                 await menstruationStore.recordFromToday();
@@ -189,6 +193,8 @@ class MenstruationPage extends HookWidget {
                             );
                             return;
                           case MenstruationSelectModifyType.yesterday:
+                            analytics.logEvent(
+                                name: "tapped_menstruation_record_yesterday");
                             Navigator.of(context).pop();
                             final created =
                                 await menstruationStore.recordFromYesterday();
@@ -201,6 +207,8 @@ class MenstruationPage extends HookWidget {
                             );
                             return;
                           case MenstruationSelectModifyType.begin:
+                            analytics.logEvent(
+                                name: "tapped_menstruation_record_begin");
                             Navigator.of(context).pop();
                             return _showEditPage(context, null,
                                 didEndSave: (menstruation) {
@@ -222,6 +230,8 @@ class MenstruationPage extends HookWidget {
                               );
                             });
                           case MenstruationSelectModifyType.edit:
+                            analytics.logEvent(
+                                name: "tapped_menstruation_record_edit");
                             Navigator.of(context).pop();
                             return _showEditPage(
                               context,
