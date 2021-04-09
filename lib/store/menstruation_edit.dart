@@ -50,7 +50,7 @@ class MenstruationEditStore extends StateNotifier<MenstruationEditState> {
         documentID, initialMenstruation.copyWith(deletedAt: now()));
   }
 
-  Future<void> save() {
+  Future<Menstruation> save() {
     final menstruation = state.menstruation;
     if (menstruation == null) {
       throw FormatException("menstruation is not exists when save");
