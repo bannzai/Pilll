@@ -33,6 +33,10 @@ abstract class MenstruationState implements _$MenstruationState {
 
   String get displayMonth =>
       DateTimeFormatter.jaMonth(_targetEndDayOfWeekday());
+
+  Menstruation? get latestMenstruation {
+    return entities.isEmpty ? null : entities.last;
+  }
 }
 
 List<List<DateTime>> _calendarDataSource() {

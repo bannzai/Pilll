@@ -131,10 +131,11 @@ class MenstruationPage extends HookWidget {
                     itemCount: 1,
                     scrollDirection: Axis.vertical,
                     itemBuilder: (context, index) {
-                      return MenstruationCard(
-                        MenstruationCardState(
-                            scheduleDate: today(), countdownString: "あと1日"),
-                      );
+                      final cardState = menstruationStore.cardState();
+                      if (cardState == null) {
+                        return Container();
+                      }
+                      return MenstruationCard(cardState);
                     },
                   ),
                 ),
@@ -144,9 +145,7 @@ class MenstruationPage extends HookWidget {
                 child: PrimaryButton(
                   onPressed: () {
                     final latestMenstruation =
-                        menstruationState.entities.isEmpty
-                            ? null
-                            : menstruationState.entities.last;
+                        menstruationState.latestMenstruation;
                     if (latestMenstruation != null &&
                         latestMenstruation.dateRange.inRange(today())) {
                       _showEditPage(context, latestMenstruation);

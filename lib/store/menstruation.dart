@@ -1,6 +1,8 @@
 import 'dart:async';
 
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:pilll/domain/menstruation/menstruation_card.dart';
+import 'package:pilll/domain/menstruation/menstruation_card_state.dart';
 import 'package:pilll/entity/menstruation.dart';
 import 'package:pilll/service/diary.dart';
 import 'package:pilll/service/menstruation.dart';
@@ -112,5 +114,21 @@ class MenstruationStore extends StateNotifier<MenstruationState> {
         isNotYetUserEdited: false,
         createdAt: now());
     menstruationService.create(menstruation);
+  }
+
+  MenstruationCardState? cardState() {
+    final latestMenstruation = state.latestMenstruation;
+    if (latestMenstruation != null &&
+        latestMenstruation.dateRange.inRange(today())) {
+      return MenstruationCardState.record(menstruation: latestMenstruation);
+    }
+    final latestPillSheet = state.latestPillSheet;
+    final setting = state.setting;
+    if (latestPillSheet != null && setting != null) {
+      return MenstruationCardState.schedule(
+          scheduleDate: latestPillSheet.beginingDate
+              .add(Duration(days: setting.pillNumberForFromMenstruation - 1)));
+    }
+    return null;
   }
 }

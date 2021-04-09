@@ -1,5 +1,6 @@
 import 'package:pilll/entity/menstruation.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:pilll/util/datetime/day.dart';
 
 part 'menstruation_card_state.freezed.dart';
 
@@ -14,22 +15,20 @@ abstract class MenstruationCardState implements _$MenstruationCardState {
 
   factory MenstruationCardState.schedule({
     required DateTime scheduleDate,
-    required DateTime today,
   }) =>
       MenstruationCardState(
           title: "生理予定日",
           scheduleDate: scheduleDate,
-          countdownString: "あと${today.difference(scheduleDate).inDays}日");
+          countdownString: "あと${scheduleDate.difference(today()).inDays}日");
 
   factory MenstruationCardState.record({
     required Menstruation menstruation,
-    required DateTime today,
   }) =>
       MenstruationCardState(
         title: "生理開始日",
         scheduleDate: menstruation.beginDate,
         countdownString: menstruation.isNotYetUserEdited
-            ? "生理予定${today.difference(menstruation.beginDate).inDays}日目"
-            : "${today.difference(menstruation.beginDate).inDays}日目",
+            ? "生理予定${today().difference(menstruation.beginDate).inDays}日目"
+            : "${today().difference(menstruation.beginDate).inDays}日目",
       );
 }

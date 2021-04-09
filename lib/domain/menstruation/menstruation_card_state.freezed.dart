@@ -17,8 +17,11 @@ class _$MenstruationCardStateTearOff {
   const _$MenstruationCardStateTearOff();
 
   _MenstruationCardState call(
-      {required DateTime scheduleDate, required String countdownString}) {
+      {required String title,
+      required DateTime scheduleDate,
+      required String countdownString}) {
     return _MenstruationCardState(
+      title: title,
       scheduleDate: scheduleDate,
       countdownString: countdownString,
     );
@@ -30,6 +33,7 @@ const $MenstruationCardState = _$MenstruationCardStateTearOff();
 
 /// @nodoc
 mixin _$MenstruationCardState {
+  String get title => throw _privateConstructorUsedError;
   DateTime get scheduleDate => throw _privateConstructorUsedError;
   String get countdownString => throw _privateConstructorUsedError;
 
@@ -43,7 +47,7 @@ abstract class $MenstruationCardStateCopyWith<$Res> {
   factory $MenstruationCardStateCopyWith(MenstruationCardState value,
           $Res Function(MenstruationCardState) then) =
       _$MenstruationCardStateCopyWithImpl<$Res>;
-  $Res call({DateTime scheduleDate, String countdownString});
+  $Res call({String title, DateTime scheduleDate, String countdownString});
 }
 
 /// @nodoc
@@ -57,10 +61,15 @@ class _$MenstruationCardStateCopyWithImpl<$Res>
 
   @override
   $Res call({
+    Object? title = freezed,
     Object? scheduleDate = freezed,
     Object? countdownString = freezed,
   }) {
     return _then(_value.copyWith(
+      title: title == freezed
+          ? _value.title
+          : title // ignore: cast_nullable_to_non_nullable
+              as String,
       scheduleDate: scheduleDate == freezed
           ? _value.scheduleDate
           : scheduleDate // ignore: cast_nullable_to_non_nullable
@@ -80,7 +89,7 @@ abstract class _$MenstruationCardStateCopyWith<$Res>
           $Res Function(_MenstruationCardState) then) =
       __$MenstruationCardStateCopyWithImpl<$Res>;
   @override
-  $Res call({DateTime scheduleDate, String countdownString});
+  $Res call({String title, DateTime scheduleDate, String countdownString});
 }
 
 /// @nodoc
@@ -96,10 +105,15 @@ class __$MenstruationCardStateCopyWithImpl<$Res>
 
   @override
   $Res call({
+    Object? title = freezed,
     Object? scheduleDate = freezed,
     Object? countdownString = freezed,
   }) {
     return _then(_MenstruationCardState(
+      title: title == freezed
+          ? _value.title
+          : title // ignore: cast_nullable_to_non_nullable
+              as String,
       scheduleDate: scheduleDate == freezed
           ? _value.scheduleDate
           : scheduleDate // ignore: cast_nullable_to_non_nullable
@@ -115,9 +129,13 @@ class __$MenstruationCardStateCopyWithImpl<$Res>
 /// @nodoc
 class _$_MenstruationCardState extends _MenstruationCardState {
   _$_MenstruationCardState(
-      {required this.scheduleDate, required this.countdownString})
+      {required this.title,
+      required this.scheduleDate,
+      required this.countdownString})
       : super._();
 
+  @override
+  final String title;
   @override
   final DateTime scheduleDate;
   @override
@@ -125,13 +143,15 @@ class _$_MenstruationCardState extends _MenstruationCardState {
 
   @override
   String toString() {
-    return 'MenstruationCardState(scheduleDate: $scheduleDate, countdownString: $countdownString)';
+    return 'MenstruationCardState(title: $title, scheduleDate: $scheduleDate, countdownString: $countdownString)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other is _MenstruationCardState &&
+            (identical(other.title, title) ||
+                const DeepCollectionEquality().equals(other.title, title)) &&
             (identical(other.scheduleDate, scheduleDate) ||
                 const DeepCollectionEquality()
                     .equals(other.scheduleDate, scheduleDate)) &&
@@ -143,6 +163,7 @@ class _$_MenstruationCardState extends _MenstruationCardState {
   @override
   int get hashCode =>
       runtimeType.hashCode ^
+      const DeepCollectionEquality().hash(title) ^
       const DeepCollectionEquality().hash(scheduleDate) ^
       const DeepCollectionEquality().hash(countdownString);
 
@@ -155,10 +176,13 @@ class _$_MenstruationCardState extends _MenstruationCardState {
 
 abstract class _MenstruationCardState extends MenstruationCardState {
   factory _MenstruationCardState(
-      {required DateTime scheduleDate,
+      {required String title,
+      required DateTime scheduleDate,
       required String countdownString}) = _$_MenstruationCardState;
   _MenstruationCardState._() : super._();
 
+  @override
+  String get title => throw _privateConstructorUsedError;
   @override
   DateTime get scheduleDate => throw _privateConstructorUsedError;
   @override
