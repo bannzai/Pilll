@@ -44,7 +44,7 @@ class MenstruationEditPage extends HookWidget {
                         style: FontType.sBigTitle.merge(TextColorStyle.main)),
                     Spacer(),
                     SecondaryButton(
-                      onPressed: menstruation != null
+                      onPressed: state.menstruation != null
                           ? () {
                               store
                                   .save()
