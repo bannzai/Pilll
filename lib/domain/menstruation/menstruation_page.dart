@@ -173,7 +173,7 @@ class MenstruationPage extends HookWidget {
 
                     showModalBottomSheet(
                       context: context,
-                      builder: (context) => MenstruationSelectModifyTypeSheet(
+                      builder: (_) => MenstruationSelectModifyTypeSheet(
                           onTap: (type) async {
                         switch (type) {
                           case MenstruationSelectModifyType.today:
