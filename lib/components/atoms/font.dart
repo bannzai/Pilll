@@ -84,11 +84,6 @@ class FontType {
   );
   static final TextStyle gridElement = TextStyle(
     fontFamily: FontFamily.number,
-    fontWeight: FontWeight.w400,
-    fontSize: FontSize.sLarge,
-  );
-  static final TextStyle gridElementBold = TextStyle(
-    fontFamily: FontFamily.number,
     fontWeight: FontWeight.w600,
     fontSize: FontSize.sLarge,
   );

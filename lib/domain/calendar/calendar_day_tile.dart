@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
+import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/domain/calendar/calendar.dart';
 import 'package:pilll/entity/weekday.dart';
 
@@ -103,11 +104,7 @@ class CalendarDayTile extends StatelessWidget {
   }
 
   TextStyle _font() {
-    if (shouldShowMenstruationMark) {
-      return FontType.gridElementBold;
-    } else {
-      return FontType.gridElement;
-    }
+    return FontType.gridElement;
   }
 
   Color _textColor() {
@@ -119,15 +116,15 @@ class CalendarDayTile extends StatelessWidget {
         case Weekday.Sunday:
           return weekday.weekdayColor();
         case Weekday.Monday:
-          return PilllColors.black;
+          return TextColor.main;
         case Weekday.Tuesday:
-          return PilllColors.black;
+          return TextColor.main;
         case Weekday.Wednesday:
-          return PilllColors.black;
+          return TextColor.main;
         case Weekday.Thursday:
-          return PilllColors.black;
+          return TextColor.main;
         case Weekday.Friday:
-          return PilllColors.black;
+          return TextColor.main;
         case Weekday.Saturday:
           return weekday.weekdayColor();
       }
