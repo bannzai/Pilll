@@ -259,7 +259,7 @@ class MenstruationPage extends HookWidget {
                       }),
                     );
                   },
-                  text: "生理期間を編集",
+                  text: menstruationState.buttonString,
                 ),
               ),
             ],
