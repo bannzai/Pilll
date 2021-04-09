@@ -9,6 +9,7 @@ class DiscardDialog extends StatelessWidget {
   final String message;
   final String doneButtonText;
   final Function() done;
+  final Function()? cancel;
 
   const DiscardDialog({
     Key? key,
@@ -16,6 +17,7 @@ class DiscardDialog extends StatelessWidget {
     required this.message,
     required this.doneButtonText,
     required this.done,
+    this.cancel,
   }) : super(key: key);
   @override
   Widget build(BuildContext context) {
@@ -37,9 +39,11 @@ class DiscardDialog extends StatelessWidget {
       actions: <Widget>[
         SecondaryButton(
           text: "キャンセル",
-          onPressed: () {
-            Navigator.of(context).pop();
-          },
+          onPressed: cancel != null
+              ? () => cancel!()
+              : () {
+                  Navigator.of(context).pop();
+                },
         ),
         SecondaryButton(
           text: doneButtonText,

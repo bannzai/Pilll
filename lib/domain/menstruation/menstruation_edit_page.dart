@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:pilll/analytics.dart';
 import 'package:pilll/components/atoms/buttons.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
@@ -50,6 +51,8 @@ class MenstruationEditPage extends HookWidget {
                     Spacer(),
                     SecondaryButton(
                       onPressed: () {
+                        analytics.logEvent(
+                            name: "pressed_saving_menstruation_edit");
                         if (store.shouldShowDiscardDialog()) {
                           showDialog(
                             context: context,
@@ -57,8 +60,16 @@ class MenstruationEditPage extends HookWidget {
                               title: "生理期間を削除しますか？",
                               message: "",
                               doneButtonText: "削除する",
-                              done: () =>
-                                  store.delete().then((_) => didEndDelete()),
+                              done: () => store
+                                  .delete()
+                                  .then((_) => didEndDelete())
+                                  .then((_) => analytics.logEvent(
+                                      name: "pressed_delete_menstruation")),
+                              cancel: () {
+                                analytics.logEvent(
+                                    name: "cancelled_delete_menstruation");
+                                Navigator.of(context).pop();
+                              },
                             ),
                           );
                         } else {
