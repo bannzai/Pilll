@@ -148,8 +148,10 @@ class MenstruationPage extends HookWidget {
                           MenstruationSelectModifyTypeSheet(onTap: (type) {
                         switch (type) {
                           case MenstruationSelectModifyType.today:
+                            Navigator.of(context).pop();
                             return menstruationStore.recordFromToday();
                           case MenstruationSelectModifyType.yesterday:
+                            Navigator.of(context).pop();
                             return menstruationStore.recordFromYesterday();
                           case MenstruationSelectModifyType.begin:
                             // TODO: Handle this case.
