@@ -87,10 +87,10 @@ class MenstruationStore extends StateNotifier<MenstruationState> {
     state = state.copyWith(currentCalendarIndex: index);
   }
 
-  void recordFromToday() {
+  Future<Menstruation> recordFromToday() {
     final duration = state.setting?.durationMenstruation;
     if (duration == null) {
-      return;
+      return Future.error(FormatException("unexpected setting is null"));
     }
     final begin = now();
     final menstruation = Menstruation(
@@ -98,13 +98,13 @@ class MenstruationStore extends StateNotifier<MenstruationState> {
         endDate: begin.add(Duration(days: duration - 1)),
         isNotYetUserEdited: false,
         createdAt: now());
-    menstruationService.create(menstruation);
+    return menstruationService.create(menstruation);
   }
 
-  void recordFromYesterday() {
+  Future<Menstruation> recordFromYesterday() {
     final duration = state.setting?.durationMenstruation;
     if (duration == null) {
-      return;
+      return Future.error(FormatException("unexpected setting is null"));
     }
     final begin = today().subtract(Duration(days: 1));
     final menstruation = Menstruation(
@@ -112,7 +112,7 @@ class MenstruationStore extends StateNotifier<MenstruationState> {
         endDate: begin.add(Duration(days: duration - 1)),
         isNotYetUserEdited: false,
         createdAt: now());
-    menstruationService.create(menstruation);
+    return menstruationService.create(menstruation);
   }
 
   MenstruationCardState? cardState() {
