@@ -7,6 +7,7 @@ part 'menstruation_card_state.freezed.dart';
 abstract class MenstruationCardState implements _$MenstruationCardState {
   MenstruationCardState._();
   factory MenstruationCardState({
+    required String title,
     required DateTime scheduleDate,
     required String countdownString,
   }) = _MenstruationCardState;
@@ -16,6 +17,7 @@ abstract class MenstruationCardState implements _$MenstruationCardState {
     required DateTime today,
   }) =>
       MenstruationCardState(
+          title: "生理予定日",
           scheduleDate: scheduleDate,
           countdownString: "あと${today.difference(scheduleDate).inDays}日");
 
@@ -24,6 +26,7 @@ abstract class MenstruationCardState implements _$MenstruationCardState {
     required DateTime today,
   }) =>
       MenstruationCardState(
+        title: "生理開始日",
         scheduleDate: menstruation.beginDate,
         countdownString: menstruation.isNotYetUserEdited
             ? "生理予定${today.difference(menstruation.beginDate).inDays}日目"
