@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:pilll/entity/menstruation.dart';
 import 'package:pilll/service/diary.dart';
 import 'package:pilll/service/menstruation.dart';
 import 'package:pilll/service/pill_sheet.dart';
@@ -83,5 +84,19 @@ class MenstruationStore extends StateNotifier<MenstruationState> {
       return;
     }
     state = state.copyWith(currentCalendarIndex: index);
+  }
+
+  void recordFromToday() {
+    final duration = state.setting?.durationMenstruation;
+    if (duration == null) {
+      return;
+    }
+    final begin = now();
+    final menstruation = Menstruation(
+        beginDate: begin,
+        endDate: begin.add(Duration(days: duration - 1)),
+        isNotYetUserEdited: false,
+        createdAt: now());
+    menstruationService.create(menstruation);
   }
 }
