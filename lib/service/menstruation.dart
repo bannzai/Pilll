@@ -51,8 +51,6 @@ class MenstruationService {
         .where(MenstruationFirestoreKey.deletedAt, isEqualTo: null)
         .orderBy(MenstruationFirestoreKey.beginDate)
         .snapshots()
-        .map((event) => event.docs
-            .map((doc) => Menstruation.fromJson(doc.data()!))
-            .toList());
+        .map((event) => event.docs.map((doc) => _map(doc)).toList());
   }
 }
