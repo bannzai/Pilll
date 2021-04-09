@@ -82,48 +82,18 @@ class _MenstruationSelectModifyTypeSheetState
   }
 
   Widget _tile(_CellType type) {
-    // TODO:
-    //     return SizedBox(
-    //   height: 48,
-    //   child: ListTile(
-    //     title: Text(
-    //       type.title,
-    //       style: FontType.assisting.merge(selectedCellType == type
-    //           ? TextColorStyle.main
-    //           : TextColorStyle.gray),
-    //     ),
-    //     leading: type.icon(selectedCellType == type),
-    //     selected: selectedCellType == type,
-    //     selectedTileColor: PilllColors.secondary.withOpacity(0.08),
-    //     onTap: () => setState(() => selectedCellType = type),
-    //   ),
-    // );
     return SizedBox(
       height: 48,
-      child: GestureDetector(
-        child: Container(
-          color: selectedCellType == type
-              ? PilllColors.secondary.withOpacity(0.08)
-              : PilllColors.white,
-          child: Padding(
-            padding: const EdgeInsets.only(left: 20),
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.start,
-              children: [
-                type.icon(selectedCellType == type),
-                SizedBox(width: 30),
-                Text(
-                  type.title,
-                  style: FontType.assisting.merge(
-                    selectedCellType == type
-                        ? TextColorStyle.main
-                        : TextColorStyle.gray,
-                  ),
-                )
-              ],
-            ),
-          ),
+      child: ListTile(
+        title: Text(
+          type.title,
+          style: FontType.assisting.merge(selectedCellType == type
+              ? TextColorStyle.main
+              : TextColorStyle.gray),
         ),
+        leading: type.icon(selectedCellType == type),
+        selected: selectedCellType == type,
+        selectedTileColor: PilllColors.secondary.withOpacity(0.08),
         onTap: () => setState(() => selectedCellType = type),
       ),
     );
