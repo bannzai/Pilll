@@ -1,4 +1,5 @@
 import 'package:pilll/analytics.dart';
+import 'package:pilll/components/page/discard_dialog.dart';
 import 'package:pilll/database/database.dart';
 import 'package:pilll/components/organisms/pill/pill_sheet_type_select_page.dart';
 import 'package:pilll/components/organisms/setting/setting_menstruation_page.dart';
@@ -14,7 +15,6 @@ import 'package:pilll/inquiry/inquiry.dart';
 import 'package:pilll/service/pill_sheet.dart';
 import 'package:pilll/store/pill_sheet.dart';
 import 'package:pilll/store/setting.dart';
-import 'package:pilll/components/atoms/buttons.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
@@ -25,7 +25,6 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -193,7 +192,7 @@ class SettingsPage extends HookWidget {
                           showDialog(
                             context: context,
                             builder: (_) {
-                              return ConfirmDeletePillSheet(
+                              return DiscardDialog(
                                   title: "現在のピルシートが削除されます",
                                   message: '''
 選択したピルシート(${type.fullName})に変更する場合、現在のピルシートは削除されます。削除後、ピル画面から新しいピルシートを作成すると${type.fullName}で開始されます。
@@ -247,7 +246,7 @@ class SettingsPage extends HookWidget {
                   showDialog(
                     context: context,
                     builder: (_) {
-                      return ConfirmDeletePillSheet(
+                      return DiscardDialog(
                           title: "ピルシートを破棄しますか？",
                           message: "現在、服用記録をしているピルシートを削除します。",
                           doneButtonText: "破棄する",
@@ -425,55 +424,6 @@ class SettingsPage extends HookWidget {
         height: 1,
         color: PilllColors.border,
       ),
-    );
-  }
-}
-
-class ConfirmDeletePillSheet extends StatelessWidget {
-  final String title;
-  final String message;
-  final String doneButtonText;
-  final Function() done;
-
-  const ConfirmDeletePillSheet({
-    Key? key,
-    required this.title,
-    required this.message,
-    required this.doneButtonText,
-    required this.done,
-  }) : super(key: key);
-  @override
-  Widget build(BuildContext context) {
-    return AlertDialog(
-      title: SvgPicture.asset("images/alert_24.svg", width: 24, height: 24),
-      content: SizedBox(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          mainAxisSize: MainAxisSize.min,
-          children: <Widget>[
-            Text(title, style: FontType.subTitle.merge(TextColorStyle.main)),
-            SizedBox(
-              height: 15,
-            ),
-            Text(message, style: FontType.assisting.merge(TextColorStyle.main)),
-          ],
-        ),
-      ),
-      actions: <Widget>[
-        SecondaryButton(
-          text: "キャンセル",
-          onPressed: () {
-            Navigator.of(context).pop();
-          },
-        ),
-        SecondaryButton(
-          text: doneButtonText,
-          onPressed: () {
-            done();
-            Navigator.of(context).pop();
-          },
-        ),
-      ],
     );
   }
 }
