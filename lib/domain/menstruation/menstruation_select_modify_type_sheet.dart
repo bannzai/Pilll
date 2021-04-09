@@ -3,6 +3,8 @@ import 'package:flutter_svg/svg.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
+import 'package:pilll/entity/menstruation.dart';
+import 'package:pilll/util/datetime/day.dart';
 
 enum MenstruationSelectModifyType { today, yesterday, begin, edit }
 
@@ -38,11 +40,31 @@ extension _CellTypeFunction on MenstruationSelectModifyType {
   }
 }
 
+List<MenstruationSelectModifyType> filteredMenstruationSelectModifyType(
+    Menstruation? menstruation) {
+  if (menstruation == null) {
+    return MenstruationSelectModifyType.values;
+  }
+  if (menstruation.dateRange.inRange(today())) {
+    return MenstruationSelectModifyType.values
+        .where((element) => element != MenstruationSelectModifyType.today)
+        .where((element) => element != MenstruationSelectModifyType.yesterday)
+        .toList();
+  }
+  return MenstruationSelectModifyType.values;
+}
+
+const double _tileHeight = 48;
+
 class MenstruationSelectModifyTypeSheet extends StatelessWidget {
+  final List<MenstruationSelectModifyType> appearanceTypes;
   final Function(MenstruationSelectModifyType) onTap;
 
-  const MenstruationSelectModifyTypeSheet({Key? key, required this.onTap})
-      : super(key: key);
+  const MenstruationSelectModifyTypeSheet({
+    Key? key,
+    required this.appearanceTypes,
+    required this.onTap,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -60,10 +82,10 @@ class MenstruationSelectModifyTypeSheet extends StatelessWidget {
             ),
             SizedBox(height: 24),
             SizedBox(
-              height: 192,
+              height: _tileHeight * appearanceTypes.length,
               child: ListView(
                 physics: NeverScrollableScrollPhysics(),
-                children: MenstruationSelectModifyType.values
+                children: appearanceTypes
                     .map(
                       (e) => _tile(e),
                     )
@@ -78,7 +100,7 @@ class MenstruationSelectModifyTypeSheet extends StatelessWidget {
 
   Widget _tile(MenstruationSelectModifyType type) {
     return SizedBox(
-      height: 48,
+      height: _tileHeight,
       child: ListTile(
         title: Text(
           type.title,
