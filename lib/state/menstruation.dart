@@ -44,7 +44,7 @@ abstract class MenstruationState implements _$MenstruationState {
         .add(Duration(days: setting.pillNumberForFromMenstruation - 1));
     final end = start.add(Duration(days: setting.durationMenstruation - 1));
     if (DateRange(start, end).inRange(today())) {
-      return "生理期間を編集";
+      return "生理を記録";
     }
     return "生理期間を編集";
   }
