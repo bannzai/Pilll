@@ -26,7 +26,9 @@ class MenstruationService {
         .where(MenstruationFirestoreKey.deletedAt, isEqualTo: null)
         .orderBy(MenstruationFirestoreKey.beginDate)
         .get()
-        .then((event) => event.docs.map(_map).toList());
+        .then((event) => event.docs.map(_map).toList())
+        .then((value) =>
+            value.where((element) => element.deletedAt == null).toList());
   }
 
   Future<Menstruation> create(Menstruation menstruation) {
@@ -51,6 +53,8 @@ class MenstruationService {
         .where(MenstruationFirestoreKey.deletedAt, isEqualTo: null)
         .orderBy(MenstruationFirestoreKey.beginDate)
         .snapshots()
-        .map((event) => event.docs.map((doc) => _map(doc)).toList());
+        .map((event) => event.docs.map((doc) => _map(doc)).toList())
+        .map((value) =>
+            value.where((element) => element.deletedAt == null).toList());
   }
 }
