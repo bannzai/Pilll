@@ -11,5 +11,5 @@ abstract class DiaryState implements _$DiaryState {
   bool hasPhysicalConditionStatusFor(PhysicalConditionStatus status) =>
       entity.physicalConditionStatus == status;
 
-  bool hasPhysicalConditionStatus() => entity.physicalConditionStatus != null;
+  bool hasPhysicalConditionStatus() => entity.hasPhysicalConditionStatus;
 }
