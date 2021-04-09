@@ -49,11 +49,13 @@ class MenstruationEditPage extends HookWidget {
                         if (store.shouldShowDiscardDialog()) {
                           showDialog(
                             context: context,
-                            builder: (_) => DiscardDialog(
+                            builder: (context) => DiscardDialog(
                               title: "生理期間を削除しますか？",
                               message: "",
                               doneButtonText: "削除する",
-                              done: () => store.delete(),
+                              done: () => store
+                                  .delete()
+                                  .then((value) => Navigator.of(context).pop()),
                             ),
                           );
                         } else {
