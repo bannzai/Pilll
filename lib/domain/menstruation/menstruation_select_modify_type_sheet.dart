@@ -20,7 +20,7 @@ extension _CellTypeFunction on MenstruationSelectModifyType {
     }
   }
 
-  Widget icon(bool isSelected) {
+  Widget get icon {
     String name() {
       switch (this) {
         case MenstruationSelectModifyType.today:
@@ -34,24 +34,15 @@ extension _CellTypeFunction on MenstruationSelectModifyType {
       }
     }
 
-    return SvgPicture.asset(name(),
-        color: isSelected ? PilllColors.secondary : PilllColors.gray);
+    return SvgPicture.asset(name(), color: PilllColors.secondary);
   }
 }
 
-class MenstruationSelectModifyTypeSheet extends StatefulWidget {
+class MenstruationSelectModifyTypeSheet extends StatelessWidget {
   final Function(MenstruationSelectModifyType) onTap;
 
   const MenstruationSelectModifyTypeSheet({Key? key, required this.onTap})
       : super(key: key);
-  @override
-  _MenstruationSelectModifyTypeSheetState createState() =>
-      _MenstruationSelectModifyTypeSheetState();
-}
-
-class _MenstruationSelectModifyTypeSheetState
-    extends State<MenstruationSelectModifyTypeSheet> {
-  MenstruationSelectModifyType? selectedCellType;
 
   @override
   Widget build(BuildContext context) {
@@ -91,16 +82,11 @@ class _MenstruationSelectModifyTypeSheetState
       child: ListTile(
         title: Text(
           type.title,
-          style: FontType.assisting.merge(selectedCellType == type
-              ? TextColorStyle.main
-              : TextColorStyle.gray),
+          style: FontType.assisting.merge(TextColorStyle.main),
         ),
-        leading: type.icon(selectedCellType == type),
-        selected: selectedCellType == type,
-        selectedTileColor: PilllColors.secondary.withOpacity(0.08),
+        leading: type.icon,
         onTap: () {
-          setState(() => selectedCellType = type);
-          widget.onTap(type);
+          onTap(type);
         },
       ),
     );
