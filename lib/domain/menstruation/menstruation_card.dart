@@ -32,7 +32,7 @@ class MenstruationCard extends StatelessWidget {
                       width: 24,
                       color: PilllColors.red,
                     ),
-                    Text("生理予定日",
+                    Text(state.title,
                         style:
                             TextColorStyle.noshime.merge(FontType.assisting)),
                   ],
