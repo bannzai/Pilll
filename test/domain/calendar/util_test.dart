@@ -51,7 +51,7 @@ void main() {
         assert(pillSheetType.dosingPeriod == 21,
             "scheduledMenstruationDateRange adding value with dosingPeriod when it will create DateRange. pillsheet_28_7 type has 24 dosingPeriod");
         expect(
-          scheduledMenstruationDateRanges(model, setting, [], 0),
+          scheduledMenstruationDateRanges(model, setting, [], 1),
           [
             DateRange(
               DateTime.parse("2020-09-23"),
@@ -83,7 +83,7 @@ void main() {
         assert(pillSheetType.dosingPeriod == 28,
             "scheduledMenstruationDateRange adding value with dosingPeriod when it will create DateRange. pillsheet_28_7 type has 24 dosingPeriod");
         expect(
-          scheduledMenstruationDateRanges(model, setting, [], 0),
+          scheduledMenstruationDateRanges(model, setting, [], 1),
           [
             DateRange(
               DateTime.parse("2021-02-09"),
@@ -115,7 +115,7 @@ void main() {
         assert(pillSheetType.dosingPeriod == 21,
             "scheduledMenstruationDateRange adding value with dosingPeriod when it will create DateRange. pillsheet_28_7 type has 24 dosingPeriod");
         expect(
-          scheduledMenstruationDateRanges(model, setting, [], 1),
+          scheduledMenstruationDateRanges(model, setting, [], 2),
           [
             DateRange(
               DateTime.parse("2020-10-21"),
@@ -147,7 +147,7 @@ void main() {
         assert(pillSheetType.dosingPeriod == 21,
             "scheduledMenstruationDateRange adding value with dosingPeriod when it will create DateRange. pillsheet_28_7 type has 24 dosingPeriod");
         expect(
-          scheduledMenstruationDateRanges(model, setting, [], 2),
+          scheduledMenstruationDateRanges(model, setting, [], 3),
           [
             DateRange(
               DateTime.parse("2020-11-18"),
@@ -187,7 +187,7 @@ void main() {
           lastTakenDate: null,
         );
         expect(
-          nextPillSheetDateRanges(model, 0),
+          nextPillSheetDateRanges(model, 1),
           [
             DateRange(
               DateTime.parse("2020-09-29"),
@@ -208,7 +208,7 @@ void main() {
           lastTakenDate: null,
         );
         expect(
-          nextPillSheetDateRanges(model, 1),
+          nextPillSheetDateRanges(model, 2),
           [
             DateRange(
               DateTime.parse("2020-10-27"),
@@ -229,7 +229,7 @@ void main() {
           lastTakenDate: null,
         );
         expect(
-          nextPillSheetDateRanges(model, 2),
+          nextPillSheetDateRanges(model, 3),
           [
             DateRange(
               DateTime.parse("2020-11-24"),
@@ -267,7 +267,7 @@ void main() {
           lastTakenDate: null,
         );
         expect(
-          nextPillSheetDateRanges(model, 0),
+          nextPillSheetDateRanges(model, 1),
           [
             DateRange(
               DateTime.parse("2020-09-29"),
