@@ -21,6 +21,7 @@ import 'package:pilll/entity/weekday.dart';
 import 'package:pilll/state/menstruation.dart';
 import 'package:pilll/store/menstruation.dart';
 import 'package:pilll/util/datetime/day.dart';
+import 'package:pilll/util/formatter/date_time_formatter.dart';
 import 'package:scrollable_positioned_list/scrollable_positioned_list.dart';
 
 const double _horizontalPadding = 10;
@@ -151,21 +152,39 @@ class MenstruationPage extends HookWidget {
 
                     showModalBottomSheet(
                       context: context,
-                      builder: (context) =>
-                          MenstruationSelectModifyTypeSheet(onTap: (type) {
+                      builder: (context) => MenstruationSelectModifyTypeSheet(
+                          onTap: (type) async {
                         switch (type) {
                           case MenstruationSelectModifyType.today:
                             Navigator.of(context).pop();
-                            return menstruationStore.recordFromToday();
+                            final created =
+                                await menstruationStore.recordFromToday();
+                            ScaffoldMessenger.of(context).showSnackBar(
+                              SnackBar(
+                                duration: Duration(seconds: 1),
+                                content: Text(
+                                    "${DateTimeFormatter.monthAndDay(created.beginDate)}から生理開始で記録しました"),
+                              ),
+                            );
+                            return;
                           case MenstruationSelectModifyType.yesterday:
                             Navigator.of(context).pop();
-                            return menstruationStore.recordFromYesterday();
+                            final created =
+                                await menstruationStore.recordFromYesterday();
+                            ScaffoldMessenger.of(context).showSnackBar(
+                              SnackBar(
+                                duration: Duration(seconds: 1),
+                                content: Text(
+                                    "${DateTimeFormatter.monthAndDay(created.beginDate)}から生理開始で記録しました"),
+                              ),
+                            );
+                            return;
                           case MenstruationSelectModifyType.begin:
                             Navigator.of(context).pop();
                             return _showEditPage(context, null);
                           case MenstruationSelectModifyType.edit:
                             Navigator.of(context).pop();
-                            return _showEditPage(context, latestMenstruation);
+                            return _showEditPage(context, null);
                         }
                       }),
                     );
@@ -180,12 +199,31 @@ class MenstruationPage extends HookWidget {
     );
   }
 
-  void _showEditPage(BuildContext context, Menstruation? menstruation) {
+  void _showEditPage(
+    BuildContext context,
+    Menstruation? menstruation,
+  ) {
     showModalBottomSheet(
       context: context,
       builder: (context) => MenstruationEditPage(
-        menstruation: menstruation,
-      ),
+          menstruation: menstruation,
+          didEndSave: (menstruation) {
+            ScaffoldMessenger.of(context).showSnackBar(
+              SnackBar(
+                duration: Duration(seconds: 1),
+                content: Text(
+                    "${DateTimeFormatter.monthAndDay(menstruation.beginDate)}から生理開始で記録しました"),
+              ),
+            );
+          },
+          didEndDelete: () {
+            ScaffoldMessenger.of(context).showSnackBar(
+              SnackBar(
+                duration: Duration(seconds: 1),
+                content: Text("生理期間を削除しました"),
+              ),
+            );
+          }),
       backgroundColor: Colors.transparent,
       isScrollControlled: true,
     );
