@@ -87,7 +87,7 @@ class ConfirmDiarySheet extends HookWidget {
                       done: () {
                         int counter = 0;
                         store.delete().then((value) => Navigator.popUntil(
-                            context, (route) => counter++ >= 2));
+                            context, (route) => counter++ >= 1));
                       });
                 });
           },
