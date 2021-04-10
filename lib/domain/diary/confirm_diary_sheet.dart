@@ -20,12 +20,12 @@ final _confirmDiaryProvider =
 });
 
 class ConfirmDiarySheet extends HookWidget {
-  final Diary diary;
+  final Diary _diary;
 
-  ConfirmDiarySheet(this.diary);
+  ConfirmDiarySheet(this._diary);
   @override
   Widget build(BuildContext context) {
-    final state = useProvider(_confirmDiaryProvider(diary).state);
+    final state = useProvider(_confirmDiaryProvider(_diary).state);
     return Container(
       decoration: BoxDecoration(
         borderRadius: BorderRadius.only(
@@ -58,17 +58,19 @@ class ConfirmDiarySheet extends HookWidget {
   }
 
   Widget _title(BuildContext context) {
-    final store = useProvider(_confirmDiaryProvider(diary));
+    final store = useProvider(_confirmDiaryProvider(_diary));
+    final state = useProvider(_confirmDiaryProvider(_diary).state);
     return Row(
       mainAxisSize: MainAxisSize.max,
       children: [
-        Text(DateTimeFormatter.yearAndMonthAndDay(diary.date),
+        Text(DateTimeFormatter.yearAndMonthAndDay(state.entity.date),
             style: FontType.sBigTitle.merge(TextColorStyle.main)),
         Spacer(),
         IconButton(
           icon: SvgPicture.asset("images/edit.svg"),
           onPressed: () {
-            Navigator.of(context).push(PostDiaryPageRoute.route(diary.date));
+            Navigator.of(context)
+                .push(PostDiaryPageRoute.route(state.entity.date));
           },
         ),
         SizedBox(width: 12),
@@ -104,7 +106,7 @@ class ConfirmDiarySheet extends HookWidget {
   }
 
   Widget _physicalCondition() {
-    final state = useProvider(_confirmDiaryProvider(diary).state);
+    final state = useProvider(_confirmDiaryProvider(_diary).state);
     return Row(
       children: [
         Text("体調", style: FontType.componentTitle.merge(TextColorStyle.black)),
@@ -115,12 +117,13 @@ class ConfirmDiarySheet extends HookWidget {
   }
 
   Widget _physicalConditionDetails() {
+    final state = useProvider(_confirmDiaryProvider(_diary).state);
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Wrap(
           spacing: 10,
-          children: diary.physicalConditions
+          children: state.entity.physicalConditions
               .map((e) => ChoiceChip(
                     label: Text(e),
                     labelStyle: FontType.assisting.merge(TextColorStyle.white),
@@ -146,8 +149,9 @@ class ConfirmDiarySheet extends HookWidget {
   }
 
   Widget _memo() {
+    final state = useProvider(_confirmDiaryProvider(_diary).state);
     return Text(
-      diary.memo,
+      state.entity.memo,
       maxLines: 2,
     );
   }
