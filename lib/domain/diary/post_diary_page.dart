@@ -322,6 +322,7 @@ extension PostDiaryPageRoute on PostDiaryPage {
     return MaterialPageRoute(
       settings: RouteSettings(name: "PostDiaryPage"),
       builder: (_) => PostDiaryPage(date),
+      fullscreenDialog: true,
     );
   }
 }
