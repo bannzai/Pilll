@@ -54,8 +54,7 @@ class MenstruationPage extends HookWidget {
         actions: [
           AppBarTextActionButton(
               onPressed: () {
-                store.updateCurrentCalendarIndex(
-                    state.todayCalendarIndex);
+                store.updateCurrentCalendarIndex(state.todayCalendarIndex);
                 itemScrollController.scrollTo(
                     index: state.todayCalendarIndex,
                     duration: Duration(milliseconds: 300));
@@ -103,14 +102,12 @@ class MenstruationPage extends HookWidget {
                       maxHeight: MenstruationPageConst.tileHeight,
                       child: ScrollablePositionedList.builder(
                         itemScrollController: itemScrollController,
-                        initialScrollIndex:
-                            state.currentCalendarIndex,
+                        initialScrollIndex: state.currentCalendarIndex,
                         physics: PageScrollPhysics(),
                         scrollDirection: Axis.horizontal,
                         itemPositionsListener: itemPositionsListener,
                         itemBuilder: (context, index) {
-                          final data =
-                              state.calendarDataSource[index];
+                          final data = state.calendarDataSource[index];
                           return _DateLine(
                             days: data,
                             state: state,
@@ -144,8 +141,7 @@ class MenstruationPage extends HookWidget {
                 child: PrimaryButton(
                   onPressed: () {
                     analytics.logEvent(name: "pressed_menstruation_record");
-                    final latestMenstruation =
-                        state.latestMenstruation;
+                    final latestMenstruation = state.latestMenstruation;
                     if (latestMenstruation != null &&
                         latestMenstruation.dateRange.inRange(today())) {
                       _showEditPage(
@@ -182,8 +178,7 @@ class MenstruationPage extends HookWidget {
                             analytics.logEvent(
                                 name: "tapped_menstruation_record_today");
                             Navigator.of(context).pop();
-                            final created =
-                                await store.recordFromToday();
+                            final created = await store.recordFromToday();
                             ScaffoldMessenger.of(context).showSnackBar(
                               SnackBar(
                                 duration: Duration(seconds: 1),
@@ -196,8 +191,7 @@ class MenstruationPage extends HookWidget {
                             analytics.logEvent(
                                 name: "tapped_menstruation_record_yesterday");
                             Navigator.of(context).pop();
-                            final created =
-                                await store.recordFromYesterday();
+                            final created = await store.recordFromYesterday();
                             ScaffoldMessenger.of(context).showSnackBar(
                               SnackBar(
                                 duration: Duration(seconds: 1),
@@ -235,7 +229,7 @@ class MenstruationPage extends HookWidget {
                             Navigator.of(context).pop();
                             return _showEditPage(
                               context,
-                              null,
+                              latestMenstruation,
                               didEndSave: (menstruation) {
                                 Navigator.of(context).pop();
                                 ScaffoldMessenger.of(context).showSnackBar(
