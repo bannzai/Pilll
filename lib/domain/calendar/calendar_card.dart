@@ -92,6 +92,8 @@ class CalendarCard extends StatelessWidget {
           SecondaryButton(
             text: "もっと見る",
             onPressed: () {
+              final bands =
+                  buildBandModels(latestPillSheet, setting, menstruations, 12);
               Navigator.of(context).push(
                 () {
                   var now = today();
@@ -101,17 +103,16 @@ class CalendarCard extends StatelessWidget {
                     CalendarListPageModel previous = CalendarListPageModel(
                         CalendarTabState(
                             DateTime(now.year, now.month - number, 1)),
-                        []);
+                        bands);
                     return previous;
                   });
                   CalendarListPageModel current = CalendarListPageModel(
                     CalendarTabState(now),
-                    buildBandModels(latestPillSheet, setting, menstruations, 1),
+                    bands,
                   );
                   List<CalendarBandModel> satisfyNextMonthDateRanges = [];
                   if (latestPillSheet != null) {
-                    satisfyNextMonthDateRanges = buildBandModels(
-                        latestPillSheet, setting, menstruations, 12);
+                    satisfyNextMonthDateRanges = bands;
                   }
                   final nextCalendars = List.generate(
                     6,
