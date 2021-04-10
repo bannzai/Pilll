@@ -15,6 +15,8 @@ abstract class MenstruationEditState implements _$MenstruationEditState {
     final menstruation = this.menstruation;
     if (menstruation != null) {
       return [
+        DateTime(
+            menstruation.beginDate.year, menstruation.beginDate.month - 1, 1),
         menstruation.beginDate,
         DateTime(
             menstruation.beginDate.year, menstruation.beginDate.month + 1, 1),
