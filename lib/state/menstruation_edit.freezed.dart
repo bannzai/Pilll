@@ -16,9 +16,12 @@ final _privateConstructorUsedError = UnsupportedError(
 class _$MenstruationEditStateTearOff {
   const _$MenstruationEditStateTearOff();
 
-  _MenstruationEditState call({required Menstruation? menstruation}) {
+  _MenstruationEditState call(
+      {required Menstruation? menstruation,
+      required List<DateTime> displayedDates}) {
     return _MenstruationEditState(
       menstruation: menstruation,
+      displayedDates: displayedDates,
     );
   }
 }
@@ -29,6 +32,7 @@ const $MenstruationEditState = _$MenstruationEditStateTearOff();
 /// @nodoc
 mixin _$MenstruationEditState {
   Menstruation? get menstruation => throw _privateConstructorUsedError;
+  List<DateTime> get displayedDates => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $MenstruationEditStateCopyWith<MenstruationEditState> get copyWith =>
@@ -40,7 +44,7 @@ abstract class $MenstruationEditStateCopyWith<$Res> {
   factory $MenstruationEditStateCopyWith(MenstruationEditState value,
           $Res Function(MenstruationEditState) then) =
       _$MenstruationEditStateCopyWithImpl<$Res>;
-  $Res call({Menstruation? menstruation});
+  $Res call({Menstruation? menstruation, List<DateTime> displayedDates});
 
   $MenstruationCopyWith<$Res>? get menstruation;
 }
@@ -57,12 +61,17 @@ class _$MenstruationEditStateCopyWithImpl<$Res>
   @override
   $Res call({
     Object? menstruation = freezed,
+    Object? displayedDates = freezed,
   }) {
     return _then(_value.copyWith(
       menstruation: menstruation == freezed
           ? _value.menstruation
           : menstruation // ignore: cast_nullable_to_non_nullable
               as Menstruation?,
+      displayedDates: displayedDates == freezed
+          ? _value.displayedDates
+          : displayedDates // ignore: cast_nullable_to_non_nullable
+              as List<DateTime>,
     ));
   }
 
@@ -85,7 +94,7 @@ abstract class _$MenstruationEditStateCopyWith<$Res>
           $Res Function(_MenstruationEditState) then) =
       __$MenstruationEditStateCopyWithImpl<$Res>;
   @override
-  $Res call({Menstruation? menstruation});
+  $Res call({Menstruation? menstruation, List<DateTime> displayedDates});
 
   @override
   $MenstruationCopyWith<$Res>? get menstruation;
@@ -105,26 +114,35 @@ class __$MenstruationEditStateCopyWithImpl<$Res>
   @override
   $Res call({
     Object? menstruation = freezed,
+    Object? displayedDates = freezed,
   }) {
     return _then(_MenstruationEditState(
       menstruation: menstruation == freezed
           ? _value.menstruation
           : menstruation // ignore: cast_nullable_to_non_nullable
               as Menstruation?,
+      displayedDates: displayedDates == freezed
+          ? _value.displayedDates
+          : displayedDates // ignore: cast_nullable_to_non_nullable
+              as List<DateTime>,
     ));
   }
 }
 
 /// @nodoc
 class _$_MenstruationEditState extends _MenstruationEditState {
-  _$_MenstruationEditState({required this.menstruation}) : super._();
+  _$_MenstruationEditState(
+      {required this.menstruation, required this.displayedDates})
+      : super._();
 
   @override
   final Menstruation? menstruation;
+  @override
+  final List<DateTime> displayedDates;
 
   @override
   String toString() {
-    return 'MenstruationEditState(menstruation: $menstruation)';
+    return 'MenstruationEditState(menstruation: $menstruation, displayedDates: $displayedDates)';
   }
 
   @override
@@ -133,12 +151,17 @@ class _$_MenstruationEditState extends _MenstruationEditState {
         (other is _MenstruationEditState &&
             (identical(other.menstruation, menstruation) ||
                 const DeepCollectionEquality()
-                    .equals(other.menstruation, menstruation)));
+                    .equals(other.menstruation, menstruation)) &&
+            (identical(other.displayedDates, displayedDates) ||
+                const DeepCollectionEquality()
+                    .equals(other.displayedDates, displayedDates)));
   }
 
   @override
   int get hashCode =>
-      runtimeType.hashCode ^ const DeepCollectionEquality().hash(menstruation);
+      runtimeType.hashCode ^
+      const DeepCollectionEquality().hash(menstruation) ^
+      const DeepCollectionEquality().hash(displayedDates);
 
   @JsonKey(ignore: true)
   @override
@@ -148,12 +171,15 @@ class _$_MenstruationEditState extends _MenstruationEditState {
 }
 
 abstract class _MenstruationEditState extends MenstruationEditState {
-  factory _MenstruationEditState({required Menstruation? menstruation}) =
-      _$_MenstruationEditState;
+  factory _MenstruationEditState(
+      {required Menstruation? menstruation,
+      required List<DateTime> displayedDates}) = _$_MenstruationEditState;
   _MenstruationEditState._() : super._();
 
   @override
   Menstruation? get menstruation => throw _privateConstructorUsedError;
+  @override
+  List<DateTime> get displayedDates => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$MenstruationEditStateCopyWith<_MenstruationEditState> get copyWith =>
