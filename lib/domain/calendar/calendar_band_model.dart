@@ -15,7 +15,7 @@ abstract class CalendarBandModel {
 
 class CalendarScheduledMenstruationBandModel extends CalendarBandModel {
   @override
-  Color get color => PilllColors.menstruation.withAlpha(153);
+  Color get color => PilllColors.menstruation;
   @override
   String get label => "";
   @override
