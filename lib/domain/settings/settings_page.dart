@@ -331,6 +331,14 @@ class SettingsPage extends HookWidget {
         return [
           SettingListTitleRowModel(
               title: "生理について",
+              error: () {
+                final message =
+                    "生理開始日のピル番号をご確認ください。現在選択しているピルシートタイプには存在しないピル番号が設定されています";
+                return settingEntity.pillSheetType.totalCount <
+                        settingEntity.pillNumberForFromMenstruation
+                    ? message
+                    : "";
+              }(),
               onTap: () {
                 analytics.logEvent(
                   name: "did_select_changing_about_menstruation",
