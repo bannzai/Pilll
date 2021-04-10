@@ -28,7 +28,4 @@ abstract class DiariesState implements _$DiariesState {
     }
     return filtered.last;
   }
-
-  Diary diaryForDateTime(DateTime dateTime) =>
-      entities.lastWhere((element) => isSameDay(element.date, dateTime));
 }
