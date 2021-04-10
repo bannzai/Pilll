@@ -43,39 +43,6 @@ class Calendar extends HookWidget {
   DateTime date() => calendarState.dateForMonth;
   double height() =>
       calendarState.lineCount().toDouble() * CalendarConstants.tileHeight;
-
-  Column _body(BuildContext context, List<Diary> diaries) {
-    return Column(
-      children: <Widget>[
-        Row(
-          mainAxisAlignment: MainAxisAlignment.start,
-          children: List.generate(
-              Weekday.values.length,
-              (index) => Expanded(
-                    child: WeekdayBadge(
-                      weekday: Weekday.values[index],
-                    ),
-                  )),
-        ),
-        Divider(height: 1),
-        ...List.generate(calendarState.lineCount(), (_line) {
-          final line = _line + 1;
-          return Column(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: <Widget>[
-              CalendarWeekdayLine(
-                  diaries: diaries,
-                  calendarState: calendarState.weeklyCalendarState(line),
-                  bandModels: bandModels,
-                  horizontalPadding: horizontalPadding,
-                  onTap: (weeklyCalendarState, date) => onTap(date, diaries)),
-              Divider(height: 1),
-            ],
-          );
-        }),
-      ],
-    );
-  }
 }
 
 class CalendarBody extends StatelessWidget {
