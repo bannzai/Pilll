@@ -1,3 +1,4 @@
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:flutter/material.dart';
@@ -11,16 +12,32 @@ abstract class SettingListRowModel {
 
 class SettingListTitleRowModel extends SettingListRowModel {
   final String title;
+  final String error;
   final VoidCallback onTap;
 
-  SettingListTitleRowModel({required this.title, required this.onTap});
+  SettingListTitleRowModel(
+      {required this.title, this.error = "", required this.onTap});
 
   @override
   Widget widget() {
-    return ListTile(
-      title: Text(title, style: FontType.listRow),
-      onTap: onTap,
-    );
+    if (error.isEmpty) {
+      return ListTile(
+        title: Text(title, style: FontType.listRow),
+        onTap: onTap,
+      );
+    } else {
+      return ListTile(
+        title: Row(
+          children: [
+            Text(title, style: FontType.listRow),
+            SizedBox(width: 8),
+            SvgPicture.asset("images/alert_24.svg", width: 24, height: 24),
+          ],
+        ),
+        subtitle: Text(error),
+        onTap: onTap,
+      );
+    }
   }
 }
 
