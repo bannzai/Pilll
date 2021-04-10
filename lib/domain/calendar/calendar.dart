@@ -31,7 +31,13 @@ class Calendar extends HookWidget {
   Widget build(BuildContext context) {
     final state = useProvider(
         monthlyDiariesStoreProvider(calendarState.dateForMonth).state);
-    return _body(context, state.entities);
+// NOTE: hooks を使ってwidgetテストをした場合に store.state じゃないと mockができなかった。しかしこれを使用してdiariesのデータを取ると今度はstateが更新されたときに画面が再描画されない。なので簡易的にコンポーネントを切り出してhooksの影響を受けないようにする
+    return CalendarBody(
+        diaries: state.entities,
+        calendarState: calendarState,
+        bandModels: bandModels,
+        onTap: onTap,
+        horizontalPadding: horizontalPadding);
   }
 
   DateTime date() => calendarState.dateForMonth;
@@ -39,6 +45,57 @@ class Calendar extends HookWidget {
       calendarState.lineCount().toDouble() * CalendarConstants.tileHeight;
 
   Column _body(BuildContext context, List<Diary> diaries) {
+    return Column(
+      children: <Widget>[
+        Row(
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: List.generate(
+              Weekday.values.length,
+              (index) => Expanded(
+                    child: WeekdayBadge(
+                      weekday: Weekday.values[index],
+                    ),
+                  )),
+        ),
+        Divider(height: 1),
+        ...List.generate(calendarState.lineCount(), (_line) {
+          final line = _line + 1;
+          return Column(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: <Widget>[
+              CalendarWeekdayLine(
+                  diaries: diaries,
+                  calendarState: calendarState.weeklyCalendarState(line),
+                  bandModels: bandModels,
+                  horizontalPadding: horizontalPadding,
+                  onTap: (weeklyCalendarState, date) => onTap(date, diaries)),
+              Divider(height: 1),
+            ],
+          );
+        }),
+      ],
+    );
+  }
+}
+
+class CalendarBody extends StatelessWidget {
+  final List<Diary> diaries;
+  final MonthlyCalendarState calendarState;
+  final List<CalendarBandModel> bandModels;
+  final Function(DateTime, List<Diary>) onTap;
+  final double horizontalPadding;
+
+  const CalendarBody({
+    Key? key,
+    required this.diaries,
+    required this.calendarState,
+    required this.bandModels,
+    required this.onTap,
+    required this.horizontalPadding,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
     return Column(
       children: <Widget>[
         Row(

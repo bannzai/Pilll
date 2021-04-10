@@ -50,7 +50,8 @@ void main() {
             )
           ],
           child: MaterialApp(
-            home: Calendar(
+            home: CalendarBody(
+              diaries: diaries,
               calendarState: CalendarTabState(now),
               bandModels: [model],
               onTap: (date, diaries) => () {},
@@ -98,7 +99,8 @@ void main() {
             )
           ],
           child: MaterialApp(
-            home: Calendar(
+            home: CalendarBody(
+              diaries: diaries,
               calendarState: CalendarTabState(now),
               bandModels: [model],
               onTap: (date, diaries) => () {},
@@ -131,7 +133,8 @@ void main() {
                 .overrideWithProvider((ref, param) => mock)
           ],
           child: MaterialApp(
-            home: Calendar(
+            home: CalendarBody(
+              diaries: [],
               calendarState: CalendarTabState(now),
               bandModels: [
                 CalendarNextPillSheetBandModel(
@@ -160,7 +163,8 @@ void main() {
                 .overrideWithProvider((ref, param) => mock)
           ],
           child: MaterialApp(
-            home: Calendar(
+            home: CalendarBody(
+              diaries: [],
               calendarState: CalendarTabState(now),
               bandModels: [
                 CalendarNextPillSheetBandModel(
