@@ -4,6 +4,7 @@ import 'package:pilll/entity/menstruation.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:pilll/entity/pill_sheet.dart';
 import 'package:pilll/entity/setting.dart';
+import 'package:pilll/util/datetime/date_compare.dart';
 import 'package:pilll/util/formatter/date_time_formatter.dart';
 import 'package:flutter/material.dart';
 import 'package:pilll/entity/weekday.dart';
@@ -24,7 +25,8 @@ abstract class MenstruationState implements _$MenstruationState {
   }) = _MenstruationState;
 
   late final List<List<DateTime>> calendarDataSource = _calendarDataSource();
-  int get todayCalendarIndex => calendarDataSource.length ~/ 2;
+  int get todayCalendarIndex => calendarDataSource.lastIndexWhere((element) =>
+      element.where((element) => isSameDay(element, today())).isNotEmpty);
 
   DateTime _targetEndDayOfWeekday() {
     final diff = currentCalendarIndex - todayCalendarIndex;
@@ -79,7 +81,7 @@ List<List<DateTime>> _calendarDataSource() {
     days.add(begin.add(Duration(days: i)));
   }
   return List.generate(
-      (diffDay / Weekday.values.length).round(),
+      ((diffDay + 1) / Weekday.values.length).round(),
       (i) => days.sublist(i * Weekday.values.length,
           i * Weekday.values.length + Weekday.values.length));
 }
