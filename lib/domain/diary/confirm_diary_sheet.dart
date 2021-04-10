@@ -1,9 +1,9 @@
+import 'package:pilll/components/page/discard_dialog.dart';
 import 'package:pilll/domain/diary/post_diary_page.dart';
 import 'package:pilll/entity/diary.dart';
 import 'package:pilll/service/diary.dart';
 import 'package:pilll/state/diary.dart';
 import 'package:pilll/store/confirm_diary.dart';
-import 'package:pilll/components/atoms/buttons.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
@@ -80,11 +80,15 @@ class ConfirmDiarySheet extends HookWidget {
             showDialog(
                 context: context,
                 builder: (context) {
-                  return ConfirmDeleteDiary(onDelete: () {
-                    int counter = 0;
-                    store.delete().then((value) =>
-                        Navigator.popUntil(context, (route) => counter++ >= 2));
-                  });
+                  return DiscardDialog(
+                      title: "日記を削除します",
+                      message: "削除された日記は復元ができません",
+                      doneButtonText: "削除する",
+                      done: () {
+                        int counter = 0;
+                        store.delete().then((value) => Navigator.popUntil(
+                            context, (route) => counter++ >= 2));
+                      });
                 });
           },
         ),
@@ -153,48 +157,6 @@ class ConfirmDiarySheet extends HookWidget {
     return Text(
       state.entity.memo,
       maxLines: 2,
-    );
-  }
-}
-
-class ConfirmDeleteDiary extends StatelessWidget {
-  final Function() onDelete;
-
-  const ConfirmDeleteDiary({Key? key, required this.onDelete})
-      : super(key: key);
-  @override
-  Widget build(BuildContext context) {
-    return AlertDialog(
-      title: SvgPicture.asset("images/alert_24.svg"),
-      content: SizedBox(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          mainAxisSize: MainAxisSize.min,
-          children: <Widget>[
-            Text("日記を削除します",
-                style: FontType.subTitle.merge(TextColorStyle.black)),
-            SizedBox(
-              height: 15,
-            ),
-            Text("削除された日記は復元ができません",
-                style: FontType.assisting.merge(TextColorStyle.lightGray)),
-          ],
-        ),
-      ),
-      actions: <Widget>[
-        SecondaryButton(
-          text: "キャンセル",
-          onPressed: () {
-            Navigator.of(context).pop();
-          },
-        ),
-        SecondaryButton(
-          text: "削除する",
-          onPressed: () {
-            onDelete();
-          },
-        ),
-      ],
     );
   }
 }
