@@ -118,9 +118,11 @@ void transitionToPostDiary(
   if (!isExistsPostedDiary(diaries, date)) {
     Navigator.of(context).push(PostDiaryPageRoute.route(date));
   } else {
+    final diary =
+        diaries.lastWhere((element) => isSameDay(element.date, date));
     showModalBottomSheet(
       context: context,
-      builder: (context) => ConfirmDiarySheet(date),
+      builder: (context) => ConfirmDiarySheet(diary),
       backgroundColor: Colors.transparent,
     );
   }
