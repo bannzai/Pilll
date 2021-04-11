@@ -139,7 +139,7 @@ class MenstruationStore extends StateNotifier<MenstruationState> {
       return null;
     }
     final prefix = index == 1 ? "前回" : "前々回";
-    final menstruation = state.entities[index];
+    final menstruation = state.entities.reversed.toList()[index];
     return MenstruationCard2State(menstruation: menstruation, prefix: prefix);
   }
 }
