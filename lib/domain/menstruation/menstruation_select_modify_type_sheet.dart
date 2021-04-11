@@ -4,7 +4,7 @@ import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 
-enum MenstruationSelectModifyType { today, yesterday, begin, edit }
+enum MenstruationSelectModifyType { today, yesterday, begin }
 
 extension _CellTypeFunction on MenstruationSelectModifyType {
   String get title {
@@ -15,8 +15,6 @@ extension _CellTypeFunction on MenstruationSelectModifyType {
         return "昨日から生理";
       case MenstruationSelectModifyType.begin:
         return "開始日を日付から選択";
-      case MenstruationSelectModifyType.edit:
-        return "生理期間を編集";
     }
   }
 
@@ -29,8 +27,6 @@ extension _CellTypeFunction on MenstruationSelectModifyType {
           return "images/menstruation_record_icon.svg";
         case MenstruationSelectModifyType.begin:
           return "images/menstruation_begin_record_icon.svg";
-        case MenstruationSelectModifyType.edit:
-          return "images/menstruation_edit_duration_icon.svg";
       }
     }
 
