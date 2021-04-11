@@ -72,7 +72,8 @@ class MenstruationEditStore extends StateNotifier<MenstruationEditState> {
   }
 
   Future<Menstruation> save() {
-    final menstruation = state.menstruation;
+    final menstruation =
+        state.menstruation?.copyWith(isNotYetUserEdited: false);
     if (menstruation == null) {
       throw FormatException("menstruation is not exists when save");
     }
