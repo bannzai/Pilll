@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import 'package:flutter/widgets.dart';
@@ -14,6 +16,7 @@ import 'package:pilll/domain/calendar/date_range.dart';
 import 'package:pilll/domain/calendar/utility.dart';
 import 'package:pilll/domain/calendar/weekly_calendar_state.dart';
 import 'package:pilll/domain/menstruation/menstruation_card.dart';
+import 'package:pilll/domain/menstruation/menstruation_card2.dart';
 import 'package:pilll/domain/menstruation/menstruation_edit_page.dart';
 import 'package:pilll/domain/menstruation/menstruation_select_modify_type_sheet.dart';
 import 'package:pilll/domain/record/weekday_badge.dart';
@@ -169,14 +172,54 @@ class MenstruationPage extends HookWidget {
                   color: PilllColors.background,
                   child: ListView.builder(
                     padding: EdgeInsets.only(top: 16),
-                    itemCount: 1,
+                    itemCount: max(1, min(3, state.entities.length)),
                     scrollDirection: Axis.vertical,
                     itemBuilder: (context, index) {
-                      final cardState = store.cardState();
-                      if (cardState == null) {
-                        return Container();
-                      }
-                      return MenstruationCard(cardState);
+                      final body = () {
+                        switch (index) {
+                          case 0:
+                            final cardState = store.cardState();
+                            if (cardState == null) {
+                              return Container();
+                            }
+                            return MenstruationCard(cardState);
+                          default:
+                            final cardState = store.card2State(index);
+                            if (cardState == null) {
+                              return Container();
+                            }
+                            return MenstruationCard2(
+                              cardState,
+                              (state) {
+                                _showEditPage(
+                                  context,
+                                  state.menstruation,
+                                  didEndSave: (menstruation) {
+                                    Navigator.of(context).pop();
+                                    ScaffoldMessenger.of(context).showSnackBar(
+                                      SnackBar(
+                                        duration: Duration(seconds: 1),
+                                        content: Text("生理期間を編集しました"),
+                                      ),
+                                    );
+                                  },
+                                  didEndDelete: () {
+                                    Navigator.of(context).pop();
+                                    ScaffoldMessenger.of(context).showSnackBar(
+                                      SnackBar(
+                                        duration: Duration(seconds: 1),
+                                        content: Text("生理期間を削除しました"),
+                                      ),
+                                    );
+                                  },
+                                );
+                              },
+                            );
+                        }
+                      };
+
+                      return Padding(
+                          padding: EdgeInsets.only(bottom: 24), child: body());
                     },
                   ),
                 ),

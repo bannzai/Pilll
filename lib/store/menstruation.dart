@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:pilll/domain/menstruation/menstruation_card2.dart';
 import 'package:pilll/domain/menstruation/menstruation_card_state.dart';
 import 'package:pilll/entity/menstruation.dart';
 import 'package:pilll/service/diary.dart';
@@ -131,5 +132,14 @@ class MenstruationStore extends StateNotifier<MenstruationState> {
               .add(Duration(days: setting.pillNumberForFromMenstruation - 1)));
     }
     return null;
+  }
+
+  MenstruationCard2State? card2State(int index) {
+    if (state.entities.length <= index) {
+      return null;
+    }
+    final prefix = index == 1 ? "前回" : "前々回";
+    final menstruation = state.entities[index];
+    return MenstruationCard2State(menstruation: menstruation, prefix: prefix);
   }
 }

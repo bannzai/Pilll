@@ -34,6 +34,8 @@ extension _CellTypeFunction on MenstruationSelectModifyType {
   }
 }
 
+final double _tileHeight = 48;
+
 class MenstruationSelectModifyTypeSheet extends StatelessWidget {
   final Function(MenstruationSelectModifyType) onTap;
 
@@ -56,7 +58,7 @@ class MenstruationSelectModifyTypeSheet extends StatelessWidget {
             ),
             SizedBox(height: 24),
             SizedBox(
-              height: 192,
+              height: _tileHeight * MenstruationSelectModifyType.values.length,
               child: ListView(
                 physics: NeverScrollableScrollPhysics(),
                 children: MenstruationSelectModifyType.values
@@ -74,7 +76,7 @@ class MenstruationSelectModifyTypeSheet extends StatelessWidget {
 
   Widget _tile(MenstruationSelectModifyType type) {
     return SizedBox(
-      height: 48,
+      height: _tileHeight,
       child: ListTile(
         title: Text(
           type.title,
