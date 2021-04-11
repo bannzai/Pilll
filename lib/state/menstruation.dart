@@ -37,18 +37,6 @@ abstract class MenstruationState implements _$MenstruationState {
   String get displayMonth =>
       DateTimeFormatter.jaMonth(_targetEndDayOfWeekday());
   String get buttonString {
-    final latestPillSheet = this.latestPillSheet;
-    final setting = this.setting;
-    if (latestPillSheet == null || setting == null) {
-      return "生理を記録";
-    }
-    final start = latestPillSheet.beginingDate
-        .add(Duration(days: setting.pillNumberForFromMenstruation - 1));
-    final end = start.add(Duration(days: setting.durationMenstruation - 1));
-    if (DateRange(start, end).inRange(today())) {
-      return "生理期間を編集";
-    }
-
     final latestMenstruation = this.latestMenstruation;
     if (latestMenstruation == null) {
       return "生理を記録";
