@@ -1,6 +1,7 @@
 import 'package:pilll/components/atoms/color.dart';
 import 'package:flutter/material.dart';
 import 'package:pilll/domain/calendar/calendar_band.dart';
+import 'package:pilll/entity/menstruation.dart';
 
 abstract class CalendarBandModel {
   Color get color;
@@ -36,8 +37,9 @@ class CalendarMenstruationBandModel extends CalendarBandModel {
   double get bottom => 0;
   @override
   bool get isNecessaryBorder => false;
-  CalendarMenstruationBandModel(DateTime begin, DateTime end)
-      : super(begin, end);
+  final Menstruation menstruation;
+  CalendarMenstruationBandModel(this.menstruation)
+      : super(menstruation.beginDate, menstruation.endDate);
 }
 
 class CalendarNextPillSheetBandModel extends CalendarBandModel {
