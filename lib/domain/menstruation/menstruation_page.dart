@@ -268,32 +268,6 @@ class MenstruationPage extends HookWidget {
                                 ),
                               );
                             });
-                          case MenstruationSelectModifyType.edit:
-                            analytics.logEvent(
-                                name: "tapped_menstruation_record_edit");
-                            Navigator.of(context).pop();
-                            return _showEditPage(
-                              context,
-                              latestMenstruation,
-                              didEndSave: (menstruation) {
-                                Navigator.of(context).pop();
-                                ScaffoldMessenger.of(context).showSnackBar(
-                                  SnackBar(
-                                    duration: Duration(seconds: 1),
-                                    content: Text("生理期間を編集しました"),
-                                  ),
-                                );
-                              },
-                              didEndDelete: () {
-                                Navigator.of(context).pop();
-                                ScaffoldMessenger.of(context).showSnackBar(
-                                  SnackBar(
-                                    duration: Duration(seconds: 1),
-                                    content: Text("生理期間を削除しました"),
-                                  ),
-                                );
-                              },
-                            );
                         }
                       }),
                     );
