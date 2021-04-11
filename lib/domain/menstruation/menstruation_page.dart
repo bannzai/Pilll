@@ -19,7 +19,6 @@ import 'package:pilll/domain/menstruation/menstruation_select_modify_type_sheet.
 import 'package:pilll/domain/record/weekday_badge.dart';
 import 'package:pilll/entity/menstruation.dart';
 import 'package:pilll/entity/weekday.dart';
-import 'package:pilll/state/menstruation.dart';
 import 'package:pilll/store/menstruation.dart';
 import 'package:pilll/util/datetime/day.dart';
 import 'package:pilll/util/formatter/date_time_formatter.dart';
@@ -107,10 +106,56 @@ class MenstruationPage extends HookWidget {
                         scrollDirection: Axis.horizontal,
                         itemPositionsListener: itemPositionsListener,
                         itemBuilder: (context, index) {
-                          final data = state.calendarDataSource[index];
-                          return _DateLine(
-                            days: data,
-                            state: state,
+                          final days = state.calendarDataSource[index];
+                          return Container(
+                            width: MediaQuery.of(context).size.width -
+                                _horizontalPadding * 2,
+                            height: MenstruationPageConst.tileHeight,
+                            child: CalendarWeekdayLine(
+                              diaries: state.diaries,
+                              calendarState: SinglelineWeeklyCalendarState(
+                                  DateRange(days.first, days.last)),
+                              bandModels: buildBandModels(state.latestPillSheet,
+                                      state.setting, state.entities, 12)
+                                  .where((element) => !(element
+                                      is CalendarNextPillSheetBandModel))
+                                  .toList(),
+                              horizontalPadding: _horizontalPadding,
+                              onTap: (weeklyCalendarState, date) {
+                                analytics.logEvent(
+                                    name:
+                                        "did_select_day_tile_on_menstruation");
+                                transitionToPostDiary(
+                                    context, date, state.diaries);
+                              },
+                              onTapBand: (model) {
+                                if (model is! CalendarMenstruationBandModel) {
+                                  return;
+                                }
+                                _showEditPage(
+                                  context,
+                                  model.menstruation,
+                                  didEndSave: (menstruation) {
+                                    Navigator.of(context).pop();
+                                    ScaffoldMessenger.of(context).showSnackBar(
+                                      SnackBar(
+                                        duration: Duration(seconds: 1),
+                                        content: Text("生理期間を編集しました"),
+                                      ),
+                                    );
+                                  },
+                                  didEndDelete: () {
+                                    Navigator.of(context).pop();
+                                    ScaffoldMessenger.of(context).showSnackBar(
+                                      SnackBar(
+                                        duration: Duration(seconds: 1),
+                                        content: Text("生理期間を削除しました"),
+                                      ),
+                                    );
+                                  },
+                                );
+                              },
+                            ),
                           );
                         },
                         itemCount: state.calendarDataSource.length,
@@ -291,38 +336,6 @@ class _WeekdayLine extends StatelessWidget {
           Weekday.values.length,
           (index) =>
               Expanded(child: WeekdayBadge(weekday: Weekday.values[index]))),
-    );
-  }
-}
-
-class _DateLine extends StatelessWidget {
-  final List<DateTime> days;
-  final MenstruationState state;
-
-  const _DateLine({
-    Key? key,
-    required this.days,
-    required this.state,
-  }) : super(key: key);
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      width: MediaQuery.of(context).size.width - _horizontalPadding * 2,
-      height: MenstruationPageConst.tileHeight,
-      child: CalendarWeekdayLine(
-        diaries: state.diaries,
-        calendarState:
-            SinglelineWeeklyCalendarState(DateRange(days.first, days.last)),
-        bandModels: buildBandModels(
-                state.latestPillSheet, state.setting, state.entities, 12)
-            .where((element) => !(element is CalendarNextPillSheetBandModel))
-            .toList(),
-        horizontalPadding: _horizontalPadding,
-        onTap: (weeklyCalendarState, date) {
-          analytics.logEvent(name: "did_select_day_tile_on_menstruation");
-          transitionToPostDiary(context, date, state.diaries);
-        },
-      ),
     );
   }
 }
