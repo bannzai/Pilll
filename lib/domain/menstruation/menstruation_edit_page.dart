@@ -46,7 +46,7 @@ class MenstruationEditPage extends HookWidget {
                 child: Row(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    Text("生理期間を選択・編集",
+                    Text("生理期間の編集",
                         style: FontType.sBigTitle.merge(TextColorStyle.main)),
                     Spacer(),
                     SecondaryButton(
