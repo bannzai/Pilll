@@ -22,7 +22,7 @@ abstract class MenstruationCardState implements _$MenstruationCardState {
           countdownString: () {
             final diff = scheduleDate.difference(today()).inDays;
             if (diff <= 0) {
-              return "${diff.abs() + 1}日目";
+              return "生理予定：${diff.abs() + 1}日目";
             }
             return "あと${scheduleDate.difference(today()).inDays}日";
           }());
@@ -33,8 +33,7 @@ abstract class MenstruationCardState implements _$MenstruationCardState {
       MenstruationCardState(
         title: "生理開始日",
         scheduleDate: menstruation.beginDate,
-        countdownString: menstruation.isNotYetUserEdited
-            ? "生理予定${today().difference(menstruation.beginDate).inDays + 1}日目"
-            : "${today().difference(menstruation.beginDate).inDays + 1}日目",
+        countdownString:
+            "${today().difference(menstruation.beginDate).inDays + 1}日目",
       );
 }
