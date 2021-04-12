@@ -4,7 +4,7 @@ import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 
-enum MenstruationSelectModifyType { today, yesterday, begin, edit }
+enum MenstruationSelectModifyType { today, yesterday, begin }
 
 extension _CellTypeFunction on MenstruationSelectModifyType {
   String get title {
@@ -14,9 +14,7 @@ extension _CellTypeFunction on MenstruationSelectModifyType {
       case MenstruationSelectModifyType.yesterday:
         return "昨日から生理";
       case MenstruationSelectModifyType.begin:
-        return "開始日を日付から選択";
-      case MenstruationSelectModifyType.edit:
-        return "生理期間を編集";
+        return "生理開始日を選択";
     }
   }
 
@@ -29,14 +27,14 @@ extension _CellTypeFunction on MenstruationSelectModifyType {
           return "images/menstruation_record_icon.svg";
         case MenstruationSelectModifyType.begin:
           return "images/menstruation_begin_record_icon.svg";
-        case MenstruationSelectModifyType.edit:
-          return "images/menstruation_edit_duration_icon.svg";
       }
     }
 
     return SvgPicture.asset(name(), color: PilllColors.secondary);
   }
 }
+
+final double _tileHeight = 48;
 
 class MenstruationSelectModifyTypeSheet extends StatelessWidget {
   final Function(MenstruationSelectModifyType) onTap;
@@ -60,7 +58,7 @@ class MenstruationSelectModifyTypeSheet extends StatelessWidget {
             ),
             SizedBox(height: 24),
             SizedBox(
-              height: 192,
+              height: _tileHeight * MenstruationSelectModifyType.values.length,
               child: ListView(
                 physics: NeverScrollableScrollPhysics(),
                 children: MenstruationSelectModifyType.values
@@ -78,7 +76,7 @@ class MenstruationSelectModifyTypeSheet extends StatelessWidget {
 
   Widget _tile(MenstruationSelectModifyType type) {
     return SizedBox(
-      height: 48,
+      height: _tileHeight,
       child: ListTile(
         title: Text(
           type.title,

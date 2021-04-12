@@ -15,6 +15,22 @@ final menstruationEditProvider = StateNotifierProvider.family
   ),
 );
 
+List<DateTime> displaedDates(Menstruation? menstruation) {
+  if (menstruation != null) {
+    return [
+      menstruation.beginDate,
+      DateTime(
+          menstruation.beginDate.year, menstruation.beginDate.month + 1, 1),
+    ];
+  } else {
+    final t = today();
+    return [
+      t,
+      DateTime(t.year, t.month + 1, 1),
+    ];
+  }
+}
+
 class MenstruationEditStore extends StateNotifier<MenstruationEditState> {
   late Menstruation? initialMenstruation;
   final MenstruationService service;
@@ -24,7 +40,9 @@ class MenstruationEditStore extends StateNotifier<MenstruationEditState> {
     Menstruation? menstruation,
     required this.service,
     required this.settingService,
-  }) : super(MenstruationEditState(menstruation: menstruation)) {
+  }) : super(MenstruationEditState(
+            menstruation: menstruation,
+            displayedDates: displaedDates(menstruation))) {
     initialMenstruation = menstruation;
   }
 
@@ -51,7 +69,8 @@ class MenstruationEditStore extends StateNotifier<MenstruationEditState> {
   }
 
   Future<Menstruation> save() {
-    final menstruation = state.menstruation;
+    final menstruation =
+        state.menstruation?.copyWith(isNotYetUserEdited: false);
     if (menstruation == null) {
       throw FormatException("menstruation is not exists when save");
     }

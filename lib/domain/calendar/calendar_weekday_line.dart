@@ -17,6 +17,7 @@ class CalendarWeekdayLine extends StatelessWidget {
   final List<CalendarBandModel> bandModels;
   final double horizontalPadding;
   final Function(WeeklyCalendarState, DateTime) onTap;
+  final Function(CalendarBandModel)? onTapBand;
 
   const CalendarWeekdayLine({
     Key? key,
@@ -25,6 +26,7 @@ class CalendarWeekdayLine extends StatelessWidget {
     required this.bandModels,
     required this.horizontalPadding,
     required this.onTap,
+    this.onTapBand,
   }) : super(key: key);
   @override
   Widget build(BuildContext context) {
@@ -98,6 +100,7 @@ class CalendarWeekdayLine extends StatelessWidget {
               model: bandModel,
               isLineBreaked: isLineBreaked,
               width: tileWidth * length,
+              onTap: onTapBand,
             ),
           );
         })
@@ -118,9 +121,10 @@ void transitionToPostDiary(
   if (!isExistsPostedDiary(diaries, date)) {
     Navigator.of(context).push(PostDiaryPageRoute.route(date));
   } else {
+    final diary = diaries.lastWhere((element) => isSameDay(element.date, date));
     showModalBottomSheet(
       context: context,
-      builder: (context) => ConfirmDiarySheet(date),
+      builder: (context) => ConfirmDiarySheet(diary),
       backgroundColor: Colors.transparent,
     );
   }

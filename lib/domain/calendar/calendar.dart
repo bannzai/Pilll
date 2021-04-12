@@ -29,17 +29,40 @@ class Calendar extends HookWidget {
 
   @override
   Widget build(BuildContext context) {
-    final store =
-        useProvider(monthlyDiariesStoreProvider(calendarState.dateForMonth));
-    // ignore: invalid_use_of_protected_member
-    return _body(context, store.state.entities);
+    final state = useProvider(
+        monthlyDiariesStoreProvider(calendarState.dateForMonth).state);
+// NOTE: hooks を使ってwidgetテストをした場合に store.state じゃないと mockができなかった。しかしこれを使用してdiariesのデータを取ると今度はstateが更新されたときに画面が再描画されない。なので簡易的にコンポーネントを切り出してhooksの影響を受けないようにする
+    return CalendarBody(
+        diaries: state.entities,
+        calendarState: calendarState,
+        bandModels: bandModels,
+        onTap: onTap,
+        horizontalPadding: horizontalPadding);
   }
 
   DateTime date() => calendarState.dateForMonth;
   double height() =>
       calendarState.lineCount().toDouble() * CalendarConstants.tileHeight;
+}
 
-  Column _body(BuildContext context, List<Diary> diaries) {
+class CalendarBody extends StatelessWidget {
+  final List<Diary> diaries;
+  final MonthlyCalendarState calendarState;
+  final List<CalendarBandModel> bandModels;
+  final Function(DateTime, List<Diary>) onTap;
+  final double horizontalPadding;
+
+  const CalendarBody({
+    Key? key,
+    required this.diaries,
+    required this.calendarState,
+    required this.bandModels,
+    required this.onTap,
+    required this.horizontalPadding,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
     return Column(
       children: <Widget>[
         Row(

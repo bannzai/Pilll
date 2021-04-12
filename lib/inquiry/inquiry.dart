@@ -1,7 +1,9 @@
 import 'package:pilll/auth/auth.dart';
 import 'package:pilll/database/database.dart';
+import 'package:pilll/entity/menstruation.dart';
 import 'package:pilll/entity/pill_sheet.dart';
 import 'package:pilll/entity/setting.dart';
+import 'package:pilll/service/menstruation.dart';
 import 'package:pilll/service/pill_sheet.dart';
 import 'package:pilll/service/setting.dart';
 import 'package:pilll/util/environment.dart';
@@ -23,6 +25,10 @@ Future<String> debugInfo(String separator) async {
   PillSheetModel pillSheet =
       await PillSheetService(databaseConnection).fetchLast();
   Setting setting = await SettingService(databaseConnection).fetch();
+  final menstruations =
+      await MenstruationService(databaseConnection).fetchAll();
+  Menstruation? menstruation =
+      menstruations.isNotEmpty ? menstruations.last : null;
   final package = await PackageInfo.fromPlatform();
   final appName = package.appName;
   final buildNumber = package.buildNumber;
@@ -34,6 +40,7 @@ Future<String> debugInfo(String separator) async {
     "buildNumber: $buildNumber",
     "env: ${Environment.isProduction ? "production" : "development"}",
     "user id: $userID",
+    "latestMenstruation: ${menstruation?.toJson()}",
     "pillSheet.entity.id: ${pillSheet.id}",
     "pillSheetState.entity: ${pillSheet.toJson()}",
     "settingState.entity: ${setting.toJson()}",
