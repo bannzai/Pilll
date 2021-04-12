@@ -14,7 +14,7 @@ extension _CellTypeFunction on MenstruationSelectModifyType {
       case MenstruationSelectModifyType.yesterday:
         return "昨日から生理";
       case MenstruationSelectModifyType.begin:
-        return "開始日を日付から選択";
+        return "生理開始日を選択";
     }
   }
 
