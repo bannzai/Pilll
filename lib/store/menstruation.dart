@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'dart:math';
 
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/domain/menstruation/menstruation_card2.dart';
@@ -118,6 +119,14 @@ class MenstruationStore extends StateNotifier<MenstruationState> {
     return menstruationService.create(menstruation);
   }
 
+  int get cardCount {
+    final card = cardState();
+    if (card == null) {
+      return 0;
+    }
+    return card2Statuses().length + 1;
+  }
+
   MenstruationCardState? cardState() {
     final latestMenstruation = state.latestMenstruation;
     if (latestMenstruation != null &&
@@ -134,12 +143,36 @@ class MenstruationStore extends StateNotifier<MenstruationState> {
     return null;
   }
 
-  MenstruationCard2State? card2State(int index) {
-    if (state.entities.length <= index) {
-      return null;
+  List<MenstruationCard2State> card2Statuses() {
+    final latestMenstruation = state.latestMenstruation;
+    if (latestMenstruation == null) {
+      return [];
     }
-    final prefix = index == 1 ? "前回" : "前々回";
-    final menstruation = state.entities.reversed.toList()[index];
-    return MenstruationCard2State(menstruation: menstruation, prefix: prefix);
+    final length = min(2, state.entities.length);
+    if (latestMenstruation.dateRange.inRange(today())) {
+      return List.generate(length, (index) => index + 1)
+          .map((index) {
+            if (index >= state.entities.length) {
+              return null;
+            }
+            final prefix = index == 1 ? "前回" : "前々回";
+            final menstruation = state.entities.reversed.toList()[index];
+            return MenstruationCard2State(
+                menstruation: menstruation, prefix: prefix);
+          })
+          .where((element) => element != null)
+          .toList()
+          .cast();
+    } else {
+      return List.generate(length, (index) {
+        if (index >= state.entities.length) {
+          return null;
+        }
+        final prefix = index == 0 ? "前回" : "前々回";
+        final menstruation = state.entities.reversed.toList()[index];
+        return MenstruationCard2State(
+            menstruation: menstruation, prefix: prefix);
+      }).where((element) => element != null).toList().cast();
+    }
   }
 }

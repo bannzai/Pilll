@@ -172,7 +172,7 @@ class MenstruationPage extends HookWidget {
                   color: PilllColors.background,
                   child: ListView.builder(
                     padding: EdgeInsets.only(top: 16),
-                    itemCount: max(1, min(3, state.entities.length)),
+                    itemCount: store.cardCount,
                     scrollDirection: Axis.vertical,
                     itemBuilder: (context, index) {
                       final body = () {
@@ -184,10 +184,8 @@ class MenstruationPage extends HookWidget {
                             }
                             return MenstruationCard(cardState);
                           default:
-                            final cardState = store.card2State(index);
-                            if (cardState == null) {
-                              return Container();
-                            }
+                            final cardState = store.card2Statuses()[
+                                index - [state.latestMenstruation].length];
                             return MenstruationCard2(
                               cardState,
                               (state) {
