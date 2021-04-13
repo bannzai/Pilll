@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/entity/menstruation.dart';
 import 'package:pilll/service/menstruation.dart';
@@ -35,6 +37,7 @@ class MenstruationEditStore extends StateNotifier<MenstruationEditState> {
   late Menstruation? initialMenstruation;
   final MenstruationService service;
   final SettingService settingService;
+  List<Menstruation> allMenstruation = [];
   bool get isExistsDB => initialMenstruation != null;
   MenstruationEditStore({
     Menstruation? menstruation,
@@ -44,6 +47,28 @@ class MenstruationEditStore extends StateNotifier<MenstruationEditState> {
             menstruation: menstruation,
             displayedDates: displaedDates(menstruation))) {
     initialMenstruation = menstruation;
+    _reset();
+  }
+
+  void _reset() {
+    Future(() async {
+      allMenstruation = await service.fetchAll();
+      _subscribe();
+    });
+  }
+
+  StreamSubscription? _canceller;
+  void _subscribe() {
+    _canceller?.cancel();
+    _canceller = service.subscribeAll().listen((entities) {
+      allMenstruation = entities;
+    });
+  }
+
+  @override
+  void dispose() {
+    _canceller?.cancel();
+    super.dispose();
   }
 
   bool shouldShowDiscardDialog() {
