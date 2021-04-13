@@ -15,10 +15,12 @@ import 'package:pilll/entity/menstruation.dart';
 import 'package:pilll/store/menstruation_edit.dart';
 
 class MenstruationEditPage extends HookWidget {
+  final String title;
   final Menstruation? menstruation;
   final Function(Menstruation) didEndSave;
   final VoidCallback didEndDelete;
   MenstruationEditPage({
+    required this.title,
     required this.menstruation,
     required this.didEndSave,
     required this.didEndDelete,
@@ -46,7 +48,7 @@ class MenstruationEditPage extends HookWidget {
                 child: Row(
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    Text("生理期間の編集",
+                    Text(title,
                         style: FontType.sBigTitle.merge(TextColorStyle.main)),
                     Spacer(),
                     SecondaryButton(
