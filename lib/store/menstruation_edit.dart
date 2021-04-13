@@ -94,8 +94,9 @@ class MenstruationEditStore extends StateNotifier<MenstruationEditState> {
   bool _containsRangeForExistsMenstruation(Menstruation menstruation) {
     return allMenstruation
         .where((element) =>
-            element.dateRange.inRange(menstruation.beginDate) ||
-            element.dateRange.inRange(menstruation.endDate))
+            menstruation.id != element.id &&
+            (element.dateRange.inRange(menstruation.beginDate) ||
+                element.dateRange.inRange(menstruation.endDate)))
         .isNotEmpty;
   }
 
