@@ -84,6 +84,12 @@ class MenstruationEditStore extends StateNotifier<MenstruationEditState> {
 
   tappedDate(DateTime date) {
     final menstruation = state.menstruation;
+    if (date.isAfter(today()) && menstruation == null) {
+      state = state.copyWith(invalidMessage: "未来の日付は選択できません");
+      return;
+    }
+    state = state.copyWith(invalidMessage: null);
+
     if (menstruation == null) {
       settingService.fetch().then((setting) {
         state = state.copyWith(
