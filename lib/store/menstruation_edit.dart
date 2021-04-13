@@ -91,32 +91,40 @@ class MenstruationEditStore extends StateNotifier<MenstruationEditState> {
     }
   }
 
-  bool _containsRangeForExistsMenstruation(Menstruation menstruation) {
-    return allMenstruation
-        .where((element) =>
-            menstruation.id != element.id &&
-            (element.dateRange.inRange(menstruation.beginDate) ||
-                element.dateRange.inRange(menstruation.endDate)))
-        .isNotEmpty;
+  Menstruation? _menstruationForDuplicatedDuration(Menstruation menstruation) {
+    final filtered = allMenstruation.where((element) =>
+        menstruation.id != element.id &&
+        (element.dateRange.inRange(menstruation.beginDate) ||
+            element.dateRange.inRange(menstruation.endDate)));
+    if (filtered.isEmpty) {
+      return null;
+    }
+    return filtered.last;
   }
 
   _setMenstruationOrInvalidMessage(Menstruation? menstruation) {
-    if (menstruation != null &&
-        _containsRangeForExistsMenstruation(menstruation)) {
-      final begin = DateTimeFormatter.monthAndDay(menstruation.beginDate);
-      final end = DateTimeFormatter.monthAndDay(menstruation.endDate);
+    if (menstruation == null) {
+      state = state.copyWith(menstruation: menstruation);
+      return;
+    }
+    final duplicatedMenstruation =
+        _menstruationForDuplicatedDuration(menstruation);
+    if (duplicatedMenstruation != null) {
+      final begin =
+          DateTimeFormatter.monthAndDay(duplicatedMenstruation.beginDate);
+      final end = DateTimeFormatter.monthAndDay(duplicatedMenstruation.endDate);
       state = state.copyWith(invalidMessage: "$begin-$endの期間にすでに生理が記録されています");
       return;
     }
 
+    state = state.copyWith(invalidMessage: null);
     state = state.copyWith(menstruation: menstruation);
   }
 
   tappedDate(DateTime date) async {
     final menstruation = state.menstruation;
-    state = state.copyWith(invalidMessage: null);
     if (date.isAfter(today()) && menstruation == null) {
-      state = state.copyWith(invalidMessage: "未来の日付は選択できません");
+      state = state.copyWith(invalidMessage: "未来の日付は開始日に選択できません");
       return;
     }
 

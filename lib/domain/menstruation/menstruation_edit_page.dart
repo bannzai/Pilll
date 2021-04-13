@@ -50,12 +50,6 @@ class MenstruationEditPage extends HookWidget {
                   mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    if (invalidMessage != null) ...[
-                      SizedBox(height: 12),
-                      Text(invalidMessage,
-                          style:
-                              FontType.assisting.merge(TextColorStyle.danger)),
-                    ],
                     Row(
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: [
@@ -94,6 +88,12 @@ class MenstruationEditPage extends HookWidget {
                         )
                       ],
                     ),
+                    if (invalidMessage != null) ...[
+                      SizedBox(height: 12),
+                      Text(invalidMessage,
+                          style:
+                              FontType.assisting.merge(TextColorStyle.danger)),
+                    ],
                   ],
                 ),
               ),
