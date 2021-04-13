@@ -36,7 +36,7 @@ class MenstruationEditStore extends StateNotifier<MenstruationEditState> {
   late Menstruation? initialMenstruation;
   final MenstruationService service;
   final SettingService settingService;
-  List<Menstruation> allMenstruation = [];
+  List<Menstruation> _allMenstruation = [];
   bool get isExistsDB => initialMenstruation != null;
   MenstruationEditStore({
     Menstruation? menstruation,
@@ -51,7 +51,10 @@ class MenstruationEditStore extends StateNotifier<MenstruationEditState> {
 
   void _reset() {
     Future(() async {
-      allMenstruation = await service.fetchAll();
+      _allMenstruation = await service.fetchAll();
+      _allMenstruation = _allMenstruation
+          .where((element) => element.id != initialMenstruation?.id)
+          .toList();
     });
   }
 
@@ -92,10 +95,12 @@ class MenstruationEditStore extends StateNotifier<MenstruationEditState> {
   }
 
   Menstruation? _menstruationForDuplicatedDuration(Menstruation menstruation) {
-    final filtered = allMenstruation.where((element) =>
+    final filtered = _allMenstruation.where((element) =>
         menstruation.id != element.id &&
-        (element.dateRange.inRange(menstruation.beginDate) ||
-            element.dateRange.inRange(menstruation.endDate)));
+            (element.dateRange.inRange(menstruation.beginDate) ||
+                element.dateRange.inRange(menstruation.endDate)) ||
+        menstruation.dateRange.inRange(element.beginDate) ||
+        menstruation.dateRange.inRange(element.endDate));
     if (filtered.isEmpty) {
       return null;
     }
@@ -124,19 +129,31 @@ class MenstruationEditStore extends StateNotifier<MenstruationEditState> {
   tappedDate(DateTime date) async {
     final menstruation = state.menstruation;
     if (date.isAfter(today()) && menstruation == null) {
-      state = state.copyWith(invalidMessage: "未来の日付は開始日に選択できません");
+      state = state.copyWith(invalidMessage: "未来の日付は選択できません");
       return;
     }
 
     if (menstruation == null) {
       try {
         final setting = await settingService.fetch();
-        final menstruation = Menstruation(
-          beginDate: date,
-          endDate: date.add(Duration(days: setting.durationMenstruation - 1)),
-          isNotYetUserEdited: false,
-          createdAt: now(),
-        );
+        final begin = date;
+        final end = date.add(Duration(days: setting.durationMenstruation - 1));
+        late final Menstruation menstruation;
+        final initialMenstruation = this.initialMenstruation;
+        if (initialMenstruation != null) {
+          menstruation = initialMenstruation.copyWith(
+            beginDate: date,
+            endDate: end,
+            isNotYetUserEdited: false,
+          );
+        } else {
+          menstruation = Menstruation(
+            beginDate: begin,
+            endDate: end,
+            isNotYetUserEdited: false,
+            createdAt: now(),
+          );
+        }
         _setMenstruationOrInvalidMessage(menstruation);
         return;
       } catch (error) {
