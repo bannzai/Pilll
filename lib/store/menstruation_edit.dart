@@ -131,6 +131,7 @@ class MenstruationEditStore extends StateNotifier<MenstruationEditState> {
       state = state.copyWith(invalidMessage: "未来の日付は選択できません");
       return;
     }
+    state = state.copyWith(invalidMessage: null);
 
     if (menstruation == null) {
       try {
@@ -151,39 +152,39 @@ class MenstruationEditStore extends StateNotifier<MenstruationEditState> {
             createdAt: now(),
           );
         }
-        _setMenstruationOrInvalidMessage(menstruation);
+        state = state.copyWith(menstruation: menstruation);
         return;
       } catch (error) {
         throw error;
       }
     }
 
-    state = state.copyWith(invalidMessage: null);
-
     if (isSameDay(menstruation.beginDate, date) &&
         isSameDay(menstruation.endDate, date)) {
-      _setMenstruationOrInvalidMessage(null);
+      state = state.copyWith(menstruation: null);
       return;
     }
 
     if (date.isBefore(menstruation.beginDate)) {
-      _setMenstruationOrInvalidMessage(menstruation.copyWith(beginDate: date));
+      state =
+          state.copyWith(menstruation: menstruation.copyWith(beginDate: date));
       return;
     }
     if (date.isAfter(menstruation.endDate)) {
-      _setMenstruationOrInvalidMessage(menstruation.copyWith(endDate: date));
+      state =
+          state.copyWith(menstruation: menstruation.copyWith(endDate: date));
       return;
     }
 
     if ((isSameDay(menstruation.beginDate, date) ||
             date.isAfter(menstruation.beginDate)) &&
         date.isBefore(menstruation.endDate)) {
-      _setMenstruationOrInvalidMessage(menstruation.copyWith(endDate: date));
+      state = state.copyWith(menstruation: menstruation.copyWith(endDate: date));
       return;
     }
 
     if (isSameDay(menstruation.endDate, date)) {
-      _setMenstruationOrInvalidMessage(
+      state = state.copyWith(menstruation: 
           menstruation.copyWith(endDate: date.subtract(Duration(days: 1))));
       return;
     }
