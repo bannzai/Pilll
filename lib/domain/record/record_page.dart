@@ -5,7 +5,7 @@ import 'package:pilll/components/molecules/indicator.dart';
 import 'package:pilll/components/organisms/pill/pill_sheet.dart';
 import 'package:pilll/domain/initial_setting/migrate_info.dart';
 import 'package:pilll/domain/record/record_taken_information.dart';
-import 'package:pilll/domain/release_note/release_note_220.dart';
+import 'package:pilll/domain/release_note/release_note.dart';
 import 'package:pilll/entity/pill_sheet.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/entity/weekday.dart';
@@ -244,7 +244,7 @@ class RecordPage extends HookWidget {
     store.take(takenDate).then((value) {
       _requestInAppReview();
       Future.delayed(Duration(milliseconds: 500)).then((_) {
-        _showReleaseNote(context);
+        showReleaseNotePreDialog(context);
       });
     });
   }
@@ -352,19 +352,5 @@ class RecordPage extends HookWidget {
         await InAppReview.instance.requestReview();
       }
     });
-  }
-
-  _showReleaseNote(BuildContext context) async {
-    final key = ReleaseNoteKey.version2_2_0;
-    final storage = await SharedPreferences.getInstance();
-    if (storage.getBool(key) ?? false) {
-      return;
-    }
-    storage.setBool(key, true);
-    showDialog(
-        context: context,
-        builder: (context) {
-          return ReleaseNote220();
-        });
   }
 }

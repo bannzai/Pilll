@@ -23,7 +23,6 @@ class AppRouter {
   static void endInitialSetting(BuildContext context) {
     SharedPreferences.getInstance().then((storage) {
       storage.setBool(BoolKey.didEndInitialSetting, true);
-      storage.setBool(ReleaseNoteKey.version2_2_0, true);
       requestNotificationPermissions().then((value) {
         listenNotificationEvents();
         Navigator.popUntil(context, (router) => router.isFirst);
