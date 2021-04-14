@@ -9,6 +9,7 @@ abstract class MenstruationEditState implements _$MenstruationEditState {
   factory MenstruationEditState({
     required Menstruation? menstruation,
     required List<DateTime> displayedDates,
+    String? invalidMessage,
   }) = _MenstruationEditState;
 
   List<DateTime> dates() => displayedDates;

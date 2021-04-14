@@ -5,6 +5,7 @@ import 'package:pilll/service/setting.dart';
 import 'package:pilll/state/menstruation_edit.dart';
 import 'package:pilll/util/datetime/date_compare.dart';
 import 'package:pilll/util/datetime/day.dart';
+import 'package:pilll/util/formatter/date_time_formatter.dart';
 
 final menstruationEditProvider = StateNotifierProvider.family
     .autoDispose<MenstruationEditStore, Menstruation?>(
@@ -35,6 +36,7 @@ class MenstruationEditStore extends StateNotifier<MenstruationEditState> {
   late Menstruation? initialMenstruation;
   final MenstruationService service;
   final SettingService settingService;
+  List<Menstruation> _allMenstruation = [];
   bool get isExistsDB => initialMenstruation != null;
   MenstruationEditStore({
     Menstruation? menstruation,
@@ -44,6 +46,16 @@ class MenstruationEditStore extends StateNotifier<MenstruationEditState> {
             menstruation: menstruation,
             displayedDates: displaedDates(menstruation))) {
     initialMenstruation = menstruation;
+    _reset();
+  }
+
+  void _reset() {
+    Future(() async {
+      _allMenstruation = await service.fetchAll();
+      _allMenstruation = _allMenstruation
+          .where((element) => element.id != initialMenstruation?.id)
+          .toList();
+    });
   }
 
   bool shouldShowDiscardDialog() {
@@ -82,51 +94,100 @@ class MenstruationEditStore extends StateNotifier<MenstruationEditState> {
     }
   }
 
-  tappedDate(DateTime date) {
-    final menstruation = state.menstruation;
+  Menstruation? _menstruationForDuplicatedDuration(Menstruation menstruation) {
+    final filtered = _allMenstruation.where((element) =>
+        menstruation.id != element.id &&
+            (element.dateRange.inRange(menstruation.beginDate) ||
+                element.dateRange.inRange(menstruation.endDate)) ||
+        menstruation.dateRange.inRange(element.beginDate) ||
+        menstruation.dateRange.inRange(element.endDate));
+    if (filtered.isEmpty) {
+      return null;
+    }
+    return filtered.last;
+  }
+
+  _setMenstruationOrInvalidMessage(Menstruation? menstruation) {
     if (menstruation == null) {
-      settingService.fetch().then((setting) {
-        state = state.copyWith(
-          menstruation: Menstruation(
-            beginDate: date,
-            endDate: date.add(Duration(days: setting.durationMenstruation - 1)),
-            isNotYetUserEdited: false,
-            createdAt: now(),
-          ),
-        );
-      });
+      state = state.copyWith(menstruation: menstruation);
+      return;
+    }
+    final duplicatedMenstruation =
+        _menstruationForDuplicatedDuration(menstruation);
+    if (duplicatedMenstruation != null) {
+      final begin =
+          DateTimeFormatter.monthAndDay(duplicatedMenstruation.beginDate);
+      final end = DateTimeFormatter.monthAndDay(duplicatedMenstruation.endDate);
+      state = state.copyWith(invalidMessage: "$begin-$endの期間にすでに生理が記録されています");
       return;
     }
 
+    state = state.copyWith(invalidMessage: null);
+    state = state.copyWith(menstruation: menstruation);
+  }
+
+  tappedDate(DateTime date) async {
+    final menstruation = state.menstruation;
+    if (date.isAfter(today()) && menstruation == null) {
+      state = state.copyWith(invalidMessage: "未来の日付は選択できません");
+      return;
+    }
+
+    if (menstruation == null) {
+      try {
+        final setting = await settingService.fetch();
+        final begin = date;
+        final end = date.add(Duration(days: setting.durationMenstruation - 1));
+        late final Menstruation menstruation;
+        final initialMenstruation = this.initialMenstruation;
+        if (initialMenstruation != null) {
+          menstruation = initialMenstruation.copyWith(
+            beginDate: date,
+            endDate: end,
+            isNotYetUserEdited: false,
+          );
+        } else {
+          menstruation = Menstruation(
+            beginDate: begin,
+            endDate: end,
+            isNotYetUserEdited: false,
+            createdAt: now(),
+          );
+        }
+        _setMenstruationOrInvalidMessage(menstruation);
+        return;
+      } catch (error) {
+        throw error;
+      }
+    }
+
+    state = state.copyWith(invalidMessage: null);
+
     if (isSameDay(menstruation.beginDate, date) &&
         isSameDay(menstruation.endDate, date)) {
-      state = state.copyWith(menstruation: null);
+      _setMenstruationOrInvalidMessage(null);
       return;
     }
 
     if (date.isBefore(menstruation.beginDate)) {
-      state =
-          state.copyWith(menstruation: menstruation.copyWith(beginDate: date));
+      _setMenstruationOrInvalidMessage(menstruation.copyWith(beginDate: date));
       return;
     }
     if (date.isAfter(menstruation.endDate)) {
-      state =
-          state.copyWith(menstruation: menstruation.copyWith(endDate: date));
+      _setMenstruationOrInvalidMessage(menstruation.copyWith(endDate: date));
       return;
     }
 
     if ((isSameDay(menstruation.beginDate, date) ||
             date.isAfter(menstruation.beginDate)) &&
         date.isBefore(menstruation.endDate)) {
-      state =
-          state.copyWith(menstruation: menstruation.copyWith(endDate: date));
+      _setMenstruationOrInvalidMessage(menstruation.copyWith(endDate: date));
       return;
     }
 
     if (isSameDay(menstruation.endDate, date)) {
-      state = state.copyWith(
-          menstruation:
-              menstruation.copyWith(endDate: date.subtract(Duration(days: 1))));
+      _setMenstruationOrInvalidMessage(
+          menstruation.copyWith(endDate: date.subtract(Duration(days: 1))));
       return;
     }
   }

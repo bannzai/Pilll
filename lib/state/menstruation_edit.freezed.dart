@@ -18,10 +18,12 @@ class _$MenstruationEditStateTearOff {
 
   _MenstruationEditState call(
       {required Menstruation? menstruation,
-      required List<DateTime> displayedDates}) {
+      required List<DateTime> displayedDates,
+      String? invalidMessage}) {
     return _MenstruationEditState(
       menstruation: menstruation,
       displayedDates: displayedDates,
+      invalidMessage: invalidMessage,
     );
   }
 }
@@ -33,6 +35,7 @@ const $MenstruationEditState = _$MenstruationEditStateTearOff();
 mixin _$MenstruationEditState {
   Menstruation? get menstruation => throw _privateConstructorUsedError;
   List<DateTime> get displayedDates => throw _privateConstructorUsedError;
+  String? get invalidMessage => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $MenstruationEditStateCopyWith<MenstruationEditState> get copyWith =>
@@ -44,7 +47,10 @@ abstract class $MenstruationEditStateCopyWith<$Res> {
   factory $MenstruationEditStateCopyWith(MenstruationEditState value,
           $Res Function(MenstruationEditState) then) =
       _$MenstruationEditStateCopyWithImpl<$Res>;
-  $Res call({Menstruation? menstruation, List<DateTime> displayedDates});
+  $Res call(
+      {Menstruation? menstruation,
+      List<DateTime> displayedDates,
+      String? invalidMessage});
 
   $MenstruationCopyWith<$Res>? get menstruation;
 }
@@ -62,6 +68,7 @@ class _$MenstruationEditStateCopyWithImpl<$Res>
   $Res call({
     Object? menstruation = freezed,
     Object? displayedDates = freezed,
+    Object? invalidMessage = freezed,
   }) {
     return _then(_value.copyWith(
       menstruation: menstruation == freezed
@@ -72,6 +79,10 @@ class _$MenstruationEditStateCopyWithImpl<$Res>
           ? _value.displayedDates
           : displayedDates // ignore: cast_nullable_to_non_nullable
               as List<DateTime>,
+      invalidMessage: invalidMessage == freezed
+          ? _value.invalidMessage
+          : invalidMessage // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 
@@ -94,7 +105,10 @@ abstract class _$MenstruationEditStateCopyWith<$Res>
           $Res Function(_MenstruationEditState) then) =
       __$MenstruationEditStateCopyWithImpl<$Res>;
   @override
-  $Res call({Menstruation? menstruation, List<DateTime> displayedDates});
+  $Res call(
+      {Menstruation? menstruation,
+      List<DateTime> displayedDates,
+      String? invalidMessage});
 
   @override
   $MenstruationCopyWith<$Res>? get menstruation;
@@ -115,6 +129,7 @@ class __$MenstruationEditStateCopyWithImpl<$Res>
   $Res call({
     Object? menstruation = freezed,
     Object? displayedDates = freezed,
+    Object? invalidMessage = freezed,
   }) {
     return _then(_MenstruationEditState(
       menstruation: menstruation == freezed
@@ -125,6 +140,10 @@ class __$MenstruationEditStateCopyWithImpl<$Res>
           ? _value.displayedDates
           : displayedDates // ignore: cast_nullable_to_non_nullable
               as List<DateTime>,
+      invalidMessage: invalidMessage == freezed
+          ? _value.invalidMessage
+          : invalidMessage // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 }
@@ -132,17 +151,21 @@ class __$MenstruationEditStateCopyWithImpl<$Res>
 /// @nodoc
 class _$_MenstruationEditState extends _MenstruationEditState {
   _$_MenstruationEditState(
-      {required this.menstruation, required this.displayedDates})
+      {required this.menstruation,
+      required this.displayedDates,
+      this.invalidMessage})
       : super._();
 
   @override
   final Menstruation? menstruation;
   @override
   final List<DateTime> displayedDates;
+  @override
+  final String? invalidMessage;
 
   @override
   String toString() {
-    return 'MenstruationEditState(menstruation: $menstruation, displayedDates: $displayedDates)';
+    return 'MenstruationEditState(menstruation: $menstruation, displayedDates: $displayedDates, invalidMessage: $invalidMessage)';
   }
 
   @override
@@ -154,14 +177,18 @@ class _$_MenstruationEditState extends _MenstruationEditState {
                     .equals(other.menstruation, menstruation)) &&
             (identical(other.displayedDates, displayedDates) ||
                 const DeepCollectionEquality()
-                    .equals(other.displayedDates, displayedDates)));
+                    .equals(other.displayedDates, displayedDates)) &&
+            (identical(other.invalidMessage, invalidMessage) ||
+                const DeepCollectionEquality()
+                    .equals(other.invalidMessage, invalidMessage)));
   }
 
   @override
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(menstruation) ^
-      const DeepCollectionEquality().hash(displayedDates);
+      const DeepCollectionEquality().hash(displayedDates) ^
+      const DeepCollectionEquality().hash(invalidMessage);
 
   @JsonKey(ignore: true)
   @override
@@ -173,13 +200,16 @@ class _$_MenstruationEditState extends _MenstruationEditState {
 abstract class _MenstruationEditState extends MenstruationEditState {
   factory _MenstruationEditState(
       {required Menstruation? menstruation,
-      required List<DateTime> displayedDates}) = _$_MenstruationEditState;
+      required List<DateTime> displayedDates,
+      String? invalidMessage}) = _$_MenstruationEditState;
   _MenstruationEditState._() : super._();
 
   @override
   Menstruation? get menstruation => throw _privateConstructorUsedError;
   @override
   List<DateTime> get displayedDates => throw _privateConstructorUsedError;
+  @override
+  String? get invalidMessage => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$MenstruationEditStateCopyWith<_MenstruationEditState> get copyWith =>

@@ -14,6 +14,7 @@ class TextColor {
   static final Color primary = PilllColors.primary;
   static final Color main = HexColor.fromHex("29304D");
   static final Color link = primary;
+  static final Color danger = PilllColors.red;
 }
 
 class TextColorStyle {
@@ -28,4 +29,5 @@ class TextColorStyle {
   static final TextStyle primary = TextStyle(color: TextColor.primary);
   static final TextStyle main = TextStyle(color: TextColor.main);
   static final TextStyle link = TextStyle(color: TextColor.link);
+  static final TextStyle danger = TextStyle(color: TextColor.danger);
 }

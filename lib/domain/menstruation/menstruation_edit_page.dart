@@ -15,10 +15,12 @@ import 'package:pilll/entity/menstruation.dart';
 import 'package:pilll/store/menstruation_edit.dart';
 
 class MenstruationEditPage extends HookWidget {
+  final String title;
   final Menstruation? menstruation;
   final Function(Menstruation) didEndSave;
   final VoidCallback didEndDelete;
   MenstruationEditPage({
+    required this.title,
     required this.menstruation,
     required this.didEndSave,
     required this.didEndDelete,
@@ -28,6 +30,7 @@ class MenstruationEditPage extends HookWidget {
   Widget build(BuildContext context) {
     final store = useProvider(menstruationEditProvider(menstruation));
     final state = useProvider(menstruationEditProvider(menstruation).state);
+    final invalidMessage = state.invalidMessage;
     return DraggableScrollableSheet(
       initialChildSize: 0.7,
       builder: (context, scrollController) {
@@ -43,41 +46,54 @@ class MenstruationEditPage extends HookWidget {
             children: [
               Padding(
                 padding: const EdgeInsets.only(top: 21.0, left: 16, right: 16),
-                child: Row(
-                  crossAxisAlignment: CrossAxisAlignment.center,
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text("生理期間の編集",
-                        style: FontType.sBigTitle.merge(TextColorStyle.main)),
-                    Spacer(),
-                    SecondaryButton(
-                      onPressed: () {
-                        analytics.logEvent(
-                            name: "pressed_saving_menstruation_edit");
-                        if (store.shouldShowDiscardDialog()) {
-                          showDialog(
-                            context: context,
-                            builder: (context) => DiscardDialog(
-                              title: "生理期間を削除しますか？",
-                              message: "",
-                              doneButtonText: "削除する",
-                              done: () => store
-                                  .delete()
-                                  .then((_) => didEndDelete())
-                                  .then((_) => analytics.logEvent(
-                                      name: "pressed_delete_menstruation")),
-                              cancel: () {
-                                analytics.logEvent(
-                                    name: "cancelled_delete_menstruation");
-                                Navigator.of(context).pop();
-                              },
-                            ),
-                          );
-                        } else {
-                          store.save().then((value) => didEndSave(value));
-                        }
-                      },
-                      text: "保存",
-                    )
+                    Row(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: [
+                        Text(title,
+                            style:
+                                FontType.sBigTitle.merge(TextColorStyle.main)),
+                        Spacer(),
+                        SecondaryButton(
+                          onPressed: () {
+                            analytics.logEvent(
+                                name: "pressed_saving_menstruation_edit");
+                            if (store.shouldShowDiscardDialog()) {
+                              showDialog(
+                                context: context,
+                                builder: (context) => DiscardDialog(
+                                  title: "生理期間を削除しますか？",
+                                  message: "",
+                                  doneButtonText: "削除する",
+                                  done: () => store
+                                      .delete()
+                                      .then((_) => didEndDelete())
+                                      .then((_) => analytics.logEvent(
+                                          name: "pressed_delete_menstruation")),
+                                  cancel: () {
+                                    analytics.logEvent(
+                                        name: "cancelled_delete_menstruation");
+                                    Navigator.of(context).pop();
+                                  },
+                                ),
+                              );
+                            } else {
+                              store.save().then((value) => didEndSave(value));
+                            }
+                          },
+                          text: "保存",
+                        )
+                      ],
+                    ),
+                    if (invalidMessage != null) ...[
+                      SizedBox(height: 12),
+                      Text(invalidMessage,
+                          style:
+                              FontType.assisting.merge(TextColorStyle.danger)),
+                    ],
                   ],
                 ),
               ),
