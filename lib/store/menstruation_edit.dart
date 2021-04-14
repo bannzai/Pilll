@@ -5,7 +5,6 @@ import 'package:pilll/service/setting.dart';
 import 'package:pilll/state/menstruation_edit.dart';
 import 'package:pilll/util/datetime/date_compare.dart';
 import 'package:pilll/util/datetime/day.dart';
-import 'package:pilll/util/formatter/date_time_formatter.dart';
 
 final menstruationEditProvider = StateNotifierProvider.family
     .autoDispose<MenstruationEditStore, Menstruation?>(
@@ -81,8 +80,7 @@ class MenstruationEditStore extends StateNotifier<MenstruationEditState> {
   }
 
   Future<Menstruation> save() {
-    final menstruation =
-        state.menstruation?.copyWith(isNotYetUserEdited: false);
+    final menstruation = state.menstruation;
     if (menstruation == null) {
       throw FormatException("menstruation is not exists when save");
     }
@@ -94,44 +92,13 @@ class MenstruationEditStore extends StateNotifier<MenstruationEditState> {
     }
   }
 
-  Menstruation? _menstruationForDuplicatedDuration(Menstruation menstruation) {
-    final filtered = _allMenstruation.where((element) =>
-        menstruation.id != element.id &&
-            (element.dateRange.inRange(menstruation.beginDate) ||
-                element.dateRange.inRange(menstruation.endDate)) ||
-        menstruation.dateRange.inRange(element.beginDate) ||
-        menstruation.dateRange.inRange(element.endDate));
-    if (filtered.isEmpty) {
-      return null;
-    }
-    return filtered.last;
-  }
-
-  _setMenstruationOrInvalidMessage(Menstruation? menstruation) {
-    if (menstruation == null) {
-      state = state.copyWith(menstruation: menstruation);
-      return;
-    }
-    final duplicatedMenstruation =
-        _menstruationForDuplicatedDuration(menstruation);
-    if (duplicatedMenstruation != null) {
-      final begin =
-          DateTimeFormatter.monthAndDay(duplicatedMenstruation.beginDate);
-      final end = DateTimeFormatter.monthAndDay(duplicatedMenstruation.endDate);
-      state = state.copyWith(invalidMessage: "$begin-$endの期間にすでに生理が記録されています");
-      return;
-    }
-
-    state = state.copyWith(invalidMessage: null);
-    state = state.copyWith(menstruation: menstruation);
-  }
-
   tappedDate(DateTime date) async {
     final menstruation = state.menstruation;
     if (date.isAfter(today()) && menstruation == null) {
       state = state.copyWith(invalidMessage: "未来の日付は選択できません");
       return;
     }
+    state = state.copyWith(invalidMessage: null);
 
     if (menstruation == null) {
       try {
@@ -144,50 +111,50 @@ class MenstruationEditStore extends StateNotifier<MenstruationEditState> {
           menstruation = initialMenstruation.copyWith(
             beginDate: date,
             endDate: end,
-            isNotYetUserEdited: false,
           );
         } else {
           menstruation = Menstruation(
             beginDate: begin,
             endDate: end,
-            isNotYetUserEdited: false,
             createdAt: now(),
           );
         }
-        _setMenstruationOrInvalidMessage(menstruation);
+        state = state.copyWith(menstruation: menstruation);
         return;
       } catch (error) {
         throw error;
       }
     }
 
-    state = state.copyWith(invalidMessage: null);
-
     if (isSameDay(menstruation.beginDate, date) &&
         isSameDay(menstruation.endDate, date)) {
-      _setMenstruationOrInvalidMessage(null);
+      state = state.copyWith(menstruation: null);
       return;
     }
 
     if (date.isBefore(menstruation.beginDate)) {
-      _setMenstruationOrInvalidMessage(menstruation.copyWith(beginDate: date));
+      state =
+          state.copyWith(menstruation: menstruation.copyWith(beginDate: date));
       return;
     }
     if (date.isAfter(menstruation.endDate)) {
-      _setMenstruationOrInvalidMessage(menstruation.copyWith(endDate: date));
+      state =
+          state.copyWith(menstruation: menstruation.copyWith(endDate: date));
       return;
     }
 
     if ((isSameDay(menstruation.beginDate, date) ||
             date.isAfter(menstruation.beginDate)) &&
         date.isBefore(menstruation.endDate)) {
-      _setMenstruationOrInvalidMessage(menstruation.copyWith(endDate: date));
+      state =
+          state.copyWith(menstruation: menstruation.copyWith(endDate: date));
       return;
     }
 
     if (isSameDay(menstruation.endDate, date)) {
-      _setMenstruationOrInvalidMessage(
-          menstruation.copyWith(endDate: date.subtract(Duration(days: 1))));
+      state = state.copyWith(
+          menstruation:
+              menstruation.copyWith(endDate: date.subtract(Duration(days: 1))));
       return;
     }
   }

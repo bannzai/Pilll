@@ -36,7 +36,6 @@ abstract class Menstruation with _$Menstruation {
       toJson: NonNullTimestampConverter.dateTimeToTimestamp,
     )
         required DateTime endDate,
-    required bool isNotYetUserEdited,
     @JsonKey(
       fromJson: TimestampConverter.timestampToDateTime,
       toJson: TimestampConverter.dateTimeToTimestamp,

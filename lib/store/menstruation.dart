@@ -100,7 +100,6 @@ class MenstruationStore extends StateNotifier<MenstruationState> {
     final menstruation = Menstruation(
         beginDate: begin,
         endDate: begin.add(Duration(days: duration - 1)),
-        isNotYetUserEdited: false,
         createdAt: now());
     return menstruationService.create(menstruation);
   }
@@ -114,7 +113,6 @@ class MenstruationStore extends StateNotifier<MenstruationState> {
     final menstruation = Menstruation(
         beginDate: begin,
         endDate: begin.add(Duration(days: duration - 1)),
-        isNotYetUserEdited: false,
         createdAt: now());
     return menstruationService.create(menstruation);
   }
