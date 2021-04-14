@@ -244,7 +244,7 @@ class RecordPage extends HookWidget {
     store.take(takenDate).then((value) {
       _requestInAppReview();
       Future.delayed(Duration(milliseconds: 500)).then((_) {
-        _showReleaseNote(context);
+        showReleaseNotePreDialog(context);
       });
     });
   }
@@ -352,19 +352,5 @@ class RecordPage extends HookWidget {
         await InAppReview.instance.requestReview();
       }
     });
-  }
-
-  _showReleaseNote(BuildContext context) async {
-    final key = ReleaseNoteKey.version2_3_0;
-    final storage = await SharedPreferences.getInstance();
-    if (storage.getBool(key) ?? false) {
-      return;
-    }
-    storage.setBool(key, true);
-    showDialog(
-        context: context,
-        builder: (context) {
-          return ReleaseNote();
-        });
   }
 }
