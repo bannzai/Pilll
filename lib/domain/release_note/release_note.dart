@@ -5,8 +5,8 @@ import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/domain/home/home_page.dart';
 import 'package:flutter/material.dart';
 
-class ReleaseNote220 extends StatelessWidget {
-  const ReleaseNote220({Key? key}) : super(key: key);
+class ReleaseNote extends StatelessWidget {
+  const ReleaseNote({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Material(
