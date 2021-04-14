@@ -93,38 +93,6 @@ class MenstruationEditStore extends StateNotifier<MenstruationEditState> {
     }
   }
 
-  Menstruation? _menstruationForDuplicatedDuration(Menstruation menstruation) {
-    final filtered = _allMenstruation.where((element) =>
-        menstruation.id != element.id &&
-            (element.dateRange.inRange(menstruation.beginDate) ||
-                element.dateRange.inRange(menstruation.endDate)) ||
-        menstruation.dateRange.inRange(element.beginDate) ||
-        menstruation.dateRange.inRange(element.endDate));
-    if (filtered.isEmpty) {
-      return null;
-    }
-    return filtered.last;
-  }
-
-  _setMenstruationOrInvalidMessage(Menstruation? menstruation) {
-    if (menstruation == null) {
-      state = state.copyWith(menstruation: menstruation);
-      return;
-    }
-    final duplicatedMenstruation =
-        _menstruationForDuplicatedDuration(menstruation);
-    if (duplicatedMenstruation != null) {
-      final begin =
-          DateTimeFormatter.monthAndDay(duplicatedMenstruation.beginDate);
-      final end = DateTimeFormatter.monthAndDay(duplicatedMenstruation.endDate);
-      state = state.copyWith(invalidMessage: "$begin-$endの期間にすでに生理が記録されています");
-      return;
-    }
-
-    state = state.copyWith(invalidMessage: null);
-    state = state.copyWith(menstruation: menstruation);
-  }
-
   tappedDate(DateTime date) async {
     final menstruation = state.menstruation;
     if (date.isAfter(today()) && menstruation == null) {
@@ -179,13 +147,15 @@ class MenstruationEditStore extends StateNotifier<MenstruationEditState> {
     if ((isSameDay(menstruation.beginDate, date) ||
             date.isAfter(menstruation.beginDate)) &&
         date.isBefore(menstruation.endDate)) {
-      state = state.copyWith(menstruation: menstruation.copyWith(endDate: date));
+      state =
+          state.copyWith(menstruation: menstruation.copyWith(endDate: date));
       return;
     }
 
     if (isSameDay(menstruation.endDate, date)) {
-      state = state.copyWith(menstruation: 
-          menstruation.copyWith(endDate: date.subtract(Duration(days: 1))));
+      state = state.copyWith(
+          menstruation:
+              menstruation.copyWith(endDate: date.subtract(Duration(days: 1))));
       return;
     }
   }
