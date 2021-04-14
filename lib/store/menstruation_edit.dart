@@ -81,8 +81,7 @@ class MenstruationEditStore extends StateNotifier<MenstruationEditState> {
   }
 
   Future<Menstruation> save() {
-    final menstruation =
-        state.menstruation?.copyWith(isNotYetUserEdited: false);
+    final menstruation = state.menstruation;
     if (menstruation == null) {
       throw FormatException("menstruation is not exists when save");
     }
@@ -144,13 +143,11 @@ class MenstruationEditStore extends StateNotifier<MenstruationEditState> {
           menstruation = initialMenstruation.copyWith(
             beginDate: date,
             endDate: end,
-            isNotYetUserEdited: false,
           );
         } else {
           menstruation = Menstruation(
             beginDate: begin,
             endDate: end,
-            isNotYetUserEdited: false,
             createdAt: now(),
           );
         }
