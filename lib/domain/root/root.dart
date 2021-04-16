@@ -130,7 +130,7 @@ class RootState extends State<Root> {
   _auth() {
     var info = "";
     auth().then((authInfo) {
-      info += "DEUBG: - 1;";
+      info += "DEUBG: - 1; ${FirebaseAuth.instance.currentUser}";
       final userService = UserService(DatabaseConnection(authInfo.uid));
       info += "DEUBG: - 2; authInfo.uid: ${authInfo.uid}";
       return userService.prepare(authInfo.uid).then((_) async {
