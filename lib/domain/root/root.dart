@@ -1,10 +1,10 @@
+import 'package:pilll/analytics.dart';
 import 'package:pilll/auth/auth.dart';
 import 'package:pilll/database/database.dart';
 import 'package:pilll/domain/home/home_page.dart';
 import 'package:pilll/domain/initial_setting/initial_setting_1_page.dart';
 import 'package:pilll/entity/user_error.dart';
 import 'package:pilll/components/molecules/indicator.dart';
-import 'package:pilll/error/template.dart';
 import 'package:pilll/error/universal_error_page.dart';
 import 'package:pilll/error_log.dart';
 import 'package:pilll/service/user.dart';
@@ -134,23 +134,28 @@ class RootState extends State<Root> {
         userService.saveStats();
         final user = await userService.fetch();
         if (!user.migratedFlutter) {
+          analytics.logEvent(name: "DEBUG", parameters: {"index": 1});
           await userService.deleteSettings();
           await userService.setFlutterMigrationFlag();
           return ScreenType.initialSetting;
         }
         if (user.setting == null) {
+          analytics.logEvent(name: "DEBUG", parameters: {"index": 2});
           return ScreenType.initialSetting;
         }
         final storage = await SharedPreferences.getInstance();
         if (!storage.getKeys().contains(StringKey.firebaseAnonymousUserID)) {
+          analytics.logEvent(name: "DEBUG", parameters: {"index": 3});
           storage.setString(
               StringKey.firebaseAnonymousUserID, user.anonymouseUserID);
         }
         bool? didEndInitialSetting =
             storage.getBool(BoolKey.didEndInitialSetting);
+        analytics.logEvent(name: "DEBUG", parameters: {"index": 4});
         if (didEndInitialSetting == null) {
           return ScreenType.initialSetting;
         }
+        analytics.logEvent(name: "DEBUG", parameters: {"index": 4});
         if (!didEndInitialSetting) {
           return ScreenType.initialSetting;
         }
@@ -161,9 +166,22 @@ class RootState extends State<Root> {
         this.screenType = screenType;
       });
     }).catchError((error) {
-      errorLogger.recordError(error, null);
-      onError(
-          UserDisplayedError(displayedMessage: "1: -- " + error.toString()));
+      if (error == null) {
+        final e = UserDisplayedError(displayedMessage: "error is null");
+        errorLogger.recordError(e, StackTrace.current);
+        onError(UserDisplayedError(
+            displayedMessage: "1: -- " +
+                e.toString() +
+                "2: -- " +
+                StackTrace.current.toString()));
+        return;
+      }
+      errorLogger.recordError(error, StackTrace.current);
+      onError(UserDisplayedError(
+          displayedMessage: "1: -- " +
+              error.toString() +
+              "2: -- " +
+              StackTrace.current.toString()));
     });
   }
 }

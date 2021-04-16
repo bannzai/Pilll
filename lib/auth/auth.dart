@@ -1,4 +1,5 @@
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:pilll/analytics.dart';
 import 'package:riverpod/riverpod.dart';
 
 class AuthInfo {
@@ -17,6 +18,8 @@ final authStateProvider = FutureProvider<AuthInfo>((ref) {
 
 Future<AuthInfo> auth() =>
     FirebaseAuth.instance.signInAnonymously().then((value) {
+      analytics.logEvent(
+          name: "DEBUG", parameters: {"index": 10, "user": value.user?.uid});
       _authInfoCache = AuthInfo(value.user!.uid);
       return _authInfoCache!;
     });
