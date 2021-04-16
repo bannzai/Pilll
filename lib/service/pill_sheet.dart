@@ -15,7 +15,7 @@ class PillSheetService {
     if (!snapshot.docs.last.exists) return null;
     var document = snapshot.docs.last;
 
-    var data = document.data()!;
+    var data = document.data();
     data["id"] = document.id;
     var pillSheetModel = PillSheetModel.fromJson(data);
 

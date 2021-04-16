@@ -222,7 +222,7 @@ class RootState extends State<Root> {
       }
       errorLogger.recordError(error, StackTrace.current);
       onError(UserDisplayedError(
-          displayedMessage: "0: -- ${e.runtimeType.toString()}" +
+          displayedMessage: "0: -- ${error.runtimeType.toString()}" +
               "1: -- " +
               error.toString() +
               "2: -- $info" +
