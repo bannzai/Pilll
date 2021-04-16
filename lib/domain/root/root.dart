@@ -1,3 +1,4 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:pilll/analytics.dart';
 import 'package:pilll/auth/auth.dart';
 import 'package:pilll/database/database.dart';
@@ -178,6 +179,32 @@ class RootState extends State<Root> {
         this.screenType = screenType;
       });
     }).catchError((error) {
+      if (error is FirebaseAuthException) {
+        final e = UserDisplayedError(
+            displayedMessage:
+                "Firebase auth exception message: ${error.message}");
+        errorLogger.recordError(e, StackTrace.current);
+        onError(UserDisplayedError(
+            displayedMessage: "1: -- " +
+                e.toString() +
+                "2: -- $info" +
+                "3: -- " +
+                e.stackTrace.toString()));
+        return;
+      }
+      if (error is FirebaseException) {
+        final e = UserDisplayedError(
+            displayedMessage:
+                "Firebase exception service: ${error.plugin} / message: ${error.message}");
+        errorLogger.recordError(e, StackTrace.current);
+        onError(UserDisplayedError(
+            displayedMessage: "1: -- " +
+                e.toString() +
+                "2: -- $info" +
+                "3: -- " +
+                e.stackTrace.toString()));
+        return;
+      }
       if (error == null) {
         final e = UserDisplayedError(displayedMessage: "error is null");
         errorLogger.recordError(e, StackTrace.current);
