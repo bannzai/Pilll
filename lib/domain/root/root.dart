@@ -133,7 +133,7 @@ class RootState extends State<Root> {
       info += "DEUBG: - 1;";
       final userService = UserService(DatabaseConnection(authInfo.uid));
       info += "DEUBG: - 2; authInfo.uid: ${authInfo.uid}";
-      return userService.prepare().then((_) async {
+      return userService.prepare(authInfo.uid).then((_) async {
         userService.saveLaunchInfo();
         userService.saveStats();
         final user = await userService.fetch();
