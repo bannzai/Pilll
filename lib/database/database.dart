@@ -1,3 +1,4 @@
+import 'package:pilll/analytics.dart';
 import 'package:pilll/auth/auth.dart';
 import 'package:pilll/entity/diary.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
@@ -32,10 +33,15 @@ abstract class _CollectionPath {
 }
 
 class DatabaseConnection {
-  DatabaseConnection(this._userID);
+  DatabaseConnection(this._userID) {
+    analytics.logEvent(
+        name: "debug_set_user_name", parameters: {"user_id": _userID});
+  }
   final String _userID;
 
   DocumentReference userReference() {
+    analytics.logEvent(
+        name: "debug_user_reference", parameters: {"user_id": _userID});
     return FirebaseFirestore.instance
         .collection(_CollectionPath.users)
         .doc(_userID);
