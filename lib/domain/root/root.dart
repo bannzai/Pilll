@@ -183,7 +183,7 @@ class RootState extends State<Root> {
         final e = UserDisplayedError(
             displayedMessage:
                 "Firebase auth exception message: ${error.message}");
-        errorLogger.recordError(e, StackTrace.current);
+        errorLogger.recordError(error, StackTrace.current);
 
         onError(UserDisplayedError(
             displayedMessage: "0: -- ${e.runtimeType.toString()}" +
@@ -198,7 +198,7 @@ class RootState extends State<Root> {
         final e = UserDisplayedError(
             displayedMessage:
                 "Firebase exception service: ${error.plugin} / message: ${error.message}");
-        errorLogger.recordError(e, StackTrace.current);
+        errorLogger.recordError(error, StackTrace.current);
         onError(UserDisplayedError(
             displayedMessage: "0: -- ${e.runtimeType.toString()}" +
                 "1: -- " +
