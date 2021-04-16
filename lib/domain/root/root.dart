@@ -115,8 +115,11 @@ class RootState extends State<Root> {
       }, error: (error, stacktrace) {
         print(error);
         print(stacktrace);
-        final displayedError =
-            UserDisplayedError(displayedMessage: error.toString());
+        final displayedError = UserDisplayedError(
+            displayedMessage: "2: -- error: " +
+                error.toString() +
+                "stacktrace: " +
+                stacktrace.toString());
         errorLogger.recordError(error, stacktrace);
         return UniversalErrorPage(error: displayedError);
       });
@@ -159,7 +162,8 @@ class RootState extends State<Root> {
       });
     }).catchError((error) {
       errorLogger.recordError(error, null);
-      onError(UserDisplayedError(displayedMessage: error.toString()));
+      onError(
+          UserDisplayedError(displayedMessage: "1: -- " + error.toString()));
     });
   }
 }
