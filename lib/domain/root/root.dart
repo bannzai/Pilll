@@ -127,23 +127,30 @@ class RootState extends State<Root> {
   }
 
   _auth() {
+    var info = "";
     auth().then((authInfo) {
+      info += "DEUBG: - 1;";
       final userService = UserService(DatabaseConnection(authInfo.uid));
+      info += "DEUBG: - 2; authInfo.uid: ${authInfo.uid}";
       return userService.prepare().then((_) async {
         userService.saveLaunchInfo();
         userService.saveStats();
         final user = await userService.fetch();
         if (!user.migratedFlutter) {
           analytics.logEvent(name: "DEBUG", parameters: {"index": 1});
+          info = "DEUBG: - 3;";
           await userService.deleteSettings();
           await userService.setFlutterMigrationFlag();
           return ScreenType.initialSetting;
         }
+        info += "DEUBG: - 3; user: ${user.toJson()}";
         if (user.setting == null) {
           analytics.logEvent(name: "DEBUG", parameters: {"index": 2});
           return ScreenType.initialSetting;
         }
+        info += "DEUBG: - 4;";
         final storage = await SharedPreferences.getInstance();
+        info += "DEUBG: - 5;${storage.getKeys()}";
         if (!storage.getKeys().contains(StringKey.firebaseAnonymousUserID)) {
           analytics.logEvent(name: "DEBUG", parameters: {"index": 3});
           storage.setString(
@@ -151,18 +158,23 @@ class RootState extends State<Root> {
         }
         bool? didEndInitialSetting =
             storage.getBool(BoolKey.didEndInitialSetting);
+        info += "DEUBG: - 6;$didEndInitialSetting";
         analytics.logEvent(name: "DEBUG", parameters: {"index": 4});
         if (didEndInitialSetting == null) {
           return ScreenType.initialSetting;
         }
+        info += "DEUBG: - 7;$didEndInitialSetting";
         analytics.logEvent(name: "DEBUG", parameters: {"index": 4});
         if (!didEndInitialSetting) {
           return ScreenType.initialSetting;
         }
+        info += "DEUBG: - 8;$didEndInitialSetting";
         return ScreenType.home;
       });
     }).then((screenType) {
+      info += "DEUBG: - 9;$screenType";
       setState(() {
+        info += "DEUBG: - 10;$screenType";
         this.screenType = screenType;
       });
     }).catchError((error) {
@@ -172,7 +184,8 @@ class RootState extends State<Root> {
         onError(UserDisplayedError(
             displayedMessage: "1: -- " +
                 e.toString() +
-                "2: -- " +
+                "2: -- $info" +
+                "3: -- " +
                 StackTrace.current.toString()));
         return;
       }
@@ -180,7 +193,8 @@ class RootState extends State<Root> {
       onError(UserDisplayedError(
           displayedMessage: "1: -- " +
               error.toString() +
-              "2: -- " +
+              "2: -- $info" +
+              "3: -- " +
               StackTrace.current.toString()));
     });
   }
