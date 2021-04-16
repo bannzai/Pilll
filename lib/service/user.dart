@@ -27,8 +27,8 @@ class UserService {
       throw FormatException(
           "cause exception when failed fetch and create user for $error");
     });
-    errorLogger.setUserIdentifier(auth.FirebaseAuth.instance.currentUser!.uid);
-    firebaseAnalytics.setUserId(auth.FirebaseAuth.instance.currentUser!.uid);
+    errorLogger.setUserIdentifier(uid);
+    firebaseAnalytics.setUserId(uid);
     return user;
   }
 
