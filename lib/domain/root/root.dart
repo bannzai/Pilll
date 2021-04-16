@@ -115,7 +115,7 @@ class RootState extends State<Root> {
         print(error);
         print(stacktrace);
         final displayedError =
-            UserDisplayedError(displayedMessage: ErrorMessages.connection);
+            UserDisplayedError(displayedMessage: error.toString());
         return UniversalErrorPage(error: displayedError);
       });
     });
@@ -156,7 +156,7 @@ class RootState extends State<Root> {
         this.screenType = screenType;
       });
     }).catchError((error) {
-      onError(UserDisplayedError(displayedMessage: ErrorMessages.connection));
+      onError(UserDisplayedError(displayedMessage: error.toString()));
     });
   }
 }
