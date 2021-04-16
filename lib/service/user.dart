@@ -14,17 +14,15 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 final userServiceProvider =
     Provider((ref) => UserService(ref.watch(databaseProvider)));
-final initialUserProvider =
-    FutureProvider((ref) => ref.watch(userServiceProvider).prepare());
 
 class UserService {
   final DatabaseConnection _database;
   UserService(this._database);
 
-  Future<User> prepare() async {
+  Future<User> prepare(String uid) async {
     final user = await fetch().catchError((error) {
       if (error is UserNotFound) {
-        return _create().then((_) => fetch());
+        return _create(uid).then((_) => fetch());
       }
       throw FormatException(
           "cause exception when failed fetch and create user for $error");
@@ -64,11 +62,10 @@ class UserService {
     );
   }
 
-  Future<void> _create() {
+  Future<void> _create(String uid) {
     return _database.userReference().set(
       {
-        UserFirestoreFieldKeys.anonymouseUserID:
-            auth.FirebaseAuth.instance.currentUser!.uid,
+        UserFirestoreFieldKeys.anonymouseUserID: uid,
       },
       SetOptions(merge: true),
     );
