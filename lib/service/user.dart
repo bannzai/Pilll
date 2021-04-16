@@ -12,23 +12,12 @@ import 'package:package_info/package_info.dart';
 import 'package:riverpod/riverpod.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-abstract class UserServiceInterface {
-  Future<User> prepare();
-  Future<User> fetch();
-  Future<User> subscribe();
-  Future<void> deleteSettings();
-  Future<void> setFlutterMigrationFlag();
-  Future<void> registerRemoteNotificationToken(String token);
-  Future<void> saveLaunchInfo();
-  Future<void> saveStats();
-}
-
 final userServiceProvider =
     Provider((ref) => UserService(ref.watch(databaseProvider)));
 final initialUserProvider =
     FutureProvider((ref) => ref.watch(userServiceProvider).prepare());
 
-class UserService extends UserServiceInterface {
+class UserService {
   final DatabaseConnection _database;
   UserService(this._database);
 
