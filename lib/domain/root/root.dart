@@ -6,6 +6,7 @@ import 'package:pilll/entity/user_error.dart';
 import 'package:pilll/components/molecules/indicator.dart';
 import 'package:pilll/error/template.dart';
 import 'package:pilll/error/universal_error_page.dart';
+import 'package:pilll/error_log.dart';
 import 'package:pilll/service/user.dart';
 import 'package:pilll/util/shared_preference/keys.dart';
 import 'package:flutter/material.dart';
@@ -116,6 +117,7 @@ class RootState extends State<Root> {
         print(stacktrace);
         final displayedError =
             UserDisplayedError(displayedMessage: error.toString());
+        errorLogger.recordError(error, stacktrace);
         return UniversalErrorPage(error: displayedError);
       });
     });
@@ -156,6 +158,7 @@ class RootState extends State<Root> {
         this.screenType = screenType;
       });
     }).catchError((error) {
+      errorLogger.recordError(error, null);
       onError(UserDisplayedError(displayedMessage: error.toString()));
     });
   }
