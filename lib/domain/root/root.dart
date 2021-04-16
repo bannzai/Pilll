@@ -184,8 +184,10 @@ class RootState extends State<Root> {
             displayedMessage:
                 "Firebase auth exception message: ${error.message}");
         errorLogger.recordError(e, StackTrace.current);
+
         onError(UserDisplayedError(
-            displayedMessage: "1: -- " +
+            displayedMessage: "0: -- ${e.runtimeType.toString()}" +
+                "1: -- " +
                 e.toString() +
                 "2: -- $info" +
                 "3: -- " +
@@ -198,7 +200,8 @@ class RootState extends State<Root> {
                 "Firebase exception service: ${error.plugin} / message: ${error.message}");
         errorLogger.recordError(e, StackTrace.current);
         onError(UserDisplayedError(
-            displayedMessage: "1: -- " +
+            displayedMessage: "0: -- ${e.runtimeType.toString()}" +
+                "1: -- " +
                 e.toString() +
                 "2: -- $info" +
                 "3: -- " +
@@ -209,7 +212,8 @@ class RootState extends State<Root> {
         final e = UserDisplayedError(displayedMessage: "error is null");
         errorLogger.recordError(e, StackTrace.current);
         onError(UserDisplayedError(
-            displayedMessage: "1: -- " +
+            displayedMessage: "0: -- ${e.runtimeType.toString()}" +
+                "1: -- " +
                 e.toString() +
                 "2: -- $info" +
                 "3: -- " +
@@ -218,7 +222,8 @@ class RootState extends State<Root> {
       }
       errorLogger.recordError(error, StackTrace.current);
       onError(UserDisplayedError(
-          displayedMessage: "1: -- " +
+          displayedMessage: "0: -- ${e.runtimeType.toString()}" +
+              "1: -- " +
               error.toString() +
               "2: -- $info" +
               "3: -- " +
