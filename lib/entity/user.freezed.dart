@@ -171,11 +171,11 @@ class _$UserTearOff {
   const _$UserTearOff();
 
   _User call(
-      {required String anonymouseUserID,
+      {required String anonymousUserID,
       @JsonKey(name: "settings") Setting? setting,
       bool migratedFlutter = false}) {
     return _User(
-      anonymouseUserID: anonymouseUserID,
+      anonymousUserID: anonymousUserID,
       setting: setting,
       migratedFlutter: migratedFlutter,
     );
@@ -191,7 +191,7 @@ const $User = _$UserTearOff();
 
 /// @nodoc
 mixin _$User {
-  String get anonymouseUserID => throw _privateConstructorUsedError;
+  String get anonymousUserID => throw _privateConstructorUsedError;
   @JsonKey(name: "settings")
   Setting? get setting => throw _privateConstructorUsedError;
   bool get migratedFlutter => throw _privateConstructorUsedError;
@@ -206,7 +206,7 @@ abstract class $UserCopyWith<$Res> {
   factory $UserCopyWith(User value, $Res Function(User) then) =
       _$UserCopyWithImpl<$Res>;
   $Res call(
-      {String anonymouseUserID,
+      {String anonymousUserID,
       @JsonKey(name: "settings") Setting? setting,
       bool migratedFlutter});
 
@@ -223,14 +223,14 @@ class _$UserCopyWithImpl<$Res> implements $UserCopyWith<$Res> {
 
   @override
   $Res call({
-    Object? anonymouseUserID = freezed,
+    Object? anonymousUserID = freezed,
     Object? setting = freezed,
     Object? migratedFlutter = freezed,
   }) {
     return _then(_value.copyWith(
-      anonymouseUserID: anonymouseUserID == freezed
-          ? _value.anonymouseUserID
-          : anonymouseUserID // ignore: cast_nullable_to_non_nullable
+      anonymousUserID: anonymousUserID == freezed
+          ? _value.anonymousUserID
+          : anonymousUserID // ignore: cast_nullable_to_non_nullable
               as String,
       setting: setting == freezed
           ? _value.setting
@@ -261,7 +261,7 @@ abstract class _$UserCopyWith<$Res> implements $UserCopyWith<$Res> {
       __$UserCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String anonymouseUserID,
+      {String anonymousUserID,
       @JsonKey(name: "settings") Setting? setting,
       bool migratedFlutter});
 
@@ -280,14 +280,14 @@ class __$UserCopyWithImpl<$Res> extends _$UserCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object? anonymouseUserID = freezed,
+    Object? anonymousUserID = freezed,
     Object? setting = freezed,
     Object? migratedFlutter = freezed,
   }) {
     return _then(_User(
-      anonymouseUserID: anonymouseUserID == freezed
-          ? _value.anonymouseUserID
-          : anonymouseUserID // ignore: cast_nullable_to_non_nullable
+      anonymousUserID: anonymousUserID == freezed
+          ? _value.anonymousUserID
+          : anonymousUserID // ignore: cast_nullable_to_non_nullable
               as String,
       setting: setting == freezed
           ? _value.setting
@@ -306,7 +306,7 @@ class __$UserCopyWithImpl<$Res> extends _$UserCopyWithImpl<$Res>
 /// @nodoc
 class _$_User extends _User {
   _$_User(
-      {required this.anonymouseUserID,
+      {required this.anonymousUserID,
       @JsonKey(name: "settings") this.setting,
       this.migratedFlutter = false})
       : super._();
@@ -315,7 +315,7 @@ class _$_User extends _User {
       _$_$_UserFromJson(json);
 
   @override
-  final String anonymouseUserID;
+  final String anonymousUserID;
   @override
   @JsonKey(name: "settings")
   final Setting? setting;
@@ -325,16 +325,16 @@ class _$_User extends _User {
 
   @override
   String toString() {
-    return 'User(anonymouseUserID: $anonymouseUserID, setting: $setting, migratedFlutter: $migratedFlutter)';
+    return 'User(anonymousUserID: $anonymousUserID, setting: $setting, migratedFlutter: $migratedFlutter)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other is _User &&
-            (identical(other.anonymouseUserID, anonymouseUserID) ||
+            (identical(other.anonymousUserID, anonymousUserID) ||
                 const DeepCollectionEquality()
-                    .equals(other.anonymouseUserID, anonymouseUserID)) &&
+                    .equals(other.anonymousUserID, anonymousUserID)) &&
             (identical(other.setting, setting) ||
                 const DeepCollectionEquality()
                     .equals(other.setting, setting)) &&
@@ -346,7 +346,7 @@ class _$_User extends _User {
   @override
   int get hashCode =>
       runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(anonymouseUserID) ^
+      const DeepCollectionEquality().hash(anonymousUserID) ^
       const DeepCollectionEquality().hash(setting) ^
       const DeepCollectionEquality().hash(migratedFlutter);
 
@@ -363,7 +363,7 @@ class _$_User extends _User {
 
 abstract class _User extends User {
   factory _User(
-      {required String anonymouseUserID,
+      {required String anonymousUserID,
       @JsonKey(name: "settings") Setting? setting,
       bool migratedFlutter}) = _$_User;
   _User._() : super._();
@@ -371,7 +371,7 @@ abstract class _User extends User {
   factory _User.fromJson(Map<String, dynamic> json) = _$_User.fromJson;
 
   @override
-  String get anonymouseUserID => throw _privateConstructorUsedError;
+  String get anonymousUserID => throw _privateConstructorUsedError;
   @override
   @JsonKey(name: "settings")
   Setting? get setting => throw _privateConstructorUsedError;
