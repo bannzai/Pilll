@@ -154,8 +154,7 @@ class RootState extends State<Root> {
         info += "DEUBG: - 5;${storage.getKeys()}";
         if (!storage.getKeys().contains(StringKey.firebaseAnonymousUserID)) {
           analytics.logEvent(name: "DEBUG", parameters: {"index": 3});
-          storage.setString(
-              StringKey.firebaseAnonymousUserID, user.anonymousUserID);
+          storage.setString(StringKey.firebaseAnonymousUserID, authInfo.uid);
         }
         bool? didEndInitialSetting =
             storage.getBool(BoolKey.didEndInitialSetting);
