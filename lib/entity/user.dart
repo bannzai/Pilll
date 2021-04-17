@@ -32,7 +32,7 @@ abstract class UserPrivate implements _$UserPrivate {
 }
 
 extension UserFirestoreFieldKeys on String {
-  static final anonymouseUserID = "anonymouseUserID";
+  static final anonymousUserID = "anonymousUserID";
   static final settings = "settings";
   static final migratedFlutter = "migratedFlutter";
   static final packageInfo = "packageInfo";
@@ -40,11 +40,11 @@ extension UserFirestoreFieldKeys on String {
 
 @freezed
 abstract class User implements _$User {
-  String get documentID => anonymouseUserID;
+  String get documentID => anonymousUserID;
 
   User._();
   factory User({
-    required String anonymouseUserID,
+    required String anonymousUserID,
     @JsonKey(name: "settings") Setting? setting,
     @Default(false) bool migratedFlutter,
   }) = _User;

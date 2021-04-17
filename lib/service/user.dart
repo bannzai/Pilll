@@ -64,7 +64,7 @@ class UserService {
   Future<void> _create(String uid) {
     return _database.userReference().set(
       {
-        UserFirestoreFieldKeys.anonymouseUserID: uid,
+        UserFirestoreFieldKeys.anonymousUserID: uid,
       },
       SetOptions(merge: true),
     );
