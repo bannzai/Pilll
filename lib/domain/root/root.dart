@@ -6,6 +6,7 @@ import 'package:pilll/entity/user_error.dart';
 import 'package:pilll/components/molecules/indicator.dart';
 import 'package:pilll/error/template.dart';
 import 'package:pilll/error/universal_error_page.dart';
+import 'package:pilll/error_log.dart';
 import 'package:pilll/service/user.dart';
 import 'package:pilll/util/shared_preference/keys.dart';
 import 'package:flutter/material.dart';
@@ -114,8 +115,14 @@ class RootState extends State<Root> {
       }, error: (error, stacktrace) {
         print(error);
         print(stacktrace);
-        final displayedError =
-            UserDisplayedError(displayedMessage: ErrorMessages.connection);
+        final displayedError = UserDisplayedError(
+            displayedMessage: ErrorMessages.connection +
+                "\n" +
+                "errorType: ${error.runtimeType.toString()}\n" +
+                error.toString() +
+                "error: ${error.toString()}\n" +
+                stacktrace.toString());
+        errorLogger.recordError(error, stacktrace);
         return UniversalErrorPage(error: displayedError);
       });
     });
@@ -124,7 +131,7 @@ class RootState extends State<Root> {
   _auth() {
     auth().then((authInfo) {
       final userService = UserService(DatabaseConnection(authInfo.uid));
-      return userService.prepare().then((_) async {
+      return userService.prepare(authInfo.uid).then((_) async {
         userService.saveLaunchInfo();
         userService.saveStats();
         final user = await userService.fetch();
@@ -138,8 +145,7 @@ class RootState extends State<Root> {
         }
         final storage = await SharedPreferences.getInstance();
         if (!storage.getKeys().contains(StringKey.firebaseAnonymousUserID)) {
-          storage.setString(
-              StringKey.firebaseAnonymousUserID, user.anonymouseUserID);
+          storage.setString(StringKey.firebaseAnonymousUserID, authInfo.uid);
         }
         bool? didEndInitialSetting =
             storage.getBool(BoolKey.didEndInitialSetting);
@@ -156,7 +162,13 @@ class RootState extends State<Root> {
         this.screenType = screenType;
       });
     }).catchError((error) {
-      onError(UserDisplayedError(displayedMessage: ErrorMessages.connection));
+      errorLogger.recordError(error, StackTrace.current);
+      onError(UserDisplayedError(
+          displayedMessage: ErrorMessages.connection +
+              "\n" +
+              "errorType: ${error.runtimeType.toString()}\n" +
+              "error: ${error.toString()}\n" +
+              StackTrace.current.toString()));
     });
   }
 }

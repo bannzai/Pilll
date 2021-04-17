@@ -19,7 +19,6 @@ Map<String, dynamic> _$_$_UserPrivateToJson(_$_UserPrivate instance) =>
 
 _$_User _$_$_UserFromJson(Map<String, dynamic> json) {
   return _$_User(
-    anonymouseUserID: json['anonymouseUserID'] as String,
     setting: json['settings'] == null
         ? null
         : Setting.fromJson(json['settings'] as Map<String, dynamic>),
@@ -28,7 +27,6 @@ _$_User _$_$_UserFromJson(Map<String, dynamic> json) {
 }
 
 Map<String, dynamic> _$_$_UserToJson(_$_User instance) => <String, dynamic>{
-      'anonymouseUserID': instance.anonymouseUserID,
       'settings': instance.setting,
       'migratedFlutter': instance.migratedFlutter,
     };

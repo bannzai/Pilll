@@ -3,7 +3,6 @@ import 'dart:async';
 import 'package:pilll/database/database.dart';
 import 'package:pilll/entity/setting.dart';
 import 'package:pilll/entity/user.dart';
-import 'package:pilll/service/user.dart';
 import 'package:riverpod/riverpod.dart';
 
 abstract class SettingServiceInterface {
@@ -14,12 +13,6 @@ abstract class SettingServiceInterface {
 
 final settingServiceProvider =
     Provider((ref) => SettingService(ref.watch(databaseProvider)));
-
-// ignore: top_level_function_literal_block
-final userSettingProvider = FutureProvider((ref) async {
-  final user = await ref.watch(initialUserProvider.future);
-  return user.setting;
-});
 
 class SettingService extends SettingServiceInterface {
   final DatabaseConnection _database;

@@ -7,41 +7,27 @@ import 'package:pilll/entity/user.dart';
 import 'package:pilll/error_log.dart';
 import 'package:pilll/util/shared_preference/keys.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:firebase_auth/firebase_auth.dart' as auth;
 import 'package:package_info/package_info.dart';
 import 'package:riverpod/riverpod.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-abstract class UserServiceInterface {
-  Future<User> prepare();
-  Future<User> fetch();
-  Future<User> subscribe();
-  Future<void> deleteSettings();
-  Future<void> setFlutterMigrationFlag();
-  Future<void> registerRemoteNotificationToken(String token);
-  Future<void> saveLaunchInfo();
-  Future<void> saveStats();
-}
-
 final userServiceProvider =
     Provider((ref) => UserService(ref.watch(databaseProvider)));
-final initialUserProvider =
-    FutureProvider((ref) => ref.watch(userServiceProvider).prepare());
 
-class UserService extends UserServiceInterface {
+class UserService {
   final DatabaseConnection _database;
   UserService(this._database);
 
-  Future<User> prepare() async {
+  Future<User> prepare(String uid) async {
     final user = await fetch().catchError((error) {
       if (error is UserNotFound) {
-        return _create().then((_) => fetch());
+        return _create(uid).then((_) => fetch());
       }
       throw FormatException(
           "cause exception when failed fetch and create user for $error");
     });
-    errorLogger.setUserIdentifier(auth.FirebaseAuth.instance.currentUser!.uid);
-    firebaseAnalytics.setUserId(auth.FirebaseAuth.instance.currentUser!.uid);
+    errorLogger.setUserIdentifier(uid);
+    firebaseAnalytics.setUserId(uid);
     return user;
   }
 
@@ -75,11 +61,10 @@ class UserService extends UserServiceInterface {
     );
   }
 
-  Future<void> _create() {
+  Future<void> _create(String uid) {
     return _database.userReference().set(
       {
-        UserFirestoreFieldKeys.anonymouseUserID:
-            auth.FirebaseAuth.instance.currentUser!.uid,
+        UserFirestoreFieldKeys.anonymousUserID: uid,
       },
       SetOptions(merge: true),
     );

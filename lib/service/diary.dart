@@ -26,7 +26,7 @@ class DiaryService {
         .orderBy(DiaryFirestoreKey.date)
         .get()
         .then((event) =>
-            event.docs.map((doc) => Diary.fromJson(doc.data()!)).toList());
+            event.docs.map((doc) => Diary.fromJson(doc.data())).toList());
   }
 
   Future<List<Diary>> fetchListForMonth(DateTime dateTimeOfMonth) {
@@ -40,7 +40,7 @@ class DiaryService {
         .orderBy(DiaryFirestoreKey.date)
         .get()
         .then((event) =>
-            event.docs.map((doc) => Diary.fromJson(doc.data()!)).toList());
+            event.docs.map((doc) => Diary.fromJson(doc.data())).toList());
   }
 
   Future<Diary> register(Diary diary) {
@@ -66,7 +66,7 @@ class DiaryService {
         .diariesReference()
         .snapshots()
         .map((event) =>
-            event.docs.map((doc) => Diary.fromJson(doc.data()!)).toList())
+            event.docs.map((doc) => Diary.fromJson(doc.data())).toList())
         .map((diaries) => sortedDiaries(diaries));
   }
 }

@@ -1,5 +1,5 @@
 PODS:
-  - cloud_firestore (1.0.3):
+  - cloud_firestore (1.0.5):
     - Firebase/Firestore (= 7.3.0)
     - firebase_core
     - Flutter
@@ -22,21 +22,21 @@ PODS:
   - Firebase/Messaging (7.3.0):
     - Firebase/CoreOnly
     - FirebaseMessaging (~> 7.3.0)
-  - firebase_analytics (8.0.0-dev.0):
+  - firebase_analytics (8.0.0):
     - Firebase/Analytics (= 7.3.0)
     - firebase_core
     - Flutter
-  - firebase_auth (1.0.1):
+  - firebase_auth (1.1.0):
     - Firebase/Auth (= 7.3.0)
     - firebase_core
     - Flutter
-  - firebase_core (1.0.2):
+  - firebase_core (1.0.3):
     - Firebase/CoreOnly (= 7.3.0)
     - Flutter
   - firebase_crashlytics (1.0.0):
     - Firebase/Crashlytics (= 7.3.0)
     - firebase_core
-  - firebase_messaging (9.1.0):
+  - firebase_messaging (9.1.1):
     - Firebase/Messaging (= 7.3.0)
     - firebase_core
     - Flutter
@@ -208,13 +208,13 @@ CHECKOUT OPTIONS:
     :tag: 7.3.0
 
 SPEC CHECKSUMS:
-  cloud_firestore: abe0e10141b0f61377340dcb308d8fa7a7910a10
+  cloud_firestore: 8887a0c9657c09ca73c9273939c5e6bdb5d7aff2
   Firebase: 26223c695fe322633274198cb19dca8cb7e54416
-  firebase_analytics: c9b8ddc8e864e45cd70761c5d972bd11c83574ab
-  firebase_auth: 9f6491ea8e44570323361ae713a2ae3175b3f21a
-  firebase_core: e6cbb0d1f7091edfcae31559e58224bfc1e455dc
+  firebase_analytics: b0d6f5a3c2208510a14b7e9f5b7f3a03b284a386
+  firebase_auth: d09964a120e218411768f5ca2d3ce938abd319f2
+  firebase_core: b5d81dfd4fb2d6f700e67de34d9a633ae325c4e9
   firebase_crashlytics: a62319db93baf2bfeca8a2384af3f29e3d62b09c
-  firebase_messaging: 9c746d6c52bb05764e73bbe745d0d698e5afb695
+  firebase_messaging: 7547c99f31466371f9cfcb733d5a1bf32a819872
   FirebaseAnalytics: 2580c2d62535ae7b644143d48941fcc239ea897a
   FirebaseAuth: c224a0cf1afa0949bd5c7bfcf154b4f5ce8ddef2
   FirebaseCore: 4d3c72622ce0e2106aaa07bb4b2935ba2c370972
