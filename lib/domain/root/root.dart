@@ -1,11 +1,10 @@
-import 'package:firebase_auth/firebase_auth.dart';
-import 'package:pilll/analytics.dart';
 import 'package:pilll/auth/auth.dart';
 import 'package:pilll/database/database.dart';
 import 'package:pilll/domain/home/home_page.dart';
 import 'package:pilll/domain/initial_setting/initial_setting_1_page.dart';
 import 'package:pilll/entity/user_error.dart';
 import 'package:pilll/components/molecules/indicator.dart';
+import 'package:pilll/error/template.dart';
 import 'package:pilll/error/universal_error_page.dart';
 import 'package:pilll/error_log.dart';
 import 'package:pilll/service/user.dart';
@@ -117,9 +116,11 @@ class RootState extends State<Root> {
         print(error);
         print(stacktrace);
         final displayedError = UserDisplayedError(
-            displayedMessage: "2: -- error: " +
+            displayedMessage: ErrorMessages.connection +
+                "\n" +
+                "errorType: ${error.runtimeType.toString()}\n" +
                 error.toString() +
-                "stacktrace: " +
+                "error: ${error.toString()}\n" +
                 stacktrace.toString());
         errorLogger.recordError(error, stacktrace);
         return UniversalErrorPage(error: displayedError);
@@ -128,104 +129,45 @@ class RootState extends State<Root> {
   }
 
   _auth() {
-    var info = "";
     auth().then((authInfo) {
-      info += "DEUBG: - 1; ${FirebaseAuth.instance.currentUser}";
       final userService = UserService(DatabaseConnection(authInfo.uid));
-      info += "DEUBG: - 2; authInfo.uid: ${authInfo.uid}";
       return userService.prepare(authInfo.uid).then((_) async {
         userService.saveLaunchInfo();
         userService.saveStats();
         final user = await userService.fetch();
         if (!user.migratedFlutter) {
-          analytics.logEvent(name: "DEBUG", parameters: {"index": 1});
-          info = "DEUBG: - 3;";
           await userService.deleteSettings();
           await userService.setFlutterMigrationFlag();
           return ScreenType.initialSetting;
         }
-        info += "DEUBG: - 3; user: ${user.toJson()}";
         if (user.setting == null) {
-          analytics.logEvent(name: "DEBUG", parameters: {"index": 2});
           return ScreenType.initialSetting;
         }
-        info += "DEUBG: - 4;";
         final storage = await SharedPreferences.getInstance();
-        info += "DEUBG: - 5;${storage.getKeys()}";
         if (!storage.getKeys().contains(StringKey.firebaseAnonymousUserID)) {
-          analytics.logEvent(name: "DEBUG", parameters: {"index": 3});
           storage.setString(StringKey.firebaseAnonymousUserID, authInfo.uid);
         }
         bool? didEndInitialSetting =
             storage.getBool(BoolKey.didEndInitialSetting);
-        info += "DEUBG: - 6;$didEndInitialSetting";
-        analytics.logEvent(name: "DEBUG", parameters: {"index": 4});
         if (didEndInitialSetting == null) {
           return ScreenType.initialSetting;
         }
-        info += "DEUBG: - 7;$didEndInitialSetting";
-        analytics.logEvent(name: "DEBUG", parameters: {"index": 4});
         if (!didEndInitialSetting) {
           return ScreenType.initialSetting;
         }
-        info += "DEUBG: - 8;$didEndInitialSetting";
         return ScreenType.home;
       });
     }).then((screenType) {
-      info += "DEUBG: - 9;$screenType";
       setState(() {
-        info += "DEUBG: - 10;$screenType";
         this.screenType = screenType;
       });
     }).catchError((error) {
-      if (error is FirebaseAuthException) {
-        final e = UserDisplayedError(
-            displayedMessage:
-                "Firebase auth exception message: ${error.message}");
-        errorLogger.recordError(error, StackTrace.current);
-
-        onError(UserDisplayedError(
-            displayedMessage: "0: -- ${e.runtimeType.toString()}" +
-                "1: -- " +
-                e.toString() +
-                "2: -- $info" +
-                "3: -- " +
-                e.stackTrace.toString()));
-        return;
-      }
-      if (error is FirebaseException) {
-        final e = UserDisplayedError(
-            displayedMessage:
-                "Firebase exception service: ${error.plugin} / message: ${error.message}");
-        errorLogger.recordError(error, StackTrace.current);
-        onError(UserDisplayedError(
-            displayedMessage: "0: -- ${e.runtimeType.toString()}" +
-                "1: -- " +
-                e.toString() +
-                "2: -- $info" +
-                "3: -- " +
-                e.stackTrace.toString()));
-        return;
-      }
-      if (error == null) {
-        final e = UserDisplayedError(displayedMessage: "error is null");
-        errorLogger.recordError(e, StackTrace.current);
-        onError(UserDisplayedError(
-            displayedMessage: "0: -- ${e.runtimeType.toString()}" +
-                "1: -- " +
-                e.toString() +
-                "2: -- $info" +
-                "3: -- " +
-                StackTrace.current.toString()));
-        return;
-      }
       errorLogger.recordError(error, StackTrace.current);
       onError(UserDisplayedError(
-          displayedMessage: "0: -- ${error.runtimeType.toString()}" +
-              "1: -- " +
-              error.toString() +
-              "2: -- $info" +
-              "3: -- " +
+          displayedMessage: ErrorMessages.connection +
+              "\n" +
+              "errorType: ${error.runtimeType.toString()}\n" +
+              "error: ${error.toString()}\n" +
               StackTrace.current.toString()));
     });
   }
