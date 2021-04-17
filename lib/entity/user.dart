@@ -40,8 +40,6 @@ extension UserFirestoreFieldKeys on String {
 
 @freezed
 abstract class User implements _$User {
-  String get documentID => anonymousUserID;
-
   User._();
   factory User({
     required String anonymousUserID,
