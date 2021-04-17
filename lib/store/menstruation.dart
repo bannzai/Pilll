@@ -2,6 +2,7 @@ import 'dart:async';
 import 'dart:math';
 
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:pilll/domain/calendar/utility.dart';
 import 'package:pilll/domain/menstruation/menstruation_card2.dart';
 import 'package:pilll/domain/menstruation/menstruation_card_state.dart';
 import 'package:pilll/entity/menstruation.dart';
@@ -133,12 +134,22 @@ class MenstruationStore extends StateNotifier<MenstruationState> {
     }
     final latestPillSheet = state.latestPillSheet;
     final setting = state.setting;
-    if (latestPillSheet != null && setting != null) {
-      return MenstruationCardState.schedule(
-          scheduleDate: latestPillSheet.beginingDate
-              .add(Duration(days: setting.pillNumberForFromMenstruation - 1)));
+    if (latestPillSheet == null || setting == null) {
+      return null;
     }
-    return null;
+    if (today().isAfter(latestPillSheet.beginingDate)) {
+      final matchedScheduledMenstruation = scheduledMenstruationDateRanges(
+              latestPillSheet, setting, state.entities, 12)
+          .where((element) => element.begin.isAfter(today()));
+
+      if (matchedScheduledMenstruation.isNotEmpty) {
+        return MenstruationCardState.schedule(
+            scheduleDate: matchedScheduledMenstruation.first.begin);
+      }
+    }
+    return MenstruationCardState.schedule(
+        scheduleDate: latestPillSheet.beginingDate
+            .add(Duration(days: setting.pillNumberForFromMenstruation - 1)));
   }
 
   List<MenstruationCard2State> card2Statuses() {
