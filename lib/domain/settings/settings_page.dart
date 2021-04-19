@@ -157,12 +157,14 @@ class SettingsPage extends HookWidget {
       BuildContext context, SettingSection section) {
     final pillSheetStore = useProvider(pillSheetStoreProvider);
     final pillSheetState = useProvider(pillSheetStoreProvider.state);
+    final pillSheetEntity = pillSheetState.entity;
     final settingStore = useProvider(settingStoreProvider);
     final settingState = useProvider(settingStoreProvider.state);
     final transactionModifier = useProvider(transactionModifierProvider);
     final settingEntity = settingState.entity;
     final isShowNotifyInRestDuration = !pillSheetState.isInvalid &&
-        !pillSheetState.entity!.pillSheetType.isNotExistsNotTakenDuration;
+        pillSheetEntity != null &&
+        !pillSheetEntity.pillSheetType.isNotExistsNotTakenDuration;
     if (settingEntity == null) {
       return [];
     }
@@ -182,13 +184,13 @@ class SettingsPage extends HookWidget {
                     title: "ピルシートタイプ",
                     backButtonIsHidden: false,
                     selected: (type) {
-                      if (!pillSheetState.isInvalid) {
-                        final entity = pillSheetState.entity!;
+                      if (!pillSheetState.isInvalid &&
+                          pillSheetEntity != null) {
                         final callProcess = () {
                           transactionModifier.modifyPillSheetType(type);
                           Navigator.pop(context);
                         };
-                        if (entity.todayPillNumber > type.totalCount) {
+                        if (pillSheetEntity.todayPillNumber > type.totalCount) {
                           showDialog(
                             context: context,
                             builder: (_) {
@@ -220,7 +222,7 @@ class SettingsPage extends HookWidget {
               },
             );
           }(),
-          if (!pillSheetState.isInvalid) ...[
+          if (!pillSheetState.isInvalid && pillSheetEntity != null) ...[
             SettingListTitleRowModel(
                 title: "今日飲むピル番号の変更",
                 onTap: () {
@@ -229,7 +231,7 @@ class SettingsPage extends HookWidget {
                   );
                   Navigator.of(context).push(
                     ModifingPillNumberPageRoute.route(
-                      pillSheetType: pillSheetState.entity!.pillSheetType,
+                      pillSheetType: pillSheetEntity.pillSheetType,
                       markSelected: (number) {
                         Navigator.pop(context);
                         pillSheetStore.modifyBeginingDate(number);
@@ -299,12 +301,11 @@ class SettingsPage extends HookWidget {
               Navigator.of(context).push(ReminderTimesPageRoute.route());
             },
           ),
-          if (isShowNotifyInRestDuration)
+          if (isShowNotifyInRestDuration && pillSheetEntity != null)
             SettingsListSwitchRowModel(
-              title:
-                  "${pillSheetState.entity!.pillSheetType.notTakenWord}期間の通知",
+              title: "${pillSheetEntity.pillSheetType.notTakenWord}期間の通知",
               subtitle:
-                  "通知オフの場合は、${pillSheetState.entity!.pillSheetType.notTakenWord}期間の服用記録も自動で付けられます",
+                  "通知オフの場合は、${pillSheetEntity.pillSheetType.notTakenWord}期間の服用記録も自動で付けられます",
               value: settingEntity.isOnNotifyInNotTakenDuration,
               onTap: () {
                 analytics.logEvent(
@@ -319,7 +320,7 @@ class SettingsPage extends HookWidget {
                     SnackBar(
                       duration: Duration(seconds: 1),
                       content: Text(
-                        "${pillSheetState.entity!.pillSheetType.notTakenWord}期間の通知を${state.entity!.isOnNotifyInNotTakenDuration ? "ON" : "OFF"}にしました",
+                        "${pillSheetEntity.pillSheetType.notTakenWord}期間の通知を${state.entity!.isOnNotifyInNotTakenDuration ? "ON" : "OFF"}にしました",
                       ),
                     ),
                   );
@@ -379,8 +380,8 @@ class SettingsPage extends HookWidget {
                         storage.getString(StringKey.salvagedOldLastTakenDate);
                     Navigator.of(context)
                         .push(InformationForBeforeMigrate132Route.route(
-                      salvagedOldStartTakenDate: salvagedOldStartTakenDate,
-                      salvagedOldLastTakenDate: salvagedOldLastTakenDate,
+                      salvagedOldStartTakenDate: salvagedOldStartTakenDate!,
+                      salvagedOldLastTakenDate: salvagedOldLastTakenDate!,
                     ));
                   });
                 }),

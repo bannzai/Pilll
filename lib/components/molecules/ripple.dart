@@ -28,7 +28,7 @@ class Ripple extends CustomPainter {
     for (int wave = 3; wave >= 0; wave--) {
       final animationValue = _animation?.value;
       if (animationValue == null) break;
-      circle(canvas, rect, wave + _animation!.value);
+      circle(canvas, rect, wave + animationValue);
     }
   }
 

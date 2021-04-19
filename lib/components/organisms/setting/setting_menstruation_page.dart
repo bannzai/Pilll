@@ -121,7 +121,7 @@ class _SettingMenstruationPageState extends State<SettingMenstruationPage> {
                 Spacer(),
                 if (this.widget.done != null) ...[
                   PrimaryButton(
-                    text: this.widget.doneText!,
+                    text: this.widget.doneText ?? "",
                     onPressed: this.widget.done,
                   ),
                   SizedBox(height: 35),

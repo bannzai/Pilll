@@ -22,7 +22,7 @@ inquiry() {
 Future<String> debugInfo(String separator) async {
   String userID = (await auth()).uid;
   DatabaseConnection databaseConnection = DatabaseConnection(userID);
-  PillSheetModel pillSheet =
+  PillSheetModel? pillSheet =
       await PillSheetService(databaseConnection).fetchLast();
   Setting setting = await SettingService(databaseConnection).fetch();
   final menstruations =
@@ -41,8 +41,8 @@ Future<String> debugInfo(String separator) async {
     "env: ${Environment.isProduction ? "production" : "development"}",
     "user id: $userID",
     "latestMenstruation: ${menstruation?.toJson()}",
-    "pillSheet.entity.id: ${pillSheet.id}",
-    "pillSheetState.entity: ${pillSheet.toJson()}",
+    "pillSheet.entity.id: ${pillSheet?.id}",
+    "pillSheetState.entity: ${pillSheet?.toJson()}",
     "settingState.entity: ${setting.toJson()}",
   ];
   return contents.join(separator);

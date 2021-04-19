@@ -70,6 +70,7 @@ class PillSheet extends StatelessWidget {
 
   Widget _pillMarkWithNumber(int number) {
     var type = pillMarkTypeBuilder(number);
+    final enabledMarkAnimation = this.enabledMarkAnimation;
     return GestureDetector(
       onTap: () {
         markSelected(number);
@@ -83,7 +84,7 @@ class PillSheet extends StatelessWidget {
             key: Key("PillMarkWidget_$number"),
             hasRippleAnimation: enabledMarkAnimation == null
                 ? false
-                : enabledMarkAnimation!(number),
+                : enabledMarkAnimation(number),
             isDone: doneStateBuilder(number),
             type: type,
           ),
