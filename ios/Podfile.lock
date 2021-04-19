@@ -88,6 +88,8 @@ PODS:
     - GoogleUtilities/Reachability (~> 7.0)
     - GoogleUtilities/UserDefaults (~> 7.0)
   - Flutter (1.0.0)
+  - flutter_app_badger (0.0.1):
+    - Flutter
   - flutter_inappwebview (0.0.1):
     - Flutter
     - flutter_inappwebview/Core (= 0.0.1)
@@ -148,6 +150,7 @@ DEPENDENCIES:
   - firebase_messaging (from `.symlinks/plugins/firebase_messaging/ios`)
   - FirebaseFirestore (from `https://github.com/invertase/firestore-ios-sdk-frameworks.git`, tag `7.3.0`)
   - Flutter (from `Flutter`)
+  - flutter_app_badger (from `.symlinks/plugins/flutter_app_badger/ios`)
   - flutter_inappwebview (from `.symlinks/plugins/flutter_inappwebview/ios`)
   - in_app_review (from `.symlinks/plugins/in_app_review/ios`)
   - package_info (from `.symlinks/plugins/package_info/ios`)
@@ -191,6 +194,8 @@ EXTERNAL SOURCES:
     :tag: 7.3.0
   Flutter:
     :path: Flutter
+  flutter_app_badger:
+    :path: ".symlinks/plugins/flutter_app_badger/ios"
   flutter_inappwebview:
     :path: ".symlinks/plugins/flutter_inappwebview/ios"
   in_app_review:
@@ -225,6 +230,7 @@ SPEC CHECKSUMS:
   FirebaseInstanceID: aaecc93b4528bbcafea12c477e26827719ca1183
   FirebaseMessaging: 68d1bcb14880189558a8ae57167abe0b7e417232
   Flutter: 434fef37c0980e73bb6479ef766c45957d4b510c
+  flutter_app_badger: 65de4d6f0c34a891df49e6cfb8a1c0496426fa68
   flutter_inappwebview: bfd58618f49dc62f2676de690fc6dcda1d6c3721
   GoogleAppMeasurement: 8d3c0aeede16ab7764144b5a4ca8e1d4323841b7
   GoogleDataTransport: 116c84c4bdeb76be2a7a46de51244368f9794eab

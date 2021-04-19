@@ -8,6 +8,11 @@ import 'package:firebase_messaging/firebase_messaging.dart';
 
 Future<void> requestNotificationPermissions() async {
   await FirebaseMessaging.instance.requestPermission();
+  if (Platform.isIOS) {
+    await FirebaseMessaging.instance
+        .setForegroundNotificationPresentationOptions(
+            alert: true, badge: true, sound: true);
+  }
   callRegisterRemoteNotification();
   auth().then((auth) {
     final userService = UserService(DatabaseConnection(auth.uid));
