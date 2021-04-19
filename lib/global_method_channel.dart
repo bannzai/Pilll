@@ -25,6 +25,9 @@ Future<void> recordPill() async {
   final authInfo = await auth();
   final service = PillSheetService(DatabaseConnection(authInfo.uid));
   final entity = await service.fetchLast();
+  if (entity == null) {
+    return Future.value();
+  }
   await service.update(entity.copyWith(lastTakenDate: now()));
 }
 
