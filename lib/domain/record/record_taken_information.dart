@@ -81,8 +81,8 @@ class RecordTakenInformation extends StatelessWidget {
             children: <Widget>[
               if (pillSheetIsValid) ...[
                 if (pillSheetModel != null &&
-                    !pillSheetModel!.inNotTakenDuration) ...[
-                  Text("${pillSheetModel!.todayPillNumber}",
+                    !pillSheetModel.inNotTakenDuration) ...[
+                  Text("${pillSheetModel.todayPillNumber}",
                       style: FontType.xHugeNumber.merge(TextColorStyle.main)),
                   Text("番",
                       style:
@@ -91,7 +91,7 @@ class RecordTakenInformation extends StatelessWidget {
                 if (pillSheetModel != null &&
                     pillSheetModel.inNotTakenDuration) ...[
                   Text(
-                    "${pillSheetModel.pillSheetType.notTakenWord}${pillSheetModel!.todayPillNumber - pillSheetModel.typeInfo.dosingPeriod}日目",
+                    "${pillSheetModel.pillSheetType.notTakenWord}${pillSheetModel.todayPillNumber - pillSheetModel.typeInfo.dosingPeriod}日目",
                     style: FontType.assistingBold.merge(TextColorStyle.main),
                   ),
                 ],

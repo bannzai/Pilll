@@ -379,8 +379,8 @@ class SettingsPage extends HookWidget {
                         storage.getString(StringKey.salvagedOldLastTakenDate);
                     Navigator.of(context)
                         .push(InformationForBeforeMigrate132Route.route(
-                      salvagedOldStartTakenDate: salvagedOldStartTakenDate,
-                      salvagedOldLastTakenDate: salvagedOldLastTakenDate,
+                      salvagedOldStartTakenDate: salvagedOldStartTakenDate!,
+                      salvagedOldLastTakenDate: salvagedOldLastTakenDate!,
                     ));
                   });
                 }),
