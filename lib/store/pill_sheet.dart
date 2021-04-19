@@ -1,5 +1,6 @@
 import 'dart:async';
 
+import 'package:flutter_app_badger/flutter_app_badger.dart';
 import 'package:pilll/analytics.dart';
 import 'package:pilll/components/molecules/indicator.dart';
 import 'package:pilll/entity/pill_mark_type.dart';
@@ -67,6 +68,7 @@ class PillSheetStateStore extends StateNotifier<PillSheetState> {
       throw FormatException("pill sheet not found");
     }
     final updated = entity.copyWith(lastTakenDate: takenDate);
+    FlutterAppBadger.removeBadge();
     showIndicator();
     return _service.update(updated).then((value) {
       hideIndicator();
