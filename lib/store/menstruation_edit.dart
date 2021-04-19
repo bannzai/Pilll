@@ -61,6 +61,9 @@ class MenstruationEditStore extends StateNotifier<MenstruationEditState> {
     return (state.menstruation == null && isExistsDB);
   }
 
+  bool isDismissWhenSaveButtonPressed() =>
+      !shouldShowDiscardDialog() && state.menstruation == null;
+
   Future<void> delete() {
     final initialMenstruation = this.initialMenstruation;
     if (initialMenstruation == null) {
