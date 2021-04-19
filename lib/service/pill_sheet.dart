@@ -30,10 +30,10 @@ class PillSheetService {
   }
 
   PillSheetService(this._database);
-  Future<PillSheetModel> fetchLast() {
+  Future<PillSheetModel?> fetchLast() {
     return _queryOfFetchLastPillSheet()
         .get()
-        .then((event) => _filterForLatestPillSheet(event)!);
+        .then((event) => _filterForLatestPillSheet(event));
   }
 
   Future<PillSheetModel> register(PillSheetModel model) {
