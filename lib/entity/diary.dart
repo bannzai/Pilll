@@ -48,7 +48,7 @@ abstract class Diary with _$Diary {
       fromJson: TimestampConverter.timestampToDateTime,
       toJson: TimestampConverter.dateTimeToTimestamp,
     )
-        required DateTime createdAt,
+        required DateTime? createdAt,
     PhysicalConditionStatus? physicalConditionStatus,
     required List<String> physicalConditions,
     required bool hasSex,
