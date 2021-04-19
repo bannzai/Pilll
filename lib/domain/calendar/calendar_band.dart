@@ -25,8 +25,9 @@ class CalendarBand extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final onTap = this.onTap;
     return GestureDetector(
-      onTap: () => onTap != null ? onTap!(model) : null,
+      onTap: () => onTap != null ? onTap(model) : null,
       child: Container(
         height: CalendarBandConst.height,
         child: Stack(

@@ -63,6 +63,7 @@ class RecordTakenInformation extends StatelessWidget {
   }
 
   Widget _takenWidget() {
+    final pillSheetModel = this.pillSheetModel;
     return GestureDetector(
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
@@ -79,16 +80,18 @@ class RecordTakenInformation extends StatelessWidget {
             textBaseline: TextBaseline.ideographic,
             children: <Widget>[
               if (pillSheetIsValid) ...[
-                if (!pillSheetModel!.inNotTakenDuration) ...[
+                if (pillSheetModel != null &&
+                    !pillSheetModel!.inNotTakenDuration) ...[
                   Text("${pillSheetModel!.todayPillNumber}",
                       style: FontType.xHugeNumber.merge(TextColorStyle.main)),
                   Text("番",
                       style:
                           FontType.assistingBold.merge(TextColorStyle.noshime)),
                 ],
-                if (pillSheetModel!.inNotTakenDuration) ...[
+                if (pillSheetModel != null &&
+                    pillSheetModel.inNotTakenDuration) ...[
                   Text(
-                    "${pillSheetModel!.pillSheetType.notTakenWord}${pillSheetModel!.todayPillNumber - pillSheetModel!.typeInfo.dosingPeriod}日目",
+                    "${pillSheetModel.pillSheetType.notTakenWord}${pillSheetModel!.todayPillNumber - pillSheetModel.typeInfo.dosingPeriod}日目",
                     style: FontType.assistingBold.merge(TextColorStyle.main),
                   ),
                 ],

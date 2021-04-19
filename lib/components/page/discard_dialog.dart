@@ -21,6 +21,7 @@ class DiscardDialog extends StatelessWidget {
   }) : super(key: key);
   @override
   Widget build(BuildContext context) {
+    final cancel = this.cancel;
     return AlertDialog(
       title: SvgPicture.asset("images/alert_24.svg", width: 24, height: 24),
       content: Column(
@@ -40,7 +41,7 @@ class DiscardDialog extends StatelessWidget {
         SecondaryButton(
           text: "キャンセル",
           onPressed: cancel != null
-              ? () => cancel!()
+              ? () => cancel()
               : () {
                   Navigator.of(context).pop();
                 },

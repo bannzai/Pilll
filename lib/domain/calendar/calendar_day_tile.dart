@@ -27,9 +27,10 @@ class CalendarDayTile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final onTap = this.onTap;
     return Expanded(
       child: RawMaterialButton(
-        onPressed: () => onTap != null ? onTap!(date) : null,
+        onPressed: () => onTap != null ? onTap(date) : null,
         child: Container(
           height: CalendarConstants.tileHeight,
           child: Stack(
