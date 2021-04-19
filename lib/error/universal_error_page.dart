@@ -44,7 +44,7 @@ class UniversalErrorPage extends StatelessWidget {
                     style: FontType.assisting.merge(TextColorStyle.primary)),
                 onPressed: () {
                   analytics.logEvent(name: "reload_button_pressed");
-                  rootKey.currentState!.reloadRoot();
+                  rootKey.currentState?.reloadRoot();
                 },
               ),
               TextButton.icon(

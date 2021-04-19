@@ -256,7 +256,11 @@ class RecordPage extends HookWidget {
     if (pillSheet.todayPillNumber != pillSheet.lastTakenPillNumber) {
       return;
     }
-    store.take(pillSheet.lastTakenDate!.subtract(Duration(days: 1)));
+    final lastTakenDate = pillSheet.lastTakenDate;
+    if (lastTakenDate == null) {
+      return;
+    }
+    store.take(lastTakenDate.subtract(Duration(days: 1)));
   }
 
   PillSheet _pillSheet(
