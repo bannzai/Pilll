@@ -80,6 +80,8 @@ class MenstruationEditPage extends HookWidget {
                                   },
                                 ),
                               );
+                            } else if (store.isDismissWhenSaveButtonPressed()) {
+                              Navigator.of(context).pop();
                             } else {
                               store.save().then((value) => didEndSave(value));
                             }
