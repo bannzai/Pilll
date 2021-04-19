@@ -1,4 +1,5 @@
 import 'package:flutter_inappwebview/flutter_inappwebview.dart';
+import 'package:pilll/analytics.dart';
 import 'package:pilll/components/atoms/buttons.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
@@ -69,6 +70,7 @@ class ReleaseNote extends StatelessWidget {
                     width: 230,
                     child: SecondaryButton(
                         onPressed: () async {
+                          analytics.logEvent(name: "pressed_show_release_note");
                           Navigator.of(context).pop();
                           await openReleaseNote();
                         },
