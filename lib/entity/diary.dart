@@ -43,9 +43,10 @@ abstract class Diary with _$Diary {
       toJson: NonNullTimestampConverter.dateTimeToTimestamp,
     )
         required DateTime date,
+    // NOTE: OLD data does't have createdAt
     @JsonKey(
-      fromJson: NonNullTimestampConverter.timestampToDateTime,
-      toJson: NonNullTimestampConverter.dateTimeToTimestamp,
+      fromJson: TimestampConverter.timestampToDateTime,
+      toJson: TimestampConverter.dateTimeToTimestamp,
     )
         required DateTime createdAt,
     PhysicalConditionStatus? physicalConditionStatus,
