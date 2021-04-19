@@ -23,12 +23,15 @@ class _$DiaryTearOff {
   _Diary call(
       {@JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
           required DateTime date,
+      @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
+          required DateTime? createdAt,
       PhysicalConditionStatus? physicalConditionStatus,
       required List<String> physicalConditions,
       required bool hasSex,
       required String memo}) {
     return _Diary(
       date: date,
+      createdAt: createdAt,
       physicalConditionStatus: physicalConditionStatus,
       physicalConditions: physicalConditions,
       hasSex: hasSex,
@@ -49,7 +52,12 @@ mixin _$Diary {
   @JsonKey(
       fromJson: NonNullTimestampConverter.timestampToDateTime,
       toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-  DateTime get date => throw _privateConstructorUsedError;
+  DateTime get date =>
+      throw _privateConstructorUsedError; // NOTE: OLD data does't have createdAt
+  @JsonKey(
+      fromJson: TimestampConverter.timestampToDateTime,
+      toJson: TimestampConverter.dateTimeToTimestamp)
+  DateTime? get createdAt => throw _privateConstructorUsedError;
   PhysicalConditionStatus? get physicalConditionStatus =>
       throw _privateConstructorUsedError;
   List<String> get physicalConditions => throw _privateConstructorUsedError;
@@ -68,6 +76,8 @@ abstract class $DiaryCopyWith<$Res> {
   $Res call(
       {@JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
           DateTime date,
+      @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
+          DateTime? createdAt,
       PhysicalConditionStatus? physicalConditionStatus,
       List<String> physicalConditions,
       bool hasSex,
@@ -85,6 +95,7 @@ class _$DiaryCopyWithImpl<$Res> implements $DiaryCopyWith<$Res> {
   @override
   $Res call({
     Object? date = freezed,
+    Object? createdAt = freezed,
     Object? physicalConditionStatus = freezed,
     Object? physicalConditions = freezed,
     Object? hasSex = freezed,
@@ -95,6 +106,10 @@ class _$DiaryCopyWithImpl<$Res> implements $DiaryCopyWith<$Res> {
           ? _value.date
           : date // ignore: cast_nullable_to_non_nullable
               as DateTime,
+      createdAt: createdAt == freezed
+          ? _value.createdAt
+          : createdAt // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
       physicalConditionStatus: physicalConditionStatus == freezed
           ? _value.physicalConditionStatus
           : physicalConditionStatus // ignore: cast_nullable_to_non_nullable
@@ -123,6 +138,8 @@ abstract class _$DiaryCopyWith<$Res> implements $DiaryCopyWith<$Res> {
   $Res call(
       {@JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
           DateTime date,
+      @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
+          DateTime? createdAt,
       PhysicalConditionStatus? physicalConditionStatus,
       List<String> physicalConditions,
       bool hasSex,
@@ -141,6 +158,7 @@ class __$DiaryCopyWithImpl<$Res> extends _$DiaryCopyWithImpl<$Res>
   @override
   $Res call({
     Object? date = freezed,
+    Object? createdAt = freezed,
     Object? physicalConditionStatus = freezed,
     Object? physicalConditions = freezed,
     Object? hasSex = freezed,
@@ -151,6 +169,10 @@ class __$DiaryCopyWithImpl<$Res> extends _$DiaryCopyWithImpl<$Res>
           ? _value.date
           : date // ignore: cast_nullable_to_non_nullable
               as DateTime,
+      createdAt: createdAt == freezed
+          ? _value.createdAt
+          : createdAt // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
       physicalConditionStatus: physicalConditionStatus == freezed
           ? _value.physicalConditionStatus
           : physicalConditionStatus // ignore: cast_nullable_to_non_nullable
@@ -178,6 +200,8 @@ class _$_Diary extends _Diary {
   _$_Diary(
       {@JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
           required this.date,
+      @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
+          required this.createdAt,
       this.physicalConditionStatus,
       required this.physicalConditions,
       required this.hasSex,
@@ -192,6 +216,11 @@ class _$_Diary extends _Diary {
       fromJson: NonNullTimestampConverter.timestampToDateTime,
       toJson: NonNullTimestampConverter.dateTimeToTimestamp)
   final DateTime date;
+  @override // NOTE: OLD data does't have createdAt
+  @JsonKey(
+      fromJson: TimestampConverter.timestampToDateTime,
+      toJson: TimestampConverter.dateTimeToTimestamp)
+  final DateTime? createdAt;
   @override
   final PhysicalConditionStatus? physicalConditionStatus;
   @override
@@ -203,7 +232,7 @@ class _$_Diary extends _Diary {
 
   @override
   String toString() {
-    return 'Diary(date: $date, physicalConditionStatus: $physicalConditionStatus, physicalConditions: $physicalConditions, hasSex: $hasSex, memo: $memo)';
+    return 'Diary(date: $date, createdAt: $createdAt, physicalConditionStatus: $physicalConditionStatus, physicalConditions: $physicalConditions, hasSex: $hasSex, memo: $memo)';
   }
 
   @override
@@ -212,6 +241,9 @@ class _$_Diary extends _Diary {
         (other is _Diary &&
             (identical(other.date, date) ||
                 const DeepCollectionEquality().equals(other.date, date)) &&
+            (identical(other.createdAt, createdAt) ||
+                const DeepCollectionEquality()
+                    .equals(other.createdAt, createdAt)) &&
             (identical(
                     other.physicalConditionStatus, physicalConditionStatus) ||
                 const DeepCollectionEquality().equals(
@@ -229,6 +261,7 @@ class _$_Diary extends _Diary {
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(date) ^
+      const DeepCollectionEquality().hash(createdAt) ^
       const DeepCollectionEquality().hash(physicalConditionStatus) ^
       const DeepCollectionEquality().hash(physicalConditions) ^
       const DeepCollectionEquality().hash(hasSex) ^
@@ -249,6 +282,8 @@ abstract class _Diary extends Diary {
   factory _Diary(
       {@JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
           required DateTime date,
+      @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
+          required DateTime? createdAt,
       PhysicalConditionStatus? physicalConditionStatus,
       required List<String> physicalConditions,
       required bool hasSex,
@@ -262,6 +297,11 @@ abstract class _Diary extends Diary {
       fromJson: NonNullTimestampConverter.timestampToDateTime,
       toJson: NonNullTimestampConverter.dateTimeToTimestamp)
   DateTime get date => throw _privateConstructorUsedError;
+  @override // NOTE: OLD data does't have createdAt
+  @JsonKey(
+      fromJson: TimestampConverter.timestampToDateTime,
+      toJson: TimestampConverter.dateTimeToTimestamp)
+  DateTime? get createdAt => throw _privateConstructorUsedError;
   @override
   PhysicalConditionStatus? get physicalConditionStatus =>
       throw _privateConstructorUsedError;

@@ -10,6 +10,8 @@ _$_Diary _$_$_DiaryFromJson(Map<String, dynamic> json) {
   return _$_Diary(
     date: NonNullTimestampConverter.timestampToDateTime(
         json['date'] as Timestamp),
+    createdAt:
+        TimestampConverter.timestampToDateTime(json['createdAt'] as Timestamp?),
     physicalConditionStatus: _$enumDecodeNullable(
         _$PhysicalConditionStatusEnumMap, json['physicalConditionStatus']),
     physicalConditions: (json['physicalConditions'] as List<dynamic>)
@@ -22,6 +24,7 @@ _$_Diary _$_$_DiaryFromJson(Map<String, dynamic> json) {
 
 Map<String, dynamic> _$_$_DiaryToJson(_$_Diary instance) => <String, dynamic>{
       'date': NonNullTimestampConverter.dateTimeToTimestamp(instance.date),
+      'createdAt': TimestampConverter.dateTimeToTimestamp(instance.createdAt),
       'physicalConditionStatus':
           _$PhysicalConditionStatusEnumMap[instance.physicalConditionStatus],
       'physicalConditions': instance.physicalConditions,
