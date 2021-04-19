@@ -71,10 +71,11 @@ class SettingsListSwitchRowModel extends SettingListRowModel {
       required this.onTap});
   @override
   Widget widget() {
+    final subtitle = this.subtitle;
     return SwitchListTile(
       title: Text(title, style: FontType.listRow),
       subtitle:
-          subtitle != null ? Text(subtitle!, style: FontType.assisting) : null,
+          subtitle != null ? Text(subtitle, style: FontType.assisting) : null,
       activeColor: PilllColors.primary,
       onChanged: (bool value) {
         this.onTap();
