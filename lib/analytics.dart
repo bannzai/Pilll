@@ -20,6 +20,7 @@ class Analytics extends AbstractAnalytics {
   Future<void> setCurrentScreen(
       {required String screenName,
       String screenClassOverride = 'Flutter'}) async {
+    firebaseAnalytics.logEvent(name: "screen_$screenName");
     return firebaseAnalytics.setCurrentScreen(
         screenName: screenName, screenClassOverride: screenClassOverride);
   }
