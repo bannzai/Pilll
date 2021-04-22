@@ -122,7 +122,11 @@ class MenstruationStore extends StateNotifier<MenstruationState> {
     if (card == null) {
       return 0;
     }
-    return card2Statuses().length + 1;
+    final historyCard = historyCardState();
+    if (historyCard == null) {
+      return [card].length;
+    }
+    return [card, historyCard].length;
   }
 
   MenstruationCardState? cardState() {

@@ -14,8 +14,8 @@ import 'package:pilll/domain/calendar/date_range.dart';
 import 'package:pilll/domain/calendar/utility.dart';
 import 'package:pilll/domain/calendar/weekly_calendar_state.dart';
 import 'package:pilll/domain/menstruation/menstruation_card.dart';
-import 'package:pilll/domain/menstruation/menstruation_card2.dart';
 import 'package:pilll/domain/menstruation/menstruation_edit_page.dart';
+import 'package:pilll/domain/menstruation/menstruation_history_card.dart';
 import 'package:pilll/domain/menstruation/menstruation_select_modify_type_sheet.dart';
 import 'package:pilll/domain/record/weekday_badge.dart';
 import 'package:pilll/entity/menstruation.dart';
@@ -182,37 +182,12 @@ class MenstruationPage extends HookWidget {
                               return Container();
                             }
                             return MenstruationCard(cardState);
-                          default:
-                            final cardState = store.card2Statuses()[
-                                index - [state.latestMenstruation].length];
-                            return MenstruationCard2(
-                              cardState,
-                              (state) {
-                                _showEditPage(
-                                  context,
-                                  state.menstruation,
-                                  title: "生理期間の編集",
-                                  didEndSave: (menstruation) {
-                                    Navigator.of(context).pop();
-                                    ScaffoldMessenger.of(context).showSnackBar(
-                                      SnackBar(
-                                        duration: Duration(seconds: 1),
-                                        content: Text("生理期間を編集しました"),
-                                      ),
-                                    );
-                                  },
-                                  didEndDelete: () {
-                                    Navigator.of(context).pop();
-                                    ScaffoldMessenger.of(context).showSnackBar(
-                                      SnackBar(
-                                        duration: Duration(seconds: 1),
-                                        content: Text("生理期間を削除しました"),
-                                      ),
-                                    );
-                                  },
-                                );
-                              },
-                            );
+                          case 1:
+                            final cardState = store.historyCardState();
+                            if (cardState == null) {
+                              return Container();
+                            }
+                            return MenstruationHistoryCard(state: cardState);
                         }
                       };
 
