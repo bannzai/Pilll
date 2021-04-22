@@ -2,6 +2,7 @@ import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/domain/calendar/date_range.dart';
+import 'package:pilll/domain/menstruation/menstruation_edit_page.dart';
 import 'package:pilll/entity/menstruation.dart';
 import 'package:pilll/util/formatter/date_time_formatter.dart';
 import 'package:flutter/material.dart';
@@ -50,46 +51,51 @@ class MenstruationHistoryRow extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Row(
-          children: [
-            if (state.prefix != null)
-              Text(state.prefix ?? "",
-                  style: FontType.descriptionBold.merge(TextColorStyle.main)),
-            Text(state.dateRange,
-                style: FontType.description.merge(TextColorStyle.main)),
-          ],
-        ),
-        SizedBox(height: 6),
-        Container(
-          width: state.width,
-          decoration: BoxDecoration(
-            color: PilllColors.tinBackground,
-            borderRadius: BorderRadius.circular(26),
+    return GestureDetector(
+      onTap: () {
+        showMenstruationEditPageForUpdate(context, state.menstruation);
+      },
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Row(
+            children: [
+              if (state.prefix != null)
+                Text(state.prefix ?? "",
+                    style: FontType.descriptionBold.merge(TextColorStyle.main)),
+              Text(state.dateRange,
+                  style: FontType.description.merge(TextColorStyle.main)),
+            ],
           ),
-          height: 20,
-          child: Padding(
-            padding: const EdgeInsets.only(left: 8.0),
-            child: Row(
-              children: [
-                ...List.generate(
-                  state.menstruation.dateRange.days,
-                  (index) {
-                    return [_circle(), SizedBox(width: 4)];
-                  },
-                ).expand((element) => element).toList(),
-                Spacer(),
-                Text(state.duration,
-                    textAlign: TextAlign.end,
-                    style: FontType.description.merge(TextColorStyle.main)),
-                SizedBox(width: 10),
-              ],
+          SizedBox(height: 6),
+          Container(
+            width: state.width,
+            decoration: BoxDecoration(
+              color: PilllColors.tinBackground,
+              borderRadius: BorderRadius.circular(26),
+            ),
+            height: 20,
+            child: Padding(
+              padding: const EdgeInsets.only(left: 8.0),
+              child: Row(
+                children: [
+                  ...List.generate(
+                    state.menstruation.dateRange.days,
+                    (index) {
+                      return [_circle(), SizedBox(width: 4)];
+                    },
+                  ).expand((element) => element).toList(),
+                  Spacer(),
+                  Text(state.duration,
+                      textAlign: TextAlign.end,
+                      style: FontType.description.merge(TextColorStyle.main)),
+                  SizedBox(width: 10),
+                ],
+              ),
             ),
           ),
-        ),
-      ],
+        ],
+      ),
     );
   }
 
