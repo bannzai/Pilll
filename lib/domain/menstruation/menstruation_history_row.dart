@@ -27,7 +27,7 @@ class MenstruationHistoryRowState {
     if (menstruationDuration == null) {
       return "-";
     }
-    return "$menstruationDuration周期";
+    return "$menstruationDuration日周期";
   }
 
   double get width {
