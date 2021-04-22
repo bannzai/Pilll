@@ -1,4 +1,6 @@
 import 'package:pilll/components/atoms/color.dart';
+import 'package:pilll/components/atoms/font.dart';
+import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/domain/calendar/date_range.dart';
 import 'package:pilll/entity/menstruation.dart';
 import 'package:pilll/util/formatter/date_time_formatter.dart';
@@ -53,8 +55,11 @@ class MenstruationHistoryRow extends StatelessWidget {
       children: [
         Row(
           children: [
-            if (state.prefix != null) Text(state.prefix ?? ""),
-            Text(state.dateRange),
+            if (state.prefix != null)
+              Text(state.prefix ?? "",
+                  style: FontType.descriptionBold.merge(TextColorStyle.main)),
+            Text(state.dateRange,
+                style: FontType.description.merge(TextColorStyle.main)),
           ],
         ),
         SizedBox(height: 6),
@@ -76,10 +81,9 @@ class MenstruationHistoryRow extends StatelessWidget {
                   },
                 ).expand((element) => element).toList(),
                 Spacer(),
-                Text(
-                  state.duration,
-                  textAlign: TextAlign.end,
-                ),
+                Text(state.duration,
+                    textAlign: TextAlign.end,
+                    style: FontType.description.merge(TextColorStyle.main)),
                 SizedBox(width: 10),
               ],
             ),
