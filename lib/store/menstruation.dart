@@ -1,9 +1,7 @@
 import 'dart:async';
-import 'dart:math';
 
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/domain/calendar/utility.dart';
-import 'package:pilll/domain/menstruation/menstruation_card2.dart';
 import 'package:pilll/domain/menstruation/menstruation_card_state.dart';
 import 'package:pilll/domain/menstruation/menstruation_history_card.dart';
 import 'package:pilll/entity/menstruation.dart';
@@ -163,38 +161,5 @@ class MenstruationStore extends StateNotifier<MenstruationState> {
       menstruations.removeLast();
     }
     return MenstruationHistoryCardState(menstruations: menstruations);
-  }
-
-  List<MenstruationCard2State> card2Statuses() {
-    final latestMenstruation = state.latestMenstruation;
-    if (latestMenstruation == null) {
-      return [];
-    }
-    final length = min(2, state.entities.length);
-    if (latestMenstruation.dateRange.inRange(today())) {
-      return List.generate(length, (index) => index + 1)
-          .map((index) {
-            if (index >= state.entities.length) {
-              return null;
-            }
-            final prefix = index == 1 ? "前回" : "前々回";
-            final menstruation = state.entities.reversed.toList()[index];
-            return MenstruationCard2State(
-                menstruation: menstruation, prefix: prefix);
-          })
-          .where((element) => element != null)
-          .toList()
-          .cast();
-    } else {
-      return List.generate(length, (index) {
-        if (index >= state.entities.length) {
-          return null;
-        }
-        final prefix = index == 0 ? "前回" : "前々回";
-        final menstruation = state.entities.reversed.toList()[index];
-        return MenstruationCard2State(
-            menstruation: menstruation, prefix: prefix);
-      }).where((element) => element != null).toList().cast();
-    }
   }
 }
