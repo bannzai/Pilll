@@ -5,6 +5,7 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/domain/calendar/utility.dart';
 import 'package:pilll/domain/menstruation/menstruation_card2.dart';
 import 'package:pilll/domain/menstruation/menstruation_card_state.dart';
+import 'package:pilll/domain/menstruation/menstruation_history_card.dart';
 import 'package:pilll/entity/menstruation.dart';
 import 'package:pilll/service/diary.dart';
 import 'package:pilll/service/menstruation.dart';
@@ -150,6 +151,18 @@ class MenstruationStore extends StateNotifier<MenstruationState> {
     return MenstruationCardState.schedule(
         scheduleDate: latestPillSheet.beginingDate
             .add(Duration(days: setting.pillNumberForFromMenstruation - 1)));
+  }
+
+  MenstruationHistoryCardState? historyCardState() {
+    final latestMenstruation = state.latestMenstruation;
+    if (latestMenstruation == null) {
+      return null;
+    }
+    final menstruations = state.entities;
+    if (latestMenstruation.dateRange.inRange(today())) {
+      menstruations.removeLast();
+    }
+    return MenstruationHistoryCardState(menstruations: menstruations);
   }
 
   List<MenstruationCard2State> card2Statuses() {
