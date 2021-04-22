@@ -57,6 +57,7 @@ class MenstruationHistoryRow extends StatelessWidget {
             Text(state.dateRange),
           ],
         ),
+        SizedBox(height: 6),
         Container(
           width: state.width,
           decoration: BoxDecoration(
