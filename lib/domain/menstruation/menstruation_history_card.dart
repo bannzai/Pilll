@@ -66,17 +66,14 @@ class MenstruationHistoryCard extends StatelessWidget {
             index, MenstruationHistoryRowState(element, _prefix(index))))
         .values
         .toList()
-        .reversed
         .fold<List<MenstruationHistoryRowState>>([], (value, element) {
-          if (value.isEmpty) {
-            return [element];
-          }
-          return value
-            ..last.menstruationDuration =
-                MenstruationHistoryRowState.diff(value.last, element)
-            ..add(element);
-        })
-        .reversed
-        .toList();
+      if (value.isEmpty) {
+        return [element];
+      }
+      return value
+        ..last.menstruationDuration =
+            MenstruationHistoryRowState.diff(value.last, element)
+        ..add(element);
+    }).toList();
   }
 }
