@@ -163,3 +163,15 @@ class MenstruationStore extends StateNotifier<MenstruationState> {
     return MenstruationHistoryCardState(state.entities);
   }
 }
+
+List<Menstruation> dropLatestMenstruationIfNeeded(
+    List<Menstruation> menstruations) {
+  if (menstruations.isEmpty) {
+    return [];
+  }
+  final latestMenstruation = menstruations.first;
+  if (latestMenstruation.dateRange.inRange(today())) {
+    menstruations.removeAt(0);
+  }
+  return menstruations;
+}

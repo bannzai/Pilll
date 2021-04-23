@@ -23,7 +23,6 @@ class MenstruationHistoryRowState {
 
   static List<MenstruationHistoryRowState> rows(
       List<Menstruation> menstruations) {
-    menstruations.sort((a, b) => b.beginDate.compareTo(a.beginDate));
     return menstruations
         .asMap()
         .map((index, element) => MapEntry(

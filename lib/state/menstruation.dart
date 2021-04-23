@@ -47,7 +47,7 @@ abstract class MenstruationState implements _$MenstruationState {
   }
 
   Menstruation? get latestMenstruation {
-    return entities.isEmpty ? null : entities.last;
+    return entities.isEmpty ? null : entities.first;
   }
 }
 

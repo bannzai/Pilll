@@ -8,7 +8,7 @@ import 'package:pilll/domain/menstruation/menstruation_history_row.dart';
 import 'package:pilll/domain/menstruation/menstruation_list_page.dart';
 import 'package:pilll/entity/menstruation.dart';
 import 'package:flutter/material.dart';
-import 'package:pilll/util/datetime/day.dart';
+import 'package:pilll/store/menstruation.dart';
 
 class MenstruationHistoryCardState {
   final List<Menstruation> _allMenstruations;
@@ -22,12 +22,13 @@ class MenstruationHistoryCardState {
     if (_allMenstruations.isEmpty) {
       return [];
     }
-    final latestMenstruation = _allMenstruations.last;
-    final menstruations = _allMenstruations;
-    if (latestMenstruation.dateRange.inRange(today())) {
-      menstruations.removeLast();
+    var menstruations = dropLatestMenstruationIfNeeded(_allMenstruations);
+    if (menstruations.isEmpty) {
+      return [];
     }
-    return menstruations.sublist(0, min(2, menstruations.length));
+
+    final length = min(2, menstruations.length);
+    return menstruations.sublist(0, length);
   }
 }
 

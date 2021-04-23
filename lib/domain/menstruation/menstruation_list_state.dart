@@ -10,6 +10,4 @@ abstract class MenstruationListState implements _$MenstruationListState {
     @Default(true) bool isNotYetLoaded,
     @Default([]) List<MenstruationHistoryRowState> rows,
   }) = _MenstruationListState;
-
-  String get variable => "";
 }
