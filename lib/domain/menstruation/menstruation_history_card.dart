@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:pilll/components/atoms/buttons.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
@@ -6,13 +8,27 @@ import 'package:pilll/domain/menstruation/menstruation_history_row.dart';
 import 'package:pilll/domain/menstruation/menstruation_list_page.dart';
 import 'package:pilll/entity/menstruation.dart';
 import 'package:flutter/material.dart';
+import 'package:pilll/util/datetime/day.dart';
 
 class MenstruationHistoryCardState {
-  final List<Menstruation> menstruations;
+  final List<Menstruation> _allMenstruations;
 
-  MenstruationHistoryCardState({
-    required this.menstruations,
-  });
+  MenstruationHistoryCardState(
+    this._allMenstruations,
+  );
+
+  bool get moreButtonIsHidden => _allMenstruations.length <= 2;
+  List<Menstruation> get viewMenstruations {
+    if (_allMenstruations.isEmpty) {
+      return [];
+    }
+    final latestMenstruation = _allMenstruations.last;
+    final menstruations = _allMenstruations;
+    if (latestMenstruation.dateRange.inRange(today())) {
+      menstruations.removeLast();
+    }
+    return menstruations.sublist(0, min(2, menstruations.length));
+  }
 }
 
 class MenstruationHistoryCard extends StatelessWidget {
@@ -34,21 +50,25 @@ class MenstruationHistoryCard extends StatelessWidget {
             SizedBox(height: 32),
             Column(
               mainAxisSize: MainAxisSize.max,
-              children: MenstruationHistoryRowState.rows(state.menstruations)
-                  .map((e) =>
-                      [MenstruationHistoryRow(state: e), SizedBox(height: 20)])
-                  .expand((e) => e)
-                  .toList(),
+              children:
+                  MenstruationHistoryRowState.rows(state.viewMenstruations)
+                      .map((e) => [
+                            MenstruationHistoryRow(state: e),
+                            SizedBox(height: 20)
+                          ])
+                      .expand((e) => e)
+                      .toList(),
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
-                SecondaryButton(
-                    text: "もっと見る",
-                    onPressed: () {
-                      Navigator.of(context)
-                          .push(MenstruationListPageRoute.route());
-                    }),
+                if (!state.moreButtonIsHidden)
+                  SecondaryButton(
+                      text: "もっと見る",
+                      onPressed: () {
+                        Navigator.of(context)
+                            .push(MenstruationListPageRoute.route());
+                      }),
               ],
             ),
           ],

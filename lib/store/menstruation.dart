@@ -1,5 +1,4 @@
 import 'dart:async';
-import 'dart:math';
 
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/domain/calendar/utility.dart';
@@ -161,12 +160,6 @@ class MenstruationStore extends StateNotifier<MenstruationState> {
     if (latestMenstruation == null) {
       return null;
     }
-    final menstruations = state.entities;
-    if (latestMenstruation.dateRange.inRange(today())) {
-      menstruations.removeLast();
-    }
-    final length = min(2, menstruations.length);
-    final menstruationSlice = menstruations.sublist(0, length);
-    return MenstruationHistoryCardState(menstruations: menstruationSlice);
+    return MenstruationHistoryCardState(state.entities);
   }
 }
