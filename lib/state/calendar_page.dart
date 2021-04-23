@@ -12,5 +12,8 @@ abstract class CalendarPageState implements _$CalendarPageState {
     required List<Menstruation> menstruations,
     Setting? setting,
     PillSheetModel? latestPillSheet,
+    @Default(true) bool isNotYetLoaded,
   }) = _CalendarPageState;
+
+  bool get shouldShowIndicator => isNotYetLoaded || setting == null;
 }
