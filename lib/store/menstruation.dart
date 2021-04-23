@@ -166,12 +166,13 @@ class MenstruationStore extends StateNotifier<MenstruationState> {
 
 List<Menstruation> dropLatestMenstruationIfNeeded(
     List<Menstruation> menstruations) {
-  if (menstruations.isEmpty) {
+  final _menstruations = [...menstruations];
+  if (_menstruations.isEmpty) {
     return [];
   }
-  final latestMenstruation = menstruations.first;
+  final latestMenstruation = _menstruations.first;
   if (latestMenstruation.dateRange.inRange(today())) {
-    menstruations.removeAt(0);
+    _menstruations.removeAt(0);
   }
-  return menstruations;
+  return _menstruations;
 }

@@ -23,7 +23,7 @@ class MenstruationHistoryRowState {
 
   static List<MenstruationHistoryRowState> rows(
       List<Menstruation> menstruations) {
-    return menstruations
+    return [...menstruations]
         .asMap()
         .map((index, element) => MapEntry(
             index, MenstruationHistoryRowState(element, _prefix(index))))

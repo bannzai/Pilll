@@ -18,7 +18,7 @@ class MenstruationHistoryCardState {
   );
 
   bool get moreButtonIsHidden => _allMenstruations.length <= 2;
-  List<Menstruation> get viewMenstruations {
+  List<MenstruationHistoryRowState> get rows {
     if (_allMenstruations.isEmpty) {
       return [];
     }
@@ -26,9 +26,9 @@ class MenstruationHistoryCardState {
     if (menstruations.isEmpty) {
       return [];
     }
-
-    final length = min(2, menstruations.length);
-    return menstruations.sublist(0, length);
+    final rows = MenstruationHistoryRowState.rows(menstruations);
+    final length = min(2, rows.length);
+    return rows.sublist(0, length);
   }
 }
 
@@ -51,14 +51,11 @@ class MenstruationHistoryCard extends StatelessWidget {
             SizedBox(height: 32),
             Column(
               mainAxisSize: MainAxisSize.max,
-              children:
-                  MenstruationHistoryRowState.rows(state.viewMenstruations)
-                      .map((e) => [
-                            MenstruationHistoryRow(state: e),
-                            SizedBox(height: 20)
-                          ])
-                      .expand((e) => e)
-                      .toList(),
+              children: state.rows
+                  .map((e) =>
+                      [MenstruationHistoryRow(state: e), SizedBox(height: 20)])
+                  .expand((e) => e)
+                  .toList(),
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.end,
