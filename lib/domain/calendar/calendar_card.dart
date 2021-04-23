@@ -25,8 +25,12 @@ class CalendarCardState {
   final Setting? setting;
   final List<Menstruation> menstruations;
 
-  CalendarCardState(
-      this.date, this.latestPillSheet, this.setting, this.menstruations);
+  CalendarCardState({
+    required this.date,
+    required this.latestPillSheet,
+    required this.setting,
+    required this.menstruations,
+  });
 
   String get dateTitle => DateTimeFormatter.yearAndMonth(date);
 
@@ -134,7 +138,8 @@ class CalendarCard extends StatelessWidget {
             onPressed: () {
               Navigator.of(context).push(
                 () {
-                  return CalendarListPageRoute.route(state.calendarListModels());
+                  return CalendarListPageRoute.route(
+                      state.calendarListModels());
                 }(),
               );
             },
