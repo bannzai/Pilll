@@ -47,34 +47,4 @@ class MenstruationHistoryCard extends StatelessWidget {
       ),
     );
   }
-
-  String? _prefix(int i) {
-    if (i == 0) {
-      return "前回";
-    }
-    if (i == 1) {
-      return "前々回";
-    }
-    return null;
-  }
-
-  List<MenstruationHistoryRowState> _rows() {
-    final menstruations = state.menstruations;
-    menstruations.sort((a, b) => b.beginDate.compareTo(a.beginDate));
-    return menstruations
-        .asMap()
-        .map((index, element) => MapEntry(
-            index, MenstruationHistoryRowState(element, _prefix(index))))
-        .values
-        .toList()
-        .fold<List<MenstruationHistoryRowState>>([], (value, element) {
-      if (value.isEmpty) {
-        return [element];
-      }
-      return value
-        ..last.menstruationDuration =
-            MenstruationHistoryRowState.diff(value.last, element)
-        ..add(element);
-    }).toList();
-  }
 }
