@@ -27,7 +27,7 @@ class CalendarPage extends HookWidget {
   Widget build(BuildContext context) {
     final state = useProvider(calendarPageStateProvider.state);
     final settingEntity = state.setting;
-    if (settingEntity == null) {
+    if (state.shouldShowIndicator) {
       return ScaffoldIndicator();
     }
     return Scaffold(
@@ -79,10 +79,12 @@ class CalendarPage extends HookWidget {
                   padding:
                       const EdgeInsets.only(left: 16, right: 16, bottom: 16),
                   child: CalendarCard(
-                    date: today(),
-                    latestPillSheet: state.latestPillSheet,
-                    setting: settingEntity,
-                    menstruations: state.menstruations,
+                    state: CalendarCardState(
+                      date: today(),
+                      latestPillSheet: state.latestPillSheet,
+                      setting: settingEntity,
+                      menstruations: state.menstruations,
+                    ),
                   ),
                 ),
               ),
