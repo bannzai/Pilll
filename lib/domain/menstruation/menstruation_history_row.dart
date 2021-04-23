@@ -110,7 +110,7 @@ class MenstruationHistoryRow extends StatelessWidget {
               child: Row(
                 children: [
                   ...List.generate(
-                    state.menstruation.dateRange.days,
+                    state.menstruation.dateRange.days + 1,
                     (index) {
                       return [_circle(), SizedBox(width: 4)];
                     },
