@@ -27,7 +27,7 @@ class CalendarPage extends HookWidget {
   Widget build(BuildContext context) {
     final state = useProvider(calendarPageStateProvider.state);
     final settingEntity = state.setting;
-    if (settingEntity == null) {
+    if (state.shouldShowIndicator) {
       return ScaffoldIndicator();
     }
     return Scaffold(

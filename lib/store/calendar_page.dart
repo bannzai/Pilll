@@ -30,9 +30,11 @@ class CalendarPageStateStore extends StateNotifier<CalendarPageState> {
       final setting = await _settingService.fetch();
       final latestPillSheet = await _pillSheetService.fetchLast();
       state = state.copyWith(
-          menstruations: menstruations,
-          setting: setting,
-          latestPillSheet: latestPillSheet);
+        menstruations: menstruations,
+        setting: setting,
+        latestPillSheet: latestPillSheet,
+        isNotYetLoaded: false,
+      );
       _subscribe();
     });
   }
