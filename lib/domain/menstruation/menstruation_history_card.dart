@@ -3,6 +3,7 @@ import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/components/molecules/app_card.dart';
 import 'package:pilll/domain/menstruation/menstruation_history_row.dart';
+import 'package:pilll/domain/menstruation/menstruation_list_page.dart';
 import 'package:pilll/entity/menstruation.dart';
 import 'package:flutter/material.dart';
 
@@ -33,13 +34,21 @@ class MenstruationHistoryCard extends StatelessWidget {
             SizedBox(height: 32),
             Column(
               mainAxisSize: MainAxisSize.max,
-              children:
-                  _rows().map((e) => [MenstruationHistoryRow(state: e), SizedBox(height: 20)]).expand((e) => e).toList(),
+              children: MenstruationHistoryRowState.rows(state.menstruations)
+                  .map((e) =>
+                      [MenstruationHistoryRow(state: e), SizedBox(height: 20)])
+                  .expand((e) => e)
+                  .toList(),
             ),
             Row(
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
-                SecondaryButton(text: "もっと見る", onPressed: () {}),
+                SecondaryButton(
+                    text: "もっと見る",
+                    onPressed: () {
+                      Navigator.of(context)
+                          .push(MenstruationListPageRoute.route());
+                    }),
               ],
             ),
           ],
