@@ -17,11 +17,11 @@ class _$MenstruationListStateTearOff {
   const _$MenstruationListStateTearOff();
 
   _MenstruationListState call(
-      {required bool isNotYetLoad,
-      required List<MenstruationHistoryCardState> cards}) {
+      {bool isNotYetLoaded = true,
+      List<MenstruationHistoryRowState> rows = const []}) {
     return _MenstruationListState(
-      isNotYetLoad: isNotYetLoad,
-      cards: cards,
+      isNotYetLoaded: isNotYetLoaded,
+      rows: rows,
     );
   }
 }
@@ -31,8 +31,8 @@ const $MenstruationListState = _$MenstruationListStateTearOff();
 
 /// @nodoc
 mixin _$MenstruationListState {
-  bool get isNotYetLoad => throw _privateConstructorUsedError;
-  List<MenstruationHistoryCardState> get cards =>
+  bool get isNotYetLoaded => throw _privateConstructorUsedError;
+  List<MenstruationHistoryRowState> get rows =>
       throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
@@ -45,7 +45,7 @@ abstract class $MenstruationListStateCopyWith<$Res> {
   factory $MenstruationListStateCopyWith(MenstruationListState value,
           $Res Function(MenstruationListState) then) =
       _$MenstruationListStateCopyWithImpl<$Res>;
-  $Res call({bool isNotYetLoad, List<MenstruationHistoryCardState> cards});
+  $Res call({bool isNotYetLoaded, List<MenstruationHistoryRowState> rows});
 }
 
 /// @nodoc
@@ -59,18 +59,18 @@ class _$MenstruationListStateCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object? isNotYetLoad = freezed,
-    Object? cards = freezed,
+    Object? isNotYetLoaded = freezed,
+    Object? rows = freezed,
   }) {
     return _then(_value.copyWith(
-      isNotYetLoad: isNotYetLoad == freezed
-          ? _value.isNotYetLoad
-          : isNotYetLoad // ignore: cast_nullable_to_non_nullable
+      isNotYetLoaded: isNotYetLoaded == freezed
+          ? _value.isNotYetLoaded
+          : isNotYetLoaded // ignore: cast_nullable_to_non_nullable
               as bool,
-      cards: cards == freezed
-          ? _value.cards
-          : cards // ignore: cast_nullable_to_non_nullable
-              as List<MenstruationHistoryCardState>,
+      rows: rows == freezed
+          ? _value.rows
+          : rows // ignore: cast_nullable_to_non_nullable
+              as List<MenstruationHistoryRowState>,
     ));
   }
 }
@@ -82,7 +82,7 @@ abstract class _$MenstruationListStateCopyWith<$Res>
           $Res Function(_MenstruationListState) then) =
       __$MenstruationListStateCopyWithImpl<$Res>;
   @override
-  $Res call({bool isNotYetLoad, List<MenstruationHistoryCardState> cards});
+  $Res call({bool isNotYetLoaded, List<MenstruationHistoryRowState> rows});
 }
 
 /// @nodoc
@@ -98,53 +98,55 @@ class __$MenstruationListStateCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object? isNotYetLoad = freezed,
-    Object? cards = freezed,
+    Object? isNotYetLoaded = freezed,
+    Object? rows = freezed,
   }) {
     return _then(_MenstruationListState(
-      isNotYetLoad: isNotYetLoad == freezed
-          ? _value.isNotYetLoad
-          : isNotYetLoad // ignore: cast_nullable_to_non_nullable
+      isNotYetLoaded: isNotYetLoaded == freezed
+          ? _value.isNotYetLoaded
+          : isNotYetLoaded // ignore: cast_nullable_to_non_nullable
               as bool,
-      cards: cards == freezed
-          ? _value.cards
-          : cards // ignore: cast_nullable_to_non_nullable
-              as List<MenstruationHistoryCardState>,
+      rows: rows == freezed
+          ? _value.rows
+          : rows // ignore: cast_nullable_to_non_nullable
+              as List<MenstruationHistoryRowState>,
     ));
   }
 }
 
 /// @nodoc
 class _$_MenstruationListState extends _MenstruationListState {
-  _$_MenstruationListState({required this.isNotYetLoad, required this.cards})
+  _$_MenstruationListState({this.isNotYetLoaded = true, this.rows = const []})
       : super._();
 
+  @JsonKey(defaultValue: true)
   @override
-  final bool isNotYetLoad;
+  final bool isNotYetLoaded;
+  @JsonKey(defaultValue: const [])
   @override
-  final List<MenstruationHistoryCardState> cards;
+  final List<MenstruationHistoryRowState> rows;
 
   @override
   String toString() {
-    return 'MenstruationListState(isNotYetLoad: $isNotYetLoad, cards: $cards)';
+    return 'MenstruationListState(isNotYetLoaded: $isNotYetLoaded, rows: $rows)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other is _MenstruationListState &&
-            (identical(other.isNotYetLoad, isNotYetLoad) ||
+            (identical(other.isNotYetLoaded, isNotYetLoaded) ||
                 const DeepCollectionEquality()
-                    .equals(other.isNotYetLoad, isNotYetLoad)) &&
-            (identical(other.cards, cards) ||
-                const DeepCollectionEquality().equals(other.cards, cards)));
+                    .equals(other.isNotYetLoaded, isNotYetLoaded)) &&
+            (identical(other.rows, rows) ||
+                const DeepCollectionEquality().equals(other.rows, rows)));
   }
 
   @override
   int get hashCode =>
       runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(isNotYetLoad) ^
-      const DeepCollectionEquality().hash(cards);
+      const DeepCollectionEquality().hash(isNotYetLoaded) ^
+      const DeepCollectionEquality().hash(rows);
 
   @JsonKey(ignore: true)
   @override
@@ -155,15 +157,14 @@ class _$_MenstruationListState extends _MenstruationListState {
 
 abstract class _MenstruationListState extends MenstruationListState {
   factory _MenstruationListState(
-          {required bool isNotYetLoad,
-          required List<MenstruationHistoryCardState> cards}) =
-      _$_MenstruationListState;
+      {bool isNotYetLoaded,
+      List<MenstruationHistoryRowState> rows}) = _$_MenstruationListState;
   _MenstruationListState._() : super._();
 
   @override
-  bool get isNotYetLoad => throw _privateConstructorUsedError;
+  bool get isNotYetLoaded => throw _privateConstructorUsedError;
   @override
-  List<MenstruationHistoryCardState> get cards =>
+  List<MenstruationHistoryRowState> get rows =>
       throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
