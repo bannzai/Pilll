@@ -22,7 +22,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 class CalendarCard extends StatelessWidget {
   final DateTime date;
   final PillSheetModel? latestPillSheet;
-  final Setting setting;
+  final Setting? setting;
   final List<Menstruation> menstruations;
 
   const CalendarCard({
