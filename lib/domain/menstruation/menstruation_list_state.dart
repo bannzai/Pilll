@@ -7,6 +7,7 @@ part 'menstruation_list_state.freezed.dart';
 abstract class MenstruationListState implements _$MenstruationListState {
   MenstruationListState._();
   factory MenstruationListState({
+    required bool isNotYetLoad,
     required List<MenstruationHistoryCardState> cards,
   }) = _MenstruationListState;
 

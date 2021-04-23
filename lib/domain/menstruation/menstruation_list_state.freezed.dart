@@ -17,8 +17,10 @@ class _$MenstruationListStateTearOff {
   const _$MenstruationListStateTearOff();
 
   _MenstruationListState call(
-      {required List<MenstruationHistoryCardState> cards}) {
+      {required bool isNotYetLoad,
+      required List<MenstruationHistoryCardState> cards}) {
     return _MenstruationListState(
+      isNotYetLoad: isNotYetLoad,
       cards: cards,
     );
   }
@@ -29,6 +31,7 @@ const $MenstruationListState = _$MenstruationListStateTearOff();
 
 /// @nodoc
 mixin _$MenstruationListState {
+  bool get isNotYetLoad => throw _privateConstructorUsedError;
   List<MenstruationHistoryCardState> get cards =>
       throw _privateConstructorUsedError;
 
@@ -42,7 +45,7 @@ abstract class $MenstruationListStateCopyWith<$Res> {
   factory $MenstruationListStateCopyWith(MenstruationListState value,
           $Res Function(MenstruationListState) then) =
       _$MenstruationListStateCopyWithImpl<$Res>;
-  $Res call({List<MenstruationHistoryCardState> cards});
+  $Res call({bool isNotYetLoad, List<MenstruationHistoryCardState> cards});
 }
 
 /// @nodoc
@@ -56,9 +59,14 @@ class _$MenstruationListStateCopyWithImpl<$Res>
 
   @override
   $Res call({
+    Object? isNotYetLoad = freezed,
     Object? cards = freezed,
   }) {
     return _then(_value.copyWith(
+      isNotYetLoad: isNotYetLoad == freezed
+          ? _value.isNotYetLoad
+          : isNotYetLoad // ignore: cast_nullable_to_non_nullable
+              as bool,
       cards: cards == freezed
           ? _value.cards
           : cards // ignore: cast_nullable_to_non_nullable
@@ -74,7 +82,7 @@ abstract class _$MenstruationListStateCopyWith<$Res>
           $Res Function(_MenstruationListState) then) =
       __$MenstruationListStateCopyWithImpl<$Res>;
   @override
-  $Res call({List<MenstruationHistoryCardState> cards});
+  $Res call({bool isNotYetLoad, List<MenstruationHistoryCardState> cards});
 }
 
 /// @nodoc
@@ -90,9 +98,14 @@ class __$MenstruationListStateCopyWithImpl<$Res>
 
   @override
   $Res call({
+    Object? isNotYetLoad = freezed,
     Object? cards = freezed,
   }) {
     return _then(_MenstruationListState(
+      isNotYetLoad: isNotYetLoad == freezed
+          ? _value.isNotYetLoad
+          : isNotYetLoad // ignore: cast_nullable_to_non_nullable
+              as bool,
       cards: cards == freezed
           ? _value.cards
           : cards // ignore: cast_nullable_to_non_nullable
@@ -103,27 +116,35 @@ class __$MenstruationListStateCopyWithImpl<$Res>
 
 /// @nodoc
 class _$_MenstruationListState extends _MenstruationListState {
-  _$_MenstruationListState({required this.cards}) : super._();
+  _$_MenstruationListState({required this.isNotYetLoad, required this.cards})
+      : super._();
 
+  @override
+  final bool isNotYetLoad;
   @override
   final List<MenstruationHistoryCardState> cards;
 
   @override
   String toString() {
-    return 'MenstruationListState(cards: $cards)';
+    return 'MenstruationListState(isNotYetLoad: $isNotYetLoad, cards: $cards)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other is _MenstruationListState &&
+            (identical(other.isNotYetLoad, isNotYetLoad) ||
+                const DeepCollectionEquality()
+                    .equals(other.isNotYetLoad, isNotYetLoad)) &&
             (identical(other.cards, cards) ||
                 const DeepCollectionEquality().equals(other.cards, cards)));
   }
 
   @override
   int get hashCode =>
-      runtimeType.hashCode ^ const DeepCollectionEquality().hash(cards);
+      runtimeType.hashCode ^
+      const DeepCollectionEquality().hash(isNotYetLoad) ^
+      const DeepCollectionEquality().hash(cards);
 
   @JsonKey(ignore: true)
   @override
@@ -134,10 +155,13 @@ class _$_MenstruationListState extends _MenstruationListState {
 
 abstract class _MenstruationListState extends MenstruationListState {
   factory _MenstruationListState(
-          {required List<MenstruationHistoryCardState> cards}) =
+          {required bool isNotYetLoad,
+          required List<MenstruationHistoryCardState> cards}) =
       _$_MenstruationListState;
   _MenstruationListState._() : super._();
 
+  @override
+  bool get isNotYetLoad => throw _privateConstructorUsedError;
   @override
   List<MenstruationHistoryCardState> get cards =>
       throw _privateConstructorUsedError;
