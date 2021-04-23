@@ -115,7 +115,12 @@ class FontType {
   );
   static final TextStyle description = TextStyle(
     fontFamily: FontFamily.japanese,
-    fontWeight: FontWeight.w300,
+    fontWeight: FontWeight.w400,
+    fontSize: FontSize.small,
+  );
+  static final TextStyle descriptionBold = TextStyle(
+    fontFamily: FontFamily.japanese,
+    fontWeight: FontWeight.w700,
     fontSize: FontSize.small,
   );
   static final TextStyle smallTitle = TextStyle(

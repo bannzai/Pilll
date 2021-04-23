@@ -15,7 +15,6 @@ class MenstruationCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.only(left: 16, right: 16),
       height: 111,
       child: AppCard(
         child: Column(

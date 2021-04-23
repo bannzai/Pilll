@@ -13,6 +13,7 @@ import 'package:pilll/domain/calendar/calendar_date_header.dart';
 import 'package:pilll/domain/calendar/monthly_calendar_state.dart';
 import 'package:pilll/entity/menstruation.dart';
 import 'package:pilll/store/menstruation_edit.dart';
+import 'package:pilll/util/formatter/date_time_formatter.dart';
 
 class MenstruationEditPage extends HookWidget {
   final String title;
@@ -121,4 +122,72 @@ class MenstruationEditPage extends HookWidget {
       },
     );
   }
+}
+
+void showMenstruationEditPageForUpdate(
+  BuildContext context,
+  Menstruation menstruation,
+) {
+  analytics.setCurrentScreen(screenName: "MenstruationEditPage");
+  showModalBottomSheet(
+    context: context,
+    builder: (context) => MenstruationEditPage(
+      title: "生理期間の編集",
+      menstruation: menstruation,
+      didEndSave: (menstruation) {
+        Navigator.of(context).pop();
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(
+            duration: Duration(seconds: 1),
+            content: Text("生理期間を編集しました"),
+          ),
+        );
+      },
+      didEndDelete: () {
+        Navigator.of(context).pop();
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(
+            duration: Duration(seconds: 1),
+            content: Text("生理期間を削除しました"),
+          ),
+        );
+      },
+    ),
+    backgroundColor: Colors.transparent,
+    isScrollControlled: true,
+  );
+}
+
+void showMenstruationEditPageForCreate(
+  BuildContext context,
+) {
+  analytics.setCurrentScreen(screenName: "MenstruationEditPage");
+  showModalBottomSheet(
+    context: context,
+    builder: (context) => MenstruationEditPage(
+      title: "生理開始日を選択",
+      menstruation: null,
+      didEndSave: (menstruation) {
+        Navigator.of(context).pop();
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(
+            duration: Duration(seconds: 1),
+            content: Text(
+                "${DateTimeFormatter.monthAndDay(menstruation.beginDate)}から生理開始で記録しました"),
+          ),
+        );
+      },
+      didEndDelete: () {
+        Navigator.of(context).pop();
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(
+            duration: Duration(seconds: 1),
+            content: Text("生理期間を削除しました"),
+          ),
+        );
+      },
+    ),
+    backgroundColor: Colors.transparent,
+    isScrollControlled: true,
+  );
 }

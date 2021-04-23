@@ -28,7 +28,7 @@ Future<String> debugInfo(String separator) async {
   final menstruations =
       await MenstruationService(databaseConnection).fetchAll();
   Menstruation? menstruation =
-      menstruations.isNotEmpty ? menstruations.last : null;
+      menstruations.isNotEmpty ? menstruations.first : null;
   final package = await PackageInfo.fromPlatform();
   final appName = package.appName;
   final buildNumber = package.buildNumber;

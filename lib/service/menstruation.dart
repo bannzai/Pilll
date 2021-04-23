@@ -24,7 +24,7 @@ class MenstruationService {
     return _database
         .menstruationsReference()
         .where(MenstruationFirestoreKey.deletedAt, isEqualTo: null)
-        .orderBy(MenstruationFirestoreKey.beginDate)
+        .orderBy(MenstruationFirestoreKey.beginDate, descending: true)
         .get()
         .then((event) => event.docs.map(_map).toList())
         .then((value) =>
@@ -51,7 +51,7 @@ class MenstruationService {
     return _database
         .menstruationsReference()
         .where(MenstruationFirestoreKey.deletedAt, isEqualTo: null)
-        .orderBy(MenstruationFirestoreKey.beginDate)
+        .orderBy(MenstruationFirestoreKey.beginDate, descending: true)
         .snapshots()
         .map((event) => event.docs.map((doc) => _map(doc)).toList())
         .map((value) =>

@@ -14,11 +14,10 @@ import 'package:pilll/domain/calendar/date_range.dart';
 import 'package:pilll/domain/calendar/utility.dart';
 import 'package:pilll/domain/calendar/weekly_calendar_state.dart';
 import 'package:pilll/domain/menstruation/menstruation_card.dart';
-import 'package:pilll/domain/menstruation/menstruation_card2.dart';
 import 'package:pilll/domain/menstruation/menstruation_edit_page.dart';
+import 'package:pilll/domain/menstruation/menstruation_history_card.dart';
 import 'package:pilll/domain/menstruation/menstruation_select_modify_type_sheet.dart';
 import 'package:pilll/domain/record/weekday_badge.dart';
-import 'package:pilll/entity/menstruation.dart';
 import 'package:pilll/entity/weekday.dart';
 import 'package:pilll/store/menstruation.dart';
 import 'package:pilll/util/datetime/day.dart';
@@ -133,29 +132,8 @@ class MenstruationPage extends HookWidget {
                                 if (model is! CalendarMenstruationBandModel) {
                                   return;
                                 }
-                                _showEditPage(
-                                  context,
-                                  model.menstruation,
-                                  title: "生理期間の編集",
-                                  didEndSave: (menstruation) {
-                                    Navigator.of(context).pop();
-                                    ScaffoldMessenger.of(context).showSnackBar(
-                                      SnackBar(
-                                        duration: Duration(seconds: 1),
-                                        content: Text("生理期間を編集しました"),
-                                      ),
-                                    );
-                                  },
-                                  didEndDelete: () {
-                                    Navigator.of(context).pop();
-                                    ScaffoldMessenger.of(context).showSnackBar(
-                                      SnackBar(
-                                        duration: Duration(seconds: 1),
-                                        content: Text("生理期間を削除しました"),
-                                      ),
-                                    );
-                                  },
-                                );
+                                showMenstruationEditPageForUpdate(
+                                    context, model.menstruation);
                               },
                             ),
                           );
@@ -182,42 +160,19 @@ class MenstruationPage extends HookWidget {
                               return Container();
                             }
                             return MenstruationCard(cardState);
-                          default:
-                            final cardState = store.card2Statuses()[
-                                index - [state.latestMenstruation].length];
-                            return MenstruationCard2(
-                              cardState,
-                              (state) {
-                                _showEditPage(
-                                  context,
-                                  state.menstruation,
-                                  title: "生理期間の編集",
-                                  didEndSave: (menstruation) {
-                                    Navigator.of(context).pop();
-                                    ScaffoldMessenger.of(context).showSnackBar(
-                                      SnackBar(
-                                        duration: Duration(seconds: 1),
-                                        content: Text("生理期間を編集しました"),
-                                      ),
-                                    );
-                                  },
-                                  didEndDelete: () {
-                                    Navigator.of(context).pop();
-                                    ScaffoldMessenger.of(context).showSnackBar(
-                                      SnackBar(
-                                        duration: Duration(seconds: 1),
-                                        content: Text("生理期間を削除しました"),
-                                      ),
-                                    );
-                                  },
-                                );
-                              },
-                            );
+                          case 1:
+                            final cardState = store.historyCardState();
+                            if (cardState == null) {
+                              return Container();
+                            }
+                            return MenstruationHistoryCard(state: cardState);
                         }
                       };
 
                       return Padding(
-                          padding: EdgeInsets.only(bottom: 24), child: body());
+                          padding:
+                              EdgeInsets.only(left: 16, right: 16, bottom: 24),
+                          child: body());
                     },
                   ),
                 ),
@@ -230,29 +185,8 @@ class MenstruationPage extends HookWidget {
                     final latestMenstruation = state.latestMenstruation;
                     if (latestMenstruation != null &&
                         latestMenstruation.dateRange.inRange(today())) {
-                      _showEditPage(
-                        context,
-                        latestMenstruation,
-                        title: "生理期間の編集",
-                        didEndSave: (menstruation) {
-                          Navigator.of(context).pop();
-                          ScaffoldMessenger.of(context).showSnackBar(
-                            SnackBar(
-                              duration: Duration(seconds: 1),
-                              content: Text("生理期間を編集しました"),
-                            ),
-                          );
-                        },
-                        didEndDelete: () {
-                          Navigator.of(context).pop();
-                          ScaffoldMessenger.of(context).showSnackBar(
-                            SnackBar(
-                              duration: Duration(seconds: 1),
-                              content: Text("生理期間を削除しました"),
-                            ),
-                          );
-                        },
-                      );
+                      showMenstruationEditPageForUpdate(
+                          context, latestMenstruation);
                       return;
                     }
 
@@ -291,30 +225,7 @@ class MenstruationPage extends HookWidget {
                             analytics.logEvent(
                                 name: "tapped_menstruation_record_begin");
                             Navigator.of(context).pop();
-                            return _showEditPage(
-                              context,
-                              null,
-                              title: "生理開始日を選択",
-                              didEndSave: (menstruation) {
-                                Navigator.of(context).pop();
-                                ScaffoldMessenger.of(context).showSnackBar(
-                                  SnackBar(
-                                    duration: Duration(seconds: 1),
-                                    content: Text(
-                                        "${DateTimeFormatter.monthAndDay(menstruation.beginDate)}から生理開始で記録しました"),
-                                  ),
-                                );
-                              },
-                              didEndDelete: () {
-                                Navigator.of(context).pop();
-                                ScaffoldMessenger.of(context).showSnackBar(
-                                  SnackBar(
-                                    duration: Duration(seconds: 1),
-                                    content: Text("生理期間を削除しました"),
-                                  ),
-                                );
-                              },
-                            );
+                            return showMenstruationEditPageForCreate(context);
                         }
                       }),
                     );
@@ -326,26 +237,6 @@ class MenstruationPage extends HookWidget {
           ),
         ),
       ),
-    );
-  }
-
-  void _showEditPage(
-    BuildContext context,
-    Menstruation? menstruation, {
-    required String title,
-    required Function(Menstruation) didEndSave,
-    required VoidCallback didEndDelete,
-  }) {
-    showModalBottomSheet(
-      context: context,
-      builder: (context) => MenstruationEditPage(
-        title: title,
-        menstruation: menstruation,
-        didEndSave: didEndSave,
-        didEndDelete: didEndDelete,
-      ),
-      backgroundColor: Colors.transparent,
-      isScrollControlled: true,
     );
   }
 }
