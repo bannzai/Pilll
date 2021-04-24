@@ -82,11 +82,12 @@ class CalendarBody extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: <Widget>[
               CalendarWeekdayLine(
-                  diaries: diaries,
-                  calendarState: calendarState.weeklyCalendarState(line),
-                  bandModels: bandModels,
-                  horizontalPadding: horizontalPadding,
-                  onTap: (weeklyCalendarState, date) => onTap(date, diaries)),
+                diaries: diaries,
+                calendarState: calendarState.weeklyCalendarState(line),
+                bandModels: bandModels,
+                horizontalPadding: horizontalPadding,
+                onTap: (weeklyCalendarState, date) => onTap(date, diaries),
+              ),
               Divider(height: 1),
             ],
           );
