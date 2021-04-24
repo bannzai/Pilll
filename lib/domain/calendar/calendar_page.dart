@@ -54,17 +54,15 @@ class CalendarPage extends HookWidget {
       body: SafeArea(
         child: ListView(
           children: <Widget>[
-            Center(
-              child: Container(
-                width: MediaQuery.of(context).size.width,
-                height: 444,
-                child: CalendarCard(
-                  state: CalendarCardState(
-                    date: today(),
-                    latestPillSheet: state.latestPillSheet,
-                    setting: settingEntity,
-                    menstruations: state.menstruations,
-                  ),
+            Container(
+              width: MediaQuery.of(context).size.width,
+              height: 444,
+              child: CalendarCard(
+                state: CalendarCardState(
+                  date: today(),
+                  latestPillSheet: state.latestPillSheet,
+                  setting: settingEntity,
+                  menstruations: state.menstruations,
                 ),
               ),
             ),
