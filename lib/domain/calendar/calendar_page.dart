@@ -1,16 +1,8 @@
-import 'package:flutter_svg/flutter_svg.dart';
-import 'package:pilll/analytics.dart';
-import 'package:pilll/components/atoms/buttons.dart';
-import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/molecules/indicator.dart';
-import 'package:pilll/domain/calendar/calendar.dart';
 import 'package:pilll/domain/calendar/calendar_card.dart';
 import 'package:pilll/components/atoms/color.dart';
+import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
-import 'package:pilll/domain/calendar/calendar_help.dart';
-import 'package:pilll/domain/calendar/calendar_weekday_line.dart';
-import 'package:pilll/domain/calendar/monthly_calendar_state.dart';
-import 'package:pilll/entity/diary.dart';
 import 'package:pilll/store/calendar_page.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -55,25 +47,37 @@ class CalendarPage extends HookWidget {
       ),
       extendBodyBehindAppBar: true,
       body: SafeArea(
+        top: false,
         child: ListView(
+          padding: EdgeInsets.all(0),
           children: <Widget>[
+            Stack(
+              children: [
+                Positioned(
+                    left: 16,
+                    top: 44,
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        _title(),
+                        SizedBox(height: 24),
+                      ],
+                    )),
+              ],
+            ),
+            SizedBox(height: 24),
             Center(
               child: Container(
                 child: Padding(
                   padding:
                       const EdgeInsets.only(left: 16, right: 16, bottom: 16),
-                  child: _calendar(
+                  child: CalendarCard(
                     state: CalendarCardState(
                       date: today(),
                       latestPillSheet: state.latestPillSheet,
                       setting: settingEntity,
                       menstruations: state.menstruations,
                     ),
-                    onTap: (date, diaries) {
-                      analytics.logEvent(
-                          name: "did_select_day_tile_on_calendar_card");
-                      transitionToPostDiary(context, date, diaries);
-                    },
                   ),
                 ),
               ),
@@ -81,18 +85,6 @@ class CalendarPage extends HookWidget {
           ],
         ),
       ),
-    );
-  }
-
-  Widget _calendar({
-    required CalendarCardState state,
-    required Function(DateTime, List<Diary>) onTap,
-  }) {
-    return Calendar(
-      calendarState: CalendarTabState(state.date),
-      bandModels: state.bands(),
-      onTap: onTap,
-      horizontalPadding: 16,
     );
   }
 }
