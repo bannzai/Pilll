@@ -55,16 +55,12 @@ class CalendarPage extends HookWidget {
           children: <Widget>[
             Center(
               child: Container(
-                child: Padding(
-                  padding:
-                      const EdgeInsets.only(left: 16, right: 16, bottom: 16),
-                  child: CalendarCard(
-                    state: CalendarCardState(
-                      date: today(),
-                      latestPillSheet: state.latestPillSheet,
-                      setting: settingEntity,
-                      menstruations: state.menstruations,
-                    ),
+                child: CalendarCard(
+                  state: CalendarCardState(
+                    date: today(),
+                    latestPillSheet: state.latestPillSheet,
+                    setting: settingEntity,
+                    menstruations: state.menstruations,
                   ),
                 ),
               ),

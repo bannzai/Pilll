@@ -85,7 +85,7 @@ class CalendarCard extends StatelessWidget {
               analytics.logEvent(name: "did_select_day_tile_on_calendar_card");
               transitionToPostDiary(context, date, diaries);
             },
-            horizontalPadding: 16,
+            horizontalPadding: 0,
           ),
         ],
       ),
