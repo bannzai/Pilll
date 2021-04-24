@@ -47,6 +47,7 @@ class CalendarPage extends HookWidget {
           "2020年8月",
           style: TextColorStyle.main.merge(FontType.subTitle),
         ),
+        elevation: 0,
         backgroundColor: PilllColors.white,
       ),
       extendBodyBehindAppBar: true,
