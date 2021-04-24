@@ -25,6 +25,7 @@ class CalendarPageStateStore extends StateNotifier<CalendarPageState> {
   }
 
   void _reset() {
+    state = state.copyWith(currentCalendarIndex: state.todayCalendarIndex);
     Future(() async {
       final menstruations = await _menstruationService.fetchAll();
       final setting = await _settingService.fetch();
@@ -65,5 +66,12 @@ class CalendarPageStateStore extends StateNotifier<CalendarPageState> {
     _settingCanceller?.cancel();
     _latestPillSheetCanceller?.cancel();
     super.dispose();
+  }
+
+  void updateCurrentCalendarIndex(int index) {
+    if (state.currentCalendarIndex == index) {
+      return;
+    }
+    state = state.copyWith(currentCalendarIndex: index);
   }
 }
