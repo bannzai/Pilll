@@ -67,17 +67,4 @@ class CalendarPage extends HookWidget {
       ),
     );
   }
-
-  Widget _title() {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.start,
-      children: <Widget>[
-        Text(
-          "こんにちは🍰",
-          style: TextColorStyle.noshime.merge(FontType.xBigTitle),
-          textAlign: TextAlign.left,
-        ),
-      ],
-    );
-  }
 }
