@@ -47,25 +47,8 @@ class CalendarPage extends HookWidget {
       ),
       extendBodyBehindAppBar: true,
       body: SafeArea(
-        top: false,
         child: ListView(
-          padding: EdgeInsets.all(0),
           children: <Widget>[
-            Stack(
-              children: [
-                Positioned(
-                    left: 16,
-                    top: 44,
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        _title(),
-                        SizedBox(height: 24),
-                      ],
-                    )),
-              ],
-            ),
-            SizedBox(height: 24),
             Center(
               child: Container(
                 child: Padding(
