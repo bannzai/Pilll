@@ -9,7 +9,6 @@ import 'package:pilll/domain/calendar/calendar_list_page.dart';
 import 'package:pilll/entity/menstruation.dart';
 import 'package:pilll/entity/pill_sheet.dart';
 import 'package:pilll/entity/setting.dart';
-import 'package:pilll/util/datetime/day.dart';
 import 'package:pilll/util/formatter/date_time_formatter.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -35,15 +34,14 @@ class CalendarCardState {
 
   List<CalendarListPageModel> calendarListModels() {
     final bands = buildBandModels(latestPillSheet, setting, menstruations, 12);
-    var now = today();
     final previouses =
         List.generate(6, (index) => index + 1).reversed.map((number) {
       CalendarListPageModel previous = CalendarListPageModel(
-          CalendarTabState(DateTime(now.year, now.month - number, 1)), bands);
+          CalendarTabState(DateTime(date.year, date.month - number, 1)), bands);
       return previous;
     });
     CalendarListPageModel current = CalendarListPageModel(
-      CalendarTabState(now),
+      CalendarTabState(date),
       bands,
     );
     List<CalendarBandModel> satisfyNextMonthDateRanges = [];
@@ -54,7 +52,7 @@ class CalendarCardState {
       6,
       (index) {
         return CalendarListPageModel(
-            CalendarTabState(DateTime(now.year, now.month + index + 1, 1)),
+            CalendarTabState(DateTime(date.year, date.month + index + 1, 1)),
             [if (latestPillSheet != null) ...satisfyNextMonthDateRanges]);
       },
     );
