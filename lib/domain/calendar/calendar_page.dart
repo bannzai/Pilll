@@ -55,6 +55,8 @@ class CalendarPage extends HookWidget {
           children: <Widget>[
             Center(
               child: Container(
+                width: MediaQuery.of(context).size.width,
+                height: 444,
                 child: CalendarCard(
                   state: CalendarCardState(
                     date: today(),
