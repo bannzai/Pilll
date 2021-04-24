@@ -111,16 +111,6 @@ class CalendarCard extends StatelessWidget {
             style: FontType.cardHeader.merge(TextColorStyle.noshime),
           ),
           Spacer(),
-          IconButton(
-            icon: SvgPicture.asset("images/help.svg"),
-            onPressed: () {
-              showDialog(
-                  context: context,
-                  builder: (_) {
-                    return CalendarHelpPage();
-                  });
-            },
-          ),
           SizedBox(width: 16),
         ],
       ),

@@ -24,7 +24,27 @@ class CalendarPage extends HookWidget {
     }
     return Scaffold(
       backgroundColor: PilllColors.background,
-      appBar: null,
+      appBar: AppBar(
+        leading: AppBarTextActionButton(onPressed: () {}, text: "今日"),
+        actions: [
+          IconButton(
+            icon: SvgPicture.asset("images/help.svg"),
+            onPressed: () {
+              analytics.logEvent(name: "pressed_calendar_help");
+              showDialog(
+                  context: context,
+                  builder: (_) {
+                    return CalendarHelpPage();
+                  });
+            },
+          ),
+        ],
+        title: Text(
+          "2020年8月",
+          style: TextColorStyle.main.merge(FontType.sBigTitle),
+        ),
+        backgroundColor: PilllColors.white,
+      ),
       extendBodyBehindAppBar: true,
       body: SafeArea(
         top: false,
