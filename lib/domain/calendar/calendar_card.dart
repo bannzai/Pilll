@@ -28,40 +28,9 @@ class CalendarCardState {
 
   String get dateTitle => DateTimeFormatter.yearAndMonth(date);
 
-  List<CalendarBandModel> bands() {
-    return buildBandModels(latestPillSheet, setting, menstruations, 1);
-  }
-
-  List<CalendarListPageModel> calendarListModels() {
-    final bands = buildBandModels(latestPillSheet, setting, menstruations, 12);
-    final previouses =
-        List.generate(6, (index) => index + 1).reversed.map((number) {
-      CalendarListPageModel previous = CalendarListPageModel(
-          CalendarTabState(DateTime(date.year, date.month - number, 1)), bands);
-      return previous;
-    });
-    CalendarListPageModel current = CalendarListPageModel(
-      CalendarTabState(date),
-      bands,
-    );
-    List<CalendarBandModel> satisfyNextMonthDateRanges = [];
-    if (latestPillSheet != null) {
-      satisfyNextMonthDateRanges = bands;
-    }
-    final nextCalendars = List.generate(
-      6,
-      (index) {
-        return CalendarListPageModel(
-            CalendarTabState(DateTime(date.year, date.month + index + 1, 1)),
-            [if (latestPillSheet != null) ...satisfyNextMonthDateRanges]);
-      },
-    );
-    return [
-      ...previouses,
-      current,
-      ...nextCalendars,
-    ];
-  }
+  late List<CalendarBandModel> bands = () {
+    return buildBandModels(latestPillSheet, setting, menstruations, 3);
+  }();
 }
 
 class CalendarCard extends StatelessWidget {
@@ -78,7 +47,7 @@ class CalendarCard extends StatelessWidget {
         children: <Widget>[
           Calendar(
             calendarState: CalendarTabState(state.date),
-            bandModels: state.bands(),
+            bandModels: state.bands,
             onTap: (date, diaries) {
               analytics.logEvent(name: "did_select_day_tile_on_calendar_card");
               transitionToPostDiary(context, date, diaries);
