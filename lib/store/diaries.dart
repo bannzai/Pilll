@@ -1,7 +1,5 @@
 import 'dart:async';
 
-import 'package:pilll/util/datetime/date_compare.dart';
-import 'package:pilll/entity/diary.dart';
 import 'package:pilll/service/diary.dart';
 import 'package:pilll/state/diaries.dart';
 import 'package:riverpod/riverpod.dart';
@@ -38,39 +36,5 @@ class DiariesStateStore extends StateNotifier<DiariesState> {
   void dispose() {
     canceller?.cancel();
     super.dispose();
-  }
-
-  Future<void> register(Diary diary) {
-    if (state.entities
-        .where((element) => isSameDay(diary.date, element.date))
-        .isNotEmpty) throw DiaryAleradyExists(diary);
-    return _service.register(diary);
-  }
-
-  Future<void> update(Diary diary) {
-    if (state.entities
-        .where((element) => isSameDay(diary.date, element.date))
-        .isEmpty) throw DiaryIsNotExists(diary);
-    return _service.update(diary);
-  }
-}
-
-class DiaryAleradyExists extends Error {
-  final Diary _diary;
-
-  DiaryAleradyExists(this._diary);
-  @override
-  toString() {
-    return "${_diary.date}の日付の日記のデータが既に存在しています。";
-  }
-}
-
-class DiaryIsNotExists extends Error {
-  final Diary _diary;
-
-  DiaryIsNotExists(this._diary);
-  @override
-  toString() {
-    return "${_diary.date} の日付の日記のデータが存在しません。";
   }
 }

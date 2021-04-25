@@ -40,7 +40,6 @@ class CalendarPageStateStore extends StateNotifier<CalendarPageState> {
       final latestPillSheet = await _pillSheetService.fetchLast();
       final diaries = await _diaryService.fetchListForMonth(
           state.calendarDataSource[state.todayCalendarIndex]);
-      ;
       state = state.copyWith(
         menstruations: menstruations,
         setting: setting,
