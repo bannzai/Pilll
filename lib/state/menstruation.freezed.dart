@@ -208,6 +208,7 @@ class __$MenstruationStateCopyWithImpl<$Res>
 }
 
 /// @nodoc
+
 class _$_MenstruationState extends _MenstruationState {
   _$_MenstruationState(
       {this.isNotYetLoaded = true,

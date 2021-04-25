@@ -98,6 +98,7 @@ class __$DiariesStateCopyWithImpl<$Res> extends _$DiariesStateCopyWithImpl<$Res>
 }
 
 /// @nodoc
+
 class _$_DiariesState extends _DiariesState {
   _$_DiariesState({this.entities = const []}) : super._();
 

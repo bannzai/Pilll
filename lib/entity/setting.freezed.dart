@@ -118,9 +118,9 @@ class __$ReminderTimeCopyWithImpl<$Res> extends _$ReminderTimeCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable(explicitToJson: true)
-
 /// @nodoc
+
+@JsonSerializable(explicitToJson: true)
 class _$_ReminderTime extends _ReminderTime with DiagnosticableTreeMixin {
   const _$_ReminderTime({required this.hour, required this.minute}) : super._();
 
@@ -359,9 +359,9 @@ class __$SettingCopyWithImpl<$Res> extends _$SettingCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable(explicitToJson: true)
-
 /// @nodoc
+
+@JsonSerializable(explicitToJson: true)
 class _$_Setting extends _Setting with DiagnosticableTreeMixin {
   _$_Setting(
       {required this.pillSheetTypeRawPath,

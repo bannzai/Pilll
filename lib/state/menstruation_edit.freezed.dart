@@ -149,6 +149,7 @@ class __$MenstruationEditStateCopyWithImpl<$Res>
 }
 
 /// @nodoc
+
 class _$_MenstruationEditState extends _MenstruationEditState {
   _$_MenstruationEditState(
       {required this.menstruation,

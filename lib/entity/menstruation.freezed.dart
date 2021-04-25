@@ -197,9 +197,9 @@ class __$MenstruationCopyWithImpl<$Res> extends _$MenstruationCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable(explicitToJson: true)
-
 /// @nodoc
+
+@JsonSerializable(explicitToJson: true)
 class _$_Menstruation extends _Menstruation {
   _$_Menstruation(
       {@JsonKey(includeIfNull: false, toJson: toNull)

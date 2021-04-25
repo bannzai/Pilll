@@ -127,6 +127,7 @@ class __$SettingStateCopyWithImpl<$Res> extends _$SettingStateCopyWithImpl<$Res>
 }
 
 /// @nodoc
+
 class _$_SettingState extends _SettingState {
   _$_SettingState({required this.entity, this.userIsUpdatedFrom132 = false})
       : super._();

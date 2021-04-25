@@ -112,6 +112,7 @@ class __$InitialSettingStateCopyWithImpl<$Res>
 }
 
 /// @nodoc
+
 class _$_InitialSettingState extends _InitialSettingState {
   _$_InitialSettingState(this.entity) : super._();
 

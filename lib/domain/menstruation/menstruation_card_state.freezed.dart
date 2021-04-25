@@ -127,6 +127,7 @@ class __$MenstruationCardStateCopyWithImpl<$Res>
 }
 
 /// @nodoc
+
 class _$_MenstruationCardState extends _MenstruationCardState {
   _$_MenstruationCardState(
       {required this.title,

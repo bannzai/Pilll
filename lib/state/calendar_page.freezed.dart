@@ -208,6 +208,7 @@ class __$CalendarPageStateCopyWithImpl<$Res>
 }
 
 /// @nodoc
+
 class _$_CalendarPageState extends _CalendarPageState {
   _$_CalendarPageState(
       {required this.menstruations,
