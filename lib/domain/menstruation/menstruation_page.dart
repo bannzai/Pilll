@@ -53,6 +53,7 @@ class MenstruationPage extends HookWidget {
         actions: [
           AppBarTextActionButton(
               onPressed: () {
+                analytics.logEvent(name: "menstruation_to_today_pressed");
                 store.updateCurrentCalendarIndex(state.todayCalendarIndex);
                 itemScrollController.scrollTo(
                     index: state.todayCalendarIndex,

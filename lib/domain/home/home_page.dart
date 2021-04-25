@@ -132,6 +132,7 @@ class _HomePageState extends State<HomePage>
                   case HomePageTabType.menstruation:
                     break;
                   case HomePageTabType.calendar:
+                    analytics.logEvent(name: "calendar_fab_pressed");
                     final context = calendarPageKey.currentContext;
                     final state = calendarPageKey.currentState;
                     assert(context != null && state != null);
