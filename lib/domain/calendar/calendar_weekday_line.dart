@@ -123,7 +123,7 @@ void transitionToPostDiary(
     return;
   }
   if (!isExistsPostedDiary(diaries, date)) {
-    Navigator.of(context).push(PostDiaryPageRoute.route(null));
+    Navigator.of(context).push(PostDiaryPageRoute.route(date, null));
   } else {
     final diary = diaries.lastWhere((element) => isSameDay(element.date, date));
     showModalBottomSheet(
