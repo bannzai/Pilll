@@ -58,10 +58,36 @@ class CalendarPage extends HookWidget {
             },
           ),
         ],
-        title: Text(
-          state.displayMonth,
-          style: TextColorStyle.main.merge(FontType.subTitle),
+        title: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            IconButton(
+              icon: SvgPicture.asset("images/arrow_left.svg"),
+              onPressed: () {
+                final previousMonthIndex = state.currentCalendarIndex - 1;
+                itemScrollController.scrollTo(
+                    index: previousMonthIndex,
+                    duration: Duration(milliseconds: 300));
+                store.updateCurrentCalendarIndex(previousMonthIndex);
+              },
+            ),
+            Text(
+              state.displayMonth,
+              style: TextColorStyle.main.merge(FontType.subTitle),
+            ),
+            IconButton(
+              icon: SvgPicture.asset("images/arrow_right.svg"),
+              onPressed: () {
+                final nextMonthIndex = state.currentCalendarIndex + 1;
+                itemScrollController.scrollTo(
+                    index: nextMonthIndex,
+                    duration: Duration(milliseconds: 300));
+                store.updateCurrentCalendarIndex(nextMonthIndex);
+              },
+            ),
+          ],
         ),
+        centerTitle: true,
         elevation: 0,
         backgroundColor: PilllColors.white,
       ),
