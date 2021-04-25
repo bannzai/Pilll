@@ -1,4 +1,3 @@
-import 'package:mockito/mockito.dart';
 import 'package:pilll/domain/calendar/monthly_calendar_state.dart';
 import 'package:pilll/domain/calendar/calendar.dart';
 import 'package:pilll/domain/calendar/calendar_band.dart';
@@ -8,10 +7,7 @@ import 'package:pilll/entity/diary.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:pilll/state/diaries.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-
-import '../../../helper/mock.dart';
 
 void main() {
   setUp(() {
@@ -37,17 +33,9 @@ void main() {
       var model = CalendarNextPillSheetBandModel(
           DateTime(2020, 09, 15), DateTime(2020, 09, 18));
       final diaries = [Diary.fromDate(now)];
-      final mock = MockDiariesStateStore();
-      // ignore: invalid_use_of_protected_member
-      when(mock.state).thenReturn(DiariesState(entities: diaries));
 
       await tester.pumpWidget(
         ProviderScope(
-          overrides: [
-            monthlyDiariesStoreProvider.overrideWithProvider(
-              (ref, parameters) => mock,
-            )
-          ],
           child: MaterialApp(
             home: CalendarBody(
               diaries: diaries,
@@ -86,17 +74,9 @@ void main() {
       var model = CalendarNextPillSheetBandModel(
           DateTime(2020, 09, 19), DateTime(2020, 09, 21));
       final diaries = [Diary.fromDate(now)];
-      final mock = MockDiariesStateStore();
-      // ignore: invalid_use_of_protected_member
-      when(mock.state).thenReturn(DiariesState(entities: diaries));
 
       await tester.pumpWidget(
         ProviderScope(
-          overrides: [
-            monthlyDiariesStoreProvider.overrideWithProvider(
-              (ref, parameters) => mock,
-            )
-          ],
           child: MaterialApp(
             home: CalendarBody(
               diaries: diaries,
@@ -121,16 +101,9 @@ void main() {
     testWidgets('when showing new sheet label to next month',
         (WidgetTester tester) async {
       var now = DateTime(2020, 09, 14);
-      final mock = MockDiariesStateStore();
-      // ignore: invalid_use_of_protected_member
-      when(mock.state).thenReturn(DiariesState(entities: []));
 
       await tester.pumpWidget(
         ProviderScope(
-          overrides: [
-            monthlyDiariesStoreProvider
-                .overrideWithProvider((ref, param) => mock)
-          ],
           child: MaterialApp(
             home: CalendarBody(
               diaries: [],
@@ -151,16 +124,9 @@ void main() {
     testWidgets('when showing new sheet label to before month',
         (WidgetTester tester) async {
       var now = DateTime(2020, 09, 14);
-      final mock = MockDiariesStateStore();
-      // ignore: invalid_use_of_protected_member
-      when(mock.state).thenReturn(DiariesState(entities: []));
 
       await tester.pumpWidget(
         ProviderScope(
-          overrides: [
-            monthlyDiariesStoreProvider
-                .overrideWithProvider((ref, param) => mock)
-          ],
           child: MaterialApp(
             home: CalendarBody(
               diaries: [],
