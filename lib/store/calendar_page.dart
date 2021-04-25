@@ -6,6 +6,7 @@ import 'package:pilll/service/menstruation.dart';
 import 'package:pilll/service/pill_sheet.dart';
 import 'package:pilll/service/setting.dart';
 import 'package:pilll/state/calendar_page.dart';
+import 'package:pilll/util/datetime/date_compare.dart';
 
 final calendarPageStateProvider = StateNotifierProvider<CalendarPageStateStore>(
   (ref) => CalendarPageStateStore(
@@ -89,5 +90,13 @@ class CalendarPageStateStore extends StateNotifier<CalendarPageState> {
       return;
     }
     state = state.copyWith(currentCalendarIndex: index);
+    final date = state.calendarDataSource[state.currentCalendarIndex];
+    _diaryService.fetchListForMonth(date).then((diaries) {
+      final ignoredSameMonth = state.diaries
+          .where((element) => !isSameMonth(element.date, date))
+          .toList();
+      final updated = ignoredSameMonth..addAll(diaries);
+      state = state.copyWith(diaries: updated);
+    });
   }
 }
