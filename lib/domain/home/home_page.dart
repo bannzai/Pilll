@@ -14,6 +14,8 @@ import 'package:pilll/util/formatter/date_time_formatter.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
+import '../calendar/calendar_weekday_line.dart';
+
 GlobalKey<_HomePageState> homeKey = GlobalKey();
 
 class HomePage extends StatefulWidget {
@@ -32,6 +34,8 @@ class _HomePageState extends State<HomePage>
   HomePageTabType get _selectedTab {
     return HomePageTabType.values[_selectedIndex];
   }
+
+  final GlobalKey<CalendarPageState> calendarPageKey = GlobalKey();
 
   @override
   void initState() {
@@ -111,7 +115,7 @@ class _HomePageState extends State<HomePage>
           children: <Widget>[
             RecordPage(),
             MenstruationPage(),
-            CalendarPage(),
+            CalendarPage(key: calendarPageKey),
             SettingsPage(),
             // SettingsPage(),
           ],
@@ -122,7 +126,24 @@ class _HomePageState extends State<HomePage>
             padding: const EdgeInsets.only(right: 10, bottom: 32),
             child: FloatingActionButton(
               onPressed: () {
-                // Add your onPressed code here!
+                switch (_selectedTab) {
+                  case HomePageTabType.record:
+                    break;
+                  case HomePageTabType.menstruation:
+                    break;
+                  case HomePageTabType.calendar:
+                    final context = calendarPageKey.currentContext;
+                    final state = calendarPageKey.currentState;
+                    assert(context != null && state != null);
+                    if (context == null || state == null) {
+                      return;
+                    }
+                    final date = today();
+                    transitionToPostDiary(context, date, state.diaries);
+                    break;
+                  case HomePageTabType.setting:
+                    break;
+                }
               },
               child: const Icon(Icons.add, color: Colors.white),
               backgroundColor: PilllColors.secondary,
