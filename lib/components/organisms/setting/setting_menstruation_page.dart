@@ -4,6 +4,9 @@ import 'package:pilll/components/atoms/buttons.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
+import 'package:pilll/components/organisms/pill/pill_sheet.dart';
+import 'package:pilll/entity/pill_mark_type.dart';
+import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/util/toolbar/picker_toolbar.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -17,10 +20,12 @@ abstract class SettingMenstruationPageConstants {
 class SettingMenstruationPageModel {
   int selectedFromMenstruation;
   int selectedDurationMenstruation;
+  PillSheetType pillSheetType;
 
   SettingMenstruationPageModel({
     required this.selectedFromMenstruation,
     required this.selectedDurationMenstruation,
+    required this.pillSheetType,
   });
 }
 
@@ -68,66 +73,76 @@ class _SettingMenstruationPageState extends State<SettingMenstruationPage> {
       ),
       body: SafeArea(
         child: Container(
-          child: Center(
-            child: Column(
-              children: <Widget>[
-                SizedBox(height: 24),
-                Text(
-                  "生理について教えてください",
-                  style: FontType.sBigTitle.merge(TextColorStyle.main),
-                  textAlign: TextAlign.center,
+          child: Column(
+            children: <Widget>[
+              SizedBox(height: 24),
+              Text(
+                "生理について教えてください",
+                style: FontType.sBigTitle.merge(TextColorStyle.main),
+                textAlign: TextAlign.center,
+              ),
+              SizedBox(height: 12),
+              PillSheet(
+                pillSheetType: widget.model.pillSheetType,
+                pillMarkTypeBuilder: (number) {
+                  return _pillMarkTypeFor(number);
+                },
+                doneStateBuilder: (number) {
+                  return false;
+                },
+                enabledMarkAnimation: null,
+                markSelected: (number) {},
+              ),
+              SizedBox(height: 24),
+              Container(
+                height: 156,
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: <Widget>[
+                    Text("いつから生理がはじまる？",
+                        style: FontType.subTitle.merge(TextColorStyle.main)),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: <Widget>[
+                        Text("ピル番号 ",
+                            style:
+                                FontType.assisting.merge(TextColorStyle.main)),
+                        GestureDetector(
+                          onTap: () => _showFromModalSheet(context),
+                          child: _from(),
+                        ),
+                        Text(" 番目ぐらいから",
+                            style:
+                                FontType.assisting.merge(TextColorStyle.main)),
+                      ],
+                    ),
+                    Text("何日間生理が続く？",
+                        style:
+                            FontType.assistingBold.merge(TextColorStyle.main)),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: <Widget>[
+                        GestureDetector(
+                          onTap: () => _showDurationModalSheet(context),
+                          child: _duration(),
+                        ),
+                        Text(" 日間生理が続く",
+                            style:
+                                FontType.assisting.merge(TextColorStyle.main)),
+                      ],
+                    )
+                  ],
                 ),
-                Spacer(),
-                Container(
-                  height: 156,
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: <Widget>[
-                      Text("いつから生理がはじまる？",
-                          style: FontType.subTitle.merge(TextColorStyle.main)),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: <Widget>[
-                          Text("ピル番号 ",
-                              style: FontType.assisting
-                                  .merge(TextColorStyle.main)),
-                          GestureDetector(
-                            onTap: () => _showFromModalSheet(context),
-                            child: _from(),
-                          ),
-                          Text(" 番目ぐらいから",
-                              style: FontType.assisting
-                                  .merge(TextColorStyle.main)),
-                        ],
-                      ),
-                      Text("何日間生理が続く？",
-                          style: FontType.assistingBold
-                              .merge(TextColorStyle.main)),
-                      Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: <Widget>[
-                          GestureDetector(
-                            onTap: () => _showDurationModalSheet(context),
-                            child: _duration(),
-                          ),
-                          Text(" 日間生理が続く",
-                              style: FontType.assisting
-                                  .merge(TextColorStyle.main)),
-                        ],
-                      )
-                    ],
-                  ),
+              ),
+              Spacer(),
+              if (this.widget.done != null) ...[
+                PrimaryButton(
+                  text: this.widget.doneText ?? "",
+                  onPressed: this.widget.done,
                 ),
-                Spacer(),
-                if (this.widget.done != null) ...[
-                  PrimaryButton(
-                    text: this.widget.doneText ?? "",
-                    onPressed: this.widget.done,
-                  ),
-                  SizedBox(height: 35),
-                ]
-              ],
-            ),
+                SizedBox(height: 35),
+              ]
+            ],
           ),
         ),
       ),
@@ -274,6 +289,17 @@ class _SettingMenstruationPageState extends State<SettingMenstruationPage> {
 
   Widget _pickerItem(String str) {
     return Text(str);
+  }
+
+  PillMarkType _pillMarkTypeFor(
+    int number,
+  ) {
+    if (widget.model.pillSheetType.dosingPeriod < number) {
+      return widget.model.pillSheetType == PillSheetType.pillsheet_21
+          ? PillMarkType.rest
+          : PillMarkType.fake;
+    }
+    return PillMarkType.normal;
   }
 }
 

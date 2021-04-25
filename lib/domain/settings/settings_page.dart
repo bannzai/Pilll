@@ -354,6 +354,7 @@ class SettingsPage extends HookWidget {
                         settingEntity.pillNumberForFromMenstruation,
                     selectedDurationMenstruation:
                         settingEntity.durationMenstruation,
+                    pillSheetType: settingEntity.pillSheetType,
                   ),
                   fromMenstructionDidDecide: (selectedFromMenstruction) =>
                       settingStore
