@@ -111,6 +111,7 @@ class __$UserStateCopyWithImpl<$Res> extends _$UserStateCopyWithImpl<$Res>
 }
 
 /// @nodoc
+
 class _$_UserState extends _UserState {
   _$_UserState({required this.entity}) : super._();
 

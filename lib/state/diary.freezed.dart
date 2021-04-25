@@ -109,6 +109,7 @@ class __$DiaryStateCopyWithImpl<$Res> extends _$DiaryStateCopyWithImpl<$Res>
 }
 
 /// @nodoc
+
 class _$_DiaryState extends _DiaryState {
   _$_DiaryState({required this.entity}) : super._();
 

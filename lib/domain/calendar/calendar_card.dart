@@ -1,74 +1,35 @@
 import 'package:pilll/analytics.dart';
 import 'package:pilll/components/molecules/app_card.dart';
+import 'package:pilll/domain/calendar/calendar_band_model.dart';
+import 'package:pilll/domain/calendar/calendar.dart';
 import 'package:pilll/domain/calendar/calendar_weekday_line.dart';
 import 'package:pilll/domain/calendar/monthly_calendar_state.dart';
-import 'package:pilll/domain/calendar/calendar.dart';
-import 'package:pilll/domain/calendar/utility.dart';
-import 'package:pilll/domain/calendar/calendar_band_model.dart';
-import 'package:pilll/domain/calendar/calendar_help.dart';
-import 'package:pilll/domain/calendar/calendar_list_page.dart';
+import 'package:pilll/entity/diary.dart';
 import 'package:pilll/entity/menstruation.dart';
 import 'package:pilll/entity/pill_sheet.dart';
 import 'package:pilll/entity/setting.dart';
-import 'package:pilll/components/atoms/buttons.dart';
-import 'package:pilll/components/atoms/font.dart';
-import 'package:pilll/components/atoms/text_color.dart';
-import 'package:pilll/util/datetime/day.dart';
 import 'package:pilll/util/formatter/date_time_formatter.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 
 class CalendarCardState {
   final DateTime date;
   final PillSheetModel? latestPillSheet;
   final Setting? setting;
+  final List<Diary> diaries;
   final List<Menstruation> menstruations;
+  final List<CalendarBandModel> bands;
 
   CalendarCardState({
     required this.date,
     required this.latestPillSheet,
     required this.setting,
+    required this.diaries,
     required this.menstruations,
+    required this.bands,
   });
 
   String get dateTitle => DateTimeFormatter.yearAndMonth(date);
-
-  List<CalendarBandModel> bands() {
-    return buildBandModels(latestPillSheet, setting, menstruations, 1);
-  }
-
-  List<CalendarListPageModel> calendarListModels() {
-    final bands = buildBandModels(latestPillSheet, setting, menstruations, 12);
-    var now = today();
-    final previouses =
-        List.generate(6, (index) => index + 1).reversed.map((number) {
-      CalendarListPageModel previous = CalendarListPageModel(
-          CalendarTabState(DateTime(now.year, now.month - number, 1)), bands);
-      return previous;
-    });
-    CalendarListPageModel current = CalendarListPageModel(
-      CalendarTabState(now),
-      bands,
-    );
-    List<CalendarBandModel> satisfyNextMonthDateRanges = [];
-    if (latestPillSheet != null) {
-      satisfyNextMonthDateRanges = bands;
-    }
-    final nextCalendars = List.generate(
-      6,
-      (index) {
-        return CalendarListPageModel(
-            CalendarTabState(DateTime(now.year, now.month + index + 1, 1)),
-            [if (latestPillSheet != null) ...satisfyNextMonthDateRanges]);
-      },
-    );
-    return [
-      ...previouses,
-      current,
-      ...nextCalendars,
-    ];
-  }
 }
 
 class CalendarCard extends StatelessWidget {
@@ -83,67 +44,16 @@ class CalendarCard extends StatelessWidget {
     return AppCard(
       child: Column(
         children: <Widget>[
-          _header(context),
           Calendar(
+            diaries: state.diaries,
             calendarState: CalendarTabState(state.date),
-            bandModels: state.bands(),
+            bandModels: state.bands,
             onTap: (date, diaries) {
               analytics.logEvent(name: "did_select_day_tile_on_calendar_card");
               transitionToPostDiary(context, date, diaries);
             },
-            horizontalPadding: 16,
+            horizontalPadding: 0,
           ),
-          _more(context),
-        ],
-      ),
-    );
-  }
-
-  Widget _header(BuildContext context) {
-    return ConstrainedBox(
-      constraints: BoxConstraints.expand(height: 64),
-      child: Row(
-        children: [
-          SizedBox(width: 16),
-          Text(
-            state.dateTitle,
-            textAlign: TextAlign.left,
-            style: FontType.cardHeader.merge(TextColorStyle.noshime),
-          ),
-          Spacer(),
-          IconButton(
-            icon: SvgPicture.asset("images/help.svg"),
-            onPressed: () {
-              showDialog(
-                  context: context,
-                  builder: (_) {
-                    return CalendarHelpPage();
-                  });
-            },
-          ),
-          SizedBox(width: 16),
-        ],
-      ),
-    );
-  }
-
-  Widget _more(BuildContext context) {
-    return ConstrainedBox(
-      constraints: BoxConstraints.expand(height: 60),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.end,
-        children: <Widget>[
-          SecondaryButton(
-            text: "もっと見る",
-            onPressed: () {
-              Navigator.of(context).push(
-                () {
-                  return CalendarListPageRoute.route(
-                      state.calendarListModels());
-                }(),
-              );
-            },
-          )
         ],
       ),
     );

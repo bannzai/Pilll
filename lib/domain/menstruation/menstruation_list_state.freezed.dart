@@ -115,6 +115,7 @@ class __$MenstruationListStateCopyWithImpl<$Res>
 }
 
 /// @nodoc
+
 class _$_MenstruationListState extends _MenstruationListState {
   _$_MenstruationListState({this.isNotYetLoaded = true, this.rows = const []})
       : super._();

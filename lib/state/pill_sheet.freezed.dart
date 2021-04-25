@@ -116,6 +116,7 @@ class __$PillSheetStateCopyWithImpl<$Res>
 }
 
 /// @nodoc
+
 class _$_PillSheetState extends _PillSheetState {
   _$_PillSheetState({required this.entity}) : super._();
 

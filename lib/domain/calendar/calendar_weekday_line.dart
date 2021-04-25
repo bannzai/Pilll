@@ -5,6 +5,7 @@ import 'package:pilll/domain/calendar/utility.dart';
 import 'package:pilll/domain/calendar/weekly_calendar_state.dart';
 import 'package:pilll/domain/diary/post_diary_page.dart';
 import 'package:flutter/material.dart';
+import 'package:pilll/domain/menstruation/menstruation_edit_page.dart';
 import 'package:pilll/entity/diary.dart';
 import 'package:pilll/entity/weekday.dart';
 import 'package:pilll/domain/diary/confirm_diary_sheet.dart';
@@ -17,7 +18,6 @@ class CalendarWeekdayLine extends StatelessWidget {
   final List<CalendarBandModel> bandModels;
   final double horizontalPadding;
   final Function(WeeklyCalendarState, DateTime) onTap;
-  final Function(CalendarBandModel)? onTapBand;
 
   const CalendarWeekdayLine({
     Key? key,
@@ -26,7 +26,6 @@ class CalendarWeekdayLine extends StatelessWidget {
     required this.bandModels,
     required this.horizontalPadding,
     required this.onTap,
-    this.onTapBand,
   }) : super(key: key);
   @override
   Widget build(BuildContext context) {
@@ -100,7 +99,12 @@ class CalendarWeekdayLine extends StatelessWidget {
               model: bandModel,
               isLineBreaked: isLineBreaked,
               width: tileWidth * length,
-              onTap: onTapBand,
+              onTap: (model) {
+                if (model is! CalendarMenstruationBandModel) {
+                  return;
+                }
+                showMenstruationEditPageForUpdate(context, model.menstruation);
+              },
             ),
           );
         })
@@ -119,7 +123,7 @@ void transitionToPostDiary(
     return;
   }
   if (!isExistsPostedDiary(diaries, date)) {
-    Navigator.of(context).push(PostDiaryPageRoute.route(date));
+    Navigator.of(context).push(PostDiaryPageRoute.route(date, null));
   } else {
     final diary = diaries.lastWhere((element) => isSameDay(element.date, date));
     showModalBottomSheet(

@@ -156,9 +156,9 @@ class __$PillSheetTypeInfoCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable(explicitToJson: true)
-
 /// @nodoc
+
+@JsonSerializable(explicitToJson: true)
 class _$_PillSheetTypeInfo implements _PillSheetTypeInfo {
   _$_PillSheetTypeInfo(
       {required this.pillSheetTypeReferencePath,
@@ -463,9 +463,9 @@ class __$PillSheetModelCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable(explicitToJson: true)
-
 /// @nodoc
+
+@JsonSerializable(explicitToJson: true)
 class _$_PillSheetModel extends _PillSheetModel {
   _$_PillSheetModel(
       {@JsonKey(includeIfNull: false, toJson: toNull)

@@ -1,7 +1,7 @@
+import 'package:pilll/domain/diary/post_diary_store_provider_family.dart';
 import 'package:pilll/entity/diary.dart';
 import 'package:pilll/service/diary.dart';
 import 'package:pilll/state/diary.dart';
-import 'package:pilll/store/diaries.dart';
 import 'package:pilll/store/post_diary.dart';
 import 'package:pilll/components/atoms/buttons.dart';
 import 'package:pilll/components/atoms/color.dart';
@@ -17,13 +17,12 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:riverpod/riverpod.dart';
 
 final _postDiaryStoreProvider = StateNotifierProvider.autoDispose
-    .family<PostDiaryStore, DateTime>((ref, date) {
-  final diary = ref
-      .watch(monthlyDiariesStoreProvider(date).state)
-      .diaryForDatetimeOrNull(date);
+    .family<PostDiaryStore, PostDiaryStoreProviderFamily>((ref, family) {
   final service = ref.watch(diaryServiceProvider);
+  final diary = family.diary;
   if (diary == null) {
-    return PostDiaryStore(service, DiaryState(entity: Diary.fromDate(date)));
+    return PostDiaryStore(
+        service, DiaryState(entity: Diary.fromDate(family.date)));
   }
   return PostDiaryStore(service, DiaryState(entity: diary.copyWith()));
 });
@@ -34,17 +33,21 @@ abstract class PostDiaryPageConst {
 
 class PostDiaryPage extends HookWidget {
   final DateTime date;
+  final Diary? diary;
 
-  PostDiaryPage(this.date);
+  PostDiaryPage(this.date, this.diary);
+
+  PostDiaryStoreProviderFamily _family() {
+    return PostDiaryStoreProviderFamily(date: date, diary: diary);
+  }
 
   @override
   Widget build(BuildContext context) {
-    // ignore: invalid_use_of_protected_member
-    final state = useProvider(_postDiaryStoreProvider(date).state);
+    final store = useProvider(_postDiaryStoreProvider(_family()));
+    final state = useProvider(_postDiaryStoreProvider(_family()).state);
     final TextEditingController? textEditingController =
         useTextEditingController(text: state.entity.memo);
     final focusNode = useFocusNode();
-    final store = useProvider(_postDiaryStoreProvider(date));
     final scrollController = useScrollController();
 
     focusNode.addListener(() {
@@ -97,10 +100,11 @@ class PostDiaryPage extends HookWidget {
                     Text(DateTimeFormatter.yearAndMonthAndDay(this.date),
                         style: FontType.sBigTitle.merge(TextColorStyle.main)),
                     ...[
-                      _physicalConditions(),
-                      _physicalConditionDetails(),
-                      _sex(),
-                      _memo(context, textEditingController, focusNode),
+                      _physicalConditions(store, state),
+                      _physicalConditionDetails(store, state),
+                      _sex(store, state),
+                      _memo(context, textEditingController, focusNode, store,
+                          state),
                     ].map((e) => _withContentSpacer(e)),
                     SizedBox(
                       height: MediaQuery.of(context).viewInsets.bottom +
@@ -125,9 +129,7 @@ class PostDiaryPage extends HookWidget {
     );
   }
 
-  Widget _physicalConditions() {
-    final store = useProvider(_postDiaryStoreProvider(date));
-    final state = useProvider(_postDiaryStoreProvider(date).state);
+  Widget _physicalConditions(PostDiaryStore store, DiaryState state) {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
@@ -197,9 +199,7 @@ class PostDiaryPage extends HookWidget {
     );
   }
 
-  Widget _physicalConditionDetails() {
-    final store = useProvider(_postDiaryStoreProvider(date));
-    final diary = useProvider(_postDiaryStoreProvider(date).state).entity;
+  Widget _physicalConditionDetails(PostDiaryStore store, DiaryState state) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -212,14 +212,14 @@ class PostDiaryPage extends HookWidget {
               .map((e) => ChoiceChip(
                     label: Text(e),
                     labelStyle: FontType.assisting.merge(
-                        diary.physicalConditions.contains(e)
+                        state.entity.physicalConditions.contains(e)
                             ? TextColorStyle.white
                             : TextColorStyle.darkGray),
                     disabledColor: PilllColors.disabledSheet,
                     selectedColor: PilllColors.secondary,
-                    selected: diary.physicalConditions.contains(e),
+                    selected: state.entity.physicalConditions.contains(e),
                     onSelected: (selected) {
-                      diary.physicalConditions.contains(e)
+                      state.entity.physicalConditions.contains(e)
                           ? store.removePhysicalCondition(e)
                           : store.addPhysicalCondition(e);
                     },
@@ -230,9 +230,7 @@ class PostDiaryPage extends HookWidget {
     );
   }
 
-  Widget _sex() {
-    final store = useProvider(_postDiaryStoreProvider(date));
-    final state = useProvider(_postDiaryStoreProvider(date).state);
+  Widget _sex(PostDiaryStore store, DiaryState state) {
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
@@ -287,9 +285,10 @@ class PostDiaryPage extends HookWidget {
     BuildContext context,
     TextEditingController? textEditingController,
     FocusNode focusNode,
+    PostDiaryStore store,
+    DiaryState state,
   ) {
     final textLength = 120;
-    final store = useProvider(_postDiaryStoreProvider(date));
     return Container(
       child: ConstrainedBox(
         constraints: BoxConstraints(
@@ -318,10 +317,10 @@ class PostDiaryPage extends HookWidget {
 }
 
 extension PostDiaryPageRoute on PostDiaryPage {
-  static Route<dynamic> route(DateTime date) {
+  static Route<dynamic> route(DateTime date, Diary? diary) {
     return MaterialPageRoute(
       settings: RouteSettings(name: "PostDiaryPage"),
-      builder: (_) => PostDiaryPage(date),
+      builder: (_) => PostDiaryPage(date, diary),
       fullscreenDialog: true,
     );
   }

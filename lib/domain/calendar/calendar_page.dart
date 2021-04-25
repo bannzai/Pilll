@@ -1,187 +1,140 @@
-import 'dart:math' as math;
-import 'package:pilll/components/molecules/app_card.dart';
+import 'package:flutter_svg/flutter_svg.dart';
+import 'package:pilll/analytics.dart';
+import 'package:pilll/components/atoms/buttons.dart';
 import 'package:pilll/components/molecules/indicator.dart';
 import 'package:pilll/domain/calendar/calendar_card.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
-import 'package:pilll/domain/calendar/utility.dart';
-import 'package:pilll/entity/menstruation.dart';
-import 'package:pilll/entity/pill_sheet.dart';
-import 'package:pilll/entity/setting.dart';
+import 'package:pilll/domain/calendar/calendar_help.dart';
 import 'package:pilll/store/calendar_page.dart';
-import 'package:pilll/util/formatter/date_time_formatter.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_hooks/flutter_hooks.dart';
-import 'package:flutter_svg/svg.dart';
-import 'package:pilll/util/datetime/day.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:scrollable_positioned_list/scrollable_positioned_list.dart';
 
-abstract class CalendarPageConstants {
-  static final double halfCircleHeight = 300;
+import 'package:pilll/entity/diary.dart';
+
+class CalendarPage extends StatefulWidget {
+  const CalendarPage({Key? key}) : super(key: key);
+
+  @override
+  CalendarPageState createState() => CalendarPageState();
 }
 
-class CalendarPage extends HookWidget {
+class CalendarPageState extends State<CalendarPage> {
+  List<Diary> diaries = [];
+
   @override
   Widget build(BuildContext context) {
-    final state = useProvider(calendarPageStateProvider.state);
-    final settingEntity = state.setting;
-    if (state.shouldShowIndicator) {
-      return ScaffoldIndicator();
-    }
-    return Scaffold(
-      backgroundColor: PilllColors.background,
-      appBar: null,
-      extendBodyBehindAppBar: true,
-      body: SafeArea(
-        top: false,
-        child: ListView(
-          padding: EdgeInsets.all(0),
-          children: <Widget>[
-            Stack(
-              children: [
-                Container(
-                  clipBehavior: Clip.antiAliasWithSaveLayer,
-                  decoration: BoxDecoration(),
-                  child: CustomPaint(
-                    painter: _HalfCircle(Size(
-                        MediaQuery.of(context).size.width + 100,
-                        CalendarPageConstants.halfCircleHeight)),
-                    size: Size(MediaQuery.of(context).size.width, 220),
-                  ),
-                ),
-                Positioned(
-                    left: 16,
-                    top: 44,
-                    child: Column(
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        _title(),
-                        SizedBox(height: 24),
-                        Container(
-                          width: MediaQuery.of(context).size.width - 32,
-                          height: 111,
-                          child: _MenstruationCard(
-                            latestPillSheet: state.latestPillSheet,
-                            setting: settingEntity,
-                            menstruations: state.menstruations,
-                          ),
-                        ),
-                      ],
-                    )),
-              ],
-            ),
-            SizedBox(height: 24),
-            Center(
-              child: Container(
-                child: Padding(
-                  padding:
-                      const EdgeInsets.only(left: 16, right: 16, bottom: 16),
-                  child: CalendarCard(
-                    state: CalendarCardState(
-                      date: today(),
-                      latestPillSheet: state.latestPillSheet,
-                      setting: settingEntity,
-                      menstruations: state.menstruations,
-                    ),
-                  ),
-                ),
-              ),
+    return Consumer(builder: (context, watch, child) {
+      final store = watch(calendarPageStateProvider);
+      final state = watch(calendarPageStateProvider.state);
+      diaries = state.diaries;
+      final settingEntity = state.setting;
+      if (state.shouldShowIndicator) {
+        return ScaffoldIndicator();
+      }
+      final ItemPositionsListener itemPositionsListener =
+          ItemPositionsListener.create();
+      itemPositionsListener.itemPositions.addListener(() {
+        final index = itemPositionsListener.itemPositions.value.last.index;
+        store.updateCurrentCalendarIndex(index);
+      });
+      final ItemScrollController itemScrollController = ItemScrollController();
+      return Scaffold(
+        backgroundColor: PilllColors.background,
+        appBar: AppBar(
+          leading: AppBarTextActionButton(
+              onPressed: () {
+                store.updateCurrentCalendarIndex(state.todayCalendarIndex);
+                itemScrollController.scrollTo(
+                    index: state.todayCalendarIndex,
+                    duration: Duration(milliseconds: 300));
+              },
+              text: "今日"),
+          actions: [
+            IconButton(
+              icon: SvgPicture.asset("images/help.svg"),
+              onPressed: () {
+                analytics.logEvent(name: "pressed_calendar_help");
+                showDialog(
+                    context: context,
+                    builder: (_) {
+                      return CalendarHelpPage();
+                    });
+              },
             ),
           ],
-        ),
-      ),
-    );
-  }
-
-  Widget _title() {
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.start,
-      children: <Widget>[
-        Text(
-          "こんにちは🍰",
-          style: TextColorStyle.noshime.merge(FontType.xBigTitle),
-          textAlign: TextAlign.left,
-        ),
-      ],
-    );
-  }
-}
-
-// TODO: remote card from Calendar
-class _MenstruationCard extends StatelessWidget {
-  final PillSheetModel? latestPillSheet;
-  final Setting? setting;
-  final List<Menstruation> menstruations;
-
-  const _MenstruationCard({
-    Key? key,
-    required this.latestPillSheet,
-    required this.setting,
-    required this.menstruations,
-  }) : super(key: key);
-  @override
-  Widget build(BuildContext context) {
-    return AppCard(
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: <Widget>[
-          Row(
+          title: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-              SvgPicture.asset("images/menstruation.svg",
-                  width: 24, color: PilllColors.red),
-              Text("生理予定日",
-                  style: TextColorStyle.noshime.merge(FontType.assisting)),
+              IconButton(
+                icon: SvgPicture.asset("images/arrow_left.svg"),
+                onPressed: () {
+                  final previousMonthIndex = state.currentCalendarIndex - 1;
+                  itemScrollController.scrollTo(
+                      index: previousMonthIndex,
+                      duration: Duration(milliseconds: 300));
+                  store.updateCurrentCalendarIndex(previousMonthIndex);
+                },
+              ),
+              Text(
+                state.displayMonth,
+                style: TextColorStyle.main.merge(FontType.subTitle),
+              ),
+              IconButton(
+                icon: SvgPicture.asset("images/arrow_right.svg"),
+                onPressed: () {
+                  final nextMonthIndex = state.currentCalendarIndex + 1;
+                  itemScrollController.scrollTo(
+                      index: nextMonthIndex,
+                      duration: Duration(milliseconds: 300));
+                  store.updateCurrentCalendarIndex(nextMonthIndex);
+                },
+              ),
             ],
           ),
-          Text(() {
-            final latestPillSheet = this.latestPillSheet;
-            if (latestPillSheet == null) {
-              return "";
-            }
-            final setting = this.setting;
-            if (setting == null) {
-              return "";
-            }
-            final matchedScheduledMenstruation =
-                scheduledMenstruationDateRanges(
-                        latestPillSheet, setting, menstruations, 12)
-                    .where((element) => element.begin.isAfter(today()));
-
-            if (matchedScheduledMenstruation.isNotEmpty) {
-              return DateTimeFormatter.monthAndWeekday(
-                  matchedScheduledMenstruation.first.begin);
-            }
-            return "";
-          }(), style: TextColorStyle.gray.merge(FontType.xBigTitle)),
-        ],
-      ),
-    );
+          centerTitle: true,
+          elevation: 0,
+          backgroundColor: PilllColors.white,
+        ),
+        extendBodyBehindAppBar: true,
+        body: SafeArea(
+          child: ListView(
+            children: <Widget>[
+              SizedBox(
+                width: MediaQuery.of(context).size.width,
+                height: 444,
+                child: ScrollablePositionedList.builder(
+                  itemScrollController: itemScrollController,
+                  initialScrollIndex: state.currentCalendarIndex,
+                  scrollDirection: Axis.horizontal,
+                  physics: PageScrollPhysics(),
+                  itemCount: state.calendarDataSource.length,
+                  itemPositionsListener: itemPositionsListener,
+                  itemBuilder: (context, index) {
+                    final date = state.calendarDataSource[index];
+                    return SizedBox(
+                      width: MediaQuery.of(context).size.width,
+                      child: CalendarCard(
+                        state: CalendarCardState(
+                          date: date,
+                          latestPillSheet: state.latestPillSheet,
+                          setting: settingEntity,
+                          diaries: state.diaries,
+                          menstruations: state.menstruations,
+                          bands: state.bands,
+                        ),
+                      ),
+                    );
+                  },
+                ),
+              ),
+            ],
+          ),
+        ),
+      );
+    });
   }
-}
-
-class _HalfCircle extends CustomPainter {
-  final Size contentSize;
-
-  _HalfCircle(this.contentSize);
-  @override
-  void paint(Canvas canvas, Size size) {
-    Paint paint = Paint()..color = PilllColors.calendarHeader;
-    canvas.drawArc(
-      Rect.fromCenter(
-        center: Offset(size.width / 2, 0),
-        width: this.contentSize.width + this.contentSize.width * 0.5,
-        height: this.contentSize.height,
-      ),
-      math.pi,
-      -math.pi,
-      false,
-      paint,
-    );
-  }
-
-  @override
-  bool shouldRepaint(CustomPainter oldDelegate) => false;
 }

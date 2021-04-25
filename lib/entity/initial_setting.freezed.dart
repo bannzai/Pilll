@@ -218,6 +218,7 @@ class __$InitialSettingModelCopyWithImpl<$Res>
 }
 
 /// @nodoc
+
 class _$_InitialSettingModel extends _InitialSettingModel {
   _$_InitialSettingModel(
       {this.fromMenstruation = 23,

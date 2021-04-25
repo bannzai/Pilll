@@ -69,8 +69,8 @@ class ConfirmDiarySheet extends HookWidget {
         IconButton(
           icon: SvgPicture.asset("images/edit.svg"),
           onPressed: () {
-            Navigator.of(context)
-                .push(PostDiaryPageRoute.route(state.entity.date));
+            Navigator.of(context).push(
+                PostDiaryPageRoute.route(state.entity.date, state.entity));
           },
         ),
         SizedBox(width: 12),

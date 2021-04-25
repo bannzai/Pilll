@@ -106,9 +106,8 @@ class __$UserPrivateCopyWithImpl<$Res> extends _$UserPrivateCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_UserPrivate extends _UserPrivate {
   _$_UserPrivate({this.fcmToken}) : super._();
 
@@ -284,9 +283,8 @@ class __$UserCopyWithImpl<$Res> extends _$UserCopyWithImpl<$Res>
   }
 }
 
-@JsonSerializable()
-
 /// @nodoc
+@JsonSerializable()
 class _$_User extends _User {
   _$_User(
       {@JsonKey(name: "settings") this.setting, this.migratedFlutter = false})

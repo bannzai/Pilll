@@ -128,13 +128,6 @@ class MenstruationPage extends HookWidget {
                                 transitionToPostDiary(
                                     context, date, state.diaries);
                               },
-                              onTapBand: (model) {
-                                if (model is! CalendarMenstruationBandModel) {
-                                  return;
-                                }
-                                showMenstruationEditPageForUpdate(
-                                    context, model.menstruation);
-                              },
                             ),
                           );
                         },
