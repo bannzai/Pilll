@@ -82,6 +82,7 @@ class CalendarPageStateStore extends StateNotifier<CalendarPageState> {
     _menstruationCanceller?.cancel();
     _settingCanceller?.cancel();
     _latestPillSheetCanceller?.cancel();
+    _diariesCanceller?.cancel();
     super.dispose();
   }
 
