@@ -1,6 +1,7 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:pilll/domain/calendar/calendar_band_model.dart';
 import 'package:pilll/domain/calendar/utility.dart';
+import 'package:pilll/entity/diary.dart';
 import 'package:pilll/entity/menstruation.dart';
 import 'package:pilll/entity/pill_sheet.dart';
 import 'package:pilll/entity/setting.dart';
@@ -18,6 +19,7 @@ abstract class CalendarPageState implements _$CalendarPageState {
     @Default(0) int currentCalendarIndex,
     Setting? setting,
     PillSheetModel? latestPillSheet,
+    @Default([]) List<Diary> diaries,
     @Default(true) bool isNotYetLoaded,
   }) = _CalendarPageState;
 
@@ -30,10 +32,8 @@ abstract class CalendarPageState implements _$CalendarPageState {
       DateTimeFormatter.yearAndMonth(calendarDataSource[currentCalendarIndex]);
 
   final _satisfyBandCount = 15;
-  late List<CalendarBandModel> bands = () {
-    return buildBandModels(
-        latestPillSheet, setting, menstruations, _satisfyBandCount);
-  }();
+  late final List<CalendarBandModel> bands = buildBandModels(
+      latestPillSheet, setting, menstruations, _satisfyBandCount);
 }
 
 List<DateTime> _calendarDataSource() {
