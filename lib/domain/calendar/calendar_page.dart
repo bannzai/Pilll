@@ -35,18 +35,19 @@ class CalendarPageState extends State<CalendarPage> {
       if (state.shouldShowIndicator) {
         return ScaffoldIndicator();
       }
+      final ItemScrollController itemScrollController = ItemScrollController();
       final ItemPositionsListener itemPositionsListener =
           ItemPositionsListener.create();
       itemPositionsListener.itemPositions.addListener(() {
         final index = itemPositionsListener.itemPositions.value.last.index;
         store.updateCurrentCalendarIndex(index);
       });
-      final ItemScrollController itemScrollController = ItemScrollController();
       return Scaffold(
         backgroundColor: PilllColors.background,
         appBar: AppBar(
           leading: AppBarTextActionButton(
               onPressed: () {
+                analytics.logEvent(name: "calendar_to_today_pressed");
                 store.updateCurrentCalendarIndex(state.todayCalendarIndex);
                 itemScrollController.scrollTo(
                     index: state.todayCalendarIndex,
@@ -77,6 +78,11 @@ class CalendarPageState extends State<CalendarPage> {
                       index: previousMonthIndex,
                       duration: Duration(milliseconds: 300));
                   store.updateCurrentCalendarIndex(previousMonthIndex);
+                  analytics
+                      .logEvent(name: "pressed_previous_month", parameters: {
+                    "current_index": state.currentCalendarIndex,
+                    "previous_index": previousMonthIndex
+                  });
                 },
               ),
               Text(
@@ -91,6 +97,10 @@ class CalendarPageState extends State<CalendarPage> {
                       index: nextMonthIndex,
                       duration: Duration(milliseconds: 300));
                   store.updateCurrentCalendarIndex(nextMonthIndex);
+                  analytics.logEvent(name: "pressed_next_month", parameters: {
+                    "current_index": state.currentCalendarIndex,
+                    "next_index": nextMonthIndex
+                  });
                 },
               ),
             ],

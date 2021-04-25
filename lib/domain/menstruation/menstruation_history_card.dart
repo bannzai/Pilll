@@ -1,5 +1,6 @@
 import 'dart:math';
 
+import 'package:pilll/analytics.dart';
 import 'package:pilll/components/atoms/buttons.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
@@ -47,7 +48,7 @@ class MenstruationHistoryCard extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text("生理記録", style: FontType.sBigTitle.merge(TextColorStyle.main)),
+            Text("生理履歴", style: FontType.sBigTitle.merge(TextColorStyle.main)),
             SizedBox(height: 32),
             Column(
               mainAxisSize: MainAxisSize.max,
@@ -64,6 +65,8 @@ class MenstruationHistoryCard extends StatelessWidget {
                   SecondaryButton(
                       text: "もっと見る",
                       onPressed: () {
+                        analytics.logEvent(
+                            name: "menstruation_more_button_pressed");
                         Navigator.of(context)
                             .push(MenstruationListPageRoute.route());
                       }),
