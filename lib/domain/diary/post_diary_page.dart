@@ -1,3 +1,4 @@
+import 'package:pilll/domain/diary/post_diary_store_provider_family.dart';
 import 'package:pilll/entity/diary.dart';
 import 'package:pilll/service/diary.dart';
 import 'package:pilll/state/diary.dart';
@@ -14,13 +15,6 @@ import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:riverpod/riverpod.dart';
-
-class PostDiaryStoreProviderFamily {
-  final DateTime date;
-  final Diary? diary;
-
-  PostDiaryStoreProviderFamily(this.date, this.diary);
-}
 
 final _postDiaryStoreProvider = StateNotifierProvider.autoDispose
     .family<PostDiaryStore, PostDiaryStoreProviderFamily>((ref, family) {
@@ -44,7 +38,7 @@ class PostDiaryPage extends HookWidget {
   PostDiaryPage(this.date, this.diary);
 
   PostDiaryStoreProviderFamily _family() {
-    return PostDiaryStoreProviderFamily(date, diary);
+    return PostDiaryStoreProviderFamily(date: date, diary: diary);
   }
 
   @override
