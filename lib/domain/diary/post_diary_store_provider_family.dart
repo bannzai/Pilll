@@ -1,13 +1,21 @@
-import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:equatable/equatable.dart';
 import 'package:pilll/entity/diary.dart';
 
-part 'post_diary_store_provider_family.freezed.dart';
+// ref: https://riverpod.dev/docs/concepts/modifiers/family/
+// > A tuple from tuple
+// > Objects generated with Freezed or built_value
+// > Objects using equatable
+class PostDiaryStoreProviderFamily extends Equatable {
+  final DateTime date;
+  final Diary? diary;
 
-@freezed
-abstract class PostDiaryStoreProviderFamily
-    with _$PostDiaryStoreProviderFamily {
-  factory PostDiaryStoreProviderFamily({
-    required DateTime date,
-    required Diary? diary,
-  }) = _PostDiaryStoreProviderFamily;
+  PostDiaryStoreProviderFamily({
+    required this.date,
+    required this.diary,
+  });
+
+// NOTE: When diary.physicalConditions did change, PostDiaryPage can not changed for sex,memo,physical condition status.
+// if PostDiaryStoreProviderFamily with @freezed object or props contains [diary].
+  @override
+  List<Object?> get props => [date];
 }
