@@ -14,10 +14,6 @@ import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:scrollable_positioned_list/scrollable_positioned_list.dart';
 
-abstract class CalendarPageConstants {
-  static final double halfCircleHeight = 300;
-}
-
 class CalendarPage extends HookWidget {
   @override
   Widget build(BuildContext context) {
