@@ -85,7 +85,7 @@ class ReleaseNote extends StatelessWidget {
 }
 
 showReleaseNotePreDialog(BuildContext context) async {
-  final key = ReleaseNoteKey.version2_3_0;
+  final key = ReleaseNoteKey.version2_4_0;
   final storage = await SharedPreferences.getInstance();
   if (storage.getBool(key) ?? false) {
     return;
@@ -103,7 +103,7 @@ openReleaseNote() async {
   final ChromeSafariBrowser browser = new ChromeSafariBrowser();
   await browser.open(
       url: Uri.parse(
-          "https://pilll.anotion.so/8a8fd4cc0c934569a338015d44238bcc"),
+          "https://pilll.anotion.so/8e4c5666bc5a498babad01e59160cfa5"),
       options: ChromeSafariBrowserClassOptions(
           android:
               AndroidChromeCustomTabsOptions(addDefaultShareMenuItem: false),
