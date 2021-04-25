@@ -1,3 +1,4 @@
+import 'package:pilll/analytics.dart';
 import 'package:pilll/domain/initial_setting/initial_setting_1_page.dart';
 import 'package:pilll/domain/home/home_page.dart';
 import 'package:pilll/domain/root/root.dart';
@@ -21,6 +22,7 @@ class AppRouter {
   }
 
   static void endInitialSetting(BuildContext context) {
+    analytics.logEvent(name: "end_initial_setteing");
     SharedPreferences.getInstance().then((storage) {
       storage.setBool(BoolKey.didEndInitialSetting, true);
       requestNotificationPermissions().then((value) {
