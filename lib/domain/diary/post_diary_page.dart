@@ -1,12 +1,12 @@
 import 'package:pilll/entity/diary.dart';
 import 'package:pilll/service/diary.dart';
 import 'package:pilll/state/diary.dart';
-import 'package:pilll/store/diaries.dart';
 import 'package:pilll/store/post_diary.dart';
 import 'package:pilll/components/atoms/buttons.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
+import 'package:pilll/util/datetime/day.dart';
 import 'package:pilll/util/formatter/date_time_formatter.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -17,13 +17,10 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:riverpod/riverpod.dart';
 
 final _postDiaryStoreProvider = StateNotifierProvider.autoDispose
-    .family<PostDiaryStore, DateTime>((ref, date) {
-  final diary = ref
-      .watch(monthlyDiariesStoreProvider(date).state)
-      .diaryForDatetimeOrNull(date);
+    .family<PostDiaryStore, Diary?>((ref, diary) {
   final service = ref.watch(diaryServiceProvider);
   if (diary == null) {
-    return PostDiaryStore(service, DiaryState(entity: Diary.fromDate(date)));
+    return PostDiaryStore(service, DiaryState(entity: Diary.fromDate(today())));
   }
   return PostDiaryStore(service, DiaryState(entity: diary.copyWith()));
 });
@@ -33,18 +30,18 @@ abstract class PostDiaryPageConst {
 }
 
 class PostDiaryPage extends HookWidget {
-  final DateTime date;
+  final Diary? diary;
 
-  PostDiaryPage(this.date);
+  PostDiaryPage(this.diary);
 
   @override
   Widget build(BuildContext context) {
     // ignore: invalid_use_of_protected_member
-    final state = useProvider(_postDiaryStoreProvider(date).state);
+    final state = useProvider(_postDiaryStoreProvider(diary).state);
     final TextEditingController? textEditingController =
         useTextEditingController(text: state.entity.memo);
     final focusNode = useFocusNode();
-    final store = useProvider(_postDiaryStoreProvider(date));
+    final store = useProvider(_postDiaryStoreProvider(diary));
     final scrollController = useScrollController();
 
     focusNode.addListener(() {
@@ -94,7 +91,9 @@ class PostDiaryPage extends HookWidget {
                 child: ListView(
                   controller: scrollController,
                   children: [
-                    Text(DateTimeFormatter.yearAndMonthAndDay(this.date),
+                    Text(
+                        DateTimeFormatter.yearAndMonthAndDay(
+                            this.diary?.date ?? today()),
                         style: FontType.sBigTitle.merge(TextColorStyle.main)),
                     ...[
                       _physicalConditions(),
@@ -126,8 +125,8 @@ class PostDiaryPage extends HookWidget {
   }
 
   Widget _physicalConditions() {
-    final store = useProvider(_postDiaryStoreProvider(date));
-    final state = useProvider(_postDiaryStoreProvider(date).state);
+    final store = useProvider(_postDiaryStoreProvider(diary));
+    final state = useProvider(_postDiaryStoreProvider(diary).state);
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
@@ -198,8 +197,8 @@ class PostDiaryPage extends HookWidget {
   }
 
   Widget _physicalConditionDetails() {
-    final store = useProvider(_postDiaryStoreProvider(date));
-    final diary = useProvider(_postDiaryStoreProvider(date).state).entity;
+    final store = useProvider(_postDiaryStoreProvider(this.diary));
+    final diary = useProvider(_postDiaryStoreProvider(this.diary).state).entity;
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -231,8 +230,8 @@ class PostDiaryPage extends HookWidget {
   }
 
   Widget _sex() {
-    final store = useProvider(_postDiaryStoreProvider(date));
-    final state = useProvider(_postDiaryStoreProvider(date).state);
+    final store = useProvider(_postDiaryStoreProvider(diary));
+    final state = useProvider(_postDiaryStoreProvider(diary).state);
     return Row(
       mainAxisAlignment: MainAxisAlignment.center,
       children: [
@@ -289,7 +288,7 @@ class PostDiaryPage extends HookWidget {
     FocusNode focusNode,
   ) {
     final textLength = 120;
-    final store = useProvider(_postDiaryStoreProvider(date));
+    final store = useProvider(_postDiaryStoreProvider(diary));
     return Container(
       child: ConstrainedBox(
         constraints: BoxConstraints(
@@ -318,10 +317,10 @@ class PostDiaryPage extends HookWidget {
 }
 
 extension PostDiaryPageRoute on PostDiaryPage {
-  static Route<dynamic> route(DateTime date) {
+  static Route<dynamic> route(Diary? diary) {
     return MaterialPageRoute(
       settings: RouteSettings(name: "PostDiaryPage"),
-      builder: (_) => PostDiaryPage(date),
+      builder: (_) => PostDiaryPage(diary),
       fullscreenDialog: true,
     );
   }

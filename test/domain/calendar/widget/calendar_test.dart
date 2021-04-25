@@ -9,7 +9,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/state/diaries.dart';
-import 'package:pilll/store/diaries.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import '../../../helper/mock.dart';

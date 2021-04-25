@@ -110,6 +110,7 @@ class CalendarPage extends HookWidget {
                         date: date,
                         latestPillSheet: state.latestPillSheet,
                         setting: settingEntity,
+                        diaries: state.diaries,
                         menstruations: state.menstruations,
                         bands: state.bands,
                       ),

@@ -1,9 +1,10 @@
 import 'package:pilll/analytics.dart';
 import 'package:pilll/components/molecules/app_card.dart';
 import 'package:pilll/domain/calendar/calendar_band_model.dart';
+import 'package:pilll/domain/calendar/calendar.dart';
 import 'package:pilll/domain/calendar/calendar_weekday_line.dart';
 import 'package:pilll/domain/calendar/monthly_calendar_state.dart';
-import 'package:pilll/domain/calendar/calendar.dart';
+import 'package:pilll/entity/diary.dart';
 import 'package:pilll/entity/menstruation.dart';
 import 'package:pilll/entity/pill_sheet.dart';
 import 'package:pilll/entity/setting.dart';
@@ -15,6 +16,7 @@ class CalendarCardState {
   final DateTime date;
   final PillSheetModel? latestPillSheet;
   final Setting? setting;
+  final List<Diary> diaries;
   final List<Menstruation> menstruations;
   final List<CalendarBandModel> bands;
 
@@ -22,6 +24,7 @@ class CalendarCardState {
     required this.date,
     required this.latestPillSheet,
     required this.setting,
+    required this.diaries,
     required this.menstruations,
     required this.bands,
   });
@@ -42,6 +45,7 @@ class CalendarCard extends StatelessWidget {
       child: Column(
         children: <Widget>[
           Calendar(
+            diaries: state.diaries,
             calendarState: CalendarTabState(state.date),
             bandModels: state.bands,
             onTap: (date, diaries) {

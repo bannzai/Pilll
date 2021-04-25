@@ -106,6 +106,7 @@ class MenstruationEditPage extends HookWidget {
                     return [
                       CalendarDateHeader(date: dateForMonth),
                       Calendar(
+                        diaries: [],
                         calendarState: MenstruationEditCalendarState(
                             dateForMonth, state.menstruation),
                         bandModels: [],
