@@ -116,6 +116,19 @@ class _HomePageState extends State<HomePage>
             // SettingsPage(),
           ],
         ),
+        floatingActionButton: Visibility(
+          visible: _selectedTab == HomePageTabType.calendar,
+          child: Container(
+            padding: const EdgeInsets.only(right: 10, bottom: 32),
+            child: FloatingActionButton(
+              onPressed: () {
+                // Add your onPressed code here!
+              },
+              child: const Icon(Icons.add, color: Colors.white),
+              backgroundColor: PilllColors.secondary,
+            ),
+          ),
+        ),
       ),
     );
   }
