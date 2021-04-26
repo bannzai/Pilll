@@ -14,6 +14,7 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 class ReminderTimesPage extends HookWidget {
   @override
   Widget build(BuildContext context) {
+    final store = useProvider(settingStoreProvider);
     final state = useProvider(settingStoreProvider.state);
     final settingEntity = state.entity;
     if (settingEntity == null) {
@@ -36,7 +37,7 @@ class ReminderTimesPage extends HookWidget {
         child: Container(
           child: ListView(
             children: [
-              ..._components(context, settingEntity).map((e) {
+              ..._components(context, store, settingEntity).map((e) {
                 return [e, _separator()];
               }).expand((element) => element),
               _footer(context),
@@ -48,23 +49,23 @@ class ReminderTimesPage extends HookWidget {
     );
   }
 
-  List<Widget> _components(BuildContext context, Setting setting) {
+  List<Widget> _components(
+      BuildContext context, SettingStateStore store, Setting setting) {
     return setting.reminderTimes
         .asMap()
-        .map((offset, reminderTime) => MapEntry(
-            offset, _component(context, setting, reminderTime, offset + 1)))
+        .map((offset, reminderTime) => MapEntry(offset,
+            _component(context, store, setting, reminderTime, offset + 1)))
         .values
         .toList();
   }
 
   Widget _component(
     BuildContext context,
+    SettingStateStore store,
     Setting setting,
     ReminderTime reminderTime,
     int number,
   ) {
-    final store = useProvider(settingStoreProvider);
-
     Widget body = GestureDetector(
       onTap: () {
         _showPicker(context, store, setting, number - 1);
