@@ -72,79 +72,91 @@ class _SettingMenstruationPageState extends State<SettingMenstruationPage> {
         backgroundColor: PilllColors.white,
       ),
       body: SafeArea(
-        child: Container(
-          child: Column(
-            children: <Widget>[
-              SizedBox(height: 24),
-              Text(
-                "生理について教えてください",
-                style: FontType.sBigTitle.merge(TextColorStyle.main),
-                textAlign: TextAlign.center,
-              ),
-              SizedBox(height: 12),
-              PillSheet(
-                pillSheetType: widget.model.pillSheetType,
-                pillMarkTypeBuilder: (number) {
-                  return _pillMarkTypeFor(number);
-                },
-                doneStateBuilder: (number) {
-                  return false;
-                },
-                enabledMarkAnimation: null,
-                markSelected: (number) {},
-              ),
-              SizedBox(height: 24),
-              Container(
-                height: 156,
+        child: LayoutBuilder(builder: (context, viewport) {
+          return ConstrainedBox(
+            constraints: BoxConstraints(minHeight: viewport.maxHeight),
+            child: SingleChildScrollView(
+              child: IntrinsicHeight(
                 child: Column(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: <Widget>[
-                    Text("いつから生理がはじまる？",
-                        style: FontType.subTitle.merge(TextColorStyle.main)),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: <Widget>[
-                        Text("ピル番号 ",
-                            style:
-                                FontType.assisting.merge(TextColorStyle.main)),
-                        GestureDetector(
-                          onTap: () => _showFromModalSheet(context),
-                          child: _from(),
-                        ),
-                        Text(" 番目ぐらいから",
-                            style:
-                                FontType.assisting.merge(TextColorStyle.main)),
-                      ],
+                    SizedBox(height: 24),
+                    Text(
+                      "生理について教えてください",
+                      style: FontType.sBigTitle.merge(TextColorStyle.main),
+                      textAlign: TextAlign.center,
                     ),
-                    Text("何日間生理が続く？",
-                        style:
-                            FontType.assistingBold.merge(TextColorStyle.main)),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      children: <Widget>[
-                        GestureDetector(
-                          onTap: () => _showDurationModalSheet(context),
-                          child: _duration(),
+                    SizedBox(height: 12),
+                    PillSheet(
+                      pillSheetType: widget.model.pillSheetType,
+                      pillMarkTypeBuilder: (number) {
+                        return _pillMarkTypeFor(number);
+                      },
+                      doneStateBuilder: (number) {
+                        return false;
+                      },
+                      enabledMarkAnimation: null,
+                      markSelected: (number) {},
+                    ),
+                    SizedBox(height: 24),
+                    Container(
+                      height: 156,
+                      child: Column(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: <Widget>[
+                          Text("いつから生理がはじまる？",
+                              style:
+                                  FontType.subTitle.merge(TextColorStyle.main)),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: <Widget>[
+                              Text("ピル番号 ",
+                                  style: FontType.assisting
+                                      .merge(TextColorStyle.main)),
+                              GestureDetector(
+                                onTap: () => _showFromModalSheet(context),
+                                child: _from(),
+                              ),
+                              Text(" 番目ぐらいから",
+                                  style: FontType.assisting
+                                      .merge(TextColorStyle.main)),
+                            ],
+                          ),
+                          Text("何日間生理が続く？",
+                              style: FontType.assistingBold
+                                  .merge(TextColorStyle.main)),
+                          Row(
+                            mainAxisAlignment: MainAxisAlignment.center,
+                            children: <Widget>[
+                              GestureDetector(
+                                onTap: () => _showDurationModalSheet(context),
+                                child: _duration(),
+                              ),
+                              Text(" 日間生理が続く",
+                                  style: FontType.assisting
+                                      .merge(TextColorStyle.main)),
+                            ],
+                          )
+                        ],
+                      ),
+                    ),
+                    if (this.widget.done != null) ...[
+                      Expanded(
+                        child: Container(
+                          constraints: BoxConstraints(minHeight: 32),
                         ),
-                        Text(" 日間生理が続く",
-                            style:
-                                FontType.assisting.merge(TextColorStyle.main)),
-                      ],
-                    )
+                      ),
+                      PrimaryButton(
+                        text: this.widget.doneText ?? "",
+                        onPressed: this.widget.done,
+                      ),
+                      SizedBox(height: 35),
+                    ]
                   ],
                 ),
               ),
-              Spacer(),
-              if (this.widget.done != null) ...[
-                PrimaryButton(
-                  text: this.widget.doneText ?? "",
-                  onPressed: this.widget.done,
-                ),
-                SizedBox(height: 35),
-              ]
-            ],
-          ),
-        ),
+            ),
+          );
+        }),
       ),
     );
   }
