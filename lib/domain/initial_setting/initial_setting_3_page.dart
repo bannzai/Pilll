@@ -22,6 +22,7 @@ class InitialSetting3Page extends HookWidget {
       model: SettingMenstruationPageModel(
         selectedFromMenstruation: state.entity.fromMenstruation,
         selectedDurationMenstruation: state.entity.durationMenstruation,
+        pillSheetType: state.entity.pillSheetType!,
       ),
       fromMenstructionDidDecide: (selectedFromMenstruction) {
         store.modify((model) =>
