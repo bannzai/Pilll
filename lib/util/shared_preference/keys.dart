@@ -11,7 +11,7 @@ extension StringKey on String {
 
 extension ReleaseNoteKey on String {
   static final String renewal = "release_notes_shown_renewal";
-  static final String version2_3_0 = "release_notes_shown_2.3.0";
+  static final String version2_4_0 = "release_notes_shown_2.4.0";
 }
 
 extension IntKey on String {
