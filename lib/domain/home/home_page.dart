@@ -91,7 +91,7 @@ class _HomePageState extends State<HomePage>
                         : "images/menstruation_disable.svg"),
                   ),
                   Tab(
-                    text: DateTimeFormatter.slashYearAndMonth(today()),
+                    text: "カレンダー",
                     icon: SvgPicture.asset(
                         _tabController.index == HomePageTabType.calendar.index
                             ? "images/tab_icon_calendar_enable.svg"

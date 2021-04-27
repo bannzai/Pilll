@@ -1,5 +1,5 @@
 import 'package:pilll/analytics.dart';
-import 'package:pilll/components/molecules/app_card.dart';
+import 'package:pilll/components/molecules/shadow_container.dart';
 import 'package:pilll/domain/calendar/calendar_band_model.dart';
 import 'package:pilll/domain/calendar/calendar.dart';
 import 'package:pilll/domain/calendar/calendar_weekday_line.dart';
@@ -41,7 +41,7 @@ class CalendarCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return AppCard(
+    return ShadowContainer(
       child: Column(
         children: <Widget>[
           Calendar(

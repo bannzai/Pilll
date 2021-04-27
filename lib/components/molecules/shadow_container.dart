@@ -1,10 +1,10 @@
 import 'package:pilll/components/atoms/color.dart';
 import 'package:flutter/material.dart';
 
-class AppCard extends StatelessWidget {
-  final Widget? child;
+class ShadowContainer extends StatelessWidget {
+  final Widget child;
 
-  const AppCard({Key? key, this.child}) : super(key: key);
+  const ShadowContainer({Key? key, required this.child}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Container(
