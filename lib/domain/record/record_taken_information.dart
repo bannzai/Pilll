@@ -1,4 +1,5 @@
 import 'package:pilll/components/molecules/app_card.dart';
+import 'package:pilll/components/molecules/shadow_container.dart';
 import 'package:pilll/entity/pill_sheet.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
@@ -29,19 +30,7 @@ class RecordTakenInformation extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       height: 130,
-      margin: EdgeInsets.only(bottom: 2),
-      decoration: BoxDecoration(
-        color: PilllColors.white,
-        borderRadius: BorderRadius.circular(12),
-        boxShadow: [
-          BoxShadow(
-            color: PilllColors.shadow,
-            blurRadius: 4.0,
-            offset: Offset(0, 2),
-          ),
-        ],
-      ),
-      child: AppCard(
+      child: ShadowContainer(
         child: Column(
           children: <Widget>[
             SizedBox(height: 34),

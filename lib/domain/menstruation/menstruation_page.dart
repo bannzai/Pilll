@@ -7,6 +7,7 @@ import 'package:pilll/analytics.dart';
 import 'package:pilll/components/atoms/buttons.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/text_color.dart';
+import 'package:pilll/components/molecules/shadow_container.dart';
 import 'package:pilll/domain/calendar/calendar.dart';
 import 'package:pilll/domain/calendar/calendar_band_model.dart';
 import 'package:pilll/domain/calendar/calendar_weekday_line.dart';
@@ -74,68 +75,59 @@ class MenstruationPage extends HookWidget {
         child: Container(
           child: Column(
             children: [
-              Container(
-                padding: const EdgeInsets.only(
-                  left: _horizontalPadding,
-                  right: _horizontalPadding,
-                ),
-                margin: const EdgeInsets.only(
-                  bottom: MenstruationPageConst.calendarHeaderDropShadowOffset,
-                ),
-                width: MediaQuery.of(context).size.width,
-                height: MenstruationPageConst.calendarHeaderHeight,
-                decoration: BoxDecoration(
-                  color: PilllColors.white,
-                  boxShadow: [
-                    BoxShadow(
-                      color: PilllColors.shadow,
-                      blurRadius: 4.0,
-                      offset: Offset(0,
-                          MenstruationPageConst.calendarHeaderDropShadowOffset),
-                    ),
-                  ],
-                ),
-                child: Column(
-                  children: [
-                    _WeekdayLine(),
-                    LimitedBox(
-                      maxHeight: MenstruationPageConst.tileHeight,
-                      child: ScrollablePositionedList.builder(
-                        itemScrollController: itemScrollController,
-                        initialScrollIndex: state.currentCalendarIndex,
-                        physics: PageScrollPhysics(),
-                        scrollDirection: Axis.horizontal,
-                        itemPositionsListener: itemPositionsListener,
-                        itemBuilder: (context, index) {
-                          final days = state.calendarDataSource[index];
-                          return Container(
-                            width: MediaQuery.of(context).size.width -
-                                _horizontalPadding * 2,
-                            height: MenstruationPageConst.tileHeight,
-                            child: CalendarWeekdayLine(
-                              diaries: state.diaries,
-                              calendarState: SinglelineWeeklyCalendarState(
-                                  DateRange(days.first, days.last)),
-                              bandModels: buildBandModels(state.latestPillSheet,
-                                      state.setting, state.entities, 12)
-                                  .where((element) => !(element
-                                      is CalendarNextPillSheetBandModel))
-                                  .toList(),
-                              horizontalPadding: _horizontalPadding,
-                              onTap: (weeklyCalendarState, date) {
-                                analytics.logEvent(
-                                    name:
-                                        "did_select_day_tile_on_menstruation");
-                                transitionToPostDiary(
-                                    context, date, state.diaries);
-                              },
-                            ),
-                          );
-                        },
-                        itemCount: state.calendarDataSource.length,
+              ShadowContainer(
+                child: Container(
+                  padding: const EdgeInsets.only(
+                    left: _horizontalPadding,
+                    right: _horizontalPadding,
+                  ),
+                  width: MediaQuery.of(context).size.width,
+                  height: MenstruationPageConst.calendarHeaderHeight,
+                  child: Column(
+                    children: [
+                      _WeekdayLine(),
+                      LimitedBox(
+                        maxHeight: MenstruationPageConst.tileHeight,
+                        child: ScrollablePositionedList.builder(
+                          itemScrollController: itemScrollController,
+                          initialScrollIndex: state.currentCalendarIndex,
+                          physics: PageScrollPhysics(),
+                          scrollDirection: Axis.horizontal,
+                          itemPositionsListener: itemPositionsListener,
+                          itemBuilder: (context, index) {
+                            final days = state.calendarDataSource[index];
+                            return Container(
+                              width: MediaQuery.of(context).size.width -
+                                  _horizontalPadding * 2,
+                              height: MenstruationPageConst.tileHeight,
+                              child: CalendarWeekdayLine(
+                                diaries: state.diaries,
+                                calendarState: SinglelineWeeklyCalendarState(
+                                    DateRange(days.first, days.last)),
+                                bandModels: buildBandModels(
+                                        state.latestPillSheet,
+                                        state.setting,
+                                        state.entities,
+                                        12)
+                                    .where((element) => !(element
+                                        is CalendarNextPillSheetBandModel))
+                                    .toList(),
+                                horizontalPadding: _horizontalPadding,
+                                onTap: (weeklyCalendarState, date) {
+                                  analytics.logEvent(
+                                      name:
+                                          "did_select_day_tile_on_menstruation");
+                                  transitionToPostDiary(
+                                      context, date, state.diaries);
+                                },
+                              ),
+                            );
+                          },
+                          itemCount: state.calendarDataSource.length,
+                        ),
                       ),
-                    ),
-                  ],
+                    ],
+                  ),
                 ),
               ),
               Expanded(

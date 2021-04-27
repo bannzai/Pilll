@@ -49,7 +49,7 @@ class RecordPage extends HookWidget {
         elevation: 0,
         titleSpacing: 0,
         backgroundColor: PilllColors.white,
-        toolbarHeight: 130,
+        toolbarHeight: 132,
         title: RecordTakenInformation(
           today: DateTime.now(),
           state: state,

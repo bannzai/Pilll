@@ -2,6 +2,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:pilll/analytics.dart';
 import 'package:pilll/components/atoms/buttons.dart';
 import 'package:pilll/components/molecules/indicator.dart';
+import 'package:pilll/components/molecules/shadow_container.dart';
 import 'package:pilll/domain/calendar/calendar_card.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
@@ -126,18 +127,6 @@ class CalendarPageState extends State<CalendarPage> {
                   itemBuilder: (context, index) {
                     final date = state.calendarDataSource[index];
                     return Container(
-                      margin: EdgeInsets.only(bottom: 2),
-                      decoration: BoxDecoration(
-                        color: PilllColors.white,
-                        borderRadius: BorderRadius.circular(12),
-                        boxShadow: [
-                          BoxShadow(
-                            color: PilllColors.shadow,
-                            blurRadius: 4.0,
-                            offset: Offset(0, 2),
-                          ),
-                        ],
-                      ),
                       height: 444,
                       width: MediaQuery.of(context).size.width,
                       child: CalendarCard(
