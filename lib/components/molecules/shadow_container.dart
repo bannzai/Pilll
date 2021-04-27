@@ -15,7 +15,7 @@ class ShadowContainer extends StatelessWidget {
         boxShadow: [
           BoxShadow(
             color: PilllColors.shadow,
-            blurRadius: 4.0,
+            blurRadius: 6.0,
             offset: Offset(0, 2),
           ),
         ],
