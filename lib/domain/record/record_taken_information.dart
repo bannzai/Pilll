@@ -1,3 +1,4 @@
+import 'package:pilll/components/molecules/app_card.dart';
 import 'package:pilll/entity/pill_sheet.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
@@ -28,36 +29,40 @@ class RecordTakenInformation extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       height: 130,
+      margin: EdgeInsets.only(bottom: 2),
       decoration: BoxDecoration(
-        color: Colors.white,
+        color: PilllColors.white,
+        borderRadius: BorderRadius.circular(12),
         boxShadow: [
           BoxShadow(
-            color: Colors.black.withOpacity(0.12),
-            blurRadius: 4,
+            color: PilllColors.shadow,
+            blurRadius: 4.0,
             offset: Offset(0, 2),
           ),
         ],
       ),
-      child: Column(
-        children: <Widget>[
-          SizedBox(height: 34),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[
-              _todayWidget(),
-              SizedBox(width: 28),
-              Container(
-                height: 64,
-                child: VerticalDivider(
-                  width: 10,
-                  color: PilllColors.divider,
+      child: AppCard(
+        child: Column(
+          children: <Widget>[
+            SizedBox(height: 34),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: <Widget>[
+                _todayWidget(),
+                SizedBox(width: 28),
+                Container(
+                  height: 64,
+                  child: VerticalDivider(
+                    width: 10,
+                    color: PilllColors.divider,
+                  ),
                 ),
-              ),
-              SizedBox(width: 28),
-              _takenWidget(),
-            ],
-          ),
-        ],
+                SizedBox(width: 28),
+                _takenWidget(),
+              ],
+            ),
+          ],
+        ),
       ),
     );
   }
