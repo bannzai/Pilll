@@ -1,5 +1,4 @@
 import 'package:pilll/analytics.dart';
-import 'package:pilll/components/molecules/app_card.dart';
 import 'package:pilll/domain/calendar/calendar_band_model.dart';
 import 'package:pilll/domain/calendar/calendar.dart';
 import 'package:pilll/domain/calendar/calendar_weekday_line.dart';
@@ -41,21 +40,19 @@ class CalendarCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return AppCard(
-      child: Column(
-        children: <Widget>[
-          Calendar(
-            diaries: state.diaries,
-            calendarState: CalendarTabState(state.date),
-            bandModels: state.bands,
-            onTap: (date, diaries) {
-              analytics.logEvent(name: "did_select_day_tile_on_calendar_card");
-              transitionToPostDiary(context, date, diaries);
-            },
-            horizontalPadding: 0,
-          ),
-        ],
-      ),
+    return Column(
+      children: <Widget>[
+        Calendar(
+          diaries: state.diaries,
+          calendarState: CalendarTabState(state.date),
+          bandModels: state.bands,
+          onTap: (date, diaries) {
+            analytics.logEvent(name: "did_select_day_tile_on_calendar_card");
+            transitionToPostDiary(context, date, diaries);
+          },
+          horizontalPadding: 0,
+        ),
+      ],
     );
   }
 }
