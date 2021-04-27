@@ -125,7 +125,20 @@ class CalendarPageState extends State<CalendarPage> {
                   itemPositionsListener: itemPositionsListener,
                   itemBuilder: (context, index) {
                     final date = state.calendarDataSource[index];
-                    return SizedBox(
+                    return Container(
+                      margin: EdgeInsets.only(bottom: 2),
+                      decoration: BoxDecoration(
+                        color: PilllColors.white,
+                        borderRadius: BorderRadius.circular(12),
+                        boxShadow: [
+                          BoxShadow(
+                            color: PilllColors.shadow,
+                            blurRadius: 4.0,
+                            offset: Offset(0, 2),
+                          ),
+                        ],
+                      ),
+                      height: 444,
                       width: MediaQuery.of(context).size.width,
                       child: CalendarCard(
                         state: CalendarCardState(
