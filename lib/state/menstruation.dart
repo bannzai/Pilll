@@ -62,13 +62,14 @@ List<List<DateTime>> _calendarDataSource() {
       Weekday.values.last.index - WeekdayFunctions.weekdayFromDate(end).index;
   end = end.add(Duration(days: endWeekdayOffset));
 
-  final diffDay = DateTimeRange(start: begin, end: end).duration.inDays;
+  var diffDay = DateTimeRange(start: begin, end: end).duration.inDays;
+  diffDay += Weekday.values.length - diffDay % Weekday.values.length;
   List<DateTime> days = [];
-  for (int i = 0; i < diffDay + 1; i++) {
+  for (int i = 0; i < diffDay; i++) {
     days.add(begin.add(Duration(days: i)));
   }
   return List.generate(
-      ((diffDay + 1) / Weekday.values.length).round(),
+      ((diffDay) / Weekday.values.length).round(),
       (i) => days.sublist(i * Weekday.values.length,
           i * Weekday.values.length + Weekday.values.length));
 }
