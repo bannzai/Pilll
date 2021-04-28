@@ -59,9 +59,11 @@ class App extends StatelessWidget {
       ],
       theme: ThemeData(
         appBarTheme: AppBarTheme(
-            brightness: Brightness.light,
-            centerTitle: true,
-            color: PilllColors.white),
+          brightness: Brightness.light,
+          centerTitle: true,
+          color: PilllColors.white,
+          elevation: 3,
+        ),
         primaryColor: PilllColors.primary,
         visualDensity: VisualDensity.adaptivePlatformDensity,
         accentColor: PilllColors.accent,

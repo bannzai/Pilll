@@ -10,7 +10,6 @@ import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/service/push_notification.dart';
 import 'package:pilll/service/setting.dart';
 import 'package:pilll/util/datetime/day.dart';
-import 'package:pilll/util/formatter/date_time_formatter.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
@@ -73,6 +72,7 @@ class _HomePageState extends State<HomePage>
               child: TabBar(
                 controller: _tabController,
                 labelColor: PilllColors.secondary,
+                labelStyle: TextStyle(fontSize: 12),
                 indicatorColor: Colors.transparent,
                 unselectedLabelColor: TextColor.gray,
                 tabs: <Tab>[
