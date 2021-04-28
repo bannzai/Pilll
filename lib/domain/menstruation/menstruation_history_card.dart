@@ -14,17 +14,15 @@ import 'package:pilll/util/datetime/day.dart';
 
 class MenstruationHistoryCardState {
   final List<Menstruation> _allMenstruations;
+  final Menstruation _latestMenstruation;
 
   MenstruationHistoryCardState(
     this._allMenstruations,
+    this._latestMenstruation,
   );
 
-  bool get _latestPillSheetIntoToday {
-    if (_allMenstruations.isEmpty) {
-      return false;
-    }
-    return _allMenstruations.last.dateRange.inRange(today());
-  }
+  bool get _latestPillSheetIntoToday =>
+      _latestMenstruation.dateRange.inRange(today());
 
   bool get moreButtonIsHidden => _latestPillSheetIntoToday
       ? _allMenstruations.length <= 3
