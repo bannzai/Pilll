@@ -1,6 +1,5 @@
 import 'package:pilll/analytics.dart';
 import 'package:pilll/auth/auth.dart';
-import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/database/database.dart';
 import 'package:pilll/domain/calendar/calendar_page.dart';
 import 'package:pilll/domain/menstruation/menstruation_page.dart';
@@ -11,7 +10,6 @@ import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/service/push_notification.dart';
 import 'package:pilll/service/setting.dart';
 import 'package:pilll/util/datetime/day.dart';
-import 'package:pilll/util/formatter/date_time_formatter.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 

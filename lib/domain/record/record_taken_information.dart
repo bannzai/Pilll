@@ -1,4 +1,3 @@
-import 'package:pilll/components/molecules/app_card.dart';
 import 'package:pilll/components/molecules/shadow_container.dart';
 import 'package:pilll/entity/pill_sheet.dart';
 import 'package:pilll/components/atoms/color.dart';
