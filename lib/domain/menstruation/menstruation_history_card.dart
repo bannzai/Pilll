@@ -18,7 +18,8 @@ class MenstruationHistoryCardState {
     this._allMenstruations,
   );
 
-  bool get moreButtonIsHidden => _allMenstruations.length <= 2;
+  bool get moreButtonIsHidden => rows.length <= 2;
+
   List<MenstruationHistoryRowState> get rows {
     if (_allMenstruations.isEmpty) {
       return [];
