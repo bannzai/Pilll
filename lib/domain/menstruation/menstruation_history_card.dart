@@ -10,15 +10,23 @@ import 'package:pilll/domain/menstruation/menstruation_list_page.dart';
 import 'package:pilll/entity/menstruation.dart';
 import 'package:flutter/material.dart';
 import 'package:pilll/store/menstruation.dart';
+import 'package:pilll/util/datetime/day.dart';
 
 class MenstruationHistoryCardState {
   final List<Menstruation> _allMenstruations;
+  final Menstruation _latestMenstruation;
 
   MenstruationHistoryCardState(
     this._allMenstruations,
+    this._latestMenstruation,
   );
 
-  bool get moreButtonIsHidden => _allMenstruations.length <= 2;
+  bool get _latestPillSheetIntoToday =>
+      _latestMenstruation.dateRange.inRange(today());
+
+  bool get moreButtonIsHidden => _latestPillSheetIntoToday
+      ? _allMenstruations.length <= 3
+      : _allMenstruations.length <= 2;
   List<MenstruationHistoryRowState> get rows {
     if (_allMenstruations.isEmpty) {
       return [];

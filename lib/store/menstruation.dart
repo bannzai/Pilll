@@ -160,7 +160,11 @@ class MenstruationStore extends StateNotifier<MenstruationState> {
     if (latestMenstruation == null) {
       return null;
     }
-    return MenstruationHistoryCardState(state.entities);
+    if (state.entities.length == 1 &&
+        latestMenstruation.dateRange.inRange(today())) {
+      return null;
+    }
+    return MenstruationHistoryCardState(state.entities, latestMenstruation);
   }
 }
 
