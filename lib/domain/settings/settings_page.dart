@@ -402,6 +402,14 @@ class SettingsPage extends HookWidget {
                     forceSafariVC: true);
               }),
           SettingListTitleRowModel(
+              title: "FAQ",
+              onTap: () {
+                analytics.logEvent(name: "did_select_faq", parameters: {});
+                launch(
+                    "https://pilll.anotion.so/bb1f49eeded64b57929b7a13e9224d69",
+                    forceSafariVC: true);
+              }),
+          SettingListTitleRowModel(
               title: "お問い合わせ",
               onTap: () {
                 analytics.logEvent(name: "did_select_inquiry", parameters: {});
