@@ -46,7 +46,6 @@ class RecordPage extends HookWidget {
     return Scaffold(
       backgroundColor: PilllColors.background,
       appBar: AppBar(
-        elevation: 0,
         titleSpacing: 0,
         backgroundColor: PilllColors.white,
         toolbarHeight: 132,

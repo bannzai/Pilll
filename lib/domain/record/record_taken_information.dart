@@ -1,4 +1,3 @@
-import 'package:pilll/components/molecules/shadow_container.dart';
 import 'package:pilll/entity/pill_sheet.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
@@ -29,28 +28,26 @@ class RecordTakenInformation extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       height: 130,
-      child: ShadowContainer(
-        child: Column(
-          children: <Widget>[
-            SizedBox(height: 34),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: <Widget>[
-                _todayWidget(),
-                SizedBox(width: 28),
-                Container(
-                  height: 64,
-                  child: VerticalDivider(
-                    width: 10,
-                    color: PilllColors.divider,
-                  ),
+      child: Column(
+        children: <Widget>[
+          SizedBox(height: 34),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: <Widget>[
+              _todayWidget(),
+              SizedBox(width: 28),
+              Container(
+                height: 64,
+                child: VerticalDivider(
+                  width: 10,
+                  color: PilllColors.divider,
                 ),
-                SizedBox(width: 28),
-                _takenWidget(),
-              ],
-            ),
-          ],
-        ),
+              ),
+              SizedBox(width: 28),
+              _takenWidget(),
+            ],
+          ),
+        ],
       ),
     );
   }
