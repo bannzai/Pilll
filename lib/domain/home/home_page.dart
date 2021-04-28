@@ -1,5 +1,6 @@
 import 'package:pilll/analytics.dart';
 import 'package:pilll/auth/auth.dart';
+import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/database/database.dart';
 import 'package:pilll/domain/calendar/calendar_page.dart';
 import 'package:pilll/domain/menstruation/menstruation_page.dart';
@@ -73,6 +74,7 @@ class _HomePageState extends State<HomePage>
               child: TabBar(
                 controller: _tabController,
                 labelColor: PilllColors.secondary,
+                labelStyle: TextStyle(fontSize: 12),
                 indicatorColor: Colors.transparent,
                 unselectedLabelColor: TextColor.gray,
                 tabs: <Tab>[
