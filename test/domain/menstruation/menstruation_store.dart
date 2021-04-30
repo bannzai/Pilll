@@ -286,5 +286,69 @@ void main() {
                 countdownString: "あと14日"));
       },
     );
+    test(
+      "if latest pillsheet.beginingDate >= today, when return card state of into duration for schedueld menstruation",
+      () async {
+        final originalTodayRepository = todayRepository;
+        final mockTodayRepository = MockTodayService();
+        todayRepository = mockTodayRepository;
+        final today = DateTime(2021, 04, 29);
+        when(mockTodayRepository.today()).thenReturn(today);
+        addTearDown(() {
+          todayRepository = originalTodayRepository;
+        });
+
+        final menstruationService = MockMnestruationService();
+        when(menstruationService.fetchAll()).thenAnswer(
+          (realInvocation) => Future.value([]),
+        );
+        when(menstruationService.subscribeAll()).thenAnswer(
+          (realInvocation) => Stream.value([]),
+        );
+        final pillSheetService = MockPillSheetService();
+        when(pillSheetService.fetchLast()).thenAnswer(
+          (realInvocation) => Future.value(
+            PillSheetModel(
+              typeInfo: PillSheetType.pillsheet_21.typeInfo,
+              beginingDate: DateTime(2021, 04, 07),
+            ),
+          ),
+        );
+        when(pillSheetService.subscribeForLatestPillSheet())
+            .thenAnswer((realInvocation) => Stream.empty());
+        final diaryService = MockDiaryService();
+        when(diaryService.fetchListAround90Days(today))
+            .thenAnswer((realInvocation) => Future.value([]));
+        when(diaryService.subscribe())
+            .thenAnswer((realInvocation) => Stream.empty());
+        final settingService = MockSettingService();
+        when(settingService.fetch()).thenAnswer((realInvocation) =>
+            Future.value(Setting(
+                pillSheetTypeRawPath: PillSheetType.pillsheet_21.rawPath,
+                pillNumberForFromMenstruation: 22,
+                durationMenstruation: 3,
+                reminderTimes: [],
+                isOnReminder: true)));
+        when(settingService.subscribe())
+            .thenAnswer((realInvocation) => Stream.empty());
+
+        final store = MenstruationStore(
+          menstruationService: menstruationService,
+          diaryService: diaryService,
+          settingService: settingService,
+          pillSheetService: pillSheetService,
+        );
+        await waitForResetStoreState();
+        final actual = store.cardState();
+
+        expect(
+          actual,
+          MenstruationCardState(
+              title: "生理予定日",
+              scheduleDate: DateTime(2021, 04, 28),
+              countdownString: "生理予定：2日目"),
+        );
+      },
+    );
   });
 }
