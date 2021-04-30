@@ -140,19 +140,26 @@ class MenstruationStore extends StateNotifier<MenstruationState> {
     if (latestPillSheet == null || setting == null) {
       return null;
     }
-    if (today().isAfter(latestPillSheet.beginingDate)) {
-      final matchedScheduledMenstruation = scheduledMenstruationDateRanges(
-              latestPillSheet, setting, state.entities, 12)
-          .where((element) => element.begin.isAfter(today()));
 
-      if (matchedScheduledMenstruation.isNotEmpty) {
-        return MenstruationCardState.schedule(
-            scheduleDate: matchedScheduledMenstruation.first.begin);
-      }
+    final menstruationDateRanges = scheduledMenstruationDateRanges(
+        latestPillSheet, setting, state.entities, 12);
+    final inTheMiddleDateRanges =
+        menstruationDateRanges.where((element) => element.inRange(today()));
+
+    if (inTheMiddleDateRanges.isNotEmpty) {
+      return MenstruationCardState.inTheMiddle(
+          scheduledDate: inTheMiddleDateRanges.first.begin);
     }
-    return MenstruationCardState.schedule(
-        scheduleDate: latestPillSheet.beginingDate
-            .add(Duration(days: setting.pillNumberForFromMenstruation - 1)));
+
+    final futureDateRanges = menstruationDateRanges
+        .where((element) => element.begin.isAfter(today()));
+    if (futureDateRanges.isNotEmpty) {
+      return MenstruationCardState.future(
+          nextSchedule: futureDateRanges.first.begin);
+    }
+
+    assert(false);
+    return null;
   }
 
   MenstruationHistoryCardState? historyCardState() {
