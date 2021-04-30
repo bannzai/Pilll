@@ -13,14 +13,25 @@ abstract class MenstruationCardState implements _$MenstruationCardState {
     required String countdownString,
   }) = _MenstruationCardState;
 
-  factory MenstruationCardState.schedule({
-    required DateTime scheduleDate,
+  factory MenstruationCardState.future({
+    required DateTime nextSchedule,
   }) {
-    final diff = scheduleDate.difference(today()).inDays;
+    final diff = nextSchedule.difference(today()).inDays;
     return MenstruationCardState(
       title: "生理予定日",
-      scheduleDate: scheduleDate,
-      countdownString: diff <= 0 ? "生理予定：${diff.abs() + 1}日目" : "あと$diff日",
+      scheduleDate: nextSchedule,
+      countdownString: "あと$diff日",
+    );
+  }
+
+  factory MenstruationCardState.inTheMiddle({
+    required DateTime scheduledDate,
+  }) {
+    final diff = today().difference(scheduledDate).inDays;
+    return MenstruationCardState(
+      title: "生理予定日",
+      scheduleDate: scheduledDate,
+      countdownString: "生理予定：${diff + 1}日目",
     );
   }
 

@@ -38,7 +38,7 @@ void main() {
   group('appearance taken button type', () {
     testWidgets('today pill not taken', (WidgetTester tester) async {
       final originalTodayRepository = todayRepository;
-      final mockTodayRepository = MockTodayRepository();
+      final mockTodayRepository = MockTodayService();
       todayRepository = mockTodayRepository;
 
       final today = DateTime(2020, 09, 01);
@@ -94,7 +94,7 @@ void main() {
   });
   testWidgets('today pill is already taken', (WidgetTester tester) async {
     final originalTodayRepository = todayRepository;
-    final mockTodayRepository = MockTodayRepository();
+    final mockTodayRepository = MockTodayService();
     todayRepository = mockTodayRepository;
 
     final today = DateTime(2020, 09, 01);
@@ -151,7 +151,7 @@ void main() {
   testWidgets('today pill number into rest duration for pill_sheet_21',
       (WidgetTester tester) async {
     final originalTodayRepository = todayRepository;
-    final mockTodayRepository = MockTodayRepository();
+    final mockTodayRepository = MockTodayService();
     todayRepository = mockTodayRepository;
 
     final today = DateTime(2020, 09, 01);

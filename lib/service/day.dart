@@ -1,13 +1,8 @@
 import 'package:pilll/util/datetime/day.dart';
 
-abstract class TodayServiceInterface {
-  DateTime today();
-  DateTime now();
-}
-
-class TodayService implements TodayServiceInterface {
+class TodayService {
   DateTime today() => DateTime.now().date();
   DateTime now() => DateTime.now();
 }
 
-TodayServiceInterface todayRepository = TodayService();
+TodayService todayRepository = TodayService();
