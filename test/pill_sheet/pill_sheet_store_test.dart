@@ -20,7 +20,7 @@ void main() {
   });
   group("#calcBeginingDateFromNextTodayPillNumber", () {
     test("pill number changed to future", () async {
-      final mockTodayRepository = MockTodayRepository();
+      final mockTodayRepository = MockTodayService();
       todayRepository = mockTodayRepository;
       when(todayRepository.today()).thenReturn(DateTime.parse("2020-11-22"));
 
@@ -47,7 +47,7 @@ void main() {
     });
   });
   test("pill number changed to past", () async {
-    final mockTodayRepository = MockTodayRepository();
+    final mockTodayRepository = MockTodayService();
     todayRepository = mockTodayRepository;
     when(todayRepository.today()).thenReturn(DateTime.parse("2020-11-23"));
 
@@ -74,7 +74,7 @@ void main() {
   });
   group("#markFor", () {
     test("it is alredy taken all", () async {
-      final mockTodayRepository = MockTodayRepository();
+      final mockTodayRepository = MockTodayService();
       todayRepository = mockTodayRepository;
       when(todayRepository.today()).thenReturn(DateTime.parse("2020-11-23"));
 
@@ -101,7 +101,7 @@ void main() {
       expect(store.markFor(4), PillMarkType.normal);
     });
     test("it is not taken all", () async {
-      final mockTodayRepository = MockTodayRepository();
+      final mockTodayRepository = MockTodayService();
       todayRepository = mockTodayRepository;
       when(todayRepository.today()).thenReturn(DateTime.parse("2020-11-23"));
 
@@ -130,7 +130,7 @@ void main() {
   });
   group("#shouldPillMarkAnimation", () {
     test("it is alredy taken all", () async {
-      final mockTodayRepository = MockTodayRepository();
+      final mockTodayRepository = MockTodayService();
       todayRepository = mockTodayRepository;
       when(mockTodayRepository.today()).thenReturn(DateTime.parse("2020-11-23"));
 
@@ -156,7 +156,7 @@ void main() {
       }
     });
     test("it is not taken all", () async {
-      final mockTodayRepository = MockTodayRepository();
+      final mockTodayRepository = MockTodayService();
       todayRepository = mockTodayRepository;
       when(todayRepository.today()).thenReturn(DateTime.parse("2020-11-23"));
 

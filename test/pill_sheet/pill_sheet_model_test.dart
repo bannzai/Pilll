@@ -14,7 +14,7 @@ void main() {
   });
   group("#todayPillNumber", () {
     test("today: 2020-09-19, begin: 2020-09-14, end: 2020-09-18", () {
-      var mockTodayRepository = MockTodayRepository();
+      var mockTodayRepository = MockTodayService();
       todayRepository = mockTodayRepository;
       when(todayRepository.today()).thenReturn(DateTime.parse("2020-09-19"));
 
@@ -32,7 +32,7 @@ void main() {
       expect(model.todayPillNumber, 6);
     });
     test("today: 2020-09-28, begin: 2020-09-01, end: 2020-09-28", () {
-      var mockTodayRepository = MockTodayRepository();
+      var mockTodayRepository = MockTodayService();
       todayRepository = mockTodayRepository;
       when(todayRepository.today()).thenReturn(DateTime.parse("2020-09-28"));
 
@@ -50,7 +50,7 @@ void main() {
       expect(model.todayPillNumber, 28);
     });
     test("today: 2020-09-29, begin: 2020-09-01, end: 2020-09-28", () {
-      var mockTodayRepository = MockTodayRepository();
+      var mockTodayRepository = MockTodayService();
       todayRepository = mockTodayRepository;
       when(todayRepository.today()).thenReturn(DateTime.parse("2020-09-29"));
 
@@ -68,7 +68,7 @@ void main() {
       expect(model.todayPillNumber, 1);
     });
     test("today: 2020-10-27, begin: 2020-09-01, end: 2020-09-28", () {
-      var mockTodayRepository = MockTodayRepository();
+      var mockTodayRepository = MockTodayService();
       todayRepository = mockTodayRepository;
       when(todayRepository.today()).thenReturn(DateTime.parse("2020-10-27"));
 
