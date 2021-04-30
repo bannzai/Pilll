@@ -8,7 +8,7 @@ import 'package:mockito/mockito.dart';
 
 class MockPillSheetService extends Mock implements PillSheetService {}
 
-class MockTodayService extends Mock implements TodayServiceInterface {}
+class MockTodayService extends Mock implements TodayService {}
 
 class MockSettingService extends Mock implements SettingService {}
 
