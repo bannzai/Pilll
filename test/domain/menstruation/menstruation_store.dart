@@ -6,6 +6,7 @@ import 'package:pilll/service/day.dart';
 import 'package:pilll/store/menstruation.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
+import '../../helper/delay.dart';
 import '../../helper/mock.dart';
 
 void main() {
@@ -16,7 +17,7 @@ void main() {
   group("#cardState", () {
     test(
       "if latestMenstruation is into today, when return card state of begining about menstruation ",
-      () {
+      () async {
         final originalTodayRepository = todayRepository;
         final mockTodayRepository = MockTodayService();
         todayRepository = mockTodayRepository;
@@ -30,29 +31,29 @@ void main() {
         when(menstruationService.fetchAll()).thenAnswer(
           (realInvocation) => Future.value([
             Menstruation(
+              beginDate: DateTime(2021, 04, 28),
+              endDate: DateTime(2021, 04, 30),
+              createdAt: DateTime(2021, 04, 28),
+            ),
+            Menstruation(
               beginDate: DateTime(2021, 03, 28),
               endDate: DateTime(2021, 03, 30),
               createdAt: DateTime(2021, 03, 28),
             ),
-            Menstruation(
-              beginDate: DateTime(2021, 04, 28),
-              endDate: DateTime(2021, 04, 30),
-              createdAt: DateTime(2021, 04, 28),
-            )
           ]),
         );
         when(menstruationService.subscribeAll()).thenAnswer(
           (realInvocation) => Stream.value([
             Menstruation(
+              beginDate: DateTime(2021, 04, 28),
+              endDate: DateTime(2021, 04, 30),
+              createdAt: DateTime(2021, 04, 28),
+            ),
+            Menstruation(
               beginDate: DateTime(2021, 03, 28),
               endDate: DateTime(2021, 03, 30),
               createdAt: DateTime(2021, 03, 28),
             ),
-            Menstruation(
-              beginDate: DateTime(2021, 04, 28),
-              endDate: DateTime(2021, 04, 30),
-              createdAt: DateTime(2021, 04, 28),
-            )
           ]),
         );
         final pillSheetService = MockPillSheetService();
@@ -77,6 +78,7 @@ void main() {
           settingService: settingService,
           pillSheetService: pillSheetService,
         );
+        await waitForResetStoreState();
         final actual = store.cardState();
 
         expect(
