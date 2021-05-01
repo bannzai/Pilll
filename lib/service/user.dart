@@ -1,10 +1,8 @@
 import 'dart:io';
 
-import 'package:pilll/analytics.dart';
 import 'package:pilll/database/database.dart';
 import 'package:pilll/entity/package.dart';
 import 'package:pilll/entity/user.dart';
-import 'package:pilll/error_log.dart';
 import 'package:pilll/util/shared_preference/keys.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:package_info/package_info.dart';
@@ -26,8 +24,6 @@ class UserService {
       throw FormatException(
           "cause exception when failed fetch and create user for $error");
     });
-    errorLogger.setUserIdentifier(uid);
-    firebaseAnalytics.setUserId(uid);
     return user;
   }
 
