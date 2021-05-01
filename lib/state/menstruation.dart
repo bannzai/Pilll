@@ -15,6 +15,7 @@ part 'menstruation.freezed.dart';
 abstract class MenstruationState implements _$MenstruationState {
   MenstruationState._();
   factory MenstruationState({
+    @Default(false) bool isAlreadyAdjsutScrollOffset,
     @Default(true) bool isNotYetLoaded,
     @Default(0) int currentCalendarIndex,
     @Default([]) List<Diary> diaries,

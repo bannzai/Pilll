@@ -17,13 +17,15 @@ class _$MenstruationStateTearOff {
   const _$MenstruationStateTearOff();
 
   _MenstruationState call(
-      {bool isNotYetLoaded = true,
+      {bool isAlreadyAdjsutScrollOffset = false,
+      bool isNotYetLoaded = true,
       int currentCalendarIndex = 0,
       List<Diary> diaries = const [],
       List<Menstruation> entities = const [],
       Setting? setting,
       PillSheetModel? latestPillSheet}) {
     return _MenstruationState(
+      isAlreadyAdjsutScrollOffset: isAlreadyAdjsutScrollOffset,
       isNotYetLoaded: isNotYetLoaded,
       currentCalendarIndex: currentCalendarIndex,
       diaries: diaries,
@@ -39,6 +41,7 @@ const $MenstruationState = _$MenstruationStateTearOff();
 
 /// @nodoc
 mixin _$MenstruationState {
+  bool get isAlreadyAdjsutScrollOffset => throw _privateConstructorUsedError;
   bool get isNotYetLoaded => throw _privateConstructorUsedError;
   int get currentCalendarIndex => throw _privateConstructorUsedError;
   List<Diary> get diaries => throw _privateConstructorUsedError;
@@ -57,7 +60,8 @@ abstract class $MenstruationStateCopyWith<$Res> {
           MenstruationState value, $Res Function(MenstruationState) then) =
       _$MenstruationStateCopyWithImpl<$Res>;
   $Res call(
-      {bool isNotYetLoaded,
+      {bool isAlreadyAdjsutScrollOffset,
+      bool isNotYetLoaded,
       int currentCalendarIndex,
       List<Diary> diaries,
       List<Menstruation> entities,
@@ -79,6 +83,7 @@ class _$MenstruationStateCopyWithImpl<$Res>
 
   @override
   $Res call({
+    Object? isAlreadyAdjsutScrollOffset = freezed,
     Object? isNotYetLoaded = freezed,
     Object? currentCalendarIndex = freezed,
     Object? diaries = freezed,
@@ -87,6 +92,10 @@ class _$MenstruationStateCopyWithImpl<$Res>
     Object? latestPillSheet = freezed,
   }) {
     return _then(_value.copyWith(
+      isAlreadyAdjsutScrollOffset: isAlreadyAdjsutScrollOffset == freezed
+          ? _value.isAlreadyAdjsutScrollOffset
+          : isAlreadyAdjsutScrollOffset // ignore: cast_nullable_to_non_nullable
+              as bool,
       isNotYetLoaded: isNotYetLoaded == freezed
           ? _value.isNotYetLoaded
           : isNotYetLoaded // ignore: cast_nullable_to_non_nullable
@@ -145,7 +154,8 @@ abstract class _$MenstruationStateCopyWith<$Res>
       __$MenstruationStateCopyWithImpl<$Res>;
   @override
   $Res call(
-      {bool isNotYetLoaded,
+      {bool isAlreadyAdjsutScrollOffset,
+      bool isNotYetLoaded,
       int currentCalendarIndex,
       List<Diary> diaries,
       List<Menstruation> entities,
@@ -171,6 +181,7 @@ class __$MenstruationStateCopyWithImpl<$Res>
 
   @override
   $Res call({
+    Object? isAlreadyAdjsutScrollOffset = freezed,
     Object? isNotYetLoaded = freezed,
     Object? currentCalendarIndex = freezed,
     Object? diaries = freezed,
@@ -179,6 +190,10 @@ class __$MenstruationStateCopyWithImpl<$Res>
     Object? latestPillSheet = freezed,
   }) {
     return _then(_MenstruationState(
+      isAlreadyAdjsutScrollOffset: isAlreadyAdjsutScrollOffset == freezed
+          ? _value.isAlreadyAdjsutScrollOffset
+          : isAlreadyAdjsutScrollOffset // ignore: cast_nullable_to_non_nullable
+              as bool,
       isNotYetLoaded: isNotYetLoaded == freezed
           ? _value.isNotYetLoaded
           : isNotYetLoaded // ignore: cast_nullable_to_non_nullable
@@ -211,7 +226,8 @@ class __$MenstruationStateCopyWithImpl<$Res>
 
 class _$_MenstruationState extends _MenstruationState {
   _$_MenstruationState(
-      {this.isNotYetLoaded = true,
+      {this.isAlreadyAdjsutScrollOffset = false,
+      this.isNotYetLoaded = true,
       this.currentCalendarIndex = 0,
       this.diaries = const [],
       this.entities = const [],
@@ -219,6 +235,9 @@ class _$_MenstruationState extends _MenstruationState {
       this.latestPillSheet})
       : super._();
 
+  @JsonKey(defaultValue: false)
+  @override
+  final bool isAlreadyAdjsutScrollOffset;
   @JsonKey(defaultValue: true)
   @override
   final bool isNotYetLoaded;
@@ -238,13 +257,18 @@ class _$_MenstruationState extends _MenstruationState {
 
   @override
   String toString() {
-    return 'MenstruationState(isNotYetLoaded: $isNotYetLoaded, currentCalendarIndex: $currentCalendarIndex, diaries: $diaries, entities: $entities, setting: $setting, latestPillSheet: $latestPillSheet)';
+    return 'MenstruationState(isAlreadyAdjsutScrollOffset: $isAlreadyAdjsutScrollOffset, isNotYetLoaded: $isNotYetLoaded, currentCalendarIndex: $currentCalendarIndex, diaries: $diaries, entities: $entities, setting: $setting, latestPillSheet: $latestPillSheet)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other is _MenstruationState &&
+            (identical(other.isAlreadyAdjsutScrollOffset,
+                    isAlreadyAdjsutScrollOffset) ||
+                const DeepCollectionEquality().equals(
+                    other.isAlreadyAdjsutScrollOffset,
+                    isAlreadyAdjsutScrollOffset)) &&
             (identical(other.isNotYetLoaded, isNotYetLoaded) ||
                 const DeepCollectionEquality()
                     .equals(other.isNotYetLoaded, isNotYetLoaded)) &&
@@ -268,6 +292,7 @@ class _$_MenstruationState extends _MenstruationState {
   @override
   int get hashCode =>
       runtimeType.hashCode ^
+      const DeepCollectionEquality().hash(isAlreadyAdjsutScrollOffset) ^
       const DeepCollectionEquality().hash(isNotYetLoaded) ^
       const DeepCollectionEquality().hash(currentCalendarIndex) ^
       const DeepCollectionEquality().hash(diaries) ^
@@ -283,7 +308,8 @@ class _$_MenstruationState extends _MenstruationState {
 
 abstract class _MenstruationState extends MenstruationState {
   factory _MenstruationState(
-      {bool isNotYetLoaded,
+      {bool isAlreadyAdjsutScrollOffset,
+      bool isNotYetLoaded,
       int currentCalendarIndex,
       List<Diary> diaries,
       List<Menstruation> entities,
@@ -291,6 +317,8 @@ abstract class _MenstruationState extends MenstruationState {
       PillSheetModel? latestPillSheet}) = _$_MenstruationState;
   _MenstruationState._() : super._();
 
+  @override
+  bool get isAlreadyAdjsutScrollOffset => throw _privateConstructorUsedError;
   @override
   bool get isNotYetLoaded => throw _privateConstructorUsedError;
   @override
