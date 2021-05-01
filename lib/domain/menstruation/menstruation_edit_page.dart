@@ -34,6 +34,7 @@ class MenstruationEditPage extends HookWidget {
     final invalidMessage = state.invalidMessage;
     return DraggableScrollableSheet(
       initialChildSize: 0.7,
+      maxChildSize: 0.7,
       builder: (context, scrollController) {
         return Container(
           decoration: BoxDecoration(
