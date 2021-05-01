@@ -41,6 +41,7 @@ abstract class MonthlyCalendarState {
   int _previousMonthDayCount() => _weekdayOffset();
   int _tileCount() => _previousMonthDayCount() + _lastDay();
   int weeklineCount() => (_tileCount() / Weekday.values.length).ceil();
+  static const int constantLineCount = 6;
 
   WeeklyCalendarState weeklyCalendarState(int line);
 }
