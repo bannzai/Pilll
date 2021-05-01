@@ -22,7 +22,7 @@ class UserService {
         return _create(uid).then((_) => fetch());
       }
       throw FormatException(
-          "cause exception when failed fetch and create user for $error");
+          "cause exception when failed fetch and create user for $error, stackTrace: ${StackTrace.current.toString()}");
     });
     return user;
   }
