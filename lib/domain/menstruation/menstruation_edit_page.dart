@@ -43,6 +43,7 @@ class MenstruationEditPage extends HookWidget {
                 topRight: const Radius.circular(20.0),
               )),
           child: ListView(
+            controller: scrollController,
             children: [
               Padding(
                 padding: const EdgeInsets.only(top: 21.0, left: 16, right: 16),
