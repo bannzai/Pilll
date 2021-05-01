@@ -36,6 +36,13 @@ class MenstruationEditPage extends HookWidget {
       initialChildSize: 0.7,
       maxChildSize: 0.7,
       builder: (context, scrollController) {
+        Future.delayed(Duration(microseconds: 200)).then((value) {
+          if (state.isAlreadyAdjsutScrollOffset) {
+            return;
+          }
+          store.adjustedScrollOffset();
+          scrollController.jumpTo(540);
+        });
         return Container(
           decoration: BoxDecoration(
               color: PilllColors.white,

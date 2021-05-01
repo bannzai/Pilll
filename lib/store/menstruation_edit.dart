@@ -164,4 +164,8 @@ class MenstruationEditStore extends StateNotifier<MenstruationEditState> {
       return;
     }
   }
+
+  void adjustedScrollOffset() {
+    state = state.copyWith(isAlreadyAdjsutScrollOffset: true);
+  }
 }
