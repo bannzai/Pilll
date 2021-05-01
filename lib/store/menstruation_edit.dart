@@ -18,6 +18,8 @@ final menstruationEditProvider = StateNotifierProvider.family
 List<DateTime> displaedDates(Menstruation? menstruation) {
   if (menstruation != null) {
     return [
+      DateTime(
+          menstruation.beginDate.year, menstruation.beginDate.month - 1, 1),
       menstruation.beginDate,
       DateTime(
           menstruation.beginDate.year, menstruation.beginDate.month + 1, 1),
@@ -25,6 +27,7 @@ List<DateTime> displaedDates(Menstruation? menstruation) {
   } else {
     final t = today();
     return [
+      DateTime(t.year, t.month - 1, 1),
       t,
       DateTime(t.year, t.month + 1, 1),
     ];
@@ -160,5 +163,9 @@ class MenstruationEditStore extends StateNotifier<MenstruationEditState> {
               menstruation.copyWith(endDate: date.subtract(Duration(days: 1))));
       return;
     }
+  }
+
+  void adjustedScrollOffset() {
+    state = state.copyWith(isAlreadyAdjsutScrollOffset: true);
   }
 }

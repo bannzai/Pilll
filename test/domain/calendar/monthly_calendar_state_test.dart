@@ -26,7 +26,7 @@ void main() {
     date = DateTime.parse("2020-09-14");
 
     test("#lineCount", () {
-      expect(calendarState.lineCount(), 5);
+      expect(calendarState.weeklineCount(), 5);
     });
     test("#dateRangeOfLine", () {
       expect(

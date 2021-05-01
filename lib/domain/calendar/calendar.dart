@@ -39,7 +39,7 @@ class Calendar extends HookWidget {
 
   DateTime date() => calendarState.dateForMonth;
   double height() =>
-      calendarState.lineCount().toDouble() * CalendarConstants.tileHeight;
+      calendarState.weeklineCount().toDouble() * CalendarConstants.tileHeight;
 }
 
 class CalendarBody extends StatelessWidget {
@@ -73,8 +73,13 @@ class CalendarBody extends StatelessWidget {
                   )),
         ),
         Divider(height: 1),
-        ...List.generate(calendarState.lineCount(), (_line) {
+        ...List.generate(MonthlyCalendarState.constantLineCount, (_line) {
           final line = _line + 1;
+          if (calendarState.weeklineCount() <
+                  MonthlyCalendarState.constantLineCount &&
+              line == MonthlyCalendarState.constantLineCount) {
+            return Container(height: CalendarConstants.tileHeight);
+          }
           return Column(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: <Widget>[

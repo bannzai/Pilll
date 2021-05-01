@@ -19,7 +19,7 @@ abstract class MonthlyCalendarState {
             Weekday.values.length - _previousMonthDayCount()),
       );
     }
-    if (line == lineCount()) {
+    if (line == weeklineCount()) {
       return DateRange(
         DateTime(dateForMonth.year, dateForMonth.month,
             Weekday.values.length * (line - 1) + 1 - _previousMonthDayCount()),
@@ -40,7 +40,8 @@ abstract class MonthlyCalendarState {
       WeekdayFunctions.weekdayFromDate(_firstDayOfMonth(dateForMonth)).index;
   int _previousMonthDayCount() => _weekdayOffset();
   int _tileCount() => _previousMonthDayCount() + _lastDay();
-  int lineCount() => (_tileCount() / Weekday.values.length).ceil();
+  int weeklineCount() => (_tileCount() / Weekday.values.length).ceil();
+  static const int constantLineCount = 6;
 
   WeeklyCalendarState weeklyCalendarState(int line);
 }
