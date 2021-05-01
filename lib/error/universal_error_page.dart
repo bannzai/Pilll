@@ -41,7 +41,7 @@ class UniversalErrorPage extends StatelessWidget {
                   size: 20,
                 ),
                 label: Text("画面を再読み込み",
-                    style: FontType.assisting.merge(TextColorStyle.primary)),
+                    style: FontType.assisting.merge(TextColorStyle.black)),
                 onPressed: () {
                   analytics.logEvent(name: "reload_button_pressed");
                   rootKey.currentState?.reloadRoot();
@@ -53,7 +53,7 @@ class UniversalErrorPage extends StatelessWidget {
                   size: 20,
                 ),
                 label: Text("解決しない場合はこちら",
-                    style: FontType.assisting.merge(TextColorStyle.white)),
+                    style: FontType.assisting.merge(TextColorStyle.black)),
                 onPressed: () {
                   analytics.logEvent(name: "problem_unresolved_button_pressed");
                   inquiry();

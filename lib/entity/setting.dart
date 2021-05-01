@@ -38,7 +38,7 @@ abstract class Setting implements _$Setting {
     required String pillSheetTypeRawPath,
     required int pillNumberForFromMenstruation,
     required int durationMenstruation,
-    required List<ReminderTime> reminderTimes,
+    @Default([]) List<ReminderTime> reminderTimes,
     @JsonSerializable(explicitToJson: true) required bool isOnReminder,
     @Default(true) bool isOnNotifyInNotTakenDuration,
   }) = _Setting;

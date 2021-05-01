@@ -1,3 +1,4 @@
+import 'package:pilll/analytics.dart';
 import 'package:pilll/auth/auth.dart';
 import 'package:pilll/database/database.dart';
 import 'package:pilll/domain/home/home_page.dart';
@@ -131,6 +132,8 @@ class RootState extends State<Root> {
   _auth() {
     auth().then((authInfo) {
       final userService = UserService(DatabaseConnection(authInfo.uid));
+      errorLogger.setUserIdentifier(authInfo.uid);
+      firebaseAnalytics.setUserId(authInfo.uid);
       return userService.prepare(authInfo.uid).then((_) async {
         userService.saveLaunchInfo();
         userService.saveStats();
