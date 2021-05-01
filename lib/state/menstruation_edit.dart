@@ -7,6 +7,7 @@ part 'menstruation_edit.freezed.dart';
 abstract class MenstruationEditState implements _$MenstruationEditState {
   MenstruationEditState._();
   factory MenstruationEditState({
+    @Default(false) bool isAlreadyAdjsutScrollOffset,
     required Menstruation? menstruation,
     required List<DateTime> displayedDates,
     String? invalidMessage,
