@@ -41,7 +41,10 @@ class MenstruationEditPage extends HookWidget {
             return;
           }
           store.adjustedScrollOffset();
-          scrollController.jumpTo(540);
+          final double estimatedSectionTitleHeight = 95;
+          scrollController.jumpTo(CalendarConstants.tileHeight *
+                  MonthlyCalendarState.constantLineCount +
+              estimatedSectionTitleHeight);
         });
         return Container(
           decoration: BoxDecoration(
@@ -50,8 +53,7 @@ class MenstruationEditPage extends HookWidget {
                 topLeft: const Radius.circular(20.0),
                 topRight: const Radius.circular(20.0),
               )),
-          child: ListView(
-            controller: scrollController,
+          child: Column(
             children: [
               Padding(
                 padding: const EdgeInsets.only(top: 21.0, left: 16, right: 16),
@@ -108,23 +110,30 @@ class MenstruationEditPage extends HookWidget {
                   ],
                 ),
               ),
-              ...state
-                  .dates()
-                  .map((dateForMonth) {
-                    return [
-                      CalendarDateHeader(date: dateForMonth),
-                      Calendar(
-                        diaries: [],
-                        calendarState: MenstruationEditCalendarState(
-                            dateForMonth, state.menstruation),
-                        bandModels: [],
-                        onTap: (date, diaries) => store.tappedDate(date),
-                        horizontalPadding: 0,
-                      ),
-                    ];
-                  })
-                  .expand((element) => element)
-                  .toList(),
+              Expanded(
+                child: ListView(
+                  controller: scrollController,
+                  children: [
+                    ...state
+                        .dates()
+                        .map((dateForMonth) {
+                          return [
+                            CalendarDateHeader(date: dateForMonth),
+                            Calendar(
+                              diaries: [],
+                              calendarState: MenstruationEditCalendarState(
+                                  dateForMonth, state.menstruation),
+                              bandModels: [],
+                              onTap: (date, diaries) => store.tappedDate(date),
+                              horizontalPadding: 0,
+                            ),
+                          ];
+                        })
+                        .expand((element) => element)
+                        .toList(),
+                  ],
+                ),
+              ),
             ],
           ),
         );
