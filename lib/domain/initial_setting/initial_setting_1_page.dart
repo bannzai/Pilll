@@ -1,3 +1,4 @@
+import 'package:pilll/analytics.dart';
 import 'package:pilll/domain/initial_setting/initial_setting_2_page.dart';
 import 'package:pilll/components/organisms/pill/pill_sheet_type_select_page.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
@@ -29,6 +30,8 @@ class InitialSetting1Page extends HookWidget {
 
 extension InitialSetting1PageRoute on InitialSetting1Page {
   static InitialSetting1Page screen() {
+    analytics.setCurrentScreen(screenName: "InitialSetting1Page");
+    analytics.logEvent(name: "screen_InitialSetting1Page");
     return InitialSetting1Page();
   }
 }
