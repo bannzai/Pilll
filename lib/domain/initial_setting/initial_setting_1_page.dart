@@ -28,10 +28,7 @@ class InitialSetting1Page extends HookWidget {
 }
 
 extension InitialSetting1PageRoute on InitialSetting1Page {
-  static Route<dynamic> route() {
-    return MaterialPageRoute(
-      settings: RouteSettings(name: "InitialSetting1Page"),
-      builder: (_) => InitialSetting1Page(),
-    );
+  static InitialSetting1Page screen() {
+    return InitialSetting1Page();
   }
 }
