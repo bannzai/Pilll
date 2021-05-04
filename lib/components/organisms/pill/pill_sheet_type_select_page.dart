@@ -1,5 +1,5 @@
 import 'package:pilll/components/atoms/buttons.dart';
-import 'package:pilll/domain/initial_setting/pill_sheet.dart';
+import 'package:pilll/components/organisms/pill/pill_sheet_type_column.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
