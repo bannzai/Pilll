@@ -16,9 +16,14 @@ final _privateConstructorUsedError = UnsupportedError(
 class _$RecordPageStateTearOff {
   const _$RecordPageStateTearOff();
 
-  _RecordPageState call({required PillSheetModel? entity}) {
+  _RecordPageState call(
+      {required PillSheetModel? entity,
+      Setting? setting,
+      bool firstLoadIsEnded = false}) {
     return _RecordPageState(
       entity: entity,
+      setting: setting,
+      firstLoadIsEnded: firstLoadIsEnded,
     );
   }
 }
@@ -29,6 +34,8 @@ const $RecordPageState = _$RecordPageStateTearOff();
 /// @nodoc
 mixin _$RecordPageState {
   PillSheetModel? get entity => throw _privateConstructorUsedError;
+  Setting? get setting => throw _privateConstructorUsedError;
+  bool get firstLoadIsEnded => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $RecordPageStateCopyWith<RecordPageState> get copyWith =>
@@ -40,9 +47,10 @@ abstract class $RecordPageStateCopyWith<$Res> {
   factory $RecordPageStateCopyWith(
           RecordPageState value, $Res Function(RecordPageState) then) =
       _$RecordPageStateCopyWithImpl<$Res>;
-  $Res call({PillSheetModel? entity});
+  $Res call({PillSheetModel? entity, Setting? setting, bool firstLoadIsEnded});
 
   $PillSheetModelCopyWith<$Res>? get entity;
+  $SettingCopyWith<$Res>? get setting;
 }
 
 /// @nodoc
@@ -57,12 +65,22 @@ class _$RecordPageStateCopyWithImpl<$Res>
   @override
   $Res call({
     Object? entity = freezed,
+    Object? setting = freezed,
+    Object? firstLoadIsEnded = freezed,
   }) {
     return _then(_value.copyWith(
       entity: entity == freezed
           ? _value.entity
           : entity // ignore: cast_nullable_to_non_nullable
               as PillSheetModel?,
+      setting: setting == freezed
+          ? _value.setting
+          : setting // ignore: cast_nullable_to_non_nullable
+              as Setting?,
+      firstLoadIsEnded: firstLoadIsEnded == freezed
+          ? _value.firstLoadIsEnded
+          : firstLoadIsEnded // ignore: cast_nullable_to_non_nullable
+              as bool,
     ));
   }
 
@@ -76,6 +94,17 @@ class _$RecordPageStateCopyWithImpl<$Res>
       return _then(_value.copyWith(entity: value));
     });
   }
+
+  @override
+  $SettingCopyWith<$Res>? get setting {
+    if (_value.setting == null) {
+      return null;
+    }
+
+    return $SettingCopyWith<$Res>(_value.setting!, (value) {
+      return _then(_value.copyWith(setting: value));
+    });
+  }
 }
 
 /// @nodoc
@@ -85,10 +114,12 @@ abstract class _$RecordPageStateCopyWith<$Res>
           _RecordPageState value, $Res Function(_RecordPageState) then) =
       __$RecordPageStateCopyWithImpl<$Res>;
   @override
-  $Res call({PillSheetModel? entity});
+  $Res call({PillSheetModel? entity, Setting? setting, bool firstLoadIsEnded});
 
   @override
   $PillSheetModelCopyWith<$Res>? get entity;
+  @override
+  $SettingCopyWith<$Res>? get setting;
 }
 
 /// @nodoc
@@ -105,12 +136,22 @@ class __$RecordPageStateCopyWithImpl<$Res>
   @override
   $Res call({
     Object? entity = freezed,
+    Object? setting = freezed,
+    Object? firstLoadIsEnded = freezed,
   }) {
     return _then(_RecordPageState(
       entity: entity == freezed
           ? _value.entity
           : entity // ignore: cast_nullable_to_non_nullable
               as PillSheetModel?,
+      setting: setting == freezed
+          ? _value.setting
+          : setting // ignore: cast_nullable_to_non_nullable
+              as Setting?,
+      firstLoadIsEnded: firstLoadIsEnded == freezed
+          ? _value.firstLoadIsEnded
+          : firstLoadIsEnded // ignore: cast_nullable_to_non_nullable
+              as bool,
     ));
   }
 }
@@ -118,14 +159,21 @@ class __$RecordPageStateCopyWithImpl<$Res>
 /// @nodoc
 
 class _$_RecordPageState extends _RecordPageState {
-  _$_RecordPageState({required this.entity}) : super._();
+  _$_RecordPageState(
+      {required this.entity, this.setting, this.firstLoadIsEnded = false})
+      : super._();
 
   @override
   final PillSheetModel? entity;
+  @override
+  final Setting? setting;
+  @JsonKey(defaultValue: false)
+  @override
+  final bool firstLoadIsEnded;
 
   @override
   String toString() {
-    return 'RecordPageState(entity: $entity)';
+    return 'RecordPageState(entity: $entity, setting: $setting, firstLoadIsEnded: $firstLoadIsEnded)';
   }
 
   @override
@@ -133,12 +181,21 @@ class _$_RecordPageState extends _RecordPageState {
     return identical(this, other) ||
         (other is _RecordPageState &&
             (identical(other.entity, entity) ||
-                const DeepCollectionEquality().equals(other.entity, entity)));
+                const DeepCollectionEquality().equals(other.entity, entity)) &&
+            (identical(other.setting, setting) ||
+                const DeepCollectionEquality()
+                    .equals(other.setting, setting)) &&
+            (identical(other.firstLoadIsEnded, firstLoadIsEnded) ||
+                const DeepCollectionEquality()
+                    .equals(other.firstLoadIsEnded, firstLoadIsEnded)));
   }
 
   @override
   int get hashCode =>
-      runtimeType.hashCode ^ const DeepCollectionEquality().hash(entity);
+      runtimeType.hashCode ^
+      const DeepCollectionEquality().hash(entity) ^
+      const DeepCollectionEquality().hash(setting) ^
+      const DeepCollectionEquality().hash(firstLoadIsEnded);
 
   @JsonKey(ignore: true)
   @override
@@ -147,12 +204,18 @@ class _$_RecordPageState extends _RecordPageState {
 }
 
 abstract class _RecordPageState extends RecordPageState {
-  factory _RecordPageState({required PillSheetModel? entity}) =
-      _$_RecordPageState;
+  factory _RecordPageState(
+      {required PillSheetModel? entity,
+      Setting? setting,
+      bool firstLoadIsEnded}) = _$_RecordPageState;
   _RecordPageState._() : super._();
 
   @override
   PillSheetModel? get entity => throw _privateConstructorUsedError;
+  @override
+  Setting? get setting => throw _privateConstructorUsedError;
+  @override
+  bool get firstLoadIsEnded => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$RecordPageStateCopyWith<_RecordPageState> get copyWith =>

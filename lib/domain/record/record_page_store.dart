@@ -8,37 +8,45 @@ import 'package:pilll/entity/pill_sheet.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/service/pill_sheet.dart';
 import 'package:pilll/domain/record/record_page_state.dart';
+import 'package:pilll/service/setting.dart';
 import 'package:riverpod/riverpod.dart';
 
-final recordPageStoreProvider = StateNotifierProvider(
-    (ref) => RecordPageStore(ref.watch(pillSheetServiceProvider)));
+final recordPageStoreProvider = StateNotifierProvider((ref) => RecordPageStore(
+    ref.watch(pillSheetServiceProvider), ref.watch(settingServiceProvider)));
 
 class RecordPageStore extends StateNotifier<RecordPageState> {
   final PillSheetService _service;
-  RecordPageStore(this._service) : super(RecordPageState(entity: null)) {
+  final SettingService _settingService;
+  RecordPageStore(this._service, this._settingService)
+      : super(RecordPageState(entity: null)) {
     _reset();
   }
 
-  var firstLoadIsEnded = false;
   void _reset() {
     Future(() async {
       final entity = await _service.fetchLast();
-      state = RecordPageState(entity: entity);
+      final setting = await _settingService.fetch();
+      state = RecordPageState(entity: entity, setting: setting);
       if (entity != null) {
         analytics.logEvent(name: "count_of_remaining_pill", parameters: {
           "count": (entity.todayPillNumber - entity.lastTakenPillNumber)
         });
       }
-      firstLoadIsEnded = true;
+      state.copyWith(firstLoadIsEnded: true);
       _subscribe();
     });
   }
 
   StreamSubscription<PillSheetModel>? canceller;
+  StreamSubscription? _settingCanceller;
   void _subscribe() {
     canceller?.cancel();
     canceller = _service.subscribeForLatestPillSheet().listen((event) {
-      state = RecordPageState(entity: event);
+      state = state.copyWith(entity: event);
+    });
+    _settingCanceller?.cancel();
+    _settingCanceller = _settingService.subscribe().listen((setting) {
+      state = state.copyWith(setting: setting);
     });
   }
 

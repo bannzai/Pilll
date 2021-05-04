@@ -13,7 +13,6 @@ import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/entity/weekday.dart';
 import 'package:pilll/error/error_alert.dart';
 import 'package:pilll/service/pill_sheet.dart';
-import 'package:pilll/domain/settings/setting_page_store.dart';
 import 'package:pilll/components/atoms/buttons.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
@@ -139,9 +138,8 @@ class RecordPage extends HookWidget {
     final state = useProvider(recordPageStoreProvider.state);
     final currentPillSheet = state.entity;
     final store = useProvider(recordPageStoreProvider);
-    final settingState = useProvider(settingStoreProvider.state);
-    final settingEntity = settingState.entity;
-    if (settingEntity == null || !store.firstLoadIsEnded) {
+    final settingEntity = state.setting;
+    if (settingEntity == null || !state.firstLoadIsEnded) {
       return Indicator();
     }
     return Center(
