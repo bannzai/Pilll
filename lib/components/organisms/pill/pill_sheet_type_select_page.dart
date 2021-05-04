@@ -82,7 +82,7 @@ class PillSheetTypeSelectPage extends StatelessWidget {
       onTap: () {
         selected(type);
       },
-      child: PillSheet(
+      child: PillSheetTypeColumn(
         pillSheetType: type,
         selected: selectedPillSheetType == type,
       ),

@@ -4,10 +4,10 @@ import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:flutter/material.dart';
 
-class PillSheet extends StatelessWidget {
+class PillSheetTypeColumn extends StatelessWidget {
   final PillSheetType pillSheetType;
   final bool selected;
-  const PillSheet({
+  const PillSheetTypeColumn({
     Key? key,
     required this.pillSheetType,
     required this.selected,
