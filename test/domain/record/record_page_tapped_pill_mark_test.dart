@@ -51,7 +51,7 @@ void main() {
           reason: "it is not yet taken pill");
 
       final pillSheetService = MockPillSheetService();
-      final pillSheetStore = RecordPageStateStore(pillSheetService);
+      final pillSheetStore = RecordPageStore(pillSheetService);
 
       when(pillSheetService.fetchLast())
           .thenAnswer((_) => Future.value(pillSheet));
@@ -108,7 +108,7 @@ void main() {
         reason: "it is already taken pill");
 
     final pillSheetService = MockPillSheetService();
-    final pillSheetStore = RecordPageStateStore(pillSheetService);
+    final pillSheetStore = RecordPageStore(pillSheetService);
 
     when(pillSheetService.fetchLast())
         .thenAnswer((_) => Future.value(pillSheet));
@@ -167,7 +167,7 @@ void main() {
     expect(pillSheet.lastTakenPillNumber, equals(25),
         reason: "in rest duration behavior for automatically taken pill");
     final pillSheetService = MockPillSheetService();
-    final pillSheetStore = RecordPageStateStore(pillSheetService);
+    final pillSheetStore = RecordPageStore(pillSheetService);
 
     when(pillSheetService.fetchLast())
         .thenAnswer((_) => Future.value(pillSheet));

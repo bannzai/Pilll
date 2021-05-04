@@ -11,11 +11,11 @@ import 'package:pilll/domain/record/record_page_state.dart';
 import 'package:riverpod/riverpod.dart';
 
 final recordPageStoreProvider = StateNotifierProvider(
-    (ref) => RecordPageStateStore(ref.watch(pillSheetServiceProvider)));
+    (ref) => RecordPageStore(ref.watch(pillSheetServiceProvider)));
 
-class RecordPageStateStore extends StateNotifier<RecordPageState> {
+class RecordPageStore extends StateNotifier<RecordPageState> {
   final PillSheetService _service;
-  RecordPageStateStore(this._service) : super(RecordPageState(entity: null)) {
+  RecordPageStore(this._service) : super(RecordPageState(entity: null)) {
     _reset();
   }
 

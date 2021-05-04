@@ -205,7 +205,7 @@ class RecordPage extends HookWidget {
   Widget _takenButton(
     BuildContext context,
     PillSheetModel pillSheet,
-    RecordPageStateStore store,
+    RecordPageStore store,
   ) {
     if (pillSheet.todayPillNumber == 1)
       analytics.logEvent(name: "user_taken_first_day_pill");
@@ -221,8 +221,7 @@ class RecordPage extends HookWidget {
     );
   }
 
-  Widget _cancelTakeButton(
-      PillSheetModel pillSheet, RecordPageStateStore store) {
+  Widget _cancelTakeButton(PillSheetModel pillSheet, RecordPageStore store) {
     return TertiaryButton(
       text: "飲んでない",
       onPressed: () {
@@ -239,7 +238,7 @@ class RecordPage extends HookWidget {
     BuildContext context,
     PillSheetModel pillSheet,
     DateTime takenDate,
-    RecordPageStateStore store,
+    RecordPageStore store,
   ) {
     if (pillSheet.todayPillNumber == pillSheet.lastTakenPillNumber) {
       return;
@@ -252,7 +251,7 @@ class RecordPage extends HookWidget {
     });
   }
 
-  void _cancelTake(PillSheetModel pillSheet, RecordPageStateStore store) {
+  void _cancelTake(PillSheetModel pillSheet, RecordPageStore store) {
     if (pillSheet.todayPillNumber != pillSheet.lastTakenPillNumber) {
       return;
     }
@@ -266,7 +265,7 @@ class RecordPage extends HookWidget {
   PillSheet _pillSheet(
     BuildContext context,
     PillSheetModel pillSheet,
-    RecordPageStateStore store,
+    RecordPageStore store,
   ) {
     return PillSheet(
       firstWeekday: WeekdayFunctions.weekdayFromDate(pillSheet.beginingDate),
@@ -296,7 +295,7 @@ class RecordPage extends HookWidget {
     );
   }
 
-  Widget _empty(BuildContext context, RecordPageStateStore store,
+  Widget _empty(BuildContext context, RecordPageStore store,
       PillSheetType pillSheetType) {
     var progressing = false;
     return GestureDetector(

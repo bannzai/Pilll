@@ -38,7 +38,7 @@ void main() {
       when(service.subscribeForLatestPillSheet())
           .thenAnswer((realInvocation) => Stream.empty());
 
-      final store = RecordPageStateStore(service);
+      final store = RecordPageStore(service);
       await waitForResetStoreState();
       expect(state.entity?.todayPillNumber, equals(1));
 
@@ -65,7 +65,7 @@ void main() {
     when(service.subscribeForLatestPillSheet())
         .thenAnswer((realInvocation) => Stream.empty());
 
-    final store = RecordPageStateStore(service);
+    final store = RecordPageStore(service);
     await waitForResetStoreState();
     expect(state.entity?.todayPillNumber, equals(3));
 
@@ -93,7 +93,7 @@ void main() {
       when(service.subscribeForLatestPillSheet())
           .thenAnswer((realInvocation) => Stream.empty());
 
-      final store = RecordPageStateStore(service);
+      final store = RecordPageStore(service);
       await waitForResetStoreState();
       expect(state.entity?.allTaken, isTrue);
       expect(store.markFor(1), PillMarkType.done);
@@ -120,7 +120,7 @@ void main() {
       when(service.subscribeForLatestPillSheet())
           .thenAnswer((realInvocation) => Stream.empty());
 
-      final store = RecordPageStateStore(service);
+      final store = RecordPageStore(service);
       await waitForResetStoreState();
       expect(state.entity?.allTaken, isFalse);
       expect(store.markFor(1), PillMarkType.done);
@@ -150,7 +150,7 @@ void main() {
       when(service.subscribeForLatestPillSheet())
           .thenAnswer((realInvocation) => Stream.empty());
 
-      final store = RecordPageStateStore(service);
+      final store = RecordPageStore(service);
       await waitForResetStoreState();
       expect(state.entity?.allTaken, isTrue);
       for (int i = 1; i <= pillSheetEntity.pillSheetType.totalCount; i++) {
@@ -176,7 +176,7 @@ void main() {
       when(service.subscribeForLatestPillSheet())
           .thenAnswer((realInvocation) => Stream.empty());
 
-      final store = RecordPageStateStore(service);
+      final store = RecordPageStore(service);
       await waitForResetStoreState();
       expect(state.entity?.allTaken, isFalse);
       expect(store.shouldPillMarkAnimation(3), isTrue);
