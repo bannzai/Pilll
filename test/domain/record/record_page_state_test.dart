@@ -1,10 +1,10 @@
 import 'package:pilll/analytics.dart';
 import 'package:pilll/domain/record/record_page_state.dart';
+import 'package:pilll/domain/record/record_page_store.dart';
 import 'package:pilll/entity/pill_mark_type.dart';
 import 'package:pilll/entity/pill_sheet.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/service/day.dart';
-import 'package:pilll/store/pill_sheet.dart';
 import 'package:pilll/util/datetime/date_compare.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
@@ -38,7 +38,7 @@ void main() {
       when(service.subscribeForLatestPillSheet())
           .thenAnswer((realInvocation) => Stream.empty());
 
-      final store = PillSheetStateStore(service);
+      final store = RecordPageStateStore(service);
       await waitForResetStoreState();
       expect(state.entity?.todayPillNumber, equals(1));
 
@@ -65,7 +65,7 @@ void main() {
     when(service.subscribeForLatestPillSheet())
         .thenAnswer((realInvocation) => Stream.empty());
 
-    final store = PillSheetStateStore(service);
+    final store = RecordPageStateStore(service);
     await waitForResetStoreState();
     expect(state.entity?.todayPillNumber, equals(3));
 
@@ -93,7 +93,7 @@ void main() {
       when(service.subscribeForLatestPillSheet())
           .thenAnswer((realInvocation) => Stream.empty());
 
-      final store = PillSheetStateStore(service);
+      final store = RecordPageStateStore(service);
       await waitForResetStoreState();
       expect(state.entity?.allTaken, isTrue);
       expect(store.markFor(1), PillMarkType.done);
@@ -120,7 +120,7 @@ void main() {
       when(service.subscribeForLatestPillSheet())
           .thenAnswer((realInvocation) => Stream.empty());
 
-      final store = PillSheetStateStore(service);
+      final store = RecordPageStateStore(service);
       await waitForResetStoreState();
       expect(state.entity?.allTaken, isFalse);
       expect(store.markFor(1), PillMarkType.done);
@@ -150,7 +150,7 @@ void main() {
       when(service.subscribeForLatestPillSheet())
           .thenAnswer((realInvocation) => Stream.empty());
 
-      final store = PillSheetStateStore(service);
+      final store = RecordPageStateStore(service);
       await waitForResetStoreState();
       expect(state.entity?.allTaken, isTrue);
       for (int i = 1; i <= pillSheetEntity.pillSheetType.totalCount; i++) {
@@ -176,7 +176,7 @@ void main() {
       when(service.subscribeForLatestPillSheet())
           .thenAnswer((realInvocation) => Stream.empty());
 
-      final store = PillSheetStateStore(service);
+      final store = RecordPageStateStore(service);
       await waitForResetStoreState();
       expect(state.entity?.allTaken, isFalse);
       expect(store.shouldPillMarkAnimation(3), isTrue);

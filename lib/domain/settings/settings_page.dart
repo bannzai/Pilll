@@ -3,6 +3,7 @@ import 'package:pilll/components/page/discard_dialog.dart';
 import 'package:pilll/database/database.dart';
 import 'package:pilll/components/organisms/pill/pill_sheet_type_select_page.dart';
 import 'package:pilll/components/organisms/setting/setting_menstruation_page.dart';
+import 'package:pilll/domain/record/record_page_store.dart';
 import 'package:pilll/domain/settings/information_for_before_major_update.dart';
 import 'package:pilll/entity/pill_sheet.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
@@ -13,7 +14,6 @@ import 'package:pilll/domain/settings/reminder_times_page.dart';
 import 'package:pilll/error/error_alert.dart';
 import 'package:pilll/inquiry/inquiry.dart';
 import 'package:pilll/service/pill_sheet.dart';
-import 'package:pilll/store/pill_sheet.dart';
 import 'package:pilll/store/setting.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
@@ -43,9 +43,9 @@ class _TransactionModifier {
     if (database == null) {
       throw FormatException("_database is necessary");
     }
-    final pillSheetStore = reader(pillSheetStoreProvider);
+    final pillSheetStore = reader(recordPageStoreProvider);
     final settingStore = reader(settingStoreProvider);
-    final pillSheetState = reader(pillSheetStoreProvider.state);
+    final pillSheetState = reader(recordPageStoreProvider.state);
     final settingState = reader(settingStoreProvider.state);
     final pillSheetEntity = pillSheetState.entity;
     final settingEntity = settingState.entity;
@@ -155,8 +155,8 @@ class SettingsPage extends HookWidget {
 
   List<SettingListRowModel> _rowModels(
       BuildContext context, SettingSection section) {
-    final pillSheetStore = useProvider(pillSheetStoreProvider);
-    final pillSheetState = useProvider(pillSheetStoreProvider.state);
+    final pillSheetStore = useProvider(recordPageStoreProvider);
+    final pillSheetState = useProvider(recordPageStoreProvider.state);
     final pillSheetEntity = pillSheetState.entity;
     final settingStore = useProvider(settingStoreProvider);
     final settingState = useProvider(settingStoreProvider.state);
