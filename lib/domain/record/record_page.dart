@@ -4,6 +4,7 @@ import 'package:pilll/analytics.dart';
 import 'package:pilll/components/molecules/indicator.dart';
 import 'package:pilll/components/organisms/pill/pill_sheet.dart';
 import 'package:pilll/domain/initial_setting/migrate_info.dart';
+import 'package:pilll/domain/record/record_page_store.dart';
 import 'package:pilll/domain/record/record_taken_information.dart';
 import 'package:pilll/domain/release_note/release_note.dart';
 import 'package:pilll/entity/pill_sheet.dart';
@@ -34,8 +35,8 @@ bool isAlreadyShowModal = false;
 class RecordPage extends HookWidget {
   @override
   Widget build(BuildContext context) {
-    final state = useProvider(pillSheetStoreProvider.state);
-    final store = useProvider(pillSheetStoreProvider);
+    final state = useProvider(recordPageStoreProvider.state);
+    final store = useProvider(recordPageStoreProvider);
     final currentPillSheet = state.entity;
     if (!isAlreadyShowModal) {
       isAlreadyShowModal = true;
