@@ -1,17 +1,17 @@
 import 'package:pilll/analytics.dart';
+import 'package:pilll/domain/record/record_page_state.dart';
 import 'package:pilll/entity/pill_mark_type.dart';
 import 'package:pilll/entity/pill_sheet.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/service/day.dart';
-import 'package:pilll/state/pill_sheet.dart';
 import 'package:pilll/store/pill_sheet.dart';
 import 'package:pilll/util/datetime/date_compare.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-import '../helper/delay.dart';
-import '../helper/mock.dart';
+import '../../helper/delay.dart';
+import '../../helper/mock.dart';
 
 void main() {
   setUp(() async {
@@ -30,7 +30,7 @@ void main() {
         beginingDate: DateTime.parse("2020-11-22"),
         createdAt: DateTime.parse("2020-11-22"),
       );
-      final state = PillSheetState(entity: pillSheetEntity);
+      final state = RecordPageState(entity: pillSheetEntity);
 
       final service = MockPillSheetService();
       when(service.fetchLast())
@@ -57,7 +57,7 @@ void main() {
       beginingDate: DateTime.parse("2020-11-21"),
       createdAt: DateTime.parse("2020-11-21"),
     );
-    final state = PillSheetState(entity: pillSheetEntity);
+    final state = RecordPageState(entity: pillSheetEntity);
 
     final service = MockPillSheetService();
     when(service.fetchLast())
@@ -85,7 +85,7 @@ void main() {
         lastTakenDate: DateTime.parse("2020-11-23"),
         createdAt: DateTime.parse("2020-11-21"),
       );
-      final state = PillSheetState(entity: pillSheetEntity);
+      final state = RecordPageState(entity: pillSheetEntity);
 
       final service = MockPillSheetService();
       when(service.fetchLast())
@@ -112,7 +112,7 @@ void main() {
         lastTakenDate: DateTime.parse("2020-11-22"),
         createdAt: DateTime.parse("2020-11-21"),
       );
-      final state = PillSheetState(entity: pillSheetEntity);
+      final state = RecordPageState(entity: pillSheetEntity);
 
       final service = MockPillSheetService();
       when(service.fetchLast())
@@ -142,7 +142,7 @@ void main() {
         lastTakenDate: DateTime.parse("2020-11-23"),
         createdAt: DateTime.parse("2020-11-21"),
       );
-      final state = PillSheetState(entity: pillSheetEntity);
+      final state = RecordPageState(entity: pillSheetEntity);
 
       final service = MockPillSheetService();
       when(service.fetchLast())
@@ -168,7 +168,7 @@ void main() {
         lastTakenDate: DateTime.parse("2020-11-22"),
         createdAt: DateTime.parse("2020-11-21"),
       );
-      final state = PillSheetState(entity: pillSheetEntity);
+      final state = RecordPageState(entity: pillSheetEntity);
 
       final service = MockPillSheetService();
       when(service.fetchLast())
