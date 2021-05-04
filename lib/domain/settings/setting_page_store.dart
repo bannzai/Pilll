@@ -3,7 +3,7 @@ import 'dart:async';
 import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/entity/setting.dart';
 import 'package:pilll/service/setting.dart';
-import 'package:pilll/state/setting.dart';
+import 'package:pilll/domain/settings/setting_page_state.dart';
 import 'package:pilll/util/shared_preference/keys.dart';
 import 'package:riverpod/riverpod.dart';
 import 'package:shared_preferences/shared_preferences.dart';

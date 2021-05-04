@@ -1,6 +1,6 @@
 import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/entity/setting.dart';
-import 'package:pilll/state/setting.dart';
+import 'package:pilll/domain/settings/setting_page_state.dart';
 import 'package:pilll/domain/settings/setting_page_store.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
