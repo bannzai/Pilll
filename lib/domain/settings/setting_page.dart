@@ -84,7 +84,7 @@ class _TransactionModifier {
 final transactionModifierProvider = Provider((ref) =>
     _TransactionModifier(ref.watch(databaseProvider), reader: ref.read));
 
-class SettingsPage extends HookWidget {
+class SettingPage extends HookWidget {
   static final int itemCount = SettingSection.values.length + 1;
   @override
   Widget build(BuildContext context) {
@@ -97,7 +97,7 @@ class SettingsPage extends HookWidget {
       body: Container(
         child: ListView.builder(
           itemBuilder: (BuildContext context, int index) {
-            if ((index + 1) == SettingsPage.itemCount) {
+            if ((index + 1) == SettingPage.itemCount) {
               if (Environment.isProduction) {
                 return Container();
               }
@@ -121,7 +121,7 @@ class SettingsPage extends HookWidget {
               },
             );
           },
-          itemCount: SettingsPage.itemCount,
+          itemCount: SettingPage.itemCount,
           addRepaintBoundaries: false,
         ),
       ),

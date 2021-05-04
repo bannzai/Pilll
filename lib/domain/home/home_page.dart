@@ -116,7 +116,7 @@ class _HomePageState extends State<HomePage>
             RecordPage(),
             MenstruationPage(),
             CalendarPage(key: calendarPageKey),
-            SettingsPage(),
+            SettingPage(),
             // SettingsPage(),
           ],
         ),
@@ -200,7 +200,7 @@ extension HomePageTabFunctions on HomePageTabType {
       case HomePageTabType.calendar:
         return CalendarPage();
       case HomePageTabType.setting:
-        return SettingsPage();
+        return SettingPage();
     }
   }
 
