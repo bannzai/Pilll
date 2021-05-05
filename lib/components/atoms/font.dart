@@ -124,7 +124,7 @@ class FontType {
     fontSize: FontSize.small,
   );
   static final TextStyle smallTitle = TextStyle(
-    fontFamily: FontFamily.japanese,
+    fontFamily: FontFamily.number,
     fontWeight: FontWeight.w500,
     fontSize: FontSize.small,
   );
