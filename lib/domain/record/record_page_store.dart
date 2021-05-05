@@ -26,13 +26,13 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
     Future(() async {
       final entity = await _service.fetchLast();
       final setting = await _settingService.fetch();
-      state = RecordPageState(entity: entity, setting: setting);
+      state = RecordPageState(
+          entity: entity, setting: setting, firstLoadIsEnded: true);
       if (entity != null) {
         analytics.logEvent(name: "count_of_remaining_pill", parameters: {
           "count": (entity.todayPillNumber - entity.lastTakenPillNumber)
         });
       }
-      state.copyWith(firstLoadIsEnded: true);
       _subscribe();
     });
   }
