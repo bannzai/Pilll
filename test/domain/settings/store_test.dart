@@ -1,3 +1,4 @@
+import 'package:pilll/entity/pill_sheet.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/entity/setting.dart';
 import 'package:pilll/domain/settings/setting_page_state.dart';
@@ -39,7 +40,14 @@ void main() {
       when(service.subscribe())
           .thenAnswer((realInvocation) => Stream.value(setting));
 
-      final store = SettingStateStore(service);
+      final pillSheet = PillSheetModel.create(PillSheetType.pillsheet_21);
+      final pillSheetService = MockPillSheetService();
+      when(pillSheetService.fetchLast())
+          .thenAnswer((_) => Future.value(pillSheet));
+      when(pillSheetService.subscribeForLatestPillSheet())
+          .thenAnswer((realInvocation) => Stream.empty());
+
+      final store = SettingStateStore(service, pillSheetService);
       // ignore: invalid_use_of_protected_member
       store.state = SettingState(entity: setting);
 
@@ -70,7 +78,14 @@ void main() {
       when(service.subscribe())
           .thenAnswer((realInvocation) => Stream.value(setting));
 
-      final store = SettingStateStore(service);
+      final pillSheet = PillSheetModel.create(PillSheetType.pillsheet_21);
+      final pillSheetService = MockPillSheetService();
+      when(pillSheetService.fetchLast())
+          .thenAnswer((_) => Future.value(pillSheet));
+      when(pillSheetService.subscribeForLatestPillSheet())
+          .thenAnswer((realInvocation) => Stream.empty());
+
+      final store = SettingStateStore(service, pillSheetService);
       // ignore: invalid_use_of_protected_member
       store.state = SettingState(entity: setting);
 
@@ -96,7 +111,14 @@ void main() {
       when(service.subscribe())
           .thenAnswer((realInvocation) => Stream.value(setting));
 
-      final store = SettingStateStore(service);
+      final pillSheet = PillSheetModel.create(PillSheetType.pillsheet_21);
+      final pillSheetService = MockPillSheetService();
+      when(pillSheetService.fetchLast())
+          .thenAnswer((_) => Future.value(pillSheet));
+      when(pillSheetService.subscribeForLatestPillSheet())
+          .thenAnswer((realInvocation) => Stream.empty());
+
+      final store = SettingStateStore(service, pillSheetService);
       // ignore: invalid_use_of_protected_member
       store.state = SettingState(entity: setting);
 
@@ -121,7 +143,14 @@ void main() {
       when(service.subscribe())
           .thenAnswer((realInvocation) => Stream.value(setting));
 
-      final store = SettingStateStore(service);
+      final pillSheet = PillSheetModel.create(PillSheetType.pillsheet_21);
+      final pillSheetService = MockPillSheetService();
+      when(pillSheetService.fetchLast())
+          .thenAnswer((_) => Future.value(pillSheet));
+      when(pillSheetService.subscribeForLatestPillSheet())
+          .thenAnswer((realInvocation) => Stream.empty());
+
+      final store = SettingStateStore(service, pillSheetService);
       // ignore: invalid_use_of_protected_member
       store.state = SettingState(entity: setting);
       expect(() => store.deleteReminderTimes(0), throwsException);
