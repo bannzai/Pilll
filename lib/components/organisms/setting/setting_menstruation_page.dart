@@ -309,13 +309,13 @@ class _SettingMenstruationPageState extends State<SettingMenstruationPage> {
   PillMarkType _pillMarkTypeFor(
     int number,
   ) {
+    if (widget.model.selectedFromMenstruation == number) {
+      return PillMarkType.selected;
+    }
     if (widget.model.pillSheetType.dosingPeriod < number) {
       return widget.model.pillSheetType == PillSheetType.pillsheet_21
           ? PillMarkType.rest
           : PillMarkType.fake;
-    }
-    if (widget.model.selectedFromMenstruation == number) {
-      return PillMarkType.selected;
     }
     return PillMarkType.normal;
   }
