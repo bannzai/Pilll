@@ -81,7 +81,7 @@ class _SettingMenstruationPageState extends State<SettingMenstruationPage> {
                   children: <Widget>[
                     SizedBox(height: 24),
                     Text(
-                      "生理について教えてください",
+                      "生理がはじまるピル番号をタップ",
                       style: FontType.sBigTitle.merge(TextColorStyle.main),
                       textAlign: TextAlign.center,
                     ),
@@ -108,9 +108,7 @@ class _SettingMenstruationPageState extends State<SettingMenstruationPage> {
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: <Widget>[
-                          Text("いつから生理がはじまる？",
-                              style:
-                                  FontType.subTitle.merge(TextColorStyle.main)),
+                          SizedBox(height: 20),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: <Widget>[
