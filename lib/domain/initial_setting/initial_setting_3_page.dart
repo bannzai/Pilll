@@ -20,7 +20,16 @@ class InitialSetting3Page extends HookWidget {
       },
       pillSheetTotalCount: state.entity.pillSheetType!.totalCount,
       model: SettingMenstruationPageModel(
-        selectedFromMenstruation: state.entity.fromMenstruation,
+        selectedFromMenstruation: () {
+          final maxPillCount = state.entity.pillSheetType?.totalCount;
+          if (maxPillCount == null) {
+            return state.entity.fromMenstruation;
+          }
+          if (maxPillCount < state.entity.fromMenstruation) {
+            return maxPillCount;
+          }
+          return state.entity.fromMenstruation;
+        }(),
         selectedDurationMenstruation: state.entity.durationMenstruation,
         pillSheetType: state.entity.pillSheetType!,
       ),
