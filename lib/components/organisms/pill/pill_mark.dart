@@ -113,8 +113,8 @@ class _PillMarkState extends State<PillMark> with TickerProviderStateMixin {
       color: type == PillMarkType.rest ? PilllColors.gray : Colors.transparent,
       strokeWidth: type == PillMarkType.rest ? 1 : 0,
       child: Container(
-        width: 20,
-        height: 20,
+        width: PillMarkConst.edge,
+        height: PillMarkConst.edge,
         child: Center(
           child: () {
             switch (type) {
