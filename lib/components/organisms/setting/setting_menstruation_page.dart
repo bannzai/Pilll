@@ -81,7 +81,7 @@ class _SettingMenstruationPageState extends State<SettingMenstruationPage> {
                   children: <Widget>[
                     SizedBox(height: 24),
                     Text(
-                      "生理について教えてください",
+                      "生理がはじまるピル番号をタップ",
                       style: FontType.sBigTitle.merge(TextColorStyle.main),
                       textAlign: TextAlign.center,
                     ),
@@ -95,7 +95,12 @@ class _SettingMenstruationPageState extends State<SettingMenstruationPage> {
                         return false;
                       },
                       enabledMarkAnimation: null,
-                      markSelected: (number) {},
+                      markSelected: (number) {
+                        this.widget.fromMenstructionDidDecide(number);
+                        setState(() {
+                          this.widget.model.selectedFromMenstruation = number;
+                        });
+                      },
                     ),
                     SizedBox(height: 24),
                     Container(
@@ -103,9 +108,7 @@ class _SettingMenstruationPageState extends State<SettingMenstruationPage> {
                       child: Column(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: <Widget>[
-                          Text("いつから生理がはじまる？",
-                              style:
-                                  FontType.subTitle.merge(TextColorStyle.main)),
+                          SizedBox(height: 20),
                           Row(
                             mainAxisAlignment: MainAxisAlignment.center,
                             children: <Widget>[
@@ -310,6 +313,9 @@ class _SettingMenstruationPageState extends State<SettingMenstruationPage> {
       return widget.model.pillSheetType == PillSheetType.pillsheet_21
           ? PillMarkType.rest
           : PillMarkType.fake;
+    }
+    if (widget.model.selectedFromMenstruation == number) {
+      return PillMarkType.selected;
     }
     return PillMarkType.normal;
   }
