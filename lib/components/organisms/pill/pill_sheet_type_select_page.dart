@@ -1,5 +1,5 @@
 import 'package:pilll/components/atoms/buttons.dart';
-import 'package:pilll/domain/initial_setting/pill_sheet.dart';
+import 'package:pilll/components/organisms/pill/pill_sheet_type_column.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
@@ -54,7 +54,7 @@ class PillSheetTypeSelectPage extends StatelessWidget {
                 mainAxisSpacing: 16,
                 crossAxisSpacing: 16,
                 padding: EdgeInsets.only(left: 34, right: 34),
-                childAspectRatio: 146 / 129,
+                childAspectRatio: PillSheetTypeColumnConstant.aspectRatio,
                 crossAxisCount: 2,
                 children: [
                   ...PillSheetType.values.map((e) => _pillSheet(e)).toList(),
@@ -82,7 +82,7 @@ class PillSheetTypeSelectPage extends StatelessWidget {
       onTap: () {
         selected(type);
       },
-      child: PillSheet(
+      child: PillSheetTypeColumn(
         pillSheetType: type,
         selected: selectedPillSheetType == type,
       ),

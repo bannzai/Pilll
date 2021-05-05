@@ -14,7 +14,7 @@ final initialSettingServiceProvider = Provider<InitialSettingServiceInterface>(
         ref.watch(pillSheetServiceProvider)));
 
 class InitialSettingService extends InitialSettingServiceInterface {
-  final SettingServiceInterface settingService;
+  final SettingService settingService;
   final PillSheetService pillSheetService;
 
   InitialSettingService(this.settingService, this.pillSheetService);

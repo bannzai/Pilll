@@ -4,6 +4,8 @@ import 'package:pilll/analytics.dart';
 import 'package:pilll/components/molecules/indicator.dart';
 import 'package:pilll/components/organisms/pill/pill_sheet.dart';
 import 'package:pilll/domain/initial_setting/migrate_info.dart';
+import 'package:pilll/domain/record/record_page_state.dart';
+import 'package:pilll/domain/record/record_page_store.dart';
 import 'package:pilll/domain/record/record_taken_information.dart';
 import 'package:pilll/domain/release_note/release_note.dart';
 import 'package:pilll/entity/pill_sheet.dart';
@@ -11,9 +13,6 @@ import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/entity/weekday.dart';
 import 'package:pilll/error/error_alert.dart';
 import 'package:pilll/service/pill_sheet.dart';
-import 'package:pilll/state/pill_sheet.dart';
-import 'package:pilll/store/pill_sheet.dart';
-import 'package:pilll/store/setting.dart';
 import 'package:pilll/components/atoms/buttons.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
@@ -34,8 +33,8 @@ bool isAlreadyShowModal = false;
 class RecordPage extends HookWidget {
   @override
   Widget build(BuildContext context) {
-    final state = useProvider(pillSheetStoreProvider.state);
-    final store = useProvider(pillSheetStoreProvider);
+    final state = useProvider(recordPageStoreProvider.state);
+    final store = useProvider(recordPageStoreProvider);
     final currentPillSheet = state.entity;
     if (!isAlreadyShowModal) {
       isAlreadyShowModal = true;
@@ -136,12 +135,11 @@ class RecordPage extends HookWidget {
   }
 
   Widget _body(BuildContext context) {
-    final state = useProvider(pillSheetStoreProvider.state);
+    final state = useProvider(recordPageStoreProvider.state);
     final currentPillSheet = state.entity;
-    final store = useProvider(pillSheetStoreProvider);
-    final settingState = useProvider(settingStoreProvider.state);
-    final settingEntity = settingState.entity;
-    if (settingEntity == null || !store.firstLoadIsEnded) {
+    final store = useProvider(recordPageStoreProvider);
+    final settingEntity = state.setting;
+    if (settingEntity == null || !state.firstLoadIsEnded) {
       return Indicator();
     }
     return Center(
@@ -177,7 +175,7 @@ class RecordPage extends HookWidget {
     );
   }
 
-  String _notificationString(PillSheetState state) {
+  String _notificationString(RecordPageState state) {
     if (state.isInvalid) {
       return "";
     }
@@ -205,7 +203,7 @@ class RecordPage extends HookWidget {
   Widget _takenButton(
     BuildContext context,
     PillSheetModel pillSheet,
-    PillSheetStateStore store,
+    RecordPageStore store,
   ) {
     if (pillSheet.todayPillNumber == 1)
       analytics.logEvent(name: "user_taken_first_day_pill");
@@ -221,8 +219,7 @@ class RecordPage extends HookWidget {
     );
   }
 
-  Widget _cancelTakeButton(
-      PillSheetModel pillSheet, PillSheetStateStore store) {
+  Widget _cancelTakeButton(PillSheetModel pillSheet, RecordPageStore store) {
     return TertiaryButton(
       text: "飲んでない",
       onPressed: () {
@@ -239,7 +236,7 @@ class RecordPage extends HookWidget {
     BuildContext context,
     PillSheetModel pillSheet,
     DateTime takenDate,
-    PillSheetStateStore store,
+    RecordPageStore store,
   ) {
     if (pillSheet.todayPillNumber == pillSheet.lastTakenPillNumber) {
       return;
@@ -252,7 +249,7 @@ class RecordPage extends HookWidget {
     });
   }
 
-  void _cancelTake(PillSheetModel pillSheet, PillSheetStateStore store) {
+  void _cancelTake(PillSheetModel pillSheet, RecordPageStore store) {
     if (pillSheet.todayPillNumber != pillSheet.lastTakenPillNumber) {
       return;
     }
@@ -266,7 +263,7 @@ class RecordPage extends HookWidget {
   PillSheet _pillSheet(
     BuildContext context,
     PillSheetModel pillSheet,
-    PillSheetStateStore store,
+    RecordPageStore store,
   ) {
     return PillSheet(
       firstWeekday: WeekdayFunctions.weekdayFromDate(pillSheet.beginingDate),
@@ -296,7 +293,7 @@ class RecordPage extends HookWidget {
     );
   }
 
-  Widget _empty(BuildContext context, PillSheetStateStore store,
+  Widget _empty(BuildContext context, RecordPageStore store,
       PillSheetType pillSheetType) {
     var progressing = false;
     return GestureDetector(

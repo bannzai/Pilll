@@ -1,7 +1,8 @@
+import 'package:pilll/entity/pill_sheet.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/entity/setting.dart';
 import 'package:pilll/domain/settings/reminder_times_page.dart';
-import 'package:pilll/store/setting.dart';
+import 'package:pilll/domain/settings/setting_page_store.dart';
 import 'package:pilll/util/environment.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
@@ -41,7 +42,14 @@ void main() {
       when(service.subscribe())
           .thenAnswer((realInvocation) => Stream.value(entity));
 
-      final store = SettingStateStore(service);
+      final pillSheet = PillSheetModel.create(PillSheetType.pillsheet_21);
+      final pillSheetService = MockPillSheetService();
+      when(pillSheetService.fetchLast())
+          .thenAnswer((_) => Future.value(pillSheet));
+      when(pillSheetService.subscribeForLatestPillSheet())
+          .thenAnswer((realInvocation) => Stream.empty());
+
+      final store = SettingStateStore(service, pillSheetService);
       await tester.pumpWidget(
         ProviderScope(
           overrides: [
@@ -80,7 +88,15 @@ void main() {
           .thenAnswer((realInvocation) => Future.value(entity));
       when(service.subscribe())
           .thenAnswer((realInvocation) => Stream.value(entity));
-      final store = SettingStateStore(service);
+
+      final pillSheet = PillSheetModel.create(PillSheetType.pillsheet_21);
+      final pillSheetService = MockPillSheetService();
+      when(pillSheetService.fetchLast())
+          .thenAnswer((_) => Future.value(pillSheet));
+      when(pillSheetService.subscribeForLatestPillSheet())
+          .thenAnswer((realInvocation) => Stream.empty());
+
+      final store = SettingStateStore(service, pillSheetService);
       await tester.pumpWidget(
         ProviderScope(
           overrides: [

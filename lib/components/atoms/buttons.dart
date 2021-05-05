@@ -20,7 +20,12 @@ class PrimaryButton extends StatelessWidget {
       child: ElevatedButton(
         child: Text(text, style: ButtonTextStyle.main),
         style: ButtonStyle(
-            backgroundColor: MaterialStateProperty.all(PilllColors.secondary)),
+            backgroundColor: MaterialStateProperty.resolveWith((statuses) {
+          if (statuses.contains(MaterialState.disabled)) {
+            return PilllColors.lightGray;
+          }
+          return PilllColors.secondary;
+        })),
         onPressed: onPressed,
       ),
     );

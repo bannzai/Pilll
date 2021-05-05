@@ -1,20 +1,16 @@
 import 'package:pilll/analytics.dart';
 import 'package:pilll/components/page/discard_dialog.dart';
-import 'package:pilll/database/database.dart';
 import 'package:pilll/components/organisms/pill/pill_sheet_type_select_page.dart';
 import 'package:pilll/components/organisms/setting/setting_menstruation_page.dart';
 import 'package:pilll/domain/settings/information_for_before_major_update.dart';
-import 'package:pilll/entity/pill_sheet.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
-import 'package:pilll/entity/user.dart';
 import 'package:pilll/domain/settings/row_model.dart';
 import 'package:pilll/domain/settings/modifing_pill_number_page.dart';
 import 'package:pilll/domain/settings/reminder_times_page.dart';
 import 'package:pilll/error/error_alert.dart';
 import 'package:pilll/inquiry/inquiry.dart';
 import 'package:pilll/service/pill_sheet.dart';
-import 'package:pilll/store/pill_sheet.dart';
-import 'package:pilll/store/setting.dart';
+import 'package:pilll/domain/settings/setting_page_store.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
@@ -29,62 +25,7 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-class _TransactionModifier {
-  final DatabaseConnection? _database;
-  final Reader reader;
-
-  _TransactionModifier(
-    this._database, {
-    required this.reader,
-  });
-
-  Future<void> modifyPillSheetType(PillSheetType type) {
-    final database = _database;
-    if (database == null) {
-      throw FormatException("_database is necessary");
-    }
-    final pillSheetStore = reader(pillSheetStoreProvider);
-    final settingStore = reader(settingStoreProvider);
-    final pillSheetState = reader(pillSheetStoreProvider.state);
-    final settingState = reader(settingStoreProvider.state);
-    final pillSheetEntity = pillSheetState.entity;
-    final settingEntity = settingState.entity;
-    if (pillSheetEntity == null) {
-      throw FormatException("pillSheetEntity is necessary");
-    }
-    if (settingEntity == null) {
-      throw FormatException("settingEntity is necessary");
-    }
-    return database.transaction((transaction) {
-      return Future.wait(
-        [
-          transaction
-              .get(database.pillSheetReference(pillSheetEntity.documentID!))
-              .then((pillSheetDocument) {
-            transaction.update(pillSheetDocument.reference,
-                {PillSheetFirestoreKey.typeInfo: type.typeInfo.toJson()});
-          }),
-          transaction.get(database.userReference()).then((userDocument) {
-            transaction.update(userDocument.reference, {
-              UserFirestoreFieldKeys.settings: settingEntity
-                  .copyWith(pillSheetTypeRawPath: type.rawPath)
-                  .toJson(),
-            });
-          })
-        ],
-      );
-    }).then((_) {
-      pillSheetStore.update(pillSheetEntity.copyWith(typeInfo: type.typeInfo));
-      settingStore
-          .update(settingEntity.copyWith(pillSheetTypeRawPath: type.rawPath));
-    });
-  }
-}
-
-final transactionModifierProvider = Provider((ref) =>
-    _TransactionModifier(ref.watch(databaseProvider), reader: ref.read));
-
-class SettingsPage extends HookWidget {
+class SettingPage extends HookWidget {
   static final int itemCount = SettingSection.values.length + 1;
   @override
   Widget build(BuildContext context) {
@@ -97,7 +38,7 @@ class SettingsPage extends HookWidget {
       body: Container(
         child: ListView.builder(
           itemBuilder: (BuildContext context, int index) {
-            if ((index + 1) == SettingsPage.itemCount) {
+            if ((index + 1) == SettingPage.itemCount) {
               if (Environment.isProduction) {
                 return Container();
               }
@@ -121,7 +62,7 @@ class SettingsPage extends HookWidget {
               },
             );
           },
-          itemCount: SettingsPage.itemCount,
+          itemCount: SettingPage.itemCount,
           addRepaintBoundaries: false,
         ),
       ),
@@ -155,14 +96,12 @@ class SettingsPage extends HookWidget {
 
   List<SettingListRowModel> _rowModels(
       BuildContext context, SettingSection section) {
-    final pillSheetStore = useProvider(pillSheetStoreProvider);
-    final pillSheetState = useProvider(pillSheetStoreProvider.state);
-    final pillSheetEntity = pillSheetState.entity;
     final settingStore = useProvider(settingStoreProvider);
     final settingState = useProvider(settingStoreProvider.state);
+    final pillSheetEntity = settingState.latestPillSheet;
     final transactionModifier = useProvider(transactionModifierProvider);
     final settingEntity = settingState.entity;
-    final isShowNotifyInRestDuration = !pillSheetState.isInvalid &&
+    final isShowNotifyInRestDuration = !settingState.latestPillSheetIsInvalid &&
         pillSheetEntity != null &&
         !pillSheetEntity.pillSheetType.isNotExistsNotTakenDuration;
     if (settingEntity == null) {
@@ -184,7 +123,7 @@ class SettingsPage extends HookWidget {
                     title: "ピルシートタイプ",
                     backButtonIsHidden: false,
                     selected: (type) {
-                      if (!pillSheetState.isInvalid &&
+                      if (!settingState.latestPillSheetIsInvalid &&
                           pillSheetEntity != null) {
                         final callProcess = () {
                           transactionModifier.modifyPillSheetType(type);
@@ -222,7 +161,8 @@ class SettingsPage extends HookWidget {
               },
             );
           }(),
-          if (!pillSheetState.isInvalid && pillSheetEntity != null) ...[
+          if (!settingState.latestPillSheetIsInvalid &&
+              pillSheetEntity != null) ...[
             SettingListTitleRowModel(
                 title: "今日飲むピル番号の変更",
                 onTap: () {
@@ -234,7 +174,7 @@ class SettingsPage extends HookWidget {
                       pillSheetType: pillSheetEntity.pillSheetType,
                       markSelected: (number) {
                         Navigator.pop(context);
-                        pillSheetStore.modifyBeginingDate(number);
+                        settingStore.modifyBeginingDate(number);
                       },
                     ),
                   );
@@ -253,7 +193,7 @@ class SettingsPage extends HookWidget {
                           message: "現在、服用記録をしているピルシートを削除します。",
                           doneButtonText: "破棄する",
                           done: () {
-                            pillSheetStore.delete().catchError((error) {
+                            settingStore.deletePillSheet().catchError((error) {
                               showErrorAlert(context,
                                   message:
                                       "ピルシートがすでに削除されています。表示等に問題がある場合は設定タブから「お問い合わせ」ください");

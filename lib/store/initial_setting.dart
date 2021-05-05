@@ -1,4 +1,5 @@
 import 'package:pilll/entity/initial_setting.dart';
+import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/entity/setting.dart';
 import 'package:pilll/service/initial_setting.dart';
 import 'package:pilll/state/initial_setting.dart';
@@ -15,6 +16,16 @@ class InitialSettingStateStore extends StateNotifier<InitialSettingState> {
             InitialSettingModel.initial(),
           ),
         );
+
+  void selectedPillSheetType(PillSheetType pillSheetType) {
+    state = state.copyWith(
+        entity: state.entity.copyWith(pillSheetType: pillSheetType));
+    if (state.entity.fromMenstruation > pillSheetType.totalCount) {
+      state = state.copyWith(
+          entity: state.entity
+              .copyWith(fromMenstruation: pillSheetType.totalCount));
+    }
+  }
 
   void modify(InitialSettingModel Function(InitialSettingModel model) closure) {
     state = state.copyWith(entity: closure(state.entity));

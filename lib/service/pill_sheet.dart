@@ -68,6 +68,7 @@ class PillSheetService {
     return _queryOfFetchLastPillSheet()
         .snapshots()
         .map(((event) => _filterForLatestPillSheet(event)))
+        .skipWhile((element) => element == null)
         .cast();
   }
 }

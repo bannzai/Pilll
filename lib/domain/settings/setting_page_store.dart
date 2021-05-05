@@ -1,19 +1,26 @@
 import 'dart:async';
 
+import 'package:pilll/database/database.dart';
+import 'package:pilll/domain/record/record_page_store.dart';
+import 'package:pilll/entity/pill_sheet.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/entity/setting.dart';
+import 'package:pilll/entity/user.dart';
+import 'package:pilll/service/pill_sheet.dart';
 import 'package:pilll/service/setting.dart';
-import 'package:pilll/state/setting.dart';
+import 'package:pilll/domain/settings/setting_page_state.dart';
 import 'package:pilll/util/shared_preference/keys.dart';
 import 'package:riverpod/riverpod.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-final settingStoreProvider = StateNotifierProvider(
-    (ref) => SettingStateStore(ref.watch(settingServiceProvider)));
+final settingStoreProvider = StateNotifierProvider((ref) => SettingStateStore(
+    ref.watch(settingServiceProvider), ref.watch(pillSheetServiceProvider)));
 
 class SettingStateStore extends StateNotifier<SettingState> {
-  final SettingServiceInterface _service;
-  SettingStateStore(this._service) : super(SettingState(entity: null)) {
+  final SettingService _service;
+  final PillSheetService _pillSheetService;
+  SettingStateStore(this._service, this._pillSheetService)
+      : super(SettingState(entity: null)) {
     _reset();
   }
 
@@ -24,24 +31,34 @@ class SettingStateStore extends StateNotifier<SettingState> {
           storage.containsKey(StringKey.salvagedOldStartTakenDate) &&
               storage.containsKey(StringKey.salvagedOldLastTakenDate);
       final entity = await _service.fetch();
+      final pillSheet = await _pillSheetService.fetchLast();
       this.state = SettingState(
-          entity: entity, userIsUpdatedFrom132: userIsMigratedFrom132);
+        entity: entity,
+        userIsUpdatedFrom132: userIsMigratedFrom132,
+        latestPillSheet: pillSheet,
+      );
       _subscribe();
     });
   }
 
-  StreamSubscription? canceller;
+  StreamSubscription? _canceller;
+  StreamSubscription? _pillSheetCanceller;
   void _subscribe() {
-    canceller?.cancel();
-    canceller = _service.subscribe().listen((event) {
-      state = SettingState(
-          entity: event, userIsUpdatedFrom132: state.userIsUpdatedFrom132);
+    _canceller?.cancel();
+    _canceller = _service.subscribe().listen((event) {
+      state = state.copyWith(entity: event);
+    });
+    _pillSheetCanceller?.cancel();
+    _canceller =
+        _pillSheetService.subscribeForLatestPillSheet().listen((event) {
+      state = state.copyWith(latestPillSheet: event);
     });
   }
 
   @override
   void dispose() {
-    canceller?.cancel();
+    _canceller?.cancel();
+    _pillSheetCanceller?.cancel();
     super.dispose();
   }
 
@@ -144,5 +161,71 @@ class SettingStateStore extends StateNotifier<SettingState> {
 
   void update(Setting? entity) {
     state = state.copyWith(entity: entity);
+  }
+
+  void modifyBeginingDate(int pillNumber) {
+    final entity = state.latestPillSheet;
+    if (entity == null) {
+      throw FormatException("pill sheet not found");
+    }
+
+    modifyBeginingDateFunction(_pillSheetService, entity, pillNumber)
+        .then((entity) => state = state.copyWith(latestPillSheet: entity));
+  }
+
+  Future<void> deletePillSheet() {
+    final entity = state.latestPillSheet;
+    if (entity == null) {
+      throw FormatException("pill sheet not found");
+    }
+    return _pillSheetService.delete(entity);
+  }
+}
+
+final transactionModifierProvider = Provider((ref) =>
+    _TransactionModifier(ref.watch(databaseProvider), reader: ref.read));
+
+class _TransactionModifier {
+  final DatabaseConnection? _database;
+  final Reader reader;
+
+  _TransactionModifier(
+    this._database, {
+    required this.reader,
+  });
+
+  Future<void> modifyPillSheetType(PillSheetType type) {
+    final database = _database;
+    if (database == null) {
+      throw FormatException("_database is necessary");
+    }
+    final settingState = reader(settingStoreProvider.state);
+    final pillSheetEntity = settingState.latestPillSheet;
+    final settingEntity = settingState.entity;
+    if (pillSheetEntity == null) {
+      throw FormatException("pillSheetEntity is necessary");
+    }
+    if (settingEntity == null) {
+      throw FormatException("settingEntity is necessary");
+    }
+    return database.transaction((transaction) {
+      return Future.wait(
+        [
+          transaction
+              .get(database.pillSheetReference(pillSheetEntity.documentID!))
+              .then((pillSheetDocument) {
+            transaction.update(pillSheetDocument.reference,
+                {PillSheetFirestoreKey.typeInfo: type.typeInfo.toJson()});
+          }),
+          transaction.get(database.userReference()).then((userDocument) {
+            transaction.update(userDocument.reference, {
+              UserFirestoreFieldKeys.settings: settingEntity
+                  .copyWith(pillSheetTypeRawPath: type.rawPath)
+                  .toJson(),
+            });
+          })
+        ],
+      );
+    });
   }
 }

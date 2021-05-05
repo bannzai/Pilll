@@ -4,7 +4,7 @@ import 'package:pilll/database/database.dart';
 import 'package:pilll/domain/calendar/calendar_page.dart';
 import 'package:pilll/domain/menstruation/menstruation_page.dart';
 import 'package:pilll/domain/record/record_page.dart';
-import 'package:pilll/domain/settings/settings_page.dart';
+import 'package:pilll/domain/settings/setting_page.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/service/push_notification.dart';
@@ -116,7 +116,7 @@ class _HomePageState extends State<HomePage>
             RecordPage(),
             MenstruationPage(),
             CalendarPage(key: calendarPageKey),
-            SettingsPage(),
+            SettingPage(),
             // SettingsPage(),
           ],
         ),
@@ -200,7 +200,7 @@ extension HomePageTabFunctions on HomePageTabType {
       case HomePageTabType.calendar:
         return CalendarPage();
       case HomePageTabType.setting:
-        return SettingsPage();
+        return SettingPage();
     }
   }
 

@@ -7,44 +7,53 @@ import 'package:pilll/entity/pill_mark_type.dart';
 import 'package:pilll/entity/pill_sheet.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/service/pill_sheet.dart';
-import 'package:pilll/state/pill_sheet.dart';
+import 'package:pilll/domain/record/record_page_state.dart';
+import 'package:pilll/service/setting.dart';
 import 'package:riverpod/riverpod.dart';
 
-final pillSheetStoreProvider = StateNotifierProvider(
-    (ref) => PillSheetStateStore(ref.watch(pillSheetServiceProvider)));
+final recordPageStoreProvider = StateNotifierProvider((ref) => RecordPageStore(
+    ref.watch(pillSheetServiceProvider), ref.watch(settingServiceProvider)));
 
-class PillSheetStateStore extends StateNotifier<PillSheetState> {
+class RecordPageStore extends StateNotifier<RecordPageState> {
   final PillSheetService _service;
-  PillSheetStateStore(this._service) : super(PillSheetState(entity: null)) {
+  final SettingService _settingService;
+  RecordPageStore(this._service, this._settingService)
+      : super(RecordPageState(entity: null)) {
     _reset();
   }
 
-  var firstLoadIsEnded = false;
   void _reset() {
     Future(() async {
       final entity = await _service.fetchLast();
-      state = PillSheetState(entity: entity);
+      final setting = await _settingService.fetch();
+      state = RecordPageState(
+          entity: entity, setting: setting, firstLoadIsEnded: true);
       if (entity != null) {
         analytics.logEvent(name: "count_of_remaining_pill", parameters: {
           "count": (entity.todayPillNumber - entity.lastTakenPillNumber)
         });
       }
-      firstLoadIsEnded = true;
       _subscribe();
     });
   }
 
-  StreamSubscription<PillSheetModel>? canceller;
+  StreamSubscription<PillSheetModel>? _canceller;
+  StreamSubscription? _settingCanceller;
   void _subscribe() {
-    canceller?.cancel();
-    canceller = _service.subscribeForLatestPillSheet().listen((event) {
-      state = PillSheetState(entity: event);
+    _canceller?.cancel();
+    _canceller = _service.subscribeForLatestPillSheet().listen((event) {
+      state = state.copyWith(entity: event);
+    });
+    _settingCanceller?.cancel();
+    _settingCanceller = _settingService.subscribe().listen((setting) {
+      state = state.copyWith(setting: setting);
     });
   }
 
   @override
   void dispose() {
-    canceller?.cancel();
+    _canceller?.cancel();
+    _settingCanceller?.cancel();
     super.dispose();
   }
 
@@ -52,14 +61,6 @@ class PillSheetStateStore extends StateNotifier<PillSheetState> {
     return _service
         .register(model)
         .then((entity) => state = state.copyWith(entity: entity));
-  }
-
-  Future<void> delete() {
-    final entity = state.entity;
-    if (entity == null) {
-      throw FormatException("pill sheet not found");
-    }
-    return _service.delete(entity).then((_) => _reset());
   }
 
   Future<dynamic> take(DateTime takenDate) {
@@ -81,9 +82,7 @@ class PillSheetStateStore extends StateNotifier<PillSheetState> {
     if (entity == null) {
       throw FormatException("pill sheet not found");
     }
-    if (pillNumber == entity.todayPillNumber) return entity.beginingDate;
-    final diff = pillNumber - entity.todayPillNumber;
-    return entity.beginingDate.subtract(Duration(days: diff));
+    return calcBeginingDateFromNextTodayPillNumberFunction(entity, pillNumber);
   }
 
   void modifyBeginingDate(int pillNumber) {
@@ -92,14 +91,8 @@ class PillSheetStateStore extends StateNotifier<PillSheetState> {
       throw FormatException("pill sheet not found");
     }
 
-    _service
-        .update(entity.copyWith(
-            beginingDate: calcBeginingDateFromNextTodayPillNumber(pillNumber)))
+    modifyBeginingDateFunction(_service, entity, pillNumber)
         .then((entity) => state = state.copyWith(entity: entity));
-  }
-
-  void update(PillSheetModel entity) {
-    state = state.copyWith(entity: entity);
   }
 
   PillMarkType markFor(int number) {
@@ -129,4 +122,23 @@ class PillSheetStateStore extends StateNotifier<PillSheetState> {
     return number > entity.lastTakenPillNumber &&
         number <= entity.todayPillNumber;
   }
+}
+
+Future<PillSheetModel> modifyBeginingDateFunction(
+  PillSheetService service,
+  PillSheetModel pillSheet,
+  int pillNumber,
+) {
+  return service.update(pillSheet.copyWith(
+      beginingDate: calcBeginingDateFromNextTodayPillNumberFunction(
+          pillSheet, pillNumber)));
+}
+
+DateTime calcBeginingDateFromNextTodayPillNumberFunction(
+  PillSheetModel pillSheet,
+  int pillNumber,
+) {
+  if (pillNumber == pillSheet.todayPillNumber) return pillSheet.beginingDate;
+  final diff = pillNumber - pillSheet.todayPillNumber;
+  return pillSheet.beginingDate.subtract(Duration(days: diff));
 }

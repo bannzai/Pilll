@@ -1,11 +1,10 @@
 import 'package:pilll/analytics.dart';
 import 'package:pilll/domain/record/record_page.dart';
+import 'package:pilll/domain/record/record_page_store.dart';
 import 'package:pilll/entity/pill_sheet.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/entity/setting.dart';
 import 'package:pilll/service/day.dart';
-import 'package:pilll/store/pill_sheet.dart';
-import 'package:pilll/store/setting.dart';
 import 'package:pilll/util/environment.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
@@ -51,8 +50,6 @@ void main() {
           reason: "it is not yet taken pill");
 
       final pillSheetService = MockPillSheetService();
-      final pillSheetStore = PillSheetStateStore(pillSheetService);
-
       when(pillSheetService.fetchLast())
           .thenAnswer((_) => Future.value(pillSheet));
       when(pillSheetService.subscribeForLatestPillSheet())
@@ -64,7 +61,7 @@ void main() {
           .thenAnswer((realInvocation) => Future.value(setting));
       when(settingService.subscribe())
           .thenAnswer((realInvocation) => Stream.value(setting));
-      final settingStore = SettingStateStore(settingService);
+      final pillSheetStore = RecordPageStore(pillSheetService, settingService);
 
       addTearDown(() {
         todayRepository = originalTodayRepository;
@@ -74,13 +71,8 @@ void main() {
       await tester.pumpWidget(
         ProviderScope(
           overrides: [
-            pillSheetStoreProvider
+            recordPageStoreProvider
                 .overrideWithProvider(Provider((ref) => pillSheetStore)),
-            settingStoreProvider.overrideWithProvider(
-              Provider(
-                (ref) => settingStore,
-              ),
-            )
           ],
           child: MaterialApp(
             home: RecordPage(),
@@ -108,7 +100,6 @@ void main() {
         reason: "it is already taken pill");
 
     final pillSheetService = MockPillSheetService();
-    final pillSheetStore = PillSheetStateStore(pillSheetService);
 
     when(pillSheetService.fetchLast())
         .thenAnswer((_) => Future.value(pillSheet));
@@ -121,7 +112,7 @@ void main() {
         .thenAnswer((realInvocation) => Future.value(setting));
     when(settingService.subscribe())
         .thenAnswer((realInvocation) => Stream.value(setting));
-    final settingStore = SettingStateStore(settingService);
+    final pillSheetStore = RecordPageStore(pillSheetService, settingService);
 
     addTearDown(() {
       todayRepository = originalTodayRepository;
@@ -131,13 +122,8 @@ void main() {
     await tester.pumpWidget(
       ProviderScope(
         overrides: [
-          pillSheetStoreProvider
+          recordPageStoreProvider
               .overrideWithProvider(Provider((ref) => pillSheetStore)),
-          settingStoreProvider.overrideWithProvider(
-            Provider(
-              (ref) => settingStore,
-            ),
-          )
         ],
         child: MaterialApp(
           home: RecordPage(),
@@ -167,8 +153,6 @@ void main() {
     expect(pillSheet.lastTakenPillNumber, equals(25),
         reason: "in rest duration behavior for automatically taken pill");
     final pillSheetService = MockPillSheetService();
-    final pillSheetStore = PillSheetStateStore(pillSheetService);
-
     when(pillSheetService.fetchLast())
         .thenAnswer((_) => Future.value(pillSheet));
     when(pillSheetService.subscribeForLatestPillSheet())
@@ -180,7 +164,8 @@ void main() {
         .thenAnswer((realInvocation) => Future.value(setting));
     when(settingService.subscribe())
         .thenAnswer((realInvocation) => Stream.value(setting));
-    final settingStore = SettingStateStore(settingService);
+
+    final pillSheetStore = RecordPageStore(pillSheetService, settingService);
 
     addTearDown(() {
       todayRepository = originalTodayRepository;
@@ -190,13 +175,8 @@ void main() {
     await tester.pumpWidget(
       ProviderScope(
         overrides: [
-          pillSheetStoreProvider
+          recordPageStoreProvider
               .overrideWithProvider(Provider((ref) => pillSheetStore)),
-          settingStoreProvider.overrideWithProvider(
-            Provider(
-              (ref) => settingStore,
-            ),
-          )
         ],
         child: MaterialApp(
           home: RecordPage(),
