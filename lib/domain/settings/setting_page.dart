@@ -1,13 +1,10 @@
 import 'package:pilll/analytics.dart';
 import 'package:pilll/components/page/discard_dialog.dart';
-import 'package:pilll/database/database.dart';
 import 'package:pilll/components/organisms/pill/pill_sheet_type_select_page.dart';
 import 'package:pilll/components/organisms/setting/setting_menstruation_page.dart';
 import 'package:pilll/domain/record/record_page_store.dart';
 import 'package:pilll/domain/settings/information_for_before_major_update.dart';
-import 'package:pilll/entity/pill_sheet.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
-import 'package:pilll/entity/user.dart';
 import 'package:pilll/domain/settings/row_model.dart';
 import 'package:pilll/domain/settings/modifing_pill_number_page.dart';
 import 'package:pilll/domain/settings/reminder_times_page.dart';
@@ -28,61 +25,6 @@ import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:url_launcher/url_launcher.dart';
-
-class _TransactionModifier {
-  final DatabaseConnection? _database;
-  final Reader reader;
-
-  _TransactionModifier(
-    this._database, {
-    required this.reader,
-  });
-
-  Future<void> modifyPillSheetType(PillSheetType type) {
-    final database = _database;
-    if (database == null) {
-      throw FormatException("_database is necessary");
-    }
-    final pillSheetStore = reader(recordPageStoreProvider);
-    final settingStore = reader(settingStoreProvider);
-    final pillSheetState = reader(recordPageStoreProvider.state);
-    final settingState = reader(settingStoreProvider.state);
-    final pillSheetEntity = pillSheetState.entity;
-    final settingEntity = settingState.entity;
-    if (pillSheetEntity == null) {
-      throw FormatException("pillSheetEntity is necessary");
-    }
-    if (settingEntity == null) {
-      throw FormatException("settingEntity is necessary");
-    }
-    return database.transaction((transaction) {
-      return Future.wait(
-        [
-          transaction
-              .get(database.pillSheetReference(pillSheetEntity.documentID!))
-              .then((pillSheetDocument) {
-            transaction.update(pillSheetDocument.reference,
-                {PillSheetFirestoreKey.typeInfo: type.typeInfo.toJson()});
-          }),
-          transaction.get(database.userReference()).then((userDocument) {
-            transaction.update(userDocument.reference, {
-              UserFirestoreFieldKeys.settings: settingEntity
-                  .copyWith(pillSheetTypeRawPath: type.rawPath)
-                  .toJson(),
-            });
-          })
-        ],
-      );
-    }).then((_) {
-      pillSheetStore.update(pillSheetEntity.copyWith(typeInfo: type.typeInfo));
-      settingStore
-          .update(settingEntity.copyWith(pillSheetTypeRawPath: type.rawPath));
-    });
-  }
-}
-
-final transactionModifierProvider = Provider((ref) =>
-    _TransactionModifier(ref.watch(databaseProvider), reader: ref.read));
 
 class SettingPage extends HookWidget {
   static final int itemCount = SettingSection.values.length + 1;

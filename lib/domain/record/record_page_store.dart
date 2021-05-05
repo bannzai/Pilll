@@ -106,10 +106,6 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
         .then((entity) => state = state.copyWith(entity: entity));
   }
 
-  void update(PillSheetModel entity) {
-    state = state.copyWith(entity: entity);
-  }
-
   PillMarkType markFor(int number) {
     final entity = state.entity;
     if (entity == null) {
