@@ -63,14 +63,6 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
         .then((entity) => state = state.copyWith(entity: entity));
   }
 
-  Future<void> delete() {
-    final entity = state.entity;
-    if (entity == null) {
-      throw FormatException("pill sheet not found");
-    }
-    return _service.delete(entity).then((_) => _reset());
-  }
-
   Future<dynamic> take(DateTime takenDate) {
     final entity = state.entity;
     if (entity == null) {
@@ -90,9 +82,7 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
     if (entity == null) {
       throw FormatException("pill sheet not found");
     }
-    if (pillNumber == entity.todayPillNumber) return entity.beginingDate;
-    final diff = pillNumber - entity.todayPillNumber;
-    return entity.beginingDate.subtract(Duration(days: diff));
+    return calcBeginingDateFromNextTodayPillNumberFunction(entity, pillNumber);
   }
 
   void modifyBeginingDate(int pillNumber) {
@@ -101,9 +91,7 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
       throw FormatException("pill sheet not found");
     }
 
-    _service
-        .update(entity.copyWith(
-            beginingDate: calcBeginingDateFromNextTodayPillNumber(pillNumber)))
+    modifyBeginingDateFunction(_service, entity, pillNumber)
         .then((entity) => state = state.copyWith(entity: entity));
   }
 
@@ -134,4 +122,23 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
     return number > entity.lastTakenPillNumber &&
         number <= entity.todayPillNumber;
   }
+}
+
+Future<PillSheetModel> modifyBeginingDateFunction(
+  PillSheetService service,
+  PillSheetModel pillSheet,
+  int pillNumber,
+) {
+  return service.update(pillSheet.copyWith(
+      beginingDate: calcBeginingDateFromNextTodayPillNumberFunction(
+          pillSheet, pillNumber)));
+}
+
+DateTime calcBeginingDateFromNextTodayPillNumberFunction(
+  PillSheetModel pillSheet,
+  int pillNumber,
+) {
+  if (pillNumber == pillSheet.todayPillNumber) return pillSheet.beginingDate;
+  final diff = pillNumber - pillSheet.todayPillNumber;
+  return pillSheet.beginingDate.subtract(Duration(days: diff));
 }

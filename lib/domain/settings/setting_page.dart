@@ -2,7 +2,6 @@ import 'package:pilll/analytics.dart';
 import 'package:pilll/components/page/discard_dialog.dart';
 import 'package:pilll/components/organisms/pill/pill_sheet_type_select_page.dart';
 import 'package:pilll/components/organisms/setting/setting_menstruation_page.dart';
-import 'package:pilll/domain/record/record_page_store.dart';
 import 'package:pilll/domain/settings/information_for_before_major_update.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/domain/settings/row_model.dart';
@@ -97,14 +96,12 @@ class SettingPage extends HookWidget {
 
   List<SettingListRowModel> _rowModels(
       BuildContext context, SettingSection section) {
-    final pillSheetStore = useProvider(recordPageStoreProvider);
-    final pillSheetState = useProvider(recordPageStoreProvider.state);
-    final pillSheetEntity = pillSheetState.entity;
     final settingStore = useProvider(settingStoreProvider);
     final settingState = useProvider(settingStoreProvider.state);
+    final pillSheetEntity = settingState.latestPillSheet;
     final transactionModifier = useProvider(transactionModifierProvider);
     final settingEntity = settingState.entity;
-    final isShowNotifyInRestDuration = !pillSheetState.isInvalid &&
+    final isShowNotifyInRestDuration = !settingState.latestPillSheetIsInvalid &&
         pillSheetEntity != null &&
         !pillSheetEntity.pillSheetType.isNotExistsNotTakenDuration;
     if (settingEntity == null) {
@@ -126,7 +123,7 @@ class SettingPage extends HookWidget {
                     title: "ピルシートタイプ",
                     backButtonIsHidden: false,
                     selected: (type) {
-                      if (!pillSheetState.isInvalid &&
+                      if (!settingState.latestPillSheetIsInvalid &&
                           pillSheetEntity != null) {
                         final callProcess = () {
                           transactionModifier.modifyPillSheetType(type);
@@ -164,7 +161,8 @@ class SettingPage extends HookWidget {
               },
             );
           }(),
-          if (!pillSheetState.isInvalid && pillSheetEntity != null) ...[
+          if (!settingState.latestPillSheetIsInvalid &&
+              pillSheetEntity != null) ...[
             SettingListTitleRowModel(
                 title: "今日飲むピル番号の変更",
                 onTap: () {
@@ -176,7 +174,7 @@ class SettingPage extends HookWidget {
                       pillSheetType: pillSheetEntity.pillSheetType,
                       markSelected: (number) {
                         Navigator.pop(context);
-                        pillSheetStore.modifyBeginingDate(number);
+                        settingStore.modifyBeginingDate(number);
                       },
                     ),
                   );
@@ -195,7 +193,7 @@ class SettingPage extends HookWidget {
                           message: "現在、服用記録をしているピルシートを削除します。",
                           doneButtonText: "破棄する",
                           done: () {
-                            pillSheetStore.delete().catchError((error) {
+                            settingStore.deletePillSheet().catchError((error) {
                               showErrorAlert(context,
                                   message:
                                       "ピルシートがすでに削除されています。表示等に問題がある場合は設定タブから「お問い合わせ」ください");

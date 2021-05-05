@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:pilll/database/database.dart';
+import 'package:pilll/domain/record/record_page_store.dart';
 import 'package:pilll/entity/pill_sheet.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/entity/setting.dart';
@@ -160,6 +161,24 @@ class SettingStateStore extends StateNotifier<SettingState> {
 
   void update(Setting? entity) {
     state = state.copyWith(entity: entity);
+  }
+
+  void modifyBeginingDate(int pillNumber) {
+    final entity = state.latestPillSheet;
+    if (entity == null) {
+      throw FormatException("pill sheet not found");
+    }
+
+    modifyBeginingDateFunction(_pillSheetService, entity, pillNumber)
+        .then((entity) => state = state.copyWith(latestPillSheet: entity));
+  }
+
+  Future<void> deletePillSheet() {
+    final entity = state.latestPillSheet;
+    if (entity == null) {
+      throw FormatException("pill sheet not found");
+    }
+    return _pillSheetService.delete(entity);
   }
 }
 
