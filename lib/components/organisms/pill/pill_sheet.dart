@@ -8,6 +8,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 import 'package:pilll/entity/pill_sheet_type.dart';
+import 'package:pilll/util/formatter/date_time_formatter.dart';
 
 typedef PillMarkSelected = void Function(int);
 typedef PillMarkTypeBuilder = PillMarkType Function(int);
@@ -75,13 +76,20 @@ class PillSheetView extends StatelessWidget {
     var type = pillMarkTypeBuilder(number);
     final enabledMarkAnimation = this.enabledMarkAnimation;
     final premiumMarkBuilder = this.premiumMarkBuilder;
+    PremiumPillMarkModel? premium;
+    if (premiumMarkBuilder != null) {
+      premium = premiumMarkBuilder(number);
+    }
     return GestureDetector(
       onTap: () {
         markSelected(number);
       },
       child: Column(
         children: <Widget>[
-          Text("$number",
+          Text(
+              premium == null
+                  ? "$number"
+                  : DateTimeFormatter.monthAndDay(premium.date),
               style: FontType.smallTitle
                   .merge(TextStyle(color: PilllColors.weekday))),
           PillMark(
@@ -91,8 +99,7 @@ class PillSheetView extends StatelessWidget {
                 : enabledMarkAnimation(number),
             isDone: doneStateBuilder(number),
             pillSheetType: type,
-            premium:
-                premiumMarkBuilder != null ? premiumMarkBuilder(number) : null,
+            premium: premium,
           ),
         ],
       ),
