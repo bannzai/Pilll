@@ -12,15 +12,31 @@ abstract class PillMarkConst {
   static final double edgeOfRipple = 80;
 }
 
+class PremiumPillMarkModel {
+  final DateTime date;
+  final int pillMarkNumber;
+  final int pillNumberForMenstruationBegin;
+  final int menstruationDuration;
+
+  PremiumPillMarkModel(
+    this.date,
+    this.pillMarkNumber,
+    this.pillNumberForMenstruationBegin,
+    this.menstruationDuration,
+  );
+}
+
 class PillMark extends StatefulWidget {
   final PillMarkType pillSheetType;
   final bool isDone;
   final bool hasRippleAnimation;
+  final PremiumPillMarkModel? premium;
   const PillMark({
     Key? key,
     this.hasRippleAnimation = false,
     required this.pillSheetType,
     required this.isDone,
+    required this.premium,
   }) : super(key: key);
 
   @override
