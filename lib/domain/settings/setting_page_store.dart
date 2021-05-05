@@ -12,7 +12,7 @@ final settingStoreProvider = StateNotifierProvider(
     (ref) => SettingStateStore(ref.watch(settingServiceProvider)));
 
 class SettingStateStore extends StateNotifier<SettingState> {
-  final SettingServiceInterface _service;
+  final SettingService _service;
   SettingStateStore(this._service) : super(SettingState(entity: null)) {
     _reset();
   }

@@ -5,16 +5,10 @@ import 'package:pilll/entity/setting.dart';
 import 'package:pilll/entity/user.dart';
 import 'package:riverpod/riverpod.dart';
 
-abstract class SettingServiceInterface {
-  Future<Setting> fetch();
-  Future<Setting> update(Setting setting);
-  Stream<Setting> subscribe();
-}
-
 final settingServiceProvider =
     Provider((ref) => SettingService(ref.watch(databaseProvider)));
 
-class SettingService extends SettingServiceInterface {
+class SettingService {
   final DatabaseConnection _database;
   SettingService(this._database);
 
