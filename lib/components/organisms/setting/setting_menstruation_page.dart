@@ -95,7 +95,12 @@ class _SettingMenstruationPageState extends State<SettingMenstruationPage> {
                         return false;
                       },
                       enabledMarkAnimation: null,
-                      markSelected: (number) {},
+                      markSelected: (number) {
+                        this.widget.fromMenstructionDidDecide(number);
+                        setState(() {
+                          this.widget.model.selectedFromMenstruation = number;
+                        });
+                      },
                     ),
                     SizedBox(height: 24),
                     Container(
@@ -310,6 +315,9 @@ class _SettingMenstruationPageState extends State<SettingMenstruationPage> {
       return widget.model.pillSheetType == PillSheetType.pillsheet_21
           ? PillMarkType.rest
           : PillMarkType.fake;
+    }
+    if (widget.model.selectedFromMenstruation == number) {
+      return PillMarkType.selected;
     }
     return PillMarkType.normal;
   }
