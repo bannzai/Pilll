@@ -133,6 +133,11 @@ class FontType {
     fontWeight: FontWeight.w600,
     fontSize: FontSize.sSmall,
   );
+  static final TextStyle sSmallNumber = TextStyle(
+    fontFamily: FontFamily.number,
+    fontWeight: FontWeight.w600,
+    fontSize: FontSize.sSmall,
+  );
   static final TextStyle sSmallSentence = TextStyle(
     fontFamily: FontFamily.japanese,
     fontWeight: FontWeight.w300,

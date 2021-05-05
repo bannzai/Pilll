@@ -1,3 +1,5 @@
+import 'package:pilll/components/atoms/font.dart';
+import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/components/molecules/ripple.dart';
 import 'package:pilll/entity/pill_mark_type.dart';
 import 'package:pilll/components/atoms/color.dart';
@@ -69,12 +71,10 @@ class _PillMarkState extends State<PillMark> with TickerProviderStateMixin {
 
   @override
   Widget build(BuildContext context) {
-    final pillMarkNumber = widget.premium?.pillMarkNumber;
     return Stack(
       clipBehavior: Clip.none,
       children: [
-        _mark(widget.isDone, widget.pillSheetType),
-        if (!widget.isDone && pillMarkNumber != null) Text("$pillMarkNumber"),
+        _mark(widget.isDone, widget.pillSheetType, widget.premium),
         if (widget.hasRippleAnimation)
           // NOTE: pill mark size is 20px. Ripple view final size is 80px.
           // Positined ripple animation equal to (80px - 20px) / 2(to center) = 30;
@@ -105,7 +105,22 @@ class _PillMarkState extends State<PillMark> with TickerProviderStateMixin {
     );
   }
 
-  Widget _mark(bool isDone, PillMarkType type) {
+  TextStyle _pillMarkNumberTextColor(PillMarkType pillMarkType) {
+    switch (pillMarkType) {
+      case PillMarkType.normal:
+        return TextColorStyle.white;
+      case PillMarkType.fake:
+        return TextColorStyle.main;
+      case PillMarkType.rest:
+        return TextColorStyle.main;
+      case PillMarkType.selected:
+        return TextStyle();
+      case PillMarkType.done:
+        return TextStyle();
+    }
+  }
+
+  Widget _mark(bool isDone, PillMarkType type, PremiumPillMarkModel? premium) {
     return DottedBorder(
       borderType: BorderType.RRect,
       radius: Radius.circular(10),
@@ -117,20 +132,18 @@ class _PillMarkState extends State<PillMark> with TickerProviderStateMixin {
         height: PillMarkConst.edge,
         child: Center(
           child: () {
-            switch (type) {
-              case PillMarkType.normal:
-                return null;
-              case PillMarkType.rest:
-                return isDone ? _checkImage() : null;
-              case PillMarkType.fake:
-                return isDone ? _checkImage() : null;
-              case PillMarkType.selected:
-                return null;
-              case PillMarkType.done:
-                return isDone ? _checkImage() : null;
-              default:
-                throw ArgumentError.notNull("");
+            if (isDone) {
+              return _checkImage();
             }
+            if (premium != null) {
+              return Text(
+                "${premium.pillMarkNumber}",
+                style: FontType.sSmallNumber.merge(
+                  _pillMarkNumberTextColor(type),
+                ),
+              );
+            }
+            return null;
           }(),
         ),
         decoration: BoxDecoration(
