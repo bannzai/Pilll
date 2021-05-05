@@ -299,10 +299,12 @@ class RecordPage extends HookWidget {
         final date =
             pillSheet.beginingDate.add(Duration(days: pillMarkNumber - 1));
         return PremiumPillMarkModel(
-            date,
-            pillMarkNumber,
-            setting.pillNumberForFromMenstruation,
-            setting.durationMenstruation);
+          date,
+          pillMarkNumber,
+          setting.pillNumberForFromMenstruation,
+          setting.durationMenstruation,
+          pillSheet.pillSheetType.totalCount,
+        );
       },
     );
   }

@@ -87,11 +87,11 @@ class PillSheetView extends StatelessWidget {
       child: Column(
         children: <Widget>[
           Text(
-              premium == null
-                  ? "$number"
-                  : DateTimeFormatter.monthAndDay(premium.date),
-              style: FontType.smallTitle
-                  .merge(TextStyle(color: PilllColors.weekday))),
+            premium == null
+                ? "$number"
+                : DateTimeFormatter.monthAndDay(premium.date),
+            style: FontType.smallTitle.merge(_upperTextColor(premium, number)),
+          ),
           PillMark(
             key: Key("PillMarkWidget_$number"),
             hasRippleAnimation: enabledMarkAnimation == null
@@ -106,6 +106,20 @@ class PillSheetView extends StatelessWidget {
     );
   }
 
+  TextStyle _upperTextColor(PremiumPillMarkModel? premium, int pillMarkNumber) {
+    if (premium == null) {
+      return TextStyle(color: PilllColors.weekday);
+    }
+    final begin = premium.pillNumberForMenstruationBegin;
+    final duration = premium.menstruationDuration;
+    final menstruationNumbers = List.generate(duration, (index) {
+      return (begin + index) % premium.maxPillNumber;
+    });
+    return menstruationNumbers.contains(pillMarkNumber)
+        ? TextStyle(color: PilllColors.primary)
+        : TextStyle(color: PilllColors.weekday);
+  }
+
   Widget _pillMarkLine(int lineIndex) {
     final lineNumber = lineIndex + 1;
     int countOfPillMarksInLine = Weekday.values.length;
@@ -113,14 +127,17 @@ class PillSheetView extends StatelessWidget {
       int diff = pillSheetType.totalCount - lineIndex * Weekday.values.length;
       countOfPillMarksInLine = diff;
     }
+    final double width = 35;
     return Container(
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: List.generate(Weekday.values.length, (index) {
           if (index >= countOfPillMarksInLine) {
-            return Container(width: PillMarkConst.edge);
+            return Container(width: width);
           }
-          return _pillMarkWithNumber(_calcIndex(index, lineIndex));
+          return Container(
+              width: width,
+              child: _pillMarkWithNumber(_calcIndex(index, lineIndex)));
         }),
       ),
     );

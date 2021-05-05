@@ -19,12 +19,14 @@ class PremiumPillMarkModel {
   final int pillMarkNumber;
   final int pillNumberForMenstruationBegin;
   final int menstruationDuration;
+  final int maxPillNumber;
 
   PremiumPillMarkModel(
     this.date,
     this.pillMarkNumber,
     this.pillNumberForMenstruationBegin,
     this.menstruationDuration,
+    this.maxPillNumber,
   );
 }
 
