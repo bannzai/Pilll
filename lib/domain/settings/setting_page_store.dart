@@ -2,18 +2,21 @@ import 'dart:async';
 
 import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/entity/setting.dart';
+import 'package:pilll/service/pill_sheet.dart';
 import 'package:pilll/service/setting.dart';
 import 'package:pilll/domain/settings/setting_page_state.dart';
 import 'package:pilll/util/shared_preference/keys.dart';
 import 'package:riverpod/riverpod.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-final settingStoreProvider = StateNotifierProvider(
-    (ref) => SettingStateStore(ref.watch(settingServiceProvider)));
+final settingStoreProvider = StateNotifierProvider((ref) => SettingStateStore(
+    ref.watch(settingServiceProvider), ref.watch(pillSheetServiceProvider)));
 
 class SettingStateStore extends StateNotifier<SettingState> {
   final SettingService _service;
-  SettingStateStore(this._service) : super(SettingState(entity: null)) {
+  final PillSheetService _pillSheetService;
+  SettingStateStore(this._service, this._pillSheetService)
+      : super(SettingState(entity: null)) {
     _reset();
   }
 
@@ -24,8 +27,12 @@ class SettingStateStore extends StateNotifier<SettingState> {
           storage.containsKey(StringKey.salvagedOldStartTakenDate) &&
               storage.containsKey(StringKey.salvagedOldLastTakenDate);
       final entity = await _service.fetch();
+      final pillSheet = await _pillSheetService.fetchLast();
       this.state = SettingState(
-          entity: entity, userIsUpdatedFrom132: userIsMigratedFrom132);
+        entity: entity,
+        userIsUpdatedFrom132: userIsMigratedFrom132,
+        latestPillSheet: pillSheet,
+      );
       _subscribe();
     });
   }
