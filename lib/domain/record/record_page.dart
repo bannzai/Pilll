@@ -260,12 +260,12 @@ class RecordPage extends HookWidget {
     store.take(lastTakenDate.subtract(Duration(days: 1)));
   }
 
-  PillSheet _pillSheet(
+  PillSheetView _pillSheet(
     BuildContext context,
     PillSheetModel pillSheet,
     RecordPageStore store,
   ) {
-    return PillSheet(
+    return PillSheetView(
       firstWeekday: WeekdayFunctions.weekdayFromDate(pillSheet.beginingDate),
       pillSheetType: pillSheet.pillSheetType,
       doneStateBuilder: (number) {
@@ -298,7 +298,7 @@ class RecordPage extends HookWidget {
     var progressing = false;
     return GestureDetector(
       child: SizedBox(
-        width: PillSheet.width,
+        width: PillSheetView.width,
         height: 316,
         child: Stack(
           children: <Widget>[

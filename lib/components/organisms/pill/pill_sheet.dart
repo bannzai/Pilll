@@ -14,7 +14,7 @@ typedef PillMarkTypeBuilder = PillMarkType Function(int);
 typedef PillMarkTypeHasRippleAnimation = bool Function(int);
 typedef DoneStateBuilder = bool Function(int);
 
-class PillSheet extends StatelessWidget {
+class PillSheetView extends StatelessWidget {
   static final double width = 316;
   static final double lineHeight = 49.5;
   static final double topSpace = 12;
@@ -29,15 +29,15 @@ class PillSheet extends StatelessWidget {
   bool get isHideWeekdayLine => firstWeekday == null;
   int get _numberOfLine => pillSheetType.numberOfLineInPillSheet;
   double get _height {
-    final verticalSpacing = PillSheet.topSpace + PillSheet.bottomSpace;
+    final verticalSpacing = PillSheetView.topSpace + PillSheetView.bottomSpace;
     final pillMarkListHeight =
-        PillSheet.lineHeight * _numberOfLine + verticalSpacing;
+        PillSheetView.lineHeight * _numberOfLine + verticalSpacing;
     return isHideWeekdayLine
         ? pillMarkListHeight
         : pillMarkListHeight + WeekdayBadgeConst.height;
   }
 
-  const PillSheet({
+  const PillSheetView({
     Key? key,
     this.firstWeekday,
     required this.pillSheetType,
@@ -116,7 +116,7 @@ class PillSheet extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: PillSheet.width,
+      width: PillSheetView.width,
       height: _height,
       decoration: BoxDecoration(
         color: PilllColors.pillSheet,
@@ -130,12 +130,12 @@ class PillSheet extends StatelessWidget {
         ],
       ),
       child: Padding(
-        padding: EdgeInsets.fromLTRB(28, 0, 28, PillSheet.bottomSpace),
+        padding: EdgeInsets.fromLTRB(28, 0, 28, PillSheetView.bottomSpace),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
             if (!isHideWeekdayLine) _weekdayLine(),
-            SizedBox(height: PillSheet.topSpace),
+            SizedBox(height: PillSheetView.topSpace),
             Expanded(
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
