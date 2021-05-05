@@ -37,11 +37,11 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
     });
   }
 
-  StreamSubscription<PillSheetModel>? canceller;
+  StreamSubscription<PillSheetModel>? _canceller;
   StreamSubscription? _settingCanceller;
   void _subscribe() {
-    canceller?.cancel();
-    canceller = _service.subscribeForLatestPillSheet().listen((event) {
+    _canceller?.cancel();
+    _canceller = _service.subscribeForLatestPillSheet().listen((event) {
       state = state.copyWith(entity: event);
     });
     _settingCanceller?.cancel();
@@ -52,7 +52,8 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
 
   @override
   void dispose() {
-    canceller?.cancel();
+    _canceller?.cancel();
+    _settingCanceller?.cancel();
     super.dispose();
   }
 
