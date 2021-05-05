@@ -4,6 +4,12 @@ import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:flutter/material.dart';
 
+abstract class PillSheetTypeColumnConstant {
+  static final double width = 146;
+  static final double height = 140;
+  static double get aspectRatio => width / height;
+}
+
 class PillSheetTypeColumn extends StatelessWidget {
   final PillSheetType pillSheetType;
   final bool selected;
@@ -16,8 +22,8 @@ class PillSheetTypeColumn extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 146,
-      height: 129,
+      width: PillSheetTypeColumnConstant.width,
+      height: PillSheetTypeColumnConstant.height,
       decoration: BoxDecoration(
         color: this.selected
             ? PilllColors.secondary.withOpacity(0.08)

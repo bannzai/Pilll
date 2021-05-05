@@ -54,7 +54,7 @@ class PillSheetTypeSelectPage extends StatelessWidget {
                 mainAxisSpacing: 16,
                 crossAxisSpacing: 16,
                 padding: EdgeInsets.only(left: 34, right: 34),
-                childAspectRatio: 146 / 129,
+                childAspectRatio: PillSheetTypeColumnConstant.aspectRatio,
                 crossAxisCount: 2,
                 children: [
                   ...PillSheetType.values.map((e) => _pillSheet(e)).toList(),
