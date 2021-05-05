@@ -2,6 +2,7 @@ import 'dart:io' show Platform;
 
 import 'package:pilll/analytics.dart';
 import 'package:pilll/components/molecules/indicator.dart';
+import 'package:pilll/components/organisms/pill/pill_mark.dart';
 import 'package:pilll/components/organisms/pill/pill_sheet.dart';
 import 'package:pilll/domain/initial_setting/migrate_info.dart';
 import 'package:pilll/domain/record/record_page_state.dart';
@@ -10,6 +11,7 @@ import 'package:pilll/domain/record/record_taken_information.dart';
 import 'package:pilll/domain/release_note/release_note.dart';
 import 'package:pilll/entity/pill_sheet.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
+import 'package:pilll/entity/setting.dart';
 import 'package:pilll/entity/weekday.dart';
 import 'package:pilll/error/error_alert.dart';
 import 'package:pilll/service/pill_sheet.dart';
@@ -162,7 +164,9 @@ class RecordPage extends HookWidget {
           if (state.isInvalid)
             Align(child: _empty(context, store, settingEntity.pillSheetType)),
           if (!state.isInvalid && currentPillSheet != null) ...[
-            Align(child: _pillSheet(context, currentPillSheet, store)),
+            Align(
+                child: _pillSheet(
+                    context, currentPillSheet, settingEntity, store)),
             SizedBox(height: 40),
             if (currentPillSheet.allTaken)
               Align(child: _cancelTakeButton(currentPillSheet, store)),
@@ -263,6 +267,7 @@ class RecordPage extends HookWidget {
   PillSheetView _pillSheet(
     BuildContext context,
     PillSheet pillSheet,
+    Setting setting,
     RecordPageStore store,
   ) {
     return PillSheetView(
@@ -289,6 +294,15 @@ class RecordPage extends HookWidget {
         }
         var takenDate = now().subtract(Duration(days: diff));
         _take(context, pillSheet, takenDate, store);
+      },
+      premiumMarkBuilder: (pillMarkNumber) {
+        final date =
+            pillSheet.beginingDate.add(Duration(days: pillMarkNumber - 1));
+        return PremiumPillMarkModel(
+            date,
+            pillMarkNumber,
+            setting.pillNumberForFromMenstruation,
+            setting.durationMenstruation);
       },
     );
   }
