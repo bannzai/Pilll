@@ -17,7 +17,7 @@ class _$RecordPageStateTearOff {
   const _$RecordPageStateTearOff();
 
   _RecordPageState call(
-      {required PillSheetModel? entity,
+      {required PillSheet? entity,
       Setting? setting,
       bool firstLoadIsEnded = false}) {
     return _RecordPageState(
@@ -33,7 +33,7 @@ const $RecordPageState = _$RecordPageStateTearOff();
 
 /// @nodoc
 mixin _$RecordPageState {
-  PillSheetModel? get entity => throw _privateConstructorUsedError;
+  PillSheet? get entity => throw _privateConstructorUsedError;
   Setting? get setting => throw _privateConstructorUsedError;
   bool get firstLoadIsEnded => throw _privateConstructorUsedError;
 
@@ -47,7 +47,7 @@ abstract class $RecordPageStateCopyWith<$Res> {
   factory $RecordPageStateCopyWith(
           RecordPageState value, $Res Function(RecordPageState) then) =
       _$RecordPageStateCopyWithImpl<$Res>;
-  $Res call({PillSheetModel? entity, Setting? setting, bool firstLoadIsEnded});
+  $Res call({PillSheet? entity, Setting? setting, bool firstLoadIsEnded});
 
   $PillSheetModelCopyWith<$Res>? get entity;
   $SettingCopyWith<$Res>? get setting;
@@ -72,7 +72,7 @@ class _$RecordPageStateCopyWithImpl<$Res>
       entity: entity == freezed
           ? _value.entity
           : entity // ignore: cast_nullable_to_non_nullable
-              as PillSheetModel?,
+              as PillSheet?,
       setting: setting == freezed
           ? _value.setting
           : setting // ignore: cast_nullable_to_non_nullable
@@ -114,7 +114,7 @@ abstract class _$RecordPageStateCopyWith<$Res>
           _RecordPageState value, $Res Function(_RecordPageState) then) =
       __$RecordPageStateCopyWithImpl<$Res>;
   @override
-  $Res call({PillSheetModel? entity, Setting? setting, bool firstLoadIsEnded});
+  $Res call({PillSheet? entity, Setting? setting, bool firstLoadIsEnded});
 
   @override
   $PillSheetModelCopyWith<$Res>? get entity;
@@ -143,7 +143,7 @@ class __$RecordPageStateCopyWithImpl<$Res>
       entity: entity == freezed
           ? _value.entity
           : entity // ignore: cast_nullable_to_non_nullable
-              as PillSheetModel?,
+              as PillSheet?,
       setting: setting == freezed
           ? _value.setting
           : setting // ignore: cast_nullable_to_non_nullable
@@ -164,7 +164,7 @@ class _$_RecordPageState extends _RecordPageState {
       : super._();
 
   @override
-  final PillSheetModel? entity;
+  final PillSheet? entity;
   @override
   final Setting? setting;
   @JsonKey(defaultValue: false)
@@ -205,13 +205,13 @@ class _$_RecordPageState extends _RecordPageState {
 
 abstract class _RecordPageState extends RecordPageState {
   factory _RecordPageState(
-      {required PillSheetModel? entity,
+      {required PillSheet? entity,
       Setting? setting,
       bool firstLoadIsEnded}) = _$_RecordPageState;
   _RecordPageState._() : super._();
 
   @override
-  PillSheetModel? get entity => throw _privateConstructorUsedError;
+  PillSheet? get entity => throw _privateConstructorUsedError;
   @override
   Setting? get setting => throw _privateConstructorUsedError;
   @override

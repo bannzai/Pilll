@@ -42,7 +42,7 @@ void main() {
       when(service.subscribe())
           .thenAnswer((realInvocation) => Stream.value(entity));
 
-      final pillSheet = PillSheetModel.create(PillSheetType.pillsheet_21);
+      final pillSheet = PillSheet.create(PillSheetType.pillsheet_21);
       final pillSheetService = MockPillSheetService();
       when(pillSheetService.fetchLast())
           .thenAnswer((_) => Future.value(pillSheet));
@@ -89,7 +89,7 @@ void main() {
       when(service.subscribe())
           .thenAnswer((realInvocation) => Stream.value(entity));
 
-      final pillSheet = PillSheetModel.create(PillSheetType.pillsheet_21);
+      final pillSheet = PillSheet.create(PillSheetType.pillsheet_21);
       final pillSheetService = MockPillSheetService();
       when(pillSheetService.fetchLast())
           .thenAnswer((_) => Future.value(pillSheet));

@@ -54,7 +54,7 @@ class _ModifingPillNumberPageState extends State<ModifingPillNumberPage> {
               ),
               SizedBox(height: 56),
               Center(
-                child: PillSheet(
+                child: PillSheetView(
                   pillSheetType: widget.pillSheetType,
                   pillMarkTypeBuilder: (number) {
                     if (selectedPillMarkNumber == number) {

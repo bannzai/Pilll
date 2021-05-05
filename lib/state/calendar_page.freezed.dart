@@ -20,7 +20,7 @@ class _$CalendarPageStateTearOff {
       {required List<Menstruation> menstruations,
       int currentCalendarIndex = 0,
       Setting? setting,
-      PillSheetModel? latestPillSheet,
+      PillSheet? latestPillSheet,
       List<Diary> diaries = const [],
       bool isNotYetLoaded = true}) {
     return _CalendarPageState(
@@ -42,7 +42,7 @@ mixin _$CalendarPageState {
   List<Menstruation> get menstruations => throw _privateConstructorUsedError;
   int get currentCalendarIndex => throw _privateConstructorUsedError;
   Setting? get setting => throw _privateConstructorUsedError;
-  PillSheetModel? get latestPillSheet => throw _privateConstructorUsedError;
+  PillSheet? get latestPillSheet => throw _privateConstructorUsedError;
   List<Diary> get diaries => throw _privateConstructorUsedError;
   bool get isNotYetLoaded => throw _privateConstructorUsedError;
 
@@ -60,7 +60,7 @@ abstract class $CalendarPageStateCopyWith<$Res> {
       {List<Menstruation> menstruations,
       int currentCalendarIndex,
       Setting? setting,
-      PillSheetModel? latestPillSheet,
+      PillSheet? latestPillSheet,
       List<Diary> diaries,
       bool isNotYetLoaded});
 
@@ -102,7 +102,7 @@ class _$CalendarPageStateCopyWithImpl<$Res>
       latestPillSheet: latestPillSheet == freezed
           ? _value.latestPillSheet
           : latestPillSheet // ignore: cast_nullable_to_non_nullable
-              as PillSheetModel?,
+              as PillSheet?,
       diaries: diaries == freezed
           ? _value.diaries
           : diaries // ignore: cast_nullable_to_non_nullable
@@ -148,7 +148,7 @@ abstract class _$CalendarPageStateCopyWith<$Res>
       {List<Menstruation> menstruations,
       int currentCalendarIndex,
       Setting? setting,
-      PillSheetModel? latestPillSheet,
+      PillSheet? latestPillSheet,
       List<Diary> diaries,
       bool isNotYetLoaded});
 
@@ -194,7 +194,7 @@ class __$CalendarPageStateCopyWithImpl<$Res>
       latestPillSheet: latestPillSheet == freezed
           ? _value.latestPillSheet
           : latestPillSheet // ignore: cast_nullable_to_non_nullable
-              as PillSheetModel?,
+              as PillSheet?,
       diaries: diaries == freezed
           ? _value.diaries
           : diaries // ignore: cast_nullable_to_non_nullable
@@ -227,7 +227,7 @@ class _$_CalendarPageState extends _CalendarPageState {
   @override
   final Setting? setting;
   @override
-  final PillSheetModel? latestPillSheet;
+  final PillSheet? latestPillSheet;
   @JsonKey(defaultValue: const [])
   @override
   final List<Diary> diaries;
@@ -285,7 +285,7 @@ abstract class _CalendarPageState extends CalendarPageState {
       {required List<Menstruation> menstruations,
       int currentCalendarIndex,
       Setting? setting,
-      PillSheetModel? latestPillSheet,
+      PillSheet? latestPillSheet,
       List<Diary> diaries,
       bool isNotYetLoaded}) = _$_CalendarPageState;
   _CalendarPageState._() : super._();
@@ -297,7 +297,7 @@ abstract class _CalendarPageState extends CalendarPageState {
   @override
   Setting? get setting => throw _privateConstructorUsedError;
   @override
-  PillSheetModel? get latestPillSheet => throw _privateConstructorUsedError;
+  PillSheet? get latestPillSheet => throw _privateConstructorUsedError;
   @override
   List<Diary> get diaries => throw _privateConstructorUsedError;
   @override

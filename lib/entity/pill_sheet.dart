@@ -33,15 +33,15 @@ abstract class PillSheetTypeInfo with _$PillSheetTypeInfo {
 }
 
 @freezed
-abstract class PillSheetModel implements _$PillSheetModel {
+abstract class PillSheet implements _$PillSheetModel {
   String? get documentID => id;
 
   PillSheetType get sheetType =>
       PillSheetTypeFunctions.fromRawPath(typeInfo.pillSheetTypeReferencePath);
 
-  PillSheetModel._();
+  PillSheet._();
   @JsonSerializable(explicitToJson: true)
-  factory PillSheetModel({
+  factory PillSheet({
     @JsonKey(includeIfNull: false, toJson: toNull)
         String? id,
     @JsonKey()
@@ -67,13 +67,13 @@ abstract class PillSheetModel implements _$PillSheetModel {
     )
         DateTime? deletedAt,
   }) = _PillSheetModel;
-  factory PillSheetModel.create(PillSheetType type) => PillSheetModel(
+  factory PillSheet.create(PillSheetType type) => PillSheet(
         typeInfo: type.typeInfo,
         beginingDate: today(),
         lastTakenDate: null,
       );
 
-  factory PillSheetModel.fromJson(Map<String, dynamic> json) =>
+  factory PillSheet.fromJson(Map<String, dynamic> json) =>
       _$PillSheetModelFromJson(json);
   Map<String, dynamic> toJson() =>
       _$_$_PillSheetModelToJson(this as _$_PillSheetModel);

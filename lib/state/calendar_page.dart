@@ -18,7 +18,7 @@ abstract class CalendarPageState implements _$CalendarPageState {
     required List<Menstruation> menstruations,
     @Default(0) int currentCalendarIndex,
     Setting? setting,
-    PillSheetModel? latestPillSheet,
+    PillSheet? latestPillSheet,
     @Default([]) List<Diary> diaries,
     @Default(true) bool isNotYetLoaded,
   }) = _CalendarPageState;

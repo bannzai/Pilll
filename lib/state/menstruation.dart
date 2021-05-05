@@ -20,7 +20,7 @@ abstract class MenstruationState implements _$MenstruationState {
     @Default([]) List<Diary> diaries,
     @Default([]) List<Menstruation> entities,
     Setting? setting,
-    PillSheetModel? latestPillSheet,
+    PillSheet? latestPillSheet,
   }) = _MenstruationState;
 
   late final List<List<DateTime>> calendarDataSource = _calendarDataSource();

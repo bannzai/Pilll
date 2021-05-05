@@ -202,7 +202,7 @@ class RecordPage extends HookWidget {
 
   Widget _takenButton(
     BuildContext context,
-    PillSheetModel pillSheet,
+    PillSheet pillSheet,
     RecordPageStore store,
   ) {
     if (pillSheet.todayPillNumber == 1)
@@ -219,7 +219,7 @@ class RecordPage extends HookWidget {
     );
   }
 
-  Widget _cancelTakeButton(PillSheetModel pillSheet, RecordPageStore store) {
+  Widget _cancelTakeButton(PillSheet pillSheet, RecordPageStore store) {
     return TertiaryButton(
       text: "飲んでない",
       onPressed: () {
@@ -234,7 +234,7 @@ class RecordPage extends HookWidget {
 
   void _take(
     BuildContext context,
-    PillSheetModel pillSheet,
+    PillSheet pillSheet,
     DateTime takenDate,
     RecordPageStore store,
   ) {
@@ -249,7 +249,7 @@ class RecordPage extends HookWidget {
     });
   }
 
-  void _cancelTake(PillSheetModel pillSheet, RecordPageStore store) {
+  void _cancelTake(PillSheet pillSheet, RecordPageStore store) {
     if (pillSheet.todayPillNumber != pillSheet.lastTakenPillNumber) {
       return;
     }
@@ -260,12 +260,12 @@ class RecordPage extends HookWidget {
     store.take(lastTakenDate.subtract(Duration(days: 1)));
   }
 
-  PillSheet _pillSheet(
+  PillSheetView _pillSheet(
     BuildContext context,
-    PillSheetModel pillSheet,
+    PillSheet pillSheet,
     RecordPageStore store,
   ) {
-    return PillSheet(
+    return PillSheetView(
       firstWeekday: WeekdayFunctions.weekdayFromDate(pillSheet.beginingDate),
       pillSheetType: pillSheet.pillSheetType,
       doneStateBuilder: (number) {
@@ -298,7 +298,7 @@ class RecordPage extends HookWidget {
     var progressing = false;
     return GestureDetector(
       child: SizedBox(
-        width: PillSheet.width,
+        width: PillSheetView.width,
         height: 316,
         child: Stack(
           children: <Widget>[
@@ -323,7 +323,7 @@ class RecordPage extends HookWidget {
         if (progressing) return;
         progressing = true;
 
-        var pillSheet = PillSheetModel.create(pillSheetType);
+        var pillSheet = PillSheet.create(pillSheetType);
         store.register(pillSheet).catchError((error) {
           showErrorAlert(
             context,

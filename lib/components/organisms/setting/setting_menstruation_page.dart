@@ -86,7 +86,7 @@ class _SettingMenstruationPageState extends State<SettingMenstruationPage> {
                       textAlign: TextAlign.center,
                     ),
                     SizedBox(height: 12),
-                    PillSheet(
+                    PillSheetView(
                       pillSheetType: widget.model.pillSheetType,
                       pillMarkTypeBuilder: (number) {
                         return _pillMarkTypeFor(number);
