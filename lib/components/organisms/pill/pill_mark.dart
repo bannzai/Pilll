@@ -77,7 +77,7 @@ class _PillMarkState extends State<PillMark> with TickerProviderStateMixin {
         if (!widget.isDone && pillMarkNumber != null) Text("$pillMarkNumber"),
         if (widget.hasRippleAnimation)
           // NOTE: pill mark size is 20px. Ripple view final size is 80px.
-          // Positined ripple animation equal to (80px - 20px) / 2(to center) = 28;
+          // Positined ripple animation equal to (80px - 20px) / 2(to center) = 30;
           Positioned(
             left: -30,
             top: -30,
