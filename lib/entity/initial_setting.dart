@@ -33,8 +33,8 @@ abstract class InitialSettingModel implements _$InitialSettingModel {
         reminderTimes: reminderTimes,
         isOnReminder: isOnReminder,
       );
-  PillSheetModel? buildPillSheet() => todayPillNumber != null
-      ? PillSheetModel(
+  PillSheet? buildPillSheet() => todayPillNumber != null
+      ? PillSheet(
           beginingDate: _beginingDate(),
           lastTakenDate: _lastTakenDate(),
           typeInfo: _typeInfo(),

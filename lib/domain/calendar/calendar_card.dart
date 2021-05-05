@@ -14,7 +14,7 @@ import 'package:flutter/material.dart';
 
 class CalendarCardState {
   final DateTime date;
-  final PillSheetModel? latestPillSheet;
+  final PillSheet? latestPillSheet;
   final Setting? setting;
   final List<Diary> diaries;
   final List<Menstruation> menstruations;

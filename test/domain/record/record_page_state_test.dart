@@ -27,7 +27,7 @@ void main() {
       when(todayRepository.today()).thenReturn(DateTime.parse("2020-11-22"));
 
       final pillSheetEntity =
-          PillSheetModel.create(PillSheetType.pillsheet_21).copyWith(
+          PillSheet.create(PillSheetType.pillsheet_21).copyWith(
         beginingDate: DateTime.parse("2020-11-22"),
         createdAt: DateTime.parse("2020-11-22"),
       );
@@ -69,7 +69,7 @@ void main() {
     when(todayRepository.today()).thenReturn(DateTime.parse("2020-11-23"));
 
     final pillSheetEntity =
-        PillSheetModel.create(PillSheetType.pillsheet_21).copyWith(
+        PillSheet.create(PillSheetType.pillsheet_21).copyWith(
       beginingDate: DateTime.parse("2020-11-21"),
       createdAt: DateTime.parse("2020-11-21"),
     );
@@ -108,7 +108,7 @@ void main() {
       when(todayRepository.today()).thenReturn(DateTime.parse("2020-11-23"));
 
       final pillSheetEntity =
-          PillSheetModel.create(PillSheetType.pillsheet_21).copyWith(
+          PillSheet.create(PillSheetType.pillsheet_21).copyWith(
         beginingDate: DateTime.parse("2020-11-21"),
         lastTakenDate: DateTime.parse("2020-11-23"),
         createdAt: DateTime.parse("2020-11-21"),
@@ -147,7 +147,7 @@ void main() {
       when(todayRepository.today()).thenReturn(DateTime.parse("2020-11-23"));
 
       final pillSheetEntity =
-          PillSheetModel.create(PillSheetType.pillsheet_21).copyWith(
+          PillSheet.create(PillSheetType.pillsheet_21).copyWith(
         beginingDate: DateTime.parse("2020-11-21"),
         lastTakenDate: DateTime.parse("2020-11-22"),
         createdAt: DateTime.parse("2020-11-21"),
@@ -189,7 +189,7 @@ void main() {
           .thenReturn(DateTime.parse("2020-11-23"));
 
       final pillSheetEntity =
-          PillSheetModel.create(PillSheetType.pillsheet_21).copyWith(
+          PillSheet.create(PillSheetType.pillsheet_21).copyWith(
         beginingDate: DateTime.parse("2020-11-21"),
         lastTakenDate: DateTime.parse("2020-11-23"),
         createdAt: DateTime.parse("2020-11-21"),
@@ -227,7 +227,7 @@ void main() {
       when(todayRepository.today()).thenReturn(DateTime.parse("2020-11-23"));
 
       final pillSheetEntity =
-          PillSheetModel.create(PillSheetType.pillsheet_21).copyWith(
+          PillSheet.create(PillSheetType.pillsheet_21).copyWith(
         beginingDate: DateTime.parse("2020-11-21"),
         lastTakenDate: DateTime.parse("2020-11-22"),
         createdAt: DateTime.parse("2020-11-21"),

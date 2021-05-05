@@ -202,7 +202,7 @@ class RecordPage extends HookWidget {
 
   Widget _takenButton(
     BuildContext context,
-    PillSheetModel pillSheet,
+    PillSheet pillSheet,
     RecordPageStore store,
   ) {
     if (pillSheet.todayPillNumber == 1)
@@ -219,7 +219,7 @@ class RecordPage extends HookWidget {
     );
   }
 
-  Widget _cancelTakeButton(PillSheetModel pillSheet, RecordPageStore store) {
+  Widget _cancelTakeButton(PillSheet pillSheet, RecordPageStore store) {
     return TertiaryButton(
       text: "飲んでない",
       onPressed: () {
@@ -234,7 +234,7 @@ class RecordPage extends HookWidget {
 
   void _take(
     BuildContext context,
-    PillSheetModel pillSheet,
+    PillSheet pillSheet,
     DateTime takenDate,
     RecordPageStore store,
   ) {
@@ -249,7 +249,7 @@ class RecordPage extends HookWidget {
     });
   }
 
-  void _cancelTake(PillSheetModel pillSheet, RecordPageStore store) {
+  void _cancelTake(PillSheet pillSheet, RecordPageStore store) {
     if (pillSheet.todayPillNumber != pillSheet.lastTakenPillNumber) {
       return;
     }
@@ -262,7 +262,7 @@ class RecordPage extends HookWidget {
 
   PillSheetView _pillSheet(
     BuildContext context,
-    PillSheetModel pillSheet,
+    PillSheet pillSheet,
     RecordPageStore store,
   ) {
     return PillSheetView(
@@ -323,7 +323,7 @@ class RecordPage extends HookWidget {
         if (progressing) return;
         progressing = true;
 
-        var pillSheet = PillSheetModel.create(pillSheetType);
+        var pillSheet = PillSheet.create(pillSheetType);
         store.register(pillSheet).catchError((error) {
           showErrorAlert(
             context,

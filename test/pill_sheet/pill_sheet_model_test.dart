@@ -19,7 +19,7 @@ void main() {
       when(todayRepository.today()).thenReturn(DateTime.parse("2020-09-19"));
 
       var sheetType = PillSheetType.pillsheet_21;
-      var model = PillSheetModel(
+      var model = PillSheet(
         beginingDate: DateTime.parse("2020-09-14"),
         lastTakenDate: DateTime.parse("2020-09-18"),
         typeInfo: PillSheetTypeInfo(
@@ -37,7 +37,7 @@ void main() {
       when(todayRepository.today()).thenReturn(DateTime.parse("2020-09-28"));
 
       var sheetType = PillSheetType.pillsheet_21;
-      var model = PillSheetModel(
+      var model = PillSheet(
         beginingDate: DateTime.parse("2020-09-01"),
         lastTakenDate: DateTime.parse("2020-09-28"),
         typeInfo: PillSheetTypeInfo(
@@ -55,7 +55,7 @@ void main() {
       when(todayRepository.today()).thenReturn(DateTime.parse("2020-09-29"));
 
       var sheetType = PillSheetType.pillsheet_21;
-      var model = PillSheetModel(
+      var model = PillSheet(
         beginingDate: DateTime.parse("2020-09-01"),
         lastTakenDate: DateTime.parse("2020-09-28"),
         typeInfo: PillSheetTypeInfo(
@@ -73,7 +73,7 @@ void main() {
       when(todayRepository.today()).thenReturn(DateTime.parse("2020-10-27"));
 
       var sheetType = PillSheetType.pillsheet_21;
-      var model = PillSheetModel(
+      var model = PillSheet(
         beginingDate: DateTime.parse("2020-09-01"),
         lastTakenDate: DateTime.parse("2020-09-28"),
         typeInfo: PillSheetTypeInfo(

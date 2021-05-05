@@ -245,7 +245,7 @@ abstract class _PillSheetTypeInfo implements PillSheetTypeInfo {
       throw _privateConstructorUsedError;
 }
 
-PillSheetModel _$PillSheetModelFromJson(Map<String, dynamic> json) {
+PillSheet _$PillSheetModelFromJson(Map<String, dynamic> json) {
   return _PillSheetModel.fromJson(json);
 }
 
@@ -276,8 +276,8 @@ class _$PillSheetModelTearOff {
     );
   }
 
-  PillSheetModel fromJson(Map<String, Object> json) {
-    return PillSheetModel.fromJson(json);
+  PillSheet fromJson(Map<String, Object> json) {
+    return PillSheet.fromJson(json);
   }
 }
 
@@ -309,14 +309,14 @@ mixin _$PillSheetModel {
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $PillSheetModelCopyWith<PillSheetModel> get copyWith =>
+  $PillSheetModelCopyWith<PillSheet> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
 abstract class $PillSheetModelCopyWith<$Res> {
   factory $PillSheetModelCopyWith(
-          PillSheetModel value, $Res Function(PillSheetModel) then) =
+          PillSheet value, $Res Function(PillSheet) then) =
       _$PillSheetModelCopyWithImpl<$Res>;
   $Res call(
       {@JsonKey(includeIfNull: false, toJson: toNull)
@@ -340,9 +340,9 @@ class _$PillSheetModelCopyWithImpl<$Res>
     implements $PillSheetModelCopyWith<$Res> {
   _$PillSheetModelCopyWithImpl(this._value, this._then);
 
-  final PillSheetModel _value;
+  final PillSheet _value;
   // ignore: unused_field
-  final $Res Function(PillSheetModel) _then;
+  final $Res Function(PillSheet) _then;
 
   @override
   $Res call({
@@ -561,7 +561,7 @@ class _$_PillSheetModel extends _PillSheetModel {
   }
 }
 
-abstract class _PillSheetModel extends PillSheetModel {
+abstract class _PillSheetModel extends PillSheet {
   factory _PillSheetModel(
       {@JsonKey(includeIfNull: false, toJson: toNull)
           String? id,

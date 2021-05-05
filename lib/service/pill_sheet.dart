@@ -10,14 +10,14 @@ final pillSheetServiceProvider = Provider<PillSheetService>(
 class PillSheetService {
   final DatabaseConnection _database;
 
-  PillSheetModel? _filterForLatestPillSheet(QuerySnapshot snapshot) {
+  PillSheet? _filterForLatestPillSheet(QuerySnapshot snapshot) {
     if (snapshot.docs.isEmpty) return null;
     if (!snapshot.docs.last.exists) return null;
     var document = snapshot.docs.last;
 
     var data = document.data();
     data["id"] = document.id;
-    var pillSheetModel = PillSheetModel.fromJson(data);
+    var pillSheetModel = PillSheet.fromJson(data);
 
     return pillSheetModel;
   }
@@ -30,13 +30,13 @@ class PillSheetService {
   }
 
   PillSheetService(this._database);
-  Future<PillSheetModel?> fetchLast() {
+  Future<PillSheet?> fetchLast() {
     return _queryOfFetchLastPillSheet()
         .get()
         .then((event) => _filterForLatestPillSheet(event));
   }
 
-  Future<PillSheetModel> register(PillSheetModel model) {
+  Future<PillSheet> register(PillSheet model) {
     if (model.createdAt != null) throw PillSheetAlreadyExists();
     if (model.deletedAt != null) throw PillSheetAlreadyDeleted();
     final copied = model.copyWith(createdAt: DateTime.now());
@@ -44,18 +44,18 @@ class PillSheetService {
     var json = copied.toJson();
     json.remove("id");
     return _database.pillSheetsReference().add(json).then((value) {
-      return PillSheetModel.fromJson(json..addAll({"id": value.id}));
+      return PillSheet.fromJson(json..addAll({"id": value.id}));
     });
   }
 
-  Future<void> delete(PillSheetModel pillSheet) {
+  Future<void> delete(PillSheet pillSheet) {
     return _database.pillSheetReference(pillSheet.documentID!).update({
       PillSheetFirestoreKey.deletedAt:
           TimestampConverter.dateTimeToTimestamp(DateTime.now())
     });
   }
 
-  Future<PillSheetModel> update(PillSheetModel pillSheet) {
+  Future<PillSheet> update(PillSheet pillSheet) {
     var json = pillSheet.toJson();
     json.remove("id");
     return _database
@@ -64,7 +64,7 @@ class PillSheetService {
         .then((_) => pillSheet);
   }
 
-  Stream<PillSheetModel> subscribeForLatestPillSheet() {
+  Stream<PillSheet> subscribeForLatestPillSheet() {
     return _queryOfFetchLastPillSheet()
         .snapshots()
         .map(((event) => _filterForLatestPillSheet(event)))

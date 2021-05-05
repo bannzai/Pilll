@@ -7,7 +7,7 @@ import 'package:pilll/entity/setting.dart';
 import 'package:pilll/entity/weekday.dart';
 
 List<DateRange> scheduledMenstruationDateRanges(
-  PillSheetModel pillSheet,
+  PillSheet pillSheet,
   Setting setting,
   List<Menstruation> menstruations,
   int maxPageCount,
@@ -30,7 +30,7 @@ List<DateRange> scheduledMenstruationDateRanges(
 }
 
 List<DateRange> nextPillSheetDateRanges(
-  PillSheetModel pillSheet,
+  PillSheet pillSheet,
   int maxPageCount,
 ) {
   assert(maxPageCount > 0);
@@ -56,7 +56,7 @@ int bandLength(
 }
 
 List<CalendarBandModel> buildBandModels(
-  PillSheetModel? pillSheet,
+  PillSheet? pillSheet,
   Setting? setting,
   List<Menstruation> menstruations,
   int maxPageCount,

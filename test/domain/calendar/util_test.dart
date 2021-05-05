@@ -36,7 +36,7 @@ void main() {
         var beginingDate = DateTime.parse("2020-09-01");
         var fromMenstruation = 23;
         var durationMenstruation = 3;
-        var model = PillSheetModel(
+        var model = PillSheet(
           typeInfo: pillSheetType.typeInfo,
           beginingDate: beginingDate,
           lastTakenDate: null,
@@ -68,7 +68,7 @@ void main() {
         var beginingDate = DateTime.parse("2020-09-01");
         var fromMenstruation = 23;
         var durationMenstruation = 3;
-        var model = PillSheetModel(
+        var model = PillSheet(
           typeInfo: pillSheetType.typeInfo,
           beginingDate: beginingDate,
           lastTakenDate: null,
@@ -104,7 +104,7 @@ void main() {
         var beginingDate = DateTime.parse("2020-09-01");
         var fromMenstruation = 23;
         var durationMenstruation = 3;
-        var model = PillSheetModel(
+        var model = PillSheet(
           typeInfo: pillSheetType.typeInfo,
           beginingDate: beginingDate,
           lastTakenDate: null,
@@ -144,7 +144,7 @@ void main() {
         var beginingDate = DateTime.parse("2021-01-18");
         var fromMenstruation = 23;
         var durationMenstruation = 3;
-        var model = PillSheetModel(
+        var model = PillSheet(
           typeInfo: pillSheetType.typeInfo,
           beginingDate: beginingDate,
           lastTakenDate: null,
@@ -193,7 +193,7 @@ void main() {
     */
         var pillSheetType = PillSheetType.pillsheet_28_7;
         var beginingDate = DateTime.parse("2020-09-01");
-        var model = PillSheetModel(
+        var model = PillSheet(
           typeInfo: pillSheetType.typeInfo,
           beginingDate: beginingDate,
           lastTakenDate: null,
@@ -214,7 +214,7 @@ void main() {
       () {
         var pillSheetType = PillSheetType.pillsheet_28_7;
         var beginingDate = DateTime.parse("2020-09-01");
-        var model = PillSheetModel(
+        var model = PillSheet(
           typeInfo: pillSheetType.typeInfo,
           beginingDate: beginingDate,
           lastTakenDate: null,
@@ -239,7 +239,7 @@ void main() {
       () {
         var pillSheetType = PillSheetType.pillsheet_28_7;
         var beginingDate = DateTime.parse("2020-09-01");
-        var model = PillSheetModel(
+        var model = PillSheet(
           typeInfo: pillSheetType.typeInfo,
           beginingDate: beginingDate,
           lastTakenDate: null,
@@ -285,7 +285,7 @@ void main() {
     */
         var pillSheetType = PillSheetType.pillsheet_28_0;
         var beginingDate = DateTime.parse("2020-09-01");
-        var model = PillSheetModel(
+        var model = PillSheet(
           typeInfo: pillSheetType.typeInfo,
           beginingDate: beginingDate,
           lastTakenDate: null,

@@ -18,7 +18,7 @@ class _$SettingStateTearOff {
 
   _SettingState call(
       {required Setting? entity,
-      PillSheetModel? latestPillSheet,
+      PillSheet? latestPillSheet,
       bool userIsUpdatedFrom132 = false}) {
     return _SettingState(
       entity: entity,
@@ -34,7 +34,7 @@ const $SettingState = _$SettingStateTearOff();
 /// @nodoc
 mixin _$SettingState {
   Setting? get entity => throw _privateConstructorUsedError;
-  PillSheetModel? get latestPillSheet => throw _privateConstructorUsedError;
+  PillSheet? get latestPillSheet => throw _privateConstructorUsedError;
   bool get userIsUpdatedFrom132 => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
@@ -49,7 +49,7 @@ abstract class $SettingStateCopyWith<$Res> {
       _$SettingStateCopyWithImpl<$Res>;
   $Res call(
       {Setting? entity,
-      PillSheetModel? latestPillSheet,
+      PillSheet? latestPillSheet,
       bool userIsUpdatedFrom132});
 
   $SettingCopyWith<$Res>? get entity;
@@ -78,7 +78,7 @@ class _$SettingStateCopyWithImpl<$Res> implements $SettingStateCopyWith<$Res> {
       latestPillSheet: latestPillSheet == freezed
           ? _value.latestPillSheet
           : latestPillSheet // ignore: cast_nullable_to_non_nullable
-              as PillSheetModel?,
+              as PillSheet?,
       userIsUpdatedFrom132: userIsUpdatedFrom132 == freezed
           ? _value.userIsUpdatedFrom132
           : userIsUpdatedFrom132 // ignore: cast_nullable_to_non_nullable
@@ -118,7 +118,7 @@ abstract class _$SettingStateCopyWith<$Res>
   @override
   $Res call(
       {Setting? entity,
-      PillSheetModel? latestPillSheet,
+      PillSheet? latestPillSheet,
       bool userIsUpdatedFrom132});
 
   @override
@@ -151,7 +151,7 @@ class __$SettingStateCopyWithImpl<$Res> extends _$SettingStateCopyWithImpl<$Res>
       latestPillSheet: latestPillSheet == freezed
           ? _value.latestPillSheet
           : latestPillSheet // ignore: cast_nullable_to_non_nullable
-              as PillSheetModel?,
+              as PillSheet?,
       userIsUpdatedFrom132: userIsUpdatedFrom132 == freezed
           ? _value.userIsUpdatedFrom132
           : userIsUpdatedFrom132 // ignore: cast_nullable_to_non_nullable
@@ -172,7 +172,7 @@ class _$_SettingState extends _SettingState {
   @override
   final Setting? entity;
   @override
-  final PillSheetModel? latestPillSheet;
+  final PillSheet? latestPillSheet;
   @JsonKey(defaultValue: false)
   @override
   final bool userIsUpdatedFrom132;
@@ -212,14 +212,14 @@ class _$_SettingState extends _SettingState {
 abstract class _SettingState extends SettingState {
   factory _SettingState(
       {required Setting? entity,
-      PillSheetModel? latestPillSheet,
+      PillSheet? latestPillSheet,
       bool userIsUpdatedFrom132}) = _$_SettingState;
   _SettingState._() : super._();
 
   @override
   Setting? get entity => throw _privateConstructorUsedError;
   @override
-  PillSheetModel? get latestPillSheet => throw _privateConstructorUsedError;
+  PillSheet? get latestPillSheet => throw _privateConstructorUsedError;
   @override
   bool get userIsUpdatedFrom132 => throw _privateConstructorUsedError;
   @override

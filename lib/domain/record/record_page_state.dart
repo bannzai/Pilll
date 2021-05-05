@@ -8,7 +8,7 @@ part 'record_page_state.freezed.dart';
 abstract class RecordPageState implements _$RecordPageState {
   RecordPageState._();
   factory RecordPageState({
-    required PillSheetModel? entity,
+    required PillSheet? entity,
     Setting? setting,
     @Default(false) bool firstLoadIsEnded,
   }) = _RecordPageState;

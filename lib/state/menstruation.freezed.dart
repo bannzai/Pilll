@@ -22,7 +22,7 @@ class _$MenstruationStateTearOff {
       List<Diary> diaries = const [],
       List<Menstruation> entities = const [],
       Setting? setting,
-      PillSheetModel? latestPillSheet}) {
+      PillSheet? latestPillSheet}) {
     return _MenstruationState(
       isNotYetLoaded: isNotYetLoaded,
       currentCalendarIndex: currentCalendarIndex,
@@ -44,7 +44,7 @@ mixin _$MenstruationState {
   List<Diary> get diaries => throw _privateConstructorUsedError;
   List<Menstruation> get entities => throw _privateConstructorUsedError;
   Setting? get setting => throw _privateConstructorUsedError;
-  PillSheetModel? get latestPillSheet => throw _privateConstructorUsedError;
+  PillSheet? get latestPillSheet => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $MenstruationStateCopyWith<MenstruationState> get copyWith =>
@@ -62,7 +62,7 @@ abstract class $MenstruationStateCopyWith<$Res> {
       List<Diary> diaries,
       List<Menstruation> entities,
       Setting? setting,
-      PillSheetModel? latestPillSheet});
+      PillSheet? latestPillSheet});
 
   $SettingCopyWith<$Res>? get setting;
   $PillSheetModelCopyWith<$Res>? get latestPillSheet;
@@ -110,7 +110,7 @@ class _$MenstruationStateCopyWithImpl<$Res>
       latestPillSheet: latestPillSheet == freezed
           ? _value.latestPillSheet
           : latestPillSheet // ignore: cast_nullable_to_non_nullable
-              as PillSheetModel?,
+              as PillSheet?,
     ));
   }
 
@@ -150,7 +150,7 @@ abstract class _$MenstruationStateCopyWith<$Res>
       List<Diary> diaries,
       List<Menstruation> entities,
       Setting? setting,
-      PillSheetModel? latestPillSheet});
+      PillSheet? latestPillSheet});
 
   @override
   $SettingCopyWith<$Res>? get setting;
@@ -202,7 +202,7 @@ class __$MenstruationStateCopyWithImpl<$Res>
       latestPillSheet: latestPillSheet == freezed
           ? _value.latestPillSheet
           : latestPillSheet // ignore: cast_nullable_to_non_nullable
-              as PillSheetModel?,
+              as PillSheet?,
     ));
   }
 }
@@ -234,7 +234,7 @@ class _$_MenstruationState extends _MenstruationState {
   @override
   final Setting? setting;
   @override
-  final PillSheetModel? latestPillSheet;
+  final PillSheet? latestPillSheet;
 
   @override
   String toString() {
@@ -288,7 +288,7 @@ abstract class _MenstruationState extends MenstruationState {
       List<Diary> diaries,
       List<Menstruation> entities,
       Setting? setting,
-      PillSheetModel? latestPillSheet}) = _$_MenstruationState;
+      PillSheet? latestPillSheet}) = _$_MenstruationState;
   _MenstruationState._() : super._();
 
   @override
@@ -302,7 +302,7 @@ abstract class _MenstruationState extends MenstruationState {
   @override
   Setting? get setting => throw _privateConstructorUsedError;
   @override
-  PillSheetModel? get latestPillSheet => throw _privateConstructorUsedError;
+  PillSheet? get latestPillSheet => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$MenstruationStateCopyWith<_MenstruationState> get copyWith =>

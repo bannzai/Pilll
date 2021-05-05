@@ -22,7 +22,7 @@ inquiry() {
 Future<String> debugInfo(String separator) async {
   String userID = (await auth()).uid;
   DatabaseConnection databaseConnection = DatabaseConnection(userID);
-  PillSheetModel? pillSheet =
+  PillSheet? pillSheet =
       await PillSheetService(databaseConnection).fetchLast();
   Setting setting = await SettingService(databaseConnection).fetch();
   final menstruations =

@@ -43,7 +43,7 @@ void main() {
       final today = DateTime(2020, 09, 01);
       when(todayRepository.today()).thenReturn(today);
 
-      final pillSheet = PillSheetModel.create(PillSheetType.pillsheet_21);
+      final pillSheet = PillSheet.create(PillSheetType.pillsheet_21);
       expect(pillSheet.todayPillNumber, equals(1),
           reason: "created pill sheet model should today pill number is 1");
       expect(pillSheet.lastTakenPillNumber, equals(0),
@@ -92,7 +92,7 @@ void main() {
     final today = DateTime(2020, 09, 01);
     when(todayRepository.today()).thenReturn(today);
 
-    var pillSheet = PillSheetModel.create(PillSheetType.pillsheet_21);
+    var pillSheet = PillSheet.create(PillSheetType.pillsheet_21);
     pillSheet = pillSheet.copyWith(lastTakenDate: todayRepository.today());
     expect(pillSheet.todayPillNumber, equals(1),
         reason: "created pill sheet model should today pill number is 1");
@@ -143,7 +143,7 @@ void main() {
     final today = DateTime(2020, 09, 01);
     when(todayRepository.today()).thenReturn(today);
 
-    final pillSheet = PillSheetModel(
+    final pillSheet = PillSheet(
       beginingDate: today.subtract(Duration(days: 24)),
       typeInfo: PillSheetType.pillsheet_21.typeInfo,
       lastTakenDate: todayRepository.today(),

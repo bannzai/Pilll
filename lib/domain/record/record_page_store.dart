@@ -37,7 +37,7 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
     });
   }
 
-  StreamSubscription<PillSheetModel>? _canceller;
+  StreamSubscription<PillSheet>? _canceller;
   StreamSubscription? _settingCanceller;
   void _subscribe() {
     _canceller?.cancel();
@@ -57,7 +57,7 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
     super.dispose();
   }
 
-  Future<void> register(PillSheetModel model) {
+  Future<void> register(PillSheet model) {
     return _service
         .register(model)
         .then((entity) => state = state.copyWith(entity: entity));
@@ -124,9 +124,9 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
   }
 }
 
-Future<PillSheetModel> modifyBeginingDateFunction(
+Future<PillSheet> modifyBeginingDateFunction(
   PillSheetService service,
-  PillSheetModel pillSheet,
+  PillSheet pillSheet,
   int pillNumber,
 ) {
   return service.update(pillSheet.copyWith(
@@ -135,7 +135,7 @@ Future<PillSheetModel> modifyBeginingDateFunction(
 }
 
 DateTime calcBeginingDateFromNextTodayPillNumberFunction(
-  PillSheetModel pillSheet,
+  PillSheet pillSheet,
   int pillNumber,
 ) {
   if (pillNumber == pillSheet.todayPillNumber) return pillSheet.beginingDate;
