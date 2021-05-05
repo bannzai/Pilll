@@ -29,8 +29,7 @@ void listenNotificationEvents() {
     print('onMessage: $event');
   });
   if (Platform.isAndroid) {
-    FirebaseMessaging.onBackgroundMessage(
-        (message) => onBackgroundMessage(message.data));
+    FirebaseMessaging.onBackgroundMessage(onBackgroundMessage);
   }
   FirebaseMessaging.onMessageOpenedApp.listen((event) {
     analytics.logEvent(name: "opened_from_notification_on_background");
@@ -46,16 +45,18 @@ void callRegisterRemoteNotification() {
   }
 }
 
-Future<dynamic> onBackgroundMessage(Map<String, dynamic> message) async {
-  if (message.containsKey('data')) {
+Future<void> onBackgroundMessage(RemoteMessage message) async {
+  print("Handling a background message ${message.data}");
+  final messageData = message.data;
+  if (messageData.containsKey('data')) {
     // データメッセージをハンドリング
-    final data = message['data'];
+    final data = messageData['data'];
     print("data: $data");
   }
 
-  if (message.containsKey('notification')) {
+  if (messageData.containsKey('notification')) {
     // 通知メッセージをハンドリング
-    final notification = message['notification'];
+    final notification = messageData['notification'];
     print("notification: $notification");
   }
   print('onBackground: $message');
