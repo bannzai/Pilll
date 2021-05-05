@@ -13,6 +13,7 @@ typedef PillMarkSelected = void Function(int);
 typedef PillMarkTypeBuilder = PillMarkType Function(int);
 typedef PillMarkTypeHasRippleAnimation = bool Function(int);
 typedef DoneStateBuilder = bool Function(int);
+typedef PremiumPillMarkBuilder = PremiumPillMarkModel Function(int);
 
 class PillSheetView extends StatelessWidget {
   static final double width = 316;
@@ -25,6 +26,7 @@ class PillSheetView extends StatelessWidget {
   final DoneStateBuilder doneStateBuilder;
   final PillMarkTypeHasRippleAnimation? enabledMarkAnimation;
   final PillMarkSelected markSelected;
+  final PremiumPillMarkBuilder? premiumMarkBuilder;
 
   bool get isHideWeekdayLine => firstWeekday == null;
   int get _numberOfLine => pillSheetType.numberOfLineInPillSheet;
@@ -45,6 +47,7 @@ class PillSheetView extends StatelessWidget {
     required this.enabledMarkAnimation,
     required this.markSelected,
     required this.doneStateBuilder,
+    this.premiumMarkBuilder,
   }) : super(key: key);
 
   int _calcIndex(int row, int line) {
@@ -71,6 +74,7 @@ class PillSheetView extends StatelessWidget {
   Widget _pillMarkWithNumber(int number) {
     var type = pillMarkTypeBuilder(number);
     final enabledMarkAnimation = this.enabledMarkAnimation;
+    final premiumMarkBuilder = this.premiumMarkBuilder;
     return GestureDetector(
       onTap: () {
         markSelected(number);
@@ -87,6 +91,8 @@ class PillSheetView extends StatelessWidget {
                 : enabledMarkAnimation(number),
             isDone: doneStateBuilder(number),
             pillSheetType: type,
+            premium:
+                premiumMarkBuilder != null ? premiumMarkBuilder(number) : null,
           ),
         ],
       ),
