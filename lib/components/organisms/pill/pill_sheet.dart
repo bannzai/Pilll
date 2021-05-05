@@ -86,7 +86,7 @@ class PillSheetView extends StatelessWidget {
                 ? false
                 : enabledMarkAnimation(number),
             isDone: doneStateBuilder(number),
-            type: type,
+            pillSheetType: type,
           ),
         ],
       ),
