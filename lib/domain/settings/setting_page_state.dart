@@ -12,4 +12,7 @@ abstract class SettingState implements _$SettingState {
     PillSheetModel? latestPillSheet,
     @Default(false) bool userIsUpdatedFrom132,
   }) = _SettingState;
+
+  bool get latestPillSheetIsInvalid =>
+      latestPillSheet == null || latestPillSheet!.isInvalid;
 }

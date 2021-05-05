@@ -13,5 +13,5 @@ abstract class RecordPageState implements _$RecordPageState {
     @Default(false) bool firstLoadIsEnded,
   }) = _RecordPageState;
 
-  bool get isInvalid => entity == null || entity!.isDeleted || entity!.isEnded;
+  bool get isInvalid => entity == null || entity!.isInvalid;
 }
