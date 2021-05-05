@@ -15,7 +15,7 @@ class InitialSetting1Page extends HookWidget {
       title: "1/4",
       backButtonIsHidden: true,
       selected: (type) {
-        store.modify((model) => model.copyWith(pillSheetType: type));
+        store.selectedPillSheetType(type);
       },
       done: state.entity.pillSheetType == null
           ? null
