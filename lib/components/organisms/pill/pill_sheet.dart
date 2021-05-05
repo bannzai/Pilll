@@ -113,7 +113,8 @@ class PillSheetView extends StatelessWidget {
     final begin = premium.pillNumberForMenstruationBegin;
     final duration = premium.menstruationDuration;
     final menstruationNumbers = List.generate(duration, (index) {
-      return (begin + index) % premium.maxPillNumber;
+      final number = (begin + index) % premium.maxPillNumber;
+      return number == 0 ? premium.maxPillNumber : number;
     });
     return menstruationNumbers.contains(pillMarkNumber)
         ? TextStyle(color: PilllColors.primary)
