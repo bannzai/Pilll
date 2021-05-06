@@ -19,7 +19,7 @@ typedef PremiumPillMarkBuilder = PremiumPillMarkModel Function(int);
 class PillSheetView extends StatelessWidget {
   static final double width = 316;
   static final double lineHeight = 49.5;
-  static final double topSpace = 12;
+  static final double topSpace = 24;
   static final double bottomSpace = 24;
   final Weekday? firstWeekday;
   final PillSheetType pillSheetType;
@@ -161,27 +161,25 @@ class PillSheetView extends StatelessWidget {
         ],
       ),
       child: Padding(
-        padding: EdgeInsets.fromLTRB(28, 0, 28, PillSheetView.bottomSpace),
+        padding: EdgeInsets.fromLTRB(22, 0, 22, PillSheetView.bottomSpace),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
             if (!isHideWeekdayLine) _weekdayLine(),
             SizedBox(height: PillSheetView.topSpace),
-            Expanded(
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  ...List.generate(_numberOfLine, (line) {
-                    if (line + 1 == _numberOfLine) {
-                      return [_pillMarkLine(line)];
-                    }
-                    return [
-                      _pillMarkLine(line),
-                      SvgPicture.asset("images/pill_sheet_dot_line.svg"),
-                    ];
-                  }).expand((element) => element).toList(),
-                ],
-              ),
+            Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                ...List.generate(_numberOfLine, (line) {
+                  if (line + 1 == _numberOfLine) {
+                    return [_pillMarkLine(line)];
+                  }
+                  return [
+                    _pillMarkLine(line),
+                    SvgPicture.asset("images/pill_sheet_dot_line.svg"),
+                  ];
+                }).expand((element) => element).toList(),
+              ],
             ),
           ],
         ),
