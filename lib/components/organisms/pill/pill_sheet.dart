@@ -16,6 +16,8 @@ typedef PillMarkTypeHasRippleAnimation = bool Function(int);
 typedef DoneStateBuilder = bool Function(int);
 typedef PremiumPillMarkBuilder = PremiumPillMarkModel Function(int);
 
+final double componentWidth = 35;
+
 class PillSheetView extends StatelessWidget {
   static final double width = 316;
   static final double lineHeight = 49.5;
@@ -128,16 +130,15 @@ class PillSheetView extends StatelessWidget {
       int diff = pillSheetType.totalCount - lineIndex * Weekday.values.length;
       countOfPillMarksInLine = diff;
     }
-    final double width = 35;
     return Container(
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: List.generate(Weekday.values.length, (index) {
           if (index >= countOfPillMarksInLine) {
-            return Container(width: width);
+            return Container(width: componentWidth);
           }
           return Container(
-              width: width,
+              width: componentWidth,
               child: _pillMarkWithNumber(_calcIndex(index, lineIndex)));
         }),
       ),
