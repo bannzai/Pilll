@@ -3,6 +3,7 @@ import 'dart:convert';
 import 'package:crypto/crypto.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:nonce/nonce.dart';
+import 'package:pilll/util/environment.dart';
 import 'package:sign_in_with_apple/sign_in_with_apple.dart';
 
 Future<UserCredential?> siwa(User user) async {
@@ -12,10 +13,8 @@ Future<UserCredential?> siwa(User user) async {
     final appleCredential = await SignInWithApple.getAppleIDCredential(
       scopes: [],
       webAuthenticationOptions: WebAuthenticationOptions(
-        clientId: String.fromEnvironment("SIWA_SERVICE_IDENTIFIIER"),
-        redirectUri: Uri.parse(
-          String.fromEnvironment('ANDROID_SIWA_REDIRECT_URL'),
-        ),
+        clientId: Environment.siwaServiceIdentifier,
+        redirectUri: Uri.parse(Environment.androidSiwaRedirectURL),
       ),
       nonce: sha256.convert(utf8.encode(rawNonce)).toString(),
       state: state,
