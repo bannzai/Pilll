@@ -15,8 +15,14 @@ final authStateProvider = FutureProvider<AuthInfo>((ref) {
   return auth();
 });
 
-Future<AuthInfo> auth() =>
-    FirebaseAuth.instance.signInAnonymously().then((value) {
-      _authInfoCache = AuthInfo(value.user!.uid);
-      return _authInfoCache!;
-    });
+Future<AuthInfo> auth() {
+  final uid = FirebaseAuth.instance.currentUser?.uid;
+  if (uid != null) {
+    _authInfoCache = AuthInfo(uid);
+    return Future.value(_authInfoCache!);
+  }
+  return FirebaseAuth.instance.signInAnonymously().then((value) {
+    _authInfoCache = AuthInfo(value.user!.uid);
+    return _authInfoCache!;
+  });
+}
