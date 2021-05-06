@@ -1,5 +1,7 @@
 import 'dart:async';
 
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:pilll/auth/apple.dart';
 import 'package:pilll/database/database.dart';
 import 'package:pilll/domain/record/record_page_store.dart';
 import 'package:pilll/entity/pill_sheet.dart';
@@ -9,17 +11,24 @@ import 'package:pilll/entity/user.dart';
 import 'package:pilll/service/pill_sheet.dart';
 import 'package:pilll/service/setting.dart';
 import 'package:pilll/domain/settings/setting_page_state.dart';
+import 'package:pilll/service/user.dart';
 import 'package:pilll/util/shared_preference/keys.dart';
 import 'package:riverpod/riverpod.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-final settingStoreProvider = StateNotifierProvider((ref) => SettingStateStore(
-    ref.watch(settingServiceProvider), ref.watch(pillSheetServiceProvider)));
+final settingStoreProvider = StateNotifierProvider(
+  (ref) => SettingStateStore(
+    ref.watch(settingServiceProvider),
+    ref.watch(pillSheetServiceProvider),
+    ref.watch(userServiceProvider),
+  ),
+);
 
 class SettingStateStore extends StateNotifier<SettingState> {
   final SettingService _service;
   final PillSheetService _pillSheetService;
-  SettingStateStore(this._service, this._pillSheetService)
+  final UserService _userService;
+  SettingStateStore(this._service, this._pillSheetService, this._userService)
       : super(SettingState(entity: null)) {
     _reset();
   }
@@ -179,6 +188,16 @@ class SettingStateStore extends StateNotifier<SettingState> {
       throw FormatException("pill sheet not found");
     }
     return _pillSheetService.delete(entity);
+  }
+
+  Future<void> linkApple() {
+    final user = FirebaseAuth.instance.currentUser;
+    if (user == null) {
+      throw AssertionError("Required Firebase user");
+    }
+    return siwa(user).then((value) {
+      return _userService.linkAccount(LinkAccountType.apple);
+    });
   }
 }
 
