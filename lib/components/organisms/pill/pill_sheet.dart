@@ -68,7 +68,11 @@ class PillSheetView extends StatelessWidget {
 
           return WeekdayFunctions.weekdaysForFirstWeekday(firstWeekday)
               .map(
-                (weekday) => WeekdayBadge(weekday: weekday),
+                (weekday) => Container(
+                  width: componentWidth,
+                  color: Colors.transparent,
+                  child: Center(child: WeekdayBadge(weekday: weekday)),
+                ),
               )
               .toList();
         }());
