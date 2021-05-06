@@ -245,13 +245,13 @@ abstract class _PillSheetTypeInfo implements PillSheetTypeInfo {
       throw _privateConstructorUsedError;
 }
 
-PillSheet _$PillSheetModelFromJson(Map<String, dynamic> json) {
+PillSheet _$PillSheetFromJson(Map<String, dynamic> json) {
   return _PillSheetModel.fromJson(json);
 }
 
 /// @nodoc
-class _$PillSheetModelTearOff {
-  const _$PillSheetModelTearOff();
+class _$PillSheetTearOff {
+  const _$PillSheetTearOff();
 
   _PillSheetModel call(
       {@JsonKey(includeIfNull: false, toJson: toNull)
@@ -282,10 +282,10 @@ class _$PillSheetModelTearOff {
 }
 
 /// @nodoc
-const $PillSheetModel = _$PillSheetModelTearOff();
+const $PillSheet = _$PillSheetTearOff();
 
 /// @nodoc
-mixin _$PillSheetModel {
+mixin _$PillSheet {
   @JsonKey(includeIfNull: false, toJson: toNull)
   String? get id => throw _privateConstructorUsedError;
   @JsonKey()
@@ -309,15 +309,14 @@ mixin _$PillSheetModel {
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $PillSheetModelCopyWith<PillSheet> get copyWith =>
+  $PillSheetCopyWith<PillSheet> get copyWith =>
       throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $PillSheetModelCopyWith<$Res> {
-  factory $PillSheetModelCopyWith(
-          PillSheet value, $Res Function(PillSheet) then) =
-      _$PillSheetModelCopyWithImpl<$Res>;
+abstract class $PillSheetCopyWith<$Res> {
+  factory $PillSheetCopyWith(PillSheet value, $Res Function(PillSheet) then) =
+      _$PillSheetCopyWithImpl<$Res>;
   $Res call(
       {@JsonKey(includeIfNull: false, toJson: toNull)
           String? id,
@@ -336,9 +335,8 @@ abstract class $PillSheetModelCopyWith<$Res> {
 }
 
 /// @nodoc
-class _$PillSheetModelCopyWithImpl<$Res>
-    implements $PillSheetModelCopyWith<$Res> {
-  _$PillSheetModelCopyWithImpl(this._value, this._then);
+class _$PillSheetCopyWithImpl<$Res> implements $PillSheetCopyWith<$Res> {
+  _$PillSheetCopyWithImpl(this._value, this._then);
 
   final PillSheet _value;
   // ignore: unused_field
@@ -391,7 +389,7 @@ class _$PillSheetModelCopyWithImpl<$Res>
 
 /// @nodoc
 abstract class _$PillSheetModelCopyWith<$Res>
-    implements $PillSheetModelCopyWith<$Res> {
+    implements $PillSheetCopyWith<$Res> {
   factory _$PillSheetModelCopyWith(
           _PillSheetModel value, $Res Function(_PillSheetModel) then) =
       __$PillSheetModelCopyWithImpl<$Res>;
@@ -415,8 +413,7 @@ abstract class _$PillSheetModelCopyWith<$Res>
 }
 
 /// @nodoc
-class __$PillSheetModelCopyWithImpl<$Res>
-    extends _$PillSheetModelCopyWithImpl<$Res>
+class __$PillSheetModelCopyWithImpl<$Res> extends _$PillSheetCopyWithImpl<$Res>
     implements _$PillSheetModelCopyWith<$Res> {
   __$PillSheetModelCopyWithImpl(
       _PillSheetModel _value, $Res Function(_PillSheetModel) _then)
@@ -514,7 +511,7 @@ class _$_PillSheetModel extends _PillSheetModel {
 
   @override
   String toString() {
-    return 'PillSheetModel(id: $id, typeInfo: $typeInfo, beginingDate: $beginingDate, lastTakenDate: $lastTakenDate, createdAt: $createdAt, deletedAt: $deletedAt)';
+    return 'PillSheet(id: $id, typeInfo: $typeInfo, beginingDate: $beginingDate, lastTakenDate: $lastTakenDate, createdAt: $createdAt, deletedAt: $deletedAt)';
   }
 
   @override

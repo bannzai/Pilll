@@ -48,12 +48,10 @@ abstract class $SettingStateCopyWith<$Res> {
           SettingState value, $Res Function(SettingState) then) =
       _$SettingStateCopyWithImpl<$Res>;
   $Res call(
-      {Setting? entity,
-      PillSheet? latestPillSheet,
-      bool userIsUpdatedFrom132});
+      {Setting? entity, PillSheet? latestPillSheet, bool userIsUpdatedFrom132});
 
   $SettingCopyWith<$Res>? get entity;
-  $PillSheetModelCopyWith<$Res>? get latestPillSheet;
+  $PillSheetCopyWith<$Res>? get latestPillSheet;
 }
 
 /// @nodoc
@@ -98,12 +96,12 @@ class _$SettingStateCopyWithImpl<$Res> implements $SettingStateCopyWith<$Res> {
   }
 
   @override
-  $PillSheetModelCopyWith<$Res>? get latestPillSheet {
+  $PillSheetCopyWith<$Res>? get latestPillSheet {
     if (_value.latestPillSheet == null) {
       return null;
     }
 
-    return $PillSheetModelCopyWith<$Res>(_value.latestPillSheet!, (value) {
+    return $PillSheetCopyWith<$Res>(_value.latestPillSheet!, (value) {
       return _then(_value.copyWith(latestPillSheet: value));
     });
   }
@@ -117,14 +115,12 @@ abstract class _$SettingStateCopyWith<$Res>
       __$SettingStateCopyWithImpl<$Res>;
   @override
   $Res call(
-      {Setting? entity,
-      PillSheet? latestPillSheet,
-      bool userIsUpdatedFrom132});
+      {Setting? entity, PillSheet? latestPillSheet, bool userIsUpdatedFrom132});
 
   @override
   $SettingCopyWith<$Res>? get entity;
   @override
-  $PillSheetModelCopyWith<$Res>? get latestPillSheet;
+  $PillSheetCopyWith<$Res>? get latestPillSheet;
 }
 
 /// @nodoc
