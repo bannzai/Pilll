@@ -81,6 +81,9 @@ class SettingPage extends HookWidget {
       case SettingSection.notification:
         text = "通知";
         break;
+      case SettingSection.account:
+        text = "アカウント";
+        break;
       case SettingSection.other:
         text = "その他";
         break;
@@ -356,8 +359,14 @@ class SettingPage extends HookWidget {
                 inquiry();
               }),
         ];
-      default:
-        throw ArgumentError.notNull("");
+      case SettingSection.account:
+        return [
+          SettingListTitleRowModel(
+              title: "Apple",
+              onTap: () {
+                settingStore.linkApple();
+              }),
+        ];
     }
   }
 
