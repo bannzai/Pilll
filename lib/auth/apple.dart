@@ -20,7 +20,7 @@ Future<UserCredential?> siwa(User user) async {
       nonce: sha256.convert(utf8.encode(rawNonce)).toString(),
       state: state,
     );
-    print(appleCredential);
+    print("appleCredential: $appleCredential");
     if (state != appleCredential.state) {
       throw AssertionError('state not matched!');
     }
