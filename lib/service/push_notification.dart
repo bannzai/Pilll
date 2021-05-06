@@ -1,7 +1,7 @@
 import 'dart:io';
 
 import 'package:pilll/analytics.dart';
-import 'package:pilll/auth/auth.dart';
+import 'package:pilll/auth/anonymous.dart';
 import 'package:pilll/database/database.dart';
 import 'package:pilll/service/user.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';

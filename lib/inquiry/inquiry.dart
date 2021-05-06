@@ -1,4 +1,4 @@
-import 'package:pilll/auth/auth.dart';
+import 'package:pilll/auth/anonymous.dart';
 import 'package:pilll/database/database.dart';
 import 'package:pilll/entity/menstruation.dart';
 import 'package:pilll/entity/pill_sheet.dart';

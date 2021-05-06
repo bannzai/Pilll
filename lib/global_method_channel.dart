@@ -4,7 +4,7 @@ import 'package:pilll/util/datetime/day.dart';
 import 'package:flutter/services.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-import 'auth/auth.dart';
+import 'auth/anonymous.dart';
 
 final _channel = MethodChannel("method.channel.MizukiOhashi.Pilll");
 definedChannel() {

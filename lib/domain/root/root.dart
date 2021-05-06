@@ -1,5 +1,5 @@
 import 'package:pilll/analytics.dart';
-import 'package:pilll/auth/auth.dart';
+import 'package:pilll/auth/anonymous.dart';
 import 'package:pilll/database/database.dart';
 import 'package:pilll/domain/home/home_page.dart';
 import 'package:pilll/domain/initial_setting/initial_setting_1_page.dart';
