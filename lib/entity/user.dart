@@ -36,6 +36,8 @@ extension UserFirestoreFieldKeys on String {
   static final settings = "settings";
   static final migratedFlutter = "migratedFlutter";
   static final packageInfo = "packageInfo";
+  static final isLinkedApple = "isLinkedApple";
+  static final isLinkedAndroid = "isLinkedAndroid";
 }
 
 @freezed
@@ -48,3 +50,5 @@ abstract class User implements _$User {
 
   factory User.fromJson(Map<String, dynamic> json) => _$UserFromJson(json);
 }
+
+enum LinkAccountType { apple, google }
