@@ -47,7 +47,9 @@ void main() {
       when(pillSheetService.subscribeForLatestPillSheet())
           .thenAnswer((realInvocation) => Stream.empty());
 
-      final store = SettingStateStore(service, pillSheetService);
+      final userService = MockUserService();
+
+      final store = SettingStateStore(service, pillSheetService, userService);
       // ignore: invalid_use_of_protected_member
       store.state = SettingState(entity: setting);
 
@@ -85,7 +87,9 @@ void main() {
       when(pillSheetService.subscribeForLatestPillSheet())
           .thenAnswer((realInvocation) => Stream.empty());
 
-      final store = SettingStateStore(service, pillSheetService);
+                final userService = MockUserService();
+
+      final store = SettingStateStore(service, pillSheetService, userService);
       // ignore: invalid_use_of_protected_member
       store.state = SettingState(entity: setting);
 
@@ -118,7 +122,9 @@ void main() {
       when(pillSheetService.subscribeForLatestPillSheet())
           .thenAnswer((realInvocation) => Stream.empty());
 
-      final store = SettingStateStore(service, pillSheetService);
+      final userService = MockUserService();
+
+      final store = SettingStateStore(service, pillSheetService, userService);
       // ignore: invalid_use_of_protected_member
       store.state = SettingState(entity: setting);
 
@@ -150,7 +156,9 @@ void main() {
       when(pillSheetService.subscribeForLatestPillSheet())
           .thenAnswer((realInvocation) => Stream.empty());
 
-      final store = SettingStateStore(service, pillSheetService);
+      final userService = MockUserService();
+
+      final store = SettingStateStore(service, pillSheetService, userService);
       // ignore: invalid_use_of_protected_member
       store.state = SettingState(entity: setting);
       expect(() => store.deleteReminderTimes(0), throwsException);

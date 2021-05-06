@@ -5,6 +5,7 @@ import 'package:pilll/service/pill_sheet.dart';
 import 'package:pilll/service/setting.dart';
 import 'package:pilll/service/day.dart';
 import 'package:mockito/mockito.dart';
+import 'package:pilll/service/user.dart';
 
 class MockPillSheetService extends Mock implements PillSheetService {}
 
@@ -17,3 +18,5 @@ class MockAnalytics extends Mock implements AbstractAnalytics {}
 class MockDiaryService extends Mock implements DiaryService {}
 
 class MockMnestruationService extends Mock implements MenstruationService {}
+
+class MockUserService extends Mock implements UserService {}
