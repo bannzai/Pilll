@@ -33,7 +33,7 @@ abstract class PillSheetTypeInfo with _$PillSheetTypeInfo {
 }
 
 @freezed
-abstract class PillSheet implements _$PillSheetModel {
+abstract class PillSheet implements _$PillSheet {
   String? get documentID => id;
 
   PillSheetType get sheetType =>
@@ -66,7 +66,7 @@ abstract class PillSheet implements _$PillSheetModel {
       toJson: TimestampConverter.dateTimeToTimestamp,
     )
         DateTime? deletedAt,
-  }) = _PillSheetModel;
+  }) = _PillSheet;
   factory PillSheet.create(PillSheetType type) => PillSheet(
         typeInfo: type.typeInfo,
         beginingDate: today(),
@@ -74,9 +74,8 @@ abstract class PillSheet implements _$PillSheetModel {
       );
 
   factory PillSheet.fromJson(Map<String, dynamic> json) =>
-      _$PillSheetModelFromJson(json);
-  Map<String, dynamic> toJson() =>
-      _$_$_PillSheetModelToJson(this as _$_PillSheetModel);
+      _$PillSheetFromJson(json);
+  Map<String, dynamic> toJson() => _$_$_PillSheetToJson(this as _$_PillSheet);
 
   PillSheetType get pillSheetType =>
       PillSheetTypeFunctions.fromRawPath(typeInfo.pillSheetTypeReferencePath);

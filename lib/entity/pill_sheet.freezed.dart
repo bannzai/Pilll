@@ -246,14 +246,14 @@ abstract class _PillSheetTypeInfo implements PillSheetTypeInfo {
 }
 
 PillSheet _$PillSheetFromJson(Map<String, dynamic> json) {
-  return _PillSheetModel.fromJson(json);
+  return _PillSheet.fromJson(json);
 }
 
 /// @nodoc
 class _$PillSheetTearOff {
   const _$PillSheetTearOff();
 
-  _PillSheetModel call(
+  _PillSheet call(
       {@JsonKey(includeIfNull: false, toJson: toNull)
           String? id,
       @JsonKey()
@@ -266,7 +266,7 @@ class _$PillSheetTearOff {
           DateTime? createdAt,
       @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
           DateTime? deletedAt}) {
-    return _PillSheetModel(
+    return _PillSheet(
       id: id,
       typeInfo: typeInfo,
       beginingDate: beginingDate,
@@ -388,11 +388,10 @@ class _$PillSheetCopyWithImpl<$Res> implements $PillSheetCopyWith<$Res> {
 }
 
 /// @nodoc
-abstract class _$PillSheetModelCopyWith<$Res>
-    implements $PillSheetCopyWith<$Res> {
-  factory _$PillSheetModelCopyWith(
-          _PillSheetModel value, $Res Function(_PillSheetModel) then) =
-      __$PillSheetModelCopyWithImpl<$Res>;
+abstract class _$PillSheetCopyWith<$Res> implements $PillSheetCopyWith<$Res> {
+  factory _$PillSheetCopyWith(
+          _PillSheet value, $Res Function(_PillSheet) then) =
+      __$PillSheetCopyWithImpl<$Res>;
   @override
   $Res call(
       {@JsonKey(includeIfNull: false, toJson: toNull)
@@ -413,14 +412,13 @@ abstract class _$PillSheetModelCopyWith<$Res>
 }
 
 /// @nodoc
-class __$PillSheetModelCopyWithImpl<$Res> extends _$PillSheetCopyWithImpl<$Res>
-    implements _$PillSheetModelCopyWith<$Res> {
-  __$PillSheetModelCopyWithImpl(
-      _PillSheetModel _value, $Res Function(_PillSheetModel) _then)
-      : super(_value, (v) => _then(v as _PillSheetModel));
+class __$PillSheetCopyWithImpl<$Res> extends _$PillSheetCopyWithImpl<$Res>
+    implements _$PillSheetCopyWith<$Res> {
+  __$PillSheetCopyWithImpl(_PillSheet _value, $Res Function(_PillSheet) _then)
+      : super(_value, (v) => _then(v as _PillSheet));
 
   @override
-  _PillSheetModel get _value => super._value as _PillSheetModel;
+  _PillSheet get _value => super._value as _PillSheet;
 
   @override
   $Res call({
@@ -431,7 +429,7 @@ class __$PillSheetModelCopyWithImpl<$Res> extends _$PillSheetCopyWithImpl<$Res>
     Object? createdAt = freezed,
     Object? deletedAt = freezed,
   }) {
-    return _then(_PillSheetModel(
+    return _then(_PillSheet(
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
@@ -463,8 +461,8 @@ class __$PillSheetModelCopyWithImpl<$Res> extends _$PillSheetCopyWithImpl<$Res>
 /// @nodoc
 
 @JsonSerializable(explicitToJson: true)
-class _$_PillSheetModel extends _PillSheetModel {
-  _$_PillSheetModel(
+class _$_PillSheet extends _PillSheet {
+  _$_PillSheet(
       {@JsonKey(includeIfNull: false, toJson: toNull)
           this.id,
       @JsonKey()
@@ -479,8 +477,8 @@ class _$_PillSheetModel extends _PillSheetModel {
           this.deletedAt})
       : super._();
 
-  factory _$_PillSheetModel.fromJson(Map<String, dynamic> json) =>
-      _$_$_PillSheetModelFromJson(json);
+  factory _$_PillSheet.fromJson(Map<String, dynamic> json) =>
+      _$_$_PillSheetFromJson(json);
 
   @override
   @JsonKey(includeIfNull: false, toJson: toNull)
@@ -517,7 +515,7 @@ class _$_PillSheetModel extends _PillSheetModel {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _PillSheetModel &&
+        (other is _PillSheet &&
             (identical(other.id, id) ||
                 const DeepCollectionEquality().equals(other.id, id)) &&
             (identical(other.typeInfo, typeInfo) ||
@@ -549,17 +547,17 @@ class _$_PillSheetModel extends _PillSheetModel {
 
   @JsonKey(ignore: true)
   @override
-  _$PillSheetModelCopyWith<_PillSheetModel> get copyWith =>
-      __$PillSheetModelCopyWithImpl<_PillSheetModel>(this, _$identity);
+  _$PillSheetCopyWith<_PillSheet> get copyWith =>
+      __$PillSheetCopyWithImpl<_PillSheet>(this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_PillSheetModelToJson(this);
+    return _$_$_PillSheetToJson(this);
   }
 }
 
-abstract class _PillSheetModel extends PillSheet {
-  factory _PillSheetModel(
+abstract class _PillSheet extends PillSheet {
+  factory _PillSheet(
       {@JsonKey(includeIfNull: false, toJson: toNull)
           String? id,
       @JsonKey()
@@ -571,11 +569,11 @@ abstract class _PillSheetModel extends PillSheet {
       @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
           DateTime? createdAt,
       @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
-          DateTime? deletedAt}) = _$_PillSheetModel;
-  _PillSheetModel._() : super._();
+          DateTime? deletedAt}) = _$_PillSheet;
+  _PillSheet._() : super._();
 
-  factory _PillSheetModel.fromJson(Map<String, dynamic> json) =
-      _$_PillSheetModel.fromJson;
+  factory _PillSheet.fromJson(Map<String, dynamic> json) =
+      _$_PillSheet.fromJson;
 
   @override
   @JsonKey(includeIfNull: false, toJson: toNull)
@@ -605,6 +603,6 @@ abstract class _PillSheetModel extends PillSheet {
   DateTime? get deletedAt => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$PillSheetModelCopyWith<_PillSheetModel> get copyWith =>
+  _$PillSheetCopyWith<_PillSheet> get copyWith =>
       throw _privateConstructorUsedError;
 }

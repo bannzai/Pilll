@@ -24,8 +24,8 @@ Map<String, dynamic> _$_$_PillSheetTypeInfoToJson(
       'dosingPeriod': instance.dosingPeriod,
     };
 
-_$_PillSheetModel _$_$_PillSheetModelFromJson(Map<String, dynamic> json) {
-  return _$_PillSheetModel(
+_$_PillSheet _$_$_PillSheetFromJson(Map<String, dynamic> json) {
+  return _$_PillSheet(
     id: json['id'] as String?,
     typeInfo:
         PillSheetTypeInfo.fromJson(json['typeInfo'] as Map<String, dynamic>),
@@ -40,7 +40,7 @@ _$_PillSheetModel _$_$_PillSheetModelFromJson(Map<String, dynamic> json) {
   );
 }
 
-Map<String, dynamic> _$_$_PillSheetModelToJson(_$_PillSheetModel instance) {
+Map<String, dynamic> _$_$_PillSheetToJson(_$_PillSheet instance) {
   final val = <String, dynamic>{};
 
   void writeNotNull(String key, dynamic value) {
