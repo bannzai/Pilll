@@ -25,8 +25,7 @@ Future<UserCredential?> siwa(User user) async {
       accessToken: appleCredential.authorizationCode,
       rawNonce: rawNonce,
     );
-    final userCredential = await user.linkWithCredential(credential);
-    return Future.value(userCredential);
+    return await user.linkWithCredential(credential);
   } on SignInWithAppleAuthorizationException catch (e) {
     if (e.code == AuthorizationErrorCode.canceled) {
       return Future.value(null);
