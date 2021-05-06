@@ -46,6 +46,8 @@ abstract class User implements _$User {
   factory User({
     @JsonKey(name: "settings") Setting? setting,
     @Default(false) bool migratedFlutter,
+    @Default(false) bool isLinkedApple,
+    @Default(false) bool isLinkedAndroid,
   }) = _User;
 
   factory User.fromJson(Map<String, dynamic> json) => _$UserFromJson(json);
