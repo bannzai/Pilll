@@ -1,3 +1,4 @@
+#include "Production-Secret.xcconfig"
 FLUTTER_FLAVOR=Production
 PRODUCT_BUNDLE_IDENTIFIER=com.mizuki.Ohashi.Pilll
 DISPLAY_NAME=Pilll
