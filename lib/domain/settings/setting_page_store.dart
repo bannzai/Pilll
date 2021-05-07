@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:pilll/auth/apple.dart';
+import 'package:pilll/auth/google.dart';
 import 'package:pilll/database/database.dart';
 import 'package:pilll/domain/record/record_page_store.dart';
 import 'package:pilll/entity/pill_sheet.dart';
@@ -197,6 +198,16 @@ class SettingStateStore extends StateNotifier<SettingState> {
     }
     return siwa(user).then((value) {
       return _userService.linkAccount(LinkAccountType.apple);
+    });
+  }
+
+  Future<void> linkGoogle() {
+    final user = FirebaseAuth.instance.currentUser;
+    if (user == null) {
+      throw AssertionError("Required Firebase user");
+    }
+    return signInWithGoogle(user).then((value) {
+      return _userService.linkAccount(LinkAccountType.google);
     });
   }
 }
