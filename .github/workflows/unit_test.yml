@@ -6,9 +6,9 @@ name: Test
 # events but only for the main branch
 on:
   push:
-    branches: [ main ]
+    branches: [ main, feature/* ]
   pull_request:
-    branches: [ main ]
+    branches: [ main, feature/* ]
 
 jobs:
   build-ios-debug:
