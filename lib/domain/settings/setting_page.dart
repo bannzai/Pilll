@@ -362,10 +362,17 @@ class SettingPage extends HookWidget {
       case SettingSection.account:
         return [
           SettingListTitleRowModel(
-              title: "Apple",
-              onTap: () {
-                settingStore.linkApple();
-              }),
+            title: "Apple",
+            onTap: () {
+              settingStore.linkApple();
+            },
+          ),
+          SettingListTitleRowModel(
+            title: "Google",
+            onTap: () {
+              settingStore.linkGoogle();
+            },
+          ),
         ];
     }
   }
