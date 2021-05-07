@@ -120,4 +120,20 @@ class UserService {
         }, SetOptions(merge: true));
     }
   }
+
+  Future<void> storeEmail(LinkAccountType linkAccountType, String email) {
+    print("email: $email");
+    switch (linkAccountType) {
+      case LinkAccountType.apple:
+        return _database.userPrivateReference().set(
+          {UserPrivateFirestoreFieldKeys.appleEmail: email},
+          SetOptions(merge: true),
+        );
+      case LinkAccountType.google:
+        return _database.userPrivateReference().set(
+          {UserPrivateFirestoreFieldKeys.googleEmail: email},
+          SetOptions(merge: true),
+        );
+    }
+  }
 }
