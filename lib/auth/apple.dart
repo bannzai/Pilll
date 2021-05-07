@@ -8,7 +8,7 @@ Future<UserCredential?> linkWithApple(User user) async {
     final rawNonce = generateNonce();
     final state = generateNonce();
     final appleCredential = await SignInWithApple.getAppleIDCredential(
-      scopes: [],
+      scopes: [AppleIDAuthorizationScopes.email],
       webAuthenticationOptions: WebAuthenticationOptions(
         clientId: Environment.siwaServiceIdentifier,
         redirectUri: Uri.parse(Environment.androidSiwaRedirectURL),

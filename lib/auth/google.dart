@@ -4,6 +4,9 @@ import 'package:google_sign_in/google_sign_in.dart';
 Future<UserCredential?> linkWithGoogle(User user) async {
   // NOTE: workaround https://github.com/flutter/flutter/issues/44564#issuecomment-655884103
   final googleUser = await GoogleSignIn(
+    scopes: [
+      'email',
+    ],
     hostedDomain: "",
   ).signIn();
 
