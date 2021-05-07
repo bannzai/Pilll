@@ -65,7 +65,7 @@ abstract class $MenstruationStateCopyWith<$Res> {
       PillSheet? latestPillSheet});
 
   $SettingCopyWith<$Res>? get setting;
-  $PillSheetModelCopyWith<$Res>? get latestPillSheet;
+  $PillSheetCopyWith<$Res>? get latestPillSheet;
 }
 
 /// @nodoc
@@ -126,12 +126,12 @@ class _$MenstruationStateCopyWithImpl<$Res>
   }
 
   @override
-  $PillSheetModelCopyWith<$Res>? get latestPillSheet {
+  $PillSheetCopyWith<$Res>? get latestPillSheet {
     if (_value.latestPillSheet == null) {
       return null;
     }
 
-    return $PillSheetModelCopyWith<$Res>(_value.latestPillSheet!, (value) {
+    return $PillSheetCopyWith<$Res>(_value.latestPillSheet!, (value) {
       return _then(_value.copyWith(latestPillSheet: value));
     });
   }
@@ -155,7 +155,7 @@ abstract class _$MenstruationStateCopyWith<$Res>
   @override
   $SettingCopyWith<$Res>? get setting;
   @override
-  $PillSheetModelCopyWith<$Res>? get latestPillSheet;
+  $PillSheetCopyWith<$Res>? get latestPillSheet;
 }
 
 /// @nodoc

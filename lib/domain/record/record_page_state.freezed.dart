@@ -49,7 +49,7 @@ abstract class $RecordPageStateCopyWith<$Res> {
       _$RecordPageStateCopyWithImpl<$Res>;
   $Res call({PillSheet? entity, Setting? setting, bool firstLoadIsEnded});
 
-  $PillSheetModelCopyWith<$Res>? get entity;
+  $PillSheetCopyWith<$Res>? get entity;
   $SettingCopyWith<$Res>? get setting;
 }
 
@@ -85,12 +85,12 @@ class _$RecordPageStateCopyWithImpl<$Res>
   }
 
   @override
-  $PillSheetModelCopyWith<$Res>? get entity {
+  $PillSheetCopyWith<$Res>? get entity {
     if (_value.entity == null) {
       return null;
     }
 
-    return $PillSheetModelCopyWith<$Res>(_value.entity!, (value) {
+    return $PillSheetCopyWith<$Res>(_value.entity!, (value) {
       return _then(_value.copyWith(entity: value));
     });
   }
@@ -117,7 +117,7 @@ abstract class _$RecordPageStateCopyWith<$Res>
   $Res call({PillSheet? entity, Setting? setting, bool firstLoadIsEnded});
 
   @override
-  $PillSheetModelCopyWith<$Res>? get entity;
+  $PillSheetCopyWith<$Res>? get entity;
   @override
   $SettingCopyWith<$Res>? get setting;
 }
