@@ -24,7 +24,7 @@ _$_User _$_$_UserFromJson(Map<String, dynamic> json) {
         : Setting.fromJson(json['settings'] as Map<String, dynamic>),
     migratedFlutter: json['migratedFlutter'] as bool? ?? false,
     isLinkedApple: json['isLinkedApple'] as bool? ?? false,
-    isLinkedAndroid: json['isLinkedAndroid'] as bool? ?? false,
+    isLinkedGoogle: json['isLinkedGoogle'] as bool? ?? false,
   );
 }
 
@@ -32,5 +32,5 @@ Map<String, dynamic> _$_$_UserToJson(_$_User instance) => <String, dynamic>{
       'settings': instance.setting,
       'migratedFlutter': instance.migratedFlutter,
       'isLinkedApple': instance.isLinkedApple,
-      'isLinkedAndroid': instance.isLinkedAndroid,
+      'isLinkedGoogle': instance.isLinkedGoogle,
     };

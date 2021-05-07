@@ -18,8 +18,6 @@ class UserAlreadyExists implements Exception {
 
 extension UserPrivateFirestoreFieldKeys on String {
   static final fcmToken = 'fcmToken';
-  static final appleEmail = 'appleEmail';
-  static final googleEmail = 'googleEmail';
 }
 
 @freezed
@@ -39,7 +37,9 @@ extension UserFirestoreFieldKeys on String {
   static final migratedFlutter = "migratedFlutter";
   static final packageInfo = "packageInfo";
   static final isLinkedApple = "isLinkedApple";
-  static final isLinkedAndroid = "isLinkedAndroid";
+  static final isLinkedGoogle = "isLinkedGoogle";
+  static final appleEmail = 'appleEmail';
+  static final googleEmail = 'googleEmail';
 }
 
 @freezed
@@ -49,7 +49,7 @@ abstract class User implements _$User {
     @JsonKey(name: "settings") Setting? setting,
     @Default(false) bool migratedFlutter,
     @Default(false) bool isLinkedApple,
-    @Default(false) bool isLinkedAndroid,
+    @Default(false) bool isLinkedGoogle,
   }) = _User;
 
   factory User.fromJson(Map<String, dynamic> json) => _$UserFromJson(json);
