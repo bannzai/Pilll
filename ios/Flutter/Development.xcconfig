@@ -1,3 +1,4 @@
+#include "Base.xcconfig"
 #include "Development-Secret.xcconfig"
 FLUTTER_FLAVOR=Development
 PRODUCT_BUNDLE_IDENTIFIER=com.mizuki.Ohashi.Pilll.dev
