@@ -2,7 +2,10 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 
 Future<UserCredential?> signInWithGoogle(User user) async {
-  final googleUser = await GoogleSignIn().signIn();
+  // NOTE: workaround https://github.com/flutter/flutter/issues/44564#issuecomment-655884103
+  final googleUser = await GoogleSignIn(
+    hostedDomain: "",
+  ).signIn();
 
   // NOTE: aborted
   if (googleUser == null) {
