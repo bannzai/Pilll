@@ -18,6 +18,8 @@ class UserAlreadyExists implements Exception {
 
 extension UserPrivateFirestoreFieldKeys on String {
   static final fcmToken = 'fcmToken';
+  static final appleEmail = 'appleEmail';
+  static final googleEmail = 'googleEmail';
 }
 
 @freezed
