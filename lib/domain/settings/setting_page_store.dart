@@ -191,23 +191,35 @@ class SettingStateStore extends StateNotifier<SettingState> {
     return _pillSheetService.delete(entity);
   }
 
-  Future<void> linkApple() {
+  Future<bool> linkApple() {
     final user = FirebaseAuth.instance.currentUser;
     if (user == null) {
       throw AssertionError("Required Firebase user");
     }
-    return linkWithApple(user).then((value) {
-      return _userService.linkAccount(LinkAccountType.apple);
+    return linkWithApple(user).then((credential) {
+      final _credential = credential;
+      if (_credential == null) {
+        return Future.value(false);
+      }
+      final email = _credential.user?.email;
+      assert(email != null);
+      return _userService.linkApple(email ?? "").then((value) => true);
     });
   }
 
-  Future<void> linkGoogle() {
+  Future<bool> linkGoogle() {
     final user = FirebaseAuth.instance.currentUser;
     if (user == null) {
       throw AssertionError("Required Firebase user");
     }
-    return linkWithGoogle(user).then((value) {
-      return _userService.linkAccount(LinkAccountType.google);
+    return linkWithGoogle(user).then((credential) {
+      final _credential = credential;
+      if (_credential == null) {
+        return Future.value(false);
+      }
+      final email = _credential.user?.email;
+      assert(email != null);
+      return _userService.linkGoogle(email ?? "").then((value) => true);
     });
   }
 }
