@@ -108,32 +108,17 @@ class UserService {
     });
   }
 
-  Future<void> linkAccount(LinkAccountType linkAccountType) {
-    switch (linkAccountType) {
-      case LinkAccountType.apple:
-        return _database.userReference().set({
-          UserFirestoreFieldKeys.isLinkedApple: true,
-        }, SetOptions(merge: true));
-      case LinkAccountType.google:
-        return _database.userReference().set({
-          UserFirestoreFieldKeys.isLinkedAndroid: true,
-        }, SetOptions(merge: true));
-    }
+  Future<void> linkApple(String email) {
+    return _database.userReference().set({
+      UserFirestoreFieldKeys.isLinkedApple: true,
+      UserFirestoreFieldKeys.appleEmail: email,
+    }, SetOptions(merge: true));
   }
 
-  Future<void> storeEmail(LinkAccountType linkAccountType, String email) {
-    print("email: $email");
-    switch (linkAccountType) {
-      case LinkAccountType.apple:
-        return _database.userPrivateReference().set(
-          {UserPrivateFirestoreFieldKeys.appleEmail: email},
-          SetOptions(merge: true),
-        );
-      case LinkAccountType.google:
-        return _database.userPrivateReference().set(
-          {UserPrivateFirestoreFieldKeys.googleEmail: email},
-          SetOptions(merge: true),
-        );
-    }
+  Future<void> linkGoogle(String email) {
+    return _database.userReference().set({
+      UserFirestoreFieldKeys.isLinkedGoogle: true,
+      UserFirestoreFieldKeys.googleEmail: email,
+    }, SetOptions(merge: true));
   }
 }
