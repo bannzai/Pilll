@@ -196,7 +196,7 @@ class SettingStateStore extends StateNotifier<SettingState> {
     if (user == null) {
       throw AssertionError("Required Firebase user");
     }
-    return siwa(user).then((value) {
+    return linkWithApple(user).then((value) {
       return _userService.linkAccount(LinkAccountType.apple);
     });
   }
@@ -206,7 +206,7 @@ class SettingStateStore extends StateNotifier<SettingState> {
     if (user == null) {
       throw AssertionError("Required Firebase user");
     }
-    return signInWithGoogle(user).then((value) {
+    return linkWithGoogle(user).then((value) {
       return _userService.linkAccount(LinkAccountType.google);
     });
   }

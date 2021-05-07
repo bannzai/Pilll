@@ -3,7 +3,7 @@ import 'package:pilll/auth/util.dart';
 import 'package:pilll/util/environment.dart';
 import 'package:sign_in_with_apple/sign_in_with_apple.dart';
 
-Future<UserCredential?> siwa(User user) async {
+Future<UserCredential?> linkWithApple(User user) async {
   try {
     final rawNonce = generateNonce();
     final state = generateNonce();
