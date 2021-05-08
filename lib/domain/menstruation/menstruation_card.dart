@@ -40,7 +40,7 @@ class MenstruationCard extends StatelessWidget {
                 Text(
                   DateTimeFormatter.monthAndWeekday(state.scheduleDate),
                   style: TextColorStyle.gray.merge(
-                    FontType.xBigTitle,
+                    FontType.xBigNumber,
                   ),
                 ),
               ],
