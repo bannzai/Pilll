@@ -31,7 +31,6 @@ class InitialSetting1Page extends HookWidget {
 extension InitialSetting1PageRoute on InitialSetting1Page {
   static InitialSetting1Page screen() {
     analytics.setCurrentScreen(screenName: "InitialSetting1Page");
-    analytics.logEvent(name: "screen_InitialSetting1Page");
     return InitialSetting1Page();
   }
 }
