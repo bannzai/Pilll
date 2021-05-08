@@ -2,24 +2,37 @@ import 'package:flutter_svg/svg.dart';
 import 'package:flutter/material.dart';
 import 'package:pilll/analytics.dart';
 import 'package:pilll/components/atoms/buttons.dart';
+import 'package:pilll/components/atoms/font.dart';
+import 'package:pilll/components/atoms/text_color.dart';
 import 'package:sign_in_with_apple/sign_in_with_apple.dart';
 
 class SigninSheet extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return DraggableScrollableSheet(
-      initialChildSize: 0.5,
-      maxChildSize: 0.5,
+      initialChildSize: 1,
+      maxChildSize: 1,
       builder: (context, scrollController) {
-        return Column(
-          children: [
-            SvgPicture.asset("images/draggable_bar.svg", height: 6),
-            Text("アカウント登録"),
-            Text("アカウント登録すると\nデータの引き継ぎが可能になります"),
-            SignInWithAppleButton(onPressed: () {}),
-            _googleButton(),
-            SecondaryButton(onPressed: () {}, text: "ログイン")
-          ],
+        return Container(
+          height: 340,
+          color: Colors.white,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            mainAxisSize: MainAxisSize.max,
+            children: [
+              SvgPicture.asset("images/draggable_bar.svg", height: 6),
+              Text("アカウント登録",
+                  textAlign: TextAlign.center,
+                  style: TextColorStyle.main.merge(FontType.xBigTitle)),
+              Text(
+                "アカウント登録すると\nデータの引き継ぎが可能になります",
+                textAlign: TextAlign.center,
+              ),
+              SignInWithAppleButton(onPressed: () {}),
+              _googleButton(),
+              SecondaryButton(onPressed: () {}, text: "ログイン")
+            ],
+          ),
         );
       },
     );
