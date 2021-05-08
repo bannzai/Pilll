@@ -13,7 +13,7 @@ class SigninSheet extends StatelessWidget {
       builder: (context, scrollController) {
         return Column(
           children: [
-            SvgPicture.asset("assets/draggable_bar.svg", height: 6),
+            SvgPicture.asset("images/draggable_bar.svg", height: 6),
             Text("アカウント登録"),
             Text("アカウント登録すると\nデータの引き継ぎが可能になります"),
             SignInWithAppleButton(onPressed: () {}),
@@ -42,7 +42,7 @@ class SigninSheet extends StatelessWidget {
           mainAxisSize: MainAxisSize.min,
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            SvgPicture.asset("assets/google_icon.svg", height: 35),
+            SvgPicture.asset("images/google_icon.svg", height: 35),
             Padding(
               padding: const EdgeInsets.only(left: 10),
               child: Text(
