@@ -17,6 +17,7 @@ import 'package:pilll/components/atoms/buttons.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
+import 'package:pilll/signin/signin_sheet.dart';
 import 'package:pilll/util/datetime/day.dart';
 import 'package:pilll/util/shared_preference/keys.dart';
 import 'package:pilll/util/toolbar/picker_toolbar.dart';
@@ -214,7 +215,8 @@ class RecordPage extends HookWidget {
           "last_taken_pill_number": pillSheet.lastTakenPillNumber,
           "today_pill_number": pillSheet.todayPillNumber,
         });
-        _take(context, pillSheet, now(), store);
+        showSigninSheet(context);
+        // _take(context, pillSheet, now(), store);
       },
     );
   }
