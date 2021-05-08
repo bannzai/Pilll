@@ -1,5 +1,6 @@
 import 'package:flutter_svg/svg.dart';
 import 'package:flutter/material.dart';
+import 'package:pilll/analytics.dart';
 import 'package:pilll/components/atoms/buttons.dart';
 import 'package:sign_in_with_apple/sign_in_with_apple.dart';
 
@@ -58,4 +59,13 @@ class SigninSheet extends StatelessWidget {
       ),
     );
   }
+}
+
+showSigninSheet(BuildContext context) {
+  analytics.setCurrentScreen(screenName: "SigninSheet");
+  showModalBottomSheet(
+    context: context,
+    builder: (_) => SigninSheet(),
+    backgroundColor: Colors.transparent,
+  );
 }
