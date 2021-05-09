@@ -13,5 +13,7 @@ abstract class Environment {
   static Flavor? flavor;
   // Avoid too, too much CPU usage.
   // Ref: https://github.com/flutter/flutter/issues/13203#issuecomment-430134157
-  static bool get disableWidgetAnimation => true && isDevelopment;
+  static bool get disableWidgetAnimation =>
+      String.fromEnvironment("DISABLE_WIDGET_ANIMATION") == "true" &&
+      isDevelopment;
 }
