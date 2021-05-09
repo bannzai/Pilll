@@ -11,4 +11,7 @@ abstract class Environment {
   static bool get isLocal => flavor == Flavor.LOCAL;
   static bool isTest = false;
   static Flavor? flavor;
+  // Avoid too, too much CPU usage.
+  // Ref: https://github.com/flutter/flutter/issues/13203#issuecomment-430134157
+  static bool get disableWidgetAnimation => true && isDevelopment;
 }
