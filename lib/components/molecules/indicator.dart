@@ -1,6 +1,7 @@
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/domain/root/root.dart';
 import 'package:flutter/material.dart';
+import 'package:pilll/util/environment.dart';
 
 class Indicator extends StatelessWidget {
   const Indicator({
@@ -9,6 +10,13 @@ class Indicator extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    if (Environment.disableWidgetAnimation) {
+      return Container(
+        color: PilllColors.primary,
+        width: 40,
+        height: 40,
+      );
+    }
     return Container(
       child: Center(
         child: CircularProgressIndicator(
