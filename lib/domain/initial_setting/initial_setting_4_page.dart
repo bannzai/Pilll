@@ -1,3 +1,4 @@
+import 'package:pilll/analytics.dart';
 import 'package:pilll/router/router.dart';
 import 'package:pilll/state/initial_setting.dart';
 import 'package:pilll/store/initial_setting.dart';
@@ -23,6 +24,7 @@ class InitialSetting4Page extends HookWidget {
     InitialSettingState state,
     InitialSettingStateStore store,
   ) {
+    analytics.logEvent(name: "show_initial_setting_reminder_picker");
     final reminderDateTime = state.reminderTimeOrDefault(index);
     final n = now();
     DateTime initialDateTime = reminderDateTime != null
@@ -34,6 +36,9 @@ class InitialSetting4Page extends HookWidget {
         return DateTimePicker(
           initialDateTime: initialDateTime,
           done: (dateTime) {
+            analytics.logEvent(
+                name: "selected_date_initial_setting_4",
+                parameters: {"hour": dateTime.hour, "minute": dateTime.minute});
             store.setReminderTime(index, dateTime.hour, dateTime.minute);
             Navigator.pop(context);
           },
@@ -176,6 +181,7 @@ class InitialSetting4Page extends HookWidget {
                     PrimaryButton(
                       text: "設定完了",
                       onPressed: () {
+                        analytics.logEvent(name: "done_initial_setting_4");
                         store
                             .register(state.entity.copyWith(isOnReminder: true))
                             .then((_) => AppRouter.endInitialSetting(context));

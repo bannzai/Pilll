@@ -1,3 +1,4 @@
+import 'package:pilll/analytics.dart';
 import 'package:pilll/store/initial_setting.dart';
 import 'package:pilll/components/atoms/buttons.dart';
 import 'package:pilll/components/atoms/color.dart';
@@ -61,6 +62,9 @@ class InitialSetting2Page extends HookWidget {
                         },
                         enabledMarkAnimation: null,
                         markSelected: (number) {
+                          analytics.logEvent(
+                              name: "selected_number_initial_setting_2",
+                              parameters: {"pill_number": number});
                           store.modify((model) =>
                               model.copyWith(todayPillNumber: number));
                         },
@@ -72,6 +76,8 @@ class InitialSetting2Page extends HookWidget {
                         onPressed: () {
                           store.modify(
                               (model) => model.copyWith(todayPillNumber: null));
+                          analytics.logEvent(
+                              name: "selected_unknown_initial_setting_2");
                           Navigator.of(context)
                               .push(InitialSetting3PageRoute.route());
                         },
@@ -88,6 +94,7 @@ class InitialSetting2Page extends HookWidget {
                     onPressed: state.entity.todayPillNumber == null
                         ? null
                         : () {
+                            analytics.logEvent(name: "done_initial_setting_2");
                             Navigator.of(context)
                                 .push(InitialSetting3PageRoute.route());
                           },

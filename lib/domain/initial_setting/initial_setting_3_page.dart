@@ -1,3 +1,4 @@
+import 'package:pilll/analytics.dart';
 import 'package:pilll/components/organisms/setting/setting_menstruation_page.dart';
 import 'package:pilll/domain/initial_setting/initial_setting_4_page.dart';
 import 'package:pilll/store/initial_setting.dart';
@@ -16,6 +17,7 @@ class InitialSetting3Page extends HookWidget {
       title: "3/4",
       doneText: "次へ",
       done: () {
+        analytics.logEvent(name: "done_initial_setting_3");
         Navigator.of(context).push(InitialSetting4PageRoute.route());
       },
       pillSheetTotalCount: state.entity.pillSheetType!.totalCount,
@@ -25,10 +27,12 @@ class InitialSetting3Page extends HookWidget {
         pillSheetType: state.entity.pillSheetType!,
       ),
       fromMenstructionDidDecide: (selectedFromMenstruction) {
+        analytics.logEvent(name: "decided_from_initial_setting_3");
         store.modify((model) =>
             model.copyWith(fromMenstruation: selectedFromMenstruction));
       },
       durationMenstructionDidDecide: (selectedDurationMenstruation) {
+        analytics.logEvent(name: "decided_duration_initial_setting_3");
         store.modify((model) =>
             model.copyWith(durationMenstruation: selectedDurationMenstruation));
       },

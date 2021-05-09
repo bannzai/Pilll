@@ -13,6 +13,8 @@ class Analytics extends AbstractAnalytics {
   @override
   Future<void> logEvent(
       {required String name, Map<String, dynamic>? parameters}) async {
+    assert(name.length <= 40,
+        "firebase analytics log event name limit length up to 40");
     return firebaseAnalytics.logEvent(name: name, parameters: parameters);
   }
 
