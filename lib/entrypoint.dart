@@ -1,8 +1,10 @@
 import 'dart:async';
 import 'dart:io';
 
+import 'package:flutter/cupertino.dart';
 import 'package:pilll/analytics.dart';
 import 'package:pilll/components/atoms/color.dart';
+import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/database/database.dart';
 import 'package:pilll/entity/user_error.dart';
 import 'package:pilll/error/universal_error_page.dart';
@@ -67,6 +69,8 @@ class App extends StatelessWidget {
         primaryColor: PilllColors.primary,
         visualDensity: VisualDensity.adaptivePlatformDensity,
         accentColor: PilllColors.accent,
+        cupertinoOverrideTheme: NoDefaultCupertinoThemeData(
+            textTheme: CupertinoTextThemeData(textStyle: FontType.xBigTitle)),
         buttonTheme: ButtonThemeData(
           buttonColor: PilllColors.secondary,
           disabledColor: PilllColors.disable,
