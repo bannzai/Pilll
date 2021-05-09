@@ -7,35 +7,34 @@ import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:sign_in_with_apple/sign_in_with_apple.dart';
 
+abstract class SigninSheetConst {
+  static final double height = 340;
+}
+
 class SigninSheet extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return DraggableScrollableSheet(
-      initialChildSize: 1,
-      maxChildSize: 1,
-      builder: (context, scrollController) {
-        return Container(
-          height: 340,
-          color: Colors.white,
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
-            mainAxisSize: MainAxisSize.max,
-            children: [
-              SvgPicture.asset("images/draggable_bar.svg", height: 6),
-              Text("アカウント登録",
-                  textAlign: TextAlign.center,
-                  style: TextColorStyle.main.merge(FontType.xBigTitle)),
-              Text(
-                "アカウント登録すると\nデータの引き継ぎが可能になります",
+    return Container(
+      constraints: BoxConstraints(maxHeight: 360, minHeight: 300),
+      color: Colors.white,
+      child: SafeArea(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.spaceAround,
+          mainAxisSize: MainAxisSize.max,
+          children: [
+            SvgPicture.asset("images/draggable_bar.svg", height: 6),
+            Text("アカウント登録",
                 textAlign: TextAlign.center,
-              ),
-              _appleButton(),
-              _googleButton(),
-              SecondaryButton(onPressed: () {}, text: "ログイン")
-            ],
-          ),
-        );
-      },
+                style: TextColorStyle.main.merge(FontType.sBigTitle)),
+            Text("アカウント登録すると\nデータの引き継ぎが可能になります",
+                textAlign: TextAlign.center,
+                style: TextColorStyle.main.merge(FontType.assisting)),
+            _appleButton(),
+            _googleButton(),
+            SecondaryButton(onPressed: () {}, text: "ログイン")
+          ],
+        ),
+      ),
     );
   }
 
@@ -115,7 +114,7 @@ showSigninSheet(BuildContext context) {
   analytics.setCurrentScreen(screenName: "SigninSheet");
   showModalBottomSheet(
     context: context,
-    builder: (_) => SigninSheet(),
+    builder: (context) => SigninSheet(),
     backgroundColor: Colors.transparent,
   );
 }
