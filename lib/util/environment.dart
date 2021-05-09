@@ -14,5 +14,5 @@ abstract class Environment {
   // Avoid too, too much CPU usage.
   // Ref: https://github.com/flutter/flutter/issues/13203#issuecomment-430134157
   static bool get disableWidgetAnimation =>
-      bool.fromEnvironment("DISABLE_WIDGET_ANIMATION") && isDevelopment;
+      const bool.fromEnvironment("DISABLE_WIDGET_ANIMATION") && isDevelopment;
 }
