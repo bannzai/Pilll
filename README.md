@@ -1,17 +1,22 @@
 # Pilll
 ![Test](https://github.com/bannzai/Pilll/workflows/Test/badge.svg)
 
-A new Flutter project.
+## HP
+https://pilll.anotion.so/
 
-## Getting Started
+## Blogs
+TODO:
 
-This project is a starting point for a Flutter application.
+## Download
+- [Google Play](https://play.google.com/store/apps/details?id=com.mizuki.Ohashi.Pilll)
+- [App Store](https://apps.apple.com/jp/app/pilll-%E3%83%94%E3%83%AB%E3%83%AA%E3%83%9E%E3%82%A4%E3%83%B3%E3%83%80%E3%83%BC%E3%81%B4%E3%82%8B%E3%82%8B/id1405931017)
 
-A few resources to get you started if this is your first Flutter project:
+## LICENSE
+ライセンスと書いておきながら規格に沿ったものの提示は無いです。原則[No LICENSE](https://choosealicense.com/no-permission/)です。つまり著作権と同等の権利を主張します。
+ただしPull Request等は許可したいので独自で許可することを定めて列挙します。
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+- このソフトウェアを使用・複写できることを無償で許可します
+- 当リポジトリにPull Requestを送る、または個人利用の範囲内ではソースコードの変更を認めます
+- 利用に伴い作成者はいかなる責任も負いません
+- 当リポジトリに存在する あなた が改変したソースコードに対して、私を含む他者が自由に改変できることを認めてください
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
