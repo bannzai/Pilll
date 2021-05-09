@@ -11,7 +11,8 @@ class Indicator extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       child: Center(
-        child: Container(color: PilllColors.primary),
+        child: CircularProgressIndicator(
+            valueColor: AlwaysStoppedAnimation(PilllColors.primary)),
       ),
     );
   }
