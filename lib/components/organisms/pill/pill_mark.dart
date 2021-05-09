@@ -30,13 +30,13 @@ class _PillMarkState extends State<PillMark> with TickerProviderStateMixin {
 
   @override
   void initState() {
-    _controller = AnimationController(
-      duration: const Duration(milliseconds: 1500),
-      vsync: this,
-    );
+    // _controller = AnimationController(
+    //   duration: const Duration(milliseconds: 1500),
+    //   vsync: this,
+    // );
     // NOTE: This statement for avoid of tester.pumpAndSettle exception about timeout
     if (!Environment.isTest) {
-      _controller!.repeat();
+      // _controller!.repeat();
     }
 
     super.initState();
@@ -62,14 +62,15 @@ class _PillMarkState extends State<PillMark> with TickerProviderStateMixin {
             left: -30,
             top: -30,
             child: Container(
-              child: CustomPaint(
-                size: Size(
-                    PillMarkConst.edgeOfRipple, PillMarkConst.edgeOfRipple),
-                painter: Ripple(
-                  _controller,
-                  color: PilllColors.primary,
-                ),
-              ),
+              child: Text("あいうえお"),
+              // child: CustomPaint(
+              //   size: Size(
+              //       PillMarkConst.edgeOfRipple, PillMarkConst.edgeOfRipple),
+              //   painter: Ripple(
+              //     _controller,
+              //     color: PilllColors.primary,
+              //   ),
+              // ),
             ),
           ),
       ],
