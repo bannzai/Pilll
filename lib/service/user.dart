@@ -1,5 +1,9 @@
 import 'dart:io';
 
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:pilll/auth/apple.dart';
+import 'package:pilll/auth/google.dart';
+import 'package:pilll/auth/util.dart';
 import 'package:pilll/database/database.dart';
 import 'package:pilll/entity/package.dart';
 import 'package:pilll/entity/user.dart';
@@ -108,17 +112,53 @@ class UserService {
     });
   }
 
-  Future<void> linkApple(String email) {
-    return _database.userReference().set({
-      UserFirestoreFieldKeys.isLinkedApple: true,
-      UserFirestoreFieldKeys.appleEmail: email,
-    }, SetOptions(merge: true));
+  Future<SigninWithAppleState> linkApple(String email) async {
+    final user = FirebaseAuth.instance.currentUser;
+    if (user == null) {
+      throw AssertionError("Required Firebase user");
+    }
+    try {
+      final credential = await linkWithApple(user);
+      if (credential == null) {
+        return Future.value(SigninWithAppleState.cancel);
+      }
+      final email = credential.user?.email;
+      assert(email != null);
+
+      await _database.userReference().set({
+        UserFirestoreFieldKeys.isLinkedApple: true,
+        UserFirestoreFieldKeys.appleEmail: email ?? "",
+      }, SetOptions(merge: true));
+
+      return Future.value(SigninWithAppleState.determined);
+    } catch (error) {
+      print("$error, ${StackTrace.current.toString()}");
+      rethrow;
+    }
   }
 
-  Future<void> linkGoogle(String email) {
-    return _database.userReference().set({
-      UserFirestoreFieldKeys.isLinkedGoogle: true,
-      UserFirestoreFieldKeys.googleEmail: email,
-    }, SetOptions(merge: true));
+  Future<SigninWithGoogleState> linkGoogle(String email) async {
+    final user = FirebaseAuth.instance.currentUser;
+    if (user == null) {
+      throw AssertionError("Required Firebase user");
+    }
+    try {
+      final credential = await linkWithGoogle(user);
+      if (credential == null) {
+        return Future.value(SigninWithGoogleState.cancel);
+      }
+      final email = credential.user?.email;
+      assert(email != null);
+
+      await _database.userReference().set({
+        UserFirestoreFieldKeys.isLinkedGoogle: true,
+        UserFirestoreFieldKeys.googleEmail: email ?? "",
+      }, SetOptions(merge: true));
+
+      return Future.value(SigninWithGoogleState.determined);
+    } catch (error) {
+      print("$error, ${StackTrace.current.toString()}");
+      rethrow;
+    }
   }
 }
