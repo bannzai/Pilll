@@ -11,7 +11,14 @@ abstract class SigninSheetConst {
   static final double height = 340;
 }
 
-class SigninSheet extends StatelessWidget {
+class SigninSheet extends StatefulWidget {
+  @override
+  _SigninSheetState createState() => _SigninSheetState();
+}
+
+class _SigninSheetState extends State<SigninSheet> {
+  bool isLogin = false;
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -31,7 +38,13 @@ class SigninSheet extends StatelessWidget {
                 style: TextColorStyle.main.merge(FontType.assisting)),
             _appleButton(),
             _googleButton(),
-            SecondaryButton(onPressed: () {}, text: "ログイン")
+            SecondaryButton(
+                onPressed: () {
+                  setState(() {
+                    isLogin = !isLogin;
+                  });
+                },
+                text: "ログイン")
           ],
         ),
       ),
