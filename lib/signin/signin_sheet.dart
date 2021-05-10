@@ -1,18 +1,23 @@
+import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:flutter/material.dart';
+import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/analytics.dart';
 import 'package:pilll/components/atoms/buttons.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
+import 'package:pilll/signin/signin_sheet_store.dart';
 
 abstract class SigninSheetConst {
   static final double height = 340;
 }
 
-class SigninSheet extends StatelessWidget {
+class SigninSheet extends HookWidget {
   @override
   Widget build(BuildContext context) {
+    final store = useProvider(signinSheetStoreProvider);
+    final state = useProvider(signinSheetStoreProvider.state);
     return Container(
       constraints: BoxConstraints(maxHeight: 360, minHeight: 300),
       color: Colors.white,
@@ -30,7 +35,9 @@ class SigninSheet extends StatelessWidget {
                 style: TextColorStyle.main.merge(FontType.assisting)),
             _appleButton(),
             _googleButton(),
-            SecondaryButton(onPressed: () {}, text: "ログイン")
+            SecondaryButton(
+                onPressed: () => store.toggleMode(),
+                text: state.isLoginMode ? "サインアップ" : "ログイン"),
           ],
         ),
       ),

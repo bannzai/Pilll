@@ -7,4 +7,8 @@ final signinSheetStoreProvider = StateNotifierProvider(
 
 class SigninSheetStore extends StateNotifier<SigninSheetState> {
   SigninSheetStore() : super(SigninSheetState());
+
+  toggleMode() {
+    state = state.copyWith(isLoginMode: !state.isLoginMode);
+  }
 }
