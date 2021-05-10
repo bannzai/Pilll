@@ -23,7 +23,7 @@ Future<UserCredential?> linkWithGoogle(User user) async {
   return await user.linkWithCredential(credential);
 }
 
-Future<UserCredential?> signInWithGoogle(User user) async {
+Future<UserCredential?> signInWithGoogle() async {
   // NOTE: workaround https://github.com/flutter/flutter/issues/44564#issuecomment-655884103
   final googleUser = await GoogleSignIn(
     scopes: [

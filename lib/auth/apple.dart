@@ -34,7 +34,7 @@ Future<UserCredential?> linkWithApple(User user) async {
   }
 }
 
-Future<UserCredential?> signInWithApple(User user) async {
+Future<UserCredential?> signInWithApple() async {
   try {
     final rawNonce = generateNonce();
     final state = generateNonce();
