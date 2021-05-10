@@ -112,7 +112,7 @@ class UserService {
     });
   }
 
-  Future<SigninWithAppleState> linkApple(String email) async {
+  Future<SigninWithAppleState> linkApple() async {
     final user = firebase_auth.FirebaseAuth.instance.currentUser;
     if (user == null) {
       throw AssertionError("Required Firebase user");
@@ -137,7 +137,7 @@ class UserService {
     }
   }
 
-  Future<SigninWithGoogleState> linkGoogle(String email) async {
+  Future<SigninWithGoogleState> linkGoogle() async {
     final user = firebase_auth.FirebaseAuth.instance.currentUser;
     if (user == null) {
       throw AssertionError("Required Firebase user");
