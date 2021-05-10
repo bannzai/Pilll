@@ -5,7 +5,7 @@
 https://pilll.anotion.so/
 
 ## Blogs
-TODO:
+- [個人開発のお話](https://bannzai.hatenadiary.jp/entry/2021/05/10/054207)
 
 ## Download
 - [Google Play](https://play.google.com/store/apps/details?id=com.mizuki.Ohashi.Pilll)
