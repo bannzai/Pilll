@@ -16,3 +16,6 @@ String sha256ofString(String input) {
   final digest = sha256.convert(bytes);
   return digest.toString();
 }
+
+enum SigninWithAppleState { determined, cancel }
+enum SigninWithGoogleState { determined, cancel }
