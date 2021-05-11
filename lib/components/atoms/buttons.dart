@@ -3,6 +3,8 @@ import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:flutter/material.dart';
 
+final double baseButtonWidth = 180;
+
 class PrimaryButton extends StatelessWidget {
   final String text;
   final Function()? onPressed;
@@ -15,7 +17,7 @@ class PrimaryButton extends StatelessWidget {
 
   Widget build(BuildContext context) {
     return SizedBox(
-      width: 180,
+      width: baseButtonWidth,
       height: 44,
       child: ElevatedButton(
         child: Text(text, style: ButtonTextStyle.main),
@@ -62,7 +64,7 @@ class TertiaryButton extends StatelessWidget {
 
   Widget build(BuildContext context) {
     return SizedBox(
-      width: 180,
+      width: baseButtonWidth,
       height: 44,
       child: TextButton(
         style: TextButton.styleFrom(backgroundColor: PilllColors.gray),
@@ -86,7 +88,7 @@ class InconspicuousButton extends StatelessWidget {
 
   Widget build(BuildContext context) {
     return SizedBox(
-      width: 180,
+      width: baseButtonWidth,
       height: 44,
       child: TextButton(
         style: TextButton.styleFrom(backgroundColor: Colors.transparent),
