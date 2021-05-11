@@ -1,5 +1,4 @@
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:pilll/auth/util.dart';
 import 'package:pilll/service/user.dart';
 import 'package:pilll/auth/apple.dart';
 import 'package:pilll/auth/google.dart';

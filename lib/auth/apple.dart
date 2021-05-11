@@ -5,6 +5,8 @@ import 'package:sign_in_with_apple/sign_in_with_apple.dart';
 
 final _providerID = "apple.com";
 
+enum SigninWithAppleState { determined, cancel }
+
 Future<UserCredential?> linkWithApple(User user) async {
   try {
     final rawNonce = generateNonce();
