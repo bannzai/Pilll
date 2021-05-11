@@ -179,31 +179,6 @@ class RecordPage extends HookWidget {
     );
   }
 
-  String _notificationString(RecordPageState state) {
-    if (state.isInvalid) {
-      return "";
-    }
-    final pillSheet = state.entity;
-    if (pillSheet == null) {
-      return "";
-    }
-    if (pillSheet.pillSheetType.isNotExistsNotTakenDuration) {
-      return "";
-    }
-    if (pillSheet.typeInfo.dosingPeriod < pillSheet.todayPillNumber) {
-      return "${pillSheet.pillSheetType.notTakenWord}期間中";
-    }
-
-    final threshold = 4;
-    if (pillSheet.typeInfo.dosingPeriod - threshold + 1 <
-        pillSheet.todayPillNumber) {
-      final diff = pillSheet.typeInfo.dosingPeriod - pillSheet.todayPillNumber;
-      return "あと${diff + 1}日で${pillSheet.pillSheetType.notTakenWord}期間です";
-    }
-
-    return "";
-  }
-
   Widget _takenButton(
     BuildContext context,
     PillSheet pillSheet,
