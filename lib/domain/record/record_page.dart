@@ -4,11 +4,13 @@ import 'package:pilll/analytics.dart';
 import 'package:pilll/components/molecules/indicator.dart';
 import 'package:pilll/components/organisms/pill/pill_sheet.dart';
 import 'package:pilll/domain/initial_setting/migrate_info.dart';
+import 'package:pilll/domain/record/record_page_state.dart';
 import 'package:pilll/domain/record/record_page_store.dart';
 import 'package:pilll/domain/record/record_taken_information.dart';
 import 'package:pilll/domain/release_note/release_note.dart';
 import 'package:pilll/entity/pill_sheet.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
+import 'package:pilll/entity/setting.dart';
 import 'package:pilll/entity/weekday.dart';
 import 'package:pilll/error/error_alert.dart';
 import 'package:pilll/service/pill_sheet.dart';
@@ -47,7 +49,7 @@ class RecordPage extends HookWidget {
       appBar: AppBar(
         titleSpacing: 0,
         backgroundColor: PilllColors.white,
-        toolbarHeight: 132,
+        toolbarHeight: RecordTakenInformationConst.height,
         title: RecordTakenInformation(
           today: DateTime.now(),
           state: state,
@@ -145,37 +147,65 @@ class RecordPage extends HookWidget {
     if (settingEntity == null || !state.firstLoadIsEnded) {
       return Indicator();
     }
-    return Center(
-      child: ListView(
-        children: [
-          if (_notificationString(state).isNotEmpty)
-            ConstrainedBox(
-              constraints: BoxConstraints.expand(height: 26),
-              child: Container(
-                height: 26,
-                color: PilllColors.secondary,
-                child: Center(
-                  child: Text(_notificationString(state),
-                      style:
-                          FontType.assistingBold.merge(TextColorStyle.white)),
-                ),
-              ),
-            ),
-          SizedBox(height: 67),
-          if (state.isInvalid)
-            Align(child: _empty(context, store, settingEntity.pillSheetType)),
-          if (!state.isInvalid && currentPillSheet != null) ...[
-            Align(child: _pillSheet(context, currentPillSheet, store)),
-            SizedBox(height: 40),
-            if (currentPillSheet.allTaken)
-              Align(child: _cancelTakeButton(currentPillSheet, store)),
-            if (!currentPillSheet.allTaken)
-              Align(child: _takenButton(context, currentPillSheet, store)),
-          ],
-          SizedBox(height: 60),
-        ],
-      ),
+    return Stack(
+      alignment: AlignmentDirectional.center,
+      children: [
+        Align(
+          alignment: Alignment.topCenter,
+          child: _notification(store),
+        ),
+        Align(
+            alignment: Alignment.center,
+            child: _content(
+                context, store, state, currentPillSheet, settingEntity)),
+        if (currentPillSheet != null)
+          Positioned(
+            bottom: 48,
+            child: _button(context, currentPillSheet, store),
+          ),
+      ],
     );
+  }
+
+  Widget _content(
+    BuildContext context,
+    RecordPageStore store,
+    RecordPageState state,
+    PillSheet? currentPillSheet,
+    Setting settingEntity,
+  ) {
+    if (state.isInvalid)
+      return _empty(context, store, settingEntity.pillSheetType);
+    if (!state.isInvalid && currentPillSheet != null)
+      return _pillSheet(context, currentPillSheet, store);
+    throw AssertionError("invalid state ${state.toString()}");
+  }
+
+  Widget _button(
+      BuildContext context, PillSheet currentPillSheet, RecordPageStore store) {
+    if (currentPillSheet.allTaken)
+      return _cancelTakeButton(currentPillSheet, store);
+    else
+      return _takenButton(context, currentPillSheet, store);
+  }
+
+  Widget _notification(RecordPageStore store) {
+    final notification = store.notification();
+    if (notification.isNotEmpty) {
+      return ConstrainedBox(
+        constraints: BoxConstraints.expand(height: 26),
+        child: Container(
+          height: 26,
+          color: PilllColors.secondary,
+          child: Center(
+            child: Text(notification,
+                style: FontType.assistingBold.merge(TextColorStyle.white)),
+          ),
+        ),
+      );
+    }
+
+    return Container();
   }
 
   Widget _takenButton(
