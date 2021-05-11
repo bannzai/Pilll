@@ -61,7 +61,6 @@ class RecordPage extends HookWidget {
           },
         ),
       ),
-      extendBodyBehindAppBar: true,
       body: _body(context),
     );
   }
@@ -152,10 +151,10 @@ class RecordPage extends HookWidget {
       children: [
         Align(
           alignment: Alignment.topCenter,
-          child: _notification(store),
+          child: _notification(context, store),
         ),
-        Align(
-            alignment: Alignment.center,
+        Positioned(
+            top: 64,
             child: _content(
                 context, store, state, currentPillSheet, settingEntity)),
         if (currentPillSheet != null)
@@ -189,18 +188,18 @@ class RecordPage extends HookWidget {
       return _takenButton(context, currentPillSheet, store);
   }
 
-  Widget _notification(RecordPageStore store) {
+  Widget _notification(BuildContext context, RecordPageStore store) {
     final notification = store.notification();
     if (notification.isNotEmpty) {
-      return ConstrainedBox(
-        constraints: BoxConstraints.expand(height: 26),
-        child: Container(
+      return Container(
+        constraints: BoxConstraints.expand(
           height: 26,
-          color: PilllColors.secondary,
-          child: Center(
-            child: Text(notification,
-                style: FontType.assistingBold.merge(TextColorStyle.white)),
-          ),
+          width: MediaQuery.of(context).size.width,
+        ),
+        color: PilllColors.secondary,
+        child: Center(
+          child: Text(notification,
+              style: FontType.assistingBold.merge(TextColorStyle.white)),
         ),
       );
     }
