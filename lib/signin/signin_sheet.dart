@@ -68,7 +68,7 @@ class SigninSheet extends HookWidget {
               Padding(
                 padding: const EdgeInsets.only(left: 10),
                 child: Text(
-                  'Apple アカウントで登録',
+                  'Apple で登録',
                   style: FontType.subTitle.merge(TextColorStyle.white),
                 ),
               )
