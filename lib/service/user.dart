@@ -1,6 +1,6 @@
 import 'dart:io';
 
-import 'package:firebase_auth/firebase_auth.dart' as firebase_auth;
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:pilll/auth/apple.dart';
 import 'package:pilll/auth/google.dart';
 import 'package:pilll/auth/util.dart';
@@ -113,7 +113,7 @@ class UserService {
   }
 
   Future<SigninWithAppleState> linkApple(String email) async {
-    final user = firebase_auth.FirebaseAuth.instance.currentUser;
+    final user = FirebaseAuth.instance.currentUser;
     if (user == null) {
       throw AssertionError("Required Firebase user");
     }
@@ -138,7 +138,7 @@ class UserService {
   }
 
   Future<SigninWithGoogleState> linkGoogle(String email) async {
-    final user = firebase_auth.FirebaseAuth.instance.currentUser;
+    final user = FirebaseAuth.instance.currentUser;
     if (user == null) {
       throw AssertionError("Required Firebase user");
     }
