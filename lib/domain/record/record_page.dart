@@ -151,12 +151,17 @@ class RecordPage extends HookWidget {
       children: [
         Align(
           alignment: Alignment.topCenter,
-          child: _notification(context, store),
+          child: SingleChildScrollView(
+            child: Column(
+              children: [
+                _notification(context, store),
+                SizedBox(height: 64),
+                _content(
+                    context, store, state, currentPillSheet, settingEntity),
+              ],
+            ),
+          ),
         ),
-        Positioned(
-            top: 64,
-            child: _content(
-                context, store, state, currentPillSheet, settingEntity)),
         if (currentPillSheet != null)
           Positioned(
             bottom: 48,
