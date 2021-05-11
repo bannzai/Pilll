@@ -3,6 +3,7 @@ import 'package:flutter_svg/svg.dart';
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/analytics.dart';
+import 'package:pilll/auth/util.dart';
 import 'package:pilll/components/atoms/buttons.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
@@ -33,7 +34,7 @@ class SigninSheet extends HookWidget {
             Text("アカウント登録すると\nデータの引き継ぎが可能になります",
                 textAlign: TextAlign.center,
                 style: TextColorStyle.main.merge(FontType.assisting)),
-            _appleButton(),
+            _appleButton(context, store),
             _googleButton(),
             SecondaryButton(
                 onPressed: () => store.toggleMode(),
@@ -44,7 +45,7 @@ class SigninSheet extends HookWidget {
     );
   }
 
-  Widget _appleButton() {
+  Widget _appleButton(BuildContext context, SigninSheetStore store) {
     return OutlinedButton(
       style: ButtonStyle(
         backgroundColor: MaterialStateProperty.all(PilllColors.appleBlack),
@@ -54,7 +55,17 @@ class SigninSheet extends HookWidget {
           ),
         ),
       ),
-      onPressed: () async {},
+      onPressed: () {
+        store.handleApple().then((value) {
+          switch (value) {
+            case SigninWithAppleState.determined:
+              Navigator.of(context).pop();
+              break;
+            case SigninWithAppleState.cancel:
+              return;
+          }
+        });
+      },
       child: Container(
         width: 220,
         height: 48,
