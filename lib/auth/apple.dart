@@ -3,6 +3,8 @@ import 'package:pilll/auth/util.dart';
 import 'package:pilll/util/environment.dart';
 import 'package:sign_in_with_apple/sign_in_with_apple.dart';
 
+final _providerID = "apple.com";
+
 Future<UserCredential?> linkWithApple(User user) async {
   try {
     final rawNonce = generateNonce();
@@ -20,7 +22,7 @@ Future<UserCredential?> linkWithApple(User user) async {
     if (state != appleCredential.state) {
       throw AssertionError('state not matched!');
     }
-    final credential = OAuthProvider('apple.com').credential(
+    final credential = OAuthProvider(_providerID).credential(
       idToken: appleCredential.identityToken,
       accessToken: appleCredential.authorizationCode,
       rawNonce: rawNonce,
@@ -51,7 +53,7 @@ Future<UserCredential?> signInWithApple() async {
     if (state != appleCredential.state) {
       throw AssertionError('state not matched!');
     }
-    final credential = OAuthProvider('apple.com').credential(
+    final credential = OAuthProvider(_providerID).credential(
       idToken: appleCredential.identityToken,
       accessToken: appleCredential.authorizationCode,
       rawNonce: rawNonce,
@@ -63,4 +65,14 @@ Future<UserCredential?> signInWithApple() async {
     }
     rethrow;
   }
+}
+
+bool isLinkedApple() {
+  final user = FirebaseAuth.instance.currentUser;
+  if (user == null) {
+    return false;
+  }
+  return user.providerData
+      .where((element) => element.providerId == _providerID)
+      .isNotEmpty;
 }
