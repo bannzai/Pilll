@@ -1,5 +1,7 @@
+import 'package:pilll/auth/anonymous.dart';
 import 'package:pilll/auth/apple.dart';
 import 'package:pilll/auth/boilerplate.dart';
+import 'package:pilll/auth/google.dart';
 import 'package:pilll/auth/util.dart';
 import 'package:pilll/service/user.dart';
 import 'package:pilll/signin/signin_sheet_state.dart';
@@ -24,6 +26,16 @@ class SigninSheetStore extends StateNotifier<SigninSheetState> {
           : SigninWithAppleState.determined);
     } else {
       return callLinkWithApple(_userService);
+    }
+  }
+
+  Future<SigninWithGoogleState> handleGoogle() {
+    if (state.isLoginMode) {
+      return signInWithGoogle().then((value) => value == null
+          ? SigninWithGoogleState.cancel
+          : SigninWithGoogleState.determined);
+    } else {
+      return callLinkWithGoogle(_userService);
     }
   }
 }

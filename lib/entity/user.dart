@@ -36,8 +36,6 @@ extension UserFirestoreFieldKeys on String {
   static final settings = "settings";
   static final migratedFlutter = "migratedFlutter";
   static final packageInfo = "packageInfo";
-  static final isLinkedApple = "isLinkedApple";
-  static final isLinkedGoogle = "isLinkedGoogle";
   static final appleEmail = 'appleEmail';
   static final googleEmail = 'googleEmail';
 }
@@ -48,8 +46,6 @@ abstract class User implements _$User {
   factory User({
     @JsonKey(name: "settings") Setting? setting,
     @Default(false) bool migratedFlutter,
-    @Default(false) bool isLinkedApple,
-    @Default(false) bool isLinkedGoogle,
   }) = _User;
 
   factory User.fromJson(Map<String, dynamic> json) => _$UserFromJson(json);
