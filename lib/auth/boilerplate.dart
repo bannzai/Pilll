@@ -1,16 +1,16 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:pilll/auth/util.dart';
 import 'package:pilll/service/user.dart';
-import 'package:pilll/auth/apple.dart' as apple;
-import 'package:pilll/auth/google.dart' as google;
+import 'package:pilll/auth/apple.dart';
+import 'package:pilll/auth/google.dart';
 
-Future<SigninWithAppleState> linkWithApple(UserService service) async {
+Future<SigninWithAppleState> callLinkWithApple(UserService service) async {
   final user = FirebaseAuth.instance.currentUser;
   if (user == null) {
     throw AssertionError("Required Firebase user");
   }
   try {
-    final credential = await apple.linkWithApple(user);
+    final credential = await linkWithApple(user);
     if (credential == null) {
       return Future.value(SigninWithAppleState.cancel);
     }
@@ -26,13 +26,13 @@ Future<SigninWithAppleState> linkWithApple(UserService service) async {
   }
 }
 
-Future<SigninWithGoogleState> linkWithGoogle(UserService service) async {
+Future<SigninWithGoogleState> callLinkWithGoogle(UserService service) async {
   final user = FirebaseAuth.instance.currentUser;
   if (user == null) {
     throw AssertionError("Required Firebase user");
   }
   try {
-    final credential = await google.linkWithGoogle(user);
+    final credential = await linkWithGoogle(user);
     if (credential == null) {
       return Future.value(SigninWithGoogleState.cancel);
     }

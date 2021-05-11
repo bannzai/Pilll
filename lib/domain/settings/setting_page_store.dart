@@ -190,11 +190,11 @@ class SettingStateStore extends StateNotifier<SettingState> {
   }
 
   Future<void> linkApple() {
-    return linkWithApple(_userService);
+    return callLinkWithApple(_userService);
   }
 
   Future<void> linkGoogle() {
-    return linkWithGoogle(_userService);
+    return callLinkWithGoogle(_userService);
   }
 }
 
