@@ -55,54 +55,57 @@ class RecordPage extends HookWidget {
           onPressed: () {
             analytics.logEvent(name: "tapped_record_information_header");
             if (currentPillSheet != null) {
-              showModalBottomSheet(
-                context: context,
-                builder: (BuildContext context) {
-                  var selectedTodayPillNumber =
-                      currentPillSheet.todayPillNumber;
-                  return Column(
-                    mainAxisAlignment: MainAxisAlignment.end,
-                    mainAxisSize: MainAxisSize.min,
-                    children: <Widget>[
-                      PickerToolbar(
-                        done: (() {
-                          store.modifyBeginingDate(selectedTodayPillNumber);
-                          Navigator.pop(context);
-                        }),
-                        cancel: (() {
-                          Navigator.pop(context);
-                        }),
-                      ),
-                      Container(
-                        height: 200,
-                        child: GestureDetector(
-                          onTap: () {
-                            Navigator.pop(context);
-                          },
-                          child: CupertinoPicker(
-                            itemExtent: 40,
-                            children: List.generate(
-                                currentPillSheet.typeInfo.totalCount,
-                                (index) => Text("${index + 1}")),
-                            onSelectedItemChanged: (index) {
-                              selectedTodayPillNumber = index + 1;
-                            },
-                            scrollController: FixedExtentScrollController(
-                              initialItem: selectedTodayPillNumber - 1,
-                            ),
-                          ),
-                        ),
-                      ),
-                    ],
-                  );
-                },
-              );
+              _showBeginDatePicker(context, currentPillSheet, store);
             }
           },
         ),
       ),
       extendBodyBehindAppBar: true,
       body: _body(context),
+    );
+  }
+
+  _showBeginDatePicker(
+      BuildContext context, PillSheet currentPillSheet, RecordPageStore store) {
+    showModalBottomSheet(
+      context: context,
+      builder: (BuildContext context) {
+        var selectedTodayPillNumber = currentPillSheet.todayPillNumber;
+        return Column(
+          mainAxisAlignment: MainAxisAlignment.end,
+          mainAxisSize: MainAxisSize.min,
+          children: <Widget>[
+            PickerToolbar(
+              done: (() {
+                store.modifyBeginingDate(selectedTodayPillNumber);
+                Navigator.pop(context);
+              }),
+              cancel: (() {
+                Navigator.pop(context);
+              }),
+            ),
+            Container(
+              height: 200,
+              child: GestureDetector(
+                onTap: () {
+                  Navigator.pop(context);
+                },
+                child: CupertinoPicker(
+                  itemExtent: 40,
+                  children: List.generate(currentPillSheet.typeInfo.totalCount,
+                      (index) => Text("${index + 1}")),
+                  onSelectedItemChanged: (index) {
+                    selectedTodayPillNumber = index + 1;
+                  },
+                  scrollController: FixedExtentScrollController(
+                    initialItem: selectedTodayPillNumber - 1,
+                  ),
+                ),
+              ),
+            ),
+          ],
+        );
+      },
     );
   }
 
