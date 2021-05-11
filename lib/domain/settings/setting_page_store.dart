@@ -1,8 +1,6 @@
 import 'dart:async';
 
-import 'package:firebase_auth/firebase_auth.dart';
-import 'package:pilll/auth/apple.dart';
-import 'package:pilll/auth/google.dart';
+import 'package:pilll/auth/boilerplate.dart';
 import 'package:pilll/database/database.dart';
 import 'package:pilll/domain/record/record_page_store.dart';
 import 'package:pilll/entity/pill_sheet.dart';
@@ -191,36 +189,12 @@ class SettingStateStore extends StateNotifier<SettingState> {
     return _pillSheetService.delete(entity);
   }
 
-  Future<bool> linkApple() {
-    final user = FirebaseAuth.instance.currentUser;
-    if (user == null) {
-      throw AssertionError("Required Firebase user");
-    }
-    return linkWithApple(user).then((credential) {
-      final _credential = credential;
-      if (_credential == null) {
-        return Future.value(false);
-      }
-      final email = _credential.user?.email;
-      assert(email != null);
-      return _userService.linkApple(email ?? "").then((value) => true);
-    });
+  Future<void> linkApple() {
+    return linkWithApple(_userService);
   }
 
-  Future<bool> linkGoogle() {
-    final user = FirebaseAuth.instance.currentUser;
-    if (user == null) {
-      throw AssertionError("Required Firebase user");
-    }
-    return linkWithGoogle(user).then((credential) {
-      final _credential = credential;
-      if (_credential == null) {
-        return Future.value(false);
-      }
-      final email = _credential.user?.email;
-      assert(email != null);
-      return _userService.linkGoogle(email ?? "").then((value) => true);
-    });
+  Future<void> linkGoogle() {
+    return linkWithGoogle(_userService);
   }
 }
 
