@@ -41,4 +41,11 @@ abstract class RecordPageState implements _$RecordPageState {
 
     return "";
   }
+
+  String get recommendedSignupNotification {
+    if (diaryCount < 5 || menstruationCount < 1) {
+      return "";
+    }
+    return "現在、生理履歴$menstruationCount件、体調記録$diaryCount件記録しています\n機種変更やスマホ紛失時に備えませんか？";
+  }
 }
