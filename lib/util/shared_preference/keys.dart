@@ -1,5 +1,7 @@
 extension BoolKey on String {
   static final didEndInitialSetting = "isDidEndInitialSettingKey";
+  static final recommendedSignupNotificationIsAlreadyShow =
+      "recommendedSignupNotificationIsAlreadyShow";
 }
 
 extension StringKey on String {
