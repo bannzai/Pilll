@@ -164,6 +164,7 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
     final sharedPreferences = await SharedPreferences.getInstance();
     sharedPreferences.setBool(
         BoolKey.recommendedSignupNotificationIsAlreadyShow, true);
+    state = state.copyWith(recommendedSignupNotificationIsAlreadyShow: true);
   }
 }
 
