@@ -44,6 +44,9 @@ abstract class RecordPageState implements _$RecordPageState {
   }
 
   String get recommendedSignupNotification {
+    if (recommendedSignupNotificationIsAlreadyShow) {
+      return "";
+    }
     if (diaryCount < 5 || menstruationCount < 1) {
       return "";
     }
