@@ -197,42 +197,44 @@ class RecordPage extends HookWidget {
       BuildContext context, RecordPageState state, RecordPageStore store) {
     final recommendedSignupNotification = state.recommendedSignupNotification;
     if (recommendedSignupNotification.isNotEmpty) {
-      return Container(
-        height: 64,
-        color: PilllColors.secondary,
-        child: Row(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            IconButton(
-              icon: Icon(Icons.close, color: Colors.white),
-              onPressed: () async => store.closeRecommendedSignupNotification(),
-            ),
-            Column(
-              children: [
-                SizedBox(height: 12),
-                Text(
-                  recommendedSignupNotification,
-                  style: TextColorStyle.white.merge(FontType.descriptionBold),
-                  textAlign: TextAlign.center,
-                ),
-              ],
-            ),
-            Column(
-              children: [
-                SizedBox(height: 8),
-                IconButton(
-                  icon: SvgPicture.asset(
-                    "images/arrow_right.svg",
-                    color: Colors.white,
+      return GestureDetector(
+        onTap: () => showSigninSheet(context),
+        child: Container(
+          height: 64,
+          color: PilllColors.secondary,
+          child: Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              IconButton(
+                icon: Icon(Icons.close, color: Colors.white),
+                onPressed: () async =>
+                    store.closeRecommendedSignupNotification(),
+              ),
+              Column(
+                children: [
+                  SizedBox(height: 12),
+                  Text(
+                    recommendedSignupNotification,
+                    style: TextColorStyle.white.merge(FontType.descriptionBold),
+                    textAlign: TextAlign.center,
                   ),
-                  onPressed: () {
-                    showSigninSheet(context);
-                  },
-                ),
-              ],
-            ),
-          ],
+                ],
+              ),
+              Column(
+                children: [
+                  SizedBox(height: 8),
+                  IconButton(
+                    icon: SvgPicture.asset(
+                      "images/arrow_right.svg",
+                      color: Colors.white,
+                    ),
+                    onPressed: () {},
+                  ),
+                ],
+              ),
+            ],
+          ),
         ),
       );
     }
