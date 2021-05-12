@@ -194,7 +194,7 @@ class RecordPage extends HookWidget {
   }
 
   Widget _notification(BuildContext context, RecordPageState state) {
-    final notification = state.notification;
+    final notification = state.restDurationNotification;
     if (notification.isNotEmpty) {
       return Container(
         constraints: BoxConstraints.expand(

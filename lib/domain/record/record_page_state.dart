@@ -17,7 +17,7 @@ abstract class RecordPageState implements _$RecordPageState {
   }) = _RecordPageState;
 
   bool get isInvalid => entity == null || entity!.isInvalid;
-  String get notification {
+  String get restDurationNotification {
     if (isInvalid) {
       return "";
     }
