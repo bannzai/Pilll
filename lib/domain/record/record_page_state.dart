@@ -13,6 +13,7 @@ abstract class RecordPageState implements _$RecordPageState {
     Setting? setting,
     @Default(0) int menstruationCount,
     @Default(0) int diaryCount,
+    @Default(true) bool recommendedSignupNotificationIsAlreadyShow,
     @Default(false) bool firstLoadIsEnded,
   }) = _RecordPageState;
 

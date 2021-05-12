@@ -21,12 +21,15 @@ class _$RecordPageStateTearOff {
       Setting? setting,
       int menstruationCount = 0,
       int diaryCount = 0,
+      bool recommendedSignupNotificationIsAlreadyShow = true,
       bool firstLoadIsEnded = false}) {
     return _RecordPageState(
       entity: entity,
       setting: setting,
       menstruationCount: menstruationCount,
       diaryCount: diaryCount,
+      recommendedSignupNotificationIsAlreadyShow:
+          recommendedSignupNotificationIsAlreadyShow,
       firstLoadIsEnded: firstLoadIsEnded,
     );
   }
@@ -41,6 +44,8 @@ mixin _$RecordPageState {
   Setting? get setting => throw _privateConstructorUsedError;
   int get menstruationCount => throw _privateConstructorUsedError;
   int get diaryCount => throw _privateConstructorUsedError;
+  bool get recommendedSignupNotificationIsAlreadyShow =>
+      throw _privateConstructorUsedError;
   bool get firstLoadIsEnded => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
@@ -58,6 +63,7 @@ abstract class $RecordPageStateCopyWith<$Res> {
       Setting? setting,
       int menstruationCount,
       int diaryCount,
+      bool recommendedSignupNotificationIsAlreadyShow,
       bool firstLoadIsEnded});
 
   $PillSheetCopyWith<$Res>? get entity;
@@ -79,6 +85,7 @@ class _$RecordPageStateCopyWithImpl<$Res>
     Object? setting = freezed,
     Object? menstruationCount = freezed,
     Object? diaryCount = freezed,
+    Object? recommendedSignupNotificationIsAlreadyShow = freezed,
     Object? firstLoadIsEnded = freezed,
   }) {
     return _then(_value.copyWith(
@@ -98,6 +105,11 @@ class _$RecordPageStateCopyWithImpl<$Res>
           ? _value.diaryCount
           : diaryCount // ignore: cast_nullable_to_non_nullable
               as int,
+      recommendedSignupNotificationIsAlreadyShow:
+          recommendedSignupNotificationIsAlreadyShow == freezed
+              ? _value.recommendedSignupNotificationIsAlreadyShow
+              : recommendedSignupNotificationIsAlreadyShow // ignore: cast_nullable_to_non_nullable
+                  as bool,
       firstLoadIsEnded: firstLoadIsEnded == freezed
           ? _value.firstLoadIsEnded
           : firstLoadIsEnded // ignore: cast_nullable_to_non_nullable
@@ -140,6 +152,7 @@ abstract class _$RecordPageStateCopyWith<$Res>
       Setting? setting,
       int menstruationCount,
       int diaryCount,
+      bool recommendedSignupNotificationIsAlreadyShow,
       bool firstLoadIsEnded});
 
   @override
@@ -165,6 +178,7 @@ class __$RecordPageStateCopyWithImpl<$Res>
     Object? setting = freezed,
     Object? menstruationCount = freezed,
     Object? diaryCount = freezed,
+    Object? recommendedSignupNotificationIsAlreadyShow = freezed,
     Object? firstLoadIsEnded = freezed,
   }) {
     return _then(_RecordPageState(
@@ -184,6 +198,11 @@ class __$RecordPageStateCopyWithImpl<$Res>
           ? _value.diaryCount
           : diaryCount // ignore: cast_nullable_to_non_nullable
               as int,
+      recommendedSignupNotificationIsAlreadyShow:
+          recommendedSignupNotificationIsAlreadyShow == freezed
+              ? _value.recommendedSignupNotificationIsAlreadyShow
+              : recommendedSignupNotificationIsAlreadyShow // ignore: cast_nullable_to_non_nullable
+                  as bool,
       firstLoadIsEnded: firstLoadIsEnded == freezed
           ? _value.firstLoadIsEnded
           : firstLoadIsEnded // ignore: cast_nullable_to_non_nullable
@@ -200,6 +219,7 @@ class _$_RecordPageState extends _RecordPageState {
       this.setting,
       this.menstruationCount = 0,
       this.diaryCount = 0,
+      this.recommendedSignupNotificationIsAlreadyShow = true,
       this.firstLoadIsEnded = false})
       : super._();
 
@@ -213,13 +233,16 @@ class _$_RecordPageState extends _RecordPageState {
   @JsonKey(defaultValue: 0)
   @override
   final int diaryCount;
+  @JsonKey(defaultValue: true)
+  @override
+  final bool recommendedSignupNotificationIsAlreadyShow;
   @JsonKey(defaultValue: false)
   @override
   final bool firstLoadIsEnded;
 
   @override
   String toString() {
-    return 'RecordPageState(entity: $entity, setting: $setting, menstruationCount: $menstruationCount, diaryCount: $diaryCount, firstLoadIsEnded: $firstLoadIsEnded)';
+    return 'RecordPageState(entity: $entity, setting: $setting, menstruationCount: $menstruationCount, diaryCount: $diaryCount, recommendedSignupNotificationIsAlreadyShow: $recommendedSignupNotificationIsAlreadyShow, firstLoadIsEnded: $firstLoadIsEnded)';
   }
 
   @override
@@ -237,6 +260,11 @@ class _$_RecordPageState extends _RecordPageState {
             (identical(other.diaryCount, diaryCount) ||
                 const DeepCollectionEquality()
                     .equals(other.diaryCount, diaryCount)) &&
+            (identical(other.recommendedSignupNotificationIsAlreadyShow,
+                    recommendedSignupNotificationIsAlreadyShow) ||
+                const DeepCollectionEquality().equals(
+                    other.recommendedSignupNotificationIsAlreadyShow,
+                    recommendedSignupNotificationIsAlreadyShow)) &&
             (identical(other.firstLoadIsEnded, firstLoadIsEnded) ||
                 const DeepCollectionEquality()
                     .equals(other.firstLoadIsEnded, firstLoadIsEnded)));
@@ -249,6 +277,8 @@ class _$_RecordPageState extends _RecordPageState {
       const DeepCollectionEquality().hash(setting) ^
       const DeepCollectionEquality().hash(menstruationCount) ^
       const DeepCollectionEquality().hash(diaryCount) ^
+      const DeepCollectionEquality()
+          .hash(recommendedSignupNotificationIsAlreadyShow) ^
       const DeepCollectionEquality().hash(firstLoadIsEnded);
 
   @JsonKey(ignore: true)
@@ -263,6 +293,7 @@ abstract class _RecordPageState extends RecordPageState {
       Setting? setting,
       int menstruationCount,
       int diaryCount,
+      bool recommendedSignupNotificationIsAlreadyShow,
       bool firstLoadIsEnded}) = _$_RecordPageState;
   _RecordPageState._() : super._();
 
@@ -274,6 +305,9 @@ abstract class _RecordPageState extends RecordPageState {
   int get menstruationCount => throw _privateConstructorUsedError;
   @override
   int get diaryCount => throw _privateConstructorUsedError;
+  @override
+  bool get recommendedSignupNotificationIsAlreadyShow =>
+      throw _privateConstructorUsedError;
   @override
   bool get firstLoadIsEnded => throw _privateConstructorUsedError;
   @override
