@@ -154,7 +154,7 @@ class RecordPage extends HookWidget {
           child: SingleChildScrollView(
             child: Column(
               children: [
-                _notification(context, state),
+                _notification(context, state, store),
                 SizedBox(height: 64),
                 _content(
                     context, store, state, currentPillSheet, settingEntity),
@@ -193,9 +193,41 @@ class RecordPage extends HookWidget {
       return _takenButton(context, currentPillSheet, store);
   }
 
-  Widget _notification(BuildContext context, RecordPageState state) {
-    final notification = state.restDurationNotification;
-    if (notification.isNotEmpty) {
+  Widget _notification(
+      BuildContext context, RecordPageState state, RecordPageStore store) {
+    final recommendedSignupNotification = state.recommendedSignupNotification;
+    if (recommendedSignupNotification.isNotEmpty) {
+      return Container(
+        child: Row(
+          children: [
+            IconButton(
+              icon: Icon(Icons.close, color: Colors.white),
+              onPressed: () async => store.closeRecommendedSignupNotification(),
+            ),
+            Row(
+              children: [
+                Text(
+                  recommendedSignupNotification,
+                  style: TextColorStyle.main.merge(FontType.description),
+                ),
+                IconButton(
+                  icon: SvgPicture.asset(
+                    "images/arrow_right.svg",
+                    color: Colors.white,
+                  ),
+                  onPressed: () {
+                    showSigninSheet(context);
+                  },
+                ),
+              ],
+            ),
+          ],
+        ),
+      );
+    }
+
+    final restDurationNotification = state.restDurationNotification;
+    if (restDurationNotification.isNotEmpty) {
       return Container(
         constraints: BoxConstraints.expand(
           height: 26,
@@ -203,7 +235,7 @@ class RecordPage extends HookWidget {
         ),
         color: PilllColors.secondary,
         child: Center(
-          child: Text(notification,
+          child: Text(restDurationNotification,
               style: FontType.assistingBold.merge(TextColorStyle.white)),
         ),
       );

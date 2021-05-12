@@ -159,6 +159,12 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
     return number > entity.lastTakenPillNumber &&
         number <= entity.todayPillNumber;
   }
+
+  Future<void> closeRecommendedSignupNotification() async {
+    final sharedPreferences = await SharedPreferences.getInstance();
+    sharedPreferences.setBool(
+        BoolKey.recommendedSignupNotificationIsAlreadyShow, true);
+  }
 }
 
 Future<PillSheet> modifyBeginingDateFunction(
