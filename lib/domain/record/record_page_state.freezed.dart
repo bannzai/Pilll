@@ -19,10 +19,14 @@ class _$RecordPageStateTearOff {
   _RecordPageState call(
       {required PillSheet? entity,
       Setting? setting,
+      int menstruationCount = 0,
+      int diaryCount = 0,
       bool firstLoadIsEnded = false}) {
     return _RecordPageState(
       entity: entity,
       setting: setting,
+      menstruationCount: menstruationCount,
+      diaryCount: diaryCount,
       firstLoadIsEnded: firstLoadIsEnded,
     );
   }
@@ -35,6 +39,8 @@ const $RecordPageState = _$RecordPageStateTearOff();
 mixin _$RecordPageState {
   PillSheet? get entity => throw _privateConstructorUsedError;
   Setting? get setting => throw _privateConstructorUsedError;
+  int get menstruationCount => throw _privateConstructorUsedError;
+  int get diaryCount => throw _privateConstructorUsedError;
   bool get firstLoadIsEnded => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
@@ -47,7 +53,12 @@ abstract class $RecordPageStateCopyWith<$Res> {
   factory $RecordPageStateCopyWith(
           RecordPageState value, $Res Function(RecordPageState) then) =
       _$RecordPageStateCopyWithImpl<$Res>;
-  $Res call({PillSheet? entity, Setting? setting, bool firstLoadIsEnded});
+  $Res call(
+      {PillSheet? entity,
+      Setting? setting,
+      int menstruationCount,
+      int diaryCount,
+      bool firstLoadIsEnded});
 
   $PillSheetCopyWith<$Res>? get entity;
   $SettingCopyWith<$Res>? get setting;
@@ -66,6 +77,8 @@ class _$RecordPageStateCopyWithImpl<$Res>
   $Res call({
     Object? entity = freezed,
     Object? setting = freezed,
+    Object? menstruationCount = freezed,
+    Object? diaryCount = freezed,
     Object? firstLoadIsEnded = freezed,
   }) {
     return _then(_value.copyWith(
@@ -77,6 +90,14 @@ class _$RecordPageStateCopyWithImpl<$Res>
           ? _value.setting
           : setting // ignore: cast_nullable_to_non_nullable
               as Setting?,
+      menstruationCount: menstruationCount == freezed
+          ? _value.menstruationCount
+          : menstruationCount // ignore: cast_nullable_to_non_nullable
+              as int,
+      diaryCount: diaryCount == freezed
+          ? _value.diaryCount
+          : diaryCount // ignore: cast_nullable_to_non_nullable
+              as int,
       firstLoadIsEnded: firstLoadIsEnded == freezed
           ? _value.firstLoadIsEnded
           : firstLoadIsEnded // ignore: cast_nullable_to_non_nullable
@@ -114,7 +135,12 @@ abstract class _$RecordPageStateCopyWith<$Res>
           _RecordPageState value, $Res Function(_RecordPageState) then) =
       __$RecordPageStateCopyWithImpl<$Res>;
   @override
-  $Res call({PillSheet? entity, Setting? setting, bool firstLoadIsEnded});
+  $Res call(
+      {PillSheet? entity,
+      Setting? setting,
+      int menstruationCount,
+      int diaryCount,
+      bool firstLoadIsEnded});
 
   @override
   $PillSheetCopyWith<$Res>? get entity;
@@ -137,6 +163,8 @@ class __$RecordPageStateCopyWithImpl<$Res>
   $Res call({
     Object? entity = freezed,
     Object? setting = freezed,
+    Object? menstruationCount = freezed,
+    Object? diaryCount = freezed,
     Object? firstLoadIsEnded = freezed,
   }) {
     return _then(_RecordPageState(
@@ -148,6 +176,14 @@ class __$RecordPageStateCopyWithImpl<$Res>
           ? _value.setting
           : setting // ignore: cast_nullable_to_non_nullable
               as Setting?,
+      menstruationCount: menstruationCount == freezed
+          ? _value.menstruationCount
+          : menstruationCount // ignore: cast_nullable_to_non_nullable
+              as int,
+      diaryCount: diaryCount == freezed
+          ? _value.diaryCount
+          : diaryCount // ignore: cast_nullable_to_non_nullable
+              as int,
       firstLoadIsEnded: firstLoadIsEnded == freezed
           ? _value.firstLoadIsEnded
           : firstLoadIsEnded // ignore: cast_nullable_to_non_nullable
@@ -160,20 +196,30 @@ class __$RecordPageStateCopyWithImpl<$Res>
 
 class _$_RecordPageState extends _RecordPageState {
   _$_RecordPageState(
-      {required this.entity, this.setting, this.firstLoadIsEnded = false})
+      {required this.entity,
+      this.setting,
+      this.menstruationCount = 0,
+      this.diaryCount = 0,
+      this.firstLoadIsEnded = false})
       : super._();
 
   @override
   final PillSheet? entity;
   @override
   final Setting? setting;
+  @JsonKey(defaultValue: 0)
+  @override
+  final int menstruationCount;
+  @JsonKey(defaultValue: 0)
+  @override
+  final int diaryCount;
   @JsonKey(defaultValue: false)
   @override
   final bool firstLoadIsEnded;
 
   @override
   String toString() {
-    return 'RecordPageState(entity: $entity, setting: $setting, firstLoadIsEnded: $firstLoadIsEnded)';
+    return 'RecordPageState(entity: $entity, setting: $setting, menstruationCount: $menstruationCount, diaryCount: $diaryCount, firstLoadIsEnded: $firstLoadIsEnded)';
   }
 
   @override
@@ -185,6 +231,12 @@ class _$_RecordPageState extends _RecordPageState {
             (identical(other.setting, setting) ||
                 const DeepCollectionEquality()
                     .equals(other.setting, setting)) &&
+            (identical(other.menstruationCount, menstruationCount) ||
+                const DeepCollectionEquality()
+                    .equals(other.menstruationCount, menstruationCount)) &&
+            (identical(other.diaryCount, diaryCount) ||
+                const DeepCollectionEquality()
+                    .equals(other.diaryCount, diaryCount)) &&
             (identical(other.firstLoadIsEnded, firstLoadIsEnded) ||
                 const DeepCollectionEquality()
                     .equals(other.firstLoadIsEnded, firstLoadIsEnded)));
@@ -195,6 +247,8 @@ class _$_RecordPageState extends _RecordPageState {
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(entity) ^
       const DeepCollectionEquality().hash(setting) ^
+      const DeepCollectionEquality().hash(menstruationCount) ^
+      const DeepCollectionEquality().hash(diaryCount) ^
       const DeepCollectionEquality().hash(firstLoadIsEnded);
 
   @JsonKey(ignore: true)
@@ -207,6 +261,8 @@ abstract class _RecordPageState extends RecordPageState {
   factory _RecordPageState(
       {required PillSheet? entity,
       Setting? setting,
+      int menstruationCount,
+      int diaryCount,
       bool firstLoadIsEnded}) = _$_RecordPageState;
   _RecordPageState._() : super._();
 
@@ -214,6 +270,10 @@ abstract class _RecordPageState extends RecordPageState {
   PillSheet? get entity => throw _privateConstructorUsedError;
   @override
   Setting? get setting => throw _privateConstructorUsedError;
+  @override
+  int get menstruationCount => throw _privateConstructorUsedError;
+  @override
+  int get diaryCount => throw _privateConstructorUsedError;
   @override
   bool get firstLoadIsEnded => throw _privateConstructorUsedError;
   @override

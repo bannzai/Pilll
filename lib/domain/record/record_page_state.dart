@@ -10,6 +10,8 @@ abstract class RecordPageState implements _$RecordPageState {
   factory RecordPageState({
     required PillSheet? entity,
     Setting? setting,
+    @Default(0) int menstruationCount,
+    @Default(0) int diaryCount,
     @Default(false) bool firstLoadIsEnded,
   }) = _RecordPageState;
 
