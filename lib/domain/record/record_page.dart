@@ -154,7 +154,7 @@ class RecordPage extends HookWidget {
           child: SingleChildScrollView(
             child: Column(
               children: [
-                _notification(context, store),
+                _notification(context, state),
                 SizedBox(height: 64),
                 _content(
                     context, store, state, currentPillSheet, settingEntity),
@@ -193,8 +193,8 @@ class RecordPage extends HookWidget {
       return _takenButton(context, currentPillSheet, store);
   }
 
-  Widget _notification(BuildContext context, RecordPageStore store) {
-    final notification = store.notification();
+  Widget _notification(BuildContext context, RecordPageState state) {
+    final notification = state.notification;
     if (notification.isNotEmpty) {
       return Container(
         constraints: BoxConstraints.expand(

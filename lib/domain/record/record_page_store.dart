@@ -133,31 +133,6 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
     return number > entity.lastTakenPillNumber &&
         number <= entity.todayPillNumber;
   }
-
-  String notification() {
-    if (state.isInvalid) {
-      return "";
-    }
-    final pillSheet = state.entity;
-    if (pillSheet == null) {
-      return "";
-    }
-    if (pillSheet.pillSheetType.isNotExistsNotTakenDuration) {
-      return "";
-    }
-    if (pillSheet.typeInfo.dosingPeriod < pillSheet.todayPillNumber) {
-      return "${pillSheet.pillSheetType.notTakenWord}期間中";
-    }
-
-    final threshold = 4;
-    if (pillSheet.typeInfo.dosingPeriod - threshold + 1 <
-        pillSheet.todayPillNumber) {
-      final diff = pillSheet.typeInfo.dosingPeriod - pillSheet.todayPillNumber;
-      return "あと${diff + 1}日で${pillSheet.pillSheetType.notTakenWord}期間です";
-    }
-
-    return "";
-  }
 }
 
 Future<PillSheet> modifyBeginingDateFunction(
