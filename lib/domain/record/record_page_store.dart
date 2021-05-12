@@ -6,19 +6,30 @@ import 'package:pilll/components/molecules/indicator.dart';
 import 'package:pilll/entity/pill_mark_type.dart';
 import 'package:pilll/entity/pill_sheet.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
+import 'package:pilll/service/diary.dart';
+import 'package:pilll/service/menstruation.dart';
 import 'package:pilll/service/pill_sheet.dart';
 import 'package:pilll/domain/record/record_page_state.dart';
 import 'package:pilll/service/setting.dart';
 import 'package:riverpod/riverpod.dart';
 
 final recordPageStoreProvider = StateNotifierProvider((ref) => RecordPageStore(
-    ref.watch(pillSheetServiceProvider), ref.watch(settingServiceProvider)));
+    ref.watch(pillSheetServiceProvider),
+    ref.watch(diaryServiceProvider),
+    ref.watch(menstruationServiceProvider),
+    ref.watch(settingServiceProvider)));
 
 class RecordPageStore extends StateNotifier<RecordPageState> {
   final PillSheetService _service;
+  final DiaryService _diaryService;
+  final MenstruationService _menstruationService;
   final SettingService _settingService;
-  RecordPageStore(this._service, this._settingService)
-      : super(RecordPageState(entity: null)) {
+  RecordPageStore(
+    this._service,
+    this._diaryService,
+    this._menstruationService,
+    this._settingService,
+  ) : super(RecordPageState(entity: null)) {
     _reset();
   }
 
