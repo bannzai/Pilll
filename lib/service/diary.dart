@@ -22,7 +22,7 @@ class DiaryService {
         .diariesReference()
         .where(DiaryFirestoreKey.date,
             isLessThanOrEqualTo: DateTime(base.year, base.month, 90),
-            isGreaterThanOrEqualTo: DateTime(base.year, base.month, 90))
+            isGreaterThanOrEqualTo: DateTime(base.year, base.month, -90))
         .orderBy(DiaryFirestoreKey.date)
         .get()
         .then((event) =>
