@@ -9,6 +9,7 @@ import 'package:pilll/service/day.dart';
 import 'package:pilll/util/datetime/date_compare.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
+import 'package:pilll/util/datetime/day.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import '../../helper/delay.dart';
@@ -50,10 +51,18 @@ void main() {
           .thenAnswer((realInvocation) => Future.value(settingEntity));
       when(settingService.subscribe())
           .thenAnswer((realInvocation) => Stream.empty());
+      final diaryService = MockDiaryService();
+      when(diaryService.fetchListAround90Days(today()))
+          .thenAnswer((realInvocation) => Future.value([]));
+      final menstruationService = MockMnestruationService();
+      when(menstruationService.fetchAll())
+          .thenAnswer((realInvocation) => Future.value([]));
 
       final store = RecordPageStore(
         service,
         settingService,
+        diaryService,
+        menstruationService,
       );
       await waitForResetStoreState();
       expect(state.entity?.todayPillNumber, equals(1));
@@ -92,8 +101,19 @@ void main() {
         .thenAnswer((realInvocation) => Future.value(settingEntity));
     when(settingService.subscribe())
         .thenAnswer((realInvocation) => Stream.empty());
+    final diaryService = MockDiaryService();
+    when(diaryService.fetchListAround90Days(today()))
+        .thenAnswer((realInvocation) => Future.value([]));
+    final menstruationService = MockMnestruationService();
+    when(menstruationService.fetchAll())
+        .thenAnswer((realInvocation) => Future.value([]));
 
-    final store = RecordPageStore(service, settingService);
+    final store = RecordPageStore(
+      service,
+      settingService,
+      diaryService,
+      menstruationService,
+    );
     await waitForResetStoreState();
     expect(state.entity?.todayPillNumber, equals(3));
 
@@ -133,7 +153,19 @@ void main() {
       when(settingService.subscribe())
           .thenAnswer((realInvocation) => Stream.empty());
 
-      final store = RecordPageStore(service, settingService);
+      final diaryService = MockDiaryService();
+      when(diaryService.fetchListAround90Days(today()))
+          .thenAnswer((realInvocation) => Future.value([]));
+      final menstruationService = MockMnestruationService();
+      when(menstruationService.fetchAll())
+          .thenAnswer((realInvocation) => Future.value([]));
+
+      final store = RecordPageStore(
+        service,
+        settingService,
+        diaryService,
+        menstruationService,
+      );
       await waitForResetStoreState();
       expect(state.entity?.allTaken, isTrue);
       expect(store.markFor(1), PillMarkType.done);
@@ -172,7 +204,19 @@ void main() {
       when(settingService.subscribe())
           .thenAnswer((realInvocation) => Stream.empty());
 
-      final store = RecordPageStore(service, settingService);
+      final diaryService = MockDiaryService();
+      when(diaryService.fetchListAround90Days(today()))
+          .thenAnswer((realInvocation) => Future.value([]));
+      final menstruationService = MockMnestruationService();
+      when(menstruationService.fetchAll())
+          .thenAnswer((realInvocation) => Future.value([]));
+
+      final store = RecordPageStore(
+        service,
+        settingService,
+        diaryService,
+        menstruationService,
+      );
       await waitForResetStoreState();
       expect(state.entity?.allTaken, isFalse);
       expect(store.markFor(1), PillMarkType.done);
@@ -214,7 +258,19 @@ void main() {
       when(settingService.subscribe())
           .thenAnswer((realInvocation) => Stream.empty());
 
-      final store = RecordPageStore(service, settingService);
+      final diaryService = MockDiaryService();
+      when(diaryService.fetchListAround90Days(today()))
+          .thenAnswer((realInvocation) => Future.value([]));
+      final menstruationService = MockMnestruationService();
+      when(menstruationService.fetchAll())
+          .thenAnswer((realInvocation) => Future.value([]));
+
+      final store = RecordPageStore(
+        service,
+        settingService,
+        diaryService,
+        menstruationService,
+      );
       await waitForResetStoreState();
       expect(state.entity?.allTaken, isTrue);
       for (int i = 1; i <= pillSheetEntity.pillSheetType.totalCount; i++) {
@@ -252,7 +308,19 @@ void main() {
       when(settingService.subscribe())
           .thenAnswer((realInvocation) => Stream.empty());
 
-      final store = RecordPageStore(service, settingService);
+      final diaryService = MockDiaryService();
+      when(diaryService.fetchListAround90Days(today()))
+          .thenAnswer((realInvocation) => Future.value([]));
+      final menstruationService = MockMnestruationService();
+      when(menstruationService.fetchAll())
+          .thenAnswer((realInvocation) => Future.value([]));
+
+      final store = RecordPageStore(
+        service,
+        settingService,
+        diaryService,
+        menstruationService,
+      );
       await waitForResetStoreState();
       expect(state.entity?.allTaken, isFalse);
       expect(store.shouldPillMarkAnimation(3), isTrue);

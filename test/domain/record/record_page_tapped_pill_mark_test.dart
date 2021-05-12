@@ -61,7 +61,19 @@ void main() {
           .thenAnswer((realInvocation) => Future.value(setting));
       when(settingService.subscribe())
           .thenAnswer((realInvocation) => Stream.value(setting));
-      final pillSheetStore = RecordPageStore(pillSheetService, settingService);
+      final diaryService = MockDiaryService();
+      when(diaryService.fetchListAround90Days(today))
+          .thenAnswer((realInvocation) => Future.value([]));
+      final menstruationService = MockMnestruationService();
+      when(menstruationService.fetchAll())
+          .thenAnswer((realInvocation) => Future.value([]));
+
+      final pillSheetStore = RecordPageStore(
+        pillSheetService,
+        settingService,
+        diaryService,
+        menstruationService,
+      );
 
       addTearDown(() {
         todayRepository = originalTodayRepository;
@@ -112,7 +124,19 @@ void main() {
         .thenAnswer((realInvocation) => Future.value(setting));
     when(settingService.subscribe())
         .thenAnswer((realInvocation) => Stream.value(setting));
-    final pillSheetStore = RecordPageStore(pillSheetService, settingService);
+    final diaryService = MockDiaryService();
+    when(diaryService.fetchListAround90Days(today))
+        .thenAnswer((realInvocation) => Future.value([]));
+    final menstruationService = MockMnestruationService();
+    when(menstruationService.fetchAll())
+        .thenAnswer((realInvocation) => Future.value([]));
+
+    final pillSheetStore = RecordPageStore(
+      pillSheetService,
+      settingService,
+      diaryService,
+      menstruationService,
+    );
 
     addTearDown(() {
       todayRepository = originalTodayRepository;
@@ -165,7 +189,19 @@ void main() {
     when(settingService.subscribe())
         .thenAnswer((realInvocation) => Stream.value(setting));
 
-    final pillSheetStore = RecordPageStore(pillSheetService, settingService);
+    final diaryService = MockDiaryService();
+    when(diaryService.fetchListAround90Days(today))
+        .thenAnswer((realInvocation) => Future.value([]));
+    final menstruationService = MockMnestruationService();
+    when(menstruationService.fetchAll())
+        .thenAnswer((realInvocation) => Future.value([]));
+
+    final pillSheetStore = RecordPageStore(
+      pillSheetService,
+      settingService,
+      diaryService,
+      menstruationService,
+    );
 
     addTearDown(() {
       todayRepository = originalTodayRepository;

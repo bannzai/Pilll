@@ -15,26 +15,26 @@ import 'package:pilll/domain/record/record_page_state.dart';
 import 'package:pilll/service/setting.dart';
 import 'package:pilll/util/datetime/day.dart';
 import 'package:pilll/util/shared_preference/keys.dart';
-import 'package:pilll/util/shared_preference/shared_preference.dart';
 import 'package:riverpod/riverpod.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 final recordPageStoreProvider = StateNotifierProvider((ref) => RecordPageStore(
-    ref.watch(pillSheetServiceProvider),
-    ref.watch(diaryServiceProvider),
-    ref.watch(menstruationServiceProvider),
-    ref.watch(settingServiceProvider)));
+      ref.watch(pillSheetServiceProvider),
+      ref.watch(settingServiceProvider),
+      ref.watch(diaryServiceProvider),
+      ref.watch(menstruationServiceProvider),
+    ));
 
 class RecordPageStore extends StateNotifier<RecordPageState> {
   final PillSheetService _service;
+  final SettingService _settingService;
   final DiaryService _diaryService;
   final MenstruationService _menstruationService;
-  final SettingService _settingService;
   RecordPageStore(
     this._service,
+    this._settingService,
     this._diaryService,
     this._menstruationService,
-    this._settingService,
   ) : super(RecordPageState(entity: null)) {
     _reset();
   }
