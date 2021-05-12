@@ -198,18 +198,29 @@ class RecordPage extends HookWidget {
     final recommendedSignupNotification = state.recommendedSignupNotification;
     if (recommendedSignupNotification.isNotEmpty) {
       return Container(
+        height: 64,
+        color: PilllColors.secondary,
         child: Row(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             IconButton(
               icon: Icon(Icons.close, color: Colors.white),
               onPressed: () async => store.closeRecommendedSignupNotification(),
             ),
-            Row(
+            Column(
               children: [
+                SizedBox(height: 12),
                 Text(
                   recommendedSignupNotification,
-                  style: TextColorStyle.main.merge(FontType.description),
+                  style: TextColorStyle.white.merge(FontType.descriptionBold),
+                  textAlign: TextAlign.center,
                 ),
+              ],
+            ),
+            Column(
+              children: [
+                SizedBox(height: 8),
                 IconButton(
                   icon: SvgPicture.asset(
                     "images/arrow_right.svg",
