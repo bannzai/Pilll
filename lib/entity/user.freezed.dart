@@ -171,14 +171,10 @@ class _$UserTearOff {
 
   _User call(
       {@JsonKey(name: "settings") Setting? setting,
-      bool migratedFlutter = false,
-      bool isLinkedApple = false,
-      bool isLinkedGoogle = false}) {
+      bool migratedFlutter = false}) {
     return _User(
       setting: setting,
       migratedFlutter: migratedFlutter,
-      isLinkedApple: isLinkedApple,
-      isLinkedGoogle: isLinkedGoogle,
     );
   }
 
@@ -195,8 +191,6 @@ mixin _$User {
   @JsonKey(name: "settings")
   Setting? get setting => throw _privateConstructorUsedError;
   bool get migratedFlutter => throw _privateConstructorUsedError;
-  bool get isLinkedApple => throw _privateConstructorUsedError;
-  bool get isLinkedGoogle => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -208,10 +202,7 @@ abstract class $UserCopyWith<$Res> {
   factory $UserCopyWith(User value, $Res Function(User) then) =
       _$UserCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(name: "settings") Setting? setting,
-      bool migratedFlutter,
-      bool isLinkedApple,
-      bool isLinkedGoogle});
+      {@JsonKey(name: "settings") Setting? setting, bool migratedFlutter});
 
   $SettingCopyWith<$Res>? get setting;
 }
@@ -228,8 +219,6 @@ class _$UserCopyWithImpl<$Res> implements $UserCopyWith<$Res> {
   $Res call({
     Object? setting = freezed,
     Object? migratedFlutter = freezed,
-    Object? isLinkedApple = freezed,
-    Object? isLinkedGoogle = freezed,
   }) {
     return _then(_value.copyWith(
       setting: setting == freezed
@@ -239,14 +228,6 @@ class _$UserCopyWithImpl<$Res> implements $UserCopyWith<$Res> {
       migratedFlutter: migratedFlutter == freezed
           ? _value.migratedFlutter
           : migratedFlutter // ignore: cast_nullable_to_non_nullable
-              as bool,
-      isLinkedApple: isLinkedApple == freezed
-          ? _value.isLinkedApple
-          : isLinkedApple // ignore: cast_nullable_to_non_nullable
-              as bool,
-      isLinkedGoogle: isLinkedGoogle == freezed
-          ? _value.isLinkedGoogle
-          : isLinkedGoogle // ignore: cast_nullable_to_non_nullable
               as bool,
     ));
   }
@@ -269,10 +250,7 @@ abstract class _$UserCopyWith<$Res> implements $UserCopyWith<$Res> {
       __$UserCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(name: "settings") Setting? setting,
-      bool migratedFlutter,
-      bool isLinkedApple,
-      bool isLinkedGoogle});
+      {@JsonKey(name: "settings") Setting? setting, bool migratedFlutter});
 
   @override
   $SettingCopyWith<$Res>? get setting;
@@ -291,8 +269,6 @@ class __$UserCopyWithImpl<$Res> extends _$UserCopyWithImpl<$Res>
   $Res call({
     Object? setting = freezed,
     Object? migratedFlutter = freezed,
-    Object? isLinkedApple = freezed,
-    Object? isLinkedGoogle = freezed,
   }) {
     return _then(_User(
       setting: setting == freezed
@@ -303,14 +279,6 @@ class __$UserCopyWithImpl<$Res> extends _$UserCopyWithImpl<$Res>
           ? _value.migratedFlutter
           : migratedFlutter // ignore: cast_nullable_to_non_nullable
               as bool,
-      isLinkedApple: isLinkedApple == freezed
-          ? _value.isLinkedApple
-          : isLinkedApple // ignore: cast_nullable_to_non_nullable
-              as bool,
-      isLinkedGoogle: isLinkedGoogle == freezed
-          ? _value.isLinkedGoogle
-          : isLinkedGoogle // ignore: cast_nullable_to_non_nullable
-              as bool,
     ));
   }
 }
@@ -319,10 +287,7 @@ class __$UserCopyWithImpl<$Res> extends _$UserCopyWithImpl<$Res>
 @JsonSerializable()
 class _$_User extends _User {
   _$_User(
-      {@JsonKey(name: "settings") this.setting,
-      this.migratedFlutter = false,
-      this.isLinkedApple = false,
-      this.isLinkedGoogle = false})
+      {@JsonKey(name: "settings") this.setting, this.migratedFlutter = false})
       : super._();
 
   factory _$_User.fromJson(Map<String, dynamic> json) =>
@@ -334,16 +299,10 @@ class _$_User extends _User {
   @JsonKey(defaultValue: false)
   @override
   final bool migratedFlutter;
-  @JsonKey(defaultValue: false)
-  @override
-  final bool isLinkedApple;
-  @JsonKey(defaultValue: false)
-  @override
-  final bool isLinkedGoogle;
 
   @override
   String toString() {
-    return 'User(setting: $setting, migratedFlutter: $migratedFlutter, isLinkedApple: $isLinkedApple, isLinkedGoogle: $isLinkedGoogle)';
+    return 'User(setting: $setting, migratedFlutter: $migratedFlutter)';
   }
 
   @override
@@ -355,22 +314,14 @@ class _$_User extends _User {
                     .equals(other.setting, setting)) &&
             (identical(other.migratedFlutter, migratedFlutter) ||
                 const DeepCollectionEquality()
-                    .equals(other.migratedFlutter, migratedFlutter)) &&
-            (identical(other.isLinkedApple, isLinkedApple) ||
-                const DeepCollectionEquality()
-                    .equals(other.isLinkedApple, isLinkedApple)) &&
-            (identical(other.isLinkedGoogle, isLinkedGoogle) ||
-                const DeepCollectionEquality()
-                    .equals(other.isLinkedGoogle, isLinkedGoogle)));
+                    .equals(other.migratedFlutter, migratedFlutter)));
   }
 
   @override
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(setting) ^
-      const DeepCollectionEquality().hash(migratedFlutter) ^
-      const DeepCollectionEquality().hash(isLinkedApple) ^
-      const DeepCollectionEquality().hash(isLinkedGoogle);
+      const DeepCollectionEquality().hash(migratedFlutter);
 
   @JsonKey(ignore: true)
   @override
@@ -386,9 +337,7 @@ class _$_User extends _User {
 abstract class _User extends User {
   factory _User(
       {@JsonKey(name: "settings") Setting? setting,
-      bool migratedFlutter,
-      bool isLinkedApple,
-      bool isLinkedGoogle}) = _$_User;
+      bool migratedFlutter}) = _$_User;
   _User._() : super._();
 
   factory _User.fromJson(Map<String, dynamic> json) = _$_User.fromJson;
@@ -398,10 +347,6 @@ abstract class _User extends User {
   Setting? get setting => throw _privateConstructorUsedError;
   @override
   bool get migratedFlutter => throw _privateConstructorUsedError;
-  @override
-  bool get isLinkedApple => throw _privateConstructorUsedError;
-  @override
-  bool get isLinkedGoogle => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$UserCopyWith<_User> get copyWith => throw _privateConstructorUsedError;
