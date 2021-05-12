@@ -164,7 +164,7 @@ class RecordPage extends HookWidget {
         ),
         if (currentPillSheet != null)
           Positioned(
-            bottom: 48,
+            bottom: 20,
             child: _button(context, currentPillSheet, store),
           ),
       ],
