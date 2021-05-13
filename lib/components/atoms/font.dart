@@ -90,7 +90,7 @@ class FontType {
 
   static final TextStyle helpRow = TextStyle(
     fontFamily: FontFamily.roboto,
-    fontWeight: FontWeight.w300,
+    fontWeight: FontWeight.w400,
     fontSize: FontSize.normal,
   );
   static final TextStyle listRow = TextStyle(
