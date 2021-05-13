@@ -375,6 +375,9 @@ class SettingPage extends HookWidget {
         _sectionTitle(section),
         ...[
           ..._rowModels(context, section).map((e) {
+            if (e is SettingListExplainRowModel) {
+              return [e.widget()];
+            }
             return [e.widget(), _separatorItem()];
           }).expand((element) => element)
         ]..add(SizedBox(height: 16)),
