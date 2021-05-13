@@ -16,6 +16,13 @@ class SettingAccountCooperationListPage extends StatelessWidget {
       ),
       body: Container(
         child: ListView(children: [
+          Container(
+            padding: EdgeInsets.only(top: 16, left: 15, right: 16),
+            child: Text(
+              "アカウント連携",
+              style: FontType.assisting.merge(TextColorStyle.primary),
+            ),
+          ),
           SettingAccountCooperationRow(
               accountType: LinkAccountType.apple,
               isLinked: (accountType) {
