@@ -1,7 +1,10 @@
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:pilll/auth/apple.dart';
+import 'package:pilll/auth/google.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:flutter/material.dart';
+import 'package:pilll/components/atoms/text_color.dart';
 
 enum SettingSection { pill, notification, menstruation, account, other }
 enum SettingRowType { title, date }
@@ -100,6 +103,52 @@ class SettingsListDatePickerRowModel extends SettingListRowModel {
     return ListTile(
       title: Text(title, style: FontType.listRow),
       subtitle: Text(content),
+      onTap: onTap,
+    );
+  }
+}
+
+class SettingListExplainRowModel extends SettingListRowModel {
+  final String content;
+
+  SettingListExplainRowModel(this.content);
+  @override
+  Widget widget() {
+    return ListTile(
+      title: Text(content, style: FontType.listRow.merge(TextColorStyle.gray)),
+    );
+  }
+}
+
+class SettingListAccountLinkRowModel extends SettingListRowModel {
+  final VoidCallback onTap;
+
+  SettingListAccountLinkRowModel({required this.onTap});
+
+  bool get _isLinked => isLinkedApple() || isLinkedGoogle();
+  Widget _subtitle() {
+    if (_isLinked) {
+      return Row(
+        children: [
+          SvgPicture.asset("images/checkmark_green.svg"),
+          Text("登録済み"),
+        ],
+      );
+    } else {
+      return Row(
+        children: [
+          SvgPicture.asset("images/alert_24.svg"),
+          Text("未登録"),
+        ],
+      );
+    }
+  }
+
+  @override
+  Widget widget() {
+    return ListTile(
+      title: Text("アカウント設定", style: FontType.listRow),
+      subtitle: _subtitle(),
       onTap: onTap,
     );
   }
