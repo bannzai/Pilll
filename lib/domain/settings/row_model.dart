@@ -115,7 +115,8 @@ class SettingListExplainRowModel extends SettingListRowModel {
   @override
   Widget widget() {
     return ListTile(
-      title: Text(content, style: FontType.listRow.merge(TextColorStyle.gray)),
+      title:
+          Text(content, style: FontType.listRow.merge(TextColorStyle.darkGray)),
     );
   }
 }
@@ -129,16 +130,21 @@ class SettingListAccountLinkRowModel extends SettingListRowModel {
   Widget _subtitle() {
     if (_isLinked) {
       return Row(
+        mainAxisSize: MainAxisSize.min,
         children: [
           SvgPicture.asset("images/checkmark_green.svg"),
-          Text("登録済み"),
+          SizedBox(width: 6),
+          Text("登録済み",
+              style: FontType.assisting.merge(TextColorStyle.darkGray)),
         ],
       );
     } else {
       return Row(
+        mainAxisSize: MainAxisSize.min,
         children: [
           SvgPicture.asset("images/alert_24.svg"),
-          Text("未登録"),
+          SizedBox(width: 6),
+          Text("未登録", style: FontType.assisting.merge(TextColorStyle.darkGray)),
         ],
       );
     }
@@ -148,7 +154,7 @@ class SettingListAccountLinkRowModel extends SettingListRowModel {
   Widget widget() {
     return ListTile(
       title: Text("アカウント設定", style: FontType.listRow),
-      subtitle: _subtitle(),
+      trailing: _subtitle(),
       onTap: onTap,
     );
   }
