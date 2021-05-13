@@ -39,6 +39,16 @@ class SettingAccountCooperationListPage extends StatelessWidget {
   }
 }
 
+extension SettingAccountCooperationListPageRoute
+    on SettingAccountCooperationListPage {
+  static Route<dynamic> route() {
+    return MaterialPageRoute(
+      settings: RouteSettings(name: "SettingAccountCooperationListPage"),
+      builder: (_) => SettingAccountCooperationListPage(),
+    );
+  }
+}
+
 class SettingAccountCooperationRow extends StatelessWidget {
   final LinkAccountType accountType;
   final bool Function(LinkAccountType) isLinked;
