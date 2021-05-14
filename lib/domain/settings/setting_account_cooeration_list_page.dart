@@ -31,7 +31,8 @@ class SettingAccountCooperationListPage extends StatelessWidget {
               ),
             ),
             ...LinkAccountType.values.map((e) {
-              return SettingAccountCooperationRow(
+              return [
+                SettingAccountCooperationRow(
                   accountType: e,
                   isLinked: (accountType) {
                     switch (accountType) {
@@ -44,8 +45,11 @@ class SettingAccountCooperationListPage extends StatelessWidget {
                   onTap: () {
                     // TODO:
                     return;
-                  });
-            }),
+                  },
+                ),
+                Divider(indent: 16),
+              ];
+            }).expand((element) => element),
           ],
         ),
       ),
