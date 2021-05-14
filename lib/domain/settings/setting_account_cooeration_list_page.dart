@@ -23,16 +23,18 @@ class SettingAccountCooperationListPage extends StatelessWidget {
               style: FontType.assisting.merge(TextColorStyle.primary),
             ),
           ),
-          SettingAccountCooperationRow(
-              accountType: LinkAccountType.apple,
-              isLinked: (accountType) {
-                // TODO:
-                return false;
-              },
-              onTap: () {
-                // TODO:
-                return;
-              })
+          ...LinkAccountType.values.map((e) {
+            return SettingAccountCooperationRow(
+                accountType: e,
+                isLinked: (accountType) {
+                  // TODO:
+                  return false;
+                },
+                onTap: () {
+                  // TODO:
+                  return;
+                });
+          }),
         ]),
       ),
     );
@@ -63,15 +65,41 @@ class SettingAccountCooperationRow extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListTile(
-      title: Row(
-        children: [
-          Text(_title, style: FontType.listRow),
-          SizedBox(width: 8),
-          SvgPicture.asset("images/alert_24.svg", width: 24, height: 24),
-        ],
+      leading: _icon(),
+      title: Align(
+        child: Text(_title, style: FontType.listRow),
+        alignment: Alignment(-1.18, 0),
       ),
+      trailing: SvgPicture.asset("images/alert_24.svg", width: 24, height: 24),
       onTap: onTap,
     );
+  }
+
+  Widget _icon() {
+    switch (accountType) {
+      case LinkAccountType.apple:
+        return Container(
+          padding: EdgeInsets.all(6),
+          decoration: BoxDecoration(
+            color: PilllColors.appleBlack,
+            borderRadius: BorderRadius.circular(12),
+          ),
+          width: 24,
+          height: 24,
+          child: SvgPicture.asset("images/apple_icon.svg"),
+        );
+      case LinkAccountType.google:
+        return Container(
+          padding: EdgeInsets.all(6),
+          child: SvgPicture.asset("images/google_icon.svg"),
+          width: 24,
+          height: 24,
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(12),
+            border: Border.all(color: PilllColors.shadow, width: 0.5),
+          ),
+        );
+    }
   }
 
   String get _title {
