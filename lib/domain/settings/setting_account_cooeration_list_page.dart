@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:pilll/auth/apple.dart';
+import 'package:pilll/auth/google.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
@@ -27,8 +29,12 @@ class SettingAccountCooperationListPage extends StatelessWidget {
             return SettingAccountCooperationRow(
                 accountType: e,
                 isLinked: (accountType) {
-                  // TODO:
-                  return false;
+                  switch (accountType) {
+                    case LinkAccountType.apple:
+                      return isLinkedApple();
+                    case LinkAccountType.google:
+                      return isLinkedGoogle();
+                  }
                 },
                 onTap: () {
                   // TODO:
