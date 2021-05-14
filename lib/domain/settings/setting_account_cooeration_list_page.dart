@@ -13,6 +13,10 @@ class SettingAccountCooperationListPage extends StatelessWidget {
     return Scaffold(
       backgroundColor: PilllColors.background,
       appBar: AppBar(
+        leading: IconButton(
+          icon: Icon(Icons.arrow_back, color: Colors.black),
+          onPressed: () => Navigator.of(context).pop(),
+        ),
         title: Text('アカウント設定', style: TextColorStyle.main),
         backgroundColor: PilllColors.white,
       ),
