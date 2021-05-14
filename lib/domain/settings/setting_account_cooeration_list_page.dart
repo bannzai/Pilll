@@ -78,11 +78,9 @@ class SettingAccountCooperationRow extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListTile(
       leading: _icon(),
-      title: Align(
-        child: Text(_title, style: FontType.listRow),
-        alignment: Alignment(-1.18, 0),
-      ),
+      title: Text(_title, style: FontType.listRow),
       trailing: _check(),
+      horizontalTitleGap: 4,
       onTap: onTap,
     );
   }
