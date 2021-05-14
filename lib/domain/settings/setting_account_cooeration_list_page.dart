@@ -21,31 +21,33 @@ class SettingAccountCooperationListPage extends StatelessWidget {
         backgroundColor: PilllColors.white,
       ),
       body: Container(
-        child: ListView(children: [
-          Container(
-            padding: EdgeInsets.only(top: 16, left: 15, right: 16),
-            child: Text(
-              "アカウント連携",
-              style: FontType.assisting.merge(TextColorStyle.primary),
+        child: ListView(
+          children: [
+            Container(
+              padding: EdgeInsets.only(top: 16, left: 15, right: 16),
+              child: Text(
+                "アカウント連携",
+                style: FontType.assisting.merge(TextColorStyle.primary),
+              ),
             ),
-          ),
-          ...LinkAccountType.values.map((e) {
-            return SettingAccountCooperationRow(
-                accountType: e,
-                isLinked: (accountType) {
-                  switch (accountType) {
-                    case LinkAccountType.apple:
-                      return isLinkedApple();
-                    case LinkAccountType.google:
-                      return isLinkedGoogle();
-                  }
-                },
-                onTap: () {
-                  // TODO:
-                  return;
-                });
-          }),
-        ]),
+            ...LinkAccountType.values.map((e) {
+              return SettingAccountCooperationRow(
+                  accountType: e,
+                  isLinked: (accountType) {
+                    switch (accountType) {
+                      case LinkAccountType.apple:
+                        return isLinkedApple();
+                      case LinkAccountType.google:
+                        return isLinkedGoogle();
+                    }
+                  },
+                  onTap: () {
+                    // TODO:
+                    return;
+                  });
+            }),
+          ],
+        ),
       ),
     );
   }
