@@ -70,7 +70,7 @@ class SettingAccountCooperationRow extends StatelessWidget {
         child: Text(_title, style: FontType.listRow),
         alignment: Alignment(-1.18, 0),
       ),
-      trailing: SvgPicture.asset("images/alert_24.svg", width: 24, height: 24),
+      trailing: _check(),
       onTap: onTap,
     );
   }
@@ -110,5 +110,18 @@ class SettingAccountCooperationRow extends StatelessWidget {
       case LinkAccountType.google:
         return linked ? "Googleで連携済み" : "Google アカウント";
     }
+  }
+
+  Widget _check() {
+    final linked = isLinked(accountType);
+    if (!linked) {
+      return Container(width: 1, height: 1);
+    }
+    return Container(
+        padding: EdgeInsets.only(left: 2, right: 2),
+        color: PilllColors.enable,
+        child: SvgPicture.asset("images/checkmark.svg"),
+        width: 18,
+        height: 18);
   }
 }
