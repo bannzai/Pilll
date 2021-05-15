@@ -1,6 +1,5 @@
 import 'dart:async';
 
-import 'package:pilll/auth/boilerplate.dart';
 import 'package:pilll/database/database.dart';
 import 'package:pilll/domain/record/record_page_store.dart';
 import 'package:pilll/entity/pill_sheet.dart';
@@ -187,14 +186,6 @@ class SettingStateStore extends StateNotifier<SettingState> {
       throw FormatException("pill sheet not found");
     }
     return _pillSheetService.delete(entity);
-  }
-
-  Future<void> linkApple() {
-    return callLinkWithApple(_userService);
-  }
-
-  Future<void> linkGoogle() {
-    return callLinkWithGoogle(_userService);
   }
 }
 
