@@ -27,6 +27,14 @@ Future<UserCredential?> linkWithGoogle(User user) async {
   return await user.linkWithCredential(credential);
 }
 
+Future<User?> unlinkGoogle() async {
+  final user = FirebaseAuth.instance.currentUser;
+  if (user == null) {
+    throw FormatException("firebase user is not found when unlink google");
+  }
+  return user.unlink(_providerID);
+}
+
 Future<UserCredential?> signInWithGoogle() async {
   // NOTE: workaround https://github.com/flutter/flutter/issues/44564#issuecomment-655884103
   final googleUser = await GoogleSignIn(
@@ -54,6 +62,10 @@ bool isLinkedGoogle() {
   if (user == null) {
     return false;
   }
+  return isLinkedGoogleFor(user);
+}
+
+bool isLinkedGoogleFor(User user) {
   return user.providerData
       .where((element) => element.providerId == _providerID)
       .isNotEmpty;
