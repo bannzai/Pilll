@@ -3,7 +3,7 @@ import 'package:pilll/components/page/discard_dialog.dart';
 import 'package:pilll/components/organisms/pill/pill_sheet_type_select_page.dart';
 import 'package:pilll/components/organisms/setting/setting_menstruation_page.dart';
 import 'package:pilll/domain/settings/information_for_before_major_update.dart';
-import 'package:pilll/domain/settings/setting_account_cooeration_list_page.dart';
+import 'package:pilll/domain/settings/setting_account_cooperation_list_page.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/domain/settings/row_model.dart';
 import 'package:pilll/domain/settings/modifing_pill_number_page.dart';
