@@ -49,9 +49,7 @@ void main() {
       when(pillSheetService.subscribeForLatestPillSheet())
           .thenAnswer((realInvocation) => Stream.empty());
 
-      final userService = MockUserService();
-
-      final store = SettingStateStore(service, pillSheetService, userService);
+      final store = SettingStateStore(service, pillSheetService);
       await tester.pumpWidget(
         ProviderScope(
           overrides: [
@@ -98,9 +96,7 @@ void main() {
       when(pillSheetService.subscribeForLatestPillSheet())
           .thenAnswer((realInvocation) => Stream.empty());
 
-      final userService = MockUserService();
-
-      final store = SettingStateStore(service, pillSheetService, userService);
+      final store = SettingStateStore(service, pillSheetService);
       await tester.pumpWidget(
         ProviderScope(
           overrides: [
