@@ -1,15 +1,19 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/auth/apple.dart';
 import 'package:pilll/auth/google.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
+import 'package:pilll/domain/settings/setting_account_cooperation_list_page_store.dart';
 import 'package:pilll/entity/user.dart';
 
-class SettingAccountCooperationListPage extends StatelessWidget {
+class SettingAccountCooperationListPage extends HookWidget {
   @override
   Widget build(BuildContext context) {
+    final store = useProvider(settingAccountCooperationListProvider);
     return Scaffold(
       backgroundColor: PilllColors.background,
       appBar: AppBar(
@@ -42,9 +46,15 @@ class SettingAccountCooperationListPage extends StatelessWidget {
                         return isLinkedGoogle();
                     }
                   },
-                  onTap: () {
-                    // TODO:
-                    return;
+                  onTap: (accountType) {
+                    switch (accountType) {
+                      case LinkAccountType.apple:
+                        store.handleApple();
+                        return;
+                      case LinkAccountType.google:
+                        store.handleGoogle();
+                        return;
+                    }
                   },
                 ),
                 Divider(indent: 16),
@@ -70,7 +80,7 @@ extension SettingAccountCooperationListPageRoute
 class SettingAccountCooperationRow extends StatelessWidget {
   final LinkAccountType accountType;
   final bool Function(LinkAccountType) isLinked;
-  final VoidCallback onTap;
+  final Function(LinkAccountType) onTap;
 
   SettingAccountCooperationRow({
     required this.accountType,
@@ -85,7 +95,7 @@ class SettingAccountCooperationRow extends StatelessWidget {
       title: Text(_title, style: FontType.listRow),
       trailing: _check(),
       horizontalTitleGap: 4,
-      onTap: onTap,
+      onTap: () => onTap(accountType),
     );
   }
 
