@@ -48,17 +48,19 @@ class SettingAccountCooperationListPageStore
     super.dispose();
   }
 
-  Future<void> handleApple() {
+// NOTE: return true is link flow, return false is unlink flow
+  Future<bool> handleApple() {
     if (state.isLinkedApple) {
-      return unlinkApple();
+      return unlinkApple().then((value) => false);
     }
-    return callLinkWithApple(_userService);
+    return callLinkWithApple(_userService).then((value) => true);
   }
 
-  Future<void> handleGoogle() {
+// NOTE: return true is link flow, return false is unlink flow
+  Future<bool> handleGoogle() {
     if (state.isLinkedGoogle) {
-      return unlinkGoogle();
+      return unlinkGoogle().then((value) => false);
     }
-    return callLinkWithGoogle(_userService);
+    return callLinkWithGoogle(_userService).then((value) => true);
   }
 }

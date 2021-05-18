@@ -8,7 +8,8 @@ import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/components/molecules/indicator.dart';
-import 'package:pilll/domain/root/root.dart';
+import 'package:pilll/domain/demography/demography_page.dart';
+import 'package:pilll/domain/demography/demography_page.dart';
 import 'package:pilll/domain/settings/setting_account_cooperation_list_page_store.dart';
 import 'package:pilll/entity/user.dart';
 
@@ -51,15 +52,19 @@ class SettingAccountCooperationListPage extends HookWidget {
                   },
                   onTap: (accountType) async {
                     showIndicator();
+                    bool shouldShowDemography = false;
                     switch (accountType) {
                       case LinkAccountType.apple:
-                        await store.handleApple();
+                        shouldShowDemography = await store.handleApple();
                         break;
                       case LinkAccountType.google:
-                        await store.handleGoogle();
+                        shouldShowDemography = await store.handleGoogle();
                         break;
                     }
                     hideIndicator();
+                    if (shouldShowDemography) {
+                      Navigator.of(context).push(DemographyPageRoute.route());
+                    }
                   },
                 ),
                 Divider(indent: 16),
