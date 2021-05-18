@@ -17,12 +17,14 @@ final authStateProvider = FutureProvider<AuthInfo>((ref) {
 
 Future<AuthInfo> auth() {
   final uid = FirebaseAuth.instance.currentUser?.uid;
+  print("current user uid: uid: $uid");
   if (uid != null) {
     _authInfoCache = AuthInfo(uid);
     return Future.value(_authInfoCache!);
   }
   return FirebaseAuth.instance.signInAnonymously().then((value) {
     _authInfoCache = AuthInfo(value.user!.uid);
+    print("signed in anonymous uid: ${value.user!.uid}");
     return _authInfoCache!;
   });
 }
