@@ -7,6 +7,8 @@ import 'package:pilll/auth/google.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
+import 'package:pilll/components/molecules/indicator.dart';
+import 'package:pilll/domain/root/root.dart';
 import 'package:pilll/domain/settings/setting_account_cooperation_list_page_store.dart';
 import 'package:pilll/entity/user.dart';
 
@@ -47,15 +49,17 @@ class SettingAccountCooperationListPage extends HookWidget {
                         return state.isLinkedGoogle;
                     }
                   },
-                  onTap: (accountType) {
+                  onTap: (accountType) async {
+                    showIndicator();
                     switch (accountType) {
                       case LinkAccountType.apple:
-                        store.handleApple();
-                        return;
+                        await store.handleApple();
+                        break;
                       case LinkAccountType.google:
-                        store.handleGoogle();
-                        return;
+                        await store.handleGoogle();
+                        break;
                     }
+                    hideIndicator();
                   },
                 ),
                 Divider(indent: 16),
