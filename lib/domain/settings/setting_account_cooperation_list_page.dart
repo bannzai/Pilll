@@ -14,6 +14,7 @@ class SettingAccountCooperationListPage extends HookWidget {
   @override
   Widget build(BuildContext context) {
     final store = useProvider(settingAccountCooperationListProvider);
+    final state = useProvider(settingAccountCooperationListProvider.state);
     return Scaffold(
       backgroundColor: PilllColors.background,
       appBar: AppBar(
@@ -41,9 +42,9 @@ class SettingAccountCooperationListPage extends HookWidget {
                   isLinked: (accountType) {
                     switch (accountType) {
                       case LinkAccountType.apple:
-                        return isLinkedApple();
+                        return state.isLinkedApple;
                       case LinkAccountType.google:
-                        return isLinkedGoogle();
+                        return state.isLinkedGoogle;
                     }
                   },
                   onTap: (accountType) {
