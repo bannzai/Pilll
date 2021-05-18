@@ -28,3 +28,12 @@ class _DemographyPageState extends State<DemographyPage> {
     );
   }
 }
+
+extension DemographyPageRout on DemographyPage {
+  static Route<dynamic> route() {
+    return MaterialPageRoute(
+      settings: RouteSettings(name: "DemographyPage"),
+      builder: (_) => DemographyPage(),
+    );
+  }
+}
