@@ -1,0 +1,1 @@
+enum LinkAccountType { apple, google }

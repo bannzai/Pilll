@@ -8,7 +8,7 @@ import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/components/molecules/indicator.dart';
 import 'package:pilll/domain/demography/demography_page.dart';
 import 'package:pilll/domain/settings/setting_account_cooperation_list_page_store.dart';
-import 'package:pilll/entity/user.dart';
+import 'package:pilll/entity/link_account_type.dart';
 import 'package:pilll/service/user.dart';
 
 class SettingAccountCooperationListPage extends HookWidget {
@@ -61,6 +61,12 @@ class SettingAccountCooperationListPage extends HookWidget {
                         break;
                     }
                     hideIndicator();
+                    ScaffoldMessenger.of(context).showSnackBar(
+                      SnackBar(
+                        duration: Duration(seconds: 1),
+                        content: Text(""),
+                      ),
+                    );
                     if (shouldShowDemography) {
                       Navigator.of(context)
                           .push(DemographyPageRoute.route(userService));

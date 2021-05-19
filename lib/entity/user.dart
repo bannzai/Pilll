@@ -50,5 +50,3 @@ abstract class User implements _$User {
 
   factory User.fromJson(Map<String, dynamic> json) => _$UserFromJson(json);
 }
-
-enum LinkAccountType { apple, google }
