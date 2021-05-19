@@ -12,14 +12,26 @@ class DemographyPage extends StatefulWidget {
   _DemographyPageState createState() => _DemographyPageState();
 }
 
+String _unknown = "該当なし";
+final _purposeDataSource = [
+  "婦人病の治療",
+  "生理・PMSの症状緩和",
+  "生理不順のため",
+  "避妊のため",
+  "美容のため",
+  "ホルモン療法",
+  _unknown,
+];
+
 class _DemographyPageState extends State<DemographyPage> {
-  String? _purpose;
+  String? _purpose1;
+  String _purpose2 = _unknown;
   String? _prescription;
   String? _birthYear;
   String? _job;
   @override
   Widget build(BuildContext context) {
-    final purpose = _purpose;
+    final purpose1 = _purpose1;
     final prescription = _prescription;
     final birthYear = _birthYear;
     final job = _job;
@@ -40,14 +52,26 @@ class _DemographyPageState extends State<DemographyPage> {
                     ),
                     SizedBox(height: 36),
                     _layout(
-                      "ピルを服用している目的/理由",
+                      "ピルを服用している1番の目的/理由",
                       GestureDetector(
-                        child: Text(purpose == null ? "選択してください" : purpose,
+                        child: Text(purpose1 == null ? "選択してください" : purpose1,
                             style:
                                 FontType.assisting.merge(TextColorStyle.black)),
-                        onTap: () => _showPurposePicker(),
+                        onTap: () => _showPurposePicker1(),
                       ),
                     ),
+                    if (purpose1 != _unknown) ...[
+                      SizedBox(height: 30),
+                      _layout(
+                        "ピルを服用しているその他の目的/理由",
+                        GestureDetector(
+                          child: Text(_purpose2,
+                              style: FontType.assisting
+                                  .merge(TextColorStyle.black)),
+                          onTap: () => _showPurposePicker2(),
+                        ),
+                      ),
+                    ],
                     SizedBox(height: 30),
                     _layout(
                       "ピルの処方はどのように行っていますか？",
@@ -61,7 +85,7 @@ class _DemographyPageState extends State<DemographyPage> {
                     ),
                     SizedBox(height: 30),
                     _layout(
-                      "年齢（生まれ年）を教えて下さい",
+                      "生まれ年を教えて下さい",
                       GestureDetector(
                         child: Text(birthYear == null ? "選択してください" : birthYear,
                             style:
@@ -123,18 +147,10 @@ class _DemographyPageState extends State<DemographyPage> {
     );
   }
 
-  _showPurposePicker() {
-    final dataSource = [
-      "婦人病の治療",
-      "生理・PMSの症状緩和",
-      "生理不順のため",
-      "避妊のため",
-      "美容のため",
-      "ホルモン療法",
-      "該当なし",
-    ];
-    String? selected = _purpose;
-    final purpose = _purpose;
+  _showPurposePicker1() {
+    final dataSource = _purposeDataSource;
+    String? selected = _purpose1;
+    final purpose = _purpose1;
     showModalBottomSheet(
       context: context,
       builder: (BuildContext context) {
@@ -145,7 +161,7 @@ class _DemographyPageState extends State<DemographyPage> {
             PickerToolbar(
               done: (() {
                 setState(() {
-                  _purpose = selected;
+                  _purpose1 = selected;
                 });
                 Navigator.pop(context);
               }),
@@ -177,13 +193,59 @@ class _DemographyPageState extends State<DemographyPage> {
     );
   }
 
+  _showPurposePicker2() {
+    final dataSource =
+        _purposeDataSource.where((element) => element != _purpose1).toList();
+    String selected = _purpose2;
+    final purpose = _purpose2;
+    showModalBottomSheet(
+      context: context,
+      builder: (BuildContext context) {
+        return Column(
+          mainAxisAlignment: MainAxisAlignment.end,
+          mainAxisSize: MainAxisSize.min,
+          children: <Widget>[
+            PickerToolbar(
+              done: (() {
+                setState(() {
+                  _purpose2 = selected;
+                });
+                Navigator.pop(context);
+              }),
+              cancel: (() {
+                Navigator.pop(context);
+              }),
+            ),
+            Container(
+              height: 200,
+              child: GestureDetector(
+                onTap: () {
+                  Navigator.pop(context);
+                },
+                child: CupertinoPicker(
+                  itemExtent: 40,
+                  children: dataSource.map((v) => Text(v)).toList(),
+                  onSelectedItemChanged: (index) {
+                    selected = dataSource[index];
+                  },
+                  scrollController: FixedExtentScrollController(
+                      initialItem: dataSource.indexOf(purpose)),
+                ),
+              ),
+            ),
+          ],
+        );
+      },
+    );
+  }
+
   _showPrescriptionPicker() {
     final dataSource = [
       "病院",
       "オンライン",
       "海外から個人輸入",
       "海外在住で薬局購入",
-      "該当なし",
+      _unknown,
     ];
     String? selected = _prescription;
     final prescription = _prescription;
@@ -236,7 +298,7 @@ class _DemographyPageState extends State<DemographyPage> {
       ...List.generate(today().year - offset, (index) => offset + index)
           .reversed
           .map((e) => e.toString()),
-      "該当なし",
+      _unknown,
     ];
     String? selected = _birthYear;
     final birthYear = _birthYear;
@@ -306,7 +368,7 @@ class _DemographyPageState extends State<DemographyPage> {
       "鉱業・採石業・砂利採取業",
       "主婦",
       "学生",
-      "該当なし",
+      _unknown,
     ];
     String? selected = _job;
     final job = _job;
