@@ -48,9 +48,12 @@ abstract class RecordPageState implements _$RecordPageState {
     if (recommendedSignupNotificationIsAlreadyShow) {
       return "";
     }
-    if (diaryCount < 5 || menstruationCount < 1) {
-      return "";
+    if (pillSheetCount >= 1 && menstruationCount >= 1) {
+      return "現在ピルシート$pillSheetCount枚分、生理$menstruationCount件記録しています\nもしもに備えて引き継ぎ設定しませんか？";
     }
-    return "現在、生理履歴$menstruationCount件、体調記録$diaryCount件記録しています\n機種変更やスマホ紛失時に備えませんか？";
+    if (diaryCount >= 5 || menstruationCount >= 1) {
+      return "生理履歴$menstruationCount件、体調記録$diaryCount件記録しています\n機種変更やスマホ紛失時に備えませんか？";
+    }
+    return "";
   }
 }
