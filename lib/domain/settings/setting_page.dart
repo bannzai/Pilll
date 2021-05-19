@@ -365,6 +365,7 @@ class SettingPage extends HookWidget {
           SettingListExplainRowModel(
               "機種変更やスマホ紛失時など、データの引き継ぎ・復元には、アカウント登録が必要です。"),
           SettingListAccountLinkRowModel(onTap: () {
+            analytics.logEvent(name: "did_select_setting_account_cooperation");
             Navigator.of(context)
                 .push(SettingAccountCooperationListPageRoute.route());
           }),

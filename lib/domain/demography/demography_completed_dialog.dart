@@ -1,4 +1,5 @@
 import 'package:flutter_svg/svg.dart';
+import 'package:pilll/analytics.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:flutter/material.dart';
@@ -47,6 +48,7 @@ class DemographyCompletedDialog extends StatelessWidget {
 }
 
 void showDemographyCompletedDialog(BuildContext context) {
+  analytics.setCurrentScreen(screenName: "DemographyCompletedDialog");
   showDialog(
     context: context,
     builder: (_) {

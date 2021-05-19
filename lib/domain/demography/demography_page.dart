@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:pilll/analytics.dart';
 import 'package:pilll/components/atoms/buttons.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
@@ -125,6 +126,8 @@ class _DemographyPageState extends State<DemographyPage> {
                 onPressed: demographic == null
                     ? null
                     : () async {
+                        analytics.logEvent(
+                            name: "demographic_done_button_pressed");
                         final sharedPreferences =
                             await SharedPreferences.getInstance();
                         sharedPreferences.setBool(
@@ -191,6 +194,7 @@ class _DemographyPageState extends State<DemographyPage> {
   }
 
   _showPurposePicker1() {
+    analytics.logEvent(name: "show_purpose_picker_1");
     final dataSource = _purposeDataSource;
     String? selected = _purpose1;
     final purpose = _purpose1;
@@ -203,6 +207,9 @@ class _DemographyPageState extends State<DemographyPage> {
           children: <Widget>[
             PickerToolbar(
               done: (() {
+                analytics.logEvent(
+                    name: "done_purpose_picker_1",
+                    parameters: {"purpose": _purpose1});
                 setState(() {
                   _purpose1 = selected;
                 });
@@ -222,6 +229,9 @@ class _DemographyPageState extends State<DemographyPage> {
                   itemExtent: 40,
                   children: dataSource.map((v) => Text(v)).toList(),
                   onSelectedItemChanged: (index) {
+                    analytics.logEvent(
+                        name: "did_select_purpose_picker_1",
+                        parameters: {"purpose": dataSource[index]});
                     selected = dataSource[index];
                   },
                   scrollController: FixedExtentScrollController(
@@ -237,6 +247,7 @@ class _DemographyPageState extends State<DemographyPage> {
   }
 
   _showPurposePicker2() {
+    analytics.logEvent(name: "show_purpose_picker_2");
     final dataSource =
         _purposeDataSource.where((element) => element != _purpose1).toList();
     String selected = _purpose2;
@@ -250,6 +261,9 @@ class _DemographyPageState extends State<DemographyPage> {
           children: <Widget>[
             PickerToolbar(
               done: (() {
+                analytics.logEvent(
+                    name: "done_purpose_picker_2",
+                    parameters: {"purpose": _purpose2});
                 setState(() {
                   _purpose2 = selected;
                 });
@@ -269,6 +283,9 @@ class _DemographyPageState extends State<DemographyPage> {
                   itemExtent: 40,
                   children: dataSource.map((v) => Text(v)).toList(),
                   onSelectedItemChanged: (index) {
+                    analytics.logEvent(
+                        name: "did_select_purpose_picker_2",
+                        parameters: {"purpose": dataSource[index]});
                     selected = dataSource[index];
                   },
                   scrollController: FixedExtentScrollController(
@@ -283,6 +300,7 @@ class _DemographyPageState extends State<DemographyPage> {
   }
 
   _showPrescriptionPicker() {
+    analytics.logEvent(name: "show_prescription_picker");
     final dataSource = [
       "病院",
       "オンライン",
@@ -301,6 +319,9 @@ class _DemographyPageState extends State<DemographyPage> {
           children: <Widget>[
             PickerToolbar(
               done: (() {
+                analytics.logEvent(
+                    name: "done_prescription_picker",
+                    parameters: {"presecription": _prescription});
                 setState(() {
                   _prescription = selected;
                 });
@@ -320,6 +341,9 @@ class _DemographyPageState extends State<DemographyPage> {
                   itemExtent: 40,
                   children: dataSource.map((v) => Text(v)).toList(),
                   onSelectedItemChanged: (index) {
+                    analytics.logEvent(
+                        name: "did_select_prescription_picker",
+                        parameters: {"prescription": dataSource[index]});
                     selected = dataSource[index];
                   },
                   scrollController: FixedExtentScrollController(
@@ -336,6 +360,7 @@ class _DemographyPageState extends State<DemographyPage> {
   }
 
   _showBirthYearPicker() {
+    analytics.logEvent(name: "show_birth_year_picker");
     final offset = 1950;
     final dataSource = [
       ...List.generate(today().year - offset, (index) => offset + index)
@@ -354,6 +379,9 @@ class _DemographyPageState extends State<DemographyPage> {
           children: <Widget>[
             PickerToolbar(
               done: (() {
+                analytics.logEvent(
+                    name: "done_birth_year_picker",
+                    parameters: {"birt_year": _birthYear});
                 setState(() {
                   _birthYear = selected;
                 });
@@ -373,6 +401,9 @@ class _DemographyPageState extends State<DemographyPage> {
                   itemExtent: 40,
                   children: dataSource.map((v) => Text(v)).toList(),
                   onSelectedItemChanged: (index) {
+                    analytics.logEvent(
+                        name: "did_select_birth_year_picker",
+                        parameters: {"birth_year": dataSource[index]});
                     selected = dataSource[index];
                   },
                   scrollController: FixedExtentScrollController(
@@ -389,6 +420,7 @@ class _DemographyPageState extends State<DemographyPage> {
   }
 
   _showJobPicker() {
+    analytics.logEvent(name: "show_job_picker");
     final dataSource = [
       "建築業",
       "製造業",
@@ -424,6 +456,8 @@ class _DemographyPageState extends State<DemographyPage> {
           children: <Widget>[
             PickerToolbar(
               done: (() {
+                analytics.logEvent(
+                    name: "done_job_picker", parameters: {"job": _job});
                 setState(() {
                   _job = selected;
                 });
@@ -443,6 +477,9 @@ class _DemographyPageState extends State<DemographyPage> {
                   itemExtent: 40,
                   children: dataSource.map((v) => Text(v)).toList(),
                   onSelectedItemChanged: (index) {
+                    analytics.logEvent(
+                        name: "did_select_job_picker",
+                        parameters: {"job": dataSource[index]});
                     selected = dataSource[index];
                   },
                   scrollController: FixedExtentScrollController(

@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:pilll/analytics.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
@@ -53,6 +54,9 @@ class SettingAccountCooperationListPage extends HookWidget {
                     }
                   },
                   onTap: (accountType) async {
+                    analytics.logEvent(
+                        name: "did_select_account_link_${accountType.index}",
+                        parameters: {"link_type": accountType.toString()});
                     showIndicator();
                     bool isLinked = false;
                     switch (accountType) {
@@ -63,6 +67,13 @@ class SettingAccountCooperationListPage extends HookWidget {
                         isLinked = await store.handleGoogle();
                         break;
                     }
+                    analytics.logEvent(
+                      name: "did_end_link_event",
+                      parameters: {
+                        "is_linked": isLinked,
+                        "link_type": accountType.toString(),
+                      },
+                    );
                     hideIndicator();
                     final snackBarDuration = Duration(seconds: 1);
                     if (!isLinked) {
