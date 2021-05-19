@@ -65,19 +65,20 @@ class SettingAccountCooperationListPage extends HookWidget {
                     }
                     hideIndicator();
                     final snackBarDuration = Duration(seconds: 1);
-                    if (isLinked) {
-                      ScaffoldMessenger.of(context).showSnackBar(
-                        SnackBar(
-                          duration: snackBarDuration,
-                          content: Text("${accountType.providerName}で連携しました"),
-                        ),
-                      );
-                    } else {
+                    if (!isLinked) {
                       ScaffoldMessenger.of(context).showSnackBar(
                         SnackBar(
                           duration: snackBarDuration,
                           content:
                               Text("${accountType.providerName}の連携を解除しました"),
+                        ),
+                      );
+                      return;
+                    } else {
+                      ScaffoldMessenger.of(context).showSnackBar(
+                        SnackBar(
+                          duration: snackBarDuration,
+                          content: Text("${accountType.providerName}で連携しました"),
                         ),
                       );
                     }
