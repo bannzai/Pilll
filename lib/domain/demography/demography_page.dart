@@ -7,7 +7,9 @@ import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/entity/demographic.dart';
 import 'package:pilll/service/user.dart';
 import 'package:pilll/util/datetime/day.dart';
+import 'package:pilll/util/shared_preference/keys.dart';
 import 'package:pilll/util/toolbar/picker_toolbar.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class DemographyPage extends StatefulWidget {
   final UserService userService;
@@ -120,6 +122,10 @@ class _DemographyPageState extends State<DemographyPage> {
                 onPressed: demographic == null
                     ? null
                     : () async {
+                        final sharedPreferences =
+                            await SharedPreferences.getInstance();
+                        sharedPreferences.setBool(
+                            BoolKey.isAlreadyDoneDemography, true);
                         await this
                             .widget
                             .userService

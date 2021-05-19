@@ -10,6 +10,8 @@ import 'package:pilll/domain/demography/demography_page.dart';
 import 'package:pilll/domain/settings/setting_account_cooperation_list_page_store.dart';
 import 'package:pilll/entity/link_account_type.dart';
 import 'package:pilll/service/user.dart';
+import 'package:pilll/util/shared_preference/keys.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class SettingAccountCooperationListPage extends HookWidget {
   @override
@@ -78,13 +80,23 @@ class SettingAccountCooperationListPage extends HookWidget {
                         ),
                       );
                     }
-                    Future.delayed(snackBarDuration).then((value) {
-                      final shouldShowDemography = isLinked;
-                      if (shouldShowDemography) {
-                        Navigator.of(context)
-                            .push(DemographyPageRoute.route(userService));
-                      }
-                    });
+                    await Future.delayed(snackBarDuration);
+                    final sharedPreference =
+                        await SharedPreferences.getInstance();
+                    final isAlreadyShowDemography = sharedPreference
+                        .getBool(BoolKey.isAlreadyShowDemography);
+
+                    if (isAlreadyShowDemography == true) {
+                      return;
+                    }
+                    sharedPreference.setBool(
+                        BoolKey.isAlreadyShowDemography, true);
+
+                    final shouldShowDemography = isLinked;
+                    if (shouldShowDemography) {
+                      Navigator.of(context)
+                          .push(DemographyPageRoute.route(userService));
+                    }
                   },
                 ),
                 Divider(indent: 16),
