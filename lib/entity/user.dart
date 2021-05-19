@@ -38,6 +38,7 @@ extension UserFirestoreFieldKeys on String {
   static final packageInfo = "packageInfo";
   static final appleEmail = 'appleEmail';
   static final googleEmail = 'googleEmail';
+  static final demographic = "demographic";
 }
 
 @freezed

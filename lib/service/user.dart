@@ -122,8 +122,8 @@ class UserService {
   }
 
   Future<void> postDemographic(Demographic demographic) {
-    return _database
-        .userReference()
-        .set(demographic.toJson(), SetOptions(merge: true));
+    return _database.userReference().set(
+        {UserFirestoreFieldKeys.demographic: demographic.toJson()},
+        SetOptions(merge: true));
   }
 }
