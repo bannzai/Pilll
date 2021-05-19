@@ -13,8 +13,11 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 class DemographyPage extends StatefulWidget {
   final UserService userService;
+  final VoidCallback done;
 
-  const DemographyPage({Key? key, required this.userService}) : super(key: key);
+  const DemographyPage(
+      {Key? key, required this.userService, required this.done})
+      : super(key: key);
   @override
   _DemographyPageState createState() => _DemographyPageState();
 }
@@ -454,11 +457,12 @@ class _DemographyPageState extends State<DemographyPage> {
 }
 
 extension DemographyPageRoute on DemographyPage {
-  static Route<dynamic> route(UserService userService) {
+  static Route<dynamic> route(UserService userService, VoidCallback done) {
     return MaterialPageRoute(
       settings: RouteSettings(name: "DemographyPage"),
       builder: (_) => DemographyPage(
         userService: userService,
+        done: done,
       ),
     );
   }

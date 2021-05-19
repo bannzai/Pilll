@@ -6,6 +6,7 @@ import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/components/molecules/indicator.dart';
+import 'package:pilll/domain/demography/demography_completed_dialog.dart';
 import 'package:pilll/domain/demography/demography_page.dart';
 import 'package:pilll/domain/settings/setting_account_cooperation_list_page_store.dart';
 import 'package:pilll/entity/link_account_type.dart';
@@ -95,7 +96,9 @@ class SettingAccountCooperationListPage extends HookWidget {
                     final shouldShowDemography = isLinked;
                     if (shouldShowDemography) {
                       Navigator.of(context)
-                          .push(DemographyPageRoute.route(userService));
+                          .push(DemographyPageRoute.route(userService, () {
+                        showDemographyCompletedDialog(context);
+                      }));
                     }
                   },
                 ),
