@@ -12,8 +12,8 @@ class DemographyPage extends StatefulWidget {
 }
 
 class _DemographyPageState extends State<DemographyPage> {
-  String? _purpose = null;
-  String? _prescription = null;
+  String? _purpose;
+  String? _prescription;
   @override
   Widget build(BuildContext context) {
     final purpose = _purpose;
