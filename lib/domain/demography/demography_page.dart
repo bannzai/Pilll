@@ -4,10 +4,15 @@ import 'package:pilll/components/atoms/buttons.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
+import 'package:pilll/entity/demographic.dart';
+import 'package:pilll/service/user.dart';
 import 'package:pilll/util/datetime/day.dart';
 import 'package:pilll/util/toolbar/picker_toolbar.dart';
 
 class DemographyPage extends StatefulWidget {
+  final UserService userService;
+
+  const DemographyPage({Key? key, required this.userService}) : super(key: key);
   @override
   _DemographyPageState createState() => _DemographyPageState();
 }
@@ -35,6 +40,7 @@ class _DemographyPageState extends State<DemographyPage> {
     final prescription = _prescription;
     final birthYear = _birthYear;
     final job = _job;
+    final demographic = _demographic();
     return Scaffold(
       appBar: null,
       body: SafeArea(
@@ -111,9 +117,15 @@ class _DemographyPageState extends State<DemographyPage> {
             Padding(
               padding: const EdgeInsets.only(bottom: 44),
               child: PrimaryButton(
-                onPressed: () {
-                  Navigator.of(context).pop();
-                },
+                onPressed: demographic == null
+                    ? null
+                    : () async {
+                        await this
+                            .widget
+                            .userService
+                            .postDemographic(demographic);
+                        Navigator.of(context).pop();
+                      },
                 text: "完了",
               ),
             ),
@@ -121,6 +133,26 @@ class _DemographyPageState extends State<DemographyPage> {
         ),
       ),
     );
+  }
+
+  Demographic? _demographic() {
+    final purpose1 = _purpose1;
+    final purpose2 = _purpose2;
+    final prescription = _prescription;
+    final birthYear = _birthYear;
+    final job = _job;
+    if (purpose1 == null ||
+        prescription == null ||
+        birthYear == null ||
+        job == null) {
+      return null;
+    }
+    return Demographic(
+        purpose1: purpose1,
+        purpose2: purpose2,
+        prescription: prescription,
+        birthYear: birthYear,
+        job: job);
   }
 
   double _columnWidht() => MediaQuery.of(context).size.width - 39 * 2;
@@ -416,10 +448,12 @@ class _DemographyPageState extends State<DemographyPage> {
 }
 
 extension DemographyPageRoute on DemographyPage {
-  static Route<dynamic> route() {
+  static Route<dynamic> route(UserService userService) {
     return MaterialPageRoute(
       settings: RouteSettings(name: "DemographyPage"),
-      builder: (_) => DemographyPage(),
+      builder: (_) => DemographyPage(
+        userService: userService,
+      ),
     );
   }
 }

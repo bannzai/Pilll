@@ -2,7 +2,6 @@ import 'package:pilll/analytics.dart';
 import 'package:pilll/components/page/discard_dialog.dart';
 import 'package:pilll/components/organisms/pill/pill_sheet_type_select_page.dart';
 import 'package:pilll/components/organisms/setting/setting_menstruation_page.dart';
-import 'package:pilll/domain/demography/demography_page.dart';
 import 'package:pilll/domain/settings/information_for_before_major_update.dart';
 import 'package:pilll/domain/settings/setting_account_cooperation_list_page.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
@@ -366,7 +365,8 @@ class SettingPage extends HookWidget {
           SettingListExplainRowModel(
               "機種変更やスマホ紛失時など、データの引き継ぎ・復元には、アカウント登録が必要です。"),
           SettingListAccountLinkRowModel(onTap: () {
-            Navigator.of(context).push(DemographyPageRoute.route());
+            Navigator.of(context)
+                .push(SettingAccountCooperationListPageRoute.route());
           }),
         ];
     }

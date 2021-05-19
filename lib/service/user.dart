@@ -1,6 +1,7 @@
 import 'dart:io';
 
 import 'package:pilll/database/database.dart';
+import 'package:pilll/entity/demographic.dart';
 import 'package:pilll/entity/package.dart';
 import 'package:pilll/entity/user.dart';
 import 'package:pilll/util/shared_preference/keys.dart';
@@ -118,5 +119,11 @@ class UserService {
     return _database.userReference().set({
       UserFirestoreFieldKeys.googleEmail: email,
     }, SetOptions(merge: true));
+  }
+
+  Future<void> postDemographic(Demographic demographic) {
+    return _database
+        .userReference()
+        .set(demographic.toJson(), SetOptions(merge: true));
   }
 }

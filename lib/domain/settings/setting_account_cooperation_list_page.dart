@@ -12,12 +12,14 @@ import 'package:pilll/domain/demography/demography_page.dart';
 import 'package:pilll/domain/demography/demography_page.dart';
 import 'package:pilll/domain/settings/setting_account_cooperation_list_page_store.dart';
 import 'package:pilll/entity/user.dart';
+import 'package:pilll/service/user.dart';
 
 class SettingAccountCooperationListPage extends HookWidget {
   @override
   Widget build(BuildContext context) {
     final store = useProvider(settingAccountCooperationListProvider);
     final state = useProvider(settingAccountCooperationListProvider.state);
+    final userService = useProvider(userServiceProvider);
     return Scaffold(
       backgroundColor: PilllColors.background,
       appBar: AppBar(
@@ -63,7 +65,8 @@ class SettingAccountCooperationListPage extends HookWidget {
                     }
                     hideIndicator();
                     if (shouldShowDemography) {
-                      Navigator.of(context).push(DemographyPageRoute.route());
+                      Navigator.of(context)
+                          .push(DemographyPageRoute.route(userService));
                     }
                   },
                 ),
