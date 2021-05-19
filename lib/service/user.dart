@@ -110,13 +110,13 @@ class UserService {
   }
 
   Future<void> linkApple(String email) {
-    return _database.userReference().set({
+    return _database.userPrivateReference().set({
       UserFirestoreFieldKeys.appleEmail: email,
     }, SetOptions(merge: true));
   }
 
   Future<void> linkGoogle(String email) {
-    return _database.userReference().set({
+    return _database.userPrivateReference().set({
       UserFirestoreFieldKeys.googleEmail: email,
     }, SetOptions(merge: true));
   }
