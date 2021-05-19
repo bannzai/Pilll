@@ -210,6 +210,9 @@ class _DemographyPageState extends State<DemographyPage> {
                 analytics.logEvent(
                     name: "done_purpose_picker_1",
                     parameters: {"purpose": _purpose1});
+                if (selected != null) {
+                  analytics.setUserProperties("purpose_1", selected);
+                }
                 setState(() {
                   _purpose1 = selected;
                 });
@@ -264,6 +267,7 @@ class _DemographyPageState extends State<DemographyPage> {
                 analytics.logEvent(
                     name: "done_purpose_picker_2",
                     parameters: {"purpose": _purpose2});
+                analytics.setUserProperties("purpose_2", selected);
                 setState(() {
                   _purpose2 = selected;
                 });
@@ -322,6 +326,9 @@ class _DemographyPageState extends State<DemographyPage> {
                 analytics.logEvent(
                     name: "done_prescription_picker",
                     parameters: {"presecription": _prescription});
+                if (selected != null) {
+                  analytics.setUserProperties("prescription", selected);
+                }
                 setState(() {
                   _prescription = selected;
                 });
@@ -382,6 +389,9 @@ class _DemographyPageState extends State<DemographyPage> {
                 analytics.logEvent(
                     name: "done_birth_year_picker",
                     parameters: {"birt_year": _birthYear});
+                if (selected != null) {
+                  analytics.setUserProperties("birth_year", selected);
+                }
                 setState(() {
                   _birthYear = selected;
                 });
@@ -458,6 +468,9 @@ class _DemographyPageState extends State<DemographyPage> {
               done: (() {
                 analytics.logEvent(
                     name: "done_job_picker", parameters: {"job": _job});
+                if (selected != null) {
+                  analytics.setUserProperties("job", selected);
+                }
                 setState(() {
                   _job = selected;
                 });
