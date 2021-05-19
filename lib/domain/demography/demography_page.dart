@@ -13,9 +13,11 @@ class DemographyPage extends StatefulWidget {
 
 class _DemographyPageState extends State<DemographyPage> {
   String? _purpose = null;
+  String? _prescription = null;
   @override
   Widget build(BuildContext context) {
     final purpose = _purpose;
+    final prescription = _prescription;
     return Scaffold(
       appBar: null,
       body: SafeArea(
@@ -39,6 +41,17 @@ class _DemographyPageState extends State<DemographyPage> {
                             style:
                                 FontType.assisting.merge(TextColorStyle.black)),
                         onTap: () => _showPurposePicker(),
+                      ),
+                    ),
+                    SizedBox(height: 30),
+                    _layout(
+                      "ピルの処方はどのように行っていますか？",
+                      GestureDetector(
+                        child: Text(
+                            prescription == null ? "選択してください" : prescription,
+                            style:
+                                FontType.assisting.merge(TextColorStyle.black)),
+                        onTap: () => _showPrescriptionPicker(),
                       ),
                     ),
                   ],
@@ -93,8 +106,10 @@ class _DemographyPageState extends State<DemographyPage> {
       "避妊のため",
       "美容のため",
       "ホルモン療法",
+      "該当なし",
     ];
-    String? selectedPurpose = _purpose;
+    String? selected = _purpose;
+    final purpose = _purpose;
     showModalBottomSheet(
       context: context,
       builder: (BuildContext context) {
@@ -105,7 +120,7 @@ class _DemographyPageState extends State<DemographyPage> {
             PickerToolbar(
               done: (() {
                 setState(() {
-                  _purpose = selectedPurpose;
+                  _purpose = selected;
                 });
                 Navigator.pop(context);
               }),
@@ -123,11 +138,64 @@ class _DemographyPageState extends State<DemographyPage> {
                   itemExtent: 40,
                   children: dataSource.map((v) => Text(v)).toList(),
                   onSelectedItemChanged: (index) {
-                    selectedPurpose = dataSource[index];
+                    selected = dataSource[index];
                   },
                   scrollController: FixedExtentScrollController(
                       initialItem:
-                          _purpose == null ? 0 : dataSource.indexOf(_purpose!)),
+                          purpose == null ? 0 : dataSource.indexOf(purpose)),
+                ),
+              ),
+            ),
+          ],
+        );
+      },
+    );
+  }
+
+  _showPrescriptionPicker() {
+    final dataSource = [
+      "病院",
+      "オンライン",
+      "海外から個人輸入",
+      "海外在住で薬局購入",
+      "該当なし",
+    ];
+    String? selected = _prescription;
+    final prescription = _prescription;
+    showModalBottomSheet(
+      context: context,
+      builder: (BuildContext context) {
+        return Column(
+          mainAxisAlignment: MainAxisAlignment.end,
+          mainAxisSize: MainAxisSize.min,
+          children: <Widget>[
+            PickerToolbar(
+              done: (() {
+                setState(() {
+                  _prescription = selected;
+                });
+                Navigator.pop(context);
+              }),
+              cancel: (() {
+                Navigator.pop(context);
+              }),
+            ),
+            Container(
+              height: 200,
+              child: GestureDetector(
+                onTap: () {
+                  Navigator.pop(context);
+                },
+                child: CupertinoPicker(
+                  itemExtent: 40,
+                  children: dataSource.map((v) => Text(v)).toList(),
+                  onSelectedItemChanged: (index) {
+                    selected = dataSource[index];
+                  },
+                  scrollController: FixedExtentScrollController(
+                      initialItem: prescription == null
+                          ? 0
+                          : dataSource.indexOf(prescription)),
                 ),
               ),
             ),
