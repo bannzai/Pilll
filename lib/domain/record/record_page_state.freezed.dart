@@ -19,6 +19,7 @@ class _$RecordPageStateTearOff {
   _RecordPageState call(
       {required PillSheet? entity,
       Setting? setting,
+      int pillSheetCount = 0,
       int menstruationCount = 0,
       int diaryCount = 0,
       bool recommendedSignupNotificationIsAlreadyShow = true,
@@ -26,6 +27,7 @@ class _$RecordPageStateTearOff {
     return _RecordPageState(
       entity: entity,
       setting: setting,
+      pillSheetCount: pillSheetCount,
       menstruationCount: menstruationCount,
       diaryCount: diaryCount,
       recommendedSignupNotificationIsAlreadyShow:
@@ -42,6 +44,7 @@ const $RecordPageState = _$RecordPageStateTearOff();
 mixin _$RecordPageState {
   PillSheet? get entity => throw _privateConstructorUsedError;
   Setting? get setting => throw _privateConstructorUsedError;
+  int get pillSheetCount => throw _privateConstructorUsedError;
   int get menstruationCount => throw _privateConstructorUsedError;
   int get diaryCount => throw _privateConstructorUsedError;
   bool get recommendedSignupNotificationIsAlreadyShow =>
@@ -61,6 +64,7 @@ abstract class $RecordPageStateCopyWith<$Res> {
   $Res call(
       {PillSheet? entity,
       Setting? setting,
+      int pillSheetCount,
       int menstruationCount,
       int diaryCount,
       bool recommendedSignupNotificationIsAlreadyShow,
@@ -83,6 +87,7 @@ class _$RecordPageStateCopyWithImpl<$Res>
   $Res call({
     Object? entity = freezed,
     Object? setting = freezed,
+    Object? pillSheetCount = freezed,
     Object? menstruationCount = freezed,
     Object? diaryCount = freezed,
     Object? recommendedSignupNotificationIsAlreadyShow = freezed,
@@ -97,6 +102,10 @@ class _$RecordPageStateCopyWithImpl<$Res>
           ? _value.setting
           : setting // ignore: cast_nullable_to_non_nullable
               as Setting?,
+      pillSheetCount: pillSheetCount == freezed
+          ? _value.pillSheetCount
+          : pillSheetCount // ignore: cast_nullable_to_non_nullable
+              as int,
       menstruationCount: menstruationCount == freezed
           ? _value.menstruationCount
           : menstruationCount // ignore: cast_nullable_to_non_nullable
@@ -150,6 +159,7 @@ abstract class _$RecordPageStateCopyWith<$Res>
   $Res call(
       {PillSheet? entity,
       Setting? setting,
+      int pillSheetCount,
       int menstruationCount,
       int diaryCount,
       bool recommendedSignupNotificationIsAlreadyShow,
@@ -176,6 +186,7 @@ class __$RecordPageStateCopyWithImpl<$Res>
   $Res call({
     Object? entity = freezed,
     Object? setting = freezed,
+    Object? pillSheetCount = freezed,
     Object? menstruationCount = freezed,
     Object? diaryCount = freezed,
     Object? recommendedSignupNotificationIsAlreadyShow = freezed,
@@ -190,6 +201,10 @@ class __$RecordPageStateCopyWithImpl<$Res>
           ? _value.setting
           : setting // ignore: cast_nullable_to_non_nullable
               as Setting?,
+      pillSheetCount: pillSheetCount == freezed
+          ? _value.pillSheetCount
+          : pillSheetCount // ignore: cast_nullable_to_non_nullable
+              as int,
       menstruationCount: menstruationCount == freezed
           ? _value.menstruationCount
           : menstruationCount // ignore: cast_nullable_to_non_nullable
@@ -217,6 +232,7 @@ class _$_RecordPageState extends _RecordPageState {
   _$_RecordPageState(
       {required this.entity,
       this.setting,
+      this.pillSheetCount = 0,
       this.menstruationCount = 0,
       this.diaryCount = 0,
       this.recommendedSignupNotificationIsAlreadyShow = true,
@@ -227,6 +243,9 @@ class _$_RecordPageState extends _RecordPageState {
   final PillSheet? entity;
   @override
   final Setting? setting;
+  @JsonKey(defaultValue: 0)
+  @override
+  final int pillSheetCount;
   @JsonKey(defaultValue: 0)
   @override
   final int menstruationCount;
@@ -242,7 +261,7 @@ class _$_RecordPageState extends _RecordPageState {
 
   @override
   String toString() {
-    return 'RecordPageState(entity: $entity, setting: $setting, menstruationCount: $menstruationCount, diaryCount: $diaryCount, recommendedSignupNotificationIsAlreadyShow: $recommendedSignupNotificationIsAlreadyShow, firstLoadIsEnded: $firstLoadIsEnded)';
+    return 'RecordPageState(entity: $entity, setting: $setting, pillSheetCount: $pillSheetCount, menstruationCount: $menstruationCount, diaryCount: $diaryCount, recommendedSignupNotificationIsAlreadyShow: $recommendedSignupNotificationIsAlreadyShow, firstLoadIsEnded: $firstLoadIsEnded)';
   }
 
   @override
@@ -254,6 +273,9 @@ class _$_RecordPageState extends _RecordPageState {
             (identical(other.setting, setting) ||
                 const DeepCollectionEquality()
                     .equals(other.setting, setting)) &&
+            (identical(other.pillSheetCount, pillSheetCount) ||
+                const DeepCollectionEquality()
+                    .equals(other.pillSheetCount, pillSheetCount)) &&
             (identical(other.menstruationCount, menstruationCount) ||
                 const DeepCollectionEquality()
                     .equals(other.menstruationCount, menstruationCount)) &&
@@ -275,6 +297,7 @@ class _$_RecordPageState extends _RecordPageState {
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(entity) ^
       const DeepCollectionEquality().hash(setting) ^
+      const DeepCollectionEquality().hash(pillSheetCount) ^
       const DeepCollectionEquality().hash(menstruationCount) ^
       const DeepCollectionEquality().hash(diaryCount) ^
       const DeepCollectionEquality()
@@ -291,6 +314,7 @@ abstract class _RecordPageState extends RecordPageState {
   factory _RecordPageState(
       {required PillSheet? entity,
       Setting? setting,
+      int pillSheetCount,
       int menstruationCount,
       int diaryCount,
       bool recommendedSignupNotificationIsAlreadyShow,
@@ -301,6 +325,8 @@ abstract class _RecordPageState extends RecordPageState {
   PillSheet? get entity => throw _privateConstructorUsedError;
   @override
   Setting? get setting => throw _privateConstructorUsedError;
+  @override
+  int get pillSheetCount => throw _privateConstructorUsedError;
   @override
   int get menstruationCount => throw _privateConstructorUsedError;
   @override
