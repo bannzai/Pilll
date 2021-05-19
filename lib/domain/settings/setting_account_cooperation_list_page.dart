@@ -51,26 +51,40 @@ class SettingAccountCooperationListPage extends HookWidget {
                   },
                   onTap: (accountType) async {
                     showIndicator();
-                    bool shouldShowDemography = false;
+                    bool isLinked = false;
                     switch (accountType) {
                       case LinkAccountType.apple:
-                        shouldShowDemography = await store.handleApple();
+                        isLinked = await store.handleApple();
                         break;
                       case LinkAccountType.google:
-                        shouldShowDemography = await store.handleGoogle();
+                        isLinked = await store.handleGoogle();
                         break;
                     }
                     hideIndicator();
-                    ScaffoldMessenger.of(context).showSnackBar(
-                      SnackBar(
-                        duration: Duration(seconds: 1),
-                        content: Text(""),
-                      ),
-                    );
-                    if (shouldShowDemography) {
-                      Navigator.of(context)
-                          .push(DemographyPageRoute.route(userService));
+                    final snackBarDuration = Duration(seconds: 1);
+                    if (isLinked) {
+                      ScaffoldMessenger.of(context).showSnackBar(
+                        SnackBar(
+                          duration: snackBarDuration,
+                          content: Text("${accountType.providerName}で連携しました"),
+                        ),
+                      );
+                    } else {
+                      ScaffoldMessenger.of(context).showSnackBar(
+                        SnackBar(
+                          duration: snackBarDuration,
+                          content:
+                              Text("${accountType.providerName}の連携を解除しました"),
+                        ),
+                      );
                     }
+                    Future.delayed(snackBarDuration).then((value) {
+                      final shouldShowDemography = isLinked;
+                      if (shouldShowDemography) {
+                        Navigator.of(context)
+                            .push(DemographyPageRoute.route(userService));
+                      }
+                    });
                   },
                 ),
                 Divider(indent: 16),
