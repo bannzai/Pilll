@@ -103,6 +103,7 @@ class _DemographyPageState extends State<DemographyPage> {
                         onTap: () => _showJobPicker(),
                       ),
                     ),
+                    SizedBox(height: 50),
                   ],
                 ),
               ),
