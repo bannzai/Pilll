@@ -144,12 +144,11 @@ class SettingAccountCooperationRow extends StatelessWidget {
 
   String get _title {
     final linked = isLinked(accountType);
-    switch (accountType) {
-      case LinkAccountType.apple:
-        return linked ? "Apple IDで連携済み" : "Apple ID";
-      case LinkAccountType.google:
-        return linked ? "Googleで連携済み" : "Google アカウント";
+    final providerName = accountType.providerName;
+    if (!linked) {
+      return providerName;
     }
+    return "$providerName で連携済み";
   }
 
   Widget _check() {
