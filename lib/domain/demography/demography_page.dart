@@ -33,13 +33,14 @@ class _DemographyPageState extends State<DemographyPage> {
                     ),
                     SizedBox(height: 36),
                     _layout(
-                        "ピルを服用している目的/理由",
-                        GestureDetector(
-                          child: Text(purpose == null ? "選択してください" : purpose,
-                              style: FontType.assisting
-                                  .merge(TextColorStyle.black)),
-                          onTap: () => _showPurposePicker(),
-                        )),
+                      "ピルを服用している目的/理由",
+                      GestureDetector(
+                        child: Text(purpose == null ? "選択してください" : purpose,
+                            style:
+                                FontType.assisting.merge(TextColorStyle.black)),
+                        onTap: () => _showPurposePicker(),
+                      ),
+                    ),
                   ],
                 ),
               ),
