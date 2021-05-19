@@ -16,11 +16,13 @@ class _DemographyPageState extends State<DemographyPage> {
   String? _purpose;
   String? _prescription;
   String? _birthYear;
+  String? _job;
   @override
   Widget build(BuildContext context) {
     final purpose = _purpose;
     final prescription = _prescription;
     final birthYear = _birthYear;
+    final job = _job;
     return Scaffold(
       appBar: null,
       body: SafeArea(
@@ -65,6 +67,16 @@ class _DemographyPageState extends State<DemographyPage> {
                             style:
                                 FontType.assisting.merge(TextColorStyle.black)),
                         onTap: () => _showBirthYearPicker(),
+                      ),
+                    ),
+                    SizedBox(height: 30),
+                    _layout(
+                      "職業",
+                      GestureDetector(
+                        child: Text(job == null ? "選択してください" : job,
+                            style:
+                                FontType.assisting.merge(TextColorStyle.black)),
+                        onTap: () => _showJobPicker(),
                       ),
                     ),
                   ],
@@ -238,7 +250,7 @@ class _DemographyPageState extends State<DemographyPage> {
             PickerToolbar(
               done: (() {
                 setState(() {
-                  _prescription = selected;
+                  _birthYear = selected;
                 });
                 Navigator.pop(context);
               }),
@@ -262,6 +274,74 @@ class _DemographyPageState extends State<DemographyPage> {
                       initialItem: birthYear == null
                           ? dataSource.indexOf("2000")
                           : dataSource.indexOf(birthYear)),
+                ),
+              ),
+            ),
+          ],
+        );
+      },
+    );
+  }
+
+  _showJobPicker() {
+    final dataSource = [
+      "建築業",
+      "製造業",
+      "情報通信業",
+      "運送業・郵便業",
+      "電気・ガス・熱供給・水道業",
+      "卸売・小売業",
+      "金融業・保険業",
+      "不動産業・物品賃貸業",
+      "学術研究",
+      "技術サービス(測量など)",
+      "専門サービス(法律・税理士など)",
+      "教育・学習支援業",
+      "宿泊業・飲食サービス業",
+      "生活関連サービス業・娯楽業",
+      "その他サービス業全般",
+      "医療・介護・福祉",
+      "公務",
+      "農業・林業",
+      "鉱業・採石業・砂利採取業",
+      "主婦",
+      "学生",
+      "該当なし",
+    ];
+    String? selected = _job;
+    final job = _job;
+    showModalBottomSheet(
+      context: context,
+      builder: (BuildContext context) {
+        return Column(
+          mainAxisAlignment: MainAxisAlignment.end,
+          mainAxisSize: MainAxisSize.min,
+          children: <Widget>[
+            PickerToolbar(
+              done: (() {
+                setState(() {
+                  _job = selected;
+                });
+                Navigator.pop(context);
+              }),
+              cancel: (() {
+                Navigator.pop(context);
+              }),
+            ),
+            Container(
+              height: 200,
+              child: GestureDetector(
+                onTap: () {
+                  Navigator.pop(context);
+                },
+                child: CupertinoPicker(
+                  itemExtent: 40,
+                  children: dataSource.map((v) => Text(v)).toList(),
+                  onSelectedItemChanged: (index) {
+                    selected = dataSource[index];
+                  },
+                  scrollController: FixedExtentScrollController(
+                      initialItem: job == null ? 0 : dataSource.indexOf(job)),
                 ),
               ),
             ),
