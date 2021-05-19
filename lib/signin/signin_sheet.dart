@@ -4,6 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/analytics.dart';
 import 'package:pilll/auth/apple.dart';
+import 'package:pilll/auth/google.dart';
 import 'package:pilll/components/atoms/buttons.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
@@ -35,7 +36,7 @@ class SigninSheet extends HookWidget {
                 textAlign: TextAlign.center,
                 style: TextColorStyle.main.merge(FontType.assisting)),
             _appleButton(context, store),
-            _googleButton(),
+            _googleButton(context, store),
             SecondaryButton(
                 onPressed: () => store.toggleMode(),
                 text: state.isLoginMode ? "サインアップ" : "ログイン"),
@@ -56,6 +57,7 @@ class SigninSheet extends HookWidget {
         ),
       ),
       onPressed: () {
+        analytics.logEvent(name: "signin_sheet_selected_apple");
         store.handleApple().then((value) {
           switch (value) {
             case SigninWithAppleState.determined:
@@ -90,7 +92,7 @@ class SigninSheet extends HookWidget {
     );
   }
 
-  Widget _googleButton() {
+  Widget _googleButton(BuildContext context, SigninSheetStore store) {
     return OutlinedButton(
       style: ButtonStyle(
         backgroundColor: MaterialStateProperty.all(Colors.white),
@@ -101,7 +103,18 @@ class SigninSheet extends HookWidget {
           ),
         ),
       ),
-      onPressed: () async {},
+      onPressed: () async {
+        analytics.logEvent(name: "signin_sheet_selected_google");
+        store.handleGoogle().then((value) {
+          switch (value) {
+            case SigninWithGoogleState.determined:
+              Navigator.of(context).pop();
+              break;
+            case SigninWithGoogleState.cancel:
+              return;
+          }
+        });
+      },
       child: Container(
         width: 220,
         height: 48,
