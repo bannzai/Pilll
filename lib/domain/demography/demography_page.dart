@@ -1,8 +1,10 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:pilll/components/atoms/buttons.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
+import 'package:pilll/util/toolbar/picker_toolbar.dart';
 
 class DemographyPage extends StatefulWidget {
   @override
@@ -10,8 +12,10 @@ class DemographyPage extends StatefulWidget {
 }
 
 class _DemographyPageState extends State<DemographyPage> {
+  String? _purpose = null;
   @override
   Widget build(BuildContext context) {
+    final purpose = _purpose;
     return Scaffold(
       appBar: null,
       body: SafeArea(
@@ -30,9 +34,12 @@ class _DemographyPageState extends State<DemographyPage> {
                     SizedBox(height: 36),
                     _layout(
                         "ピルを服用している目的/理由",
-                        Text("選択してください",
-                            style: FontType.assisting
-                                .merge(TextColorStyle.black))),
+                        GestureDetector(
+                          child: Text(purpose == null ? "選択してください" : purpose,
+                              style: FontType.assisting
+                                  .merge(TextColorStyle.black)),
+                          onTap: () => _showPurposePicker(),
+                        )),
                   ],
                 ),
               ),
@@ -74,6 +81,58 @@ class _DemographyPageState extends State<DemographyPage> {
           ],
         ),
       ),
+    );
+  }
+
+  _showPurposePicker() {
+    final dataSource = [
+      "婦人病の治療",
+      "生理・PMSの症状緩和",
+      "生理不順のため",
+      "避妊のため",
+      "美容のため",
+      "ホルモン療法",
+    ];
+    String? selectedPurpose = _purpose;
+    showModalBottomSheet(
+      context: context,
+      builder: (BuildContext context) {
+        return Column(
+          mainAxisAlignment: MainAxisAlignment.end,
+          mainAxisSize: MainAxisSize.min,
+          children: <Widget>[
+            PickerToolbar(
+              done: (() {
+                setState(() {
+                  _purpose = selectedPurpose;
+                });
+                Navigator.pop(context);
+              }),
+              cancel: (() {
+                Navigator.pop(context);
+              }),
+            ),
+            Container(
+              height: 200,
+              child: GestureDetector(
+                onTap: () {
+                  Navigator.pop(context);
+                },
+                child: CupertinoPicker(
+                  itemExtent: 40,
+                  children: dataSource.map((v) => Text(v)).toList(),
+                  onSelectedItemChanged: (index) {
+                    selectedPurpose = dataSource[index];
+                  },
+                  scrollController: FixedExtentScrollController(
+                      initialItem:
+                          _purpose == null ? 0 : dataSource.indexOf(_purpose!)),
+                ),
+              ),
+            ),
+          ],
+        );
+      },
     );
   }
 }
