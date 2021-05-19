@@ -134,6 +134,7 @@ class _DemographyPageState extends State<DemographyPage> {
                             .userService
                             .postDemographic(demographic);
                         Navigator.of(context).pop();
+                        widget.done();
                       },
                 text: "完了",
               ),
