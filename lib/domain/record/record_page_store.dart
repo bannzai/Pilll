@@ -43,27 +43,10 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
     Future(() async {
       final entity = await _service.fetchLast();
       final setting = await _settingService.fetch();
-      final sharedPreferences = await SharedPreferences.getInstance();
-      final recommendedSignupNotificationIsAlreadyShow = sharedPreferences
-              .getBool(BoolKey.recommendedSignupNotificationIsAlreadyShow) ??
-          false;
-      final List<Diary> diaries;
-      final List<Menstruation> menstruations;
-      if (!recommendedSignupNotificationIsAlreadyShow) {
-        diaries = await _diaryService.fetchListAround90Days(today());
-        menstruations = await _menstruationService.fetchAll();
-      } else {
-        diaries = [];
-        menstruations = [];
-      }
       state = RecordPageState(
         entity: entity,
         setting: setting,
         firstLoadIsEnded: true,
-        diaryCount: diaries.length,
-        menstruationCount: menstruations.length,
-        recommendedSignupNotificationIsAlreadyShow:
-            recommendedSignupNotificationIsAlreadyShow,
       );
       if (entity != null) {
         analytics.logEvent(name: "count_of_remaining_pill", parameters: {
@@ -71,6 +54,29 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
         });
       }
       _subscribe();
+    });
+
+    Future(() async {
+      final List<Diary> diaries;
+      final List<Menstruation> menstruations;
+      final sharedPreferences = await SharedPreferences.getInstance();
+      final recommendedSignupNotificationIsAlreadyShow = sharedPreferences
+              .getBool(BoolKey.recommendedSignupNotificationIsAlreadyShow) ??
+          false;
+      if (!recommendedSignupNotificationIsAlreadyShow) {
+        diaries = await _diaryService.fetchListAround90Days(today());
+        menstruations = await _menstruationService.fetchAll();
+      } else {
+        diaries = [];
+        menstruations = [];
+      }
+
+      state = state.copyWith(
+        diaryCount: diaries.length,
+        menstruationCount: menstruations.length,
+        recommendedSignupNotificationIsAlreadyShow:
+            recommendedSignupNotificationIsAlreadyShow,
+      );
     });
   }
 
