@@ -5,6 +5,7 @@ abstract class AbstractAnalytics {
       {required String name, Map<String, dynamic>? parameters});
   Future<void> setCurrentScreen(
       {required String screenName, String screenClassOverride = 'Flutter'});
+  setUserProperties(String name, dynamic value);
 }
 
 final firebaseAnalytics = FirebaseAnalytics();
@@ -25,6 +26,15 @@ class Analytics extends AbstractAnalytics {
     firebaseAnalytics.logEvent(name: "screen_$screenName");
     return firebaseAnalytics.setCurrentScreen(
         screenName: screenName, screenClassOverride: screenClassOverride);
+  }
+
+  @override
+  setUserProperties(String name, value) {
+    assert(name.toLowerCase() != "age");
+    assert(name.toLowerCase() != "gender");
+    assert(name.toLowerCase() != "interest");
+
+    firebaseAnalytics.setUserProperty(name: name, value: value);
   }
 }
 
