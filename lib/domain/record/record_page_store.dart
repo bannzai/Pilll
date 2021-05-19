@@ -59,6 +59,7 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
     Future(() async {
       final List<Diary> diaries;
       final List<Menstruation> menstruations;
+      final List<PillSheet> pillSheets;
       final sharedPreferences = await SharedPreferences.getInstance();
       final recommendedSignupNotificationIsAlreadyShow = sharedPreferences
               .getBool(BoolKey.recommendedSignupNotificationIsAlreadyShow) ??
@@ -66,14 +67,17 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
       if (!recommendedSignupNotificationIsAlreadyShow) {
         diaries = await _diaryService.fetchListAround90Days(today());
         menstruations = await _menstruationService.fetchAll();
+        pillSheets = await _service.fetchAll();
       } else {
         diaries = [];
         menstruations = [];
+        pillSheets = [];
       }
 
       state = state.copyWith(
         diaryCount: diaries.length,
         menstruationCount: menstruations.length,
+        pillSheetCount: pillSheets.length,
         recommendedSignupNotificationIsAlreadyShow:
             recommendedSignupNotificationIsAlreadyShow,
       );
