@@ -79,7 +79,7 @@ class PillSheetTypeSelectPage extends StatelessWidget {
               SizedBox(height: 20),
               SecondaryButton(
                 onPressed: () {
-                  showSigninSheet(context, cooperateAccount);
+                  showSigninSheet(context, true, cooperateAccount);
                 },
                 text: "すでにアカウントをお持ちの方はこちら",
               ),

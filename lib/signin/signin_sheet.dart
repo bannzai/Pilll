@@ -150,11 +150,15 @@ class SigninSheet extends HookWidget {
   }
 }
 
-showSigninSheet(BuildContext context, Function(LinkAccountType) callback) {
+showSigninSheet(BuildContext context, bool isFixedSignin,
+    Function(LinkAccountType) callback) {
   analytics.setCurrentScreen(screenName: "SigninSheet");
   showModalBottomSheet(
     context: context,
-    builder: (context) => SigninSheet(callback),
+    builder: (context) => SigninSheet(
+      isFixedSignin: isFixedSignin,
+      callback: callback,
+    ),
     backgroundColor: Colors.transparent,
   );
 }

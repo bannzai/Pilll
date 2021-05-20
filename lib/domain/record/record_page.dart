@@ -198,7 +198,7 @@ class RecordPage extends HookWidget {
     final recommendedSignupNotification = state.recommendedSignupNotification;
     if (recommendedSignupNotification.isNotEmpty) {
       return GestureDetector(
-        onTap: () => showSigninSheet(context, (linkAccount) {
+        onTap: () => showSigninSheet(context, false, (linkAccount) {
           analytics.logEvent(name: "signined_account_from_notification_bar");
         }),
         child: Container(
