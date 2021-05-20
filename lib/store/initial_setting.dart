@@ -1,21 +1,50 @@
+import 'dart:async';
+
 import 'package:pilll/entity/initial_setting.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/entity/setting.dart';
+import 'package:pilll/service/auth.dart';
 import 'package:pilll/service/initial_setting.dart';
 import 'package:pilll/state/initial_setting.dart';
 import 'package:riverpod/riverpod.dart';
 
 final initialSettingStoreProvider = StateNotifierProvider((ref) =>
-    InitialSettingStateStore(ref.watch(initialSettingServiceProvider)));
+    InitialSettingStateStore(ref.watch(initialSettingServiceProvider),
+        ref.watch(authServiceProvider)));
 
 class InitialSettingStateStore extends StateNotifier<InitialSettingState> {
+  final AuthService _authService;
   final InitialSettingServiceInterface _service;
-  InitialSettingStateStore(this._service)
+  InitialSettingStateStore(this._service, this._authService)
       : super(
           InitialSettingState(
-            InitialSettingModel.initial(),
+            entity: InitialSettingModel.initial(),
           ),
-        );
+        ) {
+    _reset();
+  }
+
+  _reset() {
+    _subscribe();
+  }
+
+  StreamSubscription? _authCanceller;
+  _subscribe() {
+    _authCanceller?.cancel();
+    _authCanceller = _authService.subscribe().listen((user) {
+      assert(user != null);
+      print(
+          "watch sign state uid: ${user?.uid}, isAnonymous: ${user?.isAnonymous}");
+      final bool isAccountCooperationDidEnd;
+      if (user != null) {
+        isAccountCooperationDidEnd = !user.isAnonymous;
+      } else {
+        isAccountCooperationDidEnd = true;
+      }
+      state = state.copyWith(
+          isAccountCooperationDidEnd: isAccountCooperationDidEnd);
+    });
+  }
 
   void selectedPillSheetType(PillSheetType pillSheetType) {
     state = state.copyWith(
