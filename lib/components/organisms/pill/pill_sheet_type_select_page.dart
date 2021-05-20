@@ -14,6 +14,7 @@ class PillSheetTypeSelectPage extends StatelessWidget {
   final VoidCallback? done;
   final String doneButtonText;
   final PillSheetType? selectedPillSheetType;
+  final bool accountCooperationLinkIsShown;
 
   const PillSheetTypeSelectPage({
     Key? key,
@@ -23,6 +24,7 @@ class PillSheetTypeSelectPage extends StatelessWidget {
     required this.done,
     required this.doneButtonText,
     required this.selectedPillSheetType,
+    required this.accountCooperationLinkIsShown,
   }) : super(key: key);
 
   @override
@@ -70,6 +72,15 @@ class PillSheetTypeSelectPage extends StatelessWidget {
                   onPressed: done,
                 ),
               ),
+            if (accountCooperationLinkIsShown) ...[
+              SizedBox(height: 20),
+              SecondaryButton(
+                onPressed: () {
+                  print("");
+                },
+                text: "すでにアカウントをお持ちの方はこちら",
+              ),
+            ],
             SizedBox(height: 35),
           ],
         ),
@@ -98,6 +109,7 @@ extension PillSheetTypeSelectPageRoute on PillSheetTypeSelectPage {
     required VoidCallback? done,
     required String doneButtonText,
     required PillSheetType selectedPillSheetType,
+    required bool accountCooperationLinkIsShown,
   }) {
     return MaterialPageRoute(
       settings: RouteSettings(name: "PillSheetTypeSelectPage"),
@@ -108,6 +120,7 @@ extension PillSheetTypeSelectPageRoute on PillSheetTypeSelectPage {
         done: done,
         doneButtonText: doneButtonText,
         selectedPillSheetType: selectedPillSheetType,
+        accountCooperationLinkIsShown: accountCooperationLinkIsShown,
       ),
     );
   }

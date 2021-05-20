@@ -29,6 +29,7 @@ class InitialSetting1Page extends HookWidget {
             },
       doneButtonText: "次へ",
       selectedPillSheetType: state.entity.pillSheetType,
+      accountCooperationLinkIsShown: true,
     );
   }
 }
