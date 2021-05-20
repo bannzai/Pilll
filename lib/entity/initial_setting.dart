@@ -24,6 +24,8 @@ abstract class InitialSettingModel implements _$InitialSettingModel {
         bool isOnReminder,
     int? todayPillNumber,
     PillSheetType? pillSheetType,
+    @Default(false)
+        bool isAccountCooperationDidEnd,
   }) = _InitialSettingModel;
 
   Setting buildSetting() => Setting(

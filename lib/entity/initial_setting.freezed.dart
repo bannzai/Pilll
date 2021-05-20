@@ -20,12 +20,13 @@ class _$InitialSettingModelTearOff {
       {int fromMenstruation = 23,
       int durationMenstruation = 4,
       List<ReminderTime> reminderTimes = const [
-        ReminderTime(hour: 21, minute: 0),
-        ReminderTime(hour: 22, minute: 0)
+        const ReminderTime(hour: 21, minute: 0),
+        const ReminderTime(hour: 22, minute: 0)
       ],
       bool isOnReminder = false,
       int? todayPillNumber,
-      PillSheetType? pillSheetType}) {
+      PillSheetType? pillSheetType,
+      bool isAccountCooperationDidEnd = false}) {
     return _InitialSettingModel(
       fromMenstruation: fromMenstruation,
       durationMenstruation: durationMenstruation,
@@ -33,6 +34,7 @@ class _$InitialSettingModelTearOff {
       isOnReminder: isOnReminder,
       todayPillNumber: todayPillNumber,
       pillSheetType: pillSheetType,
+      isAccountCooperationDidEnd: isAccountCooperationDidEnd,
     );
   }
 }
@@ -48,6 +50,7 @@ mixin _$InitialSettingModel {
   bool get isOnReminder => throw _privateConstructorUsedError;
   int? get todayPillNumber => throw _privateConstructorUsedError;
   PillSheetType? get pillSheetType => throw _privateConstructorUsedError;
+  bool get isAccountCooperationDidEnd => throw _privateConstructorUsedError;
 
   @optionalTypeArgs
   TResult when<TResult extends Object?>({
@@ -57,7 +60,8 @@ mixin _$InitialSettingModel {
             List<ReminderTime> reminderTimes,
             bool isOnReminder,
             int? todayPillNumber,
-            PillSheetType? pillSheetType)
+            PillSheetType? pillSheetType,
+            bool isAccountCooperationDidEnd)
         initial,
   }) =>
       throw _privateConstructorUsedError;
@@ -69,7 +73,8 @@ mixin _$InitialSettingModel {
             List<ReminderTime> reminderTimes,
             bool isOnReminder,
             int? todayPillNumber,
-            PillSheetType? pillSheetType)?
+            PillSheetType? pillSheetType,
+            bool isAccountCooperationDidEnd)?
         initial,
     required TResult orElse(),
   }) =>
@@ -102,7 +107,8 @@ abstract class $InitialSettingModelCopyWith<$Res> {
       List<ReminderTime> reminderTimes,
       bool isOnReminder,
       int? todayPillNumber,
-      PillSheetType? pillSheetType});
+      PillSheetType? pillSheetType,
+      bool isAccountCooperationDidEnd});
 }
 
 /// @nodoc
@@ -122,6 +128,7 @@ class _$InitialSettingModelCopyWithImpl<$Res>
     Object? isOnReminder = freezed,
     Object? todayPillNumber = freezed,
     Object? pillSheetType = freezed,
+    Object? isAccountCooperationDidEnd = freezed,
   }) {
     return _then(_value.copyWith(
       fromMenstruation: fromMenstruation == freezed
@@ -148,6 +155,10 @@ class _$InitialSettingModelCopyWithImpl<$Res>
           ? _value.pillSheetType
           : pillSheetType // ignore: cast_nullable_to_non_nullable
               as PillSheetType?,
+      isAccountCooperationDidEnd: isAccountCooperationDidEnd == freezed
+          ? _value.isAccountCooperationDidEnd
+          : isAccountCooperationDidEnd // ignore: cast_nullable_to_non_nullable
+              as bool,
     ));
   }
 }
@@ -165,7 +176,8 @@ abstract class _$InitialSettingModelCopyWith<$Res>
       List<ReminderTime> reminderTimes,
       bool isOnReminder,
       int? todayPillNumber,
-      PillSheetType? pillSheetType});
+      PillSheetType? pillSheetType,
+      bool isAccountCooperationDidEnd});
 }
 
 /// @nodoc
@@ -187,6 +199,7 @@ class __$InitialSettingModelCopyWithImpl<$Res>
     Object? isOnReminder = freezed,
     Object? todayPillNumber = freezed,
     Object? pillSheetType = freezed,
+    Object? isAccountCooperationDidEnd = freezed,
   }) {
     return _then(_InitialSettingModel(
       fromMenstruation: fromMenstruation == freezed
@@ -213,6 +226,10 @@ class __$InitialSettingModelCopyWithImpl<$Res>
           ? _value.pillSheetType
           : pillSheetType // ignore: cast_nullable_to_non_nullable
               as PillSheetType?,
+      isAccountCooperationDidEnd: isAccountCooperationDidEnd == freezed
+          ? _value.isAccountCooperationDidEnd
+          : isAccountCooperationDidEnd // ignore: cast_nullable_to_non_nullable
+              as bool,
     ));
   }
 }
@@ -224,12 +241,13 @@ class _$_InitialSettingModel extends _InitialSettingModel {
       {this.fromMenstruation = 23,
       this.durationMenstruation = 4,
       this.reminderTimes = const [
-        ReminderTime(hour: 21, minute: 0),
-        ReminderTime(hour: 22, minute: 0)
+        const ReminderTime(hour: 21, minute: 0),
+        const ReminderTime(hour: 22, minute: 0)
       ],
       this.isOnReminder = false,
       this.todayPillNumber,
-      this.pillSheetType})
+      this.pillSheetType,
+      this.isAccountCooperationDidEnd = false})
       : super._();
 
   @JsonKey(defaultValue: 23)
@@ -239,8 +257,8 @@ class _$_InitialSettingModel extends _InitialSettingModel {
   @override
   final int durationMenstruation;
   @JsonKey(defaultValue: const [
-    ReminderTime(hour: 21, minute: 0),
-    ReminderTime(hour: 22, minute: 0)
+    const ReminderTime(hour: 21, minute: 0),
+    const ReminderTime(hour: 22, minute: 0)
   ])
   @override
   final List<ReminderTime> reminderTimes;
@@ -251,10 +269,13 @@ class _$_InitialSettingModel extends _InitialSettingModel {
   final int? todayPillNumber;
   @override
   final PillSheetType? pillSheetType;
+  @JsonKey(defaultValue: false)
+  @override
+  final bool isAccountCooperationDidEnd;
 
   @override
   String toString() {
-    return 'InitialSettingModel.initial(fromMenstruation: $fromMenstruation, durationMenstruation: $durationMenstruation, reminderTimes: $reminderTimes, isOnReminder: $isOnReminder, todayPillNumber: $todayPillNumber, pillSheetType: $pillSheetType)';
+    return 'InitialSettingModel.initial(fromMenstruation: $fromMenstruation, durationMenstruation: $durationMenstruation, reminderTimes: $reminderTimes, isOnReminder: $isOnReminder, todayPillNumber: $todayPillNumber, pillSheetType: $pillSheetType, isAccountCooperationDidEnd: $isAccountCooperationDidEnd)';
   }
 
   @override
@@ -278,7 +299,12 @@ class _$_InitialSettingModel extends _InitialSettingModel {
                     .equals(other.todayPillNumber, todayPillNumber)) &&
             (identical(other.pillSheetType, pillSheetType) ||
                 const DeepCollectionEquality()
-                    .equals(other.pillSheetType, pillSheetType)));
+                    .equals(other.pillSheetType, pillSheetType)) &&
+            (identical(other.isAccountCooperationDidEnd,
+                    isAccountCooperationDidEnd) ||
+                const DeepCollectionEquality().equals(
+                    other.isAccountCooperationDidEnd,
+                    isAccountCooperationDidEnd)));
   }
 
   @override
@@ -289,7 +315,8 @@ class _$_InitialSettingModel extends _InitialSettingModel {
       const DeepCollectionEquality().hash(reminderTimes) ^
       const DeepCollectionEquality().hash(isOnReminder) ^
       const DeepCollectionEquality().hash(todayPillNumber) ^
-      const DeepCollectionEquality().hash(pillSheetType);
+      const DeepCollectionEquality().hash(pillSheetType) ^
+      const DeepCollectionEquality().hash(isAccountCooperationDidEnd);
 
   @JsonKey(ignore: true)
   @override
@@ -306,11 +333,18 @@ class _$_InitialSettingModel extends _InitialSettingModel {
             List<ReminderTime> reminderTimes,
             bool isOnReminder,
             int? todayPillNumber,
-            PillSheetType? pillSheetType)
+            PillSheetType? pillSheetType,
+            bool isAccountCooperationDidEnd)
         initial,
   }) {
-    return initial(fromMenstruation, durationMenstruation, reminderTimes,
-        isOnReminder, todayPillNumber, pillSheetType);
+    return initial(
+        fromMenstruation,
+        durationMenstruation,
+        reminderTimes,
+        isOnReminder,
+        todayPillNumber,
+        pillSheetType,
+        isAccountCooperationDidEnd);
   }
 
   @override
@@ -322,13 +356,20 @@ class _$_InitialSettingModel extends _InitialSettingModel {
             List<ReminderTime> reminderTimes,
             bool isOnReminder,
             int? todayPillNumber,
-            PillSheetType? pillSheetType)?
+            PillSheetType? pillSheetType,
+            bool isAccountCooperationDidEnd)?
         initial,
     required TResult orElse(),
   }) {
     if (initial != null) {
-      return initial(fromMenstruation, durationMenstruation, reminderTimes,
-          isOnReminder, todayPillNumber, pillSheetType);
+      return initial(
+          fromMenstruation,
+          durationMenstruation,
+          reminderTimes,
+          isOnReminder,
+          todayPillNumber,
+          pillSheetType,
+          isAccountCooperationDidEnd);
     }
     return orElse();
   }
@@ -361,7 +402,8 @@ abstract class _InitialSettingModel extends InitialSettingModel {
       List<ReminderTime> reminderTimes,
       bool isOnReminder,
       int? todayPillNumber,
-      PillSheetType? pillSheetType}) = _$_InitialSettingModel;
+      PillSheetType? pillSheetType,
+      bool isAccountCooperationDidEnd}) = _$_InitialSettingModel;
   _InitialSettingModel._() : super._();
 
   @override
@@ -376,6 +418,8 @@ abstract class _InitialSettingModel extends InitialSettingModel {
   int? get todayPillNumber => throw _privateConstructorUsedError;
   @override
   PillSheetType? get pillSheetType => throw _privateConstructorUsedError;
+  @override
+  bool get isAccountCooperationDidEnd => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$InitialSettingModelCopyWith<_InitialSettingModel> get copyWith =>
