@@ -17,17 +17,17 @@ abstract class SigninSheetConst {
 }
 
 class SigninSheet extends HookWidget {
-  final bool isFixedSignin;
+  final bool isFixedLoginMode;
   final Function(LinkAccountType) callback;
 
   SigninSheet({
-    required this.isFixedSignin,
+    required this.isFixedLoginMode,
     required this.callback,
   });
   @override
   Widget build(BuildContext context) {
-    final store = useProvider(signinSheetStoreProvider);
-    final state = useProvider(signinSheetStoreProvider.state);
+    final store = useProvider(signinSheetStoreProvider(isFixedLoginMode));
+    final state = useProvider(signinSheetStoreProvider(isFixedLoginMode).state);
     return Container(
       constraints: BoxConstraints(maxHeight: 360, minHeight: 300),
       color: Colors.white,
@@ -45,9 +45,10 @@ class SigninSheet extends HookWidget {
                 style: TextColorStyle.main.merge(FontType.assisting)),
             _appleButton(context, store),
             _googleButton(context, store),
-            SecondaryButton(
-                onPressed: () => store.toggleMode(),
-                text: state.isLoginMode ? "サインアップ" : "ログイン"),
+            if (!isFixedLoginMode)
+              SecondaryButton(
+                  onPressed: () => store.toggleMode(),
+                  text: state.isLoginMode ? "サインアップ" : "ログイン"),
           ],
         ),
       ),
@@ -150,13 +151,13 @@ class SigninSheet extends HookWidget {
   }
 }
 
-showSigninSheet(BuildContext context, bool isFixedSignin,
+showSigninSheet(BuildContext context, bool isFixedLoginMode,
     Function(LinkAccountType) callback) {
   analytics.setCurrentScreen(screenName: "SigninSheet");
   showModalBottomSheet(
     context: context,
     builder: (context) => SigninSheet(
-      isFixedSignin: isFixedSignin,
+      isFixedLoginMode: isFixedLoginMode,
       callback: callback,
     ),
     backgroundColor: Colors.transparent,
