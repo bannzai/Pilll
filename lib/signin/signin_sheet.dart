@@ -17,9 +17,13 @@ abstract class SigninSheetConst {
 }
 
 class SigninSheet extends HookWidget {
+  final bool isFixedSignin;
   final Function(LinkAccountType) callback;
 
-  SigninSheet(this.callback);
+  SigninSheet({
+    required this.isFixedSignin,
+    required this.callback,
+  });
   @override
   Widget build(BuildContext context) {
     final store = useProvider(signinSheetStoreProvider);
