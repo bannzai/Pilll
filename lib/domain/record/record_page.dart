@@ -198,7 +198,9 @@ class RecordPage extends HookWidget {
     final recommendedSignupNotification = state.recommendedSignupNotification;
     if (recommendedSignupNotification.isNotEmpty) {
       return GestureDetector(
-        onTap: () => showSigninSheet(context),
+        onTap: () => showSigninSheet(context, (linkAccount) {
+          analytics.logEvent(name: "signined_account_from_notification_bar");
+        }),
         child: Container(
           height: 64,
           color: PilllColors.secondary,
@@ -271,8 +273,7 @@ class RecordPage extends HookWidget {
           "last_taken_pill_number": pillSheet.lastTakenPillNumber,
           "today_pill_number": pillSheet.todayPillNumber,
         });
-        showSigninSheet(context);
-        // _take(context, pillSheet, now(), store);
+        _take(context, pillSheet, now(), store);
       },
     );
   }

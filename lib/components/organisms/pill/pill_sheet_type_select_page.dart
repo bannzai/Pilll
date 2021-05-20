@@ -1,5 +1,6 @@
 import 'package:pilll/components/atoms/buttons.dart';
 import 'package:pilll/components/organisms/pill/pill_sheet_type_column.dart';
+import 'package:pilll/entity/link_account_type.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
@@ -15,7 +16,7 @@ class PillSheetTypeSelectPage extends StatelessWidget {
   final VoidCallback? done;
   final String doneButtonText;
   final PillSheetType? selectedPillSheetType;
-  final bool accountCooperationLinkIsShown;
+  final Function(LinkAccountType)? signinAccount;
 
   const PillSheetTypeSelectPage({
     Key? key,
@@ -25,11 +26,12 @@ class PillSheetTypeSelectPage extends StatelessWidget {
     required this.done,
     required this.doneButtonText,
     required this.selectedPillSheetType,
-    required this.accountCooperationLinkIsShown,
+    required this.signinAccount,
   }) : super(key: key);
 
   @override
   Scaffold build(BuildContext context) {
+    final cooperateAccount = this.signinAccount;
     return Scaffold(
       backgroundColor: PilllColors.background,
       appBar: AppBar(
@@ -73,11 +75,11 @@ class PillSheetTypeSelectPage extends StatelessWidget {
                   onPressed: done,
                 ),
               ),
-            if (accountCooperationLinkIsShown) ...[
+            if (cooperateAccount != null) ...[
               SizedBox(height: 20),
               SecondaryButton(
                 onPressed: () {
-                  showSigninSheet(context);
+                  showSigninSheet(context, cooperateAccount);
                 },
                 text: "すでにアカウントをお持ちの方はこちら",
               ),
@@ -110,7 +112,7 @@ extension PillSheetTypeSelectPageRoute on PillSheetTypeSelectPage {
     required VoidCallback? done,
     required String doneButtonText,
     required PillSheetType selectedPillSheetType,
-    required bool accountCooperationLinkIsShown,
+    required Function(LinkAccountType)? signinAccount,
   }) {
     return MaterialPageRoute(
       settings: RouteSettings(name: "PillSheetTypeSelectPage"),
@@ -121,7 +123,7 @@ extension PillSheetTypeSelectPageRoute on PillSheetTypeSelectPage {
         done: done,
         doneButtonText: doneButtonText,
         selectedPillSheetType: selectedPillSheetType,
-        accountCooperationLinkIsShown: accountCooperationLinkIsShown,
+        signinAccount: signinAccount,
       ),
     );
   }

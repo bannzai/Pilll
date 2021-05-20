@@ -2,6 +2,7 @@ import 'package:pilll/analytics.dart';
 import 'package:pilll/domain/initial_setting/initial_setting_1_page.dart';
 import 'package:pilll/domain/home/home_page.dart';
 import 'package:pilll/domain/root/root.dart';
+import 'package:pilll/entity/link_account_type.dart';
 import 'package:pilll/service/push_notification.dart';
 import 'package:pilll/util/shared_preference/keys.dart';
 import 'package:flutter/material.dart';
@@ -21,6 +22,9 @@ class AppRouter {
     };
   }
 
+// NOTE: This method call after user end all initialSetting
+// OR user signed with 3rd party provider
+// So, Don't forget when this function is edited. Both test necessary .
   static void endInitialSetting(BuildContext context) {
     analytics.logEvent(name: "end_initial_setteing");
     SharedPreferences.getInstance().then((storage) {
@@ -31,6 +35,10 @@ class AppRouter {
         Navigator.pushReplacementNamed(context, Routes.main);
       });
     });
+  }
+
+  static void signinAccount(BuildContext context, LinkAccountType accountType) {
+    return endInitialSetting(context);
   }
 }
 

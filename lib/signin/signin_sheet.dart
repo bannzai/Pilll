@@ -9,6 +9,7 @@ import 'package:pilll/components/atoms/buttons.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
+import 'package:pilll/entity/link_account_type.dart';
 import 'package:pilll/signin/signin_sheet_store.dart';
 
 abstract class SigninSheetConst {
@@ -16,6 +17,9 @@ abstract class SigninSheetConst {
 }
 
 class SigninSheet extends HookWidget {
+  final Function(LinkAccountType) callback;
+
+  SigninSheet(this.callback);
   @override
   Widget build(BuildContext context) {
     final store = useProvider(signinSheetStoreProvider);
@@ -62,6 +66,7 @@ class SigninSheet extends HookWidget {
           switch (value) {
             case SigninWithAppleState.determined:
               Navigator.of(context).pop();
+              callback(LinkAccountType.apple);
               break;
             case SigninWithAppleState.cancel:
               return;
@@ -109,6 +114,7 @@ class SigninSheet extends HookWidget {
           switch (value) {
             case SigninWithGoogleState.determined:
               Navigator.of(context).pop();
+              callback(LinkAccountType.google);
               break;
             case SigninWithGoogleState.cancel:
               return;
@@ -140,11 +146,11 @@ class SigninSheet extends HookWidget {
   }
 }
 
-showSigninSheet(BuildContext context) {
+showSigninSheet(BuildContext context, Function(LinkAccountType) callback) {
   analytics.setCurrentScreen(screenName: "SigninSheet");
   showModalBottomSheet(
     context: context,
-    builder: (context) => SigninSheet(),
+    builder: (context) => SigninSheet(callback),
     backgroundColor: Colors.transparent,
   );
 }

@@ -160,7 +160,7 @@ class SettingPage extends HookWidget {
                     done: null,
                     doneButtonText: "",
                     selectedPillSheetType: settingEntity.pillSheetType,
-                    accountCooperationLinkIsShown: false,
+                    signinAccount: null,
                   ),
                 );
               },
