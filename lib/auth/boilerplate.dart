@@ -20,10 +20,10 @@ Future<SigninWithAppleState> callLinkWithApple(UserService service) async {
     service.linkApple(email ?? "");
 
     return Future.value(SigninWithAppleState.determined);
-  } on FirebaseAuthException catch (error) {
-    errorLogger.recordError(error, StackTrace.current);
+  } on FirebaseAuthException catch (error, stackTrace) {
+    errorLogger.recordError(error, stackTrace);
     print(
-        "FirebaseAuthException $error, code: ${error.code}, stack: ${StackTrace.current.toString()}");
+        "FirebaseAuthException $error, code: ${error.code}, stack: ${stackTrace.toString()}");
     if (error.code == "provider-already-linked")
       throw FormatException(
           "すでにAppleアカウントが他のPilllのアカウントに紐付いているため連携ができません。詳細: ${error.message}");
@@ -50,10 +50,10 @@ Future<SigninWithGoogleState> callLinkWithGoogle(UserService service) async {
     service.linkGoogle(email ?? "");
 
     return Future.value(SigninWithGoogleState.determined);
-  } on FirebaseAuthException catch (error) {
-    errorLogger.recordError(error, StackTrace.current);
+  } on FirebaseAuthException catch (error, stackTrace) {
+    errorLogger.recordError(error, stackTrace);
     print(
-        "FirebaseAuthException $error, code: ${error.code}, stack: ${StackTrace.current.toString()}");
+        "FirebaseAuthException $error, code: ${error.code}, stack: ${stackTrace.toString()}");
     if (error.code == "provider-already-linked")
       throw FormatException(
           "すでにGoogleアカウントが他のPilllのアカウントに紐付いているため連携ができません。詳細: ${error.message}");
