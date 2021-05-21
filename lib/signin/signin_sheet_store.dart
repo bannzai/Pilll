@@ -36,15 +36,7 @@ class SigninSheetStore extends StateNotifier<SigninSheetState> {
           ? SigninWithAppleState.cancel
           : SigninWithAppleState.determined);
     } else {
-      try {
-        return callLinkWithApple(_userService);
-      } on FirebaseAuthException catch (error) {
-        errorLogger.recordError(error, StackTrace.current);
-        if (error.code == "provider-already-linked")
-          throw FormatException(
-              "すでにAppleアカウントが他のPilllのアカウントに紐付いているため連携ができません。詳細: ${error.message}");
-        rethrow;
-      }
+      return callLinkWithApple(_userService);
     }
   }
 
@@ -54,15 +46,7 @@ class SigninSheetStore extends StateNotifier<SigninSheetState> {
           ? SigninWithGoogleState.cancel
           : SigninWithGoogleState.determined);
     } else {
-      try {
-        return callLinkWithGoogle(_userService);
-      } on FirebaseAuthException catch (error) {
-        errorLogger.recordError(error, StackTrace.current);
-        if (error.code == "provider-already-linked")
-          throw FormatException(
-              "すでにGoogleアカウントが他のPilllのアカウントに紐付いているため連携ができません。詳細: ${error.message}");
-        rethrow;
-      }
+      return callLinkWithGoogle(_userService);
     }
   }
 }
