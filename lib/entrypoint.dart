@@ -33,6 +33,7 @@ Future<void> entrypoint() async {
   await setupDatabase();
 
   ErrorWidget.builder = (FlutterErrorDetails details) {
+    FlutterError.dumpErrorToConsole(details);
     return UniversalErrorPage(
       error: UserDisplayedError(
         displayedMessage: details.exception.toString(),
