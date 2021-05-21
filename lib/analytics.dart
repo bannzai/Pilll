@@ -16,6 +16,7 @@ class Analytics extends AbstractAnalytics {
       {required String name, Map<String, dynamic>? parameters}) async {
     assert(name.length <= 40,
         "firebase analytics log event name limit length up to 40");
+    print("[INFO] logEvent name: $name, parameters: $parameters");
     return firebaseAnalytics.logEvent(name: name, parameters: parameters);
   }
 
@@ -34,6 +35,7 @@ class Analytics extends AbstractAnalytics {
     assert(name.toLowerCase() != "gender");
     assert(name.toLowerCase() != "interest");
 
+    print("[INFO] setUserProperties name: $name, value: $value");
     firebaseAnalytics.setUserProperty(name: name, value: value);
   }
 }

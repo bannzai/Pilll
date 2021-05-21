@@ -39,7 +39,6 @@ Future<AuthInfo> auth() async {
     name: "current_user_fetched",
     parameters: _logginParameters(currentUser),
   );
-  print("current user ${_logginParameters(currentUser)}");
   if (currentUser != null) {
     analytics.logEvent(
         name: "current_user_exists",
@@ -56,7 +55,6 @@ Future<AuthInfo> auth() async {
   final value = await FirebaseAuth.instance.signInAnonymously();
   analytics.logEvent(
       name: "signin_anonymously", parameters: _logginParameters(value.user));
-  print("signed in anonymous uid: ${_logginParameters(value.user)}");
   final sharedPreferences = await SharedPreferences.getInstance();
   final existsUID =
       sharedPreferences.getString(StringKey.lastSigninAnonymousUID);
