@@ -1,7 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 
-final _providerID = 'google.com';
+final googleProviderID = 'google.com';
 
 enum SigninWithGoogleState { determined, cancel }
 
@@ -32,7 +32,7 @@ Future<User?> unlinkGoogle() async {
   if (user == null) {
     throw FormatException("firebase user is not found when unlink google");
   }
-  return user.unlink(_providerID);
+  return user.unlink(googleProviderID);
 }
 
 Future<UserCredential?> signInWithGoogle() async {
@@ -67,6 +67,6 @@ bool isLinkedGoogle() {
 
 bool isLinkedGoogleFor(User user) {
   return user.providerData
-      .where((element) => element.providerId == _providerID)
+      .where((element) => element.providerId == googleProviderID)
       .isNotEmpty;
 }

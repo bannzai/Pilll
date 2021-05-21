@@ -3,7 +3,7 @@ import 'package:pilll/auth/hash.dart';
 import 'package:pilll/util/environment.dart';
 import 'package:sign_in_with_apple/sign_in_with_apple.dart';
 
-final _providerID = "apple.com";
+final appleProviderID = "apple.com";
 
 enum SigninWithAppleState { determined, cancel }
 
@@ -24,7 +24,7 @@ Future<UserCredential?> linkWithApple(User user) async {
     if (state != appleCredential.state) {
       throw AssertionError('state not matched!');
     }
-    final credential = OAuthProvider(_providerID).credential(
+    final credential = OAuthProvider(appleProviderID).credential(
       idToken: appleCredential.identityToken,
       accessToken: appleCredential.authorizationCode,
       rawNonce: rawNonce,
@@ -43,7 +43,7 @@ Future<User?> unlinkApple() async {
   if (user == null) {
     throw FormatException("firebase user is not found when unlink apple");
   }
-  return user.unlink(_providerID);
+  return user.unlink(appleProviderID);
 }
 
 Future<UserCredential?> signInWithApple() async {
@@ -63,7 +63,7 @@ Future<UserCredential?> signInWithApple() async {
     if (state != appleCredential.state) {
       throw AssertionError('state not matched!');
     }
-    final credential = OAuthProvider(_providerID).credential(
+    final credential = OAuthProvider(appleProviderID).credential(
       idToken: appleCredential.identityToken,
       accessToken: appleCredential.authorizationCode,
       rawNonce: rawNonce,
@@ -87,6 +87,6 @@ bool isLinkedApple() {
 
 bool isLinkedAppleFor(User user) {
   return user.providerData
-      .where((element) => element.providerId == _providerID)
+      .where((element) => element.providerId == appleProviderID)
       .isNotEmpty;
 }
