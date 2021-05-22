@@ -33,11 +33,7 @@ Future<void> entrypoint() async {
   await setupDatabase();
 
   ErrorWidget.builder = (FlutterErrorDetails details) {
-    return UniversalErrorPage(
-      error: UserDisplayedError(
-        displayedMessage: details.exception.toString(),
-      ),
-    );
+    return UniversalErrorPage(error: details.exception.toString());
   };
   FlutterError.onError = FirebaseCrashlytics.instance.recordFlutterError;
   definedChannel();

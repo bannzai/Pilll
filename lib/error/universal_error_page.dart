@@ -7,7 +7,7 @@ import 'package:pilll/inquiry/inquiry.dart';
 import 'package:flutter/material.dart';
 
 class UniversalErrorPage extends StatelessWidget {
-  final Error? error;
+  final String error;
   final Widget? child;
 
   const UniversalErrorPage({Key? key, required this.error, this.child})

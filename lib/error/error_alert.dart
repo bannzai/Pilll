@@ -3,6 +3,7 @@ import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:pilll/entity/user_error.dart';
 
 class ErrorAlert extends StatelessWidget {
   final String? title;
@@ -39,6 +40,18 @@ void showErrorAlert(BuildContext context,
       return ErrorAlert(
         title: title,
         errorMessage: message,
+      );
+    },
+  );
+}
+
+void showErrorAlertWithError(BuildContext context, UserDisplayedError error) {
+  showDialog(
+    context: context,
+    builder: (_) {
+      return ErrorAlert(
+        title: error.title ?? "エラーが発生しました",
+        errorMessage: error.toString(),
       );
     },
   );

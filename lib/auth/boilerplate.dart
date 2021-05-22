@@ -26,7 +26,7 @@ Future<SigninWithAppleState> callLinkWithApple(UserService service) async {
     print(
         "FirebaseAuthException $error, code: ${error.code}, stack: ${stackTrace.toString()}");
     if (error.code == "provider-already-linked")
-      throw FormatException(
+      throw UserDisplayedError(
           "すでにAppleアカウントが他のPilllのアカウントに紐付いているため連携ができません。詳細: ${error.message}");
     rethrow;
   } catch (error) {

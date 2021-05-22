@@ -27,8 +27,8 @@ enum ScreenType { home, initialSetting }
 enum IndicatorType { shown, hidden }
 
 class RootState extends State<Root> {
-  Error? error;
-  onError(Error error) {
+  dynamic? error;
+  onError(dynamic error) {
     setState(() {
       this.error = error;
     });
@@ -96,7 +96,7 @@ class RootState extends State<Root> {
   @override
   Widget build(BuildContext context) {
     if (error != null) {
-      return UniversalErrorPage(error: error);
+      return UniversalErrorPage(error: error.toString());
     }
     if (screenType == null) {
       return ScaffoldIndicator();
@@ -116,13 +116,13 @@ class RootState extends State<Root> {
       }, error: (error, stacktrace) {
         print(error);
         print(stacktrace);
-        final displayedError = UserDisplayedError(ErrorMessages.connection +
+        errorLogger.recordError(error, stacktrace);
+        final displayedError = ErrorMessages.connection +
             "\n" +
             "errorType: ${error.runtimeType.toString()}\n" +
             error.toString() +
             "error: ${error.toString()}\n" +
-            stacktrace.toString());
-        errorLogger.recordError(error, stacktrace);
+            stacktrace.toString();
         return UniversalErrorPage(error: displayedError);
       });
     });
@@ -165,12 +165,11 @@ class RootState extends State<Root> {
       });
     }).catchError((error) {
       errorLogger.recordError(error, StackTrace.current);
-      onError(UserDisplayedError(
-          ErrorMessages.connection +
-              "\n" +
-              "errorType: ${error.runtimeType.toString()}\n" +
-              "error: ${error.toString()}\n" +
-              StackTrace.current.toString()));
+      onError(UserDisplayedError(ErrorMessages.connection +
+          "\n" +
+          "errorType: ${error.runtimeType.toString()}\n" +
+          "error: ${error.toString()}\n" +
+          StackTrace.current.toString()));
     });
   }
 }
