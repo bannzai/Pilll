@@ -13,7 +13,7 @@ class AuthInfo {
 }
 
 final authStateProvider = FutureProvider<AuthInfo>((ref) {
-  return auth();
+  return cacheOrAuth();
 });
 
 Map<String, dynamic> _logginParameters(User? currentUser) {
@@ -29,7 +29,7 @@ Map<String, dynamic> _logginParameters(User? currentUser) {
   };
 }
 
-Future<AuthInfo> auth() async {
+Future<AuthInfo> cacheOrAuth() async {
   final currentUser = FirebaseAuth.instance.currentUser;
   analytics.logEvent(
     name: "current_user_fetched",

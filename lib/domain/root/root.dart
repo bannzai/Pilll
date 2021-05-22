@@ -129,7 +129,7 @@ class RootState extends State<Root> {
   }
 
   _auth() {
-    auth().then((authInfo) {
+    cacheOrAuth().then((authInfo) {
       final userService = UserService(DatabaseConnection(authInfo.uid));
       errorLogger.setUserIdentifier(authInfo.uid);
       firebaseAnalytics.setUserId(authInfo.uid);

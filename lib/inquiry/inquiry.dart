@@ -20,7 +20,7 @@ inquiry() {
 }
 
 Future<String> debugInfo(String separator) async {
-  String userID = (await auth()).uid;
+  String userID = (await cacheOrAuth()).uid;
   DatabaseConnection databaseConnection = DatabaseConnection(userID);
   PillSheet? pillSheet =
       await PillSheetService(databaseConnection).fetchLast();

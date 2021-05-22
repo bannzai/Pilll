@@ -44,7 +44,7 @@ class _HomePageState extends State<HomePage>
         vsync: this,
         initialIndex: _selectedIndex);
     _tabController.addListener(_handleTabSelection);
-    auth().then((auth) {
+    cacheOrAuth().then((auth) {
       requestNotificationPermissions();
       SettingService(DatabaseConnection(auth.uid)).fetch().then((setting) {
         if (setting.isOnReminder) {

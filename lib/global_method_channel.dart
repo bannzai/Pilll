@@ -22,7 +22,7 @@ definedChannel() {
 }
 
 Future<void> recordPill() async {
-  final authInfo = await auth();
+  final authInfo = await cacheOrAuth();
   final service = PillSheetService(DatabaseConnection(authInfo.uid));
   final entity = await service.fetchLast();
   if (entity == null) {
