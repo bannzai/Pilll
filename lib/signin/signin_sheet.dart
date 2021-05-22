@@ -9,7 +9,10 @@ import 'package:pilll/components/atoms/buttons.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
+import 'package:pilll/domain/root/root.dart';
 import 'package:pilll/entity/link_account_type.dart';
+import 'package:pilll/entity/user_error.dart';
+import 'package:pilll/error/error_alert.dart';
 import 'package:pilll/signin/signin_sheet_store.dart';
 
 abstract class SigninSheetConst {
@@ -76,6 +79,12 @@ class SigninSheet extends HookWidget {
             case SigninWithAppleState.cancel:
               return;
           }
+        }, onError: (error) {
+          if (error is UserDisplayedError) {
+            showErrorAlertWithError(context, error);
+          } else {
+            rootKey.currentState?.onError(error);
+          }
         });
       },
       child: Container(
@@ -123,6 +132,12 @@ class SigninSheet extends HookWidget {
               break;
             case SigninWithGoogleState.cancel:
               return;
+          }
+        }, onError: (error) {
+          if (error is UserDisplayedError) {
+            showErrorAlertWithError(context, error);
+          } else {
+            rootKey.currentState?.onError(error);
           }
         });
       },
