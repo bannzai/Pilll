@@ -8,9 +8,6 @@ final authServiceProvider = Provider(
 
 class AuthService {
   Stream<User?> subscribe() {
-    return StreamGroup.merge([
-      FirebaseAuth.instance.authStateChanges(),
-      FirebaseAuth.instance.userChanges()
-    ]);
+    return StreamGroup.merge([FirebaseAuth.instance.userChanges()]);
   }
 }
