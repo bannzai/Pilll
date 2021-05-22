@@ -1,3 +1,4 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:pilll/analytics.dart';
 import 'package:pilll/domain/initial_setting/initial_setting_1_page.dart';
 import 'package:pilll/domain/home/home_page.dart';
@@ -38,6 +39,7 @@ class AppRouter {
   }
 
   static void signinAccount(BuildContext context, LinkAccountType accountType) {
+    print("signinAccount: ${FirebaseAuth.instance.currentUser?.uid}");
     return endInitialSetting(context);
   }
 }
