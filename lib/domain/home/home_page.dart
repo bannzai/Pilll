@@ -1,5 +1,5 @@
 import 'package:pilll/analytics.dart';
-import 'package:pilll/auth/anonymous.dart';
+import 'package:pilll/service/auth.dart';
 import 'package:pilll/database/database.dart';
 import 'package:pilll/domain/calendar/calendar_page.dart';
 import 'package:pilll/domain/menstruation/menstruation_page.dart';

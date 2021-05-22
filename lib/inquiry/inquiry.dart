@@ -1,4 +1,4 @@
-import 'package:pilll/auth/anonymous.dart';
+import 'package:pilll/service/auth.dart';
 import 'package:pilll/database/database.dart';
 import 'package:pilll/entity/menstruation.dart';
 import 'package:pilll/entity/pill_sheet.dart';
@@ -22,8 +22,7 @@ inquiry() {
 Future<String> debugInfo(String separator) async {
   String userID = (await cacheOrAuth()).uid;
   DatabaseConnection databaseConnection = DatabaseConnection(userID);
-  PillSheet? pillSheet =
-      await PillSheetService(databaseConnection).fetchLast();
+  PillSheet? pillSheet = await PillSheetService(databaseConnection).fetchLast();
   Setting setting = await SettingService(databaseConnection).fetch();
   final menstruations =
       await MenstruationService(databaseConnection).fetchAll();

@@ -1,4 +1,3 @@
-import 'package:pilll/auth/anonymous.dart';
 import 'package:pilll/entity/diary.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
