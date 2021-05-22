@@ -6,7 +6,6 @@ import 'package:pilll/analytics.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/database/database.dart';
-import 'package:pilll/entity/user_error.dart';
 import 'package:pilll/error/universal_error_page.dart';
 import 'package:pilll/global_method_channel.dart';
 import 'package:pilll/router/router.dart';

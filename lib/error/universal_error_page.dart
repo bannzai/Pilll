@@ -14,7 +14,7 @@ class UniversalErrorPage extends StatelessWidget {
       : super(key: key);
   @override
   Widget build(BuildContext context) {
-    if (this.error == null && this.child != null) {
+    if (this.child != null) {
       return child!;
     }
     return Scaffold(
