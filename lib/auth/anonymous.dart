@@ -12,11 +12,7 @@ class AuthInfo {
   AuthInfo(this.uid);
 }
 
-AuthInfo? _authInfoCache;
 final authStateProvider = FutureProvider<AuthInfo>((ref) {
-  if (_authInfoCache != null) {
-    return Future.value(_authInfoCache);
-  }
   return auth();
 });
 
@@ -49,8 +45,7 @@ Future<AuthInfo> auth() async {
       sharedPreferences.setString(StringKey.currentUserUID, currentUser.uid);
     }
 
-    _authInfoCache = AuthInfo(currentUser.uid);
-    return Future.value(_authInfoCache!);
+    return Future.value(AuthInfo(currentUser.uid));
   }
   final value = await FirebaseAuth.instance.signInAnonymously();
   analytics.logEvent(
@@ -65,6 +60,5 @@ Future<AuthInfo> auth() async {
     }
   }
 
-  _authInfoCache = AuthInfo(value.user!.uid);
-  return _authInfoCache!;
+  return AuthInfo(value.user!.uid);
 }
