@@ -1,8 +1,6 @@
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:pilll/auth/apple.dart';
 import 'package:pilll/auth/boilerplate.dart';
 import 'package:pilll/auth/google.dart';
-import 'package:pilll/error_log.dart';
 import 'package:pilll/service/user.dart';
 import 'package:pilll/signin/signin_sheet_state.dart';
 import 'package:riverpod/riverpod.dart';

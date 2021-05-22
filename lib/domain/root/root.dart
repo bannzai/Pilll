@@ -116,13 +116,12 @@ class RootState extends State<Root> {
       }, error: (error, stacktrace) {
         print(error);
         print(stacktrace);
-        final displayedError = UserDisplayedError(
-            displayedMessage: ErrorMessages.connection +
-                "\n" +
-                "errorType: ${error.runtimeType.toString()}\n" +
-                error.toString() +
-                "error: ${error.toString()}\n" +
-                stacktrace.toString());
+        final displayedError = UserDisplayedError(ErrorMessages.connection +
+            "\n" +
+            "errorType: ${error.runtimeType.toString()}\n" +
+            error.toString() +
+            "error: ${error.toString()}\n" +
+            stacktrace.toString());
         errorLogger.recordError(error, stacktrace);
         return UniversalErrorPage(error: displayedError);
       });
@@ -167,7 +166,7 @@ class RootState extends State<Root> {
     }).catchError((error) {
       errorLogger.recordError(error, StackTrace.current);
       onError(UserDisplayedError(
-          displayedMessage: ErrorMessages.connection +
+          ErrorMessages.connection +
               "\n" +
               "errorType: ${error.runtimeType.toString()}\n" +
               "error: ${error.toString()}\n" +

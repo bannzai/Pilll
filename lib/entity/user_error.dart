@@ -1,6 +1,6 @@
 class UserDisplayedError extends Error {
   late String _displayedMessage;
-  UserDisplayedError({required String displayedMessage}) {
+  UserDisplayedError(String displayedMessage) {
     this._displayedMessage = displayedMessage;
   }
 
