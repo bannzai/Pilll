@@ -15,14 +15,12 @@ import 'package:pilll/entity/link_account_type.dart';
 import 'package:pilll/entity/user_error.dart';
 import 'package:pilll/error/error_alert.dart';
 import 'package:pilll/error_log.dart';
-import 'package:pilll/service/user.dart';
 
 class SettingAccountCooperationListPage extends HookWidget {
   @override
   Widget build(BuildContext context) {
     final store = useProvider(settingAccountCooperationListProvider);
     final state = useProvider(settingAccountCooperationListProvider.state);
-    final userService = useProvider(userServiceProvider);
     return Scaffold(
       backgroundColor: PilllColors.background,
       appBar: AppBar(
@@ -50,7 +48,7 @@ class SettingAccountCooperationListPage extends HookWidget {
                 if (state.isLinkedApple) {
                   _showUnlinkDialog(context, store, LinkAccountType.apple);
                 } else {
-                  _linkApple(context, store, userService);
+                  _linkApple(context, store);
                 }
               },
             ),
@@ -61,7 +59,7 @@ class SettingAccountCooperationListPage extends HookWidget {
                 if (state.isLinkedGoogle) {
                   _showUnlinkDialog(context, store, LinkAccountType.google);
                 } else {
-                  _linkGoogle(context, store, userService);
+                  _linkGoogle(context, store);
                 }
               },
             ),
@@ -163,23 +161,20 @@ class SettingAccountCooperationListPage extends HookWidget {
   _linkApple(
     BuildContext context,
     SettingAccountCooperationListPageStore store,
-    UserService userService,
   ) async {
-    return _link(context, store, userService, LinkAccountType.apple);
+    return _link(context, store, LinkAccountType.apple);
   }
 
   Future<void> _linkGoogle(
     BuildContext context,
     SettingAccountCooperationListPageStore store,
-    UserService userService,
   ) async {
-    return _link(context, store, userService, LinkAccountType.google);
+    return _link(context, store, LinkAccountType.google);
   }
 
   Future<void> _link(
     BuildContext context,
     SettingAccountCooperationListPageStore store,
-    UserService userService,
     LinkAccountType accountType,
   ) async {
     final String eventSuffix = _logEventSuffix(accountType);
@@ -222,7 +217,7 @@ class SettingAccountCooperationListPage extends HookWidget {
       ),
     );
     await Future.delayed(snackBarDuration);
-    showDemographyPageIfNeeded(context, userService);
+    showDemographyPageIfNeeded(context);
   }
 }
 
