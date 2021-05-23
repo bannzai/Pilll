@@ -7,10 +7,14 @@ import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/components/molecules/indicator.dart';
+import 'package:pilll/components/page/discard_dialog.dart';
 import 'package:pilll/domain/demography/demography_completed_dialog.dart';
 import 'package:pilll/domain/demography/demography_page.dart';
+import 'package:pilll/domain/root/root.dart';
 import 'package:pilll/domain/settings/setting_account_cooperation_list_page_store.dart';
 import 'package:pilll/entity/link_account_type.dart';
+import 'package:pilll/entity/user_error.dart';
+import 'package:pilll/error/error_alert.dart';
 import 'package:pilll/service/user.dart';
 import 'package:pilll/util/shared_preference/keys.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -41,86 +45,195 @@ class SettingAccountCooperationListPage extends HookWidget {
                 style: FontType.assisting.merge(TextColorStyle.primary),
               ),
             ),
-            ...LinkAccountType.values.map((e) {
-              return [
-                SettingAccountCooperationRow(
-                  accountType: e,
-                  isLinked: (accountType) {
-                    switch (accountType) {
-                      case LinkAccountType.apple:
-                        return state.isLinkedApple;
-                      case LinkAccountType.google:
-                        return state.isLinkedGoogle;
-                    }
-                  },
-                  onTap: (accountType) async {
-                    analytics.logEvent(
-                        name: "did_select_account_link_${accountType.index}",
-                        parameters: {"link_type": accountType.toString()});
-                    showIndicator();
-                    bool isLinked = false;
-                    switch (accountType) {
-                      case LinkAccountType.apple:
-                        isLinked = await store.handleApple();
-                        break;
-                      case LinkAccountType.google:
-                        isLinked = await store.handleGoogle();
-                        break;
-                    }
-                    analytics.logEvent(
-                      name: "did_end_link_event",
-                      parameters: {
-                        "is_linked": isLinked,
-                        "link_type": accountType.toString(),
-                      },
-                    );
-                    hideIndicator();
-                    final snackBarDuration = Duration(seconds: 1);
-                    if (!isLinked) {
-                      ScaffoldMessenger.of(context).showSnackBar(
-                        SnackBar(
-                          duration: snackBarDuration,
-                          content:
-                              Text("${accountType.providerName}の連携を解除しました"),
-                        ),
-                      );
-                      return;
-                    } else {
-                      ScaffoldMessenger.of(context).showSnackBar(
-                        SnackBar(
-                          duration: snackBarDuration,
-                          content: Text("${accountType.providerName}で連携しました"),
-                        ),
-                      );
-                    }
-                    await Future.delayed(snackBarDuration);
-                    final sharedPreference =
-                        await SharedPreferences.getInstance();
-                    final isAlreadyShowDemography = sharedPreference
-                        .getBool(BoolKey.isAlreadyShowDemography);
-
-                    if (isAlreadyShowDemography == true) {
-                      return;
-                    }
-                    sharedPreference.setBool(
-                        BoolKey.isAlreadyShowDemography, true);
-
-                    final shouldShowDemography = isLinked;
-                    if (shouldShowDemography) {
-                      Navigator.of(context)
-                          .push(DemographyPageRoute.route(userService, () {
-                        showDemographyCompletedDialog(context);
-                      }));
-                    }
-                  },
-                ),
-                Divider(indent: 16),
-              ];
-            }).expand((element) => element),
+            SettingAccountCooperationRow(
+              accountType: LinkAccountType.apple,
+              isLinked: () => state.isLinkedApple,
+              onTap: () async {
+                if (state.isLinkedApple) {
+                  _showUnlinkDialog(context, store, LinkAccountType.apple);
+                } else {
+                  _linkApple(context, store, userService);
+                }
+              },
+            ),
+            SettingAccountCooperationRow(
+              accountType: LinkAccountType.google,
+              isLinked: () => state.isLinkedGoogle,
+              onTap: () async {
+                if (state.isLinkedApple) {
+                  _showUnlinkDialog(context, store, LinkAccountType.google);
+                } else {
+                  _linkGoogle(context, store, userService);
+                }
+              },
+            ),
           ],
         ),
       ),
     );
+  }
+
+  _showUnlinkDialog(
+    BuildContext context,
+    SettingAccountCooperationListPageStore store,
+    LinkAccountType accountType,
+  ) {
+    final String eventSuffix = _logEventSuffix(accountType);
+    analytics.logEvent(
+      name: "show_unlink_dialog_$eventSuffix",
+    );
+    showDiscardDialog(
+      context,
+      title: "アカウント連携を解除しますか？",
+      message: '''
+連携を解除すると${accountType.providerName}を使ってログインができなくなります。
+機種変更等でPilllでログインするときに必要です。
+''',
+      done: () {
+        switch (accountType) {
+          case LinkAccountType.apple:
+            return _unlinkApple(context, store);
+          case LinkAccountType.google:
+            return _unlinkGoogle(context, store);
+        }
+      },
+      doneText: "解除する",
+    );
+  }
+
+  String _logEventSuffix(LinkAccountType accountType) {
+    switch (accountType) {
+      case LinkAccountType.apple:
+        return "apple";
+      case LinkAccountType.google:
+        return "google";
+    }
+  }
+
+  _unlinkApple(BuildContext context,
+          SettingAccountCooperationListPageStore store) async =>
+      _unlink(context, store, LinkAccountType.apple);
+
+  _unlinkGoogle(BuildContext context,
+          SettingAccountCooperationListPageStore store) async =>
+      _unlink(context, store, LinkAccountType.google);
+
+  _unlink(
+    BuildContext context,
+    SettingAccountCooperationListPageStore store,
+    LinkAccountType accountType,
+  ) async {
+    final String eventSuffix = _logEventSuffix(accountType);
+    analytics.logEvent(
+      name: "unlink_link_event_$eventSuffix",
+    );
+
+    showIndicator();
+    try {
+      switch (accountType) {
+        case LinkAccountType.apple:
+          await store.unlinkApple();
+          break;
+        case LinkAccountType.google:
+          await store.unlinkGoogle();
+          break;
+      }
+    } catch (error) {
+      analytics.logEvent(
+          name: "did_failure_unlink_event_$eventSuffix",
+          parameters: {"errot_type": error.runtimeType.toString()});
+      hideIndicator();
+
+      if (error is UserDisplayedError) {
+        showErrorAlertWithError(context, error);
+      } else {
+        rootKey.currentState?.onError(error);
+      }
+      return;
+    }
+
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(
+        duration: Duration(seconds: 1),
+        content: Text("${accountType.providerName}の連携を解除しました"),
+      ),
+    );
+  }
+
+  _linkApple(
+    BuildContext context,
+    SettingAccountCooperationListPageStore store,
+    UserService userService,
+  ) async {
+    return _link(context, store, userService, LinkAccountType.apple);
+  }
+
+  Future<void> _linkGoogle(
+    BuildContext context,
+    SettingAccountCooperationListPageStore store,
+    UserService userService,
+  ) async {
+    return _link(context, store, userService, LinkAccountType.google);
+  }
+
+  Future<void> _link(
+    BuildContext context,
+    SettingAccountCooperationListPageStore store,
+    UserService userService,
+    LinkAccountType accountType,
+  ) async {
+    final String eventSuffix = _logEventSuffix(accountType);
+    analytics.logEvent(
+      name: "link_event_$eventSuffix",
+    );
+    showIndicator();
+    try {
+      switch (accountType) {
+        case LinkAccountType.apple:
+          await store.linkApple();
+          break;
+        case LinkAccountType.google:
+          await store.linkGoogle();
+          break;
+      }
+      hideIndicator();
+      analytics.logEvent(
+        name: "did_end_link_event_$eventSuffix",
+      );
+    } catch (error) {
+      analytics.logEvent(
+          name: "did_failure_link_event_$eventSuffix",
+          parameters: {"errot_type": error.runtimeType.toString()});
+
+      hideIndicator();
+      if (error is UserDisplayedError) {
+        showErrorAlertWithError(context, error);
+      } else {
+        rootKey.currentState?.onError(error);
+      }
+      return;
+    }
+
+    final snackBarDuration = Duration(seconds: 1);
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(
+        duration: snackBarDuration,
+        content: Text("${accountType.providerName}で連携しました"),
+      ),
+    );
+    await Future.delayed(snackBarDuration);
+    final sharedPreference = await SharedPreferences.getInstance();
+    final isAlreadyShowDemography =
+        sharedPreference.getBool(BoolKey.isAlreadyShowDemography);
+
+    if (isAlreadyShowDemography == true) {
+      return;
+    }
+    sharedPreference.setBool(BoolKey.isAlreadyShowDemography, true);
+
+    Navigator.of(context).push(DemographyPageRoute.route(userService, () {
+      showDemographyCompletedDialog(context);
+    }));
   }
 }
 
@@ -136,8 +249,8 @@ extension SettingAccountCooperationListPageRoute
 
 class SettingAccountCooperationRow extends StatelessWidget {
   final LinkAccountType accountType;
-  final bool Function(LinkAccountType) isLinked;
-  final Function(LinkAccountType) onTap;
+  final bool Function() isLinked;
+  final Function() onTap;
 
   SettingAccountCooperationRow({
     required this.accountType,
@@ -152,7 +265,7 @@ class SettingAccountCooperationRow extends StatelessWidget {
       title: Text(_title, style: FontType.listRow),
       trailing: _check(),
       horizontalTitleGap: 4,
-      onTap: () => onTap(accountType),
+      onTap: () => onTap(),
     );
   }
 
@@ -184,7 +297,7 @@ class SettingAccountCooperationRow extends StatelessWidget {
   }
 
   String get _title {
-    final linked = isLinked(accountType);
+    final linked = isLinked();
     final providerName = accountType.providerName;
     if (!linked) {
       return providerName;
@@ -193,7 +306,7 @@ class SettingAccountCooperationRow extends StatelessWidget {
   }
 
   Widget _check() {
-    final linked = isLinked(accountType);
+    final linked = isLinked();
     if (!linked) {
       return Container(width: 1, height: 1);
     }

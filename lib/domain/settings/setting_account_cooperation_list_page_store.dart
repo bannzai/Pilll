@@ -1,9 +1,7 @@
 import 'dart:async';
 
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:pilll/auth/apple.dart';
 import 'package:pilll/auth/boilerplate.dart';
-import 'package:pilll/auth/google.dart';
 import 'package:pilll/domain/settings/setting_account_cooperation_list_page_state.dart';
 import 'package:pilll/service/auth.dart';
 import 'package:pilll/service/user.dart';
@@ -47,19 +45,21 @@ class SettingAccountCooperationListPageStore
     super.dispose();
   }
 
-// NOTE: return true is link flow, return false is unlink flow
-  Future<bool> handleApple() {
-    if (state.isLinkedApple) {
-      return unlinkApple().then((value) => false);
-    }
-    return callLinkWithApple(_userService).then((value) => true);
+  Future<void> unlinkApple() {
+    assert(state.isLinkedApple);
+    return unlinkApple();
   }
 
-// NOTE: return true is link flow, return false is unlink flow
-  Future<bool> handleGoogle() {
-    if (state.isLinkedGoogle) {
-      return unlinkGoogle().then((value) => false);
-    }
-    return callLinkWithGoogle(_userService).then((value) => true);
+  Future<void> unlinkGoogle() {
+    assert(state.isLinkedGoogle);
+    return unlinkGoogle();
+  }
+
+  Future<void> linkApple() {
+    return callLinkWithApple(_userService);
+  }
+
+  Future<void> linkGoogle() {
+    return callLinkWithGoogle(_userService);
   }
 }
