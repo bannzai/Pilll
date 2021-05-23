@@ -8,7 +8,6 @@ import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/components/molecules/indicator.dart';
 import 'package:pilll/components/page/discard_dialog.dart';
-import 'package:pilll/domain/demography/demography_completed_dialog.dart';
 import 'package:pilll/domain/demography/demography_page.dart';
 import 'package:pilll/domain/root/root.dart';
 import 'package:pilll/domain/settings/setting_account_cooperation_list_page_store.dart';
@@ -17,8 +16,6 @@ import 'package:pilll/entity/user_error.dart';
 import 'package:pilll/error/error_alert.dart';
 import 'package:pilll/error_log.dart';
 import 'package:pilll/service/user.dart';
-import 'package:pilll/util/shared_preference/keys.dart';
-import 'package:shared_preferences/shared_preferences.dart';
 
 class SettingAccountCooperationListPage extends HookWidget {
   @override
@@ -225,18 +222,7 @@ class SettingAccountCooperationListPage extends HookWidget {
       ),
     );
     await Future.delayed(snackBarDuration);
-    final sharedPreference = await SharedPreferences.getInstance();
-    final isAlreadyShowDemography =
-        sharedPreference.getBool(BoolKey.isAlreadyShowDemography);
-
-    if (isAlreadyShowDemography == true) {
-      return;
-    }
-    sharedPreference.setBool(BoolKey.isAlreadyShowDemography, true);
-
-    Navigator.of(context).push(DemographyPageRoute.route(userService, () {
-      showDemographyCompletedDialog(context);
-    }));
+    showDemographyPageIfNeeded(context, userService);
   }
 }
 

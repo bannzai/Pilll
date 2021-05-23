@@ -5,6 +5,7 @@ import 'package:pilll/components/atoms/buttons.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
+import 'package:pilll/domain/demography/demography_completed_dialog.dart';
 import 'package:pilll/entity/demographic.dart';
 import 'package:pilll/service/user.dart';
 import 'package:pilll/util/datetime/day.dart';
@@ -507,7 +508,7 @@ class _DemographyPageState extends State<DemographyPage> {
   }
 }
 
-extension DemographyPageRoute on DemographyPage {
+extension _DemographyPageRoute on DemographyPage {
   static Route<dynamic> route(UserService userService, VoidCallback done) {
     return MaterialPageRoute(
       settings: RouteSettings(name: "DemographyPage"),
@@ -517,4 +518,19 @@ extension DemographyPageRoute on DemographyPage {
       ),
     );
   }
+}
+
+showDemographyPageIfNeeded(BuildContext context, UserService userService) async {
+  final sharedPreference = await SharedPreferences.getInstance();
+  final isAlreadyShowDemography =
+      sharedPreference.getBool(BoolKey.isAlreadyShowDemography);
+
+  if (isAlreadyShowDemography == true) {
+    return;
+  }
+  sharedPreference.setBool(BoolKey.isAlreadyShowDemography, true);
+
+  Navigator.of(context).push(_DemographyPageRoute.route(userService, () {
+    showDemographyCompletedDialog(context);
+  }));
 }

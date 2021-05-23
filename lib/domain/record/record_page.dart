@@ -3,6 +3,7 @@ import 'dart:io' show Platform;
 import 'package:pilll/analytics.dart';
 import 'package:pilll/components/molecules/indicator.dart';
 import 'package:pilll/components/organisms/pill/pill_sheet.dart';
+import 'package:pilll/domain/demography/demography_page.dart';
 import 'package:pilll/domain/initial_setting/migrate_info.dart';
 import 'package:pilll/domain/record/record_page_state.dart';
 import 'package:pilll/domain/record/record_page_store.dart';
@@ -18,6 +19,7 @@ import 'package:pilll/components/atoms/buttons.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
+import 'package:pilll/service/user.dart';
 import 'package:pilll/signin/signin_sheet.dart';
 import 'package:pilll/util/datetime/day.dart';
 import 'package:pilll/util/shared_preference/keys.dart';
@@ -143,6 +145,7 @@ class RecordPage extends HookWidget {
     final currentPillSheet = state.entity;
     final store = useProvider(recordPageStoreProvider);
     final settingEntity = state.setting;
+    final userService = useProvider(userServiceProvider);
     if (settingEntity == null || !state.firstLoadIsEnded) {
       return Indicator();
     }
@@ -154,7 +157,7 @@ class RecordPage extends HookWidget {
           child: SingleChildScrollView(
             child: Column(
               children: [
-                _notification(context, state, store),
+                _notification(context, state, store, userService),
                 SizedBox(height: 64),
                 _content(
                     context, store, state, currentPillSheet, settingEntity),
@@ -194,12 +197,17 @@ class RecordPage extends HookWidget {
   }
 
   Widget _notification(
-      BuildContext context, RecordPageState state, RecordPageStore store) {
+    BuildContext context,
+    RecordPageState state,
+    RecordPageStore store,
+    UserService userService,
+  ) {
     final recommendedSignupNotification = state.recommendedSignupNotification;
     if (recommendedSignupNotification.isNotEmpty) {
       return GestureDetector(
         onTap: () => showSigninSheet(context, false, (linkAccount) {
           analytics.logEvent(name: "signined_account_from_notification_bar");
+          showDemographyPageIfNeeded(context, userService);
         }),
         child: Container(
           height: 64,
