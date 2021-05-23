@@ -15,6 +15,7 @@ import 'package:pilll/domain/settings/setting_account_cooperation_list_page_stor
 import 'package:pilll/entity/link_account_type.dart';
 import 'package:pilll/entity/user_error.dart';
 import 'package:pilll/error/error_alert.dart';
+import 'package:pilll/error_log.dart';
 import 'package:pilll/service/user.dart';
 import 'package:pilll/util/shared_preference/keys.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -138,10 +139,11 @@ class SettingAccountCooperationListPage extends HookWidget {
           await store.unlinkGoogle();
           break;
       }
-    } catch (error) {
+    } catch (error, stack) {
       analytics.logEvent(
           name: "did_failure_unlink_event_$eventSuffix",
           parameters: {"errot_type": error.runtimeType.toString()});
+      errorLogger.recordError(error, stack);
       hideIndicator();
 
       if (error is UserDisplayedError) {
