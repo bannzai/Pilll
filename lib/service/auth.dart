@@ -15,15 +15,6 @@ final authStateStreamProvider = StreamProvider(
   (ref) => _subscribe(),
 );
 
-Stream<User> _subscribe() {
-  return StreamGroup.merge(
-    [
-      _cacheOrAuth().asStream(),
-      FirebaseAuth.instance.userChanges(),
-    ],
-  ).skipWhile((element) => element == null).cast();
-}
-
 class AuthService {
   Stream<User> subscribe() {
     return _subscribe();
@@ -34,6 +25,23 @@ class AuthInfo {
   final String uid;
 
   AuthInfo(this.uid);
+}
+
+Stream<User> _subscribe() {
+  return StreamGroup.merge(
+    [
+      _cacheOrAuth().asStream(),
+      FirebaseAuth.instance.userChanges(),
+    ],
+  ).skipWhile((element) => element == null).cast();
+}
+
+Future<dynamic> callSignin() async {
+  return _cacheOrAuth();
+}
+
+Future<AuthInfo> cacheOrAuth() async {
+  return _cacheOrAuth().then((value) => AuthInfo(value!.uid));
 }
 
 Map<String, dynamic> _logginParameters(User? currentUser) {
@@ -81,12 +89,4 @@ Future<User?> _cacheOrAuth() async {
   }
 
   return value.user;
-}
-
-Future<dynamic> callSignin() async {
-  return _cacheOrAuth();
-}
-
-Future<AuthInfo> cacheOrAuth() async {
-  return _cacheOrAuth().then((value) => AuthInfo(value!.uid));
 }
