@@ -1,11 +1,12 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:google_sign_in/google_sign_in.dart';
+import 'package:pilll/auth/link_value_container.dart';
 
 final googleProviderID = 'google.com';
 
 enum SigninWithGoogleState { determined, cancel }
 
-Future<UserCredential?> linkWithGoogle(User user) async {
+Future<LinkValueContainer?> linkWithGoogle(User user) async {
   // NOTE: workaround https://github.com/flutter/flutter/issues/44564#issuecomment-655884103
   final googleUser = await GoogleSignIn(
     scopes: [
@@ -18,13 +19,15 @@ Future<UserCredential?> linkWithGoogle(User user) async {
   if (googleUser == null) {
     return Future.value(null);
   }
+  final email = googleUser.email;
   final GoogleSignInAuthentication googleAuth = await googleUser.authentication;
   final credential = GoogleAuthProvider.credential(
     accessToken: googleAuth.accessToken,
     idToken: googleAuth.idToken,
   );
 
-  return await user.linkWithCredential(credential);
+  final linkedCredential = await user.linkWithCredential(credential);
+  return Future.value(LinkValueContainer(linkedCredential, email));
 }
 
 Future<User?> unlinkGoogle() async {

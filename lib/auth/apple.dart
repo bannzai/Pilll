@@ -1,5 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:pilll/auth/hash.dart';
+import 'package:pilll/auth/link_value_container.dart';
 import 'package:pilll/util/environment.dart';
 import 'package:sign_in_with_apple/sign_in_with_apple.dart';
 
@@ -7,7 +8,7 @@ final appleProviderID = "apple.com";
 
 enum SigninWithAppleState { determined, cancel }
 
-Future<UserCredential?> linkWithApple(User user) async {
+Future<LinkValueContainer?> linkWithApple(User user) async {
   try {
     final rawNonce = generateNonce();
     final state = generateNonce();
@@ -24,12 +25,14 @@ Future<UserCredential?> linkWithApple(User user) async {
     if (state != appleCredential.state) {
       throw AssertionError('state not matched!');
     }
+    final email = appleCredential.email;
     final credential = OAuthProvider(appleProviderID).credential(
       idToken: appleCredential.identityToken,
       accessToken: appleCredential.authorizationCode,
       rawNonce: rawNonce,
     );
-    return await user.linkWithCredential(credential);
+    final linkedCredential = await user.linkWithCredential(credential);
+    return Future.value(LinkValueContainer(linkedCredential, email));
   } on SignInWithAppleAuthorizationException catch (e) {
     if (e.code == AuthorizationErrorCode.canceled) {
       return Future.value(null);
