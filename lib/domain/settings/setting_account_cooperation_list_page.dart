@@ -60,7 +60,7 @@ class SettingAccountCooperationListPage extends HookWidget {
               accountType: LinkAccountType.google,
               isLinked: () => state.isLinkedGoogle,
               onTap: () async {
-                if (state.isLinkedApple) {
+                if (state.isLinkedGoogle) {
                   _showUnlinkDialog(context, store, LinkAccountType.google);
                 } else {
                   _linkGoogle(context, store, userService);
