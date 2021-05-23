@@ -111,19 +111,33 @@ class UserService {
 
   Future<void> linkApple(String email) {
     return _database.userPrivateReference().set({
-      UserFirestoreFieldKeys.appleEmail: email,
+      UserPrivateFirestoreFieldKeys.appleEmail: email,
+      UserPrivateFirestoreFieldKeys.isLinkedApple: true,
     }, SetOptions(merge: true));
   }
 
   Future<void> linkGoogle(String email) {
     return _database.userPrivateReference().set({
-      UserFirestoreFieldKeys.googleEmail: email,
+      UserPrivateFirestoreFieldKeys.googleEmail: email,
+      UserPrivateFirestoreFieldKeys.isLinkedGoogle: true,
+    }, SetOptions(merge: true));
+  }
+
+  Future<void> unlinkApple(String email) {
+    return _database.userPrivateReference().set({
+      UserPrivateFirestoreFieldKeys.isLinkedApple: false,
+    }, SetOptions(merge: true));
+  }
+
+  Future<void> unlinkGoogle(String email) {
+    return _database.userPrivateReference().set({
+      UserPrivateFirestoreFieldKeys.isLinkedGoogle: false,
     }, SetOptions(merge: true));
   }
 
   Future<void> postDemographic(Demographic demographic) {
     return _database.userPrivateReference().set(
-        {UserFirestoreFieldKeys.demographic: demographic.toJson()},
+        {UserPrivateFirestoreFieldKeys.demographic: demographic.toJson()},
         SetOptions(merge: true));
   }
 }
