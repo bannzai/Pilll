@@ -13,6 +13,7 @@ import 'package:pilll/domain/root/root.dart';
 import 'package:pilll/entity/link_account_type.dart';
 import 'package:pilll/entity/user_error.dart';
 import 'package:pilll/error/error_alert.dart';
+import 'package:pilll/signin/signin_sheet_state.dart';
 import 'package:pilll/signin/signin_sheet_store.dart';
 
 abstract class SigninSheetConst {
@@ -40,14 +41,14 @@ class SigninSheet extends HookWidget {
           mainAxisSize: MainAxisSize.max,
           children: [
             SvgPicture.asset("images/draggable_bar.svg", height: 6),
-            Text("アカウント登録",
+            Text(state.title,
                 textAlign: TextAlign.center,
                 style: TextColorStyle.main.merge(FontType.sBigTitle)),
-            Text("アカウント登録すると\nデータの引き継ぎが可能になります",
+            Text(state.message,
                 textAlign: TextAlign.center,
                 style: TextColorStyle.main.merge(FontType.assisting)),
-            _appleButton(context, store),
-            _googleButton(context, store),
+            _appleButton(context, store, state),
+            _googleButton(context, store, state),
             if (!isFixedLoginMode)
               SecondaryButton(
                   onPressed: () => store.toggleMode(),
@@ -58,7 +59,11 @@ class SigninSheet extends HookWidget {
     );
   }
 
-  Widget _appleButton(BuildContext context, SigninSheetStore store) {
+  Widget _appleButton(
+    BuildContext context,
+    SigninSheetStore store,
+    SigninSheetState state,
+  ) {
     return OutlinedButton(
       style: ButtonStyle(
         backgroundColor: MaterialStateProperty.all(PilllColors.appleBlack),
@@ -88,7 +93,6 @@ class SigninSheet extends HookWidget {
         });
       },
       child: Container(
-        width: 220,
         height: 48,
         child: Padding(
           padding: const EdgeInsets.fromLTRB(0, 10, 0, 10),
@@ -100,7 +104,7 @@ class SigninSheet extends HookWidget {
               Padding(
                 padding: const EdgeInsets.only(left: 10),
                 child: Text(
-                  'Apple で登録',
+                  state.appleButtonText,
                   style: FontType.subTitle.merge(TextColorStyle.white),
                 ),
               )
@@ -111,7 +115,11 @@ class SigninSheet extends HookWidget {
     );
   }
 
-  Widget _googleButton(BuildContext context, SigninSheetStore store) {
+  Widget _googleButton(
+    BuildContext context,
+    SigninSheetStore store,
+    SigninSheetState state,
+  ) {
     return OutlinedButton(
       style: ButtonStyle(
         backgroundColor: MaterialStateProperty.all(Colors.white),
@@ -142,7 +150,6 @@ class SigninSheet extends HookWidget {
         });
       },
       child: Container(
-        width: 220,
         height: 48,
         child: Padding(
           padding: const EdgeInsets.fromLTRB(0, 10, 0, 10),
@@ -154,7 +161,7 @@ class SigninSheet extends HookWidget {
               Padding(
                 padding: const EdgeInsets.only(left: 10),
                 child: Text(
-                  'Google アカウントで登録',
+                  state.googleButtonText,
                   style: FontType.subTitle.merge(TextColorStyle.main),
                 ),
               ),
