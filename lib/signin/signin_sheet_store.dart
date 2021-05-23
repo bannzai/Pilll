@@ -19,7 +19,7 @@ class SigninSheetStore extends StateNotifier<SigninSheetState> {
     _reset();
   }
   _reset() {
-    state = state.copyWith(isLoginMode: _isFixedLoginMode || state.isLoginMode);
+    state = state.copyWith(isLoginMode: _isFixedLoginMode);
   }
 
   bool get isLoginMode => _isFixedLoginMode || state.isLoginMode;
