@@ -57,12 +57,16 @@ void main() {
       final menstruationService = MockMnestruationService();
       when(menstruationService.fetchAll())
           .thenAnswer((realInvocation) => Future.value([]));
+      final authService = MockAuthService();
+      when(authService.isLinkedApple()).thenReturn(false);
+      when(authService.isLinkedGoogle()).thenReturn(false);
 
       final store = RecordPageStore(
         service,
         settingService,
         diaryService,
         menstruationService,
+        authService,
       );
       await waitForResetStoreState();
       expect(state.entity?.todayPillNumber, equals(1));
@@ -107,12 +111,16 @@ void main() {
     final menstruationService = MockMnestruationService();
     when(menstruationService.fetchAll())
         .thenAnswer((realInvocation) => Future.value([]));
+    final authService = MockAuthService();
+    when(authService.isLinkedApple()).thenReturn(false);
+    when(authService.isLinkedGoogle()).thenReturn(false);
 
     final store = RecordPageStore(
       service,
       settingService,
       diaryService,
       menstruationService,
+      authService,
     );
     await waitForResetStoreState();
     expect(state.entity?.todayPillNumber, equals(3));
@@ -159,12 +167,16 @@ void main() {
       final menstruationService = MockMnestruationService();
       when(menstruationService.fetchAll())
           .thenAnswer((realInvocation) => Future.value([]));
+      final authService = MockAuthService();
+      when(authService.isLinkedApple()).thenReturn(false);
+      when(authService.isLinkedGoogle()).thenReturn(false);
 
       final store = RecordPageStore(
         service,
         settingService,
         diaryService,
         menstruationService,
+        authService,
       );
       await waitForResetStoreState();
       expect(state.entity?.allTaken, isTrue);
@@ -210,12 +222,16 @@ void main() {
       final menstruationService = MockMnestruationService();
       when(menstruationService.fetchAll())
           .thenAnswer((realInvocation) => Future.value([]));
+      final authService = MockAuthService();
+      when(authService.isLinkedApple()).thenReturn(false);
+      when(authService.isLinkedGoogle()).thenReturn(false);
 
       final store = RecordPageStore(
         service,
         settingService,
         diaryService,
         menstruationService,
+        authService,
       );
       await waitForResetStoreState();
       expect(state.entity?.allTaken, isFalse);
@@ -264,12 +280,16 @@ void main() {
       final menstruationService = MockMnestruationService();
       when(menstruationService.fetchAll())
           .thenAnswer((realInvocation) => Future.value([]));
+      final authService = MockAuthService();
+      when(authService.isLinkedApple()).thenReturn(false);
+      when(authService.isLinkedGoogle()).thenReturn(false);
 
       final store = RecordPageStore(
         service,
         settingService,
         diaryService,
         menstruationService,
+        authService,
       );
       await waitForResetStoreState();
       expect(state.entity?.allTaken, isTrue);
@@ -314,12 +334,16 @@ void main() {
       final menstruationService = MockMnestruationService();
       when(menstruationService.fetchAll())
           .thenAnswer((realInvocation) => Future.value([]));
+      final authService = MockAuthService();
+      when(authService.isLinkedApple()).thenReturn(false);
+      when(authService.isLinkedGoogle()).thenReturn(false);
 
       final store = RecordPageStore(
         service,
         settingService,
         diaryService,
         menstruationService,
+        authService,
       );
       await waitForResetStoreState();
       expect(state.entity?.allTaken, isFalse);

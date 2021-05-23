@@ -68,12 +68,16 @@ void main() {
       final menstruationService = MockMnestruationService();
       when(menstruationService.fetchAll())
           .thenAnswer((realInvocation) => Future.value([]));
+      final authService = MockAuthService();
+      when(authService.isLinkedApple()).thenReturn(false);
+      when(authService.isLinkedGoogle()).thenReturn(false);
 
       final pillSheetStore = RecordPageStore(
         pillSheetService,
         settingService,
         diaryService,
         menstruationService,
+        authService,
       );
 
       addTearDown(() {
@@ -132,12 +136,16 @@ void main() {
     final menstruationService = MockMnestruationService();
     when(menstruationService.fetchAll())
         .thenAnswer((realInvocation) => Future.value([]));
+    final authService = MockAuthService();
+    when(authService.isLinkedApple()).thenReturn(false);
+    when(authService.isLinkedGoogle()).thenReturn(false);
 
     final pillSheetStore = RecordPageStore(
       pillSheetService,
       settingService,
       diaryService,
       menstruationService,
+      authService,
     );
 
     addTearDown(() {
@@ -198,12 +206,16 @@ void main() {
     final menstruationService = MockMnestruationService();
     when(menstruationService.fetchAll())
         .thenAnswer((realInvocation) => Future.value([]));
+    final authService = MockAuthService();
+    when(authService.isLinkedApple()).thenReturn(false);
+    when(authService.isLinkedGoogle()).thenReturn(false);
 
     final pillSheetStore = RecordPageStore(
       pillSheetService,
       settingService,
       diaryService,
       menstruationService,
+      authService,
     );
 
     addTearDown(() {
