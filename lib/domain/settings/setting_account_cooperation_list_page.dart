@@ -139,6 +139,7 @@ class SettingAccountCooperationListPage extends HookWidget {
           await store.unlinkGoogle();
           break;
       }
+      hideIndicator();
     } catch (error, stack) {
       analytics.logEvent(
           name: "did_failure_unlink_event_$eventSuffix",
