@@ -1,26 +1,16 @@
 import 'package:pilll/entity/diary.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-
-final userIDProvider = FutureProvider<String>((ref) async {
-  final authInfo = await ref.watch(authStateProvider.future);
-  return authInfo.uid;
-});
-
-final _databaseProvider = FutureProvider<DatabaseConnection>((ref) async {
-  final userID = await ref.watch(userIDProvider.future);
-  return DatabaseConnection(userID);
-});
+import 'package:pilll/service/auth.dart';
 
 final databaseProvider = Provider<DatabaseConnection>((ref) {
-  return database;
+  final stream = ref.watch(authStateStreamProvider);
+  final uid = stream.data?.value.uid;
+  if (uid == null) {
+    throw UnimplementedError("Must be called service/auth.dart callSignin");
+  }
+  return DatabaseConnection(uid);
 });
-
-late DatabaseConnection database;
-Future<void> setupDatabase() async {
-  final container = ProviderContainer();
-  database = await container.read(_databaseProvider.future);
-}
 
 abstract class _CollectionPath {
   static final String users = "users";

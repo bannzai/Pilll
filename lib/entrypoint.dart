@@ -5,7 +5,6 @@ import 'package:flutter/cupertino.dart';
 import 'package:pilll/analytics.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
-import 'package:pilll/database/database.dart';
 import 'package:pilll/error/universal_error_page.dart';
 import 'package:pilll/global_method_channel.dart';
 import 'package:pilll/router/router.dart';
@@ -17,6 +16,7 @@ import 'package:firebase_crashlytics/firebase_crashlytics.dart';
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:intl/date_symbol_data_local.dart';
+import 'package:pilll/service/auth.dart';
 
 import 'router/router.dart';
 
@@ -29,7 +29,7 @@ Future<void> entrypoint() async {
   if (Environment.isLocal) {
     connectToEmulator();
   }
-  await setupDatabase();
+  await callSignin();
 
   ErrorWidget.builder = (FlutterErrorDetails details) {
     return UniversalErrorPage(error: details.exception.toString());

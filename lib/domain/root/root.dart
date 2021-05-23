@@ -102,7 +102,7 @@ class RootState extends State<Root> {
       return ScaffoldIndicator();
     }
     return Consumer(builder: (context, watch, child) {
-      return watch(authStateProvider).when(data: (snapshot) {
+      return watch(authStateStreamProvider).when(data: (snapshot) {
         switch (screenType) {
           case ScreenType.home:
             return HomePage(key: homeKey);

@@ -11,12 +11,22 @@ final authServiceProvider = Provider(
   (ref) => AuthService(),
 );
 
-class AuthService {
-  Stream<User?> subscribe() {
-    return StreamGroup.merge([
+final authStateStreamProvider = StreamProvider(
+  (ref) => _subscribe(),
+);
+
+Stream<User> _subscribe() {
+  return StreamGroup.merge(
+    [
       _cacheOrAuth().asStream(),
       FirebaseAuth.instance.userChanges(),
-    ]);
+    ],
+  ).skipWhile((element) => element == null).cast();
+}
+
+class AuthService {
+  Stream<User?> subscribe() {
+    return _subscribe();
   }
 }
 
@@ -71,6 +81,10 @@ Future<User?> _cacheOrAuth() async {
   }
 
   return value.user;
+}
+
+Future<dynamic> callSignin() async {
+  return _cacheOrAuth();
 }
 
 Future<AuthInfo> cacheOrAuth() async {
