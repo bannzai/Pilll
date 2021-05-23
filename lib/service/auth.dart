@@ -25,7 +25,7 @@ Stream<User> _subscribe() {
 }
 
 class AuthService {
-  Stream<User?> subscribe() {
+  Stream<User> subscribe() {
     return _subscribe();
   }
 }

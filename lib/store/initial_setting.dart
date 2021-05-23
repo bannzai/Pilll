@@ -32,15 +32,10 @@ class InitialSettingStateStore extends StateNotifier<InitialSettingState> {
   _subscribe() {
     _authCanceller?.cancel();
     _authCanceller = _authService.subscribe().listen((user) {
-      assert(user != null);
       print(
-          "watch sign state uid: ${user?.uid}, isAnonymous: ${user?.isAnonymous}");
+          "watch sign state uid: ${user.uid}, isAnonymous: ${user.isAnonymous}");
       final bool isAccountCooperationDidEnd;
-      if (user != null) {
-        isAccountCooperationDidEnd = !user.isAnonymous;
-      } else {
-        isAccountCooperationDidEnd = true;
-      }
+      isAccountCooperationDidEnd = !user.isAnonymous;
       state = state.copyWith(
           isAccountCooperationDidEnd: isAccountCooperationDidEnd);
     });
