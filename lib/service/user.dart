@@ -123,13 +123,13 @@ class UserService {
     }, SetOptions(merge: true));
   }
 
-  Future<void> unlinkApple(String email) {
+  Future<void> unlinkApple() {
     return _database.userPrivateReference().set({
       UserPrivateFirestoreFieldKeys.isLinkedApple: false,
     }, SetOptions(merge: true));
   }
 
-  Future<void> unlinkGoogle(String email) {
+  Future<void> unlinkGoogle() {
     return _database.userPrivateReference().set({
       UserPrivateFirestoreFieldKeys.isLinkedGoogle: false,
     }, SetOptions(merge: true));
