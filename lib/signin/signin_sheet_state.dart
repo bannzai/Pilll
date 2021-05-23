@@ -7,7 +7,7 @@ part 'signin_sheet_state.freezed.dart';
 abstract class SigninSheetState implements _$SigninSheetState {
   SigninSheetState._();
   factory SigninSheetState({
-    @Default(false) bool isLoginMode,
+    required bool isLoginMode,
   }) = _SigninSheetState;
 
   String get title => isLoginMode ? "ログイン" : "アカウント登録";

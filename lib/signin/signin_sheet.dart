@@ -20,17 +20,17 @@ abstract class SigninSheetConst {
 }
 
 class SigninSheet extends HookWidget {
-  final bool isFixedLoginMode;
+  final bool isLoginMode;
   final Function(LinkAccountType) callback;
 
   SigninSheet({
-    required this.isFixedLoginMode,
+    required this.isLoginMode,
     required this.callback,
   });
   @override
   Widget build(BuildContext context) {
-    final store = useProvider(signinSheetStoreProvider(isFixedLoginMode));
-    final state = useProvider(signinSheetStoreProvider(isFixedLoginMode).state);
+    final store = useProvider(signinSheetStoreProvider(isLoginMode));
+    final state = useProvider(signinSheetStoreProvider(isLoginMode).state);
     return Container(
       constraints: BoxConstraints(maxHeight: 360, minHeight: 300),
       color: Colors.white,
@@ -168,13 +168,13 @@ class SigninSheet extends HookWidget {
   }
 }
 
-showSigninSheet(BuildContext context, bool isFixedLoginMode,
+showSigninSheet(BuildContext context, bool isLoginMode,
     Function(LinkAccountType) callback) {
   analytics.setCurrentScreen(screenName: "SigninSheet");
   showModalBottomSheet(
     context: context,
     builder: (context) => SigninSheet(
-      isFixedLoginMode: isFixedLoginMode,
+      isLoginMode: isLoginMode,
       callback: callback,
     ),
     backgroundColor: Colors.transparent,

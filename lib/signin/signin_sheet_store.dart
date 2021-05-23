@@ -7,22 +7,15 @@ import 'package:riverpod/riverpod.dart';
 
 final signinSheetStoreProvider =
     StateNotifierProvider.autoDispose.family<SigninSheetStore, bool>(
-  (ref, isFixedLoginMode) =>
-      SigninSheetStore(isFixedLoginMode, ref.watch(userServiceProvider)),
+  (ref, isLoginMode) =>
+      SigninSheetStore(isLoginMode, ref.watch(userServiceProvider)),
 );
 
 class SigninSheetStore extends StateNotifier<SigninSheetState> {
-  final bool _isFixedLoginMode;
+  final bool isLoginMode;
   final UserService _userService;
-  SigninSheetStore(this._isFixedLoginMode, this._userService)
-      : super(SigninSheetState()) {
-    _reset();
-  }
-  _reset() {
-    state = state.copyWith(isLoginMode: _isFixedLoginMode);
-  }
-
-  bool get isLoginMode => _isFixedLoginMode || state.isLoginMode;
+  SigninSheetStore(this.isLoginMode, this._userService)
+      : super(SigninSheetState(isLoginMode: isLoginMode));
 
   Future<SigninWithAppleState> handleApple() {
     if (state.isLoginMode) {

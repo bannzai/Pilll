@@ -16,7 +16,7 @@ final _privateConstructorUsedError = UnsupportedError(
 class _$SigninSheetStateTearOff {
   const _$SigninSheetStateTearOff();
 
-  _SigninSheetState call({bool isLoginMode = false}) {
+  _SigninSheetState call({required bool isLoginMode}) {
     return _SigninSheetState(
       isLoginMode: isLoginMode,
     );
@@ -102,9 +102,8 @@ class __$SigninSheetStateCopyWithImpl<$Res>
 /// @nodoc
 
 class _$_SigninSheetState extends _SigninSheetState {
-  _$_SigninSheetState({this.isLoginMode = false}) : super._();
+  _$_SigninSheetState({required this.isLoginMode}) : super._();
 
-  @JsonKey(defaultValue: false)
   @override
   final bool isLoginMode;
 
@@ -133,7 +132,7 @@ class _$_SigninSheetState extends _SigninSheetState {
 }
 
 abstract class _SigninSheetState extends SigninSheetState {
-  factory _SigninSheetState({bool isLoginMode}) = _$_SigninSheetState;
+  factory _SigninSheetState({required bool isLoginMode}) = _$_SigninSheetState;
   _SigninSheetState._() : super._();
 
   @override
