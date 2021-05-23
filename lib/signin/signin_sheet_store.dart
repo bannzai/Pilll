@@ -22,10 +22,6 @@ class SigninSheetStore extends StateNotifier<SigninSheetState> {
     state = state.copyWith(isLoginMode: _isFixedLoginMode || state.isLoginMode);
   }
 
-  toggleMode() {
-    state = state.copyWith(isLoginMode: !state.isLoginMode);
-  }
-
   bool get isLoginMode => _isFixedLoginMode || state.isLoginMode;
 
   Future<SigninWithAppleState> handleApple() {
