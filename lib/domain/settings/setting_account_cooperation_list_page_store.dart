@@ -56,10 +56,12 @@ class SettingAccountCooperationListPageStore
   }
 
   Future<void> linkApple() {
+    assert(!state.isLinkedApple);
     return callLinkWithApple(_userService);
   }
 
   Future<void> linkGoogle() {
+    assert(!state.isLinkedGoogle);
     return callLinkWithGoogle(_userService);
   }
 }
