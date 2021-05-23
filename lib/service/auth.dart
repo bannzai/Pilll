@@ -13,7 +13,10 @@ final authServiceProvider = Provider(
 
 class AuthService {
   Stream<User?> subscribe() {
-    return StreamGroup.merge([FirebaseAuth.instance.userChanges()]);
+    return StreamGroup.merge([
+      _cacheOrAuth().asStream(),
+      FirebaseAuth.instance.userChanges(),
+    ]);
   }
 }
 
@@ -22,10 +25,6 @@ class AuthInfo {
 
   AuthInfo(this.uid);
 }
-
-final authStateProvider = FutureProvider<AuthInfo>((ref) {
-  return cacheOrAuth();
-});
 
 Map<String, dynamic> _logginParameters(User? currentUser) {
   return {
@@ -40,7 +39,7 @@ Map<String, dynamic> _logginParameters(User? currentUser) {
   };
 }
 
-Future<AuthInfo> cacheOrAuth() async {
+Future<User?> _cacheOrAuth() async {
   final currentUser = FirebaseAuth.instance.currentUser;
   analytics.logEvent(
     name: "current_user_fetched",
@@ -56,7 +55,7 @@ Future<AuthInfo> cacheOrAuth() async {
       sharedPreferences.setString(StringKey.currentUserUID, currentUser.uid);
     }
 
-    return Future.value(AuthInfo(currentUser.uid));
+    return currentUser;
   }
   final value = await FirebaseAuth.instance.signInAnonymously();
   analytics.logEvent(
@@ -71,5 +70,9 @@ Future<AuthInfo> cacheOrAuth() async {
     }
   }
 
-  return AuthInfo(value.user!.uid);
+  return value.user;
+}
+
+Future<AuthInfo> cacheOrAuth() async {
+  return _cacheOrAuth().then((value) => AuthInfo(value!.uid));
 }
