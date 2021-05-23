@@ -62,7 +62,7 @@ class SettingAccountCooperationListPageStore
   }
 
   Future<void> linkApple() {
-    if (state.isLinkedGoogle) {
+    if (state.isLinkedApple) {
       throw AssertionError("unexpected already linked apple when link");
     }
     return callLinkWithApple(_userService);
