@@ -57,3 +57,22 @@ class DiscardDialog extends StatelessWidget {
     );
   }
 }
+
+showDiscardDialog(
+  BuildContext context, {
+  required String title,
+  required String message,
+  required VoidCallback done,
+  required String doneText,
+  VoidCallback? cancel,
+}) {
+  showDialog(
+    context: context,
+    builder: (context) => DiscardDialog(
+        title: title,
+        message: message,
+        doneButtonText: doneText,
+        done: done,
+        cancel: cancel),
+  );
+}
