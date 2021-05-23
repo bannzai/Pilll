@@ -17,9 +17,7 @@ Future<SigninWithAppleState> callLinkWithApple(UserService service) async {
     }
     final email = credential.email;
     assert(email != null);
-    if (email != null) {
-      service.linkApple(email);
-    }
+    service.linkApple(email);
 
     return Future.value(SigninWithAppleState.determined);
   } on FirebaseAuthException catch (error, stackTrace) {
@@ -49,9 +47,7 @@ Future<SigninWithGoogleState> callLinkWithGoogle(UserService service) async {
 
     final email = credential.email;
     assert(email != null);
-    if (email != null) {
-      service.linkGoogle(email);
-    }
+    service.linkGoogle(email);
 
     return Future.value(SigninWithGoogleState.determined);
   } on FirebaseAuthException catch (error, stackTrace) {

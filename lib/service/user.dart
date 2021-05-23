@@ -109,16 +109,16 @@ class UserService {
     });
   }
 
-  Future<void> linkApple(String email) {
+  Future<void> linkApple(String? email) {
     return _database.userPrivateReference().set({
-      UserPrivateFirestoreFieldKeys.appleEmail: email,
+      if (email != null) UserPrivateFirestoreFieldKeys.appleEmail: email,
       UserPrivateFirestoreFieldKeys.isLinkedApple: true,
     }, SetOptions(merge: true));
   }
 
-  Future<void> linkGoogle(String email) {
+  Future<void> linkGoogle(String? email) {
     return _database.userPrivateReference().set({
-      UserPrivateFirestoreFieldKeys.googleEmail: email,
+      if (email != null) UserPrivateFirestoreFieldKeys.googleEmail: email,
       UserPrivateFirestoreFieldKeys.isLinkedGoogle: true,
     }, SetOptions(merge: true));
   }
