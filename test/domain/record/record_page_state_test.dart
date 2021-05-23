@@ -24,8 +24,9 @@ void main() {
   group("#calcBeginingDateFromNextTodayPillNumber", () {
     test("pill number changed to future", () async {
       final mockTodayRepository = MockTodayService();
+      final today = DateTime.parse("2020-11-22");
       todayRepository = mockTodayRepository;
-      when(todayRepository.today()).thenReturn(DateTime.parse("2020-11-22"));
+      when(todayRepository.today()).thenReturn(today);
 
       final pillSheetEntity =
           PillSheet.create(PillSheetType.pillsheet_21).copyWith(
@@ -53,7 +54,7 @@ void main() {
       when(settingService.subscribe())
           .thenAnswer((realInvocation) => Stream.empty());
       final diaryService = MockDiaryService();
-      when(diaryService.fetchListAround90Days(today()))
+      when(diaryService.fetchListAround90Days(today))
           .thenAnswer((realInvocation) => Future.value([]));
       final menstruationService = MockMnestruationService();
       when(menstruationService.fetchAll())
@@ -79,8 +80,9 @@ void main() {
   });
   test("pill number changed to past", () async {
     final mockTodayRepository = MockTodayService();
+    final today = DateTime.parse("2020-11-23");
     todayRepository = mockTodayRepository;
-    when(todayRepository.today()).thenReturn(DateTime.parse("2020-11-23"));
+    when(todayRepository.today()).thenReturn(today);
 
     final pillSheetEntity =
         PillSheet.create(PillSheetType.pillsheet_21).copyWith(
@@ -108,7 +110,7 @@ void main() {
     when(settingService.subscribe())
         .thenAnswer((realInvocation) => Stream.empty());
     final diaryService = MockDiaryService();
-    when(diaryService.fetchListAround90Days(today()))
+    when(diaryService.fetchListAround90Days(today))
         .thenAnswer((realInvocation) => Future.value([]));
     final menstruationService = MockMnestruationService();
     when(menstruationService.fetchAll())
@@ -134,8 +136,9 @@ void main() {
   group("#markFor", () {
     test("it is alredy taken all", () async {
       final mockTodayRepository = MockTodayService();
+      final today = DateTime.parse("2020-11-23");
       todayRepository = mockTodayRepository;
-      when(todayRepository.today()).thenReturn(DateTime.parse("2020-11-23"));
+      when(todayRepository.today()).thenReturn(today);
 
       final pillSheetEntity =
           PillSheet.create(PillSheetType.pillsheet_21).copyWith(
@@ -165,7 +168,7 @@ void main() {
           .thenAnswer((realInvocation) => Stream.empty());
 
       final diaryService = MockDiaryService();
-      when(diaryService.fetchListAround90Days(today()))
+      when(diaryService.fetchListAround90Days(today))
           .thenAnswer((realInvocation) => Future.value([]));
       final menstruationService = MockMnestruationService();
       when(menstruationService.fetchAll())
@@ -190,8 +193,9 @@ void main() {
     });
     test("it is not taken all", () async {
       final mockTodayRepository = MockTodayService();
+      final today = DateTime.parse("2020-11-23");
       todayRepository = mockTodayRepository;
-      when(todayRepository.today()).thenReturn(DateTime.parse("2020-11-23"));
+      when(todayRepository.today()).thenReturn(today);
 
       final pillSheetEntity =
           PillSheet.create(PillSheetType.pillsheet_21).copyWith(
@@ -221,7 +225,7 @@ void main() {
           .thenAnswer((realInvocation) => Stream.empty());
 
       final diaryService = MockDiaryService();
-      when(diaryService.fetchListAround90Days(today()))
+      when(diaryService.fetchListAround90Days(today))
           .thenAnswer((realInvocation) => Future.value([]));
       final menstruationService = MockMnestruationService();
       when(menstruationService.fetchAll())
@@ -248,9 +252,9 @@ void main() {
   group("#shouldPillMarkAnimation", () {
     test("it is alredy taken all", () async {
       final mockTodayRepository = MockTodayService();
+      final today = DateTime.parse("2020-11-23");
       todayRepository = mockTodayRepository;
-      when(mockTodayRepository.today())
-          .thenReturn(DateTime.parse("2020-11-23"));
+      when(mockTodayRepository.today()).thenReturn(today);
 
       final pillSheetEntity =
           PillSheet.create(PillSheetType.pillsheet_21).copyWith(
@@ -280,7 +284,7 @@ void main() {
           .thenAnswer((realInvocation) => Stream.empty());
 
       final diaryService = MockDiaryService();
-      when(diaryService.fetchListAround90Days(today()))
+      when(diaryService.fetchListAround90Days(today))
           .thenAnswer((realInvocation) => Future.value([]));
       final menstruationService = MockMnestruationService();
       when(menstruationService.fetchAll())
@@ -304,8 +308,9 @@ void main() {
     });
     test("it is not taken all", () async {
       final mockTodayRepository = MockTodayService();
+      final today = DateTime.parse("2020-11-23");
       todayRepository = mockTodayRepository;
-      when(todayRepository.today()).thenReturn(DateTime.parse("2020-11-23"));
+      when(todayRepository.today()).thenReturn(today);
 
       final pillSheetEntity =
           PillSheet.create(PillSheetType.pillsheet_21).copyWith(
@@ -335,7 +340,7 @@ void main() {
           .thenAnswer((realInvocation) => Stream.empty());
 
       final diaryService = MockDiaryService();
-      when(diaryService.fetchListAround90Days(today()))
+      when(diaryService.fetchListAround90Days(today))
           .thenAnswer((realInvocation) => Future.value([]));
       final menstruationService = MockMnestruationService();
       when(menstruationService.fetchAll())
