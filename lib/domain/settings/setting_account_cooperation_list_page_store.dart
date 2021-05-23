@@ -46,22 +46,30 @@ class SettingAccountCooperationListPageStore
   }
 
   Future<void> unlinkApple() {
-    assert(state.isLinkedApple);
+    if (!state.isLinkedGoogle) {
+      throw AssertionError("unexpected is not yet linked apple when unlink");
+    }
     return unlinkApple();
   }
 
   Future<void> unlinkGoogle() {
-    assert(state.isLinkedGoogle);
+    if (!state.isLinkedGoogle) {
+      throw AssertionError("unexpected is not yet linked google when unlink");
+    }
     return unlinkGoogle();
   }
 
   Future<void> linkApple() {
-    assert(!state.isLinkedApple);
+    if (state.isLinkedGoogle) {
+      throw AssertionError("unexpected already linked apple when link");
+    }
     return callLinkWithApple(_userService);
   }
 
   Future<void> linkGoogle() {
-    assert(!state.isLinkedGoogle);
+    if (state.isLinkedGoogle) {
+      throw AssertionError("unexpected already linked google when link");
+    }
     return callLinkWithGoogle(_userService);
   }
 }
