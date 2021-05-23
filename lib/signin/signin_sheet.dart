@@ -5,7 +5,6 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/analytics.dart';
 import 'package:pilll/auth/apple.dart';
 import 'package:pilll/auth/google.dart';
-import 'package:pilll/components/atoms/buttons.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
@@ -49,10 +48,6 @@ class SigninSheet extends HookWidget {
                 style: TextColorStyle.main.merge(FontType.assisting)),
             _appleButton(context, store, state),
             _googleButton(context, store, state),
-            if (!isFixedLoginMode)
-              SecondaryButton(
-                  onPressed: () => store.toggleMode(),
-                  text: state.isLoginMode ? "サインアップ" : "ログイン"),
           ],
         ),
       ),
