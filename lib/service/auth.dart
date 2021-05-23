@@ -6,6 +6,8 @@ import 'package:pilll/auth/google.dart';
 import 'package:pilll/util/shared_preference/keys.dart';
 import 'package:riverpod/riverpod.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:pilll/auth/apple.dart' as apple;
+import 'package:pilll/auth/google.dart' as google;
 
 final authServiceProvider = Provider(
   (ref) => AuthService(),
@@ -18,6 +20,14 @@ final authStateStreamProvider = StreamProvider(
 class AuthService {
   Stream<User> subscribe() {
     return _subscribe();
+  }
+
+  bool isLinkedApple() {
+    return apple.isLinkedApple();
+  }
+
+  bool isLinkedGoogle() {
+    return google.isLinkedGoogle();
   }
 }
 

@@ -15,6 +15,7 @@ abstract class RecordPageState implements _$RecordPageState {
     @Default(0) int menstruationCount,
     @Default(0) int diaryCount,
     @Default(true) bool recommendedSignupNotificationIsAlreadyShow,
+    @Default(false) bool isLinkedLoginProvider,
     @Default(false) bool firstLoadIsEnded,
   }) = _RecordPageState;
 
@@ -45,6 +46,9 @@ abstract class RecordPageState implements _$RecordPageState {
   }
 
   String get recommendedSignupNotification {
+    if (isLinkedLoginProvider) {
+      return "";
+    }
     if (recommendedSignupNotificationIsAlreadyShow) {
       return "";
     }

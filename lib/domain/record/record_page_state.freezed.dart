@@ -23,6 +23,7 @@ class _$RecordPageStateTearOff {
       int menstruationCount = 0,
       int diaryCount = 0,
       bool recommendedSignupNotificationIsAlreadyShow = true,
+      bool isLinkedLoginProvider = false,
       bool firstLoadIsEnded = false}) {
     return _RecordPageState(
       entity: entity,
@@ -32,6 +33,7 @@ class _$RecordPageStateTearOff {
       diaryCount: diaryCount,
       recommendedSignupNotificationIsAlreadyShow:
           recommendedSignupNotificationIsAlreadyShow,
+      isLinkedLoginProvider: isLinkedLoginProvider,
       firstLoadIsEnded: firstLoadIsEnded,
     );
   }
@@ -49,6 +51,7 @@ mixin _$RecordPageState {
   int get diaryCount => throw _privateConstructorUsedError;
   bool get recommendedSignupNotificationIsAlreadyShow =>
       throw _privateConstructorUsedError;
+  bool get isLinkedLoginProvider => throw _privateConstructorUsedError;
   bool get firstLoadIsEnded => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
@@ -68,6 +71,7 @@ abstract class $RecordPageStateCopyWith<$Res> {
       int menstruationCount,
       int diaryCount,
       bool recommendedSignupNotificationIsAlreadyShow,
+      bool isLinkedLoginProvider,
       bool firstLoadIsEnded});
 
   $PillSheetCopyWith<$Res>? get entity;
@@ -91,6 +95,7 @@ class _$RecordPageStateCopyWithImpl<$Res>
     Object? menstruationCount = freezed,
     Object? diaryCount = freezed,
     Object? recommendedSignupNotificationIsAlreadyShow = freezed,
+    Object? isLinkedLoginProvider = freezed,
     Object? firstLoadIsEnded = freezed,
   }) {
     return _then(_value.copyWith(
@@ -119,6 +124,10 @@ class _$RecordPageStateCopyWithImpl<$Res>
               ? _value.recommendedSignupNotificationIsAlreadyShow
               : recommendedSignupNotificationIsAlreadyShow // ignore: cast_nullable_to_non_nullable
                   as bool,
+      isLinkedLoginProvider: isLinkedLoginProvider == freezed
+          ? _value.isLinkedLoginProvider
+          : isLinkedLoginProvider // ignore: cast_nullable_to_non_nullable
+              as bool,
       firstLoadIsEnded: firstLoadIsEnded == freezed
           ? _value.firstLoadIsEnded
           : firstLoadIsEnded // ignore: cast_nullable_to_non_nullable
@@ -163,6 +172,7 @@ abstract class _$RecordPageStateCopyWith<$Res>
       int menstruationCount,
       int diaryCount,
       bool recommendedSignupNotificationIsAlreadyShow,
+      bool isLinkedLoginProvider,
       bool firstLoadIsEnded});
 
   @override
@@ -190,6 +200,7 @@ class __$RecordPageStateCopyWithImpl<$Res>
     Object? menstruationCount = freezed,
     Object? diaryCount = freezed,
     Object? recommendedSignupNotificationIsAlreadyShow = freezed,
+    Object? isLinkedLoginProvider = freezed,
     Object? firstLoadIsEnded = freezed,
   }) {
     return _then(_RecordPageState(
@@ -218,6 +229,10 @@ class __$RecordPageStateCopyWithImpl<$Res>
               ? _value.recommendedSignupNotificationIsAlreadyShow
               : recommendedSignupNotificationIsAlreadyShow // ignore: cast_nullable_to_non_nullable
                   as bool,
+      isLinkedLoginProvider: isLinkedLoginProvider == freezed
+          ? _value.isLinkedLoginProvider
+          : isLinkedLoginProvider // ignore: cast_nullable_to_non_nullable
+              as bool,
       firstLoadIsEnded: firstLoadIsEnded == freezed
           ? _value.firstLoadIsEnded
           : firstLoadIsEnded // ignore: cast_nullable_to_non_nullable
@@ -236,6 +251,7 @@ class _$_RecordPageState extends _RecordPageState {
       this.menstruationCount = 0,
       this.diaryCount = 0,
       this.recommendedSignupNotificationIsAlreadyShow = true,
+      this.isLinkedLoginProvider = false,
       this.firstLoadIsEnded = false})
       : super._();
 
@@ -257,11 +273,14 @@ class _$_RecordPageState extends _RecordPageState {
   final bool recommendedSignupNotificationIsAlreadyShow;
   @JsonKey(defaultValue: false)
   @override
+  final bool isLinkedLoginProvider;
+  @JsonKey(defaultValue: false)
+  @override
   final bool firstLoadIsEnded;
 
   @override
   String toString() {
-    return 'RecordPageState(entity: $entity, setting: $setting, pillSheetCount: $pillSheetCount, menstruationCount: $menstruationCount, diaryCount: $diaryCount, recommendedSignupNotificationIsAlreadyShow: $recommendedSignupNotificationIsAlreadyShow, firstLoadIsEnded: $firstLoadIsEnded)';
+    return 'RecordPageState(entity: $entity, setting: $setting, pillSheetCount: $pillSheetCount, menstruationCount: $menstruationCount, diaryCount: $diaryCount, recommendedSignupNotificationIsAlreadyShow: $recommendedSignupNotificationIsAlreadyShow, isLinkedLoginProvider: $isLinkedLoginProvider, firstLoadIsEnded: $firstLoadIsEnded)';
   }
 
   @override
@@ -287,6 +306,9 @@ class _$_RecordPageState extends _RecordPageState {
                 const DeepCollectionEquality().equals(
                     other.recommendedSignupNotificationIsAlreadyShow,
                     recommendedSignupNotificationIsAlreadyShow)) &&
+            (identical(other.isLinkedLoginProvider, isLinkedLoginProvider) ||
+                const DeepCollectionEquality().equals(
+                    other.isLinkedLoginProvider, isLinkedLoginProvider)) &&
             (identical(other.firstLoadIsEnded, firstLoadIsEnded) ||
                 const DeepCollectionEquality()
                     .equals(other.firstLoadIsEnded, firstLoadIsEnded)));
@@ -302,6 +324,7 @@ class _$_RecordPageState extends _RecordPageState {
       const DeepCollectionEquality().hash(diaryCount) ^
       const DeepCollectionEquality()
           .hash(recommendedSignupNotificationIsAlreadyShow) ^
+      const DeepCollectionEquality().hash(isLinkedLoginProvider) ^
       const DeepCollectionEquality().hash(firstLoadIsEnded);
 
   @JsonKey(ignore: true)
@@ -318,6 +341,7 @@ abstract class _RecordPageState extends RecordPageState {
       int menstruationCount,
       int diaryCount,
       bool recommendedSignupNotificationIsAlreadyShow,
+      bool isLinkedLoginProvider,
       bool firstLoadIsEnded}) = _$_RecordPageState;
   _RecordPageState._() : super._();
 
@@ -334,6 +358,8 @@ abstract class _RecordPageState extends RecordPageState {
   @override
   bool get recommendedSignupNotificationIsAlreadyShow =>
       throw _privateConstructorUsedError;
+  @override
+  bool get isLinkedLoginProvider => throw _privateConstructorUsedError;
   @override
   bool get firstLoadIsEnded => throw _privateConstructorUsedError;
   @override

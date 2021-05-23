@@ -8,6 +8,7 @@ import 'package:pilll/entity/menstruation.dart';
 import 'package:pilll/entity/pill_mark_type.dart';
 import 'package:pilll/entity/pill_sheet.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
+import 'package:pilll/service/auth.dart';
 import 'package:pilll/service/diary.dart';
 import 'package:pilll/service/menstruation.dart';
 import 'package:pilll/service/pill_sheet.dart';
@@ -23,6 +24,7 @@ final recordPageStoreProvider = StateNotifierProvider((ref) => RecordPageStore(
       ref.watch(settingServiceProvider),
       ref.watch(diaryServiceProvider),
       ref.watch(menstruationServiceProvider),
+      ref.watch(authServiceProvider),
     ));
 
 class RecordPageStore extends StateNotifier<RecordPageState> {
@@ -30,11 +32,13 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
   final SettingService _settingService;
   final DiaryService _diaryService;
   final MenstruationService _menstruationService;
+  final AuthService _authService;
   RecordPageStore(
     this._service,
     this._settingService,
     this._diaryService,
     this._menstruationService,
+    this._authService,
   ) : super(RecordPageState(entity: null)) {
     _reset();
   }
@@ -47,6 +51,8 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
         entity: entity,
         setting: setting,
         firstLoadIsEnded: true,
+        isLinkedLoginProvider:
+            _authService.isLinkedApple() || _authService.isLinkedGoogle(),
       );
       if (entity != null) {
         analytics.logEvent(name: "count_of_remaining_pill", parameters: {
