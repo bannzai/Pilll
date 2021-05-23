@@ -19,7 +19,6 @@ import 'package:pilll/components/atoms/buttons.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
-import 'package:pilll/service/user.dart';
 import 'package:pilll/signin/signin_sheet.dart';
 import 'package:pilll/util/datetime/day.dart';
 import 'package:pilll/util/shared_preference/keys.dart';
@@ -145,7 +144,6 @@ class RecordPage extends HookWidget {
     final currentPillSheet = state.entity;
     final store = useProvider(recordPageStoreProvider);
     final settingEntity = state.setting;
-    final userService = useProvider(userServiceProvider);
     if (settingEntity == null || !state.firstLoadIsEnded) {
       return Indicator();
     }
@@ -157,7 +155,7 @@ class RecordPage extends HookWidget {
           child: SingleChildScrollView(
             child: Column(
               children: [
-                _notification(context, state, store, userService),
+                _notification(context, state, store),
                 SizedBox(height: 64),
                 _content(
                     context, store, state, currentPillSheet, settingEntity),
@@ -200,14 +198,13 @@ class RecordPage extends HookWidget {
     BuildContext context,
     RecordPageState state,
     RecordPageStore store,
-    UserService userService,
   ) {
     final recommendedSignupNotification = state.recommendedSignupNotification;
     if (recommendedSignupNotification.isNotEmpty) {
       return GestureDetector(
         onTap: () => showSigninSheet(context, false, (linkAccount) {
           analytics.logEvent(name: "signined_account_from_notification_bar");
-          showDemographyPageIfNeeded(context, userService);
+          showDemographyPageIfNeeded(context);
         }),
         child: Container(
           height: 64,
