@@ -52,36 +52,41 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
         analytics.logEvent(name: "count_of_remaining_pill", parameters: {
           "count": (entity.todayPillNumber - entity.lastTakenPillNumber)
         });
+        _fetchForRecommendedSignupNotification(entity);
       }
+
       _subscribe();
     });
+  }
 
-    Future(() async {
-      final List<Diary> diaries;
-      final List<Menstruation> menstruations;
-      final List<PillSheet> pillSheets;
-      final sharedPreferences = await SharedPreferences.getInstance();
-      final recommendedSignupNotificationIsAlreadyShow = sharedPreferences
-              .getBool(BoolKey.recommendedSignupNotificationIsAlreadyShow) ??
-          false;
-      if (!recommendedSignupNotificationIsAlreadyShow) {
-        diaries = await _diaryService.fetchListAround90Days(today());
-        menstruations = await _menstruationService.fetchAll();
-        pillSheets = await _service.fetchAll();
-      } else {
-        diaries = [];
-        menstruations = [];
-        pillSheets = [];
-      }
+  _fetchForRecommendedSignupNotification(PillSheet currentPillSheet) async {
+    final List<Diary> diaries;
+    final List<Menstruation> menstruations;
+    final List<PillSheet> pillSheets;
+    final sharedPreferences = await SharedPreferences.getInstance();
+    final recommendedSignupNotificationIsAlreadyShow = sharedPreferences
+            .getBool(BoolKey.recommendedSignupNotificationIsAlreadyShow) ??
+        false;
+    if (!recommendedSignupNotificationIsAlreadyShow) {
+      diaries = await _diaryService.fetchListAround90Days(today());
+      menstruations = await _menstruationService.fetchAll();
+      final allPillSheets = await _service.fetchAll();
+      pillSheets = allPillSheets
+          .where((element) => element.id != currentPillSheet.id)
+          .toList();
+    } else {
+      diaries = [];
+      menstruations = [];
+      pillSheets = [];
+    }
 
-      state = state.copyWith(
-        diaryCount: diaries.length,
-        menstruationCount: menstruations.length,
-        pillSheetCount: pillSheets.length,
-        recommendedSignupNotificationIsAlreadyShow:
-            recommendedSignupNotificationIsAlreadyShow,
-      );
-    });
+    state = state.copyWith(
+      diaryCount: diaries.length,
+      menstruationCount: menstruations.length,
+      pillSheetCount: pillSheets.length,
+      recommendedSignupNotificationIsAlreadyShow:
+          recommendedSignupNotificationIsAlreadyShow,
+    );
   }
 
   StreamSubscription<PillSheet>? _canceller;
