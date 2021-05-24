@@ -62,12 +62,6 @@ void main() {
           .thenAnswer((realInvocation) => Future.value(setting));
       when(settingService.subscribe())
           .thenAnswer((realInvocation) => Stream.value(setting));
-      final diaryService = MockDiaryService();
-      when(diaryService.fetchListAround90Days(today))
-          .thenAnswer((realInvocation) => Future.value([]));
-      final menstruationService = MockMnestruationService();
-      when(menstruationService.fetchAll())
-          .thenAnswer((realInvocation) => Future.value([]));
       final authService = MockAuthService();
       when(authService.isLinkedApple()).thenReturn(false);
       when(authService.isLinkedGoogle()).thenReturn(false);
@@ -75,8 +69,6 @@ void main() {
       final pillSheetStore = RecordPageStore(
         pillSheetService,
         settingService,
-        diaryService,
-        menstruationService,
         authService,
       );
 
@@ -130,12 +122,6 @@ void main() {
         .thenAnswer((realInvocation) => Future.value(setting));
     when(settingService.subscribe())
         .thenAnswer((realInvocation) => Stream.value(setting));
-    final diaryService = MockDiaryService();
-    when(diaryService.fetchListAround90Days(today))
-        .thenAnswer((realInvocation) => Future.value([]));
-    final menstruationService = MockMnestruationService();
-    when(menstruationService.fetchAll())
-        .thenAnswer((realInvocation) => Future.value([]));
     final authService = MockAuthService();
     when(authService.isLinkedApple()).thenReturn(false);
     when(authService.isLinkedGoogle()).thenReturn(false);
@@ -143,8 +129,6 @@ void main() {
     final pillSheetStore = RecordPageStore(
       pillSheetService,
       settingService,
-      diaryService,
-      menstruationService,
       authService,
     );
 
@@ -200,12 +184,6 @@ void main() {
     when(settingService.subscribe())
         .thenAnswer((realInvocation) => Stream.value(setting));
 
-    final diaryService = MockDiaryService();
-    when(diaryService.fetchListAround90Days(today))
-        .thenAnswer((realInvocation) => Future.value([]));
-    final menstruationService = MockMnestruationService();
-    when(menstruationService.fetchAll())
-        .thenAnswer((realInvocation) => Future.value([]));
     final authService = MockAuthService();
     when(authService.isLinkedApple()).thenReturn(false);
     when(authService.isLinkedGoogle()).thenReturn(false);
@@ -213,8 +191,6 @@ void main() {
     final pillSheetStore = RecordPageStore(
       pillSheetService,
       settingService,
-      diaryService,
-      menstruationService,
       authService,
     );
 
