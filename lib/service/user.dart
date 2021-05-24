@@ -123,18 +123,6 @@ class UserService {
     }, SetOptions(merge: true));
   }
 
-  Future<void> unlinkApple() {
-    return _database.userPrivateReference().set({
-      UserPrivateFirestoreFieldKeys.isLinkedApple: false,
-    }, SetOptions(merge: true));
-  }
-
-  Future<void> unlinkGoogle() {
-    return _database.userPrivateReference().set({
-      UserPrivateFirestoreFieldKeys.isLinkedGoogle: false,
-    }, SetOptions(merge: true));
-  }
-
   Future<void> postDemographic(Demographic demographic) {
     return _database.userPrivateReference().set(
         {UserPrivateFirestoreFieldKeys.demographic: demographic.toJson()},
