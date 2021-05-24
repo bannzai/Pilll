@@ -1,7 +1,9 @@
 import 'dart:async';
 
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:pilll/auth/apple.dart';
 import 'package:pilll/auth/boilerplate.dart';
+import 'package:pilll/auth/google.dart';
 import 'package:pilll/domain/settings/setting_account_cooperation_list_page_state.dart';
 import 'package:pilll/service/auth.dart';
 import 'package:pilll/service/user.dart';
@@ -45,14 +47,14 @@ class SettingAccountCooperationListPageStore
     super.dispose();
   }
 
-  Future<void> linkApple() {
+  Future<SigninWithAppleState> linkApple() {
     if (state.isLinkedApple) {
       throw AssertionError("unexpected already linked apple when link");
     }
     return callLinkWithApple(_userService);
   }
 
-  Future<void> linkGoogle() {
+  Future<SigninWithGoogleState> linkGoogle() {
     if (state.isLinkedGoogle) {
       throw AssertionError("unexpected already linked google when link");
     }

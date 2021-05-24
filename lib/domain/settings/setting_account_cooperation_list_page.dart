@@ -3,6 +3,8 @@ import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/analytics.dart';
+import 'package:pilll/auth/apple.dart';
+import 'package:pilll/auth/google.dart';
 import 'package:pilll/components/atoms/buttons.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
@@ -122,18 +124,22 @@ class SettingAccountCooperationListPage extends HookWidget {
     );
     showIndicator();
     try {
+      final bool isDetermined;
       switch (accountType) {
         case LinkAccountType.apple:
-          await store.linkApple();
+          isDetermined = await _handleApple(store);
           break;
         case LinkAccountType.google:
-          await store.linkGoogle();
+          isDetermined = await _handleGoogle(store);
           break;
       }
       hideIndicator();
       analytics.logEvent(
         name: "did_end_link_event_$eventSuffix",
       );
+      if (!isDetermined) {
+        return;
+      }
     } catch (error) {
       analytics.logEvent(
           name: "did_failure_link_event_$eventSuffix",
@@ -157,6 +163,26 @@ class SettingAccountCooperationListPage extends HookWidget {
     );
     await Future.delayed(snackBarDuration);
     showDemographyPageIfNeeded(context);
+  }
+
+  Future<bool> _handleApple(
+      SettingAccountCooperationListPageStore store) async {
+    switch (await store.linkApple()) {
+      case SigninWithAppleState.cancel:
+        return false;
+      case SigninWithAppleState.determined:
+        return true;
+    }
+  }
+
+  Future<bool> _handleGoogle(
+      SettingAccountCooperationListPageStore store) async {
+    switch (await store.linkGoogle()) {
+      case SigninWithGoogleState.cancel:
+        return false;
+      case SigninWithGoogleState.determined:
+        return true;
+    }
   }
 }
 
