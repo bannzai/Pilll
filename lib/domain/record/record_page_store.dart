@@ -3,18 +3,13 @@ import 'dart:async';
 import 'package:flutter_app_badger/flutter_app_badger.dart';
 import 'package:pilll/analytics.dart';
 import 'package:pilll/components/molecules/indicator.dart';
-import 'package:pilll/entity/diary.dart';
-import 'package:pilll/entity/menstruation.dart';
 import 'package:pilll/entity/pill_mark_type.dart';
 import 'package:pilll/entity/pill_sheet.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/service/auth.dart';
-import 'package:pilll/service/diary.dart';
-import 'package:pilll/service/menstruation.dart';
 import 'package:pilll/service/pill_sheet.dart';
 import 'package:pilll/domain/record/record_page_state.dart';
 import 'package:pilll/service/setting.dart';
-import 'package:pilll/util/datetime/day.dart';
 import 'package:pilll/util/shared_preference/keys.dart';
 import 'package:riverpod/riverpod.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -22,22 +17,16 @@ import 'package:shared_preferences/shared_preferences.dart';
 final recordPageStoreProvider = StateNotifierProvider((ref) => RecordPageStore(
       ref.watch(pillSheetServiceProvider),
       ref.watch(settingServiceProvider),
-      ref.watch(diaryServiceProvider),
-      ref.watch(menstruationServiceProvider),
       ref.watch(authServiceProvider),
     ));
 
 class RecordPageStore extends StateNotifier<RecordPageState> {
   final PillSheetService _service;
   final SettingService _settingService;
-  final DiaryService _diaryService;
-  final MenstruationService _menstruationService;
   final AuthService _authService;
   RecordPageStore(
     this._service,
     this._settingService,
-    this._diaryService,
-    this._menstruationService,
     this._authService,
   ) : super(RecordPageState(entity: null)) {
     _reset();
@@ -47,52 +36,27 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
     Future(() async {
       final entity = await _service.fetchLast();
       final setting = await _settingService.fetch();
+      final sharedPreferences = await SharedPreferences.getInstance();
+      final recommendedSignupNotificationIsAlreadyShow = sharedPreferences
+              .getBool(BoolKey.recommendedSignupNotificationIsAlreadyShow) ??
+          false;
       state = RecordPageState(
         entity: entity,
         setting: setting,
         firstLoadIsEnded: true,
         isLinkedLoginProvider:
             _authService.isLinkedApple() || _authService.isLinkedGoogle(),
+        recommendedSignupNotificationIsAlreadyShow:
+            recommendedSignupNotificationIsAlreadyShow,
       );
       if (entity != null) {
         analytics.logEvent(name: "count_of_remaining_pill", parameters: {
           "count": (entity.todayPillNumber - entity.lastTakenPillNumber)
         });
-        _fetchForRecommendedSignupNotification(entity);
       }
 
       _subscribe();
     });
-  }
-
-  _fetchForRecommendedSignupNotification(PillSheet currentPillSheet) async {
-    final List<Diary> diaries;
-    final List<Menstruation> menstruations;
-    final List<PillSheet> pillSheets;
-    final sharedPreferences = await SharedPreferences.getInstance();
-    final recommendedSignupNotificationIsAlreadyShow = sharedPreferences
-            .getBool(BoolKey.recommendedSignupNotificationIsAlreadyShow) ??
-        false;
-    if (!recommendedSignupNotificationIsAlreadyShow) {
-      diaries = await _diaryService.fetchListAround90Days(today());
-      menstruations = await _menstruationService.fetchAll();
-      final allPillSheets = await _service.fetchAll();
-      pillSheets = allPillSheets
-          .where((element) => element.id != currentPillSheet.id)
-          .toList();
-    } else {
-      diaries = [];
-      menstruations = [];
-      pillSheets = [];
-    }
-
-    state = state.copyWith(
-      diaryCount: diaries.length,
-      menstruationCount: menstruations.length,
-      pillSheetCount: pillSheets.length,
-      recommendedSignupNotificationIsAlreadyShow:
-          recommendedSignupNotificationIsAlreadyShow,
-    );
   }
 
   StreamSubscription<PillSheet>? _canceller;
