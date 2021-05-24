@@ -1,5 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
-import 'package:pilll/entity/user_error.dart';
+import 'package:pilll/auth/exception.dart';
+import 'package:pilll/entity/link_account_type.dart';
 import 'package:pilll/error_log.dart';
 import 'package:pilll/service/user.dart';
 import 'package:pilll/auth/apple.dart';
@@ -24,12 +25,15 @@ Future<SigninWithAppleState> callLinkWithApple(UserService service) async {
     errorLogger.recordError(error, stackTrace);
     print(
         "FirebaseAuthException $error, code: ${error.code}, stack: ${stackTrace.toString()}");
-    if (error.code == "provider-already-linked")
-      throw UserDisplayedError(
-          "すでにAppleアカウントが他のPilllのアカウントに紐付いているため連携ができません。詳細: ${error.message}");
+    final mappedException =
+        mapFromFirebaseAuthException(error, LinkAccountType.apple);
+    if (mappedException != null) {
+      throw mappedException;
+    }
     rethrow;
-  } catch (error) {
+  } catch (error, stack) {
     print("$error, ${StackTrace.current.toString()}");
+    errorLogger.recordError(error, stack);
     rethrow;
   }
 }
@@ -54,12 +58,15 @@ Future<SigninWithGoogleState> callLinkWithGoogle(UserService service) async {
     errorLogger.recordError(error, stackTrace);
     print(
         "FirebaseAuthException $error, code: ${error.code}, stack: ${stackTrace.toString()}");
-    if (error.code == "provider-already-linked")
-      throw UserDisplayedError(
-          "すでにGoogleアカウントが他のPilllのアカウントに紐付いているため連携ができません。詳細: ${error.message}");
+    final mappedException =
+        mapFromFirebaseAuthException(error, LinkAccountType.google);
+    if (mappedException != null) {
+      throw mappedException;
+    }
     rethrow;
-  } catch (error) {
+  } catch (error, stack) {
     print("$error, ${StackTrace.current.toString()}");
+    errorLogger.recordError(error, stack);
     rethrow;
   }
 }
