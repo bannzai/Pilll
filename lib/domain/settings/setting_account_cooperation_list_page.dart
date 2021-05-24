@@ -54,6 +54,7 @@ class SettingAccountCooperationListPage extends HookWidget {
                 }
               },
             ),
+            Divider(),
             SettingAccountCooperationRow(
               accountType: LinkAccountType.google,
               isLinked: () => state.isLinkedGoogle,
@@ -65,6 +66,7 @@ class SettingAccountCooperationListPage extends HookWidget {
                 }
               },
             ),
+            Divider(),
             if (!state.isLinkedAnyProvider)
               Container(
                 padding: EdgeInsets.only(left: 15, right: 16),
