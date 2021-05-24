@@ -65,17 +65,25 @@ class SettingAccountCooperationListPage extends HookWidget {
                 }
               },
             ),
-            SecondaryButton(
-                onPressed: () {
-                  showSigninSheet(context, true, (linkAccountType) {
-                    analytics.logEvent(
-                        name: "signin_from_account_cooperation",
-                        parameters: {
-                          "link_account_type": linkAccountType.providerName,
+            if (!state.isLinkedAnyProvider)
+              Container(
+                padding: EdgeInsets.only(left: 15, right: 16),
+                child: Align(
+                  alignment: Alignment.centerLeft,
+                  child: SecondaryButton(
+                      onPressed: () {
+                        showSigninSheet(context, true, (linkAccountType) {
+                          analytics.logEvent(
+                              name: "signin_from_account_cooperation",
+                              parameters: {
+                                "link_account_type":
+                                    linkAccountType.providerName,
+                              });
                         });
-                  });
-                },
-                text: "ログイン"),
+                      },
+                      text: "ログイン"),
+                ),
+              ),
           ],
         ),
       ),

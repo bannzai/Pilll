@@ -27,4 +27,6 @@ abstract class SettingAccountCooperationListState
     }
     return google.isLinkedGoogleFor(user);
   }
+
+  bool get isLinkedAnyProvider => isLinkedApple || isLinkedGoogle;
 }
