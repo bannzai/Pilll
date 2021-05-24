@@ -41,14 +41,6 @@ Future<LinkValueContainer?> linkWithApple(User user) async {
   }
 }
 
-Future<User?> unlinkApple() async {
-  final user = FirebaseAuth.instance.currentUser;
-  if (user == null) {
-    throw FormatException("firebase user is not found when unlink apple");
-  }
-  return user.unlink(appleProviderID);
-}
-
 Future<UserCredential?> signInWithApple() async {
   try {
     final rawNonce = generateNonce();

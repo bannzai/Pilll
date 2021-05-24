@@ -30,14 +30,6 @@ Future<LinkValueContainer?> linkWithGoogle(User user) async {
   return Future.value(LinkValueContainer(linkedCredential, email));
 }
 
-Future<User?> unlinkGoogle() async {
-  final user = FirebaseAuth.instance.currentUser;
-  if (user == null) {
-    throw FormatException("firebase user is not found when unlink google");
-  }
-  return user.unlink(googleProviderID);
-}
-
 Future<UserCredential?> signInWithGoogle() async {
   // NOTE: workaround https://github.com/flutter/flutter/issues/44564#issuecomment-655884103
   final googleUser = await GoogleSignIn(
