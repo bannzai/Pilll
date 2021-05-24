@@ -6,8 +6,6 @@ import 'package:pilll/domain/settings/setting_account_cooperation_list_page_stat
 import 'package:pilll/service/auth.dart';
 import 'package:pilll/service/user.dart';
 import 'package:riverpod/riverpod.dart';
-import 'package:pilll/auth/apple.dart' as apple;
-import 'package:pilll/auth/google.dart' as google;
 
 final settingAccountCooperationListProvider = StateNotifierProvider(
   (ref) => SettingAccountCooperationListPageStore(
@@ -45,20 +43,6 @@ class SettingAccountCooperationListPageStore
   void dispose() {
     _authCanceller?.cancel();
     super.dispose();
-  }
-
-  Future<void> unlinkApple() {
-    if (!state.isLinkedApple) {
-      throw AssertionError("unexpected is not yet linked apple when unlink");
-    }
-    return apple.unlinkApple().then((value) => _userService.unlinkApple());
-  }
-
-  Future<void> unlinkGoogle() {
-    if (!state.isLinkedGoogle) {
-      throw AssertionError("unexpected is not yet linked google when unlink");
-    }
-    return google.unlinkGoogle().then((value) => _userService.unlinkGoogle());
   }
 
   Future<void> linkApple() {

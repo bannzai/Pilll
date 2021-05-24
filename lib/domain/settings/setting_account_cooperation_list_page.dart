@@ -8,14 +8,12 @@ import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/components/molecules/indicator.dart';
-import 'package:pilll/components/page/discard_dialog.dart';
 import 'package:pilll/domain/demography/demography_page.dart';
 import 'package:pilll/domain/root/root.dart';
 import 'package:pilll/domain/settings/setting_account_cooperation_list_page_store.dart';
 import 'package:pilll/entity/link_account_type.dart';
 import 'package:pilll/entity/user_error.dart';
 import 'package:pilll/error/error_alert.dart';
-import 'package:pilll/error_log.dart';
 import 'package:pilll/signin/signin_sheet.dart';
 
 class SettingAccountCooperationListPage extends HookWidget {
@@ -48,10 +46,9 @@ class SettingAccountCooperationListPage extends HookWidget {
               isLinked: () => state.isLinkedApple,
               onTap: () async {
                 if (state.isLinkedApple) {
-                  _showUnlinkDialog(context, store, LinkAccountType.apple);
-                } else {
-                  _linkApple(context, store);
+                  return;
                 }
+                _linkApple(context, store);
               },
             ),
             Divider(indent: 16),
@@ -60,10 +57,9 @@ class SettingAccountCooperationListPage extends HookWidget {
               isLinked: () => state.isLinkedGoogle,
               onTap: () async {
                 if (state.isLinkedGoogle) {
-                  _showUnlinkDialog(context, store, LinkAccountType.google);
-                } else {
-                  _linkGoogle(context, store);
+                  return;
                 }
+                _linkGoogle(context, store);
               },
             ),
             Divider(indent: 16),
@@ -92,34 +88,6 @@ class SettingAccountCooperationListPage extends HookWidget {
     );
   }
 
-  _showUnlinkDialog(
-    BuildContext context,
-    SettingAccountCooperationListPageStore store,
-    LinkAccountType accountType,
-  ) {
-    final String eventSuffix = _logEventSuffix(accountType);
-    analytics.logEvent(
-      name: "show_unlink_dialog_$eventSuffix",
-    );
-    showDiscardDialog(
-      context,
-      title: "アカウント連携を解除しますか？",
-      message: '''
-連携を解除すると${accountType.providerName}を使ってログインができなくなります。
-機種変更等でPilllでログインするときに必要です。
-''',
-      done: () {
-        switch (accountType) {
-          case LinkAccountType.apple:
-            return _unlinkApple(context, store);
-          case LinkAccountType.google:
-            return _unlinkGoogle(context, store);
-        }
-      },
-      doneText: "解除する",
-    );
-  }
-
   String _logEventSuffix(LinkAccountType accountType) {
     switch (accountType) {
       case LinkAccountType.apple:
@@ -127,58 +95,6 @@ class SettingAccountCooperationListPage extends HookWidget {
       case LinkAccountType.google:
         return "google";
     }
-  }
-
-  _unlinkApple(BuildContext context,
-          SettingAccountCooperationListPageStore store) async =>
-      _unlink(context, store, LinkAccountType.apple);
-
-  _unlinkGoogle(BuildContext context,
-          SettingAccountCooperationListPageStore store) async =>
-      _unlink(context, store, LinkAccountType.google);
-
-  _unlink(
-    BuildContext context,
-    SettingAccountCooperationListPageStore store,
-    LinkAccountType accountType,
-  ) async {
-    final String eventSuffix = _logEventSuffix(accountType);
-    analytics.logEvent(
-      name: "unlink_link_event_$eventSuffix",
-    );
-
-    showIndicator();
-    try {
-      switch (accountType) {
-        case LinkAccountType.apple:
-          await store.unlinkApple();
-          break;
-        case LinkAccountType.google:
-          await store.unlinkGoogle();
-          break;
-      }
-      hideIndicator();
-    } catch (error, stack) {
-      analytics.logEvent(
-          name: "did_failure_unlink_event_$eventSuffix",
-          parameters: {"errot_type": error.runtimeType.toString()});
-      errorLogger.recordError(error, stack);
-      hideIndicator();
-
-      if (error is UserDisplayedError) {
-        showErrorAlertWithError(context, error);
-      } else {
-        rootKey.currentState?.onError(error);
-      }
-      return;
-    }
-
-    ScaffoldMessenger.of(context).showSnackBar(
-      SnackBar(
-        duration: Duration(seconds: 1),
-        content: Text("${accountType.providerName}の連携を解除しました"),
-      ),
-    );
   }
 
   _linkApple(
