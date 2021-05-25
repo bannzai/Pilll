@@ -21,5 +21,5 @@ extension ReleaseNoteKey on String {
 }
 
 extension IntKey on String {
-  static final String totalPillCount = "totalPillCount";
+  static final String totalCountOfActionForTakenPill = "totalPillCount";
 }

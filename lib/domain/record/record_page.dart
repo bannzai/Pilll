@@ -406,7 +406,7 @@ class RecordPage extends HookWidget {
 
   _requestInAppReview() {
     SharedPreferences.getInstance().then((store) async {
-      final key = IntKey.totalPillCount;
+      final key = IntKey.totalCountOfActionForTakenPill;
       int? value = store.getInt(key);
       if (value == null) {
         value = 0;
