@@ -47,6 +47,9 @@ abstract class RecordPageState implements _$RecordPageState {
     if (isLinkedLoginProvider) {
       return "";
     }
+    if (totalCountOfActionForTakenPill < 7) {
+      return "";
+    }
     if (recommendedSignupNotificationIsAlreadyShow) {
       return "";
     }
