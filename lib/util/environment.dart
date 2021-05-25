@@ -1,3 +1,5 @@
+import 'package:flutter/material.dart';
+
 enum Flavor {
   DEVELOP,
   PRODUCTION,
@@ -20,4 +22,6 @@ abstract class Environment {
       String.fromEnvironment("SIWA_SERVICE_IDENTIFIIER");
   static const androidSiwaRedirectURL =
       String.fromEnvironment("ANDROID_SIWA_REDIRECT_URL");
+
+  static Function()? deleteUser;
 }

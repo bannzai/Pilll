@@ -45,11 +45,28 @@ class SettingPage extends HookWidget {
               }
               return Padding(
                 padding: const EdgeInsets.all(10),
-                child: TextButton(
+                child: GestureDetector(
                   child: Text("COPY DEBUG INFO", style: TextColorStyle.primary),
-                  onPressed: () async {
+                  onTap: () async {
                     Clipboard.setData(
                         ClipboardData(text: await debugInfo("\n")));
+                  },
+                  onLongPress: () {
+                    final deleteUser = Environment.deleteUser;
+                    if (deleteUser == null) {
+                      return;
+                    }
+                    showDiscardDialog(
+                      context,
+                      title: "ユーザーを削除します",
+                      message: '''
+これは開発用のオプションです。ユーザーを削除したあとはアプリを再インストールしてからやり直してください
+''',
+                      done: () async {
+                        await deleteUser();
+                      },
+                      doneText: "削除",
+                    );
                   },
                 ),
               );
