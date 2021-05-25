@@ -12,6 +12,7 @@ abstract class RecordPageState implements _$RecordPageState {
     required PillSheet? entity,
     Setting? setting,
     @Default(true) bool recommendedSignupNotificationIsAlreadyShow,
+    @Default(0) int totalCountOfActionForTakenPill,
     @Default(false) bool isLinkedLoginProvider,
     @Default(false) bool firstLoadIsEnded,
   }) = _RecordPageState;
