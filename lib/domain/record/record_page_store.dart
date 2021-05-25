@@ -40,6 +40,8 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
       final recommendedSignupNotificationIsAlreadyShow = sharedPreferences
               .getBool(BoolKey.recommendedSignupNotificationIsAlreadyShow) ??
           false;
+      final totalCountOfActionForTakenPill =
+          sharedPreferences.getInt(IntKey.totalCountOfActionForTakenPill) ?? 0;
       state = RecordPageState(
         entity: entity,
         setting: setting,
@@ -48,6 +50,7 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
             _authService.isLinkedApple() || _authService.isLinkedGoogle(),
         recommendedSignupNotificationIsAlreadyShow:
             recommendedSignupNotificationIsAlreadyShow,
+        totalCountOfActionForTakenPill: totalCountOfActionForTakenPill,
       );
       if (entity != null) {
         analytics.logEvent(name: "count_of_remaining_pill", parameters: {
