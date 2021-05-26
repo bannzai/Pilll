@@ -9,8 +9,7 @@ Future<void> main() async {
       throw AssertionError("This method should not call out of development");
     }
     final currentUser = FirebaseAuth.instance.currentUser;
-    await FirebaseAuth.instance.signOut();
-    await currentUser?.delete();
+    await FirebaseAuth.instance.currentUser?.delete();
   };
   await entrypoint();
 }
