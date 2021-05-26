@@ -46,7 +46,9 @@ class SettingPage extends HookWidget {
               return Padding(
                 padding: const EdgeInsets.all(10),
                 child: GestureDetector(
-                  child: Text("COPY DEBUG INFO", style: TextColorStyle.primary),
+                  child: Center(
+                      child: Text("COPY DEBUG INFO",
+                          style: TextColorStyle.primary)),
                   onTap: () async {
                     Clipboard.setData(
                         ClipboardData(text: await debugInfo("\n")));
