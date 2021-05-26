@@ -38,7 +38,7 @@ class AppRouter {
     });
   }
 
-  static void signinAccount(BuildContext context, LinkAccountType accountType) {
+  static void signinAccount(BuildContext context) {
     print("signinAccount: ${FirebaseAuth.instance.currentUser?.uid}");
     return endInitialSetting(context);
   }

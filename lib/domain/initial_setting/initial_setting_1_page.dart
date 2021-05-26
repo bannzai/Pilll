@@ -13,6 +13,11 @@ class InitialSetting1Page extends HookWidget {
   Widget build(BuildContext context) {
     final store = useProvider(initialSettingStoreProvider);
     final state = useProvider(initialSettingStoreProvider.state);
+    if (state.isAccountCooperationDidEnd) {
+      store.canEndInitialSetting().then((value) {
+        AppRouter.signinAccount(context);
+      });
+    }
     return PillSheetTypeSelectPage(
       title: "1/4",
       backButtonIsHidden: true,
@@ -32,7 +37,7 @@ class InitialSetting1Page extends HookWidget {
       selectedPillSheetType: state.entity.pillSheetType,
       signinAccount: (accountType) async {
         if (await store.canEndInitialSetting()) {
-          AppRouter.signinAccount(context, accountType);
+          AppRouter.signinAccount(context);
         }
       },
     );
