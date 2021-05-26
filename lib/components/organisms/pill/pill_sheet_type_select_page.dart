@@ -31,7 +31,7 @@ class PillSheetTypeSelectPage extends StatelessWidget {
 
   @override
   Scaffold build(BuildContext context) {
-    final cooperateAccount = this.signinAccount;
+    final signinAccount = this.signinAccount;
     return Scaffold(
       backgroundColor: PilllColors.background,
       appBar: AppBar(
@@ -75,11 +75,11 @@ class PillSheetTypeSelectPage extends StatelessWidget {
                   onPressed: done,
                 ),
               ),
-            if (cooperateAccount != null) ...[
+            if (signinAccount != null) ...[
               SizedBox(height: 20),
               SecondaryButton(
                 onPressed: () {
-                  showSigninSheet(context, true, cooperateAccount);
+                  showSigninSheet(context, true, signinAccount);
                 },
                 text: "すでにアカウントをお持ちの方はこちら",
               ),
