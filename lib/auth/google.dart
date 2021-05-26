@@ -31,6 +31,10 @@ Future<LinkValueContainer?> linkWithGoogle(User user) async {
 }
 
 Future<UserCredential?> signInWithGoogle() async {
+  final user = FirebaseAuth.instance.currentUser;
+  if (user == null) {
+    throw FormatException("Anonymous User not found");
+  }
   // NOTE: workaround https://github.com/flutter/flutter/issues/44564#issuecomment-655884103
   final googleUser = await GoogleSignIn(
     scopes: [
@@ -48,6 +52,16 @@ Future<UserCredential?> signInWithGoogle() async {
     accessToken: googleAuth.accessToken,
     idToken: googleAuth.idToken,
   );
+
+  // NOTE: Challenge to confirm for exists linked account
+  try {
+    final linkedCredential = await user.linkWithCredential(credential);
+    return Future.value(linkedCredential);
+  } on FirebaseAuthException catch (e) {
+    if (e.code != "provider-already-linked") rethrow;
+  } catch (e) {
+    rethrow;
+  }
 
   return await FirebaseAuth.instance.signInWithCredential(credential);
 }

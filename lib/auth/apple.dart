@@ -42,6 +42,10 @@ Future<LinkValueContainer?> linkWithApple(User user) async {
 }
 
 Future<UserCredential?> signInWithApple() async {
+  final user = FirebaseAuth.instance.currentUser;
+  if (user == null) {
+    throw FormatException("Anonymous User not found");
+  }
   try {
     final rawNonce = generateNonce();
     final state = generateNonce();
@@ -63,6 +67,16 @@ Future<UserCredential?> signInWithApple() async {
       accessToken: appleCredential.authorizationCode,
       rawNonce: rawNonce,
     );
+    // NOTE: Challenge to confirm for exists linked account
+    try {
+      final linkedCredential = await user.linkWithCredential(credential);
+      return Future.value(linkedCredential);
+    } on FirebaseAuthException catch (e) {
+      if (e.code != "provider-already-linked") rethrow;
+    } catch (e) {
+      rethrow;
+    }
+
     return await FirebaseAuth.instance.signInWithCredential(credential);
   } on SignInWithAppleAuthorizationException catch (e) {
     if (e.code == AuthorizationErrorCode.canceled) {
