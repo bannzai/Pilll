@@ -5,17 +5,24 @@ import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/entity/setting.dart';
 import 'package:pilll/service/auth.dart';
 import 'package:pilll/service/initial_setting.dart';
+import 'package:pilll/service/setting.dart';
 import 'package:pilll/state/initial_setting.dart';
 import 'package:riverpod/riverpod.dart';
 
-final initialSettingStoreProvider = StateNotifierProvider((ref) =>
-    InitialSettingStateStore(ref.watch(initialSettingServiceProvider),
-        ref.watch(authServiceProvider)));
+final initialSettingStoreProvider = StateNotifierProvider(
+  (ref) => InitialSettingStateStore(
+    ref.watch(initialSettingServiceProvider),
+    ref.watch(authServiceProvider),
+    ref.watch(settingServiceProvider),
+  ),
+);
 
 class InitialSettingStateStore extends StateNotifier<InitialSettingState> {
-  final AuthService _authService;
   final InitialSettingServiceInterface _service;
-  InitialSettingStateStore(this._service, this._authService)
+  final AuthService _authService;
+  final SettingService _settingService;
+  InitialSettingStateStore(
+      this._service, this._authService, this._settingService)
       : super(
           InitialSettingState(
             entity: InitialSettingModel.initial(),
@@ -67,5 +74,14 @@ class InitialSettingStateStore extends StateNotifier<InitialSettingState> {
 
   Future<void> register(InitialSettingModel initialSetting) {
     return _service.register(initialSetting);
+  }
+
+  Future<bool> canEndInitialSetting() async {
+    try {
+      await _settingService.fetch();
+      return true;
+    } catch (error) {
+      return false;
+    }
   }
 }

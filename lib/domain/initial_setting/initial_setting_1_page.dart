@@ -30,8 +30,10 @@ class InitialSetting1Page extends HookWidget {
             },
       doneButtonText: "次へ",
       selectedPillSheetType: state.entity.pillSheetType,
-      signinAccount: (accountType) {
-        AppRouter.signinAccount(context, accountType);
+      signinAccount: (accountType) async {
+        if (await store.canEndInitialSetting()) {
+          AppRouter.signinAccount(context, accountType);
+        }
       },
     );
   }
