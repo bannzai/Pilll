@@ -39,7 +39,9 @@ class AppRouter {
   }
 
   static void signinAccount(BuildContext context) {
-    print("signinAccount: ${FirebaseAuth.instance.currentUser?.uid}");
+    analytics.logEvent(
+        name: "initial_setting_signin_account",
+        parameters: {"uid": FirebaseAuth.instance.currentUser?.uid});
     return endInitialSetting(context);
   }
 }
