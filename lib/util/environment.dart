@@ -24,4 +24,5 @@ abstract class Environment {
       String.fromEnvironment("ANDROID_SIWA_REDIRECT_URL");
 
   static Function()? deleteUser;
+  static Function()? signOutUser;
 }

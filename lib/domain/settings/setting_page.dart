@@ -53,6 +53,23 @@ class SettingPage extends HookWidget {
                     Clipboard.setData(
                         ClipboardData(text: await debugInfo("\n")));
                   },
+                  onDoubleTap: () {
+                    final signOut = Environment.signOutUser;
+                    if (signOut == null) {
+                      return;
+                    }
+                    showDiscardDialog(
+                      context,
+                      title: "サインアウトします",
+                      message: '''
+これは開発用のオプションです。サインアウトあとはアプリを再起動してお試しください。初期設定から始まります
+''',
+                      done: () async {
+                        await signOut();
+                      },
+                      doneText: "サインアウト",
+                    );
+                  },
                   onLongPress: () {
                     final deleteUser = Environment.deleteUser;
                     if (deleteUser == null) {
@@ -62,7 +79,7 @@ class SettingPage extends HookWidget {
                       context,
                       title: "ユーザーを削除します",
                       message: '''
-これは開発用のオプションです。ユーザーを削除したあとはアプリを再インストールしてからやり直してください
+これは開発用のオプションです。ユーザーを削除したあとはアプリを再起動してからやり直してください。初期設定から始まります
 ''',
                       done: () async {
                         await deleteUser();
