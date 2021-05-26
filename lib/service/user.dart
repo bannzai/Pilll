@@ -109,14 +109,20 @@ class UserService {
     });
   }
 
-  Future<void> linkApple(String? email) {
+  Future<void> linkApple(String? email) async {
+    await _database.userReference().set({
+      UserFirestoreFieldKeys.isAnonymous: false,
+    }, SetOptions(merge: true));
     return _database.userPrivateReference().set({
       if (email != null) UserPrivateFirestoreFieldKeys.appleEmail: email,
       UserPrivateFirestoreFieldKeys.isLinkedApple: true,
     }, SetOptions(merge: true));
   }
 
-  Future<void> linkGoogle(String? email) {
+  Future<void> linkGoogle(String? email) async {
+    await _database.userReference().set({
+      UserFirestoreFieldKeys.isAnonymous: false,
+    }, SetOptions(merge: true));
     return _database.userPrivateReference().set({
       if (email != null) UserPrivateFirestoreFieldKeys.googleEmail: email,
       UserPrivateFirestoreFieldKeys.isLinkedGoogle: true,
