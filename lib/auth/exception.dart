@@ -6,7 +6,7 @@ Exception? mapFromFirebaseAuthException(
     FirebaseAuthException e, LinkAccountType accountType) {
   if (e.code == "provider-already-linked")
     throw UserDisplayedError(
-        "すでに他の${accountType.providerName}がPilllのアカウントに紐付いているため連携ができません。アプリを再起動し直して再度お試しください。詳細: ${e.message}");
+        "すでに${accountType.providerName}がPilllのアカウントに紐付いています。画面の更新をお試しください。詳細: ${e.message}");
   if (e.code == "credential-already-in-use")
     throw UserDisplayedError(
         "すでに${accountType.providerName}が他のPilllのアカウントに紐付いているため連携ができません。ログインをお試しください。詳細: ${e.message}");
