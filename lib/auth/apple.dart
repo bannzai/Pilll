@@ -47,36 +47,8 @@ Future<UserCredential?> signInWithApple() async {
     throw FormatException("Anonymous User not found");
   }
   try {
-    // NOTE: Challenge to confirm for exists linked account
-    try {
-      final rawNonce = generateNonce();
-      final appleCredential = await SignInWithApple.getAppleIDCredential(
-        scopes: [AppleIDAuthorizationScopes.email],
-        webAuthenticationOptions: WebAuthenticationOptions(
-          clientId: Environment.siwaServiceIdentifier,
-          redirectUri: Uri.parse(Environment.androidSiwaRedirectURL),
-        ),
-        nonce: sha256ofString(rawNonce).toString(),
-      );
-      final credential = OAuthProvider(appleProviderID).credential(
-        idToken: appleCredential.identityToken,
-        accessToken: appleCredential.authorizationCode,
-        rawNonce: rawNonce,
-      );
-      final linkedCredential = await user.linkWithCredential(credential);
-      return Future.value(linkedCredential);
-    } on FirebaseAuthException catch (e) {
-      print(
-          "Catch exception about Challenge to confirm for exists linked user FirebaseAuthException: $e");
-      if (e.code != "credential-already-in-use") rethrow;
-    } catch (e) {
-      print(
-          "Catch exception about Challenge to confirm for exists linked user Unknown Exception: $e");
-      rethrow;
-    }
-
-    print("It is not exists linked apple user");
     final rawNonce = generateNonce();
+    final state = generateNonce();
     final appleCredential = await SignInWithApple.getAppleIDCredential(
       scopes: [AppleIDAuthorizationScopes.email],
       webAuthenticationOptions: WebAuthenticationOptions(
@@ -84,12 +56,27 @@ Future<UserCredential?> signInWithApple() async {
         redirectUri: Uri.parse(Environment.androidSiwaRedirectURL),
       ),
       nonce: sha256ofString(rawNonce).toString(),
+      state: state,
     );
+    print("appleCredential: $appleCredential");
+    if (state != appleCredential.state) {
+      throw AssertionError('state not matched!');
+    }
     final credential = OAuthProvider(appleProviderID).credential(
       idToken: appleCredential.identityToken,
       accessToken: appleCredential.authorizationCode,
       rawNonce: rawNonce,
     );
+    // NOTE: Challenge to confirm for exists linked account
+    try {
+      final linkedCredential = await user.linkWithCredential(credential);
+      return Future.value(linkedCredential);
+    } on FirebaseAuthException catch (e) {
+      if (e.code != "provider-already-linked") rethrow;
+    } catch (e) {
+      rethrow;
+    }
+
     return await FirebaseAuth.instance.signInWithCredential(credential);
   } on SignInWithAppleAuthorizationException catch (e) {
     if (e.code == AuthorizationErrorCode.canceled) {
