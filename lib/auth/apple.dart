@@ -67,15 +67,6 @@ Future<UserCredential?> signInWithApple() async {
       accessToken: appleCredential.authorizationCode,
       rawNonce: rawNonce,
     );
-    // NOTE: Challenge to confirm for exists linked account
-    try {
-      final linkedCredential = await user.linkWithCredential(credential);
-      return Future.value(linkedCredential);
-    } on FirebaseAuthException catch (e) {
-      if (e.code != "provider-already-linked") rethrow;
-    } catch (e) {
-      rethrow;
-    }
 
     return await FirebaseAuth.instance.signInWithCredential(credential);
   } on SignInWithAppleAuthorizationException catch (e) {
