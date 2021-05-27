@@ -58,11 +58,16 @@ Future<UserCredential?> signInWithGoogle() async {
     final linkedCredential = await user.linkWithCredential(credential);
     return Future.value(linkedCredential);
   } on FirebaseAuthException catch (e) {
-    if (e.code != "provider-already-linked") rethrow;
+    print(
+        "Catch exception about Challenge to confirm for exists linked user FirebaseAuthException: $e");
+    if (e.code != "credential-already-in-use") rethrow;
   } catch (e) {
+    print(
+        "Catch exception about Challenge to confirm for exists linked user Unknown Exception: $e");
     rethrow;
   }
 
+  print("It is not exists linked google user");
   return await FirebaseAuth.instance.signInWithCredential(credential);
 }
 
