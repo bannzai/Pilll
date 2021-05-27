@@ -14,8 +14,10 @@ class InitialSetting1Page extends HookWidget {
     final store = useProvider(initialSettingStoreProvider);
     final state = useProvider(initialSettingStoreProvider.state);
     if (state.isAccountCooperationDidEnd) {
-      store.canEndInitialSetting().then((value) {
-        AppRouter.signinAccount(context);
+      Future(() async {
+        if (await store.canEndInitialSetting()) {
+          AppRouter.signinAccount(context);
+        }
       });
     }
     return PillSheetTypeSelectPage(
