@@ -7,6 +7,7 @@ import 'package:pilll/router/router.dart';
 import 'package:pilll/store/initial_setting.dart';
 import 'package:flutter/material.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
+import 'package:pilll/entity/link_account_type.dart';
 
 class InitialSetting1Page extends HookWidget {
   @override
@@ -37,11 +38,20 @@ class InitialSetting1Page extends HookWidget {
             },
       doneButtonText: "次へ",
       selectedPillSheetType: state.entity.pillSheetType,
-      signinAccount: (accountType) async {
-        if (await store.canEndInitialSetting()) {
-          AppRouter.signinAccount(context);
-        }
-      },
+      signinAccount: state.isAccountCooperationDidEnd
+          ? null
+          : (accountType) async {
+              if (await store.canEndInitialSetting()) {
+                AppRouter.signinAccount(context);
+              } else {
+                ScaffoldMessenger.of(context).showSnackBar(
+                  SnackBar(
+                    duration: Duration(seconds: 1),
+                    content: Text("${accountType.providerName}でアカウントを作成しました"),
+                  ),
+                );
+              }
+            },
     );
   }
 }
