@@ -47,13 +47,14 @@ Stream<User> _subscribe() {
   ).skipWhile((element) => element == null).cast();
 }
 
-Future<dynamic> callSignin() async {
+Future<User?> callSignin() async {
   return _cacheOrAuth().then((user) {
     if (user == null) {
-      return;
+      return null;
     }
     errorLogger.setUserIdentifier(user.uid);
     firebaseAnalytics.setUserId(user.uid);
+    return user;
   });
 }
 

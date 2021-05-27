@@ -1,11 +1,13 @@
 import 'dart:async';
 
+import 'package:pilll/database/database.dart';
 import 'package:pilll/entity/initial_setting.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/entity/setting.dart';
 import 'package:pilll/service/auth.dart';
 import 'package:pilll/service/initial_setting.dart';
 import 'package:pilll/service/setting.dart';
+import 'package:pilll/service/user.dart';
 import 'package:pilll/state/initial_setting.dart';
 import 'package:riverpod/riverpod.dart';
 
@@ -22,8 +24,10 @@ class InitialSettingStateStore extends StateNotifier<InitialSettingState> {
   final AuthService _authService;
   final SettingService _settingService;
   InitialSettingStateStore(
-      this._service, this._authService, this._settingService)
-      : super(
+    this._service,
+    this._authService,
+    this._settingService,
+  ) : super(
           InitialSettingState(
             entity: InitialSettingModel.initial(),
           ),
@@ -43,7 +47,12 @@ class InitialSettingStateStore extends StateNotifier<InitialSettingState> {
           "watch sign state uid: ${user.uid}, isAnonymous: ${user.isAnonymous}");
       final isAccountCooperationDidEnd = !user.isAnonymous;
       if (isAccountCooperationDidEnd) {
-        await callSignin();
+        final user = await callSignin();
+        if (user == null) {
+          throw AssertionError("unexpected not found user");
+        }
+        final userService = UserService(DatabaseConnection(user.uid));
+        await userService.prepare(user.uid);
       }
       state = state.copyWith(
           isAccountCooperationDidEnd: isAccountCooperationDidEnd);
