@@ -3,7 +3,6 @@ import 'package:pilll/analytics.dart';
 import 'package:pilll/domain/initial_setting/initial_setting_1_page.dart';
 import 'package:pilll/domain/home/home_page.dart';
 import 'package:pilll/domain/root/root.dart';
-import 'package:pilll/entity/link_account_type.dart';
 import 'package:pilll/service/push_notification.dart';
 import 'package:pilll/util/shared_preference/keys.dart';
 import 'package:flutter/material.dart';

@@ -1,4 +1,3 @@
-import 'package:pilll/analytics.dart';
 import 'package:pilll/service/auth.dart';
 import 'package:pilll/database/database.dart';
 import 'package:pilll/domain/home/home_page.dart';

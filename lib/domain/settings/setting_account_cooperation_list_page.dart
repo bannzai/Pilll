@@ -5,7 +5,6 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/analytics.dart';
 import 'package:pilll/auth/apple.dart';
 import 'package:pilll/auth/google.dart';
-import 'package:pilll/components/atoms/buttons.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
@@ -16,7 +15,6 @@ import 'package:pilll/domain/settings/setting_account_cooperation_list_page_stor
 import 'package:pilll/entity/link_account_type.dart';
 import 'package:pilll/entity/user_error.dart';
 import 'package:pilll/error/error_alert.dart';
-import 'package:pilll/signin/signin_sheet.dart';
 
 class SettingAccountCooperationListPage extends HookWidget {
   @override
