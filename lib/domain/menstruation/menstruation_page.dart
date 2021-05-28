@@ -188,7 +188,7 @@ class MenstruationPage extends HookWidget {
                             final created = await store.recordFromToday();
                             ScaffoldMessenger.of(context).showSnackBar(
                               SnackBar(
-                                duration: Duration(seconds: 1),
+                                duration: Duration(seconds: 2),
                                 content: Text(
                                     "${DateTimeFormatter.monthAndDay(created.beginDate)}から生理開始で記録しました"),
                               ),
@@ -201,7 +201,7 @@ class MenstruationPage extends HookWidget {
                             final created = await store.recordFromYesterday();
                             ScaffoldMessenger.of(context).showSnackBar(
                               SnackBar(
-                                duration: Duration(seconds: 1),
+                                duration: Duration(seconds: 2),
                                 content: Text(
                                     "${DateTimeFormatter.monthAndDay(created.beginDate)}から生理開始で記録しました"),
                               ),
