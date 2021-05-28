@@ -32,23 +32,26 @@ class SigninSheet extends HookWidget {
     final store = useProvider(signinSheetStoreProvider(isLoginMode));
     final state = useProvider(signinSheetStoreProvider(isLoginMode).state);
     return Container(
-      constraints: BoxConstraints(maxHeight: 360, minHeight: 300),
+      constraints: BoxConstraints(maxHeight: 360, minHeight: 200),
       color: Colors.white,
       child: SafeArea(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
-          mainAxisSize: MainAxisSize.max,
-          children: [
-            SvgPicture.asset("images/draggable_bar.svg", height: 6),
-            Text(state.title,
-                textAlign: TextAlign.center,
-                style: TextColorStyle.main.merge(FontType.sBigTitle)),
-            Text(state.message,
-                textAlign: TextAlign.center,
-                style: TextColorStyle.main.merge(FontType.assisting)),
-            _appleButton(context, store, state),
-            _googleButton(context, store, state),
-          ],
+        child: Padding(
+          padding: const EdgeInsets.only(left: 16, right: 16),
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            mainAxisSize: MainAxisSize.max,
+            children: [
+              SvgPicture.asset("images/draggable_bar.svg", height: 6),
+              Text(state.title,
+                  textAlign: TextAlign.center,
+                  style: TextColorStyle.main.merge(FontType.sBigTitle)),
+              Text(state.message,
+                  textAlign: TextAlign.center,
+                  style: TextColorStyle.main.merge(FontType.assisting)),
+              _appleButton(context, store, state),
+              _googleButton(context, store, state),
+            ],
+          ),
         ),
       ),
     );
