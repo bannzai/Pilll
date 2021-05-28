@@ -12,7 +12,7 @@ abstract class SigninSheetState implements _$SigninSheetState {
 
   String get title => isLoginMode ? "ログイン" : "アカウント登録";
   String get message => isLoginMode
-      ? "ログイン前に行った記録は引き継げません。ログインするとログイン時のアカウント情報が表示されます。"
+      ? "Pilllにまだログインしたことが無い場合は新しくアカウントが作成されます"
       : "アカウント登録するとデータの引き継ぎが可能になります";
   String get appleButtonText => isLoginMode
       ? LinkAccountType.apple.providerName + "でサインイン"
