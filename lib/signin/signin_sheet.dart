@@ -32,24 +32,30 @@ class SigninSheet extends HookWidget {
     final store = useProvider(signinSheetStoreProvider(isLoginMode));
     final state = useProvider(signinSheetStoreProvider(isLoginMode).state);
     return Container(
-      constraints: BoxConstraints(maxHeight: 360, minHeight: 200),
+      constraints: BoxConstraints(maxHeight: 333, minHeight: 300),
       color: Colors.white,
       child: SafeArea(
         child: Padding(
           padding: const EdgeInsets.only(left: 16, right: 16),
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            mainAxisAlignment: MainAxisAlignment.start,
             mainAxisSize: MainAxisSize.max,
             children: [
+              SizedBox(height: 14),
               SvgPicture.asset("images/draggable_bar.svg", height: 6),
+              SizedBox(height: 24),
               Text(state.title,
                   textAlign: TextAlign.center,
                   style: TextColorStyle.main.merge(FontType.sBigTitle)),
+              SizedBox(height: 16),
               Text(state.message,
                   textAlign: TextAlign.center,
                   style: TextColorStyle.main.merge(FontType.assisting)),
+              SizedBox(height: 24),
               _appleButton(context, store, state),
+              SizedBox(height: 24),
               _googleButton(context, store, state),
+              Spacer(),
             ],
           ),
         ),
@@ -93,7 +99,7 @@ class SigninSheet extends HookWidget {
       child: Container(
         height: 48,
         child: Padding(
-          padding: const EdgeInsets.fromLTRB(0, 10, 0, 10),
+          padding: const EdgeInsets.fromLTRB(24, 10, 24, 10),
           child: Row(
             mainAxisSize: MainAxisSize.min,
             mainAxisAlignment: MainAxisAlignment.center,
@@ -150,7 +156,7 @@ class SigninSheet extends HookWidget {
       child: Container(
         height: 48,
         child: Padding(
-          padding: const EdgeInsets.fromLTRB(0, 10, 0, 10),
+          padding: const EdgeInsets.fromLTRB(24, 10, 24, 10),
           child: Row(
             mainAxisSize: MainAxisSize.min,
             mainAxisAlignment: MainAxisAlignment.center,
