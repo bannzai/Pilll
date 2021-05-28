@@ -53,6 +53,6 @@ abstract class RecordPageState implements _$RecordPageState {
     if (recommendedSignupNotificationIsAlreadyShow) {
       return "";
     }
-    return "機種変更やスマホ紛失時に備えてアカウント登録しませんか？";
+    return "機種変更やスマホ紛失時に備えて\nアカウント登録しませんか？";
   }
 }
