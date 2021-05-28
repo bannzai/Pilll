@@ -9,7 +9,7 @@ Exception? mapFromFirebaseAuthException(
         "すでに${accountType.providerName}がPilllのアカウントに紐付いています。画面の更新をお試しください。詳細: ${e.message}");
   if (e.code == "credential-already-in-use")
     throw UserDisplayedError(
-        "すでに${accountType.providerName}が他のPilllのアカウントに紐付いているため連携ができません。ログインをお試しください。詳細: ${e.message}");
+        "すでに${accountType.providerName}が他のPilllのアカウントに紐付いているため連携ができません。詳細: ${e.message}");
   if (e.code == "email-already-in-use")
     throw UserDisplayedError(
         "すでに${accountType.providerName}がでお使いのEmailが他のPilllアカウントに紐付いているため連携ができません。詳細: ${e.message}");
