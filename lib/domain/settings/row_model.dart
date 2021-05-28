@@ -6,7 +6,7 @@ import 'package:pilll/components/atoms/font.dart';
 import 'package:flutter/material.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 
-enum SettingSection { pill, notification, menstruation, account, other }
+enum SettingSection { account, pill, notification, menstruation, other }
 enum SettingRowType { title, date }
 
 abstract class SettingListRowModel {
