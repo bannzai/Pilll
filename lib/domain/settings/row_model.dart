@@ -115,8 +115,8 @@ class SettingListExplainRowModel extends SettingListRowModel {
   @override
   Widget widget() {
     return ListTile(
-      title:
-          Text(content, style: FontType.listRow.merge(TextColorStyle.darkGray)),
+      title: Text(content,
+          style: FontType.assisting.merge(TextColorStyle.darkGray)),
     );
   }
 }
