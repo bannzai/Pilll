@@ -47,7 +47,7 @@ class InitialSetting1Page extends HookWidget {
                 ScaffoldMessenger.of(context).showSnackBar(
                   SnackBar(
                     duration: Duration(seconds: 1),
-                    content: Text("${accountType.providerName}でアカウントを作成しました"),
+                    content: Text("${accountType.providerName}でアカウントでログインしました"),
                   ),
                 );
               }
