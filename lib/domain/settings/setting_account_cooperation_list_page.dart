@@ -191,7 +191,6 @@ class SettingAccountCooperationRow extends StatelessWidget {
     return ListTile(
       leading: _icon(),
       title: Text(_title, style: FontType.listRow),
-      trailing: _check(),
       horizontalTitleGap: 4,
       onTap: () => onTap(),
     );
@@ -231,18 +230,5 @@ class SettingAccountCooperationRow extends StatelessWidget {
       return providerName;
     }
     return "$providerName で連携済み";
-  }
-
-  Widget _check() {
-    final linked = isLinked();
-    if (!linked) {
-      return Container(width: 1, height: 1);
-    }
-    return Container(
-        padding: EdgeInsets.only(left: 2, right: 2),
-        color: PilllColors.enable,
-        child: SvgPicture.asset("images/checkmark.svg"),
-        width: 18,
-        height: 18);
   }
 }
