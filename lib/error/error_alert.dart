@@ -63,6 +63,7 @@ void showErrorAlertWithError(BuildContext context, UserDisplayedError error) {
       return ErrorAlert(
         title: error.title ?? "エラーが発生しました",
         errorMessage: error.toString(),
+        faqLinkURL: error.faqLinkURL,
       );
     },
   );
