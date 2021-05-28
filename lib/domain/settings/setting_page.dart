@@ -261,7 +261,7 @@ class SettingPage extends HookWidget {
                   .then((state) {
                 ScaffoldMessenger.of(context).showSnackBar(
                   SnackBar(
-                    duration: Duration(seconds: 1.5),
+                    duration: Duration(seconds: 1),
                     content: Text(
                       "服用通知を${settingEntity.isOnReminder ? "ON" : "OFF"}にしました",
                     ),
@@ -299,7 +299,7 @@ class SettingPage extends HookWidget {
                     .then((state) {
                   ScaffoldMessenger.of(context).showSnackBar(
                     SnackBar(
-                      duration: Duration(seconds: 1.5),
+                      duration: Duration(seconds: 1),
                       content: Text(
                         "${pillSheetEntity.pillSheetType.notTakenWord}期間の通知を${state.entity!.isOnNotifyInNotTakenDuration ? "ON" : "OFF"}にしました",
                       ),
