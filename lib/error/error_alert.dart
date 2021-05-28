@@ -4,15 +4,19 @@ import 'package:pilll/components/atoms/text_color.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:pilll/entity/user_error.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class ErrorAlert extends StatelessWidget {
   final String? title;
   final String errorMessage;
+  final String? faqLinkURL;
 
-  const ErrorAlert({Key? key, this.title, required this.errorMessage})
+  const ErrorAlert(
+      {Key? key, this.title, this.faqLinkURL, required this.errorMessage})
       : super(key: key);
   @override
   Widget build(BuildContext context) {
+    final faq = this.faqLinkURL;
     return AlertDialog(
       title: Text(
         title ?? "エラーが発生しました",
@@ -21,6 +25,13 @@ class ErrorAlert extends StatelessWidget {
       content: Text(errorMessage,
           style: FontType.assisting.merge(TextColorStyle.black)),
       actions: <Widget>[
+        if (faq != null)
+          SecondaryButton(
+            text: "FAQを見る",
+            onPressed: () {
+              launch(faq);
+            },
+          ),
         SecondaryButton(
           text: "閉じる",
           onPressed: () {
