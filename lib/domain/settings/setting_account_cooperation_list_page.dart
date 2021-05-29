@@ -8,7 +8,7 @@ import 'package:pilll/auth/google.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
-import 'package:pilll/components/molecules/indicator.dart';
+import 'package:pilll/components/page/hud.dart';
 import 'package:pilll/domain/demography/demography_page.dart';
 import 'package:pilll/domain/root/root.dart';
 import 'package:pilll/domain/settings/setting_account_cooperation_list_page_store.dart';
@@ -101,7 +101,7 @@ class SettingAccountCooperationListPage extends HookWidget {
     analytics.logEvent(
       name: "link_event_$eventSuffix",
     );
-    showIndicator();
+    HUD.of(context).show();
     try {
       final bool isDetermined;
       switch (accountType) {
@@ -112,7 +112,7 @@ class SettingAccountCooperationListPage extends HookWidget {
           isDetermined = await _handleGoogle(store);
           break;
       }
-      hideIndicator();
+      HUD.of(context).hide();
       analytics.logEvent(
         name: "did_end_link_event_$eventSuffix",
       );
@@ -124,7 +124,7 @@ class SettingAccountCooperationListPage extends HookWidget {
           name: "did_failure_link_event_$eventSuffix",
           parameters: {"errot_type": error.runtimeType.toString()});
 
-      hideIndicator();
+      HUD.of(context).hide();
       if (error is UserDisplayedError) {
         showErrorAlertWithError(context, error);
       } else {

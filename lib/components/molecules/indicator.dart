@@ -1,5 +1,4 @@
 import 'package:pilll/components/atoms/color.dart';
-import 'package:pilll/domain/root/root.dart';
 import 'package:flutter/material.dart';
 import 'package:pilll/util/environment.dart';
 
