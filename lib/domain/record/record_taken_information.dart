@@ -7,6 +7,10 @@ import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/util/formatter/date_time_formatter.dart';
 import 'package:flutter/material.dart';
 
+abstract class RecordTakenInformationConst {
+  static final double height = 130;
+}
+
 class RecordTakenInformation extends StatelessWidget {
   final DateTime today;
   final RecordPageState state;
@@ -27,7 +31,7 @@ class RecordTakenInformation extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 130,
+      height: RecordTakenInformationConst.height,
       child: Column(
         children: <Widget>[
           SizedBox(height: 34),

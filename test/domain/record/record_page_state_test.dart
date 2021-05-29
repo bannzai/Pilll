@@ -23,8 +23,9 @@ void main() {
   group("#calcBeginingDateFromNextTodayPillNumber", () {
     test("pill number changed to future", () async {
       final mockTodayRepository = MockTodayService();
+      final today = DateTime.parse("2020-11-22");
       todayRepository = mockTodayRepository;
-      when(todayRepository.today()).thenReturn(DateTime.parse("2020-11-22"));
+      when(todayRepository.today()).thenReturn(today);
 
       final pillSheetEntity =
           PillSheet.create(PillSheetType.pillsheet_21).copyWith(
@@ -43,6 +44,7 @@ void main() {
       final service = MockPillSheetService();
       when(service.fetchLast())
           .thenAnswer((realInvocation) => Future.value(state.entity));
+      when(service.fetchAll()).thenAnswer((realInvocation) => Future.value([]));
       when(service.subscribeForLatestPillSheet())
           .thenAnswer((realInvocation) => Stream.empty());
       final settingService = MockSettingService();
@@ -50,10 +52,14 @@ void main() {
           .thenAnswer((realInvocation) => Future.value(settingEntity));
       when(settingService.subscribe())
           .thenAnswer((realInvocation) => Stream.empty());
+      final authService = MockAuthService();
+      when(authService.isLinkedApple()).thenReturn(false);
+      when(authService.isLinkedGoogle()).thenReturn(false);
 
       final store = RecordPageStore(
         service,
         settingService,
+        authService,
       );
       await waitForResetStoreState();
       expect(state.entity?.todayPillNumber, equals(1));
@@ -65,8 +71,9 @@ void main() {
   });
   test("pill number changed to past", () async {
     final mockTodayRepository = MockTodayService();
+    final today = DateTime.parse("2020-11-23");
     todayRepository = mockTodayRepository;
-    when(todayRepository.today()).thenReturn(DateTime.parse("2020-11-23"));
+    when(todayRepository.today()).thenReturn(today);
 
     final pillSheetEntity =
         PillSheet.create(PillSheetType.pillsheet_21).copyWith(
@@ -85,6 +92,7 @@ void main() {
     final service = MockPillSheetService();
     when(service.fetchLast())
         .thenAnswer((realInvocation) => Future.value(state.entity));
+    when(service.fetchAll()).thenAnswer((realInvocation) => Future.value([]));
     when(service.subscribeForLatestPillSheet())
         .thenAnswer((realInvocation) => Stream.empty());
     final settingService = MockSettingService();
@@ -92,8 +100,15 @@ void main() {
         .thenAnswer((realInvocation) => Future.value(settingEntity));
     when(settingService.subscribe())
         .thenAnswer((realInvocation) => Stream.empty());
+    final authService = MockAuthService();
+    when(authService.isLinkedApple()).thenReturn(false);
+    when(authService.isLinkedGoogle()).thenReturn(false);
 
-    final store = RecordPageStore(service, settingService);
+    final store = RecordPageStore(
+      service,
+      settingService,
+      authService,
+    );
     await waitForResetStoreState();
     expect(state.entity?.todayPillNumber, equals(3));
 
@@ -104,8 +119,9 @@ void main() {
   group("#markFor", () {
     test("it is alredy taken all", () async {
       final mockTodayRepository = MockTodayService();
+      final today = DateTime.parse("2020-11-23");
       todayRepository = mockTodayRepository;
-      when(todayRepository.today()).thenReturn(DateTime.parse("2020-11-23"));
+      when(todayRepository.today()).thenReturn(today);
 
       final pillSheetEntity =
           PillSheet.create(PillSheetType.pillsheet_21).copyWith(
@@ -125,6 +141,7 @@ void main() {
       final service = MockPillSheetService();
       when(service.fetchLast())
           .thenAnswer((realInvocation) => Future.value(state.entity));
+      when(service.fetchAll()).thenAnswer((realInvocation) => Future.value([]));
       when(service.subscribeForLatestPillSheet())
           .thenAnswer((realInvocation) => Stream.empty());
       final settingService = MockSettingService();
@@ -133,7 +150,15 @@ void main() {
       when(settingService.subscribe())
           .thenAnswer((realInvocation) => Stream.empty());
 
-      final store = RecordPageStore(service, settingService);
+      final authService = MockAuthService();
+      when(authService.isLinkedApple()).thenReturn(false);
+      when(authService.isLinkedGoogle()).thenReturn(false);
+
+      final store = RecordPageStore(
+        service,
+        settingService,
+        authService,
+      );
       await waitForResetStoreState();
       expect(state.entity?.allTaken, isTrue);
       expect(store.markFor(1), PillMarkType.done);
@@ -143,8 +168,9 @@ void main() {
     });
     test("it is not taken all", () async {
       final mockTodayRepository = MockTodayService();
+      final today = DateTime.parse("2020-11-23");
       todayRepository = mockTodayRepository;
-      when(todayRepository.today()).thenReturn(DateTime.parse("2020-11-23"));
+      when(todayRepository.today()).thenReturn(today);
 
       final pillSheetEntity =
           PillSheet.create(PillSheetType.pillsheet_21).copyWith(
@@ -164,6 +190,7 @@ void main() {
       final service = MockPillSheetService();
       when(service.fetchLast())
           .thenAnswer((realInvocation) => Future.value(state.entity));
+      when(service.fetchAll()).thenAnswer((realInvocation) => Future.value([]));
       when(service.subscribeForLatestPillSheet())
           .thenAnswer((realInvocation) => Stream.empty());
       final settingService = MockSettingService();
@@ -172,7 +199,15 @@ void main() {
       when(settingService.subscribe())
           .thenAnswer((realInvocation) => Stream.empty());
 
-      final store = RecordPageStore(service, settingService);
+      final authService = MockAuthService();
+      when(authService.isLinkedApple()).thenReturn(false);
+      when(authService.isLinkedGoogle()).thenReturn(false);
+
+      final store = RecordPageStore(
+        service,
+        settingService,
+        authService,
+      );
       await waitForResetStoreState();
       expect(state.entity?.allTaken, isFalse);
       expect(store.markFor(1), PillMarkType.done);
@@ -184,9 +219,9 @@ void main() {
   group("#shouldPillMarkAnimation", () {
     test("it is alredy taken all", () async {
       final mockTodayRepository = MockTodayService();
+      final today = DateTime.parse("2020-11-23");
       todayRepository = mockTodayRepository;
-      when(mockTodayRepository.today())
-          .thenReturn(DateTime.parse("2020-11-23"));
+      when(mockTodayRepository.today()).thenReturn(today);
 
       final pillSheetEntity =
           PillSheet.create(PillSheetType.pillsheet_21).copyWith(
@@ -206,6 +241,7 @@ void main() {
       final service = MockPillSheetService();
       when(service.fetchLast())
           .thenAnswer((realInvocation) => Future.value(state.entity));
+      when(service.fetchAll()).thenAnswer((realInvocation) => Future.value([]));
       when(service.subscribeForLatestPillSheet())
           .thenAnswer((realInvocation) => Stream.empty());
       final settingService = MockSettingService();
@@ -214,7 +250,15 @@ void main() {
       when(settingService.subscribe())
           .thenAnswer((realInvocation) => Stream.empty());
 
-      final store = RecordPageStore(service, settingService);
+      final authService = MockAuthService();
+      when(authService.isLinkedApple()).thenReturn(false);
+      when(authService.isLinkedGoogle()).thenReturn(false);
+
+      final store = RecordPageStore(
+        service,
+        settingService,
+        authService,
+      );
       await waitForResetStoreState();
       expect(state.entity?.allTaken, isTrue);
       for (int i = 1; i <= pillSheetEntity.pillSheetType.totalCount; i++) {
@@ -223,8 +267,9 @@ void main() {
     });
     test("it is not taken all", () async {
       final mockTodayRepository = MockTodayService();
+      final today = DateTime.parse("2020-11-23");
       todayRepository = mockTodayRepository;
-      when(todayRepository.today()).thenReturn(DateTime.parse("2020-11-23"));
+      when(todayRepository.today()).thenReturn(today);
 
       final pillSheetEntity =
           PillSheet.create(PillSheetType.pillsheet_21).copyWith(
@@ -244,6 +289,7 @@ void main() {
       final service = MockPillSheetService();
       when(service.fetchLast())
           .thenAnswer((realInvocation) => Future.value(state.entity));
+      when(service.fetchAll()).thenAnswer((realInvocation) => Future.value([]));
       when(service.subscribeForLatestPillSheet())
           .thenAnswer((realInvocation) => Stream.empty());
       final settingService = MockSettingService();
@@ -252,7 +298,15 @@ void main() {
       when(settingService.subscribe())
           .thenAnswer((realInvocation) => Stream.empty());
 
-      final store = RecordPageStore(service, settingService);
+      final authService = MockAuthService();
+      when(authService.isLinkedApple()).thenReturn(false);
+      when(authService.isLinkedGoogle()).thenReturn(false);
+
+      final store = RecordPageStore(
+        service,
+        settingService,
+        authService,
+      );
       await waitForResetStoreState();
       expect(state.entity?.allTaken, isFalse);
       expect(store.shouldPillMarkAnimation(3), isTrue);

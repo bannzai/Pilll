@@ -3,6 +3,7 @@ import 'package:pilll/components/page/discard_dialog.dart';
 import 'package:pilll/components/organisms/pill/pill_sheet_type_select_page.dart';
 import 'package:pilll/components/organisms/setting/setting_menstruation_page.dart';
 import 'package:pilll/domain/settings/information_for_before_major_update.dart';
+import 'package:pilll/domain/settings/setting_account_cooperation_list_page.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/domain/settings/row_model.dart';
 import 'package:pilll/domain/settings/modifing_pill_number_page.dart';
@@ -44,11 +45,47 @@ class SettingPage extends HookWidget {
               }
               return Padding(
                 padding: const EdgeInsets.all(10),
-                child: TextButton(
-                  child: Text("COPY DEBUG INFO", style: TextColorStyle.primary),
-                  onPressed: () async {
+                child: GestureDetector(
+                  child: Center(
+                      child: Text("COPY DEBUG INFO",
+                          style: TextColorStyle.primary)),
+                  onTap: () async {
                     Clipboard.setData(
                         ClipboardData(text: await debugInfo("\n")));
+                  },
+                  onDoubleTap: () {
+                    final signOut = Environment.signOutUser;
+                    if (signOut == null) {
+                      return;
+                    }
+                    showDiscardDialog(
+                      context,
+                      title: "サインアウトします",
+                      message: '''
+これは開発用のオプションです。サインアウトあとはアプリを再起動してお試しください。初期設定から始まります
+''',
+                      done: () async {
+                        await signOut();
+                      },
+                      doneText: "サインアウト",
+                    );
+                  },
+                  onLongPress: () {
+                    final deleteUser = Environment.deleteUser;
+                    if (deleteUser == null) {
+                      return;
+                    }
+                    showDiscardDialog(
+                      context,
+                      title: "ユーザーを削除します",
+                      message: '''
+これは開発用のオプションです。ユーザーを削除したあとはアプリを再起動してからやり直してください。初期設定から始まります
+''',
+                      done: () async {
+                        await deleteUser();
+                      },
+                      doneText: "削除",
+                    );
                   },
                 ),
               );
@@ -80,6 +117,9 @@ class SettingPage extends HookWidget {
         break;
       case SettingSection.notification:
         text = "通知";
+        break;
+      case SettingSection.account:
+        text = "アカウント";
         break;
       case SettingSection.other:
         text = "その他";
@@ -156,6 +196,7 @@ class SettingPage extends HookWidget {
                     done: null,
                     doneButtonText: "",
                     selectedPillSheetType: settingEntity.pillSheetType,
+                    signinAccount: null,
                   ),
                 );
               },
@@ -220,7 +261,7 @@ class SettingPage extends HookWidget {
                   .then((state) {
                 ScaffoldMessenger.of(context).showSnackBar(
                   SnackBar(
-                    duration: Duration(seconds: 1),
+                    duration: Duration(seconds: 2),
                     content: Text(
                       "服用通知を${settingEntity.isOnReminder ? "ON" : "OFF"}にしました",
                     ),
@@ -258,7 +299,7 @@ class SettingPage extends HookWidget {
                     .then((state) {
                   ScaffoldMessenger.of(context).showSnackBar(
                     SnackBar(
-                      duration: Duration(seconds: 1),
+                      duration: Duration(seconds: 2),
                       content: Text(
                         "${pillSheetEntity.pillSheetType.notTakenWord}期間の通知を${state.entity!.isOnNotifyInNotTakenDuration ? "ON" : "OFF"}にしました",
                       ),
@@ -356,8 +397,16 @@ class SettingPage extends HookWidget {
                 inquiry();
               }),
         ];
-      default:
-        throw ArgumentError.notNull("");
+      case SettingSection.account:
+        return [
+          SettingListExplainRowModel(
+              "機種変更やスマホ紛失時など、データの引き継ぎ・復元には、アカウント登録が必要です。"),
+          SettingListAccountLinkRowModel(onTap: () {
+            analytics.logEvent(name: "did_select_setting_account_cooperation");
+            Navigator.of(context)
+                .push(SettingAccountCooperationListPageRoute.route());
+          }),
+        ];
     }
   }
 
@@ -368,6 +417,9 @@ class SettingPage extends HookWidget {
         _sectionTitle(section),
         ...[
           ..._rowModels(context, section).map((e) {
+            if (e is SettingListExplainRowModel) {
+              return [e.widget()];
+            }
             return [e.widget(), _separatorItem()];
           }).expand((element) => element)
         ]..add(SizedBox(height: 16)),

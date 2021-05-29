@@ -19,10 +19,17 @@ class _$RecordPageStateTearOff {
   _RecordPageState call(
       {required PillSheet? entity,
       Setting? setting,
+      bool recommendedSignupNotificationIsAlreadyShow = true,
+      int totalCountOfActionForTakenPill = 0,
+      bool isLinkedLoginProvider = false,
       bool firstLoadIsEnded = false}) {
     return _RecordPageState(
       entity: entity,
       setting: setting,
+      recommendedSignupNotificationIsAlreadyShow:
+          recommendedSignupNotificationIsAlreadyShow,
+      totalCountOfActionForTakenPill: totalCountOfActionForTakenPill,
+      isLinkedLoginProvider: isLinkedLoginProvider,
       firstLoadIsEnded: firstLoadIsEnded,
     );
   }
@@ -35,6 +42,10 @@ const $RecordPageState = _$RecordPageStateTearOff();
 mixin _$RecordPageState {
   PillSheet? get entity => throw _privateConstructorUsedError;
   Setting? get setting => throw _privateConstructorUsedError;
+  bool get recommendedSignupNotificationIsAlreadyShow =>
+      throw _privateConstructorUsedError;
+  int get totalCountOfActionForTakenPill => throw _privateConstructorUsedError;
+  bool get isLinkedLoginProvider => throw _privateConstructorUsedError;
   bool get firstLoadIsEnded => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
@@ -47,7 +58,13 @@ abstract class $RecordPageStateCopyWith<$Res> {
   factory $RecordPageStateCopyWith(
           RecordPageState value, $Res Function(RecordPageState) then) =
       _$RecordPageStateCopyWithImpl<$Res>;
-  $Res call({PillSheet? entity, Setting? setting, bool firstLoadIsEnded});
+  $Res call(
+      {PillSheet? entity,
+      Setting? setting,
+      bool recommendedSignupNotificationIsAlreadyShow,
+      int totalCountOfActionForTakenPill,
+      bool isLinkedLoginProvider,
+      bool firstLoadIsEnded});
 
   $PillSheetCopyWith<$Res>? get entity;
   $SettingCopyWith<$Res>? get setting;
@@ -66,6 +83,9 @@ class _$RecordPageStateCopyWithImpl<$Res>
   $Res call({
     Object? entity = freezed,
     Object? setting = freezed,
+    Object? recommendedSignupNotificationIsAlreadyShow = freezed,
+    Object? totalCountOfActionForTakenPill = freezed,
+    Object? isLinkedLoginProvider = freezed,
     Object? firstLoadIsEnded = freezed,
   }) {
     return _then(_value.copyWith(
@@ -77,6 +97,19 @@ class _$RecordPageStateCopyWithImpl<$Res>
           ? _value.setting
           : setting // ignore: cast_nullable_to_non_nullable
               as Setting?,
+      recommendedSignupNotificationIsAlreadyShow:
+          recommendedSignupNotificationIsAlreadyShow == freezed
+              ? _value.recommendedSignupNotificationIsAlreadyShow
+              : recommendedSignupNotificationIsAlreadyShow // ignore: cast_nullable_to_non_nullable
+                  as bool,
+      totalCountOfActionForTakenPill: totalCountOfActionForTakenPill == freezed
+          ? _value.totalCountOfActionForTakenPill
+          : totalCountOfActionForTakenPill // ignore: cast_nullable_to_non_nullable
+              as int,
+      isLinkedLoginProvider: isLinkedLoginProvider == freezed
+          ? _value.isLinkedLoginProvider
+          : isLinkedLoginProvider // ignore: cast_nullable_to_non_nullable
+              as bool,
       firstLoadIsEnded: firstLoadIsEnded == freezed
           ? _value.firstLoadIsEnded
           : firstLoadIsEnded // ignore: cast_nullable_to_non_nullable
@@ -114,7 +147,13 @@ abstract class _$RecordPageStateCopyWith<$Res>
           _RecordPageState value, $Res Function(_RecordPageState) then) =
       __$RecordPageStateCopyWithImpl<$Res>;
   @override
-  $Res call({PillSheet? entity, Setting? setting, bool firstLoadIsEnded});
+  $Res call(
+      {PillSheet? entity,
+      Setting? setting,
+      bool recommendedSignupNotificationIsAlreadyShow,
+      int totalCountOfActionForTakenPill,
+      bool isLinkedLoginProvider,
+      bool firstLoadIsEnded});
 
   @override
   $PillSheetCopyWith<$Res>? get entity;
@@ -137,6 +176,9 @@ class __$RecordPageStateCopyWithImpl<$Res>
   $Res call({
     Object? entity = freezed,
     Object? setting = freezed,
+    Object? recommendedSignupNotificationIsAlreadyShow = freezed,
+    Object? totalCountOfActionForTakenPill = freezed,
+    Object? isLinkedLoginProvider = freezed,
     Object? firstLoadIsEnded = freezed,
   }) {
     return _then(_RecordPageState(
@@ -148,6 +190,19 @@ class __$RecordPageStateCopyWithImpl<$Res>
           ? _value.setting
           : setting // ignore: cast_nullable_to_non_nullable
               as Setting?,
+      recommendedSignupNotificationIsAlreadyShow:
+          recommendedSignupNotificationIsAlreadyShow == freezed
+              ? _value.recommendedSignupNotificationIsAlreadyShow
+              : recommendedSignupNotificationIsAlreadyShow // ignore: cast_nullable_to_non_nullable
+                  as bool,
+      totalCountOfActionForTakenPill: totalCountOfActionForTakenPill == freezed
+          ? _value.totalCountOfActionForTakenPill
+          : totalCountOfActionForTakenPill // ignore: cast_nullable_to_non_nullable
+              as int,
+      isLinkedLoginProvider: isLinkedLoginProvider == freezed
+          ? _value.isLinkedLoginProvider
+          : isLinkedLoginProvider // ignore: cast_nullable_to_non_nullable
+              as bool,
       firstLoadIsEnded: firstLoadIsEnded == freezed
           ? _value.firstLoadIsEnded
           : firstLoadIsEnded // ignore: cast_nullable_to_non_nullable
@@ -160,20 +215,34 @@ class __$RecordPageStateCopyWithImpl<$Res>
 
 class _$_RecordPageState extends _RecordPageState {
   _$_RecordPageState(
-      {required this.entity, this.setting, this.firstLoadIsEnded = false})
+      {required this.entity,
+      this.setting,
+      this.recommendedSignupNotificationIsAlreadyShow = true,
+      this.totalCountOfActionForTakenPill = 0,
+      this.isLinkedLoginProvider = false,
+      this.firstLoadIsEnded = false})
       : super._();
 
   @override
   final PillSheet? entity;
   @override
   final Setting? setting;
+  @JsonKey(defaultValue: true)
+  @override
+  final bool recommendedSignupNotificationIsAlreadyShow;
+  @JsonKey(defaultValue: 0)
+  @override
+  final int totalCountOfActionForTakenPill;
+  @JsonKey(defaultValue: false)
+  @override
+  final bool isLinkedLoginProvider;
   @JsonKey(defaultValue: false)
   @override
   final bool firstLoadIsEnded;
 
   @override
   String toString() {
-    return 'RecordPageState(entity: $entity, setting: $setting, firstLoadIsEnded: $firstLoadIsEnded)';
+    return 'RecordPageState(entity: $entity, setting: $setting, recommendedSignupNotificationIsAlreadyShow: $recommendedSignupNotificationIsAlreadyShow, totalCountOfActionForTakenPill: $totalCountOfActionForTakenPill, isLinkedLoginProvider: $isLinkedLoginProvider, firstLoadIsEnded: $firstLoadIsEnded)';
   }
 
   @override
@@ -185,6 +254,19 @@ class _$_RecordPageState extends _RecordPageState {
             (identical(other.setting, setting) ||
                 const DeepCollectionEquality()
                     .equals(other.setting, setting)) &&
+            (identical(other.recommendedSignupNotificationIsAlreadyShow,
+                    recommendedSignupNotificationIsAlreadyShow) ||
+                const DeepCollectionEquality().equals(
+                    other.recommendedSignupNotificationIsAlreadyShow,
+                    recommendedSignupNotificationIsAlreadyShow)) &&
+            (identical(other.totalCountOfActionForTakenPill,
+                    totalCountOfActionForTakenPill) ||
+                const DeepCollectionEquality().equals(
+                    other.totalCountOfActionForTakenPill,
+                    totalCountOfActionForTakenPill)) &&
+            (identical(other.isLinkedLoginProvider, isLinkedLoginProvider) ||
+                const DeepCollectionEquality().equals(
+                    other.isLinkedLoginProvider, isLinkedLoginProvider)) &&
             (identical(other.firstLoadIsEnded, firstLoadIsEnded) ||
                 const DeepCollectionEquality()
                     .equals(other.firstLoadIsEnded, firstLoadIsEnded)));
@@ -195,6 +277,10 @@ class _$_RecordPageState extends _RecordPageState {
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(entity) ^
       const DeepCollectionEquality().hash(setting) ^
+      const DeepCollectionEquality()
+          .hash(recommendedSignupNotificationIsAlreadyShow) ^
+      const DeepCollectionEquality().hash(totalCountOfActionForTakenPill) ^
+      const DeepCollectionEquality().hash(isLinkedLoginProvider) ^
       const DeepCollectionEquality().hash(firstLoadIsEnded);
 
   @JsonKey(ignore: true)
@@ -207,6 +293,9 @@ abstract class _RecordPageState extends RecordPageState {
   factory _RecordPageState(
       {required PillSheet? entity,
       Setting? setting,
+      bool recommendedSignupNotificationIsAlreadyShow,
+      int totalCountOfActionForTakenPill,
+      bool isLinkedLoginProvider,
       bool firstLoadIsEnded}) = _$_RecordPageState;
   _RecordPageState._() : super._();
 
@@ -214,6 +303,13 @@ abstract class _RecordPageState extends RecordPageState {
   PillSheet? get entity => throw _privateConstructorUsedError;
   @override
   Setting? get setting => throw _privateConstructorUsedError;
+  @override
+  bool get recommendedSignupNotificationIsAlreadyShow =>
+      throw _privateConstructorUsedError;
+  @override
+  int get totalCountOfActionForTakenPill => throw _privateConstructorUsedError;
+  @override
+  bool get isLinkedLoginProvider => throw _privateConstructorUsedError;
   @override
   bool get firstLoadIsEnded => throw _privateConstructorUsedError;
   @override

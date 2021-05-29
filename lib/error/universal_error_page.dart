@@ -7,14 +7,14 @@ import 'package:pilll/inquiry/inquiry.dart';
 import 'package:flutter/material.dart';
 
 class UniversalErrorPage extends StatelessWidget {
-  final Error? error;
+  final String error;
   final Widget? child;
 
   const UniversalErrorPage({Key? key, required this.error, this.child})
       : super(key: key);
   @override
   Widget build(BuildContext context) {
-    if (this.error == null && this.child != null) {
+    if (this.child != null) {
       return child!;
     }
     return Scaffold(

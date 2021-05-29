@@ -3,6 +3,7 @@ import 'dart:io' show Platform;
 import 'package:pilll/analytics.dart';
 import 'package:pilll/components/molecules/indicator.dart';
 import 'package:pilll/components/organisms/pill/pill_sheet.dart';
+import 'package:pilll/domain/demography/demography_page.dart';
 import 'package:pilll/domain/initial_setting/migrate_info.dart';
 import 'package:pilll/domain/record/record_page_state.dart';
 import 'package:pilll/domain/record/record_page_store.dart';
@@ -10,6 +11,7 @@ import 'package:pilll/domain/record/record_taken_information.dart';
 import 'package:pilll/domain/release_note/release_note.dart';
 import 'package:pilll/entity/pill_sheet.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
+import 'package:pilll/entity/setting.dart';
 import 'package:pilll/entity/weekday.dart';
 import 'package:pilll/error/error_alert.dart';
 import 'package:pilll/service/pill_sheet.dart';
@@ -17,6 +19,7 @@ import 'package:pilll/components/atoms/buttons.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
+import 'package:pilll/signin/signin_sheet.dart';
 import 'package:pilll/util/datetime/day.dart';
 import 'package:pilll/util/shared_preference/keys.dart';
 import 'package:pilll/util/toolbar/picker_toolbar.dart';
@@ -47,61 +50,63 @@ class RecordPage extends HookWidget {
       appBar: AppBar(
         titleSpacing: 0,
         backgroundColor: PilllColors.white,
-        toolbarHeight: 132,
+        toolbarHeight: RecordTakenInformationConst.height,
         title: RecordTakenInformation(
           today: DateTime.now(),
           state: state,
           onPressed: () {
             analytics.logEvent(name: "tapped_record_information_header");
             if (currentPillSheet != null) {
-              showModalBottomSheet(
-                context: context,
-                builder: (BuildContext context) {
-                  var selectedTodayPillNumber =
-                      currentPillSheet.todayPillNumber;
-                  return Column(
-                    mainAxisAlignment: MainAxisAlignment.end,
-                    mainAxisSize: MainAxisSize.min,
-                    children: <Widget>[
-                      PickerToolbar(
-                        done: (() {
-                          store.modifyBeginingDate(selectedTodayPillNumber);
-                          Navigator.pop(context);
-                        }),
-                        cancel: (() {
-                          Navigator.pop(context);
-                        }),
-                      ),
-                      Container(
-                        height: 200,
-                        child: GestureDetector(
-                          onTap: () {
-                            Navigator.pop(context);
-                          },
-                          child: CupertinoPicker(
-                            itemExtent: 40,
-                            children: List.generate(
-                                currentPillSheet.typeInfo.totalCount,
-                                (index) => Text("${index + 1}")),
-                            onSelectedItemChanged: (index) {
-                              selectedTodayPillNumber = index + 1;
-                            },
-                            scrollController: FixedExtentScrollController(
-                              initialItem: selectedTodayPillNumber - 1,
-                            ),
-                          ),
-                        ),
-                      ),
-                    ],
-                  );
-                },
-              );
+              _showBeginDatePicker(context, currentPillSheet, store);
             }
           },
         ),
       ),
-      extendBodyBehindAppBar: true,
       body: _body(context),
+    );
+  }
+
+  _showBeginDatePicker(
+      BuildContext context, PillSheet currentPillSheet, RecordPageStore store) {
+    showModalBottomSheet(
+      context: context,
+      builder: (BuildContext context) {
+        var selectedTodayPillNumber = currentPillSheet.todayPillNumber;
+        return Column(
+          mainAxisAlignment: MainAxisAlignment.end,
+          mainAxisSize: MainAxisSize.min,
+          children: <Widget>[
+            PickerToolbar(
+              done: (() {
+                store.modifyBeginingDate(selectedTodayPillNumber);
+                Navigator.pop(context);
+              }),
+              cancel: (() {
+                Navigator.pop(context);
+              }),
+            ),
+            Container(
+              height: 200,
+              child: GestureDetector(
+                onTap: () {
+                  Navigator.pop(context);
+                },
+                child: CupertinoPicker(
+                  itemExtent: 40,
+                  children: List.generate(currentPillSheet.typeInfo.totalCount,
+                      (index) => Text("${index + 1}")),
+                  onSelectedItemChanged: (index) {
+                    selectedTodayPillNumber = index + 1;
+                  },
+                  scrollController: FixedExtentScrollController(
+                    initialItem: selectedTodayPillNumber - 1,
+                  ),
+                ),
+              ),
+            ),
+          ],
+        );
+      },
     );
   }
 
@@ -142,62 +147,121 @@ class RecordPage extends HookWidget {
     if (settingEntity == null || !state.firstLoadIsEnded) {
       return Indicator();
     }
-    return Center(
-      child: ListView(
-        children: [
-          if (_notificationString(state).isNotEmpty)
-            ConstrainedBox(
-              constraints: BoxConstraints.expand(height: 26),
-              child: Container(
-                height: 26,
-                color: PilllColors.secondary,
-                child: Center(
-                  child: Text(_notificationString(state),
-                      style:
-                          FontType.assistingBold.merge(TextColorStyle.white)),
-                ),
-              ),
+    return Stack(
+      alignment: AlignmentDirectional.center,
+      children: [
+        Align(
+          alignment: Alignment.topCenter,
+          child: SingleChildScrollView(
+            child: Column(
+              children: [
+                _notification(context, state, store),
+                SizedBox(height: 64),
+                _content(
+                    context, store, state, currentPillSheet, settingEntity),
+              ],
             ),
-          SizedBox(height: 67),
-          if (state.isInvalid)
-            Align(child: _empty(context, store, settingEntity.pillSheetType)),
-          if (!state.isInvalid && currentPillSheet != null) ...[
-            Align(child: _pillSheet(context, currentPillSheet, store)),
-            SizedBox(height: 40),
-            if (currentPillSheet.allTaken)
-              Align(child: _cancelTakeButton(currentPillSheet, store)),
-            if (!currentPillSheet.allTaken)
-              Align(child: _takenButton(context, currentPillSheet, store)),
-          ],
-          SizedBox(height: 60),
-        ],
-      ),
+          ),
+        ),
+        if (currentPillSheet != null)
+          Positioned(
+            bottom: 20,
+            child: _button(context, currentPillSheet, store),
+          ),
+      ],
     );
   }
 
-  String _notificationString(RecordPageState state) {
-    if (state.isInvalid) {
-      return "";
-    }
-    final pillSheet = state.entity;
-    if (pillSheet == null) {
-      return "";
-    }
-    if (pillSheet.pillSheetType.isNotExistsNotTakenDuration) {
-      return "";
-    }
-    if (pillSheet.typeInfo.dosingPeriod < pillSheet.todayPillNumber) {
-      return "${pillSheet.pillSheetType.notTakenWord}期間中";
+  Widget _content(
+    BuildContext context,
+    RecordPageStore store,
+    RecordPageState state,
+    PillSheet? currentPillSheet,
+    Setting settingEntity,
+  ) {
+    if (state.isInvalid)
+      return _empty(context, store, settingEntity.pillSheetType);
+    if (!state.isInvalid && currentPillSheet != null)
+      return _pillSheet(context, currentPillSheet, store);
+    throw AssertionError("invalid state ${state.toString()}");
+  }
+
+  Widget _button(
+      BuildContext context, PillSheet currentPillSheet, RecordPageStore store) {
+    if (currentPillSheet.allTaken)
+      return _cancelTakeButton(currentPillSheet, store);
+    else
+      return _takenButton(context, currentPillSheet, store);
+  }
+
+  Widget _notification(
+    BuildContext context,
+    RecordPageState state,
+    RecordPageStore store,
+  ) {
+    final recommendedSignupNotification = state.recommendedSignupNotification;
+    if (recommendedSignupNotification.isNotEmpty) {
+      return GestureDetector(
+        onTap: () => showSigninSheet(context, false, (linkAccount) {
+          analytics.logEvent(name: "signined_account_from_notification_bar");
+          showDemographyPageIfNeeded(context);
+        }),
+        child: Container(
+          height: 64,
+          color: PilllColors.secondary,
+          child: Row(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              IconButton(
+                icon: Icon(Icons.close, color: Colors.white),
+                onPressed: () async =>
+                    store.closeRecommendedSignupNotification(),
+              ),
+              Column(
+                children: [
+                  SizedBox(height: 12),
+                  Text(
+                    recommendedSignupNotification,
+                    style: TextColorStyle.white.merge(FontType.descriptionBold),
+                    textAlign: TextAlign.center,
+                  ),
+                ],
+              ),
+              Column(
+                children: [
+                  SizedBox(height: 8),
+                  IconButton(
+                    icon: SvgPicture.asset(
+                      "images/arrow_right.svg",
+                      color: Colors.white,
+                    ),
+                    onPressed: () {},
+                  ),
+                ],
+              ),
+            ],
+          ),
+        ),
+      );
     }
 
-    final threshold = 4;
-    if (pillSheet.typeInfo.dosingPeriod - threshold + 1 <
-        pillSheet.todayPillNumber) {
-      final diff = pillSheet.typeInfo.dosingPeriod - pillSheet.todayPillNumber;
-      return "あと${diff + 1}日で${pillSheet.pillSheetType.notTakenWord}期間です";
+    final restDurationNotification = state.restDurationNotification;
+    if (restDurationNotification.isNotEmpty) {
+      return Container(
+        constraints: BoxConstraints.expand(
+          height: 26,
+          width: MediaQuery.of(context).size.width,
+        ),
+        color: PilllColors.secondary,
+        child: Center(
+          child: Text(restDurationNotification,
+              style: FontType.assistingBold.merge(TextColorStyle.white)),
+        ),
+      );
     }
 
-    return "";
+    return Container();
   }
 
   Widget _takenButton(
@@ -205,11 +269,11 @@ class RecordPage extends HookWidget {
     PillSheet pillSheet,
     RecordPageStore store,
   ) {
-    if (pillSheet.todayPillNumber == 1)
-      analytics.logEvent(name: "user_taken_first_day_pill");
     return PrimaryButton(
       text: "飲んだ",
       onPressed: () {
+        if (pillSheet.todayPillNumber == 1)
+          analytics.logEvent(name: "user_taken_first_day_pill");
         analytics.logEvent(name: "taken_button_pressed", parameters: {
           "last_taken_pill_number": pillSheet.lastTakenPillNumber,
           "today_pill_number": pillSheet.todayPillNumber,
@@ -342,7 +406,7 @@ class RecordPage extends HookWidget {
 
   _requestInAppReview() {
     SharedPreferences.getInstance().then((store) async {
-      final key = IntKey.totalPillCount;
+      final key = IntKey.totalCountOfActionForTakenPill;
       int? value = store.getInt(key);
       if (value == null) {
         value = 0;

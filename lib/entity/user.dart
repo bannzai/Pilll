@@ -18,6 +18,11 @@ class UserAlreadyExists implements Exception {
 
 extension UserPrivateFirestoreFieldKeys on String {
   static final fcmToken = 'fcmToken';
+  static final appleEmail = 'appleEmail';
+  static final isLinkedApple = 'isLinkedApple';
+  static final googleEmail = 'googleEmail';
+  static final isLinkedGoogle = 'isLinkedGoogle';
+  static final demographic = "demographic";
 }
 
 @freezed
@@ -36,6 +41,7 @@ extension UserFirestoreFieldKeys on String {
   static final settings = "settings";
   static final migratedFlutter = "migratedFlutter";
   static final packageInfo = "packageInfo";
+  static final isAnonymous = "isAnonymous";
 }
 
 @freezed

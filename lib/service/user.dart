@@ -1,6 +1,7 @@
 import 'dart:io';
 
 import 'package:pilll/database/database.dart';
+import 'package:pilll/entity/demographic.dart';
 import 'package:pilll/entity/package.dart';
 import 'package:pilll/entity/user.dart';
 import 'package:pilll/util/shared_preference/keys.dart';
@@ -17,6 +18,7 @@ class UserService {
   UserService(this._database);
 
   Future<User> prepare(String uid) async {
+    print("call prepare for $uid");
     final user = await fetch().catchError((error) {
       if (error is UserNotFound) {
         return _create(uid).then((_) => fetch());
@@ -28,10 +30,12 @@ class UserService {
   }
 
   Future<User> fetch() {
+    print("call fetch");
     return _database.userReference().get().then((document) {
       if (!document.exists) {
         throw UserNotFound();
       }
+      print("fetched user ${document.data()}");
       return User.fromJson(document.data()!);
     });
   }
@@ -58,6 +62,7 @@ class UserService {
   }
 
   Future<void> _create(String uid) {
+    print("call create for $uid");
     return _database.userReference().set(
       {
         UserFirestoreFieldKeys.anonymousUserID: uid,
@@ -106,5 +111,31 @@ class UserService {
         }
       }, SetOptions(merge: true));
     });
+  }
+
+  Future<void> linkApple(String? email) async {
+    await _database.userReference().set({
+      UserFirestoreFieldKeys.isAnonymous: false,
+    }, SetOptions(merge: true));
+    return _database.userPrivateReference().set({
+      if (email != null) UserPrivateFirestoreFieldKeys.appleEmail: email,
+      UserPrivateFirestoreFieldKeys.isLinkedApple: true,
+    }, SetOptions(merge: true));
+  }
+
+  Future<void> linkGoogle(String? email) async {
+    await _database.userReference().set({
+      UserFirestoreFieldKeys.isAnonymous: false,
+    }, SetOptions(merge: true));
+    return _database.userPrivateReference().set({
+      if (email != null) UserPrivateFirestoreFieldKeys.googleEmail: email,
+      UserPrivateFirestoreFieldKeys.isLinkedGoogle: true,
+    }, SetOptions(merge: true));
+  }
+
+  Future<void> postDemographic(Demographic demographic) {
+    return _database.userPrivateReference().set(
+        {UserPrivateFirestoreFieldKeys.demographic: demographic.toJson()},
+        SetOptions(merge: true));
   }
 }

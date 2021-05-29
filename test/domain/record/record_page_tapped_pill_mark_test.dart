@@ -12,6 +12,7 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:mockito/mockito.dart';
 import 'package:intl/date_symbol_data_local.dart';
+import 'package:pilll/util/shared_preference/keys.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import '../../helper/mock.dart';
@@ -27,7 +28,8 @@ void main() {
 
   setUp(() {
     TestWidgetsFlutterBinding.ensureInitialized();
-    SharedPreferences.setMockInitialValues({});
+    SharedPreferences.setMockInitialValues(
+        {BoolKey.recommendedSignupNotificationIsAlreadyShow: true});
     initializeDateFormatting('ja_JP');
     Environment.isTest = true;
     analytics = MockAnalytics();
@@ -52,6 +54,7 @@ void main() {
       final pillSheetService = MockPillSheetService();
       when(pillSheetService.fetchLast())
           .thenAnswer((_) => Future.value(pillSheet));
+      when(pillSheetService.fetchAll()).thenAnswer((_) => Future.value([]));
       when(pillSheetService.subscribeForLatestPillSheet())
           .thenAnswer((realInvocation) => Stream.value(pillSheet));
 
@@ -61,7 +64,15 @@ void main() {
           .thenAnswer((realInvocation) => Future.value(setting));
       when(settingService.subscribe())
           .thenAnswer((realInvocation) => Stream.value(setting));
-      final pillSheetStore = RecordPageStore(pillSheetService, settingService);
+      final authService = MockAuthService();
+      when(authService.isLinkedApple()).thenReturn(false);
+      when(authService.isLinkedGoogle()).thenReturn(false);
+
+      final pillSheetStore = RecordPageStore(
+        pillSheetService,
+        settingService,
+        authService,
+      );
 
       addTearDown(() {
         todayRepository = originalTodayRepository;
@@ -103,6 +114,7 @@ void main() {
 
     when(pillSheetService.fetchLast())
         .thenAnswer((_) => Future.value(pillSheet));
+    when(pillSheetService.fetchAll()).thenAnswer((_) => Future.value([]));
     when(pillSheetService.subscribeForLatestPillSheet())
         .thenAnswer((realInvocation) => Stream.value(pillSheet));
 
@@ -112,7 +124,15 @@ void main() {
         .thenAnswer((realInvocation) => Future.value(setting));
     when(settingService.subscribe())
         .thenAnswer((realInvocation) => Stream.value(setting));
-    final pillSheetStore = RecordPageStore(pillSheetService, settingService);
+    final authService = MockAuthService();
+    when(authService.isLinkedApple()).thenReturn(false);
+    when(authService.isLinkedGoogle()).thenReturn(false);
+
+    final pillSheetStore = RecordPageStore(
+      pillSheetService,
+      settingService,
+      authService,
+    );
 
     addTearDown(() {
       todayRepository = originalTodayRepository;
@@ -155,6 +175,7 @@ void main() {
     final pillSheetService = MockPillSheetService();
     when(pillSheetService.fetchLast())
         .thenAnswer((_) => Future.value(pillSheet));
+    when(pillSheetService.fetchAll()).thenAnswer((_) => Future.value([]));
     when(pillSheetService.subscribeForLatestPillSheet())
         .thenAnswer((realInvocation) => Stream.value(pillSheet));
 
@@ -165,7 +186,15 @@ void main() {
     when(settingService.subscribe())
         .thenAnswer((realInvocation) => Stream.value(setting));
 
-    final pillSheetStore = RecordPageStore(pillSheetService, settingService);
+    final authService = MockAuthService();
+    when(authService.isLinkedApple()).thenReturn(false);
+    when(authService.isLinkedGoogle()).thenReturn(false);
+
+    final pillSheetStore = RecordPageStore(
+      pillSheetService,
+      settingService,
+      authService,
+    );
 
     addTearDown(() {
       todayRepository = originalTodayRepository;

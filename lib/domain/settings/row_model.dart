@@ -1,9 +1,12 @@
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:pilll/auth/apple.dart';
+import 'package:pilll/auth/google.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:flutter/material.dart';
+import 'package:pilll/components/atoms/text_color.dart';
 
-enum SettingSection { pill, notification, menstruation, other }
+enum SettingSection { account, pill, notification, menstruation, other }
 enum SettingRowType { title, date }
 
 abstract class SettingListRowModel {
@@ -100,6 +103,58 @@ class SettingsListDatePickerRowModel extends SettingListRowModel {
     return ListTile(
       title: Text(title, style: FontType.listRow),
       subtitle: Text(content),
+      onTap: onTap,
+    );
+  }
+}
+
+class SettingListExplainRowModel extends SettingListRowModel {
+  final String content;
+
+  SettingListExplainRowModel(this.content);
+  @override
+  Widget widget() {
+    return ListTile(
+      title: Text(content,
+          style: FontType.assisting.merge(TextColorStyle.darkGray)),
+    );
+  }
+}
+
+class SettingListAccountLinkRowModel extends SettingListRowModel {
+  final VoidCallback onTap;
+
+  SettingListAccountLinkRowModel({required this.onTap});
+
+  bool get _isLinked => isLinkedApple() || isLinkedGoogle();
+  Widget _subtitle() {
+    if (_isLinked) {
+      return Row(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          SvgPicture.asset("images/checkmark_green.svg"),
+          SizedBox(width: 6),
+          Text("登録済み",
+              style: FontType.assisting.merge(TextColorStyle.darkGray)),
+        ],
+      );
+    } else {
+      return Row(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          SvgPicture.asset("images/alert_24.svg"),
+          SizedBox(width: 6),
+          Text("未登録", style: FontType.assisting.merge(TextColorStyle.darkGray)),
+        ],
+      );
+    }
+  }
+
+  @override
+  Widget widget() {
+    return ListTile(
+      title: Text("アカウント設定", style: FontType.listRow),
+      trailing: _subtitle(),
       onTap: onTap,
     );
   }

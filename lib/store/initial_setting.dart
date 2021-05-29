@@ -1,21 +1,59 @@
+import 'dart:async';
+
+import 'package:pilll/database/database.dart';
 import 'package:pilll/entity/initial_setting.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/entity/setting.dart';
+import 'package:pilll/service/auth.dart';
 import 'package:pilll/service/initial_setting.dart';
+import 'package:pilll/service/setting.dart';
+import 'package:pilll/service/user.dart';
 import 'package:pilll/state/initial_setting.dart';
 import 'package:riverpod/riverpod.dart';
 
-final initialSettingStoreProvider = StateNotifierProvider((ref) =>
-    InitialSettingStateStore(ref.watch(initialSettingServiceProvider)));
+final initialSettingStoreProvider = StateNotifierProvider(
+  (ref) => InitialSettingStateStore(
+    ref.watch(initialSettingServiceProvider),
+    ref.watch(authServiceProvider),
+    ref.watch(settingServiceProvider),
+  ),
+);
 
 class InitialSettingStateStore extends StateNotifier<InitialSettingState> {
   final InitialSettingServiceInterface _service;
-  InitialSettingStateStore(this._service)
-      : super(
+  final AuthService _authService;
+  final SettingService _settingService;
+  InitialSettingStateStore(
+    this._service,
+    this._authService,
+    this._settingService,
+  ) : super(
           InitialSettingState(
-            InitialSettingModel.initial(),
+            entity: InitialSettingModel.initial(),
           ),
-        );
+        ) {
+    _reset();
+  }
+
+  _reset() {
+    _subscribe();
+  }
+
+  StreamSubscription? _authCanceller;
+  _subscribe() {
+    _authCanceller?.cancel();
+    _authCanceller = _authService.subscribe().listen((user) async {
+      print(
+          "watch sign state uid: ${user.uid}, isAnonymous: ${user.isAnonymous}");
+      final isAccountCooperationDidEnd = !user.isAnonymous;
+      if (isAccountCooperationDidEnd) {
+        final userService = UserService(DatabaseConnection(user.uid));
+        await userService.prepare(user.uid);
+      }
+      state = state.copyWith(
+          isAccountCooperationDidEnd: isAccountCooperationDidEnd);
+    });
+  }
 
   void selectedPillSheetType(PillSheetType pillSheetType) {
     state = state.copyWith(
@@ -43,5 +81,14 @@ class InitialSettingStateStore extends StateNotifier<InitialSettingState> {
 
   Future<void> register(InitialSettingModel initialSetting) {
     return _service.register(initialSetting);
+  }
+
+  Future<bool> canEndInitialSetting() async {
+    try {
+      await _settingService.fetch();
+      return true;
+    } catch (error) {
+      return false;
+    }
   }
 }
