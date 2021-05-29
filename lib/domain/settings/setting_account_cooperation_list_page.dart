@@ -101,7 +101,7 @@ class SettingAccountCooperationListPage extends HookWidget {
     analytics.logEvent(
       name: "link_event_$eventSuffix",
     );
-    HUD.of(context).show();
+    showHUD();
     try {
       final bool isDetermined;
       switch (accountType) {
@@ -112,7 +112,7 @@ class SettingAccountCooperationListPage extends HookWidget {
           isDetermined = await _handleGoogle(store);
           break;
       }
-      HUD.of(context).hide();
+      hideHUD();
       analytics.logEvent(
         name: "did_end_link_event_$eventSuffix",
       );
@@ -124,7 +124,7 @@ class SettingAccountCooperationListPage extends HookWidget {
           name: "did_failure_link_event_$eventSuffix",
           parameters: {"errot_type": error.runtimeType.toString()});
 
-      HUD.of(context).hide();
+      hideHUD();
       if (error is UserDisplayedError) {
         showErrorAlertWithError(context, error);
       } else {
