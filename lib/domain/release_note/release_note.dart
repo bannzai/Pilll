@@ -21,29 +21,32 @@ class ReleaseNote extends StatelessWidget {
             color: PilllColors.white,
             borderRadius: BorderRadius.circular(4),
           ),
-          padding: EdgeInsets.only(),
           width: 304,
-          height: 260,
+          height: 302,
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              Row(
+              Stack(
                 children: [
-                  IconButton(
-                    icon: Icon(Icons.close, color: Colors.black),
-                    onPressed: () => Navigator.of(context).pop(),
+                  Align(
+                    alignment: Alignment.topLeft,
+                    child: IconButton(
+                      icon: Icon(Icons.close, color: Colors.black),
+                      onPressed: () => Navigator.of(context).pop(),
+                    ),
                   ),
-                  Column(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        SizedBox(height: 40),
-                        Text(
-                          "新機能・機能改善のお知らせ✨",
-                          style: FontType.subTitle.merge(TextColorStyle.black),
-                        ),
-                      ]),
+                  Align(
+                    alignment: Alignment.center,
+                    child: Container(
+                      padding: EdgeInsets.only(top: 40),
+                      child: Text(
+                        "引き継ぎ設定が\nできるようになりました✨",
+                        style: FontType.subTitle.merge(TextColorStyle.black),
+                        textAlign: TextAlign.center,
+                      ),
+                    ),
+                  ),
                 ],
               ),
               Padding(
@@ -51,11 +54,6 @@ class ReleaseNote extends StatelessWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    Text(
-                      "引き継ぎ設定ができるようになりました✨",
-                      style: FontType.assisting.merge(TextColorStyle.main),
-                    ),
-                    SizedBox(height: 20),
                     Text(
                       '''
 機種変更やスマホ紛失時などに備えて、引き継ぎ設定をしませんか？
@@ -68,18 +66,17 @@ class ReleaseNote extends StatelessWidget {
                 ),
               ),
               SizedBox(height: 20),
-              Align(
-                alignment: Alignment.center,
-                child: Container(
-                    width: 230,
-                    child: SecondaryButton(
-                        onPressed: () async {
-                          analytics.logEvent(name: "pressed_show_release_note");
-                          Navigator.of(context).pop();
-                          await openReleaseNote();
-                        },
-                        text: "詳細を見る")),
+              Container(
+                width: 230,
+                child: SecondaryButton(
+                    onPressed: () async {
+                      analytics.logEvent(name: "pressed_show_release_note");
+                      Navigator.of(context).pop();
+                      await openReleaseNote();
+                    },
+                    text: "詳細を見る"),
               ),
+              Spacer(),
             ],
           ),
         ),
