@@ -78,12 +78,12 @@ class SigninSheet extends HookWidget {
           ),
         ),
       ),
-      onPressed: () {
+      onPressed: () async {
         analytics.logEvent(name: "signin_sheet_selected_apple");
         showHUD();
-        store.handleApple().then((value) {
-          hideHUD();
-          switch (value) {
+        try {
+          final signinState = await store.handleApple();
+          switch (signinState) {
             case SigninWithAppleState.determined:
               Navigator.of(context).pop();
               callback(LinkAccountType.apple);
@@ -91,14 +91,15 @@ class SigninSheet extends HookWidget {
             case SigninWithAppleState.cancel:
               return;
           }
-        }, onError: (error) {
-          hideHUD();
+        } catch (error) {
           if (error is UserDisplayedError) {
             showErrorAlertWithError(context, error);
           } else {
             rootKey.currentState?.onError(error);
           }
-        });
+        } finally {
+          hideHUD();
+        }
       },
       child: Container(
         height: 48,
@@ -138,12 +139,12 @@ class SigninSheet extends HookWidget {
           ),
         ),
       ),
-      onPressed: () {
+      onPressed: () async {
         analytics.logEvent(name: "signin_sheet_selected_google");
         showHUD();
-        store.handleGoogle().then((value) {
-          hideHUD();
-          switch (value) {
+        try {
+          final signinState = await store.handleGoogle();
+          switch (signinState) {
             case SigninWithGoogleState.determined:
               Navigator.of(context).pop();
               callback(LinkAccountType.google);
@@ -151,14 +152,15 @@ class SigninSheet extends HookWidget {
             case SigninWithGoogleState.cancel:
               return;
           }
-        }, onError: (error) {
-          hideHUD();
+        } catch (error) {
           if (error is UserDisplayedError) {
             showErrorAlertWithError(context, error);
           } else {
             rootKey.currentState?.onError(error);
           }
-        });
+        } finally {
+          hideHUD();
+        }
       },
       child: Container(
         height: 48,
