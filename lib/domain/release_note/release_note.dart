@@ -52,12 +52,16 @@ class ReleaseNote extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      "カレンダー画面右下の＋ボタンから今日の体調を簡単に記録できるように！",
+                      "引き継ぎ設定ができるようになりました✨",
                       style: FontType.assisting.merge(TextColorStyle.main),
                     ),
                     SizedBox(height: 20),
                     Text(
-                      "詳しい使い方は詳細をご覧ください🙌",
+                      '''
+機種変更やスマホ紛失時などに備えて、引き継ぎ設定をしませんか？
+
+設定画面から設定可能です！
+                      ''',
                       style: FontType.assisting.merge(TextColorStyle.main),
                     ),
                   ],
@@ -103,7 +107,7 @@ openReleaseNote() async {
   final ChromeSafariBrowser browser = new ChromeSafariBrowser();
   await browser.open(
       url: Uri.parse(
-          "https://pilll.anotion.so/8e4c5666bc5a498babad01e59160cfa5"),
+          "https://pilll.anotion.so/733c950541f54eeda6c338d756379020"),
       options: ChromeSafariBrowserClassOptions(
           android:
               AndroidChromeCustomTabsOptions(addDefaultShareMenuItem: false),
