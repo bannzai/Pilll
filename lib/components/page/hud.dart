@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:pilll/components/molecules/indicator.dart';
 
+GlobalKey<_HUDState> hudKey = GlobalKey();
+
 class HUD extends StatefulWidget {
   final Widget child;
 
@@ -64,3 +66,7 @@ class _HUDState extends State<HUD> {
     );
   }
 }
+
+showHUD() => hudKey.currentState?.show();
+
+hideHUD() => hudKey.currentState?.hide();

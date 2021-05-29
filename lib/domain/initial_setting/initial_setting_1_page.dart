@@ -20,7 +20,7 @@ class InitialSetting1Page extends HookWidget {
         if (await store.canEndInitialSetting()) {
           AppRouter.signinAccount(context);
         }
-        HUD.of(context).hide();
+        hideHUD();
       });
     }
     return PillSheetTypeSelectPage(
@@ -43,7 +43,7 @@ class InitialSetting1Page extends HookWidget {
       signinAccount: state.isAccountCooperationDidEnd
           ? null
           : (accountType) async {
-              HUD.of(context).show();
+              showHUD();
               if (await store.canEndInitialSetting()) {
                 AppRouter.signinAccount(context);
               } else {

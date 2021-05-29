@@ -80,9 +80,9 @@ class SigninSheet extends HookWidget {
       ),
       onPressed: () {
         analytics.logEvent(name: "signin_sheet_selected_apple");
-        HUD.of(context).show();
+        showHUD();
         store.handleApple().then((value) {
-          HUD.of(context).hide();
+          hideHUD();
           switch (value) {
             case SigninWithAppleState.determined:
               Navigator.of(context).pop();
@@ -92,7 +92,7 @@ class SigninSheet extends HookWidget {
               return;
           }
         }, onError: (error) {
-          HUD.of(context).hide();
+          hideHUD();
           if (error is UserDisplayedError) {
             showErrorAlertWithError(context, error);
           } else {
@@ -140,9 +140,9 @@ class SigninSheet extends HookWidget {
       ),
       onPressed: () {
         analytics.logEvent(name: "signin_sheet_selected_google");
-        HUD.of(context).show();
+        showHUD();
         store.handleGoogle().then((value) {
-          HUD.of(context).hide();
+          hideHUD();
           switch (value) {
             case SigninWithGoogleState.determined:
               Navigator.of(context).pop();
@@ -152,7 +152,7 @@ class SigninSheet extends HookWidget {
               return;
           }
         }, onError: (error) {
-          HUD.of(context).hide();
+          hideHUD();
           if (error is UserDisplayedError) {
             showErrorAlertWithError(context, error);
           } else {
