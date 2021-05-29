@@ -18,6 +18,7 @@ class UserService {
   UserService(this._database);
 
   Future<User> prepare(String uid) async {
+    print("call prepare for $uid");
     final user = await fetch().catchError((error) {
       if (error is UserNotFound) {
         return _create(uid).then((_) => fetch());
@@ -29,10 +30,12 @@ class UserService {
   }
 
   Future<User> fetch() {
+    print("call fetch");
     return _database.userReference().get().then((document) {
       if (!document.exists) {
         throw UserNotFound();
       }
+      print("fetched user ${document.data()}");
       return User.fromJson(document.data()!);
     });
   }
@@ -59,6 +62,7 @@ class UserService {
   }
 
   Future<void> _create(String uid) {
+    print("call create for $uid");
     return _database.userReference().set(
       {
         UserFirestoreFieldKeys.anonymousUserID: uid,

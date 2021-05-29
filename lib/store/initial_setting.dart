@@ -47,10 +47,6 @@ class InitialSettingStateStore extends StateNotifier<InitialSettingState> {
           "watch sign state uid: ${user.uid}, isAnonymous: ${user.isAnonymous}");
       final isAccountCooperationDidEnd = !user.isAnonymous;
       if (isAccountCooperationDidEnd) {
-        final user = await callSignin();
-        if (user == null) {
-          throw AssertionError("unexpected not found user");
-        }
         final userService = UserService(DatabaseConnection(user.uid));
         await userService.prepare(user.uid);
       }

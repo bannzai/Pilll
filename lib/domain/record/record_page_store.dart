@@ -2,7 +2,6 @@ import 'dart:async';
 
 import 'package:flutter_app_badger/flutter_app_badger.dart';
 import 'package:pilll/analytics.dart';
-import 'package:pilll/components/molecules/indicator.dart';
 import 'package:pilll/entity/pill_mark_type.dart';
 import 'package:pilll/entity/pill_sheet.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
@@ -95,9 +94,7 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
     }
     final updated = entity.copyWith(lastTakenDate: takenDate);
     FlutterAppBadger.removeBadge();
-    showIndicator();
     return _service.update(updated).then((value) {
-      hideIndicator();
       state = state.copyWith(entity: updated);
     });
   }

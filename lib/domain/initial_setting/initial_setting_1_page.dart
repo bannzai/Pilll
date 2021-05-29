@@ -1,4 +1,5 @@
 import 'package:pilll/analytics.dart';
+import 'package:pilll/components/page/hud.dart';
 import 'package:pilll/domain/initial_setting/initial_setting_2_page.dart';
 import 'package:pilll/components/organisms/pill/pill_sheet_type_select_page.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
@@ -19,6 +20,7 @@ class InitialSetting1Page extends HookWidget {
         if (await store.canEndInitialSetting()) {
           AppRouter.signinAccount(context);
         }
+        hideHUD();
       });
     }
     return PillSheetTypeSelectPage(
@@ -41,6 +43,7 @@ class InitialSetting1Page extends HookWidget {
       signinAccount: state.isAccountCooperationDidEnd
           ? null
           : (accountType) async {
+              showHUD();
               if (await store.canEndInitialSetting()) {
                 AppRouter.signinAccount(context);
               } else {

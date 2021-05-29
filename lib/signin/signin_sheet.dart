@@ -8,6 +8,7 @@ import 'package:pilll/auth/google.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
+import 'package:pilll/components/page/hud.dart';
 import 'package:pilll/domain/root/root.dart';
 import 'package:pilll/entity/link_account_type.dart';
 import 'package:pilll/entity/user_error.dart';
@@ -77,24 +78,28 @@ class SigninSheet extends HookWidget {
           ),
         ),
       ),
-      onPressed: () {
+      onPressed: () async {
         analytics.logEvent(name: "signin_sheet_selected_apple");
-        store.handleApple().then((value) {
-          switch (value) {
+        showHUD();
+        try {
+          final signinState = await store.handleApple();
+          switch (signinState) {
             case SigninWithAppleState.determined:
               Navigator.of(context).pop();
               callback(LinkAccountType.apple);
-              break;
+              return;
             case SigninWithAppleState.cancel:
               return;
           }
-        }, onError: (error) {
+        } catch (error) {
           if (error is UserDisplayedError) {
             showErrorAlertWithError(context, error);
           } else {
             rootKey.currentState?.onError(error);
           }
-        });
+        } finally {
+          hideHUD();
+        }
       },
       child: Container(
         height: 48,
@@ -136,8 +141,10 @@ class SigninSheet extends HookWidget {
       ),
       onPressed: () async {
         analytics.logEvent(name: "signin_sheet_selected_google");
-        store.handleGoogle().then((value) {
-          switch (value) {
+        showHUD();
+        try {
+          final signinState = await store.handleGoogle();
+          switch (signinState) {
             case SigninWithGoogleState.determined:
               Navigator.of(context).pop();
               callback(LinkAccountType.google);
@@ -145,13 +152,15 @@ class SigninSheet extends HookWidget {
             case SigninWithGoogleState.cancel:
               return;
           }
-        }, onError: (error) {
+        } catch (error) {
           if (error is UserDisplayedError) {
             showErrorAlertWithError(context, error);
           } else {
             rootKey.currentState?.onError(error);
           }
-        });
+        } finally {
+          hideHUD();
+        }
       },
       child: Container(
         height: 48,
