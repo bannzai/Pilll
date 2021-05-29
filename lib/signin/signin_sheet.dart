@@ -8,6 +8,7 @@ import 'package:pilll/auth/google.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
+import 'package:pilll/components/page/hud.dart';
 import 'package:pilll/domain/root/root.dart';
 import 'package:pilll/entity/link_account_type.dart';
 import 'package:pilll/entity/user_error.dart';
@@ -79,7 +80,9 @@ class SigninSheet extends HookWidget {
       ),
       onPressed: () {
         analytics.logEvent(name: "signin_sheet_selected_apple");
+        HUD.of(context).show();
         store.handleApple().then((value) {
+          HUD.of(context).hide();
           switch (value) {
             case SigninWithAppleState.determined:
               Navigator.of(context).pop();
@@ -89,6 +92,7 @@ class SigninSheet extends HookWidget {
               return;
           }
         }, onError: (error) {
+          HUD.of(context).hide();
           if (error is UserDisplayedError) {
             showErrorAlertWithError(context, error);
           } else {
@@ -134,9 +138,11 @@ class SigninSheet extends HookWidget {
           ),
         ),
       ),
-      onPressed: () async {
+      onPressed: () {
         analytics.logEvent(name: "signin_sheet_selected_google");
+        HUD.of(context).show();
         store.handleGoogle().then((value) {
+          HUD.of(context).hide();
           switch (value) {
             case SigninWithGoogleState.determined:
               Navigator.of(context).pop();
@@ -146,6 +152,7 @@ class SigninSheet extends HookWidget {
               return;
           }
         }, onError: (error) {
+          HUD.of(context).hide();
           if (error is UserDisplayedError) {
             showErrorAlertWithError(context, error);
           } else {

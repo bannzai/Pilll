@@ -52,10 +52,10 @@ class _HUDState extends State<HUD> {
                   Visibility(
                     visible: _shown,
                     child: ModalBarrier(
-                      color: Colors.transparent,
+                      color: Colors.black.withOpacity(0.08),
                     ),
                   ),
-                Indicator(),
+                Center(child: Indicator()),
               ],
             ],
           ),
