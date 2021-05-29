@@ -69,6 +69,7 @@ class RootState extends State<Root> {
       return ScaffoldIndicator();
     }
     return HUD(
+      key: hudKey,
       child: Consumer(builder: (context, watch, child) {
         return watch(authStateStreamProvider).when(data: (snapshot) {
           switch (screenType) {

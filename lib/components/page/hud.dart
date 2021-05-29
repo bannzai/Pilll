@@ -67,6 +67,12 @@ class _HUDState extends State<HUD> {
   }
 }
 
-showHUD() => hudKey.currentState?.show();
+showHUD() {
+  assert(hudKey.currentState != null);
+  hudKey.currentState?.show();
+}
 
-hideHUD() => hudKey.currentState?.hide();
+hideHUD() {
+  assert(hudKey.currentState != null);
+  hudKey.currentState?.hide();
+}
