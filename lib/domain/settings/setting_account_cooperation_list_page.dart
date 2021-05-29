@@ -137,7 +137,7 @@ class SettingAccountCooperationListPage extends HookWidget {
     ScaffoldMessenger.of(context).showSnackBar(
       SnackBar(
         duration: snackBarDuration,
-        content: Text("${accountType.providerName}で連携しました"),
+        content: Text("${accountType.providerName}で登録しました"),
       ),
     );
     await Future.delayed(snackBarDuration);
@@ -229,6 +229,6 @@ class SettingAccountCooperationRow extends StatelessWidget {
     if (!linked) {
       return providerName;
     }
-    return "$providerName で連携済み";
+    return "$providerName で登録済み";
   }
 }
