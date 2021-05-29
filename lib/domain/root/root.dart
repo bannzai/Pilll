@@ -1,3 +1,4 @@
+import 'package:pilll/components/page/hud.dart';
 import 'package:pilll/service/auth.dart';
 import 'package:pilll/database/database.dart';
 import 'package:pilll/domain/home/home_page.dart';
@@ -67,31 +68,33 @@ class RootState extends State<Root> {
     if (screenType == null) {
       return ScaffoldIndicator();
     }
-    return Consumer(builder: (context, watch, child) {
-      return watch(authStateStreamProvider).when(data: (snapshot) {
-        switch (screenType) {
-          case ScreenType.home:
-            return HomePage(key: homeKey);
-          case ScreenType.initialSetting:
-            return InitialSetting1PageRoute.screen();
-          default:
-            return ScaffoldIndicator();
-        }
-      }, loading: () {
-        return ScaffoldIndicator();
-      }, error: (error, stacktrace) {
-        print(error);
-        print(stacktrace);
-        errorLogger.recordError(error, stacktrace);
-        final displayedError = ErrorMessages.connection +
-            "\n" +
-            "errorType: ${error.runtimeType.toString()}\n" +
-            error.toString() +
-            "error: ${error.toString()}\n" +
-            stacktrace.toString();
-        return UniversalErrorPage(error: displayedError);
-      });
-    });
+    return HUD(
+      child: Consumer(builder: (context, watch, child) {
+        return watch(authStateStreamProvider).when(data: (snapshot) {
+          switch (screenType) {
+            case ScreenType.home:
+              return HomePage(key: homeKey);
+            case ScreenType.initialSetting:
+              return InitialSetting1PageRoute.screen();
+            default:
+              return ScaffoldIndicator();
+          }
+        }, loading: () {
+          return ScaffoldIndicator();
+        }, error: (error, stacktrace) {
+          print(error);
+          print(stacktrace);
+          errorLogger.recordError(error, stacktrace);
+          final displayedError = ErrorMessages.connection +
+              "\n" +
+              "errorType: ${error.runtimeType.toString()}\n" +
+              error.toString() +
+              "error: ${error.toString()}\n" +
+              stacktrace.toString();
+          return UniversalErrorPage(error: displayedError);
+        });
+      }),
+    );
   }
 
   _auth() {
