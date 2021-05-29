@@ -57,9 +57,11 @@ class DialogIndicator extends StatelessWidget {
 }
 
 showIndicator() {
+  print("showIndicator -- ");
   rootKey.currentState?.showIndicator();
 }
 
 hideIndicator() {
+  print("hideIndicator -- ");
   rootKey.currentState?.hideIndicator();
 }

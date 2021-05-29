@@ -1,5 +1,6 @@
 import 'dart:async';
 
+import 'package:pilll/components/molecules/indicator.dart';
 import 'package:pilll/database/database.dart';
 import 'package:pilll/entity/initial_setting.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
@@ -47,12 +48,10 @@ class InitialSettingStateStore extends StateNotifier<InitialSettingState> {
           "watch sign state uid: ${user.uid}, isAnonymous: ${user.isAnonymous}");
       final isAccountCooperationDidEnd = !user.isAnonymous;
       if (isAccountCooperationDidEnd) {
-        final user = await callSignin();
-        if (user == null) {
-          throw AssertionError("unexpected not found user");
-        }
+        showIndicator();
         final userService = UserService(DatabaseConnection(user.uid));
         await userService.prepare(user.uid);
+        hideIndicator();
       }
       state = state.copyWith(
           isAccountCooperationDidEnd: isAccountCooperationDidEnd);
