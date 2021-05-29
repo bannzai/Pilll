@@ -47,7 +47,7 @@ class DemographyPage extends HookWidget {
                     SizedBox(height: 36),
                     _layout(
                       context,
-                      "ピルを服用している1番の目的/理由",
+                      "ピルを服用している1番の目的",
                       GestureDetector(
                         child: Text(purpose1 == null ? "選択してください" : purpose1,
                             style:
@@ -59,7 +59,7 @@ class DemographyPage extends HookWidget {
                       SizedBox(height: 30),
                       _layout(
                         context,
-                        "ピルを服用しているその他の目的/理由",
+                        "その他ピルを服用している目的があれば教えて下さい",
                         GestureDetector(
                           child: Text(state.purpose2,
                               style: FontType.assisting

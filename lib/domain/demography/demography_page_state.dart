@@ -39,12 +39,13 @@ abstract class DemographyPageState implements _$DemographyPageState {
 abstract class DemographyPageDataSource {
   static final unknown = "該当なし";
   static final purposes = [
-    "婦人病の治療",
-    "生理・PMSの症状緩和",
-    "生理不順のため",
+    "過多月経・PMS等の改善",
+    "月経不順の改善",
+    "月経痛の緩和",
+    "月経周期のコントロール",
+    "治療のため",
     "避妊のため",
-    "美容のため",
-    "ホルモン療法",
+    "ニキビ・肌荒れの改善",
     unknown,
   ];
   static final prescriptions = [
