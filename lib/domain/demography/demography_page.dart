@@ -168,7 +168,7 @@ class DemographyPage extends HookWidget {
   ) {
     analytics.logEvent(name: "show_purpose_picker_1");
     final dataSource = DemographyPageDataSource.purposes;
-    String? selected = state.purpose1;
+    String? selected = state.purpose1 ?? dataSource.first;
     final purpose = state.purpose1;
     showModalBottomSheet(
       context: context,
@@ -294,7 +294,7 @@ class DemographyPage extends HookWidget {
       "海外在住で薬局購入",
       _unknown,
     ];
-    String? selected = state.prescription;
+    String? selected = state.prescription ?? dataSource.first;
     final prescription = state.prescription;
     showModalBottomSheet(
       context: context,
@@ -356,7 +356,7 @@ class DemographyPage extends HookWidget {
   ) {
     analytics.logEvent(name: "show_birth_year_picker");
     final dataSource = DemographyPageDataSource.birthYears;
-    String? selected = state.birthYear;
+    String? selected = state.birthYear ?? dataSource.first;
     final birthYear = state.birthYear;
     showModalBottomSheet(
       context: context,
@@ -418,7 +418,7 @@ class DemographyPage extends HookWidget {
   ) {
     analytics.logEvent(name: "show_job_picker");
     final dataSource = DemographyPageDataSource.jobs;
-    String? selected = state.job;
+    String? selected = state.job ?? dataSource.first;
     final job = state.job;
     showModalBottomSheet(
       context: context,
