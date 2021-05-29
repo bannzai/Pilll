@@ -37,7 +37,7 @@ class SettingAccountCooperationListPage extends HookWidget {
             Container(
               padding: EdgeInsets.only(top: 16, left: 15, right: 16),
               child: Text(
-                "アカウント連携",
+                "アカウント登録",
                 style: FontType.assisting.merge(TextColorStyle.primary),
               ),
             ),
