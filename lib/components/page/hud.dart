@@ -47,14 +47,16 @@ class _HUDState extends State<HUD> {
           ignoring: !_shown,
           child: Stack(
             children: [
-              if (_barrierEnabled)
-                Visibility(
-                  visible: _shown,
-                  child: ModalBarrier(
-                    color: Colors.transparent,
+              if (_shown) ...[
+                if (_barrierEnabled)
+                  Visibility(
+                    visible: _shown,
+                    child: ModalBarrier(
+                      color: Colors.transparent,
+                    ),
                   ),
-                ),
-              Indicator(),
+                Indicator(),
+              ],
             ],
           ),
         )
