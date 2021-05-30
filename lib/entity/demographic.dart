@@ -11,7 +11,7 @@ abstract class Demographic with _$Demographic {
     required String purpose2,
     required String prescription,
     required String birthYear,
-    required String job,
+    required String lifeTime,
   }) = _Demographic;
   Demographic._();
   factory Demographic.fromJson(Map<String, dynamic> json) =>

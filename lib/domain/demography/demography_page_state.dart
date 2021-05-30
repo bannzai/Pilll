@@ -12,7 +12,7 @@ abstract class DemographyPageState implements _$DemographyPageState {
     required String purpose2,
     String? prescription,
     String? birthYear,
-    String? job,
+    String? lifeTime,
   }) = _DemographyPageState;
 
   Demographic? demographic() {
@@ -20,11 +20,11 @@ abstract class DemographyPageState implements _$DemographyPageState {
     final purpose2 = this.purpose2;
     final prescription = this.prescription;
     final birthYear = this.birthYear;
-    final job = this.job;
+    final lifeTime = this.lifeTime;
     if (purpose1 == null ||
         prescription == null ||
         birthYear == null ||
-        job == null) {
+        lifeTime == null) {
       return null;
     }
     return Demographic(
@@ -32,7 +32,7 @@ abstract class DemographyPageState implements _$DemographyPageState {
         purpose2: purpose2,
         prescription: prescription,
         birthYear: birthYear,
-        job: job);
+        lifeTime: lifeTime);
   }
 }
 
@@ -57,6 +57,7 @@ abstract class DemographyPageDataSource {
   ];
 
   static final int birthYearBegin = 1950;
+  static final int defaultBirthYear = 2000;
   static List<String> get birthYears {
     final offset = birthYearBegin;
     final dataSource = [
@@ -68,28 +69,19 @@ abstract class DemographyPageDataSource {
     return dataSource;
   }
 
-  static final jobs = [
-    "建築業",
-    "製造業",
-    "情報通信業",
-    "運送業・郵便業",
-    "電気・ガス・熱供給・水道業",
-    "卸売・小売業",
-    "金融業・保険業",
-    "不動産業・物品賃貸業",
-    "学術研究",
-    "技術サービス(測量など)",
-    "専門サービス(法律・税理士など)",
-    "教育・学習支援業",
-    "宿泊業・飲食サービス業",
-    "生活関連サービス業・娯楽業",
-    "その他サービス業全般",
-    "医療・介護・福祉",
-    "公務",
-    "農業・林業",
-    "鉱業・採石業・砂利採取業",
-    "主婦",
-    "学生",
+  static final lifeTimes = [
+    "起床後",
+    "朝食前後",
+    "出社(通学)前",
+    "出社(通学)後",
+    "休憩時間",
+    "ランチ前後",
+    "おやつ前後",
+    "帰宅前",
+    "帰宅後",
+    "夕食前後",
+    "入浴前後",
+    "就寝前",
     unknown,
   ];
 }
