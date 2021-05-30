@@ -21,13 +21,13 @@ class _$DemographyPageStateTearOff {
       required String purpose2,
       String? prescription,
       String? birthYear,
-      String? job}) {
+      String? lifeTime}) {
     return _DemographyPageState(
       purpose1: purpose1,
       purpose2: purpose2,
       prescription: prescription,
       birthYear: birthYear,
-      job: job,
+      lifeTime: lifeTime,
     );
   }
 }
@@ -41,7 +41,7 @@ mixin _$DemographyPageState {
   String get purpose2 => throw _privateConstructorUsedError;
   String? get prescription => throw _privateConstructorUsedError;
   String? get birthYear => throw _privateConstructorUsedError;
-  String? get job => throw _privateConstructorUsedError;
+  String? get lifeTime => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $DemographyPageStateCopyWith<DemographyPageState> get copyWith =>
@@ -58,7 +58,7 @@ abstract class $DemographyPageStateCopyWith<$Res> {
       String purpose2,
       String? prescription,
       String? birthYear,
-      String? job});
+      String? lifeTime});
 }
 
 /// @nodoc
@@ -76,7 +76,7 @@ class _$DemographyPageStateCopyWithImpl<$Res>
     Object? purpose2 = freezed,
     Object? prescription = freezed,
     Object? birthYear = freezed,
-    Object? job = freezed,
+    Object? lifeTime = freezed,
   }) {
     return _then(_value.copyWith(
       purpose1: purpose1 == freezed
@@ -95,9 +95,9 @@ class _$DemographyPageStateCopyWithImpl<$Res>
           ? _value.birthYear
           : birthYear // ignore: cast_nullable_to_non_nullable
               as String?,
-      job: job == freezed
-          ? _value.job
-          : job // ignore: cast_nullable_to_non_nullable
+      lifeTime: lifeTime == freezed
+          ? _value.lifeTime
+          : lifeTime // ignore: cast_nullable_to_non_nullable
               as String?,
     ));
   }
@@ -115,7 +115,7 @@ abstract class _$DemographyPageStateCopyWith<$Res>
       String purpose2,
       String? prescription,
       String? birthYear,
-      String? job});
+      String? lifeTime});
 }
 
 /// @nodoc
@@ -135,7 +135,7 @@ class __$DemographyPageStateCopyWithImpl<$Res>
     Object? purpose2 = freezed,
     Object? prescription = freezed,
     Object? birthYear = freezed,
-    Object? job = freezed,
+    Object? lifeTime = freezed,
   }) {
     return _then(_DemographyPageState(
       purpose1: purpose1 == freezed
@@ -154,9 +154,9 @@ class __$DemographyPageStateCopyWithImpl<$Res>
           ? _value.birthYear
           : birthYear // ignore: cast_nullable_to_non_nullable
               as String?,
-      job: job == freezed
-          ? _value.job
-          : job // ignore: cast_nullable_to_non_nullable
+      lifeTime: lifeTime == freezed
+          ? _value.lifeTime
+          : lifeTime // ignore: cast_nullable_to_non_nullable
               as String?,
     ));
   }
@@ -170,7 +170,7 @@ class _$_DemographyPageState extends _DemographyPageState {
       required this.purpose2,
       this.prescription,
       this.birthYear,
-      this.job})
+      this.lifeTime})
       : super._();
 
   @override
@@ -182,11 +182,11 @@ class _$_DemographyPageState extends _DemographyPageState {
   @override
   final String? birthYear;
   @override
-  final String? job;
+  final String? lifeTime;
 
   @override
   String toString() {
-    return 'DemographyPageState(purpose1: $purpose1, purpose2: $purpose2, prescription: $prescription, birthYear: $birthYear, job: $job)';
+    return 'DemographyPageState(purpose1: $purpose1, purpose2: $purpose2, prescription: $prescription, birthYear: $birthYear, lifeTime: $lifeTime)';
   }
 
   @override
@@ -205,8 +205,9 @@ class _$_DemographyPageState extends _DemographyPageState {
             (identical(other.birthYear, birthYear) ||
                 const DeepCollectionEquality()
                     .equals(other.birthYear, birthYear)) &&
-            (identical(other.job, job) ||
-                const DeepCollectionEquality().equals(other.job, job)));
+            (identical(other.lifeTime, lifeTime) ||
+                const DeepCollectionEquality()
+                    .equals(other.lifeTime, lifeTime)));
   }
 
   @override
@@ -216,7 +217,7 @@ class _$_DemographyPageState extends _DemographyPageState {
       const DeepCollectionEquality().hash(purpose2) ^
       const DeepCollectionEquality().hash(prescription) ^
       const DeepCollectionEquality().hash(birthYear) ^
-      const DeepCollectionEquality().hash(job);
+      const DeepCollectionEquality().hash(lifeTime);
 
   @JsonKey(ignore: true)
   @override
@@ -231,7 +232,7 @@ abstract class _DemographyPageState extends DemographyPageState {
       required String purpose2,
       String? prescription,
       String? birthYear,
-      String? job}) = _$_DemographyPageState;
+      String? lifeTime}) = _$_DemographyPageState;
   _DemographyPageState._() : super._();
 
   @override
@@ -243,7 +244,7 @@ abstract class _DemographyPageState extends DemographyPageState {
   @override
   String? get birthYear => throw _privateConstructorUsedError;
   @override
-  String? get job => throw _privateConstructorUsedError;
+  String? get lifeTime => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$DemographyPageStateCopyWith<_DemographyPageState> get copyWith =>

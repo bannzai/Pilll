@@ -12,7 +12,7 @@ _$_Demographic _$_$_DemographicFromJson(Map<String, dynamic> json) {
     purpose2: json['purpose2'] as String,
     prescription: json['prescription'] as String,
     birthYear: json['birthYear'] as String,
-    job: json['job'] as String,
+    lifeTime: json['lifeTime'] as String,
   );
 }
 
@@ -22,5 +22,5 @@ Map<String, dynamic> _$_$_DemographicToJson(_$_Demographic instance) =>
       'purpose2': instance.purpose2,
       'prescription': instance.prescription,
       'birthYear': instance.birthYear,
-      'job': instance.job,
+      'lifeTime': instance.lifeTime,
     };

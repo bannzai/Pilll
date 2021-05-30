@@ -25,13 +25,13 @@ class _$DemographicTearOff {
       required String purpose2,
       required String prescription,
       required String birthYear,
-      required String job}) {
+      required String lifeTime}) {
     return _Demographic(
       purpose1: purpose1,
       purpose2: purpose2,
       prescription: prescription,
       birthYear: birthYear,
-      job: job,
+      lifeTime: lifeTime,
     );
   }
 
@@ -49,7 +49,7 @@ mixin _$Demographic {
   String get purpose2 => throw _privateConstructorUsedError;
   String get prescription => throw _privateConstructorUsedError;
   String get birthYear => throw _privateConstructorUsedError;
-  String get job => throw _privateConstructorUsedError;
+  String get lifeTime => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -67,7 +67,7 @@ abstract class $DemographicCopyWith<$Res> {
       String purpose2,
       String prescription,
       String birthYear,
-      String job});
+      String lifeTime});
 }
 
 /// @nodoc
@@ -84,7 +84,7 @@ class _$DemographicCopyWithImpl<$Res> implements $DemographicCopyWith<$Res> {
     Object? purpose2 = freezed,
     Object? prescription = freezed,
     Object? birthYear = freezed,
-    Object? job = freezed,
+    Object? lifeTime = freezed,
   }) {
     return _then(_value.copyWith(
       purpose1: purpose1 == freezed
@@ -103,9 +103,9 @@ class _$DemographicCopyWithImpl<$Res> implements $DemographicCopyWith<$Res> {
           ? _value.birthYear
           : birthYear // ignore: cast_nullable_to_non_nullable
               as String,
-      job: job == freezed
-          ? _value.job
-          : job // ignore: cast_nullable_to_non_nullable
+      lifeTime: lifeTime == freezed
+          ? _value.lifeTime
+          : lifeTime // ignore: cast_nullable_to_non_nullable
               as String,
     ));
   }
@@ -123,7 +123,7 @@ abstract class _$DemographicCopyWith<$Res>
       String purpose2,
       String prescription,
       String birthYear,
-      String job});
+      String lifeTime});
 }
 
 /// @nodoc
@@ -142,7 +142,7 @@ class __$DemographicCopyWithImpl<$Res> extends _$DemographicCopyWithImpl<$Res>
     Object? purpose2 = freezed,
     Object? prescription = freezed,
     Object? birthYear = freezed,
-    Object? job = freezed,
+    Object? lifeTime = freezed,
   }) {
     return _then(_Demographic(
       purpose1: purpose1 == freezed
@@ -161,9 +161,9 @@ class __$DemographicCopyWithImpl<$Res> extends _$DemographicCopyWithImpl<$Res>
           ? _value.birthYear
           : birthYear // ignore: cast_nullable_to_non_nullable
               as String,
-      job: job == freezed
-          ? _value.job
-          : job // ignore: cast_nullable_to_non_nullable
+      lifeTime: lifeTime == freezed
+          ? _value.lifeTime
+          : lifeTime // ignore: cast_nullable_to_non_nullable
               as String,
     ));
   }
@@ -178,7 +178,7 @@ class _$_Demographic extends _Demographic {
       required this.purpose2,
       required this.prescription,
       required this.birthYear,
-      required this.job})
+      required this.lifeTime})
       : super._();
 
   factory _$_Demographic.fromJson(Map<String, dynamic> json) =>
@@ -193,11 +193,11 @@ class _$_Demographic extends _Demographic {
   @override
   final String birthYear;
   @override
-  final String job;
+  final String lifeTime;
 
   @override
   String toString() {
-    return 'Demographic(purpose1: $purpose1, purpose2: $purpose2, prescription: $prescription, birthYear: $birthYear, job: $job)';
+    return 'Demographic(purpose1: $purpose1, purpose2: $purpose2, prescription: $prescription, birthYear: $birthYear, lifeTime: $lifeTime)';
   }
 
   @override
@@ -216,8 +216,9 @@ class _$_Demographic extends _Demographic {
             (identical(other.birthYear, birthYear) ||
                 const DeepCollectionEquality()
                     .equals(other.birthYear, birthYear)) &&
-            (identical(other.job, job) ||
-                const DeepCollectionEquality().equals(other.job, job)));
+            (identical(other.lifeTime, lifeTime) ||
+                const DeepCollectionEquality()
+                    .equals(other.lifeTime, lifeTime)));
   }
 
   @override
@@ -227,7 +228,7 @@ class _$_Demographic extends _Demographic {
       const DeepCollectionEquality().hash(purpose2) ^
       const DeepCollectionEquality().hash(prescription) ^
       const DeepCollectionEquality().hash(birthYear) ^
-      const DeepCollectionEquality().hash(job);
+      const DeepCollectionEquality().hash(lifeTime);
 
   @JsonKey(ignore: true)
   @override
@@ -246,7 +247,7 @@ abstract class _Demographic extends Demographic {
       required String purpose2,
       required String prescription,
       required String birthYear,
-      required String job}) = _$_Demographic;
+      required String lifeTime}) = _$_Demographic;
   _Demographic._() : super._();
 
   factory _Demographic.fromJson(Map<String, dynamic> json) =
@@ -261,7 +262,7 @@ abstract class _Demographic extends Demographic {
   @override
   String get birthYear => throw _privateConstructorUsedError;
   @override
-  String get job => throw _privateConstructorUsedError;
+  String get lifeTime => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$DemographicCopyWith<_Demographic> get copyWith =>
