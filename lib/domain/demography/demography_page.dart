@@ -27,7 +27,7 @@ class DemographyPage extends HookWidget {
     final purpose1 = state.purpose1;
     final prescription = state.prescription;
     final birthYear = state.birthYear;
-    final job = state.job;
+    final lifeTime = state.lifeTime;
     final demographic = state.demographic();
     return Scaffold(
       appBar: null,
@@ -99,10 +99,10 @@ class DemographyPage extends HookWidget {
                       context,
                       "職業",
                       GestureDetector(
-                        child: Text(job == null ? "選択してください" : job,
+                        child: Text(lifeTime == null ? "選択してください" : lifeTime,
                             style:
                                 FontType.assisting.merge(TextColorStyle.black)),
-                        onTap: () => _showJobPicker(context, store, state),
+                        onTap: () => _showLifeTimePicker(context, store, state),
                       ),
                     ),
                     SizedBox(height: 50),
@@ -411,15 +411,15 @@ class DemographyPage extends HookWidget {
     );
   }
 
-  _showJobPicker(
+  _showLifeTimePicker(
     BuildContext context,
     DemographyPageStore store,
     DemographyPageState state,
   ) {
-    analytics.logEvent(name: "show_job_picker");
-    final dataSource = DemographyPageDataSource.jobs;
-    String? selected = state.job ?? dataSource.first;
-    final job = state.job;
+    analytics.logEvent(name: "show_life_time_picker");
+    final dataSource = DemographyPageDataSource.lifeTimes;
+    String? selected = state.lifeTime ?? dataSource.first;
+    final lifeTime = state.lifeTime;
     showModalBottomSheet(
       context: context,
       builder: (BuildContext context) {
@@ -431,12 +431,13 @@ class DemographyPage extends HookWidget {
               done: (() {
                 final _selected = selected;
                 if (_selected != null) {
-                  analytics.logEvent(name: "done_job_picker", parameters: {
-                    "before": state.job,
+                  analytics
+                      .logEvent(name: "done_life_time_picker", parameters: {
+                    "before": state.lifeTime,
                     "after": _selected,
                   });
-                  analytics.setUserProperties("job", selected);
-                  store.setJob(_selected);
+                  analytics.setUserProperties("lifeTime", selected);
+                  store.setLifeTime(_selected);
                 }
                 Navigator.pop(context);
               }),
@@ -455,12 +456,13 @@ class DemographyPage extends HookWidget {
                   children: dataSource.map((v) => Text(v)).toList(),
                   onSelectedItemChanged: (index) {
                     analytics.logEvent(
-                        name: "did_select_job_picker",
-                        parameters: {"job": dataSource[index]});
+                        name: "did_select_life_time_picker",
+                        parameters: {"lifeTime": dataSource[index]});
                     selected = dataSource[index];
                   },
                   scrollController: FixedExtentScrollController(
-                      initialItem: job == null ? 0 : dataSource.indexOf(job)),
+                      initialItem:
+                          lifeTime == null ? 0 : dataSource.indexOf(lifeTime)),
                 ),
               ),
             ),

@@ -28,8 +28,8 @@ class DemographyPageStore extends StateNotifier<DemographyPageState> {
     state = state.copyWith(birthYear: value);
   }
 
-  setJob(String value) {
-    state = state.copyWith(job: value);
+  setLifeTime(String value) {
+    state = state.copyWith(lifeTime: value);
   }
 
   register(Demographic demographic) async {

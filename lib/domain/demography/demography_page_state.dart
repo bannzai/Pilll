@@ -20,11 +20,11 @@ abstract class DemographyPageState implements _$DemographyPageState {
     final purpose2 = this.purpose2;
     final prescription = this.prescription;
     final birthYear = this.birthYear;
-    final job = this.job;
+    final lifeTime = this.lifeTime;
     if (purpose1 == null ||
         prescription == null ||
         birthYear == null ||
-        job == null) {
+        lifeTime == null) {
       return null;
     }
     return Demographic(
@@ -32,7 +32,7 @@ abstract class DemographyPageState implements _$DemographyPageState {
         purpose2: purpose2,
         prescription: prescription,
         birthYear: birthYear,
-        job: job);
+        lifeTime: lifeTime);
   }
 }
 
