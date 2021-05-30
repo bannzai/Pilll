@@ -1,9 +1,11 @@
 import 'dart:async';
 
+import 'package:pilll/analytics.dart';
 import 'package:pilll/database/database.dart';
 import 'package:pilll/entity/initial_setting.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/entity/setting.dart';
+import 'package:pilll/error_log.dart';
 import 'package:pilll/service/auth.dart';
 import 'package:pilll/service/initial_setting.dart';
 import 'package:pilll/service/setting.dart';
@@ -49,6 +51,8 @@ class InitialSettingStateStore extends StateNotifier<InitialSettingState> {
       if (isAccountCooperationDidEnd) {
         final userService = UserService(DatabaseConnection(user.uid));
         await userService.prepare(user.uid);
+        errorLogger.setUserIdentifier(user.uid);
+        firebaseAnalytics.setUserId(user.uid);
       }
       state = state.copyWith(
           isAccountCooperationDidEnd: isAccountCooperationDidEnd);
