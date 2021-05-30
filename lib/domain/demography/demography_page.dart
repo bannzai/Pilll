@@ -356,7 +356,8 @@ class DemographyPage extends HookWidget {
   ) {
     analytics.logEvent(name: "show_birth_year_picker");
     final dataSource = DemographyPageDataSource.birthYears;
-    String? selected = state.birthYear ?? dataSource.first;
+    String? selected =
+        state.birthYear ?? "${DemographyPageDataSource.defaultBirthYear}";
     final birthYear = state.birthYear;
     showModalBottomSheet(
       context: context,
@@ -400,7 +401,8 @@ class DemographyPage extends HookWidget {
                   },
                   scrollController: FixedExtentScrollController(
                       initialItem: birthYear == null
-                          ? dataSource.indexOf("2000")
+                          ? dataSource.indexOf(
+                              "${DemographyPageDataSource.defaultBirthYear}")
                           : dataSource.indexOf(birthYear)),
                 ),
               ),

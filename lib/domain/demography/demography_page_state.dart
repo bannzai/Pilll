@@ -57,6 +57,7 @@ abstract class DemographyPageDataSource {
   ];
 
   static final int birthYearBegin = 1950;
+  static final int defaultBirthYear = 2000;
   static List<String> get birthYears {
     final offset = birthYearBegin;
     final dataSource = [
