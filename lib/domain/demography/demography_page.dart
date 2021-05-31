@@ -97,7 +97,7 @@ class DemographyPage extends HookWidget {
                     SizedBox(height: 30),
                     _layout(
                       context,
-                      "ピルをいつもどこで飲んでいますか",
+                      "いつもどのようなタイミングでピルを服用していますか？",
                       GestureDetector(
                         child: Text(lifeTime == null ? "選択してください" : lifeTime,
                             style:
