@@ -17,6 +17,7 @@ import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:intl/date_symbol_data_local.dart';
 import 'package:pilll/service/auth.dart';
+import 'package:purchases_flutter/purchases_flutter.dart';
 
 import 'router/router.dart';
 
@@ -36,9 +37,15 @@ Future<void> entrypoint() async {
   };
   FlutterError.onError = FirebaseCrashlytics.instance.recordFlutterError;
   definedChannel();
-  runZonedGuarded(() {
+  runZonedGuarded(() async {
+    await initPlatformState();
     runApp(ProviderScope(child: App()));
   }, (error, stack) => FirebaseCrashlytics.instance.recordError(error, stack));
+}
+
+Future<void> initPlatformState() async {
+  await Purchases.setDebugLogsEnabled(true);
+  await Purchases.setup("public_sdk_key");
 }
 
 void connectToEmulator() {
