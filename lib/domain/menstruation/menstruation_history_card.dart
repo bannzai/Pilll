@@ -66,20 +66,20 @@ class MenstruationHistoryCard extends StatelessWidget {
                   .expand((e) => e)
                   .toList(),
             ),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.end,
-              children: [
-                if (!state.moreButtonIsHidden)
-                  SecondaryButton(
-                      text: "もっと見る",
-                      onPressed: () {
-                        analytics.logEvent(
-                            name: "menstruation_more_button_pressed");
-                        Navigator.of(context)
-                            .push(MenstruationListPageRoute.route());
-                      }),
-              ],
-            ),
+            // Row(
+            //   mainAxisAlignment: MainAxisAlignment.end,
+            //   children: [
+            //     if (!state.moreButtonIsHidden)
+            //       SecondaryButton(
+            //           text: "もっと見る",
+            //           onPressed: () {
+            //             analytics.logEvent(
+            //                 name: "menstruation_more_button_pressed");
+            //             Navigator.of(context)
+            //                 .push(MenstruationListPageRoute.route());
+            //           }),
+            //   ],
+            // ),
           ],
         ),
       ),
