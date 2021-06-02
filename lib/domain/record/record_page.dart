@@ -214,10 +214,12 @@ class RecordPage extends HookWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               IconButton(
-                icon: Icon(Icons.close, color: Colors.white),
-                onPressed: () async =>
-                    store.closeRecommendedSignupNotification(),
-              ),
+                  icon: Icon(Icons.close, color: Colors.white),
+                  onPressed: () {
+                    analytics.logEvent(
+                        name: "record_page_signing_notification_closed");
+                    store.closeRecommendedSignupNotification();
+                  }),
               Column(
                 children: [
                   SizedBox(height: 12),
