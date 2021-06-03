@@ -159,3 +159,18 @@ class SettingListAccountLinkRowModel extends SettingListRowModel {
     );
   }
 }
+
+class SettingListPremiumRowModel extends SettingListRowModel {
+  final VoidCallback onTap;
+
+  SettingListPremiumRowModel(this.onTap);
+  @override
+  Widget widget() {
+    return ListTile(
+      onTap: onTap,
+      leading: SvgPicture.asset("images/pilll_icon.svg"),
+      title: Text("Pilllプレミアム",
+          style: FontType.assisting.merge(TextColorStyle.darkGray)),
+    );
+  }
+}
