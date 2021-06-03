@@ -1,0 +1,47 @@
+import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:pilll/components/molecules/indicator.dart';
+import 'package:pilll/error/error_alert.dart';
+import 'package:pilll/error_log.dart';
+import 'package:purchases_flutter/purchases_flutter.dart';
+
+class PremiumIntroductionPage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return FutureBuilder(
+      future: _offers(),
+      builder: (context, value) {
+        if (value.hasError) {
+          showErrorAlert(context, message: value.error.toString());
+          return Indicator();
+        }
+        if (!value.hasData) {
+          return Indicator();
+        }
+        final data = value.data;
+        if (data is List) {
+          return Column(
+            children: data.map((e) => Text(e.toString())).toList(),
+          );
+        }
+        throw AssertionError(
+            "unexpected type ${data.runtimeType}, data: $data");
+      },
+    );
+  }
+
+  Future<dynamic> _offers() async {
+    try {
+      Offerings offerings = await Purchases.getOfferings();
+      final currentOffering = offerings.current;
+      if (currentOffering != null) {
+        return currentOffering.availablePackages;
+      }
+      return [];
+    } catch (exception, stack) {
+      errorLogger.recordError(exception, stack);
+      print(exception);
+      rethrow;
+    }
+  }
+}
