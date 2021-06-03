@@ -9,25 +9,30 @@ class PremiumIntroductionPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: FutureBuilder(
-        future: _offers(),
-        builder: (context, value) {
-          if (value.hasError) {
-            showErrorAlert(context, message: value.error.toString());
-            return Indicator();
-          }
-          if (!value.hasData) {
-            return Indicator();
-          }
-          final data = value.data;
-          if (data is List) {
-            return Column(
-              children: data.map((e) => Text(e.toString())).toList(),
-            );
-          }
-          throw AssertionError(
-              "unexpected type ${data.runtimeType}, data: $data");
-        },
+      body: Center(
+        child: FutureBuilder(
+          future: _offers(),
+          builder: (context, value) {
+            if (value.hasError) {
+              showErrorAlert(context, message: value.error.toString());
+              return Indicator();
+            }
+            if (!value.hasData) {
+              return Indicator();
+            }
+            final data = value.data;
+            if (data is List) {
+              if (data.isEmpty) {
+                return Container(child: Text("data is empty"));
+              }
+              return Column(
+                children: data.map((e) => Text(e.toString())).toList(),
+              );
+            }
+            throw AssertionError(
+                "unexpected type ${data.runtimeType}, data: $data");
+          },
+        ),
       ),
     );
   }
