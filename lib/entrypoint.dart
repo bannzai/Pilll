@@ -45,7 +45,7 @@ Future<void> entrypoint() async {
 
 Future<void> initPlatformState() async {
   await Purchases.setDebugLogsEnabled(true);
-  await Purchases.setup("public_sdk_key");
+  await Purchases.setup(Environment.revenueCatPublicAPIKey);
 }
 
 void connectToEmulator() {
