@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
+import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/molecules/indicator.dart';
 import 'package:pilll/error/error_alert.dart';
 import 'package:pilll/error_log.dart';
@@ -9,6 +9,14 @@ class PremiumIntroductionPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        elevation: 0.0,
+        leading: IconButton(
+          icon: Icon(Icons.close, color: Colors.black),
+          onPressed: () => Navigator.of(context).pop(),
+        ),
+        backgroundColor: PilllColors.white,
+      ),
       body: Center(
         child: FutureBuilder(
           future: _offers(),
