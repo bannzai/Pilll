@@ -180,6 +180,14 @@ PODS:
   - package_info (0.0.1):
     - Flutter
   - PromisesObjC (1.2.12)
+  - Purchases (3.11.1):
+    - PurchasesCoreSwift (= 3.11.1)
+  - purchases_flutter (3.2.2):
+    - Flutter
+    - PurchasesHybridCommon (= 1.6.3)
+  - PurchasesCoreSwift (3.11.1)
+  - PurchasesHybridCommon (1.6.3):
+    - Purchases (= 3.11.1)
   - shared_preferences (0.0.1):
     - Flutter
   - sign_in_with_apple (0.0.1):
@@ -201,6 +209,7 @@ DEPENDENCIES:
   - google_sign_in (from `.symlinks/plugins/google_sign_in/ios`)
   - in_app_review (from `.symlinks/plugins/in_app_review/ios`)
   - package_info (from `.symlinks/plugins/package_info/ios`)
+  - purchases_flutter (from `.symlinks/plugins/purchases_flutter/ios`)
   - shared_preferences (from `.symlinks/plugins/shared_preferences/ios`)
   - sign_in_with_apple (from `.symlinks/plugins/sign_in_with_apple/ios`)
   - url_launcher (from `.symlinks/plugins/url_launcher/ios`)
@@ -225,6 +234,9 @@ SPEC REPOS:
     - nanopb
     - OrderedSet
     - PromisesObjC
+    - Purchases
+    - PurchasesCoreSwift
+    - PurchasesHybridCommon
 
 EXTERNAL SOURCES:
   cloud_firestore:
@@ -254,6 +266,8 @@ EXTERNAL SOURCES:
     :path: ".symlinks/plugins/in_app_review/ios"
   package_info:
     :path: ".symlinks/plugins/package_info/ios"
+  purchases_flutter:
+    :path: ".symlinks/plugins/purchases_flutter/ios"
   shared_preferences:
     :path: ".symlinks/plugins/shared_preferences/ios"
   sign_in_with_apple:
@@ -298,6 +312,10 @@ SPEC CHECKSUMS:
   OrderedSet: aaeb196f7fef5a9edf55d89760da9176ad40b93c
   package_info: 873975fc26034f0b863a300ad47e7f1ac6c7ec62
   PromisesObjC: 3113f7f76903778cf4a0586bd1ab89329a0b7b97
+  Purchases: 6351f9ff6bd514e5ec5aa0f989ea181effa94bf5
+  purchases_flutter: 627527b070d80cdaf486fabe8b3d1dbe8d5cad92
+  PurchasesCoreSwift: ee857e4c21e6254b09d7e303a756fcf2b9164408
+  PurchasesHybridCommon: d65a799a61d688588534b80338edbcbf604ca93d
   shared_preferences: af6bfa751691cdc24be3045c43ec037377ada40d
   sign_in_with_apple: 34f3f5456a45fd7ac5fb42905e2ad31dae061b4a
   url_launcher: 6fef411d543ceb26efce54b05a0a40bfd74cbbef

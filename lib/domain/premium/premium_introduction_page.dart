@@ -8,25 +8,27 @@ import 'package:purchases_flutter/purchases_flutter.dart';
 class PremiumIntroductionPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return FutureBuilder(
-      future: _offers(),
-      builder: (context, value) {
-        if (value.hasError) {
-          showErrorAlert(context, message: value.error.toString());
-          return Indicator();
-        }
-        if (!value.hasData) {
-          return Indicator();
-        }
-        final data = value.data;
-        if (data is List) {
-          return Column(
-            children: data.map((e) => Text(e.toString())).toList(),
-          );
-        }
-        throw AssertionError(
-            "unexpected type ${data.runtimeType}, data: $data");
-      },
+    return Scaffold(
+      body: FutureBuilder(
+        future: _offers(),
+        builder: (context, value) {
+          if (value.hasError) {
+            showErrorAlert(context, message: value.error.toString());
+            return Indicator();
+          }
+          if (!value.hasData) {
+            return Indicator();
+          }
+          final data = value.data;
+          if (data is List) {
+            return Column(
+              children: data.map((e) => Text(e.toString())).toList(),
+            );
+          }
+          throw AssertionError(
+              "unexpected type ${data.runtimeType}, data: $data");
+        },
+      ),
     );
   }
 
@@ -43,5 +45,14 @@ class PremiumIntroductionPage extends StatelessWidget {
       print(exception);
       rethrow;
     }
+  }
+}
+
+extension PremiumIntroductionPageRoutes on PremiumIntroductionPage {
+  static Route<dynamic> route() {
+    return MaterialPageRoute(
+      settings: RouteSettings(name: "PremiumIntroductionPage"),
+      builder: (_) => PremiumIntroductionPage(),
+    );
   }
 }
