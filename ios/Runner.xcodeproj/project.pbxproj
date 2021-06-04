@@ -22,7 +22,7 @@
 		BA158D9D24E440B800164799 /* GoogleService-Info-Development.plist in Resources */ = {isa = PBXBuildFile; fileRef = BA158D9924E440B800164799 /* GoogleService-Info-Development.plist */; };
 		BA158D9F24E440B800164799 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BA158D9B24E440B800164799 /* GoogleService-Info.plist */; };
 		BA158DA024E440B800164799 /* GoogleService-Info-Production.plist in Resources */ = {isa = PBXBuildFile; fileRef = BA158D9C24E440B800164799 /* GoogleService-Info-Production.plist */; };
-		BA1C263B266A5EB90040ACD0 /* StoreKitTestCertificate.cer in Resources */ = {isa = PBXBuildFile; fileRef = BA1C263A266A5EB90040ACD0 /* StoreKitTestCertificate.cer */; };
+		BA1C263E266A60A00040ACD0 /* StoreKitTestCertificate.cer in Resources */ = {isa = PBXBuildFile; fileRef = BA1C263D266A60A00040ACD0 /* StoreKitTestCertificate.cer */; };
 		BA662A75264507FC003E8CE6 /* Development-Secret.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = BA662A74264507FC003E8CE6 /* Development-Secret.xcconfig */; };
 		BA662A7726450A11003E8CE6 /* Production-Secret.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = BA662A7626450A11003E8CE6 /* Production-Secret.xcconfig */; };
 		BA869E47258AFC9A000EBE33 /* becho.caf in Resources */ = {isa = PBXBuildFile; fileRef = BA869E46258AFC9A000EBE33 /* becho.caf */; };
@@ -70,7 +70,7 @@
 		BA158D9924E440B800164799 /* GoogleService-Info-Development.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info-Development.plist"; sourceTree = "<group>"; };
 		BA158D9B24E440B800164799 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BA158D9C24E440B800164799 /* GoogleService-Info-Production.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info-Production.plist"; sourceTree = "<group>"; };
-		BA1C263A266A5EB90040ACD0 /* StoreKitTestCertificate.cer */ = {isa = PBXFileReference; lastKnownFileType = file; name = StoreKitTestCertificate.cer; path = ../../../../../Desktop/StoreKitTestCertificate.cer; sourceTree = "<group>"; };
+		BA1C263D266A60A00040ACD0 /* StoreKitTestCertificate.cer */ = {isa = PBXFileReference; lastKnownFileType = file; path = StoreKitTestCertificate.cer; sourceTree = "<group>"; };
 		BA28ADE02669BB0F001BCDD1 /* StoreKitTestingConfiguration.storekit */ = {isa = PBXFileReference; lastKnownFileType = text; path = StoreKitTestingConfiguration.storekit; sourceTree = "<group>"; };
 		BA662A74264507FC003E8CE6 /* Development-Secret.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = "Development-Secret.xcconfig"; path = "Flutter/Development-Secret.xcconfig"; sourceTree = "<group>"; };
 		BA662A7626450A11003E8CE6 /* Production-Secret.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = "Production-Secret.xcconfig"; path = "Flutter/Production-Secret.xcconfig"; sourceTree = "<group>"; };
@@ -143,7 +143,7 @@
 				97C146FA1CF9000F007C117D /* Main.storyboard */,
 				97C146FD1CF9000F007C117D /* Assets.xcassets */,
 				BA28ADE02669BB0F001BCDD1 /* StoreKitTestingConfiguration.storekit */,
-				BA1C263A266A5EB90040ACD0 /* StoreKitTestCertificate.cer */,
+				BA1C263D266A60A00040ACD0 /* StoreKitTestCertificate.cer */,
 				97C146FF1CF9000F007C117D /* LaunchScreen.storyboard */,
 				97C147021CF9000F007C117D /* Info.plist */,
 				97C146F11CF9000F007C117D /* Supporting Files */,
@@ -265,7 +265,7 @@
 				BA662A7726450A11003E8CE6 /* Production-Secret.xcconfig in Resources */,
 				3379DA5624E3A4DC0002DD85 /* Release-Production.xcconfig in Resources */,
 				3379DA5524E3A4DC0002DD85 /* Debug-Development.xcconfig in Resources */,
-				BA1C263B266A5EB90040ACD0 /* StoreKitTestCertificate.cer in Resources */,
+				BA1C263E266A60A00040ACD0 /* StoreKitTestCertificate.cer in Resources */,
 				97C147011CF9000F007C117D /* LaunchScreen.storyboard in Resources */,
 				BA158DA024E440B800164799 /* GoogleService-Info-Production.plist in Resources */,
 				3B3967161E833CAA004F5970 /* AppFrameworkInfo.plist in Resources */,
