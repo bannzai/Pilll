@@ -12,6 +12,7 @@ secret:
 	echo $(FILE_FIREBASE_IOS_PRODUCTION) | base64 -D > ios/Firebase/GoogleService-Info-Production.plist
 	echo $(XCCONFIG_SECRET_DEVELOPMENT) | base64 -D > ios/Flutter/Development-Secret.xcconfig
 	echo $(XCCONFIG_SECRET_PRODUCTION) | base64 -D > ios/Flutter/Production-Secret.xcconfig
+	echo $(STOREKIT_TESTING_CONFIGURATION_PUBLIC_CERT) | base64 -D > ios/Runner/StoreKitTestCertificate.cer
 	./android/scripts/key_properties.sh
 
 .PHONY: secret-backup
