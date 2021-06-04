@@ -69,6 +69,7 @@
 		BA158D9924E440B800164799 /* GoogleService-Info-Development.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info-Development.plist"; sourceTree = "<group>"; };
 		BA158D9B24E440B800164799 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BA158D9C24E440B800164799 /* GoogleService-Info-Production.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info-Production.plist"; sourceTree = "<group>"; };
+		BA28ADE02669BB0F001BCDD1 /* StoreKitTestingConfiguration.storekit */ = {isa = PBXFileReference; lastKnownFileType = text; path = StoreKitTestingConfiguration.storekit; sourceTree = "<group>"; };
 		BA662A74264507FC003E8CE6 /* Development-Secret.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = "Development-Secret.xcconfig"; path = "Flutter/Development-Secret.xcconfig"; sourceTree = "<group>"; };
 		BA662A7626450A11003E8CE6 /* Production-Secret.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = "Production-Secret.xcconfig"; path = "Flutter/Production-Secret.xcconfig"; sourceTree = "<group>"; };
 		BA869E46258AFC9A000EBE33 /* becho.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = becho.caf; sourceTree = "<group>"; };
@@ -139,6 +140,7 @@
 				BAE6D1E42552D54800516E8E /* Runner.entitlements */,
 				97C146FA1CF9000F007C117D /* Main.storyboard */,
 				97C146FD1CF9000F007C117D /* Assets.xcassets */,
+				BA28ADE02669BB0F001BCDD1 /* StoreKitTestingConfiguration.storekit */,
 				97C146FF1CF9000F007C117D /* LaunchScreen.storyboard */,
 				97C147021CF9000F007C117D /* Info.plist */,
 				97C146F11CF9000F007C117D /* Supporting Files */,
