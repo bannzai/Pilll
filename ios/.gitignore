@@ -34,4 +34,9 @@ Runner/GeneratedPluginRegistrant.*
 # GoogleService-Info.plist
 GoogleService-Info*.plist
 _GoogleService-Info*.plist
-
+*.cer
+StoreKitTestCertificate.cer
+Flutter/.last_build_id
+Flutter/*-Secret.xcconfig
+scripts/secret.sh
+*secret*
