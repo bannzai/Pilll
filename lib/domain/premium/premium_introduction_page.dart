@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/molecules/indicator.dart';
 import 'package:pilll/error/error_alert.dart';
@@ -33,9 +34,31 @@ class PremiumIntroductionPage extends StatelessWidget {
               if (data.isEmpty) {
                 return Container(child: Text("data is empty"));
               }
-              return Column(
-                children: data.map((e) => Text(e.toString())).toList(),
-              );
+              if (data is List<Package>) {
+                return Container(
+                  padding: EdgeInsets.all(20),
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: data.map((e) {
+                      return GestureDetector(
+                        onTap: () async {
+                          await _purchase(e);
+                        },
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            SizedBox(height: 10),
+                            Text("identifier: ${e.identifier}"),
+                            Text("offeringIdentifier: ${e.offeringIdentifier}"),
+                            Text("packageType: ${e.packageType}"),
+                            Text("product: ${e.product}"),
+                          ],
+                        ),
+                      );
+                    }).toList(),
+                  ),
+                );
+              }
             }
             throw AssertionError(
                 "unexpected type ${data.runtimeType}, data: $data");
@@ -45,7 +68,24 @@ class PremiumIntroductionPage extends StatelessWidget {
     );
   }
 
-  Future<dynamic> _offers() async {
+  Future<void> _purchase(Package package) async {
+    try {
+      PurchaserInfo purchaserInfo = await Purchases.purchasePackage(package);
+      var isPro = purchaserInfo.entitlements.all["Premium"]?.isActive;
+      print(isPro);
+    } on PlatformException catch (e) {
+      var errorCode = PurchasesErrorHelper.getErrorCode(e);
+      if (errorCode != PurchasesErrorCode.purchaseCancelledError) {
+        print(e);
+        print(errorCode);
+      }
+      rethrow;
+    } catch (e) {
+      print(e);
+    }
+  }
+
+  Future<List<Package>> _offers() async {
     try {
       Offerings offerings = await Purchases.getOfferings();
       final currentOffering = offerings.current;
