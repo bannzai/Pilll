@@ -38,6 +38,5 @@ _GoogleService-Info*.plist
 StoreKitTestCertificate.cer
 Flutter/.last_build_id
 Flutter/*-Secret.xcconfig
-scripts/secret.sh
 *secret*
 _StoreKitTestCertificate.cer
