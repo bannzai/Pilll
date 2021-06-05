@@ -20,8 +20,6 @@ abstract class Environment {
       String.fromEnvironment("SIWA_SERVICE_IDENTIFIIER");
   static const androidSiwaRedirectURL =
       String.fromEnvironment("ANDROID_SIWA_REDIRECT_URL");
-  static const revenueCatPublicAPIKey =
-      String.fromEnvironment("REVENUE_CAT_PUBLIC_API_KEY");
 
   static Function()? deleteUser;
   static Function()? signOutUser;
