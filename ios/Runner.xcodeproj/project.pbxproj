@@ -381,7 +381,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nif env | grep -q ^REVENUE_CAT_PUBLIC_API_KEY=\nthen\n  # Maybe flutter command set env\n  exit 0;\nelse\n  source \"$SRCROOT/scripts/secret.sh\"\nfi\n";
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nif env | grep -q ^REVENUE_CAT_PUBLIC_API_KEY=\nthen\n  # Maybe flutter command set env\n  echo 'REVENUE_CAT_PUBLIC_API_KEY is already exists'\n  exit 0;\nelse\n  echo 'To replace REVENUE_CAT_PUBLIC_API_KEY'\n  source \"$SRCROOT/scripts/secret.sh\"\nfi\n";
 			showEnvVarsInLog = 0;
 		};
 		D0248FA5F76CFF05569BD228 /* [CP] Check Pods Manifest.lock */ = {
