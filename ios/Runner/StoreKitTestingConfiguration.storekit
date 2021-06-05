@@ -135,6 +135,69 @@
           "type" : "RecurringSubscription"
         }
       ]
+    },
+    {
+      "id" : "782C9B97",
+      "localizations" : [
+
+      ],
+      "name" : "Sandbox",
+      "subscriptions" : [
+        {
+          "adHocOffers" : [
+
+          ],
+          "displayPrice" : "3600",
+          "familyShareable" : false,
+          "groupNumber" : 1,
+          "internalID" : "5C6946F7",
+          "introductoryOffer" : null,
+          "localizations" : [
+            {
+              "description" : "",
+              "displayName" : "",
+              "locale" : "en_US"
+            },
+            {
+              "description" : "プレミアムプラン(Sandbox)",
+              "displayName" : "プレミアムプラン(Sandbox)",
+              "locale" : "ja"
+            }
+          ],
+          "productID" : "pilll_3600yen_1year_sandobx",
+          "recurringSubscriptionPeriod" : "P1M",
+          "referenceName" : "Annual 3600 yen Sandbox",
+          "subscriptionGroupID" : "782C9B97",
+          "type" : "RecurringSubscription"
+        },
+        {
+          "adHocOffers" : [
+
+          ],
+          "displayPrice" : "480",
+          "familyShareable" : false,
+          "groupNumber" : 1,
+          "internalID" : "2502FA20",
+          "introductoryOffer" : null,
+          "localizations" : [
+            {
+              "description" : "",
+              "displayName" : "",
+              "locale" : "en_US"
+            },
+            {
+              "description" : "プレミアムプラン(Sandbox)",
+              "displayName" : "プレミアムプラン(Sandbox)",
+              "locale" : "ja"
+            }
+          ],
+          "productID" : "pilll_480yen_1month_sandbox",
+          "recurringSubscriptionPeriod" : "P1M",
+          "referenceName" : "Monthly 480yen Sandbox",
+          "subscriptionGroupID" : "782C9B97",
+          "type" : "RecurringSubscription"
+        }
+      ]
     }
   ],
   "version" : {
