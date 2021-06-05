@@ -204,6 +204,7 @@
 			buildConfigurationList = 97C147051CF9000F007C117D /* Build configuration list for PBXNativeTarget "Runner" */;
 			buildPhases = (
 				D0248FA5F76CFF05569BD228 /* [CP] Check Pods Manifest.lock */,
+				BA9DEFBF266B942F007FB2E8 /* ShellScript */,
 				BA158DA124E4413900164799 /* Replace GoogleService-Info.plist */,
 				9740EEB61CF901F6004384FC /* Run Script */,
 				97C146EA1CF9000F007C117D /* Sources */,
@@ -327,7 +328,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "/bin/sh \"$FLUTTER_ROOT/packages/flutter_tools/bin/xcode_backend.sh\" build";
+			shellScript = "/bin/sh \"$FLUTTER_ROOT/packages/flutter_tools/bin/xcode_backend.sh\" build\n";
 		};
 		B3CAD8EA6F3D8D8D194CEF5F /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -364,6 +365,24 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "./scripts/prepare_firebase_config.sh\n";
+		};
+		BA9DEFBF266B942F007FB2E8 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\nif env | grep -q ^REVENUE_CAT_PUBLIC_API_KEY=\nthen\n  # Maybe flutter command set env\n  exit 0;\nelse\n  source \"$SRCROOT/scripts/secret.sh\"\nfi\n";
+			showEnvVarsInLog = 0;
 		};
 		D0248FA5F76CFF05569BD228 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
