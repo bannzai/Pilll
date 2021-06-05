@@ -38,12 +38,32 @@ target 'Runner' do
   flutter_install_all_ios_pods File.dirname(File.realpath(__FILE__))
 end
 
+require 'pry'
 post_install do |installer|
   installer.pods_project.targets.each do |target|
     flutter_additional_ios_build_settings(target)
-  end
-  installer.pods_project.build_configurations.each do |config|
-    config.build_settings["EXCLUDED_ARCHS[sdk=iphonesimulator*]"] = "arm64"
-    config.build_settings["SDKROOT"] = 'iphoneos'
+    target.build_configurations.each do |config|
+      # config.build_settings["VALID_ARCHS[sdk=iphonesimulator*]"] ||= "arm64 arm64e x86_64"
+      # config.build_settings["EXCLUDED_ARCHS[sdk=iphonesimulator*]"] = "arm64"
+      # config.build_settings["SDKROOT"] = 'iphoneos'
+      xcconfig_path = config.base_configuration_reference.real_path
+#      if target.name == 'AppAuth' #&& config.name != 'Debug' && config.name != 'Release'
+#binding.pry
+#      end
+      build_settings = Hash[*File.read(xcconfig_path).lines.map{ |x| x.split(/\s+=\s+/, 2) }.flatten]
+      puts "#{target.name}:#{config.name}:#{build_settings}"
+
+      build_settings.delete("VALID_ARCHS")
+      build_settings["EXCLUDED_ARCHS[sdk=iphonesimulator*]"] = "arm64"
+
+      lines = ""
+      build_settings.each do |key, value|
+        lines += "#{key} = #{value.chomp}\n"
+      end
+      puts "end: #{build_settings}"
+      File.open(xcconfig_path, "w") { |file| 
+        file.puts lines
+      }
+    end
   end
 end
