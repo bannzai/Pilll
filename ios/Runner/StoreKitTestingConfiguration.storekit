@@ -164,9 +164,9 @@
               "locale" : "ja"
             }
           ],
-          "productID" : "pilll_3600yen_1year_sandobx",
-          "recurringSubscriptionPeriod" : "P1M",
-          "referenceName" : "Annual 3600 yen Sandbox",
+          "productID" : "pilll_3600yen_1year_sandbox",
+          "recurringSubscriptionPeriod" : "P1Y",
+          "referenceName" : "Annual 3600yen Sandbox",
           "subscriptionGroupID" : "782C9B97",
           "type" : "RecurringSubscription"
         },
