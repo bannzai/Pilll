@@ -17,6 +17,7 @@ import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:intl/date_symbol_data_local.dart';
 import 'package:pilll/service/auth.dart';
+import 'package:pilll/util/secret.dart';
 import 'package:purchases_flutter/purchases_flutter.dart';
 
 import 'router/router.dart';
@@ -45,7 +46,7 @@ Future<void> entrypoint() async {
 
 Future<void> initPlatformState() async {
   await Purchases.setDebugLogsEnabled(true);
-  await Purchases.setup(Environment.revenueCatPublicAPIKey);
+  await Purchases.setup(Secret.revenueCatPublicAPIKey);
 }
 
 void connectToEmulator() {
