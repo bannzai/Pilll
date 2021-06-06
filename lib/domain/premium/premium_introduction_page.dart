@@ -247,6 +247,7 @@ class PremiumIntroductionPage extends HookWidget {
   Widget _noOpen(BuildContext context, PremiumIntroductionStore store,
       PremiumIntroductionState state) {
     return Container(
+      width: MediaQuery.of(context).size.width,
       padding: EdgeInsets.only(top: 24),
       color: PilllColors.white,
       child: Column(
