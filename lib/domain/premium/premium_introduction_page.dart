@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:pilll/components/atoms/buttons.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
@@ -32,15 +33,37 @@ class PremiumIntroductionPage extends HookWidget {
       body: SafeArea(
         child: Container(
           width: MediaQuery.of(context).size.width,
-          child: SingleChildScrollView(
-            child: Column(
-              children: [
-                _plan(context, store, state),
-                _noOpen(context, store, state),
-                _advancedAppearancePillSheet(context, store, state),
-                _footer(context, store, state),
-              ],
-            ),
+          child: Stack(
+            children: [
+              SingleChildScrollView(
+                padding: EdgeInsets.only(bottom: 100),
+                child: Column(
+                  children: [
+                    _plan(context, store, state),
+                    _noOpen(context, store, state),
+                    _advancedAppearancePillSheet(context, store, state),
+                    _footer(context, store, state),
+                  ],
+                ),
+              ),
+              Align(
+                alignment: Alignment.bottomCenter,
+                child: Container(
+                  padding: EdgeInsets.only(left: 20, right: 20),
+                  height: 100,
+                  width: MediaQuery.of(context).size.width,
+                  color: PilllColors.white,
+                  child: Center(
+                    child: PrimaryButton(
+                      text: state.doneButtonText,
+                      onPressed: () {
+                        return;
+                      },
+                    ),
+                  ),
+                ),
+              ),
+            ],
           ),
         ),
       ),
