@@ -449,7 +449,17 @@ class PremiumIntroductionPage extends HookWidget {
           ),
           SizedBox(height: 24),
           GestureDetector(
-            onTap: () => store.restore(),
+            onTap: () async {
+              try {
+                await store.restore();
+              } catch (error) {
+                if (error is UserDisplayedError) {
+                  showErrorAlertWithError(context, error);
+                } else {
+                  rootKey.currentState?.onError(error);
+                }
+              }
+            },
             child: Text(
               '以前購入した方はこちら',
               style: TextStyle(
