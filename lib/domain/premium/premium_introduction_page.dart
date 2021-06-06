@@ -229,7 +229,7 @@ class PremiumIntroductionPage extends HookWidget {
                 ),
               SizedBox(height: 17),
               Text(
-                "App Storeからいつでも簡単に解約出来ます",
+                "${store.storeName}からいつでも簡単に解約出来ます",
                 textAlign: TextAlign.center,
                 style: TextColorStyle.gray.merge(
                   TextStyle(
@@ -398,7 +398,7 @@ class PremiumIntroductionPage extends HookWidget {
                   ),
                   TextSpan(
                     text:
-                        "・購入後、自動更新の解約はApp Storeアプリのアカウント設定で行えます。(アプリ内から自動更新の解約は行なえません)",
+                        "・購入後、自動更新の解約は${store.storeName}アプリのアカウント設定で行えます。(アプリ内から自動更新の解約は行なえません)",
                   ),
                 ],
               ),

@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:flutter/services.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:intl/intl.dart';
@@ -87,5 +89,9 @@ class PremiumIntroductionStore extends StateNotifier<PremiumIntroductionState> {
 
   String monthlyPriceString(Package package) {
     return "${package.product.priceString}";
+  }
+
+  String get storeName {
+    return Platform.isIOS ? "App Store" : "Google Play";
   }
 }
