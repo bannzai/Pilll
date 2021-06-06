@@ -155,22 +155,26 @@ class PremiumIntroductionPage extends HookWidget {
                     ),
                     child: Row(
                       children: [
+                        SizedBox(width: 24),
                         Text(
                           "年間プラン",
                           style: TextColorStyle.main.merge(
                             TextStyle(
-                                fontWeight: FontWeight.w700,
-                                fontSize: 16,
-                                fontFamily: FontFamily.japanese),
+                              fontWeight: FontWeight.w700,
+                              fontSize: 16,
+                              fontFamily: FontFamily.japanese,
+                            ),
                           ),
                         ),
+                        SizedBox(width: 10),
                         Text(
                           store.annualPriceString(annualPackage),
                           style: TextColorStyle.main.merge(
                             TextStyle(
-                                fontWeight: FontWeight.w700,
-                                fontSize: 16,
-                                fontFamily: FontFamily.japanese),
+                              fontWeight: FontWeight.w700,
+                              fontSize: 16,
+                              fontFamily: FontFamily.japanese,
+                            ),
                           ),
                         )
                       ],
@@ -197,6 +201,7 @@ class PremiumIntroductionPage extends HookWidget {
                     ),
                     child: Row(
                       children: [
+                        SizedBox(width: 24),
                         Text(
                           "月額プラン",
                           style: TextColorStyle.main.merge(
@@ -207,7 +212,7 @@ class PremiumIntroductionPage extends HookWidget {
                             ),
                           ),
                         ),
-                        SizedBox(height: 17),
+                        SizedBox(width: 10),
                         Text(
                           store.monthlyPriceString(monthlyPackage),
                           style: TextColorStyle.main.merge(
