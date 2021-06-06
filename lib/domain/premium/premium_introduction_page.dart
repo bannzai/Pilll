@@ -366,6 +366,7 @@ class PremiumIntroductionPage extends HookWidget {
                   TextSpan(text: "・"),
                   TextSpan(
                     text: "プライバシーポリシー",
+                    style: TextStyle(decoration: TextDecoration.underline),
                     recognizer: TapGestureRecognizer()
                       ..onTap = () {
                         launch("https://bannzai.github.io/Pilll/PrivacyPolicy",
@@ -377,6 +378,7 @@ class PremiumIntroductionPage extends HookWidget {
                   ),
                   TextSpan(
                     text: "利用規約",
+                    style: TextStyle(decoration: TextDecoration.underline),
                     recognizer: TapGestureRecognizer()
                       ..onTap = () {
                         launch("https://bannzai.github.io/Pilll/Terms",
