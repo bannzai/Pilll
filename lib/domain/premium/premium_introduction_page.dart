@@ -33,48 +33,60 @@ class PremiumIntroductionPage extends HookWidget {
         ),
         backgroundColor: PilllColors.secondary.withAlpha(10),
       ),
-      body: SafeArea(
-        child: Container(
-          width: MediaQuery.of(context).size.width,
-          child: Stack(
-            children: [
-              SingleChildScrollView(
-                padding: EdgeInsets.only(bottom: 100),
-                child: Column(
-                  children: [
-                    _plan(context, store, state),
-                    _noOpen(context, store, state),
-                    _advancedAppearancePillSheet(context, store, state),
-                    _footer(context, store, state),
-                  ],
+      body: Container(
+        color: PilllColors.white,
+        child: SafeArea(
+          child: Container(
+            width: MediaQuery.of(context).size.width,
+            child: Stack(
+              children: [
+                SingleChildScrollView(
+                  padding: EdgeInsets.only(bottom: 100),
+                  child: Column(
+                    children: [
+                      _plan(context, store, state),
+                      _noOpen(context, store, state),
+                      _advancedAppearancePillSheet(context, store, state),
+                      _footer(context, store, state),
+                    ],
+                  ),
                 ),
-              ),
-              Align(
-                alignment: Alignment.bottomCenter,
-                child: Container(
-                  padding: EdgeInsets.only(left: 20, right: 20),
-                  height: 100,
-                  width: MediaQuery.of(context).size.width,
-                  color: PilllColors.white,
-                  child: Center(
-                    child: PrimaryButton(
-                      text: state.doneButtonText,
-                      onPressed: () async {
-                        try {
-                          store.purchase();
-                        } catch (error) {
-                          if (error is UserDisplayedError) {
-                            showErrorAlertWithError(context, error);
-                          } else {
-                            rootKey.currentState?.onError(error);
+                Align(
+                  alignment: Alignment.bottomCenter,
+                  child: Container(
+                    decoration: BoxDecoration(
+                      color: PilllColors.white,
+                      boxShadow: [
+                        BoxShadow(
+                          color: PilllColors.shadow,
+                          blurRadius: 6.0,
+                          offset: Offset(0, -4),
+                        ),
+                      ],
+                    ),
+                    padding: EdgeInsets.only(left: 20, right: 20),
+                    height: 100,
+                    width: MediaQuery.of(context).size.width,
+                    child: Center(
+                      child: PrimaryButton(
+                        text: state.doneButtonText,
+                        onPressed: () async {
+                          try {
+                            store.purchase();
+                          } catch (error) {
+                            if (error is UserDisplayedError) {
+                              showErrorAlertWithError(context, error);
+                            } else {
+                              rootKey.currentState?.onError(error);
+                            }
                           }
-                        }
-                      },
+                        },
+                      ),
                     ),
                   ),
                 ),
-              ),
-            ],
+              ],
+            ),
           ),
         ),
       ),
