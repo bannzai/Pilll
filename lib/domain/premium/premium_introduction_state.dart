@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:purchases_flutter/purchases_flutter.dart';
 
@@ -8,7 +10,10 @@ abstract class PremiumIntroductionState implements _$PremiumIntroductionState {
   PremiumIntroductionState._();
   factory PremiumIntroductionState({
     Offerings? offerings,
+    Package? selectedPackage,
   }) = _PremiumIntroductionState;
+
+  bool get isNotYetLoad => offerings == null;
 
   String? get currentOfferingID {
     return offerings?.current?.identifier;
@@ -25,4 +30,23 @@ abstract class PremiumIntroductionState implements _$PremiumIntroductionState {
     }
     return [];
   }
+
+  Package? get annualPackage {
+    if (packages.isEmpty) {
+      return null;
+    }
+    return packages
+        .firstWhere((element) => element.packageType == PackageType.annual);
+  }
+
+  Package? get monthlyPackage {
+    if (packages.isEmpty) {
+      return null;
+    }
+    return packages
+        .firstWhere((element) => element.packageType == PackageType.monthly);
+  }
+
+  bool get isSelectedAnnual => identical(annualPackage, selectedPackage);
+  bool get isSelectedMonthly => identical(monthlyPackage, selectedPackage);
 }
