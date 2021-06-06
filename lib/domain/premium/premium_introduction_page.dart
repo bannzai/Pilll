@@ -1,3 +1,4 @@
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
@@ -12,6 +13,7 @@ import 'package:pilll/domain/premium/premium_introduction_store.dart';
 import 'package:pilll/error/error_alert.dart';
 import 'package:pilll/error_log.dart';
 import 'package:purchases_flutter/purchases_flutter.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class PremiumIntroductionPage extends HookWidget {
   @override
@@ -40,6 +42,7 @@ class PremiumIntroductionPage extends HookWidget {
                 _plan(context, store, state),
                 _noOpen(context, store, state),
                 _advancedAppearancePillSheet(context, store, state),
+                _footer(context, store, state),
               ],
             ),
           ),
@@ -273,8 +276,11 @@ class PremiumIntroductionPage extends HookWidget {
     );
   }
 
-  Widget _advancedAppearancePillSheet(BuildContext context,
-      PremiumIntroductionStore store, PremiumIntroductionState state) {
+  Widget _advancedAppearancePillSheet(
+    BuildContext context,
+    PremiumIntroductionStore store,
+    PremiumIntroductionState state,
+  ) {
     return Container(
       padding: EdgeInsets.only(top: 24, bottom: 24),
       width: MediaQuery.of(context).size.width,
@@ -294,6 +300,100 @@ class PremiumIntroductionPage extends HookWidget {
           ),
           SizedBox(height: 48),
           Image.asset("images/premium_introduce_appearance_pill_sheet.png"),
+        ],
+      ),
+    );
+  }
+
+  Widget _footer(
+    BuildContext context,
+    PremiumIntroductionStore store,
+    PremiumIntroductionState state,
+  ) {
+    return Container(
+      padding: EdgeInsets.only(top: 24, bottom: 24),
+      width: MediaQuery.of(context).size.width,
+      color: PilllColors.white,
+      child: Column(
+        children: [
+          Text(
+            '''
+今後も便利な機能を続々追加予定です！
+お楽しみに✨
+            ''',
+            textAlign: TextAlign.center,
+            style: TextColorStyle.black.merge(
+              TextStyle(
+                fontWeight: FontWeight.w400,
+                fontFamily: FontFamily.japanese,
+                fontSize: 14,
+              ),
+            ),
+          ),
+          SizedBox(height: 32),
+          Padding(
+            padding: const EdgeInsets.only(left: 16, right: 16),
+            child: RichText(
+              textAlign: TextAlign.start,
+              text: TextSpan(
+                style: TextColorStyle.gray.merge(
+                  TextStyle(
+                      fontWeight: FontWeight.w400,
+                      fontSize: 10,
+                      fontFamily: FontFamily.japanese),
+                ),
+                children: [
+                  TextSpan(text: "・プレミアム契約期間は開始日から起算して1ヶ月または1年ごとの自動更新となります\n"),
+                  TextSpan(text: "・"),
+                  TextSpan(
+                    text: "プライバシーポリシー",
+                    recognizer: TapGestureRecognizer()
+                      ..onTap = () {
+                        launch("https://bannzai.github.io/Pilll/PrivacyPolicy",
+                            forceSafariVC: true);
+                      },
+                  ),
+                  TextSpan(
+                    text: "/",
+                  ),
+                  TextSpan(
+                    text: "利用規約",
+                    recognizer: TapGestureRecognizer()
+                      ..onTap = () {
+                        launch("https://bannzai.github.io/Pilll/Terms",
+                            forceSafariVC: true);
+                      },
+                  ),
+                  TextSpan(
+                    text: "をご確認のうえ登録してください\n",
+                  ),
+                  TextSpan(
+                    text: "・プレミアム契約期間の終了日の24時間以上前に解約しない限り契約期間が自動更新されます\n",
+                  ),
+                  TextSpan(
+                    text:
+                        "・購入後、自動更新の解約はApp Storeアプリのアカウント設定で行えます。(アプリ内から自動更新の解約は行なえません)",
+                  ),
+                ],
+              ),
+            ),
+          ),
+          SizedBox(height: 24),
+          GestureDetector(
+            onTap: () => store.restore(),
+            child: Text(
+              '以前購入した方はこちら',
+              style: TextStyle(
+                decoration: TextDecoration.underline,
+              ).merge(TextColorStyle.main).merge(
+                    TextStyle(
+                      fontWeight: FontWeight.w400,
+                      fontSize: 12,
+                      fontFamily: FontFamily.japanese,
+                    ),
+                  ),
+            ),
+          ),
         ],
       ),
     );

@@ -2,6 +2,7 @@ import 'package:flutter/services.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:intl/intl.dart';
 import 'package:pilll/domain/premium/premium_introduction_state.dart';
+import 'package:pilll/entity/user_error.dart';
 import 'package:pilll/error_log.dart';
 import 'package:pilll/service/user.dart';
 import 'package:purchases_flutter/purchases_flutter.dart';
@@ -55,6 +56,25 @@ class PremiumIntroductionStore extends StateNotifier<PremiumIntroductionState> {
       }
       errorLogger.recordError(exception, stack);
       rethrow;
+    } catch (exception, stack) {
+      errorLogger.recordError(exception, stack);
+      rethrow;
+    }
+  }
+
+  Future<void> restore() async {
+    try {
+      final purchaserInfo = await Purchases.restoreTransactions();
+      final entitlements = purchaserInfo.entitlements.all[_premiumEntitlements];
+      if (entitlements == null) {
+        throw UserDisplayedError("以前の購入情報が見つかりません。アカウントをお確かめの上再度お試しください");
+      }
+      if (entitlements.isActive) {
+        state = state.copyWith(isCompletedRestore: true);
+// TODO:
+        return;
+      }
+      return;
     } catch (exception, stack) {
       errorLogger.recordError(exception, stack);
       rethrow;
