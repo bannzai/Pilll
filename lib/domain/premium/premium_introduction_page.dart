@@ -10,6 +10,9 @@ import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/components/molecules/indicator.dart';
 import 'package:pilll/domain/premium/premium_introduction_state.dart';
 import 'package:pilll/domain/premium/premium_introduction_store.dart';
+import 'package:pilll/domain/root/root.dart';
+import 'package:pilll/entity/user_error.dart';
+import 'package:pilll/error/error_alert.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class PremiumIntroductionPage extends HookWidget {
@@ -56,9 +59,16 @@ class PremiumIntroductionPage extends HookWidget {
                   child: Center(
                     child: PrimaryButton(
                       text: state.doneButtonText,
-                      onPressed: () {
-                        // TODO:
-                        return;
+                      onPressed: () async {
+                        try {
+                          store.purchase();
+                        } catch (error) {
+                          if (error is UserDisplayedError) {
+                            showErrorAlertWithError(context, error);
+                          } else {
+                            rootKey.currentState?.onError(error);
+                          }
+                        }
                       },
                     ),
                   ),
