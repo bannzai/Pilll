@@ -33,11 +33,13 @@ class PremiumIntroductionPage extends HookWidget {
       ),
       body: SafeArea(
         child: Container(
+          width: MediaQuery.of(context).size.width,
           child: SingleChildScrollView(
             child: Column(
               children: [
                 _plan(context, store, state),
                 _noOpen(context, store, state),
+                _advancedAppearancePillSheet(context, store, state),
               ],
             ),
           ),
@@ -246,6 +248,7 @@ class PremiumIntroductionPage extends HookWidget {
       PremiumIntroductionState state) {
     return Container(
       padding: EdgeInsets.only(top: 24),
+      color: PilllColors.white,
       child: Column(
         children: [
           Text(
@@ -264,6 +267,32 @@ class PremiumIntroductionPage extends HookWidget {
           ),
           SizedBox(height: 48),
           Image.asset("images/premium_introduce_no_open.png"),
+        ],
+      ),
+    );
+  }
+
+  Widget _advancedAppearancePillSheet(BuildContext context,
+      PremiumIntroductionStore store, PremiumIntroductionState state) {
+    return Container(
+      padding: EdgeInsets.only(top: 24, bottom: 24),
+      width: MediaQuery.of(context).size.width,
+      color: PilllColors.secondary,
+      child: Column(
+        children: [
+          Text(
+            "ピルシートを日付表示に",
+            textAlign: TextAlign.center,
+            style: TextColorStyle.white.merge(
+              TextStyle(
+                fontWeight: FontWeight.w700,
+                fontFamily: FontFamily.japanese,
+                fontSize: 20,
+              ),
+            ),
+          ),
+          SizedBox(height: 48),
+          Image.asset("images/premium_introduce_appearance_pill_sheet.png"),
         ],
       ),
     );
