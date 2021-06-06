@@ -78,14 +78,6 @@ class PremiumIntroductionStore extends StateNotifier<PremiumIntroductionState> {
     }
   }
 
-  String annualPlanName() {
-    return "年間プラン";
-  }
-
-  String monthlyPlanName() {
-    return "月額プラン";
-  }
-
   String annualPriceString(Package package) {
     final monthlyPrice = package.product.price / 12;
     final monthlyPriceString =

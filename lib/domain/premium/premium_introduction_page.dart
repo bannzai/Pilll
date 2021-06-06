@@ -156,7 +156,7 @@ class PremiumIntroductionPage extends HookWidget {
                     child: Row(
                       children: [
                         Text(
-                          store.annualPlanName(),
+                          "年間プラン",
                           style: TextColorStyle.main.merge(
                             TextStyle(
                                 fontWeight: FontWeight.w700,
@@ -198,7 +198,7 @@ class PremiumIntroductionPage extends HookWidget {
                     child: Row(
                       children: [
                         Text(
-                          store.monthlyPlanName(),
+                          "月額プラン",
                           style: TextColorStyle.main.merge(
                             TextStyle(
                               fontWeight: FontWeight.w700,
