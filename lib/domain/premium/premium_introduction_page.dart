@@ -142,41 +142,73 @@ class PremiumIntroductionPage extends HookWidget {
                     store.purchase(annualPackage);
                   },
                   child: Container(
-                    padding: EdgeInsets.fromLTRB(16, 16, 16, 16),
-                    decoration: BoxDecoration(
-                      color: state.isSelectedAnnual
-                          ? Colors.transparent
-                          : PilllColors.white,
-                      borderRadius: BorderRadius.all(Radius.circular(4)),
-                      border: Border.all(
-                        width: state.isSelectedAnnual ? 2 : 0.5,
-                        color: PilllColors.secondary,
-                      ),
-                    ),
-                    child: Row(
+                    height: 68,
+                    child: Stack(
                       children: [
-                        SizedBox(width: 24),
-                        Text(
-                          "年間プラン",
-                          style: TextColorStyle.main.merge(
-                            TextStyle(
-                              fontWeight: FontWeight.w700,
-                              fontSize: 16,
-                              fontFamily: FontFamily.japanese,
+                        Container(
+                          padding: EdgeInsets.only(top: 13),
+                          child: Container(
+                            padding: EdgeInsets.fromLTRB(16, 16, 16, 16),
+                            decoration: BoxDecoration(
+                              color: state.isSelectedAnnual
+                                  ? Colors.transparent
+                                  : PilllColors.white,
+                              borderRadius:
+                                  BorderRadius.all(Radius.circular(4)),
+                              border: Border.all(
+                                width: state.isSelectedAnnual ? 2 : 0.5,
+                                color: PilllColors.secondary,
+                              ),
+                            ),
+                            child: Row(
+                              children: [
+                                SizedBox(width: 24),
+                                Text(
+                                  "年間プラン",
+                                  style: TextColorStyle.main.merge(
+                                    TextStyle(
+                                      fontWeight: FontWeight.w700,
+                                      fontSize: 16,
+                                      fontFamily: FontFamily.japanese,
+                                    ),
+                                  ),
+                                ),
+                                SizedBox(width: 10),
+                                Text(
+                                  store.annualPriceString(annualPackage),
+                                  style: TextColorStyle.main.merge(
+                                    TextStyle(
+                                      fontWeight: FontWeight.w600,
+                                      fontSize: 16,
+                                      fontFamily: FontFamily.number,
+                                    ),
+                                  ),
+                                )
+                              ],
                             ),
                           ),
                         ),
-                        SizedBox(width: 10),
-                        Text(
-                          store.annualPriceString(annualPackage),
-                          style: TextColorStyle.main.merge(
-                            TextStyle(
-                              fontWeight: FontWeight.w700,
-                              fontSize: 16,
-                              fontFamily: FontFamily.japanese,
+                        Positioned(
+                          top: 5,
+                          right: 8,
+                          child: Container(
+                            padding: EdgeInsets.only(
+                                left: 8, right: 8, top: 4, bottom: 4),
+                            decoration: BoxDecoration(
+                              borderRadius: BorderRadius.circular(12),
+                              color: PilllColors.primary,
+                            ),
+                            child: Text(
+                              "通常月額と比べて48％OFF",
+                              style: TextColorStyle.white.merge(
+                                TextStyle(
+                                    fontWeight: FontWeight.w700,
+                                    fontSize: 10,
+                                    fontFamily: FontFamily.japanese),
+                              ),
                             ),
                           ),
-                        )
+                        ),
                       ],
                     ),
                   ),
@@ -217,9 +249,9 @@ class PremiumIntroductionPage extends HookWidget {
                           store.monthlyPriceString(monthlyPackage),
                           style: TextColorStyle.main.merge(
                             TextStyle(
-                              fontWeight: FontWeight.w700,
+                              fontWeight: FontWeight.w600,
                               fontSize: 16,
-                              fontFamily: FontFamily.japanese,
+                              fontFamily: FontFamily.number,
                             ),
                           ),
                         )
