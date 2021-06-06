@@ -37,6 +37,7 @@ class PremiumIntroductionPage extends HookWidget {
             child: Column(
               children: [
                 _plan(context, store, state),
+                _noOpen(context, store, state),
               ],
             ),
           ),
@@ -236,6 +237,33 @@ class PremiumIntroductionPage extends HookWidget {
               ),
             ],
           ),
+        ],
+      ),
+    );
+  }
+
+  Widget _noOpen(BuildContext context, PremiumIntroductionStore store,
+      PremiumIntroductionState state) {
+    return Container(
+      padding: EdgeInsets.only(top: 24),
+      child: Column(
+        children: [
+          Text(
+            '''
+アプリを開かなくても
+今日飲むピルが分かる、記録できる
+          ''',
+            textAlign: TextAlign.center,
+            style: TextColorStyle.main.merge(
+              TextStyle(
+                fontWeight: FontWeight.w700,
+                fontFamily: FontFamily.japanese,
+                fontSize: 20,
+              ),
+            ),
+          ),
+          SizedBox(height: 48),
+          Image.asset("images/premium_introduce_no_open.png"),
         ],
       ),
     );
