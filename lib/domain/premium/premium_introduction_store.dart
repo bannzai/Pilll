@@ -70,6 +70,7 @@ class PremiumIntroductionStore extends StateNotifier<PremiumIntroductionState> {
       final entitlements = purchaserInfo.entitlements.all[_premiumEntitlements];
       if (entitlements != null && entitlements.isActive) {
         state = state.copyWith(isCompletedRestore: true);
+        print("done restoration");
 // TODO:
         return;
       }
