@@ -140,7 +140,7 @@ class PremiumIntroductionPage extends HookWidget {
               if (annualPackage != null)
                 GestureDetector(
                   onTap: () {
-                    store.purchase(annualPackage);
+                    store.selectedAnnual();
                   },
                   child: Container(
                     height: 68,
@@ -218,7 +218,7 @@ class PremiumIntroductionPage extends HookWidget {
               if (monthlyPackage != null)
                 GestureDetector(
                   onTap: () {
-                    store.purchase(monthlyPackage);
+                    store.selectedMonthly();
                   },
                   child: Container(
                     padding: EdgeInsets.fromLTRB(16, 16, 16, 16),

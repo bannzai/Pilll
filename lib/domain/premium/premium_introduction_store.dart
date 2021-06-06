@@ -43,21 +43,28 @@ class PremiumIntroductionStore extends StateNotifier<PremiumIntroductionState> {
     }
   }
 
-  Future<bool> purchase(Package package) async {
+  Future<void> purchase() async {
+    final package = state.selectedPackage;
+    if (package == null) {
+      throw AssertionError("unexpected selected package not found");
+    }
     try {
       PurchaserInfo purchaserInfo = await Purchases.purchasePackage(package);
       final premiumEntitlement =
           purchaserInfo.entitlements.all[_premiumEntitlements];
       if (premiumEntitlement == null) {
-        return false;
+        throw AssertionError("unexpected premium entitlements is not exists");
       }
-      return premiumEntitlement.isActive;
+      if (!premiumEntitlement.isActive) {
+        throw UserDisplayedError("課金の有効化が完了しておりません。しばらく時間をおいてからご確認ください");
+      }
+      return;
     } on PlatformException catch (exception, stack) {
       var errorCode = PurchasesErrorHelper.getErrorCode(exception);
       if (errorCode != PurchasesErrorCode.purchaseCancelledError) {
         print(exception);
         print(errorCode);
-        return false;
+        return;
       }
       errorLogger.recordError(exception, stack);
       rethrow;
@@ -97,5 +104,21 @@ class PremiumIntroductionStore extends StateNotifier<PremiumIntroductionState> {
 
   String get storeName {
     return Platform.isIOS ? "App Store" : "Google Play";
+  }
+
+  selectedMonthly() {
+    final package = state.monthlyPackage;
+    if (package == null) {
+      throw AssertionError("unexpected monthly package is not exists");
+    }
+    state = state.copyWith(selectedPackage: package);
+  }
+
+  selectedAnnual() {
+    final package = state.annualPackage;
+    if (package == null) {
+      throw AssertionError("unexpected annual package is not exists");
+    }
+    state = state.copyWith(selectedPackage: package);
   }
 }
