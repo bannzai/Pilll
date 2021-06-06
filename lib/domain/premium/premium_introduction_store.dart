@@ -1,12 +1,13 @@
 import 'package:flutter/services.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:intl/intl.dart';
 import 'package:pilll/domain/premium/premium_introduction_state.dart';
 import 'package:pilll/error_log.dart';
 import 'package:pilll/service/user.dart';
 import 'package:purchases_flutter/purchases_flutter.dart';
 
 final premiumIntroductionStoreProvider =
-    StateNotifierProvider((ref) => PremiumIntroductionStore(
+    StateNotifierProvider.autoDispose((ref) => PremiumIntroductionStore(
           ref.watch(userServiceProvider),
         ));
 
@@ -58,5 +59,24 @@ class PremiumIntroductionStore extends StateNotifier<PremiumIntroductionState> {
       errorLogger.recordError(exception, stack);
       rethrow;
     }
+  }
+
+  String annualPlanName() {
+    return "年間プラン";
+  }
+
+  String monthlyPlanName() {
+    return "月額プラン";
+  }
+
+  String annualPriceString(Package package) {
+    final monthlyPrice = package.product.price / 12;
+    final monthlyPriceString =
+        NumberFormat.simpleCurrency().format(monthlyPrice);
+    return "${package.product.priceString} $monthlyPriceString/月";
+  }
+
+  String monthlyPriceString(Package package) {
+    return "${package.product.priceString}";
   }
 }
