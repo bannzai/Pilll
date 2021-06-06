@@ -411,7 +411,7 @@ class PremiumIntroductionPage extends HookWidget {
                       },
                   ),
                   TextSpan(
-                    text: "/",
+                    text: " / ",
                   ),
                   TextSpan(
                     text: "利用規約",
