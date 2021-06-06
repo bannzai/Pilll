@@ -222,12 +222,12 @@ class PremiumIntroductionPage extends HookWidget {
                   child: Container(
                     padding: EdgeInsets.fromLTRB(16, 16, 16, 16),
                     decoration: BoxDecoration(
-                      color: state.isSelectedAnnual
+                      color: state.isSelectedMonthly
                           ? Colors.transparent
                           : PilllColors.white,
                       borderRadius: BorderRadius.all(Radius.circular(4)),
                       border: Border.all(
-                        width: state.isSelectedAnnual ? 2 : 0.5,
+                        width: state.isSelectedMonthly ? 2 : 0.5,
                         color: PilllColors.secondary,
                       ),
                     ),

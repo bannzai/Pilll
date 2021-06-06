@@ -26,6 +26,9 @@ class PremiumIntroductionStore extends StateNotifier<PremiumIntroductionState> {
   _reset() {
     Future(() async {
       state = state.copyWith(offerings: await _fetchOfferings());
+      if (state.selectedPackage == null) {
+        state = state.copyWith(selectedPackage: state.annualPackage);
+      }
     });
   }
 
