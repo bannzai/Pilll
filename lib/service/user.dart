@@ -61,11 +61,16 @@ class UserService {
     );
   }
 
-  Future<void> _create(String uid) {
+  Future<void> _create(String uid) async {
     print("call create for $uid");
+    final sharedPreferences = await SharedPreferences.getInstance();
+    final anonymousUserID =
+        sharedPreferences.getString(StringKey.lastSigninAnonymousUID);
     return _database.userReference().set(
       {
-        UserFirestoreFieldKeys.anonymousUserID: uid,
+        if (anonymousUserID != null)
+          UserFirestoreFieldKeys.anonymousUserID: anonymousUserID,
+        UserFirestoreFieldKeys.userIDWhenCreateUser: uid,
       },
       SetOptions(merge: true),
     );
