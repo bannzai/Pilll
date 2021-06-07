@@ -40,6 +40,21 @@ class UserService {
     });
   }
 
+  Future<DocumentSnapshot> _fetchRawDocumentSnapshot() {
+    return _database.userReference().get();
+  }
+
+  recordUserIDHistory() {
+    Future(() async {
+      try {
+        final userDocumentSnapshot = await _fetchRawDocumentSnapshot();
+        final userDocumentID = userDocumentSnapshot.id;
+      } catch (error) {
+        print(error);
+      }
+    });
+  }
+
   Future<User> subscribe() {
     return _database
         .userReference()

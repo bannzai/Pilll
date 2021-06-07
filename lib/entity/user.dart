@@ -37,6 +37,10 @@ abstract class UserPrivate implements _$UserPrivate {
 }
 
 extension UserFirestoreFieldKeys on String {
+  static final userDocumentIDHistories = "userDocumentIDHistories";
+  static final anonymousUserIDHistories = "anonymousUserIDHistories";
+  static final firebaseCurrentUserIDHistories =
+      "firebaseCurrentUserIDHistories";
   static final userIDWhenCreateUser = "userIDWhenCreateUser";
   static final anonymousUserID = "anonymousUserID";
   static final settings = "settings";
