@@ -13,7 +13,7 @@ import 'package:pilll/service/user.dart';
 import 'package:pilll/state/initial_setting.dart';
 import 'package:riverpod/riverpod.dart';
 
-final initialSettingStoreProvider = StateNotifierProvider(
+final initialSettingStoreProvider = StateNotifierProvider.autoDispose(
   (ref) => InitialSettingStateStore(
     ref.watch(initialSettingServiceProvider),
     ref.watch(authServiceProvider),
