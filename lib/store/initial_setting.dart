@@ -51,6 +51,7 @@ class InitialSettingStateStore extends StateNotifier<InitialSettingState> {
       if (isAccountCooperationDidEnd) {
         final userService = UserService(DatabaseConnection(user.uid));
         await userService.prepare(user.uid);
+        await userService.recordUserIDs();
         errorLogger.setUserIdentifier(user.uid);
         firebaseAnalytics.setUserId(user.uid);
       }
