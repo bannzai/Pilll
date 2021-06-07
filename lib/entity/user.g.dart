@@ -42,7 +42,7 @@ _$_User _$_$_UserFromJson(Map<String, dynamic> json) {
 }
 
 Map<String, dynamic> _$_$_UserToJson(_$_User instance) => <String, dynamic>{
-      'settings': instance.setting,
+      'settings': instance.setting?.toJson(),
       'migratedFlutter': instance.migratedFlutter,
       'userIDWhenCreateUser': instance.userIDWhenCreateUser,
       'anonymousUserID': instance.anonymousUserID,

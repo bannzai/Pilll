@@ -51,6 +51,7 @@ extension UserFirestoreFieldKeys on String {
 @freezed
 abstract class User implements _$User {
   User._();
+  @JsonSerializable(explicitToJson: true)
   factory User({
     @JsonKey(name: "settings") Setting? setting,
     @Default(false) bool migratedFlutter,
