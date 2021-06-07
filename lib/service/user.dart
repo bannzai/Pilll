@@ -1,5 +1,6 @@
 import 'dart:io';
 
+import 'package:firebase_auth/firebase_auth.dart' as firebaseAuth;
 import 'package:pilll/database/database.dart';
 import 'package:pilll/entity/demographic.dart';
 import 'package:pilll/entity/package.dart';
@@ -44,11 +45,34 @@ class UserService {
     return _database.userReference().get();
   }
 
-  recordUserIDHistory() {
+  recordUserIDs() {
     Future(() async {
       try {
-        final userDocumentSnapshot = await _fetchRawDocumentSnapshot();
-        final userDocumentID = userDocumentSnapshot.id;
+        final document = await _fetchRawDocumentSnapshot();
+        final user = User.fromJson(document.data()!);
+        final documentID = document.id;
+        if (!user.userDocumentIDSets.contains(documentID)) {
+          user.userDocumentIDSets.add(documentID);
+        }
+
+        final sharedPreferences = await SharedPreferences.getInstance();
+        final lastSigninAnonymousUID =
+            sharedPreferences.getString(StringKey.lastSigninAnonymousUID);
+        if (lastSigninAnonymousUID != null &&
+            !user.anonymousUserIDSets.contains(lastSigninAnonymousUID)) {
+          user.anonymousUserIDSets.add(lastSigninAnonymousUID);
+        }
+        final firebaseCurrentUserID =
+            firebaseAuth.FirebaseAuth.instance.currentUser?.uid;
+        if (firebaseCurrentUserID != null &&
+            !user.firebaseCurrentUserIDSets.contains(firebaseCurrentUserID)) {
+          user.firebaseCurrentUserIDSets.add(firebaseCurrentUserID);
+        }
+
+        await _database.userReference().set(
+              user.toJson(),
+              SetOptions(merge: true),
+            );
       } catch (error) {
         print(error);
       }
