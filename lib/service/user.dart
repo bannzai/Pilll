@@ -1,5 +1,6 @@
 import 'dart:io';
 
+import 'package:firebase_auth/firebase_auth.dart' as firebaseAuth;
 import 'package:pilll/database/database.dart';
 import 'package:pilll/entity/demographic.dart';
 import 'package:pilll/entity/package.dart';
@@ -40,6 +41,44 @@ class UserService {
     });
   }
 
+  Future<DocumentSnapshot> _fetchRawDocumentSnapshot() {
+    return _database.userReference().get();
+  }
+
+  recordUserIDs() {
+    Future(() async {
+      try {
+        final document = await _fetchRawDocumentSnapshot();
+        final user = User.fromJson(document.data()!);
+        final documentID = document.id;
+        if (!user.userDocumentIDSets.contains(documentID)) {
+          user.userDocumentIDSets.add(documentID);
+        }
+
+        final sharedPreferences = await SharedPreferences.getInstance();
+        final lastSigninAnonymousUID =
+            sharedPreferences.getString(StringKey.lastSigninAnonymousUID);
+        if (lastSigninAnonymousUID != null &&
+            !user.anonymousUserIDSets.contains(lastSigninAnonymousUID)) {
+          user.anonymousUserIDSets.add(lastSigninAnonymousUID);
+        }
+        final firebaseCurrentUserID =
+            firebaseAuth.FirebaseAuth.instance.currentUser?.uid;
+        if (firebaseCurrentUserID != null &&
+            !user.firebaseCurrentUserIDSets.contains(firebaseCurrentUserID)) {
+          user.firebaseCurrentUserIDSets.add(firebaseCurrentUserID);
+        }
+
+        await _database.userReference().set(
+              user.toJson(),
+              SetOptions(merge: true),
+            );
+      } catch (error) {
+        print(error);
+      }
+    });
+  }
+
   Future<User> subscribe() {
     return _database
         .userReference()
@@ -61,11 +100,16 @@ class UserService {
     );
   }
 
-  Future<void> _create(String uid) {
+  Future<void> _create(String uid) async {
     print("call create for $uid");
+    final sharedPreferences = await SharedPreferences.getInstance();
+    final anonymousUserID =
+        sharedPreferences.getString(StringKey.lastSigninAnonymousUID);
     return _database.userReference().set(
       {
-        UserFirestoreFieldKeys.anonymousUserID: uid,
+        if (anonymousUserID != null)
+          UserFirestoreFieldKeys.anonymousUserID: anonymousUserID,
+        UserFirestoreFieldKeys.userIDWhenCreateUser: uid,
       },
       SetOptions(merge: true),
     );

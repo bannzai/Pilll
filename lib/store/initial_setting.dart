@@ -13,7 +13,7 @@ import 'package:pilll/service/user.dart';
 import 'package:pilll/state/initial_setting.dart';
 import 'package:riverpod/riverpod.dart';
 
-final initialSettingStoreProvider = StateNotifierProvider(
+final initialSettingStoreProvider = StateNotifierProvider.autoDispose(
   (ref) => InitialSettingStateStore(
     ref.watch(initialSettingServiceProvider),
     ref.watch(authServiceProvider),
@@ -51,6 +51,7 @@ class InitialSettingStateStore extends StateNotifier<InitialSettingState> {
       if (isAccountCooperationDidEnd) {
         final userService = UserService(DatabaseConnection(user.uid));
         await userService.prepare(user.uid);
+        await userService.recordUserIDs();
         errorLogger.setUserIdentifier(user.uid);
         firebaseAnalytics.setUserId(user.uid);
       }

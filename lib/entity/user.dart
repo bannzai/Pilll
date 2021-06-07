@@ -37,6 +37,10 @@ abstract class UserPrivate implements _$UserPrivate {
 }
 
 extension UserFirestoreFieldKeys on String {
+  static final userDocumentIDSets = "userDocumentIDSets";
+  static final anonymousUserIDSets = "anonymousUserIDSets";
+  static final firebaseCurrentUserIDSets = "firebaseCurrentUserIDSets";
+  static final userIDWhenCreateUser = "userIDWhenCreateUser";
   static final anonymousUserID = "anonymousUserID";
   static final settings = "settings";
   static final migratedFlutter = "migratedFlutter";
@@ -47,9 +51,15 @@ extension UserFirestoreFieldKeys on String {
 @freezed
 abstract class User implements _$User {
   User._();
+  @JsonSerializable(explicitToJson: true)
   factory User({
     @JsonKey(name: "settings") Setting? setting,
     @Default(false) bool migratedFlutter,
+    String? userIDWhenCreateUser,
+    String? anonymousUserID,
+    @Default([]) List<String> userDocumentIDSets,
+    @Default([]) List<String> anonymousUserIDSets,
+    @Default([]) List<String> firebaseCurrentUserIDSets,
   }) = _User;
 
   factory User.fromJson(Map<String, dynamic> json) => _$UserFromJson(json);
