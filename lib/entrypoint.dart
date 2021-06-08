@@ -45,7 +45,7 @@ Future<void> entrypoint() async {
 }
 
 Future<void> initPlatformState() async {
-  await Purchases.setDebugLogsEnabled(true);
+  await Purchases.setDebugLogsEnabled(Environment.isDevelopment);
   await Purchases.setup(Secret.revenueCatPublicAPIKey);
 }
 
