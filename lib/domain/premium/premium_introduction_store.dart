@@ -6,6 +6,7 @@ import 'package:intl/intl.dart';
 import 'package:pilll/domain/premium/premium_introduction_state.dart';
 import 'package:pilll/entity/user_error.dart';
 import 'package:pilll/error_log.dart';
+import 'package:pilll/purchases.dart';
 import 'package:pilll/service/user.dart';
 import 'package:purchases_flutter/purchases_flutter.dart';
 
@@ -13,8 +14,6 @@ final premiumIntroductionStoreProvider =
     StateNotifierProvider.autoDispose((ref) => PremiumIntroductionStore(
           ref.watch(userServiceProvider),
         ));
-
-const _premiumEntitlements = "Premium";
 
 class PremiumIntroductionStore extends StateNotifier<PremiumIntroductionState> {
   final UserService _userService;
@@ -51,7 +50,7 @@ class PremiumIntroductionStore extends StateNotifier<PremiumIntroductionState> {
     try {
       PurchaserInfo purchaserInfo = await Purchases.purchasePackage(package);
       final premiumEntitlement =
-          purchaserInfo.entitlements.all[_premiumEntitlements];
+          purchaserInfo.entitlements.all[premiumEntitlements];
       if (premiumEntitlement == null) {
         throw AssertionError("unexpected premium entitlements is not exists");
       }
@@ -77,7 +76,7 @@ class PremiumIntroductionStore extends StateNotifier<PremiumIntroductionState> {
   Future<void> restore() async {
     try {
       final purchaserInfo = await Purchases.restoreTransactions();
-      final entitlements = purchaserInfo.entitlements.all[_premiumEntitlements];
+      final entitlements = purchaserInfo.entitlements.all[premiumEntitlements];
       if (entitlements != null && entitlements.isActive) {
         state = state.copyWith(isCompletedRestore: true);
         print("done restoration");
