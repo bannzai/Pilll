@@ -87,6 +87,19 @@ class UserService {
         .asFuture();
   }
 
+  Future<void> updatePurchaseInfo(
+      bool isActivated, String? premiumPlanIdentifier) async {
+    await _database.userReference().set(
+        {UserFirestoreFieldKeys.isPremium: isActivated},
+        SetOptions(merge: true));
+    if (premiumPlanIdentifier != null) {
+      await _database.userPrivateReference().set({
+        UserPrivateFirestoreFieldKeys.latestPremiumPlanIdentifier:
+            premiumPlanIdentifier
+      });
+    }
+  }
+
   Future<void> deleteSettings() {
     return _database
         .userReference()
