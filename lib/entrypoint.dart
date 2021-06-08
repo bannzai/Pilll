@@ -39,14 +39,19 @@ Future<void> entrypoint() async {
   FlutterError.onError = FirebaseCrashlytics.instance.recordFlutterError;
   definedChannel();
   runZonedGuarded(() async {
-    await initPlatformState();
+    await initializePurchase();
     runApp(ProviderScope(child: App()));
   }, (error, stack) => FirebaseCrashlytics.instance.recordError(error, stack));
 }
 
-Future<void> initPlatformState() async {
+Future<void> initializePurchase() async {
   await Purchases.setDebugLogsEnabled(Environment.isDevelopment);
   await Purchases.setup(Secret.revenueCatPublicAPIKey);
+  Purchases.addPurchaserInfoUpdateListener(_purchaserInfoUpdated);
+}
+
+void _purchaserInfoUpdated(PurchaserInfo info) {
+  print('purchaserInfoUpdated: $info');
 }
 
 void connectToEmulator() {
