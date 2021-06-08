@@ -49,15 +49,7 @@ Stream<User> _subscribe() {
 }
 
 Future<User?> callSignin() async {
-  return _cacheOrAuth().then((user) async {
-    if (user == null) {
-      return null;
-    }
-    errorLogger.setUserIdentifier(user.uid);
-    firebaseAnalytics.setUserId(user.uid);
-    await Purchases.identify(user.uid);
-    return user;
-  });
+  return _cacheOrAuth();
 }
 
 Future<AuthInfo> cacheOrAuth() async {

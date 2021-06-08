@@ -6,7 +6,9 @@ import 'package:pilll/analytics.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/error/universal_error_page.dart';
+import 'package:pilll/error_log.dart';
 import 'package:pilll/global_method_channel.dart';
+import 'package:pilll/purchases.dart';
 import 'package:pilll/router/router.dart';
 import 'package:pilll/util/environment.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
@@ -31,15 +33,18 @@ Future<void> entrypoint() async {
   if (Environment.isLocal) {
     connectToEmulator();
   }
-  await callSignin();
-
   ErrorWidget.builder = (FlutterErrorDetails details) {
     return UniversalErrorPage(error: details.exception.toString());
   };
   FlutterError.onError = FirebaseCrashlytics.instance.recordFlutterError;
   definedChannel();
   runZonedGuarded(() async {
-    await initializePurchase();
+    final user = await callSignin();
+    if (user != null) {
+      await errorLogger.setUserIdentifier(user.uid);
+      await firebaseAnalytics.setUserId(user.uid);
+      await initializePurchase(user.uid);
+    }
     runApp(ProviderScope(child: App()));
   }, (error, stack) => FirebaseCrashlytics.instance.recordError(error, stack));
 }
