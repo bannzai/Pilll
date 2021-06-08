@@ -5,6 +5,7 @@ import 'package:pilll/auth/apple.dart';
 import 'package:pilll/auth/google.dart';
 import 'package:pilll/error_log.dart';
 import 'package:pilll/util/shared_preference/keys.dart';
+import 'package:purchases_flutter/purchases_flutter.dart';
 import 'package:riverpod/riverpod.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:pilll/auth/apple.dart' as apple;
@@ -48,12 +49,13 @@ Stream<User> _subscribe() {
 }
 
 Future<User?> callSignin() async {
-  return _cacheOrAuth().then((user) {
+  return _cacheOrAuth().then((user) async {
     if (user == null) {
       return null;
     }
     errorLogger.setUserIdentifier(user.uid);
     firebaseAnalytics.setUserId(user.uid);
+    await Purchases.identify(user.uid);
     return user;
   });
 }
