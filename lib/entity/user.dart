@@ -23,6 +23,7 @@ extension UserPrivateFirestoreFieldKeys on String {
   static final googleEmail = 'googleEmail';
   static final isLinkedGoogle = 'isLinkedGoogle';
   static final demographic = "demographic";
+  static final latestPremiumPlanIdentifier = "latestPremiumPlanIdentifier";
 }
 
 @freezed
@@ -46,6 +47,7 @@ extension UserFirestoreFieldKeys on String {
   static final migratedFlutter = "migratedFlutter";
   static final packageInfo = "packageInfo";
   static final isAnonymous = "isAnonymous";
+  static final isPremium = "isPremium";
 }
 
 @freezed
