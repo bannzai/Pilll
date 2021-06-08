@@ -75,7 +75,7 @@ class PremiumIntroductionStore extends StateNotifier<PremiumIntroductionState> {
       if (entitlements != null && entitlements.isActive) {
         state = state.copyWith(isCompletedRestore: true);
         print("done restoration");
-// TODO:
+        await purchaserInfoUpdated(purchaserInfo);
         return;
       }
       throw UserDisplayedError("以前の購入情報が見つかりません。アカウントをお確かめの上再度お試しください");
