@@ -49,14 +49,10 @@ Future<void> entrypoint() async {
   }, (error, stack) => FirebaseCrashlytics.instance.recordError(error, stack));
 }
 
-Future<void> initializePurchase() async {
+Future<void> initializePurchase(String uid) async {
   await Purchases.setDebugLogsEnabled(Environment.isDevelopment);
-  await Purchases.setup(Secret.revenueCatPublicAPIKey);
-  Purchases.addPurchaserInfoUpdateListener(_purchaserInfoUpdated);
-}
-
-void _purchaserInfoUpdated(PurchaserInfo info) {
-  print('purchaserInfoUpdated: $info');
+  await Purchases.setup(Secret.revenueCatPublicAPIKey, appUserId: uid);
+  Purchases.addPurchaserInfoUpdateListener(purchaserInfoUpdated);
 }
 
 void connectToEmulator() {
