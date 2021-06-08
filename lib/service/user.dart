@@ -87,16 +87,35 @@ class UserService {
         .asFuture();
   }
 
-  Future<void> updatePurchaseInfo(
-      bool isActivated, String? premiumPlanIdentifier) async {
-    await _database.userReference().set(
-        {UserFirestoreFieldKeys.isPremium: isActivated},
-        SetOptions(merge: true));
-    if (premiumPlanIdentifier != null) {
-      await _database.userPrivateReference().set({
+  Future<void> updatePurchaseInfo({
+    required bool isActivated,
+    required String? entitlementIdentifier,
+    required String? premiumPlanIdentifier,
+    required String purchaseAppID,
+    required List<String> activeSubscriptions,
+    required String? originalPurchaseDate,
+  }) async {
+    await _database.userReference().set({
+      UserFirestoreFieldKeys.isPremium: isActivated,
+      UserFirestoreFieldKeys.purchaseAppID: purchaseAppID
+    }, SetOptions(merge: true));
+    final privates = {
+      if (premiumPlanIdentifier != null)
         UserPrivateFirestoreFieldKeys.latestPremiumPlanIdentifier:
-            premiumPlanIdentifier
-      });
+            premiumPlanIdentifier,
+      if (originalPurchaseDate != null)
+        UserPrivateFirestoreFieldKeys.originalPurchaseDate:
+            originalPurchaseDate,
+      if (activeSubscriptions.isNotEmpty)
+        UserPrivateFirestoreFieldKeys.activeSubscriptions: activeSubscriptions,
+      if (entitlementIdentifier != null)
+        UserPrivateFirestoreFieldKeys.entitlementIdentifier:
+            entitlementIdentifier,
+    };
+    if (privates.isNotEmpty) {
+      await _database
+          .userPrivateReference()
+          .set({...privates}, SetOptions(merge: true));
     }
   }
 

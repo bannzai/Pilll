@@ -22,7 +22,13 @@ Future<void> purchaserInfoUpdated(PurchaserInfo info) async {
       premiumEntitlement == null ? false : premiumEntitlement.isActive;
   try {
     await userService.updatePurchaseInfo(
-        isActivated, premiumEntitlement?.productIdentifier);
+      isActivated: isActivated,
+      entitlementIdentifier: premiumEntitlement?.identifier,
+      premiumPlanIdentifier: premiumEntitlement?.productIdentifier,
+      purchaseAppID: info.originalAppUserId,
+      activeSubscriptions: info.activeSubscriptions,
+      originalPurchaseDate: info.originalPurchaseDate,
+    );
   } catch (exception, stack) {
     errorLogger.recordError(exception, stack);
   }
