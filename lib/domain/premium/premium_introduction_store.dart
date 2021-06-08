@@ -57,7 +57,7 @@ class PremiumIntroductionStore extends StateNotifier<PremiumIntroductionState> {
       if (!premiumEntitlement.isActive) {
         throw UserDisplayedError("課金の有効化が完了しておりません。しばらく時間をおいてからご確認ください");
       }
-      return;
+      await purchaserInfoUpdated(purchaserInfo);
     } on PlatformException catch (exception, stack) {
       var errorCode = PurchasesErrorHelper.getErrorCode(exception);
       if (errorCode != PurchasesErrorCode.purchaseCancelledError) {

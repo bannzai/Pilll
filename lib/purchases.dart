@@ -7,7 +7,7 @@ import 'package:purchases_flutter/purchases_flutter.dart';
 
 const premiumEntitlements = "Premium";
 
-void purchaserInfoUpdated(PurchaserInfo info) async {
+Future<void> purchaserInfoUpdated(PurchaserInfo info) async {
   final uid = FirebaseAuth.instance.currentUser?.uid;
   if (uid == null) {
     errorLogger.recordError(
