@@ -7,18 +7,13 @@ import 'package:pilll/domain/premium/premium_introduction_state.dart';
 import 'package:pilll/entity/user_error.dart';
 import 'package:pilll/error_log.dart';
 import 'package:pilll/purchases.dart';
-import 'package:pilll/service/user.dart';
 import 'package:purchases_flutter/purchases_flutter.dart';
 
 final premiumIntroductionStoreProvider =
-    StateNotifierProvider.autoDispose((ref) => PremiumIntroductionStore(
-          ref.watch(userServiceProvider),
-        ));
+    StateNotifierProvider.autoDispose((ref) => PremiumIntroductionStore());
 
 class PremiumIntroductionStore extends StateNotifier<PremiumIntroductionState> {
-  final UserService _userService;
-  PremiumIntroductionStore(this._userService)
-      : super(PremiumIntroductionState()) {
+  PremiumIntroductionStore() : super(PremiumIntroductionState()) {
     _reset();
   }
 
