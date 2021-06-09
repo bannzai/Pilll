@@ -13,6 +13,7 @@ secret:
 	echo $(XCCONFIG_SECRET_DEVELOPMENT) | base64 -D > ios/Flutter/Development-Secret.xcconfig
 	echo $(XCCONFIG_SECRET_PRODUCTION) | base64 -D > ios/Flutter/Production-Secret.xcconfig
 	echo $(STOREKIT_TESTING_CONFIGURATION_PUBLIC_CERT) | base64 -D > ios/Runner/StoreKitTestCertificate.cer
+	./scripts/secret.sh
 	./android/scripts/key_properties.sh
 
 .PHONY: secret-backup
@@ -24,5 +25,6 @@ secret-backup:
 	mv ios/Flutter/Development-Secret.xcconfig ios/Flutter/_Development-Secret.xcconfig
 	mv ios/Flutter/Production-Secret.xcconfig ios/Flutter/_Production-Secret.xcconfig
 	mv ios/Runner/StoreKitTestCertificate.cer ios/Runner/_StoreKitTestCertificate.cer
+	mv lib/app/secret.dart lib/app/_secret.dart
 	mv android/key.properties android/_key.properties
 
