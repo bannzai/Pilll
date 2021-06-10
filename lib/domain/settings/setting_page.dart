@@ -259,6 +259,10 @@ class SettingPage extends HookWidget {
               settingStore
                   .modifyIsOnReminder(!settingEntity.isOnReminder)
                   .then((state) {
+                final settingEntity = state.entity;
+                if (settingEntity == null) {
+                  return;
+                }
                 ScaffoldMessenger.of(context).showSnackBar(
                   SnackBar(
                     duration: Duration(seconds: 2),
