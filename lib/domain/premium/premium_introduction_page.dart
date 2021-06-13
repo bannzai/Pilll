@@ -72,7 +72,7 @@ class PremiumIntroductionPage extends HookWidget {
                         text: state.doneButtonText,
                         onPressed: () async {
                           try {
-                            store.purchase();
+                            await store.purchase();
                           } catch (error) {
                             if (error is UserDisplayedError) {
                               showErrorAlertWithError(context, error);
