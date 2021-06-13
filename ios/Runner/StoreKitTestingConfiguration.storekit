@@ -38,7 +38,7 @@
               "locale" : "ja"
             }
           ],
-          "productID" : "pilll_3000yen_1year",
+          "productID" : "pilll_dev_3000yen_1year",
           "recurringSubscriptionPeriod" : "P1Y",
           "referenceName" : "Annual 3000yen",
           "subscriptionGroupID" : "669B819C",
@@ -65,7 +65,7 @@
               "locale" : "ja"
             }
           ],
-          "productID" : "pilll_300yen_1month",
+          "productID" : "pilll_dev_300yen_1month",
           "recurringSubscriptionPeriod" : "P1M",
           "referenceName" : "Monthly 300yen",
           "subscriptionGroupID" : "669B819C",
@@ -101,7 +101,7 @@
               "locale" : "ja"
             }
           ],
-          "productID" : "pilll_3600yen_1year",
+          "productID" : "pilll_dev_3600yen_1year",
           "recurringSubscriptionPeriod" : "P1Y",
           "referenceName" : "Annual 3600yen",
           "subscriptionGroupID" : "9B460171",
@@ -128,7 +128,7 @@
               "locale" : "ja"
             }
           ],
-          "productID" : "pilll_480yen_1month",
+          "productID" : "pilll_dev_480yen_1month",
           "recurringSubscriptionPeriod" : "P1M",
           "referenceName" : "Monthly 480yen",
           "subscriptionGroupID" : "9B460171",
