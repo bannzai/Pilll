@@ -7,7 +7,8 @@
 
   ],
   "settings" : {
-    "_storefront" : "JPN"
+    "_storefront" : "JPN",
+    "_timeRate" : 4
   },
   "subscriptionGroups" : [
     {

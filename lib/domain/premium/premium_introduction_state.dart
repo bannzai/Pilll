@@ -50,14 +50,14 @@ abstract class PremiumIntroductionState implements _$PremiumIntroductionState {
   bool get isSelectedAnnual => identical(annualPackage, selectedPackage);
   bool get isSelectedMonthly => identical(monthlyPackage, selectedPackage);
   String get doneButtonText {
+    if (isPremium) {
+      return "既にプレミアムに登録済みです";
+    }
     if (isSelectedAnnual) {
       return "年間プランでプレミアムに登録";
     }
     if (isSelectedMonthly) {
       return "月額プランでプレミアムに登録";
-    }
-    if (isPremium) {
-      return "既にプレミアムに登録済みです";
     }
     return "";
   }
