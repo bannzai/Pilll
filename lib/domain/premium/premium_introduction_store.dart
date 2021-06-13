@@ -1,3 +1,4 @@
+import 'dart:async';
 import 'dart:io';
 
 import 'package:flutter/services.dart';
@@ -6,25 +7,33 @@ import 'package:intl/intl.dart';
 import 'package:pilll/analytics.dart';
 import 'package:pilll/domain/premium/premium_introduction_state.dart';
 import 'package:pilll/entity/user_error.dart';
-import 'package:pilll/error/universal_error_page.dart';
 import 'package:pilll/error_log.dart';
 import 'package:pilll/purchases.dart';
+import 'package:pilll/service/user.dart';
 import 'package:purchases_flutter/purchases_flutter.dart';
 
-final premiumIntroductionStoreProvider =
-    StateNotifierProvider.autoDispose((ref) => PremiumIntroductionStore());
+final premiumIntroductionStoreProvider = StateNotifierProvider.autoDispose(
+    (ref) => PremiumIntroductionStore(ref.watch(userServiceProvider)));
 
 class PremiumIntroductionStore extends StateNotifier<PremiumIntroductionState> {
-  PremiumIntroductionStore() : super(PremiumIntroductionState()) {
+  final UserService _userService;
+  PremiumIntroductionStore(this._userService)
+      : super(PremiumIntroductionState()) {
     _reset();
   }
 
   _reset() {
     Future(() async {
-      state = state.copyWith(offerings: await _fetchOfferings());
-      if (state.selectedPackage == null) {
-        state = state.copyWith(selectedPackage: state.annualPackage);
-      }
+      _subscribe();
+      _userService.fetch().then((value) {
+        state = state.copyWith(isPremium: value.isPremium);
+      });
+      _fetchOfferings().then((value) {
+        state = state.copyWith(offerings: value);
+        if (state.selectedPackage == null) {
+          state = state.copyWith(selectedPackage: state.annualPackage);
+        }
+      });
     });
   }
 
@@ -37,6 +46,14 @@ class PremiumIntroductionStore extends StateNotifier<PremiumIntroductionState> {
       print(exception);
       rethrow;
     }
+  }
+
+  StreamSubscription? _userStreamCanceller;
+  _subscribe() {
+    _userStreamCanceller?.cancel();
+    _userStreamCanceller = _userService.subscribe().listen((event) {
+      state = state.copyWith(isPremium: event.isPremium);
+    });
   }
 
   Future<void> purchase() async {
