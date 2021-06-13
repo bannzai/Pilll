@@ -79,12 +79,11 @@ class UserService {
     });
   }
 
-  Future<User> subscribe() {
+  Stream<User> subscribe() {
     return _database
         .userReference()
         .snapshots(includeMetadataChanges: true)
-        .listen((event) => User.fromJson(event.data()!))
-        .asFuture();
+        .map((event) => User.fromJson(event.data()!));
   }
 
   Future<void> updatePurchaseInfo({
