@@ -70,17 +70,19 @@ class PremiumIntroductionPage extends HookWidget {
                     child: Center(
                       child: PrimaryButton(
                         text: state.doneButtonText,
-                        onPressed: () async {
-                          try {
-                            await store.purchase();
-                          } catch (error) {
-                            if (error is UserDisplayedError) {
-                              showErrorAlertWithError(context, error);
-                            } else {
-                              rootKey.currentState?.onError(error);
-                            }
-                          }
-                        },
+                        onPressed: state.isPremium
+                            ? null
+                            : () async {
+                                try {
+                                  await store.purchase();
+                                } catch (error) {
+                                  if (error is UserDisplayedError) {
+                                    showErrorAlertWithError(context, error);
+                                  } else {
+                                    rootKey.currentState?.onError(error);
+                                  }
+                                }
+                              },
                       ),
                     ),
                   ),
