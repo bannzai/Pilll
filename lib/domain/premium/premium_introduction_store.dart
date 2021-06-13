@@ -56,6 +56,13 @@ class PremiumIntroductionStore extends StateNotifier<PremiumIntroductionState> {
     });
   }
 
+  @override
+  void dispose() {
+    _userStreamCanceller?.cancel();
+    _userStreamCanceller = null;
+    super.dispose();
+  }
+
   Future<void> purchase() async {
     final package = state.selectedPackage;
     if (package == null) {
