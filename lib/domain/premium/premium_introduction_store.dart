@@ -121,7 +121,7 @@ class PremiumIntroductionStore extends StateNotifier<PremiumIntroductionState> {
         return UserDisplayedError("このデバイスで購入が許可されていません");
       case PurchasesErrorCode.purchaseInvalidError:
         // See more details: https://docs.revenuecat.com/docs/errors#-purchase_invalid
-        return UserDisplayedError("支払いに失敗しました。有効な支払い方法かをご確認の上再度お試しください");
+        return UserDisplayedError("支払いに失敗しました。有効な支払い方法かどうかをご確認の上再度お試しください");
       case PurchasesErrorCode.productNotAvailableForPurchaseError:
         // Maybe missed implement or User references older payment product.
         // See more details: https://docs.revenuecat.com/docs/errors#-product_not_available_for_purchase
