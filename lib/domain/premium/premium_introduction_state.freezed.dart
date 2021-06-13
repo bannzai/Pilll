@@ -19,11 +19,13 @@ class _$PremiumIntroductionStateTearOff {
   _PremiumIntroductionState call(
       {Offerings? offerings,
       Package? selectedPackage,
-      bool isCompletedRestore = false}) {
+      bool isCompletedRestore = false,
+      bool isPremium = false}) {
     return _PremiumIntroductionState(
       offerings: offerings,
       selectedPackage: selectedPackage,
       isCompletedRestore: isCompletedRestore,
+      isPremium: isPremium,
     );
   }
 }
@@ -36,6 +38,7 @@ mixin _$PremiumIntroductionState {
   Offerings? get offerings => throw _privateConstructorUsedError;
   Package? get selectedPackage => throw _privateConstructorUsedError;
   bool get isCompletedRestore => throw _privateConstructorUsedError;
+  bool get isPremium => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $PremiumIntroductionStateCopyWith<PremiumIntroductionState> get copyWith =>
@@ -50,7 +53,8 @@ abstract class $PremiumIntroductionStateCopyWith<$Res> {
   $Res call(
       {Offerings? offerings,
       Package? selectedPackage,
-      bool isCompletedRestore});
+      bool isCompletedRestore,
+      bool isPremium});
 }
 
 /// @nodoc
@@ -67,6 +71,7 @@ class _$PremiumIntroductionStateCopyWithImpl<$Res>
     Object? offerings = freezed,
     Object? selectedPackage = freezed,
     Object? isCompletedRestore = freezed,
+    Object? isPremium = freezed,
   }) {
     return _then(_value.copyWith(
       offerings: offerings == freezed
@@ -80,6 +85,10 @@ class _$PremiumIntroductionStateCopyWithImpl<$Res>
       isCompletedRestore: isCompletedRestore == freezed
           ? _value.isCompletedRestore
           : isCompletedRestore // ignore: cast_nullable_to_non_nullable
+              as bool,
+      isPremium: isPremium == freezed
+          ? _value.isPremium
+          : isPremium // ignore: cast_nullable_to_non_nullable
               as bool,
     ));
   }
@@ -95,7 +104,8 @@ abstract class _$PremiumIntroductionStateCopyWith<$Res>
   $Res call(
       {Offerings? offerings,
       Package? selectedPackage,
-      bool isCompletedRestore});
+      bool isCompletedRestore,
+      bool isPremium});
 }
 
 /// @nodoc
@@ -115,6 +125,7 @@ class __$PremiumIntroductionStateCopyWithImpl<$Res>
     Object? offerings = freezed,
     Object? selectedPackage = freezed,
     Object? isCompletedRestore = freezed,
+    Object? isPremium = freezed,
   }) {
     return _then(_PremiumIntroductionState(
       offerings: offerings == freezed
@@ -129,6 +140,10 @@ class __$PremiumIntroductionStateCopyWithImpl<$Res>
           ? _value.isCompletedRestore
           : isCompletedRestore // ignore: cast_nullable_to_non_nullable
               as bool,
+      isPremium: isPremium == freezed
+          ? _value.isPremium
+          : isPremium // ignore: cast_nullable_to_non_nullable
+              as bool,
     ));
   }
 }
@@ -137,7 +152,10 @@ class __$PremiumIntroductionStateCopyWithImpl<$Res>
 
 class _$_PremiumIntroductionState extends _PremiumIntroductionState {
   _$_PremiumIntroductionState(
-      {this.offerings, this.selectedPackage, this.isCompletedRestore = false})
+      {this.offerings,
+      this.selectedPackage,
+      this.isCompletedRestore = false,
+      this.isPremium = false})
       : super._();
 
   @override
@@ -147,10 +165,13 @@ class _$_PremiumIntroductionState extends _PremiumIntroductionState {
   @JsonKey(defaultValue: false)
   @override
   final bool isCompletedRestore;
+  @JsonKey(defaultValue: false)
+  @override
+  final bool isPremium;
 
   @override
   String toString() {
-    return 'PremiumIntroductionState(offerings: $offerings, selectedPackage: $selectedPackage, isCompletedRestore: $isCompletedRestore)';
+    return 'PremiumIntroductionState(offerings: $offerings, selectedPackage: $selectedPackage, isCompletedRestore: $isCompletedRestore, isPremium: $isPremium)';
   }
 
   @override
@@ -165,7 +186,10 @@ class _$_PremiumIntroductionState extends _PremiumIntroductionState {
                     .equals(other.selectedPackage, selectedPackage)) &&
             (identical(other.isCompletedRestore, isCompletedRestore) ||
                 const DeepCollectionEquality()
-                    .equals(other.isCompletedRestore, isCompletedRestore)));
+                    .equals(other.isCompletedRestore, isCompletedRestore)) &&
+            (identical(other.isPremium, isPremium) ||
+                const DeepCollectionEquality()
+                    .equals(other.isPremium, isPremium)));
   }
 
   @override
@@ -173,7 +197,8 @@ class _$_PremiumIntroductionState extends _PremiumIntroductionState {
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(offerings) ^
       const DeepCollectionEquality().hash(selectedPackage) ^
-      const DeepCollectionEquality().hash(isCompletedRestore);
+      const DeepCollectionEquality().hash(isCompletedRestore) ^
+      const DeepCollectionEquality().hash(isPremium);
 
   @JsonKey(ignore: true)
   @override
@@ -186,7 +211,8 @@ abstract class _PremiumIntroductionState extends PremiumIntroductionState {
   factory _PremiumIntroductionState(
       {Offerings? offerings,
       Package? selectedPackage,
-      bool isCompletedRestore}) = _$_PremiumIntroductionState;
+      bool isCompletedRestore,
+      bool isPremium}) = _$_PremiumIntroductionState;
   _PremiumIntroductionState._() : super._();
 
   @override
@@ -195,6 +221,8 @@ abstract class _PremiumIntroductionState extends PremiumIntroductionState {
   Package? get selectedPackage => throw _privateConstructorUsedError;
   @override
   bool get isCompletedRestore => throw _privateConstructorUsedError;
+  @override
+  bool get isPremium => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$PremiumIntroductionStateCopyWith<_PremiumIntroductionState> get copyWith =>
