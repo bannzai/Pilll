@@ -7,11 +7,21 @@ import 'package:pilll/inquiry/inquiry.dart';
 import 'package:flutter/material.dart';
 
 class UniversalErrorPage extends StatelessWidget {
-  final String error;
+  final String? error;
+  final Widget child;
+  final VoidCallback reload;
 
-  const UniversalErrorPage({Key? key, required this.error}) : super(key: key);
+  const UniversalErrorPage({
+    Key? key,
+    required this.error,
+    required this.child,
+    required this.reload,
+  }) : super(key: key);
   @override
   Widget build(BuildContext context) {
+    if (error == null) {
+      return child;
+    }
     return Scaffold(
       backgroundColor: PilllColors.background,
       body: Center(
