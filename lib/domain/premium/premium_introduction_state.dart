@@ -56,6 +56,9 @@ abstract class PremiumIntroductionState implements _$PremiumIntroductionState {
     if (isSelectedMonthly) {
       return "月額プランでプレミアムに登録";
     }
+    if (isPremium) {
+      return "既にプレミアムに登録済みです";
+    }
     return "";
   }
 }
