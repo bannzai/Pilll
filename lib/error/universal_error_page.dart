@@ -8,15 +8,10 @@ import 'package:flutter/material.dart';
 
 class UniversalErrorPage extends StatelessWidget {
   final String error;
-  final Widget? child;
 
-  const UniversalErrorPage({Key? key, required this.error, this.child})
-      : super(key: key);
+  const UniversalErrorPage({Key? key, required this.error}) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    if (this.child != null) {
-      return child!;
-    }
     return Scaffold(
       backgroundColor: PilllColors.background,
       body: Center(
