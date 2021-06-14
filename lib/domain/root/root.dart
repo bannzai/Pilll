@@ -63,7 +63,13 @@ class RootState extends State<Root> {
   @override
   Widget build(BuildContext context) {
     if (error != null) {
-      return UniversalErrorPage(error: error.toString());
+      return UniversalErrorPage(
+        error: error.toString(),
+        child: null,
+        reload: () {
+          reloadRoot();
+        },
+      );
     }
     if (screenType == null) {
       return ScaffoldIndicator();
@@ -92,7 +98,13 @@ class RootState extends State<Root> {
               error.toString() +
               "error: ${error.toString()}\n" +
               stacktrace.toString();
-          return UniversalErrorPage(error: displayedError);
+          return UniversalErrorPage(
+            error: displayedError,
+            child: null,
+            reload: () {
+              rootKey.currentState?.reloadRoot();
+            },
+          );
         });
       }),
     );

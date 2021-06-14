@@ -32,7 +32,13 @@ Future<void> entrypoint() async {
   await callSignin();
 
   ErrorWidget.builder = (FlutterErrorDetails details) {
-    return UniversalErrorPage(error: details.exception.toString());
+    return UniversalErrorPage(
+      error: details.exception.toString(),
+      child: Container(),
+      reload: () {
+        rootKey.currentState?.reloadRoot();
+      },
+    );
   };
   FlutterError.onError = FirebaseCrashlytics.instance.recordFlutterError;
   definedChannel();

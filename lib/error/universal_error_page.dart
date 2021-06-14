@@ -8,7 +8,7 @@ import 'package:flutter/material.dart';
 
 class UniversalErrorPage extends StatelessWidget {
   final String? error;
-  final Widget child;
+  final Widget? child;
   final VoidCallback reload;
 
   const UniversalErrorPage({
@@ -19,7 +19,9 @@ class UniversalErrorPage extends StatelessWidget {
   }) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    if (error == null) {
+    final child = this.child;
+    final error = this.error;
+    if (error == null && child != null) {
       return child;
     }
     return Scaffold(
