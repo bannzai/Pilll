@@ -23,7 +23,6 @@ Future<void> entrypoint() async {
   initializeDateFormatting('ja_JP');
   await Firebase.initializeApp();
 
-  // MEMO: FirebaseCrashlytics#recordFlutterError called dumpErrorToConsole in function.
   if (Environment.isLocal) {
     connectToEmulator();
   }
@@ -38,6 +37,7 @@ Future<void> entrypoint() async {
       },
     );
   };
+  // MEMO: FirebaseCrashlytics#recordFlutterError called dumpErrorToConsole in function.
   FlutterError.onError = FirebaseCrashlytics.instance.recordFlutterError;
   definedChannel();
   runZonedGuarded(() {
