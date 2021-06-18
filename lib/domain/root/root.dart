@@ -41,7 +41,7 @@ class RootState extends State<Root> {
     });
   }
 
-  reloadRoot() {
+  reload() {
     setState(() {
       screenType = null;
       _auth();
@@ -62,7 +62,7 @@ class RootState extends State<Root> {
     return UniversalErrorPage(
       error: this._error,
       reload: () {
-        reloadRoot();
+        reload();
       },
       child: HUD(
         key: hudKey,
@@ -92,7 +92,7 @@ class RootState extends State<Root> {
               error: displayedError,
               child: null,
               reload: () {
-                rootKey.currentState?.reloadRoot();
+                rootKey.currentState?.reload();
               },
             );
           });

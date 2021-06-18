@@ -33,7 +33,7 @@ Future<void> entrypoint() async {
       error: details.exception.toString(),
       child: Container(),
       reload: () {
-        rootKey.currentState?.reloadRoot();
+        rootKey.currentState?.reload();
       },
     );
   };
