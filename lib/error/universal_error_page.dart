@@ -2,24 +2,40 @@ import 'package:pilll/analytics.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
-import 'package:pilll/domain/root/root.dart';
 import 'package:pilll/inquiry/inquiry.dart';
 import 'package:flutter/material.dart';
 
-class UniversalErrorPage extends StatelessWidget {
-  final dynamic? error;
+class UniversalErrorPage extends StatefulWidget {
   final Widget? child;
   final VoidCallback reload;
 
   const UniversalErrorPage({
     Key? key,
-    required this.error,
     required this.child,
     required this.reload,
   }) : super(key: key);
+
+  static _UniversalErrorPageState of(BuildContext context) {
+    final state = context.findAncestorStateOfType<_UniversalErrorPageState>();
+    if (state == null) {
+      throw AssertionError('''
+      Not found UniversalError from this context: $context
+      The context should contains UniversalError widget into current widget tree
+      ''');
+    }
+    return state;
+  }
+
+  @override
+  _UniversalErrorPageState createState() => _UniversalErrorPageState();
+}
+
+class _UniversalErrorPageState extends State<UniversalErrorPage> {
+  dynamic? error;
+
   @override
   Widget build(BuildContext context) {
-    final child = this.child;
+    final child = this.widget.child;
     final error = this.error;
     if (error == null && child != null) {
       return child;
@@ -51,7 +67,10 @@ class UniversalErrorPage extends StatelessWidget {
                     style: FontType.assisting.merge(TextColorStyle.black)),
                 onPressed: () {
                   analytics.logEvent(name: "reload_button_pressed");
-                  rootKey.currentState?.reload();
+                  setState(() {
+                    this.error = null;
+                  });
+                  this.widget.reload();
                 },
               ),
               TextButton.icon(
