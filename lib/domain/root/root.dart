@@ -26,12 +26,7 @@ class Root extends StatefulWidget {
 enum ScreenType { home, initialSetting }
 
 class RootState extends State<Root> {
-  dynamic? error;
-  onError(dynamic error) {
-    setState(() {
-      this.error = error;
-    });
-  }
+  dynamic _error;
 
   ScreenType? screenType;
   showHome() {
@@ -49,7 +44,6 @@ class RootState extends State<Root> {
   reloadRoot() {
     setState(() {
       screenType = null;
-      error = null;
       _auth();
     });
   }
@@ -62,51 +56,48 @@ class RootState extends State<Root> {
 
   @override
   Widget build(BuildContext context) {
-    if (error != null) {
-      return UniversalErrorPage(
-        error: error.toString(),
-        child: null,
-        reload: () {
-          reloadRoot();
-        },
-      );
-    }
     if (screenType == null) {
       return ScaffoldIndicator();
     }
-    return HUD(
-      key: hudKey,
-      child: Consumer(builder: (context, watch, child) {
-        return watch(authStateStreamProvider).when(data: (snapshot) {
-          switch (screenType) {
-            case ScreenType.home:
-              return HomePage(key: homeKey);
-            case ScreenType.initialSetting:
-              return InitialSetting1PageRoute.screen();
-            default:
-              return ScaffoldIndicator();
-          }
-        }, loading: () {
-          return ScaffoldIndicator();
-        }, error: (error, stacktrace) {
-          print(error);
-          print(stacktrace);
-          errorLogger.recordError(error, stacktrace);
-          final displayedError = ErrorMessages.connection +
-              "\n" +
-              "errorType: ${error.runtimeType.toString()}\n" +
-              error.toString() +
-              "error: ${error.toString()}\n" +
-              stacktrace.toString();
-          return UniversalErrorPage(
-            error: displayedError,
-            child: null,
-            reload: () {
-              rootKey.currentState?.reloadRoot();
-            },
-          );
-        });
-      }),
+    return UniversalErrorPage(
+      error: this._error,
+      reload: () {
+        reloadRoot();
+      },
+      child: HUD(
+        key: hudKey,
+        child: Consumer(builder: (context, watch, child) {
+          return watch(authStateStreamProvider).when(data: (snapshot) {
+            switch (screenType) {
+              case ScreenType.home:
+                return HomePage(key: homeKey);
+              case ScreenType.initialSetting:
+                return InitialSetting1PageRoute.screen();
+              default:
+                return ScaffoldIndicator();
+            }
+          }, loading: () {
+            return ScaffoldIndicator();
+          }, error: (error, stacktrace) {
+            print(error);
+            print(stacktrace);
+            errorLogger.recordError(error, stacktrace);
+            final displayedError = ErrorMessages.connection +
+                "\n" +
+                "errorType: ${error.runtimeType.toString()}\n" +
+                error.toString() +
+                "error: ${error.toString()}\n" +
+                stacktrace.toString();
+            return UniversalErrorPage(
+              error: displayedError,
+              child: null,
+              reload: () {
+                rootKey.currentState?.reloadRoot();
+              },
+            );
+          });
+        }),
+      ),
     );
   }
 
@@ -146,11 +137,13 @@ class RootState extends State<Root> {
       });
     }).catchError((error) {
       errorLogger.recordError(error, StackTrace.current);
-      onError(UserDisplayedError(ErrorMessages.connection +
-          "\n" +
-          "errorType: ${error.runtimeType.toString()}\n" +
-          "error: ${error.toString()}\n" +
-          StackTrace.current.toString()));
+      setState(() {
+        this._error = UserDisplayedError(ErrorMessages.connection +
+            "\n" +
+            "errorType: ${error.runtimeType.toString()}\n" +
+            "error: ${error.toString()}\n" +
+            StackTrace.current.toString());
+      });
     });
   }
 }
