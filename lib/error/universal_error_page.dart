@@ -6,11 +6,13 @@ import 'package:pilll/inquiry/inquiry.dart';
 import 'package:flutter/material.dart';
 
 class UniversalErrorPage extends StatefulWidget {
+  final dynamic? initialError;
   final Widget? child;
   final VoidCallback reload;
 
   const UniversalErrorPage({
     Key? key,
+    this.initialError,
     required this.child,
     required this.reload,
   }) : super(key: key);
@@ -32,6 +34,12 @@ class UniversalErrorPage extends StatefulWidget {
 
 class _UniversalErrorPageState extends State<UniversalErrorPage> {
   dynamic? _error;
+
+  @override
+  void initState() {
+    _error = this.widget.initialError;
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
