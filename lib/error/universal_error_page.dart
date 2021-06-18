@@ -31,12 +31,12 @@ class UniversalErrorPage extends StatefulWidget {
 }
 
 class _UniversalErrorPageState extends State<UniversalErrorPage> {
-  dynamic? error;
+  dynamic? _error;
 
   @override
   Widget build(BuildContext context) {
     final child = this.widget.child;
-    final error = this.error;
+    final error = this._error;
     if (error == null && child != null) {
       return child;
     }
@@ -68,7 +68,7 @@ class _UniversalErrorPageState extends State<UniversalErrorPage> {
                 onPressed: () {
                   analytics.logEvent(name: "reload_button_pressed");
                   setState(() {
-                    this.error = null;
+                    this._error = null;
                   });
                   this.widget.reload();
                 },
@@ -94,7 +94,7 @@ class _UniversalErrorPageState extends State<UniversalErrorPage> {
 
   setError(dynamic error) {
     setState(() {
-      this.error = error;
+      this._error = error;
     });
   }
 }
