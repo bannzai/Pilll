@@ -91,4 +91,10 @@ class _UniversalErrorPageState extends State<UniversalErrorPage> {
       ),
     );
   }
+
+  setError(dynamic error) {
+    setState(() {
+      this.error = error;
+    });
+  }
 }

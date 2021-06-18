@@ -26,8 +26,6 @@ class Root extends StatefulWidget {
 enum ScreenType { home, initialSetting }
 
 class RootState extends State<Root> {
-  dynamic _error;
-
   ScreenType? screenType;
   showHome() {
     setState(() {
@@ -60,7 +58,6 @@ class RootState extends State<Root> {
       return ScaffoldIndicator();
     }
     return UniversalErrorPage(
-      error: this._error,
       reload: () {
         reload();
       },
@@ -82,19 +79,17 @@ class RootState extends State<Root> {
             print(error);
             print(stacktrace);
             errorLogger.recordError(error, stacktrace);
-            final displayedError = ErrorMessages.connection +
-                "\n" +
-                "errorType: ${error.runtimeType.toString()}\n" +
-                error.toString() +
-                "error: ${error.toString()}\n" +
-                stacktrace.toString();
-            return UniversalErrorPage(
-              error: displayedError,
-              child: null,
-              reload: () {
-                rootKey.currentState?.reload();
-              },
-            );
+            setState(() {
+              final displayError = ErrorMessages.connection +
+                  "\n" +
+                  "errorType: ${error.runtimeType.toString()}\n" +
+                  error.toString() +
+                  "error: ${error.toString()}\n" +
+                  stacktrace.toString();
+              UniversalErrorPage.of(context).setError(displayError);
+            });
+
+            return Indicator();
           });
         }),
       ),
@@ -138,11 +133,12 @@ class RootState extends State<Root> {
     }).catchError((error) {
       errorLogger.recordError(error, StackTrace.current);
       setState(() {
-        this._error = UserDisplayedError(ErrorMessages.connection +
+        final _error = UserDisplayedError(ErrorMessages.connection +
             "\n" +
             "errorType: ${error.runtimeType.toString()}\n" +
             "error: ${error.toString()}\n" +
             StackTrace.current.toString());
+        UniversalErrorPage.of(context).setError(_error);
       });
     });
   }
