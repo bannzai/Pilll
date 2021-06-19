@@ -24,7 +24,7 @@ class PremiumIntroductionStore extends StateNotifier<PremiumIntroductionState> {
 
   reset() {
     Future(() async {
-      state = state.copyWith(exception: null);
+      state = state.copyWith(exception: null, selectedPackage: null);
       _subscribe();
       _userService.fetch().then((value) {
         state = state.copyWith(isPremium: value.isPremium);
