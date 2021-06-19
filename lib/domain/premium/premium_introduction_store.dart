@@ -19,11 +19,12 @@ class PremiumIntroductionStore extends StateNotifier<PremiumIntroductionState> {
   final UserService _userService;
   PremiumIntroductionStore(this._userService)
       : super(PremiumIntroductionState()) {
-    _reset();
+    reset();
   }
 
-  _reset() {
+  reset() {
     Future(() async {
+      state = state.copyWith(exception: null);
       _subscribe();
       _userService.fetch().then((value) {
         state = state.copyWith(isPremium: value.isPremium);
@@ -239,5 +240,9 @@ class PremiumIntroductionStore extends StateNotifier<PremiumIntroductionState> {
       throw AssertionError("unexpected annual package is not exists");
     }
     state = state.copyWith(selectedPackage: package);
+  }
+
+  handleException(Object exception) {
+    state = state.copyWith(exception: exception);
   }
 }
