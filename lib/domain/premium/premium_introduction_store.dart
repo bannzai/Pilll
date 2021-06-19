@@ -115,7 +115,8 @@ class PremiumIntroductionStore extends StateNotifier<PremiumIntroductionState> {
         // Pilll must not be handling error message.
         // See more detail: https://docs.revenuecat.com/docs/errors#--store_problem
         // > If everything was working while testing, you shouldn't have to do anything to handle this error in production. RevenueCat will automatically retry any purchase failures so no data is lost.
-        return null;
+        // But, return ambigious error message to be the on the safe side
+        return FormatException("$storeName でエラーが発生しています。しばらくお時間をおいて再度お試しください");
       case PurchasesErrorCode.purchaseNotAllowedError:
         // NOTE: Maybe simulator or emulators
         // See more details: https://docs.revenuecat.com/docs/errors#--purchase_not_allowed
