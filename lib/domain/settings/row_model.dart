@@ -168,9 +168,12 @@ class SettingListPremiumRowModel extends SettingListRowModel {
   Widget widget() {
     return ListTile(
       onTap: onTap,
-      leading: SvgPicture.asset("images/pilll_icon.svg"),
-      title: Text("Pilllプレミアム",
-          style: FontType.assisting.merge(TextColorStyle.darkGray)),
+      leading: Image.asset("images/pilll_icon.png", width: 32, height: 32),
+      title: Align(
+        alignment: Alignment(-1.1, 0),
+        child: Text("Pilllプレミアム",
+            style: FontType.assisting.merge(TextColorStyle.black)),
+      ),
     );
   }
 }
