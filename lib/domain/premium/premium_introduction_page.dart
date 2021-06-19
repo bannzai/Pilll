@@ -79,6 +79,7 @@ class PremiumIntroductionPage extends HookWidget {
                                   try {
                                     await store.purchase();
                                   } catch (error) {
+                                    print("caused purchase error for $error");
                                     if (error is UserDisplayedError) {
                                       showErrorAlertWithError(context, error);
                                     } else {
