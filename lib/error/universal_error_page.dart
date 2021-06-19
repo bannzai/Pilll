@@ -12,21 +12,10 @@ class UniversalErrorPage extends StatefulWidget {
 
   const UniversalErrorPage({
     Key? key,
-    this.initialError,
+    required this.initialError,
     required this.child,
     required this.reload,
   }) : super(key: key);
-
-  static _UniversalErrorPageState of(BuildContext context) {
-    final state = context.findAncestorStateOfType<_UniversalErrorPageState>();
-    if (state == null) {
-      throw AssertionError('''
-      Not found UniversalError from this context: $context
-      The context should contains UniversalError widget into current widget tree
-      ''');
-    }
-    return state;
-  }
 
   @override
   _UniversalErrorPageState createState() => _UniversalErrorPageState();
