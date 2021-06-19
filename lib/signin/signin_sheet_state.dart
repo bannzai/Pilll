@@ -8,6 +8,7 @@ abstract class SigninSheetState implements _$SigninSheetState {
   SigninSheetState._();
   factory SigninSheetState({
     required bool isLoginMode,
+    Exception? exception,
   }) = _SigninSheetState;
 
   String get title => isLoginMode ? "ログイン" : "アカウント登録";
