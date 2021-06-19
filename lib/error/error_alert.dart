@@ -6,44 +6,6 @@ import 'package:flutter/widgets.dart';
 import 'package:pilll/entity/user_error.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-class WrappedErrorAlert extends StatefulWidget {
-  final Widget child;
-
-  const WrappedErrorAlert({Key? key, required this.child}) : super(key: key);
-  @override
-  _WrappedErrorAlertState createState() => _WrappedErrorAlertState();
-}
-
-class _WrappedErrorAlertState extends State<WrappedErrorAlert> {
-  bool visible = true;
-  @override
-  Widget build(BuildContext context) {
-    return Stack(
-      children: [
-        widget.child,
-        Visibility(
-          visible: visible,
-          child: GestureDetector(
-            onTap: () {
-              setState(() {
-                visible = !visible;
-              });
-            },
-            child: ModalBarrier(
-              color: Colors.black.withOpacity(0.08),
-              dismissible: true,
-              barrierSemanticsDismissible: true,
-            ),
-          ),
-        ),
-        ErrorAlert(
-          errorMessage: "Test",
-        ),
-      ],
-    );
-  }
-}
-
 class ErrorAlert extends StatelessWidget {
   final String? title;
   final String errorMessage;

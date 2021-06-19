@@ -21,54 +21,52 @@ class SettingAccountCooperationListPage extends HookWidget {
   Widget build(BuildContext context) {
     final store = useProvider(settingAccountCooperationListProvider);
     final state = useProvider(settingAccountCooperationListProvider.state);
-    return WrappedErrorAlert(
-      child: UniversalErrorPage(
-        error: state.exception,
-        reload: () => store.reset(),
-        child: Scaffold(
-          backgroundColor: PilllColors.background,
-          appBar: AppBar(
-            leading: IconButton(
-              icon: Icon(Icons.arrow_back, color: Colors.black),
-              onPressed: () => Navigator.of(context).pop(),
-            ),
-            title: Text('アカウント設定', style: TextColorStyle.main),
-            backgroundColor: PilllColors.white,
+    return UniversalErrorPage(
+      error: state.exception,
+      reload: () => store.reset(),
+      child: Scaffold(
+        backgroundColor: PilllColors.background,
+        appBar: AppBar(
+          leading: IconButton(
+            icon: Icon(Icons.arrow_back, color: Colors.black),
+            onPressed: () => Navigator.of(context).pop(),
           ),
-          body: Container(
-            child: ListView(
-              children: [
-                Container(
-                  padding: EdgeInsets.only(top: 16, left: 15, right: 16),
-                  child: Text(
-                    "アカウント登録",
-                    style: FontType.assisting.merge(TextColorStyle.primary),
-                  ),
+          title: Text('アカウント設定', style: TextColorStyle.main),
+          backgroundColor: PilllColors.white,
+        ),
+        body: Container(
+          child: ListView(
+            children: [
+              Container(
+                padding: EdgeInsets.only(top: 16, left: 15, right: 16),
+                child: Text(
+                  "アカウント登録",
+                  style: FontType.assisting.merge(TextColorStyle.primary),
                 ),
-                SettingAccountCooperationRow(
-                  accountType: LinkAccountType.apple,
-                  isLinked: () => state.isLinkedApple,
-                  onTap: () async {
-                    if (state.isLinkedApple) {
-                      return;
-                    }
-                    _linkApple(context, store);
-                  },
-                ),
-                Divider(indent: 16),
-                SettingAccountCooperationRow(
-                  accountType: LinkAccountType.google,
-                  isLinked: () => state.isLinkedGoogle,
-                  onTap: () async {
-                    if (state.isLinkedGoogle) {
-                      return;
-                    }
-                    _linkGoogle(context, store);
-                  },
-                ),
-                Divider(indent: 16),
-              ],
-            ),
+              ),
+              SettingAccountCooperationRow(
+                accountType: LinkAccountType.apple,
+                isLinked: () => state.isLinkedApple,
+                onTap: () async {
+                  if (state.isLinkedApple) {
+                    return;
+                  }
+                  _linkApple(context, store);
+                },
+              ),
+              Divider(indent: 16),
+              SettingAccountCooperationRow(
+                accountType: LinkAccountType.google,
+                isLinked: () => state.isLinkedGoogle,
+                onTap: () async {
+                  if (state.isLinkedGoogle) {
+                    return;
+                  }
+                  _linkGoogle(context, store);
+                },
+              ),
+              Divider(indent: 16),
+            ],
           ),
         ),
       ),
