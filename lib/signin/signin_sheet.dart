@@ -33,7 +33,7 @@ class SigninSheet extends HookWidget {
     final store = useProvider(signinSheetStoreProvider(isLoginMode));
     final state = useProvider(signinSheetStoreProvider(isLoginMode).state);
     return UniversalErrorPage(
-      initialError: state.exception,
+      error: state.exception,
       reload: () => store.reset(),
       child: Container(
         constraints: BoxConstraints(maxHeight: 333, minHeight: 300),

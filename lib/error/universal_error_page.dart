@@ -5,35 +5,22 @@ import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/inquiry/inquiry.dart';
 import 'package:flutter/material.dart';
 
-class UniversalErrorPage extends StatefulWidget {
-  final dynamic? initialError;
+class UniversalErrorPage extends StatelessWidget {
+  final dynamic? error;
   final Widget? child;
   final VoidCallback? reload;
 
   const UniversalErrorPage({
     Key? key,
-    required this.initialError,
+    required this.error,
     required this.child,
     required this.reload,
   }) : super(key: key);
 
   @override
-  _UniversalErrorPageState createState() => _UniversalErrorPageState();
-}
-
-class _UniversalErrorPageState extends State<UniversalErrorPage> {
-  dynamic? _error;
-
-  @override
-  void initState() {
-    _error = this.widget.initialError;
-    super.initState();
-  }
-
-  @override
   Widget build(BuildContext context) {
-    final child = this.widget.child;
-    final error = this._error;
+    final child = this.child;
+    final error = this.error;
     if (error == null && child != null) {
       return child;
     }
@@ -64,10 +51,7 @@ class _UniversalErrorPageState extends State<UniversalErrorPage> {
                     style: FontType.assisting.merge(TextColorStyle.black)),
                 onPressed: () {
                   analytics.logEvent(name: "reload_button_pressed");
-                  setState(() {
-                    this._error = null;
-                  });
-                  final reload = this.widget.reload;
+                  final reload = this.reload;
                   if (reload != null) {
                     reload();
                   }
@@ -90,11 +74,5 @@ class _UniversalErrorPageState extends State<UniversalErrorPage> {
         ),
       ),
     );
-  }
-
-  setError(dynamic error) {
-    setState(() {
-      this._error = error;
-    });
   }
 }

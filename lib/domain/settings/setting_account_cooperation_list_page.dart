@@ -22,7 +22,7 @@ class SettingAccountCooperationListPage extends HookWidget {
     final store = useProvider(settingAccountCooperationListProvider);
     final state = useProvider(settingAccountCooperationListProvider.state);
     return UniversalErrorPage(
-      initialError: state.exception,
+      error: state.exception,
       reload: () => store.reset(),
       child: Scaffold(
         backgroundColor: PilllColors.background,

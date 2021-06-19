@@ -30,7 +30,7 @@ Future<void> entrypoint() async {
 
   ErrorWidget.builder = (FlutterErrorDetails details) {
     return UniversalErrorPage(
-      initialError: details.exception.toString(),
+      error: details.exception.toString(),
       child: null,
       reload: () {
         rootKey.currentState?.reload();

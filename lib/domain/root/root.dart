@@ -44,6 +44,7 @@ class RootState extends State<Root> {
   reload() {
     setState(() {
       screenType = null;
+      _error = null;
       _auth();
     });
   }
@@ -60,7 +61,7 @@ class RootState extends State<Root> {
       return ScaffoldIndicator();
     }
     return UniversalErrorPage(
-      initialError: _error,
+      error: _error,
       reload: () => reload(),
       child: HUD(
         key: hudKey,
