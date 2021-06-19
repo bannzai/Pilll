@@ -5,9 +5,9 @@ import 'package:flutter/cupertino.dart';
 import 'package:pilll/analytics.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
+import 'package:pilll/domain/root/root.dart';
 import 'package:pilll/error/universal_error_page.dart';
 import 'package:pilll/global_method_channel.dart';
-import 'package:pilll/router/router.dart';
 import 'package:pilll/util/environment.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_analytics/observer.dart';
@@ -18,22 +18,26 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:intl/date_symbol_data_local.dart';
 import 'package:pilll/service/auth.dart';
 
-import 'router/router.dart';
-
 Future<void> entrypoint() async {
   WidgetsFlutterBinding.ensureInitialized();
   initializeDateFormatting('ja_JP');
   await Firebase.initializeApp();
 
-  // MEMO: FirebaseCrashlytics#recordFlutterError called dumpErrorToConsole in function.
   if (Environment.isLocal) {
     connectToEmulator();
   }
   await callSignin();
 
   ErrorWidget.builder = (FlutterErrorDetails details) {
-    return UniversalErrorPage(error: details.exception.toString());
+    return UniversalErrorPage(
+      error: details.exception.toString(),
+      child: null,
+      reload: () {
+        rootKey.currentState?.reload();
+      },
+    );
   };
+  // MEMO: FirebaseCrashlytics#recordFlutterError called dumpErrorToConsole in function.
   FlutterError.onError = FirebaseCrashlytics.instance.recordFlutterError;
   definedChannel();
   runZonedGuarded(() {
@@ -75,7 +79,11 @@ class App extends StatelessWidget {
           ),
         ),
       ),
-      routes: AppRouter.routes(),
+      home: ProviderScope(
+        child: Root(
+          key: rootKey,
+        ),
+      ),
     );
   }
 }

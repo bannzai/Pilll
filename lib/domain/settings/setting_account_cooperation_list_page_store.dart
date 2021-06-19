@@ -22,12 +22,13 @@ class SettingAccountCooperationListPageStore
   final AuthService _authService;
   SettingAccountCooperationListPageStore(this._userService, this._authService)
       : super(SettingAccountCooperationListState(
-            FirebaseAuth.instance.currentUser)) {
-    _reset();
+            user: FirebaseAuth.instance.currentUser)) {
+    reset();
   }
 
-  _reset() {
-    state = state.copyWith(user: FirebaseAuth.instance.currentUser);
+  reset() {
+    state = state.copyWith(
+        user: FirebaseAuth.instance.currentUser, exception: null);
     _subscribe();
   }
 
@@ -59,5 +60,9 @@ class SettingAccountCooperationListPageStore
       throw AssertionError("unexpected already linked google when link");
     }
     return callLinkWithGoogle(_userService);
+  }
+
+  handleException(Object exception) {
+    state = state.copyWith(exception: exception);
   }
 }

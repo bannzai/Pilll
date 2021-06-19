@@ -28,10 +28,10 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
     this._settingService,
     this._authService,
   ) : super(RecordPageState(entity: null)) {
-    _reset();
+    reset();
   }
 
-  void _reset() {
+  void reset() {
     Future(() async {
       final entity = await _service.fetchLast();
       final setting = await _settingService.fetch();
@@ -50,6 +50,7 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
         recommendedSignupNotificationIsAlreadyShow:
             recommendedSignupNotificationIsAlreadyShow,
         totalCountOfActionForTakenPill: totalCountOfActionForTakenPill,
+        exception: null,
       );
       if (entity != null) {
         analytics.logEvent(name: "count_of_remaining_pill", parameters: {
@@ -81,22 +82,21 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
     super.dispose();
   }
 
-  Future<void> register(PillSheet model) {
-    return _service
+  Future<void> register(PillSheet model) async {
+    await _service
         .register(model)
         .then((entity) => state = state.copyWith(entity: entity));
   }
 
-  Future<dynamic> take(DateTime takenDate) {
+  Future<dynamic> take(DateTime takenDate) async {
     final entity = state.entity;
     if (entity == null) {
       throw FormatException("pill sheet not found");
     }
     final updated = entity.copyWith(lastTakenDate: takenDate);
     FlutterAppBadger.removeBadge();
-    return _service.update(updated).then((value) {
-      state = state.copyWith(entity: updated);
-    });
+    await _service.update(updated);
+    state = state.copyWith(entity: updated);
   }
 
   DateTime calcBeginingDateFromNextTodayPillNumber(int pillNumber) {
@@ -150,6 +150,10 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
     sharedPreferences.setBool(
         BoolKey.recommendedSignupNotificationIsAlreadyShow, true);
     state = state.copyWith(recommendedSignupNotificationIsAlreadyShow: true);
+  }
+
+  handleException(Object exception) {
+    state = state.copyWith(exception: exception);
   }
 }
 

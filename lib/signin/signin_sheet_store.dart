@@ -16,7 +16,13 @@ class SigninSheetStore extends StateNotifier<SigninSheetState> {
   final bool isLoginMode;
   final UserService _userService;
   SigninSheetStore(this.isLoginMode, this._userService)
-      : super(SigninSheetState(isLoginMode: isLoginMode));
+      : super(SigninSheetState(isLoginMode: isLoginMode)) {
+    reset();
+  }
+
+  reset() {
+    state = state.copyWith(exception: null);
+  }
 
   Future<SigninWithAppleState> handleApple() {
     if (state.isLoginMode) {
@@ -40,5 +46,9 @@ class SigninSheetStore extends StateNotifier<SigninSheetState> {
       analytics.logEvent(name: "signin_sheet_link_with_google");
       return callLinkWithGoogle(_userService);
     }
+  }
+
+  handleException(Object exception) {
+    state = state.copyWith(exception: exception);
   }
 }

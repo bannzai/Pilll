@@ -16,9 +16,11 @@ final _privateConstructorUsedError = UnsupportedError(
 class _$SettingAccountCooperationListStateTearOff {
   const _$SettingAccountCooperationListStateTearOff();
 
-  _SettingAccountCooperationListState call(User? user) {
+  _SettingAccountCooperationListState call(
+      {required User? user, Object? exception}) {
     return _SettingAccountCooperationListState(
-      user,
+      user: user,
+      exception: exception,
     );
   }
 }
@@ -30,6 +32,7 @@ const $SettingAccountCooperationListState =
 /// @nodoc
 mixin _$SettingAccountCooperationListState {
   User? get user => throw _privateConstructorUsedError;
+  Object? get exception => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $SettingAccountCooperationListStateCopyWith<
@@ -43,7 +46,7 @@ abstract class $SettingAccountCooperationListStateCopyWith<$Res> {
           SettingAccountCooperationListState value,
           $Res Function(SettingAccountCooperationListState) then) =
       _$SettingAccountCooperationListStateCopyWithImpl<$Res>;
-  $Res call({User? user});
+  $Res call({User? user, Object? exception});
 }
 
 /// @nodoc
@@ -58,12 +61,14 @@ class _$SettingAccountCooperationListStateCopyWithImpl<$Res>
   @override
   $Res call({
     Object? user = freezed,
+    Object? exception = freezed,
   }) {
     return _then(_value.copyWith(
       user: user == freezed
           ? _value.user
           : user // ignore: cast_nullable_to_non_nullable
               as User?,
+      exception: exception == freezed ? _value.exception : exception,
     ));
   }
 }
@@ -76,7 +81,7 @@ abstract class _$SettingAccountCooperationListStateCopyWith<$Res>
           $Res Function(_SettingAccountCooperationListState) then) =
       __$SettingAccountCooperationListStateCopyWithImpl<$Res>;
   @override
-  $Res call({User? user});
+  $Res call({User? user, Object? exception});
 }
 
 /// @nodoc
@@ -95,12 +100,14 @@ class __$SettingAccountCooperationListStateCopyWithImpl<$Res>
   @override
   $Res call({
     Object? user = freezed,
+    Object? exception = freezed,
   }) {
     return _then(_SettingAccountCooperationListState(
-      user == freezed
+      user: user == freezed
           ? _value.user
           : user // ignore: cast_nullable_to_non_nullable
               as User?,
+      exception: exception == freezed ? _value.exception : exception,
     ));
   }
 }
@@ -109,14 +116,17 @@ class __$SettingAccountCooperationListStateCopyWithImpl<$Res>
 
 class _$_SettingAccountCooperationListState
     extends _SettingAccountCooperationListState {
-  _$_SettingAccountCooperationListState(this.user) : super._();
+  _$_SettingAccountCooperationListState({required this.user, this.exception})
+      : super._();
 
   @override
   final User? user;
+  @override
+  final Object? exception;
 
   @override
   String toString() {
-    return 'SettingAccountCooperationListState(user: $user)';
+    return 'SettingAccountCooperationListState(user: $user, exception: $exception)';
   }
 
   @override
@@ -124,12 +134,17 @@ class _$_SettingAccountCooperationListState
     return identical(this, other) ||
         (other is _SettingAccountCooperationListState &&
             (identical(other.user, user) ||
-                const DeepCollectionEquality().equals(other.user, user)));
+                const DeepCollectionEquality().equals(other.user, user)) &&
+            (identical(other.exception, exception) ||
+                const DeepCollectionEquality()
+                    .equals(other.exception, exception)));
   }
 
   @override
   int get hashCode =>
-      runtimeType.hashCode ^ const DeepCollectionEquality().hash(user);
+      runtimeType.hashCode ^
+      const DeepCollectionEquality().hash(user) ^
+      const DeepCollectionEquality().hash(exception);
 
   @JsonKey(ignore: true)
   @override
@@ -141,12 +156,15 @@ class _$_SettingAccountCooperationListState
 
 abstract class _SettingAccountCooperationListState
     extends SettingAccountCooperationListState {
-  factory _SettingAccountCooperationListState(User? user) =
-      _$_SettingAccountCooperationListState;
+  factory _SettingAccountCooperationListState(
+      {required User? user,
+      Object? exception}) = _$_SettingAccountCooperationListState;
   _SettingAccountCooperationListState._() : super._();
 
   @override
   User? get user => throw _privateConstructorUsedError;
+  @override
+  Object? get exception => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$SettingAccountCooperationListStateCopyWith<
