@@ -26,6 +26,8 @@ class Root extends StatefulWidget {
 enum ScreenType { home, initialSetting }
 
 class RootState extends State<Root> {
+  dynamic _error;
+
   ScreenType? screenType;
   showHome() {
     setState(() {
@@ -58,6 +60,7 @@ class RootState extends State<Root> {
       return ScaffoldIndicator();
     }
     return UniversalErrorPage(
+      initialError: _error,
       reload: () {
         reload();
       },
@@ -86,7 +89,7 @@ class RootState extends State<Root> {
                   error.toString() +
                   "error: ${error.toString()}\n" +
                   stacktrace.toString();
-              UniversalErrorPage.of(context).setError(displayError);
+              _error = displayError;
             });
 
             return Indicator();
@@ -133,12 +136,11 @@ class RootState extends State<Root> {
     }).catchError((error) {
       errorLogger.recordError(error, StackTrace.current);
       setState(() {
-        final _error = UserDisplayedError(ErrorMessages.connection +
+        this._error = UserDisplayedError(ErrorMessages.connection +
             "\n" +
             "errorType: ${error.runtimeType.toString()}\n" +
             "error: ${error.toString()}\n" +
             StackTrace.current.toString());
-        UniversalErrorPage.of(context).setError(_error);
       });
     });
   }
