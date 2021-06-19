@@ -16,7 +16,7 @@ final _privateConstructorUsedError = UnsupportedError(
 class _$SigninSheetStateTearOff {
   const _$SigninSheetStateTearOff();
 
-  _SigninSheetState call({required bool isLoginMode, Exception? exception}) {
+  _SigninSheetState call({required bool isLoginMode, Object? exception}) {
     return _SigninSheetState(
       isLoginMode: isLoginMode,
       exception: exception,
@@ -30,7 +30,7 @@ const $SigninSheetState = _$SigninSheetStateTearOff();
 /// @nodoc
 mixin _$SigninSheetState {
   bool get isLoginMode => throw _privateConstructorUsedError;
-  Exception? get exception => throw _privateConstructorUsedError;
+  Object? get exception => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $SigninSheetStateCopyWith<SigninSheetState> get copyWith =>
@@ -42,7 +42,7 @@ abstract class $SigninSheetStateCopyWith<$Res> {
   factory $SigninSheetStateCopyWith(
           SigninSheetState value, $Res Function(SigninSheetState) then) =
       _$SigninSheetStateCopyWithImpl<$Res>;
-  $Res call({bool isLoginMode, Exception? exception});
+  $Res call({bool isLoginMode, Object? exception});
 }
 
 /// @nodoc
@@ -64,10 +64,7 @@ class _$SigninSheetStateCopyWithImpl<$Res>
           ? _value.isLoginMode
           : isLoginMode // ignore: cast_nullable_to_non_nullable
               as bool,
-      exception: exception == freezed
-          ? _value.exception
-          : exception // ignore: cast_nullable_to_non_nullable
-              as Exception?,
+      exception: exception == freezed ? _value.exception : exception,
     ));
   }
 }
@@ -79,7 +76,7 @@ abstract class _$SigninSheetStateCopyWith<$Res>
           _SigninSheetState value, $Res Function(_SigninSheetState) then) =
       __$SigninSheetStateCopyWithImpl<$Res>;
   @override
-  $Res call({bool isLoginMode, Exception? exception});
+  $Res call({bool isLoginMode, Object? exception});
 }
 
 /// @nodoc
@@ -103,10 +100,7 @@ class __$SigninSheetStateCopyWithImpl<$Res>
           ? _value.isLoginMode
           : isLoginMode // ignore: cast_nullable_to_non_nullable
               as bool,
-      exception: exception == freezed
-          ? _value.exception
-          : exception // ignore: cast_nullable_to_non_nullable
-              as Exception?,
+      exception: exception == freezed ? _value.exception : exception,
     ));
   }
 }
@@ -119,7 +113,7 @@ class _$_SigninSheetState extends _SigninSheetState {
   @override
   final bool isLoginMode;
   @override
-  final Exception? exception;
+  final Object? exception;
 
   @override
   String toString() {
@@ -151,14 +145,14 @@ class _$_SigninSheetState extends _SigninSheetState {
 }
 
 abstract class _SigninSheetState extends SigninSheetState {
-  factory _SigninSheetState({required bool isLoginMode, Exception? exception}) =
+  factory _SigninSheetState({required bool isLoginMode, Object? exception}) =
       _$_SigninSheetState;
   _SigninSheetState._() : super._();
 
   @override
   bool get isLoginMode => throw _privateConstructorUsedError;
   @override
-  Exception? get exception => throw _privateConstructorUsedError;
+  Object? get exception => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$SigninSheetStateCopyWith<_SigninSheetState> get copyWith =>

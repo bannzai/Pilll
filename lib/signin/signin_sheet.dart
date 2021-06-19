@@ -33,7 +33,8 @@ class SigninSheet extends HookWidget {
     final store = useProvider(signinSheetStoreProvider(isLoginMode));
     final state = useProvider(signinSheetStoreProvider(isLoginMode).state);
     return UniversalErrorPage(
-      reload: null,
+      initialError: state.exception,
+      reload: () => store.reset(),
       child: Container(
         constraints: BoxConstraints(maxHeight: 333, minHeight: 300),
         color: Colors.white,
@@ -98,7 +99,7 @@ class SigninSheet extends HookWidget {
           if (error is UserDisplayedError) {
             showErrorAlertWithError(context, error);
           } else {
-            UniversalErrorPage.of(context).setError(error);
+            store.handleException(error);
           }
         } finally {
           hideHUD();
@@ -159,7 +160,7 @@ class SigninSheet extends HookWidget {
           if (error is UserDisplayedError) {
             showErrorAlertWithError(context, error);
           } else {
-            UniversalErrorPage.of(context).setError(error);
+            store.handleException(error);
           }
         } finally {
           hideHUD();

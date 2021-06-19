@@ -61,9 +61,7 @@ class RootState extends State<Root> {
     }
     return UniversalErrorPage(
       initialError: _error,
-      reload: () {
-        reload();
-      },
+      reload: () => reload(),
       child: HUD(
         key: hudKey,
         child: Consumer(builder: (context, watch, child) {

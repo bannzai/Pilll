@@ -22,7 +22,8 @@ class SettingAccountCooperationListPage extends HookWidget {
     final store = useProvider(settingAccountCooperationListProvider);
     final state = useProvider(settingAccountCooperationListProvider.state);
     return UniversalErrorPage(
-      reload: () {},
+      initialError: state.exception,
+      reload: () => store.reset(),
       child: Scaffold(
         backgroundColor: PilllColors.background,
         appBar: AppBar(
@@ -131,7 +132,7 @@ class SettingAccountCooperationListPage extends HookWidget {
       if (error is UserDisplayedError) {
         showErrorAlertWithError(context, error);
       } else {
-        UniversalErrorPage.of(context).setError(error);
+        store.handleException(error);
       }
       return;
     }

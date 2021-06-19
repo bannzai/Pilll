@@ -11,7 +11,7 @@ abstract class SettingAccountCooperationListState
   SettingAccountCooperationListState._();
   factory SettingAccountCooperationListState(
       {required User? user,
-      Exception? exception}) = _SettingAccountCooperationListState;
+      Object? exception}) = _SettingAccountCooperationListState;
 
   bool get isLinkedApple {
     final user = this.user;
