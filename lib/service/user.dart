@@ -37,7 +37,7 @@ class UserService {
         throw UserNotFound();
       }
       print("fetched user ${document.data()}");
-      return User.fromJson(document.data()!);
+      return User.fromJson(document.data() as Map<String, dynamic>);
     });
   }
 
@@ -49,7 +49,7 @@ class UserService {
     Future(() async {
       try {
         final document = await _fetchRawDocumentSnapshot();
-        final user = User.fromJson(document.data()!);
+        final user = User.fromJson(document.data() as Map<String, dynamic>);
         final documentID = document.id;
         if (!user.userDocumentIDSets.contains(documentID)) {
           user.userDocumentIDSets.add(documentID);
@@ -83,7 +83,7 @@ class UserService {
     return _database
         .userReference()
         .snapshots(includeMetadataChanges: true)
-        .map((event) => User.fromJson(event.data()!));
+        .map((event) => User.fromJson(event.data() as Map<String, dynamic>));
   }
 
   Future<void> updatePurchaseInfo({
