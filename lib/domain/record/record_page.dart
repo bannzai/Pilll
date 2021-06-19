@@ -14,6 +14,8 @@ import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/entity/setting.dart';
 import 'package:pilll/entity/weekday.dart';
 import 'package:pilll/error/error_alert.dart';
+import 'package:pilll/error/universal_error_page.dart';
+import 'package:pilll/error_log.dart';
 import 'package:pilll/service/pill_sheet.dart';
 import 'package:pilll/components/atoms/buttons.dart';
 import 'package:pilll/components/atoms/color.dart';
@@ -45,24 +47,28 @@ class RecordPage extends HookWidget {
         _showMigrateInfo(context);
       });
     }
-    return Scaffold(
-      backgroundColor: PilllColors.background,
-      appBar: AppBar(
-        titleSpacing: 0,
-        backgroundColor: PilllColors.white,
-        toolbarHeight: RecordTakenInformationConst.height,
-        title: RecordTakenInformation(
-          today: DateTime.now(),
-          state: state,
-          onPressed: () {
-            analytics.logEvent(name: "tapped_record_information_header");
-            if (currentPillSheet != null) {
-              _showBeginDatePicker(context, currentPillSheet, store);
-            }
-          },
+    return UniversalErrorPage(
+      error: state.exception,
+      reload: () => store.reset(),
+      child: Scaffold(
+        backgroundColor: PilllColors.background,
+        appBar: AppBar(
+          titleSpacing: 0,
+          backgroundColor: PilllColors.white,
+          toolbarHeight: RecordTakenInformationConst.height,
+          title: RecordTakenInformation(
+            today: DateTime.now(),
+            state: state,
+            onPressed: () {
+              analytics.logEvent(name: "tapped_record_information_header");
+              if (currentPillSheet != null) {
+                _showBeginDatePicker(context, currentPillSheet, store);
+              }
+            },
+          ),
         ),
+        body: _body(context),
       ),
-      body: _body(context),
     );
   }
 
@@ -273,14 +279,14 @@ class RecordPage extends HookWidget {
   ) {
     return PrimaryButton(
       text: "飲んだ",
-      onPressed: () {
+      onPressed: () async {
         if (pillSheet.todayPillNumber == 1)
           analytics.logEvent(name: "user_taken_first_day_pill");
         analytics.logEvent(name: "taken_button_pressed", parameters: {
           "last_taken_pill_number": pillSheet.lastTakenPillNumber,
           "today_pill_number": pillSheet.todayPillNumber,
         });
-        _take(context, pillSheet, now(), store);
+        await _take(context, pillSheet, now(), store);
       },
     );
   }
@@ -298,21 +304,25 @@ class RecordPage extends HookWidget {
     );
   }
 
-  void _take(
+  Future<void> _take(
     BuildContext context,
     PillSheet pillSheet,
     DateTime takenDate,
     RecordPageStore store,
-  ) {
+  ) async {
     if (pillSheet.todayPillNumber == pillSheet.lastTakenPillNumber) {
       return;
     }
-    store.take(takenDate).then((value) {
+    try {
+      await store.take(takenDate);
       _requestInAppReview();
       Future.delayed(Duration(milliseconds: 500)).then((_) {
         showReleaseNotePreDialog(context);
       });
-    });
+    } catch (exception, stack) {
+      errorLogger.recordError(exception, stack);
+      store.handleException(exception);
+    }
   }
 
   void _cancelTake(PillSheet pillSheet, RecordPageStore store) {
@@ -385,23 +395,29 @@ class RecordPage extends HookWidget {
           ],
         ),
       ),
-      onTap: () {
+      onTap: () async {
         if (progressing) return;
         progressing = true;
 
         var pillSheet = PillSheet.create(pillSheetType);
-        store.register(pillSheet).catchError((error) {
+        try {
+          await store.register(pillSheet);
+        } on PillSheetAlreadyExists catch (_) {
           showErrorAlert(
             context,
             message: "ピルシートがすでに存在しています。表示等に問題がある場合は設定タブから「お問い合わせ」ください",
           );
-        }, test: (e) => e is PillSheetAlreadyExists).catchError((error) {
+        } on PillSheetAlreadyDeleted catch (_) {
           showErrorAlert(
             context,
             message: "ピルシートの作成に失敗しました。時間をおいて再度お試しください",
           );
-        }, test: (e) => e is PillSheetAlreadyDeleted).whenComplete(
-            () => progressing = false);
+        } catch (exception, stack) {
+          errorLogger.recordError(exception, stack);
+          store.handleException(exception);
+        } finally {
+          progressing = false;
+        }
       },
     );
   }

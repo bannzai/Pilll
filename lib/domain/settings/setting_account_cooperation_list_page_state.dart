@@ -9,8 +9,9 @@ part 'setting_account_cooperation_list_page_state.freezed.dart';
 abstract class SettingAccountCooperationListState
     implements _$SettingAccountCooperationListState {
   SettingAccountCooperationListState._();
-  factory SettingAccountCooperationListState(User? user) =
-      _SettingAccountCooperationListState;
+  factory SettingAccountCooperationListState(
+      {required User? user,
+      Object? exception}) = _SettingAccountCooperationListState;
 
   bool get isLinkedApple {
     final user = this.user;
