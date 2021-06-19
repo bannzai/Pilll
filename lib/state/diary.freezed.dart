@@ -16,9 +16,10 @@ final _privateConstructorUsedError = UnsupportedError(
 class _$DiaryStateTearOff {
   const _$DiaryStateTearOff();
 
-  _DiaryState call({required Diary entity}) {
+  _DiaryState call({required Diary entity, Object? exception}) {
     return _DiaryState(
       entity: entity,
+      exception: exception,
     );
   }
 }
@@ -29,6 +30,7 @@ const $DiaryState = _$DiaryStateTearOff();
 /// @nodoc
 mixin _$DiaryState {
   Diary get entity => throw _privateConstructorUsedError;
+  Object? get exception => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $DiaryStateCopyWith<DiaryState> get copyWith =>
@@ -40,7 +42,7 @@ abstract class $DiaryStateCopyWith<$Res> {
   factory $DiaryStateCopyWith(
           DiaryState value, $Res Function(DiaryState) then) =
       _$DiaryStateCopyWithImpl<$Res>;
-  $Res call({Diary entity});
+  $Res call({Diary entity, Object? exception});
 
   $DiaryCopyWith<$Res> get entity;
 }
@@ -56,12 +58,14 @@ class _$DiaryStateCopyWithImpl<$Res> implements $DiaryStateCopyWith<$Res> {
   @override
   $Res call({
     Object? entity = freezed,
+    Object? exception = freezed,
   }) {
     return _then(_value.copyWith(
       entity: entity == freezed
           ? _value.entity
           : entity // ignore: cast_nullable_to_non_nullable
               as Diary,
+      exception: exception == freezed ? _value.exception : exception,
     ));
   }
 
@@ -79,7 +83,7 @@ abstract class _$DiaryStateCopyWith<$Res> implements $DiaryStateCopyWith<$Res> {
           _DiaryState value, $Res Function(_DiaryState) then) =
       __$DiaryStateCopyWithImpl<$Res>;
   @override
-  $Res call({Diary entity});
+  $Res call({Diary entity, Object? exception});
 
   @override
   $DiaryCopyWith<$Res> get entity;
@@ -98,12 +102,14 @@ class __$DiaryStateCopyWithImpl<$Res> extends _$DiaryStateCopyWithImpl<$Res>
   @override
   $Res call({
     Object? entity = freezed,
+    Object? exception = freezed,
   }) {
     return _then(_DiaryState(
       entity: entity == freezed
           ? _value.entity
           : entity // ignore: cast_nullable_to_non_nullable
               as Diary,
+      exception: exception == freezed ? _value.exception : exception,
     ));
   }
 }
@@ -111,14 +117,16 @@ class __$DiaryStateCopyWithImpl<$Res> extends _$DiaryStateCopyWithImpl<$Res>
 /// @nodoc
 
 class _$_DiaryState extends _DiaryState {
-  _$_DiaryState({required this.entity}) : super._();
+  _$_DiaryState({required this.entity, this.exception}) : super._();
 
   @override
   final Diary entity;
+  @override
+  final Object? exception;
 
   @override
   String toString() {
-    return 'DiaryState(entity: $entity)';
+    return 'DiaryState(entity: $entity, exception: $exception)';
   }
 
   @override
@@ -126,12 +134,17 @@ class _$_DiaryState extends _DiaryState {
     return identical(this, other) ||
         (other is _DiaryState &&
             (identical(other.entity, entity) ||
-                const DeepCollectionEquality().equals(other.entity, entity)));
+                const DeepCollectionEquality().equals(other.entity, entity)) &&
+            (identical(other.exception, exception) ||
+                const DeepCollectionEquality()
+                    .equals(other.exception, exception)));
   }
 
   @override
   int get hashCode =>
-      runtimeType.hashCode ^ const DeepCollectionEquality().hash(entity);
+      runtimeType.hashCode ^
+      const DeepCollectionEquality().hash(entity) ^
+      const DeepCollectionEquality().hash(exception);
 
   @JsonKey(ignore: true)
   @override
@@ -140,11 +153,14 @@ class _$_DiaryState extends _DiaryState {
 }
 
 abstract class _DiaryState extends DiaryState {
-  factory _DiaryState({required Diary entity}) = _$_DiaryState;
+  factory _DiaryState({required Diary entity, Object? exception}) =
+      _$_DiaryState;
   _DiaryState._() : super._();
 
   @override
   Diary get entity => throw _privateConstructorUsedError;
+  @override
+  Object? get exception => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$DiaryStateCopyWith<_DiaryState> get copyWith =>

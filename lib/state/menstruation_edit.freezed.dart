@@ -20,12 +20,14 @@ class _$MenstruationEditStateTearOff {
       {bool isAlreadyAdjsutScrollOffset = false,
       required Menstruation? menstruation,
       required List<DateTime> displayedDates,
-      String? invalidMessage}) {
+      String? invalidMessage,
+      Object? exception}) {
     return _MenstruationEditState(
       isAlreadyAdjsutScrollOffset: isAlreadyAdjsutScrollOffset,
       menstruation: menstruation,
       displayedDates: displayedDates,
       invalidMessage: invalidMessage,
+      exception: exception,
     );
   }
 }
@@ -39,6 +41,7 @@ mixin _$MenstruationEditState {
   Menstruation? get menstruation => throw _privateConstructorUsedError;
   List<DateTime> get displayedDates => throw _privateConstructorUsedError;
   String? get invalidMessage => throw _privateConstructorUsedError;
+  Object? get exception => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $MenstruationEditStateCopyWith<MenstruationEditState> get copyWith =>
@@ -54,7 +57,8 @@ abstract class $MenstruationEditStateCopyWith<$Res> {
       {bool isAlreadyAdjsutScrollOffset,
       Menstruation? menstruation,
       List<DateTime> displayedDates,
-      String? invalidMessage});
+      String? invalidMessage,
+      Object? exception});
 
   $MenstruationCopyWith<$Res>? get menstruation;
 }
@@ -74,6 +78,7 @@ class _$MenstruationEditStateCopyWithImpl<$Res>
     Object? menstruation = freezed,
     Object? displayedDates = freezed,
     Object? invalidMessage = freezed,
+    Object? exception = freezed,
   }) {
     return _then(_value.copyWith(
       isAlreadyAdjsutScrollOffset: isAlreadyAdjsutScrollOffset == freezed
@@ -92,6 +97,7 @@ class _$MenstruationEditStateCopyWithImpl<$Res>
           ? _value.invalidMessage
           : invalidMessage // ignore: cast_nullable_to_non_nullable
               as String?,
+      exception: exception == freezed ? _value.exception : exception,
     ));
   }
 
@@ -118,7 +124,8 @@ abstract class _$MenstruationEditStateCopyWith<$Res>
       {bool isAlreadyAdjsutScrollOffset,
       Menstruation? menstruation,
       List<DateTime> displayedDates,
-      String? invalidMessage});
+      String? invalidMessage,
+      Object? exception});
 
   @override
   $MenstruationCopyWith<$Res>? get menstruation;
@@ -141,6 +148,7 @@ class __$MenstruationEditStateCopyWithImpl<$Res>
     Object? menstruation = freezed,
     Object? displayedDates = freezed,
     Object? invalidMessage = freezed,
+    Object? exception = freezed,
   }) {
     return _then(_MenstruationEditState(
       isAlreadyAdjsutScrollOffset: isAlreadyAdjsutScrollOffset == freezed
@@ -159,6 +167,7 @@ class __$MenstruationEditStateCopyWithImpl<$Res>
           ? _value.invalidMessage
           : invalidMessage // ignore: cast_nullable_to_non_nullable
               as String?,
+      exception: exception == freezed ? _value.exception : exception,
     ));
   }
 }
@@ -170,7 +179,8 @@ class _$_MenstruationEditState extends _MenstruationEditState {
       {this.isAlreadyAdjsutScrollOffset = false,
       required this.menstruation,
       required this.displayedDates,
-      this.invalidMessage})
+      this.invalidMessage,
+      this.exception})
       : super._();
 
   @JsonKey(defaultValue: false)
@@ -182,10 +192,12 @@ class _$_MenstruationEditState extends _MenstruationEditState {
   final List<DateTime> displayedDates;
   @override
   final String? invalidMessage;
+  @override
+  final Object? exception;
 
   @override
   String toString() {
-    return 'MenstruationEditState(isAlreadyAdjsutScrollOffset: $isAlreadyAdjsutScrollOffset, menstruation: $menstruation, displayedDates: $displayedDates, invalidMessage: $invalidMessage)';
+    return 'MenstruationEditState(isAlreadyAdjsutScrollOffset: $isAlreadyAdjsutScrollOffset, menstruation: $menstruation, displayedDates: $displayedDates, invalidMessage: $invalidMessage, exception: $exception)';
   }
 
   @override
@@ -205,7 +217,10 @@ class _$_MenstruationEditState extends _MenstruationEditState {
                     .equals(other.displayedDates, displayedDates)) &&
             (identical(other.invalidMessage, invalidMessage) ||
                 const DeepCollectionEquality()
-                    .equals(other.invalidMessage, invalidMessage)));
+                    .equals(other.invalidMessage, invalidMessage)) &&
+            (identical(other.exception, exception) ||
+                const DeepCollectionEquality()
+                    .equals(other.exception, exception)));
   }
 
   @override
@@ -214,7 +229,8 @@ class _$_MenstruationEditState extends _MenstruationEditState {
       const DeepCollectionEquality().hash(isAlreadyAdjsutScrollOffset) ^
       const DeepCollectionEquality().hash(menstruation) ^
       const DeepCollectionEquality().hash(displayedDates) ^
-      const DeepCollectionEquality().hash(invalidMessage);
+      const DeepCollectionEquality().hash(invalidMessage) ^
+      const DeepCollectionEquality().hash(exception);
 
   @JsonKey(ignore: true)
   @override
@@ -228,7 +244,8 @@ abstract class _MenstruationEditState extends MenstruationEditState {
       {bool isAlreadyAdjsutScrollOffset,
       required Menstruation? menstruation,
       required List<DateTime> displayedDates,
-      String? invalidMessage}) = _$_MenstruationEditState;
+      String? invalidMessage,
+      Object? exception}) = _$_MenstruationEditState;
   _MenstruationEditState._() : super._();
 
   @override
@@ -239,6 +256,8 @@ abstract class _MenstruationEditState extends MenstruationEditState {
   List<DateTime> get displayedDates => throw _privateConstructorUsedError;
   @override
   String? get invalidMessage => throw _privateConstructorUsedError;
+  @override
+  Object? get exception => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$MenstruationEditStateCopyWith<_MenstruationEditState> get copyWith =>
