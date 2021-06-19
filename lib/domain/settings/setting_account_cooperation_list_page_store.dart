@@ -22,7 +22,7 @@ class SettingAccountCooperationListPageStore
   final AuthService _authService;
   SettingAccountCooperationListPageStore(this._userService, this._authService)
       : super(SettingAccountCooperationListState(
-            FirebaseAuth.instance.currentUser)) {
+            user: FirebaseAuth.instance.currentUser)) {
     _reset();
   }
 

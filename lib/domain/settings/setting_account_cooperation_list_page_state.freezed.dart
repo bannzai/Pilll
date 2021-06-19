@@ -16,10 +16,11 @@ final _privateConstructorUsedError = UnsupportedError(
 class _$SettingAccountCooperationListStateTearOff {
   const _$SettingAccountCooperationListStateTearOff();
 
-  _SettingAccountCooperationListState call(User? user, Exception? exception) {
+  _SettingAccountCooperationListState call(
+      {required User? user, Exception? exception}) {
     return _SettingAccountCooperationListState(
-      user,
-      exception,
+      user: user,
+      exception: exception,
     );
   }
 }
@@ -105,11 +106,11 @@ class __$SettingAccountCooperationListStateCopyWithImpl<$Res>
     Object? exception = freezed,
   }) {
     return _then(_SettingAccountCooperationListState(
-      user == freezed
+      user: user == freezed
           ? _value.user
           : user // ignore: cast_nullable_to_non_nullable
               as User?,
-      exception == freezed
+      exception: exception == freezed
           ? _value.exception
           : exception // ignore: cast_nullable_to_non_nullable
               as Exception?,
@@ -121,7 +122,8 @@ class __$SettingAccountCooperationListStateCopyWithImpl<$Res>
 
 class _$_SettingAccountCooperationListState
     extends _SettingAccountCooperationListState {
-  _$_SettingAccountCooperationListState(this.user, this.exception) : super._();
+  _$_SettingAccountCooperationListState({required this.user, this.exception})
+      : super._();
 
   @override
   final User? user;
@@ -161,7 +163,8 @@ class _$_SettingAccountCooperationListState
 abstract class _SettingAccountCooperationListState
     extends SettingAccountCooperationListState {
   factory _SettingAccountCooperationListState(
-      User? user, Exception? exception) = _$_SettingAccountCooperationListState;
+      {required User? user,
+      Exception? exception}) = _$_SettingAccountCooperationListState;
   _SettingAccountCooperationListState._() : super._();
 
   @override
