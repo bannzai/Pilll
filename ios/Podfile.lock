@@ -27,21 +27,21 @@ PODS:
   - Firebase/Messaging (8.0.0):
     - Firebase/CoreOnly
     - FirebaseMessaging (~> 8.0.0)
-  - firebase_analytics (8.1.1):
+  - firebase_analytics (8.1.2):
     - Firebase/Analytics (= 8.0.0)
     - firebase_core
     - Flutter
-  - firebase_auth (1.3.0):
+  - firebase_auth (1.4.1):
     - Firebase/Auth (= 8.0.0)
     - firebase_core
     - Flutter
-  - firebase_core (1.2.1):
+  - firebase_core (1.3.0):
     - Firebase/CoreOnly (= 8.0.0)
     - Flutter
   - firebase_crashlytics (1.0.0):
     - Firebase/Crashlytics (= 8.0.0)
     - firebase_core
-  - firebase_messaging (10.0.1):
+  - firebase_messaging (10.0.2):
     - Firebase/Messaging (= 8.0.0)
     - firebase_core
     - Flutter
@@ -138,7 +138,7 @@ PODS:
     - GoogleUtilities/Network (~> 7.4)
     - "GoogleUtilities/NSData+zlib (~> 7.4)"
     - nanopb (~> 2.30908.0)
-  - GoogleDataTransport (9.0.0):
+  - GoogleDataTransport (9.0.1):
     - GoogleUtilities/Environment (~> 7.2)
     - nanopb (~> 2.30908.0)
     - PromisesObjC (~> 1.2)
@@ -182,11 +182,11 @@ PODS:
   - PromisesObjC (1.2.12)
   - Purchases (3.11.1):
     - PurchasesCoreSwift (= 3.11.1)
-  - purchases_flutter (3.2.2):
+  - purchases_flutter (3.3.0):
     - Flutter
-    - PurchasesHybridCommon (= 1.6.3)
+    - PurchasesHybridCommon (= 1.7.1)
   - PurchasesCoreSwift (3.11.1)
-  - PurchasesHybridCommon (1.6.3):
+  - PurchasesHybridCommon (1.7.1):
     - Purchases (= 3.11.1)
   - shared_preferences (0.0.1):
     - Flutter
@@ -284,11 +284,11 @@ SPEC CHECKSUMS:
   AppAuth: 31bcec809a638d7bd2f86ea8a52bd45f6e81e7c7
   cloud_firestore: 677849586720293046982ccfa20013a6266d7928
   Firebase: 73c3e3b216ec1ecbc54d2ffdd4670c65c749edb1
-  firebase_analytics: 63c9b821662e558ae4b9920d0dab237a27f434cc
-  firebase_auth: df06751eb6e66686f6f2af4f2d36c9c381b26ed0
-  firebase_core: a9b69f8583dc992f1b15f376b4918537c1804bb4
+  firebase_analytics: 5e1820ff8ca6cc984fd4d1dedd2dd45965b91535
+  firebase_auth: 6532658f5a4f76be32cd5e7518753ebedd4544d2
+  firebase_core: cda81ae37eda6df2bc2d16027fda527987c4bd33
   firebase_crashlytics: c5136b44ed1c482ff96fed60d3f4b71782a028e0
-  firebase_messaging: f45b468c889bdc3191bc47368329ae22cda536da
+  firebase_messaging: bdc64f21cd3e9e174164b1417530c723fd128958
   FirebaseAnalytics: dcb92c7c9ef4fa7ffac276e8f87bd4fc8c97f1b8
   FirebaseAuth: b8cd992fca5b53dc6eec09e873a3f375f000c5a1
   FirebaseCore: 3f09591d51292843e2a46f18358d60bf4e996255
@@ -302,7 +302,7 @@ SPEC CHECKSUMS:
   flutter_inappwebview: bfd58618f49dc62f2676de690fc6dcda1d6c3721
   google_sign_in: 6bd214b9c154f881422f5fe27b66aaa7bbd580cc
   GoogleAppMeasurement: c6bbc9753d046b5456dd4f940057fbad2c28419e
-  GoogleDataTransport: 11e3a5f2c190327df1a4a5d7e7ae3d4d5b9c9e4c
+  GoogleDataTransport: 04c3e9a480bbcaa2ec3f5d27f1cdeb6a92f20c8d
   GoogleSignIn: 7137d297ddc022a7e0aa4619c86d72c909fa7213
   GoogleUtilities: f8a43108b38a68eebe8b3540e1f4f2d28843ce20
   GTMAppAuth: ad5c2b70b9a8689e1a04033c9369c4915bfcbe89
@@ -313,9 +313,9 @@ SPEC CHECKSUMS:
   package_info: 873975fc26034f0b863a300ad47e7f1ac6c7ec62
   PromisesObjC: 3113f7f76903778cf4a0586bd1ab89329a0b7b97
   Purchases: 6351f9ff6bd514e5ec5aa0f989ea181effa94bf5
-  purchases_flutter: 627527b070d80cdaf486fabe8b3d1dbe8d5cad92
+  purchases_flutter: b9bdce2607e0f8a5de0cbb11c3eee54e3104f293
   PurchasesCoreSwift: ee857e4c21e6254b09d7e303a756fcf2b9164408
-  PurchasesHybridCommon: d65a799a61d688588534b80338edbcbf604ca93d
+  PurchasesHybridCommon: e3b25475328b58169e811135a3476ed0e5a4243a
   shared_preferences: af6bfa751691cdc24be3045c43ec037377ada40d
   sign_in_with_apple: 34f3f5456a45fd7ac5fb42905e2ad31dae061b4a
   url_launcher: 6fef411d543ceb26efce54b05a0a40bfd74cbbef
