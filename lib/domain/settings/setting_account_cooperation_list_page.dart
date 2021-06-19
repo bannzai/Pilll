@@ -10,60 +10,63 @@ import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/components/page/hud.dart';
 import 'package:pilll/domain/demography/demography_page.dart';
-import 'package:pilll/domain/root/root.dart';
 import 'package:pilll/domain/settings/setting_account_cooperation_list_page_store.dart';
 import 'package:pilll/entity/link_account_type.dart';
 import 'package:pilll/entity/user_error.dart';
 import 'package:pilll/error/error_alert.dart';
+import 'package:pilll/error/universal_error_page.dart';
 
 class SettingAccountCooperationListPage extends HookWidget {
   @override
   Widget build(BuildContext context) {
     final store = useProvider(settingAccountCooperationListProvider);
     final state = useProvider(settingAccountCooperationListProvider.state);
-    return Scaffold(
-      backgroundColor: PilllColors.background,
-      appBar: AppBar(
-        leading: IconButton(
-          icon: Icon(Icons.arrow_back, color: Colors.black),
-          onPressed: () => Navigator.of(context).pop(),
+    return UniversalErrorPage(
+      reload: () {},
+      child: Scaffold(
+        backgroundColor: PilllColors.background,
+        appBar: AppBar(
+          leading: IconButton(
+            icon: Icon(Icons.arrow_back, color: Colors.black),
+            onPressed: () => Navigator.of(context).pop(),
+          ),
+          title: Text('アカウント設定', style: TextColorStyle.main),
+          backgroundColor: PilllColors.white,
         ),
-        title: Text('アカウント設定', style: TextColorStyle.main),
-        backgroundColor: PilllColors.white,
-      ),
-      body: Container(
-        child: ListView(
-          children: [
-            Container(
-              padding: EdgeInsets.only(top: 16, left: 15, right: 16),
-              child: Text(
-                "アカウント登録",
-                style: FontType.assisting.merge(TextColorStyle.primary),
+        body: Container(
+          child: ListView(
+            children: [
+              Container(
+                padding: EdgeInsets.only(top: 16, left: 15, right: 16),
+                child: Text(
+                  "アカウント登録",
+                  style: FontType.assisting.merge(TextColorStyle.primary),
+                ),
               ),
-            ),
-            SettingAccountCooperationRow(
-              accountType: LinkAccountType.apple,
-              isLinked: () => state.isLinkedApple,
-              onTap: () async {
-                if (state.isLinkedApple) {
-                  return;
-                }
-                _linkApple(context, store);
-              },
-            ),
-            Divider(indent: 16),
-            SettingAccountCooperationRow(
-              accountType: LinkAccountType.google,
-              isLinked: () => state.isLinkedGoogle,
-              onTap: () async {
-                if (state.isLinkedGoogle) {
-                  return;
-                }
-                _linkGoogle(context, store);
-              },
-            ),
-            Divider(indent: 16),
-          ],
+              SettingAccountCooperationRow(
+                accountType: LinkAccountType.apple,
+                isLinked: () => state.isLinkedApple,
+                onTap: () async {
+                  if (state.isLinkedApple) {
+                    return;
+                  }
+                  _linkApple(context, store);
+                },
+              ),
+              Divider(indent: 16),
+              SettingAccountCooperationRow(
+                accountType: LinkAccountType.google,
+                isLinked: () => state.isLinkedGoogle,
+                onTap: () async {
+                  if (state.isLinkedGoogle) {
+                    return;
+                  }
+                  _linkGoogle(context, store);
+                },
+              ),
+              Divider(indent: 16),
+            ],
+          ),
         ),
       ),
     );
@@ -128,7 +131,7 @@ class SettingAccountCooperationListPage extends HookWidget {
       if (error is UserDisplayedError) {
         showErrorAlertWithError(context, error);
       } else {
-        rootKey.currentState?.onError(error);
+        UniversalErrorPage.of(context).setError(error);
       }
       return;
     }

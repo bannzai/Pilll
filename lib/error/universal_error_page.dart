@@ -8,7 +8,7 @@ import 'package:flutter/material.dart';
 class UniversalErrorPage extends StatefulWidget {
   final dynamic? initialError;
   final Widget? child;
-  final VoidCallback reload;
+  final VoidCallback? reload;
 
   const UniversalErrorPage({
     Key? key,
@@ -78,7 +78,10 @@ class _UniversalErrorPageState extends State<UniversalErrorPage> {
                   setState(() {
                     this._error = null;
                   });
-                  this.widget.reload();
+                  final reload = this.widget.reload;
+                  if (reload != null) {
+                    reload();
+                  }
                 },
               ),
               TextButton.icon(
