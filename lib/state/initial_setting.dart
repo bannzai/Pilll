@@ -9,6 +9,7 @@ abstract class InitialSettingState implements _$InitialSettingState {
   InitialSettingState._();
   factory InitialSettingState({
     required InitialSettingModel entity,
+    @Default(false) bool isLoading,
     @Default(false) bool isAccountCooperationDidEnd,
   }) = _InitialSettingState;
 
