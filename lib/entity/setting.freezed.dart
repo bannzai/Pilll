@@ -205,7 +205,9 @@ class _$SettingTearOff {
       required int durationMenstruation,
       List<ReminderTime> reminderTimes = const [],
       @JsonSerializable(explicitToJson: true) required bool isOnReminder,
-      bool isOnNotifyInNotTakenDuration = true}) {
+      bool isOnNotifyInNotTakenDuration = true,
+      PillSheetAppearanceMode pillSheetAppearanceMode =
+          PillSheetAppearanceMode.number}) {
     return _Setting(
       pillSheetTypeRawPath: pillSheetTypeRawPath,
       pillNumberForFromMenstruation: pillNumberForFromMenstruation,
@@ -213,6 +215,7 @@ class _$SettingTearOff {
       reminderTimes: reminderTimes,
       isOnReminder: isOnReminder,
       isOnNotifyInNotTakenDuration: isOnNotifyInNotTakenDuration,
+      pillSheetAppearanceMode: pillSheetAppearanceMode,
     );
   }
 
@@ -233,6 +236,8 @@ mixin _$Setting {
   @JsonSerializable(explicitToJson: true)
   bool get isOnReminder => throw _privateConstructorUsedError;
   bool get isOnNotifyInNotTakenDuration => throw _privateConstructorUsedError;
+  PillSheetAppearanceMode get pillSheetAppearanceMode =>
+      throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -249,7 +254,8 @@ abstract class $SettingCopyWith<$Res> {
       int durationMenstruation,
       List<ReminderTime> reminderTimes,
       @JsonSerializable(explicitToJson: true) bool isOnReminder,
-      bool isOnNotifyInNotTakenDuration});
+      bool isOnNotifyInNotTakenDuration,
+      PillSheetAppearanceMode pillSheetAppearanceMode});
 }
 
 /// @nodoc
@@ -268,6 +274,7 @@ class _$SettingCopyWithImpl<$Res> implements $SettingCopyWith<$Res> {
     Object? reminderTimes = freezed,
     Object? isOnReminder = freezed,
     Object? isOnNotifyInNotTakenDuration = freezed,
+    Object? pillSheetAppearanceMode = freezed,
   }) {
     return _then(_value.copyWith(
       pillSheetTypeRawPath: pillSheetTypeRawPath == freezed
@@ -294,6 +301,10 @@ class _$SettingCopyWithImpl<$Res> implements $SettingCopyWith<$Res> {
           ? _value.isOnNotifyInNotTakenDuration
           : isOnNotifyInNotTakenDuration // ignore: cast_nullable_to_non_nullable
               as bool,
+      pillSheetAppearanceMode: pillSheetAppearanceMode == freezed
+          ? _value.pillSheetAppearanceMode
+          : pillSheetAppearanceMode // ignore: cast_nullable_to_non_nullable
+              as PillSheetAppearanceMode,
     ));
   }
 }
@@ -309,7 +320,8 @@ abstract class _$SettingCopyWith<$Res> implements $SettingCopyWith<$Res> {
       int durationMenstruation,
       List<ReminderTime> reminderTimes,
       @JsonSerializable(explicitToJson: true) bool isOnReminder,
-      bool isOnNotifyInNotTakenDuration});
+      bool isOnNotifyInNotTakenDuration,
+      PillSheetAppearanceMode pillSheetAppearanceMode});
 }
 
 /// @nodoc
@@ -329,6 +341,7 @@ class __$SettingCopyWithImpl<$Res> extends _$SettingCopyWithImpl<$Res>
     Object? reminderTimes = freezed,
     Object? isOnReminder = freezed,
     Object? isOnNotifyInNotTakenDuration = freezed,
+    Object? pillSheetAppearanceMode = freezed,
   }) {
     return _then(_Setting(
       pillSheetTypeRawPath: pillSheetTypeRawPath == freezed
@@ -355,6 +368,10 @@ class __$SettingCopyWithImpl<$Res> extends _$SettingCopyWithImpl<$Res>
           ? _value.isOnNotifyInNotTakenDuration
           : isOnNotifyInNotTakenDuration // ignore: cast_nullable_to_non_nullable
               as bool,
+      pillSheetAppearanceMode: pillSheetAppearanceMode == freezed
+          ? _value.pillSheetAppearanceMode
+          : pillSheetAppearanceMode // ignore: cast_nullable_to_non_nullable
+              as PillSheetAppearanceMode,
     ));
   }
 }
@@ -369,7 +386,8 @@ class _$_Setting extends _Setting with DiagnosticableTreeMixin {
       required this.durationMenstruation,
       this.reminderTimes = const [],
       @JsonSerializable(explicitToJson: true) required this.isOnReminder,
-      this.isOnNotifyInNotTakenDuration = true})
+      this.isOnNotifyInNotTakenDuration = true,
+      this.pillSheetAppearanceMode = PillSheetAppearanceMode.number})
       : super._();
 
   factory _$_Setting.fromJson(Map<String, dynamic> json) =>
@@ -390,10 +408,13 @@ class _$_Setting extends _Setting with DiagnosticableTreeMixin {
   @JsonKey(defaultValue: true)
   @override
   final bool isOnNotifyInNotTakenDuration;
+  @JsonKey(defaultValue: PillSheetAppearanceMode.number)
+  @override
+  final PillSheetAppearanceMode pillSheetAppearanceMode;
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'Setting(pillSheetTypeRawPath: $pillSheetTypeRawPath, pillNumberForFromMenstruation: $pillNumberForFromMenstruation, durationMenstruation: $durationMenstruation, reminderTimes: $reminderTimes, isOnReminder: $isOnReminder, isOnNotifyInNotTakenDuration: $isOnNotifyInNotTakenDuration)';
+    return 'Setting(pillSheetTypeRawPath: $pillSheetTypeRawPath, pillNumberForFromMenstruation: $pillNumberForFromMenstruation, durationMenstruation: $durationMenstruation, reminderTimes: $reminderTimes, isOnReminder: $isOnReminder, isOnNotifyInNotTakenDuration: $isOnNotifyInNotTakenDuration, pillSheetAppearanceMode: $pillSheetAppearanceMode)';
   }
 
   @override
@@ -408,7 +429,9 @@ class _$_Setting extends _Setting with DiagnosticableTreeMixin {
       ..add(DiagnosticsProperty('reminderTimes', reminderTimes))
       ..add(DiagnosticsProperty('isOnReminder', isOnReminder))
       ..add(DiagnosticsProperty(
-          'isOnNotifyInNotTakenDuration', isOnNotifyInNotTakenDuration));
+          'isOnNotifyInNotTakenDuration', isOnNotifyInNotTakenDuration))
+      ..add(DiagnosticsProperty(
+          'pillSheetAppearanceMode', pillSheetAppearanceMode));
   }
 
   @override
@@ -436,7 +459,11 @@ class _$_Setting extends _Setting with DiagnosticableTreeMixin {
                     isOnNotifyInNotTakenDuration) ||
                 const DeepCollectionEquality().equals(
                     other.isOnNotifyInNotTakenDuration,
-                    isOnNotifyInNotTakenDuration)));
+                    isOnNotifyInNotTakenDuration)) &&
+            (identical(
+                    other.pillSheetAppearanceMode, pillSheetAppearanceMode) ||
+                const DeepCollectionEquality().equals(
+                    other.pillSheetAppearanceMode, pillSheetAppearanceMode)));
   }
 
   @override
@@ -447,7 +474,8 @@ class _$_Setting extends _Setting with DiagnosticableTreeMixin {
       const DeepCollectionEquality().hash(durationMenstruation) ^
       const DeepCollectionEquality().hash(reminderTimes) ^
       const DeepCollectionEquality().hash(isOnReminder) ^
-      const DeepCollectionEquality().hash(isOnNotifyInNotTakenDuration);
+      const DeepCollectionEquality().hash(isOnNotifyInNotTakenDuration) ^
+      const DeepCollectionEquality().hash(pillSheetAppearanceMode);
 
   @JsonKey(ignore: true)
   @override
@@ -467,7 +495,8 @@ abstract class _Setting extends Setting {
       required int durationMenstruation,
       List<ReminderTime> reminderTimes,
       @JsonSerializable(explicitToJson: true) required bool isOnReminder,
-      bool isOnNotifyInNotTakenDuration}) = _$_Setting;
+      bool isOnNotifyInNotTakenDuration,
+      PillSheetAppearanceMode pillSheetAppearanceMode}) = _$_Setting;
   _Setting._() : super._();
 
   factory _Setting.fromJson(Map<String, dynamic> json) = _$_Setting.fromJson;
@@ -485,6 +514,9 @@ abstract class _Setting extends Setting {
   bool get isOnReminder => throw _privateConstructorUsedError;
   @override
   bool get isOnNotifyInNotTakenDuration => throw _privateConstructorUsedError;
+  @override
+  PillSheetAppearanceMode get pillSheetAppearanceMode =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$SettingCopyWith<_Setting> get copyWith =>
