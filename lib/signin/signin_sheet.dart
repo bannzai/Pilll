@@ -84,7 +84,7 @@ class SigninSheet extends HookWidget {
       ),
       onPressed: () async {
         analytics.logEvent(name: "signin_sheet_selected_apple");
-        showHUD();
+        store.showHUD();
         try {
           final signinState = await store.handleApple();
           switch (signinState) {
@@ -102,7 +102,7 @@ class SigninSheet extends HookWidget {
             store.handleException(error);
           }
         } finally {
-          hideHUD();
+          store.hideHUD();
         }
       },
       child: Container(
@@ -145,7 +145,7 @@ class SigninSheet extends HookWidget {
       ),
       onPressed: () async {
         analytics.logEvent(name: "signin_sheet_selected_google");
-        showHUD();
+        store.showHUD();
         try {
           final signinState = await store.handleGoogle();
           switch (signinState) {
