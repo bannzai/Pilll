@@ -51,6 +51,8 @@ void main() {
       final userService = MockUserService();
       when(userService.fetch()).thenAnswer(
           (realInvocation) => Future.value(FakeUserForNotPremium()));
+      when(userService.subscribe())
+          .thenAnswer((realInvocation) => Stream.empty());
 
       final store = SettingStateStore(service, pillSheetService, userService);
       await tester.pumpWidget(
@@ -101,6 +103,8 @@ void main() {
       final userService = MockUserService();
       when(userService.fetch()).thenAnswer(
           (realInvocation) => Future.value(FakeUserForNotPremium()));
+      when(userService.subscribe())
+          .thenAnswer((realInvocation) => Stream.empty());
 
       final store = SettingStateStore(service, pillSheetService, userService);
       await tester.pumpWidget(

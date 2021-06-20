@@ -70,6 +70,8 @@ void main() {
       final userService = MockUserService();
       when(userService.fetch())
           .thenAnswer((reaInvocation) => Future.value(FakeUserForNotPremium()));
+      when(userService.subscribe())
+          .thenAnswer((realInvocation) => Stream.empty());
 
       final store = RecordPageStore(
         pillSheetService,
@@ -134,6 +136,8 @@ void main() {
     final userService = MockUserService();
     when(userService.fetch())
         .thenAnswer((reaInvocation) => Future.value(FakeUserForNotPremium()));
+    when(userService.subscribe())
+        .thenAnswer((realInvocation) => Stream.empty());
 
     final store = RecordPageStore(
       pillSheetService,
@@ -200,6 +204,8 @@ void main() {
     final userService = MockUserService();
     when(userService.fetch())
         .thenAnswer((reaInvocation) => Future.value(FakeUserForNotPremium()));
+    when(userService.subscribe())
+        .thenAnswer((realInvocation) => Stream.empty());
 
     final store = RecordPageStore(
       pillSheetService,
