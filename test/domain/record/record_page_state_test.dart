@@ -57,7 +57,7 @@ void main() {
       when(authService.isLinkedGoogle()).thenReturn(false);
       final userService = MockUserService();
       when(userService.fetch())
-          .thenAnswer((reaInvocation) => Future.value(FakeUser()));
+          .thenAnswer((reaInvocation) => Future.value(FakeUserForNotPremium()));
 
       final store = RecordPageStore(
         service,
@@ -109,7 +109,7 @@ void main() {
     when(authService.isLinkedGoogle()).thenReturn(false);
     final userService = MockUserService();
     when(userService.fetch())
-        .thenAnswer((reaInvocation) => Future.value(FakeUser()));
+        .thenAnswer((reaInvocation) => Future.value(FakeUserForNotPremium()));
 
     final store = RecordPageStore(
       service,
@@ -163,7 +163,7 @@ void main() {
       when(authService.isLinkedGoogle()).thenReturn(false);
       final userService = MockUserService();
       when(userService.fetch())
-          .thenAnswer((reaInvocation) => Future.value(FakeUser()));
+          .thenAnswer((reaInvocation) => Future.value(FakeUserForNotPremium()));
 
       final store = RecordPageStore(
         service,
@@ -217,7 +217,7 @@ void main() {
       when(authService.isLinkedGoogle()).thenReturn(false);
       final userService = MockUserService();
       when(userService.fetch())
-          .thenAnswer((reaInvocation) => Future.value(FakeUser()));
+          .thenAnswer((reaInvocation) => Future.value(FakeUserForNotPremium()));
 
       final store = RecordPageStore(
         service,
@@ -273,7 +273,7 @@ void main() {
       when(authService.isLinkedGoogle()).thenReturn(false);
       final userService = MockUserService();
       when(userService.fetch())
-          .thenAnswer((reaInvocation) => Future.value(FakeUser()));
+          .thenAnswer((reaInvocation) => Future.value(FakeUserForNotPremium()));
 
       final store = RecordPageStore(
         service,
@@ -326,7 +326,7 @@ void main() {
       when(authService.isLinkedGoogle()).thenReturn(false);
       final userService = MockUserService();
       when(userService.fetch())
-          .thenAnswer((reaInvocation) => Future.value(FakeUser()));
+          .thenAnswer((reaInvocation) => Future.value(FakeUserForNotPremium()));
 
       final store = RecordPageStore(
         service,

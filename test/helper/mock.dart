@@ -25,4 +25,7 @@ class MockAuthService extends Mock implements AuthService {}
 
 class MockUserService extends Mock implements UserService {}
 
-class FakeUser extends Fake implements User {}
+class FakeUserForNotPremium extends Fake implements User {
+  @override
+  bool get isPremium => false;
+}
