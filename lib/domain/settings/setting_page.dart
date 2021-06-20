@@ -111,7 +111,7 @@ class SettingPage extends HookWidget {
     late String text;
     switch (section) {
       case SettingSection.pill:
-        text = "ピルの設定";
+        text = "ピルシート";
         break;
       case SettingSection.menstruation:
         text = "生理";
