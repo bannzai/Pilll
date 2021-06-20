@@ -96,4 +96,12 @@ class InitialSettingStateStore extends StateNotifier<InitialSettingState> {
       return false;
     }
   }
+
+  showHUD() {
+    state = state.copyWith(isLoading: true);
+  }
+
+  hideHUD() {
+    state = state.copyWith(isLoading: false);
+  }
 }

@@ -20,41 +20,44 @@ class InitialSetting1Page extends HookWidget {
         if (await store.canEndInitialSetting()) {
           AppRouter.signinAccount(context);
         }
-        hideHUD();
+        store.hideHUD();
       });
     }
-    return PillSheetTypeSelectPage(
-      title: "1/4",
-      backButtonIsHidden: true,
-      selected: (type) {
-        analytics.logEvent(
-            name: "selected_type_initial_setting_1",
-            parameters: {"pill_sheet_type": type.rawPath});
-        store.selectedPillSheetType(type);
-      },
-      done: state.entity.pillSheetType == null
-          ? null
-          : () {
-              analytics.logEvent(name: "done_initial_setting_1");
-              Navigator.of(context).push(InitialSetting2PageRoute.route());
-            },
-      doneButtonText: "次へ",
-      selectedPillSheetType: state.entity.pillSheetType,
-      signinAccount: state.isAccountCooperationDidEnd
-          ? null
-          : (accountType) async {
-              showHUD();
-              if (await store.canEndInitialSetting()) {
-                AppRouter.signinAccount(context);
-              } else {
-                ScaffoldMessenger.of(context).showSnackBar(
-                  SnackBar(
-                    duration: Duration(seconds: 2),
-                    content: Text("${accountType.providerName}でログインしました"),
-                  ),
-                );
-              }
-            },
+    return HUD(
+      shown: state.isLoading,
+      child: PillSheetTypeSelectPage(
+        title: "1/4",
+        backButtonIsHidden: true,
+        selected: (type) {
+          analytics.logEvent(
+              name: "selected_type_initial_setting_1",
+              parameters: {"pill_sheet_type": type.rawPath});
+          store.selectedPillSheetType(type);
+        },
+        done: state.entity.pillSheetType == null
+            ? null
+            : () {
+                analytics.logEvent(name: "done_initial_setting_1");
+                Navigator.of(context).push(InitialSetting2PageRoute.route());
+              },
+        doneButtonText: "次へ",
+        selectedPillSheetType: state.entity.pillSheetType,
+        signinAccount: state.isAccountCooperationDidEnd
+            ? null
+            : (accountType) async {
+                store.showHUD();
+                if (await store.canEndInitialSetting()) {
+                  AppRouter.signinAccount(context);
+                } else {
+                  ScaffoldMessenger.of(context).showSnackBar(
+                    SnackBar(
+                      duration: Duration(seconds: 2),
+                      content: Text("${accountType.providerName}でログインしました"),
+                    ),
+                  );
+                }
+              },
+      ),
     );
   }
 }

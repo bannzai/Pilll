@@ -10,7 +10,7 @@ class HUD extends StatelessWidget {
     Key? key,
     required this.child,
     required this.shown,
-    required this.barrierEnabled,
+    this.barrierEnabled = true,
   }) : super(key: key);
 
   @override
