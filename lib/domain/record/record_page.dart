@@ -166,27 +166,15 @@ class RecordPage extends HookWidget {
                 SizedBox(height: 64),
                 _content(
                     context, store, state, currentPillSheet, settingEntity),
-                SizedBox(height: 67),
-                if (state.isInvalid)
-                  Align(
-                      child:
-                          _empty(context, store, settingEntity.pillSheetType)),
-                if (!state.isInvalid && currentPillSheet != null) ...[
-                  Align(
-                      child: _pillSheet(
-                          context, currentPillSheet, settingEntity, store)),
-                  SizedBox(height: 40),
-                  if (currentPillSheet.allTaken)
-                    Align(child: _cancelTakeButton(currentPillSheet, store)),
-                  if (!currentPillSheet.allTaken)
-                    Align(
-                        child: _takenButton(context, currentPillSheet, store)),
-                ],
-                SizedBox(height: 60),
               ],
             ),
           ),
         ),
+        if (currentPillSheet != null)
+          Positioned(
+            bottom: 20,
+            child: _button(context, currentPillSheet, store),
+          ),
       ],
     );
   }
@@ -203,6 +191,14 @@ class RecordPage extends HookWidget {
     if (!state.isInvalid && currentPillSheet != null)
       return _pillSheet(context, currentPillSheet, settingEntity, store);
     throw AssertionError("invalid state ${state.toString()}");
+  }
+
+  Widget _button(
+      BuildContext context, PillSheet currentPillSheet, RecordPageStore store) {
+    if (currentPillSheet.allTaken)
+      return _cancelTakeButton(currentPillSheet, store);
+    else
+      return _takenButton(context, currentPillSheet, store);
   }
 
   Widget _notification(
