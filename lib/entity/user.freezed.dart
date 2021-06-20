@@ -176,7 +176,8 @@ class _$UserTearOff {
       String? anonymousUserID,
       List<String> userDocumentIDSets = const [],
       List<String> anonymousUserIDSets = const [],
-      List<String> firebaseCurrentUserIDSets = const []}) {
+      List<String> firebaseCurrentUserIDSets = const [],
+      bool isPremium = false}) {
     return _User(
       setting: setting,
       migratedFlutter: migratedFlutter,
@@ -185,6 +186,7 @@ class _$UserTearOff {
       userDocumentIDSets: userDocumentIDSets,
       anonymousUserIDSets: anonymousUserIDSets,
       firebaseCurrentUserIDSets: firebaseCurrentUserIDSets,
+      isPremium: isPremium,
     );
   }
 
@@ -207,6 +209,7 @@ mixin _$User {
   List<String> get anonymousUserIDSets => throw _privateConstructorUsedError;
   List<String> get firebaseCurrentUserIDSets =>
       throw _privateConstructorUsedError;
+  bool get isPremium => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -224,7 +227,8 @@ abstract class $UserCopyWith<$Res> {
       String? anonymousUserID,
       List<String> userDocumentIDSets,
       List<String> anonymousUserIDSets,
-      List<String> firebaseCurrentUserIDSets});
+      List<String> firebaseCurrentUserIDSets,
+      bool isPremium});
 
   $SettingCopyWith<$Res>? get setting;
 }
@@ -246,6 +250,7 @@ class _$UserCopyWithImpl<$Res> implements $UserCopyWith<$Res> {
     Object? userDocumentIDSets = freezed,
     Object? anonymousUserIDSets = freezed,
     Object? firebaseCurrentUserIDSets = freezed,
+    Object? isPremium = freezed,
   }) {
     return _then(_value.copyWith(
       setting: setting == freezed
@@ -276,6 +281,10 @@ class _$UserCopyWithImpl<$Res> implements $UserCopyWith<$Res> {
           ? _value.firebaseCurrentUserIDSets
           : firebaseCurrentUserIDSets // ignore: cast_nullable_to_non_nullable
               as List<String>,
+      isPremium: isPremium == freezed
+          ? _value.isPremium
+          : isPremium // ignore: cast_nullable_to_non_nullable
+              as bool,
     ));
   }
 
@@ -303,7 +312,8 @@ abstract class _$UserCopyWith<$Res> implements $UserCopyWith<$Res> {
       String? anonymousUserID,
       List<String> userDocumentIDSets,
       List<String> anonymousUserIDSets,
-      List<String> firebaseCurrentUserIDSets});
+      List<String> firebaseCurrentUserIDSets,
+      bool isPremium});
 
   @override
   $SettingCopyWith<$Res>? get setting;
@@ -327,6 +337,7 @@ class __$UserCopyWithImpl<$Res> extends _$UserCopyWithImpl<$Res>
     Object? userDocumentIDSets = freezed,
     Object? anonymousUserIDSets = freezed,
     Object? firebaseCurrentUserIDSets = freezed,
+    Object? isPremium = freezed,
   }) {
     return _then(_User(
       setting: setting == freezed
@@ -357,6 +368,10 @@ class __$UserCopyWithImpl<$Res> extends _$UserCopyWithImpl<$Res>
           ? _value.firebaseCurrentUserIDSets
           : firebaseCurrentUserIDSets // ignore: cast_nullable_to_non_nullable
               as List<String>,
+      isPremium: isPremium == freezed
+          ? _value.isPremium
+          : isPremium // ignore: cast_nullable_to_non_nullable
+              as bool,
     ));
   }
 }
@@ -372,7 +387,8 @@ class _$_User extends _User {
       this.anonymousUserID,
       this.userDocumentIDSets = const [],
       this.anonymousUserIDSets = const [],
-      this.firebaseCurrentUserIDSets = const []})
+      this.firebaseCurrentUserIDSets = const [],
+      this.isPremium = false})
       : super._();
 
   factory _$_User.fromJson(Map<String, dynamic> json) =>
@@ -397,10 +413,13 @@ class _$_User extends _User {
   @JsonKey(defaultValue: const [])
   @override
   final List<String> firebaseCurrentUserIDSets;
+  @JsonKey(defaultValue: false)
+  @override
+  final bool isPremium;
 
   @override
   String toString() {
-    return 'User(setting: $setting, migratedFlutter: $migratedFlutter, userIDWhenCreateUser: $userIDWhenCreateUser, anonymousUserID: $anonymousUserID, userDocumentIDSets: $userDocumentIDSets, anonymousUserIDSets: $anonymousUserIDSets, firebaseCurrentUserIDSets: $firebaseCurrentUserIDSets)';
+    return 'User(setting: $setting, migratedFlutter: $migratedFlutter, userIDWhenCreateUser: $userIDWhenCreateUser, anonymousUserID: $anonymousUserID, userDocumentIDSets: $userDocumentIDSets, anonymousUserIDSets: $anonymousUserIDSets, firebaseCurrentUserIDSets: $firebaseCurrentUserIDSets, isPremium: $isPremium)';
   }
 
   @override
@@ -429,7 +448,10 @@ class _$_User extends _User {
                     firebaseCurrentUserIDSets) ||
                 const DeepCollectionEquality().equals(
                     other.firebaseCurrentUserIDSets,
-                    firebaseCurrentUserIDSets)));
+                    firebaseCurrentUserIDSets)) &&
+            (identical(other.isPremium, isPremium) ||
+                const DeepCollectionEquality()
+                    .equals(other.isPremium, isPremium)));
   }
 
   @override
@@ -441,7 +463,8 @@ class _$_User extends _User {
       const DeepCollectionEquality().hash(anonymousUserID) ^
       const DeepCollectionEquality().hash(userDocumentIDSets) ^
       const DeepCollectionEquality().hash(anonymousUserIDSets) ^
-      const DeepCollectionEquality().hash(firebaseCurrentUserIDSets);
+      const DeepCollectionEquality().hash(firebaseCurrentUserIDSets) ^
+      const DeepCollectionEquality().hash(isPremium);
 
   @JsonKey(ignore: true)
   @override
@@ -462,7 +485,8 @@ abstract class _User extends User {
       String? anonymousUserID,
       List<String> userDocumentIDSets,
       List<String> anonymousUserIDSets,
-      List<String> firebaseCurrentUserIDSets}) = _$_User;
+      List<String> firebaseCurrentUserIDSets,
+      bool isPremium}) = _$_User;
   _User._() : super._();
 
   factory _User.fromJson(Map<String, dynamic> json) = _$_User.fromJson;
@@ -483,6 +507,8 @@ abstract class _User extends User {
   @override
   List<String> get firebaseCurrentUserIDSets =>
       throw _privateConstructorUsedError;
+  @override
+  bool get isPremium => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$UserCopyWith<_User> get copyWith => throw _privateConstructorUsedError;

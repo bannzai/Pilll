@@ -7,7 +7,9 @@ import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/domain/root/root.dart';
 import 'package:pilll/error/universal_error_page.dart';
+import 'package:pilll/error_log.dart';
 import 'package:pilll/global_method_channel.dart';
+import 'package:pilll/purchases.dart';
 import 'package:pilll/util/environment.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_analytics/observer.dart';
@@ -17,6 +19,8 @@ import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:intl/date_symbol_data_local.dart';
 import 'package:pilll/service/auth.dart';
+import 'package:pilll/app/secret.dart';
+import 'package:purchases_flutter/purchases_flutter.dart';
 
 Future<void> entrypoint() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -26,8 +30,6 @@ Future<void> entrypoint() async {
   if (Environment.isLocal) {
     connectToEmulator();
   }
-  await callSignin();
-
   ErrorWidget.builder = (FlutterErrorDetails details) {
     return UniversalErrorPage(
       error: details.exception.toString(),
@@ -40,9 +42,21 @@ Future<void> entrypoint() async {
   // MEMO: FirebaseCrashlytics#recordFlutterError called dumpErrorToConsole in function.
   FlutterError.onError = FirebaseCrashlytics.instance.recordFlutterError;
   definedChannel();
-  runZonedGuarded(() {
+  runZonedGuarded(() async {
+    final user = await callSignin();
+    if (user != null) {
+      await errorLogger.setUserIdentifier(user.uid);
+      await firebaseAnalytics.setUserId(user.uid);
+      await initializePurchase(user.uid);
+    }
     runApp(ProviderScope(child: App()));
   }, (error, stack) => FirebaseCrashlytics.instance.recordError(error, stack));
+}
+
+Future<void> initializePurchase(String uid) async {
+  await Purchases.setDebugLogsEnabled(Environment.isDevelopment);
+  await Purchases.setup(Secret.revenueCatPublicAPIKey, appUserId: uid);
+  Purchases.addPurchaserInfoUpdateListener(purchaserInfoUpdated);
 }
 
 void connectToEmulator() {

@@ -23,6 +23,10 @@ extension UserPrivateFirestoreFieldKeys on String {
   static final googleEmail = 'googleEmail';
   static final isLinkedGoogle = 'isLinkedGoogle';
   static final demographic = "demographic";
+  static final latestPremiumPlanIdentifier = "latestPremiumPlanIdentifier";
+  static final originalPurchaseDate = "originalPurchaseDate";
+  static final activeSubscriptions = "activeSubscriptions";
+  static final entitlementIdentifier = "entitlementIdentifier";
 }
 
 @freezed
@@ -46,6 +50,8 @@ extension UserFirestoreFieldKeys on String {
   static final migratedFlutter = "migratedFlutter";
   static final packageInfo = "packageInfo";
   static final isAnonymous = "isAnonymous";
+  static final isPremium = "isPremium";
+  static final purchaseAppID = "purchaseAppID";
 }
 
 @freezed
@@ -60,6 +66,7 @@ abstract class User implements _$User {
     @Default([]) List<String> userDocumentIDSets,
     @Default([]) List<String> anonymousUserIDSets,
     @Default([]) List<String> firebaseCurrentUserIDSets,
+    @Default(false) bool isPremium,
   }) = _User;
 
   factory User.fromJson(Map<String, dynamic> json) => _$UserFromJson(json);
