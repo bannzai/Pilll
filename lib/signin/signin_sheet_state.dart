@@ -8,6 +8,7 @@ abstract class SigninSheetState implements _$SigninSheetState {
   SigninSheetState._();
   factory SigninSheetState({
     required bool isLoginMode,
+    @Default(false) bool isLoading,
     Object? exception,
   }) = _SigninSheetState;
 

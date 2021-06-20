@@ -8,7 +8,6 @@ import 'package:pilll/auth/google.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
-import 'package:pilll/components/page/hud.dart';
 import 'package:pilll/entity/link_account_type.dart';
 import 'package:pilll/entity/user_error.dart';
 import 'package:pilll/error/error_alert.dart';
@@ -163,7 +162,7 @@ class SigninSheet extends HookWidget {
             store.handleException(error);
           }
         } finally {
-          hideHUD();
+          store.hideHUD();
         }
       },
       child: Container(
