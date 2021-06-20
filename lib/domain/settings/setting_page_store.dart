@@ -198,10 +198,15 @@ class SettingStateStore extends StateNotifier<SettingState> {
     return _pillSheetService.delete(entity);
   }
 
-  void modifyPillSheetAppearanceMode(PillSheetAppearanceMode mode) {
+  Future<void> modifyPillSheetAppearanceMode(PillSheetAppearanceMode mode) {
     final entity = state.entity;
-    final updated = entity?.copyWith(pillSheetAppearanceMode: mode);
-    update(updated);
+    if (entity == null) {
+      throw FormatException("setting entity not found");
+    }
+    final updated = entity.copyWith(pillSheetAppearanceMode: mode);
+    return _service
+        .update(updated)
+        .then((value) => state = state.copyWith(entity: value));
   }
 }
 

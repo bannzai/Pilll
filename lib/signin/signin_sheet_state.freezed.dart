@@ -16,9 +16,10 @@ final _privateConstructorUsedError = UnsupportedError(
 class _$SigninSheetStateTearOff {
   const _$SigninSheetStateTearOff();
 
-  _SigninSheetState call({required bool isLoginMode, Object? exception}) {
+  _SigninSheetState call(
+      {required SigninSheetStateContext context, Object? exception}) {
     return _SigninSheetState(
-      isLoginMode: isLoginMode,
+      context: context,
       exception: exception,
     );
   }
@@ -29,7 +30,7 @@ const $SigninSheetState = _$SigninSheetStateTearOff();
 
 /// @nodoc
 mixin _$SigninSheetState {
-  bool get isLoginMode => throw _privateConstructorUsedError;
+  SigninSheetStateContext get context => throw _privateConstructorUsedError;
   Object? get exception => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
@@ -42,7 +43,7 @@ abstract class $SigninSheetStateCopyWith<$Res> {
   factory $SigninSheetStateCopyWith(
           SigninSheetState value, $Res Function(SigninSheetState) then) =
       _$SigninSheetStateCopyWithImpl<$Res>;
-  $Res call({bool isLoginMode, Object? exception});
+  $Res call({SigninSheetStateContext context, Object? exception});
 }
 
 /// @nodoc
@@ -56,14 +57,14 @@ class _$SigninSheetStateCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object? isLoginMode = freezed,
+    Object? context = freezed,
     Object? exception = freezed,
   }) {
     return _then(_value.copyWith(
-      isLoginMode: isLoginMode == freezed
-          ? _value.isLoginMode
-          : isLoginMode // ignore: cast_nullable_to_non_nullable
-              as bool,
+      context: context == freezed
+          ? _value.context
+          : context // ignore: cast_nullable_to_non_nullable
+              as SigninSheetStateContext,
       exception: exception == freezed ? _value.exception : exception,
     ));
   }
@@ -76,7 +77,7 @@ abstract class _$SigninSheetStateCopyWith<$Res>
           _SigninSheetState value, $Res Function(_SigninSheetState) then) =
       __$SigninSheetStateCopyWithImpl<$Res>;
   @override
-  $Res call({bool isLoginMode, Object? exception});
+  $Res call({SigninSheetStateContext context, Object? exception});
 }
 
 /// @nodoc
@@ -92,14 +93,14 @@ class __$SigninSheetStateCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object? isLoginMode = freezed,
+    Object? context = freezed,
     Object? exception = freezed,
   }) {
     return _then(_SigninSheetState(
-      isLoginMode: isLoginMode == freezed
-          ? _value.isLoginMode
-          : isLoginMode // ignore: cast_nullable_to_non_nullable
-              as bool,
+      context: context == freezed
+          ? _value.context
+          : context // ignore: cast_nullable_to_non_nullable
+              as SigninSheetStateContext,
       exception: exception == freezed ? _value.exception : exception,
     ));
   }
@@ -108,25 +109,25 @@ class __$SigninSheetStateCopyWithImpl<$Res>
 /// @nodoc
 
 class _$_SigninSheetState extends _SigninSheetState {
-  _$_SigninSheetState({required this.isLoginMode, this.exception}) : super._();
+  _$_SigninSheetState({required this.context, this.exception}) : super._();
 
   @override
-  final bool isLoginMode;
+  final SigninSheetStateContext context;
   @override
   final Object? exception;
 
   @override
   String toString() {
-    return 'SigninSheetState(isLoginMode: $isLoginMode, exception: $exception)';
+    return 'SigninSheetState(context: $context, exception: $exception)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other is _SigninSheetState &&
-            (identical(other.isLoginMode, isLoginMode) ||
+            (identical(other.context, context) ||
                 const DeepCollectionEquality()
-                    .equals(other.isLoginMode, isLoginMode)) &&
+                    .equals(other.context, context)) &&
             (identical(other.exception, exception) ||
                 const DeepCollectionEquality()
                     .equals(other.exception, exception)));
@@ -135,7 +136,7 @@ class _$_SigninSheetState extends _SigninSheetState {
   @override
   int get hashCode =>
       runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(isLoginMode) ^
+      const DeepCollectionEquality().hash(context) ^
       const DeepCollectionEquality().hash(exception);
 
   @JsonKey(ignore: true)
@@ -145,12 +146,13 @@ class _$_SigninSheetState extends _SigninSheetState {
 }
 
 abstract class _SigninSheetState extends SigninSheetState {
-  factory _SigninSheetState({required bool isLoginMode, Object? exception}) =
-      _$_SigninSheetState;
+  factory _SigninSheetState(
+      {required SigninSheetStateContext context,
+      Object? exception}) = _$_SigninSheetState;
   _SigninSheetState._() : super._();
 
   @override
-  bool get isLoginMode => throw _privateConstructorUsedError;
+  SigninSheetStateContext get context => throw _privateConstructorUsedError;
   @override
   Object? get exception => throw _privateConstructorUsedError;
   @override

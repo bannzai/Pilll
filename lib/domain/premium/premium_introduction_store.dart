@@ -9,23 +9,31 @@ import 'package:pilll/domain/premium/premium_introduction_state.dart';
 import 'package:pilll/entity/user_error.dart';
 import 'package:pilll/error_log.dart';
 import 'package:pilll/purchases.dart';
+import 'package:pilll/service/auth.dart';
 import 'package:pilll/service/user.dart';
 import 'package:purchases_flutter/purchases_flutter.dart';
 
 final premiumIntroductionStoreProvider = StateNotifierProvider.autoDispose(
-    (ref) => PremiumIntroductionStore(ref.watch(userServiceProvider)));
+    (ref) => PremiumIntroductionStore(
+        ref.watch(userServiceProvider), ref.watch(authServiceProvider)));
 
 class PremiumIntroductionStore extends StateNotifier<PremiumIntroductionState> {
   final UserService _userService;
-  PremiumIntroductionStore(this._userService)
+  final AuthService _authService;
+  PremiumIntroductionStore(this._userService, this._authService)
       : super(PremiumIntroductionState()) {
     reset();
   }
 
   reset() {
     Future(() async {
-      state = state.copyWith(exception: null, selectedPackage: null);
       _subscribe();
+
+      state = state.copyWith(exception: null, selectedPackage: null);
+      state = state.copyWith(
+        hasLoginProvider:
+            _authService.isLinkedApple() || _authService.isLinkedGoogle(),
+      );
       _userService.fetch().then((value) {
         state = state.copyWith(isPremium: value.isPremium);
       });
@@ -50,10 +58,17 @@ class PremiumIntroductionStore extends StateNotifier<PremiumIntroductionState> {
   }
 
   StreamSubscription? _userStreamCanceller;
+  StreamSubscription? _authStreamCanceller;
   _subscribe() {
     _userStreamCanceller?.cancel();
     _userStreamCanceller = _userService.subscribe().listen((event) {
       state = state.copyWith(isPremium: event.isPremium);
+    });
+    _authStreamCanceller?.cancel();
+    _authStreamCanceller = _authService.subscribe().listen((_) {
+      state = state.copyWith(
+          hasLoginProvider:
+              _authService.isLinkedApple() || _authService.isLinkedGoogle());
     });
   }
 

@@ -11,6 +11,7 @@ abstract class PremiumIntroductionState implements _$PremiumIntroductionState {
     Package? selectedPackage,
     @Default(false) bool isCompletedRestore,
     @Default(false) bool isPremium,
+    @Default(false) bool hasLoginProvider,
     Object? exception,
   }) = _PremiumIntroductionState;
 

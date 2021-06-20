@@ -45,6 +45,10 @@ abstract class RecordPageState implements _$RecordPageState {
     return "";
   }
 
+  PillSheetAppearanceMode get appearanceMode {
+    return setting?.pillSheetAppearanceMode ?? PillSheetAppearanceMode.number;
+  }
+
   String get recommendedSignupNotification {
     if (isLinkedLoginProvider) {
       return "";

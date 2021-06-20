@@ -12,6 +12,7 @@ import 'package:pilll/domain/record/record_taken_information.dart';
 import 'package:pilll/domain/release_note/release_note.dart';
 import 'package:pilll/entity/pill_sheet.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
+import 'package:pilll/entity/setting.dart';
 import 'package:pilll/entity/weekday.dart';
 import 'package:pilll/error/error_alert.dart';
 import 'package:pilll/error/universal_error_page.dart';
@@ -22,6 +23,7 @@ import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/signin/signin_sheet.dart';
+import 'package:pilll/signin/signin_sheet_state.dart';
 import 'package:pilll/util/datetime/day.dart';
 import 'package:pilll/util/shared_preference/keys.dart';
 import 'package:pilll/util/toolbar/picker_toolbar.dart';
@@ -196,7 +198,8 @@ class RecordPage extends HookWidget {
     final recommendedSignupNotification = state.recommendedSignupNotification;
     if (recommendedSignupNotification.isNotEmpty) {
       return GestureDetector(
-        onTap: () => showSigninSheet(context, false, (linkAccount) {
+        onTap: () => showSigninSheet(
+            context, SigninSheetStateContext.recordPage, (linkAccount) {
           analytics.logEvent(name: "signined_account_from_notification_bar");
           showDemographyPageIfNeeded(context);
         }),
@@ -360,7 +363,8 @@ class RecordPage extends HookWidget {
         var takenDate = now().subtract(Duration(days: diff));
         _take(context, pillSheet, takenDate, store);
       },
-      premiumMarkBuilder: state.isPremium
+      premiumMarkBuilder: state.isPremium &&
+              state.appearanceMode == PillSheetAppearanceMode.date
           ? (pillMarkNumber) {
               final date = pillSheet.beginingDate
                   .add(Duration(days: pillMarkNumber - 1));
