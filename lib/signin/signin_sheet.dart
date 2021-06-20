@@ -20,17 +20,17 @@ abstract class SigninSheetConst {
 }
 
 class SigninSheet extends HookWidget {
-  final bool isLoginMode;
+  final SigninSheetStateContext stateContext;
   final Function(LinkAccountType) callback;
 
   SigninSheet({
-    required this.isLoginMode,
+    required this.stateContext,
     required this.callback,
   });
   @override
   Widget build(BuildContext context) {
-    final store = useProvider(signinSheetStoreProvider(isLoginMode));
-    final state = useProvider(signinSheetStoreProvider(isLoginMode).state);
+    final store = useProvider(signinSheetStoreProvider(stateContext));
+    final state = useProvider(signinSheetStoreProvider(stateContext).state);
     return UniversalErrorPage(
       error: state.exception,
       reload: () => store.reset(),
@@ -189,13 +189,13 @@ class SigninSheet extends HookWidget {
   }
 }
 
-showSigninSheet(BuildContext context, bool isLoginMode,
+showSigninSheet(BuildContext context, SigninSheetStateContext stateContext,
     Function(LinkAccountType) callback) {
   analytics.setCurrentScreen(screenName: "SigninSheet");
   showModalBottomSheet(
     context: context,
     builder: (context) => SigninSheet(
-      isLoginMode: isLoginMode,
+      stateContext: stateContext,
       callback: callback,
     ),
     backgroundColor: Colors.transparent,

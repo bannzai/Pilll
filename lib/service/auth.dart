@@ -3,7 +3,6 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:pilll/analytics.dart';
 import 'package:pilll/auth/apple.dart';
 import 'package:pilll/auth/google.dart';
-import 'package:pilll/error_log.dart';
 import 'package:pilll/util/shared_preference/keys.dart';
 import 'package:riverpod/riverpod.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -48,14 +47,7 @@ Stream<User> _subscribe() {
 }
 
 Future<User?> callSignin() async {
-  return _cacheOrAuth().then((user) {
-    if (user == null) {
-      return null;
-    }
-    errorLogger.setUserIdentifier(user.uid);
-    firebaseAnalytics.setUserId(user.uid);
-    return user;
-  });
+  return _cacheOrAuth();
 }
 
 Future<AuthInfo> cacheOrAuth() async {

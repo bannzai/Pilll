@@ -22,9 +22,12 @@
 		BA158D9D24E440B800164799 /* GoogleService-Info-Development.plist in Resources */ = {isa = PBXBuildFile; fileRef = BA158D9924E440B800164799 /* GoogleService-Info-Development.plist */; };
 		BA158D9F24E440B800164799 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = BA158D9B24E440B800164799 /* GoogleService-Info.plist */; };
 		BA158DA024E440B800164799 /* GoogleService-Info-Production.plist in Resources */ = {isa = PBXBuildFile; fileRef = BA158D9C24E440B800164799 /* GoogleService-Info-Production.plist */; };
+		BA1C2640266B103C0040ACD0 /* StoreKitTestCertificate.cer in Resources */ = {isa = PBXBuildFile; fileRef = BA1C263F266B103C0040ACD0 /* StoreKitTestCertificate.cer */; };
+		BA1C2641266B10E40040ACD0 /* StoreKitTestingConfiguration.storekit in Resources */ = {isa = PBXBuildFile; fileRef = BA28ADE02669BB0F001BCDD1 /* StoreKitTestingConfiguration.storekit */; };
 		BA662A75264507FC003E8CE6 /* Development-Secret.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = BA662A74264507FC003E8CE6 /* Development-Secret.xcconfig */; };
 		BA662A7726450A11003E8CE6 /* Production-Secret.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = BA662A7626450A11003E8CE6 /* Production-Secret.xcconfig */; };
 		BA869E47258AFC9A000EBE33 /* becho.caf in Resources */ = {isa = PBXBuildFile; fileRef = BA869E46258AFC9A000EBE33 /* becho.caf */; };
+		BACF001F266831730046E1A2 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BACF001E266831730046E1A2 /* StoreKit.framework */; };
 		CF825C13AD6839621AC01C06 /* Pods_Runner.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D95AD771147BDF4A2457CE90 /* Pods_Runner.framework */; };
 /* End PBXBuildFile section */
 
@@ -68,11 +71,14 @@
 		BA158D9924E440B800164799 /* GoogleService-Info-Development.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info-Development.plist"; sourceTree = "<group>"; };
 		BA158D9B24E440B800164799 /* GoogleService-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		BA158D9C24E440B800164799 /* GoogleService-Info-Production.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info-Production.plist"; sourceTree = "<group>"; };
+		BA1C263F266B103C0040ACD0 /* StoreKitTestCertificate.cer */ = {isa = PBXFileReference; lastKnownFileType = file; path = StoreKitTestCertificate.cer; sourceTree = "<group>"; };
+		BA28ADE02669BB0F001BCDD1 /* StoreKitTestingConfiguration.storekit */ = {isa = PBXFileReference; lastKnownFileType = text; path = StoreKitTestingConfiguration.storekit; sourceTree = "<group>"; };
 		BA662A74264507FC003E8CE6 /* Development-Secret.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = "Development-Secret.xcconfig"; path = "Flutter/Development-Secret.xcconfig"; sourceTree = "<group>"; };
 		BA662A7626450A11003E8CE6 /* Production-Secret.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = "Production-Secret.xcconfig"; path = "Flutter/Production-Secret.xcconfig"; sourceTree = "<group>"; };
 		BA869E46258AFC9A000EBE33 /* becho.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = becho.caf; sourceTree = "<group>"; };
 		BAC4EF3825EDB2350080B040 /* ja */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = ja; path = ja.lproj/Main.storyboard; sourceTree = "<group>"; };
 		BAC4EF3925EDB2350080B040 /* ja */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = ja; path = ja.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		BACF001E266831730046E1A2 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
 		BAE6D1E42552D54800516E8E /* Runner.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Runner.entitlements; sourceTree = "<group>"; };
 		D95AD771147BDF4A2457CE90 /* Pods_Runner.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Runner.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E5FD0418046F96951CE63113 /* Pods-Runner.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Runner.release.xcconfig"; path = "Target Support Files/Pods-Runner/Pods-Runner.release.xcconfig"; sourceTree = "<group>"; };
@@ -84,6 +90,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CF825C13AD6839621AC01C06 /* Pods_Runner.framework in Frameworks */,
+				BACF001F266831730046E1A2 /* StoreKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -136,6 +143,8 @@
 				BAE6D1E42552D54800516E8E /* Runner.entitlements */,
 				97C146FA1CF9000F007C117D /* Main.storyboard */,
 				97C146FD1CF9000F007C117D /* Assets.xcassets */,
+				BA28ADE02669BB0F001BCDD1 /* StoreKitTestingConfiguration.storekit */,
+				BA1C263F266B103C0040ACD0 /* StoreKitTestCertificate.cer */,
 				97C146FF1CF9000F007C117D /* LaunchScreen.storyboard */,
 				97C147021CF9000F007C117D /* Info.plist */,
 				97C146F11CF9000F007C117D /* Supporting Files */,
@@ -157,6 +166,7 @@
 		AA9F7F9CD8036CFC6638A43E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BACF001E266831730046E1A2 /* StoreKit.framework */,
 				D95AD771147BDF4A2457CE90 /* Pods_Runner.framework */,
 			);
 			name = Frameworks;
@@ -253,9 +263,11 @@
 				BA158D9F24E440B800164799 /* GoogleService-Info.plist in Resources */,
 				BA158D9D24E440B800164799 /* GoogleService-Info-Development.plist in Resources */,
 				BA662A75264507FC003E8CE6 /* Development-Secret.xcconfig in Resources */,
+				BA1C2641266B10E40040ACD0 /* StoreKitTestingConfiguration.storekit in Resources */,
 				BA662A7726450A11003E8CE6 /* Production-Secret.xcconfig in Resources */,
 				3379DA5624E3A4DC0002DD85 /* Release-Production.xcconfig in Resources */,
 				3379DA5524E3A4DC0002DD85 /* Debug-Development.xcconfig in Resources */,
+				BA1C2640266B103C0040ACD0 /* StoreKitTestCertificate.cer in Resources */,
 				97C147011CF9000F007C117D /* LaunchScreen.storyboard in Resources */,
 				BA158DA024E440B800164799 /* GoogleService-Info-Production.plist in Resources */,
 				3B3967161E833CAA004F5970 /* AppFrameworkInfo.plist in Resources */,
@@ -315,7 +327,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "/bin/sh \"$FLUTTER_ROOT/packages/flutter_tools/bin/xcode_backend.sh\" build";
+			shellScript = "/bin/sh \"$FLUTTER_ROOT/packages/flutter_tools/bin/xcode_backend.sh\" build\n";
 		};
 		B3CAD8EA6F3D8D8D194CEF5F /* [CP] Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -463,7 +475,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 7AFA3C8E1D35360C0083082E /* Release.xcconfig */;
 			buildSettings = {
-				ARCHS = arm64;
+				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = Runner/Runner.entitlements;
@@ -475,6 +487,7 @@
 					"$(PROJECT_DIR)/Flutter",
 				);
 				INFOPLIST_FILE = Runner/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -551,7 +564,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3379DA5124E3A4DC0002DD85 /* Debug-Development.xcconfig */;
 			buildSettings = {
-				ARCHS = arm64;
+				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = Runner/Runner.entitlements;
@@ -563,6 +576,7 @@
 					"$(PROJECT_DIR)/Flutter",
 				);
 				INFOPLIST_FILE = Runner/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -637,7 +651,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3379DA5224E3A4DC0002DD85 /* Release-Production.xcconfig */;
 			buildSettings = {
-				ARCHS = arm64;
+				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = Runner/Runner.entitlements;
@@ -649,6 +663,7 @@
 					"$(PROJECT_DIR)/Flutter",
 				);
 				INFOPLIST_FILE = Runner/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -722,7 +737,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3379DA5324E3A4DC0002DD85 /* Release-Development.xcconfig */;
 			buildSettings = {
-				ARCHS = arm64;
+				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = Runner/Runner.entitlements;
@@ -734,6 +749,7 @@
 					"$(PROJECT_DIR)/Flutter",
 				);
 				INFOPLIST_FILE = Runner/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -810,7 +826,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3379DA5024E3A4DC0002DD85 /* Debug-Production.xcconfig */;
 			buildSettings = {
-				ARCHS = arm64;
+				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = Runner/Runner.entitlements;
@@ -822,6 +838,7 @@
 					"$(PROJECT_DIR)/Flutter",
 				);
 				INFOPLIST_FILE = Runner/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -952,7 +969,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3379DA5124E3A4DC0002DD85 /* Debug-Development.xcconfig */;
 			buildSettings = {
-				ARCHS = arm64;
+				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = Runner/Runner.entitlements;
@@ -964,6 +981,7 @@
 					"$(PROJECT_DIR)/Flutter",
 				);
 				INFOPLIST_FILE = Runner/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -985,7 +1003,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3379DA5224E3A4DC0002DD85 /* Release-Production.xcconfig */;
 			buildSettings = {
-				ARCHS = arm64;
+				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = Runner/Runner.entitlements;
@@ -997,6 +1015,7 @@
 					"$(PROJECT_DIR)/Flutter",
 				);
 				INFOPLIST_FILE = Runner/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",

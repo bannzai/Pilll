@@ -46,8 +46,12 @@ void main() {
           .thenAnswer((_) => Future.value(pillSheet));
       when(pillSheetService.subscribeForLatestPillSheet())
           .thenAnswer((realInvocation) => Stream.empty());
+      final userService = MockUserService();
+      when(userService.fetch()).thenAnswer(
+          (realInvocation) => Future.value(FakeUserForNotPremium()));
 
-      final store = SettingStateStore(service, pillSheetService);
+      final store = SettingStateStore(service, pillSheetService, userService);
+
       // ignore: invalid_use_of_protected_member
       store.state = SettingState(entity: setting);
 
@@ -84,8 +88,12 @@ void main() {
           .thenAnswer((_) => Future.value(pillSheet));
       when(pillSheetService.subscribeForLatestPillSheet())
           .thenAnswer((realInvocation) => Stream.empty());
+      final userService = MockUserService();
+      when(userService.fetch()).thenAnswer(
+          (realInvocation) => Future.value(FakeUserForNotPremium()));
 
-      final store = SettingStateStore(service, pillSheetService);
+      final store = SettingStateStore(service, pillSheetService, userService);
+
       // ignore: invalid_use_of_protected_member
       store.state = SettingState(entity: setting);
 
@@ -117,8 +125,12 @@ void main() {
           .thenAnswer((_) => Future.value(pillSheet));
       when(pillSheetService.subscribeForLatestPillSheet())
           .thenAnswer((realInvocation) => Stream.empty());
+      final userService = MockUserService();
+      when(userService.fetch()).thenAnswer(
+          (realInvocation) => Future.value(FakeUserForNotPremium()));
 
-      final store = SettingStateStore(service, pillSheetService);
+      final store = SettingStateStore(service, pillSheetService, userService);
+
       // ignore: invalid_use_of_protected_member
       store.state = SettingState(entity: setting);
 
@@ -149,8 +161,12 @@ void main() {
           .thenAnswer((_) => Future.value(pillSheet));
       when(pillSheetService.subscribeForLatestPillSheet())
           .thenAnswer((realInvocation) => Stream.empty());
+      final userService = MockUserService();
+      when(userService.fetch()).thenAnswer(
+          (realInvocation) => Future.value(FakeUserForNotPremium()));
 
-      final store = SettingStateStore(service, pillSheetService);
+      final store = SettingStateStore(service, pillSheetService, userService);
+
       // ignore: invalid_use_of_protected_member
       store.state = SettingState(entity: setting);
       expect(() => store.deleteReminderTimes(0), throwsException);

@@ -55,11 +55,17 @@ void main() {
       final authService = MockAuthService();
       when(authService.isLinkedApple()).thenReturn(false);
       when(authService.isLinkedGoogle()).thenReturn(false);
+      final userService = MockUserService();
+      when(userService.fetch())
+          .thenAnswer((reaInvocation) => Future.value(FakeUserForNotPremium()));
+      when(userService.subscribe())
+          .thenAnswer((realInvocation) => Stream.empty());
 
       final store = RecordPageStore(
         service,
         settingService,
         authService,
+        userService,
       );
       await waitForResetStoreState();
       expect(state.entity?.todayPillNumber, equals(1));
@@ -103,11 +109,17 @@ void main() {
     final authService = MockAuthService();
     when(authService.isLinkedApple()).thenReturn(false);
     when(authService.isLinkedGoogle()).thenReturn(false);
+    final userService = MockUserService();
+    when(userService.fetch())
+        .thenAnswer((reaInvocation) => Future.value(FakeUserForNotPremium()));
+    when(userService.subscribe())
+        .thenAnswer((realInvocation) => Stream.empty());
 
     final store = RecordPageStore(
       service,
       settingService,
       authService,
+      userService,
     );
     await waitForResetStoreState();
     expect(state.entity?.todayPillNumber, equals(3));
@@ -153,12 +165,19 @@ void main() {
       final authService = MockAuthService();
       when(authService.isLinkedApple()).thenReturn(false);
       when(authService.isLinkedGoogle()).thenReturn(false);
+      final userService = MockUserService();
+      when(userService.fetch())
+          .thenAnswer((reaInvocation) => Future.value(FakeUserForNotPremium()));
+      when(userService.subscribe())
+          .thenAnswer((realInvocation) => Stream.empty());
 
       final store = RecordPageStore(
         service,
         settingService,
         authService,
+        userService,
       );
+
       await waitForResetStoreState();
       expect(state.entity?.allTaken, isTrue);
       expect(store.markFor(1), PillMarkType.done);
@@ -202,12 +221,19 @@ void main() {
       final authService = MockAuthService();
       when(authService.isLinkedApple()).thenReturn(false);
       when(authService.isLinkedGoogle()).thenReturn(false);
+      final userService = MockUserService();
+      when(userService.fetch())
+          .thenAnswer((reaInvocation) => Future.value(FakeUserForNotPremium()));
+      when(userService.subscribe())
+          .thenAnswer((realInvocation) => Stream.empty());
 
       final store = RecordPageStore(
         service,
         settingService,
         authService,
+        userService,
       );
+
       await waitForResetStoreState();
       expect(state.entity?.allTaken, isFalse);
       expect(store.markFor(1), PillMarkType.done);
@@ -253,12 +279,19 @@ void main() {
       final authService = MockAuthService();
       when(authService.isLinkedApple()).thenReturn(false);
       when(authService.isLinkedGoogle()).thenReturn(false);
+      final userService = MockUserService();
+      when(userService.fetch())
+          .thenAnswer((reaInvocation) => Future.value(FakeUserForNotPremium()));
+      when(userService.subscribe())
+          .thenAnswer((realInvocation) => Stream.empty());
 
       final store = RecordPageStore(
         service,
         settingService,
         authService,
+        userService,
       );
+
       await waitForResetStoreState();
       expect(state.entity?.allTaken, isTrue);
       for (int i = 1; i <= pillSheetEntity.pillSheetType.totalCount; i++) {
@@ -301,12 +334,19 @@ void main() {
       final authService = MockAuthService();
       when(authService.isLinkedApple()).thenReturn(false);
       when(authService.isLinkedGoogle()).thenReturn(false);
+      final userService = MockUserService();
+      when(userService.fetch())
+          .thenAnswer((reaInvocation) => Future.value(FakeUserForNotPremium()));
+      when(userService.subscribe())
+          .thenAnswer((realInvocation) => Stream.empty());
 
       final store = RecordPageStore(
         service,
         settingService,
         authService,
+        userService,
       );
+
       await waitForResetStoreState();
       expect(state.entity?.allTaken, isFalse);
       expect(store.shouldPillMarkAnimation(3), isTrue);

@@ -1,24 +1,46 @@
+import 'package:pilll/components/atoms/font.dart';
+import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/components/molecules/ripple.dart';
 import 'package:pilll/entity/pill_mark_type.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/util/environment.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
+import 'package:dotted_border/dotted_border.dart';
+import 'package:flutter_svg/svg.dart';
 
 abstract class PillMarkConst {
   static final double edge = 20;
   static final double edgeOfRipple = 80;
 }
 
+class PremiumPillMarkModel {
+  final DateTime date;
+  final int pillMarkNumber;
+  final int pillNumberForMenstruationBegin;
+  final int menstruationDuration;
+  final int maxPillNumber;
+
+  PremiumPillMarkModel(
+    this.date,
+    this.pillMarkNumber,
+    this.pillNumberForMenstruationBegin,
+    this.menstruationDuration,
+    this.maxPillNumber,
+  );
+}
+
 class PillMark extends StatefulWidget {
-  final PillMarkType type;
+  final PillMarkType pillSheetType;
   final bool isDone;
   final bool hasRippleAnimation;
+  final PremiumPillMarkModel? premium;
   const PillMark({
     Key? key,
     this.hasRippleAnimation = false,
-    required this.type,
+    required this.pillSheetType,
     required this.isDone,
+    required this.premium,
   }) : super(key: key);
 
   @override
@@ -54,10 +76,10 @@ class _PillMarkState extends State<PillMark> with TickerProviderStateMixin {
     return Stack(
       clipBehavior: Clip.none,
       children: [
-        PillMarkTypeFunctions.create(widget.isDone, widget.type),
+        _mark(widget.isDone, widget.pillSheetType, widget.premium),
         if (widget.hasRippleAnimation)
           // NOTE: pill mark size is 20px. Ripple view final size is 80px.
-          // Positined ripple animation equal to (80px - 20px) / 2(to center) = 28;
+          // Positined ripple animation equal to (80px - 20px) / 2(to center) = 30;
           Positioned(
             left: -30,
             top: -30,
@@ -73,6 +95,79 @@ class _PillMarkState extends State<PillMark> with TickerProviderStateMixin {
             ),
           ),
       ],
+    );
+  }
+
+  SvgPicture _checkImage() {
+    return SvgPicture.asset(
+      "images/checkmark.svg",
+      color: PilllColors.potti,
+      width: 11,
+      height: 8.5,
+    );
+  }
+
+  TextStyle _pillMarkNumberTextColor(PillMarkType pillMarkType) {
+    switch (pillMarkType) {
+      case PillMarkType.normal:
+        return TextColorStyle.white;
+      case PillMarkType.fake:
+        return TextColorStyle.main;
+      case PillMarkType.rest:
+        return TextColorStyle.main;
+      case PillMarkType.selected:
+        return TextStyle();
+      case PillMarkType.done:
+        return TextStyle();
+    }
+  }
+
+  Widget _mark(bool isDone, PillMarkType type, PremiumPillMarkModel? premium) {
+    return DottedBorder(
+      borderType: BorderType.RRect,
+      radius: Radius.circular(10),
+      padding: EdgeInsets.zero,
+      color: type == PillMarkType.rest ? PilllColors.gray : Colors.transparent,
+      strokeWidth: type == PillMarkType.rest ? 1 : 0,
+      child: Container(
+        width: PillMarkConst.edge,
+        height: PillMarkConst.edge,
+        child: Center(
+          child: () {
+            if (isDone) {
+              return _checkImage();
+            }
+            if (premium != null) {
+              return Text(
+                "${premium.pillMarkNumber}",
+                style: FontType.sSmallNumber.merge(
+                  _pillMarkNumberTextColor(type),
+                ),
+              );
+            }
+            return null;
+          }(),
+        ),
+        decoration: BoxDecoration(
+          color: () {
+            switch (type) {
+              case PillMarkType.normal:
+                return PilllColors.potti;
+              case PillMarkType.rest:
+                return PilllColors.blank;
+              case PillMarkType.fake:
+                return PilllColors.blank;
+              case PillMarkType.selected:
+                return PilllColors.enable;
+              case PillMarkType.done:
+                return PilllColors.lightGray;
+              default:
+                throw ArgumentError.notNull("");
+            }
+          }(),
+          shape: BoxShape.circle,
+        ),
+      ),
     );
   }
 }

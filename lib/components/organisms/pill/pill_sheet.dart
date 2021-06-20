@@ -8,16 +8,20 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 import 'package:pilll/entity/pill_sheet_type.dart';
+import 'package:pilll/util/formatter/date_time_formatter.dart';
 
 typedef PillMarkSelected = void Function(int);
 typedef PillMarkTypeBuilder = PillMarkType Function(int);
 typedef PillMarkTypeHasRippleAnimation = bool Function(int);
 typedef DoneStateBuilder = bool Function(int);
+typedef PremiumPillMarkBuilder = PremiumPillMarkModel Function(int);
+
+final double componentWidth = 35;
 
 class PillSheetView extends StatelessWidget {
   static final double width = 316;
   static final double lineHeight = 49.5;
-  static final double topSpace = 12;
+  static final double topSpace = 24;
   static final double bottomSpace = 24;
   final Weekday? firstWeekday;
   final PillSheetType pillSheetType;
@@ -25,6 +29,7 @@ class PillSheetView extends StatelessWidget {
   final DoneStateBuilder doneStateBuilder;
   final PillMarkTypeHasRippleAnimation? enabledMarkAnimation;
   final PillMarkSelected markSelected;
+  final PremiumPillMarkBuilder? premiumMarkBuilder;
 
   bool get isHideWeekdayLine => firstWeekday == null;
   int get _numberOfLine => pillSheetType.numberOfLineInPillSheet;
@@ -45,6 +50,7 @@ class PillSheetView extends StatelessWidget {
     required this.enabledMarkAnimation,
     required this.markSelected,
     required this.doneStateBuilder,
+    this.premiumMarkBuilder,
   }) : super(key: key);
 
   int _calcIndex(int row, int line) {
@@ -62,7 +68,11 @@ class PillSheetView extends StatelessWidget {
 
           return WeekdayFunctions.weekdaysForFirstWeekday(firstWeekday)
               .map(
-                (weekday) => WeekdayBadge(weekday: weekday),
+                (weekday) => Container(
+                  width: componentWidth,
+                  color: Colors.transparent,
+                  child: Center(child: WeekdayBadge(weekday: weekday)),
+                ),
               )
               .toList();
         }());
@@ -71,26 +81,50 @@ class PillSheetView extends StatelessWidget {
   Widget _pillMarkWithNumber(int number) {
     var type = pillMarkTypeBuilder(number);
     final enabledMarkAnimation = this.enabledMarkAnimation;
+    final premiumMarkBuilder = this.premiumMarkBuilder;
+    PremiumPillMarkModel? premium;
+    if (premiumMarkBuilder != null) {
+      premium = premiumMarkBuilder(number);
+    }
     return GestureDetector(
       onTap: () {
         markSelected(number);
       },
       child: Column(
         children: <Widget>[
-          Text("$number",
-              style: FontType.smallTitle
-                  .merge(TextStyle(color: PilllColors.weekday))),
+          Text(
+            premium == null
+                ? "$number"
+                : DateTimeFormatter.monthAndDay(premium.date),
+            style: FontType.smallTitle.merge(_upperTextColor(premium, number)),
+          ),
           PillMark(
             key: Key("PillMarkWidget_$number"),
             hasRippleAnimation: enabledMarkAnimation == null
                 ? false
                 : enabledMarkAnimation(number),
             isDone: doneStateBuilder(number),
-            type: type,
+            pillSheetType: type,
+            premium: premium,
           ),
         ],
       ),
     );
+  }
+
+  TextStyle _upperTextColor(PremiumPillMarkModel? premium, int pillMarkNumber) {
+    if (premium == null) {
+      return TextStyle(color: PilllColors.weekday);
+    }
+    final begin = premium.pillNumberForMenstruationBegin;
+    final duration = premium.menstruationDuration;
+    final menstruationNumbers = List.generate(duration, (index) {
+      final number = (begin + index) % premium.maxPillNumber;
+      return number == 0 ? premium.maxPillNumber : number;
+    });
+    return menstruationNumbers.contains(pillMarkNumber)
+        ? TextStyle(color: PilllColors.primary)
+        : TextStyle(color: PilllColors.weekday);
   }
 
   Widget _pillMarkLine(int lineIndex) {
@@ -105,9 +139,11 @@ class PillSheetView extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: List.generate(Weekday.values.length, (index) {
           if (index >= countOfPillMarksInLine) {
-            return Container(width: PillMarkConst.edge);
+            return Container(width: componentWidth);
           }
-          return _pillMarkWithNumber(_calcIndex(index, lineIndex));
+          return Container(
+              width: componentWidth,
+              child: _pillMarkWithNumber(_calcIndex(index, lineIndex)));
         }),
       ),
     );
@@ -130,27 +166,25 @@ class PillSheetView extends StatelessWidget {
         ],
       ),
       child: Padding(
-        padding: EdgeInsets.fromLTRB(28, 0, 28, PillSheetView.bottomSpace),
+        padding: EdgeInsets.fromLTRB(22, 0, 22, PillSheetView.bottomSpace),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
             if (!isHideWeekdayLine) _weekdayLine(),
             SizedBox(height: PillSheetView.topSpace),
-            Expanded(
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  ...List.generate(_numberOfLine, (line) {
-                    if (line + 1 == _numberOfLine) {
-                      return [_pillMarkLine(line)];
-                    }
-                    return [
-                      _pillMarkLine(line),
-                      SvgPicture.asset("images/pill_sheet_dot_line.svg"),
-                    ];
-                  }).expand((element) => element).toList(),
-                ],
-              ),
+            Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                ...List.generate(_numberOfLine, (line) {
+                  if (line + 1 == _numberOfLine) {
+                    return [_pillMarkLine(line)];
+                  }
+                  return [
+                    _pillMarkLine(line),
+                    SvgPicture.asset("images/pill_sheet_dot_line.svg"),
+                  ];
+                }).expand((element) => element).toList(),
+              ],
             ),
           ],
         ),

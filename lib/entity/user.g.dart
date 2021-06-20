@@ -38,6 +38,7 @@ _$_User _$_$_UserFromJson(Map<String, dynamic> json) {
                 ?.map((e) => e as String)
                 .toList() ??
             [],
+    isPremium: json['isPremium'] as bool? ?? false,
   );
 }
 
@@ -49,4 +50,5 @@ Map<String, dynamic> _$_$_UserToJson(_$_User instance) => <String, dynamic>{
       'userDocumentIDSets': instance.userDocumentIDSets,
       'anonymousUserIDSets': instance.anonymousUserIDSets,
       'firebaseCurrentUserIDSets': instance.firebaseCurrentUserIDSets,
+      'isPremium': instance.isPremium,
     };

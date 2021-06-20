@@ -11,6 +11,7 @@ import 'package:pilll/service/initial_setting.dart';
 import 'package:pilll/service/setting.dart';
 import 'package:pilll/service/user.dart';
 import 'package:pilll/state/initial_setting.dart';
+import 'package:purchases_flutter/purchases_flutter.dart';
 import 'package:riverpod/riverpod.dart';
 
 final initialSettingStoreProvider = StateNotifierProvider.autoDispose(
@@ -54,6 +55,7 @@ class InitialSettingStateStore extends StateNotifier<InitialSettingState> {
         await userService.recordUserIDs();
         errorLogger.setUserIdentifier(user.uid);
         firebaseAnalytics.setUserId(user.uid);
+        await Purchases.identify(user.uid);
       }
       state = state.copyWith(
           isAccountCooperationDidEnd: isAccountCooperationDidEnd);

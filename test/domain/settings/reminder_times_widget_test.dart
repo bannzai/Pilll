@@ -48,8 +48,13 @@ void main() {
           .thenAnswer((_) => Future.value(pillSheet));
       when(pillSheetService.subscribeForLatestPillSheet())
           .thenAnswer((realInvocation) => Stream.empty());
+      final userService = MockUserService();
+      when(userService.fetch()).thenAnswer(
+          (realInvocation) => Future.value(FakeUserForNotPremium()));
+      when(userService.subscribe())
+          .thenAnswer((realInvocation) => Stream.empty());
 
-      final store = SettingStateStore(service, pillSheetService);
+      final store = SettingStateStore(service, pillSheetService, userService);
       await tester.pumpWidget(
         ProviderScope(
           overrides: [
@@ -95,8 +100,13 @@ void main() {
           .thenAnswer((_) => Future.value(pillSheet));
       when(pillSheetService.subscribeForLatestPillSheet())
           .thenAnswer((realInvocation) => Stream.empty());
+      final userService = MockUserService();
+      when(userService.fetch()).thenAnswer(
+          (realInvocation) => Future.value(FakeUserForNotPremium()));
+      when(userService.subscribe())
+          .thenAnswer((realInvocation) => Stream.empty());
 
-      final store = SettingStateStore(service, pillSheetService);
+      final store = SettingStateStore(service, pillSheetService, userService);
       await tester.pumpWidget(
         ProviderScope(
           overrides: [

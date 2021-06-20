@@ -8,6 +8,7 @@ import 'package:pilll/components/atoms/text_color.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:pilll/signin/signin_sheet.dart';
+import 'package:pilll/signin/signin_sheet_state.dart';
 
 class PillSheetTypeSelectPage extends StatelessWidget {
   final String title;
@@ -79,7 +80,8 @@ class PillSheetTypeSelectPage extends StatelessWidget {
               SizedBox(height: 20),
               SecondaryButton(
                 onPressed: () {
-                  showSigninSheet(context, true, signinAccount);
+                  showSigninSheet(context,
+                      SigninSheetStateContext.initialSetting, signinAccount);
                 },
                 text: "すでにアカウントをお持ちの方はこちら",
               ),
