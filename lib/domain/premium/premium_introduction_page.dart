@@ -10,6 +10,7 @@ import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/components/molecules/indicator.dart';
 import 'package:pilll/domain/demography/demography_page.dart';
+import 'package:pilll/domain/premium/premium_complete_dialog.dart';
 import 'package:pilll/domain/premium/premium_introduction_state.dart';
 import 'package:pilll/domain/premium/premium_introduction_store.dart';
 import 'package:pilll/entity/user_error.dart';
@@ -83,6 +84,11 @@ class PremiumIntroductionPage extends HookWidget {
                                   if (state.hasLoginProvider) {
                                     try {
                                       await store.purchase();
+                                      showDialog(
+                                          context: context,
+                                          builder: (context) {
+                                            return PremiumCompleteDialog();
+                                          });
                                     } catch (error) {
                                       print("caused purchase error for $error");
                                       if (error is UserDisplayedError) {
