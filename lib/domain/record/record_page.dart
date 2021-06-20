@@ -163,9 +163,6 @@ class RecordPage extends HookWidget {
             child: Column(
               children: [
                 _notification(context, state, store),
-                SizedBox(height: 64),
-                _content(
-                    context, store, state, currentPillSheet, settingEntity),
                 SizedBox(height: 67),
                 if (state.isInvalid)
                   Align(
@@ -189,20 +186,6 @@ class RecordPage extends HookWidget {
         ),
       ],
     );
-  }
-
-  Widget _content(
-    BuildContext context,
-    RecordPageStore store,
-    RecordPageState state,
-    PillSheet? currentPillSheet,
-    Setting settingEntity,
-  ) {
-    if (state.isInvalid)
-      return _empty(context, store, settingEntity.pillSheetType);
-    if (!state.isInvalid && currentPillSheet != null)
-      return _pillSheet(context, currentPillSheet, settingEntity, store);
-    throw AssertionError("invalid state ${state.toString()}");
   }
 
   Widget _notification(
