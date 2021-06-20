@@ -70,6 +70,7 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
 
   StreamSubscription<PillSheet>? _canceller;
   StreamSubscription? _settingCanceller;
+  StreamSubscription? _userSubscribeCanceller;
   void _subscribe() {
     _canceller?.cancel();
     _canceller = _service.subscribeForLatestPillSheet().listen((event) {
@@ -78,6 +79,10 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
     _settingCanceller?.cancel();
     _settingCanceller = _settingService.subscribe().listen((setting) {
       state = state.copyWith(setting: setting);
+    });
+    _userSubscribeCanceller?.cancel();
+    _userSubscribeCanceller = _userService.subscribe().listen((event) {
+      state = state.copyWith(isPremium: event.isPremium);
     });
   }
 
