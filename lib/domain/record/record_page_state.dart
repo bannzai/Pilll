@@ -15,6 +15,7 @@ abstract class RecordPageState implements _$RecordPageState {
     @Default(0) int totalCountOfActionForTakenPill,
     @Default(false) bool isLinkedLoginProvider,
     @Default(false) bool firstLoadIsEnded,
+    @Default(false) bool isPremium,
     Object? exception,
   }) = _RecordPageState;
 

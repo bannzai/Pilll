@@ -2,6 +2,7 @@ import 'dart:io' show Platform;
 
 import 'package:pilll/analytics.dart';
 import 'package:pilll/components/molecules/indicator.dart';
+import 'package:pilll/components/organisms/pill/pill_mark.dart';
 import 'package:pilll/components/organisms/pill/pill_sheet.dart';
 import 'package:pilll/domain/demography/demography_page.dart';
 import 'package:pilll/domain/initial_setting/migrate_info.dart';
@@ -11,7 +12,6 @@ import 'package:pilll/domain/record/record_taken_information.dart';
 import 'package:pilll/domain/release_note/release_note.dart';
 import 'package:pilll/entity/pill_sheet.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
-import 'package:pilll/entity/setting.dart';
 import 'package:pilll/entity/weekday.dart';
 import 'package:pilll/error/error_alert.dart';
 import 'package:pilll/error/universal_error_page.dart';
@@ -163,8 +163,10 @@ class RecordPage extends HookWidget {
               children: [
                 _notification(context, state, store),
                 SizedBox(height: 64),
-                _content(
-                    context, store, state, currentPillSheet, settingEntity),
+                if (state.isInvalid)
+                  _empty(context, store, settingEntity.pillSheetType),
+                if (!state.isInvalid && currentPillSheet != null)
+                  _pillSheet(context, state, store),
               ],
             ),
           ),
@@ -176,20 +178,6 @@ class RecordPage extends HookWidget {
           ),
       ],
     );
-  }
-
-  Widget _content(
-    BuildContext context,
-    RecordPageStore store,
-    RecordPageState state,
-    PillSheet? currentPillSheet,
-    Setting settingEntity,
-  ) {
-    if (state.isInvalid)
-      return _empty(context, store, settingEntity.pillSheetType);
-    if (!state.isInvalid && currentPillSheet != null)
-      return _pillSheet(context, currentPillSheet, store);
-    throw AssertionError("invalid state ${state.toString()}");
   }
 
   Widget _button(
@@ -338,9 +326,15 @@ class RecordPage extends HookWidget {
 
   PillSheetView _pillSheet(
     BuildContext context,
-    PillSheet pillSheet,
+    RecordPageState state,
     RecordPageStore store,
   ) {
+    final pillSheet = state.entity;
+    final setting = state.setting;
+    if (pillSheet == null || setting == null) {
+      throw FormatException(
+          "Unexpected pillSheet or setting are null for state of ${state.toString()}");
+    }
     return PillSheetView(
       firstWeekday: WeekdayFunctions.weekdayFromDate(pillSheet.beginingDate),
       pillSheetType: pillSheet.pillSheetType,
@@ -366,6 +360,19 @@ class RecordPage extends HookWidget {
         var takenDate = now().subtract(Duration(days: diff));
         _take(context, pillSheet, takenDate, store);
       },
+      premiumMarkBuilder: state.isPremium
+          ? (pillMarkNumber) {
+              final date = pillSheet.beginingDate
+                  .add(Duration(days: pillMarkNumber - 1));
+              return PremiumPillMarkModel(
+                date,
+                pillMarkNumber,
+                setting.pillNumberForFromMenstruation,
+                setting.durationMenstruation,
+                pillSheet.pillSheetType.totalCount,
+              );
+            }
+          : null,
     );
   }
 

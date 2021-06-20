@@ -124,12 +124,17 @@ class FontType {
     fontSize: FontSize.small,
   );
   static final TextStyle smallTitle = TextStyle(
-    fontFamily: FontFamily.japanese,
+    fontFamily: FontFamily.number,
     fontWeight: FontWeight.w500,
     fontSize: FontSize.small,
   );
   static final TextStyle sSmallTitle = TextStyle(
     fontFamily: FontFamily.japanese,
+    fontWeight: FontWeight.w600,
+    fontSize: FontSize.sSmall,
+  );
+  static final TextStyle sSmallNumber = TextStyle(
+    fontFamily: FontFamily.number,
     fontWeight: FontWeight.w600,
     fontSize: FontSize.sSmall,
   );

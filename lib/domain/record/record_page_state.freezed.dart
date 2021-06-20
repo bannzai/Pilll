@@ -23,6 +23,7 @@ class _$RecordPageStateTearOff {
       int totalCountOfActionForTakenPill = 0,
       bool isLinkedLoginProvider = false,
       bool firstLoadIsEnded = false,
+      bool isPremium = false,
       Object? exception}) {
     return _RecordPageState(
       entity: entity,
@@ -32,6 +33,7 @@ class _$RecordPageStateTearOff {
       totalCountOfActionForTakenPill: totalCountOfActionForTakenPill,
       isLinkedLoginProvider: isLinkedLoginProvider,
       firstLoadIsEnded: firstLoadIsEnded,
+      isPremium: isPremium,
       exception: exception,
     );
   }
@@ -49,6 +51,7 @@ mixin _$RecordPageState {
   int get totalCountOfActionForTakenPill => throw _privateConstructorUsedError;
   bool get isLinkedLoginProvider => throw _privateConstructorUsedError;
   bool get firstLoadIsEnded => throw _privateConstructorUsedError;
+  bool get isPremium => throw _privateConstructorUsedError;
   Object? get exception => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
@@ -68,6 +71,7 @@ abstract class $RecordPageStateCopyWith<$Res> {
       int totalCountOfActionForTakenPill,
       bool isLinkedLoginProvider,
       bool firstLoadIsEnded,
+      bool isPremium,
       Object? exception});
 
   $PillSheetCopyWith<$Res>? get entity;
@@ -91,6 +95,7 @@ class _$RecordPageStateCopyWithImpl<$Res>
     Object? totalCountOfActionForTakenPill = freezed,
     Object? isLinkedLoginProvider = freezed,
     Object? firstLoadIsEnded = freezed,
+    Object? isPremium = freezed,
     Object? exception = freezed,
   }) {
     return _then(_value.copyWith(
@@ -118,6 +123,10 @@ class _$RecordPageStateCopyWithImpl<$Res>
       firstLoadIsEnded: firstLoadIsEnded == freezed
           ? _value.firstLoadIsEnded
           : firstLoadIsEnded // ignore: cast_nullable_to_non_nullable
+              as bool,
+      isPremium: isPremium == freezed
+          ? _value.isPremium
+          : isPremium // ignore: cast_nullable_to_non_nullable
               as bool,
       exception: exception == freezed ? _value.exception : exception,
     ));
@@ -160,6 +169,7 @@ abstract class _$RecordPageStateCopyWith<$Res>
       int totalCountOfActionForTakenPill,
       bool isLinkedLoginProvider,
       bool firstLoadIsEnded,
+      bool isPremium,
       Object? exception});
 
   @override
@@ -187,6 +197,7 @@ class __$RecordPageStateCopyWithImpl<$Res>
     Object? totalCountOfActionForTakenPill = freezed,
     Object? isLinkedLoginProvider = freezed,
     Object? firstLoadIsEnded = freezed,
+    Object? isPremium = freezed,
     Object? exception = freezed,
   }) {
     return _then(_RecordPageState(
@@ -215,6 +226,10 @@ class __$RecordPageStateCopyWithImpl<$Res>
           ? _value.firstLoadIsEnded
           : firstLoadIsEnded // ignore: cast_nullable_to_non_nullable
               as bool,
+      isPremium: isPremium == freezed
+          ? _value.isPremium
+          : isPremium // ignore: cast_nullable_to_non_nullable
+              as bool,
       exception: exception == freezed ? _value.exception : exception,
     ));
   }
@@ -230,6 +245,7 @@ class _$_RecordPageState extends _RecordPageState {
       this.totalCountOfActionForTakenPill = 0,
       this.isLinkedLoginProvider = false,
       this.firstLoadIsEnded = false,
+      this.isPremium = false,
       this.exception})
       : super._();
 
@@ -249,12 +265,15 @@ class _$_RecordPageState extends _RecordPageState {
   @JsonKey(defaultValue: false)
   @override
   final bool firstLoadIsEnded;
+  @JsonKey(defaultValue: false)
+  @override
+  final bool isPremium;
   @override
   final Object? exception;
 
   @override
   String toString() {
-    return 'RecordPageState(entity: $entity, setting: $setting, recommendedSignupNotificationIsAlreadyShow: $recommendedSignupNotificationIsAlreadyShow, totalCountOfActionForTakenPill: $totalCountOfActionForTakenPill, isLinkedLoginProvider: $isLinkedLoginProvider, firstLoadIsEnded: $firstLoadIsEnded, exception: $exception)';
+    return 'RecordPageState(entity: $entity, setting: $setting, recommendedSignupNotificationIsAlreadyShow: $recommendedSignupNotificationIsAlreadyShow, totalCountOfActionForTakenPill: $totalCountOfActionForTakenPill, isLinkedLoginProvider: $isLinkedLoginProvider, firstLoadIsEnded: $firstLoadIsEnded, isPremium: $isPremium, exception: $exception)';
   }
 
   @override
@@ -282,6 +301,9 @@ class _$_RecordPageState extends _RecordPageState {
             (identical(other.firstLoadIsEnded, firstLoadIsEnded) ||
                 const DeepCollectionEquality()
                     .equals(other.firstLoadIsEnded, firstLoadIsEnded)) &&
+            (identical(other.isPremium, isPremium) ||
+                const DeepCollectionEquality()
+                    .equals(other.isPremium, isPremium)) &&
             (identical(other.exception, exception) ||
                 const DeepCollectionEquality()
                     .equals(other.exception, exception)));
@@ -297,6 +319,7 @@ class _$_RecordPageState extends _RecordPageState {
       const DeepCollectionEquality().hash(totalCountOfActionForTakenPill) ^
       const DeepCollectionEquality().hash(isLinkedLoginProvider) ^
       const DeepCollectionEquality().hash(firstLoadIsEnded) ^
+      const DeepCollectionEquality().hash(isPremium) ^
       const DeepCollectionEquality().hash(exception);
 
   @JsonKey(ignore: true)
@@ -313,6 +336,7 @@ abstract class _RecordPageState extends RecordPageState {
       int totalCountOfActionForTakenPill,
       bool isLinkedLoginProvider,
       bool firstLoadIsEnded,
+      bool isPremium,
       Object? exception}) = _$_RecordPageState;
   _RecordPageState._() : super._();
 
@@ -329,6 +353,8 @@ abstract class _RecordPageState extends RecordPageState {
   bool get isLinkedLoginProvider => throw _privateConstructorUsedError;
   @override
   bool get firstLoadIsEnded => throw _privateConstructorUsedError;
+  @override
+  bool get isPremium => throw _privateConstructorUsedError;
   @override
   Object? get exception => throw _privateConstructorUsedError;
   @override

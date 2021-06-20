@@ -9,6 +9,7 @@ import 'package:pilll/entity/user.dart';
 import 'package:pilll/service/pill_sheet.dart';
 import 'package:pilll/service/setting.dart';
 import 'package:pilll/domain/settings/setting_page_state.dart';
+import 'package:pilll/service/user.dart';
 import 'package:pilll/util/shared_preference/keys.dart';
 import 'package:riverpod/riverpod.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -17,15 +18,18 @@ final settingStoreProvider = StateNotifierProvider(
   (ref) => SettingStateStore(
     ref.watch(settingServiceProvider),
     ref.watch(pillSheetServiceProvider),
+    ref.watch(userServiceProvider),
   ),
 );
 
 class SettingStateStore extends StateNotifier<SettingState> {
   final SettingService _service;
   final PillSheetService _pillSheetService;
+  final UserService _userService;
   SettingStateStore(
     this._service,
     this._pillSheetService,
+    this._userService,
   ) : super(SettingState(entity: null)) {
     _reset();
   }
@@ -38,10 +42,12 @@ class SettingStateStore extends StateNotifier<SettingState> {
               storage.containsKey(StringKey.salvagedOldLastTakenDate);
       final entity = await _service.fetch();
       final pillSheet = await _pillSheetService.fetchLast();
+      final user = await _userService.fetch();
       this.state = SettingState(
         entity: entity,
         userIsUpdatedFrom132: userIsMigratedFrom132,
         latestPillSheet: pillSheet,
+        isPremium: user.isPremium,
       );
       _subscribe();
     });
@@ -49,15 +55,20 @@ class SettingStateStore extends StateNotifier<SettingState> {
 
   StreamSubscription? _canceller;
   StreamSubscription? _pillSheetCanceller;
+  StreamSubscription? _userSubscribeCanceller;
   void _subscribe() {
     _canceller?.cancel();
     _canceller = _service.subscribe().listen((event) {
       state = state.copyWith(entity: event);
     });
     _pillSheetCanceller?.cancel();
-    _canceller =
+    _pillSheetCanceller =
         _pillSheetService.subscribeForLatestPillSheet().listen((event) {
       state = state.copyWith(latestPillSheet: event);
+    });
+    _userSubscribeCanceller?.cancel();
+    _userSubscribeCanceller = _userService.subscribe().listen((event) {
+      state = state.copyWith(isPremium: event.isPremium);
     });
   }
 
@@ -185,6 +196,12 @@ class SettingStateStore extends StateNotifier<SettingState> {
       throw FormatException("pill sheet not found");
     }
     return _pillSheetService.delete(entity);
+  }
+
+  void modifyPillSheetAppearanceMode(PillSheetAppearanceMode mode) {
+    final entity = state.entity;
+    final updated = entity?.copyWith(pillSheetAppearanceMode: mode);
+    update(updated);
   }
 }
 
