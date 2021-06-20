@@ -7,8 +7,10 @@ part 'initial_setting.freezed.dart';
 @freezed
 abstract class InitialSettingState implements _$InitialSettingState {
   InitialSettingState._();
-  factory InitialSettingState(InitialSettingModel entity) =
-      _InitialSettingState;
+  factory InitialSettingState({
+    required InitialSettingModel entity,
+    @Default(false) bool isAccountCooperationDidEnd,
+  }) = _InitialSettingState;
 
   DateTime? reminderTimeOrDefault(int index) {
     if (index < entity.reminderTimes.length) {

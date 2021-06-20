@@ -1,5 +1,9 @@
 extension BoolKey on String {
   static final didEndInitialSetting = "isDidEndInitialSettingKey";
+  static final recommendedSignupNotificationIsAlreadyShow =
+      "recommendedSignupNotificationIsAlreadyShow";
+  static final isAlreadyShowDemography = "isAlreadyShowDemography";
+  static final isAlreadyDoneDemography = "isAlreadyDoneDemography";
 }
 
 extension StringKey on String {
@@ -7,6 +11,8 @@ extension StringKey on String {
   static final String salvagedOldStartTakenDate = "salvagedOldStartTakenDate";
   static final String salvagedOldLastTakenDate = "salvagedOldLastTakenDate";
   static final String beginingVersionKey = "beginingVersion";
+  static final String currentUserUID = "currentUserUID";
+  static final String lastSigninAnonymousUID = "lastSigninAnonymousUID";
 }
 
 extension ReleaseNoteKey on String {
@@ -15,5 +21,5 @@ extension ReleaseNoteKey on String {
 }
 
 extension IntKey on String {
-  static final String totalPillCount = "totalPillCount";
+  static final String totalCountOfActionForTakenPill = "totalPillCount";
 }

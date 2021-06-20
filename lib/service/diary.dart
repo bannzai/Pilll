@@ -22,11 +22,14 @@ class DiaryService {
         .diariesReference()
         .where(DiaryFirestoreKey.date,
             isLessThanOrEqualTo: DateTime(base.year, base.month, 90),
-            isGreaterThanOrEqualTo: DateTime(base.year, base.month, 90))
+            isGreaterThanOrEqualTo: DateTime(base.year, base.month, -90))
         .orderBy(DiaryFirestoreKey.date)
         .get()
-        .then((event) =>
-            event.docs.map((doc) => Diary.fromJson(doc.data())).toList());
+        .then((event) => event.docs
+            .map((e) => e.data())
+            .whereType<Map<String, dynamic>>()
+            .map((data) => Diary.fromJson(data))
+            .toList());
   }
 
   Future<List<Diary>> fetchListForMonth(DateTime dateTimeOfMonth) {
@@ -39,8 +42,11 @@ class DiaryService {
                 DateTime(dateTimeOfMonth.year, dateTimeOfMonth.month, 1))
         .orderBy(DiaryFirestoreKey.date)
         .get()
-        .then((event) =>
-            event.docs.map((doc) => Diary.fromJson(doc.data())).toList());
+        .then((event) => event.docs
+            .map((e) => e.data())
+            .whereType<Map<String, dynamic>>()
+            .map((data) => Diary.fromJson(data))
+            .toList());
   }
 
   Future<Diary> register(Diary diary) {
@@ -65,8 +71,11 @@ class DiaryService {
     return _database
         .diariesReference()
         .snapshots()
-        .map((event) =>
-            event.docs.map((doc) => Diary.fromJson(doc.data())).toList())
+        .map((event) => event.docs
+            .map((e) => e.data())
+            .whereType<Map<String, dynamic>>()
+            .map((data) => Diary.fromJson(data))
+            .toList())
         .map((diaries) => sortedDiaries(diaries));
   }
 }

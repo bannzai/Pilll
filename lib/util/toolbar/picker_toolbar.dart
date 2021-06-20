@@ -17,7 +17,8 @@ class PickerToolbar extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: <Widget>[
           CupertinoButton(
-            child: Text('キャンセル', style: TextColorStyle.primary),
+            child: Text('キャンセル',
+                style: FontType.assisting.merge(TextColorStyle.primary)),
             onPressed: () {
               cancel();
             },

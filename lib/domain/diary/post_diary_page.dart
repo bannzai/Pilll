@@ -1,3 +1,4 @@
+import 'package:pilll/analytics.dart';
 import 'package:pilll/domain/diary/post_diary_store_provider_family.dart';
 import 'package:pilll/entity/diary.dart';
 import 'package:pilll/service/diary.dart';
@@ -271,6 +272,7 @@ class PostDiaryPage extends HookWidget {
             SecondaryButton(
               text: '完了',
               onPressed: () {
+                analytics.logEvent(name: "post_diary_done_button_pressed");
                 focusNode.unfocus();
               },
             ),

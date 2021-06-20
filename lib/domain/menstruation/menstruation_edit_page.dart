@@ -156,7 +156,7 @@ void showMenstruationEditPageForUpdate(
         Navigator.of(context).pop();
         ScaffoldMessenger.of(context).showSnackBar(
           SnackBar(
-            duration: Duration(seconds: 1),
+            duration: Duration(seconds: 2),
             content: Text("生理期間を編集しました"),
           ),
         );
@@ -165,7 +165,7 @@ void showMenstruationEditPageForUpdate(
         Navigator.of(context).pop();
         ScaffoldMessenger.of(context).showSnackBar(
           SnackBar(
-            duration: Duration(seconds: 1),
+            duration: Duration(seconds: 2),
             content: Text("生理期間を削除しました"),
           ),
         );
@@ -189,7 +189,7 @@ void showMenstruationEditPageForCreate(
         Navigator.of(context).pop();
         ScaffoldMessenger.of(context).showSnackBar(
           SnackBar(
-            duration: Duration(seconds: 1),
+            duration: Duration(seconds: 2),
             content: Text(
                 "${DateTimeFormatter.monthAndDay(menstruation.beginDate)}から生理開始で記録しました"),
           ),
@@ -199,7 +199,7 @@ void showMenstruationEditPageForCreate(
         Navigator.of(context).pop();
         ScaffoldMessenger.of(context).showSnackBar(
           SnackBar(
-            duration: Duration(seconds: 1),
+            duration: Duration(seconds: 2),
             content: Text("生理期間を削除しました"),
           ),
         );

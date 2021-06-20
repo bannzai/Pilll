@@ -15,11 +15,13 @@ class PillSheetService {
     if (!snapshot.docs.last.exists) return null;
     var document = snapshot.docs.last;
 
-    var data = document.data();
-    data["id"] = document.id;
-    var pillSheetModel = PillSheet.fromJson(data);
+    return _mapToEntity(document);
+  }
 
-    return pillSheetModel;
+  PillSheet _mapToEntity(QueryDocumentSnapshot snapshot) {
+    var data = snapshot.data() as Map<String, dynamic>;
+    data["id"] = snapshot.id;
+    return PillSheet.fromJson(data);
   }
 
   Query _queryOfFetchLastPillSheet() {
@@ -34,6 +36,13 @@ class PillSheetService {
     return _queryOfFetchLastPillSheet()
         .get()
         .then((event) => _filterForLatestPillSheet(event));
+  }
+
+  Future<List<PillSheet>> fetchAll() {
+    return _database
+        .pillSheetsReference()
+        .get()
+        .then((event) => event.docs.map((e) => _mapToEntity(e)).toList());
   }
 
   Future<PillSheet> register(PillSheet model) {

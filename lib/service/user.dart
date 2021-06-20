@@ -1,6 +1,8 @@
 import 'dart:io';
 
+import 'package:firebase_auth/firebase_auth.dart' as firebaseAuth;
 import 'package:pilll/database/database.dart';
+import 'package:pilll/entity/demographic.dart';
 import 'package:pilll/entity/package.dart';
 import 'package:pilll/entity/user.dart';
 import 'package:pilll/util/shared_preference/keys.dart';
@@ -17,6 +19,7 @@ class UserService {
   UserService(this._database);
 
   Future<User> prepare(String uid) async {
+    print("call prepare for $uid");
     final user = await fetch().catchError((error) {
       if (error is UserNotFound) {
         return _create(uid).then((_) => fetch());
@@ -28,20 +31,91 @@ class UserService {
   }
 
   Future<User> fetch() {
+    print("call fetch");
     return _database.userReference().get().then((document) {
       if (!document.exists) {
         throw UserNotFound();
       }
-      return User.fromJson(document.data()!);
+      print("fetched user ${document.data()}");
+      return User.fromJson(document.data() as Map<String, dynamic>);
     });
   }
 
-  Future<User> subscribe() {
+  Future<DocumentSnapshot> _fetchRawDocumentSnapshot() {
+    return _database.userReference().get();
+  }
+
+  recordUserIDs() {
+    Future(() async {
+      try {
+        final document = await _fetchRawDocumentSnapshot();
+        final user = User.fromJson(document.data() as Map<String, dynamic>);
+        final documentID = document.id;
+        if (!user.userDocumentIDSets.contains(documentID)) {
+          user.userDocumentIDSets.add(documentID);
+        }
+
+        final sharedPreferences = await SharedPreferences.getInstance();
+        final lastSigninAnonymousUID =
+            sharedPreferences.getString(StringKey.lastSigninAnonymousUID);
+        if (lastSigninAnonymousUID != null &&
+            !user.anonymousUserIDSets.contains(lastSigninAnonymousUID)) {
+          user.anonymousUserIDSets.add(lastSigninAnonymousUID);
+        }
+        final firebaseCurrentUserID =
+            firebaseAuth.FirebaseAuth.instance.currentUser?.uid;
+        if (firebaseCurrentUserID != null &&
+            !user.firebaseCurrentUserIDSets.contains(firebaseCurrentUserID)) {
+          user.firebaseCurrentUserIDSets.add(firebaseCurrentUserID);
+        }
+
+        await _database.userReference().set(
+              user.toJson(),
+              SetOptions(merge: true),
+            );
+      } catch (error) {
+        print(error);
+      }
+    });
+  }
+
+  Stream<User> subscribe() {
     return _database
         .userReference()
         .snapshots(includeMetadataChanges: true)
-        .listen((event) => User.fromJson(event.data()!))
-        .asFuture();
+        .map((event) => User.fromJson(event.data() as Map<String, dynamic>));
+  }
+
+  Future<void> updatePurchaseInfo({
+    required bool isActivated,
+    required String? entitlementIdentifier,
+    required String? premiumPlanIdentifier,
+    required String purchaseAppID,
+    required List<String> activeSubscriptions,
+    required String? originalPurchaseDate,
+  }) async {
+    await _database.userReference().set({
+      UserFirestoreFieldKeys.isPremium: isActivated,
+      UserFirestoreFieldKeys.purchaseAppID: purchaseAppID
+    }, SetOptions(merge: true));
+    final privates = {
+      if (premiumPlanIdentifier != null)
+        UserPrivateFirestoreFieldKeys.latestPremiumPlanIdentifier:
+            premiumPlanIdentifier,
+      if (originalPurchaseDate != null)
+        UserPrivateFirestoreFieldKeys.originalPurchaseDate:
+            originalPurchaseDate,
+      if (activeSubscriptions.isNotEmpty)
+        UserPrivateFirestoreFieldKeys.activeSubscriptions: activeSubscriptions,
+      if (entitlementIdentifier != null)
+        UserPrivateFirestoreFieldKeys.entitlementIdentifier:
+            entitlementIdentifier,
+    };
+    if (privates.isNotEmpty) {
+      await _database
+          .userPrivateReference()
+          .set({...privates}, SetOptions(merge: true));
+    }
   }
 
   Future<void> deleteSettings() {
@@ -57,10 +131,16 @@ class UserService {
     );
   }
 
-  Future<void> _create(String uid) {
+  Future<void> _create(String uid) async {
+    print("call create for $uid");
+    final sharedPreferences = await SharedPreferences.getInstance();
+    final anonymousUserID =
+        sharedPreferences.getString(StringKey.lastSigninAnonymousUID);
     return _database.userReference().set(
       {
-        UserFirestoreFieldKeys.anonymousUserID: uid,
+        if (anonymousUserID != null)
+          UserFirestoreFieldKeys.anonymousUserID: anonymousUserID,
+        UserFirestoreFieldKeys.userIDWhenCreateUser: uid,
       },
       SetOptions(merge: true),
     );
@@ -106,5 +186,31 @@ class UserService {
         }
       }, SetOptions(merge: true));
     });
+  }
+
+  Future<void> linkApple(String? email) async {
+    await _database.userReference().set({
+      UserFirestoreFieldKeys.isAnonymous: false,
+    }, SetOptions(merge: true));
+    return _database.userPrivateReference().set({
+      if (email != null) UserPrivateFirestoreFieldKeys.appleEmail: email,
+      UserPrivateFirestoreFieldKeys.isLinkedApple: true,
+    }, SetOptions(merge: true));
+  }
+
+  Future<void> linkGoogle(String? email) async {
+    await _database.userReference().set({
+      UserFirestoreFieldKeys.isAnonymous: false,
+    }, SetOptions(merge: true));
+    return _database.userPrivateReference().set({
+      if (email != null) UserPrivateFirestoreFieldKeys.googleEmail: email,
+      UserPrivateFirestoreFieldKeys.isLinkedGoogle: true,
+    }, SetOptions(merge: true));
+  }
+
+  Future<void> postDemographic(Demographic demographic) {
+    return _database.userPrivateReference().set(
+        {UserPrivateFirestoreFieldKeys.demographic: demographic.toJson()},
+        SetOptions(merge: true));
   }
 }

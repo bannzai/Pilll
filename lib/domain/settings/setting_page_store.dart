@@ -13,14 +13,20 @@ import 'package:pilll/util/shared_preference/keys.dart';
 import 'package:riverpod/riverpod.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-final settingStoreProvider = StateNotifierProvider((ref) => SettingStateStore(
-    ref.watch(settingServiceProvider), ref.watch(pillSheetServiceProvider)));
+final settingStoreProvider = StateNotifierProvider(
+  (ref) => SettingStateStore(
+    ref.watch(settingServiceProvider),
+    ref.watch(pillSheetServiceProvider),
+  ),
+);
 
 class SettingStateStore extends StateNotifier<SettingState> {
   final SettingService _service;
   final PillSheetService _pillSheetService;
-  SettingStateStore(this._service, this._pillSheetService)
-      : super(SettingState(entity: null)) {
+  SettingStateStore(
+    this._service,
+    this._pillSheetService,
+  ) : super(SettingState(entity: null)) {
     _reset();
   }
 

@@ -16,9 +16,12 @@ final _privateConstructorUsedError = UnsupportedError(
 class _$InitialSettingStateTearOff {
   const _$InitialSettingStateTearOff();
 
-  _InitialSettingState call(InitialSettingModel entity) {
+  _InitialSettingState call(
+      {required InitialSettingModel entity,
+      bool isAccountCooperationDidEnd = false}) {
     return _InitialSettingState(
-      entity,
+      entity: entity,
+      isAccountCooperationDidEnd: isAccountCooperationDidEnd,
     );
   }
 }
@@ -29,6 +32,7 @@ const $InitialSettingState = _$InitialSettingStateTearOff();
 /// @nodoc
 mixin _$InitialSettingState {
   InitialSettingModel get entity => throw _privateConstructorUsedError;
+  bool get isAccountCooperationDidEnd => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $InitialSettingStateCopyWith<InitialSettingState> get copyWith =>
@@ -40,7 +44,7 @@ abstract class $InitialSettingStateCopyWith<$Res> {
   factory $InitialSettingStateCopyWith(
           InitialSettingState value, $Res Function(InitialSettingState) then) =
       _$InitialSettingStateCopyWithImpl<$Res>;
-  $Res call({InitialSettingModel entity});
+  $Res call({InitialSettingModel entity, bool isAccountCooperationDidEnd});
 
   $InitialSettingModelCopyWith<$Res> get entity;
 }
@@ -57,12 +61,17 @@ class _$InitialSettingStateCopyWithImpl<$Res>
   @override
   $Res call({
     Object? entity = freezed,
+    Object? isAccountCooperationDidEnd = freezed,
   }) {
     return _then(_value.copyWith(
       entity: entity == freezed
           ? _value.entity
           : entity // ignore: cast_nullable_to_non_nullable
               as InitialSettingModel,
+      isAccountCooperationDidEnd: isAccountCooperationDidEnd == freezed
+          ? _value.isAccountCooperationDidEnd
+          : isAccountCooperationDidEnd // ignore: cast_nullable_to_non_nullable
+              as bool,
     ));
   }
 
@@ -81,7 +90,7 @@ abstract class _$InitialSettingStateCopyWith<$Res>
           $Res Function(_InitialSettingState) then) =
       __$InitialSettingStateCopyWithImpl<$Res>;
   @override
-  $Res call({InitialSettingModel entity});
+  $Res call({InitialSettingModel entity, bool isAccountCooperationDidEnd});
 
   @override
   $InitialSettingModelCopyWith<$Res> get entity;
@@ -101,12 +110,17 @@ class __$InitialSettingStateCopyWithImpl<$Res>
   @override
   $Res call({
     Object? entity = freezed,
+    Object? isAccountCooperationDidEnd = freezed,
   }) {
     return _then(_InitialSettingState(
-      entity == freezed
+      entity: entity == freezed
           ? _value.entity
           : entity // ignore: cast_nullable_to_non_nullable
               as InitialSettingModel,
+      isAccountCooperationDidEnd: isAccountCooperationDidEnd == freezed
+          ? _value.isAccountCooperationDidEnd
+          : isAccountCooperationDidEnd // ignore: cast_nullable_to_non_nullable
+              as bool,
     ));
   }
 }
@@ -114,14 +128,19 @@ class __$InitialSettingStateCopyWithImpl<$Res>
 /// @nodoc
 
 class _$_InitialSettingState extends _InitialSettingState {
-  _$_InitialSettingState(this.entity) : super._();
+  _$_InitialSettingState(
+      {required this.entity, this.isAccountCooperationDidEnd = false})
+      : super._();
 
   @override
   final InitialSettingModel entity;
+  @JsonKey(defaultValue: false)
+  @override
+  final bool isAccountCooperationDidEnd;
 
   @override
   String toString() {
-    return 'InitialSettingState(entity: $entity)';
+    return 'InitialSettingState(entity: $entity, isAccountCooperationDidEnd: $isAccountCooperationDidEnd)';
   }
 
   @override
@@ -129,12 +148,19 @@ class _$_InitialSettingState extends _InitialSettingState {
     return identical(this, other) ||
         (other is _InitialSettingState &&
             (identical(other.entity, entity) ||
-                const DeepCollectionEquality().equals(other.entity, entity)));
+                const DeepCollectionEquality().equals(other.entity, entity)) &&
+            (identical(other.isAccountCooperationDidEnd,
+                    isAccountCooperationDidEnd) ||
+                const DeepCollectionEquality().equals(
+                    other.isAccountCooperationDidEnd,
+                    isAccountCooperationDidEnd)));
   }
 
   @override
   int get hashCode =>
-      runtimeType.hashCode ^ const DeepCollectionEquality().hash(entity);
+      runtimeType.hashCode ^
+      const DeepCollectionEquality().hash(entity) ^
+      const DeepCollectionEquality().hash(isAccountCooperationDidEnd);
 
   @JsonKey(ignore: true)
   @override
@@ -144,12 +170,15 @@ class _$_InitialSettingState extends _InitialSettingState {
 }
 
 abstract class _InitialSettingState extends InitialSettingState {
-  factory _InitialSettingState(InitialSettingModel entity) =
-      _$_InitialSettingState;
+  factory _InitialSettingState(
+      {required InitialSettingModel entity,
+      bool isAccountCooperationDidEnd}) = _$_InitialSettingState;
   _InitialSettingState._() : super._();
 
   @override
   InitialSettingModel get entity => throw _privateConstructorUsedError;
+  @override
+  bool get isAccountCooperationDidEnd => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$InitialSettingStateCopyWith<_InitialSettingState> get copyWith =>

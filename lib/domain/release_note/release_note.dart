@@ -21,29 +21,32 @@ class ReleaseNote extends StatelessWidget {
             color: PilllColors.white,
             borderRadius: BorderRadius.circular(4),
           ),
-          padding: EdgeInsets.only(),
           width: 304,
-          height: 260,
+          height: 302,
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
-              Row(
+              Stack(
                 children: [
-                  IconButton(
-                    icon: Icon(Icons.close, color: Colors.black),
-                    onPressed: () => Navigator.of(context).pop(),
+                  Align(
+                    alignment: Alignment.topLeft,
+                    child: IconButton(
+                      icon: Icon(Icons.close, color: Colors.black),
+                      onPressed: () => Navigator.of(context).pop(),
+                    ),
                   ),
-                  Column(
-                      mainAxisAlignment: MainAxisAlignment.start,
-                      crossAxisAlignment: CrossAxisAlignment.start,
-                      children: [
-                        SizedBox(height: 40),
-                        Text(
-                          "新機能・機能改善のお知らせ✨",
-                          style: FontType.subTitle.merge(TextColorStyle.black),
-                        ),
-                      ]),
+                  Align(
+                    alignment: Alignment.center,
+                    child: Container(
+                      padding: EdgeInsets.only(top: 40),
+                      child: Text(
+                        "引き継ぎ設定が\nできるようになりました✨",
+                        style: FontType.subTitle.merge(TextColorStyle.black),
+                        textAlign: TextAlign.center,
+                      ),
+                    ),
+                  ),
                 ],
               ),
               Padding(
@@ -52,30 +55,28 @@ class ReleaseNote extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
-                      "カレンダー画面右下の＋ボタンから今日の体調を簡単に記録できるように！",
-                      style: FontType.assisting.merge(TextColorStyle.main),
-                    ),
-                    SizedBox(height: 20),
-                    Text(
-                      "詳しい使い方は詳細をご覧ください🙌",
+                      '''
+機種変更やスマホ紛失時などに備えて、引き継ぎ設定をしませんか？
+
+設定画面から設定可能です！
+                      ''',
                       style: FontType.assisting.merge(TextColorStyle.main),
                     ),
                   ],
                 ),
               ),
               SizedBox(height: 20),
-              Align(
-                alignment: Alignment.center,
-                child: Container(
-                    width: 230,
-                    child: SecondaryButton(
-                        onPressed: () async {
-                          analytics.logEvent(name: "pressed_show_release_note");
-                          Navigator.of(context).pop();
-                          await openReleaseNote();
-                        },
-                        text: "詳細を見る")),
+              Container(
+                width: 230,
+                child: SecondaryButton(
+                    onPressed: () async {
+                      analytics.logEvent(name: "pressed_show_release_note");
+                      Navigator.of(context).pop();
+                      await openReleaseNote();
+                    },
+                    text: "詳細を見る"),
               ),
+              Spacer(),
             ],
           ),
         ),
@@ -103,7 +104,7 @@ openReleaseNote() async {
   final ChromeSafariBrowser browser = new ChromeSafariBrowser();
   await browser.open(
       url: Uri.parse(
-          "https://pilll.anotion.so/8e4c5666bc5a498babad01e59160cfa5"),
+          "https://pilll.anotion.so/733c950541f54eeda6c338d756379020"),
       options: ChromeSafariBrowserClassOptions(
           android:
               AndroidChromeCustomTabsOptions(addDefaultShareMenuItem: false),

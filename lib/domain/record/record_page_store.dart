@@ -2,37 +2,62 @@ import 'dart:async';
 
 import 'package:flutter_app_badger/flutter_app_badger.dart';
 import 'package:pilll/analytics.dart';
-import 'package:pilll/components/molecules/indicator.dart';
 import 'package:pilll/entity/pill_mark_type.dart';
 import 'package:pilll/entity/pill_sheet.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
+import 'package:pilll/service/auth.dart';
 import 'package:pilll/service/pill_sheet.dart';
 import 'package:pilll/domain/record/record_page_state.dart';
 import 'package:pilll/service/setting.dart';
+import 'package:pilll/util/shared_preference/keys.dart';
 import 'package:riverpod/riverpod.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 final recordPageStoreProvider = StateNotifierProvider((ref) => RecordPageStore(
-    ref.watch(pillSheetServiceProvider), ref.watch(settingServiceProvider)));
+      ref.watch(pillSheetServiceProvider),
+      ref.watch(settingServiceProvider),
+      ref.watch(authServiceProvider),
+    ));
 
 class RecordPageStore extends StateNotifier<RecordPageState> {
   final PillSheetService _service;
   final SettingService _settingService;
-  RecordPageStore(this._service, this._settingService)
-      : super(RecordPageState(entity: null)) {
-    _reset();
+  final AuthService _authService;
+  RecordPageStore(
+    this._service,
+    this._settingService,
+    this._authService,
+  ) : super(RecordPageState(entity: null)) {
+    reset();
   }
 
-  void _reset() {
+  void reset() {
     Future(() async {
       final entity = await _service.fetchLast();
       final setting = await _settingService.fetch();
+      final sharedPreferences = await SharedPreferences.getInstance();
+      final recommendedSignupNotificationIsAlreadyShow = sharedPreferences
+              .getBool(BoolKey.recommendedSignupNotificationIsAlreadyShow) ??
+          false;
+      final totalCountOfActionForTakenPill =
+          sharedPreferences.getInt(IntKey.totalCountOfActionForTakenPill) ?? 0;
       state = RecordPageState(
-          entity: entity, setting: setting, firstLoadIsEnded: true);
+        entity: entity,
+        setting: setting,
+        firstLoadIsEnded: true,
+        isLinkedLoginProvider:
+            _authService.isLinkedApple() || _authService.isLinkedGoogle(),
+        recommendedSignupNotificationIsAlreadyShow:
+            recommendedSignupNotificationIsAlreadyShow,
+        totalCountOfActionForTakenPill: totalCountOfActionForTakenPill,
+        exception: null,
+      );
       if (entity != null) {
         analytics.logEvent(name: "count_of_remaining_pill", parameters: {
           "count": (entity.todayPillNumber - entity.lastTakenPillNumber)
         });
       }
+
       _subscribe();
     });
   }
@@ -57,24 +82,21 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
     super.dispose();
   }
 
-  Future<void> register(PillSheet model) {
-    return _service
+  Future<void> register(PillSheet model) async {
+    await _service
         .register(model)
         .then((entity) => state = state.copyWith(entity: entity));
   }
 
-  Future<dynamic> take(DateTime takenDate) {
+  Future<dynamic> take(DateTime takenDate) async {
     final entity = state.entity;
     if (entity == null) {
       throw FormatException("pill sheet not found");
     }
     final updated = entity.copyWith(lastTakenDate: takenDate);
     FlutterAppBadger.removeBadge();
-    showIndicator();
-    return _service.update(updated).then((value) {
-      hideIndicator();
-      state = state.copyWith(entity: updated);
-    });
+    await _service.update(updated);
+    state = state.copyWith(entity: updated);
   }
 
   DateTime calcBeginingDateFromNextTodayPillNumber(int pillNumber) {
@@ -121,6 +143,17 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
     }
     return number > entity.lastTakenPillNumber &&
         number <= entity.todayPillNumber;
+  }
+
+  Future<void> closeRecommendedSignupNotification() async {
+    final sharedPreferences = await SharedPreferences.getInstance();
+    sharedPreferences.setBool(
+        BoolKey.recommendedSignupNotificationIsAlreadyShow, true);
+    state = state.copyWith(recommendedSignupNotificationIsAlreadyShow: true);
+  }
+
+  handleException(Object exception) {
+    state = state.copyWith(exception: exception);
   }
 }
 

@@ -171,10 +171,22 @@ class _$UserTearOff {
 
   _User call(
       {@JsonKey(name: "settings") Setting? setting,
-      bool migratedFlutter = false}) {
+      bool migratedFlutter = false,
+      String? userIDWhenCreateUser,
+      String? anonymousUserID,
+      List<String> userDocumentIDSets = const [],
+      List<String> anonymousUserIDSets = const [],
+      List<String> firebaseCurrentUserIDSets = const [],
+      bool isPremium = false}) {
     return _User(
       setting: setting,
       migratedFlutter: migratedFlutter,
+      userIDWhenCreateUser: userIDWhenCreateUser,
+      anonymousUserID: anonymousUserID,
+      userDocumentIDSets: userDocumentIDSets,
+      anonymousUserIDSets: anonymousUserIDSets,
+      firebaseCurrentUserIDSets: firebaseCurrentUserIDSets,
+      isPremium: isPremium,
     );
   }
 
@@ -191,6 +203,13 @@ mixin _$User {
   @JsonKey(name: "settings")
   Setting? get setting => throw _privateConstructorUsedError;
   bool get migratedFlutter => throw _privateConstructorUsedError;
+  String? get userIDWhenCreateUser => throw _privateConstructorUsedError;
+  String? get anonymousUserID => throw _privateConstructorUsedError;
+  List<String> get userDocumentIDSets => throw _privateConstructorUsedError;
+  List<String> get anonymousUserIDSets => throw _privateConstructorUsedError;
+  List<String> get firebaseCurrentUserIDSets =>
+      throw _privateConstructorUsedError;
+  bool get isPremium => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -202,7 +221,14 @@ abstract class $UserCopyWith<$Res> {
   factory $UserCopyWith(User value, $Res Function(User) then) =
       _$UserCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(name: "settings") Setting? setting, bool migratedFlutter});
+      {@JsonKey(name: "settings") Setting? setting,
+      bool migratedFlutter,
+      String? userIDWhenCreateUser,
+      String? anonymousUserID,
+      List<String> userDocumentIDSets,
+      List<String> anonymousUserIDSets,
+      List<String> firebaseCurrentUserIDSets,
+      bool isPremium});
 
   $SettingCopyWith<$Res>? get setting;
 }
@@ -219,6 +245,12 @@ class _$UserCopyWithImpl<$Res> implements $UserCopyWith<$Res> {
   $Res call({
     Object? setting = freezed,
     Object? migratedFlutter = freezed,
+    Object? userIDWhenCreateUser = freezed,
+    Object? anonymousUserID = freezed,
+    Object? userDocumentIDSets = freezed,
+    Object? anonymousUserIDSets = freezed,
+    Object? firebaseCurrentUserIDSets = freezed,
+    Object? isPremium = freezed,
   }) {
     return _then(_value.copyWith(
       setting: setting == freezed
@@ -228,6 +260,30 @@ class _$UserCopyWithImpl<$Res> implements $UserCopyWith<$Res> {
       migratedFlutter: migratedFlutter == freezed
           ? _value.migratedFlutter
           : migratedFlutter // ignore: cast_nullable_to_non_nullable
+              as bool,
+      userIDWhenCreateUser: userIDWhenCreateUser == freezed
+          ? _value.userIDWhenCreateUser
+          : userIDWhenCreateUser // ignore: cast_nullable_to_non_nullable
+              as String?,
+      anonymousUserID: anonymousUserID == freezed
+          ? _value.anonymousUserID
+          : anonymousUserID // ignore: cast_nullable_to_non_nullable
+              as String?,
+      userDocumentIDSets: userDocumentIDSets == freezed
+          ? _value.userDocumentIDSets
+          : userDocumentIDSets // ignore: cast_nullable_to_non_nullable
+              as List<String>,
+      anonymousUserIDSets: anonymousUserIDSets == freezed
+          ? _value.anonymousUserIDSets
+          : anonymousUserIDSets // ignore: cast_nullable_to_non_nullable
+              as List<String>,
+      firebaseCurrentUserIDSets: firebaseCurrentUserIDSets == freezed
+          ? _value.firebaseCurrentUserIDSets
+          : firebaseCurrentUserIDSets // ignore: cast_nullable_to_non_nullable
+              as List<String>,
+      isPremium: isPremium == freezed
+          ? _value.isPremium
+          : isPremium // ignore: cast_nullable_to_non_nullable
               as bool,
     ));
   }
@@ -250,7 +306,14 @@ abstract class _$UserCopyWith<$Res> implements $UserCopyWith<$Res> {
       __$UserCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(name: "settings") Setting? setting, bool migratedFlutter});
+      {@JsonKey(name: "settings") Setting? setting,
+      bool migratedFlutter,
+      String? userIDWhenCreateUser,
+      String? anonymousUserID,
+      List<String> userDocumentIDSets,
+      List<String> anonymousUserIDSets,
+      List<String> firebaseCurrentUserIDSets,
+      bool isPremium});
 
   @override
   $SettingCopyWith<$Res>? get setting;
@@ -269,6 +332,12 @@ class __$UserCopyWithImpl<$Res> extends _$UserCopyWithImpl<$Res>
   $Res call({
     Object? setting = freezed,
     Object? migratedFlutter = freezed,
+    Object? userIDWhenCreateUser = freezed,
+    Object? anonymousUserID = freezed,
+    Object? userDocumentIDSets = freezed,
+    Object? anonymousUserIDSets = freezed,
+    Object? firebaseCurrentUserIDSets = freezed,
+    Object? isPremium = freezed,
   }) {
     return _then(_User(
       setting: setting == freezed
@@ -279,15 +348,47 @@ class __$UserCopyWithImpl<$Res> extends _$UserCopyWithImpl<$Res>
           ? _value.migratedFlutter
           : migratedFlutter // ignore: cast_nullable_to_non_nullable
               as bool,
+      userIDWhenCreateUser: userIDWhenCreateUser == freezed
+          ? _value.userIDWhenCreateUser
+          : userIDWhenCreateUser // ignore: cast_nullable_to_non_nullable
+              as String?,
+      anonymousUserID: anonymousUserID == freezed
+          ? _value.anonymousUserID
+          : anonymousUserID // ignore: cast_nullable_to_non_nullable
+              as String?,
+      userDocumentIDSets: userDocumentIDSets == freezed
+          ? _value.userDocumentIDSets
+          : userDocumentIDSets // ignore: cast_nullable_to_non_nullable
+              as List<String>,
+      anonymousUserIDSets: anonymousUserIDSets == freezed
+          ? _value.anonymousUserIDSets
+          : anonymousUserIDSets // ignore: cast_nullable_to_non_nullable
+              as List<String>,
+      firebaseCurrentUserIDSets: firebaseCurrentUserIDSets == freezed
+          ? _value.firebaseCurrentUserIDSets
+          : firebaseCurrentUserIDSets // ignore: cast_nullable_to_non_nullable
+              as List<String>,
+      isPremium: isPremium == freezed
+          ? _value.isPremium
+          : isPremium // ignore: cast_nullable_to_non_nullable
+              as bool,
     ));
   }
 }
 
 /// @nodoc
-@JsonSerializable()
+
+@JsonSerializable(explicitToJson: true)
 class _$_User extends _User {
   _$_User(
-      {@JsonKey(name: "settings") this.setting, this.migratedFlutter = false})
+      {@JsonKey(name: "settings") this.setting,
+      this.migratedFlutter = false,
+      this.userIDWhenCreateUser,
+      this.anonymousUserID,
+      this.userDocumentIDSets = const [],
+      this.anonymousUserIDSets = const [],
+      this.firebaseCurrentUserIDSets = const [],
+      this.isPremium = false})
       : super._();
 
   factory _$_User.fromJson(Map<String, dynamic> json) =>
@@ -299,10 +400,26 @@ class _$_User extends _User {
   @JsonKey(defaultValue: false)
   @override
   final bool migratedFlutter;
+  @override
+  final String? userIDWhenCreateUser;
+  @override
+  final String? anonymousUserID;
+  @JsonKey(defaultValue: const [])
+  @override
+  final List<String> userDocumentIDSets;
+  @JsonKey(defaultValue: const [])
+  @override
+  final List<String> anonymousUserIDSets;
+  @JsonKey(defaultValue: const [])
+  @override
+  final List<String> firebaseCurrentUserIDSets;
+  @JsonKey(defaultValue: false)
+  @override
+  final bool isPremium;
 
   @override
   String toString() {
-    return 'User(setting: $setting, migratedFlutter: $migratedFlutter)';
+    return 'User(setting: $setting, migratedFlutter: $migratedFlutter, userIDWhenCreateUser: $userIDWhenCreateUser, anonymousUserID: $anonymousUserID, userDocumentIDSets: $userDocumentIDSets, anonymousUserIDSets: $anonymousUserIDSets, firebaseCurrentUserIDSets: $firebaseCurrentUserIDSets, isPremium: $isPremium)';
   }
 
   @override
@@ -314,14 +431,40 @@ class _$_User extends _User {
                     .equals(other.setting, setting)) &&
             (identical(other.migratedFlutter, migratedFlutter) ||
                 const DeepCollectionEquality()
-                    .equals(other.migratedFlutter, migratedFlutter)));
+                    .equals(other.migratedFlutter, migratedFlutter)) &&
+            (identical(other.userIDWhenCreateUser, userIDWhenCreateUser) ||
+                const DeepCollectionEquality().equals(
+                    other.userIDWhenCreateUser, userIDWhenCreateUser)) &&
+            (identical(other.anonymousUserID, anonymousUserID) ||
+                const DeepCollectionEquality()
+                    .equals(other.anonymousUserID, anonymousUserID)) &&
+            (identical(other.userDocumentIDSets, userDocumentIDSets) ||
+                const DeepCollectionEquality()
+                    .equals(other.userDocumentIDSets, userDocumentIDSets)) &&
+            (identical(other.anonymousUserIDSets, anonymousUserIDSets) ||
+                const DeepCollectionEquality()
+                    .equals(other.anonymousUserIDSets, anonymousUserIDSets)) &&
+            (identical(other.firebaseCurrentUserIDSets,
+                    firebaseCurrentUserIDSets) ||
+                const DeepCollectionEquality().equals(
+                    other.firebaseCurrentUserIDSets,
+                    firebaseCurrentUserIDSets)) &&
+            (identical(other.isPremium, isPremium) ||
+                const DeepCollectionEquality()
+                    .equals(other.isPremium, isPremium)));
   }
 
   @override
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(setting) ^
-      const DeepCollectionEquality().hash(migratedFlutter);
+      const DeepCollectionEquality().hash(migratedFlutter) ^
+      const DeepCollectionEquality().hash(userIDWhenCreateUser) ^
+      const DeepCollectionEquality().hash(anonymousUserID) ^
+      const DeepCollectionEquality().hash(userDocumentIDSets) ^
+      const DeepCollectionEquality().hash(anonymousUserIDSets) ^
+      const DeepCollectionEquality().hash(firebaseCurrentUserIDSets) ^
+      const DeepCollectionEquality().hash(isPremium);
 
   @JsonKey(ignore: true)
   @override
@@ -337,7 +480,13 @@ class _$_User extends _User {
 abstract class _User extends User {
   factory _User(
       {@JsonKey(name: "settings") Setting? setting,
-      bool migratedFlutter}) = _$_User;
+      bool migratedFlutter,
+      String? userIDWhenCreateUser,
+      String? anonymousUserID,
+      List<String> userDocumentIDSets,
+      List<String> anonymousUserIDSets,
+      List<String> firebaseCurrentUserIDSets,
+      bool isPremium}) = _$_User;
   _User._() : super._();
 
   factory _User.fromJson(Map<String, dynamic> json) = _$_User.fromJson;
@@ -347,6 +496,19 @@ abstract class _User extends User {
   Setting? get setting => throw _privateConstructorUsedError;
   @override
   bool get migratedFlutter => throw _privateConstructorUsedError;
+  @override
+  String? get userIDWhenCreateUser => throw _privateConstructorUsedError;
+  @override
+  String? get anonymousUserID => throw _privateConstructorUsedError;
+  @override
+  List<String> get userDocumentIDSets => throw _privateConstructorUsedError;
+  @override
+  List<String> get anonymousUserIDSets => throw _privateConstructorUsedError;
+  @override
+  List<String> get firebaseCurrentUserIDSets =>
+      throw _privateConstructorUsedError;
+  @override
+  bool get isPremium => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$UserCopyWith<_User> get copyWith => throw _privateConstructorUsedError;

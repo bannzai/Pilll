@@ -23,10 +23,32 @@ _$_User _$_$_UserFromJson(Map<String, dynamic> json) {
         ? null
         : Setting.fromJson(json['settings'] as Map<String, dynamic>),
     migratedFlutter: json['migratedFlutter'] as bool? ?? false,
+    userIDWhenCreateUser: json['userIDWhenCreateUser'] as String?,
+    anonymousUserID: json['anonymousUserID'] as String?,
+    userDocumentIDSets: (json['userDocumentIDSets'] as List<dynamic>?)
+            ?.map((e) => e as String)
+            .toList() ??
+        [],
+    anonymousUserIDSets: (json['anonymousUserIDSets'] as List<dynamic>?)
+            ?.map((e) => e as String)
+            .toList() ??
+        [],
+    firebaseCurrentUserIDSets:
+        (json['firebaseCurrentUserIDSets'] as List<dynamic>?)
+                ?.map((e) => e as String)
+                .toList() ??
+            [],
+    isPremium: json['isPremium'] as bool? ?? false,
   );
 }
 
 Map<String, dynamic> _$_$_UserToJson(_$_User instance) => <String, dynamic>{
-      'settings': instance.setting,
+      'settings': instance.setting?.toJson(),
       'migratedFlutter': instance.migratedFlutter,
+      'userIDWhenCreateUser': instance.userIDWhenCreateUser,
+      'anonymousUserID': instance.anonymousUserID,
+      'userDocumentIDSets': instance.userDocumentIDSets,
+      'anonymousUserIDSets': instance.anonymousUserIDSets,
+      'firebaseCurrentUserIDSets': instance.firebaseCurrentUserIDSets,
+      'isPremium': instance.isPremium,
     };

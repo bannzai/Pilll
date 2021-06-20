@@ -1,5 +1,5 @@
-import 'package:pilll/analytics.dart';
-import 'package:pilll/auth/auth.dart';
+import 'package:pilll/components/page/hud.dart';
+import 'package:pilll/service/auth.dart';
 import 'package:pilll/database/database.dart';
 import 'package:pilll/domain/home/home_page.dart';
 import 'package:pilll/domain/initial_setting/initial_setting_1_page.dart';
@@ -24,15 +24,9 @@ class Root extends StatefulWidget {
 }
 
 enum ScreenType { home, initialSetting }
-enum IndicatorType { shown, hidden }
 
 class RootState extends State<Root> {
-  Error? error;
-  onError(Error error) {
-    setState(() {
-      this.error = error;
-    });
-  }
+  dynamic _error;
 
   ScreenType? screenType;
   showHome() {
@@ -47,44 +41,12 @@ class RootState extends State<Root> {
     });
   }
 
-  reloadRoot() {
+  reload() {
     setState(() {
       screenType = null;
-      error = null;
+      _error = null;
       _auth();
     });
-  }
-
-  List<IndicatorType> _indicatorTypes = [];
-  showIndicator() {
-    _indicatorTypes.add(IndicatorType.shown);
-    Future.delayed(Duration(milliseconds: 200)).then((value) {
-      if (_indicatorTypes.isEmpty) {
-        return;
-      }
-      if (_indicatorTypes.last == IndicatorType.hidden) {
-        return;
-      }
-      showDialog(
-          barrierColor: Colors.transparent,
-          context: context,
-          builder: (BuildContext context) {
-            return DialogIndicator();
-          });
-    });
-  }
-
-  hideIndicator() {
-    if (_indicatorTypes.isEmpty) {
-      return;
-    }
-    if (_indicatorTypes.last != IndicatorType.shown) {
-      return;
-    }
-    _indicatorTypes.add(IndicatorType.hidden);
-    if (Navigator.of(context).canPop()) {
-      Navigator.of(context).pop();
-    }
   }
 
   @override
@@ -95,46 +57,52 @@ class RootState extends State<Root> {
 
   @override
   Widget build(BuildContext context) {
-    if (error != null) {
-      return UniversalErrorPage(error: error);
-    }
     if (screenType == null) {
       return ScaffoldIndicator();
     }
-    return Consumer(builder: (context, watch, child) {
-      return watch(authStateProvider).when(data: (snapshot) {
-        switch (screenType) {
-          case ScreenType.home:
-            return HomePage(key: homeKey);
-          case ScreenType.initialSetting:
-            return InitialSetting1PageRoute.screen();
-          default:
+    return UniversalErrorPage(
+      error: _error,
+      reload: () => reload(),
+      child: HUD(
+        key: hudKey,
+        child: Consumer(builder: (context, watch, child) {
+          return watch(authStateStreamProvider).when(data: (snapshot) {
+            switch (screenType) {
+              case ScreenType.home:
+                return HomePage(key: homeKey);
+              case ScreenType.initialSetting:
+                return InitialSetting1PageRoute.screen();
+              default:
+                return ScaffoldIndicator();
+            }
+          }, loading: () {
             return ScaffoldIndicator();
-        }
-      }, loading: () {
-        return ScaffoldIndicator();
-      }, error: (error, stacktrace) {
-        print(error);
-        print(stacktrace);
-        final displayedError = UserDisplayedError(
-            displayedMessage: ErrorMessages.connection +
-                "\n" +
-                "errorType: ${error.runtimeType.toString()}\n" +
-                error.toString() +
-                "error: ${error.toString()}\n" +
-                stacktrace.toString());
-        errorLogger.recordError(error, stacktrace);
-        return UniversalErrorPage(error: displayedError);
-      });
-    });
+          }, error: (error, stacktrace) {
+            print(error);
+            print(stacktrace);
+            errorLogger.recordError(error, stacktrace);
+            setState(() {
+              final displayError = ErrorMessages.connection +
+                  "\n" +
+                  "errorType: ${error.runtimeType.toString()}\n" +
+                  error.toString() +
+                  "error: ${error.toString()}\n" +
+                  stacktrace.toString();
+              _error = displayError;
+            });
+
+            return Indicator();
+          });
+        }),
+      ),
+    );
   }
 
   _auth() {
-    auth().then((authInfo) {
+    cacheOrAuth().then((authInfo) {
       final userService = UserService(DatabaseConnection(authInfo.uid));
-      errorLogger.setUserIdentifier(authInfo.uid);
-      firebaseAnalytics.setUserId(authInfo.uid);
       return userService.prepare(authInfo.uid).then((_) async {
+        userService.recordUserIDs();
         userService.saveLaunchInfo();
         userService.saveStats();
         final user = await userService.fetch();
@@ -166,12 +134,13 @@ class RootState extends State<Root> {
       });
     }).catchError((error) {
       errorLogger.recordError(error, StackTrace.current);
-      onError(UserDisplayedError(
-          displayedMessage: ErrorMessages.connection +
-              "\n" +
-              "errorType: ${error.runtimeType.toString()}\n" +
-              "error: ${error.toString()}\n" +
-              StackTrace.current.toString()));
+      setState(() {
+        this._error = UserDisplayedError(ErrorMessages.connection +
+            "\n" +
+            "errorType: ${error.runtimeType.toString()}\n" +
+            "error: ${error.toString()}\n" +
+            StackTrace.current.toString());
+      });
     });
   }
 }

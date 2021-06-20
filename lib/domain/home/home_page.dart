@@ -1,5 +1,5 @@
 import 'package:pilll/analytics.dart';
-import 'package:pilll/auth/auth.dart';
+import 'package:pilll/service/auth.dart';
 import 'package:pilll/database/database.dart';
 import 'package:pilll/domain/calendar/calendar_page.dart';
 import 'package:pilll/domain/menstruation/menstruation_page.dart';
@@ -44,7 +44,7 @@ class _HomePageState extends State<HomePage>
         vsync: this,
         initialIndex: _selectedIndex);
     _tabController.addListener(_handleTabSelection);
-    auth().then((auth) {
+    cacheOrAuth().then((auth) {
       requestNotificationPermissions();
       SettingService(DatabaseConnection(auth.uid)).fetch().then((setting) {
         if (setting.isOnReminder) {

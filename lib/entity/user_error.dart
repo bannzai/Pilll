@@ -1,9 +1,9 @@
-class UserDisplayedError extends Error {
-  late String _displayedMessage;
-  UserDisplayedError({required String displayedMessage}) {
-    this._displayedMessage = displayedMessage;
-  }
+class UserDisplayedError implements Exception {
+  final String? title;
+  final String displayedMessage;
+  final String? faqLinkURL;
+  UserDisplayedError(this.displayedMessage, {this.title, this.faqLinkURL});
 
   @override
-  String toString() => _displayedMessage;
+  String toString() => displayedMessage;
 }

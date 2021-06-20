@@ -3,8 +3,7 @@ import 'package:pilll/service/pill_sheet.dart';
 import 'package:pilll/util/datetime/day.dart';
 import 'package:flutter/services.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-
-import 'auth/auth.dart';
+import 'package:pilll/service/auth.dart';
 
 final _channel = MethodChannel("method.channel.MizukiOhashi.Pilll");
 definedChannel() {
@@ -22,7 +21,7 @@ definedChannel() {
 }
 
 Future<void> recordPill() async {
-  final authInfo = await auth();
+  final authInfo = await cacheOrAuth();
   final service = PillSheetService(DatabaseConnection(authInfo.uid));
   final entity = await service.fetchLast();
   if (entity == null) {
