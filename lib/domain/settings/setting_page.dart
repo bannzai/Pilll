@@ -205,64 +205,67 @@ class SettingPage extends HookWidget {
               },
             );
           }(),
-          SettingListTitleAndContentRowModel(
-            title: "表示モード",
-            content: settingEntity.pillSheetAppearanceMode.itemName,
-            onTap: () {
-              analytics.logEvent(
-                name: "did_select_setting_pill_sheet_appearance",
-              );
-              var selected = settingEntity.pillSheetAppearanceMode;
-              showModalBottomSheet(
-                context: context,
-                builder: (BuildContext context) {
-                  return Column(
-                    mainAxisAlignment: MainAxisAlignment.end,
-                    mainAxisSize: MainAxisSize.min,
-                    children: <Widget>[
-                      PickerToolbar(
-                        done: (() {
-                          analytics.logEvent(
-                              name: "done_setting_pill_sheet_appearance",
-                              parameters: {
-                                "before": settingEntity
-                                    .pillSheetAppearanceMode.itemName,
-                                "after": selected.itemName,
-                              });
-                          settingStore.modifyPillSheetAppearanceMode(selected);
-                          Navigator.pop(context);
-                        }),
-                        cancel: (() {
-                          Navigator.pop(context);
-                        }),
-                      ),
-                      Container(
-                        height: 200,
-                        child: GestureDetector(
-                          onTap: () {
+          if (settingState.isPremium)
+            SettingListTitleAndContentRowModel(
+              title: "表示モード",
+              content: settingEntity.pillSheetAppearanceMode.itemName,
+              onTap: () {
+                analytics.logEvent(
+                  name: "did_select_setting_pill_sheet_appearance",
+                );
+                var selected = settingEntity.pillSheetAppearanceMode;
+                showModalBottomSheet(
+                  context: context,
+                  builder: (BuildContext context) {
+                    return Column(
+                      mainAxisAlignment: MainAxisAlignment.end,
+                      mainAxisSize: MainAxisSize.min,
+                      children: <Widget>[
+                        PickerToolbar(
+                          done: (() {
+                            analytics.logEvent(
+                                name: "done_setting_pill_sheet_appearance",
+                                parameters: {
+                                  "before": settingEntity
+                                      .pillSheetAppearanceMode.itemName,
+                                  "after": selected.itemName,
+                                });
+                            settingStore
+                                .modifyPillSheetAppearanceMode(selected);
                             Navigator.pop(context);
-                          },
-                          child: CupertinoPicker(
-                            itemExtent: 40,
-                            children: PillSheetAppearanceMode.values
-                                .map((v) => Text(v.itemName))
-                                .toList(),
-                            onSelectedItemChanged: (index) {
-                              selected = PillSheetAppearanceMode.values[index];
+                          }),
+                          cancel: (() {
+                            Navigator.pop(context);
+                          }),
+                        ),
+                        Container(
+                          height: 200,
+                          child: GestureDetector(
+                            onTap: () {
+                              Navigator.pop(context);
                             },
-                            scrollController: FixedExtentScrollController(
-                              initialItem:
-                                  settingEntity.pillSheetAppearanceMode.index,
+                            child: CupertinoPicker(
+                              itemExtent: 40,
+                              children: PillSheetAppearanceMode.values
+                                  .map((v) => Text(v.itemName))
+                                  .toList(),
+                              onSelectedItemChanged: (index) {
+                                selected =
+                                    PillSheetAppearanceMode.values[index];
+                              },
+                              scrollController: FixedExtentScrollController(
+                                initialItem:
+                                    settingEntity.pillSheetAppearanceMode.index,
+                              ),
                             ),
                           ),
                         ),
-                      ),
-                    ],
-                  );
-                },
-              );
-            },
-          ),
+                      ],
+                    );
+                  },
+                );
+              },
+            ),
           if (!settingState.latestPillSheetIsInvalid &&
               pillSheetEntity != null) ...[
             SettingListTitleRowModel(

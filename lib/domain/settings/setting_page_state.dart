@@ -11,6 +11,7 @@ abstract class SettingState implements _$SettingState {
     required Setting? entity,
     PillSheet? latestPillSheet,
     @Default(false) bool userIsUpdatedFrom132,
+    @Default(false) bool isPremium,
   }) = _SettingState;
 
   bool get latestPillSheetIsInvalid =>
