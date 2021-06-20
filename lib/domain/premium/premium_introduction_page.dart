@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
@@ -520,7 +521,8 @@ class PremiumIntroductionPage extends HookWidget {
 
 extension PremiumIntroductionPageRoutes on PremiumIntroductionPage {
   static Route<dynamic> route() {
-    return MaterialPageRoute(
+    return CupertinoPageRoute(
+      fullscreenDialog: true,
       settings: RouteSettings(name: "PremiumIntroductionPage"),
       builder: (_) => PremiumIntroductionPage(),
     );
