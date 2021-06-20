@@ -186,6 +186,12 @@ class SettingStateStore extends StateNotifier<SettingState> {
     }
     return _pillSheetService.delete(entity);
   }
+
+  void modifyPillSheetAppearanceMode(PillSheetAppearanceMode mode) {
+    final entity = state.entity;
+    final updated = entity?.copyWith(pillSheetAppearanceMode: mode);
+    update(updated);
+  }
 }
 
 final transactionModifierProvider = Provider((ref) =>
