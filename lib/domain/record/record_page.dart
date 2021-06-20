@@ -12,6 +12,7 @@ import 'package:pilll/domain/record/record_taken_information.dart';
 import 'package:pilll/domain/release_note/release_note.dart';
 import 'package:pilll/entity/pill_sheet.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
+import 'package:pilll/entity/setting.dart';
 import 'package:pilll/entity/weekday.dart';
 import 'package:pilll/error/error_alert.dart';
 import 'package:pilll/error/universal_error_page.dart';
@@ -362,7 +363,8 @@ class RecordPage extends HookWidget {
         var takenDate = now().subtract(Duration(days: diff));
         _take(context, pillSheet, takenDate, store);
       },
-      premiumMarkBuilder: state.isPremium
+      premiumMarkBuilder: state.isPremium &&
+              state.appearanceMode == PillSheetAppearanceMode.date
           ? (pillMarkNumber) {
               final date = pillSheet.beginingDate
                   .add(Duration(days: pillMarkNumber - 1));
