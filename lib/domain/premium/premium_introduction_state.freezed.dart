@@ -21,12 +21,14 @@ class _$PremiumIntroductionStateTearOff {
       Package? selectedPackage,
       bool isCompletedRestore = false,
       bool isPremium = false,
+      bool hasLoginProvider = false,
       Object? exception}) {
     return _PremiumIntroductionState(
       offerings: offerings,
       selectedPackage: selectedPackage,
       isCompletedRestore: isCompletedRestore,
       isPremium: isPremium,
+      hasLoginProvider: hasLoginProvider,
       exception: exception,
     );
   }
@@ -41,6 +43,7 @@ mixin _$PremiumIntroductionState {
   Package? get selectedPackage => throw _privateConstructorUsedError;
   bool get isCompletedRestore => throw _privateConstructorUsedError;
   bool get isPremium => throw _privateConstructorUsedError;
+  bool get hasLoginProvider => throw _privateConstructorUsedError;
   Object? get exception => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
@@ -58,6 +61,7 @@ abstract class $PremiumIntroductionStateCopyWith<$Res> {
       Package? selectedPackage,
       bool isCompletedRestore,
       bool isPremium,
+      bool hasLoginProvider,
       Object? exception});
 }
 
@@ -76,6 +80,7 @@ class _$PremiumIntroductionStateCopyWithImpl<$Res>
     Object? selectedPackage = freezed,
     Object? isCompletedRestore = freezed,
     Object? isPremium = freezed,
+    Object? hasLoginProvider = freezed,
     Object? exception = freezed,
   }) {
     return _then(_value.copyWith(
@@ -95,6 +100,10 @@ class _$PremiumIntroductionStateCopyWithImpl<$Res>
           ? _value.isPremium
           : isPremium // ignore: cast_nullable_to_non_nullable
               as bool,
+      hasLoginProvider: hasLoginProvider == freezed
+          ? _value.hasLoginProvider
+          : hasLoginProvider // ignore: cast_nullable_to_non_nullable
+              as bool,
       exception: exception == freezed ? _value.exception : exception,
     ));
   }
@@ -112,6 +121,7 @@ abstract class _$PremiumIntroductionStateCopyWith<$Res>
       Package? selectedPackage,
       bool isCompletedRestore,
       bool isPremium,
+      bool hasLoginProvider,
       Object? exception});
 }
 
@@ -133,6 +143,7 @@ class __$PremiumIntroductionStateCopyWithImpl<$Res>
     Object? selectedPackage = freezed,
     Object? isCompletedRestore = freezed,
     Object? isPremium = freezed,
+    Object? hasLoginProvider = freezed,
     Object? exception = freezed,
   }) {
     return _then(_PremiumIntroductionState(
@@ -152,6 +163,10 @@ class __$PremiumIntroductionStateCopyWithImpl<$Res>
           ? _value.isPremium
           : isPremium // ignore: cast_nullable_to_non_nullable
               as bool,
+      hasLoginProvider: hasLoginProvider == freezed
+          ? _value.hasLoginProvider
+          : hasLoginProvider // ignore: cast_nullable_to_non_nullable
+              as bool,
       exception: exception == freezed ? _value.exception : exception,
     ));
   }
@@ -165,6 +180,7 @@ class _$_PremiumIntroductionState extends _PremiumIntroductionState {
       this.selectedPackage,
       this.isCompletedRestore = false,
       this.isPremium = false,
+      this.hasLoginProvider = false,
       this.exception})
       : super._();
 
@@ -178,12 +194,15 @@ class _$_PremiumIntroductionState extends _PremiumIntroductionState {
   @JsonKey(defaultValue: false)
   @override
   final bool isPremium;
+  @JsonKey(defaultValue: false)
+  @override
+  final bool hasLoginProvider;
   @override
   final Object? exception;
 
   @override
   String toString() {
-    return 'PremiumIntroductionState(offerings: $offerings, selectedPackage: $selectedPackage, isCompletedRestore: $isCompletedRestore, isPremium: $isPremium, exception: $exception)';
+    return 'PremiumIntroductionState(offerings: $offerings, selectedPackage: $selectedPackage, isCompletedRestore: $isCompletedRestore, isPremium: $isPremium, hasLoginProvider: $hasLoginProvider, exception: $exception)';
   }
 
   @override
@@ -202,6 +221,9 @@ class _$_PremiumIntroductionState extends _PremiumIntroductionState {
             (identical(other.isPremium, isPremium) ||
                 const DeepCollectionEquality()
                     .equals(other.isPremium, isPremium)) &&
+            (identical(other.hasLoginProvider, hasLoginProvider) ||
+                const DeepCollectionEquality()
+                    .equals(other.hasLoginProvider, hasLoginProvider)) &&
             (identical(other.exception, exception) ||
                 const DeepCollectionEquality()
                     .equals(other.exception, exception)));
@@ -214,6 +236,7 @@ class _$_PremiumIntroductionState extends _PremiumIntroductionState {
       const DeepCollectionEquality().hash(selectedPackage) ^
       const DeepCollectionEquality().hash(isCompletedRestore) ^
       const DeepCollectionEquality().hash(isPremium) ^
+      const DeepCollectionEquality().hash(hasLoginProvider) ^
       const DeepCollectionEquality().hash(exception);
 
   @JsonKey(ignore: true)
@@ -229,6 +252,7 @@ abstract class _PremiumIntroductionState extends PremiumIntroductionState {
       Package? selectedPackage,
       bool isCompletedRestore,
       bool isPremium,
+      bool hasLoginProvider,
       Object? exception}) = _$_PremiumIntroductionState;
   _PremiumIntroductionState._() : super._();
 
@@ -240,6 +264,8 @@ abstract class _PremiumIntroductionState extends PremiumIntroductionState {
   bool get isCompletedRestore => throw _privateConstructorUsedError;
   @override
   bool get isPremium => throw _privateConstructorUsedError;
+  @override
+  bool get hasLoginProvider => throw _privateConstructorUsedError;
   @override
   Object? get exception => throw _privateConstructorUsedError;
   @override
