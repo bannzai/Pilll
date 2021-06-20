@@ -1,4 +1,5 @@
 import 'package:pilll/analytics.dart';
+import 'package:pilll/entity/user.dart';
 import 'package:pilll/service/auth.dart';
 import 'package:pilll/service/diary.dart';
 import 'package:pilll/service/menstruation.dart';
@@ -23,3 +24,5 @@ class MockMnestruationService extends Mock implements MenstruationService {}
 class MockAuthService extends Mock implements AuthService {}
 
 class MockUserService extends Mock implements UserService {}
+
+class FakeUser extends Fake implements User {}

@@ -67,11 +67,15 @@ void main() {
       final authService = MockAuthService();
       when(authService.isLinkedApple()).thenReturn(false);
       when(authService.isLinkedGoogle()).thenReturn(false);
+      final userService = MockUserService();
+      when(userService.fetch())
+          .thenAnswer((reaInvocation) => Future.value(FakeUser()));
 
-      final pillSheetStore = RecordPageStore(
+      final store = RecordPageStore(
         pillSheetService,
         settingService,
         authService,
+        userService,
       );
 
       addTearDown(() {
@@ -83,7 +87,7 @@ void main() {
         ProviderScope(
           overrides: [
             recordPageStoreProvider
-                .overrideWithProvider(Provider((ref) => pillSheetStore)),
+                .overrideWithProvider(Provider((ref) => store)),
           ],
           child: MaterialApp(
             home: RecordPage(),
@@ -127,11 +131,15 @@ void main() {
     final authService = MockAuthService();
     when(authService.isLinkedApple()).thenReturn(false);
     when(authService.isLinkedGoogle()).thenReturn(false);
+    final userService = MockUserService();
+    when(userService.fetch())
+        .thenAnswer((reaInvocation) => Future.value(FakeUser()));
 
-    final pillSheetStore = RecordPageStore(
+    final store = RecordPageStore(
       pillSheetService,
       settingService,
       authService,
+      userService,
     );
 
     addTearDown(() {
@@ -143,7 +151,7 @@ void main() {
       ProviderScope(
         overrides: [
           recordPageStoreProvider
-              .overrideWithProvider(Provider((ref) => pillSheetStore)),
+              .overrideWithProvider(Provider((ref) => store)),
         ],
         child: MaterialApp(
           home: RecordPage(),
@@ -189,11 +197,15 @@ void main() {
     final authService = MockAuthService();
     when(authService.isLinkedApple()).thenReturn(false);
     when(authService.isLinkedGoogle()).thenReturn(false);
+    final userService = MockUserService();
+    when(userService.fetch())
+        .thenAnswer((reaInvocation) => Future.value(FakeUser()));
 
-    final pillSheetStore = RecordPageStore(
+    final store = RecordPageStore(
       pillSheetService,
       settingService,
       authService,
+      userService,
     );
 
     addTearDown(() {
@@ -205,7 +217,7 @@ void main() {
       ProviderScope(
         overrides: [
           recordPageStoreProvider
-              .overrideWithProvider(Provider((ref) => pillSheetStore)),
+              .overrideWithProvider(Provider((ref) => store)),
         ],
         child: MaterialApp(
           home: RecordPage(),
