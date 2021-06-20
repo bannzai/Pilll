@@ -4,7 +4,7 @@ import 'package:pilll/components/molecules/indicator.dart';
 class HUD extends StatelessWidget {
   final bool shown;
   final bool barrierEnabled;
-  final Widget child;
+  final Widget? child;
 
   const HUD({
     Key? key,
@@ -15,27 +15,38 @@ class HUD extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final child = this.child;
+    if (child != null && !shown) {
+      return child;
+    }
+    if (child == null) {
+      return _hud(context);
+    }
     return Stack(
       children: [
         child,
-        IgnorePointer(
-          ignoring: !shown,
-          child: Stack(
-            children: [
-              if (shown) ...[
-                if (barrierEnabled)
-                  Visibility(
-                    visible: shown,
-                    child: ModalBarrier(
-                      color: Colors.black.withOpacity(0.08),
-                    ),
-                  ),
-                Center(child: Indicator()),
-              ],
-            ],
-          ),
-        )
+        _hud(context),
       ],
+    );
+  }
+
+  Widget _hud(BuildContext context) {
+    return IgnorePointer(
+      ignoring: !shown,
+      child: Stack(
+        children: [
+          if (shown) ...[
+            if (barrierEnabled)
+              Visibility(
+                visible: shown,
+                child: ModalBarrier(
+                  color: Colors.black.withOpacity(0.08),
+                ),
+              ),
+            Center(child: Indicator()),
+          ],
+        ],
+      ),
     );
   }
 }
