@@ -1,58 +1,31 @@
 import 'package:flutter/material.dart';
 import 'package:pilll/components/molecules/indicator.dart';
 
-GlobalKey<_HUDState> hudKey = GlobalKey();
-
-class HUD extends StatefulWidget {
+class HUD extends StatelessWidget {
+  final bool shown;
+  final bool barrierEnabled;
   final Widget child;
 
-  const HUD({Key? key, required this.child}) : super(key: key);
-  @override
-  _HUDState createState() => _HUDState();
-
-  static _HUDState of(BuildContext context) {
-    final state = context.findAncestorStateOfType<_HUDState>();
-    if (state == null) {
-      throw AssertionError('''
-      Not found HUD from this context: $context
-      The context should contains HUD widget into current widget tree
-      ''');
-    }
-    return state;
-  }
-}
-
-class _HUDState extends State<HUD> {
-  bool _shown = false;
-  bool _barrierEnabled = false;
-
-  show() {
-    setState(() {
-      _shown = true;
-      _barrierEnabled = true;
-    });
-  }
-
-  hide() {
-    setState(() {
-      _shown = false;
-      _barrierEnabled = false;
-    });
-  }
+  const HUD({
+    Key? key,
+    required this.child,
+    required this.shown,
+    required this.barrierEnabled,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Stack(
       children: [
-        widget.child,
+        child,
         IgnorePointer(
-          ignoring: !_shown,
+          ignoring: !shown,
           child: Stack(
             children: [
-              if (_shown) ...[
-                if (_barrierEnabled)
+              if (shown) ...[
+                if (barrierEnabled)
                   Visibility(
-                    visible: _shown,
+                    visible: shown,
                     child: ModalBarrier(
                       color: Colors.black.withOpacity(0.08),
                     ),
@@ -65,14 +38,4 @@ class _HUDState extends State<HUD> {
       ],
     );
   }
-}
-
-showHUD() {
-  assert(hudKey.currentState != null);
-  hudKey.currentState?.show();
-}
-
-hideHUD() {
-  assert(hudKey.currentState != null);
-  hudKey.currentState?.hide();
 }
