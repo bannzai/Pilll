@@ -22,6 +22,7 @@ import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/signin/signin_sheet.dart';
+import 'package:pilll/signin/signin_sheet_state.dart';
 import 'package:pilll/util/datetime/day.dart';
 import 'package:pilll/util/shared_preference/keys.dart';
 import 'package:pilll/util/toolbar/picker_toolbar.dart';
@@ -196,7 +197,8 @@ class RecordPage extends HookWidget {
     final recommendedSignupNotification = state.recommendedSignupNotification;
     if (recommendedSignupNotification.isNotEmpty) {
       return GestureDetector(
-        onTap: () => showSigninSheet(context, false, (linkAccount) {
+        onTap: () => showSigninSheet(
+            context, SigninSheetStateContext.recordPage, (linkAccount) {
           analytics.logEvent(name: "signined_account_from_notification_bar");
           showDemographyPageIfNeeded(context);
         }),

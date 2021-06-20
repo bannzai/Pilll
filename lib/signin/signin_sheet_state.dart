@@ -13,6 +13,17 @@ abstract class SigninSheetState implements _$SigninSheetState {
     Object? exception,
   }) = _SigninSheetState;
 
+  bool get isLoginMode {
+    switch (context) {
+      case SigninSheetStateContext.initialSetting:
+        return true;
+      case SigninSheetStateContext.recordPage:
+        return false;
+      case SigninSheetStateContext.premium:
+        return false;
+    }
+  }
+
   String get title {
     switch (context) {
       case SigninSheetStateContext.initialSetting:
