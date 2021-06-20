@@ -3,11 +3,13 @@ import 'package:pilll/entity/link_account_type.dart';
 
 part 'signin_sheet_state.freezed.dart';
 
+enum SigninSheetStateContext { initialSetting, recordPage, premium }
+
 @freezed
 abstract class SigninSheetState implements _$SigninSheetState {
   SigninSheetState._();
   factory SigninSheetState({
-    required bool isLoginMode,
+    required SigninSheetStateContext context,
     Object? exception,
   }) = _SigninSheetState;
 
