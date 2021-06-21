@@ -112,6 +112,9 @@ class PremiumIntroductionStore extends StateNotifier<PremiumIntroductionState> {
       errorLogger.recordError(exception, stack);
       throw newException;
     } catch (exception, stack) {
+      analytics.logEvent(name: "catched_purchase_anonymous", parameters: {
+        "exception_type": exception.runtimeType.toString(),
+      });
       errorLogger.recordError(exception, stack);
       rethrow;
     }
@@ -214,14 +217,40 @@ class PremiumIntroductionStore extends StateNotifier<PremiumIntroductionState> {
     try {
       final purchaserInfo = await Purchases.restoreTransactions();
       final entitlements = purchaserInfo.entitlements.all[premiumEntitlements];
+      analytics.logEvent(name: "proceed_restore_purchase_info", parameters: {
+        "entitlements": entitlements?.identifier,
+        "isActivated": entitlements?.isActive,
+      });
       if (entitlements != null && entitlements.isActive) {
+        analytics.logEvent(name: "done_restore_purchase_info", parameters: {
+          "entitlements": entitlements.identifier,
+        });
         state = state.copyWith(isCompletedRestore: true);
-        print("done restoration");
         await purchaserInfoUpdated(purchaserInfo);
         return;
       }
+      analytics.logEvent(name: "undone_restore_purchase_info", parameters: {
+        "entitlements": entitlements?.identifier,
+        "isActivated": entitlements?.isActive,
+      });
       throw UserDisplayedError("以前の購入情報が見つかりません。アカウントをお確かめの上再度お試しください");
+    } on PlatformException catch (exception, stack) {
+      analytics.logEvent(name: "catched_restore_exception", parameters: {
+        "code": exception.code,
+        "details": exception.details.toString(),
+        "message": exception.message
+      });
+      final newException = _mapToDisplayedException(exception);
+      if (newException == null) {
+        return Future.value(false);
+      }
+      errorLogger.recordError(exception, stack);
+      throw newException;
     } catch (exception, stack) {
+      analytics
+          .logEvent(name: "catched_restore_anonymous_exception", parameters: {
+        "exception_type": exception.runtimeType.toString(),
+      });
       errorLogger.recordError(exception, stack);
       rethrow;
     }
