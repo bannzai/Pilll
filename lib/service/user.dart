@@ -87,7 +87,7 @@ class UserService {
   }
 
   Future<void> updatePurchaseInfo({
-    required bool isActivated,
+    required bool? isActivated,
     required String? entitlementIdentifier,
     required String? premiumPlanIdentifier,
     required String purchaseAppID,
@@ -95,7 +95,7 @@ class UserService {
     required String? originalPurchaseDate,
   }) async {
     await _database.userReference().set({
-      UserFirestoreFieldKeys.isPremium: isActivated,
+      if (isActivated != null) UserFirestoreFieldKeys.isPremium: isActivated,
       UserFirestoreFieldKeys.purchaseAppID: purchaseAppID
     }, SetOptions(merge: true));
     final privates = {
