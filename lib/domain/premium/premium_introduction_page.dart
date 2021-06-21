@@ -31,6 +31,7 @@ class PremiumIntroductionPage extends HookWidget {
       return Indicator();
     }
     return HUD(
+      shown: state.isLoading,
       child: UniversalErrorPage(
         error: state.exception,
         reload: () => store.reset(),
@@ -86,6 +87,7 @@ class PremiumIntroductionPage extends HookWidget {
                                 : () async {
                                     if (state.hasLoginProvider) {
                                       try {
+                                        store.showHUD();
                                         await store.purchase();
                                         showDialog(
                                             context: context,
@@ -101,6 +103,8 @@ class PremiumIntroductionPage extends HookWidget {
                                         } else {
                                           store.handleException(error);
                                         }
+                                      } finally {
+                                        store.hideHUD();
                                       }
                                     } else {
                                       showSigninSheet(context,
@@ -497,6 +501,7 @@ class PremiumIntroductionPage extends HookWidget {
           GestureDetector(
             onTap: () async {
               try {
+                store.showHUD();
                 await store.restore();
               } catch (error) {
                 if (error is UserDisplayedError) {
@@ -504,6 +509,8 @@ class PremiumIntroductionPage extends HookWidget {
                 } else {
                   store.handleException(error);
                 }
+              } finally {
+                store.hideHUD();
               }
             },
             child: Text(

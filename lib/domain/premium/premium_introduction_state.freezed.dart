@@ -20,6 +20,7 @@ class _$PremiumIntroductionStateTearOff {
       {Offerings? offerings,
       Package? selectedPackage,
       bool isCompletedRestore = false,
+      bool isLoading = false,
       bool isPremium = false,
       bool hasLoginProvider = false,
       Object? exception}) {
@@ -27,6 +28,7 @@ class _$PremiumIntroductionStateTearOff {
       offerings: offerings,
       selectedPackage: selectedPackage,
       isCompletedRestore: isCompletedRestore,
+      isLoading: isLoading,
       isPremium: isPremium,
       hasLoginProvider: hasLoginProvider,
       exception: exception,
@@ -42,6 +44,7 @@ mixin _$PremiumIntroductionState {
   Offerings? get offerings => throw _privateConstructorUsedError;
   Package? get selectedPackage => throw _privateConstructorUsedError;
   bool get isCompletedRestore => throw _privateConstructorUsedError;
+  bool get isLoading => throw _privateConstructorUsedError;
   bool get isPremium => throw _privateConstructorUsedError;
   bool get hasLoginProvider => throw _privateConstructorUsedError;
   Object? get exception => throw _privateConstructorUsedError;
@@ -60,6 +63,7 @@ abstract class $PremiumIntroductionStateCopyWith<$Res> {
       {Offerings? offerings,
       Package? selectedPackage,
       bool isCompletedRestore,
+      bool isLoading,
       bool isPremium,
       bool hasLoginProvider,
       Object? exception});
@@ -79,6 +83,7 @@ class _$PremiumIntroductionStateCopyWithImpl<$Res>
     Object? offerings = freezed,
     Object? selectedPackage = freezed,
     Object? isCompletedRestore = freezed,
+    Object? isLoading = freezed,
     Object? isPremium = freezed,
     Object? hasLoginProvider = freezed,
     Object? exception = freezed,
@@ -95,6 +100,10 @@ class _$PremiumIntroductionStateCopyWithImpl<$Res>
       isCompletedRestore: isCompletedRestore == freezed
           ? _value.isCompletedRestore
           : isCompletedRestore // ignore: cast_nullable_to_non_nullable
+              as bool,
+      isLoading: isLoading == freezed
+          ? _value.isLoading
+          : isLoading // ignore: cast_nullable_to_non_nullable
               as bool,
       isPremium: isPremium == freezed
           ? _value.isPremium
@@ -120,6 +129,7 @@ abstract class _$PremiumIntroductionStateCopyWith<$Res>
       {Offerings? offerings,
       Package? selectedPackage,
       bool isCompletedRestore,
+      bool isLoading,
       bool isPremium,
       bool hasLoginProvider,
       Object? exception});
@@ -142,6 +152,7 @@ class __$PremiumIntroductionStateCopyWithImpl<$Res>
     Object? offerings = freezed,
     Object? selectedPackage = freezed,
     Object? isCompletedRestore = freezed,
+    Object? isLoading = freezed,
     Object? isPremium = freezed,
     Object? hasLoginProvider = freezed,
     Object? exception = freezed,
@@ -158,6 +169,10 @@ class __$PremiumIntroductionStateCopyWithImpl<$Res>
       isCompletedRestore: isCompletedRestore == freezed
           ? _value.isCompletedRestore
           : isCompletedRestore // ignore: cast_nullable_to_non_nullable
+              as bool,
+      isLoading: isLoading == freezed
+          ? _value.isLoading
+          : isLoading // ignore: cast_nullable_to_non_nullable
               as bool,
       isPremium: isPremium == freezed
           ? _value.isPremium
@@ -179,6 +194,7 @@ class _$_PremiumIntroductionState extends _PremiumIntroductionState {
       {this.offerings,
       this.selectedPackage,
       this.isCompletedRestore = false,
+      this.isLoading = false,
       this.isPremium = false,
       this.hasLoginProvider = false,
       this.exception})
@@ -193,6 +209,9 @@ class _$_PremiumIntroductionState extends _PremiumIntroductionState {
   final bool isCompletedRestore;
   @JsonKey(defaultValue: false)
   @override
+  final bool isLoading;
+  @JsonKey(defaultValue: false)
+  @override
   final bool isPremium;
   @JsonKey(defaultValue: false)
   @override
@@ -202,7 +221,7 @@ class _$_PremiumIntroductionState extends _PremiumIntroductionState {
 
   @override
   String toString() {
-    return 'PremiumIntroductionState(offerings: $offerings, selectedPackage: $selectedPackage, isCompletedRestore: $isCompletedRestore, isPremium: $isPremium, hasLoginProvider: $hasLoginProvider, exception: $exception)';
+    return 'PremiumIntroductionState(offerings: $offerings, selectedPackage: $selectedPackage, isCompletedRestore: $isCompletedRestore, isLoading: $isLoading, isPremium: $isPremium, hasLoginProvider: $hasLoginProvider, exception: $exception)';
   }
 
   @override
@@ -218,6 +237,9 @@ class _$_PremiumIntroductionState extends _PremiumIntroductionState {
             (identical(other.isCompletedRestore, isCompletedRestore) ||
                 const DeepCollectionEquality()
                     .equals(other.isCompletedRestore, isCompletedRestore)) &&
+            (identical(other.isLoading, isLoading) ||
+                const DeepCollectionEquality()
+                    .equals(other.isLoading, isLoading)) &&
             (identical(other.isPremium, isPremium) ||
                 const DeepCollectionEquality()
                     .equals(other.isPremium, isPremium)) &&
@@ -235,6 +257,7 @@ class _$_PremiumIntroductionState extends _PremiumIntroductionState {
       const DeepCollectionEquality().hash(offerings) ^
       const DeepCollectionEquality().hash(selectedPackage) ^
       const DeepCollectionEquality().hash(isCompletedRestore) ^
+      const DeepCollectionEquality().hash(isLoading) ^
       const DeepCollectionEquality().hash(isPremium) ^
       const DeepCollectionEquality().hash(hasLoginProvider) ^
       const DeepCollectionEquality().hash(exception);
@@ -251,6 +274,7 @@ abstract class _PremiumIntroductionState extends PremiumIntroductionState {
       {Offerings? offerings,
       Package? selectedPackage,
       bool isCompletedRestore,
+      bool isLoading,
       bool isPremium,
       bool hasLoginProvider,
       Object? exception}) = _$_PremiumIntroductionState;
@@ -262,6 +286,8 @@ abstract class _PremiumIntroductionState extends PremiumIntroductionState {
   Package? get selectedPackage => throw _privateConstructorUsedError;
   @override
   bool get isCompletedRestore => throw _privateConstructorUsedError;
+  @override
+  bool get isLoading => throw _privateConstructorUsedError;
   @override
   bool get isPremium => throw _privateConstructorUsedError;
   @override
