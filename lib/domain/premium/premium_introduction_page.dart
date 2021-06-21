@@ -88,12 +88,15 @@ class PremiumIntroductionPage extends HookWidget {
                                     if (state.hasLoginProvider) {
                                       try {
                                         store.showHUD();
-                                        await store.purchase();
-                                        showDialog(
-                                            context: context,
-                                            builder: (context) {
-                                              return PremiumCompleteDialog();
-                                            });
+                                        final shouldShowCompleteDialog =
+                                            await store.purchase();
+                                        if (shouldShowCompleteDialog) {
+                                          showDialog(
+                                              context: context,
+                                              builder: (context) {
+                                                return PremiumCompleteDialog();
+                                              });
+                                        }
                                       } catch (error) {
                                         print(
                                             "caused purchase error for $error");

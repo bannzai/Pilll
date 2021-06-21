@@ -79,7 +79,10 @@ class PremiumIntroductionStore extends StateNotifier<PremiumIntroductionState> {
     super.dispose();
   }
 
-  Future<void> purchase() async {
+  /// Return true indicates end of regularllly pattern.
+  /// Return false indicates not regulally pattern.
+  /// Return value is used to display the completion page
+  Future<bool> purchase() async {
     final package = state.selectedPackage;
     if (package == null) {
       throw AssertionError("unexpected selected package not found");
@@ -95,6 +98,7 @@ class PremiumIntroductionStore extends StateNotifier<PremiumIntroductionState> {
         throw UserDisplayedError("課金の有効化が完了しておりません。しばらく時間をおいてからご確認ください");
       }
       await purchaserInfoUpdated(purchaserInfo);
+      return Future.value(true);
     } on PlatformException catch (exception, stack) {
       analytics.logEvent(name: "catched_purchase_exception", parameters: {
         "code": exception.code,
@@ -103,7 +107,7 @@ class PremiumIntroductionStore extends StateNotifier<PremiumIntroductionState> {
       });
       final newException = _mapToDisplayedException(exception);
       if (newException == null) {
-        return;
+        return Future.value(false);
       }
       errorLogger.recordError(exception, stack);
       throw newException;
