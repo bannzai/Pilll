@@ -79,7 +79,10 @@ class PremiumIntroductionStore extends StateNotifier<PremiumIntroductionState> {
     super.dispose();
   }
 
-  Future<void> purchase() async {
+  /// Return true indicates end of regularllly pattern.
+  /// Return false indicates not regulally pattern.
+  /// Return value is used to display the completion page
+  Future<bool> purchase() async {
     final package = state.selectedPackage;
     if (package == null) {
       throw AssertionError("unexpected selected package not found");
@@ -94,7 +97,8 @@ class PremiumIntroductionStore extends StateNotifier<PremiumIntroductionState> {
       if (!premiumEntitlement.isActive) {
         throw UserDisplayedError("課金の有効化が完了しておりません。しばらく時間をおいてからご確認ください");
       }
-      await purchaserInfoUpdated(purchaserInfo);
+      await callUpdatePurchaseInfo(purchaserInfo);
+      return Future.value(true);
     } on PlatformException catch (exception, stack) {
       analytics.logEvent(name: "catched_purchase_exception", parameters: {
         "code": exception.code,
@@ -103,11 +107,14 @@ class PremiumIntroductionStore extends StateNotifier<PremiumIntroductionState> {
       });
       final newException = _mapToDisplayedException(exception);
       if (newException == null) {
-        return;
+        return Future.value(false);
       }
       errorLogger.recordError(exception, stack);
       throw newException;
     } catch (exception, stack) {
+      analytics.logEvent(name: "catched_purchase_anonymous", parameters: {
+        "exception_type": exception.runtimeType.toString(),
+      });
       errorLogger.recordError(exception, stack);
       rethrow;
     }
@@ -206,18 +213,47 @@ class PremiumIntroductionStore extends StateNotifier<PremiumIntroductionState> {
     }
   }
 
-  Future<void> restore() async {
+  /// Return true indicates end of regularllly pattern.
+  /// Return false indicates not regulally pattern.
+  /// Return value is used to display the completion snackbar
+  Future<bool> restore() async {
     try {
       final purchaserInfo = await Purchases.restoreTransactions();
       final entitlements = purchaserInfo.entitlements.all[premiumEntitlements];
+      analytics.logEvent(name: "proceed_restore_purchase_info", parameters: {
+        "entitlements": entitlements?.identifier,
+        "isActivated": entitlements?.isActive,
+      });
       if (entitlements != null && entitlements.isActive) {
+        analytics.logEvent(name: "done_restore_purchase_info", parameters: {
+          "entitlements": entitlements.identifier,
+        });
+        await callUpdatePurchaseInfo(purchaserInfo);
         state = state.copyWith(isCompletedRestore: true);
-        print("done restoration");
-        await purchaserInfoUpdated(purchaserInfo);
-        return;
+        return Future.value(true);
       }
+      analytics.logEvent(name: "undone_restore_purchase_info", parameters: {
+        "entitlements": entitlements?.identifier,
+        "isActivated": entitlements?.isActive,
+      });
       throw UserDisplayedError("以前の購入情報が見つかりません。アカウントをお確かめの上再度お試しください");
+    } on PlatformException catch (exception, stack) {
+      analytics.logEvent(name: "catched_restore_exception", parameters: {
+        "code": exception.code,
+        "details": exception.details.toString(),
+        "message": exception.message
+      });
+      final newException = _mapToDisplayedException(exception);
+      if (newException == null) {
+        return Future.value(false);
+      }
+      errorLogger.recordError(exception, stack);
+      throw newException;
     } catch (exception, stack) {
+      analytics
+          .logEvent(name: "catched_restore_anonymous_exception", parameters: {
+        "exception_type": exception.runtimeType.toString(),
+      });
       errorLogger.recordError(exception, stack);
       rethrow;
     }
@@ -226,7 +262,8 @@ class PremiumIntroductionStore extends StateNotifier<PremiumIntroductionState> {
   String annualPriceString(Package package) {
     final monthlyPrice = package.product.price / 12;
     final monthlyPriceString =
-        NumberFormat.simpleCurrency().format(monthlyPrice);
+        NumberFormat.simpleCurrency(decimalDigits: 0, name: "JPY")
+            .format(monthlyPrice);
     return "${package.product.priceString} ($monthlyPriceString/月)";
   }
 
@@ -260,5 +297,13 @@ class PremiumIntroductionStore extends StateNotifier<PremiumIntroductionState> {
 
   handleException(Object exception) {
     state = state.copyWith(exception: exception);
+  }
+
+  showHUD() {
+    state = state.copyWith(isLoading: true);
+  }
+
+  hideHUD() {
+    state = state.copyWith(isLoading: false);
   }
 }

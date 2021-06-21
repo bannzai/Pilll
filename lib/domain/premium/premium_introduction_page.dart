@@ -10,6 +10,7 @@ import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/components/molecules/indicator.dart';
+import 'package:pilll/components/page/hud.dart';
 import 'package:pilll/domain/demography/demography_page.dart';
 import 'package:pilll/domain/premium/premium_complete_dialog.dart';
 import 'package:pilll/domain/premium/premium_introduction_state.dart';
@@ -29,90 +30,102 @@ class PremiumIntroductionPage extends HookWidget {
     if (state.isNotYetLoad) {
       return Indicator();
     }
-    return UniversalErrorPage(
-      error: state.exception,
-      reload: () => store.reset(),
-      child: Scaffold(
-        appBar: AppBar(
-          title: SvgPicture.asset("images/pillll_premium_logo.svg"),
-          elevation: 0.0,
-          leading: IconButton(
-            icon: Icon(Icons.close, color: Colors.black),
-            onPressed: () => Navigator.of(context).pop(),
+    return HUD(
+      shown: state.isLoading,
+      child: UniversalErrorPage(
+        error: state.exception,
+        reload: () => store.reset(),
+        child: Scaffold(
+          appBar: AppBar(
+            title: SvgPicture.asset("images/pillll_premium_logo.svg"),
+            elevation: 0.0,
+            leading: IconButton(
+              icon: Icon(Icons.close, color: Colors.black),
+              onPressed: () => Navigator.of(context).pop(),
+            ),
+            backgroundColor: Colors.transparent,
           ),
-          backgroundColor: PilllColors.secondary.withAlpha(10),
-        ),
-        body: Container(
-          color: PilllColors.white,
-          child: SafeArea(
-            child: Container(
-              width: MediaQuery.of(context).size.width,
-              child: Stack(
-                children: [
-                  SingleChildScrollView(
-                    padding: EdgeInsets.only(bottom: 100),
-                    child: Column(
-                      children: [
-                        _plan(context, store, state),
-                        _noOpen(context, store, state),
-                        _advancedAppearancePillSheet(context, store, state),
-                        _footer(context, store, state),
-                      ],
-                    ),
-                  ),
-                  Align(
-                    alignment: Alignment.bottomCenter,
-                    child: Container(
-                      decoration: BoxDecoration(
-                        color: PilllColors.white,
-                        boxShadow: [
-                          BoxShadow(
-                            color: PilllColors.shadow,
-                            blurRadius: 6.0,
-                            offset: Offset(0, -4),
-                          ),
+          body: Container(
+            color: PilllColors.secondary.withAlpha(10),
+            child: SafeArea(
+              child: Container(
+                width: MediaQuery.of(context).size.width,
+                child: Stack(
+                  children: [
+                    SingleChildScrollView(
+                      padding: EdgeInsets.only(bottom: 100),
+                      child: Column(
+                        children: [
+                          _plan(context, store, state),
+                          _noOpen(context, store, state),
+                          _advancedAppearancePillSheet(context, store, state),
+                          _footer(context, store, state),
                         ],
                       ),
-                      padding: EdgeInsets.only(left: 20, right: 20),
-                      height: 100,
-                      width: MediaQuery.of(context).size.width,
-                      child: Center(
-                        child: PrimaryButton(
-                          text: state.doneButtonText,
-                          onPressed: state.isPremium
-                              ? null
-                              : () async {
-                                  if (state.hasLoginProvider) {
-                                    try {
-                                      await store.purchase();
-                                      showDialog(
-                                          context: context,
-                                          builder: (context) {
-                                            return PremiumCompleteDialog();
-                                          });
-                                    } catch (error) {
-                                      print("caused purchase error for $error");
-                                      if (error is UserDisplayedError) {
-                                        showErrorAlertWithError(context, error);
-                                      } else {
-                                        store.handleException(error);
+                    ),
+                    Align(
+                      alignment: Alignment.bottomCenter,
+                      child: Container(
+                        decoration: BoxDecoration(
+                          color: PilllColors.white,
+                          boxShadow: [
+                            BoxShadow(
+                              color: PilllColors.shadow,
+                              blurRadius: 6.0,
+                              offset: Offset(0, -4),
+                            ),
+                          ],
+                        ),
+                        padding: EdgeInsets.only(left: 20, right: 20),
+                        height: 100,
+                        width: MediaQuery.of(context).size.width,
+                        child: Center(
+                          child: PrimaryButton(
+                            text: state.doneButtonText,
+                            onPressed: state.isPremium
+                                ? null
+                                : () async {
+                                    if (state.hasLoginProvider) {
+                                      try {
+                                        store.showHUD();
+                                        final shouldShowCompleteDialog =
+                                            await store.purchase();
+                                        if (shouldShowCompleteDialog) {
+                                          showDialog(
+                                              context: context,
+                                              builder: (context) {
+                                                return PremiumCompleteDialog();
+                                              });
+                                        }
+                                      } catch (error) {
+                                        print(
+                                            "caused purchase error for $error");
+                                        if (error is UserDisplayedError) {
+                                          showErrorAlertWithError(
+                                              context, error);
+                                        } else {
+                                          store.handleException(error);
+                                        }
+                                      } finally {
+                                        store.hideHUD();
                                       }
+                                    } else {
+                                      showSigninSheet(context,
+                                          SigninSheetStateContext.premium,
+                                          (linkAccountType) {
+                                        analytics.logEvent(
+                                            name:
+                                                "signined_account_on_premium");
+                                        showDemographyPageIfNeeded(context);
+                                      });
                                     }
-                                  } else {
-                                    showSigninSheet(context,
-                                        SigninSheetStateContext.premium,
-                                        (linkAccountType) {
-                                      analytics.logEvent(
-                                          name: "signined_account_on_premium");
-                                      showDemographyPageIfNeeded(context);
-                                    });
-                                  }
-                                },
+                                  },
+                          ),
                         ),
                       ),
                     ),
-                  ),
-                ],
+                  ],
+                ),
               ),
             ),
           ),
@@ -127,7 +140,7 @@ class PremiumIntroductionPage extends HookWidget {
     final monthlyPackage = state.monthlyPackage;
     return Container(
       decoration: BoxDecoration(
-        color: PilllColors.secondary.withAlpha(10),
+        color: Colors.transparent,
         image: DecorationImage(
           image: AssetImage("images/premium_background.png"),
           fit: BoxFit.cover,
@@ -491,13 +504,26 @@ class PremiumIntroductionPage extends HookWidget {
           GestureDetector(
             onTap: () async {
               try {
-                await store.restore();
+                store.showHUD();
+                final shouldShowSnackbar = await store.restore();
+                if (shouldShowSnackbar) {
+                  ScaffoldMessenger.of(context).showSnackBar(
+                    SnackBar(
+                      duration: Duration(
+                        seconds: 2,
+                      ),
+                      content: Text("購入情報を復元しました"),
+                    ),
+                  );
+                }
               } catch (error) {
                 if (error is UserDisplayedError) {
                   showErrorAlertWithError(context, error);
                 } else {
                   store.handleException(error);
                 }
+              } finally {
+                store.hideHUD();
               }
             },
             child: Text(

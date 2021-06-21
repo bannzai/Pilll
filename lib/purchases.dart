@@ -6,7 +6,7 @@ import 'package:purchases_flutter/purchases_flutter.dart';
 
 const premiumEntitlements = "Premium";
 
-Future<void> purchaserInfoUpdated(PurchaserInfo info) async {
+Future<void> callUpdatePurchaseInfo(PurchaserInfo info) async {
   final uid = FirebaseAuth.instance.currentUser?.uid;
   if (uid == null) {
     errorLogger.recordError(
@@ -17,17 +17,43 @@ Future<void> purchaserInfoUpdated(PurchaserInfo info) async {
 
   final userService = UserService(DatabaseConnection(uid));
   final premiumEntitlement = info.entitlements.all[premiumEntitlements];
-  final isActivated =
-      premiumEntitlement == null ? false : premiumEntitlement.isActive;
+  if (premiumEntitlement == null) {
+    throw FormatException("Unexpected entitlements is null");
+  }
   try {
     await userService.updatePurchaseInfo(
-      isActivated: isActivated,
-      entitlementIdentifier: premiumEntitlement?.identifier,
-      premiumPlanIdentifier: premiumEntitlement?.productIdentifier,
+      isActivated: premiumEntitlement.isActive,
+      entitlementIdentifier: premiumEntitlement.identifier,
+      premiumPlanIdentifier: premiumEntitlement.productIdentifier,
       purchaseAppID: info.originalAppUserId,
       activeSubscriptions: info.activeSubscriptions,
       originalPurchaseDate: info.originalPurchaseDate,
     );
+  } catch (exception, stack) {
+    errorLogger.recordError(exception, stack);
+  }
+}
+
+Future<void> syncPurchaseInfo() async {
+  final uid = FirebaseAuth.instance.currentUser?.uid;
+  if (uid == null) {
+    errorLogger.recordError(
+        "unexpected uid is not found when purchase info to sync",
+        StackTrace.current);
+    return;
+  }
+
+  PurchaserInfo purchaserInfo = await Purchases.getPurchaserInfo();
+  final premiumEntitlement =
+      purchaserInfo.entitlements.all[premiumEntitlements];
+  if (premiumEntitlement == null) {
+    throw FormatException("Unexpected entitlements is null");
+  }
+
+  try {
+    final userService = UserService(DatabaseConnection(uid));
+    await userService.syncPurchaseInfo(
+        isActivated: premiumEntitlement.isActive);
   } catch (exception, stack) {
     errorLogger.recordError(exception, stack);
   }
