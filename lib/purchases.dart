@@ -17,14 +17,11 @@ Future<void> callUpdatePurchaseInfo(PurchaserInfo info) async {
 
   final userService = UserService(DatabaseConnection(uid));
   final premiumEntitlement = info.entitlements.all[premiumEntitlements];
-  if (premiumEntitlement == null) {
-    throw FormatException("Unexpected entitlements is null");
-  }
   try {
     await userService.updatePurchaseInfo(
-      isActivated: premiumEntitlement.isActive,
-      entitlementIdentifier: premiumEntitlement.identifier,
-      premiumPlanIdentifier: premiumEntitlement.productIdentifier,
+      isActivated: premiumEntitlement?.isActive,
+      entitlementIdentifier: premiumEntitlement?.identifier,
+      premiumPlanIdentifier: premiumEntitlement?.productIdentifier,
       purchaseAppID: info.originalAppUserId,
       activeSubscriptions: info.activeSubscriptions,
       originalPurchaseDate: info.originalPurchaseDate,
@@ -46,14 +43,12 @@ Future<void> syncPurchaseInfo() async {
   PurchaserInfo purchaserInfo = await Purchases.getPurchaserInfo();
   final premiumEntitlement =
       purchaserInfo.entitlements.all[premiumEntitlements];
-  if (premiumEntitlement == null) {
-    throw FormatException("Unexpected entitlements is null");
-  }
+  final isActivated =
+      premiumEntitlement == null ? false : premiumEntitlement.isActive;
 
   try {
     final userService = UserService(DatabaseConnection(uid));
-    await userService.syncPurchaseInfo(
-        isActivated: premiumEntitlement.isActive);
+    await userService.syncPurchaseInfo(isActivated: isActivated);
   } catch (exception, stack) {
     errorLogger.recordError(exception, stack);
   }
