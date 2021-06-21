@@ -228,8 +228,8 @@ class PremiumIntroductionStore extends StateNotifier<PremiumIntroductionState> {
         analytics.logEvent(name: "done_restore_purchase_info", parameters: {
           "entitlements": entitlements.identifier,
         });
-        state = state.copyWith(isCompletedRestore: true);
         await purchaserInfoUpdated(purchaserInfo);
+        state = state.copyWith(isCompletedRestore: true);
         return Future.value(true);
       }
       analytics.logEvent(name: "undone_restore_purchase_info", parameters: {
