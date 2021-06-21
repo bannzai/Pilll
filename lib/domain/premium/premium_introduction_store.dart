@@ -262,7 +262,8 @@ class PremiumIntroductionStore extends StateNotifier<PremiumIntroductionState> {
   String annualPriceString(Package package) {
     final monthlyPrice = package.product.price / 12;
     final monthlyPriceString =
-        NumberFormat.simpleCurrency().format(monthlyPrice);
+        NumberFormat.simpleCurrency(decimalDigits: 0, name: "JPY")
+            .format(monthlyPrice);
     return "${package.product.priceString} ($monthlyPriceString/月)";
   }
 
