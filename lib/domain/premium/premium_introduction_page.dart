@@ -43,10 +43,10 @@ class PremiumIntroductionPage extends HookWidget {
               icon: Icon(Icons.close, color: Colors.black),
               onPressed: () => Navigator.of(context).pop(),
             ),
-            backgroundColor: PilllColors.secondary.withAlpha(10),
+            backgroundColor: Colors.transparent,
           ),
           body: Container(
-            color: PilllColors.white,
+            color: PilllColors.secondary.withAlpha(10),
             child: SafeArea(
               child: Container(
                 width: MediaQuery.of(context).size.width,
@@ -140,7 +140,7 @@ class PremiumIntroductionPage extends HookWidget {
     final monthlyPackage = state.monthlyPackage;
     return Container(
       decoration: BoxDecoration(
-        color: PilllColors.secondary.withAlpha(10),
+        color: Colors.transparent,
         image: DecorationImage(
           image: AssetImage("images/premium_background.png"),
           fit: BoxFit.cover,
