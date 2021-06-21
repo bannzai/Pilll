@@ -118,6 +118,14 @@ class UserService {
     }
   }
 
+  Future<void> syncPurchaseInfo({
+    required bool isActivated,
+  }) async {
+    await _database.userReference().set({
+      UserFirestoreFieldKeys.isPremium: isActivated,
+    }, SetOptions(merge: true));
+  }
+
   Future<void> deleteSettings() {
     return _database
         .userReference()

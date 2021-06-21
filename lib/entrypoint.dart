@@ -57,6 +57,7 @@ Future<void> initializePurchase(String uid) async {
   await Purchases.setDebugLogsEnabled(Environment.isDevelopment);
   await Purchases.setup(Secret.revenueCatPublicAPIKey, appUserId: uid);
   Purchases.addPurchaserInfoUpdateListener(callUpdatePurchaseInfo);
+  await syncPurchaseInfo();
 }
 
 void connectToEmulator() {

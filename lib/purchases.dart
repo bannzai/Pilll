@@ -33,3 +33,28 @@ Future<void> callUpdatePurchaseInfo(PurchaserInfo info) async {
     errorLogger.recordError(exception, stack);
   }
 }
+
+Future<void> syncPurchaseInfo() async {
+  final uid = FirebaseAuth.instance.currentUser?.uid;
+  if (uid == null) {
+    errorLogger.recordError(
+        "unexpected uid is not found when purchase info to sync",
+        StackTrace.current);
+    return;
+  }
+
+  PurchaserInfo purchaserInfo = await Purchases.getPurchaserInfo();
+  final premiumEntitlement =
+      purchaserInfo.entitlements.all[premiumEntitlements];
+  if (premiumEntitlement == null) {
+    throw FormatException("Unexpected entitlements is null");
+  }
+
+  try {
+    final userService = UserService(DatabaseConnection(uid));
+    await userService.syncPurchaseInfo(
+        isActivated: premiumEntitlement.isActive);
+  } catch (exception, stack) {
+    errorLogger.recordError(exception, stack);
+  }
+}
