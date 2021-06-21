@@ -505,7 +505,17 @@ class PremiumIntroductionPage extends HookWidget {
             onTap: () async {
               try {
                 store.showHUD();
-                await store.restore();
+                final shouldShowSnackbar = await store.restore();
+                if (shouldShowSnackbar) {
+                  ScaffoldMessenger.of(context).showSnackBar(
+                    SnackBar(
+                      duration: Duration(
+                        seconds: 2,
+                      ),
+                      content: Text("購入情報を復元しました"),
+                    ),
+                  );
+                }
               } catch (error) {
                 if (error is UserDisplayedError) {
                   showErrorAlertWithError(context, error);
