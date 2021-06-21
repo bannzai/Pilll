@@ -49,4 +49,12 @@ class SigninSheetStore extends StateNotifier<SigninSheetState> {
   handleException(Object exception) {
     state = state.copyWith(exception: exception);
   }
+
+  showHUD() {
+    state = state.copyWith(isLoading: true);
+  }
+
+  hideHUD() {
+    state = state.copyWith(isLoading: false);
+  }
 }

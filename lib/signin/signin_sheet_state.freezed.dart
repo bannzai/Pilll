@@ -17,8 +17,11 @@ class _$SigninSheetStateTearOff {
   const _$SigninSheetStateTearOff();
 
   _SigninSheetState call(
-      {required SigninSheetStateContext context, Object? exception}) {
+      {bool isLoading = false,
+      required SigninSheetStateContext context,
+      Object? exception}) {
     return _SigninSheetState(
+      isLoading: isLoading,
       context: context,
       exception: exception,
     );
@@ -30,6 +33,7 @@ const $SigninSheetState = _$SigninSheetStateTearOff();
 
 /// @nodoc
 mixin _$SigninSheetState {
+  bool get isLoading => throw _privateConstructorUsedError;
   SigninSheetStateContext get context => throw _privateConstructorUsedError;
   Object? get exception => throw _privateConstructorUsedError;
 
@@ -43,7 +47,8 @@ abstract class $SigninSheetStateCopyWith<$Res> {
   factory $SigninSheetStateCopyWith(
           SigninSheetState value, $Res Function(SigninSheetState) then) =
       _$SigninSheetStateCopyWithImpl<$Res>;
-  $Res call({SigninSheetStateContext context, Object? exception});
+  $Res call(
+      {bool isLoading, SigninSheetStateContext context, Object? exception});
 }
 
 /// @nodoc
@@ -57,10 +62,15 @@ class _$SigninSheetStateCopyWithImpl<$Res>
 
   @override
   $Res call({
+    Object? isLoading = freezed,
     Object? context = freezed,
     Object? exception = freezed,
   }) {
     return _then(_value.copyWith(
+      isLoading: isLoading == freezed
+          ? _value.isLoading
+          : isLoading // ignore: cast_nullable_to_non_nullable
+              as bool,
       context: context == freezed
           ? _value.context
           : context // ignore: cast_nullable_to_non_nullable
@@ -77,7 +87,8 @@ abstract class _$SigninSheetStateCopyWith<$Res>
           _SigninSheetState value, $Res Function(_SigninSheetState) then) =
       __$SigninSheetStateCopyWithImpl<$Res>;
   @override
-  $Res call({SigninSheetStateContext context, Object? exception});
+  $Res call(
+      {bool isLoading, SigninSheetStateContext context, Object? exception});
 }
 
 /// @nodoc
@@ -93,10 +104,15 @@ class __$SigninSheetStateCopyWithImpl<$Res>
 
   @override
   $Res call({
+    Object? isLoading = freezed,
     Object? context = freezed,
     Object? exception = freezed,
   }) {
     return _then(_SigninSheetState(
+      isLoading: isLoading == freezed
+          ? _value.isLoading
+          : isLoading // ignore: cast_nullable_to_non_nullable
+              as bool,
       context: context == freezed
           ? _value.context
           : context // ignore: cast_nullable_to_non_nullable
@@ -109,8 +125,13 @@ class __$SigninSheetStateCopyWithImpl<$Res>
 /// @nodoc
 
 class _$_SigninSheetState extends _SigninSheetState {
-  _$_SigninSheetState({required this.context, this.exception}) : super._();
+  _$_SigninSheetState(
+      {this.isLoading = false, required this.context, this.exception})
+      : super._();
 
+  @JsonKey(defaultValue: false)
+  @override
+  final bool isLoading;
   @override
   final SigninSheetStateContext context;
   @override
@@ -118,13 +139,16 @@ class _$_SigninSheetState extends _SigninSheetState {
 
   @override
   String toString() {
-    return 'SigninSheetState(context: $context, exception: $exception)';
+    return 'SigninSheetState(isLoading: $isLoading, context: $context, exception: $exception)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other is _SigninSheetState &&
+            (identical(other.isLoading, isLoading) ||
+                const DeepCollectionEquality()
+                    .equals(other.isLoading, isLoading)) &&
             (identical(other.context, context) ||
                 const DeepCollectionEquality()
                     .equals(other.context, context)) &&
@@ -136,6 +160,7 @@ class _$_SigninSheetState extends _SigninSheetState {
   @override
   int get hashCode =>
       runtimeType.hashCode ^
+      const DeepCollectionEquality().hash(isLoading) ^
       const DeepCollectionEquality().hash(context) ^
       const DeepCollectionEquality().hash(exception);
 
@@ -147,10 +172,13 @@ class _$_SigninSheetState extends _SigninSheetState {
 
 abstract class _SigninSheetState extends SigninSheetState {
   factory _SigninSheetState(
-      {required SigninSheetStateContext context,
+      {bool isLoading,
+      required SigninSheetStateContext context,
       Object? exception}) = _$_SigninSheetState;
   _SigninSheetState._() : super._();
 
+  @override
+  bool get isLoading => throw _privateConstructorUsedError;
   @override
   SigninSheetStateContext get context => throw _privateConstructorUsedError;
   @override

@@ -32,35 +32,38 @@ class SigninSheet extends HookWidget {
   Widget build(BuildContext context) {
     final store = useProvider(signinSheetStoreProvider(stateContext));
     final state = useProvider(signinSheetStoreProvider(stateContext).state);
-    return UniversalErrorPage(
-      error: state.exception,
-      reload: () => store.reset(),
-      child: Container(
-        constraints: BoxConstraints(maxHeight: 333, minHeight: 300),
-        color: Colors.white,
-        child: SafeArea(
-          child: Padding(
-            padding: const EdgeInsets.only(left: 16, right: 16),
-            child: Column(
-              mainAxisAlignment: MainAxisAlignment.start,
-              mainAxisSize: MainAxisSize.max,
-              children: [
-                SizedBox(height: 14),
-                SvgPicture.asset("images/draggable_bar.svg", height: 6),
-                SizedBox(height: 24),
-                Text(state.title,
-                    textAlign: TextAlign.center,
-                    style: TextColorStyle.main.merge(FontType.sBigTitle)),
-                SizedBox(height: 16),
-                Text(state.message,
-                    textAlign: TextAlign.center,
-                    style: TextColorStyle.main.merge(FontType.assisting)),
-                SizedBox(height: 24),
-                _appleButton(context, store, state),
-                SizedBox(height: 24),
-                _googleButton(context, store, state),
-                Spacer(),
-              ],
+    return HUD(
+      shown: state.isLoading,
+      child: UniversalErrorPage(
+        error: state.exception,
+        reload: () => store.reset(),
+        child: Container(
+          constraints: BoxConstraints(maxHeight: 333, minHeight: 300),
+          color: Colors.white,
+          child: SafeArea(
+            child: Padding(
+              padding: const EdgeInsets.only(left: 16, right: 16),
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.start,
+                mainAxisSize: MainAxisSize.max,
+                children: [
+                  SizedBox(height: 14),
+                  SvgPicture.asset("images/draggable_bar.svg", height: 6),
+                  SizedBox(height: 24),
+                  Text(state.title,
+                      textAlign: TextAlign.center,
+                      style: TextColorStyle.main.merge(FontType.sBigTitle)),
+                  SizedBox(height: 16),
+                  Text(state.message,
+                      textAlign: TextAlign.center,
+                      style: TextColorStyle.main.merge(FontType.assisting)),
+                  SizedBox(height: 24),
+                  _appleButton(context, store, state),
+                  SizedBox(height: 24),
+                  _googleButton(context, store, state),
+                  Spacer(),
+                ],
+              ),
             ),
           ),
         ),
@@ -84,7 +87,7 @@ class SigninSheet extends HookWidget {
       ),
       onPressed: () async {
         analytics.logEvent(name: "signin_sheet_selected_apple");
-        showHUD();
+        store.showHUD();
         try {
           final signinState = await store.handleApple();
           switch (signinState) {
@@ -102,7 +105,7 @@ class SigninSheet extends HookWidget {
             store.handleException(error);
           }
         } finally {
-          hideHUD();
+          store.hideHUD();
         }
       },
       child: Container(
@@ -145,7 +148,7 @@ class SigninSheet extends HookWidget {
       ),
       onPressed: () async {
         analytics.logEvent(name: "signin_sheet_selected_google");
-        showHUD();
+        store.showHUD();
         try {
           final signinState = await store.handleGoogle();
           switch (signinState) {
@@ -163,7 +166,7 @@ class SigninSheet extends HookWidget {
             store.handleException(error);
           }
         } finally {
-          hideHUD();
+          store.hideHUD();
         }
       },
       child: Container(

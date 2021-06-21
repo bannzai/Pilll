@@ -9,6 +9,7 @@ enum SigninSheetStateContext { initialSetting, recordPage, premium }
 abstract class SigninSheetState implements _$SigninSheetState {
   SigninSheetState._();
   factory SigninSheetState({
+    @Default(false) bool isLoading,
     required SigninSheetStateContext context,
     Object? exception,
   }) = _SigninSheetState;
