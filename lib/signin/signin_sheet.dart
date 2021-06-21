@@ -33,7 +33,7 @@ class SigninSheet extends HookWidget {
     final store = useProvider(signinSheetStoreProvider(stateContext));
     final state = useProvider(signinSheetStoreProvider(stateContext).state);
     return HUD(
-      shows: state.isLoading,
+      shown: state.isLoading,
       child: UniversalErrorPage(
         error: state.exception,
         reload: () => store.reset(),
