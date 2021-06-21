@@ -97,7 +97,7 @@ class PremiumIntroductionStore extends StateNotifier<PremiumIntroductionState> {
       if (!premiumEntitlement.isActive) {
         throw UserDisplayedError("課金の有効化が完了しておりません。しばらく時間をおいてからご確認ください");
       }
-      await purchaserInfoUpdated(purchaserInfo);
+      await callUpdatePurchaseInfo(purchaserInfo);
       return Future.value(true);
     } on PlatformException catch (exception, stack) {
       analytics.logEvent(name: "catched_purchase_exception", parameters: {
@@ -228,7 +228,7 @@ class PremiumIntroductionStore extends StateNotifier<PremiumIntroductionState> {
         analytics.logEvent(name: "done_restore_purchase_info", parameters: {
           "entitlements": entitlements.identifier,
         });
-        await purchaserInfoUpdated(purchaserInfo);
+        await callUpdatePurchaseInfo(purchaserInfo);
         state = state.copyWith(isCompletedRestore: true);
         return Future.value(true);
       }

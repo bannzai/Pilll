@@ -56,7 +56,7 @@ Future<void> entrypoint() async {
 Future<void> initializePurchase(String uid) async {
   await Purchases.setDebugLogsEnabled(Environment.isDevelopment);
   await Purchases.setup(Secret.revenueCatPublicAPIKey, appUserId: uid);
-  Purchases.addPurchaserInfoUpdateListener(purchaserInfoUpdated);
+  Purchases.addPurchaserInfoUpdateListener(callUpdatePurchaseInfo);
 }
 
 void connectToEmulator() {
