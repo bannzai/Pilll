@@ -17,13 +17,14 @@ Future<void> purchaserInfoUpdated(PurchaserInfo info) async {
 
   final userService = UserService(DatabaseConnection(uid));
   final premiumEntitlement = info.entitlements.all[premiumEntitlements];
-  final isActivated =
-      premiumEntitlement == null ? false : premiumEntitlement.isActive;
+  if (premiumEntitlement == null) {
+    throw FormatException("Unexpected entitlements is null");
+  }
   try {
     await userService.updatePurchaseInfo(
-      isActivated: isActivated,
-      entitlementIdentifier: premiumEntitlement?.identifier,
-      premiumPlanIdentifier: premiumEntitlement?.productIdentifier,
+      isActivated: premiumEntitlement.isActive,
+      entitlementIdentifier: premiumEntitlement.identifier,
+      premiumPlanIdentifier: premiumEntitlement.productIdentifier,
       purchaseAppID: info.originalAppUserId,
       activeSubscriptions: info.activeSubscriptions,
       originalPurchaseDate: info.originalPurchaseDate,
