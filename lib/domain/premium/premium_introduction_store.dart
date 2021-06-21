@@ -213,7 +213,10 @@ class PremiumIntroductionStore extends StateNotifier<PremiumIntroductionState> {
     }
   }
 
-  Future<void> restore() async {
+  /// Return true indicates end of regularllly pattern.
+  /// Return false indicates not regulally pattern.
+  /// Return value is used to display the completion snackbar
+  Future<bool> restore() async {
     try {
       final purchaserInfo = await Purchases.restoreTransactions();
       final entitlements = purchaserInfo.entitlements.all[premiumEntitlements];
@@ -227,7 +230,7 @@ class PremiumIntroductionStore extends StateNotifier<PremiumIntroductionState> {
         });
         state = state.copyWith(isCompletedRestore: true);
         await purchaserInfoUpdated(purchaserInfo);
-        return;
+        return Future.value(true);
       }
       analytics.logEvent(name: "undone_restore_purchase_info", parameters: {
         "entitlements": entitlements?.identifier,
