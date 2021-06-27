@@ -3,7 +3,6 @@ import 'dart:async';
 import 'package:pilll/domain/premium_trial/premium_trial_modal_state.dart';
 import 'package:pilll/service/user.dart';
 import 'package:riverpod/riverpod.dart';
-import 'package:shared_preferences/shared_preferences.dart';
 
 final premiumTrialStoreProvider = StateNotifierProvider(
   (ref) => PremiumTrialModalStateStore(
@@ -22,7 +21,6 @@ class PremiumTrialModalStateStore
 
   void reset() {
     Future(() async {
-      final storage = await SharedPreferences.getInstance();
       final user = await _userService.fetch();
       this.state = PremiumTrialModalState(
         isLoading: false,
