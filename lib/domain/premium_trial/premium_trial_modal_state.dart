@@ -6,6 +6,7 @@ part 'premium_trial_modal_state.freezed.dart';
 abstract class PremiumTrialModalState implements _$PremiumTrialModalState {
   PremiumTrialModalState._();
   factory PremiumTrialModalState({
+    @Default(false) bool isLoading,
     @Default(false) bool isTrial,
     Object? exception,
   }) = _PremiumTrialModalState;

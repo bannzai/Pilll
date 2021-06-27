@@ -21,11 +21,11 @@ class PremiumTrialModalStateStore
   }
 
   void reset() {
-    state = state.copyWith(isLoading: true);
     Future(() async {
       final storage = await SharedPreferences.getInstance();
       final user = await _userService.fetch();
       this.state = PremiumTrialModalState(
+        isLoading: false,
         isTrial: user.isTrial,
       );
       _subscribe();
@@ -36,8 +36,7 @@ class PremiumTrialModalStateStore
   void _subscribe() {
     _userSubscribeCanceller?.cancel();
     _userSubscribeCanceller = _userService.subscribe().listen((event) {
-      state =
-          state.copyWith(isPremium: event.isPremium, isTrial: event.isTrial);
+      state = state.copyWith(isTrial: event.isTrial);
     });
   }
 
@@ -49,5 +48,13 @@ class PremiumTrialModalStateStore
 
   handleException(Object exception) {
     state = state.copyWith(exception: exception);
+  }
+
+  showHUD() {
+    state = state.copyWith(isLoading: true);
+  }
+
+  hideHUD() {
+    state = state.copyWith(isLoading: false);
   }
 }

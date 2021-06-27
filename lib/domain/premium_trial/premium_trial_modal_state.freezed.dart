@@ -16,8 +16,10 @@ final _privateConstructorUsedError = UnsupportedError(
 class _$PremiumTrialModalStateTearOff {
   const _$PremiumTrialModalStateTearOff();
 
-  _PremiumTrialModalState call({bool isTrial = false, Object? exception}) {
+  _PremiumTrialModalState call(
+      {bool isLoading = false, bool isTrial = false, Object? exception}) {
     return _PremiumTrialModalState(
+      isLoading: isLoading,
       isTrial: isTrial,
       exception: exception,
     );
@@ -29,6 +31,7 @@ const $PremiumTrialModalState = _$PremiumTrialModalStateTearOff();
 
 /// @nodoc
 mixin _$PremiumTrialModalState {
+  bool get isLoading => throw _privateConstructorUsedError;
   bool get isTrial => throw _privateConstructorUsedError;
   Object? get exception => throw _privateConstructorUsedError;
 
@@ -42,7 +45,7 @@ abstract class $PremiumTrialModalStateCopyWith<$Res> {
   factory $PremiumTrialModalStateCopyWith(PremiumTrialModalState value,
           $Res Function(PremiumTrialModalState) then) =
       _$PremiumTrialModalStateCopyWithImpl<$Res>;
-  $Res call({bool isTrial, Object? exception});
+  $Res call({bool isLoading, bool isTrial, Object? exception});
 }
 
 /// @nodoc
@@ -56,10 +59,15 @@ class _$PremiumTrialModalStateCopyWithImpl<$Res>
 
   @override
   $Res call({
+    Object? isLoading = freezed,
     Object? isTrial = freezed,
     Object? exception = freezed,
   }) {
     return _then(_value.copyWith(
+      isLoading: isLoading == freezed
+          ? _value.isLoading
+          : isLoading // ignore: cast_nullable_to_non_nullable
+              as bool,
       isTrial: isTrial == freezed
           ? _value.isTrial
           : isTrial // ignore: cast_nullable_to_non_nullable
@@ -76,7 +84,7 @@ abstract class _$PremiumTrialModalStateCopyWith<$Res>
           $Res Function(_PremiumTrialModalState) then) =
       __$PremiumTrialModalStateCopyWithImpl<$Res>;
   @override
-  $Res call({bool isTrial, Object? exception});
+  $Res call({bool isLoading, bool isTrial, Object? exception});
 }
 
 /// @nodoc
@@ -92,10 +100,15 @@ class __$PremiumTrialModalStateCopyWithImpl<$Res>
 
   @override
   $Res call({
+    Object? isLoading = freezed,
     Object? isTrial = freezed,
     Object? exception = freezed,
   }) {
     return _then(_PremiumTrialModalState(
+      isLoading: isLoading == freezed
+          ? _value.isLoading
+          : isLoading // ignore: cast_nullable_to_non_nullable
+              as bool,
       isTrial: isTrial == freezed
           ? _value.isTrial
           : isTrial // ignore: cast_nullable_to_non_nullable
@@ -108,8 +121,13 @@ class __$PremiumTrialModalStateCopyWithImpl<$Res>
 /// @nodoc
 
 class _$_PremiumTrialModalState extends _PremiumTrialModalState {
-  _$_PremiumTrialModalState({this.isTrial = false, this.exception}) : super._();
+  _$_PremiumTrialModalState(
+      {this.isLoading = false, this.isTrial = false, this.exception})
+      : super._();
 
+  @JsonKey(defaultValue: false)
+  @override
+  final bool isLoading;
   @JsonKey(defaultValue: false)
   @override
   final bool isTrial;
@@ -118,13 +136,16 @@ class _$_PremiumTrialModalState extends _PremiumTrialModalState {
 
   @override
   String toString() {
-    return 'PremiumTrialModalState(isTrial: $isTrial, exception: $exception)';
+    return 'PremiumTrialModalState(isLoading: $isLoading, isTrial: $isTrial, exception: $exception)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other is _PremiumTrialModalState &&
+            (identical(other.isLoading, isLoading) ||
+                const DeepCollectionEquality()
+                    .equals(other.isLoading, isLoading)) &&
             (identical(other.isTrial, isTrial) ||
                 const DeepCollectionEquality()
                     .equals(other.isTrial, isTrial)) &&
@@ -136,6 +157,7 @@ class _$_PremiumTrialModalState extends _PremiumTrialModalState {
   @override
   int get hashCode =>
       runtimeType.hashCode ^
+      const DeepCollectionEquality().hash(isLoading) ^
       const DeepCollectionEquality().hash(isTrial) ^
       const DeepCollectionEquality().hash(exception);
 
@@ -147,10 +169,14 @@ class _$_PremiumTrialModalState extends _PremiumTrialModalState {
 }
 
 abstract class _PremiumTrialModalState extends PremiumTrialModalState {
-  factory _PremiumTrialModalState({bool isTrial, Object? exception}) =
-      _$_PremiumTrialModalState;
+  factory _PremiumTrialModalState(
+      {bool isLoading,
+      bool isTrial,
+      Object? exception}) = _$_PremiumTrialModalState;
   _PremiumTrialModalState._() : super._();
 
+  @override
+  bool get isLoading => throw _privateConstructorUsedError;
   @override
   bool get isTrial => throw _privateConstructorUsedError;
   @override
