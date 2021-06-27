@@ -28,6 +28,8 @@ class _$RecordPageStateTearOff {
       bool isPillSheetFinishedInThePast = false,
       bool isAlreadyShowTiral = false,
       bool shouldShowMigrateInfo = false,
+      @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
+          DateTime? beginTrialDate,
       Object? exception}) {
     return _RecordPageState(
       entity: entity,
@@ -42,6 +44,7 @@ class _$RecordPageStateTearOff {
       isPillSheetFinishedInThePast: isPillSheetFinishedInThePast,
       isAlreadyShowTiral: isAlreadyShowTiral,
       shouldShowMigrateInfo: shouldShowMigrateInfo,
+      beginTrialDate: beginTrialDate,
       exception: exception,
     );
   }
@@ -64,6 +67,10 @@ mixin _$RecordPageState {
   bool get isPillSheetFinishedInThePast => throw _privateConstructorUsedError;
   bool get isAlreadyShowTiral => throw _privateConstructorUsedError;
   bool get shouldShowMigrateInfo => throw _privateConstructorUsedError;
+  @JsonKey(
+      fromJson: TimestampConverter.timestampToDateTime,
+      toJson: TimestampConverter.dateTimeToTimestamp)
+  DateTime? get beginTrialDate => throw _privateConstructorUsedError;
   Object? get exception => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
@@ -88,6 +95,8 @@ abstract class $RecordPageStateCopyWith<$Res> {
       bool isPillSheetFinishedInThePast,
       bool isAlreadyShowTiral,
       bool shouldShowMigrateInfo,
+      @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
+          DateTime? beginTrialDate,
       Object? exception});
 
   $PillSheetCopyWith<$Res>? get entity;
@@ -116,6 +125,7 @@ class _$RecordPageStateCopyWithImpl<$Res>
     Object? isPillSheetFinishedInThePast = freezed,
     Object? isAlreadyShowTiral = freezed,
     Object? shouldShowMigrateInfo = freezed,
+    Object? beginTrialDate = freezed,
     Object? exception = freezed,
   }) {
     return _then(_value.copyWith(
@@ -164,6 +174,10 @@ class _$RecordPageStateCopyWithImpl<$Res>
           ? _value.shouldShowMigrateInfo
           : shouldShowMigrateInfo // ignore: cast_nullable_to_non_nullable
               as bool,
+      beginTrialDate: beginTrialDate == freezed
+          ? _value.beginTrialDate
+          : beginTrialDate // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
       exception: exception == freezed ? _value.exception : exception,
     ));
   }
@@ -210,6 +224,8 @@ abstract class _$RecordPageStateCopyWith<$Res>
       bool isPillSheetFinishedInThePast,
       bool isAlreadyShowTiral,
       bool shouldShowMigrateInfo,
+      @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
+          DateTime? beginTrialDate,
       Object? exception});
 
   @override
@@ -242,6 +258,7 @@ class __$RecordPageStateCopyWithImpl<$Res>
     Object? isPillSheetFinishedInThePast = freezed,
     Object? isAlreadyShowTiral = freezed,
     Object? shouldShowMigrateInfo = freezed,
+    Object? beginTrialDate = freezed,
     Object? exception = freezed,
   }) {
     return _then(_RecordPageState(
@@ -290,6 +307,10 @@ class __$RecordPageStateCopyWithImpl<$Res>
           ? _value.shouldShowMigrateInfo
           : shouldShowMigrateInfo // ignore: cast_nullable_to_non_nullable
               as bool,
+      beginTrialDate: beginTrialDate == freezed
+          ? _value.beginTrialDate
+          : beginTrialDate // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
       exception: exception == freezed ? _value.exception : exception,
     ));
   }
@@ -310,6 +331,8 @@ class _$_RecordPageState extends _RecordPageState {
       this.isPillSheetFinishedInThePast = false,
       this.isAlreadyShowTiral = false,
       this.shouldShowMigrateInfo = false,
+      @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
+          this.beginTrialDate,
       this.exception})
       : super._();
 
@@ -345,11 +368,16 @@ class _$_RecordPageState extends _RecordPageState {
   @override
   final bool shouldShowMigrateInfo;
   @override
+  @JsonKey(
+      fromJson: TimestampConverter.timestampToDateTime,
+      toJson: TimestampConverter.dateTimeToTimestamp)
+  final DateTime? beginTrialDate;
+  @override
   final Object? exception;
 
   @override
   String toString() {
-    return 'RecordPageState(entity: $entity, setting: $setting, recommendedSignupNotificationIsAlreadyShow: $recommendedSignupNotificationIsAlreadyShow, totalCountOfActionForTakenPill: $totalCountOfActionForTakenPill, isLinkedLoginProvider: $isLinkedLoginProvider, firstLoadIsEnded: $firstLoadIsEnded, isPremium: $isPremium, isTrial: $isTrial, isPillSheetFinishedInThePast: $isPillSheetFinishedInThePast, isAlreadyShowTiral: $isAlreadyShowTiral, shouldShowMigrateInfo: $shouldShowMigrateInfo, exception: $exception)';
+    return 'RecordPageState(entity: $entity, setting: $setting, recommendedSignupNotificationIsAlreadyShow: $recommendedSignupNotificationIsAlreadyShow, totalCountOfActionForTakenPill: $totalCountOfActionForTakenPill, isLinkedLoginProvider: $isLinkedLoginProvider, firstLoadIsEnded: $firstLoadIsEnded, isPremium: $isPremium, isTrial: $isTrial, isPillSheetFinishedInThePast: $isPillSheetFinishedInThePast, isAlreadyShowTiral: $isAlreadyShowTiral, shouldShowMigrateInfo: $shouldShowMigrateInfo, beginTrialDate: $beginTrialDate, exception: $exception)';
   }
 
   @override
@@ -391,9 +419,11 @@ class _$_RecordPageState extends _RecordPageState {
             (identical(other.shouldShowMigrateInfo, shouldShowMigrateInfo) ||
                 const DeepCollectionEquality().equals(
                     other.shouldShowMigrateInfo, shouldShowMigrateInfo)) &&
-            (identical(other.exception, exception) ||
+            (identical(other.beginTrialDate, beginTrialDate) ||
                 const DeepCollectionEquality()
-                    .equals(other.exception, exception)));
+                    .equals(other.beginTrialDate, beginTrialDate)) &&
+            (identical(other.exception, exception) ||
+                const DeepCollectionEquality().equals(other.exception, exception)));
   }
 
   @override
@@ -411,6 +441,7 @@ class _$_RecordPageState extends _RecordPageState {
       const DeepCollectionEquality().hash(isPillSheetFinishedInThePast) ^
       const DeepCollectionEquality().hash(isAlreadyShowTiral) ^
       const DeepCollectionEquality().hash(shouldShowMigrateInfo) ^
+      const DeepCollectionEquality().hash(beginTrialDate) ^
       const DeepCollectionEquality().hash(exception);
 
   @JsonKey(ignore: true)
@@ -432,6 +463,8 @@ abstract class _RecordPageState extends RecordPageState {
       bool isPillSheetFinishedInThePast,
       bool isAlreadyShowTiral,
       bool shouldShowMigrateInfo,
+      @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
+          DateTime? beginTrialDate,
       Object? exception}) = _$_RecordPageState;
   _RecordPageState._() : super._();
 
@@ -458,6 +491,11 @@ abstract class _RecordPageState extends RecordPageState {
   bool get isAlreadyShowTiral => throw _privateConstructorUsedError;
   @override
   bool get shouldShowMigrateInfo => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(
+      fromJson: TimestampConverter.timestampToDateTime,
+      toJson: TimestampConverter.dateTimeToTimestamp)
+  DateTime? get beginTrialDate => throw _privateConstructorUsedError;
   @override
   Object? get exception => throw _privateConstructorUsedError;
   @override

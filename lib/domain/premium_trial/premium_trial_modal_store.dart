@@ -59,7 +59,7 @@ class PremiumTrialModalStateStore
   }
 
   trial() async {
-    if (state.isTrial) {
+    if (state.isTrial && state.beginTrialDate != null) {
       state = state.copyWith(
           exception: "すでにトライアル中になっています。もし解決しない場合は設定>お問い合わせよりご連絡ください");
       return;

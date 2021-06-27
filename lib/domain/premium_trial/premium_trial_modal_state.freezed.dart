@@ -17,8 +17,13 @@ class _$PremiumTrialModalStateTearOff {
   const _$PremiumTrialModalStateTearOff();
 
   _PremiumTrialModalState call(
-      {bool isLoading = false, bool isTrial = false, Object? exception}) {
+      {@JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
+          DateTime? beginTrialDate,
+      bool isLoading = false,
+      bool isTrial = false,
+      Object? exception}) {
     return _PremiumTrialModalState(
+      beginTrialDate: beginTrialDate,
       isLoading: isLoading,
       isTrial: isTrial,
       exception: exception,
@@ -31,6 +36,10 @@ const $PremiumTrialModalState = _$PremiumTrialModalStateTearOff();
 
 /// @nodoc
 mixin _$PremiumTrialModalState {
+  @JsonKey(
+      fromJson: TimestampConverter.timestampToDateTime,
+      toJson: TimestampConverter.dateTimeToTimestamp)
+  DateTime? get beginTrialDate => throw _privateConstructorUsedError;
   bool get isLoading => throw _privateConstructorUsedError;
   bool get isTrial => throw _privateConstructorUsedError;
   Object? get exception => throw _privateConstructorUsedError;
@@ -45,7 +54,12 @@ abstract class $PremiumTrialModalStateCopyWith<$Res> {
   factory $PremiumTrialModalStateCopyWith(PremiumTrialModalState value,
           $Res Function(PremiumTrialModalState) then) =
       _$PremiumTrialModalStateCopyWithImpl<$Res>;
-  $Res call({bool isLoading, bool isTrial, Object? exception});
+  $Res call(
+      {@JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
+          DateTime? beginTrialDate,
+      bool isLoading,
+      bool isTrial,
+      Object? exception});
 }
 
 /// @nodoc
@@ -59,11 +73,16 @@ class _$PremiumTrialModalStateCopyWithImpl<$Res>
 
   @override
   $Res call({
+    Object? beginTrialDate = freezed,
     Object? isLoading = freezed,
     Object? isTrial = freezed,
     Object? exception = freezed,
   }) {
     return _then(_value.copyWith(
+      beginTrialDate: beginTrialDate == freezed
+          ? _value.beginTrialDate
+          : beginTrialDate // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
       isLoading: isLoading == freezed
           ? _value.isLoading
           : isLoading // ignore: cast_nullable_to_non_nullable
@@ -84,7 +103,12 @@ abstract class _$PremiumTrialModalStateCopyWith<$Res>
           $Res Function(_PremiumTrialModalState) then) =
       __$PremiumTrialModalStateCopyWithImpl<$Res>;
   @override
-  $Res call({bool isLoading, bool isTrial, Object? exception});
+  $Res call(
+      {@JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
+          DateTime? beginTrialDate,
+      bool isLoading,
+      bool isTrial,
+      Object? exception});
 }
 
 /// @nodoc
@@ -100,11 +124,16 @@ class __$PremiumTrialModalStateCopyWithImpl<$Res>
 
   @override
   $Res call({
+    Object? beginTrialDate = freezed,
     Object? isLoading = freezed,
     Object? isTrial = freezed,
     Object? exception = freezed,
   }) {
     return _then(_PremiumTrialModalState(
+      beginTrialDate: beginTrialDate == freezed
+          ? _value.beginTrialDate
+          : beginTrialDate // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
       isLoading: isLoading == freezed
           ? _value.isLoading
           : isLoading // ignore: cast_nullable_to_non_nullable
@@ -122,9 +151,18 @@ class __$PremiumTrialModalStateCopyWithImpl<$Res>
 
 class _$_PremiumTrialModalState extends _PremiumTrialModalState {
   _$_PremiumTrialModalState(
-      {this.isLoading = false, this.isTrial = false, this.exception})
+      {@JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
+          this.beginTrialDate,
+      this.isLoading = false,
+      this.isTrial = false,
+      this.exception})
       : super._();
 
+  @override
+  @JsonKey(
+      fromJson: TimestampConverter.timestampToDateTime,
+      toJson: TimestampConverter.dateTimeToTimestamp)
+  final DateTime? beginTrialDate;
   @JsonKey(defaultValue: false)
   @override
   final bool isLoading;
@@ -136,13 +174,16 @@ class _$_PremiumTrialModalState extends _PremiumTrialModalState {
 
   @override
   String toString() {
-    return 'PremiumTrialModalState(isLoading: $isLoading, isTrial: $isTrial, exception: $exception)';
+    return 'PremiumTrialModalState(beginTrialDate: $beginTrialDate, isLoading: $isLoading, isTrial: $isTrial, exception: $exception)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other is _PremiumTrialModalState &&
+            (identical(other.beginTrialDate, beginTrialDate) ||
+                const DeepCollectionEquality()
+                    .equals(other.beginTrialDate, beginTrialDate)) &&
             (identical(other.isLoading, isLoading) ||
                 const DeepCollectionEquality()
                     .equals(other.isLoading, isLoading)) &&
@@ -157,6 +198,7 @@ class _$_PremiumTrialModalState extends _PremiumTrialModalState {
   @override
   int get hashCode =>
       runtimeType.hashCode ^
+      const DeepCollectionEquality().hash(beginTrialDate) ^
       const DeepCollectionEquality().hash(isLoading) ^
       const DeepCollectionEquality().hash(isTrial) ^
       const DeepCollectionEquality().hash(exception);
@@ -170,11 +212,18 @@ class _$_PremiumTrialModalState extends _PremiumTrialModalState {
 
 abstract class _PremiumTrialModalState extends PremiumTrialModalState {
   factory _PremiumTrialModalState(
-      {bool isLoading,
+      {@JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
+          DateTime? beginTrialDate,
+      bool isLoading,
       bool isTrial,
       Object? exception}) = _$_PremiumTrialModalState;
   _PremiumTrialModalState._() : super._();
 
+  @override
+  @JsonKey(
+      fromJson: TimestampConverter.timestampToDateTime,
+      toJson: TimestampConverter.dateTimeToTimestamp)
+  DateTime? get beginTrialDate => throw _privateConstructorUsedError;
   @override
   bool get isLoading => throw _privateConstructorUsedError;
   @override

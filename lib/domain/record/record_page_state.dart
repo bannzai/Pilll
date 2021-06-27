@@ -1,3 +1,4 @@
+import 'package:pilll/entity/firestore_timestamp_converter.dart';
 import 'package:pilll/entity/pill_sheet.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:pilll/entity/setting.dart';
@@ -11,20 +12,37 @@ abstract class RecordPageState implements _$RecordPageState {
   factory RecordPageState({
     required PillSheet? entity,
     Setting? setting,
-    @Default(true) bool recommendedSignupNotificationIsAlreadyShow,
-    @Default(0) int totalCountOfActionForTakenPill,
-    @Default(false) bool isLinkedLoginProvider,
-    @Default(false) bool firstLoadIsEnded,
-    @Default(false) bool isPremium,
-    @Default(false) bool isTrial,
-    @Default(false) bool isPillSheetFinishedInThePast,
-    @Default(false) bool isAlreadyShowTiral,
-    @Default(false) bool shouldShowMigrateInfo,
+    @Default(true)
+        bool recommendedSignupNotificationIsAlreadyShow,
+    @Default(0)
+        int totalCountOfActionForTakenPill,
+    @Default(false)
+        bool isLinkedLoginProvider,
+    @Default(false)
+        bool firstLoadIsEnded,
+    @Default(false)
+        bool isPremium,
+    @Default(false)
+        bool isTrial,
+    @Default(false)
+        bool isPillSheetFinishedInThePast,
+    @Default(false)
+        bool isAlreadyShowTiral,
+    @Default(false)
+        bool shouldShowMigrateInfo,
+    @JsonKey(
+      fromJson: TimestampConverter.timestampToDateTime,
+      toJson: TimestampConverter.dateTimeToTimestamp,
+    )
+        DateTime? beginTrialDate,
     Object? exception,
   }) = _RecordPageState;
 
   bool get isInvalid => entity == null || entity!.isInvalid;
   bool get shouldShowTrial {
+    if (beginTrialDate != null) {
+      return false;
+    }
     if (isTrial) {
       return false;
     }
