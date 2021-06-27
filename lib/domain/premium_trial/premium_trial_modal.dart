@@ -17,7 +17,8 @@ import 'package:pilll/util/shared_preference/keys.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class PremiumTrialModal extends HookWidget {
-  const PremiumTrialModal({Key? key}) : super(key: key);
+  final VoidCallback didEndTrial;
+  const PremiumTrialModal(this.didEndTrial, {Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     final store = useProvider(premiumTrialStoreProvider);
@@ -119,6 +120,7 @@ class PremiumTrialModal extends HookWidget {
                             analytics.logEvent(name: "trial_did_pressed");
                             try {
                               await store.trial();
+                              didEndTrial();
                             } catch (exception) {
                               if (exception is UserDisplayedError) {
                                 showErrorAlertWithError(context, exception);
@@ -142,7 +144,8 @@ class PremiumTrialModal extends HookWidget {
   }
 }
 
-showPremiumTrialModalWhenLaunchApp(BuildContext context) async {
+showPremiumTrialModalWhenLaunchApp(
+    BuildContext context, VoidCallback didEndTrial) async {
   final key = BoolKey.isAlreadyShowPremiumTrialModal;
   final storage = await SharedPreferences.getInstance();
   if (storage.getBool(key) ?? false) {
@@ -153,6 +156,6 @@ showPremiumTrialModalWhenLaunchApp(BuildContext context) async {
   showDialog(
       context: context,
       builder: (context) {
-        return PremiumTrialModal();
+        return PremiumTrialModal(didEndTrial);
       });
 }
