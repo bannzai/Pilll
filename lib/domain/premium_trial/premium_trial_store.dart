@@ -48,4 +48,16 @@ class PremiumTrialStateStore extends StateNotifier<PremiumTrialState> {
     _userSubscribeCanceller?.cancel();
     super.dispose();
   }
+
+  handleException(Object exception) {
+    state = state.copyWith(exception: exception);
+  }
+
+  showHUD() {
+    state = state.copyWith(isLoading: true);
+  }
+
+  hideHUD() {
+    state = state.copyWith(isLoading: false);
+  }
 }
