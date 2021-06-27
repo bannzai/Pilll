@@ -1,3 +1,4 @@
+import 'package:pilll/entity/firestore_timestamp_converter.dart';
 import 'package:pilll/entity/setting.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
@@ -61,16 +62,27 @@ abstract class User implements _$User {
   User._();
   @JsonSerializable(explicitToJson: true)
   factory User({
-    @JsonKey(name: "settings") Setting? setting,
-    @Default(false) bool migratedFlutter,
+    @JsonKey(name: "settings")
+        Setting? setting,
+    @Default(false)
+        bool migratedFlutter,
     String? userIDWhenCreateUser,
     String? anonymousUserID,
-    @Default([]) List<String> userDocumentIDSets,
-    @Default([]) List<String> anonymousUserIDSets,
-    @Default([]) List<String> firebaseCurrentUserIDSets,
-    @Default(false) bool isPremium,
-    @Default(false) bool isTrial,
-    DateTime? beginTrialDate,
+    @Default([])
+        List<String> userDocumentIDSets,
+    @Default([])
+        List<String> anonymousUserIDSets,
+    @Default([])
+        List<String> firebaseCurrentUserIDSets,
+    @Default(false)
+        bool isPremium,
+    @Default(false)
+        bool isTrial,
+    @JsonKey(
+      fromJson: TimestampConverter.timestampToDateTime,
+      toJson: TimestampConverter.dateTimeToTimestamp,
+    )
+        DateTime? beginTrialDate,
   }) = _User;
 
   factory User.fromJson(Map<String, dynamic> json) => _$UserFromJson(json);

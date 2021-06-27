@@ -170,7 +170,8 @@ class _$UserTearOff {
   const _$UserTearOff();
 
   _User call(
-      {@JsonKey(name: "settings") Setting? setting,
+      {@JsonKey(name: "settings")
+          Setting? setting,
       bool migratedFlutter = false,
       String? userIDWhenCreateUser,
       String? anonymousUserID,
@@ -179,7 +180,8 @@ class _$UserTearOff {
       List<String> firebaseCurrentUserIDSets = const [],
       bool isPremium = false,
       bool isTrial = false,
-      DateTime? beginTrialDate}) {
+      @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
+          DateTime? beginTrialDate}) {
     return _User(
       setting: setting,
       migratedFlutter: migratedFlutter,
@@ -215,6 +217,9 @@ mixin _$User {
       throw _privateConstructorUsedError;
   bool get isPremium => throw _privateConstructorUsedError;
   bool get isTrial => throw _privateConstructorUsedError;
+  @JsonKey(
+      fromJson: TimestampConverter.timestampToDateTime,
+      toJson: TimestampConverter.dateTimeToTimestamp)
   DateTime? get beginTrialDate => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -227,7 +232,8 @@ abstract class $UserCopyWith<$Res> {
   factory $UserCopyWith(User value, $Res Function(User) then) =
       _$UserCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(name: "settings") Setting? setting,
+      {@JsonKey(name: "settings")
+          Setting? setting,
       bool migratedFlutter,
       String? userIDWhenCreateUser,
       String? anonymousUserID,
@@ -236,7 +242,8 @@ abstract class $UserCopyWith<$Res> {
       List<String> firebaseCurrentUserIDSets,
       bool isPremium,
       bool isTrial,
-      DateTime? beginTrialDate});
+      @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
+          DateTime? beginTrialDate});
 
   $SettingCopyWith<$Res>? get setting;
 }
@@ -324,7 +331,8 @@ abstract class _$UserCopyWith<$Res> implements $UserCopyWith<$Res> {
       __$UserCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(name: "settings") Setting? setting,
+      {@JsonKey(name: "settings")
+          Setting? setting,
       bool migratedFlutter,
       String? userIDWhenCreateUser,
       String? anonymousUserID,
@@ -333,7 +341,8 @@ abstract class _$UserCopyWith<$Res> implements $UserCopyWith<$Res> {
       List<String> firebaseCurrentUserIDSets,
       bool isPremium,
       bool isTrial,
-      DateTime? beginTrialDate});
+      @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
+          DateTime? beginTrialDate});
 
   @override
   $SettingCopyWith<$Res>? get setting;
@@ -411,7 +420,8 @@ class __$UserCopyWithImpl<$Res> extends _$UserCopyWithImpl<$Res>
 @JsonSerializable(explicitToJson: true)
 class _$_User extends _User {
   _$_User(
-      {@JsonKey(name: "settings") this.setting,
+      {@JsonKey(name: "settings")
+          this.setting,
       this.migratedFlutter = false,
       this.userIDWhenCreateUser,
       this.anonymousUserID,
@@ -420,7 +430,8 @@ class _$_User extends _User {
       this.firebaseCurrentUserIDSets = const [],
       this.isPremium = false,
       this.isTrial = false,
-      this.beginTrialDate})
+      @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
+          this.beginTrialDate})
       : super._();
 
   factory _$_User.fromJson(Map<String, dynamic> json) =>
@@ -452,6 +463,9 @@ class _$_User extends _User {
   @override
   final bool isTrial;
   @override
+  @JsonKey(
+      fromJson: TimestampConverter.timestampToDateTime,
+      toJson: TimestampConverter.dateTimeToTimestamp)
   final DateTime? beginTrialDate;
 
   @override
@@ -524,7 +538,8 @@ class _$_User extends _User {
 
 abstract class _User extends User {
   factory _User(
-      {@JsonKey(name: "settings") Setting? setting,
+      {@JsonKey(name: "settings")
+          Setting? setting,
       bool migratedFlutter,
       String? userIDWhenCreateUser,
       String? anonymousUserID,
@@ -533,7 +548,8 @@ abstract class _User extends User {
       List<String> firebaseCurrentUserIDSets,
       bool isPremium,
       bool isTrial,
-      DateTime? beginTrialDate}) = _$_User;
+      @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
+          DateTime? beginTrialDate}) = _$_User;
   _User._() : super._();
 
   factory _User.fromJson(Map<String, dynamic> json) = _$_User.fromJson;
@@ -559,6 +575,9 @@ abstract class _User extends User {
   @override
   bool get isTrial => throw _privateConstructorUsedError;
   @override
+  @JsonKey(
+      fromJson: TimestampConverter.timestampToDateTime,
+      toJson: TimestampConverter.dateTimeToTimestamp)
   DateTime? get beginTrialDate => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)

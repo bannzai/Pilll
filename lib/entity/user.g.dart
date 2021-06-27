@@ -40,9 +40,8 @@ _$_User _$_$_UserFromJson(Map<String, dynamic> json) {
             [],
     isPremium: json['isPremium'] as bool? ?? false,
     isTrial: json['isTrial'] as bool? ?? false,
-    beginTrialDate: json['beginTrialDate'] == null
-        ? null
-        : DateTime.parse(json['beginTrialDate'] as String),
+    beginTrialDate: TimestampConverter.timestampToDateTime(
+        json['beginTrialDate'] as Timestamp?),
   );
 }
 
@@ -56,5 +55,6 @@ Map<String, dynamic> _$_$_UserToJson(_$_User instance) => <String, dynamic>{
       'firebaseCurrentUserIDSets': instance.firebaseCurrentUserIDSets,
       'isPremium': instance.isPremium,
       'isTrial': instance.isTrial,
-      'beginTrialDate': instance.beginTrialDate?.toIso8601String(),
+      'beginTrialDate':
+          TimestampConverter.dateTimeToTimestamp(instance.beginTrialDate),
     };
