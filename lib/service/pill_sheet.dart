@@ -38,6 +38,14 @@ class PillSheetService {
         .then((event) => _filterForLatestPillSheet(event));
   }
 
+  Future<List<PillSheet>> fetchListWithMax(int number) {
+    return _database
+        .pillSheetsReference()
+        .limit(number)
+        .get()
+        .then((event) => event.docs.map((e) => _mapToEntity(e)).toList());
+  }
+
   Future<List<PillSheet>> fetchAll() {
     return _database
         .pillSheetsReference()

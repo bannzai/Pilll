@@ -16,10 +16,26 @@ abstract class RecordPageState implements _$RecordPageState {
     @Default(false) bool isLinkedLoginProvider,
     @Default(false) bool firstLoadIsEnded,
     @Default(false) bool isPremium,
+    @Default(false) bool isPillSheetFinishedInThePast,
+    @Default(false) bool isAlreadyShowTiral,
+    @Default(false) bool shouldShowMigrateInfo,
     Object? exception,
   }) = _RecordPageState;
 
   bool get isInvalid => entity == null || entity!.isInvalid;
+  bool get shouldShowTrial {
+    if (isAlreadyShowTiral) {
+      return false;
+    }
+    if (!isPillSheetFinishedInThePast) {
+      return false;
+    }
+    if (totalCountOfActionForTakenPill < 14) {
+      return false;
+    }
+    return true;
+  }
+
   String get restDurationNotification {
     if (isInvalid) {
       return "";
