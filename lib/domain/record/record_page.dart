@@ -8,6 +8,7 @@ import 'package:pilll/domain/record/record_page_state.dart';
 import 'package:pilll/domain/record/record_page_store.dart';
 import 'package:pilll/domain/record/record_taken_information.dart';
 import 'package:pilll/domain/modal/release_note.dart';
+import 'package:pilll/domain/trial/premiium_trial_modal.dart';
 import 'package:pilll/entity/pill_sheet.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/entity/setting.dart';
@@ -40,8 +41,29 @@ class RecordPage extends HookWidget {
     final store = useProvider(recordPageStoreProvider);
     final currentPillSheet = state.entity;
     Future.delayed(Duration(seconds: 1)).then((_) {
-      _showMigrateInfo(context, store, state);
+      if (!state.shouldShowMigrateInfo) {
+        return;
+      }
+      showDialog(
+          context: context,
+          barrierColor: Colors.white,
+          builder: (context) {
+            return MigrateInfo(
+              onClose: () async {
+                await store.shownMigrateInfo();
+                Navigator.of(context).pop();
+              },
+            );
+          });
     });
+
+    Future.delayed(Duration(seconds: 1)).then((_) {
+      if (state.shouldShowTrial) {
+        return;
+      }
+      showPremiumTrialModalWhenLaunchApp(context);
+    });
+
     return UniversalErrorPage(
       error: state.exception,
       reload: () => store.reset(),
@@ -109,24 +131,6 @@ class RecordPage extends HookWidget {
         );
       },
     );
-  }
-
-  _showMigrateInfo(
-      BuildContext context, RecordPageStore store, RecordPageState state) {
-    if (!state.shouldShowMigrateInfo) {
-      return;
-    }
-    showDialog(
-        context: context,
-        barrierColor: Colors.white,
-        builder: (context) {
-          return MigrateInfo(
-            onClose: () async {
-              await store.shownMigrateInfo();
-              Navigator.of(context).pop();
-            },
-          );
-        });
   }
 
   Widget _body(BuildContext context) {
