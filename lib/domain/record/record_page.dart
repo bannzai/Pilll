@@ -1,5 +1,3 @@
-import 'dart:io' show Platform;
-
 import 'package:pilll/analytics.dart';
 import 'package:pilll/components/molecules/indicator.dart';
 import 'package:pilll/components/organisms/pill/pill_mark.dart';
