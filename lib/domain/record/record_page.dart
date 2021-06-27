@@ -9,7 +9,7 @@ import 'package:pilll/domain/initial_setting/migrate_info.dart';
 import 'package:pilll/domain/record/record_page_state.dart';
 import 'package:pilll/domain/record/record_page_store.dart';
 import 'package:pilll/domain/record/record_taken_information.dart';
-import 'package:pilll/domain/release_note/release_note.dart';
+import 'package:pilll/domain/modal/release_note.dart';
 import 'package:pilll/entity/pill_sheet.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/entity/setting.dart';
