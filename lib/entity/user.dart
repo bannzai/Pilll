@@ -52,6 +52,8 @@ extension UserFirestoreFieldKeys on String {
   static final isAnonymous = "isAnonymous";
   static final isPremium = "isPremium";
   static final purchaseAppID = "purchaseAppID";
+  static final isTrial = "isTrial";
+  static final beginTrialDate = "beginTrialDate";
 }
 
 @freezed

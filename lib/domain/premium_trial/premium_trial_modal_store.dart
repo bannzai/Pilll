@@ -1,6 +1,8 @@
 import 'dart:async';
 
 import 'package:pilll/domain/premium_trial/premium_trial_modal_state.dart';
+import 'package:pilll/entity/user_error.dart';
+import 'package:pilll/error_log.dart';
 import 'package:pilll/service/user.dart';
 import 'package:riverpod/riverpod.dart';
 
@@ -54,5 +56,19 @@ class PremiumTrialModalStateStore
 
   hideHUD() {
     state = state.copyWith(isLoading: false);
+  }
+
+  trial() async {
+    if (state.isTrial) {
+      state = state.copyWith(
+          exception: "すでにトライアル中になっています。もし解決しない場合は設定>お問い合わせよりご連絡ください");
+      return;
+    }
+    try {
+      await _userService.trial();
+    } catch (exception, stack) {
+      errorLogger.recordError(exception, stack);
+      throw UserDisplayedError("エラーが発生しました。通信環境をお確かめのうえ再度お試しください");
+    }
   }
 }

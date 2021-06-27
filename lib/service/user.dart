@@ -5,6 +5,7 @@ import 'package:pilll/database/database.dart';
 import 'package:pilll/entity/demographic.dart';
 import 'package:pilll/entity/package.dart';
 import 'package:pilll/entity/user.dart';
+import 'package:pilll/util/datetime/day.dart';
 import 'package:pilll/util/shared_preference/keys.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:package_info/package_info.dart';
@@ -220,5 +221,12 @@ class UserService {
     return _database.userPrivateReference().set(
         {UserPrivateFirestoreFieldKeys.demographic: demographic.toJson()},
         SetOptions(merge: true));
+  }
+
+  Future<void> trial() {
+    return _database.userReference().set({
+      UserFirestoreFieldKeys.isTrial: true,
+      UserFirestoreFieldKeys.beginTrialDate: now(),
+    }, SetOptions(merge: true));
   }
 }
