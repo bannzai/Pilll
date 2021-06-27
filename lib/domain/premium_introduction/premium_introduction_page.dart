@@ -13,7 +13,7 @@ import 'package:pilll/components/molecules/indicator.dart';
 import 'package:pilll/components/page/hud.dart';
 import 'package:pilll/domain/demography/demography_page.dart';
 import 'package:pilll/domain/premium/premium_complete_dialog.dart';
-import 'package:pilll/domain/premium/premium_introduction_limited_header.dart';
+import 'package:pilll/domain/premium/components/premium_introduction_limited_header.dart';
 import 'package:pilll/domain/premium/premium_introduction_state.dart';
 import 'package:pilll/domain/premium/premium_introduction_store.dart';
 import 'package:pilll/entity/user_error.dart';
