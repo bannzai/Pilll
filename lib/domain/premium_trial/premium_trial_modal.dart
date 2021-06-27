@@ -8,6 +8,8 @@ import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:flutter/material.dart';
 import 'package:pilll/domain/premium_trial/premium_trial_modal_store.dart';
+import 'package:pilll/entity/user_error.dart';
+import 'package:pilll/error/error_alert.dart';
 import 'package:pilll/util/environment.dart';
 import 'package:pilll/util/shared_preference/keys.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -17,7 +19,6 @@ class PremiumTrialModal extends HookWidget {
   @override
   Widget build(BuildContext context) {
     final store = useProvider(premiumTrialStoreProvider);
-    final state = useProvider(premiumTrialStoreProvider.state);
     return Material(
       type: MaterialType.transparency,
       child: Center(
@@ -104,8 +105,17 @@ class PremiumTrialModal extends HookWidget {
                     ),
                     SizedBox(height: 24),
                     PrimaryButton(
-                      onPressed: () {
+                      onPressed: () async {
                         analytics.logEvent(name: "trial_did_pressed");
+                        try {
+                          await store.trial();
+                        } catch (exception) {
+                          if (exception is UserDisplayedError) {
+                            showErrorAlertWithError(context, exception);
+                          } else {
+                            store.handleException(exception);
+                          }
+                        }
                       },
                       text: "ためす",
                     ),
