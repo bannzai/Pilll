@@ -35,20 +35,15 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:in_app_review/in_app_review.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-bool isAlreadyShowModal = false;
-
 class RecordPage extends HookWidget {
   @override
   Widget build(BuildContext context) {
     final state = useProvider(recordPageStoreProvider.state);
     final store = useProvider(recordPageStoreProvider);
     final currentPillSheet = state.entity;
-    if (!isAlreadyShowModal) {
-      isAlreadyShowModal = true;
-      Future.delayed(Duration(seconds: 1)).then((_) {
-        _showMigrateInfo(context);
-      });
-    }
+    Future.delayed(Duration(seconds: 1)).then((_) {
+      _showMigrateInfo(context, store, state);
+    });
     return UniversalErrorPage(
       error: state.exception,
       reload: () => store.reset(),
@@ -118,33 +113,22 @@ class RecordPage extends HookWidget {
     );
   }
 
-  _showMigrateInfo(BuildContext context) {
-    if (!Platform.isIOS) {
+  _showMigrateInfo(
+      BuildContext context, RecordPageStore store, RecordPageState state) {
+    if (!state.shouldShowMigrateInfo) {
       return;
     }
-    final key = "migrate_from_132_is_shown_9";
-    SharedPreferences.getInstance().then((storage) {
-      if (storage.getBool(key) ?? false) {
-        return;
-      }
-      if (!storage.containsKey(StringKey.salvagedOldStartTakenDate)) {
-        return;
-      }
-      if (!storage.containsKey(StringKey.salvagedOldLastTakenDate)) {
-        return;
-      }
-      showDialog(
-          context: context,
-          barrierColor: Colors.white,
-          builder: (context) {
-            return MigrateInfo(
-              onClose: () {
-                storage.setBool(key, true);
-                Navigator.of(context).pop();
-              },
-            );
-          });
-    });
+    showDialog(
+        context: context,
+        barrierColor: Colors.white,
+        builder: (context) {
+          return MigrateInfo(
+            onClose: () async {
+              await store.shownMigrateInfo();
+              Navigator.of(context).pop();
+            },
+          );
+        });
   }
 
   Widget _body(BuildContext context) {

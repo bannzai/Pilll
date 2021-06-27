@@ -18,6 +18,7 @@ abstract class RecordPageState implements _$RecordPageState {
     @Default(false) bool isPremium,
     @Default(false) bool isPillSheetFinishedInThePast,
     @Default(false) bool isAlreadyShowTiral,
+    @Default(false) bool shouldShowMigrateInfo,
     Object? exception,
   }) = _RecordPageState;
 

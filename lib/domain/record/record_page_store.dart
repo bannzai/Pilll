@@ -1,3 +1,4 @@
+import 'dart:io' show Platform;
 import 'dart:async';
 
 import 'package:flutter_app_badger/flutter_app_badger.dart';
@@ -49,6 +50,23 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
       final user = await _userService.fetch();
       final totalCountOfActionForTakenPill =
           sharedPreferences.getInt(IntKey.totalCountOfActionForTakenPill) ?? 0;
+      final shouldShowMigrateInfo = () {
+        if (!Platform.isIOS) {
+          return false;
+        }
+        if (sharedPreferences.getBool(BoolKey.migrateFrom132IsShown) ?? false) {
+          return false;
+        }
+        if (!sharedPreferences
+            .containsKey(StringKey.salvagedOldStartTakenDate)) {
+          return false;
+        }
+        if (!sharedPreferences
+            .containsKey(StringKey.salvagedOldLastTakenDate)) {
+          return false;
+        }
+        return true;
+      }();
       state = RecordPageState(
         entity: entity,
         setting: setting,
@@ -64,6 +82,7 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
             sharedPreferences.getBool(BoolKey.isAlreadyShowPremiumTrialModal) ??
                 false,
         isPremium: user.isPremium,
+        shouldShowMigrateInfo: shouldShowMigrateInfo,
       );
       if (entity != null) {
         analytics.logEvent(name: "count_of_remaining_pill", parameters: {
@@ -172,6 +191,12 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
 
   handleException(Object exception) {
     state = state.copyWith(exception: exception);
+  }
+
+  shownMigrateInfo() async {
+    final sharedPreferences = await SharedPreferences.getInstance();
+    sharedPreferences.setBool(BoolKey.migrateFrom132IsShown, true);
+    state = state.copyWith(shouldShowMigrateInfo: false);
   }
 }
 

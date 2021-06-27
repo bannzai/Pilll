@@ -26,6 +26,7 @@ class _$RecordPageStateTearOff {
       bool isPremium = false,
       bool isPillSheetFinishedInThePast = false,
       bool isAlreadyShowTiral = false,
+      bool shouldShowMigrateInfo = false,
       Object? exception}) {
     return _RecordPageState(
       entity: entity,
@@ -38,6 +39,7 @@ class _$RecordPageStateTearOff {
       isPremium: isPremium,
       isPillSheetFinishedInThePast: isPillSheetFinishedInThePast,
       isAlreadyShowTiral: isAlreadyShowTiral,
+      shouldShowMigrateInfo: shouldShowMigrateInfo,
       exception: exception,
     );
   }
@@ -58,6 +60,7 @@ mixin _$RecordPageState {
   bool get isPremium => throw _privateConstructorUsedError;
   bool get isPillSheetFinishedInThePast => throw _privateConstructorUsedError;
   bool get isAlreadyShowTiral => throw _privateConstructorUsedError;
+  bool get shouldShowMigrateInfo => throw _privateConstructorUsedError;
   Object? get exception => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
@@ -80,6 +83,7 @@ abstract class $RecordPageStateCopyWith<$Res> {
       bool isPremium,
       bool isPillSheetFinishedInThePast,
       bool isAlreadyShowTiral,
+      bool shouldShowMigrateInfo,
       Object? exception});
 
   $PillSheetCopyWith<$Res>? get entity;
@@ -106,6 +110,7 @@ class _$RecordPageStateCopyWithImpl<$Res>
     Object? isPremium = freezed,
     Object? isPillSheetFinishedInThePast = freezed,
     Object? isAlreadyShowTiral = freezed,
+    Object? shouldShowMigrateInfo = freezed,
     Object? exception = freezed,
   }) {
     return _then(_value.copyWith(
@@ -145,6 +150,10 @@ class _$RecordPageStateCopyWithImpl<$Res>
       isAlreadyShowTiral: isAlreadyShowTiral == freezed
           ? _value.isAlreadyShowTiral
           : isAlreadyShowTiral // ignore: cast_nullable_to_non_nullable
+              as bool,
+      shouldShowMigrateInfo: shouldShowMigrateInfo == freezed
+          ? _value.shouldShowMigrateInfo
+          : shouldShowMigrateInfo // ignore: cast_nullable_to_non_nullable
               as bool,
       exception: exception == freezed ? _value.exception : exception,
     ));
@@ -190,6 +199,7 @@ abstract class _$RecordPageStateCopyWith<$Res>
       bool isPremium,
       bool isPillSheetFinishedInThePast,
       bool isAlreadyShowTiral,
+      bool shouldShowMigrateInfo,
       Object? exception});
 
   @override
@@ -220,6 +230,7 @@ class __$RecordPageStateCopyWithImpl<$Res>
     Object? isPremium = freezed,
     Object? isPillSheetFinishedInThePast = freezed,
     Object? isAlreadyShowTiral = freezed,
+    Object? shouldShowMigrateInfo = freezed,
     Object? exception = freezed,
   }) {
     return _then(_RecordPageState(
@@ -260,6 +271,10 @@ class __$RecordPageStateCopyWithImpl<$Res>
           ? _value.isAlreadyShowTiral
           : isAlreadyShowTiral // ignore: cast_nullable_to_non_nullable
               as bool,
+      shouldShowMigrateInfo: shouldShowMigrateInfo == freezed
+          ? _value.shouldShowMigrateInfo
+          : shouldShowMigrateInfo // ignore: cast_nullable_to_non_nullable
+              as bool,
       exception: exception == freezed ? _value.exception : exception,
     ));
   }
@@ -278,6 +293,7 @@ class _$_RecordPageState extends _RecordPageState {
       this.isPremium = false,
       this.isPillSheetFinishedInThePast = false,
       this.isAlreadyShowTiral = false,
+      this.shouldShowMigrateInfo = false,
       this.exception})
       : super._();
 
@@ -306,12 +322,15 @@ class _$_RecordPageState extends _RecordPageState {
   @JsonKey(defaultValue: false)
   @override
   final bool isAlreadyShowTiral;
+  @JsonKey(defaultValue: false)
+  @override
+  final bool shouldShowMigrateInfo;
   @override
   final Object? exception;
 
   @override
   String toString() {
-    return 'RecordPageState(entity: $entity, setting: $setting, recommendedSignupNotificationIsAlreadyShow: $recommendedSignupNotificationIsAlreadyShow, totalCountOfActionForTakenPill: $totalCountOfActionForTakenPill, isLinkedLoginProvider: $isLinkedLoginProvider, firstLoadIsEnded: $firstLoadIsEnded, isPremium: $isPremium, isPillSheetFinishedInThePast: $isPillSheetFinishedInThePast, isAlreadyShowTiral: $isAlreadyShowTiral, exception: $exception)';
+    return 'RecordPageState(entity: $entity, setting: $setting, recommendedSignupNotificationIsAlreadyShow: $recommendedSignupNotificationIsAlreadyShow, totalCountOfActionForTakenPill: $totalCountOfActionForTakenPill, isLinkedLoginProvider: $isLinkedLoginProvider, firstLoadIsEnded: $firstLoadIsEnded, isPremium: $isPremium, isPillSheetFinishedInThePast: $isPillSheetFinishedInThePast, isAlreadyShowTiral: $isAlreadyShowTiral, shouldShowMigrateInfo: $shouldShowMigrateInfo, exception: $exception)';
   }
 
   @override
@@ -328,8 +347,7 @@ class _$_RecordPageState extends _RecordPageState {
                 const DeepCollectionEquality().equals(
                     other.recommendedSignupNotificationIsAlreadyShow,
                     recommendedSignupNotificationIsAlreadyShow)) &&
-            (identical(other.totalCountOfActionForTakenPill,
-                    totalCountOfActionForTakenPill) ||
+            (identical(other.totalCountOfActionForTakenPill, totalCountOfActionForTakenPill) ||
                 const DeepCollectionEquality().equals(
                     other.totalCountOfActionForTakenPill,
                     totalCountOfActionForTakenPill)) &&
@@ -349,6 +367,9 @@ class _$_RecordPageState extends _RecordPageState {
             (identical(other.isAlreadyShowTiral, isAlreadyShowTiral) ||
                 const DeepCollectionEquality()
                     .equals(other.isAlreadyShowTiral, isAlreadyShowTiral)) &&
+            (identical(other.shouldShowMigrateInfo, shouldShowMigrateInfo) ||
+                const DeepCollectionEquality().equals(
+                    other.shouldShowMigrateInfo, shouldShowMigrateInfo)) &&
             (identical(other.exception, exception) ||
                 const DeepCollectionEquality()
                     .equals(other.exception, exception)));
@@ -367,6 +388,7 @@ class _$_RecordPageState extends _RecordPageState {
       const DeepCollectionEquality().hash(isPremium) ^
       const DeepCollectionEquality().hash(isPillSheetFinishedInThePast) ^
       const DeepCollectionEquality().hash(isAlreadyShowTiral) ^
+      const DeepCollectionEquality().hash(shouldShowMigrateInfo) ^
       const DeepCollectionEquality().hash(exception);
 
   @JsonKey(ignore: true)
@@ -386,6 +408,7 @@ abstract class _RecordPageState extends RecordPageState {
       bool isPremium,
       bool isPillSheetFinishedInThePast,
       bool isAlreadyShowTiral,
+      bool shouldShowMigrateInfo,
       Object? exception}) = _$_RecordPageState;
   _RecordPageState._() : super._();
 
@@ -408,6 +431,8 @@ abstract class _RecordPageState extends RecordPageState {
   bool get isPillSheetFinishedInThePast => throw _privateConstructorUsedError;
   @override
   bool get isAlreadyShowTiral => throw _privateConstructorUsedError;
+  @override
+  bool get shouldShowMigrateInfo => throw _privateConstructorUsedError;
   @override
   Object? get exception => throw _privateConstructorUsedError;
   @override
