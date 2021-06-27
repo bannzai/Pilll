@@ -19,7 +19,7 @@ class PremiumTrialCompleteModal extends StatelessWidget {
             borderRadius: BorderRadius.circular(4),
           ),
           width: 304,
-          height: 142,
+          height: 242,
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.center,
@@ -38,13 +38,27 @@ class PremiumTrialCompleteModal extends StatelessWidget {
                     child: Container(
                       padding: EdgeInsets.only(top: 40),
                       child: Text(
-                        "プレミアム機能を無料でお試し",
+                        "プレミアム体験が始まりました！",
                         style: FontType.subTitle.merge(TextColorStyle.black),
                         textAlign: TextAlign.center,
                       ),
                     ),
                   ),
                 ],
+              ),
+              Padding(
+                padding: const EdgeInsets.only(top: 28, left: 20, right: 20),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text(
+                      '''
+今日から30日間プレミアム機能を無料でお試しいただけます
+                      ''',
+                      style: FontType.assisting.merge(TextColorStyle.main),
+                    ),
+                  ],
+                ),
               ),
               SizedBox(height: 20),
               Container(
