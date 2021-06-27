@@ -17,10 +17,14 @@ class _$PremiumTrialStateTearOff {
   const _$PremiumTrialStateTearOff();
 
   _PremiumTrialState call(
-      {bool isLoading = false,
+      {bool isTrial = false,
+      bool isPremium = false,
+      bool isLoading = false,
       bool isFirstLoadEnded = false,
       Object? exception}) {
     return _PremiumTrialState(
+      isTrial: isTrial,
+      isPremium: isPremium,
       isLoading: isLoading,
       isFirstLoadEnded: isFirstLoadEnded,
       exception: exception,
@@ -33,6 +37,8 @@ const $PremiumTrialState = _$PremiumTrialStateTearOff();
 
 /// @nodoc
 mixin _$PremiumTrialState {
+  bool get isTrial => throw _privateConstructorUsedError;
+  bool get isPremium => throw _privateConstructorUsedError;
   bool get isLoading => throw _privateConstructorUsedError;
   bool get isFirstLoadEnded => throw _privateConstructorUsedError;
   Object? get exception => throw _privateConstructorUsedError;
@@ -47,7 +53,12 @@ abstract class $PremiumTrialStateCopyWith<$Res> {
   factory $PremiumTrialStateCopyWith(
           PremiumTrialState value, $Res Function(PremiumTrialState) then) =
       _$PremiumTrialStateCopyWithImpl<$Res>;
-  $Res call({bool isLoading, bool isFirstLoadEnded, Object? exception});
+  $Res call(
+      {bool isTrial,
+      bool isPremium,
+      bool isLoading,
+      bool isFirstLoadEnded,
+      Object? exception});
 }
 
 /// @nodoc
@@ -61,11 +72,21 @@ class _$PremiumTrialStateCopyWithImpl<$Res>
 
   @override
   $Res call({
+    Object? isTrial = freezed,
+    Object? isPremium = freezed,
     Object? isLoading = freezed,
     Object? isFirstLoadEnded = freezed,
     Object? exception = freezed,
   }) {
     return _then(_value.copyWith(
+      isTrial: isTrial == freezed
+          ? _value.isTrial
+          : isTrial // ignore: cast_nullable_to_non_nullable
+              as bool,
+      isPremium: isPremium == freezed
+          ? _value.isPremium
+          : isPremium // ignore: cast_nullable_to_non_nullable
+              as bool,
       isLoading: isLoading == freezed
           ? _value.isLoading
           : isLoading // ignore: cast_nullable_to_non_nullable
@@ -86,7 +107,12 @@ abstract class _$PremiumTrialStateCopyWith<$Res>
           _PremiumTrialState value, $Res Function(_PremiumTrialState) then) =
       __$PremiumTrialStateCopyWithImpl<$Res>;
   @override
-  $Res call({bool isLoading, bool isFirstLoadEnded, Object? exception});
+  $Res call(
+      {bool isTrial,
+      bool isPremium,
+      bool isLoading,
+      bool isFirstLoadEnded,
+      Object? exception});
 }
 
 /// @nodoc
@@ -102,11 +128,21 @@ class __$PremiumTrialStateCopyWithImpl<$Res>
 
   @override
   $Res call({
+    Object? isTrial = freezed,
+    Object? isPremium = freezed,
     Object? isLoading = freezed,
     Object? isFirstLoadEnded = freezed,
     Object? exception = freezed,
   }) {
     return _then(_PremiumTrialState(
+      isTrial: isTrial == freezed
+          ? _value.isTrial
+          : isTrial // ignore: cast_nullable_to_non_nullable
+              as bool,
+      isPremium: isPremium == freezed
+          ? _value.isPremium
+          : isPremium // ignore: cast_nullable_to_non_nullable
+              as bool,
       isLoading: isLoading == freezed
           ? _value.isLoading
           : isLoading // ignore: cast_nullable_to_non_nullable
@@ -124,9 +160,19 @@ class __$PremiumTrialStateCopyWithImpl<$Res>
 
 class _$_PremiumTrialState extends _PremiumTrialState {
   _$_PremiumTrialState(
-      {this.isLoading = false, this.isFirstLoadEnded = false, this.exception})
+      {this.isTrial = false,
+      this.isPremium = false,
+      this.isLoading = false,
+      this.isFirstLoadEnded = false,
+      this.exception})
       : super._();
 
+  @JsonKey(defaultValue: false)
+  @override
+  final bool isTrial;
+  @JsonKey(defaultValue: false)
+  @override
+  final bool isPremium;
   @JsonKey(defaultValue: false)
   @override
   final bool isLoading;
@@ -138,13 +184,19 @@ class _$_PremiumTrialState extends _PremiumTrialState {
 
   @override
   String toString() {
-    return 'PremiumTrialState(isLoading: $isLoading, isFirstLoadEnded: $isFirstLoadEnded, exception: $exception)';
+    return 'PremiumTrialState(isTrial: $isTrial, isPremium: $isPremium, isLoading: $isLoading, isFirstLoadEnded: $isFirstLoadEnded, exception: $exception)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other is _PremiumTrialState &&
+            (identical(other.isTrial, isTrial) ||
+                const DeepCollectionEquality()
+                    .equals(other.isTrial, isTrial)) &&
+            (identical(other.isPremium, isPremium) ||
+                const DeepCollectionEquality()
+                    .equals(other.isPremium, isPremium)) &&
             (identical(other.isLoading, isLoading) ||
                 const DeepCollectionEquality()
                     .equals(other.isLoading, isLoading)) &&
@@ -159,6 +211,8 @@ class _$_PremiumTrialState extends _PremiumTrialState {
   @override
   int get hashCode =>
       runtimeType.hashCode ^
+      const DeepCollectionEquality().hash(isTrial) ^
+      const DeepCollectionEquality().hash(isPremium) ^
       const DeepCollectionEquality().hash(isLoading) ^
       const DeepCollectionEquality().hash(isFirstLoadEnded) ^
       const DeepCollectionEquality().hash(exception);
@@ -171,11 +225,17 @@ class _$_PremiumTrialState extends _PremiumTrialState {
 
 abstract class _PremiumTrialState extends PremiumTrialState {
   factory _PremiumTrialState(
-      {bool isLoading,
+      {bool isTrial,
+      bool isPremium,
+      bool isLoading,
       bool isFirstLoadEnded,
       Object? exception}) = _$_PremiumTrialState;
   _PremiumTrialState._() : super._();
 
+  @override
+  bool get isTrial => throw _privateConstructorUsedError;
+  @override
+  bool get isPremium => throw _privateConstructorUsedError;
   @override
   bool get isLoading => throw _privateConstructorUsedError;
   @override
