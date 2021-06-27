@@ -19,7 +19,7 @@ class PremiumTrialCompleteModal extends StatelessWidget {
             borderRadius: BorderRadius.circular(4),
           ),
           width: 304,
-          height: 302,
+          height: 262,
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.center,
@@ -47,7 +47,7 @@ class PremiumTrialCompleteModal extends StatelessWidget {
                 ],
               ),
               Padding(
-                padding: const EdgeInsets.only(top: 25, left: 20, right: 20),
+                padding: const EdgeInsets.only(top: 28, left: 20, right: 20),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
