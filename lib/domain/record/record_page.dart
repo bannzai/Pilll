@@ -4,6 +4,7 @@ import 'package:pilll/components/organisms/pill/pill_mark.dart';
 import 'package:pilll/components/organisms/pill/pill_sheet.dart';
 import 'package:pilll/domain/demography/demography_page.dart';
 import 'package:pilll/domain/initial_setting/migrate_info.dart';
+import 'package:pilll/domain/premium_trial/premium_trial_complete_modal.dart';
 import 'package:pilll/domain/record/record_page_state.dart';
 import 'package:pilll/domain/record/record_page_store.dart';
 import 'package:pilll/domain/record/record_taken_information.dart';
@@ -61,7 +62,9 @@ class RecordPage extends HookWidget {
       if (state.shouldShowTrial) {
         return;
       }
-      showPremiumTrialModalWhenLaunchApp(context);
+      showPremiumTrialModalWhenLaunchApp(context, () {
+        showPremiumTrialCompleteModalPreDialog(context);
+      });
     });
 
     return UniversalErrorPage(
