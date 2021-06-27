@@ -24,6 +24,7 @@ class _$RecordPageStateTearOff {
       bool isLinkedLoginProvider = false,
       bool firstLoadIsEnded = false,
       bool isPremium = false,
+      bool isTrial = false,
       bool isPillSheetFinishedInThePast = false,
       bool isAlreadyShowTiral = false,
       bool shouldShowMigrateInfo = false,
@@ -37,6 +38,7 @@ class _$RecordPageStateTearOff {
       isLinkedLoginProvider: isLinkedLoginProvider,
       firstLoadIsEnded: firstLoadIsEnded,
       isPremium: isPremium,
+      isTrial: isTrial,
       isPillSheetFinishedInThePast: isPillSheetFinishedInThePast,
       isAlreadyShowTiral: isAlreadyShowTiral,
       shouldShowMigrateInfo: shouldShowMigrateInfo,
@@ -58,6 +60,7 @@ mixin _$RecordPageState {
   bool get isLinkedLoginProvider => throw _privateConstructorUsedError;
   bool get firstLoadIsEnded => throw _privateConstructorUsedError;
   bool get isPremium => throw _privateConstructorUsedError;
+  bool get isTrial => throw _privateConstructorUsedError;
   bool get isPillSheetFinishedInThePast => throw _privateConstructorUsedError;
   bool get isAlreadyShowTiral => throw _privateConstructorUsedError;
   bool get shouldShowMigrateInfo => throw _privateConstructorUsedError;
@@ -81,6 +84,7 @@ abstract class $RecordPageStateCopyWith<$Res> {
       bool isLinkedLoginProvider,
       bool firstLoadIsEnded,
       bool isPremium,
+      bool isTrial,
       bool isPillSheetFinishedInThePast,
       bool isAlreadyShowTiral,
       bool shouldShowMigrateInfo,
@@ -108,6 +112,7 @@ class _$RecordPageStateCopyWithImpl<$Res>
     Object? isLinkedLoginProvider = freezed,
     Object? firstLoadIsEnded = freezed,
     Object? isPremium = freezed,
+    Object? isTrial = freezed,
     Object? isPillSheetFinishedInThePast = freezed,
     Object? isAlreadyShowTiral = freezed,
     Object? shouldShowMigrateInfo = freezed,
@@ -142,6 +147,10 @@ class _$RecordPageStateCopyWithImpl<$Res>
       isPremium: isPremium == freezed
           ? _value.isPremium
           : isPremium // ignore: cast_nullable_to_non_nullable
+              as bool,
+      isTrial: isTrial == freezed
+          ? _value.isTrial
+          : isTrial // ignore: cast_nullable_to_non_nullable
               as bool,
       isPillSheetFinishedInThePast: isPillSheetFinishedInThePast == freezed
           ? _value.isPillSheetFinishedInThePast
@@ -197,6 +206,7 @@ abstract class _$RecordPageStateCopyWith<$Res>
       bool isLinkedLoginProvider,
       bool firstLoadIsEnded,
       bool isPremium,
+      bool isTrial,
       bool isPillSheetFinishedInThePast,
       bool isAlreadyShowTiral,
       bool shouldShowMigrateInfo,
@@ -228,6 +238,7 @@ class __$RecordPageStateCopyWithImpl<$Res>
     Object? isLinkedLoginProvider = freezed,
     Object? firstLoadIsEnded = freezed,
     Object? isPremium = freezed,
+    Object? isTrial = freezed,
     Object? isPillSheetFinishedInThePast = freezed,
     Object? isAlreadyShowTiral = freezed,
     Object? shouldShowMigrateInfo = freezed,
@@ -263,6 +274,10 @@ class __$RecordPageStateCopyWithImpl<$Res>
           ? _value.isPremium
           : isPremium // ignore: cast_nullable_to_non_nullable
               as bool,
+      isTrial: isTrial == freezed
+          ? _value.isTrial
+          : isTrial // ignore: cast_nullable_to_non_nullable
+              as bool,
       isPillSheetFinishedInThePast: isPillSheetFinishedInThePast == freezed
           ? _value.isPillSheetFinishedInThePast
           : isPillSheetFinishedInThePast // ignore: cast_nullable_to_non_nullable
@@ -291,6 +306,7 @@ class _$_RecordPageState extends _RecordPageState {
       this.isLinkedLoginProvider = false,
       this.firstLoadIsEnded = false,
       this.isPremium = false,
+      this.isTrial = false,
       this.isPillSheetFinishedInThePast = false,
       this.isAlreadyShowTiral = false,
       this.shouldShowMigrateInfo = false,
@@ -318,6 +334,9 @@ class _$_RecordPageState extends _RecordPageState {
   final bool isPremium;
   @JsonKey(defaultValue: false)
   @override
+  final bool isTrial;
+  @JsonKey(defaultValue: false)
+  @override
   final bool isPillSheetFinishedInThePast;
   @JsonKey(defaultValue: false)
   @override
@@ -330,7 +349,7 @@ class _$_RecordPageState extends _RecordPageState {
 
   @override
   String toString() {
-    return 'RecordPageState(entity: $entity, setting: $setting, recommendedSignupNotificationIsAlreadyShow: $recommendedSignupNotificationIsAlreadyShow, totalCountOfActionForTakenPill: $totalCountOfActionForTakenPill, isLinkedLoginProvider: $isLinkedLoginProvider, firstLoadIsEnded: $firstLoadIsEnded, isPremium: $isPremium, isPillSheetFinishedInThePast: $isPillSheetFinishedInThePast, isAlreadyShowTiral: $isAlreadyShowTiral, shouldShowMigrateInfo: $shouldShowMigrateInfo, exception: $exception)';
+    return 'RecordPageState(entity: $entity, setting: $setting, recommendedSignupNotificationIsAlreadyShow: $recommendedSignupNotificationIsAlreadyShow, totalCountOfActionForTakenPill: $totalCountOfActionForTakenPill, isLinkedLoginProvider: $isLinkedLoginProvider, firstLoadIsEnded: $firstLoadIsEnded, isPremium: $isPremium, isTrial: $isTrial, isPillSheetFinishedInThePast: $isPillSheetFinishedInThePast, isAlreadyShowTiral: $isAlreadyShowTiral, shouldShowMigrateInfo: $shouldShowMigrateInfo, exception: $exception)';
   }
 
   @override
@@ -342,8 +361,7 @@ class _$_RecordPageState extends _RecordPageState {
             (identical(other.setting, setting) ||
                 const DeepCollectionEquality()
                     .equals(other.setting, setting)) &&
-            (identical(other.recommendedSignupNotificationIsAlreadyShow,
-                    recommendedSignupNotificationIsAlreadyShow) ||
+            (identical(other.recommendedSignupNotificationIsAlreadyShow, recommendedSignupNotificationIsAlreadyShow) ||
                 const DeepCollectionEquality().equals(
                     other.recommendedSignupNotificationIsAlreadyShow,
                     recommendedSignupNotificationIsAlreadyShow)) &&
@@ -360,6 +378,9 @@ class _$_RecordPageState extends _RecordPageState {
             (identical(other.isPremium, isPremium) ||
                 const DeepCollectionEquality()
                     .equals(other.isPremium, isPremium)) &&
+            (identical(other.isTrial, isTrial) ||
+                const DeepCollectionEquality()
+                    .equals(other.isTrial, isTrial)) &&
             (identical(other.isPillSheetFinishedInThePast, isPillSheetFinishedInThePast) ||
                 const DeepCollectionEquality().equals(
                     other.isPillSheetFinishedInThePast,
@@ -386,6 +407,7 @@ class _$_RecordPageState extends _RecordPageState {
       const DeepCollectionEquality().hash(isLinkedLoginProvider) ^
       const DeepCollectionEquality().hash(firstLoadIsEnded) ^
       const DeepCollectionEquality().hash(isPremium) ^
+      const DeepCollectionEquality().hash(isTrial) ^
       const DeepCollectionEquality().hash(isPillSheetFinishedInThePast) ^
       const DeepCollectionEquality().hash(isAlreadyShowTiral) ^
       const DeepCollectionEquality().hash(shouldShowMigrateInfo) ^
@@ -406,6 +428,7 @@ abstract class _RecordPageState extends RecordPageState {
       bool isLinkedLoginProvider,
       bool firstLoadIsEnded,
       bool isPremium,
+      bool isTrial,
       bool isPillSheetFinishedInThePast,
       bool isAlreadyShowTiral,
       bool shouldShowMigrateInfo,
@@ -427,6 +450,8 @@ abstract class _RecordPageState extends RecordPageState {
   bool get firstLoadIsEnded => throw _privateConstructorUsedError;
   @override
   bool get isPremium => throw _privateConstructorUsedError;
+  @override
+  bool get isTrial => throw _privateConstructorUsedError;
   @override
   bool get isPillSheetFinishedInThePast => throw _privateConstructorUsedError;
   @override

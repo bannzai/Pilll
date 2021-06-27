@@ -16,6 +16,7 @@ abstract class RecordPageState implements _$RecordPageState {
     @Default(false) bool isLinkedLoginProvider,
     @Default(false) bool firstLoadIsEnded,
     @Default(false) bool isPremium,
+    @Default(false) bool isTrial,
     @Default(false) bool isPillSheetFinishedInThePast,
     @Default(false) bool isAlreadyShowTiral,
     @Default(false) bool shouldShowMigrateInfo,
@@ -24,6 +25,9 @@ abstract class RecordPageState implements _$RecordPageState {
 
   bool get isInvalid => entity == null || entity!.isInvalid;
   bool get shouldShowTrial {
+    if (isTrial) {
+      return false;
+    }
     if (isAlreadyShowTiral) {
       return false;
     }

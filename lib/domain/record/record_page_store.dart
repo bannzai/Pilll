@@ -82,6 +82,7 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
             sharedPreferences.getBool(BoolKey.isAlreadyShowPremiumTrialModal) ??
                 false,
         isPremium: user.isPremium,
+        isTrial: user.isTrial,
         shouldShowMigrateInfo: shouldShowMigrateInfo,
       );
       if (entity != null) {
