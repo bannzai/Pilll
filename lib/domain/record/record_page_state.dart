@@ -28,6 +28,9 @@ abstract class RecordPageState implements _$RecordPageState {
     if (isTrial) {
       return false;
     }
+    if (!firstLoadIsEnded) {
+      return false;
+    }
     if (isAlreadyShowTiral) {
       return false;
     }
