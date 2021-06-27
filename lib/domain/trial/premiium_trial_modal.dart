@@ -123,7 +123,7 @@ showPremiumTrialModalWhenLaunchApp(BuildContext context) async {
   if (storage.getBool(key) ?? false) {
     return;
   }
-  storage.setBool(key, true);
+  storage.setBool(key, !Environment.isDevelopment);
 
   showDialog(
       context: context,
