@@ -101,16 +101,17 @@ class PremiumTrialModal extends HookWidget {
                       children: [
                         SvgPicture.asset("images/crown.svg"),
                         SizedBox(height: 24),
-                        Text(
-                          '''
-          プレミアム機能がお試しできます。
-          自動で課金される事はありません。
-                          ''',
-                          style: TextStyle(
-                              color: TextColor.black,
-                              fontFamily: FontFamily.japanese,
-                              fontWeight: FontWeight.w400,
-                              fontSize: 14),
+                        Padding(
+                          padding: const EdgeInsets.only(left: 16, right: 16),
+                          child: Text(
+                            "プレミアム機能がお試しできます。自動で課金される事はありません。",
+                            style: TextStyle(
+                                color: TextColor.black,
+                                fontFamily: FontFamily.japanese,
+                                fontWeight: FontWeight.w400,
+                                fontSize: 14),
+                            textAlign: TextAlign.center,
+                          ),
                         ),
                         SizedBox(height: 24),
                         PrimaryButton(
