@@ -120,6 +120,7 @@ class PremiumTrialModal extends HookWidget {
                             analytics.logEvent(name: "pressed_trial_start");
                             try {
                               await store.trial();
+                              Navigator.of(context).pop();
                               didEndTrial();
                             } catch (exception) {
                               if (exception is UserDisplayedError) {
