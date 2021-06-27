@@ -12,7 +12,6 @@ class ReleaseNote extends StatelessWidget {
   const ReleaseNote({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    ChromeSafariBrowser();
     return Material(
       type: MaterialType.transparency,
       child: Center(
