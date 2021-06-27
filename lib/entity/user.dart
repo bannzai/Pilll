@@ -67,6 +67,8 @@ abstract class User implements _$User {
     @Default([]) List<String> anonymousUserIDSets,
     @Default([]) List<String> firebaseCurrentUserIDSets,
     @Default(false) bool isPremium,
+    @Default(false) bool isTrial,
+    DateTime? beginTrialDate,
   }) = _User;
 
   factory User.fromJson(Map<String, dynamic> json) => _$UserFromJson(json);

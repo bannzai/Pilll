@@ -39,6 +39,10 @@ _$_User _$_$_UserFromJson(Map<String, dynamic> json) {
                 .toList() ??
             [],
     isPremium: json['isPremium'] as bool? ?? false,
+    isTrial: json['isTrial'] as bool? ?? false,
+    beginTrialDate: json['beginTrialDate'] == null
+        ? null
+        : DateTime.parse(json['beginTrialDate'] as String),
   );
 }
 
@@ -51,4 +55,6 @@ Map<String, dynamic> _$_$_UserToJson(_$_User instance) => <String, dynamic>{
       'anonymousUserIDSets': instance.anonymousUserIDSets,
       'firebaseCurrentUserIDSets': instance.firebaseCurrentUserIDSets,
       'isPremium': instance.isPremium,
+      'isTrial': instance.isTrial,
+      'beginTrialDate': instance.beginTrialDate?.toIso8601String(),
     };
