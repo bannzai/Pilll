@@ -6,6 +6,7 @@ import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:flutter/material.dart';
+import 'package:pilll/util/environment.dart';
 import 'package:pilll/util/shared_preference/keys.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -18,9 +19,11 @@ class PremiumTrialModal extends StatelessWidget {
       type: MaterialType.transparency,
       child: Center(
         child: Container(
+          width: 314,
+          height: 360,
           decoration: BoxDecoration(
             color: PilllColors.white,
-            borderRadius: BorderRadius.circular(4),
+            borderRadius: BorderRadius.circular(20),
           ),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
@@ -43,10 +46,12 @@ class PremiumTrialModal extends StatelessWidget {
                         crossAxisAlignment: CrossAxisAlignment.center,
                         children: [
                           Container(
+                            width: 108,
                             decoration: BoxDecoration(
                               color: PilllColors.primary,
-                              borderRadius: BorderRadius.circular(4),
+                              borderRadius: BorderRadius.circular(50),
                             ),
+                            padding: EdgeInsets.only(top: 4, bottom: 4),
                             child: Center(
                               child: Text(
                                 "30日間お試し",
