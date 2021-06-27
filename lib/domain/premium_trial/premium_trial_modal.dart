@@ -1,20 +1,23 @@
-import 'package:flutter_inappwebview/flutter_inappwebview.dart';
+import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/analytics.dart';
 import 'package:pilll/components/atoms/buttons.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:flutter/material.dart';
+import 'package:pilll/domain/premium_trial/premium_trial_modal_store.dart';
 import 'package:pilll/util/environment.dart';
 import 'package:pilll/util/shared_preference/keys.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-class PremiumTrialModal extends StatelessWidget {
+class PremiumTrialModal extends HookWidget {
   const PremiumTrialModal({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    ChromeSafariBrowser();
+    final store = useProvider(premiumTrialStoreProvider);
+    final state = useProvider(premiumTrialStoreProvider.state);
     return Material(
       type: MaterialType.transparency,
       child: Center(

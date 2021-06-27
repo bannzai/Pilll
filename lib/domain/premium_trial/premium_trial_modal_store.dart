@@ -1,21 +1,22 @@
 import 'dart:async';
 
-import 'package:pilll/domain/premium_trial/premium_trial_state.dart';
+import 'package:pilll/domain/premium_trial/premium_trial_modal_state.dart';
 import 'package:pilll/service/user.dart';
 import 'package:riverpod/riverpod.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 final premiumTrialStoreProvider = StateNotifierProvider(
-  (ref) => PremiumTrialStateStore(
+  (ref) => PremiumTrialModalStateStore(
     ref.watch(userServiceProvider),
   ),
 );
 
-class PremiumTrialStateStore extends StateNotifier<PremiumTrialState> {
+class PremiumTrialModalStateStore
+    extends StateNotifier<PremiumTrialModalState> {
   final UserService _userService;
-  PremiumTrialStateStore(
+  PremiumTrialModalStateStore(
     this._userService,
-  ) : super(PremiumTrialState()) {
+  ) : super(PremiumTrialModalState()) {
     reset();
   }
 
@@ -24,11 +25,8 @@ class PremiumTrialStateStore extends StateNotifier<PremiumTrialState> {
     Future(() async {
       final storage = await SharedPreferences.getInstance();
       final user = await _userService.fetch();
-      this.state = PremiumTrialState(
-        isPremium: user.isPremium,
+      this.state = PremiumTrialModalState(
         isTrial: user.isTrial,
-        isLoading: false,
-        isFirstLoadEnded: true,
       );
       _subscribe();
     });
@@ -51,13 +49,5 @@ class PremiumTrialStateStore extends StateNotifier<PremiumTrialState> {
 
   handleException(Object exception) {
     state = state.copyWith(exception: exception);
-  }
-
-  showHUD() {
-    state = state.copyWith(isLoading: true);
-  }
-
-  hideHUD() {
-    state = state.copyWith(isLoading: false);
   }
 }
