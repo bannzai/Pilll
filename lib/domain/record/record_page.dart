@@ -59,7 +59,7 @@ class RecordPage extends HookWidget {
     });
 
     Future.delayed(Duration(seconds: 1)).then((_) {
-      if (state.shouldShowTrial) {
+      if (!state.shouldShowTrial) {
         return;
       }
       showPremiumTrialModalWhenLaunchApp(context, () {
