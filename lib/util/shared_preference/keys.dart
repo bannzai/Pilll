@@ -4,6 +4,8 @@ extension BoolKey on String {
       "recommendedSignupNotificationIsAlreadyShow";
   static final isAlreadyShowDemography = "isAlreadyShowDemography";
   static final isAlreadyDoneDemography = "isAlreadyDoneDemography";
+  static final isAlreadyShowPremiumTrialModal =
+      "isAlreadyShowPremiumTrialModal";
 }
 
 extension StringKey on String {
