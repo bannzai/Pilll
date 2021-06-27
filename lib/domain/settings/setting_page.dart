@@ -2,7 +2,7 @@ import 'package:pilll/analytics.dart';
 import 'package:pilll/components/page/discard_dialog.dart';
 import 'package:pilll/components/organisms/pill/pill_sheet_type_select_page.dart';
 import 'package:pilll/components/organisms/setting/setting_menstruation_page.dart';
-import 'package:pilll/domain/premium/premium_introduction_page.dart';
+import 'package:pilll/domain/premium_introduction/premium_introduction_page.dart';
 import 'package:pilll/domain/settings/information_for_before_major_update.dart';
 import 'package:pilll/domain/settings/setting_account_cooperation_list_page.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';

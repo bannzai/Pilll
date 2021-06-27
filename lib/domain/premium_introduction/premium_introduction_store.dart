@@ -5,7 +5,7 @@ import 'package:flutter/services.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:intl/intl.dart';
 import 'package:pilll/analytics.dart';
-import 'package:pilll/domain/premium/premium_introduction_state.dart';
+import 'package:pilll/domain/premium_introduction/premium_introduction_state.dart';
 import 'package:pilll/entity/user_error.dart';
 import 'package:pilll/error_log.dart';
 import 'package:pilll/purchases.dart';
