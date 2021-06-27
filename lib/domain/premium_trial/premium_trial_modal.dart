@@ -117,7 +117,7 @@ class PremiumTrialModal extends HookWidget {
                         SizedBox(height: 24),
                         PrimaryButton(
                           onPressed: () async {
-                            analytics.logEvent(name: "trial_did_pressed");
+                            analytics.logEvent(name: "pressed_trial_start");
                             try {
                               await store.trial();
                               didEndTrial();
