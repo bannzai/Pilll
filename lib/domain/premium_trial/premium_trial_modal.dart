@@ -152,7 +152,7 @@ showPremiumTrialModalWhenLaunchApp(
   if (storage.getBool(key) ?? false) {
     return;
   }
-  storage.setBool(key, !Environment.isDevelopment);
+  storage.setBool(key, true);
 
   showDialog(
       context: context,
