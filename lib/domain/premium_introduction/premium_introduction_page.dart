@@ -12,7 +12,7 @@ import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/components/molecules/indicator.dart';
 import 'package:pilll/components/page/hud.dart';
 import 'package:pilll/domain/demography/demography_page.dart';
-import 'package:pilll/domain/premium_introduction/components/premium_introduction_annual_button.dart';
+import 'package:pilll/domain/premium_introduction/components/annaul_purchase_button.dart';
 import 'package:pilll/domain/premium_introduction/premium_complete_dialog.dart';
 import 'package:pilll/domain/premium_introduction/components/premium_introduction_limited_header.dart';
 import 'package:pilll/domain/premium_introduction/premium_introduction_state.dart';
@@ -64,7 +64,7 @@ class PremiumIntroductionPage extends HookWidget {
                           Row(
                             children: [
                               if (monthlyPackage != null)
-                                PremiumIntroductionAnnualButton(
+                                AnnualPurchaseButton(
                                     annualPackage: monthlyPackage,
                                     onTap: (monthlyPackage) async {
                                       try {
@@ -93,7 +93,7 @@ class PremiumIntroductionPage extends HookWidget {
                                       }
                                     }),
                               if (annualPackage != null)
-                                PremiumIntroductionAnnualButton(
+                                AnnualPurchaseButton(
                                     annualPackage: annualPackage,
                                     onTap: (annualPackage) async {
                                       try {

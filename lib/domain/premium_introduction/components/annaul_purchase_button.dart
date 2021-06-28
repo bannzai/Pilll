@@ -3,11 +3,11 @@ import 'package:intl/intl.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:purchases_flutter/purchases_flutter.dart';
 
-class PremiumIntroductionAnnualButton extends StatelessWidget {
+class AnnualPurchaseButton extends StatelessWidget {
   final Package annualPackage;
   final Function(Package) onTap;
 
-  const PremiumIntroductionAnnualButton(
+  const AnnualPurchaseButton(
       {Key? key, required this.annualPackage, required this.onTap})
       : super(key: key);
   @override
