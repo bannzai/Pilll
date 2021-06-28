@@ -1,29 +1,24 @@
 import 'package:flutter/material.dart';
-import 'package:intl/intl.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:purchases_flutter/purchases_flutter.dart';
 
-class AnnualPurchaseButton extends StatelessWidget {
-  final Package annualPackage;
+class MonthlyPurchaseButton extends StatelessWidget {
+  final Package monthlyPackage;
   final Function(Package) onTap;
 
-  const AnnualPurchaseButton(
-      {Key? key, required this.annualPackage, required this.onTap})
+  const MonthlyPurchaseButton(
+      {Key? key, required this.monthlyPackage, required this.onTap})
       : super(key: key);
   @override
   Widget build(BuildContext context) {
-    final monthlyPrice = annualPackage.product.price / 12;
-    final monthlyPriceString =
-        NumberFormat.simpleCurrency(decimalDigits: 0, name: "JPY")
-            .format(monthlyPrice);
     return GestureDetector(
       onTap: () {
-        onTap(annualPackage);
+        onTap(monthlyPackage);
       },
       child: Container(
-        padding: EdgeInsets.fromLTRB(32, 24, 32, 24),
+        padding: EdgeInsets.fromLTRB(32, 24, 32, 46),
         decoration: BoxDecoration(
           color: Colors.transparent,
           borderRadius: BorderRadius.all(Radius.circular(4)),
@@ -36,7 +31,7 @@ class AnnualPurchaseButton extends StatelessWidget {
           child: Column(
             children: [
               Text(
-                "年間プラン",
+                "月間プラン",
                 style: TextStyle(
                   color: TextColor.main,
                   fontFamily: FontFamily.japanese,
@@ -45,20 +40,11 @@ class AnnualPurchaseButton extends StatelessWidget {
                 ),
               ),
               Text(
-                "${annualPackage.product.priceString}/年",
+                "${monthlyPackage.product.priceString}/年",
                 style: TextStyle(
                   color: TextColor.main,
                   fontFamily: FontFamily.japanese,
                   fontSize: 16,
-                  fontWeight: FontWeight.w600,
-                ),
-              ),
-              Text(
-                "（$monthlyPriceString/月）",
-                style: TextStyle(
-                  color: TextColor.main,
-                  fontFamily: FontFamily.japanese,
-                  fontSize: 14,
                   fontWeight: FontWeight.w600,
                 ),
               ),

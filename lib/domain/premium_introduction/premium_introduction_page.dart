@@ -13,6 +13,7 @@ import 'package:pilll/components/molecules/indicator.dart';
 import 'package:pilll/components/page/hud.dart';
 import 'package:pilll/domain/demography/demography_page.dart';
 import 'package:pilll/domain/premium_introduction/components/annaul_purchase_button.dart';
+import 'package:pilll/domain/premium_introduction/components/monthly_purchase_button.dart';
 import 'package:pilll/domain/premium_introduction/premium_complete_dialog.dart';
 import 'package:pilll/domain/premium_introduction/components/premium_introduction_limited_header.dart';
 import 'package:pilll/domain/premium_introduction/premium_introduction_state.dart';
@@ -63,63 +64,63 @@ class PremiumIntroductionPage extends HookWidget {
                           PremiumIntroductionLimitedHeader(),
                           Row(
                             children: [
+                              Spacer(),
                               if (monthlyPackage != null)
-                                AnnualPurchaseButton(
-                                    annualPackage: monthlyPackage,
-                                    onTap: (monthlyPackage) async {
-                                      try {
-                                        store.showHUD();
-                                        final shouldShowCompleteDialog =
-                                            await store
-                                                .purchase(monthlyPackage);
-                                        if (shouldShowCompleteDialog) {
-                                          showDialog(
-                                              context: context,
-                                              builder: (context) {
-                                                return PremiumCompleteDialog();
-                                              });
-                                        }
-                                      } catch (error) {
-                                        print(
-                                            "caused purchase error for $error");
-                                        if (error is UserDisplayedError) {
-                                          showErrorAlertWithError(
-                                              context, error);
-                                        } else {
-                                          store.handleException(error);
-                                        }
-                                      } finally {
-                                        store.hideHUD();
+                                MonthlyPurchaseButton(
+                                  monthlyPackage: monthlyPackage,
+                                  onTap: (monthlyPackage) async {
+                                    try {
+                                      store.showHUD();
+                                      final shouldShowCompleteDialog =
+                                          await store.purchase(monthlyPackage);
+                                      if (shouldShowCompleteDialog) {
+                                        showDialog(
+                                            context: context,
+                                            builder: (context) {
+                                              return PremiumCompleteDialog();
+                                            });
                                       }
-                                    }),
+                                    } catch (error) {
+                                      print("caused purchase error for $error");
+                                      if (error is UserDisplayedError) {
+                                        showErrorAlertWithError(context, error);
+                                      } else {
+                                        store.handleException(error);
+                                      }
+                                    } finally {
+                                      store.hideHUD();
+                                    }
+                                  },
+                                ),
+                              SizedBox(width: 16),
                               if (annualPackage != null)
                                 AnnualPurchaseButton(
-                                    annualPackage: annualPackage,
-                                    onTap: (annualPackage) async {
-                                      try {
-                                        store.showHUD();
-                                        final shouldShowCompleteDialog =
-                                            await store.purchase(annualPackage);
-                                        if (shouldShowCompleteDialog) {
-                                          showDialog(
-                                              context: context,
-                                              builder: (context) {
-                                                return PremiumCompleteDialog();
-                                              });
-                                        }
-                                      } catch (error) {
-                                        print(
-                                            "caused purchase error for $error");
-                                        if (error is UserDisplayedError) {
-                                          showErrorAlertWithError(
-                                              context, error);
-                                        } else {
-                                          store.handleException(error);
-                                        }
-                                      } finally {
-                                        store.hideHUD();
+                                  annualPackage: annualPackage,
+                                  onTap: (annualPackage) async {
+                                    try {
+                                      store.showHUD();
+                                      final shouldShowCompleteDialog =
+                                          await store.purchase(annualPackage);
+                                      if (shouldShowCompleteDialog) {
+                                        showDialog(
+                                            context: context,
+                                            builder: (context) {
+                                              return PremiumCompleteDialog();
+                                            });
                                       }
-                                    }),
+                                    } catch (error) {
+                                      print("caused purchase error for $error");
+                                      if (error is UserDisplayedError) {
+                                        showErrorAlertWithError(context, error);
+                                      } else {
+                                        store.handleException(error);
+                                      }
+                                    } finally {
+                                      store.hideHUD();
+                                    }
+                                  },
+                                ),
+                              Spacer(),
                             ],
                           ),
                           _noOpen(context, store, state),
