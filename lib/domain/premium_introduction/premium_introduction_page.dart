@@ -12,6 +12,7 @@ import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/components/molecules/indicator.dart';
 import 'package:pilll/components/page/hud.dart';
 import 'package:pilll/domain/demography/demography_page.dart';
+import 'package:pilll/domain/premium_introduction/components/premium_introduction_annual_button.dart';
 import 'package:pilll/domain/premium_introduction/premium_complete_dialog.dart';
 import 'package:pilll/domain/premium_introduction/components/premium_introduction_limited_header.dart';
 import 'package:pilll/domain/premium_introduction/premium_introduction_state.dart';
@@ -31,6 +32,8 @@ class PremiumIntroductionPage extends HookWidget {
     if (state.isNotYetLoad) {
       return Indicator();
     }
+    final annualPackage = state.annualPackage;
+    final monthlyPackage = state.monthlyPackage;
     return HUD(
       shown: state.isLoading,
       child: UniversalErrorPage(
@@ -44,10 +47,10 @@ class PremiumIntroductionPage extends HookWidget {
               icon: Icon(Icons.close, color: Colors.black),
               onPressed: () => Navigator.of(context).pop(),
             ),
-            backgroundColor: Colors.transparent,
+            backgroundColor: PilllColors.blueBackground,
           ),
           body: Container(
-            color: PilllColors.secondary.withAlpha(10),
+            color: PilllColors.blueBackground,
             child: SafeArea(
               child: Container(
                 width: MediaQuery.of(context).size.width,
@@ -58,6 +61,67 @@ class PremiumIntroductionPage extends HookWidget {
                       child: Column(
                         children: [
                           PremiumIntroductionLimitedHeader(),
+                          Row(
+                            children: [
+                              if (monthlyPackage != null)
+                                PremiumIntroductionAnnualButton(
+                                    annualPackage: monthlyPackage,
+                                    onTap: (monthlyPackage) async {
+                                      try {
+                                        store.showHUD();
+                                        final shouldShowCompleteDialog =
+                                            await store
+                                                .purchase(monthlyPackage);
+                                        if (shouldShowCompleteDialog) {
+                                          showDialog(
+                                              context: context,
+                                              builder: (context) {
+                                                return PremiumCompleteDialog();
+                                              });
+                                        }
+                                      } catch (error) {
+                                        print(
+                                            "caused purchase error for $error");
+                                        if (error is UserDisplayedError) {
+                                          showErrorAlertWithError(
+                                              context, error);
+                                        } else {
+                                          store.handleException(error);
+                                        }
+                                      } finally {
+                                        store.hideHUD();
+                                      }
+                                    }),
+                              if (annualPackage != null)
+                                PremiumIntroductionAnnualButton(
+                                    annualPackage: annualPackage,
+                                    onTap: (annualPackage) async {
+                                      try {
+                                        store.showHUD();
+                                        final shouldShowCompleteDialog =
+                                            await store.purchase(annualPackage);
+                                        if (shouldShowCompleteDialog) {
+                                          showDialog(
+                                              context: context,
+                                              builder: (context) {
+                                                return PremiumCompleteDialog();
+                                              });
+                                        }
+                                      } catch (error) {
+                                        print(
+                                            "caused purchase error for $error");
+                                        if (error is UserDisplayedError) {
+                                          showErrorAlertWithError(
+                                              context, error);
+                                        } else {
+                                          store.handleException(error);
+                                        }
+                                      } finally {
+                                        store.hideHUD();
+                                      }
+                                    }),
+                            ],
+                          ),
                           _noOpen(context, store, state),
                           _advancedAppearancePillSheet(context, store, state),
                           _footer(context, store, state),
@@ -90,7 +154,8 @@ class PremiumIntroductionPage extends HookWidget {
                                       try {
                                         store.showHUD();
                                         final shouldShowCompleteDialog =
-                                            await store.purchase();
+                                            await store.purchase(
+                                                state.selectedPackage!);
                                         if (shouldShowCompleteDialog) {
                                           showDialog(
                                               context: context,

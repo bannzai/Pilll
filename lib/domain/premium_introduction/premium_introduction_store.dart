@@ -82,11 +82,7 @@ class PremiumIntroductionStore extends StateNotifier<PremiumIntroductionState> {
   /// Return true indicates end of regularllly pattern.
   /// Return false indicates not regulally pattern.
   /// Return value is used to display the completion page
-  Future<bool> purchase() async {
-    final package = state.selectedPackage;
-    if (package == null) {
-      throw AssertionError("unexpected selected package not found");
-    }
+  Future<bool> purchase(Package package) async {
     try {
       PurchaserInfo purchaserInfo = await Purchases.purchasePackage(package);
       final premiumEntitlement =
