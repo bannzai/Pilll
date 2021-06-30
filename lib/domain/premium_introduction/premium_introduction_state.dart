@@ -8,7 +8,6 @@ abstract class PremiumIntroductionState implements _$PremiumIntroductionState {
   PremiumIntroductionState._();
   factory PremiumIntroductionState({
     Offerings? offerings,
-    Package? selectedPackage,
     @Default(false) bool isCompletedRestore,
     @Default(false) bool isLoading,
     @Default(false) bool isPremium,
