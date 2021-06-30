@@ -1,0 +1,218 @@
+import 'package:flutter/material.dart';
+import 'package:flutter/services.dart';
+import 'package:pilll/analytics.dart';
+import 'package:pilll/domain/premium_introduction/components/annaul_purchase_button.dart';
+import 'package:pilll/domain/premium_introduction/components/monthly_purchase_button.dart';
+import 'package:pilll/entity/user_error.dart';
+import 'package:pilll/error_log.dart';
+import 'package:pilll/purchases.dart';
+import 'package:purchases_flutter/purchases_flutter.dart';
+
+class PurchaseButtons extends StatelessWidget {
+  final Package? monthlyPackage;
+  final Package? annualPackage;
+
+  const PurchaseButtons({
+    Key? key,
+    required this.monthlyPackage,
+    required this.annualPackage,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    final monthlyPackage = this.monthlyPackage;
+    final annualPackage = this.annualPackage;
+
+    return Row(
+      children: [
+        Spacer(),
+        if (monthlyPackage != null)
+          MonthlyPurchaseButton(
+            monthlyPackage: monthlyPackage,
+            onTap: (monthlyPackage) async {
+              try {
+                store.showHUD();
+                final shouldShowCompleteDialog =
+                    await store.purchase(monthlyPackage);
+                if (shouldShowCompleteDialog) {
+                  showDialog(
+                      context: context,
+                      builder: (context) {
+                        return PremiumCompleteDialog();
+                      });
+                }
+              } catch (error) {
+                print("caused purchase error for $error");
+                if (error is UserDisplayedError) {
+                  showErrorAlertWithError(context, error);
+                } else {
+                  store.handleException(error);
+                }
+              } finally {
+                store.hideHUD();
+              }
+            },
+          ),
+        SizedBox(width: 16),
+        if (annualPackage != null)
+          AnnualPurchaseButton(
+            annualPackage: annualPackage,
+            onTap: (annualPackage) async {
+              try {
+                store.showHUD();
+                final shouldShowCompleteDialog =
+                    await store.purchase(annualPackage);
+                if (shouldShowCompleteDialog) {
+                  showDialog(
+                      context: context,
+                      builder: (context) {
+                        return PremiumCompleteDialog();
+                      });
+                }
+              } catch (error) {
+                print("caused purchase error for $error");
+                if (error is UserDisplayedError) {
+                  showErrorAlertWithError(context, error);
+                } else {
+                  store.handleException(error);
+                }
+              } finally {
+                store.hideHUD();
+              }
+            },
+          ),
+        Spacer(),
+      ],
+    );
+  }
+
+  /// Return true indicates end of regularllly pattern.
+  /// Return false indicates not regulally pattern.
+  /// Return value is used to display the completion page
+  Future<bool> _purchase(Package package) async {
+    try {
+      PurchaserInfo purchaserInfo = await Purchases.purchasePackage(package);
+      final premiumEntitlement =
+          purchaserInfo.entitlements.all[premiumEntitlements];
+      if (premiumEntitlement == null) {
+        throw AssertionError("unexpected premium entitlements is not exists");
+      }
+      if (!premiumEntitlement.isActive) {
+        throw UserDisplayedError("課金の有効化が完了しておりません。しばらく時間をおいてからご確認ください");
+      }
+      await callUpdatePurchaseInfo(purchaserInfo);
+      return Future.value(true);
+    } on PlatformException catch (exception, stack) {
+      analytics.logEvent(name: "catched_purchase_exception", parameters: {
+        "code": exception.code,
+        "details": exception.details.toString(),
+        "message": exception.message
+      });
+      final newException = _mapToDisplayedException(exception);
+      if (newException == null) {
+        return Future.value(false);
+      }
+      errorLogger.recordError(exception, stack);
+      throw newException;
+    } catch (exception, stack) {
+      analytics.logEvent(name: "catched_purchase_anonymous", parameters: {
+        "exception_type": exception.runtimeType.toString(),
+      });
+      errorLogger.recordError(exception, stack);
+      rethrow;
+    }
+  }
+
+  // See also: https://docs.revenuecat.com/docs/errors
+  Exception? _mapToDisplayedException(PlatformException exception) {
+    final errorCode = PurchasesErrorHelper.getErrorCode(exception);
+    switch (errorCode) {
+      case PurchasesErrorCode.unknownError:
+        return FormatException(
+            "原因不明のエラーが発生しました。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: ${exception.message}:${exception.details}");
+      case PurchasesErrorCode.purchaseCancelledError:
+        // NOTE: This exception indicates that the User has canceled.
+        // See more details: https://docs.revenuecat.com/docs/errors#--purchase_cancelled
+        // > No action required. The user decided not to proceed with their in-app purchase.
+        return null;
+      case PurchasesErrorCode.storeProblemError:
+        // NOTE: RevenueCat auto retring purchase request on backend services.
+        // Pilll must not be handling error message.
+        // See more detail: https://docs.revenuecat.com/docs/errors#--store_problem
+        // > If everything was working while testing, you shouldn't have to do anything to handle this error in production. RevenueCat will automatically retry any purchase failures so no data is lost.
+        // But, return ambigious error message to be the on the safe side
+        return FormatException("$storeName でエラーが発生しています。しばらくお時間をおいて再度お試しください");
+      case PurchasesErrorCode.purchaseNotAllowedError:
+        // NOTE: Maybe simulator or emulators
+        // See more details: https://docs.revenuecat.com/docs/errors#--purchase_not_allowed
+        return UserDisplayedError("このデバイスで購入が許可されていません");
+      case PurchasesErrorCode.purchaseInvalidError:
+        // See more details: https://docs.revenuecat.com/docs/errors#-purchase_invalid
+        return UserDisplayedError("支払いに失敗しました。有効な支払い方法かどうかをご確認の上再度お試しください");
+      case PurchasesErrorCode.productNotAvailableForPurchaseError:
+        // Maybe missed implement or User references older payment product.
+        // See more details: https://docs.revenuecat.com/docs/errors#-product_not_available_for_purchase
+        return UserDisplayedError("対象のプランは現在販売しておりません。お手数ですがアプリを再起動の上お試しください");
+      case PurchasesErrorCode.productAlreadyPurchasedError:
+        // User already has same product. Announcement to restore
+        // See more details: https://docs.revenuecat.com/docs/errors#-product_already_purchased
+        // > If this occurs in production, make sure the user restores purchases to re-sync any transactions with their current App User Id.
+        return UserDisplayedError(
+            "すでにプランを購入済みです。この端末で購入情報を復元する場合は「以前購入した方はこちら」から購入情報を復元してくさい");
+      case PurchasesErrorCode.receiptAlreadyInUseError:
+        return UserDisplayedError(
+            '既に購入済み。もくは購入情報は別のユーザーで使用されています。$_accountNameを確認してください');
+      case PurchasesErrorCode.invalidReceiptError:
+        return UserDisplayedError("不正な購入情報です。購入情報を確かめてください");
+      case PurchasesErrorCode.missingReceiptFileError:
+        return UserDisplayedError(
+            "購入者の情報が存在しません。$_accountName で端末にサインインをした上でお試しください");
+      case PurchasesErrorCode.networkError:
+        return UserDisplayedError("ネットワーク状態が不安定です。接続状況を確認した上でお試しください。");
+      case PurchasesErrorCode.invalidCredentialsError:
+        // Maybe developer or store settings error
+        // See more details: https://docs.revenuecat.com/docs/errors#---invalid_credentials
+        return FormatException(
+            "購入に失敗しました。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: ${exception.message}:${exception.details}");
+      case PurchasesErrorCode.unexpectedBackendResponseError:
+        // Maybe RevenueCat incident
+        // See more details: https://docs.revenuecat.com/docs/errors#-unexpected_backend_response_error
+        return FormatException(
+            "現在購入ができません。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: ${exception.message}:${exception.details}");
+      case PurchasesErrorCode.receiptInUseByOtherSubscriberError:
+        return UserDisplayedError(
+            '購入情報は別のユーザーで使用されています。端末にログインしている$_accountNameを確認してください');
+      case PurchasesErrorCode.invalidAppUserIdError:
+        return FormatException(
+            "ユーザーが確認できませんでした。アプリを再起動の上再度お試しください。詳細: ${exception.message}:${exception.details}");
+      case PurchasesErrorCode.operationAlreadyInProgressError:
+        return UserDisplayedError('購入処理が別途進んでおります。お時間をおいて再度ご確認ください');
+      case PurchasesErrorCode.unknownBackendError:
+        // Maybe RevenueCat incident
+        // See more details: https://docs.revenuecat.com/docs/errors#-unknown_backend_error
+        return FormatException(
+            "現在購入ができません。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: ${exception.message}:${exception.details}");
+      case PurchasesErrorCode.invalidAppleSubscriptionKeyError:
+        // Maybe developer setting error on AppStore
+        // See more details: https://docs.revenuecat.com/docs/errors#-invalid_apple_subscription_key
+        // > In order to provide Subscription Offers you must first generate a subscription key.
+        return FormatException(
+            "購入に失敗しました。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: ${exception.message}:${exception.details}");
+      case PurchasesErrorCode.ineligibleError:
+        // Invalidate user
+        // See more details: https://docs.revenuecat.com/docs/errors#-ineligible_error
+        return FormatException(
+            "お使いのユーザーでの購入に失敗しました。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: ${exception.message}:${exception.details}");
+      case PurchasesErrorCode.insufficientPermissionsError:
+        return UserDisplayedError(
+            'お使いの $_accountName ではプランへの加入ができません。お支払い情報をご確認の上再度お試しください');
+      case PurchasesErrorCode.paymentPendingError:
+        return UserDisplayedError(
+            '支払いが途中で止まっております。ログイン中の$_accountNameで$storeNameをお確かめくだい');
+      case PurchasesErrorCode.invalidSubscriberAttributesError:
+        // See more details: https://docs.revenuecat.com/docs/errors#-invalid_subscriber_attributes
+        return FormatException(
+            "購入に失敗しました。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: ${exception.message}:${exception.details}");
+    }
+  }
+}
