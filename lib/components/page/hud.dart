@@ -1,6 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:pilll/components/molecules/indicator.dart';
 
+class _InheritedWidget extends InheritedWidget {
+  _InheritedWidget({
+    Key? key,
+    required Widget child,
+    required this.state,
+  }) : super(key: key, child: child);
+
+  final _HUDState state;
+
+  @override
+  bool updateShouldNotify(covariant InheritedWidget oldWidget) {
+    return true;
+  }
+}
+
 class HUD extends StatefulWidget {
   final bool shown;
   final bool barrierEnabled;
@@ -17,7 +32,8 @@ class HUD extends StatefulWidget {
   _HUDState createState() => _HUDState();
 
   static _HUDState of(BuildContext context) {
-    final state = context.findAncestorStateOfType<_HUDState>();
+    final state =
+        context.dependOnInheritedWidgetOfExactType<_InheritedWidget>()?.state;
     if (state == null) {
       throw AssertionError('''
       Not found HUD from this context: $context
@@ -29,25 +45,29 @@ class HUD extends StatefulWidget {
 }
 
 class _HUDState extends State<HUD> {
-  bool shown = false;
+  bool _shown = false;
   show() {
     setState(() {
-      shown = true;
+      _shown = true;
     });
   }
 
   hide() {
     setState(() {
-      shown = false;
+      _shown = false;
     });
   }
 
-  bool get _shown => widget.shown || shown;
+  bool get shown => widget.shown || _shown;
 
   @override
   Widget build(BuildContext context) {
+    return _InheritedWidget(child: _body(context), state: this);
+  }
+
+  Widget _body(BuildContext context) {
     final child = this.widget.child;
-    if (child != null && !_shown) {
+    if (child != null && !shown) {
       return child;
     }
     if (child == null) {
@@ -63,13 +83,13 @@ class _HUDState extends State<HUD> {
 
   Widget _hud(BuildContext context) {
     return IgnorePointer(
-      ignoring: !_shown,
+      ignoring: !shown,
       child: Stack(
         children: [
-          if (_shown) ...[
+          if (shown) ...[
             if (widget.barrierEnabled)
               Visibility(
-                visible: _shown,
+                visible: shown,
                 child: ModalBarrier(
                   color: Colors.black.withOpacity(0.08),
                 ),
