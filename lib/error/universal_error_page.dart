@@ -34,6 +34,21 @@ class UniversalErrorPage extends StatefulWidget {
 
   @override
   _UniversalErrorPageState createState() => _UniversalErrorPageState();
+
+  static _UniversalErrorPageState of(BuildContext context) {
+    final exactType = context
+        .getElementForInheritedWidgetOfExactType<_InheritedWidget>()
+        ?.widget;
+    final stateWidget = exactType as _InheritedWidget?;
+    final state = stateWidget?.state;
+    if (state == null) {
+      throw AssertionError('''
+      Not found UniversalErrorMessage from this context: $context
+      The context should contains UniversalErrorMessage widget into current widget tree
+      ''');
+    }
+    return state;
+  }
 }
 
 class _UniversalErrorPageState extends State<UniversalErrorPage> {
@@ -84,10 +99,13 @@ class _UniversalErrorPageState extends State<UniversalErrorPage> {
                                 FontType.assisting.merge(TextColorStyle.black)),
                         onPressed: () {
                           analytics.logEvent(name: "reload_button_pressed");
-                          final reload = this.widget.reload;
-                          if (reload != null) {
-                            reload();
-                          }
+                          setState(() {
+                            _error = null;
+                            final reload = this.widget.reload;
+                            if (reload != null) {
+                              reload();
+                            }
+                          });
                         },
                       ),
                       TextButton.icon(

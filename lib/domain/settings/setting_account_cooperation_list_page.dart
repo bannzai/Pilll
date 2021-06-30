@@ -139,7 +139,7 @@ class SettingAccountCooperationListPage extends HookWidget {
       if (error is UserDisplayedError) {
         showErrorAlertWithError(context, error);
       } else {
-        store.handleException(error);
+        UniversalErrorPage.of(context).showError(error);
       }
       return;
     }

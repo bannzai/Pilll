@@ -63,8 +63,4 @@ class SettingAccountCooperationListPageStore
     }
     return callLinkWithGoogle(_userService);
   }
-
-  handleException(Object exception) {
-    state = state.copyWith(exception: exception);
-  }
 }
