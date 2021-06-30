@@ -137,14 +137,6 @@ class PremiumIntroductionStore extends StateNotifier<PremiumIntroductionState> {
     return "${package.product.priceString}";
   }
 
-  String get storeName {
-    return Platform.isIOS ? "App Store" : "Google Play";
-  }
-
-  String get _accountName {
-    return Platform.isIOS ? "Apple ID" : "Google アカウント";
-  }
-
   selectedMonthly() {
     final package = state.monthlyPackage;
     if (package == null) {
