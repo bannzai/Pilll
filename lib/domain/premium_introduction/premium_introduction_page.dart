@@ -21,6 +21,7 @@ import 'package:pilll/error/error_alert.dart';
 import 'package:pilll/error/universal_error_page.dart';
 import 'package:pilll/signin/signin_sheet.dart';
 import 'package:pilll/signin/signin_sheet_state.dart';
+import 'package:pilll/util/platform/platform.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class PremiumIntroductionPage extends HookWidget {
@@ -31,8 +32,6 @@ class PremiumIntroductionPage extends HookWidget {
     if (state.isNotYetLoad) {
       return Indicator();
     }
-    final annualPackage = state.annualPackage;
-    final monthlyPackage = state.monthlyPackage;
     return HUD(
       shown: state.isLoading,
       child: UniversalErrorPage(
@@ -62,68 +61,6 @@ class PremiumIntroductionPage extends HookWidget {
                           PremiumIntroductionLimitedHeader(),
                           _footer(context, store, state),
                         ],
-                      ),
-                    ),
-                    Align(
-                      alignment: Alignment.bottomCenter,
-                      child: Container(
-                        decoration: BoxDecoration(
-                          color: PilllColors.white,
-                          boxShadow: [
-                            BoxShadow(
-                              color: PilllColors.shadow,
-                              blurRadius: 6.0,
-                              offset: Offset(0, -4),
-                            ),
-                          ],
-                        ),
-                        padding: EdgeInsets.only(left: 20, right: 20),
-                        height: 100,
-                        width: MediaQuery.of(context).size.width,
-                        child: Center(
-                          child: PrimaryButton(
-                            text: state.doneButtonText,
-                            onPressed: state.isPremium
-                                ? null
-                                : () async {
-                                    if (state.hasLoginProvider) {
-                                      try {
-                                        store.showHUD();
-                                        final shouldShowCompleteDialog =
-                                            await store.purchase(
-                                                state.selectedPackage!);
-                                        if (shouldShowCompleteDialog) {
-                                          showDialog(
-                                              context: context,
-                                              builder: (context) {
-                                                return PremiumCompleteDialog();
-                                              });
-                                        }
-                                      } catch (error) {
-                                        print(
-                                            "caused purchase error for $error");
-                                        if (error is UserDisplayedError) {
-                                          showErrorAlertWithError(
-                                              context, error);
-                                        } else {
-                                          store.handleException(error);
-                                        }
-                                      } finally {
-                                        store.hideHUD();
-                                      }
-                                    } else {
-                                      showSigninSheet(context,
-                                          SigninSheetStateContext.premium,
-                                          (linkAccountType) {
-                                        analytics.logEvent(
-                                            name:
-                                                "signined_account_on_premium");
-                                        showDemographyPageIfNeeded(context);
-                                      });
-                                    }
-                                  },
-                          ),
-                        ),
                       ),
                     ),
                   ],
@@ -205,7 +142,7 @@ class PremiumIntroductionPage extends HookWidget {
                   ),
                   TextSpan(
                     text:
-                        "・購入後、自動更新の解約は${store.storeName}アプリのアカウント設定で行えます。(アプリ内から自動更新の解約は行なえません)",
+                        "・購入後、自動更新の解約は${storeName}アプリのアカウント設定で行えます。(アプリ内から自動更新の解約は行なえません)",
                   ),
                 ],
               ),
