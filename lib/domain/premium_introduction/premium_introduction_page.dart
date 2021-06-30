@@ -4,23 +4,17 @@ import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:pilll/analytics.dart';
-import 'package:pilll/components/atoms/buttons.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/components/molecules/indicator.dart';
 import 'package:pilll/components/page/hud.dart';
-import 'package:pilll/domain/demography/demography_page.dart';
-import 'package:pilll/domain/premium_introduction/premium_complete_dialog.dart';
 import 'package:pilll/domain/premium_introduction/components/premium_introduction_limited_header.dart';
 import 'package:pilll/domain/premium_introduction/premium_introduction_state.dart';
 import 'package:pilll/domain/premium_introduction/premium_introduction_store.dart';
 import 'package:pilll/entity/user_error.dart';
 import 'package:pilll/error/error_alert.dart';
 import 'package:pilll/error/universal_error_page.dart';
-import 'package:pilll/signin/signin_sheet.dart';
-import 'package:pilll/signin/signin_sheet_state.dart';
 import 'package:pilll/util/platform/platform.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -142,7 +136,7 @@ class PremiumIntroductionPage extends HookWidget {
                   ),
                   TextSpan(
                     text:
-                        "・購入後、自動更新の解約は${storeName}アプリのアカウント設定で行えます。(アプリ内から自動更新の解約は行なえません)",
+                        "・購入後、自動更新の解約は$storeNameアプリのアカウント設定で行えます。(アプリ内から自動更新の解約は行なえません)",
                   ),
                 ],
               ),
