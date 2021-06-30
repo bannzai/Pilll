@@ -29,7 +29,7 @@ class PremiumIntroductionStore extends StateNotifier<PremiumIntroductionState> {
     Future(() async {
       _subscribe();
 
-      state = state.copyWith(exception: null, selectedPackage: null);
+      state = state.copyWith(exception: null);
       state = state.copyWith(
         hasLoginProvider:
             _authService.isLinkedApple() || _authService.isLinkedGoogle(),
