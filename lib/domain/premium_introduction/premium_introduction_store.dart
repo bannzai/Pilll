@@ -6,6 +6,7 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:intl/intl.dart';
 import 'package:pilll/analytics.dart';
 import 'package:pilll/domain/premium_introduction/premium_introduction_state.dart';
+import 'package:pilll/domain/premium_introduction/util/map_to_error.dart';
 import 'package:pilll/entity/user_error.dart';
 import 'package:pilll/error_log.dart';
 import 'package:pilll/purchases.dart';
@@ -39,9 +40,6 @@ class PremiumIntroductionStore extends StateNotifier<PremiumIntroductionState> {
       });
       _fetchOfferings().then((value) {
         state = state.copyWith(offerings: value);
-        if (state.selectedPackage == null) {
-          state = state.copyWith(selectedPackage: state.annualPackage);
-        }
       });
     });
   }
@@ -109,7 +107,7 @@ class PremiumIntroductionStore extends StateNotifier<PremiumIntroductionState> {
         "details": exception.details.toString(),
         "message": exception.message
       });
-      final newException = _mapToDisplayedException(exception);
+      final newException = mapToDisplayedException(exception);
       if (newException == null) {
         return Future.value(false);
       }
