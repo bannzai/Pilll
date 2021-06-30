@@ -32,8 +32,6 @@ class HUD extends StatefulWidget {
   _HUDState createState() => _HUDState();
 
   static _HUDState of(BuildContext context) {
-    final state =
-        context.dependOnInheritedWidgetOfExactType<_InheritedWidget>()?.state;
     final exactType = context
         .getElementForInheritedWidgetOfExactType<_InheritedWidget>()
         ?.widget;
