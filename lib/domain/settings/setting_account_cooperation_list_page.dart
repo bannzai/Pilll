@@ -26,51 +26,55 @@ class SettingAccountCooperationListPage extends HookWidget {
       child: UniversalErrorPage(
         error: state.exception,
         reload: () => store.reset(),
-        child: Scaffold(
-          backgroundColor: PilllColors.background,
-          appBar: AppBar(
-            leading: IconButton(
-              icon: Icon(Icons.arrow_back, color: Colors.black),
-              onPressed: () => Navigator.of(context).pop(),
-            ),
-            title: Text('アカウント設定', style: TextColorStyle.main),
-            backgroundColor: PilllColors.white,
-          ),
-          body: Container(
-            child: ListView(
-              children: [
-                Container(
-                  padding: EdgeInsets.only(top: 16, left: 15, right: 16),
-                  child: Text(
-                    "アカウント登録",
-                    style: FontType.assisting.merge(TextColorStyle.primary),
-                  ),
+        child: Builder(
+          builder: (BuildContext context) {
+            return Scaffold(
+              backgroundColor: PilllColors.background,
+              appBar: AppBar(
+                leading: IconButton(
+                  icon: Icon(Icons.arrow_back, color: Colors.black),
+                  onPressed: () => Navigator.of(context).pop(),
                 ),
-                SettingAccountCooperationRow(
-                  accountType: LinkAccountType.apple,
-                  isLinked: () => state.isLinkedApple,
-                  onTap: () async {
-                    if (state.isLinkedApple) {
-                      return;
-                    }
-                    _linkApple(context, store);
-                  },
+                title: Text('アカウント設定', style: TextColorStyle.main),
+                backgroundColor: PilllColors.white,
+              ),
+              body: Container(
+                child: ListView(
+                  children: [
+                    Container(
+                      padding: EdgeInsets.only(top: 16, left: 15, right: 16),
+                      child: Text(
+                        "アカウント登録",
+                        style: FontType.assisting.merge(TextColorStyle.primary),
+                      ),
+                    ),
+                    SettingAccountCooperationRow(
+                      accountType: LinkAccountType.apple,
+                      isLinked: () => state.isLinkedApple,
+                      onTap: () async {
+                        if (state.isLinkedApple) {
+                          return;
+                        }
+                        _linkApple(context, store);
+                      },
+                    ),
+                    Divider(indent: 16),
+                    SettingAccountCooperationRow(
+                      accountType: LinkAccountType.google,
+                      isLinked: () => state.isLinkedGoogle,
+                      onTap: () async {
+                        if (state.isLinkedGoogle) {
+                          return;
+                        }
+                        _linkGoogle(context, store);
+                      },
+                    ),
+                    Divider(indent: 16),
+                  ],
                 ),
-                Divider(indent: 16),
-                SettingAccountCooperationRow(
-                  accountType: LinkAccountType.google,
-                  isLinked: () => state.isLinkedGoogle,
-                  onTap: () async {
-                    if (state.isLinkedGoogle) {
-                      return;
-                    }
-                    _linkGoogle(context, store);
-                  },
-                ),
-                Divider(indent: 16),
-              ],
-            ),
-          ),
+              ),
+            );
+          },
         ),
       ),
     );
@@ -108,7 +112,7 @@ class SettingAccountCooperationListPage extends HookWidget {
     analytics.logEvent(
       name: "link_event_$eventSuffix",
     );
-    store.showHUD();
+    HUD.of(context).show();
     try {
       final bool isDetermined;
       switch (accountType) {
@@ -119,7 +123,7 @@ class SettingAccountCooperationListPage extends HookWidget {
           isDetermined = await _handleGoogle(store);
           break;
       }
-      store.hideHUD();
+      HUD.of(context).hide();
       analytics.logEvent(
         name: "did_end_link_event_$eventSuffix",
       );
@@ -131,7 +135,7 @@ class SettingAccountCooperationListPage extends HookWidget {
           name: "did_failure_link_event_$eventSuffix",
           parameters: {"errot_type": error.runtimeType.toString()});
 
-      store.hideHUD();
+      HUD.of(context).hide();
       if (error is UserDisplayedError) {
         showErrorAlertWithError(context, error);
       } else {
