@@ -1,5 +1,4 @@
 import 'dart:async';
-import 'dart:io';
 
 import 'package:flutter/services.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
@@ -133,22 +132,6 @@ class PremiumIntroductionStore extends StateNotifier<PremiumIntroductionState> {
 
   String monthlyPriceString(Package package) {
     return "${package.product.priceString}";
-  }
-
-  selectedMonthly() {
-    final package = state.monthlyPackage;
-    if (package == null) {
-      throw AssertionError("unexpected monthly package is not exists");
-    }
-    state = state.copyWith(selectedPackage: package);
-  }
-
-  selectedAnnual() {
-    final package = state.annualPackage;
-    if (package == null) {
-      throw AssertionError("unexpected annual package is not exists");
-    }
-    state = state.copyWith(selectedPackage: package);
   }
 
   handleException(Object exception) {
