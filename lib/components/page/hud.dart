@@ -11,8 +11,8 @@ class _InheritedWidget extends InheritedWidget {
   final _HUDState state;
 
   @override
-  bool updateShouldNotify(covariant InheritedWidget oldWidget) {
-    return true;
+  bool updateShouldNotify(covariant _InheritedWidget oldWidget) {
+    return false;
   }
 }
 
@@ -34,6 +34,11 @@ class HUD extends StatefulWidget {
   static _HUDState of(BuildContext context) {
     final state =
         context.dependOnInheritedWidgetOfExactType<_InheritedWidget>()?.state;
+    final exactType = context
+        .getElementForInheritedWidgetOfExactType<_InheritedWidget>()
+        ?.widget;
+    final stateWidget = exactType as _InheritedWidget?;
+    final state = stateWidget?.state;
     if (state == null) {
       throw AssertionError('''
       Not found HUD from this context: $context
@@ -66,10 +71,7 @@ class _HUDState extends State<HUD> {
   }
 
   Widget _body(BuildContext context) {
-    final child = this.widget.child;
-    if (child != null && !shown) {
-      return child;
-    }
+    final child = widget.child;
     if (child == null) {
       return _hud(context);
     }
