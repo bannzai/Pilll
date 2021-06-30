@@ -9,7 +9,7 @@ import 'package:pilll/service/auth.dart';
 import 'package:pilll/service/user.dart';
 import 'package:riverpod/riverpod.dart';
 
-final settingAccountCooperationListProvider = StateNotifierProvider(
+final settingAccountCooperationListProvider = StateNotifierProvider.autoDispose(
   (ref) => SettingAccountCooperationListPageStore(
     ref.watch(userServiceProvider),
     ref.watch(authServiceProvider),
@@ -27,8 +27,10 @@ class SettingAccountCooperationListPageStore
   }
 
   reset() {
-    state = state.copyWith(
-        user: FirebaseAuth.instance.currentUser, exception: null);
+    Future(() async {
+      state = state.copyWith(
+          user: FirebaseAuth.instance.currentUser, exception: null);
+    });
     _subscribe();
   }
 
@@ -60,17 +62,5 @@ class SettingAccountCooperationListPageStore
       throw AssertionError("unexpected already linked google when link");
     }
     return callLinkWithGoogle(_userService);
-  }
-
-  handleException(Object exception) {
-    state = state.copyWith(exception: exception);
-  }
-
-  showHUD() {
-    state = state.copyWith(isLoading: true);
-  }
-
-  hideHUD() {
-    state = state.copyWith(isLoading: false);
   }
 }
