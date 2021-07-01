@@ -21,11 +21,12 @@ class PremiumIntroductionPage extends HookWidget {
   Widget build(BuildContext context) {
     final store = useProvider(premiumIntroductionStoreProvider);
     final state = useProvider(premiumIntroductionStoreProvider.state);
+    final offerings = state.offerings;
+    final trialDeadlineDate = state.trialDeadlineDate;
     if (state.isNotYetLoad) {
       return Indicator();
     }
-    final offerings = state.offerings;
-    final trialDeadlineDate = state.trialDeadlineDate;
+
     return HUD(
       shown: state.isLoading,
       child: UniversalErrorPage(
@@ -56,13 +57,17 @@ class PremiumIntroductionPage extends HookWidget {
                         mainAxisSize: MainAxisSize.min,
                         children: [
                           PremiumIntroductionHeader(shouldShowDismiss: true),
-                          if (state.isTrial && trialDeadlineDate != null)
+                          if (trialDeadlineDate != null)
                             PremiumIntroductionLimited(
                               trialDeadlineDate: trialDeadlineDate,
                             ),
-                          if (offerings != null) ...[
+                          if (offerings != null &&
+                              trialDeadlineDate != null) ...[
                             SizedBox(height: 32),
-                            PurchaseButtons(offerings: offerings),
+                            PurchaseButtons(
+                              offerings: offerings,
+                              trialDeadlineDate: trialDeadlineDate,
+                            ),
                           ],
                           SizedBox(height: 24),
                           Text(
