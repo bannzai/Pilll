@@ -6,13 +6,6 @@ import 'package:pilll/components/atoms/text_color.dart';
 class PremiumIntroductionLimited extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
-      decoration: BoxDecoration(
-        color: Colors.transparent,
-        image: DecorationImage(
-          image: AssetImage("images/premium_background.png"),
-          fit: BoxFit.cover,
-        ),
-      ),
       padding: EdgeInsets.only(left: 40, right: 40, bottom: 40),
       width: MediaQuery.of(context).size.width,
       child: Column(

@@ -16,26 +16,11 @@ class PremiumIntroductionFotter extends StatelessWidget {
   Widget build(BuildContext context) {
     final store = PremiumIntroductionFooterStateStore();
     return Container(
-      padding: EdgeInsets.only(top: 24, bottom: 24),
+      padding: EdgeInsets.only(bottom: 24),
       width: MediaQuery.of(context).size.width,
       color: PilllColors.white,
       child: Column(
         children: [
-          Text(
-            '''
-今後も便利な機能を続々追加予定です！
-お楽しみに✨
-            ''',
-            textAlign: TextAlign.center,
-            style: TextColorStyle.black.merge(
-              TextStyle(
-                fontWeight: FontWeight.w400,
-                fontFamily: FontFamily.japanese,
-                fontSize: 14,
-              ),
-            ),
-          ),
-          SizedBox(height: 32),
           Padding(
             padding: const EdgeInsets.only(left: 16, right: 16),
             child: RichText(

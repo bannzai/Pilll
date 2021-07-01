@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/components/atoms/color.dart';
+import 'package:pilll/components/atoms/font.dart';
+import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/components/molecules/indicator.dart';
 import 'package:pilll/components/page/hud.dart';
 import 'package:pilll/domain/premium_introduction/components/premium_introduction_footer.dart';
@@ -11,6 +13,7 @@ import 'package:pilll/domain/premium_introduction/components/premium_introductio
 import 'package:pilll/domain/premium_introduction/components/purchase_buttons.dart';
 import 'package:pilll/domain/premium_introduction/premium_introduction_store.dart';
 import 'package:pilll/error/universal_error_page.dart';
+import 'package:pilll/util/platform/platform.dart';
 
 class PremiumIntroductionPage extends HookWidget {
   @override
@@ -34,6 +37,17 @@ class PremiumIntroductionPage extends HookWidget {
                 width: MediaQuery.of(context).size.width,
                 child: Stack(
                   children: [
+                    Container(
+                      decoration: BoxDecoration(
+                        color: Colors.transparent,
+                        image: DecorationImage(
+                          image: AssetImage("images/premium_background.png"),
+                          fit: BoxFit.cover,
+                        ),
+                      ),
+                      padding: EdgeInsets.only(left: 40, right: 40, bottom: 40),
+                      width: MediaQuery.of(context).size.width,
+                    ),
                     SingleChildScrollView(
                       padding: EdgeInsets.only(bottom: 100),
                       child: Column(
@@ -43,6 +57,19 @@ class PremiumIntroductionPage extends HookWidget {
                           if (offerings != null) ...[
                             PurchaseButtons(offerings: offerings),
                           ],
+                          SizedBox(height: 24),
+                          Text(
+                            "$storeNameからいつでも簡単に解約出来ます",
+                            textAlign: TextAlign.center,
+                            style: TextColorStyle.black.merge(
+                              TextStyle(
+                                fontWeight: FontWeight.w400,
+                                fontFamily: FontFamily.japanese,
+                                fontSize: 14,
+                              ),
+                            ),
+                          ),
+                          SizedBox(height: 32),
                           PremiumIntroductionFotter(),
                         ],
                       ),
