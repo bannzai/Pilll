@@ -51,10 +51,12 @@ class PremiumIntroductionPage extends HookWidget {
                     SingleChildScrollView(
                       padding: EdgeInsets.only(bottom: 100),
                       child: Column(
+                        mainAxisSize: MainAxisSize.min,
                         children: [
                           PremiumIntroductionHeader(shouldShowDismiss: true),
                           PremiumIntroductionLimited(),
                           if (offerings != null) ...[
+                            SizedBox(height: 32),
                             PurchaseButtons(offerings: offerings),
                           ],
                           SizedBox(height: 24),

@@ -6,7 +6,7 @@ import 'package:pilll/components/atoms/text_color.dart';
 class PremiumIntroductionLimited extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.only(left: 40, right: 40, bottom: 40),
+      padding: EdgeInsets.only(left: 40, right: 40),
       width: MediaQuery.of(context).size.width,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
@@ -67,7 +67,6 @@ class PremiumIntroductionLimited extends StatelessWidget {
           ),
           SizedBox(height: 8),
           SvgPicture.asset("images/arrow_down.svg"),
-          SizedBox(height: 28),
         ],
       ),
     );
