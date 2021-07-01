@@ -2,9 +2,10 @@ import 'package:pilll/analytics.dart';
 import 'package:pilll/components/molecules/indicator.dart';
 import 'package:pilll/components/organisms/pill/pill_mark.dart';
 import 'package:pilll/components/organisms/pill/pill_sheet.dart';
-import 'package:pilll/domain/demography/demography_page.dart';
 import 'package:pilll/domain/initial_setting/migrate_info.dart';
 import 'package:pilll/domain/premium_trial/premium_trial_complete_modal.dart';
+import 'package:pilll/domain/record/components/notification_bar.dart';
+import 'package:pilll/domain/record/components/notification_bar_store_parameter.dart';
 import 'package:pilll/domain/record/record_page_state.dart';
 import 'package:pilll/domain/record/record_page_store.dart';
 import 'package:pilll/domain/record/record_taken_information.dart';
@@ -22,8 +23,6 @@ import 'package:pilll/components/atoms/buttons.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
-import 'package:pilll/signin/signin_sheet.dart';
-import 'package:pilll/signin/signin_sheet_state.dart';
 import 'package:pilll/util/datetime/day.dart';
 import 'package:pilll/util/shared_preference/keys.dart';
 import 'package:pilll/util/toolbar/picker_toolbar.dart';
@@ -152,7 +151,13 @@ class RecordPage extends HookWidget {
           child: SingleChildScrollView(
             child: Column(
               children: [
-                _notification(context, state, store),
+                NotificationBar(
+                  NotificationBarStoreParameter(
+                      pillSheet: state.entity,
+                      isLinkedLoginProvider: state.isLinkedLoginProvider,
+                      totalCountOfActionForTakenPill:
+                          state.totalCountOfActionForTakenPill),
+                ),
                 SizedBox(height: 64),
                 if (state.isInvalid)
                   _empty(context, store, settingEntity.pillSheetType),
@@ -177,79 +182,6 @@ class RecordPage extends HookWidget {
       return _cancelTakeButton(currentPillSheet, store);
     else
       return _takenButton(context, currentPillSheet, store);
-  }
-
-  Widget _notification(
-    BuildContext context,
-    RecordPageState state,
-    RecordPageStore store,
-  ) {
-    final recommendedSignupNotification = state.recommendedSignupNotification;
-    if (recommendedSignupNotification.isNotEmpty) {
-      return GestureDetector(
-        onTap: () => showSigninSheet(
-            context, SigninSheetStateContext.recordPage, (linkAccount) {
-          analytics.logEvent(name: "signined_account_from_notification_bar");
-          showDemographyPageIfNeeded(context);
-        }),
-        child: Container(
-          height: 64,
-          color: PilllColors.secondary,
-          child: Row(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              IconButton(
-                  icon: Icon(Icons.close, color: Colors.white),
-                  onPressed: () {
-                    analytics.logEvent(
-                        name: "record_page_signing_notification_closed");
-                    store.closeRecommendedSignupNotification();
-                  }),
-              Column(
-                children: [
-                  SizedBox(height: 12),
-                  Text(
-                    recommendedSignupNotification,
-                    style: TextColorStyle.white.merge(FontType.descriptionBold),
-                    textAlign: TextAlign.center,
-                  ),
-                ],
-              ),
-              Column(
-                children: [
-                  SizedBox(height: 8),
-                  IconButton(
-                    icon: SvgPicture.asset(
-                      "images/arrow_right.svg",
-                      color: Colors.white,
-                    ),
-                    onPressed: () {},
-                  ),
-                ],
-              ),
-            ],
-          ),
-        ),
-      );
-    }
-
-    final restDurationNotification = state.restDurationNotification;
-    if (restDurationNotification.isNotEmpty) {
-      return Container(
-        constraints: BoxConstraints.expand(
-          height: 26,
-          width: MediaQuery.of(context).size.width,
-        ),
-        color: PilllColors.secondary,
-        child: Center(
-          child: Text(restDurationNotification,
-              style: FontType.assistingBold.merge(TextColorStyle.white)),
-        ),
-      );
-    }
-
-    return Container();
   }
 
   Widget _takenButton(

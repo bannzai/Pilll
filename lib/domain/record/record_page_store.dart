@@ -44,9 +44,6 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
           entities.where((element) => element.id != entity?.id).length >= 1;
       final setting = await _settingService.fetch();
       final sharedPreferences = await SharedPreferences.getInstance();
-      final recommendedSignupNotificationIsAlreadyShow = sharedPreferences
-              .getBool(BoolKey.recommendedSignupNotificationIsAlreadyShow) ??
-          false;
       final user = await _userService.fetch();
       final totalCountOfActionForTakenPill =
           sharedPreferences.getInt(IntKey.totalCountOfActionForTakenPill) ?? 0;
@@ -73,8 +70,6 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
         firstLoadIsEnded: true,
         isLinkedLoginProvider:
             _authService.isLinkedApple() || _authService.isLinkedGoogle(),
-        recommendedSignupNotificationIsAlreadyShow:
-            recommendedSignupNotificationIsAlreadyShow,
         totalCountOfActionForTakenPill: totalCountOfActionForTakenPill,
         exception: null,
         isPillSheetFinishedInThePast: isPillSheetFinishedInThePast,
@@ -181,13 +176,6 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
     }
     return number > entity.lastTakenPillNumber &&
         number <= entity.todayPillNumber;
-  }
-
-  Future<void> closeRecommendedSignupNotification() async {
-    final sharedPreferences = await SharedPreferences.getInstance();
-    sharedPreferences.setBool(
-        BoolKey.recommendedSignupNotificationIsAlreadyShow, true);
-    state = state.copyWith(recommendedSignupNotificationIsAlreadyShow: true);
   }
 
   handleException(Object exception) {
