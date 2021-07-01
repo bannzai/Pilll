@@ -25,6 +25,7 @@ class PremiumIntroductionPage extends HookWidget {
       return Indicator();
     }
     final offerings = state.offerings;
+    final trialDeadlineDate = state.trialDeadlineDate;
     return HUD(
       shown: state.isLoading,
       child: UniversalErrorPage(
@@ -55,7 +56,10 @@ class PremiumIntroductionPage extends HookWidget {
                         mainAxisSize: MainAxisSize.min,
                         children: [
                           PremiumIntroductionHeader(shouldShowDismiss: true),
-                          PremiumIntroductionLimited(),
+                          if (state.isTrial && trialDeadlineDate != null)
+                            PremiumIntroductionLimited(
+                              trialDeadlineDate: trialDeadlineDate,
+                            ),
                           if (offerings != null) ...[
                             SizedBox(height: 32),
                             PurchaseButtons(offerings: offerings),

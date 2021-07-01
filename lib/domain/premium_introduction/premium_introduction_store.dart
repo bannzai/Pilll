@@ -30,7 +30,12 @@ class PremiumIntroductionStore extends StateNotifier<PremiumIntroductionState> {
             _authService.isLinkedApple() || _authService.isLinkedGoogle(),
       );
       _userService.fetch().then((value) {
-        state = state.copyWith(isPremium: value.isPremium);
+        state = state.copyWith(
+          isPremium: value.isPremium,
+          isTrial: value.isTrial,
+          beginTrialDate: value.beginTrialDate,
+          trialDeadlineDate: value.trialDeadlineDate,
+        );
       });
       _fetchOfferings().then((value) {
         state = state.copyWith(offerings: value);
