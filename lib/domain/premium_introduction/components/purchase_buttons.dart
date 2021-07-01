@@ -13,7 +13,7 @@ import 'package:purchases_flutter/purchases_flutter.dart';
 
 class PurchaseButtons extends StatelessWidget {
   final Offerings offerings;
-  final DateTime trialDeadlineDate;
+  final DateTime? trialDeadlineDate;
 
   const PurchaseButtons({
     Key? key,

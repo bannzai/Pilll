@@ -8,7 +8,8 @@ abstract class PurchaseButtonsState implements _$PurchaseButtonsState {
   PurchaseButtonsState._();
   factory PurchaseButtonsState({
     required Offerings offerings,
-    required bool isOverTrialDeadline,
+    required DateTime? trialDeadlineDate,
+    required bool? isOverTrialDeadline,
   }) = _PurchaseButtonsState;
 
   List<Package> get _packages {

@@ -7,6 +7,6 @@ abstract class PurchaseButtonsStoreParameter
     with _$PurchaseButtonsStoreParameter {
   factory PurchaseButtonsStoreParameter({
     required Offerings offerings,
-    required DateTime trialDeadlineDate,
+    required DateTime? trialDeadlineDate,
   }) = _PurchaseButtonsStoreParameter;
 }

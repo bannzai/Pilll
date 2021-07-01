@@ -17,7 +17,7 @@ class _$PurchaseButtonsStoreParameterTearOff {
   const _$PurchaseButtonsStoreParameterTearOff();
 
   _PurchaseButtonsStoreParameter call(
-      {required Offerings offerings, required DateTime trialDeadlineDate}) {
+      {required Offerings offerings, required DateTime? trialDeadlineDate}) {
     return _PurchaseButtonsStoreParameter(
       offerings: offerings,
       trialDeadlineDate: trialDeadlineDate,
@@ -31,7 +31,7 @@ const $PurchaseButtonsStoreParameter = _$PurchaseButtonsStoreParameterTearOff();
 /// @nodoc
 mixin _$PurchaseButtonsStoreParameter {
   Offerings get offerings => throw _privateConstructorUsedError;
-  DateTime get trialDeadlineDate => throw _privateConstructorUsedError;
+  DateTime? get trialDeadlineDate => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $PurchaseButtonsStoreParameterCopyWith<PurchaseButtonsStoreParameter>
@@ -44,7 +44,7 @@ abstract class $PurchaseButtonsStoreParameterCopyWith<$Res> {
           PurchaseButtonsStoreParameter value,
           $Res Function(PurchaseButtonsStoreParameter) then) =
       _$PurchaseButtonsStoreParameterCopyWithImpl<$Res>;
-  $Res call({Offerings offerings, DateTime trialDeadlineDate});
+  $Res call({Offerings offerings, DateTime? trialDeadlineDate});
 }
 
 /// @nodoc
@@ -69,7 +69,7 @@ class _$PurchaseButtonsStoreParameterCopyWithImpl<$Res>
       trialDeadlineDate: trialDeadlineDate == freezed
           ? _value.trialDeadlineDate
           : trialDeadlineDate // ignore: cast_nullable_to_non_nullable
-              as DateTime,
+              as DateTime?,
     ));
   }
 }
@@ -82,7 +82,7 @@ abstract class _$PurchaseButtonsStoreParameterCopyWith<$Res>
           $Res Function(_PurchaseButtonsStoreParameter) then) =
       __$PurchaseButtonsStoreParameterCopyWithImpl<$Res>;
   @override
-  $Res call({Offerings offerings, DateTime trialDeadlineDate});
+  $Res call({Offerings offerings, DateTime? trialDeadlineDate});
 }
 
 /// @nodoc
@@ -111,7 +111,7 @@ class __$PurchaseButtonsStoreParameterCopyWithImpl<$Res>
       trialDeadlineDate: trialDeadlineDate == freezed
           ? _value.trialDeadlineDate
           : trialDeadlineDate // ignore: cast_nullable_to_non_nullable
-              as DateTime,
+              as DateTime?,
     ));
   }
 }
@@ -126,7 +126,7 @@ class _$_PurchaseButtonsStoreParameter
   @override
   final Offerings offerings;
   @override
-  final DateTime trialDeadlineDate;
+  final DateTime? trialDeadlineDate;
 
   @override
   String toString() {
@@ -162,12 +162,12 @@ abstract class _PurchaseButtonsStoreParameter
     implements PurchaseButtonsStoreParameter {
   factory _PurchaseButtonsStoreParameter(
       {required Offerings offerings,
-      required DateTime trialDeadlineDate}) = _$_PurchaseButtonsStoreParameter;
+      required DateTime? trialDeadlineDate}) = _$_PurchaseButtonsStoreParameter;
 
   @override
   Offerings get offerings => throw _privateConstructorUsedError;
   @override
-  DateTime get trialDeadlineDate => throw _privateConstructorUsedError;
+  DateTime? get trialDeadlineDate => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$PurchaseButtonsStoreParameterCopyWith<_PurchaseButtonsStoreParameter>

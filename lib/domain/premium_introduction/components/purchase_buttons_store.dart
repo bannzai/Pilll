@@ -12,24 +12,31 @@ import 'package:flutter/services.dart';
 import 'package:pilll/analytics.dart';
 import 'package:riverpod/riverpod.dart';
 
-final purchaseButtonsStoreProvider = StateNotifierProvider.family.autoDispose(
-  (ref, PurchaseButtonsStoreParameter parameter) => PurchaseButtonsStore(
+final purchaseButtonsStoreProvider = StateNotifierProvider.family
+    .autoDispose((ref, PurchaseButtonsStoreParameter parameter) {
+  final trialDeadlineDate = parameter.trialDeadlineDate;
+  return PurchaseButtonsStore(
     offerings: parameter.offerings,
-    isOverTrialDeadline:
-        ref.watch(isOverTrialDeadlineProvider(parameter.trialDeadlineDate)),
-  ),
-);
+    trialDeadlineDate: trialDeadlineDate,
+    isOverTrialDeadline: trialDeadlineDate != null
+        ? ref.watch(isOverTrialDeadlineProvider(trialDeadlineDate))
+        : null,
+  );
+});
 
 class PurchaseButtonsStore extends StateNotifier<PurchaseButtonsState> {
   final Offerings offerings;
-  final bool isOverTrialDeadline;
+  final DateTime? trialDeadlineDate;
+  final bool? isOverTrialDeadline;
 
   PurchaseButtonsStore({
     required this.offerings,
+    required this.trialDeadlineDate,
     required this.isOverTrialDeadline,
   }) : super(
           PurchaseButtonsState(
             offerings: offerings,
+            trialDeadlineDate: trialDeadlineDate,
             isOverTrialDeadline: isOverTrialDeadline,
           ),
         );
