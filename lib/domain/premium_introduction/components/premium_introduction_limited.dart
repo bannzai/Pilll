@@ -10,7 +10,7 @@ import 'package:pilll/util/formatter/date_time_formatter.dart';
 
 class PremiumIntroductionLimited extends HookWidget {
   final DateTime trialDeadlineDate;
-  DateTime get discountedPriceDeadline =>
+  DateTime get discountPriceDeadline =>
       trialDeadlineDate.add(Duration(hours: 48));
 
   const PremiumIntroductionLimited({Key? key, required this.trialDeadlineDate})
@@ -19,7 +19,7 @@ class PremiumIntroductionLimited extends HookWidget {
     final timer = useProvider(timerStoreProvider);
     timer.fire(now());
     final timerState = useProvider(timerStoreProvider.state);
-    final diff = discountedPriceDeadline.difference(timerState);
+    final diff = discountPriceDeadline.difference(timerState);
     final String countdown;
     if (diff.inSeconds <= 0) {
       countdown = "00:00:00";
