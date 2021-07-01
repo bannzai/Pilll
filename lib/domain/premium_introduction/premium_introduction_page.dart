@@ -35,12 +35,13 @@ class PremiumIntroductionPage extends HookWidget {
         error: null,
         reload: () => store.reset(),
         child: Scaffold(
-          body: Container(
-            color: PilllColors.white,
+          body: SafeArea(
             child: PremiumIntroductionBody(
-                isBlessMode: isBlessMode,
-                trialDeadlineDate: trialDeadlineDate,
-                offerings: offerings),
+              isBlessMode: isBlessMode,
+              trialDeadlineDate: trialDeadlineDate,
+              offerings: offerings,
+              scrollController: null,
+            ),
           ),
         ),
       ),

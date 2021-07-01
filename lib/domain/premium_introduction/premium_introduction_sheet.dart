@@ -32,7 +32,7 @@ class PremiumIntroductionSheet extends HookWidget {
     }
 
     return DraggableScrollableSheet(
-      initialChildSize: 0.7,
+      initialChildSize: 0.5,
       maxChildSize: 0.7,
       builder: (context, scrollController) {
         return HUD(
@@ -41,9 +41,11 @@ class PremiumIntroductionSheet extends HookWidget {
             error: null,
             reload: () => store.reset(),
             child: PremiumIntroductionBody(
-                isBlessMode: isBlessMode,
-                trialDeadlineDate: trialDeadlineDate,
-                offerings: offerings),
+              isBlessMode: isBlessMode,
+              trialDeadlineDate: trialDeadlineDate,
+              offerings: offerings,
+              scrollController: scrollController,
+            ),
           ),
         );
       },
@@ -56,5 +58,7 @@ showPremiumIntroductionSheet(BuildContext context) {
   showModalBottomSheet(
     context: context,
     builder: (_) => PremiumIntroductionSheet(),
+    isScrollControlled: true,
+    backgroundColor: Colors.transparent,
   );
 }
