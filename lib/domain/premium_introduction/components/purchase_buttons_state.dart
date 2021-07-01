@@ -3,6 +3,9 @@ import 'package:purchases_flutter/object_wrappers.dart';
 
 part 'purchase_buttons_state.freezed.dart';
 
+String _offeringNameForLimited = "Limited";
+String _offeringNameForPremium = "Premium";
+
 @freezed
 abstract class PurchaseButtonsState implements _$PurchaseButtonsState {
   PurchaseButtonsState._();
@@ -12,10 +15,26 @@ abstract class PurchaseButtonsState implements _$PurchaseButtonsState {
     required bool? isOverTrialDeadline,
   }) = _PurchaseButtonsState;
 
+  String get _offeringName {
+    final trialDeadlineDate = this.trialDeadlineDate;
+    if (trialDeadlineDate == null) {
+      return _offeringNameForPremium;
+    }
+    final isOverTrialDeadline = this.isOverTrialDeadline;
+    if (isOverTrialDeadline == null) {
+      return _offeringNameForPremium;
+    }
+    if (isOverTrialDeadline) {
+      return _offeringNameForPremium;
+    } else {
+      return _offeringNameForLimited;
+    }
+  }
+
   List<Package> get _packages {
-    final currentOffering = offerings.current;
-    if (currentOffering != null) {
-      return currentOffering.availablePackages;
+    final offering = offerings.all[_offeringName];
+    if (offering != null) {
+      return offering.availablePackages;
     }
     return [];
   }
