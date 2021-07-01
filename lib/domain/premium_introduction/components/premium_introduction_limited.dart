@@ -3,7 +3,7 @@ import 'package:flutter_svg/svg.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 
-class PremiumIntroductionLimitedHeader extends StatelessWidget {
+class PremiumIntroductionLimited extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
