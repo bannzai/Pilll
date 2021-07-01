@@ -22,6 +22,9 @@ class _$PremiumIntroductionStateTearOff {
       bool isLoading = false,
       bool isPremium = false,
       bool hasLoginProvider = false,
+      dynamic isTrial = bool,
+      DateTime? beginTrialDate,
+      DateTime? trialDeadlineDate,
       Object? exception}) {
     return _PremiumIntroductionState(
       offerings: offerings,
@@ -29,6 +32,9 @@ class _$PremiumIntroductionStateTearOff {
       isLoading: isLoading,
       isPremium: isPremium,
       hasLoginProvider: hasLoginProvider,
+      isTrial: isTrial,
+      beginTrialDate: beginTrialDate,
+      trialDeadlineDate: trialDeadlineDate,
       exception: exception,
     );
   }
@@ -44,6 +50,9 @@ mixin _$PremiumIntroductionState {
   bool get isLoading => throw _privateConstructorUsedError;
   bool get isPremium => throw _privateConstructorUsedError;
   bool get hasLoginProvider => throw _privateConstructorUsedError;
+  dynamic get isTrial => throw _privateConstructorUsedError;
+  DateTime? get beginTrialDate => throw _privateConstructorUsedError;
+  DateTime? get trialDeadlineDate => throw _privateConstructorUsedError;
   Object? get exception => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
@@ -62,6 +71,9 @@ abstract class $PremiumIntroductionStateCopyWith<$Res> {
       bool isLoading,
       bool isPremium,
       bool hasLoginProvider,
+      dynamic isTrial,
+      DateTime? beginTrialDate,
+      DateTime? trialDeadlineDate,
       Object? exception});
 }
 
@@ -81,6 +93,9 @@ class _$PremiumIntroductionStateCopyWithImpl<$Res>
     Object? isLoading = freezed,
     Object? isPremium = freezed,
     Object? hasLoginProvider = freezed,
+    Object? isTrial = freezed,
+    Object? beginTrialDate = freezed,
+    Object? trialDeadlineDate = freezed,
     Object? exception = freezed,
   }) {
     return _then(_value.copyWith(
@@ -104,6 +119,18 @@ class _$PremiumIntroductionStateCopyWithImpl<$Res>
           ? _value.hasLoginProvider
           : hasLoginProvider // ignore: cast_nullable_to_non_nullable
               as bool,
+      isTrial: isTrial == freezed
+          ? _value.isTrial
+          : isTrial // ignore: cast_nullable_to_non_nullable
+              as dynamic,
+      beginTrialDate: beginTrialDate == freezed
+          ? _value.beginTrialDate
+          : beginTrialDate // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
+      trialDeadlineDate: trialDeadlineDate == freezed
+          ? _value.trialDeadlineDate
+          : trialDeadlineDate // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
       exception: exception == freezed ? _value.exception : exception,
     ));
   }
@@ -122,6 +149,9 @@ abstract class _$PremiumIntroductionStateCopyWith<$Res>
       bool isLoading,
       bool isPremium,
       bool hasLoginProvider,
+      dynamic isTrial,
+      DateTime? beginTrialDate,
+      DateTime? trialDeadlineDate,
       Object? exception});
 }
 
@@ -144,6 +174,9 @@ class __$PremiumIntroductionStateCopyWithImpl<$Res>
     Object? isLoading = freezed,
     Object? isPremium = freezed,
     Object? hasLoginProvider = freezed,
+    Object? isTrial = freezed,
+    Object? beginTrialDate = freezed,
+    Object? trialDeadlineDate = freezed,
     Object? exception = freezed,
   }) {
     return _then(_PremiumIntroductionState(
@@ -167,6 +200,15 @@ class __$PremiumIntroductionStateCopyWithImpl<$Res>
           ? _value.hasLoginProvider
           : hasLoginProvider // ignore: cast_nullable_to_non_nullable
               as bool,
+      isTrial: isTrial == freezed ? _value.isTrial : isTrial,
+      beginTrialDate: beginTrialDate == freezed
+          ? _value.beginTrialDate
+          : beginTrialDate // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
+      trialDeadlineDate: trialDeadlineDate == freezed
+          ? _value.trialDeadlineDate
+          : trialDeadlineDate // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
       exception: exception == freezed ? _value.exception : exception,
     ));
   }
@@ -181,6 +223,9 @@ class _$_PremiumIntroductionState extends _PremiumIntroductionState {
       this.isLoading = false,
       this.isPremium = false,
       this.hasLoginProvider = false,
+      this.isTrial = bool,
+      this.beginTrialDate,
+      this.trialDeadlineDate,
       this.exception})
       : super._();
 
@@ -198,12 +243,19 @@ class _$_PremiumIntroductionState extends _PremiumIntroductionState {
   @JsonKey(defaultValue: false)
   @override
   final bool hasLoginProvider;
+  @JsonKey(defaultValue: bool)
+  @override
+  final dynamic isTrial;
+  @override
+  final DateTime? beginTrialDate;
+  @override
+  final DateTime? trialDeadlineDate;
   @override
   final Object? exception;
 
   @override
   String toString() {
-    return 'PremiumIntroductionState(offerings: $offerings, isCompletedRestore: $isCompletedRestore, isLoading: $isLoading, isPremium: $isPremium, hasLoginProvider: $hasLoginProvider, exception: $exception)';
+    return 'PremiumIntroductionState(offerings: $offerings, isCompletedRestore: $isCompletedRestore, isLoading: $isLoading, isPremium: $isPremium, hasLoginProvider: $hasLoginProvider, isTrial: $isTrial, beginTrialDate: $beginTrialDate, trialDeadlineDate: $trialDeadlineDate, exception: $exception)';
   }
 
   @override
@@ -225,6 +277,15 @@ class _$_PremiumIntroductionState extends _PremiumIntroductionState {
             (identical(other.hasLoginProvider, hasLoginProvider) ||
                 const DeepCollectionEquality()
                     .equals(other.hasLoginProvider, hasLoginProvider)) &&
+            (identical(other.isTrial, isTrial) ||
+                const DeepCollectionEquality()
+                    .equals(other.isTrial, isTrial)) &&
+            (identical(other.beginTrialDate, beginTrialDate) ||
+                const DeepCollectionEquality()
+                    .equals(other.beginTrialDate, beginTrialDate)) &&
+            (identical(other.trialDeadlineDate, trialDeadlineDate) ||
+                const DeepCollectionEquality()
+                    .equals(other.trialDeadlineDate, trialDeadlineDate)) &&
             (identical(other.exception, exception) ||
                 const DeepCollectionEquality()
                     .equals(other.exception, exception)));
@@ -238,6 +299,9 @@ class _$_PremiumIntroductionState extends _PremiumIntroductionState {
       const DeepCollectionEquality().hash(isLoading) ^
       const DeepCollectionEquality().hash(isPremium) ^
       const DeepCollectionEquality().hash(hasLoginProvider) ^
+      const DeepCollectionEquality().hash(isTrial) ^
+      const DeepCollectionEquality().hash(beginTrialDate) ^
+      const DeepCollectionEquality().hash(trialDeadlineDate) ^
       const DeepCollectionEquality().hash(exception);
 
   @JsonKey(ignore: true)
@@ -254,6 +318,9 @@ abstract class _PremiumIntroductionState extends PremiumIntroductionState {
       bool isLoading,
       bool isPremium,
       bool hasLoginProvider,
+      dynamic isTrial,
+      DateTime? beginTrialDate,
+      DateTime? trialDeadlineDate,
       Object? exception}) = _$_PremiumIntroductionState;
   _PremiumIntroductionState._() : super._();
 
@@ -267,6 +334,12 @@ abstract class _PremiumIntroductionState extends PremiumIntroductionState {
   bool get isPremium => throw _privateConstructorUsedError;
   @override
   bool get hasLoginProvider => throw _privateConstructorUsedError;
+  @override
+  dynamic get isTrial => throw _privateConstructorUsedError;
+  @override
+  DateTime? get beginTrialDate => throw _privateConstructorUsedError;
+  @override
+  DateTime? get trialDeadlineDate => throw _privateConstructorUsedError;
   @override
   Object? get exception => throw _privateConstructorUsedError;
   @override
