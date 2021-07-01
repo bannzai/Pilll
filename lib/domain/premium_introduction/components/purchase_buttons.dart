@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/components/page/hud.dart';
 import 'package:pilll/domain/premium_introduction/components/annual_purchase_button.dart';
 import 'package:pilll/domain/premium_introduction/components/monthly_purchase_button.dart';
 import 'package:pilll/domain/premium_introduction/components/puchase_buttons_store.dart';
+import 'package:pilll/domain/premium_introduction/components/purchase_buttons_store_parameter.dart';
 import 'package:pilll/domain/premium_introduction/premium_complete_dialog.dart';
 import 'package:pilll/entity/user_error.dart';
 import 'package:pilll/error/error_alert.dart';
@@ -11,17 +13,28 @@ import 'package:purchases_flutter/purchases_flutter.dart';
 
 class PurchaseButtons extends StatelessWidget {
   final Offerings offerings;
+  final DateTime trialDeadlineDate;
 
   const PurchaseButtons({
     Key? key,
     required this.offerings,
+    required this.trialDeadlineDate,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    final store = PurchaseButtonsStore(offerings);
-    final monthlyPackage = store.monthlyPackage;
-    final annualPackage = store.annualPackage;
+    final store =
+        useProvider(purchaseButtonsStoreProvider(PurchaseButtonsStoreParameter(
+      offerings: offerings,
+      trialDeadlineDate: trialDeadlineDate,
+    )));
+    final state =
+        useProvider(purchaseButtonsStoreProvider(PurchaseButtonsStoreParameter(
+      offerings: offerings,
+      trialDeadlineDate: trialDeadlineDate,
+    )).state);
+    final monthlyPackage = state.monthlyPackage;
+    final annualPackage = state.annualPackage;
 
     return Row(
       children: [
