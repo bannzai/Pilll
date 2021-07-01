@@ -2,6 +2,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:pilll/components/atoms/buttons.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
@@ -71,7 +72,13 @@ class PremiumIntroductionPage extends HookWidget {
                               ),
                             ),
                           ),
-                          SizedBox(height: 32),
+                          SizedBox(height: 24),
+                          SecondaryButton(
+                              onPressed: () {
+                                print("");
+                              },
+                              text: "プレミアム機能を見る"),
+                          SizedBox(height: 24),
                           PremiumIntroductionFotter(),
                         ],
                       ),
