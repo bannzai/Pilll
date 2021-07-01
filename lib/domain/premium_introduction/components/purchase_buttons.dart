@@ -58,66 +58,34 @@ class PurchaseButtons extends StatelessWidget {
           ),
         SizedBox(width: 16),
         if (annualPackage != null)
-          Stack(
-            clipBehavior: Clip.none,
-            children: [
-              AnnualPurchaseButton(
-                annualPackage: annualPackage,
-                onTap: (annualPackage) async {
-                  try {
-                    HUD.of(context).show();
-                    final shouldShowCompleteDialog =
-                        await store.purchase(annualPackage);
-                    if (shouldShowCompleteDialog) {
-                      showDialog(
-                          context: context,
-                          builder: (context) {
-                            return PremiumCompleteDialog();
-                          });
-                    }
-                  } catch (error) {
-                    print("caused purchase error for $error");
-                    if (error is UserDisplayedError) {
-                      showErrorAlertWithError(context, error);
-                    } else {
-                      UniversalErrorPage.of(context).showError(error);
-                    }
-                  } finally {
-                    HUD.of(context).hide();
-                  }
-                },
-              ),
-              Positioned(
-                top: -11,
-                left: 8,
-                child: _DiscountBadge(),
-              ),
-            ],
+          AnnualPurchaseButton(
+            annualPackage: annualPackage,
+            onTap: (annualPackage) async {
+              try {
+                HUD.of(context).show();
+                final shouldShowCompleteDialog =
+                    await store.purchase(annualPackage);
+                if (shouldShowCompleteDialog) {
+                  showDialog(
+                      context: context,
+                      builder: (context) {
+                        return PremiumCompleteDialog();
+                      });
+                }
+              } catch (error) {
+                print("caused purchase error for $error");
+                if (error is UserDisplayedError) {
+                  showErrorAlertWithError(context, error);
+                } else {
+                  UniversalErrorPage.of(context).showError(error);
+                }
+              } finally {
+                HUD.of(context).hide();
+              }
+            },
           ),
         Spacer(),
       ],
-    );
-  }
-}
-
-class _DiscountBadge extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      padding: EdgeInsets.only(left: 8, right: 8, top: 4, bottom: 4),
-      decoration: BoxDecoration(
-        borderRadius: BorderRadius.circular(12),
-        color: PilllColors.primary,
-      ),
-      child: Text(
-        "通常月額と比べて48％OFF",
-        style: TextColorStyle.white.merge(
-          TextStyle(
-              fontWeight: FontWeight.w700,
-              fontSize: 10,
-              fontFamily: FontFamily.japanese),
-        ),
-      ),
     );
   }
 }

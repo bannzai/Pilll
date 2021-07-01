@@ -22,48 +22,80 @@ class AnnualPurchaseButton extends StatelessWidget {
       onTap: () {
         onTap(annualPackage);
       },
-      child: Container(
-        padding: EdgeInsets.fromLTRB(33, 24, 33, 24),
-        decoration: BoxDecoration(
-          color: Colors.transparent,
-          borderRadius: BorderRadius.all(Radius.circular(4)),
-          border: Border.all(
-            width: 2,
-            color: PilllColors.secondary,
+      child: Stack(
+        clipBehavior: Clip.none,
+        children: [
+          Container(
+            padding: EdgeInsets.fromLTRB(33, 24, 33, 24),
+            decoration: BoxDecoration(
+              color: Colors.transparent,
+              borderRadius: BorderRadius.all(Radius.circular(4)),
+              border: Border.all(
+                width: 2,
+                color: PilllColors.secondary,
+              ),
+            ),
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.start,
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                Text(
+                  "年間プラン",
+                  style: TextStyle(
+                    color: TextColor.main,
+                    fontFamily: FontFamily.japanese,
+                    fontSize: 16,
+                    fontWeight: FontWeight.w700,
+                  ),
+                ),
+                Text(
+                  "${annualPackage.product.priceString}/年",
+                  style: TextStyle(
+                    color: TextColor.main,
+                    fontFamily: FontFamily.japanese,
+                    fontSize: 16,
+                    fontWeight: FontWeight.w600,
+                  ),
+                ),
+                Text(
+                  "（$monthlyPriceString/月）",
+                  style: TextStyle(
+                    color: TextColor.main,
+                    fontFamily: FontFamily.japanese,
+                    fontSize: 14,
+                    fontWeight: FontWeight.w600,
+                  ),
+                ),
+              ],
+            ),
           ),
-        ),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
-          mainAxisSize: MainAxisSize.min,
-          children: [
-            Text(
-              "年間プラン",
-              style: TextStyle(
-                color: TextColor.main,
-                fontFamily: FontFamily.japanese,
-                fontSize: 16,
-                fontWeight: FontWeight.w700,
-              ),
-            ),
-            Text(
-              "${annualPackage.product.priceString}/年",
-              style: TextStyle(
-                color: TextColor.main,
-                fontFamily: FontFamily.japanese,
-                fontSize: 16,
-                fontWeight: FontWeight.w600,
-              ),
-            ),
-            Text(
-              "（$monthlyPriceString/月）",
-              style: TextStyle(
-                color: TextColor.main,
-                fontFamily: FontFamily.japanese,
-                fontSize: 14,
-                fontWeight: FontWeight.w600,
-              ),
-            ),
-          ],
+          Positioned(
+            top: -11,
+            left: 8,
+            child: _DiscountBadge(),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class _DiscountBadge extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      padding: EdgeInsets.only(left: 8, right: 8, top: 4, bottom: 4),
+      decoration: BoxDecoration(
+        borderRadius: BorderRadius.circular(12),
+        color: PilllColors.primary,
+      ),
+      child: Text(
+        "通常月額と比べて48％OFF",
+        style: TextColorStyle.white.merge(
+          TextStyle(
+              fontWeight: FontWeight.w700,
+              fontSize: 10,
+              fontFamily: FontFamily.japanese),
         ),
       ),
     );
