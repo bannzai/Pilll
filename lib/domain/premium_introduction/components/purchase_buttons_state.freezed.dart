@@ -9,17 +9,20 @@ part of 'purchase_buttons_state.dart';
 
 T _$identity<T>(T value) => value;
 
-
-final _privateConstructorUsedError = UnsupportedError('It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
+final _privateConstructorUsedError = UnsupportedError(
+    'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
 /// @nodoc
 class _$PurchaseButtonsStateTearOff {
   const _$PurchaseButtonsStateTearOff();
 
-_PurchaseButtonsState call({required  Offerings offerings, required  required isOverTrialDeadline}) {
-  return  _PurchaseButtonsState(offerings:offerings,isOverTrialDeadline:isOverTrialDeadline,);
-}
-
+  _PurchaseButtonsState call(
+      {required Offerings offerings, required bool isOverTrialDeadline}) {
+    return _PurchaseButtonsState(
+      offerings: offerings,
+      isOverTrialDeadline: isOverTrialDeadline,
+    );
+  }
 }
 
 /// @nodoc
@@ -27,123 +30,142 @@ const $PurchaseButtonsState = _$PurchaseButtonsStateTearOff();
 
 /// @nodoc
 mixin _$PurchaseButtonsState {
+  Offerings get offerings => throw _privateConstructorUsedError;
+  bool get isOverTrialDeadline => throw _privateConstructorUsedError;
 
- Offerings get offerings => throw _privateConstructorUsedError; required get isOverTrialDeadline => throw _privateConstructorUsedError;
-
-
-
-
-
-
-@JsonKey(ignore: true)
-$PurchaseButtonsStateCopyWith<PurchaseButtonsState> get copyWith => throw _privateConstructorUsedError;
-
+  @JsonKey(ignore: true)
+  $PurchaseButtonsStateCopyWith<PurchaseButtonsState> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $PurchaseButtonsStateCopyWith<$Res>  {
-  factory $PurchaseButtonsStateCopyWith(PurchaseButtonsState value, $Res Function(PurchaseButtonsState) then) = _$PurchaseButtonsStateCopyWithImpl<$Res>;
-$Res call({
- Offerings offerings, required isOverTrialDeadline
-});
-
-
-
+abstract class $PurchaseButtonsStateCopyWith<$Res> {
+  factory $PurchaseButtonsStateCopyWith(PurchaseButtonsState value,
+          $Res Function(PurchaseButtonsState) then) =
+      _$PurchaseButtonsStateCopyWithImpl<$Res>;
+  $Res call({Offerings offerings, bool isOverTrialDeadline});
 }
 
 /// @nodoc
-class _$PurchaseButtonsStateCopyWithImpl<$Res> implements $PurchaseButtonsStateCopyWith<$Res> {
+class _$PurchaseButtonsStateCopyWithImpl<$Res>
+    implements $PurchaseButtonsStateCopyWith<$Res> {
   _$PurchaseButtonsStateCopyWithImpl(this._value, this._then);
 
   final PurchaseButtonsState _value;
   // ignore: unused_field
   final $Res Function(PurchaseButtonsState) _then;
 
-@override $Res call({Object? offerings = freezed,Object? isOverTrialDeadline = freezed,}) {
-  return _then(_value.copyWith(
-offerings: offerings == freezed ? _value.offerings : offerings // ignore: cast_nullable_to_non_nullable
-as Offerings,isOverTrialDeadline: isOverTrialDeadline == freezed ? _value.isOverTrialDeadline : isOverTrialDeadline // ignore: cast_nullable_to_non_nullable
-as required,
-  ));
-}
-
-}
-
-
-/// @nodoc
-abstract class _$PurchaseButtonsStateCopyWith<$Res> implements $PurchaseButtonsStateCopyWith<$Res> {
-  factory _$PurchaseButtonsStateCopyWith(_PurchaseButtonsState value, $Res Function(_PurchaseButtonsState) then) = __$PurchaseButtonsStateCopyWithImpl<$Res>;
-@override $Res call({
- Offerings offerings, required isOverTrialDeadline
-});
-
-
-
+  @override
+  $Res call({
+    Object? offerings = freezed,
+    Object? isOverTrialDeadline = freezed,
+  }) {
+    return _then(_value.copyWith(
+      offerings: offerings == freezed
+          ? _value.offerings
+          : offerings // ignore: cast_nullable_to_non_nullable
+              as Offerings,
+      isOverTrialDeadline: isOverTrialDeadline == freezed
+          ? _value.isOverTrialDeadline
+          : isOverTrialDeadline // ignore: cast_nullable_to_non_nullable
+              as bool,
+    ));
+  }
 }
 
 /// @nodoc
-class __$PurchaseButtonsStateCopyWithImpl<$Res> extends _$PurchaseButtonsStateCopyWithImpl<$Res> implements _$PurchaseButtonsStateCopyWith<$Res> {
-  __$PurchaseButtonsStateCopyWithImpl(_PurchaseButtonsState _value, $Res Function(_PurchaseButtonsState) _then)
+abstract class _$PurchaseButtonsStateCopyWith<$Res>
+    implements $PurchaseButtonsStateCopyWith<$Res> {
+  factory _$PurchaseButtonsStateCopyWith(_PurchaseButtonsState value,
+          $Res Function(_PurchaseButtonsState) then) =
+      __$PurchaseButtonsStateCopyWithImpl<$Res>;
+  @override
+  $Res call({Offerings offerings, bool isOverTrialDeadline});
+}
+
+/// @nodoc
+class __$PurchaseButtonsStateCopyWithImpl<$Res>
+    extends _$PurchaseButtonsStateCopyWithImpl<$Res>
+    implements _$PurchaseButtonsStateCopyWith<$Res> {
+  __$PurchaseButtonsStateCopyWithImpl(
+      _PurchaseButtonsState _value, $Res Function(_PurchaseButtonsState) _then)
       : super(_value, (v) => _then(v as _PurchaseButtonsState));
 
-@override
-_PurchaseButtonsState get _value => super._value as _PurchaseButtonsState;
+  @override
+  _PurchaseButtonsState get _value => super._value as _PurchaseButtonsState;
 
-@override $Res call({Object? offerings = freezed,Object? isOverTrialDeadline = freezed,}) {
-  return _then(_PurchaseButtonsState(
-offerings: offerings == freezed ? _value.offerings : offerings // ignore: cast_nullable_to_non_nullable
-as Offerings,isOverTrialDeadline: isOverTrialDeadline == freezed ? _value.isOverTrialDeadline : isOverTrialDeadline // ignore: cast_nullable_to_non_nullable
-as required,
-  ));
-}
-
-
+  @override
+  $Res call({
+    Object? offerings = freezed,
+    Object? isOverTrialDeadline = freezed,
+  }) {
+    return _then(_PurchaseButtonsState(
+      offerings: offerings == freezed
+          ? _value.offerings
+          : offerings // ignore: cast_nullable_to_non_nullable
+              as Offerings,
+      isOverTrialDeadline: isOverTrialDeadline == freezed
+          ? _value.isOverTrialDeadline
+          : isOverTrialDeadline // ignore: cast_nullable_to_non_nullable
+              as bool,
+    ));
+  }
 }
 
 /// @nodoc
 
+class _$_PurchaseButtonsState extends _PurchaseButtonsState {
+  _$_PurchaseButtonsState(
+      {required this.offerings, required this.isOverTrialDeadline})
+      : super._();
 
-class _$_PurchaseButtonsState extends _PurchaseButtonsState  {
-   _$_PurchaseButtonsState({required this.offerings, required this.isOverTrialDeadline}): super._();
+  @override
+  final Offerings offerings;
+  @override
+  final bool isOverTrialDeadline;
 
-  
+  @override
+  String toString() {
+    return 'PurchaseButtonsState(offerings: $offerings, isOverTrialDeadline: $isOverTrialDeadline)';
+  }
 
-@override  final Offerings offerings;@override  final required isOverTrialDeadline;
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other is _PurchaseButtonsState &&
+            (identical(other.offerings, offerings) ||
+                const DeepCollectionEquality()
+                    .equals(other.offerings, offerings)) &&
+            (identical(other.isOverTrialDeadline, isOverTrialDeadline) ||
+                const DeepCollectionEquality()
+                    .equals(other.isOverTrialDeadline, isOverTrialDeadline)));
+  }
 
-@override
-String toString() {
-  return 'PurchaseButtonsState(offerings: $offerings, isOverTrialDeadline: $isOverTrialDeadline)';
+  @override
+  int get hashCode =>
+      runtimeType.hashCode ^
+      const DeepCollectionEquality().hash(offerings) ^
+      const DeepCollectionEquality().hash(isOverTrialDeadline);
+
+  @JsonKey(ignore: true)
+  @override
+  _$PurchaseButtonsStateCopyWith<_PurchaseButtonsState> get copyWith =>
+      __$PurchaseButtonsStateCopyWithImpl<_PurchaseButtonsState>(
+          this, _$identity);
 }
-
-
-@override
-bool operator ==(dynamic other) {
-  return identical(this, other) || (other is _PurchaseButtonsState&&(identical(other.offerings, offerings) || const DeepCollectionEquality().equals(other.offerings, offerings))&&(identical(other.isOverTrialDeadline, isOverTrialDeadline) || const DeepCollectionEquality().equals(other.isOverTrialDeadline, isOverTrialDeadline)));
-}
-
-@override
-int get hashCode => runtimeType.hashCode ^ const DeepCollectionEquality().hash(offerings)^ const DeepCollectionEquality().hash(isOverTrialDeadline);
-
-@JsonKey(ignore: true)
-@override
-_$PurchaseButtonsStateCopyWith<_PurchaseButtonsState> get copyWith => __$PurchaseButtonsStateCopyWithImpl<_PurchaseButtonsState>(this, _$identity);
-
-
-
-
-
-
-}
-
 
 abstract class _PurchaseButtonsState extends PurchaseButtonsState {
-   factory _PurchaseButtonsState({required  Offerings offerings, required  required isOverTrialDeadline}) = _$_PurchaseButtonsState;
-   _PurchaseButtonsState._(): super._();
+  factory _PurchaseButtonsState(
+      {required Offerings offerings,
+      required bool isOverTrialDeadline}) = _$_PurchaseButtonsState;
+  _PurchaseButtonsState._() : super._();
 
-  
-
-@override  Offerings get offerings => throw _privateConstructorUsedError;@override  required get isOverTrialDeadline => throw _privateConstructorUsedError;
-@override @JsonKey(ignore: true)
-_$PurchaseButtonsStateCopyWith<_PurchaseButtonsState> get copyWith => throw _privateConstructorUsedError;
-
+  @override
+  Offerings get offerings => throw _privateConstructorUsedError;
+  @override
+  bool get isOverTrialDeadline => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(ignore: true)
+  _$PurchaseButtonsStateCopyWith<_PurchaseButtonsState> get copyWith =>
+      throw _privateConstructorUsedError;
 }
