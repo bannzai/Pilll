@@ -24,7 +24,6 @@ class PremiumIntroductionStore extends StateNotifier<PremiumIntroductionState> {
     Future(() async {
       _subscribe();
 
-      state = state.copyWith(exception: null);
       state = state.copyWith(
         hasLoginProvider:
             _authService.isLinkedApple() || _authService.isLinkedGoogle(),
@@ -86,17 +85,5 @@ class PremiumIntroductionStore extends StateNotifier<PremiumIntroductionState> {
 
   String monthlyPriceString(Package package) {
     return "${package.product.priceString}";
-  }
-
-  handleException(Object exception) {
-    state = state.copyWith(exception: exception);
-  }
-
-  showHUD() {
-    state = state.copyWith(isLoading: true);
-  }
-
-  hideHUD() {
-    state = state.copyWith(isLoading: false);
   }
 }

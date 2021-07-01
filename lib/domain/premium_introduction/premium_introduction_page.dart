@@ -39,7 +39,7 @@ class PremiumIntroductionPage extends HookWidget {
     return HUD(
       shown: state.isLoading,
       child: UniversalErrorPage(
-        error: state.exception,
+        error: null,
         reload: () => store.reset(),
         child: Scaffold(
           body: Container(
