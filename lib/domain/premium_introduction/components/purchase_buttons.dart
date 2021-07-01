@@ -44,27 +44,7 @@ class PurchaseButtons extends HookWidget {
           MonthlyPurchaseButton(
             monthlyPackage: monthlyPackage,
             onTap: (monthlyPackage) async {
-              try {
-                HUD.of(context).show();
-                final shouldShowCompleteDialog =
-                    await store.purchase(monthlyPackage);
-                if (shouldShowCompleteDialog) {
-                  showDialog(
-                      context: context,
-                      builder: (context) {
-                        return PremiumCompleteDialog();
-                      });
-                }
-              } catch (error) {
-                print("caused purchase error for $error");
-                if (error is UserDisplayedError) {
-                  showErrorAlertWithError(context, error);
-                } else {
-                  UniversalErrorPage.of(context).showError(error);
-                }
-              } finally {
-                HUD.of(context).hide();
-              }
+              await _purchase(context, store, monthlyPackage);
             },
           ),
         SizedBox(width: 16),
@@ -72,31 +52,35 @@ class PurchaseButtons extends HookWidget {
           AnnualPurchaseButton(
             annualPackage: annualPackage,
             onTap: (annualPackage) async {
-              try {
-                HUD.of(context).show();
-                final shouldShowCompleteDialog =
-                    await store.purchase(annualPackage);
-                if (shouldShowCompleteDialog) {
-                  showDialog(
-                      context: context,
-                      builder: (context) {
-                        return PremiumCompleteDialog();
-                      });
-                }
-              } catch (error) {
-                print("caused purchase error for $error");
-                if (error is UserDisplayedError) {
-                  showErrorAlertWithError(context, error);
-                } else {
-                  UniversalErrorPage.of(context).showError(error);
-                }
-              } finally {
-                HUD.of(context).hide();
-              }
+              await _purchase(context, store, annualPackage);
             },
           ),
         Spacer(),
       ],
     );
+  }
+
+  _purchase(
+      BuildContext context, PurchaseButtonsStore store, Package package) async {
+    try {
+      HUD.of(context).show();
+      final shouldShowCompleteDialog = await store.purchase(package);
+      if (shouldShowCompleteDialog) {
+        showDialog(
+            context: context,
+            builder: (context) {
+              return PremiumCompleteDialog();
+            });
+      }
+    } catch (error) {
+      print("caused purchase error for $error");
+      if (error is UserDisplayedError) {
+        showErrorAlertWithError(context, error);
+      } else {
+        UniversalErrorPage.of(context).showError(error);
+      }
+    } finally {
+      HUD.of(context).hide();
+    }
   }
 }
