@@ -3,6 +3,7 @@ import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:pilll/analytics.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/molecules/indicator.dart';
 import 'package:pilll/components/page/hud.dart';
@@ -56,6 +57,7 @@ class PremiumIntroductionSheet extends HookWidget {
 }
 
 showPremiumIntroductionSheet(BuildContext context) {
+  analytics.setCurrentScreen(screenName: "PremiumIntroductionSheet");
   showModalBottomSheet(
     context: context,
     builder: (_) => PremiumIntroductionSheet(),
