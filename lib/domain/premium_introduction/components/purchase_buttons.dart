@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/components/page/hud.dart';
 import 'package:pilll/domain/premium_introduction/components/annual_purchase_button.dart';
@@ -11,7 +12,7 @@ import 'package:pilll/error/error_alert.dart';
 import 'package:pilll/error/universal_error_page.dart';
 import 'package:purchases_flutter/purchases_flutter.dart';
 
-class PurchaseButtons extends StatelessWidget {
+class PurchaseButtons extends HookWidget {
   final Offerings offerings;
   final DateTime? trialDeadlineDate;
 
