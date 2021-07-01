@@ -40,15 +40,10 @@ class PremiumIntroductionSheet extends HookWidget {
           child: UniversalErrorPage(
             error: null,
             reload: () => store.reset(),
-            child: Scaffold(
-              body: Container(
-                color: PilllColors.white,
-                child: PremiumIntroductionBody(
-                    isBlessMode: isBlessMode,
-                    trialDeadlineDate: trialDeadlineDate,
-                    offerings: offerings),
-              ),
-            ),
+            child: PremiumIntroductionBody(
+                isBlessMode: isBlessMode,
+                trialDeadlineDate: trialDeadlineDate,
+                offerings: offerings),
           ),
         );
       },
