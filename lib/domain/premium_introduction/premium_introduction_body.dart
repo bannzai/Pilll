@@ -14,12 +14,14 @@ class PremiumIntroductionBody extends StatelessWidget {
   const PremiumIntroductionBody({
     Key? key,
     required this.isBlessMode,
+    required this.shownDismissButton,
     required this.trialDeadlineDate,
     required this.offerings,
     required this.scrollController,
   }) : super(key: key);
 
   final bool isBlessMode;
+  final bool shownDismissButton;
   final DateTime? trialDeadlineDate;
   final Offerings? offerings;
   final ScrollController? scrollController;
@@ -52,7 +54,8 @@ class PremiumIntroductionBody extends StatelessWidget {
             child: Column(
               mainAxisSize: MainAxisSize.min,
               children: [
-                PremiumIntroductionHeader(shouldShowDismiss: true),
+                PremiumIntroductionHeader(
+                    shouldShowDismiss: shownDismissButton),
                 if (trialDeadlineDate != null)
                   PremiumIntroductionLimited(
                     trialDeadlineDate: trialDeadlineDate,
