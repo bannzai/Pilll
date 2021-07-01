@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_hooks/flutter_hooks.dart';
-import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/components/page/hud.dart';
 import 'package:pilll/domain/premium_introduction/components/annaul_purchase_button.dart';
 import 'package:pilll/domain/premium_introduction/components/monthly_purchase_button.dart';
@@ -11,17 +9,17 @@ import 'package:pilll/error/error_alert.dart';
 import 'package:pilll/error/universal_error_page.dart';
 import 'package:purchases_flutter/purchases_flutter.dart';
 
-class PurchaseButtons extends HookWidget {
-  final Offerings offers;
+class PurchaseButtons extends StatelessWidget {
+  final Offerings offerings;
 
   const PurchaseButtons({
     Key? key,
-    required this.offers,
+    required this.offerings,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    final store = useProvider(purchaseButtonsStoreProvider(offers));
+    final store = PurchaseButtonsStore(offerings);
     final monthlyPackage = store.monthlyPackage;
     final annualPackage = store.annualPackage;
 

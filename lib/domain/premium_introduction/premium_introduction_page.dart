@@ -49,7 +49,7 @@ class PremiumIntroductionPage extends HookWidget {
                         children: [
                           PremiumIntroductionLimitedHeader(),
                           if (offerings != null) ...[
-                            PurchaseButtons(offers: offerings),
+                            PurchaseButtons(offerings: offerings),
                           ],
                           PremiumIntroductionFotter(),
                         ],

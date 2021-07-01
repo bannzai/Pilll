@@ -3,21 +3,16 @@ import 'dart:async';
 import 'package:pilll/domain/premium_introduction/util/map_to_error.dart';
 import 'package:pilll/entity/user_error.dart';
 import 'package:purchases_flutter/purchases_flutter.dart';
-import 'package:riverpod/riverpod.dart';
 import 'package:pilll/error_log.dart';
 import 'package:pilll/purchases.dart';
 import 'package:flutter/services.dart';
 import 'package:pilll/analytics.dart';
 
-final purchaseButtonsStoreProvider = Provider.family.autoDispose(
-  (ref, Offerings offerings) => PurchaseButtonsStore(offerings),
-);
+class PurchaseButtonsStore {
+  final Offerings offerings;
 
-class PurchaseButtonsStore extends StateNotifier<Offerings> {
-  PurchaseButtonsStore(Offerings state) : super(state);
-
+  PurchaseButtonsStore(this.offerings);
   List<Package> get _packages {
-    final offerings = this.state;
     final currentOffering = offerings.current;
     if (currentOffering != null) {
       return currentOffering.availablePackages;
