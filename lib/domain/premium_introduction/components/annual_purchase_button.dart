@@ -28,7 +28,7 @@ class AnnualPurchaseButton extends StatelessWidget {
           Container(
             padding: EdgeInsets.fromLTRB(33, 24, 33, 24),
             decoration: BoxDecoration(
-              color: Colors.transparent,
+              color: PilllColors.blueBackground,
               borderRadius: BorderRadius.all(Radius.circular(4)),
               border: Border.all(
                 width: 2,
