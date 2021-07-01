@@ -4,7 +4,6 @@ import 'package:flutter_svg/svg.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
-import 'package:pilll/util/datetime/day.dart';
 import 'package:pilll/util/datetime/timer.dart';
 import 'package:pilll/util/formatter/date_time_formatter.dart';
 
@@ -16,9 +15,7 @@ class PremiumIntroductionLimited extends HookWidget {
   const PremiumIntroductionLimited({Key? key, required this.trialDeadlineDate})
       : super(key: key);
   Widget build(BuildContext context) {
-    final timer = useProvider(timerStoreProvider);
-    timer.fire(now());
-    final timerState = useProvider(timerStoreProvider.state);
+    final timerState = useProvider(timerStateProvider);
     final diff = discountPriceDeadline.difference(timerState);
     final String countdown;
     if (diff.inSeconds <= 0) {
