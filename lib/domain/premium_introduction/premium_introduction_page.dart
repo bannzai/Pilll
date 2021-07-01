@@ -14,6 +14,7 @@ import 'package:pilll/domain/premium_introduction/components/premium_introductio
 import 'package:pilll/domain/premium_introduction/components/purchase_buttons.dart';
 import 'package:pilll/domain/premium_introduction/premium_introduction_store.dart';
 import 'package:pilll/error/universal_error_page.dart';
+import 'package:pilll/util/datetime/timer.dart';
 import 'package:pilll/util/platform/platform.dart';
 
 class PremiumIntroductionPage extends HookWidget {
@@ -23,6 +24,14 @@ class PremiumIntroductionPage extends HookWidget {
     final state = useProvider(premiumIntroductionStoreProvider.state);
     final offerings = state.offerings;
     final trialDeadlineDate = state.trialDeadlineDate;
+    final bool isBlessMode;
+    if (trialDeadlineDate != null) {
+      final isOverTiralDeadline =
+          useProvider(isOverTrialDeadlineProvider(trialDeadlineDate));
+      isBlessMode = !isOverTiralDeadline;
+    } else {
+      isBlessMode = false;
+    }
     if (state.isNotYetLoad) {
       return Indicator();
     }
@@ -43,10 +52,13 @@ class PremiumIntroductionPage extends HookWidget {
                     Container(
                       decoration: BoxDecoration(
                         color: Colors.transparent,
-                        image: DecorationImage(
-                          image: AssetImage("images/premium_background.png"),
-                          fit: BoxFit.cover,
-                        ),
+                        image: isBlessMode
+                            ? DecorationImage(
+                                image:
+                                    AssetImage("images/premium_background.png"),
+                                fit: BoxFit.cover,
+                              )
+                            : null,
                       ),
                       padding: EdgeInsets.only(left: 40, right: 40, bottom: 40),
                       width: MediaQuery.of(context).size.width,
