@@ -42,6 +42,8 @@ _$_User _$_$_UserFromJson(Map<String, dynamic> json) {
     isTrial: json['isTrial'] as bool? ?? false,
     beginTrialDate: TimestampConverter.timestampToDateTime(
         json['beginTrialDate'] as Timestamp?),
+    trialDeadlineDate: TimestampConverter.timestampToDateTime(
+        json['trialDeadlineDate'] as Timestamp?),
   );
 }
 
@@ -57,4 +59,6 @@ Map<String, dynamic> _$_$_UserToJson(_$_User instance) => <String, dynamic>{
       'isTrial': instance.isTrial,
       'beginTrialDate':
           TimestampConverter.dateTimeToTimestamp(instance.beginTrialDate),
+      'trialDeadlineDate':
+          TimestampConverter.dateTimeToTimestamp(instance.trialDeadlineDate),
     };

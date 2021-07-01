@@ -1,4 +1,5 @@
-import 'package:cloud_firestore/cloud_firestore.dart'; import 'package:pilll/entity/firestore_timestamp_converter.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:pilll/entity/firestore_timestamp_converter.dart';
 import 'package:pilll/entity/setting.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
@@ -55,6 +56,7 @@ extension UserFirestoreFieldKeys on String {
   static final purchaseAppID = "purchaseAppID";
   static final isTrial = "isTrial";
   static final beginTrialDate = "beginTrialDate";
+  static final trialDeadlineDate = "trialDeadlineDate";
 }
 
 @freezed
@@ -83,6 +85,11 @@ abstract class User implements _$User {
       toJson: TimestampConverter.dateTimeToTimestamp,
     )
         DateTime? beginTrialDate,
+    @JsonKey(
+      fromJson: TimestampConverter.timestampToDateTime,
+      toJson: TimestampConverter.dateTimeToTimestamp,
+    )
+        DateTime? trialDeadlineDate,
   }) = _User;
 
   factory User.fromJson(Map<String, dynamic> json) => _$UserFromJson(json);

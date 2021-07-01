@@ -181,7 +181,9 @@ class _$UserTearOff {
       bool isPremium = false,
       bool isTrial = false,
       @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
-          DateTime? beginTrialDate}) {
+          DateTime? beginTrialDate,
+      @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
+          DateTime? trialDeadlineDate}) {
     return _User(
       setting: setting,
       migratedFlutter: migratedFlutter,
@@ -193,6 +195,7 @@ class _$UserTearOff {
       isPremium: isPremium,
       isTrial: isTrial,
       beginTrialDate: beginTrialDate,
+      trialDeadlineDate: trialDeadlineDate,
     );
   }
 
@@ -221,6 +224,10 @@ mixin _$User {
       fromJson: TimestampConverter.timestampToDateTime,
       toJson: TimestampConverter.dateTimeToTimestamp)
   DateTime? get beginTrialDate => throw _privateConstructorUsedError;
+  @JsonKey(
+      fromJson: TimestampConverter.timestampToDateTime,
+      toJson: TimestampConverter.dateTimeToTimestamp)
+  DateTime? get trialDeadlineDate => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -243,7 +250,9 @@ abstract class $UserCopyWith<$Res> {
       bool isPremium,
       bool isTrial,
       @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
-          DateTime? beginTrialDate});
+          DateTime? beginTrialDate,
+      @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
+          DateTime? trialDeadlineDate});
 
   $SettingCopyWith<$Res>? get setting;
 }
@@ -268,6 +277,7 @@ class _$UserCopyWithImpl<$Res> implements $UserCopyWith<$Res> {
     Object? isPremium = freezed,
     Object? isTrial = freezed,
     Object? beginTrialDate = freezed,
+    Object? trialDeadlineDate = freezed,
   }) {
     return _then(_value.copyWith(
       setting: setting == freezed
@@ -310,6 +320,10 @@ class _$UserCopyWithImpl<$Res> implements $UserCopyWith<$Res> {
           ? _value.beginTrialDate
           : beginTrialDate // ignore: cast_nullable_to_non_nullable
               as DateTime?,
+      trialDeadlineDate: trialDeadlineDate == freezed
+          ? _value.trialDeadlineDate
+          : trialDeadlineDate // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
     ));
   }
 
@@ -342,7 +356,9 @@ abstract class _$UserCopyWith<$Res> implements $UserCopyWith<$Res> {
       bool isPremium,
       bool isTrial,
       @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
-          DateTime? beginTrialDate});
+          DateTime? beginTrialDate,
+      @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
+          DateTime? trialDeadlineDate});
 
   @override
   $SettingCopyWith<$Res>? get setting;
@@ -369,6 +385,7 @@ class __$UserCopyWithImpl<$Res> extends _$UserCopyWithImpl<$Res>
     Object? isPremium = freezed,
     Object? isTrial = freezed,
     Object? beginTrialDate = freezed,
+    Object? trialDeadlineDate = freezed,
   }) {
     return _then(_User(
       setting: setting == freezed
@@ -411,6 +428,10 @@ class __$UserCopyWithImpl<$Res> extends _$UserCopyWithImpl<$Res>
           ? _value.beginTrialDate
           : beginTrialDate // ignore: cast_nullable_to_non_nullable
               as DateTime?,
+      trialDeadlineDate: trialDeadlineDate == freezed
+          ? _value.trialDeadlineDate
+          : trialDeadlineDate // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
     ));
   }
 }
@@ -431,7 +452,9 @@ class _$_User extends _User {
       this.isPremium = false,
       this.isTrial = false,
       @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
-          this.beginTrialDate})
+          this.beginTrialDate,
+      @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
+          this.trialDeadlineDate})
       : super._();
 
   factory _$_User.fromJson(Map<String, dynamic> json) =>
@@ -467,10 +490,15 @@ class _$_User extends _User {
       fromJson: TimestampConverter.timestampToDateTime,
       toJson: TimestampConverter.dateTimeToTimestamp)
   final DateTime? beginTrialDate;
+  @override
+  @JsonKey(
+      fromJson: TimestampConverter.timestampToDateTime,
+      toJson: TimestampConverter.dateTimeToTimestamp)
+  final DateTime? trialDeadlineDate;
 
   @override
   String toString() {
-    return 'User(setting: $setting, migratedFlutter: $migratedFlutter, userIDWhenCreateUser: $userIDWhenCreateUser, anonymousUserID: $anonymousUserID, userDocumentIDSets: $userDocumentIDSets, anonymousUserIDSets: $anonymousUserIDSets, firebaseCurrentUserIDSets: $firebaseCurrentUserIDSets, isPremium: $isPremium, isTrial: $isTrial, beginTrialDate: $beginTrialDate)';
+    return 'User(setting: $setting, migratedFlutter: $migratedFlutter, userIDWhenCreateUser: $userIDWhenCreateUser, anonymousUserID: $anonymousUserID, userDocumentIDSets: $userDocumentIDSets, anonymousUserIDSets: $anonymousUserIDSets, firebaseCurrentUserIDSets: $firebaseCurrentUserIDSets, isPremium: $isPremium, isTrial: $isTrial, beginTrialDate: $beginTrialDate, trialDeadlineDate: $trialDeadlineDate)';
   }
 
   @override
@@ -508,7 +536,10 @@ class _$_User extends _User {
                     .equals(other.isTrial, isTrial)) &&
             (identical(other.beginTrialDate, beginTrialDate) ||
                 const DeepCollectionEquality()
-                    .equals(other.beginTrialDate, beginTrialDate)));
+                    .equals(other.beginTrialDate, beginTrialDate)) &&
+            (identical(other.trialDeadlineDate, trialDeadlineDate) ||
+                const DeepCollectionEquality()
+                    .equals(other.trialDeadlineDate, trialDeadlineDate)));
   }
 
   @override
@@ -523,7 +554,8 @@ class _$_User extends _User {
       const DeepCollectionEquality().hash(firebaseCurrentUserIDSets) ^
       const DeepCollectionEquality().hash(isPremium) ^
       const DeepCollectionEquality().hash(isTrial) ^
-      const DeepCollectionEquality().hash(beginTrialDate);
+      const DeepCollectionEquality().hash(beginTrialDate) ^
+      const DeepCollectionEquality().hash(trialDeadlineDate);
 
   @JsonKey(ignore: true)
   @override
@@ -549,7 +581,9 @@ abstract class _User extends User {
       bool isPremium,
       bool isTrial,
       @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
-          DateTime? beginTrialDate}) = _$_User;
+          DateTime? beginTrialDate,
+      @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
+          DateTime? trialDeadlineDate}) = _$_User;
   _User._() : super._();
 
   factory _User.fromJson(Map<String, dynamic> json) = _$_User.fromJson;
@@ -579,6 +613,11 @@ abstract class _User extends User {
       fromJson: TimestampConverter.timestampToDateTime,
       toJson: TimestampConverter.dateTimeToTimestamp)
   DateTime? get beginTrialDate => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(
+      fromJson: TimestampConverter.timestampToDateTime,
+      toJson: TimestampConverter.dateTimeToTimestamp)
+  DateTime? get trialDeadlineDate => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$UserCopyWith<_User> get copyWith => throw _privateConstructorUsedError;
