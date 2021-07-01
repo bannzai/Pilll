@@ -1,40 +1,38 @@
 import 'dart:async';
 
+import 'package:pilll/domain/premium_introduction/components/purchase_buttons_state.dart';
+import 'package:pilll/domain/premium_introduction/components/purchase_buttons_store_parameter.dart';
 import 'package:pilll/domain/premium_introduction/util/map_to_error.dart';
 import 'package:pilll/entity/user_error.dart';
+import 'package:pilll/util/datetime/timer.dart';
 import 'package:purchases_flutter/purchases_flutter.dart';
 import 'package:pilll/error_log.dart';
 import 'package:pilll/purchases.dart';
 import 'package:flutter/services.dart';
 import 'package:pilll/analytics.dart';
+import 'package:riverpod/riverpod.dart';
 
-class PurchaseButtonsStore {
+final purchaseButtonsStoreProvider = StateNotifierProvider.family.autoDispose(
+  (ref, PurchaseButtonsStoreParameter parameter) => PurchaseButtonsStore(
+    offerings: parameter.offerings,
+    isOverTrialDeadline:
+        ref.watch(isOverTrialDeadlineProvider(parameter.trialDeadlineDate)),
+  ),
+);
+
+class PurchaseButtonsStore extends StateNotifier<PurchaseButtonsState> {
   final Offerings offerings;
+  final bool isOverTrialDeadline;
 
-  PurchaseButtonsStore(this.offerings);
-  List<Package> get _packages {
-    final currentOffering = offerings.current;
-    if (currentOffering != null) {
-      return currentOffering.availablePackages;
-    }
-    return [];
-  }
-
-  Package? get annualPackage {
-    if (_packages.isEmpty) {
-      return null;
-    }
-    return _packages
-        .firstWhere((element) => element.packageType == PackageType.annual);
-  }
-
-  Package? get monthlyPackage {
-    if (_packages.isEmpty) {
-      return null;
-    }
-    return _packages
-        .firstWhere((element) => element.packageType == PackageType.monthly);
-  }
+  PurchaseButtonsStore({
+    required this.offerings,
+    required this.isOverTrialDeadline,
+  }) : super(
+          PurchaseButtonsState(
+            offerings: offerings,
+            isOverTrialDeadline: isOverTrialDeadline,
+          ),
+        );
 
   /// Return true indicates end of regularllly pattern.
   /// Return false indicates not regulally pattern.
