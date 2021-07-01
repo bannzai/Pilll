@@ -34,10 +34,10 @@ class PremiumIntroductionPage extends HookWidget {
               icon: Icon(Icons.close, color: Colors.black),
               onPressed: () => Navigator.of(context).pop(),
             ),
-            backgroundColor: PilllColors.blueBackground,
+            backgroundColor: PilllColors.white,
           ),
           body: Container(
-            color: PilllColors.blueBackground,
+            color: PilllColors.white,
             child: SafeArea(
               child: Container(
                 width: MediaQuery.of(context).size.width,
