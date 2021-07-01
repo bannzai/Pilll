@@ -1,10 +1,32 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
+import 'package:pilll/util/datetime/day.dart';
+import 'package:pilll/util/datetime/timer.dart';
+import 'package:pilll/util/formatter/date_time_formatter.dart';
 
-class PremiumIntroductionLimited extends StatelessWidget {
+class PremiumIntroductionLimited extends HookWidget {
+  final DateTime trialDeadlineDate;
+  DateTime get discountedPriceDeadline =>
+      trialDeadlineDate.add(Duration(hours: 48));
+
+  const PremiumIntroductionLimited({Key? key, required this.trialDeadlineDate})
+      : super(key: key);
   Widget build(BuildContext context) {
+    final timer = useProvider(timerStoreProvider);
+    timer.fire(now());
+    final timerState = useProvider(timerStoreProvider.state);
+    final diff = discountedPriceDeadline.difference(timerState);
+    final String countdown;
+    if (diff.inSeconds <= 0) {
+      countdown = "00:00:00";
+    } else {
+      countdown =
+          DateTimeFormatter.clock(diff.inHours, diff.inMinutes, diff.inSeconds);
+    }
     return Container(
       padding: EdgeInsets.only(left: 40, right: 40),
       width: MediaQuery.of(context).size.width,
@@ -25,7 +47,7 @@ class PremiumIntroductionLimited extends StatelessWidget {
           ),
           SizedBox(height: 4),
           Text(
-            "47:58:00",
+            countdown,
             style: TextStyle(
               color: TextColor.main,
               fontFamily: FontFamily.japanese,
