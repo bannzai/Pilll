@@ -34,6 +34,7 @@ class PremiumIntroductionPage extends HookWidget {
         error: null,
         reload: () => store.reset(),
         child: Scaffold(
+          backgroundColor: Colors.white,
           body: SafeArea(
             child: PremiumIntroductionBody(
               isBlessMode: isBlessMode,
