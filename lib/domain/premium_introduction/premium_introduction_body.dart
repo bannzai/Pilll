@@ -25,43 +25,67 @@ class PremiumIntroductionBody extends StatelessWidget {
   Widget build(BuildContext context) {
     final offerings = this.offerings;
     final trialDeadlineDate = this.trialDeadlineDate;
-
-    return Column(
-      mainAxisSize: MainAxisSize.min,
-      children: [
-        PremiumIntroductionHeader(shouldShowDismiss: true),
-        if (trialDeadlineDate != null)
-          PremiumIntroductionLimited(
-            trialDeadlineDate: trialDeadlineDate,
-          ),
-        if (offerings != null) ...[
-          SizedBox(height: 32),
-          PurchaseButtons(
-            offerings: offerings,
-            trialDeadlineDate: trialDeadlineDate,
-          ),
-        ],
-        SizedBox(height: 24),
-        Text(
-          "$storeNameからいつでも簡単に解約出来ます",
-          textAlign: TextAlign.center,
-          style: TextColorStyle.black.merge(
-            TextStyle(
-              fontWeight: FontWeight.w400,
-              fontFamily: FontFamily.japanese,
-              fontSize: 14,
+    return SafeArea(
+      child: Container(
+        width: MediaQuery.of(context).size.width,
+        child: Stack(
+          children: [
+            Container(
+              decoration: BoxDecoration(
+                color: Colors.transparent,
+                image: isBlessMode
+                    ? DecorationImage(
+                        image: AssetImage("images/premium_background.png"),
+                        fit: BoxFit.cover,
+                      )
+                    : null,
+              ),
+              padding: EdgeInsets.only(left: 40, right: 40, bottom: 40),
+              width: MediaQuery.of(context).size.width,
             ),
-          ),
+            SingleChildScrollView(
+              padding: EdgeInsets.only(bottom: 100),
+              child: Column(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  PremiumIntroductionHeader(shouldShowDismiss: true),
+                  if (trialDeadlineDate != null)
+                    PremiumIntroductionLimited(
+                      trialDeadlineDate: trialDeadlineDate,
+                    ),
+                  if (offerings != null) ...[
+                    SizedBox(height: 32),
+                    PurchaseButtons(
+                      offerings: offerings,
+                      trialDeadlineDate: trialDeadlineDate,
+                    ),
+                  ],
+                  SizedBox(height: 24),
+                  Text(
+                    "$storeNameからいつでも簡単に解約出来ます",
+                    textAlign: TextAlign.center,
+                    style: TextColorStyle.black.merge(
+                      TextStyle(
+                        fontWeight: FontWeight.w400,
+                        fontFamily: FontFamily.japanese,
+                        fontSize: 14,
+                      ),
+                    ),
+                  ),
+                  SizedBox(height: 24),
+                  SecondaryButton(
+                      onPressed: () {
+                        print("");
+                      },
+                      text: "プレミアム機能を見る"),
+                  SizedBox(height: 24),
+                  PremiumIntroductionFotter(),
+                ],
+              ),
+            ),
+          ],
         ),
-        SizedBox(height: 24),
-        SecondaryButton(
-            onPressed: () {
-              print("");
-            },
-            text: "プレミアム機能を見る"),
-        SizedBox(height: 24),
-        PremiumIntroductionFotter(),
-      ],
+      ),
     );
   }
 }
