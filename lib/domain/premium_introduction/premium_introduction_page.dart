@@ -61,8 +61,7 @@ class PremiumIntroductionPage extends HookWidget {
                             PremiumIntroductionLimited(
                               trialDeadlineDate: trialDeadlineDate,
                             ),
-                          if (offerings != null &&
-                              trialDeadlineDate != null) ...[
+                          if (offerings != null) ...[
                             SizedBox(height: 32),
                             PurchaseButtons(
                               offerings: offerings,
