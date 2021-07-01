@@ -18,7 +18,7 @@ class MonthlyPurchaseButton extends StatelessWidget {
         onTap(monthlyPackage);
       },
       child: Container(
-        padding: EdgeInsets.fromLTRB(32, 24, 32, 46),
+        padding: EdgeInsets.fromLTRB(32, 24, 32, 45),
         decoration: BoxDecoration(
           color: Colors.transparent,
           borderRadius: BorderRadius.all(Radius.circular(4)),
@@ -27,29 +27,29 @@ class MonthlyPurchaseButton extends StatelessWidget {
             color: PilllColors.secondary,
           ),
         ),
-        child: Center(
-          child: Column(
-            children: [
-              Text(
-                "月間プラン",
-                style: TextStyle(
-                  color: TextColor.main,
-                  fontFamily: FontFamily.japanese,
-                  fontSize: 16,
-                  fontWeight: FontWeight.w700,
-                ),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          mainAxisSize: MainAxisSize.min,
+          children: [
+            Text(
+              "月間プラン",
+              style: TextStyle(
+                color: TextColor.main,
+                fontFamily: FontFamily.japanese,
+                fontSize: 16,
+                fontWeight: FontWeight.w700,
               ),
-              Text(
-                "${monthlyPackage.product.priceString}/年",
-                style: TextStyle(
-                  color: TextColor.main,
-                  fontFamily: FontFamily.japanese,
-                  fontSize: 16,
-                  fontWeight: FontWeight.w600,
-                ),
+            ),
+            Text(
+              "${monthlyPackage.product.priceString}/年",
+              style: TextStyle(
+                color: TextColor.main,
+                fontFamily: FontFamily.japanese,
+                fontSize: 16,
+                fontWeight: FontWeight.w600,
               ),
-            ],
-          ),
+            ),
+          ],
         ),
       ),
     );
