@@ -26,7 +26,6 @@ abstract class PurchaseButtonsState implements _$PurchaseButtonsState {
   }) = _PurchaseButtonsState;
 
   OfferingType get _offeringType {
-    return OfferingType.limited;
     final trialDeadlineDate = this.trialDeadlineDate;
     if (trialDeadlineDate == null) {
       return OfferingType.premium;
