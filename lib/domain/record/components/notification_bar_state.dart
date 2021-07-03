@@ -1,6 +1,7 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:pilll/entity/pill_sheet.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
+import 'package:pilll/util/datetime/day.dart';
 
 part 'notification_bar_state.freezed.dart';
 
@@ -13,6 +14,7 @@ abstract class NotificationBarState implements _$NotificationBarState {
     @Default(false) bool isLinkedLoginProvider,
     @Default(false) bool isPremium,
     @Default(false) bool isTrial,
+    DateTime? trialDeadlineDate,
     @Default(true) bool recommendedSignupNotificationIsAlreadyShow,
   }) = _NotificationBarState;
 
@@ -49,5 +51,31 @@ abstract class NotificationBarState implements _$NotificationBarState {
     }
 
     return null;
+  }
+
+  String? get premiumTrialLimit {
+    if (!isTrial) {
+      return null;
+    }
+    final trialDeadlineDate = this.trialDeadlineDate;
+    assert(trialDeadlineDate != null,
+        "if is trial should fill of trialDeadlineDate");
+    if (trialDeadlineDate == null) {
+      return null;
+    }
+
+    assert(trialDeadlineDate.isAfter(now()), "It is end of trial period.");
+    if (trialDeadlineDate.isBefore(now())) {
+      return null;
+    }
+
+    final diff = trialDeadlineDate.difference(now());
+    if (diff.inDays <= 0) {
+      return null;
+    }
+    if (diff.inDays > 10) {
+      return null;
+    }
+    return "プレミアムお試し体験中（残り$diff日）";
   }
 }

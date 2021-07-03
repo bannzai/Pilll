@@ -22,6 +22,7 @@ class _$NotificationBarStateTearOff {
       bool isLinkedLoginProvider = false,
       bool isPremium = false,
       bool isTrial = false,
+      DateTime? trialDeadlineDate,
       bool recommendedSignupNotificationIsAlreadyShow = true}) {
     return _NotificationBarState(
       pillSheet: pillSheet,
@@ -29,6 +30,7 @@ class _$NotificationBarStateTearOff {
       isLinkedLoginProvider: isLinkedLoginProvider,
       isPremium: isPremium,
       isTrial: isTrial,
+      trialDeadlineDate: trialDeadlineDate,
       recommendedSignupNotificationIsAlreadyShow:
           recommendedSignupNotificationIsAlreadyShow,
     );
@@ -45,6 +47,7 @@ mixin _$NotificationBarState {
   bool get isLinkedLoginProvider => throw _privateConstructorUsedError;
   bool get isPremium => throw _privateConstructorUsedError;
   bool get isTrial => throw _privateConstructorUsedError;
+  DateTime? get trialDeadlineDate => throw _privateConstructorUsedError;
   bool get recommendedSignupNotificationIsAlreadyShow =>
       throw _privateConstructorUsedError;
 
@@ -64,6 +67,7 @@ abstract class $NotificationBarStateCopyWith<$Res> {
       bool isLinkedLoginProvider,
       bool isPremium,
       bool isTrial,
+      DateTime? trialDeadlineDate,
       bool recommendedSignupNotificationIsAlreadyShow});
 
   $PillSheetCopyWith<$Res>? get pillSheet;
@@ -85,6 +89,7 @@ class _$NotificationBarStateCopyWithImpl<$Res>
     Object? isLinkedLoginProvider = freezed,
     Object? isPremium = freezed,
     Object? isTrial = freezed,
+    Object? trialDeadlineDate = freezed,
     Object? recommendedSignupNotificationIsAlreadyShow = freezed,
   }) {
     return _then(_value.copyWith(
@@ -108,6 +113,10 @@ class _$NotificationBarStateCopyWithImpl<$Res>
           ? _value.isTrial
           : isTrial // ignore: cast_nullable_to_non_nullable
               as bool,
+      trialDeadlineDate: trialDeadlineDate == freezed
+          ? _value.trialDeadlineDate
+          : trialDeadlineDate // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
       recommendedSignupNotificationIsAlreadyShow:
           recommendedSignupNotificationIsAlreadyShow == freezed
               ? _value.recommendedSignupNotificationIsAlreadyShow
@@ -141,6 +150,7 @@ abstract class _$NotificationBarStateCopyWith<$Res>
       bool isLinkedLoginProvider,
       bool isPremium,
       bool isTrial,
+      DateTime? trialDeadlineDate,
       bool recommendedSignupNotificationIsAlreadyShow});
 
   @override
@@ -165,6 +175,7 @@ class __$NotificationBarStateCopyWithImpl<$Res>
     Object? isLinkedLoginProvider = freezed,
     Object? isPremium = freezed,
     Object? isTrial = freezed,
+    Object? trialDeadlineDate = freezed,
     Object? recommendedSignupNotificationIsAlreadyShow = freezed,
   }) {
     return _then(_NotificationBarState(
@@ -188,6 +199,10 @@ class __$NotificationBarStateCopyWithImpl<$Res>
           ? _value.isTrial
           : isTrial // ignore: cast_nullable_to_non_nullable
               as bool,
+      trialDeadlineDate: trialDeadlineDate == freezed
+          ? _value.trialDeadlineDate
+          : trialDeadlineDate // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
       recommendedSignupNotificationIsAlreadyShow:
           recommendedSignupNotificationIsAlreadyShow == freezed
               ? _value.recommendedSignupNotificationIsAlreadyShow
@@ -206,6 +221,7 @@ class _$_NotificationBarState extends _NotificationBarState {
       this.isLinkedLoginProvider = false,
       this.isPremium = false,
       this.isTrial = false,
+      this.trialDeadlineDate,
       this.recommendedSignupNotificationIsAlreadyShow = true})
       : super._();
 
@@ -222,13 +238,15 @@ class _$_NotificationBarState extends _NotificationBarState {
   @JsonKey(defaultValue: false)
   @override
   final bool isTrial;
+  @override
+  final DateTime? trialDeadlineDate;
   @JsonKey(defaultValue: true)
   @override
   final bool recommendedSignupNotificationIsAlreadyShow;
 
   @override
   String toString() {
-    return 'NotificationBarState(pillSheet: $pillSheet, totalCountOfActionForTakenPill: $totalCountOfActionForTakenPill, isLinkedLoginProvider: $isLinkedLoginProvider, isPremium: $isPremium, isTrial: $isTrial, recommendedSignupNotificationIsAlreadyShow: $recommendedSignupNotificationIsAlreadyShow)';
+    return 'NotificationBarState(pillSheet: $pillSheet, totalCountOfActionForTakenPill: $totalCountOfActionForTakenPill, isLinkedLoginProvider: $isLinkedLoginProvider, isPremium: $isPremium, isTrial: $isTrial, trialDeadlineDate: $trialDeadlineDate, recommendedSignupNotificationIsAlreadyShow: $recommendedSignupNotificationIsAlreadyShow)';
   }
 
   @override
@@ -252,6 +270,9 @@ class _$_NotificationBarState extends _NotificationBarState {
             (identical(other.isTrial, isTrial) ||
                 const DeepCollectionEquality()
                     .equals(other.isTrial, isTrial)) &&
+            (identical(other.trialDeadlineDate, trialDeadlineDate) ||
+                const DeepCollectionEquality()
+                    .equals(other.trialDeadlineDate, trialDeadlineDate)) &&
             (identical(other.recommendedSignupNotificationIsAlreadyShow,
                     recommendedSignupNotificationIsAlreadyShow) ||
                 const DeepCollectionEquality().equals(
@@ -267,6 +288,7 @@ class _$_NotificationBarState extends _NotificationBarState {
       const DeepCollectionEquality().hash(isLinkedLoginProvider) ^
       const DeepCollectionEquality().hash(isPremium) ^
       const DeepCollectionEquality().hash(isTrial) ^
+      const DeepCollectionEquality().hash(trialDeadlineDate) ^
       const DeepCollectionEquality()
           .hash(recommendedSignupNotificationIsAlreadyShow);
 
@@ -284,6 +306,7 @@ abstract class _NotificationBarState extends NotificationBarState {
           bool isLinkedLoginProvider,
           bool isPremium,
           bool isTrial,
+          DateTime? trialDeadlineDate,
           bool recommendedSignupNotificationIsAlreadyShow}) =
       _$_NotificationBarState;
   _NotificationBarState._() : super._();
@@ -298,6 +321,8 @@ abstract class _NotificationBarState extends NotificationBarState {
   bool get isPremium => throw _privateConstructorUsedError;
   @override
   bool get isTrial => throw _privateConstructorUsedError;
+  @override
+  DateTime? get trialDeadlineDate => throw _privateConstructorUsedError;
   @override
   bool get recommendedSignupNotificationIsAlreadyShow =>
       throw _privateConstructorUsedError;
