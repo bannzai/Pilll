@@ -53,6 +53,13 @@ abstract class NotificationBarState implements _$NotificationBarState {
     return null;
   }
 
+  String? get premiumTrialGuide {
+    if (isPremium || isTrial || trialDeadlineDate != null) {
+      return null;
+    }
+    return "プレミアム機能 お試し体験プレゼント中\n詳しくみる";
+  }
+
   String? get premiumTrialLimit {
     if (!isTrial) {
       return null;
