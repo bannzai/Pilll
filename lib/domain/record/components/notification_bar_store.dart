@@ -38,6 +38,17 @@ class NotificationBarStateStore extends StateNotifier<NotificationBarState> {
         isLinkedLoginProvider:
             _authService.isLinkedApple() || _authService.isLinkedGoogle(),
       );
+      _subscribe();
+    });
+  }
+
+  StreamSubscription? _authServiceCanceller;
+  _subscribe() {
+    _authServiceCanceller?.cancel();
+    _authServiceCanceller = _authService.subscribe().listen((event) {
+      state = state.copyWith(
+          isLinkedLoginProvider:
+              _authService.isLinkedApple() || _authService.isLinkedGoogle());
     });
   }
 
