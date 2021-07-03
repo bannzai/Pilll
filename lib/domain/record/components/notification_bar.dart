@@ -33,6 +33,21 @@ class NotificationBar extends HookWidget {
           recommendedSignupNotification: recommendedSignupNotification);
     }
 
+    final premiumTrialLimit = state.premiumTrialLimit;
+    if (premiumTrialLimit != null) {
+      return Container(
+        constraints: BoxConstraints.expand(
+          height: 26,
+          width: MediaQuery.of(context).size.width,
+        ),
+        color: PilllColors.secondary,
+        child: Center(
+          child: Text(premiumTrialLimit,
+              style: FontType.assistingBold.merge(TextColorStyle.white)),
+        ),
+      );
+    }
+
     return Container();
   }
 }
