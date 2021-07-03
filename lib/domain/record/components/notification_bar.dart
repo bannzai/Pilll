@@ -51,13 +51,12 @@ class NotificationBar extends HookWidget {
     final premiumTrialGuide = state.premiumTrialGuide;
     if (premiumTrialGuide != null) {
       return GestureDetector(
-        onTap: () => showSigninSheet(
-            context, SigninSheetStateContext.recordPage, (linkAccount) {
+        onTap: () {
           analytics.logEvent(name: "premium_trial_from_notification_bar");
           showPremiumTrialModal(context, () {
             showPremiumTrialCompleteModalPreDialog(context);
           });
-        }),
+        },
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
@@ -69,9 +68,8 @@ class NotificationBar extends HookWidget {
                 size: 24,
               ),
               onPressed: () {
-                analytics.logEvent(
-                    name: "record_page_premium_trial_notification_closed");
-                store.closeRecommendedSignupNotification();
+                analytics.logEvent(name: "premium_trial_notification_closed");
+                store.closePremiumTrialNotification();
               },
               iconSize: 24,
               padding: EdgeInsets.zero,
