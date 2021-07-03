@@ -20,71 +20,102 @@ class NotificationBar extends HookWidget {
   Widget build(BuildContext context) {
     final store = useProvider(notificationBarStoreProvider(parameter));
     final state = useProvider(notificationBarStoreProvider(parameter).state);
-    final recommendedSignupNotification = state.recommendedSignupNotification;
-    if (recommendedSignupNotification.isNotEmpty) {
-      return GestureDetector(
-        onTap: () => showSigninSheet(
-            context, SigninSheetStateContext.recordPage, (linkAccount) {
-          analytics.logEvent(name: "signined_account_from_notification_bar");
-          showDemographyPageIfNeeded(context);
-        }),
-        child: Container(
-          height: 64,
-          color: PilllColors.secondary,
-          child: Row(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              IconButton(
-                  icon: Icon(Icons.close, color: Colors.white),
-                  onPressed: () {
-                    analytics.logEvent(
-                        name: "record_page_signing_notification_closed");
-                    store.closeRecommendedSignupNotification();
-                  }),
-              Column(
-                children: [
-                  SizedBox(height: 12),
-                  Text(
-                    recommendedSignupNotification,
-                    style: TextColorStyle.white.merge(FontType.descriptionBold),
-                    textAlign: TextAlign.center,
-                  ),
-                ],
-              ),
-              Column(
-                children: [
-                  SizedBox(height: 8),
-                  IconButton(
-                    icon: SvgPicture.asset(
-                      "images/arrow_right.svg",
-                      color: Colors.white,
-                    ),
-                    onPressed: () {},
-                  ),
-                ],
-              ),
-            ],
-          ),
-        ),
-      );
+    if (state.restDurationNotification.isNotEmpty) {
+      return RestDurationNotificationBar(
+          restDurationNotification: state.restDurationNotification);
     }
 
-    final restDurationNotification = state.restDurationNotification;
-    if (restDurationNotification.isNotEmpty) {
-      return Container(
-        constraints: BoxConstraints.expand(
-          height: 26,
-          width: MediaQuery.of(context).size.width,
-        ),
-        color: PilllColors.secondary,
-        child: Center(
-          child: Text(restDurationNotification,
-              style: FontType.assistingBold.merge(TextColorStyle.white)),
-        ),
-      );
+    if (state.recommendedSignupNotification.isNotEmpty) {
+      return RecommendSignupNotificationBar(
+          store: store,
+          recommendedSignupNotification: state.recommendedSignupNotification);
     }
 
     return Container();
+  }
+}
+
+class RecommendSignupNotificationBar extends StatelessWidget {
+  const RecommendSignupNotificationBar({
+    Key? key,
+    required this.store,
+    required this.recommendedSignupNotification,
+  }) : super(key: key);
+
+  final NotificationBarStateStore store;
+  final String recommendedSignupNotification;
+
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      onTap: () => showSigninSheet(context, SigninSheetStateContext.recordPage,
+          (linkAccount) {
+        analytics.logEvent(name: "signined_account_from_notification_bar");
+        showDemographyPageIfNeeded(context);
+      }),
+      child: Container(
+        height: 64,
+        color: PilllColors.secondary,
+        child: Row(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: [
+            IconButton(
+                icon: Icon(Icons.close, color: Colors.white),
+                onPressed: () {
+                  analytics.logEvent(
+                      name: "record_page_signing_notification_closed");
+                  store.closeRecommendedSignupNotification();
+                }),
+            Column(
+              children: [
+                SizedBox(height: 12),
+                Text(
+                  recommendedSignupNotification,
+                  style: TextColorStyle.white.merge(FontType.descriptionBold),
+                  textAlign: TextAlign.center,
+                ),
+              ],
+            ),
+            Column(
+              children: [
+                SizedBox(height: 8),
+                IconButton(
+                  icon: SvgPicture.asset(
+                    "images/arrow_right.svg",
+                    color: Colors.white,
+                  ),
+                  onPressed: () {},
+                ),
+              ],
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
+
+class RestDurationNotificationBar extends StatelessWidget {
+  const RestDurationNotificationBar({
+    Key? key,
+    required this.restDurationNotification,
+  }) : super(key: key);
+
+  final String restDurationNotification;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      constraints: BoxConstraints.expand(
+        height: 26,
+        width: MediaQuery.of(context).size.width,
+      ),
+      color: PilllColors.secondary,
+      child: Center(
+        child: Text(restDurationNotification,
+            style: FontType.assistingBold.merge(TextColorStyle.white)),
+      ),
+    );
   }
 }
