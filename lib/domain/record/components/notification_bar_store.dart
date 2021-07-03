@@ -46,6 +46,7 @@ class NotificationBarStateStore extends StateNotifier<NotificationBarState> {
             _authService.isLinkedApple() || _authService.isLinkedGoogle(),
         isTrial: user.isTrial,
         isPremium: user.isPremium,
+        trialDeadlineDate: user.trialDeadlineDate,
       );
       _subscribe();
     });
@@ -62,8 +63,11 @@ class NotificationBarStateStore extends StateNotifier<NotificationBarState> {
     });
     _userServiceCanceller?.cancel();
     _userServiceCanceller = _userService.subscribe().listen((event) {
-      state =
-          state.copyWith(isPremium: event.isPremium, isTrial: event.isTrial);
+      state = state.copyWith(
+        isPremium: event.isPremium,
+        isTrial: event.isTrial,
+        trialDeadlineDate: event.trialDeadlineDate,
+      );
     });
   }
 

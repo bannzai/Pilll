@@ -69,11 +69,11 @@ abstract class NotificationBarState implements _$NotificationBarState {
       return null;
     }
 
-    final diff = trialDeadlineDate.difference(now());
-    if (diff.inDays <= 0) {
+    final diff = trialDeadlineDate.difference(now()).inDays + 1;
+    if (diff < 0) {
       return null;
     }
-    if (diff.inDays > 10) {
+    if (diff > 10) {
       return null;
     }
     return "プレミアムお試し体験中（残り$diff日）";
