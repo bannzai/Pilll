@@ -58,6 +58,9 @@ abstract class NotificationBarState implements _$NotificationBarState {
     if (isPremium || isTrial || trialDeadlineDate != null) {
       return null;
     }
+    if (premiumTrialGuideNotificationIsClosed) {
+      return null;
+    }
     return "プレミアム機能 お試し体験プレゼント中\n詳しくみる";
   }
 
