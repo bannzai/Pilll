@@ -76,7 +76,6 @@ void main() {
       final store = RecordPageStore(
         pillSheetService,
         settingService,
-        authService,
         userService,
       );
 
@@ -142,7 +141,6 @@ void main() {
     final store = RecordPageStore(
       pillSheetService,
       settingService,
-      authService,
       userService,
     );
 
@@ -210,7 +208,6 @@ void main() {
     final store = RecordPageStore(
       pillSheetService,
       settingService,
-      authService,
       userService,
     );
 

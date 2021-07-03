@@ -9,8 +9,8 @@ abstract class NotificationBarState implements _$NotificationBarState {
   NotificationBarState._();
   factory NotificationBarState({
     required PillSheet? pillSheet,
-    required bool isLinkedLoginProvider,
     required int totalCountOfActionForTakenPill,
+    @Default(false) bool isLinkedLoginProvider,
     @Default(true) bool recommendedSignupNotificationIsAlreadyShow,
   }) = _NotificationBarState;
 

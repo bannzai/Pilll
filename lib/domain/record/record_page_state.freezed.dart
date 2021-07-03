@@ -20,7 +20,6 @@ class _$RecordPageStateTearOff {
       {required PillSheet? entity,
       Setting? setting,
       int totalCountOfActionForTakenPill = 0,
-      bool isLinkedLoginProvider = false,
       bool firstLoadIsEnded = false,
       bool isPremium = false,
       bool isTrial = false,
@@ -34,7 +33,6 @@ class _$RecordPageStateTearOff {
       entity: entity,
       setting: setting,
       totalCountOfActionForTakenPill: totalCountOfActionForTakenPill,
-      isLinkedLoginProvider: isLinkedLoginProvider,
       firstLoadIsEnded: firstLoadIsEnded,
       isPremium: isPremium,
       isTrial: isTrial,
@@ -55,7 +53,6 @@ mixin _$RecordPageState {
   PillSheet? get entity => throw _privateConstructorUsedError;
   Setting? get setting => throw _privateConstructorUsedError;
   int get totalCountOfActionForTakenPill => throw _privateConstructorUsedError;
-  bool get isLinkedLoginProvider => throw _privateConstructorUsedError;
   bool get firstLoadIsEnded => throw _privateConstructorUsedError;
   bool get isPremium => throw _privateConstructorUsedError;
   bool get isTrial => throw _privateConstructorUsedError;
@@ -82,7 +79,6 @@ abstract class $RecordPageStateCopyWith<$Res> {
       {PillSheet? entity,
       Setting? setting,
       int totalCountOfActionForTakenPill,
-      bool isLinkedLoginProvider,
       bool firstLoadIsEnded,
       bool isPremium,
       bool isTrial,
@@ -111,7 +107,6 @@ class _$RecordPageStateCopyWithImpl<$Res>
     Object? entity = freezed,
     Object? setting = freezed,
     Object? totalCountOfActionForTakenPill = freezed,
-    Object? isLinkedLoginProvider = freezed,
     Object? firstLoadIsEnded = freezed,
     Object? isPremium = freezed,
     Object? isTrial = freezed,
@@ -134,10 +129,6 @@ class _$RecordPageStateCopyWithImpl<$Res>
           ? _value.totalCountOfActionForTakenPill
           : totalCountOfActionForTakenPill // ignore: cast_nullable_to_non_nullable
               as int,
-      isLinkedLoginProvider: isLinkedLoginProvider == freezed
-          ? _value.isLinkedLoginProvider
-          : isLinkedLoginProvider // ignore: cast_nullable_to_non_nullable
-              as bool,
       firstLoadIsEnded: firstLoadIsEnded == freezed
           ? _value.firstLoadIsEnded
           : firstLoadIsEnded // ignore: cast_nullable_to_non_nullable
@@ -204,7 +195,6 @@ abstract class _$RecordPageStateCopyWith<$Res>
       {PillSheet? entity,
       Setting? setting,
       int totalCountOfActionForTakenPill,
-      bool isLinkedLoginProvider,
       bool firstLoadIsEnded,
       bool isPremium,
       bool isTrial,
@@ -237,7 +227,6 @@ class __$RecordPageStateCopyWithImpl<$Res>
     Object? entity = freezed,
     Object? setting = freezed,
     Object? totalCountOfActionForTakenPill = freezed,
-    Object? isLinkedLoginProvider = freezed,
     Object? firstLoadIsEnded = freezed,
     Object? isPremium = freezed,
     Object? isTrial = freezed,
@@ -260,10 +249,6 @@ class __$RecordPageStateCopyWithImpl<$Res>
           ? _value.totalCountOfActionForTakenPill
           : totalCountOfActionForTakenPill // ignore: cast_nullable_to_non_nullable
               as int,
-      isLinkedLoginProvider: isLinkedLoginProvider == freezed
-          ? _value.isLinkedLoginProvider
-          : isLinkedLoginProvider // ignore: cast_nullable_to_non_nullable
-              as bool,
       firstLoadIsEnded: firstLoadIsEnded == freezed
           ? _value.firstLoadIsEnded
           : firstLoadIsEnded // ignore: cast_nullable_to_non_nullable
@@ -304,7 +289,6 @@ class _$_RecordPageState extends _RecordPageState {
       {required this.entity,
       this.setting,
       this.totalCountOfActionForTakenPill = 0,
-      this.isLinkedLoginProvider = false,
       this.firstLoadIsEnded = false,
       this.isPremium = false,
       this.isTrial = false,
@@ -323,9 +307,6 @@ class _$_RecordPageState extends _RecordPageState {
   @JsonKey(defaultValue: 0)
   @override
   final int totalCountOfActionForTakenPill;
-  @JsonKey(defaultValue: false)
-  @override
-  final bool isLinkedLoginProvider;
   @JsonKey(defaultValue: false)
   @override
   final bool firstLoadIsEnded;
@@ -354,7 +335,7 @@ class _$_RecordPageState extends _RecordPageState {
 
   @override
   String toString() {
-    return 'RecordPageState(entity: $entity, setting: $setting, totalCountOfActionForTakenPill: $totalCountOfActionForTakenPill, isLinkedLoginProvider: $isLinkedLoginProvider, firstLoadIsEnded: $firstLoadIsEnded, isPremium: $isPremium, isTrial: $isTrial, isPillSheetFinishedInThePast: $isPillSheetFinishedInThePast, isAlreadyShowTiral: $isAlreadyShowTiral, shouldShowMigrateInfo: $shouldShowMigrateInfo, beginTrialDate: $beginTrialDate, exception: $exception)';
+    return 'RecordPageState(entity: $entity, setting: $setting, totalCountOfActionForTakenPill: $totalCountOfActionForTakenPill, firstLoadIsEnded: $firstLoadIsEnded, isPremium: $isPremium, isTrial: $isTrial, isPillSheetFinishedInThePast: $isPillSheetFinishedInThePast, isAlreadyShowTiral: $isAlreadyShowTiral, shouldShowMigrateInfo: $shouldShowMigrateInfo, beginTrialDate: $beginTrialDate, exception: $exception)';
   }
 
   @override
@@ -371,9 +352,6 @@ class _$_RecordPageState extends _RecordPageState {
                 const DeepCollectionEquality().equals(
                     other.totalCountOfActionForTakenPill,
                     totalCountOfActionForTakenPill)) &&
-            (identical(other.isLinkedLoginProvider, isLinkedLoginProvider) ||
-                const DeepCollectionEquality().equals(
-                    other.isLinkedLoginProvider, isLinkedLoginProvider)) &&
             (identical(other.firstLoadIsEnded, firstLoadIsEnded) ||
                 const DeepCollectionEquality()
                     .equals(other.firstLoadIsEnded, firstLoadIsEnded)) &&
@@ -408,7 +386,6 @@ class _$_RecordPageState extends _RecordPageState {
       const DeepCollectionEquality().hash(entity) ^
       const DeepCollectionEquality().hash(setting) ^
       const DeepCollectionEquality().hash(totalCountOfActionForTakenPill) ^
-      const DeepCollectionEquality().hash(isLinkedLoginProvider) ^
       const DeepCollectionEquality().hash(firstLoadIsEnded) ^
       const DeepCollectionEquality().hash(isPremium) ^
       const DeepCollectionEquality().hash(isTrial) ^
@@ -429,7 +406,6 @@ abstract class _RecordPageState extends RecordPageState {
       {required PillSheet? entity,
       Setting? setting,
       int totalCountOfActionForTakenPill,
-      bool isLinkedLoginProvider,
       bool firstLoadIsEnded,
       bool isPremium,
       bool isTrial,
@@ -447,8 +423,6 @@ abstract class _RecordPageState extends RecordPageState {
   Setting? get setting => throw _privateConstructorUsedError;
   @override
   int get totalCountOfActionForTakenPill => throw _privateConstructorUsedError;
-  @override
-  bool get isLinkedLoginProvider => throw _privateConstructorUsedError;
   @override
   bool get firstLoadIsEnded => throw _privateConstructorUsedError;
   @override

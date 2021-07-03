@@ -154,7 +154,6 @@ class RecordPage extends HookWidget {
                 NotificationBar(
                   NotificationBarStoreParameter(
                       pillSheet: state.entity,
-                      isLinkedLoginProvider: state.isLinkedLoginProvider,
                       totalCountOfActionForTakenPill:
                           state.totalCountOfActionForTakenPill),
                 ),

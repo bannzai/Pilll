@@ -18,11 +18,9 @@ class _$NotificationBarStoreParameterTearOff {
 
   _NotificationBarStoreParameter call(
       {required PillSheet? pillSheet,
-      required bool isLinkedLoginProvider,
       required int totalCountOfActionForTakenPill}) {
     return _NotificationBarStoreParameter(
       pillSheet: pillSheet,
-      isLinkedLoginProvider: isLinkedLoginProvider,
       totalCountOfActionForTakenPill: totalCountOfActionForTakenPill,
     );
   }
@@ -34,7 +32,6 @@ const $NotificationBarStoreParameter = _$NotificationBarStoreParameterTearOff();
 /// @nodoc
 mixin _$NotificationBarStoreParameter {
   PillSheet? get pillSheet => throw _privateConstructorUsedError;
-  bool get isLinkedLoginProvider => throw _privateConstructorUsedError;
   int get totalCountOfActionForTakenPill => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
@@ -48,10 +45,7 @@ abstract class $NotificationBarStoreParameterCopyWith<$Res> {
           NotificationBarStoreParameter value,
           $Res Function(NotificationBarStoreParameter) then) =
       _$NotificationBarStoreParameterCopyWithImpl<$Res>;
-  $Res call(
-      {PillSheet? pillSheet,
-      bool isLinkedLoginProvider,
-      int totalCountOfActionForTakenPill});
+  $Res call({PillSheet? pillSheet, int totalCountOfActionForTakenPill});
 
   $PillSheetCopyWith<$Res>? get pillSheet;
 }
@@ -68,7 +62,6 @@ class _$NotificationBarStoreParameterCopyWithImpl<$Res>
   @override
   $Res call({
     Object? pillSheet = freezed,
-    Object? isLinkedLoginProvider = freezed,
     Object? totalCountOfActionForTakenPill = freezed,
   }) {
     return _then(_value.copyWith(
@@ -76,10 +69,6 @@ class _$NotificationBarStoreParameterCopyWithImpl<$Res>
           ? _value.pillSheet
           : pillSheet // ignore: cast_nullable_to_non_nullable
               as PillSheet?,
-      isLinkedLoginProvider: isLinkedLoginProvider == freezed
-          ? _value.isLinkedLoginProvider
-          : isLinkedLoginProvider // ignore: cast_nullable_to_non_nullable
-              as bool,
       totalCountOfActionForTakenPill: totalCountOfActionForTakenPill == freezed
           ? _value.totalCountOfActionForTakenPill
           : totalCountOfActionForTakenPill // ignore: cast_nullable_to_non_nullable
@@ -107,10 +96,7 @@ abstract class _$NotificationBarStoreParameterCopyWith<$Res>
           $Res Function(_NotificationBarStoreParameter) then) =
       __$NotificationBarStoreParameterCopyWithImpl<$Res>;
   @override
-  $Res call(
-      {PillSheet? pillSheet,
-      bool isLinkedLoginProvider,
-      int totalCountOfActionForTakenPill});
+  $Res call({PillSheet? pillSheet, int totalCountOfActionForTakenPill});
 
   @override
   $PillSheetCopyWith<$Res>? get pillSheet;
@@ -132,7 +118,6 @@ class __$NotificationBarStoreParameterCopyWithImpl<$Res>
   @override
   $Res call({
     Object? pillSheet = freezed,
-    Object? isLinkedLoginProvider = freezed,
     Object? totalCountOfActionForTakenPill = freezed,
   }) {
     return _then(_NotificationBarStoreParameter(
@@ -140,10 +125,6 @@ class __$NotificationBarStoreParameterCopyWithImpl<$Res>
           ? _value.pillSheet
           : pillSheet // ignore: cast_nullable_to_non_nullable
               as PillSheet?,
-      isLinkedLoginProvider: isLinkedLoginProvider == freezed
-          ? _value.isLinkedLoginProvider
-          : isLinkedLoginProvider // ignore: cast_nullable_to_non_nullable
-              as bool,
       totalCountOfActionForTakenPill: totalCountOfActionForTakenPill == freezed
           ? _value.totalCountOfActionForTakenPill
           : totalCountOfActionForTakenPill // ignore: cast_nullable_to_non_nullable
@@ -157,20 +138,16 @@ class __$NotificationBarStoreParameterCopyWithImpl<$Res>
 class _$_NotificationBarStoreParameter
     implements _NotificationBarStoreParameter {
   _$_NotificationBarStoreParameter(
-      {required this.pillSheet,
-      required this.isLinkedLoginProvider,
-      required this.totalCountOfActionForTakenPill});
+      {required this.pillSheet, required this.totalCountOfActionForTakenPill});
 
   @override
   final PillSheet? pillSheet;
-  @override
-  final bool isLinkedLoginProvider;
   @override
   final int totalCountOfActionForTakenPill;
 
   @override
   String toString() {
-    return 'NotificationBarStoreParameter(pillSheet: $pillSheet, isLinkedLoginProvider: $isLinkedLoginProvider, totalCountOfActionForTakenPill: $totalCountOfActionForTakenPill)';
+    return 'NotificationBarStoreParameter(pillSheet: $pillSheet, totalCountOfActionForTakenPill: $totalCountOfActionForTakenPill)';
   }
 
   @override
@@ -180,9 +157,6 @@ class _$_NotificationBarStoreParameter
             (identical(other.pillSheet, pillSheet) ||
                 const DeepCollectionEquality()
                     .equals(other.pillSheet, pillSheet)) &&
-            (identical(other.isLinkedLoginProvider, isLinkedLoginProvider) ||
-                const DeepCollectionEquality().equals(
-                    other.isLinkedLoginProvider, isLinkedLoginProvider)) &&
             (identical(other.totalCountOfActionForTakenPill,
                     totalCountOfActionForTakenPill) ||
                 const DeepCollectionEquality().equals(
@@ -194,7 +168,6 @@ class _$_NotificationBarStoreParameter
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(pillSheet) ^
-      const DeepCollectionEquality().hash(isLinkedLoginProvider) ^
       const DeepCollectionEquality().hash(totalCountOfActionForTakenPill);
 
   @JsonKey(ignore: true)
@@ -208,14 +181,11 @@ abstract class _NotificationBarStoreParameter
     implements NotificationBarStoreParameter {
   factory _NotificationBarStoreParameter(
           {required PillSheet? pillSheet,
-          required bool isLinkedLoginProvider,
           required int totalCountOfActionForTakenPill}) =
       _$_NotificationBarStoreParameter;
 
   @override
   PillSheet? get pillSheet => throw _privateConstructorUsedError;
-  @override
-  bool get isLinkedLoginProvider => throw _privateConstructorUsedError;
   @override
   int get totalCountOfActionForTakenPill => throw _privateConstructorUsedError;
   @override

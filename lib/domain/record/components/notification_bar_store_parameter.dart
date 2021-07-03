@@ -8,7 +8,6 @@ abstract class NotificationBarStoreParameter
     with _$NotificationBarStoreParameter {
   factory NotificationBarStoreParameter({
     required PillSheet? pillSheet,
-    required bool isLinkedLoginProvider,
     required int totalCountOfActionForTakenPill,
   }) = _NotificationBarStoreParameter;
 }

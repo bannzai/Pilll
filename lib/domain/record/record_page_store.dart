@@ -6,7 +6,6 @@ import 'package:pilll/analytics.dart';
 import 'package:pilll/entity/pill_mark_type.dart';
 import 'package:pilll/entity/pill_sheet.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
-import 'package:pilll/service/auth.dart';
 import 'package:pilll/service/pill_sheet.dart';
 import 'package:pilll/domain/record/record_page_state.dart';
 import 'package:pilll/service/setting.dart';
@@ -18,19 +17,16 @@ import 'package:shared_preferences/shared_preferences.dart';
 final recordPageStoreProvider = StateNotifierProvider((ref) => RecordPageStore(
       ref.watch(pillSheetServiceProvider),
       ref.watch(settingServiceProvider),
-      ref.watch(authServiceProvider),
       ref.watch(userServiceProvider),
     ));
 
 class RecordPageStore extends StateNotifier<RecordPageState> {
   final PillSheetService _service;
   final SettingService _settingService;
-  final AuthService _authService;
   final UserService _userService;
   RecordPageStore(
     this._service,
     this._settingService,
-    this._authService,
     this._userService,
   ) : super(RecordPageState(entity: null)) {
     reset();
@@ -68,8 +64,6 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
         entity: entity,
         setting: setting,
         firstLoadIsEnded: true,
-        isLinkedLoginProvider:
-            _authService.isLinkedApple() || _authService.isLinkedGoogle(),
         totalCountOfActionForTakenPill: totalCountOfActionForTakenPill,
         exception: null,
         isPillSheetFinishedInThePast: isPillSheetFinishedInThePast,
