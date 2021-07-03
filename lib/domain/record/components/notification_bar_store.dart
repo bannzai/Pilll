@@ -38,15 +38,15 @@ class NotificationBarStateStore extends StateNotifier<NotificationBarState> {
       final recommendedSignupNotificationIsAlreadyShow = sharedPreferences
               .getBool(BoolKey.recommendedSignupNotificationIsAlreadyShow) ??
           false;
-      final premiumTrialModalGuideNotificationIsClosed = sharedPreferences
-              .getBool(BoolKey.premiumTrialModalGuideNotificationIsClosed) ??
+      final premiumTrialGuideNotificationIsClosed = sharedPreferences
+              .getBool(BoolKey.premiumTrialGuideNotificationIsClosed) ??
           false;
       final user = await _userService.fetch();
       state = state.copyWith(
         recommendedSignupNotificationIsAlreadyShow:
             recommendedSignupNotificationIsAlreadyShow,
-        premiumTrialModalGuideNotificationIsClosed:
-            premiumTrialModalGuideNotificationIsClosed,
+        premiumTrialGuideNotificationIsClosed:
+            premiumTrialGuideNotificationIsClosed,
         isLinkedLoginProvider:
             _authService.isLinkedApple() || _authService.isLinkedGoogle(),
         isTrial: user.isTrial,
@@ -86,7 +86,7 @@ class NotificationBarStateStore extends StateNotifier<NotificationBarState> {
   Future<void> closePremiumTrialNotification() async {
     final sharedPreferences = await SharedPreferences.getInstance();
     sharedPreferences.setBool(
-        BoolKey.premiumTrialModalGuideNotificationIsClosed, true);
-    state = state.copyWith(premiumTrialModalGuideNotificationIsClosed: true);
+        BoolKey.premiumTrialGuideNotificationIsClosed, true);
+    state = state.copyWith(premiumTrialGuideNotificationIsClosed: true);
   }
 }

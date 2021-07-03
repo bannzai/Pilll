@@ -16,7 +16,7 @@ abstract class NotificationBarState implements _$NotificationBarState {
     @Default(false) bool isTrial,
     DateTime? trialDeadlineDate,
     @Default(true) bool recommendedSignupNotificationIsAlreadyShow,
-    @Default(true) bool premiumTrialModalGuideNotificationIsClosed,
+    @Default(true) bool premiumTrialGuideNotificationIsClosed,
   }) = _NotificationBarState;
 
   String? get recommendedSignupNotification {
