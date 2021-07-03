@@ -18,6 +18,19 @@ class NotificationBar extends HookWidget {
   NotificationBar(this.parameter);
   @override
   Widget build(BuildContext context) {
+    final body = _body();
+    if (body != null) {
+      return Container(
+        padding: const EdgeInsets.all(8),
+        color: PilllColors.secondary,
+        child: body,
+      );
+    }
+
+    return Container();
+  }
+
+  Widget? _body() {
     final store = useProvider(notificationBarStoreProvider(parameter));
     final state = useProvider(notificationBarStoreProvider(parameter).state);
     final restDurationNotification = state.restDurationNotification;
@@ -35,17 +48,11 @@ class NotificationBar extends HookWidget {
 
     final premiumTrialLimit = state.premiumTrialLimit;
     if (premiumTrialLimit != null) {
-      return Container(
-        padding: const EdgeInsets.all(8),
-        color: PilllColors.secondary,
-        child: Center(
-          child: Text(premiumTrialLimit,
-              style: FontType.assistingBold.merge(TextColorStyle.white)),
-        ),
+      return Center(
+        child: Text(premiumTrialLimit,
+            style: FontType.assistingBold.merge(TextColorStyle.white)),
       );
     }
-
-    return Container();
   }
 }
 
@@ -67,44 +74,40 @@ class RecommendSignupNotificationBar extends StatelessWidget {
         analytics.logEvent(name: "signined_account_from_notification_bar");
         showDemographyPageIfNeeded(context);
       }),
-      child: Container(
-        height: 64,
-        color: PilllColors.secondary,
-        child: Row(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            IconButton(
-                icon: Icon(Icons.close, color: Colors.white),
-                onPressed: () {
-                  analytics.logEvent(
-                      name: "record_page_signing_notification_closed");
-                  store.closeRecommendedSignupNotification();
-                }),
-            Column(
-              children: [
-                SizedBox(height: 12),
-                Text(
-                  recommendedSignupNotification,
-                  style: TextColorStyle.white.merge(FontType.descriptionBold),
-                  textAlign: TextAlign.center,
+      child: Row(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          IconButton(
+              icon: Icon(Icons.close, color: Colors.white),
+              onPressed: () {
+                analytics.logEvent(
+                    name: "record_page_signing_notification_closed");
+                store.closeRecommendedSignupNotification();
+              }),
+          Column(
+            children: [
+              SizedBox(height: 12),
+              Text(
+                recommendedSignupNotification,
+                style: TextColorStyle.white.merge(FontType.descriptionBold),
+                textAlign: TextAlign.center,
+              ),
+            ],
+          ),
+          Column(
+            children: [
+              SizedBox(height: 8),
+              IconButton(
+                icon: SvgPicture.asset(
+                  "images/arrow_right.svg",
+                  color: Colors.white,
                 ),
-              ],
-            ),
-            Column(
-              children: [
-                SizedBox(height: 8),
-                IconButton(
-                  icon: SvgPicture.asset(
-                    "images/arrow_right.svg",
-                    color: Colors.white,
-                  ),
-                  onPressed: () {},
-                ),
-              ],
-            ),
-          ],
-        ),
+                onPressed: () {},
+              ),
+            ],
+          ),
+        ],
       ),
     );
   }
@@ -120,16 +123,9 @@ class RestDurationNotificationBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      constraints: BoxConstraints.expand(
-        height: 26,
-        width: MediaQuery.of(context).size.width,
-      ),
-      color: PilllColors.secondary,
-      child: Center(
-        child: Text(restDurationNotification,
-            style: FontType.assistingBold.merge(TextColorStyle.white)),
-      ),
+    return Center(
+      child: Text(restDurationNotification,
+          style: FontType.assistingBold.merge(TextColorStyle.white)),
     );
   }
 }
