@@ -36,10 +36,7 @@ class NotificationBar extends HookWidget {
     final premiumTrialLimit = state.premiumTrialLimit;
     if (premiumTrialLimit != null) {
       return Container(
-        constraints: BoxConstraints.expand(
-          height: 26,
-          width: MediaQuery.of(context).size.width,
-        ),
+        padding: const EdgeInsets.all(8),
         color: PilllColors.secondary,
         child: Center(
           child: Text(premiumTrialLimit,
