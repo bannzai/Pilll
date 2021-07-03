@@ -20,11 +20,15 @@ class _$NotificationBarStateTearOff {
       {required PillSheet? pillSheet,
       required int totalCountOfActionForTakenPill,
       bool isLinkedLoginProvider = false,
+      bool isPremium = false,
+      bool isTrial = false,
       bool recommendedSignupNotificationIsAlreadyShow = true}) {
     return _NotificationBarState(
       pillSheet: pillSheet,
       totalCountOfActionForTakenPill: totalCountOfActionForTakenPill,
       isLinkedLoginProvider: isLinkedLoginProvider,
+      isPremium: isPremium,
+      isTrial: isTrial,
       recommendedSignupNotificationIsAlreadyShow:
           recommendedSignupNotificationIsAlreadyShow,
     );
@@ -39,6 +43,8 @@ mixin _$NotificationBarState {
   PillSheet? get pillSheet => throw _privateConstructorUsedError;
   int get totalCountOfActionForTakenPill => throw _privateConstructorUsedError;
   bool get isLinkedLoginProvider => throw _privateConstructorUsedError;
+  bool get isPremium => throw _privateConstructorUsedError;
+  bool get isTrial => throw _privateConstructorUsedError;
   bool get recommendedSignupNotificationIsAlreadyShow =>
       throw _privateConstructorUsedError;
 
@@ -56,6 +62,8 @@ abstract class $NotificationBarStateCopyWith<$Res> {
       {PillSheet? pillSheet,
       int totalCountOfActionForTakenPill,
       bool isLinkedLoginProvider,
+      bool isPremium,
+      bool isTrial,
       bool recommendedSignupNotificationIsAlreadyShow});
 
   $PillSheetCopyWith<$Res>? get pillSheet;
@@ -75,6 +83,8 @@ class _$NotificationBarStateCopyWithImpl<$Res>
     Object? pillSheet = freezed,
     Object? totalCountOfActionForTakenPill = freezed,
     Object? isLinkedLoginProvider = freezed,
+    Object? isPremium = freezed,
+    Object? isTrial = freezed,
     Object? recommendedSignupNotificationIsAlreadyShow = freezed,
   }) {
     return _then(_value.copyWith(
@@ -89,6 +99,14 @@ class _$NotificationBarStateCopyWithImpl<$Res>
       isLinkedLoginProvider: isLinkedLoginProvider == freezed
           ? _value.isLinkedLoginProvider
           : isLinkedLoginProvider // ignore: cast_nullable_to_non_nullable
+              as bool,
+      isPremium: isPremium == freezed
+          ? _value.isPremium
+          : isPremium // ignore: cast_nullable_to_non_nullable
+              as bool,
+      isTrial: isTrial == freezed
+          ? _value.isTrial
+          : isTrial // ignore: cast_nullable_to_non_nullable
               as bool,
       recommendedSignupNotificationIsAlreadyShow:
           recommendedSignupNotificationIsAlreadyShow == freezed
@@ -121,6 +139,8 @@ abstract class _$NotificationBarStateCopyWith<$Res>
       {PillSheet? pillSheet,
       int totalCountOfActionForTakenPill,
       bool isLinkedLoginProvider,
+      bool isPremium,
+      bool isTrial,
       bool recommendedSignupNotificationIsAlreadyShow});
 
   @override
@@ -143,6 +163,8 @@ class __$NotificationBarStateCopyWithImpl<$Res>
     Object? pillSheet = freezed,
     Object? totalCountOfActionForTakenPill = freezed,
     Object? isLinkedLoginProvider = freezed,
+    Object? isPremium = freezed,
+    Object? isTrial = freezed,
     Object? recommendedSignupNotificationIsAlreadyShow = freezed,
   }) {
     return _then(_NotificationBarState(
@@ -157,6 +179,14 @@ class __$NotificationBarStateCopyWithImpl<$Res>
       isLinkedLoginProvider: isLinkedLoginProvider == freezed
           ? _value.isLinkedLoginProvider
           : isLinkedLoginProvider // ignore: cast_nullable_to_non_nullable
+              as bool,
+      isPremium: isPremium == freezed
+          ? _value.isPremium
+          : isPremium // ignore: cast_nullable_to_non_nullable
+              as bool,
+      isTrial: isTrial == freezed
+          ? _value.isTrial
+          : isTrial // ignore: cast_nullable_to_non_nullable
               as bool,
       recommendedSignupNotificationIsAlreadyShow:
           recommendedSignupNotificationIsAlreadyShow == freezed
@@ -174,6 +204,8 @@ class _$_NotificationBarState extends _NotificationBarState {
       {required this.pillSheet,
       required this.totalCountOfActionForTakenPill,
       this.isLinkedLoginProvider = false,
+      this.isPremium = false,
+      this.isTrial = false,
       this.recommendedSignupNotificationIsAlreadyShow = true})
       : super._();
 
@@ -184,13 +216,19 @@ class _$_NotificationBarState extends _NotificationBarState {
   @JsonKey(defaultValue: false)
   @override
   final bool isLinkedLoginProvider;
+  @JsonKey(defaultValue: false)
+  @override
+  final bool isPremium;
+  @JsonKey(defaultValue: false)
+  @override
+  final bool isTrial;
   @JsonKey(defaultValue: true)
   @override
   final bool recommendedSignupNotificationIsAlreadyShow;
 
   @override
   String toString() {
-    return 'NotificationBarState(pillSheet: $pillSheet, totalCountOfActionForTakenPill: $totalCountOfActionForTakenPill, isLinkedLoginProvider: $isLinkedLoginProvider, recommendedSignupNotificationIsAlreadyShow: $recommendedSignupNotificationIsAlreadyShow)';
+    return 'NotificationBarState(pillSheet: $pillSheet, totalCountOfActionForTakenPill: $totalCountOfActionForTakenPill, isLinkedLoginProvider: $isLinkedLoginProvider, isPremium: $isPremium, isTrial: $isTrial, recommendedSignupNotificationIsAlreadyShow: $recommendedSignupNotificationIsAlreadyShow)';
   }
 
   @override
@@ -208,6 +246,12 @@ class _$_NotificationBarState extends _NotificationBarState {
             (identical(other.isLinkedLoginProvider, isLinkedLoginProvider) ||
                 const DeepCollectionEquality().equals(
                     other.isLinkedLoginProvider, isLinkedLoginProvider)) &&
+            (identical(other.isPremium, isPremium) ||
+                const DeepCollectionEquality()
+                    .equals(other.isPremium, isPremium)) &&
+            (identical(other.isTrial, isTrial) ||
+                const DeepCollectionEquality()
+                    .equals(other.isTrial, isTrial)) &&
             (identical(other.recommendedSignupNotificationIsAlreadyShow,
                     recommendedSignupNotificationIsAlreadyShow) ||
                 const DeepCollectionEquality().equals(
@@ -221,6 +265,8 @@ class _$_NotificationBarState extends _NotificationBarState {
       const DeepCollectionEquality().hash(pillSheet) ^
       const DeepCollectionEquality().hash(totalCountOfActionForTakenPill) ^
       const DeepCollectionEquality().hash(isLinkedLoginProvider) ^
+      const DeepCollectionEquality().hash(isPremium) ^
+      const DeepCollectionEquality().hash(isTrial) ^
       const DeepCollectionEquality()
           .hash(recommendedSignupNotificationIsAlreadyShow);
 
@@ -236,6 +282,8 @@ abstract class _NotificationBarState extends NotificationBarState {
           {required PillSheet? pillSheet,
           required int totalCountOfActionForTakenPill,
           bool isLinkedLoginProvider,
+          bool isPremium,
+          bool isTrial,
           bool recommendedSignupNotificationIsAlreadyShow}) =
       _$_NotificationBarState;
   _NotificationBarState._() : super._();
@@ -246,6 +294,10 @@ abstract class _NotificationBarState extends NotificationBarState {
   int get totalCountOfActionForTakenPill => throw _privateConstructorUsedError;
   @override
   bool get isLinkedLoginProvider => throw _privateConstructorUsedError;
+  @override
+  bool get isPremium => throw _privateConstructorUsedError;
+  @override
+  bool get isTrial => throw _privateConstructorUsedError;
   @override
   bool get recommendedSignupNotificationIsAlreadyShow =>
       throw _privateConstructorUsedError;
