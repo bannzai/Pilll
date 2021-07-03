@@ -75,19 +75,26 @@ class RecommendSignupNotificationBar extends StatelessWidget {
         showDemographyPageIfNeeded(context);
       }),
       child: Row(
-        crossAxisAlignment: CrossAxisAlignment.start,
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           IconButton(
-              icon: Icon(Icons.close, color: Colors.white),
-              onPressed: () {
-                analytics.logEvent(
-                    name: "record_page_signing_notification_closed");
-                store.closeRecommendedSignupNotification();
-              }),
+            alignment: Alignment.topLeft,
+            icon: Icon(
+              Icons.close,
+              color: Colors.white,
+              size: 24,
+            ),
+            onPressed: () {
+              analytics.logEvent(
+                  name: "record_page_signing_notification_closed");
+              store.closeRecommendedSignupNotification();
+            },
+            iconSize: 24,
+            padding: EdgeInsets.zero,
+          ),
+          Spacer(),
           Column(
             children: [
-              SizedBox(height: 12),
               Text(
                 recommendedSignupNotification,
                 style: TextColorStyle.white.merge(FontType.descriptionBold),
@@ -95,15 +102,18 @@ class RecommendSignupNotificationBar extends StatelessWidget {
               ),
             ],
           ),
+          Spacer(),
           Column(
             children: [
-              SizedBox(height: 8),
               IconButton(
                 icon: SvgPicture.asset(
                   "images/arrow_right.svg",
                   color: Colors.white,
                 ),
                 onPressed: () {},
+                iconSize: 24,
+                padding: EdgeInsets.all(8),
+                alignment: Alignment.centerRight,
               ),
             ],
           ),
