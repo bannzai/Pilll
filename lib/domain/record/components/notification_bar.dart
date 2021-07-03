@@ -7,6 +7,8 @@ import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/domain/demography/demography_page.dart';
+import 'package:pilll/domain/premium_trial/premium_trial_complete_modal.dart';
+import 'package:pilll/domain/premium_trial/premium_trial_modal.dart';
 import 'package:pilll/domain/record/components/notification_bar_store.dart';
 import 'package:pilll/domain/record/components/notification_bar_store_parameter.dart';
 import 'package:pilll/signin/signin_sheet.dart';
@@ -18,7 +20,7 @@ class NotificationBar extends HookWidget {
   NotificationBar(this.parameter);
   @override
   Widget build(BuildContext context) {
-    final body = _body();
+    final body = _body(context);
     if (body != null) {
       return Container(
         padding: const EdgeInsets.all(8),
@@ -30,7 +32,7 @@ class NotificationBar extends HookWidget {
     return Container();
   }
 
-  Widget? _body() {
+  Widget? _body(BuildContext context) {
     final store = useProvider(notificationBarStoreProvider(parameter));
     final state = useProvider(notificationBarStoreProvider(parameter).state);
     final restDurationNotification = state.restDurationNotification;
@@ -44,6 +46,64 @@ class NotificationBar extends HookWidget {
       return RecommendSignupNotificationBar(
           store: store,
           recommendedSignupNotification: recommendedSignupNotification);
+    }
+
+    final premiumTrialGuide = state.premiumTrialGuide;
+    if (premiumTrialGuide != null) {
+      return GestureDetector(
+        onTap: () => showSigninSheet(
+            context, SigninSheetStateContext.recordPage, (linkAccount) {
+          analytics.logEvent(name: "premium_trial_from_notification_bar");
+          showPremiumTrialModal(context, () {
+            showPremiumTrialCompleteModalPreDialog(context);
+          });
+        }),
+        child: Row(
+          crossAxisAlignment: CrossAxisAlignment.center,
+          children: [
+            IconButton(
+              alignment: Alignment.topLeft,
+              icon: Icon(
+                Icons.close,
+                color: Colors.white,
+                size: 24,
+              ),
+              onPressed: () {
+                analytics.logEvent(
+                    name: "record_page_premium_trial_notification_closed");
+                store.closeRecommendedSignupNotification();
+              },
+              iconSize: 24,
+              padding: EdgeInsets.zero,
+            ),
+            Spacer(),
+            Column(
+              children: [
+                Text(
+                  premiumTrialGuide,
+                  style: TextColorStyle.white.merge(FontType.descriptionBold),
+                  textAlign: TextAlign.center,
+                ),
+              ],
+            ),
+            Spacer(),
+            Column(
+              children: [
+                IconButton(
+                  icon: SvgPicture.asset(
+                    "images/arrow_right.svg",
+                    color: Colors.white,
+                  ),
+                  onPressed: () {},
+                  iconSize: 24,
+                  padding: EdgeInsets.all(8),
+                  alignment: Alignment.centerRight,
+                ),
+              ],
+            ),
+          ],
+        ),
+      );
     }
 
     final premiumTrialLimit = state.premiumTrialLimit;

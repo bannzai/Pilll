@@ -23,7 +23,8 @@ class _$NotificationBarStateTearOff {
       bool isPremium = false,
       bool isTrial = false,
       DateTime? trialDeadlineDate,
-      bool recommendedSignupNotificationIsAlreadyShow = true}) {
+      bool recommendedSignupNotificationIsAlreadyShow = true,
+      bool premiumTrialModalGuideNotificationIsClosed = true}) {
     return _NotificationBarState(
       pillSheet: pillSheet,
       totalCountOfActionForTakenPill: totalCountOfActionForTakenPill,
@@ -33,6 +34,8 @@ class _$NotificationBarStateTearOff {
       trialDeadlineDate: trialDeadlineDate,
       recommendedSignupNotificationIsAlreadyShow:
           recommendedSignupNotificationIsAlreadyShow,
+      premiumTrialModalGuideNotificationIsClosed:
+          premiumTrialModalGuideNotificationIsClosed,
     );
   }
 }
@@ -49,6 +52,8 @@ mixin _$NotificationBarState {
   bool get isTrial => throw _privateConstructorUsedError;
   DateTime? get trialDeadlineDate => throw _privateConstructorUsedError;
   bool get recommendedSignupNotificationIsAlreadyShow =>
+      throw _privateConstructorUsedError;
+  bool get premiumTrialModalGuideNotificationIsClosed =>
       throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
@@ -68,7 +73,8 @@ abstract class $NotificationBarStateCopyWith<$Res> {
       bool isPremium,
       bool isTrial,
       DateTime? trialDeadlineDate,
-      bool recommendedSignupNotificationIsAlreadyShow});
+      bool recommendedSignupNotificationIsAlreadyShow,
+      bool premiumTrialModalGuideNotificationIsClosed});
 
   $PillSheetCopyWith<$Res>? get pillSheet;
 }
@@ -91,6 +97,7 @@ class _$NotificationBarStateCopyWithImpl<$Res>
     Object? isTrial = freezed,
     Object? trialDeadlineDate = freezed,
     Object? recommendedSignupNotificationIsAlreadyShow = freezed,
+    Object? premiumTrialModalGuideNotificationIsClosed = freezed,
   }) {
     return _then(_value.copyWith(
       pillSheet: pillSheet == freezed
@@ -122,6 +129,11 @@ class _$NotificationBarStateCopyWithImpl<$Res>
               ? _value.recommendedSignupNotificationIsAlreadyShow
               : recommendedSignupNotificationIsAlreadyShow // ignore: cast_nullable_to_non_nullable
                   as bool,
+      premiumTrialModalGuideNotificationIsClosed:
+          premiumTrialModalGuideNotificationIsClosed == freezed
+              ? _value.premiumTrialModalGuideNotificationIsClosed
+              : premiumTrialModalGuideNotificationIsClosed // ignore: cast_nullable_to_non_nullable
+                  as bool,
     ));
   }
 
@@ -151,7 +163,8 @@ abstract class _$NotificationBarStateCopyWith<$Res>
       bool isPremium,
       bool isTrial,
       DateTime? trialDeadlineDate,
-      bool recommendedSignupNotificationIsAlreadyShow});
+      bool recommendedSignupNotificationIsAlreadyShow,
+      bool premiumTrialModalGuideNotificationIsClosed});
 
   @override
   $PillSheetCopyWith<$Res>? get pillSheet;
@@ -177,6 +190,7 @@ class __$NotificationBarStateCopyWithImpl<$Res>
     Object? isTrial = freezed,
     Object? trialDeadlineDate = freezed,
     Object? recommendedSignupNotificationIsAlreadyShow = freezed,
+    Object? premiumTrialModalGuideNotificationIsClosed = freezed,
   }) {
     return _then(_NotificationBarState(
       pillSheet: pillSheet == freezed
@@ -208,6 +222,11 @@ class __$NotificationBarStateCopyWithImpl<$Res>
               ? _value.recommendedSignupNotificationIsAlreadyShow
               : recommendedSignupNotificationIsAlreadyShow // ignore: cast_nullable_to_non_nullable
                   as bool,
+      premiumTrialModalGuideNotificationIsClosed:
+          premiumTrialModalGuideNotificationIsClosed == freezed
+              ? _value.premiumTrialModalGuideNotificationIsClosed
+              : premiumTrialModalGuideNotificationIsClosed // ignore: cast_nullable_to_non_nullable
+                  as bool,
     ));
   }
 }
@@ -222,7 +241,8 @@ class _$_NotificationBarState extends _NotificationBarState {
       this.isPremium = false,
       this.isTrial = false,
       this.trialDeadlineDate,
-      this.recommendedSignupNotificationIsAlreadyShow = true})
+      this.recommendedSignupNotificationIsAlreadyShow = true,
+      this.premiumTrialModalGuideNotificationIsClosed = true})
       : super._();
 
   @override
@@ -243,10 +263,13 @@ class _$_NotificationBarState extends _NotificationBarState {
   @JsonKey(defaultValue: true)
   @override
   final bool recommendedSignupNotificationIsAlreadyShow;
+  @JsonKey(defaultValue: true)
+  @override
+  final bool premiumTrialModalGuideNotificationIsClosed;
 
   @override
   String toString() {
-    return 'NotificationBarState(pillSheet: $pillSheet, totalCountOfActionForTakenPill: $totalCountOfActionForTakenPill, isLinkedLoginProvider: $isLinkedLoginProvider, isPremium: $isPremium, isTrial: $isTrial, trialDeadlineDate: $trialDeadlineDate, recommendedSignupNotificationIsAlreadyShow: $recommendedSignupNotificationIsAlreadyShow)';
+    return 'NotificationBarState(pillSheet: $pillSheet, totalCountOfActionForTakenPill: $totalCountOfActionForTakenPill, isLinkedLoginProvider: $isLinkedLoginProvider, isPremium: $isPremium, isTrial: $isTrial, trialDeadlineDate: $trialDeadlineDate, recommendedSignupNotificationIsAlreadyShow: $recommendedSignupNotificationIsAlreadyShow, premiumTrialModalGuideNotificationIsClosed: $premiumTrialModalGuideNotificationIsClosed)';
   }
 
   @override
@@ -277,7 +300,12 @@ class _$_NotificationBarState extends _NotificationBarState {
                     recommendedSignupNotificationIsAlreadyShow) ||
                 const DeepCollectionEquality().equals(
                     other.recommendedSignupNotificationIsAlreadyShow,
-                    recommendedSignupNotificationIsAlreadyShow)));
+                    recommendedSignupNotificationIsAlreadyShow)) &&
+            (identical(other.premiumTrialModalGuideNotificationIsClosed,
+                    premiumTrialModalGuideNotificationIsClosed) ||
+                const DeepCollectionEquality().equals(
+                    other.premiumTrialModalGuideNotificationIsClosed,
+                    premiumTrialModalGuideNotificationIsClosed)));
   }
 
   @override
@@ -290,7 +318,9 @@ class _$_NotificationBarState extends _NotificationBarState {
       const DeepCollectionEquality().hash(isTrial) ^
       const DeepCollectionEquality().hash(trialDeadlineDate) ^
       const DeepCollectionEquality()
-          .hash(recommendedSignupNotificationIsAlreadyShow);
+          .hash(recommendedSignupNotificationIsAlreadyShow) ^
+      const DeepCollectionEquality()
+          .hash(premiumTrialModalGuideNotificationIsClosed);
 
   @JsonKey(ignore: true)
   @override
@@ -307,7 +337,8 @@ abstract class _NotificationBarState extends NotificationBarState {
           bool isPremium,
           bool isTrial,
           DateTime? trialDeadlineDate,
-          bool recommendedSignupNotificationIsAlreadyShow}) =
+          bool recommendedSignupNotificationIsAlreadyShow,
+          bool premiumTrialModalGuideNotificationIsClosed}) =
       _$_NotificationBarState;
   _NotificationBarState._() : super._();
 
@@ -325,6 +356,9 @@ abstract class _NotificationBarState extends NotificationBarState {
   DateTime? get trialDeadlineDate => throw _privateConstructorUsedError;
   @override
   bool get recommendedSignupNotificationIsAlreadyShow =>
+      throw _privateConstructorUsedError;
+  @override
+  bool get premiumTrialModalGuideNotificationIsClosed =>
       throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
