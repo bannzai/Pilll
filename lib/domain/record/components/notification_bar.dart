@@ -20,15 +20,17 @@ class NotificationBar extends HookWidget {
   Widget build(BuildContext context) {
     final store = useProvider(notificationBarStoreProvider(parameter));
     final state = useProvider(notificationBarStoreProvider(parameter).state);
-    if (state.restDurationNotification.isNotEmpty) {
+    final restDurationNotification = state.restDurationNotification;
+    if (restDurationNotification != null) {
       return RestDurationNotificationBar(
-          restDurationNotification: state.restDurationNotification);
+          restDurationNotification: restDurationNotification);
     }
 
-    if (state.recommendedSignupNotification.isNotEmpty) {
+    final recommendedSignupNotification = state.recommendedSignupNotification;
+    if (recommendedSignupNotification != null) {
       return RecommendSignupNotificationBar(
           store: store,
-          recommendedSignupNotification: state.recommendedSignupNotification);
+          recommendedSignupNotification: recommendedSignupNotification);
     }
 
     return Container();

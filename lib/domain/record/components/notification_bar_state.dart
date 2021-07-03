@@ -14,26 +14,26 @@ abstract class NotificationBarState implements _$NotificationBarState {
     @Default(true) bool recommendedSignupNotificationIsAlreadyShow,
   }) = _NotificationBarState;
 
-  String get recommendedSignupNotification {
+  String? get recommendedSignupNotification {
     if (isLinkedLoginProvider) {
-      return "";
+      return null;
     }
     if (totalCountOfActionForTakenPill < 7) {
-      return "";
+      return null;
     }
     if (recommendedSignupNotificationIsAlreadyShow) {
-      return "";
+      return null;
     }
     return "機種変更やスマホ紛失時に備えて\nアカウント登録しませんか？";
   }
 
-  String get restDurationNotification {
+  String? get restDurationNotification {
     final pillSheet = this.pillSheet;
     if (pillSheet == null || pillSheet.isInvalid) {
-      return "";
+      return null;
     }
     if (pillSheet.pillSheetType.isNotExistsNotTakenDuration) {
-      return "";
+      return null;
     }
     if (pillSheet.typeInfo.dosingPeriod < pillSheet.todayPillNumber) {
       return "${pillSheet.pillSheetType.notTakenWord}期間中";
@@ -46,6 +46,6 @@ abstract class NotificationBarState implements _$NotificationBarState {
       return "あと${diff + 1}日で${pillSheet.pillSheetType.notTakenWord}期間です";
     }
 
-    return "";
+    return null;
   }
 }
