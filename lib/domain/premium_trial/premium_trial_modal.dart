@@ -152,7 +152,10 @@ showPremiumTrialModalWhenLaunchApp(
     return;
   }
   storage.setBool(key, true);
+  showPremiumTrialModal(context, didEndTrial);
+}
 
+showPremiumTrialModal(BuildContext context, VoidCallback didEndTrial) async {
   showDialog(
       context: context,
       builder: (context) {
