@@ -46,10 +46,6 @@ class NotificationBar extends HookWidget {
           }
         }
       }
-    } else {
-      if (state.shownRecommendSignupNotificationForPremium) {
-        return RecommendSignupForPremiumNotificationBar();
-      }
 
       if (!state.isTrial) {
         if (state.trialDeadlineDate == null) {
@@ -57,6 +53,10 @@ class NotificationBar extends HookWidget {
             return PremiumTrialGuideNotificationBar(store: store);
           }
         }
+      }
+    } else {
+      if (state.shownRecommendSignupNotificationForPremium) {
+        return RecommendSignupForPremiumNotificationBar();
       }
     }
 
