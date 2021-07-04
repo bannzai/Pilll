@@ -42,7 +42,7 @@ class NotificationBar extends HookWidget {
             restDurationNotification: restDurationNotification);
       }
 
-      final recommendedSignupNotification = state.recommendedSignupNotification;
+      final recommendedSignupNotification = state.recommendSignupNotification;
       if (recommendedSignupNotification != null) {
         return RecommendSignupNotificationBar(
             store: store,

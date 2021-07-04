@@ -19,7 +19,7 @@ abstract class NotificationBarState implements _$NotificationBarState {
     @Default(true) bool premiumTrialGuideNotificationIsClosed,
   }) = _NotificationBarState;
 
-  String? get recommendedSignupNotification {
+  String? get recommendSignupNotification {
     if (isLinkedLoginProvider) {
       return null;
     }
@@ -53,6 +53,8 @@ abstract class NotificationBarState implements _$NotificationBarState {
 
     return null;
   }
+  
+  
 
   String? get premiumTrialGuide {
     if (isPremium || isTrial || trialDeadlineDate != null) {
