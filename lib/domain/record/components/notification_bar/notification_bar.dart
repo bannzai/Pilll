@@ -52,12 +52,14 @@ class NotificationBar extends HookWidget {
       if (state.shownRecommendSignupNotificationForPremium) {
         return RecommendSignupForPremiumNotificationBar();
       }
-    }
 
-    final premiumTrialGuide = state.premiumTrialGuide;
-    if (premiumTrialGuide != null) {
-      return PremiumTrialGuideNotificationBar(
-          store: store, premiumTrialGuide: premiumTrialGuide);
+      if (!state.isTrial) {
+        if (state.trialDeadlineDate == null) {
+          if (!state.premiumTrialGuideNotificationIsClosed) {
+            return PremiumTrialGuideNotificationBar(store: store);
+          }
+        }
+      }
     }
 
     final premiumTrialLimit = state.premiumTrialLimit;
@@ -74,11 +76,9 @@ class PremiumTrialGuideNotificationBar extends StatelessWidget {
   const PremiumTrialGuideNotificationBar({
     Key? key,
     required this.store,
-    required this.premiumTrialGuide,
   }) : super(key: key);
 
   final NotificationBarStateStore store;
-  final String premiumTrialGuide;
 
   @override
   Widget build(BuildContext context) {
@@ -110,7 +110,7 @@ class PremiumTrialGuideNotificationBar extends StatelessWidget {
           Column(
             children: [
               Text(
-                premiumTrialGuide,
+                "プレミアム機能 お試し体験プレゼント中\n詳しくみる",
                 style: TextColorStyle.white.merge(FontType.descriptionBold),
                 textAlign: TextAlign.center,
               ),
