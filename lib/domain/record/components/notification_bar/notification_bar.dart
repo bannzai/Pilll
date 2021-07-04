@@ -66,6 +66,12 @@ class NotificationBar extends HookWidget {
       if (state.shownRecommendSignupNotificationForPremium) {
         return RecommendSignupForPremiumNotificationBar();
       }
+
+      final restDurationNotification = state.restDurationNotification;
+      if (restDurationNotification != null) {
+        return RestDurationNotificationBar(
+            restDurationNotification: restDurationNotification);
+      }
     }
   }
 }
