@@ -30,7 +30,7 @@ void main() {
           todayRepository = originalTodayRepository;
         });
 
-        final menstruationService = MockMnestruationService();
+        final menstruationService = MockMenstruationService();
         when(menstruationService.fetchAll()).thenAnswer(
           (realInvocation) => Future.value([
             Menstruation(
@@ -104,7 +104,7 @@ void main() {
           todayRepository = originalTodayRepository;
         });
 
-        final menstruationService = MockMnestruationService();
+        final menstruationService = MockMenstruationService();
         when(menstruationService.fetchAll()).thenAnswer(
           (realInvocation) => Future.value([
             Menstruation(
@@ -169,7 +169,7 @@ void main() {
           todayRepository = originalTodayRepository;
         });
 
-        final menstruationService = MockMnestruationService();
+        final menstruationService = MockMenstruationService();
         when(menstruationService.fetchAll()).thenAnswer(
           (realInvocation) => Future.value([
             Menstruation(
@@ -235,7 +235,7 @@ void main() {
           todayRepository = originalTodayRepository;
         });
 
-        final menstruationService = MockMnestruationService();
+        final menstruationService = MockMenstruationService();
         when(menstruationService.fetchAll()).thenAnswer(
           (realInvocation) => Future.value([]),
         );
@@ -298,7 +298,7 @@ void main() {
           todayRepository = originalTodayRepository;
         });
 
-        final menstruationService = MockMnestruationService();
+        final menstruationService = MockMenstruationService();
         when(menstruationService.fetchAll()).thenAnswer(
           (realInvocation) => Future.value([]),
         );

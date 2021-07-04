@@ -8,6 +8,7 @@ import 'package:mockito/mockito.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import '../../helper/mock.mocks.dart';
+import '../../helper/mock.dart';
 
 class _FakeSetting extends Fake implements Setting {
   final List<ReminderTime> fakeReminderTimes;

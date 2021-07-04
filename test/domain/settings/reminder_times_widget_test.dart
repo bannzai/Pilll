@@ -12,6 +12,7 @@ import 'package:mockito/mockito.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import '../../helper/mock.mocks.dart';
+import '../../helper/mock.dart';
 import '../../helper/supported_device.dart';
 
 void main() {
