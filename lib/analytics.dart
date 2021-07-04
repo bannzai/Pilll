@@ -1,17 +1,8 @@
 import 'package:firebase_analytics/firebase_analytics.dart';
 
-abstract class AbstractAnalytics {
-  Future<void> logEvent(
-      {required String name, Map<String, dynamic>? parameters});
-  Future<void> setCurrentScreen(
-      {required String screenName, String screenClassOverride = 'Flutter'});
-  setUserProperties(String name, dynamic value);
-}
-
 final firebaseAnalytics = FirebaseAnalytics();
 
-class Analytics extends AbstractAnalytics {
-  @override
+class Analytics {
   Future<void> logEvent(
       {required String name, Map<String, dynamic>? parameters}) async {
     assert(name.length <= 40,
@@ -20,7 +11,6 @@ class Analytics extends AbstractAnalytics {
     return firebaseAnalytics.logEvent(name: name, parameters: parameters);
   }
 
-  @override
   Future<void> setCurrentScreen(
       {required String screenName,
       String screenClassOverride = 'Flutter'}) async {
@@ -29,7 +19,6 @@ class Analytics extends AbstractAnalytics {
         screenName: screenName, screenClassOverride: screenClassOverride);
   }
 
-  @override
   setUserProperties(String name, value) {
     assert(name.toLowerCase() != "age");
     assert(name.toLowerCase() != "gender");
@@ -40,4 +29,4 @@ class Analytics extends AbstractAnalytics {
   }
 }
 
-AbstractAnalytics analytics = Analytics();
+Analytics analytics = Analytics();
