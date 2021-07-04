@@ -56,58 +56,8 @@ class NotificationBar extends HookWidget {
 
     final premiumTrialGuide = state.premiumTrialGuide;
     if (premiumTrialGuide != null) {
-      return GestureDetector(
-        onTap: () {
-          analytics.logEvent(name: "premium_trial_from_notification_bar");
-          showPremiumTrialModal(context, () {
-            showPremiumTrialCompleteModalPreDialog(context);
-          });
-        },
-        child: Row(
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            IconButton(
-              alignment: Alignment.topLeft,
-              icon: Icon(
-                Icons.close,
-                color: Colors.white,
-                size: 24,
-              ),
-              onPressed: () {
-                analytics.logEvent(name: "premium_trial_notification_closed");
-                store.closePremiumTrialNotification();
-              },
-              iconSize: 24,
-              padding: EdgeInsets.zero,
-            ),
-            Spacer(),
-            Column(
-              children: [
-                Text(
-                  premiumTrialGuide,
-                  style: TextColorStyle.white.merge(FontType.descriptionBold),
-                  textAlign: TextAlign.center,
-                ),
-              ],
-            ),
-            Spacer(),
-            Column(
-              children: [
-                IconButton(
-                  icon: SvgPicture.asset(
-                    "images/arrow_right.svg",
-                    color: Colors.white,
-                  ),
-                  onPressed: () {},
-                  iconSize: 24,
-                  padding: EdgeInsets.all(8),
-                  alignment: Alignment.centerRight,
-                ),
-              ],
-            ),
-          ],
-        ),
-      );
+      return PremiumTrialGuideNotificationBar(
+          store: store, premiumTrialGuide: premiumTrialGuide);
     }
 
     final premiumTrialLimit = state.premiumTrialLimit;
@@ -117,6 +67,73 @@ class NotificationBar extends HookWidget {
             style: FontType.assistingBold.merge(TextColorStyle.white)),
       );
     }
+  }
+}
+
+class PremiumTrialGuideNotificationBar extends StatelessWidget {
+  const PremiumTrialGuideNotificationBar({
+    Key? key,
+    required this.store,
+    required this.premiumTrialGuide,
+  }) : super(key: key);
+
+  final NotificationBarStateStore store;
+  final String? premiumTrialGuide;
+
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      onTap: () {
+        analytics.logEvent(name: "premium_trial_from_notification_bar");
+        showPremiumTrialModal(context, () {
+          showPremiumTrialCompleteModalPreDialog(context);
+        });
+      },
+      child: Row(
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          IconButton(
+            alignment: Alignment.topLeft,
+            icon: Icon(
+              Icons.close,
+              color: Colors.white,
+              size: 24,
+            ),
+            onPressed: () {
+              analytics.logEvent(name: "premium_trial_notification_closed");
+              store.closePremiumTrialNotification();
+            },
+            iconSize: 24,
+            padding: EdgeInsets.zero,
+          ),
+          Spacer(),
+          Column(
+            children: [
+              Text(
+                premiumTrialGuide,
+                style: TextColorStyle.white.merge(FontType.descriptionBold),
+                textAlign: TextAlign.center,
+              ),
+            ],
+          ),
+          Spacer(),
+          Column(
+            children: [
+              IconButton(
+                icon: SvgPicture.asset(
+                  "images/arrow_right.svg",
+                  color: Colors.white,
+                ),
+                onPressed: () {},
+                iconSize: 24,
+                padding: EdgeInsets.all(8),
+                alignment: Alignment.centerRight,
+              ),
+            ],
+          ),
+        ],
+      ),
+    );
   }
 }
 
