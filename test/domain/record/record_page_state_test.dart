@@ -26,7 +26,7 @@ void main() {
       final mockTodayRepository = MockTodayService();
       final today = DateTime.parse("2020-11-22");
       todayRepository = mockTodayRepository;
-      when(todayRepository.today()).thenReturn(today);
+      when(mockTodayRepository.today()).thenReturn(today);
 
       final pillSheetEntity =
           PillSheet.create(PillSheetType.pillsheet_21).copyWith(
@@ -79,7 +79,7 @@ void main() {
     final mockTodayRepository = MockTodayService();
     final today = DateTime.parse("2020-11-23");
     todayRepository = mockTodayRepository;
-    when(todayRepository.today()).thenReturn(today);
+    when(mockTodayRepository.today()).thenReturn(today);
 
     final pillSheetEntity =
         PillSheet.create(PillSheetType.pillsheet_21).copyWith(
@@ -132,7 +132,7 @@ void main() {
       final mockTodayRepository = MockTodayService();
       final today = DateTime.parse("2020-11-23");
       todayRepository = mockTodayRepository;
-      when(todayRepository.today()).thenReturn(today);
+      when(mockTodayRepository.today()).thenReturn(today);
 
       final pillSheetEntity =
           PillSheet.create(PillSheetType.pillsheet_21).copyWith(
@@ -187,7 +187,7 @@ void main() {
       final mockTodayRepository = MockTodayService();
       final today = DateTime.parse("2020-11-23");
       todayRepository = mockTodayRepository;
-      when(todayRepository.today()).thenReturn(today);
+      when(mockTodayRepository.today()).thenReturn(today);
 
       final pillSheetEntity =
           PillSheet.create(PillSheetType.pillsheet_21).copyWith(
@@ -298,7 +298,7 @@ void main() {
       final mockTodayRepository = MockTodayService();
       final today = DateTime.parse("2020-11-23");
       todayRepository = mockTodayRepository;
-      when(todayRepository.today()).thenReturn(today);
+      when(mockTodayRepository.today()).thenReturn(today);
 
       final pillSheetEntity =
           PillSheet.create(PillSheetType.pillsheet_21).copyWith(

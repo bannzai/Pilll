@@ -44,7 +44,7 @@ void main() {
       todayRepository = mockTodayRepository;
 
       final today = DateTime(2020, 09, 01);
-      when(todayRepository.today()).thenReturn(today);
+      when(mockTodayRepository.today()).thenReturn(today);
 
       final pillSheet = PillSheet.create(PillSheetType.pillsheet_21);
       expect(pillSheet.todayPillNumber, equals(1),
@@ -107,7 +107,7 @@ void main() {
     todayRepository = mockTodayRepository;
 
     final today = DateTime(2020, 09, 01);
-    when(todayRepository.today()).thenReturn(today);
+    when(mockTodayRepository.today()).thenReturn(today);
 
     var pillSheet = PillSheet.create(PillSheetType.pillsheet_21);
     pillSheet = pillSheet.copyWith(lastTakenDate: todayRepository.today());
@@ -172,7 +172,7 @@ void main() {
     todayRepository = mockTodayRepository;
 
     final today = DateTime(2020, 09, 01);
-    when(todayRepository.today()).thenReturn(today);
+    when(mockTodayRepository.today()).thenReturn(today);
 
     final pillSheet = PillSheet(
       beginingDate: today.subtract(Duration(days: 24)),
