@@ -2,8 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/components/atoms/color.dart';
-import 'package:pilll/components/atoms/font.dart';
-import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/domain/record/components/notification_bar/notification_bar_store.dart';
 import 'package:pilll/domain/record/components/notification_bar/notification_bar_store_parameter.dart';
 import 'package:pilll/domain/record/components/notification_bar/premium_trial_guide.dart';
@@ -31,7 +29,6 @@ class NotificationBar extends HookWidget {
   }
 
   Widget? _body(BuildContext context) {
-    final store = useProvider(notificationBarStoreProvider(parameter));
     final state = useProvider(notificationBarStoreProvider(parameter).state);
     if (!state.isPremium) {
       final restDurationNotification = state.restDurationNotification;
@@ -43,7 +40,7 @@ class NotificationBar extends HookWidget {
       if (!state.isLinkedLoginProvider) {
         if (state.totalCountOfActionForTakenPill >= 7) {
           if (!state.recommendedSignupNotificationIsAlreadyShow) {
-            return RecommendSignupNotificationBar(store: store);
+            return RecommendSignupNotificationBar(parameter: parameter);
           }
         }
       }
@@ -51,7 +48,7 @@ class NotificationBar extends HookWidget {
       if (!state.isTrial) {
         if (state.trialDeadlineDate == null) {
           if (!state.premiumTrialGuideNotificationIsClosed) {
-            return PremiumTrialGuideNotificationBar(store: store);
+            return PremiumTrialGuideNotificationBar(parameter: parameter);
           }
         }
       }

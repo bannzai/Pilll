@@ -1,23 +1,27 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/analytics.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/domain/demography/demography_page.dart';
 import 'package:pilll/domain/record/components/notification_bar/notification_bar_store.dart';
+import 'package:pilll/domain/record/components/notification_bar/notification_bar_store_parameter.dart';
 import 'package:pilll/signin/signin_sheet.dart';
 import 'package:pilll/signin/signin_sheet_state.dart';
 
-class RecommendSignupNotificationBar extends StatelessWidget {
+class RecommendSignupNotificationBar extends HookWidget {
   const RecommendSignupNotificationBar({
     Key? key,
-    required this.store,
+    required this.parameter,
   }) : super(key: key);
 
-  final NotificationBarStateStore store;
+  final NotificationBarStoreParameter parameter;
 
   @override
   Widget build(BuildContext context) {
+    final store = useProvider(notificationBarStoreProvider(parameter));
     return GestureDetector(
       onTap: () => showSigninSheet(context, SigninSheetStateContext.recordPage,
           (linkAccount) {
