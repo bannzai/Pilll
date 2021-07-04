@@ -2,8 +2,8 @@ import 'package:pilll/analytics.dart';
 import 'package:pilll/domain/record/components/notification_bar/notification_bar.dart';
 import 'package:pilll/domain/record/components/notification_bar/notification_bar_state.dart';
 import 'package:pilll/domain/record/components/notification_bar/notification_bar_store.dart';
-import 'package:pilll/domain/record/components/notification_bar/notification_bar_store_parameter.dart';
 import 'package:pilll/domain/record/components/notification_bar/rest_duration.dart';
+import 'package:pilll/domain/record/record_page_state.dart';
 import 'package:pilll/entity/pill_sheet.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/service/day.dart';
@@ -59,11 +59,7 @@ void main() {
         isLinkedLoginProvider: false,
       );
 
-      final anyParameter = NotificationBarStoreParameter(
-        pillSheet: pillSheet,
-        totalCountOfActionForTakenPill:
-            totalCountOfActionForTakenPillForLongTimeUser,
-      );
+      final recordPageState = RecordPageState(entity: pillSheet);
       await tester.pumpWidget(
         ProviderScope(
           overrides: [
@@ -71,7 +67,7 @@ void main() {
                 .overrideWithProvider((ref, param) => state),
           ],
           child: MaterialApp(
-            home: NotificationBar(anyParameter),
+            home: NotificationBar(recordPageState),
           ),
         ),
       );
@@ -111,11 +107,7 @@ void main() {
         isLinkedLoginProvider: false,
       );
 
-      final anyParameter = NotificationBarStoreParameter(
-        pillSheet: pillSheet,
-        totalCountOfActionForTakenPill:
-            totalCountOfActionForTakenPillForLongTimeUser,
-      );
+      final recordPageState = RecordPageState(entity: pillSheet);
       await tester.pumpWidget(
         ProviderScope(
           overrides: [
@@ -123,7 +115,7 @@ void main() {
                 .overrideWithProvider((ref, param) => state),
           ],
           child: MaterialApp(
-            home: NotificationBar(anyParameter),
+            home: NotificationBar(recordPageState),
           ),
         ),
       );

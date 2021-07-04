@@ -1,7 +1,7 @@
 import 'dart:async';
 
-import 'package:pilll/domain/record/components/notification_bar/notification_bar_store_parameter.dart';
 import 'package:pilll/domain/record/components/notification_bar/notification_bar_state.dart';
+import 'package:pilll/domain/record/record_page_state.dart';
 import 'package:pilll/service/auth.dart';
 import 'package:pilll/service/user.dart';
 import 'package:pilll/util/shared_preference/keys.dart';
@@ -9,26 +9,26 @@ import 'package:riverpod/riverpod.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 final notificationBarStoreProvider = StateNotifierProvider.autoDispose.family(
-  (ref, NotificationBarStoreParameter parameter) => NotificationBarStateStore(
+  (ref, RecordPageState parameter) => NotificationBarStateStore(
     parameter,
     ref.watch(authServiceProvider),
     ref.watch(userServiceProvider),
   ),
 );
 final notificationBarStateProvider = Provider.autoDispose.family(
-  (ref, NotificationBarStoreParameter parameter) =>
+  (ref, RecordPageState parameter) =>
       ref.watch(notificationBarStoreProvider(parameter).state),
 );
 
 class NotificationBarStateStore extends StateNotifier<NotificationBarState> {
-  final NotificationBarStoreParameter parameter;
+  final RecordPageState parameter;
   final AuthService _authService;
   final UserService _userService;
   NotificationBarStateStore(
       this.parameter, this._authService, this._userService)
       : super(
           NotificationBarState(
-            pillSheet: parameter.pillSheet,
+            pillSheet: parameter.entity,
             totalCountOfActionForTakenPill:
                 parameter.totalCountOfActionForTakenPill,
           ),

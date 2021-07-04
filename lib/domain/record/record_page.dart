@@ -6,7 +6,6 @@ import 'package:pilll/domain/initial_setting/migrate_info.dart';
 import 'package:pilll/domain/premium_trial/premium_trial_complete_modal.dart';
 import 'package:pilll/domain/record/components/button/record_page_button.dart';
 import 'package:pilll/domain/record/components/notification_bar/notification_bar.dart';
-import 'package:pilll/domain/record/components/notification_bar/notification_bar_store_parameter.dart';
 import 'package:pilll/domain/record/record_page_state.dart';
 import 'package:pilll/domain/record/record_page_store.dart';
 import 'package:pilll/domain/record/record_taken_information.dart';
@@ -148,12 +147,7 @@ class RecordPage extends HookWidget {
           child: SingleChildScrollView(
             child: Column(
               children: [
-                NotificationBar(
-                  NotificationBarStoreParameter(
-                      pillSheet: state.entity,
-                      totalCountOfActionForTakenPill:
-                          state.totalCountOfActionForTakenPill),
-                ),
+                NotificationBar(state),
                 SizedBox(height: 64),
                 if (state.isInvalid)
                   _empty(context, store, settingEntity.pillSheetType),
