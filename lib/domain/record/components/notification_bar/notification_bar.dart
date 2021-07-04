@@ -7,6 +7,7 @@ import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/domain/record/components/notification_bar/notification_bar_store.dart';
 import 'package:pilll/domain/record/components/notification_bar/notification_bar_store_parameter.dart';
 import 'package:pilll/domain/record/components/notification_bar/premium_trial_guide.dart';
+import 'package:pilll/domain/record/components/notification_bar/premium_trial_limit.dart';
 import 'package:pilll/domain/record/components/notification_bar/recommend_signup.dart';
 import 'package:pilll/domain/record/components/notification_bar/recommend_signup_premium.dart';
 import 'package:pilll/domain/record/components/notification_bar/rest_duration.dart';
@@ -57,10 +58,8 @@ class NotificationBar extends HookWidget {
 
       final premiumTrialLimit = state.premiumTrialLimit;
       if (premiumTrialLimit != null) {
-        return Center(
-          child: Text(premiumTrialLimit,
-              style: FontType.assistingBold.merge(TextColorStyle.white)),
-        );
+        return PremiumTrialLimitNotificationBar(
+            premiumTrialLimit: premiumTrialLimit);
       }
     } else {
       if (state.shownRecommendSignupNotificationForPremium) {
