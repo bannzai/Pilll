@@ -80,6 +80,15 @@ class NotificationBarStateStore extends StateNotifier<NotificationBarState> {
     });
   }
 
+  @override
+  dispose() {
+    _authServiceCanceller?.cancel();
+    _userServiceCanceller?.cancel();
+    _authServiceCanceller = null;
+    _userServiceCanceller = null;
+    super.dispose();
+  }
+
   Future<void> closeRecommendedSignupNotification() async {
     final sharedPreferences = await SharedPreferences.getInstance();
     sharedPreferences.setBool(
