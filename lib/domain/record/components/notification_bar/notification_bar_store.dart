@@ -1,7 +1,7 @@
 import 'dart:async';
 
-import 'package:pilll/domain/record/components/notification_bar_store_parameter.dart';
-import 'package:pilll/domain/record/components/notification_bar_state.dart';
+import 'package:pilll/domain/record/components/notification_bar/notification_bar_store_parameter.dart';
+import 'package:pilll/domain/record/components/notification_bar/notification_bar_state.dart';
 import 'package:pilll/service/auth.dart';
 import 'package:pilll/service/user.dart';
 import 'package:pilll/util/shared_preference/keys.dart';

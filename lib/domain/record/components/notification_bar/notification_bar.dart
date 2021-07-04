@@ -9,8 +9,8 @@ import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/domain/demography/demography_page.dart';
 import 'package:pilll/domain/premium_trial/premium_trial_complete_modal.dart';
 import 'package:pilll/domain/premium_trial/premium_trial_modal.dart';
-import 'package:pilll/domain/record/components/notification_bar_store.dart';
-import 'package:pilll/domain/record/components/notification_bar_store_parameter.dart';
+import 'package:pilll/domain/record/components/notification_bar/notification_bar_store.dart';
+import 'package:pilll/domain/record/components/notification_bar/notification_bar_store_parameter.dart';
 import 'package:pilll/signin/signin_sheet.dart';
 import 'package:pilll/signin/signin_sheet_state.dart';
 
