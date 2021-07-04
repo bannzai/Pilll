@@ -54,18 +54,18 @@ class NotificationBar extends HookWidget {
           }
         }
       }
+
+      final premiumTrialLimit = state.premiumTrialLimit;
+      if (premiumTrialLimit != null) {
+        return Center(
+          child: Text(premiumTrialLimit,
+              style: FontType.assistingBold.merge(TextColorStyle.white)),
+        );
+      }
     } else {
       if (state.shownRecommendSignupNotificationForPremium) {
         return RecommendSignupForPremiumNotificationBar();
       }
-    }
-
-    final premiumTrialLimit = state.premiumTrialLimit;
-    if (premiumTrialLimit != null) {
-      return Center(
-        child: Text(premiumTrialLimit,
-            style: FontType.assistingBold.merge(TextColorStyle.white)),
-      );
     }
   }
 }
