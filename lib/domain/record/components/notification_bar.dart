@@ -78,7 +78,7 @@ class PremiumTrialGuideNotificationBar extends StatelessWidget {
   }) : super(key: key);
 
   final NotificationBarStateStore store;
-  final String? premiumTrialGuide;
+  final String premiumTrialGuide;
 
   @override
   Widget build(BuildContext context) {
