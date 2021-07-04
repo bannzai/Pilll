@@ -15,6 +15,10 @@ final notificationBarStoreProvider = StateNotifierProvider.autoDispose.family(
     ref.watch(userServiceProvider),
   ),
 );
+final notificationBarStateProvider = Provider.autoDispose.family(
+  (ref, NotificationBarStoreParameter parameter) =>
+      ref.watch(notificationBarStoreProvider(parameter).state),
+);
 
 class NotificationBarStateStore extends StateNotifier<NotificationBarState> {
   final NotificationBarStoreParameter parameter;

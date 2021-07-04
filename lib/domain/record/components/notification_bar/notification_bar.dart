@@ -29,7 +29,7 @@ class NotificationBar extends HookWidget {
   }
 
   Widget? _body(BuildContext context) {
-    final state = useProvider(notificationBarStoreProvider(parameter).state);
+    final state = useProvider(notificationBarStateProvider(parameter));
     if (!state.isPremium) {
       final restDurationNotification = state.restDurationNotification;
       if (restDurationNotification != null) {
