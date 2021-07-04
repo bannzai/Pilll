@@ -1,4 +1,5 @@
 import 'package:pilll/analytics.dart';
+import 'package:pilll/domain/record/components/notification_bar/notification_bar_store.dart';
 import 'package:pilll/domain/record/record_page.dart';
 import 'package:pilll/domain/record/record_page_store.dart';
 import 'package:pilll/entity/pill_sheet.dart';
@@ -19,13 +20,20 @@ import 'package:shared_preferences/shared_preferences.dart';
 import '../../helper/mock.mocks.dart';
 
 class _FakeUser extends Fake implements User {
-  _FakeUser({this.fakeIsPremium = false, this.fakeIsTrial = false});
+  _FakeUser({
+    this.fakeIsPremium = false,
+    this.fakeIsTrial = false,
+    this.fakeTrialDeadlineDate,
+  });
   final bool fakeIsPremium;
   final bool fakeIsTrial;
+  final DateTime? fakeTrialDeadlineDate;
   @override
   bool get isPremium => fakeIsPremium;
   @override
   bool get isTrial => fakeIsTrial;
+  @override
+  DateTime? get trialDeadlineDate => fakeTrialDeadlineDate;
 }
 
 void main() {
@@ -78,8 +86,10 @@ void main() {
       when(settingService.subscribe())
           .thenAnswer((realInvocation) => Stream.value(setting));
       final authService = MockAuthService();
-      when(authService.isLinkedApple()).thenReturn(false);
-      when(authService.isLinkedGoogle()).thenReturn(false);
+      when(authService.isLinkedApple()).thenReturn(true);
+      when(authService.isLinkedGoogle()).thenReturn(true);
+      when(authService.subscribe())
+          .thenAnswer((realInvocation) => Stream.empty());
       final userService = MockUserService();
       when(userService.fetch())
           .thenAnswer((reaInvocation) => Future.value(_FakeUser()));
@@ -102,6 +112,10 @@ void main() {
           overrides: [
             recordPageStoreProvider
                 .overrideWithProvider(Provider((ref) => store)),
+            notificationBarStoreProvider.overrideWithProvider(
+              (ref, param) =>
+                  NotificationBarStateStore(param, authService, userService),
+            ),
           ],
           child: MaterialApp(
             home: RecordPage(),
@@ -147,8 +161,10 @@ void main() {
     when(settingService.subscribe())
         .thenAnswer((realInvocation) => Stream.value(setting));
     final authService = MockAuthService();
-    when(authService.isLinkedApple()).thenReturn(false);
-    when(authService.isLinkedGoogle()).thenReturn(false);
+    when(authService.subscribe())
+        .thenAnswer((realInvocation) => Stream.empty());
+    when(authService.isLinkedApple()).thenReturn(true);
+    when(authService.isLinkedGoogle()).thenReturn(true);
     final userService = MockUserService();
     when(userService.fetch())
         .thenAnswer((reaInvocation) => Future.value(_FakeUser()));
@@ -171,6 +187,10 @@ void main() {
         overrides: [
           recordPageStoreProvider
               .overrideWithProvider(Provider((ref) => store)),
+          notificationBarStoreProvider.overrideWithProvider(
+            (ref, param) =>
+                NotificationBarStateStore(param, authService, userService),
+          ),
         ],
         child: MaterialApp(
           home: RecordPage(),
@@ -180,74 +200,5 @@ void main() {
     await tester.pumpAndSettle(Duration(milliseconds: 500));
 
     expect(find.text("飲んでない"), findsOneWidget);
-  });
-  testWidgets('today pill number into rest duration for pill_sheet_21',
-      (WidgetTester tester) async {
-    final originalTodayRepository = todayRepository;
-    final mockTodayRepository = MockTodayService();
-    todayRepository = mockTodayRepository;
-
-    final today = DateTime(2020, 09, 01);
-    when(mockTodayRepository.today()).thenReturn(today);
-
-    final pillSheet = PillSheet(
-      beginingDate: today.subtract(Duration(days: 24)),
-      typeInfo: PillSheetType.pillsheet_21.typeInfo,
-      lastTakenDate: todayRepository.today(),
-      createdAt: today.subtract(Duration(days: 24)),
-    );
-    expect(pillSheet.todayPillNumber, equals(25));
-    expect(pillSheet.lastTakenPillNumber, equals(25),
-        reason: "in rest duration behavior for automatically taken pill");
-    final pillSheetService = MockPillSheetService();
-    when(pillSheetService.fetchLast())
-        .thenAnswer((_) => Future.value(pillSheet));
-    when(pillSheetService.fetchAll()).thenAnswer((_) => Future.value([]));
-    when(pillSheetService.fetchListWithMax(2))
-        .thenAnswer((_) => Future.value([]));
-    when(pillSheetService.subscribeForLatestPillSheet())
-        .thenAnswer((realInvocation) => Stream.value(pillSheet));
-
-    final settingService = MockSettingService();
-    final setting = _anySetting();
-    when(settingService.fetch())
-        .thenAnswer((realInvocation) => Future.value(setting));
-    when(settingService.subscribe())
-        .thenAnswer((realInvocation) => Stream.value(setting));
-
-    final authService = MockAuthService();
-    when(authService.isLinkedApple()).thenReturn(false);
-    when(authService.isLinkedGoogle()).thenReturn(false);
-    final userService = MockUserService();
-    when(userService.fetch())
-        .thenAnswer((reaInvocation) => Future.value(_FakeUser()));
-    when(userService.subscribe())
-        .thenAnswer((realInvocation) => Stream.empty());
-
-    final store = RecordPageStore(
-      pillSheetService,
-      settingService,
-      userService,
-    );
-
-    addTearDown(() {
-      todayRepository = originalTodayRepository;
-      tester.binding.window.clearAllTestValues();
-    });
-
-    await tester.pumpWidget(
-      ProviderScope(
-        overrides: [
-          recordPageStoreProvider
-              .overrideWithProvider(Provider((ref) => store)),
-        ],
-        child: MaterialApp(
-          home: RecordPage(),
-        ),
-      ),
-    );
-    await tester.pumpAndSettle(Duration(milliseconds: 500));
-
-    expect(find.text("休薬期間中"), findsWidgets);
   });
 }
