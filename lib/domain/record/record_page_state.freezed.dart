@@ -19,21 +19,27 @@ class _$RecordPageStateTearOff {
   _RecordPageState call(
       {required PillSheet? entity,
       Setting? setting,
-      bool recommendedSignupNotificationIsAlreadyShow = true,
       int totalCountOfActionForTakenPill = 0,
-      bool isLinkedLoginProvider = false,
       bool firstLoadIsEnded = false,
       bool isPremium = false,
+      bool isTrial = false,
+      bool isPillSheetFinishedInThePast = false,
+      bool isAlreadyShowTiral = false,
+      bool shouldShowMigrateInfo = false,
+      @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
+          DateTime? beginTrialDate,
       Object? exception}) {
     return _RecordPageState(
       entity: entity,
       setting: setting,
-      recommendedSignupNotificationIsAlreadyShow:
-          recommendedSignupNotificationIsAlreadyShow,
       totalCountOfActionForTakenPill: totalCountOfActionForTakenPill,
-      isLinkedLoginProvider: isLinkedLoginProvider,
       firstLoadIsEnded: firstLoadIsEnded,
       isPremium: isPremium,
+      isTrial: isTrial,
+      isPillSheetFinishedInThePast: isPillSheetFinishedInThePast,
+      isAlreadyShowTiral: isAlreadyShowTiral,
+      shouldShowMigrateInfo: shouldShowMigrateInfo,
+      beginTrialDate: beginTrialDate,
       exception: exception,
     );
   }
@@ -46,12 +52,17 @@ const $RecordPageState = _$RecordPageStateTearOff();
 mixin _$RecordPageState {
   PillSheet? get entity => throw _privateConstructorUsedError;
   Setting? get setting => throw _privateConstructorUsedError;
-  bool get recommendedSignupNotificationIsAlreadyShow =>
-      throw _privateConstructorUsedError;
   int get totalCountOfActionForTakenPill => throw _privateConstructorUsedError;
-  bool get isLinkedLoginProvider => throw _privateConstructorUsedError;
   bool get firstLoadIsEnded => throw _privateConstructorUsedError;
   bool get isPremium => throw _privateConstructorUsedError;
+  bool get isTrial => throw _privateConstructorUsedError;
+  bool get isPillSheetFinishedInThePast => throw _privateConstructorUsedError;
+  bool get isAlreadyShowTiral => throw _privateConstructorUsedError;
+  bool get shouldShowMigrateInfo => throw _privateConstructorUsedError;
+  @JsonKey(
+      fromJson: TimestampConverter.timestampToDateTime,
+      toJson: TimestampConverter.dateTimeToTimestamp)
+  DateTime? get beginTrialDate => throw _privateConstructorUsedError;
   Object? get exception => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
@@ -67,11 +78,15 @@ abstract class $RecordPageStateCopyWith<$Res> {
   $Res call(
       {PillSheet? entity,
       Setting? setting,
-      bool recommendedSignupNotificationIsAlreadyShow,
       int totalCountOfActionForTakenPill,
-      bool isLinkedLoginProvider,
       bool firstLoadIsEnded,
       bool isPremium,
+      bool isTrial,
+      bool isPillSheetFinishedInThePast,
+      bool isAlreadyShowTiral,
+      bool shouldShowMigrateInfo,
+      @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
+          DateTime? beginTrialDate,
       Object? exception});
 
   $PillSheetCopyWith<$Res>? get entity;
@@ -91,11 +106,14 @@ class _$RecordPageStateCopyWithImpl<$Res>
   $Res call({
     Object? entity = freezed,
     Object? setting = freezed,
-    Object? recommendedSignupNotificationIsAlreadyShow = freezed,
     Object? totalCountOfActionForTakenPill = freezed,
-    Object? isLinkedLoginProvider = freezed,
     Object? firstLoadIsEnded = freezed,
     Object? isPremium = freezed,
+    Object? isTrial = freezed,
+    Object? isPillSheetFinishedInThePast = freezed,
+    Object? isAlreadyShowTiral = freezed,
+    Object? shouldShowMigrateInfo = freezed,
+    Object? beginTrialDate = freezed,
     Object? exception = freezed,
   }) {
     return _then(_value.copyWith(
@@ -107,19 +125,10 @@ class _$RecordPageStateCopyWithImpl<$Res>
           ? _value.setting
           : setting // ignore: cast_nullable_to_non_nullable
               as Setting?,
-      recommendedSignupNotificationIsAlreadyShow:
-          recommendedSignupNotificationIsAlreadyShow == freezed
-              ? _value.recommendedSignupNotificationIsAlreadyShow
-              : recommendedSignupNotificationIsAlreadyShow // ignore: cast_nullable_to_non_nullable
-                  as bool,
       totalCountOfActionForTakenPill: totalCountOfActionForTakenPill == freezed
           ? _value.totalCountOfActionForTakenPill
           : totalCountOfActionForTakenPill // ignore: cast_nullable_to_non_nullable
               as int,
-      isLinkedLoginProvider: isLinkedLoginProvider == freezed
-          ? _value.isLinkedLoginProvider
-          : isLinkedLoginProvider // ignore: cast_nullable_to_non_nullable
-              as bool,
       firstLoadIsEnded: firstLoadIsEnded == freezed
           ? _value.firstLoadIsEnded
           : firstLoadIsEnded // ignore: cast_nullable_to_non_nullable
@@ -128,6 +137,26 @@ class _$RecordPageStateCopyWithImpl<$Res>
           ? _value.isPremium
           : isPremium // ignore: cast_nullable_to_non_nullable
               as bool,
+      isTrial: isTrial == freezed
+          ? _value.isTrial
+          : isTrial // ignore: cast_nullable_to_non_nullable
+              as bool,
+      isPillSheetFinishedInThePast: isPillSheetFinishedInThePast == freezed
+          ? _value.isPillSheetFinishedInThePast
+          : isPillSheetFinishedInThePast // ignore: cast_nullable_to_non_nullable
+              as bool,
+      isAlreadyShowTiral: isAlreadyShowTiral == freezed
+          ? _value.isAlreadyShowTiral
+          : isAlreadyShowTiral // ignore: cast_nullable_to_non_nullable
+              as bool,
+      shouldShowMigrateInfo: shouldShowMigrateInfo == freezed
+          ? _value.shouldShowMigrateInfo
+          : shouldShowMigrateInfo // ignore: cast_nullable_to_non_nullable
+              as bool,
+      beginTrialDate: beginTrialDate == freezed
+          ? _value.beginTrialDate
+          : beginTrialDate // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
       exception: exception == freezed ? _value.exception : exception,
     ));
   }
@@ -165,11 +194,15 @@ abstract class _$RecordPageStateCopyWith<$Res>
   $Res call(
       {PillSheet? entity,
       Setting? setting,
-      bool recommendedSignupNotificationIsAlreadyShow,
       int totalCountOfActionForTakenPill,
-      bool isLinkedLoginProvider,
       bool firstLoadIsEnded,
       bool isPremium,
+      bool isTrial,
+      bool isPillSheetFinishedInThePast,
+      bool isAlreadyShowTiral,
+      bool shouldShowMigrateInfo,
+      @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
+          DateTime? beginTrialDate,
       Object? exception});
 
   @override
@@ -193,11 +226,14 @@ class __$RecordPageStateCopyWithImpl<$Res>
   $Res call({
     Object? entity = freezed,
     Object? setting = freezed,
-    Object? recommendedSignupNotificationIsAlreadyShow = freezed,
     Object? totalCountOfActionForTakenPill = freezed,
-    Object? isLinkedLoginProvider = freezed,
     Object? firstLoadIsEnded = freezed,
     Object? isPremium = freezed,
+    Object? isTrial = freezed,
+    Object? isPillSheetFinishedInThePast = freezed,
+    Object? isAlreadyShowTiral = freezed,
+    Object? shouldShowMigrateInfo = freezed,
+    Object? beginTrialDate = freezed,
     Object? exception = freezed,
   }) {
     return _then(_RecordPageState(
@@ -209,19 +245,10 @@ class __$RecordPageStateCopyWithImpl<$Res>
           ? _value.setting
           : setting // ignore: cast_nullable_to_non_nullable
               as Setting?,
-      recommendedSignupNotificationIsAlreadyShow:
-          recommendedSignupNotificationIsAlreadyShow == freezed
-              ? _value.recommendedSignupNotificationIsAlreadyShow
-              : recommendedSignupNotificationIsAlreadyShow // ignore: cast_nullable_to_non_nullable
-                  as bool,
       totalCountOfActionForTakenPill: totalCountOfActionForTakenPill == freezed
           ? _value.totalCountOfActionForTakenPill
           : totalCountOfActionForTakenPill // ignore: cast_nullable_to_non_nullable
               as int,
-      isLinkedLoginProvider: isLinkedLoginProvider == freezed
-          ? _value.isLinkedLoginProvider
-          : isLinkedLoginProvider // ignore: cast_nullable_to_non_nullable
-              as bool,
       firstLoadIsEnded: firstLoadIsEnded == freezed
           ? _value.firstLoadIsEnded
           : firstLoadIsEnded // ignore: cast_nullable_to_non_nullable
@@ -230,6 +257,26 @@ class __$RecordPageStateCopyWithImpl<$Res>
           ? _value.isPremium
           : isPremium // ignore: cast_nullable_to_non_nullable
               as bool,
+      isTrial: isTrial == freezed
+          ? _value.isTrial
+          : isTrial // ignore: cast_nullable_to_non_nullable
+              as bool,
+      isPillSheetFinishedInThePast: isPillSheetFinishedInThePast == freezed
+          ? _value.isPillSheetFinishedInThePast
+          : isPillSheetFinishedInThePast // ignore: cast_nullable_to_non_nullable
+              as bool,
+      isAlreadyShowTiral: isAlreadyShowTiral == freezed
+          ? _value.isAlreadyShowTiral
+          : isAlreadyShowTiral // ignore: cast_nullable_to_non_nullable
+              as bool,
+      shouldShowMigrateInfo: shouldShowMigrateInfo == freezed
+          ? _value.shouldShowMigrateInfo
+          : shouldShowMigrateInfo // ignore: cast_nullable_to_non_nullable
+              as bool,
+      beginTrialDate: beginTrialDate == freezed
+          ? _value.beginTrialDate
+          : beginTrialDate // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
       exception: exception == freezed ? _value.exception : exception,
     ));
   }
@@ -241,11 +288,15 @@ class _$_RecordPageState extends _RecordPageState {
   _$_RecordPageState(
       {required this.entity,
       this.setting,
-      this.recommendedSignupNotificationIsAlreadyShow = true,
       this.totalCountOfActionForTakenPill = 0,
-      this.isLinkedLoginProvider = false,
       this.firstLoadIsEnded = false,
       this.isPremium = false,
+      this.isTrial = false,
+      this.isPillSheetFinishedInThePast = false,
+      this.isAlreadyShowTiral = false,
+      this.shouldShowMigrateInfo = false,
+      @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
+          this.beginTrialDate,
       this.exception})
       : super._();
 
@@ -253,27 +304,38 @@ class _$_RecordPageState extends _RecordPageState {
   final PillSheet? entity;
   @override
   final Setting? setting;
-  @JsonKey(defaultValue: true)
-  @override
-  final bool recommendedSignupNotificationIsAlreadyShow;
   @JsonKey(defaultValue: 0)
   @override
   final int totalCountOfActionForTakenPill;
-  @JsonKey(defaultValue: false)
-  @override
-  final bool isLinkedLoginProvider;
   @JsonKey(defaultValue: false)
   @override
   final bool firstLoadIsEnded;
   @JsonKey(defaultValue: false)
   @override
   final bool isPremium;
+  @JsonKey(defaultValue: false)
+  @override
+  final bool isTrial;
+  @JsonKey(defaultValue: false)
+  @override
+  final bool isPillSheetFinishedInThePast;
+  @JsonKey(defaultValue: false)
+  @override
+  final bool isAlreadyShowTiral;
+  @JsonKey(defaultValue: false)
+  @override
+  final bool shouldShowMigrateInfo;
+  @override
+  @JsonKey(
+      fromJson: TimestampConverter.timestampToDateTime,
+      toJson: TimestampConverter.dateTimeToTimestamp)
+  final DateTime? beginTrialDate;
   @override
   final Object? exception;
 
   @override
   String toString() {
-    return 'RecordPageState(entity: $entity, setting: $setting, recommendedSignupNotificationIsAlreadyShow: $recommendedSignupNotificationIsAlreadyShow, totalCountOfActionForTakenPill: $totalCountOfActionForTakenPill, isLinkedLoginProvider: $isLinkedLoginProvider, firstLoadIsEnded: $firstLoadIsEnded, isPremium: $isPremium, exception: $exception)';
+    return 'RecordPageState(entity: $entity, setting: $setting, totalCountOfActionForTakenPill: $totalCountOfActionForTakenPill, firstLoadIsEnded: $firstLoadIsEnded, isPremium: $isPremium, isTrial: $isTrial, isPillSheetFinishedInThePast: $isPillSheetFinishedInThePast, isAlreadyShowTiral: $isAlreadyShowTiral, shouldShowMigrateInfo: $shouldShowMigrateInfo, beginTrialDate: $beginTrialDate, exception: $exception)';
   }
 
   @override
@@ -285,25 +347,34 @@ class _$_RecordPageState extends _RecordPageState {
             (identical(other.setting, setting) ||
                 const DeepCollectionEquality()
                     .equals(other.setting, setting)) &&
-            (identical(other.recommendedSignupNotificationIsAlreadyShow,
-                    recommendedSignupNotificationIsAlreadyShow) ||
-                const DeepCollectionEquality().equals(
-                    other.recommendedSignupNotificationIsAlreadyShow,
-                    recommendedSignupNotificationIsAlreadyShow)) &&
             (identical(other.totalCountOfActionForTakenPill,
                     totalCountOfActionForTakenPill) ||
                 const DeepCollectionEquality().equals(
                     other.totalCountOfActionForTakenPill,
                     totalCountOfActionForTakenPill)) &&
-            (identical(other.isLinkedLoginProvider, isLinkedLoginProvider) ||
-                const DeepCollectionEquality().equals(
-                    other.isLinkedLoginProvider, isLinkedLoginProvider)) &&
             (identical(other.firstLoadIsEnded, firstLoadIsEnded) ||
                 const DeepCollectionEquality()
                     .equals(other.firstLoadIsEnded, firstLoadIsEnded)) &&
             (identical(other.isPremium, isPremium) ||
                 const DeepCollectionEquality()
                     .equals(other.isPremium, isPremium)) &&
+            (identical(other.isTrial, isTrial) ||
+                const DeepCollectionEquality()
+                    .equals(other.isTrial, isTrial)) &&
+            (identical(other.isPillSheetFinishedInThePast,
+                    isPillSheetFinishedInThePast) ||
+                const DeepCollectionEquality().equals(
+                    other.isPillSheetFinishedInThePast,
+                    isPillSheetFinishedInThePast)) &&
+            (identical(other.isAlreadyShowTiral, isAlreadyShowTiral) ||
+                const DeepCollectionEquality()
+                    .equals(other.isAlreadyShowTiral, isAlreadyShowTiral)) &&
+            (identical(other.shouldShowMigrateInfo, shouldShowMigrateInfo) ||
+                const DeepCollectionEquality().equals(
+                    other.shouldShowMigrateInfo, shouldShowMigrateInfo)) &&
+            (identical(other.beginTrialDate, beginTrialDate) ||
+                const DeepCollectionEquality()
+                    .equals(other.beginTrialDate, beginTrialDate)) &&
             (identical(other.exception, exception) ||
                 const DeepCollectionEquality()
                     .equals(other.exception, exception)));
@@ -314,12 +385,14 @@ class _$_RecordPageState extends _RecordPageState {
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(entity) ^
       const DeepCollectionEquality().hash(setting) ^
-      const DeepCollectionEquality()
-          .hash(recommendedSignupNotificationIsAlreadyShow) ^
       const DeepCollectionEquality().hash(totalCountOfActionForTakenPill) ^
-      const DeepCollectionEquality().hash(isLinkedLoginProvider) ^
       const DeepCollectionEquality().hash(firstLoadIsEnded) ^
       const DeepCollectionEquality().hash(isPremium) ^
+      const DeepCollectionEquality().hash(isTrial) ^
+      const DeepCollectionEquality().hash(isPillSheetFinishedInThePast) ^
+      const DeepCollectionEquality().hash(isAlreadyShowTiral) ^
+      const DeepCollectionEquality().hash(shouldShowMigrateInfo) ^
+      const DeepCollectionEquality().hash(beginTrialDate) ^
       const DeepCollectionEquality().hash(exception);
 
   @JsonKey(ignore: true)
@@ -332,11 +405,15 @@ abstract class _RecordPageState extends RecordPageState {
   factory _RecordPageState(
       {required PillSheet? entity,
       Setting? setting,
-      bool recommendedSignupNotificationIsAlreadyShow,
       int totalCountOfActionForTakenPill,
-      bool isLinkedLoginProvider,
       bool firstLoadIsEnded,
       bool isPremium,
+      bool isTrial,
+      bool isPillSheetFinishedInThePast,
+      bool isAlreadyShowTiral,
+      bool shouldShowMigrateInfo,
+      @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
+          DateTime? beginTrialDate,
       Object? exception}) = _$_RecordPageState;
   _RecordPageState._() : super._();
 
@@ -345,16 +422,24 @@ abstract class _RecordPageState extends RecordPageState {
   @override
   Setting? get setting => throw _privateConstructorUsedError;
   @override
-  bool get recommendedSignupNotificationIsAlreadyShow =>
-      throw _privateConstructorUsedError;
-  @override
   int get totalCountOfActionForTakenPill => throw _privateConstructorUsedError;
-  @override
-  bool get isLinkedLoginProvider => throw _privateConstructorUsedError;
   @override
   bool get firstLoadIsEnded => throw _privateConstructorUsedError;
   @override
   bool get isPremium => throw _privateConstructorUsedError;
+  @override
+  bool get isTrial => throw _privateConstructorUsedError;
+  @override
+  bool get isPillSheetFinishedInThePast => throw _privateConstructorUsedError;
+  @override
+  bool get isAlreadyShowTiral => throw _privateConstructorUsedError;
+  @override
+  bool get shouldShowMigrateInfo => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(
+      fromJson: TimestampConverter.timestampToDateTime,
+      toJson: TimestampConverter.dateTimeToTimestamp)
+  DateTime? get beginTrialDate => throw _privateConstructorUsedError;
   @override
   Object? get exception => throw _privateConstructorUsedError;
   @override

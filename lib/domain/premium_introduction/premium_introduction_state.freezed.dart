@@ -18,20 +18,22 @@ class _$PremiumIntroductionStateTearOff {
 
   _PremiumIntroductionState call(
       {Offerings? offerings,
-      Package? selectedPackage,
       bool isCompletedRestore = false,
       bool isLoading = false,
       bool isPremium = false,
       bool hasLoginProvider = false,
-      Object? exception}) {
+      dynamic isTrial = bool,
+      DateTime? beginTrialDate,
+      DateTime? trialDeadlineDate}) {
     return _PremiumIntroductionState(
       offerings: offerings,
-      selectedPackage: selectedPackage,
       isCompletedRestore: isCompletedRestore,
       isLoading: isLoading,
       isPremium: isPremium,
       hasLoginProvider: hasLoginProvider,
-      exception: exception,
+      isTrial: isTrial,
+      beginTrialDate: beginTrialDate,
+      trialDeadlineDate: trialDeadlineDate,
     );
   }
 }
@@ -42,12 +44,13 @@ const $PremiumIntroductionState = _$PremiumIntroductionStateTearOff();
 /// @nodoc
 mixin _$PremiumIntroductionState {
   Offerings? get offerings => throw _privateConstructorUsedError;
-  Package? get selectedPackage => throw _privateConstructorUsedError;
   bool get isCompletedRestore => throw _privateConstructorUsedError;
   bool get isLoading => throw _privateConstructorUsedError;
   bool get isPremium => throw _privateConstructorUsedError;
   bool get hasLoginProvider => throw _privateConstructorUsedError;
-  Object? get exception => throw _privateConstructorUsedError;
+  dynamic get isTrial => throw _privateConstructorUsedError;
+  DateTime? get beginTrialDate => throw _privateConstructorUsedError;
+  DateTime? get trialDeadlineDate => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $PremiumIntroductionStateCopyWith<PremiumIntroductionState> get copyWith =>
@@ -61,12 +64,13 @@ abstract class $PremiumIntroductionStateCopyWith<$Res> {
       _$PremiumIntroductionStateCopyWithImpl<$Res>;
   $Res call(
       {Offerings? offerings,
-      Package? selectedPackage,
       bool isCompletedRestore,
       bool isLoading,
       bool isPremium,
       bool hasLoginProvider,
-      Object? exception});
+      dynamic isTrial,
+      DateTime? beginTrialDate,
+      DateTime? trialDeadlineDate});
 }
 
 /// @nodoc
@@ -81,22 +85,19 @@ class _$PremiumIntroductionStateCopyWithImpl<$Res>
   @override
   $Res call({
     Object? offerings = freezed,
-    Object? selectedPackage = freezed,
     Object? isCompletedRestore = freezed,
     Object? isLoading = freezed,
     Object? isPremium = freezed,
     Object? hasLoginProvider = freezed,
-    Object? exception = freezed,
+    Object? isTrial = freezed,
+    Object? beginTrialDate = freezed,
+    Object? trialDeadlineDate = freezed,
   }) {
     return _then(_value.copyWith(
       offerings: offerings == freezed
           ? _value.offerings
           : offerings // ignore: cast_nullable_to_non_nullable
               as Offerings?,
-      selectedPackage: selectedPackage == freezed
-          ? _value.selectedPackage
-          : selectedPackage // ignore: cast_nullable_to_non_nullable
-              as Package?,
       isCompletedRestore: isCompletedRestore == freezed
           ? _value.isCompletedRestore
           : isCompletedRestore // ignore: cast_nullable_to_non_nullable
@@ -113,7 +114,18 @@ class _$PremiumIntroductionStateCopyWithImpl<$Res>
           ? _value.hasLoginProvider
           : hasLoginProvider // ignore: cast_nullable_to_non_nullable
               as bool,
-      exception: exception == freezed ? _value.exception : exception,
+      isTrial: isTrial == freezed
+          ? _value.isTrial
+          : isTrial // ignore: cast_nullable_to_non_nullable
+              as dynamic,
+      beginTrialDate: beginTrialDate == freezed
+          ? _value.beginTrialDate
+          : beginTrialDate // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
+      trialDeadlineDate: trialDeadlineDate == freezed
+          ? _value.trialDeadlineDate
+          : trialDeadlineDate // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
     ));
   }
 }
@@ -127,12 +139,13 @@ abstract class _$PremiumIntroductionStateCopyWith<$Res>
   @override
   $Res call(
       {Offerings? offerings,
-      Package? selectedPackage,
       bool isCompletedRestore,
       bool isLoading,
       bool isPremium,
       bool hasLoginProvider,
-      Object? exception});
+      dynamic isTrial,
+      DateTime? beginTrialDate,
+      DateTime? trialDeadlineDate});
 }
 
 /// @nodoc
@@ -150,22 +163,19 @@ class __$PremiumIntroductionStateCopyWithImpl<$Res>
   @override
   $Res call({
     Object? offerings = freezed,
-    Object? selectedPackage = freezed,
     Object? isCompletedRestore = freezed,
     Object? isLoading = freezed,
     Object? isPremium = freezed,
     Object? hasLoginProvider = freezed,
-    Object? exception = freezed,
+    Object? isTrial = freezed,
+    Object? beginTrialDate = freezed,
+    Object? trialDeadlineDate = freezed,
   }) {
     return _then(_PremiumIntroductionState(
       offerings: offerings == freezed
           ? _value.offerings
           : offerings // ignore: cast_nullable_to_non_nullable
               as Offerings?,
-      selectedPackage: selectedPackage == freezed
-          ? _value.selectedPackage
-          : selectedPackage // ignore: cast_nullable_to_non_nullable
-              as Package?,
       isCompletedRestore: isCompletedRestore == freezed
           ? _value.isCompletedRestore
           : isCompletedRestore // ignore: cast_nullable_to_non_nullable
@@ -182,7 +192,15 @@ class __$PremiumIntroductionStateCopyWithImpl<$Res>
           ? _value.hasLoginProvider
           : hasLoginProvider // ignore: cast_nullable_to_non_nullable
               as bool,
-      exception: exception == freezed ? _value.exception : exception,
+      isTrial: isTrial == freezed ? _value.isTrial : isTrial,
+      beginTrialDate: beginTrialDate == freezed
+          ? _value.beginTrialDate
+          : beginTrialDate // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
+      trialDeadlineDate: trialDeadlineDate == freezed
+          ? _value.trialDeadlineDate
+          : trialDeadlineDate // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
     ));
   }
 }
@@ -192,18 +210,17 @@ class __$PremiumIntroductionStateCopyWithImpl<$Res>
 class _$_PremiumIntroductionState extends _PremiumIntroductionState {
   _$_PremiumIntroductionState(
       {this.offerings,
-      this.selectedPackage,
       this.isCompletedRestore = false,
       this.isLoading = false,
       this.isPremium = false,
       this.hasLoginProvider = false,
-      this.exception})
+      this.isTrial = bool,
+      this.beginTrialDate,
+      this.trialDeadlineDate})
       : super._();
 
   @override
   final Offerings? offerings;
-  @override
-  final Package? selectedPackage;
   @JsonKey(defaultValue: false)
   @override
   final bool isCompletedRestore;
@@ -216,12 +233,17 @@ class _$_PremiumIntroductionState extends _PremiumIntroductionState {
   @JsonKey(defaultValue: false)
   @override
   final bool hasLoginProvider;
+  @JsonKey(defaultValue: bool)
   @override
-  final Object? exception;
+  final dynamic isTrial;
+  @override
+  final DateTime? beginTrialDate;
+  @override
+  final DateTime? trialDeadlineDate;
 
   @override
   String toString() {
-    return 'PremiumIntroductionState(offerings: $offerings, selectedPackage: $selectedPackage, isCompletedRestore: $isCompletedRestore, isLoading: $isLoading, isPremium: $isPremium, hasLoginProvider: $hasLoginProvider, exception: $exception)';
+    return 'PremiumIntroductionState(offerings: $offerings, isCompletedRestore: $isCompletedRestore, isLoading: $isLoading, isPremium: $isPremium, hasLoginProvider: $hasLoginProvider, isTrial: $isTrial, beginTrialDate: $beginTrialDate, trialDeadlineDate: $trialDeadlineDate)';
   }
 
   @override
@@ -231,9 +253,6 @@ class _$_PremiumIntroductionState extends _PremiumIntroductionState {
             (identical(other.offerings, offerings) ||
                 const DeepCollectionEquality()
                     .equals(other.offerings, offerings)) &&
-            (identical(other.selectedPackage, selectedPackage) ||
-                const DeepCollectionEquality()
-                    .equals(other.selectedPackage, selectedPackage)) &&
             (identical(other.isCompletedRestore, isCompletedRestore) ||
                 const DeepCollectionEquality()
                     .equals(other.isCompletedRestore, isCompletedRestore)) &&
@@ -246,21 +265,28 @@ class _$_PremiumIntroductionState extends _PremiumIntroductionState {
             (identical(other.hasLoginProvider, hasLoginProvider) ||
                 const DeepCollectionEquality()
                     .equals(other.hasLoginProvider, hasLoginProvider)) &&
-            (identical(other.exception, exception) ||
+            (identical(other.isTrial, isTrial) ||
                 const DeepCollectionEquality()
-                    .equals(other.exception, exception)));
+                    .equals(other.isTrial, isTrial)) &&
+            (identical(other.beginTrialDate, beginTrialDate) ||
+                const DeepCollectionEquality()
+                    .equals(other.beginTrialDate, beginTrialDate)) &&
+            (identical(other.trialDeadlineDate, trialDeadlineDate) ||
+                const DeepCollectionEquality()
+                    .equals(other.trialDeadlineDate, trialDeadlineDate)));
   }
 
   @override
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(offerings) ^
-      const DeepCollectionEquality().hash(selectedPackage) ^
       const DeepCollectionEquality().hash(isCompletedRestore) ^
       const DeepCollectionEquality().hash(isLoading) ^
       const DeepCollectionEquality().hash(isPremium) ^
       const DeepCollectionEquality().hash(hasLoginProvider) ^
-      const DeepCollectionEquality().hash(exception);
+      const DeepCollectionEquality().hash(isTrial) ^
+      const DeepCollectionEquality().hash(beginTrialDate) ^
+      const DeepCollectionEquality().hash(trialDeadlineDate);
 
   @JsonKey(ignore: true)
   @override
@@ -272,18 +298,17 @@ class _$_PremiumIntroductionState extends _PremiumIntroductionState {
 abstract class _PremiumIntroductionState extends PremiumIntroductionState {
   factory _PremiumIntroductionState(
       {Offerings? offerings,
-      Package? selectedPackage,
       bool isCompletedRestore,
       bool isLoading,
       bool isPremium,
       bool hasLoginProvider,
-      Object? exception}) = _$_PremiumIntroductionState;
+      dynamic isTrial,
+      DateTime? beginTrialDate,
+      DateTime? trialDeadlineDate}) = _$_PremiumIntroductionState;
   _PremiumIntroductionState._() : super._();
 
   @override
   Offerings? get offerings => throw _privateConstructorUsedError;
-  @override
-  Package? get selectedPackage => throw _privateConstructorUsedError;
   @override
   bool get isCompletedRestore => throw _privateConstructorUsedError;
   @override
@@ -293,7 +318,11 @@ abstract class _PremiumIntroductionState extends PremiumIntroductionState {
   @override
   bool get hasLoginProvider => throw _privateConstructorUsedError;
   @override
-  Object? get exception => throw _privateConstructorUsedError;
+  dynamic get isTrial => throw _privateConstructorUsedError;
+  @override
+  DateTime? get beginTrialDate => throw _privateConstructorUsedError;
+  @override
+  DateTime? get trialDeadlineDate => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$PremiumIntroductionStateCopyWith<_PremiumIntroductionState> get copyWith =>

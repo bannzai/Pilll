@@ -1,3 +1,5 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:pilll/entity/firestore_timestamp_converter.dart';
 import 'package:pilll/entity/setting.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
@@ -52,6 +54,9 @@ extension UserFirestoreFieldKeys on String {
   static final isAnonymous = "isAnonymous";
   static final isPremium = "isPremium";
   static final purchaseAppID = "purchaseAppID";
+  static final isTrial = "isTrial";
+  static final beginTrialDate = "beginTrialDate";
+  static final trialDeadlineDate = "trialDeadlineDate";
 }
 
 @freezed
@@ -59,14 +64,32 @@ abstract class User implements _$User {
   User._();
   @JsonSerializable(explicitToJson: true)
   factory User({
-    @JsonKey(name: "settings") Setting? setting,
-    @Default(false) bool migratedFlutter,
+    @JsonKey(name: "settings")
+        Setting? setting,
+    @Default(false)
+        bool migratedFlutter,
     String? userIDWhenCreateUser,
     String? anonymousUserID,
-    @Default([]) List<String> userDocumentIDSets,
-    @Default([]) List<String> anonymousUserIDSets,
-    @Default([]) List<String> firebaseCurrentUserIDSets,
-    @Default(false) bool isPremium,
+    @Default([])
+        List<String> userDocumentIDSets,
+    @Default([])
+        List<String> anonymousUserIDSets,
+    @Default([])
+        List<String> firebaseCurrentUserIDSets,
+    @Default(false)
+        bool isPremium,
+    @Default(false)
+        bool isTrial,
+    @JsonKey(
+      fromJson: TimestampConverter.timestampToDateTime,
+      toJson: TimestampConverter.dateTimeToTimestamp,
+    )
+        DateTime? beginTrialDate,
+    @JsonKey(
+      fromJson: TimestampConverter.timestampToDateTime,
+      toJson: TimestampConverter.dateTimeToTimestamp,
+    )
+        DateTime? trialDeadlineDate,
   }) = _User;
 
   factory User.fromJson(Map<String, dynamic> json) => _$UserFromJson(json);

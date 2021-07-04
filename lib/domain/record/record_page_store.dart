@@ -1,3 +1,4 @@
+import 'dart:io' show Platform;
 import 'dart:async';
 
 import 'package:flutter_app_badger/flutter_app_badger.dart';
@@ -5,7 +6,6 @@ import 'package:pilll/analytics.dart';
 import 'package:pilll/entity/pill_mark_type.dart';
 import 'package:pilll/entity/pill_sheet.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
-import 'package:pilll/service/auth.dart';
 import 'package:pilll/service/pill_sheet.dart';
 import 'package:pilll/domain/record/record_page_state.dart';
 import 'package:pilll/service/setting.dart';
@@ -17,19 +17,16 @@ import 'package:shared_preferences/shared_preferences.dart';
 final recordPageStoreProvider = StateNotifierProvider((ref) => RecordPageStore(
       ref.watch(pillSheetServiceProvider),
       ref.watch(settingServiceProvider),
-      ref.watch(authServiceProvider),
       ref.watch(userServiceProvider),
     ));
 
 class RecordPageStore extends StateNotifier<RecordPageState> {
   final PillSheetService _service;
   final SettingService _settingService;
-  final AuthService _authService;
   final UserService _userService;
   RecordPageStore(
     this._service,
     this._settingService,
-    this._authService,
     this._userService,
   ) : super(RecordPageState(entity: null)) {
     reset();
@@ -38,25 +35,44 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
   void reset() {
     Future(() async {
       final entity = await _service.fetchLast();
+      final entities = await _service.fetchListWithMax(2);
+      final isPillSheetFinishedInThePast =
+          entities.where((element) => element.id != entity?.id).length >= 1;
       final setting = await _settingService.fetch();
       final sharedPreferences = await SharedPreferences.getInstance();
-      final recommendedSignupNotificationIsAlreadyShow = sharedPreferences
-              .getBool(BoolKey.recommendedSignupNotificationIsAlreadyShow) ??
-          false;
       final user = await _userService.fetch();
       final totalCountOfActionForTakenPill =
           sharedPreferences.getInt(IntKey.totalCountOfActionForTakenPill) ?? 0;
+      final shouldShowMigrateInfo = () {
+        if (!Platform.isIOS) {
+          return false;
+        }
+        if (sharedPreferences.getBool(BoolKey.migrateFrom132IsShown) ?? false) {
+          return false;
+        }
+        if (!sharedPreferences
+            .containsKey(StringKey.salvagedOldStartTakenDate)) {
+          return false;
+        }
+        if (!sharedPreferences
+            .containsKey(StringKey.salvagedOldLastTakenDate)) {
+          return false;
+        }
+        return true;
+      }();
       state = RecordPageState(
         entity: entity,
         setting: setting,
         firstLoadIsEnded: true,
-        isLinkedLoginProvider:
-            _authService.isLinkedApple() || _authService.isLinkedGoogle(),
-        recommendedSignupNotificationIsAlreadyShow:
-            recommendedSignupNotificationIsAlreadyShow,
         totalCountOfActionForTakenPill: totalCountOfActionForTakenPill,
         exception: null,
+        isPillSheetFinishedInThePast: isPillSheetFinishedInThePast,
+        isAlreadyShowTiral:
+            sharedPreferences.getBool(BoolKey.isAlreadyShowPremiumTrialModal) ??
+                false,
         isPremium: user.isPremium,
+        isTrial: user.isTrial,
+        shouldShowMigrateInfo: shouldShowMigrateInfo,
       );
       if (entity != null) {
         analytics.logEvent(name: "count_of_remaining_pill", parameters: {
@@ -156,15 +172,14 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
         number <= entity.todayPillNumber;
   }
 
-  Future<void> closeRecommendedSignupNotification() async {
-    final sharedPreferences = await SharedPreferences.getInstance();
-    sharedPreferences.setBool(
-        BoolKey.recommendedSignupNotificationIsAlreadyShow, true);
-    state = state.copyWith(recommendedSignupNotificationIsAlreadyShow: true);
-  }
-
   handleException(Object exception) {
     state = state.copyWith(exception: exception);
+  }
+
+  shownMigrateInfo() async {
+    final sharedPreferences = await SharedPreferences.getInstance();
+    sharedPreferences.setBool(BoolKey.migrateFrom132IsShown, true);
+    state = state.copyWith(shouldShowMigrateInfo: false);
   }
 }
 

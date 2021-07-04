@@ -64,7 +64,6 @@ void main() {
       final store = RecordPageStore(
         service,
         settingService,
-        authService,
         userService,
       );
       await waitForResetStoreState();
@@ -118,7 +117,6 @@ void main() {
     final store = RecordPageStore(
       service,
       settingService,
-      authService,
       userService,
     );
     await waitForResetStoreState();
@@ -174,7 +172,6 @@ void main() {
       final store = RecordPageStore(
         service,
         settingService,
-        authService,
         userService,
       );
 
@@ -230,7 +227,6 @@ void main() {
       final store = RecordPageStore(
         service,
         settingService,
-        authService,
         userService,
       );
 
@@ -288,7 +284,6 @@ void main() {
       final store = RecordPageStore(
         service,
         settingService,
-        authService,
         userService,
       );
 
@@ -343,7 +338,6 @@ void main() {
       final store = RecordPageStore(
         service,
         settingService,
-        authService,
         userService,
       );
 
