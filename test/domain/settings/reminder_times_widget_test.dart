@@ -3,6 +3,7 @@ import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/entity/setting.dart';
 import 'package:pilll/domain/settings/reminder_times_page.dart';
 import 'package:pilll/domain/settings/setting_page_store.dart';
+import 'package:pilll/entity/user.dart';
 import 'package:pilll/util/environment.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
@@ -12,8 +13,17 @@ import 'package:mockito/mockito.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import '../../helper/mock.mocks.dart';
-import '../../helper/mock.dart';
 import '../../helper/supported_device.dart';
+
+class _FakeUser extends Fake implements User {
+  _FakeUser({this.fakeIsPremium = false, this.fakeIsTrial = false});
+  final bool fakeIsPremium;
+  final bool fakeIsTrial;
+  @override
+  bool get isPremium => fakeIsPremium;
+  @override
+  bool get isTrial => fakeIsTrial;
+}
 
 void main() {
   setUp(() {
@@ -50,8 +60,8 @@ void main() {
       when(pillSheetService.subscribeForLatestPillSheet())
           .thenAnswer((realInvocation) => Stream.empty());
       final userService = MockUserService();
-      when(userService.fetch()).thenAnswer(
-          (realInvocation) => Future.value(FakeUserForNotPremium()));
+      when(userService.fetch())
+          .thenAnswer((realInvocation) => Future.value(_FakeUser()));
       when(userService.subscribe())
           .thenAnswer((realInvocation) => Stream.empty());
 
@@ -102,8 +112,8 @@ void main() {
       when(pillSheetService.subscribeForLatestPillSheet())
           .thenAnswer((realInvocation) => Stream.empty());
       final userService = MockUserService();
-      when(userService.fetch()).thenAnswer(
-          (realInvocation) => Future.value(FakeUserForNotPremium()));
+      when(userService.fetch())
+          .thenAnswer((realInvocation) => Future.value(_FakeUser()));
       when(userService.subscribe())
           .thenAnswer((realInvocation) => Stream.empty());
 
