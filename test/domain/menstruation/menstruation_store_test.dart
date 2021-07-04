@@ -72,8 +72,13 @@ void main() {
         when(diaryService.subscribe())
             .thenAnswer((realInvocation) => Stream.empty());
         final settingService = MockSettingService();
-        when(settingService.fetch())
-            .thenAnswer((realInvocation) => Future.value(null));
+        when(settingService.fetch()).thenAnswer((realInvocation) =>
+            Future.value(Setting(
+                pillSheetTypeRawPath: PillSheetType.pillsheet_21.rawPath,
+                pillNumberForFromMenstruation: 22,
+                durationMenstruation: 3,
+                reminderTimes: [],
+                isOnReminder: true)));
         when(settingService.subscribe())
             .thenAnswer((realInvocation) => Stream.empty());
 
