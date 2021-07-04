@@ -17,7 +17,7 @@ import 'package:intl/date_symbol_data_local.dart';
 import 'package:pilll/util/shared_preference/keys.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-import '../../../helper/mock.dart';
+import '../../../helper/mock.mocks.dart';
 
 void main() {
   final totalCountOfActionForTakenPillForLongTimeUser = 14;
@@ -36,8 +36,8 @@ void main() {
       final mockTodayRepository = MockTodayService();
       final today = DateTime(2021, 04, 29);
 
-      todayRepository = mockTodayRepository;
       when(mockTodayRepository.today()).thenReturn(today);
+      todayRepository = mockTodayRepository;
 
       var pillSheet = PillSheet.create(PillSheetType.pillsheet_21);
       pillSheet = pillSheet.copyWith(

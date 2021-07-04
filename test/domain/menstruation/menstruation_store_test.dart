@@ -8,9 +8,9 @@ import 'package:pilll/entity/setting.dart';
 import 'package:pilll/service/day.dart';
 import 'package:pilll/store/menstruation.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+import 'package:mockito/annotations.dart';
 
 import '../../helper/delay.dart';
-import '../../helper/mock.dart';
 
 void main() {
   setUp(() {
