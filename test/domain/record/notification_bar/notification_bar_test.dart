@@ -32,7 +32,60 @@ void main() {
         new TestViewConfiguration(size: const Size(375.0, 667.0));
   });
   group('notification bar appearance content type', () {
-    testWidgets('today pill not taken', (WidgetTester tester) async {
+    testWidgets('user is not premium and pill sheet into rest duration',
+        (WidgetTester tester) async {
+      final mockTodayRepository = MockTodayService();
+      final today = DateTime(2021, 04, 29);
+
+      when(mockTodayRepository.today()).thenReturn(today);
+      todayRepository = mockTodayRepository;
+
+      var pillSheet = PillSheet.create(PillSheetType.pillsheet_21);
+      pillSheet = pillSheet.copyWith(
+        lastTakenDate: today,
+        beginingDate: today.subtract(
+// NOTE: Into rest duration and notification duration
+          Duration(days: 25),
+        ),
+      );
+      var state = NotificationBarState(
+        pillSheet: pillSheet,
+        totalCountOfActionForTakenPill:
+            totalCountOfActionForTakenPillForLongTimeUser,
+      );
+      state = state.copyWith(
+        isPremium: false,
+        isTrial: false,
+        isLinkedLoginProvider: false,
+      );
+
+      final anyParameter = NotificationBarStoreParameter(
+        pillSheet: pillSheet,
+        totalCountOfActionForTakenPill:
+            totalCountOfActionForTakenPillForLongTimeUser,
+      );
+      await tester.pumpWidget(
+        ProviderScope(
+          overrides: [
+            notificationBarStateProvider
+                .overrideWithProvider((ref, param) => state),
+          ],
+          child: MaterialApp(
+            home: NotificationBar(anyParameter),
+          ),
+        ),
+      );
+      await tester.pump();
+
+      expect(
+        find.byWidgetPredicate(
+            (widget) => widget is RestDurationNotificationBar),
+        findsOneWidget,
+      );
+    });
+
+    testWidgets('user is not premium and pill sheet into rest duration',
+        (WidgetTester tester) async {
       final mockTodayRepository = MockTodayService();
       final today = DateTime(2021, 04, 29);
 
