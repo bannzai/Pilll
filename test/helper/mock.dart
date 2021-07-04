@@ -1,4 +1,5 @@
 import 'package:pilll/analytics.dart';
+import 'package:pilll/domain/record/record_page_store.dart';
 import 'package:pilll/service/auth.dart';
 import 'package:pilll/service/diary.dart';
 import 'package:pilll/service/menstruation.dart';
@@ -16,6 +17,7 @@ import 'package:mockito/annotations.dart';
   DiaryService,
   MenstruationService,
   AuthService,
-  UserService
+  UserService,
+  RecordPageStore,
 ])
 abstract class KeepGeneratedMocks {}
