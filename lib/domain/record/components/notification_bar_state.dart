@@ -32,6 +32,16 @@ abstract class NotificationBarState implements _$NotificationBarState {
     return "機種変更やスマホ紛失時に備えて\nアカウント登録しませんか？";
   }
 
+  bool get shownRecommendSignupNotificationForPremium {
+    if (isLinkedLoginProvider) {
+      return false;
+    }
+    if (!isPremium) {
+      return false;
+    }
+    return true;
+  }
+
   String? get restDurationNotification {
     final pillSheet = this.pillSheet;
     if (pillSheet == null || pillSheet.isInvalid) {
@@ -53,8 +63,6 @@ abstract class NotificationBarState implements _$NotificationBarState {
 
     return null;
   }
-  
-  
 
   String? get premiumTrialGuide {
     if (isPremium || isTrial || trialDeadlineDate != null) {
