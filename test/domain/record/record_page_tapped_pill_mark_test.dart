@@ -120,7 +120,11 @@ void main() {
 
     when(pillSheetService.fetchLast())
         .thenAnswer((_) => Future.value(pillSheet));
+    when(pillSheetService.fetchListWithMax(2))
+        .thenAnswer((_) => Future.value([]));
     when(pillSheetService.fetchAll()).thenAnswer((_) => Future.value([]));
+    when(pillSheetService.fetchListWithMax(2))
+        .thenAnswer((_) => Future.value([]));
     when(pillSheetService.subscribeForLatestPillSheet())
         .thenAnswer((realInvocation) => Stream.value(pillSheet));
 
@@ -187,6 +191,8 @@ void main() {
     when(pillSheetService.fetchLast())
         .thenAnswer((_) => Future.value(pillSheet));
     when(pillSheetService.fetchAll()).thenAnswer((_) => Future.value([]));
+    when(pillSheetService.fetchListWithMax(2))
+        .thenAnswer((_) => Future.value([]));
     when(pillSheetService.subscribeForLatestPillSheet())
         .thenAnswer((realInvocation) => Stream.value(pillSheet));
 

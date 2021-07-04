@@ -62,6 +62,8 @@ void main() {
         final pillSheetService = MockPillSheetService();
         when(pillSheetService.fetchLast())
             .thenAnswer((realInvocation) => Future.value(null));
+        when(pillSheetService.fetchListWithMax(2))
+            .thenAnswer((_) => Future.value([]));
         when(pillSheetService.subscribeForLatestPillSheet())
             .thenAnswer((realInvocation) => Stream.empty());
         final diaryService = MockDiaryService();

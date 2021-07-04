@@ -46,6 +46,7 @@ void main() {
       when(service.fetchLast())
           .thenAnswer((realInvocation) => Future.value(state.entity));
       when(service.fetchAll()).thenAnswer((realInvocation) => Future.value([]));
+      when(service.fetchListWithMax(2)).thenAnswer((_) => Future.value([]));
       when(service.subscribeForLatestPillSheet())
           .thenAnswer((realInvocation) => Stream.empty());
       final settingService = MockSettingService();
@@ -99,6 +100,7 @@ void main() {
     when(service.fetchLast())
         .thenAnswer((realInvocation) => Future.value(state.entity));
     when(service.fetchAll()).thenAnswer((realInvocation) => Future.value([]));
+    when(service.fetchListWithMax(2)).thenAnswer((_) => Future.value([]));
     when(service.subscribeForLatestPillSheet())
         .thenAnswer((realInvocation) => Stream.empty());
     final settingService = MockSettingService();
@@ -152,6 +154,7 @@ void main() {
       final service = MockPillSheetService();
       when(service.fetchLast())
           .thenAnswer((realInvocation) => Future.value(state.entity));
+      when(service.fetchListWithMax(2)).thenAnswer((_) => Future.value([]));
       when(service.fetchAll()).thenAnswer((realInvocation) => Future.value([]));
       when(service.subscribeForLatestPillSheet())
           .thenAnswer((realInvocation) => Stream.empty());
@@ -264,6 +267,7 @@ void main() {
       final service = MockPillSheetService();
       when(service.fetchLast())
           .thenAnswer((realInvocation) => Future.value(state.entity));
+      when(service.fetchListWithMax(2)).thenAnswer((_) => Future.value([]));
       when(service.fetchAll()).thenAnswer((realInvocation) => Future.value([]));
       when(service.subscribeForLatestPillSheet())
           .thenAnswer((realInvocation) => Stream.empty());
