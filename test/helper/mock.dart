@@ -8,23 +8,18 @@ import 'package:pilll/service/setting.dart';
 import 'package:pilll/service/day.dart';
 import 'package:mockito/mockito.dart';
 import 'package:pilll/service/user.dart';
+import 'package:mockito/annotations.dart';
 
-class MockPillSheetService extends Mock implements PillSheetService {}
-
-class MockTodayService extends Mock implements TodayService {}
-
-class MockSettingService extends Mock implements SettingService {}
-
-class MockAnalytics extends Mock implements AbstractAnalytics {}
-
-class MockDiaryService extends Mock implements DiaryService {}
-
-class MockMnestruationService extends Mock implements MenstruationService {}
-
-class MockAuthService extends Mock implements AuthService {}
-
-class MockUserService extends Mock implements UserService {}
-
+@GenerateMocks([
+  PillSheetService,
+  TodayService,
+  SettingService,
+  Analytics,
+  DiaryService,
+  MenstruationService,
+  AuthService,
+  UserService
+])
 class FakeUserForNotPremium extends Fake implements User {
   @override
   bool get isPremium => false;
