@@ -42,11 +42,12 @@ class NotificationBar extends HookWidget {
             restDurationNotification: restDurationNotification);
       }
 
-      final recommendedSignupNotification = state.recommendSignupNotification;
-      if (recommendedSignupNotification != null) {
-        return RecommendSignupNotificationBar(
-            store: store,
-            recommendedSignupNotification: recommendedSignupNotification);
+      if (!state.isLinkedLoginProvider) {
+        if (state.totalCountOfActionForTakenPill >= 7) {
+          if (!state.recommendedSignupNotificationIsAlreadyShow) {
+            return RecommendSignupNotificationBar(store: store);
+          }
+        }
       }
     } else {
       if (state.shownRecommendSignupNotificationForPremium) {
@@ -207,11 +208,9 @@ class RecommendSignupNotificationBar extends StatelessWidget {
   const RecommendSignupNotificationBar({
     Key? key,
     required this.store,
-    required this.recommendedSignupNotification,
   }) : super(key: key);
 
   final NotificationBarStateStore store;
-  final String recommendedSignupNotification;
 
   @override
   Widget build(BuildContext context) {
@@ -243,7 +242,7 @@ class RecommendSignupNotificationBar extends StatelessWidget {
           Column(
             children: [
               Text(
-                recommendedSignupNotification,
+                "機種変更やスマホ紛失時に備えて\nアカウント登録しませんか？",
                 style: TextColorStyle.white.merge(FontType.descriptionBold),
                 textAlign: TextAlign.center,
               ),

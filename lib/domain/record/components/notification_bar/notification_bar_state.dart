@@ -19,19 +19,6 @@ abstract class NotificationBarState implements _$NotificationBarState {
     @Default(true) bool premiumTrialGuideNotificationIsClosed,
   }) = _NotificationBarState;
 
-  String? get recommendSignupNotification {
-    if (isLinkedLoginProvider) {
-      return null;
-    }
-    if (totalCountOfActionForTakenPill < 7) {
-      return null;
-    }
-    if (recommendedSignupNotificationIsAlreadyShow) {
-      return null;
-    }
-    return "機種変更やスマホ紛失時に備えて\nアカウント登録しませんか？";
-  }
-
   bool get shownRecommendSignupNotificationForPremium {
     if (isLinkedLoginProvider) {
       return false;
