@@ -16,13 +16,20 @@ import '../../helper/delay.dart';
 import '../../helper/mock.mocks.dart';
 
 class _FakeUser extends Fake implements User {
-  _FakeUser({this.fakeIsPremium = false, this.fakeIsTrial = false});
+  _FakeUser({
+    this.fakeIsPremium = false,
+    this.fakeIsTrial = false,
+    this.fakeTrialDeadlineDate,
+  });
+  final DateTime? fakeTrialDeadlineDate;
   final bool fakeIsPremium;
   final bool fakeIsTrial;
   @override
   bool get isPremium => fakeIsPremium;
   @override
   bool get isTrial => fakeIsTrial;
+  @override
+  DateTime? get trialDeadlineDate => fakeTrialDeadlineDate;
 }
 
 void main() {

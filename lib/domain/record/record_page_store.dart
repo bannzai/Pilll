@@ -90,7 +90,6 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
           "count": (entity.todayPillNumber - entity.lastTakenPillNumber)
         });
       }
-
       _subscribe();
     });
   }
@@ -109,7 +108,11 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
     });
     _userSubscribeCanceller?.cancel();
     _userSubscribeCanceller = _userService.subscribe().listen((event) {
-      state = state.copyWith(isPremium: event.isPremium);
+      state = state.copyWith(
+        isPremium: event.isPremium,
+        isTrial: event.isTrial,
+        trialDeadlineDate: event.trialDeadlineDate,
+      );
     });
   }
 
@@ -117,6 +120,7 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
   void dispose() {
     _canceller?.cancel();
     _settingCanceller?.cancel();
+    _userSubscribeCanceller?.cancel();
     super.dispose();
   }
 
