@@ -52,11 +52,12 @@ void main() {
         pillSheet: pillSheet,
         totalCountOfActionForTakenPill:
             totalCountOfActionForTakenPillForLongTimeUser,
-      );
-      state = state.copyWith(
         isPremium: false,
         isTrial: false,
         isLinkedLoginProvider: false,
+        premiumTrialGuideNotificationIsClosed: false,
+        recommendedSignupNotificationIsAlreadyShow: false,
+        trialDeadlineDate: null,
       );
 
       final recordPageState = RecordPageState(entity: pillSheet);
@@ -100,6 +101,12 @@ void main() {
         pillSheet: pillSheet,
         totalCountOfActionForTakenPill:
             totalCountOfActionForTakenPillForLongTimeUser,
+        isPremium: false,
+        isTrial: false,
+        isLinkedLoginProvider: false,
+        premiumTrialGuideNotificationIsClosed: false,
+        recommendedSignupNotificationIsAlreadyShow: false,
+        trialDeadlineDate: null,
       );
       state = state.copyWith(
         isPremium: false,

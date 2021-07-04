@@ -19,16 +19,15 @@ class _$NotificationBarStateTearOff {
   _NotificationBarState call(
       {required PillSheet? pillSheet,
       required int totalCountOfActionForTakenPill,
-      bool isLinkedLoginProvider = false,
-      bool isPremium = false,
-      bool isTrial = false,
-      DateTime? trialDeadlineDate,
-      bool recommendedSignupNotificationIsAlreadyShow = true,
-      bool premiumTrialGuideNotificationIsClosed = true}) {
+      required bool isPremium,
+      required bool isTrial,
+      required DateTime? trialDeadlineDate,
+      required bool recommendedSignupNotificationIsAlreadyShow,
+      required bool premiumTrialGuideNotificationIsClosed,
+      bool isLinkedLoginProvider = false}) {
     return _NotificationBarState(
       pillSheet: pillSheet,
       totalCountOfActionForTakenPill: totalCountOfActionForTakenPill,
-      isLinkedLoginProvider: isLinkedLoginProvider,
       isPremium: isPremium,
       isTrial: isTrial,
       trialDeadlineDate: trialDeadlineDate,
@@ -36,6 +35,7 @@ class _$NotificationBarStateTearOff {
           recommendedSignupNotificationIsAlreadyShow,
       premiumTrialGuideNotificationIsClosed:
           premiumTrialGuideNotificationIsClosed,
+      isLinkedLoginProvider: isLinkedLoginProvider,
     );
   }
 }
@@ -47,7 +47,6 @@ const $NotificationBarState = _$NotificationBarStateTearOff();
 mixin _$NotificationBarState {
   PillSheet? get pillSheet => throw _privateConstructorUsedError;
   int get totalCountOfActionForTakenPill => throw _privateConstructorUsedError;
-  bool get isLinkedLoginProvider => throw _privateConstructorUsedError;
   bool get isPremium => throw _privateConstructorUsedError;
   bool get isTrial => throw _privateConstructorUsedError;
   DateTime? get trialDeadlineDate => throw _privateConstructorUsedError;
@@ -55,6 +54,7 @@ mixin _$NotificationBarState {
       throw _privateConstructorUsedError;
   bool get premiumTrialGuideNotificationIsClosed =>
       throw _privateConstructorUsedError;
+  bool get isLinkedLoginProvider => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $NotificationBarStateCopyWith<NotificationBarState> get copyWith =>
@@ -69,12 +69,12 @@ abstract class $NotificationBarStateCopyWith<$Res> {
   $Res call(
       {PillSheet? pillSheet,
       int totalCountOfActionForTakenPill,
-      bool isLinkedLoginProvider,
       bool isPremium,
       bool isTrial,
       DateTime? trialDeadlineDate,
       bool recommendedSignupNotificationIsAlreadyShow,
-      bool premiumTrialGuideNotificationIsClosed});
+      bool premiumTrialGuideNotificationIsClosed,
+      bool isLinkedLoginProvider});
 
   $PillSheetCopyWith<$Res>? get pillSheet;
 }
@@ -92,12 +92,12 @@ class _$NotificationBarStateCopyWithImpl<$Res>
   $Res call({
     Object? pillSheet = freezed,
     Object? totalCountOfActionForTakenPill = freezed,
-    Object? isLinkedLoginProvider = freezed,
     Object? isPremium = freezed,
     Object? isTrial = freezed,
     Object? trialDeadlineDate = freezed,
     Object? recommendedSignupNotificationIsAlreadyShow = freezed,
     Object? premiumTrialGuideNotificationIsClosed = freezed,
+    Object? isLinkedLoginProvider = freezed,
   }) {
     return _then(_value.copyWith(
       pillSheet: pillSheet == freezed
@@ -108,10 +108,6 @@ class _$NotificationBarStateCopyWithImpl<$Res>
           ? _value.totalCountOfActionForTakenPill
           : totalCountOfActionForTakenPill // ignore: cast_nullable_to_non_nullable
               as int,
-      isLinkedLoginProvider: isLinkedLoginProvider == freezed
-          ? _value.isLinkedLoginProvider
-          : isLinkedLoginProvider // ignore: cast_nullable_to_non_nullable
-              as bool,
       isPremium: isPremium == freezed
           ? _value.isPremium
           : isPremium // ignore: cast_nullable_to_non_nullable
@@ -134,6 +130,10 @@ class _$NotificationBarStateCopyWithImpl<$Res>
               ? _value.premiumTrialGuideNotificationIsClosed
               : premiumTrialGuideNotificationIsClosed // ignore: cast_nullable_to_non_nullable
                   as bool,
+      isLinkedLoginProvider: isLinkedLoginProvider == freezed
+          ? _value.isLinkedLoginProvider
+          : isLinkedLoginProvider // ignore: cast_nullable_to_non_nullable
+              as bool,
     ));
   }
 
@@ -159,12 +159,12 @@ abstract class _$NotificationBarStateCopyWith<$Res>
   $Res call(
       {PillSheet? pillSheet,
       int totalCountOfActionForTakenPill,
-      bool isLinkedLoginProvider,
       bool isPremium,
       bool isTrial,
       DateTime? trialDeadlineDate,
       bool recommendedSignupNotificationIsAlreadyShow,
-      bool premiumTrialGuideNotificationIsClosed});
+      bool premiumTrialGuideNotificationIsClosed,
+      bool isLinkedLoginProvider});
 
   @override
   $PillSheetCopyWith<$Res>? get pillSheet;
@@ -185,12 +185,12 @@ class __$NotificationBarStateCopyWithImpl<$Res>
   $Res call({
     Object? pillSheet = freezed,
     Object? totalCountOfActionForTakenPill = freezed,
-    Object? isLinkedLoginProvider = freezed,
     Object? isPremium = freezed,
     Object? isTrial = freezed,
     Object? trialDeadlineDate = freezed,
     Object? recommendedSignupNotificationIsAlreadyShow = freezed,
     Object? premiumTrialGuideNotificationIsClosed = freezed,
+    Object? isLinkedLoginProvider = freezed,
   }) {
     return _then(_NotificationBarState(
       pillSheet: pillSheet == freezed
@@ -201,10 +201,6 @@ class __$NotificationBarStateCopyWithImpl<$Res>
           ? _value.totalCountOfActionForTakenPill
           : totalCountOfActionForTakenPill // ignore: cast_nullable_to_non_nullable
               as int,
-      isLinkedLoginProvider: isLinkedLoginProvider == freezed
-          ? _value.isLinkedLoginProvider
-          : isLinkedLoginProvider // ignore: cast_nullable_to_non_nullable
-              as bool,
       isPremium: isPremium == freezed
           ? _value.isPremium
           : isPremium // ignore: cast_nullable_to_non_nullable
@@ -227,6 +223,10 @@ class __$NotificationBarStateCopyWithImpl<$Res>
               ? _value.premiumTrialGuideNotificationIsClosed
               : premiumTrialGuideNotificationIsClosed // ignore: cast_nullable_to_non_nullable
                   as bool,
+      isLinkedLoginProvider: isLinkedLoginProvider == freezed
+          ? _value.isLinkedLoginProvider
+          : isLinkedLoginProvider // ignore: cast_nullable_to_non_nullable
+              as bool,
     ));
   }
 }
@@ -237,39 +237,35 @@ class _$_NotificationBarState extends _NotificationBarState {
   _$_NotificationBarState(
       {required this.pillSheet,
       required this.totalCountOfActionForTakenPill,
-      this.isLinkedLoginProvider = false,
-      this.isPremium = false,
-      this.isTrial = false,
-      this.trialDeadlineDate,
-      this.recommendedSignupNotificationIsAlreadyShow = true,
-      this.premiumTrialGuideNotificationIsClosed = true})
+      required this.isPremium,
+      required this.isTrial,
+      required this.trialDeadlineDate,
+      required this.recommendedSignupNotificationIsAlreadyShow,
+      required this.premiumTrialGuideNotificationIsClosed,
+      this.isLinkedLoginProvider = false})
       : super._();
 
   @override
   final PillSheet? pillSheet;
   @override
   final int totalCountOfActionForTakenPill;
-  @JsonKey(defaultValue: false)
-  @override
-  final bool isLinkedLoginProvider;
-  @JsonKey(defaultValue: false)
   @override
   final bool isPremium;
-  @JsonKey(defaultValue: false)
   @override
   final bool isTrial;
   @override
   final DateTime? trialDeadlineDate;
-  @JsonKey(defaultValue: true)
   @override
   final bool recommendedSignupNotificationIsAlreadyShow;
-  @JsonKey(defaultValue: true)
   @override
   final bool premiumTrialGuideNotificationIsClosed;
+  @JsonKey(defaultValue: false)
+  @override
+  final bool isLinkedLoginProvider;
 
   @override
   String toString() {
-    return 'NotificationBarState(pillSheet: $pillSheet, totalCountOfActionForTakenPill: $totalCountOfActionForTakenPill, isLinkedLoginProvider: $isLinkedLoginProvider, isPremium: $isPremium, isTrial: $isTrial, trialDeadlineDate: $trialDeadlineDate, recommendedSignupNotificationIsAlreadyShow: $recommendedSignupNotificationIsAlreadyShow, premiumTrialGuideNotificationIsClosed: $premiumTrialGuideNotificationIsClosed)';
+    return 'NotificationBarState(pillSheet: $pillSheet, totalCountOfActionForTakenPill: $totalCountOfActionForTakenPill, isPremium: $isPremium, isTrial: $isTrial, trialDeadlineDate: $trialDeadlineDate, recommendedSignupNotificationIsAlreadyShow: $recommendedSignupNotificationIsAlreadyShow, premiumTrialGuideNotificationIsClosed: $premiumTrialGuideNotificationIsClosed, isLinkedLoginProvider: $isLinkedLoginProvider)';
   }
 
   @override
@@ -284,9 +280,6 @@ class _$_NotificationBarState extends _NotificationBarState {
                 const DeepCollectionEquality().equals(
                     other.totalCountOfActionForTakenPill,
                     totalCountOfActionForTakenPill)) &&
-            (identical(other.isLinkedLoginProvider, isLinkedLoginProvider) ||
-                const DeepCollectionEquality().equals(
-                    other.isLinkedLoginProvider, isLinkedLoginProvider)) &&
             (identical(other.isPremium, isPremium) ||
                 const DeepCollectionEquality()
                     .equals(other.isPremium, isPremium)) &&
@@ -305,7 +298,10 @@ class _$_NotificationBarState extends _NotificationBarState {
                     premiumTrialGuideNotificationIsClosed) ||
                 const DeepCollectionEquality().equals(
                     other.premiumTrialGuideNotificationIsClosed,
-                    premiumTrialGuideNotificationIsClosed)));
+                    premiumTrialGuideNotificationIsClosed)) &&
+            (identical(other.isLinkedLoginProvider, isLinkedLoginProvider) ||
+                const DeepCollectionEquality().equals(
+                    other.isLinkedLoginProvider, isLinkedLoginProvider)));
   }
 
   @override
@@ -313,14 +309,14 @@ class _$_NotificationBarState extends _NotificationBarState {
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(pillSheet) ^
       const DeepCollectionEquality().hash(totalCountOfActionForTakenPill) ^
-      const DeepCollectionEquality().hash(isLinkedLoginProvider) ^
       const DeepCollectionEquality().hash(isPremium) ^
       const DeepCollectionEquality().hash(isTrial) ^
       const DeepCollectionEquality().hash(trialDeadlineDate) ^
       const DeepCollectionEquality()
           .hash(recommendedSignupNotificationIsAlreadyShow) ^
       const DeepCollectionEquality()
-          .hash(premiumTrialGuideNotificationIsClosed);
+          .hash(premiumTrialGuideNotificationIsClosed) ^
+      const DeepCollectionEquality().hash(isLinkedLoginProvider);
 
   @JsonKey(ignore: true)
   @override
@@ -333,20 +329,18 @@ abstract class _NotificationBarState extends NotificationBarState {
   factory _NotificationBarState(
       {required PillSheet? pillSheet,
       required int totalCountOfActionForTakenPill,
-      bool isLinkedLoginProvider,
-      bool isPremium,
-      bool isTrial,
-      DateTime? trialDeadlineDate,
-      bool recommendedSignupNotificationIsAlreadyShow,
-      bool premiumTrialGuideNotificationIsClosed}) = _$_NotificationBarState;
+      required bool isPremium,
+      required bool isTrial,
+      required DateTime? trialDeadlineDate,
+      required bool recommendedSignupNotificationIsAlreadyShow,
+      required bool premiumTrialGuideNotificationIsClosed,
+      bool isLinkedLoginProvider}) = _$_NotificationBarState;
   _NotificationBarState._() : super._();
 
   @override
   PillSheet? get pillSheet => throw _privateConstructorUsedError;
   @override
   int get totalCountOfActionForTakenPill => throw _privateConstructorUsedError;
-  @override
-  bool get isLinkedLoginProvider => throw _privateConstructorUsedError;
   @override
   bool get isPremium => throw _privateConstructorUsedError;
   @override
@@ -359,6 +353,8 @@ abstract class _NotificationBarState extends NotificationBarState {
   @override
   bool get premiumTrialGuideNotificationIsClosed =>
       throw _privateConstructorUsedError;
+  @override
+  bool get isLinkedLoginProvider => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$NotificationBarStateCopyWith<_NotificationBarState> get copyWith =>

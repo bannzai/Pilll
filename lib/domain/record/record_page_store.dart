@@ -60,6 +60,12 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
         }
         return true;
       }();
+      final recommendedSignupNotificationIsAlreadyShow = sharedPreferences
+              .getBool(BoolKey.recommendedSignupNotificationIsAlreadyShow) ??
+          false;
+      final premiumTrialGuideNotificationIsClosed = sharedPreferences
+              .getBool(BoolKey.premiumTrialGuideNotificationIsClosed) ??
+          false;
       state = RecordPageState(
         entity: entity,
         setting: setting,
@@ -72,7 +78,12 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
                 false,
         isPremium: user.isPremium,
         isTrial: user.isTrial,
+        trialDeadlineDate: user.trialDeadlineDate,
         shouldShowMigrateInfo: shouldShowMigrateInfo,
+        recommendedSignupNotificationIsAlreadyShow:
+            recommendedSignupNotificationIsAlreadyShow,
+        premiumTrialGuideNotificationIsClosed:
+            premiumTrialGuideNotificationIsClosed,
       );
       if (entity != null) {
         analytics.logEvent(name: "count_of_remaining_pill", parameters: {

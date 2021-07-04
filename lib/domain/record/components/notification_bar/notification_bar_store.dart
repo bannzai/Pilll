@@ -3,7 +3,6 @@ import 'dart:async';
 import 'package:pilll/domain/record/components/notification_bar/notification_bar_state.dart';
 import 'package:pilll/domain/record/record_page_state.dart';
 import 'package:pilll/service/auth.dart';
-import 'package:pilll/service/user.dart';
 import 'package:pilll/util/shared_preference/keys.dart';
 import 'package:riverpod/riverpod.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -12,7 +11,6 @@ final notificationBarStoreProvider = StateNotifierProvider.autoDispose.family(
   (ref, RecordPageState parameter) => NotificationBarStateStore(
     parameter,
     ref.watch(authServiceProvider),
-    ref.watch(userServiceProvider),
   ),
 );
 final notificationBarStateProvider = Provider.autoDispose.family(
@@ -23,14 +21,19 @@ final notificationBarStateProvider = Provider.autoDispose.family(
 class NotificationBarStateStore extends StateNotifier<NotificationBarState> {
   final RecordPageState parameter;
   final AuthService _authService;
-  final UserService _userService;
-  NotificationBarStateStore(
-      this.parameter, this._authService, this._userService)
+  NotificationBarStateStore(this.parameter, this._authService)
       : super(
           NotificationBarState(
             pillSheet: parameter.entity,
             totalCountOfActionForTakenPill:
                 parameter.totalCountOfActionForTakenPill,
+            isPremium: parameter.isPremium,
+            isTrial: parameter.isTrial,
+            trialDeadlineDate: parameter.trialDeadlineDate,
+            premiumTrialGuideNotificationIsClosed:
+                parameter.premiumTrialGuideNotificationIsClosed,
+            recommendedSignupNotificationIsAlreadyShow:
+                parameter.recommendedSignupNotificationIsAlreadyShow,
           ),
         ) {
     reset();
@@ -38,31 +41,15 @@ class NotificationBarStateStore extends StateNotifier<NotificationBarState> {
 
   reset() {
     Future(() async {
-      final sharedPreferences = await SharedPreferences.getInstance();
-      final recommendedSignupNotificationIsAlreadyShow = sharedPreferences
-              .getBool(BoolKey.recommendedSignupNotificationIsAlreadyShow) ??
-          false;
-      final premiumTrialGuideNotificationIsClosed = sharedPreferences
-              .getBool(BoolKey.premiumTrialGuideNotificationIsClosed) ??
-          false;
-      final user = await _userService.fetch();
       state = state.copyWith(
-        recommendedSignupNotificationIsAlreadyShow:
-            recommendedSignupNotificationIsAlreadyShow,
-        premiumTrialGuideNotificationIsClosed:
-            premiumTrialGuideNotificationIsClosed,
         isLinkedLoginProvider:
             _authService.isLinkedApple() || _authService.isLinkedGoogle(),
-        isTrial: user.isTrial,
-        isPremium: user.isPremium,
-        trialDeadlineDate: user.trialDeadlineDate,
       );
       _subscribe();
     });
   }
 
   StreamSubscription? _authServiceCanceller;
-  StreamSubscription? _userServiceCanceller;
   _subscribe() {
     _authServiceCanceller?.cancel();
     _authServiceCanceller = _authService.subscribe().listen((event) {
@@ -70,22 +57,12 @@ class NotificationBarStateStore extends StateNotifier<NotificationBarState> {
           isLinkedLoginProvider:
               _authService.isLinkedApple() || _authService.isLinkedGoogle());
     });
-    _userServiceCanceller?.cancel();
-    _userServiceCanceller = _userService.subscribe().listen((event) {
-      state = state.copyWith(
-        isPremium: event.isPremium,
-        isTrial: event.isTrial,
-        trialDeadlineDate: event.trialDeadlineDate,
-      );
-    });
   }
 
   @override
   dispose() {
     _authServiceCanceller?.cancel();
-    _userServiceCanceller?.cancel();
     _authServiceCanceller = null;
-    _userServiceCanceller = null;
     super.dispose();
   }
 
