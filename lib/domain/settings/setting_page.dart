@@ -477,28 +477,31 @@ class SettingPage extends HookWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        SettingSectionTitle(text: () {
-          switch (section) {
-            case SettingSection.pill:
-              return "ピルシート";
-            case SettingSection.menstruation:
-              return "生理";
-            case SettingSection.notification:
-              return "通知";
-            case SettingSection.account:
-              return "アカウント";
-            case SettingSection.other:
-              return "その他";
-          }
-        }()),
-        ...[
-          ..._rowModels(context, section).map((e) {
-            if (e is SettingListExplainRowModel) {
-              return [e.widget()];
-            }
-            return [e.widget(), _separatorItem()];
-          }).expand((element) => element)
-        ]..add(SizedBox(height: 16)),
+        SettingSectionTitle(
+            text: () {
+              switch (section) {
+                case SettingSection.pill:
+                  return "ピルシート";
+                case SettingSection.menstruation:
+                  return "生理";
+                case SettingSection.notification:
+                  return "通知";
+                case SettingSection.account:
+                  return "アカウント";
+                case SettingSection.other:
+                  return "その他";
+              }
+            }(),
+            children: [
+              ...[
+                ..._rowModels(context, section).map((e) {
+                  if (e is SettingListExplainRowModel) {
+                    return [e.widget()];
+                  }
+                  return [e.widget(), _separatorItem()];
+                }).expand((element) => element)
+              ]..add(SizedBox(height: 16)),
+            ]),
       ],
     );
   }
