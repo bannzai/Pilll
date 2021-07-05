@@ -5,6 +5,7 @@ import 'package:pilll/entity/pill_mark_type.dart';
 import 'package:pilll/entity/pill_sheet.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/entity/setting.dart';
+import 'package:pilll/entity/user.dart';
 import 'package:pilll/service/day.dart';
 import 'package:pilll/util/datetime/date_compare.dart';
 import 'package:flutter_test/flutter_test.dart';
@@ -12,7 +13,24 @@ import 'package:mockito/mockito.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import '../../helper/delay.dart';
-import '../../helper/mock.dart';
+import '../../helper/mock.mocks.dart';
+
+class _FakeUser extends Fake implements User {
+  _FakeUser({
+    this.fakeIsPremium = false,
+    this.fakeIsTrial = false,
+    this.fakeTrialDeadlineDate,
+  });
+  final DateTime? fakeTrialDeadlineDate;
+  final bool fakeIsPremium;
+  final bool fakeIsTrial;
+  @override
+  bool get isPremium => fakeIsPremium;
+  @override
+  bool get isTrial => fakeIsTrial;
+  @override
+  DateTime? get trialDeadlineDate => fakeTrialDeadlineDate;
+}
 
 void main() {
   setUp(() async {
@@ -25,7 +43,7 @@ void main() {
       final mockTodayRepository = MockTodayService();
       final today = DateTime.parse("2020-11-22");
       todayRepository = mockTodayRepository;
-      when(todayRepository.today()).thenReturn(today);
+      when(mockTodayRepository.today()).thenReturn(today);
 
       final pillSheetEntity =
           PillSheet.create(PillSheetType.pillsheet_21).copyWith(
@@ -45,6 +63,7 @@ void main() {
       when(service.fetchLast())
           .thenAnswer((realInvocation) => Future.value(state.entity));
       when(service.fetchAll()).thenAnswer((realInvocation) => Future.value([]));
+      when(service.fetchListWithMax(2)).thenAnswer((_) => Future.value([]));
       when(service.subscribeForLatestPillSheet())
           .thenAnswer((realInvocation) => Stream.empty());
       final settingService = MockSettingService();
@@ -57,7 +76,7 @@ void main() {
       when(authService.isLinkedGoogle()).thenReturn(false);
       final userService = MockUserService();
       when(userService.fetch())
-          .thenAnswer((reaInvocation) => Future.value(FakeUserForNotPremium()));
+          .thenAnswer((reaInvocation) => Future.value(_FakeUser()));
       when(userService.subscribe())
           .thenAnswer((realInvocation) => Stream.empty());
 
@@ -78,7 +97,7 @@ void main() {
     final mockTodayRepository = MockTodayService();
     final today = DateTime.parse("2020-11-23");
     todayRepository = mockTodayRepository;
-    when(todayRepository.today()).thenReturn(today);
+    when(mockTodayRepository.today()).thenReturn(today);
 
     final pillSheetEntity =
         PillSheet.create(PillSheetType.pillsheet_21).copyWith(
@@ -98,6 +117,7 @@ void main() {
     when(service.fetchLast())
         .thenAnswer((realInvocation) => Future.value(state.entity));
     when(service.fetchAll()).thenAnswer((realInvocation) => Future.value([]));
+    when(service.fetchListWithMax(2)).thenAnswer((_) => Future.value([]));
     when(service.subscribeForLatestPillSheet())
         .thenAnswer((realInvocation) => Stream.empty());
     final settingService = MockSettingService();
@@ -110,7 +130,7 @@ void main() {
     when(authService.isLinkedGoogle()).thenReturn(false);
     final userService = MockUserService();
     when(userService.fetch())
-        .thenAnswer((reaInvocation) => Future.value(FakeUserForNotPremium()));
+        .thenAnswer((reaInvocation) => Future.value(_FakeUser()));
     when(userService.subscribe())
         .thenAnswer((realInvocation) => Stream.empty());
 
@@ -131,7 +151,7 @@ void main() {
       final mockTodayRepository = MockTodayService();
       final today = DateTime.parse("2020-11-23");
       todayRepository = mockTodayRepository;
-      when(todayRepository.today()).thenReturn(today);
+      when(mockTodayRepository.today()).thenReturn(today);
 
       final pillSheetEntity =
           PillSheet.create(PillSheetType.pillsheet_21).copyWith(
@@ -152,6 +172,8 @@ void main() {
       when(service.fetchLast())
           .thenAnswer((realInvocation) => Future.value(state.entity));
       when(service.fetchAll()).thenAnswer((realInvocation) => Future.value([]));
+      when(service.fetchListWithMax(2))
+          .thenAnswer((realInvocation) => Future.value([]));
       when(service.subscribeForLatestPillSheet())
           .thenAnswer((realInvocation) => Stream.empty());
       final settingService = MockSettingService();
@@ -165,7 +187,7 @@ void main() {
       when(authService.isLinkedGoogle()).thenReturn(false);
       final userService = MockUserService();
       when(userService.fetch())
-          .thenAnswer((reaInvocation) => Future.value(FakeUserForNotPremium()));
+          .thenAnswer((reaInvocation) => Future.value(_FakeUser()));
       when(userService.subscribe())
           .thenAnswer((realInvocation) => Stream.empty());
 
@@ -186,7 +208,7 @@ void main() {
       final mockTodayRepository = MockTodayService();
       final today = DateTime.parse("2020-11-23");
       todayRepository = mockTodayRepository;
-      when(todayRepository.today()).thenReturn(today);
+      when(mockTodayRepository.today()).thenReturn(today);
 
       final pillSheetEntity =
           PillSheet.create(PillSheetType.pillsheet_21).copyWith(
@@ -207,6 +229,8 @@ void main() {
       when(service.fetchLast())
           .thenAnswer((realInvocation) => Future.value(state.entity));
       when(service.fetchAll()).thenAnswer((realInvocation) => Future.value([]));
+      when(service.fetchListWithMax(2))
+          .thenAnswer((realInvocation) => Future.value([]));
       when(service.subscribeForLatestPillSheet())
           .thenAnswer((realInvocation) => Stream.empty());
       final settingService = MockSettingService();
@@ -220,7 +244,7 @@ void main() {
       when(authService.isLinkedGoogle()).thenReturn(false);
       final userService = MockUserService();
       when(userService.fetch())
-          .thenAnswer((reaInvocation) => Future.value(FakeUserForNotPremium()));
+          .thenAnswer((reaInvocation) => Future.value(_FakeUser()));
       when(userService.subscribe())
           .thenAnswer((realInvocation) => Stream.empty());
 
@@ -263,6 +287,7 @@ void main() {
       final service = MockPillSheetService();
       when(service.fetchLast())
           .thenAnswer((realInvocation) => Future.value(state.entity));
+      when(service.fetchListWithMax(2)).thenAnswer((_) => Future.value([]));
       when(service.fetchAll()).thenAnswer((realInvocation) => Future.value([]));
       when(service.subscribeForLatestPillSheet())
           .thenAnswer((realInvocation) => Stream.empty());
@@ -277,7 +302,7 @@ void main() {
       when(authService.isLinkedGoogle()).thenReturn(false);
       final userService = MockUserService();
       when(userService.fetch())
-          .thenAnswer((reaInvocation) => Future.value(FakeUserForNotPremium()));
+          .thenAnswer((reaInvocation) => Future.value(_FakeUser()));
       when(userService.subscribe())
           .thenAnswer((realInvocation) => Stream.empty());
 
@@ -297,7 +322,7 @@ void main() {
       final mockTodayRepository = MockTodayService();
       final today = DateTime.parse("2020-11-23");
       todayRepository = mockTodayRepository;
-      when(todayRepository.today()).thenReturn(today);
+      when(mockTodayRepository.today()).thenReturn(today);
 
       final pillSheetEntity =
           PillSheet.create(PillSheetType.pillsheet_21).copyWith(
@@ -318,6 +343,8 @@ void main() {
       when(service.fetchLast())
           .thenAnswer((realInvocation) => Future.value(state.entity));
       when(service.fetchAll()).thenAnswer((realInvocation) => Future.value([]));
+      when(service.fetchListWithMax(2))
+          .thenAnswer((realInvocation) => Future.value([]));
       when(service.subscribeForLatestPillSheet())
           .thenAnswer((realInvocation) => Stream.empty());
       final settingService = MockSettingService();
@@ -331,7 +358,7 @@ void main() {
       when(authService.isLinkedGoogle()).thenReturn(false);
       final userService = MockUserService();
       when(userService.fetch())
-          .thenAnswer((reaInvocation) => Future.value(FakeUserForNotPremium()));
+          .thenAnswer((reaInvocation) => Future.value(_FakeUser()));
       when(userService.subscribe())
           .thenAnswer((realInvocation) => Stream.empty());
 

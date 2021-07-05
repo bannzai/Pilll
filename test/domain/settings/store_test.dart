@@ -5,9 +5,20 @@ import 'package:pilll/domain/settings/setting_page_state.dart';
 import 'package:pilll/domain/settings/setting_page_store.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
+import 'package:pilll/entity/user.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-import '../../helper/mock.dart';
+import '../../helper/mock.mocks.dart';
+
+class _FakeUser extends Fake implements User {
+  _FakeUser({this.fakeIsPremium = false, this.fakeIsTrial = false});
+  final bool fakeIsPremium;
+  final bool fakeIsTrial;
+  @override
+  bool get isPremium => fakeIsPremium;
+  @override
+  bool get isTrial => fakeIsTrial;
+}
 
 class _FakeSetting extends Fake implements Setting {
   final List<ReminderTime> fakeReminderTimes;
@@ -47,8 +58,8 @@ void main() {
       when(pillSheetService.subscribeForLatestPillSheet())
           .thenAnswer((realInvocation) => Stream.empty());
       final userService = MockUserService();
-      when(userService.fetch()).thenAnswer(
-          (realInvocation) => Future.value(FakeUserForNotPremium()));
+      when(userService.fetch())
+          .thenAnswer((realInvocation) => Future.value(_FakeUser()));
 
       final store = SettingStateStore(service, pillSheetService, userService);
 
@@ -89,8 +100,8 @@ void main() {
       when(pillSheetService.subscribeForLatestPillSheet())
           .thenAnswer((realInvocation) => Stream.empty());
       final userService = MockUserService();
-      when(userService.fetch()).thenAnswer(
-          (realInvocation) => Future.value(FakeUserForNotPremium()));
+      when(userService.fetch())
+          .thenAnswer((realInvocation) => Future.value(_FakeUser()));
 
       final store = SettingStateStore(service, pillSheetService, userService);
 
@@ -126,8 +137,8 @@ void main() {
       when(pillSheetService.subscribeForLatestPillSheet())
           .thenAnswer((realInvocation) => Stream.empty());
       final userService = MockUserService();
-      when(userService.fetch()).thenAnswer(
-          (realInvocation) => Future.value(FakeUserForNotPremium()));
+      when(userService.fetch())
+          .thenAnswer((realInvocation) => Future.value(_FakeUser()));
 
       final store = SettingStateStore(service, pillSheetService, userService);
 
@@ -162,8 +173,8 @@ void main() {
       when(pillSheetService.subscribeForLatestPillSheet())
           .thenAnswer((realInvocation) => Stream.empty());
       final userService = MockUserService();
-      when(userService.fetch()).thenAnswer(
-          (realInvocation) => Future.value(FakeUserForNotPremium()));
+      when(userService.fetch())
+          .thenAnswer((realInvocation) => Future.value(_FakeUser()));
 
       final store = SettingStateStore(service, pillSheetService, userService);
 

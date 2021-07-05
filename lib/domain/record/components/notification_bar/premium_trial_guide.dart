@@ -8,7 +8,7 @@ import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/domain/premium_trial/premium_trial_complete_modal.dart';
 import 'package:pilll/domain/premium_trial/premium_trial_modal.dart';
 import 'package:pilll/domain/record/components/notification_bar/notification_bar_store.dart';
-import 'package:pilll/domain/record/components/notification_bar/notification_bar_store_parameter.dart';
+import 'package:pilll/domain/record/record_page_state.dart';
 
 class PremiumTrialGuideNotificationBar extends HookWidget {
   const PremiumTrialGuideNotificationBar({
@@ -16,7 +16,7 @@ class PremiumTrialGuideNotificationBar extends HookWidget {
     required this.parameter,
   }) : super(key: key);
 
-  final NotificationBarStoreParameter parameter;
+  final RecordPageState parameter;
 
   @override
   Widget build(BuildContext context) {

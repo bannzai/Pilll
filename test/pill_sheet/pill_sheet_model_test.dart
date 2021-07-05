@@ -5,7 +5,7 @@ import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-import '../helper/mock.dart';
+import '../helper/mock.mocks.dart';
 
 void main() {
   setUp(() {
@@ -16,7 +16,8 @@ void main() {
     test("today: 2020-09-19, begin: 2020-09-14, end: 2020-09-18", () {
       var mockTodayRepository = MockTodayService();
       todayRepository = mockTodayRepository;
-      when(todayRepository.today()).thenReturn(DateTime.parse("2020-09-19"));
+      when(mockTodayRepository.today())
+          .thenReturn(DateTime.parse("2020-09-19"));
 
       var sheetType = PillSheetType.pillsheet_21;
       var model = PillSheet(
@@ -34,7 +35,8 @@ void main() {
     test("today: 2020-09-28, begin: 2020-09-01, end: 2020-09-28", () {
       var mockTodayRepository = MockTodayService();
       todayRepository = mockTodayRepository;
-      when(todayRepository.today()).thenReturn(DateTime.parse("2020-09-28"));
+      when(mockTodayRepository.today())
+          .thenReturn(DateTime.parse("2020-09-28"));
 
       var sheetType = PillSheetType.pillsheet_21;
       var model = PillSheet(
@@ -52,7 +54,8 @@ void main() {
     test("today: 2020-09-29, begin: 2020-09-01, end: 2020-09-28", () {
       var mockTodayRepository = MockTodayService();
       todayRepository = mockTodayRepository;
-      when(todayRepository.today()).thenReturn(DateTime.parse("2020-09-29"));
+      when(mockTodayRepository.today())
+          .thenReturn(DateTime.parse("2020-09-29"));
 
       var sheetType = PillSheetType.pillsheet_21;
       var model = PillSheet(
@@ -70,7 +73,8 @@ void main() {
     test("today: 2020-10-27, begin: 2020-09-01, end: 2020-09-28", () {
       var mockTodayRepository = MockTodayService();
       todayRepository = mockTodayRepository;
-      when(todayRepository.today()).thenReturn(DateTime.parse("2020-10-27"));
+      when(mockTodayRepository.today())
+          .thenReturn(DateTime.parse("2020-10-27"));
 
       var sheetType = PillSheetType.pillsheet_21;
       var model = PillSheet(

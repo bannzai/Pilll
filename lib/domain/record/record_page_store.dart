@@ -60,6 +60,12 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
         }
         return true;
       }();
+      final recommendedSignupNotificationIsAlreadyShow = sharedPreferences
+              .getBool(BoolKey.recommendedSignupNotificationIsAlreadyShow) ??
+          false;
+      final premiumTrialGuideNotificationIsClosed = sharedPreferences
+              .getBool(BoolKey.premiumTrialGuideNotificationIsClosed) ??
+          false;
       state = RecordPageState(
         entity: entity,
         setting: setting,
@@ -72,14 +78,18 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
                 false,
         isPremium: user.isPremium,
         isTrial: user.isTrial,
+        trialDeadlineDate: user.trialDeadlineDate,
         shouldShowMigrateInfo: shouldShowMigrateInfo,
+        recommendedSignupNotificationIsAlreadyShow:
+            recommendedSignupNotificationIsAlreadyShow,
+        premiumTrialGuideNotificationIsClosed:
+            premiumTrialGuideNotificationIsClosed,
       );
       if (entity != null) {
         analytics.logEvent(name: "count_of_remaining_pill", parameters: {
           "count": (entity.todayPillNumber - entity.lastTakenPillNumber)
         });
       }
-
       _subscribe();
     });
   }
@@ -98,7 +108,11 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
     });
     _userSubscribeCanceller?.cancel();
     _userSubscribeCanceller = _userService.subscribe().listen((event) {
-      state = state.copyWith(isPremium: event.isPremium);
+      state = state.copyWith(
+        isPremium: event.isPremium,
+        isTrial: event.isTrial,
+        trialDeadlineDate: event.trialDeadlineDate,
+      );
     });
   }
 
@@ -106,6 +120,7 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
   void dispose() {
     _canceller?.cancel();
     _settingCanceller?.cancel();
+    _userSubscribeCanceller?.cancel();
     super.dispose();
   }
 

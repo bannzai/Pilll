@@ -11,12 +11,12 @@ abstract class NotificationBarState implements _$NotificationBarState {
   factory NotificationBarState({
     required PillSheet? pillSheet,
     required int totalCountOfActionForTakenPill,
+    required bool isPremium,
+    required bool isTrial,
+    required DateTime? trialDeadlineDate,
+    required bool recommendedSignupNotificationIsAlreadyShow,
+    required bool premiumTrialGuideNotificationIsClosed,
     @Default(false) bool isLinkedLoginProvider,
-    @Default(false) bool isPremium,
-    @Default(false) bool isTrial,
-    DateTime? trialDeadlineDate,
-    @Default(true) bool recommendedSignupNotificationIsAlreadyShow,
-    @Default(true) bool premiumTrialGuideNotificationIsClosed,
   }) = _NotificationBarState;
 
   bool get shownRecommendSignupNotificationForPremium {

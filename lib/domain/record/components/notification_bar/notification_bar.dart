@@ -3,15 +3,15 @@ import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/domain/record/components/notification_bar/notification_bar_store.dart';
-import 'package:pilll/domain/record/components/notification_bar/notification_bar_store_parameter.dart';
 import 'package:pilll/domain/record/components/notification_bar/premium_trial_guide.dart';
 import 'package:pilll/domain/record/components/notification_bar/premium_trial_limit.dart';
 import 'package:pilll/domain/record/components/notification_bar/recommend_signup.dart';
 import 'package:pilll/domain/record/components/notification_bar/recommend_signup_premium.dart';
 import 'package:pilll/domain/record/components/notification_bar/rest_duration.dart';
+import 'package:pilll/domain/record/record_page_state.dart';
 
 class NotificationBar extends HookWidget {
-  final NotificationBarStoreParameter parameter;
+  final RecordPageState parameter;
 
   NotificationBar(this.parameter);
   @override

@@ -1,31 +1,25 @@
 import 'package:pilll/analytics.dart';
-import 'package:pilll/entity/user.dart';
+import 'package:pilll/domain/record/components/notification_bar/notification_bar_store.dart';
+import 'package:pilll/domain/record/record_page_store.dart';
 import 'package:pilll/service/auth.dart';
 import 'package:pilll/service/diary.dart';
 import 'package:pilll/service/menstruation.dart';
 import 'package:pilll/service/pill_sheet.dart';
 import 'package:pilll/service/setting.dart';
 import 'package:pilll/service/day.dart';
-import 'package:mockito/mockito.dart';
 import 'package:pilll/service/user.dart';
+import 'package:mockito/annotations.dart';
 
-class MockPillSheetService extends Mock implements PillSheetService {}
-
-class MockTodayService extends Mock implements TodayService {}
-
-class MockSettingService extends Mock implements SettingService {}
-
-class MockAnalytics extends Mock implements AbstractAnalytics {}
-
-class MockDiaryService extends Mock implements DiaryService {}
-
-class MockMnestruationService extends Mock implements MenstruationService {}
-
-class MockAuthService extends Mock implements AuthService {}
-
-class MockUserService extends Mock implements UserService {}
-
-class FakeUserForNotPremium extends Fake implements User {
-  @override
-  bool get isPremium => false;
-}
+@GenerateMocks([
+  PillSheetService,
+  TodayService,
+  SettingService,
+  Analytics,
+  DiaryService,
+  MenstruationService,
+  AuthService,
+  UserService,
+  RecordPageStore,
+  NotificationBarStateStore,
+])
+abstract class KeepGeneratedMocks {}

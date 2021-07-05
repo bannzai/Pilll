@@ -1,4 +1,3 @@
-import 'package:pilll/entity/firestore_timestamp_converter.dart';
 import 'package:pilll/entity/pill_sheet.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:pilll/entity/setting.dart';
@@ -11,25 +10,17 @@ abstract class RecordPageState implements _$RecordPageState {
   factory RecordPageState({
     required PillSheet? entity,
     Setting? setting,
-    @Default(0)
-        int totalCountOfActionForTakenPill,
-    @Default(false)
-        bool firstLoadIsEnded,
-    @Default(false)
-        bool isPremium,
-    @Default(false)
-        bool isTrial,
-    @Default(false)
-        bool isPillSheetFinishedInThePast,
-    @Default(false)
-        bool isAlreadyShowTiral,
-    @Default(false)
-        bool shouldShowMigrateInfo,
-    @JsonKey(
-      fromJson: TimestampConverter.timestampToDateTime,
-      toJson: TimestampConverter.dateTimeToTimestamp,
-    )
-        DateTime? beginTrialDate,
+    @Default(0) int totalCountOfActionForTakenPill,
+    @Default(false) bool firstLoadIsEnded,
+    @Default(false) bool isPremium,
+    @Default(false) bool isTrial,
+    @Default(false) bool isPillSheetFinishedInThePast,
+    @Default(false) bool isAlreadyShowTiral,
+    @Default(false) bool shouldShowMigrateInfo,
+    DateTime? beginTrialDate,
+    DateTime? trialDeadlineDate,
+    @Default(true) bool recommendedSignupNotificationIsAlreadyShow,
+    @Default(true) bool premiumTrialGuideNotificationIsClosed,
     Object? exception,
   }) = _RecordPageState;
 

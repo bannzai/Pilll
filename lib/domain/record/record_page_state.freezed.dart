@@ -26,8 +26,10 @@ class _$RecordPageStateTearOff {
       bool isPillSheetFinishedInThePast = false,
       bool isAlreadyShowTiral = false,
       bool shouldShowMigrateInfo = false,
-      @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
-          DateTime? beginTrialDate,
+      DateTime? beginTrialDate,
+      DateTime? trialDeadlineDate,
+      bool recommendedSignupNotificationIsAlreadyShow = true,
+      bool premiumTrialGuideNotificationIsClosed = true,
       Object? exception}) {
     return _RecordPageState(
       entity: entity,
@@ -40,6 +42,11 @@ class _$RecordPageStateTearOff {
       isAlreadyShowTiral: isAlreadyShowTiral,
       shouldShowMigrateInfo: shouldShowMigrateInfo,
       beginTrialDate: beginTrialDate,
+      trialDeadlineDate: trialDeadlineDate,
+      recommendedSignupNotificationIsAlreadyShow:
+          recommendedSignupNotificationIsAlreadyShow,
+      premiumTrialGuideNotificationIsClosed:
+          premiumTrialGuideNotificationIsClosed,
       exception: exception,
     );
   }
@@ -59,10 +66,12 @@ mixin _$RecordPageState {
   bool get isPillSheetFinishedInThePast => throw _privateConstructorUsedError;
   bool get isAlreadyShowTiral => throw _privateConstructorUsedError;
   bool get shouldShowMigrateInfo => throw _privateConstructorUsedError;
-  @JsonKey(
-      fromJson: TimestampConverter.timestampToDateTime,
-      toJson: TimestampConverter.dateTimeToTimestamp)
   DateTime? get beginTrialDate => throw _privateConstructorUsedError;
+  DateTime? get trialDeadlineDate => throw _privateConstructorUsedError;
+  bool get recommendedSignupNotificationIsAlreadyShow =>
+      throw _privateConstructorUsedError;
+  bool get premiumTrialGuideNotificationIsClosed =>
+      throw _privateConstructorUsedError;
   Object? get exception => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
@@ -85,8 +94,10 @@ abstract class $RecordPageStateCopyWith<$Res> {
       bool isPillSheetFinishedInThePast,
       bool isAlreadyShowTiral,
       bool shouldShowMigrateInfo,
-      @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
-          DateTime? beginTrialDate,
+      DateTime? beginTrialDate,
+      DateTime? trialDeadlineDate,
+      bool recommendedSignupNotificationIsAlreadyShow,
+      bool premiumTrialGuideNotificationIsClosed,
       Object? exception});
 
   $PillSheetCopyWith<$Res>? get entity;
@@ -114,6 +125,9 @@ class _$RecordPageStateCopyWithImpl<$Res>
     Object? isAlreadyShowTiral = freezed,
     Object? shouldShowMigrateInfo = freezed,
     Object? beginTrialDate = freezed,
+    Object? trialDeadlineDate = freezed,
+    Object? recommendedSignupNotificationIsAlreadyShow = freezed,
+    Object? premiumTrialGuideNotificationIsClosed = freezed,
     Object? exception = freezed,
   }) {
     return _then(_value.copyWith(
@@ -157,6 +171,20 @@ class _$RecordPageStateCopyWithImpl<$Res>
           ? _value.beginTrialDate
           : beginTrialDate // ignore: cast_nullable_to_non_nullable
               as DateTime?,
+      trialDeadlineDate: trialDeadlineDate == freezed
+          ? _value.trialDeadlineDate
+          : trialDeadlineDate // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
+      recommendedSignupNotificationIsAlreadyShow:
+          recommendedSignupNotificationIsAlreadyShow == freezed
+              ? _value.recommendedSignupNotificationIsAlreadyShow
+              : recommendedSignupNotificationIsAlreadyShow // ignore: cast_nullable_to_non_nullable
+                  as bool,
+      premiumTrialGuideNotificationIsClosed:
+          premiumTrialGuideNotificationIsClosed == freezed
+              ? _value.premiumTrialGuideNotificationIsClosed
+              : premiumTrialGuideNotificationIsClosed // ignore: cast_nullable_to_non_nullable
+                  as bool,
       exception: exception == freezed ? _value.exception : exception,
     ));
   }
@@ -201,8 +229,10 @@ abstract class _$RecordPageStateCopyWith<$Res>
       bool isPillSheetFinishedInThePast,
       bool isAlreadyShowTiral,
       bool shouldShowMigrateInfo,
-      @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
-          DateTime? beginTrialDate,
+      DateTime? beginTrialDate,
+      DateTime? trialDeadlineDate,
+      bool recommendedSignupNotificationIsAlreadyShow,
+      bool premiumTrialGuideNotificationIsClosed,
       Object? exception});
 
   @override
@@ -234,6 +264,9 @@ class __$RecordPageStateCopyWithImpl<$Res>
     Object? isAlreadyShowTiral = freezed,
     Object? shouldShowMigrateInfo = freezed,
     Object? beginTrialDate = freezed,
+    Object? trialDeadlineDate = freezed,
+    Object? recommendedSignupNotificationIsAlreadyShow = freezed,
+    Object? premiumTrialGuideNotificationIsClosed = freezed,
     Object? exception = freezed,
   }) {
     return _then(_RecordPageState(
@@ -277,6 +310,20 @@ class __$RecordPageStateCopyWithImpl<$Res>
           ? _value.beginTrialDate
           : beginTrialDate // ignore: cast_nullable_to_non_nullable
               as DateTime?,
+      trialDeadlineDate: trialDeadlineDate == freezed
+          ? _value.trialDeadlineDate
+          : trialDeadlineDate // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
+      recommendedSignupNotificationIsAlreadyShow:
+          recommendedSignupNotificationIsAlreadyShow == freezed
+              ? _value.recommendedSignupNotificationIsAlreadyShow
+              : recommendedSignupNotificationIsAlreadyShow // ignore: cast_nullable_to_non_nullable
+                  as bool,
+      premiumTrialGuideNotificationIsClosed:
+          premiumTrialGuideNotificationIsClosed == freezed
+              ? _value.premiumTrialGuideNotificationIsClosed
+              : premiumTrialGuideNotificationIsClosed // ignore: cast_nullable_to_non_nullable
+                  as bool,
       exception: exception == freezed ? _value.exception : exception,
     ));
   }
@@ -295,8 +342,10 @@ class _$_RecordPageState extends _RecordPageState {
       this.isPillSheetFinishedInThePast = false,
       this.isAlreadyShowTiral = false,
       this.shouldShowMigrateInfo = false,
-      @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
-          this.beginTrialDate,
+      this.beginTrialDate,
+      this.trialDeadlineDate,
+      this.recommendedSignupNotificationIsAlreadyShow = true,
+      this.premiumTrialGuideNotificationIsClosed = true,
       this.exception})
       : super._();
 
@@ -326,16 +375,21 @@ class _$_RecordPageState extends _RecordPageState {
   @override
   final bool shouldShowMigrateInfo;
   @override
-  @JsonKey(
-      fromJson: TimestampConverter.timestampToDateTime,
-      toJson: TimestampConverter.dateTimeToTimestamp)
   final DateTime? beginTrialDate;
+  @override
+  final DateTime? trialDeadlineDate;
+  @JsonKey(defaultValue: true)
+  @override
+  final bool recommendedSignupNotificationIsAlreadyShow;
+  @JsonKey(defaultValue: true)
+  @override
+  final bool premiumTrialGuideNotificationIsClosed;
   @override
   final Object? exception;
 
   @override
   String toString() {
-    return 'RecordPageState(entity: $entity, setting: $setting, totalCountOfActionForTakenPill: $totalCountOfActionForTakenPill, firstLoadIsEnded: $firstLoadIsEnded, isPremium: $isPremium, isTrial: $isTrial, isPillSheetFinishedInThePast: $isPillSheetFinishedInThePast, isAlreadyShowTiral: $isAlreadyShowTiral, shouldShowMigrateInfo: $shouldShowMigrateInfo, beginTrialDate: $beginTrialDate, exception: $exception)';
+    return 'RecordPageState(entity: $entity, setting: $setting, totalCountOfActionForTakenPill: $totalCountOfActionForTakenPill, firstLoadIsEnded: $firstLoadIsEnded, isPremium: $isPremium, isTrial: $isTrial, isPillSheetFinishedInThePast: $isPillSheetFinishedInThePast, isAlreadyShowTiral: $isAlreadyShowTiral, shouldShowMigrateInfo: $shouldShowMigrateInfo, beginTrialDate: $beginTrialDate, trialDeadlineDate: $trialDeadlineDate, recommendedSignupNotificationIsAlreadyShow: $recommendedSignupNotificationIsAlreadyShow, premiumTrialGuideNotificationIsClosed: $premiumTrialGuideNotificationIsClosed, exception: $exception)';
   }
 
   @override
@@ -347,8 +401,7 @@ class _$_RecordPageState extends _RecordPageState {
             (identical(other.setting, setting) ||
                 const DeepCollectionEquality()
                     .equals(other.setting, setting)) &&
-            (identical(other.totalCountOfActionForTakenPill,
-                    totalCountOfActionForTakenPill) ||
+            (identical(other.totalCountOfActionForTakenPill, totalCountOfActionForTakenPill) ||
                 const DeepCollectionEquality().equals(
                     other.totalCountOfActionForTakenPill,
                     totalCountOfActionForTakenPill)) &&
@@ -361,8 +414,7 @@ class _$_RecordPageState extends _RecordPageState {
             (identical(other.isTrial, isTrial) ||
                 const DeepCollectionEquality()
                     .equals(other.isTrial, isTrial)) &&
-            (identical(other.isPillSheetFinishedInThePast,
-                    isPillSheetFinishedInThePast) ||
+            (identical(other.isPillSheetFinishedInThePast, isPillSheetFinishedInThePast) ||
                 const DeepCollectionEquality().equals(
                     other.isPillSheetFinishedInThePast,
                     isPillSheetFinishedInThePast)) &&
@@ -375,9 +427,18 @@ class _$_RecordPageState extends _RecordPageState {
             (identical(other.beginTrialDate, beginTrialDate) ||
                 const DeepCollectionEquality()
                     .equals(other.beginTrialDate, beginTrialDate)) &&
-            (identical(other.exception, exception) ||
+            (identical(other.trialDeadlineDate, trialDeadlineDate) ||
                 const DeepCollectionEquality()
-                    .equals(other.exception, exception)));
+                    .equals(other.trialDeadlineDate, trialDeadlineDate)) &&
+            (identical(other.recommendedSignupNotificationIsAlreadyShow, recommendedSignupNotificationIsAlreadyShow) ||
+                const DeepCollectionEquality().equals(
+                    other.recommendedSignupNotificationIsAlreadyShow,
+                    recommendedSignupNotificationIsAlreadyShow)) &&
+            (identical(other.premiumTrialGuideNotificationIsClosed, premiumTrialGuideNotificationIsClosed) ||
+                const DeepCollectionEquality().equals(
+                    other.premiumTrialGuideNotificationIsClosed,
+                    premiumTrialGuideNotificationIsClosed)) &&
+            (identical(other.exception, exception) || const DeepCollectionEquality().equals(other.exception, exception)));
   }
 
   @override
@@ -393,6 +454,11 @@ class _$_RecordPageState extends _RecordPageState {
       const DeepCollectionEquality().hash(isAlreadyShowTiral) ^
       const DeepCollectionEquality().hash(shouldShowMigrateInfo) ^
       const DeepCollectionEquality().hash(beginTrialDate) ^
+      const DeepCollectionEquality().hash(trialDeadlineDate) ^
+      const DeepCollectionEquality()
+          .hash(recommendedSignupNotificationIsAlreadyShow) ^
+      const DeepCollectionEquality()
+          .hash(premiumTrialGuideNotificationIsClosed) ^
       const DeepCollectionEquality().hash(exception);
 
   @JsonKey(ignore: true)
@@ -412,8 +478,10 @@ abstract class _RecordPageState extends RecordPageState {
       bool isPillSheetFinishedInThePast,
       bool isAlreadyShowTiral,
       bool shouldShowMigrateInfo,
-      @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
-          DateTime? beginTrialDate,
+      DateTime? beginTrialDate,
+      DateTime? trialDeadlineDate,
+      bool recommendedSignupNotificationIsAlreadyShow,
+      bool premiumTrialGuideNotificationIsClosed,
       Object? exception}) = _$_RecordPageState;
   _RecordPageState._() : super._();
 
@@ -436,10 +504,15 @@ abstract class _RecordPageState extends RecordPageState {
   @override
   bool get shouldShowMigrateInfo => throw _privateConstructorUsedError;
   @override
-  @JsonKey(
-      fromJson: TimestampConverter.timestampToDateTime,
-      toJson: TimestampConverter.dateTimeToTimestamp)
   DateTime? get beginTrialDate => throw _privateConstructorUsedError;
+  @override
+  DateTime? get trialDeadlineDate => throw _privateConstructorUsedError;
+  @override
+  bool get recommendedSignupNotificationIsAlreadyShow =>
+      throw _privateConstructorUsedError;
+  @override
+  bool get premiumTrialGuideNotificationIsClosed =>
+      throw _privateConstructorUsedError;
   @override
   Object? get exception => throw _privateConstructorUsedError;
   @override
