@@ -290,6 +290,54 @@ void main() {
           findsOneWidget,
         );
       });
+
+      testWidgets('#RestDurationNotificationBar', (WidgetTester tester) async {
+        final mockTodayRepository = MockTodayService();
+        final today = DateTime(2021, 04, 29);
+
+        when(mockTodayRepository.today()).thenReturn(today);
+        todayRepository = mockTodayRepository;
+
+        var pillSheet = PillSheet.create(PillSheetType.pillsheet_21);
+        pillSheet = pillSheet.copyWith(
+          lastTakenDate: today,
+          beginingDate: today.subtract(
+// NOTE: Into rest duration and notification duration
+            Duration(days: 25),
+          ),
+        );
+        var state = NotificationBarState(
+          pillSheet: pillSheet,
+          totalCountOfActionForTakenPill:
+              totalCountOfActionForTakenPillForLongTimeUser,
+          isPremium: true,
+          isTrial: false,
+          isLinkedLoginProvider: true,
+          premiumTrialGuideNotificationIsClosed: false,
+          recommendedSignupNotificationIsAlreadyShow: false,
+          trialDeadlineDate: null,
+        );
+
+        final recordPageState = RecordPageState(entity: pillSheet);
+        await tester.pumpWidget(
+          ProviderScope(
+            overrides: [
+              notificationBarStateProvider
+                  .overrideWithProvider((ref, param) => state),
+            ],
+            child: MaterialApp(
+              home: Material(child: NotificationBar(recordPageState)),
+            ),
+          ),
+        );
+        await tester.pump();
+
+        expect(
+          find.byWidgetPredicate(
+              (widget) => widget is RestDurationNotificationBar),
+          findsOneWidget,
+        );
+      });
     });
   });
 }
