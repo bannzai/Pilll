@@ -74,7 +74,7 @@ void main() {
                   .overrideWithProvider((ref, param) => state),
             ],
             child: MaterialApp(
-              home: NotificationBar(recordPageState),
+              home: Material(child: NotificationBar(recordPageState)),
             ),
           ),
         );
