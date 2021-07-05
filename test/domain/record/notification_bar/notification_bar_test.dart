@@ -37,204 +37,207 @@ void main() {
         new TestViewConfiguration(size: const Size(375.0, 667.0));
   });
   group('notification bar appearance content type', () {
-    testWidgets('#RestDurationNotificationBar', (WidgetTester tester) async {
-      final mockTodayRepository = MockTodayService();
-      final today = DateTime(2021, 04, 29);
+    group('for is not premium user', () {
+      testWidgets('#RestDurationNotificationBar', (WidgetTester tester) async {
+        final mockTodayRepository = MockTodayService();
+        final today = DateTime(2021, 04, 29);
 
-      when(mockTodayRepository.today()).thenReturn(today);
-      todayRepository = mockTodayRepository;
+        when(mockTodayRepository.today()).thenReturn(today);
+        todayRepository = mockTodayRepository;
 
-      var pillSheet = PillSheet.create(PillSheetType.pillsheet_21);
-      pillSheet = pillSheet.copyWith(
-        lastTakenDate: today,
-        beginingDate: today.subtract(
+        var pillSheet = PillSheet.create(PillSheetType.pillsheet_21);
+        pillSheet = pillSheet.copyWith(
+          lastTakenDate: today,
+          beginingDate: today.subtract(
 // NOTE: Into rest duration and notification duration
-          Duration(days: 25),
-        ),
-      );
-      var state = NotificationBarState(
-        pillSheet: pillSheet,
-        totalCountOfActionForTakenPill:
-            totalCountOfActionForTakenPillForLongTimeUser,
-        isPremium: false,
-        isTrial: false,
-        isLinkedLoginProvider: false,
-        premiumTrialGuideNotificationIsClosed: false,
-        recommendedSignupNotificationIsAlreadyShow: false,
-        trialDeadlineDate: null,
-      );
-
-      final recordPageState = RecordPageState(entity: pillSheet);
-      await tester.pumpWidget(
-        ProviderScope(
-          overrides: [
-            notificationBarStateProvider
-                .overrideWithProvider((ref, param) => state),
-          ],
-          child: MaterialApp(
-            home: NotificationBar(recordPageState),
+            Duration(days: 25),
           ),
-        ),
-      );
-      await tester.pump();
+        );
+        var state = NotificationBarState(
+          pillSheet: pillSheet,
+          totalCountOfActionForTakenPill:
+              totalCountOfActionForTakenPillForLongTimeUser,
+          isPremium: false,
+          isTrial: false,
+          isLinkedLoginProvider: false,
+          premiumTrialGuideNotificationIsClosed: false,
+          recommendedSignupNotificationIsAlreadyShow: false,
+          trialDeadlineDate: null,
+        );
 
-      expect(
-        find.byWidgetPredicate(
-            (widget) => widget is RestDurationNotificationBar),
-        findsOneWidget,
-      );
-    });
+        final recordPageState = RecordPageState(entity: pillSheet);
+        await tester.pumpWidget(
+          ProviderScope(
+            overrides: [
+              notificationBarStateProvider
+                  .overrideWithProvider((ref, param) => state),
+            ],
+            child: MaterialApp(
+              home: NotificationBar(recordPageState),
+            ),
+          ),
+        );
+        await tester.pump();
 
-    testWidgets('#RecommendSignupNotificationBar', (WidgetTester tester) async {
-      final mockTodayRepository = MockTodayService();
-      final today = DateTime(2021, 04, 29);
+        expect(
+          find.byWidgetPredicate(
+              (widget) => widget is RestDurationNotificationBar),
+          findsOneWidget,
+        );
+      });
 
-      when(mockTodayRepository.today()).thenReturn(today);
-      todayRepository = mockTodayRepository;
+      testWidgets('#RecommendSignupNotificationBar',
+          (WidgetTester tester) async {
+        final mockTodayRepository = MockTodayService();
+        final today = DateTime(2021, 04, 29);
 
-      var pillSheet = PillSheet.create(PillSheetType.pillsheet_21);
-      pillSheet = pillSheet.copyWith(
-        lastTakenDate: today,
-        beginingDate: today.subtract(
+        when(mockTodayRepository.today()).thenReturn(today);
+        todayRepository = mockTodayRepository;
+
+        var pillSheet = PillSheet.create(PillSheetType.pillsheet_21);
+        pillSheet = pillSheet.copyWith(
+          lastTakenDate: today,
+          beginingDate: today.subtract(
 // NOTE: Not into rest duration and notification duration
-          Duration(days: 10),
-        ),
-      );
-      var state = NotificationBarState(
-        pillSheet: pillSheet,
-        totalCountOfActionForTakenPill:
-            totalCountOfActionForTakenPillForLongTimeUser,
-        isPremium: false,
-        isTrial: false,
-        isLinkedLoginProvider: false,
-        premiumTrialGuideNotificationIsClosed: false,
-        recommendedSignupNotificationIsAlreadyShow: false,
-        trialDeadlineDate: null,
-      );
-
-      final recordPageState = RecordPageState(entity: pillSheet);
-      await tester.pumpWidget(
-        ProviderScope(
-          overrides: [
-            notificationBarStoreProvider.overrideWithProvider(
-                (ref, param) => MockNotificationBarStateStore()),
-            notificationBarStateProvider
-                .overrideWithProvider((ref, param) => state),
-          ],
-          child: MaterialApp(
-            home: Material(child: NotificationBar(recordPageState)),
+            Duration(days: 10),
           ),
-        ),
-      );
-      await tester.pumpAndSettle(Duration(milliseconds: 400));
+        );
+        var state = NotificationBarState(
+          pillSheet: pillSheet,
+          totalCountOfActionForTakenPill:
+              totalCountOfActionForTakenPillForLongTimeUser,
+          isPremium: false,
+          isTrial: false,
+          isLinkedLoginProvider: false,
+          premiumTrialGuideNotificationIsClosed: false,
+          recommendedSignupNotificationIsAlreadyShow: false,
+          trialDeadlineDate: null,
+        );
 
-      expect(
-        find.byWidgetPredicate(
-            (widget) => widget is RecommendSignupNotificationBar),
-        findsOneWidget,
-      );
-    });
-    testWidgets('#PremiumTrialGuideNotificationBar',
-        (WidgetTester tester) async {
-      final mockTodayRepository = MockTodayService();
-      final today = DateTime(2021, 04, 29);
+        final recordPageState = RecordPageState(entity: pillSheet);
+        await tester.pumpWidget(
+          ProviderScope(
+            overrides: [
+              notificationBarStoreProvider.overrideWithProvider(
+                  (ref, param) => MockNotificationBarStateStore()),
+              notificationBarStateProvider
+                  .overrideWithProvider((ref, param) => state),
+            ],
+            child: MaterialApp(
+              home: Material(child: NotificationBar(recordPageState)),
+            ),
+          ),
+        );
+        await tester.pumpAndSettle(Duration(milliseconds: 400));
 
-      when(mockTodayRepository.today()).thenReturn(today);
-      todayRepository = mockTodayRepository;
+        expect(
+          find.byWidgetPredicate(
+              (widget) => widget is RecommendSignupNotificationBar),
+          findsOneWidget,
+        );
+      });
+      testWidgets('#PremiumTrialGuideNotificationBar',
+          (WidgetTester tester) async {
+        final mockTodayRepository = MockTodayService();
+        final today = DateTime(2021, 04, 29);
 
-      var pillSheet = PillSheet.create(PillSheetType.pillsheet_21);
-      pillSheet = pillSheet.copyWith(
-        lastTakenDate: today,
-        beginingDate: today.subtract(
+        when(mockTodayRepository.today()).thenReturn(today);
+        todayRepository = mockTodayRepository;
+
+        var pillSheet = PillSheet.create(PillSheetType.pillsheet_21);
+        pillSheet = pillSheet.copyWith(
+          lastTakenDate: today,
+          beginingDate: today.subtract(
 // NOTE: Not into rest duration and notification duration
-          Duration(days: 10),
-        ),
-      );
-      var state = NotificationBarState(
-        pillSheet: pillSheet,
-        totalCountOfActionForTakenPill:
-            totalCountOfActionForTakenPillForLongTimeUser,
-        isPremium: false,
-        isTrial: false,
-        isLinkedLoginProvider: true,
-        premiumTrialGuideNotificationIsClosed: false,
-        recommendedSignupNotificationIsAlreadyShow: false,
-        trialDeadlineDate: null,
-      );
-
-      final recordPageState = RecordPageState(entity: pillSheet);
-      await tester.pumpWidget(
-        ProviderScope(
-          overrides: [
-            notificationBarStateProvider
-                .overrideWithProvider((ref, param) => state),
-            notificationBarStoreProvider.overrideWithProvider(
-                (ref, param) => MockNotificationBarStateStore()),
-          ],
-          child: MaterialApp(
-            home: Material(child: NotificationBar(recordPageState)),
+            Duration(days: 10),
           ),
-        ),
-      );
-      await tester.pump();
+        );
+        var state = NotificationBarState(
+          pillSheet: pillSheet,
+          totalCountOfActionForTakenPill:
+              totalCountOfActionForTakenPillForLongTimeUser,
+          isPremium: false,
+          isTrial: false,
+          isLinkedLoginProvider: true,
+          premiumTrialGuideNotificationIsClosed: false,
+          recommendedSignupNotificationIsAlreadyShow: false,
+          trialDeadlineDate: null,
+        );
 
-      expect(
-        find.byWidgetPredicate(
-            (widget) => widget is PremiumTrialGuideNotificationBar),
-        findsOneWidget,
-      );
-    });
-    testWidgets('#PremiumTrialLimitNotificationBar',
-        (WidgetTester tester) async {
-      final mockTodayRepository = MockTodayService();
-      final today = DateTime(2021, 04, 29);
-      final now = today;
+        final recordPageState = RecordPageState(entity: pillSheet);
+        await tester.pumpWidget(
+          ProviderScope(
+            overrides: [
+              notificationBarStateProvider
+                  .overrideWithProvider((ref, param) => state),
+              notificationBarStoreProvider.overrideWithProvider(
+                  (ref, param) => MockNotificationBarStateStore()),
+            ],
+            child: MaterialApp(
+              home: Material(child: NotificationBar(recordPageState)),
+            ),
+          ),
+        );
+        await tester.pump();
 
-      when(mockTodayRepository.today()).thenReturn(today);
-      when(mockTodayRepository.now()).thenReturn(now);
-      todayRepository = mockTodayRepository;
+        expect(
+          find.byWidgetPredicate(
+              (widget) => widget is PremiumTrialGuideNotificationBar),
+          findsOneWidget,
+        );
+      });
+      testWidgets('#PremiumTrialLimitNotificationBar',
+          (WidgetTester tester) async {
+        final mockTodayRepository = MockTodayService();
+        final today = DateTime(2021, 04, 29);
+        final now = today;
 
-      var pillSheet = PillSheet.create(PillSheetType.pillsheet_21);
-      pillSheet = pillSheet.copyWith(
-        lastTakenDate: today,
-        beginingDate: today.subtract(
+        when(mockTodayRepository.today()).thenReturn(today);
+        when(mockTodayRepository.now()).thenReturn(now);
+        todayRepository = mockTodayRepository;
+
+        var pillSheet = PillSheet.create(PillSheetType.pillsheet_21);
+        pillSheet = pillSheet.copyWith(
+          lastTakenDate: today,
+          beginingDate: today.subtract(
 // NOTE: Not into rest duration and notification duration
-          Duration(days: 10),
-        ),
-      );
-      var state = NotificationBarState(
-        pillSheet: pillSheet,
-        totalCountOfActionForTakenPill:
-            totalCountOfActionForTakenPillForLongTimeUser,
-        isPremium: false,
-        isTrial: true,
-        isLinkedLoginProvider: true,
-        premiumTrialGuideNotificationIsClosed: false,
-        recommendedSignupNotificationIsAlreadyShow: false,
-        trialDeadlineDate: today.add(Duration(days: 1)),
-      );
-
-      final recordPageState = RecordPageState(entity: pillSheet);
-      await tester.pumpWidget(
-        ProviderScope(
-          overrides: [
-            notificationBarStateProvider
-                .overrideWithProvider((ref, param) => state),
-            notificationBarStoreProvider.overrideWithProvider(
-                (ref, param) => MockNotificationBarStateStore()),
-          ],
-          child: MaterialApp(
-            home: Material(child: NotificationBar(recordPageState)),
+            Duration(days: 10),
           ),
-        ),
-      );
-      await tester.pump();
+        );
+        var state = NotificationBarState(
+          pillSheet: pillSheet,
+          totalCountOfActionForTakenPill:
+              totalCountOfActionForTakenPillForLongTimeUser,
+          isPremium: false,
+          isTrial: true,
+          isLinkedLoginProvider: true,
+          premiumTrialGuideNotificationIsClosed: false,
+          recommendedSignupNotificationIsAlreadyShow: false,
+          trialDeadlineDate: today.add(Duration(days: 1)),
+        );
 
-      expect(
-        find.byWidgetPredicate(
-            (widget) => widget is PremiumTrialLimitNotificationBar),
-        findsOneWidget,
-      );
+        final recordPageState = RecordPageState(entity: pillSheet);
+        await tester.pumpWidget(
+          ProviderScope(
+            overrides: [
+              notificationBarStateProvider
+                  .overrideWithProvider((ref, param) => state),
+              notificationBarStoreProvider.overrideWithProvider(
+                  (ref, param) => MockNotificationBarStateStore()),
+            ],
+            child: MaterialApp(
+              home: Material(child: NotificationBar(recordPageState)),
+            ),
+          ),
+        );
+        await tester.pump();
+
+        expect(
+          find.byWidgetPredicate(
+              (widget) => widget is PremiumTrialLimitNotificationBar),
+          findsOneWidget,
+        );
+      });
     });
   });
 }
