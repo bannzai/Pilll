@@ -17,7 +17,6 @@ class SettingSectionTitle extends StatelessWidget {
       children: [
         _section(),
         ...children,
-        SizedBox(height: 16),
       ],
     );
   }
