@@ -128,34 +128,6 @@ class SettingPage extends HookWidget {
     );
   }
 
-  Widget _sectionTitle(SettingSection section) {
-    late String text;
-    switch (section) {
-      case SettingSection.pill:
-        text = "ピルシート";
-        break;
-      case SettingSection.menstruation:
-        text = "生理";
-        break;
-      case SettingSection.notification:
-        text = "通知";
-        break;
-      case SettingSection.account:
-        text = "アカウント";
-        break;
-      case SettingSection.other:
-        text = "その他";
-        break;
-    }
-    return Container(
-      padding: EdgeInsets.only(top: 16, left: 15, right: 16),
-      child: Text(
-        text,
-        style: FontType.assisting.merge(TextColorStyle.primary),
-      ),
-    );
-  }
-
   List<SettingListRowModel> _rowModels(
       BuildContext context, SettingSection section) {
     final settingStore = useProvider(settingStoreProvider);
