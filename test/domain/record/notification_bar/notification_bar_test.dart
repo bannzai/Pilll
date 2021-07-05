@@ -2,6 +2,7 @@ import 'package:pilll/analytics.dart';
 import 'package:pilll/domain/record/components/notification_bar/notification_bar.dart';
 import 'package:pilll/domain/record/components/notification_bar/notification_bar_state.dart';
 import 'package:pilll/domain/record/components/notification_bar/notification_bar_store.dart';
+import 'package:pilll/domain/record/components/notification_bar/recommend_signup.dart';
 import 'package:pilll/domain/record/components/notification_bar/rest_duration.dart';
 import 'package:pilll/domain/record/record_page_state.dart';
 import 'package:pilll/entity/pill_sheet.dart';
@@ -19,6 +20,8 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 import '../../../helper/mock.mocks.dart';
 
+class FakeState extends Fake implements NotificationBarState {}
+
 void main() {
   final totalCountOfActionForTakenPillForLongTimeUser = 14;
   setUp(() {
@@ -32,8 +35,7 @@ void main() {
         new TestViewConfiguration(size: const Size(375.0, 667.0));
   });
   group('notification bar appearance content type', () {
-    testWidgets('user is not premium and pill sheet into rest duration',
-        (WidgetTester tester) async {
+    testWidgets('#RestDurationNotificationBar', (WidgetTester tester) async {
       final mockTodayRepository = MockTodayService();
       final today = DateTime(2021, 04, 29);
 
@@ -81,8 +83,7 @@ void main() {
       );
     });
 
-    testWidgets('user is not premium and pill sheet into rest duration',
-        (WidgetTester tester) async {
+    testWidgets('#RecommendSignupNotificationBar', (WidgetTester tester) async {
       final mockTodayRepository = MockTodayService();
       final today = DateTime(2021, 04, 29);
 
@@ -94,7 +95,7 @@ void main() {
         lastTakenDate: today,
         beginingDate: today.subtract(
 // NOTE: Into rest duration and notification duration
-          Duration(days: 25),
+          Duration(days: 10),
         ),
       );
       var state = NotificationBarState(
@@ -108,29 +109,26 @@ void main() {
         recommendedSignupNotificationIsAlreadyShow: false,
         trialDeadlineDate: null,
       );
-      state = state.copyWith(
-        isPremium: false,
-        isTrial: false,
-        isLinkedLoginProvider: false,
-      );
 
       final recordPageState = RecordPageState(entity: pillSheet);
       await tester.pumpWidget(
         ProviderScope(
           overrides: [
+            notificationBarStoreProvider.overrideWithProvider(
+                (ref, param) => MockNotificationBarStateStore()),
             notificationBarStateProvider
                 .overrideWithProvider((ref, param) => state),
           ],
           child: MaterialApp(
-            home: NotificationBar(recordPageState),
+            home: Material(child: NotificationBar(recordPageState)),
           ),
         ),
       );
-      await tester.pump();
+      await tester.pumpAndSettle(Duration(milliseconds: 400));
 
       expect(
         find.byWidgetPredicate(
-            (widget) => widget is RestDurationNotificationBar),
+            (widget) => widget is RecommendSignupNotificationBar),
         findsOneWidget,
       );
     });

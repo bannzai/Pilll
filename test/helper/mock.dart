@@ -1,4 +1,5 @@
 import 'package:pilll/analytics.dart';
+import 'package:pilll/domain/record/components/notification_bar/notification_bar_store.dart';
 import 'package:pilll/domain/record/record_page_store.dart';
 import 'package:pilll/service/auth.dart';
 import 'package:pilll/service/diary.dart';
@@ -19,5 +20,6 @@ import 'package:mockito/annotations.dart';
   AuthService,
   UserService,
   RecordPageStore,
+  NotificationBarStateStore,
 ])
 abstract class KeepGeneratedMocks {}
