@@ -3,6 +3,7 @@ import 'package:pilll/domain/record/components/notification_bar/notification_bar
 import 'package:pilll/domain/record/components/notification_bar/notification_bar_state.dart';
 import 'package:pilll/domain/record/components/notification_bar/notification_bar_store.dart';
 import 'package:pilll/domain/record/components/notification_bar/premium_trial_guide.dart';
+import 'package:pilll/domain/record/components/notification_bar/premium_trial_limit.dart';
 import 'package:pilll/domain/record/components/notification_bar/recommend_signup.dart';
 import 'package:pilll/domain/record/components/notification_bar/rest_duration.dart';
 import 'package:pilll/domain/record/record_page_state.dart';
@@ -180,6 +181,58 @@ void main() {
       expect(
         find.byWidgetPredicate(
             (widget) => widget is PremiumTrialGuideNotificationBar),
+        findsOneWidget,
+      );
+    });
+    testWidgets('#PremiumTrialLimitNotificationBar',
+        (WidgetTester tester) async {
+      final mockTodayRepository = MockTodayService();
+      final today = DateTime(2021, 04, 29);
+      final now = today;
+
+      when(mockTodayRepository.today()).thenReturn(today);
+      when(mockTodayRepository.now()).thenReturn(now);
+      todayRepository = mockTodayRepository;
+
+      var pillSheet = PillSheet.create(PillSheetType.pillsheet_21);
+      pillSheet = pillSheet.copyWith(
+        lastTakenDate: today,
+        beginingDate: today.subtract(
+// NOTE: Not into rest duration and notification duration
+          Duration(days: 10),
+        ),
+      );
+      var state = NotificationBarState(
+        pillSheet: pillSheet,
+        totalCountOfActionForTakenPill:
+            totalCountOfActionForTakenPillForLongTimeUser,
+        isPremium: false,
+        isTrial: true,
+        isLinkedLoginProvider: true,
+        premiumTrialGuideNotificationIsClosed: false,
+        recommendedSignupNotificationIsAlreadyShow: false,
+        trialDeadlineDate: today.add(Duration(days: 1)),
+      );
+
+      final recordPageState = RecordPageState(entity: pillSheet);
+      await tester.pumpWidget(
+        ProviderScope(
+          overrides: [
+            notificationBarStateProvider
+                .overrideWithProvider((ref, param) => state),
+            notificationBarStoreProvider.overrideWithProvider(
+                (ref, param) => MockNotificationBarStateStore()),
+          ],
+          child: MaterialApp(
+            home: Material(child: NotificationBar(recordPageState)),
+          ),
+        ),
+      );
+      await tester.pump();
+
+      expect(
+        find.byWidgetPredicate(
+            (widget) => widget is PremiumTrialLimitNotificationBar),
         findsOneWidget,
       );
     });
