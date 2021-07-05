@@ -3,6 +3,7 @@ import 'package:pilll/components/page/discard_dialog.dart';
 import 'package:pilll/components/organisms/pill/pill_sheet_type_select_page.dart';
 import 'package:pilll/components/organisms/setting/setting_menstruation_page.dart';
 import 'package:pilll/domain/premium_introduction/premium_introduction_page.dart';
+import 'package:pilll/domain/settings/components/setting_section_title.dart';
 import 'package:pilll/domain/settings/information_for_before_major_update.dart';
 import 'package:pilll/domain/settings/setting_account_cooperation_list_page.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
@@ -105,6 +106,24 @@ class SettingPage extends HookWidget {
           itemCount: SettingPage.itemCount,
           addRepaintBoundaries: false,
         ),
+      ),
+    );
+  }
+
+  Widget _body(BuildContext context) {
+    return Container(
+      child: ListView.builder(
+        itemBuilder: (BuildContext context, int index) {
+          return HookBuilder(
+            builder: (BuildContext context) {
+              return Column(
+                children: [],
+              );
+            },
+          );
+        },
+        itemCount: SettingPage.itemCount,
+        addRepaintBoundaries: false,
       ),
     );
   }
@@ -487,7 +506,20 @@ class SettingPage extends HookWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        _sectionTitle(section),
+        SettingSectionTitle(text: () {
+          switch (section) {
+            case SettingSection.pill:
+              return "ピルシート";
+            case SettingSection.menstruation:
+              return "生理";
+            case SettingSection.notification:
+              return "通知";
+            case SettingSection.account:
+              return "アカウント";
+            case SettingSection.other:
+              return "その他";
+          }
+        }()),
         ...[
           ..._rowModels(context, section).map((e) {
             if (e is SettingListExplainRowModel) {
