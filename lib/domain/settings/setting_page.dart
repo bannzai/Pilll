@@ -115,13 +115,38 @@ class SettingPage extends HookWidget {
         itemBuilder: (BuildContext context, int index) {
           return HookBuilder(
             builder: (BuildContext context) {
-              return Column(
-                children: [],
-              );
+              final section = SettingSection.values[index];
+              switch (section) {
+                case SettingSection.account:
+                  return SettingSectionTitle(
+                    text: "アカウント",
+                    children: [],
+                  );
+                case SettingSection.pill:
+                  return SettingSectionTitle(
+                    text: "ピルシート",
+                    children: [],
+                  );
+                case SettingSection.notification:
+                  return SettingSectionTitle(
+                    text: "通知",
+                    children: [],
+                  );
+                case SettingSection.menstruation:
+                  return SettingSectionTitle(
+                    text: "生理",
+                    children: [],
+                  );
+                case SettingSection.other:
+                  return SettingSectionTitle(
+                    text: "その他",
+                    children: [],
+                  );
+              }
             },
           );
         },
-        itemCount: SettingPage.itemCount,
+        itemCount: SettingSection.values.length,
         addRepaintBoundaries: false,
       ),
     );

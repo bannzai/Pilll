@@ -9,6 +9,23 @@ import 'package:pilll/components/atoms/text_color.dart';
 enum SettingSection { account, pill, notification, menstruation, other }
 enum SettingRowType { title, date }
 
+extension SettingSectionFunction on SettingSection {
+  String get title {
+    switch (this) {
+      case SettingSection.pill:
+        return "ピルシート";
+      case SettingSection.menstruation:
+        return "生理";
+      case SettingSection.notification:
+        return "通知";
+      case SettingSection.account:
+        return "アカウント";
+      case SettingSection.other:
+        return "その他";
+    }
+  }
+}
+
 abstract class SettingListRowModel {
   Widget widget();
 }
