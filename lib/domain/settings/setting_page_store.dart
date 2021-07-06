@@ -1,11 +1,7 @@
 import 'dart:async';
 
-import 'package:pilll/database/database.dart';
 import 'package:pilll/domain/record/record_page_store.dart';
-import 'package:pilll/entity/pill_sheet.dart';
-import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/entity/setting.dart';
-import 'package:pilll/entity/user.dart';
 import 'package:pilll/service/pill_sheet.dart';
 import 'package:pilll/service/setting.dart';
 import 'package:pilll/domain/settings/setting_page_state.dart';
