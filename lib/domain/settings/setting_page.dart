@@ -3,6 +3,7 @@ import 'package:pilll/components/page/discard_dialog.dart';
 import 'package:pilll/components/organisms/pill/pill_sheet_type_select_page.dart';
 import 'package:pilll/components/organisms/setting/setting_menstruation_page.dart';
 import 'package:pilll/domain/premium_introduction/premium_introduction_page.dart';
+import 'package:pilll/domain/settings/components/rows/list_explain.dart';
 import 'package:pilll/domain/settings/components/setting_section_title.dart';
 import 'package:pilll/domain/settings/information_for_before_major_update.dart';
 import 'package:pilll/domain/settings/setting_account_cooperation_list_page.dart';
@@ -120,7 +121,10 @@ class SettingPage extends HookWidget {
                 case SettingSection.account:
                   return SettingSectionTitle(
                     text: "アカウント",
-                    children: [],
+                    children: [
+                      ListExplainRow(
+                          text: "機種変更やスマホ紛失時など、データの引き継ぎ・復元には、アカウント登録が必要です。"),
+                    ],
                   );
                 case SettingSection.pill:
                   return SettingSectionTitle(
@@ -482,8 +486,6 @@ class SettingPage extends HookWidget {
         ];
       case SettingSection.account:
         return [
-          SettingListExplainRowModel(
-              "機種変更やスマホ紛失時など、データの引き継ぎ・復元には、アカウント登録が必要です。"),
           SettingListAccountLinkRowModel(onTap: () {
             analytics.logEvent(name: "did_select_setting_account_cooperation");
             Navigator.of(context)
