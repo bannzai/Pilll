@@ -80,16 +80,6 @@ class SettingStateStore extends StateNotifier<SettingState> {
     super.dispose();
   }
 
-  Future<void> modifyType(PillSheetType pillSheetType) {
-    final entity = state.entity;
-    if (entity == null) {
-      throw FormatException("setting entity not found");
-    }
-    return _service
-        .update(entity.copyWith(pillSheetTypeRawPath: pillSheetType.rawPath))
-        .then((entity) => state = state.copyWith(entity: entity));
-  }
-
   void _modifyReminderTimes(List<ReminderTime> reminderTimes) {
     final entity = state.entity;
     if (entity == null) {
@@ -208,53 +198,5 @@ class SettingStateStore extends StateNotifier<SettingState> {
     return _service
         .update(updated)
         .then((value) => state = state.copyWith(entity: value));
-  }
-}
-
-final transactionModifierProvider = Provider((ref) =>
-    _TransactionModifier(ref.watch(databaseProvider), reader: ref.read));
-
-class _TransactionModifier {
-  final DatabaseConnection? _database;
-  final Reader reader;
-
-  _TransactionModifier(
-    this._database, {
-    required this.reader,
-  });
-
-  Future<void> modifyPillSheetType(PillSheetType type) {
-    final database = _database;
-    if (database == null) {
-      throw FormatException("_database is necessary");
-    }
-    final settingState = reader(settingStoreProvider.state);
-    final pillSheetEntity = settingState.latestPillSheet;
-    final settingEntity = settingState.entity;
-    if (pillSheetEntity == null) {
-      throw FormatException("pillSheetEntity is necessary");
-    }
-    if (settingEntity == null) {
-      throw FormatException("settingEntity is necessary");
-    }
-    return database.transaction((transaction) {
-      return Future.wait(
-        [
-          transaction
-              .get(database.pillSheetReference(pillSheetEntity.documentID!))
-              .then((pillSheetDocument) {
-            transaction.update(pillSheetDocument.reference,
-                {PillSheetFirestoreKey.typeInfo: type.typeInfo.toJson()});
-          }),
-          transaction.get(database.userReference()).then((userDocument) {
-            transaction.update(userDocument.reference, {
-              UserFirestoreFieldKeys.settings: settingEntity
-                  .copyWith(pillSheetTypeRawPath: type.rawPath)
-                  .toJson(),
-            });
-          })
-        ],
-      );
-    });
   }
 }

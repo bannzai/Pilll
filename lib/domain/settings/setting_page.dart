@@ -5,6 +5,7 @@ import 'package:pilll/components/organisms/setting/setting_menstruation_page.dar
 import 'package:pilll/domain/premium_introduction/premium_introduction_page.dart';
 import 'package:pilll/domain/settings/components/rows/account_link.dart';
 import 'package:pilll/domain/settings/components/rows/list_explain.dart';
+import 'package:pilll/domain/settings/components/rows/pill_sheet_type.dart';
 import 'package:pilll/domain/settings/components/rows/premium_introduction.dart';
 import 'package:pilll/domain/settings/components/setting_section_title.dart';
 import 'package:pilll/domain/settings/information_for_before_major_update.dart';
@@ -113,6 +114,7 @@ class SettingPage extends HookWidget {
   }
 
   Widget _body(BuildContext context) {
+    final state = useProvider(settingStoreProvider.state);
     return Container(
       child: ListView.builder(
         itemBuilder: (BuildContext context, int index) {
@@ -133,7 +135,9 @@ class SettingPage extends HookWidget {
                 case SettingSection.pill:
                   return SettingSectionTitle(
                     text: "ピルシート",
-                    children: [],
+                    children: [
+                      PillSheetTypeRow(settingState: state),
+                    ],
                   );
                 case SettingSection.notification:
                   return SettingSectionTitle(
@@ -165,7 +169,6 @@ class SettingPage extends HookWidget {
     final settingStore = useProvider(settingStoreProvider);
     final settingState = useProvider(settingStoreProvider.state);
     final pillSheetEntity = settingState.latestPillSheet;
-    final transactionModifier = useProvider(transactionModifierProvider);
     final settingEntity = settingState.entity;
     final isShowNotifyInRestDuration = !settingState.latestPillSheetIsInvalid &&
         pillSheetEntity != null &&
@@ -176,58 +179,6 @@ class SettingPage extends HookWidget {
     switch (section) {
       case SettingSection.pill:
         return [
-          () {
-            return SettingListTitleAndContentRowModel(
-              title: "ピルシートタイプ",
-              content: settingState.entity?.pillSheetType.fullName ?? "",
-              onTap: () {
-                analytics.logEvent(
-                  name: "did_select_changing_pill_sheet_type",
-                );
-                Navigator.of(context).push(
-                  PillSheetTypeSelectPageRoute.route(
-                    title: "ピルシートタイプ",
-                    backButtonIsHidden: false,
-                    selected: (type) {
-                      if (!settingState.latestPillSheetIsInvalid &&
-                          pillSheetEntity != null) {
-                        final callProcess = () {
-                          transactionModifier.modifyPillSheetType(type);
-                          Navigator.pop(context);
-                        };
-                        if (pillSheetEntity.todayPillNumber > type.totalCount) {
-                          showDialog(
-                            context: context,
-                            builder: (_) {
-                              return DiscardDialog(
-                                  title: "現在のピルシートが削除されます",
-                                  message: '''
-選択したピルシート(${type.fullName})に変更する場合、現在のピルシートは削除されます。削除後、ピル画面から新しいピルシートを作成すると${type.fullName}で開始されます。
-現在のピルシートを削除してピルシートのタイプを変更しますか？
-                              ''',
-                                  doneButtonText: "変更する",
-                                  done: () {
-                                    callProcess();
-                                  });
-                            },
-                          );
-                        } else {
-                          callProcess();
-                        }
-                      } else {
-                        settingStore.modifyType(type);
-                        Navigator.pop(context);
-                      }
-                    },
-                    done: null,
-                    doneButtonText: "",
-                    selectedPillSheetType: settingEntity.pillSheetType,
-                    signinAccount: null,
-                  ),
-                );
-              },
-            );
-          }(),
           if (settingState.isPremium)
             SettingListTitleAndContentRowModel(
               title: "表示モード",
