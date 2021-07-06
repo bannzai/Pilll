@@ -5,6 +5,7 @@ import 'package:pilll/components/organisms/setting/setting_menstruation_page.dar
 import 'package:pilll/domain/premium_introduction/premium_introduction_page.dart';
 import 'package:pilll/domain/settings/components/rows/account_link.dart';
 import 'package:pilll/domain/settings/components/rows/list_explain.dart';
+import 'package:pilll/domain/settings/components/rows/premium_introduction.dart';
 import 'package:pilll/domain/settings/components/setting_section_title.dart';
 import 'package:pilll/domain/settings/information_for_before_major_update.dart';
 import 'package:pilll/domain/settings/setting_account_cooperation_list_page.dart';
@@ -126,6 +127,7 @@ class SettingPage extends HookWidget {
                       ListExplainRow(
                           text: "機種変更やスマホ紛失時など、データの引き継ぎ・復元には、アカウント登録が必要です。"),
                       AccountLinkRow(),
+                      PremiumIntroductionRow(),
                     ],
                   );
                 case SettingSection.pill:
@@ -487,13 +489,7 @@ class SettingPage extends HookWidget {
               }),
         ];
       case SettingSection.account:
-        return [
-          SettingListPremiumRowModel(() {
-            Navigator.of(context).push(
-              PremiumIntroductionPageRoutes.route(),
-            );
-          }),
-        ];
+        return [];
     }
   }
 
