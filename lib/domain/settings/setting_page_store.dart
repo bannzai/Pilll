@@ -76,6 +76,7 @@ class SettingStateStore extends StateNotifier<SettingState> {
   void dispose() {
     _canceller?.cancel();
     _pillSheetCanceller?.cancel();
+    _userSubscribeCanceller?.cancel();
     super.dispose();
   }
 
