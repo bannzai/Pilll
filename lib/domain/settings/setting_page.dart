@@ -137,7 +137,7 @@ class SettingPage extends HookWidget {
                     text: "ピルシート",
                     children: [
                       PillSheetTypeRow(settingState: state),
-                      PillSheetAppearanceModeRow(settingState: state),
+                      PillSheetAppearanceModeRow(setting: setting),
                       TodayPllNumberRow(setting: setting),
                     ],
                   );

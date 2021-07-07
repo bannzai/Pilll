@@ -4,26 +4,21 @@ import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/analytics.dart';
 import 'package:pilll/components/atoms/font.dart';
-import 'package:pilll/domain/settings/setting_page_state.dart';
 import 'package:pilll/domain/settings/setting_page_store.dart';
 import 'package:pilll/entity/setting.dart';
 import 'package:pilll/util/toolbar/picker_toolbar.dart';
 
 class PillSheetAppearanceModeRow extends HookWidget {
-  final SettingState settingState;
+  final Setting setting;
 
   const PillSheetAppearanceModeRow({
     Key? key,
-    required this.settingState,
+    required this.setting,
   }) : super(key: key);
 
   // TODO: add premium introduction logic
   @override
   Widget build(BuildContext context) {
-    final setting = settingState.entity;
-    if (setting == null) {
-      return Container();
-    }
     final store = useProvider(settingStoreProvider);
     return ListTile(
       title: Text("表示モード", style: FontType.listRow),
