@@ -3,6 +3,7 @@ import 'package:pilll/components/page/discard_dialog.dart';
 import 'package:pilll/components/organisms/setting/setting_menstruation_page.dart';
 import 'package:pilll/domain/settings/components/rows/account_link.dart';
 import 'package:pilll/domain/settings/components/rows/list_explain.dart';
+import 'package:pilll/domain/settings/components/rows/notification_in_rest_duration.dart';
 import 'package:pilll/domain/settings/components/rows/notification_time.dart';
 import 'package:pilll/domain/settings/components/rows/pill_sheet_appearance_mode.dart';
 import 'package:pilll/domain/settings/components/rows/pill_sheet_remove.dart';
@@ -150,6 +151,9 @@ class SettingPage extends HookWidget {
                     children: [
                       TakingPillNotification(setting: setting),
                       NotificationTimeRow(setting: setting),
+                      if (pillSheet != null && pillSheet.hasRestDuration)
+                        NotificationInRestDuration(
+                            setting: setting, pillSheet: pillSheet),
                     ],
                   );
                 case SettingSection.menstruation:
@@ -178,9 +182,6 @@ class SettingPage extends HookWidget {
     final settingState = useProvider(settingStoreProvider.state);
     final pillSheetEntity = settingState.latestPillSheet;
     final settingEntity = settingState.entity;
-    final isShowNotifyInRestDuration = !settingState.latestPillSheetIsInvalid &&
-        pillSheetEntity != null &&
-        !pillSheetEntity.pillSheetType.isNotExistsNotTakenDuration;
     if (settingEntity == null) {
       return [];
     }
@@ -190,34 +191,7 @@ class SettingPage extends HookWidget {
           ...[],
         ];
       case SettingSection.notification:
-        return [
-          if (isShowNotifyInRestDuration && pillSheetEntity != null)
-            SettingsListSwitchRowModel(
-              title: "${pillSheetEntity.pillSheetType.notTakenWord}期間の通知",
-              subtitle:
-                  "通知オフの場合は、${pillSheetEntity.pillSheetType.notTakenWord}期間の服用記録も自動で付けられます",
-              value: settingEntity.isOnNotifyInNotTakenDuration,
-              onTap: () {
-                analytics.logEvent(
-                  name: "toggle_notify_not_taken_duration",
-                );
-                ScaffoldMessenger.of(context).hideCurrentSnackBar();
-                settingStore
-                    .modifyIsOnNotifyInNotTakenDuration(
-                        !settingEntity.isOnNotifyInNotTakenDuration)
-                    .then((state) {
-                  ScaffoldMessenger.of(context).showSnackBar(
-                    SnackBar(
-                      duration: Duration(seconds: 2),
-                      content: Text(
-                        "${pillSheetEntity.pillSheetType.notTakenWord}期間の通知を${state.entity!.isOnNotifyInNotTakenDuration ? "ON" : "OFF"}にしました",
-                      ),
-                    ),
-                  );
-                });
-              },
-            ),
-        ];
+        return [];
       case SettingSection.menstruation:
         return [
           SettingListTitleRowModel(
