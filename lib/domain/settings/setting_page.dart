@@ -91,10 +91,11 @@ class SettingPage extends HookWidget {
                       _separator(),
                       NotificationTimeRow(setting: setting),
                       _separator(),
-                      if (pillSheet != null && pillSheet.hasRestDuration)
+                      if (pillSheet != null && pillSheet.hasRestDuration) ...[
                         NotificationInRestDuration(
                             setting: setting, pillSheet: pillSheet),
-                      _separator(),
+                        _separator(),
+                      ]
                     ],
                   );
                 case SettingSection.menstruation:
