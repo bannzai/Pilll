@@ -12,5 +12,6 @@ abstract class SettingState implements _$SettingState {
     PillSheet? latestPillSheet,
     @Default(false) bool userIsUpdatedFrom132,
     @Default(false) bool isPremium,
+    @Default(false) bool isTrial,
   }) = _SettingState;
 }
