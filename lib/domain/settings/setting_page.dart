@@ -6,11 +6,11 @@ import 'package:pilll/domain/settings/components/rows/list_explain.dart';
 import 'package:pilll/domain/settings/components/rows/pill_sheet_appearance_mode.dart';
 import 'package:pilll/domain/settings/components/rows/pill_sheet_type.dart';
 import 'package:pilll/domain/settings/components/rows/premium_introduction.dart';
+import 'package:pilll/domain/settings/components/rows/today_pill_number.dart';
 import 'package:pilll/domain/settings/components/setting_section_title.dart';
 import 'package:pilll/domain/settings/information_for_before_major_update.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/domain/settings/row_model.dart';
-import 'package:pilll/domain/settings/modifing_pill_number_page.dart';
 import 'package:pilll/domain/settings/reminder_times_page.dart';
 import 'package:pilll/error/error_alert.dart';
 import 'package:pilll/inquiry/inquiry.dart';
@@ -111,6 +111,10 @@ class SettingPage extends HookWidget {
 
   Widget _body(BuildContext context) {
     final state = useProvider(settingStoreProvider.state);
+    final setting = state.entity;
+    if (setting == null) {
+      return Container();
+    }
     return Container(
       child: ListView.builder(
         itemBuilder: (BuildContext context, int index) {
@@ -134,6 +138,7 @@ class SettingPage extends HookWidget {
                     children: [
                       PillSheetTypeRow(settingState: state),
                       PillSheetAppearanceModeRow(settingState: state),
+                      TodayPllNumberRow(setting: setting),
                     ],
                   );
                 case SettingSection.notification:
@@ -178,22 +183,6 @@ class SettingPage extends HookWidget {
         return [
           if (!settingState.latestPillSheetIsInvalid &&
               pillSheetEntity != null) ...[
-            SettingListTitleRowModel(
-                title: "今日飲むピル番号の変更",
-                onTap: () {
-                  analytics.logEvent(
-                    name: "did_select_changing_pill_number",
-                  );
-                  Navigator.of(context).push(
-                    ModifingPillNumberPageRoute.route(
-                      pillSheetType: pillSheetEntity.pillSheetType,
-                      markSelected: (number) {
-                        Navigator.pop(context);
-                        settingStore.modifyBeginingDate(number);
-                      },
-                    ),
-                  );
-                }),
             SettingListTitleRowModel(
                 title: "ピルシートの破棄",
                 onTap: () {
