@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/analytics.dart';
 import 'package:pilll/components/atoms/font.dart';
@@ -8,7 +9,7 @@ import 'package:pilll/domain/settings/components/rows/pill_sheet_type_store.dart
 import 'package:pilll/domain/settings/setting_page_state.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 
-class PillSheetTypeRow extends StatelessWidget {
+class PillSheetTypeRow extends HookWidget {
   final SettingState settingState;
 
   const PillSheetTypeRow({
