@@ -4,6 +4,7 @@ import 'package:pilll/components/organisms/setting/setting_menstruation_page.dar
 import 'package:pilll/domain/settings/components/rows/account_link.dart';
 import 'package:pilll/domain/settings/components/rows/list_explain.dart';
 import 'package:pilll/domain/settings/components/rows/pill_sheet_appearance_mode.dart';
+import 'package:pilll/domain/settings/components/rows/pill_sheet_remove.dart';
 import 'package:pilll/domain/settings/components/rows/pill_sheet_type.dart';
 import 'package:pilll/domain/settings/components/rows/premium_introduction.dart';
 import 'package:pilll/domain/settings/components/rows/today_pill_number.dart';
@@ -12,9 +13,7 @@ import 'package:pilll/domain/settings/information_for_before_major_update.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/domain/settings/row_model.dart';
 import 'package:pilll/domain/settings/reminder_times_page.dart';
-import 'package:pilll/error/error_alert.dart';
 import 'package:pilll/inquiry/inquiry.dart';
-import 'package:pilll/service/pill_sheet.dart';
 import 'package:pilll/domain/settings/setting_page_store.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/text_color.dart';
@@ -115,6 +114,7 @@ class SettingPage extends HookWidget {
     if (setting == null) {
       return Container();
     }
+    final pillSheet = state.latestPillSheet;
     return Container(
       child: ListView.builder(
         itemBuilder: (BuildContext context, int index) {
@@ -139,6 +139,8 @@ class SettingPage extends HookWidget {
                       PillSheetTypeRow(settingState: state),
                       PillSheetAppearanceModeRow(setting: setting),
                       TodayPllNumberRow(setting: setting),
+                      if (pillSheet != null && pillSheet.isInvalid)
+                        PillSheetRemoveRow(),
                     ],
                   );
                 case SettingSection.notification:
@@ -181,32 +183,7 @@ class SettingPage extends HookWidget {
     switch (section) {
       case SettingSection.pill:
         return [
-          if (!settingState.latestPillSheetIsInvalid &&
-              pillSheetEntity != null) ...[
-            SettingListTitleRowModel(
-                title: "ピルシートの破棄",
-                onTap: () {
-                  analytics.logEvent(
-                    name: "did_select_removing_pill_sheet",
-                  );
-                  showDialog(
-                    context: context,
-                    builder: (_) {
-                      return DiscardDialog(
-                          title: "ピルシートを破棄しますか？",
-                          message: "現在、服用記録をしているピルシートを削除します。",
-                          doneButtonText: "破棄する",
-                          done: () {
-                            settingStore.deletePillSheet().catchError((error) {
-                              showErrorAlert(context,
-                                  message:
-                                      "ピルシートがすでに削除されています。表示等に問題がある場合は設定タブから「お問い合わせ」ください");
-                            }, test: (error) => error is PillSheetIsNotExists);
-                          });
-                    },
-                  );
-                }),
-          ],
+          ...[],
         ];
       case SettingSection.notification:
         return [
