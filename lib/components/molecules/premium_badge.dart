@@ -8,7 +8,7 @@ class PremiumBadge extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.fromLTRB(8, 2, 8, 2),
+      padding: EdgeInsets.fromLTRB(8, 1, 8, 1),
       decoration: BoxDecoration(
         color: PilllColors.gold,
         borderRadius: BorderRadius.circular(41),
