@@ -11,6 +11,7 @@ import 'package:pilll/domain/settings/components/rows/pill_sheet_type.dart';
 import 'package:pilll/domain/settings/components/rows/premium_introduction.dart';
 import 'package:pilll/domain/settings/components/rows/taking_pill_notification.dart';
 import 'package:pilll/domain/settings/components/rows/today_pill_number.dart';
+import 'package:pilll/domain/settings/components/rows/update_from_132.dart';
 import 'package:pilll/domain/settings/components/setting_section_title.dart';
 import 'package:pilll/domain/settings/information_for_before_major_update.dart';
 import 'package:pilll/domain/settings/row_model.dart';
@@ -165,7 +166,9 @@ class SettingPage extends HookWidget {
                 case SettingSection.other:
                   return SettingSectionTitle(
                     text: "その他",
-                    children: [],
+                    children: [
+                      if (state.userIsUpdatedFrom132) UpdateFrom132Row()
+                    ],
                   );
               }
             },
@@ -197,24 +200,6 @@ class SettingPage extends HookWidget {
         return [];
       case SettingSection.other:
         return [
-          if (settingState.userIsUpdatedFrom132)
-            SettingListTitleRowModel(
-                title: "大型アップデート前の情報",
-                onTap: () {
-                  analytics
-                      .logEvent(name: "did_select_migrate_132", parameters: {});
-                  SharedPreferences.getInstance().then((storage) {
-                    final salvagedOldStartTakenDate =
-                        storage.getString(StringKey.salvagedOldStartTakenDate);
-                    final salvagedOldLastTakenDate =
-                        storage.getString(StringKey.salvagedOldLastTakenDate);
-                    Navigator.of(context)
-                        .push(InformationForBeforeMigrate132Route.route(
-                      salvagedOldStartTakenDate: salvagedOldStartTakenDate!,
-                      salvagedOldLastTakenDate: salvagedOldLastTakenDate!,
-                    ));
-                  });
-                }),
           SettingListTitleRowModel(
               title: "利用規約",
               onTap: () {
