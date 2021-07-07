@@ -1,6 +1,6 @@
 import 'package:pilll/analytics.dart';
 import 'package:pilll/components/page/discard_dialog.dart';
-import 'package:pilll/domain/settings/components/menstruation.dart';
+import 'package:pilll/domain/settings/components/rows/menstruation.dart';
 import 'package:pilll/domain/settings/components/rows/account_link.dart';
 import 'package:pilll/domain/settings/components/rows/list_explain.dart';
 import 'package:pilll/domain/settings/components/rows/notification_in_rest_duration.dart';
