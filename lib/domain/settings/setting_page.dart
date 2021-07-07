@@ -151,10 +151,9 @@ class SettingPage extends HookWidget {
                             inquiry();
                           }),
                       _separator(),
+                      if (Environment.isDevelopment) _debug(context),
                     ],
                   );
-                case SettingSection.debug:
-                  return _debug(context);
               }
             },
           );
