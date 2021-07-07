@@ -1,13 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:pilll/components/atoms/buttons.dart';
 import 'package:pilll/components/atoms/color.dart';
-import 'package:pilll/components/atoms/font.dart';
-import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/domain/premium_introduction/components/premium_introduction_footer.dart';
 import 'package:pilll/domain/premium_introduction/components/premium_introduction_header.dart';
 import 'package:pilll/domain/premium_introduction/components/premium_introduction_limited.dart';
 import 'package:pilll/domain/premium_introduction/components/purchase_buttons.dart';
-import 'package:pilll/util/platform/platform.dart';
 import 'package:purchases_flutter/purchases_flutter.dart';
 
 class PremiumIntroductionBody extends StatelessWidget {
