@@ -68,18 +68,6 @@ class PremiumIntroductionBody extends StatelessWidget {
                   ),
                 ],
                 SizedBox(height: 24),
-                Text(
-                  "$storeNameからいつでも簡単に解約出来ます",
-                  textAlign: TextAlign.center,
-                  style: TextColorStyle.black.merge(
-                    TextStyle(
-                      fontWeight: FontWeight.w400,
-                      fontFamily: FontFamily.japanese,
-                      fontSize: 14,
-                    ),
-                  ),
-                ),
-                SizedBox(height: 24),
                 SecondaryButton(
                     onPressed: () {
                       print("");
