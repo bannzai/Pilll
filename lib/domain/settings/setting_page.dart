@@ -75,7 +75,7 @@ class SettingPage extends HookWidget {
                       _separator(),
                       PillSheetAppearanceModeRow(setting: setting),
                       _separator(),
-                      if (pillSheet != null && pillSheet.isInvalid) ...[
+                      if (pillSheet != null && !pillSheet.isInvalid) ...[
                         TodayPllNumberRow(setting: setting),
                         _separator(),
                         PillSheetRemoveRow(),
