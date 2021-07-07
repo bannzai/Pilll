@@ -9,6 +9,7 @@ import 'package:pilll/domain/settings/components/rows/notification_time.dart';
 import 'package:pilll/domain/settings/components/rows/pill_sheet_appearance_mode.dart';
 import 'package:pilll/domain/settings/components/rows/pill_sheet_remove.dart';
 import 'package:pilll/domain/settings/components/rows/pill_sheet_type.dart';
+import 'package:pilll/domain/settings/components/rows/quick_record.dart';
 import 'package:pilll/domain/settings/components/rows/taking_pill_notification.dart';
 import 'package:pilll/domain/settings/components/rows/today_pill_number.dart';
 import 'package:pilll/domain/settings/components/rows/update_from_132.dart';
@@ -92,7 +93,9 @@ class SettingPage extends HookWidget {
                         NotificationInRestDuration(
                             setting: setting, pillSheet: pillSheet),
                         _separator(),
-                      ]
+                      ],
+                      if (!state.isPremium)
+                        QuickRecordRow(isTrial: state.isTrial),
                     ],
                   );
                 case SettingSection.menstruation:
