@@ -131,7 +131,9 @@ class SettingPage extends HookWidget {
                       ListExplainRow(
                           text: "機種変更やスマホ紛失時など、データの引き継ぎ・復元には、アカウント登録が必要です。"),
                       AccountLinkRow(),
+                      _separator(),
                       PremiumIntroductionRow(),
+                      _separator(),
                     ],
                   );
                 case SettingSection.pill:
@@ -139,10 +141,14 @@ class SettingPage extends HookWidget {
                     text: "ピルシート",
                     children: [
                       PillSheetTypeRow(settingState: state),
+                      _separator(),
                       PillSheetAppearanceModeRow(setting: setting),
+                      _separator(),
                       if (pillSheet != null && pillSheet.isInvalid) ...[
                         TodayPllNumberRow(setting: setting),
+                        _separator(),
                         PillSheetRemoveRow(),
+                        _separator(),
                       ]
                     ],
                   );
@@ -151,10 +157,13 @@ class SettingPage extends HookWidget {
                     text: "通知",
                     children: [
                       TakingPillNotification(setting: setting),
+                      _separator(),
                       NotificationTimeRow(setting: setting),
+                      _separator(),
                       if (pillSheet != null && pillSheet.hasRestDuration)
                         NotificationInRestDuration(
                             setting: setting, pillSheet: pillSheet),
+                      _separator(),
                     ],
                   );
                 case SettingSection.menstruation:
@@ -162,13 +171,17 @@ class SettingPage extends HookWidget {
                     text: "生理",
                     children: [
                       MenstruationRow(setting),
+                      _separator(),
                     ],
                   );
                 case SettingSection.other:
                   return SettingSectionTitle(
                     text: "その他",
                     children: [
-                      if (state.userIsUpdatedFrom132) UpdateFrom132Row(),
+                      if (state.userIsUpdatedFrom132) ...[
+                        UpdateFrom132Row(),
+                        _separator(),
+                      ],
                       ListTile(
                           title: Text("利用規約", style: FontType.listRow),
                           onTap: () {
@@ -177,6 +190,7 @@ class SettingPage extends HookWidget {
                             launch("https://bannzai.github.io/Pilll/Terms",
                                 forceSafariVC: true);
                           }),
+                      _separator(),
                       ListTile(
                           title: Text("プライバシーポリシー", style: FontType.listRow),
                           onTap: () {
@@ -187,6 +201,7 @@ class SettingPage extends HookWidget {
                                 "https://bannzai.github.io/Pilll/PrivacyPolicy",
                                 forceSafariVC: true);
                           }),
+                      _separator(),
                       ListTile(
                           title: Text("FAQ", style: FontType.listRow),
                           onTap: () {
@@ -196,6 +211,7 @@ class SettingPage extends HookWidget {
                                 "https://pilll.anotion.so/bb1f49eeded64b57929b7a13e9224d69",
                                 forceSafariVC: true);
                           }),
+                      _separator(),
                       ListTile(
                           title: Text("お問い合わせ", style: FontType.listRow),
                           onTap: () {
@@ -203,6 +219,7 @@ class SettingPage extends HookWidget {
                                 name: "did_select_inquiry", parameters: {});
                             inquiry();
                           }),
+                      _separator(),
                     ],
                   );
               }
@@ -270,6 +287,16 @@ class SettingPage extends HookWidget {
               ]..add(SizedBox(height: 16)),
             ]),
       ],
+    );
+  }
+
+  Widget _separator() {
+    return Padding(
+      padding: const EdgeInsets.only(left: 15, right: 15),
+      child: Container(
+        height: 1,
+        color: PilllColors.border,
+      ),
     );
   }
 
