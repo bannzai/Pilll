@@ -7,6 +7,7 @@ import 'package:pilll/domain/settings/components/rows/pill_sheet_appearance_mode
 import 'package:pilll/domain/settings/components/rows/pill_sheet_remove.dart';
 import 'package:pilll/domain/settings/components/rows/pill_sheet_type.dart';
 import 'package:pilll/domain/settings/components/rows/premium_introduction.dart';
+import 'package:pilll/domain/settings/components/rows/taking_pill_notification.dart';
 import 'package:pilll/domain/settings/components/rows/today_pill_number.dart';
 import 'package:pilll/domain/settings/components/setting_section_title.dart';
 import 'package:pilll/domain/settings/information_for_before_major_update.dart';
@@ -147,7 +148,9 @@ class SettingPage extends HookWidget {
                 case SettingSection.notification:
                   return SettingSectionTitle(
                     text: "通知",
-                    children: [],
+                    children: [
+                      TakingPillNotification(setting: setting),
+                    ],
                   );
                 case SettingSection.menstruation:
                   return SettingSectionTitle(
@@ -188,33 +191,6 @@ class SettingPage extends HookWidget {
         ];
       case SettingSection.notification:
         return [
-          SettingsListSwitchRowModel(
-            title: "ピルの服用通知",
-            subtitle: "通知時間までに服用した場合は通知はきません",
-            value: settingEntity.isOnReminder,
-            onTap: () {
-              analytics.logEvent(
-                name: "did_select_toggle_reminder",
-              );
-              ScaffoldMessenger.of(context).hideCurrentSnackBar();
-              settingStore
-                  .modifyIsOnReminder(!settingEntity.isOnReminder)
-                  .then((state) {
-                final settingEntity = state.entity;
-                if (settingEntity == null) {
-                  return;
-                }
-                ScaffoldMessenger.of(context).showSnackBar(
-                  SnackBar(
-                    duration: Duration(seconds: 2),
-                    content: Text(
-                      "服用通知を${settingEntity.isOnReminder ? "ON" : "OFF"}にしました",
-                    ),
-                  ),
-                );
-              });
-            },
-          ),
           SettingsListDatePickerRowModel(
             title: "通知時刻",
             content: settingEntity.reminderTimes
