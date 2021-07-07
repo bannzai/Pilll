@@ -3,6 +3,7 @@ import 'package:pilll/components/page/discard_dialog.dart';
 import 'package:pilll/components/organisms/setting/setting_menstruation_page.dart';
 import 'package:pilll/domain/settings/components/rows/account_link.dart';
 import 'package:pilll/domain/settings/components/rows/list_explain.dart';
+import 'package:pilll/domain/settings/components/rows/notification_time.dart';
 import 'package:pilll/domain/settings/components/rows/pill_sheet_appearance_mode.dart';
 import 'package:pilll/domain/settings/components/rows/pill_sheet_remove.dart';
 import 'package:pilll/domain/settings/components/rows/pill_sheet_type.dart';
@@ -13,13 +14,11 @@ import 'package:pilll/domain/settings/components/setting_section_title.dart';
 import 'package:pilll/domain/settings/information_for_before_major_update.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/domain/settings/row_model.dart';
-import 'package:pilll/domain/settings/reminder_times_page.dart';
 import 'package:pilll/inquiry/inquiry.dart';
 import 'package:pilll/domain/settings/setting_page_store.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/util/environment.dart';
-import 'package:pilll/util/formatter/date_time_formatter.dart';
 import 'package:pilll/util/shared_preference/keys.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -150,6 +149,7 @@ class SettingPage extends HookWidget {
                     text: "通知",
                     children: [
                       TakingPillNotification(setting: setting),
+                      NotificationTimeRow(setting: setting),
                     ],
                   );
                 case SettingSection.menstruation:
@@ -191,18 +191,6 @@ class SettingPage extends HookWidget {
         ];
       case SettingSection.notification:
         return [
-          SettingsListDatePickerRowModel(
-            title: "通知時刻",
-            content: settingEntity.reminderTimes
-                .map((e) => DateTimeFormatter.militaryTime(e.dateTime()))
-                .join(", "),
-            onTap: () {
-              analytics.logEvent(
-                name: "did_select_changing_reminder_times",
-              );
-              Navigator.of(context).push(ReminderTimesPageRoute.route());
-            },
-          ),
           if (isShowNotifyInRestDuration && pillSheetEntity != null)
             SettingsListSwitchRowModel(
               title: "${pillSheetEntity.pillSheetType.notTakenWord}期間の通知",
