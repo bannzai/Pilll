@@ -13,29 +13,25 @@ class QuickRecordRow extends StatelessWidget {
   }) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
+    return ListTile(
+      minVerticalPadding: 9,
+      title: Row(
+        children: [
+          Text("クイックレコード", style: FontType.listRow),
+          SizedBox(width: 7),
+          PremiumBadge(),
+        ],
+      ),
+      subtitle: Text("通知画面で今日飲むピルが分かり、そのまま服用記録できます。"),
       onTap: () {
+        analytics.logEvent(
+          name: "did_select_quick_record_row",
+        );
         if (isTrial) {
           return;
         }
         showPremiumIntroductionSheet(context);
       },
-      child: ListTile(
-        minVerticalPadding: 9,
-        title: Row(
-          children: [
-            Text("クイックレコード", style: FontType.listRow),
-            SizedBox(width: 7),
-            PremiumBadge(),
-          ],
-        ),
-        subtitle: Text("通知画面で今日飲むピルが分かり、そのまま服用記録できます。"),
-        onTap: () {
-          analytics.logEvent(
-            name: "did_select_quick_record_row",
-          );
-        },
-      ),
     );
   }
 }
