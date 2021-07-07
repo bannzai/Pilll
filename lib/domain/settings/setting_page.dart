@@ -1,4 +1,5 @@
 import 'package:pilll/analytics.dart';
+import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/page/discard_dialog.dart';
 import 'package:pilll/domain/settings/components/rows/menstruation.dart';
 import 'package:pilll/domain/settings/components/rows/account_link.dart';
@@ -167,7 +168,41 @@ class SettingPage extends HookWidget {
                   return SettingSectionTitle(
                     text: "その他",
                     children: [
-                      if (state.userIsUpdatedFrom132) UpdateFrom132Row()
+                      if (state.userIsUpdatedFrom132) UpdateFrom132Row(),
+                      ListTile(
+                          title: Text("利用規約", style: FontType.listRow),
+                          onTap: () {
+                            analytics.logEvent(
+                                name: "did_select_terms", parameters: {});
+                            launch("https://bannzai.github.io/Pilll/Terms",
+                                forceSafariVC: true);
+                          }),
+                      ListTile(
+                          title: Text("プライバシーポリシー", style: FontType.listRow),
+                          onTap: () {
+                            analytics.logEvent(
+                                name: "did_select_privacy_policy",
+                                parameters: {});
+                            launch(
+                                "https://bannzai.github.io/Pilll/PrivacyPolicy",
+                                forceSafariVC: true);
+                          }),
+                      ListTile(
+                          title: Text("FAQ", style: FontType.listRow),
+                          onTap: () {
+                            analytics.logEvent(
+                                name: "did_select_faq", parameters: {});
+                            launch(
+                                "https://pilll.anotion.so/bb1f49eeded64b57929b7a13e9224d69",
+                                forceSafariVC: true);
+                          }),
+                      ListTile(
+                          title: Text("お問い合わせ", style: FontType.listRow),
+                          onTap: () {
+                            analytics.logEvent(
+                                name: "did_select_inquiry", parameters: {});
+                            inquiry();
+                          }),
                     ],
                   );
               }
@@ -199,37 +234,7 @@ class SettingPage extends HookWidget {
       case SettingSection.menstruation:
         return [];
       case SettingSection.other:
-        return [
-          SettingListTitleRowModel(
-              title: "利用規約",
-              onTap: () {
-                analytics.logEvent(name: "did_select_terms", parameters: {});
-                launch("https://bannzai.github.io/Pilll/Terms",
-                    forceSafariVC: true);
-              }),
-          SettingListTitleRowModel(
-              title: "プライバシーポリシー",
-              onTap: () {
-                analytics.logEvent(
-                    name: "did_select_privacy_policy", parameters: {});
-                launch("https://bannzai.github.io/Pilll/PrivacyPolicy",
-                    forceSafariVC: true);
-              }),
-          SettingListTitleRowModel(
-              title: "FAQ",
-              onTap: () {
-                analytics.logEvent(name: "did_select_faq", parameters: {});
-                launch(
-                    "https://pilll.anotion.so/bb1f49eeded64b57929b7a13e9224d69",
-                    forceSafariVC: true);
-              }),
-          SettingListTitleRowModel(
-              title: "お問い合わせ",
-              onTap: () {
-                analytics.logEvent(name: "did_select_inquiry", parameters: {});
-                inquiry();
-              }),
-        ];
+        return [];
       case SettingSection.account:
         return [];
     }
