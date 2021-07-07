@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/util/links.dart';
@@ -18,9 +19,17 @@ class PremiumTrialLimitNotificationBar extends StatelessWidget {
       onTap: () async {
         await launch(preimumLink);
       },
-      child: Center(
-        child: Text(premiumTrialLimit,
-            style: FontType.assistingBold.merge(TextColorStyle.white)),
+      child: Row(
+        children: [
+          Spacer(),
+          Text(premiumTrialLimit,
+              style: FontType.assistingBold.merge(TextColorStyle.white)),
+          Spacer(),
+          SvgPicture.asset(
+            "images/arrow_right.svg",
+            color: Colors.white,
+          ),
+        ],
       ),
     );
   }
