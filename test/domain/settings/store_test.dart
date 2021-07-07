@@ -104,6 +104,8 @@ void main() {
       final userService = MockUserService();
       when(userService.fetch())
           .thenAnswer((realInvocation) => Future.value(_FakeUser()));
+      when(userService.subscribe())
+          .thenAnswer((realInvocation) => Stream.empty());
 
       final store = SettingStateStore(service, pillSheetService, userService);
 
