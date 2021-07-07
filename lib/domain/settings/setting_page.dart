@@ -1,6 +1,7 @@
 import 'package:pilll/analytics.dart';
 import 'package:pilll/components/page/discard_dialog.dart';
 import 'package:pilll/components/organisms/setting/setting_menstruation_page.dart';
+import 'package:pilll/domain/settings/components/menstruation.dart';
 import 'package:pilll/domain/settings/components/rows/account_link.dart';
 import 'package:pilll/domain/settings/components/rows/list_explain.dart';
 import 'package:pilll/domain/settings/components/rows/notification_in_rest_duration.dart';
@@ -159,7 +160,9 @@ class SettingPage extends HookWidget {
                 case SettingSection.menstruation:
                   return SettingSectionTitle(
                     text: "生理",
-                    children: [],
+                    children: [
+                      MenstruationRow(setting),
+                    ],
                   );
                 case SettingSection.other:
                   return SettingSectionTitle(
@@ -193,43 +196,7 @@ class SettingPage extends HookWidget {
       case SettingSection.notification:
         return [];
       case SettingSection.menstruation:
-        return [
-          SettingListTitleRowModel(
-              title: "生理について",
-              error: () {
-                final message =
-                    "生理開始日のピル番号をご確認ください。現在選択しているピルシートタイプには存在しないピル番号が設定されています";
-                return settingEntity.pillSheetType.totalCount <
-                        settingEntity.pillNumberForFromMenstruation
-                    ? message
-                    : "";
-              }(),
-              onTap: () {
-                analytics.logEvent(
-                  name: "did_select_changing_about_menstruation",
-                );
-                Navigator.of(context).push(SettingMenstruationPageRoute.route(
-                  done: null,
-                  doneText: null,
-                  title: "生理について",
-                  pillSheetTotalCount: settingEntity.pillSheetType.totalCount,
-                  model: SettingMenstruationPageModel(
-                    selectedFromMenstruation:
-                        settingEntity.pillNumberForFromMenstruation,
-                    selectedDurationMenstruation:
-                        settingEntity.durationMenstruation,
-                    pillSheetType: settingEntity.pillSheetType,
-                  ),
-                  fromMenstructionDidDecide: (selectedFromMenstruction) =>
-                      settingStore
-                          .modifyFromMenstruation(selectedFromMenstruction),
-                  durationMenstructionDidDecide:
-                      (selectedDurationMenstruation) =>
-                          settingStore.modifyDurationMenstruation(
-                              selectedDurationMenstruation),
-                ));
-              }),
-        ];
+        return [];
       case SettingSection.other:
         return [
           if (settingState.userIsUpdatedFrom132)
