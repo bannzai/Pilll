@@ -43,57 +43,7 @@ class SettingPage extends HookWidget {
       body: Container(
         child: ListView.builder(
           itemBuilder: (BuildContext context, int index) {
-            if ((index + 1) == SettingPage.itemCount) {
-              if (Environment.isProduction) {
-                return Container();
-              }
-              return Padding(
-                padding: const EdgeInsets.all(10),
-                child: GestureDetector(
-                  child: Center(
-                      child: Text("COPY DEBUG INFO",
-                          style: TextColorStyle.primary)),
-                  onTap: () async {
-                    Clipboard.setData(
-                        ClipboardData(text: await debugInfo("\n")));
-                  },
-                  onDoubleTap: () {
-                    final signOut = Environment.signOutUser;
-                    if (signOut == null) {
-                      return;
-                    }
-                    showDiscardDialog(
-                      context,
-                      title: "サインアウトします",
-                      message: '''
-これは開発用のオプションです。サインアウトあとはアプリを再起動してお試しください。初期設定から始まります
-''',
-                      done: () async {
-                        await signOut();
-                      },
-                      doneText: "サインアウト",
-                    );
-                  },
-                  onLongPress: () {
-                    final deleteUser = Environment.deleteUser;
-                    if (deleteUser == null) {
-                      return;
-                    }
-                    showDiscardDialog(
-                      context,
-                      title: "ユーザーを削除します",
-                      message: '''
-これは開発用のオプションです。ユーザーを削除したあとはアプリを再起動してからやり直してください。初期設定から始まります
-''',
-                      done: () async {
-                        await deleteUser();
-                      },
-                      doneText: "削除",
-                    );
-                  },
-                ),
-              );
-            }
+            if ((index + 1) == SettingPage.itemCount) {}
             return HookBuilder(
               builder: (BuildContext context) {
                 return _section(
@@ -222,12 +172,64 @@ class SettingPage extends HookWidget {
                       _separator(),
                     ],
                   );
+                case SettingSection.debug:
+                  return _debug(context);
               }
             },
           );
         },
         itemCount: SettingSection.values.length,
         addRepaintBoundaries: false,
+      ),
+    );
+  }
+
+  Widget _debug(BuildContext context) {
+    if (Environment.isProduction) {
+      return Container();
+    }
+    return Padding(
+      padding: const EdgeInsets.only(left: 10, right: 10, bottom: 20, top: 20),
+      child: GestureDetector(
+        child: Center(
+            child: Text("COPY DEBUG INFO", style: TextColorStyle.primary)),
+        onTap: () async {
+          Clipboard.setData(ClipboardData(text: await debugInfo("\n")));
+        },
+        onDoubleTap: () {
+          final signOut = Environment.signOutUser;
+          if (signOut == null) {
+            return;
+          }
+          showDiscardDialog(
+            context,
+            title: "サインアウトします",
+            message: '''
+これは開発用のオプションです。サインアウトあとはアプリを再起動してお試しください。初期設定から始まります
+''',
+            done: () async {
+              await signOut();
+            },
+            doneText: "サインアウト",
+          );
+        },
+        onLongPress: () {
+          final deleteUser = Environment.deleteUser;
+          if (deleteUser == null) {
+            return;
+          }
+          showDiscardDialog(
+            context,
+            title: "ユーザーを削除します",
+            message: '''
+これは開発用のオプションです。ユーザーを削除したあとはアプリを再起動してからやり直してください。初期設定から始まります
+''',
+            done: () async {
+              await deleteUser();
+            },
+            doneText: "削除",
+          );
+        },
       ),
     );
   }
