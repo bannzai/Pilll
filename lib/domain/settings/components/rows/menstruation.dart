@@ -22,7 +22,8 @@ class MenstruationRow extends HookWidget {
         children: [
           Text("生理について", style: FontType.listRow),
           SizedBox(width: 8),
-          SvgPicture.asset("images/alert_24.svg", width: 24, height: 24),
+          if (_hasError)
+            SvgPicture.asset("images/alert_24.svg", width: 24, height: 24),
         ],
       ),
       subtitle: _hasError
