@@ -21,6 +21,7 @@ class QuickRecordRow extends StatelessWidget {
         showPremiumIntroductionSheet(context);
       },
       child: ListTile(
+        minVerticalPadding: 9,
         title: Row(
           children: [
             Text("クイックレコード", style: FontType.listRow),

@@ -94,8 +94,10 @@ class SettingPage extends HookWidget {
                             setting: setting, pillSheet: pillSheet),
                         _separator(),
                       ],
-                      if (!state.isPremium)
+                      if (!state.isPremium) ...[
                         QuickRecordRow(isTrial: state.isTrial),
+                        _separator(),
+                      ]
                     ],
                   );
                 case SettingSection.menstruation:
