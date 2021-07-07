@@ -29,7 +29,6 @@ import 'package:url_launcher/url_launcher.dart';
 enum SettingSection { account, pill, notification, menstruation, other }
 
 class SettingPage extends HookWidget {
-  static final int itemCount = SettingSection.values.length + 1;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
