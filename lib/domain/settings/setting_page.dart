@@ -14,20 +14,17 @@ import 'package:pilll/domain/settings/components/rows/taking_pill_notification.d
 import 'package:pilll/domain/settings/components/rows/today_pill_number.dart';
 import 'package:pilll/domain/settings/components/rows/update_from_132.dart';
 import 'package:pilll/domain/settings/components/setting_section_title.dart';
-import 'package:pilll/domain/settings/information_for_before_major_update.dart';
 import 'package:pilll/domain/settings/row_model.dart';
 import 'package:pilll/inquiry/inquiry.dart';
 import 'package:pilll/domain/settings/setting_page_store.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/util/environment.dart';
-import 'package:pilll/util/shared_preference/keys.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:shared_preferences/shared_preferences.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class SettingPage extends HookWidget {
@@ -40,23 +37,7 @@ class SettingPage extends HookWidget {
         title: Text('設定', style: TextColorStyle.main),
         backgroundColor: PilllColors.white,
       ),
-      body: Container(
-        child: ListView.builder(
-          itemBuilder: (BuildContext context, int index) {
-            if ((index + 1) == SettingPage.itemCount) {}
-            return HookBuilder(
-              builder: (BuildContext context) {
-                return _section(
-                  context,
-                  SettingSection.values[index],
-                );
-              },
-            );
-          },
-          itemCount: SettingPage.itemCount,
-          addRepaintBoundaries: false,
-        ),
-      ),
+      body: Container(child: _body(context)),
     );
   }
 
@@ -234,75 +215,7 @@ class SettingPage extends HookWidget {
     );
   }
 
-  List<SettingListRowModel> _rowModels(
-      BuildContext context, SettingSection section) {
-    final settingStore = useProvider(settingStoreProvider);
-    final settingState = useProvider(settingStoreProvider.state);
-    final pillSheetEntity = settingState.latestPillSheet;
-    final settingEntity = settingState.entity;
-    if (settingEntity == null) {
-      return [];
-    }
-    switch (section) {
-      case SettingSection.pill:
-        return [
-          ...[],
-        ];
-      case SettingSection.notification:
-        return [];
-      case SettingSection.menstruation:
-        return [];
-      case SettingSection.other:
-        return [];
-      case SettingSection.account:
-        return [];
-    }
-  }
-
-  Widget _section(BuildContext context, SettingSection section) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        SettingSectionTitle(
-            text: () {
-              switch (section) {
-                case SettingSection.pill:
-                  return "ピルシート";
-                case SettingSection.menstruation:
-                  return "生理";
-                case SettingSection.notification:
-                  return "通知";
-                case SettingSection.account:
-                  return "アカウント";
-                case SettingSection.other:
-                  return "その他";
-              }
-            }(),
-            children: [
-              ...[
-                ..._rowModels(context, section).map((e) {
-                  if (e is SettingListExplainRowModel) {
-                    return [e.widget()];
-                  }
-                  return [e.widget(), _separatorItem()];
-                }).expand((element) => element)
-              ]..add(SizedBox(height: 16)),
-            ]),
-      ],
-    );
-  }
-
   Widget _separator() {
-    return Padding(
-      padding: const EdgeInsets.only(left: 15, right: 15),
-      child: Container(
-        height: 1,
-        color: PilllColors.border,
-      ),
-    );
-  }
-
-  Widget _separatorItem() {
     return Padding(
       padding: const EdgeInsets.only(left: 15, right: 15),
       child: Container(
