@@ -4,33 +4,69 @@ import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/analytics.dart';
 import 'package:pilll/components/atoms/font.dart';
+import 'package:pilll/components/molecules/premium_badge.dart';
+import 'package:pilll/domain/premium_introduction/premium_introduction_sheet.dart';
 import 'package:pilll/domain/settings/setting_page_store.dart';
 import 'package:pilll/entity/setting.dart';
 
 class PillSheetAppearanceModeRow extends HookWidget {
+  final bool isPremium;
   final Setting setting;
 
   const PillSheetAppearanceModeRow({
     Key? key,
+    required this.isPremium,
     required this.setting,
   }) : super(key: key);
 
-  // TODO: add premium introduction logic
   @override
   Widget build(BuildContext context) {
+    if (isPremium) {
+      return _body(context);
+    } else {
+      return GestureDetector(
+        child: _body(context),
+        onTap: () {
+          showPremiumIntroductionSheet(context);
+        },
+      );
+    }
+  }
+
+  Widget _body(BuildContext context) {
     final store = useProvider(settingStoreProvider);
-    return SwitchListTile(
-      title: Text("日付表示モード", style: FontType.listRow),
-      value: setting.pillSheetAppearanceMode == PillSheetAppearanceMode.date,
-      onChanged: (value) {
-        analytics.logEvent(
-          name: "did_select_pill_sheet_appearance",
-        );
-        final pillSheetAppearanceMode = value
-            ? PillSheetAppearanceMode.date
-            : PillSheetAppearanceMode.number;
-        store.modifyPillSheetAppearanceMode(pillSheetAppearanceMode);
-      },
+    final isOn =
+        setting.pillSheetAppearanceMode == PillSheetAppearanceMode.date;
+    return ListTile(
+      title: Row(
+        children: [
+          Text("日付表示モード", style: FontType.listRow),
+          SizedBox(width: 8),
+          PremiumBadge(),
+        ],
+      ),
+      trailing: Switch(
+        value: isOn,
+        onChanged: (value) => _onChanged(context, value, store),
+      ),
+      onTap: () => _onChanged(context, !isOn, store),
     );
+  }
+
+  _onChanged(
+    BuildContext context,
+    bool value,
+    SettingStateStore store,
+  ) {
+    analytics.logEvent(
+      name: "did_select_pill_sheet_appearance",
+    );
+    if (!isPremium) {
+      showPremiumIntroductionSheet(context);
+    } else {
+      final pillSheetAppearanceMode =
+          value ? PillSheetAppearanceMode.date : PillSheetAppearanceMode.number;
+      store.modifyPillSheetAppearanceMode(pillSheetAppearanceMode);
+    }
   }
 }

@@ -71,7 +71,10 @@ class SettingPage extends HookWidget {
                     children: [
                       PillSheetTypeRow(settingState: state),
                       _separator(),
-                      PillSheetAppearanceModeRow(setting: setting),
+                      PillSheetAppearanceModeRow(
+                        setting: setting,
+                        isPremium: state.isPremium,
+                      ),
                       _separator(),
                       if (pillSheet != null && !pillSheet.isInvalid) ...[
                         TodayPllNumberRow(setting: setting),
