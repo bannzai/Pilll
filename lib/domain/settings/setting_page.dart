@@ -1,6 +1,5 @@
 import 'package:pilll/analytics.dart';
 import 'package:pilll/components/page/discard_dialog.dart';
-import 'package:pilll/components/organisms/setting/setting_menstruation_page.dart';
 import 'package:pilll/domain/settings/components/menstruation.dart';
 import 'package:pilll/domain/settings/components/rows/account_link.dart';
 import 'package:pilll/domain/settings/components/rows/list_explain.dart';
@@ -14,7 +13,6 @@ import 'package:pilll/domain/settings/components/rows/taking_pill_notification.d
 import 'package:pilll/domain/settings/components/rows/today_pill_number.dart';
 import 'package:pilll/domain/settings/components/setting_section_title.dart';
 import 'package:pilll/domain/settings/information_for_before_major_update.dart';
-import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/domain/settings/row_model.dart';
 import 'package:pilll/inquiry/inquiry.dart';
 import 'package:pilll/domain/settings/setting_page_store.dart';
