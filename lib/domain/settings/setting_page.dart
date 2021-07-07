@@ -138,9 +138,10 @@ class SettingPage extends HookWidget {
                     children: [
                       PillSheetTypeRow(settingState: state),
                       PillSheetAppearanceModeRow(setting: setting),
-                      TodayPllNumberRow(setting: setting),
-                      if (pillSheet != null && pillSheet.isInvalid)
+                      if (pillSheet != null && pillSheet.isInvalid) ...[
+                        TodayPllNumberRow(setting: setting),
                         PillSheetRemoveRow(),
+                      ]
                     ],
                   );
                 case SettingSection.notification:
