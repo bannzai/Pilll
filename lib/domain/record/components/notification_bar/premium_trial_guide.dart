@@ -64,6 +64,8 @@ class PremiumTrialGuideNotificationBar extends HookWidget {
                 child: SvgPicture.asset(
                   "images/arrow_right.svg",
                   color: Colors.white,
+                  width: 16,
+                  height: 16,
                 ),
               ),
             ],

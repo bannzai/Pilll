@@ -20,15 +20,23 @@ class PremiumTrialLimitNotificationBar extends StatelessWidget {
         await launch(preimumLink);
       },
       child: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
         children: [
+          SizedBox(width: 24),
           Spacer(),
-          Text(premiumTrialLimit,
-              style: FontType.assistingBold.merge(TextColorStyle.white)),
+          Text(
+            premiumTrialLimit,
+            style: FontType.assistingBold.merge(TextColorStyle.white),
+            textAlign: TextAlign.center,
+          ),
           Spacer(),
           SvgPicture.asset(
             "images/arrow_right.svg",
             color: Colors.white,
+            width: 16,
+            height: 16,
           ),
+          SizedBox(width: 8),
         ],
       ),
     );
