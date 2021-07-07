@@ -40,7 +40,7 @@ class AnnualPurchaseButton extends StatelessWidget {
               mainAxisSize: MainAxisSize.min,
               children: [
                 Text(
-                  "年間プラン",
+                  "年額プラン",
                   style: TextStyle(
                     color: TextColor.main,
                     fontFamily: FontFamily.japanese,

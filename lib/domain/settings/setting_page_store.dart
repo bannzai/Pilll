@@ -1,11 +1,7 @@
 import 'dart:async';
 
-import 'package:pilll/database/database.dart';
 import 'package:pilll/domain/record/record_page_store.dart';
-import 'package:pilll/entity/pill_sheet.dart';
-import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/entity/setting.dart';
-import 'package:pilll/entity/user.dart';
 import 'package:pilll/service/pill_sheet.dart';
 import 'package:pilll/service/setting.dart';
 import 'package:pilll/domain/settings/setting_page_state.dart';
@@ -76,17 +72,8 @@ class SettingStateStore extends StateNotifier<SettingState> {
   void dispose() {
     _canceller?.cancel();
     _pillSheetCanceller?.cancel();
+    _userSubscribeCanceller?.cancel();
     super.dispose();
-  }
-
-  Future<void> modifyType(PillSheetType pillSheetType) {
-    final entity = state.entity;
-    if (entity == null) {
-      throw FormatException("setting entity not found");
-    }
-    return _service
-        .update(entity.copyWith(pillSheetTypeRawPath: pillSheetType.rawPath))
-        .then((entity) => state = state.copyWith(entity: entity));
   }
 
   void _modifyReminderTimes(List<ReminderTime> reminderTimes) {
@@ -207,53 +194,5 @@ class SettingStateStore extends StateNotifier<SettingState> {
     return _service
         .update(updated)
         .then((value) => state = state.copyWith(entity: value));
-  }
-}
-
-final transactionModifierProvider = Provider((ref) =>
-    _TransactionModifier(ref.watch(databaseProvider), reader: ref.read));
-
-class _TransactionModifier {
-  final DatabaseConnection? _database;
-  final Reader reader;
-
-  _TransactionModifier(
-    this._database, {
-    required this.reader,
-  });
-
-  Future<void> modifyPillSheetType(PillSheetType type) {
-    final database = _database;
-    if (database == null) {
-      throw FormatException("_database is necessary");
-    }
-    final settingState = reader(settingStoreProvider.state);
-    final pillSheetEntity = settingState.latestPillSheet;
-    final settingEntity = settingState.entity;
-    if (pillSheetEntity == null) {
-      throw FormatException("pillSheetEntity is necessary");
-    }
-    if (settingEntity == null) {
-      throw FormatException("settingEntity is necessary");
-    }
-    return database.transaction((transaction) {
-      return Future.wait(
-        [
-          transaction
-              .get(database.pillSheetReference(pillSheetEntity.documentID!))
-              .then((pillSheetDocument) {
-            transaction.update(pillSheetDocument.reference,
-                {PillSheetFirestoreKey.typeInfo: type.typeInfo.toJson()});
-          }),
-          transaction.get(database.userReference()).then((userDocument) {
-            transaction.update(userDocument.reference, {
-              UserFirestoreFieldKeys.settings: settingEntity
-                  .copyWith(pillSheetTypeRawPath: type.rawPath)
-                  .toJson(),
-            });
-          })
-        ],
-      );
-    });
   }
 }

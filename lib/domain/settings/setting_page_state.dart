@@ -13,7 +13,4 @@ abstract class SettingState implements _$SettingState {
     @Default(false) bool userIsUpdatedFrom132,
     @Default(false) bool isPremium,
   }) = _SettingState;
-
-  bool get latestPillSheetIsInvalid =>
-      latestPillSheet == null || latestPillSheet!.isInvalid;
 }
