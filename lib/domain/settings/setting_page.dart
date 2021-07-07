@@ -14,7 +14,6 @@ import 'package:pilll/domain/settings/components/rows/taking_pill_notification.d
 import 'package:pilll/domain/settings/components/rows/today_pill_number.dart';
 import 'package:pilll/domain/settings/components/rows/update_from_132.dart';
 import 'package:pilll/domain/settings/components/setting_section_title.dart';
-import 'package:pilll/domain/settings/row_model.dart';
 import 'package:pilll/inquiry/inquiry.dart';
 import 'package:pilll/domain/settings/setting_page_store.dart';
 import 'package:pilll/components/atoms/color.dart';
@@ -26,6 +25,8 @@ import 'package:flutter/services.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:url_launcher/url_launcher.dart';
+
+enum SettingSection { account, pill, notification, menstruation, other }
 
 class SettingPage extends HookWidget {
   static final int itemCount = SettingSection.values.length + 1;
