@@ -59,15 +59,14 @@ class PremiumTrialGuideNotificationBar extends HookWidget {
           Spacer(),
           Column(
             children: [
-              IconButton(
-                icon: SvgPicture.asset(
+              Padding(
+                padding: const EdgeInsets.only(right: 8.0),
+                child: SvgPicture.asset(
                   "images/arrow_right.svg",
                   color: Colors.white,
+                  width: 16,
+                  height: 16,
                 ),
-                onPressed: () {},
-                iconSize: 24,
-                padding: EdgeInsets.all(8),
-                alignment: Alignment.centerRight,
               ),
             ],
           ),

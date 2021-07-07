@@ -1,14 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:pilll/components/atoms/buttons.dart';
 import 'package:pilll/components/atoms/color.dart';
-import 'package:pilll/components/atoms/font.dart';
-import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/domain/premium_introduction/components/premium_introduction_footer.dart';
 import 'package:pilll/domain/premium_introduction/components/premium_introduction_header.dart';
 import 'package:pilll/domain/premium_introduction/components/premium_introduction_limited.dart';
 import 'package:pilll/domain/premium_introduction/components/purchase_buttons.dart';
-import 'package:pilll/util/platform/platform.dart';
+import 'package:pilll/util/links.dart';
 import 'package:purchases_flutter/purchases_flutter.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class PremiumIntroductionBody extends StatelessWidget {
   const PremiumIntroductionBody({
@@ -69,8 +68,8 @@ class PremiumIntroductionBody extends StatelessWidget {
                 ],
                 SizedBox(height: 24),
                 SecondaryButton(
-                    onPressed: () {
-                      print("");
+                    onPressed: () async {
+                      await launch(preimumLink);
                     },
                     text: "プレミアム機能を見る"),
                 SizedBox(height: 24),
