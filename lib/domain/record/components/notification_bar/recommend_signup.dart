@@ -23,11 +23,14 @@ class RecommendSignupNotificationBar extends HookWidget {
   Widget build(BuildContext context) {
     final store = useProvider(notificationBarStoreProvider(parameter));
     return GestureDetector(
-      onTap: () => showSigninSheet(context, SigninSheetStateContext.recordPage,
-          (linkAccount) {
-        analytics.logEvent(name: "signined_account_from_notification_bar");
-        showDemographyPageIfNeeded(context);
-      }),
+      onTap: () {
+        analytics.logEvent(name: "tapped_signup_notification_bar");
+        showSigninSheet(context, SigninSheetStateContext.recordPage,
+            (linkAccount) {
+          analytics.logEvent(name: "signined_account_from_notification_bar");
+          showDemographyPageIfNeeded(context);
+        });
+      },
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
