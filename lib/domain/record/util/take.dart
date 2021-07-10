@@ -19,9 +19,7 @@ Future<void> take(
   try {
     await store.take(takenDate);
     _requestInAppReview();
-    Future.delayed(Duration(milliseconds: 500)).then((_) {
-      showReleaseNotePreDialog(context);
-    });
+    await showReleaseNotePreDialog(context);
   } catch (exception, stack) {
     errorLogger.recordError(exception, stack);
     store.handleException(exception);

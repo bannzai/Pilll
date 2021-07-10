@@ -9,12 +9,12 @@ import 'package:pilll/entity/pill_sheet.dart';
 import 'package:pilll/util/datetime/day.dart';
 
 class TakenButton extends HookWidget {
-  final BuildContext context;
+  final BuildContext parentContext;
   final PillSheet pillSheet;
 
   const TakenButton({
     Key? key,
-    required this.context,
+    required this.parentContext,
     required this.pillSheet,
   }) : super(key: key);
   @override
@@ -29,7 +29,7 @@ class TakenButton extends HookWidget {
           "last_taken_pill_number": pillSheet.lastTakenPillNumber,
           "today_pill_number": pillSheet.todayPillNumber,
         });
-        await take(context, pillSheet, now(), store);
+        await take(parentContext, pillSheet, now(), store);
       },
     );
   }
