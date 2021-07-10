@@ -1,10 +1,11 @@
 import 'dart:async';
 
+import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/domain/premium_introduction/components/purchase_buttons_state.dart';
 import 'package:pilll/domain/premium_introduction/components/purchase_buttons_store_parameter.dart';
+import 'package:pilll/domain/premium_introduction/util/discount_deadline.dart';
 import 'package:pilll/domain/premium_introduction/util/map_to_error.dart';
 import 'package:pilll/entity/user_error.dart';
-import 'package:pilll/util/datetime/timer.dart';
 import 'package:purchases_flutter/purchases_flutter.dart';
 import 'package:pilll/error_log.dart';
 import 'package:pilll/purchases.dart';
@@ -18,8 +19,8 @@ final purchaseButtonsStoreProvider = StateNotifierProvider.family
   return PurchaseButtonsStore(
     offerings: parameter.offerings,
     trialDeadlineDate: trialDeadlineDate,
-    isOverTrialDeadline: trialDeadlineDate != null
-        ? ref.watch(isOverTrialDeadlineProvider(trialDeadlineDate))
+    isOverDiscountDeadline: trialDeadlineDate != null
+        ? ref.watch(isOverDiscountDeadlineProvider(trialDeadlineDate))
         : null,
   );
 });
@@ -27,17 +28,17 @@ final purchaseButtonsStoreProvider = StateNotifierProvider.family
 class PurchaseButtonsStore extends StateNotifier<PurchaseButtonsState> {
   final Offerings offerings;
   final DateTime? trialDeadlineDate;
-  final bool? isOverTrialDeadline;
+  final bool? isOverDiscountDeadline;
 
   PurchaseButtonsStore({
     required this.offerings,
     required this.trialDeadlineDate,
-    required this.isOverTrialDeadline,
+    required this.isOverDiscountDeadline,
   }) : super(
           PurchaseButtonsState(
             offerings: offerings,
             trialDeadlineDate: trialDeadlineDate,
-            isOverTrialDeadline: isOverTrialDeadline,
+            isOverDiscountDeadline: isOverDiscountDeadline,
           ),
         );
 
