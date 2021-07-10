@@ -21,8 +21,11 @@ class PremiumIntroductionLimited extends HookWidget {
     if (diff.inSeconds <= 0) {
       countdown = "00:00:00";
     } else {
+      final hour = diff.inHours;
+      final minute = diff.inMinutes % 60;
+      final second = diff.inSeconds % 60;
       countdown =
-          DateTimeFormatter.clock(diff.inHours, diff.inMinutes, diff.inSeconds);
+          DateTimeFormatter.clock(hour.toInt(), minute.toInt(), second.toInt());
     }
     return Container(
       padding: EdgeInsets.only(left: 40, right: 40),
