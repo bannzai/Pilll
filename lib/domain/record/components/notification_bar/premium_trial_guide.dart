@@ -47,28 +47,20 @@ class PremiumTrialGuideNotificationBar extends HookWidget {
             padding: EdgeInsets.zero,
           ),
           Spacer(),
-          Column(
-            children: [
-              Text(
-                "プレミアム機能 お試し体験プレゼント中\n詳しくみる",
-                style: TextColorStyle.white.merge(FontType.descriptionBold),
-                textAlign: TextAlign.center,
-              ),
-            ],
+          Text(
+            "プレミアム機能 お試し体験プレゼント中\n詳しくみる",
+            style: TextColorStyle.white.merge(FontType.descriptionBold),
+            textAlign: TextAlign.center,
           ),
           Spacer(),
-          Column(
-            children: [
-              Padding(
-                padding: const EdgeInsets.only(right: 8.0),
-                child: SvgPicture.asset(
-                  "images/arrow_right.svg",
-                  color: Colors.white,
-                  width: 16,
-                  height: 16,
-                ),
-              ),
-            ],
+          Padding(
+            padding: const EdgeInsets.only(right: 8.0),
+            child: SvgPicture.asset(
+              "images/arrow_right.svg",
+              color: Colors.white,
+              width: 16,
+              height: 16,
+            ),
           ),
         ],
       ),
