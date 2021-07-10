@@ -17,16 +17,14 @@ class PremiumIntroductionLimited extends HookWidget {
   Widget build(BuildContext context) {
     final timerState = useProvider(timerStateProvider);
     final diff = discountPriceDeadline.difference(timerState);
-    final String countdown;
     if (diff.inSeconds <= 0) {
-      countdown = "00:00:00";
-    } else {
-      final hour = diff.inHours;
-      final minute = diff.inMinutes % 60;
-      final second = diff.inSeconds % 60;
-      countdown =
-          DateTimeFormatter.clock(hour.toInt(), minute.toInt(), second.toInt());
+      return Container();
     }
+    final hour = diff.inHours;
+    final minute = diff.inMinutes % 60;
+    final second = diff.inSeconds % 60;
+    final countdown =
+        DateTimeFormatter.clock(hour.toInt(), minute.toInt(), second.toInt());
     return Container(
       padding: EdgeInsets.only(left: 40, right: 40),
       width: MediaQuery.of(context).size.width,
