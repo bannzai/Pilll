@@ -38,14 +38,18 @@ class SigninSheet extends HookWidget {
         error: state.exception,
         reload: () => store.reset(),
         child: Container(
-          constraints: BoxConstraints(maxHeight: 333, minHeight: 300),
+          constraints: BoxConstraints(
+            maxHeight: 333,
+            minHeight: 300,
+            minWidth: MediaQuery.of(context).size.width,
+          ),
           color: Colors.white,
           child: SafeArea(
             child: Padding(
               padding: const EdgeInsets.only(left: 16, right: 16),
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.start,
-                mainAxisSize: MainAxisSize.max,
+                mainAxisSize: MainAxisSize.min,
                 children: [
                   SizedBox(height: 14),
                   SvgPicture.asset("images/draggable_bar.svg", height: 6),
