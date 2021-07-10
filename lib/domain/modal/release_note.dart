@@ -84,7 +84,7 @@ Apple Watchからも服用記録ができます。
 }
 
 showReleaseNotePreDialog(BuildContext context) async {
-  final key = ReleaseNoteKey.version2_4_0;
+  final key = ReleaseNoteKey.version3_0_0;
   final storage = await SharedPreferences.getInstance();
   if (storage.getBool(key) ?? false) {
     return;
