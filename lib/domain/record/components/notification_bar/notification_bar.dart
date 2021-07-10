@@ -19,7 +19,7 @@ class NotificationBar extends HookWidget {
     final body = _body(context);
     if (body != null) {
       return Container(
-        padding: const EdgeInsets.all(8),
+        padding: const EdgeInsets.fromLTRB(8, 0, 8, 0),
         color: PilllColors.secondary,
         child: body,
       );

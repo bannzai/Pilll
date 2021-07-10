@@ -21,6 +21,7 @@ class PremiumTrialGuideNotificationBar extends HookWidget {
   @override
   Widget build(BuildContext context) {
     final store = useProvider(notificationBarStoreProvider(parameter));
+    final double _closeButtonIconWidth = 24;
 
     return GestureDetector(
       onTap: () {
@@ -29,38 +30,46 @@ class PremiumTrialGuideNotificationBar extends HookWidget {
           showPremiumTrialCompleteModalPreDialog(context);
         });
       },
-      child: Row(
-        crossAxisAlignment: CrossAxisAlignment.center,
+      child: Stack(
         children: [
-          IconButton(
-            alignment: Alignment.topLeft,
-            icon: Icon(
-              Icons.close,
-              color: Colors.white,
-              size: 24,
+          Positioned(
+            top: 8,
+            child: GestureDetector(
+              child: Icon(
+                Icons.close,
+                color: Colors.white,
+                size: _closeButtonIconWidth,
+              ),
+              onTap: () {
+                analytics.logEvent(name: "premium_trial_notification_closed");
+                store.closePremiumTrialNotification();
+              },
             ),
-            onPressed: () {
-              analytics.logEvent(name: "premium_trial_notification_closed");
-              store.closePremiumTrialNotification();
-            },
-            iconSize: 24,
-            padding: EdgeInsets.zero,
           ),
-          Spacer(),
-          Text(
-            "プレミアム機能 お試し体験プレゼント中\n詳しくみる",
-            style: TextColorStyle.white.merge(FontType.descriptionBold),
-            textAlign: TextAlign.center,
-          ),
-          Spacer(),
-          Padding(
-            padding: const EdgeInsets.only(right: 8.0),
-            child: SvgPicture.asset(
-              "images/arrow_right.svg",
-              color: Colors.white,
-              width: 16,
-              height: 16,
-            ),
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              SizedBox(width: _closeButtonIconWidth),
+              Spacer(),
+              Padding(
+                padding: const EdgeInsets.only(top: 12, bottom: 12),
+                child: Text(
+                  "プレミアム機能 お試し体験プレゼント中\n詳しくみる",
+                  style: TextColorStyle.white.merge(FontType.descriptionBold),
+                  textAlign: TextAlign.center,
+                ),
+              ),
+              Spacer(),
+              Padding(
+                padding: const EdgeInsets.only(right: 8, left: 8),
+                child: SvgPicture.asset(
+                  "images/arrow_right.svg",
+                  color: Colors.white,
+                  width: 16,
+                  height: 16,
+                ),
+              ),
+            ],
           ),
         ],
       ),
