@@ -8,8 +8,8 @@ import 'package:pilll/components/molecules/indicator.dart';
 import 'package:pilll/components/page/hud.dart';
 import 'package:pilll/domain/premium_introduction/premium_introduction_body.dart';
 import 'package:pilll/domain/premium_introduction/premium_introduction_store.dart';
+import 'package:pilll/domain/premium_introduction/util/discount_deadline.dart';
 import 'package:pilll/error/universal_error_page.dart';
-import 'package:pilll/util/datetime/timer.dart';
 
 class PremiumIntroductionSheet extends HookWidget {
   @override
@@ -18,13 +18,12 @@ class PremiumIntroductionSheet extends HookWidget {
     final state = useProvider(premiumIntroductionStoreProvider.state);
     final offerings = state.offerings;
     final trialDeadlineDate = state.trialDeadlineDate;
-    final bool isBlessMode;
+    final bool isOverDiscountDeadline;
     if (trialDeadlineDate != null) {
-      final isOverTiralDeadline =
-          useProvider(isOverTrialDeadlineProvider(trialDeadlineDate));
-      isBlessMode = !isOverTiralDeadline;
+      isOverDiscountDeadline =
+          useProvider(isOverDiscountDeadlineProvider(trialDeadlineDate));
     } else {
-      isBlessMode = false;
+      isOverDiscountDeadline = false;
     }
     if (state.isNotYetLoad) {
       return Indicator();
@@ -40,7 +39,7 @@ class PremiumIntroductionSheet extends HookWidget {
             error: null,
             reload: () => store.reset(),
             child: PremiumIntroductionBody(
-              isBlessMode: isBlessMode,
+              isOverDiscountDeadline: isOverDiscountDeadline,
               shownDismissButton: false,
               trialDeadlineDate: trialDeadlineDate,
               offerings: offerings,

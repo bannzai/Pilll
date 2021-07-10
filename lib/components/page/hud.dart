@@ -74,6 +74,7 @@ class _HUDState extends State<HUD> {
       return _hud(context);
     }
     return Stack(
+      alignment: AlignmentDirectional.bottomCenter,
       children: [
         child,
         _hud(context),

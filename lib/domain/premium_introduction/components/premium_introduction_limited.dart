@@ -4,26 +4,28 @@ import 'package:flutter_svg/svg.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
+import 'package:pilll/domain/premium_introduction/util/discount_deadline.dart';
 import 'package:pilll/util/datetime/timer.dart';
 import 'package:pilll/util/formatter/date_time_formatter.dart';
 
 class PremiumIntroductionLimited extends HookWidget {
   final DateTime trialDeadlineDate;
-  DateTime get discountPriceDeadline =>
-      trialDeadlineDate.add(Duration(hours: 48));
 
   const PremiumIntroductionLimited({Key? key, required this.trialDeadlineDate})
       : super(key: key);
   Widget build(BuildContext context) {
     final timerState = useProvider(timerStateProvider);
+    final discountPriceDeadline =
+        useProvider(discountPriceDeadlineProvider(trialDeadlineDate));
     final diff = discountPriceDeadline.difference(timerState);
-    final String countdown;
     if (diff.inSeconds <= 0) {
-      countdown = "00:00:00";
-    } else {
-      countdown =
-          DateTimeFormatter.clock(diff.inHours, diff.inMinutes, diff.inSeconds);
+      return Container();
     }
+    final hour = diff.inHours;
+    final minute = diff.inMinutes % 60;
+    final second = diff.inSeconds % 60;
+    final countdown =
+        DateTimeFormatter.clock(hour.toInt(), minute.toInt(), second.toInt());
     return Container(
       padding: EdgeInsets.only(left: 40, right: 40),
       width: MediaQuery.of(context).size.width,

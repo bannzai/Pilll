@@ -11,17 +11,21 @@ import 'package:pilll/entity/setting.dart';
 
 class PillSheetAppearanceModeRow extends HookWidget {
   final bool isPremium;
+  final bool isTrial;
   final Setting setting;
+
+  bool get isDisableEvent => isPremium || isTrial;
 
   const PillSheetAppearanceModeRow({
     Key? key,
+    required this.isTrial,
     required this.isPremium,
     required this.setting,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    if (isPremium) {
+    if (isDisableEvent) {
       return _body(context);
     } else {
       return GestureDetector(
@@ -61,7 +65,7 @@ class PillSheetAppearanceModeRow extends HookWidget {
     analytics.logEvent(
       name: "did_select_pill_sheet_appearance",
     );
-    if (!isPremium) {
+    if (!isDisableEvent) {
       showPremiumIntroductionSheet(context);
     } else {
       final pillSheetAppearanceMode =

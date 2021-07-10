@@ -10,11 +10,6 @@ final timerStoreProvider = StateNotifierProvider(
 final timerStateProvider = Provider.autoDispose(
   (ref) => ref.watch(timerStoreProvider.state),
 );
-final isOverTrialDeadlineProvider =
-    Provider.family.autoDispose((ref, DateTime trialDeadlineDate) {
-  final now = ref.watch(timerStateProvider);
-  return now.isAfter(trialDeadlineDate);
-});
 
 class TimerStateStore extends StateNotifier<DateTime> {
   Timer? _timer;

@@ -22,21 +22,25 @@ abstract class PurchaseButtonsState implements _$PurchaseButtonsState {
   factory PurchaseButtonsState({
     required Offerings offerings,
     required DateTime? trialDeadlineDate,
-    required bool? isOverTrialDeadline,
+    required bool? isOverDiscountDeadline,
   }) = _PurchaseButtonsState;
 
   OfferingType get _offeringType {
     final trialDeadlineDate = this.trialDeadlineDate;
     if (trialDeadlineDate == null) {
+      print("[DEBUG] trialDeadlineDate is null");
       return OfferingType.premium;
     }
-    final isOverTrialDeadline = this.isOverTrialDeadline;
-    if (isOverTrialDeadline == null) {
+    final isOverDiscountDeadline = this.isOverDiscountDeadline;
+    if (isOverDiscountDeadline == null) {
+      print("[DEBUG] isOverDiscountDeadline is null");
       return OfferingType.premium;
     }
-    if (isOverTrialDeadline) {
+    if (isOverDiscountDeadline) {
+      print("[DEBUG] isOverDiscountDeadline is true");
       return OfferingType.premium;
     } else {
+      print("[DEBUG] isOverDiscountDeadline is false");
       return OfferingType.limited;
     }
   }

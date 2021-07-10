@@ -15,29 +15,32 @@ class PremiumTrialLimitNotificationBar extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: () async {
-        await launch(preimumLink);
-      },
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          SizedBox(width: 24),
-          Spacer(),
-          Text(
-            premiumTrialLimit,
-            style: FontType.assistingBold.merge(TextColorStyle.white),
-            textAlign: TextAlign.center,
-          ),
-          Spacer(),
-          SvgPicture.asset(
-            "images/arrow_right.svg",
-            color: Colors.white,
-            width: 16,
-            height: 16,
-          ),
-          SizedBox(width: 8),
-        ],
+    return Container(
+      padding: EdgeInsets.only(top: 10, bottom: 10),
+      child: GestureDetector(
+        onTap: () async {
+          await launch(preimumLink);
+        },
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            SizedBox(width: 24),
+            Spacer(),
+            Text(
+              premiumTrialLimit,
+              style: FontType.assistingBold.merge(TextColorStyle.white),
+              textAlign: TextAlign.center,
+            ),
+            Spacer(),
+            SvgPicture.asset(
+              "images/arrow_right.svg",
+              color: Colors.white,
+              width: 16,
+              height: 16,
+            ),
+            SizedBox(width: 8),
+          ],
+        ),
       ),
     );
   }

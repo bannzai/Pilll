@@ -12,14 +12,14 @@ import 'package:url_launcher/url_launcher.dart';
 class PremiumIntroductionBody extends StatelessWidget {
   const PremiumIntroductionBody({
     Key? key,
-    required this.isBlessMode,
+    required this.isOverDiscountDeadline,
     required this.shownDismissButton,
     required this.trialDeadlineDate,
     required this.offerings,
     required this.scrollController,
   }) : super(key: key);
 
-  final bool isBlessMode;
+  final bool isOverDiscountDeadline;
   final bool shownDismissButton;
   final DateTime? trialDeadlineDate;
   final Offerings? offerings;
@@ -37,7 +37,7 @@ class PremiumIntroductionBody extends StatelessWidget {
           Container(
             decoration: BoxDecoration(
               color: Colors.transparent,
-              image: isBlessMode
+              image: !isOverDiscountDeadline
                   ? DecorationImage(
                       image: AssetImage("images/premium_background.png"),
                       fit: BoxFit.cover,

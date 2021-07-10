@@ -74,6 +74,7 @@ class SettingPage extends HookWidget {
                       PillSheetAppearanceModeRow(
                         setting: setting,
                         isPremium: state.isPremium,
+                        isTrial: state.isTrial,
                       ),
                       _separator(),
                       if (pillSheet != null && !pillSheet.isInvalid) ...[

@@ -6,8 +6,8 @@ import 'package:pilll/components/molecules/indicator.dart';
 import 'package:pilll/components/page/hud.dart';
 import 'package:pilll/domain/premium_introduction/premium_introduction_body.dart';
 import 'package:pilll/domain/premium_introduction/premium_introduction_store.dart';
+import 'package:pilll/domain/premium_introduction/util/discount_deadline.dart';
 import 'package:pilll/error/universal_error_page.dart';
-import 'package:pilll/util/datetime/timer.dart';
 
 class PremiumIntroductionPage extends HookWidget {
   @override
@@ -19,7 +19,7 @@ class PremiumIntroductionPage extends HookWidget {
     final bool isBlessMode;
     if (trialDeadlineDate != null) {
       final isOverTiralDeadline =
-          useProvider(isOverTrialDeadlineProvider(trialDeadlineDate));
+          useProvider(isOverDiscountDeadlineProvider(trialDeadlineDate));
       isBlessMode = !isOverTiralDeadline;
     } else {
       isBlessMode = false;
@@ -37,7 +37,7 @@ class PremiumIntroductionPage extends HookWidget {
           backgroundColor: Colors.white,
           body: SafeArea(
             child: PremiumIntroductionBody(
-              isBlessMode: isBlessMode,
+              isOverDiscountDeadline: isBlessMode,
               shownDismissButton: true,
               trialDeadlineDate: trialDeadlineDate,
               offerings: offerings,

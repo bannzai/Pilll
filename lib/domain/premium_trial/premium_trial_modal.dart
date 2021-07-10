@@ -106,10 +106,11 @@ class PremiumTrialModal extends HookWidget {
                           child: Text(
                             "プレミアム機能がお試しできます。自動で課金される事はありません。",
                             style: TextStyle(
-                                color: TextColor.black,
-                                fontFamily: FontFamily.japanese,
-                                fontWeight: FontWeight.w400,
-                                fontSize: 14),
+                              color: TextColor.black,
+                              fontFamily: FontFamily.japanese,
+                              fontWeight: FontWeight.w400,
+                              fontSize: 14,
+                            ),
                             textAlign: TextAlign.center,
                           ),
                         ),
