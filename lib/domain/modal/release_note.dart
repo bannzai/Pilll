@@ -40,7 +40,7 @@ class ReleaseNote extends StatelessWidget {
                     child: Container(
                       padding: EdgeInsets.only(top: 40),
                       child: Text(
-                        "引き継ぎ設定が\nできるようになりました✨",
+                        "通知から服用記録ができるようになりました！",
                         style: FontType.subTitle.merge(TextColorStyle.black),
                         textAlign: TextAlign.center,
                       ),
@@ -55,9 +55,8 @@ class ReleaseNote extends StatelessWidget {
                   children: [
                     Text(
                       '''
-機種変更やスマホ紛失時などに備えて、引き継ぎ設定をしませんか？
-
-設定画面から設定可能です！
+Apple Watchからも服用記録ができます。
+その他にも新機能が続々登場！
                       ''',
                       style: FontType.assisting.merge(TextColorStyle.main),
                     ),
@@ -103,7 +102,7 @@ openReleaseNote() async {
   final ChromeSafariBrowser browser = new ChromeSafariBrowser();
   await browser.open(
       url: Uri.parse(
-          "https://pilll.anotion.so/733c950541f54eeda6c338d756379020"),
+          "https://pilll.anotion.so/6b4ac5d845f24f7ca864f6b501690694"),
       options: ChromeSafariBrowserClassOptions(
           android:
               AndroidChromeCustomTabsOptions(addDefaultShareMenuItem: false),
