@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/components/atoms/color.dart';
+import 'package:pilll/domain/premium_trial/premium_trial_complete_modal.dart';
+import 'package:pilll/domain/premium_trial/premium_trial_modal.dart';
 import 'package:pilll/domain/record/components/notification_bar/notification_bar_store.dart';
 import 'package:pilll/domain/record/components/notification_bar/premium_trial_guide.dart';
 import 'package:pilll/domain/record/components/notification_bar/premium_trial_limit.dart';
@@ -30,6 +32,7 @@ class NotificationBar extends HookWidget {
 
   Widget? _body(BuildContext context) {
     final state = useProvider(notificationBarStateProvider(parameter));
+    final store = useProvider(notificationBarStoreProvider(parameter));
     if (!state.isPremium) {
       final restDurationNotification = state.restDurationNotification;
       if (restDurationNotification != null) {
@@ -48,7 +51,16 @@ class NotificationBar extends HookWidget {
       if (!state.isTrial) {
         if (state.trialDeadlineDate == null) {
           if (!state.premiumTrialGuideNotificationIsClosed) {
-            return PremiumTrialGuideNotificationBar(parameter: parameter);
+            return PremiumTrialGuideNotificationBar(
+              onTap: () {
+                showPremiumTrialModal(context, () {
+                  showPremiumTrialCompleteModalPreDialog(context);
+                });
+              },
+              onClose: () {
+                store.closePremiumTrialNotification();
+              },
+            );
           }
         }
       }
