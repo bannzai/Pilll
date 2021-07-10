@@ -1,7 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:pilll/analytics.dart';
 import 'package:pilll/components/atoms/color.dart';
+import 'package:pilll/domain/demography/demography_page.dart';
 import 'package:pilll/domain/premium_trial/premium_trial_complete_modal.dart';
 import 'package:pilll/domain/premium_trial/premium_trial_modal.dart';
 import 'package:pilll/domain/record/components/notification_bar/notification_bar_store.dart';
@@ -11,6 +13,8 @@ import 'package:pilll/domain/record/components/notification_bar/recommend_signup
 import 'package:pilll/domain/record/components/notification_bar/recommend_signup_premium.dart';
 import 'package:pilll/domain/record/components/notification_bar/rest_duration.dart';
 import 'package:pilll/domain/record/record_page_state.dart';
+import 'package:pilll/signin/signin_sheet.dart';
+import 'package:pilll/signin/signin_sheet_state.dart';
 
 class NotificationBar extends HookWidget {
   final RecordPageState parameter;
@@ -43,7 +47,25 @@ class NotificationBar extends HookWidget {
       if (!state.isLinkedLoginProvider) {
         if (state.totalCountOfActionForTakenPill >= 7) {
           if (!state.recommendedSignupNotificationIsAlreadyShow) {
-            return RecommendSignupNotificationBar(parameter: parameter);
+            return RecommendSignupNotificationBar(
+              onTap: () {
+                analytics.logEvent(name: "tapped_signup_notification_bar");
+                showSigninSheet(
+                  context,
+                  SigninSheetStateContext.recordPage,
+                  (linkAccount) {
+                    analytics.logEvent(
+                        name: "signined_account_from_notification_bar");
+                    showDemographyPageIfNeeded(context);
+                  },
+                );
+              },
+              onClose: () {
+                analytics.logEvent(
+                    name: "record_page_signing_notification_closed");
+                store.closeRecommendedSignupNotification();
+              },
+            );
           }
         }
       }
