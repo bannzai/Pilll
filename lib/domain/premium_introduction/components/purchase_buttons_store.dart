@@ -15,6 +15,10 @@ final purchaseButtonsStoreProvider =
     StateNotifierProvider.family.autoDispose((ref, PurchaseButtonsState state) {
   return PurchaseButtonsStore(state);
 });
+final purchaseButtonStateProvider =
+    Provider.family.autoDispose((ref, PurchaseButtonsState state) {
+  return ref.watch(purchaseButtonsStoreProvider(state).state);
+});
 
 class PurchaseButtonsStore extends StateNotifier<PurchaseButtonsState> {
   PurchaseButtonsStore(PurchaseButtonsState state) : super(state);

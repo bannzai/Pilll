@@ -22,7 +22,7 @@ class PremiumIntroductionSheet extends HookWidget {
   @override
   Widget build(BuildContext context) {
     final store = useProvider(premiumIntroductionStoreProvider);
-    final state = useProvider(premiumIntroductionStoreProvider.state);
+    final state = useProvider(premiumIntroductionStateProvider);
     final offerings = state.offerings;
     final trialDeadlineDate = state.trialDeadlineDate;
     final bool isOverDiscountDeadline;

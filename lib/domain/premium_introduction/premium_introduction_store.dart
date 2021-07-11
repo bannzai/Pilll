@@ -15,6 +15,8 @@ final premiumIntroductionStoreProvider = StateNotifierProvider.autoDispose(
     ref.watch(purchaseServiceProvider),
   ),
 );
+final premiumIntroductionStateProvider = Provider.autoDispose(
+    (ref) => ref.watch(premiumIntroductionStoreProvider.state));
 
 class PremiumIntroductionStore extends StateNotifier<PremiumIntroductionState> {
   final UserService _userService;
