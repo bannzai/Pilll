@@ -79,6 +79,8 @@ void main() {
                   .overrideWithProvider((ref, param) => state),
               isOverDiscountDeadlineProvider
                   .overrideWithProvider((ref, param) => false),
+              durationToDiscountPriceDeadline.overrideWithProvider(
+                  (ref, param) => Duration(seconds: 1000)),
             ],
             child: MaterialApp(
               home: Material(child: NotificationBar(recordPageState)),
