@@ -376,8 +376,8 @@ class MockUserService extends _i1.Mock implements _i20.UserService {
           returnValue: Future<void>.value(),
           returnValueForMissingStub: Future.value()) as _i12.Future<void>);
   @override
-  _i12.Future<void> trial() =>
-      (super.noSuchMethod(Invocation.method(#trial, []),
+  _i12.Future<void> trial(_i3.Setting? setting) =>
+      (super.noSuchMethod(Invocation.method(#trial, [setting]),
           returnValue: Future<void>.value(),
           returnValueForMissingStub: Future.value()) as _i12.Future<void>);
 }
