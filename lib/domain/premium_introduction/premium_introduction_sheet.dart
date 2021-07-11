@@ -81,6 +81,8 @@ class PremiumIntroductionSheet extends HookWidget {
                             PurchaseButtons(
                               offerings: offerings,
                               trialDeadlineDate: trialDeadlineDate,
+                              isExpiredDiscountEntitlements:
+                                  state.isExpiredDiscountEntitlements,
                             ),
                           ],
                           SizedBox(height: 24),
