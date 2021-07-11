@@ -42,9 +42,9 @@ class NotificationBar extends HookWidget {
     final store = useProvider(notificationBarStoreProvider(parameter));
     if (!state.isPremium) {
       if (!state.isExpiredDiscountEntitlements) {
-        final trialDeadlineDate = state.trialDeadlineDate;
-        if (trialDeadlineDate != null) {
-          if (!state.isTrial) {
+        if (!state.isTrial) {
+          final trialDeadlineDate = state.trialDeadlineDate;
+          if (trialDeadlineDate != null) {
             // NOTE: watch state
             final isOverDiscountDeadline =
                 useProvider(isOverDiscountDeadlineProvider(trialDeadlineDate));
