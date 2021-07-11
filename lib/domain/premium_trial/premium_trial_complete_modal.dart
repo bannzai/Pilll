@@ -5,6 +5,7 @@ import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:flutter/material.dart';
+import 'package:pilll/util/links.dart';
 
 class PremiumTrialCompleteModal extends StatelessWidget {
   const PremiumTrialCompleteModal({Key? key}) : super(key: key);
@@ -92,7 +93,7 @@ showPremiumTrialCompleteModalPreDialog(BuildContext context) async {
 openPremiumFunctions() async {
   final ChromeSafariBrowser browser = new ChromeSafariBrowser();
   await browser.open(
-      url: Uri.parse("TODO"),
+      url: Uri.parse(preimumLink),
       options: ChromeSafariBrowserClassOptions(
           android:
               AndroidChromeCustomTabsOptions(addDefaultShareMenuItem: false),

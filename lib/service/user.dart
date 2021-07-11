@@ -4,6 +4,7 @@ import 'package:firebase_auth/firebase_auth.dart' as firebaseAuth;
 import 'package:pilll/database/database.dart';
 import 'package:pilll/entity/demographic.dart';
 import 'package:pilll/entity/package.dart';
+import 'package:pilll/entity/setting.dart';
 import 'package:pilll/entity/user.dart';
 import 'package:pilll/util/datetime/day.dart';
 import 'package:pilll/util/shared_preference/keys.dart';
@@ -223,11 +224,12 @@ class UserService {
         SetOptions(merge: true));
   }
 
-  Future<void> trial() {
+  Future<void> trial(Setting setting) {
     return _database.userReference().set({
       UserFirestoreFieldKeys.isTrial: true,
       UserFirestoreFieldKeys.beginTrialDate: now(),
       UserFirestoreFieldKeys.trialDeadlineDate: now().add(Duration(days: 30)),
+      UserFirestoreFieldKeys.settings: setting.toJson(),
     }, SetOptions(merge: true));
   }
 }
