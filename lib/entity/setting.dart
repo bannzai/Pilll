@@ -48,6 +48,10 @@ extension PillSheetAppearanceModeFunctions on PillSheetAppearanceMode {
   }
 }
 
+abstract class SettingFirestoreFieldKeys {
+  static final pillSheetAppearanceMode = "pillSheetAppearanceMode";
+}
+
 @freezed
 abstract class Setting implements _$Setting {
   Setting._();
