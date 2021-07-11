@@ -77,6 +77,8 @@ class PremiumIntroductionStore extends StateNotifier<PremiumIntroductionState> {
   void dispose() {
     _userStreamCanceller?.cancel();
     _userStreamCanceller = null;
+    _authStreamCanceller?.cancel();
+    _authStreamCanceller = null;
     super.dispose();
   }
 
