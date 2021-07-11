@@ -7,8 +7,12 @@ import 'package:pilll/domain/premium_introduction/util/discount_deadline.dart';
 
 class DiscountPriceDeadline extends HookWidget {
   final DateTime trialDeadlineDate;
+  final VoidCallback onTap;
 
-  DiscountPriceDeadline(this.trialDeadlineDate);
+  DiscountPriceDeadline({
+    required this.trialDeadlineDate,
+    required this.onTap,
+  });
   @override
   Widget build(BuildContext context) {
     final difference =
@@ -19,11 +23,14 @@ class DiscountPriceDeadline extends HookWidget {
     final countdown = discountPriceDeadlineCountdownString(difference);
     return Container(
       padding: EdgeInsets.only(top: 8, bottom: 8),
-      child: Center(
-        child: Text(
-          "トライアル期間が終了しました\n $countdown 内に購入すると記念価格で購入できます",
-          style: FontType.assistingBold.merge(TextColorStyle.white),
-          textAlign: TextAlign.center,
+      child: GestureDetector(
+        onTap: onTap,
+        child: Center(
+          child: Text(
+            "トライアル期間が終了しました\n $countdown 内に購入すると記念価格で購入できます",
+            style: FontType.assistingBold.merge(TextColorStyle.white),
+            textAlign: TextAlign.center,
+          ),
         ),
       ),
     );
