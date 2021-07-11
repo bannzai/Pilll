@@ -88,6 +88,7 @@ void main() {
         service,
         settingService,
         userService,
+        authService,
       );
       await waitForResetStoreState();
       expect(state.entity?.todayPillNumber, equals(1));
@@ -142,6 +143,7 @@ void main() {
       service,
       settingService,
       userService,
+      authService,
     );
     await waitForResetStoreState();
     expect(state.entity?.todayPillNumber, equals(3));
@@ -199,6 +201,7 @@ void main() {
         service,
         settingService,
         userService,
+        authService,
       );
 
       await waitForResetStoreState();
@@ -256,6 +259,7 @@ void main() {
         service,
         settingService,
         userService,
+        authService,
       );
 
       await waitForResetStoreState();
@@ -314,6 +318,7 @@ void main() {
         service,
         settingService,
         userService,
+        authService,
       );
 
       await waitForResetStoreState();
@@ -370,6 +375,7 @@ void main() {
         service,
         settingService,
         userService,
+        authService,
       );
 
       await waitForResetStoreState();
