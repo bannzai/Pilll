@@ -31,7 +31,7 @@ class DiscountPriceDeadline extends HookWidget {
             Align(
               alignment: Alignment.center,
               child: Text(
-                "トライアル期間が終了しました\n$countdown 内に購入すると記念価格で購入できます",
+                "トライアル期間が終了しました\n$countdown内に購入すると割引価格で購入できます",
                 style: FontType.assistingBold.merge(TextColorStyle.white),
                 textAlign: TextAlign.center,
               ),
