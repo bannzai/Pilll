@@ -1,4 +1,6 @@
 import 'package:pilll/analytics.dart';
+import 'package:pilll/domain/premium_introduction/util/discount_deadline.dart';
+import 'package:pilll/domain/record/components/notification_bar/discount_price_deadline.dart';
 import 'package:pilll/domain/record/components/notification_bar/notification_bar.dart';
 import 'package:pilll/domain/record/components/notification_bar/notification_bar_state.dart';
 import 'package:pilll/domain/record/components/notification_bar/notification_bar_store.dart';
@@ -39,6 +41,59 @@ void main() {
   });
   group('notification bar appearance content type', () {
     group('for it is not premium user', () {
+      testWidgets('#DiscountPriceDeadline', (WidgetTester tester) async {
+        final mockTodayRepository = MockTodayService();
+        final today = DateTime(2021, 04, 29);
+
+        when(mockTodayRepository.today()).thenReturn(today);
+        todayRepository = mockTodayRepository;
+
+        var pillSheet = PillSheet.create(PillSheetType.pillsheet_21);
+        pillSheet = pillSheet.copyWith(
+          lastTakenDate: today,
+          beginingDate: today.subtract(
+// NOTE: Into rest duration and notification duration
+            Duration(days: 25),
+          ),
+        );
+        var state = NotificationBarState(
+          pillSheet: pillSheet,
+          totalCountOfActionForTakenPill:
+              totalCountOfActionForTakenPillForLongTimeUser,
+          isPremium: false,
+          isTrial: false,
+          isExpiredDiscountEntitlements: false,
+          isLinkedLoginProvider: false,
+          premiumTrialGuideNotificationIsClosed: false,
+          recommendedSignupNotificationIsAlreadyShow: false,
+          trialDeadlineDate: today.subtract(Duration(days: 1)),
+        );
+
+        final recordPageState = RecordPageState(entity: pillSheet);
+        await tester.pumpWidget(
+          ProviderScope(
+            overrides: [
+              notificationBarStoreProvider.overrideWithProvider(
+                  (ref, param) => MockNotificationBarStateStore()),
+              notificationBarStateProvider
+                  .overrideWithProvider((ref, param) => state),
+              isOverDiscountDeadlineProvider
+                  .overrideWithProvider((ref, param) => false),
+              durationToDiscountPriceDeadline.overrideWithProvider(
+                  (ref, param) => Duration(seconds: 1000)),
+            ],
+            child: MaterialApp(
+              home: Material(child: NotificationBar(recordPageState)),
+            ),
+          ),
+        );
+        await tester.pump();
+
+        expect(
+          find.byWidgetPredicate((widget) => widget is DiscountPriceDeadline),
+          findsOneWidget,
+        );
+      });
       testWidgets('#RestDurationNotificationBar', (WidgetTester tester) async {
         final mockTodayRepository = MockTodayService();
         final today = DateTime(2021, 04, 29);
@@ -60,6 +115,7 @@ void main() {
               totalCountOfActionForTakenPillForLongTimeUser,
           isPremium: false,
           isTrial: false,
+          isExpiredDiscountEntitlements: true,
           isLinkedLoginProvider: false,
           premiumTrialGuideNotificationIsClosed: false,
           recommendedSignupNotificationIsAlreadyShow: false,
@@ -70,6 +126,8 @@ void main() {
         await tester.pumpWidget(
           ProviderScope(
             overrides: [
+              notificationBarStoreProvider.overrideWithProvider(
+                  (ref, param) => MockNotificationBarStateStore()),
               notificationBarStateProvider
                   .overrideWithProvider((ref, param) => state),
             ],
@@ -109,6 +167,7 @@ void main() {
               totalCountOfActionForTakenPillForLongTimeUser,
           isPremium: false,
           isTrial: false,
+          isExpiredDiscountEntitlements: true,
           isLinkedLoginProvider: false,
           premiumTrialGuideNotificationIsClosed: false,
           recommendedSignupNotificationIsAlreadyShow: false,
@@ -159,6 +218,7 @@ void main() {
               totalCountOfActionForTakenPillForLongTimeUser,
           isPremium: false,
           isTrial: false,
+          isExpiredDiscountEntitlements: true,
           isLinkedLoginProvider: true,
           premiumTrialGuideNotificationIsClosed: false,
           recommendedSignupNotificationIsAlreadyShow: false,
@@ -211,6 +271,7 @@ void main() {
               totalCountOfActionForTakenPillForLongTimeUser,
           isPremium: false,
           isTrial: true,
+          isExpiredDiscountEntitlements: true,
           isLinkedLoginProvider: true,
           premiumTrialGuideNotificationIsClosed: false,
           recommendedSignupNotificationIsAlreadyShow: false,
@@ -264,6 +325,7 @@ void main() {
               totalCountOfActionForTakenPillForLongTimeUser,
           isPremium: true,
           isTrial: true,
+          isExpiredDiscountEntitlements: true,
           isLinkedLoginProvider: false,
           premiumTrialGuideNotificationIsClosed: false,
           recommendedSignupNotificationIsAlreadyShow: false,
@@ -274,6 +336,8 @@ void main() {
         await tester.pumpWidget(
           ProviderScope(
             overrides: [
+              notificationBarStoreProvider.overrideWithProvider(
+                  (ref, param) => MockNotificationBarStateStore()),
               notificationBarStateProvider
                   .overrideWithProvider((ref, param) => state),
             ],
@@ -312,6 +376,7 @@ void main() {
               totalCountOfActionForTakenPillForLongTimeUser,
           isPremium: true,
           isTrial: false,
+          isExpiredDiscountEntitlements: true,
           isLinkedLoginProvider: true,
           premiumTrialGuideNotificationIsClosed: false,
           recommendedSignupNotificationIsAlreadyShow: false,
@@ -322,6 +387,8 @@ void main() {
         await tester.pumpWidget(
           ProviderScope(
             overrides: [
+              notificationBarStoreProvider.overrideWithProvider(
+                  (ref, param) => MockNotificationBarStateStore()),
               notificationBarStateProvider
                   .overrideWithProvider((ref, param) => state),
             ],

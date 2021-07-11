@@ -14,9 +14,11 @@ abstract class RecordPageState implements _$RecordPageState {
     @Default(false) bool firstLoadIsEnded,
     @Default(false) bool isPremium,
     @Default(false) bool isTrial,
+    @Default(false) bool isExpiredDiscountEntitlements,
     @Default(false) bool isPillSheetFinishedInThePast,
     @Default(false) bool isAlreadyShowTiral,
     @Default(false) bool shouldShowMigrateInfo,
+    @Default(false) bool isLinkedLoginProvider,
     DateTime? beginTrialDate,
     DateTime? trialDeadlineDate,
     @Default(true) bool recommendedSignupNotificationIsAlreadyShow,
@@ -30,6 +32,9 @@ abstract class RecordPageState implements _$RecordPageState {
       return false;
     }
     if (isTrial) {
+      return false;
+    }
+    if (isExpiredDiscountEntitlements) {
       return false;
     }
     if (!firstLoadIsEnded) {

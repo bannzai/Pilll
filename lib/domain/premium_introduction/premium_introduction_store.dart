@@ -34,6 +34,7 @@ class PremiumIntroductionStore extends StateNotifier<PremiumIntroductionState> {
           isTrial: value.isTrial,
           beginTrialDate: value.beginTrialDate,
           trialDeadlineDate: value.trialDeadlineDate,
+          isExpiredDiscountEntitlements: value.isExpiredDiscountEntitlements,
         );
       });
       _fetchOfferings().then((value) {
@@ -58,7 +59,11 @@ class PremiumIntroductionStore extends StateNotifier<PremiumIntroductionState> {
   _subscribe() {
     _userStreamCanceller?.cancel();
     _userStreamCanceller = _userService.subscribe().listen((event) {
-      state = state.copyWith(isPremium: event.isPremium);
+      state = state.copyWith(
+        isPremium: event.isPremium,
+        isTrial: event.isTrial,
+        isExpiredDiscountEntitlements: event.isExpiredDiscountEntitlements,
+      );
     });
     _authStreamCanceller?.cancel();
     _authStreamCanceller = _authService.subscribe().listen((_) {
@@ -72,6 +77,8 @@ class PremiumIntroductionStore extends StateNotifier<PremiumIntroductionState> {
   void dispose() {
     _userStreamCanceller?.cancel();
     _userStreamCanceller = null;
+    _authStreamCanceller?.cancel();
+    _authStreamCanceller = null;
     super.dispose();
   }
 

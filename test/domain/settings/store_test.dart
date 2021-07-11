@@ -11,13 +11,20 @@ import 'package:shared_preferences/shared_preferences.dart';
 import '../../helper/mock.mocks.dart';
 
 class _FakeUser extends Fake implements User {
-  _FakeUser({this.fakeIsPremium = false, this.fakeIsTrial = false});
+  _FakeUser({
+    this.fakeIsPremium = false,
+    this.fakeIsTrial = false,
+    this.fakeIsExpiredDiscountEntitlements = false,
+  });
   final bool fakeIsPremium;
   final bool fakeIsTrial;
+  final bool fakeIsExpiredDiscountEntitlements;
   @override
   bool get isPremium => fakeIsPremium;
   @override
   bool get isTrial => fakeIsTrial;
+  @override
+  bool get isExpiredDiscountEntitlements => fakeIsExpiredDiscountEntitlements;
 }
 
 class _FakeSetting extends Fake implements Setting {

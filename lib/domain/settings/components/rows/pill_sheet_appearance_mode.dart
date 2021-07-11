@@ -59,9 +59,9 @@ class PillSheetAppearanceModeRow extends HookWidget {
 
   _onChanged(
     BuildContext context,
-    bool value,
+    bool isOn,
     SettingStateStore store,
-  ) {
+  ) async {
     analytics.logEvent(
       name: "did_select_pill_sheet_appearance",
     );
@@ -69,8 +69,17 @@ class PillSheetAppearanceModeRow extends HookWidget {
       showPremiumIntroductionSheet(context);
     } else {
       final pillSheetAppearanceMode =
-          value ? PillSheetAppearanceMode.date : PillSheetAppearanceMode.number;
-      store.modifyPillSheetAppearanceMode(pillSheetAppearanceMode);
+          isOn ? PillSheetAppearanceMode.date : PillSheetAppearanceMode.number;
+      await store.modifyPillSheetAppearanceMode(pillSheetAppearanceMode);
+      ScaffoldMessenger.of(context).hideCurrentSnackBar();
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(
+          duration: Duration(seconds: 2),
+          content: Text(
+            "日付表示モードを${isOn ? "有効" : "無効"}にしました",
+          ),
+        ),
+      );
     }
   }
 }
