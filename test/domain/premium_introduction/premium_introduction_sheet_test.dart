@@ -65,8 +65,58 @@ void main() {
         new TestViewConfiguration(size: const Size(375.0, 667.0));
   });
   group('#PremiumIntroductionSheet', () {
+    final mockTodayRepository = MockTodayService();
+    final today = DateTime(2021, 04, 29);
+    final trialDeadlineDate = today.subtract(Duration(days: 1));
+
+    when(mockTodayRepository.today()).thenReturn(today);
+    todayRepository = mockTodayRepository;
     group('user has discount entitlements', () {
+      final isExpiredDiscountEntitlements = false;
+      final isOverDiscountDeadline = false;
       testWidgets('#PremiumIntroductionLimited is found',
+          (WidgetTester tester) async {
+        var state = PremiumIntroductionState();
+        state = state.copyWith(
+          offerings: _FakeOfferings(),
+          isExpiredDiscountEntitlements: isExpiredDiscountEntitlements,
+          trialDeadlineDate: trialDeadlineDate,
+        );
+
+        final sheet = PremiumIntroductionSheet();
+        await tester.pumpWidget(
+          ProviderScope(
+            overrides: [
+              premiumIntroductionStateProvider.overrideWithValue(state),
+              premiumIntroductionStoreProvider.overrideWithProvider(
+                  StateNotifierProvider.autoDispose(
+                      (ref) => MockPremiumIntroductionStore())),
+              isOverDiscountDeadlineProvider
+                  .overrideWithProvider((ref, param) => isOverDiscountDeadline),
+              durationToDiscountPriceDeadline.overrideWithProvider(
+                  (ref, param) => Duration(seconds: 1000)),
+              purchaseButtonsStoreProvider.overrideWithProvider(
+                  (ref, param) => MockPurchaseButtonsStore()),
+              purchaseButtonStateProvider.overrideWithProvider(
+                  (ref, param) => _FakePurchaseButtonState()),
+            ],
+            child: MaterialApp(
+              home: sheet,
+            ),
+          ),
+        );
+        await tester.pump();
+
+        expect(
+          find.byWidgetPredicate(
+              (widget) => widget is PremiumIntroductionLimited),
+          findsOneWidget,
+        );
+      });
+    });
+    group('user does not has discount entitlements', () {
+      final isExpiredDiscountEntitlements = true;
+      testWidgets('#PremiumIntroductionLimited is not found',
           (WidgetTester tester) async {
         final mockTodayRepository = MockTodayService();
         final today = DateTime(2021, 04, 29);
@@ -77,7 +127,7 @@ void main() {
         var state = PremiumIntroductionState();
         state = state.copyWith(
           offerings: _FakeOfferings(),
-          isExpiredDiscountEntitlements: false,
+          isExpiredDiscountEntitlements: isExpiredDiscountEntitlements,
           trialDeadlineDate: today.subtract(Duration(days: 1)),
         );
 
@@ -108,11 +158,12 @@ void main() {
         expect(
           find.byWidgetPredicate(
               (widget) => widget is PremiumIntroductionLimited),
-          findsOneWidget,
+          findsNothing,
         );
       });
     });
-    group('user does not has discount entitlements', () {
+    group('is over discount deadline ', () {
+      final isOverDiscountDeadline = true;
       testWidgets('#PremiumIntroductionLimited is not found',
           (WidgetTester tester) async {
         final mockTodayRepository = MockTodayService();
@@ -124,8 +175,56 @@ void main() {
         var state = PremiumIntroductionState();
         state = state.copyWith(
           offerings: _FakeOfferings(),
-          isExpiredDiscountEntitlements: true,
+          isExpiredDiscountEntitlements: false,
           trialDeadlineDate: today.subtract(Duration(days: 1)),
+        );
+
+        final sheet = PremiumIntroductionSheet();
+        await tester.pumpWidget(
+          ProviderScope(
+            overrides: [
+              premiumIntroductionStateProvider.overrideWithValue(state),
+              premiumIntroductionStoreProvider.overrideWithProvider(
+                  StateNotifierProvider.autoDispose(
+                      (ref) => MockPremiumIntroductionStore())),
+              isOverDiscountDeadlineProvider
+                  .overrideWithProvider((ref, param) => isOverDiscountDeadline),
+              durationToDiscountPriceDeadline.overrideWithProvider(
+                  (ref, param) => Duration(seconds: 1000)),
+              purchaseButtonsStoreProvider.overrideWithProvider(
+                  (ref, param) => MockPurchaseButtonsStore()),
+              purchaseButtonStateProvider.overrideWithProvider(
+                  (ref, param) => _FakePurchaseButtonState()),
+            ],
+            child: MaterialApp(
+              home: sheet,
+            ),
+          ),
+        );
+        await tester.pump();
+
+        expect(
+          find.byWidgetPredicate(
+              (widget) => widget is PremiumIntroductionLimited),
+          findsNothing,
+        );
+      });
+    });
+    group('trial deadline date is null', () {
+      DateTime? trialDeadlineDate;
+      testWidgets('#PremiumIntroductionLimited is not found',
+          (WidgetTester tester) async {
+        final mockTodayRepository = MockTodayService();
+        final today = DateTime(2021, 04, 29);
+
+        when(mockTodayRepository.today()).thenReturn(today);
+        todayRepository = mockTodayRepository;
+
+        var state = PremiumIntroductionState();
+        state = state.copyWith(
+          offerings: _FakeOfferings(),
+          isExpiredDiscountEntitlements: false,
+          trialDeadlineDate: trialDeadlineDate,
         );
 
         final sheet = PremiumIntroductionSheet();

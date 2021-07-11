@@ -72,6 +72,7 @@ class PremiumIntroductionSheet extends HookWidget {
                         children: [
                           PremiumIntroductionHeader(),
                           if (trialDeadlineDate != null &&
+                              !isOverDiscountDeadline &&
                               !state.isExpiredDiscountEntitlements)
                             PremiumIntroductionLimited(
                               trialDeadlineDate: trialDeadlineDate,
