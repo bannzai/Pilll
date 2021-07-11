@@ -2,7 +2,6 @@ import 'dart:async';
 
 import 'package:pilll/domain/record/components/notification_bar/notification_bar_state.dart';
 import 'package:pilll/domain/record/record_page_state.dart';
-import 'package:pilll/service/auth.dart';
 import 'package:pilll/util/shared_preference/keys.dart';
 import 'package:riverpod/riverpod.dart';
 import 'package:shared_preferences/shared_preferences.dart';
