@@ -492,9 +492,6 @@ class MockNotificationBarStateStore extends _i1.Mock
       (super.noSuchMethod(Invocation.getter(#hasListeners), returnValue: false)
           as bool);
   @override
-  void dispose() => super.noSuchMethod(Invocation.method(#dispose, []),
-      returnValueForMissingStub: null);
-  @override
   _i10.Future<void> closeRecommendedSignupNotification() => (super.noSuchMethod(
       Invocation.method(#closeRecommendedSignupNotification, []),
       returnValue: Future<void>.value(),
@@ -512,4 +509,7 @@ class MockNotificationBarStateStore extends _i1.Mock
           Invocation.method(
               #addListener, [listener], {#fireImmediately: fireImmediately}),
           returnValue: () {}) as _i21.RemoveListener);
+  @override
+  void dispose() => super.noSuchMethod(Invocation.method(#dispose, []),
+      returnValueForMissingStub: null);
 }
