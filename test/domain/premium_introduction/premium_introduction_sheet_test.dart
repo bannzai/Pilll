@@ -66,7 +66,8 @@ void main() {
   });
   group('#PremiumIntroductionSheet', () {
     group('user has discount entitlements', () {
-      testWidgets('#PremiumIntroductionLimited', (WidgetTester tester) async {
+      testWidgets('#PremiumIntroductionLimited is found',
+          (WidgetTester tester) async {
         final mockTodayRepository = MockTodayService();
         final today = DateTime(2021, 04, 29);
 
@@ -108,6 +109,53 @@ void main() {
           find.byWidgetPredicate(
               (widget) => widget is PremiumIntroductionLimited),
           findsOneWidget,
+        );
+      });
+    });
+    group('user does not has discount entitlements', () {
+      testWidgets('#PremiumIntroductionLimited is not found',
+          (WidgetTester tester) async {
+        final mockTodayRepository = MockTodayService();
+        final today = DateTime(2021, 04, 29);
+
+        when(mockTodayRepository.today()).thenReturn(today);
+        todayRepository = mockTodayRepository;
+
+        var state = PremiumIntroductionState();
+        state = state.copyWith(
+          offerings: _FakeOfferings(),
+          isExpiredDiscountEntitlements: true,
+          trialDeadlineDate: today.subtract(Duration(days: 1)),
+        );
+
+        final sheet = PremiumIntroductionSheet();
+        await tester.pumpWidget(
+          ProviderScope(
+            overrides: [
+              premiumIntroductionStateProvider.overrideWithValue(state),
+              premiumIntroductionStoreProvider.overrideWithProvider(
+                  StateNotifierProvider.autoDispose(
+                      (ref) => MockPremiumIntroductionStore())),
+              isOverDiscountDeadlineProvider
+                  .overrideWithProvider((ref, param) => false),
+              durationToDiscountPriceDeadline.overrideWithProvider(
+                  (ref, param) => Duration(seconds: 1000)),
+              purchaseButtonsStoreProvider.overrideWithProvider(
+                  (ref, param) => MockPurchaseButtonsStore()),
+              purchaseButtonStateProvider.overrideWithProvider(
+                  (ref, param) => _FakePurchaseButtonState()),
+            ],
+            child: MaterialApp(
+              home: sheet,
+            ),
+          ),
+        );
+        await tester.pump();
+
+        expect(
+          find.byWidgetPredicate(
+              (widget) => widget is PremiumIntroductionLimited),
+          findsNothing,
         );
       });
     });
