@@ -227,7 +227,7 @@ class UserService {
     return _database.userReference().set({
       UserFirestoreFieldKeys.isTrial: true,
       UserFirestoreFieldKeys.beginTrialDate: now(),
-      UserFirestoreFieldKeys.trialDeadlineDate: today().add(Duration(days: 30)),
+      UserFirestoreFieldKeys.trialDeadlineDate: now().add(Duration(days: 30)),
     }, SetOptions(merge: true));
   }
 }
