@@ -10,7 +10,6 @@ import 'package:shared_preferences/shared_preferences.dart';
 final notificationBarStoreProvider = StateNotifierProvider.autoDispose.family(
   (ref, RecordPageState parameter) => NotificationBarStateStore(
     parameter,
-    ref.watch(authServiceProvider),
   ),
 );
 final notificationBarStateProvider = Provider.autoDispose.family(
@@ -20,8 +19,7 @@ final notificationBarStateProvider = Provider.autoDispose.family(
 
 class NotificationBarStateStore extends StateNotifier<NotificationBarState> {
   final RecordPageState parameter;
-  final AuthService _authService;
-  NotificationBarStateStore(this.parameter, this._authService)
+  NotificationBarStateStore(this.parameter)
       : super(
           NotificationBarState(
             pillSheet: parameter.entity,
@@ -32,42 +30,13 @@ class NotificationBarStateStore extends StateNotifier<NotificationBarState> {
             isExpiredDiscountEntitlements:
                 parameter.isExpiredDiscountEntitlements,
             trialDeadlineDate: parameter.trialDeadlineDate,
+            isLinkedLoginProvider: parameter.isLinkedLoginProvider,
             premiumTrialGuideNotificationIsClosed:
                 parameter.premiumTrialGuideNotificationIsClosed,
             recommendedSignupNotificationIsAlreadyShow:
                 parameter.recommendedSignupNotificationIsAlreadyShow,
           ),
-        ) {
-    reset();
-  }
-
-  reset() {
-    Future(() async {
-      state = state.copyWith(
-        isLinkedLoginProvider:
-            _authService.isLinkedApple() || _authService.isLinkedGoogle(),
-      );
-      _subscribe();
-    });
-  }
-
-  StreamSubscription? _authServiceCanceller;
-  _subscribe() {
-    _authServiceCanceller?.cancel();
-    _authServiceCanceller = _authService.subscribe().listen((event) {
-      state = state.copyWith(
-          isLinkedLoginProvider:
-              _authService.isLinkedApple() || _authService.isLinkedGoogle());
-    });
-  }
-
-  @override
-  dispose() {
-    _authServiceCanceller?.cancel();
-    _authServiceCanceller = null;
-    super.dispose();
-  }
-
+        );
   Future<void> closeRecommendedSignupNotification() async {
     final sharedPreferences = await SharedPreferences.getInstance();
     sharedPreferences.setBool(

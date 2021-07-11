@@ -18,6 +18,7 @@ abstract class RecordPageState implements _$RecordPageState {
     @Default(false) bool isPillSheetFinishedInThePast,
     @Default(false) bool isAlreadyShowTiral,
     @Default(false) bool shouldShowMigrateInfo,
+    @Default(false) bool isLinkedLoginProvider,
     DateTime? beginTrialDate,
     DateTime? trialDeadlineDate,
     @Default(true) bool recommendedSignupNotificationIsAlreadyShow,

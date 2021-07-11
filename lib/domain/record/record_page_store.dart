@@ -6,6 +6,7 @@ import 'package:pilll/analytics.dart';
 import 'package:pilll/entity/pill_mark_type.dart';
 import 'package:pilll/entity/pill_sheet.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
+import 'package:pilll/service/auth.dart';
 import 'package:pilll/service/pill_sheet.dart';
 import 'package:pilll/domain/record/record_page_state.dart';
 import 'package:pilll/service/setting.dart';
@@ -18,16 +19,19 @@ final recordPageStoreProvider = StateNotifierProvider((ref) => RecordPageStore(
       ref.watch(pillSheetServiceProvider),
       ref.watch(settingServiceProvider),
       ref.watch(userServiceProvider),
+      ref.watch(authServiceProvider),
     ));
 
 class RecordPageStore extends StateNotifier<RecordPageState> {
   final PillSheetService _service;
   final SettingService _settingService;
   final UserService _userService;
+  final AuthService _authService;
   RecordPageStore(
     this._service,
     this._settingService,
     this._userService,
+    this._authService,
   ) : super(RecordPageState(entity: null)) {
     reset();
   }
@@ -81,6 +85,8 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
         isExpiredDiscountEntitlements: user.isExpiredDiscountEntitlements,
         trialDeadlineDate: user.trialDeadlineDate,
         shouldShowMigrateInfo: shouldShowMigrateInfo,
+        isLinkedLoginProvider:
+            _authService.isLinkedApple() || _authService.isLinkedGoogle(),
         recommendedSignupNotificationIsAlreadyShow:
             recommendedSignupNotificationIsAlreadyShow,
         premiumTrialGuideNotificationIsClosed:
@@ -98,6 +104,7 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
   StreamSubscription<PillSheet>? _canceller;
   StreamSubscription? _settingCanceller;
   StreamSubscription? _userSubscribeCanceller;
+  StreamSubscription? _authServiceCanceller;
   void _subscribe() {
     _canceller?.cancel();
     _canceller = _service.subscribeForLatestPillSheet().listen((event) {
@@ -116,6 +123,12 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
         trialDeadlineDate: event.trialDeadlineDate,
       );
     });
+    _authServiceCanceller?.cancel();
+    _authServiceCanceller = _authService.subscribe().listen((event) {
+      state = state.copyWith(
+          isLinkedLoginProvider:
+              _authService.isLinkedApple() || _authService.isLinkedGoogle());
+    });
   }
 
   @override
@@ -123,6 +136,7 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
     _canceller?.cancel();
     _settingCanceller?.cancel();
     _userSubscribeCanceller?.cancel();
+    _authServiceCanceller?.cancel();
     super.dispose();
   }
 

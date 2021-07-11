@@ -25,7 +25,7 @@ class _$NotificationBarStateTearOff {
       required DateTime? trialDeadlineDate,
       required bool recommendedSignupNotificationIsAlreadyShow,
       required bool premiumTrialGuideNotificationIsClosed,
-      bool isLinkedLoginProvider = false}) {
+      required bool isLinkedLoginProvider}) {
     return _NotificationBarState(
       pillSheet: pillSheet,
       totalCountOfActionForTakenPill: totalCountOfActionForTakenPill,
@@ -258,7 +258,7 @@ class _$_NotificationBarState extends _NotificationBarState {
       required this.trialDeadlineDate,
       required this.recommendedSignupNotificationIsAlreadyShow,
       required this.premiumTrialGuideNotificationIsClosed,
-      this.isLinkedLoginProvider = false})
+      required this.isLinkedLoginProvider})
       : super._();
 
   @override
@@ -277,7 +277,6 @@ class _$_NotificationBarState extends _NotificationBarState {
   final bool recommendedSignupNotificationIsAlreadyShow;
   @override
   final bool premiumTrialGuideNotificationIsClosed;
-  @JsonKey(defaultValue: false)
   @override
   final bool isLinkedLoginProvider;
 
@@ -357,7 +356,7 @@ abstract class _NotificationBarState extends NotificationBarState {
       required DateTime? trialDeadlineDate,
       required bool recommendedSignupNotificationIsAlreadyShow,
       required bool premiumTrialGuideNotificationIsClosed,
-      bool isLinkedLoginProvider}) = _$_NotificationBarState;
+      required bool isLinkedLoginProvider}) = _$_NotificationBarState;
   _NotificationBarState._() : super._();
 
   @override
