@@ -17,15 +17,16 @@ class _$PremiumTrialModalStateTearOff {
   const _$PremiumTrialModalStateTearOff();
 
   _PremiumTrialModalState call(
-      {@JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
-          DateTime? beginTrialDate,
+      {DateTime? beginTrialDate,
       bool isLoading = false,
       bool isTrial = false,
+      Setting? setting,
       Object? exception}) {
     return _PremiumTrialModalState(
       beginTrialDate: beginTrialDate,
       isLoading: isLoading,
       isTrial: isTrial,
+      setting: setting,
       exception: exception,
     );
   }
@@ -36,12 +37,10 @@ const $PremiumTrialModalState = _$PremiumTrialModalStateTearOff();
 
 /// @nodoc
 mixin _$PremiumTrialModalState {
-  @JsonKey(
-      fromJson: TimestampConverter.timestampToDateTime,
-      toJson: TimestampConverter.dateTimeToTimestamp)
   DateTime? get beginTrialDate => throw _privateConstructorUsedError;
   bool get isLoading => throw _privateConstructorUsedError;
   bool get isTrial => throw _privateConstructorUsedError;
+  Setting? get setting => throw _privateConstructorUsedError;
   Object? get exception => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
@@ -55,11 +54,13 @@ abstract class $PremiumTrialModalStateCopyWith<$Res> {
           $Res Function(PremiumTrialModalState) then) =
       _$PremiumTrialModalStateCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
-          DateTime? beginTrialDate,
+      {DateTime? beginTrialDate,
       bool isLoading,
       bool isTrial,
+      Setting? setting,
       Object? exception});
+
+  $SettingCopyWith<$Res>? get setting;
 }
 
 /// @nodoc
@@ -76,6 +77,7 @@ class _$PremiumTrialModalStateCopyWithImpl<$Res>
     Object? beginTrialDate = freezed,
     Object? isLoading = freezed,
     Object? isTrial = freezed,
+    Object? setting = freezed,
     Object? exception = freezed,
   }) {
     return _then(_value.copyWith(
@@ -91,8 +93,23 @@ class _$PremiumTrialModalStateCopyWithImpl<$Res>
           ? _value.isTrial
           : isTrial // ignore: cast_nullable_to_non_nullable
               as bool,
+      setting: setting == freezed
+          ? _value.setting
+          : setting // ignore: cast_nullable_to_non_nullable
+              as Setting?,
       exception: exception == freezed ? _value.exception : exception,
     ));
+  }
+
+  @override
+  $SettingCopyWith<$Res>? get setting {
+    if (_value.setting == null) {
+      return null;
+    }
+
+    return $SettingCopyWith<$Res>(_value.setting!, (value) {
+      return _then(_value.copyWith(setting: value));
+    });
   }
 }
 
@@ -104,11 +121,14 @@ abstract class _$PremiumTrialModalStateCopyWith<$Res>
       __$PremiumTrialModalStateCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
-          DateTime? beginTrialDate,
+      {DateTime? beginTrialDate,
       bool isLoading,
       bool isTrial,
+      Setting? setting,
       Object? exception});
+
+  @override
+  $SettingCopyWith<$Res>? get setting;
 }
 
 /// @nodoc
@@ -127,6 +147,7 @@ class __$PremiumTrialModalStateCopyWithImpl<$Res>
     Object? beginTrialDate = freezed,
     Object? isLoading = freezed,
     Object? isTrial = freezed,
+    Object? setting = freezed,
     Object? exception = freezed,
   }) {
     return _then(_PremiumTrialModalState(
@@ -142,6 +163,10 @@ class __$PremiumTrialModalStateCopyWithImpl<$Res>
           ? _value.isTrial
           : isTrial // ignore: cast_nullable_to_non_nullable
               as bool,
+      setting: setting == freezed
+          ? _value.setting
+          : setting // ignore: cast_nullable_to_non_nullable
+              as Setting?,
       exception: exception == freezed ? _value.exception : exception,
     ));
   }
@@ -151,17 +176,14 @@ class __$PremiumTrialModalStateCopyWithImpl<$Res>
 
 class _$_PremiumTrialModalState extends _PremiumTrialModalState {
   _$_PremiumTrialModalState(
-      {@JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
-          this.beginTrialDate,
+      {this.beginTrialDate,
       this.isLoading = false,
       this.isTrial = false,
+      this.setting,
       this.exception})
       : super._();
 
   @override
-  @JsonKey(
-      fromJson: TimestampConverter.timestampToDateTime,
-      toJson: TimestampConverter.dateTimeToTimestamp)
   final DateTime? beginTrialDate;
   @JsonKey(defaultValue: false)
   @override
@@ -170,11 +192,13 @@ class _$_PremiumTrialModalState extends _PremiumTrialModalState {
   @override
   final bool isTrial;
   @override
+  final Setting? setting;
+  @override
   final Object? exception;
 
   @override
   String toString() {
-    return 'PremiumTrialModalState(beginTrialDate: $beginTrialDate, isLoading: $isLoading, isTrial: $isTrial, exception: $exception)';
+    return 'PremiumTrialModalState(beginTrialDate: $beginTrialDate, isLoading: $isLoading, isTrial: $isTrial, setting: $setting, exception: $exception)';
   }
 
   @override
@@ -190,6 +214,9 @@ class _$_PremiumTrialModalState extends _PremiumTrialModalState {
             (identical(other.isTrial, isTrial) ||
                 const DeepCollectionEquality()
                     .equals(other.isTrial, isTrial)) &&
+            (identical(other.setting, setting) ||
+                const DeepCollectionEquality()
+                    .equals(other.setting, setting)) &&
             (identical(other.exception, exception) ||
                 const DeepCollectionEquality()
                     .equals(other.exception, exception)));
@@ -201,6 +228,7 @@ class _$_PremiumTrialModalState extends _PremiumTrialModalState {
       const DeepCollectionEquality().hash(beginTrialDate) ^
       const DeepCollectionEquality().hash(isLoading) ^
       const DeepCollectionEquality().hash(isTrial) ^
+      const DeepCollectionEquality().hash(setting) ^
       const DeepCollectionEquality().hash(exception);
 
   @JsonKey(ignore: true)
@@ -212,22 +240,21 @@ class _$_PremiumTrialModalState extends _PremiumTrialModalState {
 
 abstract class _PremiumTrialModalState extends PremiumTrialModalState {
   factory _PremiumTrialModalState(
-      {@JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
-          DateTime? beginTrialDate,
+      {DateTime? beginTrialDate,
       bool isLoading,
       bool isTrial,
+      Setting? setting,
       Object? exception}) = _$_PremiumTrialModalState;
   _PremiumTrialModalState._() : super._();
 
   @override
-  @JsonKey(
-      fromJson: TimestampConverter.timestampToDateTime,
-      toJson: TimestampConverter.dateTimeToTimestamp)
   DateTime? get beginTrialDate => throw _privateConstructorUsedError;
   @override
   bool get isLoading => throw _privateConstructorUsedError;
   @override
   bool get isTrial => throw _privateConstructorUsedError;
+  @override
+  Setting? get setting => throw _privateConstructorUsedError;
   @override
   Object? get exception => throw _privateConstructorUsedError;
   @override

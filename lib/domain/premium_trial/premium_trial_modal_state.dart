@@ -1,5 +1,5 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:pilll/entity/firestore_timestamp_converter.dart';
+import 'package:pilll/entity/setting.dart';
 
 part 'premium_trial_modal_state.freezed.dart';
 
@@ -7,15 +7,10 @@ part 'premium_trial_modal_state.freezed.dart';
 abstract class PremiumTrialModalState implements _$PremiumTrialModalState {
   PremiumTrialModalState._();
   factory PremiumTrialModalState({
-    @JsonKey(
-      fromJson: TimestampConverter.timestampToDateTime,
-      toJson: TimestampConverter.dateTimeToTimestamp,
-    )
-        DateTime? beginTrialDate,
-    @Default(false)
-        bool isLoading,
-    @Default(false)
-        bool isTrial,
+    DateTime? beginTrialDate,
+    @Default(false) bool isLoading,
+    @Default(false) bool isTrial,
+    Setting? setting,
     Object? exception,
   }) = _PremiumTrialModalState;
 }
