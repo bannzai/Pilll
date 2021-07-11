@@ -33,6 +33,9 @@ abstract class RecordPageState implements _$RecordPageState {
     if (isTrial) {
       return false;
     }
+    if (isExpiredDiscountEntitlements) {
+      return false;
+    }
     if (!firstLoadIsEnded) {
       return false;
     }

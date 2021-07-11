@@ -71,6 +71,8 @@ void main() {
         await tester.pumpWidget(
           ProviderScope(
             overrides: [
+              notificationBarStoreProvider.overrideWithProvider(
+                  (ref, param) => MockNotificationBarStateStore()),
               notificationBarStateProvider
                   .overrideWithProvider((ref, param) => state),
             ],
@@ -279,6 +281,8 @@ void main() {
         await tester.pumpWidget(
           ProviderScope(
             overrides: [
+              notificationBarStoreProvider.overrideWithProvider(
+                  (ref, param) => MockNotificationBarStateStore()),
               notificationBarStateProvider
                   .overrideWithProvider((ref, param) => state),
             ],
@@ -328,6 +332,8 @@ void main() {
         await tester.pumpWidget(
           ProviderScope(
             overrides: [
+              notificationBarStoreProvider.overrideWithProvider(
+                  (ref, param) => MockNotificationBarStateStore()),
               notificationBarStateProvider
                   .overrideWithProvider((ref, param) => state),
             ],
