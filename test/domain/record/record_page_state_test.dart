@@ -78,6 +78,8 @@ void main() {
       final authService = MockAuthService();
       when(authService.isLinkedApple()).thenReturn(false);
       when(authService.isLinkedGoogle()).thenReturn(false);
+    when(authService.subscribe())
+        .thenAnswer((realInvocation) => Stream.empty());
       final userService = MockUserService();
       when(userService.fetch())
           .thenAnswer((reaInvocation) => Future.value(_FakeUser()));
@@ -133,6 +135,8 @@ void main() {
     final authService = MockAuthService();
     when(authService.isLinkedApple()).thenReturn(false);
     when(authService.isLinkedGoogle()).thenReturn(false);
+    when(authService.subscribe())
+        .thenAnswer((realInvocation) => Stream.empty());
     final userService = MockUserService();
     when(userService.fetch())
         .thenAnswer((reaInvocation) => Future.value(_FakeUser()));
@@ -191,6 +195,8 @@ void main() {
       final authService = MockAuthService();
       when(authService.isLinkedApple()).thenReturn(false);
       when(authService.isLinkedGoogle()).thenReturn(false);
+      when(authService.subscribe())
+          .thenAnswer((realInvocation) => Stream.empty());
       final userService = MockUserService();
       when(userService.fetch())
           .thenAnswer((reaInvocation) => Future.value(_FakeUser()));
@@ -249,6 +255,8 @@ void main() {
       final authService = MockAuthService();
       when(authService.isLinkedApple()).thenReturn(false);
       when(authService.isLinkedGoogle()).thenReturn(false);
+    when(authService.subscribe())
+        .thenAnswer((realInvocation) => Stream.empty());
       final userService = MockUserService();
       when(userService.fetch())
           .thenAnswer((reaInvocation) => Future.value(_FakeUser()));
@@ -308,6 +316,8 @@ void main() {
       final authService = MockAuthService();
       when(authService.isLinkedApple()).thenReturn(false);
       when(authService.isLinkedGoogle()).thenReturn(false);
+    when(authService.subscribe())
+        .thenAnswer((realInvocation) => Stream.empty());
       final userService = MockUserService();
       when(userService.fetch())
           .thenAnswer((reaInvocation) => Future.value(_FakeUser()));
@@ -365,6 +375,8 @@ void main() {
       final authService = MockAuthService();
       when(authService.isLinkedApple()).thenReturn(false);
       when(authService.isLinkedGoogle()).thenReturn(false);
+    when(authService.subscribe())
+        .thenAnswer((realInvocation) => Stream.empty());
       final userService = MockUserService();
       when(userService.fetch())
           .thenAnswer((reaInvocation) => Future.value(_FakeUser()));
