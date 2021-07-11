@@ -19,8 +19,4 @@ abstract class PremiumIntroductionState implements _$PremiumIntroductionState {
   }) = _PremiumIntroductionState;
 
   bool get isNotYetLoad => offerings == null;
-
-  String? get currentOfferingID {
-    return offerings?.current?.identifier;
-  }
 }
