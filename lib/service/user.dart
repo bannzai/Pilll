@@ -224,12 +224,10 @@ class UserService {
   }
 
   Future<void> trial() {
-    final beginTrialDate = now();
-    final tiralDeadlineDate = beginTrialDate.add(Duration(days: 30));
     return _database.userReference().set({
       UserFirestoreFieldKeys.isTrial: true,
       UserFirestoreFieldKeys.beginTrialDate: now(),
-      UserFirestoreFieldKeys.trialDeadlineDate: tiralDeadlineDate,
+      UserFirestoreFieldKeys.trialDeadlineDate: today().add(Duration(days: 30)),
     }, SetOptions(merge: true));
   }
 }
