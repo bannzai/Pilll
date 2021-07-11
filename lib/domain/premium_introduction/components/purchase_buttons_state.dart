@@ -26,7 +26,7 @@ abstract class PurchaseButtonsState implements _$PurchaseButtonsState {
     required bool? isOverDiscountDeadline,
   }) = _PurchaseButtonsState;
 
-  OfferingType get _offeringType {
+  OfferingType get offeringType {
     if (isExpiredDiscountEntitlements) {
       print("[DEBUG] user isExpiredDiscountEntitlements");
       return OfferingType.premium;
@@ -51,7 +51,7 @@ abstract class PurchaseButtonsState implements _$PurchaseButtonsState {
   }
 
   List<Package> get _packages {
-    final offering = offerings.all[_offeringType.name];
+    final offering = offerings.all[offeringType.name];
     if (offering != null) {
       return offering.availablePackages;
     }

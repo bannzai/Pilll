@@ -28,8 +28,7 @@ class PurchaseButtons extends HookWidget {
   @override
   Widget build(BuildContext context) {
     final store = useProvider(purchaseButtonsStoreProvider(_buildState()));
-    final state =
-        useProvider(purchaseButtonsStoreProvider(_buildState()).state);
+    final state = useProvider(purchaseButtonStateProvider(_buildState()));
     final monthlyPackage = state.monthlyPackage;
     final annualPackage = state.annualPackage;
 
