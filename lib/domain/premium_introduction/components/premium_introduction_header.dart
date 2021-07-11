@@ -7,11 +7,7 @@ class PremiumIntroductionHeader extends StatelessWidget {
     return Container(
       height: 111,
       width: MediaQuery.of(context).size.width,
-      child: Stack(
-        children: [
-          Center(child: SvgPicture.asset("images/pillll_premium_logo.svg")),
-        ],
-      ),
+      child: Center(child: SvgPicture.asset("images/pillll_premium_logo.svg")),
     );
   }
 }
