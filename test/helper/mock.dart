@@ -1,4 +1,6 @@
 import 'package:pilll/analytics.dart';
+import 'package:pilll/domain/premium_introduction/components/purchase_buttons_store.dart';
+import 'package:pilll/domain/premium_introduction/premium_introduction_store.dart';
 import 'package:pilll/domain/record/components/notification_bar/notification_bar_store.dart';
 import 'package:pilll/domain/record/record_page_store.dart';
 import 'package:pilll/service/auth.dart';
@@ -21,5 +23,7 @@ import 'package:mockito/annotations.dart';
   UserService,
   RecordPageStore,
   NotificationBarStateStore,
+  PremiumIntroductionStore,
+  PurchaseButtonsStore,
 ])
 abstract class KeepGeneratedMocks {}
