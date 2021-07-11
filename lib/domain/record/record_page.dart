@@ -202,20 +202,25 @@ class RecordPage extends HookWidget {
         var takenDate = now().subtract(Duration(days: diff));
         take(context, pillSheet, takenDate, store);
       },
-      premiumMarkBuilder: state.isPremium &&
-              state.appearanceMode == PillSheetAppearanceMode.date
-          ? (pillMarkNumber) {
-              final date = pillSheet.beginingDate
-                  .add(Duration(days: pillMarkNumber - 1));
-              return PremiumPillMarkModel(
-                date,
-                pillMarkNumber,
-                setting.pillNumberForFromMenstruation,
-                setting.durationMenstruation,
-                pillSheet.pillSheetType.totalCount,
-              );
-            }
-          : null,
+      premiumMarkBuilder: () {
+        if (!(state.isPremium || state.isTrial)) {
+          return null;
+        }
+        if (state.appearanceMode != PillSheetAppearanceMode.date) {
+          return null;
+        }
+        return (pillMarkNumber) {
+          final date =
+              pillSheet.beginingDate.add(Duration(days: pillMarkNumber - 1));
+          return PremiumPillMarkModel(
+            date,
+            pillMarkNumber,
+            setting.pillNumberForFromMenstruation,
+            setting.durationMenstruation,
+            pillSheet.pillSheetType.totalCount,
+          );
+        };
+      }(),
     );
   }
 
