@@ -27,8 +27,8 @@ abstract class PurchaseButtonsState implements _$PurchaseButtonsState {
   }) = _PurchaseButtonsState;
 
   OfferingType get offeringType {
-    if (hasDiscountEntitlement) {
-      print("[DEBUG] user hasDiscountEntitlement");
+    if (!hasDiscountEntitlement) {
+      print("[DEBUG] user does not hasDiscountEntitlement");
       return OfferingType.premium;
     }
     final trialDeadlineDate = this.trialDeadlineDate;
