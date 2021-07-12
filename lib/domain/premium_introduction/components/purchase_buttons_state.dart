@@ -22,13 +22,13 @@ abstract class PurchaseButtonsState implements _$PurchaseButtonsState {
   factory PurchaseButtonsState({
     required Offerings offerings,
     required DateTime? trialDeadlineDate,
-    required bool isExpiredDiscountEntitlements,
+    required bool hasDiscountEntitlement,
     required bool? isOverDiscountDeadline,
   }) = _PurchaseButtonsState;
 
   OfferingType get offeringType {
-    if (isExpiredDiscountEntitlements) {
-      print("[DEBUG] user isExpiredDiscountEntitlements");
+    if (hasDiscountEntitlement) {
+      print("[DEBUG] user hasDiscountEntitlement");
       return OfferingType.premium;
     }
     final trialDeadlineDate = this.trialDeadlineDate;

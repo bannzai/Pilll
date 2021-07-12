@@ -57,7 +57,7 @@ extension UserFirestoreFieldKeys on String {
   static final isTrial = "isTrial";
   static final beginTrialDate = "beginTrialDate";
   static final trialDeadlineDate = "trialDeadlineDate";
-  static final isExpiredDiscountEntitlements = "isExpiredDiscountEntitlements";
+  static final hasDiscountEntitlement = "hasDiscountEntitlement";
 }
 
 @freezed
@@ -82,7 +82,7 @@ abstract class User implements _$User {
     @Default(false)
         bool isTrial,
     @Default(false)
-        bool isExpiredDiscountEntitlements,
+        bool hasDiscountEntitlement,
     @JsonKey(
       fromJson: TimestampConverter.timestampToDateTime,
       toJson: TimestampConverter.dateTimeToTimestamp,

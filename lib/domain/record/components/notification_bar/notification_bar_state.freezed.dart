@@ -21,7 +21,7 @@ class _$NotificationBarStateTearOff {
       required int totalCountOfActionForTakenPill,
       required bool isPremium,
       required bool isTrial,
-      required bool isExpiredDiscountEntitlements,
+      required bool hasDiscountEntitlement,
       required DateTime? trialDeadlineDate,
       required bool recommendedSignupNotificationIsAlreadyShow,
       required bool premiumTrialGuideNotificationIsClosed,
@@ -31,7 +31,7 @@ class _$NotificationBarStateTearOff {
       totalCountOfActionForTakenPill: totalCountOfActionForTakenPill,
       isPremium: isPremium,
       isTrial: isTrial,
-      isExpiredDiscountEntitlements: isExpiredDiscountEntitlements,
+      hasDiscountEntitlement: hasDiscountEntitlement,
       trialDeadlineDate: trialDeadlineDate,
       recommendedSignupNotificationIsAlreadyShow:
           recommendedSignupNotificationIsAlreadyShow,
@@ -51,7 +51,7 @@ mixin _$NotificationBarState {
   int get totalCountOfActionForTakenPill => throw _privateConstructorUsedError;
   bool get isPremium => throw _privateConstructorUsedError;
   bool get isTrial => throw _privateConstructorUsedError;
-  bool get isExpiredDiscountEntitlements => throw _privateConstructorUsedError;
+  bool get hasDiscountEntitlement => throw _privateConstructorUsedError;
   DateTime? get trialDeadlineDate => throw _privateConstructorUsedError;
   bool get recommendedSignupNotificationIsAlreadyShow =>
       throw _privateConstructorUsedError;
@@ -74,7 +74,7 @@ abstract class $NotificationBarStateCopyWith<$Res> {
       int totalCountOfActionForTakenPill,
       bool isPremium,
       bool isTrial,
-      bool isExpiredDiscountEntitlements,
+      bool hasDiscountEntitlement,
       DateTime? trialDeadlineDate,
       bool recommendedSignupNotificationIsAlreadyShow,
       bool premiumTrialGuideNotificationIsClosed,
@@ -98,7 +98,7 @@ class _$NotificationBarStateCopyWithImpl<$Res>
     Object? totalCountOfActionForTakenPill = freezed,
     Object? isPremium = freezed,
     Object? isTrial = freezed,
-    Object? isExpiredDiscountEntitlements = freezed,
+    Object? hasDiscountEntitlement = freezed,
     Object? trialDeadlineDate = freezed,
     Object? recommendedSignupNotificationIsAlreadyShow = freezed,
     Object? premiumTrialGuideNotificationIsClosed = freezed,
@@ -121,9 +121,9 @@ class _$NotificationBarStateCopyWithImpl<$Res>
           ? _value.isTrial
           : isTrial // ignore: cast_nullable_to_non_nullable
               as bool,
-      isExpiredDiscountEntitlements: isExpiredDiscountEntitlements == freezed
-          ? _value.isExpiredDiscountEntitlements
-          : isExpiredDiscountEntitlements // ignore: cast_nullable_to_non_nullable
+      hasDiscountEntitlement: hasDiscountEntitlement == freezed
+          ? _value.hasDiscountEntitlement
+          : hasDiscountEntitlement // ignore: cast_nullable_to_non_nullable
               as bool,
       trialDeadlineDate: trialDeadlineDate == freezed
           ? _value.trialDeadlineDate
@@ -170,7 +170,7 @@ abstract class _$NotificationBarStateCopyWith<$Res>
       int totalCountOfActionForTakenPill,
       bool isPremium,
       bool isTrial,
-      bool isExpiredDiscountEntitlements,
+      bool hasDiscountEntitlement,
       DateTime? trialDeadlineDate,
       bool recommendedSignupNotificationIsAlreadyShow,
       bool premiumTrialGuideNotificationIsClosed,
@@ -197,7 +197,7 @@ class __$NotificationBarStateCopyWithImpl<$Res>
     Object? totalCountOfActionForTakenPill = freezed,
     Object? isPremium = freezed,
     Object? isTrial = freezed,
-    Object? isExpiredDiscountEntitlements = freezed,
+    Object? hasDiscountEntitlement = freezed,
     Object? trialDeadlineDate = freezed,
     Object? recommendedSignupNotificationIsAlreadyShow = freezed,
     Object? premiumTrialGuideNotificationIsClosed = freezed,
@@ -220,9 +220,9 @@ class __$NotificationBarStateCopyWithImpl<$Res>
           ? _value.isTrial
           : isTrial // ignore: cast_nullable_to_non_nullable
               as bool,
-      isExpiredDiscountEntitlements: isExpiredDiscountEntitlements == freezed
-          ? _value.isExpiredDiscountEntitlements
-          : isExpiredDiscountEntitlements // ignore: cast_nullable_to_non_nullable
+      hasDiscountEntitlement: hasDiscountEntitlement == freezed
+          ? _value.hasDiscountEntitlement
+          : hasDiscountEntitlement // ignore: cast_nullable_to_non_nullable
               as bool,
       trialDeadlineDate: trialDeadlineDate == freezed
           ? _value.trialDeadlineDate
@@ -254,7 +254,7 @@ class _$_NotificationBarState extends _NotificationBarState {
       required this.totalCountOfActionForTakenPill,
       required this.isPremium,
       required this.isTrial,
-      required this.isExpiredDiscountEntitlements,
+      required this.hasDiscountEntitlement,
       required this.trialDeadlineDate,
       required this.recommendedSignupNotificationIsAlreadyShow,
       required this.premiumTrialGuideNotificationIsClosed,
@@ -270,7 +270,7 @@ class _$_NotificationBarState extends _NotificationBarState {
   @override
   final bool isTrial;
   @override
-  final bool isExpiredDiscountEntitlements;
+  final bool hasDiscountEntitlement;
   @override
   final DateTime? trialDeadlineDate;
   @override
@@ -282,7 +282,7 @@ class _$_NotificationBarState extends _NotificationBarState {
 
   @override
   String toString() {
-    return 'NotificationBarState(pillSheet: $pillSheet, totalCountOfActionForTakenPill: $totalCountOfActionForTakenPill, isPremium: $isPremium, isTrial: $isTrial, isExpiredDiscountEntitlements: $isExpiredDiscountEntitlements, trialDeadlineDate: $trialDeadlineDate, recommendedSignupNotificationIsAlreadyShow: $recommendedSignupNotificationIsAlreadyShow, premiumTrialGuideNotificationIsClosed: $premiumTrialGuideNotificationIsClosed, isLinkedLoginProvider: $isLinkedLoginProvider)';
+    return 'NotificationBarState(pillSheet: $pillSheet, totalCountOfActionForTakenPill: $totalCountOfActionForTakenPill, isPremium: $isPremium, isTrial: $isTrial, hasDiscountEntitlement: $hasDiscountEntitlement, trialDeadlineDate: $trialDeadlineDate, recommendedSignupNotificationIsAlreadyShow: $recommendedSignupNotificationIsAlreadyShow, premiumTrialGuideNotificationIsClosed: $premiumTrialGuideNotificationIsClosed, isLinkedLoginProvider: $isLinkedLoginProvider)';
   }
 
   @override
@@ -292,7 +292,8 @@ class _$_NotificationBarState extends _NotificationBarState {
             (identical(other.pillSheet, pillSheet) ||
                 const DeepCollectionEquality()
                     .equals(other.pillSheet, pillSheet)) &&
-            (identical(other.totalCountOfActionForTakenPill, totalCountOfActionForTakenPill) ||
+            (identical(other.totalCountOfActionForTakenPill,
+                    totalCountOfActionForTakenPill) ||
                 const DeepCollectionEquality().equals(
                     other.totalCountOfActionForTakenPill,
                     totalCountOfActionForTakenPill)) &&
@@ -302,10 +303,9 @@ class _$_NotificationBarState extends _NotificationBarState {
             (identical(other.isTrial, isTrial) ||
                 const DeepCollectionEquality()
                     .equals(other.isTrial, isTrial)) &&
-            (identical(other.isExpiredDiscountEntitlements, isExpiredDiscountEntitlements) ||
+            (identical(other.hasDiscountEntitlement, hasDiscountEntitlement) ||
                 const DeepCollectionEquality().equals(
-                    other.isExpiredDiscountEntitlements,
-                    isExpiredDiscountEntitlements)) &&
+                    other.hasDiscountEntitlement, hasDiscountEntitlement)) &&
             (identical(other.trialDeadlineDate, trialDeadlineDate) ||
                 const DeepCollectionEquality()
                     .equals(other.trialDeadlineDate, trialDeadlineDate)) &&
@@ -331,7 +331,7 @@ class _$_NotificationBarState extends _NotificationBarState {
       const DeepCollectionEquality().hash(totalCountOfActionForTakenPill) ^
       const DeepCollectionEquality().hash(isPremium) ^
       const DeepCollectionEquality().hash(isTrial) ^
-      const DeepCollectionEquality().hash(isExpiredDiscountEntitlements) ^
+      const DeepCollectionEquality().hash(hasDiscountEntitlement) ^
       const DeepCollectionEquality().hash(trialDeadlineDate) ^
       const DeepCollectionEquality()
           .hash(recommendedSignupNotificationIsAlreadyShow) ^
@@ -352,7 +352,7 @@ abstract class _NotificationBarState extends NotificationBarState {
       required int totalCountOfActionForTakenPill,
       required bool isPremium,
       required bool isTrial,
-      required bool isExpiredDiscountEntitlements,
+      required bool hasDiscountEntitlement,
       required DateTime? trialDeadlineDate,
       required bool recommendedSignupNotificationIsAlreadyShow,
       required bool premiumTrialGuideNotificationIsClosed,
@@ -368,7 +368,7 @@ abstract class _NotificationBarState extends NotificationBarState {
   @override
   bool get isTrial => throw _privateConstructorUsedError;
   @override
-  bool get isExpiredDiscountEntitlements => throw _privateConstructorUsedError;
+  bool get hasDiscountEntitlement => throw _privateConstructorUsedError;
   @override
   DateTime? get trialDeadlineDate => throw _privateConstructorUsedError;
   @override

@@ -73,7 +73,7 @@ class PremiumIntroductionSheet extends HookWidget {
                           PremiumIntroductionHeader(),
                           if (trialDeadlineDate != null &&
                               !isOverDiscountDeadline &&
-                              !state.isExpiredDiscountEntitlements)
+                              !state.hasDiscountEntitlement)
                             PremiumIntroductionLimited(
                               trialDeadlineDate: trialDeadlineDate,
                             ),
@@ -82,8 +82,8 @@ class PremiumIntroductionSheet extends HookWidget {
                             PurchaseButtons(
                               offerings: offerings,
                               trialDeadlineDate: trialDeadlineDate,
-                              isExpiredDiscountEntitlements:
-                                  state.isExpiredDiscountEntitlements,
+                              hasDiscountEntitlement:
+                                  state.hasDiscountEntitlement,
                             ),
                           ],
                           SizedBox(height: 24),

@@ -42,7 +42,7 @@ class PremiumIntroductionStore extends StateNotifier<PremiumIntroductionState> {
           isTrial: value.isTrial,
           beginTrialDate: value.beginTrialDate,
           trialDeadlineDate: value.trialDeadlineDate,
-          isExpiredDiscountEntitlements: value.isExpiredDiscountEntitlements,
+          hasDiscountEntitlement: value.hasDiscountEntitlement,
         );
       });
       _purchaseService.fetchOfferings().then((value) {
@@ -59,7 +59,7 @@ class PremiumIntroductionStore extends StateNotifier<PremiumIntroductionState> {
       state = state.copyWith(
         isPremium: event.isPremium,
         isTrial: event.isTrial,
-        isExpiredDiscountEntitlements: event.isExpiredDiscountEntitlements,
+        hasDiscountEntitlement: event.hasDiscountEntitlement,
       );
     });
     _authStreamCanceller?.cancel();
