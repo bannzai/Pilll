@@ -19,7 +19,7 @@ class PillSheetService {
   }
 
   PillSheet _mapToEntity(QueryDocumentSnapshot snapshot) {
-    var data = snapshot.data() as Map<String, dynamic>;
+    var data = snapshot.data();
     data["id"] = snapshot.id;
     return PillSheet.fromJson(data);
   }

@@ -11,7 +11,7 @@ class MenstruationService {
 
   MenstruationService(this._database);
   Menstruation _map(DocumentSnapshot document) {
-    var data = document.data()! as Map<String, dynamic>;
+    var data = document.data()!;
     data["id"] = document.id;
     return Menstruation.fromJson(data);
   }
