@@ -62,7 +62,7 @@ void main() {
               totalCountOfActionForTakenPillForLongTimeUser,
           isPremium: false,
           isTrial: false,
-          hasDiscountEntitlement: false,
+          hasDiscountEntitlement: true,
           isLinkedLoginProvider: false,
           premiumTrialGuideNotificationIsClosed: false,
           recommendedSignupNotificationIsAlreadyShow: false,
