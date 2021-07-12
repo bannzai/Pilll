@@ -23,7 +23,7 @@ class _$RecordPageStateTearOff {
       bool firstLoadIsEnded = false,
       bool isPremium = false,
       bool isTrial = false,
-      bool hasDiscountEntitlement = false,
+      bool hasDiscountEntitlement = true,
       bool isPillSheetFinishedInThePast = false,
       bool isAlreadyShowTiral = false,
       bool shouldShowMigrateInfo = false,
@@ -369,7 +369,7 @@ class _$_RecordPageState extends _RecordPageState {
       this.firstLoadIsEnded = false,
       this.isPremium = false,
       this.isTrial = false,
-      this.hasDiscountEntitlement = false,
+      this.hasDiscountEntitlement = true,
       this.isPillSheetFinishedInThePast = false,
       this.isAlreadyShowTiral = false,
       this.shouldShowMigrateInfo = false,
@@ -397,7 +397,7 @@ class _$_RecordPageState extends _RecordPageState {
   @JsonKey(defaultValue: false)
   @override
   final bool isTrial;
-  @JsonKey(defaultValue: false)
+  @JsonKey(defaultValue: true)
   @override
   final bool hasDiscountEntitlement;
   @JsonKey(defaultValue: false)
