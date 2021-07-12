@@ -13,7 +13,7 @@ abstract class PremiumIntroductionState implements _$PremiumIntroductionState {
     @Default(false) bool isPremium,
     @Default(false) bool hasLoginProvider,
     @Default(false) bool isTrial,
-    @Default(false) bool hasDiscountEntitlement,
+    @Default(true) bool hasDiscountEntitlement,
     DateTime? beginTrialDate,
     DateTime? trialDeadlineDate,
   }) = _PremiumIntroductionState;
