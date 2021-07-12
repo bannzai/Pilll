@@ -180,7 +180,7 @@ class _$UserTearOff {
       List<String> firebaseCurrentUserIDSets = const [],
       bool isPremium = false,
       bool isTrial = false,
-      bool isExpiredDiscountEntitlements = false,
+      bool hasDiscountEntitlement = false,
       @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
           DateTime? beginTrialDate,
       @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
@@ -195,7 +195,7 @@ class _$UserTearOff {
       firebaseCurrentUserIDSets: firebaseCurrentUserIDSets,
       isPremium: isPremium,
       isTrial: isTrial,
-      isExpiredDiscountEntitlements: isExpiredDiscountEntitlements,
+      hasDiscountEntitlement: hasDiscountEntitlement,
       beginTrialDate: beginTrialDate,
       trialDeadlineDate: trialDeadlineDate,
     );
@@ -222,7 +222,7 @@ mixin _$User {
       throw _privateConstructorUsedError;
   bool get isPremium => throw _privateConstructorUsedError;
   bool get isTrial => throw _privateConstructorUsedError;
-  bool get isExpiredDiscountEntitlements => throw _privateConstructorUsedError;
+  bool get hasDiscountEntitlement => throw _privateConstructorUsedError;
   @JsonKey(
       fromJson: TimestampConverter.timestampToDateTime,
       toJson: TimestampConverter.dateTimeToTimestamp)
@@ -252,7 +252,7 @@ abstract class $UserCopyWith<$Res> {
       List<String> firebaseCurrentUserIDSets,
       bool isPremium,
       bool isTrial,
-      bool isExpiredDiscountEntitlements,
+      bool hasDiscountEntitlement,
       @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
           DateTime? beginTrialDate,
       @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
@@ -280,7 +280,7 @@ class _$UserCopyWithImpl<$Res> implements $UserCopyWith<$Res> {
     Object? firebaseCurrentUserIDSets = freezed,
     Object? isPremium = freezed,
     Object? isTrial = freezed,
-    Object? isExpiredDiscountEntitlements = freezed,
+    Object? hasDiscountEntitlement = freezed,
     Object? beginTrialDate = freezed,
     Object? trialDeadlineDate = freezed,
   }) {
@@ -321,9 +321,9 @@ class _$UserCopyWithImpl<$Res> implements $UserCopyWith<$Res> {
           ? _value.isTrial
           : isTrial // ignore: cast_nullable_to_non_nullable
               as bool,
-      isExpiredDiscountEntitlements: isExpiredDiscountEntitlements == freezed
-          ? _value.isExpiredDiscountEntitlements
-          : isExpiredDiscountEntitlements // ignore: cast_nullable_to_non_nullable
+      hasDiscountEntitlement: hasDiscountEntitlement == freezed
+          ? _value.hasDiscountEntitlement
+          : hasDiscountEntitlement // ignore: cast_nullable_to_non_nullable
               as bool,
       beginTrialDate: beginTrialDate == freezed
           ? _value.beginTrialDate
@@ -364,7 +364,7 @@ abstract class _$UserCopyWith<$Res> implements $UserCopyWith<$Res> {
       List<String> firebaseCurrentUserIDSets,
       bool isPremium,
       bool isTrial,
-      bool isExpiredDiscountEntitlements,
+      bool hasDiscountEntitlement,
       @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
           DateTime? beginTrialDate,
       @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
@@ -394,7 +394,7 @@ class __$UserCopyWithImpl<$Res> extends _$UserCopyWithImpl<$Res>
     Object? firebaseCurrentUserIDSets = freezed,
     Object? isPremium = freezed,
     Object? isTrial = freezed,
-    Object? isExpiredDiscountEntitlements = freezed,
+    Object? hasDiscountEntitlement = freezed,
     Object? beginTrialDate = freezed,
     Object? trialDeadlineDate = freezed,
   }) {
@@ -435,9 +435,9 @@ class __$UserCopyWithImpl<$Res> extends _$UserCopyWithImpl<$Res>
           ? _value.isTrial
           : isTrial // ignore: cast_nullable_to_non_nullable
               as bool,
-      isExpiredDiscountEntitlements: isExpiredDiscountEntitlements == freezed
-          ? _value.isExpiredDiscountEntitlements
-          : isExpiredDiscountEntitlements // ignore: cast_nullable_to_non_nullable
+      hasDiscountEntitlement: hasDiscountEntitlement == freezed
+          ? _value.hasDiscountEntitlement
+          : hasDiscountEntitlement // ignore: cast_nullable_to_non_nullable
               as bool,
       beginTrialDate: beginTrialDate == freezed
           ? _value.beginTrialDate
@@ -466,7 +466,7 @@ class _$_User extends _User {
       this.firebaseCurrentUserIDSets = const [],
       this.isPremium = false,
       this.isTrial = false,
-      this.isExpiredDiscountEntitlements = false,
+      this.hasDiscountEntitlement = false,
       @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
           this.beginTrialDate,
       @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
@@ -503,7 +503,7 @@ class _$_User extends _User {
   final bool isTrial;
   @JsonKey(defaultValue: false)
   @override
-  final bool isExpiredDiscountEntitlements;
+  final bool hasDiscountEntitlement;
   @override
   @JsonKey(
       fromJson: TimestampConverter.timestampToDateTime,
@@ -517,7 +517,7 @@ class _$_User extends _User {
 
   @override
   String toString() {
-    return 'User(setting: $setting, migratedFlutter: $migratedFlutter, userIDWhenCreateUser: $userIDWhenCreateUser, anonymousUserID: $anonymousUserID, userDocumentIDSets: $userDocumentIDSets, anonymousUserIDSets: $anonymousUserIDSets, firebaseCurrentUserIDSets: $firebaseCurrentUserIDSets, isPremium: $isPremium, isTrial: $isTrial, isExpiredDiscountEntitlements: $isExpiredDiscountEntitlements, beginTrialDate: $beginTrialDate, trialDeadlineDate: $trialDeadlineDate)';
+    return 'User(setting: $setting, migratedFlutter: $migratedFlutter, userIDWhenCreateUser: $userIDWhenCreateUser, anonymousUserID: $anonymousUserID, userDocumentIDSets: $userDocumentIDSets, anonymousUserIDSets: $anonymousUserIDSets, firebaseCurrentUserIDSets: $firebaseCurrentUserIDSets, isPremium: $isPremium, isTrial: $isTrial, hasDiscountEntitlement: $hasDiscountEntitlement, beginTrialDate: $beginTrialDate, trialDeadlineDate: $trialDeadlineDate)';
   }
 
   @override
@@ -553,11 +553,9 @@ class _$_User extends _User {
             (identical(other.isTrial, isTrial) ||
                 const DeepCollectionEquality()
                     .equals(other.isTrial, isTrial)) &&
-            (identical(other.isExpiredDiscountEntitlements,
-                    isExpiredDiscountEntitlements) ||
+            (identical(other.hasDiscountEntitlement, hasDiscountEntitlement) ||
                 const DeepCollectionEquality().equals(
-                    other.isExpiredDiscountEntitlements,
-                    isExpiredDiscountEntitlements)) &&
+                    other.hasDiscountEntitlement, hasDiscountEntitlement)) &&
             (identical(other.beginTrialDate, beginTrialDate) ||
                 const DeepCollectionEquality()
                     .equals(other.beginTrialDate, beginTrialDate)) &&
@@ -578,7 +576,7 @@ class _$_User extends _User {
       const DeepCollectionEquality().hash(firebaseCurrentUserIDSets) ^
       const DeepCollectionEquality().hash(isPremium) ^
       const DeepCollectionEquality().hash(isTrial) ^
-      const DeepCollectionEquality().hash(isExpiredDiscountEntitlements) ^
+      const DeepCollectionEquality().hash(hasDiscountEntitlement) ^
       const DeepCollectionEquality().hash(beginTrialDate) ^
       const DeepCollectionEquality().hash(trialDeadlineDate);
 
@@ -605,7 +603,7 @@ abstract class _User extends User {
       List<String> firebaseCurrentUserIDSets,
       bool isPremium,
       bool isTrial,
-      bool isExpiredDiscountEntitlements,
+      bool hasDiscountEntitlement,
       @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
           DateTime? beginTrialDate,
       @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
@@ -635,7 +633,7 @@ abstract class _User extends User {
   @override
   bool get isTrial => throw _privateConstructorUsedError;
   @override
-  bool get isExpiredDiscountEntitlements => throw _privateConstructorUsedError;
+  bool get hasDiscountEntitlement => throw _privateConstructorUsedError;
   @override
   @JsonKey(
       fromJson: TimestampConverter.timestampToDateTime,

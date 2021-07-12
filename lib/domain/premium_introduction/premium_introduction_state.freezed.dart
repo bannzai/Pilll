@@ -23,7 +23,7 @@ class _$PremiumIntroductionStateTearOff {
       bool isPremium = false,
       bool hasLoginProvider = false,
       bool isTrial = false,
-      bool isExpiredDiscountEntitlements = false,
+      bool hasDiscountEntitlement = true,
       DateTime? beginTrialDate,
       DateTime? trialDeadlineDate}) {
     return _PremiumIntroductionState(
@@ -33,7 +33,7 @@ class _$PremiumIntroductionStateTearOff {
       isPremium: isPremium,
       hasLoginProvider: hasLoginProvider,
       isTrial: isTrial,
-      isExpiredDiscountEntitlements: isExpiredDiscountEntitlements,
+      hasDiscountEntitlement: hasDiscountEntitlement,
       beginTrialDate: beginTrialDate,
       trialDeadlineDate: trialDeadlineDate,
     );
@@ -51,7 +51,7 @@ mixin _$PremiumIntroductionState {
   bool get isPremium => throw _privateConstructorUsedError;
   bool get hasLoginProvider => throw _privateConstructorUsedError;
   bool get isTrial => throw _privateConstructorUsedError;
-  bool get isExpiredDiscountEntitlements => throw _privateConstructorUsedError;
+  bool get hasDiscountEntitlement => throw _privateConstructorUsedError;
   DateTime? get beginTrialDate => throw _privateConstructorUsedError;
   DateTime? get trialDeadlineDate => throw _privateConstructorUsedError;
 
@@ -72,7 +72,7 @@ abstract class $PremiumIntroductionStateCopyWith<$Res> {
       bool isPremium,
       bool hasLoginProvider,
       bool isTrial,
-      bool isExpiredDiscountEntitlements,
+      bool hasDiscountEntitlement,
       DateTime? beginTrialDate,
       DateTime? trialDeadlineDate});
 }
@@ -94,7 +94,7 @@ class _$PremiumIntroductionStateCopyWithImpl<$Res>
     Object? isPremium = freezed,
     Object? hasLoginProvider = freezed,
     Object? isTrial = freezed,
-    Object? isExpiredDiscountEntitlements = freezed,
+    Object? hasDiscountEntitlement = freezed,
     Object? beginTrialDate = freezed,
     Object? trialDeadlineDate = freezed,
   }) {
@@ -123,9 +123,9 @@ class _$PremiumIntroductionStateCopyWithImpl<$Res>
           ? _value.isTrial
           : isTrial // ignore: cast_nullable_to_non_nullable
               as bool,
-      isExpiredDiscountEntitlements: isExpiredDiscountEntitlements == freezed
-          ? _value.isExpiredDiscountEntitlements
-          : isExpiredDiscountEntitlements // ignore: cast_nullable_to_non_nullable
+      hasDiscountEntitlement: hasDiscountEntitlement == freezed
+          ? _value.hasDiscountEntitlement
+          : hasDiscountEntitlement // ignore: cast_nullable_to_non_nullable
               as bool,
       beginTrialDate: beginTrialDate == freezed
           ? _value.beginTrialDate
@@ -153,7 +153,7 @@ abstract class _$PremiumIntroductionStateCopyWith<$Res>
       bool isPremium,
       bool hasLoginProvider,
       bool isTrial,
-      bool isExpiredDiscountEntitlements,
+      bool hasDiscountEntitlement,
       DateTime? beginTrialDate,
       DateTime? trialDeadlineDate});
 }
@@ -178,7 +178,7 @@ class __$PremiumIntroductionStateCopyWithImpl<$Res>
     Object? isPremium = freezed,
     Object? hasLoginProvider = freezed,
     Object? isTrial = freezed,
-    Object? isExpiredDiscountEntitlements = freezed,
+    Object? hasDiscountEntitlement = freezed,
     Object? beginTrialDate = freezed,
     Object? trialDeadlineDate = freezed,
   }) {
@@ -207,9 +207,9 @@ class __$PremiumIntroductionStateCopyWithImpl<$Res>
           ? _value.isTrial
           : isTrial // ignore: cast_nullable_to_non_nullable
               as bool,
-      isExpiredDiscountEntitlements: isExpiredDiscountEntitlements == freezed
-          ? _value.isExpiredDiscountEntitlements
-          : isExpiredDiscountEntitlements // ignore: cast_nullable_to_non_nullable
+      hasDiscountEntitlement: hasDiscountEntitlement == freezed
+          ? _value.hasDiscountEntitlement
+          : hasDiscountEntitlement // ignore: cast_nullable_to_non_nullable
               as bool,
       beginTrialDate: beginTrialDate == freezed
           ? _value.beginTrialDate
@@ -233,7 +233,7 @@ class _$_PremiumIntroductionState extends _PremiumIntroductionState {
       this.isPremium = false,
       this.hasLoginProvider = false,
       this.isTrial = false,
-      this.isExpiredDiscountEntitlements = false,
+      this.hasDiscountEntitlement = true,
       this.beginTrialDate,
       this.trialDeadlineDate})
       : super._();
@@ -255,9 +255,9 @@ class _$_PremiumIntroductionState extends _PremiumIntroductionState {
   @JsonKey(defaultValue: false)
   @override
   final bool isTrial;
-  @JsonKey(defaultValue: false)
+  @JsonKey(defaultValue: true)
   @override
-  final bool isExpiredDiscountEntitlements;
+  final bool hasDiscountEntitlement;
   @override
   final DateTime? beginTrialDate;
   @override
@@ -265,7 +265,7 @@ class _$_PremiumIntroductionState extends _PremiumIntroductionState {
 
   @override
   String toString() {
-    return 'PremiumIntroductionState(offerings: $offerings, isCompletedRestore: $isCompletedRestore, isLoading: $isLoading, isPremium: $isPremium, hasLoginProvider: $hasLoginProvider, isTrial: $isTrial, isExpiredDiscountEntitlements: $isExpiredDiscountEntitlements, beginTrialDate: $beginTrialDate, trialDeadlineDate: $trialDeadlineDate)';
+    return 'PremiumIntroductionState(offerings: $offerings, isCompletedRestore: $isCompletedRestore, isLoading: $isLoading, isPremium: $isPremium, hasLoginProvider: $hasLoginProvider, isTrial: $isTrial, hasDiscountEntitlement: $hasDiscountEntitlement, beginTrialDate: $beginTrialDate, trialDeadlineDate: $trialDeadlineDate)';
   }
 
   @override
@@ -290,11 +290,9 @@ class _$_PremiumIntroductionState extends _PremiumIntroductionState {
             (identical(other.isTrial, isTrial) ||
                 const DeepCollectionEquality()
                     .equals(other.isTrial, isTrial)) &&
-            (identical(other.isExpiredDiscountEntitlements,
-                    isExpiredDiscountEntitlements) ||
+            (identical(other.hasDiscountEntitlement, hasDiscountEntitlement) ||
                 const DeepCollectionEquality().equals(
-                    other.isExpiredDiscountEntitlements,
-                    isExpiredDiscountEntitlements)) &&
+                    other.hasDiscountEntitlement, hasDiscountEntitlement)) &&
             (identical(other.beginTrialDate, beginTrialDate) ||
                 const DeepCollectionEquality()
                     .equals(other.beginTrialDate, beginTrialDate)) &&
@@ -312,7 +310,7 @@ class _$_PremiumIntroductionState extends _PremiumIntroductionState {
       const DeepCollectionEquality().hash(isPremium) ^
       const DeepCollectionEquality().hash(hasLoginProvider) ^
       const DeepCollectionEquality().hash(isTrial) ^
-      const DeepCollectionEquality().hash(isExpiredDiscountEntitlements) ^
+      const DeepCollectionEquality().hash(hasDiscountEntitlement) ^
       const DeepCollectionEquality().hash(beginTrialDate) ^
       const DeepCollectionEquality().hash(trialDeadlineDate);
 
@@ -331,7 +329,7 @@ abstract class _PremiumIntroductionState extends PremiumIntroductionState {
       bool isPremium,
       bool hasLoginProvider,
       bool isTrial,
-      bool isExpiredDiscountEntitlements,
+      bool hasDiscountEntitlement,
       DateTime? beginTrialDate,
       DateTime? trialDeadlineDate}) = _$_PremiumIntroductionState;
   _PremiumIntroductionState._() : super._();
@@ -349,7 +347,7 @@ abstract class _PremiumIntroductionState extends PremiumIntroductionState {
   @override
   bool get isTrial => throw _privateConstructorUsedError;
   @override
-  bool get isExpiredDiscountEntitlements => throw _privateConstructorUsedError;
+  bool get hasDiscountEntitlement => throw _privateConstructorUsedError;
   @override
   DateTime? get beginTrialDate => throw _privateConstructorUsedError;
   @override

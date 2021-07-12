@@ -26,8 +26,7 @@ class NotificationBarStateStore extends StateNotifier<NotificationBarState> {
                 parameter.totalCountOfActionForTakenPill,
             isPremium: parameter.isPremium,
             isTrial: parameter.isTrial,
-            isExpiredDiscountEntitlements:
-                parameter.isExpiredDiscountEntitlements,
+            hasDiscountEntitlement: parameter.hasDiscountEntitlement,
             trialDeadlineDate: parameter.trialDeadlineDate,
             isLinkedLoginProvider: parameter.isLinkedLoginProvider,
             premiumTrialGuideNotificationIsClosed:

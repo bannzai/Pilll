@@ -16,13 +16,13 @@ import 'package:purchases_flutter/purchases_flutter.dart';
 class PurchaseButtons extends HookWidget {
   final Offerings offerings;
   final DateTime? trialDeadlineDate;
-  final bool isExpiredDiscountEntitlements;
+  final bool hasDiscountEntitlement;
 
   const PurchaseButtons({
     Key? key,
     required this.offerings,
     required this.trialDeadlineDate,
-    required this.isExpiredDiscountEntitlements,
+    required this.hasDiscountEntitlement,
   }) : super(key: key);
 
   @override
@@ -84,7 +84,7 @@ class PurchaseButtons extends HookWidget {
     return PurchaseButtonsState(
       offerings: offerings,
       trialDeadlineDate: trialDeadlineDate,
-      isExpiredDiscountEntitlements: isExpiredDiscountEntitlements,
+      hasDiscountEntitlement: hasDiscountEntitlement,
       isOverDiscountDeadline: trialDeadlineDate != null
           ? useProvider(isOverDiscountDeadlineProvider(trialDeadlineDate))
           : null,

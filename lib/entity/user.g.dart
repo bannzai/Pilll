@@ -40,8 +40,7 @@ _$_User _$_$_UserFromJson(Map<String, dynamic> json) {
             [],
     isPremium: json['isPremium'] as bool? ?? false,
     isTrial: json['isTrial'] as bool? ?? false,
-    isExpiredDiscountEntitlements:
-        json['isExpiredDiscountEntitlements'] as bool? ?? false,
+    hasDiscountEntitlement: json['hasDiscountEntitlement'] as bool? ?? false,
     beginTrialDate: TimestampConverter.timestampToDateTime(
         json['beginTrialDate'] as Timestamp?),
     trialDeadlineDate: TimestampConverter.timestampToDateTime(
@@ -59,7 +58,7 @@ Map<String, dynamic> _$_$_UserToJson(_$_User instance) => <String, dynamic>{
       'firebaseCurrentUserIDSets': instance.firebaseCurrentUserIDSets,
       'isPremium': instance.isPremium,
       'isTrial': instance.isTrial,
-      'isExpiredDiscountEntitlements': instance.isExpiredDiscountEntitlements,
+      'hasDiscountEntitlement': instance.hasDiscountEntitlement,
       'beginTrialDate':
           TimestampConverter.dateTimeToTimestamp(instance.beginTrialDate),
       'trialDeadlineDate':

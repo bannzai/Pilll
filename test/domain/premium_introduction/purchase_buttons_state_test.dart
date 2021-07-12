@@ -16,12 +16,11 @@ void main() {
     analytics = MockAnalytics();
   });
   group("#offeringType", () {
-    test("when isExpiredDiscountEntitlements = true should return premium",
-        () async {
+    test("when hasDiscountEntitlement = false should return premium", () async {
       final state = PurchaseButtonsState(
         offerings: _FakeOfferings(),
         trialDeadlineDate: DateTime.now(),
-        isExpiredDiscountEntitlements: true,
+        hasDiscountEntitlement: false,
         isOverDiscountDeadline: false,
       );
       expect(state.offeringType, equals(OfferingType.premium));
@@ -30,7 +29,7 @@ void main() {
       final state = PurchaseButtonsState(
         offerings: _FakeOfferings(),
         trialDeadlineDate: null,
-        isExpiredDiscountEntitlements: false,
+        hasDiscountEntitlement: true,
         isOverDiscountDeadline: false,
       );
       expect(state.offeringType, equals(OfferingType.premium));
@@ -39,7 +38,7 @@ void main() {
       final state = PurchaseButtonsState(
         offerings: _FakeOfferings(),
         trialDeadlineDate: DateTime.now(),
-        isExpiredDiscountEntitlements: false,
+        hasDiscountEntitlement: true,
         isOverDiscountDeadline: null,
       );
       expect(state.offeringType, equals(OfferingType.premium));
@@ -48,7 +47,7 @@ void main() {
       final state = PurchaseButtonsState(
         offerings: _FakeOfferings(),
         trialDeadlineDate: DateTime.now(),
-        isExpiredDiscountEntitlements: false,
+        hasDiscountEntitlement: true,
         isOverDiscountDeadline: true,
       );
       expect(state.offeringType, equals(OfferingType.premium));
@@ -57,7 +56,7 @@ void main() {
       final state = PurchaseButtonsState(
         offerings: _FakeOfferings(),
         trialDeadlineDate: DateTime.now(),
-        isExpiredDiscountEntitlements: false,
+        hasDiscountEntitlement: true,
         isOverDiscountDeadline: false,
       );
       expect(state.offeringType, equals(OfferingType.limited));

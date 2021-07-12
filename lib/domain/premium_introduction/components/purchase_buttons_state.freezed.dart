@@ -19,12 +19,12 @@ class _$PurchaseButtonsStateTearOff {
   _PurchaseButtonsState call(
       {required Offerings offerings,
       required DateTime? trialDeadlineDate,
-      required bool isExpiredDiscountEntitlements,
+      required bool hasDiscountEntitlement,
       required bool? isOverDiscountDeadline}) {
     return _PurchaseButtonsState(
       offerings: offerings,
       trialDeadlineDate: trialDeadlineDate,
-      isExpiredDiscountEntitlements: isExpiredDiscountEntitlements,
+      hasDiscountEntitlement: hasDiscountEntitlement,
       isOverDiscountDeadline: isOverDiscountDeadline,
     );
   }
@@ -37,7 +37,7 @@ const $PurchaseButtonsState = _$PurchaseButtonsStateTearOff();
 mixin _$PurchaseButtonsState {
   Offerings get offerings => throw _privateConstructorUsedError;
   DateTime? get trialDeadlineDate => throw _privateConstructorUsedError;
-  bool get isExpiredDiscountEntitlements => throw _privateConstructorUsedError;
+  bool get hasDiscountEntitlement => throw _privateConstructorUsedError;
   bool? get isOverDiscountDeadline => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
@@ -53,7 +53,7 @@ abstract class $PurchaseButtonsStateCopyWith<$Res> {
   $Res call(
       {Offerings offerings,
       DateTime? trialDeadlineDate,
-      bool isExpiredDiscountEntitlements,
+      bool hasDiscountEntitlement,
       bool? isOverDiscountDeadline});
 }
 
@@ -70,7 +70,7 @@ class _$PurchaseButtonsStateCopyWithImpl<$Res>
   $Res call({
     Object? offerings = freezed,
     Object? trialDeadlineDate = freezed,
-    Object? isExpiredDiscountEntitlements = freezed,
+    Object? hasDiscountEntitlement = freezed,
     Object? isOverDiscountDeadline = freezed,
   }) {
     return _then(_value.copyWith(
@@ -82,9 +82,9 @@ class _$PurchaseButtonsStateCopyWithImpl<$Res>
           ? _value.trialDeadlineDate
           : trialDeadlineDate // ignore: cast_nullable_to_non_nullable
               as DateTime?,
-      isExpiredDiscountEntitlements: isExpiredDiscountEntitlements == freezed
-          ? _value.isExpiredDiscountEntitlements
-          : isExpiredDiscountEntitlements // ignore: cast_nullable_to_non_nullable
+      hasDiscountEntitlement: hasDiscountEntitlement == freezed
+          ? _value.hasDiscountEntitlement
+          : hasDiscountEntitlement // ignore: cast_nullable_to_non_nullable
               as bool,
       isOverDiscountDeadline: isOverDiscountDeadline == freezed
           ? _value.isOverDiscountDeadline
@@ -104,7 +104,7 @@ abstract class _$PurchaseButtonsStateCopyWith<$Res>
   $Res call(
       {Offerings offerings,
       DateTime? trialDeadlineDate,
-      bool isExpiredDiscountEntitlements,
+      bool hasDiscountEntitlement,
       bool? isOverDiscountDeadline});
 }
 
@@ -123,7 +123,7 @@ class __$PurchaseButtonsStateCopyWithImpl<$Res>
   $Res call({
     Object? offerings = freezed,
     Object? trialDeadlineDate = freezed,
-    Object? isExpiredDiscountEntitlements = freezed,
+    Object? hasDiscountEntitlement = freezed,
     Object? isOverDiscountDeadline = freezed,
   }) {
     return _then(_PurchaseButtonsState(
@@ -135,9 +135,9 @@ class __$PurchaseButtonsStateCopyWithImpl<$Res>
           ? _value.trialDeadlineDate
           : trialDeadlineDate // ignore: cast_nullable_to_non_nullable
               as DateTime?,
-      isExpiredDiscountEntitlements: isExpiredDiscountEntitlements == freezed
-          ? _value.isExpiredDiscountEntitlements
-          : isExpiredDiscountEntitlements // ignore: cast_nullable_to_non_nullable
+      hasDiscountEntitlement: hasDiscountEntitlement == freezed
+          ? _value.hasDiscountEntitlement
+          : hasDiscountEntitlement // ignore: cast_nullable_to_non_nullable
               as bool,
       isOverDiscountDeadline: isOverDiscountDeadline == freezed
           ? _value.isOverDiscountDeadline
@@ -153,7 +153,7 @@ class _$_PurchaseButtonsState extends _PurchaseButtonsState {
   _$_PurchaseButtonsState(
       {required this.offerings,
       required this.trialDeadlineDate,
-      required this.isExpiredDiscountEntitlements,
+      required this.hasDiscountEntitlement,
       required this.isOverDiscountDeadline})
       : super._();
 
@@ -162,13 +162,13 @@ class _$_PurchaseButtonsState extends _PurchaseButtonsState {
   @override
   final DateTime? trialDeadlineDate;
   @override
-  final bool isExpiredDiscountEntitlements;
+  final bool hasDiscountEntitlement;
   @override
   final bool? isOverDiscountDeadline;
 
   @override
   String toString() {
-    return 'PurchaseButtonsState(offerings: $offerings, trialDeadlineDate: $trialDeadlineDate, isExpiredDiscountEntitlements: $isExpiredDiscountEntitlements, isOverDiscountDeadline: $isOverDiscountDeadline)';
+    return 'PurchaseButtonsState(offerings: $offerings, trialDeadlineDate: $trialDeadlineDate, hasDiscountEntitlement: $hasDiscountEntitlement, isOverDiscountDeadline: $isOverDiscountDeadline)';
   }
 
   @override
@@ -181,11 +181,9 @@ class _$_PurchaseButtonsState extends _PurchaseButtonsState {
             (identical(other.trialDeadlineDate, trialDeadlineDate) ||
                 const DeepCollectionEquality()
                     .equals(other.trialDeadlineDate, trialDeadlineDate)) &&
-            (identical(other.isExpiredDiscountEntitlements,
-                    isExpiredDiscountEntitlements) ||
+            (identical(other.hasDiscountEntitlement, hasDiscountEntitlement) ||
                 const DeepCollectionEquality().equals(
-                    other.isExpiredDiscountEntitlements,
-                    isExpiredDiscountEntitlements)) &&
+                    other.hasDiscountEntitlement, hasDiscountEntitlement)) &&
             (identical(other.isOverDiscountDeadline, isOverDiscountDeadline) ||
                 const DeepCollectionEquality().equals(
                     other.isOverDiscountDeadline, isOverDiscountDeadline)));
@@ -196,7 +194,7 @@ class _$_PurchaseButtonsState extends _PurchaseButtonsState {
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(offerings) ^
       const DeepCollectionEquality().hash(trialDeadlineDate) ^
-      const DeepCollectionEquality().hash(isExpiredDiscountEntitlements) ^
+      const DeepCollectionEquality().hash(hasDiscountEntitlement) ^
       const DeepCollectionEquality().hash(isOverDiscountDeadline);
 
   @JsonKey(ignore: true)
@@ -210,7 +208,7 @@ abstract class _PurchaseButtonsState extends PurchaseButtonsState {
   factory _PurchaseButtonsState(
       {required Offerings offerings,
       required DateTime? trialDeadlineDate,
-      required bool isExpiredDiscountEntitlements,
+      required bool hasDiscountEntitlement,
       required bool? isOverDiscountDeadline}) = _$_PurchaseButtonsState;
   _PurchaseButtonsState._() : super._();
 
@@ -219,7 +217,7 @@ abstract class _PurchaseButtonsState extends PurchaseButtonsState {
   @override
   DateTime? get trialDeadlineDate => throw _privateConstructorUsedError;
   @override
-  bool get isExpiredDiscountEntitlements => throw _privateConstructorUsedError;
+  bool get hasDiscountEntitlement => throw _privateConstructorUsedError;
   @override
   bool? get isOverDiscountDeadline => throw _privateConstructorUsedError;
   @override

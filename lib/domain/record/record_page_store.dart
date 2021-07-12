@@ -82,7 +82,7 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
                 false,
         isPremium: user.isPremium,
         isTrial: user.isTrial,
-        isExpiredDiscountEntitlements: user.isExpiredDiscountEntitlements,
+        hasDiscountEntitlement: user.hasDiscountEntitlement,
         trialDeadlineDate: user.trialDeadlineDate,
         shouldShowMigrateInfo: shouldShowMigrateInfo,
         isLinkedLoginProvider:
@@ -119,7 +119,7 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
       state = state.copyWith(
         isPremium: event.isPremium,
         isTrial: event.isTrial,
-        isExpiredDiscountEntitlements: event.isExpiredDiscountEntitlements,
+        hasDiscountEntitlement: event.hasDiscountEntitlement,
         trialDeadlineDate: event.trialDeadlineDate,
       );
     });

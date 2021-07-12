@@ -23,7 +23,7 @@ class _$RecordPageStateTearOff {
       bool firstLoadIsEnded = false,
       bool isPremium = false,
       bool isTrial = false,
-      bool isExpiredDiscountEntitlements = false,
+      bool hasDiscountEntitlement = true,
       bool isPillSheetFinishedInThePast = false,
       bool isAlreadyShowTiral = false,
       bool shouldShowMigrateInfo = false,
@@ -40,7 +40,7 @@ class _$RecordPageStateTearOff {
       firstLoadIsEnded: firstLoadIsEnded,
       isPremium: isPremium,
       isTrial: isTrial,
-      isExpiredDiscountEntitlements: isExpiredDiscountEntitlements,
+      hasDiscountEntitlement: hasDiscountEntitlement,
       isPillSheetFinishedInThePast: isPillSheetFinishedInThePast,
       isAlreadyShowTiral: isAlreadyShowTiral,
       shouldShowMigrateInfo: shouldShowMigrateInfo,
@@ -67,7 +67,7 @@ mixin _$RecordPageState {
   bool get firstLoadIsEnded => throw _privateConstructorUsedError;
   bool get isPremium => throw _privateConstructorUsedError;
   bool get isTrial => throw _privateConstructorUsedError;
-  bool get isExpiredDiscountEntitlements => throw _privateConstructorUsedError;
+  bool get hasDiscountEntitlement => throw _privateConstructorUsedError;
   bool get isPillSheetFinishedInThePast => throw _privateConstructorUsedError;
   bool get isAlreadyShowTiral => throw _privateConstructorUsedError;
   bool get shouldShowMigrateInfo => throw _privateConstructorUsedError;
@@ -97,7 +97,7 @@ abstract class $RecordPageStateCopyWith<$Res> {
       bool firstLoadIsEnded,
       bool isPremium,
       bool isTrial,
-      bool isExpiredDiscountEntitlements,
+      bool hasDiscountEntitlement,
       bool isPillSheetFinishedInThePast,
       bool isAlreadyShowTiral,
       bool shouldShowMigrateInfo,
@@ -129,7 +129,7 @@ class _$RecordPageStateCopyWithImpl<$Res>
     Object? firstLoadIsEnded = freezed,
     Object? isPremium = freezed,
     Object? isTrial = freezed,
-    Object? isExpiredDiscountEntitlements = freezed,
+    Object? hasDiscountEntitlement = freezed,
     Object? isPillSheetFinishedInThePast = freezed,
     Object? isAlreadyShowTiral = freezed,
     Object? shouldShowMigrateInfo = freezed,
@@ -165,9 +165,9 @@ class _$RecordPageStateCopyWithImpl<$Res>
           ? _value.isTrial
           : isTrial // ignore: cast_nullable_to_non_nullable
               as bool,
-      isExpiredDiscountEntitlements: isExpiredDiscountEntitlements == freezed
-          ? _value.isExpiredDiscountEntitlements
-          : isExpiredDiscountEntitlements // ignore: cast_nullable_to_non_nullable
+      hasDiscountEntitlement: hasDiscountEntitlement == freezed
+          ? _value.hasDiscountEntitlement
+          : hasDiscountEntitlement // ignore: cast_nullable_to_non_nullable
               as bool,
       isPillSheetFinishedInThePast: isPillSheetFinishedInThePast == freezed
           ? _value.isPillSheetFinishedInThePast
@@ -244,7 +244,7 @@ abstract class _$RecordPageStateCopyWith<$Res>
       bool firstLoadIsEnded,
       bool isPremium,
       bool isTrial,
-      bool isExpiredDiscountEntitlements,
+      bool hasDiscountEntitlement,
       bool isPillSheetFinishedInThePast,
       bool isAlreadyShowTiral,
       bool shouldShowMigrateInfo,
@@ -280,7 +280,7 @@ class __$RecordPageStateCopyWithImpl<$Res>
     Object? firstLoadIsEnded = freezed,
     Object? isPremium = freezed,
     Object? isTrial = freezed,
-    Object? isExpiredDiscountEntitlements = freezed,
+    Object? hasDiscountEntitlement = freezed,
     Object? isPillSheetFinishedInThePast = freezed,
     Object? isAlreadyShowTiral = freezed,
     Object? shouldShowMigrateInfo = freezed,
@@ -316,9 +316,9 @@ class __$RecordPageStateCopyWithImpl<$Res>
           ? _value.isTrial
           : isTrial // ignore: cast_nullable_to_non_nullable
               as bool,
-      isExpiredDiscountEntitlements: isExpiredDiscountEntitlements == freezed
-          ? _value.isExpiredDiscountEntitlements
-          : isExpiredDiscountEntitlements // ignore: cast_nullable_to_non_nullable
+      hasDiscountEntitlement: hasDiscountEntitlement == freezed
+          ? _value.hasDiscountEntitlement
+          : hasDiscountEntitlement // ignore: cast_nullable_to_non_nullable
               as bool,
       isPillSheetFinishedInThePast: isPillSheetFinishedInThePast == freezed
           ? _value.isPillSheetFinishedInThePast
@@ -369,7 +369,7 @@ class _$_RecordPageState extends _RecordPageState {
       this.firstLoadIsEnded = false,
       this.isPremium = false,
       this.isTrial = false,
-      this.isExpiredDiscountEntitlements = false,
+      this.hasDiscountEntitlement = true,
       this.isPillSheetFinishedInThePast = false,
       this.isAlreadyShowTiral = false,
       this.shouldShowMigrateInfo = false,
@@ -397,9 +397,9 @@ class _$_RecordPageState extends _RecordPageState {
   @JsonKey(defaultValue: false)
   @override
   final bool isTrial;
-  @JsonKey(defaultValue: false)
+  @JsonKey(defaultValue: true)
   @override
-  final bool isExpiredDiscountEntitlements;
+  final bool hasDiscountEntitlement;
   @JsonKey(defaultValue: false)
   @override
   final bool isPillSheetFinishedInThePast;
@@ -427,7 +427,7 @@ class _$_RecordPageState extends _RecordPageState {
 
   @override
   String toString() {
-    return 'RecordPageState(entity: $entity, setting: $setting, totalCountOfActionForTakenPill: $totalCountOfActionForTakenPill, firstLoadIsEnded: $firstLoadIsEnded, isPremium: $isPremium, isTrial: $isTrial, isExpiredDiscountEntitlements: $isExpiredDiscountEntitlements, isPillSheetFinishedInThePast: $isPillSheetFinishedInThePast, isAlreadyShowTiral: $isAlreadyShowTiral, shouldShowMigrateInfo: $shouldShowMigrateInfo, isLinkedLoginProvider: $isLinkedLoginProvider, beginTrialDate: $beginTrialDate, trialDeadlineDate: $trialDeadlineDate, recommendedSignupNotificationIsAlreadyShow: $recommendedSignupNotificationIsAlreadyShow, premiumTrialGuideNotificationIsClosed: $premiumTrialGuideNotificationIsClosed, exception: $exception)';
+    return 'RecordPageState(entity: $entity, setting: $setting, totalCountOfActionForTakenPill: $totalCountOfActionForTakenPill, firstLoadIsEnded: $firstLoadIsEnded, isPremium: $isPremium, isTrial: $isTrial, hasDiscountEntitlement: $hasDiscountEntitlement, isPillSheetFinishedInThePast: $isPillSheetFinishedInThePast, isAlreadyShowTiral: $isAlreadyShowTiral, shouldShowMigrateInfo: $shouldShowMigrateInfo, isLinkedLoginProvider: $isLinkedLoginProvider, beginTrialDate: $beginTrialDate, trialDeadlineDate: $trialDeadlineDate, recommendedSignupNotificationIsAlreadyShow: $recommendedSignupNotificationIsAlreadyShow, premiumTrialGuideNotificationIsClosed: $premiumTrialGuideNotificationIsClosed, exception: $exception)';
   }
 
   @override
@@ -452,10 +452,9 @@ class _$_RecordPageState extends _RecordPageState {
             (identical(other.isTrial, isTrial) ||
                 const DeepCollectionEquality()
                     .equals(other.isTrial, isTrial)) &&
-            (identical(other.isExpiredDiscountEntitlements, isExpiredDiscountEntitlements) ||
+            (identical(other.hasDiscountEntitlement, hasDiscountEntitlement) ||
                 const DeepCollectionEquality().equals(
-                    other.isExpiredDiscountEntitlements,
-                    isExpiredDiscountEntitlements)) &&
+                    other.hasDiscountEntitlement, hasDiscountEntitlement)) &&
             (identical(other.isPillSheetFinishedInThePast, isPillSheetFinishedInThePast) ||
                 const DeepCollectionEquality().equals(
                     other.isPillSheetFinishedInThePast,
@@ -475,7 +474,9 @@ class _$_RecordPageState extends _RecordPageState {
             (identical(other.trialDeadlineDate, trialDeadlineDate) ||
                 const DeepCollectionEquality()
                     .equals(other.trialDeadlineDate, trialDeadlineDate)) &&
-            (identical(other.recommendedSignupNotificationIsAlreadyShow, recommendedSignupNotificationIsAlreadyShow) || const DeepCollectionEquality().equals(other.recommendedSignupNotificationIsAlreadyShow, recommendedSignupNotificationIsAlreadyShow)) &&
+            (identical(other.recommendedSignupNotificationIsAlreadyShow, recommendedSignupNotificationIsAlreadyShow) ||
+                const DeepCollectionEquality().equals(
+                    other.recommendedSignupNotificationIsAlreadyShow, recommendedSignupNotificationIsAlreadyShow)) &&
             (identical(other.premiumTrialGuideNotificationIsClosed, premiumTrialGuideNotificationIsClosed) || const DeepCollectionEquality().equals(other.premiumTrialGuideNotificationIsClosed, premiumTrialGuideNotificationIsClosed)) &&
             (identical(other.exception, exception) || const DeepCollectionEquality().equals(other.exception, exception)));
   }
@@ -489,7 +490,7 @@ class _$_RecordPageState extends _RecordPageState {
       const DeepCollectionEquality().hash(firstLoadIsEnded) ^
       const DeepCollectionEquality().hash(isPremium) ^
       const DeepCollectionEquality().hash(isTrial) ^
-      const DeepCollectionEquality().hash(isExpiredDiscountEntitlements) ^
+      const DeepCollectionEquality().hash(hasDiscountEntitlement) ^
       const DeepCollectionEquality().hash(isPillSheetFinishedInThePast) ^
       const DeepCollectionEquality().hash(isAlreadyShowTiral) ^
       const DeepCollectionEquality().hash(shouldShowMigrateInfo) ^
@@ -516,7 +517,7 @@ abstract class _RecordPageState extends RecordPageState {
       bool firstLoadIsEnded,
       bool isPremium,
       bool isTrial,
-      bool isExpiredDiscountEntitlements,
+      bool hasDiscountEntitlement,
       bool isPillSheetFinishedInThePast,
       bool isAlreadyShowTiral,
       bool shouldShowMigrateInfo,
@@ -541,7 +542,7 @@ abstract class _RecordPageState extends RecordPageState {
   @override
   bool get isTrial => throw _privateConstructorUsedError;
   @override
-  bool get isExpiredDiscountEntitlements => throw _privateConstructorUsedError;
+  bool get hasDiscountEntitlement => throw _privateConstructorUsedError;
   @override
   bool get isPillSheetFinishedInThePast => throw _privateConstructorUsedError;
   @override

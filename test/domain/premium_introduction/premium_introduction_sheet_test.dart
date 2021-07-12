@@ -72,14 +72,14 @@ void main() {
     when(mockTodayRepository.today()).thenReturn(today);
     todayRepository = mockTodayRepository;
     group('user has discount entitlements', () {
-      final isExpiredDiscountEntitlements = false;
+      final hasDiscountEntitlement = true;
       final isOverDiscountDeadline = false;
       testWidgets('#PremiumIntroductionLimited is found',
           (WidgetTester tester) async {
         var state = PremiumIntroductionState();
         state = state.copyWith(
           offerings: _FakeOfferings(),
-          isExpiredDiscountEntitlements: isExpiredDiscountEntitlements,
+          hasDiscountEntitlement: hasDiscountEntitlement,
           trialDeadlineDate: trialDeadlineDate,
         );
 
@@ -115,7 +115,7 @@ void main() {
       });
     });
     group('user does not has discount entitlements', () {
-      final isExpiredDiscountEntitlements = true;
+      final hasDiscountEntitlement = false;
       testWidgets('#PremiumIntroductionLimited is not found',
           (WidgetTester tester) async {
         final mockTodayRepository = MockTodayService();
@@ -127,7 +127,7 @@ void main() {
         var state = PremiumIntroductionState();
         state = state.copyWith(
           offerings: _FakeOfferings(),
-          isExpiredDiscountEntitlements: isExpiredDiscountEntitlements,
+          hasDiscountEntitlement: hasDiscountEntitlement,
           trialDeadlineDate: today.subtract(Duration(days: 1)),
         );
 
@@ -175,7 +175,7 @@ void main() {
         var state = PremiumIntroductionState();
         state = state.copyWith(
           offerings: _FakeOfferings(),
-          isExpiredDiscountEntitlements: false,
+          hasDiscountEntitlement: true,
           trialDeadlineDate: today.subtract(Duration(days: 1)),
         );
 
@@ -223,7 +223,7 @@ void main() {
         var state = PremiumIntroductionState();
         state = state.copyWith(
           offerings: _FakeOfferings(),
-          isExpiredDiscountEntitlements: false,
+          hasDiscountEntitlement: true,
           trialDeadlineDate: trialDeadlineDate,
         );
 

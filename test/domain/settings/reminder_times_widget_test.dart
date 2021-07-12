@@ -29,7 +29,7 @@ class _FakeUser extends Fake implements User {
   @override
   bool get isTrial => fakeIsTrial;
   @override
-  bool get isExpiredDiscountEntitlements => fakeIsExpiredDiscountEntitlements;
+  bool get hasDiscountEntitlement => fakeIsExpiredDiscountEntitlements;
 }
 
 void main() {
