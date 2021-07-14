@@ -66,8 +66,8 @@ void main() {
           isLinkedLoginProvider: false,
           premiumTrialGuideNotificationIsClosed: false,
           recommendedSignupNotificationIsAlreadyShow: false,
-          trialDeadlineDate: today.subtract(Duration(days: 1)),
-          discountEntitlementDeadlineDate: null,
+          trialDeadlineDate: null,
+          discountEntitlementDeadlineDate: today.subtract(Duration(days: 1)),
         );
 
         final recordPageState = RecordPageState(entity: pillSheet);
