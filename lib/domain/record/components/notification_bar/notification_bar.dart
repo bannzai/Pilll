@@ -70,8 +70,8 @@ class NotificationBar extends HookWidget {
             restDurationNotification: restDurationNotification);
       }
 
-      if (!state.isLinkedLoginProvider) {
-        if (state.totalCountOfActionForTakenPill >= 7) {
+      if (state.totalCountOfActionForTakenPill >= 7) {
+        if (!state.isLinkedLoginProvider) {
           if (!state.recommendedSignupNotificationIsAlreadyShow) {
             return RecommendSignupNotificationBar(
               onTap: () {
@@ -94,23 +94,25 @@ class NotificationBar extends HookWidget {
             );
           }
         }
-      }
 
-      if (!state.isTrial) {
-        if (state.trialDeadlineDate == null) {
-          if (!state.premiumTrialGuideNotificationIsClosed) {
-            return PremiumTrialGuideNotificationBar(
-              onTap: () {
-                analytics.logEvent(
-                    name: "pressed_trial_guide_notification_bar");
-                showPremiumTrialModal(context, () {
-                  showPremiumTrialCompleteModalPreDialog(context);
-                });
-              },
-              onClose: () {
-                store.closePremiumTrialNotification();
-              },
-            );
+        if (!state.isTrial) {
+          if (state.totalCountOfActionForTakenPill >= 7) {
+            if (state.trialDeadlineDate == null) {
+              if (!state.premiumTrialGuideNotificationIsClosed) {
+                return PremiumTrialGuideNotificationBar(
+                  onTap: () {
+                    analytics.logEvent(
+                        name: "pressed_trial_guide_notification_bar");
+                    showPremiumTrialModal(context, () {
+                      showPremiumTrialCompleteModalPreDialog(context);
+                    });
+                  },
+                  onClose: () {
+                    store.closePremiumTrialNotification();
+                  },
+                );
+              }
+            }
           }
         }
       }
