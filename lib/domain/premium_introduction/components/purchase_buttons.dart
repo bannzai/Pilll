@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:pilll/analytics.dart';
 import 'package:pilll/components/page/hud.dart';
 import 'package:pilll/domain/premium_introduction/components/annual_purchase_button.dart';
 import 'package:pilll/domain/premium_introduction/components/monthly_purchase_button.dart';
@@ -39,6 +40,7 @@ class PurchaseButtons extends HookWidget {
           MonthlyPurchaseButton(
             monthlyPackage: monthlyPackage,
             onTap: (monthlyPackage) async {
+              analytics.logEvent(name: "pressed_monthly_purchase_button");
               await _purchase(context, store, monthlyPackage);
             },
           ),
@@ -47,6 +49,7 @@ class PurchaseButtons extends HookWidget {
           AnnualPurchaseButton(
             annualPackage: annualPackage,
             onTap: (annualPackage) async {
+              analytics.logEvent(name: "pressed_annual_purchase_button");
               await _purchase(context, store, annualPackage);
             },
           ),
