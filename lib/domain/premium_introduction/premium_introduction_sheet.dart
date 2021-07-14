@@ -92,6 +92,8 @@ class PremiumIntroductionSheet extends HookWidget {
                           SizedBox(height: 24),
                           SecondaryButton(
                               onPressed: () async {
+                                analytics.logEvent(
+                                    name: "pressed_premium_functions_on_sheet");
                                 await launch(preimumLink);
                               },
                               text: "プレミアム機能を見る"),

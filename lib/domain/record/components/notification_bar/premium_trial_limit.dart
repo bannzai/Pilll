@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:pilll/analytics.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/util/links.dart';
@@ -19,6 +20,7 @@ class PremiumTrialLimitNotificationBar extends StatelessWidget {
       padding: EdgeInsets.only(top: 10, bottom: 10),
       child: GestureDetector(
         onTap: () async {
+          analytics.logEvent(name: "pressed_trial_limited_notification_bar");
           await launch(preimumLink);
         },
         child: Row(

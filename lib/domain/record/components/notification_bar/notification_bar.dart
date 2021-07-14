@@ -55,6 +55,8 @@ class NotificationBar extends HookWidget {
                   discountEntitlementDeadlineDate:
                       discountEntitlementDeadlineDate,
                   onTap: () {
+                    analytics.logEvent(
+                        name: "pressed_discount_notification_bar");
                     showPremiumIntroductionSheet(context);
                   });
             }
@@ -99,6 +101,8 @@ class NotificationBar extends HookWidget {
           if (!state.premiumTrialGuideNotificationIsClosed) {
             return PremiumTrialGuideNotificationBar(
               onTap: () {
+                analytics.logEvent(
+                    name: "pressed_trial_guide_notification_bar");
                 showPremiumTrialModal(context, () {
                   showPremiumTrialCompleteModalPreDialog(context);
                 });
