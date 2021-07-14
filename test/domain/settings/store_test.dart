@@ -15,16 +15,20 @@ class _FakeUser extends Fake implements User {
     this.fakeIsPremium = false,
     this.fakeIsTrial = false,
     this.fakeIsExpiredDiscountEntitlements = false,
+    this.fakeIsTrialDeadlineDate,
   });
   final bool fakeIsPremium;
   final bool fakeIsTrial;
   final bool fakeIsExpiredDiscountEntitlements;
+  final DateTime? fakeIsTrialDeadlineDate;
   @override
   bool get isPremium => fakeIsPremium;
   @override
   bool get isTrial => fakeIsTrial;
   @override
   bool get hasDiscountEntitlement => fakeIsExpiredDiscountEntitlements;
+  @override
+  DateTime? get trialDeadlineDate => fakeIsTrialDeadlineDate;
 }
 
 class _FakeSetting extends Fake implements Setting {
