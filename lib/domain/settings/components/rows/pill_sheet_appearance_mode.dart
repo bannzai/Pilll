@@ -17,8 +17,6 @@ class PillSheetAppearanceModeRow extends HookWidget {
   final DateTime? trialDeadlineDate;
   final Setting setting;
 
-  bool get isDisableEvent => isPremium || isTrial;
-
   const PillSheetAppearanceModeRow({
     Key? key,
     required this.isTrial,
@@ -29,25 +27,6 @@ class PillSheetAppearanceModeRow extends HookWidget {
 
   @override
   Widget build(BuildContext context) {
-    if (isDisableEvent) {
-      return _body(context);
-    } else {
-      return GestureDetector(
-        child: _body(context),
-        onTap: () {
-          if (trialDeadlineDate == null) {
-            showPremiumTrialModal(context, () {
-              showPremiumTrialCompleteModalPreDialog(context);
-            });
-          } else {
-            showPremiumIntroductionSheet(context);
-          }
-        },
-      );
-    }
-  }
-
-  Widget _body(BuildContext context) {
     final store = useProvider(settingStoreProvider);
     final isOn =
         setting.pillSheetAppearanceMode == PillSheetAppearanceMode.date;
@@ -75,9 +54,7 @@ class PillSheetAppearanceModeRow extends HookWidget {
     analytics.logEvent(
       name: "did_select_pill_sheet_appearance",
     );
-    if (!isDisableEvent) {
-      showPremiumIntroductionSheet(context);
-    } else {
+    if (isPremium || isTrial) {
       final pillSheetAppearanceMode =
           isOn ? PillSheetAppearanceMode.date : PillSheetAppearanceMode.number;
       await store.modifyPillSheetAppearanceMode(pillSheetAppearanceMode);
@@ -90,6 +67,14 @@ class PillSheetAppearanceModeRow extends HookWidget {
           ),
         ),
       );
+    } else {
+      if (trialDeadlineDate == null) {
+        showPremiumTrialModal(context, () {
+          showPremiumTrialCompleteModalPreDialog(context);
+        });
+      } else {
+        showPremiumIntroductionSheet(context);
+      }
     }
   }
 }
