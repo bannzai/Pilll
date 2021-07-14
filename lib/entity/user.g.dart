@@ -40,7 +40,7 @@ _$_User _$_$_UserFromJson(Map<String, dynamic> json) {
             [],
     isPremium: json['isPremium'] as bool? ?? false,
     isTrial: json['isTrial'] as bool? ?? false,
-    hasDiscountEntitlement: json['hasDiscountEntitlement'] as bool? ?? false,
+    hasDiscountEntitlement: json['hasDiscountEntitlement'] as bool? ?? true,
     beginTrialDate: TimestampConverter.timestampToDateTime(
         json['beginTrialDate'] as Timestamp?),
     trialDeadlineDate: TimestampConverter.timestampToDateTime(

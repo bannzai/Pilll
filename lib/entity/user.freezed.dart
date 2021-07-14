@@ -180,7 +180,7 @@ class _$UserTearOff {
       List<String> firebaseCurrentUserIDSets = const [],
       bool isPremium = false,
       bool isTrial = false,
-      bool hasDiscountEntitlement = false,
+      bool hasDiscountEntitlement = true,
       @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
           DateTime? beginTrialDate,
       @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
@@ -490,7 +490,7 @@ class _$_User extends _User {
       this.firebaseCurrentUserIDSets = const [],
       this.isPremium = false,
       this.isTrial = false,
-      this.hasDiscountEntitlement = false,
+      this.hasDiscountEntitlement = true,
       @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
           this.beginTrialDate,
       @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
@@ -527,7 +527,7 @@ class _$_User extends _User {
   @JsonKey(defaultValue: false)
   @override
   final bool isTrial;
-  @JsonKey(defaultValue: false)
+  @JsonKey(defaultValue: true)
   @override
   final bool hasDiscountEntitlement;
   @override

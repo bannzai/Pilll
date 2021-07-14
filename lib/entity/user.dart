@@ -83,7 +83,7 @@ abstract class User implements _$User {
         bool isPremium,
     @Default(false)
         bool isTrial,
-    @Default(false)
+    @Default(true)
         bool hasDiscountEntitlement,
     @JsonKey(
       fromJson: TimestampConverter.timestampToDateTime,
