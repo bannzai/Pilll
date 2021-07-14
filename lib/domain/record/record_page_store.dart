@@ -83,7 +83,7 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
         isPremium: user.isPremium,
         isTrial: user.isTrial,
         hasDiscountEntitlement: user.hasDiscountEntitlement,
-        trialDeadlineDate: user.trialDeadlineDate,
+        discountEntitlementDeadlineDate: user.discountEntitlementDeadlineDate,
         shouldShowMigrateInfo: shouldShowMigrateInfo,
         isLinkedLoginProvider:
             _authService.isLinkedApple() || _authService.isLinkedGoogle(),
@@ -121,6 +121,7 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
         isTrial: event.isTrial,
         hasDiscountEntitlement: event.hasDiscountEntitlement,
         trialDeadlineDate: event.trialDeadlineDate,
+        discountEntitlementDeadlineDate: event.discountEntitlementDeadlineDate,
       );
     });
     _authServiceCanceller?.cancel();
