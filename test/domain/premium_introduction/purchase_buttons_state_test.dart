@@ -24,14 +24,6 @@ void main() {
       );
       expect(state.offeringType, equals(OfferingType.premium));
     });
-    test("when trialDeadlineDate is null should return premium", () async {
-      final state = PurchaseButtonsState(
-        offerings: _FakeOfferings(),
-        hasDiscountEntitlement: true,
-        isOverDiscountDeadline: false,
-      );
-      expect(state.offeringType, equals(OfferingType.premium));
-    });
     test("when isOverDiscountDeadline is null should return premium", () async {
       final state = PurchaseButtonsState(
         offerings: _FakeOfferings(),
