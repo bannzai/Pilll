@@ -66,8 +66,10 @@ class PurchaseButtons extends HookWidget {
       if (shouldShowCompleteDialog) {
         showDialog(
             context: context,
-            builder: (context) {
-              return PremiumCompleteDialog();
+            builder: (_) {
+              return PremiumCompleteDialog(onClose: () {
+                Navigator.of(context).pop();
+              });
             });
       }
     } catch (error) {
