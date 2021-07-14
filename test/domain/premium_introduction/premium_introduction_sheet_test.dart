@@ -210,8 +210,8 @@ void main() {
         );
       });
     });
-    group('trial deadline date is null', () {
-      DateTime? trialDeadlineDate;
+    group('discount entitlemenet deadline date is null', () {
+      DateTime? discountEntitlementDeadlineDate;
       testWidgets('#PremiumIntroductionLimited is not found',
           (WidgetTester tester) async {
         final mockTodayRepository = MockTodayService();
@@ -224,7 +224,7 @@ void main() {
         state = state.copyWith(
           offerings: _FakeOfferings(),
           hasDiscountEntitlement: true,
-          discountEntitlementDeadlineDate: trialDeadlineDate,
+          discountEntitlementDeadlineDate: discountEntitlementDeadlineDate,
         );
 
         final sheet = PremiumIntroductionSheet();
