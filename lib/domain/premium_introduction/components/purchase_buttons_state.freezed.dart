@@ -18,12 +18,10 @@ class _$PurchaseButtonsStateTearOff {
 
   _PurchaseButtonsState call(
       {required Offerings offerings,
-      required DateTime? trialDeadlineDate,
       required bool hasDiscountEntitlement,
       required bool? isOverDiscountDeadline}) {
     return _PurchaseButtonsState(
       offerings: offerings,
-      trialDeadlineDate: trialDeadlineDate,
       hasDiscountEntitlement: hasDiscountEntitlement,
       isOverDiscountDeadline: isOverDiscountDeadline,
     );
@@ -36,7 +34,6 @@ const $PurchaseButtonsState = _$PurchaseButtonsStateTearOff();
 /// @nodoc
 mixin _$PurchaseButtonsState {
   Offerings get offerings => throw _privateConstructorUsedError;
-  DateTime? get trialDeadlineDate => throw _privateConstructorUsedError;
   bool get hasDiscountEntitlement => throw _privateConstructorUsedError;
   bool? get isOverDiscountDeadline => throw _privateConstructorUsedError;
 
@@ -52,7 +49,6 @@ abstract class $PurchaseButtonsStateCopyWith<$Res> {
       _$PurchaseButtonsStateCopyWithImpl<$Res>;
   $Res call(
       {Offerings offerings,
-      DateTime? trialDeadlineDate,
       bool hasDiscountEntitlement,
       bool? isOverDiscountDeadline});
 }
@@ -69,7 +65,6 @@ class _$PurchaseButtonsStateCopyWithImpl<$Res>
   @override
   $Res call({
     Object? offerings = freezed,
-    Object? trialDeadlineDate = freezed,
     Object? hasDiscountEntitlement = freezed,
     Object? isOverDiscountDeadline = freezed,
   }) {
@@ -78,10 +73,6 @@ class _$PurchaseButtonsStateCopyWithImpl<$Res>
           ? _value.offerings
           : offerings // ignore: cast_nullable_to_non_nullable
               as Offerings,
-      trialDeadlineDate: trialDeadlineDate == freezed
-          ? _value.trialDeadlineDate
-          : trialDeadlineDate // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
       hasDiscountEntitlement: hasDiscountEntitlement == freezed
           ? _value.hasDiscountEntitlement
           : hasDiscountEntitlement // ignore: cast_nullable_to_non_nullable
@@ -103,7 +94,6 @@ abstract class _$PurchaseButtonsStateCopyWith<$Res>
   @override
   $Res call(
       {Offerings offerings,
-      DateTime? trialDeadlineDate,
       bool hasDiscountEntitlement,
       bool? isOverDiscountDeadline});
 }
@@ -122,7 +112,6 @@ class __$PurchaseButtonsStateCopyWithImpl<$Res>
   @override
   $Res call({
     Object? offerings = freezed,
-    Object? trialDeadlineDate = freezed,
     Object? hasDiscountEntitlement = freezed,
     Object? isOverDiscountDeadline = freezed,
   }) {
@@ -131,10 +120,6 @@ class __$PurchaseButtonsStateCopyWithImpl<$Res>
           ? _value.offerings
           : offerings // ignore: cast_nullable_to_non_nullable
               as Offerings,
-      trialDeadlineDate: trialDeadlineDate == freezed
-          ? _value.trialDeadlineDate
-          : trialDeadlineDate // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
       hasDiscountEntitlement: hasDiscountEntitlement == freezed
           ? _value.hasDiscountEntitlement
           : hasDiscountEntitlement // ignore: cast_nullable_to_non_nullable
@@ -152,7 +137,6 @@ class __$PurchaseButtonsStateCopyWithImpl<$Res>
 class _$_PurchaseButtonsState extends _PurchaseButtonsState {
   _$_PurchaseButtonsState(
       {required this.offerings,
-      required this.trialDeadlineDate,
       required this.hasDiscountEntitlement,
       required this.isOverDiscountDeadline})
       : super._();
@@ -160,15 +144,13 @@ class _$_PurchaseButtonsState extends _PurchaseButtonsState {
   @override
   final Offerings offerings;
   @override
-  final DateTime? trialDeadlineDate;
-  @override
   final bool hasDiscountEntitlement;
   @override
   final bool? isOverDiscountDeadline;
 
   @override
   String toString() {
-    return 'PurchaseButtonsState(offerings: $offerings, trialDeadlineDate: $trialDeadlineDate, hasDiscountEntitlement: $hasDiscountEntitlement, isOverDiscountDeadline: $isOverDiscountDeadline)';
+    return 'PurchaseButtonsState(offerings: $offerings, hasDiscountEntitlement: $hasDiscountEntitlement, isOverDiscountDeadline: $isOverDiscountDeadline)';
   }
 
   @override
@@ -178,9 +160,6 @@ class _$_PurchaseButtonsState extends _PurchaseButtonsState {
             (identical(other.offerings, offerings) ||
                 const DeepCollectionEquality()
                     .equals(other.offerings, offerings)) &&
-            (identical(other.trialDeadlineDate, trialDeadlineDate) ||
-                const DeepCollectionEquality()
-                    .equals(other.trialDeadlineDate, trialDeadlineDate)) &&
             (identical(other.hasDiscountEntitlement, hasDiscountEntitlement) ||
                 const DeepCollectionEquality().equals(
                     other.hasDiscountEntitlement, hasDiscountEntitlement)) &&
@@ -193,7 +172,6 @@ class _$_PurchaseButtonsState extends _PurchaseButtonsState {
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(offerings) ^
-      const DeepCollectionEquality().hash(trialDeadlineDate) ^
       const DeepCollectionEquality().hash(hasDiscountEntitlement) ^
       const DeepCollectionEquality().hash(isOverDiscountDeadline);
 
@@ -207,15 +185,12 @@ class _$_PurchaseButtonsState extends _PurchaseButtonsState {
 abstract class _PurchaseButtonsState extends PurchaseButtonsState {
   factory _PurchaseButtonsState(
       {required Offerings offerings,
-      required DateTime? trialDeadlineDate,
       required bool hasDiscountEntitlement,
       required bool? isOverDiscountDeadline}) = _$_PurchaseButtonsState;
   _PurchaseButtonsState._() : super._();
 
   @override
   Offerings get offerings => throw _privateConstructorUsedError;
-  @override
-  DateTime? get trialDeadlineDate => throw _privateConstructorUsedError;
   @override
   bool get hasDiscountEntitlement => throw _privateConstructorUsedError;
   @override

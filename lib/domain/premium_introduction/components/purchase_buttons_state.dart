@@ -21,7 +21,6 @@ abstract class PurchaseButtonsState implements _$PurchaseButtonsState {
   PurchaseButtonsState._();
   factory PurchaseButtonsState({
     required Offerings offerings,
-    required DateTime? trialDeadlineDate,
     required bool hasDiscountEntitlement,
     required bool? isOverDiscountDeadline,
   }) = _PurchaseButtonsState;
@@ -29,11 +28,6 @@ abstract class PurchaseButtonsState implements _$PurchaseButtonsState {
   OfferingType get offeringType {
     if (!hasDiscountEntitlement) {
       print("[DEBUG] user does not hasDiscountEntitlement");
-      return OfferingType.premium;
-    }
-    final trialDeadlineDate = this.trialDeadlineDate;
-    if (trialDeadlineDate == null) {
-      print("[DEBUG] trialDeadlineDate is null");
       return OfferingType.premium;
     }
     final isOverDiscountDeadline = this.isOverDiscountDeadline;
