@@ -21,13 +21,15 @@ class _$SettingStateTearOff {
       PillSheet? latestPillSheet,
       bool userIsUpdatedFrom132 = false,
       bool isPremium = false,
-      bool isTrial = false}) {
+      bool isTrial = false,
+      DateTime? trialDeadlineDate}) {
     return _SettingState(
       entity: entity,
       latestPillSheet: latestPillSheet,
       userIsUpdatedFrom132: userIsUpdatedFrom132,
       isPremium: isPremium,
       isTrial: isTrial,
+      trialDeadlineDate: trialDeadlineDate,
     );
   }
 }
@@ -42,6 +44,7 @@ mixin _$SettingState {
   bool get userIsUpdatedFrom132 => throw _privateConstructorUsedError;
   bool get isPremium => throw _privateConstructorUsedError;
   bool get isTrial => throw _privateConstructorUsedError;
+  DateTime? get trialDeadlineDate => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $SettingStateCopyWith<SettingState> get copyWith =>
@@ -58,7 +61,8 @@ abstract class $SettingStateCopyWith<$Res> {
       PillSheet? latestPillSheet,
       bool userIsUpdatedFrom132,
       bool isPremium,
-      bool isTrial});
+      bool isTrial,
+      DateTime? trialDeadlineDate});
 
   $SettingCopyWith<$Res>? get entity;
   $PillSheetCopyWith<$Res>? get latestPillSheet;
@@ -79,6 +83,7 @@ class _$SettingStateCopyWithImpl<$Res> implements $SettingStateCopyWith<$Res> {
     Object? userIsUpdatedFrom132 = freezed,
     Object? isPremium = freezed,
     Object? isTrial = freezed,
+    Object? trialDeadlineDate = freezed,
   }) {
     return _then(_value.copyWith(
       entity: entity == freezed
@@ -101,6 +106,10 @@ class _$SettingStateCopyWithImpl<$Res> implements $SettingStateCopyWith<$Res> {
           ? _value.isTrial
           : isTrial // ignore: cast_nullable_to_non_nullable
               as bool,
+      trialDeadlineDate: trialDeadlineDate == freezed
+          ? _value.trialDeadlineDate
+          : trialDeadlineDate // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
     ));
   }
 
@@ -139,7 +148,8 @@ abstract class _$SettingStateCopyWith<$Res>
       PillSheet? latestPillSheet,
       bool userIsUpdatedFrom132,
       bool isPremium,
-      bool isTrial});
+      bool isTrial,
+      DateTime? trialDeadlineDate});
 
   @override
   $SettingCopyWith<$Res>? get entity;
@@ -164,6 +174,7 @@ class __$SettingStateCopyWithImpl<$Res> extends _$SettingStateCopyWithImpl<$Res>
     Object? userIsUpdatedFrom132 = freezed,
     Object? isPremium = freezed,
     Object? isTrial = freezed,
+    Object? trialDeadlineDate = freezed,
   }) {
     return _then(_SettingState(
       entity: entity == freezed
@@ -186,6 +197,10 @@ class __$SettingStateCopyWithImpl<$Res> extends _$SettingStateCopyWithImpl<$Res>
           ? _value.isTrial
           : isTrial // ignore: cast_nullable_to_non_nullable
               as bool,
+      trialDeadlineDate: trialDeadlineDate == freezed
+          ? _value.trialDeadlineDate
+          : trialDeadlineDate // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
     ));
   }
 }
@@ -198,7 +213,8 @@ class _$_SettingState extends _SettingState {
       this.latestPillSheet,
       this.userIsUpdatedFrom132 = false,
       this.isPremium = false,
-      this.isTrial = false})
+      this.isTrial = false,
+      this.trialDeadlineDate})
       : super._();
 
   @override
@@ -214,10 +230,12 @@ class _$_SettingState extends _SettingState {
   @JsonKey(defaultValue: false)
   @override
   final bool isTrial;
+  @override
+  final DateTime? trialDeadlineDate;
 
   @override
   String toString() {
-    return 'SettingState(entity: $entity, latestPillSheet: $latestPillSheet, userIsUpdatedFrom132: $userIsUpdatedFrom132, isPremium: $isPremium, isTrial: $isTrial)';
+    return 'SettingState(entity: $entity, latestPillSheet: $latestPillSheet, userIsUpdatedFrom132: $userIsUpdatedFrom132, isPremium: $isPremium, isTrial: $isTrial, trialDeadlineDate: $trialDeadlineDate)';
   }
 
   @override
@@ -236,7 +254,11 @@ class _$_SettingState extends _SettingState {
                 const DeepCollectionEquality()
                     .equals(other.isPremium, isPremium)) &&
             (identical(other.isTrial, isTrial) ||
-                const DeepCollectionEquality().equals(other.isTrial, isTrial)));
+                const DeepCollectionEquality()
+                    .equals(other.isTrial, isTrial)) &&
+            (identical(other.trialDeadlineDate, trialDeadlineDate) ||
+                const DeepCollectionEquality()
+                    .equals(other.trialDeadlineDate, trialDeadlineDate)));
   }
 
   @override
@@ -246,7 +268,8 @@ class _$_SettingState extends _SettingState {
       const DeepCollectionEquality().hash(latestPillSheet) ^
       const DeepCollectionEquality().hash(userIsUpdatedFrom132) ^
       const DeepCollectionEquality().hash(isPremium) ^
-      const DeepCollectionEquality().hash(isTrial);
+      const DeepCollectionEquality().hash(isTrial) ^
+      const DeepCollectionEquality().hash(trialDeadlineDate);
 
   @JsonKey(ignore: true)
   @override
@@ -260,7 +283,8 @@ abstract class _SettingState extends SettingState {
       PillSheet? latestPillSheet,
       bool userIsUpdatedFrom132,
       bool isPremium,
-      bool isTrial}) = _$_SettingState;
+      bool isTrial,
+      DateTime? trialDeadlineDate}) = _$_SettingState;
   _SettingState._() : super._();
 
   @override
@@ -273,6 +297,8 @@ abstract class _SettingState extends SettingState {
   bool get isPremium => throw _privateConstructorUsedError;
   @override
   bool get isTrial => throw _privateConstructorUsedError;
+  @override
+  DateTime? get trialDeadlineDate => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$SettingStateCopyWith<_SettingState> get copyWith =>
