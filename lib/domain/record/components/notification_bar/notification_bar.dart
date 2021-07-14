@@ -55,6 +55,8 @@ class NotificationBar extends HookWidget {
                   discountEntitlementDeadlineDate:
                       discountEntitlementDeadlineDate,
                   onTap: () {
+                    analytics.logEvent(
+                        name: "pressed_discount_notification_bar");
                     showPremiumIntroductionSheet(context);
                   });
             }
