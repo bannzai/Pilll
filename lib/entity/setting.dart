@@ -30,6 +30,28 @@ abstract class ReminderTime implements _$ReminderTime {
   static final int minimumCount = 1;
 }
 
+enum PillSheetAppearanceMode {
+  @JsonValue("number")
+  number,
+  @JsonValue("date")
+  date,
+}
+
+extension PillSheetAppearanceModeFunctions on PillSheetAppearanceMode {
+  String get itemName {
+    switch (this) {
+      case PillSheetAppearanceMode.number:
+        return "ピル番号";
+      case PillSheetAppearanceMode.date:
+        return "日付";
+    }
+  }
+}
+
+abstract class SettingFirestoreFieldKeys {
+  static final pillSheetAppearanceMode = "pillSheetAppearanceMode";
+}
+
 @freezed
 abstract class Setting implements _$Setting {
   Setting._();
@@ -41,6 +63,8 @@ abstract class Setting implements _$Setting {
     @Default([]) List<ReminderTime> reminderTimes,
     @JsonSerializable(explicitToJson: true) required bool isOnReminder,
     @Default(true) bool isOnNotifyInNotTakenDuration,
+    @Default(PillSheetAppearanceMode.number)
+        PillSheetAppearanceMode pillSheetAppearanceMode,
   }) = _Setting;
 
   factory Setting.fromJson(Map<String, dynamic> json) =>

@@ -4,7 +4,9 @@ import 'package:firebase_auth/firebase_auth.dart' as firebaseAuth;
 import 'package:pilll/database/database.dart';
 import 'package:pilll/entity/demographic.dart';
 import 'package:pilll/entity/package.dart';
+import 'package:pilll/entity/setting.dart';
 import 'package:pilll/entity/user.dart';
+import 'package:pilll/util/datetime/day.dart';
 import 'package:pilll/util/shared_preference/keys.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:package_info/package_info.dart';
@@ -37,7 +39,7 @@ class UserService {
         throw UserNotFound();
       }
       print("fetched user ${document.data()}");
-      return User.fromJson(document.data()!);
+      return User.fromJson(document.data() as Map<String, dynamic>);
     });
   }
 
@@ -49,7 +51,7 @@ class UserService {
     Future(() async {
       try {
         final document = await _fetchRawDocumentSnapshot();
-        final user = User.fromJson(document.data()!);
+        final user = User.fromJson(document.data() as Map<String, dynamic>);
         final documentID = document.id;
         if (!user.userDocumentIDSets.contains(documentID)) {
           user.userDocumentIDSets.add(documentID);
@@ -79,12 +81,51 @@ class UserService {
     });
   }
 
-  Future<User> subscribe() {
+  Stream<User> subscribe() {
     return _database
         .userReference()
         .snapshots(includeMetadataChanges: true)
-        .listen((event) => User.fromJson(event.data()!))
-        .asFuture();
+        .map((event) => User.fromJson(event.data() as Map<String, dynamic>));
+  }
+
+  Future<void> updatePurchaseInfo({
+    required bool? isActivated,
+    required String? entitlementIdentifier,
+    required String? premiumPlanIdentifier,
+    required String purchaseAppID,
+    required List<String> activeSubscriptions,
+    required String? originalPurchaseDate,
+  }) async {
+    await _database.userReference().set({
+      if (isActivated != null) UserFirestoreFieldKeys.isPremium: isActivated,
+      UserFirestoreFieldKeys.purchaseAppID: purchaseAppID
+    }, SetOptions(merge: true));
+    final privates = {
+      if (premiumPlanIdentifier != null)
+        UserPrivateFirestoreFieldKeys.latestPremiumPlanIdentifier:
+            premiumPlanIdentifier,
+      if (originalPurchaseDate != null)
+        UserPrivateFirestoreFieldKeys.originalPurchaseDate:
+            originalPurchaseDate,
+      if (activeSubscriptions.isNotEmpty)
+        UserPrivateFirestoreFieldKeys.activeSubscriptions: activeSubscriptions,
+      if (entitlementIdentifier != null)
+        UserPrivateFirestoreFieldKeys.entitlementIdentifier:
+            entitlementIdentifier,
+    };
+    if (privates.isNotEmpty) {
+      await _database
+          .userPrivateReference()
+          .set({...privates}, SetOptions(merge: true));
+    }
+  }
+
+  Future<void> syncPurchaseInfo({
+    required bool isActivated,
+  }) async {
+    await _database.userReference().set({
+      UserFirestoreFieldKeys.isPremium: isActivated,
+    }, SetOptions(merge: true));
   }
 
   Future<void> deleteSettings() {
@@ -181,5 +222,14 @@ class UserService {
     return _database.userPrivateReference().set(
         {UserPrivateFirestoreFieldKeys.demographic: demographic.toJson()},
         SetOptions(merge: true));
+  }
+
+  Future<void> trial(Setting setting) {
+    return _database.userReference().set({
+      UserFirestoreFieldKeys.isTrial: true,
+      UserFirestoreFieldKeys.beginTrialDate: now(),
+      UserFirestoreFieldKeys.trialDeadlineDate: now().add(Duration(days: 30)),
+      UserFirestoreFieldKeys.settings: setting.toJson(),
+    }, SetOptions(merge: true));
   }
 }

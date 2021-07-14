@@ -5,14 +5,12 @@ import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:flutter/material.dart';
-import 'package:pilll/util/shared_preference/keys.dart';
-import 'package:shared_preferences/shared_preferences.dart';
+import 'package:pilll/util/links.dart';
 
-class ReleaseNote extends StatelessWidget {
-  const ReleaseNote({Key? key}) : super(key: key);
+class PremiumTrialCompleteModal extends StatelessWidget {
+  const PremiumTrialCompleteModal({Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    ChromeSafariBrowser();
     return Material(
       type: MaterialType.transparency,
       child: Center(
@@ -22,7 +20,7 @@ class ReleaseNote extends StatelessWidget {
             borderRadius: BorderRadius.circular(4),
           ),
           width: 304,
-          height: 302,
+          height: 242,
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.center,
@@ -41,7 +39,7 @@ class ReleaseNote extends StatelessWidget {
                     child: Container(
                       padding: EdgeInsets.only(top: 40),
                       child: Text(
-                        "引き継ぎ設定が\nできるようになりました✨",
+                        "プレミアム体験が始まりました！",
                         style: FontType.subTitle.merge(TextColorStyle.black),
                         textAlign: TextAlign.center,
                       ),
@@ -50,15 +48,13 @@ class ReleaseNote extends StatelessWidget {
                 ],
               ),
               Padding(
-                padding: const EdgeInsets.only(top: 25, left: 20, right: 20),
+                padding: const EdgeInsets.only(top: 28, left: 20, right: 20),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     Text(
                       '''
-機種変更やスマホ紛失時などに備えて、引き継ぎ設定をしませんか？
-
-設定画面から設定可能です！
+今日から30日間プレミアム機能を無料でお試しいただけます
                       ''',
                       style: FontType.assisting.merge(TextColorStyle.main),
                     ),
@@ -70,11 +66,12 @@ class ReleaseNote extends StatelessWidget {
                 width: 230,
                 child: SecondaryButton(
                     onPressed: () async {
-                      analytics.logEvent(name: "pressed_show_release_note");
+                      analytics.logEvent(
+                          name: "pressed_show_premium_for_trial");
                       Navigator.of(context).pop();
-                      await openReleaseNote();
+                      await openPremiumFunctions();
                     },
-                    text: "詳細を見る"),
+                    text: "プレミアム機能を見る"),
               ),
               Spacer(),
             ],
@@ -85,26 +82,18 @@ class ReleaseNote extends StatelessWidget {
   }
 }
 
-showReleaseNotePreDialog(BuildContext context) async {
-  final key = ReleaseNoteKey.version2_4_0;
-  final storage = await SharedPreferences.getInstance();
-  if (storage.getBool(key) ?? false) {
-    return;
-  }
-  storage.setBool(key, true);
-
+showPremiumTrialCompleteModalPreDialog(BuildContext context) async {
   showDialog(
       context: context,
       builder: (context) {
-        return ReleaseNote();
+        return PremiumTrialCompleteModal();
       });
 }
 
-openReleaseNote() async {
+openPremiumFunctions() async {
   final ChromeSafariBrowser browser = new ChromeSafariBrowser();
   await browser.open(
-      url: Uri.parse(
-          "https://pilll.anotion.so/733c950541f54eeda6c338d756379020"),
+      url: Uri.parse(preimumLink),
       options: ChromeSafariBrowserClassOptions(
           android:
               AndroidChromeCustomTabsOptions(addDefaultShareMenuItem: false),

@@ -44,4 +44,13 @@ class DateTimeFormatter {
   static String diaryIdentifier(DateTime dateTime) {
     return DateFormat("yyyyMMdd", "ja_JP").format(dateTime);
   }
+
+  static String clock(int hour, minute, second) {
+    final format = NumberFormat("00");
+    return format.format(hour) +
+        ":" +
+        format.format(minute) +
+        ":" +
+        format.format(second);
+  }
 }

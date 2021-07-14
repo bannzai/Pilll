@@ -170,13 +170,23 @@ class _$UserTearOff {
   const _$UserTearOff();
 
   _User call(
-      {@JsonKey(name: "settings") Setting? setting,
+      {@JsonKey(name: "settings")
+          Setting? setting,
       bool migratedFlutter = false,
       String? userIDWhenCreateUser,
       String? anonymousUserID,
       List<String> userDocumentIDSets = const [],
       List<String> anonymousUserIDSets = const [],
-      List<String> firebaseCurrentUserIDSets = const []}) {
+      List<String> firebaseCurrentUserIDSets = const [],
+      bool isPremium = false,
+      bool isTrial = false,
+      bool hasDiscountEntitlement = false,
+      @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
+          DateTime? beginTrialDate,
+      @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
+          DateTime? trialDeadlineDate,
+      @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
+          DateTime? discountEntitlementDeadlineDate}) {
     return _User(
       setting: setting,
       migratedFlutter: migratedFlutter,
@@ -185,6 +195,12 @@ class _$UserTearOff {
       userDocumentIDSets: userDocumentIDSets,
       anonymousUserIDSets: anonymousUserIDSets,
       firebaseCurrentUserIDSets: firebaseCurrentUserIDSets,
+      isPremium: isPremium,
+      isTrial: isTrial,
+      hasDiscountEntitlement: hasDiscountEntitlement,
+      beginTrialDate: beginTrialDate,
+      trialDeadlineDate: trialDeadlineDate,
+      discountEntitlementDeadlineDate: discountEntitlementDeadlineDate,
     );
   }
 
@@ -207,6 +223,22 @@ mixin _$User {
   List<String> get anonymousUserIDSets => throw _privateConstructorUsedError;
   List<String> get firebaseCurrentUserIDSets =>
       throw _privateConstructorUsedError;
+  bool get isPremium => throw _privateConstructorUsedError;
+  bool get isTrial => throw _privateConstructorUsedError;
+  bool get hasDiscountEntitlement => throw _privateConstructorUsedError;
+  @JsonKey(
+      fromJson: TimestampConverter.timestampToDateTime,
+      toJson: TimestampConverter.dateTimeToTimestamp)
+  DateTime? get beginTrialDate => throw _privateConstructorUsedError;
+  @JsonKey(
+      fromJson: TimestampConverter.timestampToDateTime,
+      toJson: TimestampConverter.dateTimeToTimestamp)
+  DateTime? get trialDeadlineDate => throw _privateConstructorUsedError;
+  @JsonKey(
+      fromJson: TimestampConverter.timestampToDateTime,
+      toJson: TimestampConverter.dateTimeToTimestamp)
+  DateTime? get discountEntitlementDeadlineDate =>
+      throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -218,13 +250,23 @@ abstract class $UserCopyWith<$Res> {
   factory $UserCopyWith(User value, $Res Function(User) then) =
       _$UserCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(name: "settings") Setting? setting,
+      {@JsonKey(name: "settings")
+          Setting? setting,
       bool migratedFlutter,
       String? userIDWhenCreateUser,
       String? anonymousUserID,
       List<String> userDocumentIDSets,
       List<String> anonymousUserIDSets,
-      List<String> firebaseCurrentUserIDSets});
+      List<String> firebaseCurrentUserIDSets,
+      bool isPremium,
+      bool isTrial,
+      bool hasDiscountEntitlement,
+      @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
+          DateTime? beginTrialDate,
+      @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
+          DateTime? trialDeadlineDate,
+      @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
+          DateTime? discountEntitlementDeadlineDate});
 
   $SettingCopyWith<$Res>? get setting;
 }
@@ -246,6 +288,12 @@ class _$UserCopyWithImpl<$Res> implements $UserCopyWith<$Res> {
     Object? userDocumentIDSets = freezed,
     Object? anonymousUserIDSets = freezed,
     Object? firebaseCurrentUserIDSets = freezed,
+    Object? isPremium = freezed,
+    Object? isTrial = freezed,
+    Object? hasDiscountEntitlement = freezed,
+    Object? beginTrialDate = freezed,
+    Object? trialDeadlineDate = freezed,
+    Object? discountEntitlementDeadlineDate = freezed,
   }) {
     return _then(_value.copyWith(
       setting: setting == freezed
@@ -276,6 +324,31 @@ class _$UserCopyWithImpl<$Res> implements $UserCopyWith<$Res> {
           ? _value.firebaseCurrentUserIDSets
           : firebaseCurrentUserIDSets // ignore: cast_nullable_to_non_nullable
               as List<String>,
+      isPremium: isPremium == freezed
+          ? _value.isPremium
+          : isPremium // ignore: cast_nullable_to_non_nullable
+              as bool,
+      isTrial: isTrial == freezed
+          ? _value.isTrial
+          : isTrial // ignore: cast_nullable_to_non_nullable
+              as bool,
+      hasDiscountEntitlement: hasDiscountEntitlement == freezed
+          ? _value.hasDiscountEntitlement
+          : hasDiscountEntitlement // ignore: cast_nullable_to_non_nullable
+              as bool,
+      beginTrialDate: beginTrialDate == freezed
+          ? _value.beginTrialDate
+          : beginTrialDate // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
+      trialDeadlineDate: trialDeadlineDate == freezed
+          ? _value.trialDeadlineDate
+          : trialDeadlineDate // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
+      discountEntitlementDeadlineDate: discountEntitlementDeadlineDate ==
+              freezed
+          ? _value.discountEntitlementDeadlineDate
+          : discountEntitlementDeadlineDate // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
     ));
   }
 
@@ -297,13 +370,23 @@ abstract class _$UserCopyWith<$Res> implements $UserCopyWith<$Res> {
       __$UserCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(name: "settings") Setting? setting,
+      {@JsonKey(name: "settings")
+          Setting? setting,
       bool migratedFlutter,
       String? userIDWhenCreateUser,
       String? anonymousUserID,
       List<String> userDocumentIDSets,
       List<String> anonymousUserIDSets,
-      List<String> firebaseCurrentUserIDSets});
+      List<String> firebaseCurrentUserIDSets,
+      bool isPremium,
+      bool isTrial,
+      bool hasDiscountEntitlement,
+      @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
+          DateTime? beginTrialDate,
+      @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
+          DateTime? trialDeadlineDate,
+      @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
+          DateTime? discountEntitlementDeadlineDate});
 
   @override
   $SettingCopyWith<$Res>? get setting;
@@ -327,6 +410,12 @@ class __$UserCopyWithImpl<$Res> extends _$UserCopyWithImpl<$Res>
     Object? userDocumentIDSets = freezed,
     Object? anonymousUserIDSets = freezed,
     Object? firebaseCurrentUserIDSets = freezed,
+    Object? isPremium = freezed,
+    Object? isTrial = freezed,
+    Object? hasDiscountEntitlement = freezed,
+    Object? beginTrialDate = freezed,
+    Object? trialDeadlineDate = freezed,
+    Object? discountEntitlementDeadlineDate = freezed,
   }) {
     return _then(_User(
       setting: setting == freezed
@@ -357,6 +446,31 @@ class __$UserCopyWithImpl<$Res> extends _$UserCopyWithImpl<$Res>
           ? _value.firebaseCurrentUserIDSets
           : firebaseCurrentUserIDSets // ignore: cast_nullable_to_non_nullable
               as List<String>,
+      isPremium: isPremium == freezed
+          ? _value.isPremium
+          : isPremium // ignore: cast_nullable_to_non_nullable
+              as bool,
+      isTrial: isTrial == freezed
+          ? _value.isTrial
+          : isTrial // ignore: cast_nullable_to_non_nullable
+              as bool,
+      hasDiscountEntitlement: hasDiscountEntitlement == freezed
+          ? _value.hasDiscountEntitlement
+          : hasDiscountEntitlement // ignore: cast_nullable_to_non_nullable
+              as bool,
+      beginTrialDate: beginTrialDate == freezed
+          ? _value.beginTrialDate
+          : beginTrialDate // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
+      trialDeadlineDate: trialDeadlineDate == freezed
+          ? _value.trialDeadlineDate
+          : trialDeadlineDate // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
+      discountEntitlementDeadlineDate: discountEntitlementDeadlineDate ==
+              freezed
+          ? _value.discountEntitlementDeadlineDate
+          : discountEntitlementDeadlineDate // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
     ));
   }
 }
@@ -366,13 +480,23 @@ class __$UserCopyWithImpl<$Res> extends _$UserCopyWithImpl<$Res>
 @JsonSerializable(explicitToJson: true)
 class _$_User extends _User {
   _$_User(
-      {@JsonKey(name: "settings") this.setting,
+      {@JsonKey(name: "settings")
+          this.setting,
       this.migratedFlutter = false,
       this.userIDWhenCreateUser,
       this.anonymousUserID,
       this.userDocumentIDSets = const [],
       this.anonymousUserIDSets = const [],
-      this.firebaseCurrentUserIDSets = const []})
+      this.firebaseCurrentUserIDSets = const [],
+      this.isPremium = false,
+      this.isTrial = false,
+      this.hasDiscountEntitlement = false,
+      @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
+          this.beginTrialDate,
+      @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
+          this.trialDeadlineDate,
+      @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
+          this.discountEntitlementDeadlineDate})
       : super._();
 
   factory _$_User.fromJson(Map<String, dynamic> json) =>
@@ -397,10 +521,34 @@ class _$_User extends _User {
   @JsonKey(defaultValue: const [])
   @override
   final List<String> firebaseCurrentUserIDSets;
+  @JsonKey(defaultValue: false)
+  @override
+  final bool isPremium;
+  @JsonKey(defaultValue: false)
+  @override
+  final bool isTrial;
+  @JsonKey(defaultValue: false)
+  @override
+  final bool hasDiscountEntitlement;
+  @override
+  @JsonKey(
+      fromJson: TimestampConverter.timestampToDateTime,
+      toJson: TimestampConverter.dateTimeToTimestamp)
+  final DateTime? beginTrialDate;
+  @override
+  @JsonKey(
+      fromJson: TimestampConverter.timestampToDateTime,
+      toJson: TimestampConverter.dateTimeToTimestamp)
+  final DateTime? trialDeadlineDate;
+  @override
+  @JsonKey(
+      fromJson: TimestampConverter.timestampToDateTime,
+      toJson: TimestampConverter.dateTimeToTimestamp)
+  final DateTime? discountEntitlementDeadlineDate;
 
   @override
   String toString() {
-    return 'User(setting: $setting, migratedFlutter: $migratedFlutter, userIDWhenCreateUser: $userIDWhenCreateUser, anonymousUserID: $anonymousUserID, userDocumentIDSets: $userDocumentIDSets, anonymousUserIDSets: $anonymousUserIDSets, firebaseCurrentUserIDSets: $firebaseCurrentUserIDSets)';
+    return 'User(setting: $setting, migratedFlutter: $migratedFlutter, userIDWhenCreateUser: $userIDWhenCreateUser, anonymousUserID: $anonymousUserID, userDocumentIDSets: $userDocumentIDSets, anonymousUserIDSets: $anonymousUserIDSets, firebaseCurrentUserIDSets: $firebaseCurrentUserIDSets, isPremium: $isPremium, isTrial: $isTrial, hasDiscountEntitlement: $hasDiscountEntitlement, beginTrialDate: $beginTrialDate, trialDeadlineDate: $trialDeadlineDate, discountEntitlementDeadlineDate: $discountEntitlementDeadlineDate)';
   }
 
   @override
@@ -429,7 +577,27 @@ class _$_User extends _User {
                     firebaseCurrentUserIDSets) ||
                 const DeepCollectionEquality().equals(
                     other.firebaseCurrentUserIDSets,
-                    firebaseCurrentUserIDSets)));
+                    firebaseCurrentUserIDSets)) &&
+            (identical(other.isPremium, isPremium) ||
+                const DeepCollectionEquality()
+                    .equals(other.isPremium, isPremium)) &&
+            (identical(other.isTrial, isTrial) ||
+                const DeepCollectionEquality()
+                    .equals(other.isTrial, isTrial)) &&
+            (identical(other.hasDiscountEntitlement, hasDiscountEntitlement) ||
+                const DeepCollectionEquality().equals(
+                    other.hasDiscountEntitlement, hasDiscountEntitlement)) &&
+            (identical(other.beginTrialDate, beginTrialDate) ||
+                const DeepCollectionEquality()
+                    .equals(other.beginTrialDate, beginTrialDate)) &&
+            (identical(other.trialDeadlineDate, trialDeadlineDate) ||
+                const DeepCollectionEquality()
+                    .equals(other.trialDeadlineDate, trialDeadlineDate)) &&
+            (identical(other.discountEntitlementDeadlineDate,
+                    discountEntitlementDeadlineDate) ||
+                const DeepCollectionEquality().equals(
+                    other.discountEntitlementDeadlineDate,
+                    discountEntitlementDeadlineDate)));
   }
 
   @override
@@ -441,7 +609,13 @@ class _$_User extends _User {
       const DeepCollectionEquality().hash(anonymousUserID) ^
       const DeepCollectionEquality().hash(userDocumentIDSets) ^
       const DeepCollectionEquality().hash(anonymousUserIDSets) ^
-      const DeepCollectionEquality().hash(firebaseCurrentUserIDSets);
+      const DeepCollectionEquality().hash(firebaseCurrentUserIDSets) ^
+      const DeepCollectionEquality().hash(isPremium) ^
+      const DeepCollectionEquality().hash(isTrial) ^
+      const DeepCollectionEquality().hash(hasDiscountEntitlement) ^
+      const DeepCollectionEquality().hash(beginTrialDate) ^
+      const DeepCollectionEquality().hash(trialDeadlineDate) ^
+      const DeepCollectionEquality().hash(discountEntitlementDeadlineDate);
 
   @JsonKey(ignore: true)
   @override
@@ -456,13 +630,23 @@ class _$_User extends _User {
 
 abstract class _User extends User {
   factory _User(
-      {@JsonKey(name: "settings") Setting? setting,
+      {@JsonKey(name: "settings")
+          Setting? setting,
       bool migratedFlutter,
       String? userIDWhenCreateUser,
       String? anonymousUserID,
       List<String> userDocumentIDSets,
       List<String> anonymousUserIDSets,
-      List<String> firebaseCurrentUserIDSets}) = _$_User;
+      List<String> firebaseCurrentUserIDSets,
+      bool isPremium,
+      bool isTrial,
+      bool hasDiscountEntitlement,
+      @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
+          DateTime? beginTrialDate,
+      @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
+          DateTime? trialDeadlineDate,
+      @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
+          DateTime? discountEntitlementDeadlineDate}) = _$_User;
   _User._() : super._();
 
   factory _User.fromJson(Map<String, dynamic> json) = _$_User.fromJson;
@@ -482,6 +666,28 @@ abstract class _User extends User {
   List<String> get anonymousUserIDSets => throw _privateConstructorUsedError;
   @override
   List<String> get firebaseCurrentUserIDSets =>
+      throw _privateConstructorUsedError;
+  @override
+  bool get isPremium => throw _privateConstructorUsedError;
+  @override
+  bool get isTrial => throw _privateConstructorUsedError;
+  @override
+  bool get hasDiscountEntitlement => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(
+      fromJson: TimestampConverter.timestampToDateTime,
+      toJson: TimestampConverter.dateTimeToTimestamp)
+  DateTime? get beginTrialDate => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(
+      fromJson: TimestampConverter.timestampToDateTime,
+      toJson: TimestampConverter.dateTimeToTimestamp)
+  DateTime? get trialDeadlineDate => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(
+      fromJson: TimestampConverter.timestampToDateTime,
+      toJson: TimestampConverter.dateTimeToTimestamp)
+  DateTime? get discountEntitlementDeadlineDate =>
       throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)

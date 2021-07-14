@@ -13,8 +13,9 @@ class SettingService {
   SettingService(this._database);
 
   Future<Setting> fetch() {
-    return _database.userReference().get().then((event) =>
-        Setting.fromJson(event.data()![UserFirestoreFieldKeys.settings]));
+    return _database.userReference().get().then((event) => Setting.fromJson(
+        (event.data()
+            as Map<String, dynamic>)[UserFirestoreFieldKeys.settings]));
   }
 
   Stream<Setting> subscribe() {
@@ -22,9 +23,9 @@ class SettingService {
         .userReference()
         .snapshots()
         .map((event) => event.data())
-        .where((event) => event != null)
-        .map((event) =>
-            Setting.fromJson(event![UserFirestoreFieldKeys.settings]))
+        .where((data) => data != null)
+        .map((data) => Setting.fromJson(
+            (data as Map<String, dynamic>)[UserFirestoreFieldKeys.settings]))
         .cast();
   }
 

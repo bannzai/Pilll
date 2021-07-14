@@ -14,9 +14,8 @@ class PrimaryButton extends StatelessWidget {
   }) : super(key: key);
 
   Widget build(BuildContext context) {
-    return SizedBox(
-      width: 180,
-      height: 44,
+    return ConstrainedBox(
+      constraints: BoxConstraints(maxHeight: 44, minHeight: 44, minWidth: 180),
       child: ElevatedButton(
         child: Text(text, style: ButtonTextStyle.main),
         style: ButtonStyle(

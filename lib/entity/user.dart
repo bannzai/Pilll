@@ -1,3 +1,5 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:pilll/entity/firestore_timestamp_converter.dart';
 import 'package:pilll/entity/setting.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
@@ -23,6 +25,10 @@ extension UserPrivateFirestoreFieldKeys on String {
   static final googleEmail = 'googleEmail';
   static final isLinkedGoogle = 'isLinkedGoogle';
   static final demographic = "demographic";
+  static final latestPremiumPlanIdentifier = "latestPremiumPlanIdentifier";
+  static final originalPurchaseDate = "originalPurchaseDate";
+  static final activeSubscriptions = "activeSubscriptions";
+  static final entitlementIdentifier = "entitlementIdentifier";
 }
 
 @freezed
@@ -46,6 +52,14 @@ extension UserFirestoreFieldKeys on String {
   static final migratedFlutter = "migratedFlutter";
   static final packageInfo = "packageInfo";
   static final isAnonymous = "isAnonymous";
+  static final isPremium = "isPremium";
+  static final purchaseAppID = "purchaseAppID";
+  static final isTrial = "isTrial";
+  static final beginTrialDate = "beginTrialDate";
+  static final trialDeadlineDate = "trialDeadlineDate";
+  static final hasDiscountEntitlement = "hasDiscountEntitlement";
+  static final discountEntitlementDeadlineDate =
+      "discountEntitlementDeadlineDate";
 }
 
 @freezed
@@ -53,13 +67,39 @@ abstract class User implements _$User {
   User._();
   @JsonSerializable(explicitToJson: true)
   factory User({
-    @JsonKey(name: "settings") Setting? setting,
-    @Default(false) bool migratedFlutter,
+    @JsonKey(name: "settings")
+        Setting? setting,
+    @Default(false)
+        bool migratedFlutter,
     String? userIDWhenCreateUser,
     String? anonymousUserID,
-    @Default([]) List<String> userDocumentIDSets,
-    @Default([]) List<String> anonymousUserIDSets,
-    @Default([]) List<String> firebaseCurrentUserIDSets,
+    @Default([])
+        List<String> userDocumentIDSets,
+    @Default([])
+        List<String> anonymousUserIDSets,
+    @Default([])
+        List<String> firebaseCurrentUserIDSets,
+    @Default(false)
+        bool isPremium,
+    @Default(false)
+        bool isTrial,
+    @Default(false)
+        bool hasDiscountEntitlement,
+    @JsonKey(
+      fromJson: TimestampConverter.timestampToDateTime,
+      toJson: TimestampConverter.dateTimeToTimestamp,
+    )
+        DateTime? beginTrialDate,
+    @JsonKey(
+      fromJson: TimestampConverter.timestampToDateTime,
+      toJson: TimestampConverter.dateTimeToTimestamp,
+    )
+        DateTime? trialDeadlineDate,
+    @JsonKey(
+      fromJson: TimestampConverter.timestampToDateTime,
+      toJson: TimestampConverter.dateTimeToTimestamp,
+    )
+        DateTime? discountEntitlementDeadlineDate,
   }) = _User;
 
   factory User.fromJson(Map<String, dynamic> json) => _$UserFromJson(json);

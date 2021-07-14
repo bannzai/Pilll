@@ -2,8 +2,13 @@ extension BoolKey on String {
   static final didEndInitialSetting = "isDidEndInitialSettingKey";
   static final recommendedSignupNotificationIsAlreadyShow =
       "recommendedSignupNotificationIsAlreadyShow";
+  static final premiumTrialGuideNotificationIsClosed =
+      "premiumTrialGuideNotificationIsClosed";
   static final isAlreadyShowDemography = "isAlreadyShowDemography";
   static final isAlreadyDoneDemography = "isAlreadyDoneDemography";
+  static final isAlreadyShowPremiumTrialModal =
+      "isAlreadyShowPremiumTrialModal";
+  static final migrateFrom132IsShown = "migrate_from_132_is_shown_9";
 }
 
 extension StringKey on String {
@@ -18,6 +23,7 @@ extension StringKey on String {
 extension ReleaseNoteKey on String {
   static final String renewal = "release_notes_shown_renewal";
   static final String version2_4_0 = "release_notes_shown_2.4.0";
+  static final String version3_0_0 = "release_notes_shown_3.0.0";
 }
 
 extension IntKey on String {

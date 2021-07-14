@@ -5,8 +5,23 @@ import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/inquiry/inquiry.dart';
 import 'package:flutter/material.dart';
 
-class UniversalErrorPage extends StatelessWidget {
-  final dynamic? error;
+class _InheritedWidget extends InheritedWidget {
+  _InheritedWidget({
+    Key? key,
+    required Widget child,
+    required this.state,
+  }) : super(key: key, child: child);
+
+  final _UniversalErrorPageState state;
+
+  @override
+  bool updateShouldNotify(covariant _InheritedWidget oldWidget) {
+    return false;
+  }
+}
+
+class UniversalErrorPage extends StatefulWidget {
+  final Object? error;
   final Widget? child;
   final VoidCallback? reload;
 
@@ -18,12 +33,49 @@ class UniversalErrorPage extends StatelessWidget {
   }) : super(key: key);
 
   @override
-  Widget build(BuildContext context) {
-    final child = this.child;
-    final error = this.error;
-    if (error == null && child != null) {
-      return child;
+  _UniversalErrorPageState createState() => _UniversalErrorPageState();
+
+  static _UniversalErrorPageState of(BuildContext context) {
+    final exactType = context
+        .getElementForInheritedWidgetOfExactType<_InheritedWidget>()
+        ?.widget;
+    final stateWidget = exactType as _InheritedWidget?;
+    final state = stateWidget?.state;
+    if (state == null) {
+      throw AssertionError('''
+      Not found UniversalErrorMessage from this context: $context
+      The context should contains UniversalErrorMessage widget into current widget tree
+      ''');
     }
+    return state;
+  }
+}
+
+class _UniversalErrorPageState extends State<UniversalErrorPage> {
+  Object? _error;
+  showError(Object error) {
+    setState(() {
+      _error = error;
+    });
+  }
+
+  Object? get error => _error ?? widget.error;
+
+  @override
+  Widget build(BuildContext context) {
+    final child = this.widget.child;
+    final error = this.error;
+    return _InheritedWidget(
+      state: this,
+      child: () {
+        if (child != null) return child;
+        if (error != null) return _errorPage(error);
+        throw AssertionError("unexpected child and error are both null");
+      }(),
+    );
+  }
+
+  Widget _errorPage(Object error) {
     return Scaffold(
       backgroundColor: PilllColors.background,
       body: Center(
@@ -51,10 +103,13 @@ class UniversalErrorPage extends StatelessWidget {
                     style: FontType.assisting.merge(TextColorStyle.black)),
                 onPressed: () {
                   analytics.logEvent(name: "reload_button_pressed");
-                  final reload = this.reload;
-                  if (reload != null) {
-                    reload();
-                  }
+                  setState(() {
+                    _error = null;
+                    final reload = this.widget.reload;
+                    if (reload != null) {
+                      reload();
+                    }
+                  });
                 },
               ),
               TextButton.icon(

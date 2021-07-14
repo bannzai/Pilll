@@ -6,17 +6,15 @@ import 'package:pilll/service/user.dart';
 import 'package:pilll/signin/signin_sheet_state.dart';
 import 'package:riverpod/riverpod.dart';
 
-final signinSheetStoreProvider =
-    StateNotifierProvider.autoDispose.family<SigninSheetStore, bool>(
-  (ref, isLoginMode) =>
-      SigninSheetStore(isLoginMode, ref.watch(userServiceProvider)),
+final signinSheetStoreProvider = StateNotifierProvider.autoDispose
+    .family<SigninSheetStore, SigninSheetStateContext>(
+  (ref, context) => SigninSheetStore(context, ref.watch(userServiceProvider)),
 );
 
 class SigninSheetStore extends StateNotifier<SigninSheetState> {
-  final bool isLoginMode;
   final UserService _userService;
-  SigninSheetStore(this.isLoginMode, this._userService)
-      : super(SigninSheetState(isLoginMode: isLoginMode)) {
+  SigninSheetStore(SigninSheetStateContext context, this._userService)
+      : super(SigninSheetState(context: context)) {
     reset();
   }
 
@@ -50,5 +48,13 @@ class SigninSheetStore extends StateNotifier<SigninSheetState> {
 
   handleException(Object exception) {
     state = state.copyWith(exception: exception);
+  }
+
+  showHUD() {
+    state = state.copyWith(isLoading: true);
+  }
+
+  hideHUD() {
+    state = state.copyWith(isLoading: false);
   }
 }

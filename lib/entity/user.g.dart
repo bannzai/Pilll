@@ -38,6 +38,15 @@ _$_User _$_$_UserFromJson(Map<String, dynamic> json) {
                 ?.map((e) => e as String)
                 .toList() ??
             [],
+    isPremium: json['isPremium'] as bool? ?? false,
+    isTrial: json['isTrial'] as bool? ?? false,
+    hasDiscountEntitlement: json['hasDiscountEntitlement'] as bool? ?? false,
+    beginTrialDate: TimestampConverter.timestampToDateTime(
+        json['beginTrialDate'] as Timestamp?),
+    trialDeadlineDate: TimestampConverter.timestampToDateTime(
+        json['trialDeadlineDate'] as Timestamp?),
+    discountEntitlementDeadlineDate: TimestampConverter.timestampToDateTime(
+        json['discountEntitlementDeadlineDate'] as Timestamp?),
   );
 }
 
@@ -49,4 +58,13 @@ Map<String, dynamic> _$_$_UserToJson(_$_User instance) => <String, dynamic>{
       'userDocumentIDSets': instance.userDocumentIDSets,
       'anonymousUserIDSets': instance.anonymousUserIDSets,
       'firebaseCurrentUserIDSets': instance.firebaseCurrentUserIDSets,
+      'isPremium': instance.isPremium,
+      'isTrial': instance.isTrial,
+      'hasDiscountEntitlement': instance.hasDiscountEntitlement,
+      'beginTrialDate':
+          TimestampConverter.dateTimeToTimestamp(instance.beginTrialDate),
+      'trialDeadlineDate':
+          TimestampConverter.dateTimeToTimestamp(instance.trialDeadlineDate),
+      'discountEntitlementDeadlineDate': TimestampConverter.dateTimeToTimestamp(
+          instance.discountEntitlementDeadlineDate),
     };
