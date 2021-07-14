@@ -67,7 +67,7 @@ void main() {
   group('#PremiumIntroductionSheet', () {
     final mockTodayRepository = MockTodayService();
     final today = DateTime(2021, 04, 29);
-    final trialDeadlineDate = today.subtract(Duration(days: 1));
+    final discountEntitlementDeadlineDate = today.subtract(Duration(days: 1));
 
     when(mockTodayRepository.today()).thenReturn(today);
     todayRepository = mockTodayRepository;
@@ -80,7 +80,7 @@ void main() {
         state = state.copyWith(
           offerings: _FakeOfferings(),
           hasDiscountEntitlement: hasDiscountEntitlement,
-          trialDeadlineDate: trialDeadlineDate,
+          discountEntitlementDeadlineDate: discountEntitlementDeadlineDate,
         );
 
         final sheet = PremiumIntroductionSheet();
@@ -128,7 +128,7 @@ void main() {
         state = state.copyWith(
           offerings: _FakeOfferings(),
           hasDiscountEntitlement: hasDiscountEntitlement,
-          trialDeadlineDate: today.subtract(Duration(days: 1)),
+          discountEntitlementDeadlineDate: today.subtract(Duration(days: 1)),
         );
 
         final sheet = PremiumIntroductionSheet();
@@ -176,7 +176,7 @@ void main() {
         state = state.copyWith(
           offerings: _FakeOfferings(),
           hasDiscountEntitlement: true,
-          trialDeadlineDate: today.subtract(Duration(days: 1)),
+          discountEntitlementDeadlineDate: today.subtract(Duration(days: 1)),
         );
 
         final sheet = PremiumIntroductionSheet();
@@ -224,7 +224,7 @@ void main() {
         state = state.copyWith(
           offerings: _FakeOfferings(),
           hasDiscountEntitlement: true,
-          trialDeadlineDate: trialDeadlineDate,
+          discountEntitlementDeadlineDate: trialDeadlineDate,
         );
 
         final sheet = PremiumIntroductionSheet();

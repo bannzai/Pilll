@@ -19,7 +19,6 @@ void main() {
     test("when hasDiscountEntitlement = false should return premium", () async {
       final state = PurchaseButtonsState(
         offerings: _FakeOfferings(),
-        trialDeadlineDate: DateTime.now(),
         hasDiscountEntitlement: false,
         isOverDiscountDeadline: false,
       );
@@ -28,7 +27,6 @@ void main() {
     test("when trialDeadlineDate is null should return premium", () async {
       final state = PurchaseButtonsState(
         offerings: _FakeOfferings(),
-        trialDeadlineDate: null,
         hasDiscountEntitlement: true,
         isOverDiscountDeadline: false,
       );
@@ -37,7 +35,6 @@ void main() {
     test("when isOverDiscountDeadline is null should return premium", () async {
       final state = PurchaseButtonsState(
         offerings: _FakeOfferings(),
-        trialDeadlineDate: DateTime.now(),
         hasDiscountEntitlement: true,
         isOverDiscountDeadline: null,
       );
@@ -46,7 +43,6 @@ void main() {
     test("when isOverDiscountDeadline = true should return premium", () async {
       final state = PurchaseButtonsState(
         offerings: _FakeOfferings(),
-        trialDeadlineDate: DateTime.now(),
         hasDiscountEntitlement: true,
         isOverDiscountDeadline: true,
       );
@@ -55,7 +51,6 @@ void main() {
     test("should return limited", () async {
       final state = PurchaseButtonsState(
         offerings: _FakeOfferings(),
-        trialDeadlineDate: DateTime.now(),
         hasDiscountEntitlement: true,
         isOverDiscountDeadline: false,
       );
