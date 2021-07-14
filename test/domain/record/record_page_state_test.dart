@@ -20,9 +20,11 @@ class _FakeUser extends Fake implements User {
     this.fakeIsPremium = false,
     this.fakeIsTrial = false,
     this.fakeTrialDeadlineDate,
+    this.fakeDiscountEntitlementDeadlineDate,
     this.fakeIsExpiredDiscountEntitlements = false,
   });
   final DateTime? fakeTrialDeadlineDate;
+  final DateTime? fakeDiscountEntitlementDeadlineDate;
   final bool fakeIsPremium;
   final bool fakeIsTrial;
   final bool fakeIsExpiredDiscountEntitlements;
@@ -34,6 +36,9 @@ class _FakeUser extends Fake implements User {
   bool get hasDiscountEntitlement => fakeIsExpiredDiscountEntitlements;
   @override
   DateTime? get trialDeadlineDate => fakeTrialDeadlineDate;
+  @override
+  DateTime? get discountEntitlementDeadlineDate =>
+      fakeDiscountEntitlementDeadlineDate;
 }
 
 void main() {
