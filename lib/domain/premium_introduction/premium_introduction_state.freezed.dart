@@ -23,7 +23,7 @@ class _$PremiumIntroductionStateTearOff {
       bool isPremium = false,
       bool hasLoginProvider = false,
       bool isTrial = false,
-      bool hasDiscountEntitlement = true,
+      bool hasDiscountEntitlement = false,
       DateTime? beginTrialDate,
       DateTime? discountEntitlementDeadlineDate}) {
     return _PremiumIntroductionState(
@@ -236,7 +236,7 @@ class _$_PremiumIntroductionState extends _PremiumIntroductionState {
       this.isPremium = false,
       this.hasLoginProvider = false,
       this.isTrial = false,
-      this.hasDiscountEntitlement = true,
+      this.hasDiscountEntitlement = false,
       this.beginTrialDate,
       this.discountEntitlementDeadlineDate})
       : super._();
@@ -258,7 +258,7 @@ class _$_PremiumIntroductionState extends _PremiumIntroductionState {
   @JsonKey(defaultValue: false)
   @override
   final bool isTrial;
-  @JsonKey(defaultValue: true)
+  @JsonKey(defaultValue: false)
   @override
   final bool hasDiscountEntitlement;
   @override
