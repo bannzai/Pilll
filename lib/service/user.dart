@@ -178,24 +178,27 @@ class UserService {
     });
   }
 
-  Future<void> saveStats() {
-    return SharedPreferences.getInstance().then((store) async {
-      String? beginingVersion = store.getString(StringKey.beginingVersionKey);
-      if (beginingVersion == null) {
-        final v =
-            await PackageInfo.fromPlatform().then((value) => value.version);
-        await store.setString(StringKey.beginingVersionKey, v);
-        return v;
+  Future<void> saveStats() async {
+    final store = await SharedPreferences.getInstance();
+    String? beginingVersion = store.getString(StringKey.beginingVersionKey);
+    if (beginingVersion == null) {
+      final v = await PackageInfo.fromPlatform().then((value) => value.version);
+      await store.setString(StringKey.beginingVersionKey, v);
+      beginingVersion = v;
+    }
+
+    final now = DateTime.now();
+    final timeZoneName = now.timeZoneName;
+    final timeZoneOffset = now.timeZoneOffset;
+
+    return _database.userReference().set({
+      "stats": {
+        "lastLoginAt": now,
+        "beginingVersion": beginingVersion,
+        "timeZoneName": timeZoneName,
+        "timeZoneOffset": timeZoneOffset,
       }
-      return beginingVersion;
-    }).then((version) {
-      return _database.userReference().set({
-        "stats": {
-          "lastLoginAt": DateTime.now(),
-          "beginingVersion": version,
-        }
-      }, SetOptions(merge: true));
-    });
+    }, SetOptions(merge: true));
   }
 
   Future<void> linkApple(String? email) async {
