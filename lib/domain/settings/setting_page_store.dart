@@ -45,6 +45,7 @@ class SettingStateStore extends StateNotifier<SettingState> {
         latestPillSheet: pillSheet,
         isPremium: user.isPremium,
         isTrial: user.isTrial,
+        trialDeadlineDate: user.trialDeadlineDate,
       );
       _subscribe();
     });
@@ -65,8 +66,11 @@ class SettingStateStore extends StateNotifier<SettingState> {
     });
     _userSubscribeCanceller?.cancel();
     _userSubscribeCanceller = _userService.subscribe().listen((event) {
-      state =
-          state.copyWith(isPremium: event.isPremium, isTrial: event.isTrial);
+      state = state.copyWith(
+        isPremium: event.isPremium,
+        isTrial: event.isTrial,
+        trialDeadlineDate: event.trialDeadlineDate,
+      );
     });
   }
 
