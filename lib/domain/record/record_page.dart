@@ -157,7 +157,7 @@ class RecordPage extends HookWidget {
             ),
           ),
         ),
-        if (currentPillSheet != null && currentPillSheet.isInvalid)
+        if (currentPillSheet != null && !currentPillSheet.isInvalid)
           Positioned(
             bottom: 20,
             child: RecordPageButton(currentPillSheet: currentPillSheet),
