@@ -196,7 +196,8 @@ class UserService {
         "lastLoginAt": now,
         "beginingVersion": beginingVersion,
         "timeZoneName": timeZoneName,
-        "timeZoneOffset": timeZoneOffset,
+        "timeZoneOffset":
+            "${timeZoneOffset.isNegative ? "-" : "+"}${timeZoneOffset.inHours}",
       }
     }, SetOptions(merge: true));
   }
