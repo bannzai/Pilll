@@ -43,14 +43,17 @@ class NotificationBar extends HookWidget {
     if (!state.isPremium) {
       if (state.hasDiscountEntitlement) {
         if (!state.isTrial) {
-          final trialDeadlineDate = state.trialDeadlineDate;
-          if (trialDeadlineDate != null) {
+          final discountEntitlementDeadlineDate =
+              state.discountEntitlementDeadlineDate;
+          if (discountEntitlementDeadlineDate != null) {
             // NOTE: watch state
-            final isOverDiscountDeadline =
-                useProvider(isOverDiscountDeadlineProvider(trialDeadlineDate));
+            final isOverDiscountDeadline = useProvider(
+                isOverDiscountDeadlineProvider(
+                    discountEntitlementDeadlineDate));
             if (!isOverDiscountDeadline) {
               return DiscountPriceDeadline(
-                  trialDeadlineDate: trialDeadlineDate,
+                  discountEntitlementDeadlineDate:
+                      discountEntitlementDeadlineDate,
                   onTap: () {
                     showPremiumIntroductionSheet(context);
                   });

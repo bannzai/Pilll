@@ -15,6 +15,7 @@ abstract class NotificationBarState implements _$NotificationBarState {
     required bool isTrial,
     required bool hasDiscountEntitlement,
     required DateTime? trialDeadlineDate,
+    required DateTime? discountEntitlementDeadlineDate,
     required bool recommendedSignupNotificationIsAlreadyShow,
     required bool premiumTrialGuideNotificationIsClosed,
     required bool isLinkedLoginProvider,

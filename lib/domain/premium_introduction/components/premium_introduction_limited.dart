@@ -7,13 +7,14 @@ import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/domain/premium_introduction/util/discount_deadline.dart';
 
 class PremiumIntroductionLimited extends HookWidget {
-  final DateTime trialDeadlineDate;
+  final DateTime discountDeadlineDate;
 
-  const PremiumIntroductionLimited({Key? key, required this.trialDeadlineDate})
+  const PremiumIntroductionLimited(
+      {Key? key, required this.discountDeadlineDate})
       : super(key: key);
   Widget build(BuildContext context) {
     final diff =
-        useProvider(durationToDiscountPriceDeadline(trialDeadlineDate));
+        useProvider(durationToDiscountPriceDeadline(discountDeadlineDate));
     if (diff.inSeconds <= 0) {
       return Container();
     }

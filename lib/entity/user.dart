@@ -58,6 +58,8 @@ extension UserFirestoreFieldKeys on String {
   static final beginTrialDate = "beginTrialDate";
   static final trialDeadlineDate = "trialDeadlineDate";
   static final hasDiscountEntitlement = "hasDiscountEntitlement";
+  static final discountEntitlementDeadlineDate =
+      "discountEntitlementDeadlineDate";
 }
 
 @freezed
@@ -93,6 +95,11 @@ abstract class User implements _$User {
       toJson: TimestampConverter.dateTimeToTimestamp,
     )
         DateTime? trialDeadlineDate,
+    @JsonKey(
+      fromJson: TimestampConverter.timestampToDateTime,
+      toJson: TimestampConverter.dateTimeToTimestamp,
+    )
+        DateTime? discountEntitlementDeadlineDate,
   }) = _User;
 
   factory User.fromJson(Map<String, dynamic> json) => _$UserFromJson(json);

@@ -24,11 +24,12 @@ class PremiumIntroductionSheet extends HookWidget {
     final store = useProvider(premiumIntroductionStoreProvider);
     final state = useProvider(premiumIntroductionStateProvider);
     final offerings = state.offerings;
-    final trialDeadlineDate = state.trialDeadlineDate;
+    final discountEntitlementDeadlineDate =
+        state.discountEntitlementDeadlineDate;
     final bool isOverDiscountDeadline;
-    if (trialDeadlineDate != null) {
-      isOverDiscountDeadline =
-          useProvider(isOverDiscountDeadlineProvider(trialDeadlineDate));
+    if (discountEntitlementDeadlineDate != null) {
+      isOverDiscountDeadline = useProvider(
+          isOverDiscountDeadlineProvider(discountEntitlementDeadlineDate));
     } else {
       isOverDiscountDeadline = false;
     }
@@ -71,17 +72,19 @@ class PremiumIntroductionSheet extends HookWidget {
                         mainAxisSize: MainAxisSize.min,
                         children: [
                           PremiumIntroductionHeader(),
-                          if (trialDeadlineDate != null &&
+                          if (discountEntitlementDeadlineDate != null &&
                               !isOverDiscountDeadline &&
                               state.hasDiscountEntitlement)
                             PremiumIntroductionLimited(
-                              trialDeadlineDate: trialDeadlineDate,
+                              discountDeadlineDate:
+                                  discountEntitlementDeadlineDate,
                             ),
                           if (offerings != null) ...[
                             SizedBox(height: 32),
                             PurchaseButtons(
                               offerings: offerings,
-                              trialDeadlineDate: trialDeadlineDate,
+                              discountEntitlementDeadlineDate:
+                                  discountEntitlementDeadlineDate,
                               hasDiscountEntitlement:
                                   state.hasDiscountEntitlement,
                             ),

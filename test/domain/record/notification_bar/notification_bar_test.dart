@@ -66,7 +66,8 @@ void main() {
           isLinkedLoginProvider: false,
           premiumTrialGuideNotificationIsClosed: false,
           recommendedSignupNotificationIsAlreadyShow: false,
-          trialDeadlineDate: today.subtract(Duration(days: 1)),
+          trialDeadlineDate: null,
+          discountEntitlementDeadlineDate: today.subtract(Duration(days: 1)),
         );
 
         final recordPageState = RecordPageState(entity: pillSheet);
@@ -120,6 +121,7 @@ void main() {
           premiumTrialGuideNotificationIsClosed: false,
           recommendedSignupNotificationIsAlreadyShow: false,
           trialDeadlineDate: null,
+          discountEntitlementDeadlineDate: null,
         );
 
         final recordPageState = RecordPageState(entity: pillSheet);
@@ -172,6 +174,7 @@ void main() {
           premiumTrialGuideNotificationIsClosed: false,
           recommendedSignupNotificationIsAlreadyShow: false,
           trialDeadlineDate: null,
+          discountEntitlementDeadlineDate: null,
         );
 
         final recordPageState = RecordPageState(entity: pillSheet);
@@ -223,6 +226,7 @@ void main() {
           premiumTrialGuideNotificationIsClosed: false,
           recommendedSignupNotificationIsAlreadyShow: false,
           trialDeadlineDate: null,
+          discountEntitlementDeadlineDate: null,
         );
 
         final recordPageState = RecordPageState(entity: pillSheet);
@@ -276,6 +280,7 @@ void main() {
           premiumTrialGuideNotificationIsClosed: false,
           recommendedSignupNotificationIsAlreadyShow: false,
           trialDeadlineDate: today.add(Duration(days: 1)),
+          discountEntitlementDeadlineDate: null,
         );
 
         final recordPageState = RecordPageState(entity: pillSheet);
@@ -330,6 +335,7 @@ void main() {
           premiumTrialGuideNotificationIsClosed: false,
           recommendedSignupNotificationIsAlreadyShow: false,
           trialDeadlineDate: null,
+          discountEntitlementDeadlineDate: null,
         );
 
         final recordPageState = RecordPageState(entity: pillSheet);
@@ -381,6 +387,7 @@ void main() {
           premiumTrialGuideNotificationIsClosed: false,
           recommendedSignupNotificationIsAlreadyShow: false,
           trialDeadlineDate: null,
+          discountEntitlementDeadlineDate: null,
         );
 
         final recordPageState = RecordPageState(entity: pillSheet);
