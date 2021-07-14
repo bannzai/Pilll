@@ -2,25 +2,16 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/util/datetime/timer.dart';
 import 'package:pilll/util/formatter/date_time_formatter.dart';
 
-final discountPriceDeadlineProvider =
-    Provider.family.autoDispose((ref, DateTime trialDeadlineDate) {
-  return trialDeadlineDate.add(Duration(hours: 48));
-});
-
 final isOverDiscountDeadlineProvider =
-    Provider.family.autoDispose((ref, DateTime trialDeadlineDate) {
+    Provider.family.autoDispose((ref, DateTime discountDeadlineDate) {
   final timer = ref.watch(timerStateProvider);
-  final discountDeadline =
-      ref.watch(discountPriceDeadlineProvider(trialDeadlineDate));
-  return timer.isAfter(discountDeadline);
+  return timer.isAfter(discountDeadlineDate);
 });
 
 final durationToDiscountPriceDeadline =
-    Provider.family.autoDispose((ref, DateTime trialDeadlineDate) {
+    Provider.family.autoDispose((ref, DateTime discountDeadlineDate) {
   final timerDate = ref.watch(timerStateProvider);
-  final discountDeadline =
-      ref.watch(discountPriceDeadlineProvider(trialDeadlineDate));
-  return discountDeadline.difference(timerDate);
+  return discountDeadlineDate.difference(timerDate);
 });
 
 String discountPriceDeadlineCountdownString(Duration diff) {

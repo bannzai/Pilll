@@ -15,7 +15,7 @@ abstract class PremiumIntroductionState implements _$PremiumIntroductionState {
     @Default(false) bool isTrial,
     @Default(true) bool hasDiscountEntitlement,
     DateTime? beginTrialDate,
-    DateTime? trialDeadlineDate,
+    DateTime? discountEntitlementDeadlineDate,
   }) = _PremiumIntroductionState;
 
   bool get isNotYetLoad => offerings == null;

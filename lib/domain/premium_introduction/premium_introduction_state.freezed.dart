@@ -25,7 +25,7 @@ class _$PremiumIntroductionStateTearOff {
       bool isTrial = false,
       bool hasDiscountEntitlement = true,
       DateTime? beginTrialDate,
-      DateTime? trialDeadlineDate}) {
+      DateTime? discountEntitlementDeadlineDate}) {
     return _PremiumIntroductionState(
       offerings: offerings,
       isCompletedRestore: isCompletedRestore,
@@ -35,7 +35,7 @@ class _$PremiumIntroductionStateTearOff {
       isTrial: isTrial,
       hasDiscountEntitlement: hasDiscountEntitlement,
       beginTrialDate: beginTrialDate,
-      trialDeadlineDate: trialDeadlineDate,
+      discountEntitlementDeadlineDate: discountEntitlementDeadlineDate,
     );
   }
 }
@@ -53,7 +53,8 @@ mixin _$PremiumIntroductionState {
   bool get isTrial => throw _privateConstructorUsedError;
   bool get hasDiscountEntitlement => throw _privateConstructorUsedError;
   DateTime? get beginTrialDate => throw _privateConstructorUsedError;
-  DateTime? get trialDeadlineDate => throw _privateConstructorUsedError;
+  DateTime? get discountEntitlementDeadlineDate =>
+      throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $PremiumIntroductionStateCopyWith<PremiumIntroductionState> get copyWith =>
@@ -74,7 +75,7 @@ abstract class $PremiumIntroductionStateCopyWith<$Res> {
       bool isTrial,
       bool hasDiscountEntitlement,
       DateTime? beginTrialDate,
-      DateTime? trialDeadlineDate});
+      DateTime? discountEntitlementDeadlineDate});
 }
 
 /// @nodoc
@@ -96,7 +97,7 @@ class _$PremiumIntroductionStateCopyWithImpl<$Res>
     Object? isTrial = freezed,
     Object? hasDiscountEntitlement = freezed,
     Object? beginTrialDate = freezed,
-    Object? trialDeadlineDate = freezed,
+    Object? discountEntitlementDeadlineDate = freezed,
   }) {
     return _then(_value.copyWith(
       offerings: offerings == freezed
@@ -131,9 +132,10 @@ class _$PremiumIntroductionStateCopyWithImpl<$Res>
           ? _value.beginTrialDate
           : beginTrialDate // ignore: cast_nullable_to_non_nullable
               as DateTime?,
-      trialDeadlineDate: trialDeadlineDate == freezed
-          ? _value.trialDeadlineDate
-          : trialDeadlineDate // ignore: cast_nullable_to_non_nullable
+      discountEntitlementDeadlineDate: discountEntitlementDeadlineDate ==
+              freezed
+          ? _value.discountEntitlementDeadlineDate
+          : discountEntitlementDeadlineDate // ignore: cast_nullable_to_non_nullable
               as DateTime?,
     ));
   }
@@ -155,7 +157,7 @@ abstract class _$PremiumIntroductionStateCopyWith<$Res>
       bool isTrial,
       bool hasDiscountEntitlement,
       DateTime? beginTrialDate,
-      DateTime? trialDeadlineDate});
+      DateTime? discountEntitlementDeadlineDate});
 }
 
 /// @nodoc
@@ -180,7 +182,7 @@ class __$PremiumIntroductionStateCopyWithImpl<$Res>
     Object? isTrial = freezed,
     Object? hasDiscountEntitlement = freezed,
     Object? beginTrialDate = freezed,
-    Object? trialDeadlineDate = freezed,
+    Object? discountEntitlementDeadlineDate = freezed,
   }) {
     return _then(_PremiumIntroductionState(
       offerings: offerings == freezed
@@ -215,9 +217,10 @@ class __$PremiumIntroductionStateCopyWithImpl<$Res>
           ? _value.beginTrialDate
           : beginTrialDate // ignore: cast_nullable_to_non_nullable
               as DateTime?,
-      trialDeadlineDate: trialDeadlineDate == freezed
-          ? _value.trialDeadlineDate
-          : trialDeadlineDate // ignore: cast_nullable_to_non_nullable
+      discountEntitlementDeadlineDate: discountEntitlementDeadlineDate ==
+              freezed
+          ? _value.discountEntitlementDeadlineDate
+          : discountEntitlementDeadlineDate // ignore: cast_nullable_to_non_nullable
               as DateTime?,
     ));
   }
@@ -235,7 +238,7 @@ class _$_PremiumIntroductionState extends _PremiumIntroductionState {
       this.isTrial = false,
       this.hasDiscountEntitlement = true,
       this.beginTrialDate,
-      this.trialDeadlineDate})
+      this.discountEntitlementDeadlineDate})
       : super._();
 
   @override
@@ -261,11 +264,11 @@ class _$_PremiumIntroductionState extends _PremiumIntroductionState {
   @override
   final DateTime? beginTrialDate;
   @override
-  final DateTime? trialDeadlineDate;
+  final DateTime? discountEntitlementDeadlineDate;
 
   @override
   String toString() {
-    return 'PremiumIntroductionState(offerings: $offerings, isCompletedRestore: $isCompletedRestore, isLoading: $isLoading, isPremium: $isPremium, hasLoginProvider: $hasLoginProvider, isTrial: $isTrial, hasDiscountEntitlement: $hasDiscountEntitlement, beginTrialDate: $beginTrialDate, trialDeadlineDate: $trialDeadlineDate)';
+    return 'PremiumIntroductionState(offerings: $offerings, isCompletedRestore: $isCompletedRestore, isLoading: $isLoading, isPremium: $isPremium, hasLoginProvider: $hasLoginProvider, isTrial: $isTrial, hasDiscountEntitlement: $hasDiscountEntitlement, beginTrialDate: $beginTrialDate, discountEntitlementDeadlineDate: $discountEntitlementDeadlineDate)';
   }
 
   @override
@@ -296,9 +299,11 @@ class _$_PremiumIntroductionState extends _PremiumIntroductionState {
             (identical(other.beginTrialDate, beginTrialDate) ||
                 const DeepCollectionEquality()
                     .equals(other.beginTrialDate, beginTrialDate)) &&
-            (identical(other.trialDeadlineDate, trialDeadlineDate) ||
-                const DeepCollectionEquality()
-                    .equals(other.trialDeadlineDate, trialDeadlineDate)));
+            (identical(other.discountEntitlementDeadlineDate,
+                    discountEntitlementDeadlineDate) ||
+                const DeepCollectionEquality().equals(
+                    other.discountEntitlementDeadlineDate,
+                    discountEntitlementDeadlineDate)));
   }
 
   @override
@@ -312,7 +317,7 @@ class _$_PremiumIntroductionState extends _PremiumIntroductionState {
       const DeepCollectionEquality().hash(isTrial) ^
       const DeepCollectionEquality().hash(hasDiscountEntitlement) ^
       const DeepCollectionEquality().hash(beginTrialDate) ^
-      const DeepCollectionEquality().hash(trialDeadlineDate);
+      const DeepCollectionEquality().hash(discountEntitlementDeadlineDate);
 
   @JsonKey(ignore: true)
   @override
@@ -331,7 +336,7 @@ abstract class _PremiumIntroductionState extends PremiumIntroductionState {
       bool isTrial,
       bool hasDiscountEntitlement,
       DateTime? beginTrialDate,
-      DateTime? trialDeadlineDate}) = _$_PremiumIntroductionState;
+      DateTime? discountEntitlementDeadlineDate}) = _$_PremiumIntroductionState;
   _PremiumIntroductionState._() : super._();
 
   @override
@@ -351,7 +356,8 @@ abstract class _PremiumIntroductionState extends PremiumIntroductionState {
   @override
   DateTime? get beginTrialDate => throw _privateConstructorUsedError;
   @override
-  DateTime? get trialDeadlineDate => throw _privateConstructorUsedError;
+  DateTime? get discountEntitlementDeadlineDate =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$PremiumIntroductionStateCopyWith<_PremiumIntroductionState> get copyWith =>

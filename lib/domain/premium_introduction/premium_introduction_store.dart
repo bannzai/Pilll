@@ -41,7 +41,8 @@ class PremiumIntroductionStore extends StateNotifier<PremiumIntroductionState> {
           isPremium: value.isPremium,
           isTrial: value.isTrial,
           beginTrialDate: value.beginTrialDate,
-          trialDeadlineDate: value.trialDeadlineDate,
+          discountEntitlementDeadlineDate:
+              value.discountEntitlementDeadlineDate,
           hasDiscountEntitlement: value.hasDiscountEntitlement,
         );
       });
