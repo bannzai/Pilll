@@ -7,17 +7,17 @@ import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/domain/premium_introduction/util/discount_deadline.dart';
 
 class DiscountPriceDeadline extends HookWidget {
-  final DateTime trialDeadlineDate;
+  final DateTime discountEntitlementDeadlineDate;
   final VoidCallback onTap;
 
   DiscountPriceDeadline({
-    required this.trialDeadlineDate,
+    required this.discountEntitlementDeadlineDate,
     required this.onTap,
   });
   @override
   Widget build(BuildContext context) {
-    final difference =
-        useProvider(durationToDiscountPriceDeadline(trialDeadlineDate));
+    final difference = useProvider(
+        durationToDiscountPriceDeadline(discountEntitlementDeadlineDate));
     if (difference.inSeconds <= 0) {
       return Container();
     }
