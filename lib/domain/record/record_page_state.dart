@@ -20,7 +20,7 @@ abstract class RecordPageState implements _$RecordPageState {
     @Default(false) bool shouldShowMigrateInfo,
     @Default(false) bool isLinkedLoginProvider,
     DateTime? beginTrialDate,
-    DateTime? trialDeadlineDate,
+    DateTime? discountEntitlementDeadlineDate,
     @Default(true) bool recommendedSignupNotificationIsAlreadyShow,
     @Default(true) bool premiumTrialGuideNotificationIsClosed,
     Object? exception,
