@@ -6,12 +6,15 @@ import 'package:pilll/analytics.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/molecules/premium_badge.dart';
 import 'package:pilll/domain/premium_introduction/premium_introduction_sheet.dart';
+import 'package:pilll/domain/premium_trial/premium_trial_complete_modal.dart';
+import 'package:pilll/domain/premium_trial/premium_trial_modal.dart';
 import 'package:pilll/domain/settings/setting_page_store.dart';
 import 'package:pilll/entity/setting.dart';
 
 class PillSheetAppearanceModeRow extends HookWidget {
   final bool isPremium;
   final bool isTrial;
+  final DateTime? trialDeadlineDate;
   final Setting setting;
 
   bool get isDisableEvent => isPremium || isTrial;
@@ -20,6 +23,7 @@ class PillSheetAppearanceModeRow extends HookWidget {
     Key? key,
     required this.isTrial,
     required this.isPremium,
+    required this.trialDeadlineDate,
     required this.setting,
   }) : super(key: key);
 
@@ -31,7 +35,13 @@ class PillSheetAppearanceModeRow extends HookWidget {
       return GestureDetector(
         child: _body(context),
         onTap: () {
-          showPremiumIntroductionSheet(context);
+          if (trialDeadlineDate == null) {
+            showPremiumTrialModal(context, () {
+              showPremiumTrialCompleteModalPreDialog(context);
+            });
+          } else {
+            showPremiumIntroductionSheet(context);
+          }
         },
       );
     }
