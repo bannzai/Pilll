@@ -28,14 +28,17 @@ class PillSheetAppearanceModeRow extends HookWidget {
   @override
   Widget build(BuildContext context) {
     final store = useProvider(settingStoreProvider);
+    final state = useProvider(settingStoreProvider.state);
     final isOn =
         setting.pillSheetAppearanceMode == PillSheetAppearanceMode.date;
     return ListTile(
       title: Row(
         children: [
           Text("日付表示モード", style: FontType.listRow),
-          SizedBox(width: 8),
-          PremiumBadge(),
+          if (state.isPremium) ...[
+            SizedBox(width: 8),
+            PremiumBadge(),
+          ]
         ],
       ),
       trailing: Switch(
