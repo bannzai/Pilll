@@ -35,7 +35,7 @@ class PillSheetAppearanceModeRow extends HookWidget {
       title: Row(
         children: [
           Text("日付表示モード", style: FontType.listRow),
-          if (state.isPremium) ...[
+          if (!state.isPremium) ...[
             SizedBox(width: 8),
             PremiumBadge(),
           ]
