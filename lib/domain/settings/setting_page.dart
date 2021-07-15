@@ -75,6 +75,7 @@ class SettingPage extends HookWidget {
                         setting: setting,
                         isPremium: state.isPremium,
                         isTrial: state.isTrial,
+                        trialDeadlineDate: state.trialDeadlineDate,
                       ),
                       _separator(),
                       if (pillSheet != null && !pillSheet.isInvalid) ...[
@@ -99,7 +100,10 @@ class SettingPage extends HookWidget {
                         _separator(),
                       ],
                       if (!state.isPremium) ...[
-                        QuickRecordRow(isTrial: state.isTrial),
+                        QuickRecordRow(
+                          isTrial: state.isTrial,
+                          trialDeadlineDate: state.trialDeadlineDate,
+                        ),
                         _separator(),
                       ]
                     ],
