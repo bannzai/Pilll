@@ -38,7 +38,7 @@ class PremiumIntroductionSheet extends HookWidget {
     }
 
     return DraggableScrollableSheet(
-      initialChildSize: 0.5,
+      initialChildSize: 0.9,
       maxChildSize: 0.9,
       builder: (context, scrollController) {
         return HUD(
