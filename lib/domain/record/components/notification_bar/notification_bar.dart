@@ -41,6 +41,12 @@ class NotificationBar extends HookWidget {
     final state = useProvider(notificationBarStateProvider(parameter));
     final store = useProvider(notificationBarStoreProvider(parameter));
     if (!state.isPremium) {
+      final premiumTrialLimit = state.premiumTrialLimit;
+      if (premiumTrialLimit != null) {
+        return PremiumTrialLimitNotificationBar(
+            premiumTrialLimit: premiumTrialLimit);
+      }
+
       if (state.hasDiscountEntitlement) {
         if (!state.isTrial) {
           final discountEntitlementDeadlineDate =
@@ -115,12 +121,6 @@ class NotificationBar extends HookWidget {
             }
           }
         }
-      }
-
-      final premiumTrialLimit = state.premiumTrialLimit;
-      if (premiumTrialLimit != null) {
-        return PremiumTrialLimitNotificationBar(
-            premiumTrialLimit: premiumTrialLimit);
       }
     } else {
       if (state.shownRecommendSignupNotificationForPremium) {
