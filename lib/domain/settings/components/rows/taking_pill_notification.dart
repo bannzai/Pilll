@@ -20,7 +20,6 @@ class TakingPillNotification extends HookWidget {
     final store = useProvider(settingStoreProvider);
     return SwitchListTile(
       title: Text("ピルの服用通知", style: FontType.listRow),
-      subtitle: Text("通知時間までに服用した場合は通知はきません", style: FontType.assisting),
       activeColor: PilllColors.primary,
       onChanged: (bool value) {
         analytics.logEvent(
@@ -44,7 +43,7 @@ class TakingPillNotification extends HookWidget {
       },
       value: setting.isOnReminder,
       // NOTE: when configured subtitle, the space between elements becomes very narrow
-      contentPadding: EdgeInsets.fromLTRB(14, 8, 6, 8),
+      contentPadding: EdgeInsets.fromLTRB(14, 4, 6, 0),
     );
   }
 }

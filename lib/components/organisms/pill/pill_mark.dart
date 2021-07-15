@@ -1,5 +1,3 @@
-import 'package:pilll/components/atoms/font.dart';
-import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/components/molecules/ripple.dart';
 import 'package:pilll/entity/pill_mark_type.dart';
 import 'package:pilll/components/atoms/color.dart';
@@ -16,14 +14,12 @@ abstract class PillMarkConst {
 
 class PremiumPillMarkModel {
   final DateTime date;
-  final int pillMarkNumber;
   final int pillNumberForMenstruationBegin;
   final int menstruationDuration;
   final int maxPillNumber;
 
   PremiumPillMarkModel(
     this.date,
-    this.pillMarkNumber,
     this.pillNumberForMenstruationBegin,
     this.menstruationDuration,
     this.maxPillNumber,
@@ -107,21 +103,6 @@ class _PillMarkState extends State<PillMark> with TickerProviderStateMixin {
     );
   }
 
-  TextStyle _pillMarkNumberTextColor(PillMarkType pillMarkType) {
-    switch (pillMarkType) {
-      case PillMarkType.normal:
-        return TextColorStyle.white;
-      case PillMarkType.fake:
-        return TextColorStyle.main;
-      case PillMarkType.rest:
-        return TextColorStyle.main;
-      case PillMarkType.selected:
-        return TextStyle();
-      case PillMarkType.done:
-        return TextStyle();
-    }
-  }
-
   Widget _mark(bool isDone, PillMarkType type, PremiumPillMarkModel? premium) {
     return DottedBorder(
       borderType: BorderType.RRect,
@@ -136,14 +117,6 @@ class _PillMarkState extends State<PillMark> with TickerProviderStateMixin {
           child: () {
             if (isDone) {
               return _checkImage();
-            }
-            if (premium != null) {
-              return Text(
-                "${premium.pillMarkNumber}",
-                style: FontType.sSmallNumber.merge(
-                  _pillMarkNumberTextColor(type),
-                ),
-              );
             }
             return null;
           }(),

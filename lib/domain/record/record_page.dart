@@ -217,7 +217,6 @@ class RecordPage extends HookWidget {
             pillMarkNumber,
             setting.pillNumberForFromMenstruation,
             setting.durationMenstruation,
-            pillSheet.pillSheetType.totalCount,
           );
         };
       }(),
