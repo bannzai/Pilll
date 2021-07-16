@@ -209,14 +209,19 @@ class RecordPage extends HookWidget {
         if (state.appearanceMode != PillSheetAppearanceMode.date) {
           return null;
         }
+        final pillSheet = state.entity;
+        if (pillSheet == null) {
+          return null;
+        }
         return (pillMarkNumber) {
           final date =
               pillSheet.beginingDate.add(Duration(days: pillMarkNumber - 1));
           return PremiumPillMarkModel(
-            date,
-            pillMarkNumber,
-            setting.pillNumberForFromMenstruation,
-            setting.durationMenstruation,
+            date: date,
+            pillNumberForMenstruationBegin:
+                setting.pillNumberForFromMenstruation,
+            menstruationDuration: setting.durationMenstruation,
+            maxPillNumber: pillSheet.pillSheetType.totalCount,
           );
         };
       }(),
