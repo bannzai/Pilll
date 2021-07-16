@@ -18,12 +18,12 @@ class PremiumPillMarkModel {
   final int menstruationDuration;
   final int maxPillNumber;
 
-  PremiumPillMarkModel(
-    this.date,
-    this.pillNumberForMenstruationBegin,
-    this.menstruationDuration,
-    this.maxPillNumber,
-  );
+  PremiumPillMarkModel({
+    required this.date,
+    required this.pillNumberForMenstruationBegin,
+    required this.menstruationDuration,
+    required this.maxPillNumber,
+  });
 }
 
 class PillMark extends StatefulWidget {
