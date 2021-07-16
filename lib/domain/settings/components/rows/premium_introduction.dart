@@ -10,12 +10,8 @@ class PremiumIntroductionRow extends StatelessWidget {
       onTap: () {
         showPremiumIntroductionSheet(context);
       },
-      leading: Image.asset("images/pilll_icon.png", width: 32, height: 32),
-      title: Align(
-        alignment: Alignment(-1.1, 0),
-        child: Text("Pilllプレミアム",
-            style: FontType.assisting.merge(TextColorStyle.black)),
-      ),
+      title: Text("Pilllプレミアム",
+          style: FontType.assisting.merge(TextColorStyle.black)),
     );
   }
 }
