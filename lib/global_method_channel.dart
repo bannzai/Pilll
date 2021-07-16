@@ -1,3 +1,4 @@
+import 'package:pilll/analytics.dart';
 import 'package:pilll/database/database.dart';
 import 'package:pilll/service/pill_sheet.dart';
 import 'package:pilll/util/datetime/day.dart';
@@ -28,6 +29,8 @@ Future<void> recordPill() async {
     return Future.value();
   }
   await service.update(entity.copyWith(lastTakenDate: now()));
+  // NOTE: Firebase initializeが成功しているかが定かでは無いので一番最後にログを送る
+  analytics.logEvent(name: "quick_recorded");
 }
 
 Future<void> salvagedOldStartTakenDate(dynamic arguments) async {
