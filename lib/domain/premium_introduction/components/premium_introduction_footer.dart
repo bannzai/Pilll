@@ -57,6 +57,19 @@ class PremiumIntroductionFotter extends StatelessWidget {
                       },
                   ),
                   TextSpan(
+                    text: " / ",
+                  ),
+                  TextSpan(
+                    text: "特定商取引法に基づく表示",
+                    style: TextStyle(decoration: TextDecoration.underline),
+                    recognizer: TapGestureRecognizer()
+                      ..onTap = () {
+                        launch(
+                            "https://bannzai.github.io/Pilll/SpecifiedCommercialTransactionAct",
+                            forceSafariVC: true);
+                      },
+                  ),
+                  TextSpan(
                     text: "をご確認のうえ登録してください\n",
                   ),
                   TextSpan(
