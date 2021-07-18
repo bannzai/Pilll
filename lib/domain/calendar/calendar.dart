@@ -13,11 +13,12 @@ abstract class CalendarConstants {
 }
 
 class MonthlyCalendarLayout extends StatelessWidget {
-  final List<Widget> weeklyCalendars;
+  // NOTE: If return null fill container at bottom
+  final Widget? Function(BuildContext, int) weeklyCalendarBuilder;
 
   const MonthlyCalendarLayout({
     Key? key,
-    required this.weeklyCalendars,
+    required this.weeklyCalendarBuilder,
   }) : super(key: key);
 
   @override
@@ -36,17 +37,13 @@ class MonthlyCalendarLayout extends StatelessWidget {
         ),
         Divider(height: 1),
         ...List.generate(CalendarConstants.constantLineCount, (offset) {
-          final line = offset + 1;
-          if (line == CalendarConstants.constantLineCount) {
+          final weeklyCalendar = weeklyCalendarBuilder(context, offset);
+          if (weeklyCalendar == null) {
             return Container(height: CalendarConstants.tileHeight);
           }
           return Column(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: weeklyCalendars
-                .expand(
-                    (weeklyCalendar) => [weeklyCalendar, Divider(height: 1)])
-                .toList(),
-          );
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [weeklyCalendar, Divider(height: 1)]);
         }),
       ],
     );
