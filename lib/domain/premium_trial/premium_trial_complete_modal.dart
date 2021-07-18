@@ -19,8 +19,8 @@ class PremiumTrialCompleteModal extends StatelessWidget {
             color: PilllColors.white,
             borderRadius: BorderRadius.circular(4),
           ),
-          width: 304,
-          height: 242,
+          width: 314,
+          height: 342,
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.center,
@@ -40,7 +40,7 @@ class PremiumTrialCompleteModal extends StatelessWidget {
                       padding: EdgeInsets.only(top: 40),
                       child: Text(
                         "プレミアム体験が始まりました！",
-                        style: FontType.subTitle.merge(TextColorStyle.black),
+                        style: FontType.subTitle.merge(TextColorStyle.main),
                         textAlign: TextAlign.center,
                       ),
                     ),
@@ -50,18 +50,20 @@ class PremiumTrialCompleteModal extends StatelessWidget {
               Padding(
                 padding: const EdgeInsets.only(top: 28, left: 20, right: 20),
                 child: Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
+                    Image.asset(
+                      "images/quick-record.gif",
+                    ),
+                    SizedBox(height: 20),
                     Text(
                       '''
-今日から30日間プレミアム機能を無料でお試しいただけます
-                      ''',
+通知を長押しすると服用記録ができます
+                  ''',
                       style: FontType.assisting.merge(TextColorStyle.main),
                     ),
                   ],
                 ),
               ),
-              SizedBox(height: 20),
               Container(
                 width: 230,
                 child: SecondaryButton(
