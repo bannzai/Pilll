@@ -36,10 +36,6 @@ class Calendar extends HookWidget {
         onTap: onTap,
         horizontalPadding: horizontalPadding);
   }
-
-  DateTime date() => calendarState.dateForMonth;
-  double height() =>
-      calendarState.weeklineCount().toDouble() * CalendarConstants.tileHeight;
 }
 
 class CalendarBody extends StatelessWidget {
