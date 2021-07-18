@@ -35,8 +35,8 @@ class MonthlyCalendarLayout extends StatelessWidget {
                   )),
         ),
         Divider(height: 1),
-        ...List.generate(CalendarConstants.constantLineCount, (_line) {
-          final line = _line + 1;
+        ...List.generate(CalendarConstants.constantLineCount, (offset) {
+          final line = offset + 1;
           if (line == CalendarConstants.constantLineCount) {
             return Container(height: CalendarConstants.tileHeight);
           }
