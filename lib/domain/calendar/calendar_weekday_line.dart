@@ -81,16 +81,17 @@ class CalendarWeekdayLine extends StatelessWidget {
           if (!isInRange) {
             return null;
           }
+
           bool isLineBreaked =
               calendarState.isNecessaryLineBreak(bandModel.begin);
           int start =
               calendarState.offsetForStartPositionAtLine(bandModel.begin);
-
           final length =
               bandLength(calendarState.dateRange, bandModel, isLineBreaked);
           var tileWidth =
               (MediaQuery.of(context).size.width - horizontalPadding * 2) /
                   Weekday.values.length;
+
           return Positioned(
             left: start.toDouble() * tileWidth,
             width: tileWidth * length,
