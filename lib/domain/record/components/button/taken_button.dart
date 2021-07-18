@@ -3,7 +3,6 @@ import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/analytics.dart';
 import 'package:pilll/components/atoms/buttons.dart';
-import 'package:pilll/domain/premium_trial/premium_trial_complete_modal.dart';
 import 'package:pilll/domain/record/record_page_store.dart';
 import 'package:pilll/domain/record/util/take.dart';
 import 'package:pilll/entity/pill_sheet.dart';
@@ -24,14 +23,13 @@ class TakenButton extends HookWidget {
     return PrimaryButton(
       text: "飲んだ",
       onPressed: () async {
-        showPremiumTrialCompleteModalPreDialog(context);
-//        if (pillSheet.todayPillNumber == 1)
-//          analytics.logEvent(name: "user_taken_first_day_pill");
-//        analytics.logEvent(name: "taken_button_pressed", parameters: {
-//          "last_taken_pill_number": pillSheet.lastTakenPillNumber,
-//          "today_pill_number": pillSheet.todayPillNumber,
-//        });
-//        await take(parentContext, pillSheet, now(), store);
+        if (pillSheet.todayPillNumber == 1)
+          analytics.logEvent(name: "user_taken_first_day_pill");
+        analytics.logEvent(name: "taken_button_pressed", parameters: {
+          "last_taken_pill_number": pillSheet.lastTakenPillNumber,
+          "today_pill_number": pillSheet.todayPillNumber,
+        });
+        await take(parentContext, pillSheet, now(), store);
       },
     );
   }
