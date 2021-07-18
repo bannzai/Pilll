@@ -9,6 +9,7 @@ import 'package:flutter_hooks/flutter_hooks.dart';
 
 abstract class CalendarConstants {
   static final double tileHeight = 66;
+  static const int constantLineCount = 6;
 }
 
 class MonthlyCalendarLayout extends StatelessWidget {
@@ -34,9 +35,9 @@ class MonthlyCalendarLayout extends StatelessWidget {
                   )),
         ),
         Divider(height: 1),
-        ...List.generate(MonthlyCalendarState.constantLineCount, (_line) {
+        ...List.generate(CalendarConstants.constantLineCount, (_line) {
           final line = _line + 1;
-          if (line == MonthlyCalendarState.constantLineCount) {
+          if (line == CalendarConstants.constantLineCount) {
             return Container(height: CalendarConstants.tileHeight);
           }
           return Column(
@@ -83,11 +84,11 @@ class Calendar extends HookWidget {
                   )),
         ),
         Divider(height: 1),
-        ...List.generate(MonthlyCalendarState.constantLineCount, (_line) {
+        ...List.generate(CalendarConstants.constantLineCount, (_line) {
           final line = _line + 1;
           if (calendarState.weeklineCount() <
-                  MonthlyCalendarState.constantLineCount &&
-              line == MonthlyCalendarState.constantLineCount) {
+                  CalendarConstants.constantLineCount &&
+              line == CalendarConstants.constantLineCount) {
             return Container(height: CalendarConstants.tileHeight);
           }
           return Column(

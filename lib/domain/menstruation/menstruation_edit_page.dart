@@ -43,7 +43,7 @@ class MenstruationEditPage extends HookWidget {
           store.adjustedScrollOffset();
           final double estimatedSectionTitleHeight = 95;
           scrollController.jumpTo(CalendarConstants.tileHeight *
-                  MonthlyCalendarState.constantLineCount +
+                  CalendarConstants.constantLineCount +
               estimatedSectionTitleHeight);
         });
         return Container(
