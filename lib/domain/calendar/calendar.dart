@@ -11,6 +11,47 @@ abstract class CalendarConstants {
   static final double tileHeight = 66;
 }
 
+class MonthlyCalendarLayout extends StatelessWidget {
+  final List<Widget> weeklyCalendars;
+
+  const MonthlyCalendarLayout({
+    Key? key,
+    required this.weeklyCalendars,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: <Widget>[
+        Row(
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: List.generate(
+              Weekday.values.length,
+              (index) => Expanded(
+                    child: WeekdayBadge(
+                      weekday: Weekday.values[index],
+                    ),
+                  )),
+        ),
+        Divider(height: 1),
+        ...List.generate(MonthlyCalendarState.constantLineCount, (_line) {
+          final line = _line + 1;
+          if (line == MonthlyCalendarState.constantLineCount) {
+            return Container(height: CalendarConstants.tileHeight);
+          }
+          return Column(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: weeklyCalendars
+                .expand(
+                    (weeklyCalendar) => [weeklyCalendar, Divider(height: 1)])
+                .toList(),
+          );
+        }),
+      ],
+    );
+  }
+}
+
 class Calendar extends HookWidget {
   final MonthlyCalendarState calendarState;
   final List<CalendarBandModel> bandModels;
