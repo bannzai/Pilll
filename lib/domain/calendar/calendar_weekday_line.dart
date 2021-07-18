@@ -74,6 +74,10 @@ class CalendarWeekdayLine extends StatelessWidget {
     WeeklyCalendarState calendarState,
     double horizontalPadding,
   ) {
+    var tileWidth =
+        (MediaQuery.of(context).size.width - horizontalPadding * 2) /
+            Weekday.values.length;
+
     return bandModels
         .map((bandModel) {
           final isInRange = calendarState.dateRange.inRange(bandModel.begin) ||
@@ -88,9 +92,6 @@ class CalendarWeekdayLine extends StatelessWidget {
               calendarState.offsetForStartPositionAtLine(bandModel.begin);
           final length =
               bandLength(calendarState.dateRange, bandModel, isLineBreaked);
-          var tileWidth =
-              (MediaQuery.of(context).size.width - horizontalPadding * 2) /
-                  Weekday.values.length;
 
           return Positioned(
             left: start.toDouble() * tileWidth,
