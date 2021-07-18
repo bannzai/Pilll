@@ -29,33 +29,6 @@ class Calendar extends HookWidget {
 
   @override
   Widget build(BuildContext context) {
-    return CalendarBody(
-        diaries: diaries,
-        calendarState: calendarState,
-        bandModels: bandModels,
-        onTap: onTap,
-        horizontalPadding: horizontalPadding);
-  }
-}
-
-class CalendarBody extends StatelessWidget {
-  final List<Diary> diaries;
-  final MonthlyCalendarState calendarState;
-  final List<CalendarBandModel> bandModels;
-  final Function(DateTime, List<Diary>) onTap;
-  final double horizontalPadding;
-
-  const CalendarBody({
-    Key? key,
-    required this.diaries,
-    required this.calendarState,
-    required this.bandModels,
-    required this.onTap,
-    required this.horizontalPadding,
-  }) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
     return Column(
       children: <Widget>[
         Row(

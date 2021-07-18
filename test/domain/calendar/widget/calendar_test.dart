@@ -37,7 +37,7 @@ void main() {
       await tester.pumpWidget(
         ProviderScope(
           child: MaterialApp(
-            home: CalendarBody(
+            home: Calendar(
               diaries: diaries,
               calendarState: CalendarTabState(now),
               bandModels: [model],
@@ -78,7 +78,7 @@ void main() {
       await tester.pumpWidget(
         ProviderScope(
           child: MaterialApp(
-            home: CalendarBody(
+            home: Calendar(
               diaries: diaries,
               calendarState: CalendarTabState(now),
               bandModels: [model],
@@ -105,7 +105,7 @@ void main() {
       await tester.pumpWidget(
         ProviderScope(
           child: MaterialApp(
-            home: CalendarBody(
+            home: Calendar(
               diaries: [],
               calendarState: CalendarTabState(now),
               bandModels: [
@@ -128,7 +128,7 @@ void main() {
       await tester.pumpWidget(
         ProviderScope(
           child: MaterialApp(
-            home: CalendarBody(
+            home: Calendar(
               diaries: [],
               calendarState: CalendarTabState(now),
               bandModels: [
