@@ -9,7 +9,7 @@ class CalendarTabWeeklyCalendarState extends WeeklyCalendarState {
 
   CalendarTabWeeklyCalendarState(this.dateRange, this.targetDateOfMonth);
 
-  bool isGrayoutTile(DateTime date) => date._isPreviousMonth(targetDateOfMonth);
+  bool isGrayoutTile(DateTime date) => date.isPreviousMonth(targetDateOfMonth);
   bool hasDiaryMark(List<Diary> diaries, DateTime date) =>
       isExistsPostedDiary(diaries, date);
   bool hasMenstruationMark(DateTime date) => false;

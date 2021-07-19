@@ -1,23 +1,22 @@
 import 'package:flutter/material.dart';
 import 'package:pilll/domain/calendar/date_range.dart';
 import 'package:pilll/entity/diary.dart';
-import 'package:pilll/entity/menstruation.dart';
 import 'package:pilll/entity/weekday.dart';
 import 'package:pilll/util/datetime/date_compare.dart';
 import 'package:pilll/util/datetime/day.dart';
 
+bool isPostedDiary(Diary diary, DateTime date) => isSameDay(diary.date, date);
+bool isExistsPostedDiary(List<Diary> diaries, DateTime date) =>
+    diaries.where((element) => isPostedDiary(element, date)).isNotEmpty;
+
 extension DateTimeForCalnedarState on DateTime {
-  bool _isPreviousMonth(DateTime date) {
+  bool isPreviousMonth(DateTime date) {
     if (isSameMonth(date, this)) {
       return false;
     }
     return this.isBefore(date);
   }
 }
-
-bool isPostedDiary(Diary diary, DateTime date) => isSameDay(diary.date, date);
-bool isExistsPostedDiary(List<Diary> diaries, DateTime date) =>
-    diaries.where((element) => isPostedDiary(element, date)).isNotEmpty;
 
 abstract class WeeklyCalendarState {
   DateRange get dateRange;
@@ -46,26 +45,4 @@ extension WeeklyCalendarStateCompoutedProperties on WeeklyCalendarState {
   int targetDay(Weekday weekday) {
     return dateRange.begin.add(Duration(days: weekday.index + 1)).day;
   }
-}
-
-class MenstruationEditWeeklyCalendarState extends WeeklyCalendarState {
-  final DateRange dateRange;
-  final DateTime targetDateOfMonth;
-  final Menstruation? menstruation;
-
-  MenstruationEditWeeklyCalendarState(
-      this.dateRange, this.targetDateOfMonth, this.menstruation);
-
-  bool isGrayoutTile(DateTime date) => date._isPreviousMonth(targetDateOfMonth);
-  bool hasDiaryMark(List<Diary> diaries, DateTime date) => false;
-  bool hasMenstruationMark(DateTime date) {
-    final menstruation = this.menstruation;
-    if (menstruation == null) {
-      return false;
-    }
-    return DateRange(menstruation.beginDate, menstruation.endDate)
-        .inRange(date);
-  }
-
-  Alignment get contentAlignment => Alignment.center;
 }
