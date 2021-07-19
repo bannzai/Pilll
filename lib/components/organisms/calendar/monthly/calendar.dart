@@ -1,5 +1,5 @@
 import 'package:pilll/domain/calendar/monthly_calendar_state.dart';
-import 'package:pilll/components/organisms/calendar/calendar_band_model.dart';
+import 'package:pilll/components/organisms/calendar/band/calendar_band_model.dart';
 import 'package:pilll/components/organisms/calendar/weekly/weekly_calendar.dart';
 import 'package:pilll/domain/record/weekday_badge.dart';
 import 'package:pilll/entity/diary.dart';

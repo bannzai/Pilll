@@ -1,6 +1,6 @@
 import 'package:pilll/components/atoms/color.dart';
 import 'package:flutter/material.dart';
-import 'package:pilll/components/organisms/calendar/calendar_band.dart';
+import 'package:pilll/components/organisms/calendar/band/calendar_band.dart';
 import 'package:pilll/entity/menstruation.dart';
 
 abstract class CalendarBandModel {
