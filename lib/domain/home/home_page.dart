@@ -13,7 +13,7 @@ import 'package:pilll/util/datetime/day.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
-import '../calendar/calendar_weekday_line.dart';
+import '../calendar/weekly/weekly_calendar.dart';
 
 GlobalKey<_HomePageState> homeKey = GlobalKey();
 

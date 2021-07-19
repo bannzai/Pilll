@@ -1,5 +1,5 @@
 import 'package:pilll/domain/calendar/date_range.dart';
-import 'package:pilll/domain/calendar/weekly_calendar_state.dart';
+import 'package:pilll/domain/calendar/weekly/weekly_calendar_state.dart';
 import 'package:pilll/entity/menstruation.dart';
 import 'package:pilll/entity/weekday.dart';
 
