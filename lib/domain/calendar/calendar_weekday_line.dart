@@ -52,7 +52,7 @@ class CalendarWeekdayLine extends StatelessWidget {
               isToday: isSameDay(today(), date),
               weekday: weekday,
               date: date,
-              hasDiary: calendarState.hasDiaryMark(diaries, date),
+              shouldShowDiaryMark: calendarState.hasDiaryMark(diaries, date),
               shouldShowMenstruationMark:
                   calendarState.hasMenstruationMark(date),
               contentAlignment: calendarState.contentAlignment,
