@@ -10,6 +10,7 @@ import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/components/page/discard_dialog.dart';
 import 'package:pilll/domain/calendar/calendar.dart';
 import 'package:pilll/domain/calendar/calendar_date_header.dart';
+import 'package:pilll/domain/calendar/calendar_weekday_line.dart';
 import 'package:pilll/domain/calendar/monthly_calendar_state.dart';
 import 'package:pilll/entity/menstruation.dart';
 import 'package:pilll/store/menstruation_edit.dart';
@@ -119,14 +120,31 @@ class MenstruationEditPage extends HookWidget {
                         .map((dateForMonth) {
                           return [
                             CalendarDateHeader(date: dateForMonth),
-                            Calendar(
-                              diaries: [],
-                              calendarState: MenstruationEditCalendarState(
-                                  dateForMonth, state.menstruation),
-                              bandModels: [],
-                              onTap: (date, diaries) => store.tappedDate(date),
-                              horizontalPadding: 0,
-                            ),
+                            MonthlyCalendarLayout(
+                                weeklyCalendarBuilder: (context, offset) {
+                              final calendarState =
+                                  MenstruationEditCalendarState(
+                                      dateForMonth, state.menstruation);
+                              final line = offset + 1;
+                              if (calendarState.weeklineCount() <
+                                      CalendarConstants.constantLineCount &&
+                                  line == CalendarConstants.constantLineCount) {
+                                return null;
+                              }
+                              return CalendarWeekdayLine(
+                                diaries: [],
+                                calendarState:
+                                    calendarState.weeklyCalendarState(line),
+                                bandModels: [],
+                                horizontalPadding: 0,
+                                onTap: (weeklyCalendarState, date) {
+                                  analytics.logEvent(
+                                      name:
+                                          "selected_day_tile_on_menstruation_edit");
+                                  store.tappedDate(date);
+                                },
+                              );
+                            }),
                           ];
                         })
                         .expand((element) => element)
