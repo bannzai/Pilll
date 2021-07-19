@@ -13,7 +13,7 @@ import 'package:pilll/domain/menstruation/components/calendar/calendar_date_head
 import 'package:pilll/components/organisms/calendar/weekly/weekly_calendar.dart';
 import 'package:pilll/domain/calendar/monthly_calendar_state.dart';
 import 'package:pilll/entity/menstruation.dart';
-import 'package:pilll/store/menstruation_edit.dart';
+import 'package:pilll/domain/menstruation_edit/menstruation_edit_store.dart';
 import 'package:pilll/util/formatter/date_time_formatter.dart';
 
 class MenstruationEditPage extends HookWidget {

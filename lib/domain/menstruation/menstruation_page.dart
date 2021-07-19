@@ -15,7 +15,7 @@ import 'package:pilll/components/organisms/calendar/weekly/weekly_calendar.dart'
 import 'package:pilll/domain/calendar/date_range.dart';
 import 'package:pilll/components/organisms/calendar/utility.dart';
 import 'package:pilll/domain/menstruation/menstruation_card.dart';
-import 'package:pilll/domain/menstruation/menstruation_edit_page.dart';
+import 'package:pilll/domain/menstruation_edit/menstruation_edit_page.dart';
 import 'package:pilll/domain/menstruation/menstruation_history_card.dart';
 import 'package:pilll/domain/menstruation/menstruation_select_modify_type_sheet.dart';
 import 'package:pilll/domain/record/weekday_badge.dart';

@@ -1,7 +1,7 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:pilll/entity/menstruation.dart';
 
-part 'menstruation_edit.freezed.dart';
+part 'menstruation_edit_state.freezed.dart';
 
 @freezed
 abstract class MenstruationEditState implements _$MenstruationEditState {
