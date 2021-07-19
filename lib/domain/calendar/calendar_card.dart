@@ -39,19 +39,27 @@ class CalendarCard extends StatelessWidget {
     required this.state,
   }) : super(key: key);
 
+  CalendarTabState get _calendarTabState => CalendarTabState(state.date);
+
   @override
   Widget build(BuildContext context) {
-    return ShadowContainer(
-      child: Calendar(
-        diaries: state.diaries,
-        calendarState: CalendarTabState(state.date),
-        bandModels: state.bands,
-        onTap: (date, diaries) {
-          analytics.logEvent(name: "did_select_day_tile_on_calendar_card");
-          transitionToPostDiary(context, date, diaries);
-        },
-        horizontalPadding: 0,
-      ),
-    );
+    return ShadowContainer(child: MonthlyCalendarLayout(
+      weeklyCalendarBuilder: (context, offset) {
+        final line = offset;
+        if (line == CalendarConstants.constantLineCount) {
+          return null;
+        }
+        final diaries = state.diaries;
+        return CalendarWeekdayLine(
+            diaries: diaries,
+            calendarState: _calendarTabState.weeklyCalendarState(line),
+            bandModels: state.bands,
+            horizontalPadding: 0,
+            onTap: (weeklyCalendarState, date) {
+              analytics.logEvent(name: "did_select_day_tile_on_calendar_card");
+              transitionToPostDiary(context, date, diaries);
+            });
+      },
+    ));
   }
 }
