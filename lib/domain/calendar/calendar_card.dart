@@ -51,14 +51,15 @@ class CalendarCard extends StatelessWidget {
         }
         final diaries = state.diaries;
         return CalendarWeekdayLine(
-            diaries: diaries,
-            calendarState: _calendarTabState.weeklyCalendarState(line),
-            bandModels: state.bands,
-            horizontalPadding: 0,
-            onTap: (weeklyCalendarState, date) {
-              analytics.logEvent(name: "did_select_day_tile_on_calendar_card");
-              transitionToPostDiary(context, date, diaries);
-            });
+          diaries: diaries,
+          calendarState: _calendarTabState.weeklyCalendarState(line),
+          bandModels: state.bands,
+          horizontalPadding: 0,
+          onTap: (weeklyCalendarState, date) {
+            analytics.logEvent(name: "did_select_day_tile_on_calendar_card");
+            transitionToPostDiary(context, date, diaries);
+          },
+        );
       },
     ));
   }
