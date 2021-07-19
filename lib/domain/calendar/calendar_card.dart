@@ -45,7 +45,7 @@ class CalendarCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return ShadowContainer(child: MonthlyCalendarLayout(
       weeklyCalendarBuilder: (context, offset) {
-        final line = offset;
+        final line = offset + 1;
         if (_calendarTabState.weeklineCount() <
                 CalendarConstants.constantLineCount &&
             line == CalendarConstants.constantLineCount) {
