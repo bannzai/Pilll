@@ -49,17 +49,6 @@ extension WeeklyCalendarStateCompoutedProperties on WeeklyCalendarState {
   }
 }
 
-class SinglelineWeeklyCalendarState extends WeeklyCalendarState {
-  final DateRange dateRange;
-  SinglelineWeeklyCalendarState(this.dateRange);
-
-  bool isGrayoutTile(DateTime date) => false;
-  bool hasDiaryMark(List<Diary> diaries, DateTime date) =>
-      isExistsPostedDiary(diaries, date);
-  bool hasMenstruationMark(DateTime date) => false;
-  Alignment get contentAlignment => Alignment.center;
-}
-
 class MultilineWeeklyCalendarState extends WeeklyCalendarState {
   final DateRange dateRange;
   final DateTime targetDateOfMonth;

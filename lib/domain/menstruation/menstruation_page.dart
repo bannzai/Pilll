@@ -102,7 +102,7 @@ class MenstruationPage extends HookWidget {
                               height: MenstruationPageConst.tileHeight,
                               child: CalendarWeekdayLine(
                                 diaries: state.diaries,
-                                calendarState: SinglelineWeeklyCalendarState(
+                                calendarState: MenstruationSinglelineWeeklyCalendarState(
                                     DateRange(days.first, days.last)),
                                 bandModels: buildBandModels(
                                         state.latestPillSheet,
