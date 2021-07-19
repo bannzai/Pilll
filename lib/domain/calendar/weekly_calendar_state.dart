@@ -22,9 +22,9 @@ bool isExistsPostedDiary(List<Diary> diaries, DateTime date) =>
 abstract class WeeklyCalendarState {
   DateRange get dateRange;
 
-  bool shouldGrayoutTile(DateTime date);
-  bool shouldShowDiaryMark(List<Diary> diaries, DateTime date);
-  bool shouldShowMenstruationMark(DateTime date);
+  bool isGrayoutTile(DateTime date);
+  bool hasDiaryMark(List<Diary> diaries, DateTime date);
+  bool hasMenstruationMark(DateTime date);
   Alignment get contentAlignment;
 
   bool isNecessaryLineBreak(DateTime date) {
@@ -50,10 +50,10 @@ class SinglelineWeeklyCalendarState extends WeeklyCalendarState {
   final DateRange dateRange;
   SinglelineWeeklyCalendarState(this.dateRange);
 
-  bool shouldGrayoutTile(DateTime date) => false;
-  bool shouldShowDiaryMark(List<Diary> diaries, DateTime date) =>
+  bool isGrayoutTile(DateTime date) => false;
+  bool hasDiaryMark(List<Diary> diaries, DateTime date) =>
       isExistsPostedDiary(diaries, date);
-  bool shouldShowMenstruationMark(DateTime date) => false;
+  bool hasMenstruationMark(DateTime date) => false;
   Alignment get contentAlignment => Alignment.center;
 }
 
@@ -63,11 +63,10 @@ class MultilineWeeklyCalendarState extends WeeklyCalendarState {
 
   MultilineWeeklyCalendarState(this.dateRange, this.targetDateOfMonth);
 
-  bool shouldGrayoutTile(DateTime date) =>
-      date._isPreviousMonth(targetDateOfMonth);
-  bool shouldShowDiaryMark(List<Diary> diaries, DateTime date) =>
+  bool isGrayoutTile(DateTime date) => date._isPreviousMonth(targetDateOfMonth);
+  bool hasDiaryMark(List<Diary> diaries, DateTime date) =>
       isExistsPostedDiary(diaries, date);
-  bool shouldShowMenstruationMark(DateTime date) => false;
+  bool hasMenstruationMark(DateTime date) => false;
   Alignment get contentAlignment => Alignment.center;
 }
 
@@ -79,10 +78,9 @@ class MenstruationEditWeeklyCalendarState extends WeeklyCalendarState {
   MenstruationEditWeeklyCalendarState(
       this.dateRange, this.targetDateOfMonth, this.menstruation);
 
-  bool shouldGrayoutTile(DateTime date) =>
-      date._isPreviousMonth(targetDateOfMonth);
-  bool shouldShowDiaryMark(List<Diary> diaries, DateTime date) => false;
-  bool shouldShowMenstruationMark(DateTime date) {
+  bool isGrayoutTile(DateTime date) => date._isPreviousMonth(targetDateOfMonth);
+  bool hasDiaryMark(List<Diary> diaries, DateTime date) => false;
+  bool hasMenstruationMark(DateTime date) {
     final menstruation = this.menstruation;
     if (menstruation == null) {
       return false;

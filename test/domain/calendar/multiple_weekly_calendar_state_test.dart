@@ -25,11 +25,11 @@ void main() {
       final anyDate = date;
       final calendarState = MultilineWeeklyCalendarState(
           DateRange(anyDate, anyDate.add(Duration(days: 6))), date);
-      expect(calendarState.shouldGrayoutTile(DateTime.parse("2020-08-30")),
+      expect(calendarState.isGrayoutTile(DateTime.parse("2020-08-30")),
           true);
-      expect(calendarState.shouldGrayoutTile(DateTime.parse("2020-08-31")),
+      expect(calendarState.isGrayoutTile(DateTime.parse("2020-08-31")),
           true);
-      expect(calendarState.shouldGrayoutTile(DateTime.parse("2020-09-01")),
+      expect(calendarState.isGrayoutTile(DateTime.parse("2020-09-01")),
           false);
     });
 
