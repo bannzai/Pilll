@@ -10,10 +10,10 @@ import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/components/molecules/shadow_container.dart';
 import 'package:pilll/domain/calendar/calendar.dart';
 import 'package:pilll/domain/calendar/calendar_band_model.dart';
+import 'package:pilll/domain/calendar/weekly/menstruation_single_line_state.dart';
 import 'package:pilll/domain/calendar/weekly/weekly_calendar.dart';
 import 'package:pilll/domain/calendar/date_range.dart';
 import 'package:pilll/domain/calendar/utility.dart';
-import 'package:pilll/domain/calendar/weekly/weekly_calendar_state.dart';
 import 'package:pilll/domain/menstruation/menstruation_card.dart';
 import 'package:pilll/domain/menstruation/menstruation_edit_page.dart';
 import 'package:pilll/domain/menstruation/menstruation_history_card.dart';
@@ -102,8 +102,9 @@ class MenstruationPage extends HookWidget {
                               height: MenstruationPageConst.tileHeight,
                               child: CalendarWeekdayLine(
                                 diaries: state.diaries,
-                                calendarState: MenstruationSinglelineWeeklyCalendarState(
-                                    DateRange(days.first, days.last)),
+                                calendarState:
+                                    MenstruationSinglelineWeeklyCalendarState(
+                                        DateRange(days.first, days.last)),
                                 bandModels: buildBandModels(
                                         state.latestPillSheet,
                                         state.setting,

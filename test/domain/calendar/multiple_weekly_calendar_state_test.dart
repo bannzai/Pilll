@@ -1,4 +1,5 @@
 import 'package:pilll/domain/calendar/date_range.dart';
+import 'package:pilll/domain/calendar/weekly/calendar_tab_state.dart';
 import 'package:pilll/domain/calendar/weekly/weekly_calendar_state.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -25,12 +26,9 @@ void main() {
       final anyDate = date;
       final calendarState = CalendarTabWeeklyCalendarState(
           DateRange(anyDate, anyDate.add(Duration(days: 6))), date);
-      expect(calendarState.isGrayoutTile(DateTime.parse("2020-08-30")),
-          true);
-      expect(calendarState.isGrayoutTile(DateTime.parse("2020-08-31")),
-          true);
-      expect(calendarState.isGrayoutTile(DateTime.parse("2020-09-01")),
-          false);
+      expect(calendarState.isGrayoutTile(DateTime.parse("2020-08-30")), true);
+      expect(calendarState.isGrayoutTile(DateTime.parse("2020-08-31")), true);
+      expect(calendarState.isGrayoutTile(DateTime.parse("2020-09-01")), false);
     });
 
     group("#isNecessaryLineBreak", () {
