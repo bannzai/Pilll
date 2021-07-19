@@ -23,7 +23,7 @@ void main() {
     test("#shouldGrayoutTile", () {
       final date = DateTime.parse("2020-09-14");
       final anyDate = date;
-      final calendarState = MultilineWeeklyCalendarState(
+      final calendarState = CalendarTabWeeklyCalendarState(
           DateRange(anyDate, anyDate.add(Duration(days: 6))), date);
       expect(calendarState.isGrayoutTile(DateTime.parse("2020-08-30")),
           true);
@@ -39,7 +39,7 @@ void main() {
         final begin = DateTime.parse("2020-08-30");
         final end = DateTime.parse("2020-09-05");
         final calendarState =
-            MultilineWeeklyCalendarState(DateRange(begin, end), date);
+            CalendarTabWeeklyCalendarState(DateRange(begin, end), date);
         expect(
           calendarState.isNecessaryLineBreak(DateTime.parse("2020-08-31")),
           false,
@@ -64,7 +64,7 @@ void main() {
         final begin = DateTime.parse("2020-08-30");
         final end = DateTime.parse("2020-09-05");
         final calendarState =
-            MultilineWeeklyCalendarState(DateRange(begin, end), date);
+            CalendarTabWeeklyCalendarState(DateRange(begin, end), date);
         expect(
           calendarState.offsetForStartPositionAtLine(
             DateTime.parse("2020-08-31"),

@@ -50,7 +50,7 @@ class CalendarTabState extends MonthlyCalendarState {
   CalendarTabState(this.dateForMonth);
 
   WeeklyCalendarState weeklyCalendarState(int line) {
-    return MultilineWeeklyCalendarState(
+    return CalendarTabWeeklyCalendarState(
       dateRangeOfLine(line),
       dateForMonth,
     );
