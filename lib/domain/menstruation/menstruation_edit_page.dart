@@ -10,7 +10,7 @@ import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/components/page/discard_dialog.dart';
 import 'package:pilll/components/organisms/calendar/calendar.dart';
 import 'package:pilll/domain/menstruation/components/calendar/calendar_date_header.dart';
-import 'package:pilll/components/organisms/calendar/weekly_calendar.dart';
+import 'package:pilll/components/organisms/calendar/weekly/weekly_calendar.dart';
 import 'package:pilll/domain/calendar/monthly_calendar_state.dart';
 import 'package:pilll/entity/menstruation.dart';
 import 'package:pilll/store/menstruation_edit.dart';
