@@ -40,11 +40,8 @@ class CalendarWeekdayLine extends StatelessWidget {
             }
 
             if (calendarState.isGrayoutTile(date)) {
-              return CalendarDayTile(
-                isToday: false,
-                onTap: null,
+              return CalendarDayTile.grayout(
                 weekday: weekday,
-                hasDiary: false,
                 shouldShowMenstruationMark:
                     calendarState.hasMenstruationMark(date),
                 contentAlignment: calendarState.contentAlignment,

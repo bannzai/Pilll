@@ -14,6 +14,21 @@ class CalendarDayTile extends StatelessWidget {
   final Alignment contentAlignment;
   final Function(DateTime)? onTap;
 
+  const CalendarDayTile.grayout({
+    required DateTime date,
+    required Weekday weekday,
+    required bool shouldShowMenstruationMark,
+    required Alignment contentAlignment,
+  }) : this(
+          isToday: false,
+          onTap: null,
+          weekday: weekday,
+          hasDiary: false,
+          shouldShowMenstruationMark: shouldShowMenstruationMark,
+          contentAlignment: contentAlignment,
+          date: date,
+        );
+
   const CalendarDayTile({
     Key? key,
     required this.date,
