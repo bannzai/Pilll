@@ -18,16 +18,12 @@ class CalendarCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return ShadowContainer(
       child: MonthlyCalendarLayout(
-        weeklyCalendarBuilder: (context, offset) {
-          final line = offset + 1;
-          if (state.weeklineCount() < CalendarConstants.constantLineCount &&
-              line == CalendarConstants.constantLineCount) {
-            return null;
-          }
+        state: state,
+        weeklyCalendarBuilder: (context, weeklyDateRange) {
           final diaries = state.diariesForMonth;
           return CalendarWeekdayLine(
             calendarState: CalendarTabWeeklyCalendarState(
-              dateRange: state.dateRangeOfLine(line),
+              dateRange: weeklyDateRange,
               diariesForMonth: diaries,
               allBandModels: state.allBands,
               targetDateOfMonth: state.dateForMonth,

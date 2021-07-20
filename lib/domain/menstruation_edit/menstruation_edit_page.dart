@@ -122,32 +122,27 @@ class MenstruationEditPage extends HookWidget {
                           return [
                             CalendarDateHeader(date: dateForMonth),
                             MonthlyCalendarLayout(
-                                weeklyCalendarBuilder: (context, offset) {
-                              final calendarState =
-                                  MenstruationEditCalendarState(
-                                      dateForMonth, state.menstruation);
-                              final line = offset + 1;
-                              if (calendarState.weeklineCount() <
-                                      CalendarConstants.constantLineCount &&
-                                  line == CalendarConstants.constantLineCount) {
-                                return null;
-                              }
-                              return CalendarWeekdayLine(
-                                calendarState:
-                                    MenstruationEditWeeklyCalendarState(
-                                  calendarState.dateRangeOfLine(line),
-                                  dateForMonth,
-                                  menstruation,
-                                ),
-                                horizontalPadding: 0,
-                                onTap: (weeklyCalendarState, date) {
-                                  analytics.logEvent(
-                                      name:
-                                          "selected_day_tile_on_menstruation_edit");
-                                  store.tappedDate(date);
-                                },
-                              );
-                            }),
+                              state: MenstruationEditCalendarState(
+                                  dateForMonth, state.menstruation),
+                              weeklyCalendarBuilder:
+                                  (context, weeklyCalendarState) {
+                                return CalendarWeekdayLine(
+                                  calendarState:
+                                      MenstruationEditWeeklyCalendarState(
+                                    weeklyCalendarState,
+                                    dateForMonth,
+                                    menstruation,
+                                  ),
+                                  horizontalPadding: 0,
+                                  onTap: (weeklyCalendarState, date) {
+                                    analytics.logEvent(
+                                        name:
+                                            "selected_day_tile_on_menstruation_edit");
+                                    store.tappedDate(date);
+                                  },
+                                );
+                              },
+                            ),
                           ];
                         })
                         .expand((element) => element)
