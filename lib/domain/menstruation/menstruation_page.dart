@@ -8,14 +8,14 @@ import 'package:pilll/components/atoms/buttons.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/components/molecules/shadow_container.dart';
-import 'package:pilll/domain/calendar/calendar.dart';
-import 'package:pilll/domain/calendar/calendar_band_model.dart';
-import 'package:pilll/domain/calendar/calendar_weekday_line.dart';
+import 'package:pilll/components/organisms/calendar/monthly/monthly_calendar_layout.dart';
+import 'package:pilll/components/organisms/calendar/band/calendar_band_model.dart';
+import 'package:pilll/domain/menstruation/components/calendar/menstruation_single_line_state.dart';
+import 'package:pilll/components/organisms/calendar/weekly/weekly_calendar.dart';
 import 'package:pilll/domain/calendar/date_range.dart';
-import 'package:pilll/domain/calendar/utility.dart';
-import 'package:pilll/domain/calendar/weekly_calendar_state.dart';
+import 'package:pilll/components/organisms/calendar/utility.dart';
 import 'package:pilll/domain/menstruation/menstruation_card.dart';
-import 'package:pilll/domain/menstruation/menstruation_edit_page.dart';
+import 'package:pilll/domain/menstruation_edit/menstruation_edit_page.dart';
 import 'package:pilll/domain/menstruation/menstruation_history_card.dart';
 import 'package:pilll/domain/menstruation/menstruation_select_modify_type_sheet.dart';
 import 'package:pilll/domain/record/weekday_badge.dart';
@@ -101,24 +101,26 @@ class MenstruationPage extends HookWidget {
                                   _horizontalPadding * 2,
                               height: MenstruationPageConst.tileHeight,
                               child: CalendarWeekdayLine(
-                                diaries: state.diaries,
-                                calendarState: SinglelineWeeklyCalendarState(
-                                    DateRange(days.first, days.last)),
-                                bandModels: buildBandModels(
-                                        state.latestPillSheet,
-                                        state.setting,
-                                        state.entities,
-                                        12)
-                                    .where((element) => !(element
-                                        is CalendarNextPillSheetBandModel))
-                                    .toList(),
+                                calendarState:
+                                    MenstruationSinglelineWeeklyCalendarState(
+                                  dateRange: DateRange(days.first, days.last),
+                                  diariesForMonth: state.diariesForMonth,
+                                  allBandModels: buildBandModels(
+                                          state.latestPillSheet,
+                                          state.setting,
+                                          state.entities,
+                                          12)
+                                      .where((element) => !(element
+                                          is CalendarNextPillSheetBandModel))
+                                      .toList(),
+                                ),
                                 horizontalPadding: _horizontalPadding,
                                 onTap: (weeklyCalendarState, date) {
                                   analytics.logEvent(
                                       name:
                                           "did_select_day_tile_on_menstruation");
                                   transitionToPostDiary(
-                                      context, date, state.diaries);
+                                      context, date, state.diariesForMonth);
                                 },
                               ),
                             );

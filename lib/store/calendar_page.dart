@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:pilll/domain/calendar/calendar_card_state.dart';
 import 'package:pilll/service/diary.dart';
 import 'package:pilll/service/menstruation.dart';
 import 'package:pilll/service/pill_sheet.dart';
@@ -44,7 +45,7 @@ class CalendarPageStateStore extends StateNotifier<CalendarPageState> {
         menstruations: menstruations,
         setting: setting,
         latestPillSheet: latestPillSheet,
-        diaries: diaries,
+        diariesForMonth: diaries,
         isNotYetLoaded: false,
       );
       _subscribe();
@@ -72,7 +73,7 @@ class CalendarPageStateStore extends StateNotifier<CalendarPageState> {
     });
     _diariesCanceller?.cancel();
     _diariesCanceller = _diaryService.subscribe().listen((entities) {
-      state = state.copyWith(diaries: entities);
+      state = state.copyWith(diariesForMonth: entities);
     });
   }
 
@@ -92,11 +93,13 @@ class CalendarPageStateStore extends StateNotifier<CalendarPageState> {
     state = state.copyWith(currentCalendarIndex: index);
     final date = state.calendarDataSource[state.currentCalendarIndex];
     _diaryService.fetchListForMonth(date).then((diaries) {
-      final ignoredSameMonth = state.diaries
+      final ignoredSameMonth = state.diariesForMonth
           .where((element) => !isSameMonth(element.date, date))
           .toList();
       final updated = ignoredSameMonth..addAll(diaries);
-      state = state.copyWith(diaries: updated);
+      state = state.copyWith(diariesForMonth: updated);
     });
   }
+
+  CalendarCardState cardState(DateTime date) => CalendarCardState(date);
 }

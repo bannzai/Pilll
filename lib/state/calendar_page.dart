@@ -1,6 +1,6 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:pilll/domain/calendar/calendar_band_model.dart';
-import 'package:pilll/domain/calendar/utility.dart';
+import 'package:pilll/components/organisms/calendar/band/calendar_band_model.dart';
+import 'package:pilll/components/organisms/calendar/utility.dart';
 import 'package:pilll/entity/diary.dart';
 import 'package:pilll/entity/menstruation.dart';
 import 'package:pilll/entity/pill_sheet.dart';
@@ -19,7 +19,7 @@ abstract class CalendarPageState implements _$CalendarPageState {
     @Default(0) int currentCalendarIndex,
     Setting? setting,
     PillSheet? latestPillSheet,
-    @Default([]) List<Diary> diaries,
+    @Default([]) List<Diary> diariesForMonth,
     @Default(true) bool isNotYetLoaded,
   }) = _CalendarPageState;
 
@@ -28,11 +28,11 @@ abstract class CalendarPageState implements _$CalendarPageState {
   final List<DateTime> calendarDataSource = _calendarDataSource();
   int get todayCalendarIndex => calendarDataSource
       .lastIndexWhere((element) => isSameMonth(element, today()));
-  String get displayMonth =>
-      DateTimeFormatter.yearAndMonth(calendarDataSource[currentCalendarIndex]);
+  DateTime get displayMonth => calendarDataSource[currentCalendarIndex];
+  String get displayMonthString => DateTimeFormatter.yearAndMonth(displayMonth);
 
   final _satisfyBandCount = 15;
-  late final List<CalendarBandModel> bands = buildBandModels(
+  late final List<CalendarBandModel> allBands = buildBandModels(
       latestPillSheet, setting, menstruations, _satisfyBandCount);
 }
 

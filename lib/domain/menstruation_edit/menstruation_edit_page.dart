@@ -8,11 +8,13 @@ import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/components/page/discard_dialog.dart';
-import 'package:pilll/domain/calendar/calendar.dart';
-import 'package:pilll/domain/calendar/calendar_date_header.dart';
-import 'package:pilll/domain/calendar/monthly_calendar_state.dart';
+import 'package:pilll/components/organisms/calendar/monthly/monthly_calendar_layout.dart';
+import 'package:pilll/domain/menstruation/components/calendar/calendar_date_header.dart';
+import 'package:pilll/components/organisms/calendar/weekly/weekly_calendar.dart';
+import 'package:pilll/domain/menstruation_edit/components/calendar/weekly_calendar_state.dart';
+import 'package:pilll/domain/menstruation_edit/components/monthly_calendar_state.dart';
 import 'package:pilll/entity/menstruation.dart';
-import 'package:pilll/store/menstruation_edit.dart';
+import 'package:pilll/domain/menstruation_edit/menstruation_edit_store.dart';
 import 'package:pilll/util/formatter/date_time_formatter.dart';
 
 class MenstruationEditPage extends HookWidget {
@@ -43,7 +45,7 @@ class MenstruationEditPage extends HookWidget {
           store.adjustedScrollOffset();
           final double estimatedSectionTitleHeight = 95;
           scrollController.jumpTo(CalendarConstants.tileHeight *
-                  MonthlyCalendarState.constantLineCount +
+                  CalendarConstants.constantLineCount +
               estimatedSectionTitleHeight);
         });
         return Container(
@@ -119,13 +121,27 @@ class MenstruationEditPage extends HookWidget {
                         .map((dateForMonth) {
                           return [
                             CalendarDateHeader(date: dateForMonth),
-                            Calendar(
-                              diaries: [],
-                              calendarState: MenstruationEditCalendarState(
+                            MonthlyCalendarLayout(
+                              state: MenstruationEditCalendarState(
                                   dateForMonth, state.menstruation),
-                              bandModels: [],
-                              onTap: (date, diaries) => store.tappedDate(date),
-                              horizontalPadding: 0,
+                              weeklyCalendarBuilder:
+                                  (context, weeklyCalendarState) {
+                                return CalendarWeekdayLine(
+                                  calendarState:
+                                      MenstruationEditWeeklyCalendarState(
+                                    weeklyCalendarState,
+                                    dateForMonth,
+                                    state.menstruation,
+                                  ),
+                                  horizontalPadding: 0,
+                                  onTap: (weeklyCalendarState, date) {
+                                    analytics.logEvent(
+                                        name:
+                                            "selected_day_tile_on_menstruation_edit");
+                                    store.tappedDate(date);
+                                  },
+                                );
+                              },
                             ),
                           ];
                         })

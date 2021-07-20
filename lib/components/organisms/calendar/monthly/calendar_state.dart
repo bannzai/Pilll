@@ -1,6 +1,4 @@
 import 'package:pilll/domain/calendar/date_range.dart';
-import 'package:pilll/domain/calendar/weekly_calendar_state.dart';
-import 'package:pilll/entity/menstruation.dart';
 import 'package:pilll/entity/weekday.dart';
 
 DateTime _firstDayOfMonth(DateTime date) {
@@ -41,33 +39,4 @@ abstract class MonthlyCalendarState {
   int _previousMonthDayCount() => _weekdayOffset();
   int _tileCount() => _previousMonthDayCount() + _lastDay();
   int weeklineCount() => (_tileCount() / Weekday.values.length).ceil();
-  static const int constantLineCount = 6;
-
-  WeeklyCalendarState weeklyCalendarState(int line);
-}
-
-class CalendarTabState extends MonthlyCalendarState {
-  final DateTime dateForMonth;
-  CalendarTabState(this.dateForMonth);
-
-  WeeklyCalendarState weeklyCalendarState(int line) {
-    return MultilineWeeklyCalendarState(
-      dateRangeOfLine(line),
-      dateForMonth,
-    );
-  }
-}
-
-class MenstruationEditCalendarState extends MonthlyCalendarState {
-  final DateTime dateForMonth;
-  final Menstruation? menstruation;
-  MenstruationEditCalendarState(this.dateForMonth, this.menstruation);
-
-  WeeklyCalendarState weeklyCalendarState(int line) {
-    return MenstruationEditWeeklyCalendarState(
-      dateRangeOfLine(line),
-      dateForMonth,
-      menstruation,
-    );
-  }
 }

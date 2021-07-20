@@ -1,11 +1,11 @@
-import 'package:pilll/domain/calendar/calendar_band.dart';
-import 'package:pilll/domain/calendar/calendar_band_model.dart';
-import 'package:pilll/domain/calendar/calendar_day_tile.dart';
-import 'package:pilll/domain/calendar/utility.dart';
-import 'package:pilll/domain/calendar/weekly_calendar_state.dart';
+import 'package:pilll/components/organisms/calendar/band/calendar_band.dart';
+import 'package:pilll/components/organisms/calendar/band/calendar_band_model.dart';
+import 'package:pilll/components/organisms/calendar/day/calendar_day_tile.dart';
+import 'package:pilll/components/organisms/calendar/utility.dart';
+import 'package:pilll/components/organisms/calendar/weekly/weekly_calendar_state.dart';
 import 'package:pilll/domain/diary/post_diary_page.dart';
 import 'package:flutter/material.dart';
-import 'package:pilll/domain/menstruation/menstruation_edit_page.dart';
+import 'package:pilll/domain/menstruation_edit/menstruation_edit_page.dart';
 import 'package:pilll/entity/diary.dart';
 import 'package:pilll/entity/weekday.dart';
 import 'package:pilll/domain/diary/confirm_diary_sheet.dart';
@@ -13,17 +13,13 @@ import 'package:pilll/util/datetime/date_compare.dart';
 import 'package:pilll/util/datetime/day.dart';
 
 class CalendarWeekdayLine extends StatelessWidget {
-  final List<Diary> diaries;
   final WeeklyCalendarState calendarState;
-  final List<CalendarBandModel> bandModels;
   final double horizontalPadding;
   final Function(WeeklyCalendarState, DateTime) onTap;
 
   const CalendarWeekdayLine({
     Key? key,
-    required this.diaries,
     required this.calendarState,
-    required this.bandModels,
     required this.horizontalPadding,
     required this.onTap,
   }) : super(key: key);
@@ -39,14 +35,11 @@ class CalendarWeekdayLine extends StatelessWidget {
               return Expanded(child: Container());
             }
 
-            if (calendarState.shouldGrayoutTile(date)) {
-              return CalendarDayTile(
-                isToday: false,
-                onTap: null,
+            if (calendarState.isGrayoutTile(date)) {
+              return CalendarDayTile.grayout(
                 weekday: weekday,
-                hasDiary: false,
                 shouldShowMenstruationMark:
-                    calendarState.shouldShowMenstruationMark(date),
+                    calendarState.hasMenstruationMark(date),
                 contentAlignment: calendarState.contentAlignment,
                 date: date,
               );
@@ -55,15 +48,17 @@ class CalendarWeekdayLine extends StatelessWidget {
               isToday: isSameDay(today(), date),
               weekday: weekday,
               date: date,
-              hasDiary: calendarState.shouldShowDiaryMark(diaries, date),
+              shouldShowDiaryMark: calendarState.hasDiaryMark(
+                  calendarState.diariesForMonth, date),
               shouldShowMenstruationMark:
-                  calendarState.shouldShowMenstruationMark(date),
+                  calendarState.hasMenstruationMark(date),
               contentAlignment: calendarState.contentAlignment,
               onTap: (date) => onTap(calendarState, date),
             );
           }).toList(),
         ),
-        ..._bands(context, bandModels, calendarState, horizontalPadding)
+        ..._bands(context, calendarState.allBandModels, calendarState,
+            horizontalPadding)
       ],
     );
   }
@@ -74,6 +69,10 @@ class CalendarWeekdayLine extends StatelessWidget {
     WeeklyCalendarState calendarState,
     double horizontalPadding,
   ) {
+    var tileWidth =
+        (MediaQuery.of(context).size.width - horizontalPadding * 2) /
+            Weekday.values.length;
+
     return bandModels
         .map((bandModel) {
           final isInRange = calendarState.dateRange.inRange(bandModel.begin) ||
@@ -81,16 +80,14 @@ class CalendarWeekdayLine extends StatelessWidget {
           if (!isInRange) {
             return null;
           }
+
           bool isLineBreaked =
               calendarState.isNecessaryLineBreak(bandModel.begin);
           int start =
               calendarState.offsetForStartPositionAtLine(bandModel.begin);
-
           final length =
               bandLength(calendarState.dateRange, bandModel, isLineBreaked);
-          var tileWidth =
-              (MediaQuery.of(context).size.width - horizontalPadding * 2) /
-                  Weekday.values.length;
+
           return Positioned(
             left: start.toDouble() * tileWidth,
             width: tileWidth * length,

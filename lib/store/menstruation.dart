@@ -1,7 +1,7 @@
 import 'dart:async';
 
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:pilll/domain/calendar/utility.dart';
+import 'package:pilll/components/organisms/calendar/utility.dart';
 import 'package:pilll/domain/menstruation/menstruation_card_state.dart';
 import 'package:pilll/domain/menstruation/menstruation_history_card.dart';
 import 'package:pilll/entity/menstruation.dart';
@@ -42,7 +42,7 @@ class MenstruationStore extends StateNotifier<MenstruationState> {
       final latestPillSheet = await pillSheetService.fetchLast();
       state = state.copyWith(
           entities: menstruations,
-          diaries: diaries,
+          diariesForMonth: diaries,
           isNotYetLoaded: false,
           setting: setting,
           latestPillSheet: latestPillSheet);
@@ -62,7 +62,7 @@ class MenstruationStore extends StateNotifier<MenstruationState> {
     });
     _diaryCanceller?.cancel();
     _diaryCanceller = diaryService.subscribe().listen((entities) {
-      state = state.copyWith(diaries: entities);
+      state = state.copyWith(diariesForMonth: entities);
     });
     _settingCanceller?.cancel();
     _settingCanceller = settingService.subscribe().listen((setting) {

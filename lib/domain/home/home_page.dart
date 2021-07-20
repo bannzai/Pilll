@@ -1,4 +1,5 @@
 import 'package:pilll/analytics.dart';
+import 'package:pilll/entity/diary.dart';
 import 'package:pilll/service/auth.dart';
 import 'package:pilll/database/database.dart';
 import 'package:pilll/domain/calendar/calendar_page.dart';
@@ -13,7 +14,7 @@ import 'package:pilll/util/datetime/day.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
-import '../calendar/calendar_weekday_line.dart';
+import '../../components/organisms/calendar/weekly/weekly_calendar.dart';
 
 GlobalKey<_HomePageState> homeKey = GlobalKey();
 
@@ -34,7 +35,7 @@ class _HomePageState extends State<HomePage>
     return HomePageTabType.values[_selectedIndex];
   }
 
-  final GlobalKey<CalendarPageState> calendarPageKey = GlobalKey();
+  List<Diary> diaries = [];
 
   @override
   void initState() {
@@ -115,7 +116,7 @@ class _HomePageState extends State<HomePage>
           children: <Widget>[
             RecordPage(),
             MenstruationPage(),
-            CalendarPage(key: calendarPageKey),
+            CalendarPage(),
             SettingPage(),
             // SettingsPage(),
           ],
@@ -133,14 +134,8 @@ class _HomePageState extends State<HomePage>
                     break;
                   case HomePageTabType.calendar:
                     analytics.logEvent(name: "calendar_fab_pressed");
-                    final context = calendarPageKey.currentContext;
-                    final state = calendarPageKey.currentState;
-                    assert(context != null && state != null);
-                    if (context == null || state == null) {
-                      return;
-                    }
                     final date = today();
-                    transitionToPostDiary(context, date, state.diaries);
+                    transitionToPostDiary(context, date, diaries);
                     break;
                   case HomePageTabType.setting:
                     break;

@@ -17,7 +17,7 @@ abstract class MenstruationState implements _$MenstruationState {
   factory MenstruationState({
     @Default(true) bool isNotYetLoaded,
     @Default(0) int currentCalendarIndex,
-    @Default([]) List<Diary> diaries,
+    @Default([]) List<Diary> diariesForMonth,
     @Default([]) List<Menstruation> entities,
     Setting? setting,
     PillSheet? latestPillSheet,

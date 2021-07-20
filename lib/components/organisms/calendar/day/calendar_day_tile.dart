@@ -2,24 +2,39 @@ import 'package:flutter/material.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
-import 'package:pilll/domain/calendar/calendar.dart';
+import 'package:pilll/components/organisms/calendar/monthly/monthly_calendar_layout.dart';
 import 'package:pilll/entity/weekday.dart';
 
 class CalendarDayTile extends StatelessWidget {
   final DateTime date;
   final Weekday weekday;
   final bool isToday;
-  final bool hasDiary;
+  final bool shouldShowDiaryMark;
   final bool shouldShowMenstruationMark;
   final Alignment contentAlignment;
   final Function(DateTime)? onTap;
+
+  const CalendarDayTile.grayout({
+    required DateTime date,
+    required Weekday weekday,
+    required bool shouldShowMenstruationMark,
+    required Alignment contentAlignment,
+  }) : this(
+          isToday: false,
+          onTap: null,
+          weekday: weekday,
+          shouldShowDiaryMark: false,
+          shouldShowMenstruationMark: shouldShowMenstruationMark,
+          contentAlignment: contentAlignment,
+          date: date,
+        );
 
   const CalendarDayTile({
     Key? key,
     required this.date,
     required this.weekday,
     required this.isToday,
-    required this.hasDiary,
+    required this.shouldShowDiaryMark,
     required this.shouldShowMenstruationMark,
     required this.contentAlignment,
     required this.onTap,
@@ -35,7 +50,7 @@ class CalendarDayTile extends StatelessWidget {
           height: CalendarConstants.tileHeight,
           child: Stack(
             children: <Widget>[
-              if (hasDiary) ...[
+              if (shouldShowDiaryMark) ...[
                 Positioned.fill(
                   top: 8,
                   child: Align(

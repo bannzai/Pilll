@@ -1,5 +1,6 @@
 import 'package:pilll/domain/calendar/date_range.dart';
 import 'package:pilll/domain/calendar/weekly_calendar_state.dart';
+import 'package:pilll/components/organisms/calendar/weekly/weekly_calendar_state.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -23,14 +24,15 @@ void main() {
     test("#shouldGrayoutTile", () {
       final date = DateTime.parse("2020-09-14");
       final anyDate = date;
-      final calendarState = MultilineWeeklyCalendarState(
-          DateRange(anyDate, anyDate.add(Duration(days: 6))), date);
-      expect(calendarState.shouldGrayoutTile(DateTime.parse("2020-08-30")),
-          true);
-      expect(calendarState.shouldGrayoutTile(DateTime.parse("2020-08-31")),
-          true);
-      expect(calendarState.shouldGrayoutTile(DateTime.parse("2020-09-01")),
-          false);
+      final calendarState = CalendarTabWeeklyCalendarState(
+        dateRange: DateRange(anyDate, anyDate.add(Duration(days: 6))),
+        targetDateOfMonth: date,
+        diariesForMonth: [],
+        allBandModels: [],
+      );
+      expect(calendarState.isGrayoutTile(DateTime.parse("2020-08-30")), true);
+      expect(calendarState.isGrayoutTile(DateTime.parse("2020-08-31")), true);
+      expect(calendarState.isGrayoutTile(DateTime.parse("2020-09-01")), false);
     });
 
     group("#isNecessaryLineBreak", () {
@@ -38,8 +40,12 @@ void main() {
         final date = DateTime.parse("2020-09-14");
         final begin = DateTime.parse("2020-08-30");
         final end = DateTime.parse("2020-09-05");
-        final calendarState =
-            MultilineWeeklyCalendarState(DateRange(begin, end), date);
+        final calendarState = CalendarTabWeeklyCalendarState(
+          dateRange: DateRange(begin, end),
+          targetDateOfMonth: date,
+          diariesForMonth: [],
+          allBandModels: [],
+        );
         expect(
           calendarState.isNecessaryLineBreak(DateTime.parse("2020-08-31")),
           false,
@@ -63,8 +69,12 @@ void main() {
         final date = DateTime.parse("2020-09-14");
         final begin = DateTime.parse("2020-08-30");
         final end = DateTime.parse("2020-09-05");
-        final calendarState =
-            MultilineWeeklyCalendarState(DateRange(begin, end), date);
+        final calendarState = CalendarTabWeeklyCalendarState(
+          dateRange: DateRange(begin, end),
+          targetDateOfMonth: date,
+          allBandModels: [],
+          diariesForMonth: [],
+        );
         expect(
           calendarState.offsetForStartPositionAtLine(
             DateTime.parse("2020-08-31"),
