@@ -102,5 +102,6 @@ class CalendarPageStateStore extends StateNotifier<CalendarPageState> {
   }
 
   CalendarCardState cardState() => CalendarCardState(
-      state.dateForMonth, state.diariesForMonth, state.allBands);
+        state.dateForMonth,
+      );
 }

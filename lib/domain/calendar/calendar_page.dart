@@ -128,6 +128,8 @@ class CalendarPageState extends State<CalendarPage> {
                       width: MediaQuery.of(context).size.width,
                       child: CalendarCard(
                         state: store.cardState(),
+                        diariesForMonth: state.diariesForMonth,
+                        allBands: state.allBands,
                       ),
                     );
                   },
