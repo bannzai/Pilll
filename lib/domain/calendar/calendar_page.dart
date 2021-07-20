@@ -1,3 +1,4 @@
+import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:pilll/analytics.dart';
 import 'package:pilll/components/atoms/buttons.dart';
@@ -7,30 +8,20 @@ import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/domain/calendar/components/calendar_help.dart';
+import 'package:pilll/domain/home/home_page.dart';
 import 'package:pilll/store/calendar_page.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:scrollable_positioned_list/scrollable_positioned_list.dart';
 
-import 'package:pilll/entity/diary.dart';
-
-class CalendarPage extends StatefulWidget {
-  const CalendarPage({Key? key}) : super(key: key);
-
-  @override
-  CalendarPageState createState() => CalendarPageState();
-}
-
-class CalendarPageState extends State<CalendarPage> {
-  List<Diary> diaries = [];
-
+class CalendarPage extends HookWidget {
   @override
   Widget build(BuildContext context) {
     return Consumer(builder: (context, watch, child) {
       final store = watch(calendarPageStateProvider);
       final state = watch(calendarPageStateProvider.state);
-      diaries = state.diariesForMonth;
+      homeKey.currentState?.diaries = state.diariesForMonth;
       if (state.shouldShowIndicator) {
         return ScaffoldIndicator();
       }
