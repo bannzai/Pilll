@@ -10,7 +10,6 @@ abstract class CalendarConstants {
 }
 
 class MonthlyCalendarLayout extends StatelessWidget {
-  // NOTE: If return null fill container at bottom
   final MonthlyCalendarState state;
   final Widget Function(BuildContext, DateRange) weeklyCalendarBuilder;
 
