@@ -23,7 +23,7 @@ class MenstruationListStore extends StateNotifier<MenstruationListState> {
       final menstruations = await menstruationService.fetchAll();
       state = state.copyWith(
         isNotYetLoaded: false,
-        rows: MenstruationHistoryRowState.rows(
+        allRows: MenstruationHistoryRowState.rows(
             dropLatestMenstruationIfNeeded(menstruations)),
       );
       _subscribe();

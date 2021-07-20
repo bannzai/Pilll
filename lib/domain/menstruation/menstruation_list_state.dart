@@ -12,4 +12,21 @@ abstract class MenstruationListState implements _$MenstruationListState {
     @Default(false) bool isTrial,
     @Default([]) List<MenstruationHistoryRowState> allRows,
   }) = _MenstruationListState;
+
+  List<MenstruationHistoryRowState> get rows {
+    if (isPremium || isTrial) {
+      return allRows;
+    }
+    if (allRows.length < 2) {
+      return allRows;
+    }
+    return allRows.sublist(0, 2);
+  }
+
+  List<MenstruationHistoryRowState> get lockedRows {
+    if (allRows.length == rows.length) {
+      return [];
+    }
+    return allRows.sublist(rows.length);
+  }
 }
