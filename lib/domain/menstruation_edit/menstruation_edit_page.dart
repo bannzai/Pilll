@@ -131,7 +131,7 @@ class MenstruationEditPage extends HookWidget {
                                       MenstruationEditWeeklyCalendarState(
                                     weeklyCalendarState,
                                     dateForMonth,
-                                    menstruation,
+                                    state.menstruation,
                                   ),
                                   horizontalPadding: 0,
                                   onTap: (weeklyCalendarState, date) {
