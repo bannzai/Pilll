@@ -16,28 +16,30 @@ class CalendarCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ShadowContainer(child: MonthlyCalendarLayout(
-      weeklyCalendarBuilder: (context, offset) {
-        final line = offset + 1;
-        if (state.weeklineCount() < CalendarConstants.constantLineCount &&
-            line == CalendarConstants.constantLineCount) {
-          return null;
-        }
-        final diaries = state.diariesForMonth;
-        return CalendarWeekdayLine(
-          calendarState: CalendarTabWeeklyCalendarState(
-            dateRange: state.dateRangeOfLine(line),
-            diariesForMonth: diaries,
-            allBandModels: state.allBands,
-            targetDateOfMonth: state.dateForMonth,
-          ),
-          horizontalPadding: 0,
-          onTap: (weeklyCalendarState, date) {
-            analytics.logEvent(name: "did_select_day_tile_on_calendar_card");
-            transitionToPostDiary(context, date, diaries);
-          },
-        );
-      },
-    ));
+    return ShadowContainer(
+      child: MonthlyCalendarLayout(
+        weeklyCalendarBuilder: (context, offset) {
+          final line = offset + 1;
+          if (state.weeklineCount() < CalendarConstants.constantLineCount &&
+              line == CalendarConstants.constantLineCount) {
+            return null;
+          }
+          final diaries = state.diariesForMonth;
+          return CalendarWeekdayLine(
+            calendarState: CalendarTabWeeklyCalendarState(
+              dateRange: state.dateRangeOfLine(line),
+              diariesForMonth: diaries,
+              allBandModels: state.allBands,
+              targetDateOfMonth: state.dateForMonth,
+            ),
+            horizontalPadding: 0,
+            onTap: (weeklyCalendarState, date) {
+              analytics.logEvent(name: "did_select_day_tile_on_calendar_card");
+              transitionToPostDiary(context, date, diaries);
+            },
+          );
+        },
+      ),
+    );
   }
 }
