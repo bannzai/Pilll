@@ -85,7 +85,7 @@ class CalendarPageState extends State<CalendarPage> {
                 },
               ),
               Text(
-                state.displayMonth,
+                state.displayMonthString,
                 style: TextColorStyle.main.merge(FontType.subTitle),
               ),
               IconButton(
@@ -127,7 +127,7 @@ class CalendarPageState extends State<CalendarPage> {
                       height: 444,
                       width: MediaQuery.of(context).size.width,
                       child: CalendarCard(
-                        state: store.cardState(),
+                        state: store.cardState(state.displayMonth),
                         diariesForMonth: state.diariesForMonth,
                         allBands: state.allBands,
                       ),
