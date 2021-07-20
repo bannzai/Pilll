@@ -132,10 +132,10 @@ class MenstruationEditPage extends HookWidget {
                                 return null;
                               }
                               return CalendarWeekdayLine(
-                                diaries: [],
+                                diariesForMonth: [],
                                 calendarState:
                                     calendarState.weeklyCalendarState(line),
-                                bandModels: [],
+                                allBandModels: [],
                                 horizontalPadding: 0,
                                 onTap: (weeklyCalendarState, date) {
                                   analytics.logEvent(

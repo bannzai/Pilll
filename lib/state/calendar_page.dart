@@ -19,7 +19,7 @@ abstract class CalendarPageState implements _$CalendarPageState {
     @Default(0) int currentCalendarIndex,
     Setting? setting,
     PillSheet? latestPillSheet,
-    @Default([]) List<Diary> diaries,
+    @Default([]) List<Diary> diariesForMonth,
     @Default(true) bool isNotYetLoaded,
   }) = _CalendarPageState;
 
@@ -32,7 +32,7 @@ abstract class CalendarPageState implements _$CalendarPageState {
       DateTimeFormatter.yearAndMonth(calendarDataSource[currentCalendarIndex]);
 
   final _satisfyBandCount = 15;
-  late final List<CalendarBandModel> bands = buildBandModels(
+  late final List<CalendarBandModel> allBands = buildBandModels(
       latestPillSheet, setting, menstruations, _satisfyBandCount);
 }
 

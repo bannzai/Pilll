@@ -42,7 +42,7 @@ class MenstruationStore extends StateNotifier<MenstruationState> {
       final latestPillSheet = await pillSheetService.fetchLast();
       state = state.copyWith(
           entities: menstruations,
-          diaries: diaries,
+          diariesForMonth: diaries,
           isNotYetLoaded: false,
           setting: setting,
           latestPillSheet: latestPillSheet);
@@ -62,7 +62,7 @@ class MenstruationStore extends StateNotifier<MenstruationState> {
     });
     _diaryCanceller?.cancel();
     _diaryCanceller = diaryService.subscribe().listen((entities) {
-      state = state.copyWith(diaries: entities);
+      state = state.copyWith(diariesForMonth: entities);
     });
     _settingCanceller?.cancel();
     _settingCanceller = settingService.subscribe().listen((setting) {

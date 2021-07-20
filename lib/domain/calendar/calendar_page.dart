@@ -30,7 +30,7 @@ class CalendarPageState extends State<CalendarPage> {
     return Consumer(builder: (context, watch, child) {
       final store = watch(calendarPageStateProvider);
       final state = watch(calendarPageStateProvider.state);
-      diaries = state.diaries;
+      diaries = state.diariesForMonth;
       final settingEntity = state.setting;
       if (state.shouldShowIndicator) {
         return ScaffoldIndicator();
@@ -133,9 +133,9 @@ class CalendarPageState extends State<CalendarPage> {
                           date: date,
                           latestPillSheet: state.latestPillSheet,
                           setting: settingEntity,
-                          diaries: state.diaries,
+                          diariesForMonth: state.diariesForMonth,
                           menstruations: state.menstruations,
-                          bands: state.bands,
+                          allBands: state.allBands,
                         ),
                       ),
                     );

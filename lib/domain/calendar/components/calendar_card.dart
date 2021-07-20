@@ -16,17 +16,17 @@ class CalendarCardState {
   final DateTime date;
   final PillSheet? latestPillSheet;
   final Setting? setting;
-  final List<Diary> diaries;
+  final List<Diary> diariesForMonth;
   final List<Menstruation> menstruations;
-  final List<CalendarBandModel> bands;
+  final List<CalendarBandModel> allBands;
 
   CalendarCardState({
     required this.date,
     required this.latestPillSheet,
     required this.setting,
-    required this.diaries,
+    required this.diariesForMonth,
     required this.menstruations,
-    required this.bands,
+    required this.allBands,
   });
 
   String get dateTitle => DateTimeFormatter.yearAndMonth(date);
@@ -51,11 +51,11 @@ class CalendarCard extends StatelessWidget {
             line == CalendarConstants.constantLineCount) {
           return null;
         }
-        final diaries = state.diaries;
+        final diaries = state.diariesForMonth;
         return CalendarWeekdayLine(
-          diaries: diaries,
+          diariesForMonth: diaries,
           calendarState: _calendarTabState.weeklyCalendarState(line),
-          bandModels: state.bands,
+          allBandModels: state.allBands,
           horizontalPadding: 0,
           onTap: (weeklyCalendarState, date) {
             analytics.logEvent(name: "did_select_day_tile_on_calendar_card");

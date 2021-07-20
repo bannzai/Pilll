@@ -101,11 +101,11 @@ class MenstruationPage extends HookWidget {
                                   _horizontalPadding * 2,
                               height: MenstruationPageConst.tileHeight,
                               child: CalendarWeekdayLine(
-                                diaries: state.diaries,
+                                diariesForMonth: state.diariesForMonth,
                                 calendarState:
                                     MenstruationSinglelineWeeklyCalendarState(
                                         DateRange(days.first, days.last)),
-                                bandModels: buildBandModels(
+                                allBandModels: buildBandModels(
                                         state.latestPillSheet,
                                         state.setting,
                                         state.entities,
@@ -119,7 +119,7 @@ class MenstruationPage extends HookWidget {
                                       name:
                                           "did_select_day_tile_on_menstruation");
                                   transitionToPostDiary(
-                                      context, date, state.diaries);
+                                      context, date, state.diariesForMonth);
                                 },
                               ),
                             );
