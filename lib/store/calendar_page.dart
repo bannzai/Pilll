@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:pilll/domain/calendar/calendar_card_state.dart';
 import 'package:pilll/service/diary.dart';
 import 'package:pilll/service/menstruation.dart';
 import 'package:pilll/service/pill_sheet.dart';
@@ -99,4 +100,7 @@ class CalendarPageStateStore extends StateNotifier<CalendarPageState> {
       state = state.copyWith(diariesForMonth: updated);
     });
   }
+
+  CalendarCardState cardState() => CalendarCardState(
+      state.dateForMonth, state.diariesForMonth, state.allBands);
 }

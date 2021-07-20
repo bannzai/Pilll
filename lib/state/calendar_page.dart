@@ -1,5 +1,6 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:pilll/components/organisms/calendar/band/calendar_band_model.dart';
+import 'package:pilll/components/organisms/calendar/monthly/calendar_state.dart';
 import 'package:pilll/components/organisms/calendar/utility.dart';
 import 'package:pilll/entity/diary.dart';
 import 'package:pilll/entity/menstruation.dart';
@@ -12,7 +13,8 @@ import 'package:pilll/util/formatter/date_time_formatter.dart';
 part 'calendar_page.freezed.dart';
 
 @freezed
-abstract class CalendarPageState implements _$CalendarPageState {
+abstract class CalendarPageState
+    implements _$CalendarPageState, MonthlyCalendarState {
   CalendarPageState._();
   factory CalendarPageState({
     required List<Menstruation> menstruations,

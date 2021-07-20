@@ -11,6 +11,7 @@ import 'package:pilll/components/page/discard_dialog.dart';
 import 'package:pilll/components/organisms/calendar/monthly/monthly_calendar_layout.dart';
 import 'package:pilll/domain/menstruation/components/calendar/calendar_date_header.dart';
 import 'package:pilll/components/organisms/calendar/weekly/weekly_calendar.dart';
+import 'package:pilll/domain/menstruation_edit/components/calendar/weekly_calendar_state.dart';
 import 'package:pilll/domain/menstruation_edit/components/monthly_calendar_state.dart';
 import 'package:pilll/entity/menstruation.dart';
 import 'package:pilll/domain/menstruation_edit/menstruation_edit_store.dart';
@@ -132,10 +133,12 @@ class MenstruationEditPage extends HookWidget {
                                 return null;
                               }
                               return CalendarWeekdayLine(
-                                diariesForMonth: [],
                                 calendarState:
-                                    calendarState.weeklyCalendarState(line),
-                                allBandModels: [],
+                                    MenstruationEditWeeklyCalendarState(
+                                  calendarState.dateRangeOfLine(line),
+                                  dateForMonth,
+                                  menstruation,
+                                ),
                                 horizontalPadding: 0,
                                 onTap: (weeklyCalendarState, date) {
                                   analytics.logEvent(

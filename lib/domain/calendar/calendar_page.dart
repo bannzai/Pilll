@@ -31,7 +31,6 @@ class CalendarPageState extends State<CalendarPage> {
       final store = watch(calendarPageStateProvider);
       final state = watch(calendarPageStateProvider.state);
       diaries = state.diariesForMonth;
-      final settingEntity = state.setting;
       if (state.shouldShowIndicator) {
         return ScaffoldIndicator();
       }
@@ -124,19 +123,11 @@ class CalendarPageState extends State<CalendarPage> {
                   itemCount: state.calendarDataSource.length,
                   itemPositionsListener: itemPositionsListener,
                   itemBuilder: (context, index) {
-                    final date = state.calendarDataSource[index];
                     return Container(
                       height: 444,
                       width: MediaQuery.of(context).size.width,
                       child: CalendarCard(
-                        state: CalendarCardState(
-                          date: date,
-                          latestPillSheet: state.latestPillSheet,
-                          setting: settingEntity,
-                          diariesForMonth: state.diariesForMonth,
-                          menstruations: state.menstruations,
-                          allBands: state.allBands,
-                        ),
+                        state: store.cardState(),
                       ),
                     );
                   },

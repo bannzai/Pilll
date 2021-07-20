@@ -101,18 +101,19 @@ class MenstruationPage extends HookWidget {
                                   _horizontalPadding * 2,
                               height: MenstruationPageConst.tileHeight,
                               child: CalendarWeekdayLine(
-                                diariesForMonth: state.diariesForMonth,
                                 calendarState:
                                     MenstruationSinglelineWeeklyCalendarState(
-                                        DateRange(days.first, days.last)),
-                                allBandModels: buildBandModels(
-                                        state.latestPillSheet,
-                                        state.setting,
-                                        state.entities,
-                                        12)
-                                    .where((element) => !(element
-                                        is CalendarNextPillSheetBandModel))
-                                    .toList(),
+                                  dateRange: DateRange(days.first, days.last),
+                                  diariesForMonth: state.diariesForMonth,
+                                  allBandModels: buildBandModels(
+                                          state.latestPillSheet,
+                                          state.setting,
+                                          state.entities,
+                                          12)
+                                      .where((element) => !(element
+                                          is CalendarNextPillSheetBandModel))
+                                      .toList(),
+                                ),
                                 horizontalPadding: _horizontalPadding,
                                 onTap: (weeklyCalendarState, date) {
                                   analytics.logEvent(

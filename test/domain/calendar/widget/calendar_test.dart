@@ -1,5 +1,4 @@
-import 'package:pilll/domain/calendar/monthly_calendar_state.dart';
-import 'package:pilll/components/organisms/calendar/monthly/monthly_calendar_layout.dart';
+import 'package:pilll/domain/calendar/calendar_card_state.dart';
 import 'package:pilll/components/organisms/calendar/band/calendar_band.dart';
 import 'package:pilll/components/organisms/calendar/band/calendar_band_model.dart';
 import 'package:pilll/domain/calendar/date_range.dart';
@@ -39,7 +38,7 @@ void main() {
           child: MaterialApp(
             home: Calendar(
               diaries: diaries,
-              calendarState: CalendarTabState(now),
+              calendarState: CalendarCardState(now),
               bandModels: [model],
               onTap: (date, diaries) => () {},
               horizontalPadding: 16,
@@ -80,7 +79,7 @@ void main() {
           child: MaterialApp(
             home: Calendar(
               diaries: diaries,
-              calendarState: CalendarTabState(now),
+              calendarState: CalendarCardState(now),
               bandModels: [model],
               onTap: (date, diaries) => () {},
               horizontalPadding: 16,
@@ -107,7 +106,7 @@ void main() {
           child: MaterialApp(
             home: Calendar(
               diaries: [],
-              calendarState: CalendarTabState(now),
+              calendarState: CalendarCardState(now),
               bandModels: [
                 CalendarNextPillSheetBandModel(
                     DateTime(2020, 10, 15), DateTime(2020, 10, 18)),
@@ -130,7 +129,7 @@ void main() {
           child: MaterialApp(
             home: Calendar(
               diaries: [],
-              calendarState: CalendarTabState(now),
+              calendarState: CalendarCardState(now),
               bandModels: [
                 CalendarNextPillSheetBandModel(
                     DateTime(2020, 08, 15), DateTime(2020, 08, 18)),

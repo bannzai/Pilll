@@ -25,7 +25,11 @@ void main() {
       final date = DateTime.parse("2020-09-14");
       final anyDate = date;
       final calendarState = CalendarTabWeeklyCalendarState(
-          DateRange(anyDate, anyDate.add(Duration(days: 6))), date);
+        dateRange: DateRange(anyDate, anyDate.add(Duration(days: 6))),
+        targetDateOfMonth: date,
+        diariesForMonth: [],
+        allBandModels: [],
+      );
       expect(calendarState.isGrayoutTile(DateTime.parse("2020-08-30")), true);
       expect(calendarState.isGrayoutTile(DateTime.parse("2020-08-31")), true);
       expect(calendarState.isGrayoutTile(DateTime.parse("2020-09-01")), false);
@@ -36,8 +40,12 @@ void main() {
         final date = DateTime.parse("2020-09-14");
         final begin = DateTime.parse("2020-08-30");
         final end = DateTime.parse("2020-09-05");
-        final calendarState =
-            CalendarTabWeeklyCalendarState(DateRange(begin, end), date);
+        final calendarState = CalendarTabWeeklyCalendarState(
+          dateRange: DateRange(begin, end),
+          targetDateOfMonth: date,
+          diariesForMonth: [],
+          allBandModels: [],
+        );
         expect(
           calendarState.isNecessaryLineBreak(DateTime.parse("2020-08-31")),
           false,
@@ -61,8 +69,12 @@ void main() {
         final date = DateTime.parse("2020-09-14");
         final begin = DateTime.parse("2020-08-30");
         final end = DateTime.parse("2020-09-05");
-        final calendarState =
-            CalendarTabWeeklyCalendarState(DateRange(begin, end), date);
+        final calendarState = CalendarTabWeeklyCalendarState(
+          dateRange: DateRange(begin, end),
+          targetDateOfMonth: date,
+          allBandModels: [],
+          diariesForMonth: [],
+        );
         expect(
           calendarState.offsetForStartPositionAtLine(
             DateTime.parse("2020-08-31"),

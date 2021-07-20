@@ -1,5 +1,4 @@
 import 'package:pilll/domain/calendar/date_range.dart';
-import 'package:pilll/components/organisms/calendar/weekly/weekly_calendar_state.dart';
 import 'package:pilll/entity/weekday.dart';
 
 DateTime _firstDayOfMonth(DateTime date) {
@@ -40,6 +39,4 @@ abstract class MonthlyCalendarState {
   int _previousMonthDayCount() => _weekdayOffset();
   int _tileCount() => _previousMonthDayCount() + _lastDay();
   int weeklineCount() => (_tileCount() / Weekday.values.length).ceil();
-
-  WeeklyCalendarState weeklyCalendarState(int line);
 }

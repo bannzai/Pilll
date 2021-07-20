@@ -13,17 +13,13 @@ import 'package:pilll/util/datetime/date_compare.dart';
 import 'package:pilll/util/datetime/day.dart';
 
 class CalendarWeekdayLine extends StatelessWidget {
-  final List<Diary> diariesForMonth;
   final WeeklyCalendarState calendarState;
-  final List<CalendarBandModel> allBandModels;
   final double horizontalPadding;
   final Function(WeeklyCalendarState, DateTime) onTap;
 
   const CalendarWeekdayLine({
     Key? key,
-    required this.diariesForMonth,
     required this.calendarState,
-    required this.allBandModels,
     required this.horizontalPadding,
     required this.onTap,
   }) : super(key: key);
@@ -52,7 +48,8 @@ class CalendarWeekdayLine extends StatelessWidget {
               isToday: isSameDay(today(), date),
               weekday: weekday,
               date: date,
-              shouldShowDiaryMark: calendarState.hasDiaryMark(diariesForMonth, date),
+              shouldShowDiaryMark: calendarState.hasDiaryMark(
+                  calendarState.diariesForMonth, date),
               shouldShowMenstruationMark:
                   calendarState.hasMenstruationMark(date),
               contentAlignment: calendarState.contentAlignment,
@@ -60,7 +57,8 @@ class CalendarWeekdayLine extends StatelessWidget {
             );
           }).toList(),
         ),
-        ..._bands(context, allBandModels, calendarState, horizontalPadding)
+        ..._bands(context, calendarState.allBandModels, calendarState,
+            horizontalPadding)
       ],
     );
   }

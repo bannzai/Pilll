@@ -1,15 +1,15 @@
-import 'package:pilll/domain/calendar/monthly_calendar_state.dart';
+import 'package:pilll/domain/calendar/calendar_card_state.dart';
 import 'package:pilll/domain/calendar/date_range.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 void main() {
-  late CalendarTabState calendarState;
+  late CalendarCardState calendarState;
   late DateTime date;
   setUp(() {
     TestWidgetsFlutterBinding.ensureInitialized();
     SharedPreferences.setMockInitialValues({});
-    calendarState = CalendarTabState(date);
+    calendarState = CalendarCardState(date, [], []);
   });
   group("2020-09-14", () {
     /*
