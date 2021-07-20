@@ -18,10 +18,10 @@ class _$MenstruationListStateTearOff {
 
   _MenstruationListState call(
       {bool isNotYetLoaded = true,
-      List<MenstruationHistoryRowState> rows = const []}) {
+      List<MenstruationHistoryRowState> allRows = const []}) {
     return _MenstruationListState(
       isNotYetLoaded: isNotYetLoaded,
-      rows: rows,
+      allRows: allRows,
     );
   }
 }
@@ -32,7 +32,7 @@ const $MenstruationListState = _$MenstruationListStateTearOff();
 /// @nodoc
 mixin _$MenstruationListState {
   bool get isNotYetLoaded => throw _privateConstructorUsedError;
-  List<MenstruationHistoryRowState> get rows =>
+  List<MenstruationHistoryRowState> get allRows =>
       throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
@@ -45,7 +45,7 @@ abstract class $MenstruationListStateCopyWith<$Res> {
   factory $MenstruationListStateCopyWith(MenstruationListState value,
           $Res Function(MenstruationListState) then) =
       _$MenstruationListStateCopyWithImpl<$Res>;
-  $Res call({bool isNotYetLoaded, List<MenstruationHistoryRowState> rows});
+  $Res call({bool isNotYetLoaded, List<MenstruationHistoryRowState> allRows});
 }
 
 /// @nodoc
@@ -60,16 +60,16 @@ class _$MenstruationListStateCopyWithImpl<$Res>
   @override
   $Res call({
     Object? isNotYetLoaded = freezed,
-    Object? rows = freezed,
+    Object? allRows = freezed,
   }) {
     return _then(_value.copyWith(
       isNotYetLoaded: isNotYetLoaded == freezed
           ? _value.isNotYetLoaded
           : isNotYetLoaded // ignore: cast_nullable_to_non_nullable
               as bool,
-      rows: rows == freezed
-          ? _value.rows
-          : rows // ignore: cast_nullable_to_non_nullable
+      allRows: allRows == freezed
+          ? _value.allRows
+          : allRows // ignore: cast_nullable_to_non_nullable
               as List<MenstruationHistoryRowState>,
     ));
   }
@@ -82,7 +82,7 @@ abstract class _$MenstruationListStateCopyWith<$Res>
           $Res Function(_MenstruationListState) then) =
       __$MenstruationListStateCopyWithImpl<$Res>;
   @override
-  $Res call({bool isNotYetLoaded, List<MenstruationHistoryRowState> rows});
+  $Res call({bool isNotYetLoaded, List<MenstruationHistoryRowState> allRows});
 }
 
 /// @nodoc
@@ -99,16 +99,16 @@ class __$MenstruationListStateCopyWithImpl<$Res>
   @override
   $Res call({
     Object? isNotYetLoaded = freezed,
-    Object? rows = freezed,
+    Object? allRows = freezed,
   }) {
     return _then(_MenstruationListState(
       isNotYetLoaded: isNotYetLoaded == freezed
           ? _value.isNotYetLoaded
           : isNotYetLoaded // ignore: cast_nullable_to_non_nullable
               as bool,
-      rows: rows == freezed
-          ? _value.rows
-          : rows // ignore: cast_nullable_to_non_nullable
+      allRows: allRows == freezed
+          ? _value.allRows
+          : allRows // ignore: cast_nullable_to_non_nullable
               as List<MenstruationHistoryRowState>,
     ));
   }
@@ -117,7 +117,8 @@ class __$MenstruationListStateCopyWithImpl<$Res>
 /// @nodoc
 
 class _$_MenstruationListState extends _MenstruationListState {
-  _$_MenstruationListState({this.isNotYetLoaded = true, this.rows = const []})
+  _$_MenstruationListState(
+      {this.isNotYetLoaded = true, this.allRows = const []})
       : super._();
 
   @JsonKey(defaultValue: true)
@@ -125,11 +126,11 @@ class _$_MenstruationListState extends _MenstruationListState {
   final bool isNotYetLoaded;
   @JsonKey(defaultValue: const [])
   @override
-  final List<MenstruationHistoryRowState> rows;
+  final List<MenstruationHistoryRowState> allRows;
 
   @override
   String toString() {
-    return 'MenstruationListState(isNotYetLoaded: $isNotYetLoaded, rows: $rows)';
+    return 'MenstruationListState(isNotYetLoaded: $isNotYetLoaded, allRows: $allRows)';
   }
 
   @override
@@ -139,15 +140,15 @@ class _$_MenstruationListState extends _MenstruationListState {
             (identical(other.isNotYetLoaded, isNotYetLoaded) ||
                 const DeepCollectionEquality()
                     .equals(other.isNotYetLoaded, isNotYetLoaded)) &&
-            (identical(other.rows, rows) ||
-                const DeepCollectionEquality().equals(other.rows, rows)));
+            (identical(other.allRows, allRows) ||
+                const DeepCollectionEquality().equals(other.allRows, allRows)));
   }
 
   @override
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(isNotYetLoaded) ^
-      const DeepCollectionEquality().hash(rows);
+      const DeepCollectionEquality().hash(allRows);
 
   @JsonKey(ignore: true)
   @override
@@ -159,13 +160,13 @@ class _$_MenstruationListState extends _MenstruationListState {
 abstract class _MenstruationListState extends MenstruationListState {
   factory _MenstruationListState(
       {bool isNotYetLoaded,
-      List<MenstruationHistoryRowState> rows}) = _$_MenstruationListState;
+      List<MenstruationHistoryRowState> allRows}) = _$_MenstruationListState;
   _MenstruationListState._() : super._();
 
   @override
   bool get isNotYetLoaded => throw _privateConstructorUsedError;
   @override
-  List<MenstruationHistoryRowState> get rows =>
+  List<MenstruationHistoryRowState> get allRows =>
       throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
