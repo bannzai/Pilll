@@ -3,7 +3,7 @@ import 'dart:async';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/components/organisms/calendar/utility.dart';
 import 'package:pilll/domain/menstruation/menstruation_card_state.dart';
-import 'package:pilll/domain/menstruation/menstruation_history_card.dart';
+import 'package:pilll/domain/menstruation/menstruation_history_card_state.dart';
 import 'package:pilll/entity/menstruation.dart';
 import 'package:pilll/service/diary.dart';
 import 'package:pilll/service/menstruation.dart';
