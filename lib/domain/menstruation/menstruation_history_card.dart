@@ -1,4 +1,3 @@
-
 import 'package:pilll/analytics.dart';
 import 'package:pilll/components/atoms/buttons.dart';
 import 'package:pilll/components/atoms/font.dart';
@@ -8,6 +7,9 @@ import 'package:pilll/domain/menstruation/menstruation_history_card_state.dart';
 import 'package:pilll/domain/menstruation/menstruation_history_row.dart';
 import 'package:pilll/domain/menstruation/menstruation_list_page.dart';
 import 'package:flutter/material.dart';
+import 'package:pilll/domain/premium_introduction/premium_introduction_sheet.dart';
+import 'package:pilll/domain/premium_trial/premium_trial_complete_modal.dart';
+import 'package:pilll/domain/premium_trial/premium_trial_modal.dart';
 
 class MenstruationHistoryCard extends StatelessWidget {
   final MenstruationHistoryCardState state;
@@ -41,10 +43,20 @@ class MenstruationHistoryCard extends StatelessWidget {
                   SecondaryButton(
                       text: "もっと見る",
                       onPressed: () {
-                        analytics.logEvent(
-                            name: "menstruation_more_button_pressed");
-                        Navigator.of(context)
-                            .push(MenstruationListPageRoute.route());
+                        if (state.isPremium || state.isTrial) {
+                          analytics.logEvent(
+                              name: "menstruation_more_button_pressed");
+                          Navigator.of(context)
+                              .push(MenstruationListPageRoute.route());
+                        } else {
+                          if (state.trialDeadlineDate == null) {
+                            showPremiumTrialModal(context, () {
+                              showPremiumTrialCompleteModalPreDialog(context);
+                            });
+                          } else {
+                            showPremiumIntroductionSheet(context);
+                          }
+                        }
                       }),
               ],
             ),
