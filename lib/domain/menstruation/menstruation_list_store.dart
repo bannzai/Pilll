@@ -36,7 +36,7 @@ class MenstruationListStore extends StateNotifier<MenstruationListState> {
     _menstruationCanceller =
         menstruationService.subscribeAll().listen((entities) {
       state = state.copyWith(
-          rows: MenstruationHistoryRowState.rows(
+          allRows: MenstruationHistoryRowState.rows(
               dropLatestMenstruationIfNeeded(entities)));
     });
   }
