@@ -21,6 +21,8 @@ class _$MenstruationStateTearOff {
       int currentCalendarIndex = 0,
       List<Diary> diariesForMonth = const [],
       List<Menstruation> entities = const [],
+      bool isPremium = false,
+      bool isTrial = false,
       Setting? setting,
       PillSheet? latestPillSheet}) {
     return _MenstruationState(
@@ -28,6 +30,8 @@ class _$MenstruationStateTearOff {
       currentCalendarIndex: currentCalendarIndex,
       diariesForMonth: diariesForMonth,
       entities: entities,
+      isPremium: isPremium,
+      isTrial: isTrial,
       setting: setting,
       latestPillSheet: latestPillSheet,
     );
@@ -43,6 +47,8 @@ mixin _$MenstruationState {
   int get currentCalendarIndex => throw _privateConstructorUsedError;
   List<Diary> get diariesForMonth => throw _privateConstructorUsedError;
   List<Menstruation> get entities => throw _privateConstructorUsedError;
+  bool get isPremium => throw _privateConstructorUsedError;
+  bool get isTrial => throw _privateConstructorUsedError;
   Setting? get setting => throw _privateConstructorUsedError;
   PillSheet? get latestPillSheet => throw _privateConstructorUsedError;
 
@@ -61,6 +67,8 @@ abstract class $MenstruationStateCopyWith<$Res> {
       int currentCalendarIndex,
       List<Diary> diariesForMonth,
       List<Menstruation> entities,
+      bool isPremium,
+      bool isTrial,
       Setting? setting,
       PillSheet? latestPillSheet});
 
@@ -83,6 +91,8 @@ class _$MenstruationStateCopyWithImpl<$Res>
     Object? currentCalendarIndex = freezed,
     Object? diariesForMonth = freezed,
     Object? entities = freezed,
+    Object? isPremium = freezed,
+    Object? isTrial = freezed,
     Object? setting = freezed,
     Object? latestPillSheet = freezed,
   }) {
@@ -103,6 +113,14 @@ class _$MenstruationStateCopyWithImpl<$Res>
           ? _value.entities
           : entities // ignore: cast_nullable_to_non_nullable
               as List<Menstruation>,
+      isPremium: isPremium == freezed
+          ? _value.isPremium
+          : isPremium // ignore: cast_nullable_to_non_nullable
+              as bool,
+      isTrial: isTrial == freezed
+          ? _value.isTrial
+          : isTrial // ignore: cast_nullable_to_non_nullable
+              as bool,
       setting: setting == freezed
           ? _value.setting
           : setting // ignore: cast_nullable_to_non_nullable
@@ -149,6 +167,8 @@ abstract class _$MenstruationStateCopyWith<$Res>
       int currentCalendarIndex,
       List<Diary> diariesForMonth,
       List<Menstruation> entities,
+      bool isPremium,
+      bool isTrial,
       Setting? setting,
       PillSheet? latestPillSheet});
 
@@ -175,6 +195,8 @@ class __$MenstruationStateCopyWithImpl<$Res>
     Object? currentCalendarIndex = freezed,
     Object? diariesForMonth = freezed,
     Object? entities = freezed,
+    Object? isPremium = freezed,
+    Object? isTrial = freezed,
     Object? setting = freezed,
     Object? latestPillSheet = freezed,
   }) {
@@ -195,6 +217,14 @@ class __$MenstruationStateCopyWithImpl<$Res>
           ? _value.entities
           : entities // ignore: cast_nullable_to_non_nullable
               as List<Menstruation>,
+      isPremium: isPremium == freezed
+          ? _value.isPremium
+          : isPremium // ignore: cast_nullable_to_non_nullable
+              as bool,
+      isTrial: isTrial == freezed
+          ? _value.isTrial
+          : isTrial // ignore: cast_nullable_to_non_nullable
+              as bool,
       setting: setting == freezed
           ? _value.setting
           : setting // ignore: cast_nullable_to_non_nullable
@@ -215,6 +245,8 @@ class _$_MenstruationState extends _MenstruationState {
       this.currentCalendarIndex = 0,
       this.diariesForMonth = const [],
       this.entities = const [],
+      this.isPremium = false,
+      this.isTrial = false,
       this.setting,
       this.latestPillSheet})
       : super._();
@@ -231,6 +263,12 @@ class _$_MenstruationState extends _MenstruationState {
   @JsonKey(defaultValue: const [])
   @override
   final List<Menstruation> entities;
+  @JsonKey(defaultValue: false)
+  @override
+  final bool isPremium;
+  @JsonKey(defaultValue: false)
+  @override
+  final bool isTrial;
   @override
   final Setting? setting;
   @override
@@ -238,7 +276,7 @@ class _$_MenstruationState extends _MenstruationState {
 
   @override
   String toString() {
-    return 'MenstruationState(isNotYetLoaded: $isNotYetLoaded, currentCalendarIndex: $currentCalendarIndex, diariesForMonth: $diariesForMonth, entities: $entities, setting: $setting, latestPillSheet: $latestPillSheet)';
+    return 'MenstruationState(isNotYetLoaded: $isNotYetLoaded, currentCalendarIndex: $currentCalendarIndex, diariesForMonth: $diariesForMonth, entities: $entities, isPremium: $isPremium, isTrial: $isTrial, setting: $setting, latestPillSheet: $latestPillSheet)';
   }
 
   @override
@@ -257,6 +295,12 @@ class _$_MenstruationState extends _MenstruationState {
             (identical(other.entities, entities) ||
                 const DeepCollectionEquality()
                     .equals(other.entities, entities)) &&
+            (identical(other.isPremium, isPremium) ||
+                const DeepCollectionEquality()
+                    .equals(other.isPremium, isPremium)) &&
+            (identical(other.isTrial, isTrial) ||
+                const DeepCollectionEquality()
+                    .equals(other.isTrial, isTrial)) &&
             (identical(other.setting, setting) ||
                 const DeepCollectionEquality()
                     .equals(other.setting, setting)) &&
@@ -272,6 +316,8 @@ class _$_MenstruationState extends _MenstruationState {
       const DeepCollectionEquality().hash(currentCalendarIndex) ^
       const DeepCollectionEquality().hash(diariesForMonth) ^
       const DeepCollectionEquality().hash(entities) ^
+      const DeepCollectionEquality().hash(isPremium) ^
+      const DeepCollectionEquality().hash(isTrial) ^
       const DeepCollectionEquality().hash(setting) ^
       const DeepCollectionEquality().hash(latestPillSheet);
 
@@ -287,6 +333,8 @@ abstract class _MenstruationState extends MenstruationState {
       int currentCalendarIndex,
       List<Diary> diariesForMonth,
       List<Menstruation> entities,
+      bool isPremium,
+      bool isTrial,
       Setting? setting,
       PillSheet? latestPillSheet}) = _$_MenstruationState;
   _MenstruationState._() : super._();
@@ -299,6 +347,10 @@ abstract class _MenstruationState extends MenstruationState {
   List<Diary> get diariesForMonth => throw _privateConstructorUsedError;
   @override
   List<Menstruation> get entities => throw _privateConstructorUsedError;
+  @override
+  bool get isPremium => throw _privateConstructorUsedError;
+  @override
+  bool get isTrial => throw _privateConstructorUsedError;
   @override
   Setting? get setting => throw _privateConstructorUsedError;
   @override

@@ -5,12 +5,39 @@ import 'package:pilll/entity/menstruation.dart';
 import 'package:pilll/entity/pill_sheet.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/entity/setting.dart';
+import 'package:pilll/entity/user.dart';
 import 'package:pilll/service/day.dart';
 import 'package:pilll/domain/menstruation/menstruation_store.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import '../../helper/delay.dart';
 import '../../helper/mock.mocks.dart';
+
+class _FakeUser extends Fake implements User {
+  _FakeUser({
+    this.fakeIsPremium = false,
+    this.fakeIsTrial = false,
+    this.fakeTrialDeadlineDate,
+    this.fakeDiscountEntitlementDeadlineDate,
+    this.fakeIsExpiredDiscountEntitlements = false,
+  });
+  final DateTime? fakeTrialDeadlineDate;
+  final DateTime? fakeDiscountEntitlementDeadlineDate;
+  final bool fakeIsPremium;
+  final bool fakeIsTrial;
+  final bool fakeIsExpiredDiscountEntitlements;
+  @override
+  bool get isPremium => fakeIsPremium;
+  @override
+  bool get isTrial => fakeIsTrial;
+  @override
+  bool get hasDiscountEntitlement => fakeIsExpiredDiscountEntitlements;
+  @override
+  DateTime? get trialDeadlineDate => fakeTrialDeadlineDate;
+  @override
+  DateTime? get discountEntitlementDeadlineDate =>
+      fakeDiscountEntitlementDeadlineDate;
+}
 
 void main() {
   setUp(() {
@@ -81,12 +108,18 @@ void main() {
                 isOnReminder: true)));
         when(settingService.subscribe())
             .thenAnswer((realInvocation) => Stream.empty());
+        final userService = MockUserService();
+        when(userService.fetch())
+            .thenAnswer((reaInvocation) => Future.value(_FakeUser()));
+        when(userService.subscribe())
+            .thenAnswer((realInvocation) => Stream.empty());
 
         final store = MenstruationStore(
           menstruationService: menstruationService,
           diaryService: diaryService,
           settingService: settingService,
           pillSheetService: pillSheetService,
+          userService: userService,
         );
         await waitForResetStoreState();
         final actual = store.cardState();
@@ -150,12 +183,18 @@ void main() {
                 isOnReminder: true)));
         when(settingService.subscribe())
             .thenAnswer((realInvocation) => Stream.empty());
+        final userService = MockUserService();
+        when(userService.fetch())
+            .thenAnswer((reaInvocation) => Future.value(_FakeUser()));
+        when(userService.subscribe())
+            .thenAnswer((realInvocation) => Stream.empty());
 
         final store = MenstruationStore(
           menstruationService: menstruationService,
           diaryService: diaryService,
           settingService: settingService,
           pillSheetService: pillSheetService,
+          userService: userService,
         );
         await waitForResetStoreState();
         final actual = store.cardState();
@@ -209,12 +248,18 @@ void main() {
                 isOnReminder: true)));
         when(settingService.subscribe())
             .thenAnswer((realInvocation) => Stream.empty());
+        final userService = MockUserService();
+        when(userService.fetch())
+            .thenAnswer((reaInvocation) => Future.value(_FakeUser()));
+        when(userService.subscribe())
+            .thenAnswer((realInvocation) => Stream.empty());
 
         final store = MenstruationStore(
           menstruationService: menstruationService,
           diaryService: diaryService,
           settingService: settingService,
           pillSheetService: pillSheetService,
+          userService: userService,
         );
         await waitForResetStoreState();
         final actual = store.cardState();
@@ -272,12 +317,18 @@ void main() {
                 isOnReminder: true)));
         when(settingService.subscribe())
             .thenAnswer((realInvocation) => Stream.empty());
+        final userService = MockUserService();
+        when(userService.fetch())
+            .thenAnswer((reaInvocation) => Future.value(_FakeUser()));
+        when(userService.subscribe())
+            .thenAnswer((realInvocation) => Stream.empty());
 
         final store = MenstruationStore(
           menstruationService: menstruationService,
           diaryService: diaryService,
           settingService: settingService,
           pillSheetService: pillSheetService,
+          userService: userService,
         );
         await waitForResetStoreState();
         final actual = store.cardState();
