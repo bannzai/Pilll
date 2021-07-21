@@ -17,7 +17,7 @@ abstract class MenstruationListState implements _$MenstruationListState {
     if (isPremium || isTrial) {
       return allRows;
     }
-    if (allRows.length < 2) {
+    if (allRows.length <= 2) {
       return allRows;
     }
     return allRows.sublist(0, 2);
