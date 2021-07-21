@@ -4,7 +4,6 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/domain/menstruation/menstruation_history_row.dart';
 import 'package:pilll/domain/menstruation/menstruation_list_state.dart';
 import 'package:pilll/service/menstruation.dart';
-import 'package:pilll/service/user.dart';
 import 'package:pilll/domain/menstruation/menstruation_store.dart';
 
 final menstruationListStoreProvider = StateNotifierProvider(
