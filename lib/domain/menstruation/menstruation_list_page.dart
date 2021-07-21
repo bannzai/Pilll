@@ -7,6 +7,7 @@ import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/components/molecules/indicator.dart';
+import 'package:pilll/domain/menstruation/locked_menstruation_history_row.dart';
 import 'package:pilll/domain/menstruation/menstruation_history_row.dart';
 import 'package:pilll/domain/menstruation/menstruation_list_store.dart';
 
@@ -37,18 +38,23 @@ class MenstruationListPage extends HookWidget {
       body: SafeArea(
         child: Container(
           color: PilllColors.white,
-          child: ListView.builder(
+          child: ListView(
             padding: const EdgeInsets.all(32),
-            itemCount: state.rows.length,
-            itemBuilder: (context, index) {
-              final rowState = state.rows[index];
-              return Column(
-                children: [
-                  MenstruationHistoryRow(state: rowState),
+            children: [
+              ...state.rows.map((row) {
+                return [
+                  MenstruationHistoryRow(state: row),
                   SizedBox(height: 8),
-                ],
-              );
-            },
+                ];
+              }).expand((element) => element),
+              SizedBox(height: 8),
+              ...state.lockedRows.map((row) {
+                return [
+                  LockedMenstruationHistoryRow(),
+                  SizedBox(height: 8),
+                ];
+              }).expand((element) => element),
+            ],
           ),
         ),
       ),
