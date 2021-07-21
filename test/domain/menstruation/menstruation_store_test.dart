@@ -6,7 +6,7 @@ import 'package:pilll/entity/pill_sheet.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/entity/setting.dart';
 import 'package:pilll/service/day.dart';
-import 'package:pilll/store/menstruation.dart';
+import 'package:pilll/domain/menstruation/menstruation_store.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import '../../helper/delay.dart';

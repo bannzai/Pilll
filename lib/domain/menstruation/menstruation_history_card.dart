@@ -9,7 +9,7 @@ import 'package:pilll/domain/menstruation/menstruation_history_row.dart';
 import 'package:pilll/domain/menstruation/menstruation_list_page.dart';
 import 'package:pilll/entity/menstruation.dart';
 import 'package:flutter/material.dart';
-import 'package:pilll/store/menstruation.dart';
+import 'package:pilll/domain/menstruation/menstruation_store.dart';
 import 'package:pilll/util/datetime/day.dart';
 
 class MenstruationHistoryCardState {
