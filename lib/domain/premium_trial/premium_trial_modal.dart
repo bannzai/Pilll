@@ -147,6 +147,7 @@ class PremiumTrialModal extends HookWidget {
 
 showPremiumTrialModalWhenLaunchApp(
     BuildContext context, VoidCallback didEndTrial) async {
+  analytics.logEvent(name: "show_trial_when_launch_app");
   final key = BoolKey.isAlreadyShowPremiumTrialModal;
   final storage = await SharedPreferences.getInstance();
   if (storage.getBool(key) ?? false) {
@@ -157,6 +158,7 @@ showPremiumTrialModalWhenLaunchApp(
 }
 
 showPremiumTrialModal(BuildContext context, VoidCallback didEndTrial) async {
+  analytics.logEvent(name: "show_trial_modal");
   showDialog(
       context: context,
       builder: (context) {

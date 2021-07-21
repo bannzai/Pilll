@@ -85,6 +85,7 @@ class PremiumTrialCompleteModal extends StatelessWidget {
 }
 
 showPremiumTrialCompleteModalPreDialog(BuildContext context) async {
+  analytics.logEvent(name: "show_trial_completed");
   showDialog(
       context: context,
       builder: (context) {
@@ -93,6 +94,7 @@ showPremiumTrialCompleteModalPreDialog(BuildContext context) async {
 }
 
 openPremiumFunctions() async {
+  analytics.logEvent(name: "trial_completed_open_premium_link");
   final ChromeSafariBrowser browser = new ChromeSafariBrowser();
   await browser.open(
       url: Uri.parse(preimumLink),
