@@ -1,45 +1,13 @@
-import 'dart:math';
 
 import 'package:pilll/analytics.dart';
 import 'package:pilll/components/atoms/buttons.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/components/molecules/app_card.dart';
+import 'package:pilll/domain/menstruation/menstruation_history_card_state.dart';
 import 'package:pilll/domain/menstruation/menstruation_history_row.dart';
 import 'package:pilll/domain/menstruation/menstruation_list_page.dart';
-import 'package:pilll/entity/menstruation.dart';
 import 'package:flutter/material.dart';
-import 'package:pilll/domain/menstruation/menstruation_store.dart';
-import 'package:pilll/util/datetime/day.dart';
-
-class MenstruationHistoryCardState {
-  final List<Menstruation> _allMenstruations;
-  final Menstruation _latestMenstruation;
-
-  MenstruationHistoryCardState(
-    this._allMenstruations,
-    this._latestMenstruation,
-  );
-
-  bool get _latestPillSheetIntoToday =>
-      _latestMenstruation.dateRange.inRange(today());
-
-  bool get moreButtonIsHidden => _latestPillSheetIntoToday
-      ? _allMenstruations.length <= 3
-      : _allMenstruations.length <= 2;
-  List<MenstruationHistoryRowState> get rows {
-    if (_allMenstruations.isEmpty) {
-      return [];
-    }
-    var menstruations = dropLatestMenstruationIfNeeded(_allMenstruations);
-    if (menstruations.isEmpty) {
-      return [];
-    }
-    final rows = MenstruationHistoryRowState.rows(menstruations);
-    final length = min(2, rows.length);
-    return rows.sublist(0, length);
-  }
-}
 
 class MenstruationHistoryCard extends StatelessWidget {
   final MenstruationHistoryCardState state;
