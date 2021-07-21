@@ -10,12 +10,14 @@ class MenstruationHistoryCardState {
   final Menstruation latestMenstruation;
   final bool isPremium;
   final bool isTrial;
+  final DateTime? trialDeadlineDate;
 
   MenstruationHistoryCardState({
     required this.allMenstruations,
     required this.latestMenstruation,
     required this.isPremium,
     required this.isTrial,
+    required this.trialDeadlineDate,
   });
 
   bool get _latestPillSheetIntoToday =>

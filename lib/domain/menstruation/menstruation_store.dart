@@ -55,6 +55,7 @@ class MenstruationStore extends StateNotifier<MenstruationState> {
         latestPillSheet: latestPillSheet,
         isPremium: user.isPremium,
         isTrial: user.isTrial,
+        trialDeadlineDate: user.trialDeadlineDate,
       );
       _subscribe();
     });
@@ -86,7 +87,11 @@ class MenstruationStore extends StateNotifier<MenstruationState> {
     });
     _userCanceller?.cancel();
     _userCanceller = userService.subscribe().listen((user) {
-      state = state.copyWith(isPremium: user.isPremium, isTrial: user.isTrial);
+      state = state.copyWith(
+        isPremium: user.isPremium,
+        isTrial: user.isTrial,
+        trialDeadlineDate: user.trialDeadlineDate,
+      );
     });
   }
 
@@ -192,6 +197,7 @@ class MenstruationStore extends StateNotifier<MenstruationState> {
       latestMenstruation: latestMenstruation,
       isPremium: state.isPremium,
       isTrial: state.isTrial,
+      trialDeadlineDate: state.trialDeadlineDate,
     );
   }
 }

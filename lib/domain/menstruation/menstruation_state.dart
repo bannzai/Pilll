@@ -21,6 +21,7 @@ abstract class MenstruationState implements _$MenstruationState {
     @Default([]) List<Menstruation> entities,
     @Default(false) bool isPremium,
     @Default(false) bool isTrial,
+    DateTime? trialDeadlineDate,
     Setting? setting,
     PillSheet? latestPillSheet,
   }) = _MenstruationState;

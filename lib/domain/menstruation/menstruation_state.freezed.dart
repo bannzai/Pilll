@@ -23,6 +23,7 @@ class _$MenstruationStateTearOff {
       List<Menstruation> entities = const [],
       bool isPremium = false,
       bool isTrial = false,
+      DateTime? trialDeadlineDate,
       Setting? setting,
       PillSheet? latestPillSheet}) {
     return _MenstruationState(
@@ -32,6 +33,7 @@ class _$MenstruationStateTearOff {
       entities: entities,
       isPremium: isPremium,
       isTrial: isTrial,
+      trialDeadlineDate: trialDeadlineDate,
       setting: setting,
       latestPillSheet: latestPillSheet,
     );
@@ -49,6 +51,7 @@ mixin _$MenstruationState {
   List<Menstruation> get entities => throw _privateConstructorUsedError;
   bool get isPremium => throw _privateConstructorUsedError;
   bool get isTrial => throw _privateConstructorUsedError;
+  DateTime? get trialDeadlineDate => throw _privateConstructorUsedError;
   Setting? get setting => throw _privateConstructorUsedError;
   PillSheet? get latestPillSheet => throw _privateConstructorUsedError;
 
@@ -69,6 +72,7 @@ abstract class $MenstruationStateCopyWith<$Res> {
       List<Menstruation> entities,
       bool isPremium,
       bool isTrial,
+      DateTime? trialDeadlineDate,
       Setting? setting,
       PillSheet? latestPillSheet});
 
@@ -93,6 +97,7 @@ class _$MenstruationStateCopyWithImpl<$Res>
     Object? entities = freezed,
     Object? isPremium = freezed,
     Object? isTrial = freezed,
+    Object? trialDeadlineDate = freezed,
     Object? setting = freezed,
     Object? latestPillSheet = freezed,
   }) {
@@ -121,6 +126,10 @@ class _$MenstruationStateCopyWithImpl<$Res>
           ? _value.isTrial
           : isTrial // ignore: cast_nullable_to_non_nullable
               as bool,
+      trialDeadlineDate: trialDeadlineDate == freezed
+          ? _value.trialDeadlineDate
+          : trialDeadlineDate // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
       setting: setting == freezed
           ? _value.setting
           : setting // ignore: cast_nullable_to_non_nullable
@@ -169,6 +178,7 @@ abstract class _$MenstruationStateCopyWith<$Res>
       List<Menstruation> entities,
       bool isPremium,
       bool isTrial,
+      DateTime? trialDeadlineDate,
       Setting? setting,
       PillSheet? latestPillSheet});
 
@@ -197,6 +207,7 @@ class __$MenstruationStateCopyWithImpl<$Res>
     Object? entities = freezed,
     Object? isPremium = freezed,
     Object? isTrial = freezed,
+    Object? trialDeadlineDate = freezed,
     Object? setting = freezed,
     Object? latestPillSheet = freezed,
   }) {
@@ -225,6 +236,10 @@ class __$MenstruationStateCopyWithImpl<$Res>
           ? _value.isTrial
           : isTrial // ignore: cast_nullable_to_non_nullable
               as bool,
+      trialDeadlineDate: trialDeadlineDate == freezed
+          ? _value.trialDeadlineDate
+          : trialDeadlineDate // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
       setting: setting == freezed
           ? _value.setting
           : setting // ignore: cast_nullable_to_non_nullable
@@ -247,6 +262,7 @@ class _$_MenstruationState extends _MenstruationState {
       this.entities = const [],
       this.isPremium = false,
       this.isTrial = false,
+      this.trialDeadlineDate,
       this.setting,
       this.latestPillSheet})
       : super._();
@@ -270,13 +286,15 @@ class _$_MenstruationState extends _MenstruationState {
   @override
   final bool isTrial;
   @override
+  final DateTime? trialDeadlineDate;
+  @override
   final Setting? setting;
   @override
   final PillSheet? latestPillSheet;
 
   @override
   String toString() {
-    return 'MenstruationState(isNotYetLoaded: $isNotYetLoaded, currentCalendarIndex: $currentCalendarIndex, diariesForMonth: $diariesForMonth, entities: $entities, isPremium: $isPremium, isTrial: $isTrial, setting: $setting, latestPillSheet: $latestPillSheet)';
+    return 'MenstruationState(isNotYetLoaded: $isNotYetLoaded, currentCalendarIndex: $currentCalendarIndex, diariesForMonth: $diariesForMonth, entities: $entities, isPremium: $isPremium, isTrial: $isTrial, trialDeadlineDate: $trialDeadlineDate, setting: $setting, latestPillSheet: $latestPillSheet)';
   }
 
   @override
@@ -301,6 +319,9 @@ class _$_MenstruationState extends _MenstruationState {
             (identical(other.isTrial, isTrial) ||
                 const DeepCollectionEquality()
                     .equals(other.isTrial, isTrial)) &&
+            (identical(other.trialDeadlineDate, trialDeadlineDate) ||
+                const DeepCollectionEquality()
+                    .equals(other.trialDeadlineDate, trialDeadlineDate)) &&
             (identical(other.setting, setting) ||
                 const DeepCollectionEquality()
                     .equals(other.setting, setting)) &&
@@ -318,6 +339,7 @@ class _$_MenstruationState extends _MenstruationState {
       const DeepCollectionEquality().hash(entities) ^
       const DeepCollectionEquality().hash(isPremium) ^
       const DeepCollectionEquality().hash(isTrial) ^
+      const DeepCollectionEquality().hash(trialDeadlineDate) ^
       const DeepCollectionEquality().hash(setting) ^
       const DeepCollectionEquality().hash(latestPillSheet);
 
@@ -335,6 +357,7 @@ abstract class _MenstruationState extends MenstruationState {
       List<Menstruation> entities,
       bool isPremium,
       bool isTrial,
+      DateTime? trialDeadlineDate,
       Setting? setting,
       PillSheet? latestPillSheet}) = _$_MenstruationState;
   _MenstruationState._() : super._();
@@ -351,6 +374,8 @@ abstract class _MenstruationState extends MenstruationState {
   bool get isPremium => throw _privateConstructorUsedError;
   @override
   bool get isTrial => throw _privateConstructorUsedError;
+  @override
+  DateTime? get trialDeadlineDate => throw _privateConstructorUsedError;
   @override
   Setting? get setting => throw _privateConstructorUsedError;
   @override
