@@ -6,25 +6,29 @@ import 'package:pilll/domain/menstruation/menstruation_store.dart';
 import 'package:pilll/util/datetime/day.dart';
 
 class MenstruationHistoryCardState {
-  final List<Menstruation> _allMenstruations;
-  final Menstruation _latestMenstruation;
+  final List<Menstruation> allMenstruations;
+  final Menstruation latestMenstruation;
+  final bool isPremium;
+  final bool isTrial;
 
-  MenstruationHistoryCardState(
-    this._allMenstruations,
-    this._latestMenstruation,
-  );
+  MenstruationHistoryCardState({
+    required this.allMenstruations,
+    required this.latestMenstruation,
+    required this.isPremium,
+    required this.isTrial,
+  });
 
   bool get _latestPillSheetIntoToday =>
-      _latestMenstruation.dateRange.inRange(today());
+      latestMenstruation.dateRange.inRange(today());
 
   bool get moreButtonIsHidden => _latestPillSheetIntoToday
-      ? _allMenstruations.length <= 3
-      : _allMenstruations.length <= 2;
+      ? allMenstruations.length <= 3
+      : allMenstruations.length <= 2;
   List<MenstruationHistoryRowState> get rows {
-    if (_allMenstruations.isEmpty) {
+    if (allMenstruations.isEmpty) {
       return [];
     }
-    var menstruations = dropLatestMenstruationIfNeeded(_allMenstruations);
+    var menstruations = dropLatestMenstruationIfNeeded(allMenstruations);
     if (menstruations.isEmpty) {
       return [];
     }
