@@ -16,9 +16,6 @@ import 'package:shared_preferences/shared_preferences.dart';
 final userServiceProvider =
     Provider((ref) => UserService(ref.watch(databaseProvider)));
 
-final premiumStateStreamProvider = StreamProvider(
-    (ref) => UserService(ref.watch(databaseProvider)).subscribe());
-
 class UserService {
   final DatabaseConnection _database;
   UserService(this._database);
