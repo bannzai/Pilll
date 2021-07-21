@@ -18,13 +18,9 @@ class _$MenstruationListStateTearOff {
 
   _MenstruationListState call(
       {bool isNotYetLoaded = true,
-      bool isPremium = false,
-      bool isTrial = false,
       List<MenstruationHistoryRowState> allRows = const []}) {
     return _MenstruationListState(
       isNotYetLoaded: isNotYetLoaded,
-      isPremium: isPremium,
-      isTrial: isTrial,
       allRows: allRows,
     );
   }
@@ -36,8 +32,6 @@ const $MenstruationListState = _$MenstruationListStateTearOff();
 /// @nodoc
 mixin _$MenstruationListState {
   bool get isNotYetLoaded => throw _privateConstructorUsedError;
-  bool get isPremium => throw _privateConstructorUsedError;
-  bool get isTrial => throw _privateConstructorUsedError;
   List<MenstruationHistoryRowState> get allRows =>
       throw _privateConstructorUsedError;
 
@@ -51,11 +45,7 @@ abstract class $MenstruationListStateCopyWith<$Res> {
   factory $MenstruationListStateCopyWith(MenstruationListState value,
           $Res Function(MenstruationListState) then) =
       _$MenstruationListStateCopyWithImpl<$Res>;
-  $Res call(
-      {bool isNotYetLoaded,
-      bool isPremium,
-      bool isTrial,
-      List<MenstruationHistoryRowState> allRows});
+  $Res call({bool isNotYetLoaded, List<MenstruationHistoryRowState> allRows});
 }
 
 /// @nodoc
@@ -70,22 +60,12 @@ class _$MenstruationListStateCopyWithImpl<$Res>
   @override
   $Res call({
     Object? isNotYetLoaded = freezed,
-    Object? isPremium = freezed,
-    Object? isTrial = freezed,
     Object? allRows = freezed,
   }) {
     return _then(_value.copyWith(
       isNotYetLoaded: isNotYetLoaded == freezed
           ? _value.isNotYetLoaded
           : isNotYetLoaded // ignore: cast_nullable_to_non_nullable
-              as bool,
-      isPremium: isPremium == freezed
-          ? _value.isPremium
-          : isPremium // ignore: cast_nullable_to_non_nullable
-              as bool,
-      isTrial: isTrial == freezed
-          ? _value.isTrial
-          : isTrial // ignore: cast_nullable_to_non_nullable
               as bool,
       allRows: allRows == freezed
           ? _value.allRows
@@ -102,11 +82,7 @@ abstract class _$MenstruationListStateCopyWith<$Res>
           $Res Function(_MenstruationListState) then) =
       __$MenstruationListStateCopyWithImpl<$Res>;
   @override
-  $Res call(
-      {bool isNotYetLoaded,
-      bool isPremium,
-      bool isTrial,
-      List<MenstruationHistoryRowState> allRows});
+  $Res call({bool isNotYetLoaded, List<MenstruationHistoryRowState> allRows});
 }
 
 /// @nodoc
@@ -123,22 +99,12 @@ class __$MenstruationListStateCopyWithImpl<$Res>
   @override
   $Res call({
     Object? isNotYetLoaded = freezed,
-    Object? isPremium = freezed,
-    Object? isTrial = freezed,
     Object? allRows = freezed,
   }) {
     return _then(_MenstruationListState(
       isNotYetLoaded: isNotYetLoaded == freezed
           ? _value.isNotYetLoaded
           : isNotYetLoaded // ignore: cast_nullable_to_non_nullable
-              as bool,
-      isPremium: isPremium == freezed
-          ? _value.isPremium
-          : isPremium // ignore: cast_nullable_to_non_nullable
-              as bool,
-      isTrial: isTrial == freezed
-          ? _value.isTrial
-          : isTrial // ignore: cast_nullable_to_non_nullable
               as bool,
       allRows: allRows == freezed
           ? _value.allRows
@@ -152,28 +118,19 @@ class __$MenstruationListStateCopyWithImpl<$Res>
 
 class _$_MenstruationListState extends _MenstruationListState {
   _$_MenstruationListState(
-      {this.isNotYetLoaded = true,
-      this.isPremium = false,
-      this.isTrial = false,
-      this.allRows = const []})
+      {this.isNotYetLoaded = true, this.allRows = const []})
       : super._();
 
   @JsonKey(defaultValue: true)
   @override
   final bool isNotYetLoaded;
-  @JsonKey(defaultValue: false)
-  @override
-  final bool isPremium;
-  @JsonKey(defaultValue: false)
-  @override
-  final bool isTrial;
   @JsonKey(defaultValue: const [])
   @override
   final List<MenstruationHistoryRowState> allRows;
 
   @override
   String toString() {
-    return 'MenstruationListState(isNotYetLoaded: $isNotYetLoaded, isPremium: $isPremium, isTrial: $isTrial, allRows: $allRows)';
+    return 'MenstruationListState(isNotYetLoaded: $isNotYetLoaded, allRows: $allRows)';
   }
 
   @override
@@ -183,12 +140,6 @@ class _$_MenstruationListState extends _MenstruationListState {
             (identical(other.isNotYetLoaded, isNotYetLoaded) ||
                 const DeepCollectionEquality()
                     .equals(other.isNotYetLoaded, isNotYetLoaded)) &&
-            (identical(other.isPremium, isPremium) ||
-                const DeepCollectionEquality()
-                    .equals(other.isPremium, isPremium)) &&
-            (identical(other.isTrial, isTrial) ||
-                const DeepCollectionEquality()
-                    .equals(other.isTrial, isTrial)) &&
             (identical(other.allRows, allRows) ||
                 const DeepCollectionEquality().equals(other.allRows, allRows)));
   }
@@ -197,8 +148,6 @@ class _$_MenstruationListState extends _MenstruationListState {
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(isNotYetLoaded) ^
-      const DeepCollectionEquality().hash(isPremium) ^
-      const DeepCollectionEquality().hash(isTrial) ^
       const DeepCollectionEquality().hash(allRows);
 
   @JsonKey(ignore: true)
@@ -211,17 +160,11 @@ class _$_MenstruationListState extends _MenstruationListState {
 abstract class _MenstruationListState extends MenstruationListState {
   factory _MenstruationListState(
       {bool isNotYetLoaded,
-      bool isPremium,
-      bool isTrial,
       List<MenstruationHistoryRowState> allRows}) = _$_MenstruationListState;
   _MenstruationListState._() : super._();
 
   @override
   bool get isNotYetLoaded => throw _privateConstructorUsedError;
-  @override
-  bool get isPremium => throw _privateConstructorUsedError;
-  @override
-  bool get isTrial => throw _privateConstructorUsedError;
   @override
   List<MenstruationHistoryRowState> get allRows =>
       throw _privateConstructorUsedError;

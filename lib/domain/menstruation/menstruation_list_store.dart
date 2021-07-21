@@ -9,16 +9,14 @@ import 'package:pilll/domain/menstruation/menstruation_store.dart';
 
 final menstruationListStoreProvider = StateNotifierProvider(
   (ref) => MenstruationListStore(
-      menstruationService: ref.watch(menstruationServiceProvider),
-      userService: ref.watch(userServiceProvider)),
+    menstruationService: ref.watch(menstruationServiceProvider),
+  ),
 );
 
 class MenstruationListStore extends StateNotifier<MenstruationListState> {
   final MenstruationService menstruationService;
-  final UserService userService;
   MenstruationListStore({
     required this.menstruationService,
-    required this.userService,
   }) : super(MenstruationListState()) {
     _reset();
   }
@@ -26,11 +24,8 @@ class MenstruationListStore extends StateNotifier<MenstruationListState> {
   void _reset() {
     Future(() async {
       final menstruations = await menstruationService.fetchAll();
-      final user = await userService.fetch();
       state = state.copyWith(
         isNotYetLoaded: false,
-        isPremium: user.isPremium,
-        isTrial: user.isTrial,
         allRows: MenstruationHistoryRowState.rows(
             dropLatestMenstruationIfNeeded(menstruations)),
       );
@@ -39,7 +34,6 @@ class MenstruationListStore extends StateNotifier<MenstruationListState> {
   }
 
   StreamSubscription? _menstruationCanceller;
-  StreamSubscription? _userStreamCanceller;
   void _subscribe() {
     _menstruationCanceller?.cancel();
     _menstruationCanceller =
@@ -48,16 +42,11 @@ class MenstruationListStore extends StateNotifier<MenstruationListState> {
           allRows: MenstruationHistoryRowState.rows(
               dropLatestMenstruationIfNeeded(entities)));
     });
-    _userStreamCanceller?.cancel();
-    _userStreamCanceller = userService.subscribe().listen((user) {
-      state = state.copyWith(isPremium: user.isPremium, isTrial: user.isTrial);
-    });
   }
 
   @override
   void dispose() {
     _menstruationCanceller?.cancel();
-    _userStreamCanceller?.cancel();
     super.dispose();
   }
 }
