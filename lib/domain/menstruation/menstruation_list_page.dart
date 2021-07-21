@@ -36,19 +36,19 @@ class MenstruationListPage extends HookWidget {
       ),
       body: SafeArea(
         child: Container(
-            color: PilllColors.white,
-            child: ListView.builder(
-                padding: const EdgeInsets.all(32),
-                itemCount: state.rows.length,
-                itemBuilder: (context, index) {
-                  final rowState = state.rows[index];
-                  return Column(
-                    children: [
-                      MenstruationHistoryRow(state: rowState),
-                      SizedBox(height: 8),
-                    ],
-                  );
-                })),
+          color: PilllColors.white,
+          child: ListView(
+            padding: const EdgeInsets.all(32),
+            children: [
+              ...state.allRows.map((row) {
+                return [
+                  MenstruationHistoryRow(state: row),
+                  SizedBox(height: 8),
+                ];
+              }).expand((element) => element),
+            ],
+          ),
+        ),
       ),
     );
   }

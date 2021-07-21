@@ -9,7 +9,7 @@ import 'package:flutter/material.dart';
 import 'package:pilll/entity/weekday.dart';
 import 'package:pilll/util/datetime/day.dart';
 
-part 'menstruation.freezed.dart';
+part 'menstruation_state.freezed.dart';
 
 @freezed
 abstract class MenstruationState implements _$MenstruationState {
@@ -19,6 +19,9 @@ abstract class MenstruationState implements _$MenstruationState {
     @Default(0) int currentCalendarIndex,
     @Default([]) List<Diary> diariesForMonth,
     @Default([]) List<Menstruation> entities,
+    @Default(false) bool isPremium,
+    @Default(false) bool isTrial,
+    DateTime? trialDeadlineDate,
     Setting? setting,
     PillSheet? latestPillSheet,
   }) = _MenstruationState;

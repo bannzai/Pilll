@@ -8,6 +8,6 @@ abstract class MenstruationListState implements _$MenstruationListState {
   MenstruationListState._();
   factory MenstruationListState({
     @Default(true) bool isNotYetLoaded,
-    @Default([]) List<MenstruationHistoryRowState> rows,
+    @Default([]) List<MenstruationHistoryRowState> allRows,
   }) = _MenstruationListState;
 }

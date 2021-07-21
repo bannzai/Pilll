@@ -20,7 +20,7 @@ import 'package:pilll/domain/menstruation/menstruation_history_card.dart';
 import 'package:pilll/domain/menstruation/menstruation_select_modify_type_sheet.dart';
 import 'package:pilll/domain/record/weekday_badge.dart';
 import 'package:pilll/entity/weekday.dart';
-import 'package:pilll/store/menstruation.dart';
+import 'package:pilll/domain/menstruation/menstruation_store.dart';
 import 'package:pilll/util/datetime/day.dart';
 import 'package:pilll/util/formatter/date_time_formatter.dart';
 import 'package:scrollable_positioned_list/scrollable_positioned_list.dart';

@@ -3,32 +3,38 @@ import 'dart:async';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/components/organisms/calendar/utility.dart';
 import 'package:pilll/domain/menstruation/menstruation_card_state.dart';
-import 'package:pilll/domain/menstruation/menstruation_history_card.dart';
+import 'package:pilll/domain/menstruation/menstruation_history_card_state.dart';
 import 'package:pilll/entity/menstruation.dart';
 import 'package:pilll/service/diary.dart';
 import 'package:pilll/service/menstruation.dart';
 import 'package:pilll/service/pill_sheet.dart';
 import 'package:pilll/service/setting.dart';
-import 'package:pilll/state/menstruation.dart';
+import 'package:pilll/domain/menstruation/menstruation_state.dart';
+import 'package:pilll/service/user.dart';
 import 'package:pilll/util/datetime/day.dart';
 
-final menstruationsStoreProvider = StateNotifierProvider((ref) =>
-    MenstruationStore(
-        menstruationService: ref.watch(menstruationServiceProvider),
-        diaryService: ref.watch(diaryServiceProvider),
-        settingService: ref.watch(settingServiceProvider),
-        pillSheetService: ref.watch(pillSheetServiceProvider)));
+final menstruationsStoreProvider = StateNotifierProvider(
+  (ref) => MenstruationStore(
+    menstruationService: ref.watch(menstruationServiceProvider),
+    diaryService: ref.watch(diaryServiceProvider),
+    settingService: ref.watch(settingServiceProvider),
+    pillSheetService: ref.watch(pillSheetServiceProvider),
+    userService: ref.watch(userServiceProvider),
+  ),
+);
 
 class MenstruationStore extends StateNotifier<MenstruationState> {
   final MenstruationService menstruationService;
   final DiaryService diaryService;
   final SettingService settingService;
   final PillSheetService pillSheetService;
+  final UserService userService;
   MenstruationStore({
     required this.menstruationService,
     required this.diaryService,
     required this.settingService,
     required this.pillSheetService,
+    required this.userService,
   }) : super(MenstruationState()) {
     _reset();
   }
@@ -40,12 +46,17 @@ class MenstruationStore extends StateNotifier<MenstruationState> {
       final diaries = await diaryService.fetchListAround90Days(today());
       final setting = await settingService.fetch();
       final latestPillSheet = await pillSheetService.fetchLast();
+      final user = await userService.fetch();
       state = state.copyWith(
-          entities: menstruations,
-          diariesForMonth: diaries,
-          isNotYetLoaded: false,
-          setting: setting,
-          latestPillSheet: latestPillSheet);
+        entities: menstruations,
+        diariesForMonth: diaries,
+        isNotYetLoaded: false,
+        setting: setting,
+        latestPillSheet: latestPillSheet,
+        isPremium: user.isPremium,
+        isTrial: user.isTrial,
+        trialDeadlineDate: user.trialDeadlineDate,
+      );
       _subscribe();
     });
   }
@@ -54,6 +65,7 @@ class MenstruationStore extends StateNotifier<MenstruationState> {
   StreamSubscription? _diaryCanceller;
   StreamSubscription? _settingCanceller;
   StreamSubscription? _pillSheetCanceller;
+  StreamSubscription? _userCanceller;
   void _subscribe() {
     _menstruationCanceller?.cancel();
     _menstruationCanceller =
@@ -73,6 +85,14 @@ class MenstruationStore extends StateNotifier<MenstruationState> {
         pillSheetService.subscribeForLatestPillSheet().listen((pillSheet) {
       state = state.copyWith(latestPillSheet: pillSheet);
     });
+    _userCanceller?.cancel();
+    _userCanceller = userService.subscribe().listen((user) {
+      state = state.copyWith(
+        isPremium: user.isPremium,
+        isTrial: user.isTrial,
+        trialDeadlineDate: user.trialDeadlineDate,
+      );
+    });
   }
 
   @override
@@ -81,6 +101,7 @@ class MenstruationStore extends StateNotifier<MenstruationState> {
     _diaryCanceller?.cancel();
     _settingCanceller?.cancel();
     _pillSheetCanceller?.cancel();
+    _userCanceller?.cancel();
     super.dispose();
   }
 
@@ -171,7 +192,13 @@ class MenstruationStore extends StateNotifier<MenstruationState> {
         latestMenstruation.dateRange.inRange(today())) {
       return null;
     }
-    return MenstruationHistoryCardState(state.entities, latestMenstruation);
+    return MenstruationHistoryCardState(
+      allMenstruations: state.entities,
+      latestMenstruation: latestMenstruation,
+      isPremium: state.isPremium,
+      isTrial: state.isTrial,
+      trialDeadlineDate: state.trialDeadlineDate,
+    );
   }
 }
 
