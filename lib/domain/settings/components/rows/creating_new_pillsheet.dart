@@ -71,8 +71,6 @@ class CreatingNewPillSheetRow extends HookWidget {
         }
       },
       value: setting.isAutomaticallyCreatePillSheet,
-      // NOTE: when configured subtitle, the space between elements becomes very narrow
-      contentPadding: EdgeInsets.fromLTRB(14, 8, 6, 8),
     );
   }
 }
