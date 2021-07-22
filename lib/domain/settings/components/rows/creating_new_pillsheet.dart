@@ -31,7 +31,7 @@ class CreatingNewPillSheetRow extends HookWidget {
     return SwitchListTile(
       title: Row(
         children: [
-          Text("ピルシートの自動作成", style: FontType.listRow),
+          Text("ピルシートの自動追加", style: FontType.listRow),
           if (!isPremium) ...[
             SizedBox(width: 8),
             PremiumBadge(),
@@ -57,7 +57,7 @@ class CreatingNewPillSheetRow extends HookWidget {
               SnackBar(
                 duration: Duration(seconds: 2),
                 content: Text(
-                  "ピルシートの自動作成を${setting.isAutomaticallyCreatePillSheet ? "ON" : "OFF"}にしました",
+                  "ピルシートの自動追加を${setting.isAutomaticallyCreatePillSheet ? "ON" : "OFF"}にしました",
                 ),
               ),
             );
