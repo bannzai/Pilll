@@ -71,6 +71,7 @@ class CreatingNewPillSheetRow extends HookWidget {
         }
       },
       value: setting.isAutomaticallyCreatePillSheet,
+      contentPadding: EdgeInsets.fromLTRB(14, 0, 6, 0),
     );
   }
 }
