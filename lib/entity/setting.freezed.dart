@@ -207,7 +207,8 @@ class _$SettingTearOff {
       @JsonSerializable(explicitToJson: true) required bool isOnReminder,
       bool isOnNotifyInNotTakenDuration = true,
       PillSheetAppearanceMode pillSheetAppearanceMode =
-          PillSheetAppearanceMode.number}) {
+          PillSheetAppearanceMode.number,
+      bool isAutomaticallyCreatePillSheet = false}) {
     return _Setting(
       pillSheetTypeRawPath: pillSheetTypeRawPath,
       pillNumberForFromMenstruation: pillNumberForFromMenstruation,
@@ -216,6 +217,7 @@ class _$SettingTearOff {
       isOnReminder: isOnReminder,
       isOnNotifyInNotTakenDuration: isOnNotifyInNotTakenDuration,
       pillSheetAppearanceMode: pillSheetAppearanceMode,
+      isAutomaticallyCreatePillSheet: isAutomaticallyCreatePillSheet,
     );
   }
 
@@ -238,6 +240,7 @@ mixin _$Setting {
   bool get isOnNotifyInNotTakenDuration => throw _privateConstructorUsedError;
   PillSheetAppearanceMode get pillSheetAppearanceMode =>
       throw _privateConstructorUsedError;
+  bool get isAutomaticallyCreatePillSheet => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -255,7 +258,8 @@ abstract class $SettingCopyWith<$Res> {
       List<ReminderTime> reminderTimes,
       @JsonSerializable(explicitToJson: true) bool isOnReminder,
       bool isOnNotifyInNotTakenDuration,
-      PillSheetAppearanceMode pillSheetAppearanceMode});
+      PillSheetAppearanceMode pillSheetAppearanceMode,
+      bool isAutomaticallyCreatePillSheet});
 }
 
 /// @nodoc
@@ -275,6 +279,7 @@ class _$SettingCopyWithImpl<$Res> implements $SettingCopyWith<$Res> {
     Object? isOnReminder = freezed,
     Object? isOnNotifyInNotTakenDuration = freezed,
     Object? pillSheetAppearanceMode = freezed,
+    Object? isAutomaticallyCreatePillSheet = freezed,
   }) {
     return _then(_value.copyWith(
       pillSheetTypeRawPath: pillSheetTypeRawPath == freezed
@@ -305,6 +310,10 @@ class _$SettingCopyWithImpl<$Res> implements $SettingCopyWith<$Res> {
           ? _value.pillSheetAppearanceMode
           : pillSheetAppearanceMode // ignore: cast_nullable_to_non_nullable
               as PillSheetAppearanceMode,
+      isAutomaticallyCreatePillSheet: isAutomaticallyCreatePillSheet == freezed
+          ? _value.isAutomaticallyCreatePillSheet
+          : isAutomaticallyCreatePillSheet // ignore: cast_nullable_to_non_nullable
+              as bool,
     ));
   }
 }
@@ -321,7 +330,8 @@ abstract class _$SettingCopyWith<$Res> implements $SettingCopyWith<$Res> {
       List<ReminderTime> reminderTimes,
       @JsonSerializable(explicitToJson: true) bool isOnReminder,
       bool isOnNotifyInNotTakenDuration,
-      PillSheetAppearanceMode pillSheetAppearanceMode});
+      PillSheetAppearanceMode pillSheetAppearanceMode,
+      bool isAutomaticallyCreatePillSheet});
 }
 
 /// @nodoc
@@ -342,6 +352,7 @@ class __$SettingCopyWithImpl<$Res> extends _$SettingCopyWithImpl<$Res>
     Object? isOnReminder = freezed,
     Object? isOnNotifyInNotTakenDuration = freezed,
     Object? pillSheetAppearanceMode = freezed,
+    Object? isAutomaticallyCreatePillSheet = freezed,
   }) {
     return _then(_Setting(
       pillSheetTypeRawPath: pillSheetTypeRawPath == freezed
@@ -372,6 +383,10 @@ class __$SettingCopyWithImpl<$Res> extends _$SettingCopyWithImpl<$Res>
           ? _value.pillSheetAppearanceMode
           : pillSheetAppearanceMode // ignore: cast_nullable_to_non_nullable
               as PillSheetAppearanceMode,
+      isAutomaticallyCreatePillSheet: isAutomaticallyCreatePillSheet == freezed
+          ? _value.isAutomaticallyCreatePillSheet
+          : isAutomaticallyCreatePillSheet // ignore: cast_nullable_to_non_nullable
+              as bool,
     ));
   }
 }
@@ -387,7 +402,8 @@ class _$_Setting extends _Setting with DiagnosticableTreeMixin {
       this.reminderTimes = const [],
       @JsonSerializable(explicitToJson: true) required this.isOnReminder,
       this.isOnNotifyInNotTakenDuration = true,
-      this.pillSheetAppearanceMode = PillSheetAppearanceMode.number})
+      this.pillSheetAppearanceMode = PillSheetAppearanceMode.number,
+      this.isAutomaticallyCreatePillSheet = false})
       : super._();
 
   factory _$_Setting.fromJson(Map<String, dynamic> json) =>
@@ -411,10 +427,13 @@ class _$_Setting extends _Setting with DiagnosticableTreeMixin {
   @JsonKey(defaultValue: PillSheetAppearanceMode.number)
   @override
   final PillSheetAppearanceMode pillSheetAppearanceMode;
+  @JsonKey(defaultValue: false)
+  @override
+  final bool isAutomaticallyCreatePillSheet;
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'Setting(pillSheetTypeRawPath: $pillSheetTypeRawPath, pillNumberForFromMenstruation: $pillNumberForFromMenstruation, durationMenstruation: $durationMenstruation, reminderTimes: $reminderTimes, isOnReminder: $isOnReminder, isOnNotifyInNotTakenDuration: $isOnNotifyInNotTakenDuration, pillSheetAppearanceMode: $pillSheetAppearanceMode)';
+    return 'Setting(pillSheetTypeRawPath: $pillSheetTypeRawPath, pillNumberForFromMenstruation: $pillNumberForFromMenstruation, durationMenstruation: $durationMenstruation, reminderTimes: $reminderTimes, isOnReminder: $isOnReminder, isOnNotifyInNotTakenDuration: $isOnNotifyInNotTakenDuration, pillSheetAppearanceMode: $pillSheetAppearanceMode, isAutomaticallyCreatePillSheet: $isAutomaticallyCreatePillSheet)';
   }
 
   @override
@@ -431,7 +450,9 @@ class _$_Setting extends _Setting with DiagnosticableTreeMixin {
       ..add(DiagnosticsProperty(
           'isOnNotifyInNotTakenDuration', isOnNotifyInNotTakenDuration))
       ..add(DiagnosticsProperty(
-          'pillSheetAppearanceMode', pillSheetAppearanceMode));
+          'pillSheetAppearanceMode', pillSheetAppearanceMode))
+      ..add(DiagnosticsProperty(
+          'isAutomaticallyCreatePillSheet', isAutomaticallyCreatePillSheet));
   }
 
   @override
@@ -463,7 +484,12 @@ class _$_Setting extends _Setting with DiagnosticableTreeMixin {
             (identical(
                     other.pillSheetAppearanceMode, pillSheetAppearanceMode) ||
                 const DeepCollectionEquality().equals(
-                    other.pillSheetAppearanceMode, pillSheetAppearanceMode)));
+                    other.pillSheetAppearanceMode, pillSheetAppearanceMode)) &&
+            (identical(other.isAutomaticallyCreatePillSheet,
+                    isAutomaticallyCreatePillSheet) ||
+                const DeepCollectionEquality().equals(
+                    other.isAutomaticallyCreatePillSheet,
+                    isAutomaticallyCreatePillSheet)));
   }
 
   @override
@@ -475,7 +501,8 @@ class _$_Setting extends _Setting with DiagnosticableTreeMixin {
       const DeepCollectionEquality().hash(reminderTimes) ^
       const DeepCollectionEquality().hash(isOnReminder) ^
       const DeepCollectionEquality().hash(isOnNotifyInNotTakenDuration) ^
-      const DeepCollectionEquality().hash(pillSheetAppearanceMode);
+      const DeepCollectionEquality().hash(pillSheetAppearanceMode) ^
+      const DeepCollectionEquality().hash(isAutomaticallyCreatePillSheet);
 
   @JsonKey(ignore: true)
   @override
@@ -496,7 +523,8 @@ abstract class _Setting extends Setting {
       List<ReminderTime> reminderTimes,
       @JsonSerializable(explicitToJson: true) required bool isOnReminder,
       bool isOnNotifyInNotTakenDuration,
-      PillSheetAppearanceMode pillSheetAppearanceMode}) = _$_Setting;
+      PillSheetAppearanceMode pillSheetAppearanceMode,
+      bool isAutomaticallyCreatePillSheet}) = _$_Setting;
   _Setting._() : super._();
 
   factory _Setting.fromJson(Map<String, dynamic> json) = _$_Setting.fromJson;
@@ -517,6 +545,8 @@ abstract class _Setting extends Setting {
   @override
   PillSheetAppearanceMode get pillSheetAppearanceMode =>
       throw _privateConstructorUsedError;
+  @override
+  bool get isAutomaticallyCreatePillSheet => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$SettingCopyWith<_Setting> get copyWith =>
