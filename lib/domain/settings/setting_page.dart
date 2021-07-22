@@ -84,7 +84,14 @@ class SettingPage extends HookWidget {
                         _separator(),
                         PillSheetRemoveRow(),
                         _separator(),
-                      ]
+                      ],
+                      CreatingNewPillSheetRow(
+                        setting: setting,
+                        isPremium: state.isPremium,
+                        isTrial: state.isTrial,
+                        trialDeadlineDate: state.trialDeadlineDate,
+                      ),
+                      _separator(),
                     ],
                   );
                 case SettingSection.notification:
@@ -94,13 +101,6 @@ class SettingPage extends HookWidget {
                       TakingPillNotification(setting: setting),
                       _separator(),
                       NotificationTimeRow(setting: setting),
-                      _separator(),
-                      CreatingNewPillSheetRow(
-                        setting: setting,
-                        isPremium: state.isPremium,
-                        isTrial: state.isTrial,
-                        trialDeadlineDate: state.trialDeadlineDate,
-                      ),
                       _separator(),
                       if (pillSheet != null && pillSheet.hasRestDuration) ...[
                         NotificationInRestDuration(
