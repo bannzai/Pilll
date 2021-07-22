@@ -4,15 +4,24 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/analytics.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
+import 'package:pilll/domain/premium_introduction/premium_introduction_sheet.dart';
+import 'package:pilll/domain/premium_trial/premium_trial_complete_modal.dart';
+import 'package:pilll/domain/premium_trial/premium_trial_modal.dart';
 import 'package:pilll/domain/settings/setting_page_store.dart';
 import 'package:pilll/entity/setting.dart';
 
 class CreatingNewPillSheetRow extends HookWidget {
   final Setting setting;
+  final bool isTrial;
+  final bool isPremium;
+  final DateTime? trialDeadlineDate;
 
   const CreatingNewPillSheetRow({
     Key? key,
     required this.setting,
+    required this.isTrial,
+    required this.isPremium,
+    required this.trialDeadlineDate,
   }) : super(key: key);
 
   @override
@@ -25,24 +34,32 @@ class CreatingNewPillSheetRow extends HookWidget {
         analytics.logEvent(
           name: "toggle_creating_new_pillsheet",
         );
-        ScaffoldMessenger.of(context).hideCurrentSnackBar();
-        store
-            .modifiyIsAutomaticallyCreatePillSheet(
-                !setting.isAutomaticallyCreatePillSheet)
-            .then((state) {
-          final setting = state.entity;
-          if (setting == null) {
-            return null;
-          }
-          ScaffoldMessenger.of(context).showSnackBar(
-            SnackBar(
-              duration: Duration(seconds: 2),
-              content: Text(
-                "ピルシートの自動作成を${setting.isAutomaticallyCreatePillSheet ? "ON" : "OFF"}にしました",
+        if (isPremium || isTrial) {
+          ScaffoldMessenger.of(context).hideCurrentSnackBar();
+          store
+              .modifiyIsAutomaticallyCreatePillSheet(
+                  !setting.isAutomaticallyCreatePillSheet)
+              .then((state) {
+            final setting = state.entity;
+            if (setting == null) {
+              return null;
+            }
+            ScaffoldMessenger.of(context).showSnackBar(
+              SnackBar(
+                duration: Duration(seconds: 2),
+                content: Text(
+                  "ピルシートの自動作成を${setting.isAutomaticallyCreatePillSheet ? "ON" : "OFF"}にしました",
+                ),
               ),
-            ),
-          );
-        });
+            );
+          });
+        } else if (trialDeadlineDate == null) {
+          showPremiumTrialModal(context, () {
+            showPremiumTrialCompleteModalPreDialog(context);
+          });
+        } else if (!isPremium) {
+          showPremiumIntroductionSheet(context);
+        }
       },
       value: setting.isAutomaticallyCreatePillSheet,
       // NOTE: when configured subtitle, the space between elements becomes very narrow
