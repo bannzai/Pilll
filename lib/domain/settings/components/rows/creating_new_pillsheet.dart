@@ -4,6 +4,7 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/analytics.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
+import 'package:pilll/components/molecules/premium_badge.dart';
 import 'package:pilll/domain/premium_introduction/premium_introduction_sheet.dart';
 import 'package:pilll/domain/premium_trial/premium_trial_complete_modal.dart';
 import 'package:pilll/domain/premium_trial/premium_trial_modal.dart';
@@ -28,7 +29,15 @@ class CreatingNewPillSheetRow extends HookWidget {
   Widget build(BuildContext context) {
     final store = useProvider(settingStoreProvider);
     return SwitchListTile(
-      title: Text("ピルシートの自動作成", style: FontType.listRow),
+      title: Row(
+        children: [
+          Text("ピルシートの自動作成", style: FontType.listRow),
+          if (!isPremium) ...[
+            SizedBox(width: 8),
+            PremiumBadge(),
+          ]
+        ],
+      ),
       activeColor: PilllColors.primary,
       onChanged: (bool value) {
         analytics.logEvent(
