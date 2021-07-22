@@ -70,7 +70,7 @@ class CreatingNewPillSheetRow extends HookWidget {
           showPremiumIntroductionSheet(context);
         }
       },
-      value: setting.isAutomaticallyCreatePillSheet,
+      value: setting.isAutomaticallyCreatePillSheet && (isPremium || isTrial),
       contentPadding: EdgeInsets.fromLTRB(14, 0, 6, 0),
     );
   }
