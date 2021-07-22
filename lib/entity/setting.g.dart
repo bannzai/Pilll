@@ -35,6 +35,8 @@ _$_Setting _$_$_SettingFromJson(Map<String, dynamic> json) {
             _$PillSheetAppearanceModeEnumMap,
             json['pillSheetAppearanceMode']) ??
         PillSheetAppearanceMode.number,
+    isAutomaticallyCreatePillSheet:
+        json['isAutomaticallyCreatePillSheet'] as bool? ?? false,
   );
 }
 
@@ -48,6 +50,7 @@ Map<String, dynamic> _$_$_SettingToJson(_$_Setting instance) =>
       'isOnNotifyInNotTakenDuration': instance.isOnNotifyInNotTakenDuration,
       'pillSheetAppearanceMode':
           _$PillSheetAppearanceModeEnumMap[instance.pillSheetAppearanceMode],
+      'isAutomaticallyCreatePillSheet': instance.isAutomaticallyCreatePillSheet,
     };
 
 K _$enumDecode<K, V>(

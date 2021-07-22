@@ -42,7 +42,7 @@ class PillSheetAppearanceModeRow extends HookWidget {
         ],
       ),
       trailing: Switch(
-        value: isOn,
+        value: (isOn && (isPremium || isTrial)),
         onChanged: (value) => _onChanged(context, value, store),
       ),
       onTap: () => _onChanged(context, !isOn, store),

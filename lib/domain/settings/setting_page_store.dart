@@ -201,4 +201,14 @@ class SettingStateStore extends StateNotifier<SettingState> {
         .update(updated)
         .then((value) => state = state.copyWith(entity: value));
   }
+
+  Future<SettingState> modifiyIsAutomaticallyCreatePillSheet(bool isOn) {
+    final entity = state.entity;
+    if (entity == null) {
+      throw FormatException("setting entity not found");
+    }
+    return _service
+        .update(entity.copyWith(isAutomaticallyCreatePillSheet: isOn))
+        .then((entity) => state = state.copyWith(entity: entity));
+  }
 }

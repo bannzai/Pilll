@@ -65,6 +65,7 @@ abstract class Setting implements _$Setting {
     @Default(true) bool isOnNotifyInNotTakenDuration,
     @Default(PillSheetAppearanceMode.number)
         PillSheetAppearanceMode pillSheetAppearanceMode,
+    @Default(false) bool isAutomaticallyCreatePillSheet,
   }) = _Setting;
 
   factory Setting.fromJson(Map<String, dynamic> json) =>

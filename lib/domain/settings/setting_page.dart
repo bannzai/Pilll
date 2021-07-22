@@ -1,6 +1,7 @@
 import 'package:pilll/analytics.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/page/discard_dialog.dart';
+import 'package:pilll/domain/settings/components/rows/creating_new_pillsheet.dart';
 import 'package:pilll/domain/settings/components/rows/menstruation.dart';
 import 'package:pilll/domain/settings/components/rows/account_link.dart';
 import 'package:pilll/domain/settings/components/rows/list_explain.dart';
@@ -83,7 +84,14 @@ class SettingPage extends HookWidget {
                         _separator(),
                         PillSheetRemoveRow(),
                         _separator(),
-                      ]
+                      ],
+                      CreatingNewPillSheetRow(
+                        setting: setting,
+                        isPremium: state.isPremium,
+                        isTrial: state.isTrial,
+                        trialDeadlineDate: state.trialDeadlineDate,
+                      ),
+                      _separator(),
                     ],
                   );
                 case SettingSection.notification:
