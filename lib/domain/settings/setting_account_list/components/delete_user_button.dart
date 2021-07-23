@@ -12,9 +12,8 @@ class DeleteUserButton extends StatelessWidget {
         onPressed: () {
           showDiscardDialog(
             context,
-            title: "ユーザーが削除されます",
-            message:
-                "退会をするとユーザーが削除されます。ユーザーが削除されたあとはすべてのデータが消え、二度と同じアカウントでログインができなくなります。",
+            title: "ユーザー情報が削除されます",
+            message: "退会をするとすべてデータが削除され、二度と同じアカウントでログインができなくなります。",
             doneText: "退会する",
             done: () async {
               try {
