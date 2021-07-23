@@ -87,7 +87,7 @@ Apple Watchからも服用記録ができます。
 }
 
 showReleaseNotePreDialog(BuildContext context) async {
-  final key = ReleaseNoteKey.version3_0_0;
+  final key = ReleaseNoteKey.version3_1_0;
   final storage = await SharedPreferences.getInstance();
   if (storage.getBool(key) ?? false) {
     return;
@@ -105,7 +105,7 @@ openReleaseNote() async {
   final ChromeSafariBrowser browser = new ChromeSafariBrowser();
   await browser.open(
       url: Uri.parse(
-          "https://pilll.anotion.so/6b4ac5d845f24f7ca864f6b501690694"),
+          "https://pilll.anotion.so/8cfba3bf53f04df08bf45f7265c5e423"),
       options: ChromeSafariBrowserClassOptions(
           android:
               AndroidChromeCustomTabsOptions(addDefaultShareMenuItem: false),
