@@ -39,7 +39,7 @@ class CreatingNewPillSheetRow extends HookWidget {
         ],
       ),
       subtitle:
-          Text("ピルシートすべてを服用した場合、新しいシートを自動で追加します。", style: FontType.assisting),
+          Text("1シートすべて服用済みの場合、新しいシートを自動で追加します", style: FontType.assisting),
       activeColor: PilllColors.primary,
       onChanged: (bool value) {
         analytics.logEvent(
