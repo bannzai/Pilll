@@ -72,7 +72,9 @@ class PremiumTrialModalStateStore
     }
     try {
       await _userService.trial(setting.copyWith(
-          pillSheetAppearanceMode: PillSheetAppearanceMode.date));
+        pillSheetAppearanceMode: PillSheetAppearanceMode.date,
+        isAutomaticallyCreatePillSheet: true,
+      ));
     } catch (exception, stack) {
       errorLogger.recordError(exception, stack);
       throw UserDisplayedError("エラーが発生しました。通信環境をお確かめのうえ再度お試しください");
