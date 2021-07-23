@@ -4,6 +4,12 @@ import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/domain/premium_introduction/premium_introduction_sheet.dart';
 
 class PremiumIntroductionRow extends StatelessWidget {
+  final bool isPremium;
+
+  const PremiumIntroductionRow({
+    Key? key,
+    required this.isPremium,
+  }) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return ListTile(
@@ -12,6 +18,7 @@ class PremiumIntroductionRow extends StatelessWidget {
       },
       title: Text("Pilllプレミアム",
           style: FontType.assisting.merge(TextColorStyle.black)),
+      trailing: isPremium ? Text("プレミアムユーザー") : null,
     );
   }
 }

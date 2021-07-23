@@ -65,7 +65,7 @@ class SettingPage extends HookWidget {
                           text: "機種変更やスマホ紛失時など、データの引き継ぎ・復元には、アカウント登録が必要です。"),
                       AccountLinkRow(),
                       _separator(),
-                      PremiumIntroductionRow(),
+                      PremiumIntroductionRow(isPremium: state.isPremium),
                       _separator(),
                     ],
                   );
