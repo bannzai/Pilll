@@ -5,7 +5,7 @@ import 'package:pilll/auth/apple.dart';
 import 'package:pilll/auth/google.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
-import 'package:pilll/domain/settings/setting_account_cooperation_list_page.dart';
+import 'package:pilll/domain/settings/setting_account_list/setting_account_cooperation_list_page.dart';
 
 class AccountLinkRow extends StatelessWidget {
   @override

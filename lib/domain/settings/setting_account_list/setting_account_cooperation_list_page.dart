@@ -10,7 +10,7 @@ import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/components/page/hud.dart';
 import 'package:pilll/domain/demography/demography_page.dart';
-import 'package:pilll/domain/settings/setting_account_cooperation_list_page_store.dart';
+import 'package:pilll/domain/settings/setting_account_list/setting_account_cooperation_list_page_store.dart';
 import 'package:pilll/entity/link_account_type.dart';
 import 'package:pilll/entity/user_error.dart';
 import 'package:pilll/error/error_alert.dart';

@@ -4,7 +4,7 @@ import 'package:firebase_auth/firebase_auth.dart';
 import 'package:pilll/auth/apple.dart';
 import 'package:pilll/auth/boilerplate.dart';
 import 'package:pilll/auth/google.dart';
-import 'package:pilll/domain/settings/setting_account_cooperation_list_page_state.dart';
+import 'package:pilll/domain/settings/setting_account_list/setting_account_cooperation_list_page_state.dart';
 import 'package:pilll/service/auth.dart';
 import 'package:pilll/service/user.dart';
 import 'package:riverpod/riverpod.dart';
