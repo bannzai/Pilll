@@ -1,4 +1,3 @@
-import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:pilll/service/auth.dart';
 import 'package:pilll/database/database.dart';
 import 'package:pilll/domain/home/home_page.dart';
@@ -33,10 +32,6 @@ class RootState extends State<Root> {
     setState(() {
       screenType = ScreenType.home;
     });
-  }
-
-  showInitialSetting() {
-    reload();
   }
 
   reload() {
