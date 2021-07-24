@@ -75,7 +75,7 @@ class PremiumIntroductionSheet extends HookWidget {
                           if (!state.isPremium) ...[
                             if (state.hasDiscountEntitlement)
                               PremiumIntroductionDiscountRow(
-                                discountDeadlineDate:
+                                discountEntitlementDeadlineDate:
                                     discountEntitlementDeadlineDate,
                               ),
                             if (offerings != null) ...[

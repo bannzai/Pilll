@@ -7,17 +7,18 @@ import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/domain/premium_introduction/util/discount_deadline.dart';
 
 class PremiumIntroductionDiscountRow extends HookWidget {
-  final DateTime? discountDeadlineDate;
+  final DateTime? discountEntitlementDeadlineDate;
 
   const PremiumIntroductionDiscountRow(
-      {Key? key, required this.discountDeadlineDate})
+      {Key? key, required this.discountEntitlementDeadlineDate})
       : super(key: key);
   Widget build(BuildContext context) {
-    final discountDeadlineDate = this.discountDeadlineDate;
+    final discountEntitlementDeadlineDate =
+        this.discountEntitlementDeadlineDate;
     final String? countdown;
-    if (discountDeadlineDate != null) {
-      final diff =
-          useProvider(durationToDiscountPriceDeadline(discountDeadlineDate));
+    if (discountEntitlementDeadlineDate != null) {
+      final diff = useProvider(
+          durationToDiscountPriceDeadline(discountEntitlementDeadlineDate));
       countdown = discountPriceDeadlineCountdownString(diff);
     } else {
       countdown = null;
