@@ -74,7 +74,7 @@ void main() {
     group('user has discount entitlements', () {
       final hasDiscountEntitlement = true;
       final isOverDiscountDeadline = false;
-      testWidgets('#PremiumIntroductionLimited is found',
+      testWidgets('#PremiumIntroductionDiscountRow is found',
           (WidgetTester tester) async {
         var state = PremiumIntroductionState();
         state = state.copyWith(
