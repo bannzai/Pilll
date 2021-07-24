@@ -10,7 +10,7 @@ import 'package:pilll/components/molecules/indicator.dart';
 import 'package:pilll/components/page/hud.dart';
 import 'package:pilll/domain/premium_introduction/components/premium_introduction_footer.dart';
 import 'package:pilll/domain/premium_introduction/components/premium_introduction_header.dart';
-import 'package:pilll/domain/premium_introduction/components/premium_introduction_discount_countdown.dart';
+import 'package:pilll/domain/premium_introduction/components/premium_introduction_discount.dart';
 import 'package:pilll/domain/premium_introduction/components/premium_user_info.dart';
 import 'package:pilll/domain/premium_introduction/components/purchase_buttons.dart';
 import 'package:pilll/domain/premium_introduction/premium_introduction_store.dart';
@@ -79,7 +79,7 @@ class PremiumIntroductionSheet extends HookWidget {
                           ],
                           if (!state.isPremium) ...[
                             if (state.hasDiscountEntitlement)
-                              PremiumIntroductionDiscountCountdown(
+                              PremiumIntroductionDiscountRow(
                                 discountDeadlineDate:
                                     discountEntitlementDeadlineDate,
                               ),

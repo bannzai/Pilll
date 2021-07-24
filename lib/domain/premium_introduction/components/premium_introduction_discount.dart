@@ -6,10 +6,10 @@ import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/domain/premium_introduction/util/discount_deadline.dart';
 
-class PremiumIntroductionDiscountCountdown extends HookWidget {
+class PremiumIntroductionDiscountRow extends HookWidget {
   final DateTime? discountDeadlineDate;
 
-  const PremiumIntroductionDiscountCountdown(
+  const PremiumIntroductionDiscountRow(
       {Key? key, required this.discountDeadlineDate})
       : super(key: key);
   Widget build(BuildContext context) {

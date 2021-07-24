@@ -1,5 +1,5 @@
 import 'package:pilll/analytics.dart';
-import 'package:pilll/domain/premium_introduction/components/premium_introduction_discount_countdown.dart';
+import 'package:pilll/domain/premium_introduction/components/premium_introduction_discount.dart';
 import 'package:pilll/domain/premium_introduction/components/purchase_buttons_state.dart';
 import 'package:pilll/domain/premium_introduction/components/purchase_buttons_store.dart';
 import 'package:pilll/domain/premium_introduction/premium_introduction_sheet.dart';
@@ -109,7 +109,7 @@ void main() {
 
         expect(
           find.byWidgetPredicate(
-              (widget) => widget is PremiumIntroductionDiscountCountdown),
+              (widget) => widget is PremiumIntroductionDiscountRow),
           findsOneWidget,
         );
       });
@@ -157,7 +157,7 @@ void main() {
 
         expect(
           find.byWidgetPredicate(
-              (widget) => widget is PremiumIntroductionDiscountCountdown),
+              (widget) => widget is PremiumIntroductionDiscountRow),
           findsNothing,
         );
       });
@@ -205,7 +205,7 @@ void main() {
 
         expect(
           find.byWidgetPredicate(
-              (widget) => widget is PremiumIntroductionDiscountCountdown),
+              (widget) => widget is PremiumIntroductionDiscountRow),
           findsNothing,
         );
       });
@@ -252,7 +252,7 @@ void main() {
 
         expect(
           find.byWidgetPredicate(
-              (widget) => widget is PremiumIntroductionDiscountCountdown),
+              (widget) => widget is PremiumIntroductionDiscountRow),
           findsNothing,
         );
       });
