@@ -18,12 +18,14 @@ class PurchaseButtons extends HookWidget {
   final Offerings offerings;
   final DateTime? discountEntitlementDeadlineDate;
   final bool hasDiscountEntitlement;
+  final bool isPremium;
 
   const PurchaseButtons({
     Key? key,
     required this.offerings,
     required this.discountEntitlementDeadlineDate,
     required this.hasDiscountEntitlement,
+    required this.isPremium,
   }) : super(key: key);
 
   @override

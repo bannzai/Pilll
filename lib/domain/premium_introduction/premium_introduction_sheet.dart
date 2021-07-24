@@ -54,7 +54,7 @@ class PremiumIntroductionSheet extends HookWidget {
                     Container(
                       decoration: BoxDecoration(
                         color: Colors.transparent,
-                        image: !isOverDiscountDeadline
+                        image: !state.isPremium && !isOverDiscountDeadline
                             ? DecorationImage(
                                 image:
                                     AssetImage("images/premium_background.png"),
@@ -72,7 +72,8 @@ class PremiumIntroductionSheet extends HookWidget {
                         mainAxisSize: MainAxisSize.min,
                         children: [
                           PremiumIntroductionHeader(),
-                          if (discountEntitlementDeadlineDate != null &&
+                          if (!state.isPremium &&
+                              discountEntitlementDeadlineDate != null &&
                               !isOverDiscountDeadline &&
                               state.hasDiscountEntitlement)
                             PremiumIntroductionLimited(
