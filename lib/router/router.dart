@@ -34,5 +34,6 @@ class AppRouter {
     final storage = await SharedPreferences.getInstance();
     storage.setBool(BoolKey.didEndInitialSetting, false);
     Navigator.popUntil(context, (router) => router.isFirst);
+    rootKey.currentState?.showInitialSetting();
   }
 }
