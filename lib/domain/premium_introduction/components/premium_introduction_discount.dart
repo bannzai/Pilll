@@ -15,13 +15,20 @@ class PremiumIntroductionDiscountRow extends HookWidget {
   Widget build(BuildContext context) {
     final discountEntitlementDeadlineDate =
         this.discountEntitlementDeadlineDate;
+    final Duration? diff;
     final String? countdown;
     if (discountEntitlementDeadlineDate != null) {
-      final diff = useProvider(
+      final _diff = useProvider(
           durationToDiscountPriceDeadline(discountEntitlementDeadlineDate));
-      countdown = discountPriceDeadlineCountdownString(diff);
+      countdown = discountPriceDeadlineCountdownString(_diff);
+      diff = _diff;
     } else {
       countdown = null;
+      diff = null;
+    }
+
+    if (diff != null && diff.inSeconds < 0) {
+      return Container();
     }
 
     return Container(
