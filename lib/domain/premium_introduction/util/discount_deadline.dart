@@ -3,7 +3,11 @@ import 'package:pilll/util/datetime/timer.dart';
 import 'package:pilll/util/formatter/date_time_formatter.dart';
 
 final isOverDiscountDeadlineProvider =
-    Provider.family.autoDispose((ref, DateTime discountDeadlineDate) {
+    Provider.family.autoDispose((ref, DateTime? discountDeadlineDate) {
+  if (discountDeadlineDate == null) {
+    // NOTE: discountDeadlineDate が存在しない時はbackendの方でまだ期限を決めていないのでfalse状態で扱う
+    return false;
+  }
   final timer = ref.watch(timerStateProvider);
   return timer.isAfter(discountDeadlineDate);
 });

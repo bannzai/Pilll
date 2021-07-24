@@ -27,13 +27,8 @@ class PremiumIntroductionSheet extends HookWidget {
     final offerings = state.offerings;
     final discountEntitlementDeadlineDate =
         state.discountEntitlementDeadlineDate;
-    final bool isOverDiscountDeadline;
-    if (discountEntitlementDeadlineDate != null) {
-      isOverDiscountDeadline = useProvider(
-          isOverDiscountDeadlineProvider(discountEntitlementDeadlineDate));
-    } else {
-      isOverDiscountDeadline = false;
-    }
+    final isOverDiscountDeadline = useProvider(
+        isOverDiscountDeadlineProvider(discountEntitlementDeadlineDate));
     if (state.isNotYetLoad) {
       return Indicator();
     }

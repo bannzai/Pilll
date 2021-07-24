@@ -22,7 +22,7 @@ abstract class PurchaseButtonsState implements _$PurchaseButtonsState {
   factory PurchaseButtonsState({
     required Offerings offerings,
     required bool hasDiscountEntitlement,
-    required bool? isOverDiscountDeadline,
+    required bool isOverDiscountDeadline,
   }) = _PurchaseButtonsState;
 
   OfferingType get offeringType {
