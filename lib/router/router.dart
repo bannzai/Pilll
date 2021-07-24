@@ -28,4 +28,12 @@ class AppRouter {
         parameters: {"uid": FirebaseAuth.instance.currentUser?.uid});
     return endInitialSetting(context);
   }
+
+  static Future<void> routeToInitialSetting(BuildContext context) async {
+    analytics.logEvent(name: "route_to_initial_settings");
+    final storage = await SharedPreferences.getInstance();
+    storage.setBool(BoolKey.didEndInitialSetting, false);
+    Navigator.popUntil(context, (router) => router.isFirst);
+    rootKey.currentState?.reload();
+  }
 }

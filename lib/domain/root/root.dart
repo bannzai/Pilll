@@ -34,12 +34,6 @@ class RootState extends State<Root> {
     });
   }
 
-  showInitialSetting() {
-    setState(() {
-      screenType = ScreenType.initialSetting;
-    });
-  }
-
   reload() {
     setState(() {
       screenType = null;
