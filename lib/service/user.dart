@@ -234,6 +234,7 @@ class UserService {
       UserFirestoreFieldKeys.beginTrialDate: now(),
       UserFirestoreFieldKeys.trialDeadlineDate: now().add(Duration(days: 30)),
       UserFirestoreFieldKeys.settings: setting.toJson(),
+      UserFirestoreFieldKeys.hasDiscountEntitlement: true,
     }, SetOptions(merge: true));
   }
 }
