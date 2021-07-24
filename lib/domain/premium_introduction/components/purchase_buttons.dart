@@ -88,12 +88,9 @@ class PurchaseButtons extends HookWidget {
     final discountEntitlementDeadlineDate =
         this.discountEntitlementDeadlineDate;
     return PurchaseButtonsState(
-      offerings: offerings,
-      hasDiscountEntitlement: hasDiscountEntitlement,
-      isOverDiscountDeadline: discountEntitlementDeadlineDate != null
-          ? useProvider(
-              isOverDiscountDeadlineProvider(discountEntitlementDeadlineDate))
-          : null,
-    );
+        offerings: offerings,
+        hasDiscountEntitlement: hasDiscountEntitlement,
+        isOverDiscountDeadline: useProvider(
+            isOverDiscountDeadlineProvider(discountEntitlementDeadlineDate)));
   }
 }

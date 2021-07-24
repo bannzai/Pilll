@@ -10,7 +10,8 @@ import 'package:pilll/components/molecules/indicator.dart';
 import 'package:pilll/components/page/hud.dart';
 import 'package:pilll/domain/premium_introduction/components/premium_introduction_footer.dart';
 import 'package:pilll/domain/premium_introduction/components/premium_introduction_header.dart';
-import 'package:pilll/domain/premium_introduction/components/premium_introduction_limited.dart';
+import 'package:pilll/domain/premium_introduction/components/premium_introduction_discount.dart';
+import 'package:pilll/domain/premium_introduction/components/premium_user_thanks.dart';
 import 'package:pilll/domain/premium_introduction/components/purchase_buttons.dart';
 import 'package:pilll/domain/premium_introduction/premium_introduction_store.dart';
 import 'package:pilll/domain/premium_introduction/util/discount_deadline.dart';
@@ -26,13 +27,8 @@ class PremiumIntroductionSheet extends HookWidget {
     final offerings = state.offerings;
     final discountEntitlementDeadlineDate =
         state.discountEntitlementDeadlineDate;
-    final bool isOverDiscountDeadline;
-    if (discountEntitlementDeadlineDate != null) {
-      isOverDiscountDeadline = useProvider(
-          isOverDiscountDeadlineProvider(discountEntitlementDeadlineDate));
-    } else {
-      isOverDiscountDeadline = false;
-    }
+    final isOverDiscountDeadline = useProvider(
+        isOverDiscountDeadlineProvider(discountEntitlementDeadlineDate));
     if (state.isNotYetLoad) {
       return Indicator();
     }
@@ -54,7 +50,7 @@ class PremiumIntroductionSheet extends HookWidget {
                     Container(
                       decoration: BoxDecoration(
                         color: Colors.transparent,
-                        image: !isOverDiscountDeadline
+                        image: !state.isPremium && !isOverDiscountDeadline
                             ? DecorationImage(
                                 image:
                                     AssetImage("images/premium_background.png"),
@@ -72,22 +68,26 @@ class PremiumIntroductionSheet extends HookWidget {
                         mainAxisSize: MainAxisSize.min,
                         children: [
                           PremiumIntroductionHeader(),
-                          if (discountEntitlementDeadlineDate != null &&
-                              !isOverDiscountDeadline &&
-                              state.hasDiscountEntitlement)
-                            PremiumIntroductionLimited(
-                              discountDeadlineDate:
-                                  discountEntitlementDeadlineDate,
-                            ),
-                          if (offerings != null) ...[
+                          if (state.isPremium) ...[
                             SizedBox(height: 32),
-                            PurchaseButtons(
-                              offerings: offerings,
-                              discountEntitlementDeadlineDate:
-                                  discountEntitlementDeadlineDate,
-                              hasDiscountEntitlement:
-                                  state.hasDiscountEntitlement,
-                            ),
+                            PremiumUserThanksRow(),
+                          ],
+                          if (!state.isPremium) ...[
+                            if (state.hasDiscountEntitlement)
+                              PremiumIntroductionDiscountRow(
+                                discountEntitlementDeadlineDate:
+                                    discountEntitlementDeadlineDate,
+                              ),
+                            if (offerings != null) ...[
+                              SizedBox(height: 32),
+                              PurchaseButtons(
+                                offerings: offerings,
+                                discountEntitlementDeadlineDate:
+                                    discountEntitlementDeadlineDate,
+                                hasDiscountEntitlement:
+                                    state.hasDiscountEntitlement,
+                              ),
+                            ],
                           ],
                           SizedBox(height: 24),
                           SecondaryButton(

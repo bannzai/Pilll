@@ -6,20 +6,31 @@ import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/domain/premium_introduction/util/discount_deadline.dart';
 
-class PremiumIntroductionLimited extends HookWidget {
-  final DateTime discountDeadlineDate;
+class PremiumIntroductionDiscountRow extends HookWidget {
+  final DateTime? discountEntitlementDeadlineDate;
 
-  const PremiumIntroductionLimited(
-      {Key? key, required this.discountDeadlineDate})
+  const PremiumIntroductionDiscountRow(
+      {Key? key, required this.discountEntitlementDeadlineDate})
       : super(key: key);
   Widget build(BuildContext context) {
-    final diff =
-        useProvider(durationToDiscountPriceDeadline(discountDeadlineDate));
-    if (diff.inSeconds <= 0) {
+    final discountEntitlementDeadlineDate =
+        this.discountEntitlementDeadlineDate;
+    final Duration? diff;
+    final String? countdown;
+    if (discountEntitlementDeadlineDate != null) {
+      final _diff = useProvider(
+          durationToDiscountPriceDeadline(discountEntitlementDeadlineDate));
+      countdown = discountPriceDeadlineCountdownString(_diff);
+      diff = _diff;
+    } else {
+      countdown = null;
+      diff = null;
+    }
+
+    if (diff != null && diff.inSeconds < 0) {
       return Container();
     }
 
-    final countdown = discountPriceDeadlineCountdownString(diff);
     return Container(
       padding: EdgeInsets.only(left: 40, right: 40),
       width: MediaQuery.of(context).size.width,
@@ -39,15 +50,16 @@ class PremiumIntroductionLimited extends HookWidget {
             ),
           ),
           SizedBox(height: 4),
-          Text(
-            countdown,
-            style: TextStyle(
-              color: TextColor.main,
-              fontFamily: FontFamily.japanese,
-              fontWeight: FontWeight.w700,
-              fontSize: 16,
+          if (countdown != null)
+            Text(
+              countdown,
+              style: TextStyle(
+                color: TextColor.main,
+                fontFamily: FontFamily.japanese,
+                fontWeight: FontWeight.w700,
+                fontSize: 16,
+              ),
             ),
-          ),
           SizedBox(height: 20),
           Text(
             "通常 月額プラン",

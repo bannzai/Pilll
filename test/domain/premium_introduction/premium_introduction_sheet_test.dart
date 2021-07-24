@@ -1,5 +1,6 @@
 import 'package:pilll/analytics.dart';
-import 'package:pilll/domain/premium_introduction/components/premium_introduction_limited.dart';
+import 'package:pilll/domain/premium_introduction/components/premium_introduction_discount.dart';
+import 'package:pilll/domain/premium_introduction/components/premium_user_thanks.dart';
 import 'package:pilll/domain/premium_introduction/components/purchase_buttons_state.dart';
 import 'package:pilll/domain/premium_introduction/components/purchase_buttons_store.dart';
 import 'package:pilll/domain/premium_introduction/premium_introduction_sheet.dart';
@@ -71,10 +72,57 @@ void main() {
 
     when(mockTodayRepository.today()).thenReturn(today);
     todayRepository = mockTodayRepository;
+
+    group('user is premium', () {
+      testWidgets(
+          '#PremiumIntroductionDiscountRow is not found and #PremiumUserThanksRow is found',
+          (WidgetTester tester) async {
+        var state = PremiumIntroductionState();
+        state = state.copyWith(
+          offerings: _FakeOfferings(),
+          isPremium: true,
+          hasDiscountEntitlement: true, // NOTE: Nasty data
+        );
+
+        final sheet = PremiumIntroductionSheet();
+        await tester.pumpWidget(
+          ProviderScope(
+            overrides: [
+              premiumIntroductionStateProvider.overrideWithValue(state),
+              premiumIntroductionStoreProvider.overrideWithProvider(
+                  StateNotifierProvider.autoDispose(
+                      (ref) => MockPremiumIntroductionStore())),
+              isOverDiscountDeadlineProvider
+                  .overrideWithProvider((ref, param) => true),
+              durationToDiscountPriceDeadline.overrideWithProvider(
+                  (ref, param) => Duration(seconds: 1000)),
+              purchaseButtonsStoreProvider.overrideWithProvider(
+                  (ref, param) => MockPurchaseButtonsStore()),
+              purchaseButtonStateProvider.overrideWithProvider(
+                  (ref, param) => _FakePurchaseButtonState()),
+            ],
+            child: MaterialApp(
+              home: sheet,
+            ),
+          ),
+        );
+        await tester.pump();
+
+        expect(
+          find.byWidgetPredicate(
+              (widget) => widget is PremiumIntroductionDiscountRow),
+          findsNothing,
+        );
+        expect(
+          find.byWidgetPredicate((widget) => widget is PremiumUserThanksRow),
+          findsOneWidget,
+        );
+      });
+    });
     group('user has discount entitlements', () {
       final hasDiscountEntitlement = true;
       final isOverDiscountDeadline = false;
-      testWidgets('#PremiumIntroductionLimited is found',
+      testWidgets('#PremiumIntroductionDiscountRow is found',
           (WidgetTester tester) async {
         var state = PremiumIntroductionState();
         state = state.copyWith(
@@ -109,14 +157,14 @@ void main() {
 
         expect(
           find.byWidgetPredicate(
-              (widget) => widget is PremiumIntroductionLimited),
+              (widget) => widget is PremiumIntroductionDiscountRow),
           findsOneWidget,
         );
       });
     });
     group('user does not has discount entitlements', () {
       final hasDiscountEntitlement = false;
-      testWidgets('#PremiumIntroductionLimited is not found',
+      testWidgets('#PremiumIntroductionDiscountRow is not found',
           (WidgetTester tester) async {
         final mockTodayRepository = MockTodayService();
         final today = DateTime(2021, 04, 29);
@@ -157,14 +205,14 @@ void main() {
 
         expect(
           find.byWidgetPredicate(
-              (widget) => widget is PremiumIntroductionLimited),
+              (widget) => widget is PremiumIntroductionDiscountRow),
           findsNothing,
         );
       });
     });
     group('is over discount deadline ', () {
       final isOverDiscountDeadline = true;
-      testWidgets('#PremiumIntroductionLimited is not found',
+      testWidgets('#PremiumIntroductionDiscountRow is found',
           (WidgetTester tester) async {
         final mockTodayRepository = MockTodayService();
         final today = DateTime(2021, 04, 29);
@@ -205,13 +253,13 @@ void main() {
 
         expect(
           find.byWidgetPredicate(
-              (widget) => widget is PremiumIntroductionLimited),
-          findsNothing,
+              (widget) => widget is PremiumIntroductionDiscountRow),
+          findsOneWidget,
         );
       });
     });
     group('discount entitlemenet deadline date is null', () {
-      testWidgets('#PremiumIntroductionLimited is not found',
+      testWidgets('#PremiumIntroductionDiscountRow is found',
           (WidgetTester tester) async {
         final mockTodayRepository = MockTodayService();
         final today = DateTime(2021, 04, 29);
@@ -252,8 +300,8 @@ void main() {
 
         expect(
           find.byWidgetPredicate(
-              (widget) => widget is PremiumIntroductionLimited),
-          findsNothing,
+              (widget) => widget is PremiumIntroductionDiscountRow),
+          findsWidgets,
         );
       });
     });

@@ -22,7 +22,7 @@ abstract class PurchaseButtonsState implements _$PurchaseButtonsState {
   factory PurchaseButtonsState({
     required Offerings offerings,
     required bool hasDiscountEntitlement,
-    required bool? isOverDiscountDeadline,
+    required bool isOverDiscountDeadline,
   }) = _PurchaseButtonsState;
 
   OfferingType get offeringType {
@@ -33,7 +33,7 @@ abstract class PurchaseButtonsState implements _$PurchaseButtonsState {
     final isOverDiscountDeadline = this.isOverDiscountDeadline;
     if (isOverDiscountDeadline == null) {
       print("[DEBUG] isOverDiscountDeadline is null");
-      return OfferingType.premium;
+      return OfferingType.limited;
     }
     if (isOverDiscountDeadline) {
       print("[DEBUG] isOverDiscountDeadline is true");
