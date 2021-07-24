@@ -73,27 +73,28 @@ class PremiumIntroductionSheet extends HookWidget {
                         mainAxisSize: MainAxisSize.min,
                         children: [
                           PremiumIntroductionHeader(),
-                          if (!state.isPremium &&
-                              discountEntitlementDeadlineDate != null &&
-                              !isOverDiscountDeadline &&
-                              state.hasDiscountEntitlement)
-                            PremiumIntroductionLimited(
-                              discountDeadlineDate:
-                                  discountEntitlementDeadlineDate,
-                            ),
                           if (state.isPremium) ...[
                             SizedBox(height: 32),
                             PremiumuserInfoRow(),
                           ],
-                          if (offerings != null && !state.isPremium) ...[
-                            SizedBox(height: 32),
-                            PurchaseButtons(
-                              offerings: offerings,
-                              discountEntitlementDeadlineDate:
-                                  discountEntitlementDeadlineDate,
-                              hasDiscountEntitlement:
-                                  state.hasDiscountEntitlement,
-                            ),
+                          if (!state.isPremium) ...[
+                            if (discountEntitlementDeadlineDate != null &&
+                                !isOverDiscountDeadline &&
+                                state.hasDiscountEntitlement)
+                              PremiumIntroductionLimited(
+                                discountDeadlineDate:
+                                    discountEntitlementDeadlineDate,
+                              ),
+                            if (offerings != null) ...[
+                              SizedBox(height: 32),
+                              PurchaseButtons(
+                                offerings: offerings,
+                                discountEntitlementDeadlineDate:
+                                    discountEntitlementDeadlineDate,
+                                hasDiscountEntitlement:
+                                    state.hasDiscountEntitlement,
+                              ),
+                            ],
                           ],
                           SizedBox(height: 24),
                           SecondaryButton(
