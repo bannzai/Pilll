@@ -11,7 +11,7 @@ import 'package:pilll/components/page/hud.dart';
 import 'package:pilll/domain/premium_introduction/components/premium_introduction_footer.dart';
 import 'package:pilll/domain/premium_introduction/components/premium_introduction_header.dart';
 import 'package:pilll/domain/premium_introduction/components/premium_introduction_discount.dart';
-import 'package:pilll/domain/premium_introduction/components/premium_user_info.dart';
+import 'package:pilll/domain/premium_introduction/components/premium_user_thanks.dart';
 import 'package:pilll/domain/premium_introduction/components/purchase_buttons.dart';
 import 'package:pilll/domain/premium_introduction/premium_introduction_store.dart';
 import 'package:pilll/domain/premium_introduction/util/discount_deadline.dart';
@@ -70,7 +70,7 @@ class PremiumIntroductionSheet extends HookWidget {
                           PremiumIntroductionHeader(),
                           if (state.isPremium) ...[
                             SizedBox(height: 32),
-                            PremiumuserInfoRow(),
+                            PremiumUserThanksRow(),
                           ],
                           if (!state.isPremium) ...[
                             if (state.hasDiscountEntitlement)

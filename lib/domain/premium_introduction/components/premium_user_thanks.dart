@@ -3,7 +3,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 
-class PremiumuserInfoRow extends StatelessWidget {
+class PremiumUserThanksRow extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(

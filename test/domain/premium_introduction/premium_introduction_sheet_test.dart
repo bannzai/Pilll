@@ -1,6 +1,6 @@
 import 'package:pilll/analytics.dart';
 import 'package:pilll/domain/premium_introduction/components/premium_introduction_discount.dart';
-import 'package:pilll/domain/premium_introduction/components/premium_user_info.dart';
+import 'package:pilll/domain/premium_introduction/components/premium_user_thanks.dart';
 import 'package:pilll/domain/premium_introduction/components/purchase_buttons_state.dart';
 import 'package:pilll/domain/premium_introduction/components/purchase_buttons_store.dart';
 import 'package:pilll/domain/premium_introduction/premium_introduction_sheet.dart';
@@ -75,7 +75,7 @@ void main() {
 
     group('user is premium', () {
       testWidgets(
-          '#PremiumIntroductionDiscountRow is not found and #PremiumUserInfo is found',
+          '#PremiumIntroductionDiscountRow is not found and #PremiumUserThanksRow is found',
           (WidgetTester tester) async {
         var state = PremiumIntroductionState();
         state = state.copyWith(
@@ -114,7 +114,7 @@ void main() {
           findsNothing,
         );
         expect(
-          find.byWidgetPredicate((widget) => widget is PremiumuserInfoRow),
+          find.byWidgetPredicate((widget) => widget is PremiumUserThanksRow),
           findsOneWidget,
         );
       });
