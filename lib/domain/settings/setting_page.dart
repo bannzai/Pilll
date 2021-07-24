@@ -67,7 +67,6 @@ class SettingPage extends HookWidget {
                       _separator(),
                       PremiumIntroductionRow(
                         isPremium: state.isPremium,
-                        isTrial: state.isTrial,
                         trialDeadlineDate: state.trialDeadlineDate,
                       ),
                       _separator(),

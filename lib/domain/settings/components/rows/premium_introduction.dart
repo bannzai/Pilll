@@ -7,20 +7,18 @@ import 'package:pilll/domain/premium_trial/premium_trial_modal.dart';
 
 class PremiumIntroductionRow extends StatelessWidget {
   final bool isPremium;
-  final bool isTrial;
   final DateTime? trialDeadlineDate;
 
   const PremiumIntroductionRow({
     Key? key,
     required this.isPremium,
-    required this.isTrial,
     required this.trialDeadlineDate,
   }) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return ListTile(
       onTap: () {
-        if (!isTrial && trialDeadlineDate == null) {
+        if (trialDeadlineDate == null) {
           showPremiumTrialModal(context, () {
             showPremiumTrialCompleteModalPreDialog(context);
           });
