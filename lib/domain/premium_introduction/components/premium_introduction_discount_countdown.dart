@@ -7,19 +7,22 @@ import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/domain/premium_introduction/util/discount_deadline.dart';
 
 class PremiumIntroductionDiscountCountdown extends HookWidget {
-  final DateTime discountDeadlineDate;
+  final DateTime? discountDeadlineDate;
 
   const PremiumIntroductionDiscountCountdown(
       {Key? key, required this.discountDeadlineDate})
       : super(key: key);
   Widget build(BuildContext context) {
-    final diff =
-        useProvider(durationToDiscountPriceDeadline(discountDeadlineDate));
-    if (diff.inSeconds <= 0) {
-      return Container();
+    final discountDeadlineDate = this.discountDeadlineDate;
+    final String? countdown;
+    if (discountDeadlineDate != null) {
+      final diff =
+          useProvider(durationToDiscountPriceDeadline(discountDeadlineDate));
+      countdown = discountPriceDeadlineCountdownString(diff);
+    } else {
+      countdown = null;
     }
 
-    final countdown = discountPriceDeadlineCountdownString(diff);
     return Container(
       padding: EdgeInsets.only(left: 40, right: 40),
       width: MediaQuery.of(context).size.width,
@@ -39,15 +42,16 @@ class PremiumIntroductionDiscountCountdown extends HookWidget {
             ),
           ),
           SizedBox(height: 4),
-          Text(
-            countdown,
-            style: TextStyle(
-              color: TextColor.main,
-              fontFamily: FontFamily.japanese,
-              fontWeight: FontWeight.w700,
-              fontSize: 16,
+          if (countdown != null)
+            Text(
+              countdown,
+              style: TextStyle(
+                color: TextColor.main,
+                fontFamily: FontFamily.japanese,
+                fontWeight: FontWeight.w700,
+                fontSize: 16,
+              ),
             ),
-          ),
           SizedBox(height: 20),
           Text(
             "通常 月額プラン",

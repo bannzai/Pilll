@@ -33,7 +33,7 @@ abstract class PurchaseButtonsState implements _$PurchaseButtonsState {
     final isOverDiscountDeadline = this.isOverDiscountDeadline;
     if (isOverDiscountDeadline == null) {
       print("[DEBUG] isOverDiscountDeadline is null");
-      return OfferingType.premium;
+      return OfferingType.limited;
     }
     if (isOverDiscountDeadline) {
       print("[DEBUG] isOverDiscountDeadline is true");
