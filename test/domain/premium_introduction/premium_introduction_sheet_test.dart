@@ -116,7 +116,7 @@ void main() {
     });
     group('user does not has discount entitlements', () {
       final hasDiscountEntitlement = false;
-      testWidgets('#PremiumIntroductionLimited is not found',
+      testWidgets('#PremiumIntroductionDiscountRow is not found',
           (WidgetTester tester) async {
         final mockTodayRepository = MockTodayService();
         final today = DateTime(2021, 04, 29);
