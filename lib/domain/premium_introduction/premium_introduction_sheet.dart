@@ -11,6 +11,7 @@ import 'package:pilll/components/page/hud.dart';
 import 'package:pilll/domain/premium_introduction/components/premium_introduction_footer.dart';
 import 'package:pilll/domain/premium_introduction/components/premium_introduction_header.dart';
 import 'package:pilll/domain/premium_introduction/components/premium_introduction_limited.dart';
+import 'package:pilll/domain/premium_introduction/components/premium_user_info.dart';
 import 'package:pilll/domain/premium_introduction/components/purchase_buttons.dart';
 import 'package:pilll/domain/premium_introduction/premium_introduction_store.dart';
 import 'package:pilll/domain/premium_introduction/util/discount_deadline.dart';
@@ -80,7 +81,11 @@ class PremiumIntroductionSheet extends HookWidget {
                               discountDeadlineDate:
                                   discountEntitlementDeadlineDate,
                             ),
-                          if (offerings != null) ...[
+                          if (state.isPremium) ...[
+                            SizedBox(height: 32),
+                            PremiumuserInfoRow(),
+                          ],
+                          if (offerings != null && !state.isPremium) ...[
                             SizedBox(height: 32),
                             PurchaseButtons(
                               offerings: offerings,

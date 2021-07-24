@@ -8,9 +8,11 @@ class MonthlyPurchaseButton extends StatelessWidget {
   final Package monthlyPackage;
   final Function(Package) onTap;
 
-  const MonthlyPurchaseButton(
-      {Key? key, required this.monthlyPackage, required this.onTap})
-      : super(key: key);
+  const MonthlyPurchaseButton({
+    Key? key,
+    required this.monthlyPackage,
+    required this.onTap,
+  }) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
