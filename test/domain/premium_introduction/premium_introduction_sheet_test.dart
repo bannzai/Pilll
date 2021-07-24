@@ -164,7 +164,7 @@ void main() {
     });
     group('is over discount deadline ', () {
       final isOverDiscountDeadline = true;
-      testWidgets('#PremiumIntroductionLimited is not found',
+      testWidgets('#PremiumIntroductionDiscountRow is found',
           (WidgetTester tester) async {
         final mockTodayRepository = MockTodayService();
         final today = DateTime(2021, 04, 29);
@@ -206,12 +206,12 @@ void main() {
         expect(
           find.byWidgetPredicate(
               (widget) => widget is PremiumIntroductionDiscountRow),
-          findsNothing,
+          findsOneWidget,
         );
       });
     });
     group('discount entitlemenet deadline date is null', () {
-      testWidgets('#PremiumIntroductionLimited is not found',
+      testWidgets('#PremiumIntroductionDiscountRow is found',
           (WidgetTester tester) async {
         final mockTodayRepository = MockTodayService();
         final today = DateTime(2021, 04, 29);
@@ -253,7 +253,7 @@ void main() {
         expect(
           find.byWidgetPredicate(
               (widget) => widget is PremiumIntroductionDiscountRow),
-          findsNothing,
+          findsWidgets,
         );
       });
     });
