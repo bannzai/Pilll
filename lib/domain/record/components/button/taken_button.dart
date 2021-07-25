@@ -3,6 +3,7 @@ import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/analytics.dart';
 import 'package:pilll/components/atoms/buttons.dart';
+import 'package:pilll/domain/pill_sheet_history/pill_sheet_history_page.dart';
 import 'package:pilll/domain/record/record_page_store.dart';
 import 'package:pilll/domain/record/util/take.dart';
 import 'package:pilll/entity/pill_sheet.dart';
@@ -29,7 +30,8 @@ class TakenButton extends HookWidget {
           "last_taken_pill_number": pillSheet.lastTakenPillNumber,
           "today_pill_number": pillSheet.todayPillNumber,
         });
-        await take(parentContext, pillSheet, now(), store);
+        // await take(parentContext, pillSheet, now(), store);
+        Navigator.of(context).push(PillSheetHistoryPageRoutes.route());
       },
     );
   }
