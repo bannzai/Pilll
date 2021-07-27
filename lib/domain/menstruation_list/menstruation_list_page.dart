@@ -7,8 +7,8 @@ import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/components/molecules/indicator.dart';
-import 'package:pilll/domain/menstruation/menstruation_history_row.dart';
-import 'package:pilll/domain/menstruation/menstruation_list_store.dart';
+import 'package:pilll/domain/menstruation_list/menstruation_history_row.dart';
+import 'package:pilll/domain/menstruation_list/menstruation_list_store.dart';
 
 class MenstruationListPage extends HookWidget {
   @override

@@ -1,5 +1,5 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:pilll/domain/menstruation/menstruation_history_row.dart';
+import 'package:pilll/domain/menstruation_list/menstruation_history_row.dart';
 
 part 'menstruation_list_state.freezed.dart';
 

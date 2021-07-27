@@ -1,6 +1,6 @@
 import 'dart:math';
 
-import 'package:pilll/domain/menstruation/menstruation_history_row.dart';
+import 'package:pilll/domain/menstruation_list/menstruation_history_row.dart';
 import 'package:pilll/entity/menstruation.dart';
 import 'package:pilll/domain/menstruation/menstruation_store.dart';
 import 'package:pilll/util/datetime/day.dart';

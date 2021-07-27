@@ -1,8 +1,8 @@
 import 'dart:async';
 
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:pilll/domain/menstruation/menstruation_history_row.dart';
-import 'package:pilll/domain/menstruation/menstruation_list_state.dart';
+import 'package:pilll/domain/menstruation_list/menstruation_history_row.dart';
+import 'package:pilll/domain/menstruation_list/menstruation_list_state.dart';
 import 'package:pilll/service/menstruation.dart';
 import 'package:pilll/domain/menstruation/menstruation_store.dart';
 
