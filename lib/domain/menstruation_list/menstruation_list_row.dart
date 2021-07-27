@@ -7,35 +7,33 @@ import 'package:pilll/entity/menstruation.dart';
 import 'package:pilll/util/formatter/date_time_formatter.dart';
 import 'package:flutter/material.dart';
 
-class MenstruationHistoryRowState {
+class MenstruationListRowState {
   final Menstruation menstruation;
   final String? prefix;
   int? menstruationDuration;
 
-  MenstruationHistoryRowState(this.menstruation, this.prefix);
+  MenstruationListRowState(this.menstruation, this.prefix);
 
-  static int diff(
-      MenstruationHistoryRowState lhs, MenstruationHistoryRowState rhs) {
+  static int diff(MenstruationListRowState lhs, MenstruationListRowState rhs) {
     final range =
         DateRange(lhs.menstruation.beginDate, rhs.menstruation.beginDate);
     return range.days.abs() - 1;
   }
 
-  static List<MenstruationHistoryRowState> rows(
-      List<Menstruation> menstruations) {
+  static List<MenstruationListRowState> rows(List<Menstruation> menstruations) {
     return [...menstruations]
         .asMap()
-        .map((index, element) => MapEntry(
-            index, MenstruationHistoryRowState(element, _prefix(index))))
+        .map((index, element) =>
+            MapEntry(index, MenstruationListRowState(element, _prefix(index))))
         .values
         .toList()
-        .fold<List<MenstruationHistoryRowState>>([], (value, element) {
+        .fold<List<MenstruationListRowState>>([], (value, element) {
       if (value.isEmpty) {
         return [element];
       }
       return value
         ..last.menstruationDuration =
-            MenstruationHistoryRowState.diff(value.last, element)
+            MenstruationListRowState.diff(value.last, element)
         ..add(element);
     }).toList();
   }
@@ -72,11 +70,10 @@ class MenstruationHistoryRowState {
   }
 }
 
-class MenstruationHistoryRow extends StatelessWidget {
-  final MenstruationHistoryRowState state;
+class MenstruationListRow extends StatelessWidget {
+  final MenstruationListRowState state;
 
-  const MenstruationHistoryRow({Key? key, required this.state})
-      : super(key: key);
+  const MenstruationListRow({Key? key, required this.state}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
