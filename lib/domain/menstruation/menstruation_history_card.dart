@@ -1,8 +1,10 @@
 import 'package:pilll/analytics.dart';
 import 'package:pilll/components/atoms/buttons.dart';
+import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/components/molecules/app_card.dart';
+import 'package:pilll/components/molecules/counter_unit_layout.dart';
 import 'package:pilll/components/molecules/premium_badge.dart';
 import 'package:pilll/domain/menstruation/menstruation_history_card_state.dart';
 import 'package:pilll/domain/menstruation_list/menstruation_list_row.dart';
@@ -27,23 +29,9 @@ class MenstruationHistoryCard extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Row(
-              children: [
-                Text(
-                  "生理履歴",
-                  style: TextStyle(
-                    color: TextColor.main,
-                    fontFamily: FontFamily.japanese,
-                    fontSize: 20,
-                    fontWeight: FontWeight.w500,
-                  ),
-                ),
-                if (!state.isPremium) ...[
-                  SizedBox(width: 8),
-                  PremiumBadge(),
-                ],
-              ],
-            ),
+            MenstruationHistoryCardTitle(state: state),
+            SizedBox(height: 32),
+            MenstruationHisotryCardAvarageInformation(),
             SizedBox(height: 32),
             Column(
               mainAxisSize: MainAxisSize.max,
@@ -80,6 +68,62 @@ class MenstruationHistoryCard extends StatelessWidget {
           ],
         ),
       ),
+    );
+  }
+}
+
+class MenstruationHisotryCardAvarageInformation extends StatelessWidget {
+  const MenstruationHisotryCardAvarageInformation({
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      children: [
+        Spacer(),
+        CounterUnitLayout(title: "平均周期", number: 28, unit: "日"),
+        SizedBox(width: 30),
+        Container(
+            height: 64,
+            child: VerticalDivider(
+              color: PilllColors.divider,
+              width: 3,
+            )),
+        SizedBox(width: 30),
+        CounterUnitLayout(title: "平均日数", number: 5, unit: "日"),
+        Spacer(),
+      ],
+    );
+  }
+}
+
+class MenstruationHistoryCardTitle extends StatelessWidget {
+  const MenstruationHistoryCardTitle({
+    Key? key,
+    required this.state,
+  }) : super(key: key);
+
+  final MenstruationHistoryCardState state;
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      children: [
+        Text(
+          "生理履歴",
+          style: TextStyle(
+            color: TextColor.main,
+            fontFamily: FontFamily.japanese,
+            fontSize: 20,
+            fontWeight: FontWeight.w500,
+          ),
+        ),
+        if (!state.isPremium) ...[
+          SizedBox(width: 8),
+          PremiumBadge(),
+        ],
+      ],
     );
   }
 }
