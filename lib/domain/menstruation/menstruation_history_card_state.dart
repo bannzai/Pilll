@@ -27,7 +27,7 @@ class MenstruationHistoryCardState {
     if (allMenstruations.isEmpty) {
       return [];
     }
-    var menstruations = dropLatestMenstruationIfNeeded(allMenstruations);
+    var menstruations = dropInTheMiddleMenstruation(allMenstruations);
     if (menstruations.isEmpty) {
       return [];
     }

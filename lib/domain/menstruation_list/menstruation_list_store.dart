@@ -26,7 +26,7 @@ class MenstruationListStore extends StateNotifier<MenstruationListState> {
       state = state.copyWith(
         isNotYetLoaded: false,
         allRows: MenstruationListRowState.rows(
-            dropLatestMenstruationIfNeeded(menstruations)),
+            dropInTheMiddleMenstruation(menstruations)),
       );
       _subscribe();
     });
@@ -39,7 +39,7 @@ class MenstruationListStore extends StateNotifier<MenstruationListState> {
         menstruationService.subscribeAll().listen((entities) {
       state = state.copyWith(
           allRows: MenstruationListRowState.rows(
-              dropLatestMenstruationIfNeeded(entities)));
+              dropInTheMiddleMenstruation(entities)));
     });
   }
 
