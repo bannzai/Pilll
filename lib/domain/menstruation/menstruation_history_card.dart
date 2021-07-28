@@ -26,16 +26,31 @@ class MenstruationHistoryCard extends StatelessWidget {
       child: Padding(
         padding:
             const EdgeInsets.only(top: 16, left: 16, bottom: 16, right: 16),
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            MenstruationHistoryCardTitle(state: state),
-            SizedBox(height: 32),
-            MenstruationHisotryCardAvarageInformation(state: state),
-            SizedBox(height: 32),
-            MenstruationHistoryCardList(state: state),
-            MenstruationHistoryCardMoreButton(state: state),
-          ],
+        child: GestureDetector(
+          onTap: () {
+            analytics.logEvent(name: "menstruation_history_card_tapped");
+            if (state.isPremium || state.isTrial) {
+              return;
+            }
+            if (state.trialDeadlineDate == null) {
+              showPremiumTrialModal(context, () {
+                showPremiumTrialCompleteModalPreDialog(context);
+              });
+            } else {
+              showPremiumIntroductionSheet(context);
+            }
+          },
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              MenstruationHistoryCardTitle(state: state),
+              SizedBox(height: 32),
+              MenstruationHisotryCardAvarageInformation(state: state),
+              SizedBox(height: 32),
+              MenstruationHistoryCardList(state: state),
+              MenstruationHistoryCardMoreButton(state: state),
+            ],
+          ),
         ),
       ),
     );
