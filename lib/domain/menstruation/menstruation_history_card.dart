@@ -33,14 +33,7 @@ class MenstruationHistoryCard extends StatelessWidget {
             SizedBox(height: 32),
             MenstruationHisotryCardAvarageInformation(),
             SizedBox(height: 32),
-            Column(
-              mainAxisSize: MainAxisSize.max,
-              children: state.rows
-                  .map((e) =>
-                      [MenstruationListRow(state: e), SizedBox(height: 20)])
-                  .expand((e) => e)
-                  .toList(),
-            ),
+            MenstruationHistoryCardList(state: state),
             Row(
               mainAxisAlignment: MainAxisAlignment.end,
               children: [
@@ -68,6 +61,26 @@ class MenstruationHistoryCard extends StatelessWidget {
           ],
         ),
       ),
+    );
+  }
+}
+
+class MenstruationHistoryCardList extends StatelessWidget {
+  const MenstruationHistoryCardList({
+    Key? key,
+    required this.state,
+  }) : super(key: key);
+
+  final MenstruationHistoryCardState state;
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      mainAxisSize: MainAxisSize.max,
+      children: state.rows
+          .map((e) => [MenstruationListRow(state: e), SizedBox(height: 20)])
+          .expand((e) => e)
+          .toList(),
     );
   }
 }
