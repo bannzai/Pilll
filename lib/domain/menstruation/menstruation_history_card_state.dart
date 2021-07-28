@@ -35,4 +35,40 @@ class MenstruationHistoryCardState {
     final length = min(2, rows.length);
     return rows.sublist(0, length);
   }
+
+  String get avalageMenstruationDuration {
+    if (allMenstruations.length <= 1) {
+      return "";
+    }
+    final rows = MenstruationListRowState.rows(allMenstruations);
+
+    int count = 0;
+    int totalMenstruationDuration = 0;
+    for (final row in rows) {
+      final menstruationDuration = row.menstruationDuration;
+      if (menstruationDuration == null) {
+        continue;
+      }
+      count += 1;
+      totalMenstruationDuration += menstruationDuration;
+    }
+
+    return (totalMenstruationDuration ~/ count).toString();
+  }
+
+  String get avalageMenstruationPeriod {
+    if (allMenstruations.length <= 1) {
+      return "";
+    }
+
+    int count = 0;
+    int totalMenstruationPeriod = 0;
+    for (final menstruation in dropInTheMiddleMenstruation(allMenstruations)) {
+      final menstruationPeriod = menstruation.dateRange.days;
+      count += 1;
+      totalMenstruationPeriod += menstruationPeriod;
+    }
+
+    return (totalMenstruationPeriod ~/ count).toString();
+  }
 }
