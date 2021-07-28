@@ -47,6 +47,12 @@ class PremiumTrialCompleteModal extends StatelessWidget {
                   ),
                 ],
               ),
+              Text(
+                '''
+                プレミアム体験後も自動で課金が発生することはありません
+                ''',
+                style: FontType.assisting.merge(TextColorStyle.main),
+              ),
               Padding(
                 padding: const EdgeInsets.only(top: 28, left: 20, right: 20),
                 child: Column(
