@@ -13,7 +13,6 @@ import 'package:flutter/material.dart';
 import 'package:pilll/domain/premium_introduction/premium_introduction_sheet.dart';
 import 'package:pilll/domain/premium_trial/premium_trial_complete_modal.dart';
 import 'package:pilll/domain/premium_trial/premium_trial_modal.dart';
-import 'package:pilll/entity/menstruation.dart';
 
 class MenstruationHistoryCard extends StatelessWidget {
   final MenstruationHistoryCardState state;
@@ -32,10 +31,7 @@ class MenstruationHistoryCard extends StatelessWidget {
           children: [
             MenstruationHistoryCardTitle(state: state),
             SizedBox(height: 32),
-            MenstruationHisotryCardAvarageInformation(
-              isPremium: state.isPremium,
-              menstruations: state.allMenstruations,
-            ),
+            MenstruationHisotryCardAvarageInformation(state: state),
             SizedBox(height: 32),
             MenstruationHistoryCardList(state: state),
             MenstruationHistoryCardMoreButton(state: state),
@@ -102,13 +98,11 @@ class MenstruationHistoryCardList extends StatelessWidget {
 }
 
 class MenstruationHisotryCardAvarageInformation extends StatelessWidget {
-  final List<Menstruation> menstruations;
-  final bool isPremium;
+  final MenstruationHistoryCardState state;
 
   const MenstruationHisotryCardAvarageInformation({
     Key? key,
-    required this.menstruations,
-    required this.isPremium,
+    required this.state,
   }) : super(key: key);
 
   @override
@@ -117,7 +111,11 @@ class MenstruationHisotryCardAvarageInformation extends StatelessWidget {
       children: [
         Spacer(),
         CounterUnitLayout(
-            title: "平均周期", number: isPremium ? "28" : "🔒", unit: "日"),
+          title: "平均周期",
+          number:
+              state.isPremium ? "${state.avalageMenstruationDuration}" : "🔒",
+          unit: "日",
+        ),
         SizedBox(width: 30),
         Container(
             height: 64,
@@ -127,7 +125,10 @@ class MenstruationHisotryCardAvarageInformation extends StatelessWidget {
             )),
         SizedBox(width: 30),
         CounterUnitLayout(
-            title: "平均日数", number: isPremium ? "5" : "🔒", unit: "日"),
+          title: "平均日数",
+          number: state.isPremium ? "${state.avalageMenstruationPeriod}" : "🔒",
+          unit: "日",
+        ),
         Spacer(),
       ],
     );
