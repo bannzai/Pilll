@@ -7,8 +7,8 @@ import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/components/molecules/indicator.dart';
-import 'package:pilll/domain/menstruation/menstruation_history_row.dart';
-import 'package:pilll/domain/menstruation/menstruation_list_store.dart';
+import 'package:pilll/domain/menstruation_list/menstruation_list_row.dart';
+import 'package:pilll/domain/menstruation_list/menstruation_list_store.dart';
 
 class MenstruationListPage extends HookWidget {
   @override
@@ -42,7 +42,7 @@ class MenstruationListPage extends HookWidget {
             children: [
               ...state.allRows.map((row) {
                 return [
-                  MenstruationHistoryRow(state: row),
+                  MenstruationListRow(state: row),
                   SizedBox(height: 8),
                 ];
               }).expand((element) => element),

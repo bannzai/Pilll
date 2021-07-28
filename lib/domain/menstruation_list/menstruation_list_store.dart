@@ -1,8 +1,8 @@
 import 'dart:async';
 
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:pilll/domain/menstruation/menstruation_history_row.dart';
-import 'package:pilll/domain/menstruation/menstruation_list_state.dart';
+import 'package:pilll/domain/menstruation_list/menstruation_list_row.dart';
+import 'package:pilll/domain/menstruation_list/menstruation_list_state.dart';
 import 'package:pilll/service/menstruation.dart';
 import 'package:pilll/domain/menstruation/menstruation_store.dart';
 
@@ -25,8 +25,8 @@ class MenstruationListStore extends StateNotifier<MenstruationListState> {
       final menstruations = await menstruationService.fetchAll();
       state = state.copyWith(
         isNotYetLoaded: false,
-        allRows: MenstruationHistoryRowState.rows(
-            dropLatestMenstruationIfNeeded(menstruations)),
+        allRows: MenstruationListRowState.rows(
+            dropInTheMiddleMenstruation(menstruations)),
       );
       _subscribe();
     });
@@ -38,8 +38,8 @@ class MenstruationListStore extends StateNotifier<MenstruationListState> {
     _menstruationCanceller =
         menstruationService.subscribeAll().listen((entities) {
       state = state.copyWith(
-          allRows: MenstruationHistoryRowState.rows(
-              dropLatestMenstruationIfNeeded(entities)));
+          allRows: MenstruationListRowState.rows(
+              dropInTheMiddleMenstruation(entities)));
     });
   }
 

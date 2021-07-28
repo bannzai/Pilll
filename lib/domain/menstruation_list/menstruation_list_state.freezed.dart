@@ -18,7 +18,7 @@ class _$MenstruationListStateTearOff {
 
   _MenstruationListState call(
       {bool isNotYetLoaded = true,
-      List<MenstruationHistoryRowState> allRows = const []}) {
+      List<MenstruationListRowState> allRows = const []}) {
     return _MenstruationListState(
       isNotYetLoaded: isNotYetLoaded,
       allRows: allRows,
@@ -32,7 +32,7 @@ const $MenstruationListState = _$MenstruationListStateTearOff();
 /// @nodoc
 mixin _$MenstruationListState {
   bool get isNotYetLoaded => throw _privateConstructorUsedError;
-  List<MenstruationHistoryRowState> get allRows =>
+  List<MenstruationListRowState> get allRows =>
       throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
@@ -45,7 +45,7 @@ abstract class $MenstruationListStateCopyWith<$Res> {
   factory $MenstruationListStateCopyWith(MenstruationListState value,
           $Res Function(MenstruationListState) then) =
       _$MenstruationListStateCopyWithImpl<$Res>;
-  $Res call({bool isNotYetLoaded, List<MenstruationHistoryRowState> allRows});
+  $Res call({bool isNotYetLoaded, List<MenstruationListRowState> allRows});
 }
 
 /// @nodoc
@@ -70,7 +70,7 @@ class _$MenstruationListStateCopyWithImpl<$Res>
       allRows: allRows == freezed
           ? _value.allRows
           : allRows // ignore: cast_nullable_to_non_nullable
-              as List<MenstruationHistoryRowState>,
+              as List<MenstruationListRowState>,
     ));
   }
 }
@@ -82,7 +82,7 @@ abstract class _$MenstruationListStateCopyWith<$Res>
           $Res Function(_MenstruationListState) then) =
       __$MenstruationListStateCopyWithImpl<$Res>;
   @override
-  $Res call({bool isNotYetLoaded, List<MenstruationHistoryRowState> allRows});
+  $Res call({bool isNotYetLoaded, List<MenstruationListRowState> allRows});
 }
 
 /// @nodoc
@@ -109,7 +109,7 @@ class __$MenstruationListStateCopyWithImpl<$Res>
       allRows: allRows == freezed
           ? _value.allRows
           : allRows // ignore: cast_nullable_to_non_nullable
-              as List<MenstruationHistoryRowState>,
+              as List<MenstruationListRowState>,
     ));
   }
 }
@@ -126,7 +126,7 @@ class _$_MenstruationListState extends _MenstruationListState {
   final bool isNotYetLoaded;
   @JsonKey(defaultValue: const [])
   @override
-  final List<MenstruationHistoryRowState> allRows;
+  final List<MenstruationListRowState> allRows;
 
   @override
   String toString() {
@@ -160,13 +160,13 @@ class _$_MenstruationListState extends _MenstruationListState {
 abstract class _MenstruationListState extends MenstruationListState {
   factory _MenstruationListState(
       {bool isNotYetLoaded,
-      List<MenstruationHistoryRowState> allRows}) = _$_MenstruationListState;
+      List<MenstruationListRowState> allRows}) = _$_MenstruationListState;
   _MenstruationListState._() : super._();
 
   @override
   bool get isNotYetLoaded => throw _privateConstructorUsedError;
   @override
-  List<MenstruationHistoryRowState> get allRows =>
+  List<MenstruationListRowState> get allRows =>
       throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)

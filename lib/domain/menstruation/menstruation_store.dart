@@ -202,7 +202,7 @@ class MenstruationStore extends StateNotifier<MenstruationState> {
   }
 }
 
-List<Menstruation> dropLatestMenstruationIfNeeded(
+List<Menstruation> dropInTheMiddleMenstruation(
     List<Menstruation> menstruations) {
   final _menstruations = [...menstruations];
   if (_menstruations.isEmpty) {
