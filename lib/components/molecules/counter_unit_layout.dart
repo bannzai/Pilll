@@ -4,7 +4,7 @@ import 'package:pilll/components/atoms/text_color.dart';
 
 class CounterUnitLayout extends StatelessWidget {
   final String title;
-  final int number;
+  final String number;
   final String unit;
 
   const CounterUnitLayout({
@@ -32,7 +32,7 @@ class CounterUnitLayout extends StatelessWidget {
           textBaseline: TextBaseline.ideographic,
           children: [
             Text(
-              "$number",
+              number,
               style: TextStyle(
                 color: TextColor.main,
                 fontFamily: FontFamily.number,
