@@ -34,33 +34,45 @@ class MenstruationHistoryCard extends StatelessWidget {
             MenstruationHisotryCardAvarageInformation(),
             SizedBox(height: 32),
             MenstruationHistoryCardList(state: state),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.end,
-              children: [
-                if (!state.moreButtonIsHidden)
-                  SecondaryButton(
-                      text: "もっと見る",
-                      onPressed: () {
-                        if (state.isPremium || state.isTrial) {
-                          analytics.logEvent(
-                              name: "menstruation_more_button_pressed");
-                          Navigator.of(context)
-                              .push(MenstruationListPageRoute.route());
-                        } else {
-                          if (state.trialDeadlineDate == null) {
-                            showPremiumTrialModal(context, () {
-                              showPremiumTrialCompleteModalPreDialog(context);
-                            });
-                          } else {
-                            showPremiumIntroductionSheet(context);
-                          }
-                        }
-                      }),
-              ],
-            ),
+            MenstruationHistoryCardMoreButton(state: state),
           ],
         ),
       ),
+    );
+  }
+}
+
+class MenstruationHistoryCardMoreButton extends StatelessWidget {
+  const MenstruationHistoryCardMoreButton({
+    Key? key,
+    required this.state,
+  }) : super(key: key);
+
+  final MenstruationHistoryCardState state;
+
+  @override
+  Widget build(BuildContext context) {
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.end,
+      children: [
+        if (!state.moreButtonIsHidden)
+          SecondaryButton(
+              text: "もっと見る",
+              onPressed: () {
+                if (state.isPremium || state.isTrial) {
+                  analytics.logEvent(name: "menstruation_more_button_pressed");
+                  Navigator.of(context).push(MenstruationListPageRoute.route());
+                } else {
+                  if (state.trialDeadlineDate == null) {
+                    showPremiumTrialModal(context, () {
+                      showPremiumTrialCompleteModalPreDialog(context);
+                    });
+                  } else {
+                    showPremiumIntroductionSheet(context);
+                  }
+                }
+              }),
+      ],
     );
   }
 }
