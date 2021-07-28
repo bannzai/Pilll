@@ -3,6 +3,7 @@ import 'package:pilll/components/atoms/buttons.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/components/molecules/app_card.dart';
+import 'package:pilll/components/molecules/premium_badge.dart';
 import 'package:pilll/domain/menstruation/menstruation_history_card_state.dart';
 import 'package:pilll/domain/menstruation_list/menstruation_list_row.dart';
 import 'package:pilll/domain/menstruation_list/menstruation_list_page.dart';
@@ -26,14 +27,22 @@ class MenstruationHistoryCard extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text(
-              "生理履歴",
-              style: TextStyle(
-                color: TextColor.main,
-                fontFamily: FontFamily.japanese,
-                fontSize: 20,
-                fontWeight: FontWeight.w500,
-              ),
+            Row(
+              children: [
+                Text(
+                  "生理履歴",
+                  style: TextStyle(
+                    color: TextColor.main,
+                    fontFamily: FontFamily.japanese,
+                    fontSize: 20,
+                    fontWeight: FontWeight.w500,
+                  ),
+                ),
+                if (!state.isPremium) ...[
+                  SizedBox(width: 8),
+                  PremiumBadge(),
+                ],
+              ],
             ),
             SizedBox(height: 32),
             Column(
