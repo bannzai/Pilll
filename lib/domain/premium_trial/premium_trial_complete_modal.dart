@@ -20,7 +20,7 @@ class PremiumTrialCompleteModal extends StatelessWidget {
             borderRadius: BorderRadius.circular(4),
           ),
           width: 314,
-          height: 342,
+          height: 400,
           child: Column(
             mainAxisAlignment: MainAxisAlignment.start,
             crossAxisAlignment: CrossAxisAlignment.center,
@@ -48,9 +48,15 @@ class PremiumTrialCompleteModal extends StatelessWidget {
                 ],
               ),
               Padding(
-                padding: const EdgeInsets.only(top: 28, left: 20, right: 20),
+                padding: const EdgeInsets.only(top: 20, left: 20, right: 20),
                 child: Column(
                   children: [
+                    Text(
+                      '''
+体験後も自動で課金はされません
+                ''',
+                      style: FontType.assisting.merge(TextColorStyle.main),
+                    ),
                     Image.asset(
                       "images/quick-record.gif",
                     ),
