@@ -101,17 +101,30 @@ class PremiumTrialModal extends HookWidget {
                       children: [
                         SvgPicture.asset("images/crown.svg"),
                         SizedBox(height: 24),
-                        Padding(
-                          padding: const EdgeInsets.only(left: 16, right: 16),
-                          child: Text(
-                            "プレミアム機能がお試しできます。自動で課金される事はありません。",
-                            style: TextStyle(
-                              color: TextColor.black,
-                              fontFamily: FontFamily.japanese,
-                              fontWeight: FontWeight.w400,
-                              fontSize: 14,
-                            ),
-                            textAlign: TextAlign.center,
+                        RichText(
+                          textAlign: TextAlign.center,
+                          text: TextSpan(
+                            children: [
+                              TextSpan(
+                                text: "プレミアム機能がお試しできます。",
+                                style: TextStyle(
+                                  color: TextColor.black,
+                                  fontFamily: FontFamily.japanese,
+                                  fontWeight: FontWeight.w400,
+                                  fontSize: 14,
+                                ),
+                              ),
+                              TextSpan(text: "\n"),
+                              TextSpan(
+                                text: "自動で課金される事はありません。",
+                                style: TextStyle(
+                                  color: TextColor.black,
+                                  fontFamily: FontFamily.japanese,
+                                  fontWeight: FontWeight.w700,
+                                  fontSize: 14,
+                                ),
+                              ),
+                            ],
                           ),
                         ),
                         SizedBox(height: 24),
