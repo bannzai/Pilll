@@ -64,7 +64,7 @@ class MenstruationHistoryCardState {
     int count = 0;
     int totalMenstruationPeriod = 0;
     for (final menstruation in dropInTheMiddleMenstruation(allMenstruations)) {
-      final menstruationPeriod = menstruation.dateRange.days;
+      final menstruationPeriod = menstruation.dateRange.days + 1;
       count += 1;
       totalMenstruationPeriod += menstruationPeriod;
     }
