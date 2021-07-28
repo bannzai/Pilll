@@ -53,7 +53,7 @@ class MenstruationHistoryCardState {
       totalMenstruationDuration += menstruationDuration;
     }
 
-    return (totalMenstruationDuration ~/ count).toString();
+    return (totalMenstruationDuration / count).toStringAsFixed(1);
   }
 
   String get avalageMenstruationPeriod {
@@ -69,6 +69,6 @@ class MenstruationHistoryCardState {
       totalMenstruationPeriod += menstruationPeriod;
     }
 
-    return (totalMenstruationPeriod ~/ count).toString();
+    return (totalMenstruationPeriod / count).toStringAsFixed(1);
   }
 }
