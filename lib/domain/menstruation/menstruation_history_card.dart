@@ -26,7 +26,15 @@ class MenstruationHistoryCard extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text("生理履歴", style: FontType.sBigTitle.merge(TextColorStyle.main)),
+            Text(
+              "生理履歴",
+              style: TextStyle(
+                color: TextColor.main,
+                fontFamily: FontFamily.japanese,
+                fontSize: 20,
+                fontWeight: FontWeight.w500,
+              ),
+            ),
             SizedBox(height: 32),
             Column(
               mainAxisSize: MainAxisSize.max,
