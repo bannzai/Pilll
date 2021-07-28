@@ -53,7 +53,7 @@ class PremiumTrialCompleteModal extends StatelessWidget {
                   children: [
                     Text(
                       '''
-プレミアム体験後も自動で課金が発生することはありません
+体験後も自動で課金はされません
                 ''',
                       style: FontType.assisting.merge(TextColorStyle.main),
                     ),
