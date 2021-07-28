@@ -112,8 +112,9 @@ class MenstruationHisotryCardAvarageInformation extends StatelessWidget {
         Spacer(),
         CounterUnitLayout(
           title: "平均周期",
-          number:
-              state.isPremium ? "${state.avalageMenstruationDuration}" : "🔒",
+          number: (state.isPremium || state.isTrial)
+              ? "${state.avalageMenstruationDuration}"
+              : "🔒",
           unit: "日",
         ),
         SizedBox(width: 30),
@@ -126,7 +127,9 @@ class MenstruationHisotryCardAvarageInformation extends StatelessWidget {
         SizedBox(width: 30),
         CounterUnitLayout(
           title: "平均日数",
-          number: state.isPremium ? "${state.avalageMenstruationPeriod}" : "🔒",
+          number: (state.isPremium || state.isTrial)
+              ? "${state.avalageMenstruationPeriod}"
+              : "🔒",
           unit: "日",
         ),
         Spacer(),
