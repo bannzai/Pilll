@@ -35,7 +35,7 @@ class CounterUnitLayout extends StatelessWidget {
               "$number",
               style: TextStyle(
                 color: TextColor.main,
-                fontFamily: FontFamily.japanese,
+                fontFamily: FontFamily.number,
                 fontSize: 24,
                 fontWeight: FontWeight.w700,
               ),
