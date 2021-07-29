@@ -52,6 +52,8 @@ class _FakePurchaseButtonState extends Fake implements PurchaseButtonsState {
   Package? get monthlyPackage => _MonthlyFakePackage();
   @override
   Package? get annualPackage => _AnnualFakePackage();
+  @override
+  OfferingType get offeringType => OfferingType.limited;
 }
 
 void main() {
