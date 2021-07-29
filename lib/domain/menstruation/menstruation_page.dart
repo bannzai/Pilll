@@ -74,18 +74,25 @@ class MenstruationPage extends HookWidget {
       ),
       body: SafeArea(
         child: Container(
-          child: Column(
+          child: Stack(
             children: [
-              MenstruationCalendarHeader(
-                  itemScrollController: itemScrollController,
-                  state: state,
-                  itemPositionsListener: itemPositionsListener),
-              Expanded(
-                child: MenstruationCardList(store: store),
+              Column(
+                children: [
+                  MenstruationCalendarHeader(
+                      itemScrollController: itemScrollController,
+                      state: state,
+                      itemPositionsListener: itemPositionsListener),
+                  Expanded(
+                    child: MenstruationCardList(store: store),
+                  ),
+                ],
               ),
-              Padding(
-                padding: const EdgeInsets.only(bottom: 20.0),
-                child: MenstruationRecordButton(state: state, store: store),
+              Align(
+                alignment: Alignment.bottomCenter,
+                child: Padding(
+                  padding: const EdgeInsets.only(bottom: 20.0),
+                  child: MenstruationRecordButton(state: state, store: store),
+                ),
               ),
             ],
           ),
