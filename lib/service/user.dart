@@ -10,6 +10,7 @@ import 'package:pilll/util/datetime/day.dart';
 import 'package:pilll/util/shared_preference/keys.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:package_info/package_info.dart';
+import 'package:pilll/util/datetime/day.dart';
 import 'package:riverpod/riverpod.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -235,6 +236,22 @@ class UserService {
       UserFirestoreFieldKeys.trialDeadlineDate: now().add(Duration(days: 30)),
       UserFirestoreFieldKeys.settings: setting.toJson(),
       UserFirestoreFieldKeys.hasDiscountEntitlement: true,
+    }, SetOptions(merge: true));
+  }
+
+  // NOTE: 下位互換のために一時的にhasDiscountEntitlementをtrueにしていくスクリプト。
+  // サーバー側での制御が無駄になるけど、理屈ではこれで生合成が取れる
+  Future<void> temporarySyncronizeDiscountEntitlement(User user) async {
+    final discountEntitlementDeadlineDate =
+        user.discountEntitlementDeadlineDate;
+    final bool hasDiscountEntitlement;
+    if (discountEntitlementDeadlineDate == null) {
+      hasDiscountEntitlement = true;
+    } else {
+      hasDiscountEntitlement = !now().isAfter(discountEntitlementDeadlineDate);
+    }
+    return _database.userReference().set({
+      UserFirestoreFieldKeys.hasDiscountEntitlement: hasDiscountEntitlement,
     }, SetOptions(merge: true));
   }
 }
