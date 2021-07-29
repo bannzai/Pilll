@@ -99,7 +99,7 @@ class RootState extends State<Root> {
         });
 
         final user = await userService.fetch();
-        userService.temporarySyncronizeDiscountEntitlement(user);
+        await userService.temporarySyncronizeDiscountEntitlement(user);
         if (!user.migratedFlutter) {
           await userService.deleteSettings();
           await userService.setFlutterMigrationFlag();
