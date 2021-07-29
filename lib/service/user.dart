@@ -10,7 +10,6 @@ import 'package:pilll/util/datetime/day.dart';
 import 'package:pilll/util/shared_preference/keys.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:package_info/package_info.dart';
-import 'package:pilll/util/datetime/day.dart';
 import 'package:riverpod/riverpod.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -48,38 +47,45 @@ class UserService {
     return _database.userReference().get();
   }
 
-  recordUserIDs() {
-    Future(() async {
-      try {
-        final document = await _fetchRawDocumentSnapshot();
-        final user = User.fromJson(document.data() as Map<String, dynamic>);
-        final documentID = document.id;
-        if (!user.userDocumentIDSets.contains(documentID)) {
-          user.userDocumentIDSets.add(documentID);
-        }
+  Future<void> recordUserIDs() async {
+    try {
+      final document = await _fetchRawDocumentSnapshot();
+      final user = User.fromJson(document.data() as Map<String, dynamic>);
+      final documentID = document.id;
+      final sharedPreferences = await SharedPreferences.getInstance();
 
-        final sharedPreferences = await SharedPreferences.getInstance();
-        final lastSigninAnonymousUID =
-            sharedPreferences.getString(StringKey.lastSigninAnonymousUID);
-        if (lastSigninAnonymousUID != null &&
-            !user.anonymousUserIDSets.contains(lastSigninAnonymousUID)) {
-          user.anonymousUserIDSets.add(lastSigninAnonymousUID);
-        }
-        final firebaseCurrentUserID =
-            firebaseAuth.FirebaseAuth.instance.currentUser?.uid;
-        if (firebaseCurrentUserID != null &&
-            !user.firebaseCurrentUserIDSets.contains(firebaseCurrentUserID)) {
-          user.firebaseCurrentUserIDSets.add(firebaseCurrentUserID);
-        }
-
-        await _database.userReference().set(
-              user.toJson(),
-              SetOptions(merge: true),
-            );
-      } catch (error) {
-        print(error);
+      List<String> userDocumentIDSets = user.userDocumentIDSets;
+      if (!userDocumentIDSets.contains(documentID)) {
+        userDocumentIDSets.add(documentID);
       }
-    });
+
+      final lastSigninAnonymousUID =
+          sharedPreferences.getString(StringKey.lastSigninAnonymousUID);
+      List<String> anonymousUserIDSets = user.anonymousUserIDSets;
+      if (lastSigninAnonymousUID != null &&
+          !anonymousUserIDSets.contains(lastSigninAnonymousUID)) {
+        anonymousUserIDSets.add(lastSigninAnonymousUID);
+      }
+      final firebaseCurrentUserID =
+          firebaseAuth.FirebaseAuth.instance.currentUser?.uid;
+      List<String> firebaseCurrentUserIDSets = user.firebaseCurrentUserIDSets;
+      if (firebaseCurrentUserID != null &&
+          !firebaseCurrentUserIDSets.contains(firebaseCurrentUserID)) {
+        firebaseCurrentUserIDSets.add(firebaseCurrentUserID);
+      }
+
+      await _database.userReference().set(
+        {
+          UserFirestoreFieldKeys.userDocumentIDSets: userDocumentIDSets,
+          UserFirestoreFieldKeys.firebaseCurrentUserIDSets:
+              firebaseCurrentUserIDSets,
+          UserFirestoreFieldKeys.anonymousUserIDSets: anonymousUserIDSets,
+        },
+        SetOptions(merge: true),
+      );
+    } catch (error) {
+      print(error);
+    }
   }
 
   Stream<User> subscribe() {
