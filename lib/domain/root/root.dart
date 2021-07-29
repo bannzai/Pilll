@@ -92,9 +92,12 @@ class RootState extends State<Root> {
     cacheOrAuth().then((authInfo) {
       final userService = UserService(DatabaseConnection(authInfo.uid));
       return userService.prepare(authInfo.uid).then((_) async {
-        userService.recordUserIDs();
-        userService.saveLaunchInfo();
-        userService.saveStats();
+        Future(() {
+          userService.recordUserIDs();
+          userService.saveLaunchInfo();
+          userService.saveStats();
+        });
+
         final user = await userService.fetch();
         userService.temporarySyncronizeDiscountEntitlement(user);
         if (!user.migratedFlutter) {
