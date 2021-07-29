@@ -47,38 +47,45 @@ class UserService {
     return _database.userReference().get();
   }
 
-  recordUserIDs() {
-    Future(() async {
-      try {
-        final document = await _fetchRawDocumentSnapshot();
-        final user = User.fromJson(document.data() as Map<String, dynamic>);
-        final documentID = document.id;
-        if (!user.userDocumentIDSets.contains(documentID)) {
-          user.userDocumentIDSets.add(documentID);
-        }
+  Future<void> recordUserIDs() async {
+    try {
+      final document = await _fetchRawDocumentSnapshot();
+      final user = User.fromJson(document.data() as Map<String, dynamic>);
+      final documentID = document.id;
+      final sharedPreferences = await SharedPreferences.getInstance();
 
-        final sharedPreferences = await SharedPreferences.getInstance();
-        final lastSigninAnonymousUID =
-            sharedPreferences.getString(StringKey.lastSigninAnonymousUID);
-        if (lastSigninAnonymousUID != null &&
-            !user.anonymousUserIDSets.contains(lastSigninAnonymousUID)) {
-          user.anonymousUserIDSets.add(lastSigninAnonymousUID);
-        }
-        final firebaseCurrentUserID =
-            firebaseAuth.FirebaseAuth.instance.currentUser?.uid;
-        if (firebaseCurrentUserID != null &&
-            !user.firebaseCurrentUserIDSets.contains(firebaseCurrentUserID)) {
-          user.firebaseCurrentUserIDSets.add(firebaseCurrentUserID);
-        }
-
-        await _database.userReference().set(
-              user.toJson(),
-              SetOptions(merge: true),
-            );
-      } catch (error) {
-        print(error);
+      List<String> userDocumentIDSets = user.userDocumentIDSets;
+      if (!userDocumentIDSets.contains(documentID)) {
+        userDocumentIDSets.add(documentID);
       }
-    });
+
+      final lastSigninAnonymousUID =
+          sharedPreferences.getString(StringKey.lastSigninAnonymousUID);
+      List<String> anonymousUserIDSets = user.anonymousUserIDSets;
+      if (lastSigninAnonymousUID != null &&
+          !anonymousUserIDSets.contains(lastSigninAnonymousUID)) {
+        anonymousUserIDSets.add(lastSigninAnonymousUID);
+      }
+      final firebaseCurrentUserID =
+          firebaseAuth.FirebaseAuth.instance.currentUser?.uid;
+      List<String> firebaseCurrentUserIDSets = user.firebaseCurrentUserIDSets;
+      if (firebaseCurrentUserID != null &&
+          !firebaseCurrentUserIDSets.contains(firebaseCurrentUserID)) {
+        firebaseCurrentUserIDSets.add(firebaseCurrentUserID);
+      }
+
+      await _database.userReference().set(
+        {
+          UserFirestoreFieldKeys.userDocumentIDSets: userDocumentIDSets,
+          UserFirestoreFieldKeys.firebaseCurrentUserIDSets:
+              firebaseCurrentUserIDSets,
+          UserFirestoreFieldKeys.anonymousUserIDSets: anonymousUserIDSets,
+        },
+        SetOptions(merge: true),
+      );
+    } catch (error) {
+      print(error);
+    }
   }
 
   Stream<User> subscribe() {
@@ -235,6 +242,22 @@ class UserService {
       UserFirestoreFieldKeys.trialDeadlineDate: now().add(Duration(days: 30)),
       UserFirestoreFieldKeys.settings: setting.toJson(),
       UserFirestoreFieldKeys.hasDiscountEntitlement: true,
+    }, SetOptions(merge: true));
+  }
+
+  // NOTE: 下位互換のために一時的にhasDiscountEntitlementをtrueにしていくスクリプト。
+  // サーバー側での制御が無駄になるけど、理屈ではこれで生合成が取れる
+  Future<void> temporarySyncronizeDiscountEntitlement(User user) async {
+    final discountEntitlementDeadlineDate =
+        user.discountEntitlementDeadlineDate;
+    final bool hasDiscountEntitlement;
+    if (discountEntitlementDeadlineDate == null) {
+      hasDiscountEntitlement = true;
+    } else {
+      hasDiscountEntitlement = !now().isAfter(discountEntitlementDeadlineDate);
+    }
+    return _database.userReference().set({
+      UserFirestoreFieldKeys.hasDiscountEntitlement: hasDiscountEntitlement,
     }, SetOptions(merge: true));
   }
 }
