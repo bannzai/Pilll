@@ -48,6 +48,7 @@ class PurchaseButtons extends HookWidget {
         if (annualPackage != null)
           AnnualPurchaseButton(
             annualPackage: annualPackage,
+            offeringType: state.offeringType,
             onTap: (annualPackage) async {
               analytics.logEvent(name: "pressed_annual_purchase_button");
               await _purchase(context, store, annualPackage);
