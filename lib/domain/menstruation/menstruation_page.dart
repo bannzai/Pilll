@@ -15,6 +15,7 @@ import 'package:pilll/components/organisms/calendar/weekly/weekly_calendar.dart'
 import 'package:pilll/domain/calendar/date_range.dart';
 import 'package:pilll/components/organisms/calendar/utility.dart';
 import 'package:pilll/domain/menstruation/menstruation_card.dart';
+import 'package:pilll/domain/menstruation/menstruation_state.dart';
 import 'package:pilll/domain/menstruation_edit/menstruation_edit_page.dart';
 import 'package:pilll/domain/menstruation/menstruation_history_card.dart';
 import 'package:pilll/domain/menstruation/menstruation_select_modify_type_sheet.dart';
@@ -75,154 +76,196 @@ class MenstruationPage extends HookWidget {
         child: Container(
           child: Column(
             children: [
-              ShadowContainer(
-                child: Container(
-                  padding: const EdgeInsets.only(
-                    left: _horizontalPadding,
-                    right: _horizontalPadding,
-                  ),
-                  width: MediaQuery.of(context).size.width,
-                  height: MenstruationPageConst.calendarHeaderHeight,
-                  child: Column(
-                    children: [
-                      _WeekdayLine(),
-                      LimitedBox(
-                        maxHeight: MenstruationPageConst.tileHeight,
-                        child: ScrollablePositionedList.builder(
-                          itemScrollController: itemScrollController,
-                          initialScrollIndex: state.currentCalendarIndex,
-                          physics: PageScrollPhysics(),
-                          scrollDirection: Axis.horizontal,
-                          itemPositionsListener: itemPositionsListener,
-                          itemBuilder: (context, index) {
-                            final days = state.calendarDataSource[index];
-                            return Container(
-                              width: MediaQuery.of(context).size.width -
-                                  _horizontalPadding * 2,
-                              height: MenstruationPageConst.tileHeight,
-                              child: CalendarWeekdayLine(
-                                calendarState:
-                                    MenstruationSinglelineWeeklyCalendarState(
-                                  dateRange: DateRange(days.first, days.last),
-                                  diariesForMonth: state.diariesForMonth,
-                                  allBandModels: buildBandModels(
-                                          state.latestPillSheet,
-                                          state.setting,
-                                          state.entities,
-                                          12)
-                                      .where((element) => !(element
-                                          is CalendarNextPillSheetBandModel))
-                                      .toList(),
-                                ),
-                                horizontalPadding: _horizontalPadding,
-                                onTap: (weeklyCalendarState, date) {
-                                  analytics.logEvent(
-                                      name:
-                                          "did_select_day_tile_on_menstruation");
-                                  transitionToPostDiary(
-                                      context, date, state.diariesForMonth);
-                                },
-                              ),
-                            );
-                          },
-                          itemCount: state.calendarDataSource.length,
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-              ),
+              MenstruationCalendarHeader(
+                  itemScrollController: itemScrollController,
+                  state: state,
+                  itemPositionsListener: itemPositionsListener),
               Expanded(
-                child: Container(
-                  color: PilllColors.background,
-                  child: ListView.builder(
-                    padding: EdgeInsets.only(top: 16),
-                    itemCount: store.cardCount,
-                    scrollDirection: Axis.vertical,
-                    itemBuilder: (context, index) {
-                      final body = () {
-                        switch (index) {
-                          case 0:
-                            final cardState = store.cardState();
-                            if (cardState == null) {
-                              return Container();
-                            }
-                            return MenstruationCard(cardState);
-                          case 1:
-                            final cardState = store.historyCardState();
-                            if (cardState == null) {
-                              return Container();
-                            }
-                            return MenstruationHistoryCard(state: cardState);
-                        }
-                      };
-
-                      return Padding(
-                          padding:
-                              EdgeInsets.only(left: 16, right: 16, bottom: 24),
-                          child: body());
-                    },
-                  ),
-                ),
+                child: MenstruationCardList(store: store),
               ),
               Padding(
                 padding: const EdgeInsets.only(bottom: 20.0),
-                child: PrimaryButton(
-                  onPressed: () {
-                    analytics.logEvent(name: "pressed_menstruation_record");
-                    final latestMenstruation = state.latestMenstruation;
-                    if (latestMenstruation != null &&
-                        latestMenstruation.dateRange.inRange(today())) {
-                      showMenstruationEditPageForUpdate(
-                          context, latestMenstruation);
-                      return;
-                    }
-
-                    showModalBottomSheet(
-                      context: context,
-                      builder: (_) => MenstruationSelectModifyTypeSheet(
-                          onTap: (type) async {
-                        switch (type) {
-                          case MenstruationSelectModifyType.today:
-                            analytics.logEvent(
-                                name: "tapped_menstruation_record_today");
-                            Navigator.of(context).pop();
-                            final created = await store.recordFromToday();
-                            ScaffoldMessenger.of(context).showSnackBar(
-                              SnackBar(
-                                duration: Duration(seconds: 2),
-                                content: Text(
-                                    "${DateTimeFormatter.monthAndDay(created.beginDate)}から生理開始で記録しました"),
-                              ),
-                            );
-                            return;
-                          case MenstruationSelectModifyType.yesterday:
-                            analytics.logEvent(
-                                name: "tapped_menstruation_record_yesterday");
-                            Navigator.of(context).pop();
-                            final created = await store.recordFromYesterday();
-                            ScaffoldMessenger.of(context).showSnackBar(
-                              SnackBar(
-                                duration: Duration(seconds: 2),
-                                content: Text(
-                                    "${DateTimeFormatter.monthAndDay(created.beginDate)}から生理開始で記録しました"),
-                              ),
-                            );
-                            return;
-                          case MenstruationSelectModifyType.begin:
-                            analytics.logEvent(
-                                name: "tapped_menstruation_record_begin");
-                            Navigator.of(context).pop();
-                            return showMenstruationEditPageForCreate(context);
-                        }
-                      }),
-                    );
-                  },
-                  text: state.buttonString,
-                ),
+                child: MenstruationRecordButton(state: state, store: store),
               ),
             ],
           ),
+        ),
+      ),
+    );
+  }
+}
+
+class MenstruationRecordButton extends StatelessWidget {
+  const MenstruationRecordButton({
+    Key? key,
+    required this.state,
+    required this.store,
+  }) : super(key: key);
+
+  final MenstruationState state;
+  final MenstruationStore store;
+
+  @override
+  Widget build(BuildContext context) {
+    return PrimaryButton(
+      onPressed: () {
+        analytics.logEvent(name: "pressed_menstruation_record");
+        final latestMenstruation = state.latestMenstruation;
+        if (latestMenstruation != null &&
+            latestMenstruation.dateRange.inRange(today())) {
+          showMenstruationEditPageForUpdate(context, latestMenstruation);
+          return;
+        }
+
+        showModalBottomSheet(
+          context: context,
+          builder: (_) =>
+              MenstruationSelectModifyTypeSheet(onTap: (type) async {
+            switch (type) {
+              case MenstruationSelectModifyType.today:
+                analytics.logEvent(name: "tapped_menstruation_record_today");
+                Navigator.of(context).pop();
+                final created = await store.recordFromToday();
+                ScaffoldMessenger.of(context).showSnackBar(
+                  SnackBar(
+                    duration: Duration(seconds: 2),
+                    content: Text(
+                        "${DateTimeFormatter.monthAndDay(created.beginDate)}から生理開始で記録しました"),
+                  ),
+                );
+                return;
+              case MenstruationSelectModifyType.yesterday:
+                analytics.logEvent(
+                    name: "tapped_menstruation_record_yesterday");
+                Navigator.of(context).pop();
+                final created = await store.recordFromYesterday();
+                ScaffoldMessenger.of(context).showSnackBar(
+                  SnackBar(
+                    duration: Duration(seconds: 2),
+                    content: Text(
+                        "${DateTimeFormatter.monthAndDay(created.beginDate)}から生理開始で記録しました"),
+                  ),
+                );
+                return;
+              case MenstruationSelectModifyType.begin:
+                analytics.logEvent(name: "tapped_menstruation_record_begin");
+                Navigator.of(context).pop();
+                return showMenstruationEditPageForCreate(context);
+            }
+          }),
+        );
+      },
+      text: state.buttonString,
+    );
+  }
+}
+
+class MenstruationCardList extends StatelessWidget {
+  const MenstruationCardList({
+    Key? key,
+    required this.store,
+  }) : super(key: key);
+
+  final MenstruationStore store;
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      color: PilllColors.background,
+      child: ListView.builder(
+        padding: EdgeInsets.only(top: 16),
+        itemCount: store.cardCount,
+        scrollDirection: Axis.vertical,
+        itemBuilder: (context, index) {
+          final body = () {
+            switch (index) {
+              case 0:
+                final cardState = store.cardState();
+                if (cardState == null) {
+                  return Container();
+                }
+                return MenstruationCard(cardState);
+              case 1:
+                final cardState = store.historyCardState();
+                if (cardState == null) {
+                  return Container();
+                }
+                return MenstruationHistoryCard(state: cardState);
+            }
+          };
+
+          return Padding(
+              padding: EdgeInsets.only(left: 16, right: 16, bottom: 24),
+              child: body());
+        },
+      ),
+    );
+  }
+}
+
+class MenstruationCalendarHeader extends StatelessWidget {
+  const MenstruationCalendarHeader({
+    Key? key,
+    required this.itemScrollController,
+    required this.state,
+    required this.itemPositionsListener,
+  }) : super(key: key);
+
+  final ItemScrollController itemScrollController;
+  final MenstruationState state;
+  final ItemPositionsListener itemPositionsListener;
+
+  @override
+  Widget build(BuildContext context) {
+    return ShadowContainer(
+      child: Container(
+        padding: const EdgeInsets.only(
+          left: _horizontalPadding,
+          right: _horizontalPadding,
+        ),
+        width: MediaQuery.of(context).size.width,
+        height: MenstruationPageConst.calendarHeaderHeight,
+        child: Column(
+          children: [
+            _WeekdayLine(),
+            LimitedBox(
+              maxHeight: MenstruationPageConst.tileHeight,
+              child: ScrollablePositionedList.builder(
+                itemScrollController: itemScrollController,
+                initialScrollIndex: state.currentCalendarIndex,
+                physics: PageScrollPhysics(),
+                scrollDirection: Axis.horizontal,
+                itemPositionsListener: itemPositionsListener,
+                itemBuilder: (context, index) {
+                  final days = state.calendarDataSource[index];
+                  return Container(
+                    width: MediaQuery.of(context).size.width -
+                        _horizontalPadding * 2,
+                    height: MenstruationPageConst.tileHeight,
+                    child: CalendarWeekdayLine(
+                      calendarState: MenstruationSinglelineWeeklyCalendarState(
+                        dateRange: DateRange(days.first, days.last),
+                        diariesForMonth: state.diariesForMonth,
+                        allBandModels: buildBandModels(state.latestPillSheet,
+                                state.setting, state.entities, 12)
+                            .where((element) =>
+                                !(element is CalendarNextPillSheetBandModel))
+                            .toList(),
+                      ),
+                      horizontalPadding: _horizontalPadding,
+                      onTap: (weeklyCalendarState, date) {
+                        analytics.logEvent(
+                            name: "did_select_day_tile_on_menstruation");
+                        transitionToPostDiary(
+                            context, date, state.diariesForMonth);
+                      },
+                    ),
+                  );
+                },
+                itemCount: state.calendarDataSource.length,
+              ),
+            ),
+          ],
         ),
       ),
     );
