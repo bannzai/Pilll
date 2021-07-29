@@ -3,15 +3,20 @@ import 'package:intl/intl.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
+import 'package:pilll/domain/premium_introduction/components/purchase_buttons_state.dart';
 import 'package:purchases_flutter/purchases_flutter.dart';
 
 class AnnualPurchaseButton extends StatelessWidget {
   final Package annualPackage;
+  final OfferingType offeringType;
   final Function(Package) onTap;
 
-  const AnnualPurchaseButton(
-      {Key? key, required this.annualPackage, required this.onTap})
-      : super(key: key);
+  const AnnualPurchaseButton({
+    Key? key,
+    required this.annualPackage,
+    required this.offeringType,
+    required this.onTap,
+  }) : super(key: key);
   @override
   Widget build(BuildContext context) {
     final monthlyPrice = annualPackage.product.price / 12;
@@ -71,8 +76,10 @@ class AnnualPurchaseButton extends StatelessWidget {
           ),
           Positioned(
             top: -11,
-            left: 8,
-            child: _DiscountBadge(),
+            right: 8,
+            child: _DiscountBadge(
+              offeringType: offeringType,
+            ),
           ),
         ],
       ),
@@ -81,6 +88,10 @@ class AnnualPurchaseButton extends StatelessWidget {
 }
 
 class _DiscountBadge extends StatelessWidget {
+  final OfferingType offeringType;
+
+  const _DiscountBadge({Key? key, required this.offeringType})
+      : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -90,12 +101,13 @@ class _DiscountBadge extends StatelessWidget {
         color: PilllColors.primary,
       ),
       child: Text(
-        "通常月額と比べて48％OFF",
+        offeringType == OfferingType.limited ? "通常月額と比べて48％OFF" : "37.5％OFF",
         style: TextColorStyle.white.merge(
           TextStyle(
-              fontWeight: FontWeight.w700,
-              fontSize: 10,
-              fontFamily: FontFamily.japanese),
+            fontWeight: FontWeight.w700,
+            fontSize: 10,
+            fontFamily: FontFamily.japanese,
+          ),
         ),
       ),
     );

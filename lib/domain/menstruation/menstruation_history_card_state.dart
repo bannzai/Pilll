@@ -38,7 +38,7 @@ class MenstruationHistoryCardState {
 
   String get avalageMenstruationDuration {
     if (allMenstruations.length <= 1) {
-      return "";
+      return "-";
     }
     final rows = MenstruationListRowState.rows(allMenstruations);
 
@@ -58,7 +58,7 @@ class MenstruationHistoryCardState {
 
   String get avalageMenstruationPeriod {
     if (allMenstruations.length <= 1) {
-      return "";
+      return "-";
     }
 
     int count = 0;
