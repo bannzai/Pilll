@@ -14,7 +14,7 @@ import 'package:flutter/widgets.dart';
 
 abstract class SettingMenstruationPageConstants {
   static final List<String> durationList =
-      List<String>.generate(7, (index) => (index + 1).toString());
+      List<String>.generate(7 + 1, (index) => (index).toString());
 }
 
 class SettingMenstruationPageModel {
@@ -235,15 +235,15 @@ class _SettingMenstruationPageState extends State<SettingMenstruationPage> {
                 child: CupertinoPicker(
                   itemExtent: 40,
                   children: List.generate(
-                          this.widget.pillSheetTotalCount, (index) => index + 1)
+                          this.widget.pillSheetTotalCount + 1, (index) => index)
                       .map((number) => number.toString())
                       .map(_pickerItem)
                       .toList(),
                   onSelectedItemChanged: (index) {
-                    keepSelectedFromMenstruation = index + 1;
+                    keepSelectedFromMenstruation = index;
                   },
                   scrollController: FixedExtentScrollController(
-                      initialItem: keepSelectedFromMenstruation - 1),
+                      initialItem: keepSelectedFromMenstruation),
                 ),
               ),
             ),
@@ -289,10 +289,10 @@ class _SettingMenstruationPageState extends State<SettingMenstruationPage> {
                       .map(_pickerItem)
                       .toList(),
                   onSelectedItemChanged: (index) {
-                    keepSelectedDurationMenstruation = index + 1;
+                    keepSelectedDurationMenstruation = index;
                   },
                   scrollController: FixedExtentScrollController(
-                      initialItem: keepSelectedDurationMenstruation - 1),
+                      initialItem: keepSelectedDurationMenstruation),
                 ),
               ),
             ),
