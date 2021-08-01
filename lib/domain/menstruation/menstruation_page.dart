@@ -124,6 +124,15 @@ class MenstruationRecordButton extends StatelessWidget {
           return;
         }
 
+        final setting = state.setting;
+        if (setting == null) {
+          throw FormatException("生理記録前にデータの読み込みに失敗しました。再読み込みしてから再度お試しください");
+        }
+
+        if (setting.durationMenstruation == 0 &&
+            setting.pillNumberForFromMenstruation == 0) {
+          return showMenstruationEditPageForCreate(context);
+        }
         showModalBottomSheet(
           context: context,
           builder: (_) =>
