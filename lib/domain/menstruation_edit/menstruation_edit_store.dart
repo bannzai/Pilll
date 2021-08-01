@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/entity/menstruation.dart';
 import 'package:pilll/entity/setting.dart';
@@ -116,7 +118,8 @@ class MenstruationEditStore extends StateNotifier<MenstruationEditState> {
       }
 
       final begin = date;
-      final end = date.add(Duration(days: setting.durationMenstruation - 1));
+      final end =
+          date.add(Duration(days: max(setting.durationMenstruation - 1, 0)));
       late final Menstruation menstruation;
       final initialMenstruation = this.initialMenstruation;
       if (initialMenstruation != null) {
