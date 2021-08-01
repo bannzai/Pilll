@@ -1,5 +1,8 @@
+import 'dart:math';
+
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/entity/menstruation.dart';
+import 'package:pilll/entity/setting.dart';
 import 'package:pilll/service/menstruation.dart';
 import 'package:pilll/service/setting.dart';
 import 'package:pilll/domain/menstruation_edit/menstruation_edit_state.dart';
@@ -107,29 +110,32 @@ class MenstruationEditStore extends StateNotifier<MenstruationEditState> {
     state = state.copyWith(invalidMessage: null);
 
     if (menstruation == null) {
+      final Setting setting;
       try {
-        final setting = await settingService.fetch();
-        final begin = date;
-        final end = date.add(Duration(days: setting.durationMenstruation - 1));
-        late final Menstruation menstruation;
-        final initialMenstruation = this.initialMenstruation;
-        if (initialMenstruation != null) {
-          menstruation = initialMenstruation.copyWith(
-            beginDate: date,
-            endDate: end,
-          );
-        } else {
-          menstruation = Menstruation(
-            beginDate: begin,
-            endDate: end,
-            createdAt: now(),
-          );
-        }
-        state = state.copyWith(menstruation: menstruation);
-        return;
+        setting = await settingService.fetch();
       } catch (error) {
         throw error;
       }
+
+      final begin = date;
+      final end =
+          date.add(Duration(days: max(setting.durationMenstruation - 1, 0)));
+      late final Menstruation menstruation;
+      final initialMenstruation = this.initialMenstruation;
+      if (initialMenstruation != null) {
+        menstruation = initialMenstruation.copyWith(
+          beginDate: date,
+          endDate: end,
+        );
+      } else {
+        menstruation = Menstruation(
+          beginDate: begin,
+          endDate: end,
+          createdAt: now(),
+        );
+      }
+      state = state.copyWith(menstruation: menstruation);
+      return;
     }
 
     if (isSameDay(menstruation.beginDate, date) &&
