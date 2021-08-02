@@ -185,34 +185,21 @@ class MenstruationCardList extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final cardState = store.cardState();
+    final historyCardState = store.historyCardState();
     return Container(
       color: PilllColors.background,
-      child: ListView.builder(
-        padding: EdgeInsets.only(top: 16),
-        itemCount: store.cardCount,
+      child: ListView(
+        padding: EdgeInsets.only(top: 16, left: 16, right: 16),
         scrollDirection: Axis.vertical,
-        itemBuilder: (context, index) {
-          final body = () {
-            switch (index) {
-              case 0:
-                final cardState = store.cardState();
-                if (cardState == null) {
-                  return Container();
-                }
-                return MenstruationCard(cardState);
-              case 1:
-                final cardState = store.historyCardState();
-                if (cardState == null) {
-                  return Container();
-                }
-                return MenstruationHistoryCard(state: cardState);
-            }
-          };
-
-          return Padding(
-              padding: EdgeInsets.only(left: 16, right: 16, bottom: 24),
-              child: body());
-        },
+        children: [
+          if (cardState != null) ...[
+            MenstruationCard(cardState),
+            SizedBox(height: 24),
+          ],
+          if (historyCardState != null)
+            MenstruationHistoryCard(state: historyCardState),
+        ],
       ),
     );
   }
