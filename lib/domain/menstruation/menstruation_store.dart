@@ -138,18 +138,6 @@ class MenstruationStore extends StateNotifier<MenstruationState> {
     return menstruationService.create(menstruation);
   }
 
-  int get cardCount {
-    final card = cardState();
-    if (card == null) {
-      return 0;
-    }
-    final historyCard = historyCardState();
-    if (historyCard == null) {
-      return [card].length;
-    }
-    return [card, historyCard].length;
-  }
-
   MenstruationCardState? cardState() {
     final latestMenstruation = state.latestMenstruation;
     if (latestMenstruation != null &&
@@ -159,6 +147,10 @@ class MenstruationStore extends StateNotifier<MenstruationState> {
     final latestPillSheet = state.latestPillSheet;
     final setting = state.setting;
     if (latestPillSheet == null || setting == null) {
+      return null;
+    }
+    if (setting.pillNumberForFromMenstruation == 0 ||
+        setting.durationMenstruation == 0) {
       return null;
     }
 

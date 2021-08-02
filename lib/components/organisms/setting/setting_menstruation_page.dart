@@ -13,8 +13,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
 abstract class SettingMenstruationPageConstants {
-  static final List<String> durationList =
-      List<String>.generate(7 + 1, (index) => (index).toString());
+  static final List<String> durationList = [
+    "-",
+    ...List<String>.generate(7, (index) => (index + 1).toString())
+  ];
 }
 
 class SettingMenstruationPageModel {
@@ -165,6 +167,13 @@ class _SettingMenstruationPageState extends State<SettingMenstruationPage> {
   }
 
   Widget _from() {
+    final from = this.widget.model.selectedFromMenstruation;
+    final String fromString;
+    if (from == 0) {
+      fromString = "-";
+    } else {
+      fromString = from.toString();
+    }
     return Container(
       width: 48,
       height: 48,
@@ -176,13 +185,20 @@ class _SettingMenstruationPageState extends State<SettingMenstruationPage> {
         ),
       ),
       child: Center(
-        child: Text(this.widget.model.selectedFromMenstruation.toString(),
+        child: Text(fromString,
             style: FontType.inputNumber.merge(TextColorStyle.gray)),
       ),
     );
   }
 
   Widget _duration() {
+    final duration = this.widget.model.selectedDurationMenstruation;
+    final String durationString;
+    if (duration == 0) {
+      durationString = "-";
+    } else {
+      durationString = duration.toString();
+    }
     return Container(
       width: 48,
       height: 48,
@@ -194,7 +210,7 @@ class _SettingMenstruationPageState extends State<SettingMenstruationPage> {
         ),
       ),
       child: Center(
-        child: Text(this.widget.model.selectedDurationMenstruation.toString(),
+        child: Text(durationString,
             style: FontType.inputNumber.merge(TextColorStyle.gray)),
       ),
     );
@@ -234,11 +250,13 @@ class _SettingMenstruationPageState extends State<SettingMenstruationPage> {
                 },
                 child: CupertinoPicker(
                   itemExtent: 40,
-                  children: List.generate(
-                          this.widget.pillSheetTotalCount + 1, (index) => index)
-                      .map((number) => number.toString())
-                      .map(_pickerItem)
-                      .toList(),
+                  children: List.generate(this.widget.pillSheetTotalCount + 1,
+                      (index) {
+                    if (index == 0) {
+                      return "-";
+                    }
+                    return "$index";
+                  }).map(_pickerItem).toList(),
                   onSelectedItemChanged: (index) {
                     keepSelectedFromMenstruation = index;
                   },
