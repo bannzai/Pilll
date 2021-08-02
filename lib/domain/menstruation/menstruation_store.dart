@@ -149,6 +149,9 @@ class MenstruationStore extends StateNotifier<MenstruationState> {
     if (latestPillSheet == null || setting == null) {
       return null;
     }
+    if (setting.pillNumberForFromMenstruation == 0) {
+      return null;
+    }
 
     final menstruationDateRanges = scheduledMenstruationDateRanges(
         latestPillSheet, setting, state.entities, 12);
