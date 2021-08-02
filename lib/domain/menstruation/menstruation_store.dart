@@ -149,7 +149,8 @@ class MenstruationStore extends StateNotifier<MenstruationState> {
     if (latestPillSheet == null || setting == null) {
       return null;
     }
-    if (setting.pillNumberForFromMenstruation == 0) {
+    if (setting.pillNumberForFromMenstruation == 0 ||
+        setting.durationMenstruation == 0) {
       return null;
     }
 
