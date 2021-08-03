@@ -85,6 +85,7 @@ class MenstruationPage extends HookWidget {
                   Expanded(
                     child: MenstruationCardList(store: store),
                   ),
+                  SizedBox(height: 40),
                 ],
               ),
               Align(
