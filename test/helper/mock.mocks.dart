@@ -306,6 +306,11 @@ class MockUserService extends _i1.Mock implements _i20.UserService {
               returnValue: Future<_i6.User>.value(_FakeUser()))
           as _i12.Future<_i6.User>);
   @override
+  _i12.Future<void> recordUserIDs() =>
+      (super.noSuchMethod(Invocation.method(#recordUserIDs, []),
+          returnValue: Future<void>.value(),
+          returnValueForMissingStub: Future.value()) as _i12.Future<void>);
+  @override
   _i12.Stream<_i6.User> subscribe() =>
       (super.noSuchMethod(Invocation.method(#subscribe, []),
           returnValue: Stream<_i6.User>.empty()) as _i12.Stream<_i6.User>);
@@ -378,6 +383,12 @@ class MockUserService extends _i1.Mock implements _i20.UserService {
   @override
   _i12.Future<void> trial(_i3.Setting? setting) =>
       (super.noSuchMethod(Invocation.method(#trial, [setting]),
+          returnValue: Future<void>.value(),
+          returnValueForMissingStub: Future.value()) as _i12.Future<void>);
+  @override
+  _i12.Future<void> temporarySyncronizeDiscountEntitlement(_i6.User? user) =>
+      (super.noSuchMethod(
+          Invocation.method(#temporarySyncronizeDiscountEntitlement, [user]),
           returnValue: Future<void>.value(),
           returnValueForMissingStub: Future.value()) as _i12.Future<void>);
 }
