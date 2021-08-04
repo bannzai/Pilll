@@ -3,6 +3,10 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 part 'pill_sheet_modified_history.g.dart';
 part 'pill_sheet_modified_history.freezed.dart';
 
+abstract class PillSheetModifiedHistoryFirestoreKeys {
+  static final createdAt = "createdAt";
+}
+
 enum PillSheetModifiedActionType {
   @JsonValue("createdPillSheet")
   createdPillSheet,
