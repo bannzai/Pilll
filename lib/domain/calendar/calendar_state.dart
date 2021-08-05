@@ -9,7 +9,7 @@ import 'package:pilll/util/datetime/date_compare.dart';
 import 'package:pilll/util/datetime/day.dart';
 import 'package:pilll/util/formatter/date_time_formatter.dart';
 
-part '../../state/calendar_page.freezed.dart';
+part 'calendar_state.freezed.dart';
 
 @freezed
 abstract class CalendarPageState implements _$CalendarPageState {
