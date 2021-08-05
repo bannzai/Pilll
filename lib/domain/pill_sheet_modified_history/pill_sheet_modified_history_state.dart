@@ -1,4 +1,5 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:pilll/entity/pill_sheet_modified_history.dart';
 
 part 'pill_sheet_modified_history_state.freezed.dart';
 
@@ -7,11 +8,19 @@ abstract class PillSheetModifiedHistoryState
     implements _$PillSheetModifiedHistoryState {
   PillSheetModifiedHistoryState._();
   factory PillSheetModifiedHistoryState({
-    DateTime? beginTrialDate,
-    @Default(false) bool isTrial,
-    @Default(false) bool isPremium,
-    @Default(false) bool isLoading,
     @Default(false) bool isFirstLoadEnded,
-    Object? exception,
+    @Default(false) bool isLoading,
+    @Default([]) List<PillSheetModifiedHistoryElementState> elements,
   }) = _PillSheetModifiedHistoryState;
+}
+
+@freezed
+abstract class PillSheetModifiedHistoryElementState
+    implements _$PillSheetModifiedHistoryElementState {
+  PillSheetModifiedHistoryElementState._();
+  factory PillSheetModifiedHistoryElementState({
+    required PillSheetModifiedActionType actionType,
+    required PillSheetModifiedValue value,
+    required DateTime createdAt,
+  }) = _PillSheetModifiedHistoryElementState;
 }
