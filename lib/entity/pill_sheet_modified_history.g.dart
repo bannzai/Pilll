@@ -34,6 +34,8 @@ _$_PillSheetModifiedHistory _$_$_PillSheetModifiedHistoryFromJson(
   return _$_PillSheetModifiedHistory(
     actionType: json['actionType'] as String,
     userID: json['userID'] as String,
+    value:
+        PillSheetModifiedValue.fromJson(json['value'] as Map<String, dynamic>),
     createdAt: DateTime.parse(json['createdAt'] as String),
   );
 }
@@ -43,5 +45,6 @@ Map<String, dynamic> _$_$_PillSheetModifiedHistoryToJson(
     <String, dynamic>{
       'actionType': instance.actionType,
       'userID': instance.userID,
+      'value': instance.value.toJson(),
       'createdAt': instance.createdAt.toIso8601String(),
     };

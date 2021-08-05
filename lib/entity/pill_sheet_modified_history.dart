@@ -47,6 +47,7 @@ abstract class PillSheetModifiedHistory with _$PillSheetModifiedHistory {
   factory PillSheetModifiedHistory({
     required String actionType,
     required String userID,
+    required PillSheetModifiedValue value,
     required DateTime createdAt,
   }) = _PillSheetModifiedHistory;
   const PillSheetModifiedHistory._();

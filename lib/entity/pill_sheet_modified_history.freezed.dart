@@ -236,10 +236,12 @@ class _$PillSheetModifiedHistoryTearOff {
   _PillSheetModifiedHistory call(
       {required String actionType,
       required String userID,
+      required PillSheetModifiedValue value,
       required DateTime createdAt}) {
     return _PillSheetModifiedHistory(
       actionType: actionType,
       userID: userID,
+      value: value,
       createdAt: createdAt,
     );
   }
@@ -256,6 +258,7 @@ const $PillSheetModifiedHistory = _$PillSheetModifiedHistoryTearOff();
 mixin _$PillSheetModifiedHistory {
   String get actionType => throw _privateConstructorUsedError;
   String get userID => throw _privateConstructorUsedError;
+  PillSheetModifiedValue get value => throw _privateConstructorUsedError;
   DateTime get createdAt => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -269,7 +272,13 @@ abstract class $PillSheetModifiedHistoryCopyWith<$Res> {
   factory $PillSheetModifiedHistoryCopyWith(PillSheetModifiedHistory value,
           $Res Function(PillSheetModifiedHistory) then) =
       _$PillSheetModifiedHistoryCopyWithImpl<$Res>;
-  $Res call({String actionType, String userID, DateTime createdAt});
+  $Res call(
+      {String actionType,
+      String userID,
+      PillSheetModifiedValue value,
+      DateTime createdAt});
+
+  $PillSheetModifiedValueCopyWith<$Res> get value;
 }
 
 /// @nodoc
@@ -285,6 +294,7 @@ class _$PillSheetModifiedHistoryCopyWithImpl<$Res>
   $Res call({
     Object? actionType = freezed,
     Object? userID = freezed,
+    Object? value = freezed,
     Object? createdAt = freezed,
   }) {
     return _then(_value.copyWith(
@@ -296,11 +306,22 @@ class _$PillSheetModifiedHistoryCopyWithImpl<$Res>
           ? _value.userID
           : userID // ignore: cast_nullable_to_non_nullable
               as String,
+      value: value == freezed
+          ? _value.value
+          : value // ignore: cast_nullable_to_non_nullable
+              as PillSheetModifiedValue,
       createdAt: createdAt == freezed
           ? _value.createdAt
           : createdAt // ignore: cast_nullable_to_non_nullable
               as DateTime,
     ));
+  }
+
+  @override
+  $PillSheetModifiedValueCopyWith<$Res> get value {
+    return $PillSheetModifiedValueCopyWith<$Res>(_value.value, (value) {
+      return _then(_value.copyWith(value: value));
+    });
   }
 }
 
@@ -311,7 +332,14 @@ abstract class _$PillSheetModifiedHistoryCopyWith<$Res>
           $Res Function(_PillSheetModifiedHistory) then) =
       __$PillSheetModifiedHistoryCopyWithImpl<$Res>;
   @override
-  $Res call({String actionType, String userID, DateTime createdAt});
+  $Res call(
+      {String actionType,
+      String userID,
+      PillSheetModifiedValue value,
+      DateTime createdAt});
+
+  @override
+  $PillSheetModifiedValueCopyWith<$Res> get value;
 }
 
 /// @nodoc
@@ -330,6 +358,7 @@ class __$PillSheetModifiedHistoryCopyWithImpl<$Res>
   $Res call({
     Object? actionType = freezed,
     Object? userID = freezed,
+    Object? value = freezed,
     Object? createdAt = freezed,
   }) {
     return _then(_PillSheetModifiedHistory(
@@ -341,6 +370,10 @@ class __$PillSheetModifiedHistoryCopyWithImpl<$Res>
           ? _value.userID
           : userID // ignore: cast_nullable_to_non_nullable
               as String,
+      value: value == freezed
+          ? _value.value
+          : value // ignore: cast_nullable_to_non_nullable
+              as PillSheetModifiedValue,
       createdAt: createdAt == freezed
           ? _value.createdAt
           : createdAt // ignore: cast_nullable_to_non_nullable
@@ -354,7 +387,10 @@ class __$PillSheetModifiedHistoryCopyWithImpl<$Res>
 @JsonSerializable(explicitToJson: true)
 class _$_PillSheetModifiedHistory extends _PillSheetModifiedHistory {
   _$_PillSheetModifiedHistory(
-      {required this.actionType, required this.userID, required this.createdAt})
+      {required this.actionType,
+      required this.userID,
+      required this.value,
+      required this.createdAt})
       : super._();
 
   factory _$_PillSheetModifiedHistory.fromJson(Map<String, dynamic> json) =>
@@ -365,11 +401,13 @@ class _$_PillSheetModifiedHistory extends _PillSheetModifiedHistory {
   @override
   final String userID;
   @override
+  final PillSheetModifiedValue value;
+  @override
   final DateTime createdAt;
 
   @override
   String toString() {
-    return 'PillSheetModifiedHistory(actionType: $actionType, userID: $userID, createdAt: $createdAt)';
+    return 'PillSheetModifiedHistory(actionType: $actionType, userID: $userID, value: $value, createdAt: $createdAt)';
   }
 
   @override
@@ -381,6 +419,8 @@ class _$_PillSheetModifiedHistory extends _PillSheetModifiedHistory {
                     .equals(other.actionType, actionType)) &&
             (identical(other.userID, userID) ||
                 const DeepCollectionEquality().equals(other.userID, userID)) &&
+            (identical(other.value, value) ||
+                const DeepCollectionEquality().equals(other.value, value)) &&
             (identical(other.createdAt, createdAt) ||
                 const DeepCollectionEquality()
                     .equals(other.createdAt, createdAt)));
@@ -391,6 +431,7 @@ class _$_PillSheetModifiedHistory extends _PillSheetModifiedHistory {
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(actionType) ^
       const DeepCollectionEquality().hash(userID) ^
+      const DeepCollectionEquality().hash(value) ^
       const DeepCollectionEquality().hash(createdAt);
 
   @JsonKey(ignore: true)
@@ -409,6 +450,7 @@ abstract class _PillSheetModifiedHistory extends PillSheetModifiedHistory {
   factory _PillSheetModifiedHistory(
       {required String actionType,
       required String userID,
+      required PillSheetModifiedValue value,
       required DateTime createdAt}) = _$_PillSheetModifiedHistory;
   _PillSheetModifiedHistory._() : super._();
 
@@ -419,6 +461,8 @@ abstract class _PillSheetModifiedHistory extends PillSheetModifiedHistory {
   String get actionType => throw _privateConstructorUsedError;
   @override
   String get userID => throw _privateConstructorUsedError;
+  @override
+  PillSheetModifiedValue get value => throw _privateConstructorUsedError;
   @override
   DateTime get createdAt => throw _privateConstructorUsedError;
   @override
