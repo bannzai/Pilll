@@ -10,6 +10,7 @@ import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/domain/calendar/components/calendar_help.dart';
+import 'package:pilll/domain/calendar/components/pill_sheet_modified_history/pill_sheet_modified_history_card.dart';
 import 'package:pilll/domain/home/home_page.dart';
 import 'package:pilll/domain/calendar/calendar_store.dart';
 import 'package:flutter/cupertino.dart';
@@ -87,6 +88,10 @@ class CalendarPage extends HookWidget {
                 ),
               ),
               SizedBox(height: 30),
+              Padding(
+                padding: const EdgeInsets.only(left: 16, right: 16),
+                child: CalendarPillSheetModifiedHistoryCard(),
+              ),
             ],
           ),
         ),
