@@ -38,7 +38,7 @@ class PillSheetModifiedHistoryDate extends StatelessWidget {
               fontWeight: FontWeight.w400,
             ),
           ),
-          SizedBox(width: 16),
+          SizedBox(width: 12),
           Container(
             height: 26,
             child: VerticalDivider(
