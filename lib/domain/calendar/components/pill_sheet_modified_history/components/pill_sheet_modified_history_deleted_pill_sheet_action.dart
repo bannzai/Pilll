@@ -60,8 +60,10 @@ class PillSheetModifiedHistoryDeletedPillSheetAction extends StatelessWidget {
                 ],
               ),
             ),
+            Spacer(flex: 2),
             Container(
-              padding: EdgeInsets.only(left: 10),
+              width: PillSheetModifiedHistoryTakenActionLayoutWidths
+                  .actionDescription,
               child: Text(
                 "ピルシート破棄",
                 style: TextStyle(
@@ -72,6 +74,9 @@ class PillSheetModifiedHistoryDeletedPillSheetAction extends StatelessWidget {
                 ),
                 textAlign: TextAlign.start,
               ),
+            ),
+            Container(
+              width: PillSheetModifiedHistoryTakenActionLayoutWidths.takenMark,
             ),
           ],
         ),

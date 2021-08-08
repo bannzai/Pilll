@@ -42,7 +42,7 @@ class CalendarPillSheetModifiedHistoryCard extends StatelessWidget {
             ),
             SizedBox(height: 16),
             Padding(
-              padding: const EdgeInsets.only(left: 8, right: 8),
+              padding: const EdgeInsets.only(right: 8),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
@@ -50,12 +50,10 @@ class CalendarPillSheetModifiedHistoryCard extends StatelessWidget {
                     width:
                         PillSheetModifiedHistoryTakenActionLayoutWidths.leading,
                   ),
-                  Spacer(),
+                  Spacer(flex: 2),
                   Container(
-                    constraints: BoxConstraints(
-                      maxWidth: PillSheetModifiedHistoryTakenActionLayoutWidths
-                          .takenMark,
-                    ),
+                    width: PillSheetModifiedHistoryTakenActionLayoutWidths
+                        .takenMark,
                     child: Text(
                       "服用時間",
                       style: TextStyle(
@@ -64,7 +62,7 @@ class CalendarPillSheetModifiedHistoryCard extends StatelessWidget {
                         fontSize: 12,
                         fontWeight: FontWeight.w400,
                       ),
-                      textAlign: TextAlign.center,
+                      textAlign: TextAlign.start,
                     ),
                   ),
                   Spacer(flex: 2),

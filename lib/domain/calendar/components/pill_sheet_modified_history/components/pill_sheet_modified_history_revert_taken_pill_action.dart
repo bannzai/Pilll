@@ -61,8 +61,10 @@ class PillSheetModifiedHistoryRevertTakenPillAction extends StatelessWidget {
                 ],
               ),
             ),
+            Spacer(flex: 2),
             Container(
-              padding: EdgeInsets.only(left: 10),
+              width: PillSheetModifiedHistoryTakenActionLayoutWidths
+                  .actionDescription,
               child: Text(
                 "服用取り消し",
                 style: TextStyle(
@@ -73,6 +75,9 @@ class PillSheetModifiedHistoryRevertTakenPillAction extends StatelessWidget {
                 ),
                 textAlign: TextAlign.start,
               ),
+            ),
+            Container(
+              width: PillSheetModifiedHistoryTakenActionLayoutWidths.takenMark,
             ),
           ],
         ),

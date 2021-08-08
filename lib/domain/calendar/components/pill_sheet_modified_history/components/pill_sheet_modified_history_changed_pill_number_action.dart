@@ -61,8 +61,10 @@ class PillSheetModifiedHistoryChangedPillNumberAction extends StatelessWidget {
                 ],
               ),
             ),
+            Spacer(flex: 2),
             Container(
-              padding: EdgeInsets.only(left: 10),
+              width: PillSheetModifiedHistoryTakenActionLayoutWidths
+                  .actionDescription,
               child: Text(
                 "ピル番号変更",
                 style: TextStyle(
@@ -73,6 +75,9 @@ class PillSheetModifiedHistoryChangedPillNumberAction extends StatelessWidget {
                 ),
                 textAlign: TextAlign.start,
               ),
+            ),
+            Container(
+              width: PillSheetModifiedHistoryTakenActionLayoutWidths.takenMark,
             ),
           ],
         ),
