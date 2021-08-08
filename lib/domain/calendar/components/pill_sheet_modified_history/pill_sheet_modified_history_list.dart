@@ -19,6 +19,12 @@ class CalendarPillSheetModifiedHistoryList extends StatelessWidget {
   }
 }
 
+abstract class CalendarPillSheetModifiedHistoryTakenPillActionRowElementWidth {
+  static final double leading = 160;
+  static final double takenTime = 53;
+  static final double takenMark = 53;
+}
+
 class CalendarPillSheetModifiedHistoryTakenPillActionRow
     extends StatelessWidget {
   @override
@@ -29,21 +35,48 @@ class CalendarPillSheetModifiedHistoryTakenPillActionRow
         child: Row(
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
-            RichText(
-              text: TextSpan(
-                style: TextStyle(color: TextColor.main),
+            LimitedBox(
+              maxWidth:
+                  CalendarPillSheetModifiedHistoryTakenPillActionRowElementWidth
+                      .leading,
+              child: Row(
                 children: [
-                  TextSpan(
-                    text: "22番",
-                    style: TextStyle(
-                      fontFamily: FontFamily.number,
-                      fontSize: 23,
-                      fontWeight: FontWeight.w500,
+                  RichText(
+                    text: TextSpan(
+                      style: TextStyle(color: TextColor.main),
+                      children: [
+                        TextSpan(
+                          text: "22",
+                          style: TextStyle(
+                            fontFamily: FontFamily.number,
+                            fontSize: 23,
+                            fontWeight: FontWeight.w500,
+                          ),
+                        ),
+                        TextSpan(
+                          text: "(木)",
+                          style: TextStyle(
+                            fontFamily: FontFamily.japanese,
+                            fontSize: 12,
+                            fontWeight: FontWeight.w400,
+                          ),
+                        ),
+                      ],
                     ),
                   ),
-                  TextSpan(
-                    text: "(木)",
+                  SizedBox(width: 16),
+                  Container(
+                    height: 26,
+                    child: VerticalDivider(
+                      color: PilllColors.divider,
+                      width: 0.5,
+                    ),
+                  ),
+                  SizedBox(width: 16),
+                  Text(
+                    "22番",
                     style: TextStyle(
+                      color: TextColor.main,
                       fontFamily: FontFamily.japanese,
                       fontSize: 12,
                       fontWeight: FontWeight.w400,
@@ -52,38 +85,34 @@ class CalendarPillSheetModifiedHistoryTakenPillActionRow
                 ],
               ),
             ),
-            SizedBox(width: 16),
+            Spacer(),
             Container(
-              height: 26,
-              child: VerticalDivider(
-                color: PilllColors.divider,
-                width: 0.5,
+              constraints: BoxConstraints(
+                maxWidth:
+                    CalendarPillSheetModifiedHistoryTakenPillActionRowElementWidth
+                        .takenTime,
+              ),
+              padding: EdgeInsets.only(left: 8),
+              child: Text(
+                "19:20",
+                style: TextStyle(
+                  decoration: TextDecoration.underline,
+                  color: TextColor.main,
+                  fontSize: 15,
+                  fontFamily: FontFamily.number,
+                  fontWeight: FontWeight.w400,
+                ),
+                textAlign: TextAlign.center,
               ),
             ),
-            SizedBox(width: 16),
-            Text(
-              "22番",
-              style: TextStyle(
-                color: TextColor.main,
-                fontFamily: FontFamily.japanese,
-                fontSize: 12,
-                fontWeight: FontWeight.w400,
+            Spacer(flex: 2),
+            Container(
+              constraints: BoxConstraints(
+                maxWidth:
+                    CalendarPillSheetModifiedHistoryTakenPillActionRowElementWidth
+                        .takenMark,
               ),
-            ),
-            Spacer(),
-            Text(
-              "19:20",
-              style: TextStyle(
-                decoration: TextDecoration.underline,
-                color: TextColor.main,
-                fontSize: 15,
-                fontFamily: FontFamily.number,
-                fontWeight: FontWeight.w400,
-              ),
-            ),
-            Spacer(),
-            LimitedBox(
-              maxWidth: 60,
+              padding: EdgeInsets.only(left: 8),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.center,
                 children: [SvgPicture.asset("images/o.svg")],

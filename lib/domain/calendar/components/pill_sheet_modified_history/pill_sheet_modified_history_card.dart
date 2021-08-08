@@ -42,6 +42,56 @@ class CalendarPillSheetModifiedHistoryCard extends StatelessWidget {
             SizedBox(height: 16),
             Padding(
               padding: const EdgeInsets.only(left: 8, right: 8),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: [
+                  SizedBox(
+                    width:
+                        CalendarPillSheetModifiedHistoryTakenPillActionRowElementWidth
+                            .leading,
+                  ),
+                  Spacer(),
+                  Container(
+                    constraints: BoxConstraints(
+                      maxWidth:
+                          CalendarPillSheetModifiedHistoryTakenPillActionRowElementWidth
+                              .takenMark,
+                    ),
+                    child: Text(
+                      "服用時間",
+                      style: TextStyle(
+                        color: TextColor.main,
+                        fontFamily: FontFamily.japanese,
+                        fontSize: 12,
+                        fontWeight: FontWeight.w400,
+                      ),
+                      textAlign: TextAlign.center,
+                    ),
+                  ),
+                  Spacer(flex: 2),
+                  Container(
+                    constraints: BoxConstraints(
+                      maxWidth:
+                          CalendarPillSheetModifiedHistoryTakenPillActionRowElementWidth
+                              .takenMark,
+                    ),
+                    child: Text(
+                      "服用済み",
+                      style: TextStyle(
+                        color: TextColor.main,
+                        fontFamily: FontFamily.japanese,
+                        fontSize: 12,
+                        fontWeight: FontWeight.w400,
+                      ),
+                      textAlign: TextAlign.center,
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            SizedBox(height: 4),
+            Padding(
+              padding: const EdgeInsets.only(left: 8, right: 8),
               child: CalendarPillSheetModifiedHistoryList(),
             ),
           ],
