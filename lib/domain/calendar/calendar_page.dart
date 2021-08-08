@@ -91,6 +91,7 @@ class CalendarPage extends HookWidget {
                 padding: const EdgeInsets.only(left: 16, right: 16),
                 child: CalendarPillSheetModifiedHistoryCard(),
               ),
+              SizedBox(height: 120),
             ],
           ),
         ),
