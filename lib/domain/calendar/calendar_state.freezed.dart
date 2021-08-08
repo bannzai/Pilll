@@ -17,19 +17,21 @@ class _$CalendarPageStateTearOff {
   const _$CalendarPageStateTearOff();
 
   _CalendarPageState call(
-      {required List<Menstruation> menstruations,
-      int currentCalendarIndex = 0,
+      {int currentCalendarIndex = 0,
+      bool isNotYetLoaded = true,
+      List<Menstruation> menstruations = const [],
       Setting? setting,
       PillSheet? latestPillSheet,
       List<Diary> diariesForMonth = const [],
-      bool isNotYetLoaded = true}) {
+      List<PillSheetModifiedHistory> pillSheetModifiedHistories = const []}) {
     return _CalendarPageState(
-      menstruations: menstruations,
       currentCalendarIndex: currentCalendarIndex,
+      isNotYetLoaded: isNotYetLoaded,
+      menstruations: menstruations,
       setting: setting,
       latestPillSheet: latestPillSheet,
       diariesForMonth: diariesForMonth,
-      isNotYetLoaded: isNotYetLoaded,
+      pillSheetModifiedHistories: pillSheetModifiedHistories,
     );
   }
 }
@@ -39,12 +41,14 @@ const $CalendarPageState = _$CalendarPageStateTearOff();
 
 /// @nodoc
 mixin _$CalendarPageState {
-  List<Menstruation> get menstruations => throw _privateConstructorUsedError;
   int get currentCalendarIndex => throw _privateConstructorUsedError;
+  bool get isNotYetLoaded => throw _privateConstructorUsedError;
+  List<Menstruation> get menstruations => throw _privateConstructorUsedError;
   Setting? get setting => throw _privateConstructorUsedError;
   PillSheet? get latestPillSheet => throw _privateConstructorUsedError;
   List<Diary> get diariesForMonth => throw _privateConstructorUsedError;
-  bool get isNotYetLoaded => throw _privateConstructorUsedError;
+  List<PillSheetModifiedHistory> get pillSheetModifiedHistories =>
+      throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $CalendarPageStateCopyWith<CalendarPageState> get copyWith =>
@@ -57,12 +61,13 @@ abstract class $CalendarPageStateCopyWith<$Res> {
           CalendarPageState value, $Res Function(CalendarPageState) then) =
       _$CalendarPageStateCopyWithImpl<$Res>;
   $Res call(
-      {List<Menstruation> menstruations,
-      int currentCalendarIndex,
+      {int currentCalendarIndex,
+      bool isNotYetLoaded,
+      List<Menstruation> menstruations,
       Setting? setting,
       PillSheet? latestPillSheet,
       List<Diary> diariesForMonth,
-      bool isNotYetLoaded});
+      List<PillSheetModifiedHistory> pillSheetModifiedHistories});
 
   $SettingCopyWith<$Res>? get setting;
   $PillSheetCopyWith<$Res>? get latestPillSheet;
@@ -79,22 +84,27 @@ class _$CalendarPageStateCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object? menstruations = freezed,
     Object? currentCalendarIndex = freezed,
+    Object? isNotYetLoaded = freezed,
+    Object? menstruations = freezed,
     Object? setting = freezed,
     Object? latestPillSheet = freezed,
     Object? diariesForMonth = freezed,
-    Object? isNotYetLoaded = freezed,
+    Object? pillSheetModifiedHistories = freezed,
   }) {
     return _then(_value.copyWith(
-      menstruations: menstruations == freezed
-          ? _value.menstruations
-          : menstruations // ignore: cast_nullable_to_non_nullable
-              as List<Menstruation>,
       currentCalendarIndex: currentCalendarIndex == freezed
           ? _value.currentCalendarIndex
           : currentCalendarIndex // ignore: cast_nullable_to_non_nullable
               as int,
+      isNotYetLoaded: isNotYetLoaded == freezed
+          ? _value.isNotYetLoaded
+          : isNotYetLoaded // ignore: cast_nullable_to_non_nullable
+              as bool,
+      menstruations: menstruations == freezed
+          ? _value.menstruations
+          : menstruations // ignore: cast_nullable_to_non_nullable
+              as List<Menstruation>,
       setting: setting == freezed
           ? _value.setting
           : setting // ignore: cast_nullable_to_non_nullable
@@ -107,10 +117,10 @@ class _$CalendarPageStateCopyWithImpl<$Res>
           ? _value.diariesForMonth
           : diariesForMonth // ignore: cast_nullable_to_non_nullable
               as List<Diary>,
-      isNotYetLoaded: isNotYetLoaded == freezed
-          ? _value.isNotYetLoaded
-          : isNotYetLoaded // ignore: cast_nullable_to_non_nullable
-              as bool,
+      pillSheetModifiedHistories: pillSheetModifiedHistories == freezed
+          ? _value.pillSheetModifiedHistories
+          : pillSheetModifiedHistories // ignore: cast_nullable_to_non_nullable
+              as List<PillSheetModifiedHistory>,
     ));
   }
 
@@ -145,12 +155,13 @@ abstract class _$CalendarPageStateCopyWith<$Res>
       __$CalendarPageStateCopyWithImpl<$Res>;
   @override
   $Res call(
-      {List<Menstruation> menstruations,
-      int currentCalendarIndex,
+      {int currentCalendarIndex,
+      bool isNotYetLoaded,
+      List<Menstruation> menstruations,
       Setting? setting,
       PillSheet? latestPillSheet,
       List<Diary> diariesForMonth,
-      bool isNotYetLoaded});
+      List<PillSheetModifiedHistory> pillSheetModifiedHistories});
 
   @override
   $SettingCopyWith<$Res>? get setting;
@@ -171,22 +182,27 @@ class __$CalendarPageStateCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object? menstruations = freezed,
     Object? currentCalendarIndex = freezed,
+    Object? isNotYetLoaded = freezed,
+    Object? menstruations = freezed,
     Object? setting = freezed,
     Object? latestPillSheet = freezed,
     Object? diariesForMonth = freezed,
-    Object? isNotYetLoaded = freezed,
+    Object? pillSheetModifiedHistories = freezed,
   }) {
     return _then(_CalendarPageState(
-      menstruations: menstruations == freezed
-          ? _value.menstruations
-          : menstruations // ignore: cast_nullable_to_non_nullable
-              as List<Menstruation>,
       currentCalendarIndex: currentCalendarIndex == freezed
           ? _value.currentCalendarIndex
           : currentCalendarIndex // ignore: cast_nullable_to_non_nullable
               as int,
+      isNotYetLoaded: isNotYetLoaded == freezed
+          ? _value.isNotYetLoaded
+          : isNotYetLoaded // ignore: cast_nullable_to_non_nullable
+              as bool,
+      menstruations: menstruations == freezed
+          ? _value.menstruations
+          : menstruations // ignore: cast_nullable_to_non_nullable
+              as List<Menstruation>,
       setting: setting == freezed
           ? _value.setting
           : setting // ignore: cast_nullable_to_non_nullable
@@ -199,10 +215,10 @@ class __$CalendarPageStateCopyWithImpl<$Res>
           ? _value.diariesForMonth
           : diariesForMonth // ignore: cast_nullable_to_non_nullable
               as List<Diary>,
-      isNotYetLoaded: isNotYetLoaded == freezed
-          ? _value.isNotYetLoaded
-          : isNotYetLoaded // ignore: cast_nullable_to_non_nullable
-              as bool,
+      pillSheetModifiedHistories: pillSheetModifiedHistories == freezed
+          ? _value.pillSheetModifiedHistories
+          : pillSheetModifiedHistories // ignore: cast_nullable_to_non_nullable
+              as List<PillSheetModifiedHistory>,
     ));
   }
 }
@@ -211,19 +227,24 @@ class __$CalendarPageStateCopyWithImpl<$Res>
 
 class _$_CalendarPageState extends _CalendarPageState {
   _$_CalendarPageState(
-      {required this.menstruations,
-      this.currentCalendarIndex = 0,
+      {this.currentCalendarIndex = 0,
+      this.isNotYetLoaded = true,
+      this.menstruations = const [],
       this.setting,
       this.latestPillSheet,
       this.diariesForMonth = const [],
-      this.isNotYetLoaded = true})
+      this.pillSheetModifiedHistories = const []})
       : super._();
 
-  @override
-  final List<Menstruation> menstruations;
   @JsonKey(defaultValue: 0)
   @override
   final int currentCalendarIndex;
+  @JsonKey(defaultValue: true)
+  @override
+  final bool isNotYetLoaded;
+  @JsonKey(defaultValue: const [])
+  @override
+  final List<Menstruation> menstruations;
   @override
   final Setting? setting;
   @override
@@ -231,25 +252,28 @@ class _$_CalendarPageState extends _CalendarPageState {
   @JsonKey(defaultValue: const [])
   @override
   final List<Diary> diariesForMonth;
-  @JsonKey(defaultValue: true)
+  @JsonKey(defaultValue: const [])
   @override
-  final bool isNotYetLoaded;
+  final List<PillSheetModifiedHistory> pillSheetModifiedHistories;
 
   @override
   String toString() {
-    return 'CalendarPageState(menstruations: $menstruations, currentCalendarIndex: $currentCalendarIndex, setting: $setting, latestPillSheet: $latestPillSheet, diariesForMonth: $diariesForMonth, isNotYetLoaded: $isNotYetLoaded)';
+    return 'CalendarPageState(currentCalendarIndex: $currentCalendarIndex, isNotYetLoaded: $isNotYetLoaded, menstruations: $menstruations, setting: $setting, latestPillSheet: $latestPillSheet, diariesForMonth: $diariesForMonth, pillSheetModifiedHistories: $pillSheetModifiedHistories)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other is _CalendarPageState &&
-            (identical(other.menstruations, menstruations) ||
-                const DeepCollectionEquality()
-                    .equals(other.menstruations, menstruations)) &&
             (identical(other.currentCalendarIndex, currentCalendarIndex) ||
                 const DeepCollectionEquality().equals(
                     other.currentCalendarIndex, currentCalendarIndex)) &&
+            (identical(other.isNotYetLoaded, isNotYetLoaded) ||
+                const DeepCollectionEquality()
+                    .equals(other.isNotYetLoaded, isNotYetLoaded)) &&
+            (identical(other.menstruations, menstruations) ||
+                const DeepCollectionEquality()
+                    .equals(other.menstruations, menstruations)) &&
             (identical(other.setting, setting) ||
                 const DeepCollectionEquality()
                     .equals(other.setting, setting)) &&
@@ -259,20 +283,23 @@ class _$_CalendarPageState extends _CalendarPageState {
             (identical(other.diariesForMonth, diariesForMonth) ||
                 const DeepCollectionEquality()
                     .equals(other.diariesForMonth, diariesForMonth)) &&
-            (identical(other.isNotYetLoaded, isNotYetLoaded) ||
-                const DeepCollectionEquality()
-                    .equals(other.isNotYetLoaded, isNotYetLoaded)));
+            (identical(other.pillSheetModifiedHistories,
+                    pillSheetModifiedHistories) ||
+                const DeepCollectionEquality().equals(
+                    other.pillSheetModifiedHistories,
+                    pillSheetModifiedHistories)));
   }
 
   @override
   int get hashCode =>
       runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(menstruations) ^
       const DeepCollectionEquality().hash(currentCalendarIndex) ^
+      const DeepCollectionEquality().hash(isNotYetLoaded) ^
+      const DeepCollectionEquality().hash(menstruations) ^
       const DeepCollectionEquality().hash(setting) ^
       const DeepCollectionEquality().hash(latestPillSheet) ^
       const DeepCollectionEquality().hash(diariesForMonth) ^
-      const DeepCollectionEquality().hash(isNotYetLoaded);
+      const DeepCollectionEquality().hash(pillSheetModifiedHistories);
 
   @JsonKey(ignore: true)
   @override
@@ -282,18 +309,22 @@ class _$_CalendarPageState extends _CalendarPageState {
 
 abstract class _CalendarPageState extends CalendarPageState {
   factory _CalendarPageState(
-      {required List<Menstruation> menstruations,
-      int currentCalendarIndex,
-      Setting? setting,
-      PillSheet? latestPillSheet,
-      List<Diary> diariesForMonth,
-      bool isNotYetLoaded}) = _$_CalendarPageState;
+          {int currentCalendarIndex,
+          bool isNotYetLoaded,
+          List<Menstruation> menstruations,
+          Setting? setting,
+          PillSheet? latestPillSheet,
+          List<Diary> diariesForMonth,
+          List<PillSheetModifiedHistory> pillSheetModifiedHistories}) =
+      _$_CalendarPageState;
   _CalendarPageState._() : super._();
 
   @override
-  List<Menstruation> get menstruations => throw _privateConstructorUsedError;
-  @override
   int get currentCalendarIndex => throw _privateConstructorUsedError;
+  @override
+  bool get isNotYetLoaded => throw _privateConstructorUsedError;
+  @override
+  List<Menstruation> get menstruations => throw _privateConstructorUsedError;
   @override
   Setting? get setting => throw _privateConstructorUsedError;
   @override
@@ -301,7 +332,8 @@ abstract class _CalendarPageState extends CalendarPageState {
   @override
   List<Diary> get diariesForMonth => throw _privateConstructorUsedError;
   @override
-  bool get isNotYetLoaded => throw _privateConstructorUsedError;
+  List<PillSheetModifiedHistory> get pillSheetModifiedHistories =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$CalendarPageStateCopyWith<_CalendarPageState> get copyWith =>
