@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:pilll/domain/calendar/components/pill_sheet_modified_history/components/pill_sheet_modified_history_automatically_recorded_last_taken_date_action.dart';
+import 'package:pilll/domain/calendar/components/pill_sheet_modified_history/components/pill_sheet_modified_history_changed_pill_number_action.dart';
 import 'package:pilll/domain/calendar/components/pill_sheet_modified_history/components/pill_sheet_modified_history_ended_pill_sheet_action.dart';
 import 'package:pilll/domain/calendar/components/pill_sheet_modified_history/components/pill_sheet_modified_history_monthly_header.dart';
 import 'package:pilll/domain/calendar/components/pill_sheet_modified_history/components/pill_sheet_modified_history_taken_pill_action.dart';
@@ -17,7 +18,7 @@ class CalendarPillSheetModifiedHistoryList extends StatelessWidget {
         CalendarPillSheetModifiedHistoryTakenPillActionElement(),
         PillSheetModifiedHistoryEndedPillSheetAction(),
         CalendarPillSheetModifiedHistoryTakenPillActionElement(),
-        CalendarPillSheetModifiedHistoryTakenPillActionElement(),
+        PillSheetModifiedHistoryChangedPillNumberAction(),
         PillSheetModifiedHistoryAutomaticallyRecordedLastTakenDateAction(),
       ],
     );
