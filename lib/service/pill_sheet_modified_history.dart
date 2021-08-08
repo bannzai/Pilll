@@ -11,16 +11,12 @@ class PillSheetModifiedHistoryService {
 
   PillSheetModifiedHistoryService(this._database);
 
-  Future<List<PillSheetModifiedHistory>> fetchListForMonth(
-      DateTime dateTimeOfMonth) {
+  Future<List<PillSheetModifiedHistory>> fetchList(DateTime? after, int limit) {
     return _database
         .pillSheetModifiedHistoriesReference()
-        .where(PillSheetModifiedHistoryFirestoreKeys.createdAt,
-            isLessThanOrEqualTo:
-                DateTime(dateTimeOfMonth.year, dateTimeOfMonth.month + 1, 0),
-            isGreaterThanOrEqualTo:
-                DateTime(dateTimeOfMonth.year, dateTimeOfMonth.month, 1))
         .orderBy(PillSheetModifiedHistoryFirestoreKeys.createdAt)
+        .startAfter([after])
+        .limit(limit)
         .get()
         .then((reference) => reference.docs)
         .then((docs) => docs
