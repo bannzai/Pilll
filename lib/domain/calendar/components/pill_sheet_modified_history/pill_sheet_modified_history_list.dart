@@ -9,7 +9,7 @@ class CalendarPillSheetModifiedHistoryList extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        CalendarPillSheetModifiedHistoryMonthHeader(
+        CalendarPillSheetModifiedHistoryMonthlyHeader(
           dateTimeOfMonth: today(),
         ),
         CalendarPillSheetModifiedHistoryTakenPillActionElement(),
