@@ -20,17 +20,48 @@ class CalendarPillSheetModifiedHistoryList extends StatelessWidget {
   Widget build(BuildContext context) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        CalendarPillSheetModifiedHistoryMonthlyHeader(
-          dateTimeOfMonth: today(),
-        ),
-        CalendarPillSheetModifiedHistoryTakenPillActionElement(),
-        PillSheetModifiedHistoryEndedPillSheetAction(),
-        PillSheetModifiedHistoryDeletedPillSheetAction(),
-        PillSheetModifiedHistoryChangedPillNumberAction(),
-        PillSheetModifiedHistoryRevertTakenPillAction(),
-        PillSheetModifiedHistoryAutomaticallyRecordedLastTakenDateAction(),
-      ],
+      children: pillSheetModifiedHistories.map((pillSheetModifiedHistory) {
+        final actionType = pillSheetModifiedHistory.enumActionType;
+        if (actionType == null) {
+          return Container();
+        }
+        switch (actionType) {
+          case PillSheetModifiedActionType.createdPillSheet:
+            // TODO: Handle this case.
+            break;
+          case PillSheetModifiedActionType.automaticallyRecordedLastTakenDate:
+            // TODO: Handle this case.
+            break;
+          case PillSheetModifiedActionType.deletedPillSheet:
+            // TODO: Handle this case.
+            break;
+          case PillSheetModifiedActionType.takenPill:
+            // TODO: Handle this case.
+            break;
+          case PillSheetModifiedActionType.revertTakenPill:
+            // TODO: Handle this case.
+            break;
+          case PillSheetModifiedActionType.changedPillNumber:
+            // TODO: Handle this case.
+            break;
+          case PillSheetModifiedActionType.endedPillSheet:
+            // TODO: Handle this case.
+            break;
+        }
+        return Container();
+      })
+          // .expand((element) => element)
+          .toList(),
+//        CalendarPillSheetModifiedHistoryMonthlyHeader(
+//          dateTimeOfMonth: today(),
+//        ),
+//        CalendarPillSheetModifiedHistoryTakenPillActionElement(),
+//        PillSheetModifiedHistoryEndedPillSheetAction(),
+//        PillSheetModifiedHistoryDeletedPillSheetAction(),
+//        PillSheetModifiedHistoryChangedPillNumberAction(),
+//        PillSheetModifiedHistoryRevertTakenPillAction(),
+//        PillSheetModifiedHistoryAutomaticallyRecordedLastTakenDateAction(),
+//      ],
     );
   }
 }
