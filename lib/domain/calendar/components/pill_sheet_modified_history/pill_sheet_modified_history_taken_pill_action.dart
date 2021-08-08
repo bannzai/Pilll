@@ -3,7 +3,6 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
-import 'package:pilll/util/formatter/date_time_formatter.dart';
 
 abstract class CalendarPillSheetModifiedHistoryTakenPillActionElementWidth {
   static final double leading = 160;
@@ -108,18 +107,5 @@ class CalendarPillSheetModifiedHistoryTakenPillActionElement
         ),
       ),
     );
-  }
-}
-
-class CalendarPillSheetModifiedHistoryMonthHeader extends StatelessWidget {
-  final DateTime dateTimeOfMonth;
-
-  const CalendarPillSheetModifiedHistoryMonthHeader(
-      {Key? key, required this.dateTimeOfMonth})
-      : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Text(DateTimeFormatter.jaMonth(dateTimeOfMonth));
   }
 }
