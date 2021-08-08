@@ -16,9 +16,7 @@ class CalendarPillSheetModifiedHistoryTakenPillActionElement
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
             LimitedBox(
-              maxWidth:
-                  PillSheetModifiedHistoryTakenActionLayoutWidths
-                      .leading,
+              maxWidth: PillSheetModifiedHistoryTakenActionLayoutWidths.leading,
               child: Row(
                 children: [
                   RichText(
@@ -69,8 +67,7 @@ class CalendarPillSheetModifiedHistoryTakenPillActionElement
             Container(
               constraints: BoxConstraints(
                 maxWidth:
-                    PillSheetModifiedHistoryTakenActionLayoutWidths
-                        .takenTime,
+                    PillSheetModifiedHistoryTakenActionLayoutWidths.takenTime,
               ),
               padding: EdgeInsets.only(left: 8),
               child: Text(
@@ -89,8 +86,7 @@ class CalendarPillSheetModifiedHistoryTakenPillActionElement
             Container(
               constraints: BoxConstraints(
                 maxWidth:
-                    PillSheetModifiedHistoryTakenActionLayoutWidths
-                        .takenMark,
+                    PillSheetModifiedHistoryTakenActionLayoutWidths.takenMark,
               ),
               padding: EdgeInsets.only(left: 8),
               child: Row(
