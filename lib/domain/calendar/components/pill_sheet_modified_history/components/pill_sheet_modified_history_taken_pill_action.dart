@@ -65,10 +65,7 @@ class CalendarPillSheetModifiedHistoryTakenPillActionElement
             ),
             Spacer(),
             Container(
-              constraints: BoxConstraints(
-                maxWidth:
-                    PillSheetModifiedHistoryTakenActionLayoutWidths.takenTime,
-              ),
+              width: PillSheetModifiedHistoryTakenActionLayoutWidths.takenTime,
               child: Text(
                 "19:20",
                 style: TextStyle(

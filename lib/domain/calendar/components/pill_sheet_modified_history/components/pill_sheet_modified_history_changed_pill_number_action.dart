@@ -62,7 +62,7 @@ class PillSheetModifiedHistoryChangedPillNumberAction extends StatelessWidget {
               ),
             ),
             Container(
-              padding: EdgeInsets.only(left: 8),
+              padding: EdgeInsets.only(left: 10),
               child: Text(
                 "ピル番号変更",
                 style: TextStyle(

@@ -61,7 +61,7 @@ class PillSheetModifiedHistoryDeletedPillSheetAction extends StatelessWidget {
               ),
             ),
             Container(
-              padding: EdgeInsets.only(left: 8),
+              padding: EdgeInsets.only(left: 10),
               child: Text(
                 "ピルシート破棄",
                 style: TextStyle(
