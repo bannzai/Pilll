@@ -3,12 +3,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
-
-abstract class CalendarPillSheetModifiedHistoryTakenPillActionElementWidth {
-  static final double leading = 160;
-  static final double takenTime = 53;
-  static final double takenMark = 53;
-}
+import 'package:pilll/domain/calendar/components/pill_sheet_modified_history/components/pill_sheet_modified_history_taken_action_layout.dart';
 
 class CalendarPillSheetModifiedHistoryTakenPillActionElement
     extends StatelessWidget {
