@@ -12,10 +12,9 @@ class CalendarPillSheetModifiedHistoryTakenPillActionElement
       child: Padding(
         padding: const EdgeInsets.only(top: 4, bottom: 4),
         child: Row(
-          mainAxisAlignment: MainAxisAlignment.start,
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             PillSheetModifiedHistoryDate(),
-            Spacer(flex: 2),
             Container(
               width: PillSheetModifiedHistoryTakenActionLayoutWidths.takenTime,
               child: Text(
@@ -30,7 +29,6 @@ class CalendarPillSheetModifiedHistoryTakenPillActionElement
                 textAlign: TextAlign.start,
               ),
             ),
-            Spacer(flex: 2),
             Container(
               width: PillSheetModifiedHistoryTakenActionLayoutWidths.takenMark,
               padding: EdgeInsets.only(left: 8),

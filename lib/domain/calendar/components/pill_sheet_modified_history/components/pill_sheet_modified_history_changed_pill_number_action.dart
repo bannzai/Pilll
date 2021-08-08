@@ -10,13 +10,10 @@ class PillSheetModifiedHistoryChangedPillNumberAction extends StatelessWidget {
       child: Padding(
         padding: const EdgeInsets.only(top: 4, bottom: 4),
         child: Row(
-          mainAxisAlignment: MainAxisAlignment.start,
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             PillSheetModifiedHistoryDate(),
-            Spacer(flex: 2),
             Container(
-              width: PillSheetModifiedHistoryTakenActionLayoutWidths
-                  .actionDescription,
               child: Text(
                 "ピル番号変更",
                 style: TextStyle(

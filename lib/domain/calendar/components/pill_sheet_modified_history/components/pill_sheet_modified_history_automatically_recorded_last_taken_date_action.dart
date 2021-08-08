@@ -12,15 +12,10 @@ class PillSheetModifiedHistoryAutomaticallyRecordedLastTakenDateAction
       child: Padding(
         padding: const EdgeInsets.only(top: 4, bottom: 4),
         child: Row(
-          mainAxisAlignment: MainAxisAlignment.start,
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             PillSheetModifiedHistoryDate(),
-            Spacer(flex: 2),
             Container(
-              constraints: BoxConstraints(
-                maxWidth:
-                    PillSheetModifiedHistoryTakenActionLayoutWidths.takenTime,
-              ),
               padding: EdgeInsets.only(left: 8),
               child: Text(
                 "-",
@@ -33,7 +28,6 @@ class PillSheetModifiedHistoryAutomaticallyRecordedLastTakenDateAction
                 textAlign: TextAlign.center,
               ),
             ),
-            Spacer(flex: 2),
             Container(
               constraints: BoxConstraints(
                 maxWidth:

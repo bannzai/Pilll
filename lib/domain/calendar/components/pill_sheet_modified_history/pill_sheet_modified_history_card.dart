@@ -44,13 +44,12 @@ class CalendarPillSheetModifiedHistoryCard extends StatelessWidget {
             Padding(
               padding: const EdgeInsets.only(right: 8),
               child: Row(
-                mainAxisAlignment: MainAxisAlignment.end,
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   SizedBox(
                     width:
                         PillSheetModifiedHistoryTakenActionLayoutWidths.leading,
                   ),
-                  Spacer(flex: 2),
                   Container(
                     width: PillSheetModifiedHistoryTakenActionLayoutWidths
                         .takenMark,
@@ -65,7 +64,6 @@ class CalendarPillSheetModifiedHistoryCard extends StatelessWidget {
                       textAlign: TextAlign.start,
                     ),
                   ),
-                  Spacer(flex: 2),
                   Container(
                     constraints: BoxConstraints(
                       maxWidth: PillSheetModifiedHistoryTakenActionLayoutWidths
