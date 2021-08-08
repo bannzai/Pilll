@@ -73,7 +73,7 @@ class PillSheetModifiedHistoryChangedPillNumberAction extends StatelessWidget {
                   fontFamily: FontFamily.japanese,
                   fontWeight: FontWeight.w400,
                 ),
-                textAlign: TextAlign.start,
+                textAlign: TextAlign.center,
               ),
             ),
             Container(
