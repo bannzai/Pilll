@@ -16,28 +16,26 @@ class PillSheetModifiedHistoryDate extends StatelessWidget {
     return Container(
       width: PillSheetModifiedHistoryTakenActionLayoutWidths.leading,
       child: Row(
+        crossAxisAlignment: CrossAxisAlignment.baseline,
+        textBaseline: TextBaseline.alphabetic,
         children: [
-          RichText(
-            text: TextSpan(
-              style: TextStyle(color: TextColor.main),
-              children: [
-                TextSpan(
-                  text: "18",
-                  style: TextStyle(
-                    fontFamily: FontFamily.number,
-                    fontSize: 23,
-                    fontWeight: FontWeight.w500,
-                  ),
-                ),
-                TextSpan(
-                  text: "(日)",
-                  style: TextStyle(
-                    fontFamily: FontFamily.japanese,
-                    fontSize: 12,
-                    fontWeight: FontWeight.w400,
-                  ),
-                ),
-              ],
+          Text(
+            "18",
+            style: TextStyle(
+              color: TextColor.main,
+              fontFamily: FontFamily.number,
+              fontSize: 23,
+              fontWeight: FontWeight.w500,
+            ),
+          ),
+          SizedBox(width: 4),
+          Text(
+            "(日)",
+            style: TextStyle(
+              color: TextColor.main,
+              fontFamily: FontFamily.japanese,
+              fontSize: 12,
+              fontWeight: FontWeight.w400,
             ),
           ),
           SizedBox(width: 16),
