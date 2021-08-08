@@ -27,8 +27,8 @@ class PillSheetModifiedHistoryStateStore
   void reset() {
     state = state.copyWith(isLoading: true);
     Future(() async {
-      final pillSheetModifiedHistories = await _pillSheetModifiedHistoryService
-          .fetchListForMonth(_dateTimeOfMonth);
+      final pillSheetModifiedHistories =
+          await _pillSheetModifiedHistoryService.fetchList(null, 20);
       final elements = _mapToElements(pillSheetModifiedHistories);
       state = state.copyWith(
           elements: elements, isFirstLoadEnded: true, isLoading: false);
