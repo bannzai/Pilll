@@ -49,7 +49,7 @@ class PillSheetModifiedHistoryDeletedPillSheetAction extends StatelessWidget {
                   ),
                   SizedBox(width: 16),
                   Text(
-                    "22番",
+                    "-",
                     style: TextStyle(
                       color: TextColor.main,
                       fontFamily: FontFamily.japanese,
@@ -60,7 +60,6 @@ class PillSheetModifiedHistoryDeletedPillSheetAction extends StatelessWidget {
                 ],
               ),
             ),
-            Spacer(),
             Container(
               padding: EdgeInsets.only(left: 8),
               child: Text(
@@ -74,7 +73,6 @@ class PillSheetModifiedHistoryDeletedPillSheetAction extends StatelessWidget {
                 textAlign: TextAlign.start,
               ),
             ),
-            Spacer(flex: 2),
           ],
         ),
       ),

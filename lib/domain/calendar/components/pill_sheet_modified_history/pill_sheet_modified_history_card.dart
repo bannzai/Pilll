@@ -48,15 +48,13 @@ class CalendarPillSheetModifiedHistoryCard extends StatelessWidget {
                 children: [
                   SizedBox(
                     width:
-                        PillSheetModifiedHistoryTakenActionLayoutWidths
-                            .leading,
+                        PillSheetModifiedHistoryTakenActionLayoutWidths.leading,
                   ),
                   Spacer(),
                   Container(
                     constraints: BoxConstraints(
-                      maxWidth:
-                          PillSheetModifiedHistoryTakenActionLayoutWidths
-                              .takenMark,
+                      maxWidth: PillSheetModifiedHistoryTakenActionLayoutWidths
+                          .takenMark,
                     ),
                     child: Text(
                       "服用時間",
@@ -72,9 +70,8 @@ class CalendarPillSheetModifiedHistoryCard extends StatelessWidget {
                   Spacer(flex: 2),
                   Container(
                     constraints: BoxConstraints(
-                      maxWidth:
-                          PillSheetModifiedHistoryTakenActionLayoutWidths
-                              .takenMark,
+                      maxWidth: PillSheetModifiedHistoryTakenActionLayoutWidths
+                          .takenMark,
                     ),
                     child: Text(
                       "服用済み",

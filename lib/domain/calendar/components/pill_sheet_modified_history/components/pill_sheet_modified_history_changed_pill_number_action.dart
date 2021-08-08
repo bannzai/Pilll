@@ -14,9 +14,7 @@ class PillSheetModifiedHistoryChangedPillNumberAction extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
             LimitedBox(
-              maxWidth:
-                  PillSheetModifiedHistoryTakenActionLayoutWidths
-                      .leading,
+              maxWidth: PillSheetModifiedHistoryTakenActionLayoutWidths.leading,
               child: Row(
                 children: [
                   RichText(
@@ -52,7 +50,7 @@ class PillSheetModifiedHistoryChangedPillNumberAction extends StatelessWidget {
                   ),
                   SizedBox(width: 16),
                   Text(
-                    "1→-23番",
+                    "1→23番",
                     style: TextStyle(
                       color: TextColor.main,
                       fontFamily: FontFamily.japanese,
