@@ -63,6 +63,7 @@ class CalendarPageStateStore extends StateNotifier<CalendarPageState> {
   StreamSubscription? _settingCanceller;
   StreamSubscription? _latestPillSheetCanceller;
   StreamSubscription? _diariesCanceller;
+  StreamSubscription? _pillSheetModifiedHistoryCanceller;
   void _subscribe() {
     _menstruationCanceller?.cancel();
     _menstruationCanceller =
@@ -82,6 +83,11 @@ class CalendarPageStateStore extends StateNotifier<CalendarPageState> {
     _diariesCanceller = _diaryService.subscribe().listen((entities) {
       state = state.copyWith(diariesForMonth: entities);
     });
+    _pillSheetModifiedHistoryCanceller?.cancel();
+    _pillSheetModifiedHistoryCanceller =
+        _pillSheetModifiedHistoryService.subscribe(6).listen((event) {
+      state = state.copyWith(pillSheetModifiedHistories: event);
+    });
   }
 
   @override
@@ -90,6 +96,7 @@ class CalendarPageStateStore extends StateNotifier<CalendarPageState> {
     _settingCanceller?.cancel();
     _latestPillSheetCanceller?.cancel();
     _diariesCanceller?.cancel();
+    _pillSheetModifiedHistoryCanceller?.cancel();
     super.dispose();
   }
 

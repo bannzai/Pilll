@@ -38,16 +38,11 @@ class PillSheetModifiedHistoryService {
             .toList());
   }
 
-  Stream<List<PillSheetModifiedHistory>> subscribeForMonth(
-      DateTime dateTimeOfMonth) {
+  Stream<List<PillSheetModifiedHistory>> subscribe(int limit) {
     return _database
         .pillSheetModifiedHistoriesReference()
-        .where(PillSheetModifiedHistoryFirestoreKeys.createdAt,
-            isLessThanOrEqualTo:
-                DateTime(dateTimeOfMonth.year, dateTimeOfMonth.month + 1, 0),
-            isGreaterThanOrEqualTo:
-                DateTime(dateTimeOfMonth.year, dateTimeOfMonth.month, 1))
         .orderBy(PillSheetModifiedHistoryFirestoreKeys.createdAt)
+        .limit(limit)
         .snapshots()
         .map((reference) => reference.docs)
         .map((docs) => docs

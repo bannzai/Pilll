@@ -40,7 +40,7 @@ class PillSheetModifiedHistoryStateStore
   void _subscribe() {
     _pillSheetModifiedHistoryCanceller?.cancel();
     _pillSheetModifiedHistoryCanceller = _pillSheetModifiedHistoryService
-        .subscribeForMonth(_dateTimeOfMonth)
+        .subscribe(state.elements.length)
         .listen((event) {
       final elements = _mapToElements(event);
       state = state.copyWith(elements: elements);
