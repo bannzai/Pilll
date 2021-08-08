@@ -2,7 +2,6 @@ import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:pilll/analytics.dart';
 import 'package:pilll/components/atoms/buttons.dart';
-import 'package:pilll/components/molecules/app_card.dart';
 import 'package:pilll/components/molecules/indicator.dart';
 import 'package:pilll/domain/calendar/calendar_state.dart';
 import 'package:pilll/domain/calendar/components/calendar_card.dart';
