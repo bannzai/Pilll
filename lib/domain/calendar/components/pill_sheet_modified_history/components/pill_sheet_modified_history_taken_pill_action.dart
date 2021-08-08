@@ -17,7 +17,7 @@ class CalendarPillSheetModifiedHistoryTakenPillActionElement
           children: [
             LimitedBox(
               maxWidth:
-                  CalendarPillSheetModifiedHistoryTakenPillActionElementWidth
+                  PillSheetModifiedHistoryTakenActionLayoutWidths
                       .leading,
               child: Row(
                 children: [
@@ -69,7 +69,7 @@ class CalendarPillSheetModifiedHistoryTakenPillActionElement
             Container(
               constraints: BoxConstraints(
                 maxWidth:
-                    CalendarPillSheetModifiedHistoryTakenPillActionElementWidth
+                    PillSheetModifiedHistoryTakenActionLayoutWidths
                         .takenTime,
               ),
               padding: EdgeInsets.only(left: 8),
@@ -89,7 +89,7 @@ class CalendarPillSheetModifiedHistoryTakenPillActionElement
             Container(
               constraints: BoxConstraints(
                 maxWidth:
-                    CalendarPillSheetModifiedHistoryTakenPillActionElementWidth
+                    PillSheetModifiedHistoryTakenActionLayoutWidths
                         .takenMark,
               ),
               padding: EdgeInsets.only(left: 8),

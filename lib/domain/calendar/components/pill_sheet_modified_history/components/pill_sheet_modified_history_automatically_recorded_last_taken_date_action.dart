@@ -17,7 +17,7 @@ class PillSheetModifiedHistoryAutomaticallyRecordedLastTakenDateAction
           children: [
             LimitedBox(
               maxWidth:
-                  CalendarPillSheetModifiedHistoryTakenPillActionElementWidth
+                  PillSheetModifiedHistoryTakenActionLayoutWidths
                       .leading,
               child: Row(
                 children: [
@@ -69,7 +69,7 @@ class PillSheetModifiedHistoryAutomaticallyRecordedLastTakenDateAction
             Container(
               constraints: BoxConstraints(
                 maxWidth:
-                    CalendarPillSheetModifiedHistoryTakenPillActionElementWidth
+                    PillSheetModifiedHistoryTakenActionLayoutWidths
                         .takenTime,
               ),
               padding: EdgeInsets.only(left: 8),
@@ -88,7 +88,7 @@ class PillSheetModifiedHistoryAutomaticallyRecordedLastTakenDateAction
             Container(
               constraints: BoxConstraints(
                 maxWidth:
-                    CalendarPillSheetModifiedHistoryTakenPillActionElementWidth
+                    PillSheetModifiedHistoryTakenActionLayoutWidths
                         .takenMark,
               ),
               padding: EdgeInsets.only(left: 8),

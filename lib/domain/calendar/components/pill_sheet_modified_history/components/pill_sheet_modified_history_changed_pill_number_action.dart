@@ -15,7 +15,7 @@ class PillSheetModifiedHistoryChangedPillNumberAction extends StatelessWidget {
           children: [
             LimitedBox(
               maxWidth:
-                  CalendarPillSheetModifiedHistoryTakenPillActionElementWidth
+                  PillSheetModifiedHistoryTakenActionLayoutWidths
                       .leading,
               child: Row(
                 children: [
