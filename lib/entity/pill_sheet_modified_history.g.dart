@@ -15,8 +15,8 @@ _$_PillSheetModifiedValue _$_$_PillSheetModifiedValueFromJson(
     pillSheetCreatedAt: json['pillSheetCreatedAt'] == null
         ? null
         : DateTime.parse(json['pillSheetCreatedAt'] as String),
-    changedPillNumber: (json['changedPillNumber'] as List<dynamic>)
-        .map((e) => e as int)
+    changedPillNumber: (json['changedPillNumber'] as List<dynamic>?)
+        ?.map((e) => e as int)
         .toList(),
   );
 }

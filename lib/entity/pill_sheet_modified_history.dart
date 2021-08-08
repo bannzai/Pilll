@@ -30,7 +30,7 @@ abstract class PillSheetModifiedValue with _$PillSheetModifiedValue {
   factory PillSheetModifiedValue({
     @Default(null) DateTime? pillSheetDeletedAt,
     @Default(null) DateTime? pillSheetCreatedAt,
-    @Default(null) List<int> changedPillNumber,
+    @Default(null) List<int>? changedPillNumber,
   }) = _PillSheetModifiedValue;
 
   factory PillSheetModifiedValue.fromJson(Map<String, dynamic> json) =>

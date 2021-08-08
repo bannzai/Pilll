@@ -24,7 +24,7 @@ class _$PillSheetModifiedValueTearOff {
   _PillSheetModifiedValue call(
       {DateTime? pillSheetDeletedAt = null,
       DateTime? pillSheetCreatedAt = null,
-      List<int> changedPillNumber = null}) {
+      List<int>? changedPillNumber = null}) {
     return _PillSheetModifiedValue(
       pillSheetDeletedAt: pillSheetDeletedAt,
       pillSheetCreatedAt: pillSheetCreatedAt,
@@ -44,7 +44,7 @@ const $PillSheetModifiedValue = _$PillSheetModifiedValueTearOff();
 mixin _$PillSheetModifiedValue {
   DateTime? get pillSheetDeletedAt => throw _privateConstructorUsedError;
   DateTime? get pillSheetCreatedAt => throw _privateConstructorUsedError;
-  List<int> get changedPillNumber => throw _privateConstructorUsedError;
+  List<int>? get changedPillNumber => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -60,7 +60,7 @@ abstract class $PillSheetModifiedValueCopyWith<$Res> {
   $Res call(
       {DateTime? pillSheetDeletedAt,
       DateTime? pillSheetCreatedAt,
-      List<int> changedPillNumber});
+      List<int>? changedPillNumber});
 }
 
 /// @nodoc
@@ -90,7 +90,7 @@ class _$PillSheetModifiedValueCopyWithImpl<$Res>
       changedPillNumber: changedPillNumber == freezed
           ? _value.changedPillNumber
           : changedPillNumber // ignore: cast_nullable_to_non_nullable
-              as List<int>,
+              as List<int>?,
     ));
   }
 }
@@ -105,7 +105,7 @@ abstract class _$PillSheetModifiedValueCopyWith<$Res>
   $Res call(
       {DateTime? pillSheetDeletedAt,
       DateTime? pillSheetCreatedAt,
-      List<int> changedPillNumber});
+      List<int>? changedPillNumber});
 }
 
 /// @nodoc
@@ -137,7 +137,7 @@ class __$PillSheetModifiedValueCopyWithImpl<$Res>
       changedPillNumber: changedPillNumber == freezed
           ? _value.changedPillNumber
           : changedPillNumber // ignore: cast_nullable_to_non_nullable
-              as List<int>,
+              as List<int>?,
     ));
   }
 }
@@ -162,7 +162,7 @@ class _$_PillSheetModifiedValue implements _PillSheetModifiedValue {
   final DateTime? pillSheetCreatedAt;
   @JsonKey(defaultValue: null)
   @override
-  final List<int> changedPillNumber;
+  final List<int>? changedPillNumber;
 
   @override
   String toString() {
@@ -207,7 +207,7 @@ abstract class _PillSheetModifiedValue implements PillSheetModifiedValue {
   factory _PillSheetModifiedValue(
       {DateTime? pillSheetDeletedAt,
       DateTime? pillSheetCreatedAt,
-      List<int> changedPillNumber}) = _$_PillSheetModifiedValue;
+      List<int>? changedPillNumber}) = _$_PillSheetModifiedValue;
 
   factory _PillSheetModifiedValue.fromJson(Map<String, dynamic> json) =
       _$_PillSheetModifiedValue.fromJson;
@@ -217,7 +217,7 @@ abstract class _PillSheetModifiedValue implements PillSheetModifiedValue {
   @override
   DateTime? get pillSheetCreatedAt => throw _privateConstructorUsedError;
   @override
-  List<int> get changedPillNumber => throw _privateConstructorUsedError;
+  List<int>? get changedPillNumber => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$PillSheetModifiedValueCopyWith<_PillSheetModifiedValue> get copyWith =>
