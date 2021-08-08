@@ -73,7 +73,7 @@ class PillSheetModifiedHistoryRevertTakenPillAction extends StatelessWidget {
                   fontFamily: FontFamily.japanese,
                   fontWeight: FontWeight.w400,
                 ),
-                textAlign: TextAlign.center,
+                textAlign: TextAlign.start,
               ),
             ),
             Container(

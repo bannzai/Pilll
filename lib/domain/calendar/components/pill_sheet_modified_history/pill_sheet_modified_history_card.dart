@@ -62,7 +62,7 @@ class CalendarPillSheetModifiedHistoryCard extends StatelessWidget {
                         fontSize: 12,
                         fontWeight: FontWeight.w400,
                       ),
-                      textAlign: TextAlign.center,
+                      textAlign: TextAlign.start,
                     ),
                   ),
                   Spacer(flex: 2),

@@ -75,7 +75,7 @@ class CalendarPillSheetModifiedHistoryTakenPillActionElement
                   fontFamily: FontFamily.number,
                   fontWeight: FontWeight.w400,
                 ),
-                textAlign: TextAlign.center,
+                textAlign: TextAlign.start,
               ),
             ),
             Spacer(flex: 2),

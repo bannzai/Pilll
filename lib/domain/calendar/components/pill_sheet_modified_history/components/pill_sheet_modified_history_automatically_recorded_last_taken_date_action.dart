@@ -16,7 +16,9 @@ class PillSheetModifiedHistoryAutomaticallyRecordedLastTakenDateAction
           mainAxisAlignment: MainAxisAlignment.start,
           children: [
             LimitedBox(
-              maxWidth: PillSheetModifiedHistoryTakenActionLayoutWidths.leading,
+              maxWidth:
+                  PillSheetModifiedHistoryTakenActionLayoutWidths
+                      .leading,
               child: Row(
                 children: [
                   RichText(
@@ -63,13 +65,16 @@ class PillSheetModifiedHistoryAutomaticallyRecordedLastTakenDateAction
                 ],
               ),
             ),
-            Spacer(flex: 2),
+            Spacer(),
             Container(
-              width: PillSheetModifiedHistoryTakenActionLayoutWidths
-                  .actionDescription,
+              constraints: BoxConstraints(
+                maxWidth:
+                    PillSheetModifiedHistoryTakenActionLayoutWidths
+                        .takenTime,
+              ),
               padding: EdgeInsets.only(left: 8),
               child: Text(
-                "-",
+                "  -  ",
                 style: TextStyle(
                   color: TextColor.main,
                   fontSize: 15,
@@ -83,7 +88,8 @@ class PillSheetModifiedHistoryAutomaticallyRecordedLastTakenDateAction
             Container(
               constraints: BoxConstraints(
                 maxWidth:
-                    PillSheetModifiedHistoryTakenActionLayoutWidths.takenMark,
+                    PillSheetModifiedHistoryTakenActionLayoutWidths
+                        .takenMark,
               ),
               padding: EdgeInsets.only(left: 8),
               child: Row(
