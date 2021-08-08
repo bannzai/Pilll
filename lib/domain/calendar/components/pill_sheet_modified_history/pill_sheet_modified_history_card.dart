@@ -5,8 +5,14 @@ import 'package:pilll/components/molecules/app_card.dart';
 import 'package:pilll/components/molecules/premium_badge.dart';
 import 'package:pilll/domain/calendar/components/pill_sheet_modified_history/components/pill_sheet_modified_history_taken_action_layout.dart';
 import 'package:pilll/domain/calendar/components/pill_sheet_modified_history/pill_sheet_modified_history_list.dart';
+import 'package:pilll/entity/pill_sheet_modified_history.dart';
 
 class CalendarPillSheetModifiedHistoryCard extends StatelessWidget {
+  final List<PillSheetModifiedHistory> pillSheetModifiedHistories;
+
+  const CalendarPillSheetModifiedHistoryCard(
+      {Key? key, required this.pillSheetModifiedHistories})
+      : super(key: key);
   @override
   Widget build(BuildContext context) {
     return AppCard(
