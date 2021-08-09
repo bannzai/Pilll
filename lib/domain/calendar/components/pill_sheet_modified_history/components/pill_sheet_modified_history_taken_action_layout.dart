@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
+import 'package:pilll/entity/weekday.dart';
 
 abstract class PillSheetModifiedHistoryTakenActionLayoutWidths {
   static final double leading = 160;
@@ -11,6 +12,18 @@ abstract class PillSheetModifiedHistoryTakenActionLayoutWidths {
 }
 
 class PillSheetModifiedHistoryDate extends StatelessWidget {
+  final DateTime dateTime;
+  final int pillNumber;
+
+  const PillSheetModifiedHistoryDate({
+    Key? key,
+    required this.dateTime,
+    required this.pillNumber,
+  }) : super(key: key);
+
+  int get _day => dateTime.day;
+  Weekday get _weekday => WeekdayFunctions.weekdayFromDate(dateTime);
+
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -20,7 +33,7 @@ class PillSheetModifiedHistoryDate extends StatelessWidget {
         textBaseline: TextBaseline.alphabetic,
         children: [
           Text(
-            "18",
+            "$_day",
             style: TextStyle(
               color: TextColor.main,
               fontFamily: FontFamily.number,
@@ -30,7 +43,7 @@ class PillSheetModifiedHistoryDate extends StatelessWidget {
           ),
           SizedBox(width: 4),
           Text(
-            "(日)",
+            "(${_weekday.weekdayString()})",
             style: TextStyle(
               color: TextColor.main,
               fontFamily: FontFamily.japanese,
@@ -48,7 +61,7 @@ class PillSheetModifiedHistoryDate extends StatelessWidget {
           ),
           SizedBox(width: 16),
           Text(
-            "19番",
+            "$pillNumber番",
             style: TextStyle(
               color: TextColor.main,
               fontFamily: FontFamily.japanese,
