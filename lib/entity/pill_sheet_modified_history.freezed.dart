@@ -22,8 +22,10 @@ class _$PillSheetModifiedValueTearOff {
   const _$PillSheetModifiedValueTearOff();
 
   _PillSheetModifiedValue call(
-      {DateTime? pillSheetDeletedAt = null,
-      DateTime? pillSheetCreatedAt = null,
+      {@JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
+          DateTime? pillSheetDeletedAt = null,
+      @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
+          DateTime? pillSheetCreatedAt = null,
       List<int>? changedPillNumber = null}) {
     return _PillSheetModifiedValue(
       pillSheetDeletedAt: pillSheetDeletedAt,
@@ -42,7 +44,13 @@ const $PillSheetModifiedValue = _$PillSheetModifiedValueTearOff();
 
 /// @nodoc
 mixin _$PillSheetModifiedValue {
+  @JsonKey(
+      fromJson: TimestampConverter.timestampToDateTime,
+      toJson: TimestampConverter.dateTimeToTimestamp)
   DateTime? get pillSheetDeletedAt => throw _privateConstructorUsedError;
+  @JsonKey(
+      fromJson: TimestampConverter.timestampToDateTime,
+      toJson: TimestampConverter.dateTimeToTimestamp)
   DateTime? get pillSheetCreatedAt => throw _privateConstructorUsedError;
   List<int>? get changedPillNumber => throw _privateConstructorUsedError;
 
@@ -58,8 +66,10 @@ abstract class $PillSheetModifiedValueCopyWith<$Res> {
           $Res Function(PillSheetModifiedValue) then) =
       _$PillSheetModifiedValueCopyWithImpl<$Res>;
   $Res call(
-      {DateTime? pillSheetDeletedAt,
-      DateTime? pillSheetCreatedAt,
+      {@JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
+          DateTime? pillSheetDeletedAt,
+      @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
+          DateTime? pillSheetCreatedAt,
       List<int>? changedPillNumber});
 }
 
@@ -103,8 +113,10 @@ abstract class _$PillSheetModifiedValueCopyWith<$Res>
       __$PillSheetModifiedValueCopyWithImpl<$Res>;
   @override
   $Res call(
-      {DateTime? pillSheetDeletedAt,
-      DateTime? pillSheetCreatedAt,
+      {@JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
+          DateTime? pillSheetDeletedAt,
+      @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
+          DateTime? pillSheetCreatedAt,
       List<int>? changedPillNumber});
 }
 
@@ -147,18 +159,24 @@ class __$PillSheetModifiedValueCopyWithImpl<$Res>
 @JsonSerializable(explicitToJson: true)
 class _$_PillSheetModifiedValue implements _PillSheetModifiedValue {
   _$_PillSheetModifiedValue(
-      {this.pillSheetDeletedAt = null,
-      this.pillSheetCreatedAt = null,
+      {@JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
+          this.pillSheetDeletedAt = null,
+      @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
+          this.pillSheetCreatedAt = null,
       this.changedPillNumber = null});
 
   factory _$_PillSheetModifiedValue.fromJson(Map<String, dynamic> json) =>
       _$_$_PillSheetModifiedValueFromJson(json);
 
-  @JsonKey(defaultValue: null)
   @override
+  @JsonKey(
+      fromJson: TimestampConverter.timestampToDateTime,
+      toJson: TimestampConverter.dateTimeToTimestamp)
   final DateTime? pillSheetDeletedAt;
-  @JsonKey(defaultValue: null)
   @override
+  @JsonKey(
+      fromJson: TimestampConverter.timestampToDateTime,
+      toJson: TimestampConverter.dateTimeToTimestamp)
   final DateTime? pillSheetCreatedAt;
   @JsonKey(defaultValue: null)
   @override
@@ -205,16 +223,24 @@ class _$_PillSheetModifiedValue implements _PillSheetModifiedValue {
 
 abstract class _PillSheetModifiedValue implements PillSheetModifiedValue {
   factory _PillSheetModifiedValue(
-      {DateTime? pillSheetDeletedAt,
-      DateTime? pillSheetCreatedAt,
+      {@JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
+          DateTime? pillSheetDeletedAt,
+      @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
+          DateTime? pillSheetCreatedAt,
       List<int>? changedPillNumber}) = _$_PillSheetModifiedValue;
 
   factory _PillSheetModifiedValue.fromJson(Map<String, dynamic> json) =
       _$_PillSheetModifiedValue.fromJson;
 
   @override
+  @JsonKey(
+      fromJson: TimestampConverter.timestampToDateTime,
+      toJson: TimestampConverter.dateTimeToTimestamp)
   DateTime? get pillSheetDeletedAt => throw _privateConstructorUsedError;
   @override
+  @JsonKey(
+      fromJson: TimestampConverter.timestampToDateTime,
+      toJson: TimestampConverter.dateTimeToTimestamp)
   DateTime? get pillSheetCreatedAt => throw _privateConstructorUsedError;
   @override
   List<int>? get changedPillNumber => throw _privateConstructorUsedError;
@@ -237,7 +263,8 @@ class _$PillSheetModifiedHistoryTearOff {
       {required String actionType,
       required String userID,
       required PillSheetModifiedValue value,
-      required DateTime createdAt}) {
+      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+          required DateTime createdAt}) {
     return _PillSheetModifiedHistory(
       actionType: actionType,
       userID: userID,
@@ -259,6 +286,9 @@ mixin _$PillSheetModifiedHistory {
   String get actionType => throw _privateConstructorUsedError;
   String get userID => throw _privateConstructorUsedError;
   PillSheetModifiedValue get value => throw _privateConstructorUsedError;
+  @JsonKey(
+      fromJson: NonNullTimestampConverter.timestampToDateTime,
+      toJson: NonNullTimestampConverter.dateTimeToTimestamp)
   DateTime get createdAt => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -276,7 +306,8 @@ abstract class $PillSheetModifiedHistoryCopyWith<$Res> {
       {String actionType,
       String userID,
       PillSheetModifiedValue value,
-      DateTime createdAt});
+      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+          DateTime createdAt});
 
   $PillSheetModifiedValueCopyWith<$Res> get value;
 }
@@ -336,7 +367,8 @@ abstract class _$PillSheetModifiedHistoryCopyWith<$Res>
       {String actionType,
       String userID,
       PillSheetModifiedValue value,
-      DateTime createdAt});
+      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+          DateTime createdAt});
 
   @override
   $PillSheetModifiedValueCopyWith<$Res> get value;
@@ -390,7 +422,8 @@ class _$_PillSheetModifiedHistory extends _PillSheetModifiedHistory {
       {required this.actionType,
       required this.userID,
       required this.value,
-      required this.createdAt})
+      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+          required this.createdAt})
       : super._();
 
   factory _$_PillSheetModifiedHistory.fromJson(Map<String, dynamic> json) =>
@@ -403,6 +436,9 @@ class _$_PillSheetModifiedHistory extends _PillSheetModifiedHistory {
   @override
   final PillSheetModifiedValue value;
   @override
+  @JsonKey(
+      fromJson: NonNullTimestampConverter.timestampToDateTime,
+      toJson: NonNullTimestampConverter.dateTimeToTimestamp)
   final DateTime createdAt;
 
   @override
@@ -451,7 +487,8 @@ abstract class _PillSheetModifiedHistory extends PillSheetModifiedHistory {
       {required String actionType,
       required String userID,
       required PillSheetModifiedValue value,
-      required DateTime createdAt}) = _$_PillSheetModifiedHistory;
+      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+          required DateTime createdAt}) = _$_PillSheetModifiedHistory;
   _PillSheetModifiedHistory._() : super._();
 
   factory _PillSheetModifiedHistory.fromJson(Map<String, dynamic> json) =
@@ -464,6 +501,9 @@ abstract class _PillSheetModifiedHistory extends PillSheetModifiedHistory {
   @override
   PillSheetModifiedValue get value => throw _privateConstructorUsedError;
   @override
+  @JsonKey(
+      fromJson: NonNullTimestampConverter.timestampToDateTime,
+      toJson: NonNullTimestampConverter.dateTimeToTimestamp)
   DateTime get createdAt => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)

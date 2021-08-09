@@ -1,4 +1,5 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:pilll/entity/firestore_timestamp_converter.dart';
 
 part 'pill_sheet_modified_history.g.dart';
 part 'pill_sheet_modified_history.freezed.dart';
@@ -28,9 +29,20 @@ enum PillSheetModifiedActionType {
 abstract class PillSheetModifiedValue with _$PillSheetModifiedValue {
   @JsonSerializable(explicitToJson: true)
   factory PillSheetModifiedValue({
-    @Default(null) DateTime? pillSheetDeletedAt,
-    @Default(null) DateTime? pillSheetCreatedAt,
-    @Default(null) List<int>? changedPillNumber,
+    @JsonKey(
+      fromJson: TimestampConverter.timestampToDateTime,
+      toJson: TimestampConverter.dateTimeToTimestamp,
+    )
+    @Default(null)
+        DateTime? pillSheetDeletedAt,
+    @JsonKey(
+      fromJson: TimestampConverter.timestampToDateTime,
+      toJson: TimestampConverter.dateTimeToTimestamp,
+    )
+    @Default(null)
+        DateTime? pillSheetCreatedAt,
+    @Default(null)
+        List<int>? changedPillNumber,
   }) = _PillSheetModifiedValue;
 
   factory PillSheetModifiedValue.fromJson(Map<String, dynamic> json) =>
@@ -48,7 +60,11 @@ abstract class PillSheetModifiedHistory with _$PillSheetModifiedHistory {
     required String actionType,
     required String userID,
     required PillSheetModifiedValue value,
-    required DateTime createdAt,
+    @JsonKey(
+      fromJson: NonNullTimestampConverter.timestampToDateTime,
+      toJson: NonNullTimestampConverter.dateTimeToTimestamp,
+    )
+        required DateTime createdAt,
   }) = _PillSheetModifiedHistory;
   const PillSheetModifiedHistory._();
 

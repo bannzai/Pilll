@@ -9,12 +9,10 @@ part of 'pill_sheet_modified_history.dart';
 _$_PillSheetModifiedValue _$_$_PillSheetModifiedValueFromJson(
     Map<String, dynamic> json) {
   return _$_PillSheetModifiedValue(
-    pillSheetDeletedAt: json['pillSheetDeletedAt'] == null
-        ? null
-        : DateTime.parse(json['pillSheetDeletedAt'] as String),
-    pillSheetCreatedAt: json['pillSheetCreatedAt'] == null
-        ? null
-        : DateTime.parse(json['pillSheetCreatedAt'] as String),
+    pillSheetDeletedAt: TimestampConverter.timestampToDateTime(
+        json['pillSheetDeletedAt'] as Timestamp?),
+    pillSheetCreatedAt: TimestampConverter.timestampToDateTime(
+        json['pillSheetCreatedAt'] as Timestamp?),
     changedPillNumber: (json['changedPillNumber'] as List<dynamic>?)
         ?.map((e) => e as int)
         .toList(),
@@ -24,8 +22,10 @@ _$_PillSheetModifiedValue _$_$_PillSheetModifiedValueFromJson(
 Map<String, dynamic> _$_$_PillSheetModifiedValueToJson(
         _$_PillSheetModifiedValue instance) =>
     <String, dynamic>{
-      'pillSheetDeletedAt': instance.pillSheetDeletedAt?.toIso8601String(),
-      'pillSheetCreatedAt': instance.pillSheetCreatedAt?.toIso8601String(),
+      'pillSheetDeletedAt':
+          TimestampConverter.dateTimeToTimestamp(instance.pillSheetDeletedAt),
+      'pillSheetCreatedAt':
+          TimestampConverter.dateTimeToTimestamp(instance.pillSheetCreatedAt),
       'changedPillNumber': instance.changedPillNumber,
     };
 
@@ -36,7 +36,8 @@ _$_PillSheetModifiedHistory _$_$_PillSheetModifiedHistoryFromJson(
     userID: json['userID'] as String,
     value:
         PillSheetModifiedValue.fromJson(json['value'] as Map<String, dynamic>),
-    createdAt: DateTime.parse(json['createdAt'] as String),
+    createdAt: NonNullTimestampConverter.timestampToDateTime(
+        json['createdAt'] as Timestamp),
   );
 }
 
@@ -46,5 +47,6 @@ Map<String, dynamic> _$_$_PillSheetModifiedHistoryToJson(
       'actionType': instance.actionType,
       'userID': instance.userID,
       'value': instance.value.toJson(),
-      'createdAt': instance.createdAt.toIso8601String(),
+      'createdAt':
+          NonNullTimestampConverter.dateTimeToTimestamp(instance.createdAt),
     };
