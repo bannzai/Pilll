@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/domain/calendar/calendar_card_state.dart';
+import 'package:pilll/domain/calendar/components/pill_sheet_modified_history/pill_sheet_modified_history_card.dart';
 import 'package:pilll/service/diary.dart';
 import 'package:pilll/service/menstruation.dart';
 import 'package:pilll/service/pill_sheet.dart';
@@ -46,13 +47,16 @@ class CalendarPageStateStore extends StateNotifier<CalendarPageState> {
       final diaries = await _diaryService.fetchListForMonth(
           state.calendarDataSource[state.todayCalendarIndex]);
       final pillSheetModifiedHistories =
-          await _pillSheetModifiedHistoryService.fetchList(null, 6);
+          await _pillSheetModifiedHistoryService.fetchList(
+              null,
+              CalendarPillSheetModifiedHistoryCardState
+                  .pillSheetModifiedHistoriesThreshold);
       state = state.copyWith(
         menstruations: menstruations,
         setting: setting,
         latestPillSheet: latestPillSheet,
         diariesForMonth: diaries,
-        pillSheetModifiedHistories: pillSheetModifiedHistories,
+        allPillSheetModifiedHistories: pillSheetModifiedHistories,
         isNotYetLoaded: false,
       );
       _subscribe();
@@ -84,9 +88,11 @@ class CalendarPageStateStore extends StateNotifier<CalendarPageState> {
       state = state.copyWith(diariesForMonth: entities);
     });
     _pillSheetModifiedHistoryCanceller?.cancel();
-    _pillSheetModifiedHistoryCanceller =
-        _pillSheetModifiedHistoryService.subscribe(6).listen((event) {
-      state = state.copyWith(pillSheetModifiedHistories: event);
+    _pillSheetModifiedHistoryCanceller = _pillSheetModifiedHistoryService
+        .subscribe(CalendarPillSheetModifiedHistoryCardState
+            .pillSheetModifiedHistoriesThreshold)
+        .listen((event) {
+      state = state.copyWith(allPillSheetModifiedHistories: event);
     });
   }
 

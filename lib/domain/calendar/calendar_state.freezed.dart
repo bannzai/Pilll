@@ -23,7 +23,8 @@ class _$CalendarPageStateTearOff {
       Setting? setting,
       PillSheet? latestPillSheet,
       List<Diary> diariesForMonth = const [],
-      List<PillSheetModifiedHistory> pillSheetModifiedHistories = const []}) {
+      List<PillSheetModifiedHistory> allPillSheetModifiedHistories =
+          const []}) {
     return _CalendarPageState(
       currentCalendarIndex: currentCalendarIndex,
       isNotYetLoaded: isNotYetLoaded,
@@ -31,7 +32,7 @@ class _$CalendarPageStateTearOff {
       setting: setting,
       latestPillSheet: latestPillSheet,
       diariesForMonth: diariesForMonth,
-      pillSheetModifiedHistories: pillSheetModifiedHistories,
+      allPillSheetModifiedHistories: allPillSheetModifiedHistories,
     );
   }
 }
@@ -47,7 +48,7 @@ mixin _$CalendarPageState {
   Setting? get setting => throw _privateConstructorUsedError;
   PillSheet? get latestPillSheet => throw _privateConstructorUsedError;
   List<Diary> get diariesForMonth => throw _privateConstructorUsedError;
-  List<PillSheetModifiedHistory> get pillSheetModifiedHistories =>
+  List<PillSheetModifiedHistory> get allPillSheetModifiedHistories =>
       throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
@@ -67,7 +68,7 @@ abstract class $CalendarPageStateCopyWith<$Res> {
       Setting? setting,
       PillSheet? latestPillSheet,
       List<Diary> diariesForMonth,
-      List<PillSheetModifiedHistory> pillSheetModifiedHistories});
+      List<PillSheetModifiedHistory> allPillSheetModifiedHistories});
 
   $SettingCopyWith<$Res>? get setting;
   $PillSheetCopyWith<$Res>? get latestPillSheet;
@@ -90,7 +91,7 @@ class _$CalendarPageStateCopyWithImpl<$Res>
     Object? setting = freezed,
     Object? latestPillSheet = freezed,
     Object? diariesForMonth = freezed,
-    Object? pillSheetModifiedHistories = freezed,
+    Object? allPillSheetModifiedHistories = freezed,
   }) {
     return _then(_value.copyWith(
       currentCalendarIndex: currentCalendarIndex == freezed
@@ -117,9 +118,9 @@ class _$CalendarPageStateCopyWithImpl<$Res>
           ? _value.diariesForMonth
           : diariesForMonth // ignore: cast_nullable_to_non_nullable
               as List<Diary>,
-      pillSheetModifiedHistories: pillSheetModifiedHistories == freezed
-          ? _value.pillSheetModifiedHistories
-          : pillSheetModifiedHistories // ignore: cast_nullable_to_non_nullable
+      allPillSheetModifiedHistories: allPillSheetModifiedHistories == freezed
+          ? _value.allPillSheetModifiedHistories
+          : allPillSheetModifiedHistories // ignore: cast_nullable_to_non_nullable
               as List<PillSheetModifiedHistory>,
     ));
   }
@@ -161,7 +162,7 @@ abstract class _$CalendarPageStateCopyWith<$Res>
       Setting? setting,
       PillSheet? latestPillSheet,
       List<Diary> diariesForMonth,
-      List<PillSheetModifiedHistory> pillSheetModifiedHistories});
+      List<PillSheetModifiedHistory> allPillSheetModifiedHistories});
 
   @override
   $SettingCopyWith<$Res>? get setting;
@@ -188,7 +189,7 @@ class __$CalendarPageStateCopyWithImpl<$Res>
     Object? setting = freezed,
     Object? latestPillSheet = freezed,
     Object? diariesForMonth = freezed,
-    Object? pillSheetModifiedHistories = freezed,
+    Object? allPillSheetModifiedHistories = freezed,
   }) {
     return _then(_CalendarPageState(
       currentCalendarIndex: currentCalendarIndex == freezed
@@ -215,9 +216,9 @@ class __$CalendarPageStateCopyWithImpl<$Res>
           ? _value.diariesForMonth
           : diariesForMonth // ignore: cast_nullable_to_non_nullable
               as List<Diary>,
-      pillSheetModifiedHistories: pillSheetModifiedHistories == freezed
-          ? _value.pillSheetModifiedHistories
-          : pillSheetModifiedHistories // ignore: cast_nullable_to_non_nullable
+      allPillSheetModifiedHistories: allPillSheetModifiedHistories == freezed
+          ? _value.allPillSheetModifiedHistories
+          : allPillSheetModifiedHistories // ignore: cast_nullable_to_non_nullable
               as List<PillSheetModifiedHistory>,
     ));
   }
@@ -233,7 +234,7 @@ class _$_CalendarPageState extends _CalendarPageState {
       this.setting,
       this.latestPillSheet,
       this.diariesForMonth = const [],
-      this.pillSheetModifiedHistories = const []})
+      this.allPillSheetModifiedHistories = const []})
       : super._();
 
   @JsonKey(defaultValue: 0)
@@ -254,11 +255,11 @@ class _$_CalendarPageState extends _CalendarPageState {
   final List<Diary> diariesForMonth;
   @JsonKey(defaultValue: const [])
   @override
-  final List<PillSheetModifiedHistory> pillSheetModifiedHistories;
+  final List<PillSheetModifiedHistory> allPillSheetModifiedHistories;
 
   @override
   String toString() {
-    return 'CalendarPageState(currentCalendarIndex: $currentCalendarIndex, isNotYetLoaded: $isNotYetLoaded, menstruations: $menstruations, setting: $setting, latestPillSheet: $latestPillSheet, diariesForMonth: $diariesForMonth, pillSheetModifiedHistories: $pillSheetModifiedHistories)';
+    return 'CalendarPageState(currentCalendarIndex: $currentCalendarIndex, isNotYetLoaded: $isNotYetLoaded, menstruations: $menstruations, setting: $setting, latestPillSheet: $latestPillSheet, diariesForMonth: $diariesForMonth, allPillSheetModifiedHistories: $allPillSheetModifiedHistories)';
   }
 
   @override
@@ -283,11 +284,11 @@ class _$_CalendarPageState extends _CalendarPageState {
             (identical(other.diariesForMonth, diariesForMonth) ||
                 const DeepCollectionEquality()
                     .equals(other.diariesForMonth, diariesForMonth)) &&
-            (identical(other.pillSheetModifiedHistories,
-                    pillSheetModifiedHistories) ||
+            (identical(other.allPillSheetModifiedHistories,
+                    allPillSheetModifiedHistories) ||
                 const DeepCollectionEquality().equals(
-                    other.pillSheetModifiedHistories,
-                    pillSheetModifiedHistories)));
+                    other.allPillSheetModifiedHistories,
+                    allPillSheetModifiedHistories)));
   }
 
   @override
@@ -299,7 +300,7 @@ class _$_CalendarPageState extends _CalendarPageState {
       const DeepCollectionEquality().hash(setting) ^
       const DeepCollectionEquality().hash(latestPillSheet) ^
       const DeepCollectionEquality().hash(diariesForMonth) ^
-      const DeepCollectionEquality().hash(pillSheetModifiedHistories);
+      const DeepCollectionEquality().hash(allPillSheetModifiedHistories);
 
   @JsonKey(ignore: true)
   @override
@@ -315,7 +316,7 @@ abstract class _CalendarPageState extends CalendarPageState {
           Setting? setting,
           PillSheet? latestPillSheet,
           List<Diary> diariesForMonth,
-          List<PillSheetModifiedHistory> pillSheetModifiedHistories}) =
+          List<PillSheetModifiedHistory> allPillSheetModifiedHistories}) =
       _$_CalendarPageState;
   _CalendarPageState._() : super._();
 
@@ -332,7 +333,7 @@ abstract class _CalendarPageState extends CalendarPageState {
   @override
   List<Diary> get diariesForMonth => throw _privateConstructorUsedError;
   @override
-  List<PillSheetModifiedHistory> get pillSheetModifiedHistories =>
+  List<PillSheetModifiedHistory> get allPillSheetModifiedHistories =>
       throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)

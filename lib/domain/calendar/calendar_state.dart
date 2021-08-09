@@ -22,7 +22,7 @@ abstract class CalendarPageState implements _$CalendarPageState {
     Setting? setting,
     PillSheet? latestPillSheet,
     @Default([]) List<Diary> diariesForMonth,
-    @Default([]) List<PillSheetModifiedHistory> pillSheetModifiedHistories,
+    @Default([]) List<PillSheetModifiedHistory> allPillSheetModifiedHistories,
   }) = _CalendarPageState;
 
   bool get shouldShowIndicator => isNotYetLoaded || setting == null;

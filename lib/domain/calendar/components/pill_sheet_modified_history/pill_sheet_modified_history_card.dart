@@ -7,12 +7,42 @@ import 'package:pilll/domain/calendar/components/pill_sheet_modified_history/com
 import 'package:pilll/domain/calendar/components/pill_sheet_modified_history/pill_sheet_modified_history_list.dart';
 import 'package:pilll/entity/pill_sheet_modified_history.dart';
 
-class CalendarPillSheetModifiedHistoryCard extends StatelessWidget {
-  final List<PillSheetModifiedHistory> pillSheetModifiedHistories;
+class CalendarPillSheetModifiedHistoryCardState {
+  static final pillSheetModifiedHistoriesThreshold = 6;
+  final List<PillSheetModifiedHistory> _allPillSheetModifiedHistories;
 
-  const CalendarPillSheetModifiedHistoryCard(
-      {Key? key, required this.pillSheetModifiedHistories})
-      : super(key: key);
+  CalendarPillSheetModifiedHistoryCardState(
+      this._allPillSheetModifiedHistories);
+
+  bool get moreButtonIsHidden =>
+      _allPillSheetModifiedHistories.length >
+      CalendarPillSheetModifiedHistoryCardState
+          .pillSheetModifiedHistoriesThreshold;
+  List<PillSheetModifiedHistory> get pillSheetModifiedHistories {
+    if (_allPillSheetModifiedHistories.length >
+        CalendarPillSheetModifiedHistoryCardState
+            .pillSheetModifiedHistoriesThreshold) {
+      final copied = _allPillSheetModifiedHistories;
+      copied.removeRange(
+          copied.length -
+              CalendarPillSheetModifiedHistoryCardState
+                  .pillSheetModifiedHistoriesThreshold -
+              1,
+          copied.length);
+      return copied;
+    } else {
+      return _allPillSheetModifiedHistories;
+    }
+  }
+}
+
+class CalendarPillSheetModifiedHistoryCard extends StatelessWidget {
+  final CalendarPillSheetModifiedHistoryCardState state;
+
+  const CalendarPillSheetModifiedHistoryCard({
+    Key? key,
+    required this.state,
+  }) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return AppCard(
@@ -93,9 +123,11 @@ class CalendarPillSheetModifiedHistoryCard extends StatelessWidget {
             Container(
               padding: const EdgeInsets.only(left: 8, right: 8),
               child: CalendarPillSheetModifiedHistoryList(
-                pillSheetModifiedHistories: pillSheetModifiedHistories,
+                pillSheetModifiedHistories: state.pillSheetModifiedHistories,
               ),
             ),
+            if !(state.moreButtonIsHidden) 
+              
           ],
         ),
       ),
