@@ -5,20 +5,16 @@ import 'package:pilll/entity/pill_sheet_modified_history.dart';
 import 'package:pilll/service/pill_sheet_modified_history.dart';
 import 'package:riverpod/riverpod.dart';
 
-final pillSheetModifiedHistoryStoreProvider =
-    StateNotifierProvider.autoDispose.family(
-  (ref, DateTime dateTimeOfMonth) => PillSheetModifiedHistoryStateStore(
-    dateTimeOfMonth,
+final pillSheetModifiedHistoryStoreProvider = StateNotifierProvider.autoDispose(
+  (ref) => PillSheetModifiedHistoryStateStore(
     ref.watch(pillSheetModifiedHistoryServiceProvider),
   ),
 );
 
 class PillSheetModifiedHistoryStateStore
     extends StateNotifier<PillSheetModifiedHistoryState> {
-  final DateTime _dateTimeOfMonth;
   final PillSheetModifiedHistoryService _pillSheetModifiedHistoryService;
   PillSheetModifiedHistoryStateStore(
-    this._dateTimeOfMonth,
     this._pillSheetModifiedHistoryService,
   ) : super(PillSheetModifiedHistoryState()) {
     reset();
