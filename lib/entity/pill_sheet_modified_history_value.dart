@@ -1,4 +1,6 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:pilll/entity/firestore_timestamp_converter.dart';
 
 part 'pill_sheet_modified_history_value.g.dart';
 part 'pill_sheet_modified_history_value.freezed.dart';
@@ -24,12 +26,11 @@ abstract class CreatedPillSheetValue implements _$CreatedPillSheetValue {
   CreatedPillSheetValue._();
   @JsonSerializable(explicitToJson: true)
   factory CreatedPillSheetValue({
-    DateTime? beginTrialDate,
-    @Default(false) bool isTrial,
-    @Default(false) bool isPremium,
-    @Default(false) bool isLoading,
-    @Default(false) bool isFirstLoadEnded,
-    Object? exception,
+    @JsonKey(
+      fromJson: NonNullTimestampConverter.timestampToDateTime,
+      toJson: NonNullTimestampConverter.dateTimeToTimestamp,
+    )
+        required DateTime pillSheetCreatedAt,
   }) = _CreatedPillSheetValue;
 
   factory CreatedPillSheetValue.fromJson(Map<String, dynamic> json) =>

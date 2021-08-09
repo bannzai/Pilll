@@ -225,19 +225,10 @@ class _$CreatedPillSheetValueTearOff {
   const _$CreatedPillSheetValueTearOff();
 
   _CreatedPillSheetValue call(
-      {DateTime? beginTrialDate,
-      bool isTrial = false,
-      bool isPremium = false,
-      bool isLoading = false,
-      bool isFirstLoadEnded = false,
-      Object? exception}) {
+      {@JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+          required DateTime pillSheetCreatedAt}) {
     return _CreatedPillSheetValue(
-      beginTrialDate: beginTrialDate,
-      isTrial: isTrial,
-      isPremium: isPremium,
-      isLoading: isLoading,
-      isFirstLoadEnded: isFirstLoadEnded,
-      exception: exception,
+      pillSheetCreatedAt: pillSheetCreatedAt,
     );
   }
 
@@ -251,12 +242,10 @@ const $CreatedPillSheetValue = _$CreatedPillSheetValueTearOff();
 
 /// @nodoc
 mixin _$CreatedPillSheetValue {
-  DateTime? get beginTrialDate => throw _privateConstructorUsedError;
-  bool get isTrial => throw _privateConstructorUsedError;
-  bool get isPremium => throw _privateConstructorUsedError;
-  bool get isLoading => throw _privateConstructorUsedError;
-  bool get isFirstLoadEnded => throw _privateConstructorUsedError;
-  Object? get exception => throw _privateConstructorUsedError;
+  @JsonKey(
+      fromJson: NonNullTimestampConverter.timestampToDateTime,
+      toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+  DateTime get pillSheetCreatedAt => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -270,12 +259,8 @@ abstract class $CreatedPillSheetValueCopyWith<$Res> {
           $Res Function(CreatedPillSheetValue) then) =
       _$CreatedPillSheetValueCopyWithImpl<$Res>;
   $Res call(
-      {DateTime? beginTrialDate,
-      bool isTrial,
-      bool isPremium,
-      bool isLoading,
-      bool isFirstLoadEnded,
-      Object? exception});
+      {@JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+          DateTime pillSheetCreatedAt});
 }
 
 /// @nodoc
@@ -289,35 +274,13 @@ class _$CreatedPillSheetValueCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object? beginTrialDate = freezed,
-    Object? isTrial = freezed,
-    Object? isPremium = freezed,
-    Object? isLoading = freezed,
-    Object? isFirstLoadEnded = freezed,
-    Object? exception = freezed,
+    Object? pillSheetCreatedAt = freezed,
   }) {
     return _then(_value.copyWith(
-      beginTrialDate: beginTrialDate == freezed
-          ? _value.beginTrialDate
-          : beginTrialDate // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
-      isTrial: isTrial == freezed
-          ? _value.isTrial
-          : isTrial // ignore: cast_nullable_to_non_nullable
-              as bool,
-      isPremium: isPremium == freezed
-          ? _value.isPremium
-          : isPremium // ignore: cast_nullable_to_non_nullable
-              as bool,
-      isLoading: isLoading == freezed
-          ? _value.isLoading
-          : isLoading // ignore: cast_nullable_to_non_nullable
-              as bool,
-      isFirstLoadEnded: isFirstLoadEnded == freezed
-          ? _value.isFirstLoadEnded
-          : isFirstLoadEnded // ignore: cast_nullable_to_non_nullable
-              as bool,
-      exception: exception == freezed ? _value.exception : exception,
+      pillSheetCreatedAt: pillSheetCreatedAt == freezed
+          ? _value.pillSheetCreatedAt
+          : pillSheetCreatedAt // ignore: cast_nullable_to_non_nullable
+              as DateTime,
     ));
   }
 }
@@ -330,12 +293,8 @@ abstract class _$CreatedPillSheetValueCopyWith<$Res>
       __$CreatedPillSheetValueCopyWithImpl<$Res>;
   @override
   $Res call(
-      {DateTime? beginTrialDate,
-      bool isTrial,
-      bool isPremium,
-      bool isLoading,
-      bool isFirstLoadEnded,
-      Object? exception});
+      {@JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+          DateTime pillSheetCreatedAt});
 }
 
 /// @nodoc
@@ -351,35 +310,13 @@ class __$CreatedPillSheetValueCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object? beginTrialDate = freezed,
-    Object? isTrial = freezed,
-    Object? isPremium = freezed,
-    Object? isLoading = freezed,
-    Object? isFirstLoadEnded = freezed,
-    Object? exception = freezed,
+    Object? pillSheetCreatedAt = freezed,
   }) {
     return _then(_CreatedPillSheetValue(
-      beginTrialDate: beginTrialDate == freezed
-          ? _value.beginTrialDate
-          : beginTrialDate // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
-      isTrial: isTrial == freezed
-          ? _value.isTrial
-          : isTrial // ignore: cast_nullable_to_non_nullable
-              as bool,
-      isPremium: isPremium == freezed
-          ? _value.isPremium
-          : isPremium // ignore: cast_nullable_to_non_nullable
-              as bool,
-      isLoading: isLoading == freezed
-          ? _value.isLoading
-          : isLoading // ignore: cast_nullable_to_non_nullable
-              as bool,
-      isFirstLoadEnded: isFirstLoadEnded == freezed
-          ? _value.isFirstLoadEnded
-          : isFirstLoadEnded // ignore: cast_nullable_to_non_nullable
-              as bool,
-      exception: exception == freezed ? _value.exception : exception,
+      pillSheetCreatedAt: pillSheetCreatedAt == freezed
+          ? _value.pillSheetCreatedAt
+          : pillSheetCreatedAt // ignore: cast_nullable_to_non_nullable
+              as DateTime,
     ));
   }
 }
@@ -389,72 +326,37 @@ class __$CreatedPillSheetValueCopyWithImpl<$Res>
 @JsonSerializable(explicitToJson: true)
 class _$_CreatedPillSheetValue extends _CreatedPillSheetValue {
   _$_CreatedPillSheetValue(
-      {this.beginTrialDate,
-      this.isTrial = false,
-      this.isPremium = false,
-      this.isLoading = false,
-      this.isFirstLoadEnded = false,
-      this.exception})
+      {@JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+          required this.pillSheetCreatedAt})
       : super._();
 
   factory _$_CreatedPillSheetValue.fromJson(Map<String, dynamic> json) =>
       _$_$_CreatedPillSheetValueFromJson(json);
 
   @override
-  final DateTime? beginTrialDate;
-  @JsonKey(defaultValue: false)
-  @override
-  final bool isTrial;
-  @JsonKey(defaultValue: false)
-  @override
-  final bool isPremium;
-  @JsonKey(defaultValue: false)
-  @override
-  final bool isLoading;
-  @JsonKey(defaultValue: false)
-  @override
-  final bool isFirstLoadEnded;
-  @override
-  final Object? exception;
+  @JsonKey(
+      fromJson: NonNullTimestampConverter.timestampToDateTime,
+      toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+  final DateTime pillSheetCreatedAt;
 
   @override
   String toString() {
-    return 'CreatedPillSheetValue(beginTrialDate: $beginTrialDate, isTrial: $isTrial, isPremium: $isPremium, isLoading: $isLoading, isFirstLoadEnded: $isFirstLoadEnded, exception: $exception)';
+    return 'CreatedPillSheetValue(pillSheetCreatedAt: $pillSheetCreatedAt)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other is _CreatedPillSheetValue &&
-            (identical(other.beginTrialDate, beginTrialDate) ||
+            (identical(other.pillSheetCreatedAt, pillSheetCreatedAt) ||
                 const DeepCollectionEquality()
-                    .equals(other.beginTrialDate, beginTrialDate)) &&
-            (identical(other.isTrial, isTrial) ||
-                const DeepCollectionEquality()
-                    .equals(other.isTrial, isTrial)) &&
-            (identical(other.isPremium, isPremium) ||
-                const DeepCollectionEquality()
-                    .equals(other.isPremium, isPremium)) &&
-            (identical(other.isLoading, isLoading) ||
-                const DeepCollectionEquality()
-                    .equals(other.isLoading, isLoading)) &&
-            (identical(other.isFirstLoadEnded, isFirstLoadEnded) ||
-                const DeepCollectionEquality()
-                    .equals(other.isFirstLoadEnded, isFirstLoadEnded)) &&
-            (identical(other.exception, exception) ||
-                const DeepCollectionEquality()
-                    .equals(other.exception, exception)));
+                    .equals(other.pillSheetCreatedAt, pillSheetCreatedAt)));
   }
 
   @override
   int get hashCode =>
       runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(beginTrialDate) ^
-      const DeepCollectionEquality().hash(isTrial) ^
-      const DeepCollectionEquality().hash(isPremium) ^
-      const DeepCollectionEquality().hash(isLoading) ^
-      const DeepCollectionEquality().hash(isFirstLoadEnded) ^
-      const DeepCollectionEquality().hash(exception);
+      const DeepCollectionEquality().hash(pillSheetCreatedAt);
 
   @JsonKey(ignore: true)
   @override
@@ -470,29 +372,18 @@ class _$_CreatedPillSheetValue extends _CreatedPillSheetValue {
 
 abstract class _CreatedPillSheetValue extends CreatedPillSheetValue {
   factory _CreatedPillSheetValue(
-      {DateTime? beginTrialDate,
-      bool isTrial,
-      bool isPremium,
-      bool isLoading,
-      bool isFirstLoadEnded,
-      Object? exception}) = _$_CreatedPillSheetValue;
+      {@JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+          required DateTime pillSheetCreatedAt}) = _$_CreatedPillSheetValue;
   _CreatedPillSheetValue._() : super._();
 
   factory _CreatedPillSheetValue.fromJson(Map<String, dynamic> json) =
       _$_CreatedPillSheetValue.fromJson;
 
   @override
-  DateTime? get beginTrialDate => throw _privateConstructorUsedError;
-  @override
-  bool get isTrial => throw _privateConstructorUsedError;
-  @override
-  bool get isPremium => throw _privateConstructorUsedError;
-  @override
-  bool get isLoading => throw _privateConstructorUsedError;
-  @override
-  bool get isFirstLoadEnded => throw _privateConstructorUsedError;
-  @override
-  Object? get exception => throw _privateConstructorUsedError;
+  @JsonKey(
+      fromJson: NonNullTimestampConverter.timestampToDateTime,
+      toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+  DateTime get pillSheetCreatedAt => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$CreatedPillSheetValueCopyWith<_CreatedPillSheetValue> get copyWith =>

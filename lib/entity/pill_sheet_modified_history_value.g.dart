@@ -27,24 +27,14 @@ Map<String, dynamic> _$_$_PillSheetModifiedHistoryValueToJson(
 _$_CreatedPillSheetValue _$_$_CreatedPillSheetValueFromJson(
     Map<String, dynamic> json) {
   return _$_CreatedPillSheetValue(
-    beginTrialDate: json['beginTrialDate'] == null
-        ? null
-        : DateTime.parse(json['beginTrialDate'] as String),
-    isTrial: json['isTrial'] as bool? ?? false,
-    isPremium: json['isPremium'] as bool? ?? false,
-    isLoading: json['isLoading'] as bool? ?? false,
-    isFirstLoadEnded: json['isFirstLoadEnded'] as bool? ?? false,
-    exception: json['exception'],
+    pillSheetCreatedAt: NonNullTimestampConverter.timestampToDateTime(
+        json['pillSheetCreatedAt'] as Timestamp),
   );
 }
 
 Map<String, dynamic> _$_$_CreatedPillSheetValueToJson(
         _$_CreatedPillSheetValue instance) =>
     <String, dynamic>{
-      'beginTrialDate': instance.beginTrialDate?.toIso8601String(),
-      'isTrial': instance.isTrial,
-      'isPremium': instance.isPremium,
-      'isLoading': instance.isLoading,
-      'isFirstLoadEnded': instance.isFirstLoadEnded,
-      'exception': instance.exception,
+      'pillSheetCreatedAt': NonNullTimestampConverter.dateTimeToTimestamp(
+          instance.pillSheetCreatedAt),
     };
