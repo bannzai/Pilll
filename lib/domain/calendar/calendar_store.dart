@@ -56,6 +56,7 @@ class CalendarPageStateStore extends StateNotifier<CalendarPageState> {
               CalendarPillSheetModifiedHistoryCardState
                       .pillSheetModifiedHistoriesThreshold +
                   1);
+      final user = await _userService.fetch();
       state = state.copyWith(
         menstruations: menstruations,
         setting: setting,
@@ -63,6 +64,9 @@ class CalendarPageStateStore extends StateNotifier<CalendarPageState> {
         diariesForMonth: diaries,
         allPillSheetModifiedHistories: pillSheetModifiedHistories,
         isNotYetLoaded: false,
+        isPremium: user.isPremium,
+        isTrial: user.isTrial,
+        trialDeadlineDate: user.trialDeadlineDate,
       );
       _subscribe();
     });
@@ -73,6 +77,7 @@ class CalendarPageStateStore extends StateNotifier<CalendarPageState> {
   StreamSubscription? _latestPillSheetCanceller;
   StreamSubscription? _diariesCanceller;
   StreamSubscription? _pillSheetModifiedHistoryCanceller;
+  StreamSubscription? _userCanceller;
   void _subscribe() {
     _menstruationCanceller?.cancel();
     _menstruationCanceller =
@@ -100,6 +105,14 @@ class CalendarPageStateStore extends StateNotifier<CalendarPageState> {
         .listen((event) {
       state = state.copyWith(allPillSheetModifiedHistories: event);
     });
+    _userCanceller?.cancel();
+    _userCanceller = _userService.subscribe().listen((event) {
+      state = state.copyWith(
+        isPremium: event.isPremium,
+        isTrial: event.isTrial,
+        trialDeadlineDate: event.trialDeadlineDate,
+      );
+    });
   }
 
   @override
@@ -109,6 +122,7 @@ class CalendarPageStateStore extends StateNotifier<CalendarPageState> {
     _latestPillSheetCanceller?.cancel();
     _diariesCanceller?.cancel();
     _pillSheetModifiedHistoryCanceller?.cancel();
+    _userCanceller?.cancel();
     super.dispose();
   }
 
