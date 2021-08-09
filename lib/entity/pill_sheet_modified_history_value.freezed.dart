@@ -28,7 +28,8 @@ class _$PillSheetModifiedHistoryValueTearOff {
           automaticallyRecordedLastTakenDate = null,
       DeletedPillSheetValue? deletedPillSheet = null,
       TakenPillValue? takenPill = null,
-      RevertTakenPillValue? revertTakenPill = null}) {
+      RevertTakenPillValue? revertTakenPill = null,
+      ChangedPillNumberValue changedPillNumber = null}) {
     return _PillSheetModifiedHistoryValue(
       beginTrialDate: beginTrialDate,
       createdPillSheet: createdPillSheet,
@@ -36,6 +37,7 @@ class _$PillSheetModifiedHistoryValueTearOff {
       deletedPillSheet: deletedPillSheet,
       takenPill: takenPill,
       revertTakenPill: revertTakenPill,
+      changedPillNumber: changedPillNumber,
     );
   }
 
@@ -60,6 +62,8 @@ mixin _$PillSheetModifiedHistoryValue {
   TakenPillValue? get takenPill => throw _privateConstructorUsedError;
   RevertTakenPillValue? get revertTakenPill =>
       throw _privateConstructorUsedError;
+  ChangedPillNumberValue get changedPillNumber =>
+      throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -80,7 +84,8 @@ abstract class $PillSheetModifiedHistoryValueCopyWith<$Res> {
           automaticallyRecordedLastTakenDate,
       DeletedPillSheetValue? deletedPillSheet,
       TakenPillValue? takenPill,
-      RevertTakenPillValue? revertTakenPill});
+      RevertTakenPillValue? revertTakenPill,
+      ChangedPillNumberValue changedPillNumber});
 
   $CreatedPillSheetValueCopyWith<$Res>? get createdPillSheet;
   $AutomaticallyRecordedLastTakenDateValueCopyWith<$Res>?
@@ -88,6 +93,7 @@ abstract class $PillSheetModifiedHistoryValueCopyWith<$Res> {
   $DeletedPillSheetValueCopyWith<$Res>? get deletedPillSheet;
   $TakenPillValueCopyWith<$Res>? get takenPill;
   $RevertTakenPillValueCopyWith<$Res>? get revertTakenPill;
+  $ChangedPillNumberValueCopyWith<$Res> get changedPillNumber;
 }
 
 /// @nodoc
@@ -107,6 +113,7 @@ class _$PillSheetModifiedHistoryValueCopyWithImpl<$Res>
     Object? deletedPillSheet = freezed,
     Object? takenPill = freezed,
     Object? revertTakenPill = freezed,
+    Object? changedPillNumber = freezed,
   }) {
     return _then(_value.copyWith(
       beginTrialDate: beginTrialDate == freezed
@@ -134,6 +141,10 @@ class _$PillSheetModifiedHistoryValueCopyWithImpl<$Res>
           ? _value.revertTakenPill
           : revertTakenPill // ignore: cast_nullable_to_non_nullable
               as RevertTakenPillValue?,
+      changedPillNumber: changedPillNumber == freezed
+          ? _value.changedPillNumber
+          : changedPillNumber // ignore: cast_nullable_to_non_nullable
+              as ChangedPillNumberValue,
     ));
   }
 
@@ -196,6 +207,14 @@ class _$PillSheetModifiedHistoryValueCopyWithImpl<$Res>
       return _then(_value.copyWith(revertTakenPill: value));
     });
   }
+
+  @override
+  $ChangedPillNumberValueCopyWith<$Res> get changedPillNumber {
+    return $ChangedPillNumberValueCopyWith<$Res>(_value.changedPillNumber,
+        (value) {
+      return _then(_value.copyWith(changedPillNumber: value));
+    });
+  }
 }
 
 /// @nodoc
@@ -213,7 +232,8 @@ abstract class _$PillSheetModifiedHistoryValueCopyWith<$Res>
           automaticallyRecordedLastTakenDate,
       DeletedPillSheetValue? deletedPillSheet,
       TakenPillValue? takenPill,
-      RevertTakenPillValue? revertTakenPill});
+      RevertTakenPillValue? revertTakenPill,
+      ChangedPillNumberValue changedPillNumber});
 
   @override
   $CreatedPillSheetValueCopyWith<$Res>? get createdPillSheet;
@@ -226,6 +246,8 @@ abstract class _$PillSheetModifiedHistoryValueCopyWith<$Res>
   $TakenPillValueCopyWith<$Res>? get takenPill;
   @override
   $RevertTakenPillValueCopyWith<$Res>? get revertTakenPill;
+  @override
+  $ChangedPillNumberValueCopyWith<$Res> get changedPillNumber;
 }
 
 /// @nodoc
@@ -249,6 +271,7 @@ class __$PillSheetModifiedHistoryValueCopyWithImpl<$Res>
     Object? deletedPillSheet = freezed,
     Object? takenPill = freezed,
     Object? revertTakenPill = freezed,
+    Object? changedPillNumber = freezed,
   }) {
     return _then(_PillSheetModifiedHistoryValue(
       beginTrialDate: beginTrialDate == freezed
@@ -276,6 +299,10 @@ class __$PillSheetModifiedHistoryValueCopyWithImpl<$Res>
           ? _value.revertTakenPill
           : revertTakenPill // ignore: cast_nullable_to_non_nullable
               as RevertTakenPillValue?,
+      changedPillNumber: changedPillNumber == freezed
+          ? _value.changedPillNumber
+          : changedPillNumber // ignore: cast_nullable_to_non_nullable
+              as ChangedPillNumberValue,
     ));
   }
 }
@@ -290,7 +317,8 @@ class _$_PillSheetModifiedHistoryValue extends _PillSheetModifiedHistoryValue {
       this.automaticallyRecordedLastTakenDate = null,
       this.deletedPillSheet = null,
       this.takenPill = null,
-      this.revertTakenPill = null})
+      this.revertTakenPill = null,
+      this.changedPillNumber = null})
       : super._();
 
   factory _$_PillSheetModifiedHistoryValue.fromJson(
@@ -315,10 +343,13 @@ class _$_PillSheetModifiedHistoryValue extends _PillSheetModifiedHistoryValue {
   @JsonKey(defaultValue: null)
   @override
   final RevertTakenPillValue? revertTakenPill;
+  @JsonKey(defaultValue: null)
+  @override
+  final ChangedPillNumberValue changedPillNumber;
 
   @override
   String toString() {
-    return 'PillSheetModifiedHistoryValue(beginTrialDate: $beginTrialDate, createdPillSheet: $createdPillSheet, automaticallyRecordedLastTakenDate: $automaticallyRecordedLastTakenDate, deletedPillSheet: $deletedPillSheet, takenPill: $takenPill, revertTakenPill: $revertTakenPill)';
+    return 'PillSheetModifiedHistoryValue(beginTrialDate: $beginTrialDate, createdPillSheet: $createdPillSheet, automaticallyRecordedLastTakenDate: $automaticallyRecordedLastTakenDate, deletedPillSheet: $deletedPillSheet, takenPill: $takenPill, revertTakenPill: $revertTakenPill, changedPillNumber: $changedPillNumber)';
   }
 
   @override
@@ -344,7 +375,10 @@ class _$_PillSheetModifiedHistoryValue extends _PillSheetModifiedHistoryValue {
                     .equals(other.takenPill, takenPill)) &&
             (identical(other.revertTakenPill, revertTakenPill) ||
                 const DeepCollectionEquality()
-                    .equals(other.revertTakenPill, revertTakenPill)));
+                    .equals(other.revertTakenPill, revertTakenPill)) &&
+            (identical(other.changedPillNumber, changedPillNumber) ||
+                const DeepCollectionEquality()
+                    .equals(other.changedPillNumber, changedPillNumber)));
   }
 
   @override
@@ -355,7 +389,8 @@ class _$_PillSheetModifiedHistoryValue extends _PillSheetModifiedHistoryValue {
       const DeepCollectionEquality().hash(automaticallyRecordedLastTakenDate) ^
       const DeepCollectionEquality().hash(deletedPillSheet) ^
       const DeepCollectionEquality().hash(takenPill) ^
-      const DeepCollectionEquality().hash(revertTakenPill);
+      const DeepCollectionEquality().hash(revertTakenPill) ^
+      const DeepCollectionEquality().hash(changedPillNumber);
 
   @JsonKey(ignore: true)
   @override
@@ -378,7 +413,8 @@ abstract class _PillSheetModifiedHistoryValue
               automaticallyRecordedLastTakenDate,
           DeletedPillSheetValue? deletedPillSheet,
           TakenPillValue? takenPill,
-          RevertTakenPillValue? revertTakenPill}) =
+          RevertTakenPillValue? revertTakenPill,
+          ChangedPillNumberValue changedPillNumber}) =
       _$_PillSheetModifiedHistoryValue;
   _PillSheetModifiedHistoryValue._() : super._();
 
@@ -401,6 +437,9 @@ abstract class _PillSheetModifiedHistoryValue
   TakenPillValue? get takenPill => throw _privateConstructorUsedError;
   @override
   RevertTakenPillValue? get revertTakenPill =>
+      throw _privateConstructorUsedError;
+  @override
+  ChangedPillNumberValue get changedPillNumber =>
       throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
@@ -1405,5 +1444,272 @@ abstract class _RevertTakenPillValue extends RevertTakenPillValue {
   @override
   @JsonKey(ignore: true)
   _$RevertTakenPillValueCopyWith<_RevertTakenPillValue> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+ChangedPillNumberValue _$ChangedPillNumberValueFromJson(
+    Map<String, dynamic> json) {
+  return _ChangedPillNumberValue.fromJson(json);
+}
+
+/// @nodoc
+class _$ChangedPillNumberValueTearOff {
+  const _$ChangedPillNumberValueTearOff();
+
+  _ChangedPillNumberValue call(
+      {@JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+          required DateTime beforeBeginingDate,
+      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+          required DateTime afterBeginingDate,
+      int? beforeLastTakenPillNumber,
+      required int afterLastTakenPillNumber}) {
+    return _ChangedPillNumberValue(
+      beforeBeginingDate: beforeBeginingDate,
+      afterBeginingDate: afterBeginingDate,
+      beforeLastTakenPillNumber: beforeLastTakenPillNumber,
+      afterLastTakenPillNumber: afterLastTakenPillNumber,
+    );
+  }
+
+  ChangedPillNumberValue fromJson(Map<String, Object> json) {
+    return ChangedPillNumberValue.fromJson(json);
+  }
+}
+
+/// @nodoc
+const $ChangedPillNumberValue = _$ChangedPillNumberValueTearOff();
+
+/// @nodoc
+mixin _$ChangedPillNumberValue {
+  @JsonKey(
+      fromJson: NonNullTimestampConverter.timestampToDateTime,
+      toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+  DateTime get beforeBeginingDate => throw _privateConstructorUsedError;
+  @JsonKey(
+      fromJson: NonNullTimestampConverter.timestampToDateTime,
+      toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+  DateTime get afterBeginingDate => throw _privateConstructorUsedError;
+  int? get beforeLastTakenPillNumber => throw _privateConstructorUsedError;
+  int get afterLastTakenPillNumber => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $ChangedPillNumberValueCopyWith<ChangedPillNumberValue> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $ChangedPillNumberValueCopyWith<$Res> {
+  factory $ChangedPillNumberValueCopyWith(ChangedPillNumberValue value,
+          $Res Function(ChangedPillNumberValue) then) =
+      _$ChangedPillNumberValueCopyWithImpl<$Res>;
+  $Res call(
+      {@JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+          DateTime beforeBeginingDate,
+      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+          DateTime afterBeginingDate,
+      int? beforeLastTakenPillNumber,
+      int afterLastTakenPillNumber});
+}
+
+/// @nodoc
+class _$ChangedPillNumberValueCopyWithImpl<$Res>
+    implements $ChangedPillNumberValueCopyWith<$Res> {
+  _$ChangedPillNumberValueCopyWithImpl(this._value, this._then);
+
+  final ChangedPillNumberValue _value;
+  // ignore: unused_field
+  final $Res Function(ChangedPillNumberValue) _then;
+
+  @override
+  $Res call({
+    Object? beforeBeginingDate = freezed,
+    Object? afterBeginingDate = freezed,
+    Object? beforeLastTakenPillNumber = freezed,
+    Object? afterLastTakenPillNumber = freezed,
+  }) {
+    return _then(_value.copyWith(
+      beforeBeginingDate: beforeBeginingDate == freezed
+          ? _value.beforeBeginingDate
+          : beforeBeginingDate // ignore: cast_nullable_to_non_nullable
+              as DateTime,
+      afterBeginingDate: afterBeginingDate == freezed
+          ? _value.afterBeginingDate
+          : afterBeginingDate // ignore: cast_nullable_to_non_nullable
+              as DateTime,
+      beforeLastTakenPillNumber: beforeLastTakenPillNumber == freezed
+          ? _value.beforeLastTakenPillNumber
+          : beforeLastTakenPillNumber // ignore: cast_nullable_to_non_nullable
+              as int?,
+      afterLastTakenPillNumber: afterLastTakenPillNumber == freezed
+          ? _value.afterLastTakenPillNumber
+          : afterLastTakenPillNumber // ignore: cast_nullable_to_non_nullable
+              as int,
+    ));
+  }
+}
+
+/// @nodoc
+abstract class _$ChangedPillNumberValueCopyWith<$Res>
+    implements $ChangedPillNumberValueCopyWith<$Res> {
+  factory _$ChangedPillNumberValueCopyWith(_ChangedPillNumberValue value,
+          $Res Function(_ChangedPillNumberValue) then) =
+      __$ChangedPillNumberValueCopyWithImpl<$Res>;
+  @override
+  $Res call(
+      {@JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+          DateTime beforeBeginingDate,
+      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+          DateTime afterBeginingDate,
+      int? beforeLastTakenPillNumber,
+      int afterLastTakenPillNumber});
+}
+
+/// @nodoc
+class __$ChangedPillNumberValueCopyWithImpl<$Res>
+    extends _$ChangedPillNumberValueCopyWithImpl<$Res>
+    implements _$ChangedPillNumberValueCopyWith<$Res> {
+  __$ChangedPillNumberValueCopyWithImpl(_ChangedPillNumberValue _value,
+      $Res Function(_ChangedPillNumberValue) _then)
+      : super(_value, (v) => _then(v as _ChangedPillNumberValue));
+
+  @override
+  _ChangedPillNumberValue get _value => super._value as _ChangedPillNumberValue;
+
+  @override
+  $Res call({
+    Object? beforeBeginingDate = freezed,
+    Object? afterBeginingDate = freezed,
+    Object? beforeLastTakenPillNumber = freezed,
+    Object? afterLastTakenPillNumber = freezed,
+  }) {
+    return _then(_ChangedPillNumberValue(
+      beforeBeginingDate: beforeBeginingDate == freezed
+          ? _value.beforeBeginingDate
+          : beforeBeginingDate // ignore: cast_nullable_to_non_nullable
+              as DateTime,
+      afterBeginingDate: afterBeginingDate == freezed
+          ? _value.afterBeginingDate
+          : afterBeginingDate // ignore: cast_nullable_to_non_nullable
+              as DateTime,
+      beforeLastTakenPillNumber: beforeLastTakenPillNumber == freezed
+          ? _value.beforeLastTakenPillNumber
+          : beforeLastTakenPillNumber // ignore: cast_nullable_to_non_nullable
+              as int?,
+      afterLastTakenPillNumber: afterLastTakenPillNumber == freezed
+          ? _value.afterLastTakenPillNumber
+          : afterLastTakenPillNumber // ignore: cast_nullable_to_non_nullable
+              as int,
+    ));
+  }
+}
+
+/// @nodoc
+
+@JsonSerializable(explicitToJson: true)
+class _$_ChangedPillNumberValue extends _ChangedPillNumberValue {
+  _$_ChangedPillNumberValue(
+      {@JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+          required this.beforeBeginingDate,
+      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+          required this.afterBeginingDate,
+      this.beforeLastTakenPillNumber,
+      required this.afterLastTakenPillNumber})
+      : super._();
+
+  factory _$_ChangedPillNumberValue.fromJson(Map<String, dynamic> json) =>
+      _$_$_ChangedPillNumberValueFromJson(json);
+
+  @override
+  @JsonKey(
+      fromJson: NonNullTimestampConverter.timestampToDateTime,
+      toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+  final DateTime beforeBeginingDate;
+  @override
+  @JsonKey(
+      fromJson: NonNullTimestampConverter.timestampToDateTime,
+      toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+  final DateTime afterBeginingDate;
+  @override
+  final int? beforeLastTakenPillNumber;
+  @override
+  final int afterLastTakenPillNumber;
+
+  @override
+  String toString() {
+    return 'ChangedPillNumberValue(beforeBeginingDate: $beforeBeginingDate, afterBeginingDate: $afterBeginingDate, beforeLastTakenPillNumber: $beforeLastTakenPillNumber, afterLastTakenPillNumber: $afterLastTakenPillNumber)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other is _ChangedPillNumberValue &&
+            (identical(other.beforeBeginingDate, beforeBeginingDate) ||
+                const DeepCollectionEquality()
+                    .equals(other.beforeBeginingDate, beforeBeginingDate)) &&
+            (identical(other.afterBeginingDate, afterBeginingDate) ||
+                const DeepCollectionEquality()
+                    .equals(other.afterBeginingDate, afterBeginingDate)) &&
+            (identical(other.beforeLastTakenPillNumber,
+                    beforeLastTakenPillNumber) ||
+                const DeepCollectionEquality().equals(
+                    other.beforeLastTakenPillNumber,
+                    beforeLastTakenPillNumber)) &&
+            (identical(
+                    other.afterLastTakenPillNumber, afterLastTakenPillNumber) ||
+                const DeepCollectionEquality().equals(
+                    other.afterLastTakenPillNumber, afterLastTakenPillNumber)));
+  }
+
+  @override
+  int get hashCode =>
+      runtimeType.hashCode ^
+      const DeepCollectionEquality().hash(beforeBeginingDate) ^
+      const DeepCollectionEquality().hash(afterBeginingDate) ^
+      const DeepCollectionEquality().hash(beforeLastTakenPillNumber) ^
+      const DeepCollectionEquality().hash(afterLastTakenPillNumber);
+
+  @JsonKey(ignore: true)
+  @override
+  _$ChangedPillNumberValueCopyWith<_ChangedPillNumberValue> get copyWith =>
+      __$ChangedPillNumberValueCopyWithImpl<_ChangedPillNumberValue>(
+          this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$_$_ChangedPillNumberValueToJson(this);
+  }
+}
+
+abstract class _ChangedPillNumberValue extends ChangedPillNumberValue {
+  factory _ChangedPillNumberValue(
+      {@JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+          required DateTime beforeBeginingDate,
+      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+          required DateTime afterBeginingDate,
+      int? beforeLastTakenPillNumber,
+      required int afterLastTakenPillNumber}) = _$_ChangedPillNumberValue;
+  _ChangedPillNumberValue._() : super._();
+
+  factory _ChangedPillNumberValue.fromJson(Map<String, dynamic> json) =
+      _$_ChangedPillNumberValue.fromJson;
+
+  @override
+  @JsonKey(
+      fromJson: NonNullTimestampConverter.timestampToDateTime,
+      toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+  DateTime get beforeBeginingDate => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(
+      fromJson: NonNullTimestampConverter.timestampToDateTime,
+      toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+  DateTime get afterBeginingDate => throw _privateConstructorUsedError;
+  @override
+  int? get beforeLastTakenPillNumber => throw _privateConstructorUsedError;
+  @override
+  int get afterLastTakenPillNumber => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(ignore: true)
+  _$ChangedPillNumberValueCopyWith<_ChangedPillNumberValue> get copyWith =>
       throw _privateConstructorUsedError;
 }

@@ -33,6 +33,8 @@ _$_PillSheetModifiedHistoryValue _$_$_PillSheetModifiedHistoryValueFromJson(
         ? null
         : RevertTakenPillValue.fromJson(
             json['revertTakenPill'] as Map<String, dynamic>),
+    changedPillNumber: ChangedPillNumberValue.fromJson(
+        json['changedPillNumber'] as Map<String, dynamic>),
   );
 }
 
@@ -46,6 +48,7 @@ Map<String, dynamic> _$_$_PillSheetModifiedHistoryValueToJson(
       'deletedPillSheet': instance.deletedPillSheet?.toJson(),
       'takenPill': instance.takenPill?.toJson(),
       'revertTakenPill': instance.revertTakenPill?.toJson(),
+      'changedPillNumber': instance.changedPillNumber.toJson(),
     };
 
 _$_CreatedPillSheetValue _$_$_CreatedPillSheetValueFromJson(
@@ -126,6 +129,29 @@ _$_RevertTakenPillValue _$_$_RevertTakenPillValueFromJson(
 Map<String, dynamic> _$_$_RevertTakenPillValueToJson(
         _$_RevertTakenPillValue instance) =>
     <String, dynamic>{
+      'beforeLastTakenPillNumber': instance.beforeLastTakenPillNumber,
+      'afterLastTakenPillNumber': instance.afterLastTakenPillNumber,
+    };
+
+_$_ChangedPillNumberValue _$_$_ChangedPillNumberValueFromJson(
+    Map<String, dynamic> json) {
+  return _$_ChangedPillNumberValue(
+    beforeBeginingDate: NonNullTimestampConverter.timestampToDateTime(
+        json['beforeBeginingDate'] as Timestamp),
+    afterBeginingDate: NonNullTimestampConverter.timestampToDateTime(
+        json['afterBeginingDate'] as Timestamp),
+    beforeLastTakenPillNumber: json['beforeLastTakenPillNumber'] as int?,
+    afterLastTakenPillNumber: json['afterLastTakenPillNumber'] as int,
+  );
+}
+
+Map<String, dynamic> _$_$_ChangedPillNumberValueToJson(
+        _$_ChangedPillNumberValue instance) =>
+    <String, dynamic>{
+      'beforeBeginingDate': NonNullTimestampConverter.dateTimeToTimestamp(
+          instance.beforeBeginingDate),
+      'afterBeginingDate': NonNullTimestampConverter.dateTimeToTimestamp(
+          instance.afterBeginingDate),
       'beforeLastTakenPillNumber': instance.beforeLastTakenPillNumber,
       'afterLastTakenPillNumber': instance.afterLastTakenPillNumber,
     };
