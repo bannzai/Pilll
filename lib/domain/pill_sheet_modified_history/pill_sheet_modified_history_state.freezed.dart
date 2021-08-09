@@ -255,8 +255,6 @@ abstract class $PillSheetModifiedHistoryElementStateCopyWith<$Res> {
       {PillSheetModifiedActionType actionType,
       PillSheetModifiedValue value,
       DateTime createdAt});
-
-  $PillSheetModifiedValueCopyWith<$Res> get value;
 }
 
 /// @nodoc
@@ -289,13 +287,6 @@ class _$PillSheetModifiedHistoryElementStateCopyWithImpl<$Res>
               as DateTime,
     ));
   }
-
-  @override
-  $PillSheetModifiedValueCopyWith<$Res> get value {
-    return $PillSheetModifiedValueCopyWith<$Res>(_value.value, (value) {
-      return _then(_value.copyWith(value: value));
-    });
-  }
 }
 
 /// @nodoc
@@ -310,9 +301,6 @@ abstract class _$PillSheetModifiedHistoryElementStateCopyWith<$Res>
       {PillSheetModifiedActionType actionType,
       PillSheetModifiedValue value,
       DateTime createdAt});
-
-  @override
-  $PillSheetModifiedValueCopyWith<$Res> get value;
 }
 
 /// @nodoc

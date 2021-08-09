@@ -1,6 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:pilll/entity/firestore_timestamp_converter.dart';
+import 'package:pilll/entity/pill_sheet_modified_history_value.dart';
 
 part 'pill_sheet_modified_history.g.dart';
 part 'pill_sheet_modified_history.freezed.dart';
@@ -26,32 +27,6 @@ enum PillSheetModifiedActionType {
   endedPillSheet
 }
 
-@freezed
-abstract class PillSheetModifiedValue with _$PillSheetModifiedValue {
-  @JsonSerializable(explicitToJson: true)
-  factory PillSheetModifiedValue({
-    @JsonKey(
-      fromJson: TimestampConverter.timestampToDateTime,
-      toJson: TimestampConverter.dateTimeToTimestamp,
-    )
-    @Default(null)
-        DateTime? pillSheetDeletedAt,
-    @JsonKey(
-      fromJson: TimestampConverter.timestampToDateTime,
-      toJson: TimestampConverter.dateTimeToTimestamp,
-    )
-    @Default(null)
-        DateTime? pillSheetCreatedAt,
-    @Default(null)
-        List<int>? changedPillNumber,
-  }) = _PillSheetModifiedValue;
-
-  factory PillSheetModifiedValue.fromJson(Map<String, dynamic> json) =>
-      _$PillSheetModifiedValueFromJson(json);
-  Map<String, dynamic> toJson() =>
-      _$_$_PillSheetModifiedValueToJson(this as _$_PillSheetModifiedValue);
-}
-
 // PillSheetModifiedHistory only create on backend
 // If you want to make it from the client side, please match it with the property of backend
 @freezed
@@ -60,7 +35,7 @@ abstract class PillSheetModifiedHistory with _$PillSheetModifiedHistory {
   factory PillSheetModifiedHistory({
     required String actionType,
     required String userID,
-    required PillSheetModifiedValue value,
+    required PillSheetModifiedHistoryValue value,
     @JsonKey(
       fromJson: NonNullTimestampConverter.timestampToDateTime,
       toJson: NonNullTimestampConverter.dateTimeToTimestamp,
