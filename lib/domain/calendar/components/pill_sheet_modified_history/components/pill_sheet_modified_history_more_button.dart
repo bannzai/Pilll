@@ -17,22 +17,27 @@ class PillSheetModifiedHistoryMoreButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SecondaryButton(
-        text: "もっと見る",
-        onPressed: () {
-          analytics.logEvent(name: "pill_sheet_modified_history_more");
-          if (state.isPremium || state.isTrial) {
-            Navigator.of(context)
-                .push(PillSheetModifiedHistoriesPageRoute.route());
-          } else {
-            if (state.trialDeadlineDate == null) {
-              showPremiumTrialModal(context, () {
-                showPremiumTrialCompleteModalPreDialog(context);
-              });
-            } else {
-              showPremiumIntroductionSheet(context);
-            }
-          }
-        });
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.end,
+      children: [
+        SecondaryButton(
+            text: "もっと見る",
+            onPressed: () {
+              analytics.logEvent(name: "pill_sheet_modified_history_more");
+              if (state.isPremium || state.isTrial) {
+                Navigator.of(context)
+                    .push(PillSheetModifiedHistoriesPageRoute.route());
+              } else {
+                if (state.trialDeadlineDate == null) {
+                  showPremiumTrialModal(context, () {
+                    showPremiumTrialCompleteModalPreDialog(context);
+                  });
+                } else {
+                  showPremiumIntroductionSheet(context);
+                }
+              }
+            }),
+      ],
+    );
   }
 }
