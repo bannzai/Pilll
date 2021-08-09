@@ -22,7 +22,7 @@ class CalendarPillSheetModifiedHistoryCardState {
     required this.trialDeadlineDate,
   });
 
-  bool get moreButtonIsHidden =>
+  bool get moreButtonIsShown =>
       _allPillSheetModifiedHistories.length >
       CalendarPillSheetModifiedHistoryCardState
           .pillSheetModifiedHistoriesThreshold;
@@ -30,14 +30,14 @@ class CalendarPillSheetModifiedHistoryCardState {
     if (_allPillSheetModifiedHistories.length >
         CalendarPillSheetModifiedHistoryCardState
             .pillSheetModifiedHistoriesThreshold) {
-      final copied = _allPillSheetModifiedHistories;
+      final copied = List.from(_allPillSheetModifiedHistories);
       copied.removeRange(
-          copied.length -
-              CalendarPillSheetModifiedHistoryCardState
-                  .pillSheetModifiedHistoriesThreshold -
-              1,
-          copied.length);
-      return copied;
+        CalendarPillSheetModifiedHistoryCardState
+                .pillSheetModifiedHistoriesThreshold -
+            1,
+        copied.length,
+      );
+      return copied.cast();
     } else {
       return _allPillSheetModifiedHistories;
     }
@@ -134,7 +134,7 @@ class CalendarPillSheetModifiedHistoryCard extends StatelessWidget {
                 pillSheetModifiedHistories: state.pillSheetModifiedHistories,
               ),
             ),
-            if (!state.moreButtonIsHidden)
+            if (state.moreButtonIsShown)
               PillSheetModifiedHistoryMoreButton(state: state),
           ],
         ),
