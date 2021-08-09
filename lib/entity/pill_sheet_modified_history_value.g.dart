@@ -26,6 +26,10 @@ _$_PillSheetModifiedHistoryValue _$_$_PillSheetModifiedHistoryValueFromJson(
         ? null
         : DeletedPillSheetValue.fromJson(
             json['deletedPillSheetValue'] as Map<String, dynamic>),
+    takenPillValue: json['takenPillValue'] == null
+        ? null
+        : TakenPillValue.fromJson(
+            json['takenPillValue'] as Map<String, dynamic>),
   );
 }
 
@@ -37,6 +41,7 @@ Map<String, dynamic> _$_$_PillSheetModifiedHistoryValueToJson(
       'automaticallyRecordedLastTakenDateValue':
           instance.automaticallyRecordedLastTakenDateValue?.toJson(),
       'deletedPillSheetValue': instance.deletedPillSheetValue?.toJson(),
+      'takenPillValue': instance.takenPillValue?.toJson(),
     };
 
 _$_CreatedPillSheetValue _$_$_CreatedPillSheetValueFromJson(
@@ -83,4 +88,25 @@ Map<String, dynamic> _$_$_DeletedPillSheetValueToJson(
     <String, dynamic>{
       'pillSheetDeletedAt': NonNullTimestampConverter.dateTimeToTimestamp(
           instance.pillSheetDeletedAt),
+    };
+
+_$_TakenPillValue _$_$_TakenPillValueFromJson(Map<String, dynamic> json) {
+  return _$_TakenPillValue(
+    beforeLastTakenDate: TimestampConverter.timestampToDateTime(
+        json['beforeLastTakenDate'] as Timestamp?),
+    afterLastTakenDate: NonNullTimestampConverter.timestampToDateTime(
+        json['afterLastTakenDate'] as Timestamp),
+    beforeLastTakenPillNumber: json['beforeLastTakenPillNumber'] as int?,
+    afterLastTakenPillNumber: json['afterLastTakenPillNumber'] as int,
+  );
+}
+
+Map<String, dynamic> _$_$_TakenPillValueToJson(_$_TakenPillValue instance) =>
+    <String, dynamic>{
+      'beforeLastTakenDate':
+          TimestampConverter.dateTimeToTimestamp(instance.beforeLastTakenDate),
+      'afterLastTakenDate': NonNullTimestampConverter.dateTimeToTimestamp(
+          instance.afterLastTakenDate),
+      'beforeLastTakenPillNumber': instance.beforeLastTakenPillNumber,
+      'afterLastTakenPillNumber': instance.afterLastTakenPillNumber,
     };
