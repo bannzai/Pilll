@@ -9,6 +9,7 @@ import 'package:pilll/service/pill_sheet.dart';
 import 'package:pilll/service/pill_sheet_modified_history.dart';
 import 'package:pilll/service/setting.dart';
 import 'package:pilll/domain/calendar/calendar_state.dart';
+import 'package:pilll/service/user.dart';
 import 'package:pilll/util/datetime/date_compare.dart';
 
 final calendarPageStateProvider = StateNotifierProvider<CalendarPageStateStore>(
@@ -18,6 +19,7 @@ final calendarPageStateProvider = StateNotifierProvider<CalendarPageStateStore>(
     ref.watch(pillSheetServiceProvider),
     ref.watch(diaryServiceProvider),
     ref.watch(pillSheetModifiedHistoryServiceProvider),
+    ref.watch(userServiceProvider),
   ),
 );
 
@@ -27,6 +29,7 @@ class CalendarPageStateStore extends StateNotifier<CalendarPageState> {
   final PillSheetService _pillSheetService;
   final DiaryService _diaryService;
   final PillSheetModifiedHistoryService _pillSheetModifiedHistoryService;
+  final UserService _userService;
 
   CalendarPageStateStore(
     this._menstruationService,
@@ -34,6 +37,7 @@ class CalendarPageStateStore extends StateNotifier<CalendarPageState> {
     this._pillSheetService,
     this._diaryService,
     this._pillSheetModifiedHistoryService,
+    this._userService,
   ) : super(CalendarPageState(menstruations: [])) {
     _reset();
   }
