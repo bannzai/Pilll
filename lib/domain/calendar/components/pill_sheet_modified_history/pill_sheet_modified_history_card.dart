@@ -139,8 +139,25 @@ class CalendarPillSheetModifiedHistoryCard extends StatelessWidget {
                 pillSheetModifiedHistories: state.pillSheetModifiedHistories,
               ),
             ),
-            if !(state.moreButtonIsHidden)
-
+            if (!state.moreButtonIsHidden)
+              SecondaryButton(
+                  text: "もっと見る",
+                  onPressed: () {
+                    analytics.logEvent(
+                        name: "pill_sheet_modified_history_more");
+                    if (state.isPremium || state.isTrial) {
+                      Navigator.of(context)
+                          .push(PillSheetModifiedHistoriesPageRoute.route());
+                    } else {
+                      if (state.trialDeadlineDate == null) {
+                        showPremiumTrialModal(context, () {
+                          showPremiumTrialCompleteModalPreDialog(context);
+                        });
+                      } else {
+                        showPremiumIntroductionSheet(context);
+                      }
+                    }
+                  }),
           ],
         ),
       ),
