@@ -1,5 +1,6 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:pilll/entity/pill_sheet_modified_history.dart';
+import 'package:pilll/entity/pill_sheet_modified_history_value.dart';
 
 part 'pill_sheet_modified_history_state.freezed.dart';
 
@@ -20,7 +21,7 @@ abstract class PillSheetModifiedHistoryElementState
   PillSheetModifiedHistoryElementState._();
   factory PillSheetModifiedHistoryElementState({
     required PillSheetModifiedActionType actionType,
-    required PillSheetModifiedValue value,
+    required PillSheetModifiedHistoryValue value,
     required DateTime createdAt,
   }) = _PillSheetModifiedHistoryElementState;
 }
