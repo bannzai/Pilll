@@ -12,7 +12,10 @@ abstract class PillSheetModifiedHistoryValue
   @JsonSerializable(explicitToJson: true)
   factory PillSheetModifiedHistoryValue({
     DateTime? beginTrialDate,
-    @Default(null) CreatedPillSheetValue createdPillSheet,
+    @Default(null) CreatedPillSheetValue? createdPillSheet,
+    @Default(null)
+        AutomaticallyRecordedLastTakenDateValue?
+            automaticallyRecordedLastTakenDateValue,
   }) = _PillSheetModifiedHistoryValue;
 
   factory PillSheetModifiedHistoryValue.fromJson(Map<String, dynamic> json) =>
@@ -37,4 +40,22 @@ abstract class CreatedPillSheetValue implements _$CreatedPillSheetValue {
       _$CreatedPillSheetValueFromJson(json);
   Map<String, dynamic> toJson() =>
       _$_$_CreatedPillSheetValueToJson(this as _$_CreatedPillSheetValue);
+}
+
+@freezed
+abstract class AutomaticallyRecordedLastTakenDateValue
+    implements _$AutomaticallyRecordedLastTakenDateValue {
+  AutomaticallyRecordedLastTakenDateValue._();
+  @JsonSerializable(explicitToJson: true)
+  factory AutomaticallyRecordedLastTakenDateValue({
+    required int beforeLastTakenPillNumber,
+    required int afterLastTakenPillNumber,
+  }) = _AutomaticallyRecordedLastTakenDateValue;
+
+  factory AutomaticallyRecordedLastTakenDateValue.fromJson(
+          Map<String, dynamic> json) =>
+      _$AutomaticallyRecordedLastTakenDateValueFromJson(json);
+  Map<String, dynamic> toJson() =>
+      _$_$_AutomaticallyRecordedLastTakenDateValueToJson(
+          this as _$_AutomaticallyRecordedLastTakenDateValue);
 }

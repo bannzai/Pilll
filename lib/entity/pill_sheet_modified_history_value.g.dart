@@ -12,8 +12,16 @@ _$_PillSheetModifiedHistoryValue _$_$_PillSheetModifiedHistoryValueFromJson(
     beginTrialDate: json['beginTrialDate'] == null
         ? null
         : DateTime.parse(json['beginTrialDate'] as String),
-    createdPillSheet: CreatedPillSheetValue.fromJson(
-        json['createdPillSheet'] as Map<String, dynamic>),
+    createdPillSheet: json['createdPillSheet'] == null
+        ? null
+        : CreatedPillSheetValue.fromJson(
+            json['createdPillSheet'] as Map<String, dynamic>),
+    automaticallyRecordedLastTakenDateValue:
+        json['automaticallyRecordedLastTakenDateValue'] == null
+            ? null
+            : AutomaticallyRecordedLastTakenDateValue.fromJson(
+                json['automaticallyRecordedLastTakenDateValue']
+                    as Map<String, dynamic>),
   );
 }
 
@@ -21,7 +29,9 @@ Map<String, dynamic> _$_$_PillSheetModifiedHistoryValueToJson(
         _$_PillSheetModifiedHistoryValue instance) =>
     <String, dynamic>{
       'beginTrialDate': instance.beginTrialDate?.toIso8601String(),
-      'createdPillSheet': instance.createdPillSheet.toJson(),
+      'createdPillSheet': instance.createdPillSheet?.toJson(),
+      'automaticallyRecordedLastTakenDateValue':
+          instance.automaticallyRecordedLastTakenDateValue?.toJson(),
     };
 
 _$_CreatedPillSheetValue _$_$_CreatedPillSheetValueFromJson(
@@ -37,4 +47,20 @@ Map<String, dynamic> _$_$_CreatedPillSheetValueToJson(
     <String, dynamic>{
       'pillSheetCreatedAt': NonNullTimestampConverter.dateTimeToTimestamp(
           instance.pillSheetCreatedAt),
+    };
+
+_$_AutomaticallyRecordedLastTakenDateValue
+    _$_$_AutomaticallyRecordedLastTakenDateValueFromJson(
+        Map<String, dynamic> json) {
+  return _$_AutomaticallyRecordedLastTakenDateValue(
+    beforeLastTakenPillNumber: json['beforeLastTakenPillNumber'] as int,
+    afterLastTakenPillNumber: json['afterLastTakenPillNumber'] as int,
+  );
+}
+
+Map<String, dynamic> _$_$_AutomaticallyRecordedLastTakenDateValueToJson(
+        _$_AutomaticallyRecordedLastTakenDateValue instance) =>
+    <String, dynamic>{
+      'beforeLastTakenPillNumber': instance.beforeLastTakenPillNumber,
+      'afterLastTakenPillNumber': instance.afterLastTakenPillNumber,
     };
