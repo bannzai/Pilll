@@ -12,17 +12,17 @@ abstract class PillSheetModifiedHistoryTakenActionLayoutWidths {
 }
 
 class PillSheetModifiedHistoryDate extends StatelessWidget {
-  final DateTime dateTime;
-  final int pillNumber;
+  final DateTime createdAt;
+  final int? pillNumber;
 
   const PillSheetModifiedHistoryDate({
     Key? key,
-    required this.dateTime,
+    required this.createdAt,
     required this.pillNumber,
   }) : super(key: key);
 
-  int get _day => dateTime.day;
-  Weekday get _weekday => WeekdayFunctions.weekdayFromDate(dateTime);
+  int get _day => createdAt.day;
+  Weekday get _weekday => WeekdayFunctions.weekdayFromDate(createdAt);
 
   @override
   Widget build(BuildContext context) {
@@ -60,15 +60,26 @@ class PillSheetModifiedHistoryDate extends StatelessWidget {
             ),
           ),
           SizedBox(width: 16),
-          Text(
-            "$pillNumber番",
-            style: TextStyle(
-              color: TextColor.main,
-              fontFamily: FontFamily.japanese,
-              fontSize: 12,
-              fontWeight: FontWeight.w400,
+          if (pillNumber != null)
+            Text(
+              "$pillNumber番",
+              style: TextStyle(
+                color: TextColor.main,
+                fontFamily: FontFamily.japanese,
+                fontSize: 12,
+                fontWeight: FontWeight.w400,
+              ),
             ),
-          ),
+          if (pillNumber == null)
+            Text(
+              "-",
+              style: TextStyle(
+                color: TextColor.main,
+                fontFamily: FontFamily.japanese,
+                fontSize: 12,
+                fontWeight: FontWeight.w400,
+              ),
+            ),
         ],
       ),
     );

@@ -5,21 +5,30 @@ import 'package:pilll/domain/calendar/components/pill_sheet_modified_history/com
 import 'package:pilll/entity/pill_sheet_modified_history_value.dart';
 
 class PillSheetModifiedHistoryChangedPillNumberAction extends StatelessWidget {
+  final DateTime createdAt;
   final ChangedPillNumberValue? value;
 
   const PillSheetModifiedHistoryChangedPillNumberAction({
     Key? key,
+    required this.createdAt,
     required this.value,
   }) : super(key: key);
   @override
   Widget build(BuildContext context) {
+    final value = this.value;
+    if (value == null) {
+      return Container();
+    }
     return Container(
       child: Padding(
         padding: const EdgeInsets.only(top: 4, bottom: 4),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            PillSheetModifiedHistoryDate(),
+            PillSheetModifiedHistoryDate(
+              createdAt: createdAt,
+              pillNumber: value.afterLastTakenPillNumber,
+            ),
             Container(
               child: Text(
                 "ピル番号変更",

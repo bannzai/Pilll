@@ -74,25 +74,34 @@ class CalendarPillSheetModifiedHistoryList extends StatelessWidget {
                   case PillSheetModifiedActionType
                       .automaticallyRecordedLastTakenDate:
                     return PillSheetModifiedHistoryAutomaticallyRecordedLastTakenDateAction(
+                      createdAt: history.createdAt,
                       pillSheetType: history.after.pillSheetType,
                       value: history.value.automaticallyRecordedLastTakenDate,
                     );
                   case PillSheetModifiedActionType.deletedPillSheet:
                     return PillSheetModifiedHistoryDeletedPillSheetAction(
-                        value: history.value.deletedPillSheet);
+                      createdAt: history.createdAt,
+                      value: history.value.deletedPillSheet,
+                    );
                   case PillSheetModifiedActionType.takenPill:
                     return PillSheetModifiedHistoryTakenPillAction(
+                      createdAt: history.createdAt,
                       value: history.value.takenPill,
                     );
                   case PillSheetModifiedActionType.revertTakenPill:
                     return PillSheetModifiedHistoryRevertTakenPillAction(
-                        value: history.value.revertTakenPill);
+                      createdAt: history.createdAt,
+                      value: history.value.revertTakenPill,
+                    );
                   case PillSheetModifiedActionType.changedPillNumber:
                     return PillSheetModifiedHistoryChangedPillNumberAction(
-                        value: history.value.changedPillNumber);
+                      createdAt: history.createdAt,
+                      value: history.value.changedPillNumber,
+                    );
                   case PillSheetModifiedActionType.endedPillSheet:
                     return PillSheetModifiedHistoryEndedPillSheetAction(
-                        value: history.value.endedPillSheet);
+                      value: history.value.endedPillSheet,
+                    );
                 }
                 return Container();
               }).toList()

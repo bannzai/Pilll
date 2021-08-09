@@ -7,10 +7,12 @@ import 'package:pilll/entity/pill_sheet_modified_history_value.dart';
 import 'package:pilll/util/formatter/date_time_formatter.dart';
 
 class PillSheetModifiedHistoryTakenPillAction extends StatelessWidget {
+  final DateTime createdAt;
   final TakenPillValue? value;
 
   const PillSheetModifiedHistoryTakenPillAction({
     Key? key,
+    required this.createdAt,
     required this.value,
   }) : super(key: key);
 
@@ -27,7 +29,10 @@ class PillSheetModifiedHistoryTakenPillAction extends StatelessWidget {
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            PillSheetModifiedHistoryDate(),
+            PillSheetModifiedHistoryDate(
+              createdAt: createdAt,
+              pillNumber: value.afterLastTakenPillNumber,
+            ),
             Container(
               width: PillSheetModifiedHistoryTakenActionLayoutWidths.takenTime,
               child: Text(

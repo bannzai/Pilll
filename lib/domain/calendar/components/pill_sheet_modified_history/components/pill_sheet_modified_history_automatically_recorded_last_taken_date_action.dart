@@ -7,11 +7,13 @@ import 'package:pilll/entity/pill_sheet_type.dart';
 
 class PillSheetModifiedHistoryAutomaticallyRecordedLastTakenDateAction
     extends StatelessWidget {
+  final DateTime createdAt;
   final PillSheetType pillSheetType;
   final AutomaticallyRecordedLastTakenDateValue? value;
 
   const PillSheetModifiedHistoryAutomaticallyRecordedLastTakenDateAction({
     Key? key,
+    required this.createdAt,
     required this.value,
     required this.pillSheetType,
   }) : super(key: key);
@@ -27,7 +29,10 @@ class PillSheetModifiedHistoryAutomaticallyRecordedLastTakenDateAction
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            PillSheetModifiedHistoryDate(),
+            PillSheetModifiedHistoryDate(
+              createdAt: createdAt,
+              pillNumber: value.afterLastTakenPillNumber,
+            ),
             Container(
               padding: EdgeInsets.only(left: 8),
               child: Text(

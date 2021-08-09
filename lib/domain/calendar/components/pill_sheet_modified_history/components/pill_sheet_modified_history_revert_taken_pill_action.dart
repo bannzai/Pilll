@@ -5,21 +5,30 @@ import 'package:pilll/domain/calendar/components/pill_sheet_modified_history/com
 import 'package:pilll/entity/pill_sheet_modified_history_value.dart';
 
 class PillSheetModifiedHistoryRevertTakenPillAction extends StatelessWidget {
+  final DateTime createdAt;
   final RevertTakenPillValue? value;
 
   const PillSheetModifiedHistoryRevertTakenPillAction({
     Key? key,
+    required this.createdAt,
     required this.value,
   }) : super(key: key);
   @override
   Widget build(BuildContext context) {
+    final value = this.value;
+    if (value == null) {
+      return Container();
+    }
     return Container(
       child: Padding(
         padding: const EdgeInsets.only(top: 4, bottom: 4),
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            PillSheetModifiedHistoryDate(),
+            PillSheetModifiedHistoryDate(
+              createdAt: createdAt,
+              pillNumber: value.afterLastTakenPillNumber,
+            ),
             Container(
               child: Text(
                 "服用取り消し",

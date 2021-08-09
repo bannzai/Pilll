@@ -218,7 +218,7 @@ class _$PillSheetModifiedHistoryElementStateTearOff {
 
   _PillSheetModifiedHistoryElementState call(
       {required PillSheetModifiedActionType actionType,
-      required PillSheetModifiedValue value,
+      required PillSheetModifiedHistoryValue value,
       required DateTime createdAt}) {
     return _PillSheetModifiedHistoryElementState(
       actionType: actionType,
@@ -236,7 +236,7 @@ const $PillSheetModifiedHistoryElementState =
 mixin _$PillSheetModifiedHistoryElementState {
   PillSheetModifiedActionType get actionType =>
       throw _privateConstructorUsedError;
-  PillSheetModifiedValue get value => throw _privateConstructorUsedError;
+  PillSheetModifiedHistoryValue get value => throw _privateConstructorUsedError;
   DateTime get createdAt => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
@@ -253,8 +253,10 @@ abstract class $PillSheetModifiedHistoryElementStateCopyWith<$Res> {
       _$PillSheetModifiedHistoryElementStateCopyWithImpl<$Res>;
   $Res call(
       {PillSheetModifiedActionType actionType,
-      PillSheetModifiedValue value,
+      PillSheetModifiedHistoryValue value,
       DateTime createdAt});
+
+  $PillSheetModifiedHistoryValueCopyWith<$Res> get value;
 }
 
 /// @nodoc
@@ -280,12 +282,19 @@ class _$PillSheetModifiedHistoryElementStateCopyWithImpl<$Res>
       value: value == freezed
           ? _value.value
           : value // ignore: cast_nullable_to_non_nullable
-              as PillSheetModifiedValue,
+              as PillSheetModifiedHistoryValue,
       createdAt: createdAt == freezed
           ? _value.createdAt
           : createdAt // ignore: cast_nullable_to_non_nullable
               as DateTime,
     ));
+  }
+
+  @override
+  $PillSheetModifiedHistoryValueCopyWith<$Res> get value {
+    return $PillSheetModifiedHistoryValueCopyWith<$Res>(_value.value, (value) {
+      return _then(_value.copyWith(value: value));
+    });
   }
 }
 
@@ -299,8 +308,11 @@ abstract class _$PillSheetModifiedHistoryElementStateCopyWith<$Res>
   @override
   $Res call(
       {PillSheetModifiedActionType actionType,
-      PillSheetModifiedValue value,
+      PillSheetModifiedHistoryValue value,
       DateTime createdAt});
+
+  @override
+  $PillSheetModifiedHistoryValueCopyWith<$Res> get value;
 }
 
 /// @nodoc
@@ -330,7 +342,7 @@ class __$PillSheetModifiedHistoryElementStateCopyWithImpl<$Res>
       value: value == freezed
           ? _value.value
           : value // ignore: cast_nullable_to_non_nullable
-              as PillSheetModifiedValue,
+              as PillSheetModifiedHistoryValue,
       createdAt: createdAt == freezed
           ? _value.createdAt
           : createdAt // ignore: cast_nullable_to_non_nullable
@@ -350,7 +362,7 @@ class _$_PillSheetModifiedHistoryElementState
   @override
   final PillSheetModifiedActionType actionType;
   @override
-  final PillSheetModifiedValue value;
+  final PillSheetModifiedHistoryValue value;
   @override
   final DateTime createdAt;
 
@@ -392,7 +404,7 @@ abstract class _PillSheetModifiedHistoryElementState
     extends PillSheetModifiedHistoryElementState {
   factory _PillSheetModifiedHistoryElementState(
       {required PillSheetModifiedActionType actionType,
-      required PillSheetModifiedValue value,
+      required PillSheetModifiedHistoryValue value,
       required DateTime createdAt}) = _$_PillSheetModifiedHistoryElementState;
   _PillSheetModifiedHistoryElementState._() : super._();
 
@@ -400,7 +412,7 @@ abstract class _PillSheetModifiedHistoryElementState
   PillSheetModifiedActionType get actionType =>
       throw _privateConstructorUsedError;
   @override
-  PillSheetModifiedValue get value => throw _privateConstructorUsedError;
+  PillSheetModifiedHistoryValue get value => throw _privateConstructorUsedError;
   @override
   DateTime get createdAt => throw _privateConstructorUsedError;
   @override
