@@ -62,9 +62,8 @@ class CalendarPillSheetModifiedHistoryList extends StatelessWidget {
               CalendarPillSheetModifiedHistoryMonthlyHeader(
                 dateTimeOfMonth: model.dateTimeOfMonth,
               ),
-              ...model.pillSheetModifiedHistories
-                  .map((pillSheetModifiedHistory) {
-                final actionType = pillSheetModifiedHistory.enumActionType;
+              ...model.pillSheetModifiedHistories.map((history) {
+                final actionType = history.enumActionType;
                 if (actionType == null) {
                   return Container();
                 }
