@@ -16,20 +16,19 @@ _$_PillSheetModifiedHistoryValue _$_$_PillSheetModifiedHistoryValueFromJson(
         ? null
         : CreatedPillSheetValue.fromJson(
             json['createdPillSheet'] as Map<String, dynamic>),
-    automaticallyRecordedLastTakenDateValue:
-        json['automaticallyRecordedLastTakenDateValue'] == null
+    automaticallyRecordedLastTakenDate:
+        json['automaticallyRecordedLastTakenDate'] == null
             ? null
             : AutomaticallyRecordedLastTakenDateValue.fromJson(
-                json['automaticallyRecordedLastTakenDateValue']
+                json['automaticallyRecordedLastTakenDate']
                     as Map<String, dynamic>),
-    deletedPillSheetValue: json['deletedPillSheetValue'] == null
+    deletedPillSheet: json['deletedPillSheet'] == null
         ? null
         : DeletedPillSheetValue.fromJson(
-            json['deletedPillSheetValue'] as Map<String, dynamic>),
-    takenPillValue: json['takenPillValue'] == null
+            json['deletedPillSheet'] as Map<String, dynamic>),
+    takenPill: json['takenPill'] == null
         ? null
-        : TakenPillValue.fromJson(
-            json['takenPillValue'] as Map<String, dynamic>),
+        : TakenPillValue.fromJson(json['takenPill'] as Map<String, dynamic>),
     revertTakenPill: json['revertTakenPill'] == null
         ? null
         : RevertTakenPillValue.fromJson(
@@ -42,10 +41,10 @@ Map<String, dynamic> _$_$_PillSheetModifiedHistoryValueToJson(
     <String, dynamic>{
       'beginTrialDate': instance.beginTrialDate?.toIso8601String(),
       'createdPillSheet': instance.createdPillSheet?.toJson(),
-      'automaticallyRecordedLastTakenDateValue':
-          instance.automaticallyRecordedLastTakenDateValue?.toJson(),
-      'deletedPillSheetValue': instance.deletedPillSheetValue?.toJson(),
-      'takenPillValue': instance.takenPillValue?.toJson(),
+      'automaticallyRecordedLastTakenDate':
+          instance.automaticallyRecordedLastTakenDate?.toJson(),
+      'deletedPillSheet': instance.deletedPillSheet?.toJson(),
+      'takenPill': instance.takenPill?.toJson(),
       'revertTakenPill': instance.revertTakenPill?.toJson(),
     };
 

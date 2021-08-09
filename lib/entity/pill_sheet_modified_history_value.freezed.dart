@@ -25,17 +25,16 @@ class _$PillSheetModifiedHistoryValueTearOff {
       {DateTime? beginTrialDate,
       CreatedPillSheetValue? createdPillSheet = null,
       AutomaticallyRecordedLastTakenDateValue?
-          automaticallyRecordedLastTakenDateValue = null,
-      DeletedPillSheetValue? deletedPillSheetValue = null,
-      TakenPillValue? takenPillValue = null,
+          automaticallyRecordedLastTakenDate = null,
+      DeletedPillSheetValue? deletedPillSheet = null,
+      TakenPillValue? takenPill = null,
       RevertTakenPillValue? revertTakenPill = null}) {
     return _PillSheetModifiedHistoryValue(
       beginTrialDate: beginTrialDate,
       createdPillSheet: createdPillSheet,
-      automaticallyRecordedLastTakenDateValue:
-          automaticallyRecordedLastTakenDateValue,
-      deletedPillSheetValue: deletedPillSheetValue,
-      takenPillValue: takenPillValue,
+      automaticallyRecordedLastTakenDate: automaticallyRecordedLastTakenDate,
+      deletedPillSheet: deletedPillSheet,
+      takenPill: takenPill,
       revertTakenPill: revertTakenPill,
     );
   }
@@ -54,11 +53,11 @@ mixin _$PillSheetModifiedHistoryValue {
   CreatedPillSheetValue? get createdPillSheet =>
       throw _privateConstructorUsedError;
   AutomaticallyRecordedLastTakenDateValue?
-      get automaticallyRecordedLastTakenDateValue =>
+      get automaticallyRecordedLastTakenDate =>
           throw _privateConstructorUsedError;
-  DeletedPillSheetValue? get deletedPillSheetValue =>
+  DeletedPillSheetValue? get deletedPillSheet =>
       throw _privateConstructorUsedError;
-  TakenPillValue? get takenPillValue => throw _privateConstructorUsedError;
+  TakenPillValue? get takenPill => throw _privateConstructorUsedError;
   RevertTakenPillValue? get revertTakenPill =>
       throw _privateConstructorUsedError;
 
@@ -78,16 +77,16 @@ abstract class $PillSheetModifiedHistoryValueCopyWith<$Res> {
       {DateTime? beginTrialDate,
       CreatedPillSheetValue? createdPillSheet,
       AutomaticallyRecordedLastTakenDateValue?
-          automaticallyRecordedLastTakenDateValue,
-      DeletedPillSheetValue? deletedPillSheetValue,
-      TakenPillValue? takenPillValue,
+          automaticallyRecordedLastTakenDate,
+      DeletedPillSheetValue? deletedPillSheet,
+      TakenPillValue? takenPill,
       RevertTakenPillValue? revertTakenPill});
 
   $CreatedPillSheetValueCopyWith<$Res>? get createdPillSheet;
   $AutomaticallyRecordedLastTakenDateValueCopyWith<$Res>?
-      get automaticallyRecordedLastTakenDateValue;
-  $DeletedPillSheetValueCopyWith<$Res>? get deletedPillSheetValue;
-  $TakenPillValueCopyWith<$Res>? get takenPillValue;
+      get automaticallyRecordedLastTakenDate;
+  $DeletedPillSheetValueCopyWith<$Res>? get deletedPillSheet;
+  $TakenPillValueCopyWith<$Res>? get takenPill;
   $RevertTakenPillValueCopyWith<$Res>? get revertTakenPill;
 }
 
@@ -104,9 +103,9 @@ class _$PillSheetModifiedHistoryValueCopyWithImpl<$Res>
   $Res call({
     Object? beginTrialDate = freezed,
     Object? createdPillSheet = freezed,
-    Object? automaticallyRecordedLastTakenDateValue = freezed,
-    Object? deletedPillSheetValue = freezed,
-    Object? takenPillValue = freezed,
+    Object? automaticallyRecordedLastTakenDate = freezed,
+    Object? deletedPillSheet = freezed,
+    Object? takenPill = freezed,
     Object? revertTakenPill = freezed,
   }) {
     return _then(_value.copyWith(
@@ -118,18 +117,18 @@ class _$PillSheetModifiedHistoryValueCopyWithImpl<$Res>
           ? _value.createdPillSheet
           : createdPillSheet // ignore: cast_nullable_to_non_nullable
               as CreatedPillSheetValue?,
-      automaticallyRecordedLastTakenDateValue:
-          automaticallyRecordedLastTakenDateValue == freezed
-              ? _value.automaticallyRecordedLastTakenDateValue
-              : automaticallyRecordedLastTakenDateValue // ignore: cast_nullable_to_non_nullable
-                  as AutomaticallyRecordedLastTakenDateValue?,
-      deletedPillSheetValue: deletedPillSheetValue == freezed
-          ? _value.deletedPillSheetValue
-          : deletedPillSheetValue // ignore: cast_nullable_to_non_nullable
+      automaticallyRecordedLastTakenDate: automaticallyRecordedLastTakenDate ==
+              freezed
+          ? _value.automaticallyRecordedLastTakenDate
+          : automaticallyRecordedLastTakenDate // ignore: cast_nullable_to_non_nullable
+              as AutomaticallyRecordedLastTakenDateValue?,
+      deletedPillSheet: deletedPillSheet == freezed
+          ? _value.deletedPillSheet
+          : deletedPillSheet // ignore: cast_nullable_to_non_nullable
               as DeletedPillSheetValue?,
-      takenPillValue: takenPillValue == freezed
-          ? _value.takenPillValue
-          : takenPillValue // ignore: cast_nullable_to_non_nullable
+      takenPill: takenPill == freezed
+          ? _value.takenPill
+          : takenPill // ignore: cast_nullable_to_non_nullable
               as TakenPillValue?,
       revertTakenPill: revertTakenPill == freezed
           ? _value.revertTakenPill
@@ -152,38 +151,37 @@ class _$PillSheetModifiedHistoryValueCopyWithImpl<$Res>
 
   @override
   $AutomaticallyRecordedLastTakenDateValueCopyWith<$Res>?
-      get automaticallyRecordedLastTakenDateValue {
-    if (_value.automaticallyRecordedLastTakenDateValue == null) {
+      get automaticallyRecordedLastTakenDate {
+    if (_value.automaticallyRecordedLastTakenDate == null) {
       return null;
     }
 
     return $AutomaticallyRecordedLastTakenDateValueCopyWith<$Res>(
-        _value.automaticallyRecordedLastTakenDateValue!, (value) {
-      return _then(
-          _value.copyWith(automaticallyRecordedLastTakenDateValue: value));
+        _value.automaticallyRecordedLastTakenDate!, (value) {
+      return _then(_value.copyWith(automaticallyRecordedLastTakenDate: value));
     });
   }
 
   @override
-  $DeletedPillSheetValueCopyWith<$Res>? get deletedPillSheetValue {
-    if (_value.deletedPillSheetValue == null) {
+  $DeletedPillSheetValueCopyWith<$Res>? get deletedPillSheet {
+    if (_value.deletedPillSheet == null) {
       return null;
     }
 
-    return $DeletedPillSheetValueCopyWith<$Res>(_value.deletedPillSheetValue!,
+    return $DeletedPillSheetValueCopyWith<$Res>(_value.deletedPillSheet!,
         (value) {
-      return _then(_value.copyWith(deletedPillSheetValue: value));
+      return _then(_value.copyWith(deletedPillSheet: value));
     });
   }
 
   @override
-  $TakenPillValueCopyWith<$Res>? get takenPillValue {
-    if (_value.takenPillValue == null) {
+  $TakenPillValueCopyWith<$Res>? get takenPill {
+    if (_value.takenPill == null) {
       return null;
     }
 
-    return $TakenPillValueCopyWith<$Res>(_value.takenPillValue!, (value) {
-      return _then(_value.copyWith(takenPillValue: value));
+    return $TakenPillValueCopyWith<$Res>(_value.takenPill!, (value) {
+      return _then(_value.copyWith(takenPill: value));
     });
   }
 
@@ -212,20 +210,20 @@ abstract class _$PillSheetModifiedHistoryValueCopyWith<$Res>
       {DateTime? beginTrialDate,
       CreatedPillSheetValue? createdPillSheet,
       AutomaticallyRecordedLastTakenDateValue?
-          automaticallyRecordedLastTakenDateValue,
-      DeletedPillSheetValue? deletedPillSheetValue,
-      TakenPillValue? takenPillValue,
+          automaticallyRecordedLastTakenDate,
+      DeletedPillSheetValue? deletedPillSheet,
+      TakenPillValue? takenPill,
       RevertTakenPillValue? revertTakenPill});
 
   @override
   $CreatedPillSheetValueCopyWith<$Res>? get createdPillSheet;
   @override
   $AutomaticallyRecordedLastTakenDateValueCopyWith<$Res>?
-      get automaticallyRecordedLastTakenDateValue;
+      get automaticallyRecordedLastTakenDate;
   @override
-  $DeletedPillSheetValueCopyWith<$Res>? get deletedPillSheetValue;
+  $DeletedPillSheetValueCopyWith<$Res>? get deletedPillSheet;
   @override
-  $TakenPillValueCopyWith<$Res>? get takenPillValue;
+  $TakenPillValueCopyWith<$Res>? get takenPill;
   @override
   $RevertTakenPillValueCopyWith<$Res>? get revertTakenPill;
 }
@@ -247,9 +245,9 @@ class __$PillSheetModifiedHistoryValueCopyWithImpl<$Res>
   $Res call({
     Object? beginTrialDate = freezed,
     Object? createdPillSheet = freezed,
-    Object? automaticallyRecordedLastTakenDateValue = freezed,
-    Object? deletedPillSheetValue = freezed,
-    Object? takenPillValue = freezed,
+    Object? automaticallyRecordedLastTakenDate = freezed,
+    Object? deletedPillSheet = freezed,
+    Object? takenPill = freezed,
     Object? revertTakenPill = freezed,
   }) {
     return _then(_PillSheetModifiedHistoryValue(
@@ -261,18 +259,18 @@ class __$PillSheetModifiedHistoryValueCopyWithImpl<$Res>
           ? _value.createdPillSheet
           : createdPillSheet // ignore: cast_nullable_to_non_nullable
               as CreatedPillSheetValue?,
-      automaticallyRecordedLastTakenDateValue:
-          automaticallyRecordedLastTakenDateValue == freezed
-              ? _value.automaticallyRecordedLastTakenDateValue
-              : automaticallyRecordedLastTakenDateValue // ignore: cast_nullable_to_non_nullable
-                  as AutomaticallyRecordedLastTakenDateValue?,
-      deletedPillSheetValue: deletedPillSheetValue == freezed
-          ? _value.deletedPillSheetValue
-          : deletedPillSheetValue // ignore: cast_nullable_to_non_nullable
+      automaticallyRecordedLastTakenDate: automaticallyRecordedLastTakenDate ==
+              freezed
+          ? _value.automaticallyRecordedLastTakenDate
+          : automaticallyRecordedLastTakenDate // ignore: cast_nullable_to_non_nullable
+              as AutomaticallyRecordedLastTakenDateValue?,
+      deletedPillSheet: deletedPillSheet == freezed
+          ? _value.deletedPillSheet
+          : deletedPillSheet // ignore: cast_nullable_to_non_nullable
               as DeletedPillSheetValue?,
-      takenPillValue: takenPillValue == freezed
-          ? _value.takenPillValue
-          : takenPillValue // ignore: cast_nullable_to_non_nullable
+      takenPill: takenPill == freezed
+          ? _value.takenPill
+          : takenPill // ignore: cast_nullable_to_non_nullable
               as TakenPillValue?,
       revertTakenPill: revertTakenPill == freezed
           ? _value.revertTakenPill
@@ -289,9 +287,9 @@ class _$_PillSheetModifiedHistoryValue extends _PillSheetModifiedHistoryValue {
   _$_PillSheetModifiedHistoryValue(
       {this.beginTrialDate,
       this.createdPillSheet = null,
-      this.automaticallyRecordedLastTakenDateValue = null,
-      this.deletedPillSheetValue = null,
-      this.takenPillValue = null,
+      this.automaticallyRecordedLastTakenDate = null,
+      this.deletedPillSheet = null,
+      this.takenPill = null,
       this.revertTakenPill = null})
       : super._();
 
@@ -307,20 +305,20 @@ class _$_PillSheetModifiedHistoryValue extends _PillSheetModifiedHistoryValue {
   @JsonKey(defaultValue: null)
   @override
   final AutomaticallyRecordedLastTakenDateValue?
-      automaticallyRecordedLastTakenDateValue;
+      automaticallyRecordedLastTakenDate;
   @JsonKey(defaultValue: null)
   @override
-  final DeletedPillSheetValue? deletedPillSheetValue;
+  final DeletedPillSheetValue? deletedPillSheet;
   @JsonKey(defaultValue: null)
   @override
-  final TakenPillValue? takenPillValue;
+  final TakenPillValue? takenPill;
   @JsonKey(defaultValue: null)
   @override
   final RevertTakenPillValue? revertTakenPill;
 
   @override
   String toString() {
-    return 'PillSheetModifiedHistoryValue(beginTrialDate: $beginTrialDate, createdPillSheet: $createdPillSheet, automaticallyRecordedLastTakenDateValue: $automaticallyRecordedLastTakenDateValue, deletedPillSheetValue: $deletedPillSheetValue, takenPillValue: $takenPillValue, revertTakenPill: $revertTakenPill)';
+    return 'PillSheetModifiedHistoryValue(beginTrialDate: $beginTrialDate, createdPillSheet: $createdPillSheet, automaticallyRecordedLastTakenDate: $automaticallyRecordedLastTakenDate, deletedPillSheet: $deletedPillSheet, takenPill: $takenPill, revertTakenPill: $revertTakenPill)';
   }
 
   @override
@@ -333,17 +331,17 @@ class _$_PillSheetModifiedHistoryValue extends _PillSheetModifiedHistoryValue {
             (identical(other.createdPillSheet, createdPillSheet) ||
                 const DeepCollectionEquality()
                     .equals(other.createdPillSheet, createdPillSheet)) &&
-            (identical(other.automaticallyRecordedLastTakenDateValue,
-                    automaticallyRecordedLastTakenDateValue) ||
+            (identical(other.automaticallyRecordedLastTakenDate,
+                    automaticallyRecordedLastTakenDate) ||
                 const DeepCollectionEquality().equals(
-                    other.automaticallyRecordedLastTakenDateValue,
-                    automaticallyRecordedLastTakenDateValue)) &&
-            (identical(other.deletedPillSheetValue, deletedPillSheetValue) ||
-                const DeepCollectionEquality().equals(
-                    other.deletedPillSheetValue, deletedPillSheetValue)) &&
-            (identical(other.takenPillValue, takenPillValue) ||
+                    other.automaticallyRecordedLastTakenDate,
+                    automaticallyRecordedLastTakenDate)) &&
+            (identical(other.deletedPillSheet, deletedPillSheet) ||
                 const DeepCollectionEquality()
-                    .equals(other.takenPillValue, takenPillValue)) &&
+                    .equals(other.deletedPillSheet, deletedPillSheet)) &&
+            (identical(other.takenPill, takenPill) ||
+                const DeepCollectionEquality()
+                    .equals(other.takenPill, takenPill)) &&
             (identical(other.revertTakenPill, revertTakenPill) ||
                 const DeepCollectionEquality()
                     .equals(other.revertTakenPill, revertTakenPill)));
@@ -354,10 +352,9 @@ class _$_PillSheetModifiedHistoryValue extends _PillSheetModifiedHistoryValue {
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(beginTrialDate) ^
       const DeepCollectionEquality().hash(createdPillSheet) ^
-      const DeepCollectionEquality()
-          .hash(automaticallyRecordedLastTakenDateValue) ^
-      const DeepCollectionEquality().hash(deletedPillSheetValue) ^
-      const DeepCollectionEquality().hash(takenPillValue) ^
+      const DeepCollectionEquality().hash(automaticallyRecordedLastTakenDate) ^
+      const DeepCollectionEquality().hash(deletedPillSheet) ^
+      const DeepCollectionEquality().hash(takenPill) ^
       const DeepCollectionEquality().hash(revertTakenPill);
 
   @JsonKey(ignore: true)
@@ -378,9 +375,9 @@ abstract class _PillSheetModifiedHistoryValue
           {DateTime? beginTrialDate,
           CreatedPillSheetValue? createdPillSheet,
           AutomaticallyRecordedLastTakenDateValue?
-              automaticallyRecordedLastTakenDateValue,
-          DeletedPillSheetValue? deletedPillSheetValue,
-          TakenPillValue? takenPillValue,
+              automaticallyRecordedLastTakenDate,
+          DeletedPillSheetValue? deletedPillSheet,
+          TakenPillValue? takenPill,
           RevertTakenPillValue? revertTakenPill}) =
       _$_PillSheetModifiedHistoryValue;
   _PillSheetModifiedHistoryValue._() : super._();
@@ -395,13 +392,13 @@ abstract class _PillSheetModifiedHistoryValue
       throw _privateConstructorUsedError;
   @override
   AutomaticallyRecordedLastTakenDateValue?
-      get automaticallyRecordedLastTakenDateValue =>
+      get automaticallyRecordedLastTakenDate =>
           throw _privateConstructorUsedError;
   @override
-  DeletedPillSheetValue? get deletedPillSheetValue =>
+  DeletedPillSheetValue? get deletedPillSheet =>
       throw _privateConstructorUsedError;
   @override
-  TakenPillValue? get takenPillValue => throw _privateConstructorUsedError;
+  TakenPillValue? get takenPill => throw _privateConstructorUsedError;
   @override
   RevertTakenPillValue? get revertTakenPill =>
       throw _privateConstructorUsedError;

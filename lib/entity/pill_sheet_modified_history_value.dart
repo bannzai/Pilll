@@ -15,9 +15,9 @@ abstract class PillSheetModifiedHistoryValue
     @Default(null) CreatedPillSheetValue? createdPillSheet,
     @Default(null)
         AutomaticallyRecordedLastTakenDateValue?
-            automaticallyRecordedLastTakenDateValue,
-    @Default(null) DeletedPillSheetValue? deletedPillSheetValue,
-    @Default(null) TakenPillValue? takenPillValue,
+            automaticallyRecordedLastTakenDate,
+    @Default(null) DeletedPillSheetValue? deletedPillSheet,
+    @Default(null) TakenPillValue? takenPill,
     @Default(null) RevertTakenPillValue? revertTakenPill,
   }) = _PillSheetModifiedHistoryValue;
 
