@@ -29,7 +29,8 @@ class _$PillSheetModifiedHistoryValueTearOff {
       DeletedPillSheetValue? deletedPillSheet = null,
       TakenPillValue? takenPill = null,
       RevertTakenPillValue? revertTakenPill = null,
-      ChangedPillNumberValue changedPillNumber = null}) {
+      ChangedPillNumberValue? changedPillNumber = null,
+      EndedPillSheetValue? endedPillSheet = null}) {
     return _PillSheetModifiedHistoryValue(
       beginTrialDate: beginTrialDate,
       createdPillSheet: createdPillSheet,
@@ -38,6 +39,7 @@ class _$PillSheetModifiedHistoryValueTearOff {
       takenPill: takenPill,
       revertTakenPill: revertTakenPill,
       changedPillNumber: changedPillNumber,
+      endedPillSheet: endedPillSheet,
     );
   }
 
@@ -62,8 +64,9 @@ mixin _$PillSheetModifiedHistoryValue {
   TakenPillValue? get takenPill => throw _privateConstructorUsedError;
   RevertTakenPillValue? get revertTakenPill =>
       throw _privateConstructorUsedError;
-  ChangedPillNumberValue get changedPillNumber =>
+  ChangedPillNumberValue? get changedPillNumber =>
       throw _privateConstructorUsedError;
+  EndedPillSheetValue? get endedPillSheet => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -85,7 +88,8 @@ abstract class $PillSheetModifiedHistoryValueCopyWith<$Res> {
       DeletedPillSheetValue? deletedPillSheet,
       TakenPillValue? takenPill,
       RevertTakenPillValue? revertTakenPill,
-      ChangedPillNumberValue changedPillNumber});
+      ChangedPillNumberValue? changedPillNumber,
+      EndedPillSheetValue? endedPillSheet});
 
   $CreatedPillSheetValueCopyWith<$Res>? get createdPillSheet;
   $AutomaticallyRecordedLastTakenDateValueCopyWith<$Res>?
@@ -93,7 +97,8 @@ abstract class $PillSheetModifiedHistoryValueCopyWith<$Res> {
   $DeletedPillSheetValueCopyWith<$Res>? get deletedPillSheet;
   $TakenPillValueCopyWith<$Res>? get takenPill;
   $RevertTakenPillValueCopyWith<$Res>? get revertTakenPill;
-  $ChangedPillNumberValueCopyWith<$Res> get changedPillNumber;
+  $ChangedPillNumberValueCopyWith<$Res>? get changedPillNumber;
+  $EndedPillSheetValueCopyWith<$Res>? get endedPillSheet;
 }
 
 /// @nodoc
@@ -114,6 +119,7 @@ class _$PillSheetModifiedHistoryValueCopyWithImpl<$Res>
     Object? takenPill = freezed,
     Object? revertTakenPill = freezed,
     Object? changedPillNumber = freezed,
+    Object? endedPillSheet = freezed,
   }) {
     return _then(_value.copyWith(
       beginTrialDate: beginTrialDate == freezed
@@ -144,7 +150,11 @@ class _$PillSheetModifiedHistoryValueCopyWithImpl<$Res>
       changedPillNumber: changedPillNumber == freezed
           ? _value.changedPillNumber
           : changedPillNumber // ignore: cast_nullable_to_non_nullable
-              as ChangedPillNumberValue,
+              as ChangedPillNumberValue?,
+      endedPillSheet: endedPillSheet == freezed
+          ? _value.endedPillSheet
+          : endedPillSheet // ignore: cast_nullable_to_non_nullable
+              as EndedPillSheetValue?,
     ));
   }
 
@@ -209,10 +219,25 @@ class _$PillSheetModifiedHistoryValueCopyWithImpl<$Res>
   }
 
   @override
-  $ChangedPillNumberValueCopyWith<$Res> get changedPillNumber {
-    return $ChangedPillNumberValueCopyWith<$Res>(_value.changedPillNumber,
+  $ChangedPillNumberValueCopyWith<$Res>? get changedPillNumber {
+    if (_value.changedPillNumber == null) {
+      return null;
+    }
+
+    return $ChangedPillNumberValueCopyWith<$Res>(_value.changedPillNumber!,
         (value) {
       return _then(_value.copyWith(changedPillNumber: value));
+    });
+  }
+
+  @override
+  $EndedPillSheetValueCopyWith<$Res>? get endedPillSheet {
+    if (_value.endedPillSheet == null) {
+      return null;
+    }
+
+    return $EndedPillSheetValueCopyWith<$Res>(_value.endedPillSheet!, (value) {
+      return _then(_value.copyWith(endedPillSheet: value));
     });
   }
 }
@@ -233,7 +258,8 @@ abstract class _$PillSheetModifiedHistoryValueCopyWith<$Res>
       DeletedPillSheetValue? deletedPillSheet,
       TakenPillValue? takenPill,
       RevertTakenPillValue? revertTakenPill,
-      ChangedPillNumberValue changedPillNumber});
+      ChangedPillNumberValue? changedPillNumber,
+      EndedPillSheetValue? endedPillSheet});
 
   @override
   $CreatedPillSheetValueCopyWith<$Res>? get createdPillSheet;
@@ -247,7 +273,9 @@ abstract class _$PillSheetModifiedHistoryValueCopyWith<$Res>
   @override
   $RevertTakenPillValueCopyWith<$Res>? get revertTakenPill;
   @override
-  $ChangedPillNumberValueCopyWith<$Res> get changedPillNumber;
+  $ChangedPillNumberValueCopyWith<$Res>? get changedPillNumber;
+  @override
+  $EndedPillSheetValueCopyWith<$Res>? get endedPillSheet;
 }
 
 /// @nodoc
@@ -272,6 +300,7 @@ class __$PillSheetModifiedHistoryValueCopyWithImpl<$Res>
     Object? takenPill = freezed,
     Object? revertTakenPill = freezed,
     Object? changedPillNumber = freezed,
+    Object? endedPillSheet = freezed,
   }) {
     return _then(_PillSheetModifiedHistoryValue(
       beginTrialDate: beginTrialDate == freezed
@@ -302,7 +331,11 @@ class __$PillSheetModifiedHistoryValueCopyWithImpl<$Res>
       changedPillNumber: changedPillNumber == freezed
           ? _value.changedPillNumber
           : changedPillNumber // ignore: cast_nullable_to_non_nullable
-              as ChangedPillNumberValue,
+              as ChangedPillNumberValue?,
+      endedPillSheet: endedPillSheet == freezed
+          ? _value.endedPillSheet
+          : endedPillSheet // ignore: cast_nullable_to_non_nullable
+              as EndedPillSheetValue?,
     ));
   }
 }
@@ -318,7 +351,8 @@ class _$_PillSheetModifiedHistoryValue extends _PillSheetModifiedHistoryValue {
       this.deletedPillSheet = null,
       this.takenPill = null,
       this.revertTakenPill = null,
-      this.changedPillNumber = null})
+      this.changedPillNumber = null,
+      this.endedPillSheet = null})
       : super._();
 
   factory _$_PillSheetModifiedHistoryValue.fromJson(
@@ -345,11 +379,14 @@ class _$_PillSheetModifiedHistoryValue extends _PillSheetModifiedHistoryValue {
   final RevertTakenPillValue? revertTakenPill;
   @JsonKey(defaultValue: null)
   @override
-  final ChangedPillNumberValue changedPillNumber;
+  final ChangedPillNumberValue? changedPillNumber;
+  @JsonKey(defaultValue: null)
+  @override
+  final EndedPillSheetValue? endedPillSheet;
 
   @override
   String toString() {
-    return 'PillSheetModifiedHistoryValue(beginTrialDate: $beginTrialDate, createdPillSheet: $createdPillSheet, automaticallyRecordedLastTakenDate: $automaticallyRecordedLastTakenDate, deletedPillSheet: $deletedPillSheet, takenPill: $takenPill, revertTakenPill: $revertTakenPill, changedPillNumber: $changedPillNumber)';
+    return 'PillSheetModifiedHistoryValue(beginTrialDate: $beginTrialDate, createdPillSheet: $createdPillSheet, automaticallyRecordedLastTakenDate: $automaticallyRecordedLastTakenDate, deletedPillSheet: $deletedPillSheet, takenPill: $takenPill, revertTakenPill: $revertTakenPill, changedPillNumber: $changedPillNumber, endedPillSheet: $endedPillSheet)';
   }
 
   @override
@@ -378,7 +415,10 @@ class _$_PillSheetModifiedHistoryValue extends _PillSheetModifiedHistoryValue {
                     .equals(other.revertTakenPill, revertTakenPill)) &&
             (identical(other.changedPillNumber, changedPillNumber) ||
                 const DeepCollectionEquality()
-                    .equals(other.changedPillNumber, changedPillNumber)));
+                    .equals(other.changedPillNumber, changedPillNumber)) &&
+            (identical(other.endedPillSheet, endedPillSheet) ||
+                const DeepCollectionEquality()
+                    .equals(other.endedPillSheet, endedPillSheet)));
   }
 
   @override
@@ -390,7 +430,8 @@ class _$_PillSheetModifiedHistoryValue extends _PillSheetModifiedHistoryValue {
       const DeepCollectionEquality().hash(deletedPillSheet) ^
       const DeepCollectionEquality().hash(takenPill) ^
       const DeepCollectionEquality().hash(revertTakenPill) ^
-      const DeepCollectionEquality().hash(changedPillNumber);
+      const DeepCollectionEquality().hash(changedPillNumber) ^
+      const DeepCollectionEquality().hash(endedPillSheet);
 
   @JsonKey(ignore: true)
   @override
@@ -407,15 +448,15 @@ class _$_PillSheetModifiedHistoryValue extends _PillSheetModifiedHistoryValue {
 abstract class _PillSheetModifiedHistoryValue
     extends PillSheetModifiedHistoryValue {
   factory _PillSheetModifiedHistoryValue(
-          {DateTime? beginTrialDate,
-          CreatedPillSheetValue? createdPillSheet,
-          AutomaticallyRecordedLastTakenDateValue?
-              automaticallyRecordedLastTakenDate,
-          DeletedPillSheetValue? deletedPillSheet,
-          TakenPillValue? takenPill,
-          RevertTakenPillValue? revertTakenPill,
-          ChangedPillNumberValue changedPillNumber}) =
-      _$_PillSheetModifiedHistoryValue;
+      {DateTime? beginTrialDate,
+      CreatedPillSheetValue? createdPillSheet,
+      AutomaticallyRecordedLastTakenDateValue?
+          automaticallyRecordedLastTakenDate,
+      DeletedPillSheetValue? deletedPillSheet,
+      TakenPillValue? takenPill,
+      RevertTakenPillValue? revertTakenPill,
+      ChangedPillNumberValue? changedPillNumber,
+      EndedPillSheetValue? endedPillSheet}) = _$_PillSheetModifiedHistoryValue;
   _PillSheetModifiedHistoryValue._() : super._();
 
   factory _PillSheetModifiedHistoryValue.fromJson(Map<String, dynamic> json) =
@@ -439,8 +480,10 @@ abstract class _PillSheetModifiedHistoryValue
   RevertTakenPillValue? get revertTakenPill =>
       throw _privateConstructorUsedError;
   @override
-  ChangedPillNumberValue get changedPillNumber =>
+  ChangedPillNumberValue? get changedPillNumber =>
       throw _privateConstructorUsedError;
+  @override
+  EndedPillSheetValue? get endedPillSheet => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$PillSheetModifiedHistoryValueCopyWith<_PillSheetModifiedHistoryValue>
@@ -1711,5 +1754,179 @@ abstract class _ChangedPillNumberValue extends ChangedPillNumberValue {
   @override
   @JsonKey(ignore: true)
   _$ChangedPillNumberValueCopyWith<_ChangedPillNumberValue> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+EndedPillSheetValue _$EndedPillSheetValueFromJson(Map<String, dynamic> json) {
+  return _EndedPillSheetValue.fromJson(json);
+}
+
+/// @nodoc
+class _$EndedPillSheetValueTearOff {
+  const _$EndedPillSheetValueTearOff();
+
+  _EndedPillSheetValue call(
+      {@JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+          required DateTime afterLastTakenDate}) {
+    return _EndedPillSheetValue(
+      afterLastTakenDate: afterLastTakenDate,
+    );
+  }
+
+  EndedPillSheetValue fromJson(Map<String, Object> json) {
+    return EndedPillSheetValue.fromJson(json);
+  }
+}
+
+/// @nodoc
+const $EndedPillSheetValue = _$EndedPillSheetValueTearOff();
+
+/// @nodoc
+mixin _$EndedPillSheetValue {
+  @JsonKey(
+      fromJson: NonNullTimestampConverter.timestampToDateTime,
+      toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+  DateTime get afterLastTakenDate => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $EndedPillSheetValueCopyWith<EndedPillSheetValue> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $EndedPillSheetValueCopyWith<$Res> {
+  factory $EndedPillSheetValueCopyWith(
+          EndedPillSheetValue value, $Res Function(EndedPillSheetValue) then) =
+      _$EndedPillSheetValueCopyWithImpl<$Res>;
+  $Res call(
+      {@JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+          DateTime afterLastTakenDate});
+}
+
+/// @nodoc
+class _$EndedPillSheetValueCopyWithImpl<$Res>
+    implements $EndedPillSheetValueCopyWith<$Res> {
+  _$EndedPillSheetValueCopyWithImpl(this._value, this._then);
+
+  final EndedPillSheetValue _value;
+  // ignore: unused_field
+  final $Res Function(EndedPillSheetValue) _then;
+
+  @override
+  $Res call({
+    Object? afterLastTakenDate = freezed,
+  }) {
+    return _then(_value.copyWith(
+      afterLastTakenDate: afterLastTakenDate == freezed
+          ? _value.afterLastTakenDate
+          : afterLastTakenDate // ignore: cast_nullable_to_non_nullable
+              as DateTime,
+    ));
+  }
+}
+
+/// @nodoc
+abstract class _$EndedPillSheetValueCopyWith<$Res>
+    implements $EndedPillSheetValueCopyWith<$Res> {
+  factory _$EndedPillSheetValueCopyWith(_EndedPillSheetValue value,
+          $Res Function(_EndedPillSheetValue) then) =
+      __$EndedPillSheetValueCopyWithImpl<$Res>;
+  @override
+  $Res call(
+      {@JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+          DateTime afterLastTakenDate});
+}
+
+/// @nodoc
+class __$EndedPillSheetValueCopyWithImpl<$Res>
+    extends _$EndedPillSheetValueCopyWithImpl<$Res>
+    implements _$EndedPillSheetValueCopyWith<$Res> {
+  __$EndedPillSheetValueCopyWithImpl(
+      _EndedPillSheetValue _value, $Res Function(_EndedPillSheetValue) _then)
+      : super(_value, (v) => _then(v as _EndedPillSheetValue));
+
+  @override
+  _EndedPillSheetValue get _value => super._value as _EndedPillSheetValue;
+
+  @override
+  $Res call({
+    Object? afterLastTakenDate = freezed,
+  }) {
+    return _then(_EndedPillSheetValue(
+      afterLastTakenDate: afterLastTakenDate == freezed
+          ? _value.afterLastTakenDate
+          : afterLastTakenDate // ignore: cast_nullable_to_non_nullable
+              as DateTime,
+    ));
+  }
+}
+
+/// @nodoc
+
+@JsonSerializable(explicitToJson: true)
+class _$_EndedPillSheetValue extends _EndedPillSheetValue {
+  _$_EndedPillSheetValue(
+      {@JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+          required this.afterLastTakenDate})
+      : super._();
+
+  factory _$_EndedPillSheetValue.fromJson(Map<String, dynamic> json) =>
+      _$_$_EndedPillSheetValueFromJson(json);
+
+  @override
+  @JsonKey(
+      fromJson: NonNullTimestampConverter.timestampToDateTime,
+      toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+  final DateTime afterLastTakenDate;
+
+  @override
+  String toString() {
+    return 'EndedPillSheetValue(afterLastTakenDate: $afterLastTakenDate)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other is _EndedPillSheetValue &&
+            (identical(other.afterLastTakenDate, afterLastTakenDate) ||
+                const DeepCollectionEquality()
+                    .equals(other.afterLastTakenDate, afterLastTakenDate)));
+  }
+
+  @override
+  int get hashCode =>
+      runtimeType.hashCode ^
+      const DeepCollectionEquality().hash(afterLastTakenDate);
+
+  @JsonKey(ignore: true)
+  @override
+  _$EndedPillSheetValueCopyWith<_EndedPillSheetValue> get copyWith =>
+      __$EndedPillSheetValueCopyWithImpl<_EndedPillSheetValue>(
+          this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$_$_EndedPillSheetValueToJson(this);
+  }
+}
+
+abstract class _EndedPillSheetValue extends EndedPillSheetValue {
+  factory _EndedPillSheetValue(
+      {@JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+          required DateTime afterLastTakenDate}) = _$_EndedPillSheetValue;
+  _EndedPillSheetValue._() : super._();
+
+  factory _EndedPillSheetValue.fromJson(Map<String, dynamic> json) =
+      _$_EndedPillSheetValue.fromJson;
+
+  @override
+  @JsonKey(
+      fromJson: NonNullTimestampConverter.timestampToDateTime,
+      toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+  DateTime get afterLastTakenDate => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(ignore: true)
+  _$EndedPillSheetValueCopyWith<_EndedPillSheetValue> get copyWith =>
       throw _privateConstructorUsedError;
 }

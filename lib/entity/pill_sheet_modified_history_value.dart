@@ -19,7 +19,8 @@ abstract class PillSheetModifiedHistoryValue
     @Default(null) DeletedPillSheetValue? deletedPillSheet,
     @Default(null) TakenPillValue? takenPill,
     @Default(null) RevertTakenPillValue? revertTakenPill,
-    @Default(null) ChangedPillNumberValue changedPillNumber,
+    @Default(null) ChangedPillNumberValue? changedPillNumber,
+    @Default(null) EndedPillSheetValue? endedPillSheet,
   }) = _PillSheetModifiedHistoryValue;
 
   factory PillSheetModifiedHistoryValue.fromJson(Map<String, dynamic> json) =>
@@ -145,4 +146,22 @@ abstract class ChangedPillNumberValue implements _$ChangedPillNumberValue {
       _$ChangedPillNumberValueFromJson(json);
   Map<String, dynamic> toJson() =>
       _$_$_ChangedPillNumberValueToJson(this as _$_ChangedPillNumberValue);
+}
+
+@freezed
+abstract class EndedPillSheetValue implements _$EndedPillSheetValue {
+  EndedPillSheetValue._();
+  @JsonSerializable(explicitToJson: true)
+  factory EndedPillSheetValue({
+    @JsonKey(
+      fromJson: NonNullTimestampConverter.timestampToDateTime,
+      toJson: NonNullTimestampConverter.dateTimeToTimestamp,
+    )
+        required DateTime afterLastTakenDate,
+  }) = _EndedPillSheetValue;
+
+  factory EndedPillSheetValue.fromJson(Map<String, dynamic> json) =>
+      _$EndedPillSheetValueFromJson(json);
+  Map<String, dynamic> toJson() =>
+      _$_$_EndedPillSheetValueToJson(this as _$_EndedPillSheetValue);
 }
