@@ -25,12 +25,14 @@ class _$PillSheetModifiedHistoryTearOff {
       {required String actionType,
       required String userID,
       required PillSheetModifiedHistoryValue value,
+      required PillSheet after,
       @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
           required DateTime createdAt}) {
     return _PillSheetModifiedHistory(
       actionType: actionType,
       userID: userID,
       value: value,
+      after: after,
       createdAt: createdAt,
     );
   }
@@ -48,6 +50,7 @@ mixin _$PillSheetModifiedHistory {
   String get actionType => throw _privateConstructorUsedError;
   String get userID => throw _privateConstructorUsedError;
   PillSheetModifiedHistoryValue get value => throw _privateConstructorUsedError;
+  PillSheet get after => throw _privateConstructorUsedError;
   @JsonKey(
       fromJson: NonNullTimestampConverter.timestampToDateTime,
       toJson: NonNullTimestampConverter.dateTimeToTimestamp)
@@ -68,10 +71,12 @@ abstract class $PillSheetModifiedHistoryCopyWith<$Res> {
       {String actionType,
       String userID,
       PillSheetModifiedHistoryValue value,
+      PillSheet after,
       @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
           DateTime createdAt});
 
   $PillSheetModifiedHistoryValueCopyWith<$Res> get value;
+  $PillSheetCopyWith<$Res> get after;
 }
 
 /// @nodoc
@@ -88,6 +93,7 @@ class _$PillSheetModifiedHistoryCopyWithImpl<$Res>
     Object? actionType = freezed,
     Object? userID = freezed,
     Object? value = freezed,
+    Object? after = freezed,
     Object? createdAt = freezed,
   }) {
     return _then(_value.copyWith(
@@ -103,6 +109,10 @@ class _$PillSheetModifiedHistoryCopyWithImpl<$Res>
           ? _value.value
           : value // ignore: cast_nullable_to_non_nullable
               as PillSheetModifiedHistoryValue,
+      after: after == freezed
+          ? _value.after
+          : after // ignore: cast_nullable_to_non_nullable
+              as PillSheet,
       createdAt: createdAt == freezed
           ? _value.createdAt
           : createdAt // ignore: cast_nullable_to_non_nullable
@@ -114,6 +124,13 @@ class _$PillSheetModifiedHistoryCopyWithImpl<$Res>
   $PillSheetModifiedHistoryValueCopyWith<$Res> get value {
     return $PillSheetModifiedHistoryValueCopyWith<$Res>(_value.value, (value) {
       return _then(_value.copyWith(value: value));
+    });
+  }
+
+  @override
+  $PillSheetCopyWith<$Res> get after {
+    return $PillSheetCopyWith<$Res>(_value.after, (value) {
+      return _then(_value.copyWith(after: value));
     });
   }
 }
@@ -129,11 +146,14 @@ abstract class _$PillSheetModifiedHistoryCopyWith<$Res>
       {String actionType,
       String userID,
       PillSheetModifiedHistoryValue value,
+      PillSheet after,
       @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
           DateTime createdAt});
 
   @override
   $PillSheetModifiedHistoryValueCopyWith<$Res> get value;
+  @override
+  $PillSheetCopyWith<$Res> get after;
 }
 
 /// @nodoc
@@ -153,6 +173,7 @@ class __$PillSheetModifiedHistoryCopyWithImpl<$Res>
     Object? actionType = freezed,
     Object? userID = freezed,
     Object? value = freezed,
+    Object? after = freezed,
     Object? createdAt = freezed,
   }) {
     return _then(_PillSheetModifiedHistory(
@@ -168,6 +189,10 @@ class __$PillSheetModifiedHistoryCopyWithImpl<$Res>
           ? _value.value
           : value // ignore: cast_nullable_to_non_nullable
               as PillSheetModifiedHistoryValue,
+      after: after == freezed
+          ? _value.after
+          : after // ignore: cast_nullable_to_non_nullable
+              as PillSheet,
       createdAt: createdAt == freezed
           ? _value.createdAt
           : createdAt // ignore: cast_nullable_to_non_nullable
@@ -184,6 +209,7 @@ class _$_PillSheetModifiedHistory extends _PillSheetModifiedHistory {
       {required this.actionType,
       required this.userID,
       required this.value,
+      required this.after,
       @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
           required this.createdAt})
       : super._();
@@ -198,6 +224,8 @@ class _$_PillSheetModifiedHistory extends _PillSheetModifiedHistory {
   @override
   final PillSheetModifiedHistoryValue value;
   @override
+  final PillSheet after;
+  @override
   @JsonKey(
       fromJson: NonNullTimestampConverter.timestampToDateTime,
       toJson: NonNullTimestampConverter.dateTimeToTimestamp)
@@ -205,7 +233,7 @@ class _$_PillSheetModifiedHistory extends _PillSheetModifiedHistory {
 
   @override
   String toString() {
-    return 'PillSheetModifiedHistory(actionType: $actionType, userID: $userID, value: $value, createdAt: $createdAt)';
+    return 'PillSheetModifiedHistory(actionType: $actionType, userID: $userID, value: $value, after: $after, createdAt: $createdAt)';
   }
 
   @override
@@ -219,6 +247,8 @@ class _$_PillSheetModifiedHistory extends _PillSheetModifiedHistory {
                 const DeepCollectionEquality().equals(other.userID, userID)) &&
             (identical(other.value, value) ||
                 const DeepCollectionEquality().equals(other.value, value)) &&
+            (identical(other.after, after) ||
+                const DeepCollectionEquality().equals(other.after, after)) &&
             (identical(other.createdAt, createdAt) ||
                 const DeepCollectionEquality()
                     .equals(other.createdAt, createdAt)));
@@ -230,6 +260,7 @@ class _$_PillSheetModifiedHistory extends _PillSheetModifiedHistory {
       const DeepCollectionEquality().hash(actionType) ^
       const DeepCollectionEquality().hash(userID) ^
       const DeepCollectionEquality().hash(value) ^
+      const DeepCollectionEquality().hash(after) ^
       const DeepCollectionEquality().hash(createdAt);
 
   @JsonKey(ignore: true)
@@ -249,6 +280,7 @@ abstract class _PillSheetModifiedHistory extends PillSheetModifiedHistory {
       {required String actionType,
       required String userID,
       required PillSheetModifiedHistoryValue value,
+      required PillSheet after,
       @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
           required DateTime createdAt}) = _$_PillSheetModifiedHistory;
   _PillSheetModifiedHistory._() : super._();
@@ -262,6 +294,8 @@ abstract class _PillSheetModifiedHistory extends PillSheetModifiedHistory {
   String get userID => throw _privateConstructorUsedError;
   @override
   PillSheetModifiedHistoryValue get value => throw _privateConstructorUsedError;
+  @override
+  PillSheet get after => throw _privateConstructorUsedError;
   @override
   @JsonKey(
       fromJson: NonNullTimestampConverter.timestampToDateTime,

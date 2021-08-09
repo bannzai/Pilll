@@ -1,6 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:pilll/entity/firestore_timestamp_converter.dart';
+import 'package:pilll/entity/pill_sheet.dart';
 import 'package:pilll/entity/pill_sheet_modified_history_value.dart';
 
 part 'pill_sheet_modified_history.g.dart';
@@ -36,6 +37,7 @@ abstract class PillSheetModifiedHistory with _$PillSheetModifiedHistory {
     required String actionType,
     required String userID,
     required PillSheetModifiedHistoryValue value,
+    required PillSheet after,
     @JsonKey(
       fromJson: NonNullTimestampConverter.timestampToDateTime,
       toJson: NonNullTimestampConverter.dateTimeToTimestamp,

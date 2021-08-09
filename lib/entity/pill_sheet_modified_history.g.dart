@@ -13,6 +13,7 @@ _$_PillSheetModifiedHistory _$_$_PillSheetModifiedHistoryFromJson(
     userID: json['userID'] as String,
     value: PillSheetModifiedHistoryValue.fromJson(
         json['value'] as Map<String, dynamic>),
+    after: PillSheet.fromJson(json['after'] as Map<String, dynamic>),
     createdAt: NonNullTimestampConverter.timestampToDateTime(
         json['createdAt'] as Timestamp),
   );
@@ -24,6 +25,7 @@ Map<String, dynamic> _$_$_PillSheetModifiedHistoryToJson(
       'actionType': instance.actionType,
       'userID': instance.userID,
       'value': instance.value.toJson(),
+      'after': instance.after.toJson(),
       'createdAt':
           NonNullTimestampConverter.dateTimeToTimestamp(instance.createdAt),
     };
