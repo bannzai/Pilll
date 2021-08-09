@@ -5,6 +5,7 @@ import 'package:pilll/domain/calendar/components/pill_sheet_modified_history/com
 import 'package:pilll/domain/calendar/components/pill_sheet_modified_history/components/pill_sheet_modified_history_ended_pill_sheet_action.dart';
 import 'package:pilll/domain/calendar/components/pill_sheet_modified_history/components/pill_sheet_modified_history_monthly_header.dart';
 import 'package:pilll/domain/calendar/components/pill_sheet_modified_history/components/pill_sheet_modified_history_revert_taken_pill_action.dart';
+import 'package:pilll/domain/calendar/components/pill_sheet_modified_history/components/pill_sheet_modified_history_taken_pill_action.dart';
 import 'package:pilll/entity/pill_sheet_modified_history.dart';
 import 'package:pilll/util/datetime/date_compare.dart';
 
@@ -38,11 +39,14 @@ class CalendarPillSheetModifiedHistoryList extends StatelessWidget {
 
       final m = model;
       if (m != null) {
-        models.add(m);
+        m.pillSheetModifiedHistories.add(history);
       } else {
-        models.add(CalendarPillSheetModifiedHistoryListModel(
+        models.add(
+          CalendarPillSheetModifiedHistoryListModel(
             dateTimeOfMonth: history.createdAt,
-            pillSheetModifiedHistories: pillSheetModifiedHistories));
+            pillSheetModifiedHistories: [history],
+          ),
+        );
       }
     });
     return models;
@@ -74,7 +78,7 @@ class CalendarPillSheetModifiedHistoryList extends StatelessWidget {
                   case PillSheetModifiedActionType.deletedPillSheet:
                     return PillSheetModifiedHistoryDeletedPillSheetAction();
                   case PillSheetModifiedActionType.takenPill:
-                    return PillSheetModifiedHistoryRevertTakenPillAction();
+                    return PillSheetModifiedHistoryTakenPillAction();
                   case PillSheetModifiedActionType.revertTakenPill:
                     return PillSheetModifiedHistoryRevertTakenPillAction();
                   case PillSheetModifiedActionType.changedPillNumber:

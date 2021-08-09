@@ -75,6 +75,6 @@ abstract class PillSheetModifiedHistory with _$PillSheetModifiedHistory {
       _$_$_PillSheetModifiedHistoryToJson(this as _$_PillSheetModifiedHistory);
 
   PillSheetModifiedActionType? get enumActionType =>
-      PillSheetModifiedActionType.values
-          .firstWhereOrNull((element) => element.toString() == actionType);
+      PillSheetModifiedActionType.values.firstWhereOrNull(
+          (element) => element.toString().split(".").last == actionType);
 }

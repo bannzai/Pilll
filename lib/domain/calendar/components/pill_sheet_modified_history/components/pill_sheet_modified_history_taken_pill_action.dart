@@ -4,8 +4,7 @@ import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/domain/calendar/components/pill_sheet_modified_history/components/pill_sheet_modified_history_taken_action_layout.dart';
 
-class CalendarPillSheetModifiedHistoryTakenPillActionElement
-    extends StatelessWidget {
+class PillSheetModifiedHistoryTakenPillAction extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
