@@ -89,6 +89,6 @@ class PillSheetModifiedHistoryTakenPillAction extends StatelessWidget {
   }
 
   bool _inRestDuration(PillSheet pillSheet, int pillNumber) {
-    return pillSheet.pillSheetType.dosingPeriod >= pillNumber;
+    return pillSheet.pillSheetType.dosingPeriod < pillNumber;
   }
 }
