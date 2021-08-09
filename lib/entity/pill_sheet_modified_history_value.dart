@@ -16,6 +16,7 @@ abstract class PillSheetModifiedHistoryValue
     @Default(null)
         AutomaticallyRecordedLastTakenDateValue?
             automaticallyRecordedLastTakenDateValue,
+    @Default(null) DeletedPillSheetValue? deletedPillSheetValue,
   }) = _PillSheetModifiedHistoryValue;
 
   factory PillSheetModifiedHistoryValue.fromJson(Map<String, dynamic> json) =>
@@ -58,4 +59,22 @@ abstract class AutomaticallyRecordedLastTakenDateValue
   Map<String, dynamic> toJson() =>
       _$_$_AutomaticallyRecordedLastTakenDateValueToJson(
           this as _$_AutomaticallyRecordedLastTakenDateValue);
+}
+
+@freezed
+abstract class DeletedPillSheetValue implements _$DeletedPillSheetValue {
+  DeletedPillSheetValue._();
+  @JsonSerializable(explicitToJson: true)
+  factory DeletedPillSheetValue({
+    @JsonKey(
+      fromJson: NonNullTimestampConverter.timestampToDateTime,
+      toJson: NonNullTimestampConverter.dateTimeToTimestamp,
+    )
+        required DateTime pillSheetDeletedAt,
+  }) = _DeletedPillSheetValue;
+
+  factory DeletedPillSheetValue.fromJson(Map<String, dynamic> json) =>
+      _$DeletedPillSheetValueFromJson(json);
+  Map<String, dynamic> toJson() =>
+      _$_$_DeletedPillSheetValueToJson(this as _$_DeletedPillSheetValue);
 }

@@ -22,6 +22,10 @@ _$_PillSheetModifiedHistoryValue _$_$_PillSheetModifiedHistoryValueFromJson(
             : AutomaticallyRecordedLastTakenDateValue.fromJson(
                 json['automaticallyRecordedLastTakenDateValue']
                     as Map<String, dynamic>),
+    deletedPillSheetValue: json['deletedPillSheetValue'] == null
+        ? null
+        : DeletedPillSheetValue.fromJson(
+            json['deletedPillSheetValue'] as Map<String, dynamic>),
   );
 }
 
@@ -32,6 +36,7 @@ Map<String, dynamic> _$_$_PillSheetModifiedHistoryValueToJson(
       'createdPillSheet': instance.createdPillSheet?.toJson(),
       'automaticallyRecordedLastTakenDateValue':
           instance.automaticallyRecordedLastTakenDateValue?.toJson(),
+      'deletedPillSheetValue': instance.deletedPillSheetValue?.toJson(),
     };
 
 _$_CreatedPillSheetValue _$_$_CreatedPillSheetValueFromJson(
@@ -63,4 +68,19 @@ Map<String, dynamic> _$_$_AutomaticallyRecordedLastTakenDateValueToJson(
     <String, dynamic>{
       'beforeLastTakenPillNumber': instance.beforeLastTakenPillNumber,
       'afterLastTakenPillNumber': instance.afterLastTakenPillNumber,
+    };
+
+_$_DeletedPillSheetValue _$_$_DeletedPillSheetValueFromJson(
+    Map<String, dynamic> json) {
+  return _$_DeletedPillSheetValue(
+    pillSheetDeletedAt: NonNullTimestampConverter.timestampToDateTime(
+        json['pillSheetDeletedAt'] as Timestamp),
+  );
+}
+
+Map<String, dynamic> _$_$_DeletedPillSheetValueToJson(
+        _$_DeletedPillSheetValue instance) =>
+    <String, dynamic>{
+      'pillSheetDeletedAt': NonNullTimestampConverter.dateTimeToTimestamp(
+          instance.pillSheetDeletedAt),
     };

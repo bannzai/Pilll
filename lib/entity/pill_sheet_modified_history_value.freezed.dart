@@ -25,12 +25,14 @@ class _$PillSheetModifiedHistoryValueTearOff {
       {DateTime? beginTrialDate,
       CreatedPillSheetValue? createdPillSheet = null,
       AutomaticallyRecordedLastTakenDateValue?
-          automaticallyRecordedLastTakenDateValue = null}) {
+          automaticallyRecordedLastTakenDateValue = null,
+      DeletedPillSheetValue? deletedPillSheetValue = null}) {
     return _PillSheetModifiedHistoryValue(
       beginTrialDate: beginTrialDate,
       createdPillSheet: createdPillSheet,
       automaticallyRecordedLastTakenDateValue:
           automaticallyRecordedLastTakenDateValue,
+      deletedPillSheetValue: deletedPillSheetValue,
     );
   }
 
@@ -50,6 +52,8 @@ mixin _$PillSheetModifiedHistoryValue {
   AutomaticallyRecordedLastTakenDateValue?
       get automaticallyRecordedLastTakenDateValue =>
           throw _privateConstructorUsedError;
+  DeletedPillSheetValue? get deletedPillSheetValue =>
+      throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -67,11 +71,13 @@ abstract class $PillSheetModifiedHistoryValueCopyWith<$Res> {
       {DateTime? beginTrialDate,
       CreatedPillSheetValue? createdPillSheet,
       AutomaticallyRecordedLastTakenDateValue?
-          automaticallyRecordedLastTakenDateValue});
+          automaticallyRecordedLastTakenDateValue,
+      DeletedPillSheetValue? deletedPillSheetValue});
 
   $CreatedPillSheetValueCopyWith<$Res>? get createdPillSheet;
   $AutomaticallyRecordedLastTakenDateValueCopyWith<$Res>?
       get automaticallyRecordedLastTakenDateValue;
+  $DeletedPillSheetValueCopyWith<$Res>? get deletedPillSheetValue;
 }
 
 /// @nodoc
@@ -88,6 +94,7 @@ class _$PillSheetModifiedHistoryValueCopyWithImpl<$Res>
     Object? beginTrialDate = freezed,
     Object? createdPillSheet = freezed,
     Object? automaticallyRecordedLastTakenDateValue = freezed,
+    Object? deletedPillSheetValue = freezed,
   }) {
     return _then(_value.copyWith(
       beginTrialDate: beginTrialDate == freezed
@@ -103,6 +110,10 @@ class _$PillSheetModifiedHistoryValueCopyWithImpl<$Res>
               ? _value.automaticallyRecordedLastTakenDateValue
               : automaticallyRecordedLastTakenDateValue // ignore: cast_nullable_to_non_nullable
                   as AutomaticallyRecordedLastTakenDateValue?,
+      deletedPillSheetValue: deletedPillSheetValue == freezed
+          ? _value.deletedPillSheetValue
+          : deletedPillSheetValue // ignore: cast_nullable_to_non_nullable
+              as DeletedPillSheetValue?,
     ));
   }
 
@@ -131,6 +142,18 @@ class _$PillSheetModifiedHistoryValueCopyWithImpl<$Res>
           _value.copyWith(automaticallyRecordedLastTakenDateValue: value));
     });
   }
+
+  @override
+  $DeletedPillSheetValueCopyWith<$Res>? get deletedPillSheetValue {
+    if (_value.deletedPillSheetValue == null) {
+      return null;
+    }
+
+    return $DeletedPillSheetValueCopyWith<$Res>(_value.deletedPillSheetValue!,
+        (value) {
+      return _then(_value.copyWith(deletedPillSheetValue: value));
+    });
+  }
 }
 
 /// @nodoc
@@ -145,13 +168,16 @@ abstract class _$PillSheetModifiedHistoryValueCopyWith<$Res>
       {DateTime? beginTrialDate,
       CreatedPillSheetValue? createdPillSheet,
       AutomaticallyRecordedLastTakenDateValue?
-          automaticallyRecordedLastTakenDateValue});
+          automaticallyRecordedLastTakenDateValue,
+      DeletedPillSheetValue? deletedPillSheetValue});
 
   @override
   $CreatedPillSheetValueCopyWith<$Res>? get createdPillSheet;
   @override
   $AutomaticallyRecordedLastTakenDateValueCopyWith<$Res>?
       get automaticallyRecordedLastTakenDateValue;
+  @override
+  $DeletedPillSheetValueCopyWith<$Res>? get deletedPillSheetValue;
 }
 
 /// @nodoc
@@ -172,6 +198,7 @@ class __$PillSheetModifiedHistoryValueCopyWithImpl<$Res>
     Object? beginTrialDate = freezed,
     Object? createdPillSheet = freezed,
     Object? automaticallyRecordedLastTakenDateValue = freezed,
+    Object? deletedPillSheetValue = freezed,
   }) {
     return _then(_PillSheetModifiedHistoryValue(
       beginTrialDate: beginTrialDate == freezed
@@ -187,6 +214,10 @@ class __$PillSheetModifiedHistoryValueCopyWithImpl<$Res>
               ? _value.automaticallyRecordedLastTakenDateValue
               : automaticallyRecordedLastTakenDateValue // ignore: cast_nullable_to_non_nullable
                   as AutomaticallyRecordedLastTakenDateValue?,
+      deletedPillSheetValue: deletedPillSheetValue == freezed
+          ? _value.deletedPillSheetValue
+          : deletedPillSheetValue // ignore: cast_nullable_to_non_nullable
+              as DeletedPillSheetValue?,
     ));
   }
 }
@@ -198,7 +229,8 @@ class _$_PillSheetModifiedHistoryValue extends _PillSheetModifiedHistoryValue {
   _$_PillSheetModifiedHistoryValue(
       {this.beginTrialDate,
       this.createdPillSheet = null,
-      this.automaticallyRecordedLastTakenDateValue = null})
+      this.automaticallyRecordedLastTakenDateValue = null,
+      this.deletedPillSheetValue = null})
       : super._();
 
   factory _$_PillSheetModifiedHistoryValue.fromJson(
@@ -214,10 +246,13 @@ class _$_PillSheetModifiedHistoryValue extends _PillSheetModifiedHistoryValue {
   @override
   final AutomaticallyRecordedLastTakenDateValue?
       automaticallyRecordedLastTakenDateValue;
+  @JsonKey(defaultValue: null)
+  @override
+  final DeletedPillSheetValue? deletedPillSheetValue;
 
   @override
   String toString() {
-    return 'PillSheetModifiedHistoryValue(beginTrialDate: $beginTrialDate, createdPillSheet: $createdPillSheet, automaticallyRecordedLastTakenDateValue: $automaticallyRecordedLastTakenDateValue)';
+    return 'PillSheetModifiedHistoryValue(beginTrialDate: $beginTrialDate, createdPillSheet: $createdPillSheet, automaticallyRecordedLastTakenDateValue: $automaticallyRecordedLastTakenDateValue, deletedPillSheetValue: $deletedPillSheetValue)';
   }
 
   @override
@@ -234,7 +269,10 @@ class _$_PillSheetModifiedHistoryValue extends _PillSheetModifiedHistoryValue {
                     automaticallyRecordedLastTakenDateValue) ||
                 const DeepCollectionEquality().equals(
                     other.automaticallyRecordedLastTakenDateValue,
-                    automaticallyRecordedLastTakenDateValue)));
+                    automaticallyRecordedLastTakenDateValue)) &&
+            (identical(other.deletedPillSheetValue, deletedPillSheetValue) ||
+                const DeepCollectionEquality().equals(
+                    other.deletedPillSheetValue, deletedPillSheetValue)));
   }
 
   @override
@@ -243,7 +281,8 @@ class _$_PillSheetModifiedHistoryValue extends _PillSheetModifiedHistoryValue {
       const DeepCollectionEquality().hash(beginTrialDate) ^
       const DeepCollectionEquality().hash(createdPillSheet) ^
       const DeepCollectionEquality()
-          .hash(automaticallyRecordedLastTakenDateValue);
+          .hash(automaticallyRecordedLastTakenDateValue) ^
+      const DeepCollectionEquality().hash(deletedPillSheetValue);
 
   @JsonKey(ignore: true)
   @override
@@ -263,7 +302,8 @@ abstract class _PillSheetModifiedHistoryValue
           {DateTime? beginTrialDate,
           CreatedPillSheetValue? createdPillSheet,
           AutomaticallyRecordedLastTakenDateValue?
-              automaticallyRecordedLastTakenDateValue}) =
+              automaticallyRecordedLastTakenDateValue,
+          DeletedPillSheetValue? deletedPillSheetValue}) =
       _$_PillSheetModifiedHistoryValue;
   _PillSheetModifiedHistoryValue._() : super._();
 
@@ -279,6 +319,9 @@ abstract class _PillSheetModifiedHistoryValue
   AutomaticallyRecordedLastTakenDateValue?
       get automaticallyRecordedLastTakenDateValue =>
           throw _privateConstructorUsedError;
+  @override
+  DeletedPillSheetValue? get deletedPillSheetValue =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$PillSheetModifiedHistoryValueCopyWith<_PillSheetModifiedHistoryValue>
@@ -659,4 +702,179 @@ abstract class _AutomaticallyRecordedLastTakenDateValue
   _$AutomaticallyRecordedLastTakenDateValueCopyWith<
           _AutomaticallyRecordedLastTakenDateValue>
       get copyWith => throw _privateConstructorUsedError;
+}
+
+DeletedPillSheetValue _$DeletedPillSheetValueFromJson(
+    Map<String, dynamic> json) {
+  return _DeletedPillSheetValue.fromJson(json);
+}
+
+/// @nodoc
+class _$DeletedPillSheetValueTearOff {
+  const _$DeletedPillSheetValueTearOff();
+
+  _DeletedPillSheetValue call(
+      {@JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+          required DateTime pillSheetDeletedAt}) {
+    return _DeletedPillSheetValue(
+      pillSheetDeletedAt: pillSheetDeletedAt,
+    );
+  }
+
+  DeletedPillSheetValue fromJson(Map<String, Object> json) {
+    return DeletedPillSheetValue.fromJson(json);
+  }
+}
+
+/// @nodoc
+const $DeletedPillSheetValue = _$DeletedPillSheetValueTearOff();
+
+/// @nodoc
+mixin _$DeletedPillSheetValue {
+  @JsonKey(
+      fromJson: NonNullTimestampConverter.timestampToDateTime,
+      toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+  DateTime get pillSheetDeletedAt => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $DeletedPillSheetValueCopyWith<DeletedPillSheetValue> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $DeletedPillSheetValueCopyWith<$Res> {
+  factory $DeletedPillSheetValueCopyWith(DeletedPillSheetValue value,
+          $Res Function(DeletedPillSheetValue) then) =
+      _$DeletedPillSheetValueCopyWithImpl<$Res>;
+  $Res call(
+      {@JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+          DateTime pillSheetDeletedAt});
+}
+
+/// @nodoc
+class _$DeletedPillSheetValueCopyWithImpl<$Res>
+    implements $DeletedPillSheetValueCopyWith<$Res> {
+  _$DeletedPillSheetValueCopyWithImpl(this._value, this._then);
+
+  final DeletedPillSheetValue _value;
+  // ignore: unused_field
+  final $Res Function(DeletedPillSheetValue) _then;
+
+  @override
+  $Res call({
+    Object? pillSheetDeletedAt = freezed,
+  }) {
+    return _then(_value.copyWith(
+      pillSheetDeletedAt: pillSheetDeletedAt == freezed
+          ? _value.pillSheetDeletedAt
+          : pillSheetDeletedAt // ignore: cast_nullable_to_non_nullable
+              as DateTime,
+    ));
+  }
+}
+
+/// @nodoc
+abstract class _$DeletedPillSheetValueCopyWith<$Res>
+    implements $DeletedPillSheetValueCopyWith<$Res> {
+  factory _$DeletedPillSheetValueCopyWith(_DeletedPillSheetValue value,
+          $Res Function(_DeletedPillSheetValue) then) =
+      __$DeletedPillSheetValueCopyWithImpl<$Res>;
+  @override
+  $Res call(
+      {@JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+          DateTime pillSheetDeletedAt});
+}
+
+/// @nodoc
+class __$DeletedPillSheetValueCopyWithImpl<$Res>
+    extends _$DeletedPillSheetValueCopyWithImpl<$Res>
+    implements _$DeletedPillSheetValueCopyWith<$Res> {
+  __$DeletedPillSheetValueCopyWithImpl(_DeletedPillSheetValue _value,
+      $Res Function(_DeletedPillSheetValue) _then)
+      : super(_value, (v) => _then(v as _DeletedPillSheetValue));
+
+  @override
+  _DeletedPillSheetValue get _value => super._value as _DeletedPillSheetValue;
+
+  @override
+  $Res call({
+    Object? pillSheetDeletedAt = freezed,
+  }) {
+    return _then(_DeletedPillSheetValue(
+      pillSheetDeletedAt: pillSheetDeletedAt == freezed
+          ? _value.pillSheetDeletedAt
+          : pillSheetDeletedAt // ignore: cast_nullable_to_non_nullable
+              as DateTime,
+    ));
+  }
+}
+
+/// @nodoc
+
+@JsonSerializable(explicitToJson: true)
+class _$_DeletedPillSheetValue extends _DeletedPillSheetValue {
+  _$_DeletedPillSheetValue(
+      {@JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+          required this.pillSheetDeletedAt})
+      : super._();
+
+  factory _$_DeletedPillSheetValue.fromJson(Map<String, dynamic> json) =>
+      _$_$_DeletedPillSheetValueFromJson(json);
+
+  @override
+  @JsonKey(
+      fromJson: NonNullTimestampConverter.timestampToDateTime,
+      toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+  final DateTime pillSheetDeletedAt;
+
+  @override
+  String toString() {
+    return 'DeletedPillSheetValue(pillSheetDeletedAt: $pillSheetDeletedAt)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other is _DeletedPillSheetValue &&
+            (identical(other.pillSheetDeletedAt, pillSheetDeletedAt) ||
+                const DeepCollectionEquality()
+                    .equals(other.pillSheetDeletedAt, pillSheetDeletedAt)));
+  }
+
+  @override
+  int get hashCode =>
+      runtimeType.hashCode ^
+      const DeepCollectionEquality().hash(pillSheetDeletedAt);
+
+  @JsonKey(ignore: true)
+  @override
+  _$DeletedPillSheetValueCopyWith<_DeletedPillSheetValue> get copyWith =>
+      __$DeletedPillSheetValueCopyWithImpl<_DeletedPillSheetValue>(
+          this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$_$_DeletedPillSheetValueToJson(this);
+  }
+}
+
+abstract class _DeletedPillSheetValue extends DeletedPillSheetValue {
+  factory _DeletedPillSheetValue(
+      {@JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+          required DateTime pillSheetDeletedAt}) = _$_DeletedPillSheetValue;
+  _DeletedPillSheetValue._() : super._();
+
+  factory _DeletedPillSheetValue.fromJson(Map<String, dynamic> json) =
+      _$_DeletedPillSheetValue.fromJson;
+
+  @override
+  @JsonKey(
+      fromJson: NonNullTimestampConverter.timestampToDateTime,
+      toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+  DateTime get pillSheetDeletedAt => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(ignore: true)
+  _$DeletedPillSheetValueCopyWith<_DeletedPillSheetValue> get copyWith =>
+      throw _privateConstructorUsedError;
 }
