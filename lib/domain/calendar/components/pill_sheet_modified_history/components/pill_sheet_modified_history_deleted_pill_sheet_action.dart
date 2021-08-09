@@ -2,8 +2,16 @@ import 'package:flutter/material.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/domain/calendar/components/pill_sheet_modified_history/components/pill_sheet_modified_history_taken_action_layout.dart';
+import 'package:pilll/entity/pill_sheet_modified_history_value.dart';
 
 class PillSheetModifiedHistoryDeletedPillSheetAction extends StatelessWidget {
+  final DeletedPillSheetValue? value;
+
+  const PillSheetModifiedHistoryDeletedPillSheetAction({
+    Key? key,
+    required this.value,
+  }) : super(key: key);
+
   Widget build(BuildContext context) {
     return Container(
       child: Padding(
