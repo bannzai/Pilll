@@ -1,18 +1,31 @@
 import 'package:flutter/material.dart';
+import 'package:pilll/analytics.dart';
+import 'package:pilll/components/atoms/buttons.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/components/molecules/app_card.dart';
 import 'package:pilll/components/molecules/premium_badge.dart';
 import 'package:pilll/domain/calendar/components/pill_sheet_modified_history/components/pill_sheet_modified_history_taken_action_layout.dart';
 import 'package:pilll/domain/calendar/components/pill_sheet_modified_history/pill_sheet_modified_history_list.dart';
+import 'package:pilll/domain/pill_sheet_modified_history/pill_sheet_modified_history_page.dart';
+import 'package:pilll/domain/premium_introduction/premium_introduction_sheet.dart';
+import 'package:pilll/domain/premium_trial/premium_trial_complete_modal.dart';
+import 'package:pilll/domain/premium_trial/premium_trial_modal.dart';
 import 'package:pilll/entity/pill_sheet_modified_history.dart';
 
 class CalendarPillSheetModifiedHistoryCardState {
   static final pillSheetModifiedHistoriesThreshold = 6;
   final List<PillSheetModifiedHistory> _allPillSheetModifiedHistories;
+  final bool isPremium;
+  final bool isTrial;
+  final DateTime? trialDeadlineDate;
 
   CalendarPillSheetModifiedHistoryCardState(
-      this._allPillSheetModifiedHistories);
+    this._allPillSheetModifiedHistories, {
+    required this.isPremium,
+    required this.isTrial,
+    required this.trialDeadlineDate,
+  });
 
   bool get moreButtonIsHidden =>
       _allPillSheetModifiedHistories.length >
@@ -126,8 +139,8 @@ class CalendarPillSheetModifiedHistoryCard extends StatelessWidget {
                 pillSheetModifiedHistories: state.pillSheetModifiedHistories,
               ),
             ),
-            if !(state.moreButtonIsHidden) 
-              
+            if !(state.moreButtonIsHidden)
+
           ],
         ),
       ),
