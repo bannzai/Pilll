@@ -1,16 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:pilll/analytics.dart';
-import 'package:pilll/components/atoms/buttons.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/components/molecules/app_card.dart';
 import 'package:pilll/components/molecules/premium_badge.dart';
+import 'package:pilll/domain/calendar/components/pill_sheet_modified_history/components/pill_sheet_modified_history_more_button.dart';
 import 'package:pilll/domain/calendar/components/pill_sheet_modified_history/components/pill_sheet_modified_history_taken_action_layout.dart';
 import 'package:pilll/domain/calendar/components/pill_sheet_modified_history/pill_sheet_modified_history_list.dart';
-import 'package:pilll/domain/pill_sheet_modified_history/pill_sheet_modified_history_page.dart';
-import 'package:pilll/domain/premium_introduction/premium_introduction_sheet.dart';
-import 'package:pilll/domain/premium_trial/premium_trial_complete_modal.dart';
-import 'package:pilll/domain/premium_trial/premium_trial_modal.dart';
 import 'package:pilll/entity/pill_sheet_modified_history.dart';
 
 class CalendarPillSheetModifiedHistoryCardState {
@@ -140,24 +135,7 @@ class CalendarPillSheetModifiedHistoryCard extends StatelessWidget {
               ),
             ),
             if (!state.moreButtonIsHidden)
-              SecondaryButton(
-                  text: "もっと見る",
-                  onPressed: () {
-                    analytics.logEvent(
-                        name: "pill_sheet_modified_history_more");
-                    if (state.isPremium || state.isTrial) {
-                      Navigator.of(context)
-                          .push(PillSheetModifiedHistoriesPageRoute.route());
-                    } else {
-                      if (state.trialDeadlineDate == null) {
-                        showPremiumTrialModal(context, () {
-                          showPremiumTrialCompleteModalPreDialog(context);
-                        });
-                      } else {
-                        showPremiumIntroductionSheet(context);
-                      }
-                    }
-                  }),
+              PillSheetModifiedHistoryMoreButton(state: state),
           ],
         ),
       ),
