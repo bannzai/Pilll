@@ -50,7 +50,8 @@ class CalendarPageStateStore extends StateNotifier<CalendarPageState> {
           await _pillSheetModifiedHistoryService.fetchList(
               null,
               CalendarPillSheetModifiedHistoryCardState
-                  .pillSheetModifiedHistoriesThreshold);
+                      .pillSheetModifiedHistoriesThreshold +
+                  1);
       state = state.copyWith(
         menstruations: menstruations,
         setting: setting,
@@ -90,7 +91,8 @@ class CalendarPageStateStore extends StateNotifier<CalendarPageState> {
     _pillSheetModifiedHistoryCanceller?.cancel();
     _pillSheetModifiedHistoryCanceller = _pillSheetModifiedHistoryService
         .subscribe(CalendarPillSheetModifiedHistoryCardState
-            .pillSheetModifiedHistoriesThreshold)
+                .pillSheetModifiedHistoriesThreshold +
+            1)
         .listen((event) {
       state = state.copyWith(allPillSheetModifiedHistories: event);
     });
