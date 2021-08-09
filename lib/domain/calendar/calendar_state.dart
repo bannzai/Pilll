@@ -23,6 +23,9 @@ abstract class CalendarPageState implements _$CalendarPageState {
     PillSheet? latestPillSheet,
     @Default([]) List<Diary> diariesForMonth,
     @Default([]) List<PillSheetModifiedHistory> allPillSheetModifiedHistories,
+    @Default(false) bool isPremium,
+    @Default(false) bool isTrial,
+    DateTime? trialDeadlineDate,
   }) = _CalendarPageState;
 
   bool get shouldShowIndicator => isNotYetLoaded || setting == null;

@@ -23,8 +23,10 @@ class _$CalendarPageStateTearOff {
       Setting? setting,
       PillSheet? latestPillSheet,
       List<Diary> diariesForMonth = const [],
-      List<PillSheetModifiedHistory> allPillSheetModifiedHistories =
-          const []}) {
+      List<PillSheetModifiedHistory> allPillSheetModifiedHistories = const [],
+      bool isPremium = false,
+      bool isTrial = false,
+      DateTime? trialDeadlineDate}) {
     return _CalendarPageState(
       currentCalendarIndex: currentCalendarIndex,
       isNotYetLoaded: isNotYetLoaded,
@@ -33,6 +35,9 @@ class _$CalendarPageStateTearOff {
       latestPillSheet: latestPillSheet,
       diariesForMonth: diariesForMonth,
       allPillSheetModifiedHistories: allPillSheetModifiedHistories,
+      isPremium: isPremium,
+      isTrial: isTrial,
+      trialDeadlineDate: trialDeadlineDate,
     );
   }
 }
@@ -50,6 +55,9 @@ mixin _$CalendarPageState {
   List<Diary> get diariesForMonth => throw _privateConstructorUsedError;
   List<PillSheetModifiedHistory> get allPillSheetModifiedHistories =>
       throw _privateConstructorUsedError;
+  bool get isPremium => throw _privateConstructorUsedError;
+  bool get isTrial => throw _privateConstructorUsedError;
+  DateTime? get trialDeadlineDate => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $CalendarPageStateCopyWith<CalendarPageState> get copyWith =>
@@ -68,7 +76,10 @@ abstract class $CalendarPageStateCopyWith<$Res> {
       Setting? setting,
       PillSheet? latestPillSheet,
       List<Diary> diariesForMonth,
-      List<PillSheetModifiedHistory> allPillSheetModifiedHistories});
+      List<PillSheetModifiedHistory> allPillSheetModifiedHistories,
+      bool isPremium,
+      bool isTrial,
+      DateTime? trialDeadlineDate});
 
   $SettingCopyWith<$Res>? get setting;
   $PillSheetCopyWith<$Res>? get latestPillSheet;
@@ -92,6 +103,9 @@ class _$CalendarPageStateCopyWithImpl<$Res>
     Object? latestPillSheet = freezed,
     Object? diariesForMonth = freezed,
     Object? allPillSheetModifiedHistories = freezed,
+    Object? isPremium = freezed,
+    Object? isTrial = freezed,
+    Object? trialDeadlineDate = freezed,
   }) {
     return _then(_value.copyWith(
       currentCalendarIndex: currentCalendarIndex == freezed
@@ -122,6 +136,18 @@ class _$CalendarPageStateCopyWithImpl<$Res>
           ? _value.allPillSheetModifiedHistories
           : allPillSheetModifiedHistories // ignore: cast_nullable_to_non_nullable
               as List<PillSheetModifiedHistory>,
+      isPremium: isPremium == freezed
+          ? _value.isPremium
+          : isPremium // ignore: cast_nullable_to_non_nullable
+              as bool,
+      isTrial: isTrial == freezed
+          ? _value.isTrial
+          : isTrial // ignore: cast_nullable_to_non_nullable
+              as bool,
+      trialDeadlineDate: trialDeadlineDate == freezed
+          ? _value.trialDeadlineDate
+          : trialDeadlineDate // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
     ));
   }
 
@@ -162,7 +188,10 @@ abstract class _$CalendarPageStateCopyWith<$Res>
       Setting? setting,
       PillSheet? latestPillSheet,
       List<Diary> diariesForMonth,
-      List<PillSheetModifiedHistory> allPillSheetModifiedHistories});
+      List<PillSheetModifiedHistory> allPillSheetModifiedHistories,
+      bool isPremium,
+      bool isTrial,
+      DateTime? trialDeadlineDate});
 
   @override
   $SettingCopyWith<$Res>? get setting;
@@ -190,6 +219,9 @@ class __$CalendarPageStateCopyWithImpl<$Res>
     Object? latestPillSheet = freezed,
     Object? diariesForMonth = freezed,
     Object? allPillSheetModifiedHistories = freezed,
+    Object? isPremium = freezed,
+    Object? isTrial = freezed,
+    Object? trialDeadlineDate = freezed,
   }) {
     return _then(_CalendarPageState(
       currentCalendarIndex: currentCalendarIndex == freezed
@@ -220,6 +252,18 @@ class __$CalendarPageStateCopyWithImpl<$Res>
           ? _value.allPillSheetModifiedHistories
           : allPillSheetModifiedHistories // ignore: cast_nullable_to_non_nullable
               as List<PillSheetModifiedHistory>,
+      isPremium: isPremium == freezed
+          ? _value.isPremium
+          : isPremium // ignore: cast_nullable_to_non_nullable
+              as bool,
+      isTrial: isTrial == freezed
+          ? _value.isTrial
+          : isTrial // ignore: cast_nullable_to_non_nullable
+              as bool,
+      trialDeadlineDate: trialDeadlineDate == freezed
+          ? _value.trialDeadlineDate
+          : trialDeadlineDate // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
     ));
   }
 }
@@ -234,7 +278,10 @@ class _$_CalendarPageState extends _CalendarPageState {
       this.setting,
       this.latestPillSheet,
       this.diariesForMonth = const [],
-      this.allPillSheetModifiedHistories = const []})
+      this.allPillSheetModifiedHistories = const [],
+      this.isPremium = false,
+      this.isTrial = false,
+      this.trialDeadlineDate})
       : super._();
 
   @JsonKey(defaultValue: 0)
@@ -256,10 +303,18 @@ class _$_CalendarPageState extends _CalendarPageState {
   @JsonKey(defaultValue: const [])
   @override
   final List<PillSheetModifiedHistory> allPillSheetModifiedHistories;
+  @JsonKey(defaultValue: false)
+  @override
+  final bool isPremium;
+  @JsonKey(defaultValue: false)
+  @override
+  final bool isTrial;
+  @override
+  final DateTime? trialDeadlineDate;
 
   @override
   String toString() {
-    return 'CalendarPageState(currentCalendarIndex: $currentCalendarIndex, isNotYetLoaded: $isNotYetLoaded, menstruations: $menstruations, setting: $setting, latestPillSheet: $latestPillSheet, diariesForMonth: $diariesForMonth, allPillSheetModifiedHistories: $allPillSheetModifiedHistories)';
+    return 'CalendarPageState(currentCalendarIndex: $currentCalendarIndex, isNotYetLoaded: $isNotYetLoaded, menstruations: $menstruations, setting: $setting, latestPillSheet: $latestPillSheet, diariesForMonth: $diariesForMonth, allPillSheetModifiedHistories: $allPillSheetModifiedHistories, isPremium: $isPremium, isTrial: $isTrial, trialDeadlineDate: $trialDeadlineDate)';
   }
 
   @override
@@ -288,7 +343,16 @@ class _$_CalendarPageState extends _CalendarPageState {
                     allPillSheetModifiedHistories) ||
                 const DeepCollectionEquality().equals(
                     other.allPillSheetModifiedHistories,
-                    allPillSheetModifiedHistories)));
+                    allPillSheetModifiedHistories)) &&
+            (identical(other.isPremium, isPremium) ||
+                const DeepCollectionEquality()
+                    .equals(other.isPremium, isPremium)) &&
+            (identical(other.isTrial, isTrial) ||
+                const DeepCollectionEquality()
+                    .equals(other.isTrial, isTrial)) &&
+            (identical(other.trialDeadlineDate, trialDeadlineDate) ||
+                const DeepCollectionEquality()
+                    .equals(other.trialDeadlineDate, trialDeadlineDate)));
   }
 
   @override
@@ -300,7 +364,10 @@ class _$_CalendarPageState extends _CalendarPageState {
       const DeepCollectionEquality().hash(setting) ^
       const DeepCollectionEquality().hash(latestPillSheet) ^
       const DeepCollectionEquality().hash(diariesForMonth) ^
-      const DeepCollectionEquality().hash(allPillSheetModifiedHistories);
+      const DeepCollectionEquality().hash(allPillSheetModifiedHistories) ^
+      const DeepCollectionEquality().hash(isPremium) ^
+      const DeepCollectionEquality().hash(isTrial) ^
+      const DeepCollectionEquality().hash(trialDeadlineDate);
 
   @JsonKey(ignore: true)
   @override
@@ -310,14 +377,16 @@ class _$_CalendarPageState extends _CalendarPageState {
 
 abstract class _CalendarPageState extends CalendarPageState {
   factory _CalendarPageState(
-          {int currentCalendarIndex,
-          bool isNotYetLoaded,
-          List<Menstruation> menstruations,
-          Setting? setting,
-          PillSheet? latestPillSheet,
-          List<Diary> diariesForMonth,
-          List<PillSheetModifiedHistory> allPillSheetModifiedHistories}) =
-      _$_CalendarPageState;
+      {int currentCalendarIndex,
+      bool isNotYetLoaded,
+      List<Menstruation> menstruations,
+      Setting? setting,
+      PillSheet? latestPillSheet,
+      List<Diary> diariesForMonth,
+      List<PillSheetModifiedHistory> allPillSheetModifiedHistories,
+      bool isPremium,
+      bool isTrial,
+      DateTime? trialDeadlineDate}) = _$_CalendarPageState;
   _CalendarPageState._() : super._();
 
   @override
@@ -335,6 +404,12 @@ abstract class _CalendarPageState extends CalendarPageState {
   @override
   List<PillSheetModifiedHistory> get allPillSheetModifiedHistories =>
       throw _privateConstructorUsedError;
+  @override
+  bool get isPremium => throw _privateConstructorUsedError;
+  @override
+  bool get isTrial => throw _privateConstructorUsedError;
+  @override
+  DateTime? get trialDeadlineDate => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$CalendarPageStateCopyWith<_CalendarPageState> get copyWith =>
