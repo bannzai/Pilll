@@ -77,6 +77,10 @@ _$_AutomaticallyRecordedLastTakenDateValue
     _$_$_AutomaticallyRecordedLastTakenDateValueFromJson(
         Map<String, dynamic> json) {
   return _$_AutomaticallyRecordedLastTakenDateValue(
+    beforeLastTakenDate: TimestampConverter.timestampToDateTime(
+        json['beforeLastTakenDate'] as Timestamp?),
+    afterLastTakenDate: NonNullTimestampConverter.timestampToDateTime(
+        json['afterLastTakenDate'] as Timestamp),
     beforeLastTakenPillNumber: json['beforeLastTakenPillNumber'] as int,
     afterLastTakenPillNumber: json['afterLastTakenPillNumber'] as int,
   );
@@ -85,6 +89,10 @@ _$_AutomaticallyRecordedLastTakenDateValue
 Map<String, dynamic> _$_$_AutomaticallyRecordedLastTakenDateValueToJson(
         _$_AutomaticallyRecordedLastTakenDateValue instance) =>
     <String, dynamic>{
+      'beforeLastTakenDate':
+          TimestampConverter.dateTimeToTimestamp(instance.beforeLastTakenDate),
+      'afterLastTakenDate': NonNullTimestampConverter.dateTimeToTimestamp(
+          instance.afterLastTakenDate),
       'beforeLastTakenPillNumber': instance.beforeLastTakenPillNumber,
       'afterLastTakenPillNumber': instance.afterLastTakenPillNumber,
     };
