@@ -85,9 +85,11 @@ class CalendarPillSheetModifiedHistoryList extends StatelessWidget {
                       value: history.value.takenPill,
                     );
                   case PillSheetModifiedActionType.revertTakenPill:
-                    return PillSheetModifiedHistoryRevertTakenPillAction();
+                    return PillSheetModifiedHistoryRevertTakenPillAction(
+                        value: history.value.revertTakenPill);
                   case PillSheetModifiedActionType.changedPillNumber:
-                    return PillSheetModifiedHistoryChangedPillNumberAction();
+                    return PillSheetModifiedHistoryChangedPillNumberAction(
+                        value: history.value.changedPillNumber);
                   case PillSheetModifiedActionType.endedPillSheet:
                     return PillSheetModifiedHistoryEndedPillSheetAction();
                 }
