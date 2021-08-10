@@ -33,27 +33,36 @@ class PillSheetModifiedHistoryDate extends StatelessWidget {
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.baseline,
         textBaseline: TextBaseline.alphabetic,
+        mainAxisAlignment: MainAxisAlignment.start,
         children: [
-          Text(
-            "$_day",
-            style: TextStyle(
-              color: TextColor.main,
-              fontFamily: FontFamily.number,
-              fontSize: 23,
-              fontWeight: FontWeight.w500,
+          Container(
+            width: 56,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.end,
+              children: [
+                Text(
+                  "$_day",
+                  style: TextStyle(
+                    color: TextColor.main,
+                    fontFamily: FontFamily.number,
+                    fontSize: 23,
+                    fontWeight: FontWeight.w500,
+                  ),
+                ),
+                SizedBox(width: 4),
+                Text(
+                  "(${_weekday.weekdayString()})",
+                  style: TextStyle(
+                    color: TextColor.main,
+                    fontFamily: FontFamily.japanese,
+                    fontSize: 12,
+                    fontWeight: FontWeight.w400,
+                  ),
+                ),
+              ],
             ),
           ),
-          SizedBox(width: 4),
-          Text(
-            "(${_weekday.weekdayString()})",
-            style: TextStyle(
-              color: TextColor.main,
-              fontFamily: FontFamily.japanese,
-              fontSize: 12,
-              fontWeight: FontWeight.w400,
-            ),
-          ),
-          SizedBox(width: 12),
+          SizedBox(width: 16),
           Container(
             height: 26,
             child: VerticalDivider(
@@ -62,13 +71,17 @@ class PillSheetModifiedHistoryDate extends StatelessWidget {
             ),
           ),
           SizedBox(width: 16),
-          Text(
-            "$_pillNumberWord",
-            style: TextStyle(
-              color: TextColor.main,
-              fontFamily: FontFamily.japanese,
-              fontSize: 12,
-              fontWeight: FontWeight.w400,
+          Container(
+            width: 50,
+            child: Text(
+              "$_pillNumberWord",
+              style: TextStyle(
+                color: TextColor.main,
+                fontFamily: FontFamily.japanese,
+                fontSize: 12,
+                fontWeight: FontWeight.w400,
+              ),
+              textAlign: TextAlign.start,
             ),
           ),
         ],
