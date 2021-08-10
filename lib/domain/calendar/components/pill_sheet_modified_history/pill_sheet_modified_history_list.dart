@@ -19,10 +19,13 @@ class CalendarPillSheetModifiedHistoryListModel {
 }
 
 class CalendarPillSheetModifiedHistoryList extends StatelessWidget {
+  final ScrollPhysics scrollPhysics;
   final List<PillSheetModifiedHistory> pillSheetModifiedHistories;
 
   const CalendarPillSheetModifiedHistoryList(
-      {Key? key, required this.pillSheetModifiedHistories})
+      {Key? key,
+      required this.pillSheetModifiedHistories,
+      required this.scrollPhysics})
       : super(key: key);
 
   List<CalendarPillSheetModifiedHistoryListModel> get models {
@@ -54,9 +57,10 @@ class CalendarPillSheetModifiedHistoryList extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      mainAxisSize: MainAxisSize.min,
-      crossAxisAlignment: CrossAxisAlignment.start,
+    return ListView(
+      shrinkWrap: scrollPhysics is NeverScrollableScrollPhysics,
+      physics: scrollPhysics,
+      scrollDirection: Axis.vertical,
       children: models
           .map((model) {
             return [
