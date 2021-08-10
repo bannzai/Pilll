@@ -5,6 +5,7 @@ import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/components/molecules/indicator.dart';
 import 'package:pilll/domain/calendar/components/pill_sheet_modified_history/pill_sheet_modified_history_list.dart';
+import 'package:pilll/domain/calendar/components/pill_sheet_modified_history/pill_sheet_modified_history_list_header.dart';
 import 'package:pilll/domain/pill_sheet_modified_history/pill_sheet_modified_history_store.dart';
 
 class PillSheetModifiedHistoriesPage extends HookWidget {
@@ -31,22 +32,37 @@ class PillSheetModifiedHistoriesPage extends HookWidget {
         backgroundColor: PilllColors.white,
       ),
       body: SafeArea(
-        child: NotificationListener<ScrollNotification>(
-          onNotification: (notification) {
-            if (!state.isLoading &&
-                notification.metrics.pixels >=
-                    notification.metrics.maxScrollExtent) {
-              store.fetchNext();
-            }
-            return true;
+        child: LayoutBuilder(
+          builder: (context, constraints) {
+            return NotificationListener<ScrollNotification>(
+              onNotification: (notification) {
+                if (!state.isLoading &&
+                    notification.metrics.pixels >=
+                        notification.metrics.maxScrollExtent) {
+                  store.fetchNext();
+                }
+                return true;
+              },
+              child: Container(
+                height: constraints.maxHeight,
+                padding: EdgeInsets.only(left: 32, right: 32),
+                child: Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    PillSheetModifiedHisotiryListHeader(),
+                    SizedBox(height: 4),
+                    Expanded(
+                      child: CalendarPillSheetModifiedHistoryList(
+                        scrollPhysics: AlwaysScrollableScrollPhysics(),
+                        pillSheetModifiedHistories:
+                            state.pillSheetModifiedHistories,
+                      ),
+                    ),
+                  ],
+                ),
+              ),
+            );
           },
-          child: Container(
-            padding: EdgeInsets.only(left: 32, right: 32),
-            child: CalendarPillSheetModifiedHistoryList(
-              scrollPhysics: AlwaysScrollableScrollPhysics(),
-              pillSheetModifiedHistories: state.pillSheetModifiedHistories,
-            ),
-          ),
         ),
       ),
     );

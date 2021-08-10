@@ -58,7 +58,7 @@ class CalendarPillSheetModifiedHistoryList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView(
-      shrinkWrap: scrollPhysics is NeverScrollableScrollPhysics,
+      shrinkWrap: true,
       physics: scrollPhysics,
       scrollDirection: Axis.vertical,
       children: models
