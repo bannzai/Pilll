@@ -81,13 +81,13 @@ class PillSheetModifiedHistoryDate extends StatelessWidget {
       return "-";
     }
     if (afterPillNumber == null) {
-      return "$beforePillNumber";
+      return "$beforePillNumber番";
     }
     if (beforePillNumber == null) {
-      return "$afterPillNumber";
+      return "$afterPillNumber番";
     }
     if (beforePillNumber == afterPillNumber) {
-      return "$beforePillNumber";
+      return "$beforePillNumber番";
     }
     return "$beforePillNumber→$afterPillNumber番";
   }
