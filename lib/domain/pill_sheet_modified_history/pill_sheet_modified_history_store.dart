@@ -50,4 +50,15 @@ class PillSheetModifiedHistoryStateStore
     _pillSheetModifiedHistoryCanceller?.cancel();
     super.dispose();
   }
+
+  Future<void> fetchNext() async {
+    if (state.pillSheetModifiedHistories.isEmpty) {
+      return Future.value();
+    }
+    final pillSheetModifiedHistories = await _pillSheetModifiedHistoryService
+        .fetchList(state.pillSheetModifiedHistories.last.createdAt, 30);
+    state =
+        state.copyWith(pillSheetModifiedHistories: pillSheetModifiedHistories);
+    _subscribe();
+  }
 }

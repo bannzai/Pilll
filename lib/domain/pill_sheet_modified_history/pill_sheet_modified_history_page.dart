@@ -10,6 +10,7 @@ import 'package:pilll/domain/pill_sheet_modified_history/pill_sheet_modified_his
 class PillSheetModifiedHistoriesPage extends HookWidget {
   @override
   Widget build(BuildContext context) {
+    final store = useProvider(pillSheetModifiedHistoryStoreProvider);
     final state = useProvider(pillSheetModifiedHistoryStoreProvider.state);
     if (!state.isFirstLoadEnded) {
       return ScaffoldIndicator();
@@ -33,8 +34,14 @@ class PillSheetModifiedHistoriesPage extends HookWidget {
         child: SingleChildScrollView(
           child: Container(
             padding: EdgeInsets.only(left: 32, right: 32),
-            child: CalendarPillSheetModifiedHistoryList(
-              pillSheetModifiedHistories: state.pillSheetModifiedHistories,
+            child: NotificationListener<ScrollNotification>(
+              onNotification: (notification) {
+                store.fetchNext();
+                return true;
+              },
+              child: CalendarPillSheetModifiedHistoryList(
+                pillSheetModifiedHistories: state.pillSheetModifiedHistories,
+              ),
             ),
           ),
         ),
