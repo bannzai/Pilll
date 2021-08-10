@@ -41,8 +41,8 @@ class PillSheetModifiedHistoriesPage extends HookWidget {
             return true;
           },
           child: SingleChildScrollView(
+            padding: EdgeInsets.only(left: 32, right: 32, bottom: 100),
             child: Container(
-              padding: EdgeInsets.only(left: 32, right: 32),
               child: CalendarPillSheetModifiedHistoryList(
                 pillSheetModifiedHistories: state.pillSheetModifiedHistories,
               ),
