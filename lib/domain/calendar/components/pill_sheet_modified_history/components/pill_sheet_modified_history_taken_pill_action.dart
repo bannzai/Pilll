@@ -63,25 +63,16 @@ class PillSheetModifiedHistoryTakenPillAction extends StatelessWidget {
                         afterPillSheet, value.afterLastTakenPillNumber - index)
                     ? SvgPicture.asset("images/dot_o.svg")
                     : SvgPicture.asset("images/o.svg");
-                if (index == 0) {
-                  return Align(
-                    alignment: Alignment.center,
-                    child: child,
-                  );
-                } else {
-                  if (index % 2 == 0) {
-                    return Align(
-                      alignment: Alignment(-0.3 * index, 0),
+
+                final alignment =
+                    index == 0 ? Alignment.center : Alignment(-0.3 * index, 0);
+                return Align(
+                    alignment: alignment,
+                    child: Container(
+                      color: Colors.white,
                       child: child,
-                    );
-                  } else {
-                    return Align(
-                      alignment: Alignment(0.3 * index, 0),
-                      child: child,
-                    );
-                  }
-                }
-              }).toList()),
+                    ));
+              }).reversed.toList()),
             ),
           ],
         ),
