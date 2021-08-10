@@ -10,7 +10,6 @@ import 'package:pilll/domain/pill_sheet_modified_history/pill_sheet_modified_his
 class PillSheetModifiedHistoriesPage extends HookWidget {
   @override
   Widget build(BuildContext context) {
-    final store = useProvider(pillSheetModifiedHistoryStoreProvider);
     final state = useProvider(pillSheetModifiedHistoryStoreProvider.state);
     if (!state.isFirstLoadEnded) {
       return ScaffoldIndicator();

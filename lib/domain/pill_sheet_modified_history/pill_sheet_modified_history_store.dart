@@ -25,7 +25,7 @@ class PillSheetModifiedHistoryStateStore
     state = state.copyWith(isLoading: true);
     Future(() async {
       final pillSheetModifiedHistories =
-          await _pillSheetModifiedHistoryService.fetchList(null, 20);
+          await _pillSheetModifiedHistoryService.fetchList(null, 30);
       state = state.copyWith(
         pillSheetModifiedHistories: pillSheetModifiedHistories,
         isFirstLoadEnded: true,
@@ -39,7 +39,7 @@ class PillSheetModifiedHistoryStateStore
   void _subscribe() {
     _pillSheetModifiedHistoryCanceller?.cancel();
     _pillSheetModifiedHistoryCanceller = _pillSheetModifiedHistoryService
-        .subscribe(max(state.pillSheetModifiedHistories.length, 20))
+        .subscribe(max(state.pillSheetModifiedHistories.length, 30))
         .listen((event) {
       state = state.copyWith(pillSheetModifiedHistories: event);
     });
