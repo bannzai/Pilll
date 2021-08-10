@@ -13,12 +13,14 @@ abstract class PillSheetModifiedHistoryTakenActionLayoutWidths {
 
 class PillSheetModifiedHistoryDate extends StatelessWidget {
   final DateTime createdAt;
-  final int? pillNumber;
+  final int? beforePillNumber;
+  final int? afterPillNumber;
 
   const PillSheetModifiedHistoryDate({
     Key? key,
     required this.createdAt,
-    required this.pillNumber,
+    required this.beforePillNumber,
+    required this.afterPillNumber,
   }) : super(key: key);
 
   int get _day => createdAt.day;
@@ -60,28 +62,33 @@ class PillSheetModifiedHistoryDate extends StatelessWidget {
             ),
           ),
           SizedBox(width: 16),
-          if (pillNumber != null)
-            Text(
-              "$pillNumber番",
-              style: TextStyle(
-                color: TextColor.main,
-                fontFamily: FontFamily.japanese,
-                fontSize: 12,
-                fontWeight: FontWeight.w400,
-              ),
+          Text(
+            "$_pillNumberWord",
+            style: TextStyle(
+              color: TextColor.main,
+              fontFamily: FontFamily.japanese,
+              fontSize: 12,
+              fontWeight: FontWeight.w400,
             ),
-          if (pillNumber == null)
-            Text(
-              "-",
-              style: TextStyle(
-                color: TextColor.main,
-                fontFamily: FontFamily.japanese,
-                fontSize: 12,
-                fontWeight: FontWeight.w400,
-              ),
-            ),
+          ),
         ],
       ),
     );
+  }
+
+  String get _pillNumberWord {
+    if (beforePillNumber == null && afterPillNumber == null) {
+      return "-";
+    }
+    if (afterPillNumber == null) {
+      return "$beforePillNumber";
+    }
+    if (beforePillNumber == null) {
+      return "$afterPillNumber";
+    }
+    if (beforePillNumber == afterPillNumber) {
+      return "$beforePillNumber";
+    }
+    return "$beforePillNumber→$afterPillNumber番";
   }
 }

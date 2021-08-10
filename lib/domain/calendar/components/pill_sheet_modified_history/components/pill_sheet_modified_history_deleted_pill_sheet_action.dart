@@ -23,7 +23,8 @@ class PillSheetModifiedHistoryDeletedPillSheetAction extends StatelessWidget {
           children: [
             PillSheetModifiedHistoryDate(
               createdAt: createdAt,
-              pillNumber: null,
+              beforePillNumber: null,
+              afterPillNumber: null,
             ),
             Container(
               child: Text(

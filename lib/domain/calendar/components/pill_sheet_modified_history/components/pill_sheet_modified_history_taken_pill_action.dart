@@ -35,7 +35,8 @@ class PillSheetModifiedHistoryTakenPillAction extends StatelessWidget {
           children: [
             PillSheetModifiedHistoryDate(
               createdAt: createdAt,
-              pillNumber: value.afterLastTakenPillNumber,
+              beforePillNumber: value.beforeLastTakenPillNumber,
+              afterPillNumber: value.afterLastTakenPillNumber,
             ),
             Container(
               width: PillSheetModifiedHistoryTakenActionLayoutWidths.takenTime,

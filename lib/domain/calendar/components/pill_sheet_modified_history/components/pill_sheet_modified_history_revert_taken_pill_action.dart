@@ -27,7 +27,8 @@ class PillSheetModifiedHistoryRevertTakenPillAction extends StatelessWidget {
           children: [
             PillSheetModifiedHistoryDate(
               createdAt: createdAt,
-              pillNumber: value.afterLastTakenPillNumber,
+              beforePillNumber: value.beforeLastTakenPillNumber,
+              afterPillNumber: value.afterLastTakenPillNumber,
             ),
             Container(
               child: Text(

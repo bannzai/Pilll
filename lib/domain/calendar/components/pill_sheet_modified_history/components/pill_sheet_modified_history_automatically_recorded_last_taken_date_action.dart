@@ -31,7 +31,8 @@ class PillSheetModifiedHistoryAutomaticallyRecordedLastTakenDateAction
           children: [
             PillSheetModifiedHistoryDate(
               createdAt: createdAt,
-              pillNumber: value.afterLastTakenPillNumber,
+              beforePillNumber: value.beforeLastTakenPillNumber,
+              afterPillNumber: value.afterLastTakenPillNumber,
             ),
             Container(
               padding: EdgeInsets.only(left: 8),
