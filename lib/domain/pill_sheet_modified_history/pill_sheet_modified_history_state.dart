@@ -11,17 +11,6 @@ abstract class PillSheetModifiedHistoryState
   factory PillSheetModifiedHistoryState({
     @Default(false) bool isFirstLoadEnded,
     @Default(false) bool isLoading,
-    @Default([]) List<PillSheetModifiedHistoryElementState> elements,
+    @Default([]) List<PillSheetModifiedHistory> pillSheetModifiedHistories,
   }) = _PillSheetModifiedHistoryState;
-}
-
-@freezed
-abstract class PillSheetModifiedHistoryElementState
-    implements _$PillSheetModifiedHistoryElementState {
-  PillSheetModifiedHistoryElementState._();
-  factory PillSheetModifiedHistoryElementState({
-    required PillSheetModifiedActionType actionType,
-    required PillSheetModifiedHistoryValue value,
-    required DateTime createdAt,
-  }) = _PillSheetModifiedHistoryElementState;
 }

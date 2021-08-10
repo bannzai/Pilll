@@ -19,11 +19,11 @@ class _$PillSheetModifiedHistoryStateTearOff {
   _PillSheetModifiedHistoryState call(
       {bool isFirstLoadEnded = false,
       bool isLoading = false,
-      List<PillSheetModifiedHistoryElementState> elements = const []}) {
+      List<PillSheetModifiedHistory> pillSheetModifiedHistories = const []}) {
     return _PillSheetModifiedHistoryState(
       isFirstLoadEnded: isFirstLoadEnded,
       isLoading: isLoading,
-      elements: elements,
+      pillSheetModifiedHistories: pillSheetModifiedHistories,
     );
   }
 }
@@ -35,7 +35,7 @@ const $PillSheetModifiedHistoryState = _$PillSheetModifiedHistoryStateTearOff();
 mixin _$PillSheetModifiedHistoryState {
   bool get isFirstLoadEnded => throw _privateConstructorUsedError;
   bool get isLoading => throw _privateConstructorUsedError;
-  List<PillSheetModifiedHistoryElementState> get elements =>
+  List<PillSheetModifiedHistory> get pillSheetModifiedHistories =>
       throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
@@ -52,7 +52,7 @@ abstract class $PillSheetModifiedHistoryStateCopyWith<$Res> {
   $Res call(
       {bool isFirstLoadEnded,
       bool isLoading,
-      List<PillSheetModifiedHistoryElementState> elements});
+      List<PillSheetModifiedHistory> pillSheetModifiedHistories});
 }
 
 /// @nodoc
@@ -68,7 +68,7 @@ class _$PillSheetModifiedHistoryStateCopyWithImpl<$Res>
   $Res call({
     Object? isFirstLoadEnded = freezed,
     Object? isLoading = freezed,
-    Object? elements = freezed,
+    Object? pillSheetModifiedHistories = freezed,
   }) {
     return _then(_value.copyWith(
       isFirstLoadEnded: isFirstLoadEnded == freezed
@@ -79,10 +79,10 @@ class _$PillSheetModifiedHistoryStateCopyWithImpl<$Res>
           ? _value.isLoading
           : isLoading // ignore: cast_nullable_to_non_nullable
               as bool,
-      elements: elements == freezed
-          ? _value.elements
-          : elements // ignore: cast_nullable_to_non_nullable
-              as List<PillSheetModifiedHistoryElementState>,
+      pillSheetModifiedHistories: pillSheetModifiedHistories == freezed
+          ? _value.pillSheetModifiedHistories
+          : pillSheetModifiedHistories // ignore: cast_nullable_to_non_nullable
+              as List<PillSheetModifiedHistory>,
     ));
   }
 }
@@ -98,7 +98,7 @@ abstract class _$PillSheetModifiedHistoryStateCopyWith<$Res>
   $Res call(
       {bool isFirstLoadEnded,
       bool isLoading,
-      List<PillSheetModifiedHistoryElementState> elements});
+      List<PillSheetModifiedHistory> pillSheetModifiedHistories});
 }
 
 /// @nodoc
@@ -118,7 +118,7 @@ class __$PillSheetModifiedHistoryStateCopyWithImpl<$Res>
   $Res call({
     Object? isFirstLoadEnded = freezed,
     Object? isLoading = freezed,
-    Object? elements = freezed,
+    Object? pillSheetModifiedHistories = freezed,
   }) {
     return _then(_PillSheetModifiedHistoryState(
       isFirstLoadEnded: isFirstLoadEnded == freezed
@@ -129,10 +129,10 @@ class __$PillSheetModifiedHistoryStateCopyWithImpl<$Res>
           ? _value.isLoading
           : isLoading // ignore: cast_nullable_to_non_nullable
               as bool,
-      elements: elements == freezed
-          ? _value.elements
-          : elements // ignore: cast_nullable_to_non_nullable
-              as List<PillSheetModifiedHistoryElementState>,
+      pillSheetModifiedHistories: pillSheetModifiedHistories == freezed
+          ? _value.pillSheetModifiedHistories
+          : pillSheetModifiedHistories // ignore: cast_nullable_to_non_nullable
+              as List<PillSheetModifiedHistory>,
     ));
   }
 }
@@ -143,7 +143,7 @@ class _$_PillSheetModifiedHistoryState extends _PillSheetModifiedHistoryState {
   _$_PillSheetModifiedHistoryState(
       {this.isFirstLoadEnded = false,
       this.isLoading = false,
-      this.elements = const []})
+      this.pillSheetModifiedHistories = const []})
       : super._();
 
   @JsonKey(defaultValue: false)
@@ -154,11 +154,11 @@ class _$_PillSheetModifiedHistoryState extends _PillSheetModifiedHistoryState {
   final bool isLoading;
   @JsonKey(defaultValue: const [])
   @override
-  final List<PillSheetModifiedHistoryElementState> elements;
+  final List<PillSheetModifiedHistory> pillSheetModifiedHistories;
 
   @override
   String toString() {
-    return 'PillSheetModifiedHistoryState(isFirstLoadEnded: $isFirstLoadEnded, isLoading: $isLoading, elements: $elements)';
+    return 'PillSheetModifiedHistoryState(isFirstLoadEnded: $isFirstLoadEnded, isLoading: $isLoading, pillSheetModifiedHistories: $pillSheetModifiedHistories)';
   }
 
   @override
@@ -171,9 +171,11 @@ class _$_PillSheetModifiedHistoryState extends _PillSheetModifiedHistoryState {
             (identical(other.isLoading, isLoading) ||
                 const DeepCollectionEquality()
                     .equals(other.isLoading, isLoading)) &&
-            (identical(other.elements, elements) ||
-                const DeepCollectionEquality()
-                    .equals(other.elements, elements)));
+            (identical(other.pillSheetModifiedHistories,
+                    pillSheetModifiedHistories) ||
+                const DeepCollectionEquality().equals(
+                    other.pillSheetModifiedHistories,
+                    pillSheetModifiedHistories)));
   }
 
   @override
@@ -181,7 +183,7 @@ class _$_PillSheetModifiedHistoryState extends _PillSheetModifiedHistoryState {
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(isFirstLoadEnded) ^
       const DeepCollectionEquality().hash(isLoading) ^
-      const DeepCollectionEquality().hash(elements);
+      const DeepCollectionEquality().hash(pillSheetModifiedHistories);
 
   @JsonKey(ignore: true)
   @override
@@ -195,7 +197,7 @@ abstract class _PillSheetModifiedHistoryState
   factory _PillSheetModifiedHistoryState(
           {bool isFirstLoadEnded,
           bool isLoading,
-          List<PillSheetModifiedHistoryElementState> elements}) =
+          List<PillSheetModifiedHistory> pillSheetModifiedHistories}) =
       _$_PillSheetModifiedHistoryState;
   _PillSheetModifiedHistoryState._() : super._();
 
@@ -204,220 +206,10 @@ abstract class _PillSheetModifiedHistoryState
   @override
   bool get isLoading => throw _privateConstructorUsedError;
   @override
-  List<PillSheetModifiedHistoryElementState> get elements =>
+  List<PillSheetModifiedHistory> get pillSheetModifiedHistories =>
       throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$PillSheetModifiedHistoryStateCopyWith<_PillSheetModifiedHistoryState>
-      get copyWith => throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-class _$PillSheetModifiedHistoryElementStateTearOff {
-  const _$PillSheetModifiedHistoryElementStateTearOff();
-
-  _PillSheetModifiedHistoryElementState call(
-      {required PillSheetModifiedActionType actionType,
-      required PillSheetModifiedHistoryValue value,
-      required DateTime createdAt}) {
-    return _PillSheetModifiedHistoryElementState(
-      actionType: actionType,
-      value: value,
-      createdAt: createdAt,
-    );
-  }
-}
-
-/// @nodoc
-const $PillSheetModifiedHistoryElementState =
-    _$PillSheetModifiedHistoryElementStateTearOff();
-
-/// @nodoc
-mixin _$PillSheetModifiedHistoryElementState {
-  PillSheetModifiedActionType get actionType =>
-      throw _privateConstructorUsedError;
-  PillSheetModifiedHistoryValue get value => throw _privateConstructorUsedError;
-  DateTime get createdAt => throw _privateConstructorUsedError;
-
-  @JsonKey(ignore: true)
-  $PillSheetModifiedHistoryElementStateCopyWith<
-          PillSheetModifiedHistoryElementState>
-      get copyWith => throw _privateConstructorUsedError;
-}
-
-/// @nodoc
-abstract class $PillSheetModifiedHistoryElementStateCopyWith<$Res> {
-  factory $PillSheetModifiedHistoryElementStateCopyWith(
-          PillSheetModifiedHistoryElementState value,
-          $Res Function(PillSheetModifiedHistoryElementState) then) =
-      _$PillSheetModifiedHistoryElementStateCopyWithImpl<$Res>;
-  $Res call(
-      {PillSheetModifiedActionType actionType,
-      PillSheetModifiedHistoryValue value,
-      DateTime createdAt});
-
-  $PillSheetModifiedHistoryValueCopyWith<$Res> get value;
-}
-
-/// @nodoc
-class _$PillSheetModifiedHistoryElementStateCopyWithImpl<$Res>
-    implements $PillSheetModifiedHistoryElementStateCopyWith<$Res> {
-  _$PillSheetModifiedHistoryElementStateCopyWithImpl(this._value, this._then);
-
-  final PillSheetModifiedHistoryElementState _value;
-  // ignore: unused_field
-  final $Res Function(PillSheetModifiedHistoryElementState) _then;
-
-  @override
-  $Res call({
-    Object? actionType = freezed,
-    Object? value = freezed,
-    Object? createdAt = freezed,
-  }) {
-    return _then(_value.copyWith(
-      actionType: actionType == freezed
-          ? _value.actionType
-          : actionType // ignore: cast_nullable_to_non_nullable
-              as PillSheetModifiedActionType,
-      value: value == freezed
-          ? _value.value
-          : value // ignore: cast_nullable_to_non_nullable
-              as PillSheetModifiedHistoryValue,
-      createdAt: createdAt == freezed
-          ? _value.createdAt
-          : createdAt // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-    ));
-  }
-
-  @override
-  $PillSheetModifiedHistoryValueCopyWith<$Res> get value {
-    return $PillSheetModifiedHistoryValueCopyWith<$Res>(_value.value, (value) {
-      return _then(_value.copyWith(value: value));
-    });
-  }
-}
-
-/// @nodoc
-abstract class _$PillSheetModifiedHistoryElementStateCopyWith<$Res>
-    implements $PillSheetModifiedHistoryElementStateCopyWith<$Res> {
-  factory _$PillSheetModifiedHistoryElementStateCopyWith(
-          _PillSheetModifiedHistoryElementState value,
-          $Res Function(_PillSheetModifiedHistoryElementState) then) =
-      __$PillSheetModifiedHistoryElementStateCopyWithImpl<$Res>;
-  @override
-  $Res call(
-      {PillSheetModifiedActionType actionType,
-      PillSheetModifiedHistoryValue value,
-      DateTime createdAt});
-
-  @override
-  $PillSheetModifiedHistoryValueCopyWith<$Res> get value;
-}
-
-/// @nodoc
-class __$PillSheetModifiedHistoryElementStateCopyWithImpl<$Res>
-    extends _$PillSheetModifiedHistoryElementStateCopyWithImpl<$Res>
-    implements _$PillSheetModifiedHistoryElementStateCopyWith<$Res> {
-  __$PillSheetModifiedHistoryElementStateCopyWithImpl(
-      _PillSheetModifiedHistoryElementState _value,
-      $Res Function(_PillSheetModifiedHistoryElementState) _then)
-      : super(_value, (v) => _then(v as _PillSheetModifiedHistoryElementState));
-
-  @override
-  _PillSheetModifiedHistoryElementState get _value =>
-      super._value as _PillSheetModifiedHistoryElementState;
-
-  @override
-  $Res call({
-    Object? actionType = freezed,
-    Object? value = freezed,
-    Object? createdAt = freezed,
-  }) {
-    return _then(_PillSheetModifiedHistoryElementState(
-      actionType: actionType == freezed
-          ? _value.actionType
-          : actionType // ignore: cast_nullable_to_non_nullable
-              as PillSheetModifiedActionType,
-      value: value == freezed
-          ? _value.value
-          : value // ignore: cast_nullable_to_non_nullable
-              as PillSheetModifiedHistoryValue,
-      createdAt: createdAt == freezed
-          ? _value.createdAt
-          : createdAt // ignore: cast_nullable_to_non_nullable
-              as DateTime,
-    ));
-  }
-}
-
-/// @nodoc
-
-class _$_PillSheetModifiedHistoryElementState
-    extends _PillSheetModifiedHistoryElementState {
-  _$_PillSheetModifiedHistoryElementState(
-      {required this.actionType, required this.value, required this.createdAt})
-      : super._();
-
-  @override
-  final PillSheetModifiedActionType actionType;
-  @override
-  final PillSheetModifiedHistoryValue value;
-  @override
-  final DateTime createdAt;
-
-  @override
-  String toString() {
-    return 'PillSheetModifiedHistoryElementState(actionType: $actionType, value: $value, createdAt: $createdAt)';
-  }
-
-  @override
-  bool operator ==(dynamic other) {
-    return identical(this, other) ||
-        (other is _PillSheetModifiedHistoryElementState &&
-            (identical(other.actionType, actionType) ||
-                const DeepCollectionEquality()
-                    .equals(other.actionType, actionType)) &&
-            (identical(other.value, value) ||
-                const DeepCollectionEquality().equals(other.value, value)) &&
-            (identical(other.createdAt, createdAt) ||
-                const DeepCollectionEquality()
-                    .equals(other.createdAt, createdAt)));
-  }
-
-  @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(actionType) ^
-      const DeepCollectionEquality().hash(value) ^
-      const DeepCollectionEquality().hash(createdAt);
-
-  @JsonKey(ignore: true)
-  @override
-  _$PillSheetModifiedHistoryElementStateCopyWith<
-          _PillSheetModifiedHistoryElementState>
-      get copyWith => __$PillSheetModifiedHistoryElementStateCopyWithImpl<
-          _PillSheetModifiedHistoryElementState>(this, _$identity);
-}
-
-abstract class _PillSheetModifiedHistoryElementState
-    extends PillSheetModifiedHistoryElementState {
-  factory _PillSheetModifiedHistoryElementState(
-      {required PillSheetModifiedActionType actionType,
-      required PillSheetModifiedHistoryValue value,
-      required DateTime createdAt}) = _$_PillSheetModifiedHistoryElementState;
-  _PillSheetModifiedHistoryElementState._() : super._();
-
-  @override
-  PillSheetModifiedActionType get actionType =>
-      throw _privateConstructorUsedError;
-  @override
-  PillSheetModifiedHistoryValue get value => throw _privateConstructorUsedError;
-  @override
-  DateTime get createdAt => throw _privateConstructorUsedError;
-  @override
-  @JsonKey(ignore: true)
-  _$PillSheetModifiedHistoryElementStateCopyWith<
-          _PillSheetModifiedHistoryElementState>
       get copyWith => throw _privateConstructorUsedError;
 }
