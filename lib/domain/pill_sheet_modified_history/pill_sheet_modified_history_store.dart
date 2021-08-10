@@ -25,7 +25,7 @@ class PillSheetModifiedHistoryStateStore
     state = state.copyWith(isLoading: true);
     Future(() async {
       final pillSheetModifiedHistories =
-          await _pillSheetModifiedHistoryService.fetchList(null, 30);
+          await _pillSheetModifiedHistoryService.fetchList(null, 20);
       state = state.copyWith(
         pillSheetModifiedHistories: pillSheetModifiedHistories,
         isFirstLoadEnded: true,
@@ -39,7 +39,7 @@ class PillSheetModifiedHistoryStateStore
   void _subscribe() {
     _pillSheetModifiedHistoryCanceller?.cancel();
     _pillSheetModifiedHistoryCanceller = _pillSheetModifiedHistoryService
-        .subscribe(max(state.pillSheetModifiedHistories.length, 30))
+        .subscribe(max(state.pillSheetModifiedHistories.length, 20))
         .listen((event) {
       state = state.copyWith(pillSheetModifiedHistories: event);
     });
@@ -55,10 +55,13 @@ class PillSheetModifiedHistoryStateStore
     if (state.pillSheetModifiedHistories.isEmpty) {
       return Future.value();
     }
+    state = state.copyWith(isLoading: true);
     final pillSheetModifiedHistories = await _pillSheetModifiedHistoryService
-        .fetchList(state.pillSheetModifiedHistories.last.createdAt, 30);
-    state =
-        state.copyWith(pillSheetModifiedHistories: pillSheetModifiedHistories);
+        .fetchList(state.pillSheetModifiedHistories.last.createdAt, 20);
+    state = state.copyWith(
+        pillSheetModifiedHistories:
+            state.pillSheetModifiedHistories + pillSheetModifiedHistories,
+        isLoading: false);
     _subscribe();
   }
 }
