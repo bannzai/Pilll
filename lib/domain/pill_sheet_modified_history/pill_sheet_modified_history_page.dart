@@ -42,7 +42,7 @@ class PillSheetModifiedHistoriesPage extends HookWidget {
             return true;
           },
           child: Container(
-            padding: EdgeInsets.only(left: 32, right: 32),
+            padding: EdgeInsets.only(left: 32, right: 32, top: 24),
             child: Column(
               mainAxisSize: MainAxisSize.min,
               children: [
