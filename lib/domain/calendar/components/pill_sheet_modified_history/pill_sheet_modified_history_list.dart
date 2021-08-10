@@ -55,15 +55,17 @@ class CalendarPillSheetModifiedHistoryList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
-      mainAxisSize: MainAxisSize.min,
       crossAxisAlignment: CrossAxisAlignment.start,
       children: models
           .map((model) {
+            var i = 0;
             return [
               CalendarPillSheetModifiedHistoryMonthlyHeader(
                 dateTimeOfMonth: model.dateTimeOfMonth,
               ),
-              ...model.pillSheetModifiedHistories.map((history) {
+              Column(
+                  children: model.pillSheetModifiedHistories.map((history) {
+                i += 1;
                 final actionType = history.enumActionType;
                 if (actionType == null) {
                   return Container();
@@ -85,10 +87,15 @@ class CalendarPillSheetModifiedHistoryList extends StatelessWidget {
                       value: history.value.deletedPillSheet,
                     );
                   case PillSheetModifiedActionType.takenPill:
-                    return PillSheetModifiedHistoryTakenPillAction(
-                      createdAt: history.createdAt,
-                      value: history.value.takenPill,
-                      afterPillSheet: history.after,
+                    return Row(
+                      children: [
+                        Text("$i"),
+                        PillSheetModifiedHistoryTakenPillAction(
+                          createdAt: history.createdAt,
+                          value: history.value.takenPill,
+                          afterPillSheet: history.after,
+                        ),
+                      ],
                     );
                   case PillSheetModifiedActionType.revertTakenPill:
                     return PillSheetModifiedHistoryRevertTakenPillAction(
@@ -106,7 +113,7 @@ class CalendarPillSheetModifiedHistoryList extends StatelessWidget {
                     );
                 }
                 return Container();
-              }).toList()
+              }).toList())
             ];
           })
           .expand((element) => element)
