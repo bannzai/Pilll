@@ -31,14 +31,18 @@ class PillSheetModifiedHistoriesPage extends HookWidget {
         backgroundColor: PilllColors.white,
       ),
       body: SafeArea(
-        child: SingleChildScrollView(
-          child: Container(
-            padding: EdgeInsets.only(left: 32, right: 32),
-            child: NotificationListener<ScrollNotification>(
-              onNotification: (notification) {
-                store.fetchNext();
-                return true;
-              },
+        child: NotificationListener<ScrollNotification>(
+          onNotification: (notification) {
+            if (!state.isLoading &&
+                notification.metrics.pixels >=
+                    notification.metrics.maxScrollExtent) {
+              store.fetchNext();
+            }
+            return true;
+          },
+          child: SingleChildScrollView(
+            child: Container(
+              padding: EdgeInsets.only(left: 32, right: 32),
               child: CalendarPillSheetModifiedHistoryList(
                 pillSheetModifiedHistories: state.pillSheetModifiedHistories,
               ),
