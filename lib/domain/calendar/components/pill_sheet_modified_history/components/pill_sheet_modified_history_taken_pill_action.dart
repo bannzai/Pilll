@@ -71,12 +71,12 @@ class PillSheetModifiedHistoryTakenPillAction extends StatelessWidget {
                 } else {
                   if (index % 2 == 0) {
                     return Align(
-                      alignment: Alignment(-0.1 * index, 0),
+                      alignment: Alignment(-0.3 * index, 0),
                       child: child,
                     );
                   } else {
                     return Align(
-                      alignment: Alignment(0.1 * index, 0),
+                      alignment: Alignment(0.3 * index, 0),
                       child: child,
                     );
                   }
