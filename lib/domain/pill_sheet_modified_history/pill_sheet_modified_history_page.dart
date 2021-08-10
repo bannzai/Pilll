@@ -50,6 +50,7 @@ class PillSheetModifiedHistoriesPage extends HookWidget {
                 SizedBox(height: 4),
                 Expanded(
                   child: CalendarPillSheetModifiedHistoryList(
+                    padding: EdgeInsets.only(bottom: 20),
                     scrollPhysics: AlwaysScrollableScrollPhysics(),
                     pillSheetModifiedHistories:
                         state.pillSheetModifiedHistories,

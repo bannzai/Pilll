@@ -19,14 +19,16 @@ class CalendarPillSheetModifiedHistoryListModel {
 }
 
 class CalendarPillSheetModifiedHistoryList extends StatelessWidget {
+  final EdgeInsets? padding;
   final ScrollPhysics scrollPhysics;
   final List<PillSheetModifiedHistory> pillSheetModifiedHistories;
 
-  const CalendarPillSheetModifiedHistoryList(
-      {Key? key,
-      required this.pillSheetModifiedHistories,
-      required this.scrollPhysics})
-      : super(key: key);
+  const CalendarPillSheetModifiedHistoryList({
+    Key? key,
+    required this.padding,
+    required this.scrollPhysics,
+    required this.pillSheetModifiedHistories,
+  }) : super(key: key);
 
   List<CalendarPillSheetModifiedHistoryListModel> get models {
     final List<CalendarPillSheetModifiedHistoryListModel> models = [];
@@ -58,6 +60,7 @@ class CalendarPillSheetModifiedHistoryList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListView(
+      padding: padding,
       shrinkWrap: true,
       physics: scrollPhysics,
       scrollDirection: Axis.vertical,

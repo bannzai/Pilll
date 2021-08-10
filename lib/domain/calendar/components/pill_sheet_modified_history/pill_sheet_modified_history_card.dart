@@ -90,6 +90,7 @@ class CalendarPillSheetModifiedHistoryCard extends StatelessWidget {
             Container(
               padding: const EdgeInsets.only(left: 8, right: 8),
               child: CalendarPillSheetModifiedHistoryList(
+                padding: null,
                 scrollPhysics: NeverScrollableScrollPhysics(),
                 pillSheetModifiedHistories: state.pillSheetModifiedHistories,
               ),
