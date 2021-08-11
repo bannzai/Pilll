@@ -5,12 +5,12 @@ import 'package:pilll/domain/calendar/components/pill_sheet_modified_history/com
 import 'package:pilll/entity/pill_sheet_modified_history_value.dart';
 
 class PillSheetModifiedHistoryDeletedPillSheetAction extends StatelessWidget {
-  final DateTime createdAt;
+  final DateTime estimatedEventCausingDate;
   final DeletedPillSheetValue? value;
 
   const PillSheetModifiedHistoryDeletedPillSheetAction({
     Key? key,
-    required this.createdAt,
+    required this.estimatedEventCausingDate,
     required this.value,
   }) : super(key: key);
 
@@ -22,7 +22,7 @@ class PillSheetModifiedHistoryDeletedPillSheetAction extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             PillSheetModifiedHistoryDate(
-              estimatedEventCausingDate: createdAt,
+              estimatedEventCausingDate: estimatedEventCausingDate,
               beforePillNumber: null,
               afterPillNumber: null,
             ),
