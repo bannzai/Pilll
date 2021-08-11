@@ -96,7 +96,7 @@ class CalendarPillSheetModifiedHistoryList extends StatelessWidget {
                     );
                   case PillSheetModifiedActionType.takenPill:
                     return PillSheetModifiedHistoryTakenPillAction(
-                        createdAt: history.estimatedEventCausingDate,
+                        estimatedEventCausingDate: history.estimatedEventCausingDate,
                         value: history.value.takenPill,
                         afterPillSheet: history.after,
                         onPickerItemSelect: (dateTime) {});

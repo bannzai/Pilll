@@ -11,14 +11,14 @@ import 'package:pilll/util/formatter/date_time_formatter.dart';
 import 'package:pilll/util/toolbar/date_time_picker.dart';
 
 class PillSheetModifiedHistoryTakenPillAction extends StatelessWidget {
-  final DateTime createdAt;
+  final DateTime estimatedEventCausingDate;
   final TakenPillValue? value;
   final PillSheet afterPillSheet;
   final Function(DateTime) onPickerItemSelect;
 
   const PillSheetModifiedHistoryTakenPillAction({
     Key? key,
-    required this.createdAt,
+    required this.estimatedEventCausingDate,
     required this.value,
     required this.afterPillSheet,
     required this.onPickerItemSelect,
@@ -42,7 +42,7 @@ class PillSheetModifiedHistoryTakenPillAction extends StatelessWidget {
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               PillSheetModifiedHistoryDate(
-                createdAt: createdAt,
+                createdAt: estimatedEventCausingDate,
                 beforePillNumber: value.beforeLastTakenPillNumber,
                 afterPillNumber: value.afterLastTakenPillNumber,
               ),
@@ -101,7 +101,7 @@ class PillSheetModifiedHistoryTakenPillAction extends StatelessWidget {
       context: context,
       builder: (BuildContext context) {
         return DateTimePicker(
-          initialDateTime: createdAt,
+          initialDateTime: estimatedEventCausingDate,
           done: (dateTime) {
             Navigator.pop(context);
             onPickerItemSelect(dateTime);
