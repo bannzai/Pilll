@@ -107,7 +107,7 @@ class CalendarPillSheetModifiedHistoryList extends StatelessWidget {
                     );
                   case PillSheetModifiedActionType.changedPillNumber:
                     return PillSheetModifiedHistoryChangedPillNumberAction(
-                      createdAt: history.estimatedEventCausingDate,
+                      estimatedEventCausingDate: history.estimatedEventCausingDate,
                       value: history.value.changedPillNumber,
                     );
                   case PillSheetModifiedActionType.endedPillSheet:
