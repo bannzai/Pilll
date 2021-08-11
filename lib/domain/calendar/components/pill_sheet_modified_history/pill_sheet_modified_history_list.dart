@@ -91,23 +91,29 @@ class CalendarPillSheetModifiedHistoryList extends StatelessWidget {
                     );
                   case PillSheetModifiedActionType.deletedPillSheet:
                     return PillSheetModifiedHistoryDeletedPillSheetAction(
-                      estimatedEventCausingDate: history.estimatedEventCausingDate,
+                      estimatedEventCausingDate:
+                          history.estimatedEventCausingDate,
                       value: history.value.deletedPillSheet,
                     );
                   case PillSheetModifiedActionType.takenPill:
                     return PillSheetModifiedHistoryTakenPillAction(
-                        estimatedEventCausingDate: history.estimatedEventCausingDate,
+                        estimatedEventCausingDate:
+                            history.estimatedEventCausingDate,
                         value: history.value.takenPill,
                         afterPillSheet: history.after,
-                        onPickerItemSelect: (dateTime) {});
+                        onPickerItemSelect: (dateTime) {
+                          onHistoryCreatedAtUpdate(history, dateTime);
+                        });
                   case PillSheetModifiedActionType.revertTakenPill:
                     return PillSheetModifiedHistoryRevertTakenPillAction(
-                      estimatedEventCausingDate: history.estimatedEventCausingDate,
+                      estimatedEventCausingDate:
+                          history.estimatedEventCausingDate,
                       value: history.value.revertTakenPill,
                     );
                   case PillSheetModifiedActionType.changedPillNumber:
                     return PillSheetModifiedHistoryChangedPillNumberAction(
-                      estimatedEventCausingDate: history.estimatedEventCausingDate,
+                      estimatedEventCausingDate:
+                          history.estimatedEventCausingDate,
                       value: history.value.changedPillNumber,
                     );
                   case PillSheetModifiedActionType.endedPillSheet:
