@@ -3,6 +3,7 @@ import 'dart:async';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/domain/calendar/calendar_card_state.dart';
 import 'package:pilll/domain/calendar/components/pill_sheet_modified_history/pill_sheet_modified_history_card.dart';
+import 'package:pilll/entity/pill_sheet_modified_history.dart';
 import 'package:pilll/service/diary.dart';
 import 'package:pilll/service/menstruation.dart';
 import 'package:pilll/service/pill_sheet.dart';
@@ -139,6 +140,13 @@ class CalendarPageStateStore extends StateNotifier<CalendarPageState> {
       final updated = ignoredSameMonth..addAll(diaries);
       state = state.copyWith(diariesForMonth: updated);
     });
+  }
+
+  Future<void> updatePillSheetModifiedHistoryEstimatedEventCausingDate(
+      PillSheetModifiedHistory pillSheetModifiedHistory,
+      DateTime estimatedEventCausingDate) async {
+    await _pillSheetModifiedHistoryService.update(pillSheetModifiedHistory
+        .copyWith(estimatedEventCausingDate: estimatedEventCausingDate));
   }
 
   CalendarCardState cardState(DateTime date) => CalendarCardState(date);
