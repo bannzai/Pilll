@@ -23,14 +23,12 @@ class CalendarPillSheetModifiedHistoryList extends StatelessWidget {
   final EdgeInsets? padding;
   final ScrollPhysics scrollPhysics;
   final List<PillSheetModifiedHistory> pillSheetModifiedHistories;
-  final Function(PillSheetModifiedHistory, DateTime) onHistoryCreatedAtUpdate;
 
   const CalendarPillSheetModifiedHistoryList({
     Key? key,
     required this.padding,
     required this.scrollPhysics,
     required this.pillSheetModifiedHistories,
-    required this.onHistoryCreatedAtUpdate,
   }) : super(key: key);
 
   List<CalendarPillSheetModifiedHistoryListModel> get models {
@@ -101,13 +99,11 @@ class CalendarPillSheetModifiedHistoryList extends StatelessWidget {
                     );
                   case PillSheetModifiedActionType.takenPill:
                     return PillSheetModifiedHistoryTakenPillAction(
-                        estimatedEventCausingDate:
-                            history.estimatedEventCausingDate,
-                        value: history.value.takenPill,
-                        afterPillSheet: history.after,
-                        onPickerItemSelect: (dateTime) {
-                          onHistoryCreatedAtUpdate(history, dateTime);
-                        });
+                      estimatedEventCausingDate:
+                          history.estimatedEventCausingDate,
+                      value: history.value.takenPill,
+                      afterPillSheet: history.after,
+                    );
                   case PillSheetModifiedActionType.revertTakenPill:
                     return PillSheetModifiedHistoryRevertTakenPillAction(
                       estimatedEventCausingDate:

@@ -9,20 +9,17 @@ import 'package:pilll/entity/pill_sheet.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/entity/pill_sheet_modified_history_value.dart';
 import 'package:pilll/util/formatter/date_time_formatter.dart';
-import 'package:pilll/util/toolbar/date_and_time_picker.dart';
 
 class PillSheetModifiedHistoryTakenPillAction extends StatelessWidget {
   final DateTime estimatedEventCausingDate;
   final TakenPillValue? value;
   final PillSheet afterPillSheet;
-  final Function(DateTime) onPickerItemSelect;
 
   const PillSheetModifiedHistoryTakenPillAction({
     Key? key,
     required this.estimatedEventCausingDate,
     required this.value,
     required this.afterPillSheet,
-    required this.onPickerItemSelect,
   }) : super(key: key);
 
   @override
@@ -35,7 +32,6 @@ class PillSheetModifiedHistoryTakenPillAction extends StatelessWidget {
     return GestureDetector(
       onTap: () {
         analytics.logEvent(name: "tapped_history_taken_action");
-        _showPicker(context);
       },
       child: Container(
         child: Padding(
@@ -96,20 +92,5 @@ class PillSheetModifiedHistoryTakenPillAction extends StatelessWidget {
 
   bool _inRestDuration(PillSheet pillSheet, int pillNumber) {
     return pillSheet.pillSheetType.dosingPeriod < pillNumber;
-  }
-
-  void _showPicker(BuildContext context) {
-    showModalBottomSheet(
-      context: context,
-      builder: (BuildContext context) {
-        return DateAndTimePicker(
-          initialDateTime: estimatedEventCausingDate,
-          done: (dateTime) {
-            Navigator.pop(context);
-            onPickerItemSelect(dateTime);
-          },
-        );
-      },
-    );
   }
 }

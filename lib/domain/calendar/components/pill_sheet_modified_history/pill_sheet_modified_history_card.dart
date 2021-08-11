@@ -96,11 +96,6 @@ class CalendarPillSheetModifiedHistoryCard extends StatelessWidget {
                 padding: null,
                 scrollPhysics: NeverScrollableScrollPhysics(),
                 pillSheetModifiedHistories: state.pillSheetModifiedHistories,
-                onHistoryCreatedAtUpdate:
-                    (history, newEstimatedEventCausingDate) {
-                  store.updatePillSheetModifiedHistoryEstimatedEventCausingDate(
-                      history, newEstimatedEventCausingDate);
-                },
               ),
             ),
             if (state.moreButtonIsShown)

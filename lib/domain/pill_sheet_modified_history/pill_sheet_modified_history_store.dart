@@ -2,7 +2,6 @@ import 'dart:async';
 import 'dart:math';
 
 import 'package:pilll/domain/pill_sheet_modified_history/pill_sheet_modified_history_state.dart';
-import 'package:pilll/entity/pill_sheet_modified_history.dart';
 import 'package:pilll/service/pill_sheet_modified_history.dart';
 import 'package:riverpod/riverpod.dart';
 
@@ -65,12 +64,5 @@ class PillSheetModifiedHistoryStateStore
             state.pillSheetModifiedHistories + pillSheetModifiedHistories,
         isLoading: false);
     _subscribe();
-  }
-
-  Future<void> updatePillSheetModifiedHistoryEstimatedEventCausingDate(
-      PillSheetModifiedHistory pillSheetModifiedHistory,
-      DateTime estimatedEventCausingDate) async {
-    await _pillSheetModifiedHistoryService.update(pillSheetModifiedHistory
-        .copyWith(estimatedEventCausingDate: estimatedEventCausingDate));
   }
 }
