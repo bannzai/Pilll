@@ -34,7 +34,6 @@ class InitialSetting4Page extends HookWidget {
       context: context,
       builder: (BuildContext context) {
         return DateTimePicker(
-          mode: CupertinoDatePickerMode.time,
           initialDateTime: initialDateTime,
           done: (dateTime) {
             analytics.logEvent(

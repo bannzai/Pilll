@@ -155,7 +155,6 @@ class ReminderTimesPage extends HookWidget {
       context: context,
       builder: (BuildContext context) {
         return DateTimePicker(
-          mode: CupertinoDatePickerMode.time,
           initialDateTime: isEditing
               ? setting.reminderTimes[index!].dateTime()
               : ReminderTime(hour: 22, minute: 0).dateTime(),

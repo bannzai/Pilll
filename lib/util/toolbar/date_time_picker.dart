@@ -4,13 +4,11 @@ import 'package:flutter/material.dart';
 
 class DateTimePicker extends StatelessWidget {
   final DateTime initialDateTime;
-  final CupertinoDatePickerMode mode;
   final void Function(DateTime datetime) done;
 
   const DateTimePicker({
     Key? key,
     required this.initialDateTime,
-    required this.mode,
     required this.done,
   }) : super(key: key);
   @override
@@ -36,7 +34,7 @@ class DateTimePicker extends StatelessWidget {
                 use24hFormat: true,
                 minuteInterval: 10,
                 initialDateTime: selectedDateTime,
-                mode: mode,
+                mode: CupertinoDatePickerMode.time,
                 onDateTimeChanged: (DateTime value) {
                   selectedDateTime = value;
                 },

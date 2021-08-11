@@ -106,7 +106,6 @@ class PillSheetModifiedHistoryTakenPillAction extends StatelessWidget {
             Navigator.pop(context);
             onPickerItemSelect(dateTime);
           },
-          mode: CupertinoDatePickerMode.dateAndTime,
         );
       },
     );
