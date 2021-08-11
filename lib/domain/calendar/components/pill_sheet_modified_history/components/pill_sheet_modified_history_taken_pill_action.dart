@@ -8,7 +8,7 @@ import 'package:pilll/entity/pill_sheet.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/entity/pill_sheet_modified_history_value.dart';
 import 'package:pilll/util/formatter/date_time_formatter.dart';
-import 'package:pilll/util/toolbar/date_time_picker.dart';
+import 'package:pilll/util/toolbar/time_picker.dart';
 
 class PillSheetModifiedHistoryTakenPillAction extends StatelessWidget {
   final DateTime estimatedEventCausingDate;
@@ -100,7 +100,7 @@ class PillSheetModifiedHistoryTakenPillAction extends StatelessWidget {
     showModalBottomSheet(
       context: context,
       builder: (BuildContext context) {
-        return DateTimePicker(
+        return TimePicker(
           initialDateTime: estimatedEventCausingDate,
           done: (dateTime) {
             Navigator.pop(context);

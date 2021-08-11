@@ -6,7 +6,7 @@ import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/util/formatter/date_time_formatter.dart';
-import 'package:pilll/util/toolbar/date_time_picker.dart';
+import 'package:pilll/util/toolbar/time_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:flutter_svg/svg.dart';
@@ -154,7 +154,7 @@ class ReminderTimesPage extends HookWidget {
     showModalBottomSheet(
       context: context,
       builder: (BuildContext context) {
-        return DateTimePicker(
+        return TimePicker(
           initialDateTime: isEditing
               ? setting.reminderTimes[index!].dateTime()
               : ReminderTime(hour: 22, minute: 0).dateTime(),
