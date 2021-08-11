@@ -78,16 +78,6 @@ class CalendarPillSheetModifiedHistoryCard extends StatelessWidget {
               ],
             ),
             SizedBox(height: 16),
-            Text(
-              "28日連続服用記録中👏",
-              style: TextStyle(
-                color: TextColor.main,
-                fontFamily: FontFamily.japanese,
-                fontSize: 14,
-                fontWeight: FontWeight.w400,
-              ),
-            ),
-            SizedBox(height: 16),
             PillSheetModifiedHisotiryListHeader(),
             SizedBox(height: 4),
             Container(
