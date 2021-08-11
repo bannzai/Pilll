@@ -5,12 +5,12 @@ import 'package:pilll/domain/calendar/components/pill_sheet_modified_history/com
 import 'package:pilll/entity/pill_sheet_modified_history_value.dart';
 
 class PillSheetModifiedHistoryRevertTakenPillAction extends StatelessWidget {
-  final DateTime createdAt;
+  final DateTime estimatedEventCausingDate;
   final RevertTakenPillValue? value;
 
   const PillSheetModifiedHistoryRevertTakenPillAction({
     Key? key,
-    required this.createdAt,
+    required this.estimatedEventCausingDate,
     required this.value,
   }) : super(key: key);
   @override
@@ -26,7 +26,7 @@ class PillSheetModifiedHistoryRevertTakenPillAction extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             PillSheetModifiedHistoryDate(
-              estimatedEventCausingDate: createdAt,
+              estimatedEventCausingDate: estimatedEventCausingDate,
               beforePillNumber: value.beforeLastTakenPillNumber,
               afterPillNumber: value.afterLastTakenPillNumber,
             ),
