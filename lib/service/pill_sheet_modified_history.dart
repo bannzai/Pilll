@@ -1,3 +1,4 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:pilll/database/database.dart';
 import 'package:pilll/entity/pill_sheet_modified_history.dart';
 import 'package:riverpod/riverpod.dart';
@@ -39,16 +40,13 @@ class PillSheetModifiedHistoryService {
             .toList());
   }
 
-  Future<List<PillSheetModifiedHistory>> fetchAll() {
-    return _database
+  Future<PillSheetModifiedHistory> update(
+      PillSheetModifiedHistory pillSheetModifiedHistory) async {
+    await _database
         .pillSheetModifiedHistoriesReference()
-        .get()
-        .then((reference) => reference.docs)
-        .then((docs) => docs
-            .map((doc) => doc.data())
-            .whereType<Map<String, dynamic>>()
-            .map((data) => PillSheetModifiedHistory.fromJson(data))
-            .toList());
+        .doc(pillSheetModifiedHistory.id)
+        .set(pillSheetModifiedHistory, SetOptions(merge: true));
+    return pillSheetModifiedHistory;
   }
 
   Stream<List<PillSheetModifiedHistory>> subscribe(int limit) {
