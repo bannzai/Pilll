@@ -42,7 +42,7 @@ abstract class PillSheetModifiedHistory with _$PillSheetModifiedHistory {
       fromJson: NonNullTimestampConverter.timestampToDateTime,
       toJson: NonNullTimestampConverter.dateTimeToTimestamp,
     )
-        required DateTime estimatedEventDateTime,
+        required DateTime estimatedEventCausingDate,
   }) = _PillSheetModifiedHistory;
   const PillSheetModifiedHistory._();
 

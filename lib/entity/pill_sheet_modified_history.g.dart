@@ -14,8 +14,8 @@ _$_PillSheetModifiedHistory _$_$_PillSheetModifiedHistoryFromJson(
     value: PillSheetModifiedHistoryValue.fromJson(
         json['value'] as Map<String, dynamic>),
     after: PillSheet.fromJson(json['after'] as Map<String, dynamic>),
-    estimatedEventDateTime: NonNullTimestampConverter.timestampToDateTime(
-        json['estimatedEventDateTime'] as Timestamp),
+    estimatedEventCausingDate: NonNullTimestampConverter.timestampToDateTime(
+        json['estimatedEventCausingDate'] as Timestamp),
   );
 }
 
@@ -26,6 +26,7 @@ Map<String, dynamic> _$_$_PillSheetModifiedHistoryToJson(
       'userID': instance.userID,
       'value': instance.value.toJson(),
       'after': instance.after.toJson(),
-      'estimatedEventDateTime': NonNullTimestampConverter.dateTimeToTimestamp(
-          instance.estimatedEventDateTime),
+      'estimatedEventCausingDate':
+          NonNullTimestampConverter.dateTimeToTimestamp(
+              instance.estimatedEventCausingDate),
     };
