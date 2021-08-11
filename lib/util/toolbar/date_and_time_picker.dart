@@ -1,14 +1,17 @@
+import 'package:pilll/util/datetime/day.dart';
 import 'package:pilll/util/toolbar/picker_toolbar.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class TimePicker extends StatelessWidget {
+class DateAndTimePicker extends StatelessWidget {
   final DateTime initialDateTime;
+  final DateTime? maximumDate;
   final void Function(DateTime datetime) done;
 
-  const TimePicker({
+  const DateAndTimePicker({
     Key? key,
     required this.initialDateTime,
+    this.maximumDate,
     required this.done,
   }) : super(key: key);
 
@@ -33,9 +36,9 @@ class TimePicker extends StatelessWidget {
               },
               child: CupertinoDatePicker(
                 use24hFormat: true,
-                minuteInterval: 10,
                 initialDateTime: selectedDateTime,
-                mode: CupertinoDatePickerMode.time,
+                maximumDate: maximumDate ?? now(),
+                mode: CupertinoDatePickerMode.dateAndTime,
                 onDateTimeChanged: (DateTime value) {
                   selectedDateTime = value;
                 },
