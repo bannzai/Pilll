@@ -38,7 +38,7 @@ class CalendarPillSheetModifiedHistoryList extends StatelessWidget {
       CalendarPillSheetModifiedHistoryListModel? model;
 
       models.forEach((m) {
-        if (isSameMonth(m.dateTimeOfMonth, history.createdAt)) {
+        if (isSameMonth(m.dateTimeOfMonth, history.estimatedEventCausingDate)) {
           model = m;
           return;
         }
@@ -50,7 +50,7 @@ class CalendarPillSheetModifiedHistoryList extends StatelessWidget {
       } else {
         models.add(
           CalendarPillSheetModifiedHistoryListModel(
-            dateTimeOfMonth: history.createdAt,
+            dateTimeOfMonth: history.estimatedEventCausingDate,
             pillSheetModifiedHistories: [history],
           ),
         );
@@ -84,29 +84,30 @@ class CalendarPillSheetModifiedHistoryList extends StatelessWidget {
                   case PillSheetModifiedActionType
                       .automaticallyRecordedLastTakenDate:
                     return PillSheetModifiedHistoryAutomaticallyRecordedLastTakenDateAction(
-                      createdAt: history.createdAt,
+                      estimatedEventCausingDate:
+                          history.estimatedEventCausingDate,
                       pillSheetType: history.after.pillSheetType,
                       value: history.value.automaticallyRecordedLastTakenDate,
                     );
                   case PillSheetModifiedActionType.deletedPillSheet:
                     return PillSheetModifiedHistoryDeletedPillSheetAction(
-                      createdAt: history.createdAt,
+                      createdAt: history.estimatedEventCausingDate,
                       value: history.value.deletedPillSheet,
                     );
                   case PillSheetModifiedActionType.takenPill:
                     return PillSheetModifiedHistoryTakenPillAction(
-                        createdAt: history.createdAt,
+                        createdAt: history.estimatedEventCausingDate,
                         value: history.value.takenPill,
                         afterPillSheet: history.after,
                         onPickerItemSelect: (dateTime) {});
                   case PillSheetModifiedActionType.revertTakenPill:
                     return PillSheetModifiedHistoryRevertTakenPillAction(
-                      createdAt: history.createdAt,
+                      createdAt: history.estimatedEventCausingDate,
                       value: history.value.revertTakenPill,
                     );
                   case PillSheetModifiedActionType.changedPillNumber:
                     return PillSheetModifiedHistoryChangedPillNumberAction(
-                      createdAt: history.createdAt,
+                      createdAt: history.estimatedEventCausingDate,
                       value: history.value.changedPillNumber,
                     );
                   case PillSheetModifiedActionType.endedPillSheet:

@@ -56,7 +56,7 @@ class PillSheetModifiedHistoryStateStore
     }
     state = state.copyWith(isLoading: true);
     final pillSheetModifiedHistories = await _pillSheetModifiedHistoryService
-        .fetchList(state.pillSheetModifiedHistories.last.createdAt, 20);
+        .fetchList(state.pillSheetModifiedHistories.last.estimatedEventCausingDate, 20);
     state = state.copyWith(
         pillSheetModifiedHistories:
             state.pillSheetModifiedHistories + pillSheetModifiedHistories,
