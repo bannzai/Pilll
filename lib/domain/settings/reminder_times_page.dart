@@ -1,3 +1,4 @@
+import 'package:flutter/cupertino.dart';
 import 'package:pilll/components/molecules/indicator.dart';
 import 'package:pilll/entity/setting.dart';
 import 'package:pilll/domain/settings/setting_page_store.dart';
@@ -154,6 +155,7 @@ class ReminderTimesPage extends HookWidget {
       context: context,
       builder: (BuildContext context) {
         return DateTimePicker(
+          mode: CupertinoDatePickerMode.time,
           initialDateTime: isEditing
               ? setting.reminderTimes[index!].dateTime()
               : ReminderTime(hour: 22, minute: 0).dateTime(),
