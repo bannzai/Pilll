@@ -54,6 +54,11 @@ class PillSheetModifiedHistoriesPage extends HookWidget {
                     scrollPhysics: AlwaysScrollableScrollPhysics(),
                     pillSheetModifiedHistories:
                         state.pillSheetModifiedHistories,
+                    onHistoryCreatedAtUpdate:
+                        (history, newEstimatedEventDateTime) {
+                      // TODO:
+                      print("TODO");
+                    },
                   ),
                 ),
               ],
