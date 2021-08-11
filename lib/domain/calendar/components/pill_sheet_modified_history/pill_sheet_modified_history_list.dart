@@ -125,7 +125,6 @@ class CalendarPillSheetModifiedHistoryList extends StatelessWidget {
                       value: history.value.endedPillSheet,
                     );
                 }
-                return Container();
               }).toList()
             ];
           })
