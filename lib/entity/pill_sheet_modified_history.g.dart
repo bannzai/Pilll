@@ -9,6 +9,7 @@ part of 'pill_sheet_modified_history.dart';
 _$_PillSheetModifiedHistory _$_$_PillSheetModifiedHistoryFromJson(
     Map<String, dynamic> json) {
   return _$_PillSheetModifiedHistory(
+    id: json['id'] as String,
     actionType: json['actionType'] as String,
     userID: json['userID'] as String,
     value: PillSheetModifiedHistoryValue.fromJson(
@@ -20,13 +21,22 @@ _$_PillSheetModifiedHistory _$_$_PillSheetModifiedHistoryFromJson(
 }
 
 Map<String, dynamic> _$_$_PillSheetModifiedHistoryToJson(
-        _$_PillSheetModifiedHistory instance) =>
-    <String, dynamic>{
-      'actionType': instance.actionType,
-      'userID': instance.userID,
-      'value': instance.value.toJson(),
-      'after': instance.after.toJson(),
-      'estimatedEventCausingDate':
-          NonNullTimestampConverter.dateTimeToTimestamp(
-              instance.estimatedEventCausingDate),
-    };
+    _$_PillSheetModifiedHistory instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', toNull(instance.id));
+  val['actionType'] = instance.actionType;
+  val['userID'] = instance.userID;
+  val['value'] = instance.value.toJson();
+  val['after'] = instance.after.toJson();
+  val['estimatedEventCausingDate'] =
+      NonNullTimestampConverter.dateTimeToTimestamp(
+          instance.estimatedEventCausingDate);
+  return val;
+}

@@ -1,5 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:pilll/entity/firestore_document_id_escaping_to_json.dart';
 import 'package:pilll/entity/firestore_timestamp_converter.dart';
 import 'package:pilll/entity/pill_sheet.dart';
 import 'package:pilll/entity/pill_sheet_modified_history_value.dart';
@@ -34,6 +35,8 @@ enum PillSheetModifiedActionType {
 abstract class PillSheetModifiedHistory with _$PillSheetModifiedHistory {
   @JsonSerializable(explicitToJson: true)
   factory PillSheetModifiedHistory({
+    @JsonKey(includeIfNull: false, toJson: toNull)
+        required String id,
     required String actionType,
     required String userID,
     required PillSheetModifiedHistoryValue value,
