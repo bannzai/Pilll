@@ -93,7 +93,8 @@ class CalendarPillSheetModifiedHistoryCard extends StatelessWidget {
                 padding: null,
                 scrollPhysics: NeverScrollableScrollPhysics(),
                 pillSheetModifiedHistories: state.pillSheetModifiedHistories,
-                onHistoryCreatedAtUpdate: (history, newCreatedAt) {
+                onHistoryCreatedAtUpdate:
+                    (history, newEstimatedEventCausingDate) {
                   // TODO:
                   print("TODO");
                 },
