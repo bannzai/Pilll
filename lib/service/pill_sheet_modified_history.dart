@@ -21,6 +21,18 @@ class PillSheetModifiedHistoryService {
         .get()
         .then((reference) => reference.docs)
         .then((docs) => docs
+            .map((doc) => PillSheetModifiedHistory.fromJson(
+                (doc.data() as Map<String, dynamic>)
+                  ..putIfAbsent("id", () => doc.id)))
+            .toList());
+  }
+
+  Future<List<PillSheetModifiedHistory>> fetchAll() {
+    return _database
+        .pillSheetModifiedHistoriesReference()
+        .get()
+        .then((reference) => reference.docs)
+        .then((docs) => docs
             .map((doc) => doc.data())
             .whereType<Map<String, dynamic>>()
             .map((data) => PillSheetModifiedHistory.fromJson(data))
@@ -48,9 +60,9 @@ class PillSheetModifiedHistoryService {
         .snapshots()
         .map((reference) => reference.docs)
         .map((docs) => docs
-            .map((doc) => doc.data())
-            .whereType<Map<String, dynamic>>()
-            .map((data) => PillSheetModifiedHistory.fromJson(data))
+            .map((doc) => PillSheetModifiedHistory.fromJson(
+                (doc.data() as Map<String, dynamic>)
+                  ..putIfAbsent("id", () => doc.id)))
             .toList());
   }
 }
