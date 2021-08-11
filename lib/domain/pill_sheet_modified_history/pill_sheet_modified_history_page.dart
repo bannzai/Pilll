@@ -56,8 +56,9 @@ class PillSheetModifiedHistoriesPage extends HookWidget {
                         state.pillSheetModifiedHistories,
                     onHistoryCreatedAtUpdate:
                         (history, newEstimatedEventDateTime) {
-                      // TODO:
-                      print("TODO");
+                      store
+                          .updatePillSheetModifiedHistoryEstimatedEventCausingDate(
+                              history, newEstimatedEventDateTime);
                     },
                   ),
                 ),
