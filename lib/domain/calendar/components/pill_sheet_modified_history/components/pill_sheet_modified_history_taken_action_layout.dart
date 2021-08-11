@@ -12,19 +12,19 @@ abstract class PillSheetModifiedHistoryTakenActionLayoutWidths {
 }
 
 class PillSheetModifiedHistoryDate extends StatelessWidget {
-  final DateTime createdAt;
+  final DateTime estimatedEventCausingDate;
   final int? beforePillNumber;
   final int? afterPillNumber;
 
   const PillSheetModifiedHistoryDate({
     Key? key,
-    required this.createdAt,
+    required this.estimatedEventCausingDate,
     required this.beforePillNumber,
     required this.afterPillNumber,
   }) : super(key: key);
 
-  int get _day => createdAt.day;
-  Weekday get _weekday => WeekdayFunctions.weekdayFromDate(createdAt);
+  int get _day => estimatedEventCausingDate.day;
+  Weekday get _weekday => WeekdayFunctions.weekdayFromDate(estimatedEventCausingDate);
 
   @override
   Widget build(BuildContext context) {

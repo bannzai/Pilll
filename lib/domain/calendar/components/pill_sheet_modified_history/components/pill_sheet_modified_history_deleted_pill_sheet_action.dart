@@ -22,7 +22,7 @@ class PillSheetModifiedHistoryDeletedPillSheetAction extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             PillSheetModifiedHistoryDate(
-              createdAt: createdAt,
+              estimatedEventCausingDate: createdAt,
               beforePillNumber: null,
               afterPillNumber: null,
             ),

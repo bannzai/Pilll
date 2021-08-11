@@ -26,7 +26,7 @@ class PillSheetModifiedHistoryRevertTakenPillAction extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             PillSheetModifiedHistoryDate(
-              createdAt: createdAt,
+              estimatedEventCausingDate: createdAt,
               beforePillNumber: value.beforeLastTakenPillNumber,
               afterPillNumber: value.afterLastTakenPillNumber,
             ),

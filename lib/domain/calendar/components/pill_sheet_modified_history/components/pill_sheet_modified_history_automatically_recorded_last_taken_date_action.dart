@@ -30,7 +30,7 @@ class PillSheetModifiedHistoryAutomaticallyRecordedLastTakenDateAction
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             PillSheetModifiedHistoryDate(
-              createdAt: estimatedEventCausingDate,
+              estimatedEventCausingDate: estimatedEventCausingDate,
               beforePillNumber: value.beforeLastTakenPillNumber,
               afterPillNumber: value.afterLastTakenPillNumber,
             ),
