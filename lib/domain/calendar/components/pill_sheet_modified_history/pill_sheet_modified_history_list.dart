@@ -67,6 +67,7 @@ class CalendarPillSheetModifiedHistoryList extends StatelessWidget {
       scrollDirection: Axis.vertical,
       children: models
           .map((model) {
+            var dirtyIndex = 0;
             return [
               CalendarPillSheetModifiedHistoryMonthlyHeader(
                 dateTimeOfMonth: model.dateTimeOfMonth,
@@ -76,51 +77,75 @@ class CalendarPillSheetModifiedHistoryList extends StatelessWidget {
                 if (actionType == null) {
                   return Container();
                 }
-                switch (actionType) {
-                  case PillSheetModifiedActionType.createdPillSheet:
-                    return PillSheetModifiedHistoryCreatePillSheetAction(
-                      estimatedEventCausingDate:
-                          history.estimatedEventCausingDate,
-                      value: history.value.createdPillSheet,
-                    );
-                  case PillSheetModifiedActionType
-                      .automaticallyRecordedLastTakenDate:
-                    return PillSheetModifiedHistoryAutomaticallyRecordedLastTakenDateAction(
-                      estimatedEventCausingDate:
-                          history.estimatedEventCausingDate,
-                      pillSheetType: history.after.pillSheetType,
-                      value: history.value.automaticallyRecordedLastTakenDate,
-                    );
-                  case PillSheetModifiedActionType.deletedPillSheet:
-                    return PillSheetModifiedHistoryDeletedPillSheetAction(
-                      estimatedEventCausingDate:
-                          history.estimatedEventCausingDate,
-                      value: history.value.deletedPillSheet,
-                    );
-                  case PillSheetModifiedActionType.takenPill:
-                    return PillSheetModifiedHistoryTakenPillAction(
-                      estimatedEventCausingDate:
-                          history.estimatedEventCausingDate,
-                      value: history.value.takenPill,
-                      afterPillSheet: history.after,
-                    );
-                  case PillSheetModifiedActionType.revertTakenPill:
-                    return PillSheetModifiedHistoryRevertTakenPillAction(
-                      estimatedEventCausingDate:
-                          history.estimatedEventCausingDate,
-                      value: history.value.revertTakenPill,
-                    );
-                  case PillSheetModifiedActionType.changedPillNumber:
-                    return PillSheetModifiedHistoryChangedPillNumberAction(
-                      estimatedEventCausingDate:
-                          history.estimatedEventCausingDate,
-                      value: history.value.changedPillNumber,
-                    );
-                  case PillSheetModifiedActionType.endedPillSheet:
-                    return PillSheetModifiedHistoryEndedPillSheetAction(
-                      value: history.value.endedPillSheet,
-                    );
+
+                var isDotNecessary = false;
+                if (dirtyIndex != 0) {
+                  final oneNewlyHistory =
+                      model.pillSheetModifiedHistories[dirtyIndex - 1];
+                  final diff = oneNewlyHistory.estimatedEventCausingDate
+                      .difference(history.estimatedEventCausingDate);
+                  if (diff.inDays > 1) {
+                    isDotNecessary = true;
+                  }
                 }
+
+                dirtyIndex += 1;
+                final body = () {
+                  switch (actionType) {
+                    case PillSheetModifiedActionType.createdPillSheet:
+                      return PillSheetModifiedHistoryCreatePillSheetAction(
+                        estimatedEventCausingDate:
+                            history.estimatedEventCausingDate,
+                        value: history.value.createdPillSheet,
+                      );
+                    case PillSheetModifiedActionType
+                        .automaticallyRecordedLastTakenDate:
+                      return PillSheetModifiedHistoryAutomaticallyRecordedLastTakenDateAction(
+                        estimatedEventCausingDate:
+                            history.estimatedEventCausingDate,
+                        pillSheetType: history.after.pillSheetType,
+                        value: history.value.automaticallyRecordedLastTakenDate,
+                      );
+                    case PillSheetModifiedActionType.deletedPillSheet:
+                      return PillSheetModifiedHistoryDeletedPillSheetAction(
+                        estimatedEventCausingDate:
+                            history.estimatedEventCausingDate,
+                        value: history.value.deletedPillSheet,
+                      );
+                    case PillSheetModifiedActionType.takenPill:
+                      return PillSheetModifiedHistoryTakenPillAction(
+                        estimatedEventCausingDate:
+                            history.estimatedEventCausingDate,
+                        value: history.value.takenPill,
+                        afterPillSheet: history.after,
+                      );
+                    case PillSheetModifiedActionType.revertTakenPill:
+                      return PillSheetModifiedHistoryRevertTakenPillAction(
+                        estimatedEventCausingDate:
+                            history.estimatedEventCausingDate,
+                        value: history.value.revertTakenPill,
+                      );
+                    case PillSheetModifiedActionType.changedPillNumber:
+                      return PillSheetModifiedHistoryChangedPillNumberAction(
+                        estimatedEventCausingDate:
+                            history.estimatedEventCausingDate,
+                        value: history.value.changedPillNumber,
+                      );
+                    case PillSheetModifiedActionType.endedPillSheet:
+                      return PillSheetModifiedHistoryEndedPillSheetAction(
+                        value: history.value.endedPillSheet,
+                      );
+                  }
+                };
+
+                if (isDotNecessary) {
+                  return Column(children: [
+                    Text("..."),
+                    body(),
+                  ]);
+                }
+
+                return body();
               }).toList()
             ];
           })
