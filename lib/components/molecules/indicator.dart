@@ -10,10 +10,12 @@ class Indicator extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     if (Environment.disableWidgetAnimation) {
-      return Container(
-        color: PilllColors.primary,
-        width: 40,
-        height: 40,
+      return Center(
+        child: Container(
+          color: PilllColors.primary,
+          width: 40,
+          height: 40,
+        ),
       );
     }
     return Container(
