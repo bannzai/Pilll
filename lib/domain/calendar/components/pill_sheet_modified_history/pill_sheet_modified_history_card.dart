@@ -130,7 +130,7 @@ class CalendarPillSheetModifiedHistoryCard extends StatelessWidget {
                               children: [
                                 BackdropFilter(
                                   filter:
-                                      ImageFilter.blur(sigmaX: 10, sigmaY: 10),
+                                      ImageFilter.blur(sigmaX: 6, sigmaY: 6),
                                   child: Container(
                                     color: Colors.black.withOpacity(0),
                                   ),
