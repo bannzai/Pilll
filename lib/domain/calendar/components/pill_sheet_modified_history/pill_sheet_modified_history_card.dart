@@ -1,3 +1,5 @@
+import 'dart:ui';
+
 import 'package:flutter/material.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
@@ -7,6 +9,7 @@ import 'package:pilll/domain/calendar/calendar_store.dart';
 import 'package:pilll/domain/calendar/components/pill_sheet_modified_history/components/pill_sheet_modified_history_more_button.dart';
 import 'package:pilll/domain/calendar/components/pill_sheet_modified_history/pill_sheet_modified_history_list.dart';
 import 'package:pilll/domain/calendar/components/pill_sheet_modified_history/pill_sheet_modified_history_list_header.dart';
+import 'package:pilll/emoji/emoji.dart';
 import 'package:pilll/entity/pill_sheet_modified_history.dart';
 
 class CalendarPillSheetModifiedHistoryCardState {
@@ -80,16 +83,57 @@ class CalendarPillSheetModifiedHistoryCard extends StatelessWidget {
             SizedBox(height: 16),
             PillSheetModifiedHisotiryListHeader(),
             SizedBox(height: 4),
-            Container(
-              padding: const EdgeInsets.only(left: 8, right: 8),
-              child: CalendarPillSheetModifiedHistoryList(
-                padding: null,
-                scrollPhysics: NeverScrollableScrollPhysics(),
-                pillSheetModifiedHistories: state.pillSheetModifiedHistories,
-              ),
-            ),
-            if (state.moreButtonIsShown)
-              PillSheetModifiedHistoryMoreButton(state: state),
+            ...() {
+              if (state.isPremium || state.isTrial) {
+                return [
+                  Container(
+                    padding: const EdgeInsets.only(left: 8, right: 8),
+                    child: CalendarPillSheetModifiedHistoryList(
+                      padding: null,
+                      scrollPhysics: NeverScrollableScrollPhysics(),
+                      pillSheetModifiedHistories:
+                          state.pillSheetModifiedHistories,
+                    ),
+                  ),
+                  if (state.moreButtonIsShown)
+                    PillSheetModifiedHistoryMoreButton(state: state),
+                ];
+              } else {
+                return [
+                  Stack(
+                    children: [
+                      Container(
+                        padding: const EdgeInsets.only(left: 8, right: 8),
+                        child: CalendarPillSheetModifiedHistoryList(
+                          padding: null,
+                          scrollPhysics: NeverScrollableScrollPhysics(),
+                          pillSheetModifiedHistories:
+                              state.pillSheetModifiedHistories,
+                        ),
+                      ),
+                      Positioned.fill(
+                        child: ClipRect(
+                          child: Stack(
+                            children: [
+                              BackdropFilter(
+                                filter:
+                                    ImageFilter.blur(sigmaX: 10, sigmaY: 10),
+                                child: Container(
+                                  color: Colors.black.withOpacity(0),
+                                ),
+                              ),
+                              Center(
+                                  child: Text(lockEmoji,
+                                      style: TextStyle(fontSize: 40))),
+                            ],
+                          ),
+                        ),
+                      ),
+                    ],
+                  ),
+                ];
+              }
+            }(),
           ],
         ),
       ),
