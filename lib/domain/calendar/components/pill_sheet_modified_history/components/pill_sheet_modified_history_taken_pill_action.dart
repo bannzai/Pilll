@@ -71,13 +71,19 @@ class PillSheetModifiedHistoryTakenPillAction extends StatelessWidget {
                       afterPillSheet, value.afterLastTakenPillNumber, index);
                   if (index == 0) {
                     return _centerWidget(inRestDuration
-                        ? SvgPicture.asset("images/dash_o.svg")
-                        : SvgPicture.asset("images/o.svg"));
+                        ? SvgPicture.asset(
+                            "images/dash_o.svg",
+                          )
+                        : SvgPicture.asset(
+                            "images/o.svg",
+                          ));
                   } else {
                     return _shiftWidget(
                         inRestDuration
                             ? SvgPicture.asset("images/dash_half_o.svg")
-                            : SvgPicture.asset("images/half.svg"),
+                            : SvgPicture.asset(
+                                "images/half_o.svg",
+                              ),
                         index);
                   }
                 }).reversed.toList()),
@@ -89,21 +95,19 @@ class PillSheetModifiedHistoryTakenPillAction extends StatelessWidget {
     );
   }
 
-  Widget _centerWidget(SvgPicture picture) {
+  Widget _centerWidget(Widget picture) {
     return Align(
       alignment: Alignment.center,
       child: Container(
-        color: Colors.white,
         child: picture,
       ),
     );
   }
 
-  Widget _shiftWidget(SvgPicture picture, int index) {
+  Widget _shiftWidget(Widget picture, int index) {
     return Align(
-      alignment: Alignment(-0.3 * index, 0),
+      alignment: Alignment(-0.5 * index, 0),
       child: Container(
-        color: Colors.white,
         child: picture,
       ),
     );
