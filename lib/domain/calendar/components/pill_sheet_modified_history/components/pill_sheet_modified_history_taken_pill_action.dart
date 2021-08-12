@@ -1,12 +1,11 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:pilll/analytics.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/domain/calendar/components/pill_sheet_modified_history/components/pill_sheet_modified_history_taken_action_layout.dart';
+import 'package:pilll/domain/calendar/components/pill_sheet_modified_history/components/taken_pill_action_o_list.dart';
 import 'package:pilll/entity/pill_sheet.dart';
-import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/entity/pill_sheet_modified_history_value.dart';
 import 'package:pilll/util/formatter/date_time_formatter.dart';
 
@@ -63,59 +62,13 @@ class PillSheetModifiedHistoryTakenPillAction extends StatelessWidget {
                 width:
                     PillSheetModifiedHistoryTakenActionLayoutWidths.takenMark,
                 padding: EdgeInsets.only(left: 8),
-                child: Stack(
-                    children: List.generate(
-                        value.afterLastTakenPillNumber -
-                            (value.beforeLastTakenPillNumber ?? 1), (index) {
-                  final inRestDuration = _inRestDuration(
-                      afterPillSheet, value.afterLastTakenPillNumber, index);
-                  if (index == 0) {
-                    return _centerWidget(inRestDuration
-                        ? SvgPicture.asset(
-                            "images/dash_o.svg",
-                          )
-                        : SvgPicture.asset(
-                            "images/o.svg",
-                          ));
-                  } else {
-                    return _shiftWidget(
-                        inRestDuration
-                            ? SvgPicture.asset("images/dash_half_o.svg")
-                            : SvgPicture.asset(
-                                "images/half_o.svg",
-                              ),
-                        index);
-                  }
-                }).reversed.toList()),
+                child: TakenPillActionOList(
+                    value: value, afterPillSheet: afterPillSheet),
               ),
             ],
           ),
         ),
       ),
     );
-  }
-
-  Widget _centerWidget(Widget picture) {
-    return Align(
-      alignment: Alignment.center,
-      child: Container(
-        child: picture,
-      ),
-    );
-  }
-
-  Widget _shiftWidget(Widget picture, int index) {
-    return Align(
-      alignment: Alignment(0.6 * index, 0),
-      child: Container(
-        child: picture,
-      ),
-    );
-  }
-
-  bool _inRestDuration(
-      PillSheet afterPillSheet, int afterLastTakenPillNumber, int index) {
-    final pillNumber = afterLastTakenPillNumber - index;
-    return afterPillSheet.pillSheetType.dosingPeriod < pillNumber;
   }
 }
