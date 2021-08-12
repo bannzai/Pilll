@@ -67,20 +67,19 @@ class PillSheetModifiedHistoryTakenPillAction extends StatelessWidget {
                     children: List.generate(
                         value.afterLastTakenPillNumber -
                             (value.beforeLastTakenPillNumber ?? 1), (index) {
-                  final child = _inRestDuration(afterPillSheet,
-                          value.afterLastTakenPillNumber - index)
-                      ? SvgPicture.asset("images/dot_o.svg")
-                      : SvgPicture.asset("images/o.svg");
-
-                  final alignment = index == 0
-                      ? Alignment.center
-                      : Alignment(-0.3 * index, 0);
-                  return Align(
-                      alignment: alignment,
-                      child: Container(
-                        color: Colors.white,
-                        child: child,
-                      ));
+                  final inRestDuration = _inRestDuration(
+                      afterPillSheet, value.afterLastTakenPillNumber, index);
+                  if (index == 0) {
+                    return _centerWidget(inRestDuration
+                        ? SvgPicture.asset("images/dash_o.svg")
+                        : SvgPicture.asset("images/o.svg"));
+                  } else {
+                    return _shiftWidget(
+                        inRestDuration
+                            ? SvgPicture.asset("images/dash_half_o.svg")
+                            : SvgPicture.asset("images/half.svg"),
+                        index);
+                  }
                 }).reversed.toList()),
               ),
             ],
@@ -90,7 +89,29 @@ class PillSheetModifiedHistoryTakenPillAction extends StatelessWidget {
     );
   }
 
-  bool _inRestDuration(PillSheet pillSheet, int pillNumber) {
-    return pillSheet.pillSheetType.dosingPeriod < pillNumber;
+  Widget _centerWidget(SvgPicture picture) {
+    return Align(
+      alignment: Alignment.center,
+      child: Container(
+        color: Colors.white,
+        child: picture,
+      ),
+    );
+  }
+
+  Widget _shiftWidget(SvgPicture picture, int index) {
+    return Align(
+      alignment: Alignment(-0.3 * index, 0),
+      child: Container(
+        color: Colors.white,
+        child: picture,
+      ),
+    );
+  }
+
+  bool _inRestDuration(
+      PillSheet afterPillSheet, int afterLastTakenPillNumber, int index) {
+    final pillNumber = afterLastTakenPillNumber - index;
+    return afterPillSheet.pillSheetType.dosingPeriod < pillNumber;
   }
 }
