@@ -106,7 +106,7 @@ class PillSheetModifiedHistoryTakenPillAction extends StatelessWidget {
 
   Widget _shiftWidget(Widget picture, int index) {
     return Align(
-      alignment: Alignment(-0.5 * index, 0),
+      alignment: Alignment(0.6 * index, 0),
       child: Container(
         child: picture,
       ),
