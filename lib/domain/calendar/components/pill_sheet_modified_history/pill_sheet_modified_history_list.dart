@@ -82,9 +82,9 @@ class CalendarPillSheetModifiedHistoryList extends StatelessWidget {
                 if (dirtyIndex != 0) {
                   final oneNewlyHistory =
                       model.pillSheetModifiedHistories[dirtyIndex - 1];
-                  final diff = oneNewlyHistory.estimatedEventCausingDate
-                      .difference(history.estimatedEventCausingDate);
-                  if (diff.inDays > 1) {
+                  final diff = oneNewlyHistory.estimatedEventCausingDate.day -
+                      history.estimatedEventCausingDate.day;
+                  if (diff > 1) {
                     isDotNecessary = true;
                   }
                 }
