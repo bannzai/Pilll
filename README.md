@@ -1,5 +1,5 @@
 <head>
-  <link rel="shortcut icon" type="image/x-icon" href="./homepage/favicon.ico">
+  <link rel="shortcut icon" type="image/x-icon" href="./homepage/favicon.png">
 </head>
 
 <img width="320px" src="./homepage/homepage.png" />
