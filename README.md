@@ -12,9 +12,9 @@ https://pilll.anotion.so/
 - [App Store](https://apps.apple.com/jp/app/pilll-%E3%83%94%E3%83%AB%E3%83%AA%E3%83%9E%E3%82%A4%E3%83%B3%E3%83%80%E3%83%BC%E3%81%B4%E3%82%8B%E3%82%8B/id1405931017)
 
 ## App
-- [利用規約](https://github.com/bannzai/Pilll/blob/main/Terms.md)
-- [プライバシーポリシー](https://github.com/bannzai/Pilll/blob/main/PrivacyPolicy.md)
-- [特定商取引法に基づく表示](https://github.com/bannzai/Pilll/blob/main/SpecifiedCommercialTransactionAct.md)
+- [利用規約](https://bannzai.github.io/Pilll/Terms)
+- [プライバシーポリシー](https://bannzai.github.io/Pilll/PrivacyPolicy)
+- [特定商取引法に基づく表示](https://bannzai.github.io/Pilll/SpecifiedCommercialTransactionAct.md)
 
 ## LICENSE
 ライセンスと書いておきながら規格に沿ったものの提示は無いです。原則[No LICENSE](https://choosealicense.com/no-permission/)です。つまり著作権と同等の権利を主張します。
