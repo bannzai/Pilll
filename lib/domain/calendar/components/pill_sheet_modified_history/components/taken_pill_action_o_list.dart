@@ -4,9 +4,6 @@ import 'package:pilll/entity/pill_sheet.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/entity/pill_sheet_modified_history_value.dart';
 
-final double _oWidth = 17;
-final double _halfOWidth = 13;
-
 class TakenPillActionOList extends StatelessWidget {
   final TakenPillValue value;
   final PillSheet afterPillSheet;
@@ -25,7 +22,7 @@ class TakenPillActionOList extends StatelessWidget {
       child: Row(
           mainAxisSize: MainAxisSize.min,
           mainAxisAlignment: MainAxisAlignment.start,
-          children: List.generate(3, (index) {
+          children: List.generate(4, (index) {
             final inRestDuration = _inRestDuration(
                 afterPillSheet, value.afterLastTakenPillNumber, index);
             if (index == 0) {
@@ -39,7 +36,8 @@ class TakenPillActionOList extends StatelessWidget {
                       : SvgPicture.asset("images/half_o.svg"),
                   index);
             } else {
-              return SvgPicture.asset("images/dots.svg");
+              return _dotsWidgetWithTransform(
+                  SvgPicture.asset("images/dots.svg"));
             }
           }).toList()),
     );
@@ -48,6 +46,15 @@ class TakenPillActionOList extends StatelessWidget {
   Widget _halfOWidgetWithTransform(Widget picture, int index) {
     return Container(
       transform: Matrix4.translationValues(-3.0 * index, 0, 0),
+      child: Container(
+        child: picture,
+      ),
+    );
+  }
+
+  Widget _dotsWidgetWithTransform(Widget picture) {
+    return Container(
+      transform: Matrix4.translationValues(-1.0 * 3, 0, 0),
       child: Container(
         child: picture,
       ),
