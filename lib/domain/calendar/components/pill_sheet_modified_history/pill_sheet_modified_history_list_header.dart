@@ -13,38 +13,47 @@ class PillSheetModifiedHisotiryListHeader extends StatelessWidget {
     return Padding(
       padding: const EdgeInsets.only(right: 8),
       child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           SizedBox(
             width: PillSheetModifiedHistoryTakenActionLayoutWidths.leading,
           ),
+          Spacer(),
           Container(
-            width: PillSheetModifiedHistoryTakenActionLayoutWidths.takenMark,
-            child: Text(
-              "服用時間",
-              style: TextStyle(
-                color: TextColor.main,
-                fontFamily: FontFamily.japanese,
-                fontSize: 12,
-                fontWeight: FontWeight.w400,
-              ),
-              textAlign: TextAlign.start,
-            ),
-          ),
-          Container(
-            constraints: BoxConstraints(
-              maxWidth:
-                  PillSheetModifiedHistoryTakenActionLayoutWidths.takenMark,
-            ),
-            child: Text(
-              "服用済み",
-              style: TextStyle(
-                color: TextColor.main,
-                fontFamily: FontFamily.japanese,
-                fontSize: 12,
-                fontWeight: FontWeight.w400,
-              ),
-              textAlign: TextAlign.center,
+            width: PillSheetModifiedHistoryTakenActionLayoutWidths.trailing,
+            child: Row(
+              children: [
+                Container(
+                  width:
+                      PillSheetModifiedHistoryTakenActionLayoutWidths.takenMark,
+                  child: Text(
+                    "服用時間",
+                    style: TextStyle(
+                      color: TextColor.main,
+                      fontFamily: FontFamily.japanese,
+                      fontSize: 12,
+                      fontWeight: FontWeight.w400,
+                    ),
+                    textAlign: TextAlign.start,
+                  ),
+                ),
+                SizedBox(width: 24),
+                Container(
+                  constraints: BoxConstraints(
+                    maxWidth: PillSheetModifiedHistoryTakenActionLayoutWidths
+                        .takenMark,
+                  ),
+                  child: Text(
+                    "服用済み",
+                    style: TextStyle(
+                      color: TextColor.main,
+                      fontFamily: FontFamily.japanese,
+                      fontSize: 12,
+                      fontWeight: FontWeight.w400,
+                    ),
+                    textAlign: TextAlign.center,
+                  ),
+                ),
+              ],
             ),
           ),
         ],
