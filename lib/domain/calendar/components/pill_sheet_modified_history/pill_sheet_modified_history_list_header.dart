@@ -23,7 +23,6 @@ class PillSheetModifiedHisotiryListHeader extends StatelessWidget {
             child: Row(
               children: [
                 Container(
-                  padding: EdgeInsets.only(left: 7),
                   width:
                       PillSheetModifiedHistoryTakenActionLayoutWidths.takenMark,
                   child: Text(

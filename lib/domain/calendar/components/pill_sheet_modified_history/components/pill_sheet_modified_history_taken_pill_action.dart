@@ -63,7 +63,10 @@ class PillSheetModifiedHistoryTakenPillAction extends StatelessWidget {
                         textAlign: TextAlign.start,
                       ),
                     ),
+                    Spacer(),
                     Container(
+                      width: PillSheetModifiedHistoryTakenActionLayoutWidths
+                          .takenMark,
                       padding: EdgeInsets.only(left: 8),
                       child: TakenPillActionOList(
                           value: value, afterPillSheet: afterPillSheet),

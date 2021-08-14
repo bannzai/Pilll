@@ -31,7 +31,7 @@ class PillSheetModifiedHistoryDate extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      decoration: BoxDecoration(border: Border.all()),
+      width: PillSheetModifiedHistoryTakenActionLayoutWidths.leading,
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.baseline,
         textBaseline: TextBaseline.alphabetic,
