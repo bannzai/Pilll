@@ -1,6 +1,8 @@
 <head>
-  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+  <link rel="shortcut icon" type="image/x-icon" href="./homepage/favicon.ico">
 </head>
+
+<img width="320px" src="./homepage/homepage.png" />
 
 # Pilll
 ![Test](https://github.com/bannzai/Pilll/workflows/Test/badge.svg)
