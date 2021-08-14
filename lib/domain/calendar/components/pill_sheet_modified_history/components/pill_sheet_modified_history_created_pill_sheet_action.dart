@@ -19,27 +19,33 @@ class PillSheetModifiedHistoryCreatePillSheetAction extends StatelessWidget {
       child: Padding(
         padding: const EdgeInsets.only(top: 4, bottom: 4),
         child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          mainAxisAlignment: MainAxisAlignment.start,
           children: [
             PillSheetModifiedHistoryDate(
               estimatedEventCausingDate: estimatedEventCausingDate,
               beforePillNumber: null,
               afterPillNumber: null,
             ),
+            Spacer(),
             Container(
-              child: Text(
-                "ピルシート追加",
-                style: TextStyle(
-                  color: TextColor.main,
-                  fontSize: 14,
-                  fontFamily: FontFamily.japanese,
-                  fontWeight: FontWeight.w400,
-                ),
-                textAlign: TextAlign.start,
+              width: PillSheetModifiedHistoryTakenActionLayoutWidths.trailing,
+              child: Row(
+                children: [
+                  Container(
+                    child: Text(
+                      "ピルシート追加",
+                      style: TextStyle(
+                        color: TextColor.main,
+                        fontSize: 14,
+                        fontFamily: FontFamily.japanese,
+                        fontWeight: FontWeight.w400,
+                      ),
+                      textAlign: TextAlign.start,
+                    ),
+                  ),
+                  Spacer(),
+                ],
               ),
-            ),
-            Container(
-              width: PillSheetModifiedHistoryTakenActionLayoutWidths.takenMark,
             ),
           ],
         ),
