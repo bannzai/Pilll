@@ -34,33 +34,42 @@ class PillSheetModifiedHistoryAutomaticallyRecordedLastTakenDateAction
               beforePillNumber: value.beforeLastTakenPillNumber,
               afterPillNumber: value.afterLastTakenPillNumber,
             ),
+            Spacer(),
             Container(
-              padding: EdgeInsets.only(left: 8),
-              child: Text(
-                "${value.afterLastTakenPillNumber}番",
-                style: TextStyle(
-                  color: TextColor.main,
-                  fontSize: 12,
-                  fontFamily: FontFamily.japanese,
-                  fontWeight: FontWeight.w400,
-                ),
-                textAlign: TextAlign.center,
-              ),
-            ),
-            Container(
-              constraints: BoxConstraints(
-                maxWidth:
-                    PillSheetModifiedHistoryTakenActionLayoutWidths.takenMark,
-              ),
-              padding: EdgeInsets.only(left: 8),
-              child: Text(
-                pillSheetType.notTakenWord,
-                style: TextStyle(
-                  color: TextColor.main,
-                  fontFamily: FontFamily.japanese,
-                  fontSize: 12,
-                  fontWeight: FontWeight.w400,
-                ),
+              width: PillSheetModifiedHistoryTakenActionLayoutWidths.trailing,
+              child: Row(
+                children: [
+                  Container(
+                    padding: EdgeInsets.only(left: 8),
+                    child: Text(
+                      "${value.afterLastTakenPillNumber}番",
+                      style: TextStyle(
+                        color: TextColor.main,
+                        fontSize: 12,
+                        fontFamily: FontFamily.japanese,
+                        fontWeight: FontWeight.w400,
+                      ),
+                      textAlign: TextAlign.center,
+                    ),
+                  ),
+                  SizedBox(width: 24),
+                  Container(
+                    constraints: BoxConstraints(
+                      maxWidth: PillSheetModifiedHistoryTakenActionLayoutWidths
+                          .takenMark,
+                    ),
+                    padding: EdgeInsets.only(left: 8),
+                    child: Text(
+                      pillSheetType.notTakenWord,
+                      style: TextStyle(
+                        color: TextColor.main,
+                        fontFamily: FontFamily.japanese,
+                        fontSize: 12,
+                        fontWeight: FontWeight.w400,
+                      ),
+                    ),
+                  ),
+                ],
               ),
             ),
           ],
