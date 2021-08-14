@@ -44,12 +44,13 @@ class PillSheetModifiedHistoryTakenPillAction extends StatelessWidget {
               ),
               Spacer(),
               Container(
-                width: PillSheetModifiedHistoryTakenActionLayoutWidths.trailing,
+                constraints: BoxConstraints(
+                  maxWidth:
+                      PillSheetModifiedHistoryTakenActionLayoutWidths.trailing,
+                ),
                 child: Row(
                   children: [
                     Container(
-                      width: PillSheetModifiedHistoryTakenActionLayoutWidths
-                          .takenTime,
                       child: Text(
                         time,
                         style: TextStyle(
@@ -62,10 +63,7 @@ class PillSheetModifiedHistoryTakenPillAction extends StatelessWidget {
                         textAlign: TextAlign.start,
                       ),
                     ),
-                    SizedBox(width: 24),
                     Container(
-                      width: PillSheetModifiedHistoryTakenActionLayoutWidths
-                          .takenMark,
                       padding: EdgeInsets.only(left: 8),
                       child: TakenPillActionOList(
                           value: value, afterPillSheet: afterPillSheet),

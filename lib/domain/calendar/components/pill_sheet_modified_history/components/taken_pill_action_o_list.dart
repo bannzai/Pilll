@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:pilll/entity/pill_sheet.dart';
@@ -16,8 +18,9 @@ class TakenPillActionOList extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final count =
-        value.afterLastTakenPillNumber - (value.beforeLastTakenPillNumber ?? 1);
+    final count = max(
+        value.afterLastTakenPillNumber - (value.beforeLastTakenPillNumber ?? 1),
+        1);
     return Container(
       child: Row(
           mainAxisSize: MainAxisSize.min,

@@ -5,8 +5,8 @@ import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/entity/weekday.dart';
 
 abstract class PillSheetModifiedHistoryTakenActionLayoutWidths {
-  static final double leading = 160;
-  static final double trailing = 140;
+  static final double leading = 140;
+  static final double trailing = 150;
   static final double takenTime = 53;
   static final double takenMark = 61;
   static final double actionDescription = 100;
@@ -31,9 +31,7 @@ class PillSheetModifiedHistoryDate extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      constraints: BoxConstraints(
-        maxWidth: PillSheetModifiedHistoryTakenActionLayoutWidths.leading,
-      ),
+      decoration: BoxDecoration(border: Border.all()),
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.baseline,
         textBaseline: TextBaseline.alphabetic,
@@ -76,7 +74,7 @@ class PillSheetModifiedHistoryDate extends StatelessWidget {
           ),
           SizedBox(width: 16),
           Container(
-            width: 50,
+            width: 40,
             child: Text(
               "$_pillNumberWord",
               style: TextStyle(
