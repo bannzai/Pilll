@@ -1,3 +1,7 @@
+<head>
+  <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+</head>
+
 # Pilll
 ![Test](https://github.com/bannzai/Pilll/workflows/Test/badge.svg)
 
