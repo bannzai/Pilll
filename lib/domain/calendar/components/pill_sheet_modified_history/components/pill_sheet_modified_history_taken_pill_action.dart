@@ -36,34 +36,42 @@ class PillSheetModifiedHistoryTakenPillAction extends StatelessWidget {
         child: Padding(
           padding: const EdgeInsets.only(top: 4, bottom: 4),
           child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               PillSheetModifiedHistoryDate(
                 estimatedEventCausingDate: estimatedEventCausingDate,
                 beforePillNumber: value.beforeLastTakenPillNumber,
                 afterPillNumber: value.afterLastTakenPillNumber,
               ),
+              Spacer(),
               Container(
-                width:
-                    PillSheetModifiedHistoryTakenActionLayoutWidths.takenTime,
-                child: Text(
-                  time,
-                  style: TextStyle(
-                    decoration: TextDecoration.underline,
-                    color: TextColor.main,
-                    fontSize: 15,
-                    fontFamily: FontFamily.number,
-                    fontWeight: FontWeight.w400,
-                  ),
-                  textAlign: TextAlign.start,
+                width: PillSheetModifiedHistoryTakenActionLayoutWidths.trailing,
+                child: Row(
+                  children: [
+                    Container(
+                      width: PillSheetModifiedHistoryTakenActionLayoutWidths
+                          .takenTime,
+                      child: Text(
+                        time,
+                        style: TextStyle(
+                          decoration: TextDecoration.underline,
+                          color: TextColor.main,
+                          fontSize: 15,
+                          fontFamily: FontFamily.number,
+                          fontWeight: FontWeight.w400,
+                        ),
+                        textAlign: TextAlign.start,
+                      ),
+                    ),
+                    SizedBox(width: 24),
+                    Container(
+                      width: PillSheetModifiedHistoryTakenActionLayoutWidths
+                          .takenMark,
+                      padding: EdgeInsets.only(left: 8),
+                      child: TakenPillActionOList(
+                          value: value, afterPillSheet: afterPillSheet),
+                    ),
+                  ],
                 ),
-              ),
-              Container(
-                width:
-                    PillSheetModifiedHistoryTakenActionLayoutWidths.takenMark,
-                padding: EdgeInsets.only(left: 8),
-                child: TakenPillActionOList(
-                    value: value, afterPillSheet: afterPillSheet),
               ),
             ],
           ),
