@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
-import 'package:pilll/domain/calendar/components/pill_sheet_modified_history/components/pill_sheet_modified_history_taken_action_layout.dart';
+import 'package:pilll/domain/calendar/components/pill_sheet_modified_history/components/pill_sheet_modified_history_date_component.dart';
 import 'package:pilll/entity/pill_sheet_modified_history_value.dart';
 
 class PillSheetModifiedHistoryDeletedPillSheetAction extends StatelessWidget {
