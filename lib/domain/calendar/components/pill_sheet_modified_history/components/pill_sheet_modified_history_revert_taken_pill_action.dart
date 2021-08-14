@@ -23,27 +23,32 @@ class PillSheetModifiedHistoryRevertTakenPillAction extends StatelessWidget {
       child: Padding(
         padding: const EdgeInsets.only(top: 4, bottom: 4),
         child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             PillSheetModifiedHistoryDate(
               estimatedEventCausingDate: estimatedEventCausingDate,
               beforePillNumber: value.beforeLastTakenPillNumber,
               afterPillNumber: value.afterLastTakenPillNumber,
             ),
+            Spacer(),
             Container(
-              child: Text(
-                "服用取り消し",
-                style: TextStyle(
-                  color: TextColor.main,
-                  fontSize: 14,
-                  fontFamily: FontFamily.japanese,
-                  fontWeight: FontWeight.w400,
-                ),
-                textAlign: TextAlign.start,
+              width: PillSheetModifiedHistoryTakenActionLayoutWidths.trailing,
+              child: Row(
+                children: [
+                  Container(
+                    child: Text(
+                      "服用取り消し",
+                      style: TextStyle(
+                        color: TextColor.main,
+                        fontSize: 14,
+                        fontFamily: FontFamily.japanese,
+                        fontWeight: FontWeight.w400,
+                      ),
+                      textAlign: TextAlign.start,
+                    ),
+                  ),
+                  Spacer(),
+                ],
               ),
-            ),
-            Container(
-              width: PillSheetModifiedHistoryTakenActionLayoutWidths.takenMark,
             ),
           ],
         ),
