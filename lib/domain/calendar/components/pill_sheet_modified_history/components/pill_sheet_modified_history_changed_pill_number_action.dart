@@ -30,20 +30,26 @@ class PillSheetModifiedHistoryChangedPillNumberAction extends StatelessWidget {
               beforePillNumber: value.beforeLastTakenPillNumber,
               afterPillNumber: value.afterLastTakenPillNumber,
             ),
+            Spacer(),
             Container(
-              child: Text(
-                "ピル番号変更",
-                style: TextStyle(
-                  color: TextColor.main,
-                  fontSize: 14,
-                  fontFamily: FontFamily.japanese,
-                  fontWeight: FontWeight.w400,
-                ),
-                textAlign: TextAlign.start,
+              width: PillSheetModifiedHistoryTakenActionLayoutWidths.trailing,
+              child: Row(
+                children: [
+                  Container(
+                    child: Text(
+                      "ピル番号変更",
+                      style: TextStyle(
+                        color: TextColor.main,
+                        fontSize: 14,
+                        fontFamily: FontFamily.japanese,
+                        fontWeight: FontWeight.w400,
+                      ),
+                      textAlign: TextAlign.start,
+                    ),
+                  ),
+                  Spacer(),
+                ],
               ),
-            ),
-            Container(
-              width: PillSheetModifiedHistoryTakenActionLayoutWidths.takenMark,
             ),
           ],
         ),
