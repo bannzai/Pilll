@@ -16,13 +16,13 @@ class TakenPillActionOList extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // final count =
-    // value.afterLastTakenPillNumber - (value.beforeLastTakenPillNumber ?? 1);
+    final count =
+        value.afterLastTakenPillNumber - (value.beforeLastTakenPillNumber ?? 1);
     return Container(
       child: Row(
           mainAxisSize: MainAxisSize.min,
-          mainAxisAlignment: MainAxisAlignment.start,
-          children: List.generate(4, (index) {
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: List.generate(count, (index) {
             final inRestDuration = _inRestDuration(
                 afterPillSheet, value.afterLastTakenPillNumber, index);
             if (index == 0) {
