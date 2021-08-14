@@ -43,9 +43,10 @@ class PillSheetModifiedHistoryTakenPillAction extends StatelessWidget {
                 beforePillNumber: value.beforeLastTakenPillNumber,
                 afterPillNumber: value.afterLastTakenPillNumber,
               ),
-              Spacer(),
-              PillSheetModifiedHistoryTrailingTakenTimeAndTakenMark(
-                left: Text(
+              Container(
+                width:
+                    PillSheetModifiedHistoryTakenActionLayoutWidths.takenTime,
+                child: Text(
                   time,
                   style: TextStyle(
                     decoration: TextDecoration.underline,
@@ -56,7 +57,12 @@ class PillSheetModifiedHistoryTakenPillAction extends StatelessWidget {
                   ),
                   textAlign: TextAlign.start,
                 ),
-                right: TakenPillActionOList(
+              ),
+              Container(
+                width:
+                    PillSheetModifiedHistoryTakenActionLayoutWidths.takenMark,
+                padding: EdgeInsets.only(left: 8),
+                child: TakenPillActionOList(
                     value: value, afterPillSheet: afterPillSheet),
               ),
             ],

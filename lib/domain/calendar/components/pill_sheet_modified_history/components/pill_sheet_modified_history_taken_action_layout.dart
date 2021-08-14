@@ -6,9 +6,8 @@ import 'package:pilll/entity/weekday.dart';
 
 abstract class PillSheetModifiedHistoryTakenActionLayoutWidths {
   static final double leading = 160;
-  static final double trailing = 140;
   static final double takenTime = 53;
-  static final double takenMark = 65;
+  static final double takenMark = 61;
   static final double actionDescription = 100;
 }
 
@@ -31,11 +30,8 @@ class PillSheetModifiedHistoryDate extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      constraints: BoxConstraints(
-        maxWidth: PillSheetModifiedHistoryTakenActionLayoutWidths.leading,
-      ),
+      width: PillSheetModifiedHistoryTakenActionLayoutWidths.leading,
       child: Row(
-        mainAxisSize: MainAxisSize.min,
         crossAxisAlignment: CrossAxisAlignment.baseline,
         textBaseline: TextBaseline.alphabetic,
         mainAxisAlignment: MainAxisAlignment.start,
@@ -108,48 +104,5 @@ class PillSheetModifiedHistoryDate extends StatelessWidget {
       return "$beforePillNumber番";
     }
     return "$beforePillNumber→$afterPillNumber番";
-  }
-}
-
-class PillSheetModifiedHistoryTrailingTakenTimeAndTakenMark
-    extends StatelessWidget {
-  final Widget left;
-  final Widget? right;
-
-  const PillSheetModifiedHistoryTrailingTakenTimeAndTakenMark({
-    Key? key,
-    required this.left,
-    required this.right,
-  }) : super(key: key);
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      width: PillSheetModifiedHistoryTakenActionLayoutWidths.trailing,
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.start,
-        children: [
-          Container(
-            width: PillSheetModifiedHistoryTakenActionLayoutWidths.takenTime,
-            child: left,
-          ),
-          ...() {
-            final right = this.right;
-            if (right != null) {
-              return [
-                SizedBox(width: 24),
-                Container(
-                  width:
-                      PillSheetModifiedHistoryTakenActionLayoutWidths.takenMark,
-                  padding: EdgeInsets.only(left: 8),
-                  child: right,
-                ),
-              ];
-            } else {
-              return [Spacer()];
-            }
-          }(),
-        ],
-      ),
-    );
   }
 }
