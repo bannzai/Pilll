@@ -23,43 +23,27 @@ class TakenPillActionOList extends StatelessWidget {
     // value.afterLastTakenPillNumber - (value.beforeLastTakenPillNumber ?? 1);
     return Container(
       child: Row(
+          mainAxisSize: MainAxisSize.min,
           mainAxisAlignment: MainAxisAlignment.start,
           children: List.generate(3, (index) {
             final inRestDuration = _inRestDuration(
                 afterPillSheet, value.afterLastTakenPillNumber, index);
             if (index == 0) {
-              return _centerWidget(!inRestDuration
-                  ? SvgPicture.asset(
-                      "images/dash_o.svg",
-                    )
-                  : SvgPicture.asset(
-                      "images/o.svg",
-                    ));
+              return inRestDuration
+                  ? SvgPicture.asset("images/dash_o.svg")
+                  : SvgPicture.asset("images/o.svg");
             } else {
-              return _shiftWidget(
-                  !inRestDuration
+              return _halfOWidgetWithTransform(
+                  inRestDuration
                       ? SvgPicture.asset("images/dash_half_o.svg")
-                      : SvgPicture.asset(
-                          "images/half_o.svg",
-                        ),
+                      : SvgPicture.asset("images/half_o.svg"),
                   index);
             }
           }).toList()),
     );
   }
 
-  Widget _centerWidget(Widget picture) {
-    return picture;
-    return Align(
-      alignment: Alignment.center,
-      child: Container(
-        child: picture,
-      ),
-    );
-  }
-
-  Widget _shiftWidget(Widget picture, int index) {
-    final double x = (_oWidth / 2) * (_halfOWidth / _oWidth * index);
+  Widget _halfOWidgetWithTransform(Widget picture, int index) {
     return Container(
       transform: Matrix4.translationValues(-3.0 * index, 0, 0),
       child: Container(
