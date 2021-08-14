@@ -10,7 +10,7 @@ class PillSheetModifiedHisotiryListHeader extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Padding(
+    return Container(
       padding: const EdgeInsets.only(right: 8),
       child: Row(
         children: [
