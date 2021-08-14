@@ -129,10 +129,7 @@ class PillSheetModifiedHistoryTrailingTakenTimeAndTakenMark
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
           Container(
-            constraints: BoxConstraints(
-              minWidth:
-                  PillSheetModifiedHistoryTakenActionLayoutWidths.takenTime,
-            ),
+            width: PillSheetModifiedHistoryTakenActionLayoutWidths.takenTime,
             child: left,
           ),
           ...() {
@@ -141,6 +138,8 @@ class PillSheetModifiedHistoryTrailingTakenTimeAndTakenMark
               return [
                 SizedBox(width: 24),
                 Container(
+                  width:
+                      PillSheetModifiedHistoryTakenActionLayoutWidths.takenMark,
                   padding: EdgeInsets.only(left: 8),
                   child: right,
                 ),

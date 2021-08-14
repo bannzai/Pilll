@@ -26,20 +26,20 @@ class PillSheetModifiedHistoryCreatePillSheetAction extends StatelessWidget {
               beforePillNumber: null,
               afterPillNumber: null,
             ),
-            PillSheetModifiedHistoryTrailingTakenTimeAndTakenMark(
-              left: Container(
-                child: Text(
-                  "ピルシート追加",
-                  style: TextStyle(
-                    color: TextColor.main,
-                    fontSize: 14,
-                    fontFamily: FontFamily.japanese,
-                    fontWeight: FontWeight.w400,
-                  ),
-                  textAlign: TextAlign.start,
+            Container(
+              child: Text(
+                "ピルシート追加",
+                style: TextStyle(
+                  color: TextColor.main,
+                  fontSize: 14,
+                  fontFamily: FontFamily.japanese,
+                  fontWeight: FontWeight.w400,
                 ),
+                textAlign: TextAlign.start,
               ),
-              right: null,
+            ),
+            Container(
+              width: PillSheetModifiedHistoryTakenActionLayoutWidths.takenMark,
             ),
           ],
         ),
