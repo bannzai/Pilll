@@ -22,7 +22,6 @@ class TakenPillActionOList extends StatelessWidget {
     // final count =
     // value.afterLastTakenPillNumber - (value.beforeLastTakenPillNumber ?? 1);
     return Container(
-      decoration: BoxDecoration(border: Border.all()),
       child: Row(
           mainAxisAlignment: MainAxisAlignment.start,
           children: List.generate(3, (index) {
