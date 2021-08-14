@@ -60,10 +60,9 @@ class TakenPillActionOList extends StatelessWidget {
   }
 
   Widget _shiftWidget(Widget picture, int index) {
-    return picture;
     final double x = (_oWidth / 2) * (_halfOWidth / _oWidth * index);
-    return Align(
-      alignment: Alignment(0.6 * index, 0),
+    return Container(
+      transform: Matrix4.translationValues(-3.0 * index, 0, 0),
       child: Container(
         child: picture,
       ),
