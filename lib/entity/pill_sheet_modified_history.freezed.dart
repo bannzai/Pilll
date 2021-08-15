@@ -23,7 +23,7 @@ class _$PillSheetModifiedHistoryTearOff {
 
   _PillSheetModifiedHistory call(
       {@JsonKey(includeIfNull: false, toJson: toNull)
-          required String id,
+          required String? id,
       required String actionType,
       required String userID,
       required PillSheetModifiedHistoryValue value,
@@ -60,7 +60,7 @@ const $PillSheetModifiedHistory = _$PillSheetModifiedHistoryTearOff();
 /// @nodoc
 mixin _$PillSheetModifiedHistory {
   @JsonKey(includeIfNull: false, toJson: toNull)
-  String get id => throw _privateConstructorUsedError;
+  String? get id => throw _privateConstructorUsedError;
   String get actionType => throw _privateConstructorUsedError;
   String get userID => throw _privateConstructorUsedError;
   PillSheetModifiedHistoryValue get value => throw _privateConstructorUsedError;
@@ -90,7 +90,7 @@ abstract class $PillSheetModifiedHistoryCopyWith<$Res> {
       _$PillSheetModifiedHistoryCopyWithImpl<$Res>;
   $Res call(
       {@JsonKey(includeIfNull: false, toJson: toNull)
-          String id,
+          String? id,
       String actionType,
       String userID,
       PillSheetModifiedHistoryValue value,
@@ -134,7 +134,7 @@ class _$PillSheetModifiedHistoryCopyWithImpl<$Res>
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       actionType: actionType == freezed
           ? _value.actionType
           : actionType // ignore: cast_nullable_to_non_nullable
@@ -209,7 +209,7 @@ abstract class _$PillSheetModifiedHistoryCopyWith<$Res>
   @override
   $Res call(
       {@JsonKey(includeIfNull: false, toJson: toNull)
-          String id,
+          String? id,
       String actionType,
       String userID,
       PillSheetModifiedHistoryValue value,
@@ -259,7 +259,7 @@ class __$PillSheetModifiedHistoryCopyWithImpl<$Res>
       id: id == freezed
           ? _value.id
           : id // ignore: cast_nullable_to_non_nullable
-              as String,
+              as String?,
       actionType: actionType == freezed
           ? _value.actionType
           : actionType // ignore: cast_nullable_to_non_nullable
@@ -325,7 +325,7 @@ class _$_PillSheetModifiedHistory extends _PillSheetModifiedHistory {
 
   @override
   @JsonKey(includeIfNull: false, toJson: toNull)
-  final String id;
+  final String? id;
   @override
   final String actionType;
   @override
@@ -420,7 +420,7 @@ class _$_PillSheetModifiedHistory extends _PillSheetModifiedHistory {
 abstract class _PillSheetModifiedHistory extends PillSheetModifiedHistory {
   factory _PillSheetModifiedHistory(
       {@JsonKey(includeIfNull: false, toJson: toNull)
-          required String id,
+          required String? id,
       required String actionType,
       required String userID,
       required PillSheetModifiedHistoryValue value,
@@ -439,7 +439,7 @@ abstract class _PillSheetModifiedHistory extends PillSheetModifiedHistory {
 
   @override
   @JsonKey(includeIfNull: false, toJson: toNull)
-  String get id => throw _privateConstructorUsedError;
+  String? get id => throw _privateConstructorUsedError;
   @override
   String get actionType => throw _privateConstructorUsedError;
   @override

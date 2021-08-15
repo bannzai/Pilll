@@ -9,7 +9,7 @@ part of 'pill_sheet_modified_history.dart';
 _$_PillSheetModifiedHistory _$_$_PillSheetModifiedHistoryFromJson(
     Map<String, dynamic> json) {
   return _$_PillSheetModifiedHistory(
-    id: json['id'] as String,
+    id: json['id'] as String?,
     actionType: json['actionType'] as String,
     userID: json['userID'] as String,
     value: PillSheetModifiedHistoryValue.fromJson(

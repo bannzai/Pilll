@@ -29,6 +29,10 @@ enum PillSheetModifiedActionType {
   endedPillSheet
 }
 
+extension PillSheetModifiedActionTypeFunctions on PillSheetModifiedActionType {
+  String get name => this.toString().split(".").last;
+}
+
 // PillSheetModifiedHistory only create on backend
 // If you want to make it from the client side, please match it with the property of backend
 @freezed
@@ -36,7 +40,7 @@ abstract class PillSheetModifiedHistory with _$PillSheetModifiedHistory {
   @JsonSerializable(explicitToJson: true)
   factory PillSheetModifiedHistory({
     @JsonKey(includeIfNull: false, toJson: toNull)
-        required String id,
+        required String? id,
     required String actionType,
     required String userID,
     required PillSheetModifiedHistoryValue value,
@@ -65,6 +69,6 @@ abstract class PillSheetModifiedHistory with _$PillSheetModifiedHistory {
       _$_$_PillSheetModifiedHistoryToJson(this as _$_PillSheetModifiedHistory);
 
   PillSheetModifiedActionType? get enumActionType =>
-      PillSheetModifiedActionType.values.firstWhereOrNull(
-          (element) => element.toString().split(".").last == actionType);
+      PillSheetModifiedActionType.values
+          .firstWhereOrNull((element) => element.name == actionType);
 }
