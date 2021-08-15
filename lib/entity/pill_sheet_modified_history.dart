@@ -40,12 +40,22 @@ abstract class PillSheetModifiedHistory with _$PillSheetModifiedHistory {
     required String actionType,
     required String userID,
     required PillSheetModifiedHistoryValue value,
+    @Default(null)
+        String? beforeID,
+    @Default(null)
+        PillSheet? before,
+    required String afterID,
     required PillSheet after,
     @JsonKey(
       fromJson: NonNullTimestampConverter.timestampToDateTime,
       toJson: NonNullTimestampConverter.dateTimeToTimestamp,
     )
         required DateTime estimatedEventCausingDate,
+    @JsonKey(
+      fromJson: NonNullTimestampConverter.timestampToDateTime,
+      toJson: NonNullTimestampConverter.dateTimeToTimestamp,
+    )
+        required DateTime createdAt,
   }) = _PillSheetModifiedHistory;
   const PillSheetModifiedHistory._();
 
