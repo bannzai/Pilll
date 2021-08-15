@@ -33,7 +33,6 @@ class _$RecordPageStateTearOff {
       DateTime? discountEntitlementDeadlineDate,
       bool recommendedSignupNotificationIsAlreadyShow = true,
       bool premiumTrialGuideNotificationIsClosed = true,
-      String? userID,
       Object? exception}) {
     return _RecordPageState(
       entity: entity,
@@ -54,7 +53,6 @@ class _$RecordPageStateTearOff {
           recommendedSignupNotificationIsAlreadyShow,
       premiumTrialGuideNotificationIsClosed:
           premiumTrialGuideNotificationIsClosed,
-      userID: userID,
       exception: exception,
     );
   }
@@ -84,7 +82,6 @@ mixin _$RecordPageState {
       throw _privateConstructorUsedError;
   bool get premiumTrialGuideNotificationIsClosed =>
       throw _privateConstructorUsedError;
-  String? get userID => throw _privateConstructorUsedError;
   Object? get exception => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
@@ -114,7 +111,6 @@ abstract class $RecordPageStateCopyWith<$Res> {
       DateTime? discountEntitlementDeadlineDate,
       bool recommendedSignupNotificationIsAlreadyShow,
       bool premiumTrialGuideNotificationIsClosed,
-      String? userID,
       Object? exception});
 
   $PillSheetCopyWith<$Res>? get entity;
@@ -148,7 +144,6 @@ class _$RecordPageStateCopyWithImpl<$Res>
     Object? discountEntitlementDeadlineDate = freezed,
     Object? recommendedSignupNotificationIsAlreadyShow = freezed,
     Object? premiumTrialGuideNotificationIsClosed = freezed,
-    Object? userID = freezed,
     Object? exception = freezed,
   }) {
     return _then(_value.copyWith(
@@ -219,10 +214,6 @@ class _$RecordPageStateCopyWithImpl<$Res>
               ? _value.premiumTrialGuideNotificationIsClosed
               : premiumTrialGuideNotificationIsClosed // ignore: cast_nullable_to_non_nullable
                   as bool,
-      userID: userID == freezed
-          ? _value.userID
-          : userID // ignore: cast_nullable_to_non_nullable
-              as String?,
       exception: exception == freezed ? _value.exception : exception,
     ));
   }
@@ -274,7 +265,6 @@ abstract class _$RecordPageStateCopyWith<$Res>
       DateTime? discountEntitlementDeadlineDate,
       bool recommendedSignupNotificationIsAlreadyShow,
       bool premiumTrialGuideNotificationIsClosed,
-      String? userID,
       Object? exception});
 
   @override
@@ -312,7 +302,6 @@ class __$RecordPageStateCopyWithImpl<$Res>
     Object? discountEntitlementDeadlineDate = freezed,
     Object? recommendedSignupNotificationIsAlreadyShow = freezed,
     Object? premiumTrialGuideNotificationIsClosed = freezed,
-    Object? userID = freezed,
     Object? exception = freezed,
   }) {
     return _then(_RecordPageState(
@@ -383,10 +372,6 @@ class __$RecordPageStateCopyWithImpl<$Res>
               ? _value.premiumTrialGuideNotificationIsClosed
               : premiumTrialGuideNotificationIsClosed // ignore: cast_nullable_to_non_nullable
                   as bool,
-      userID: userID == freezed
-          ? _value.userID
-          : userID // ignore: cast_nullable_to_non_nullable
-              as String?,
       exception: exception == freezed ? _value.exception : exception,
     ));
   }
@@ -412,7 +397,6 @@ class _$_RecordPageState extends _RecordPageState {
       this.discountEntitlementDeadlineDate,
       this.recommendedSignupNotificationIsAlreadyShow = true,
       this.premiumTrialGuideNotificationIsClosed = true,
-      this.userID,
       this.exception})
       : super._();
 
@@ -460,13 +444,11 @@ class _$_RecordPageState extends _RecordPageState {
   @override
   final bool premiumTrialGuideNotificationIsClosed;
   @override
-  final String? userID;
-  @override
   final Object? exception;
 
   @override
   String toString() {
-    return 'RecordPageState(entity: $entity, setting: $setting, totalCountOfActionForTakenPill: $totalCountOfActionForTakenPill, firstLoadIsEnded: $firstLoadIsEnded, isPremium: $isPremium, isTrial: $isTrial, hasDiscountEntitlement: $hasDiscountEntitlement, isPillSheetFinishedInThePast: $isPillSheetFinishedInThePast, isAlreadyShowTiral: $isAlreadyShowTiral, shouldShowMigrateInfo: $shouldShowMigrateInfo, isLinkedLoginProvider: $isLinkedLoginProvider, beginTrialDate: $beginTrialDate, trialDeadlineDate: $trialDeadlineDate, discountEntitlementDeadlineDate: $discountEntitlementDeadlineDate, recommendedSignupNotificationIsAlreadyShow: $recommendedSignupNotificationIsAlreadyShow, premiumTrialGuideNotificationIsClosed: $premiumTrialGuideNotificationIsClosed, userID: $userID, exception: $exception)';
+    return 'RecordPageState(entity: $entity, setting: $setting, totalCountOfActionForTakenPill: $totalCountOfActionForTakenPill, firstLoadIsEnded: $firstLoadIsEnded, isPremium: $isPremium, isTrial: $isTrial, hasDiscountEntitlement: $hasDiscountEntitlement, isPillSheetFinishedInThePast: $isPillSheetFinishedInThePast, isAlreadyShowTiral: $isAlreadyShowTiral, shouldShowMigrateInfo: $shouldShowMigrateInfo, isLinkedLoginProvider: $isLinkedLoginProvider, beginTrialDate: $beginTrialDate, trialDeadlineDate: $trialDeadlineDate, discountEntitlementDeadlineDate: $discountEntitlementDeadlineDate, recommendedSignupNotificationIsAlreadyShow: $recommendedSignupNotificationIsAlreadyShow, premiumTrialGuideNotificationIsClosed: $premiumTrialGuideNotificationIsClosed, exception: $exception)';
   }
 
   @override
@@ -518,7 +500,6 @@ class _$_RecordPageState extends _RecordPageState {
                     other.discountEntitlementDeadlineDate, discountEntitlementDeadlineDate)) &&
             (identical(other.recommendedSignupNotificationIsAlreadyShow, recommendedSignupNotificationIsAlreadyShow) || const DeepCollectionEquality().equals(other.recommendedSignupNotificationIsAlreadyShow, recommendedSignupNotificationIsAlreadyShow)) &&
             (identical(other.premiumTrialGuideNotificationIsClosed, premiumTrialGuideNotificationIsClosed) || const DeepCollectionEquality().equals(other.premiumTrialGuideNotificationIsClosed, premiumTrialGuideNotificationIsClosed)) &&
-            (identical(other.userID, userID) || const DeepCollectionEquality().equals(other.userID, userID)) &&
             (identical(other.exception, exception) || const DeepCollectionEquality().equals(other.exception, exception)));
   }
 
@@ -543,7 +524,6 @@ class _$_RecordPageState extends _RecordPageState {
           .hash(recommendedSignupNotificationIsAlreadyShow) ^
       const DeepCollectionEquality()
           .hash(premiumTrialGuideNotificationIsClosed) ^
-      const DeepCollectionEquality().hash(userID) ^
       const DeepCollectionEquality().hash(exception);
 
   @JsonKey(ignore: true)
@@ -570,7 +550,6 @@ abstract class _RecordPageState extends RecordPageState {
       DateTime? discountEntitlementDeadlineDate,
       bool recommendedSignupNotificationIsAlreadyShow,
       bool premiumTrialGuideNotificationIsClosed,
-      String? userID,
       Object? exception}) = _$_RecordPageState;
   _RecordPageState._() : super._();
 
@@ -609,8 +588,6 @@ abstract class _RecordPageState extends RecordPageState {
   @override
   bool get premiumTrialGuideNotificationIsClosed =>
       throw _privateConstructorUsedError;
-  @override
-  String? get userID => throw _privateConstructorUsedError;
   @override
   Object? get exception => throw _privateConstructorUsedError;
   @override
