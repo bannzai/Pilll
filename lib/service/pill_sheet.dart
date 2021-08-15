@@ -53,16 +53,15 @@ class PillSheetService {
         .then((event) => event.docs.map((e) => _mapToEntity(e)).toList());
   }
 
-  Future<PillSheet> register(PillSheet model) {
+  Transaction registerTransaction(Transaction transaction, PillSheet model) {
     if (model.createdAt != null) throw PillSheetAlreadyExists();
     if (model.deletedAt != null) throw PillSheetAlreadyDeleted();
     final copied = model.copyWith(createdAt: DateTime.now());
 
     var json = copied.toJson();
     json.remove("id");
-    return _database.pillSheetsReference().add(json).then((value) {
-      return PillSheet.fromJson(json..addAll({"id": value.id}));
-    });
+    return transaction.set(
+        _database.pillSheetsReference().doc(), json, SetOptions(merge: true));
   }
 
   Future<void> delete(PillSheet pillSheet) {
