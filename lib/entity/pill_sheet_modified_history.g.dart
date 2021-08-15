@@ -11,7 +11,6 @@ _$_PillSheetModifiedHistory _$_$_PillSheetModifiedHistoryFromJson(
   return _$_PillSheetModifiedHistory(
     id: json['id'] as String?,
     actionType: json['actionType'] as String,
-    userID: json['userID'] as String,
     value: PillSheetModifiedHistoryValue.fromJson(
         json['value'] as Map<String, dynamic>),
     beforeID: json['beforeID'] as String?,
@@ -39,7 +38,6 @@ Map<String, dynamic> _$_$_PillSheetModifiedHistoryToJson(
 
   writeNotNull('id', toNull(instance.id));
   val['actionType'] = instance.actionType;
-  val['userID'] = instance.userID;
   val['value'] = instance.value.toJson();
   val['beforeID'] = instance.beforeID;
   val['before'] = instance.before?.toJson();

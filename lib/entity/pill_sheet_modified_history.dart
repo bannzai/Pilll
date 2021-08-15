@@ -42,7 +42,6 @@ abstract class PillSheetModifiedHistory with _$PillSheetModifiedHistory {
     @JsonKey(includeIfNull: false, toJson: toNull)
         required String? id,
     required String actionType,
-    required String userID,
     required PillSheetModifiedHistoryValue value,
     @Default(null)
         String? beforeID,
