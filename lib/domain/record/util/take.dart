@@ -2,19 +2,17 @@ import 'package:flutter/material.dart';
 import 'package:in_app_review/in_app_review.dart';
 import 'package:pilll/domain/modal/release_note.dart';
 import 'package:pilll/domain/record/record_page_store.dart';
-import 'package:pilll/entity/pill_sheet.dart';
 import 'package:pilll/error_log.dart';
 import 'package:pilll/util/shared_preference/keys.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-Future<void> effectAfterTaken(
-  BuildContext context,
-  PillSheet pillSheet,
-  DateTime takenDate,
-  RecordPageStore store,
-) async {
+Future<void> effectAfterTaken({
+  required BuildContext context,
+  required Future<void> Function() taken,
+  required RecordPageStore store,
+}) async {
   try {
-    await store.take(takenDate);
+    await taken();
     _requestInAppReview();
     await showReleaseNotePreDialog(context);
   } catch (exception, stack) {
