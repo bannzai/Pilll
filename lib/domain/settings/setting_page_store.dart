@@ -2,7 +2,6 @@ import 'dart:async';
 
 import 'package:pilll/database/batch.dart';
 import 'package:pilll/domain/record/record_page_store.dart';
-import 'package:pilll/entity/pill_sheet_modified_history.dart';
 import 'package:pilll/entity/setting.dart';
 import 'package:pilll/service/pill_sheet.dart';
 import 'package:pilll/service/pill_sheet_modified_history.dart';
