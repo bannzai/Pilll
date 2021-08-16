@@ -219,10 +219,18 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
     if (lastTakenDate == null) {
       return;
     }
+
+    final batch = _batchFactory.batch();
+
     final updated = pillSheet.copyWith(
         lastTakenDate: lastTakenDate.subtract(Duration(days: 1)));
-    await _service.update(updated);
-    state = state.copyWith(entity: updated);
+    _service.update(batch, updated);
+
+    final history = PillSheetModifiedHistoryServiceActionFactory
+        .createRevertTakenPillAction(before: pillSheet, after: updated);
+    _pillSheetModifiedHistoryService.add(batch, history);
+
+    await batch.commit();
   }
 
   DateTime calcBeginingDateFromNextTodayPillNumber(int pillNumber) {
