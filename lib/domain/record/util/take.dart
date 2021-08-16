@@ -13,9 +13,6 @@ Future<void> effectAfterTaken(
   DateTime takenDate,
   RecordPageStore store,
 ) async {
-  if (pillSheet.todayPillNumber == pillSheet.lastTakenPillNumber) {
-    return;
-  }
   try {
     await store.take(takenDate);
     _requestInAppReview();

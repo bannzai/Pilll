@@ -166,6 +166,9 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
     if (entity == null) {
       throw FormatException("pill sheet not found");
     }
+    if (entity.todayPillNumber == entity.lastTakenPillNumber) {
+      return;
+    }
     final updated = entity.copyWith(lastTakenDate: takenDate);
     FlutterAppBadger.removeBadge();
     await _service.update(updated);
