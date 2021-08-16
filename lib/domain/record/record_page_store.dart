@@ -13,6 +13,7 @@ import 'package:pilll/domain/record/record_page_state.dart';
 import 'package:pilll/service/pill_sheet_modified_history.dart';
 import 'package:pilll/service/setting.dart';
 import 'package:pilll/service/user.dart';
+import 'package:pilll/util/datetime/day.dart';
 import 'package:pilll/util/shared_preference/keys.dart';
 import 'package:riverpod/riverpod.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -169,6 +170,10 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
     FlutterAppBadger.removeBadge();
     await _service.update(updated);
     state = state.copyWith(entity: updated);
+  }
+
+  Future<void> taken() {
+    return _take(now());
   }
 
   Future<void> cancelTaken() async {
