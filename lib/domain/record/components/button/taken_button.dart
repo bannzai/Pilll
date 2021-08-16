@@ -29,7 +29,11 @@ class TakenButton extends HookWidget {
           "last_taken_pill_number": pillSheet.lastTakenPillNumber,
           "today_pill_number": pillSheet.todayPillNumber,
         });
-        await effectAfterTaken(parentContext, pillSheet, now(), store);
+        await effectAfterTaken(
+          context: parentContext,
+          taken: store.taken,
+          store: store,
+        );
       },
     );
   }
