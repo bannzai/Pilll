@@ -174,4 +174,29 @@ extension PillSheetModifiedHistoryServiceActionFactory
       before: before,
     );
   }
+
+  static PillSheetModifiedHistory createChangedPillNumberAction({
+    required PillSheet before,
+    required PillSheet after,
+  }) {
+    final afterID = after.id;
+    final afterLastTakenDate = after.lastTakenDate;
+    if (afterID == null || afterLastTakenDate == null) {
+      throw FormatException(
+          "unexpected after pill sheet id or lastTakenDate is null id: ${after.id}, lastTakenDate: ${after.lastTakenDate} for changedPillNumber action");
+    }
+    return _create(
+      actionType: PillSheetModifiedActionType.changedPillNumber,
+      value: PillSheetModifiedHistoryValue(
+        changedPillNumber: ChangedPillNumberValue(
+            afterBeginingDate: after.beginingDate,
+            beforeBeginingDate: before.beginingDate,
+            afterLastTakenPillNumber: after.lastTakenPillNumber,
+            beforeLastTakenPillNumber: before.lastTakenPillNumber),
+      ),
+      after: after,
+      afterID: afterID,
+      before: before,
+    );
+  }
 }

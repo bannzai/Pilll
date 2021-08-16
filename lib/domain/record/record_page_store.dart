@@ -1,6 +1,7 @@
 import 'dart:io' show Platform;
 import 'dart:async';
 
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter_app_badger/flutter_app_badger.dart';
 import 'package:pilll/analytics.dart';
 import 'package:pilll/database/batch.dart';
@@ -290,14 +291,27 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
   }
 }
 
-Future<PillSheet> modifyBeginingDateFunction(
+modifyBeginingDateFunction(
+  WriteBatch batch,
   PillSheetService service,
+  PillSheetModifiedHistoryService pillSheetModifiedHistoryService,
   PillSheet pillSheet,
   int pillNumber,
 ) {
-  return service.update(pillSheet.copyWith(
-      beginingDate: calcBeginingDateFromNextTodayPillNumberFunction(
-          pillSheet, pillNumber)));
+  final updated = pillSheet.copyWith(
+    beginingDate: calcBeginingDateFromNextTodayPillNumberFunction(
+      pillSheet,
+      pillNumber,
+    ),
+  );
+  service.update(
+    batch,
+    updated,
+  );
+
+  final history = PillSheetModifiedHistoryServiceActionFactory
+      .createChangedPillNumberAction(before: pillSheet, after: updated);
+  pillSheetModifiedHistoryService.add(batch, history);
 }
 
 DateTime calcBeginingDateFromNextTodayPillNumberFunction(
