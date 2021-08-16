@@ -1,7 +1,6 @@
 import 'dart:io' show Platform;
 import 'dart:async';
 
-import 'package:flutter/material.dart';
 import 'package:flutter_app_badger/flutter_app_badger.dart';
 import 'package:pilll/analytics.dart';
 import 'package:pilll/database/database.dart';
