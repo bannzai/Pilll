@@ -8,11 +8,15 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 Future<void> effectAfterTaken({
   required BuildContext context,
-  required Future<void> Function() taken,
+  required Future<void>? taken,
   required RecordPageStore store,
 }) async {
+  final _taken = taken;
+  if (_taken == null) {
+    return;
+  }
   try {
-    await taken();
+    await _taken;
     _requestInAppReview();
     await showReleaseNotePreDialog(context);
   } catch (exception, stack) {

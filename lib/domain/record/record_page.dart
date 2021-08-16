@@ -191,16 +191,11 @@ class RecordPage extends HookWidget {
           "last_taken_pill_number": pillSheet.lastTakenPillNumber,
           "today_pill_number": pillSheet.todayPillNumber,
         });
-        if (number <= pillSheet.lastTakenPillNumber) {
-          return;
-        }
-        var diff = pillSheet.todayPillNumber - number;
-        if (diff < 0) {
-          // This is in the future pill number.
-          return;
-        }
-        var takenDate = now().subtract(Duration(days: diff));
-        effectAfterTaken(context, pillSheet, takenDate, store);
+
+        effectAfterTaken(
+            context: context,
+            taken: store.takenWithPillNumber(number),
+            store: store);
       },
       premiumMarkBuilder: () {
         if (!(state.isPremium || state.isTrial)) {

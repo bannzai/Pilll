@@ -1,6 +1,7 @@
 import 'dart:io' show Platform;
 import 'dart:async';
 
+import 'package:flutter/material.dart';
 import 'package:flutter_app_badger/flutter_app_badger.dart';
 import 'package:pilll/analytics.dart';
 import 'package:pilll/database/database.dart';
@@ -161,13 +162,13 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
     return batch.commit();
   }
 
-  Future<dynamic> _take(DateTime takenDate) async {
+  Future<dynamic>? _take(DateTime takenDate) async {
     final entity = state.entity;
     if (entity == null) {
       throw FormatException("pill sheet not found");
     }
     if (entity.todayPillNumber == entity.lastTakenPillNumber) {
-      return;
+      return null;
     }
     final updated = entity.copyWith(lastTakenDate: takenDate);
     FlutterAppBadger.removeBadge();
@@ -175,8 +176,25 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
     state = state.copyWith(entity: updated);
   }
 
-  Future<void> taken() {
+  Future<void>? taken() {
     return _take(now());
+  }
+
+  Future<void>? takenWithPillNumber(int pillNumber) async {
+    final pillSheet = state.entity;
+    if (pillSheet == null) {
+      return null;
+    }
+    if (pillNumber <= pillSheet.lastTakenPillNumber) {
+      return null;
+    }
+    var diff = pillSheet.todayPillNumber - pillNumber;
+    if (diff < 0) {
+      // This is in the future pill number.
+      return null;
+    }
+    var takenDate = now().subtract(Duration(days: diff));
+    return _take(takenDate);
   }
 
   Future<void> cancelTaken() async {
