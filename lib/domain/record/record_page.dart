@@ -200,7 +200,7 @@ class RecordPage extends HookWidget {
           return;
         }
         var takenDate = now().subtract(Duration(days: diff));
-        take(context, pillSheet, takenDate, store);
+        effectAfterTaken(context, pillSheet, takenDate, store);
       },
       premiumMarkBuilder: () {
         if (!(state.isPremium || state.isTrial)) {

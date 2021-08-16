@@ -7,7 +7,7 @@ import 'package:pilll/error_log.dart';
 import 'package:pilll/util/shared_preference/keys.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-Future<void> take(
+Future<void> effectAfterTaken(
   BuildContext context,
   PillSheet pillSheet,
   DateTime takenDate,
