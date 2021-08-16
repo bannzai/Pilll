@@ -200,7 +200,14 @@ class SettingStateStore extends StateNotifier<SettingState> {
     if (entity == null) {
       throw FormatException("pill sheet not found");
     }
-    return _pillSheetService.delete(entity);
+
+    final batch = _batchFactory.batch();
+    final updated = _pillSheetService.delete(batch, entity);
+    final history = PillSheetModifiedHistoryServiceActionFactory
+        .createDeletedPillSheetAction(before: entity, after: updated);
+    _pillSheetModifiedHistoryService.add(batch, history);
+
+    return batch.commit();
   }
 
   Future<void> modifyPillSheetAppearanceMode(PillSheetAppearanceMode mode) {

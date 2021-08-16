@@ -1,5 +1,4 @@
 import 'package:pilll/database/database.dart';
-import 'package:pilll/entity/firestore_timestamp_converter.dart';
 import 'package:pilll/entity/pill_sheet.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:riverpod/riverpod.dart';
@@ -64,11 +63,11 @@ class PillSheetService {
         _database.pillSheetsReference().doc(), json, SetOptions(merge: true));
   }
 
-  Future<void> delete(PillSheet pillSheet) {
-    return _database.pillSheetReference(pillSheet.documentID!).update({
-      PillSheetFirestoreKey.deletedAt:
-          TimestampConverter.dateTimeToTimestamp(DateTime.now())
-    });
+  PillSheet delete(WriteBatch batch, PillSheet pillSheet) {
+    final updated = pillSheet.copyWith(deletedAt: DateTime.now());
+    batch.set(_database.pillSheetReference(pillSheet.documentID!),
+        updated.toJson(), SetOptions(merge: true));
+    return updated;
   }
 
   update(WriteBatch batch, PillSheet pillSheet) {
