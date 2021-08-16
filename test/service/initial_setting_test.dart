@@ -1,3 +1,4 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:pilll/entity/initial_setting.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/service/initial_setting.dart';
@@ -17,6 +18,7 @@ void main() {
         pillSheetType: PillSheetType.pillsheet_21,
       );
       final database = MockDatabaseConnection();
+      when(database.batch()).thenReturn(MockWriteBatch());
 
       final settingService = MockSettingService();
       final settingEntity = initialSetting.buildSetting();

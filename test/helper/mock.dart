@@ -1,3 +1,4 @@
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:pilll/analytics.dart';
 import 'package:pilll/database/database.dart';
 import 'package:pilll/domain/premium_introduction/components/purchase_buttons_store.dart';
@@ -29,5 +30,6 @@ import 'package:mockito/annotations.dart';
   PurchaseButtonsStore,
   DatabaseConnection,
   PillSheetModifiedHistoryService,
+  WriteBatch,
 ])
 abstract class KeepGeneratedMocks {}

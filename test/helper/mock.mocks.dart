@@ -5,6 +5,8 @@
 import 'dart:async' as _i14;
 
 import 'package:cloud_firestore/cloud_firestore.dart' as _i11;
+import 'package:cloud_firestore_platform_interface/src/set_options.dart'
+    as _i33;
 import 'package:firebase_auth/firebase_auth.dart' as _i21;
 import 'package:mockito/mockito.dart' as _i1;
 import 'package:pilll/analytics.dart' as _i17;
@@ -774,4 +776,33 @@ class MockPillSheetModifiedHistoryService extends _i1.Mock
   @override
   dynamic add(_i11.WriteBatch? batch, _i12.PillSheetModifiedHistory? history) =>
       super.noSuchMethod(Invocation.method(#add, [batch, history]));
+}
+
+/// A class which mocks [WriteBatch].
+///
+/// See the documentation for Mockito's code generation for more information.
+class MockWriteBatch extends _i1.Mock implements _i11.WriteBatch {
+  MockWriteBatch() {
+    _i1.throwOnMissingStub(this);
+  }
+
+  @override
+  _i14.Future<void> commit() =>
+      (super.noSuchMethod(Invocation.method(#commit, []),
+          returnValue: Future<void>.value(),
+          returnValueForMissingStub: Future.value()) as _i14.Future<void>);
+  @override
+  void delete(_i11.DocumentReference<Object?>? document) =>
+      super.noSuchMethod(Invocation.method(#delete, [document]),
+          returnValueForMissingStub: null);
+  @override
+  void set<T>(_i11.DocumentReference<T>? document, T? data,
+          [_i33.SetOptions? options]) =>
+      super.noSuchMethod(Invocation.method(#set, [document, data, options]),
+          returnValueForMissingStub: null);
+  @override
+  void update(_i11.DocumentReference<Object?>? document,
+          Map<String, dynamic>? data) =>
+      super.noSuchMethod(Invocation.method(#update, [document, data]),
+          returnValueForMissingStub: null);
 }
