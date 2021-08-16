@@ -65,4 +65,8 @@ class DatabaseConnection {
   Future<T> transaction<T>(TransactionHandler<T> transactionHandler) {
     return FirebaseFirestore.instance.runTransaction(transactionHandler);
   }
+
+  WriteBatch batch() {
+    return FirebaseFirestore.instance.batch();
+  }
 }
