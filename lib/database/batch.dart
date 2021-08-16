@@ -5,16 +5,14 @@ import 'package:riverpod/riverpod.dart';
 typedef BatchFactoryFunction = WriteBatch Function();
 
 class BatchFactory {
-  final BatchFactoryFunction _batch;
+  final DatabaseConnection database;
 
-  BatchFactory(this._batch);
+  BatchFactory(this.database);
 
-  WriteBatch batch() => _batch();
+  WriteBatch batch() => database.batch();
 }
 
 final batchFactoryProvider = Provider<BatchFactory>((ref) {
   final database = ref.watch(databaseProvider);
-  return BatchFactory(() {
-    return database.batch();
-  });
+  return BatchFactory(database);
 });

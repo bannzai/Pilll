@@ -23,12 +23,16 @@ definedChannel() {
 
 Future<void> recordPill() async {
   final authInfo = await cacheOrAuth();
-  final service = PillSheetService(DatabaseConnection(authInfo.uid));
+  final database = DatabaseConnection(authInfo.uid);
+  final service = PillSheetService(database);
   final entity = await service.fetchLast();
   if (entity == null) {
     return Future.value();
   }
-  await service.update(entity.copyWith(lastTakenDate: now()));
+
+  final batch = database.batch();
+  await service.update(batch, entity.copyWith(lastTakenDate: now()));
+  await batch.commit();
   // NOTE: Firebase initializeが成功しているかが定かでは無いので一番最後にログを送る
   analytics.logEvent(name: "quick_recorded");
 }
