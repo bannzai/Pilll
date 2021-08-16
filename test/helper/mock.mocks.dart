@@ -4,13 +4,13 @@
 
 import 'dart:async' as _i14;
 
-import 'package:cloud_firestore/cloud_firestore.dart' as _i11;
+import 'package:cloud_firestore/cloud_firestore.dart' as _i12;
 import 'package:cloud_firestore_platform_interface/src/set_options.dart'
     as _i33;
 import 'package:firebase_auth/firebase_auth.dart' as _i21;
 import 'package:mockito/mockito.dart' as _i1;
 import 'package:pilll/analytics.dart' as _i17;
-import 'package:pilll/database/database.dart' as _i31;
+import 'package:pilll/database/batch.dart' as _i32;
 import 'package:pilll/domain/premium_introduction/components/purchase_buttons_state.dart'
     as _i10;
 import 'package:pilll/domain/premium_introduction/components/purchase_buttons_store.dart'
@@ -30,7 +30,7 @@ import 'package:pilll/entity/diary.dart' as _i4;
 import 'package:pilll/entity/menstruation.dart' as _i5;
 import 'package:pilll/entity/pill_mark_type.dart' as _i26;
 import 'package:pilll/entity/pill_sheet.dart' as _i2;
-import 'package:pilll/entity/pill_sheet_modified_history.dart' as _i12;
+import 'package:pilll/entity/pill_sheet_modified_history.dart' as _i11;
 import 'package:pilll/entity/setting.dart' as _i3;
 import 'package:pilll/entity/user.dart' as _i6;
 import 'package:pilll/service/auth.dart' as _i20;
@@ -38,7 +38,7 @@ import 'package:pilll/service/day.dart' as _i15;
 import 'package:pilll/service/diary.dart' as _i18;
 import 'package:pilll/service/menstruation.dart' as _i19;
 import 'package:pilll/service/pill_sheet.dart' as _i13;
-import 'package:pilll/service/pill_sheet_modified_history.dart' as _i32;
+import 'package:pilll/service/pill_sheet_modified_history.dart' as _i31;
 import 'package:pilll/service/setting.dart' as _i16;
 import 'package:pilll/service/user.dart' as _i22;
 import 'package:purchases_flutter/package_wrapper.dart' as _i29;
@@ -76,16 +76,10 @@ class _FakePremiumIntroductionState extends _i1.Fake
 class _FakePurchaseButtonsState extends _i1.Fake
     implements _i10.PurchaseButtonsState {}
 
-class _FakeDocumentReference<T extends Object?> extends _i1.Fake
-    implements _i11.DocumentReference<T> {}
-
-class _FakeCollectionReference<T extends Object?> extends _i1.Fake
-    implements _i11.CollectionReference<T> {}
-
-class _FakeWriteBatch extends _i1.Fake implements _i11.WriteBatch {}
-
 class _FakePillSheetModifiedHistory extends _i1.Fake
-    implements _i12.PillSheetModifiedHistory {}
+    implements _i11.PillSheetModifiedHistory {}
+
+class _FakeWriteBatch extends _i1.Fake implements _i12.WriteBatch {}
 
 /// A class which mocks [PillSheetService].
 ///
@@ -111,7 +105,7 @@ class MockPillSheetService extends _i1.Mock implements _i13.PillSheetService {
               returnValue: Future<List<_i2.PillSheet>>.value(<_i2.PillSheet>[]))
           as _i14.Future<List<_i2.PillSheet>>);
   @override
-  dynamic register(_i11.WriteBatch? batch, _i2.PillSheet? model) =>
+  dynamic register(_i12.WriteBatch? batch, _i2.PillSheet? model) =>
       super.noSuchMethod(Invocation.method(#register, [batch, model]));
   @override
   _i14.Future<void> delete(_i2.PillSheet? pillSheet) =>
@@ -457,9 +451,18 @@ class MockRecordPageStore extends _i1.Mock implements _i24.RecordPageStore {
           returnValue: Future<void>.value(),
           returnValueForMissingStub: Future.value()) as _i14.Future<void>);
   @override
-  _i14.Future<dynamic> take(DateTime? takenDate) =>
-      (super.noSuchMethod(Invocation.method(#take, [takenDate]),
-          returnValue: Future<dynamic>.value()) as _i14.Future<dynamic>);
+  _i14.Future<void>? taken() =>
+      (super.noSuchMethod(Invocation.method(#taken, []),
+          returnValueForMissingStub: Future.value()) as _i14.Future<void>?);
+  @override
+  _i14.Future<void>? takenWithPillNumber(int? pillNumber) =>
+      (super.noSuchMethod(Invocation.method(#takenWithPillNumber, [pillNumber]),
+          returnValueForMissingStub: Future.value()) as _i14.Future<void>?);
+  @override
+  _i14.Future<void> cancelTaken() =>
+      (super.noSuchMethod(Invocation.method(#cancelTaken, []),
+          returnValue: Future<void>.value(),
+          returnValueForMissingStub: Future.value()) as _i14.Future<void>);
   @override
   DateTime calcBeginingDateFromNextTodayPillNumber(int? pillNumber) =>
       (super.noSuchMethod(
@@ -671,117 +674,63 @@ class MockPurchaseButtonsStore extends _i1.Mock
       returnValueForMissingStub: null);
 }
 
-/// A class which mocks [DatabaseConnection].
-///
-/// See the documentation for Mockito's code generation for more information.
-class MockDatabaseConnection extends _i1.Mock
-    implements _i31.DatabaseConnection {
-  MockDatabaseConnection() {
-    _i1.throwOnMissingStub(this);
-  }
-
-  @override
-  _i11.DocumentReference<Object?> userReference() =>
-      (super.noSuchMethod(Invocation.method(#userReference, []),
-              returnValue: _FakeDocumentReference<Object?>())
-          as _i11.DocumentReference<Object?>);
-  @override
-  _i11.CollectionReference<Object?> pillSheetsReference() =>
-      (super.noSuchMethod(Invocation.method(#pillSheetsReference, []),
-              returnValue: _FakeCollectionReference<Object?>())
-          as _i11.CollectionReference<Object?>);
-  @override
-  _i11.DocumentReference<Object?> pillSheetReference(String? pillSheetID) =>
-      (super.noSuchMethod(Invocation.method(#pillSheetReference, [pillSheetID]),
-              returnValue: _FakeDocumentReference<Object?>())
-          as _i11.DocumentReference<Object?>);
-  @override
-  _i11.CollectionReference<Object?> diariesReference() =>
-      (super.noSuchMethod(Invocation.method(#diariesReference, []),
-              returnValue: _FakeCollectionReference<Object?>())
-          as _i11.CollectionReference<Object?>);
-  @override
-  _i11.DocumentReference<Object?> diaryReference(_i4.Diary? diary) =>
-      (super.noSuchMethod(Invocation.method(#diaryReference, [diary]),
-              returnValue: _FakeDocumentReference<Object?>())
-          as _i11.DocumentReference<Object?>);
-  @override
-  _i11.DocumentReference<Object?> userPrivateReference() =>
-      (super.noSuchMethod(Invocation.method(#userPrivateReference, []),
-              returnValue: _FakeDocumentReference<Object?>())
-          as _i11.DocumentReference<Object?>);
-  @override
-  _i11.CollectionReference<Object?> menstruationsReference() =>
-      (super.noSuchMethod(Invocation.method(#menstruationsReference, []),
-              returnValue: _FakeCollectionReference<Object?>())
-          as _i11.CollectionReference<Object?>);
-  @override
-  _i11.DocumentReference<Object?> menstruationReference(
-          String? menstruationID) =>
-      (super.noSuchMethod(
-              Invocation.method(#menstruationReference, [menstruationID]),
-              returnValue: _FakeDocumentReference<Object?>())
-          as _i11.DocumentReference<Object?>);
-  @override
-  _i11.CollectionReference<Object?> pillSheetModifiedHistoriesReference() =>
-      (super.noSuchMethod(
-              Invocation.method(#pillSheetModifiedHistoriesReference, []),
-              returnValue: _FakeCollectionReference<Object?>())
-          as _i11.CollectionReference<Object?>);
-  @override
-  _i14.Future<T> transaction<T>(
-          _i11.TransactionHandler<T>? transactionHandler) =>
-      (super.noSuchMethod(Invocation.method(#transaction, [transactionHandler]),
-          returnValue: Future<T>.value(null)) as _i14.Future<T>);
-  @override
-  _i11.WriteBatch batch() => (super.noSuchMethod(Invocation.method(#batch, []),
-      returnValue: _FakeWriteBatch()) as _i11.WriteBatch);
-}
-
 /// A class which mocks [PillSheetModifiedHistoryService].
 ///
 /// See the documentation for Mockito's code generation for more information.
 class MockPillSheetModifiedHistoryService extends _i1.Mock
-    implements _i32.PillSheetModifiedHistoryService {
+    implements _i31.PillSheetModifiedHistoryService {
   MockPillSheetModifiedHistoryService() {
     _i1.throwOnMissingStub(this);
   }
 
   @override
-  _i14.Future<List<_i12.PillSheetModifiedHistory>> fetchList(
+  _i14.Future<List<_i11.PillSheetModifiedHistory>> fetchList(
           DateTime? after, int? limit) =>
       (super.noSuchMethod(Invocation.method(#fetchList, [after, limit]),
-              returnValue: Future<List<_i12.PillSheetModifiedHistory>>.value(
-                  <_i12.PillSheetModifiedHistory>[]))
-          as _i14.Future<List<_i12.PillSheetModifiedHistory>>);
+              returnValue: Future<List<_i11.PillSheetModifiedHistory>>.value(
+                  <_i11.PillSheetModifiedHistory>[]))
+          as _i14.Future<List<_i11.PillSheetModifiedHistory>>);
   @override
-  _i14.Future<List<_i12.PillSheetModifiedHistory>> fetchAll() =>
+  _i14.Future<List<_i11.PillSheetModifiedHistory>> fetchAll() =>
       (super.noSuchMethod(Invocation.method(#fetchAll, []),
-              returnValue: Future<List<_i12.PillSheetModifiedHistory>>.value(
-                  <_i12.PillSheetModifiedHistory>[]))
-          as _i14.Future<List<_i12.PillSheetModifiedHistory>>);
+              returnValue: Future<List<_i11.PillSheetModifiedHistory>>.value(
+                  <_i11.PillSheetModifiedHistory>[]))
+          as _i14.Future<List<_i11.PillSheetModifiedHistory>>);
   @override
-  _i14.Future<_i12.PillSheetModifiedHistory> update(
-          _i12.PillSheetModifiedHistory? pillSheetModifiedHistory) =>
+  _i14.Future<_i11.PillSheetModifiedHistory> update(
+          _i11.PillSheetModifiedHistory? pillSheetModifiedHistory) =>
       (super.noSuchMethod(
               Invocation.method(#update, [pillSheetModifiedHistory]),
-              returnValue: Future<_i12.PillSheetModifiedHistory>.value(
+              returnValue: Future<_i11.PillSheetModifiedHistory>.value(
                   _FakePillSheetModifiedHistory()))
-          as _i14.Future<_i12.PillSheetModifiedHistory>);
+          as _i14.Future<_i11.PillSheetModifiedHistory>);
   @override
-  _i14.Stream<List<_i12.PillSheetModifiedHistory>> subscribe(int? limit) =>
+  _i14.Stream<List<_i11.PillSheetModifiedHistory>> subscribe(int? limit) =>
       (super.noSuchMethod(Invocation.method(#subscribe, [limit]),
-              returnValue: Stream<List<_i12.PillSheetModifiedHistory>>.empty())
-          as _i14.Stream<List<_i12.PillSheetModifiedHistory>>);
+              returnValue: Stream<List<_i11.PillSheetModifiedHistory>>.empty())
+          as _i14.Stream<List<_i11.PillSheetModifiedHistory>>);
   @override
-  dynamic add(_i11.WriteBatch? batch, _i12.PillSheetModifiedHistory? history) =>
+  dynamic add(_i12.WriteBatch? batch, _i11.PillSheetModifiedHistory? history) =>
       super.noSuchMethod(Invocation.method(#add, [batch, history]));
+}
+
+/// A class which mocks [BatchFactory].
+///
+/// See the documentation for Mockito's code generation for more information.
+class MockBatchFactory extends _i1.Mock implements _i32.BatchFactory {
+  MockBatchFactory() {
+    _i1.throwOnMissingStub(this);
+  }
+
+  @override
+  _i12.WriteBatch batch() => (super.noSuchMethod(Invocation.method(#batch, []),
+      returnValue: _FakeWriteBatch()) as _i12.WriteBatch);
 }
 
 /// A class which mocks [WriteBatch].
 ///
 /// See the documentation for Mockito's code generation for more information.
-class MockWriteBatch extends _i1.Mock implements _i11.WriteBatch {
+class MockWriteBatch extends _i1.Mock implements _i12.WriteBatch {
   MockWriteBatch() {
     _i1.throwOnMissingStub(this);
   }
@@ -792,16 +741,16 @@ class MockWriteBatch extends _i1.Mock implements _i11.WriteBatch {
           returnValue: Future<void>.value(),
           returnValueForMissingStub: Future.value()) as _i14.Future<void>);
   @override
-  void delete(_i11.DocumentReference<Object?>? document) =>
+  void delete(_i12.DocumentReference<Object?>? document) =>
       super.noSuchMethod(Invocation.method(#delete, [document]),
           returnValueForMissingStub: null);
   @override
-  void set<T>(_i11.DocumentReference<T>? document, T? data,
+  void set<T>(_i12.DocumentReference<T>? document, T? data,
           [_i33.SetOptions? options]) =>
       super.noSuchMethod(Invocation.method(#set, [document, data, options]),
           returnValueForMissingStub: null);
   @override
-  void update(_i11.DocumentReference<Object?>? document,
+  void update(_i12.DocumentReference<Object?>? document,
           Map<String, dynamic>? data) =>
       super.noSuchMethod(Invocation.method(#update, [document, data]),
           returnValueForMissingStub: null);

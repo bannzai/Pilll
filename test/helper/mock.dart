@@ -1,6 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:pilll/analytics.dart';
-import 'package:pilll/database/database.dart';
+import 'package:pilll/database/batch.dart';
 import 'package:pilll/domain/premium_introduction/components/purchase_buttons_store.dart';
 import 'package:pilll/domain/premium_introduction/premium_introduction_store.dart';
 import 'package:pilll/domain/record/components/notification_bar/notification_bar_store.dart';
@@ -28,8 +28,8 @@ import 'package:mockito/annotations.dart';
   NotificationBarStateStore,
   PremiumIntroductionStore,
   PurchaseButtonsStore,
-  DatabaseConnection,
   PillSheetModifiedHistoryService,
+  BatchFactory,
   WriteBatch,
 ])
 abstract class KeepGeneratedMocks {}

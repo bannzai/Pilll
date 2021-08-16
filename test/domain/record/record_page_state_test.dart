@@ -75,7 +75,7 @@ void main() {
       when(service.fetchListWithMax(2)).thenAnswer((_) => Future.value([]));
       when(service.subscribeForLatestPillSheet())
           .thenAnswer((realInvocation) => Stream.empty());
-      final database = MockDatabaseConnection();
+      final batch = MockBatchFactory();
       final settingService = MockSettingService();
       when(settingService.fetch())
           .thenAnswer((realInvocation) => Future.value(settingEntity));
@@ -95,7 +95,7 @@ void main() {
           MockPillSheetModifiedHistoryService();
 
       final store = RecordPageStore(
-        database,
+        batch,
         service,
         settingService,
         userService,
@@ -137,7 +137,7 @@ void main() {
     when(service.fetchListWithMax(2)).thenAnswer((_) => Future.value([]));
     when(service.subscribeForLatestPillSheet())
         .thenAnswer((realInvocation) => Stream.empty());
-    final database = MockDatabaseConnection();
+    final batch = MockBatchFactory();
 
     final settingService = MockSettingService();
     when(settingService.fetch())
@@ -158,7 +158,7 @@ void main() {
         MockPillSheetModifiedHistoryService();
 
     final store = RecordPageStore(
-      database,
+      batch,
       service,
       settingService,
       userService,
@@ -203,7 +203,7 @@ void main() {
           .thenAnswer((realInvocation) => Future.value([]));
       when(service.subscribeForLatestPillSheet())
           .thenAnswer((realInvocation) => Stream.empty());
-      final database = MockDatabaseConnection();
+      final batch = MockBatchFactory();
       final settingService = MockSettingService();
       when(settingService.fetch())
           .thenAnswer((realInvocation) => Future.value(settingEntity));
@@ -224,7 +224,7 @@ void main() {
           MockPillSheetModifiedHistoryService();
 
       final store = RecordPageStore(
-        database,
+        batch,
         service,
         settingService,
         userService,
@@ -268,7 +268,7 @@ void main() {
           .thenAnswer((realInvocation) => Future.value([]));
       when(service.subscribeForLatestPillSheet())
           .thenAnswer((realInvocation) => Stream.empty());
-      final database = MockDatabaseConnection();
+      final batch = MockBatchFactory();
       final settingService = MockSettingService();
       when(settingService.fetch())
           .thenAnswer((realInvocation) => Future.value(settingEntity));
@@ -289,7 +289,7 @@ void main() {
           MockPillSheetModifiedHistoryService();
 
       final store = RecordPageStore(
-        database,
+        batch,
         service,
         settingService,
         userService,
@@ -334,7 +334,7 @@ void main() {
       when(service.fetchAll()).thenAnswer((realInvocation) => Future.value([]));
       when(service.subscribeForLatestPillSheet())
           .thenAnswer((realInvocation) => Stream.empty());
-      final database = MockDatabaseConnection();
+      final batch = MockBatchFactory();
       final settingService = MockSettingService();
       when(settingService.fetch())
           .thenAnswer((realInvocation) => Future.value(settingEntity));
@@ -355,7 +355,7 @@ void main() {
           MockPillSheetModifiedHistoryService();
 
       final store = RecordPageStore(
-        database,
+        batch,
         service,
         settingService,
         userService,
@@ -398,7 +398,7 @@ void main() {
           .thenAnswer((realInvocation) => Future.value([]));
       when(service.subscribeForLatestPillSheet())
           .thenAnswer((realInvocation) => Stream.empty());
-      final database = MockDatabaseConnection();
+      final batch = MockBatchFactory();
       final settingService = MockSettingService();
       when(settingService.fetch())
           .thenAnswer((realInvocation) => Future.value(settingEntity));
@@ -419,7 +419,7 @@ void main() {
           MockPillSheetModifiedHistoryService();
 
       final store = RecordPageStore(
-        database,
+        batch,
         service,
         settingService,
         userService,
