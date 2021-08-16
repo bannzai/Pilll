@@ -1,8 +1,6 @@
 import 'dart:io' show Platform;
 import 'dart:async';
 
-import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter_app_badger/flutter_app_badger.dart';
 import 'package:pilll/analytics.dart';
 import 'package:pilll/database/database.dart';
