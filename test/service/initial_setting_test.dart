@@ -16,6 +16,8 @@ void main() {
         todayPillNumber: 1,
         pillSheetType: PillSheetType.pillsheet_21,
       );
+      final database = MockDatabaseConnection();
+
       final settingService = MockSettingService();
       final settingEntity = initialSetting.buildSetting();
       when(settingService.update(settingEntity))
@@ -23,14 +25,15 @@ void main() {
 
       final pillSheetEntity = initialSetting.buildPillSheet();
       final pillSheetService = MockPillSheetService();
-      when(pillSheetService.register(pillSheetEntity!))
+      when(pillSheetService.register(any, pillSheetEntity!))
           .thenAnswer((realInvocation) => Future.value(pillSheetEntity));
 
-      final service = InitialSettingService(settingService, pillSheetService);
+      final service =
+          InitialSettingService(database, settingService, pillSheetService);
       await service.register(initialSetting);
 
       verify(settingService.update(settingEntity));
-      verify(pillSheetService.register(pillSheetEntity));
+      verify(pillSheetService.register(any, pillSheetEntity));
     });
   });
 }
