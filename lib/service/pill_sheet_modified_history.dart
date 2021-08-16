@@ -68,12 +68,9 @@ class PillSheetModifiedHistoryService {
             .toList());
   }
 
-  Transaction addTransaction(
-      Transaction transaction, PillSheetModifiedHistory history) {
-    return transaction.set(
-        _database.pillSheetModifiedHistoriesReference().doc(),
-        history.toJson(),
-        SetOptions(merge: true));
+  add(WriteBatch batch, PillSheetModifiedHistory history) {
+    batch.set(_database.pillSheetModifiedHistoriesReference().doc(),
+        history.toJson(), SetOptions(merge: true));
   }
 }
 
