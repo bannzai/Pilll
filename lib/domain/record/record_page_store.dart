@@ -160,13 +160,31 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
     return batch.commit();
   }
 
-  Future<dynamic> take(DateTime takenDate) async {
+  Future<dynamic> _take(DateTime takenDate) async {
     final entity = state.entity;
     if (entity == null) {
       throw FormatException("pill sheet not found");
     }
     final updated = entity.copyWith(lastTakenDate: takenDate);
     FlutterAppBadger.removeBadge();
+    await _service.update(updated);
+    state = state.copyWith(entity: updated);
+  }
+
+  Future<void> cancelTaken() async {
+    final pillSheet = state.entity;
+    if (pillSheet == null) {
+      return;
+    }
+    if (pillSheet.todayPillNumber != pillSheet.lastTakenPillNumber) {
+      return;
+    }
+    final lastTakenDate = pillSheet.lastTakenDate;
+    if (lastTakenDate == null) {
+      return;
+    }
+    final updated = pillSheet.copyWith(
+        lastTakenDate: lastTakenDate.subtract(Duration(days: 1)));
     await _service.update(updated);
     state = state.copyWith(entity: updated);
   }

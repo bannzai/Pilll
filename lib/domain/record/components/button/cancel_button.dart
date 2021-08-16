@@ -32,6 +32,6 @@ class CancelButton extends HookWidget {
     if (lastTakenDate == null) {
       return;
     }
-    store.take(lastTakenDate.subtract(Duration(days: 1)));
+    store.cancelTaken();
   }
 }
