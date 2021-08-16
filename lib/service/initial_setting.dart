@@ -1,3 +1,4 @@
+import 'package:pilll/database/batch.dart';
 import 'package:pilll/database/database.dart';
 import 'package:pilll/entity/initial_setting.dart';
 import 'package:pilll/service/pill_sheet.dart';
@@ -12,19 +13,19 @@ abstract class InitialSettingServiceInterface {
 
 final initialSettingServiceProvider = Provider<InitialSettingServiceInterface>(
   (ref) => InitialSettingService(
-    ref.watch(databaseProvider),
+    ref.watch(batchFactoryProvider),
     ref.watch(settingServiceProvider),
     ref.watch(pillSheetServiceProvider),
   ),
 );
 
 class InitialSettingService extends InitialSettingServiceInterface {
-  final DatabaseConnection database;
+  final BatchFactory batchFactory;
   final SettingService settingService;
   final PillSheetService pillSheetService;
 
   InitialSettingService(
-      this.database, this.settingService, this.pillSheetService);
+      this.batchFactory, this.settingService, this.pillSheetService);
 
   Future<void> register(InitialSettingModel initialSetting) {
     var setting = initialSetting.buildSetting();
@@ -33,7 +34,7 @@ class InitialSettingService extends InitialSettingServiceInterface {
       if (pillSheet == null) {
         return Future.value();
       }
-      return pillSheetService.register(database.batch(), pillSheet);
+      return pillSheetService.register(batchFactory(), pillSheet);
     });
   }
 }

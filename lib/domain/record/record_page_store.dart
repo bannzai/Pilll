@@ -3,6 +3,7 @@ import 'dart:async';
 
 import 'package:flutter_app_badger/flutter_app_badger.dart';
 import 'package:pilll/analytics.dart';
+import 'package:pilll/database/batch.dart';
 import 'package:pilll/database/database.dart';
 import 'package:pilll/entity/pill_mark_type.dart';
 import 'package:pilll/entity/pill_sheet.dart';
@@ -19,7 +20,7 @@ import 'package:riverpod/riverpod.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 final recordPageStoreProvider = StateNotifierProvider((ref) => RecordPageStore(
-      ref.watch(databaseProvider),
+      ref.watch(batchFactoryProvider),
       ref.watch(pillSheetServiceProvider),
       ref.watch(settingServiceProvider),
       ref.watch(userServiceProvider),
@@ -28,14 +29,14 @@ final recordPageStoreProvider = StateNotifierProvider((ref) => RecordPageStore(
     ));
 
 class RecordPageStore extends StateNotifier<RecordPageState> {
-  final DatabaseConnection _database;
+  final BatchFactory _batchFactory;
   final PillSheetService _service;
   final SettingService _settingService;
   final UserService _userService;
   final AuthService _authService;
   final PillSheetModifiedHistoryService _pillSheetModifiedHistoryService;
   RecordPageStore(
-    this._database,
+    this._batchFactory,
     this._service,
     this._settingService,
     this._userService,
@@ -151,7 +152,7 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
   }
 
   Future<void> register(PillSheet model) async {
-    final batch = _database.batch();
+    final batch = _batchFactory();
 
     final history = PillSheetModifiedHistoryServiceActionFactory
         .createCreatedPillSheetAction(before: null, after: model);
