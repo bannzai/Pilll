@@ -26,7 +26,7 @@ class InitialSettingService extends InitialSettingServiceInterface {
       if (pillSheet == null) {
         return Future.value();
       }
-      return pillSheetService.register(pillSheet);
+      return pillSheetService.register(null, pillSheet).commit();
     });
   }
 }
