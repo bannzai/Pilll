@@ -9,7 +9,7 @@ class BatchFactory {
 
   BatchFactory(this._batch);
 
-  WriteBatch bach() => _batch();
+  WriteBatch batch() => _batch();
 }
 
 final batchFactoryProvider = Provider<BatchFactory>((ref) {

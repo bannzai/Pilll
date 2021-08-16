@@ -4,7 +4,6 @@ import 'dart:async';
 import 'package:flutter_app_badger/flutter_app_badger.dart';
 import 'package:pilll/analytics.dart';
 import 'package:pilll/database/batch.dart';
-import 'package:pilll/database/database.dart';
 import 'package:pilll/entity/pill_mark_type.dart';
 import 'package:pilll/entity/pill_sheet.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
@@ -152,7 +151,7 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
   }
 
   Future<void> register(PillSheet model) async {
-    final batch = _batchFactory();
+    final batch = _batchFactory.batch();
 
     final history = PillSheetModifiedHistoryServiceActionFactory
         .createCreatedPillSheetAction(before: null, after: model);

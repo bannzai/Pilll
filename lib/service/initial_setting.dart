@@ -1,5 +1,4 @@
 import 'package:pilll/database/batch.dart';
-import 'package:pilll/database/database.dart';
 import 'package:pilll/entity/initial_setting.dart';
 import 'package:pilll/service/pill_sheet.dart';
 import 'package:pilll/service/setting.dart';
@@ -34,7 +33,7 @@ class InitialSettingService extends InitialSettingServiceInterface {
       if (pillSheet == null) {
         return Future.value();
       }
-      return pillSheetService.register(batchFactory(), pillSheet);
+      return pillSheetService.register(batchFactory.batch(), pillSheet);
     });
   }
 }
