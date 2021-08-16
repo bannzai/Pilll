@@ -169,9 +169,20 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
     if (entity.todayPillNumber == entity.lastTakenPillNumber) {
       return null;
     }
-    final updated = entity.copyWith(lastTakenDate: takenDate);
+
     FlutterAppBadger.removeBadge();
-    await _service.update(updated);
+
+    final batch = _batchFactory.batch();
+
+    final updated = entity.copyWith(lastTakenDate: takenDate);
+    _service.update(batch, updated);
+
+    final history =
+        PillSheetModifiedHistoryServiceActionFactory.createTakenPillAction(
+            before: entity, after: updated);
+    _pillSheetModifiedHistoryService.add(batch, history);
+
+    await batch.commit();
     state = state.copyWith(entity: updated);
   }
 

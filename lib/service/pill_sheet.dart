@@ -71,13 +71,10 @@ class PillSheetService {
     });
   }
 
-  Future<PillSheet> update(PillSheet pillSheet) {
+  update(WriteBatch batch, PillSheet pillSheet) {
     var json = pillSheet.toJson();
     json.remove("id");
-    return _database
-        .pillSheetReference(pillSheet.documentID!)
-        .update(json)
-        .then((_) => pillSheet);
+    batch.update(_database.pillSheetReference(pillSheet.documentID!), json);
   }
 
   Stream<PillSheet> subscribeForLatestPillSheet() {
