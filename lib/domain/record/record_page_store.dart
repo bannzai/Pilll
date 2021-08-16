@@ -1,14 +1,18 @@
 import 'dart:io' show Platform;
 import 'dart:async';
 
+import 'package:cloud_firestore/cloud_firestore.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter_app_badger/flutter_app_badger.dart';
 import 'package:pilll/analytics.dart';
+import 'package:pilll/database/database.dart';
 import 'package:pilll/entity/pill_mark_type.dart';
 import 'package:pilll/entity/pill_sheet.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/service/auth.dart';
 import 'package:pilll/service/pill_sheet.dart';
 import 'package:pilll/domain/record/record_page_state.dart';
+import 'package:pilll/service/pill_sheet_modified_history.dart';
 import 'package:pilll/service/setting.dart';
 import 'package:pilll/service/user.dart';
 import 'package:pilll/util/shared_preference/keys.dart';
@@ -16,22 +20,28 @@ import 'package:riverpod/riverpod.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 final recordPageStoreProvider = StateNotifierProvider((ref) => RecordPageStore(
+      ref.watch(databaseProvider),
       ref.watch(pillSheetServiceProvider),
       ref.watch(settingServiceProvider),
       ref.watch(userServiceProvider),
       ref.watch(authServiceProvider),
+      ref.watch(pillSheetModifiedHistoryServiceProvider),
     ));
 
 class RecordPageStore extends StateNotifier<RecordPageState> {
+  final DatabaseConnection _database;
   final PillSheetService _service;
   final SettingService _settingService;
   final UserService _userService;
   final AuthService _authService;
+  final PillSheetModifiedHistoryService _pillSheetModifiedHistoryService;
   RecordPageStore(
+    this._database,
     this._service,
     this._settingService,
     this._userService,
     this._authService,
+    this._pillSheetModifiedHistoryService,
   ) : super(RecordPageState(entity: null)) {
     reset();
   }
@@ -141,10 +151,15 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
     super.dispose();
   }
 
-  Future<void> register(PillSheet model) async {
-    await _service
-        .register(model)
-        .then((entity) => state = state.copyWith(entity: entity));
+  Future<void> register(PillSheet model) {
+    final batch = _database.batch();
+
+    final history = PillSheetModifiedHistoryServiceActionFactory
+        .createCreatedPillSheetAction(before: null, after: model);
+    _pillSheetModifiedHistoryService.add(batch, history);
+    _service.register(batch, model);
+
+    return batch.commit();
   }
 
   Future<dynamic> take(DateTime takenDate) async {
