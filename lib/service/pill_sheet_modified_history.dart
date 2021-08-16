@@ -121,6 +121,38 @@ extension PillSheetModifiedHistoryServiceActionFactory
     );
   }
 
+  static PillSheetModifiedHistory createRevertTakenPillAction({
+    required PillSheet before,
+    required PillSheet after,
+  }) {
+    final afterID = after.id;
+    final afterLastTakenDate = after.lastTakenDate;
+    if (afterID == null || afterLastTakenDate == null) {
+      throw FormatException(
+          "unexpected after pill sheet id or lastTakenDate is null id: ${after.id}, lastTakenDate: ${after.lastTakenDate} for revertTakenPill action");
+    }
+    final beforeID = before.id;
+    final beforeLastTakenDate = before.lastTakenDate;
+    if (beforeID == null || beforeLastTakenDate == null) {
+      throw FormatException(
+          "unexpected before pill sheet id or lastTakenDate is null id: ${before.id}, lastTakenDate: ${before.lastTakenDate} for revertTakenPill action");
+    }
+    return _create(
+      actionType: PillSheetModifiedActionType.revertTakenPill,
+      value: PillSheetModifiedHistoryValue(
+        revertTakenPill: RevertTakenPillValue(
+          afterLastTakenDate: afterLastTakenDate,
+          afterLastTakenPillNumber: after.lastTakenPillNumber,
+          beforeLastTakenDate: beforeLastTakenDate,
+          beforeLastTakenPillNumber: before.lastTakenPillNumber,
+        ),
+      ),
+      after: after,
+      afterID: afterID,
+      before: before,
+    );
+  }
+
   static PillSheetModifiedHistory createCreatedPillSheetAction({
     required PillSheet? before,
     required PillSheet after,
@@ -129,7 +161,7 @@ extension PillSheetModifiedHistoryServiceActionFactory
     final afterLastTakenDate = after.lastTakenDate;
     if (afterID == null || afterLastTakenDate == null) {
       throw FormatException(
-          "unexpected after pill sheet id or lastTakenDate is null id: ${after.id}, lastTakenDate: ${after.lastTakenDate} for takenPill action");
+          "unexpected after pill sheet id or lastTakenDate is null id: ${after.id}, lastTakenDate: ${after.lastTakenDate} for createdPillSheet action");
     }
     return _create(
       actionType: PillSheetModifiedActionType.createdPillSheet,
