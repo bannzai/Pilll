@@ -136,6 +136,10 @@ Map<String, dynamic> _$_$_TakenPillValueToJson(_$_TakenPillValue instance) =>
 _$_RevertTakenPillValue _$_$_RevertTakenPillValueFromJson(
     Map<String, dynamic> json) {
   return _$_RevertTakenPillValue(
+    beforeLastTakenDate: TimestampConverter.timestampToDateTime(
+        json['beforeLastTakenDate'] as Timestamp?),
+    afterLastTakenDate: NonNullTimestampConverter.timestampToDateTime(
+        json['afterLastTakenDate'] as Timestamp),
     beforeLastTakenPillNumber: json['beforeLastTakenPillNumber'] as int,
     afterLastTakenPillNumber: json['afterLastTakenPillNumber'] as int,
   );
@@ -144,6 +148,10 @@ _$_RevertTakenPillValue _$_$_RevertTakenPillValueFromJson(
 Map<String, dynamic> _$_$_RevertTakenPillValueToJson(
         _$_RevertTakenPillValue instance) =>
     <String, dynamic>{
+      'beforeLastTakenDate':
+          TimestampConverter.dateTimeToTimestamp(instance.beforeLastTakenDate),
+      'afterLastTakenDate': NonNullTimestampConverter.dateTimeToTimestamp(
+          instance.afterLastTakenDate),
       'beforeLastTakenPillNumber': instance.beforeLastTakenPillNumber,
       'afterLastTakenPillNumber': instance.afterLastTakenPillNumber,
     };

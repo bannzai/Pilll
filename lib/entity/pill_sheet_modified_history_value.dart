@@ -123,6 +123,16 @@ abstract class RevertTakenPillValue implements _$RevertTakenPillValue {
   RevertTakenPillValue._();
   @JsonSerializable(explicitToJson: true)
   factory RevertTakenPillValue({
+    @JsonKey(
+      fromJson: TimestampConverter.timestampToDateTime,
+      toJson: TimestampConverter.dateTimeToTimestamp,
+    )
+        DateTime? beforeLastTakenDate,
+    @JsonKey(
+      fromJson: NonNullTimestampConverter.timestampToDateTime,
+      toJson: NonNullTimestampConverter.dateTimeToTimestamp,
+    )
+        required DateTime afterLastTakenDate,
     required int beforeLastTakenPillNumber,
     required int afterLastTakenPillNumber,
   }) = _RevertTakenPillValue;
