@@ -242,14 +242,23 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
     return calcBeginingDateFromNextTodayPillNumberFunction(entity, pillNumber);
   }
 
-  void modifyBeginingDate(int pillNumber) {
+  Future<void> modifyBeginingDate(int pillNumber) async {
     final entity = state.entity;
     if (entity == null) {
       throw FormatException("pill sheet not found");
     }
 
-    modifyBeginingDateFunction(_service, entity, pillNumber)
-        .then((entity) => state = state.copyWith(entity: entity));
+    final batch = _batchFactory.batch();
+    modifyBeginingDateFunction(
+      batch,
+      _service,
+      _pillSheetModifiedHistoryService,
+      entity,
+      pillNumber,
+    );
+    await batch.commit();
+
+    state = state.copyWith(entity: entity);
   }
 
   PillMarkType markFor(int number) {
@@ -291,7 +300,7 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
   }
 }
 
-modifyBeginingDateFunction(
+PillSheet modifyBeginingDateFunction(
   WriteBatch batch,
   PillSheetService service,
   PillSheetModifiedHistoryService pillSheetModifiedHistoryService,
@@ -312,6 +321,8 @@ modifyBeginingDateFunction(
   final history = PillSheetModifiedHistoryServiceActionFactory
       .createChangedPillNumberAction(before: pillSheet, after: updated);
   pillSheetModifiedHistoryService.add(batch, history);
+
+  return updated;
 }
 
 DateTime calcBeginingDateFromNextTodayPillNumberFunction(
