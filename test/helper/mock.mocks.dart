@@ -45,7 +45,7 @@ import 'package:state_notifier/state_notifier.dart' as _i24;
 // ignore_for_file: prefer_const_constructors
 // ignore_for_file: unnecessary_parenthesis
 
-class _FakeTransaction extends _i1.Fake implements _i2.Transaction {}
+class _FakeWriteBatch extends _i1.Fake implements _i2.WriteBatch {}
 
 class _FakePillSheet extends _i1.Fake implements _i3.PillSheet {}
 
@@ -97,11 +97,9 @@ class MockPillSheetService extends _i1.Mock implements _i12.PillSheetService {
               returnValue: Future<List<_i3.PillSheet>>.value(<_i3.PillSheet>[]))
           as _i13.Future<List<_i3.PillSheet>>);
   @override
-  _i2.Transaction registerTransaction(
-          _i2.Transaction? transaction, _i3.PillSheet? model) =>
-      (super.noSuchMethod(
-          Invocation.method(#registerTransaction, [transaction, model]),
-          returnValue: _FakeTransaction()) as _i2.Transaction);
+  _i2.WriteBatch register(_i2.WriteBatch? batch, _i3.PillSheet? model) =>
+      (super.noSuchMethod(Invocation.method(#register, [batch, model]),
+          returnValue: _FakeWriteBatch()) as _i2.WriteBatch);
   @override
   _i13.Future<void> delete(_i3.PillSheet? pillSheet) =>
       (super.noSuchMethod(Invocation.method(#delete, [pillSheet]),

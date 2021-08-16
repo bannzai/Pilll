@@ -53,17 +53,15 @@ class PillSheetService {
         .then((event) => event.docs.map((e) => _mapToEntity(e)).toList());
   }
 
-  WriteBatch register(WriteBatch? batch, PillSheet model) {
+  register(WriteBatch batch, PillSheet model) {
     if (model.createdAt != null) throw PillSheetAlreadyExists();
     if (model.deletedAt != null) throw PillSheetAlreadyDeleted();
     final copied = model.copyWith(createdAt: DateTime.now());
 
     var json = copied.toJson();
     json.remove("id");
-    final _batch = batch ?? _database.batch();
-    _batch.set(
+    batch.set(
         _database.pillSheetsReference().doc(), json, SetOptions(merge: true));
-    return _batch;
   }
 
   Future<void> delete(PillSheet pillSheet) {
