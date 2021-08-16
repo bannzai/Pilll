@@ -182,8 +182,8 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
         PillSheetModifiedHistoryServiceActionFactory.createTakenPillAction(
             before: entity, after: updated);
     _pillSheetModifiedHistoryService.add(batch, history);
-
     await batch.commit();
+
     state = state.copyWith(entity: updated);
   }
 
@@ -249,7 +249,7 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
     }
 
     final batch = _batchFactory.batch();
-    modifyBeginingDateFunction(
+    final updated = modifyBeginingDateFunction(
       batch,
       _service,
       _pillSheetModifiedHistoryService,
@@ -258,7 +258,7 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
     );
     await batch.commit();
 
-    state = state.copyWith(entity: entity);
+    state = state.copyWith(entity: updated);
   }
 
   PillMarkType markFor(int number) {

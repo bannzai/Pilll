@@ -1,8 +1,11 @@
 import 'dart:async';
 
+import 'package:pilll/database/batch.dart';
 import 'package:pilll/domain/record/record_page_store.dart';
+import 'package:pilll/entity/pill_sheet_modified_history.dart';
 import 'package:pilll/entity/setting.dart';
 import 'package:pilll/service/pill_sheet.dart';
+import 'package:pilll/service/pill_sheet_modified_history.dart';
 import 'package:pilll/service/setting.dart';
 import 'package:pilll/domain/settings/setting_page_state.dart';
 import 'package:pilll/service/user.dart';
@@ -12,20 +15,26 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 final settingStoreProvider = StateNotifierProvider(
   (ref) => SettingStateStore(
+    ref.watch(batchFactoryProvider),
     ref.watch(settingServiceProvider),
     ref.watch(pillSheetServiceProvider),
     ref.watch(userServiceProvider),
+    ref.watch(pillSheetModifiedHistoryServiceProvider),
   ),
 );
 
 class SettingStateStore extends StateNotifier<SettingState> {
+  final BatchFactory _batchFactory;
   final SettingService _service;
   final PillSheetService _pillSheetService;
   final UserService _userService;
+  final PillSheetModifiedHistoryService _pillSheetModifiedHistoryService;
   SettingStateStore(
+    this._batchFactory,
     this._service,
     this._pillSheetService,
     this._userService,
+    this._pillSheetModifiedHistoryService,
   ) : super(SettingState(entity: null)) {
     _reset();
   }
@@ -173,14 +182,18 @@ class SettingStateStore extends StateNotifier<SettingState> {
     state = state.copyWith(entity: entity);
   }
 
-  void modifyBeginingDate(int pillNumber) {
+  Future<void> modifyBeginingDate(int pillNumber) async {
     final entity = state.latestPillSheet;
     if (entity == null) {
       throw FormatException("pill sheet not found");
     }
 
-    modifyBeginingDateFunction(_pillSheetService, entity, pillNumber)
-        .then((entity) => state = state.copyWith(latestPillSheet: entity));
+    final batch = _batchFactory.batch();
+    final updated = modifyBeginingDateFunction(batch, _pillSheetService,
+        _pillSheetModifiedHistoryService, entity, pillNumber);
+    await batch.commit();
+
+    state = state.copyWith(latestPillSheet: updated);
   }
 
   Future<void> deletePillSheet() {
