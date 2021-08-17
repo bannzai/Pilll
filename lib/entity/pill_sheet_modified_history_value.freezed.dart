@@ -1930,9 +1930,9 @@ class _$EndedPillSheetValueTearOff {
 
   _EndedPillSheetValue call(
       {@JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-          required DateTime afterLastTakenDate}) {
+          required DateTime lastTakenDate}) {
     return _EndedPillSheetValue(
-      afterLastTakenDate: afterLastTakenDate,
+      lastTakenDate: lastTakenDate,
     );
   }
 
@@ -1949,7 +1949,7 @@ mixin _$EndedPillSheetValue {
   @JsonKey(
       fromJson: NonNullTimestampConverter.timestampToDateTime,
       toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-  DateTime get afterLastTakenDate => throw _privateConstructorUsedError;
+  DateTime get lastTakenDate => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -1964,7 +1964,7 @@ abstract class $EndedPillSheetValueCopyWith<$Res> {
       _$EndedPillSheetValueCopyWithImpl<$Res>;
   $Res call(
       {@JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-          DateTime afterLastTakenDate});
+          DateTime lastTakenDate});
 }
 
 /// @nodoc
@@ -1978,12 +1978,12 @@ class _$EndedPillSheetValueCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object? afterLastTakenDate = freezed,
+    Object? lastTakenDate = freezed,
   }) {
     return _then(_value.copyWith(
-      afterLastTakenDate: afterLastTakenDate == freezed
-          ? _value.afterLastTakenDate
-          : afterLastTakenDate // ignore: cast_nullable_to_non_nullable
+      lastTakenDate: lastTakenDate == freezed
+          ? _value.lastTakenDate
+          : lastTakenDate // ignore: cast_nullable_to_non_nullable
               as DateTime,
     ));
   }
@@ -1998,7 +1998,7 @@ abstract class _$EndedPillSheetValueCopyWith<$Res>
   @override
   $Res call(
       {@JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-          DateTime afterLastTakenDate});
+          DateTime lastTakenDate});
 }
 
 /// @nodoc
@@ -2014,12 +2014,12 @@ class __$EndedPillSheetValueCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object? afterLastTakenDate = freezed,
+    Object? lastTakenDate = freezed,
   }) {
     return _then(_EndedPillSheetValue(
-      afterLastTakenDate: afterLastTakenDate == freezed
-          ? _value.afterLastTakenDate
-          : afterLastTakenDate // ignore: cast_nullable_to_non_nullable
+      lastTakenDate: lastTakenDate == freezed
+          ? _value.lastTakenDate
+          : lastTakenDate // ignore: cast_nullable_to_non_nullable
               as DateTime,
     ));
   }
@@ -2031,7 +2031,7 @@ class __$EndedPillSheetValueCopyWithImpl<$Res>
 class _$_EndedPillSheetValue extends _EndedPillSheetValue {
   _$_EndedPillSheetValue(
       {@JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-          required this.afterLastTakenDate})
+          required this.lastTakenDate})
       : super._();
 
   factory _$_EndedPillSheetValue.fromJson(Map<String, dynamic> json) =>
@@ -2041,26 +2041,25 @@ class _$_EndedPillSheetValue extends _EndedPillSheetValue {
   @JsonKey(
       fromJson: NonNullTimestampConverter.timestampToDateTime,
       toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-  final DateTime afterLastTakenDate;
+  final DateTime lastTakenDate;
 
   @override
   String toString() {
-    return 'EndedPillSheetValue(afterLastTakenDate: $afterLastTakenDate)';
+    return 'EndedPillSheetValue(lastTakenDate: $lastTakenDate)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other is _EndedPillSheetValue &&
-            (identical(other.afterLastTakenDate, afterLastTakenDate) ||
+            (identical(other.lastTakenDate, lastTakenDate) ||
                 const DeepCollectionEquality()
-                    .equals(other.afterLastTakenDate, afterLastTakenDate)));
+                    .equals(other.lastTakenDate, lastTakenDate)));
   }
 
   @override
   int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(afterLastTakenDate);
+      runtimeType.hashCode ^ const DeepCollectionEquality().hash(lastTakenDate);
 
   @JsonKey(ignore: true)
   @override
@@ -2077,7 +2076,7 @@ class _$_EndedPillSheetValue extends _EndedPillSheetValue {
 abstract class _EndedPillSheetValue extends EndedPillSheetValue {
   factory _EndedPillSheetValue(
       {@JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-          required DateTime afterLastTakenDate}) = _$_EndedPillSheetValue;
+          required DateTime lastTakenDate}) = _$_EndedPillSheetValue;
   _EndedPillSheetValue._() : super._();
 
   factory _EndedPillSheetValue.fromJson(Map<String, dynamic> json) =
@@ -2087,7 +2086,7 @@ abstract class _EndedPillSheetValue extends EndedPillSheetValue {
   @JsonKey(
       fromJson: NonNullTimestampConverter.timestampToDateTime,
       toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-  DateTime get afterLastTakenDate => throw _privateConstructorUsedError;
+  DateTime get lastTakenDate => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$EndedPillSheetValueCopyWith<_EndedPillSheetValue> get copyWith =>

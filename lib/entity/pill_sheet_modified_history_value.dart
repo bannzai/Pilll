@@ -177,7 +177,7 @@ abstract class EndedPillSheetValue implements _$EndedPillSheetValue {
       fromJson: NonNullTimestampConverter.timestampToDateTime,
       toJson: NonNullTimestampConverter.dateTimeToTimestamp,
     )
-        required DateTime afterLastTakenDate,
+        required DateTime lastTakenDate,
   }) = _EndedPillSheetValue;
 
   factory EndedPillSheetValue.fromJson(Map<String, dynamic> json) =>
