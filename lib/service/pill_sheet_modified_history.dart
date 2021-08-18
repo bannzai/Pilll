@@ -78,7 +78,7 @@ extension PillSheetModifiedHistoryServiceActionFactory
   static PillSheetModifiedHistory _create({
     required PillSheet? before,
     required PillSheet after,
-    required String afterID,
+    required String pillSheetID,
     required PillSheetModifiedActionType actionType,
     required PillSheetModifiedHistoryValue value,
   }) {
@@ -86,9 +86,8 @@ extension PillSheetModifiedHistoryServiceActionFactory
       id: null,
       actionType: actionType.name,
       value: value,
-      beforeID: before?.id,
+      pillSheetID: pillSheetID,
       before: before,
-      afterID: afterID,
       after: after,
       estimatedEventCausingDate: DateTime.now(),
       createdAt: DateTime.now(),
@@ -116,7 +115,7 @@ extension PillSheetModifiedHistoryServiceActionFactory
         ),
       ),
       after: after,
-      afterID: afterID,
+      pillSheetID: afterID,
       before: before,
     );
   }
@@ -148,7 +147,7 @@ extension PillSheetModifiedHistoryServiceActionFactory
         ),
       ),
       after: after,
-      afterID: afterID,
+      pillSheetID: afterID,
       before: before,
     );
   }
@@ -170,7 +169,7 @@ extension PillSheetModifiedHistoryServiceActionFactory
             CreatedPillSheetValue(pillSheetCreatedAt: DateTime.now()),
       ),
       after: after,
-      afterID: afterID,
+      pillSheetID: afterID,
       before: before,
     );
   }
@@ -195,7 +194,7 @@ extension PillSheetModifiedHistoryServiceActionFactory
             beforeLastTakenPillNumber: before.lastTakenPillNumber),
       ),
       after: after,
-      afterID: afterID,
+      pillSheetID: afterID,
       before: before,
     );
   }
@@ -218,7 +217,7 @@ extension PillSheetModifiedHistoryServiceActionFactory
         ),
       ),
       after: after,
-      afterID: afterID,
+      pillSheetID: afterID,
       before: before,
     );
   }
