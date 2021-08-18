@@ -13,11 +13,10 @@ _$_PillSheetModifiedHistory _$_$_PillSheetModifiedHistoryFromJson(
     actionType: json['actionType'] as String,
     value: PillSheetModifiedHistoryValue.fromJson(
         json['value'] as Map<String, dynamic>),
-    beforeID: json['beforeID'] as String?,
+    pillSheetID: json['pillSheetID'] as String,
     before: json['before'] == null
         ? null
         : PillSheet.fromJson(json['before'] as Map<String, dynamic>),
-    afterID: json['afterID'] as String,
     after: PillSheet.fromJson(json['after'] as Map<String, dynamic>),
     estimatedEventCausingDate: NonNullTimestampConverter.timestampToDateTime(
         json['estimatedEventCausingDate'] as Timestamp),
@@ -39,9 +38,8 @@ Map<String, dynamic> _$_$_PillSheetModifiedHistoryToJson(
   writeNotNull('id', toNull(instance.id));
   val['actionType'] = instance.actionType;
   val['value'] = instance.value.toJson();
-  val['beforeID'] = instance.beforeID;
+  val['pillSheetID'] = instance.pillSheetID;
   val['before'] = instance.before?.toJson();
-  val['afterID'] = instance.afterID;
   val['after'] = instance.after.toJson();
   val['estimatedEventCausingDate'] =
       NonNullTimestampConverter.dateTimeToTimestamp(

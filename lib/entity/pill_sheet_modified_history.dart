@@ -43,11 +43,9 @@ abstract class PillSheetModifiedHistory with _$PillSheetModifiedHistory {
         required String? id,
     required String actionType,
     required PillSheetModifiedHistoryValue value,
-    @Default(null)
-        String? beforeID,
+    required String pillSheetID,
     @Default(null)
         PillSheet? before,
-    required String afterID,
     required PillSheet after,
     @JsonKey(
       fromJson: NonNullTimestampConverter.timestampToDateTime,

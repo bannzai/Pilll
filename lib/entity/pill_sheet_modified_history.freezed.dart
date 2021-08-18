@@ -26,9 +26,8 @@ class _$PillSheetModifiedHistoryTearOff {
           required String? id,
       required String actionType,
       required PillSheetModifiedHistoryValue value,
-      String? beforeID = null,
+      required String pillSheetID,
       PillSheet? before = null,
-      required String afterID,
       required PillSheet after,
       @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
           required DateTime estimatedEventCausingDate,
@@ -38,9 +37,8 @@ class _$PillSheetModifiedHistoryTearOff {
       id: id,
       actionType: actionType,
       value: value,
-      beforeID: beforeID,
+      pillSheetID: pillSheetID,
       before: before,
-      afterID: afterID,
       after: after,
       estimatedEventCausingDate: estimatedEventCausingDate,
       createdAt: createdAt,
@@ -61,9 +59,8 @@ mixin _$PillSheetModifiedHistory {
   String? get id => throw _privateConstructorUsedError;
   String get actionType => throw _privateConstructorUsedError;
   PillSheetModifiedHistoryValue get value => throw _privateConstructorUsedError;
-  String? get beforeID => throw _privateConstructorUsedError;
+  String get pillSheetID => throw _privateConstructorUsedError;
   PillSheet? get before => throw _privateConstructorUsedError;
-  String get afterID => throw _privateConstructorUsedError;
   PillSheet get after => throw _privateConstructorUsedError;
   @JsonKey(
       fromJson: NonNullTimestampConverter.timestampToDateTime,
@@ -90,9 +87,8 @@ abstract class $PillSheetModifiedHistoryCopyWith<$Res> {
           String? id,
       String actionType,
       PillSheetModifiedHistoryValue value,
-      String? beforeID,
+      String pillSheetID,
       PillSheet? before,
-      String afterID,
       PillSheet after,
       @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
           DateTime estimatedEventCausingDate,
@@ -118,9 +114,8 @@ class _$PillSheetModifiedHistoryCopyWithImpl<$Res>
     Object? id = freezed,
     Object? actionType = freezed,
     Object? value = freezed,
-    Object? beforeID = freezed,
+    Object? pillSheetID = freezed,
     Object? before = freezed,
-    Object? afterID = freezed,
     Object? after = freezed,
     Object? estimatedEventCausingDate = freezed,
     Object? createdAt = freezed,
@@ -138,18 +133,14 @@ class _$PillSheetModifiedHistoryCopyWithImpl<$Res>
           ? _value.value
           : value // ignore: cast_nullable_to_non_nullable
               as PillSheetModifiedHistoryValue,
-      beforeID: beforeID == freezed
-          ? _value.beforeID
-          : beforeID // ignore: cast_nullable_to_non_nullable
-              as String?,
+      pillSheetID: pillSheetID == freezed
+          ? _value.pillSheetID
+          : pillSheetID // ignore: cast_nullable_to_non_nullable
+              as String,
       before: before == freezed
           ? _value.before
           : before // ignore: cast_nullable_to_non_nullable
               as PillSheet?,
-      afterID: afterID == freezed
-          ? _value.afterID
-          : afterID // ignore: cast_nullable_to_non_nullable
-              as String,
       after: after == freezed
           ? _value.after
           : after // ignore: cast_nullable_to_non_nullable
@@ -203,9 +194,8 @@ abstract class _$PillSheetModifiedHistoryCopyWith<$Res>
           String? id,
       String actionType,
       PillSheetModifiedHistoryValue value,
-      String? beforeID,
+      String pillSheetID,
       PillSheet? before,
-      String afterID,
       PillSheet after,
       @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
           DateTime estimatedEventCausingDate,
@@ -237,9 +227,8 @@ class __$PillSheetModifiedHistoryCopyWithImpl<$Res>
     Object? id = freezed,
     Object? actionType = freezed,
     Object? value = freezed,
-    Object? beforeID = freezed,
+    Object? pillSheetID = freezed,
     Object? before = freezed,
-    Object? afterID = freezed,
     Object? after = freezed,
     Object? estimatedEventCausingDate = freezed,
     Object? createdAt = freezed,
@@ -257,18 +246,14 @@ class __$PillSheetModifiedHistoryCopyWithImpl<$Res>
           ? _value.value
           : value // ignore: cast_nullable_to_non_nullable
               as PillSheetModifiedHistoryValue,
-      beforeID: beforeID == freezed
-          ? _value.beforeID
-          : beforeID // ignore: cast_nullable_to_non_nullable
-              as String?,
+      pillSheetID: pillSheetID == freezed
+          ? _value.pillSheetID
+          : pillSheetID // ignore: cast_nullable_to_non_nullable
+              as String,
       before: before == freezed
           ? _value.before
           : before // ignore: cast_nullable_to_non_nullable
               as PillSheet?,
-      afterID: afterID == freezed
-          ? _value.afterID
-          : afterID // ignore: cast_nullable_to_non_nullable
-              as String,
       after: after == freezed
           ? _value.after
           : after // ignore: cast_nullable_to_non_nullable
@@ -294,9 +279,8 @@ class _$_PillSheetModifiedHistory extends _PillSheetModifiedHistory {
           required this.id,
       required this.actionType,
       required this.value,
-      this.beforeID = null,
+      required this.pillSheetID,
       this.before = null,
-      required this.afterID,
       required this.after,
       @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
           required this.estimatedEventCausingDate,
@@ -314,14 +298,11 @@ class _$_PillSheetModifiedHistory extends _PillSheetModifiedHistory {
   final String actionType;
   @override
   final PillSheetModifiedHistoryValue value;
-  @JsonKey(defaultValue: null)
   @override
-  final String? beforeID;
+  final String pillSheetID;
   @JsonKey(defaultValue: null)
   @override
   final PillSheet? before;
-  @override
-  final String afterID;
   @override
   final PillSheet after;
   @override
@@ -337,7 +318,7 @@ class _$_PillSheetModifiedHistory extends _PillSheetModifiedHistory {
 
   @override
   String toString() {
-    return 'PillSheetModifiedHistory(id: $id, actionType: $actionType, value: $value, beforeID: $beforeID, before: $before, afterID: $afterID, after: $after, estimatedEventCausingDate: $estimatedEventCausingDate, createdAt: $createdAt)';
+    return 'PillSheetModifiedHistory(id: $id, actionType: $actionType, value: $value, pillSheetID: $pillSheetID, before: $before, after: $after, estimatedEventCausingDate: $estimatedEventCausingDate, createdAt: $createdAt)';
   }
 
   @override
@@ -351,14 +332,11 @@ class _$_PillSheetModifiedHistory extends _PillSheetModifiedHistory {
                     .equals(other.actionType, actionType)) &&
             (identical(other.value, value) ||
                 const DeepCollectionEquality().equals(other.value, value)) &&
-            (identical(other.beforeID, beforeID) ||
+            (identical(other.pillSheetID, pillSheetID) ||
                 const DeepCollectionEquality()
-                    .equals(other.beforeID, beforeID)) &&
+                    .equals(other.pillSheetID, pillSheetID)) &&
             (identical(other.before, before) ||
                 const DeepCollectionEquality().equals(other.before, before)) &&
-            (identical(other.afterID, afterID) ||
-                const DeepCollectionEquality()
-                    .equals(other.afterID, afterID)) &&
             (identical(other.after, after) ||
                 const DeepCollectionEquality().equals(other.after, after)) &&
             (identical(other.estimatedEventCausingDate,
@@ -377,9 +355,8 @@ class _$_PillSheetModifiedHistory extends _PillSheetModifiedHistory {
       const DeepCollectionEquality().hash(id) ^
       const DeepCollectionEquality().hash(actionType) ^
       const DeepCollectionEquality().hash(value) ^
-      const DeepCollectionEquality().hash(beforeID) ^
+      const DeepCollectionEquality().hash(pillSheetID) ^
       const DeepCollectionEquality().hash(before) ^
-      const DeepCollectionEquality().hash(afterID) ^
       const DeepCollectionEquality().hash(after) ^
       const DeepCollectionEquality().hash(estimatedEventCausingDate) ^
       const DeepCollectionEquality().hash(createdAt);
@@ -402,9 +379,8 @@ abstract class _PillSheetModifiedHistory extends PillSheetModifiedHistory {
           required String? id,
       required String actionType,
       required PillSheetModifiedHistoryValue value,
-      String? beforeID,
+      required String pillSheetID,
       PillSheet? before,
-      required String afterID,
       required PillSheet after,
       @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
           required DateTime estimatedEventCausingDate,
@@ -423,11 +399,9 @@ abstract class _PillSheetModifiedHistory extends PillSheetModifiedHistory {
   @override
   PillSheetModifiedHistoryValue get value => throw _privateConstructorUsedError;
   @override
-  String? get beforeID => throw _privateConstructorUsedError;
+  String get pillSheetID => throw _privateConstructorUsedError;
   @override
   PillSheet? get before => throw _privateConstructorUsedError;
-  @override
-  String get afterID => throw _privateConstructorUsedError;
   @override
   PillSheet get after => throw _privateConstructorUsedError;
   @override
