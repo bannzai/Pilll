@@ -177,6 +177,11 @@ abstract class EndedPillSheetValue implements _$EndedPillSheetValue {
       fromJson: NonNullTimestampConverter.timestampToDateTime,
       toJson: NonNullTimestampConverter.dateTimeToTimestamp,
     )
+        required DateTime endRecordDate,
+    @JsonKey(
+      fromJson: NonNullTimestampConverter.timestampToDateTime,
+      toJson: NonNullTimestampConverter.dateTimeToTimestamp,
+    )
         required DateTime lastTakenDate,
   }) = _EndedPillSheetValue;
 

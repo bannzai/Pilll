@@ -182,6 +182,8 @@ Map<String, dynamic> _$_$_ChangedPillNumberValueToJson(
 _$_EndedPillSheetValue _$_$_EndedPillSheetValueFromJson(
     Map<String, dynamic> json) {
   return _$_EndedPillSheetValue(
+    endRecordDate: NonNullTimestampConverter.timestampToDateTime(
+        json['endRecordDate'] as Timestamp),
     lastTakenDate: NonNullTimestampConverter.timestampToDateTime(
         json['lastTakenDate'] as Timestamp),
   );
@@ -190,6 +192,8 @@ _$_EndedPillSheetValue _$_$_EndedPillSheetValueFromJson(
 Map<String, dynamic> _$_$_EndedPillSheetValueToJson(
         _$_EndedPillSheetValue instance) =>
     <String, dynamic>{
+      'endRecordDate':
+          NonNullTimestampConverter.dateTimeToTimestamp(instance.endRecordDate),
       'lastTakenDate':
           NonNullTimestampConverter.dateTimeToTimestamp(instance.lastTakenDate),
     };

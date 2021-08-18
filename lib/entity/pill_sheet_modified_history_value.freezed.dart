@@ -1930,8 +1930,11 @@ class _$EndedPillSheetValueTearOff {
 
   _EndedPillSheetValue call(
       {@JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+          required DateTime endRecordDate,
+      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
           required DateTime lastTakenDate}) {
     return _EndedPillSheetValue(
+      endRecordDate: endRecordDate,
       lastTakenDate: lastTakenDate,
     );
   }
@@ -1946,6 +1949,10 @@ const $EndedPillSheetValue = _$EndedPillSheetValueTearOff();
 
 /// @nodoc
 mixin _$EndedPillSheetValue {
+  @JsonKey(
+      fromJson: NonNullTimestampConverter.timestampToDateTime,
+      toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+  DateTime get endRecordDate => throw _privateConstructorUsedError;
   @JsonKey(
       fromJson: NonNullTimestampConverter.timestampToDateTime,
       toJson: NonNullTimestampConverter.dateTimeToTimestamp)
@@ -1964,6 +1971,8 @@ abstract class $EndedPillSheetValueCopyWith<$Res> {
       _$EndedPillSheetValueCopyWithImpl<$Res>;
   $Res call(
       {@JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+          DateTime endRecordDate,
+      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
           DateTime lastTakenDate});
 }
 
@@ -1978,9 +1987,14 @@ class _$EndedPillSheetValueCopyWithImpl<$Res>
 
   @override
   $Res call({
+    Object? endRecordDate = freezed,
     Object? lastTakenDate = freezed,
   }) {
     return _then(_value.copyWith(
+      endRecordDate: endRecordDate == freezed
+          ? _value.endRecordDate
+          : endRecordDate // ignore: cast_nullable_to_non_nullable
+              as DateTime,
       lastTakenDate: lastTakenDate == freezed
           ? _value.lastTakenDate
           : lastTakenDate // ignore: cast_nullable_to_non_nullable
@@ -1998,6 +2012,8 @@ abstract class _$EndedPillSheetValueCopyWith<$Res>
   @override
   $Res call(
       {@JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+          DateTime endRecordDate,
+      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
           DateTime lastTakenDate});
 }
 
@@ -2014,9 +2030,14 @@ class __$EndedPillSheetValueCopyWithImpl<$Res>
 
   @override
   $Res call({
+    Object? endRecordDate = freezed,
     Object? lastTakenDate = freezed,
   }) {
     return _then(_EndedPillSheetValue(
+      endRecordDate: endRecordDate == freezed
+          ? _value.endRecordDate
+          : endRecordDate // ignore: cast_nullable_to_non_nullable
+              as DateTime,
       lastTakenDate: lastTakenDate == freezed
           ? _value.lastTakenDate
           : lastTakenDate // ignore: cast_nullable_to_non_nullable
@@ -2031,6 +2052,8 @@ class __$EndedPillSheetValueCopyWithImpl<$Res>
 class _$_EndedPillSheetValue extends _EndedPillSheetValue {
   _$_EndedPillSheetValue(
       {@JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+          required this.endRecordDate,
+      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
           required this.lastTakenDate})
       : super._();
 
@@ -2041,17 +2064,25 @@ class _$_EndedPillSheetValue extends _EndedPillSheetValue {
   @JsonKey(
       fromJson: NonNullTimestampConverter.timestampToDateTime,
       toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+  final DateTime endRecordDate;
+  @override
+  @JsonKey(
+      fromJson: NonNullTimestampConverter.timestampToDateTime,
+      toJson: NonNullTimestampConverter.dateTimeToTimestamp)
   final DateTime lastTakenDate;
 
   @override
   String toString() {
-    return 'EndedPillSheetValue(lastTakenDate: $lastTakenDate)';
+    return 'EndedPillSheetValue(endRecordDate: $endRecordDate, lastTakenDate: $lastTakenDate)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other is _EndedPillSheetValue &&
+            (identical(other.endRecordDate, endRecordDate) ||
+                const DeepCollectionEquality()
+                    .equals(other.endRecordDate, endRecordDate)) &&
             (identical(other.lastTakenDate, lastTakenDate) ||
                 const DeepCollectionEquality()
                     .equals(other.lastTakenDate, lastTakenDate)));
@@ -2059,7 +2090,9 @@ class _$_EndedPillSheetValue extends _EndedPillSheetValue {
 
   @override
   int get hashCode =>
-      runtimeType.hashCode ^ const DeepCollectionEquality().hash(lastTakenDate);
+      runtimeType.hashCode ^
+      const DeepCollectionEquality().hash(endRecordDate) ^
+      const DeepCollectionEquality().hash(lastTakenDate);
 
   @JsonKey(ignore: true)
   @override
@@ -2076,12 +2109,19 @@ class _$_EndedPillSheetValue extends _EndedPillSheetValue {
 abstract class _EndedPillSheetValue extends EndedPillSheetValue {
   factory _EndedPillSheetValue(
       {@JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+          required DateTime endRecordDate,
+      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
           required DateTime lastTakenDate}) = _$_EndedPillSheetValue;
   _EndedPillSheetValue._() : super._();
 
   factory _EndedPillSheetValue.fromJson(Map<String, dynamic> json) =
       _$_EndedPillSheetValue.fromJson;
 
+  @override
+  @JsonKey(
+      fromJson: NonNullTimestampConverter.timestampToDateTime,
+      toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+  DateTime get endRecordDate => throw _privateConstructorUsedError;
   @override
   @JsonKey(
       fromJson: NonNullTimestampConverter.timestampToDateTime,
