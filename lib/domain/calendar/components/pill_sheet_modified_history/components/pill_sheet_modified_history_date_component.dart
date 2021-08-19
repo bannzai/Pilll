@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
+import 'package:pilll/entity/pill_sheet_modified_history_value.dart';
 import 'package:pilll/entity/weekday.dart';
 
 abstract class PillSheetModifiedHistoryTakenActionLayoutWidths {
@@ -14,14 +15,12 @@ abstract class PillSheetModifiedHistoryTakenActionLayoutWidths {
 
 class PillSheetModifiedHistoryDate extends StatelessWidget {
   final DateTime estimatedEventCausingDate;
-  final int? beforePillNumber;
-  final int? afterPillNumber;
+  final String effectivePillNumber;
 
   const PillSheetModifiedHistoryDate({
     Key? key,
     required this.estimatedEventCausingDate,
-    required this.beforePillNumber,
-    required this.afterPillNumber,
+    required this.effectivePillNumber,
   }) : super(key: key);
 
   int get _day => estimatedEventCausingDate.day;
@@ -76,7 +75,7 @@ class PillSheetModifiedHistoryDate extends StatelessWidget {
           Container(
             width: 50,
             child: Text(
-              "$_pillNumberWord",
+              "$effectivePillNumber",
               style: TextStyle(
                 color: TextColor.main,
                 fontFamily: FontFamily.japanese,
@@ -90,20 +89,29 @@ class PillSheetModifiedHistoryDate extends StatelessWidget {
       ),
     );
   }
+}
 
-  String get _pillNumberWord {
-    if (beforePillNumber == null && afterPillNumber == null) {
-      return "-";
+extension PillSheetModifiedHistoryDateEffectivePillNumber
+    on PillSheetModifiedHistoryDate {
+  static String hyphen() => "-";
+  static String taken(TakenPillValue value) {
+    final before = value.beforeLastTakenPillNumber;
+    final after = value.afterLastTakenPillNumber;
+    if (before == after) {
+      return "$before";
     }
-    if (afterPillNumber == null) {
-      return "$beforePillNumber番";
-    }
-    if (beforePillNumber == null) {
-      return "$afterPillNumber番";
-    }
-    if (beforePillNumber == afterPillNumber) {
-      return "$beforePillNumber番";
-    }
-    return "$beforePillNumber→$afterPillNumber番";
+    return "$before-$after";
   }
+
+  static String revert(RevertTakenPillValue value) {
+    final before = value.beforeLastTakenPillNumber;
+    final after = value.afterLastTakenPillNumber;
+    if (before == after) {
+      return "$before";
+    }
+    return "$before-$after";
+  }
+
+  static String changed(ChangedPillNumberValue value) =>
+      "${value.beforeLastTakenPillNumber}→${value.afterLastTakenPillNumber}";
 }
