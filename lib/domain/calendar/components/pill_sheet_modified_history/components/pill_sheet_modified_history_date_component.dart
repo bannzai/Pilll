@@ -98,20 +98,20 @@ extension PillSheetModifiedHistoryDateEffectivePillNumber
     final before = value.beforeLastTakenPillNumber;
     final after = value.afterLastTakenPillNumber;
     if (before == after) {
-      return "$before";
+      return "$before番";
     }
-    return "$before-$after";
+    return "$before-$after番";
   }
 
   static String revert(RevertTakenPillValue value) {
     final before = value.beforeLastTakenPillNumber;
     final after = value.afterLastTakenPillNumber;
     if (before == after) {
-      return "$before";
+      return "$before番";
     }
-    return "$before-$after";
+    return "$before-$after番";
   }
 
   static String changed(ChangedPillNumberValue value) =>
-      "${value.beforeLastTakenPillNumber}→${value.afterLastTakenPillNumber}";
+      "${value.beforeLastTakenPillNumber}→${value.afterLastTakenPillNumber}番";
 }
