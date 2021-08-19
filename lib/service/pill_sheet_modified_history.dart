@@ -157,11 +157,6 @@ extension PillSheetModifiedHistoryServiceActionFactory
     required String pillSheetID,
     required PillSheet after,
   }) {
-    final afterLastTakenDate = after.lastTakenDate;
-    if (afterLastTakenDate == null) {
-      throw FormatException(
-          "unexpected after pill sheet id or lastTakenDate is null id: ${after.id}, lastTakenDate: ${after.lastTakenDate} for createdPillSheet action");
-    }
     return _create(
       actionType: PillSheetModifiedActionType.createdPillSheet,
       value: PillSheetModifiedHistoryValue(
