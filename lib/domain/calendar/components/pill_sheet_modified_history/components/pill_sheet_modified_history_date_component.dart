@@ -103,6 +103,15 @@ extension PillSheetModifiedHistoryDateEffectivePillNumber
     return "$before-$after番";
   }
 
+  static String autoTaken(AutomaticallyRecordedLastTakenDateValue value) {
+    final before = value.beforeLastTakenPillNumber;
+    final after = value.afterLastTakenPillNumber;
+    if (before == (after - 1)) {
+      return "$after番";
+    }
+    return "$before-$after番";
+  }
+
   static String revert(RevertTakenPillValue value) {
     return "${value.beforeLastTakenPillNumber}番";
   }

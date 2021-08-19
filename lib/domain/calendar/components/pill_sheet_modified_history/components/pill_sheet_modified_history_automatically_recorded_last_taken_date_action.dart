@@ -32,7 +32,8 @@ class PillSheetModifiedHistoryAutomaticallyRecordedLastTakenDateAction
             PillSheetModifiedHistoryDate(
               estimatedEventCausingDate: estimatedEventCausingDate,
               effectivePillNumber:
-                  PillSheetModifiedHistoryDateEffectivePillNumber.hyphen(),
+                  PillSheetModifiedHistoryDateEffectivePillNumber.autoTaken(
+                      value),
             ),
             Spacer(),
             Container(
@@ -42,7 +43,7 @@ class PillSheetModifiedHistoryAutomaticallyRecordedLastTakenDateAction
                   Container(
                     padding: EdgeInsets.only(left: 8),
                     child: Text(
-                      "${value.afterLastTakenPillNumber}番",
+                      "-",
                       style: TextStyle(
                         color: TextColor.main,
                         fontSize: 12,
@@ -59,15 +60,6 @@ class PillSheetModifiedHistoryAutomaticallyRecordedLastTakenDateAction
                           .takenMark,
                     ),
                     padding: EdgeInsets.only(left: 8),
-                    child: Text(
-                      pillSheetType.notTakenWord,
-                      style: TextStyle(
-                        color: TextColor.main,
-                        fontFamily: FontFamily.japanese,
-                        fontSize: 12,
-                        fontWeight: FontWeight.w400,
-                      ),
-                    ),
                   ),
                 ],
               ),
