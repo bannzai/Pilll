@@ -19,8 +19,7 @@ class TakenPillActionOList extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final count = max(
-        value.afterLastTakenPillNumber - (value.beforeLastTakenPillNumber ?? 1),
-        1);
+        value.afterLastTakenPillNumber - (value.beforeLastTakenPillNumber), 1);
     return Container(
       child: Row(
           mainAxisSize: MainAxisSize.min,
