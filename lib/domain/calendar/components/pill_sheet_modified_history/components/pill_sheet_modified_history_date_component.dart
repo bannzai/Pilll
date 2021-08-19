@@ -104,7 +104,7 @@ extension PillSheetModifiedHistoryDateEffectivePillNumber
   }
 
   static String revert(RevertTakenPillValue value) {
-    return "${value.afterLastTakenPillNumber}番";
+    return "${value.beforeLastTakenPillNumber}番";
   }
 
   static String changed(ChangedPillNumberValue value) =>
