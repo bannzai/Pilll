@@ -95,7 +95,7 @@ extension PillSheetModifiedHistoryServiceActionFactory
   }
 
   static PillSheetModifiedHistory createTakenPillAction({
-    required PillSheet? before,
+    required PillSheet before,
     required PillSheet after,
   }) {
     final afterID = after.id;
@@ -110,8 +110,8 @@ extension PillSheetModifiedHistoryServiceActionFactory
         takenPill: TakenPillValue(
           afterLastTakenDate: afterLastTakenDate,
           afterLastTakenPillNumber: after.lastTakenPillNumber,
-          beforeLastTakenDate: before?.lastTakenDate,
-          beforeLastTakenPillNumber: before?.lastTakenPillNumber,
+          beforeLastTakenDate: before.lastTakenDate,
+          beforeLastTakenPillNumber: before.lastTakenPillNumber,
         ),
       ),
       after: after,
@@ -200,7 +200,7 @@ extension PillSheetModifiedHistoryServiceActionFactory
   }
 
   static PillSheetModifiedHistory createDeletedPillSheetAction({
-    required PillSheet? before,
+    required PillSheet before,
     required PillSheet after,
   }) {
     final afterID = after.id;
