@@ -27,7 +27,7 @@ void main() {
       final pillSheetEntity = initialSetting.buildPillSheet();
       final pillSheetService = MockPillSheetService();
       when(pillSheetService.register(any, pillSheetEntity!))
-          .thenAnswer((realInvocation) => Future.value(pillSheetEntity));
+          .thenAnswer((realInvocation) => "ID");
 
       final service =
           InitialSettingService(batch, settingService, pillSheetService);
