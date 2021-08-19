@@ -97,7 +97,7 @@ extension PillSheetModifiedHistoryDateEffectivePillNumber
   static String taken(TakenPillValue value) {
     final before = value.beforeLastTakenPillNumber;
     final after = value.afterLastTakenPillNumber;
-    if (before == after) {
+    if (before == (after - 1)) {
       return "$before番";
     }
     return "$before-$after番";
@@ -106,7 +106,7 @@ extension PillSheetModifiedHistoryDateEffectivePillNumber
   static String revert(RevertTakenPillValue value) {
     final before = value.beforeLastTakenPillNumber;
     final after = value.afterLastTakenPillNumber;
-    if (before == after) {
+    if (before == (after + 1)) {
       return "$before番";
     }
     return "$before-$after番";
