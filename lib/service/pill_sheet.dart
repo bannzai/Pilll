@@ -52,15 +52,17 @@ class PillSheetService {
         .then((event) => event.docs.map((e) => _mapToEntity(e)).toList());
   }
 
-  register(WriteBatch batch, PillSheet model) {
+  // Return new PillSheet document id
+  String register(WriteBatch batch, PillSheet model) {
     if (model.createdAt != null) throw PillSheetAlreadyExists();
     if (model.deletedAt != null) throw PillSheetAlreadyDeleted();
     final copied = model.copyWith(createdAt: DateTime.now());
 
+    final document = _database.pillSheetsReference().doc();
     var json = copied.toJson();
     json.remove("id");
-    batch.set(
-        _database.pillSheetsReference().doc(), json, SetOptions(merge: true));
+    batch.set(document, json, SetOptions(merge: true));
+    return document.id;
   }
 
   PillSheet delete(WriteBatch batch, PillSheet pillSheet) {

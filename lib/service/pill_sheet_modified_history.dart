@@ -154,11 +154,11 @@ extension PillSheetModifiedHistoryServiceActionFactory
 
   static PillSheetModifiedHistory createCreatedPillSheetAction({
     required PillSheet? before,
+    required String pillSheetID,
     required PillSheet after,
   }) {
-    final afterID = after.id;
     final afterLastTakenDate = after.lastTakenDate;
-    if (afterID == null || afterLastTakenDate == null) {
+    if (afterLastTakenDate == null) {
       throw FormatException(
           "unexpected after pill sheet id or lastTakenDate is null id: ${after.id}, lastTakenDate: ${after.lastTakenDate} for createdPillSheet action");
     }
@@ -169,7 +169,7 @@ extension PillSheetModifiedHistoryServiceActionFactory
             CreatedPillSheetValue(pillSheetCreatedAt: DateTime.now()),
       ),
       after: after,
-      pillSheetID: afterID,
+      pillSheetID: pillSheetID,
       before: before,
     );
   }

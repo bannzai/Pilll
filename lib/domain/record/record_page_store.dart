@@ -154,10 +154,11 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
   Future<void> register(PillSheet model) async {
     final batch = _batchFactory.batch();
 
+    final documentID = _service.register(batch, model);
     final history = PillSheetModifiedHistoryServiceActionFactory
-        .createCreatedPillSheetAction(before: null, after: model);
+        .createCreatedPillSheetAction(
+            before: null, pillSheetID: documentID, after: model);
     _pillSheetModifiedHistoryService.add(batch, history);
-    _service.register(batch, model);
 
     return batch.commit();
   }
