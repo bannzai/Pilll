@@ -109,8 +109,9 @@ class MockPillSheetService extends _i1.Mock implements _i14.PillSheetService {
               returnValue: Future<List<_i2.PillSheet>>.value(<_i2.PillSheet>[]))
           as _i15.Future<List<_i2.PillSheet>>);
   @override
-  dynamic register(_i13.WriteBatch? batch, _i2.PillSheet? model) =>
-      super.noSuchMethod(Invocation.method(#register, [batch, model]));
+  String register(_i13.WriteBatch? batch, _i2.PillSheet? model) =>
+      (super.noSuchMethod(Invocation.method(#register, [batch, model]),
+          returnValue: '') as String);
   @override
   _i2.PillSheet delete(_i13.WriteBatch? batch, _i2.PillSheet? pillSheet) =>
       (super.noSuchMethod(Invocation.method(#delete, [batch, pillSheet]),
