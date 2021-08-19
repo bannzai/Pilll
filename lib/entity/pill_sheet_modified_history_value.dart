@@ -108,7 +108,7 @@ abstract class TakenPillValue implements _$TakenPillValue {
       toJson: NonNullTimestampConverter.dateTimeToTimestamp,
     )
         required DateTime afterLastTakenDate,
-    int? beforeLastTakenPillNumber,
+    required int beforeLastTakenPillNumber,
     required int afterLastTakenPillNumber,
   }) = _TakenPillValue;
 
@@ -158,7 +158,7 @@ abstract class ChangedPillNumberValue implements _$ChangedPillNumberValue {
       toJson: NonNullTimestampConverter.dateTimeToTimestamp,
     )
         required DateTime afterBeginingDate,
-    int? beforeLastTakenPillNumber,
+    required int beforeLastTakenPillNumber,
     required int afterLastTakenPillNumber,
   }) = _ChangedPillNumberValue;
 

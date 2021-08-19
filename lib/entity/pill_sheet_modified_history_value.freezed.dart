@@ -1135,7 +1135,7 @@ class _$TakenPillValueTearOff {
           DateTime? beforeLastTakenDate,
       @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
           required DateTime afterLastTakenDate,
-      int? beforeLastTakenPillNumber,
+      required int beforeLastTakenPillNumber,
       required int afterLastTakenPillNumber}) {
     return _TakenPillValue(
       beforeLastTakenDate: beforeLastTakenDate,
@@ -1163,7 +1163,7 @@ mixin _$TakenPillValue {
       fromJson: NonNullTimestampConverter.timestampToDateTime,
       toJson: NonNullTimestampConverter.dateTimeToTimestamp)
   DateTime get afterLastTakenDate => throw _privateConstructorUsedError;
-  int? get beforeLastTakenPillNumber => throw _privateConstructorUsedError;
+  int get beforeLastTakenPillNumber => throw _privateConstructorUsedError;
   int get afterLastTakenPillNumber => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -1182,7 +1182,7 @@ abstract class $TakenPillValueCopyWith<$Res> {
           DateTime? beforeLastTakenDate,
       @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
           DateTime afterLastTakenDate,
-      int? beforeLastTakenPillNumber,
+      int beforeLastTakenPillNumber,
       int afterLastTakenPillNumber});
 }
 
@@ -1214,7 +1214,7 @@ class _$TakenPillValueCopyWithImpl<$Res>
       beforeLastTakenPillNumber: beforeLastTakenPillNumber == freezed
           ? _value.beforeLastTakenPillNumber
           : beforeLastTakenPillNumber // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as int,
       afterLastTakenPillNumber: afterLastTakenPillNumber == freezed
           ? _value.afterLastTakenPillNumber
           : afterLastTakenPillNumber // ignore: cast_nullable_to_non_nullable
@@ -1235,7 +1235,7 @@ abstract class _$TakenPillValueCopyWith<$Res>
           DateTime? beforeLastTakenDate,
       @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
           DateTime afterLastTakenDate,
-      int? beforeLastTakenPillNumber,
+      int beforeLastTakenPillNumber,
       int afterLastTakenPillNumber});
 }
 
@@ -1269,7 +1269,7 @@ class __$TakenPillValueCopyWithImpl<$Res>
       beforeLastTakenPillNumber: beforeLastTakenPillNumber == freezed
           ? _value.beforeLastTakenPillNumber
           : beforeLastTakenPillNumber // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as int,
       afterLastTakenPillNumber: afterLastTakenPillNumber == freezed
           ? _value.afterLastTakenPillNumber
           : afterLastTakenPillNumber // ignore: cast_nullable_to_non_nullable
@@ -1287,7 +1287,7 @@ class _$_TakenPillValue extends _TakenPillValue {
           this.beforeLastTakenDate,
       @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
           required this.afterLastTakenDate,
-      this.beforeLastTakenPillNumber,
+      required this.beforeLastTakenPillNumber,
       required this.afterLastTakenPillNumber})
       : super._();
 
@@ -1305,7 +1305,7 @@ class _$_TakenPillValue extends _TakenPillValue {
       toJson: NonNullTimestampConverter.dateTimeToTimestamp)
   final DateTime afterLastTakenDate;
   @override
-  final int? beforeLastTakenPillNumber;
+  final int beforeLastTakenPillNumber;
   @override
   final int afterLastTakenPillNumber;
 
@@ -1360,7 +1360,7 @@ abstract class _TakenPillValue extends TakenPillValue {
           DateTime? beforeLastTakenDate,
       @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
           required DateTime afterLastTakenDate,
-      int? beforeLastTakenPillNumber,
+      required int beforeLastTakenPillNumber,
       required int afterLastTakenPillNumber}) = _$_TakenPillValue;
   _TakenPillValue._() : super._();
 
@@ -1378,7 +1378,7 @@ abstract class _TakenPillValue extends TakenPillValue {
       toJson: NonNullTimestampConverter.dateTimeToTimestamp)
   DateTime get afterLastTakenDate => throw _privateConstructorUsedError;
   @override
-  int? get beforeLastTakenPillNumber => throw _privateConstructorUsedError;
+  int get beforeLastTakenPillNumber => throw _privateConstructorUsedError;
   @override
   int get afterLastTakenPillNumber => throw _privateConstructorUsedError;
   @override
@@ -1667,7 +1667,7 @@ class _$ChangedPillNumberValueTearOff {
           required DateTime beforeBeginingDate,
       @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
           required DateTime afterBeginingDate,
-      int? beforeLastTakenPillNumber,
+      required int beforeLastTakenPillNumber,
       required int afterLastTakenPillNumber}) {
     return _ChangedPillNumberValue(
       beforeBeginingDate: beforeBeginingDate,
@@ -1695,7 +1695,7 @@ mixin _$ChangedPillNumberValue {
       fromJson: NonNullTimestampConverter.timestampToDateTime,
       toJson: NonNullTimestampConverter.dateTimeToTimestamp)
   DateTime get afterBeginingDate => throw _privateConstructorUsedError;
-  int? get beforeLastTakenPillNumber => throw _privateConstructorUsedError;
+  int get beforeLastTakenPillNumber => throw _privateConstructorUsedError;
   int get afterLastTakenPillNumber => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -1714,7 +1714,7 @@ abstract class $ChangedPillNumberValueCopyWith<$Res> {
           DateTime beforeBeginingDate,
       @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
           DateTime afterBeginingDate,
-      int? beforeLastTakenPillNumber,
+      int beforeLastTakenPillNumber,
       int afterLastTakenPillNumber});
 }
 
@@ -1746,7 +1746,7 @@ class _$ChangedPillNumberValueCopyWithImpl<$Res>
       beforeLastTakenPillNumber: beforeLastTakenPillNumber == freezed
           ? _value.beforeLastTakenPillNumber
           : beforeLastTakenPillNumber // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as int,
       afterLastTakenPillNumber: afterLastTakenPillNumber == freezed
           ? _value.afterLastTakenPillNumber
           : afterLastTakenPillNumber // ignore: cast_nullable_to_non_nullable
@@ -1767,7 +1767,7 @@ abstract class _$ChangedPillNumberValueCopyWith<$Res>
           DateTime beforeBeginingDate,
       @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
           DateTime afterBeginingDate,
-      int? beforeLastTakenPillNumber,
+      int beforeLastTakenPillNumber,
       int afterLastTakenPillNumber});
 }
 
@@ -1801,7 +1801,7 @@ class __$ChangedPillNumberValueCopyWithImpl<$Res>
       beforeLastTakenPillNumber: beforeLastTakenPillNumber == freezed
           ? _value.beforeLastTakenPillNumber
           : beforeLastTakenPillNumber // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as int,
       afterLastTakenPillNumber: afterLastTakenPillNumber == freezed
           ? _value.afterLastTakenPillNumber
           : afterLastTakenPillNumber // ignore: cast_nullable_to_non_nullable
@@ -1819,7 +1819,7 @@ class _$_ChangedPillNumberValue extends _ChangedPillNumberValue {
           required this.beforeBeginingDate,
       @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
           required this.afterBeginingDate,
-      this.beforeLastTakenPillNumber,
+      required this.beforeLastTakenPillNumber,
       required this.afterLastTakenPillNumber})
       : super._();
 
@@ -1837,7 +1837,7 @@ class _$_ChangedPillNumberValue extends _ChangedPillNumberValue {
       toJson: NonNullTimestampConverter.dateTimeToTimestamp)
   final DateTime afterBeginingDate;
   @override
-  final int? beforeLastTakenPillNumber;
+  final int beforeLastTakenPillNumber;
   @override
   final int afterLastTakenPillNumber;
 
@@ -1893,7 +1893,7 @@ abstract class _ChangedPillNumberValue extends ChangedPillNumberValue {
           required DateTime beforeBeginingDate,
       @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
           required DateTime afterBeginingDate,
-      int? beforeLastTakenPillNumber,
+      required int beforeLastTakenPillNumber,
       required int afterLastTakenPillNumber}) = _$_ChangedPillNumberValue;
   _ChangedPillNumberValue._() : super._();
 
@@ -1911,7 +1911,7 @@ abstract class _ChangedPillNumberValue extends ChangedPillNumberValue {
       toJson: NonNullTimestampConverter.dateTimeToTimestamp)
   DateTime get afterBeginingDate => throw _privateConstructorUsedError;
   @override
-  int? get beforeLastTakenPillNumber => throw _privateConstructorUsedError;
+  int get beforeLastTakenPillNumber => throw _privateConstructorUsedError;
   @override
   int get afterLastTakenPillNumber => throw _privateConstructorUsedError;
   @override

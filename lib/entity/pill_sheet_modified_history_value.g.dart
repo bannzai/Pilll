@@ -118,7 +118,7 @@ _$_TakenPillValue _$_$_TakenPillValueFromJson(Map<String, dynamic> json) {
         json['beforeLastTakenDate'] as Timestamp?),
     afterLastTakenDate: NonNullTimestampConverter.timestampToDateTime(
         json['afterLastTakenDate'] as Timestamp),
-    beforeLastTakenPillNumber: json['beforeLastTakenPillNumber'] as int?,
+    beforeLastTakenPillNumber: json['beforeLastTakenPillNumber'] as int,
     afterLastTakenPillNumber: json['afterLastTakenPillNumber'] as int,
   );
 }
@@ -163,7 +163,7 @@ _$_ChangedPillNumberValue _$_$_ChangedPillNumberValueFromJson(
         json['beforeBeginingDate'] as Timestamp),
     afterBeginingDate: NonNullTimestampConverter.timestampToDateTime(
         json['afterBeginingDate'] as Timestamp),
-    beforeLastTakenPillNumber: json['beforeLastTakenPillNumber'] as int?,
+    beforeLastTakenPillNumber: json['beforeLastTakenPillNumber'] as int,
     afterLastTakenPillNumber: json['afterLastTakenPillNumber'] as int,
   );
 }
