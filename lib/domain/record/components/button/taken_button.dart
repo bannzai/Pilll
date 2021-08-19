@@ -6,7 +6,6 @@ import 'package:pilll/components/atoms/buttons.dart';
 import 'package:pilll/domain/record/record_page_store.dart';
 import 'package:pilll/domain/record/util/take.dart';
 import 'package:pilll/entity/pill_sheet.dart';
-import 'package:pilll/util/datetime/day.dart';
 
 class TakenButton extends HookWidget {
   final BuildContext parentContext;
@@ -29,7 +28,11 @@ class TakenButton extends HookWidget {
           "last_taken_pill_number": pillSheet.lastTakenPillNumber,
           "today_pill_number": pillSheet.todayPillNumber,
         });
-        await take(parentContext, pillSheet, now(), store);
+        await effectAfterTaken(
+          context: parentContext,
+          taken: store.taken(),
+          store: store,
+        );
       },
     );
   }

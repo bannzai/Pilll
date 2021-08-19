@@ -1,37 +1,47 @@
 import 'dart:io' show Platform;
 import 'dart:async';
 
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter_app_badger/flutter_app_badger.dart';
 import 'package:pilll/analytics.dart';
+import 'package:pilll/database/batch.dart';
 import 'package:pilll/entity/pill_mark_type.dart';
 import 'package:pilll/entity/pill_sheet.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/service/auth.dart';
 import 'package:pilll/service/pill_sheet.dart';
 import 'package:pilll/domain/record/record_page_state.dart';
+import 'package:pilll/service/pill_sheet_modified_history.dart';
 import 'package:pilll/service/setting.dart';
 import 'package:pilll/service/user.dart';
+import 'package:pilll/util/datetime/day.dart';
 import 'package:pilll/util/shared_preference/keys.dart';
 import 'package:riverpod/riverpod.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 final recordPageStoreProvider = StateNotifierProvider((ref) => RecordPageStore(
+      ref.watch(batchFactoryProvider),
       ref.watch(pillSheetServiceProvider),
       ref.watch(settingServiceProvider),
       ref.watch(userServiceProvider),
       ref.watch(authServiceProvider),
+      ref.watch(pillSheetModifiedHistoryServiceProvider),
     ));
 
 class RecordPageStore extends StateNotifier<RecordPageState> {
+  final BatchFactory _batchFactory;
   final PillSheetService _service;
   final SettingService _settingService;
   final UserService _userService;
   final AuthService _authService;
+  final PillSheetModifiedHistoryService _pillSheetModifiedHistoryService;
   RecordPageStore(
+    this._batchFactory,
     this._service,
     this._settingService,
     this._userService,
     this._authService,
+    this._pillSheetModifiedHistoryService,
   ) : super(RecordPageState(entity: null)) {
     reset();
   }
@@ -142,20 +152,87 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
   }
 
   Future<void> register(PillSheet model) async {
-    await _service
-        .register(model)
-        .then((entity) => state = state.copyWith(entity: entity));
+    final batch = _batchFactory.batch();
+
+    final documentID = _service.register(batch, model);
+    final history = PillSheetModifiedHistoryServiceActionFactory
+        .createCreatedPillSheetAction(
+            before: null, pillSheetID: documentID, after: model);
+    _pillSheetModifiedHistoryService.add(batch, history);
+
+    return batch.commit();
   }
 
-  Future<dynamic> take(DateTime takenDate) async {
+  Future<dynamic>? _take(DateTime takenDate) async {
     final entity = state.entity;
     if (entity == null) {
       throw FormatException("pill sheet not found");
     }
-    final updated = entity.copyWith(lastTakenDate: takenDate);
+    if (entity.todayPillNumber == entity.lastTakenPillNumber) {
+      return null;
+    }
+
     FlutterAppBadger.removeBadge();
-    await _service.update(updated);
+
+    final batch = _batchFactory.batch();
+
+    final updated = entity.copyWith(lastTakenDate: takenDate);
+    _service.update(batch, updated);
+
+    final history =
+        PillSheetModifiedHistoryServiceActionFactory.createTakenPillAction(
+            before: entity, after: updated);
+    _pillSheetModifiedHistoryService.add(batch, history);
+    await batch.commit();
+
     state = state.copyWith(entity: updated);
+  }
+
+  Future<void>? taken() {
+    return _take(now());
+  }
+
+  Future<void>? takenWithPillNumber(int pillNumber) async {
+    final pillSheet = state.entity;
+    if (pillSheet == null) {
+      return null;
+    }
+    if (pillNumber <= pillSheet.lastTakenPillNumber) {
+      return null;
+    }
+    var diff = pillSheet.todayPillNumber - pillNumber;
+    if (diff < 0) {
+      // This is in the future pill number.
+      return null;
+    }
+    var takenDate = now().subtract(Duration(days: diff));
+    return _take(takenDate);
+  }
+
+  Future<void> cancelTaken() async {
+    final pillSheet = state.entity;
+    if (pillSheet == null) {
+      return;
+    }
+    if (pillSheet.todayPillNumber != pillSheet.lastTakenPillNumber) {
+      return;
+    }
+    final lastTakenDate = pillSheet.lastTakenDate;
+    if (lastTakenDate == null) {
+      return;
+    }
+
+    final batch = _batchFactory.batch();
+
+    final updated = pillSheet.copyWith(
+        lastTakenDate: lastTakenDate.subtract(Duration(days: 1)));
+    _service.update(batch, updated);
+
+    final history = PillSheetModifiedHistoryServiceActionFactory
+        .createRevertTakenPillAction(before: pillSheet, after: updated);
+    _pillSheetModifiedHistoryService.add(batch, history);
+
+    await batch.commit();
   }
 
   DateTime calcBeginingDateFromNextTodayPillNumber(int pillNumber) {
@@ -166,14 +243,23 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
     return calcBeginingDateFromNextTodayPillNumberFunction(entity, pillNumber);
   }
 
-  void modifyBeginingDate(int pillNumber) {
+  Future<void> modifyBeginingDate(int pillNumber) async {
     final entity = state.entity;
     if (entity == null) {
       throw FormatException("pill sheet not found");
     }
 
-    modifyBeginingDateFunction(_service, entity, pillNumber)
-        .then((entity) => state = state.copyWith(entity: entity));
+    final batch = _batchFactory.batch();
+    final updated = modifyBeginingDateFunction(
+      batch,
+      _service,
+      _pillSheetModifiedHistoryService,
+      entity,
+      pillNumber,
+    );
+    await batch.commit();
+
+    state = state.copyWith(entity: updated);
   }
 
   PillMarkType markFor(int number) {
@@ -215,14 +301,29 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
   }
 }
 
-Future<PillSheet> modifyBeginingDateFunction(
+PillSheet modifyBeginingDateFunction(
+  WriteBatch batch,
   PillSheetService service,
+  PillSheetModifiedHistoryService pillSheetModifiedHistoryService,
   PillSheet pillSheet,
   int pillNumber,
 ) {
-  return service.update(pillSheet.copyWith(
-      beginingDate: calcBeginingDateFromNextTodayPillNumberFunction(
-          pillSheet, pillNumber)));
+  final updated = pillSheet.copyWith(
+    beginingDate: calcBeginingDateFromNextTodayPillNumberFunction(
+      pillSheet,
+      pillNumber,
+    ),
+  );
+  service.update(
+    batch,
+    updated,
+  );
+
+  final history = PillSheetModifiedHistoryServiceActionFactory
+      .createChangedPillNumberAction(before: pillSheet, after: updated);
+  pillSheetModifiedHistoryService.add(batch, history);
+
+  return updated;
 }
 
 DateTime calcBeginingDateFromNextTodayPillNumberFunction(

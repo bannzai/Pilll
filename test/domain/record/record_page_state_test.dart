@@ -75,6 +75,7 @@ void main() {
       when(service.fetchListWithMax(2)).thenAnswer((_) => Future.value([]));
       when(service.subscribeForLatestPillSheet())
           .thenAnswer((realInvocation) => Stream.empty());
+      final batch = MockBatchFactory();
       final settingService = MockSettingService();
       when(settingService.fetch())
           .thenAnswer((realInvocation) => Future.value(settingEntity));
@@ -90,12 +91,16 @@ void main() {
           .thenAnswer((reaInvocation) => Future.value(_FakeUser()));
       when(userService.subscribe())
           .thenAnswer((realInvocation) => Stream.empty());
+      final pillSheetModifedHistoryService =
+          MockPillSheetModifiedHistoryService();
 
       final store = RecordPageStore(
+        batch,
         service,
         settingService,
         userService,
         authService,
+        pillSheetModifedHistoryService,
       );
       await waitForResetStoreState();
       expect(state.entity?.todayPillNumber, equals(1));
@@ -132,6 +137,8 @@ void main() {
     when(service.fetchListWithMax(2)).thenAnswer((_) => Future.value([]));
     when(service.subscribeForLatestPillSheet())
         .thenAnswer((realInvocation) => Stream.empty());
+    final batch = MockBatchFactory();
+
     final settingService = MockSettingService();
     when(settingService.fetch())
         .thenAnswer((realInvocation) => Future.value(settingEntity));
@@ -147,13 +154,18 @@ void main() {
         .thenAnswer((reaInvocation) => Future.value(_FakeUser()));
     when(userService.subscribe())
         .thenAnswer((realInvocation) => Stream.empty());
+    final pillSheetModifedHistoryService =
+        MockPillSheetModifiedHistoryService();
 
     final store = RecordPageStore(
+      batch,
       service,
       settingService,
       userService,
       authService,
+      pillSheetModifedHistoryService,
     );
+
     await waitForResetStoreState();
     expect(state.entity?.todayPillNumber, equals(3));
 
@@ -191,6 +203,7 @@ void main() {
           .thenAnswer((realInvocation) => Future.value([]));
       when(service.subscribeForLatestPillSheet())
           .thenAnswer((realInvocation) => Stream.empty());
+      final batch = MockBatchFactory();
       final settingService = MockSettingService();
       when(settingService.fetch())
           .thenAnswer((realInvocation) => Future.value(settingEntity));
@@ -207,12 +220,16 @@ void main() {
           .thenAnswer((reaInvocation) => Future.value(_FakeUser()));
       when(userService.subscribe())
           .thenAnswer((realInvocation) => Stream.empty());
+      final pillSheetModifedHistoryService =
+          MockPillSheetModifiedHistoryService();
 
       final store = RecordPageStore(
+        batch,
         service,
         settingService,
         userService,
         authService,
+        pillSheetModifedHistoryService,
       );
 
       await waitForResetStoreState();
@@ -251,6 +268,7 @@ void main() {
           .thenAnswer((realInvocation) => Future.value([]));
       when(service.subscribeForLatestPillSheet())
           .thenAnswer((realInvocation) => Stream.empty());
+      final batch = MockBatchFactory();
       final settingService = MockSettingService();
       when(settingService.fetch())
           .thenAnswer((realInvocation) => Future.value(settingEntity));
@@ -267,12 +285,16 @@ void main() {
           .thenAnswer((reaInvocation) => Future.value(_FakeUser()));
       when(userService.subscribe())
           .thenAnswer((realInvocation) => Stream.empty());
+      final pillSheetModifedHistoryService =
+          MockPillSheetModifiedHistoryService();
 
       final store = RecordPageStore(
+        batch,
         service,
         settingService,
         userService,
         authService,
+        pillSheetModifedHistoryService,
       );
 
       await waitForResetStoreState();
@@ -312,6 +334,7 @@ void main() {
       when(service.fetchAll()).thenAnswer((realInvocation) => Future.value([]));
       when(service.subscribeForLatestPillSheet())
           .thenAnswer((realInvocation) => Stream.empty());
+      final batch = MockBatchFactory();
       final settingService = MockSettingService();
       when(settingService.fetch())
           .thenAnswer((realInvocation) => Future.value(settingEntity));
@@ -328,12 +351,16 @@ void main() {
           .thenAnswer((reaInvocation) => Future.value(_FakeUser()));
       when(userService.subscribe())
           .thenAnswer((realInvocation) => Stream.empty());
+      final pillSheetModifedHistoryService =
+          MockPillSheetModifiedHistoryService();
 
       final store = RecordPageStore(
+        batch,
         service,
         settingService,
         userService,
         authService,
+        pillSheetModifedHistoryService,
       );
 
       await waitForResetStoreState();
@@ -371,6 +398,7 @@ void main() {
           .thenAnswer((realInvocation) => Future.value([]));
       when(service.subscribeForLatestPillSheet())
           .thenAnswer((realInvocation) => Stream.empty());
+      final batch = MockBatchFactory();
       final settingService = MockSettingService();
       when(settingService.fetch())
           .thenAnswer((realInvocation) => Future.value(settingEntity));
@@ -387,12 +415,16 @@ void main() {
           .thenAnswer((reaInvocation) => Future.value(_FakeUser()));
       when(userService.subscribe())
           .thenAnswer((realInvocation) => Stream.empty());
+      final pillSheetModifedHistoryService =
+          MockPillSheetModifiedHistoryService();
 
       final store = RecordPageStore(
+        batch,
         service,
         settingService,
         userService,
         authService,
+        pillSheetModifedHistoryService,
       );
 
       await waitForResetStoreState();

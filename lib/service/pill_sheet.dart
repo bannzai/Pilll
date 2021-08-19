@@ -1,5 +1,4 @@
 import 'package:pilll/database/database.dart';
-import 'package:pilll/entity/firestore_timestamp_converter.dart';
 import 'package:pilll/entity/pill_sheet.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:riverpod/riverpod.dart';
@@ -53,32 +52,30 @@ class PillSheetService {
         .then((event) => event.docs.map((e) => _mapToEntity(e)).toList());
   }
 
-  Future<PillSheet> register(PillSheet model) {
+  // Return new PillSheet document id
+  String register(WriteBatch batch, PillSheet model) {
     if (model.createdAt != null) throw PillSheetAlreadyExists();
     if (model.deletedAt != null) throw PillSheetAlreadyDeleted();
     final copied = model.copyWith(createdAt: DateTime.now());
 
+    final document = _database.pillSheetsReference().doc();
     var json = copied.toJson();
     json.remove("id");
-    return _database.pillSheetsReference().add(json).then((value) {
-      return PillSheet.fromJson(json..addAll({"id": value.id}));
-    });
+    batch.set(document, json, SetOptions(merge: true));
+    return document.id;
   }
 
-  Future<void> delete(PillSheet pillSheet) {
-    return _database.pillSheetReference(pillSheet.documentID!).update({
-      PillSheetFirestoreKey.deletedAt:
-          TimestampConverter.dateTimeToTimestamp(DateTime.now())
-    });
+  PillSheet delete(WriteBatch batch, PillSheet pillSheet) {
+    final updated = pillSheet.copyWith(deletedAt: DateTime.now());
+    batch.set(_database.pillSheetReference(pillSheet.documentID!),
+        updated.toJson(), SetOptions(merge: true));
+    return updated;
   }
 
-  Future<PillSheet> update(PillSheet pillSheet) {
+  update(WriteBatch batch, PillSheet pillSheet) {
     var json = pillSheet.toJson();
     json.remove("id");
-    return _database
-        .pillSheetReference(pillSheet.documentID!)
-        .update(json)
-        .then((_) => pillSheet);
+    batch.update(_database.pillSheetReference(pillSheet.documentID!), json);
   }
 
   Stream<PillSheet> subscribeForLatestPillSheet() {

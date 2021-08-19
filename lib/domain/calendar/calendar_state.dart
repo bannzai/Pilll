@@ -4,23 +4,28 @@ import 'package:pilll/components/organisms/calendar/utility.dart';
 import 'package:pilll/entity/diary.dart';
 import 'package:pilll/entity/menstruation.dart';
 import 'package:pilll/entity/pill_sheet.dart';
+import 'package:pilll/entity/pill_sheet_modified_history.dart';
 import 'package:pilll/entity/setting.dart';
 import 'package:pilll/util/datetime/date_compare.dart';
 import 'package:pilll/util/datetime/day.dart';
 import 'package:pilll/util/formatter/date_time_formatter.dart';
 
-part 'calendar_page.freezed.dart';
+part 'calendar_state.freezed.dart';
 
 @freezed
 abstract class CalendarPageState implements _$CalendarPageState {
   CalendarPageState._();
   factory CalendarPageState({
-    required List<Menstruation> menstruations,
     @Default(0) int currentCalendarIndex,
+    @Default(true) bool isNotYetLoaded,
+    @Default([]) List<Menstruation> menstruations,
     Setting? setting,
     PillSheet? latestPillSheet,
     @Default([]) List<Diary> diariesForMonth,
-    @Default(true) bool isNotYetLoaded,
+    @Default([]) List<PillSheetModifiedHistory> allPillSheetModifiedHistories,
+    @Default(false) bool isPremium,
+    @Default(false) bool isTrial,
+    DateTime? trialDeadlineDate,
   }) = _CalendarPageState;
 
   bool get shouldShowIndicator => isNotYetLoaded || setting == null;

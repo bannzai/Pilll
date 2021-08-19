@@ -8,7 +8,7 @@ import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/util/datetime/day.dart';
 import 'package:pilll/util/formatter/date_time_formatter.dart';
-import 'package:pilll/util/toolbar/date_time_picker.dart';
+import 'package:pilll/util/toolbar/time_picker.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
@@ -33,7 +33,7 @@ class InitialSetting4Page extends HookWidget {
     showModalBottomSheet(
       context: context,
       builder: (BuildContext context) {
-        return DateTimePicker(
+        return TimePicker(
           initialDateTime: initialDateTime,
           done: (dateTime) {
             analytics.logEvent(

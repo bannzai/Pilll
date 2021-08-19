@@ -2,13 +2,16 @@ import 'package:pilll/util/toolbar/picker_toolbar.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class DateTimePicker extends StatelessWidget {
+class TimePicker extends StatelessWidget {
   final DateTime initialDateTime;
   final void Function(DateTime datetime) done;
 
-  const DateTimePicker(
-      {Key? key, required this.done, required this.initialDateTime})
-      : super(key: key);
+  const TimePicker({
+    Key? key,
+    required this.initialDateTime,
+    required this.done,
+  }) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     var selectedDateTime = initialDateTime;

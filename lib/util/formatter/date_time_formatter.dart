@@ -45,6 +45,11 @@ class DateTimeFormatter {
     return DateFormat("yyyyMMdd", "ja_JP").format(dateTime);
   }
 
+  static String hourAndMinute(DateTime dateTime) {
+    final format = NumberFormat("00");
+    return format.format(dateTime.hour) + ":" + format.format(dateTime.minute);
+  }
+
   static String clock(int hour, minute, second) {
     final format = NumberFormat("00");
     return format.format(hour) +

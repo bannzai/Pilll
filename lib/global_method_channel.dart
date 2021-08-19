@@ -1,6 +1,7 @@
 import 'package:pilll/analytics.dart';
 import 'package:pilll/database/database.dart';
 import 'package:pilll/service/pill_sheet.dart';
+import 'package:pilll/service/pill_sheet_modified_history.dart';
 import 'package:pilll/util/datetime/day.dart';
 import 'package:flutter/services.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -23,12 +24,25 @@ definedChannel() {
 
 Future<void> recordPill() async {
   final authInfo = await cacheOrAuth();
-  final service = PillSheetService(DatabaseConnection(authInfo.uid));
-  final entity = await service.fetchLast();
+  final database = DatabaseConnection(authInfo.uid);
+  final pillSheetService = PillSheetService(database);
+  final pillSheetModifiedHistoryService =
+      PillSheetModifiedHistoryService(database);
+  final entity = await pillSheetService.fetchLast();
   if (entity == null) {
     return Future.value();
   }
-  await service.update(entity.copyWith(lastTakenDate: now()));
+
+  final batch = database.batch();
+
+  pillSheetService.update(batch, entity.copyWith(lastTakenDate: now()));
+
+  final history =
+      PillSheetModifiedHistoryServiceActionFactory.createTakenPillAction(
+          before: entity, after: entity.copyWith(lastTakenDate: now()));
+  pillSheetModifiedHistoryService.add(batch, history);
+
+  await batch.commit();
   // NOTE: Firebase initializeが成功しているかが定かでは無いので一番最後にログを送る
   analytics.logEvent(name: "quick_recorded");
 }

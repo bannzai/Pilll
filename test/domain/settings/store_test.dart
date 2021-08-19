@@ -62,6 +62,7 @@ void main() {
       when(service.subscribe())
           .thenAnswer((realInvocation) => Stream.value(setting));
 
+      final batchFactory = MockBatchFactory();
       final pillSheet = PillSheet.create(PillSheetType.pillsheet_21);
       final pillSheetService = MockPillSheetService();
       when(pillSheetService.fetchLast())
@@ -73,8 +74,15 @@ void main() {
           .thenAnswer((realInvocation) => Future.value(_FakeUser()));
       when(userService.subscribe())
           .thenAnswer((realInvocation) => Stream.empty());
+      final pillSheetModifiedService = MockPillSheetModifiedHistoryService();
 
-      final store = SettingStateStore(service, pillSheetService, userService);
+      final store = SettingStateStore(
+        batchFactory,
+        service,
+        pillSheetService,
+        userService,
+        pillSheetModifiedService,
+      );
 
       // ignore: invalid_use_of_protected_member
       store.state = SettingState(entity: setting);
@@ -106,6 +114,7 @@ void main() {
       when(service.subscribe())
           .thenAnswer((realInvocation) => Stream.value(setting));
 
+      final batchFactory = MockBatchFactory();
       final pillSheet = PillSheet.create(PillSheetType.pillsheet_21);
       final pillSheetService = MockPillSheetService();
       when(pillSheetService.fetchLast())
@@ -117,8 +126,15 @@ void main() {
           .thenAnswer((realInvocation) => Future.value(_FakeUser()));
       when(userService.subscribe())
           .thenAnswer((realInvocation) => Stream.empty());
+      final pillSheetModifiedService = MockPillSheetModifiedHistoryService();
 
-      final store = SettingStateStore(service, pillSheetService, userService);
+      final store = SettingStateStore(
+        batchFactory,
+        service,
+        pillSheetService,
+        userService,
+        pillSheetModifiedService,
+      );
 
       // ignore: invalid_use_of_protected_member
       store.state = SettingState(entity: setting);
@@ -145,6 +161,7 @@ void main() {
       when(service.subscribe())
           .thenAnswer((realInvocation) => Stream.value(setting));
 
+      final batchFactory = MockBatchFactory();
       final pillSheet = PillSheet.create(PillSheetType.pillsheet_21);
       final pillSheetService = MockPillSheetService();
       when(pillSheetService.fetchLast())
@@ -156,8 +173,15 @@ void main() {
           .thenAnswer((realInvocation) => Future.value(_FakeUser()));
       when(userService.subscribe())
           .thenAnswer((realInvocation) => Stream.empty());
+      final pillSheetModifiedService = MockPillSheetModifiedHistoryService();
 
-      final store = SettingStateStore(service, pillSheetService, userService);
+      final store = SettingStateStore(
+        batchFactory,
+        service,
+        pillSheetService,
+        userService,
+        pillSheetModifiedService,
+      );
 
       // ignore: invalid_use_of_protected_member
       store.state = SettingState(entity: setting);
@@ -183,6 +207,7 @@ void main() {
       when(service.subscribe())
           .thenAnswer((realInvocation) => Stream.value(setting));
 
+      final batchFactory = MockBatchFactory();
       final pillSheet = PillSheet.create(PillSheetType.pillsheet_21);
       final pillSheetService = MockPillSheetService();
       when(pillSheetService.fetchLast())
@@ -194,8 +219,15 @@ void main() {
           .thenAnswer((realInvocation) => Future.value(_FakeUser()));
       when(userService.subscribe())
           .thenAnswer((realInvocation) => Stream.empty());
+      final pillSheetModifiedService = MockPillSheetModifiedHistoryService();
 
-      final store = SettingStateStore(service, pillSheetService, userService);
+      final store = SettingStateStore(
+        batchFactory,
+        service,
+        pillSheetService,
+        userService,
+        pillSheetModifiedService,
+      );
 
       // ignore: invalid_use_of_protected_member
       store.state = SettingState(entity: setting);
