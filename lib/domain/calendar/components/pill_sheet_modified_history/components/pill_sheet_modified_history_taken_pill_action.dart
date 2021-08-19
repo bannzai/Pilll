@@ -39,8 +39,9 @@ class PillSheetModifiedHistoryTakenPillAction extends StatelessWidget {
             children: [
               PillSheetModifiedHistoryDate(
                 estimatedEventCausingDate: estimatedEventCausingDate,
-                beforePillNumber: value.beforeLastTakenPillNumber,
-                afterPillNumber: value.afterLastTakenPillNumber,
+                effectivePillNumber:
+                    PillSheetModifiedHistoryDateEffectivePillNumber.taken(
+                        value),
               ),
               Spacer(),
               Container(

@@ -31,8 +31,8 @@ class PillSheetModifiedHistoryAutomaticallyRecordedLastTakenDateAction
           children: [
             PillSheetModifiedHistoryDate(
               estimatedEventCausingDate: estimatedEventCausingDate,
-              beforePillNumber: value.beforeLastTakenPillNumber,
-              afterPillNumber: value.afterLastTakenPillNumber,
+              effectivePillNumber:
+                  PillSheetModifiedHistoryDateEffectivePillNumber.hyphen(),
             ),
             Spacer(),
             Container(

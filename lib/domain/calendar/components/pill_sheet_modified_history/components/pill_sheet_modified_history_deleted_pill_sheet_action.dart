@@ -23,8 +23,8 @@ class PillSheetModifiedHistoryDeletedPillSheetAction extends StatelessWidget {
           children: [
             PillSheetModifiedHistoryDate(
               estimatedEventCausingDate: estimatedEventCausingDate,
-              beforePillNumber: null,
-              afterPillNumber: null,
+              effectivePillNumber:
+                  PillSheetModifiedHistoryDateEffectivePillNumber.hyphen(),
             ),
             Spacer(),
             Container(
