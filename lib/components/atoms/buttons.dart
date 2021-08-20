@@ -1,5 +1,6 @@
 import 'package:pilll/components/atoms/button.dart';
 import 'package:pilll/components/atoms/color.dart';
+import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:flutter/material.dart';
 
@@ -92,6 +93,45 @@ class InconspicuousButton extends StatelessWidget {
         child: Text(text, style: TextColorStyle.gray),
         onPressed: onPressed,
       ),
+    );
+  }
+}
+
+class PrimaryOutlinedButton extends StatelessWidget {
+  final String text;
+  final VoidCallback? onPressed;
+
+  const PrimaryOutlinedButton({
+    Key? key,
+    required this.onPressed,
+    required this.text,
+  }) : super(key: key);
+
+  Widget build(BuildContext context) {
+    return OutlinedButton(
+      child: Container(
+        width: 204,
+        padding: EdgeInsets.only(top: 12, bottom: 12),
+        child: Center(
+          child: Text(
+            text,
+            style: TextStyle(
+              color: TextColor.main,
+              fontSize: 16,
+              fontFamily: FontFamily.japanese,
+              fontWeight: FontWeight.w700,
+            ),
+          ),
+        ),
+      ),
+      style: OutlinedButton.styleFrom(
+        primary: PilllColors.secondary,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(6),
+        ),
+        side: BorderSide(color: PilllColors.secondary),
+      ),
+      onPressed: onPressed,
     );
   }
 }

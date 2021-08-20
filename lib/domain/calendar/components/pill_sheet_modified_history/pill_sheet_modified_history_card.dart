@@ -1,6 +1,7 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'package:pilll/components/atoms/buttons.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/components/molecules/app_card.dart';
@@ -105,47 +106,65 @@ class CalendarPillSheetModifiedHistoryCard extends StatelessWidget {
                 ];
               } else {
                 return [
-                  GestureDetector(
-                    onTap: () {
-                      if (state.trialDeadlineDate == null) {
-                        showPremiumTrialModal(context, () {
-                          showPremiumTrialCompleteModalPreDialog(context);
-                        });
-                      } else {
-                        showPremiumIntroductionSheet(context);
-                      }
-                    },
-                    child: Stack(
-                      children: [
-                        Container(
-                          padding: const EdgeInsets.only(left: 8, right: 8),
-                          child: CalendarPillSheetModifiedHistoryList(
-                            padding: null,
-                            scrollPhysics: NeverScrollableScrollPhysics(),
-                            pillSheetModifiedHistories:
-                                state.pillSheetModifiedHistories,
-                          ),
+                  Stack(
+                    children: [
+                      Container(
+                        padding: const EdgeInsets.only(left: 8, right: 8),
+                        child: CalendarPillSheetModifiedHistoryList(
+                          padding: null,
+                          scrollPhysics: NeverScrollableScrollPhysics(),
+                          pillSheetModifiedHistories:
+                              state.pillSheetModifiedHistories,
                         ),
-                        Positioned.fill(
-                          child: ClipRect(
-                            child: Stack(
-                              children: [
-                                BackdropFilter(
-                                  filter:
-                                      ImageFilter.blur(sigmaX: 6, sigmaY: 6),
-                                  child: Container(
-                                    color: Colors.black.withOpacity(0),
-                                  ),
+                      ),
+                      Positioned.fill(
+                        child: ClipRect(
+                          child: Stack(
+                            children: [
+                              BackdropFilter(
+                                filter: ImageFilter.blur(sigmaX: 6, sigmaY: 6),
+                                child: Container(
+                                  color: Colors.black.withOpacity(0),
                                 ),
-                                Center(
-                                    child: Text(lockEmoji,
-                                        style: TextStyle(fontSize: 40))),
-                              ],
-                            ),
+                              ),
+                              Center(
+                                child: Column(
+                                  mainAxisAlignment: MainAxisAlignment.center,
+                                  children: [
+                                    Text(lockEmoji,
+                                        style: TextStyle(fontSize: 40)),
+                                    SizedBox(height: 12),
+                                    Text(
+                                      "服用履歴はプレミアム機能です",
+                                      style: TextStyle(
+                                        color: TextColor.main,
+                                        fontSize: 14,
+                                        fontFamily: FontFamily.japanese,
+                                        fontWeight: FontWeight.w400,
+                                      ),
+                                    ),
+                                    SizedBox(height: 15),
+                                    PrimaryOutlinedButton(
+                                      text: "くわしくみる",
+                                      onPressed: () {
+                                        if (state.trialDeadlineDate == null) {
+                                          showPremiumTrialModal(context, () {
+                                            showPremiumTrialCompleteModalPreDialog(
+                                                context);
+                                          });
+                                        } else {
+                                          showPremiumIntroductionSheet(context);
+                                        }
+                                      },
+                                    ),
+                                  ],
+                                ),
+                              ),
+                            ],
                           ),
                         ),
-                      ],
-                    ),
+                      ),
+                    ],
                   ),
                 ];
               }
