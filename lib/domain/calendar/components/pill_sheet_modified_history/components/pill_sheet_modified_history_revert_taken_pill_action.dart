@@ -39,7 +39,7 @@ class PillSheetModifiedHistoryRevertTakenPillAction extends StatelessWidget {
                       "服用取り消し",
                       style: TextStyle(
                         color: TextColor.main,
-                        fontSize: 14,
+                        fontSize: 12,
                         fontFamily: FontFamily.japanese,
                         fontWeight: FontWeight.w400,
                       ),

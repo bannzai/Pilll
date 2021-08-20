@@ -41,7 +41,7 @@ class PillSheetModifiedHistoryChangedPillNumberAction extends StatelessWidget {
                       "ピル番号変更",
                       style: TextStyle(
                         color: TextColor.main,
-                        fontSize: 14,
+                        fontSize: 12,
                         fontFamily: FontFamily.japanese,
                         fontWeight: FontWeight.w400,
                       ),

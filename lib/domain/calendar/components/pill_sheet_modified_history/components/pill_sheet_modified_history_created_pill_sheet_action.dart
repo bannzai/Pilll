@@ -36,7 +36,7 @@ class PillSheetModifiedHistoryCreatePillSheetAction extends StatelessWidget {
                       "ピルシート追加",
                       style: TextStyle(
                         color: TextColor.main,
-                        fontSize: 14,
+                        fontSize: 12,
                         fontFamily: FontFamily.japanese,
                         fontWeight: FontWeight.w400,
                       ),
