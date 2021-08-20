@@ -55,6 +55,7 @@ class PillSheetModifiedHistoryTakenPillAction extends StatelessWidget {
                       child: Text(
                         time,
                         style: TextStyle(
+                          letterSpacing: 1.5,
                           color: TextColor.main,
                           fontSize: 15,
                           fontFamily: FontFamily.number,
