@@ -27,7 +27,6 @@ class PillSheetModifiedHistoryAutomaticallyRecordedLastTakenDateAction
       child: Padding(
         padding: const EdgeInsets.only(top: 4, bottom: 4),
         child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             PillSheetModifiedHistoryDate(
               estimatedEventCausingDate: estimatedEventCausingDate,

@@ -19,7 +19,6 @@ class PillSheetModifiedHistoryDeletedPillSheetAction extends StatelessWidget {
       child: Padding(
         padding: const EdgeInsets.only(top: 4, bottom: 4),
         child: Row(
-          mainAxisAlignment: MainAxisAlignment.start,
           children: [
             PillSheetModifiedHistoryDate(
               estimatedEventCausingDate: estimatedEventCausingDate,

@@ -23,8 +23,7 @@ class PillSheetModifiedHisotiryListHeader extends StatelessWidget {
             child: Row(
               children: [
                 Container(
-                  width:
-                      PillSheetModifiedHistoryTakenActionLayoutWidths.takenMark,
+                  width: 55,
                   child: Text(
                     "服用時間",
                     style: TextStyle(
@@ -33,7 +32,7 @@ class PillSheetModifiedHisotiryListHeader extends StatelessWidget {
                       fontSize: 12,
                       fontWeight: FontWeight.w400,
                     ),
-                    textAlign: TextAlign.start,
+                    textAlign: TextAlign.center,
                   ),
                 ),
                 Spacer(),

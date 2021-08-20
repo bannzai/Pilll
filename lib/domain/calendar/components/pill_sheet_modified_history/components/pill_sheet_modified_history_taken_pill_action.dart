@@ -66,11 +66,8 @@ class PillSheetModifiedHistoryTakenPillAction extends StatelessWidget {
                     ),
                     Spacer(),
                     Container(
-                      constraints: BoxConstraints(
-                        maxWidth:
-                            PillSheetModifiedHistoryTakenActionLayoutWidths
-                                .takenMark,
-                      ),
+                      width: PillSheetModifiedHistoryTakenActionLayoutWidths
+                          .takenMark,
                       padding: EdgeInsets.only(left: 8),
                       child: TakenPillActionOList(
                           value: value, afterPillSheet: afterPillSheet),
