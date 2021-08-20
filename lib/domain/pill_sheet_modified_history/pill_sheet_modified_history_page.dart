@@ -27,7 +27,7 @@ class PillSheetModifiedHistoriesPage extends HookWidget {
         ),
         title: Text(
           "服用履歴",
-          style: TextStyle(color: TextColor.black),
+          style: TextStyle(color: TextColor.main),
         ),
         centerTitle: false,
         backgroundColor: PilllColors.white,
