@@ -29,6 +29,7 @@ class PillSheetModifiedHistoriesPage extends HookWidget {
           "服用履歴",
           style: TextStyle(color: TextColor.black),
         ),
+        centerTitle: false,
         backgroundColor: PilllColors.white,
       ),
       body: SafeArea(
