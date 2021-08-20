@@ -184,8 +184,8 @@ extension PillSheetModifiedHistoryServiceActionFactory
         changedPillNumber: ChangedPillNumberValue(
           afterBeginingDate: after.beginingDate,
           beforeBeginingDate: before.beginingDate,
-          afterLastTakenPillNumber: after.lastTakenPillNumber,
-          beforeLastTakenPillNumber: before.lastTakenPillNumber,
+          afterTodayPillNumber: after.todayPillNumber,
+          beforeTodayPillNumber: before.todayPillNumber,
         ),
       ),
       after: after,

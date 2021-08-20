@@ -158,8 +158,8 @@ abstract class ChangedPillNumberValue implements _$ChangedPillNumberValue {
       toJson: NonNullTimestampConverter.dateTimeToTimestamp,
     )
         required DateTime afterBeginingDate,
-    required int beforeLastTakenPillNumber,
-    required int afterLastTakenPillNumber,
+    required int beforeTodayPillNumber,
+    required int afterTodayPillNumber,
   }) = _ChangedPillNumberValue;
 
   factory ChangedPillNumberValue.fromJson(Map<String, dynamic> json) =>
