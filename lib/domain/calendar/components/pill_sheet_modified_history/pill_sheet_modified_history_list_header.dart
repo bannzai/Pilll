@@ -11,7 +11,7 @@ class PillSheetModifiedHisotiryListHeader extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: const EdgeInsets.only(right: 8),
+      padding: const EdgeInsets.only(right: 12),
       child: Row(
         children: [
           SizedBox(

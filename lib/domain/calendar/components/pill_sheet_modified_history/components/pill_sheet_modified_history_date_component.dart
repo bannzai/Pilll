@@ -7,7 +7,7 @@ import 'package:pilll/entity/weekday.dart';
 
 abstract class PillSheetModifiedHistoryTakenActionLayoutWidths {
   static final double leading = 150;
-  static final double trailing = 150;
+  static final double trailing = 140;
   static final double takenTime = 53;
   static final double takenMark = 61;
   static final double actionDescription = 100;
