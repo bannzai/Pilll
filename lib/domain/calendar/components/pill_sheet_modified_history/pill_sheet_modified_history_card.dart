@@ -64,7 +64,7 @@ class CalendarPillSheetModifiedHistoryCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return AppCard(
       child: Container(
-        padding: EdgeInsets.only(left: 16, top: 16, right: 16, bottom: 32),
+        padding: EdgeInsets.only(left: 16, top: 16, right: 16, bottom: 16),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
