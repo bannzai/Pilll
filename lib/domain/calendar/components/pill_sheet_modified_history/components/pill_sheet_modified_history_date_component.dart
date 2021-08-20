@@ -117,5 +117,5 @@ extension PillSheetModifiedHistoryDateEffectivePillNumber
   }
 
   static String changed(ChangedPillNumberValue value) =>
-      "${value.beforeLastTakenPillNumber}→${value.afterLastTakenPillNumber}番";
+      "${value.beforeTodayPillNumber}→${value.afterTodayPillNumber}番";
 }
