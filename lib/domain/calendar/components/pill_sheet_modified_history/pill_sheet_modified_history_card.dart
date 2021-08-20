@@ -79,8 +79,10 @@ class CalendarPillSheetModifiedHistoryCard extends StatelessWidget {
                     color: TextColor.main,
                   ),
                 ),
-                SizedBox(width: 8),
-                PremiumBadge(),
+                if (!state.isPremium) ...[
+                  SizedBox(width: 8),
+                  PremiumBadge(),
+                ],
               ],
             ),
             SizedBox(height: 16),
