@@ -42,7 +42,7 @@ class ReleaseNote extends StatelessWidget {
                       child: Container(
                         padding: EdgeInsets.only(top: 40, left: 40, right: 40),
                         child: Text(
-                          "通知から服用記録ができるようになりました！",
+                          "服用履歴で\nいつ服用したかが分かる",
                           style: FontType.subTitle.merge(TextColorStyle.black),
                           textAlign: TextAlign.center,
                         ),
@@ -57,7 +57,7 @@ class ReleaseNote extends StatelessWidget {
                     children: [
                       Text(
                         '''
-Apple Watchからも服用記録ができます。
+服用時刻やまとめて服用した日が分かるようになりました。
 その他にも新機能が続々登場！
                         ''',
                         style: FontType.assisting.merge(TextColorStyle.main),
@@ -65,7 +65,6 @@ Apple Watchからも服用記録ができます。
                     ],
                   ),
                 ),
-                SizedBox(height: 20),
                 Container(
                   width: 230,
                   child: SecondaryButton(
@@ -87,7 +86,7 @@ Apple Watchからも服用記録ができます。
 }
 
 showReleaseNotePreDialog(BuildContext context) async {
-  final key = ReleaseNoteKey.version3_1_0;
+  final key = ReleaseNoteKey.version3_2_0;
   final storage = await SharedPreferences.getInstance();
   if (storage.getBool(key) ?? false) {
     return;
@@ -105,7 +104,7 @@ openReleaseNote() async {
   final ChromeSafariBrowser browser = new ChromeSafariBrowser();
   await browser.open(
       url: Uri.parse(
-          "https://pilll.anotion.so/8cfba3bf53f04df08bf45f7265c5e423"),
+          "https://pilll.anotion.so/5dcbbb397703462ba8021412a3ff1b50"),
       options: ChromeSafariBrowserClassOptions(
           android:
               AndroidChromeCustomTabsOptions(addDefaultShareMenuItem: false),
