@@ -163,8 +163,8 @@ _$_ChangedPillNumberValue _$_$_ChangedPillNumberValueFromJson(
         json['beforeBeginingDate'] as Timestamp),
     afterBeginingDate: NonNullTimestampConverter.timestampToDateTime(
         json['afterBeginingDate'] as Timestamp),
-    beforeLastTakenPillNumber: json['beforeLastTakenPillNumber'] as int,
-    afterLastTakenPillNumber: json['afterLastTakenPillNumber'] as int,
+    beforeTodayPillNumber: json['beforeTodayPillNumber'] as int,
+    afterTodayPillNumber: json['afterTodayPillNumber'] as int,
   );
 }
 
@@ -175,8 +175,8 @@ Map<String, dynamic> _$_$_ChangedPillNumberValueToJson(
           instance.beforeBeginingDate),
       'afterBeginingDate': NonNullTimestampConverter.dateTimeToTimestamp(
           instance.afterBeginingDate),
-      'beforeLastTakenPillNumber': instance.beforeLastTakenPillNumber,
-      'afterLastTakenPillNumber': instance.afterLastTakenPillNumber,
+      'beforeTodayPillNumber': instance.beforeTodayPillNumber,
+      'afterTodayPillNumber': instance.afterTodayPillNumber,
     };
 
 _$_EndedPillSheetValue _$_$_EndedPillSheetValueFromJson(

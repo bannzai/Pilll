@@ -7,10 +7,9 @@ import 'package:pilll/entity/weekday.dart';
 
 abstract class PillSheetModifiedHistoryTakenActionLayoutWidths {
   static final double leading = 150;
-  static final double trailing = 150;
-  static final double takenTime = 53;
-  static final double takenMark = 61;
-  static final double actionDescription = 100;
+  static final double trailing = 140;
+  static final double takenTime = 60;
+  static final double takenMark = 60;
 }
 
 class PillSheetModifiedHistoryDate extends StatelessWidget {
@@ -73,7 +72,7 @@ class PillSheetModifiedHistoryDate extends StatelessWidget {
           ),
           SizedBox(width: 16),
           Container(
-            width: 50,
+            width: 53,
             child: Text(
               "$effectivePillNumber",
               style: TextStyle(
@@ -117,5 +116,5 @@ extension PillSheetModifiedHistoryDateEffectivePillNumber
   }
 
   static String changed(ChangedPillNumberValue value) =>
-      "${value.beforeLastTakenPillNumber}→${value.afterLastTakenPillNumber}番";
+      "${value.beforeTodayPillNumber}→${value.afterTodayPillNumber}番";
 }

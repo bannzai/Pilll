@@ -19,7 +19,6 @@ class PillSheetModifiedHistoryDeletedPillSheetAction extends StatelessWidget {
       child: Padding(
         padding: const EdgeInsets.only(top: 4, bottom: 4),
         child: Row(
-          mainAxisAlignment: MainAxisAlignment.start,
           children: [
             PillSheetModifiedHistoryDate(
               estimatedEventCausingDate: estimatedEventCausingDate,
@@ -36,7 +35,7 @@ class PillSheetModifiedHistoryDeletedPillSheetAction extends StatelessWidget {
                       "ピルシート破棄",
                       style: TextStyle(
                         color: TextColor.main,
-                        fontSize: 14,
+                        fontSize: 12,
                         fontFamily: FontFamily.japanese,
                         fontWeight: FontWeight.w400,
                       ),

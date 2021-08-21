@@ -24,7 +24,7 @@ class TakenPillActionOList extends StatelessWidget {
       child: Row(
           mainAxisSize: MainAxisSize.min,
           mainAxisAlignment: MainAxisAlignment.center,
-          children: List.generate(count, (index) {
+          children: List.generate(min(count, 4), (index) {
             final inRestDuration = _inRestDuration(
                 afterPillSheet, value.afterLastTakenPillNumber, index);
             if (index == 0) {
