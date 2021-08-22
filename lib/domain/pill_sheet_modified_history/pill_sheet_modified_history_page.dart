@@ -20,6 +20,7 @@ class PillSheetModifiedHistoriesPage extends HookWidget {
       return ScaffoldIndicator();
     }
     return Scaffold(
+      backgroundColor: PilllColors.white,
       appBar: AppBar(
         leading: IconButton(
           icon: Icon(Icons.arrow_back, color: Colors.black),
