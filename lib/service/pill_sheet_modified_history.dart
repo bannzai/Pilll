@@ -201,7 +201,7 @@ extension PillSheetModifiedHistoryServiceActionFactory
     final afterID = after.id;
     if (afterID == null) {
       throw FormatException(
-          "unexpected after pill sheet id or lastTakenDate is null id: ${after.id}, lastTakenDate: ${after.lastTakenDate} for deletedPillSheet action");
+          "unexpected after pill sheet is null id: ${after.id}, for deletedPillSheet action");
     }
     return _create(
       actionType: PillSheetModifiedActionType.deletedPillSheet,
