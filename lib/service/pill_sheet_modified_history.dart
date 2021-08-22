@@ -199,8 +199,7 @@ extension PillSheetModifiedHistoryServiceActionFactory
     required PillSheet after,
   }) {
     final afterID = after.id;
-    final afterLastTakenDate = after.lastTakenDate;
-    if (afterID == null || afterLastTakenDate == null) {
+    if (afterID == null) {
       throw FormatException(
           "unexpected after pill sheet id or lastTakenDate is null id: ${after.id}, lastTakenDate: ${after.lastTakenDate} for deletedPillSheet action");
     }
