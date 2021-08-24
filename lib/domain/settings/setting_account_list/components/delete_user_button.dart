@@ -3,7 +3,6 @@ import 'dart:io';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:pilll/auth/apple.dart';
-import 'package:pilll/auth/exception.dart';
 import 'package:pilll/auth/google.dart';
 import 'package:pilll/components/atoms/buttons.dart';
 import 'package:pilll/components/atoms/font.dart';
@@ -38,9 +37,18 @@ class DeleteUserButton extends StatelessWidget {
   Future<void> _delete(BuildContext context) async {
     try {
       await FirebaseAuth.instance.currentUser?.delete();
+      showDialog(
+        context: context,
+        builder: (context) {
+          return _CompletedDialog(
+            onClose: () async {
+              await AppRouter.routeToInitialSetting(context);
+            },
+          );
+        },
+      );
     } on FirebaseAuthException catch (error, stackTrace) {
       if (error.code == "requires-recent-login") {
-        Navigator.of(context).pop();
         showDiscardDialog(
           context,
           title: "再ログインしてください",
@@ -60,23 +68,11 @@ class DeleteUserButton extends StatelessWidget {
         );
       } else {
         errorLogger.recordError(error, stackTrace);
-        Navigator.of(context).pop();
         showErrorAlert(context, message: error.toString());
       }
     } catch (error) {
-      Navigator.of(context).pop();
       showErrorAlert(context, message: error.toString());
     }
-    showDialog(
-      context: context,
-      builder: (context) {
-        return _CompletedDialog(
-          onClose: () async {
-            await AppRouter.routeToInitialSetting(context);
-          },
-        );
-      },
-    );
   }
 }
 
