@@ -90,3 +90,30 @@ bool isLinkedAppleFor(User user) {
       .where((element) => element.providerId == appleProviderID)
       .isNotEmpty;
 }
+
+Future<bool> appleReauthentification() async {
+  final rawNonce = generateNonce();
+  final state = generateNonce();
+  final appleCredential = await SignInWithApple.getAppleIDCredential(
+    scopes: [AppleIDAuthorizationScopes.email],
+    webAuthenticationOptions: WebAuthenticationOptions(
+      clientId: Environment.siwaServiceIdentifier,
+      redirectUri: Uri.parse(Environment.androidSiwaRedirectURL),
+    ),
+    nonce: sha256ofString(rawNonce).toString(),
+    state: state,
+  );
+  print("appleCredential: $appleCredential");
+  if (state != appleCredential.state) {
+    throw AssertionError('state not matched!');
+  }
+  final credential = OAuthProvider(appleProviderID).credential(
+    idToken: appleCredential.identityToken,
+    accessToken: appleCredential.authorizationCode,
+    rawNonce: rawNonce,
+  );
+
+  await FirebaseAuth.instance.currentUser
+      ?.reauthenticateWithCredential(credential);
+  return true;
+}
