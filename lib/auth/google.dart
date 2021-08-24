@@ -69,3 +69,27 @@ bool isLinkedGoogleFor(User user) {
       .where((element) => element.providerId == googleProviderID)
       .isNotEmpty;
 }
+
+Future<bool> googleReauthentification() async {
+  // NOTE: workaround https://github.com/flutter/flutter/issues/44564#issuecomment-655884103
+  final googleUser = await GoogleSignIn(
+    scopes: [
+      'email',
+    ],
+    hostedDomain: "",
+  ).signIn();
+  // NOTE: aborted
+  if (googleUser == null) {
+    return false;
+  }
+
+  final GoogleSignInAuthentication googleAuth = await googleUser.authentication;
+  final credential = GoogleAuthProvider.credential(
+    accessToken: googleAuth.accessToken,
+    idToken: googleAuth.idToken,
+  );
+
+  await FirebaseAuth.instance.currentUser
+      ?.reauthenticateWithCredential(credential);
+  return true;
+}
