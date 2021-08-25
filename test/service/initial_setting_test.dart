@@ -28,9 +28,11 @@ void main() {
       final pillSheetService = MockPillSheetService();
       when(pillSheetService.register(any, pillSheetEntity!))
           .thenAnswer((realInvocation) => "ID");
+      final pillSheetModifedHistoryService =
+          MockPillSheetModifiedHistoryService();
 
-      final service =
-          InitialSettingService(batch, settingService, pillSheetService);
+      final service = InitialSettingService(batch, settingService,
+          pillSheetService, pillSheetModifedHistoryService);
       await service.register(initialSetting);
 
       verify(settingService.update(settingEntity));
