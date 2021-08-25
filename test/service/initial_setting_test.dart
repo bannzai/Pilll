@@ -16,8 +16,10 @@ void main() {
         todayPillNumber: 1,
         pillSheetType: PillSheetType.pillsheet_21,
       );
-      final batch = MockBatchFactory();
-      when(batch.batch()).thenReturn(MockWriteBatch());
+      final batchFactory = MockBatchFactory();
+      final batch = MockWriteBatch();
+      when(batch.commit()).thenAnswer((realInvocation) => Future.value());
+      when(batchFactory.batch()).thenReturn(batch);
 
       final settingService = MockSettingService();
       final settingEntity = initialSetting.buildSetting();
@@ -30,10 +32,10 @@ void main() {
           .thenAnswer((realInvocation) => "ID");
       final pillSheetModifedHistoryService =
           MockPillSheetModifiedHistoryService();
-      when(pillSheetModifedHistoryService.update(any))
+      when(pillSheetModifedHistoryService.add(batch, any))
           .thenAnswer((_) => Future.value());
 
-      final service = InitialSettingService(batch, settingService,
+      final service = InitialSettingService(batchFactory, settingService,
           pillSheetService, pillSheetModifedHistoryService);
       await service.register(initialSetting);
 
