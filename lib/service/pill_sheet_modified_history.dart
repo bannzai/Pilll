@@ -42,13 +42,12 @@ class PillSheetModifiedHistoryService {
             .toList());
   }
 
-  Future<PillSheetModifiedHistory> update(
-      PillSheetModifiedHistory pillSheetModifiedHistory) async {
+  Future<void> update(PillSheetModifiedHistory pillSheetModifiedHistory) async {
     await _database
         .pillSheetModifiedHistoriesReference()
         .doc(pillSheetModifiedHistory.id)
         .set(pillSheetModifiedHistory, SetOptions(merge: true));
-    return pillSheetModifiedHistory;
+    return;
   }
 
   Stream<List<PillSheetModifiedHistory>> subscribe(int limit) {

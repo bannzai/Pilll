@@ -30,6 +30,8 @@ void main() {
           .thenAnswer((realInvocation) => "ID");
       final pillSheetModifedHistoryService =
           MockPillSheetModifiedHistoryService();
+      when(pillSheetModifedHistoryService.update(any))
+          .thenAnswer((_) => Future.value());
 
       final service = InitialSettingService(batch, settingService,
           pillSheetService, pillSheetModifedHistoryService);
