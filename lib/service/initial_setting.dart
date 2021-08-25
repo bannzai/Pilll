@@ -1,6 +1,7 @@
 import 'package:pilll/database/batch.dart';
 import 'package:pilll/entity/initial_setting.dart';
 import 'package:pilll/service/pill_sheet.dart';
+import 'package:pilll/service/pill_sheet_modified_history.dart';
 import 'package:pilll/service/setting.dart';
 import 'package:riverpod/riverpod.dart';
 
@@ -15,6 +16,7 @@ final initialSettingServiceProvider = Provider<InitialSettingServiceInterface>(
     ref.watch(batchFactoryProvider),
     ref.watch(settingServiceProvider),
     ref.watch(pillSheetServiceProvider),
+    ref.watch(pillSheetModifiedHistoryServiceProvider),
   ),
 );
 
@@ -22,9 +24,14 @@ class InitialSettingService extends InitialSettingServiceInterface {
   final BatchFactory batchFactory;
   final SettingService settingService;
   final PillSheetService pillSheetService;
+  final PillSheetModifiedHistoryService pillSheetModifiedHistoryService;
 
   InitialSettingService(
-      this.batchFactory, this.settingService, this.pillSheetService);
+    this.batchFactory,
+    this.settingService,
+    this.pillSheetService,
+    this.pillSheetModifiedHistoryService,
+  );
 
   Future<void> register(InitialSettingModel initialSetting) {
     var setting = initialSetting.buildSetting();
@@ -33,7 +40,14 @@ class InitialSettingService extends InitialSettingServiceInterface {
       if (pillSheet == null) {
         return Future.value();
       }
-      return pillSheetService.register(batchFactory.batch(), pillSheet);
+      final batch = batchFactory.batch();
+      final documentID = pillSheetService.register(batch, pillSheet);
+      final history = PillSheetModifiedHistoryServiceActionFactory
+          .createCreatedPillSheetAction(
+              before: null, pillSheetID: documentID, after: pillSheet);
+      pillSheetModifiedHistoryService.add(batch, history);
+
+      return batch.commit();
     });
   }
 }
