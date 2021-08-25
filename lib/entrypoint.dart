@@ -43,12 +43,14 @@ Future<void> entrypoint() async {
   FlutterError.onError = FirebaseCrashlytics.instance.recordFlutterError;
   definedChannel();
   runZonedGuarded(() async {
-    final user = await callSignin();
-    if (user != null) {
-      await errorLogger.setUserIdentifier(user.uid);
-      await firebaseAnalytics.setUserId(user.uid);
-      await initializePurchase(user.uid);
-    }
+    // No UI thread blocking
+    callSignin().then((user) async {
+      if (user != null) {
+        await errorLogger.setUserIdentifier(user.uid);
+        await firebaseAnalytics.setUserId(user.uid);
+        await initializePurchase(user.uid);
+      }
+    });
     runApp(ProviderScope(child: App()));
   }, (error, stack) => FirebaseCrashlytics.instance.recordError(error, stack));
 }
