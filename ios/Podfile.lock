@@ -8,6 +8,9 @@ PODS:
     - Firebase/Firestore (= 8.0.0)
     - firebase_core
     - Flutter
+  - connectivity_plus (0.0.1):
+    - Flutter
+    - Reachability
   - Firebase/Analytics (8.0.0):
     - Firebase/Core
   - Firebase/Auth (8.0.0):
@@ -189,6 +192,7 @@ PODS:
   - PurchasesCoreSwift (3.11.1)
   - PurchasesHybridCommon (1.7.1):
     - Purchases (= 3.11.1)
+  - Reachability (3.2)
   - shared_preferences (0.0.1):
     - Flutter
   - sign_in_with_apple (0.0.1):
@@ -198,6 +202,7 @@ PODS:
 
 DEPENDENCIES:
   - cloud_firestore (from `.symlinks/plugins/cloud_firestore/ios`)
+  - connectivity_plus (from `.symlinks/plugins/connectivity_plus/ios`)
   - firebase_analytics (from `.symlinks/plugins/firebase_analytics/ios`)
   - firebase_auth (from `.symlinks/plugins/firebase_auth/ios`)
   - firebase_core (from `.symlinks/plugins/firebase_core/ios`)
@@ -238,10 +243,13 @@ SPEC REPOS:
     - Purchases
     - PurchasesCoreSwift
     - PurchasesHybridCommon
+    - Reachability
 
 EXTERNAL SOURCES:
   cloud_firestore:
     :path: ".symlinks/plugins/cloud_firestore/ios"
+  connectivity_plus:
+    :path: ".symlinks/plugins/connectivity_plus/ios"
   firebase_analytics:
     :path: ".symlinks/plugins/firebase_analytics/ios"
   firebase_auth:
@@ -284,6 +292,7 @@ CHECKOUT OPTIONS:
 SPEC CHECKSUMS:
   AppAuth: 31bcec809a638d7bd2f86ea8a52bd45f6e81e7c7
   cloud_firestore: 83d6cd19d24798c523265494ab81db32009fcb7b
+  connectivity_plus: 5f0eb61093bec56935f21a1699dd2758bc895587
   Firebase: 73c3e3b216ec1ecbc54d2ffdd4670c65c749edb1
   firebase_analytics: 5e1820ff8ca6cc984fd4d1dedd2dd45965b91535
   firebase_auth: 6532658f5a4f76be32cd5e7518753ebedd4544d2
@@ -317,6 +326,7 @@ SPEC CHECKSUMS:
   purchases_flutter: b9bdce2607e0f8a5de0cbb11c3eee54e3104f293
   PurchasesCoreSwift: ee857e4c21e6254b09d7e303a756fcf2b9164408
   PurchasesHybridCommon: e3b25475328b58169e811135a3476ed0e5a4243a
+  Reachability: 33e18b67625424e47b6cde6d202dce689ad7af96
   shared_preferences: af6bfa751691cdc24be3045c43ec037377ada40d
   sign_in_with_apple: 34f3f5456a45fd7ac5fb42905e2ad31dae061b4a
   url_launcher: 6fef411d543ceb26efce54b05a0a40bfd74cbbef

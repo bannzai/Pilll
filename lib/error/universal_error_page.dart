@@ -68,14 +68,20 @@ class _UniversalErrorPageState extends State<UniversalErrorPage> {
     return _InheritedWidget(
       state: this,
       child: () {
-        if (child != null) return child;
         if (error != null) return _errorPage(error);
+        if (child != null) return child;
         throw AssertionError("unexpected child and error are both null");
       }(),
     );
   }
 
   Widget _errorPage(Object error) {
+    final String message;
+    if (error is FormatException) {
+      message = error.message;
+    } else {
+      message = error.toString();
+    }
     return Scaffold(
       backgroundColor: PilllColors.background,
       body: Center(
@@ -91,7 +97,7 @@ class _UniversalErrorPageState extends State<UniversalErrorPage> {
                 height: 190,
               ),
               SizedBox(height: 25),
-              Text(error.toString(),
+              Text(message,
                   style: FontType.assisting.merge(TextColorStyle.main)),
               SizedBox(height: 25),
               TextButton.icon(

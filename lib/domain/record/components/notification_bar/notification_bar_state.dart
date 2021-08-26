@@ -58,8 +58,6 @@ abstract class NotificationBarState implements _$NotificationBarState {
       return null;
     }
     final trialDeadlineDate = this.trialDeadlineDate;
-    assert(trialDeadlineDate != null,
-        "if is trial should fill of trialDeadlineDate");
     if (trialDeadlineDate == null) {
       return null;
     }
