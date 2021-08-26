@@ -7,7 +7,6 @@ import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/domain/root/root.dart';
 import 'package:pilll/error/universal_error_page.dart';
-import 'package:pilll/error_log.dart';
 import 'package:pilll/global_method_channel.dart';
 import 'package:pilll/service/purchase.dart';
 import 'package:pilll/util/environment.dart';
@@ -43,14 +42,7 @@ Future<void> entrypoint() async {
   FlutterError.onError = FirebaseCrashlytics.instance.recordFlutterError;
   definedChannel();
   runZonedGuarded(() async {
-    // No UI thread blocking
-    callSignin().then((user) async {
-      if (user != null) {
-        await errorLogger.setUserIdentifier(user.uid);
-        await firebaseAnalytics.setUserId(user.uid);
-        await initializePurchase(user.uid);
-      }
-    });
+    callSignin();
     runApp(ProviderScope(child: App()));
   }, (error, stack) => FirebaseCrashlytics.instance.recordError(error, stack));
 }

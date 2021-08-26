@@ -1,3 +1,6 @@
+import 'package:connectivity_plus/connectivity_plus.dart';
+import 'package:pilll/analytics.dart';
+import 'package:pilll/entrypoint.dart';
 import 'package:pilll/service/auth.dart';
 import 'package:pilll/database/database.dart';
 import 'package:pilll/domain/home/home_page.dart';
@@ -50,7 +53,7 @@ class RootState extends State<Root> {
 
   @override
   Widget build(BuildContext context) {
-    if (screenType == null) {
+    if (screenType == null && _error == null) {
       return ScaffoldIndicator();
     }
     return UniversalErrorPage(
@@ -88,7 +91,21 @@ class RootState extends State<Root> {
     );
   }
 
-  _auth() {
+  _auth() async {
+    final connectivityResult = await (Connectivity().checkConnectivity());
+    if (connectivityResult == ConnectivityResult.none) {
+      setState(() {
+        _error = FormatException("インターネットへの接続がされていません。通信環境をお確かめください");
+      });
+      return;
+    }
+    // No UI thread blocking
+    final user = await callSignin();
+    if (user != null) {
+      await errorLogger.setUserIdentifier(user.uid);
+      await firebaseAnalytics.setUserId(user.uid);
+      await initializePurchase(user.uid);
+    }
     cacheOrAuth().then((authInfo) {
       final userService = UserService(DatabaseConnection(authInfo.uid));
       return userService.prepare(authInfo.uid).then((_) async {
