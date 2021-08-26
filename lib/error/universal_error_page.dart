@@ -76,6 +76,12 @@ class _UniversalErrorPageState extends State<UniversalErrorPage> {
   }
 
   Widget _errorPage(Object error) {
+    final String message;
+    if (error is FormatException) {
+      message = error.message;
+    } else {
+      message = error.toString();
+    }
     return Scaffold(
       backgroundColor: PilllColors.background,
       body: Center(
@@ -91,7 +97,7 @@ class _UniversalErrorPageState extends State<UniversalErrorPage> {
                 height: 190,
               ),
               SizedBox(height: 25),
-              Text(error.toString(),
+              Text(message,
                   style: FontType.assisting.merge(TextColorStyle.main)),
               SizedBox(height: 25),
               TextButton.icon(
