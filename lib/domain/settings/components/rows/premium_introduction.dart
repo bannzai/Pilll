@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:pilll/analytics.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/domain/premium_introduction/premium_introduction_sheet.dart';
@@ -27,8 +28,13 @@ class PremiumIntroductionRow extends StatelessWidget {
           showPremiumIntroductionSheet(context);
         }
       },
-      title: Text("Pilllプレミアム", style: FontType.listRow),
-      trailing: isPremium ? Text("プレミアムユーザー") : null,
+      title: Row(
+        children: [
+          SvgPicture.asset("images/crown.svg", width: 24),
+          SizedBox(width: 8),
+          Text("プレミアムプランを見る", style: FontType.listRow),
+        ],
+      ),
     );
   }
 }
