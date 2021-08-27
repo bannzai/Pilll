@@ -28,7 +28,14 @@ import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-enum SettingSection { account, pill, notification, menstruation, other }
+enum SettingSection {
+  account,
+  premium,
+  pill,
+  notification,
+  menstruation,
+  other
+}
 
 class SettingPage extends HookWidget {
   @override
@@ -65,13 +72,29 @@ class SettingPage extends HookWidget {
                           text: "機種変更やスマホ紛失時など、データの引き継ぎ・復元には、アカウント登録が必要です。"),
                       AccountLinkRow(),
                       _separator(),
-                      PremiumIntroductionRow(
-                        isPremium: state.isPremium,
-                        trialDeadlineDate: state.trialDeadlineDate,
+                    ],
+                  );
+                case SettingSection.premium:
+                  return SettingSectionTitle(text: "Pilllプレミアム", children: [
+                    if (state.isTrial) ...[
+                      ListTile(
+                        title: Text("プレミアムお試し体験について", style: FontType.listRow),
+                        onTap: () {
+                          analytics.logEvent(
+                              name: "did_select_about_trial", parameters: {});
+                          launch(
+                              "https://pilll.anotion.so/3abd690f501549c48f813fd310b5f242",
+                              forceSafariVC: true);
+                        },
                       ),
                       _separator(),
                     ],
-                  );
+                    PremiumIntroductionRow(
+                      isPremium: state.isPremium,
+                      trialDeadlineDate: state.trialDeadlineDate,
+                    ),
+                    _separator(),
+                  ]);
                 case SettingSection.pill:
                   return SettingSectionTitle(
                     text: "ピルシート",
