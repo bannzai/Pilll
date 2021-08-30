@@ -26,7 +26,7 @@ class PillSheetRemoveRow extends HookWidget {
                 message: "現在、服用記録をしているピルシートを削除します。",
                 doneButtonText: "破棄する",
                 done: () {
-                  store.deletePillSheet().catchError((error) {
+                  store.deletePillSheetGroup().catchError((error) {
                     showErrorAlert(context,
                         message:
                             "ピルシートがすでに削除されています。表示等に問題がある場合は設定タブから「お問い合わせ」ください");

@@ -195,7 +195,7 @@ class SettingStateStore extends StateNotifier<SettingState> {
     state = state.copyWith(latestPillSheet: updated);
   }
 
-  Future<void> deletePillSheet() {
+  Future<void> deletePillSheetGroup() {
     final entity = state.latestPillSheet;
     if (entity == null) {
       throw FormatException("pill sheet not found");
