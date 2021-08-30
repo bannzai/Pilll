@@ -1,6 +1,10 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:pilll/database/database.dart';
 import 'package:pilll/entity/pill_sheet_group.dart';
+import 'package:riverpod/riverpod.dart';
+
+final pillSheetGroupoServiceProvider = Provider<PillSheetGroupService>(
+    (ref) => PillSheetGroupService(ref.watch(databaseProvider)));
 
 class PillSheetGroupService {
   final DatabaseConnection _database;
