@@ -21,13 +21,16 @@ class _$PillSheetGroupTearOff {
   const _$PillSheetGroupTearOff();
 
   _PillSheetGroup call(
-      {required List<String> pillSheetIDs,
+      {@JsonKey(includeIfNull: false, toJson: toNull)
+          String? id,
+      required List<String> pillSheetIDs,
       required List<PillSheet> pillSheets,
       @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
           DateTime? createdAt,
       @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
           DateTime? deletedAt}) {
     return _PillSheetGroup(
+      id: id,
       pillSheetIDs: pillSheetIDs,
       pillSheets: pillSheets,
       createdAt: createdAt,
@@ -45,6 +48,8 @@ const $PillSheetGroup = _$PillSheetGroupTearOff();
 
 /// @nodoc
 mixin _$PillSheetGroup {
+  @JsonKey(includeIfNull: false, toJson: toNull)
+  String? get id => throw _privateConstructorUsedError;
   List<String> get pillSheetIDs => throw _privateConstructorUsedError;
   List<PillSheet> get pillSheets => throw _privateConstructorUsedError;
   @JsonKey(
@@ -68,7 +73,9 @@ abstract class $PillSheetGroupCopyWith<$Res> {
           PillSheetGroup value, $Res Function(PillSheetGroup) then) =
       _$PillSheetGroupCopyWithImpl<$Res>;
   $Res call(
-      {List<String> pillSheetIDs,
+      {@JsonKey(includeIfNull: false, toJson: toNull)
+          String? id,
+      List<String> pillSheetIDs,
       List<PillSheet> pillSheets,
       @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
           DateTime? createdAt,
@@ -87,12 +94,17 @@ class _$PillSheetGroupCopyWithImpl<$Res>
 
   @override
   $Res call({
+    Object? id = freezed,
     Object? pillSheetIDs = freezed,
     Object? pillSheets = freezed,
     Object? createdAt = freezed,
     Object? deletedAt = freezed,
   }) {
     return _then(_value.copyWith(
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       pillSheetIDs: pillSheetIDs == freezed
           ? _value.pillSheetIDs
           : pillSheetIDs // ignore: cast_nullable_to_non_nullable
@@ -121,7 +133,9 @@ abstract class _$PillSheetGroupCopyWith<$Res>
       __$PillSheetGroupCopyWithImpl<$Res>;
   @override
   $Res call(
-      {List<String> pillSheetIDs,
+      {@JsonKey(includeIfNull: false, toJson: toNull)
+          String? id,
+      List<String> pillSheetIDs,
       List<PillSheet> pillSheets,
       @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
           DateTime? createdAt,
@@ -142,12 +156,17 @@ class __$PillSheetGroupCopyWithImpl<$Res>
 
   @override
   $Res call({
+    Object? id = freezed,
     Object? pillSheetIDs = freezed,
     Object? pillSheets = freezed,
     Object? createdAt = freezed,
     Object? deletedAt = freezed,
   }) {
     return _then(_PillSheetGroup(
+      id: id == freezed
+          ? _value.id
+          : id // ignore: cast_nullable_to_non_nullable
+              as String?,
       pillSheetIDs: pillSheetIDs == freezed
           ? _value.pillSheetIDs
           : pillSheetIDs // ignore: cast_nullable_to_non_nullable
@@ -173,7 +192,9 @@ class __$PillSheetGroupCopyWithImpl<$Res>
 @JsonSerializable(explicitToJson: true)
 class _$_PillSheetGroup extends _PillSheetGroup {
   _$_PillSheetGroup(
-      {required this.pillSheetIDs,
+      {@JsonKey(includeIfNull: false, toJson: toNull)
+          this.id,
+      required this.pillSheetIDs,
       required this.pillSheets,
       @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
           this.createdAt,
@@ -184,6 +205,9 @@ class _$_PillSheetGroup extends _PillSheetGroup {
   factory _$_PillSheetGroup.fromJson(Map<String, dynamic> json) =>
       _$_$_PillSheetGroupFromJson(json);
 
+  @override
+  @JsonKey(includeIfNull: false, toJson: toNull)
+  final String? id;
   @override
   final List<String> pillSheetIDs;
   @override
@@ -201,13 +225,15 @@ class _$_PillSheetGroup extends _PillSheetGroup {
 
   @override
   String toString() {
-    return 'PillSheetGroup(pillSheetIDs: $pillSheetIDs, pillSheets: $pillSheets, createdAt: $createdAt, deletedAt: $deletedAt)';
+    return 'PillSheetGroup(id: $id, pillSheetIDs: $pillSheetIDs, pillSheets: $pillSheets, createdAt: $createdAt, deletedAt: $deletedAt)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other is _PillSheetGroup &&
+            (identical(other.id, id) ||
+                const DeepCollectionEquality().equals(other.id, id)) &&
             (identical(other.pillSheetIDs, pillSheetIDs) ||
                 const DeepCollectionEquality()
                     .equals(other.pillSheetIDs, pillSheetIDs)) &&
@@ -225,6 +251,7 @@ class _$_PillSheetGroup extends _PillSheetGroup {
   @override
   int get hashCode =>
       runtimeType.hashCode ^
+      const DeepCollectionEquality().hash(id) ^
       const DeepCollectionEquality().hash(pillSheetIDs) ^
       const DeepCollectionEquality().hash(pillSheets) ^
       const DeepCollectionEquality().hash(createdAt) ^
@@ -243,7 +270,9 @@ class _$_PillSheetGroup extends _PillSheetGroup {
 
 abstract class _PillSheetGroup extends PillSheetGroup {
   factory _PillSheetGroup(
-      {required List<String> pillSheetIDs,
+      {@JsonKey(includeIfNull: false, toJson: toNull)
+          String? id,
+      required List<String> pillSheetIDs,
       required List<PillSheet> pillSheets,
       @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
           DateTime? createdAt,
@@ -254,6 +283,9 @@ abstract class _PillSheetGroup extends PillSheetGroup {
   factory _PillSheetGroup.fromJson(Map<String, dynamic> json) =
       _$_PillSheetGroup.fromJson;
 
+  @override
+  @JsonKey(includeIfNull: false, toJson: toNull)
+  String? get id => throw _privateConstructorUsedError;
   @override
   List<String> get pillSheetIDs => throw _privateConstructorUsedError;
   @override

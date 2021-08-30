@@ -1,3 +1,4 @@
+import 'package:pilll/entity/firestore_document_id_escaping_to_json.dart';
 import 'package:pilll/entity/firestore_timestamp_converter.dart';
 import 'package:pilll/entity/pill_sheet.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
@@ -16,6 +17,8 @@ abstract class PillSheetGroup implements _$PillSheetGroup {
   PillSheetGroup._();
   @JsonSerializable(explicitToJson: true)
   factory PillSheetGroup({
+    @JsonKey(includeIfNull: false, toJson: toNull)
+        String? id,
     required List<String> pillSheetIDs,
     required List<PillSheet> pillSheets,
     @JsonKey(
