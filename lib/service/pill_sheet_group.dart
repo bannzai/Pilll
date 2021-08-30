@@ -14,22 +14,26 @@ class PillSheetGroupService {
         .limitToLast(1);
   }
 
-  PillSheetGroup? _filter(QuerySnapshot snapshot) {
+  PillSheetGroup? _map(QuerySnapshot snapshot) {
     if (snapshot.docs.isEmpty) return null;
     if (!snapshot.docs.last.exists) return null;
+
     final document = snapshot.docs.last;
-    return PillSheetGroup.fromJson(document.data() as Map<String, dynamic>);
+    final data = document.data() as Map<String, dynamic>;
+    data["id"] = document.id;
+
+    return PillSheetGroup.fromJson(data);
   }
 
   Future<PillSheetGroup?> fetchLatest() async {
     final snapshot = await _fetchLatestQuery().get();
-    return _filter(snapshot);
+    return _map(snapshot);
   }
 
   Stream<PillSheetGroup> subscribeForLatestPillSheet() {
     return _fetchLatestQuery()
         .snapshots()
-        .map(((event) => _filter(event)))
+        .map(((event) => _map(event)))
         .skipWhile((element) => element == null)
         .cast();
   }
@@ -38,10 +42,20 @@ class PillSheetGroupService {
   PillSheetGroup register(WriteBatch batch, PillSheetGroup pillSheetGroup) {
     if (pillSheetGroup.createdAt != null) throw PillSheetGroupAlreadyExists();
     if (pillSheetGroup.deletedAt != null) throw PillSheetGroupAlreadyDeleted();
+
     final copied = pillSheetGroup.copyWith(createdAt: DateTime.now());
     final newDocument = _database.pillSheetsReference().doc();
     batch.set(newDocument, copied.toJson(), SetOptions(merge: true));
     return copied;
+  }
+
+  PillSheetGroup delete(WriteBatch batch, PillSheetGroup pillSheetGroup) {
+    if (pillSheetGroup.deletedAt != null) throw PillSheetGroupAlreadyDeleted();
+
+    final updated = pillSheetGroup.copyWith(deletedAt: DateTime.now());
+    batch.set(_database.pillSheetReference(pillSheetGroup.id!),
+        updated.toJson(), SetOptions(merge: true));
+    return updated;
   }
 }
 
