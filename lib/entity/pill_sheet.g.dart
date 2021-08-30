@@ -37,6 +37,7 @@ _$_PillSheet _$_$_PillSheetFromJson(Map<String, dynamic> json) {
         TimestampConverter.timestampToDateTime(json['createdAt'] as Timestamp?),
     deletedAt:
         TimestampConverter.timestampToDateTime(json['deletedAt'] as Timestamp?),
+    gropuIndex: json['gropuIndex'] as int?,
   );
 }
 
@@ -57,5 +58,6 @@ Map<String, dynamic> _$_$_PillSheetToJson(_$_PillSheet instance) {
       TimestampConverter.dateTimeToTimestamp(instance.lastTakenDate);
   val['createdAt'] = TimestampConverter.dateTimeToTimestamp(instance.createdAt);
   val['deletedAt'] = TimestampConverter.dateTimeToTimestamp(instance.deletedAt);
+  val['gropuIndex'] = instance.gropuIndex;
   return val;
 }
