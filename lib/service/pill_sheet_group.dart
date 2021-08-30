@@ -33,4 +33,28 @@ class PillSheetGroupService {
         .skipWhile((element) => element == null)
         .cast();
   }
+
+  // Return new PillSheet document id
+  PillSheetGroup register(WriteBatch batch, PillSheetGroup pillSheetGroup) {
+    if (pillSheetGroup.createdAt != null) throw PillSheetGroupAlreadyExists();
+    if (pillSheetGroup.deletedAt != null) throw PillSheetGroupAlreadyDeleted();
+    final copied = pillSheetGroup.copyWith(createdAt: DateTime.now());
+    final newDocument = _database.pillSheetsReference().doc();
+    batch.set(newDocument, copied.toJson(), SetOptions(merge: true));
+    return copied;
+  }
+}
+
+class PillSheetGroupAlreadyExists extends Error {
+  @override
+  toString() {
+    return "ピルシートグループがすでに存在しています。";
+  }
+}
+
+class PillSheetGroupAlreadyDeleted extends Error {
+  @override
+  String toString() {
+    return "ピルシートグループはすでに削除されています。";
+  }
 }
