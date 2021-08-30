@@ -9,7 +9,7 @@ class PillSheetGroupService {
 
   Query _fetchLatestQuery() {
     return _database
-        .pillSheetsReference()
+        .pillSheetGroupsReference()
         .orderBy(PillSheetGroupFirestoreKeys.createdAt)
         .limitToLast(1);
   }
@@ -44,7 +44,7 @@ class PillSheetGroupService {
     if (pillSheetGroup.deletedAt != null) throw PillSheetGroupAlreadyDeleted();
 
     final copied = pillSheetGroup.copyWith(createdAt: DateTime.now());
-    final newDocument = _database.pillSheetsReference().doc();
+    final newDocument = _database.pillSheetGroupsReference().doc();
     batch.set(newDocument, copied.toJson(), SetOptions(merge: true));
     return copied;
   }
@@ -53,7 +53,7 @@ class PillSheetGroupService {
     if (pillSheetGroup.deletedAt != null) throw PillSheetGroupAlreadyDeleted();
 
     final updated = pillSheetGroup.copyWith(deletedAt: DateTime.now());
-    batch.set(_database.pillSheetReference(pillSheetGroup.id!),
+    batch.set(_database.pillSheetGroupReference(pillSheetGroup.id!),
         updated.toJson(), SetOptions(merge: true));
     return updated;
   }
