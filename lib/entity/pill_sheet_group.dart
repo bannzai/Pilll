@@ -14,7 +14,7 @@ part 'pill_sheet_group.freezed.dart';
 abstract class PillSheetGroup implements _$PillSheetGroup {
   PillSheetGroup._();
   @JsonSerializable(explicitToJson: true)
-  factory PillSheet({
+  factory PillSheetGroup({
     required List<String> pillSheetIDs,
     required List<PillSheet> pillSheets,
     @JsonKey(
