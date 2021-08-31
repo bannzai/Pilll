@@ -34,7 +34,7 @@ class RecordPage extends HookWidget {
   Widget build(BuildContext context) {
     final state = useProvider(recordPageStoreProvider.state);
     final store = useProvider(recordPageStoreProvider);
-    final currentPillSheet = state.entity;
+    final currentPillSheet = state.pillSheetGroup?.activePillSheet;
     Future.delayed(Duration(seconds: 1)).then((_) {
       if (!state.shouldShowMigrateInfo) {
         return;
@@ -132,7 +132,7 @@ class RecordPage extends HookWidget {
 
   Widget _body(BuildContext context) {
     final state = useProvider(recordPageStoreProvider.state);
-    final currentPillSheet = state.entity;
+    final currentPillSheet = state.pillSheetGroup?.activePillSheet;
     final store = useProvider(recordPageStoreProvider);
     final settingEntity = state.setting;
     if (settingEntity == null || !state.firstLoadIsEnded) {
@@ -170,7 +170,7 @@ class RecordPage extends HookWidget {
     RecordPageState state,
     RecordPageStore store,
   ) {
-    final pillSheet = state.entity;
+    final pillSheet = state.pillSheetGroup?.activePillSheet;
     final setting = state.setting;
     if (pillSheet == null || setting == null) {
       throw FormatException(
@@ -203,7 +203,7 @@ class RecordPage extends HookWidget {
         if (state.appearanceMode != PillSheetAppearanceMode.date) {
           return null;
         }
-        final pillSheet = state.entity;
+        final pillSheet = state.pillSheetGroup?.activePillSheet;
         if (pillSheet == null) {
           return null;
         }
