@@ -20,7 +20,7 @@ abstract class CalendarPageState implements _$CalendarPageState {
     @Default(true) bool isNotYetLoaded,
     @Default([]) List<Menstruation> menstruations,
     Setting? setting,
-    PillSheet? latestPillSheetGroup,
+    PillSheetGroup? latestPillSheetGroup,
     @Default([]) List<Diary> diariesForMonth,
     @Default([]) List<PillSheetModifiedHistory> allPillSheetModifiedHistories,
     @Default(false) bool isPremium,

@@ -18,7 +18,7 @@ class _$SettingStateTearOff {
 
   _SettingState call(
       {required Setting? entity,
-      PillSheet? latestPillSheetGroup,
+      PillSheetGroup? latestPillSheetGroup,
       bool userIsUpdatedFrom132 = false,
       bool isPremium = false,
       bool isTrial = false,
@@ -58,7 +58,7 @@ abstract class $SettingStateCopyWith<$Res> {
       _$SettingStateCopyWithImpl<$Res>;
   $Res call(
       {Setting? entity,
-      PillSheet? latestPillSheetGroup,
+      PillSheetGroup? latestPillSheetGroup,
       bool userIsUpdatedFrom132,
       bool isPremium,
       bool isTrial,
@@ -145,7 +145,7 @@ abstract class _$SettingStateCopyWith<$Res>
   @override
   $Res call(
       {Setting? entity,
-      PillSheet? latestPillSheetGroup,
+      PillSheetGroup? latestPillSheetGroup,
       bool userIsUpdatedFrom132,
       bool isPremium,
       bool isTrial,
@@ -220,7 +220,7 @@ class _$_SettingState extends _SettingState {
   @override
   final Setting? entity;
   @override
-  final PillSheet? latestPillSheetGroup;
+  final PillSheetGroup? latestPillSheetGroup;
   @JsonKey(defaultValue: false)
   @override
   final bool userIsUpdatedFrom132;
@@ -280,7 +280,7 @@ class _$_SettingState extends _SettingState {
 abstract class _SettingState extends SettingState {
   factory _SettingState(
       {required Setting? entity,
-      PillSheet? latestPillSheetGroup,
+      PillSheetGroup? latestPillSheetGroup,
       bool userIsUpdatedFrom132,
       bool isPremium,
       bool isTrial,

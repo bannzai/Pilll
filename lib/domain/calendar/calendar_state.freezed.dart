@@ -21,7 +21,7 @@ class _$CalendarPageStateTearOff {
       bool isNotYetLoaded = true,
       List<Menstruation> menstruations = const [],
       Setting? setting,
-      PillSheet? latestPillSheetGroup,
+      PillSheetGroup? latestPillSheetGroup,
       List<Diary> diariesForMonth = const [],
       List<PillSheetModifiedHistory> allPillSheetModifiedHistories = const [],
       bool isPremium = false,
@@ -74,7 +74,7 @@ abstract class $CalendarPageStateCopyWith<$Res> {
       bool isNotYetLoaded,
       List<Menstruation> menstruations,
       Setting? setting,
-      PillSheet? latestPillSheetGroup,
+      PillSheetGroup? latestPillSheetGroup,
       List<Diary> diariesForMonth,
       List<PillSheetModifiedHistory> allPillSheetModifiedHistories,
       bool isPremium,
@@ -186,7 +186,7 @@ abstract class _$CalendarPageStateCopyWith<$Res>
       bool isNotYetLoaded,
       List<Menstruation> menstruations,
       Setting? setting,
-      PillSheet? latestPillSheetGroup,
+      PillSheetGroup? latestPillSheetGroup,
       List<Diary> diariesForMonth,
       List<PillSheetModifiedHistory> allPillSheetModifiedHistories,
       bool isPremium,
@@ -296,7 +296,7 @@ class _$_CalendarPageState extends _CalendarPageState {
   @override
   final Setting? setting;
   @override
-  final PillSheet? latestPillSheetGroup;
+  final PillSheetGroup? latestPillSheetGroup;
   @JsonKey(defaultValue: const [])
   @override
   final List<Diary> diariesForMonth;
@@ -381,7 +381,7 @@ abstract class _CalendarPageState extends CalendarPageState {
       bool isNotYetLoaded,
       List<Menstruation> menstruations,
       Setting? setting,
-      PillSheet? latestPillSheetGroup,
+      PillSheetGroup? latestPillSheetGroup,
       List<Diary> diariesForMonth,
       List<PillSheetModifiedHistory> allPillSheetModifiedHistories,
       bool isPremium,
