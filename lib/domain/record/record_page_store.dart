@@ -3,10 +3,10 @@ import 'dart:async';
 
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter_app_badger/flutter_app_badger.dart';
-import 'package:pilll/analytics.dart';
 import 'package:pilll/database/batch.dart';
 import 'package:pilll/entity/pill_mark_type.dart';
 import 'package:pilll/entity/pill_sheet.dart';
+import 'package:pilll/entity/pill_sheet_group.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/service/auth.dart';
 import 'package:pilll/service/pill_sheet.dart';
@@ -197,7 +197,7 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
   }
 
   Future<void>? takenWithPillNumber(int pillNumber) async {
-    final pillSheet = state.entity;
+    final pillSheet = state.pillSheetGroup?.activePillSheet;
     if (pillSheet == null) {
       return null;
     }
@@ -214,33 +214,43 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
   }
 
   Future<void> cancelTaken() async {
-    final pillSheet = state.entity;
-    if (pillSheet == null) {
+    final pillSheetGroup = state.pillSheetGroup;
+    if (pillSheetGroup == null) {
+      throw FormatException("pill sheet group not found");
+    }
+    final activePillSheet = pillSheetGroup.activePillSheet;
+    if (activePillSheet == null) {
+      throw FormatException("active pill sheet not found");
+    }
+    if (activePillSheet.todayPillNumber !=
+        activePillSheet.lastTakenPillNumber) {
       return;
     }
-    if (pillSheet.todayPillNumber != pillSheet.lastTakenPillNumber) {
-      return;
-    }
-    final lastTakenDate = pillSheet.lastTakenDate;
+    final lastTakenDate = activePillSheet.lastTakenDate;
     if (lastTakenDate == null) {
       return;
     }
 
     final batch = _batchFactory.batch();
 
-    final updated = pillSheet.copyWith(
+    final updatedPillSheet = activePillSheet.copyWith(
         lastTakenDate: lastTakenDate.subtract(Duration(days: 1)));
-    _pillSheetService.update(batch, updated);
+    _pillSheetService.update(batch, updatedPillSheet);
 
     final history = PillSheetModifiedHistoryServiceActionFactory
-        .createRevertTakenPillAction(before: pillSheet, after: updated);
+        .createRevertTakenPillAction(
+            before: activePillSheet, after: updatedPillSheet);
     _pillSheetModifiedHistoryService.add(batch, history);
 
+    final updatedPillSheetGroup = pillSheetGroup.replaced(updatedPillSheet);
+    _pillSheetGroupService.update(batch, updatedPillSheetGroup);
+
     await batch.commit();
+    state = state.copyWith(pillSheetGroup: updatedPillSheetGroup);
   }
 
   DateTime calcBeginingDateFromNextTodayPillNumber(int pillNumber) {
-    final entity = state.entity;
+    final entity = state.pillSheetGroup?.activePillSheet;
     if (entity == null) {
       throw FormatException("pill sheet not found");
     }
@@ -248,9 +258,13 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
   }
 
   Future<void> modifyBeginingDate(int pillNumber) async {
-    final entity = state.entity;
-    if (entity == null) {
-      throw FormatException("pill sheet not found");
+    final pillSheetGroup = state.pillSheetGroup;
+    if (pillSheetGroup == null) {
+      throw FormatException("pill sheet group not found");
+    }
+    final activePillSheet = pillSheetGroup.activePillSheet;
+    if (activePillSheet == null) {
+      throw FormatException("active pill sheet not found");
     }
 
     final batch = _batchFactory.batch();
@@ -258,40 +272,42 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
       batch,
       _pillSheetService,
       _pillSheetModifiedHistoryService,
-      entity,
+      _pillSheetGroupService,
+      activePillSheet,
+      pillSheetGroup,
       pillNumber,
     );
     await batch.commit();
 
-    state = state.copyWith(entity: updated);
+    state = state.copyWith(pillSheetGroup: updated);
   }
 
   PillMarkType markFor(int number) {
-    final entity = state.entity;
-    if (entity == null) {
+    final activePillSheet = state.pillSheetGroup?.activePillSheet;
+    if (activePillSheet == null) {
       throw FormatException("pill sheet not found");
     }
-    if (number > entity.typeInfo.dosingPeriod) {
-      return state.entity?.pillSheetType == PillSheetType.pillsheet_21
+    if (number > activePillSheet.typeInfo.dosingPeriod) {
+      return activePillSheet.pillSheetType == PillSheetType.pillsheet_21
           ? PillMarkType.rest
           : PillMarkType.fake;
     }
-    if (number <= entity.lastTakenPillNumber) {
+    if (number <= activePillSheet.lastTakenPillNumber) {
       return PillMarkType.done;
     }
-    if (number < entity.todayPillNumber) {
+    if (number < activePillSheet.todayPillNumber) {
       return PillMarkType.normal;
     }
     return PillMarkType.normal;
   }
 
   bool shouldPillMarkAnimation(int number) {
-    final entity = state.entity;
-    if (entity == null) {
+    final activePillSheet = state.pillSheetGroup?.activePillSheet;
+    if (activePillSheet == null) {
       throw FormatException("pill sheet not found");
     }
-    return number > entity.lastTakenPillNumber &&
-        number <= entity.todayPillNumber;
+    return number > activePillSheet.lastTakenPillNumber &&
+        number <= activePillSheet.todayPillNumber;
   }
 
   handleException(Object exception) {
@@ -305,14 +321,16 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
   }
 }
 
-PillSheet modifyBeginingDateFunction(
+PillSheetGroup modifyBeginingDateFunction(
   WriteBatch batch,
   PillSheetService service,
   PillSheetModifiedHistoryService pillSheetModifiedHistoryService,
+  PillSheetGroupService pillSheetGroupService,
   PillSheet pillSheet,
+  PillSheetGroup pillSheetGroup,
   int pillNumber,
 ) {
-  final updated = pillSheet.copyWith(
+  final updatedPillSheet = pillSheet.copyWith(
     beginingDate: calcBeginingDateFromNextTodayPillNumberFunction(
       pillSheet,
       pillNumber,
@@ -320,14 +338,18 @@ PillSheet modifyBeginingDateFunction(
   );
   service.update(
     batch,
-    updated,
+    updatedPillSheet,
   );
 
   final history = PillSheetModifiedHistoryServiceActionFactory
-      .createChangedPillNumberAction(before: pillSheet, after: updated);
+      .createChangedPillNumberAction(
+          before: pillSheet, after: updatedPillSheet);
   pillSheetModifiedHistoryService.add(batch, history);
 
-  return updated;
+  final updatedPillSheetGroup = pillSheetGroup.replaced(updatedPillSheet);
+  pillSheetGroupService.update(batch, updatedPillSheetGroup);
+
+  return updatedPillSheetGroup;
 }
 
 DateTime calcBeginingDateFromNextTodayPillNumberFunction(
