@@ -11,6 +11,7 @@ import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/service/auth.dart';
 import 'package:pilll/service/pill_sheet.dart';
 import 'package:pilll/domain/record/record_page_state.dart';
+import 'package:pilll/service/pill_sheet_group.dart';
 import 'package:pilll/service/pill_sheet_modified_history.dart';
 import 'package:pilll/service/setting.dart';
 import 'package:pilll/service/user.dart';
@@ -26,6 +27,7 @@ final recordPageStoreProvider = StateNotifierProvider((ref) => RecordPageStore(
       ref.watch(userServiceProvider),
       ref.watch(authServiceProvider),
       ref.watch(pillSheetModifiedHistoryServiceProvider),
+      ref.watch(pillSheetServiceProvider),
     ));
 
 class RecordPageStore extends StateNotifier<RecordPageState> {
@@ -35,6 +37,7 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
   final UserService _userService;
   final AuthService _authService;
   final PillSheetModifiedHistoryService _pillSheetModifiedHistoryService;
+  final PillSheetGroupService _pillSheetGroupService;
   RecordPageStore(
     this._batchFactory,
     this._pillSheetService,
@@ -42,13 +45,14 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
     this._userService,
     this._authService,
     this._pillSheetModifiedHistoryService,
+    this._pillSheetGroupService,
   ) : super(RecordPageState(entity: null)) {
     reset();
   }
 
   void reset() {
     Future(() async {
-      final entity = await _pillSheetService.fetchActivePillSheet();
+      final entity = await _pillSheetGroupService.fetchLatest();
       final entities = await _pillSheetService.fetchListWithMax(2);
       final isPillSheetFinishedInThePast =
           entities.where((element) => element.id != entity?.id).length >= 1;
