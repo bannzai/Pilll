@@ -30,14 +30,14 @@ final recordPageStoreProvider = StateNotifierProvider((ref) => RecordPageStore(
 
 class RecordPageStore extends StateNotifier<RecordPageState> {
   final BatchFactory _batchFactory;
-  final PillSheetService _service;
+  final PillSheetService _pillSheetService;
   final SettingService _settingService;
   final UserService _userService;
   final AuthService _authService;
   final PillSheetModifiedHistoryService _pillSheetModifiedHistoryService;
   RecordPageStore(
     this._batchFactory,
-    this._service,
+    this._pillSheetService,
     this._settingService,
     this._userService,
     this._authService,
@@ -48,8 +48,8 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
 
   void reset() {
     Future(() async {
-      final entity = await _service.fetchActivePillSheet();
-      final entities = await _service.fetchListWithMax(2);
+      final entity = await _pillSheetService.fetchActivePillSheet();
+      final entities = await _pillSheetService.fetchListWithMax(2);
       final isPillSheetFinishedInThePast =
           entities.where((element) => element.id != entity?.id).length >= 1;
       final setting = await _settingService.fetch();
@@ -117,7 +117,8 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
   StreamSubscription? _authServiceCanceller;
   void _subscribe() {
     _canceller?.cancel();
-    _canceller = _service.subscribeForLatestPillSheet().listen((event) {
+    _canceller =
+        _pillSheetService.subscribeForLatestPillSheet().listen((event) {
       state = state.copyWith(entity: event);
     });
     _settingCanceller?.cancel();
@@ -154,7 +155,7 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
   Future<void> register(PillSheet model) async {
     final batch = _batchFactory.batch();
 
-    final documentID = _service.register(batch, model);
+    final documentID = _pillSheetService.register(batch, model);
     final history = PillSheetModifiedHistoryServiceActionFactory
         .createCreatedPillSheetAction(
             before: null, pillSheetID: documentID, after: model);
@@ -177,7 +178,7 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
     final batch = _batchFactory.batch();
 
     final updated = entity.copyWith(lastTakenDate: takenDate);
-    _service.update(batch, updated);
+    _pillSheetService.update(batch, updated);
 
     final history =
         PillSheetModifiedHistoryServiceActionFactory.createTakenPillAction(
@@ -226,7 +227,7 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
 
     final updated = pillSheet.copyWith(
         lastTakenDate: lastTakenDate.subtract(Duration(days: 1)));
-    _service.update(batch, updated);
+    _pillSheetService.update(batch, updated);
 
     final history = PillSheetModifiedHistoryServiceActionFactory
         .createRevertTakenPillAction(before: pillSheet, after: updated);
@@ -252,7 +253,7 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
     final batch = _batchFactory.batch();
     final updated = modifyBeginingDateFunction(
       batch,
-      _service,
+      _pillSheetService,
       _pillSheetModifiedHistoryService,
       entity,
       pillNumber,
