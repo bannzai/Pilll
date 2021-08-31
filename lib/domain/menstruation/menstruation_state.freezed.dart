@@ -25,7 +25,7 @@ class _$MenstruationStateTearOff {
       bool isTrial = false,
       DateTime? trialDeadlineDate,
       Setting? setting,
-      PillSheet? latestPillSheetGroup}) {
+      PillSheetGroup? latestPillSheetGroup}) {
     return _MenstruationState(
       isNotYetLoaded: isNotYetLoaded,
       currentCalendarIndex: currentCalendarIndex,
@@ -74,7 +74,7 @@ abstract class $MenstruationStateCopyWith<$Res> {
       bool isTrial,
       DateTime? trialDeadlineDate,
       Setting? setting,
-      PillSheet? latestPillSheetGroup});
+      PillSheetGroup? latestPillSheetGroup});
 
   $SettingCopyWith<$Res>? get setting;
   $PillSheetCopyWith<$Res>? get latestPillSheetGroup;
@@ -180,7 +180,7 @@ abstract class _$MenstruationStateCopyWith<$Res>
       bool isTrial,
       DateTime? trialDeadlineDate,
       Setting? setting,
-      PillSheet? latestPillSheetGroup});
+      PillSheetGroup? latestPillSheetGroup});
 
   @override
   $SettingCopyWith<$Res>? get setting;
@@ -290,7 +290,7 @@ class _$_MenstruationState extends _MenstruationState {
   @override
   final Setting? setting;
   @override
-  final PillSheet? latestPillSheetGroup;
+  final PillSheetGroup? latestPillSheetGroup;
 
   @override
   String toString() {
@@ -359,7 +359,7 @@ abstract class _MenstruationState extends MenstruationState {
       bool isTrial,
       DateTime? trialDeadlineDate,
       Setting? setting,
-      PillSheet? latestPillSheetGroup}) = _$_MenstruationState;
+      PillSheetGroup? latestPillSheetGroup}) = _$_MenstruationState;
   _MenstruationState._() : super._();
 
   @override

@@ -9,7 +9,7 @@ abstract class SettingState implements _$SettingState {
   SettingState._();
   factory SettingState({
     required Setting? entity,
-    PillSheet? latestPillSheetGroup,
+    PillSheetGroup? latestPillSheetGroup,
     @Default(false) bool userIsUpdatedFrom132,
     @Default(false) bool isPremium,
     @Default(false) bool isTrial,
