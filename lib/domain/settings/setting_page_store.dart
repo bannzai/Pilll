@@ -45,7 +45,7 @@ class SettingStateStore extends StateNotifier<SettingState> {
           storage.containsKey(StringKey.salvagedOldStartTakenDate) &&
               storage.containsKey(StringKey.salvagedOldLastTakenDate);
       final entity = await _service.fetch();
-      final pillSheet = await _pillSheetService.fetchLast();
+      final pillSheet = await _pillSheetService.fetchActivePillSheet();
       final user = await _userService.fetch();
       this.state = SettingState(
         entity: entity,

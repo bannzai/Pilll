@@ -28,7 +28,7 @@ Future<void> recordPill() async {
   final pillSheetService = PillSheetService(database);
   final pillSheetModifiedHistoryService =
       PillSheetModifiedHistoryService(database);
-  final entity = await pillSheetService.fetchLast();
+  final entity = await pillSheetService.fetchActivePillSheet();
   if (entity == null) {
     return Future.value();
   }

@@ -47,7 +47,7 @@ class CalendarPageStateStore extends StateNotifier<CalendarPageState> {
     Future(() async {
       final menstruations = await _menstruationService.fetchAll();
       final setting = await _settingService.fetch();
-      final latestPillSheet = await _pillSheetService.fetchLast();
+      final latestPillSheet = await _pillSheetService.fetchActivePillSheet();
       final diaries = await _diaryService.fetchListForMonth(
           state.calendarDataSource[state.todayCalendarIndex]);
       final pillSheetModifiedHistories =

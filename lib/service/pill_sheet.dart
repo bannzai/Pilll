@@ -8,7 +8,49 @@ final pillSheetServiceProvider = Provider<PillSheetService>(
 
 class PillSheetService {
   final DatabaseConnection _database;
+
+  PillSheet? _filterForLatestPillSheet(QuerySnapshot snapshot) {
+    if (snapshot.docs.isEmpty) return null;
+    if (!snapshot.docs.last.exists) return null;
+    var document = snapshot.docs.last;
+
+    return _mapToEntity(document);
+  }
+
+  PillSheet _mapToEntity(QueryDocumentSnapshot snapshot) {
+    var data = snapshot.data() as Map<String, dynamic>;
+    data["id"] = snapshot.id;
+    return PillSheet.fromJson(data);
+  }
+
+  Query _queryOfFetchLastPillSheet() {
+    return _database
+        .pillSheetsReference()
+        .orderBy(PillSheetFirestoreKey.createdAt)
+        .limitToLast(1);
+  }
+
   PillSheetService(this._database);
+  Future<PillSheet?> fetchActivePillSheet() {
+    return _queryOfFetchLastPillSheet()
+        .get()
+        .then((event) => _filterForLatestPillSheet(event));
+  }
+
+  Future<List<PillSheet>> fetchListWithMax(int number) {
+    return _database
+        .pillSheetsReference()
+        .limit(number)
+        .get()
+        .then((event) => event.docs.map((e) => _mapToEntity(e)).toList());
+  }
+
+  Future<List<PillSheet>> fetchAll() {
+    return _database
+        .pillSheetsReference()
+        .get()
+        .then((event) => event.docs.map((e) => _mapToEntity(e)).toList());
+  }
 
   // Return new PillSheet document id
   String register(WriteBatch batch, PillSheet model) {
@@ -34,6 +76,14 @@ class PillSheetService {
     var json = pillSheet.toJson();
     json.remove("id");
     batch.update(_database.pillSheetReference(pillSheet.documentID!), json);
+  }
+
+  Stream<PillSheet> subscribeForLatestPillSheet() {
+    return _queryOfFetchLastPillSheet()
+        .snapshots()
+        .map(((event) => _filterForLatestPillSheet(event)))
+        .skipWhile((element) => element == null)
+        .cast();
   }
 }
 

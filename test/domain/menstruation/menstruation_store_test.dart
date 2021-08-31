@@ -87,7 +87,7 @@ void main() {
           ]),
         );
         final pillSheetService = MockPillSheetService();
-        when(pillSheetService.fetchLast())
+        when(pillSheetService.fetchActivePillSheet())
             .thenAnswer((realInvocation) => Future.value(null));
         when(pillSheetService.fetchListWithMax(2))
             .thenAnswer((_) => Future.value([]));
@@ -164,7 +164,7 @@ void main() {
           ]),
         );
         final pillSheetService = MockPillSheetService();
-        when(pillSheetService.fetchLast())
+        when(pillSheetService.fetchActivePillSheet())
             .thenAnswer((realInvocation) => Future.value(null));
         when(pillSheetService.subscribeForLatestPillSheet())
             .thenAnswer((realInvocation) => Stream.empty());
@@ -223,7 +223,7 @@ void main() {
           (realInvocation) => Stream.value([]),
         );
         final pillSheetService = MockPillSheetService();
-        when(pillSheetService.fetchLast()).thenAnswer(
+        when(pillSheetService.fetchActivePillSheet()).thenAnswer(
           (realInvocation) => Future.value(
             PillSheet(
               typeInfo: PillSheetType.pillsheet_21.typeInfo,
@@ -292,7 +292,7 @@ void main() {
           (realInvocation) => Stream.value([]),
         );
         final pillSheetService = MockPillSheetService();
-        when(pillSheetService.fetchLast()).thenAnswer(
+        when(pillSheetService.fetchActivePillSheet()).thenAnswer(
           (realInvocation) => Future.value(
             PillSheet(
               typeInfo: PillSheetType.pillsheet_21.typeInfo,

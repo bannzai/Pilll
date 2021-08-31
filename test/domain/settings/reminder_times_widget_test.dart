@@ -67,7 +67,7 @@ void main() {
       final batchFactory = MockBatchFactory();
       final pillSheet = PillSheet.create(PillSheetType.pillsheet_21);
       final pillSheetService = MockPillSheetService();
-      when(pillSheetService.fetchLast())
+      when(pillSheetService.fetchActivePillSheet())
           .thenAnswer((_) => Future.value(pillSheet));
       when(pillSheetService.subscribeForLatestPillSheet())
           .thenAnswer((realInvocation) => Stream.empty());
@@ -127,7 +127,7 @@ void main() {
       final batchFactory = MockBatchFactory();
       final pillSheet = PillSheet.create(PillSheetType.pillsheet_21);
       final pillSheetService = MockPillSheetService();
-      when(pillSheetService.fetchLast())
+      when(pillSheetService.fetchActivePillSheet())
           .thenAnswer((_) => Future.value(pillSheet));
       when(pillSheetService.subscribeForLatestPillSheet())
           .thenAnswer((realInvocation) => Stream.empty());
