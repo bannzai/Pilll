@@ -1,6 +1,7 @@
 import 'package:pilll/analytics.dart';
 import 'package:pilll/database/database.dart';
 import 'package:pilll/service/pill_sheet.dart';
+import 'package:pilll/service/pill_sheet_group.dart';
 import 'package:pilll/service/pill_sheet_modified_history.dart';
 import 'package:pilll/util/datetime/day.dart';
 import 'package:flutter/services.dart';
@@ -28,19 +29,30 @@ Future<void> recordPill() async {
   final pillSheetService = PillSheetService(database);
   final pillSheetModifiedHistoryService =
       PillSheetModifiedHistoryService(database);
-  final entity = await pillSheetService.fetchActivePillSheet();
-  if (entity == null) {
+  final pillSheetGroupService = PillSheetGroupService(database);
+  final pillSheetGroup = await pillSheetGroupService.fetchLatest();
+  if (pillSheetGroup == null) {
+    return Future.value();
+  }
+  final activatedPillSheet = pillSheetGroup.activedPillSheet;
+  if (activatedPillSheet == null) {
     return Future.value();
   }
 
   final batch = database.batch();
 
-  pillSheetService.update(batch, entity.copyWith(lastTakenDate: now()));
+  final updatedPillSheet = activatedPillSheet.copyWith(lastTakenDate: now());
+  pillSheetService.update(batch, updatedPillSheet);
 
   final history =
       PillSheetModifiedHistoryServiceActionFactory.createTakenPillAction(
-          before: entity, after: entity.copyWith(lastTakenDate: now()));
+    before: activatedPillSheet,
+    after: updatedPillSheet,
+  );
   pillSheetModifiedHistoryService.add(batch, history);
+
+  final updatedPillSheetGroup = pillSheetGroup.replaced(updatedPillSheet);
+  pillSheetGroupService.update(batch, updatedPillSheetGroup);
 
   await batch.commit();
   // NOTE: Firebase initializeが成功しているかが定かでは無いので一番最後にログを送る
