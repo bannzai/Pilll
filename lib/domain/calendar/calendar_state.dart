@@ -38,7 +38,7 @@ abstract class CalendarPageState implements _$CalendarPageState {
 
   final _satisfyBandCount = 15;
   late final List<CalendarBandModel> allBands = buildBandModels(
-      latestPillSheetGroup?.activePillSheet,
+      latestPillSheetGroup?.activedPillSheet,
       setting,
       menstruations,
       _satisfyBandCount);

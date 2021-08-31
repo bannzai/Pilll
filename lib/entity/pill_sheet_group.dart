@@ -41,7 +41,7 @@ abstract class PillSheetGroup implements _$PillSheetGroup {
   Map<String, dynamic> toJson() =>
       _$_$_PillSheetGroupToJson(this as _$_PillSheetGroup);
 
-  PillSheet? get activePillSheet {
+  PillSheet? get activedPillSheet {
     final filtered = pillSheets.where((element) => element.isActive);
     return filtered.isEmpty ? null : filtered.first;
   }
@@ -60,7 +60,7 @@ abstract class PillSheetGroup implements _$PillSheetGroup {
     return copyWith(pillSheets: copied);
   }
 
-  bool get isDeactive => activePillSheet == null;
+  bool get isDeactive => activedPillSheet == null;
   bool get isDeleted => deletedAt != null;
   bool get isInvalid => isDeactive || isDeleted;
 }
