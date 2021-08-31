@@ -27,7 +27,7 @@ final recordPageStoreProvider = StateNotifierProvider((ref) => RecordPageStore(
       ref.watch(userServiceProvider),
       ref.watch(authServiceProvider),
       ref.watch(pillSheetModifiedHistoryServiceProvider),
-      ref.watch(pillSheetServiceProvider),
+      ref.watch(pillSheetGroupoServiceProvider),
     ));
 
 class RecordPageStore extends StateNotifier<RecordPageState> {
@@ -82,7 +82,7 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
               .getBool(BoolKey.premiumTrialGuideNotificationIsClosed) ??
           false;
       state = RecordPageState(
-        entity: entity,
+        pillSheetGroup: pillSheetGroup,
         setting: setting,
         firstLoadIsEnded: true,
         totalCountOfActionForTakenPill: totalCountOfActionForTakenPill,
