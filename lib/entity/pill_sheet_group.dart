@@ -1,9 +1,12 @@
+import 'package:flutter/material.dart';
+import 'package:pilll/domain/calendar/date_range.dart';
 import 'package:pilll/entity/firestore_document_id_escaping_to_json.dart';
 import 'package:pilll/entity/firestore_timestamp_converter.dart';
 import 'package:pilll/entity/pill_sheet.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:json_annotation/json_annotation.dart';
+import 'package:pilll/util/datetime/date_compare.dart';
 
 part 'pill_sheet_group.g.dart';
 part 'pill_sheet_group.freezed.dart';
@@ -37,4 +40,9 @@ abstract class PillSheetGroup implements _$PillSheetGroup {
       _$PillSheetGroupFromJson(json);
   Map<String, dynamic> toJson() =>
       _$_$_PillSheetGroupToJson(this as _$_PillSheetGroup);
+
+  PillSheet? get activePillSheet {
+    final filtered = pillSheets.where((element) => element.isActive);
+    return filtered.isEmpty ? null : filtered.first;
+  }
 }
