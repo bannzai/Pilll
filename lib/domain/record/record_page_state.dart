@@ -8,7 +8,7 @@ part 'record_page_state.freezed.dart';
 abstract class RecordPageState implements _$RecordPageState {
   RecordPageState._();
   factory RecordPageState({
-    required PillSheetGroup? pillSheetGroup,
+    PillSheetGroup? pillSheetGroup,
     Setting? setting,
     @Default(0) int totalCountOfActionForTakenPill,
     @Default(false) bool firstLoadIsEnded,
@@ -26,7 +26,11 @@ abstract class RecordPageState implements _$RecordPageState {
     Object? exception,
   }) = _RecordPageState;
 
-  bool get isInvalid => entity == null || entity!.isInvalid;
+  bool get isInvalid {
+    final pillSheetGroup = this.pillSheetGroup;
+    return pillSheetGroup == null || pillSheetGroup.isInvalid;
+  }
+
   bool get shouldShowTrial {
     if (beginTrialDate != null) {
       return false;

@@ -17,7 +17,7 @@ class _$RecordPageStateTearOff {
   const _$RecordPageStateTearOff();
 
   _RecordPageState call(
-      {required PillSheetGroup? pillSheetGroup,
+      {PillSheetGroup? pillSheetGroup,
       Setting? setting,
       int totalCountOfActionForTakenPill = 0,
       bool firstLoadIsEnded = false,
@@ -366,7 +366,7 @@ class __$RecordPageStateCopyWithImpl<$Res>
 
 class _$_RecordPageState extends _RecordPageState {
   _$_RecordPageState(
-      {required this.pillSheetGroup,
+      {this.pillSheetGroup,
       this.setting,
       this.totalCountOfActionForTakenPill = 0,
       this.firstLoadIsEnded = false,
@@ -516,7 +516,7 @@ class _$_RecordPageState extends _RecordPageState {
 
 abstract class _RecordPageState extends RecordPageState {
   factory _RecordPageState(
-      {required PillSheetGroup? pillSheetGroup,
+      {PillSheetGroup? pillSheetGroup,
       Setting? setting,
       int totalCountOfActionForTakenPill,
       bool firstLoadIsEnded,
