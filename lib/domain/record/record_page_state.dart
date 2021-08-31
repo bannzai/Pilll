@@ -1,5 +1,5 @@
-import 'package:pilll/entity/pill_sheet.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:pilll/entity/pill_sheet_group.dart';
 import 'package:pilll/entity/setting.dart';
 
 part 'record_page_state.freezed.dart';
@@ -8,7 +8,7 @@ part 'record_page_state.freezed.dart';
 abstract class RecordPageState implements _$RecordPageState {
   RecordPageState._();
   factory RecordPageState({
-    required PillSheet? entity,
+    required PillSheetGroup? pillSheetGroup,
     Setting? setting,
     @Default(0) int totalCountOfActionForTakenPill,
     @Default(false) bool firstLoadIsEnded,
