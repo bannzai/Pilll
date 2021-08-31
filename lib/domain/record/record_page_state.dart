@@ -15,7 +15,6 @@ abstract class RecordPageState implements _$RecordPageState {
     @Default(false) bool isPremium,
     @Default(false) bool isTrial,
     @Default(false) bool hasDiscountEntitlement,
-    @Default(false) bool isPillSheetFinishedInThePast,
     @Default(false) bool isAlreadyShowTiral,
     @Default(false) bool shouldShowMigrateInfo,
     @Default(false) bool isLinkedLoginProvider,
@@ -41,10 +40,7 @@ abstract class RecordPageState implements _$RecordPageState {
     if (isAlreadyShowTiral) {
       return false;
     }
-    if (!isPillSheetFinishedInThePast) {
-      return false;
-    }
-    if (totalCountOfActionForTakenPill < 14) {
+    if (totalCountOfActionForTakenPill < 42) {
       return false;
     }
     return true;
