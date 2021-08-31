@@ -1,3 +1,4 @@
+import 'package:pilll/domain/calendar/date_range.dart';
 import 'package:pilll/entity/firestore_document_id_escaping_to_json.dart';
 import 'package:pilll/entity/firestore_timestamp_converter.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
@@ -98,4 +99,12 @@ abstract class PillSheet implements _$PillSheet {
   bool get inNotTakenDuration => todayPillNumber > typeInfo.dosingPeriod;
   bool get isInvalid => isDeleted || isEnded;
   bool get hasRestDuration => !pillSheetType.isNotExistsNotTakenDuration;
+
+  bool get isActive {
+    final n = now();
+    final begin = beginingDate.date();
+    final totalCount = typeInfo.totalCount;
+    final end = begin.add(Duration(days: totalCount));
+    return DateRange(begin, end).inRange(n);
+  }
 }
