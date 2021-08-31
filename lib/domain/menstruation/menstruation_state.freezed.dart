@@ -53,7 +53,8 @@ mixin _$MenstruationState {
   bool get isTrial => throw _privateConstructorUsedError;
   DateTime? get trialDeadlineDate => throw _privateConstructorUsedError;
   Setting? get setting => throw _privateConstructorUsedError;
-  PillSheet? get latestPillSheetGroup => throw _privateConstructorUsedError;
+  PillSheetGroup? get latestPillSheetGroup =>
+      throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $MenstruationStateCopyWith<MenstruationState> get copyWith =>
@@ -77,7 +78,7 @@ abstract class $MenstruationStateCopyWith<$Res> {
       PillSheetGroup? latestPillSheetGroup});
 
   $SettingCopyWith<$Res>? get setting;
-  $PillSheetCopyWith<$Res>? get latestPillSheetGroup;
+  $PillSheetGroupCopyWith<$Res>? get latestPillSheetGroup;
 }
 
 /// @nodoc
@@ -137,7 +138,7 @@ class _$MenstruationStateCopyWithImpl<$Res>
       latestPillSheetGroup: latestPillSheetGroup == freezed
           ? _value.latestPillSheetGroup
           : latestPillSheetGroup // ignore: cast_nullable_to_non_nullable
-              as PillSheet?,
+              as PillSheetGroup?,
     ));
   }
 
@@ -153,12 +154,12 @@ class _$MenstruationStateCopyWithImpl<$Res>
   }
 
   @override
-  $PillSheetCopyWith<$Res>? get latestPillSheetGroup {
+  $PillSheetGroupCopyWith<$Res>? get latestPillSheetGroup {
     if (_value.latestPillSheetGroup == null) {
       return null;
     }
 
-    return $PillSheetCopyWith<$Res>(_value.latestPillSheetGroup!, (value) {
+    return $PillSheetGroupCopyWith<$Res>(_value.latestPillSheetGroup!, (value) {
       return _then(_value.copyWith(latestPillSheetGroup: value));
     });
   }
@@ -185,7 +186,7 @@ abstract class _$MenstruationStateCopyWith<$Res>
   @override
   $SettingCopyWith<$Res>? get setting;
   @override
-  $PillSheetCopyWith<$Res>? get latestPillSheetGroup;
+  $PillSheetGroupCopyWith<$Res>? get latestPillSheetGroup;
 }
 
 /// @nodoc
@@ -247,7 +248,7 @@ class __$MenstruationStateCopyWithImpl<$Res>
       latestPillSheetGroup: latestPillSheetGroup == freezed
           ? _value.latestPillSheetGroup
           : latestPillSheetGroup // ignore: cast_nullable_to_non_nullable
-              as PillSheet?,
+              as PillSheetGroup?,
     ));
   }
 }
@@ -379,7 +380,8 @@ abstract class _MenstruationState extends MenstruationState {
   @override
   Setting? get setting => throw _privateConstructorUsedError;
   @override
-  PillSheet? get latestPillSheetGroup => throw _privateConstructorUsedError;
+  PillSheetGroup? get latestPillSheetGroup =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$MenstruationStateCopyWith<_MenstruationState> get copyWith =>

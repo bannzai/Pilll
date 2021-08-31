@@ -40,7 +40,8 @@ const $SettingState = _$SettingStateTearOff();
 /// @nodoc
 mixin _$SettingState {
   Setting? get entity => throw _privateConstructorUsedError;
-  PillSheet? get latestPillSheetGroup => throw _privateConstructorUsedError;
+  PillSheetGroup? get latestPillSheetGroup =>
+      throw _privateConstructorUsedError;
   bool get userIsUpdatedFrom132 => throw _privateConstructorUsedError;
   bool get isPremium => throw _privateConstructorUsedError;
   bool get isTrial => throw _privateConstructorUsedError;
@@ -65,7 +66,7 @@ abstract class $SettingStateCopyWith<$Res> {
       DateTime? trialDeadlineDate});
 
   $SettingCopyWith<$Res>? get entity;
-  $PillSheetCopyWith<$Res>? get latestPillSheetGroup;
+  $PillSheetGroupCopyWith<$Res>? get latestPillSheetGroup;
 }
 
 /// @nodoc
@@ -93,7 +94,7 @@ class _$SettingStateCopyWithImpl<$Res> implements $SettingStateCopyWith<$Res> {
       latestPillSheetGroup: latestPillSheetGroup == freezed
           ? _value.latestPillSheetGroup
           : latestPillSheetGroup // ignore: cast_nullable_to_non_nullable
-              as PillSheet?,
+              as PillSheetGroup?,
       userIsUpdatedFrom132: userIsUpdatedFrom132 == freezed
           ? _value.userIsUpdatedFrom132
           : userIsUpdatedFrom132 // ignore: cast_nullable_to_non_nullable
@@ -125,12 +126,12 @@ class _$SettingStateCopyWithImpl<$Res> implements $SettingStateCopyWith<$Res> {
   }
 
   @override
-  $PillSheetCopyWith<$Res>? get latestPillSheetGroup {
+  $PillSheetGroupCopyWith<$Res>? get latestPillSheetGroup {
     if (_value.latestPillSheetGroup == null) {
       return null;
     }
 
-    return $PillSheetCopyWith<$Res>(_value.latestPillSheetGroup!, (value) {
+    return $PillSheetGroupCopyWith<$Res>(_value.latestPillSheetGroup!, (value) {
       return _then(_value.copyWith(latestPillSheetGroup: value));
     });
   }
@@ -154,7 +155,7 @@ abstract class _$SettingStateCopyWith<$Res>
   @override
   $SettingCopyWith<$Res>? get entity;
   @override
-  $PillSheetCopyWith<$Res>? get latestPillSheetGroup;
+  $PillSheetGroupCopyWith<$Res>? get latestPillSheetGroup;
 }
 
 /// @nodoc
@@ -184,7 +185,7 @@ class __$SettingStateCopyWithImpl<$Res> extends _$SettingStateCopyWithImpl<$Res>
       latestPillSheetGroup: latestPillSheetGroup == freezed
           ? _value.latestPillSheetGroup
           : latestPillSheetGroup // ignore: cast_nullable_to_non_nullable
-              as PillSheet?,
+              as PillSheetGroup?,
       userIsUpdatedFrom132: userIsUpdatedFrom132 == freezed
           ? _value.userIsUpdatedFrom132
           : userIsUpdatedFrom132 // ignore: cast_nullable_to_non_nullable
@@ -290,7 +291,8 @@ abstract class _SettingState extends SettingState {
   @override
   Setting? get entity => throw _privateConstructorUsedError;
   @override
-  PillSheet? get latestPillSheetGroup => throw _privateConstructorUsedError;
+  PillSheetGroup? get latestPillSheetGroup =>
+      throw _privateConstructorUsedError;
   @override
   bool get userIsUpdatedFrom132 => throw _privateConstructorUsedError;
   @override
