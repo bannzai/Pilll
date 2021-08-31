@@ -46,7 +46,7 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
     this._authService,
     this._pillSheetModifiedHistoryService,
     this._pillSheetGroupService,
-  ) : super(RecordPageState(entity: null)) {
+  ) : super(RecordPageState()) {
     reset();
   }
 
@@ -102,24 +102,19 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
         premiumTrialGuideNotificationIsClosed:
             premiumTrialGuideNotificationIsClosed,
       );
-      if (entity != null) {
-        analytics.logEvent(name: "count_of_remaining_pill", parameters: {
-          "count": (entity.todayPillNumber - entity.lastTakenPillNumber)
-        });
-      }
       _subscribe();
     });
   }
 
-  StreamSubscription<PillSheet>? _canceller;
+  StreamSubscription? _pillSheetGroupCanceller;
   StreamSubscription? _settingCanceller;
   StreamSubscription? _userSubscribeCanceller;
   StreamSubscription? _authServiceCanceller;
   void _subscribe() {
-    _canceller?.cancel();
-    _canceller =
-        _pillSheetService.subscribeForLatestPillSheet().listen((event) {
-      state = state.copyWith(entity: event);
+    _pillSheetGroupCanceller?.cancel();
+    _pillSheetGroupCanceller =
+        _pillSheetGroupService.subscribeForLatest().listen((event) {
+      state = state.copyWith(pillSheetGroup: event);
     });
     _settingCanceller?.cancel();
     _settingCanceller = _settingService.subscribe().listen((setting) {
@@ -145,7 +140,7 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
 
   @override
   void dispose() {
-    _canceller?.cancel();
+    _pillSheetGroupCanceller?.cancel();
     _settingCanceller?.cancel();
     _userSubscribeCanceller?.cancel();
     _authServiceCanceller?.cancel();
@@ -165,11 +160,16 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
   }
 
   Future<dynamic>? _take(DateTime takenDate) async {
-    final entity = state.entity;
-    if (entity == null) {
-      throw FormatException("pill sheet not found");
+    final pillSheetGroup = state.pillSheetGroup;
+    if (pillSheetGroup == null) {
+      throw FormatException("pill sheet group not found");
     }
-    if (entity.todayPillNumber == entity.lastTakenPillNumber) {
+    final activePillSheet = pillSheetGroup.activePillSheet;
+    if (activePillSheet == null) {
+      throw FormatException("active pill sheet not found");
+    }
+    if (activePillSheet.todayPillNumber ==
+        activePillSheet.lastTakenPillNumber) {
       return null;
     }
 
@@ -177,16 +177,19 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
 
     final batch = _batchFactory.batch();
 
-    final updated = entity.copyWith(lastTakenDate: takenDate);
-    _pillSheetService.update(batch, updated);
+    final updatedPillSheet = activePillSheet.copyWith(lastTakenDate: takenDate);
+    _pillSheetService.update(batch, updatedPillSheet);
 
     final history =
         PillSheetModifiedHistoryServiceActionFactory.createTakenPillAction(
-            before: entity, after: updated);
+            before: activePillSheet, after: updatedPillSheet);
     _pillSheetModifiedHistoryService.add(batch, history);
-    await batch.commit();
 
-    state = state.copyWith(entity: updated);
+    final updatedPillSheetGroup = pillSheetGroup.replaced(updatedPillSheet);
+    _pillSheetGroupService.update(batch, updatedPillSheetGroup);
+
+    await batch.commit();
+    state = state.copyWith(pillSheetGroup: updatedPillSheetGroup);
   }
 
   Future<void>? taken() {
