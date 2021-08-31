@@ -45,4 +45,22 @@ abstract class PillSheetGroup implements _$PillSheetGroup {
     final filtered = pillSheets.where((element) => element.isActive);
     return filtered.isEmpty ? null : filtered.first;
   }
+
+  PillSheetGroup replaced(PillSheet pillSheet) {
+    if (pillSheet.id == null) {
+      throw FormatException("ピルシートの置き換えによる更新できませんでした");
+    }
+    final index =
+        pillSheets.indexWhere((element) => element.id == pillSheet.id);
+    if (index == -1) {
+      throw FormatException("ピルシートの置き換えによる更新できませんでした。id: ${pillSheet.id}");
+    }
+    final copied = [...pillSheets];
+    copied[index] = pillSheet;
+    return copyWith(pillSheets: copied);
+  }
+
+  bool get isDeactive => activePillSheet == null;
+  bool get isDeleted => deletedAt != null;
+  bool get isInvalid => isDeactive || isDeleted;
 }
