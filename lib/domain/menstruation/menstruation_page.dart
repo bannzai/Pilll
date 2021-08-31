@@ -250,7 +250,7 @@ class MenstruationCalendarHeader extends StatelessWidget {
                         dateRange: DateRange(days.first, days.last),
                         diariesForMonth: state.diariesForMonth,
                         allBandModels: buildBandModels(
-                                state.latestPillSheetGroup?.activePillSheet,
+                                state.latestPillSheetGroup?.activedPillSheet,
                                 state.setting,
                                 state.entities,
                                 12)

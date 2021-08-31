@@ -14,7 +14,7 @@ abstract class RecordTakenInformationConst {
 class RecordTakenInformation extends StatelessWidget {
   final DateTime today;
   final RecordPageState state;
-  PillSheet? get pillSheetModel => state.pillSheetGroup?.activePillSheet;
+  PillSheet? get pillSheetModel => state.pillSheetGroup?.activedPillSheet;
   final VoidCallback onPressed;
   const RecordTakenInformation({
     Key? key,
