@@ -52,10 +52,7 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
 
   void reset() {
     Future(() async {
-      final entity = await _pillSheetGroupService.fetchLatest();
-      final entities = await _pillSheetService.fetchListWithMax(2);
-      final isPillSheetFinishedInThePast =
-          entities.where((element) => element.id != entity?.id).length >= 1;
+      final pillSheetGroup = await _pillSheetGroupService.fetchLatest();
       final setting = await _settingService.fetch();
       final sharedPreferences = await SharedPreferences.getInstance();
       final user = await _userService.fetch();
@@ -90,7 +87,6 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
         firstLoadIsEnded: true,
         totalCountOfActionForTakenPill: totalCountOfActionForTakenPill,
         exception: null,
-        isPillSheetFinishedInThePast: isPillSheetFinishedInThePast,
         isAlreadyShowTiral:
             sharedPreferences.getBool(BoolKey.isAlreadyShowPremiumTrialModal) ??
                 false,
