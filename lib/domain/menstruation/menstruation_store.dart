@@ -45,7 +45,7 @@ class MenstruationStore extends StateNotifier<MenstruationState> {
       final menstruations = await menstruationService.fetchAll();
       final diaries = await diaryService.fetchListAround90Days(today());
       final setting = await settingService.fetch();
-      final latestPillSheet = await pillSheetService.fetchLast();
+      final latestPillSheet = await pillSheetService.fetchActivePillSheet();
       final user = await userService.fetch();
       state = state.copyWith(
         entities: menstruations,

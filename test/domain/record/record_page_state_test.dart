@@ -69,7 +69,7 @@ void main() {
           RecordPageState(entity: pillSheetEntity, setting: settingEntity);
 
       final service = MockPillSheetService();
-      when(service.fetchLast())
+      when(service.fetchActivePillSheet())
           .thenAnswer((realInvocation) => Future.value(state.entity));
       when(service.fetchAll()).thenAnswer((realInvocation) => Future.value([]));
       when(service.fetchListWithMax(2)).thenAnswer((_) => Future.value([]));
@@ -131,7 +131,7 @@ void main() {
         RecordPageState(entity: pillSheetEntity, setting: settingEntity);
 
     final service = MockPillSheetService();
-    when(service.fetchLast())
+    when(service.fetchActivePillSheet())
         .thenAnswer((realInvocation) => Future.value(state.entity));
     when(service.fetchAll()).thenAnswer((realInvocation) => Future.value([]));
     when(service.fetchListWithMax(2)).thenAnswer((_) => Future.value([]));
@@ -196,7 +196,7 @@ void main() {
           RecordPageState(entity: pillSheetEntity, setting: settingEntity);
 
       final service = MockPillSheetService();
-      when(service.fetchLast())
+      when(service.fetchActivePillSheet())
           .thenAnswer((realInvocation) => Future.value(state.entity));
       when(service.fetchAll()).thenAnswer((realInvocation) => Future.value([]));
       when(service.fetchListWithMax(2))
@@ -261,7 +261,7 @@ void main() {
           RecordPageState(entity: pillSheetEntity, setting: settingEntity);
 
       final service = MockPillSheetService();
-      when(service.fetchLast())
+      when(service.fetchActivePillSheet())
           .thenAnswer((realInvocation) => Future.value(state.entity));
       when(service.fetchAll()).thenAnswer((realInvocation) => Future.value([]));
       when(service.fetchListWithMax(2))
@@ -328,7 +328,7 @@ void main() {
           RecordPageState(entity: pillSheetEntity, setting: settingEntity);
 
       final service = MockPillSheetService();
-      when(service.fetchLast())
+      when(service.fetchActivePillSheet())
           .thenAnswer((realInvocation) => Future.value(state.entity));
       when(service.fetchListWithMax(2)).thenAnswer((_) => Future.value([]));
       when(service.fetchAll()).thenAnswer((realInvocation) => Future.value([]));
@@ -391,7 +391,7 @@ void main() {
           RecordPageState(entity: pillSheetEntity, setting: settingEntity);
 
       final service = MockPillSheetService();
-      when(service.fetchLast())
+      when(service.fetchActivePillSheet())
           .thenAnswer((realInvocation) => Future.value(state.entity));
       when(service.fetchAll()).thenAnswer((realInvocation) => Future.value([]));
       when(service.fetchListWithMax(2))
