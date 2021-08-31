@@ -6,6 +6,7 @@ import 'package:pilll/domain/calendar/components/pill_sheet_modified_history/pil
 import 'package:pilll/service/diary.dart';
 import 'package:pilll/service/menstruation.dart';
 import 'package:pilll/service/pill_sheet.dart';
+import 'package:pilll/service/pill_sheet_group.dart';
 import 'package:pilll/service/pill_sheet_modified_history.dart';
 import 'package:pilll/service/setting.dart';
 import 'package:pilll/domain/calendar/calendar_state.dart';
@@ -20,6 +21,7 @@ final calendarPageStateProvider = StateNotifierProvider<CalendarPageStateStore>(
     ref.watch(diaryServiceProvider),
     ref.watch(pillSheetModifiedHistoryServiceProvider),
     ref.watch(userServiceProvider),
+    ref.watch(pillSheetGroupService),
   ),
 );
 
@@ -30,6 +32,7 @@ class CalendarPageStateStore extends StateNotifier<CalendarPageState> {
   final DiaryService _diaryService;
   final PillSheetModifiedHistoryService _pillSheetModifiedHistoryService;
   final UserService _userService;
+  final PillSheetGroupService _pillSheetGroupService;
 
   CalendarPageStateStore(
     this._menstruationService,
@@ -38,6 +41,7 @@ class CalendarPageStateStore extends StateNotifier<CalendarPageState> {
     this._diaryService,
     this._pillSheetModifiedHistoryService,
     this._userService,
+    this._pillSheetGroupService,
   ) : super(CalendarPageState(menstruations: [])) {
     _reset();
   }
@@ -47,7 +51,7 @@ class CalendarPageStateStore extends StateNotifier<CalendarPageState> {
     Future(() async {
       final menstruations = await _menstruationService.fetchAll();
       final setting = await _settingService.fetch();
-      final latestPillSheet = await _pillSheetService.fetchActivePillSheet();
+      final latestPillSheet = await _pillSheetGroupService.fetchLatest();
       final diaries = await _diaryService.fetchListForMonth(
           state.calendarDataSource[state.todayCalendarIndex]);
       final pillSheetModifiedHistories =
