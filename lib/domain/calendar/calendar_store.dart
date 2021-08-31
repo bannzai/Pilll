@@ -5,7 +5,6 @@ import 'package:pilll/domain/calendar/calendar_card_state.dart';
 import 'package:pilll/domain/calendar/components/pill_sheet_modified_history/pill_sheet_modified_history_card.dart';
 import 'package:pilll/service/diary.dart';
 import 'package:pilll/service/menstruation.dart';
-import 'package:pilll/service/pill_sheet.dart';
 import 'package:pilll/service/pill_sheet_group.dart';
 import 'package:pilll/service/pill_sheet_modified_history.dart';
 import 'package:pilll/service/setting.dart';
@@ -17,18 +16,16 @@ final calendarPageStateProvider = StateNotifierProvider<CalendarPageStateStore>(
   (ref) => CalendarPageStateStore(
     ref.watch(menstruationServiceProvider),
     ref.watch(settingServiceProvider),
-    ref.watch(pillSheetServiceProvider),
     ref.watch(diaryServiceProvider),
     ref.watch(pillSheetModifiedHistoryServiceProvider),
     ref.watch(userServiceProvider),
-    ref.watch(pillSheetGroupService),
+    ref.watch(pillSheetGroupServiceProvider),
   ),
 );
 
 class CalendarPageStateStore extends StateNotifier<CalendarPageState> {
   final MenstruationService _menstruationService;
   final SettingService _settingService;
-  final PillSheetService _pillSheetService;
   final DiaryService _diaryService;
   final PillSheetModifiedHistoryService _pillSheetModifiedHistoryService;
   final UserService _userService;
@@ -37,7 +34,6 @@ class CalendarPageStateStore extends StateNotifier<CalendarPageState> {
   CalendarPageStateStore(
     this._menstruationService,
     this._settingService,
-    this._pillSheetService,
     this._diaryService,
     this._pillSheetModifiedHistoryService,
     this._userService,
@@ -94,7 +90,7 @@ class CalendarPageStateStore extends StateNotifier<CalendarPageState> {
     });
     _latestPillSheetGroupCanceller?.cancel();
     _latestPillSheetGroupCanceller =
-        _pillSheetService.subscribeForLatestPillSheet().listen((entity) {
+        _pillSheetGroupService.subscribeForLatest().listen((entity) {
       state = state.copyWith(latestPillSheetGroup: entity);
     });
     _diariesCanceller?.cancel();
