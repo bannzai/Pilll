@@ -17,14 +17,13 @@ class _$RecordPageStateTearOff {
   const _$RecordPageStateTearOff();
 
   _RecordPageState call(
-      {required PillSheet? entity,
+      {required PillSheetGroup? pillSheetGroup,
       Setting? setting,
       int totalCountOfActionForTakenPill = 0,
       bool firstLoadIsEnded = false,
       bool isPremium = false,
       bool isTrial = false,
       bool hasDiscountEntitlement = false,
-      bool isPillSheetFinishedInThePast = false,
       bool isAlreadyShowTiral = false,
       bool shouldShowMigrateInfo = false,
       bool isLinkedLoginProvider = false,
@@ -35,14 +34,13 @@ class _$RecordPageStateTearOff {
       bool premiumTrialGuideNotificationIsClosed = true,
       Object? exception}) {
     return _RecordPageState(
-      entity: entity,
+      pillSheetGroup: pillSheetGroup,
       setting: setting,
       totalCountOfActionForTakenPill: totalCountOfActionForTakenPill,
       firstLoadIsEnded: firstLoadIsEnded,
       isPremium: isPremium,
       isTrial: isTrial,
       hasDiscountEntitlement: hasDiscountEntitlement,
-      isPillSheetFinishedInThePast: isPillSheetFinishedInThePast,
       isAlreadyShowTiral: isAlreadyShowTiral,
       shouldShowMigrateInfo: shouldShowMigrateInfo,
       isLinkedLoginProvider: isLinkedLoginProvider,
@@ -63,14 +61,13 @@ const $RecordPageState = _$RecordPageStateTearOff();
 
 /// @nodoc
 mixin _$RecordPageState {
-  PillSheet? get entity => throw _privateConstructorUsedError;
+  PillSheetGroup? get pillSheetGroup => throw _privateConstructorUsedError;
   Setting? get setting => throw _privateConstructorUsedError;
   int get totalCountOfActionForTakenPill => throw _privateConstructorUsedError;
   bool get firstLoadIsEnded => throw _privateConstructorUsedError;
   bool get isPremium => throw _privateConstructorUsedError;
   bool get isTrial => throw _privateConstructorUsedError;
   bool get hasDiscountEntitlement => throw _privateConstructorUsedError;
-  bool get isPillSheetFinishedInThePast => throw _privateConstructorUsedError;
   bool get isAlreadyShowTiral => throw _privateConstructorUsedError;
   bool get shouldShowMigrateInfo => throw _privateConstructorUsedError;
   bool get isLinkedLoginProvider => throw _privateConstructorUsedError;
@@ -95,14 +92,13 @@ abstract class $RecordPageStateCopyWith<$Res> {
           RecordPageState value, $Res Function(RecordPageState) then) =
       _$RecordPageStateCopyWithImpl<$Res>;
   $Res call(
-      {PillSheet? entity,
+      {PillSheetGroup? pillSheetGroup,
       Setting? setting,
       int totalCountOfActionForTakenPill,
       bool firstLoadIsEnded,
       bool isPremium,
       bool isTrial,
       bool hasDiscountEntitlement,
-      bool isPillSheetFinishedInThePast,
       bool isAlreadyShowTiral,
       bool shouldShowMigrateInfo,
       bool isLinkedLoginProvider,
@@ -113,7 +109,7 @@ abstract class $RecordPageStateCopyWith<$Res> {
       bool premiumTrialGuideNotificationIsClosed,
       Object? exception});
 
-  $PillSheetCopyWith<$Res>? get entity;
+  $PillSheetGroupCopyWith<$Res>? get pillSheetGroup;
   $SettingCopyWith<$Res>? get setting;
 }
 
@@ -128,14 +124,13 @@ class _$RecordPageStateCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object? entity = freezed,
+    Object? pillSheetGroup = freezed,
     Object? setting = freezed,
     Object? totalCountOfActionForTakenPill = freezed,
     Object? firstLoadIsEnded = freezed,
     Object? isPremium = freezed,
     Object? isTrial = freezed,
     Object? hasDiscountEntitlement = freezed,
-    Object? isPillSheetFinishedInThePast = freezed,
     Object? isAlreadyShowTiral = freezed,
     Object? shouldShowMigrateInfo = freezed,
     Object? isLinkedLoginProvider = freezed,
@@ -147,10 +142,10 @@ class _$RecordPageStateCopyWithImpl<$Res>
     Object? exception = freezed,
   }) {
     return _then(_value.copyWith(
-      entity: entity == freezed
-          ? _value.entity
-          : entity // ignore: cast_nullable_to_non_nullable
-              as PillSheet?,
+      pillSheetGroup: pillSheetGroup == freezed
+          ? _value.pillSheetGroup
+          : pillSheetGroup // ignore: cast_nullable_to_non_nullable
+              as PillSheetGroup?,
       setting: setting == freezed
           ? _value.setting
           : setting // ignore: cast_nullable_to_non_nullable
@@ -174,10 +169,6 @@ class _$RecordPageStateCopyWithImpl<$Res>
       hasDiscountEntitlement: hasDiscountEntitlement == freezed
           ? _value.hasDiscountEntitlement
           : hasDiscountEntitlement // ignore: cast_nullable_to_non_nullable
-              as bool,
-      isPillSheetFinishedInThePast: isPillSheetFinishedInThePast == freezed
-          ? _value.isPillSheetFinishedInThePast
-          : isPillSheetFinishedInThePast // ignore: cast_nullable_to_non_nullable
               as bool,
       isAlreadyShowTiral: isAlreadyShowTiral == freezed
           ? _value.isAlreadyShowTiral
@@ -219,13 +210,13 @@ class _$RecordPageStateCopyWithImpl<$Res>
   }
 
   @override
-  $PillSheetCopyWith<$Res>? get entity {
-    if (_value.entity == null) {
+  $PillSheetGroupCopyWith<$Res>? get pillSheetGroup {
+    if (_value.pillSheetGroup == null) {
       return null;
     }
 
-    return $PillSheetCopyWith<$Res>(_value.entity!, (value) {
-      return _then(_value.copyWith(entity: value));
+    return $PillSheetGroupCopyWith<$Res>(_value.pillSheetGroup!, (value) {
+      return _then(_value.copyWith(pillSheetGroup: value));
     });
   }
 
@@ -249,14 +240,13 @@ abstract class _$RecordPageStateCopyWith<$Res>
       __$RecordPageStateCopyWithImpl<$Res>;
   @override
   $Res call(
-      {PillSheet? entity,
+      {PillSheetGroup? pillSheetGroup,
       Setting? setting,
       int totalCountOfActionForTakenPill,
       bool firstLoadIsEnded,
       bool isPremium,
       bool isTrial,
       bool hasDiscountEntitlement,
-      bool isPillSheetFinishedInThePast,
       bool isAlreadyShowTiral,
       bool shouldShowMigrateInfo,
       bool isLinkedLoginProvider,
@@ -268,7 +258,7 @@ abstract class _$RecordPageStateCopyWith<$Res>
       Object? exception});
 
   @override
-  $PillSheetCopyWith<$Res>? get entity;
+  $PillSheetGroupCopyWith<$Res>? get pillSheetGroup;
   @override
   $SettingCopyWith<$Res>? get setting;
 }
@@ -286,14 +276,13 @@ class __$RecordPageStateCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object? entity = freezed,
+    Object? pillSheetGroup = freezed,
     Object? setting = freezed,
     Object? totalCountOfActionForTakenPill = freezed,
     Object? firstLoadIsEnded = freezed,
     Object? isPremium = freezed,
     Object? isTrial = freezed,
     Object? hasDiscountEntitlement = freezed,
-    Object? isPillSheetFinishedInThePast = freezed,
     Object? isAlreadyShowTiral = freezed,
     Object? shouldShowMigrateInfo = freezed,
     Object? isLinkedLoginProvider = freezed,
@@ -305,10 +294,10 @@ class __$RecordPageStateCopyWithImpl<$Res>
     Object? exception = freezed,
   }) {
     return _then(_RecordPageState(
-      entity: entity == freezed
-          ? _value.entity
-          : entity // ignore: cast_nullable_to_non_nullable
-              as PillSheet?,
+      pillSheetGroup: pillSheetGroup == freezed
+          ? _value.pillSheetGroup
+          : pillSheetGroup // ignore: cast_nullable_to_non_nullable
+              as PillSheetGroup?,
       setting: setting == freezed
           ? _value.setting
           : setting // ignore: cast_nullable_to_non_nullable
@@ -332,10 +321,6 @@ class __$RecordPageStateCopyWithImpl<$Res>
       hasDiscountEntitlement: hasDiscountEntitlement == freezed
           ? _value.hasDiscountEntitlement
           : hasDiscountEntitlement // ignore: cast_nullable_to_non_nullable
-              as bool,
-      isPillSheetFinishedInThePast: isPillSheetFinishedInThePast == freezed
-          ? _value.isPillSheetFinishedInThePast
-          : isPillSheetFinishedInThePast // ignore: cast_nullable_to_non_nullable
               as bool,
       isAlreadyShowTiral: isAlreadyShowTiral == freezed
           ? _value.isAlreadyShowTiral
@@ -381,14 +366,13 @@ class __$RecordPageStateCopyWithImpl<$Res>
 
 class _$_RecordPageState extends _RecordPageState {
   _$_RecordPageState(
-      {required this.entity,
+      {required this.pillSheetGroup,
       this.setting,
       this.totalCountOfActionForTakenPill = 0,
       this.firstLoadIsEnded = false,
       this.isPremium = false,
       this.isTrial = false,
       this.hasDiscountEntitlement = false,
-      this.isPillSheetFinishedInThePast = false,
       this.isAlreadyShowTiral = false,
       this.shouldShowMigrateInfo = false,
       this.isLinkedLoginProvider = false,
@@ -401,7 +385,7 @@ class _$_RecordPageState extends _RecordPageState {
       : super._();
 
   @override
-  final PillSheet? entity;
+  final PillSheetGroup? pillSheetGroup;
   @override
   final Setting? setting;
   @JsonKey(defaultValue: 0)
@@ -419,9 +403,6 @@ class _$_RecordPageState extends _RecordPageState {
   @JsonKey(defaultValue: false)
   @override
   final bool hasDiscountEntitlement;
-  @JsonKey(defaultValue: false)
-  @override
-  final bool isPillSheetFinishedInThePast;
   @JsonKey(defaultValue: false)
   @override
   final bool isAlreadyShowTiral;
@@ -448,15 +429,16 @@ class _$_RecordPageState extends _RecordPageState {
 
   @override
   String toString() {
-    return 'RecordPageState(entity: $entity, setting: $setting, totalCountOfActionForTakenPill: $totalCountOfActionForTakenPill, firstLoadIsEnded: $firstLoadIsEnded, isPremium: $isPremium, isTrial: $isTrial, hasDiscountEntitlement: $hasDiscountEntitlement, isPillSheetFinishedInThePast: $isPillSheetFinishedInThePast, isAlreadyShowTiral: $isAlreadyShowTiral, shouldShowMigrateInfo: $shouldShowMigrateInfo, isLinkedLoginProvider: $isLinkedLoginProvider, beginTrialDate: $beginTrialDate, trialDeadlineDate: $trialDeadlineDate, discountEntitlementDeadlineDate: $discountEntitlementDeadlineDate, recommendedSignupNotificationIsAlreadyShow: $recommendedSignupNotificationIsAlreadyShow, premiumTrialGuideNotificationIsClosed: $premiumTrialGuideNotificationIsClosed, exception: $exception)';
+    return 'RecordPageState(pillSheetGroup: $pillSheetGroup, setting: $setting, totalCountOfActionForTakenPill: $totalCountOfActionForTakenPill, firstLoadIsEnded: $firstLoadIsEnded, isPremium: $isPremium, isTrial: $isTrial, hasDiscountEntitlement: $hasDiscountEntitlement, isAlreadyShowTiral: $isAlreadyShowTiral, shouldShowMigrateInfo: $shouldShowMigrateInfo, isLinkedLoginProvider: $isLinkedLoginProvider, beginTrialDate: $beginTrialDate, trialDeadlineDate: $trialDeadlineDate, discountEntitlementDeadlineDate: $discountEntitlementDeadlineDate, recommendedSignupNotificationIsAlreadyShow: $recommendedSignupNotificationIsAlreadyShow, premiumTrialGuideNotificationIsClosed: $premiumTrialGuideNotificationIsClosed, exception: $exception)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other is _RecordPageState &&
-            (identical(other.entity, entity) ||
-                const DeepCollectionEquality().equals(other.entity, entity)) &&
+            (identical(other.pillSheetGroup, pillSheetGroup) ||
+                const DeepCollectionEquality()
+                    .equals(other.pillSheetGroup, pillSheetGroup)) &&
             (identical(other.setting, setting) ||
                 const DeepCollectionEquality()
                     .equals(other.setting, setting)) &&
@@ -476,10 +458,6 @@ class _$_RecordPageState extends _RecordPageState {
             (identical(other.hasDiscountEntitlement, hasDiscountEntitlement) ||
                 const DeepCollectionEquality().equals(
                     other.hasDiscountEntitlement, hasDiscountEntitlement)) &&
-            (identical(other.isPillSheetFinishedInThePast, isPillSheetFinishedInThePast) ||
-                const DeepCollectionEquality().equals(
-                    other.isPillSheetFinishedInThePast,
-                    isPillSheetFinishedInThePast)) &&
             (identical(other.isAlreadyShowTiral, isAlreadyShowTiral) ||
                 const DeepCollectionEquality()
                     .equals(other.isAlreadyShowTiral, isAlreadyShowTiral)) &&
@@ -497,23 +475,27 @@ class _$_RecordPageState extends _RecordPageState {
                     .equals(other.trialDeadlineDate, trialDeadlineDate)) &&
             (identical(other.discountEntitlementDeadlineDate, discountEntitlementDeadlineDate) ||
                 const DeepCollectionEquality().equals(
-                    other.discountEntitlementDeadlineDate, discountEntitlementDeadlineDate)) &&
-            (identical(other.recommendedSignupNotificationIsAlreadyShow, recommendedSignupNotificationIsAlreadyShow) || const DeepCollectionEquality().equals(other.recommendedSignupNotificationIsAlreadyShow, recommendedSignupNotificationIsAlreadyShow)) &&
-            (identical(other.premiumTrialGuideNotificationIsClosed, premiumTrialGuideNotificationIsClosed) || const DeepCollectionEquality().equals(other.premiumTrialGuideNotificationIsClosed, premiumTrialGuideNotificationIsClosed)) &&
+                    other.discountEntitlementDeadlineDate,
+                    discountEntitlementDeadlineDate)) &&
+            (identical(other.recommendedSignupNotificationIsAlreadyShow, recommendedSignupNotificationIsAlreadyShow) ||
+                const DeepCollectionEquality().equals(
+                    other.recommendedSignupNotificationIsAlreadyShow,
+                    recommendedSignupNotificationIsAlreadyShow)) &&
+            (identical(other.premiumTrialGuideNotificationIsClosed, premiumTrialGuideNotificationIsClosed) ||
+                const DeepCollectionEquality().equals(other.premiumTrialGuideNotificationIsClosed, premiumTrialGuideNotificationIsClosed)) &&
             (identical(other.exception, exception) || const DeepCollectionEquality().equals(other.exception, exception)));
   }
 
   @override
   int get hashCode =>
       runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(entity) ^
+      const DeepCollectionEquality().hash(pillSheetGroup) ^
       const DeepCollectionEquality().hash(setting) ^
       const DeepCollectionEquality().hash(totalCountOfActionForTakenPill) ^
       const DeepCollectionEquality().hash(firstLoadIsEnded) ^
       const DeepCollectionEquality().hash(isPremium) ^
       const DeepCollectionEquality().hash(isTrial) ^
       const DeepCollectionEquality().hash(hasDiscountEntitlement) ^
-      const DeepCollectionEquality().hash(isPillSheetFinishedInThePast) ^
       const DeepCollectionEquality().hash(isAlreadyShowTiral) ^
       const DeepCollectionEquality().hash(shouldShowMigrateInfo) ^
       const DeepCollectionEquality().hash(isLinkedLoginProvider) ^
@@ -534,14 +516,13 @@ class _$_RecordPageState extends _RecordPageState {
 
 abstract class _RecordPageState extends RecordPageState {
   factory _RecordPageState(
-      {required PillSheet? entity,
+      {required PillSheetGroup? pillSheetGroup,
       Setting? setting,
       int totalCountOfActionForTakenPill,
       bool firstLoadIsEnded,
       bool isPremium,
       bool isTrial,
       bool hasDiscountEntitlement,
-      bool isPillSheetFinishedInThePast,
       bool isAlreadyShowTiral,
       bool shouldShowMigrateInfo,
       bool isLinkedLoginProvider,
@@ -554,7 +535,7 @@ abstract class _RecordPageState extends RecordPageState {
   _RecordPageState._() : super._();
 
   @override
-  PillSheet? get entity => throw _privateConstructorUsedError;
+  PillSheetGroup? get pillSheetGroup => throw _privateConstructorUsedError;
   @override
   Setting? get setting => throw _privateConstructorUsedError;
   @override
@@ -567,8 +548,6 @@ abstract class _RecordPageState extends RecordPageState {
   bool get isTrial => throw _privateConstructorUsedError;
   @override
   bool get hasDiscountEntitlement => throw _privateConstructorUsedError;
-  @override
-  bool get isPillSheetFinishedInThePast => throw _privateConstructorUsedError;
   @override
   bool get isAlreadyShowTiral => throw _privateConstructorUsedError;
   @override
