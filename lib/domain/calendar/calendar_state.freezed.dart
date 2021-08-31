@@ -51,7 +51,8 @@ mixin _$CalendarPageState {
   bool get isNotYetLoaded => throw _privateConstructorUsedError;
   List<Menstruation> get menstruations => throw _privateConstructorUsedError;
   Setting? get setting => throw _privateConstructorUsedError;
-  PillSheet? get latestPillSheetGroup => throw _privateConstructorUsedError;
+  PillSheetGroup? get latestPillSheetGroup =>
+      throw _privateConstructorUsedError;
   List<Diary> get diariesForMonth => throw _privateConstructorUsedError;
   List<PillSheetModifiedHistory> get allPillSheetModifiedHistories =>
       throw _privateConstructorUsedError;
@@ -82,7 +83,7 @@ abstract class $CalendarPageStateCopyWith<$Res> {
       DateTime? trialDeadlineDate});
 
   $SettingCopyWith<$Res>? get setting;
-  $PillSheetCopyWith<$Res>? get latestPillSheetGroup;
+  $PillSheetGroupCopyWith<$Res>? get latestPillSheetGroup;
 }
 
 /// @nodoc
@@ -127,7 +128,7 @@ class _$CalendarPageStateCopyWithImpl<$Res>
       latestPillSheetGroup: latestPillSheetGroup == freezed
           ? _value.latestPillSheetGroup
           : latestPillSheetGroup // ignore: cast_nullable_to_non_nullable
-              as PillSheet?,
+              as PillSheetGroup?,
       diariesForMonth: diariesForMonth == freezed
           ? _value.diariesForMonth
           : diariesForMonth // ignore: cast_nullable_to_non_nullable
@@ -163,12 +164,12 @@ class _$CalendarPageStateCopyWithImpl<$Res>
   }
 
   @override
-  $PillSheetCopyWith<$Res>? get latestPillSheetGroup {
+  $PillSheetGroupCopyWith<$Res>? get latestPillSheetGroup {
     if (_value.latestPillSheetGroup == null) {
       return null;
     }
 
-    return $PillSheetCopyWith<$Res>(_value.latestPillSheetGroup!, (value) {
+    return $PillSheetGroupCopyWith<$Res>(_value.latestPillSheetGroup!, (value) {
       return _then(_value.copyWith(latestPillSheetGroup: value));
     });
   }
@@ -196,7 +197,7 @@ abstract class _$CalendarPageStateCopyWith<$Res>
   @override
   $SettingCopyWith<$Res>? get setting;
   @override
-  $PillSheetCopyWith<$Res>? get latestPillSheetGroup;
+  $PillSheetGroupCopyWith<$Res>? get latestPillSheetGroup;
 }
 
 /// @nodoc
@@ -243,7 +244,7 @@ class __$CalendarPageStateCopyWithImpl<$Res>
       latestPillSheetGroup: latestPillSheetGroup == freezed
           ? _value.latestPillSheetGroup
           : latestPillSheetGroup // ignore: cast_nullable_to_non_nullable
-              as PillSheet?,
+              as PillSheetGroup?,
       diariesForMonth: diariesForMonth == freezed
           ? _value.diariesForMonth
           : diariesForMonth // ignore: cast_nullable_to_non_nullable
@@ -398,7 +399,8 @@ abstract class _CalendarPageState extends CalendarPageState {
   @override
   Setting? get setting => throw _privateConstructorUsedError;
   @override
-  PillSheet? get latestPillSheetGroup => throw _privateConstructorUsedError;
+  PillSheetGroup? get latestPillSheetGroup =>
+      throw _privateConstructorUsedError;
   @override
   List<Diary> get diariesForMonth => throw _privateConstructorUsedError;
   @override
