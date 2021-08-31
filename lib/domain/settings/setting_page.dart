@@ -56,7 +56,8 @@ class SettingPage extends HookWidget {
     if (setting == null) {
       return Container();
     }
-    final pillSheet = state.latestPillSheetGroup;
+    final pillSheetGroup = state.latestPillSheetGroup;
+    final activedPillSheet = pillSheetGroup?.activedPillSheet;
     return Container(
       child: ListView.builder(
         itemBuilder: (BuildContext context, int index) {
@@ -108,7 +109,8 @@ class SettingPage extends HookWidget {
                         trialDeadlineDate: state.trialDeadlineDate,
                       ),
                       _separator(),
-                      if (pillSheet != null && !pillSheet.isInvalid) ...[
+                      if (pillSheetGroup != null &&
+                          !pillSheetGroup.isInvalid) ...[
                         TodayPllNumberRow(setting: setting),
                         _separator(),
                         PillSheetRemoveRow(),
@@ -131,9 +133,10 @@ class SettingPage extends HookWidget {
                       _separator(),
                       NotificationTimeRow(setting: setting),
                       _separator(),
-                      if (pillSheet != null && pillSheet.hasRestDuration) ...[
+                      if (activedPillSheet != null &&
+                          activedPillSheet.hasRestDuration) ...[
                         NotificationInRestDuration(
-                            setting: setting, pillSheet: pillSheet),
+                            setting: setting, pillSheet: activedPillSheet),
                         _separator(),
                       ],
                       if (!state.isPremium) ...[
