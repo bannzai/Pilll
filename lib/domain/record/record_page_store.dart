@@ -48,7 +48,7 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
 
   void reset() {
     Future(() async {
-      final entity = await _service.fetchLast();
+      final entity = await _service.fetchActivePillSheet();
       final entities = await _service.fetchListWithMax(2);
       final isPillSheetFinishedInThePast =
           entities.where((element) => element.id != entity?.id).length >= 1;

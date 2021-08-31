@@ -91,7 +91,7 @@ class MockPillSheetService extends _i1.Mock implements _i13.PillSheetService {
   }
 
   @override
-  _i14.Future<_i2.PillSheet?> fetchLast() =>
+  _i14.Future<_i2.PillSheet?> fetchActivePillSheet() =>
       (super.noSuchMethod(Invocation.method(#fetchLast, []),
               returnValue: Future<_i2.PillSheet?>.value())
           as _i14.Future<_i2.PillSheet?>);
