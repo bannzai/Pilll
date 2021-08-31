@@ -34,7 +34,7 @@ class PillSheetGroupService {
     return _map(snapshot);
   }
 
-  Stream<PillSheetGroup> subscribeForLatestPillSheet() {
+  Stream<PillSheetGroup> subscribeForLatest() {
     return _fetchLatestQuery()
         .snapshots()
         .map(((event) => _map(event)))
@@ -60,6 +60,11 @@ class PillSheetGroupService {
     batch.set(_database.pillSheetGroupReference(pillSheetGroup.id!),
         updated.toJson(), SetOptions(merge: true));
     return updated;
+  }
+
+  update(WriteBatch batch, PillSheetGroup pillSheetGroup) {
+    final json = pillSheetGroup.toJson();
+    batch.update(_database.pillSheetGroupReference(pillSheetGroup.id!), json);
   }
 }
 
