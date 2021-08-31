@@ -3,7 +3,6 @@ import 'package:pilll/components/organisms/calendar/band/calendar_band_model.dar
 import 'package:pilll/components/organisms/calendar/utility.dart';
 import 'package:pilll/entity/diary.dart';
 import 'package:pilll/entity/menstruation.dart';
-import 'package:pilll/entity/pill_sheet.dart';
 import 'package:pilll/entity/pill_sheet_group.dart';
 import 'package:pilll/entity/pill_sheet_modified_history.dart';
 import 'package:pilll/entity/setting.dart';
@@ -39,7 +38,10 @@ abstract class CalendarPageState implements _$CalendarPageState {
 
   final _satisfyBandCount = 15;
   late final List<CalendarBandModel> allBands = buildBandModels(
-      latestPillSheetGroup, setting, menstruations, _satisfyBandCount);
+      latestPillSheetGroup?.activePillSheet,
+      setting,
+      menstruations,
+      _satisfyBandCount);
 }
 
 List<DateTime> _calendarDataSource() {

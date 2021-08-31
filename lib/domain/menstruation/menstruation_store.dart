@@ -8,6 +8,7 @@ import 'package:pilll/entity/menstruation.dart';
 import 'package:pilll/service/diary.dart';
 import 'package:pilll/service/menstruation.dart';
 import 'package:pilll/service/pill_sheet.dart';
+import 'package:pilll/service/pill_sheet_group.dart';
 import 'package:pilll/service/setting.dart';
 import 'package:pilll/domain/menstruation/menstruation_state.dart';
 import 'package:pilll/service/user.dart';
@@ -20,6 +21,7 @@ final menstruationsStoreProvider = StateNotifierProvider(
     settingService: ref.watch(settingServiceProvider),
     pillSheetService: ref.watch(pillSheetServiceProvider),
     userService: ref.watch(userServiceProvider),
+    pillSheetGroupService: ref.watch(pillSheetGroupServiceProvider),
   ),
 );
 
@@ -29,12 +31,14 @@ class MenstruationStore extends StateNotifier<MenstruationState> {
   final SettingService settingService;
   final PillSheetService pillSheetService;
   final UserService userService;
+  final PillSheetGroupService pillSheetGroupService;
   MenstruationStore({
     required this.menstruationService,
     required this.diaryService,
     required this.settingService,
     required this.pillSheetService,
     required this.userService,
+    required this.pillSheetGroupService,
   }) : super(MenstruationState()) {
     _reset();
   }
@@ -45,8 +49,7 @@ class MenstruationStore extends StateNotifier<MenstruationState> {
       final menstruations = await menstruationService.fetchAll();
       final diaries = await diaryService.fetchListAround90Days(today());
       final setting = await settingService.fetch();
-      final latestPillSheetGroup =
-          await pillSheetService.fetchActivePillSheet();
+      final latestPillSheetGroup = await pillSheetGroupService.fetchLatest();
       final user = await userService.fetch();
       state = state.copyWith(
         entities: menstruations,
