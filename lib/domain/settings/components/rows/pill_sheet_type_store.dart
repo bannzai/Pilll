@@ -26,7 +26,7 @@ class PillSheetTypeStateStore extends StateNotifier<PillSheetTypeState> {
     this._settingService,
   ) : super(PillSheetTypeState(
           setting: state.entity,
-          pillSheet: state.latestPillSheet,
+          pillSheet: state.latestPillSheetGroup,
         ));
 
   Future<void> modifyPillSheetType(PillSheetType pillSheetType) {

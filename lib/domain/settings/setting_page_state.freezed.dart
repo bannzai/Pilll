@@ -18,14 +18,14 @@ class _$SettingStateTearOff {
 
   _SettingState call(
       {required Setting? entity,
-      PillSheet? latestPillSheet,
+      PillSheet? latestPillSheetGroup,
       bool userIsUpdatedFrom132 = false,
       bool isPremium = false,
       bool isTrial = false,
       DateTime? trialDeadlineDate}) {
     return _SettingState(
       entity: entity,
-      latestPillSheet: latestPillSheet,
+      latestPillSheetGroup: latestPillSheetGroup,
       userIsUpdatedFrom132: userIsUpdatedFrom132,
       isPremium: isPremium,
       isTrial: isTrial,
@@ -40,7 +40,7 @@ const $SettingState = _$SettingStateTearOff();
 /// @nodoc
 mixin _$SettingState {
   Setting? get entity => throw _privateConstructorUsedError;
-  PillSheet? get latestPillSheet => throw _privateConstructorUsedError;
+  PillSheet? get latestPillSheetGroup => throw _privateConstructorUsedError;
   bool get userIsUpdatedFrom132 => throw _privateConstructorUsedError;
   bool get isPremium => throw _privateConstructorUsedError;
   bool get isTrial => throw _privateConstructorUsedError;
@@ -58,14 +58,14 @@ abstract class $SettingStateCopyWith<$Res> {
       _$SettingStateCopyWithImpl<$Res>;
   $Res call(
       {Setting? entity,
-      PillSheet? latestPillSheet,
+      PillSheet? latestPillSheetGroup,
       bool userIsUpdatedFrom132,
       bool isPremium,
       bool isTrial,
       DateTime? trialDeadlineDate});
 
   $SettingCopyWith<$Res>? get entity;
-  $PillSheetCopyWith<$Res>? get latestPillSheet;
+  $PillSheetCopyWith<$Res>? get latestPillSheetGroup;
 }
 
 /// @nodoc
@@ -79,7 +79,7 @@ class _$SettingStateCopyWithImpl<$Res> implements $SettingStateCopyWith<$Res> {
   @override
   $Res call({
     Object? entity = freezed,
-    Object? latestPillSheet = freezed,
+    Object? latestPillSheetGroup = freezed,
     Object? userIsUpdatedFrom132 = freezed,
     Object? isPremium = freezed,
     Object? isTrial = freezed,
@@ -90,9 +90,9 @@ class _$SettingStateCopyWithImpl<$Res> implements $SettingStateCopyWith<$Res> {
           ? _value.entity
           : entity // ignore: cast_nullable_to_non_nullable
               as Setting?,
-      latestPillSheet: latestPillSheet == freezed
-          ? _value.latestPillSheet
-          : latestPillSheet // ignore: cast_nullable_to_non_nullable
+      latestPillSheetGroup: latestPillSheetGroup == freezed
+          ? _value.latestPillSheetGroup
+          : latestPillSheetGroup // ignore: cast_nullable_to_non_nullable
               as PillSheet?,
       userIsUpdatedFrom132: userIsUpdatedFrom132 == freezed
           ? _value.userIsUpdatedFrom132
@@ -125,13 +125,13 @@ class _$SettingStateCopyWithImpl<$Res> implements $SettingStateCopyWith<$Res> {
   }
 
   @override
-  $PillSheetCopyWith<$Res>? get latestPillSheet {
-    if (_value.latestPillSheet == null) {
+  $PillSheetCopyWith<$Res>? get latestPillSheetGroup {
+    if (_value.latestPillSheetGroup == null) {
       return null;
     }
 
-    return $PillSheetCopyWith<$Res>(_value.latestPillSheet!, (value) {
-      return _then(_value.copyWith(latestPillSheet: value));
+    return $PillSheetCopyWith<$Res>(_value.latestPillSheetGroup!, (value) {
+      return _then(_value.copyWith(latestPillSheetGroup: value));
     });
   }
 }
@@ -145,7 +145,7 @@ abstract class _$SettingStateCopyWith<$Res>
   @override
   $Res call(
       {Setting? entity,
-      PillSheet? latestPillSheet,
+      PillSheet? latestPillSheetGroup,
       bool userIsUpdatedFrom132,
       bool isPremium,
       bool isTrial,
@@ -154,7 +154,7 @@ abstract class _$SettingStateCopyWith<$Res>
   @override
   $SettingCopyWith<$Res>? get entity;
   @override
-  $PillSheetCopyWith<$Res>? get latestPillSheet;
+  $PillSheetCopyWith<$Res>? get latestPillSheetGroup;
 }
 
 /// @nodoc
@@ -170,7 +170,7 @@ class __$SettingStateCopyWithImpl<$Res> extends _$SettingStateCopyWithImpl<$Res>
   @override
   $Res call({
     Object? entity = freezed,
-    Object? latestPillSheet = freezed,
+    Object? latestPillSheetGroup = freezed,
     Object? userIsUpdatedFrom132 = freezed,
     Object? isPremium = freezed,
     Object? isTrial = freezed,
@@ -181,9 +181,9 @@ class __$SettingStateCopyWithImpl<$Res> extends _$SettingStateCopyWithImpl<$Res>
           ? _value.entity
           : entity // ignore: cast_nullable_to_non_nullable
               as Setting?,
-      latestPillSheet: latestPillSheet == freezed
-          ? _value.latestPillSheet
-          : latestPillSheet // ignore: cast_nullable_to_non_nullable
+      latestPillSheetGroup: latestPillSheetGroup == freezed
+          ? _value.latestPillSheetGroup
+          : latestPillSheetGroup // ignore: cast_nullable_to_non_nullable
               as PillSheet?,
       userIsUpdatedFrom132: userIsUpdatedFrom132 == freezed
           ? _value.userIsUpdatedFrom132
@@ -210,7 +210,7 @@ class __$SettingStateCopyWithImpl<$Res> extends _$SettingStateCopyWithImpl<$Res>
 class _$_SettingState extends _SettingState {
   _$_SettingState(
       {required this.entity,
-      this.latestPillSheet,
+      this.latestPillSheetGroup,
       this.userIsUpdatedFrom132 = false,
       this.isPremium = false,
       this.isTrial = false,
@@ -220,7 +220,7 @@ class _$_SettingState extends _SettingState {
   @override
   final Setting? entity;
   @override
-  final PillSheet? latestPillSheet;
+  final PillSheet? latestPillSheetGroup;
   @JsonKey(defaultValue: false)
   @override
   final bool userIsUpdatedFrom132;
@@ -235,7 +235,7 @@ class _$_SettingState extends _SettingState {
 
   @override
   String toString() {
-    return 'SettingState(entity: $entity, latestPillSheet: $latestPillSheet, userIsUpdatedFrom132: $userIsUpdatedFrom132, isPremium: $isPremium, isTrial: $isTrial, trialDeadlineDate: $trialDeadlineDate)';
+    return 'SettingState(entity: $entity, latestPillSheetGroup: $latestPillSheetGroup, userIsUpdatedFrom132: $userIsUpdatedFrom132, isPremium: $isPremium, isTrial: $isTrial, trialDeadlineDate: $trialDeadlineDate)';
   }
 
   @override
@@ -244,9 +244,9 @@ class _$_SettingState extends _SettingState {
         (other is _SettingState &&
             (identical(other.entity, entity) ||
                 const DeepCollectionEquality().equals(other.entity, entity)) &&
-            (identical(other.latestPillSheet, latestPillSheet) ||
-                const DeepCollectionEquality()
-                    .equals(other.latestPillSheet, latestPillSheet)) &&
+            (identical(other.latestPillSheetGroup, latestPillSheetGroup) ||
+                const DeepCollectionEquality().equals(
+                    other.latestPillSheetGroup, latestPillSheetGroup)) &&
             (identical(other.userIsUpdatedFrom132, userIsUpdatedFrom132) ||
                 const DeepCollectionEquality().equals(
                     other.userIsUpdatedFrom132, userIsUpdatedFrom132)) &&
@@ -265,7 +265,7 @@ class _$_SettingState extends _SettingState {
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(entity) ^
-      const DeepCollectionEquality().hash(latestPillSheet) ^
+      const DeepCollectionEquality().hash(latestPillSheetGroup) ^
       const DeepCollectionEquality().hash(userIsUpdatedFrom132) ^
       const DeepCollectionEquality().hash(isPremium) ^
       const DeepCollectionEquality().hash(isTrial) ^
@@ -280,7 +280,7 @@ class _$_SettingState extends _SettingState {
 abstract class _SettingState extends SettingState {
   factory _SettingState(
       {required Setting? entity,
-      PillSheet? latestPillSheet,
+      PillSheet? latestPillSheetGroup,
       bool userIsUpdatedFrom132,
       bool isPremium,
       bool isTrial,
@@ -290,7 +290,7 @@ abstract class _SettingState extends SettingState {
   @override
   Setting? get entity => throw _privateConstructorUsedError;
   @override
-  PillSheet? get latestPillSheet => throw _privateConstructorUsedError;
+  PillSheet? get latestPillSheetGroup => throw _privateConstructorUsedError;
   @override
   bool get userIsUpdatedFrom132 => throw _privateConstructorUsedError;
   @override

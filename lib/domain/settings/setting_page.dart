@@ -56,7 +56,7 @@ class SettingPage extends HookWidget {
     if (setting == null) {
       return Container();
     }
-    final pillSheet = state.latestPillSheet;
+    final pillSheet = state.latestPillSheetGroup;
     return Container(
       child: ListView.builder(
         itemBuilder: (BuildContext context, int index) {
