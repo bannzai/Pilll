@@ -50,7 +50,7 @@ class SettingStateStore extends StateNotifier<SettingState> {
       this.state = SettingState(
         entity: entity,
         userIsUpdatedFrom132: userIsMigratedFrom132,
-        latestPillSheet: pillSheet,
+        latestPillSheetGroup: pillSheet,
         isPremium: user.isPremium,
         isTrial: user.isTrial,
         trialDeadlineDate: user.trialDeadlineDate,
@@ -70,7 +70,7 @@ class SettingStateStore extends StateNotifier<SettingState> {
     _pillSheetCanceller?.cancel();
     _pillSheetCanceller =
         _pillSheetService.subscribeForLatestPillSheet().listen((event) {
-      state = state.copyWith(latestPillSheet: event);
+      state = state.copyWith(latestPillSheetGroup: event);
     });
     _userSubscribeCanceller?.cancel();
     _userSubscribeCanceller = _userService.subscribe().listen((event) {
@@ -182,7 +182,7 @@ class SettingStateStore extends StateNotifier<SettingState> {
   }
 
   Future<void> modifyBeginingDate(int pillNumber) async {
-    final entity = state.latestPillSheet;
+    final entity = state.latestPillSheetGroup;
     if (entity == null) {
       throw FormatException("pill sheet not found");
     }
@@ -192,11 +192,11 @@ class SettingStateStore extends StateNotifier<SettingState> {
         _pillSheetModifiedHistoryService, entity, pillNumber);
     await batch.commit();
 
-    state = state.copyWith(latestPillSheet: updated);
+    state = state.copyWith(latestPillSheetGroup: updated);
   }
 
   Future<void> deletePillSheet() {
-    final entity = state.latestPillSheet;
+    final entity = state.latestPillSheetGroup;
     if (entity == null) {
       throw FormatException("pill sheet not found");
     }

@@ -249,8 +249,11 @@ class MenstruationCalendarHeader extends StatelessWidget {
                       calendarState: MenstruationSinglelineWeeklyCalendarState(
                         dateRange: DateRange(days.first, days.last),
                         diariesForMonth: state.diariesForMonth,
-                        allBandModels: buildBandModels(state.latestPillSheet,
-                                state.setting, state.entities, 12)
+                        allBandModels: buildBandModels(
+                                state.latestPillSheetGroup,
+                                state.setting,
+                                state.entities,
+                                12)
                             .where((element) =>
                                 !(element is CalendarNextPillSheetBandModel))
                             .toList(),
