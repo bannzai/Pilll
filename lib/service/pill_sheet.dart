@@ -35,14 +35,6 @@ class PillSheetService {
     json.remove("id");
     batch.update(_database.pillSheetReference(pillSheet.documentID!), json);
   }
-
-  Stream<PillSheet> subscribeForLatestPillSheet() {
-    return _queryOfFetchLastPillSheet()
-        .snapshots()
-        .map(((event) => _filterForLatestPillSheet(event)))
-        .skipWhile((element) => element == null)
-        .cast();
-  }
 }
 
 class PillSheetIsNotExists extends Error {
