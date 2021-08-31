@@ -27,7 +27,7 @@ final recordPageStoreProvider = StateNotifierProvider((ref) => RecordPageStore(
       ref.watch(userServiceProvider),
       ref.watch(authServiceProvider),
       ref.watch(pillSheetModifiedHistoryServiceProvider),
-      ref.watch(pillSheetGroupoServiceProvider),
+      ref.watch(pillSheetGroupServiceProvider),
     ));
 
 class RecordPageStore extends StateNotifier<RecordPageState> {
