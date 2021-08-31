@@ -45,14 +45,15 @@ class MenstruationStore extends StateNotifier<MenstruationState> {
       final menstruations = await menstruationService.fetchAll();
       final diaries = await diaryService.fetchListAround90Days(today());
       final setting = await settingService.fetch();
-      final latestPillSheet = await pillSheetService.fetchActivePillSheet();
+      final latestPillSheetGroup =
+          await pillSheetService.fetchActivePillSheet();
       final user = await userService.fetch();
       state = state.copyWith(
         entities: menstruations,
         diariesForMonth: diaries,
         isNotYetLoaded: false,
         setting: setting,
-        latestPillSheet: latestPillSheet,
+        latestPillSheetGroup: latestPillSheetGroup,
         isPremium: user.isPremium,
         isTrial: user.isTrial,
         trialDeadlineDate: user.trialDeadlineDate,
@@ -83,7 +84,7 @@ class MenstruationStore extends StateNotifier<MenstruationState> {
     _pillSheetCanceller?.cancel();
     _pillSheetCanceller =
         pillSheetService.subscribeForLatestPillSheet().listen((pillSheet) {
-      state = state.copyWith(latestPillSheet: pillSheet);
+      state = state.copyWith(latestPillSheetGroup: pillSheet);
     });
     _userCanceller?.cancel();
     _userCanceller = userService.subscribe().listen((user) {
@@ -144,9 +145,9 @@ class MenstruationStore extends StateNotifier<MenstruationState> {
         latestMenstruation.dateRange.inRange(today())) {
       return MenstruationCardState.record(menstruation: latestMenstruation);
     }
-    final latestPillSheet = state.latestPillSheet;
+    final latestPillSheetGroup = state.latestPillSheetGroup;
     final setting = state.setting;
-    if (latestPillSheet == null || setting == null) {
+    if (latestPillSheetGroup == null || setting == null) {
       return null;
     }
     if (setting.pillNumberForFromMenstruation == 0 ||
@@ -155,7 +156,7 @@ class MenstruationStore extends StateNotifier<MenstruationState> {
     }
 
     final menstruationDateRanges = scheduledMenstruationDateRanges(
-        latestPillSheet, setting, state.entities, 12);
+        latestPillSheetGroup, setting, state.entities, 12);
     final inTheMiddleDateRanges =
         menstruationDateRanges.where((element) => element.inRange(today()));
 

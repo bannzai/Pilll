@@ -51,7 +51,7 @@ class CalendarPageStateStore extends StateNotifier<CalendarPageState> {
     Future(() async {
       final menstruations = await _menstruationService.fetchAll();
       final setting = await _settingService.fetch();
-      final latestPillSheet = await _pillSheetGroupService.fetchLatest();
+      final latestPillSheetGroup = await _pillSheetGroupService.fetchLatest();
       final diaries = await _diaryService.fetchListForMonth(
           state.calendarDataSource[state.todayCalendarIndex]);
       final pillSheetModifiedHistories =
@@ -64,7 +64,7 @@ class CalendarPageStateStore extends StateNotifier<CalendarPageState> {
       state = state.copyWith(
         menstruations: menstruations,
         setting: setting,
-        latestPillSheet: latestPillSheet,
+        latestPillSheetGroup: latestPillSheetGroup,
         diariesForMonth: diaries,
         allPillSheetModifiedHistories: pillSheetModifiedHistories,
         isNotYetLoaded: false,
@@ -78,7 +78,7 @@ class CalendarPageStateStore extends StateNotifier<CalendarPageState> {
 
   StreamSubscription? _menstruationCanceller;
   StreamSubscription? _settingCanceller;
-  StreamSubscription? _latestPillSheetCanceller;
+  StreamSubscription? _latestPillSheetGroupCanceller;
   StreamSubscription? _diariesCanceller;
   StreamSubscription? _pillSheetModifiedHistoryCanceller;
   StreamSubscription? _userCanceller;
@@ -92,10 +92,10 @@ class CalendarPageStateStore extends StateNotifier<CalendarPageState> {
     _settingCanceller = _settingService.subscribe().listen((entity) {
       state = state.copyWith(setting: entity);
     });
-    _latestPillSheetCanceller?.cancel();
-    _latestPillSheetCanceller =
+    _latestPillSheetGroupCanceller?.cancel();
+    _latestPillSheetGroupCanceller =
         _pillSheetService.subscribeForLatestPillSheet().listen((entity) {
-      state = state.copyWith(latestPillSheet: entity);
+      state = state.copyWith(latestPillSheetGroup: entity);
     });
     _diariesCanceller?.cancel();
     _diariesCanceller = _diaryService.subscribe().listen((entities) {
@@ -123,7 +123,7 @@ class CalendarPageStateStore extends StateNotifier<CalendarPageState> {
   void dispose() {
     _menstruationCanceller?.cancel();
     _settingCanceller?.cancel();
-    _latestPillSheetCanceller?.cancel();
+    _latestPillSheetGroupCanceller?.cancel();
     _diariesCanceller?.cancel();
     _pillSheetModifiedHistoryCanceller?.cancel();
     _userCanceller?.cancel();

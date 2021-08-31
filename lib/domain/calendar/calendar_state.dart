@@ -20,7 +20,7 @@ abstract class CalendarPageState implements _$CalendarPageState {
     @Default(true) bool isNotYetLoaded,
     @Default([]) List<Menstruation> menstruations,
     Setting? setting,
-    PillSheet? latestPillSheet,
+    PillSheet? latestPillSheetGroup,
     @Default([]) List<Diary> diariesForMonth,
     @Default([]) List<PillSheetModifiedHistory> allPillSheetModifiedHistories,
     @Default(false) bool isPremium,
@@ -38,7 +38,7 @@ abstract class CalendarPageState implements _$CalendarPageState {
 
   final _satisfyBandCount = 15;
   late final List<CalendarBandModel> allBands = buildBandModels(
-      latestPillSheet, setting, menstruations, _satisfyBandCount);
+      latestPillSheetGroup, setting, menstruations, _satisfyBandCount);
 }
 
 List<DateTime> _calendarDataSource() {
