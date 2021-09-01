@@ -41,10 +41,12 @@ class InitialSettingService extends InitialSettingServiceInterface {
         return Future.value();
       }
       final batch = batchFactory.batch();
-      final documentID = pillSheetService.register(batch, pillSheet);
+      final updatedPillSheet = pillSheetService.register(batch, pillSheet);
       final history = PillSheetModifiedHistoryServiceActionFactory
           .createCreatedPillSheetAction(
-              before: null, pillSheetID: documentID, after: pillSheet);
+              before: null,
+              pillSheetID: updatedPillSheet.id!,
+              after: pillSheet);
       pillSheetModifiedHistoryService.add(batch, history);
 
       return batch.commit();

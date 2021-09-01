@@ -147,22 +147,41 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
     super.dispose();
   }
 
-  Future<void> register(int count, PillSheet model) async {
+  Future<void> register(int count) async {
+    final pillSheetType = state.setting?.pillSheetType;
+    if (pillSheetType == null) {
+      return;
+    }
     final batch = _batchFactory.batch();
 
-    final updatedPillSheet = _pillSheetService.register(batch, model);
-    final pillSheetID = updatedPillSheet.id;
-    if (pillSheetID == null) {
-      throw FormatException("ピルシートのIDの登録に失敗しました。設定 > お問い合わせからご報告していただけると幸いです");
+    final Map<String, PillSheet> idAndPillSheet = {};
+    final n = now();
+    for (int i = 0; i < count; i++) {
+      final pillSheet = PillSheet(
+        typeInfo: pillSheetType.typeInfo,
+        beginingDate: n.add(
+          Duration(days: pillSheetType.totalCount * i),
+        ),
+      );
+
+      final createdPillSheet = _pillSheetService.register(batch, pillSheet);
+      final pillSheetID = createdPillSheet.id;
+      if (pillSheetID == null) {
+        throw FormatException(
+            "ピルシートのIDの登録に失敗しました。設定 > お問い合わせからご報告していただけると幸いです");
+      }
+      idAndPillSheet[pillSheetID] = createdPillSheet;
+
+      final history = PillSheetModifiedHistoryServiceActionFactory
+          .createCreatedPillSheetAction(
+              before: null, pillSheetID: pillSheetID, after: createdPillSheet);
+      _pillSheetModifiedHistoryService.add(batch, history);
     }
 
-    final history = PillSheetModifiedHistoryServiceActionFactory
-        .createCreatedPillSheetAction(
-            before: null, pillSheetID: pillSheetID, after: model);
-    _pillSheetModifiedHistoryService.add(batch, history);
-
-    final pillSheetGroup = PillSheetGroup(
-        pillSheetIDs: [pillSheetID], pillSheets: [updatedPillSheet]);
+    final pillSheetIDs = idAndPillSheet.keys.toList();
+    final pillSheets = idAndPillSheet.values.toList();
+    final pillSheetGroup =
+        PillSheetGroup(pillSheetIDs: pillSheetIDs, pillSheets: pillSheets);
     _pillSheetGroupService.register(batch, pillSheetGroup);
 
     return batch.commit();

@@ -1,7 +1,6 @@
 import 'package:pilll/analytics.dart';
 import 'package:pilll/components/organisms/pill/pill_sheet.dart';
 import 'package:pilll/domain/record/record_page_store.dart';
-import 'package:pilll/entity/pill_sheet.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/error/error_alert.dart';
 import 'package:pilll/error_log.dart';
@@ -63,7 +62,6 @@ class RecordPageAddingPillSheet extends StatelessWidget {
 
   Widget _picker() {
     final elements = List.generate(12, (index) => index + 1);
-    final pillSheet = PillSheet.create(pillSheetType);
     int selected = elements.first;
     return Column(
       mainAxisAlignment: MainAxisAlignment.end,
@@ -72,7 +70,7 @@ class RecordPageAddingPillSheet extends StatelessWidget {
         PickerToolbar(
           done: (() async {
             try {
-              await store.register(selected, pillSheet);
+              await store.register(selected);
             } on PillSheetAlreadyExists catch (_) {
               showErrorAlert(
                 context,
