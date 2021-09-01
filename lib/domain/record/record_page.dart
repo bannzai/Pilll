@@ -25,7 +25,6 @@ class RecordPage extends HookWidget {
   Widget build(BuildContext context) {
     final state = useProvider(recordPageStoreProvider.state);
     final store = useProvider(recordPageStoreProvider);
-    final currentPillSheet = state.pillSheetGroup?.activedPillSheet;
     Future.delayed(Duration(seconds: 1)).then((_) {
       if (!state.shouldShowMigrateInfo) {
         return;
@@ -41,6 +40,12 @@ class RecordPage extends HookWidget {
         showPremiumTrialCompleteModalPreDialog(context);
       });
     });
+
+    final currentPillSheet = state.pillSheetGroup?.activedPillSheet;
+    final settingEntity = state.setting;
+    if (settingEntity == null || !state.firstLoadIsEnded) {
+      return Indicator();
+    }
 
     return UniversalErrorPage(
       error: state.exception,
@@ -62,44 +67,33 @@ class RecordPage extends HookWidget {
             },
           ),
         ),
-        body: _body(context),
+        body: Stack(
+          alignment: AlignmentDirectional.center,
+          children: [
+            Align(
+              alignment: Alignment.topCenter,
+              child: SingleChildScrollView(
+                child: Column(
+                  children: [
+                    NotificationBar(state),
+                    SizedBox(height: 64),
+                    _content(context, settingEntity, state, store),
+                  ],
+                ),
+              ),
+            ),
+            if (currentPillSheet != null && !currentPillSheet.isInvalid)
+              Positioned(
+                bottom: 20,
+                child: RecordPageButton(currentPillSheet: currentPillSheet),
+              ),
+          ],
+        ),
       ),
     );
   }
 
-  Widget _body(BuildContext context) {
-    final state = useProvider(recordPageStoreProvider.state);
-    final currentPillSheet = state.pillSheetGroup?.activedPillSheet;
-    final store = useProvider(recordPageStoreProvider);
-    final settingEntity = state.setting;
-    if (settingEntity == null || !state.firstLoadIsEnded) {
-      return Indicator();
-    }
-    return Stack(
-      alignment: AlignmentDirectional.center,
-      children: [
-        Align(
-          alignment: Alignment.topCenter,
-          child: SingleChildScrollView(
-            child: Column(
-              children: [
-                NotificationBar(state),
-                SizedBox(height: 64),
-                __body(context, settingEntity, state, store),
-              ],
-            ),
-          ),
-        ),
-        if (currentPillSheet != null && !currentPillSheet.isInvalid)
-          Positioned(
-            bottom: 20,
-            child: RecordPageButton(currentPillSheet: currentPillSheet),
-          ),
-      ],
-    );
-  }
-
-  Widget __body(
+  Widget _content(
     BuildContext context,
     Setting settingEntity,
     RecordPageState state,
