@@ -15,30 +15,29 @@ class RecordPagePillSheetList extends StatelessWidget {
     Key? key,
     required this.state,
     required this.store,
-    required this.pillSheet,
     required this.setting,
   }) : super(key: key);
 
   final RecordPageState state;
   final RecordPageStore store;
-  final PillSheet pillSheet;
   final Setting setting;
 
   @override
   Widget build(BuildContext context) {
     return PillSheetView(
-      firstWeekday: WeekdayFunctions.weekdayFromDate(pillSheet.beginingDate),
-      pillSheetType: pillSheet.pillSheetType,
+      firstWeekday:
+          WeekdayFunctions.weekdayFromDate(pillSheetGroup.beginingDate),
+      pillSheetType: pillSheetGroup.pillSheetType,
       doneStateBuilder: (number) {
-        return number <= pillSheet.lastTakenPillNumber;
+        return number <= pillSheetGroup.lastTakenPillNumber;
       },
       pillMarkTypeBuilder: (number) => store.markFor(number),
       enabledMarkAnimation: (number) => store.shouldPillMarkAnimation(number),
       markSelected: (number) {
         analytics.logEvent(name: "pill_mark_tapped", parameters: {
           "number": number,
-          "last_taken_pill_number": pillSheet.lastTakenPillNumber,
-          "today_pill_number": pillSheet.todayPillNumber,
+          "last_taken_pill_number": pillSheetGroup.lastTakenPillNumber,
+          "today_pill_number": pillSheetGroup.todayPillNumber,
         });
 
 //        effectAfterTaken(

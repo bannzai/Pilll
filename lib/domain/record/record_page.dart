@@ -11,6 +11,7 @@ import 'package:pilll/domain/record/record_page_store.dart';
 import 'package:pilll/domain/record/record_taken_information.dart';
 import 'package:pilll/domain/premium_trial/premium_trial_modal.dart';
 import 'package:pilll/entity/pill_sheet.dart';
+import 'package:pilll/entity/setting.dart';
 import 'package:pilll/error/universal_error_page.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/util/toolbar/picker_toolbar.dart';
@@ -138,14 +139,7 @@ class RecordPage extends HookWidget {
               children: [
                 NotificationBar(state),
                 SizedBox(height: 64),
-                if (state.isUserInteractionDisabled)
-                  RecordPageAddingPillSheet(
-                      context: context,
-                      store: store,
-                      pillSheetType: settingEntity.pillSheetType),
-                if (!state.isUserInteractionDisabled &&
-                    currentPillSheet != null)
-                  _pillSheet(context, state, store),
+                __body(context, settingEntity, state, store),
               ],
             ),
           ),
@@ -159,22 +153,23 @@ class RecordPage extends HookWidget {
     );
   }
 
-  Widget _pillSheet(
+  Widget __body(
     BuildContext context,
+    Setting settingEntity,
     RecordPageState state,
     RecordPageStore store,
   ) {
-    final pillSheet = state.pillSheetGroup?.activedPillSheet;
-    final setting = state.setting;
-    if (pillSheet == null || setting == null) {
-      throw FormatException(
-          "Unexpected pillSheet or setting are null for state of ${state.toString()}");
-    }
-    return RecordPagePillSheetList(
-      state: state,
-      store: store,
-      pillSheet: pillSheet,
-      setting: setting,
-    );
+    if (state.isUserInteractionDisabled)
+      return RecordPageAddingPillSheet(
+          context: context,
+          store: store,
+          pillSheetType: settingEntity.pillSheetType);
+    if (!state.isUserInteractionDisabled)
+      return RecordPagePillSheetList(
+        state: state,
+        store: store,
+        setting: settingEntity,
+      );
+    return Container();
   }
 }
