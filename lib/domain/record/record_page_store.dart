@@ -150,11 +150,20 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
   Future<void> register(int count, PillSheet model) async {
     final batch = _batchFactory.batch();
 
-    final documentID = _pillSheetService.register(batch, model);
+    final updatedPillSheet = _pillSheetService.register(batch, model);
+    final pillSheetID = updatedPillSheet.id;
+    if (pillSheetID == null) {
+      throw FormatException("ピルシートのIDの登録に失敗しました。設定 > お問い合わせからご報告していただけると幸いです");
+    }
+
     final history = PillSheetModifiedHistoryServiceActionFactory
         .createCreatedPillSheetAction(
-            before: null, pillSheetID: documentID, after: model);
+            before: null, pillSheetID: pillSheetID, after: model);
     _pillSheetModifiedHistoryService.add(batch, history);
+
+    final pillSheetGroup = PillSheetGroup(
+        pillSheetIDs: [pillSheetID], pillSheets: [updatedPillSheet]);
+    _pillSheetGroupService.register(batch, pillSheetGroup);
 
     return batch.commit();
   }
