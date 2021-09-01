@@ -56,9 +56,10 @@ class RecordPagePillSheetList extends StatelessWidget {
                 });
 
                 effectAfterTaken(
-                    context: context,
-                    taken: store.takenWithPillNumber(number),
-                    store: store);
+                  context: context,
+                  taken: store.takenWithPillNumber(number),
+                  store: store,
+                );
               },
               premiumMarkBuilder: () {
                 if (!(state.isPremium || state.isTrial)) {
