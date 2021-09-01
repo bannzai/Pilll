@@ -162,7 +162,7 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
         beginingDate: n.add(
           Duration(days: pillSheetType.totalCount * i),
         ),
-        gropuIndex: i,
+        groupIndex: i,
       );
 
       final createdPillSheet = _pillSheetService.register(batch, pillSheet);
@@ -321,7 +321,7 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
       throw FormatException("pill sheet type not found");
     }
     final number =
-        numberInPillSheet + (pillSheet.gropuIndex * pillSheetType.totalCount);
+        numberInPillSheet + (pillSheet.groupIndex * pillSheetType.totalCount);
     if (number > activedPillSheet.typeInfo.dosingPeriod) {
       return activedPillSheet.pillSheetType == PillSheetType.pillsheet_21
           ? PillMarkType.rest

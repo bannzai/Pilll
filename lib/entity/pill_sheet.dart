@@ -67,7 +67,7 @@ abstract class PillSheet implements _$PillSheet {
     )
         DateTime? deletedAt,
     @Default(0)
-        int gropuIndex,
+        int groupIndex,
   }) = _PillSheet;
   factory PillSheet.create(PillSheetType type) => PillSheet(
         typeInfo: type.typeInfo,
