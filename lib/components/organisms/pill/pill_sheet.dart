@@ -1,7 +1,6 @@
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/entity/pill_mark_type.dart';
 import 'package:pilll/components/atoms/color.dart';
-import 'package:pilll/entity/pill_sheet.dart';
 import 'package:pilll/entity/weekday.dart';
 import 'package:pilll/components/organisms/pill/pill_mark.dart';
 import 'package:pilll/domain/record/weekday_badge.dart';
@@ -34,8 +33,6 @@ class PillSheetView extends StatelessWidget {
 
   bool get isHideWeekdayLine => firstWeekday == null;
   int get _numberOfLine => pillSheetType.numberOfLineInPillSheet;
-  double get _height =>
-      PillSheetView.calcHeight(_numberOfLine, isHideWeekdayLine);
 
   static double calcHeight(
       int numberOfLineInPillSheet, bool isHideWeekdayLine) {
@@ -158,8 +155,8 @@ class PillSheetView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      constraints:
-          BoxConstraints(maxHeight: _height, minWidth: PillSheetView.width),
+      height: PillSheetView.calcHeight(_numberOfLine, isHideWeekdayLine),
+      width: PillSheetView.width,
       decoration: BoxDecoration(
         color: PilllColors.pillSheet,
         borderRadius: BorderRadius.circular(10),
