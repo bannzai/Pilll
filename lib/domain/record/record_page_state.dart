@@ -26,7 +26,7 @@ abstract class RecordPageState implements _$RecordPageState {
     Object? exception,
   }) = _RecordPageState;
 
-  bool get isInvalid {
+  bool get isUserInteractionDisabled {
     final pillSheetGroup = this.pillSheetGroup;
     return pillSheetGroup == null || pillSheetGroup.isInvalid;
   }

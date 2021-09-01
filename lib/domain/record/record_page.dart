@@ -143,12 +143,12 @@ class RecordPage extends HookWidget {
               children: [
                 NotificationBar(state),
                 SizedBox(height: 64),
-                if (state.isInvalid)
+                if (state.isUserInteractionDisabled)
                   RecordPageAddingPillSheet(
                       context: context,
                       store: store,
                       pillSheetType: settingEntity.pillSheetType),
-                if (!state.isInvalid && currentPillSheet != null)
+                if (!state.isUserInteractionDisabled && currentPillSheet != null)
                   _pillSheet(context, state, store),
               ],
             ),
