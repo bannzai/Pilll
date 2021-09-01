@@ -147,7 +147,7 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
     super.dispose();
   }
 
-  Future<void> register(PillSheet model) async {
+  Future<void> register(int count, PillSheet model) async {
     final batch = _batchFactory.batch();
 
     final documentID = _pillSheetService.register(batch, model);
