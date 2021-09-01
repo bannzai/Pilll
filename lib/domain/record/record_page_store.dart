@@ -336,17 +336,15 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
     required int pillNumberIntoPillSheet,
     required PillSheet pillSheet,
   }) {
-    final number = pillNumberIntoPillSheet +
-        (pillSheet.groupIndex * pillSheet.typeInfo.totalCount);
-    if (number > pillSheet.typeInfo.dosingPeriod) {
+    if (pillNumberIntoPillSheet > pillSheet.typeInfo.dosingPeriod) {
       return pillSheet.pillSheetType == PillSheetType.pillsheet_21
           ? PillMarkType.rest
           : PillMarkType.fake;
     }
-    if (number <= pillSheet.lastTakenPillNumber) {
+    if (pillNumberIntoPillSheet <= pillSheet.lastTakenPillNumber) {
       return PillMarkType.done;
     }
-    if (number < pillSheet.todayPillNumber) {
+    if (pillNumberIntoPillSheet < pillSheet.todayPillNumber) {
       return PillMarkType.normal;
     }
     return PillMarkType.normal;
