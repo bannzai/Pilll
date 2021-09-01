@@ -33,10 +33,14 @@ class PillSheetView extends StatelessWidget {
 
   bool get isHideWeekdayLine => firstWeekday == null;
   int get _numberOfLine => pillSheetType.numberOfLineInPillSheet;
-  double get _height {
+  double get _height =>
+      PillSheetView.calcHeight(_numberOfLine, isHideWeekdayLine);
+
+  static double calcHeight(
+      int numberOfLineInPillSheet, bool isHideWeekdayLine) {
     final verticalSpacing = PillSheetView.topSpace + PillSheetView.bottomSpace;
     final pillMarkListHeight =
-        PillSheetView.lineHeight * _numberOfLine + verticalSpacing;
+        PillSheetView.lineHeight * numberOfLineInPillSheet + verticalSpacing;
     return isHideWeekdayLine
         ? pillMarkListHeight
         : pillMarkListHeight + WeekdayBadgeConst.height;
