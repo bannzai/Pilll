@@ -67,7 +67,8 @@ abstract class PillSheet implements _$PillSheet {
       toJson: TimestampConverter.dateTimeToTimestamp,
     )
         DateTime? deletedAt,
-    int? gropuIndex,
+    @Default(0)
+        int gropuIndex,
   }) = _PillSheet;
   factory PillSheet.create(PillSheetType type) => PillSheet(
         typeInfo: type.typeInfo,

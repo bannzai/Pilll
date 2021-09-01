@@ -37,7 +37,7 @@ _$_PillSheet _$_$_PillSheetFromJson(Map<String, dynamic> json) {
         TimestampConverter.timestampToDateTime(json['createdAt'] as Timestamp?),
     deletedAt:
         TimestampConverter.timestampToDateTime(json['deletedAt'] as Timestamp?),
-    gropuIndex: json['gropuIndex'] as int?,
+    gropuIndex: json['gropuIndex'] as int? ?? 0,
   );
 }
 
