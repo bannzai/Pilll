@@ -30,17 +30,7 @@ class RecordPage extends HookWidget {
       if (!state.shouldShowMigrateInfo) {
         return;
       }
-      showDialog(
-          context: context,
-          barrierColor: Colors.white,
-          builder: (context) {
-            return MigrateInfo(
-              onClose: () async {
-                await store.shownMigrateInfo();
-                Navigator.of(context).pop();
-              },
-            );
-          });
+      _showMigrateInfoDialog(context, store);
     });
 
     Future.delayed(Duration(seconds: 1)).then((_) {
@@ -171,5 +161,20 @@ class RecordPage extends HookWidget {
         );
       },
     );
+  }
+
+  Future<void> _showMigrateInfoDialog(
+      BuildContext context, RecordPageStore store) async {
+    showDialog(
+        context: context,
+        barrierColor: Colors.white,
+        builder: (context) {
+          return MigrateInfo(
+            onClose: () async {
+              await store.shownMigrateInfo();
+              Navigator.of(context).pop();
+            },
+          );
+        });
   }
 }
