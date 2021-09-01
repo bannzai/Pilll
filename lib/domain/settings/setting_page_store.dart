@@ -226,7 +226,8 @@ class SettingStateStore extends StateNotifier<SettingState> {
         .createDeletedPillSheetAction(
             before: activedPillSheet, after: updatedPillSheet);
     _pillSheetModifiedHistoryService.add(batch, history);
-    _pillSheetGroupService.delete(batch, pillSheetGroup);
+    _pillSheetGroupService.delete(
+        batch, pillSheetGroup.replaced(updatedPillSheet));
 
     return batch.commit();
   }
