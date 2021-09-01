@@ -37,7 +37,8 @@ class RecordPagePillSheetList extends HookWidget {
           false),
       child: PageView(
         controller: PageController(
-            viewportFraction: 336 / MediaQuery.of(context).size.width),
+            viewportFraction:
+                (PillSheetView.width + 20) / MediaQuery.of(context).size.width),
         scrollDirection: Axis.horizontal,
         children: pillSheetGroup.pillSheets
             .map((pillSheet) {
