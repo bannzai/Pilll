@@ -1,4 +1,5 @@
 import 'package:pilll/entity/pill_sheet.dart';
+import 'package:pilll/entity/pill_sheet_group.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/entity/setting.dart';
 import 'package:pilll/domain/settings/reminder_times_page.dart';
@@ -66,17 +67,21 @@ void main() {
 
       final batchFactory = MockBatchFactory();
       final pillSheet = PillSheet.create(PillSheetType.pillsheet_21);
+      final pillSheetGroup =
+          PillSheetGroup(pillSheetIDs: ["1"], pillSheets: [pillSheet]);
+
       final pillSheetService = MockPillSheetService();
-      when(pillSheetService.fetchActivePillSheet())
-          .thenAnswer((_) => Future.value(pillSheet));
-      when(pillSheetService.subscribeForLatestPillSheet())
-          .thenAnswer((realInvocation) => Stream.empty());
       final userService = MockUserService();
       when(userService.fetch())
           .thenAnswer((realInvocation) => Future.value(_FakeUser()));
       when(userService.subscribe())
           .thenAnswer((realInvocation) => Stream.empty());
       final pillSheetModifiedService = MockPillSheetModifiedHistoryService();
+      final pillSheetGroupService = MockPillSheetGroupService();
+      when(pillSheetGroupService.fetchLatest())
+          .thenAnswer((realInvocation) => Future.value(pillSheetGroup));
+      when(pillSheetGroupService.subscribeForLatest())
+          .thenAnswer((realInvocation) => Stream.empty());
 
       final store = SettingStateStore(
         batchFactory,
@@ -84,7 +89,9 @@ void main() {
         pillSheetService,
         userService,
         pillSheetModifiedService,
+        pillSheetGroupService,
       );
+
       await tester.pumpWidget(
         ProviderScope(
           overrides: [
@@ -126,17 +133,21 @@ void main() {
 
       final batchFactory = MockBatchFactory();
       final pillSheet = PillSheet.create(PillSheetType.pillsheet_21);
+      final pillSheetGroup =
+          PillSheetGroup(pillSheetIDs: ["1"], pillSheets: [pillSheet]);
+
       final pillSheetService = MockPillSheetService();
-      when(pillSheetService.fetchActivePillSheet())
-          .thenAnswer((_) => Future.value(pillSheet));
-      when(pillSheetService.subscribeForLatestPillSheet())
-          .thenAnswer((realInvocation) => Stream.empty());
       final userService = MockUserService();
       when(userService.fetch())
           .thenAnswer((realInvocation) => Future.value(_FakeUser()));
       when(userService.subscribe())
           .thenAnswer((realInvocation) => Stream.empty());
       final pillSheetModifiedService = MockPillSheetModifiedHistoryService();
+      final pillSheetGroupService = MockPillSheetGroupService();
+      when(pillSheetGroupService.fetchLatest())
+          .thenAnswer((realInvocation) => Future.value(pillSheetGroup));
+      when(pillSheetGroupService.subscribeForLatest())
+          .thenAnswer((realInvocation) => Stream.empty());
 
       final store = SettingStateStore(
         batchFactory,
@@ -144,6 +155,7 @@ void main() {
         pillSheetService,
         userService,
         pillSheetModifiedService,
+        pillSheetGroupService,
       );
 
       await tester.pumpWidget(
