@@ -1,6 +1,7 @@
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/entity/pill_mark_type.dart';
 import 'package:pilll/components/atoms/color.dart';
+import 'package:pilll/entity/pill_sheet.dart';
 import 'package:pilll/entity/weekday.dart';
 import 'package:pilll/components/organisms/pill/pill_mark.dart';
 import 'package:pilll/domain/record/weekday_badge.dart';
@@ -157,8 +158,8 @@ class PillSheetView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: PillSheetView.width,
-      height: _height,
+      constraints:
+          BoxConstraints(maxHeight: _height, minWidth: PillSheetView.width),
       decoration: BoxDecoration(
         color: PilllColors.pillSheet,
         borderRadius: BorderRadius.circular(10),
@@ -170,7 +171,7 @@ class PillSheetView extends StatelessWidget {
           ),
         ],
       ),
-      child: Padding(
+      child: Container(
         padding: EdgeInsets.fromLTRB(22, 0, 22, PillSheetView.bottomSpace),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.start,

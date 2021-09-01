@@ -1,5 +1,4 @@
 import 'package:pilll/analytics.dart';
-import 'package:pilll/components/organisms/pill/pill_sheet.dart';
 import 'package:pilll/domain/record/record_page_store.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/error/error_alert.dart';
@@ -28,7 +27,7 @@ class RecordPageAddingPillSheet extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       child: SizedBox(
-        width: PillSheetView.width,
+        width: 316,
         height: 316,
         child: Stack(
           children: <Widget>[
