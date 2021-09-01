@@ -37,9 +37,8 @@ class RecordPagePillSheetList extends StatelessWidget {
               firstWeekday:
                   WeekdayFunctions.weekdayFromDate(pillSheet.beginingDate),
               pillSheetType: pillSheet.pillSheetType,
-              doneStateBuilder: (number) {
-                return number <= pillSheet.lastTakenPillNumber;
-              },
+              doneStateBuilder: (number) => store.isDone(
+                  pillNumberIntoPillSheet: number, pillSheet: pillSheet),
               pillMarkTypeBuilder: (number) => store.markFor(
                 pillNumberIntoPillSheet: number,
                 pillSheet: pillSheet,
