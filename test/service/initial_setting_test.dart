@@ -1,4 +1,5 @@
 import 'package:pilll/entity/initial_setting.dart';
+import 'package:pilll/entity/pill_sheet.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/service/initial_setting.dart';
 import 'package:flutter_test/flutter_test.dart';
@@ -28,8 +29,10 @@ void main() {
 
       final pillSheetEntity = initialSetting.buildPillSheet();
       final pillSheetService = MockPillSheetService();
-      when(pillSheetService.register(any, pillSheetEntity!))
-          .thenAnswer((realInvocation) => "ID");
+      when(pillSheetService.register(any, pillSheetEntity!)).thenAnswer(
+          (realInvocation) => PillSheet(
+              typeInfo: PillSheetType.pillsheet_21.typeInfo,
+              beginingDate: DateTime.now()));
       final pillSheetModifedHistoryService =
           MockPillSheetModifiedHistoryService();
       when(pillSheetModifedHistoryService.add(batch, any))
