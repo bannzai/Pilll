@@ -19,7 +19,6 @@ class PillSheetService {
 
     final document = _database.pillSheetsReference().doc();
     var json = copied.toJson();
-    json.remove("id");
     batch.set(document, json, SetOptions(merge: true));
     return document.id;
   }
@@ -33,7 +32,6 @@ class PillSheetService {
 
   update(WriteBatch batch, PillSheet pillSheet) {
     var json = pillSheet.toJson();
-    json.remove("id");
     batch.update(_database.pillSheetReference(pillSheet.documentID!), json);
   }
 }

@@ -24,7 +24,7 @@ class PillSheetGroupService {
 
     final document = snapshot.docs.last;
     final data = document.data() as Map<String, dynamic>;
-    data["id"] = document.id;
+    data.putIfAbsent("id", () => document.id);
 
     return PillSheetGroup.fromJson(data);
   }
