@@ -313,7 +313,7 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
   }
 
   bool isDone({
-    required int numberOfPillSheet,
+    required int pillNumberIntoPillSheet,
     required PillSheet pillSheet,
   }) {
     final activedPillSheet = state.pillSheetGroup?.activedPillSheet;
@@ -323,14 +323,14 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
     if (activedPillSheet.id != pillSheet.id) {
       return false;
     }
-    return numberOfPillSheet <= activedPillSheet.lastTakenPillNumber;
+    return pillNumberIntoPillSheet <= activedPillSheet.lastTakenPillNumber;
   }
 
   PillMarkType markFor({
-    required int numberOfPillSheet,
+    required int pillNumberIntoPillSheet,
     required PillSheet pillSheet,
   }) {
-    final number = numberOfPillSheet +
+    final number = pillNumberIntoPillSheet +
         (pillSheet.groupIndex * pillSheet.typeInfo.totalCount);
     if (number > pillSheet.typeInfo.dosingPeriod) {
       return pillSheet.pillSheetType == PillSheetType.pillsheet_21
@@ -347,7 +347,7 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
   }
 
   bool shouldPillMarkAnimation({
-    required int numberOfPillSheet,
+    required int pillNumberIntoPillSheet,
     required PillSheet pillSheet,
   }) {
     final activedPillSheet = state.pillSheetGroup?.activedPillSheet;
@@ -357,8 +357,8 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
     if (activedPillSheet.id != pillSheet.id) {
       return false;
     }
-    return numberOfPillSheet > activedPillSheet.lastTakenPillNumber &&
-        numberOfPillSheet <= activedPillSheet.todayPillNumber;
+    return pillNumberIntoPillSheet > activedPillSheet.lastTakenPillNumber &&
+        pillNumberIntoPillSheet <= activedPillSheet.todayPillNumber;
   }
 
   handleException(Object exception) {
