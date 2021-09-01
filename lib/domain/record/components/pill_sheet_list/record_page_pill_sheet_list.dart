@@ -29,60 +29,58 @@ class RecordPagePillSheetList extends StatelessWidget {
       return Container();
     }
     return Container(
-      height: PillSheetView.calcHeight(
-        setting.pillSheetType.numberOfLineInPillSheet,
-        false,
-      ),
-      child: ListView(
+      child: SingleChildScrollView(
         scrollDirection: Axis.horizontal,
-        children: pillSheetGroup.pillSheets.map((pillSheet) {
-          return PillSheetView(
-            firstWeekday:
-                WeekdayFunctions.weekdayFromDate(pillSheet.beginingDate),
-            pillSheetType: pillSheet.pillSheetType,
-            doneStateBuilder: (number) {
-              return number <= pillSheet.lastTakenPillNumber;
-            },
-            pillMarkTypeBuilder: (number) => store.markFor(number),
-            enabledMarkAnimation: (number) =>
-                store.shouldPillMarkAnimation(number),
-            markSelected: (number) {
-              analytics.logEvent(name: "pill_mark_tapped", parameters: {
-                "number": number,
-                "last_taken_pill_number": pillSheet.lastTakenPillNumber,
-                "today_pill_number": pillSheet.todayPillNumber,
-              });
+        child: Row(
+          children: pillSheetGroup.pillSheets.map((pillSheet) {
+            return PillSheetView(
+              firstWeekday:
+                  WeekdayFunctions.weekdayFromDate(pillSheet.beginingDate),
+              pillSheetType: pillSheet.pillSheetType,
+              doneStateBuilder: (number) {
+                return number <= pillSheet.lastTakenPillNumber;
+              },
+              pillMarkTypeBuilder: (number) => store.markFor(number),
+              enabledMarkAnimation: (number) =>
+                  store.shouldPillMarkAnimation(number),
+              markSelected: (number) {
+                analytics.logEvent(name: "pill_mark_tapped", parameters: {
+                  "number": number,
+                  "last_taken_pill_number": pillSheet.lastTakenPillNumber,
+                  "today_pill_number": pillSheet.todayPillNumber,
+                });
 
-              effectAfterTaken(
-                  context: context,
-                  taken: store.takenWithPillNumber(number),
-                  store: store);
-            },
-            premiumMarkBuilder: () {
-              if (!(state.isPremium || state.isTrial)) {
-                return null;
-              }
-              if (state.appearanceMode != PillSheetAppearanceMode.date) {
-                return null;
-              }
-              final pillSheet = state.pillSheetGroup?.activedPillSheet;
-              if (pillSheet == null) {
-                return null;
-              }
-              return (pillMarkNumber) {
-                final date = pillSheet.beginingDate
-                    .add(Duration(days: pillMarkNumber - 1));
-                return PremiumPillMarkModel(
-                  date: date,
-                  pillNumberForMenstruationBegin:
-                      setting.pillNumberForFromMenstruation,
-                  menstruationDuration: setting.durationMenstruation,
-                  maxPillNumber: pillSheet.pillSheetType.totalCount,
-                );
-              };
-            }(),
-          );
-        }).toList(),
+                effectAfterTaken(
+                    context: context,
+                    taken: store.takenWithPillNumber(number),
+                    store: store);
+              },
+              premiumMarkBuilder: () {
+                if (!(state.isPremium || state.isTrial)) {
+                  return null;
+                }
+                if (state.appearanceMode != PillSheetAppearanceMode.date) {
+                  return null;
+                }
+                final pillSheet = state.pillSheetGroup?.activedPillSheet;
+                if (pillSheet == null) {
+                  return null;
+                }
+                return (pillMarkNumber) {
+                  final date = pillSheet.beginingDate
+                      .add(Duration(days: pillMarkNumber - 1));
+                  return PremiumPillMarkModel(
+                    date: date,
+                    pillNumberForMenstruationBegin:
+                        setting.pillNumberForFromMenstruation,
+                    menstruationDuration: setting.durationMenstruation,
+                    maxPillNumber: pillSheet.pillSheetType.totalCount,
+                  );
+                };
+              }(),
+            );
+          }).toList(),
+        ),
       ),
     );
   }
