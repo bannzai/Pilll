@@ -3,6 +3,7 @@ import 'package:pilll/components/organisms/pill/pill_mark.dart';
 import 'package:pilll/components/organisms/pill/pill_sheet.dart';
 import 'package:pilll/domain/record/record_page_state.dart';
 import 'package:pilll/domain/record/record_page_store.dart';
+import 'package:pilll/domain/record/util/take.dart';
 import 'package:pilll/entity/pill_sheet.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/entity/setting.dart';
@@ -40,10 +41,10 @@ class RecordPagePillSheetList extends StatelessWidget {
           "today_pill_number": pillSheetGroup.todayPillNumber,
         });
 
-//        effectAfterTaken(
-//            context: context,
-//            taken: store.takenWithPillNumber(number),
-//            store: store);
+        effectAfterTaken(
+            context: context,
+            taken: store.takenWithPillNumber(number),
+            store: store);
       },
       premiumMarkBuilder: () {
         if (!(state.isPremium || state.isTrial)) {
