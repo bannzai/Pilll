@@ -36,6 +36,7 @@ class RecordPagePillSheetList extends HookWidget {
           pillSheetGroup.pillSheets.first.pillSheetType.numberOfLineInPillSheet,
           false),
       child: PageView(
+        clipBehavior: Clip.none,
         controller: PageController(
             viewportFraction:
                 (PillSheetView.width + 20) / MediaQuery.of(context).size.width),
