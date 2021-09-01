@@ -110,7 +110,8 @@ class SettingPage extends HookWidget {
                       ),
                       _separator(),
                       if (pillSheetGroup != null &&
-                          !pillSheetGroup.isInvalid) ...[
+                          !pillSheetGroup.isDeactived &&
+                          !pillSheetGroup.isDeleted) ...[
                         TodayPllNumberRow(setting: setting),
                         _separator(),
                         PillSheetRemoveRow(),
