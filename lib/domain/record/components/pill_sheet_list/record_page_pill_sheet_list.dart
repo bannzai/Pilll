@@ -44,8 +44,10 @@ class RecordPagePillSheetList extends StatelessWidget {
                 numberOfPillSheet: number,
                 pillSheet: pillSheet,
               ),
-              enabledMarkAnimation: (number) =>
-                  store.shouldPillMarkAnimation(number),
+              enabledMarkAnimation: (number) => store.shouldPillMarkAnimation(
+                numberOfPillSheet: number,
+                pillSheet: pillSheet,
+              ),
               markSelected: (number) {
                 analytics.logEvent(name: "pill_mark_tapped", parameters: {
                   "number": number,
