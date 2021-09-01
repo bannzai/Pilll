@@ -11,6 +11,7 @@ import 'package:pilll/components/atoms/text_color.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:pilll/util/toolbar/picker_toolbar.dart';
 
 class RecordPageAddingPillSheet extends StatelessWidget {
   const RecordPageAddingPillSheet({
@@ -26,7 +27,6 @@ class RecordPageAddingPillSheet extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var progressing = false;
     return GestureDetector(
       child: SizedBox(
         width: PillSheetView.width,
@@ -52,29 +52,66 @@ class RecordPageAddingPillSheet extends StatelessWidget {
       ),
       onTap: () async {
         analytics.logEvent(name: "adding_pill_sheet_tapped");
-        if (progressing) return;
-        progressing = true;
-
-        var pillSheet = PillSheet.create(pillSheetType);
-        try {
-          await store.register(pillSheet);
-        } on PillSheetAlreadyExists catch (_) {
-          showErrorAlert(
-            context,
-            message: "ピルシートがすでに存在しています。表示等に問題がある場合は設定タブから「お問い合わせ」ください",
-          );
-        } on PillSheetAlreadyDeleted catch (_) {
-          showErrorAlert(
-            context,
-            message: "ピルシートの作成に失敗しました。時間をおいて再度お試しください",
-          );
-        } catch (exception, stack) {
-          errorLogger.recordError(exception, stack);
-          store.handleException(exception);
-        } finally {
-          progressing = false;
-        }
+        showModalBottomSheet(
+            context: context,
+            builder: (context) {
+              return _picker();
+            });
       },
+    );
+  }
+
+  Widget _picker() {
+    final elements = List.generate(12, (index) => index + 1);
+    final pillSheet = PillSheet.create(pillSheetType);
+    int selected = elements.first;
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.end,
+      mainAxisSize: MainAxisSize.min,
+      children: <Widget>[
+        PickerToolbar(
+          done: (() async {
+            try {
+              await store.register(selected, pillSheet);
+            } on PillSheetAlreadyExists catch (_) {
+              showErrorAlert(
+                context,
+                message: "ピルシートがすでに存在しています。表示等に問題がある場合は設定タブから「お問い合わせ」ください",
+              );
+            } on PillSheetAlreadyDeleted catch (_) {
+              showErrorAlert(
+                context,
+                message: "ピルシートの作成に失敗しました。時間をおいて再度お試しください",
+              );
+            } catch (exception, stack) {
+              errorLogger.recordError(exception, stack);
+              store.handleException(exception);
+            }
+            Navigator.pop(context);
+          }),
+          cancel: (() {
+            Navigator.pop(context);
+          }),
+        ),
+        Container(
+          height: 200,
+          child: GestureDetector(
+            onTap: () {
+              Navigator.pop(context);
+            },
+            child: CupertinoPicker(
+              itemExtent: 40,
+              children: elements.map((e) => Text("$e")).toList(),
+              onSelectedItemChanged: (index) {
+                selected = elements[index];
+              },
+              scrollController: FixedExtentScrollController(
+                initialItem: 0,
+              ),
+            ),
+          ),
+        ),
+      ],
     );
   }
 }
