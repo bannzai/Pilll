@@ -43,7 +43,7 @@ abstract class PillSheet implements _$PillSheet {
   PillSheet._();
   @JsonSerializable(explicitToJson: true)
   factory PillSheet({
-    @JsonKey(includeIfNull: false, toJson: toNull)
+    @JsonKey(includeIfNull: false)
         String? id,
     @JsonKey()
         required PillSheetTypeInfo typeInfo,
