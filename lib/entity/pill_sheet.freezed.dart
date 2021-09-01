@@ -266,7 +266,7 @@ class _$PillSheetTearOff {
           DateTime? createdAt,
       @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
           DateTime? deletedAt,
-      int? gropuIndex}) {
+      int gropuIndex = 0}) {
     return _PillSheet(
       id: id,
       typeInfo: typeInfo,
@@ -308,7 +308,7 @@ mixin _$PillSheet {
       fromJson: TimestampConverter.timestampToDateTime,
       toJson: TimestampConverter.dateTimeToTimestamp)
   DateTime? get deletedAt => throw _privateConstructorUsedError;
-  int? get gropuIndex => throw _privateConstructorUsedError;
+  int get gropuIndex => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -333,7 +333,7 @@ abstract class $PillSheetCopyWith<$Res> {
           DateTime? createdAt,
       @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
           DateTime? deletedAt,
-      int? gropuIndex});
+      int gropuIndex});
 
   $PillSheetTypeInfoCopyWith<$Res> get typeInfo;
 }
@@ -384,7 +384,7 @@ class _$PillSheetCopyWithImpl<$Res> implements $PillSheetCopyWith<$Res> {
       gropuIndex: gropuIndex == freezed
           ? _value.gropuIndex
           : gropuIndex // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as int,
     ));
   }
 
@@ -415,7 +415,7 @@ abstract class _$PillSheetCopyWith<$Res> implements $PillSheetCopyWith<$Res> {
           DateTime? createdAt,
       @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
           DateTime? deletedAt,
-      int? gropuIndex});
+      int gropuIndex});
 
   @override
   $PillSheetTypeInfoCopyWith<$Res> get typeInfo;
@@ -468,7 +468,7 @@ class __$PillSheetCopyWithImpl<$Res> extends _$PillSheetCopyWithImpl<$Res>
       gropuIndex: gropuIndex == freezed
           ? _value.gropuIndex
           : gropuIndex // ignore: cast_nullable_to_non_nullable
-              as int?,
+              as int,
     ));
   }
 }
@@ -490,7 +490,7 @@ class _$_PillSheet extends _PillSheet {
           this.createdAt,
       @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
           this.deletedAt,
-      this.gropuIndex})
+      this.gropuIndex = 0})
       : super._();
 
   factory _$_PillSheet.fromJson(Map<String, dynamic> json) =>
@@ -522,8 +522,9 @@ class _$_PillSheet extends _PillSheet {
       fromJson: TimestampConverter.timestampToDateTime,
       toJson: TimestampConverter.dateTimeToTimestamp)
   final DateTime? deletedAt;
+  @JsonKey(defaultValue: 0)
   @override
-  final int? gropuIndex;
+  final int gropuIndex;
 
   @override
   String toString() {
@@ -592,7 +593,7 @@ abstract class _PillSheet extends PillSheet {
           DateTime? createdAt,
       @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
           DateTime? deletedAt,
-      int? gropuIndex}) = _$_PillSheet;
+      int gropuIndex}) = _$_PillSheet;
   _PillSheet._() : super._();
 
   factory _PillSheet.fromJson(Map<String, dynamic> json) =
@@ -625,7 +626,7 @@ abstract class _PillSheet extends PillSheet {
       toJson: TimestampConverter.dateTimeToTimestamp)
   DateTime? get deletedAt => throw _privateConstructorUsedError;
   @override
-  int? get gropuIndex => throw _privateConstructorUsedError;
+  int get gropuIndex => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$PillSheetCopyWith<_PillSheet> get copyWith =>
