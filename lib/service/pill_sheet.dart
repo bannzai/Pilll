@@ -12,7 +12,7 @@ class PillSheetService {
   PillSheetService(this._database);
 
   // Return new PillSheet document id
-  String register(WriteBatch batch, PillSheet model) {
+  PillSheet register(WriteBatch batch, PillSheet model) {
     if (model.createdAt != null) throw PillSheetAlreadyExists();
     if (model.deletedAt != null) throw PillSheetAlreadyDeleted();
     final copied = model.copyWith(createdAt: DateTime.now());
@@ -20,7 +20,8 @@ class PillSheetService {
     final document = _database.pillSheetsReference().doc();
     var json = copied.toJson();
     batch.set(document, json, SetOptions(merge: true));
-    return document.id;
+
+    return copied.copyWith(id: document.id);
   }
 
   PillSheet delete(WriteBatch batch, PillSheet pillSheet) {
