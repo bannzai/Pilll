@@ -4,7 +4,7 @@ import 'package:pilll/components/organisms/pill/pill_mark.dart';
 import 'package:pilll/components/organisms/pill/pill_sheet.dart';
 import 'package:pilll/domain/initial_setting/migrate_info.dart';
 import 'package:pilll/domain/premium_trial/premium_trial_complete_modal.dart';
-import 'package:pilll/domain/record/components/adding/record_page_adding_sheet.dart';
+import 'package:pilll/domain/record/components/adding/record_page_adding_pill_sheet.dart';
 import 'package:pilll/domain/record/components/button/record_page_button.dart';
 import 'package:pilll/domain/record/components/notification_bar/notification_bar.dart';
 import 'package:pilll/domain/record/record_page_state.dart';
@@ -144,7 +144,7 @@ class RecordPage extends HookWidget {
                 NotificationBar(state),
                 SizedBox(height: 64),
                 if (state.isInvalid)
-                  RecordPageAddingSheet(
+                  RecordPageAddingPillSheet(
                       context: context,
                       store: store,
                       pillSheetType: settingEntity.pillSheetType),

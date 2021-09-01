@@ -12,8 +12,8 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 
-class RecordPageAddingSheet extends StatelessWidget {
-  const RecordPageAddingSheet({
+class RecordPageAddingPillSheet extends StatelessWidget {
+  const RecordPageAddingPillSheet({
     Key? key,
     required this.context,
     required this.store,
