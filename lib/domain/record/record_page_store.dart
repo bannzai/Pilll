@@ -313,7 +313,7 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
   }
 
   PillMarkType markFor({
-    required int numberInPillSheet,
+    required int numberOfPillSheet,
     required PillSheet pillSheet,
   }) {
     final pillSheetType = state.setting?.pillSheetType;
@@ -321,7 +321,7 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
       throw FormatException("pill sheet type not found");
     }
     final number =
-        numberInPillSheet + (pillSheet.groupIndex * pillSheetType.totalCount);
+        numberOfPillSheet + (pillSheet.groupIndex * pillSheetType.totalCount);
     if (number > pillSheet.typeInfo.dosingPeriod) {
       return pillSheet.pillSheetType == PillSheetType.pillsheet_21
           ? PillMarkType.rest
