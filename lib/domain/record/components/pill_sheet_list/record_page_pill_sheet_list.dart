@@ -42,7 +42,7 @@ class RecordPagePillSheetList extends StatelessWidget {
               },
               pillMarkTypeBuilder: (number) => store.markFor(
                 numberInPillSheet: number,
-                pillSheetGroupIndex: pillSheet.groupIndex,
+                pillSheet: pillSheet,
               ),
               enabledMarkAnimation: (number) =>
                   store.shouldPillMarkAnimation(number),

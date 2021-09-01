@@ -322,15 +322,15 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
     }
     final number =
         numberInPillSheet + (pillSheet.groupIndex * pillSheetType.totalCount);
-    if (number > activedPillSheet.typeInfo.dosingPeriod) {
-      return activedPillSheet.pillSheetType == PillSheetType.pillsheet_21
+    if (number > pillSheet.typeInfo.dosingPeriod) {
+      return pillSheet.pillSheetType == PillSheetType.pillsheet_21
           ? PillMarkType.rest
           : PillMarkType.fake;
     }
-    if (number <= activedPillSheet.lastTakenPillNumber) {
+    if (number <= pillSheet.lastTakenPillNumber) {
       return PillMarkType.done;
     }
-    if (number < activedPillSheet.todayPillNumber) {
+    if (number < pillSheet.todayPillNumber) {
       return PillMarkType.normal;
     }
     return PillMarkType.normal;
