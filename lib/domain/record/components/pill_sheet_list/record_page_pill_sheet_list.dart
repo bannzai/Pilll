@@ -1,4 +1,3 @@
-import 'package:carousel_slider/carousel_slider.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:pilll/analytics.dart';
 import 'package:pilll/components/organisms/pill/pill_mark.dart';
