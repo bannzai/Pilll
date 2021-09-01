@@ -57,6 +57,6 @@ abstract class PillSheetGroup implements _$PillSheetGroup {
     return copyWith(pillSheets: copied);
   }
 
-  bool get isDeactive => activedPillSheet == null;
+  bool get isDeactived => activedPillSheet == null;
   bool get isDeleted => deletedAt != null;
 }
