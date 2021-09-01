@@ -40,8 +40,10 @@ class RecordPagePillSheetList extends StatelessWidget {
               doneStateBuilder: (number) {
                 return number <= pillSheet.lastTakenPillNumber;
               },
-              pillMarkTypeBuilder: (number) =>
-                  store.markFor(number, pillSheet.gropuIndex),
+              pillMarkTypeBuilder: (number) => store.markFor(
+                numberInPillSheet: number,
+                pillSheetGroupIndex: pillSheet.gropuIndex,
+              ),
               enabledMarkAnimation: (number) =>
                   store.shouldPillMarkAnimation(number),
               markSelected: (number) {

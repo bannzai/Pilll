@@ -243,10 +243,14 @@ void main() {
 
       await waitForResetStoreState();
       expect(state.pillSheetGroup?.pillSheets.first.allTaken, isTrue);
-      expect(store.markFor(1), PillMarkType.done);
-      expect(store.markFor(2), PillMarkType.done);
-      expect(store.markFor(3), PillMarkType.done);
-      expect(store.markFor(4), PillMarkType.normal);
+      expect(store.markFor(numberInPillSheet: 1, pillSheetGroupIndex: 0),
+          PillMarkType.done);
+      expect(store.markFor(numberInPillSheet: 2, pillSheetGroupIndex: 0),
+          PillMarkType.done);
+      expect(store.markFor(numberInPillSheet: 3, pillSheetGroupIndex: 0),
+          PillMarkType.done);
+      expect(store.markFor(numberInPillSheet: 4, pillSheetGroupIndex: 0),
+          PillMarkType.normal);
     });
     test("it is not taken all", () async {
       final mockTodayRepository = MockTodayService();
@@ -310,10 +314,14 @@ void main() {
 
       await waitForResetStoreState();
       expect(state.pillSheetGroup?.pillSheets.first.allTaken, isFalse);
-      expect(store.markFor(1), PillMarkType.done);
-      expect(store.markFor(2), PillMarkType.done);
-      expect(store.markFor(3), PillMarkType.normal);
-      expect(store.markFor(4), PillMarkType.normal);
+      expect(store.markFor(numberInPillSheet: 1, pillSheetGroupIndex: 0),
+          PillMarkType.done);
+      expect(store.markFor(numberInPillSheet: 2, pillSheetGroupIndex: 0),
+          PillMarkType.done);
+      expect(store.markFor(numberInPillSheet: 3, pillSheetGroupIndex: 0),
+          PillMarkType.normal);
+      expect(store.markFor(numberInPillSheet: 4, pillSheetGroupIndex: 0),
+          PillMarkType.normal);
     });
   });
   group("#shouldPillMarkAnimation", () {
