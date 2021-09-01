@@ -50,7 +50,7 @@ Map<String, dynamic> _$_$_PillSheetToJson(_$_PillSheet instance) {
     }
   }
 
-  writeNotNull('id', toNull(instance.id));
+  writeNotNull('id', instance.id);
   val['typeInfo'] = instance.typeInfo.toJson();
   val['beginingDate'] =
       NonNullTimestampConverter.dateTimeToTimestamp(instance.beginingDate);
