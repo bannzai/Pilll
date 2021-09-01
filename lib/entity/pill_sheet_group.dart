@@ -59,5 +59,4 @@ abstract class PillSheetGroup implements _$PillSheetGroup {
 
   bool get isDeactive => activedPillSheet == null;
   bool get isDeleted => deletedAt != null;
-  bool get isInvalid => isDeactive || isDeleted;
 }
