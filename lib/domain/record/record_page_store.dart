@@ -312,6 +312,20 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
     state = state.copyWith(pillSheetGroup: updated);
   }
 
+  bool isDone({
+    required int numberOfPillSheet,
+    required PillSheet pillSheet,
+  }) {
+    final activedPillSheet = state.pillSheetGroup?.activedPillSheet;
+    if (activedPillSheet == null) {
+      throw FormatException("pill sheet not found");
+    }
+    if (activedPillSheet.id != pillSheet.id) {
+      return false;
+    }
+    return numberOfPillSheet <= activedPillSheet.lastTakenPillNumber;
+  }
+
   PillMarkType markFor({
     required int numberOfPillSheet,
     required PillSheet pillSheet,
