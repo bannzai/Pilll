@@ -41,11 +41,11 @@ class RecordPagePillSheetList extends StatelessWidget {
                 return number <= pillSheet.lastTakenPillNumber;
               },
               pillMarkTypeBuilder: (number) => store.markFor(
-                numberOfPillSheet: number,
+                pillNumberIntoPillSheet: number,
                 pillSheet: pillSheet,
               ),
               enabledMarkAnimation: (number) => store.shouldPillMarkAnimation(
-                numberOfPillSheet: number,
+                pillNumberIntoPillSheet: number,
                 pillSheet: pillSheet,
               ),
               markSelected: (number) {
