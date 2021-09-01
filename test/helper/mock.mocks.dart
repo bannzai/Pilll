@@ -95,9 +95,9 @@ class MockPillSheetService extends _i1.Mock implements _i14.PillSheetService {
   }
 
   @override
-  String register(_i13.WriteBatch? batch, _i2.PillSheet? model) =>
+  _i2.PillSheet register(_i13.WriteBatch? batch, _i2.PillSheet? model) =>
       (super.noSuchMethod(Invocation.method(#register, [batch, model]),
-          returnValue: '') as String);
+          returnValue: _FakePillSheet()) as _i2.PillSheet);
   @override
   _i2.PillSheet delete(_i13.WriteBatch? batch, _i2.PillSheet? pillSheet) =>
       (super.noSuchMethod(Invocation.method(#delete, [batch, pillSheet]),
@@ -429,8 +429,8 @@ class MockRecordPageStore extends _i1.Mock implements _i25.RecordPageStore {
   void dispose() => super.noSuchMethod(Invocation.method(#dispose, []),
       returnValueForMissingStub: null);
   @override
-  _i17.Future<void> register(_i2.PillSheet? model) =>
-      (super.noSuchMethod(Invocation.method(#register, [model]),
+  _i17.Future<void> register(int? count) =>
+      (super.noSuchMethod(Invocation.method(#register, [count]),
           returnValue: Future<void>.value(),
           returnValueForMissingStub: Future.value()) as _i17.Future<void>);
   @override
