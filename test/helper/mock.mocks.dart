@@ -459,10 +459,10 @@ class MockRecordPageStore extends _i1.Mock implements _i25.RecordPageStore {
           returnValueForMissingStub: Future.value()) as _i17.Future<void>);
   @override
   _i27.PillMarkType markFor(
-          {int? numberInPillSheet, _i2.PillSheet? pillSheet}) =>
+          {int? numberOfPillSheet, _i2.PillSheet? pillSheet}) =>
       (super.noSuchMethod(
           Invocation.method(#markFor, [],
-              {#numberInPillSheet: numberInPillSheet, #pillSheet: pillSheet}),
+              {#numberInPillSheet: numberOfPillSheet, #pillSheet: pillSheet}),
           returnValue: _i27.PillMarkType.normal) as _i27.PillMarkType);
   @override
   bool shouldPillMarkAnimation(int? number) =>
