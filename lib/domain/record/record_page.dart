@@ -1,21 +1,16 @@
 import 'package:pilll/analytics.dart';
 import 'package:pilll/components/molecules/indicator.dart';
-import 'package:pilll/components/organisms/pill/pill_mark.dart';
-import 'package:pilll/components/organisms/pill/pill_sheet.dart';
 import 'package:pilll/domain/initial_setting/migrate_info.dart';
 import 'package:pilll/domain/premium_trial/premium_trial_complete_modal.dart';
 import 'package:pilll/domain/record/components/adding/record_page_adding_pill_sheet.dart';
 import 'package:pilll/domain/record/components/button/record_page_button.dart';
 import 'package:pilll/domain/record/components/notification_bar/notification_bar.dart';
+import 'package:pilll/domain/record/components/pill_sheet_list/record_page_pill_sheet_list.dart';
 import 'package:pilll/domain/record/record_page_state.dart';
 import 'package:pilll/domain/record/record_page_store.dart';
 import 'package:pilll/domain/record/record_taken_information.dart';
 import 'package:pilll/domain/premium_trial/premium_trial_modal.dart';
-import 'package:pilll/domain/record/util/take.dart';
 import 'package:pilll/entity/pill_sheet.dart';
-import 'package:pilll/entity/pill_sheet_type.dart';
-import 'package:pilll/entity/setting.dart';
-import 'package:pilll/entity/weekday.dart';
 import 'package:pilll/error/universal_error_page.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/util/toolbar/picker_toolbar.dart';
@@ -148,7 +143,8 @@ class RecordPage extends HookWidget {
                       context: context,
                       store: store,
                       pillSheetType: settingEntity.pillSheetType),
-                if (!state.isUserInteractionDisabled && currentPillSheet != null)
+                if (!state.isUserInteractionDisabled &&
+                    currentPillSheet != null)
                   _pillSheet(context, state, store),
               ],
             ),
@@ -163,7 +159,7 @@ class RecordPage extends HookWidget {
     );
   }
 
-  PillSheetView _pillSheet(
+  Widget _pillSheet(
     BuildContext context,
     RecordPageState state,
     RecordPageStore store,
@@ -174,49 +170,11 @@ class RecordPage extends HookWidget {
       throw FormatException(
           "Unexpected pillSheet or setting are null for state of ${state.toString()}");
     }
-    return PillSheetView(
-      firstWeekday: WeekdayFunctions.weekdayFromDate(pillSheet.beginingDate),
-      pillSheetType: pillSheet.pillSheetType,
-      doneStateBuilder: (number) {
-        return number <= pillSheet.lastTakenPillNumber;
-      },
-      pillMarkTypeBuilder: (number) => store.markFor(number),
-      enabledMarkAnimation: (number) => store.shouldPillMarkAnimation(number),
-      markSelected: (number) {
-        analytics.logEvent(name: "pill_mark_tapped", parameters: {
-          "number": number,
-          "last_taken_pill_number": pillSheet.lastTakenPillNumber,
-          "today_pill_number": pillSheet.todayPillNumber,
-        });
-
-        effectAfterTaken(
-            context: context,
-            taken: store.takenWithPillNumber(number),
-            store: store);
-      },
-      premiumMarkBuilder: () {
-        if (!(state.isPremium || state.isTrial)) {
-          return null;
-        }
-        if (state.appearanceMode != PillSheetAppearanceMode.date) {
-          return null;
-        }
-        final pillSheet = state.pillSheetGroup?.activedPillSheet;
-        if (pillSheet == null) {
-          return null;
-        }
-        return (pillMarkNumber) {
-          final date =
-              pillSheet.beginingDate.add(Duration(days: pillMarkNumber - 1));
-          return PremiumPillMarkModel(
-            date: date,
-            pillNumberForMenstruationBegin:
-                setting.pillNumberForFromMenstruation,
-            menstruationDuration: setting.durationMenstruation,
-            maxPillNumber: pillSheet.pillSheetType.totalCount,
-          );
-        };
-      }(),
+    return RecordPagePillSheetList(
+      state: state,
+      store: store,
+      pillSheet: pillSheet,
+      setting: setting,
     );
   }
 }
