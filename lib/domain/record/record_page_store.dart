@@ -312,18 +312,16 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
     state = state.copyWith(pillSheetGroup: updated);
   }
 
-  PillMarkType markFor(
-      {required int numberInPillSheet, required int pillSheetGroupIndex}) {
-    final activedPillSheet = state.pillSheetGroup?.activedPillSheet;
-    if (activedPillSheet == null) {
-      throw FormatException("pill sheet not found");
-    }
+  PillMarkType markFor({
+    required int numberInPillSheet,
+    required PillSheet pillSheet,
+  }) {
     final pillSheetType = state.setting?.pillSheetType;
     if (pillSheetType == null) {
       throw FormatException("pill sheet type not found");
     }
     final number =
-        numberInPillSheet + (pillSheetGroupIndex * pillSheetType.totalCount);
+        numberInPillSheet + (pillSheet.gropuIndex * pillSheetType.totalCount);
     if (number > activedPillSheet.typeInfo.dosingPeriod) {
       return activedPillSheet.pillSheetType == PillSheetType.pillsheet_21
           ? PillMarkType.rest
