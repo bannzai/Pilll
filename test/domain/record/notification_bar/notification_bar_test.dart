@@ -11,6 +11,7 @@ import 'package:pilll/domain/record/components/notification_bar/recommend_signup
 import 'package:pilll/domain/record/components/notification_bar/rest_duration.dart';
 import 'package:pilll/domain/record/record_page_state.dart';
 import 'package:pilll/entity/pill_sheet.dart';
+import 'package:pilll/entity/pill_sheet_group.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/service/day.dart';
 import 'package:pilll/util/environment.dart';
@@ -70,7 +71,9 @@ void main() {
           discountEntitlementDeadlineDate: today.subtract(Duration(days: 1)),
         );
 
-        final recordPageState = RecordPageState(entity: pillSheet);
+        final recordPageState = RecordPageState(
+            pillSheetGroup:
+                PillSheetGroup(pillSheets: [pillSheet], pillSheetIDs: ["1"]));
         await tester.pumpWidget(
           ProviderScope(
             overrides: [
@@ -124,7 +127,9 @@ void main() {
           discountEntitlementDeadlineDate: null,
         );
 
-        final recordPageState = RecordPageState(entity: pillSheet);
+        final recordPageState = RecordPageState(
+            pillSheetGroup:
+                PillSheetGroup(pillSheets: [pillSheet], pillSheetIDs: ["1"]));
         await tester.pumpWidget(
           ProviderScope(
             overrides: [
@@ -177,7 +182,9 @@ void main() {
           discountEntitlementDeadlineDate: null,
         );
 
-        final recordPageState = RecordPageState(entity: pillSheet);
+        final recordPageState = RecordPageState(
+            pillSheetGroup:
+                PillSheetGroup(pillSheets: [pillSheet], pillSheetIDs: ["1"]));
         await tester.pumpWidget(
           ProviderScope(
             overrides: [
@@ -229,7 +236,9 @@ void main() {
           discountEntitlementDeadlineDate: null,
         );
 
-        final recordPageState = RecordPageState(entity: pillSheet);
+        final recordPageState = RecordPageState(
+            pillSheetGroup:
+                PillSheetGroup(pillSheets: [pillSheet], pillSheetIDs: ["1"]));
         await tester.pumpWidget(
           ProviderScope(
             overrides: [
@@ -283,7 +292,9 @@ void main() {
           discountEntitlementDeadlineDate: null,
         );
 
-        final recordPageState = RecordPageState(entity: pillSheet);
+        final recordPageState = RecordPageState(
+            pillSheetGroup:
+                PillSheetGroup(pillSheets: [pillSheet], pillSheetIDs: ["1"]));
         await tester.pumpWidget(
           ProviderScope(
             overrides: [
@@ -338,7 +349,9 @@ void main() {
           discountEntitlementDeadlineDate: null,
         );
 
-        final recordPageState = RecordPageState(entity: pillSheet);
+        final recordPageState = RecordPageState(
+            pillSheetGroup:
+                PillSheetGroup(pillSheets: [pillSheet], pillSheetIDs: ["1"]));
         await tester.pumpWidget(
           ProviderScope(
             overrides: [
@@ -390,7 +403,9 @@ void main() {
           discountEntitlementDeadlineDate: null,
         );
 
-        final recordPageState = RecordPageState(entity: pillSheet);
+        final recordPageState = RecordPageState(
+            pillSheetGroup:
+                PillSheetGroup(pillSheets: [pillSheet], pillSheetIDs: ["1"]));
         await tester.pumpWidget(
           ProviderScope(
             overrides: [
