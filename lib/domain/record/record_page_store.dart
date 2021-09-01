@@ -226,15 +226,21 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
     return _take(now());
   }
 
-  Future<void>? takenWithPillNumber(int pillNumber) async {
-    final pillSheet = state.pillSheetGroup?.activedPillSheet;
-    if (pillSheet == null) {
+  Future<void>? takenWithPillNumber({
+    required int pillNumberIntoPillSheet,
+    required PillSheet pillSheet,
+  }) async {
+    final activedPillSheet = state.pillSheetGroup?.activedPillSheet;
+    if (activedPillSheet == null) {
       return null;
     }
-    if (pillNumber <= pillSheet.lastTakenPillNumber) {
+    if (activedPillSheet.id != pillSheet.id) {
       return null;
     }
-    var diff = pillSheet.todayPillNumber - pillNumber;
+    if (pillNumberIntoPillSheet <= activedPillSheet.lastTakenPillNumber) {
+      return null;
+    }
+    var diff = activedPillSheet.todayPillNumber - pillNumberIntoPillSheet;
     if (diff < 0) {
       // This is in the future pill number.
       return null;

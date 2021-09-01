@@ -56,7 +56,8 @@ class RecordPagePillSheetList extends StatelessWidget {
 
                 effectAfterTaken(
                   context: context,
-                  taken: store.takenWithPillNumber(number),
+                  taken: store.takenWithPillNumber(
+                      pillNumberIntoPillSheet: number, pillSheet: pillSheet),
                   store: store,
                 );
               },
