@@ -316,12 +316,8 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
     required int numberOfPillSheet,
     required PillSheet pillSheet,
   }) {
-    final pillSheetType = state.setting?.pillSheetType;
-    if (pillSheetType == null) {
-      throw FormatException("pill sheet type not found");
-    }
-    final number =
-        numberOfPillSheet + (pillSheet.groupIndex * pillSheetType.totalCount);
+    final number = numberOfPillSheet +
+        (pillSheet.groupIndex * pillSheet.typeInfo.totalCount);
     if (number > pillSheet.typeInfo.dosingPeriod) {
       return pillSheet.pillSheetType == PillSheetType.pillsheet_21
           ? PillMarkType.rest
@@ -336,13 +332,19 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
     return PillMarkType.normal;
   }
 
-  bool shouldPillMarkAnimation(int number) {
+  bool shouldPillMarkAnimation({
+    required int numberOfPillSheet,
+    required PillSheet pillSheet,
+  }) {
     final activedPillSheet = state.pillSheetGroup?.activedPillSheet;
     if (activedPillSheet == null) {
       throw FormatException("pill sheet not found");
     }
-    return number > activedPillSheet.lastTakenPillNumber &&
-        number <= activedPillSheet.todayPillNumber;
+    if (activedPillSheet.id != pillSheet.id) {
+      return false;
+    }
+    return numberOfPillSheet > activedPillSheet.lastTakenPillNumber &&
+        numberOfPillSheet <= activedPillSheet.todayPillNumber;
   }
 
   handleException(Object exception) {

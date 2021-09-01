@@ -388,7 +388,12 @@ void main() {
       await waitForResetStoreState();
       expect(state.pillSheetGroup?.pillSheets.first.allTaken, isTrue);
       for (int i = 1; i <= pillSheetEntity.pillSheetType.totalCount; i++) {
-        expect(store.shouldPillMarkAnimation(i), isFalse);
+        expect(
+            store.shouldPillMarkAnimation(
+              numberOfPillSheet: i,
+              pillSheet: pillSheetEntity,
+            ),
+            isFalse);
       }
     });
     test("it is not taken all", () async {
@@ -454,7 +459,12 @@ void main() {
 
       await waitForResetStoreState();
       expect(state.pillSheetGroup?.pillSheets.first.allTaken, isFalse);
-      expect(store.shouldPillMarkAnimation(3), isTrue);
+      expect(
+          store.shouldPillMarkAnimation(
+            numberOfPillSheet: 3,
+            pillSheet: pillSheetEntity,
+          ),
+          isTrue);
     });
   });
 }

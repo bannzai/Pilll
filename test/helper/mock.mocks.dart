@@ -462,11 +462,14 @@ class MockRecordPageStore extends _i1.Mock implements _i25.RecordPageStore {
           {int? numberOfPillSheet, _i2.PillSheet? pillSheet}) =>
       (super.noSuchMethod(
           Invocation.method(#markFor, [],
-              {#numberInPillSheet: numberOfPillSheet, #pillSheet: pillSheet}),
+              {#numberOfPillSheet: numberOfPillSheet, #pillSheet: pillSheet}),
           returnValue: _i27.PillMarkType.normal) as _i27.PillMarkType);
   @override
-  bool shouldPillMarkAnimation(int? number) =>
-      (super.noSuchMethod(Invocation.method(#shouldPillMarkAnimation, [number]),
+  bool shouldPillMarkAnimation(
+          {int? numberOfPillSheet, _i2.PillSheet? pillSheet}) =>
+      (super.noSuchMethod(
+          Invocation.method(#shouldPillMarkAnimation, [],
+              {#numberOfPillSheet: numberOfPillSheet, #pillSheet: pillSheet}),
           returnValue: false) as bool);
   @override
   dynamic handleException(Object? exception) =>
