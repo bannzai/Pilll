@@ -3,6 +3,7 @@ import 'package:mockito/mockito.dart';
 import 'package:pilll/domain/menstruation/menstruation_card_state.dart';
 import 'package:pilll/entity/menstruation.dart';
 import 'package:pilll/entity/pill_sheet.dart';
+import 'package:pilll/entity/pill_sheet_group.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/entity/setting.dart';
 import 'package:pilll/entity/user.dart';
@@ -87,12 +88,6 @@ void main() {
           ]),
         );
         final pillSheetService = MockPillSheetService();
-        when(pillSheetService.fetchActivePillSheet())
-            .thenAnswer((realInvocation) => Future.value(null));
-        when(pillSheetService.fetchListWithMax(2))
-            .thenAnswer((_) => Future.value([]));
-        when(pillSheetService.subscribeForLatestPillSheet())
-            .thenAnswer((realInvocation) => Stream.empty());
         final diaryService = MockDiaryService();
         when(diaryService.fetchListAround90Days(today))
             .thenAnswer((realInvocation) => Future.value([]));
@@ -113,6 +108,13 @@ void main() {
             .thenAnswer((reaInvocation) => Future.value(_FakeUser()));
         when(userService.subscribe())
             .thenAnswer((realInvocation) => Stream.empty());
+        final pillSheetGroup = PillSheetGroup(pillSheetIDs: [], pillSheets: []);
+
+        final pillSheetGroupService = MockPillSheetGroupService();
+        when(pillSheetGroupService.fetchLatest())
+            .thenAnswer((realInvocation) => Future.value(pillSheetGroup));
+        when(pillSheetGroupService.subscribeForLatest())
+            .thenAnswer((realInvocation) => Stream.empty());
 
         final store = MenstruationStore(
           menstruationService: menstruationService,
@@ -120,7 +122,9 @@ void main() {
           settingService: settingService,
           pillSheetService: pillSheetService,
           userService: userService,
+          pillSheetGroupService: pillSheetGroupService,
         );
+
         await waitForResetStoreState();
         final actual = store.cardState();
 
@@ -164,10 +168,6 @@ void main() {
           ]),
         );
         final pillSheetService = MockPillSheetService();
-        when(pillSheetService.fetchActivePillSheet())
-            .thenAnswer((realInvocation) => Future.value(null));
-        when(pillSheetService.subscribeForLatestPillSheet())
-            .thenAnswer((realInvocation) => Stream.empty());
         final diaryService = MockDiaryService();
         when(diaryService.fetchListAround90Days(today))
             .thenAnswer((realInvocation) => Future.value([]));
@@ -189,13 +189,23 @@ void main() {
         when(userService.subscribe())
             .thenAnswer((realInvocation) => Stream.empty());
 
+        final pillSheetGroup = PillSheetGroup(pillSheetIDs: [], pillSheets: []);
+
+        final pillSheetGroupService = MockPillSheetGroupService();
+        when(pillSheetGroupService.fetchLatest())
+            .thenAnswer((realInvocation) => Future.value(pillSheetGroup));
+        when(pillSheetGroupService.subscribeForLatest())
+            .thenAnswer((realInvocation) => Stream.empty());
+
         final store = MenstruationStore(
           menstruationService: menstruationService,
           diaryService: diaryService,
           settingService: settingService,
           pillSheetService: pillSheetService,
           userService: userService,
+          pillSheetGroupService: pillSheetGroupService,
         );
+
         await waitForResetStoreState();
         final actual = store.cardState();
 
@@ -223,16 +233,6 @@ void main() {
           (realInvocation) => Stream.value([]),
         );
         final pillSheetService = MockPillSheetService();
-        when(pillSheetService.fetchActivePillSheet()).thenAnswer(
-          (realInvocation) => Future.value(
-            PillSheet(
-              typeInfo: PillSheetType.pillsheet_21.typeInfo,
-              beginingDate: DateTime(2021, 04, 22),
-            ),
-          ),
-        );
-        when(pillSheetService.subscribeForLatestPillSheet())
-            .thenAnswer((realInvocation) => Stream.empty());
         final diaryService = MockDiaryService();
         when(diaryService.fetchListAround90Days(today))
             .thenAnswer((realInvocation) => Future.value([]));
@@ -254,13 +254,30 @@ void main() {
         when(userService.subscribe())
             .thenAnswer((realInvocation) => Stream.empty());
 
+        final pillSheetGroup = PillSheetGroup(pillSheetIDs: [
+          "1"
+        ], pillSheets: [
+          PillSheet(
+            typeInfo: PillSheetType.pillsheet_21.typeInfo,
+            beginingDate: DateTime(2021, 04, 22),
+          ),
+        ]);
+
+        final pillSheetGroupService = MockPillSheetGroupService();
+        when(pillSheetGroupService.fetchLatest())
+            .thenAnswer((realInvocation) => Future.value(pillSheetGroup));
+        when(pillSheetGroupService.subscribeForLatest())
+            .thenAnswer((realInvocation) => Stream.empty());
+
         final store = MenstruationStore(
           menstruationService: menstruationService,
           diaryService: diaryService,
           settingService: settingService,
           pillSheetService: pillSheetService,
           userService: userService,
+          pillSheetGroupService: pillSheetGroupService,
         );
+
         await waitForResetStoreState();
         final actual = store.cardState();
 
@@ -292,16 +309,6 @@ void main() {
           (realInvocation) => Stream.value([]),
         );
         final pillSheetService = MockPillSheetService();
-        when(pillSheetService.fetchActivePillSheet()).thenAnswer(
-          (realInvocation) => Future.value(
-            PillSheet(
-              typeInfo: PillSheetType.pillsheet_21.typeInfo,
-              beginingDate: DateTime(2021, 04, 07),
-            ),
-          ),
-        );
-        when(pillSheetService.subscribeForLatestPillSheet())
-            .thenAnswer((realInvocation) => Stream.empty());
         final diaryService = MockDiaryService();
         when(diaryService.fetchListAround90Days(today))
             .thenAnswer((realInvocation) => Future.value([]));
@@ -323,12 +330,27 @@ void main() {
         when(userService.subscribe())
             .thenAnswer((realInvocation) => Stream.empty());
 
+        final pillSheetGroup = PillSheetGroup(pillSheetIDs: [
+          "1"
+        ], pillSheets: [
+          PillSheet(
+            typeInfo: PillSheetType.pillsheet_21.typeInfo,
+            beginingDate: DateTime(2021, 04, 07),
+          ),
+        ]);
+        final pillSheetGroupService = MockPillSheetGroupService();
+        when(pillSheetGroupService.fetchLatest())
+            .thenAnswer((realInvocation) => Future.value(pillSheetGroup));
+        when(pillSheetGroupService.subscribeForLatest())
+            .thenAnswer((realInvocation) => Stream.empty());
+
         final store = MenstruationStore(
           menstruationService: menstruationService,
           diaryService: diaryService,
           settingService: settingService,
           pillSheetService: pillSheetService,
           userService: userService,
+          pillSheetGroupService: pillSheetGroupService,
         );
         await waitForResetStoreState();
         final actual = store.cardState();
