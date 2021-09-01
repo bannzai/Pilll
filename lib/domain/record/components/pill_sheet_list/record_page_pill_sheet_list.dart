@@ -32,18 +32,19 @@ class RecordPagePillSheetList extends HookWidget {
     if (pillSheetGroup == null) {
       return Container();
     }
-    final pageController = usePageController(viewportFraction: 0.8);
     return Container(
       height: PillSheetView.calcHeight(
           pillSheetGroup.pillSheets.first.pillSheetType.numberOfLineInPillSheet,
           false),
       child: PageView(
-        controller: pageController,
+        controller: PageController(
+            viewportFraction: 336 / MediaQuery.of(context).size.width),
         scrollDirection: Axis.horizontal,
         children: pillSheetGroup.pillSheets
             .map((pillSheet) {
               return [
                 Container(
+                  padding: EdgeInsets.symmetric(horizontal: 10),
                   child: _PillSheetContent(
                     pillSheet: pillSheet,
                     pillSheetGroup: pillSheetGroup,
