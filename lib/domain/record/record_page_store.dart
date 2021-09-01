@@ -326,9 +326,17 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
     if (activedPillSheet == null) {
       throw FormatException("pill sheet not found");
     }
-    if (activedPillSheet.id != pillSheet.id) {
+    if (activedPillSheet.groupIndex < pillSheet.groupIndex) {
       return false;
     }
+    if (activedPillSheet.id != pillSheet.id) {
+      if (pillSheet.isOutOfRange) {
+        if (pillNumberIntoPillSheet > pillSheet.lastTakenPillNumber) {
+          return false;
+        }
+      }
+    }
+
     return pillNumberIntoPillSheet <= activedPillSheet.lastTakenPillNumber;
   }
 
@@ -358,8 +366,15 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
     if (activedPillSheet == null) {
       throw FormatException("pill sheet not found");
     }
-    if (activedPillSheet.id != pillSheet.id) {
+    if (activedPillSheet.groupIndex < pillSheet.groupIndex) {
       return false;
+    }
+    if (activedPillSheet.id != pillSheet.id) {
+      if (pillSheet.isOutOfRange) {
+        if (pillNumberIntoPillSheet > pillSheet.lastTakenPillNumber) {
+          return true;
+        }
+      }
     }
     return pillNumberIntoPillSheet > activedPillSheet.lastTakenPillNumber &&
         pillNumberIntoPillSheet <= activedPillSheet.todayPillNumber;
