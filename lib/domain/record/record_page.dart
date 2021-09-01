@@ -4,6 +4,7 @@ import 'package:pilll/components/organisms/pill/pill_mark.dart';
 import 'package:pilll/components/organisms/pill/pill_sheet.dart';
 import 'package:pilll/domain/initial_setting/migrate_info.dart';
 import 'package:pilll/domain/premium_trial/premium_trial_complete_modal.dart';
+import 'package:pilll/domain/record/components/adding/record_page_adding_sheet.dart';
 import 'package:pilll/domain/record/components/button/record_page_button.dart';
 import 'package:pilll/domain/record/components/notification_bar/notification_bar.dart';
 import 'package:pilll/domain/record/record_page_state.dart';
@@ -15,18 +16,12 @@ import 'package:pilll/entity/pill_sheet.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/entity/setting.dart';
 import 'package:pilll/entity/weekday.dart';
-import 'package:pilll/error/error_alert.dart';
 import 'package:pilll/error/universal_error_page.dart';
-import 'package:pilll/error_log.dart';
-import 'package:pilll/service/pill_sheet.dart';
 import 'package:pilll/components/atoms/color.dart';
-import 'package:pilll/components/atoms/font.dart';
-import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/util/toolbar/picker_toolbar.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 class RecordPage extends HookWidget {
@@ -149,7 +144,10 @@ class RecordPage extends HookWidget {
                 NotificationBar(state),
                 SizedBox(height: 64),
                 if (state.isInvalid)
-                  _empty(context, store, settingEntity.pillSheetType),
+                  RecordPageAddingSheet(
+                      context: context,
+                      store: store,
+                      pillSheetType: settingEntity.pillSheetType),
                 if (!state.isInvalid && currentPillSheet != null)
                   _pillSheet(context, state, store),
               ],
@@ -219,59 +217,6 @@ class RecordPage extends HookWidget {
           );
         };
       }(),
-    );
-  }
-
-  Widget _empty(BuildContext context, RecordPageStore store,
-      PillSheetType pillSheetType) {
-    var progressing = false;
-    return GestureDetector(
-      child: SizedBox(
-        width: PillSheetView.width,
-        height: 316,
-        child: Stack(
-          children: <Widget>[
-            Center(
-              child: SvgPicture.asset(
-                "images/empty_frame.svg",
-              ),
-            ),
-            Center(
-                child: Row(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: <Widget>[
-                Icon(Icons.add, color: TextColor.noshime),
-                Text("ピルシートを追加",
-                    style: FontType.assisting.merge(TextColorStyle.noshime)),
-              ],
-            )),
-          ],
-        ),
-      ),
-      onTap: () async {
-        if (progressing) return;
-        progressing = true;
-
-        var pillSheet = PillSheet.create(pillSheetType);
-        try {
-          await store.register(pillSheet);
-        } on PillSheetAlreadyExists catch (_) {
-          showErrorAlert(
-            context,
-            message: "ピルシートがすでに存在しています。表示等に問題がある場合は設定タブから「お問い合わせ」ください",
-          );
-        } on PillSheetAlreadyDeleted catch (_) {
-          showErrorAlert(
-            context,
-            message: "ピルシートの作成に失敗しました。時間をおいて再度お試しください",
-          );
-        } catch (exception, stack) {
-          errorLogger.recordError(exception, stack);
-          store.handleException(exception);
-        } finally {
-          progressing = false;
-        }
-      },
     );
   }
 }
