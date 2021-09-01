@@ -254,7 +254,7 @@ class _$PillSheetTearOff {
   const _$PillSheetTearOff();
 
   _PillSheet call(
-      {@JsonKey(includeIfNull: false, toJson: toNull)
+      {@JsonKey(includeIfNull: false)
           String? id,
       @JsonKey()
           required PillSheetTypeInfo typeInfo,
@@ -288,7 +288,7 @@ const $PillSheet = _$PillSheetTearOff();
 
 /// @nodoc
 mixin _$PillSheet {
-  @JsonKey(includeIfNull: false, toJson: toNull)
+  @JsonKey(includeIfNull: false)
   String? get id => throw _privateConstructorUsedError;
   @JsonKey()
   PillSheetTypeInfo get typeInfo => throw _privateConstructorUsedError;
@@ -321,7 +321,7 @@ abstract class $PillSheetCopyWith<$Res> {
   factory $PillSheetCopyWith(PillSheet value, $Res Function(PillSheet) then) =
       _$PillSheetCopyWithImpl<$Res>;
   $Res call(
-      {@JsonKey(includeIfNull: false, toJson: toNull)
+      {@JsonKey(includeIfNull: false)
           String? id,
       @JsonKey()
           PillSheetTypeInfo typeInfo,
@@ -403,7 +403,7 @@ abstract class _$PillSheetCopyWith<$Res> implements $PillSheetCopyWith<$Res> {
       __$PillSheetCopyWithImpl<$Res>;
   @override
   $Res call(
-      {@JsonKey(includeIfNull: false, toJson: toNull)
+      {@JsonKey(includeIfNull: false)
           String? id,
       @JsonKey()
           PillSheetTypeInfo typeInfo,
@@ -478,7 +478,7 @@ class __$PillSheetCopyWithImpl<$Res> extends _$PillSheetCopyWithImpl<$Res>
 @JsonSerializable(explicitToJson: true)
 class _$_PillSheet extends _PillSheet {
   _$_PillSheet(
-      {@JsonKey(includeIfNull: false, toJson: toNull)
+      {@JsonKey(includeIfNull: false)
           this.id,
       @JsonKey()
           required this.typeInfo,
@@ -497,7 +497,7 @@ class _$_PillSheet extends _PillSheet {
       _$_$_PillSheetFromJson(json);
 
   @override
-  @JsonKey(includeIfNull: false, toJson: toNull)
+  @JsonKey(includeIfNull: false)
   final String? id;
   @override
   @JsonKey()
@@ -581,7 +581,7 @@ class _$_PillSheet extends _PillSheet {
 
 abstract class _PillSheet extends PillSheet {
   factory _PillSheet(
-      {@JsonKey(includeIfNull: false, toJson: toNull)
+      {@JsonKey(includeIfNull: false)
           String? id,
       @JsonKey()
           required PillSheetTypeInfo typeInfo,
@@ -600,7 +600,7 @@ abstract class _PillSheet extends PillSheet {
       _$_PillSheet.fromJson;
 
   @override
-  @JsonKey(includeIfNull: false, toJson: toNull)
+  @JsonKey(includeIfNull: false)
   String? get id => throw _privateConstructorUsedError;
   @override
   @JsonKey()
