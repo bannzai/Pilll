@@ -29,64 +29,82 @@ class RecordPagePillSheetList extends StatelessWidget {
       return Container();
     }
     return Container(
-      child: SingleChildScrollView(
+      height: PillSheetView.calcHeight(
+          pillSheetGroup.pillSheets.first.pillSheetType.numberOfLineInPillSheet,
+          false),
+      child: PageView(
         scrollDirection: Axis.horizontal,
-        child: Row(
-          children: pillSheetGroup.pillSheets.map((pillSheet) {
-            return PillSheetView(
-              firstWeekday:
-                  WeekdayFunctions.weekdayFromDate(pillSheet.beginingDate),
-              pillSheetType: pillSheet.pillSheetType,
-              doneStateBuilder: (number) => store.isDone(
-                  pillNumberIntoPillSheet: number, pillSheet: pillSheet),
-              pillMarkTypeBuilder: (number) => store.markFor(
-                pillNumberIntoPillSheet: number,
-                pillSheet: pillSheet,
-              ),
-              enabledMarkAnimation: (number) => store.shouldPillMarkAnimation(
-                pillNumberIntoPillSheet: number,
-                pillSheet: pillSheet,
-              ),
-              markSelected: (number) {
-                analytics.logEvent(name: "pill_mark_tapped", parameters: {
-                  "number": number,
-                  "last_taken_pill_number": pillSheet.lastTakenPillNumber,
-                  "today_pill_number": pillSheet.todayPillNumber,
-                });
-
-                effectAfterTaken(
-                  context: context,
-                  taken: store.takenWithPillNumber(
+        children: pillSheetGroup.pillSheets
+            .map((pillSheet) {
+              final view = Padding(
+                padding: const EdgeInsets.only(left: 20, right: 20),
+                child: PillSheetView(
+                  firstWeekday:
+                      WeekdayFunctions.weekdayFromDate(pillSheet.beginingDate),
+                  pillSheetType: pillSheet.pillSheetType,
+                  doneStateBuilder: (number) => store.isDone(
                       pillNumberIntoPillSheet: number, pillSheet: pillSheet),
-                  store: store,
-                );
-              },
-              premiumMarkBuilder: () {
-                if (!(state.isPremium || state.isTrial)) {
-                  return null;
-                }
-                if (state.appearanceMode != PillSheetAppearanceMode.date) {
-                  return null;
-                }
-                final pillSheet = state.pillSheetGroup?.activedPillSheet;
-                if (pillSheet == null) {
-                  return null;
-                }
-                return (pillMarkNumber) {
-                  final date = pillSheet.beginingDate
-                      .add(Duration(days: pillMarkNumber - 1));
-                  return PremiumPillMarkModel(
-                    date: date,
-                    pillNumberForMenstruationBegin:
-                        setting.pillNumberForFromMenstruation,
-                    menstruationDuration: setting.durationMenstruation,
-                    maxPillNumber: pillSheet.pillSheetType.totalCount,
-                  );
-                };
-              }(),
-            );
-          }).toList(),
-        ),
+                  pillMarkTypeBuilder: (number) => store.markFor(
+                    pillNumberIntoPillSheet: number,
+                    pillSheet: pillSheet,
+                  ),
+                  enabledMarkAnimation: (number) =>
+                      store.shouldPillMarkAnimation(
+                    pillNumberIntoPillSheet: number,
+                    pillSheet: pillSheet,
+                  ),
+                  markSelected: (number) {
+                    analytics.logEvent(name: "pill_mark_tapped", parameters: {
+                      "number": number,
+                      "last_taken_pill_number": pillSheet.lastTakenPillNumber,
+                      "today_pill_number": pillSheet.todayPillNumber,
+                    });
+
+                    effectAfterTaken(
+                      context: context,
+                      taken: store.takenWithPillNumber(
+                          pillNumberIntoPillSheet: number,
+                          pillSheet: pillSheet),
+                      store: store,
+                    );
+                  },
+                  premiumMarkBuilder: () {
+                    if (!(state.isPremium || state.isTrial)) {
+                      return null;
+                    }
+                    if (state.appearanceMode != PillSheetAppearanceMode.date) {
+                      return null;
+                    }
+                    final pillSheet = state.pillSheetGroup?.activedPillSheet;
+                    if (pillSheet == null) {
+                      return null;
+                    }
+                    return (pillMarkNumber) {
+                      final date = pillSheet.beginingDate
+                          .add(Duration(days: pillMarkNumber - 1));
+                      return PremiumPillMarkModel(
+                        date: date,
+                        pillNumberForMenstruationBegin:
+                            setting.pillNumberForFromMenstruation,
+                        menstruationDuration: setting.durationMenstruation,
+                        maxPillNumber: pillSheet.pillSheetType.totalCount,
+                      );
+                    };
+                  }(),
+                ),
+              );
+              return [view];
+//                if (pillSheet.groupIndex == 0) {
+//                  return [view, SizedBox(width: 30)];
+//                } else if (pillSheet.groupIndex ==
+//                    pillSheetGroup.pillSheets.length - 1) {
+//                  return [SizedBox(width: 30), view];
+//                } else {
+//                  return [view];
+//                }
+            })
+            .expand((element) => element)
+            .toList(),
       ),
     );
   }
