@@ -3,6 +3,7 @@ import 'package:pilll/domain/record/record_page_state.dart';
 import 'package:pilll/domain/record/record_page_store.dart';
 import 'package:pilll/entity/pill_mark_type.dart';
 import 'package:pilll/entity/pill_sheet.dart';
+import 'package:pilll/entity/pill_sheet_group.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/entity/setting.dart';
 import 'package:pilll/entity/user.dart';
@@ -65,16 +66,12 @@ void main() {
         durationMenstruation: 4,
         isOnReminder: true,
       );
-      final state =
-          RecordPageState(entity: pillSheetEntity, setting: settingEntity);
+      final pillSheetGroup =
+          PillSheetGroup(pillSheetIDs: ["1"], pillSheets: [pillSheetEntity]);
+      final state = RecordPageState(
+          pillSheetGroup: pillSheetGroup, setting: settingEntity);
 
       final service = MockPillSheetService();
-      when(service.fetchActivePillSheet())
-          .thenAnswer((realInvocation) => Future.value(state.entity));
-      when(service.fetchAll()).thenAnswer((realInvocation) => Future.value([]));
-      when(service.fetchListWithMax(2)).thenAnswer((_) => Future.value([]));
-      when(service.subscribeForLatestPillSheet())
-          .thenAnswer((realInvocation) => Stream.empty());
       final batch = MockBatchFactory();
       final settingService = MockSettingService();
       when(settingService.fetch())
@@ -93,6 +90,11 @@ void main() {
           .thenAnswer((realInvocation) => Stream.empty());
       final pillSheetModifedHistoryService =
           MockPillSheetModifiedHistoryService();
+      final pillSheetGroupService = MockPillSheetGroupService();
+      when(pillSheetGroupService.fetchLatest())
+          .thenAnswer((realInvocation) => Future.value(pillSheetGroup));
+      when(pillSheetGroupService.subscribeForLatest())
+          .thenAnswer((realInvocation) => Stream.empty());
 
       final store = RecordPageStore(
         batch,
@@ -101,9 +103,11 @@ void main() {
         userService,
         authService,
         pillSheetModifedHistoryService,
+        pillSheetGroupService,
       );
+
       await waitForResetStoreState();
-      expect(state.entity?.todayPillNumber, equals(1));
+      expect(state.pillSheetGroup?.pillSheets.first.todayPillNumber, equals(1));
 
       final expected = DateTime.parse("2020-11-13");
       final actual = store.calcBeginingDateFromNextTodayPillNumber(10);
@@ -127,16 +131,12 @@ void main() {
       durationMenstruation: 4,
       isOnReminder: true,
     );
+    final pillSheetGroup =
+        PillSheetGroup(pillSheetIDs: ["1"], pillSheets: [pillSheetEntity]);
     final state =
-        RecordPageState(entity: pillSheetEntity, setting: settingEntity);
+        RecordPageState(pillSheetGroup: pillSheetGroup, setting: settingEntity);
 
     final service = MockPillSheetService();
-    when(service.fetchActivePillSheet())
-        .thenAnswer((realInvocation) => Future.value(state.entity));
-    when(service.fetchAll()).thenAnswer((realInvocation) => Future.value([]));
-    when(service.fetchListWithMax(2)).thenAnswer((_) => Future.value([]));
-    when(service.subscribeForLatestPillSheet())
-        .thenAnswer((realInvocation) => Stream.empty());
     final batch = MockBatchFactory();
 
     final settingService = MockSettingService();
@@ -156,6 +156,11 @@ void main() {
         .thenAnswer((realInvocation) => Stream.empty());
     final pillSheetModifedHistoryService =
         MockPillSheetModifiedHistoryService();
+    final pillSheetGroupService = MockPillSheetGroupService();
+    when(pillSheetGroupService.fetchLatest())
+        .thenAnswer((realInvocation) => Future.value(pillSheetGroup));
+    when(pillSheetGroupService.subscribeForLatest())
+        .thenAnswer((realInvocation) => Stream.empty());
 
     final store = RecordPageStore(
       batch,
@@ -164,10 +169,11 @@ void main() {
       userService,
       authService,
       pillSheetModifedHistoryService,
+      pillSheetGroupService,
     );
 
     await waitForResetStoreState();
-    expect(state.entity?.todayPillNumber, equals(3));
+    expect(state.pillSheetGroup?.pillSheets.first.todayPillNumber, equals(3));
 
     final expected = DateTime.parse("2020-11-22");
     final actual = store.calcBeginingDateFromNextTodayPillNumber(2);
@@ -192,17 +198,12 @@ void main() {
         durationMenstruation: 4,
         isOnReminder: true,
       );
-      final state =
-          RecordPageState(entity: pillSheetEntity, setting: settingEntity);
+      final pillSheetGroup =
+          PillSheetGroup(pillSheetIDs: ["1"], pillSheets: [pillSheetEntity]);
+      final state = RecordPageState(
+          pillSheetGroup: pillSheetGroup, setting: settingEntity);
 
       final service = MockPillSheetService();
-      when(service.fetchActivePillSheet())
-          .thenAnswer((realInvocation) => Future.value(state.entity));
-      when(service.fetchAll()).thenAnswer((realInvocation) => Future.value([]));
-      when(service.fetchListWithMax(2))
-          .thenAnswer((realInvocation) => Future.value([]));
-      when(service.subscribeForLatestPillSheet())
-          .thenAnswer((realInvocation) => Stream.empty());
       final batch = MockBatchFactory();
       final settingService = MockSettingService();
       when(settingService.fetch())
@@ -222,7 +223,11 @@ void main() {
           .thenAnswer((realInvocation) => Stream.empty());
       final pillSheetModifedHistoryService =
           MockPillSheetModifiedHistoryService();
-
+      final pillSheetGroupService = MockPillSheetGroupService();
+      when(pillSheetGroupService.fetchLatest())
+          .thenAnswer((realInvocation) => Future.value(pillSheetGroup));
+      when(pillSheetGroupService.subscribeForLatest())
+          .thenAnswer((realInvocation) => Stream.empty());
       final store = RecordPageStore(
         batch,
         service,
@@ -230,10 +235,11 @@ void main() {
         userService,
         authService,
         pillSheetModifedHistoryService,
+        pillSheetGroupService,
       );
 
       await waitForResetStoreState();
-      expect(state.entity?.allTaken, isTrue);
+      expect(state.pillSheetGroup?.pillSheets.first.allTaken, isTrue);
       expect(store.markFor(1), PillMarkType.done);
       expect(store.markFor(2), PillMarkType.done);
       expect(store.markFor(3), PillMarkType.done);
@@ -257,17 +263,12 @@ void main() {
         durationMenstruation: 4,
         isOnReminder: true,
       );
-      final state =
-          RecordPageState(entity: pillSheetEntity, setting: settingEntity);
+      final pillSheetGroup =
+          PillSheetGroup(pillSheetIDs: ["1"], pillSheets: [pillSheetEntity]);
+      final state = RecordPageState(
+          pillSheetGroup: pillSheetGroup, setting: settingEntity);
 
       final service = MockPillSheetService();
-      when(service.fetchActivePillSheet())
-          .thenAnswer((realInvocation) => Future.value(state.entity));
-      when(service.fetchAll()).thenAnswer((realInvocation) => Future.value([]));
-      when(service.fetchListWithMax(2))
-          .thenAnswer((realInvocation) => Future.value([]));
-      when(service.subscribeForLatestPillSheet())
-          .thenAnswer((realInvocation) => Stream.empty());
       final batch = MockBatchFactory();
       final settingService = MockSettingService();
       when(settingService.fetch())
@@ -287,6 +288,11 @@ void main() {
           .thenAnswer((realInvocation) => Stream.empty());
       final pillSheetModifedHistoryService =
           MockPillSheetModifiedHistoryService();
+      final pillSheetGroupService = MockPillSheetGroupService();
+      when(pillSheetGroupService.fetchLatest())
+          .thenAnswer((realInvocation) => Future.value(pillSheetGroup));
+      when(pillSheetGroupService.subscribeForLatest())
+          .thenAnswer((realInvocation) => Stream.empty());
 
       final store = RecordPageStore(
         batch,
@@ -295,10 +301,11 @@ void main() {
         userService,
         authService,
         pillSheetModifedHistoryService,
+        pillSheetGroupService,
       );
 
       await waitForResetStoreState();
-      expect(state.entity?.allTaken, isFalse);
+      expect(state.pillSheetGroup?.pillSheets.first.allTaken, isFalse);
       expect(store.markFor(1), PillMarkType.done);
       expect(store.markFor(2), PillMarkType.done);
       expect(store.markFor(3), PillMarkType.normal);
@@ -324,16 +331,12 @@ void main() {
         durationMenstruation: 4,
         isOnReminder: true,
       );
-      final state =
-          RecordPageState(entity: pillSheetEntity, setting: settingEntity);
+      final pillSheetGroup =
+          PillSheetGroup(pillSheetIDs: ["1"], pillSheets: [pillSheetEntity]);
+      final state = RecordPageState(
+          pillSheetGroup: pillSheetGroup, setting: settingEntity);
 
       final service = MockPillSheetService();
-      when(service.fetchActivePillSheet())
-          .thenAnswer((realInvocation) => Future.value(state.entity));
-      when(service.fetchListWithMax(2)).thenAnswer((_) => Future.value([]));
-      when(service.fetchAll()).thenAnswer((realInvocation) => Future.value([]));
-      when(service.subscribeForLatestPillSheet())
-          .thenAnswer((realInvocation) => Stream.empty());
       final batch = MockBatchFactory();
       final settingService = MockSettingService();
       when(settingService.fetch())
@@ -353,6 +356,11 @@ void main() {
           .thenAnswer((realInvocation) => Stream.empty());
       final pillSheetModifedHistoryService =
           MockPillSheetModifiedHistoryService();
+      final pillSheetGroupService = MockPillSheetGroupService();
+      when(pillSheetGroupService.fetchLatest())
+          .thenAnswer((realInvocation) => Future.value(pillSheetGroup));
+      when(pillSheetGroupService.subscribeForLatest())
+          .thenAnswer((realInvocation) => Stream.empty());
 
       final store = RecordPageStore(
         batch,
@@ -361,10 +369,11 @@ void main() {
         userService,
         authService,
         pillSheetModifedHistoryService,
+        pillSheetGroupService,
       );
 
       await waitForResetStoreState();
-      expect(state.entity?.allTaken, isTrue);
+      expect(state.pillSheetGroup?.pillSheets.first.allTaken, isTrue);
       for (int i = 1; i <= pillSheetEntity.pillSheetType.totalCount; i++) {
         expect(store.shouldPillMarkAnimation(i), isFalse);
       }
@@ -387,17 +396,13 @@ void main() {
         durationMenstruation: 4,
         isOnReminder: true,
       );
-      final state =
-          RecordPageState(entity: pillSheetEntity, setting: settingEntity);
+      final pillSheetGroup =
+          PillSheetGroup(pillSheetIDs: ["1"], pillSheets: [pillSheetEntity]);
+
+      final state = RecordPageState(
+          pillSheetGroup: pillSheetGroup, setting: settingEntity);
 
       final service = MockPillSheetService();
-      when(service.fetchActivePillSheet())
-          .thenAnswer((realInvocation) => Future.value(state.entity));
-      when(service.fetchAll()).thenAnswer((realInvocation) => Future.value([]));
-      when(service.fetchListWithMax(2))
-          .thenAnswer((realInvocation) => Future.value([]));
-      when(service.subscribeForLatestPillSheet())
-          .thenAnswer((realInvocation) => Stream.empty());
       final batch = MockBatchFactory();
       final settingService = MockSettingService();
       when(settingService.fetch())
@@ -417,6 +422,11 @@ void main() {
           .thenAnswer((realInvocation) => Stream.empty());
       final pillSheetModifedHistoryService =
           MockPillSheetModifiedHistoryService();
+      final pillSheetGroupService = MockPillSheetGroupService();
+      when(pillSheetGroupService.fetchLatest())
+          .thenAnswer((realInvocation) => Future.value(pillSheetGroup));
+      when(pillSheetGroupService.subscribeForLatest())
+          .thenAnswer((realInvocation) => Stream.empty());
 
       final store = RecordPageStore(
         batch,
@@ -425,10 +435,11 @@ void main() {
         userService,
         authService,
         pillSheetModifedHistoryService,
+        pillSheetGroupService,
       );
 
       await waitForResetStoreState();
-      expect(state.entity?.allTaken, isFalse);
+      expect(state.pillSheetGroup?.pillSheets.first.allTaken, isFalse);
       expect(store.shouldPillMarkAnimation(3), isTrue);
     });
   });
