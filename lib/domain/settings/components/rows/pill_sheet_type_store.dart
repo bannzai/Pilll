@@ -68,13 +68,4 @@ class PillSheetTypeStateStore extends StateNotifier<PillSheetTypeState> {
       );
     }
   }
-
-  bool shouldShowDiscardDialog(PillSheetType pillSheetType) {
-    final pillSheetEntity = state.pillSheet;
-    assert(pillSheetEntity != null);
-    if (pillSheetEntity == null) {
-      return false;
-    }
-    return pillSheetEntity.todayPillNumber > pillSheetType.totalCount;
-  }
 }
