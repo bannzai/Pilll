@@ -452,12 +452,6 @@ class MockRecordPageStore extends _i1.Mock implements _i25.RecordPageStore {
           returnValue: Future<void>.value(),
           returnValueForMissingStub: Future.value()) as _i17.Future<void>);
   @override
-  DateTime calcBeginingDateFromNextTodayPillNumber(int? pillNumber) =>
-      (super.noSuchMethod(
-          Invocation.method(
-              #calcBeginingDateFromNextTodayPillNumber, [pillNumber]),
-          returnValue: _FakeDateTime()) as DateTime);
-  @override
   _i17.Future<void> modifyBeginingDate(int? pillNumber) =>
       (super.noSuchMethod(Invocation.method(#modifyBeginingDate, [pillNumber]),
           returnValue: Future<void>.value(),
