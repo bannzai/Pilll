@@ -285,14 +285,6 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
     state = state.copyWith(pillSheetGroup: updatedPillSheetGroup);
   }
 
-  DateTime calcBeginingDateFromNextTodayPillNumber(int pillNumber) {
-    final entity = state.pillSheetGroup?.activedPillSheet;
-    if (entity == null) {
-      throw FormatException("pill sheet not found");
-    }
-    return calcBeginingDateFromNextTodayPillNumberFunction(entity, pillNumber);
-  }
-
   Future<void> modifyBeginingDate(int pillNumber) async {
     final pillSheetGroup = state.pillSheetGroup;
     if (pillSheetGroup == null) {
@@ -400,23 +392,34 @@ PillSheetGroup modifyBeginingDateFunction({
   required PillSheetGroup pillSheetGroup,
   required int pillNumber,
 }) {
-  final updatedPillSheet = activedPillSheet.copyWith(
-    beginingDate: calcBeginingDateFromNextTodayPillNumberFunction(
-      activedPillSheet,
-      pillNumber,
-    ),
-  );
-  pillSheetService.update(
-    batch,
-    updatedPillSheet,
-  );
+  if (pillNumber == activedPillSheet.todayPillNumber) {
+    return pillSheetGroup;
+  }
+  final distance = pillNumber - activedPillSheet.todayPillNumber;
+
+  final affectPillSheets =
+      pillSheetGroup.pillSheets.sublist(activedPillSheet.groupIndex);
+  affectPillSheets.forEach((_pillSheet) {
+    final PillSheet pillSheet;
+    if (_pillSheet.id == activedPillSheet.id) {
+      // NOTE: Updated activedPillSheet is used to pillSheetGroupService.update
+      pillSheet = activedPillSheet;
+    } else {
+      pillSheet = _pillSheet;
+    }
+
+    final updatedPillSheet = pillSheet.copyWith(
+      beginingDate: pillSheet.beginingDate.subtract(Duration(days: distance)),
+    );
+    pillSheetService.update(batch, updatedPillSheet);
+  });
 
   final history = PillSheetModifiedHistoryServiceActionFactory
       .createChangedPillNumberAction(
-          before: activedPillSheet, after: updatedPillSheet);
+          before: activedPillSheet, after: activedPillSheet);
   pillSheetModifiedHistoryService.add(batch, history);
 
-  final updatedPillSheetGroup = pillSheetGroup.replaced(updatedPillSheet);
+  final updatedPillSheetGroup = pillSheetGroup.replaced(activedPillSheet);
   pillSheetGroupService.update(batch, updatedPillSheetGroup);
 
   return updatedPillSheetGroup;
