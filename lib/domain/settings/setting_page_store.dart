@@ -197,13 +197,13 @@ class SettingStateStore extends StateNotifier<SettingState> {
 
     final batch = _batchFactory.batch();
     final updated = modifyBeginingDateFunction(
-      batch,
-      _pillSheetService,
-      _pillSheetModifiedHistoryService,
-      _pillSheetGroupService,
-      activedPillSheet,
-      pillSheetGroup,
-      pillNumber,
+      batch: batch,
+      pillSheetService: _pillSheetService,
+      pillSheetModifiedHistoryService: _pillSheetModifiedHistoryService,
+      pillSheetGroupService: _pillSheetGroupService,
+      activedPillSheet: activedPillSheet,
+      pillSheetGroup: pillSheetGroup,
+      pillNumber: pillNumber,
     );
     await batch.commit();
 
