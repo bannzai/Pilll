@@ -395,11 +395,13 @@ PillSheetGroup modifyBeginingDateFunction({
   if (pillNumber == activedPillSheet.todayPillNumber) {
     return pillSheetGroup;
   }
+  var updatedPillSheetGroup = pillSheetGroup;
   final distance = pillNumber - activedPillSheet.todayPillNumber;
+  pillSheetGroup.pillSheets.forEach((_pillSheet) {
+    if (_pillSheet.groupIndex < activedPillSheet.groupIndex) {
+      return;
+    }
 
-  final affectPillSheets =
-      pillSheetGroup.pillSheets.sublist(activedPillSheet.groupIndex);
-  affectPillSheets.forEach((_pillSheet) {
     final PillSheet pillSheet;
     if (_pillSheet.id == activedPillSheet.id) {
       // NOTE: Updated activedPillSheet is used to pillSheetGroupService.update
@@ -412,6 +414,7 @@ PillSheetGroup modifyBeginingDateFunction({
       beginingDate: pillSheet.beginingDate.subtract(Duration(days: distance)),
     );
     pillSheetService.update(batch, updatedPillSheet);
+    updatedPillSheetGroup = updatedPillSheetGroup.replaced(updatedPillSheet);
   });
 
   final history = PillSheetModifiedHistoryServiceActionFactory
@@ -419,7 +422,6 @@ PillSheetGroup modifyBeginingDateFunction({
           before: activedPillSheet, after: activedPillSheet);
   pillSheetModifiedHistoryService.add(batch, history);
 
-  final updatedPillSheetGroup = pillSheetGroup.replaced(activedPillSheet);
   pillSheetGroupService.update(batch, updatedPillSheetGroup);
 
   return updatedPillSheetGroup;
