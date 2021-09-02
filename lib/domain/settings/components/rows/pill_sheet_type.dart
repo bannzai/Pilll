@@ -4,7 +4,7 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/analytics.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/organisms/pill/pill_sheet_type_select_page.dart';
-import 'package:pilll/components/page/discard_dialog.dart';
+import 'package:pilll/components/page/ok_dialog.dart';
 import 'package:pilll/domain/settings/components/rows/pill_sheet_type_store.dart';
 import 'package:pilll/domain/settings/setting_page_state.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
@@ -21,6 +21,7 @@ class PillSheetTypeRow extends HookWidget {
   Widget build(BuildContext context) {
     final store = useProvider(pillSheetTypeStoreProvider(settingState));
     final state = useProvider(pillSheetTypeStoreProvider(settingState).state);
+    final latestPillSheetGroup = settingState.latestPillSheetGroup;
     final pillSheetType = state.setting?.pillSheetType;
     assert(pillSheetType != null);
     if (pillSheetType == null) {
@@ -38,24 +39,19 @@ class PillSheetTypeRow extends HookWidget {
             title: "ピルシートタイプ",
             backButtonIsHidden: false,
             selected: (type) async {
-              if (store.shouldShowDiscardDialog(type)) {
-                showDialog(
-                  context: context,
-                  builder: (_) {
-                    return DiscardDialog(
-                        title: "現在のピルシートが削除されます",
-                        message: '''
-選択したピルシート(${type.fullName})に変更する場合、現在のピルシートは削除されます。削除後、ピル画面から新しいピルシートを作成すると${type.fullName}で開始されます。
-現在のピルシートを削除してピルシートのタイプを変更しますか？
-                              ''',
-                        doneButtonText: "変更する",
-                        done: () async {
-                          await _modifyProcess(context, store, type);
-                        });
-                  },
+              if (latestPillSheetGroup != null) {
+                final word = latestPillSheetGroup.pillSheets.length == 1
+                    ? "ピルシート"
+                    : "ピルシートグループ";
+                showOKDialog(
+                  context,
+                  title: "ピルシートタイプを変更するには",
+                  message:
+                      "現在進行中$wordがある場合はピルシートタイプを変更できません。$wordを破棄した後にピルシートタイプの変更をお試しください",
                 );
               } else {
-                await _modifyProcess(context, store, type);
+                await store.modifyPillSheetType(pillSheetType);
+                Navigator.pop(context);
               }
             },
             done: null,
@@ -66,14 +62,5 @@ class PillSheetTypeRow extends HookWidget {
         );
       },
     );
-  }
-
-  Future<void> _modifyProcess(
-    BuildContext context,
-    PillSheetTypeStateStore store,
-    PillSheetType pillSheetType,
-  ) async {
-    await store.modifyPillSheetType(pillSheetType);
-    Navigator.pop(context);
   }
 }
