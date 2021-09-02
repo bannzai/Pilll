@@ -55,7 +55,6 @@ dependencies:
   google_sign_in: ^5.0.4
   purchases_flutter: ^3.2.2
   connectivity_plus: ^1.1.0
-  carousel_slider: ^4.0.0
 
 dev_dependencies:
   flutter_test:
