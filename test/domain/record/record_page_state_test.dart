@@ -8,7 +8,6 @@ import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/entity/setting.dart';
 import 'package:pilll/entity/user.dart';
 import 'package:pilll/service/day.dart';
-import 'package:pilll/util/datetime/date_compare.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
 import 'package:shared_preferences/shared_preferences.dart';
@@ -47,72 +46,6 @@ void main() {
     TestWidgetsFlutterBinding.ensureInitialized();
     SharedPreferences.setMockInitialValues({});
     analytics = MockAnalytics();
-  });
-  test("pill number changed to past", () async {
-    final mockTodayRepository = MockTodayService();
-    final today = DateTime.parse("2020-11-23");
-    todayRepository = mockTodayRepository;
-    when(mockTodayRepository.today()).thenReturn(today);
-    when(mockTodayRepository.now()).thenReturn(today);
-
-    final pillSheetEntity =
-        PillSheet.create(PillSheetType.pillsheet_21).copyWith(
-      beginingDate: DateTime.parse("2020-11-21"),
-      createdAt: DateTime.parse("2020-11-21"),
-    );
-    final settingEntity = Setting(
-      pillSheetTypeRawPath: PillSheetType.pillsheet_21.rawPath,
-      pillNumberForFromMenstruation: 22,
-      durationMenstruation: 4,
-      isOnReminder: true,
-    );
-    final pillSheetGroup =
-        PillSheetGroup(pillSheetIDs: ["1"], pillSheets: [pillSheetEntity]);
-    final state =
-        RecordPageState(pillSheetGroup: pillSheetGroup, setting: settingEntity);
-
-    final service = MockPillSheetService();
-    final batch = MockBatchFactory();
-
-    final settingService = MockSettingService();
-    when(settingService.fetch())
-        .thenAnswer((realInvocation) => Future.value(settingEntity));
-    when(settingService.subscribe())
-        .thenAnswer((realInvocation) => Stream.empty());
-    final authService = MockAuthService();
-    when(authService.isLinkedApple()).thenReturn(false);
-    when(authService.isLinkedGoogle()).thenReturn(false);
-    when(authService.subscribe())
-        .thenAnswer((realInvocation) => Stream.empty());
-    final userService = MockUserService();
-    when(userService.fetch())
-        .thenAnswer((reaInvocation) => Future.value(_FakeUser()));
-    when(userService.subscribe())
-        .thenAnswer((realInvocation) => Stream.empty());
-    final pillSheetModifedHistoryService =
-        MockPillSheetModifiedHistoryService();
-    final pillSheetGroupService = MockPillSheetGroupService();
-    when(pillSheetGroupService.fetchLatest())
-        .thenAnswer((realInvocation) => Future.value(pillSheetGroup));
-    when(pillSheetGroupService.subscribeForLatest())
-        .thenAnswer((realInvocation) => Stream.empty());
-
-    final store = RecordPageStore(
-      batch,
-      service,
-      settingService,
-      userService,
-      authService,
-      pillSheetModifedHistoryService,
-      pillSheetGroupService,
-    );
-
-    await waitForResetStoreState();
-    expect(state.pillSheetGroup?.pillSheets.first.todayPillNumber, equals(3));
-
-    final expected = DateTime.parse("2020-11-22");
-    final actual = store.calcBeginingDateFromNextTodayPillNumber(2);
-    expect(isSameDay(expected, actual), isTrue);
   });
   group("#markFor", () {
     test("it is alredy taken all", () async {
