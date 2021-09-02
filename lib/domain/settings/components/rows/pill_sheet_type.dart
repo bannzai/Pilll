@@ -34,32 +34,31 @@ class PillSheetTypeRow extends HookWidget {
         analytics.logEvent(
           name: "did_select_changing_pill_sheet_type",
         );
-        Navigator.of(context).push(
-          PillSheetTypeSelectPageRoute.route(
-            title: "ピルシートタイプ",
-            backButtonIsHidden: false,
-            selected: (type) async {
-              if (latestPillSheetGroup != null) {
-                final word = latestPillSheetGroup.pillSheets.length == 1
-                    ? "ピルシート"
-                    : "ピルシートグループ";
-                showOKDialog(
-                  context,
-                  title: "ピルシートタイプを変更するには",
-                  message:
-                      "現在進行中$wordがある場合はピルシートタイプを変更できません。$wordを破棄した後にピルシートタイプの変更をお試しください",
-                );
-              } else {
+        if (latestPillSheetGroup != null) {
+          final word = latestPillSheetGroup.pillSheets.length == 1
+              ? "ピルシート"
+              : "ピルシートグループ";
+          showOKDialog(
+            context,
+            title: "ピルシートタイプを変更するには",
+            message: "現在服用中の$wordを破棄した後にピルシートタイプの変更をお試しください",
+          );
+        } else {
+          Navigator.of(context).push(
+            PillSheetTypeSelectPageRoute.route(
+              title: "ピルシートタイプ",
+              backButtonIsHidden: false,
+              selected: (type) async {
                 await store.modifyPillSheetType(pillSheetType);
                 Navigator.pop(context);
-              }
-            },
-            done: null,
-            doneButtonText: "",
-            selectedPillSheetType: pillSheetType,
-            signinAccount: null,
-          ),
-        );
+              },
+              done: null,
+              doneButtonText: "",
+              selectedPillSheetType: pillSheetType,
+              signinAccount: null,
+            ),
+          );
+        }
       },
     );
   }
