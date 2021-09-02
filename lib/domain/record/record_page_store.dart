@@ -305,13 +305,13 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
 
     final batch = _batchFactory.batch();
     final updated = modifyBeginingDateFunction(
-      batch,
-      _pillSheetService,
-      _pillSheetModifiedHistoryService,
-      _pillSheetGroupService,
-      activedPillSheet,
-      pillSheetGroup,
-      pillNumber,
+      batch: batch,
+      pillSheetService: _pillSheetService,
+      pillSheetModifiedHistoryService: _pillSheetModifiedHistoryService,
+      pillSheetGroupService: _pillSheetGroupService,
+      activedPillSheet: activedPillSheet,
+      pillSheetGroup: pillSheetGroup,
+      pillNumber: pillNumber,
     );
     await batch.commit();
 
@@ -391,29 +391,29 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
   }
 }
 
-PillSheetGroup modifyBeginingDateFunction(
-  WriteBatch batch,
-  PillSheetService service,
-  PillSheetModifiedHistoryService pillSheetModifiedHistoryService,
-  PillSheetGroupService pillSheetGroupService,
-  PillSheet pillSheet,
-  PillSheetGroup pillSheetGroup,
-  int pillNumber,
-) {
-  final updatedPillSheet = pillSheet.copyWith(
+PillSheetGroup modifyBeginingDateFunction({
+  required WriteBatch batch,
+  required PillSheetService pillSheetService,
+  required PillSheetModifiedHistoryService pillSheetModifiedHistoryService,
+  required PillSheetGroupService pillSheetGroupService,
+  required PillSheet activedPillSheet,
+  required PillSheetGroup pillSheetGroup,
+  required int pillNumber,
+}) {
+  final updatedPillSheet = activedPillSheet.copyWith(
     beginingDate: calcBeginingDateFromNextTodayPillNumberFunction(
-      pillSheet,
+      activedPillSheet,
       pillNumber,
     ),
   );
-  service.update(
+  pillSheetService.update(
     batch,
     updatedPillSheet,
   );
 
   final history = PillSheetModifiedHistoryServiceActionFactory
       .createChangedPillNumberAction(
-          before: pillSheet, after: updatedPillSheet);
+          before: activedPillSheet, after: updatedPillSheet);
   pillSheetModifiedHistoryService.add(batch, history);
 
   final updatedPillSheetGroup = pillSheetGroup.replaced(updatedPillSheet);
