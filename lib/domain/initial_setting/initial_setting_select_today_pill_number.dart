@@ -2,7 +2,7 @@ import 'package:pilll/analytics.dart';
 import 'package:pilll/store/initial_setting.dart';
 import 'package:pilll/components/atoms/buttons.dart';
 import 'package:pilll/components/atoms/color.dart';
-import 'package:pilll/domain/initial_setting/initial_setting_3_page.dart';
+import 'package:pilll/domain/initial_setting/initial_setting_setting_menstruation.dart';
 import 'package:pilll/components/organisms/pill/pill_sheet.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
@@ -78,8 +78,9 @@ class InitialSettingSelectTodayPillNumber extends HookWidget {
                               (model) => model.copyWith(todayPillNumber: null));
                           analytics.logEvent(
                               name: "selected_unknown_initial_setting_2");
-                          Navigator.of(context)
-                              .push(InitialSetting3PageRoute.route());
+                          Navigator.of(context).push(
+                              InitialSettingSettingMenstruationPageRoute
+                                  .route());
                         },
                         text: "まだ分からない",
                       ),
@@ -95,8 +96,9 @@ class InitialSettingSelectTodayPillNumber extends HookWidget {
                         ? null
                         : () {
                             analytics.logEvent(name: "done_initial_setting_2");
-                            Navigator.of(context)
-                                .push(InitialSetting3PageRoute.route());
+                            Navigator.of(context).push(
+                                InitialSettingSettingMenstruationPageRoute
+                                    .route());
                           },
                   ),
                 ),
