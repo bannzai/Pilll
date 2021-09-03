@@ -12,8 +12,8 @@ import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:intl/intl.dart';
 
-class InitialSetting2Page extends HookWidget {
-  const InitialSetting2Page({Key? key}) : super(key: key);
+class InitialSettingSelectTodayPillNumber extends HookWidget {
+  const InitialSettingSelectTodayPillNumber({Key? key}) : super(key: key);
 
   String todayString() {
     return DateFormat.yMEd('ja').format(today());
@@ -141,11 +141,12 @@ class ExplainPillNumber extends HookWidget {
   }
 }
 
-extension InitialSetting2PageRoute on InitialSetting2Page {
+extension InitialSettingSelectTodayPillNumberRoute
+    on InitialSettingSelectTodayPillNumber {
   static Route<dynamic> route() {
     return MaterialPageRoute(
-      settings: RouteSettings(name: "InitialSetting2Page"),
-      builder: (_) => InitialSetting2Page(),
+      settings: RouteSettings(name: "InitialSettingSelectTodayPillNumber"),
+      builder: (_) => InitialSettingSelectTodayPillNumber(),
     );
   }
 }
