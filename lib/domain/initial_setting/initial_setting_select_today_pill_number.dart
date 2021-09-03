@@ -63,7 +63,7 @@ class InitialSettingSelectTodayPillNumberPage extends HookWidget {
                         enabledMarkAnimation: null,
                         markSelected: (number) {
                           analytics.logEvent(
-                              name: "selected_number_initial_setting_2",
+                              name: "selected_today_number_initial_setting",
                               parameters: {"pill_number": number});
                           store.modify((model) =>
                               model.copyWith(todayPillNumber: number));
@@ -77,7 +77,7 @@ class InitialSettingSelectTodayPillNumberPage extends HookWidget {
                           store.modify(
                               (model) => model.copyWith(todayPillNumber: null));
                           analytics.logEvent(
-                              name: "selected_unknown_initial_setting_2");
+                              name: "unknown_number_initial_setting");
                           Navigator.of(context).push(
                               InitialSettingMenstruationPageRoute.route());
                         },
@@ -94,7 +94,8 @@ class InitialSettingSelectTodayPillNumberPage extends HookWidget {
                     onPressed: state.entity.todayPillNumber == null
                         ? null
                         : () {
-                            analytics.logEvent(name: "done_initial_setting_2");
+                            analytics.logEvent(
+                                name: "done_today_number_initial_setting");
                             Navigator.of(context).push(
                                 InitialSettingMenstruationPageRoute.route());
                           },

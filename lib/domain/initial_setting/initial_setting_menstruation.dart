@@ -17,7 +17,7 @@ class InitialSettingMenstruationPage extends HookWidget {
       title: "3/4",
       doneText: "次へ",
       done: () {
-        analytics.logEvent(name: "done_initial_setting_3");
+        analytics.logEvent(name: "done_on_initial_setting_menstruation");
         Navigator.of(context)
             .push(InitialSettingReminderTimesPageRoute.route());
       },
@@ -28,12 +28,12 @@ class InitialSettingMenstruationPage extends HookWidget {
         pillSheetType: state.entity.pillSheetType!,
       ),
       fromMenstructionDidDecide: (selectedFromMenstruction) {
-        analytics.logEvent(name: "decided_from_initial_setting_3");
+        analytics.logEvent(name: "from_menstruation_initial_setting");
         store.modify((model) =>
             model.copyWith(fromMenstruation: selectedFromMenstruction));
       },
       durationMenstructionDidDecide: (selectedDurationMenstruation) {
-        analytics.logEvent(name: "decided_duration_initial_setting_3");
+        analytics.logEvent(name: "duration_menstruation_initial_setting");
         store.modify((model) =>
             model.copyWith(durationMenstruation: selectedDurationMenstruation));
       },
