@@ -1,98 +1,16 @@
 import 'package:pilll/analytics.dart';
 import 'package:pilll/router/router.dart';
-import 'package:pilll/state/initial_setting.dart';
 import 'package:pilll/store/initial_setting.dart';
 import 'package:pilll/components/atoms/buttons.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
-import 'package:pilll/util/datetime/day.dart';
-import 'package:pilll/util/formatter/date_time_formatter.dart';
-import 'package:pilll/util/toolbar/time_picker.dart';
 import 'package:flutter/cupertino.dart';
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:url_launcher/url_launcher.dart';
 
 class InitialSettingPillSheetCountPage extends HookWidget {
-  void _showDurationModalSheet(
-    BuildContext context,
-    int index,
-    InitialSettingState state,
-    InitialSettingStateStore store,
-  ) {
-    analytics.logEvent(name: "show_initial_setting_reminder_picker");
-    final reminderDateTime = state.reminderTimeOrDefault(index);
-    final n = now();
-    DateTime initialDateTime = reminderDateTime != null
-        ? reminderDateTime
-        : DateTime(n.year, n.month, n.day, 22, 0, 0);
-    showModalBottomSheet(
-      context: context,
-      builder: (BuildContext context) {
-        return TimePicker(
-          initialDateTime: initialDateTime,
-          done: (dateTime) {
-            analytics.logEvent(
-                name: "selected_date_initial_setting_4",
-                parameters: {"hour": dateTime.hour, "minute": dateTime.minute});
-            store.setReminderTime(index, dateTime.hour, dateTime.minute);
-            Navigator.pop(context);
-          },
-        );
-      },
-    );
-  }
-
-  Widget _form(
-    BuildContext context,
-    InitialSettingStateStore store,
-    InitialSettingState state,
-    int index,
-  ) {
-    final reminderTime = state.reminderTimeOrDefault(index);
-    final formValue = reminderTime == null
-        ? "--:--"
-        : DateTimeFormatter.militaryTime(reminderTime);
-    return Padding(
-      padding: const EdgeInsets.fromLTRB(10, 0, 10, 0),
-      child: Column(
-        children: [
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              SvgPicture.asset("images/alerm.svg"),
-              Text("通知${index + 1}",
-                  style: FontType.assisting.merge(TextColorStyle.main))
-            ],
-          ),
-          SizedBox(height: 8),
-          GestureDetector(
-            onTap: () => _showDurationModalSheet(context, index, state, store),
-            child: Container(
-              width: 81,
-              height: 48,
-              decoration: BoxDecoration(
-                borderRadius: BorderRadius.all(Radius.circular(4)),
-                border: Border.all(
-                  width: 1,
-                  color: PilllColors.border,
-                ),
-              ),
-              child: Center(
-                child: Text(formValue,
-                    style: FontType.inputNumber.merge(TextColorStyle.gray)),
-              ),
-            ),
-          )
-        ],
-      ),
-    );
-  }
-
   @override
   Widget build(BuildContext context) {
     final store = useProvider(initialSettingStoreProvider);
@@ -105,93 +23,96 @@ class InitialSettingPillSheetCountPage extends HookWidget {
           onPressed: () => Navigator.of(context).pop(),
         ),
         title: Text(
-          "4/4",
+          "2/5",
           style: TextStyle(color: TextColor.black),
         ),
         backgroundColor: PilllColors.white,
       ),
       body: SafeArea(
         child: Container(
-          child: Center(
-            child: Column(
-              children: <Widget>[
-                SizedBox(height: 24),
-                Text(
-                  "ピルの飲み忘れ通知",
-                  style: FontType.title.merge(TextColorStyle.main),
-                  textAlign: TextAlign.center,
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            children: [
+              SizedBox(height: 24),
+              Text(
+                "お手元のピルシートの枚数を\n選んでください",
+                style: FontType.title.merge(TextColorStyle.main),
+                textAlign: TextAlign.center,
+              ),
+              SizedBox(height: 80),
+              Container(
+                child: Expanded(
+                  child: GridView.count(
+                    padding: EdgeInsets.symmetric(horizontal: 16),
+                    crossAxisCount: 3,
+                    crossAxisSpacing: 16,
+                    mainAxisSpacing: 16,
+                    childAspectRatio: 97 / 68,
+                    children: List.generate(5, (index) {
+                      final number = index + 1;
+                      return Container(
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(6),
+                          border: Border.all(
+                              width: 2, color: PilllColors.secondary),
+                        ),
+                        child: Center(
+                          child: Text(
+                            "$number",
+                            style: TextStyle(
+                              color: TextColor.main,
+                              fontSize: 18,
+                              fontWeight: FontWeight.w600,
+                              fontFamily: FontFamily.number,
+                            ),
+                          ),
+                        ),
+                      );
+                    }),
+                  ),
                 ),
-                Spacer(),
-                Column(
-                  children: [
-                    Padding(
-                      padding: const EdgeInsets.only(bottom: 36),
-                      child: Row(
-                          mainAxisAlignment: MainAxisAlignment.center,
-                          children: List.generate(3, (index) {
-                            return _form(context, store, state, index);
-                          })),
-                    ),
-                    Text("複数設定しておく事で飲み忘れを防げます",
-                        style: FontType.assisting.merge(TextColorStyle.main)),
-                  ],
-                ),
-                Spacer(),
-                Column(
-                  children: [
-                    RichText(
-                      textAlign: TextAlign.center,
-                      text: TextSpan(
-                        children: [
-                          TextSpan(
-                            text: "プライバシーポリシー",
-                            style: FontType.sSmallSentence
-                                .merge(TextColorStyle.link),
-                            recognizer: TapGestureRecognizer()
-                              ..onTap = () {
-                                launch(
-                                    "https://bannzai.github.io/Pilll/PrivacyPolicy",
-                                    forceSafariVC: true);
-                              },
-                          ),
-                          TextSpan(
-                            text: "と",
-                            style: FontType.sSmallSentence
-                                .merge(TextColorStyle.gray),
-                          ),
-                          TextSpan(
-                            text: "利用規約",
-                            style: FontType.sSmallSentence
-                                .merge(TextColorStyle.link),
-                            recognizer: TapGestureRecognizer()
-                              ..onTap = () {
-                                launch("https://bannzai.github.io/Pilll/Terms",
-                                    forceSafariVC: true);
-                              },
-                          ),
-                          TextSpan(
-                            text: "を読んで\n利用をはじめてください",
-                            style: FontType.sSmallSentence
-                                .merge(TextColorStyle.gray),
-                          ),
-                        ],
+              ),
+              SizedBox(height: 62),
+              Column(
+                children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Text(
+                        "連続服用タイプ",
+                        style: TextStyle(
+                          color: TextColor.main,
+                          fontSize: 14,
+                          fontFamily: FontFamily.japanese,
+                        ),
                       ),
+                      Switch(value: true, onChanged: (isOn) {}),
+                    ],
+                  ),
+                  SizedBox(height: 16),
+                  Text(
+                    "ヤーズフレックス等で連続服用する方は\nオンにしてください",
+                    style: TextStyle(
+                      color: TextColor.main,
+                      fontFamily: FontFamily.japanese,
+                      fontSize: 12,
+                      fontWeight: FontWeight.w400,
                     ),
-                    SizedBox(height: 24),
-                    PrimaryButton(
-                      text: "設定完了",
-                      onPressed: () {
-                        analytics.logEvent(name: "done_initial_setting_4");
-                        store
-                            .register(state.entity.copyWith(isOnReminder: true))
-                            .then((_) => AppRouter.endInitialSetting(context));
-                      },
-                    ),
-                  ],
-                ),
-                SizedBox(height: 35),
-              ],
-            ),
+                  ),
+                ],
+              ),
+              Spacer(),
+              PrimaryButton(
+                text: "次へ",
+                onPressed: () {
+                  analytics.logEvent(name: "done_initial_setting_4");
+                  store
+                      .register(state.entity.copyWith(isOnReminder: true))
+                      .then((_) => AppRouter.endInitialSetting(context));
+                },
+              ),
+              SizedBox(height: 35),
+            ],
           ),
         ),
       ),
