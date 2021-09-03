@@ -10,7 +10,7 @@ import 'package:flutter/material.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/entity/link_account_type.dart';
 
-class InitialSetting1Page extends HookWidget {
+class InitialSettingSelectPillSheetTypePage extends HookWidget {
   @override
   Widget build(BuildContext context) {
     final store = useProvider(initialSettingStoreProvider);
@@ -62,9 +62,11 @@ class InitialSetting1Page extends HookWidget {
   }
 }
 
-extension InitialSetting1PageRoute on InitialSetting1Page {
-  static InitialSetting1Page screen() {
-    analytics.setCurrentScreen(screenName: "InitialSetting1Page");
-    return InitialSetting1Page();
+extension InitialSettingSelectPillSheetType
+    on InitialSettingSelectPillSheetTypePage {
+  static InitialSettingSelectPillSheetTypePage screen() {
+    analytics.setCurrentScreen(
+        screenName: "InitialSettingSelectPillSheetTypePage");
+    return InitialSettingSelectPillSheetTypePage();
   }
 }
