@@ -17,7 +17,7 @@ import 'package:flutter_svg/svg.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-class InitialSetting4Page extends HookWidget {
+class InitialSettingReminderTimesPage extends HookWidget {
   void _showDurationModalSheet(
     BuildContext context,
     int index,
@@ -199,11 +199,12 @@ class InitialSetting4Page extends HookWidget {
   }
 }
 
-extension InitialSetting4PageRoute on InitialSetting4Page {
+extension InitialSettingReminderTimesPageRoute
+    on InitialSettingReminderTimesPage {
   static Route<dynamic> route() {
     return MaterialPageRoute(
-      settings: RouteSettings(name: "InitialSetting4Page"),
-      builder: (_) => InitialSetting4Page(),
+      settings: RouteSettings(name: "InitialSettingReminderTimesPage"),
+      builder: (_) => InitialSettingReminderTimesPage(),
     );
   }
 }
