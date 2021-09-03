@@ -55,16 +55,14 @@ extension AppDelegate {
 
     func configureNotificationActionableButtons() {
         let recordAction = UNNotificationAction(identifier: "RECORD_PILL",
-                                                title: "飲んだ",
-                                                options: UNNotificationActionOptions(rawValue: 0))
+                                                title: "飲んだ")
         let category =
             UNNotificationCategory(identifier: Category.pillReminder.rawValue,
                                    actions: [recordAction],
                                    intentIdentifiers: [],
                                    hiddenPreviewsBodyPlaceholder: "",
                                    options: .customDismissAction)
-        let notificationCenter = UNUserNotificationCenter.current()
-        notificationCenter.setNotificationCategories([category])
+        UNUserNotificationCenter.current().setNotificationCategories([category])
     }
 
     @objc func userNotificationCenter_methodSwizzling(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
@@ -86,6 +84,7 @@ extension AppDelegate {
                 }
             }
         }
+
         switch extractCategory(userInfo: response.notification.request.content.userInfo) {
         case nil:
             return
