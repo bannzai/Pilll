@@ -37,9 +37,15 @@ void main() {
           MockPillSheetModifiedHistoryService();
       when(pillSheetModifedHistoryService.add(batch, any))
           .thenAnswer((_) => Future.value());
+      final pillSheetGroupService = MockPillSheetGroupService();
 
-      final service = InitialSettingService(batchFactory, settingService,
-          pillSheetService, pillSheetModifedHistoryService);
+      final service = InitialSettingService(
+        batchFactory,
+        settingService,
+        pillSheetService,
+        pillSheetModifedHistoryService,
+        pillSheetGroupService,
+      );
       await service.register(initialSetting);
 
       verify(settingService.update(settingEntity));
