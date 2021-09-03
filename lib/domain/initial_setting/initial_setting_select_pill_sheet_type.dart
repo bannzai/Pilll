@@ -30,14 +30,15 @@ class InitialSettingSelectPillSheetTypePage extends HookWidget {
         backButtonIsHidden: true,
         selected: (type) {
           analytics.logEvent(
-              name: "selected_type_initial_setting_1",
+              name: "selected_type_initial_setting",
               parameters: {"pill_sheet_type": type.rawPath});
           store.selectedPillSheetType(type);
         },
         done: state.entity.pillSheetType == null
             ? null
             : () {
-                analytics.logEvent(name: "done_initial_setting_1");
+                analytics.logEvent(
+                    name: "done_initial_setting_pill_sheet_type");
                 Navigator.of(context)
                     .push(InitialSettingSelectTodayPillNumberPageRoute.route());
               },

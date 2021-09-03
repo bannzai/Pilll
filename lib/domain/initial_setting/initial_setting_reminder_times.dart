@@ -37,7 +37,7 @@ class InitialSettingReminderTimesPage extends HookWidget {
           initialDateTime: initialDateTime,
           done: (dateTime) {
             analytics.logEvent(
-                name: "selected_date_initial_setting_4",
+                name: "selected_times_initial_setting",
                 parameters: {"hour": dateTime.hour, "minute": dateTime.minute});
             store.setReminderTime(index, dateTime.hour, dateTime.minute);
             Navigator.pop(context);
@@ -181,7 +181,8 @@ class InitialSettingReminderTimesPage extends HookWidget {
                     PrimaryButton(
                       text: "設定完了",
                       onPressed: () {
-                        analytics.logEvent(name: "done_initial_setting_4");
+                        analytics.logEvent(
+                            name: "done_initial_setting_reminder_times");
                         store
                             .register(state.entity.copyWith(isOnReminder: true))
                             .then((_) => AppRouter.endInitialSetting(context));
