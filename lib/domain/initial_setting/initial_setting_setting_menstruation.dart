@@ -1,6 +1,6 @@
 import 'package:pilll/analytics.dart';
 import 'package:pilll/components/organisms/setting/setting_menstruation_page.dart';
-import 'package:pilll/domain/initial_setting/initial_setting_4_page.dart';
+import 'package:pilll/domain/initial_setting/initial_setting_reminder_times.dart';
 import 'package:pilll/store/initial_setting.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
@@ -18,7 +18,8 @@ class InitialSettingSettingMenstruationPage extends HookWidget {
       doneText: "次へ",
       done: () {
         analytics.logEvent(name: "done_initial_setting_3");
-        Navigator.of(context).push(InitialSetting4PageRoute.route());
+        Navigator.of(context)
+            .push(InitialSettingReminderTimesPageRoute.route());
       },
       pillSheetTotalCount: state.entity.pillSheetType!.totalCount,
       model: SettingMenstruationPageModel(
