@@ -8,7 +8,7 @@ import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 
-class InitialSetting3Page extends HookWidget {
+class InitialSettingSettingMenstruationPage extends HookWidget {
   @override
   Widget build(BuildContext context) {
     final store = useProvider(initialSettingStoreProvider);
@@ -40,11 +40,12 @@ class InitialSetting3Page extends HookWidget {
   }
 }
 
-extension InitialSetting3PageRoute on InitialSetting3Page {
+extension InitialSettingSettingMenstruationPageRoute
+    on InitialSettingSettingMenstruationPage {
   static Route<dynamic> route() {
     return MaterialPageRoute(
-      settings: RouteSettings(name: "InitialSetting3Page"),
-      builder: (_) => InitialSetting3Page(),
+      settings: RouteSettings(name: "InitialSettingSettingMenstruationPage"),
+      builder: (_) => InitialSettingSettingMenstruationPage(),
     );
   }
 }
