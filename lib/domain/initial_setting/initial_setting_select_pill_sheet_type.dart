@@ -1,6 +1,6 @@
 import 'package:pilll/analytics.dart';
 import 'package:pilll/components/page/hud.dart';
-import 'package:pilll/domain/initial_setting/initial_setting_2_page.dart';
+import 'package:pilll/domain/initial_setting/initial_setting_select_today_pill_number.dart';
 import 'package:pilll/components/organisms/pill/pill_sheet_type_select_page.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
@@ -38,7 +38,8 @@ class InitialSettingSelectPillSheetTypePage extends HookWidget {
             ? null
             : () {
                 analytics.logEvent(name: "done_initial_setting_1");
-                Navigator.of(context).push(InitialSetting2PageRoute.route());
+                Navigator.of(context)
+                    .push(InitialSettingSelectTodayPillNumberRoute.route());
               },
         doneButtonText: "次へ",
         selectedPillSheetType: state.entity.pillSheetType,
