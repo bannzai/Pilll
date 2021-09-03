@@ -39,7 +39,7 @@ class InitialSettingSelectPillSheetTypePage extends HookWidget {
             : () {
                 analytics.logEvent(name: "done_initial_setting_1");
                 Navigator.of(context)
-                    .push(InitialSettingSelectTodayPillNumberRoute.route());
+                    .push(InitialSettingSelectTodayPillNumberPageRoute.route());
               },
         doneButtonText: "次へ",
         selectedPillSheetType: state.entity.pillSheetType,
