@@ -37,8 +37,7 @@ class InitialSettingSelectPillSheetTypePage extends HookWidget {
         done: state.pillSheetType == null
             ? null
             : () {
-                analytics.logEvent(
-                    name: "done_initial_setting_pill_sheet_type");
+                analytics.logEvent(name: "next_initial_setting_pillsheet_type");
                 Navigator.of(context)
                     .push(InitialSettingPillSheetCountPageRoute.route());
               },

@@ -1,4 +1,5 @@
 import 'package:pilll/analytics.dart';
+import 'package:pilll/domain/initial_setting/initial_setting_select_today_pill_number.dart';
 import 'package:pilll/router/router.dart';
 import 'package:pilll/domain/initial_setting/initial_setting_store.dart';
 import 'package:pilll/components/atoms/buttons.dart';
@@ -112,9 +113,9 @@ class InitialSettingPillSheetCountPage extends HookWidget {
               PrimaryButton(
                 text: "次へ",
                 onPressed: () async {
-                  analytics.logEvent(name: "done_initial_setting");
-                  await store.register();
-                  AppRouter.endInitialSetting(context);
+                  analytics.logEvent(name: "next_pill_sheet_count");
+                  Navigator.of(context).push(
+                      InitialSettingSelectTodayPillNumberPageRoute.route());
                 },
               ),
               SizedBox(height: 35),
