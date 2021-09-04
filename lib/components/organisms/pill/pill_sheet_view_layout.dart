@@ -8,6 +8,7 @@ class PillSheetViewLayout extends StatelessWidget {
   static final double lineHeight = 49.5;
   static final double topSpace = 24;
   static final double bottomSpace = 24;
+  static final double componentWidth = 35;
   static double calcHeight(
       int numberOfLineInPillSheet, bool isHideWeekdayLine) {
     final verticalSpacing =
