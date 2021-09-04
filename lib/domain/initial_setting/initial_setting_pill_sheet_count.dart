@@ -91,6 +91,7 @@ class InitialSettingPillSheetCountPage extends HookWidget {
                           color: TextColor.main,
                           fontSize: 14,
                           fontFamily: FontFamily.japanese,
+                          fontWeight: FontWeight.w700,
                         ),
                       ),
                       Switch(value: true, onChanged: (isOn) {}),
