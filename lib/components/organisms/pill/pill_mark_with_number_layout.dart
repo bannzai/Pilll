@@ -1,5 +1,5 @@
 import 'package:pilll/components/atoms/color.dart';
-import 'package:pilll/components/organisms/pill/pill_mark.dart';
+import 'package:pilll/components/organisms/pill_mark/pill_mark.dart';
 import 'package:flutter/material.dart';
 
 class PillMarkWithNumberLayout extends StatelessWidget {
