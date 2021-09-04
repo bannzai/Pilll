@@ -112,7 +112,7 @@ class InitialSettingPillSheetCountPage extends HookWidget {
               PrimaryButton(
                 text: "次へ",
                 onPressed: () async {
-                  analytics.logEvent(name: "done_initial_setting_4");
+                  analytics.logEvent(name: "done_initial_setting");
                   await store.register();
                   AppRouter.endInitialSetting(context);
                 },
