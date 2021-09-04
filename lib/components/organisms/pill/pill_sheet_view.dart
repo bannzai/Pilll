@@ -1,4 +1,3 @@
-import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/entity/pill_mark_type.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/entity/weekday.dart';
@@ -9,7 +8,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 import 'package:pilll/entity/pill_sheet_type.dart';
-import 'package:pilll/util/formatter/date_time_formatter.dart';
 
 typedef PillMarkSelected = void Function(int);
 typedef PillMarkTypeBuilder = PillMarkType Function(int);
@@ -103,6 +101,7 @@ class PillSheetView extends StatelessWidget {
     return PillSheetViewWeekdayLine(firstWeekday: firstWeekday);
   }
 }
+<<<<<<< HEAD
 
 class PillMarkLine extends StatelessWidget {
   final List<Widget> pillMarks;
