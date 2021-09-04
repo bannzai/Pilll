@@ -11,6 +11,7 @@ abstract class InitialSettingState implements _$InitialSettingState {
     required InitialSettingModel entity,
     @Default(false) bool isLoading,
     @Default(false) bool isAccountCooperationDidEnd,
+    @Default(1) int pillSheetCount,
   }) = _InitialSettingState;
 
   DateTime? reminderTimeOrDefault(int index) {
