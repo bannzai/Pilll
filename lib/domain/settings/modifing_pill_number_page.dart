@@ -97,7 +97,9 @@ extension ModifingPillNumberPageRoute on ModifingPillNumberPage {
     return MaterialPageRoute(
       settings: RouteSettings(name: "ModifingPillNumberPage"),
       builder: (_) => ModifingPillNumberPage(
-          pillSheetType: pillSheetType, markSelected: markSelected),
+        pillSheetType: pillSheetType,
+        markSelected: markSelected,
+      ),
     );
   }
 }
