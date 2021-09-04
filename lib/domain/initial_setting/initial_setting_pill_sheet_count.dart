@@ -1,6 +1,5 @@
 import 'package:pilll/analytics.dart';
 import 'package:pilll/domain/initial_setting/initial_setting_select_today_pill_number.dart';
-import 'package:pilll/router/router.dart';
 import 'package:pilll/domain/initial_setting/initial_setting_store.dart';
 import 'package:pilll/components/atoms/buttons.dart';
 import 'package:pilll/components/atoms/color.dart';
@@ -49,15 +48,15 @@ class InitialSettingPillSheetCountPage extends HookWidget {
                       children: [
                         InitialSettingPillSheetCountPanel(
                           number: 1,
-                          onTap: (number) => _onTapPanel(number),
+                          onTap: (number) => _onTapPanel(number, store),
                         ),
                         InitialSettingPillSheetCountPanel(
                           number: 2,
-                          onTap: (number) => _onTapPanel(number),
+                          onTap: (number) => _onTapPanel(number, store),
                         ),
                         InitialSettingPillSheetCountPanel(
                           number: 3,
-                          onTap: (number) => _onTapPanel(number),
+                          onTap: (number) => _onTapPanel(number, store),
                         ),
                       ],
                     ),
@@ -67,11 +66,11 @@ class InitialSettingPillSheetCountPage extends HookWidget {
                       children: [
                         InitialSettingPillSheetCountPanel(
                           number: 4,
-                          onTap: (number) => _onTapPanel(number),
+                          onTap: (number) => _onTapPanel(number, store),
                         ),
                         InitialSettingPillSheetCountPanel(
                           number: 5,
-                          onTap: (number) => _onTapPanel(number),
+                          onTap: (number) => _onTapPanel(number, store),
                         ),
                         SizedBox(width: 97),
                       ],
@@ -126,7 +125,9 @@ class InitialSettingPillSheetCountPage extends HookWidget {
     );
   }
 
-  _onTapPanel(int number) {}
+  _onTapPanel(int count, InitialSettingStateStore store) {
+    store.selectedPillSheetCount(count);
+  }
 }
 
 class InitialSettingPillSheetCountPanel extends StatelessWidget {
