@@ -1,4 +1,6 @@
 import 'package:pilll/components/atoms/color.dart';
+import 'package:pilll/components/organisms/pill/pill_mark_line.dart';
+import 'package:pilll/components/organisms/pill/pill_sheet_view_weekday_line.dart';
 import 'package:pilll/domain/record/weekday_badge.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -21,7 +23,7 @@ class PillSheetViewLayout extends StatelessWidget {
         : pillMarkListHeight + WeekdayBadgeConst.height;
   }
 
-  final Widget? weekdayLines;
+  final PillSheetViewWeekdayLine? weekdayLines;
   final List<Widget> pillMarkLines;
 
   const PillSheetViewLayout({
