@@ -24,7 +24,6 @@ class InitialSettingSelectTodayPillNumberPage extends HookWidget {
     final store = useProvider(initialSettingStoreProvider);
     final state = useProvider(initialSettingStoreProvider.state);
     final pillSheetType = state.pillSheetType;
-    final todayPillNumber = state.todayPillNumber;
     return Scaffold(
       backgroundColor: PilllColors.background,
       appBar: AppBar(
@@ -53,11 +52,11 @@ class InitialSettingSelectTodayPillNumberPage extends HookWidget {
                         textAlign: TextAlign.center,
                       ),
                       SizedBox(height: 44),
-                      if (pillSheetType != null && todayPillNumber != null)
+                      if (pillSheetType != null)
                         Align(
                           child: SettingPillSheetView(
                             pillSheetType: pillSheetType,
-                            selectedPillNumber: todayPillNumber,
+                            selectedPillNumber: state.todayPillNumber,
                             markSelected: (number) {
                               analytics.logEvent(
                                   name: "selected_today_number_initial_setting",

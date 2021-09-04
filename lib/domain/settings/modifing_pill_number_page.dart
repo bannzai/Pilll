@@ -1,9 +1,8 @@
 import 'package:pilll/components/atoms/buttons.dart';
-import 'package:pilll/components/organisms/pill/pill_sheet_view.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
-import 'package:pilll/entity/pill_mark_type.dart';
+import 'package:pilll/components/organisms/pill/setting_pill_sheet_view.dart';
 import 'package:pilll/util/formatter/date_time_formatter.dart';
 import 'package:flutter/material.dart';
 
@@ -11,7 +10,7 @@ import '../../entity/pill_sheet_type.dart';
 
 class ModifingPillNumberPage extends StatefulWidget {
   final PillSheetType pillSheetType;
-  final PillMarkSelected markSelected;
+  final Function(int) markSelected;
 
   const ModifingPillNumberPage({
     Key? key,
@@ -54,18 +53,9 @@ class _ModifingPillNumberPageState extends State<ModifingPillNumberPage> {
               ),
               SizedBox(height: 56),
               Center(
-                child: PillSheetView(
+                child: SettingPillSheetView(
                   pillSheetType: widget.pillSheetType,
-                  pillMarkTypeBuilder: (number) {
-                    if (selectedPillMarkNumber == number) {
-                      return PillMarkType.selected;
-                    }
-                    return PillMarkType.normal;
-                  },
-                  doneStateBuilder: (_) {
-                    return false;
-                  },
-                  enabledMarkAnimation: null,
+                  selectedPillNumber: selectedPillMarkNumber,
                   markSelected: (number) {
                     setState(() => selectedPillMarkNumber = number);
                   },
@@ -93,7 +83,7 @@ class _ModifingPillNumberPageState extends State<ModifingPillNumberPage> {
 extension ModifingPillNumberPageRoute on ModifingPillNumberPage {
   static Route<dynamic> route(
       {required PillSheetType pillSheetType,
-      required PillMarkSelected markSelected}) {
+      required Function(int) markSelected}) {
     return MaterialPageRoute(
       settings: RouteSettings(name: "ModifingPillNumberPage"),
       builder: (_) => ModifingPillNumberPage(
