@@ -109,6 +109,8 @@ class RecordPagePillSheet extends StatelessWidget {
       style: FontType.smallTitle.merge(
           PillMarkWithNumberLayoutHelper.upperTextColor(
               isPremium: state.isPremium,
+              isTrial: state.isTrial,
+              pillSheetAppearanceMode: state.appearanceMode,
               pillNumberForMenstruationBegin:
                   setting.pillNumberForFromMenstruation,
               menstruationDuration: setting.durationMenstruation,

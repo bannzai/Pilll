@@ -1,6 +1,7 @@
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/organisms/pill_mark/pill_mark.dart';
 import 'package:flutter/material.dart';
+import 'package:pilll/entity/setting.dart';
 
 class PillMarkWithNumberLayout extends StatelessWidget {
   final Text textOfPillNumber;
@@ -35,12 +36,16 @@ extension PillMarkWithNumberLayoutHelper on PillMarkWithNumberLayout {
 
   static TextStyle upperTextColor({
     required bool isPremium,
+    required bool isTrial,
+    required PillSheetAppearanceMode pillSheetAppearanceMode,
     required int pillNumberForMenstruationBegin,
     required int menstruationDuration,
     required int maxPillNumber,
     required int pillMarkNumber,
   }) {
-    if (!isPremium) {
+    if (!isPremium &&
+        !isTrial &&
+        pillSheetAppearanceMode != PillSheetAppearanceMode.date) {
       return TextStyle(color: PilllColors.weekday);
     }
     final begin = pillNumberForMenstruationBegin;
