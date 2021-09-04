@@ -1,4 +1,3 @@
-import 'package:pilll/entity/initial_setting.dart';
 import 'package:pilll/util/datetime/day.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:pilll/entity/pill_mark_type.dart';

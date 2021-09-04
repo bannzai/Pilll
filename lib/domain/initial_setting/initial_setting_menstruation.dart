@@ -21,21 +21,19 @@ class InitialSettingMenstruationPage extends HookWidget {
         Navigator.of(context)
             .push(InitialSettingReminderTimesPageRoute.route());
       },
-      pillSheetTotalCount: state.entity.pillSheetType!.totalCount,
+      pillSheetTotalCount: state.pillSheetType!.totalCount,
       model: SettingMenstruationPageModel(
-        selectedFromMenstruation: state.entity.fromMenstruation,
-        selectedDurationMenstruation: state.entity.durationMenstruation,
-        pillSheetType: state.entity.pillSheetType!,
+        selectedFromMenstruation: state.fromMenstruation,
+        selectedDurationMenstruation: state.durationMenstruation,
+        pillSheetType: state.pillSheetType!,
       ),
       fromMenstructionDidDecide: (selectedFromMenstruction) {
         analytics.logEvent(name: "from_menstruation_initial_setting");
-        store.modify((model) =>
-            model.copyWith(fromMenstruation: selectedFromMenstruction));
+        store.setFromMenstruation(selectedFromMenstruction);
       },
       durationMenstructionDidDecide: (selectedDurationMenstruation) {
         analytics.logEvent(name: "duration_menstruation_initial_setting");
-        store.modify((model) =>
-            model.copyWith(durationMenstruation: selectedDurationMenstruation));
+        store.setFromMenstruation(selectedDurationMenstruation);
       },
     );
   }

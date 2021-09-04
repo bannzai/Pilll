@@ -34,7 +34,7 @@ class InitialSettingSelectPillSheetTypePage extends HookWidget {
               parameters: {"pill_sheet_type": type.rawPath});
           store.selectedPillSheetType(type);
         },
-        done: state.entity.pillSheetType == null
+        done: state.pillSheetType == null
             ? null
             : () {
                 analytics.logEvent(
@@ -43,7 +43,7 @@ class InitialSettingSelectPillSheetTypePage extends HookWidget {
                     .push(InitialSettingPillSheetCountPageRoute.route());
               },
         doneButtonText: "次へ",
-        selectedPillSheetType: state.entity.pillSheetType,
+        selectedPillSheetType: state.pillSheetType,
         signinAccount: state.isAccountCooperationDidEnd
             ? null
             : (accountType) async {
