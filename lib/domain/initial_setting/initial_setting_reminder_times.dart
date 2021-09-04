@@ -180,12 +180,11 @@ class InitialSettingReminderTimesPage extends HookWidget {
                     SizedBox(height: 24),
                     PrimaryButton(
                       text: "設定完了",
-                      onPressed: () {
+                      onPressed: () async {
                         analytics.logEvent(
                             name: "done_initial_setting_reminder_times");
-                        store
-                            .register(state.copyWith(isOnReminder: true))
-                            .then((_) => AppRouter.endInitialSetting(context));
+                        await store.register();
+                        AppRouter.endInitialSetting(context);
                       },
                     ),
                   ],

@@ -1,5 +1,6 @@
 import 'dart:async';
 
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:pilll/database/database.dart';
 import 'package:pilll/entity/setting.dart';
 import 'package:pilll/entity/user.dart';
@@ -34,5 +35,14 @@ class SettingService {
         .userReference()
         .update({UserFirestoreFieldKeys.settings: setting.toJson()}).then(
             (_) => setting);
+  }
+
+  updateWithBatch(WriteBatch batch, Setting setting) {
+    batch.set(
+      _database.userReference(),
+      {UserFirestoreFieldKeys.settings: setting.toJson()},
+      SetOptions(merge: true),
+    );
+    return setting;
   }
 }

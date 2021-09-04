@@ -20,7 +20,7 @@ abstract class InitialSettingState implements _$InitialSettingState {
       ReminderTime(hour: 22, minute: 0),
     ])
         List<ReminderTime> reminderTimes,
-    @Default(false)
+    @Default(true)
         bool isOnReminder,
     int? todayPillNumber,
     PillSheetType? pillSheetType,
