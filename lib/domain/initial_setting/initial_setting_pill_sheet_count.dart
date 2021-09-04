@@ -157,6 +157,9 @@ class InitialSettingPillSheetCountPanel extends StatelessWidget {
         width: 97,
         height: 68,
         decoration: BoxDecoration(
+          color: state.pillSheetCount == number
+              ? PilllColors.secondary
+              : PilllColors.white,
           borderRadius: BorderRadius.circular(6),
           border: Border.all(width: 2, color: PilllColors.secondary),
         ),
@@ -164,7 +167,9 @@ class InitialSettingPillSheetCountPanel extends StatelessWidget {
           child: Text(
             "$number",
             style: TextStyle(
-              color: TextColor.main,
+              color: state.pillSheetCount == number
+                  ? TextColor.white
+                  : TextColor.main,
               fontSize: 18,
               fontWeight: FontWeight.w600,
               fontFamily: FontFamily.number,
