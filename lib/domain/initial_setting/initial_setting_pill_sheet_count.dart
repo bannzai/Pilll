@@ -79,7 +79,7 @@ class InitialSettingPillSheetCountPage extends HookWidget {
                   ],
                 ),
               ),
-              SizedBox(height: 62),
+              Spacer(),
               Column(
                 children: [
                   Row(
@@ -108,7 +108,7 @@ class InitialSettingPillSheetCountPage extends HookWidget {
                   ),
                 ],
               ),
-              Spacer(),
+              SizedBox(height: 51),
               PrimaryButton(
                 text: "次へ",
                 onPressed: () {
