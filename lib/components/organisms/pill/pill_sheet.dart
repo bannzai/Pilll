@@ -55,6 +55,49 @@ class PillSheetView extends StatelessWidget {
     this.premiumMarkBuilder,
   }) : super(key: key);
 
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      height: PillSheetView.calcHeight(_numberOfLine, isHideWeekdayLine),
+      width: PillSheetView.width,
+      decoration: BoxDecoration(
+        color: PilllColors.pillSheet,
+        borderRadius: BorderRadius.circular(10),
+        boxShadow: [
+          BoxShadow(
+            color: Colors.black26,
+            blurRadius: 6.0,
+            offset: Offset(0, 2),
+          ),
+        ],
+      ),
+      child: Container(
+        padding: EdgeInsets.fromLTRB(22, 0, 22, PillSheetView.bottomSpace),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          children: [
+            if (!isHideWeekdayLine) _weekdayLine(),
+            SizedBox(height: PillSheetView.topSpace),
+            Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                ...List.generate(_numberOfLine, (line) {
+                  if (line + 1 == _numberOfLine) {
+                    return [_pillMarkLine(line)];
+                  }
+                  return [
+                    _pillMarkLine(line),
+                    SvgPicture.asset("images/pill_sheet_dot_line.svg"),
+                  ];
+                }).expand((element) => element).toList(),
+              ],
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+
   int _calcIndex(int row, int line) {
     return row + 1 + (line) * 7;
   }
@@ -148,49 +191,6 @@ class PillSheetView extends StatelessWidget {
               width: componentWidth,
               child: _pillMarkWithNumber(_calcIndex(index, lineIndex)));
         }),
-      ),
-    );
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      height: PillSheetView.calcHeight(_numberOfLine, isHideWeekdayLine),
-      width: PillSheetView.width,
-      decoration: BoxDecoration(
-        color: PilllColors.pillSheet,
-        borderRadius: BorderRadius.circular(10),
-        boxShadow: [
-          BoxShadow(
-            color: Colors.black26,
-            blurRadius: 6.0,
-            offset: Offset(0, 2),
-          ),
-        ],
-      ),
-      child: Container(
-        padding: EdgeInsets.fromLTRB(22, 0, 22, PillSheetView.bottomSpace),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
-          children: [
-            if (!isHideWeekdayLine) _weekdayLine(),
-            SizedBox(height: PillSheetView.topSpace),
-            Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                ...List.generate(_numberOfLine, (line) {
-                  if (line + 1 == _numberOfLine) {
-                    return [_pillMarkLine(line)];
-                  }
-                  return [
-                    _pillMarkLine(line),
-                    SvgPicture.asset("images/pill_sheet_dot_line.svg"),
-                  ];
-                }).expand((element) => element).toList(),
-              ],
-            ),
-          ],
-        ),
       ),
     );
   }
