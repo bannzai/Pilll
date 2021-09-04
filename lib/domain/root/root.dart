@@ -95,7 +95,8 @@ class RootState extends State<Root> {
     final connectivityResult = await (Connectivity().checkConnectivity());
     if (connectivityResult == ConnectivityResult.none) {
       setState(() {
-        _error = FormatException("インターネットへの接続がされていません。通信環境をお確かめください");
+        _error = FormatException(
+            "インターネットへの接続がされていません。通信環境をお確かめください。接続後「画面を再読み込み」の項目をタップしてください");
       });
       return;
     }
