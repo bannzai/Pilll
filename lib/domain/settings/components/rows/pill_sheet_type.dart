@@ -3,7 +3,7 @@ import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/analytics.dart';
 import 'package:pilll/components/atoms/font.dart';
-import 'package:pilll/components/organisms/pill/pill_sheet_type_select_page.dart';
+import 'package:pilll/components/organisms/pill_sheet/pill_sheet_type_select_page.dart';
 import 'package:pilll/components/page/ok_dialog.dart';
 import 'package:pilll/domain/settings/components/rows/pill_sheet_type_store.dart';
 import 'package:pilll/domain/settings/setting_page_state.dart';
