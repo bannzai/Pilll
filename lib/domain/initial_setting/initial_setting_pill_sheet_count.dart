@@ -14,7 +14,6 @@ class InitialSettingPillSheetCountPage extends HookWidget {
   @override
   Widget build(BuildContext context) {
     final store = useProvider(initialSettingStoreProvider);
-    final state = useProvider(initialSettingStoreProvider.state);
     return Scaffold(
       backgroundColor: PilllColors.background,
       appBar: AppBar(
@@ -112,11 +111,10 @@ class InitialSettingPillSheetCountPage extends HookWidget {
               SizedBox(height: 51),
               PrimaryButton(
                 text: "次へ",
-                onPressed: () {
+                onPressed: () async {
                   analytics.logEvent(name: "done_initial_setting_4");
-                  store
-                      .register(state.copyWith(isOnReminder: true))
-                      .then((_) => AppRouter.endInitialSetting(context));
+                  await store.register();
+                  AppRouter.endInitialSetting(context);
                 },
               ),
               SizedBox(height: 35),
