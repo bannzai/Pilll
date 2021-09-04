@@ -92,7 +92,7 @@ class InitialSettingPillSheetCountPage extends HookWidget {
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Text(
-                        "連続服用タイプ",
+                        "連番表示モード",
                         style: TextStyle(
                           color: TextColor.main,
                           fontSize: 14,
@@ -100,7 +100,11 @@ class InitialSettingPillSheetCountPage extends HookWidget {
                           fontWeight: FontWeight.w700,
                         ),
                       ),
-                      Switch(value: true, onChanged: (isOn) {}),
+                      Switch(
+                          value: state.isOnSequenceAppearance,
+                          onChanged: (isOn) {
+                            store.setIsOnSequenceAppearance(isOn);
+                          }),
                     ],
                   ),
                   SizedBox(height: 16),
