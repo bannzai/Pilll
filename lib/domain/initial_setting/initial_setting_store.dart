@@ -72,6 +72,16 @@ class InitialSettingStateStore extends StateNotifier<InitialSettingState> {
     }
   }
 
+  void selectedPillSheetCount(int count) {
+    state = state.copyWith(
+        entity: state.entity.copyWith(pillSheetType: pillSheetType));
+    if (state.entity.fromMenstruation > pillSheetType.totalCount) {
+      state = state.copyWith(
+          entity: state.entity
+              .copyWith(fromMenstruation: pillSheetType.totalCount));
+    }
+  }
+
   void modify(InitialSettingModel Function(InitialSettingModel model) closure) {
     state = state.copyWith(entity: closure(state.entity));
   }

@@ -19,11 +19,13 @@ class _$InitialSettingStateTearOff {
   _InitialSettingState call(
       {required InitialSettingModel entity,
       bool isLoading = false,
-      bool isAccountCooperationDidEnd = false}) {
+      bool isAccountCooperationDidEnd = false,
+      int pillSheetCount = 1}) {
     return _InitialSettingState(
       entity: entity,
       isLoading: isLoading,
       isAccountCooperationDidEnd: isAccountCooperationDidEnd,
+      pillSheetCount: pillSheetCount,
     );
   }
 }
@@ -36,6 +38,7 @@ mixin _$InitialSettingState {
   InitialSettingModel get entity => throw _privateConstructorUsedError;
   bool get isLoading => throw _privateConstructorUsedError;
   bool get isAccountCooperationDidEnd => throw _privateConstructorUsedError;
+  int get pillSheetCount => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $InitialSettingStateCopyWith<InitialSettingState> get copyWith =>
@@ -50,7 +53,8 @@ abstract class $InitialSettingStateCopyWith<$Res> {
   $Res call(
       {InitialSettingModel entity,
       bool isLoading,
-      bool isAccountCooperationDidEnd});
+      bool isAccountCooperationDidEnd,
+      int pillSheetCount});
 
   $InitialSettingModelCopyWith<$Res> get entity;
 }
@@ -69,6 +73,7 @@ class _$InitialSettingStateCopyWithImpl<$Res>
     Object? entity = freezed,
     Object? isLoading = freezed,
     Object? isAccountCooperationDidEnd = freezed,
+    Object? pillSheetCount = freezed,
   }) {
     return _then(_value.copyWith(
       entity: entity == freezed
@@ -83,6 +88,10 @@ class _$InitialSettingStateCopyWithImpl<$Res>
           ? _value.isAccountCooperationDidEnd
           : isAccountCooperationDidEnd // ignore: cast_nullable_to_non_nullable
               as bool,
+      pillSheetCount: pillSheetCount == freezed
+          ? _value.pillSheetCount
+          : pillSheetCount // ignore: cast_nullable_to_non_nullable
+              as int,
     ));
   }
 
@@ -104,7 +113,8 @@ abstract class _$InitialSettingStateCopyWith<$Res>
   $Res call(
       {InitialSettingModel entity,
       bool isLoading,
-      bool isAccountCooperationDidEnd});
+      bool isAccountCooperationDidEnd,
+      int pillSheetCount});
 
   @override
   $InitialSettingModelCopyWith<$Res> get entity;
@@ -126,6 +136,7 @@ class __$InitialSettingStateCopyWithImpl<$Res>
     Object? entity = freezed,
     Object? isLoading = freezed,
     Object? isAccountCooperationDidEnd = freezed,
+    Object? pillSheetCount = freezed,
   }) {
     return _then(_InitialSettingState(
       entity: entity == freezed
@@ -140,6 +151,10 @@ class __$InitialSettingStateCopyWithImpl<$Res>
           ? _value.isAccountCooperationDidEnd
           : isAccountCooperationDidEnd // ignore: cast_nullable_to_non_nullable
               as bool,
+      pillSheetCount: pillSheetCount == freezed
+          ? _value.pillSheetCount
+          : pillSheetCount // ignore: cast_nullable_to_non_nullable
+              as int,
     ));
   }
 }
@@ -150,7 +165,8 @@ class _$_InitialSettingState extends _InitialSettingState {
   _$_InitialSettingState(
       {required this.entity,
       this.isLoading = false,
-      this.isAccountCooperationDidEnd = false})
+      this.isAccountCooperationDidEnd = false,
+      this.pillSheetCount = 1})
       : super._();
 
   @override
@@ -161,10 +177,13 @@ class _$_InitialSettingState extends _InitialSettingState {
   @JsonKey(defaultValue: false)
   @override
   final bool isAccountCooperationDidEnd;
+  @JsonKey(defaultValue: 1)
+  @override
+  final int pillSheetCount;
 
   @override
   String toString() {
-    return 'InitialSettingState(entity: $entity, isLoading: $isLoading, isAccountCooperationDidEnd: $isAccountCooperationDidEnd)';
+    return 'InitialSettingState(entity: $entity, isLoading: $isLoading, isAccountCooperationDidEnd: $isAccountCooperationDidEnd, pillSheetCount: $pillSheetCount)';
   }
 
   @override
@@ -180,7 +199,10 @@ class _$_InitialSettingState extends _InitialSettingState {
                     isAccountCooperationDidEnd) ||
                 const DeepCollectionEquality().equals(
                     other.isAccountCooperationDidEnd,
-                    isAccountCooperationDidEnd)));
+                    isAccountCooperationDidEnd)) &&
+            (identical(other.pillSheetCount, pillSheetCount) ||
+                const DeepCollectionEquality()
+                    .equals(other.pillSheetCount, pillSheetCount)));
   }
 
   @override
@@ -188,7 +210,8 @@ class _$_InitialSettingState extends _InitialSettingState {
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(entity) ^
       const DeepCollectionEquality().hash(isLoading) ^
-      const DeepCollectionEquality().hash(isAccountCooperationDidEnd);
+      const DeepCollectionEquality().hash(isAccountCooperationDidEnd) ^
+      const DeepCollectionEquality().hash(pillSheetCount);
 
   @JsonKey(ignore: true)
   @override
@@ -201,7 +224,8 @@ abstract class _InitialSettingState extends InitialSettingState {
   factory _InitialSettingState(
       {required InitialSettingModel entity,
       bool isLoading,
-      bool isAccountCooperationDidEnd}) = _$_InitialSettingState;
+      bool isAccountCooperationDidEnd,
+      int pillSheetCount}) = _$_InitialSettingState;
   _InitialSettingState._() : super._();
 
   @override
@@ -210,6 +234,8 @@ abstract class _InitialSettingState extends InitialSettingState {
   bool get isLoading => throw _privateConstructorUsedError;
   @override
   bool get isAccountCooperationDidEnd => throw _privateConstructorUsedError;
+  @override
+  int get pillSheetCount => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$InitialSettingStateCopyWith<_InitialSettingState> get copyWith =>
