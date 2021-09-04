@@ -14,7 +14,7 @@ import 'package:pilll/service/user.dart';
 import 'package:purchases_flutter/purchases_flutter.dart';
 import 'package:riverpod/riverpod.dart';
 
-final initialSettingStoreProvider = StateNotifierProvider.autoDispose(
+final initialSettingStoreProvider = StateNotifierProvider(
   (ref) => InitialSettingStateStore(
     ref.watch(initialSettingServiceProvider),
     ref.watch(authServiceProvider),
