@@ -84,13 +84,10 @@ class PillSheetView extends StatelessWidget {
               children: [
                 ...List.generate(_numberOfLine, (line) {
                   if (line + 1 == _numberOfLine) {
-                    return [
-                      PillMarkLine(
-                          lineIndex: line, pillSheetType: pillSheetType)
-                    ];
+                    return [PillMarkLine(lineIndex: line)];
                   }
                   return [
-                    PillMarkLine(lineIndex: line, pillSheetType: pillSheetType),
+                    PillMarkLine(lineIndex: line),
                     SvgPicture.asset("images/pill_sheet_dot_line.svg"),
                   ];
                 }).expand((element) => element).toList(),
@@ -108,34 +105,36 @@ class PillSheetView extends StatelessWidget {
 }
 
 class PillMarkLine extends StatelessWidget {
-  final int lineIndex;
-  final PillSheetType pillSheetType;
+  final List<Widget> pillMarks;
 
   const PillMarkLine({
     Key? key,
-    required this.lineIndex,
-    required this.pillSheetType,
   }) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    final lineNumber = lineIndex + 1;
-    int countOfPillMarksInLine = Weekday.values.length;
-    if (lineNumber * Weekday.values.length > pillSheetType.totalCount) {
-      int diff = pillSheetType.totalCount - lineIndex * Weekday.values.length;
-      countOfPillMarksInLine = diff;
-    }
-    return Container(
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: List.generate(Weekday.values.length, (index) {
-          if (index >= countOfPillMarksInLine) {
-            return Container(width: componentWidth);
-          }
-          return Container(
-              width: componentWidth,
-              child: _pillMarkWithNumber(_calcIndex(index, lineIndex)));
-        }),
-      ),
+    //final lineNumber = lineIndex + 1;
+    //int countOfPillMarksInLine = Weekday.values.length;
+    //if (lineNumber * Weekday.values.length > pillSheetType.totalCount) {
+    //  int diff = pillSheetType.totalCount - lineIndex * Weekday.values.length;
+    //  countOfPillMarksInLine = diff;
+    //}
+//    return Container(
+//      child: Row(
+//        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+//        children: List.generate(Weekday.values.length, (index) {
+//          if (index >= countOfPillMarksInLine) {
+//            return Container(width: componentWidth);
+//          }
+//          return Container(
+//              width: componentWidth,
+//              child: _pillMarkWithNumber(_calcIndex(index, lineIndex)));
+//        }),
+//      ),
+//    );
+
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      children: pillMarks,
     );
   }
 
@@ -176,20 +175,5 @@ class PillMarkLine extends StatelessWidget {
         ],
       ),
     );
-  }
-
-  TextStyle _upperTextColor(PremiumPillMarkModel? premium, int pillMarkNumber) {
-    if (premium == null) {
-      return TextStyle(color: PilllColors.weekday);
-    }
-    final begin = premium.pillNumberForMenstruationBegin;
-    final duration = premium.menstruationDuration;
-    final menstruationNumbers = List.generate(duration, (index) {
-      final number = (begin + index) % premium.maxPillNumber;
-      return number == 0 ? premium.maxPillNumber : number;
-    });
-    return menstruationNumbers.contains(pillMarkNumber)
-        ? TextStyle(color: PilllColors.primary)
-        : TextStyle(color: PilllColors.weekday);
   }
 }
