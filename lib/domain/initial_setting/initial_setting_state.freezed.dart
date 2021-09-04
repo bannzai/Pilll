@@ -23,12 +23,13 @@ class _$InitialSettingStateTearOff {
         const ReminderTime(hour: 21, minute: 0),
         const ReminderTime(hour: 22, minute: 0)
       ],
-      bool isOnReminder = false,
+      bool isOnReminder = true,
       int? todayPillNumber,
       PillSheetType? pillSheetType,
       int pillSheetCount = 1,
       bool isLoading = false,
-      bool isAccountCooperationDidEnd = false}) {
+      bool isAccountCooperationDidEnd = false,
+      dynamic isOnSequenceAppearance = false}) {
     return _InitialSettingState(
       fromMenstruation: fromMenstruation,
       durationMenstruation: durationMenstruation,
@@ -39,6 +40,7 @@ class _$InitialSettingStateTearOff {
       pillSheetCount: pillSheetCount,
       isLoading: isLoading,
       isAccountCooperationDidEnd: isAccountCooperationDidEnd,
+      isOnSequenceAppearance: isOnSequenceAppearance,
     );
   }
 }
@@ -57,6 +59,7 @@ mixin _$InitialSettingState {
   int get pillSheetCount => throw _privateConstructorUsedError;
   bool get isLoading => throw _privateConstructorUsedError;
   bool get isAccountCooperationDidEnd => throw _privateConstructorUsedError;
+  dynamic get isOnSequenceAppearance => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $InitialSettingStateCopyWith<InitialSettingState> get copyWith =>
@@ -77,7 +80,8 @@ abstract class $InitialSettingStateCopyWith<$Res> {
       PillSheetType? pillSheetType,
       int pillSheetCount,
       bool isLoading,
-      bool isAccountCooperationDidEnd});
+      bool isAccountCooperationDidEnd,
+      dynamic isOnSequenceAppearance});
 }
 
 /// @nodoc
@@ -100,6 +104,7 @@ class _$InitialSettingStateCopyWithImpl<$Res>
     Object? pillSheetCount = freezed,
     Object? isLoading = freezed,
     Object? isAccountCooperationDidEnd = freezed,
+    Object? isOnSequenceAppearance = freezed,
   }) {
     return _then(_value.copyWith(
       fromMenstruation: fromMenstruation == freezed
@@ -138,6 +143,10 @@ class _$InitialSettingStateCopyWithImpl<$Res>
           ? _value.isAccountCooperationDidEnd
           : isAccountCooperationDidEnd // ignore: cast_nullable_to_non_nullable
               as bool,
+      isOnSequenceAppearance: isOnSequenceAppearance == freezed
+          ? _value.isOnSequenceAppearance
+          : isOnSequenceAppearance // ignore: cast_nullable_to_non_nullable
+              as dynamic,
     ));
   }
 }
@@ -158,7 +167,8 @@ abstract class _$InitialSettingStateCopyWith<$Res>
       PillSheetType? pillSheetType,
       int pillSheetCount,
       bool isLoading,
-      bool isAccountCooperationDidEnd});
+      bool isAccountCooperationDidEnd,
+      dynamic isOnSequenceAppearance});
 }
 
 /// @nodoc
@@ -183,6 +193,7 @@ class __$InitialSettingStateCopyWithImpl<$Res>
     Object? pillSheetCount = freezed,
     Object? isLoading = freezed,
     Object? isAccountCooperationDidEnd = freezed,
+    Object? isOnSequenceAppearance = freezed,
   }) {
     return _then(_InitialSettingState(
       fromMenstruation: fromMenstruation == freezed
@@ -221,6 +232,9 @@ class __$InitialSettingStateCopyWithImpl<$Res>
           ? _value.isAccountCooperationDidEnd
           : isAccountCooperationDidEnd // ignore: cast_nullable_to_non_nullable
               as bool,
+      isOnSequenceAppearance: isOnSequenceAppearance == freezed
+          ? _value.isOnSequenceAppearance
+          : isOnSequenceAppearance,
     ));
   }
 }
@@ -235,12 +249,13 @@ class _$_InitialSettingState extends _InitialSettingState {
         const ReminderTime(hour: 21, minute: 0),
         const ReminderTime(hour: 22, minute: 0)
       ],
-      this.isOnReminder = false,
+      this.isOnReminder = true,
       this.todayPillNumber,
       this.pillSheetType,
       this.pillSheetCount = 1,
       this.isLoading = false,
-      this.isAccountCooperationDidEnd = false})
+      this.isAccountCooperationDidEnd = false,
+      this.isOnSequenceAppearance = false})
       : super._();
 
   @JsonKey(defaultValue: 23)
@@ -255,7 +270,7 @@ class _$_InitialSettingState extends _InitialSettingState {
   ])
   @override
   final List<ReminderTime> reminderTimes;
-  @JsonKey(defaultValue: false)
+  @JsonKey(defaultValue: true)
   @override
   final bool isOnReminder;
   @override
@@ -271,10 +286,13 @@ class _$_InitialSettingState extends _InitialSettingState {
   @JsonKey(defaultValue: false)
   @override
   final bool isAccountCooperationDidEnd;
+  @JsonKey(defaultValue: false)
+  @override
+  final dynamic isOnSequenceAppearance;
 
   @override
   String toString() {
-    return 'InitialSettingState(fromMenstruation: $fromMenstruation, durationMenstruation: $durationMenstruation, reminderTimes: $reminderTimes, isOnReminder: $isOnReminder, todayPillNumber: $todayPillNumber, pillSheetType: $pillSheetType, pillSheetCount: $pillSheetCount, isLoading: $isLoading, isAccountCooperationDidEnd: $isAccountCooperationDidEnd)';
+    return 'InitialSettingState(fromMenstruation: $fromMenstruation, durationMenstruation: $durationMenstruation, reminderTimes: $reminderTimes, isOnReminder: $isOnReminder, todayPillNumber: $todayPillNumber, pillSheetType: $pillSheetType, pillSheetCount: $pillSheetCount, isLoading: $isLoading, isAccountCooperationDidEnd: $isAccountCooperationDidEnd, isOnSequenceAppearance: $isOnSequenceAppearance)';
   }
 
   @override
@@ -309,7 +327,10 @@ class _$_InitialSettingState extends _InitialSettingState {
                     isAccountCooperationDidEnd) ||
                 const DeepCollectionEquality().equals(
                     other.isAccountCooperationDidEnd,
-                    isAccountCooperationDidEnd)));
+                    isAccountCooperationDidEnd)) &&
+            (identical(other.isOnSequenceAppearance, isOnSequenceAppearance) ||
+                const DeepCollectionEquality().equals(
+                    other.isOnSequenceAppearance, isOnSequenceAppearance)));
   }
 
   @override
@@ -323,7 +344,8 @@ class _$_InitialSettingState extends _InitialSettingState {
       const DeepCollectionEquality().hash(pillSheetType) ^
       const DeepCollectionEquality().hash(pillSheetCount) ^
       const DeepCollectionEquality().hash(isLoading) ^
-      const DeepCollectionEquality().hash(isAccountCooperationDidEnd);
+      const DeepCollectionEquality().hash(isAccountCooperationDidEnd) ^
+      const DeepCollectionEquality().hash(isOnSequenceAppearance);
 
   @JsonKey(ignore: true)
   @override
@@ -342,7 +364,8 @@ abstract class _InitialSettingState extends InitialSettingState {
       PillSheetType? pillSheetType,
       int pillSheetCount,
       bool isLoading,
-      bool isAccountCooperationDidEnd}) = _$_InitialSettingState;
+      bool isAccountCooperationDidEnd,
+      dynamic isOnSequenceAppearance}) = _$_InitialSettingState;
   _InitialSettingState._() : super._();
 
   @override
@@ -363,6 +386,8 @@ abstract class _InitialSettingState extends InitialSettingState {
   bool get isLoading => throw _privateConstructorUsedError;
   @override
   bool get isAccountCooperationDidEnd => throw _privateConstructorUsedError;
+  @override
+  dynamic get isOnSequenceAppearance => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$InitialSettingStateCopyWith<_InitialSettingState> get copyWith =>
