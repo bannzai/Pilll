@@ -1,4 +1,4 @@
-import 'package:pilll/entity/initial_setting.dart';
+import 'package:pilll/domain/initial_setting/initial_setting_state.dart';
 import 'package:pilll/entity/pill_sheet.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/service/initial_setting.dart';
@@ -13,7 +13,7 @@ void main() {
   SharedPreferences.setMockInitialValues({});
   group("#register", () {
     test("when today pill number is not null", () async {
-      final initialSetting = InitialSettingModel.initial(
+      final initialSetting = InitialSettingState(
         todayPillNumber: 1,
         pillSheetType: PillSheetType.pillsheet_21,
       );
@@ -46,7 +46,8 @@ void main() {
         pillSheetModifedHistoryService,
         pillSheetGroupService,
       );
-      await service.register(initialSetting);
+      await service.register(
+          initialSetting.buildSetting(), initialSetting.buildPillSheet());
 
       verify(settingService.update(settingEntity));
       verify(pillSheetService.register(any, pillSheetEntity));
