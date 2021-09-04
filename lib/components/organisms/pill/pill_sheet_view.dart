@@ -3,6 +3,7 @@ import 'package:pilll/entity/pill_mark_type.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/entity/weekday.dart';
 import 'package:pilll/components/organisms/pill/pill_mark.dart';
+import 'package:pilll/components/organisms/pill/pill_sheet_view_weekday_line.dart';
 import 'package:pilll/domain/record/weekday_badge.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -103,24 +104,7 @@ class PillSheetView extends StatelessWidget {
   }
 
   Widget _weekdayLine() {
-    return Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: () {
-          final firstWeekday = this.firstWeekday;
-          if (firstWeekday == null) {
-            return <Widget>[];
-          }
-
-          return WeekdayFunctions.weekdaysForFirstWeekday(firstWeekday)
-              .map(
-                (weekday) => Container(
-                  width: componentWidth,
-                  color: Colors.transparent,
-                  child: Center(child: WeekdayBadge(weekday: weekday)),
-                ),
-              )
-              .toList();
-        }());
+    return PillSheetViewWeekdayLine(firstWeekday: firstWeekday);
   }
 
   Widget _pillMarkWithNumber(int number) {
