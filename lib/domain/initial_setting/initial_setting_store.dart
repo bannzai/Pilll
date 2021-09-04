@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:pilll/analytics.dart';
 import 'package:pilll/database/database.dart';
+import 'package:pilll/domain/initial_setting/initial_setting_state.dart';
 import 'package:pilll/entity/initial_setting.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/entity/setting.dart';
@@ -10,7 +11,6 @@ import 'package:pilll/service/auth.dart';
 import 'package:pilll/service/initial_setting.dart';
 import 'package:pilll/service/setting.dart';
 import 'package:pilll/service/user.dart';
-import 'package:pilll/state/initial_setting.dart';
 import 'package:purchases_flutter/purchases_flutter.dart';
 import 'package:riverpod/riverpod.dart';
 
