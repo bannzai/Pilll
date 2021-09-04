@@ -1,9 +1,9 @@
 import 'package:pilll/analytics.dart';
+import 'package:pilll/components/organisms/pill/setting_pill_sheet_view.dart';
 import 'package:pilll/domain/initial_setting/initial_setting_store.dart';
 import 'package:pilll/components/atoms/buttons.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/domain/initial_setting/initial_setting_menstruation.dart';
-import 'package:pilll/components/organisms/pill/pill_sheet_view.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/util/datetime/day.dart';
@@ -23,6 +23,8 @@ class InitialSettingSelectTodayPillNumberPage extends HookWidget {
   Widget build(BuildContext context) {
     final store = useProvider(initialSettingStoreProvider);
     final state = useProvider(initialSettingStoreProvider.state);
+    final pillSheetType = state.pillSheetType;
+    final todayPillNumber = state.todayPillNumber;
     return Scaffold(
       backgroundColor: PilllColors.background,
       appBar: AppBar(
@@ -51,23 +53,19 @@ class InitialSettingSelectTodayPillNumberPage extends HookWidget {
                         textAlign: TextAlign.center,
                       ),
                       SizedBox(height: 44),
-                      Align(
-                          child: PillSheetView(
-                        pillSheetType: state.pillSheetType!,
-                        pillMarkTypeBuilder: (number) {
-                          return state.pillMarkTypeFor(number);
-                        },
-                        doneStateBuilder: (number) {
-                          return false;
-                        },
-                        enabledMarkAnimation: null,
-                        markSelected: (number) {
-                          analytics.logEvent(
-                              name: "selected_today_number_initial_setting",
-                              parameters: {"pill_number": number});
-                          store.setTodayPillNumber(number);
-                        },
-                      )),
+                      if (pillSheetType != null && todayPillNumber != null)
+                        Align(
+                          child: SettingPillSheetView(
+                            pillSheetType: pillSheetType,
+                            selectedPillNumber: todayPillNumber,
+                            markSelected: (number) {
+                              analytics.logEvent(
+                                  name: "selected_today_number_initial_setting",
+                                  parameters: {"pill_number": number});
+                              store.setTodayPillNumber(number);
+                            },
+                          ),
+                        ),
                       SizedBox(height: 24),
                       ExplainPillNumber(today: todayString()),
                       SizedBox(height: 16),
