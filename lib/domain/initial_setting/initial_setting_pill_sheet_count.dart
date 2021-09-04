@@ -41,35 +41,42 @@ class InitialSettingPillSheetCountPage extends HookWidget {
               ),
               SizedBox(height: 80),
               Container(
-                child: Expanded(
-                  child: GridView.count(
-                    padding: EdgeInsets.symmetric(horizontal: 16),
-                    crossAxisCount: 3,
-                    crossAxisSpacing: 16,
-                    mainAxisSpacing: 16,
-                    childAspectRatio: 97 / 68,
-                    children: List.generate(5, (index) {
-                      final number = index + 1;
-                      return Container(
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(6),
-                          border: Border.all(
-                              width: 2, color: PilllColors.secondary),
+                padding: EdgeInsets.symmetric(horizontal: 26),
+                child: Column(
+                  children: [
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        InitialSettingPillSheetCountPanel(
+                          number: 1,
+                          onTap: (number) => _onTapPanel(number),
                         ),
-                        child: Center(
-                          child: Text(
-                            "$number",
-                            style: TextStyle(
-                              color: TextColor.main,
-                              fontSize: 18,
-                              fontWeight: FontWeight.w600,
-                              fontFamily: FontFamily.number,
-                            ),
-                          ),
+                        InitialSettingPillSheetCountPanel(
+                          number: 2,
+                          onTap: (number) => _onTapPanel(number),
                         ),
-                      );
-                    }),
-                  ),
+                        InitialSettingPillSheetCountPanel(
+                          number: 3,
+                          onTap: (number) => _onTapPanel(number),
+                        ),
+                      ],
+                    ),
+                    SizedBox(height: 16),
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        InitialSettingPillSheetCountPanel(
+                          number: 4,
+                          onTap: (number) => _onTapPanel(number),
+                        ),
+                        InitialSettingPillSheetCountPanel(
+                          number: 5,
+                          onTap: (number) => _onTapPanel(number),
+                        ),
+                        SizedBox(width: 97),
+                      ],
+                    ),
+                  ],
                 ),
               ),
               SizedBox(height: 62),
@@ -113,6 +120,45 @@ class InitialSettingPillSheetCountPage extends HookWidget {
               ),
               SizedBox(height: 35),
             ],
+          ),
+        ),
+      ),
+    );
+  }
+
+  _onTapPanel(int number) {}
+}
+
+class InitialSettingPillSheetCountPanel extends StatelessWidget {
+  const InitialSettingPillSheetCountPanel({
+    Key? key,
+    required this.number,
+    required this.onTap,
+  }) : super(key: key);
+
+  final int number;
+  final Function(int) onTap;
+
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      onTap: () => onTap(number),
+      child: Container(
+        width: 97,
+        height: 68,
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(6),
+          border: Border.all(width: 2, color: PilllColors.secondary),
+        ),
+        child: Center(
+          child: Text(
+            "$number",
+            style: TextStyle(
+              color: TextColor.main,
+              fontSize: 18,
+              fontWeight: FontWeight.w600,
+              fontFamily: FontFamily.number,
+            ),
           ),
         ),
       ),
