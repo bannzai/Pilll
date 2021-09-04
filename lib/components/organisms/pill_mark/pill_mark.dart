@@ -12,20 +12,6 @@ abstract class PillMarkConst {
   static final double edgeOfRipple = 80;
 }
 
-class PremiumPillMarkModel {
-  final DateTime date;
-  final int pillNumberForMenstruationBegin;
-  final int menstruationDuration;
-  final int maxPillNumber;
-
-  PremiumPillMarkModel({
-    required this.date,
-    required this.pillNumberForMenstruationBegin,
-    required this.menstruationDuration,
-    required this.maxPillNumber,
-  });
-}
-
 class PillMark extends StatefulWidget {
   final PillMarkType pillSheetType;
   final bool isDone;
