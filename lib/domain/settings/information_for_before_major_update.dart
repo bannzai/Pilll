@@ -100,7 +100,7 @@ extension InformationForBeforeMigrate132Route
       {required String salvagedOldStartTakenDate,
       required String salvagedOldLastTakenDate}) {
     return MaterialPageRoute(
-      settings: RouteSettings(name: "ModifingPillNumberPage"),
+      settings: RouteSettings(name: "InformationForBeforeMigrate132Route"),
       builder: (_) => InformationForBeforeMigrate132(
         salvagedOldStartTakenDate: salvagedOldStartTakenDate,
         salvagedOldLastTakenDate: salvagedOldLastTakenDate,
