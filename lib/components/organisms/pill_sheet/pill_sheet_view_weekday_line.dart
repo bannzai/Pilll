@@ -1,4 +1,4 @@
-import 'package:pilll/components/organisms/pill/pill_sheet_view_layout.dart';
+import 'package:pilll/components/organisms/pill_sheet/pill_sheet_view_layout.dart';
 import 'package:pilll/entity/weekday.dart';
 import 'package:pilll/domain/record/weekday_badge.dart';
 import 'package:flutter/material.dart';

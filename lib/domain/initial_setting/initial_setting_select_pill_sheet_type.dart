@@ -1,7 +1,7 @@
 import 'package:pilll/analytics.dart';
 import 'package:pilll/components/page/hud.dart';
 import 'package:pilll/domain/initial_setting/initial_setting_pill_sheet_count.dart';
-import 'package:pilll/components/organisms/pill/pill_sheet_type_select_page.dart';
+import 'package:pilll/components/organisms/pill_sheet/pill_sheet_type_select_page.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:pilll/router/router.dart';
