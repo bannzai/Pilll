@@ -77,9 +77,9 @@ class InitialSettingStateStore extends StateNotifier<InitialSettingState> {
     }
   }
 
-  //void selectedPillSheetCount(int pillSheetCount) {
-  //  state = state.copyWith(pillSheetCount: pillSheetCount);
-  //}
+  void selectedPillSheetCount(int pillSheetCount) {
+    state = state.copyWith(pillSheetCount: pillSheetCount);
+  }
 
   void setReminderTime(int index, int hour, int minute) {
     final copied = [...state.reminderTimes];
