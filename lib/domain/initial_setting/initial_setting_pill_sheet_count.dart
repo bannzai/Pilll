@@ -109,7 +109,7 @@ class InitialSettingPillSheetCountPage extends HookWidget {
                   ),
                   SizedBox(height: 16),
                   Text(
-                    "ヤーズフレックス等で連続服用する方は\nオンにしてください",
+                    "連続服用する方は連番表示をお勧めします\n（ヤーズフレックスやジェミーナなど）",
                     style: TextStyle(
                       color: TextColor.main,
                       fontFamily: FontFamily.japanese,
