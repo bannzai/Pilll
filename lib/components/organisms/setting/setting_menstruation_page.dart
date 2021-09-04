@@ -4,7 +4,7 @@ import 'package:pilll/components/atoms/buttons.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
-import 'package:pilll/components/organisms/pill/pill_sheet_view.dart';
+import 'package:pilll/components/organisms/pill/setting_pill_sheet_view.dart';
 import 'package:pilll/entity/pill_mark_type.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/util/toolbar/picker_toolbar.dart';
@@ -88,15 +88,10 @@ class _SettingMenstruationPageState extends State<SettingMenstruationPage> {
                       textAlign: TextAlign.center,
                     ),
                     SizedBox(height: 12),
-                    PillSheetView(
+                    SettingPillSheetView(
                       pillSheetType: widget.model.pillSheetType,
-                      pillMarkTypeBuilder: (number) {
-                        return _pillMarkTypeFor(number);
-                      },
-                      doneStateBuilder: (number) {
-                        return false;
-                      },
-                      enabledMarkAnimation: null,
+                      selectedPillNumber:
+                          this.widget.model.selectedFromMenstruation,
                       markSelected: (number) {
                         this.widget.fromMenstructionDidDecide(number);
                         setState(() {
@@ -322,20 +317,6 @@ class _SettingMenstruationPageState extends State<SettingMenstruationPage> {
 
   Widget _pickerItem(String str) {
     return Text(str);
-  }
-
-  PillMarkType _pillMarkTypeFor(
-    int number,
-  ) {
-    if (widget.model.selectedFromMenstruation == number) {
-      return PillMarkType.selected;
-    }
-    if (widget.model.pillSheetType.dosingPeriod < number) {
-      return widget.model.pillSheetType == PillSheetType.pillsheet_21
-          ? PillMarkType.rest
-          : PillMarkType.fake;
-    }
-    return PillMarkType.normal;
   }
 }
 

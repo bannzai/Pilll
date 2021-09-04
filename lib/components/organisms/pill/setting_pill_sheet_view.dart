@@ -54,9 +54,7 @@ class SettingPillSheetView extends StatelessWidget {
           pillMark: PillMark(
             hasRippleAnimation: false,
             isDone: false,
-            pillSheetType: selectedPillNumber == number
-                ? PillMarkType.selected
-                : PillMarkType.normal,
+            pillSheetType: _pillMarkTypeFor(number),
           ),
           onTap: () {
             analytics.logEvent(name: "setting_pill_mark_tapped", parameters: {
@@ -67,5 +65,19 @@ class SettingPillSheetView extends StatelessWidget {
         ),
       );
     });
+  }
+
+  PillMarkType _pillMarkTypeFor(
+    int number,
+  ) {
+    if (selectedPillNumber == number) {
+      return PillMarkType.selected;
+    }
+    if (pillSheetType.dosingPeriod < number) {
+      return pillSheetType == PillSheetType.pillsheet_21
+          ? PillMarkType.rest
+          : PillMarkType.fake;
+    }
+    return PillMarkType.normal;
   }
 }
