@@ -2,7 +2,7 @@ import 'package:pilll/entity/initial_setting.dart';
 import 'package:pilll/util/datetime/day.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-part 'initial_setting.freezed.dart';
+part 'initial_setting_state.freezed.dart';
 
 @freezed
 abstract class InitialSettingState implements _$InitialSettingState {

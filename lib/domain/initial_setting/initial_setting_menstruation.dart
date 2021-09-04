@@ -1,7 +1,7 @@
 import 'package:pilll/analytics.dart';
 import 'package:pilll/components/organisms/setting/setting_menstruation_page.dart';
 import 'package:pilll/domain/initial_setting/initial_setting_reminder_times.dart';
-import 'package:pilll/store/initial_setting.dart';
+import 'package:pilll/domain/initial_setting/initial_setting_store.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
