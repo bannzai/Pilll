@@ -3,7 +3,7 @@ import 'package:pilll/domain/initial_setting/initial_setting_store.dart';
 import 'package:pilll/components/atoms/buttons.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/domain/initial_setting/initial_setting_menstruation.dart';
-import 'package:pilll/components/organisms/pill/pill_sheet.dart';
+import 'package:pilll/components/organisms/pill/pill_sheet_view.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/util/datetime/day.dart';

@@ -4,7 +4,7 @@ import 'package:pilll/components/atoms/buttons.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
-import 'package:pilll/components/organisms/pill/pill_sheet.dart';
+import 'package:pilll/components/organisms/pill/pill_sheet_view.dart';
 import 'package:pilll/entity/pill_mark_type.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/util/toolbar/picker_toolbar.dart';
