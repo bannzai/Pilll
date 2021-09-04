@@ -138,10 +138,6 @@ class PillMarkLine extends StatelessWidget {
     );
   }
 
-  int _calcIndex(int row, int line) {
-    return row + 1 + (line) * 7;
-  }
-
   Widget _pillMarkWithNumber(int number) {
     var type = pillMarkTypeBuilder(number);
     final enabledMarkAnimation = this.enabledMarkAnimation;
