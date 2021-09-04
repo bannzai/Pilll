@@ -30,6 +30,8 @@ abstract class InitialSettingState implements _$InitialSettingState {
         bool isLoading,
     @Default(false)
         bool isAccountCooperationDidEnd,
+    @Default(false)
+        isOnSequenceAppearance,
   }) = _InitialSettingState;
 
   DateTime? reminderTimeOrDefault(int index) {
