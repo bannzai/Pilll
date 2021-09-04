@@ -3,7 +3,6 @@ import 'dart:async';
 import 'package:pilll/analytics.dart';
 import 'package:pilll/database/database.dart';
 import 'package:pilll/domain/initial_setting/initial_setting_state.dart';
-import 'package:pilll/entity/initial_setting.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/entity/setting.dart';
 import 'package:pilll/error_log.dart';
@@ -23,18 +22,14 @@ final initialSettingStoreProvider = StateNotifierProvider(
 );
 
 class InitialSettingStateStore extends StateNotifier<InitialSettingState> {
-  final InitialSettingServiceInterface _service;
+  final InitialSettingService _service;
   final AuthService _authService;
   final SettingService _settingService;
   InitialSettingStateStore(
     this._service,
     this._authService,
     this._settingService,
-  ) : super(
-          InitialSettingState(
-            entity: InitialSettingModel.initial(),
-          ),
-        ) {
+  ) : super(InitialSettingState()) {
     _reset();
   }
 
@@ -63,41 +58,45 @@ class InitialSettingStateStore extends StateNotifier<InitialSettingState> {
   }
 
   void selectedPillSheetType(PillSheetType pillSheetType) {
-    state = state.copyWith(
-        entity: state.entity.copyWith(pillSheetType: pillSheetType));
-    if (state.entity.fromMenstruation > pillSheetType.totalCount) {
-      state = state.copyWith(
-          entity: state.entity
-              .copyWith(fromMenstruation: pillSheetType.totalCount));
+    state = state.copyWith(pillSheetType: pillSheetType);
+    if (state.fromMenstruation > pillSheetType.totalCount) {
+      state = state.copyWith(fromMenstruation: pillSheetType.totalCount);
     }
   }
 
-  void selectedPillSheetCount(int count) {
-    state = state.copyWith(
-        entity: state.entity.copyWith(pillSheetType: pillSheetType));
-    if (state.entity.fromMenstruation > pillSheetType.totalCount) {
-      state = state.copyWith(
-          entity: state.entity
-              .copyWith(fromMenstruation: pillSheetType.totalCount));
-    }
-  }
-
-  void modify(InitialSettingModel Function(InitialSettingModel model) closure) {
-    state = state.copyWith(entity: closure(state.entity));
-  }
+  //void selectedPillSheetCount(int pillSheetCount) {
+  //  state = state.copyWith(pillSheetCount: pillSheetCount);
+  //}
 
   void setReminderTime(int index, int hour, int minute) {
-    final copied = [...state.entity.reminderTimes];
+    final copied = [...state.reminderTimes];
     if (index >= copied.length) {
       copied.add(ReminderTime(hour: hour, minute: minute));
     } else {
       copied[index] = ReminderTime(hour: hour, minute: minute);
     }
-    modify((model) => model.copyWith(reminderTimes: copied));
+    state = state.copyWith(reminderTimes: copied);
   }
 
-  Future<void> register(InitialSettingModel initialSetting) {
-    return _service.register(initialSetting);
+  void setTodayPillNumber(int todayPillNumber) {
+    state = state.copyWith(todayPillNumber: todayPillNumber);
+  }
+
+  void unsetTodayPillNumber() {
+    state = state.copyWith(todayPillNumber: null);
+  }
+
+  void setFromMenstruation(int fromMenstruation) {
+    state = state.copyWith(fromMenstruation: fromMenstruation);
+  }
+
+  void setDurationMenstruation(int durationMenstruation) {
+    state = state.copyWith(durationMenstruation: durationMenstruation);
+  }
+
+  Future<void> register(InitialSettingState initialSetting) {
+    return _service.register(
+        initialSetting.buildSetting(), initialSetting.buildPillSheet());
   }
 
   Future<bool> canEndInitialSetting() async {

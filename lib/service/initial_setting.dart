@@ -1,19 +1,14 @@
 import 'package:pilll/database/batch.dart';
-import 'package:pilll/entity/initial_setting.dart';
+import 'package:pilll/entity/pill_sheet.dart';
 import 'package:pilll/entity/pill_sheet_group.dart';
+import 'package:pilll/entity/setting.dart';
 import 'package:pilll/service/pill_sheet.dart';
 import 'package:pilll/service/pill_sheet_group.dart';
 import 'package:pilll/service/pill_sheet_modified_history.dart';
 import 'package:pilll/service/setting.dart';
 import 'package:riverpod/riverpod.dart';
 
-abstract class InitialSettingServiceInterface {
-  Future<void> register(InitialSettingModel initialSetting) {
-    throw new UnimplementedError("Should call subclass");
-  }
-}
-
-final initialSettingServiceProvider = Provider<InitialSettingServiceInterface>(
+final initialSettingServiceProvider = Provider<InitialSettingService>(
   (ref) => InitialSettingService(
     ref.watch(batchFactoryProvider),
     ref.watch(settingServiceProvider),
@@ -23,7 +18,7 @@ final initialSettingServiceProvider = Provider<InitialSettingServiceInterface>(
   ),
 );
 
-class InitialSettingService extends InitialSettingServiceInterface {
+class InitialSettingService {
   final BatchFactory batchFactory;
   final SettingService settingService;
   final PillSheetService pillSheetService;
@@ -38,10 +33,8 @@ class InitialSettingService extends InitialSettingServiceInterface {
     this.pillSheetGroupService,
   );
 
-  Future<void> register(InitialSettingModel initialSetting) {
-    var setting = initialSetting.buildSetting();
+  Future<void> register(Setting setting, PillSheet? pillSheet) {
     return settingService.update(setting).then((_) {
-      final pillSheet = initialSetting.buildPillSheet();
       if (pillSheet == null) {
         return Future.value();
       }

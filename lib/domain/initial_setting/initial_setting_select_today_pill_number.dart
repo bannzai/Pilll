@@ -53,9 +53,9 @@ class InitialSettingSelectTodayPillNumberPage extends HookWidget {
                       SizedBox(height: 44),
                       Align(
                           child: PillSheetView(
-                        pillSheetType: state.entity.pillSheetType!,
+                        pillSheetType: state.pillSheetType!,
                         pillMarkTypeBuilder: (number) {
-                          return state.entity.pillMarkTypeFor(number);
+                          return state.pillMarkTypeFor(number);
                         },
                         doneStateBuilder: (number) {
                           return false;
@@ -65,8 +65,7 @@ class InitialSettingSelectTodayPillNumberPage extends HookWidget {
                           analytics.logEvent(
                               name: "selected_today_number_initial_setting",
                               parameters: {"pill_number": number});
-                          store.modify((model) =>
-                              model.copyWith(todayPillNumber: number));
+                          store.setTodayPillNumber(number);
                         },
                       )),
                       SizedBox(height: 24),
@@ -74,8 +73,7 @@ class InitialSettingSelectTodayPillNumberPage extends HookWidget {
                       SizedBox(height: 16),
                       InconspicuousButton(
                         onPressed: () {
-                          store.modify(
-                              (model) => model.copyWith(todayPillNumber: null));
+                          store.unsetTodayPillNumber();
                           analytics.logEvent(
                               name: "unknown_number_initial_setting");
                           Navigator.of(context).push(
@@ -91,7 +89,7 @@ class InitialSettingSelectTodayPillNumberPage extends HookWidget {
                   alignment: Alignment.bottomCenter,
                   child: PrimaryButton(
                     text: "次へ",
-                    onPressed: state.entity.todayPillNumber == null
+                    onPressed: state.todayPillNumber == null
                         ? null
                         : () {
                             analytics.logEvent(
@@ -124,7 +122,7 @@ class ExplainPillNumber extends HookWidget {
         crossAxisAlignment: CrossAxisAlignment.baseline,
         textBaseline: TextBaseline.ideographic,
         children: () {
-          if (state.entity.todayPillNumber == null) {
+          if (state.todayPillNumber == null) {
             return <Widget>[
               Text("", style: FontType.largeNumber.merge(TextColorStyle.main)),
             ];
@@ -132,7 +130,7 @@ class ExplainPillNumber extends HookWidget {
           return <Widget>[
             Text("$todayに飲むピルは",
                 style: FontType.description.merge(TextColorStyle.main)),
-            Text("${state.entity.todayPillNumber}",
+            Text("${state.todayPillNumber}",
                 style: FontType.largeNumber.merge(TextColorStyle.main)),
             Text("番", style: FontType.description.merge(TextColorStyle.main)),
           ];

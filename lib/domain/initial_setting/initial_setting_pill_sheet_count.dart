@@ -115,7 +115,7 @@ class InitialSettingPillSheetCountPage extends HookWidget {
                 onPressed: () {
                   analytics.logEvent(name: "done_initial_setting_4");
                   store
-                      .register(state.entity.copyWith(isOnReminder: true))
+                      .register(state.copyWith(isOnReminder: true))
                       .then((_) => AppRouter.endInitialSetting(context));
                 },
               ),

@@ -184,7 +184,7 @@ class InitialSettingReminderTimesPage extends HookWidget {
                         analytics.logEvent(
                             name: "done_initial_setting_reminder_times");
                         store
-                            .register(state.entity.copyWith(isOnReminder: true))
+                            .register(state.copyWith(isOnReminder: true))
                             .then((_) => AppRouter.endInitialSetting(context));
                       },
                     ),
