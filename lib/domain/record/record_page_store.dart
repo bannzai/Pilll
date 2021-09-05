@@ -230,12 +230,9 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
     required int sequentialPillNumber,
     required PillSheet pillSheet,
   }) async {
-    final offset =
-        ((sequentialPillNumber - 1) / pillSheet.pillSheetType.totalCount)
-            .floor();
-    final pillNumberIntoPillSheet = ((sequentialPillNumber + offset) %
-            (pillSheet.pillSheetType.totalCount + 1))
-        .toInt();
+    final pillNumberIntoPillSheet = PillSheet.pillNumberIntoPillSheet(
+        sequentialPillNumber: sequentialPillNumber,
+        pillSheetType: pillSheet.pillSheetType);
 
     final activedPillSheet = state.pillSheetGroup?.activedPillSheet;
     if (activedPillSheet == null) {
@@ -321,11 +318,9 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
     required int sequentialPillNumber,
     required PillSheet pillSheet,
   }) {
-    final offset =
-        ((sequentialPillNumber - 1) / pillSheet.pillSheetType.totalCount)
-            .floor();
-    final pillNumberIntoPillSheet = (sequentialPillNumber + offset) %
-        (pillSheet.pillSheetType.totalCount + 1);
+    final pillNumberIntoPillSheet = PillSheet.pillNumberIntoPillSheet(
+        sequentialPillNumber: sequentialPillNumber,
+        pillSheetType: pillSheet.pillSheetType);
     final activedPillSheet = state.pillSheetGroup?.activedPillSheet;
     if (activedPillSheet == null) {
       throw FormatException("pill sheet not found");
@@ -371,11 +366,9 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
     required int sequentialPillNumber,
     required PillSheet pillSheet,
   }) {
-    final offset =
-        ((sequentialPillNumber - 1) / pillSheet.pillSheetType.totalCount)
-            .floor();
-    final pillNumberIntoPillSheet = (sequentialPillNumber + offset) %
-        (pillSheet.pillSheetType.totalCount + 1);
+    final pillNumberIntoPillSheet = PillSheet.pillNumberIntoPillSheet(
+        sequentialPillNumber: sequentialPillNumber,
+        pillSheetType: pillSheet.pillSheetType);
     final activedPillSheet = state.pillSheetGroup?.activedPillSheet;
     if (activedPillSheet == null) {
       throw FormatException("pill sheet not found");
