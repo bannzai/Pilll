@@ -43,7 +43,7 @@ class MonthlyPurchaseButton extends StatelessWidget {
               ),
             ),
             Text(
-              "${monthlyPackage.product.priceString}/年",
+              "${monthlyPackage.product.priceString}/月",
               style: TextStyle(
                 color: TextColor.main,
                 fontFamily: FontFamily.japanese,
