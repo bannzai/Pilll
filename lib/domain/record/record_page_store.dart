@@ -383,6 +383,10 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
         }
       }
     }
+    if (activedPillSheet.id != pillSheet.id) {
+      return false;
+    }
+
     return pillNumberIntoPillSheet > activedPillSheet.lastTakenPillNumber &&
         pillNumberIntoPillSheet <= activedPillSheet.todayPillNumber;
   }
