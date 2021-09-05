@@ -56,7 +56,9 @@ class InitialSettingSelectTodayPillNumberPage extends HookWidget {
                       if (pillSheetType != null)
                         Align(
                           child: SelectTodayPillNumberPillSheetList(
-                              state: state, store: store),
+                            state: state,
+                            store: store,
+                          ),
                         ),
                       SizedBox(height: 24),
                       ExplainPillNumber(today: todayString()),
