@@ -99,12 +99,12 @@ class RecordPage extends HookWidget {
     RecordPageState state,
     RecordPageStore store,
   ) {
-    if (state.isUserInteractionDisabled)
+    if (state.pillSheetGroupIsHidden)
       return RecordPageAddingPillSheet(
           context: context,
           store: store,
           pillSheetType: settingEntity.pillSheetType);
-    if (!state.isUserInteractionDisabled)
+    if (!state.pillSheetGroupIsHidden)
       return RecordPagePillSheetList(
         state: state,
         store: store,
