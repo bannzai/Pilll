@@ -1,4 +1,5 @@
 import 'package:pilll/analytics.dart';
+import 'package:pilll/domain/initial_setting/initial_setting_menstruation.dart';
 import 'package:pilll/domain/initial_setting/initial_setting_select_today_pill_number.dart';
 import 'package:pilll/domain/initial_setting/initial_setting_state.dart';
 import 'package:pilll/domain/initial_setting/initial_setting_store.dart';
@@ -128,8 +129,13 @@ class InitialSettingPillSheetCountPage extends HookWidget {
                 text: "次へ",
                 onPressed: () async {
                   analytics.logEvent(name: "next_pill_sheet_count");
-                  Navigator.of(context).push(
-                      InitialSettingSelectTodayPillNumberPageRoute.route());
+                  if (state.todayPillNumber == 0) {
+                    Navigator.of(context).push(
+                        InitialSettingMenstruationPageRoute.route());
+                  } else {
+                    Navigator.of(context).push(
+                        InitialSettingSelectTodayPillNumberPageRoute.route());
+                  }
                 },
               ),
               SizedBox(height: 35),
