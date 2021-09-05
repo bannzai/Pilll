@@ -105,7 +105,7 @@ class InitialSettingReminderTimesPage extends HookWidget {
           onPressed: () => Navigator.of(context).pop(),
         ),
         title: Text(
-          "4/4",
+          "5/5",
           style: TextStyle(color: TextColor.black),
         ),
         backgroundColor: PilllColors.white,

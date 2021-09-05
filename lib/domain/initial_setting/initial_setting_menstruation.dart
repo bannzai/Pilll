@@ -14,7 +14,7 @@ class InitialSettingMenstruationPage extends HookWidget {
     final store = useProvider(initialSettingStoreProvider);
     final state = useProvider(initialSettingStoreProvider.state);
     return SettingMenstruationPage(
-      title: "3/4",
+      title: "4/5",
       doneText: "次へ",
       done: () {
         analytics.logEvent(name: "done_on_initial_setting_menstruation");

@@ -33,7 +33,7 @@ class InitialSettingSelectTodayPillNumberPage extends HookWidget {
           onPressed: () => Navigator.of(context).pop(),
         ),
         title: Text(
-          "2/4",
+          "3/5",
           style: TextStyle(color: TextColor.black),
         ),
         backgroundColor: PilllColors.white,
