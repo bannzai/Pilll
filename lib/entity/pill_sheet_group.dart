@@ -96,13 +96,18 @@ abstract class PillSheetGroup implements _$PillSheetGroup {
     return totalPillCountIntoGroup - latestTakenSerializedPillNumber;
   }
 
+  // Return null means pillSheets is empty
+  PillSheet? get latestTakenPillSheet {
+    if (pillSheets.isEmpty) {
+      return null;
+    }
+    return pillSheets.firstWhere((element) =>
+        element.pillSheetType.totalCount != element.lastTakenPillNumber);
+  }
+
   // Return 0 means pillSheets is empty
   int get latestTakenSerializedPillNumber {
-    if (pillSheets.isEmpty) {
-      return 0;
-    }
-    final latestTakenPillSheet = pillSheets.firstWhereOrNull((element) =>
-        element.pillSheetType.totalCount != element.lastTakenPillNumber);
+    final latestTakenPillSheet = this.latestTakenPillSheet;
     if (latestTakenPillSheet == null) {
       return 0;
     }
