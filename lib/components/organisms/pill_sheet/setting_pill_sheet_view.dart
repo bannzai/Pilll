@@ -6,6 +6,7 @@ import 'package:pilll/components/organisms/pill_mark/pill_mark_line.dart';
 import 'package:pilll/components/organisms/pill_mark/pill_mark_with_number_layout.dart';
 import 'package:pilll/components/organisms/pill_sheet/pill_sheet_view_layout.dart';
 import 'package:pilll/entity/pill_mark_type.dart';
+import 'package:pilll/entity/pill_sheet.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/entity/weekday.dart';
 
@@ -82,12 +83,9 @@ class SettingPillSheetView extends StatelessWidget {
   PillMarkType _pillMarkTypeFor({
     required int sequentialPillNumber,
   }) {
-    final offset =
-        ((sequentialPillNumber - 1) / pillSheetType.totalCount).floor();
-    print(
-        "[DEBUG] offset: $offset, sequentialPillNumber: $sequentialPillNumber");
-    final pillNumberIntoPillSheet =
-        (sequentialPillNumber + offset) % (pillSheetType.totalCount + 1);
+    final pillNumberIntoPillSheet = PillSheet.pillNumberIntoPillSheet(
+        sequentialPillNumber: sequentialPillNumber,
+        pillSheetType: pillSheetType);
 
     if (selectedPillNumber == pillNumberIntoPillSheet) {
       return PillMarkType.selected;
