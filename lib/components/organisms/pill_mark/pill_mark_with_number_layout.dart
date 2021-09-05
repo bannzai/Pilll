@@ -30,8 +30,13 @@ class PillMarkWithNumberLayout extends StatelessWidget {
 }
 
 extension PillMarkWithNumberLayoutHelper on PillMarkWithNumberLayout {
-  static int calcPillNumber({required int column, required int lineIndex}) {
-    return column + 1 + (lineIndex) * 7;
+  static int calcPillNumber({
+    required int column,
+    required int lineIndex,
+    required int pageIndex,
+    required int pillSheetTotalCount,
+  }) {
+    return column + 1 + (lineIndex) * 7 + (pageIndex * pillSheetTotalCount);
   }
 
   static TextStyle upperTextColor({

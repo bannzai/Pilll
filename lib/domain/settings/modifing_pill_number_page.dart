@@ -54,6 +54,7 @@ class _ModifingPillNumberPageState extends State<ModifingPillNumberPage> {
               SizedBox(height: 56),
               Center(
                 child: SettingPillSheetView(
+                  pageIndex: 0,
                   pillSheetType: widget.pillSheetType,
                   selectedPillNumber: selectedPillMarkNumber,
                   markSelected: (number) {

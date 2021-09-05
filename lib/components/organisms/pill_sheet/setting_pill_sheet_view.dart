@@ -10,12 +10,14 @@ import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/entity/weekday.dart';
 
 class SettingPillSheetView extends StatelessWidget {
+  final int pageIndex;
   final PillSheetType pillSheetType;
   final int? selectedPillNumber;
   final Function(int) markSelected;
 
   const SettingPillSheetView({
     Key? key,
+    required this.pageIndex,
     required this.pillSheetType,
     required this.selectedPillNumber,
     required this.markSelected,
@@ -28,13 +30,16 @@ class SettingPillSheetView extends StatelessWidget {
       pillMarkLines: List.generate(
         pillSheetType.numberOfLineInPillSheet,
         (index) {
-          return PillMarkLine(pillMarks: _pillMarks(context, index));
+          return PillMarkLine(pillMarks: _pillMarks(context, lineIndex: index));
         },
       ),
     );
   }
 
-  List<Widget> _pillMarks(BuildContext context, int lineIndex) {
+  List<Widget> _pillMarks(
+    BuildContext context, {
+    required int lineIndex,
+  }) {
     final lineNumber = lineIndex + 1;
     int countOfPillMarksInLine = Weekday.values.length;
     if (lineNumber * Weekday.values.length > pillSheetType.totalCount) {
@@ -48,6 +53,8 @@ class SettingPillSheetView extends StatelessWidget {
       final number = PillMarkWithNumberLayoutHelper.calcPillNumber(
         column: index,
         lineIndex: lineIndex,
+        pageIndex: pageIndex,
+        pillSheetTotalCount: pillSheetType.totalCount,
       );
       return Container(
         width: PillSheetViewLayout.componentWidth,

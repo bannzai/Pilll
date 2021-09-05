@@ -38,13 +38,23 @@ class RecordPagePillSheet extends StatelessWidget {
       pillMarkLines: List.generate(
         pillSheet.pillSheetType.numberOfLineInPillSheet,
         (index) {
-          return PillMarkLine(pillMarks: _pillMarks(context, index));
+          return PillMarkLine(
+            pillMarks: _pillMarks(
+              context,
+              lineIndex: index,
+              pageIndex: pillSheet.groupIndex,
+            ),
+          );
         },
       ),
     );
   }
 
-  List<Widget> _pillMarks(BuildContext context, int lineIndex) {
+  List<Widget> _pillMarks(
+    BuildContext context, {
+    required int lineIndex,
+    required int pageIndex,
+  }) {
     final lineNumber = lineIndex + 1;
     int countOfPillMarksInLine = Weekday.values.length;
     if (lineNumber * Weekday.values.length >
@@ -60,6 +70,8 @@ class RecordPagePillSheet extends StatelessWidget {
       final number = PillMarkWithNumberLayoutHelper.calcPillNumber(
         column: index,
         lineIndex: lineIndex,
+        pageIndex: pageIndex,
+        pillSheetTotalCount: pillSheet.pillSheetType.totalCount,
       );
       return Container(
         width: PillSheetViewLayout.componentWidth,

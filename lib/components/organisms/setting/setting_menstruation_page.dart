@@ -88,6 +88,7 @@ class _SettingMenstruationPageState extends State<SettingMenstruationPage> {
                     ),
                     SizedBox(height: 12),
                     SettingPillSheetView(
+                      pageIndex: 0,
                       pillSheetType: widget.model.pillSheetType,
                       selectedPillNumber:
                           this.widget.model.selectedFromMenstruation,
