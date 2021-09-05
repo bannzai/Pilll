@@ -334,6 +334,7 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
           return false;
         }
       }
+      return true;
     }
 
     return pillNumberIntoPillSheet <= activedPillSheet.lastTakenPillNumber;
@@ -382,8 +383,6 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
           return true;
         }
       }
-    }
-    if (activedPillSheet.id != pillSheet.id) {
       return false;
     }
 
