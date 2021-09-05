@@ -83,7 +83,7 @@ abstract class InitialSettingState implements _$InitialSettingState {
     required PillSheetType pillSheetType,
   }) {
     final pageOffset = pageIndex * pillSheetType.totalCount;
-    return today().subtract(Duration(days: todayPillNumber - 1 + pageOffset));
+    return today().subtract(Duration(days: todayPillNumber - 1 - pageOffset));
   }
 
   DateTime? _lastTakenDate({
