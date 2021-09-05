@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:pilll/util/datetime/day.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:pilll/entity/pill_mark_type.dart';
@@ -56,20 +58,64 @@ abstract class InitialSettingState implements _$InitialSettingState {
         isOnReminder: isOnReminder,
       );
 
-  PillSheet? buildPillSheet() => todayPillNumber != null
-      ? PillSheet(
-          beginingDate: _beginingDate(),
-          lastTakenDate: _lastTakenDate(),
-          typeInfo: _typeInfo(),
-        )
-      : null;
+  PillSheet? buildPillSheet(int pageIndex) {
+    final todayPillNumber = this.todayPillNumber;
+    if (todayPillNumber == null) {
+      return null;
+    }
+    final pillSheetType = this.pillSheetType;
+    if (pillSheetType == null) {
+      throw AssertionError(
+          "Must not be null for pillSheet when register initial settings");
+    }
 
-  DateTime _beginingDate() {
-    return today().subtract(Duration(days: todayPillNumber! - 1));
+    return PillSheet(
+      beginingDate: _beginingDate(
+        pageIndex: pageIndex,
+        todayPillNumber: todayPillNumber,
+        pillSheetType: pillSheetType,
+      ),
+      lastTakenDate: _lastTakenDate(
+          pageIndex: pageIndex, todayPillNumber: todayPillNumber),
+      typeInfo: _typeInfo(),
+    );
   }
 
-  DateTime? _lastTakenDate() {
-    return todayPillNumber == 1 ? null : today().subtract(Duration(days: 1));
+  DateTime _beginingDate({
+    required int pageIndex,
+    required int todayPillNumber,
+    required PillSheetType pillSheetType,
+  }) {
+    final pageOffset = pageIndex * pillSheetType.totalCount;
+    return today().subtract(Duration(days: todayPillNumber - 1 + pageOffset));
+  }
+
+  DateTime? _lastTakenDate({
+    required int pageIndex,
+    required int todayPillNumber,
+    required PillSheetType pillSheetType,
+  }) {
+    if (pageIndex == 0 && todayPillNumber == 1) {
+      return null;
+    }
+    final pillSheetBeginPillNumber = pageIndex * pillSheetType.totalCount + 1;
+    final pillSheetEndPillNumber =
+        pageIndex * pillSheetType.totalCount + pillSheetType.totalCount;
+    if (pillSheetBeginPillNumber <= todayPillNumber &&
+        todayPillNumber <= pillSheetEndPillNumber) {
+      // Between current PillSheet
+      return today().subtract(Duration(days: 1));
+    } else if (todayPillNumber < pillSheetEndPillNumber) {
+      // Right side PillSheet
+      return null;
+    } else {
+      // Left side PillSheet
+      return _beginingDate(
+        pageIndex: pageIndex,
+        todayPillNumber: todayPillNumber,
+        pillSheetType: pillSheetType,
+      ).add(Duration(days: pillSheetType.totalCount - 1));
+    }
   }
 
   PillSheetTypeInfo _typeInfo() {
