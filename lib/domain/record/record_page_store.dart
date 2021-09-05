@@ -230,8 +230,13 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
     required int sequentialPillNumber,
     required PillSheet pillSheet,
   }) async {
-    final pillNumberIntoPillSheet =
-        sequentialPillNumber ~/ pillSheet.pillSheetType.totalCount;
+    final offset =
+        ((sequentialPillNumber - 1) / pillSheet.pillSheetType.totalCount)
+            .floor();
+    final pillNumberIntoPillSheet = ((sequentialPillNumber + offset) %
+            (pillSheet.pillSheetType.totalCount + 1))
+        .toInt();
+
     final activedPillSheet = state.pillSheetGroup?.activedPillSheet;
     if (activedPillSheet == null) {
       return null;
@@ -316,8 +321,11 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
     required int sequentialPillNumber,
     required PillSheet pillSheet,
   }) {
-    final pillNumberIntoPillSheet =
-        sequentialPillNumber ~/ pillSheet.pillSheetType.totalCount;
+    final offset =
+        ((sequentialPillNumber - 1) / pillSheet.pillSheetType.totalCount)
+            .floor();
+    final pillNumberIntoPillSheet = (sequentialPillNumber + offset) %
+        (pillSheet.pillSheetType.totalCount + 1);
     final activedPillSheet = state.pillSheetGroup?.activedPillSheet;
     if (activedPillSheet == null) {
       throw FormatException("pill sheet not found");
@@ -340,8 +348,11 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
     required int sequentialPillNumber,
     required PillSheet pillSheet,
   }) {
-    final pillNumberIntoPillSheet =
-        sequentialPillNumber ~/ pillSheet.pillSheetType.totalCount;
+    final offset =
+        ((sequentialPillNumber - 1) / pillSheet.pillSheetType.totalCount)
+            .floor();
+    final pillNumberIntoPillSheet = (sequentialPillNumber + offset) %
+        (pillSheet.pillSheetType.totalCount + 1);
     if (pillNumberIntoPillSheet > pillSheet.typeInfo.dosingPeriod) {
       return pillSheet.pillSheetType == PillSheetType.pillsheet_21
           ? PillMarkType.rest
@@ -360,8 +371,11 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
     required int sequentialPillNumber,
     required PillSheet pillSheet,
   }) {
-    final pillNumberIntoPillSheet =
-        sequentialPillNumber ~/ pillSheet.pillSheetType.totalCount;
+    final offset =
+        ((sequentialPillNumber - 1) / pillSheet.pillSheetType.totalCount)
+            .floor();
+    final pillNumberIntoPillSheet = (sequentialPillNumber + offset) %
+        (pillSheet.pillSheetType.totalCount + 1);
     final activedPillSheet = state.pillSheetGroup?.activedPillSheet;
     if (activedPillSheet == null) {
       throw FormatException("pill sheet not found");
