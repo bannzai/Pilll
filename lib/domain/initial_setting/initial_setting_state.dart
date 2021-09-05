@@ -55,6 +55,7 @@ abstract class InitialSettingState implements _$InitialSettingState {
         reminderTimes: reminderTimes,
         isOnReminder: isOnReminder,
       );
+
   PillSheet? buildPillSheet() => todayPillNumber != null
       ? PillSheet(
           beginingDate: _beginingDate(),
