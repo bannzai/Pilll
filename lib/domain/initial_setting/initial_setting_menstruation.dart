@@ -1,5 +1,5 @@
 import 'package:pilll/analytics.dart';
-import 'package:pilll/components/organisms/setting/setting_menstruation_page.dart';
+import 'package:pilll/components/molecules/template/setting_menstruation/setting_menstruation.dart';
 import 'package:pilll/domain/initial_setting/initial_setting_reminder_times.dart';
 import 'package:pilll/domain/initial_setting/initial_setting_store.dart';
 import 'package:flutter/cupertino.dart';
@@ -35,6 +35,7 @@ class InitialSettingMenstruationPage extends HookWidget {
         analytics.logEvent(name: "duration_menstruation_initial_setting");
         store.setFromMenstruation(selectedDurationMenstruation);
       },
+      pillSheetPageCount: state.pillSheetCount,
     );
   }
 }

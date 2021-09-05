@@ -4,7 +4,7 @@ import 'package:pilll/components/atoms/buttons.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
-import 'package:pilll/components/organisms/pill_sheet/setting_pill_sheet_view.dart';
+import 'package:pilll/components/molecules/template/setting_menstruation/setting_menstruation_pill_sheet_list.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/util/toolbar/picker_toolbar.dart';
 import 'package:flutter/cupertino.dart';
@@ -36,6 +36,7 @@ class SettingMenstruationPage extends StatefulWidget {
   final String? doneText;
   final VoidCallback? done;
   final int pillSheetTotalCount;
+  final int pillSheetPageCount;
   final SettingMenstruationPageModel model;
   final void Function(int from) fromMenstructionDidDecide;
   final void Function(int duration) durationMenstructionDidDecide;
@@ -46,6 +47,7 @@ class SettingMenstruationPage extends StatefulWidget {
     required this.doneText,
     required this.done,
     required this.pillSheetTotalCount,
+    required this.pillSheetPageCount,
     required this.model,
     required this.fromMenstructionDidDecide,
     required this.durationMenstructionDidDecide,
@@ -87,15 +89,14 @@ class _SettingMenstruationPageState extends State<SettingMenstruationPage> {
                       textAlign: TextAlign.center,
                     ),
                     SizedBox(height: 12),
-                    SettingPillSheetView(
-                      pageIndex: 0,
+                    SettingMenstruationPillSheetList(
+                      pillSheetCount: widget.pillSheetPageCount,
                       pillSheetType: widget.model.pillSheetType,
-                      selectedPillNumber:
-                          this.widget.model.selectedFromMenstruation,
+                      selectedPillNumber: widget.model.selectedFromMenstruation,
                       markSelected: (number) {
-                        this.widget.fromMenstructionDidDecide(number);
+                        widget.fromMenstructionDidDecide(number);
                         setState(() {
-                          this.widget.model.selectedFromMenstruation = number;
+                          widget.model.selectedFromMenstruation = number;
                         });
                       },
                     ),
@@ -326,6 +327,7 @@ extension SettingMenstruationPageRoute on SettingMenstruationPage {
     required String? doneText,
     required VoidCallback? done,
     required int pillSheetTotalCount,
+    required int pillSheetPageCount,
     required SettingMenstruationPageModel model,
     required void Function(int from) fromMenstructionDidDecide,
     required void Function(int duration) durationMenstructionDidDecide,
@@ -337,6 +339,7 @@ extension SettingMenstruationPageRoute on SettingMenstruationPage {
         doneText: doneText,
         done: done,
         pillSheetTotalCount: pillSheetTotalCount,
+        pillSheetPageCount: pillSheetPageCount,
         model: model,
         fromMenstructionDidDecide: fromMenstructionDidDecide,
         durationMenstructionDidDecide: durationMenstructionDidDecide,
