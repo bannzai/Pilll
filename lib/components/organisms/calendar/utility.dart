@@ -2,21 +2,44 @@ import 'package:pilll/components/organisms/calendar/band/calendar_band_model.dar
 import 'package:pilll/domain/calendar/date_range.dart';
 import 'package:pilll/entity/menstruation.dart';
 import 'package:pilll/entity/pill_sheet.dart';
+import 'package:pilll/entity/pill_sheet_group.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/entity/setting.dart';
 import 'package:pilll/entity/weekday.dart';
+import 'package:pilll/util/datetime/day.dart';
 
 List<DateRange> scheduledMenstruationDateRanges(
-  PillSheet pillSheet,
+  PillSheetGroup pillSheetGroup,
   Setting setting,
   List<Menstruation> menstruations,
   int maxPageCount,
 ) {
+  if (pillSheetGroup.pillSheets.isEmpty) {
+    return [];
+  }
   assert(maxPageCount > 0);
   return List.generate(maxPageCount, (pageIndex) {
-    final offset = pageIndex * pillSheet.pillSheetType.totalCount;
-    final begin = pillSheet.beginingDate.add(
-        Duration(days: (setting.pillNumberForFromMenstruation - 1) + offset));
+    final offset = pageIndex * pillSheetGroup.totalPillCountIntoGroup;
+
+    final DateTime begin;
+    final serializedTodayPillNumber = pillSheetGroup.serializedTodayPillNumber;
+    if (serializedTodayPillNumber != null) {
+      if (serializedTodayPillNumber <= setting.pillNumberForFromMenstruation) {
+        final diff =
+            setting.pillNumberForFromMenstruation - serializedTodayPillNumber;
+        begin = today().add(Duration(days: diff));
+      } else {
+        begin = today().add(Duration(
+            days: pillSheetGroup.remainPillCount +
+                setting.pillNumberForFromMenstruation));
+      }
+    } else {
+      // PillSheetGroup has not actived pillSheet
+      // The lastTakenPillSheet is always present here as it is checking for empty pillSheets in the function above
+      begin = pillSheetGroup.latestTakenPillSheet!.beginingDate
+          .add(Duration(days: pillSheetGroup.remainPillCount));
+    }
+
     final end = begin.add(Duration(days: (setting.durationMenstruation - 1)));
     final isContained = menstruations
         .where((element) =>
@@ -25,7 +48,8 @@ List<DateRange> scheduledMenstruationDateRanges(
     if (isContained) {
       return null;
     }
-    return DateRange(begin, end);
+    return DateRange(
+        begin.add(Duration(days: offset)), end.add(Duration(days: offset)));
   }).where((element) => element != null).toList().cast();
 }
 
