@@ -50,7 +50,8 @@ class SettingPillSheetView extends StatelessWidget {
       if (index >= countOfPillMarksInLine) {
         return Container(width: PillSheetViewLayout.componentWidth);
       }
-      final number = PillMarkWithNumberLayoutHelper.calcPillNumber(
+      final sequentialPillNumber =
+          PillMarkWithNumberLayoutHelper.calcPillNumber(
         column: index,
         lineIndex: lineIndex,
         pageIndex: pageIndex,
@@ -59,31 +60,39 @@ class SettingPillSheetView extends StatelessWidget {
       return Container(
         width: PillSheetViewLayout.componentWidth,
         child: PillMarkWithNumberLayout(
-          textOfPillNumber:
-              Text("$number", style: TextStyle(color: PilllColors.weekday)),
+          textOfPillNumber: Text("$sequentialPillNumber",
+              style: TextStyle(color: PilllColors.weekday)),
           pillMark: PillMark(
             hasRippleAnimation: false,
             isDone: false,
-            pillSheetType: _pillMarkTypeFor(number),
+            pillSheetType:
+                _pillMarkTypeFor(sequentialPillNumber: sequentialPillNumber),
           ),
           onTap: () {
             analytics.logEvent(name: "setting_pill_mark_tapped", parameters: {
-              "number": number,
+              "number": sequentialPillNumber,
             });
-            markSelected(number);
+            markSelected(sequentialPillNumber);
           },
         ),
       );
     });
   }
 
-  PillMarkType _pillMarkTypeFor(
-    int number,
-  ) {
-    if (selectedPillNumber == number) {
+  PillMarkType _pillMarkTypeFor({
+    required int sequentialPillNumber,
+  }) {
+    final offset =
+        ((sequentialPillNumber - 1) / pillSheetType.totalCount).floor();
+    print(
+        "[DEBUG] offset: $offset, sequentialPillNumber: $sequentialPillNumber");
+    final pillNumberIntoPillSheet =
+        (sequentialPillNumber + offset) % (pillSheetType.totalCount + 1);
+
+    if (selectedPillNumber == pillNumberIntoPillSheet) {
       return PillMarkType.selected;
     }
-    if (pillSheetType.dosingPeriod < number) {
+    if (pillSheetType.dosingPeriod < pillNumberIntoPillSheet) {
       return pillSheetType == PillSheetType.pillsheet_21
           ? PillMarkType.rest
           : PillMarkType.fake;
