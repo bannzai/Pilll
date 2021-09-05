@@ -227,9 +227,11 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
   }
 
   Future<void>? takenWithPillNumber({
-    required int pillNumberIntoPillSheet,
+    required int sequentialPillNumber,
     required PillSheet pillSheet,
   }) async {
+    final pillNumberIntoPillSheet =
+        sequentialPillNumber ~/ pillSheet.pillSheetType.totalCount;
     final activedPillSheet = state.pillSheetGroup?.activedPillSheet;
     if (activedPillSheet == null) {
       return null;
@@ -311,9 +313,11 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
   }
 
   bool isDone({
-    required int pillNumberIntoPillSheet,
+    required int sequentialPillNumber,
     required PillSheet pillSheet,
   }) {
+    final pillNumberIntoPillSheet =
+        sequentialPillNumber ~/ pillSheet.pillSheetType.totalCount;
     final activedPillSheet = state.pillSheetGroup?.activedPillSheet;
     if (activedPillSheet == null) {
       throw FormatException("pill sheet not found");
@@ -333,9 +337,11 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
   }
 
   PillMarkType markFor({
-    required int pillNumberIntoPillSheet,
+    required int sequentialPillNumber,
     required PillSheet pillSheet,
   }) {
+    final pillNumberIntoPillSheet =
+        sequentialPillNumber ~/ pillSheet.pillSheetType.totalCount;
     if (pillNumberIntoPillSheet > pillSheet.typeInfo.dosingPeriod) {
       return pillSheet.pillSheetType == PillSheetType.pillsheet_21
           ? PillMarkType.rest
@@ -351,9 +357,11 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
   }
 
   bool shouldPillMarkAnimation({
-    required int pillNumberIntoPillSheet,
+    required int sequentialPillNumber,
     required PillSheet pillSheet,
   }) {
+    final pillNumberIntoPillSheet =
+        sequentialPillNumber ~/ pillSheet.pillSheetType.totalCount;
     final activedPillSheet = state.pillSheetGroup?.activedPillSheet;
     if (activedPillSheet == null) {
       throw FormatException("pill sheet not found");
