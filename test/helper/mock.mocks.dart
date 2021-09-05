@@ -442,10 +442,10 @@ class MockRecordPageStore extends _i1.Mock implements _i25.RecordPageStore {
           returnValueForMissingStub: Future.value()) as _i17.Future<void>?);
   @override
   _i17.Future<void>? takenWithPillNumber(
-          {int? pillNumberIntoPillSheet, _i2.PillSheet? pillSheet}) =>
+          {int? sequentialPillNumber, _i2.PillSheet? pillSheet}) =>
       (super.noSuchMethod(
           Invocation.method(#takenWithPillNumber, [], {
-            #sequentialPillNumber: pillNumberIntoPillSheet,
+            #sequentialPillNumber: sequentialPillNumber,
             #pillSheet: pillSheet
           }),
           returnValueForMissingStub: Future.value()) as _i17.Future<void>?);
@@ -460,28 +460,28 @@ class MockRecordPageStore extends _i1.Mock implements _i25.RecordPageStore {
           returnValue: Future<void>.value(),
           returnValueForMissingStub: Future.value()) as _i17.Future<void>);
   @override
-  bool isDone({int? pillNumberIntoPillSheet, _i2.PillSheet? pillSheet}) =>
+  bool isDone({int? sequentialPillNumber, _i2.PillSheet? pillSheet}) =>
       (super.noSuchMethod(
           Invocation.method(#isDone, [], {
-            #sequentialPillNumber: pillNumberIntoPillSheet,
+            #sequentialPillNumber: sequentialPillNumber,
             #pillSheet: pillSheet
           }),
           returnValue: false) as bool);
   @override
   _i27.PillMarkType markFor(
-          {int? pillNumberIntoPillSheet, _i2.PillSheet? pillSheet}) =>
+          {int? sequentialPillNumber, _i2.PillSheet? pillSheet}) =>
       (super.noSuchMethod(
           Invocation.method(#markFor, [], {
-            #sequentialPillNumber: pillNumberIntoPillSheet,
+            #sequentialPillNumber: sequentialPillNumber,
             #pillSheet: pillSheet
           }),
           returnValue: _i27.PillMarkType.normal) as _i27.PillMarkType);
   @override
   bool shouldPillMarkAnimation(
-          {int? pillNumberIntoPillSheet, _i2.PillSheet? pillSheet}) =>
+          {int? sequentialPillNumber, _i2.PillSheet? pillSheet}) =>
       (super.noSuchMethod(
           Invocation.method(#shouldPillMarkAnimation, [], {
-            #sequentialPillNumber: pillNumberIntoPillSheet,
+            #sequentialPillNumber: sequentialPillNumber,
             #pillSheet: pillSheet
           }),
           returnValue: false) as bool);
