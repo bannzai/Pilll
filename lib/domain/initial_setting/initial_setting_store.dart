@@ -4,6 +4,7 @@ import 'package:pilll/analytics.dart';
 import 'package:pilll/database/batch.dart';
 import 'package:pilll/database/database.dart';
 import 'package:pilll/domain/initial_setting/initial_setting_state.dart';
+import 'package:pilll/entity/pill_sheet.dart';
 import 'package:pilll/entity/pill_sheet_group.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/entity/setting.dart';
@@ -112,24 +113,43 @@ class InitialSettingStateStore extends StateNotifier<InitialSettingState> {
   }
 
   Future<void> register() async {
+    final pillSheetType = state.pillSheetType;
+    if (pillSheetType == null) {
+      throw AssertionError(
+          "Must not be null for pillSheet when register initial settings");
+    }
+
     final batch = _batchFactory.batch();
 
     _settingService.updateWithBatch(batch, state.buildSetting());
 
-    final pillSheet = state.buildPillSheet();
-    if (pillSheet != null) {
-      final updatedPillSheet = _pillSheetService.register(batch, pillSheet);
-      final history = PillSheetModifiedHistoryServiceActionFactory
-          .createCreatedPillSheetAction(
-              before: null,
-              pillSheetID: updatedPillSheet.id!,
-              after: pillSheet);
-      _pillSheetModifiedHistoryService.add(batch, history);
+    final todayPillNumber = state.todayPillNumber;
+    if (todayPillNumber != null) {
+      final Map<String, PillSheet> idAndPillSheet = {};
 
-      final pillSheetGroup = PillSheetGroup(
-        pillSheetIDs: [updatedPillSheet.id!],
-        pillSheets: [updatedPillSheet],
-      );
+      for (var i = 0; i < state.pillSheetCount; i++) {
+        final pillSheet = state.buildPillSheet(
+          pageIndex: i,
+          todayPillNumber: todayPillNumber,
+          pillSheetType: pillSheetType,
+        );
+        final createdPillSheet = _pillSheetService.register(batch, pillSheet);
+
+        final pillSheetID = createdPillSheet.id!;
+        idAndPillSheet[pillSheetID] = createdPillSheet;
+
+        final history = PillSheetModifiedHistoryServiceActionFactory
+            .createCreatedPillSheetAction(
+                before: null,
+                pillSheetID: createdPillSheet.id!,
+                after: pillSheet);
+        _pillSheetModifiedHistoryService.add(batch, history);
+      }
+
+      final pillSheetIDs = idAndPillSheet.keys.toList();
+      final pillSheets = idAndPillSheet.values.toList();
+      final pillSheetGroup =
+          PillSheetGroup(pillSheetIDs: pillSheetIDs, pillSheets: pillSheets);
       _pillSheetGroupService.register(batch, pillSheetGroup);
     }
 
