@@ -27,9 +27,13 @@ void main() {
       when(settingService.update(settingEntity))
           .thenAnswer((realInvocation) => Future.value(settingEntity));
 
-      final pillSheetEntity = initialSetting.buildPillSheet();
+      final pillSheetEntity = initialSetting.buildPillSheet(
+        pageIndex: 0,
+        pillSheetType: PillSheetType.pillsheet_21,
+        todayPillNumber: 1,
+      );
       final pillSheetService = MockPillSheetService();
-      when(pillSheetService.register(any, pillSheetEntity!)).thenAnswer(
+      when(pillSheetService.register(any, pillSheetEntity)).thenAnswer(
           (realInvocation) => PillSheet(
               typeInfo: PillSheetType.pillsheet_21.typeInfo,
               beginingDate: DateTime.now()));
@@ -47,7 +51,11 @@ void main() {
         pillSheetGroupService,
       );
       await service.register(
-          initialSetting.buildSetting(), initialSetting.buildPillSheet());
+          initialSetting.buildSetting(),
+          initialSetting.buildPillSheet(
+              pageIndex: 0,
+              pillSheetType: PillSheetType.pillsheet_21,
+              todayPillNumber: 1));
 
       verify(settingService.update(settingEntity));
       verify(pillSheetService.register(any, pillSheetEntity));
