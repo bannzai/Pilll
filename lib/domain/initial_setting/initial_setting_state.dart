@@ -58,17 +58,11 @@ abstract class InitialSettingState implements _$InitialSettingState {
         isOnReminder: isOnReminder,
       );
 
-  PillSheet? buildPillSheet(int pageIndex) {
-    final todayPillNumber = this.todayPillNumber;
-    if (todayPillNumber == null) {
-      return null;
-    }
-    final pillSheetType = this.pillSheetType;
-    if (pillSheetType == null) {
-      throw AssertionError(
-          "Must not be null for pillSheet when register initial settings");
-    }
-
+  PillSheet buildPillSheet({
+    required int pageIndex,
+    required int todayPillNumber,
+    required PillSheetType pillSheetType,
+  }) {
     return PillSheet(
       beginingDate: _beginingDate(
         pageIndex: pageIndex,
@@ -76,7 +70,10 @@ abstract class InitialSettingState implements _$InitialSettingState {
         pillSheetType: pillSheetType,
       ),
       lastTakenDate: _lastTakenDate(
-          pageIndex: pageIndex, todayPillNumber: todayPillNumber),
+        pageIndex: pageIndex,
+        todayPillNumber: todayPillNumber,
+        pillSheetType: pillSheetType,
+      ),
       typeInfo: _typeInfo(),
     );
   }
