@@ -1,6 +1,4 @@
 import 'package:pilll/analytics.dart';
-import 'package:pilll/components/organisms/pill_sheet/pill_sheet_view_layout.dart';
-import 'package:pilll/components/organisms/pill_sheet/setting_pill_sheet_view.dart';
 import 'package:pilll/domain/initial_setting/initial_setting_store.dart';
 import 'package:pilll/components/atoms/buttons.dart';
 import 'package:pilll/components/atoms/color.dart';
@@ -9,7 +7,6 @@ import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/domain/initial_setting/today_pill_number/explain_label.dart';
 import 'package:pilll/domain/initial_setting/today_pill_number/select_today_pill_number_pill_sheet.dart';
-import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/util/datetime/day.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
