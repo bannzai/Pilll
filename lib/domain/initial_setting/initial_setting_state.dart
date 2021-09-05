@@ -62,6 +62,7 @@ abstract class InitialSettingState implements _$InitialSettingState {
     required PillSheetType pillSheetType,
   }) {
     return PillSheet(
+      groupIndex: pageIndex,
       beginingDate: _beginingDate(
         pageIndex: pageIndex,
         todayPillNumber: todayPillNumber,
