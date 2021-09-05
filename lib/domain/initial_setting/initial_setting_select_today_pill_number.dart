@@ -1,4 +1,5 @@
 import 'package:pilll/analytics.dart';
+import 'package:pilll/components/organisms/pill_sheet/pill_sheet_view_layout.dart';
 import 'package:pilll/components/organisms/pill_sheet/setting_pill_sheet_view.dart';
 import 'package:pilll/domain/initial_setting/initial_setting_store.dart';
 import 'package:pilll/components/atoms/buttons.dart';
@@ -6,6 +7,9 @@ import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/domain/initial_setting/initial_setting_menstruation.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
+import 'package:pilll/domain/initial_setting/today_pill_number/explain_label.dart';
+import 'package:pilll/domain/initial_setting/today_pill_number/select_today_pill_number_pill_sheet.dart';
+import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/util/datetime/day.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
@@ -54,16 +58,8 @@ class InitialSettingSelectTodayPillNumberPage extends HookWidget {
                       SizedBox(height: 44),
                       if (pillSheetType != null)
                         Align(
-                          child: SettingPillSheetView(
-                            pillSheetType: pillSheetType,
-                            selectedPillNumber: state.todayPillNumber,
-                            markSelected: (number) {
-                              analytics.logEvent(
-                                  name: "selected_today_number_initial_setting",
-                                  parameters: {"pill_number": number});
-                              store.setTodayPillNumber(number);
-                            },
-                          ),
+                          child: SelectTodayPillNumberPillSheet(
+                              state: state, store: store),
                         ),
                       SizedBox(height: 24),
                       ExplainPillNumber(today: todayString()),
@@ -101,37 +97,6 @@ class InitialSettingSelectTodayPillNumberPage extends HookWidget {
             ),
           ),
         ),
-      ),
-    );
-  }
-}
-
-class ExplainPillNumber extends HookWidget {
-  final String today;
-
-  const ExplainPillNumber({Key? key, required this.today}) : super(key: key);
-  @override
-  Widget build(BuildContext context) {
-    final state = useProvider(initialSettingStoreProvider.state);
-    return Center(
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.center,
-        crossAxisAlignment: CrossAxisAlignment.baseline,
-        textBaseline: TextBaseline.ideographic,
-        children: () {
-          if (state.todayPillNumber == null) {
-            return <Widget>[
-              Text("", style: FontType.largeNumber.merge(TextColorStyle.main)),
-            ];
-          }
-          return <Widget>[
-            Text("$todayに飲むピルは",
-                style: FontType.description.merge(TextColorStyle.main)),
-            Text("${state.todayPillNumber}",
-                style: FontType.largeNumber.merge(TextColorStyle.main)),
-            Text("番", style: FontType.description.merge(TextColorStyle.main)),
-          ];
-        }(),
       ),
     );
   }
