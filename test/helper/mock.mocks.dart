@@ -445,7 +445,7 @@ class MockRecordPageStore extends _i1.Mock implements _i25.RecordPageStore {
           {int? pillNumberIntoPillSheet, _i2.PillSheet? pillSheet}) =>
       (super.noSuchMethod(
           Invocation.method(#takenWithPillNumber, [], {
-            #pillNumberIntoPillSheet: pillNumberIntoPillSheet,
+            #sequentialPillNumber: pillNumberIntoPillSheet,
             #pillSheet: pillSheet
           }),
           returnValueForMissingStub: Future.value()) as _i17.Future<void>?);
@@ -463,7 +463,7 @@ class MockRecordPageStore extends _i1.Mock implements _i25.RecordPageStore {
   bool isDone({int? pillNumberIntoPillSheet, _i2.PillSheet? pillSheet}) =>
       (super.noSuchMethod(
           Invocation.method(#isDone, [], {
-            #pillNumberIntoPillSheet: pillNumberIntoPillSheet,
+            #sequentialPillNumber: pillNumberIntoPillSheet,
             #pillSheet: pillSheet
           }),
           returnValue: false) as bool);
@@ -472,7 +472,7 @@ class MockRecordPageStore extends _i1.Mock implements _i25.RecordPageStore {
           {int? pillNumberIntoPillSheet, _i2.PillSheet? pillSheet}) =>
       (super.noSuchMethod(
           Invocation.method(#markFor, [], {
-            #pillNumberIntoPillSheet: pillNumberIntoPillSheet,
+            #sequentialPillNumber: pillNumberIntoPillSheet,
             #pillSheet: pillSheet
           }),
           returnValue: _i27.PillMarkType.normal) as _i27.PillMarkType);
@@ -481,7 +481,7 @@ class MockRecordPageStore extends _i1.Mock implements _i25.RecordPageStore {
           {int? pillNumberIntoPillSheet, _i2.PillSheet? pillSheet}) =>
       (super.noSuchMethod(
           Invocation.method(#shouldPillMarkAnimation, [], {
-            #pillNumberIntoPillSheet: pillNumberIntoPillSheet,
+            #sequentialPillNumber: pillNumberIntoPillSheet,
             #pillSheet: pillSheet
           }),
           returnValue: false) as bool);

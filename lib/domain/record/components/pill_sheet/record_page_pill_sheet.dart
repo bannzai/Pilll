@@ -79,11 +79,11 @@ class RecordPagePillSheet extends StatelessWidget {
           textOfPillNumber: _textOfPillNumber(state, number),
           pillMark: PillMark(
             hasRippleAnimation: store.shouldPillMarkAnimation(
-                pillNumberIntoPillSheet: number, pillSheet: pillSheet),
+                sequentialPillNumber: number, pillSheet: pillSheet),
             isDone: store.isDone(
-                pillNumberIntoPillSheet: number, pillSheet: pillSheet),
+                sequentialPillNumber: number, pillSheet: pillSheet),
             pillSheetType: store.markFor(
-                pillNumberIntoPillSheet: number, pillSheet: pillSheet),
+                sequentialPillNumber: number, pillSheet: pillSheet),
           ),
           onTap: () {
             analytics.logEvent(name: "pill_mark_tapped", parameters: {
@@ -95,7 +95,7 @@ class RecordPagePillSheet extends StatelessWidget {
             effectAfterTaken(
               context: context,
               taken: store.takenWithPillNumber(
-                  pillNumberIntoPillSheet: number, pillSheet: pillSheet),
+                  sequentialPillNumber: number, pillSheet: pillSheet),
               store: store,
             );
           },

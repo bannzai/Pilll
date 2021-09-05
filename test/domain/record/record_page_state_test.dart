@@ -109,17 +109,13 @@ void main() {
 
       await waitForResetStoreState();
       expect(state.pillSheetGroup?.pillSheets.first.allTaken, isTrue);
-      expect(
-          store.markFor(pillNumberIntoPillSheet: 1, pillSheet: pillSheetEntity),
+      expect(store.markFor(sequentialPillNumber: 1, pillSheet: pillSheetEntity),
           PillMarkType.done);
-      expect(
-          store.markFor(pillNumberIntoPillSheet: 2, pillSheet: pillSheetEntity),
+      expect(store.markFor(sequentialPillNumber: 2, pillSheet: pillSheetEntity),
           PillMarkType.done);
-      expect(
-          store.markFor(pillNumberIntoPillSheet: 3, pillSheet: pillSheetEntity),
+      expect(store.markFor(sequentialPillNumber: 3, pillSheet: pillSheetEntity),
           PillMarkType.done);
-      expect(
-          store.markFor(pillNumberIntoPillSheet: 4, pillSheet: pillSheetEntity),
+      expect(store.markFor(sequentialPillNumber: 4, pillSheet: pillSheetEntity),
           PillMarkType.normal);
     });
     test("it is not taken all", () async {
@@ -184,17 +180,13 @@ void main() {
 
       await waitForResetStoreState();
       expect(state.pillSheetGroup?.pillSheets.first.allTaken, isFalse);
-      expect(
-          store.markFor(pillNumberIntoPillSheet: 1, pillSheet: pillSheetEntity),
+      expect(store.markFor(sequentialPillNumber: 1, pillSheet: pillSheetEntity),
           PillMarkType.done);
-      expect(
-          store.markFor(pillNumberIntoPillSheet: 2, pillSheet: pillSheetEntity),
+      expect(store.markFor(sequentialPillNumber: 2, pillSheet: pillSheetEntity),
           PillMarkType.done);
-      expect(
-          store.markFor(pillNumberIntoPillSheet: 3, pillSheet: pillSheetEntity),
+      expect(store.markFor(sequentialPillNumber: 3, pillSheet: pillSheetEntity),
           PillMarkType.normal);
-      expect(
-          store.markFor(pillNumberIntoPillSheet: 4, pillSheet: pillSheetEntity),
+      expect(store.markFor(sequentialPillNumber: 4, pillSheet: pillSheetEntity),
           PillMarkType.normal);
     });
   });
@@ -264,7 +256,7 @@ void main() {
       for (int i = 1; i <= pillSheetEntity.pillSheetType.totalCount; i++) {
         expect(
             store.shouldPillMarkAnimation(
-              pillNumberIntoPillSheet: i,
+              sequentialPillNumber: i,
               pillSheet: pillSheetEntity,
             ),
             isFalse);
@@ -335,7 +327,7 @@ void main() {
       expect(state.pillSheetGroup?.pillSheets.first.allTaken, isFalse);
       expect(
           store.shouldPillMarkAnimation(
-            pillNumberIntoPillSheet: 3,
+            sequentialPillNumber: 3,
             pillSheet: pillSheetEntity,
           ),
           isTrue);
