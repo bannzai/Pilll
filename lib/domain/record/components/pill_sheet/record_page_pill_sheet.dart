@@ -105,7 +105,7 @@ class RecordPagePillSheet extends StatelessWidget {
     }();
 
     return Text(
-      isDateMode ? "$pillNumber" : DateTimeFormatter.monthAndDay(date),
+      isDateMode ? DateTimeFormatter.monthAndDay(date) : "$pillNumber",
       style: FontType.smallTitle.merge(
           PillMarkWithNumberLayoutHelper.upperTextColor(
               isPremium: state.isPremium,
