@@ -153,8 +153,10 @@ class SettingPage extends HookWidget {
                   return SettingSectionTitle(
                     text: "生理",
                     children: [
-                      MenstruationRow(setting),
-                      _separator(),
+                      if (pillSheetGroup != null) ...[
+                        MenstruationRow(setting, pillSheetGroup),
+                        _separator(),
+                      ],
                     ],
                   );
                 case SettingSection.other:
