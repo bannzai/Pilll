@@ -49,17 +49,17 @@ class InitialSettingPillSheetCountPage extends HookWidget {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         InitialSettingPillSheetCountPanel(
+                          number: 0,
+                          state: state,
+                          onTap: (number) => _onTapPanel(number, store),
+                        ),
+                        InitialSettingPillSheetCountPanel(
                           number: 1,
                           state: state,
                           onTap: (number) => _onTapPanel(number, store),
                         ),
                         InitialSettingPillSheetCountPanel(
                           number: 2,
-                          state: state,
-                          onTap: (number) => _onTapPanel(number, store),
-                        ),
-                        InitialSettingPillSheetCountPanel(
-                          number: 3,
                           state: state,
                           onTap: (number) => _onTapPanel(number, store),
                         ),
@@ -70,6 +70,11 @@ class InitialSettingPillSheetCountPage extends HookWidget {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         InitialSettingPillSheetCountPanel(
+                          number: 3,
+                          state: state,
+                          onTap: (number) => _onTapPanel(number, store),
+                        ),
+                        InitialSettingPillSheetCountPanel(
                           number: 4,
                           state: state,
                           onTap: (number) => _onTapPanel(number, store),
@@ -79,7 +84,6 @@ class InitialSettingPillSheetCountPage extends HookWidget {
                           state: state,
                           onTap: (number) => _onTapPanel(number, store),
                         ),
-                        SizedBox(width: 97),
                       ],
                     ),
                   ],
