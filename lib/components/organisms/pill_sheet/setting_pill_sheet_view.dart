@@ -83,13 +83,14 @@ class SettingPillSheetView extends StatelessWidget {
   PillMarkType _pillMarkTypeFor({
     required int sequentialPillNumber,
   }) {
+    if (selectedPillNumber == sequentialPillNumber) {
+      return PillMarkType.selected;
+    }
+
     final pillNumberIntoPillSheet = PillSheet.pillNumberIntoPillSheet(
         sequentialPillNumber: sequentialPillNumber,
         pillSheetType: pillSheetType);
 
-    if (selectedPillNumber == pillNumberIntoPillSheet) {
-      return PillMarkType.selected;
-    }
     if (pillSheetType.dosingPeriod < pillNumberIntoPillSheet) {
       return pillSheetType == PillSheetType.pillsheet_21
           ? PillMarkType.rest
