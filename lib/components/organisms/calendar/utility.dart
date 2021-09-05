@@ -54,15 +54,17 @@ List<DateRange> scheduledMenstruationDateRanges(
 }
 
 List<DateRange> nextPillSheetDateRanges(
-  PillSheet pillSheet,
+  PillSheetGroup pillSheetGroup,
   int maxPageCount,
 ) {
   assert(maxPageCount > 0);
   return List.generate(maxPageCount, (pageIndex) {
-    final begin = pillSheet.beginingDate.add(
-        Duration(days: pillSheet.pillSheetType.totalCount * (pageIndex + 1)));
+    final remainPillCount = pillSheetGroup.remainPillCount;
+    final offset = pageIndex * pillSheetGroup.totalPillCountIntoGroup;
+    final begin = today().add(Duration(days: remainPillCount + 1));
     final end = begin.add(Duration(days: Weekday.values.length - 1));
-    return DateRange(begin, end);
+    return DateRange(
+        begin.add(Duration(days: offset)), end.add(Duration(days: offset)));
   });
 }
 
@@ -80,7 +82,7 @@ int bandLength(
 }
 
 List<CalendarBandModel> buildBandModels(
-  PillSheet? pillSheet,
+  PillSheetGroup? pillSheetGroup,
   Setting? setting,
   List<Menstruation> menstruations,
   int maxPageCount,
@@ -88,9 +90,9 @@ List<CalendarBandModel> buildBandModels(
   assert(maxPageCount > 0);
   return [
     ...menstruations.map((e) => CalendarMenstruationBandModel(e)),
-    if (pillSheet != null) ...[
+    if (pillSheetGroup != null) ...[
       ...scheduledMenstruationDateRanges(
-              pillSheet, setting!, menstruations, maxPageCount)
+              pillSheetGroup, setting!, menstruations, maxPageCount)
           .where((bandRange) => menstruations
               .where((menstruation) =>
                   bandRange.inRange(menstruation.beginDate) ||
@@ -98,7 +100,7 @@ List<CalendarBandModel> buildBandModels(
               .isEmpty)
           .map((range) =>
               CalendarScheduledMenstruationBandModel(range.begin, range.end)),
-      ...nextPillSheetDateRanges(pillSheet, maxPageCount).map(
+      ...nextPillSheetDateRanges(pillSheetGroup, maxPageCount).map(
           (range) => CalendarNextPillSheetBandModel(range.begin, range.end))
     ]
   ];
