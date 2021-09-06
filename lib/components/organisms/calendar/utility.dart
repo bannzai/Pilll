@@ -59,7 +59,7 @@ List<DateRange> nextPillSheetDateRanges(
   return List.generate(maxPageCount, (pageIndex) {
     final remainPillCount = pillSheetGroup.remainPillCount;
     final offset = pageIndex * pillSheetGroup.totalPillCountIntoGroup;
-    final begin = today().add(Duration(days: remainPillCount + 1));
+    final begin = today().add(Duration(days: remainPillCount));
     final end = begin.add(Duration(days: Weekday.values.length - 1));
     return DateRange(
         begin.add(Duration(days: offset)), end.add(Duration(days: offset)));
