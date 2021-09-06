@@ -111,6 +111,9 @@ abstract class PillSheetGroup implements _$PillSheetGroup {
     if (latestTakenPillSheet == null) {
       return 0;
     }
+    if (endedPillSheets.isEmpty) {
+      return 0;
+    }
     final pastedPillCount = endedPillSheets
         .map((pillSheet) => pillSheet.pillSheetType.totalCount)
         .reduce((value, element) => value + element);
