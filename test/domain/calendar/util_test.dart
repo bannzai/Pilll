@@ -211,6 +211,8 @@ void main() {
         todayRepository = mockTodayRepository;
         when(mockTodayRepository.now())
             .thenReturn(DateTime.parse("2020-09-01"));
+        when(mockTodayRepository.today())
+            .thenReturn(DateTime.parse("2020-09-01"));
 
         addTearDown(() {
           todayRepository = originalTodayRepository;
