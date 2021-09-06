@@ -1,3 +1,4 @@
+import 'package:mockito/mockito.dart';
 import 'package:pilll/components/organisms/calendar/band/calendar_band_model.dart';
 import 'package:pilll/domain/calendar/date_range.dart';
 import 'package:pilll/components/organisms/calendar/utility.dart';
@@ -6,7 +7,10 @@ import 'package:pilll/entity/pill_sheet_group.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/entity/setting.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:pilll/service/day.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+
+import '../../helper/mock.mocks.dart';
 
 void main() {
   setUp(() {
@@ -201,6 +205,17 @@ void main() {
    4    5   6   7   8   9  10
         C  
     */
+
+        final originalTodayRepository = todayRepository;
+        final mockTodayRepository = MockTodayService();
+        todayRepository = mockTodayRepository;
+        when(mockTodayRepository.now())
+            .thenReturn(DateTime.parse("2020-09-01"));
+
+        addTearDown(() {
+          todayRepository = originalTodayRepository;
+        });
+
         var pillSheetType = PillSheetType.pillsheet_28_7;
         var beginingDate = DateTime.parse("2020-09-01");
         var pillSheet = PillSheet(
