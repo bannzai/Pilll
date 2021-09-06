@@ -213,7 +213,6 @@ void main() {
             .thenReturn(DateTime.parse("2020-09-01"));
         when(mockTodayRepository.today())
             .thenReturn(DateTime.parse("2020-09-01"));
-
         addTearDown(() {
           todayRepository = originalTodayRepository;
         });
@@ -241,6 +240,17 @@ void main() {
     test(
       "Second page with pillSheetType: pillsheet_28_7, beginingDate: 2020-09-01",
       () {
+        final originalTodayRepository = todayRepository;
+        final mockTodayRepository = MockTodayService();
+        todayRepository = mockTodayRepository;
+        when(mockTodayRepository.now())
+            .thenReturn(DateTime.parse("2020-09-01"));
+        when(mockTodayRepository.today())
+            .thenReturn(DateTime.parse("2020-09-01"));
+        addTearDown(() {
+          todayRepository = originalTodayRepository;
+        });
+
         var pillSheetType = PillSheetType.pillsheet_28_7;
         var beginingDate = DateTime.parse("2020-09-01");
         var pillSheet = PillSheet(
@@ -268,6 +278,17 @@ void main() {
     test(
       "Third page with pillSheetType: pillsheet_28_7, beginingDate: 2020-09-01",
       () {
+        final originalTodayRepository = todayRepository;
+        final mockTodayRepository = MockTodayService();
+        todayRepository = mockTodayRepository;
+        when(mockTodayRepository.now())
+            .thenReturn(DateTime.parse("2020-09-01"));
+        when(mockTodayRepository.today())
+            .thenReturn(DateTime.parse("2020-09-01"));
+        addTearDown(() {
+          todayRepository = originalTodayRepository;
+        });
+
         var pillSheetType = PillSheetType.pillsheet_28_7;
         var beginingDate = DateTime.parse("2020-09-01");
         var pillSheet = PillSheet(
@@ -316,6 +337,17 @@ void main() {
    4    5   6   7   8   9  10
         C  
     */
+        final originalTodayRepository = todayRepository;
+        final mockTodayRepository = MockTodayService();
+        todayRepository = mockTodayRepository;
+        when(mockTodayRepository.now())
+            .thenReturn(DateTime.parse("2020-09-01"));
+        when(mockTodayRepository.today())
+            .thenReturn(DateTime.parse("2020-09-01"));
+        addTearDown(() {
+          todayRepository = originalTodayRepository;
+        });
+
         var pillSheetType = PillSheetType.pillsheet_28_0;
         var beginingDate = DateTime.parse("2020-09-01");
         var pillSheet = PillSheet(
