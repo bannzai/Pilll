@@ -44,7 +44,7 @@ List<DateRange> scheduledOrInTheMiddleMenstruationDateRanges(
         }
       }
     } else {
-      // PillSheetGroup has not actived pillSheet
+      // PillSheetGroup does not have actived pillSheet
       // The lastTakenPillSheet is always present here as it is checking for empty pillSheets in the function above
       begin = pillSheetGroup.latestTakenPillSheet!.beginingDate
           .add(Duration(days: pillSheetGroup.remainPillCount));
