@@ -2,6 +2,7 @@ import 'package:pilll/components/organisms/calendar/band/calendar_band_model.dar
 import 'package:pilll/domain/calendar/date_range.dart';
 import 'package:pilll/components/organisms/calendar/utility.dart';
 import 'package:pilll/entity/pill_sheet.dart';
+import 'package:pilll/entity/pill_sheet_group.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/entity/setting.dart';
 import 'package:flutter_test/flutter_test.dart';
@@ -36,11 +37,13 @@ void main() {
         var beginingDate = DateTime.parse("2020-09-01");
         var fromMenstruation = 23;
         var durationMenstruation = 3;
-        var model = PillSheet(
+        var pillSheet = PillSheet(
           typeInfo: pillSheetType.typeInfo,
           beginingDate: beginingDate,
           lastTakenDate: null,
         );
+        final pillSheetGroup =
+            PillSheetGroup(pillSheetIDs: ["1"], pillSheets: [pillSheet]);
         var setting = Setting(
           pillSheetTypeRawPath: pillSheetType.rawPath,
           pillNumberForFromMenstruation: fromMenstruation,
@@ -51,7 +54,7 @@ void main() {
         assert(pillSheetType.dosingPeriod == 21,
             "scheduledMenstruationDateRange adding value with dosingPeriod when it will create DateRange. pillsheet_28_7 type has 24 dosingPeriod");
         expect(
-          scheduledMenstruationDateRanges(model, setting, [], 1),
+          scheduledMenstruationDateRanges(pillSheetGroup, setting, [], 1),
           [
             DateRange(
               DateTime.parse("2020-09-23"),
@@ -68,11 +71,14 @@ void main() {
         var beginingDate = DateTime.parse("2020-09-01");
         var fromMenstruation = 23;
         var durationMenstruation = 3;
-        var model = PillSheet(
+        var pillSheet = PillSheet(
           typeInfo: pillSheetType.typeInfo,
           beginingDate: beginingDate,
           lastTakenDate: null,
         );
+        final pillSheetGroup =
+            PillSheetGroup(pillSheetIDs: ["1"], pillSheets: [pillSheet]);
+
         var setting = Setting(
           pillSheetTypeRawPath: pillSheetType.rawPath,
           pillNumberForFromMenstruation: fromMenstruation,
@@ -83,7 +89,7 @@ void main() {
         assert(pillSheetType.dosingPeriod == 21,
             "scheduledMenstruationDateRange adding value with dosingPeriod when it will create DateRange. pillsheet_28_7 type has 24 dosingPeriod");
         expect(
-          scheduledMenstruationDateRanges(model, setting, [], 2),
+          scheduledMenstruationDateRanges(pillSheetGroup, setting, [], 2),
           [
             DateRange(
               DateTime.parse("2020-09-23"),
@@ -104,11 +110,13 @@ void main() {
         var beginingDate = DateTime.parse("2020-09-01");
         var fromMenstruation = 23;
         var durationMenstruation = 3;
-        var model = PillSheet(
+        var pillSheet = PillSheet(
           typeInfo: pillSheetType.typeInfo,
           beginingDate: beginingDate,
           lastTakenDate: null,
         );
+        final pillSheetGroup =
+            PillSheetGroup(pillSheetIDs: ["1"], pillSheets: [pillSheet]);
         var setting = Setting(
           pillSheetTypeRawPath: pillSheetType.rawPath,
           pillNumberForFromMenstruation: fromMenstruation,
@@ -119,7 +127,7 @@ void main() {
         assert(pillSheetType.dosingPeriod == 21,
             "scheduledMenstruationDateRange adding value with dosingPeriod when it will create DateRange. pillsheet_28_7 type has 24 dosingPeriod");
         expect(
-          scheduledMenstruationDateRanges(model, setting, [], 3),
+          scheduledMenstruationDateRanges(pillSheetGroup, setting, [], 3),
           [
             DateRange(
               DateTime.parse("2020-09-23"),
@@ -144,11 +152,13 @@ void main() {
         var beginingDate = DateTime.parse("2021-01-18");
         var fromMenstruation = 23;
         var durationMenstruation = 3;
-        var model = PillSheet(
+        var pillSheet = PillSheet(
           typeInfo: pillSheetType.typeInfo,
           beginingDate: beginingDate,
           lastTakenDate: null,
         );
+        final pillSheetGroup =
+            PillSheetGroup(pillSheetIDs: ["1"], pillSheets: [pillSheet]);
         var setting = Setting(
           pillSheetTypeRawPath: pillSheetType.rawPath,
           pillNumberForFromMenstruation: fromMenstruation,
@@ -159,7 +169,7 @@ void main() {
         assert(pillSheetType.dosingPeriod == 28,
             "scheduledMenstruationDateRange adding value with dosingPeriod when it will create DateRange. pillsheet_28_7 type has 24 dosingPeriod");
         expect(
-          scheduledMenstruationDateRanges(model, setting, [], 1),
+          scheduledMenstruationDateRanges(pillSheetGroup, setting, [], 1),
           [
             DateRange(
               DateTime.parse("2021-02-09"),
@@ -193,13 +203,15 @@ void main() {
     */
         var pillSheetType = PillSheetType.pillsheet_28_7;
         var beginingDate = DateTime.parse("2020-09-01");
-        var model = PillSheet(
+        var pillSheet = PillSheet(
           typeInfo: pillSheetType.typeInfo,
           beginingDate: beginingDate,
           lastTakenDate: null,
         );
+        final pillSheetGroup =
+            PillSheetGroup(pillSheetIDs: ["1"], pillSheets: [pillSheet]);
         expect(
-          nextPillSheetDateRanges(model, 1),
+          nextPillSheetDateRanges(pillSheetGroup, 1),
           [
             DateRange(
               DateTime.parse("2020-09-29"),
@@ -214,13 +226,15 @@ void main() {
       () {
         var pillSheetType = PillSheetType.pillsheet_28_7;
         var beginingDate = DateTime.parse("2020-09-01");
-        var model = PillSheet(
+        var pillSheet = PillSheet(
           typeInfo: pillSheetType.typeInfo,
           beginingDate: beginingDate,
           lastTakenDate: null,
         );
+        final pillSheetGroup =
+            PillSheetGroup(pillSheetIDs: ["1"], pillSheets: [pillSheet]);
         expect(
-          nextPillSheetDateRanges(model, 2),
+          nextPillSheetDateRanges(pillSheetGroup, 2),
           [
             DateRange(
               DateTime.parse("2020-09-29"),
@@ -239,13 +253,15 @@ void main() {
       () {
         var pillSheetType = PillSheetType.pillsheet_28_7;
         var beginingDate = DateTime.parse("2020-09-01");
-        var model = PillSheet(
+        var pillSheet = PillSheet(
           typeInfo: pillSheetType.typeInfo,
           beginingDate: beginingDate,
           lastTakenDate: null,
         );
+        final pillSheetGroup =
+            PillSheetGroup(pillSheetIDs: ["1"], pillSheets: [pillSheet]);
         expect(
-          nextPillSheetDateRanges(model, 3),
+          nextPillSheetDateRanges(pillSheetGroup, 3),
           [
             DateRange(
               DateTime.parse("2020-09-29"),
@@ -285,13 +301,15 @@ void main() {
     */
         var pillSheetType = PillSheetType.pillsheet_28_0;
         var beginingDate = DateTime.parse("2020-09-01");
-        var model = PillSheet(
+        var pillSheet = PillSheet(
           typeInfo: pillSheetType.typeInfo,
           beginingDate: beginingDate,
           lastTakenDate: null,
         );
+        final pillSheetGroup =
+            PillSheetGroup(pillSheetIDs: ["1"], pillSheets: [pillSheet]);
         expect(
-          nextPillSheetDateRanges(model, 1),
+          nextPillSheetDateRanges(pillSheetGroup, 1),
           [
             DateRange(
               DateTime.parse("2020-09-29"),
