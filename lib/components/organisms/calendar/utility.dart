@@ -27,9 +27,21 @@ List<DateRange> scheduledMenstruationDateRanges(
             setting.pillNumberForFromMenstruation - serializedTodayPillNumber;
         begin = today().add(Duration(days: diff));
       } else {
-        begin = today().add(Duration(
-            days: pillSheetGroup.remainPillCount +
-                setting.pillNumberForFromMenstruation));
+        // Avoid very dirty indent
+        final _left = setting.pillNumberForFromMenstruation;
+        final _target = serializedTodayPillNumber;
+        final _right = setting.pillNumberForFromMenstruation +
+            setting.durationMenstruation;
+
+        if (_left <= _target && _target <= _right) {
+          final diff =
+              serializedTodayPillNumber - setting.pillNumberForFromMenstruation;
+          begin = today().subtract(Duration(days: diff));
+        } else {
+          begin = today().add(Duration(
+              days: pillSheetGroup.remainPillCount +
+                  setting.pillNumberForFromMenstruation));
+        }
       }
     } else {
       // PillSheetGroup has not actived pillSheet

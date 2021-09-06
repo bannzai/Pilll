@@ -291,7 +291,7 @@ void main() {
       },
     );
     test(
-      "if latest pillsheet.beginingDate + totalCount >= today, when return card state of into duration for schedueld menstruation",
+      "if todayPillNumber > setting.pillNumberForFromMenstruation, when return card state of into duration for schedueld menstruation",
       () async {
         final originalTodayRepository = todayRepository;
         final mockTodayRepository = MockTodayService();
