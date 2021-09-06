@@ -80,9 +80,12 @@ abstract class PillSheetGroup implements _$PillSheetGroup {
     if (activedPillSheet == null) {
       return null;
     }
-    final index = pillSheets.indexOf(activedPillSheet);
-    final pastedPillSheets = pillSheets.sublist(0, index);
-    final pastedPillCount = pastedPillSheets
+
+    if (endedPillSheets.isEmpty) {
+      return null;
+    }
+
+    final pastedPillCount = endedPillSheets
         .map((pillSheet) => pillSheet.pillSheetType.totalCount)
         .reduce((value, element) => value + element);
     return pastedPillCount + activedPillSheet.todayPillNumber;
