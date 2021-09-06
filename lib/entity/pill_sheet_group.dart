@@ -81,14 +81,15 @@ abstract class PillSheetGroup implements _$PillSheetGroup {
       return null;
     }
 
-    if (pastedPillSheet.isEmpty) {
-      return null;
+    if (pastedPillSheet.isNotEmpty) {
+      final pastedPillCount = pastedPillSheet
+          .map((pillSheet) => pillSheet.pillSheetType.totalCount)
+          .reduce((value, element) => value + element);
+      return pastedPillCount + activedPillSheet.todayPillNumber;
+    } else {
+      // Group has only one PillSheet
+      return activedPillSheet.todayPillNumber;
     }
-
-    final pastedPillCount = pastedPillSheet
-        .map((pillSheet) => pillSheet.pillSheetType.totalCount)
-        .reduce((value, element) => value + element);
-    return pastedPillCount + activedPillSheet.todayPillNumber;
   }
 
   // Return 0 means pillSheets is empty
