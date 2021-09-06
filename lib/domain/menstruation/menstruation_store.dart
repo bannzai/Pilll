@@ -150,7 +150,9 @@ class MenstruationStore extends StateNotifier<MenstruationState> {
     }
     final latestPillSheetGroup = state.latestPillSheetGroup;
     final setting = state.setting;
-    if (latestPillSheetGroup == null || setting == null) {
+    if (latestPillSheetGroup == null ||
+        latestPillSheetGroup.pillSheets.isEmpty ||
+        setting == null) {
       return null;
     }
     if (setting.pillNumberForFromMenstruation == 0 ||
