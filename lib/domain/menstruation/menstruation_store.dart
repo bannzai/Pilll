@@ -160,7 +160,7 @@ class MenstruationStore extends StateNotifier<MenstruationState> {
       return null;
     }
 
-    final menstruationDateRanges = scheduledMenstruationDateRanges(
+    final menstruationDateRanges = scheduledOrInTheMiddleMenstruationDateRanges(
       latestPillSheetGroup,
       setting,
       state.entities,

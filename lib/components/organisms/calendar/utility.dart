@@ -6,7 +6,7 @@ import 'package:pilll/entity/setting.dart';
 import 'package:pilll/entity/weekday.dart';
 import 'package:pilll/util/datetime/day.dart';
 
-List<DateRange> scheduledMenstruationDateRanges(
+List<DateRange> scheduledOrInTheMiddleMenstruationDateRanges(
   PillSheetGroup pillSheetGroup,
   Setting setting,
   List<Menstruation> menstruations,
@@ -101,7 +101,7 @@ List<CalendarBandModel> buildBandModels(
   return [
     ...menstruations.map((e) => CalendarMenstruationBandModel(e)),
     if (pillSheetGroup != null) ...[
-      ...scheduledMenstruationDateRanges(
+      ...scheduledOrInTheMiddleMenstruationDateRanges(
               pillSheetGroup, setting!, menstruations, maxPageCount)
           .where((bandRange) => menstruations
               .where((menstruation) =>
