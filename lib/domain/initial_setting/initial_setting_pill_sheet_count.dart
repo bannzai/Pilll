@@ -1,5 +1,4 @@
 import 'package:pilll/analytics.dart';
-import 'package:pilll/domain/initial_setting/initial_setting_menstruation.dart';
 import 'package:pilll/domain/initial_setting/initial_setting_select_today_pill_number.dart';
 import 'package:pilll/domain/initial_setting/initial_setting_state.dart';
 import 'package:pilll/domain/initial_setting/initial_setting_store.dart';
@@ -166,7 +165,7 @@ class InitialSettingPillSheetCountPanel extends StatelessWidget {
         width: 97,
         height: 68,
         decoration: BoxDecoration(
-          color: state.pillSheetCount == number
+          color: state.pillSheetTypes.length == number
               ? PilllColors.secondary
               : PilllColors.white,
           borderRadius: BorderRadius.circular(6),
@@ -176,7 +175,7 @@ class InitialSettingPillSheetCountPanel extends StatelessWidget {
           child: Text(
             "$number",
             style: TextStyle(
-              color: state.pillSheetCount == number
+              color: state.pillSheetTypes.length == number
                   ? TextColor.white
                   : TextColor.main,
               fontSize: 18,
