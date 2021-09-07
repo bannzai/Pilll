@@ -107,30 +107,3 @@ class SettingMenstruationPage extends StatelessWidget {
     );
   }
 }
-
-extension SettingMenstruationPageRoute on SettingMenstruationPage {
-  static Route<dynamic> route({
-    required String title,
-    required String? doneText,
-    required VoidCallback? done,
-    required int pillSheetTotalCount,
-    required int pillSheetPageCount,
-    required SettingMenstruationPageModel model,
-    required void Function(int from) fromMenstructionDidDecide,
-    required void Function(int duration) durationMenstructionDidDecide,
-  }) {
-    return MaterialPageRoute(
-      settings: RouteSettings(name: "SettingMenstruationPage"),
-      builder: (_) => SettingMenstruationPage(
-        title: title,
-        doneText: doneText,
-        done: done,
-        pillSheetTotalCount: pillSheetTotalCount,
-        pillSheetPageCount: pillSheetPageCount,
-        model: model,
-        fromMenstructionDidDecide: fromMenstructionDidDecide,
-        durationMenstructionDidDecide: durationMenstructionDidDecide,
-      ),
-    );
-  }
-}
