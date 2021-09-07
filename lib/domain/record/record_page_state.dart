@@ -26,6 +26,10 @@ abstract class RecordPageState implements _$RecordPageState {
     Object? exception,
   }) = _RecordPageState;
 
+  int get initialPageIndex {
+    return pillSheetGroup?.activedPillSheet?.groupIndex ?? 0;
+  }
+
   bool get pillSheetGroupIsHidden {
     final pillSheetGroup = this.pillSheetGroup;
     return pillSheetGroup == null ||
