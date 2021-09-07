@@ -29,7 +29,7 @@ class SettingMenstruationPageModel {
   });
 }
 
-class SettingMenstruationPage extends StatefulWidget {
+class SettingMenstruationPage extends StatelessWidget {
   final String title;
   final int pillSheetPageCount;
   final bool isOnSequenceAppearance;
@@ -50,14 +50,8 @@ class SettingMenstruationPage extends StatefulWidget {
   }) : super(key: key);
 
   @override
-  _SettingMenstruationPageState createState() =>
-      _SettingMenstruationPageState();
-}
-
-class _SettingMenstruationPageState extends State<SettingMenstruationPage> {
-  @override
   Scaffold build(BuildContext context) {
-    final doneButton = this.widget.doneButton;
+    final doneButton = this.doneButton;
     return Scaffold(
       backgroundColor: PilllColors.background,
       appBar: AppBar(
@@ -66,7 +60,7 @@ class _SettingMenstruationPageState extends State<SettingMenstruationPage> {
           onPressed: () => Navigator.of(context).pop(),
         ),
         title: Text(
-          this.widget.title,
+          this.title,
           style: TextStyle(color: TextColor.black),
         ),
         backgroundColor: PilllColors.white,
@@ -87,13 +81,13 @@ class _SettingMenstruationPageState extends State<SettingMenstruationPage> {
                     ),
                     SizedBox(height: 12),
                     () {
-                      if (widget.isOnSequenceAppearance)
-                        return widget.pillSheetList;
+                      if (isOnSequenceAppearance)
+                        return pillSheetList;
                       else
-                        return widget.pillSheetView;
+                        return pillSheetView;
                     }(),
                     SizedBox(height: 24),
-                    widget.dynamicDescription,
+                    dynamicDescription,
                     if (doneButton != null) ...[
                       Expanded(
                         child: Container(
