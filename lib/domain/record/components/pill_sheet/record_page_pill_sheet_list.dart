@@ -29,6 +29,7 @@ class RecordPagePillSheetList extends HookWidget {
     }
 
     final pageController = usePageController(
+        initialPage: state.initialPageIndex,
         viewportFraction: (PillSheetViewLayout.width + 20) /
             MediaQuery.of(context).size.width);
     return Column(
