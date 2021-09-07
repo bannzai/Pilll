@@ -10,18 +10,6 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
-class SettingMenstruationPageModel {
-  int selectedFromMenstruation;
-  int selectedDurationMenstruation;
-  PillSheetType pillSheetType;
-
-  SettingMenstruationPageModel({
-    required this.selectedFromMenstruation,
-    required this.selectedDurationMenstruation,
-    required this.pillSheetType,
-  });
-}
-
 class SettingMenstruationPage extends StatelessWidget {
   final String title;
   final int pillSheetPageCount;
