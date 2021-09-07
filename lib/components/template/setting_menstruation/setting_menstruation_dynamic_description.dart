@@ -19,7 +19,7 @@ abstract class SettingMenstruationDynamicDescriptionConstants {
 class SettingMenstruationDynamicDescription extends StatelessWidget {
   final int fromMenstruation;
   final int durationMenstruation;
-  final PillSheetType pillSheetType;
+  final PillSheetType Function() retrieveFocusedPillSheetType;
   final void Function(int from) fromMenstructionDidDecide;
   final void Function(int duration) durationMenstructionDidDecide;
 
@@ -27,7 +27,7 @@ class SettingMenstruationDynamicDescription extends StatelessWidget {
     Key? key,
     required this.fromMenstruation,
     required this.durationMenstruation,
-    required this.pillSheetType,
+    required this.retrieveFocusedPillSheetType,
     required this.fromMenstructionDidDecide,
     required this.durationMenstructionDidDecide,
   }) : super(key: key);
@@ -121,7 +121,7 @@ class SettingMenstruationDynamicDescription extends StatelessWidget {
 
   void _showFromModalSheet(BuildContext context) {
     int keepSelectedFromMenstruation =
-        min(fromMenstruation, pillSheetType.totalCount);
+        min(fromMenstruation, retrieveFocusedPillSheetType().totalCount);
     showModalBottomSheet(
       context: context,
       builder: (BuildContext context) {
@@ -146,8 +146,8 @@ class SettingMenstruationDynamicDescription extends StatelessWidget {
                 },
                 child: CupertinoPicker(
                   itemExtent: 40,
-                  children:
-                      List.generate(pillSheetType.totalCount + 1, (index) {
+                  children: List.generate(
+                      retrieveFocusedPillSheetType().totalCount + 1, (index) {
                     if (index == 0) {
                       return "-";
                     }
