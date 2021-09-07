@@ -5,12 +5,11 @@ import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/components/organisms/pill_sheet/setting_pill_sheet_view.dart';
 import 'package:pilll/components/template/setting_menstruation/setting_menstruation_dynamic_description.dart';
 import 'package:pilll/components/template/setting_menstruation/setting_menstruation_pill_sheet_list.dart';
-import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
-class SettingMenstruationPage extends StatelessWidget {
+class SettingMenstruationPageTemplate extends StatelessWidget {
   final String title;
   final int pillSheetPageCount;
   final bool isOnSequenceAppearance;
@@ -19,7 +18,7 @@ class SettingMenstruationPage extends StatelessWidget {
   final SettingMenstruationDynamicDescription dynamicDescription;
   final PrimaryButton? doneButton;
 
-  const SettingMenstruationPage({
+  const SettingMenstruationPageTemplate({
     Key? key,
     required this.title,
     required this.pillSheetPageCount,
