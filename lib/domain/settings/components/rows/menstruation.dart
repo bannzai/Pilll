@@ -4,7 +4,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/analytics.dart';
 import 'package:pilll/components/atoms/font.dart';
-import 'package:pilll/components/molecules/template/setting_menstruation/setting_menstruation_page_template.dart';
+import 'package:pilll/domain/settings/setting_account_list/menstruation_page.dart';
 import 'package:pilll/domain/settings/setting_page_store.dart';
 import 'package:pilll/entity/pill_sheet_group.dart';
 import 'package:pilll/entity/setting.dart';
@@ -35,22 +35,7 @@ class MenstruationRow extends HookWidget {
         analytics.logEvent(
           name: "did_select_changing_about_menstruation",
         );
-        Navigator.of(context).push(SettingMenstruationPageRoute.route(
-          done: null,
-          doneText: null,
-          title: "生理について",
-          pillSheetTotalCount: setting.pillSheetType.totalCount,
-          model: SettingMenstruationPageModel(
-            selectedFromMenstruation: setting.pillNumberForFromMenstruation,
-            selectedDurationMenstruation: setting.durationMenstruation,
-            pillSheetType: setting.pillSheetType,
-          ),
-          fromMenstructionDidDecide: (selectedFromMenstruction) =>
-              store.modifyFromMenstruation(selectedFromMenstruction),
-          durationMenstructionDidDecide: (selectedDurationMenstruation) =>
-              store.modifyDurationMenstruation(selectedDurationMenstruation),
-          pillSheetPageCount: pillSheetGroup.pillSheets.length,
-        ));
+        Navigator.of(context).push(SettingMenstruationPageRoute.route());
       },
     );
   }
