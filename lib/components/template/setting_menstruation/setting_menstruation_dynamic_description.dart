@@ -9,6 +9,13 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
+abstract class SettingMenstruationDynamicDescriptionConstants {
+  static final List<String> durationList = [
+    "-",
+    ...List<String>.generate(7, (index) => (index + 1).toString())
+  ];
+}
+
 class SettingMenstruationDynamicDescription extends StatelessWidget {
   final int fromMenstruation;
   final int durationMenstruation;
@@ -186,7 +193,8 @@ class SettingMenstruationDynamicDescription extends StatelessWidget {
                 },
                 child: CupertinoPicker(
                   itemExtent: 40,
-                  children: SettingMenstruationPageConstants.durationList
+                  children: SettingMenstruationDynamicDescriptionConstants
+                      .durationList
                       .map(_pickerItem)
                       .toList(),
                   onSelectedItemChanged: (index) {
