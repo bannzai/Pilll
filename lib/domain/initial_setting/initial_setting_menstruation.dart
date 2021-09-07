@@ -1,5 +1,5 @@
 import 'package:pilll/analytics.dart';
-import 'package:pilll/components/molecules/template/setting_menstruation/setting_menstruation.dart';
+import 'package:pilll/components/molecules/template/setting_menstruation/setting_menstruation_page_template.dart';
 import 'package:pilll/domain/initial_setting/initial_setting_reminder_times.dart';
 import 'package:pilll/domain/initial_setting/initial_setting_store.dart';
 import 'package:flutter/cupertino.dart';
