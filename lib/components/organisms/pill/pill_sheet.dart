@@ -152,8 +152,6 @@ class PillSheetView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final scaleFactor = MediaQuery.of(context).textScaleFactor;
-    print("textScaleFactor: $scaleFactor");
     return Container(
       width: PillSheetView.width,
       height: _height,
