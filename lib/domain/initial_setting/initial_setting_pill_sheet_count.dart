@@ -129,13 +129,8 @@ class InitialSettingPillSheetCountPage extends HookWidget {
                 text: "次へ",
                 onPressed: () async {
                   analytics.logEvent(name: "next_pill_sheet_count");
-                  if (state.pillSheetCount == 0) {
-                    Navigator.of(context)
-                        .push(InitialSettingMenstruationPageRoute.route());
-                  } else {
-                    Navigator.of(context).push(
-                        InitialSettingSelectTodayPillNumberPageRoute.route());
-                  }
+                  Navigator.of(context).push(
+                      InitialSettingSelectTodayPillNumberPageRoute.route());
                 },
               ),
               SizedBox(height: 35),
