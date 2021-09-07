@@ -11,6 +11,11 @@ part 'initial_setting_state.freezed.dart';
 abstract class InitialSettingState implements _$InitialSettingState {
   InitialSettingState._();
   factory InitialSettingState({
+    @Default([])
+        List<PillSheetType> pillSheetTypes,
+    @Default(false)
+        isOnSequenceAppearance,
+    int? todayPillNumber,
     @Default(23)
         int fromMenstruation,
     @Default(4)
@@ -22,15 +27,10 @@ abstract class InitialSettingState implements _$InitialSettingState {
         List<ReminderTime> reminderTimes,
     @Default(true)
         bool isOnReminder,
-    int? todayPillNumber,
-    @Default([])
-        List<PillSheetType> pillSheetTypes,
     @Default(false)
         bool isLoading,
     @Default(false)
         bool isAccountCooperationDidEnd,
-    @Default(false)
-        isOnSequenceAppearance,
   }) = _InitialSettingState;
 
   DateTime? reminderTimeOrDefault(int index) {
