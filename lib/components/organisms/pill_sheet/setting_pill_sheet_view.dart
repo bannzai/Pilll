@@ -61,8 +61,11 @@ class SettingPillSheetView extends StatelessWidget {
       return Container(
         width: PillSheetViewLayout.componentWidth,
         child: PillMarkWithNumberLayout(
-          textOfPillNumber: Text("$sequentialPillNumber",
-              style: TextStyle(color: PilllColors.weekday)),
+          textOfPillNumber: Text(
+            "$sequentialPillNumber",
+            style: TextStyle(color: PilllColors.weekday),
+            textScaleFactor: 1,
+          ),
           pillMark: PillMark(
             hasRippleAnimation: false,
             isDone: false,
