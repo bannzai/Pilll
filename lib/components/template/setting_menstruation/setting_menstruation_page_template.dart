@@ -10,13 +10,6 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
-abstract class SettingMenstruationPageConstants {
-  static final List<String> durationList = [
-    "-",
-    ...List<String>.generate(7, (index) => (index + 1).toString())
-  ];
-}
-
 class SettingMenstruationPageModel {
   int selectedFromMenstruation;
   int selectedDurationMenstruation;
