@@ -128,6 +128,7 @@ class RecordPagePillSheet extends StatelessWidget {
               menstruationDuration: setting.durationMenstruation,
               maxPillNumber: pillSheet.pillSheetType.totalCount,
               pillMarkNumber: pillNumber)),
+      textScaleFactor: 1,
     );
   }
 }
