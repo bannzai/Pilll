@@ -20,13 +20,12 @@ class _$InitialSettingStateTearOff {
       {int fromMenstruation = 23,
       int durationMenstruation = 4,
       List<ReminderTime> reminderTimes = const [
-        const ReminderTime(hour: 21, minute: 0),
-        const ReminderTime(hour: 22, minute: 0)
+        ReminderTime(hour: 21, minute: 0),
+        ReminderTime(hour: 22, minute: 0)
       ],
       bool isOnReminder = true,
       int? todayPillNumber,
-      PillSheetType? pillSheetType,
-      int pillSheetCount = 1,
+      List<PillSheetType> pillSheetTypes = const [],
       bool isLoading = false,
       bool isAccountCooperationDidEnd = false,
       dynamic isOnSequenceAppearance = false}) {
@@ -36,8 +35,7 @@ class _$InitialSettingStateTearOff {
       reminderTimes: reminderTimes,
       isOnReminder: isOnReminder,
       todayPillNumber: todayPillNumber,
-      pillSheetType: pillSheetType,
-      pillSheetCount: pillSheetCount,
+      pillSheetTypes: pillSheetTypes,
       isLoading: isLoading,
       isAccountCooperationDidEnd: isAccountCooperationDidEnd,
       isOnSequenceAppearance: isOnSequenceAppearance,
@@ -55,8 +53,7 @@ mixin _$InitialSettingState {
   List<ReminderTime> get reminderTimes => throw _privateConstructorUsedError;
   bool get isOnReminder => throw _privateConstructorUsedError;
   int? get todayPillNumber => throw _privateConstructorUsedError;
-  PillSheetType? get pillSheetType => throw _privateConstructorUsedError;
-  int get pillSheetCount => throw _privateConstructorUsedError;
+  List<PillSheetType> get pillSheetTypes => throw _privateConstructorUsedError;
   bool get isLoading => throw _privateConstructorUsedError;
   bool get isAccountCooperationDidEnd => throw _privateConstructorUsedError;
   dynamic get isOnSequenceAppearance => throw _privateConstructorUsedError;
@@ -77,8 +74,7 @@ abstract class $InitialSettingStateCopyWith<$Res> {
       List<ReminderTime> reminderTimes,
       bool isOnReminder,
       int? todayPillNumber,
-      PillSheetType? pillSheetType,
-      int pillSheetCount,
+      List<PillSheetType> pillSheetTypes,
       bool isLoading,
       bool isAccountCooperationDidEnd,
       dynamic isOnSequenceAppearance});
@@ -100,8 +96,7 @@ class _$InitialSettingStateCopyWithImpl<$Res>
     Object? reminderTimes = freezed,
     Object? isOnReminder = freezed,
     Object? todayPillNumber = freezed,
-    Object? pillSheetType = freezed,
-    Object? pillSheetCount = freezed,
+    Object? pillSheetTypes = freezed,
     Object? isLoading = freezed,
     Object? isAccountCooperationDidEnd = freezed,
     Object? isOnSequenceAppearance = freezed,
@@ -127,14 +122,10 @@ class _$InitialSettingStateCopyWithImpl<$Res>
           ? _value.todayPillNumber
           : todayPillNumber // ignore: cast_nullable_to_non_nullable
               as int?,
-      pillSheetType: pillSheetType == freezed
-          ? _value.pillSheetType
-          : pillSheetType // ignore: cast_nullable_to_non_nullable
-              as PillSheetType?,
-      pillSheetCount: pillSheetCount == freezed
-          ? _value.pillSheetCount
-          : pillSheetCount // ignore: cast_nullable_to_non_nullable
-              as int,
+      pillSheetTypes: pillSheetTypes == freezed
+          ? _value.pillSheetTypes
+          : pillSheetTypes // ignore: cast_nullable_to_non_nullable
+              as List<PillSheetType>,
       isLoading: isLoading == freezed
           ? _value.isLoading
           : isLoading // ignore: cast_nullable_to_non_nullable
@@ -164,8 +155,7 @@ abstract class _$InitialSettingStateCopyWith<$Res>
       List<ReminderTime> reminderTimes,
       bool isOnReminder,
       int? todayPillNumber,
-      PillSheetType? pillSheetType,
-      int pillSheetCount,
+      List<PillSheetType> pillSheetTypes,
       bool isLoading,
       bool isAccountCooperationDidEnd,
       dynamic isOnSequenceAppearance});
@@ -189,8 +179,7 @@ class __$InitialSettingStateCopyWithImpl<$Res>
     Object? reminderTimes = freezed,
     Object? isOnReminder = freezed,
     Object? todayPillNumber = freezed,
-    Object? pillSheetType = freezed,
-    Object? pillSheetCount = freezed,
+    Object? pillSheetTypes = freezed,
     Object? isLoading = freezed,
     Object? isAccountCooperationDidEnd = freezed,
     Object? isOnSequenceAppearance = freezed,
@@ -216,14 +205,10 @@ class __$InitialSettingStateCopyWithImpl<$Res>
           ? _value.todayPillNumber
           : todayPillNumber // ignore: cast_nullable_to_non_nullable
               as int?,
-      pillSheetType: pillSheetType == freezed
-          ? _value.pillSheetType
-          : pillSheetType // ignore: cast_nullable_to_non_nullable
-              as PillSheetType?,
-      pillSheetCount: pillSheetCount == freezed
-          ? _value.pillSheetCount
-          : pillSheetCount // ignore: cast_nullable_to_non_nullable
-              as int,
+      pillSheetTypes: pillSheetTypes == freezed
+          ? _value.pillSheetTypes
+          : pillSheetTypes // ignore: cast_nullable_to_non_nullable
+              as List<PillSheetType>,
       isLoading: isLoading == freezed
           ? _value.isLoading
           : isLoading // ignore: cast_nullable_to_non_nullable
@@ -246,13 +231,12 @@ class _$_InitialSettingState extends _InitialSettingState {
       {this.fromMenstruation = 23,
       this.durationMenstruation = 4,
       this.reminderTimes = const [
-        const ReminderTime(hour: 21, minute: 0),
-        const ReminderTime(hour: 22, minute: 0)
+        ReminderTime(hour: 21, minute: 0),
+        ReminderTime(hour: 22, minute: 0)
       ],
       this.isOnReminder = true,
       this.todayPillNumber,
-      this.pillSheetType,
-      this.pillSheetCount = 1,
+      this.pillSheetTypes = const [],
       this.isLoading = false,
       this.isAccountCooperationDidEnd = false,
       this.isOnSequenceAppearance = false})
@@ -265,8 +249,8 @@ class _$_InitialSettingState extends _InitialSettingState {
   @override
   final int durationMenstruation;
   @JsonKey(defaultValue: const [
-    const ReminderTime(hour: 21, minute: 0),
-    const ReminderTime(hour: 22, minute: 0)
+    ReminderTime(hour: 21, minute: 0),
+    ReminderTime(hour: 22, minute: 0)
   ])
   @override
   final List<ReminderTime> reminderTimes;
@@ -275,11 +259,9 @@ class _$_InitialSettingState extends _InitialSettingState {
   final bool isOnReminder;
   @override
   final int? todayPillNumber;
+  @JsonKey(defaultValue: const [])
   @override
-  final PillSheetType? pillSheetType;
-  @JsonKey(defaultValue: 1)
-  @override
-  final int pillSheetCount;
+  final List<PillSheetType> pillSheetTypes;
   @JsonKey(defaultValue: false)
   @override
   final bool isLoading;
@@ -292,7 +274,7 @@ class _$_InitialSettingState extends _InitialSettingState {
 
   @override
   String toString() {
-    return 'InitialSettingState(fromMenstruation: $fromMenstruation, durationMenstruation: $durationMenstruation, reminderTimes: $reminderTimes, isOnReminder: $isOnReminder, todayPillNumber: $todayPillNumber, pillSheetType: $pillSheetType, pillSheetCount: $pillSheetCount, isLoading: $isLoading, isAccountCooperationDidEnd: $isAccountCooperationDidEnd, isOnSequenceAppearance: $isOnSequenceAppearance)';
+    return 'InitialSettingState(fromMenstruation: $fromMenstruation, durationMenstruation: $durationMenstruation, reminderTimes: $reminderTimes, isOnReminder: $isOnReminder, todayPillNumber: $todayPillNumber, pillSheetTypes: $pillSheetTypes, isLoading: $isLoading, isAccountCooperationDidEnd: $isAccountCooperationDidEnd, isOnSequenceAppearance: $isOnSequenceAppearance)';
   }
 
   @override
@@ -314,12 +296,9 @@ class _$_InitialSettingState extends _InitialSettingState {
             (identical(other.todayPillNumber, todayPillNumber) ||
                 const DeepCollectionEquality()
                     .equals(other.todayPillNumber, todayPillNumber)) &&
-            (identical(other.pillSheetType, pillSheetType) ||
+            (identical(other.pillSheetTypes, pillSheetTypes) ||
                 const DeepCollectionEquality()
-                    .equals(other.pillSheetType, pillSheetType)) &&
-            (identical(other.pillSheetCount, pillSheetCount) ||
-                const DeepCollectionEquality()
-                    .equals(other.pillSheetCount, pillSheetCount)) &&
+                    .equals(other.pillSheetTypes, pillSheetTypes)) &&
             (identical(other.isLoading, isLoading) ||
                 const DeepCollectionEquality()
                     .equals(other.isLoading, isLoading)) &&
@@ -341,8 +320,7 @@ class _$_InitialSettingState extends _InitialSettingState {
       const DeepCollectionEquality().hash(reminderTimes) ^
       const DeepCollectionEquality().hash(isOnReminder) ^
       const DeepCollectionEquality().hash(todayPillNumber) ^
-      const DeepCollectionEquality().hash(pillSheetType) ^
-      const DeepCollectionEquality().hash(pillSheetCount) ^
+      const DeepCollectionEquality().hash(pillSheetTypes) ^
       const DeepCollectionEquality().hash(isLoading) ^
       const DeepCollectionEquality().hash(isAccountCooperationDidEnd) ^
       const DeepCollectionEquality().hash(isOnSequenceAppearance);
@@ -361,8 +339,7 @@ abstract class _InitialSettingState extends InitialSettingState {
       List<ReminderTime> reminderTimes,
       bool isOnReminder,
       int? todayPillNumber,
-      PillSheetType? pillSheetType,
-      int pillSheetCount,
+      List<PillSheetType> pillSheetTypes,
       bool isLoading,
       bool isAccountCooperationDidEnd,
       dynamic isOnSequenceAppearance}) = _$_InitialSettingState;
@@ -379,9 +356,7 @@ abstract class _InitialSettingState extends InitialSettingState {
   @override
   int? get todayPillNumber => throw _privateConstructorUsedError;
   @override
-  PillSheetType? get pillSheetType => throw _privateConstructorUsedError;
-  @override
-  int get pillSheetCount => throw _privateConstructorUsedError;
+  List<PillSheetType> get pillSheetTypes => throw _privateConstructorUsedError;
   @override
   bool get isLoading => throw _privateConstructorUsedError;
   @override
