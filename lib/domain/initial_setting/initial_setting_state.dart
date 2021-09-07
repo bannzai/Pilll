@@ -23,9 +23,8 @@ abstract class InitialSettingState implements _$InitialSettingState {
     @Default(true)
         bool isOnReminder,
     int? todayPillNumber,
-    PillSheetType? pillSheetType,
-    @Default(1)
-        int pillSheetCount,
+    @Default([])
+        List<PillSheetType> pillSheetTypes,
     @Default(false)
         bool isLoading,
     @Default(false)
