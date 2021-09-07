@@ -70,10 +70,4 @@ class SettingMenstruationPillSheetList extends HookWidget {
       ],
     );
   }
-
-  PillSheetType get _mostLargePillSheetType {
-    final copied = [...pillSheetTypes];
-    copied.sort((a, b) => a.totalCount.compareTo(b.totalCount));
-    return copied.first;
-  }
 }

@@ -3,6 +3,7 @@ import 'package:pilll/components/organisms/pill_sheet/pill_sheet_view_weekday_li
 import 'package:pilll/domain/record/weekday_badge.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:pilll/entity/pill_sheet_type.dart';
 
 class PillSheetViewLayout extends StatelessWidget {
   static final double width = 316;
@@ -10,16 +11,26 @@ class PillSheetViewLayout extends StatelessWidget {
   static final double topSpace = 24;
   static final double bottomSpace = 24;
   static final double componentWidth = 37;
+
   static double calcHeight(
-      int numberOfLineInPillSheet, bool isHideWeekdayLine) {
+    List<PillSheetType> pillSheetTypes,
+    bool isHideWeekdayLine,
+  ) {
     final verticalSpacing =
         PillSheetViewLayout.topSpace + PillSheetViewLayout.bottomSpace;
-    final pillMarkListHeight =
-        PillSheetViewLayout.lineHeight * numberOfLineInPillSheet +
-            verticalSpacing;
+    final pillMarkListHeight = PillSheetViewLayout.lineHeight *
+            _mostLargePillSheetType(pillSheetTypes).numberOfLineInPillSheet +
+        verticalSpacing;
     return isHideWeekdayLine
         ? pillMarkListHeight
         : pillMarkListHeight + WeekdayBadgeConst.height;
+  }
+
+  static PillSheetType _mostLargePillSheetType(
+      List<PillSheetType> pillSheetTypes) {
+    final copied = [...pillSheetTypes];
+    copied.sort((a, b) => a.totalCount.compareTo(b.totalCount));
+    return copied.first;
   }
 
   final PillSheetViewWeekdayLine? weekdayLines;
