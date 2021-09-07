@@ -6,14 +6,12 @@ import 'package:pilll/components/organisms/pill_sheet/setting_pill_sheet_view.da
 import 'package:pilll/entity/pill_sheet_type.dart';
 
 class SettingMenstruationPillSheetList extends HookWidget {
-  final int pillSheetCount;
-  final PillSheetType pillSheetType;
+  final List<PillSheetType> pillSheetTypes;
   final int? selectedPillNumber;
   final Function(int) markSelected;
 
   SettingMenstruationPillSheetList({
-    required this.pillSheetCount,
-    required this.pillSheetType,
+    required this.pillSheetTypes,
     required this.selectedPillNumber,
     required this.markSelected,
   });
@@ -27,18 +25,18 @@ class SettingMenstruationPillSheetList extends HookWidget {
       children: [
         Container(
           height: PillSheetViewLayout.calcHeight(
-              pillSheetType.numberOfLineInPillSheet, true),
+              _mostLargePillSheetType.numberOfLineInPillSheet, true),
           child: PageView(
             clipBehavior: Clip.none,
             controller: pageController,
             scrollDirection: Axis.horizontal,
-            children: List.generate(pillSheetCount, (index) {
+            children: List.generate(pillSheetTypes.length, (index) {
               return [
                 Container(
                   padding: EdgeInsets.symmetric(horizontal: 10),
                   child: SettingPillSheetView(
                     pageIndex: index,
-                    pillSheetType: pillSheetType,
+                    pillSheetType: pillSheetTypes[index],
                     selectedPillNumber: selectedPillNumber,
                     markSelected: (number) => markSelected(number),
                   ),
@@ -47,11 +45,11 @@ class SettingMenstruationPillSheetList extends HookWidget {
             }).expand((element) => element).toList(),
           ),
         ),
-        if (pillSheetCount > 1) ...[
+        if (pillSheetTypes.length > 1) ...[
           SizedBox(height: 16),
           DotsIndicator(
             controller: pageController,
-            itemCount: pillSheetCount,
+            itemCount: pillSheetTypes.length,
             onDotTapped: (page) {
               pageController.animateToPage(
                 page,
@@ -63,5 +61,11 @@ class SettingMenstruationPillSheetList extends HookWidget {
         ]
       ],
     );
+  }
+
+  PillSheetType get _mostLargePillSheetType {
+    final copied = [...pillSheetTypes];
+    copied.sort((a, b) => a.totalCount.compareTo(b.totalCount));
+    return copied.first;
   }
 }
