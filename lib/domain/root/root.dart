@@ -1,4 +1,3 @@
-import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:pilll/analytics.dart';
 import 'package:pilll/entrypoint.dart';
 import 'package:pilll/service/auth.dart';
