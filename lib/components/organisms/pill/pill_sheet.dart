@@ -16,7 +16,7 @@ typedef PillMarkTypeHasRippleAnimation = bool Function(int);
 typedef DoneStateBuilder = bool Function(int);
 typedef PremiumPillMarkBuilder = PremiumPillMarkModel Function(int);
 
-final double componentWidth = 35;
+final double componentWidth = 37;
 
 class PillSheetView extends StatelessWidget {
   static final double width = 316;
@@ -97,6 +97,7 @@ class PillSheetView extends StatelessWidget {
                 ? "$number"
                 : DateTimeFormatter.monthAndDay(premium.date),
             style: FontType.smallTitle.merge(_upperTextColor(premium, number)),
+            textScaleFactor: 1,
           ),
           PillMark(
             key: Key("PillMarkWidget_$number"),
@@ -151,6 +152,8 @@ class PillSheetView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final scaleFactor = MediaQuery.of(context).textScaleFactor;
+    print("textScaleFactor: $scaleFactor");
     return Container(
       width: PillSheetView.width,
       height: _height,
