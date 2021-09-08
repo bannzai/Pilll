@@ -1,6 +1,7 @@
 import 'package:pilll/analytics.dart';
 import 'package:pilll/domain/record/record_page_store.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
+import 'package:pilll/entity/setting.dart';
 import 'package:pilll/error/error_alert.dart';
 import 'package:pilll/error_log.dart';
 import 'package:pilll/service/pill_sheet.dart';
@@ -16,12 +17,12 @@ class RecordPageAddingPillSheet extends StatelessWidget {
     Key? key,
     required this.context,
     required this.store,
-    required this.pillSheetType,
+    required this.setting,
   }) : super(key: key);
 
   final BuildContext context;
   final RecordPageStore store;
-  final PillSheetType pillSheetType;
+  final Setting setting;
 
   @override
   Widget build(BuildContext context) {
