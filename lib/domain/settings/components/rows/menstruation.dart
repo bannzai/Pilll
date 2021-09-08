@@ -41,7 +41,7 @@ class MenstruationRow extends HookWidget {
   }
 
   bool get _hasError {
-    return setting.legacyPropertyForPillSheetType.totalCount * pillSheetGroup.pillSheets.length <
+    return setting.pillSheetType.totalCount * pillSheetGroup.pillSheets.length <
         setting.pillNumberForFromMenstruation;
   }
 }
