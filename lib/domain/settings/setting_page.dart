@@ -9,7 +9,6 @@ import 'package:pilll/domain/settings/components/rows/notification_in_rest_durat
 import 'package:pilll/domain/settings/components/rows/notification_time.dart';
 import 'package:pilll/domain/settings/components/rows/pill_sheet_appearance_mode.dart';
 import 'package:pilll/domain/settings/components/rows/pill_sheet_remove.dart';
-import 'package:pilll/domain/settings/components/rows/pill_sheet_type.dart';
 import 'package:pilll/domain/settings/components/rows/premium_introduction.dart';
 import 'package:pilll/domain/settings/components/rows/quick_record.dart';
 import 'package:pilll/domain/settings/components/rows/taking_pill_notification.dart';
@@ -100,8 +99,6 @@ class SettingPage extends HookWidget {
                   return SettingSectionTitle(
                     text: "ピルシート",
                     children: [
-                      PillSheetTypeRow(settingState: state),
-                      _separator(),
                       PillSheetAppearanceModeRow(
                         setting: setting,
                         isPremium: state.isPremium,
