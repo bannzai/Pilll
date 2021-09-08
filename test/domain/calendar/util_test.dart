@@ -61,7 +61,7 @@ void main() {
           final pillSheetGroup =
               PillSheetGroup(pillSheetIDs: ["1"], pillSheets: [pillSheet]);
           var setting = Setting(
-            pillSheetTypeRawPath: pillSheetType.rawPath,
+            pillSheetTypes: [pillSheetType],
             pillNumberForFromMenstruation: fromMenstruation,
             durationMenstruation: durationMenstruation,
             isOnReminder: false,
@@ -108,7 +108,7 @@ void main() {
               PillSheetGroup(pillSheetIDs: ["1"], pillSheets: [pillSheet]);
 
           var setting = Setting(
-            pillSheetTypeRawPath: pillSheetType.rawPath,
+            pillSheetTypes: [pillSheetType],
             pillNumberForFromMenstruation: fromMenstruation,
             durationMenstruation: durationMenstruation,
             isOnReminder: false,
@@ -158,7 +158,7 @@ void main() {
           final pillSheetGroup =
               PillSheetGroup(pillSheetIDs: ["1"], pillSheets: [pillSheet]);
           var setting = Setting(
-            pillSheetTypeRawPath: pillSheetType.rawPath,
+            pillSheetTypes: [pillSheetType],
             pillNumberForFromMenstruation: fromMenstruation,
             durationMenstruation: durationMenstruation,
             isOnReminder: false,
@@ -212,7 +212,7 @@ void main() {
           final pillSheetGroup =
               PillSheetGroup(pillSheetIDs: ["1"], pillSheets: [pillSheet]);
           var setting = Setting(
-            pillSheetTypeRawPath: pillSheetType.rawPath,
+            pillSheetTypes: [pillSheetType],
             pillNumberForFromMenstruation: fromMenstruation,
             durationMenstruation: durationMenstruation,
             isOnReminder: false,
@@ -290,7 +290,7 @@ void main() {
       final pillSheetGroup =
           PillSheetGroup(pillSheetIDs: ["1"], pillSheets: [pillSheet]);
       var setting = Setting(
-        pillSheetTypeRawPath: pillSheetType.rawPath,
+        pillSheetTypes: [pillSheetType],
         pillNumberForFromMenstruation: fromMenstruation,
         durationMenstruation: durationMenstruation,
         isOnReminder: false,
