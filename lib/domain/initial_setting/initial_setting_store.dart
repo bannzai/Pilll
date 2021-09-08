@@ -72,14 +72,20 @@ class InitialSettingStateStore extends StateNotifier<InitialSettingState> {
   }
 
   void selectedPillSheetType(PillSheetType pillSheetType) {
-    state = state.copyWith(legacyPropertyForPillSheetType: pillSheetType);
+    state = state.copyWith(pillSheetTypes: [pillSheetType]);
     if (state.fromMenstruation > pillSheetType.totalCount) {
       state = state.copyWith(fromMenstruation: pillSheetType.totalCount);
     }
   }
 
-  void selectedPillSheetCount(int pillSheetCount) {
-    state = state.copyWith(pillSheetCount: pillSheetCount);
+  void addPillSheetType(PillSheetType pillSheetType) {
+    state = state.copyWith(
+        pillSheetTypes: [...state.pillSheetTypes]..add(pillSheetType));
+  }
+
+  void removePillSheetType(PillSheetType pillSheetType) {
+    state = state.copyWith(
+        pillSheetTypes: [...state.pillSheetTypes]..remove(pillSheetType));
   }
 
   void setIsOnSequenceAppearance(bool isOnSequenceAppearance) {
