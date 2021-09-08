@@ -24,7 +24,6 @@ class InitialSettingSelectTodayPillNumberPage extends HookWidget {
   Widget build(BuildContext context) {
     final store = useProvider(initialSettingStoreProvider);
     final state = useProvider(initialSettingStoreProvider.state);
-    final pillSheetType = state.pillSheetType;
     return Scaffold(
       backgroundColor: PilllColors.background,
       appBar: AppBar(
@@ -53,7 +52,7 @@ class InitialSettingSelectTodayPillNumberPage extends HookWidget {
                         textAlign: TextAlign.center,
                       ),
                       SizedBox(height: 44),
-                      if (pillSheetType != null)
+                      if (state.pillSheetTypes.isNotEmpty)
                         Align(
                           child: SelectTodayPillNumberPillSheetList(
                             state: state,

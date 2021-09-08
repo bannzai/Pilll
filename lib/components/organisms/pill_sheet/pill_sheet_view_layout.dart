@@ -13,20 +13,20 @@ class PillSheetViewLayout extends StatelessWidget {
   static final double componentWidth = 37;
 
   static double calcHeight(
-    List<PillSheetType> pillSheetTypes,
+    int numberOfLineInPillSheet,
     bool isHideWeekdayLine,
   ) {
     final verticalSpacing =
         PillSheetViewLayout.topSpace + PillSheetViewLayout.bottomSpace;
-    final pillMarkListHeight = PillSheetViewLayout.lineHeight *
-            _mostLargePillSheetType(pillSheetTypes).numberOfLineInPillSheet +
-        verticalSpacing;
+    final pillMarkListHeight =
+        PillSheetViewLayout.lineHeight * numberOfLineInPillSheet +
+            verticalSpacing;
     return isHideWeekdayLine
         ? pillMarkListHeight
         : pillMarkListHeight + WeekdayBadgeConst.height;
   }
 
-  static PillSheetType _mostLargePillSheetType(
+  static PillSheetType mostLargePillSheetType(
       List<PillSheetType> pillSheetTypes) {
     final copied = [...pillSheetTypes];
     copied.sort((a, b) => a.totalCount.compareTo(b.totalCount));
