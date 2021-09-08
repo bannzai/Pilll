@@ -25,7 +25,11 @@ class SelectTodayPillNumberPillSheetList extends HookWidget {
     return Column(
       children: [
         Container(
-          height: PillSheetViewLayout.calcHeight(state.pillSheetTypes, true),
+          height: PillSheetViewLayout.calcHeight(
+            PillSheetViewLayout.mostLargePillSheetType(state.pillSheetTypes)
+                .numberOfLineInPillSheet,
+            true,
+          ),
           child: PageView(
             clipBehavior: Clip.none,
             controller: pageController,
