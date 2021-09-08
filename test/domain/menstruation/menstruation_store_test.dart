@@ -96,7 +96,7 @@ void main() {
         final settingService = MockSettingService();
         when(settingService.fetch()).thenAnswer((realInvocation) =>
             Future.value(Setting(
-                pillSheetTypeRawPath: PillSheetType.pillsheet_21.rawPath,
+                pillSheetTypes: [PillSheetType.pillsheet_21],
                 pillNumberForFromMenstruation: 22,
                 durationMenstruation: 3,
                 reminderTimes: [],
@@ -176,7 +176,7 @@ void main() {
         final settingService = MockSettingService();
         when(settingService.fetch()).thenAnswer((realInvocation) =>
             Future.value(Setting(
-                pillSheetTypeRawPath: PillSheetType.pillsheet_21.rawPath,
+                pillSheetTypes: [PillSheetType.pillsheet_21],
                 pillNumberForFromMenstruation: 22,
                 durationMenstruation: 3,
                 reminderTimes: [],
@@ -242,7 +242,7 @@ void main() {
         final settingService = MockSettingService();
         when(settingService.fetch()).thenAnswer((realInvocation) =>
             Future.value(Setting(
-                pillSheetTypeRawPath: PillSheetType.pillsheet_21.rawPath,
+                pillSheetTypes: [PillSheetType.pillsheet_21],
                 pillNumberForFromMenstruation: 22,
                 durationMenstruation: 3,
                 reminderTimes: [],
@@ -319,7 +319,7 @@ void main() {
         final settingService = MockSettingService();
         when(settingService.fetch()).thenAnswer((realInvocation) =>
             Future.value(Setting(
-                pillSheetTypeRawPath: PillSheetType.pillsheet_21.rawPath,
+                pillSheetTypes: [PillSheetType.pillsheet_21],
                 pillNumberForFromMenstruation: 22,
                 durationMenstruation: 3,
                 reminderTimes: [],
