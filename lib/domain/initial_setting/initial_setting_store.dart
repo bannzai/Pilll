@@ -72,7 +72,7 @@ class InitialSettingStateStore extends StateNotifier<InitialSettingState> {
   }
 
   void selectedPillSheetType(PillSheetType pillSheetType) {
-    state = state.copyWith(pillSheetType: pillSheetType);
+    state = state.copyWith(legacyPropertyForPillSheetType: pillSheetType);
     if (state.fromMenstruation > pillSheetType.totalCount) {
       state = state.copyWith(fromMenstruation: pillSheetType.totalCount);
     }
@@ -113,7 +113,7 @@ class InitialSettingStateStore extends StateNotifier<InitialSettingState> {
   }
 
   Future<void> register() async {
-    final pillSheetType = state.pillSheetType;
+    final pillSheetType = state.legacyPropertyForPillSheetType;
     if (pillSheetType == null) {
       throw AssertionError(
           "Must not be null for pillSheet when register initial settings");
