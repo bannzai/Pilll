@@ -22,14 +22,14 @@ class PillSheetTypeRow extends HookWidget {
     final store = useProvider(pillSheetTypeStoreProvider(settingState));
     final state = useProvider(pillSheetTypeStoreProvider(settingState).state);
     final latestPillSheetGroup = settingState.latestPillSheetGroup;
-    final pillSheetType = state.setting?.pillSheetType;
+    final pillSheetType = state.setting?.legacyPropertyForPillSheetType;
     assert(pillSheetType != null);
     if (pillSheetType == null) {
       return Container();
     }
     return ListTile(
       title: Text("ピルシートタイプ", style: FontType.listRow),
-      subtitle: Text(state.setting?.pillSheetType.fullName ?? ""),
+      subtitle: Text(state.setting?.legacyPropertyForPillSheetType.fullName ?? ""),
       onTap: () {
         analytics.logEvent(
           name: "did_select_changing_pill_sheet_type",
