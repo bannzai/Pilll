@@ -1,6 +1,5 @@
 import 'package:pilll/analytics.dart';
 import 'package:pilll/domain/record/record_page_store.dart';
-import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/entity/setting.dart';
 import 'package:pilll/error/error_alert.dart';
 import 'package:pilll/error_log.dart';
