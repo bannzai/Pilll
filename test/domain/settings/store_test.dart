@@ -55,7 +55,7 @@ void main() {
         durationMenstruation: 1,
         pillNumberForFromMenstruation: 22,
         isOnReminder: false,
-        pillSheetTypeRawPath: PillSheetType.pillsheet_28_4.rawPath,
+        pillSheetTypes: [PillSheetType.pillsheet_28_4],
       );
 
       when(service.fetch())
@@ -165,7 +165,7 @@ void main() {
         durationMenstruation: 1,
         pillNumberForFromMenstruation: 22,
         isOnReminder: false,
-        pillSheetTypeRawPath: PillSheetType.pillsheet_28_4.rawPath,
+        pillSheetTypes: [PillSheetType.pillsheet_28_4],
       );
       when(service.fetch())
           .thenAnswer((realInvocation) => Future.value(setting));
