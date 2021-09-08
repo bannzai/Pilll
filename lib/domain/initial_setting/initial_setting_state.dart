@@ -50,7 +50,7 @@ abstract class InitialSettingState implements _$InitialSettingState {
   Setting buildSetting() => Setting(
         pillNumberForFromMenstruation: fromMenstruation,
         durationMenstruation: durationMenstruation,
-        pillSheetTypeRawPath: legacyPropertyForPillSheetType!.rawPath,
+        pillSheetTypes: pillSheetTypes,
         reminderTimes: reminderTimes,
         isOnReminder: isOnReminder,
       );
@@ -72,7 +72,7 @@ abstract class InitialSettingState implements _$InitialSettingState {
         todayPillNumber: todayPillNumber,
         pillSheetType: pillSheetType,
       ),
-      typeInfo: _typeInfo(),
+      typeInfo: pillSheetType.typeInfo,
     );
   }
 
@@ -113,20 +113,7 @@ abstract class InitialSettingState implements _$InitialSettingState {
     }
   }
 
-  PillSheetTypeInfo _typeInfo() {
-    return PillSheetTypeInfo(
-      pillSheetTypeReferencePath: legacyPropertyForPillSheetType!.rawPath,
-      name: legacyPropertyForPillSheetType!.fullName,
-      dosingPeriod: legacyPropertyForPillSheetType!.dosingPeriod,
-      totalCount: legacyPropertyForPillSheetType!.totalCount,
-    );
-  }
-
-  PillMarkType pillMarkTypeFor(int number) {
-    final pillSheetType = this.legacyPropertyForPillSheetType;
-    if (pillSheetType == null) {
-      throw ArgumentError.notNull("pill sheet type not allowed null");
-    }
+  PillMarkType pillMarkTypeFor(int number, PillSheetType pillSheetType) {
     if (todayPillNumber == number) {
       return PillMarkType.selected;
     }
