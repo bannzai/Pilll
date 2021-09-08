@@ -148,7 +148,7 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
   }
 
   Future<void> register(int count) async {
-    final pillSheetType = state.setting?.legacyPropertyForPillSheetType;
+    final pillSheetType = state.setting?.pillSheetType;
     if (pillSheetType == null) {
       return;
     }

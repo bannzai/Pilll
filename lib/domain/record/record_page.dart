@@ -103,7 +103,7 @@ class RecordPage extends HookWidget {
       return RecordPageAddingPillSheet(
           context: context,
           store: store,
-          pillSheetType: settingEntity.legacyPropertyForPillSheetType);
+          pillSheetType: settingEntity.pillSheetType);
     if (!state.pillSheetGroupIsHidden)
       return RecordPagePillSheetList(
         state: state,
