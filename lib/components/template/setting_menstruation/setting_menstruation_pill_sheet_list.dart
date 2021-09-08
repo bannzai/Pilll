@@ -33,7 +33,10 @@ class SettingMenstruationPillSheetList extends HookWidget {
       children: [
         Container(
           height: PillSheetViewLayout.calcHeight(
-              _mostLargePillSheetType.numberOfLineInPillSheet, true),
+            PillSheetViewLayout.mostLargePillSheetType(pillSheetTypes)
+                .numberOfLineInPillSheet,
+            true,
+          ),
           child: PageView(
             clipBehavior: Clip.none,
             controller: pageController,
