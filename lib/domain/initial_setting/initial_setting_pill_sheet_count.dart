@@ -140,6 +140,7 @@ class InitialSettingPillSheetCountPage extends HookWidget {
     );
   }
 
+  // TODO:
   _onTapPanel(int count, InitialSettingStateStore store) {}
 }
 
