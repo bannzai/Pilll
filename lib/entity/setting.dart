@@ -57,7 +57,8 @@ abstract class Setting implements _$Setting {
   Setting._();
   @JsonSerializable(explicitToJson: true)
   factory Setting({
-    required String pillSheetTypeRawPath,
+    String? pillSheetTypeRawPath,
+    required List<PillSheetType> pillSheetTypes,
     required int pillNumberForFromMenstruation,
     required int durationMenstruation,
     @Default([]) List<ReminderTime> reminderTimes,
