@@ -73,6 +73,7 @@ abstract class Setting implements _$Setting {
       _$SettingFromJson(json);
   Map<String, dynamic> toJson() => _$_$_SettingToJson(this as _$_Setting);
 
-  PillSheetType get pillSheetType =>
-      PillSheetTypeFunctions.fromRawPath(pillSheetTypeRawPath);
+  PillSheetType? get pillSheetType => pillSheetTypeRawPath != null
+      ? PillSheetTypeFunctions.fromRawPath(pillSheetTypeRawPath!)
+      : null;
 }
