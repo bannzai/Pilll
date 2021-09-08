@@ -119,8 +119,7 @@ class InitialSettingStateStore extends StateNotifier<InitialSettingState> {
   }
 
   Future<void> register() async {
-    final pillSheetType = state.legacyPropertyForPillSheetType;
-    if (pillSheetType == null) {
+    if (state.pillSheetTypes.isEmpty) {
       throw AssertionError(
           "Must not be null for pillSheet when register initial settings");
     }
@@ -133,7 +132,8 @@ class InitialSettingStateStore extends StateNotifier<InitialSettingState> {
     if (todayPillNumber != null) {
       final Map<String, PillSheet> idAndPillSheet = {};
 
-      for (var i = 0; i < state.pillSheetCount; i++) {
+      var i = 0;
+      state.pillSheetTypes.forEach((pillSheetType) {
         final pillSheet = state.buildPillSheet(
           pageIndex: i,
           todayPillNumber: todayPillNumber,
@@ -150,7 +150,9 @@ class InitialSettingStateStore extends StateNotifier<InitialSettingState> {
                 pillSheetID: createdPillSheet.id!,
                 after: pillSheet);
         _pillSheetModifiedHistoryService.add(batch, history);
-      }
+
+        i += 1;
+      });
 
       final pillSheetIDs = idAndPillSheet.keys.toList();
       final pillSheets = idAndPillSheet.values.toList();

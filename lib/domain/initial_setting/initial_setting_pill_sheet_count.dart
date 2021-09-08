@@ -140,9 +140,7 @@ class InitialSettingPillSheetCountPage extends HookWidget {
     );
   }
 
-  _onTapPanel(int count, InitialSettingStateStore store) {
-    store.selectedPillSheetCount(count);
-  }
+  _onTapPanel(int count, InitialSettingStateStore store) {}
 }
 
 class InitialSettingPillSheetCountPanel extends StatelessWidget {
