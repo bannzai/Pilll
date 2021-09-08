@@ -55,7 +55,7 @@ void main() {
         pillNumberForFromMenstruation: 22,
         durationMenstruation: 2,
         isOnReminder: false,
-        pillSheetTypeRawPath: PillSheetType.pillsheet_21.rawPath,
+        pillSheetTypes: [PillSheetType.pillsheet_21],
         reminderTimes: [
           ReminderTime(hour: 10, minute: 0),
         ],
@@ -119,7 +119,7 @@ void main() {
         pillNumberForFromMenstruation: 22,
         durationMenstruation: 2,
         isOnReminder: false,
-        pillSheetTypeRawPath: PillSheetType.pillsheet_21.rawPath,
+        pillSheetTypes: [PillSheetType.pillsheet_21],
         reminderTimes: [
           ReminderTime(hour: 10, minute: 0),
           ReminderTime(hour: 11, minute: 0),

@@ -62,7 +62,7 @@ void main() {
         createdAt: DateTime.parse("2020-11-21"),
       );
       final settingEntity = Setting(
-        pillSheetTypeRawPath: PillSheetType.pillsheet_21.rawPath,
+        pillSheetTypes: [PillSheetType.pillsheet_21],
         pillNumberForFromMenstruation: 22,
         durationMenstruation: 4,
         isOnReminder: true,
@@ -132,7 +132,7 @@ void main() {
         createdAt: DateTime.parse("2020-11-21"),
       );
       final settingEntity = Setting(
-        pillSheetTypeRawPath: PillSheetType.pillsheet_21.rawPath,
+        pillSheetTypes: [PillSheetType.pillsheet_21],
         pillNumberForFromMenstruation: 22,
         durationMenstruation: 4,
         isOnReminder: true,
@@ -205,7 +205,7 @@ void main() {
         createdAt: DateTime.parse("2020-11-21"),
       );
       final settingEntity = Setting(
-        pillSheetTypeRawPath: PillSheetType.pillsheet_21.rawPath,
+        pillSheetTypes: [PillSheetType.pillsheet_21],
         pillNumberForFromMenstruation: 22,
         durationMenstruation: 4,
         isOnReminder: true,
@@ -276,7 +276,7 @@ void main() {
         createdAt: DateTime.parse("2020-11-21"),
       );
       final settingEntity = Setting(
-        pillSheetTypeRawPath: PillSheetType.pillsheet_21.rawPath,
+        pillSheetTypes: [PillSheetType.pillsheet_21],
         pillNumberForFromMenstruation: 22,
         durationMenstruation: 4,
         isOnReminder: true,
