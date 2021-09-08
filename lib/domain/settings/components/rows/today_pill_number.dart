@@ -30,7 +30,7 @@ class TodayPllNumberRow extends HookWidget {
     );
     Navigator.of(context).push(
       ModifingPillNumberPageRoute.route(
-        pillSheetType: setting.pillSheetType,
+        pillSheetType: setting.legacyPropertyForPillSheetType,
         markSelected: (number) {
           Navigator.pop(context);
           store.modifyBeginingDate(number);
