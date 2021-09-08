@@ -147,16 +147,14 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
     super.dispose();
   }
 
-  Future<void> register(int count) async {
-    final pillSheetType = state.setting?.legacyPropertyForPillSheetType;
-    if (pillSheetType == null) {
-      return;
-    }
+  Future<void> register(List<PillSheetType> pillSheetTypes) async {
     final batch = _batchFactory.batch();
 
     final Map<String, PillSheet> idAndPillSheet = {};
     final n = now();
-    for (int i = 0; i < count; i++) {
+
+    var i = 0;
+    pillSheetTypes.forEach((pillSheetType) {
       final pillSheet = PillSheet(
         typeInfo: pillSheetType.typeInfo,
         beginingDate: n.add(
@@ -177,7 +175,9 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
           .createCreatedPillSheetAction(
               before: null, pillSheetID: pillSheetID, after: createdPillSheet);
       _pillSheetModifiedHistoryService.add(batch, history);
-    }
+
+      i++;
+    });
 
     final pillSheetIDs = idAndPillSheet.keys.toList();
     final pillSheets = idAndPillSheet.values.toList();
