@@ -16,7 +16,7 @@ https://pilll.anotion.so/
 ## App
 - [利用規約](https://bannzai.github.io/Pilll/Terms)
 - [プライバシーポリシー](https://bannzai.github.io/Pilll/PrivacyPolicy)
-- [特定商取引法に基づく表示](https://bannzai.github.io/Pilll/SpecifiedCommercialTransactionAct.md)
+- [特定商取引法に基づく表示](https://bannzai.github.io/Pilll/SpecifiedCommercialTransactionAct)
 
 ## LICENSE
 ライセンスと書いておきながら規格に沿ったものの提示は無いです。原則[No LICENSE](https://choosealicense.com/no-permission/)です。つまり著作権と同等の権利を主張します。
