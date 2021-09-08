@@ -3,18 +3,17 @@ import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/components/organisms/pill_sheet/setting_pill_sheet_view.dart';
+import 'package:pilll/entity/pill_sheet.dart';
 import 'package:pilll/util/formatter/date_time_formatter.dart';
 import 'package:flutter/material.dart';
 
-import '../../entity/pill_sheet_type.dart';
-
 class ModifingPillNumberPage extends StatefulWidget {
-  final PillSheetType pillSheetType;
+  final PillSheet activedPillSheet;
   final Function(int) markSelected;
 
   const ModifingPillNumberPage({
     Key? key,
-    required this.pillSheetType,
+    required this.activedPillSheet,
     required this.markSelected,
   }) : super(key: key);
 
@@ -55,7 +54,7 @@ class _ModifingPillNumberPageState extends State<ModifingPillNumberPage> {
               Center(
                 child: SettingPillSheetView(
                   pageIndex: 0,
-                  pillSheetType: widget.pillSheetType,
+                  pillSheetType: widget.activedPillSheet.pillSheetType,
                   selectedPillNumber: selectedPillMarkNumber,
                   markSelected: (number) {
                     setState(() => selectedPillMarkNumber = number);
@@ -83,12 +82,12 @@ class _ModifingPillNumberPageState extends State<ModifingPillNumberPage> {
 
 extension ModifingPillNumberPageRoute on ModifingPillNumberPage {
   static Route<dynamic> route(
-      {required PillSheetType pillSheetType,
+      {required PillSheet activedPillSheet,
       required Function(int) markSelected}) {
     return MaterialPageRoute(
       settings: RouteSettings(name: "ModifingPillNumberPage"),
       builder: (_) => ModifingPillNumberPage(
-        pillSheetType: pillSheetType,
+        activedPillSheet: activedPillSheet,
         markSelected: markSelected,
       ),
     );

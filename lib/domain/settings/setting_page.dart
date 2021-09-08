@@ -106,10 +106,12 @@ class SettingPage extends HookWidget {
                         trialDeadlineDate: state.trialDeadlineDate,
                       ),
                       _separator(),
-                      if (pillSheetGroup != null &&
-                          !pillSheetGroup.isDeactived &&
-                          !pillSheetGroup.isDeleted) ...[
-                        TodayPllNumberRow(setting: setting),
+                      if (activedPillSheet != null &&
+                          !activedPillSheet.isInvalid) ...[
+                        TodayPllNumberRow(
+                          setting: setting,
+                          activedPillSheet: activedPillSheet,
+                        ),
                         _separator(),
                         PillSheetRemoveRow(),
                         _separator(),
