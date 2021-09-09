@@ -4,7 +4,7 @@
 ![Test](https://github.com/bannzai/Pilll/workflows/Test/badge.svg)
 
 ## HP
-https://pilll.anotion.so/
+https://pilll.wraptas.site/
 
 ## Blogs
 - [個人開発のお話](https://bannzai.hatenadiary.jp/entry/2021/05/10/054207)
