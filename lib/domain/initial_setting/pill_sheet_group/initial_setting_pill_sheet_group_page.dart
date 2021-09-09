@@ -64,30 +64,7 @@ class InitialSettingPillSheetGroupPage extends HookWidget {
                         .expand((element) => element)
                         .toList(),
                     SizedBox(height: 20),
-                    Container(
-                      width: double.infinity,
-                      padding: EdgeInsets.symmetric(vertical: 16),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          Icon(
-                            Icons.add,
-                            color: TextColor.noshime,
-                            size: 20,
-                          ),
-                          SizedBox(width: 4),
-                          Text(
-                            "ピルシートを追加",
-                            style: TextStyle(
-                              color: TextColor.main,
-                              fontFamily: FontFamily.japanese,
-                              fontSize: 12,
-                              fontWeight: FontWeight.w400,
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
+                    PillSheetTypeAddButton(),
                   ],
                 ),
               ),
@@ -144,4 +121,43 @@ class InitialSettingPillSheetGroupPage extends HookWidget {
 
   // TODO:
   _onTapPanel(int count, InitialSettingStateStore store) {}
+}
+
+class PillSheetTypeAddButton extends StatelessWidget {
+  const PillSheetTypeAddButton({
+    Key? key,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return GestureDetector(
+      onTap: () {
+        
+      },
+      child: Container(
+        width: double.infinity,
+        padding: EdgeInsets.symmetric(vertical: 16),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Icon(
+              Icons.add,
+              color: TextColor.noshime,
+              size: 20,
+            ),
+            SizedBox(width: 4),
+            Text(
+              "ピルシートを追加",
+              style: TextStyle(
+                color: TextColor.main,
+                fontFamily: FontFamily.japanese,
+                fontSize: 12,
+                fontWeight: FontWeight.w400,
+              ),
+            ),
+          ],
+        ),
+      ),
+    );
+  }
 }
