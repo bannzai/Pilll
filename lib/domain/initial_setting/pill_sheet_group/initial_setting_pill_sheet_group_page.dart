@@ -1,5 +1,6 @@
 import 'package:pilll/analytics.dart';
 import 'package:pilll/components/template/pill_sheet_type_setting/pill_sheet_type_select_body_template.dart';
+import 'package:pilll/domain/initial_setting/pill_sheet_group/initial_setting_pill_sheet_group_select_pill_sheet_type_page.dart';
 import 'package:pilll/domain/initial_setting/today_pill_number/initial_setting_select_today_pill_number_page.dart';
 import 'package:pilll/domain/initial_setting/initial_setting_store.dart';
 import 'package:pilll/components/atoms/buttons.dart';
@@ -65,7 +66,7 @@ class InitialSettingPillSheetGroupPage extends HookWidget {
                         .expand((element) => element)
                         .toList(),
                     SizedBox(height: 20),
-                    PillSheetTypeAddButton(),
+                    PillSheetTypeAddButton(store: store),
                   ],
                 ),
               ),
@@ -122,14 +123,21 @@ class InitialSettingPillSheetGroupPage extends HookWidget {
 }
 
 class PillSheetTypeAddButton extends StatelessWidget {
-  const PillSheetTypeAddButton({
-    Key? key,
-  }) : super(key: key);
+  final InitialSettingStateStore store;
+  const PillSheetTypeAddButton({Key? key, required this.store})
+      : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () {},
+      onTap: () {
+        showInitialSettingPillSheetGroupSelectPillSheetTypePage(
+            context: context,
+            pillSheetType: null,
+            onSelect: (pillSheetType) {
+              store.addPillSheetType(pillSheetType);
+            });
+      },
       child: Container(
         width: double.infinity,
         padding: EdgeInsets.symmetric(vertical: 16),
