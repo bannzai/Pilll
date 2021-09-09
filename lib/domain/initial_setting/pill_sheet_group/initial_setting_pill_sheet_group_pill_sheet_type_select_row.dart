@@ -32,8 +32,6 @@ class InitialSettingPillSheetGroupPillSheetTypeSelectRow
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Row(
-            mainAxisSize: MainAxisSize.min,
-            mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Text(
                 "${index + 1}枚目",
@@ -44,19 +42,21 @@ class InitialSettingPillSheetGroupPillSheetTypeSelectRow
                   fontFamily: FontFamily.japanese,
                 ),
               ),
-              Spacer(),
-              SizedBox(
-                width: 20,
-                height: 20,
-                child: IconButton(
-                    padding: EdgeInsets.all(0),
-                    onPressed: () {},
-                    icon: SvgPicture.asset(
-                      "images/minus_icon.svg",
-                      width: 20,
-                      height: 20,
-                    )),
-              ),
+              if (index != 0) ...[
+                Spacer(),
+                SizedBox(
+                  width: 20,
+                  height: 20,
+                  child: IconButton(
+                      padding: EdgeInsets.all(0),
+                      onPressed: () {},
+                      icon: SvgPicture.asset(
+                        "images/minus_icon.svg",
+                        width: 20,
+                        height: 20,
+                      )),
+                ),
+              ],
             ],
           ),
           SizedBox(height: 10),
