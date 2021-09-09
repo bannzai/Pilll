@@ -70,8 +70,21 @@ class InitialSettingPillSheetGroupPage extends HookWidget {
                       child: Row(
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          Icon(Icons.add, color: TextColor.noshime),
-                          Text("ピルシートを追加"),
+                          Icon(
+                            Icons.add,
+                            color: TextColor.noshime,
+                            size: 20,
+                          ),
+                          SizedBox(width: 4),
+                          Text(
+                            "ピルシートを追加",
+                            style: TextStyle(
+                              color: TextColor.main,
+                              fontFamily: FontFamily.japanese,
+                              fontSize: 12,
+                              fontWeight: FontWeight.w400,
+                            ),
+                          ),
                         ],
                       ),
                     ),
