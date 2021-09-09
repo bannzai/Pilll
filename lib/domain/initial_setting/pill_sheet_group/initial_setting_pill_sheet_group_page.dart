@@ -44,24 +44,38 @@ class InitialSettingPillSheetGroupPage extends HookWidget {
               Container(
                 padding: EdgeInsets.symmetric(horizontal: 26),
                 child: Column(
-                  children: state.pillSheetTypes
-                      .asMap()
-                      .map((index, pillSheetType) {
-                        return MapEntry(
-                          index,
-                          [
-                            InitialSettingPillSheetGroupPillSheetTypeSelectRow(
-                              index: index,
-                              pillSheetType: pillSheetType,
-                              state: state,
-                              store: store,
-                            ),
-                          ],
-                        );
-                      })
-                      .values
-                      .expand((element) => element)
-                      .toList(),
+                  children: [
+                    ...state.pillSheetTypes
+                        .asMap()
+                        .map((index, pillSheetType) {
+                          return MapEntry(
+                            index,
+                            [
+                              InitialSettingPillSheetGroupPillSheetTypeSelectRow(
+                                index: index,
+                                pillSheetType: pillSheetType,
+                                state: state,
+                                store: store,
+                              ),
+                            ],
+                          );
+                        })
+                        .values
+                        .expand((element) => element)
+                        .toList(),
+                    SizedBox(height: 20),
+                    Container(
+                      width: double.infinity,
+                      padding: EdgeInsets.symmetric(vertical: 16),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Icon(Icons.add, color: TextColor.noshime),
+                          Text("ピルシートを追加"),
+                        ],
+                      ),
+                    ),
+                  ],
                 ),
               ),
               Spacer(),
