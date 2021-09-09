@@ -201,7 +201,7 @@ class _$SettingTearOff {
 
   _Setting call(
       {String? pillSheetTypeRawPath,
-      required List<PillSheetType> pillSheetTypes,
+      List<PillSheetType> pillSheetTypes = const [],
       required int pillNumberForFromMenstruation,
       required int durationMenstruation,
       List<ReminderTime> reminderTimes = const [],
@@ -412,7 +412,7 @@ class __$SettingCopyWithImpl<$Res> extends _$SettingCopyWithImpl<$Res>
 class _$_Setting extends _Setting with DiagnosticableTreeMixin {
   _$_Setting(
       {this.pillSheetTypeRawPath,
-      required this.pillSheetTypes,
+      this.pillSheetTypes = const [],
       required this.pillNumberForFromMenstruation,
       required this.durationMenstruation,
       this.reminderTimes = const [],
@@ -427,6 +427,7 @@ class _$_Setting extends _Setting with DiagnosticableTreeMixin {
 
   @override
   final String? pillSheetTypeRawPath;
+  @JsonKey(defaultValue: const [])
   @override
   final List<PillSheetType> pillSheetTypes;
   @override
@@ -540,7 +541,7 @@ class _$_Setting extends _Setting with DiagnosticableTreeMixin {
 abstract class _Setting extends Setting {
   factory _Setting(
       {String? pillSheetTypeRawPath,
-      required List<PillSheetType> pillSheetTypes,
+      List<PillSheetType> pillSheetTypes,
       required int pillNumberForFromMenstruation,
       required int durationMenstruation,
       List<ReminderTime> reminderTimes,
