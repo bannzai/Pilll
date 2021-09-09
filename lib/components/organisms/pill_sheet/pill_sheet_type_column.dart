@@ -22,35 +22,37 @@ class PillSheetTypeColumn extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: PillSheetTypeColumnConstant.width,
-      height: PillSheetTypeColumnConstant.height,
+      constraints: BoxConstraints(minWidth: 146, minHeight: 129),
       decoration: BoxDecoration(
         color: this.selected
             ? PilllColors.secondary.withOpacity(0.08)
             : PilllColors.white,
         border: Border.all(
-            width: this.selected ? 2 : 1,
-            color: this.selected ? PilllColors.secondary : PilllColors.border),
+          width: this.selected ? 2 : 1,
+          color: this.selected ? PilllColors.secondary : PilllColors.border,
+        ),
         borderRadius: BorderRadius.circular(10),
       ),
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.start,
-        children: <Widget>[
-          SizedBox(width: 16),
-          Column(
-            mainAxisAlignment: MainAxisAlignment.start,
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: <Widget>[
-              SizedBox(height: 10),
-              Text("${_title(pillSheetType)}",
-                  style: FontType.thinTitle.merge(TextColorStyle.main)),
-              Text("${_subtitle(pillSheetType)}",
-                  style: FontType.assisting.merge(TextColorStyle.main)),
-              SizedBox(height: 8),
-              this.pillSheetType.image,
-            ],
-          ),
-        ],
+      child: Container(
+        padding: EdgeInsets.only(
+          left: 16,
+          top: 10,
+          right: 25,
+          bottom: PillSheetType.pillsheet_21_0 == pillSheetType ? 30 : 10,
+        ),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.start,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: <Widget>[
+            Text("${_title(pillSheetType)}",
+                style: FontType.thinTitle.merge(TextColorStyle.main)),
+            SizedBox(height: 2),
+            Text("${_subtitle(pillSheetType)}",
+                style: FontType.assisting.merge(TextColorStyle.main)),
+            SizedBox(height: 9),
+            this.pillSheetType.image,
+          ],
+        ),
       ),
     );
   }

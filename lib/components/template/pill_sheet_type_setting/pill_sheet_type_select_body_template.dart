@@ -1,4 +1,3 @@
-import 'package:flutter/gestures.dart';
 import 'package:pilll/components/atoms/buttons.dart';
 import 'package:pilll/components/organisms/pill_sheet/pill_sheet_type_column.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
@@ -33,19 +32,35 @@ class PillSheetTypeSelectBodyTemplate extends StatelessWidget {
           Text("飲んでいるピルシートのタイプはどれ？",
               style: FontType.sBigTitle.merge(TextColorStyle.main)),
           SizedBox(height: 24),
-          Expanded(
-            child: GridView.count(
-              shrinkWrap: true,
-              mainAxisSpacing: 16,
-              crossAxisSpacing: 16,
-              padding: EdgeInsets.only(left: 34, right: 34),
-              childAspectRatio: PillSheetTypeColumnConstant.aspectRatio,
-              crossAxisCount: 2,
-              children: [
-                ...PillSheetType.values.map((e) => _pillSheet(e)).toList(),
-              ],
-            ),
-          ),
+          ..._chunckedPillSheetTypes()
+              .map((pillSheetTypes) {
+                return [
+                  SizedBox(height: 16),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: pillSheetTypes
+                        .asMap()
+                        .map(
+                          (index, pillSheetType) {
+                            if (index == 0) {
+                              return MapEntry(index, [
+                                _pillSheet(pillSheetType),
+                                SizedBox(width: 16),
+                              ]);
+                            } else {
+                              return MapEntry(
+                                  index, [_pillSheet(pillSheetType)]);
+                            }
+                          },
+                        )
+                        .values
+                        .expand((element) => element)
+                        .toList(),
+                  ),
+                ];
+              })
+              .expand((element) => element)
+              .toList(),
           SizedBox(height: 10),
           if (doneButton != null)
             Align(
