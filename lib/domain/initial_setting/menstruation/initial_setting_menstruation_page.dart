@@ -4,7 +4,7 @@ import 'package:pilll/components/organisms/pill_sheet/setting_pill_sheet_view.da
 import 'package:pilll/components/template/setting_menstruation/setting_menstruation_dynamic_description.dart';
 import 'package:pilll/components/template/setting_menstruation/setting_menstruation_page_template.dart';
 import 'package:pilll/components/template/setting_menstruation/setting_menstruation_pill_sheet_list.dart';
-import 'package:pilll/domain/initial_setting/initial_setting_reminder_times.dart';
+import 'package:pilll/domain/initial_setting/reminder_times/initial_setting_reminder_times_page.dart';
 import 'package:pilll/domain/initial_setting/initial_setting_store.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
