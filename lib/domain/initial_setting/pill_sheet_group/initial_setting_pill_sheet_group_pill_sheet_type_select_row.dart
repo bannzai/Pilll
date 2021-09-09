@@ -23,11 +23,12 @@ class InitialSettingPillSheetGroupPillSheetTypeSelectRow
   final PillSheetType pillSheetType;
   final InitialSettingState state;
   final InitialSettingStateStore store;
+  final double _width = 297;
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      constraints: BoxConstraints(maxWidth: 297),
+      constraints: BoxConstraints(maxWidth: _width),
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
@@ -62,7 +63,7 @@ class InitialSettingPillSheetGroupPillSheetTypeSelectRow
           SizedBox(height: 10),
           Container(
             padding: EdgeInsets.symmetric(vertical: 16, horizontal: 16),
-            constraints: BoxConstraints(minWidth: 297),
+            constraints: BoxConstraints(minWidth: _width),
             decoration: BoxDecoration(
               color: PilllColors.white,
               borderRadius: BorderRadius.circular(4),
