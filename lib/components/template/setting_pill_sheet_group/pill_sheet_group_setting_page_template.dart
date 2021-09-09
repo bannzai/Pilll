@@ -12,6 +12,9 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/domain/initial_setting/pill_sheet_group/initial_setting_pill_sheet_group_pill_sheet_type_select_row.dart';
 
 class InitialSettingPillSheetGroupPage extends HookWidget {
+  final Text title;
+
+  InitialSettingPillSheetGroupPage({required this.title});
   @override
   Widget build(BuildContext context) {
     final store = useProvider(initialSettingStoreProvider);
@@ -23,10 +26,7 @@ class InitialSettingPillSheetGroupPage extends HookWidget {
           icon: Icon(Icons.arrow_back, color: Colors.black),
           onPressed: () => Navigator.of(context).pop(),
         ),
-        title: Text(
-          "2/5",
-          style: TextStyle(color: TextColor.black),
-        ),
+        title: title,
         backgroundColor: PilllColors.white,
       ),
       body: SafeArea(
