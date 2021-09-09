@@ -12,27 +12,27 @@ import 'package:pilll/signin/signin_sheet_state.dart';
 
 class PillSheetTypeSelectPageLayout extends StatelessWidget {
   final String title;
-  final bool backButtonIsHidden;
-  final void Function(PillSheetType type) selected;
-  final VoidCallback? done;
-  final String doneButtonText;
+  final PrimaryButton? doneButton;
+  final Widget? signinWidget;
   final PillSheetType? selectedPillSheetType;
-  final Function(LinkAccountType)? signinAccount;
+  final void Function(PillSheetType type) onSelect;
+
+  final bool backButtonIsHidden;
 
   const PillSheetTypeSelectPageLayout({
     Key? key,
     required this.title,
+    required this.doneButton,
+    required this.signinWidget,
     required this.backButtonIsHidden,
-    required this.selected,
-    required this.done,
-    required this.doneButtonText,
+    required this.onSelect,
     required this.selectedPillSheetType,
-    required this.signinAccount,
   }) : super(key: key);
 
   @override
   Scaffold build(BuildContext context) {
-    final signinAccount = this.signinAccount;
+    final doneButton = this.doneButton;
+    final signinWidget = this.signinWidget;
     return Scaffold(
       backgroundColor: PilllColors.background,
       appBar: AppBar(
@@ -68,23 +68,14 @@ class PillSheetTypeSelectPageLayout extends StatelessWidget {
               ),
             ),
             SizedBox(height: 10),
-            if (done != null)
+            if (doneButton != null)
               Align(
                 alignment: Alignment.bottomCenter,
-                child: PrimaryButton(
-                  text: doneButtonText,
-                  onPressed: done,
-                ),
+                child: doneButton,
               ),
-            if (signinAccount != null) ...[
+            if (signinWidget != null) ...[
               SizedBox(height: 20),
-              SecondaryButton(
-                onPressed: () {
-                  showSigninSheet(context,
-                      SigninSheetStateContext.initialSetting, signinAccount);
-                },
-                text: "すでにアカウントをお持ちの方はこちら",
-              ),
+              signinWidget,
             ],
             SizedBox(height: 35),
           ],
@@ -96,7 +87,7 @@ class PillSheetTypeSelectPageLayout extends StatelessWidget {
   Widget _pillSheet(PillSheetType type) {
     return GestureDetector(
       onTap: () {
-        selected(type);
+        onSelect(type);
       },
       child: PillSheetTypeColumn(
         pillSheetType: type,
@@ -121,7 +112,7 @@ extension PillSheetTypeSelectPageRoute on PillSheetTypeSelectPageLayout {
       builder: (_) => PillSheetTypeSelectPageLayout(
         title: title,
         backButtonIsHidden: backButtonIsHidden,
-        selected: selected,
+        onSelect: selected,
         done: done,
         doneButtonText: doneButtonText,
         selectedPillSheetType: selectedPillSheetType,

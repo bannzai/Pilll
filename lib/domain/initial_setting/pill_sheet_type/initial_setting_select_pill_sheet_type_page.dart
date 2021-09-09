@@ -1,4 +1,5 @@
 import 'package:pilll/analytics.dart';
+import 'package:pilll/components/atoms/buttons.dart';
 import 'package:pilll/components/page/hud.dart';
 import 'package:pilll/domain/initial_setting/pill_sheet_group/initial_setting_pill_sheet_group_page.dart';
 import 'package:pilll/components/organisms/pill_sheet/pill_sheet_type_select_page.dart';
@@ -10,6 +11,8 @@ import 'package:pilll/domain/initial_setting/initial_setting_store.dart';
 import 'package:flutter/material.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/entity/link_account_type.dart';
+import 'package:pilll/signin/signin_sheet.dart';
+import 'package:pilll/signin/signin_sheet_state.dart';
 
 class InitialSettingSelectPillSheetTypePage extends HookWidget {
   @override
@@ -29,37 +32,49 @@ class InitialSettingSelectPillSheetTypePage extends HookWidget {
       child: PillSheetTypeSelectPageLayout(
         title: "1/5",
         backButtonIsHidden: true,
-        selected: (type) {
+        onSelect: (type) {
           analytics.logEvent(
               name: "selected_type_initial_setting",
               parameters: {"pill_sheet_type": type.rawPath});
           store.selectedPillSheetType(type);
         },
-        done: state.pillSheetTypes.isEmpty
+        doneButton: state.pillSheetTypes.isEmpty
             ? null
-            : () {
-                analytics.logEvent(name: "next_initial_setting_pillsheet_type");
-                Navigator.of(context)
-                    .push(InitialSettingPillSheetCountPageRoute.route());
-              },
-        doneButtonText: "次へ",
+            : PrimaryButton(
+                text: "次へ",
+                onPressed: () {
+                  analytics.logEvent(
+                      name: "next_initial_setting_pillsheet_type");
+                  Navigator.of(context)
+                      .push(InitialSettingPillSheetCountPageRoute.route());
+                }),
         selectedPillSheetType:
             state.pillSheetTypes.isEmpty ? null : state.pillSheetTypes.first,
-        signinAccount: state.isAccountCooperationDidEnd
+        signinWidget: state.isAccountCooperationDidEnd
             ? null
-            : (accountType) async {
-                store.showHUD();
-                if (await store.canEndInitialSetting()) {
-                  AppRouter.signinAccount(context);
-                } else {
-                  ScaffoldMessenger.of(context).showSnackBar(
-                    SnackBar(
-                      duration: Duration(seconds: 2),
-                      content: Text("${accountType.providerName}でログインしました"),
-                    ),
+            : SecondaryButton(
+                text: "すでにアカウントをお持ちの方はこちら",
+                onPressed: () {
+                  showSigninSheet(
+                    context,
+                    SigninSheetStateContext.initialSetting,
+                    (accountType) async {
+                      store.showHUD();
+                      if (await store.canEndInitialSetting()) {
+                        AppRouter.signinAccount(context);
+                      } else {
+                        ScaffoldMessenger.of(context).showSnackBar(
+                          SnackBar(
+                            duration: Duration(seconds: 2),
+                            content:
+                                Text("${accountType.providerName}でログインしました"),
+                          ),
+                        );
+                      }
+                    },
                   );
-                }
-              },
+                },
+              ),
       ),
     );
   }
