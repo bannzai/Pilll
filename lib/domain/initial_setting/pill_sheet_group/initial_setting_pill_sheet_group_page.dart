@@ -118,9 +118,6 @@ class InitialSettingPillSheetGroupPage extends HookWidget {
       ),
     );
   }
-
-  // TODO:
-  _onTapPanel(int count, InitialSettingStateStore store) {}
 }
 
 class PillSheetTypeAddButton extends StatelessWidget {
@@ -131,9 +128,7 @@ class PillSheetTypeAddButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () {
-        
-      },
+      onTap: () {},
       child: Container(
         width: double.infinity,
         padding: EdgeInsets.symmetric(vertical: 16),
