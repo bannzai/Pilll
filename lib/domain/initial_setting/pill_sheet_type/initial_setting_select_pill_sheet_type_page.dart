@@ -26,7 +26,7 @@ class InitialSettingSelectPillSheetTypePage extends HookWidget {
     }
     return HUD(
       shown: state.isLoading,
-      child: PillSheetTypeSelectPage(
+      child: PillSheetTypeSelectPageLayout(
         title: "1/5",
         backButtonIsHidden: true,
         selected: (type) {
