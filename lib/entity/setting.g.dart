@@ -22,9 +22,10 @@ Map<String, dynamic> _$_$_ReminderTimeToJson(_$_ReminderTime instance) =>
 _$_Setting _$_$_SettingFromJson(Map<String, dynamic> json) {
   return _$_Setting(
     pillSheetTypeRawPath: json['pillSheetTypeRawPath'] as String?,
-    pillSheetTypes: (json['pillSheetTypes'] as List<dynamic>)
-        .map((e) => _$enumDecode(_$PillSheetTypeEnumMap, e))
-        .toList(),
+    pillSheetTypes: (json['pillSheetTypes'] as List<dynamic>?)
+            ?.map((e) => _$enumDecode(_$PillSheetTypeEnumMap, e))
+            .toList() ??
+        [],
     pillNumberForFromMenstruation: json['pillNumberForFromMenstruation'] as int,
     durationMenstruation: json['durationMenstruation'] as int,
     reminderTimes: (json['reminderTimes'] as List<dynamic>?)
