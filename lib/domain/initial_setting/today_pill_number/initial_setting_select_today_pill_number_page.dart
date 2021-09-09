@@ -2,7 +2,7 @@ import 'package:pilll/analytics.dart';
 import 'package:pilll/domain/initial_setting/initial_setting_store.dart';
 import 'package:pilll/components/atoms/buttons.dart';
 import 'package:pilll/components/atoms/color.dart';
-import 'package:pilll/domain/initial_setting/initial_setting_menstruation.dart';
+import 'package:pilll/domain/initial_setting/menstruation/initial_setting_menstruation_page.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/domain/initial_setting/today_pill_number/explain_label.dart';
