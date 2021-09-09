@@ -50,7 +50,7 @@ class InitialSettingSelectPillSheetTypePage extends HookWidget {
                 }),
         selectedPillSheetType:
             state.pillSheetTypes.isEmpty ? null : state.pillSheetTypes.first,
-        signinWidget: state.isAccountCooperationDidEnd
+        signinButton: state.isAccountCooperationDidEnd
             ? null
             : SecondaryButton(
                 text: "すでにアカウントをお持ちの方はこちら",
