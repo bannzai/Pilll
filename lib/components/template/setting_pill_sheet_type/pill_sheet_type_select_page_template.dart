@@ -7,7 +7,7 @@ import 'package:pilll/components/atoms/text_color.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 
-class PillSheetTypeSelectPageLayout extends StatelessWidget {
+class PillSheetTypeSelectPageTemplate extends StatelessWidget {
   final String title;
   final bool backButtonIsHidden;
   final PrimaryButton? doneButton;
@@ -15,7 +15,7 @@ class PillSheetTypeSelectPageLayout extends StatelessWidget {
   final PillSheetType? selectedPillSheetType;
   final void Function(PillSheetType type) onSelect;
 
-  const PillSheetTypeSelectPageLayout({
+  const PillSheetTypeSelectPageTemplate({
     Key? key,
     required this.title,
     required this.doneButton,
@@ -93,7 +93,7 @@ class PillSheetTypeSelectPageLayout extends StatelessWidget {
   }
 }
 
-extension PillSheetTypeSelectPageRoute on PillSheetTypeSelectPageLayout {
+extension PillSheetTypeSelectPageRoute on PillSheetTypeSelectPageTemplate {
   static Route<dynamic> route({
     required String title,
     required bool backButtonIsHidden,
@@ -104,7 +104,7 @@ extension PillSheetTypeSelectPageRoute on PillSheetTypeSelectPageLayout {
   }) {
     return MaterialPageRoute(
       settings: RouteSettings(name: "PillSheetTypeSelectPage"),
-      builder: (_) => PillSheetTypeSelectPageLayout(
+      builder: (_) => PillSheetTypeSelectPageTemplate(
         title: title,
         backButtonIsHidden: backButtonIsHidden,
         selectedPillSheetType: selectedPillSheetType,
