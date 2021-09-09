@@ -1,7 +1,9 @@
 import 'package:pilll/analytics.dart';
 import 'package:pilll/components/atoms/buttons.dart';
+import 'package:pilll/components/atoms/color.dart';
+import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/components/page/hud.dart';
-import 'package:pilll/components/template/pill_sheet_type_setting/pill_sheet_type_select_page_template.dart';
+import 'package:pilll/components/template/pill_sheet_type_setting/pill_sheet_type_select_body_template.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:pilll/domain/initial_setting/pill_sheet_group/initial_setting_pill_sheet_group_pill_sheet_type_select_row.dart';
@@ -28,52 +30,60 @@ class InitialSettingSelectPillSheetTypePage extends HookWidget {
     }
     return HUD(
       shown: state.isLoading,
-      child: PillSheetTypeSelectPageTemplate(
-        title: "1/5",
-        backButtonIsHidden: true,
-        onSelect: (type) {
-          analytics.logEvent(
-              name: "selected_type_initial_setting",
-              parameters: {"pill_sheet_type": type.rawPath});
-          store.selectedPillSheetType(type);
-        },
-        doneButton: state.pillSheetTypes.isEmpty
-            ? null
-            : PrimaryButton(
-                text: "次へ",
-                onPressed: () {
-                  analytics.logEvent(
-                      name: "next_initial_setting_pillsheet_type");
-                  Navigator.of(context)
-                      .push(InitialSettingPillSheetCountPageRoute.route());
-                }),
-        selectedPillSheetType:
-            state.pillSheetTypes.isEmpty ? null : state.pillSheetTypes.first,
-        signinButton: state.isAccountCooperationDidEnd
-            ? null
-            : SecondaryButton(
-                text: "すでにアカウントをお持ちの方はこちら",
-                onPressed: () {
-                  showSigninSheet(
-                    context,
-                    SigninSheetStateContext.initialSetting,
-                    (accountType) async {
-                      store.showHUD();
-                      if (await store.canEndInitialSetting()) {
-                        AppRouter.signinAccount(context);
-                      } else {
-                        ScaffoldMessenger.of(context).showSnackBar(
-                          SnackBar(
-                            duration: Duration(seconds: 2),
-                            content:
-                                Text("${accountType.providerName}でログインしました"),
-                          ),
-                        );
-                      }
-                    },
-                  );
-                },
-              ),
+      child: Scaffold(
+        backgroundColor: PilllColors.background,
+        appBar: AppBar(
+          title: Text(
+            "1/5",
+            style: TextStyle(color: TextColor.black),
+          ),
+          backgroundColor: PilllColors.white,
+        ),
+        body: PillSheetTypeSelectBodyTemplate(
+          onSelect: (type) {
+            analytics.logEvent(
+                name: "selected_type_initial_setting",
+                parameters: {"pill_sheet_type": type.rawPath});
+            store.selectedPillSheetType(type);
+          },
+          doneButton: state.pillSheetTypes.isEmpty
+              ? null
+              : PrimaryButton(
+                  text: "次へ",
+                  onPressed: () {
+                    analytics.logEvent(
+                        name: "next_initial_setting_pillsheet_type");
+                    Navigator.of(context)
+                        .push(InitialSettingPillSheetCountPageRoute.route());
+                  }),
+          selectedPillSheetType:
+              state.pillSheetTypes.isEmpty ? null : state.pillSheetTypes.first,
+          signinButton: state.isAccountCooperationDidEnd
+              ? null
+              : SecondaryButton(
+                  text: "すでにアカウントをお持ちの方はこちら",
+                  onPressed: () {
+                    showSigninSheet(
+                      context,
+                      SigninSheetStateContext.initialSetting,
+                      (accountType) async {
+                        store.showHUD();
+                        if (await store.canEndInitialSetting()) {
+                          AppRouter.signinAccount(context);
+                        } else {
+                          ScaffoldMessenger.of(context).showSnackBar(
+                            SnackBar(
+                              duration: Duration(seconds: 2),
+                              content:
+                                  Text("${accountType.providerName}でログインしました"),
+                            ),
+                          );
+                        }
+                      },
+                    );
+                  },
+                ),
+        ),
       ),
     );
   }
