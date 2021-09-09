@@ -13,7 +13,7 @@ import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 
-class InitialSettingPillSheetCountPage extends HookWidget {
+class InitialSettingPillSheetGroupPage extends HookWidget {
   @override
   Widget build(BuildContext context) {
     final store = useProvider(initialSettingStoreProvider);
@@ -52,7 +52,7 @@ class InitialSettingPillSheetCountPage extends HookWidget {
                         return MapEntry(
                           index,
                           [
-                            InitialSettingPillSheetSelectRow(
+                            InitialSettingPillSheetGroupPillSheetTypeSelectRow(
                               index: index,
                               pillSheetType: pillSheetType,
                               state: state,
@@ -121,8 +121,9 @@ class InitialSettingPillSheetCountPage extends HookWidget {
   _onTapPanel(int count, InitialSettingStateStore store) {}
 }
 
-class InitialSettingPillSheetSelectRow extends StatelessWidget {
-  const InitialSettingPillSheetSelectRow({
+class InitialSettingPillSheetGroupPillSheetTypeSelectRow
+    extends StatelessWidget {
+  const InitialSettingPillSheetGroupPillSheetTypeSelectRow({
     Key? key,
     required this.index,
     required this.pillSheetType,
@@ -172,11 +173,11 @@ class InitialSettingPillSheetSelectRow extends StatelessWidget {
 }
 
 extension InitialSettingPillSheetCountPageRoute
-    on InitialSettingPillSheetCountPage {
+    on InitialSettingPillSheetGroupPage {
   static Route<dynamic> route() {
     return MaterialPageRoute(
       settings: RouteSettings(name: "InitialSettingPillSheetCountPage"),
-      builder: (_) => InitialSettingPillSheetCountPage(),
+      builder: (_) => InitialSettingPillSheetGroupPage(),
     );
   }
 }
