@@ -1,3 +1,4 @@
+import 'package:flutter_svg/svg.dart';
 import 'package:pilll/domain/initial_setting/initial_setting_state.dart';
 import 'package:pilll/domain/initial_setting/initial_setting_store.dart';
 import 'package:pilll/components/atoms/color.dart';
@@ -26,23 +27,47 @@ class InitialSettingPillSheetGroupPillSheetTypeSelectRow
   @override
   Widget build(BuildContext context) {
     return Container(
+      constraints: BoxConstraints(maxWidth: 297),
       child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          Text(
-            "${index + 1}枚目",
-            style: TextStyle(
-              color: TextColor.main,
-              fontSize: 13,
-              fontWeight: FontWeight.w500,
-              fontFamily: FontFamily.japanese,
-            ),
+          Row(
+            mainAxisSize: MainAxisSize.min,
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text(
+                "${index + 1}枚目",
+                style: TextStyle(
+                  color: TextColor.main,
+                  fontSize: 13,
+                  fontWeight: FontWeight.w500,
+                  fontFamily: FontFamily.japanese,
+                ),
+              ),
+              Spacer(),
+              SizedBox(
+                width: 20,
+                height: 20,
+                child: IconButton(
+                    padding: EdgeInsets.all(0),
+                    onPressed: () {},
+                    icon: SvgPicture.asset(
+                      "images/minus_icon.svg",
+                      width: 20,
+                      height: 20,
+                    )),
+              ),
+            ],
           ),
           SizedBox(height: 10),
           Container(
             padding: EdgeInsets.symmetric(vertical: 16, horizontal: 16),
             constraints: BoxConstraints(minWidth: 297),
-            color: PilllColors.white,
+            decoration: BoxDecoration(
+              color: PilllColors.white,
+              borderRadius: BorderRadius.circular(4),
+              border: Border.all(width: 1, color: PilllColors.border),
+            ),
             child: Text(
               pillSheetType.fullName,
               style: TextStyle(

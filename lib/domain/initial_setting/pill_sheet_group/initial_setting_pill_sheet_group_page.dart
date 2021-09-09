@@ -40,7 +40,7 @@ class InitialSettingPillSheetGroupPage extends HookWidget {
                 style: FontType.title.merge(TextColorStyle.main),
                 textAlign: TextAlign.center,
               ),
-              SizedBox(height: 80),
+              SizedBox(height: 6),
               Container(
                 padding: EdgeInsets.symmetric(horizontal: 26),
                 child: Column(
