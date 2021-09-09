@@ -1,4 +1,5 @@
 import 'package:pilll/analytics.dart';
+import 'package:pilll/components/organisms/pill_sheet/pill_sheet_type_column.dart';
 import 'package:pilll/domain/initial_setting/initial_setting_select_today_pill_number.dart';
 import 'package:pilll/domain/initial_setting/initial_setting_state.dart';
 import 'package:pilll/domain/initial_setting/initial_setting_store.dart';
@@ -10,6 +11,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:pilll/entity/pill_sheet_type.dart';
 
 class InitialSettingPillSheetCountPage extends HookWidget {
   @override
@@ -44,49 +46,24 @@ class InitialSettingPillSheetCountPage extends HookWidget {
               Container(
                 padding: EdgeInsets.symmetric(horizontal: 26),
                 child: Column(
-                  children: [
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        InitialSettingPillSheetCountPanel(
-                          number: 0,
-                          state: state,
-                          onTap: (number) => _onTapPanel(number, store),
-                        ),
-                        InitialSettingPillSheetCountPanel(
-                          number: 1,
-                          state: state,
-                          onTap: (number) => _onTapPanel(number, store),
-                        ),
-                        InitialSettingPillSheetCountPanel(
-                          number: 2,
-                          state: state,
-                          onTap: (number) => _onTapPanel(number, store),
-                        ),
-                      ],
-                    ),
-                    SizedBox(height: 16),
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                      children: [
-                        InitialSettingPillSheetCountPanel(
-                          number: 3,
-                          state: state,
-                          onTap: (number) => _onTapPanel(number, store),
-                        ),
-                        InitialSettingPillSheetCountPanel(
-                          number: 4,
-                          state: state,
-                          onTap: (number) => _onTapPanel(number, store),
-                        ),
-                        InitialSettingPillSheetCountPanel(
-                          number: 5,
-                          state: state,
-                          onTap: (number) => _onTapPanel(number, store),
-                        ),
-                      ],
-                    ),
-                  ],
+                  children: state.pillSheetTypes
+                      .asMap()
+                      .map((index, pillSheetType) {
+                        return MapEntry(
+                          index,
+                          [
+                            InitialSettingPillSheetSelectRow(
+                              index: index,
+                              pillSheetType: pillSheetType,
+                              state: state,
+                              store: store,
+                            ),
+                          ],
+                        );
+                      })
+                      .values
+                      .expand((element) => element)
+                      .toList(),
                 ),
               ),
               Spacer(),
@@ -144,45 +121,51 @@ class InitialSettingPillSheetCountPage extends HookWidget {
   _onTapPanel(int count, InitialSettingStateStore store) {}
 }
 
-class InitialSettingPillSheetCountPanel extends StatelessWidget {
-  const InitialSettingPillSheetCountPanel({
+class InitialSettingPillSheetSelectRow extends StatelessWidget {
+  const InitialSettingPillSheetSelectRow({
     Key? key,
-    required this.number,
+    required this.index,
+    required this.pillSheetType,
     required this.state,
-    required this.onTap,
+    required this.store,
   }) : super(key: key);
 
-  final int number;
+  final int index;
+  final PillSheetType pillSheetType;
   final InitialSettingState state;
-  final Function(int) onTap;
+  final InitialSettingStateStore store;
 
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: () => onTap(number),
-      child: Container(
-        width: 97,
-        height: 68,
-        decoration: BoxDecoration(
-          color: state.pillSheetTypes.length == number
-              ? PilllColors.secondary
-              : PilllColors.white,
-          borderRadius: BorderRadius.circular(6),
-          border: Border.all(width: 2, color: PilllColors.secondary),
-        ),
-        child: Center(
-          child: Text(
-            "$number",
+    return Container(
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text(
+            "${index + 1}枚目",
             style: TextStyle(
-              color: state.pillSheetTypes.length == number
-                  ? TextColor.white
-                  : TextColor.main,
-              fontSize: 18,
-              fontWeight: FontWeight.w600,
-              fontFamily: FontFamily.number,
+              color: TextColor.main,
+              fontSize: 13,
+              fontWeight: FontWeight.w500,
+              fontFamily: FontFamily.japanese,
             ),
           ),
-        ),
+          SizedBox(height: 10),
+          Container(
+            padding: EdgeInsets.symmetric(vertical: 16, horizontal: 16),
+            constraints: BoxConstraints(minWidth: 297),
+            color: PilllColors.white,
+            child: Text(
+              pillSheetType.fullName,
+              style: TextStyle(
+                color: TextColor.main,
+                fontWeight: FontWeight.w400,
+                fontSize: 12,
+                fontFamily: FontFamily.japanese,
+              ),
+            ),
+          ),
+        ],
       ),
     );
   }
