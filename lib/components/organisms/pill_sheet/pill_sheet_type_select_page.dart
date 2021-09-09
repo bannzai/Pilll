@@ -10,7 +10,7 @@ import 'package:flutter/widgets.dart';
 import 'package:pilll/signin/signin_sheet.dart';
 import 'package:pilll/signin/signin_sheet_state.dart';
 
-class PillSheetTypeSelectPage extends StatelessWidget {
+class PillSheetTypeSelectPageLayout extends StatelessWidget {
   final String title;
   final bool backButtonIsHidden;
   final void Function(PillSheetType type) selected;
@@ -19,7 +19,7 @@ class PillSheetTypeSelectPage extends StatelessWidget {
   final PillSheetType? selectedPillSheetType;
   final Function(LinkAccountType)? signinAccount;
 
-  const PillSheetTypeSelectPage({
+  const PillSheetTypeSelectPageLayout({
     Key? key,
     required this.title,
     required this.backButtonIsHidden,
@@ -106,7 +106,7 @@ class PillSheetTypeSelectPage extends StatelessWidget {
   }
 }
 
-extension PillSheetTypeSelectPageRoute on PillSheetTypeSelectPage {
+extension PillSheetTypeSelectPageRoute on PillSheetTypeSelectPageLayout {
   static Route<dynamic> route({
     required String title,
     required bool backButtonIsHidden,
@@ -118,7 +118,7 @@ extension PillSheetTypeSelectPageRoute on PillSheetTypeSelectPage {
   }) {
     return MaterialPageRoute(
       settings: RouteSettings(name: "PillSheetTypeSelectPage"),
-      builder: (_) => PillSheetTypeSelectPage(
+      builder: (_) => PillSheetTypeSelectPageLayout(
         title: title,
         backButtonIsHidden: backButtonIsHidden,
         selected: selected,
