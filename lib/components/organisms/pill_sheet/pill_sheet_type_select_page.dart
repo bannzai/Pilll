@@ -7,23 +7,20 @@ import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:pilll/signin/signin_sheet.dart';
-import 'package:pilll/signin/signin_sheet_state.dart';
 
 class PillSheetTypeSelectPageLayout extends StatelessWidget {
   final String title;
+  final bool backButtonIsHidden;
   final PrimaryButton? doneButton;
-  final Widget? signinWidget;
+  final SecondaryButton? signinButton;
   final PillSheetType? selectedPillSheetType;
   final void Function(PillSheetType type) onSelect;
-
-  final bool backButtonIsHidden;
 
   const PillSheetTypeSelectPageLayout({
     Key? key,
     required this.title,
     required this.doneButton,
-    required this.signinWidget,
+    required this.signinButton,
     required this.backButtonIsHidden,
     required this.onSelect,
     required this.selectedPillSheetType,
@@ -32,7 +29,7 @@ class PillSheetTypeSelectPageLayout extends StatelessWidget {
   @override
   Scaffold build(BuildContext context) {
     final doneButton = this.doneButton;
-    final signinWidget = this.signinWidget;
+    final signinButton = this.signinButton;
     return Scaffold(
       backgroundColor: PilllColors.background,
       appBar: AppBar(
@@ -73,9 +70,9 @@ class PillSheetTypeSelectPageLayout extends StatelessWidget {
                 alignment: Alignment.bottomCenter,
                 child: doneButton,
               ),
-            if (signinWidget != null) ...[
+            if (signinButton != null) ...[
               SizedBox(height: 20),
-              signinWidget,
+              signinButton,
             ],
             SizedBox(height: 35),
           ],
@@ -101,22 +98,20 @@ extension PillSheetTypeSelectPageRoute on PillSheetTypeSelectPageLayout {
   static Route<dynamic> route({
     required String title,
     required bool backButtonIsHidden,
-    required void Function(PillSheetType type) selected,
-    required VoidCallback? done,
-    required String doneButtonText,
-    required PillSheetType selectedPillSheetType,
-    required Function(LinkAccountType)? signinAccount,
+    required PrimaryButton? doneButton,
+    required SecondaryButton? signinButton,
+    required PillSheetType? selectedPillSheetType,
+    required void Function(PillSheetType type) onSelect,
   }) {
     return MaterialPageRoute(
       settings: RouteSettings(name: "PillSheetTypeSelectPage"),
       builder: (_) => PillSheetTypeSelectPageLayout(
         title: title,
         backButtonIsHidden: backButtonIsHidden,
-        onSelect: selected,
-        done: done,
-        doneButtonText: doneButtonText,
         selectedPillSheetType: selectedPillSheetType,
-        signinAccount: signinAccount,
+        onSelect: onSelect,
+        doneButton: doneButton,
+        signinButton: signinButton,
       ),
     );
   }
