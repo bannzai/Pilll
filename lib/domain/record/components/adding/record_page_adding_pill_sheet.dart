@@ -1,15 +1,11 @@
 import 'package:pilll/analytics.dart';
 import 'package:pilll/domain/record/record_page_store.dart';
 import 'package:pilll/entity/setting.dart';
-import 'package:pilll/error/error_alert.dart';
-import 'package:pilll/error_log.dart';
-import 'package:pilll/service/pill_sheet.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:pilll/util/toolbar/picker_toolbar.dart';
 
 class RecordPageAddingPillSheet extends StatelessWidget {
   const RecordPageAddingPillSheet({
