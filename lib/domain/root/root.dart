@@ -3,7 +3,7 @@ import 'package:pilll/entrypoint.dart';
 import 'package:pilll/service/auth.dart';
 import 'package:pilll/database/database.dart';
 import 'package:pilll/domain/home/home_page.dart';
-import 'package:pilll/domain/initial_setting/initial_setting_select_pill_sheet_type.dart';
+import 'package:pilll/domain/initial_setting/pill_sheet_group/initial_setting_select_pill_sheet_type.dart';
 import 'package:pilll/entity/user_error.dart';
 import 'package:pilll/components/molecules/indicator.dart';
 import 'package:pilll/error/template.dart';
