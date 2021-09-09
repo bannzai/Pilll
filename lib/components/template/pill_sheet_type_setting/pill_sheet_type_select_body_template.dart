@@ -1,3 +1,4 @@
+import 'package:flutter/gestures.dart';
 import 'package:pilll/components/atoms/buttons.dart';
 import 'package:pilll/components/organisms/pill_sheet/pill_sheet_type_column.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
@@ -24,6 +25,7 @@ class PillSheetTypeSelectBodyTemplate extends StatelessWidget {
   Widget build(BuildContext context) {
     final doneButton = this.doneButton;
     final signinButton = this.signinButton;
+
     return SafeArea(
       child: Column(
         children: <Widget>[
@@ -33,6 +35,7 @@ class PillSheetTypeSelectBodyTemplate extends StatelessWidget {
           SizedBox(height: 24),
           Expanded(
             child: GridView.count(
+              shrinkWrap: true,
               mainAxisSpacing: 16,
               crossAxisSpacing: 16,
               padding: EdgeInsets.only(left: 34, right: 34),
@@ -57,6 +60,16 @@ class PillSheetTypeSelectBodyTemplate extends StatelessWidget {
         ],
       ),
     );
+  }
+
+  List<List<PillSheetType>> _chunckedPillSheetTypes() {
+    final List<List<PillSheetType>> chunkedPillSheetTypes = [];
+    final pillSheetTypes = PillSheetType.values;
+    for (int i = 0; i < pillSheetTypes.length; i += 2) {
+      chunkedPillSheetTypes.add(pillSheetTypes.sublist(
+          i, i + 2 > pillSheetTypes.length ? pillSheetTypes.length : i + 2));
+    }
+    return chunkedPillSheetTypes;
   }
 
   Widget _pillSheet(PillSheetType type) {
