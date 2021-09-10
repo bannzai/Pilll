@@ -42,28 +42,27 @@ class InitialSettingSelectTodayPillNumberPage extends HookWidget {
       body: SafeArea(
         child: Container(
           child: Center(
-            child: Column(
-              children: <Widget>[
-                Expanded(
-                  child: ListView(
-                    children: [
-                      SizedBox(height: 24),
-                      Text(
-                        "今日(${todayString()})\n飲む・飲んだピルの番号をタップ",
-                        style: FontType.sBigTitle.merge(TextColorStyle.main),
-                        textAlign: TextAlign.center,
-                      ),
-                      SizedBox(height: 44),
-                      _pillSheet(context, state, store),
-                      SizedBox(height: 24),
-                      ExplainPillNumber(today: todayString()),
-                      SizedBox(height: 16),
-                    ],
-                  ),
+            child: Stack(
+              children: [
+                Column(
+                  children: <Widget>[
+                    SizedBox(height: 24),
+                    Text(
+                      "今日(${todayString()})\n飲む・飲んだピルの番号をタップ",
+                      style: FontType.sBigTitle.merge(TextColorStyle.main),
+                      textAlign: TextAlign.center,
+                    ),
+                    SizedBox(height: 44),
+                    _pillSheet(context, state, store),
+                    SizedBox(height: 24),
+                    ExplainPillNumber(today: todayString()),
+                    SizedBox(height: 16),
+                  ],
                 ),
                 Align(
                   alignment: Alignment.bottomCenter,
                   child: Column(
+                    mainAxisAlignment: MainAxisAlignment.end,
                     children: [
                       InconspicuousButton(
                         onPressed: () {
@@ -88,10 +87,10 @@ class InitialSettingSelectTodayPillNumberPage extends HookWidget {
                                         .route());
                               },
                       ),
+                      SizedBox(height: 35),
                     ],
                   ),
                 ),
-                SizedBox(height: 35),
               ],
             ),
           ),
