@@ -89,9 +89,10 @@ class InitialSettingStateStore extends StateNotifier<InitialSettingState> {
     state = state.copyWith(pillSheetTypes: copied);
   }
 
-  void removePillSheetType(PillSheetType pillSheetType) {
-    state = state.copyWith(
-        pillSheetTypes: [...state.pillSheetTypes]..remove(pillSheetType));
+  void removePillSheetType(index) {
+    final copied = [...state.pillSheetTypes];
+    copied.removeAt(index);
+    state = state.copyWith(pillSheetTypes: copied);
   }
 
   void setIsOnSequenceAppearance(bool isOnSequenceAppearance) {
