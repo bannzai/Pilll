@@ -44,8 +44,8 @@ class InitialSettingSelectTodayPillNumberPage extends HookWidget {
           child: Center(
             child: Stack(
               children: [
-                Column(
-                  children: <Widget>[
+                ListView(
+                  children: [
                     SizedBox(height: 24),
                     Text(
                       "今日(${todayString()})\n飲む・飲んだピルの番号をタップ",
