@@ -32,85 +32,95 @@ class InitialSettingPillSheetGroupPage extends HookWidget {
       ),
       body: SafeArea(
         child: Container(
-          child: ListView(
+          child: Stack(
             children: [
-              SizedBox(height: 24),
-              Text(
-                "お手元のピルシートの枚数を\n選んでください",
-                style: FontType.title.merge(TextColorStyle.main),
-                textAlign: TextAlign.center,
-              ),
-              SizedBox(height: 6),
-              Container(
-                padding: EdgeInsets.symmetric(horizontal: 26),
-                child: Column(
-                  children: [
-                    ...state.pillSheetTypes
-                        .asMap()
-                        .map((index, pillSheetType) {
-                          return MapEntry(
-                            index,
-                            [
-                              SizedBox(height: 16),
-                              InitialSettingPillSheetGroupPillSheetTypeSelectRow(
-                                index: index,
-                                pillSheetType: pillSheetType,
-                                state: state,
-                                store: store,
-                              ),
-                            ],
-                          );
-                        })
-                        .values
-                        .expand((element) => element)
-                        .toList(),
-                    SizedBox(height: 20),
-                    PillSheetTypeAddButton(store: store),
-                  ],
-                ),
-              ),
-              Spacer(),
-              Column(
+              ListView(
                 children: [
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Text(
-                        "連番表示モード",
-                        style: TextStyle(
-                          color: TextColor.main,
-                          fontSize: 14,
-                          fontFamily: FontFamily.japanese,
-                          fontWeight: FontWeight.w700,
-                        ),
-                      ),
-                      Switch(
-                          value: state.isOnSequenceAppearance,
-                          onChanged: (isOn) {
-                            store.setIsOnSequenceAppearance(isOn);
-                          }),
-                    ],
-                  ),
-                  SizedBox(height: 16),
+                  SizedBox(height: 24),
                   Text(
-                    "連続服用する方は連番表示をお勧めします\n（ヤーズフレックスやジェミーナなど）",
-                    style: TextStyle(
-                      color: TextColor.main,
-                      fontFamily: FontFamily.japanese,
-                      fontSize: 12,
-                      fontWeight: FontWeight.w400,
+                    "お手元のピルシートの枚数を\n選んでください",
+                    style: FontType.title.merge(TextColorStyle.main),
+                    textAlign: TextAlign.center,
+                  ),
+                  SizedBox(height: 6),
+                  Container(
+                    padding: EdgeInsets.symmetric(horizontal: 26),
+                    child: Column(
+                      children: [
+                        ...state.pillSheetTypes
+                            .asMap()
+                            .map((index, pillSheetType) {
+                              return MapEntry(
+                                index,
+                                [
+                                  SizedBox(height: 16),
+                                  InitialSettingPillSheetGroupPillSheetTypeSelectRow(
+                                    index: index,
+                                    pillSheetType: pillSheetType,
+                                    state: state,
+                                    store: store,
+                                  ),
+                                ],
+                              );
+                            })
+                            .values
+                            .expand((element) => element)
+                            .toList(),
+                        SizedBox(height: 20),
+                        PillSheetTypeAddButton(store: store),
+                      ],
                     ),
                   ),
+                  Spacer(),
+                  Column(
+                    children: [
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Text(
+                            "連番表示モード",
+                            style: TextStyle(
+                              color: TextColor.main,
+                              fontSize: 14,
+                              fontFamily: FontFamily.japanese,
+                              fontWeight: FontWeight.w700,
+                            ),
+                          ),
+                          Switch(
+                              value: state.isOnSequenceAppearance,
+                              onChanged: (isOn) {
+                                store.setIsOnSequenceAppearance(isOn);
+                              }),
+                        ],
+                      ),
+                      SizedBox(height: 16),
+                      Text(
+                        "連続服用する方は連番表示をお勧めします\n（ヤーズフレックスやジェミーナなど）",
+                        style: TextStyle(
+                          color: TextColor.main,
+                          fontFamily: FontFamily.japanese,
+                          fontSize: 12,
+                          fontWeight: FontWeight.w400,
+                        ),
+                      ),
+                    ],
+                  ),
+                  SizedBox(height: 80),
                 ],
               ),
-              SizedBox(height: 51),
-              PrimaryButton(
-                text: "次へ",
-                onPressed: () async {
-                  analytics.logEvent(name: "next_pill_sheet_count");
-                  Navigator.of(context).push(
-                      InitialSettingSelectTodayPillNumberPageRoute.route());
-                },
+              Align(
+                alignment: Alignment.bottomCenter,
+                child: Padding(
+                  padding: const EdgeInsets.only(bottom: 35),
+                  child: PrimaryButton(
+                    text: "次へ",
+                    onPressed: () async {
+                      analytics.logEvent(name: "next_pill_sheet_count");
+                      Navigator.of(context).push(
+                          InitialSettingSelectTodayPillNumberPageRoute.route());
+                    },
+                  ),
+                ),
               ),
               SizedBox(height: 35),
             ],
