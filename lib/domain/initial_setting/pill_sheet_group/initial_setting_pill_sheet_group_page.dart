@@ -1,3 +1,4 @@
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:pilll/analytics.dart';
 import 'package:pilll/domain/initial_setting/pill_sheet_group/initial_setting_pill_sheet_group_select_pill_sheet_type_page.dart';
 import 'package:pilll/domain/initial_setting/today_pill_number/initial_setting_select_today_pill_number_page.dart';
@@ -68,14 +69,20 @@ class InitialSettingPillSheetGroupPage extends HookWidget {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Text(
-                          "連番表示モード",
-                          style: TextStyle(
-                            color: TextColor.main,
-                            fontSize: 14,
-                            fontFamily: FontFamily.japanese,
-                            fontWeight: FontWeight.w700,
-                          ),
+                        Row(
+                          children: [
+                            Text(
+                              "連番表示モード",
+                              style: TextStyle(
+                                color: TextColor.main,
+                                fontSize: 14,
+                                fontFamily: FontFamily.japanese,
+                                fontWeight: FontWeight.w700,
+                              ),
+                            ),
+                            SizedBox(width: 8),
+                            SvgPicture.asset("images/help.svg")
+                          ],
                         ),
                         Spacer(),
                         Switch(
