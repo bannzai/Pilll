@@ -44,18 +44,22 @@ class SettingMenstruationPillSheetList extends HookWidget {
             controller: pageController,
             scrollDirection: Axis.horizontal,
             children: List.generate(pillSheetTypes.length, (index) {
-              return [
-                Container(
-                  padding: EdgeInsets.symmetric(horizontal: 10),
-                  child: SettingPillSheetView(
-                    pageIndex: index,
-                    pillSheetType: pillSheetTypes[index],
-                    selectedPillNumber: selectedPillNumber,
-                    markSelected: (number) => markSelected(number),
+              return Column(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  Container(
+                    padding: EdgeInsets.symmetric(horizontal: 10),
+                    child: SettingPillSheetView(
+                      pageIndex: index,
+                      pillSheetType: pillSheetTypes[index],
+                      selectedPillNumber: selectedPillNumber,
+                      markSelected: (number) => markSelected(number),
+                    ),
                   ),
-                ),
-              ];
-            }).expand((element) => element).toList(),
+                  Spacer(),
+                ],
+              );
+            }).toList(),
           ),
         ),
         if (pillSheetTypes.length > 1) ...[
