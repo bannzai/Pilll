@@ -29,8 +29,10 @@ class InitialSettingMenstruationPage extends HookWidget {
           currentPage = number;
         },
         markSelected: (number) {
-          analytics.logEvent(name: "from_menstruation_initial_setting");
-          store.setFromMenstruation(state.fromMenstruation);
+          analytics.logEvent(
+              name: "from_menstruation_initial_setting",
+              parameters: {"number": number});
+          store.setFromMenstruation(number);
         },
       ),
       pillSheetView: SettingPillSheetView(
@@ -38,8 +40,10 @@ class InitialSettingMenstruationPage extends HookWidget {
         pillSheetType: state.pillSheetTypes.first,
         selectedPillNumber: state.fromMenstruation,
         markSelected: (number) {
-          analytics.logEvent(name: "from_menstruation_initial_setting");
-          store.setFromMenstruation(state.fromMenstruation);
+          analytics.logEvent(
+              name: "from_menstruation_initial_setting",
+              parameters: {"number": number});
+          store.setFromMenstruation(number);
         },
       ),
       doneButton: PrimaryButton(
@@ -53,12 +57,16 @@ class InitialSettingMenstruationPage extends HookWidget {
       dynamicDescription: SettingMenstruationDynamicDescription(
         fromMenstruation: state.fromMenstruation,
         fromMenstructionDidDecide: (number) {
-          analytics.logEvent(name: "from_menstruation_initial_setting");
+          analytics.logEvent(
+              name: "from_menstruation_initial_setting",
+              parameters: {"number": number});
           store.setFromMenstruation(state.fromMenstruation);
         },
         durationMenstruation: state.durationMenstruation,
         durationMenstructionDidDecide: (number) {
-          analytics.logEvent(name: "duration_menstruation_initial_setting");
+          analytics.logEvent(
+              name: "duration_menstruation_initial_setting",
+              parameters: {"number": number});
           store.setFromMenstruation(number);
         },
         retrieveFocusedPillSheetType: () {
