@@ -62,6 +62,13 @@ class InitialSettingSelectTodayPillNumberPage extends HookWidget {
                       SizedBox(height: 24),
                       ExplainPillNumber(today: todayString()),
                       SizedBox(height: 16),
+                    ],
+                  ),
+                ),
+                Align(
+                  alignment: Alignment.bottomCenter,
+                  child: Column(
+                    children: [
                       InconspicuousButton(
                         onPressed: () {
                           store.unsetTodayPillNumber();
@@ -72,22 +79,20 @@ class InitialSettingSelectTodayPillNumberPage extends HookWidget {
                         },
                         text: "まだ分からない",
                       ),
+                      SizedBox(height: 30),
+                      PrimaryButton(
+                        text: "次へ",
+                        onPressed: state.todayPillNumber == null
+                            ? null
+                            : () {
+                                analytics.logEvent(
+                                    name: "done_today_number_initial_setting");
+                                Navigator.of(context).push(
+                                    InitialSettingMenstruationPageRoute
+                                        .route());
+                              },
+                      ),
                     ],
-                  ),
-                ),
-                SizedBox(height: 10),
-                Align(
-                  alignment: Alignment.bottomCenter,
-                  child: PrimaryButton(
-                    text: "次へ",
-                    onPressed: state.todayPillNumber == null
-                        ? null
-                        : () {
-                            analytics.logEvent(
-                                name: "done_today_number_initial_setting");
-                            Navigator.of(context).push(
-                                InitialSettingMenstruationPageRoute.route());
-                          },
                   ),
                 ),
                 SizedBox(height: 35),
