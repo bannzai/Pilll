@@ -68,7 +68,7 @@ class InitialSettingPillSheetGroupPillSheetTypeSelectRow
                   context: context,
                   pillSheetType: pillSheetType,
                   onSelect: (pillSheetType) {
-                    store.addPillSheetType(pillSheetType);
+                    store.changePillSheetType(index, pillSheetType);
                   });
             },
             child: Container(

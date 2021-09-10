@@ -83,6 +83,12 @@ class InitialSettingStateStore extends StateNotifier<InitialSettingState> {
         pillSheetTypes: [...state.pillSheetTypes]..add(pillSheetType));
   }
 
+  void changePillSheetType(int index, PillSheetType pillSheetType) {
+    final copied = [...state.pillSheetTypes];
+    copied[index] = pillSheetType;
+    state = state.copyWith(pillSheetTypes: copied);
+  }
+
   void removePillSheetType(PillSheetType pillSheetType) {
     state = state.copyWith(
         pillSheetTypes: [...state.pillSheetTypes]..remove(pillSheetType));
