@@ -53,7 +53,7 @@ class InitialSettingSelectTodayPillNumberPage extends HookWidget {
                       textAlign: TextAlign.center,
                     ),
                     SizedBox(height: 44),
-                    _pillSheet(context, state, store),
+                    Center(child: _pillSheet(context, state, store)),
                     SizedBox(height: 24),
                     ExplainPillNumber(today: todayString()),
                     SizedBox(height: 16),
