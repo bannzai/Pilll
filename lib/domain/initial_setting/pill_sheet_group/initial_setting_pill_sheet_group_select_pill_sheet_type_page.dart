@@ -33,7 +33,7 @@ class InitialSettingPillSheetGroupSelectPillSheetTypePage extends HookWidget {
                       color: TextColor.main,
                       fontSize: 20,
                       fontFamily: FontFamily.japanese,
-                      fontWeight: FontWeight.w500,
+                      fontWeight: FontWeight.w600,
                     ),
                   ),
                 ],
