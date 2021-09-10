@@ -32,8 +32,7 @@ class InitialSettingPillSheetGroupPage extends HookWidget {
       ),
       body: SafeArea(
         child: Container(
-          child: Column(
-            mainAxisSize: MainAxisSize.min,
+          child: ListView(
             children: [
               SizedBox(height: 24),
               Text(
