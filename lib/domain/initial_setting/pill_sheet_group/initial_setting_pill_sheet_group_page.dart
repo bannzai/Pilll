@@ -1,6 +1,6 @@
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:pilll/analytics.dart';
-import 'package:pilll/domain/initial_setting/pill_sheet_group/initial_setting_pill_sheet_group_select_pill_sheet_type_page.dart';
+import 'package:pilll/domain/initial_setting/pill_sheet_group/pill_sheet_type_add_button.dart';
 import 'package:pilll/domain/initial_setting/today_pill_number/initial_setting_select_today_pill_number_page.dart';
 import 'package:pilll/domain/initial_setting/initial_setting_store.dart';
 import 'package:pilll/components/atoms/buttons.dart';
@@ -69,20 +69,23 @@ class InitialSettingPillSheetGroupPage extends HookWidget {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Row(
-                          children: [
-                            Text(
-                              "連番表示モード",
-                              style: TextStyle(
-                                color: TextColor.main,
-                                fontSize: 14,
-                                fontFamily: FontFamily.japanese,
-                                fontWeight: FontWeight.w700,
+                        GestureDetector(
+                          onTap: () {},
+                          child: Row(
+                            children: [
+                              Text(
+                                "連番表示モード",
+                                style: TextStyle(
+                                  color: TextColor.main,
+                                  fontSize: 14,
+                                  fontFamily: FontFamily.japanese,
+                                  fontWeight: FontWeight.w700,
+                                ),
                               ),
-                            ),
-                            SizedBox(width: 8),
-                            SvgPicture.asset("images/help.svg")
-                          ],
+                              SizedBox(width: 8),
+                              SvgPicture.asset("images/help.svg")
+                            ],
+                          ),
                         ),
                         Spacer(),
                         Switch(
@@ -119,50 +122,6 @@ class InitialSettingPillSheetGroupPage extends HookWidget {
               SizedBox(height: 35),
             ],
           ),
-        ),
-      ),
-    );
-  }
-}
-
-class PillSheetTypeAddButton extends StatelessWidget {
-  final InitialSettingStateStore store;
-  const PillSheetTypeAddButton({Key? key, required this.store})
-      : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: () {
-        showInitialSettingPillSheetGroupSelectPillSheetTypePage(
-            context: context,
-            pillSheetType: null,
-            onSelect: (pillSheetType) {
-              store.addPillSheetType(pillSheetType);
-            });
-      },
-      child: Container(
-        width: double.infinity,
-        padding: EdgeInsets.symmetric(vertical: 13),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Icon(
-              Icons.add,
-              color: TextColor.noshime,
-              size: 20,
-            ),
-            SizedBox(width: 4),
-            Text(
-              "ピルシートを追加",
-              style: TextStyle(
-                color: TextColor.main,
-                fontFamily: FontFamily.japanese,
-                fontSize: 12,
-                fontWeight: FontWeight.w400,
-              ),
-            ),
-          ],
         ),
       ),
     );
