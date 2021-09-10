@@ -46,36 +46,41 @@ class SettingMenstruationPageTemplate extends StatelessWidget {
         backgroundColor: PilllColors.white,
       ),
       body: SafeArea(
-        child: LayoutBuilder(builder: (context, viewport) {
-          return Column(
-            children: <Widget>[
-              SizedBox(height: 24),
-              Text(
-                "生理がはじまるピル番号をタップ",
-                style: FontType.sBigTitle.merge(TextColorStyle.main),
-                textAlign: TextAlign.center,
-              ),
-              SizedBox(height: 28),
-              () {
-                if (isOnSequenceAppearance)
-                  return pillSheetList;
-                else
-                  return pillSheetView;
-              }(),
-              SizedBox(height: 24),
-              dynamicDescription,
-              if (doneButton != null) ...[
-                Expanded(
-                  child: Container(
-                    constraints: BoxConstraints(minHeight: 32),
-                  ),
+        child: Stack(
+          children: [
+            ListView(
+              children: <Widget>[
+                SizedBox(height: 24),
+                Text(
+                  "生理がはじまるピル番号をタップ",
+                  style: FontType.sBigTitle.merge(TextColorStyle.main),
+                  textAlign: TextAlign.center,
                 ),
-                doneButton,
-                SizedBox(height: 35),
-              ]
-            ],
-          );
-        }),
+                SizedBox(height: 59),
+                () {
+                  if (isOnSequenceAppearance)
+                    return pillSheetList;
+                  else
+                    return pillSheetView;
+                }(),
+                SizedBox(height: 24),
+                dynamicDescription,
+              ],
+            ),
+            if (doneButton != null) ...[
+              Align(
+                alignment: Alignment.bottomCenter,
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: [
+                    doneButton,
+                    SizedBox(height: 35),
+                  ],
+                ),
+              ),
+            ]
+          ],
+        ),
       ),
     );
   }
