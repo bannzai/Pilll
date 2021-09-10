@@ -33,6 +33,8 @@ abstract class Diary with _$Diary {
     "動悸",
     "不正出血",
     "食欲不振",
+    "胸の張り",
+    "不眠",
   ];
 
   String get id => "Diary_${DateTimeFormatter.diaryIdentifier(date)}";
