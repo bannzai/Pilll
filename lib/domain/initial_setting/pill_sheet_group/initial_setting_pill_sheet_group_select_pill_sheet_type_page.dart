@@ -41,8 +41,6 @@ class InitialSettingPillSheetGroupSelectPillSheetTypePage extends HookWidget {
                 ),
                 SizedBox(height: 24),
                 PillSheetTypeSelectBodyTemplate(
-                  doneButton: null,
-                  signinButton: null,
                   onSelect: onSelect,
                   selectedPillSheetType: pillSheetType,
                 ),

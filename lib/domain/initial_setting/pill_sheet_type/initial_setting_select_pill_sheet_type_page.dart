@@ -1,6 +1,7 @@
 import 'package:pilll/analytics.dart';
 import 'package:pilll/components/atoms/buttons.dart';
 import 'package:pilll/components/atoms/color.dart';
+import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/components/page/hud.dart';
 import 'package:pilll/components/template/pill_sheet_type_setting/pill_sheet_type_select_body_template.dart';
@@ -39,28 +40,41 @@ class InitialSettingSelectPillSheetTypePage extends HookWidget {
           ),
           backgroundColor: PilllColors.white,
         ),
-        body: PillSheetTypeSelectBodyTemplate(
-          onSelect: (type) {
-            analytics.logEvent(
-                name: "selected_type_initial_setting",
-                parameters: {"pill_sheet_type": type.rawPath});
-            store.selectedPillSheetType(type);
-          },
-          doneButton: state.pillSheetTypes.isEmpty
-              ? null
-              : PrimaryButton(
-                  text: "次へ",
-                  onPressed: () {
-                    analytics.logEvent(
-                        name: "next_initial_setting_pillsheet_type");
-                    Navigator.of(context)
-                        .push(InitialSettingPillSheetCountPageRoute.route());
-                  }),
-          selectedPillSheetType:
-              state.pillSheetTypes.isEmpty ? null : state.pillSheetTypes.first,
-          signinButton: state.isAccountCooperationDidEnd
-              ? null
-              : SecondaryButton(
+        body: SafeArea(
+          child: Column(
+            children: [
+              SizedBox(height: 24),
+              Text("飲んでいるピルシートのタイプはどれ？",
+                  style: FontType.sBigTitle.merge(TextColorStyle.main)),
+              SizedBox(height: 24),
+              PillSheetTypeSelectBodyTemplate(
+                onSelect: (type) {
+                  analytics.logEvent(
+                      name: "selected_type_initial_setting",
+                      parameters: {"pill_sheet_type": type.rawPath});
+                  store.selectedPillSheetType(type);
+                },
+                selectedPillSheetType: state.pillSheetTypes.isEmpty
+                    ? null
+                    : state.pillSheetTypes.first,
+              ),
+              SizedBox(height: 10),
+              if (state.pillSheetTypes.isNotEmpty)
+                Align(
+                  alignment: Alignment.bottomCenter,
+                  child: PrimaryButton(
+                    text: "次へ",
+                    onPressed: () {
+                      analytics.logEvent(
+                          name: "next_initial_setting_pillsheet_type");
+                      Navigator.of(context)
+                          .push(InitialSettingPillSheetCountPageRoute.route());
+                    },
+                  ),
+                ),
+              if (!state.isAccountCooperationDidEnd) ...[
+                SizedBox(height: 20),
+                SecondaryButton(
                   text: "すでにアカウントをお持ちの方はこちら",
                   onPressed: () {
                     showSigninSheet(
@@ -83,6 +97,10 @@ class InitialSettingSelectPillSheetTypePage extends HookWidget {
                     );
                   },
                 ),
+              ],
+              SizedBox(height: 35),
+            ],
+          ),
         ),
       ),
     );
