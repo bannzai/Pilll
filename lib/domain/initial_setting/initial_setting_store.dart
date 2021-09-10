@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'dart:math';
 
 import 'package:pilll/analytics.dart';
 import 'package:pilll/database/batch.dart';
@@ -15,6 +16,7 @@ import 'package:pilll/service/pill_sheet_group.dart';
 import 'package:pilll/service/pill_sheet_modified_history.dart';
 import 'package:pilll/service/setting.dart';
 import 'package:pilll/service/user.dart';
+import 'package:pilll/util/datetime/day.dart';
 import 'package:purchases_flutter/purchases_flutter.dart';
 import 'package:riverpod/riverpod.dart';
 
@@ -76,6 +78,12 @@ class InitialSettingStateStore extends StateNotifier<InitialSettingState> {
     if (state.fromMenstruation > pillSheetType.totalCount) {
       state = state.copyWith(fromMenstruation: pillSheetType.totalCount);
     }
+    final todayPillNumber = state.todayPillNumber;
+    if (todayPillNumber != null &&
+        todayPillNumber > state.pillSheetTypes.first.totalCount) {
+      state = state.copyWith(
+          todayPillNumber: state.pillSheetTypes.first.totalCount);
+    }
   }
 
   void addPillSheetType(PillSheetType pillSheetType) {
@@ -97,6 +105,21 @@ class InitialSettingStateStore extends StateNotifier<InitialSettingState> {
 
   void setIsOnSequenceAppearance(bool isOnSequenceAppearance) {
     state = state.copyWith(isOnSequenceAppearance: isOnSequenceAppearance);
+    if (!isOnSequenceAppearance) {
+      if (state.pillSheetTypes.isEmpty) {
+        return;
+      }
+      if (state.fromMenstruation > state.pillSheetTypes.first.totalCount) {
+        state = state.copyWith(
+            fromMenstruation: state.pillSheetTypes.first.totalCount);
+      }
+      final todayPillNumber = state.todayPillNumber;
+      if (todayPillNumber != null &&
+          todayPillNumber > state.pillSheetTypes.first.totalCount) {
+        state = state.copyWith(
+            todayPillNumber: state.pillSheetTypes.first.totalCount);
+      }
+    }
   }
 
   void setReminderTime(int index, int hour, int minute) {
