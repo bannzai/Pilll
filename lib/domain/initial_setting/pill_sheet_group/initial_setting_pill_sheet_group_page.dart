@@ -1,5 +1,6 @@
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:pilll/analytics.dart';
+import 'package:pilll/domain/initial_setting/pill_sheet_group/pill_sheet_group_sequence_number_help_page.dart';
 import 'package:pilll/domain/initial_setting/pill_sheet_group/pill_sheet_type_add_button.dart';
 import 'package:pilll/domain/initial_setting/today_pill_number/initial_setting_select_today_pill_number_page.dart';
 import 'package:pilll/domain/initial_setting/initial_setting_store.dart';
@@ -83,7 +84,19 @@ class InitialSettingPillSheetGroupPage extends HookWidget {
                                 ),
                               ),
                               SizedBox(width: 8),
-                              SvgPicture.asset("images/help.svg")
+                              IconButton(
+                                iconSize: 20,
+                                alignment: Alignment.centerLeft,
+                                padding: EdgeInsets.zero,
+                                icon: SvgPicture.asset(
+                                  "images/help.svg",
+                                  width: 20,
+                                  height: 20,
+                                ),
+                                onPressed: () =>
+                                    showPillSheetGroupSequenceNumberHelpPage(
+                                        context),
+                              ),
                             ],
                           ),
                         ),
