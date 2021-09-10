@@ -35,23 +35,28 @@ class SelectTodayPillNumberPillSheetList extends HookWidget {
             controller: pageController,
             scrollDirection: Axis.horizontal,
             children: List.generate(state.pillSheetTypes.length, (index) {
-              return [
-                Container(
-                  padding: EdgeInsets.symmetric(horizontal: 10),
-                  child: SettingPillSheetView(
-                    pageIndex: index,
-                    pillSheetType: state.pillSheetTypes[index],
-                    selectedPillNumber: state.todayPillNumber,
-                    markSelected: (number) {
-                      analytics.logEvent(
-                          name: "selected_today_number_initial_setting",
-                          parameters: {"pill_number": number});
-                      store.setTodayPillNumber(number);
-                    },
-                  ),
+              return 
+                Column(
+                  mainAxisSize: MainAxisSize.min,
+                  children: [
+                    Container(
+                      padding: EdgeInsets.symmetric(horizontal: 10),
+                      child: SettingPillSheetView(
+                        pageIndex: index,
+                        pillSheetType: state.pillSheetTypes[index],
+                        selectedPillNumber: state.todayPillNumber,
+                        markSelected: (number) {
+                          analytics.logEvent(
+                              name: "selected_today_number_initial_setting",
+                              parameters: {"pill_number": number});
+                          store.setTodayPillNumber(number);
+                        },
+                      ),
+                    ),
+                    Spacer(),
+                  ],
                 ),
-              ];
-            }).expand((element) => element).toList(),
+            }).toList(),
           ),
         ),
         if (state.pillSheetTypes.length > 1) ...[

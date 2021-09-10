@@ -29,7 +29,7 @@ class PillSheetViewLayout extends StatelessWidget {
   static PillSheetType mostLargePillSheetType(
       List<PillSheetType> pillSheetTypes) {
     final copied = [...pillSheetTypes];
-    copied.sort((a, b) => a.totalCount.compareTo(b.totalCount));
+    copied.sort((a, b) => b.totalCount.compareTo(a.totalCount));
     return copied.first;
   }
 
@@ -62,33 +62,30 @@ class PillSheetViewLayout extends StatelessWidget {
           ),
         ],
       ),
-      child: Container(
-        padding:
-            EdgeInsets.fromLTRB(22, 0, 22, PillSheetViewLayout.bottomSpace),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.start,
-          children: [
-            if (weekdayLines != null) weekdayLines,
-            SizedBox(height: PillSheetViewLayout.topSpace),
-            Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: pillMarkLines
-                  .asMap()
-                  .map((index, pillMarkLine) {
-                    if (index + 1 == pillMarkLines.length) {
-                      return MapEntry(index, [pillMarkLine]);
-                    }
-                    return MapEntry(index, [
-                      pillMarkLine,
-                      SvgPicture.asset("images/pill_sheet_dot_line.svg"),
-                    ]);
-                  })
-                  .entries
-                  .expand((element) => element.value)
-                  .toList(),
-            ),
-          ],
-        ),
+      padding: EdgeInsets.fromLTRB(22, 0, 22, PillSheetViewLayout.bottomSpace),
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.start,
+        children: [
+          if (weekdayLines != null) weekdayLines,
+          SizedBox(height: PillSheetViewLayout.topSpace),
+          Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: pillMarkLines
+                .asMap()
+                .map((index, pillMarkLine) {
+                  if (index + 1 == pillMarkLines.length) {
+                    return MapEntry(index, [pillMarkLine]);
+                  }
+                  return MapEntry(index, [
+                    pillMarkLine,
+                    SvgPicture.asset("images/pill_sheet_dot_line.svg"),
+                  ]);
+                })
+                .entries
+                .expand((element) => element.value)
+                .toList(),
+          ),
+        ],
       ),
     );
   }
