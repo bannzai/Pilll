@@ -61,7 +61,7 @@ class SettingMenstruationPageTemplate extends StatelessWidget {
                   if (isOnSequenceAppearance)
                     return pillSheetList;
                   else
-                    return pillSheetView;
+                    return Center(child: pillSheetView);
                 }(),
                 SizedBox(height: 24),
                 dynamicDescription,
