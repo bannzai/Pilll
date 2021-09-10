@@ -7,6 +7,7 @@ import 'package:pilll/components/atoms/text_color.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:pilll/domain/initial_setting/pill_sheet_group/initial_setting_pill_sheet_group_page.dart';
+import 'package:pilll/domain/initial_setting/pill_sheet_group/initial_setting_pill_sheet_group_select_pill_sheet_type_page.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 
 class InitialSettingPillSheetGroupPillSheetTypeSelectRow
@@ -61,21 +62,31 @@ class InitialSettingPillSheetGroupPillSheetTypeSelectRow
             ],
           ),
           SizedBox(height: 10),
-          Container(
-            padding: EdgeInsets.symmetric(vertical: 16, horizontal: 16),
-            constraints: BoxConstraints(minWidth: _width),
-            decoration: BoxDecoration(
-              color: PilllColors.white,
-              borderRadius: BorderRadius.circular(4),
-              border: Border.all(width: 1, color: PilllColors.border),
-            ),
-            child: Text(
-              pillSheetType.fullName,
-              style: TextStyle(
-                color: TextColor.main,
-                fontWeight: FontWeight.w400,
-                fontSize: 12,
-                fontFamily: FontFamily.japanese,
+          GestureDetector(
+            onTap: () {
+              showInitialSettingPillSheetGroupSelectPillSheetTypePage(
+                  context: context,
+                  pillSheetType: pillSheetType,
+                  onSelect: (pillSheetType) {
+                    store.addPillSheetType(pillSheetType);
+                  });
+            },
+            child: Container(
+              padding: EdgeInsets.symmetric(vertical: 16, horizontal: 16),
+              constraints: BoxConstraints(minWidth: _width),
+              decoration: BoxDecoration(
+                color: PilllColors.white,
+                borderRadius: BorderRadius.circular(4),
+                border: Border.all(width: 1, color: PilllColors.border),
+              ),
+              child: Text(
+                pillSheetType.fullName,
+                style: TextStyle(
+                  color: TextColor.main,
+                  fontWeight: FontWeight.w400,
+                  fontSize: 12,
+                  fontFamily: FontFamily.japanese,
+                ),
               ),
             ),
           ),

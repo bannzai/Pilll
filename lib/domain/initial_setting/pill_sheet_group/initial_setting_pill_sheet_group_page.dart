@@ -52,6 +52,7 @@ class InitialSettingPillSheetGroupPage extends HookWidget {
                           return MapEntry(
                             index,
                             [
+                              SizedBox(height: 16),
                               InitialSettingPillSheetGroupPillSheetTypeSelectRow(
                                 index: index,
                                 pillSheetType: pillSheetType,

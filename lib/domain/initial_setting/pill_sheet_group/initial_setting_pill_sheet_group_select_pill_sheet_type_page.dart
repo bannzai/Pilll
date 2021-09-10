@@ -40,7 +40,10 @@ class InitialSettingPillSheetGroupSelectPillSheetTypePage extends HookWidget {
               ),
               SizedBox(height: 24),
               PillSheetTypeSelectBodyTemplate(
-                onSelect: onSelect,
+                onSelect: (e) {
+                  Navigator.of(context).pop();
+                  onSelect(e);
+                },
                 selectedPillSheetType: pillSheetType,
               ),
               SizedBox(height: 100),
