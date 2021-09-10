@@ -1,4 +1,6 @@
 import 'package:pilll/analytics.dart';
+import 'package:pilll/components/organisms/pill_sheet/setting_pill_sheet_view.dart';
+import 'package:pilll/domain/initial_setting/initial_setting_state.dart';
 import 'package:pilll/domain/initial_setting/initial_setting_store.dart';
 import 'package:pilll/components/atoms/buttons.dart';
 import 'package:pilll/components/atoms/color.dart';
@@ -52,13 +54,7 @@ class InitialSettingSelectTodayPillNumberPage extends HookWidget {
                         textAlign: TextAlign.center,
                       ),
                       SizedBox(height: 44),
-                      if (state.pillSheetTypes.isNotEmpty)
-                        Align(
-                          child: SelectTodayPillNumberPillSheetList(
-                            state: state,
-                            store: store,
-                          ),
-                        ),
+                      _pillSheet(context, state, store),
                       SizedBox(height: 24),
                       ExplainPillNumber(today: todayString()),
                       SizedBox(height: 16),
@@ -102,6 +98,26 @@ class InitialSettingSelectTodayPillNumberPage extends HookWidget {
         ),
       ),
     );
+  }
+
+  Widget _pillSheet(BuildContext context, InitialSettingState state,
+      InitialSettingStateStore store) {
+    if (state.pillSheetTypes.isEmpty) {
+      throw AssertionError("unexpected state.pillSheetTypes.isEmpty");
+    }
+    if (state.isOnSequenceAppearance) {
+      return SelectTodayPillNumberPillSheetList(
+        state: state,
+        store: store,
+      );
+    } else {
+      return SettingPillSheetView(
+        pageIndex: 0,
+        pillSheetType: state.pillSheetTypes.first,
+        selectedPillNumber: state.todayPillNumber,
+        markSelected: (number) => store.setTodayPillNumber(number),
+      );
+    }
   }
 }
 
