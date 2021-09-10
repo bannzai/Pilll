@@ -55,7 +55,7 @@ class SettingMenstruationPageTemplate extends StatelessWidget {
                 style: FontType.sBigTitle.merge(TextColorStyle.main),
                 textAlign: TextAlign.center,
               ),
-              SizedBox(height: 12),
+              SizedBox(height: 28),
               () {
                 if (isOnSequenceAppearance)
                   return pillSheetList;
