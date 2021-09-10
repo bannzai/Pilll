@@ -47,40 +47,33 @@ class SettingMenstruationPageTemplate extends StatelessWidget {
       ),
       body: SafeArea(
         child: LayoutBuilder(builder: (context, viewport) {
-          return ConstrainedBox(
-            constraints: BoxConstraints(minHeight: viewport.maxHeight),
-            child: SingleChildScrollView(
-              child: IntrinsicHeight(
-                child: Column(
-                  children: <Widget>[
-                    SizedBox(height: 24),
-                    Text(
-                      "生理がはじまるピル番号をタップ",
-                      style: FontType.sBigTitle.merge(TextColorStyle.main),
-                      textAlign: TextAlign.center,
-                    ),
-                    SizedBox(height: 12),
-                    () {
-                      if (isOnSequenceAppearance)
-                        return pillSheetList;
-                      else
-                        return pillSheetView;
-                    }(),
-                    SizedBox(height: 24),
-                    dynamicDescription,
-                    if (doneButton != null) ...[
-                      Expanded(
-                        child: Container(
-                          constraints: BoxConstraints(minHeight: 32),
-                        ),
-                      ),
-                      doneButton,
-                      SizedBox(height: 35),
-                    ]
-                  ],
-                ),
+          return Column(
+            children: <Widget>[
+              SizedBox(height: 24),
+              Text(
+                "生理がはじまるピル番号をタップ",
+                style: FontType.sBigTitle.merge(TextColorStyle.main),
+                textAlign: TextAlign.center,
               ),
-            ),
+              SizedBox(height: 12),
+              () {
+                if (isOnSequenceAppearance)
+                  return pillSheetList;
+                else
+                  return pillSheetView;
+              }(),
+              SizedBox(height: 24),
+              dynamicDescription,
+              if (doneButton != null) ...[
+                Expanded(
+                  child: Container(
+                    constraints: BoxConstraints(minHeight: 32),
+                  ),
+                ),
+                doneButton,
+                SizedBox(height: 35),
+              ]
+            ],
           );
         }),
       ),
