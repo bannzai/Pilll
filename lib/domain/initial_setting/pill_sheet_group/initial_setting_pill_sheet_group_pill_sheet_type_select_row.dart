@@ -51,7 +51,9 @@ class InitialSettingPillSheetGroupPillSheetTypeSelectRow
                   height: 20,
                   child: IconButton(
                       padding: EdgeInsets.all(0),
-                      onPressed: () {},
+                      onPressed: () {
+                        store.removePillSheetType(index);
+                      },
                       icon: SvgPicture.asset(
                         "images/minus_icon.svg",
                         width: 20,
