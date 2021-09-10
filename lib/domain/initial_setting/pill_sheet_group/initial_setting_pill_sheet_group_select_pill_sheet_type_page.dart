@@ -19,34 +19,32 @@ class InitialSettingPillSheetGroupSelectPillSheetTypePage extends HookWidget {
       initialChildSize: 1,
       maxChildSize: 1,
       builder: (context, scrollController) {
-        return SingleChildScrollView(
-          controller: scrollController,
-          child: Container(
-            child: Column(
-              children: [
-                SizedBox(height: 15),
-                Row(
-                  children: [
-                    SizedBox(width: 16),
-                    Text(
-                      "ピルの種類を選択",
-                      style: TextStyle(
-                        color: TextColor.main,
-                        fontSize: 20,
-                        fontFamily: FontFamily.japanese,
-                        fontWeight: FontWeight.w500,
-                      ),
+        return Container(
+          child: ListView(
+            controller: scrollController,
+            children: [
+              SizedBox(height: 15),
+              Row(
+                children: [
+                  SizedBox(width: 16),
+                  Text(
+                    "ピルの種類を選択",
+                    style: TextStyle(
+                      color: TextColor.main,
+                      fontSize: 20,
+                      fontFamily: FontFamily.japanese,
+                      fontWeight: FontWeight.w500,
                     ),
-                  ],
-                ),
-                SizedBox(height: 24),
-                PillSheetTypeSelectBodyTemplate(
-                  onSelect: onSelect,
-                  selectedPillSheetType: pillSheetType,
-                ),
-                SizedBox(height: 20),
-              ],
-            ),
+                  ),
+                ],
+              ),
+              SizedBox(height: 24),
+              PillSheetTypeSelectBodyTemplate(
+                onSelect: onSelect,
+                selectedPillSheetType: pillSheetType,
+              ),
+              SizedBox(height: 100),
+            ],
           ),
         );
       },
