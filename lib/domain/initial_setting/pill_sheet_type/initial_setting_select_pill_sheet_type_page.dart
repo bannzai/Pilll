@@ -55,6 +55,8 @@ class InitialSettingSelectPillSheetTypePage extends HookWidget {
                           name: "selected_type_initial_setting",
                           parameters: {"pill_sheet_type": type.rawPath});
                       store.selectedPillSheetType(type);
+                      Navigator.of(context)
+                          .push(InitialSettingPillSheetCountPageRoute.route());
                     },
                     selectedPillSheetType: state.pillSheetTypes.isEmpty
                         ? null
@@ -70,16 +72,6 @@ class InitialSettingSelectPillSheetTypePage extends HookWidget {
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: [
-                      if (state.pillSheetTypes.isNotEmpty)
-                        PrimaryButton(
-                          text: "次へ",
-                          onPressed: () {
-                            analytics.logEvent(
-                                name: "next_initial_setting_pillsheet_type");
-                            Navigator.of(context).push(
-                                InitialSettingPillSheetCountPageRoute.route());
-                          },
-                        ),
                       if (!state.isAccountCooperationDidEnd) ...[
                         SizedBox(height: 20),
                         SecondaryButton(
