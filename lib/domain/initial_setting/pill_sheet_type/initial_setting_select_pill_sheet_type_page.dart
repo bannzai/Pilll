@@ -41,64 +41,75 @@ class InitialSettingSelectPillSheetTypePage extends HookWidget {
           backgroundColor: PilllColors.white,
         ),
         body: SafeArea(
-          child: Column(
+          child: Stack(
             children: [
-              SizedBox(height: 24),
-              Text("飲んでいるピルシートのタイプはどれ？",
-                  style: FontType.sBigTitle.merge(TextColorStyle.main)),
-              SizedBox(height: 24),
-              PillSheetTypeSelectBodyTemplate(
-                onSelect: (type) {
-                  analytics.logEvent(
-                      name: "selected_type_initial_setting",
-                      parameters: {"pill_sheet_type": type.rawPath});
-                  store.selectedPillSheetType(type);
-                },
-                selectedPillSheetType: state.pillSheetTypes.isEmpty
-                    ? null
-                    : state.pillSheetTypes.first,
-              ),
-              SizedBox(height: 10),
-              if (state.pillSheetTypes.isNotEmpty)
-                Align(
-                  alignment: Alignment.bottomCenter,
-                  child: PrimaryButton(
-                    text: "次へ",
-                    onPressed: () {
+              Column(
+                children: [
+                  SizedBox(height: 24),
+                  Text("飲んでいるピルシートのタイプはどれ？",
+                      style: FontType.sBigTitle.merge(TextColorStyle.main)),
+                  SizedBox(height: 24),
+                  PillSheetTypeSelectBodyTemplate(
+                    onSelect: (type) {
                       analytics.logEvent(
-                          name: "next_initial_setting_pillsheet_type");
-                      Navigator.of(context)
-                          .push(InitialSettingPillSheetCountPageRoute.route());
+                          name: "selected_type_initial_setting",
+                          parameters: {"pill_sheet_type": type.rawPath});
+                      store.selectedPillSheetType(type);
                     },
+                    selectedPillSheetType: state.pillSheetTypes.isEmpty
+                        ? null
+                        : state.pillSheetTypes.first,
+                  ),
+                  SizedBox(height: 35),
+                ],
+              ),
+              Align(
+                alignment: Alignment.bottomCenter,
+                child: Container(
+                  padding: EdgeInsets.only(bottom: 43),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    children: [
+                      if (state.pillSheetTypes.isNotEmpty)
+                        PrimaryButton(
+                          text: "次へ",
+                          onPressed: () {
+                            analytics.logEvent(
+                                name: "next_initial_setting_pillsheet_type");
+                            Navigator.of(context).push(
+                                InitialSettingPillSheetCountPageRoute.route());
+                          },
+                        ),
+                      if (!state.isAccountCooperationDidEnd) ...[
+                        SizedBox(height: 20),
+                        SecondaryButton(
+                          text: "すでにアカウントをお持ちの方はこちら",
+                          onPressed: () {
+                            showSigninSheet(
+                              context,
+                              SigninSheetStateContext.initialSetting,
+                              (accountType) async {
+                                store.showHUD();
+                                if (await store.canEndInitialSetting()) {
+                                  AppRouter.signinAccount(context);
+                                } else {
+                                  ScaffoldMessenger.of(context).showSnackBar(
+                                    SnackBar(
+                                      duration: Duration(seconds: 2),
+                                      content: Text(
+                                          "${accountType.providerName}でログインしました"),
+                                    ),
+                                  );
+                                }
+                              },
+                            );
+                          },
+                        ),
+                      ],
+                    ],
                   ),
                 ),
-              if (!state.isAccountCooperationDidEnd) ...[
-                SizedBox(height: 20),
-                SecondaryButton(
-                  text: "すでにアカウントをお持ちの方はこちら",
-                  onPressed: () {
-                    showSigninSheet(
-                      context,
-                      SigninSheetStateContext.initialSetting,
-                      (accountType) async {
-                        store.showHUD();
-                        if (await store.canEndInitialSetting()) {
-                          AppRouter.signinAccount(context);
-                        } else {
-                          ScaffoldMessenger.of(context).showSnackBar(
-                            SnackBar(
-                              duration: Duration(seconds: 2),
-                              content:
-                                  Text("${accountType.providerName}でログインしました"),
-                            ),
-                          );
-                        }
-                      },
-                    );
-                  },
-                ),
-              ],
-              SizedBox(height: 35),
+              ),
             ],
           ),
         ),
