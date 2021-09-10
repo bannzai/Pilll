@@ -38,6 +38,9 @@ class MenstruationRow extends HookWidget {
   }
 
   bool get _hasError {
+    if (setting.pillSheetTypes.isEmpty) {
+      return false;
+    }
     return setting.pillSheetTypes
                 .map((e) => e.totalCount)
                 .reduce((value, element) => value + element) *
