@@ -257,6 +257,7 @@ void main() {
         expect(
             store.shouldPillMarkAnimation(
               sequentialPillNumber: i,
+              pillNumberIntoPillSheet: i,
               pillSheet: pillSheetEntity,
             ),
             isFalse);
@@ -328,6 +329,7 @@ void main() {
       expect(
           store.shouldPillMarkAnimation(
             sequentialPillNumber: 3,
+            pillNumberIntoPillSheet: 3,
             pillSheet: pillSheetEntity,
           ),
           isTrue);

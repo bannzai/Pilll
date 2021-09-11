@@ -32,7 +32,7 @@ class PillMarkWithNumberLayout extends StatelessWidget {
 
 extension PillMarkWithNumberLayoutHelper on PillMarkWithNumberLayout {
   static int calcSequentialPillNumber({
-    required int column,
+    required int columnIndex,
     required int lineIndex,
     required int pageIndex,
     required List<PillSheetType> pillSheetTypes,
@@ -40,7 +40,7 @@ extension PillMarkWithNumberLayoutHelper on PillMarkWithNumberLayout {
     if (pillSheetTypes.isEmpty) {
       return 0;
     }
-    return column +
+    return columnIndex +
         1 +
         (lineIndex) * 7 +
         pastedTotalCount(
@@ -49,8 +49,8 @@ extension PillMarkWithNumberLayoutHelper on PillMarkWithNumberLayout {
         );
   }
 
-  static int calcPillNumberIntoPillSheet(int column, int lineIndex) {
-    return column + 1 + (lineIndex) * 7;
+  static int calcPillNumberIntoPillSheet(int columnIndex, int lineIndex) {
+    return columnIndex + 1 + (lineIndex) * 7;
   }
 
   static TextStyle upperTextColor({

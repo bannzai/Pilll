@@ -443,10 +443,13 @@ class MockRecordPageStore extends _i1.Mock implements _i25.RecordPageStore {
           returnValueForMissingStub: Future.value()) as _i17.Future<void>?);
   @override
   _i17.Future<void>? takenWithPillNumber(
-          {int? sequentialPillNumber, _i2.PillSheet? pillSheet}) =>
+          {int? sequentialPillNumber,
+          int? pillNumberIntoPillSheet,
+          _i2.PillSheet? pillSheet}) =>
       (super.noSuchMethod(
           Invocation.method(#takenWithPillNumber, [], {
             #sequentialPillNumber: sequentialPillNumber,
+            #pillNumberIntoPillSheet: pillNumberIntoPillSheet,
             #pillSheet: pillSheet
           }),
           returnValueForMissingStub: Future.value()) as _i17.Future<void>?);
@@ -461,10 +464,14 @@ class MockRecordPageStore extends _i1.Mock implements _i25.RecordPageStore {
           returnValue: Future<void>.value(),
           returnValueForMissingStub: Future.value()) as _i17.Future<void>);
   @override
-  bool isDone({int? sequentialPillNumber, _i2.PillSheet? pillSheet}) =>
+  bool isDone(
+          {int? sequentialPillNumber,
+          int? pillNumberIntoPillSheet,
+          _i2.PillSheet? pillSheet}) =>
       (super.noSuchMethod(
           Invocation.method(#isDone, [], {
             #sequentialPillNumber: sequentialPillNumber,
+            #pillNumberIntoPillSheet: pillNumberIntoPillSheet,
             #pillSheet: pillSheet
           }),
           returnValue: false) as bool);
@@ -479,10 +486,13 @@ class MockRecordPageStore extends _i1.Mock implements _i25.RecordPageStore {
           returnValue: _i27.PillMarkType.normal) as _i27.PillMarkType);
   @override
   bool shouldPillMarkAnimation(
-          {int? sequentialPillNumber, _i2.PillSheet? pillSheet}) =>
+          {int? sequentialPillNumber,
+          int? pillNumberIntoPillSheet,
+          _i2.PillSheet? pillSheet}) =>
       (super.noSuchMethod(
           Invocation.method(#shouldPillMarkAnimation, [], {
             #sequentialPillNumber: sequentialPillNumber,
+            #pillNumberIntoPillSheet: pillNumberIntoPillSheet,
             #pillSheet: pillSheet
           }),
           returnValue: false) as bool);
