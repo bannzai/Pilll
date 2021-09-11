@@ -10,19 +10,25 @@ import 'package:pilll/domain/record/record_page_state.dart';
 import 'package:pilll/domain/record/record_page_store.dart';
 import 'package:pilll/domain/record/util/take.dart';
 import 'package:pilll/entity/pill_sheet.dart';
+import 'package:pilll/entity/pill_sheet_group.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/entity/setting.dart';
 import 'package:pilll/entity/weekday.dart';
 import 'package:pilll/util/formatter/date_time_formatter.dart';
 
 class RecordPagePillSheet extends StatelessWidget {
+  final PillSheetGroup pillSheetGroup;
   final PillSheet pillSheet;
   final Setting setting;
   final RecordPageStore store;
   final RecordPageState state;
 
+  List<PillSheetType> get pillSheetTypes =>
+      pillSheetGroup.pillSheets.map((e) => e.pillSheetType).toList();
+
   const RecordPagePillSheet({
     Key? key,
+    required this.pillSheetGroup,
     required this.pillSheet,
     required this.setting,
     required this.store,
@@ -71,7 +77,7 @@ class RecordPagePillSheet extends StatelessWidget {
         column: index,
         lineIndex: lineIndex,
         pageIndex: pageIndex,
-        pillSheetTotalCount: pillSheet.pillSheetType.totalCount,
+        pillSheetTypes: pillSheetTypes,
       );
       return Container(
         width: PillSheetViewLayout.componentWidth,

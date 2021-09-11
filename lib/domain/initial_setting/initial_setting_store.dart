@@ -156,16 +156,16 @@ class InitialSettingStateStore extends StateNotifier<InitialSettingState> {
 
     _settingService.updateWithBatch(batch, state.buildSetting());
 
-    final todayPillNumber = state.todayPillNumber;
-    if (todayPillNumber != null) {
+    final sequentialTodayPillNumber = state.todayPillNumber;
+    if (sequentialTodayPillNumber != null) {
       final Map<String, PillSheet> idAndPillSheet = {};
 
       var i = 0;
       state.pillSheetTypes.forEach((pillSheetType) {
         final pillSheet = state.buildPillSheet(
           pageIndex: i,
-          todayPillNumber: todayPillNumber,
-          pillSheetType: pillSheetType,
+          sequentialTodayPillNumber: sequentialTodayPillNumber,
+          pillSheetTypes: state.pillSheetTypes,
         );
         final createdPillSheet = _pillSheetService.register(batch, pillSheet);
 

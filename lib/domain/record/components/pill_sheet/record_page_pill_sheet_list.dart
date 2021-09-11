@@ -49,6 +49,7 @@ class RecordPagePillSheetList extends HookWidget {
                     Container(
                       padding: EdgeInsets.symmetric(horizontal: 10),
                       child: RecordPagePillSheet(
+                        pillSheetGroup: pillSheetGroup,
                         pillSheet: pillSheet,
                         store: store,
                         state: state,

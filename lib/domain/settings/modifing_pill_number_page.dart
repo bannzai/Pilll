@@ -4,16 +4,19 @@ import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/components/organisms/pill_sheet/setting_pill_sheet_view.dart';
 import 'package:pilll/entity/pill_sheet.dart';
+import 'package:pilll/entity/pill_sheet_group.dart';
 import 'package:pilll/util/formatter/date_time_formatter.dart';
 import 'package:flutter/material.dart';
 
 class ModifingPillNumberPage extends StatefulWidget {
+  final PillSheetGroup pillSheetGroup;
   final PillSheet activedPillSheet;
   final bool isOnSequenceAppearance;
   final Function(int) markSelected;
 
   const ModifingPillNumberPage({
     Key? key,
+    required this.pillSheetGroup,
     required this.activedPillSheet,
     required this.isOnSequenceAppearance,
     required this.markSelected,
@@ -57,7 +60,9 @@ class _ModifingPillNumberPageState extends State<ModifingPillNumberPage> {
                 child: SettingPillSheetView(
                   pageIndex: 0,
                   isOnSequenceAppearance: widget.isOnSequenceAppearance,
-                  pillSheetType: widget.activedPillSheet.pillSheetType,
+                  pillSheetTypes: widget.pillSheetGroup.pillSheets
+                      .map((e) => e.pillSheetType)
+                      .toList(),
                   selectedPillNumber: selectedPillMarkNumber,
                   markSelected: (number) {
                     setState(() => selectedPillMarkNumber = number);
@@ -85,6 +90,7 @@ class _ModifingPillNumberPageState extends State<ModifingPillNumberPage> {
 
 extension ModifingPillNumberPageRoute on ModifingPillNumberPage {
   static Route<dynamic> route({
+    required PillSheetGroup pillSheetGroup,
     required PillSheet activedPillSheet,
     required bool isOnSequenceAppearance,
     required Function(int) markSelected,
@@ -92,6 +98,7 @@ extension ModifingPillNumberPageRoute on ModifingPillNumberPage {
     return MaterialPageRoute(
       settings: RouteSettings(name: "ModifingPillNumberPage"),
       builder: (_) => ModifingPillNumberPage(
+        pillSheetGroup: pillSheetGroup,
         activedPillSheet: activedPillSheet,
         isOnSequenceAppearance: isOnSequenceAppearance,
         markSelected: markSelected,

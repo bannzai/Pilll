@@ -110,7 +110,8 @@ abstract class PillSheet implements _$PillSheet {
 
   static int pillNumberIntoPillSheet({
     required int sequentialPillNumber,
-    required PillSheetType pillSheetType,
+    required int pageIndex,
+    required List<PillSheetType> pillSheetTypes,
   }) {
     final offset =
         ((sequentialPillNumber - 1) / pillSheetType.totalCount).floor();

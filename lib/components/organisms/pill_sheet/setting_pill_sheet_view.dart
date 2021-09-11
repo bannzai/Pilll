@@ -12,16 +12,18 @@ import 'package:pilll/entity/weekday.dart';
 
 class SettingPillSheetView extends StatelessWidget {
   final int pageIndex;
+  final List<PillSheetType> pillSheetTypes;
   final bool isOnSequenceAppearance;
-  final PillSheetType pillSheetType;
   final int? selectedPillNumber;
   final Function(int) markSelected;
+
+  PillSheetType get pillSheetType => pillSheetTypes[pageIndex];
 
   const SettingPillSheetView({
     Key? key,
     required this.pageIndex,
+    required this.pillSheetTypes,
     required this.isOnSequenceAppearance,
-    required this.pillSheetType,
     required this.selectedPillNumber,
     required this.markSelected,
   }) : super(key: key);
@@ -58,8 +60,11 @@ class SettingPillSheetView extends StatelessWidget {
         column: index,
         lineIndex: lineIndex,
         pageIndex: pageIndex,
-        pillSheetTotalCount: pillSheetType.totalCount,
+        pillSheetTypes: pillSheetTypes,
       );
+      final pillNumberIntoPillSheet =
+          PillMarkWithNumberLayoutHelper.calcPillNumberIntoPillSheet(
+              index, lineIndex);
       return Container(
         width: PillSheetViewLayout.componentWidth,
         child: PillMarkWithNumberLayout(
@@ -71,8 +76,10 @@ class SettingPillSheetView extends StatelessWidget {
           pillMark: PillMark(
             hasRippleAnimation: false,
             isDone: false,
-            pillSheetType:
-                _pillMarkTypeFor(sequentialPillNumber: sequentialPillNumber),
+            pillSheetType: _pillMarkTypeFor(
+              sequentialPillNumber: sequentialPillNumber,
+              pillNumberIntoPillSheet: pillNumberIntoPillSheet,
+            ),
           ),
           onTap: () {
             analytics.logEvent(name: "setting_pill_mark_tapped", parameters: {
@@ -86,15 +93,12 @@ class SettingPillSheetView extends StatelessWidget {
   }
 
   PillMarkType _pillMarkTypeFor({
+    required int pillNumberIntoPillSheet,
     required int sequentialPillNumber,
   }) {
     if (selectedPillNumber == sequentialPillNumber) {
       return PillMarkType.selected;
     }
-
-    final pillNumberIntoPillSheet = PillSheet.pillNumberIntoPillSheet(
-        sequentialPillNumber: sequentialPillNumber,
-        pillSheetType: pillSheetType);
 
     if (pillSheetType.dosingPeriod < pillNumberIntoPillSheet) {
       return pillSheetType == PillSheetType.pillsheet_21

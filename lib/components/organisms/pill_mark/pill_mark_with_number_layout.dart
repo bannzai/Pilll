@@ -1,6 +1,7 @@
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/organisms/pill_mark/pill_mark.dart';
 import 'package:flutter/material.dart';
+import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/entity/setting.dart';
 
 class PillMarkWithNumberLayout extends StatelessWidget {
@@ -34,9 +35,22 @@ extension PillMarkWithNumberLayoutHelper on PillMarkWithNumberLayout {
     required int column,
     required int lineIndex,
     required int pageIndex,
-    required int pillSheetTotalCount,
+    required List<PillSheetType> pillSheetTypes,
   }) {
-    return column + 1 + (lineIndex) * 7 + (pageIndex * pillSheetTotalCount);
+    if (pillSheetTypes.isEmpty) {
+      return 0;
+    }
+    return column +
+        1 +
+        (lineIndex) * 7 +
+        pastedTotalCount(
+          pillSheetTypes: pillSheetTypes,
+          pageIndex: pageIndex,
+        );
+  }
+
+  static int calcPillNumberIntoPillSheet(int column, int lineIndex) {
+    return column + 1 + (lineIndex) * 7;
   }
 
   static TextStyle upperTextColor({
