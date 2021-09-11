@@ -201,9 +201,8 @@ class SettingStateStore extends StateNotifier<SettingState> {
       pillSheetService: _pillSheetService,
       pillSheetModifiedHistoryService: _pillSheetModifiedHistoryService,
       pillSheetGroupService: _pillSheetGroupService,
-      activedPillSheet: activedPillSheet,
       pillSheetGroup: pillSheetGroup,
-      pillNumber: pillNumber,
+      pillNumberIntoGroup: pillNumber,
     );
     await batch.commit();
 

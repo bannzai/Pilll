@@ -305,9 +305,8 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
       pillSheetService: _pillSheetService,
       pillSheetModifiedHistoryService: _pillSheetModifiedHistoryService,
       pillSheetGroupService: _pillSheetGroupService,
-      activedPillSheet: activedPillSheet,
       pillSheetGroup: pillSheetGroup,
-      pillNumber: pillNumber,
+      pillNumberIntoGroup: pillNumber,
     );
     await batch.commit();
 
@@ -406,40 +405,32 @@ PillSheetGroup modifyBeginingDateFunction({
   required PillSheetService pillSheetService,
   required PillSheetModifiedHistoryService pillSheetModifiedHistoryService,
   required PillSheetGroupService pillSheetGroupService,
-  required PillSheet activedPillSheet,
   required PillSheetGroup pillSheetGroup,
-  required int pillNumber,
+  required int pillNumberIntoGroup,
 }) {
-  if (pillNumber == activedPillSheet.todayPillNumber) {
+  final serializedTodayPillNumber = pillSheetGroup.serializedTodayPillNumber;
+  final activedPillSheet = pillSheetGroup.activedPillSheet;
+  if (serializedTodayPillNumber == null || activedPillSheet == null) {
+    throw FormatException("有効なピルシートのデータが見つかりませんでした");
+  }
+
+  if (pillNumberIntoGroup == serializedTodayPillNumber) {
     return pillSheetGroup;
   }
-  var updatedPillSheetGroup = pillSheetGroup;
-  final distance = pillNumber - activedPillSheet.todayPillNumber;
-  pillSheetGroup.pillSheets.forEach((_pillSheet) {
-    if (_pillSheet.groupIndex < activedPillSheet.groupIndex) {
-      return;
-    }
 
-    final PillSheet pillSheet;
-    if (_pillSheet.id == activedPillSheet.id) {
-      // NOTE: Updated activedPillSheet is used to pillSheetGroupService.update
-      pillSheet = activedPillSheet;
-    } else {
-      pillSheet = _pillSheet;
-    }
-
-    final updatedPillSheet = pillSheet.copyWith(
-      beginingDate: pillSheet.beginingDate.subtract(Duration(days: distance)),
-    );
-    pillSheetService.update(batch, updatedPillSheet);
-    updatedPillSheetGroup = updatedPillSheetGroup.replaced(updatedPillSheet);
-  });
+  final distance = pillNumberIntoGroup - serializedTodayPillNumber;
+  final updatedPillSheet = activedPillSheet.copyWith(
+    beginingDate:
+        activedPillSheet.beginingDate.subtract(Duration(days: distance)),
+  );
+  pillSheetService.update(batch, updatedPillSheet);
 
   final history = PillSheetModifiedHistoryServiceActionFactory
       .createChangedPillNumberAction(
           before: activedPillSheet, after: activedPillSheet);
   pillSheetModifiedHistoryService.add(batch, history);
 
+  final updatedPillSheetGroup = pillSheetGroup.replaced(updatedPillSheet);
   pillSheetGroupService.update(batch, updatedPillSheetGroup);
 
   return updatedPillSheetGroup;
