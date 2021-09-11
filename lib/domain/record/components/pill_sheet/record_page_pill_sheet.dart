@@ -67,7 +67,7 @@ class RecordPagePillSheet extends StatelessWidget {
       if (index >= countOfPillMarksInLine) {
         return Container(width: PillSheetViewLayout.componentWidth);
       }
-      final number = PillMarkWithNumberLayoutHelper.calcPillNumber(
+      final number = PillMarkWithNumberLayoutHelper.calcSequentialPillNumber(
         column: index,
         lineIndex: lineIndex,
         pageIndex: pageIndex,

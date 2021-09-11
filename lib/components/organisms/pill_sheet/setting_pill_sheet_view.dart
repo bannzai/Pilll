@@ -12,6 +12,7 @@ import 'package:pilll/entity/weekday.dart';
 
 class SettingPillSheetView extends StatelessWidget {
   final int pageIndex;
+  final bool isOnSequenceAppearance;
   final PillSheetType pillSheetType;
   final int? selectedPillNumber;
   final Function(int) markSelected;
@@ -19,6 +20,7 @@ class SettingPillSheetView extends StatelessWidget {
   const SettingPillSheetView({
     Key? key,
     required this.pageIndex,
+    required this.isOnSequenceAppearance,
     required this.pillSheetType,
     required this.selectedPillNumber,
     required this.markSelected,
@@ -52,7 +54,7 @@ class SettingPillSheetView extends StatelessWidget {
         return Container(width: PillSheetViewLayout.componentWidth);
       }
       final sequentialPillNumber =
-          PillMarkWithNumberLayoutHelper.calcPillNumber(
+          PillMarkWithNumberLayoutHelper.calcSequentialPillNumber(
         column: index,
         lineIndex: lineIndex,
         pageIndex: pageIndex,
