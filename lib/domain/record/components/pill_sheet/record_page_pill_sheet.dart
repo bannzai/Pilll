@@ -100,6 +100,7 @@ class RecordPagePillSheet extends StatelessWidget {
             ),
             pillSheetType: store.markFor(
               sequentialPillNumber: sequentialPillNumber,
+              pillNumberIntoPillSheet: pillNumberIntoPillSheet,
               pillSheet: pillSheet,
             ),
           ),
