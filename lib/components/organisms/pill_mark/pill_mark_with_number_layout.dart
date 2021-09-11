@@ -30,7 +30,7 @@ class PillMarkWithNumberLayout extends StatelessWidget {
 }
 
 extension PillMarkWithNumberLayoutHelper on PillMarkWithNumberLayout {
-  static int calcPillNumber({
+  static int calcSequentialPillNumber({
     required int column,
     required int lineIndex,
     required int pageIndex,
