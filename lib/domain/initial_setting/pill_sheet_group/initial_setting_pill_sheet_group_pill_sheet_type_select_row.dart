@@ -1,6 +1,4 @@
 import 'package:flutter_svg/svg.dart';
-import 'package:pilll/domain/initial_setting/initial_setting_state.dart';
-import 'package:pilll/domain/initial_setting/initial_setting_store.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
@@ -16,14 +14,14 @@ class InitialSettingPillSheetGroupPillSheetTypeSelectRow
     Key? key,
     required this.index,
     required this.pillSheetType,
-    required this.state,
-    required this.store,
+    required this.onSelect,
+    required this.onDelete,
   }) : super(key: key);
 
   final int index;
   final PillSheetType pillSheetType;
-  final InitialSettingState state;
-  final InitialSettingStateStore store;
+  final Function(int, PillSheetType) onSelect;
+  final Function(int) onDelete;
 
   @override
   Widget build(BuildContext context) {
@@ -50,7 +48,7 @@ class InitialSettingPillSheetGroupPillSheetTypeSelectRow
                   child: IconButton(
                       padding: EdgeInsets.all(0),
                       onPressed: () {
-                        store.removePillSheetType(index);
+                        onDelete(index);
                       },
                       icon: SvgPicture.asset(
                         "images/minus_icon.svg",
@@ -68,7 +66,7 @@ class InitialSettingPillSheetGroupPillSheetTypeSelectRow
                   context: context,
                   pillSheetType: pillSheetType,
                   onSelect: (pillSheetType) {
-                    store.changePillSheetType(index, pillSheetType);
+                    onSelect(index, pillSheetType);
                   });
             },
             child: Container(

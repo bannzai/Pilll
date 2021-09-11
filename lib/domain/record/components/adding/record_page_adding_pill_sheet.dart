@@ -1,7 +1,5 @@
 import 'package:pilll/analytics.dart';
-import 'package:pilll/domain/initial_setting/pill_sheet_group/pill_sheet_group_select_pill_sheet_type_page_template.dart';
 import 'package:pilll/domain/record/record_page_store.dart';
-import 'package:pilll/entity/pill_sheet_group.dart';
 import 'package:pilll/entity/setting.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
@@ -58,10 +56,6 @@ class RecordPageAddingPillSheet extends StatelessWidget {
   }
 
   Widget _picker() {
-    return PillSheetGroupSelectPillSheetTypePageTemplate(
-      pillSheetType: pillSheetType,
-      onSelect: onSelect,
-    );
     // TODO:
     return Container();
 //    final elements = List.generate(12, (index) => index + 1);
