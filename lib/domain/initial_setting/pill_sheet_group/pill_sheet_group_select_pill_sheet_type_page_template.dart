@@ -6,11 +6,11 @@ import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/components/template/pill_sheet_type_setting/pill_sheet_type_select_body_template.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 
-class InitialSettingPillSheetGroupSelectPillSheetTypePage extends HookWidget {
+class PillSheetGroupSelectPillSheetTypePage extends HookWidget {
   final PillSheetType? pillSheetType;
   final Function(PillSheetType) onSelect;
 
-  const InitialSettingPillSheetGroupSelectPillSheetTypePage(
+  const PillSheetGroupSelectPillSheetTypePage(
       {Key? key, required this.pillSheetType, required this.onSelect})
       : super(key: key);
   @override
@@ -55,16 +55,16 @@ class InitialSettingPillSheetGroupSelectPillSheetTypePage extends HookWidget {
   }
 }
 
-void showInitialSettingPillSheetGroupSelectPillSheetTypePage({
+void showSettingPillSheetGroupSelectPillSheetTypePage({
   required BuildContext context,
   required final PillSheetType? pillSheetType,
   required final Function(PillSheetType) onSelect,
 }) {
   analytics.setCurrentScreen(
-      screenName: "InitialSettingPillSheetGroupSelectPillSheetTypePage");
+      screenName: "PillSheetGroupSelectPillSheetTypePage");
   showModalBottomSheet(
     context: context,
-    builder: (context) => InitialSettingPillSheetGroupSelectPillSheetTypePage(
+    builder: (context) => PillSheetGroupSelectPillSheetTypePage(
       pillSheetType: pillSheetType,
       onSelect: onSelect,
     ),
