@@ -1,4 +1,5 @@
 import 'package:pilll/analytics.dart';
+import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/template/setting_pill_sheet_group/settin_pill_sheet_group.dart';
 import 'package:pilll/domain/initial_setting/today_pill_number/initial_setting_select_today_pill_number_page.dart';
 import 'package:pilll/domain/initial_setting/initial_setting_store.dart';
@@ -33,15 +34,29 @@ class InitialSettingPillSheetGroupPage extends HookWidget {
           padding: EdgeInsets.symmetric(horizontal: 40),
           child: Stack(
             children: [
-              SettingPillSheetGroup(
-                pillSheetTypes: state.pillSheetTypes,
-                onAdd: (pillSheetType) => store.addPillSheetType(pillSheetType),
-                onChange: (index, pillSheetType) =>
-                    store.changePillSheetType(index, pillSheetType),
-                onDelete: (index) => store.removePillSheetType(index),
-                isOnSequenceAppearance: state.isOnSequenceAppearance,
-                setIsOnSequenceAppearance: (isOn) =>
-                    store.setIsOnSequenceAppearance(isOn),
+              SingleChildScrollView(
+                child: Column(
+                  children: [
+                    SizedBox(height: 24),
+                    Text(
+                      "お手元のピルシートの枚数を\n選んでください",
+                      style: FontType.title.merge(TextColorStyle.main),
+                      textAlign: TextAlign.center,
+                    ),
+                    SizedBox(height: 6),
+                    SettingPillSheetGroup(
+                      pillSheetTypes: state.pillSheetTypes,
+                      onAdd: (pillSheetType) =>
+                          store.addPillSheetType(pillSheetType),
+                      onChange: (index, pillSheetType) =>
+                          store.changePillSheetType(index, pillSheetType),
+                      onDelete: (index) => store.removePillSheetType(index),
+                      isOnSequenceAppearance: state.isOnSequenceAppearance,
+                      setIsOnSequenceAppearance: (isOn) =>
+                          store.setIsOnSequenceAppearance(isOn),
+                    ),
+                  ],
+                ),
               ),
               Align(
                 alignment: Alignment.bottomCenter,

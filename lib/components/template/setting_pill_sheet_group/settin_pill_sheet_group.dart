@@ -28,15 +28,8 @@ class SettingPillSheetGroup extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ListView(
+    return Column(
       children: [
-        SizedBox(height: 24),
-        Text(
-          "お手元のピルシートの枚数を\n選んでください",
-          style: FontType.title.merge(TextColorStyle.main),
-          textAlign: TextAlign.center,
-        ),
-        SizedBox(height: 6),
         ...pillSheetTypes
             .asMap()
             .map((index, pillSheetType) {
