@@ -41,7 +41,10 @@ class TakeToday extends StatelessWidget {
     final pillSheetGroup = this.pillSheetGroup;
     final pillSheet = this.pillSheetGroup?.activedPillSheet;
     if (pillSheetGroup == null || pillSheet == null || pillSheet.isInvalid) {
-      return Text("-", style: FontType.assisting.merge(TextColorStyle.noshime));
+      return Padding(
+          padding: EdgeInsets.only(top: 8),
+          child: Text("-",
+              style: FontType.assisting.merge(TextColorStyle.noshime)));
     }
     if (pillSheet.inNotTakenDuration) {
       return Text(
