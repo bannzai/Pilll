@@ -50,6 +50,7 @@ class SettingPage extends HookWidget {
   }
 
   Widget _body(BuildContext context) {
+    final store = useProvider(settingStoreProvider);
     final state = useProvider(settingStoreProvider.state);
     final setting = state.entity;
     if (setting == null) {
@@ -153,7 +154,7 @@ class SettingPage extends HookWidget {
                     text: "生理",
                     children: [
                       if (pillSheetGroup != null) ...[
-                        MenstruationRow(setting, pillSheetGroup),
+                        MenstruationRow(store, setting, pillSheetGroup),
                         _separator(),
                       ],
                     ],
