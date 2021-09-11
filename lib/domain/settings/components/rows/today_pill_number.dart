@@ -6,15 +6,18 @@ import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/domain/settings/modifing_pill_number_page.dart';
 import 'package:pilll/domain/settings/setting_page_store.dart';
 import 'package:pilll/entity/pill_sheet.dart';
+import 'package:pilll/entity/pill_sheet_group.dart';
 import 'package:pilll/entity/setting.dart';
 
 class TodayPllNumberRow extends HookWidget {
   final Setting setting;
+  final PillSheetGroup pillSheetGroup;
   final PillSheet activedPillSheet;
 
   const TodayPllNumberRow({
     Key? key,
     required this.setting,
+    required this.pillSheetGroup,
     required this.activedPillSheet,
   }) : super(key: key);
 
@@ -34,6 +37,7 @@ class TodayPllNumberRow extends HookWidget {
     );
     Navigator.of(context).push(
       ModifingPillNumberPageRoute.route(
+        pillSheetGroup: pillSheetGroup,
         activedPillSheet: activedPillSheet,
         isOnSequenceAppearance: setting.isOnSequenceAppearance,
         markSelected: (number) {

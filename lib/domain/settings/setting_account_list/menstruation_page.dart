@@ -41,7 +41,7 @@ class SettingMenstruationPage extends HookWidget {
       pillSheetView: SettingPillSheetView(
         pageIndex: 0,
         isOnSequenceAppearance: setting.isOnSequenceAppearance,
-        pillSheetType: setting.pillSheetTypes.first,
+        pillSheetTypes: setting.pillSheetTypes,
         selectedPillNumber: setting.pillNumberForFromMenstruation,
         markSelected: (number) {
           analytics.logEvent(

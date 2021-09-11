@@ -235,7 +235,7 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
   }) async {
     final pillNumberIntoPillSheet = PillSheet.pillNumberIntoPillSheet(
         sequentialPillNumber: sequentialPillNumber,
-        pillSheetType: pillSheet.pillSheetType);
+        pillSheetTypes: pillSheet.pillSheetType);
 
     final activedPillSheet = state.pillSheetGroup?.activedPillSheet;
     if (activedPillSheet == null) {

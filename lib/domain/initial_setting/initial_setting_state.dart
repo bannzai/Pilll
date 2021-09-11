@@ -57,20 +57,21 @@ abstract class InitialSettingState implements _$InitialSettingState {
 
   PillSheet buildPillSheet({
     required int pageIndex,
-    required int todayPillNumber,
-    required PillSheetType pillSheetType,
+    required List<PillSheetType> pillSheetTypes,
+    required int sequentialTodayPillNumber,
   }) {
+    final pillSheetType = pillSheetTypes[pageIndex];
     return PillSheet(
       groupIndex: pageIndex,
       beginingDate: _beginingDate(
         pageIndex: pageIndex,
-        todayPillNumber: todayPillNumber,
-        pillSheetType: pillSheetType,
+        sequentialTodayPillNumber: sequentialTodayPillNumber,
+        pillSheetTypes: pillSheetTypes,
       ),
       lastTakenDate: _lastTakenDate(
         pageIndex: pageIndex,
-        todayPillNumber: todayPillNumber,
-        pillSheetType: pillSheetType,
+        sequentialTodayPillNumber: sequentialTodayPillNumber,
+        pillSheetTypes: pillSheetTypes,
       ),
       typeInfo: pillSheetType.typeInfo,
     );
@@ -78,37 +79,41 @@ abstract class InitialSettingState implements _$InitialSettingState {
 
   DateTime _beginingDate({
     required int pageIndex,
-    required int todayPillNumber,
-    required PillSheetType pillSheetType,
+    required List<PillSheetType> pillSheetTypes,
+    required int sequentialTodayPillNumber,
   }) {
-    final pageOffset = pageIndex * pillSheetType.totalCount;
-    return today().subtract(Duration(days: todayPillNumber - 1 - pageOffset));
+    final pageOffset =
+        pastedTotalCount(pillSheetTypes: pillSheetTypes, pageIndex: pageIndex);
+    return today()
+        .subtract(Duration(days: sequentialTodayPillNumber - 1 - pageOffset));
   }
 
   DateTime? _lastTakenDate({
     required int pageIndex,
-    required int todayPillNumber,
-    required PillSheetType pillSheetType,
+    required int sequentialTodayPillNumber,
+    required List<PillSheetType> pillSheetTypes,
   }) {
     if (pageIndex == 0 && todayPillNumber == 1) {
       return null;
     }
+    final pillSheetType = pillSheetTypes[pageIndex];
     final pillSheetBeginPillNumber = pageIndex * pillSheetType.totalCount + 1;
     final pillSheetEndPillNumber =
-        pageIndex * pillSheetType.totalCount + pillSheetType.totalCount;
-    if (pillSheetBeginPillNumber <= todayPillNumber &&
-        todayPillNumber <= pillSheetEndPillNumber) {
+        pastedTotalCount(pillSheetTypes: pillSheetTypes, pageIndex: pageIndex) +
+            pillSheetType.totalCount;
+    if (pillSheetBeginPillNumber <= sequentialTodayPillNumber &&
+        sequentialTodayPillNumber <= pillSheetEndPillNumber) {
       // Between current PillSheet
       return today().subtract(Duration(days: 1));
-    } else if (todayPillNumber < pillSheetEndPillNumber) {
+    } else if (sequentialTodayPillNumber < pillSheetEndPillNumber) {
       // Right side PillSheet
       return null;
     } else {
       // Left side PillSheet
       return _beginingDate(
         pageIndex: pageIndex,
-        todayPillNumber: todayPillNumber,
-        pillSheetType: pillSheetType,
+        sequentialTodayPillNumber: sequentialTodayPillNumber,
+        pillSheetTypes: pillSheetTypes,
       ).add(Duration(days: pillSheetType.totalCount - 1));
     }
   }
