@@ -7,7 +7,7 @@ import 'package:pilll/domain/record/components/notification_bar/notification_bar
 import 'package:pilll/domain/record/components/pill_sheet/record_page_pill_sheet_list.dart';
 import 'package:pilll/domain/record/record_page_state.dart';
 import 'package:pilll/domain/record/record_page_store.dart';
-import 'package:pilll/domain/record/components/header/record_taken_information.dart';
+import 'package:pilll/domain/record/components/header/record_page_header.dart';
 import 'package:pilll/domain/premium_trial/premium_trial_modal.dart';
 import 'package:pilll/entity/setting.dart';
 import 'package:pilll/error/universal_error_page.dart';
@@ -52,8 +52,8 @@ class RecordPage extends HookWidget {
         appBar: AppBar(
           titleSpacing: 0,
           backgroundColor: PilllColors.white,
-          toolbarHeight: RecordTakenInformationConst.height,
-          title: RecordTakenInformation(
+          toolbarHeight: RecordPageHeaderrmationConst.height,
+          title: RecordPageHeaderrmation(
             today: DateTime.now(),
             pillSheetGroup: state.pillSheetGroup,
             store: store,
