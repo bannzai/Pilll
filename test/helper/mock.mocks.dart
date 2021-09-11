@@ -29,11 +29,11 @@ import 'package:pilll/domain/record/record_page_store.dart' as _i25;
 import 'package:pilll/entity/demographic.dart' as _i24;
 import 'package:pilll/entity/diary.dart' as _i4;
 import 'package:pilll/entity/menstruation.dart' as _i5;
-import 'package:pilll/entity/pill_mark_type.dart' as _i28;
+import 'package:pilll/entity/pill_mark_type.dart' as _i27;
 import 'package:pilll/entity/pill_sheet.dart' as _i2;
 import 'package:pilll/entity/pill_sheet_group.dart' as _i11;
 import 'package:pilll/entity/pill_sheet_modified_history.dart' as _i34;
-import 'package:pilll/entity/pill_sheet_type.dart' as _i27;
+import 'package:pilll/entity/pill_sheet_type.dart' as _i28;
 import 'package:pilll/entity/setting.dart' as _i3;
 import 'package:pilll/entity/user.dart' as _i6;
 import 'package:pilll/service/auth.dart' as _i21;
@@ -433,8 +433,8 @@ class MockRecordPageStore extends _i1.Mock implements _i25.RecordPageStore {
   void dispose() => super.noSuchMethod(Invocation.method(#dispose, []),
       returnValueForMissingStub: null);
   @override
-  _i17.Future<void> register(List<_i27.PillSheetType>? pillSheetTypes) =>
-      (super.noSuchMethod(Invocation.method(#register, [pillSheetTypes]),
+  _i17.Future<void> register(_i3.Setting? setting) =>
+      (super.noSuchMethod(Invocation.method(#register, [setting]),
           returnValue: Future<void>.value(),
           returnValueForMissingStub: Future.value()) as _i17.Future<void>);
   @override
@@ -469,14 +469,14 @@ class MockRecordPageStore extends _i1.Mock implements _i25.RecordPageStore {
           }),
           returnValue: false) as bool);
   @override
-  _i28.PillMarkType markFor(
+  _i27.PillMarkType markFor(
           {int? sequentialPillNumber, _i2.PillSheet? pillSheet}) =>
       (super.noSuchMethod(
           Invocation.method(#markFor, [], {
             #sequentialPillNumber: sequentialPillNumber,
             #pillSheet: pillSheet
           }),
-          returnValue: _i28.PillMarkType.normal) as _i28.PillMarkType);
+          returnValue: _i27.PillMarkType.normal) as _i27.PillMarkType);
   @override
   bool shouldPillMarkAnimation(
           {int? sequentialPillNumber, _i2.PillSheet? pillSheet}) =>
@@ -489,6 +489,23 @@ class MockRecordPageStore extends _i1.Mock implements _i25.RecordPageStore {
   @override
   dynamic handleException(Object? exception) =>
       super.noSuchMethod(Invocation.method(#handleException, [exception]));
+  @override
+  dynamic addPillSheetType(
+          _i28.PillSheetType? pillSheetType, _i3.Setting? setting) =>
+      super.noSuchMethod(
+          Invocation.method(#addPillSheetType, [pillSheetType, setting]));
+  @override
+  dynamic changePillSheetType(int? index, _i28.PillSheetType? pillSheetType,
+          _i3.Setting? setting) =>
+      super.noSuchMethod(Invocation.method(
+          #changePillSheetType, [index, pillSheetType, setting]));
+  @override
+  dynamic removePillSheetType(int? index, _i3.Setting? setting) => super
+      .noSuchMethod(Invocation.method(#removePillSheetType, [index, setting]));
+  @override
+  dynamic setIsOnSequenceAppearance(bool? isOn, _i3.Setting? setting) =>
+      super.noSuchMethod(
+          Invocation.method(#setIsOnSequenceAppearance, [isOn, setting]));
   @override
   _i26.RemoveListener addListener(_i26.Listener<_i7.RecordPageState>? listener,
           {bool? fireImmediately = true}) =>
