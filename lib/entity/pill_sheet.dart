@@ -107,16 +107,4 @@ abstract class PillSheet implements _$PillSheet {
     final end = begin.add(Duration(days: totalCount));
     return DateRange(begin, end).inRange(n);
   }
-
-  static int pillNumberIntoPillSheet({
-    required int sequentialPillNumber,
-    required int pageIndex,
-    required List<PillSheetType> pillSheetTypes,
-  }) {
-    final offset =
-        ((sequentialPillNumber - 1) / pillSheetType.totalCount).floor();
-    final pillNumberIntoPillSheet =
-        (sequentialPillNumber + offset) % (pillSheetType.totalCount + 1);
-    return pillNumberIntoPillSheet;
-  }
 }

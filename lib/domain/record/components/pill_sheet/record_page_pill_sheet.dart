@@ -69,31 +69,43 @@ class RecordPagePillSheet extends StatelessWidget {
           lineIndex * Weekday.values.length;
       countOfPillMarksInLine = diff;
     }
-    return List.generate(Weekday.values.length, (index) {
-      if (index >= countOfPillMarksInLine) {
+    return List.generate(Weekday.values.length, (columnIndex) {
+      if (columnIndex >= countOfPillMarksInLine) {
         return Container(width: PillSheetViewLayout.componentWidth);
       }
-      final number = PillMarkWithNumberLayoutHelper.calcSequentialPillNumber(
-        column: index,
+      final sequentialPillNumber =
+          PillMarkWithNumberLayoutHelper.calcSequentialPillNumber(
+        columnIndex: columnIndex,
         lineIndex: lineIndex,
         pageIndex: pageIndex,
         pillSheetTypes: pillSheetTypes,
       );
+      final pillNumberIntoPillSheet =
+          PillMarkWithNumberLayoutHelper.calcPillNumberIntoPillSheet(
+              columnIndex, lineIndex);
       return Container(
         width: PillSheetViewLayout.componentWidth,
         child: PillMarkWithNumberLayout(
-          textOfPillNumber: _textOfPillNumber(state, number),
+          textOfPillNumber: _textOfPillNumber(state, sequentialPillNumber),
           pillMark: PillMark(
             hasRippleAnimation: store.shouldPillMarkAnimation(
-                sequentialPillNumber: number, pillSheet: pillSheet),
+              sequentialPillNumber: sequentialPillNumber,
+              pillNumberIntoPillSheet: pillNumberIntoPillSheet,
+              pillSheet: pillSheet,
+            ),
             isDone: store.isDone(
-                sequentialPillNumber: number, pillSheet: pillSheet),
+              sequentialPillNumber: sequentialPillNumber,
+              pillNumberIntoPillSheet: pillNumberIntoPillSheet,
+              pillSheet: pillSheet,
+            ),
             pillSheetType: store.markFor(
-                sequentialPillNumber: number, pillSheet: pillSheet),
+              sequentialPillNumber: sequentialPillNumber,
+              pillSheet: pillSheet,
+            ),
           ),
           onTap: () {
             analytics.logEvent(name: "pill_mark_tapped", parameters: {
-              "number": number,
+              "number": sequentialPillNumber,
               "last_taken_pill_number": pillSheet.lastTakenPillNumber,
               "today_pill_number": pillSheet.todayPillNumber,
             });
@@ -101,7 +113,10 @@ class RecordPagePillSheet extends StatelessWidget {
             effectAfterTaken(
               context: context,
               taken: store.takenWithPillNumber(
-                  sequentialPillNumber: number, pillSheet: pillSheet),
+                sequentialPillNumber: sequentialPillNumber,
+                pillNumberIntoPillSheet: pillNumberIntoPillSheet,
+                pillSheet: pillSheet,
+              ),
               store: store,
             );
           },

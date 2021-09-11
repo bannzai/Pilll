@@ -231,12 +231,9 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
 
   Future<void>? takenWithPillNumber({
     required int sequentialPillNumber,
+    required int pillNumberIntoPillSheet,
     required PillSheet pillSheet,
   }) async {
-    final pillNumberIntoPillSheet = PillSheet.pillNumberIntoPillSheet(
-        sequentialPillNumber: sequentialPillNumber,
-        pillSheetTypes: pillSheet.pillSheetType);
-
     final activedPillSheet = state.pillSheetGroup?.activedPillSheet;
     if (activedPillSheet == null) {
       return null;
@@ -318,11 +315,9 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
 
   bool isDone({
     required int sequentialPillNumber,
+    required int pillNumberIntoPillSheet,
     required PillSheet pillSheet,
   }) {
-    final pillNumberIntoPillSheet = PillSheet.pillNumberIntoPillSheet(
-        sequentialPillNumber: sequentialPillNumber,
-        pillSheetType: pillSheet.pillSheetType);
     final activedPillSheet = state.pillSheetGroup?.activedPillSheet;
     if (activedPillSheet == null) {
       throw FormatException("pill sheet not found");
@@ -367,11 +362,9 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
 
   bool shouldPillMarkAnimation({
     required int sequentialPillNumber,
+    required int pillNumberIntoPillSheet,
     required PillSheet pillSheet,
   }) {
-    final pillNumberIntoPillSheet = PillSheet.pillNumberIntoPillSheet(
-        sequentialPillNumber: sequentialPillNumber,
-        pillSheetType: pillSheet.pillSheetType);
     final activedPillSheet = state.pillSheetGroup?.activedPillSheet;
     if (activedPillSheet == null) {
       throw FormatException("pill sheet not found");

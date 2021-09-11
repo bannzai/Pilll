@@ -6,7 +6,6 @@ import 'package:pilll/components/organisms/pill_mark/pill_mark_line.dart';
 import 'package:pilll/components/organisms/pill_mark/pill_mark_with_number_layout.dart';
 import 'package:pilll/components/organisms/pill_sheet/pill_sheet_view_layout.dart';
 import 'package:pilll/entity/pill_mark_type.dart';
-import 'package:pilll/entity/pill_sheet.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/entity/weekday.dart';
 
@@ -57,7 +56,7 @@ class SettingPillSheetView extends StatelessWidget {
       }
       final sequentialPillNumber =
           PillMarkWithNumberLayoutHelper.calcSequentialPillNumber(
-        column: index,
+        columnIndex: index,
         lineIndex: lineIndex,
         pageIndex: pageIndex,
         pillSheetTypes: pillSheetTypes,
