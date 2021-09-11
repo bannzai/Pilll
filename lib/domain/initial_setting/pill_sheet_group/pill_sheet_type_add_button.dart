@@ -1,14 +1,14 @@
 import 'package:pilll/domain/initial_setting/pill_sheet_group/pill_sheet_group_select_pill_sheet_type_page_template.dart';
 
-import 'package:pilll/domain/initial_setting/initial_setting_store.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:pilll/entity/pill_sheet_type.dart';
 
 class PillSheetTypeAddButton extends StatelessWidget {
-  final InitialSettingStateStore store;
-  const PillSheetTypeAddButton({Key? key, required this.store})
+  final Function(PillSheetType) onAdd;
+  const PillSheetTypeAddButton({Key? key, required this.onAdd})
       : super(key: key);
 
   @override
@@ -16,11 +16,10 @@ class PillSheetTypeAddButton extends StatelessWidget {
     return GestureDetector(
       onTap: () {
         showSettingPillSheetGroupSelectPillSheetTypePage(
-            context: context,
-            pillSheetType: null,
-            onSelect: (pillSheetType) {
-              store.addPillSheetType(pillSheetType);
-            });
+          context: context,
+          pillSheetType: null,
+          onSelect: (pillSheetType) => onAdd(pillSheetType),
+        );
       },
       child: Container(
         width: double.infinity,
