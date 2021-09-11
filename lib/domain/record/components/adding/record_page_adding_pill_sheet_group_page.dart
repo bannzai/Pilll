@@ -12,25 +12,24 @@ import 'package:pilll/domain/record/record_page_store.dart';
 import 'package:pilll/entity/setting.dart';
 
 class RecordPageAddingPillSheetGroupPage extends HookWidget {
-  final Setting setting;
-
-  RecordPageAddingPillSheetGroupPage({
-    required this.setting,
-  });
-
   @override
   Widget build(BuildContext context) {
     final store = useProvider(recordPageStoreProvider);
+    final state = useProvider(recordPageStoreProvider.state);
+    final setting = state.setting;
+    if (setting == null) {
+      throw FormatException("ピルシートグループの設定が読み込めませんでした");
+    }
 
     return Scaffold(
       backgroundColor: PilllColors.background,
       appBar: AppBar(
         leading: IconButton(
-          icon: Icon(Icons.arrow_back, color: Colors.black),
+          icon: Icon(Icons.close, color: Colors.black),
           onPressed: () => Navigator.of(context).pop(),
         ),
         title: Text(
-          "2/5",
+          "ピルシート追加",
           style: TextStyle(color: TextColor.black),
         ),
         backgroundColor: PilllColors.white,
@@ -58,9 +57,10 @@ class RecordPageAddingPillSheetGroupPage extends HookWidget {
                   child: Container(
                     color: PilllColors.background,
                     child: PrimaryButton(
-                      text: "次へ",
+                      text: "追加",
                       onPressed: () async {
-                        analytics.logEvent(name: "next_pill_sheet_count");
+                        analytics.logEvent(
+                            name: "pressed_add_pill_sheet_group");
                         await store.register(setting);
                         Navigator.of(context).pop();
                       },
@@ -73,6 +73,17 @@ class RecordPageAddingPillSheetGroupPage extends HookWidget {
           ),
         ),
       ),
+    );
+  }
+}
+
+extension RecordPageAddingPillSheetGroupPageRoute
+    on RecordPageAddingPillSheetGroupPage {
+  static Route<dynamic> route() {
+    return MaterialPageRoute(
+      fullscreenDialog: true,
+      settings: RouteSettings(name: "RecordPageAddingPillSheetGroupPage"),
+      builder: (_) => RecordPageAddingPillSheetGroupPage(),
     );
   }
 }
