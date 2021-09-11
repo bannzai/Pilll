@@ -8,6 +8,7 @@ import 'package:pilll/entity/pill_mark_type.dart';
 import 'package:pilll/entity/pill_sheet.dart';
 import 'package:pilll/entity/pill_sheet_group.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
+import 'package:pilll/entity/setting.dart';
 import 'package:pilll/service/auth.dart';
 import 'package:pilll/service/pill_sheet.dart';
 import 'package:pilll/domain/record/record_page_state.dart';
@@ -147,14 +148,14 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
     super.dispose();
   }
 
-  Future<void> register(List<PillSheetType> pillSheetTypes) async {
+  Future<void> register(Setting setting) async {
     final batch = _batchFactory.batch();
 
     final Map<String, PillSheet> idAndPillSheet = {};
     final n = now();
 
     var i = 0;
-    pillSheetTypes.forEach((pillSheetType) {
+    setting.pillSheetTypes.forEach((pillSheetType) {
       final pillSheet = PillSheet(
         typeInfo: pillSheetType.typeInfo,
         beginingDate: n.add(
@@ -184,6 +185,8 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
     final pillSheetGroup =
         PillSheetGroup(pillSheetIDs: pillSheetIDs, pillSheets: pillSheets);
     _pillSheetGroupService.register(batch, pillSheetGroup);
+
+    _settingService.updateWithBatch(batch, setting);
 
     return batch.commit();
   }
@@ -397,6 +400,33 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
     final sharedPreferences = await SharedPreferences.getInstance();
     sharedPreferences.setBool(BoolKey.migrateFrom132IsShown, true);
     state = state.copyWith(shouldShowMigrateInfo: false);
+  }
+
+  addPillSheetType(PillSheetType pillSheetType, Setting setting) {
+    final updatedSetting = setting.copyWith(
+        pillSheetTypes: setting.pillSheetTypes..add(pillSheetType));
+    state = state.copyWith(setting: updatedSetting);
+  }
+
+  changePillSheetType(int index, PillSheetType pillSheetType, Setting setting) {
+    final copied = [...setting.pillSheetTypes];
+    copied[index] = pillSheetType;
+
+    final updatedSetting = setting.copyWith(pillSheetTypes: copied);
+    state = state.copyWith(setting: updatedSetting);
+  }
+
+  removePillSheetType(int index, Setting setting) {
+    final copied = [...setting.pillSheetTypes];
+    copied.removeAt(index);
+
+    final updatedSetting = setting.copyWith(pillSheetTypes: copied);
+    state = state.copyWith(setting: updatedSetting);
+  }
+
+  setIsOnSequenceAppearance(bool isOn, Setting setting) {
+    final updatedSetting = setting.copyWith(isOnSequenceAppearance: isOn);
+    state = state.copyWith(setting: updatedSetting);
   }
 }
 
