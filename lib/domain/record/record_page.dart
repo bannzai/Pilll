@@ -1,4 +1,3 @@
-import 'package:pilll/analytics.dart';
 import 'package:pilll/components/molecules/indicator.dart';
 import 'package:pilll/domain/initial_setting/migrate_info.dart';
 import 'package:pilll/domain/premium_trial/premium_trial_complete_modal.dart';
@@ -8,13 +7,11 @@ import 'package:pilll/domain/record/components/notification_bar/notification_bar
 import 'package:pilll/domain/record/components/pill_sheet/record_page_pill_sheet_list.dart';
 import 'package:pilll/domain/record/record_page_state.dart';
 import 'package:pilll/domain/record/record_page_store.dart';
-import 'package:pilll/domain/record/record_taken_information.dart';
+import 'package:pilll/domain/record/components/header/record_taken_information.dart';
 import 'package:pilll/domain/premium_trial/premium_trial_modal.dart';
-import 'package:pilll/entity/pill_sheet.dart';
 import 'package:pilll/entity/setting.dart';
 import 'package:pilll/error/universal_error_page.dart';
 import 'package:pilll/components/atoms/color.dart';
-import 'package:pilll/util/toolbar/picker_toolbar.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
@@ -59,12 +56,7 @@ class RecordPage extends HookWidget {
           title: RecordTakenInformation(
             today: DateTime.now(),
             pillSheetGroup: state.pillSheetGroup,
-            onPressed: () {
-              analytics.logEvent(name: "tapped_record_information_header");
-              if (currentPillSheet != null) {
-                _showBeginDatePicker(context, currentPillSheet, store);
-              }
-            },
+            store: store,
           ),
         ),
         body: Stack(
@@ -112,50 +104,6 @@ class RecordPage extends HookWidget {
         setting: settingEntity,
       );
     return Container();
-  }
-
-  _showBeginDatePicker(
-      BuildContext context, PillSheet currentPillSheet, RecordPageStore store) {
-    showModalBottomSheet(
-      context: context,
-      builder: (BuildContext context) {
-        var selectedTodayPillNumber = currentPillSheet.todayPillNumber;
-        return Column(
-          mainAxisAlignment: MainAxisAlignment.end,
-          mainAxisSize: MainAxisSize.min,
-          children: <Widget>[
-            PickerToolbar(
-              done: (() {
-                store.modifyBeginingDate(selectedTodayPillNumber);
-                Navigator.pop(context);
-              }),
-              cancel: (() {
-                Navigator.pop(context);
-              }),
-            ),
-            Container(
-              height: 200,
-              child: GestureDetector(
-                onTap: () {
-                  Navigator.pop(context);
-                },
-                child: CupertinoPicker(
-                  itemExtent: 40,
-                  children: List.generate(currentPillSheet.typeInfo.totalCount,
-                      (index) => Text("${index + 1}")),
-                  onSelectedItemChanged: (index) {
-                    selectedTodayPillNumber = index + 1;
-                  },
-                  scrollController: FixedExtentScrollController(
-                    initialItem: selectedTodayPillNumber - 1,
-                  ),
-                ),
-              ),
-            ),
-          ],
-        );
-      },
-    );
   }
 
   Future<void> _showMigrateInfoDialog(

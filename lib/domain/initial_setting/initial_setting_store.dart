@@ -1,5 +1,4 @@
 import 'dart:async';
-import 'dart:math';
 
 import 'package:pilll/analytics.dart';
 import 'package:pilll/database/batch.dart';
@@ -16,7 +15,6 @@ import 'package:pilll/service/pill_sheet_group.dart';
 import 'package:pilll/service/pill_sheet_modified_history.dart';
 import 'package:pilll/service/setting.dart';
 import 'package:pilll/service/user.dart';
-import 'package:pilll/util/datetime/day.dart';
 import 'package:purchases_flutter/purchases_flutter.dart';
 import 'package:riverpod/riverpod.dart';
 
