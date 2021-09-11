@@ -21,7 +21,6 @@ class InitialSettingMenstruationPage extends HookWidget {
     return SettingMenstruationPageTemplate(
       title: "4/5",
       isOnSequenceAppearance: state.isOnSequenceAppearance,
-      pillSheetPageCount: state.pillSheetTypes.length,
       pillSheetList: SettingMenstruationPillSheetList(
         pillSheetTypes: state.pillSheetTypes,
         selectedPillNumber: state.fromMenstruation,
@@ -60,14 +59,14 @@ class InitialSettingMenstruationPage extends HookWidget {
           analytics.logEvent(
               name: "from_menstruation_initial_setting",
               parameters: {"number": number});
-          store.setFromMenstruation(state.fromMenstruation);
+          store.setFromMenstruation(number);
         },
         durationMenstruation: state.durationMenstruation,
         durationMenstructionDidDecide: (number) {
           analytics.logEvent(
               name: "duration_menstruation_initial_setting",
               parameters: {"number": number});
-          store.setFromMenstruation(number);
+          store.setDurationMenstruation(number);
         },
         retrieveFocusedPillSheetType: () {
           return state.pillSheetTypes[currentPage];
