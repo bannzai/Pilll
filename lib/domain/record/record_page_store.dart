@@ -339,13 +339,9 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
 
   PillMarkType markFor({
     required int sequentialPillNumber,
+    required int pillNumberIntoPillSheet,
     required PillSheet pillSheet,
   }) {
-    final offset =
-        ((sequentialPillNumber - 1) / pillSheet.pillSheetType.totalCount)
-            .floor();
-    final pillNumberIntoPillSheet = (sequentialPillNumber + offset) %
-        (pillSheet.pillSheetType.totalCount + 1);
     if (pillNumberIntoPillSheet > pillSheet.typeInfo.dosingPeriod) {
       return pillSheet.pillSheetType == PillSheetType.pillsheet_21
           ? PillMarkType.rest
