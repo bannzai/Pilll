@@ -58,7 +58,7 @@ class RecordPage extends HookWidget {
           toolbarHeight: RecordTakenInformationConst.height,
           title: RecordTakenInformation(
             today: DateTime.now(),
-            state: state,
+            pillSheetGroup: state.pillSheetGroup,
             onPressed: () {
               analytics.logEvent(name: "tapped_record_information_header");
               if (currentPillSheet != null) {
