@@ -477,10 +477,13 @@ class MockRecordPageStore extends _i1.Mock implements _i25.RecordPageStore {
           returnValue: false) as bool);
   @override
   _i27.PillMarkType markFor(
-          {int? sequentialPillNumber, _i2.PillSheet? pillSheet}) =>
+          {int? sequentialPillNumber,
+          int? pillNumberIntoPillSheet,
+          _i2.PillSheet? pillSheet}) =>
       (super.noSuchMethod(
           Invocation.method(#markFor, [], {
             #sequentialPillNumber: sequentialPillNumber,
+            #pillNumberIntoPillSheet: pillNumberIntoPillSheet,
             #pillSheet: pillSheet
           }),
           returnValue: _i27.PillMarkType.normal) as _i27.PillMarkType);
