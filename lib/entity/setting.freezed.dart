@@ -191,6 +191,199 @@ abstract class _ReminderTime extends ReminderTime {
       throw _privateConstructorUsedError;
 }
 
+MenstruationSetting _$MenstruationSettingFromJson(Map<String, dynamic> json) {
+  return _MenstruationSetting.fromJson(json);
+}
+
+/// @nodoc
+class _$MenstruationSettingTearOff {
+  const _$MenstruationSettingTearOff();
+
+  _MenstruationSetting call(
+      {required int pillNumberForFromMenstruation,
+      required int durationMenstruation}) {
+    return _MenstruationSetting(
+      pillNumberForFromMenstruation: pillNumberForFromMenstruation,
+      durationMenstruation: durationMenstruation,
+    );
+  }
+
+  MenstruationSetting fromJson(Map<String, Object> json) {
+    return MenstruationSetting.fromJson(json);
+  }
+}
+
+/// @nodoc
+const $MenstruationSetting = _$MenstruationSettingTearOff();
+
+/// @nodoc
+mixin _$MenstruationSetting {
+  int get pillNumberForFromMenstruation => throw _privateConstructorUsedError;
+  int get durationMenstruation => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $MenstruationSettingCopyWith<MenstruationSetting> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $MenstruationSettingCopyWith<$Res> {
+  factory $MenstruationSettingCopyWith(
+          MenstruationSetting value, $Res Function(MenstruationSetting) then) =
+      _$MenstruationSettingCopyWithImpl<$Res>;
+  $Res call({int pillNumberForFromMenstruation, int durationMenstruation});
+}
+
+/// @nodoc
+class _$MenstruationSettingCopyWithImpl<$Res>
+    implements $MenstruationSettingCopyWith<$Res> {
+  _$MenstruationSettingCopyWithImpl(this._value, this._then);
+
+  final MenstruationSetting _value;
+  // ignore: unused_field
+  final $Res Function(MenstruationSetting) _then;
+
+  @override
+  $Res call({
+    Object? pillNumberForFromMenstruation = freezed,
+    Object? durationMenstruation = freezed,
+  }) {
+    return _then(_value.copyWith(
+      pillNumberForFromMenstruation: pillNumberForFromMenstruation == freezed
+          ? _value.pillNumberForFromMenstruation
+          : pillNumberForFromMenstruation // ignore: cast_nullable_to_non_nullable
+              as int,
+      durationMenstruation: durationMenstruation == freezed
+          ? _value.durationMenstruation
+          : durationMenstruation // ignore: cast_nullable_to_non_nullable
+              as int,
+    ));
+  }
+}
+
+/// @nodoc
+abstract class _$MenstruationSettingCopyWith<$Res>
+    implements $MenstruationSettingCopyWith<$Res> {
+  factory _$MenstruationSettingCopyWith(_MenstruationSetting value,
+          $Res Function(_MenstruationSetting) then) =
+      __$MenstruationSettingCopyWithImpl<$Res>;
+  @override
+  $Res call({int pillNumberForFromMenstruation, int durationMenstruation});
+}
+
+/// @nodoc
+class __$MenstruationSettingCopyWithImpl<$Res>
+    extends _$MenstruationSettingCopyWithImpl<$Res>
+    implements _$MenstruationSettingCopyWith<$Res> {
+  __$MenstruationSettingCopyWithImpl(
+      _MenstruationSetting _value, $Res Function(_MenstruationSetting) _then)
+      : super(_value, (v) => _then(v as _MenstruationSetting));
+
+  @override
+  _MenstruationSetting get _value => super._value as _MenstruationSetting;
+
+  @override
+  $Res call({
+    Object? pillNumberForFromMenstruation = freezed,
+    Object? durationMenstruation = freezed,
+  }) {
+    return _then(_MenstruationSetting(
+      pillNumberForFromMenstruation: pillNumberForFromMenstruation == freezed
+          ? _value.pillNumberForFromMenstruation
+          : pillNumberForFromMenstruation // ignore: cast_nullable_to_non_nullable
+              as int,
+      durationMenstruation: durationMenstruation == freezed
+          ? _value.durationMenstruation
+          : durationMenstruation // ignore: cast_nullable_to_non_nullable
+              as int,
+    ));
+  }
+}
+
+/// @nodoc
+
+@JsonSerializable(explicitToJson: true)
+class _$_MenstruationSetting
+    with DiagnosticableTreeMixin
+    implements _MenstruationSetting {
+  _$_MenstruationSetting(
+      {required this.pillNumberForFromMenstruation,
+      required this.durationMenstruation});
+
+  factory _$_MenstruationSetting.fromJson(Map<String, dynamic> json) =>
+      _$_$_MenstruationSettingFromJson(json);
+
+  @override
+  final int pillNumberForFromMenstruation;
+  @override
+  final int durationMenstruation;
+
+  @override
+  String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
+    return 'MenstruationSetting(pillNumberForFromMenstruation: $pillNumberForFromMenstruation, durationMenstruation: $durationMenstruation)';
+  }
+
+  @override
+  void debugFillProperties(DiagnosticPropertiesBuilder properties) {
+    super.debugFillProperties(properties);
+    properties
+      ..add(DiagnosticsProperty('type', 'MenstruationSetting'))
+      ..add(DiagnosticsProperty(
+          'pillNumberForFromMenstruation', pillNumberForFromMenstruation))
+      ..add(DiagnosticsProperty('durationMenstruation', durationMenstruation));
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other is _MenstruationSetting &&
+            (identical(other.pillNumberForFromMenstruation,
+                    pillNumberForFromMenstruation) ||
+                const DeepCollectionEquality().equals(
+                    other.pillNumberForFromMenstruation,
+                    pillNumberForFromMenstruation)) &&
+            (identical(other.durationMenstruation, durationMenstruation) ||
+                const DeepCollectionEquality()
+                    .equals(other.durationMenstruation, durationMenstruation)));
+  }
+
+  @override
+  int get hashCode =>
+      runtimeType.hashCode ^
+      const DeepCollectionEquality().hash(pillNumberForFromMenstruation) ^
+      const DeepCollectionEquality().hash(durationMenstruation);
+
+  @JsonKey(ignore: true)
+  @override
+  _$MenstruationSettingCopyWith<_MenstruationSetting> get copyWith =>
+      __$MenstruationSettingCopyWithImpl<_MenstruationSetting>(
+          this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$_$_MenstruationSettingToJson(this);
+  }
+}
+
+abstract class _MenstruationSetting implements MenstruationSetting {
+  factory _MenstruationSetting(
+      {required int pillNumberForFromMenstruation,
+      required int durationMenstruation}) = _$_MenstruationSetting;
+
+  factory _MenstruationSetting.fromJson(Map<String, dynamic> json) =
+      _$_MenstruationSetting.fromJson;
+
+  @override
+  int get pillNumberForFromMenstruation => throw _privateConstructorUsedError;
+  @override
+  int get durationMenstruation => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(ignore: true)
+  _$MenstruationSettingCopyWith<_MenstruationSetting> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
 Setting _$SettingFromJson(Map<String, dynamic> json) {
   return _Setting.fromJson(json);
 }
@@ -202,8 +395,9 @@ class _$SettingTearOff {
   _Setting call(
       {String? pillSheetTypeRawPath,
       List<PillSheetType> pillSheetTypes = const [],
-      required int pillNumberForFromMenstruation,
-      required int durationMenstruation,
+      required List<MenstruationSetting> menstruations,
+      int? pillNumberForFromMenstruation,
+      int? durationMenstruation,
       List<ReminderTime> reminderTimes = const [],
       @JsonSerializable(explicitToJson: true) required bool isOnReminder,
       bool isOnNotifyInNotTakenDuration = true,
@@ -214,6 +408,7 @@ class _$SettingTearOff {
     return _Setting(
       pillSheetTypeRawPath: pillSheetTypeRawPath,
       pillSheetTypes: pillSheetTypes,
+      menstruations: menstruations,
       pillNumberForFromMenstruation: pillNumberForFromMenstruation,
       durationMenstruation: durationMenstruation,
       reminderTimes: reminderTimes,
@@ -237,8 +432,10 @@ const $Setting = _$SettingTearOff();
 mixin _$Setting {
   String? get pillSheetTypeRawPath => throw _privateConstructorUsedError;
   List<PillSheetType> get pillSheetTypes => throw _privateConstructorUsedError;
-  int get pillNumberForFromMenstruation => throw _privateConstructorUsedError;
-  int get durationMenstruation => throw _privateConstructorUsedError;
+  List<MenstruationSetting> get menstruations =>
+      throw _privateConstructorUsedError;
+  int? get pillNumberForFromMenstruation => throw _privateConstructorUsedError;
+  int? get durationMenstruation => throw _privateConstructorUsedError;
   List<ReminderTime> get reminderTimes => throw _privateConstructorUsedError;
   @JsonSerializable(explicitToJson: true)
   bool get isOnReminder => throw _privateConstructorUsedError;
@@ -260,8 +457,9 @@ abstract class $SettingCopyWith<$Res> {
   $Res call(
       {String? pillSheetTypeRawPath,
       List<PillSheetType> pillSheetTypes,
-      int pillNumberForFromMenstruation,
-      int durationMenstruation,
+      List<MenstruationSetting> menstruations,
+      int? pillNumberForFromMenstruation,
+      int? durationMenstruation,
       List<ReminderTime> reminderTimes,
       @JsonSerializable(explicitToJson: true) bool isOnReminder,
       bool isOnNotifyInNotTakenDuration,
@@ -282,6 +480,7 @@ class _$SettingCopyWithImpl<$Res> implements $SettingCopyWith<$Res> {
   $Res call({
     Object? pillSheetTypeRawPath = freezed,
     Object? pillSheetTypes = freezed,
+    Object? menstruations = freezed,
     Object? pillNumberForFromMenstruation = freezed,
     Object? durationMenstruation = freezed,
     Object? reminderTimes = freezed,
@@ -300,14 +499,18 @@ class _$SettingCopyWithImpl<$Res> implements $SettingCopyWith<$Res> {
           ? _value.pillSheetTypes
           : pillSheetTypes // ignore: cast_nullable_to_non_nullable
               as List<PillSheetType>,
+      menstruations: menstruations == freezed
+          ? _value.menstruations
+          : menstruations // ignore: cast_nullable_to_non_nullable
+              as List<MenstruationSetting>,
       pillNumberForFromMenstruation: pillNumberForFromMenstruation == freezed
           ? _value.pillNumberForFromMenstruation
           : pillNumberForFromMenstruation // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
       durationMenstruation: durationMenstruation == freezed
           ? _value.durationMenstruation
           : durationMenstruation // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
       reminderTimes: reminderTimes == freezed
           ? _value.reminderTimes
           : reminderTimes // ignore: cast_nullable_to_non_nullable
@@ -344,8 +547,9 @@ abstract class _$SettingCopyWith<$Res> implements $SettingCopyWith<$Res> {
   $Res call(
       {String? pillSheetTypeRawPath,
       List<PillSheetType> pillSheetTypes,
-      int pillNumberForFromMenstruation,
-      int durationMenstruation,
+      List<MenstruationSetting> menstruations,
+      int? pillNumberForFromMenstruation,
+      int? durationMenstruation,
       List<ReminderTime> reminderTimes,
       @JsonSerializable(explicitToJson: true) bool isOnReminder,
       bool isOnNotifyInNotTakenDuration,
@@ -367,6 +571,7 @@ class __$SettingCopyWithImpl<$Res> extends _$SettingCopyWithImpl<$Res>
   $Res call({
     Object? pillSheetTypeRawPath = freezed,
     Object? pillSheetTypes = freezed,
+    Object? menstruations = freezed,
     Object? pillNumberForFromMenstruation = freezed,
     Object? durationMenstruation = freezed,
     Object? reminderTimes = freezed,
@@ -385,14 +590,18 @@ class __$SettingCopyWithImpl<$Res> extends _$SettingCopyWithImpl<$Res>
           ? _value.pillSheetTypes
           : pillSheetTypes // ignore: cast_nullable_to_non_nullable
               as List<PillSheetType>,
+      menstruations: menstruations == freezed
+          ? _value.menstruations
+          : menstruations // ignore: cast_nullable_to_non_nullable
+              as List<MenstruationSetting>,
       pillNumberForFromMenstruation: pillNumberForFromMenstruation == freezed
           ? _value.pillNumberForFromMenstruation
           : pillNumberForFromMenstruation // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
       durationMenstruation: durationMenstruation == freezed
           ? _value.durationMenstruation
           : durationMenstruation // ignore: cast_nullable_to_non_nullable
-              as int,
+              as int?,
       reminderTimes: reminderTimes == freezed
           ? _value.reminderTimes
           : reminderTimes // ignore: cast_nullable_to_non_nullable
@@ -427,8 +636,9 @@ class _$_Setting extends _Setting with DiagnosticableTreeMixin {
   _$_Setting(
       {this.pillSheetTypeRawPath,
       this.pillSheetTypes = const [],
-      required this.pillNumberForFromMenstruation,
-      required this.durationMenstruation,
+      required this.menstruations,
+      this.pillNumberForFromMenstruation,
+      this.durationMenstruation,
       this.reminderTimes = const [],
       @JsonSerializable(explicitToJson: true) required this.isOnReminder,
       this.isOnNotifyInNotTakenDuration = true,
@@ -446,9 +656,11 @@ class _$_Setting extends _Setting with DiagnosticableTreeMixin {
   @override
   final List<PillSheetType> pillSheetTypes;
   @override
-  final int pillNumberForFromMenstruation;
+  final List<MenstruationSetting> menstruations;
   @override
-  final int durationMenstruation;
+  final int? pillNumberForFromMenstruation;
+  @override
+  final int? durationMenstruation;
   @JsonKey(defaultValue: const [])
   @override
   final List<ReminderTime> reminderTimes;
@@ -470,7 +682,7 @@ class _$_Setting extends _Setting with DiagnosticableTreeMixin {
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'Setting(pillSheetTypeRawPath: $pillSheetTypeRawPath, pillSheetTypes: $pillSheetTypes, pillNumberForFromMenstruation: $pillNumberForFromMenstruation, durationMenstruation: $durationMenstruation, reminderTimes: $reminderTimes, isOnReminder: $isOnReminder, isOnNotifyInNotTakenDuration: $isOnNotifyInNotTakenDuration, pillSheetAppearanceMode: $pillSheetAppearanceMode, isAutomaticallyCreatePillSheet: $isAutomaticallyCreatePillSheet, isOnSequenceAppearance: $isOnSequenceAppearance)';
+    return 'Setting(pillSheetTypeRawPath: $pillSheetTypeRawPath, pillSheetTypes: $pillSheetTypes, menstruations: $menstruations, pillNumberForFromMenstruation: $pillNumberForFromMenstruation, durationMenstruation: $durationMenstruation, reminderTimes: $reminderTimes, isOnReminder: $isOnReminder, isOnNotifyInNotTakenDuration: $isOnNotifyInNotTakenDuration, pillSheetAppearanceMode: $pillSheetAppearanceMode, isAutomaticallyCreatePillSheet: $isAutomaticallyCreatePillSheet, isOnSequenceAppearance: $isOnSequenceAppearance)';
   }
 
   @override
@@ -480,6 +692,7 @@ class _$_Setting extends _Setting with DiagnosticableTreeMixin {
       ..add(DiagnosticsProperty('type', 'Setting'))
       ..add(DiagnosticsProperty('pillSheetTypeRawPath', pillSheetTypeRawPath))
       ..add(DiagnosticsProperty('pillSheetTypes', pillSheetTypes))
+      ..add(DiagnosticsProperty('menstruations', menstruations))
       ..add(DiagnosticsProperty(
           'pillNumberForFromMenstruation', pillNumberForFromMenstruation))
       ..add(DiagnosticsProperty('durationMenstruation', durationMenstruation))
@@ -505,8 +718,10 @@ class _$_Setting extends _Setting with DiagnosticableTreeMixin {
             (identical(other.pillSheetTypes, pillSheetTypes) ||
                 const DeepCollectionEquality()
                     .equals(other.pillSheetTypes, pillSheetTypes)) &&
-            (identical(other.pillNumberForFromMenstruation,
-                    pillNumberForFromMenstruation) ||
+            (identical(other.menstruations, menstruations) ||
+                const DeepCollectionEquality()
+                    .equals(other.menstruations, menstruations)) &&
+            (identical(other.pillNumberForFromMenstruation, pillNumberForFromMenstruation) ||
                 const DeepCollectionEquality().equals(
                     other.pillNumberForFromMenstruation,
                     pillNumberForFromMenstruation)) &&
@@ -523,7 +738,8 @@ class _$_Setting extends _Setting with DiagnosticableTreeMixin {
                 const DeepCollectionEquality().equals(
                     other.isOnNotifyInNotTakenDuration,
                     isOnNotifyInNotTakenDuration)) &&
-            (identical(other.pillSheetAppearanceMode, pillSheetAppearanceMode) ||
+            (identical(
+                    other.pillSheetAppearanceMode, pillSheetAppearanceMode) ||
                 const DeepCollectionEquality().equals(
                     other.pillSheetAppearanceMode, pillSheetAppearanceMode)) &&
             (identical(other.isAutomaticallyCreatePillSheet,
@@ -532,8 +748,8 @@ class _$_Setting extends _Setting with DiagnosticableTreeMixin {
                     other.isAutomaticallyCreatePillSheet,
                     isAutomaticallyCreatePillSheet)) &&
             (identical(other.isOnSequenceAppearance, isOnSequenceAppearance) ||
-                const DeepCollectionEquality()
-                    .equals(other.isOnSequenceAppearance, isOnSequenceAppearance)));
+                const DeepCollectionEquality().equals(
+                    other.isOnSequenceAppearance, isOnSequenceAppearance)));
   }
 
   @override
@@ -541,6 +757,7 @@ class _$_Setting extends _Setting with DiagnosticableTreeMixin {
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(pillSheetTypeRawPath) ^
       const DeepCollectionEquality().hash(pillSheetTypes) ^
+      const DeepCollectionEquality().hash(menstruations) ^
       const DeepCollectionEquality().hash(pillNumberForFromMenstruation) ^
       const DeepCollectionEquality().hash(durationMenstruation) ^
       const DeepCollectionEquality().hash(reminderTimes) ^
@@ -565,8 +782,9 @@ abstract class _Setting extends Setting {
   factory _Setting(
       {String? pillSheetTypeRawPath,
       List<PillSheetType> pillSheetTypes,
-      required int pillNumberForFromMenstruation,
-      required int durationMenstruation,
+      required List<MenstruationSetting> menstruations,
+      int? pillNumberForFromMenstruation,
+      int? durationMenstruation,
       List<ReminderTime> reminderTimes,
       @JsonSerializable(explicitToJson: true) required bool isOnReminder,
       bool isOnNotifyInNotTakenDuration,
@@ -582,9 +800,12 @@ abstract class _Setting extends Setting {
   @override
   List<PillSheetType> get pillSheetTypes => throw _privateConstructorUsedError;
   @override
-  int get pillNumberForFromMenstruation => throw _privateConstructorUsedError;
+  List<MenstruationSetting> get menstruations =>
+      throw _privateConstructorUsedError;
   @override
-  int get durationMenstruation => throw _privateConstructorUsedError;
+  int? get pillNumberForFromMenstruation => throw _privateConstructorUsedError;
+  @override
+  int? get durationMenstruation => throw _privateConstructorUsedError;
   @override
   List<ReminderTime> get reminderTimes => throw _privateConstructorUsedError;
   @override
