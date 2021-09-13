@@ -51,7 +51,6 @@ class SettingMenstruationPillSheetList extends HookWidget {
                     padding: EdgeInsets.symmetric(horizontal: 10),
                     child: SettingPillSheetView(
                       pageIndex: index,
-                      isOnSequenceAppearance: isOnSequenceAppearance,
                       pillSheetTypes: pillSheetTypes,
                       selectedPillNumber: selectedPillNumber,
                       markSelected: (number) => markSelected(number),
