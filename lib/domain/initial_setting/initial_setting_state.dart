@@ -1,4 +1,3 @@
-import 'package:pilll/domain/settings/components/rows/today_pill_number.dart';
 import 'package:pilll/util/datetime/day.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:pilll/entity/pill_sheet.dart';
