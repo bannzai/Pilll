@@ -51,9 +51,6 @@ class InitialSettingPillSheetGroupPage extends HookWidget {
                       onChange: (index, pillSheetType) =>
                           store.changePillSheetType(index, pillSheetType),
                       onDelete: (index) => store.removePillSheetType(index),
-                      isOnSequenceAppearance: state.isOnSequenceAppearance,
-                      setIsOnSequenceAppearance: (isOn) =>
-                          store.setIsOnSequenceAppearance(isOn),
                     ),
                   ],
                 ),
