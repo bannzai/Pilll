@@ -11,14 +11,12 @@ class SettingPillSheetGroup extends StatelessWidget {
     required this.onAdd,
     required this.onChange,
     required this.onDelete,
-    required this.setIsOnSequenceAppearance,
   }) : super(key: key);
 
   final List<PillSheetType> pillSheetTypes;
   final Function(PillSheetType) onAdd;
   final Function(int, PillSheetType) onChange;
   final Function(int) onDelete;
-  final Function(bool) setIsOnSequenceAppearance;
 
   @override
   Widget build(BuildContext context) {

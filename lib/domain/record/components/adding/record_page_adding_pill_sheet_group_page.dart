@@ -45,9 +45,6 @@ class RecordPageAddingPillSheetGroupPage extends HookWidget {
                 onChange: (index, pillSheetType) =>
                     store.changePillSheetType(index, pillSheetType, setting),
                 onDelete: (index) => store.removePillSheetType(index, setting),
-                isOnSequenceAppearance: setting.isOnSequenceAppearance,
-                setIsOnSequenceAppearance: (isOn) =>
-                    store.setIsOnSequenceAppearance(isOn, setting),
               ),
               Align(
                 alignment: Alignment.bottomCenter,

@@ -42,7 +42,6 @@ class SelectTodayPillNumberPillSheetList extends HookWidget {
                     padding: EdgeInsets.symmetric(horizontal: 10),
                     child: SettingPillSheetView(
                       pageIndex: index,
-                      isOnSequenceAppearance: state.isOnSequenceAppearance,
                       pillSheetTypes: state.pillSheetTypes,
                       selectedPillNumber: state.todayPillNumber,
                       markSelected: (number) {
