@@ -44,7 +44,7 @@ class SelectTodayPillNumberPillSheetList extends HookWidget {
                       pageIndex: index,
                       pillSheetTypes: state.pillSheetTypes,
                       selectedPillNumberIntoPillSheet:
-                          state.sequentialTodayPillNumber,
+                          state.todayPillNumber?.pillNumberIntoPillSheet,
                       markSelected: (pageIndex, number) {
                         analytics.logEvent(
                             name: "selected_today_number_initial_setting",
@@ -52,7 +52,9 @@ class SelectTodayPillNumberPillSheetList extends HookWidget {
                               "pill_number": number,
                               "page": pageIndex,
                             });
-                        store.setTodayPillNumber(number);
+                        store.setTodayPillNumber(
+                            pageIndex: pageIndex,
+                            pillNumberIntoPillSheet: number);
                       },
                     ),
                   ),

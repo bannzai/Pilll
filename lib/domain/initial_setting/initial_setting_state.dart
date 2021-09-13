@@ -64,21 +64,18 @@ abstract class InitialSettingState implements _$InitialSettingState {
       );
 
   PillSheet buildPillSheet({
-    required int pageIndex,
+    required InitialSettingTodayPillNumber todayPillNumber,
     required List<PillSheetType> pillSheetTypes,
-    required int sequentialTodayPillNumber,
   }) {
-    final pillSheetType = pillSheetTypes[pageIndex];
+    final pillSheetType = pillSheetTypes[todayPillNumber.pageIndex];
     return PillSheet(
-      groupIndex: pageIndex,
+      groupIndex: todayPillNumber.pageIndex,
       beginingDate: _beginingDate(
-        pageIndex: pageIndex,
-        sequentialTodayPillNumber: sequentialTodayPillNumber,
+        todayPillNumber: todayPillNumber,
         pillSheetTypes: pillSheetTypes,
       ),
       lastTakenDate: _lastTakenDate(
-        pageIndex: pageIndex,
-        sequentialTodayPillNumber: sequentialTodayPillNumber,
+        todayPillNumber: todayPillNumber,
         pillSheetTypes: pillSheetTypes,
       ),
       typeInfo: pillSheetType.typeInfo,
@@ -86,41 +83,42 @@ abstract class InitialSettingState implements _$InitialSettingState {
   }
 
   DateTime _beginingDate({
-    required int pageIndex,
+    required InitialSettingTodayPillNumber todayPillNumber,
     required List<PillSheetType> pillSheetTypes,
-    required int sequentialTodayPillNumber,
   }) {
-    final pageOffset =
-        pastedTotalCount(pillSheetTypes: pillSheetTypes, pageIndex: pageIndex);
-    return today()
-        .subtract(Duration(days: sequentialTodayPillNumber - 1 - pageOffset));
+    final pageOffset = pastedTotalCount(
+        pillSheetTypes: pillSheetTypes, pageIndex: todayPillNumber.pageIndex);
+    return today().subtract(Duration(
+        days: todayPillNumber.pillNumberIntoPillSheet - 1 - pageOffset));
   }
 
   DateTime? _lastTakenDate({
-    required int pageIndex,
-    required int sequentialTodayPillNumber,
+    required InitialSettingTodayPillNumber todayPillNumber,
     required List<PillSheetType> pillSheetTypes,
   }) {
-    if (pageIndex == 0 && sequentialTodayPillNumber == 1) {
+    if (todayPillNumber.pageIndex == 0 &&
+        todayPillNumber.pillNumberIntoPillSheet == 1) {
       return null;
     }
-    final pillSheetType = pillSheetTypes[pageIndex];
-    final pillSheetBeginPillNumber = pageIndex * pillSheetType.totalCount + 1;
-    final pillSheetEndPillNumber =
-        pastedTotalCount(pillSheetTypes: pillSheetTypes, pageIndex: pageIndex) +
-            pillSheetType.totalCount;
-    if (pillSheetBeginPillNumber <= sequentialTodayPillNumber &&
-        sequentialTodayPillNumber <= pillSheetEndPillNumber) {
+    final pillSheetType = pillSheetTypes[todayPillNumber.pageIndex];
+    final pillSheetBeginPillNumber =
+        todayPillNumber.pageIndex * pillSheetType.totalCount + 1;
+    final pillSheetEndPillNumber = pastedTotalCount(
+            pillSheetTypes: pillSheetTypes,
+            pageIndex: todayPillNumber.pageIndex) +
+        pillSheetType.totalCount;
+    if (pillSheetBeginPillNumber <= todayPillNumber.pillNumberIntoPillSheet &&
+        todayPillNumber.pillNumberIntoPillSheet <= pillSheetEndPillNumber) {
       // Between current PillSheet
       return today().subtract(Duration(days: 1));
-    } else if (sequentialTodayPillNumber < pillSheetEndPillNumber) {
+    } else if (todayPillNumber.pillNumberIntoPillSheet <
+        pillSheetEndPillNumber) {
       // Right side PillSheet
       return null;
     } else {
       // Left side PillSheet
       return _beginingDate(
-        pageIndex: pageIndex,
-        sequentialTodayPillNumber: sequentialTodayPillNumber,
+        todayPillNumber: todayPillNumber,
         pillSheetTypes: pillSheetTypes,
       ).add(Duration(days: pillSheetType.totalCount - 1));
     }
@@ -131,20 +129,5 @@ abstract class InitialSettingState implements _$InitialSettingState {
     final reminderTime = reminderTimes[index];
     return DateTime(t.year, t.month, t.day, reminderTime.hour,
         reminderTime.minute, t.second, t.millisecond, t.microsecond);
-  }
-
-  int? get todayPillNumberIntoPillSheet {
-    final sequentialTodayPillNumber = this.sequentialTodayPillNumber;
-    if (sequentialTodayPillNumber == null) {
-      return null;
-    }
-    var todayPillNumber = sequentialTodayPillNumber;
-    for (final pillSheetType in pillSheetTypes) {
-      if (todayPillNumber > pillSheetType.totalCount) {
-        todayPillNumber = todayPillNumber - pillSheetType.totalCount;
-        continue;
-      }
-    }
-    return todayPillNumber;
   }
 }
