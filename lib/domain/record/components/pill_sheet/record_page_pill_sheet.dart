@@ -73,40 +73,33 @@ class RecordPagePillSheet extends StatelessWidget {
       if (columnIndex >= countOfPillMarksInLine) {
         return Container(width: PillSheetViewLayout.componentWidth);
       }
-      final sequentialPillNumber =
-          PillMarkWithNumberLayoutHelper.calcSequentialPillNumber(
-        columnIndex: columnIndex,
-        lineIndex: lineIndex,
-        pageIndex: pageIndex,
-        pillSheetTypes: pillSheetTypes,
-      );
       final pillNumberIntoPillSheet =
           PillMarkWithNumberLayoutHelper.calcPillNumberIntoPillSheet(
               columnIndex, lineIndex);
       return Container(
         width: PillSheetViewLayout.componentWidth,
         child: PillMarkWithNumberLayout(
-          textOfPillNumber: _textOfPillNumber(state, sequentialPillNumber),
+          textOfPillNumber: _textOfPillNumber(
+            state: state,
+            pillNumberIntoPillSheet: pillNumberIntoPillSheet,
+            pageIndex: pageIndex,
+          ),
           pillMark: PillMark(
             hasRippleAnimation: store.shouldPillMarkAnimation(
-              sequentialPillNumber: sequentialPillNumber,
               pillNumberIntoPillSheet: pillNumberIntoPillSheet,
               pillSheet: pillSheet,
             ),
             isDone: store.isDone(
-              sequentialPillNumber: sequentialPillNumber,
               pillNumberIntoPillSheet: pillNumberIntoPillSheet,
               pillSheet: pillSheet,
             ),
             pillSheetType: store.markFor(
-              sequentialPillNumber: sequentialPillNumber,
               pillNumberIntoPillSheet: pillNumberIntoPillSheet,
               pillSheet: pillSheet,
             ),
           ),
           onTap: () {
             analytics.logEvent(name: "pill_mark_tapped", parameters: {
-              "number": sequentialPillNumber,
               "last_taken_pill_number": pillSheet.lastTakenPillNumber,
               "today_pill_number": pillSheet.todayPillNumber,
             });
@@ -114,7 +107,6 @@ class RecordPagePillSheet extends StatelessWidget {
             effectAfterTaken(
               context: context,
               taken: store.takenWithPillNumber(
-                sequentialPillNumber: sequentialPillNumber,
                 pillNumberIntoPillSheet: pillNumberIntoPillSheet,
                 pillSheet: pillSheet,
               ),
@@ -126,8 +118,13 @@ class RecordPagePillSheet extends StatelessWidget {
     });
   }
 
-  Text _textOfPillNumber(RecordPageState state, int pillNumber) {
-    final date = pillSheet.beginingDate.add(Duration(days: pillNumber - 1));
+  Text _textOfPillNumber({
+    required RecordPageState state,
+    required int pillNumberIntoPillSheet,
+    required int pageIndex,
+  }) {
+    final date =
+        pillSheet.beginingDate.add(Duration(days: pillNumberIntoPillSheet - 1));
     final isDateMode = () {
       if (!(state.isPremium || state.isTrial)) {
         return false;
@@ -139,17 +136,20 @@ class RecordPagePillSheet extends StatelessWidget {
     }();
 
     return Text(
-      isDateMode ? DateTimeFormatter.monthAndDay(date) : "$pillNumber",
+      isDateMode
+          ? DateTimeFormatter.monthAndDay(date)
+          : "$pillNumberIntoPillSheet",
       style: FontType.smallTitle.merge(
           PillMarkWithNumberLayoutHelper.upperTextColor(
               isPremium: state.isPremium,
               isTrial: state.isTrial,
               pillSheetAppearanceMode: state.appearanceMode,
-              pillNumberForMenstruationBegin:
-                  setting.pillNumberForFromMenstruation,
-              menstruationDuration: setting.durationMenstruation,
+              pillNumberForMenstruationBegin: setting
+                  .menstruations[pageIndex].pillNumberForFromMenstruation,
+              menstruationDuration:
+                  setting.menstruations[pageIndex].durationMenstruation,
               maxPillNumber: pillSheet.pillSheetType.totalCount,
-              pillMarkNumber: pillNumber)),
+              pillMarkNumber: pillNumberIntoPillSheet)),
       textScaleFactor: 1,
     );
   }

@@ -230,7 +230,6 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
   }
 
   Future<void>? takenWithPillNumber({
-    required int sequentialPillNumber,
     required int pillNumberIntoPillSheet,
     required PillSheet pillSheet,
   }) async {
@@ -314,7 +313,6 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
   }
 
   bool isDone({
-    required int sequentialPillNumber,
     required int pillNumberIntoPillSheet,
     required PillSheet pillSheet,
   }) {
@@ -338,7 +336,6 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
   }
 
   PillMarkType markFor({
-    required int sequentialPillNumber,
     required int pillNumberIntoPillSheet,
     required PillSheet pillSheet,
   }) {
@@ -357,7 +354,6 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
   }
 
   bool shouldPillMarkAnimation({
-    required int sequentialPillNumber,
     required int pillNumberIntoPillSheet,
     required PillSheet pillSheet,
   }) {
