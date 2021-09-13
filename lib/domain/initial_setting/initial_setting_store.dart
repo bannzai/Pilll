@@ -146,7 +146,7 @@ class InitialSettingStateStore extends StateNotifier<InitialSettingState> {
     required int fromMenstruation,
   }) {
     if (state.menstruations.length < pageIndex) {
-      state.copyWith(
+      state = state.copyWith(
           menstruations: state.menstruations
             ..add(MenstruationSetting(
                 pillNumberForFromMenstruation: fromMenstruation,
@@ -157,7 +157,7 @@ class InitialSettingStateStore extends StateNotifier<InitialSettingState> {
     final updatedMenstruation =
         menstruation.copyWith(pillNumberForFromMenstruation: fromMenstruation);
     copiedMenstruations[pageIndex] = updatedMenstruation;
-    state.copyWith(menstruations: copiedMenstruations);
+    state = state.copyWith(menstruations: copiedMenstruations);
   }
 
   void setDurationMenstruation({
@@ -165,7 +165,7 @@ class InitialSettingStateStore extends StateNotifier<InitialSettingState> {
     required int durationMenstruation,
   }) {
     if (state.menstruations.length < pageIndex) {
-      state.copyWith(
+      state = state.copyWith(
           menstruations: state.menstruations
             ..add(MenstruationSetting(
                 pillNumberForFromMenstruation: 0,
@@ -176,7 +176,7 @@ class InitialSettingStateStore extends StateNotifier<InitialSettingState> {
     final updatedMenstruation =
         menstruation.copyWith(durationMenstruation: durationMenstruation);
     copiedMenstruations[pageIndex] = updatedMenstruation;
-    state.copyWith(menstruations: copiedMenstruations);
+    state = state.copyWith(menstruations: copiedMenstruations);
   }
 
   Future<void> register() async {
