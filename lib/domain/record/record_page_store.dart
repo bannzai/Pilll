@@ -408,11 +408,6 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
     final updatedSetting = setting.copyWith(pillSheetTypes: copied);
     state = state.copyWith(setting: updatedSetting);
   }
-
-  setIsOnSequenceAppearance(bool isOn, Setting setting) {
-    final updatedSetting = setting.copyWith(isOnSequenceAppearance: isOn);
-    state = state.copyWith(setting: updatedSetting);
-  }
 }
 
 PillSheetGroup modifyBeginingDateFunction({

@@ -23,10 +23,8 @@ class SettingMenstruationPage extends HookWidget {
     int currentPage = 0;
     return SettingMenstruationPageTemplate(
       title: "生理について",
-      isOnSequenceAppearance: setting.isOnSequenceAppearance,
       pillSheetList: SettingMenstruationPillSheetList(
         pillSheetTypes: setting.pillSheetTypes,
-        isOnSequenceAppearance: setting.isOnSequenceAppearance,
         selectedPillNumber: setting.pillNumberForFromMenstruation,
         onPageChanged: (number) {
           currentPage = number;
@@ -34,18 +32,6 @@ class SettingMenstruationPage extends HookWidget {
         markSelected: (number) {
           analytics.logEvent(
               name: "from_menstruation_setting",
-              parameters: {"number": number});
-          store.modifyFromMenstruation(number);
-        },
-      ),
-      pillSheetView: SettingPillSheetView(
-        pageIndex: 0,
-        isOnSequenceAppearance: setting.isOnSequenceAppearance,
-        pillSheetTypes: setting.pillSheetTypes,
-        selectedPillNumberIntoPillSheet: setting.pillNumberForFromMenstruation,
-        markSelected: (number) {
-          analytics.logEvent(
-              name: "from_menstruation_initial_setting",
               parameters: {"number": number});
           store.modifyFromMenstruation(number);
         },
