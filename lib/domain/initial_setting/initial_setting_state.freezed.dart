@@ -26,7 +26,8 @@ class _$InitialSettingStateTearOff {
       ],
       bool isOnReminder = true,
       bool isLoading = false,
-      bool isAccountCooperationDidEnd = false}) {
+      bool isAccountCooperationDidEnd = false,
+      dynamic currentMenstruationPageIndex = 0}) {
     return _InitialSettingState(
       pillSheetTypes: pillSheetTypes,
       todayPillNumber: todayPillNumber,
@@ -35,6 +36,7 @@ class _$InitialSettingStateTearOff {
       isOnReminder: isOnReminder,
       isLoading: isLoading,
       isAccountCooperationDidEnd: isAccountCooperationDidEnd,
+      currentMenstruationPageIndex: currentMenstruationPageIndex,
     );
   }
 }
@@ -52,6 +54,8 @@ mixin _$InitialSettingState {
   bool get isOnReminder => throw _privateConstructorUsedError;
   bool get isLoading => throw _privateConstructorUsedError;
   bool get isAccountCooperationDidEnd => throw _privateConstructorUsedError;
+  dynamic get currentMenstruationPageIndex =>
+      throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $InitialSettingStateCopyWith<InitialSettingState> get copyWith =>
@@ -70,7 +74,8 @@ abstract class $InitialSettingStateCopyWith<$Res> {
       List<ReminderTime> reminderTimes,
       bool isOnReminder,
       bool isLoading,
-      bool isAccountCooperationDidEnd});
+      bool isAccountCooperationDidEnd,
+      dynamic currentMenstruationPageIndex});
 }
 
 /// @nodoc
@@ -91,6 +96,7 @@ class _$InitialSettingStateCopyWithImpl<$Res>
     Object? isOnReminder = freezed,
     Object? isLoading = freezed,
     Object? isAccountCooperationDidEnd = freezed,
+    Object? currentMenstruationPageIndex = freezed,
   }) {
     return _then(_value.copyWith(
       pillSheetTypes: pillSheetTypes == freezed
@@ -121,6 +127,10 @@ class _$InitialSettingStateCopyWithImpl<$Res>
           ? _value.isAccountCooperationDidEnd
           : isAccountCooperationDidEnd // ignore: cast_nullable_to_non_nullable
               as bool,
+      currentMenstruationPageIndex: currentMenstruationPageIndex == freezed
+          ? _value.currentMenstruationPageIndex
+          : currentMenstruationPageIndex // ignore: cast_nullable_to_non_nullable
+              as dynamic,
     ));
   }
 }
@@ -139,7 +149,8 @@ abstract class _$InitialSettingStateCopyWith<$Res>
       List<ReminderTime> reminderTimes,
       bool isOnReminder,
       bool isLoading,
-      bool isAccountCooperationDidEnd});
+      bool isAccountCooperationDidEnd,
+      dynamic currentMenstruationPageIndex});
 }
 
 /// @nodoc
@@ -162,6 +173,7 @@ class __$InitialSettingStateCopyWithImpl<$Res>
     Object? isOnReminder = freezed,
     Object? isLoading = freezed,
     Object? isAccountCooperationDidEnd = freezed,
+    Object? currentMenstruationPageIndex = freezed,
   }) {
     return _then(_InitialSettingState(
       pillSheetTypes: pillSheetTypes == freezed
@@ -192,6 +204,9 @@ class __$InitialSettingStateCopyWithImpl<$Res>
           ? _value.isAccountCooperationDidEnd
           : isAccountCooperationDidEnd // ignore: cast_nullable_to_non_nullable
               as bool,
+      currentMenstruationPageIndex: currentMenstruationPageIndex == freezed
+          ? _value.currentMenstruationPageIndex
+          : currentMenstruationPageIndex,
     ));
   }
 }
@@ -209,7 +224,8 @@ class _$_InitialSettingState extends _InitialSettingState {
       ],
       this.isOnReminder = true,
       this.isLoading = false,
-      this.isAccountCooperationDidEnd = false})
+      this.isAccountCooperationDidEnd = false,
+      this.currentMenstruationPageIndex = 0})
       : super._();
 
   @JsonKey(defaultValue: const [])
@@ -235,10 +251,13 @@ class _$_InitialSettingState extends _InitialSettingState {
   @JsonKey(defaultValue: false)
   @override
   final bool isAccountCooperationDidEnd;
+  @JsonKey(defaultValue: 0)
+  @override
+  final dynamic currentMenstruationPageIndex;
 
   @override
   String toString() {
-    return 'InitialSettingState(pillSheetTypes: $pillSheetTypes, todayPillNumber: $todayPillNumber, menstruations: $menstruations, reminderTimes: $reminderTimes, isOnReminder: $isOnReminder, isLoading: $isLoading, isAccountCooperationDidEnd: $isAccountCooperationDidEnd)';
+    return 'InitialSettingState(pillSheetTypes: $pillSheetTypes, todayPillNumber: $todayPillNumber, menstruations: $menstruations, reminderTimes: $reminderTimes, isOnReminder: $isOnReminder, isLoading: $isLoading, isAccountCooperationDidEnd: $isAccountCooperationDidEnd, currentMenstruationPageIndex: $currentMenstruationPageIndex)';
   }
 
   @override
@@ -267,7 +286,12 @@ class _$_InitialSettingState extends _InitialSettingState {
                     isAccountCooperationDidEnd) ||
                 const DeepCollectionEquality().equals(
                     other.isAccountCooperationDidEnd,
-                    isAccountCooperationDidEnd)));
+                    isAccountCooperationDidEnd)) &&
+            (identical(other.currentMenstruationPageIndex,
+                    currentMenstruationPageIndex) ||
+                const DeepCollectionEquality().equals(
+                    other.currentMenstruationPageIndex,
+                    currentMenstruationPageIndex)));
   }
 
   @override
@@ -279,7 +303,8 @@ class _$_InitialSettingState extends _InitialSettingState {
       const DeepCollectionEquality().hash(reminderTimes) ^
       const DeepCollectionEquality().hash(isOnReminder) ^
       const DeepCollectionEquality().hash(isLoading) ^
-      const DeepCollectionEquality().hash(isAccountCooperationDidEnd);
+      const DeepCollectionEquality().hash(isAccountCooperationDidEnd) ^
+      const DeepCollectionEquality().hash(currentMenstruationPageIndex);
 
   @JsonKey(ignore: true)
   @override
@@ -296,7 +321,8 @@ abstract class _InitialSettingState extends InitialSettingState {
       List<ReminderTime> reminderTimes,
       bool isOnReminder,
       bool isLoading,
-      bool isAccountCooperationDidEnd}) = _$_InitialSettingState;
+      bool isAccountCooperationDidEnd,
+      dynamic currentMenstruationPageIndex}) = _$_InitialSettingState;
   _InitialSettingState._() : super._();
 
   @override
@@ -314,6 +340,9 @@ abstract class _InitialSettingState extends InitialSettingState {
   bool get isLoading => throw _privateConstructorUsedError;
   @override
   bool get isAccountCooperationDidEnd => throw _privateConstructorUsedError;
+  @override
+  dynamic get currentMenstruationPageIndex =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$InitialSettingStateCopyWith<_InitialSettingState> get copyWith =>

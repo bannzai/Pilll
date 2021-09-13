@@ -73,9 +73,10 @@ class InitialSettingStateStore extends StateNotifier<InitialSettingState> {
 
   void selectedPillSheetType(PillSheetType pillSheetType) {
     state = state.copyWith(pillSheetTypes: [pillSheetType]);
-    if (state.fromMenstruation > pillSheetType.totalCount) {
-      state = state.copyWith(fromMenstruation: pillSheetType.totalCount);
-    }
+    state = state.copyWith(menstruations: [
+      MenstruationSetting(
+          pillNumberForFromMenstruation: 0, durationMenstruation: 0)
+    ]);
     final todayPillNumber = state.todayPillNumber;
     if (todayPillNumber != null &&
         todayPillNumber > state.pillSheetTypes.first.totalCount) {
@@ -119,12 +120,46 @@ class InitialSettingStateStore extends StateNotifier<InitialSettingState> {
     state = state.copyWith(todayPillNumber: null);
   }
 
-  void setFromMenstruation(int fromMenstruation) {
-    state = state.copyWith(fromMenstruation: fromMenstruation);
+  setCurrentMenstruationPageIndex(int pageIndex) {
+    state = state.copyWith(currentMenstruationPageIndex: pageIndex);
   }
 
-  void setDurationMenstruation(int durationMenstruation) {
-    state = state.copyWith(durationMenstruation: durationMenstruation);
+  void setFromMenstruation({
+    required int pageIndex,
+    required int fromMenstruation,
+  }) {
+    if (state.menstruations.length < pageIndex) {
+      state.copyWith(
+          menstruations: state.menstruations
+            ..add(MenstruationSetting(
+                pillNumberForFromMenstruation: fromMenstruation,
+                durationMenstruation: 0)));
+    }
+    final copiedMenstruations = [...state.menstruations];
+    final menstruation = copiedMenstruations[pageIndex];
+    final updatedMenstruation =
+        menstruation.copyWith(pillNumberForFromMenstruation: fromMenstruation);
+    copiedMenstruations[pageIndex] = updatedMenstruation;
+    state.copyWith(menstruations: copiedMenstruations);
+  }
+
+  void setDurationMenstruation({
+    required int pageIndex,
+    required int durationMenstruation,
+  }) {
+    if (state.menstruations.length < pageIndex) {
+      state.copyWith(
+          menstruations: state.menstruations
+            ..add(MenstruationSetting(
+                pillNumberForFromMenstruation: 0,
+                durationMenstruation: durationMenstruation)));
+    }
+    final copiedMenstruations = [...state.menstruations];
+    final menstruation = copiedMenstruations[pageIndex];
+    final updatedMenstruation =
+        menstruation.copyWith(durationMenstruation: durationMenstruation);
+    copiedMenstruations[pageIndex] = updatedMenstruation;
+    state.copyWith(menstruations: copiedMenstruations);
   }
 
   Future<void> register() async {

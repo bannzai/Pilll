@@ -7,9 +7,9 @@ import 'package:pilll/entity/pill_sheet_type.dart';
 
 class SettingMenstruationPillSheetList extends HookWidget {
   final List<PillSheetType> pillSheetTypes;
-  final int? selectedPillNumber;
+  final int Function(int pageIndex) selectedPillNumber;
   final Function(int) onPageChanged;
-  final Function(int) markSelected;
+  final Function(int pageIndex, int pillNumber) markSelected;
 
   SettingMenstruationPillSheetList({
     required this.pillSheetTypes,
@@ -43,17 +43,17 @@ class SettingMenstruationPillSheetList extends HookWidget {
             clipBehavior: Clip.none,
             controller: pageController,
             scrollDirection: Axis.horizontal,
-            children: List.generate(pillSheetTypes.length, (index) {
+            children: List.generate(pillSheetTypes.length, (pageIndex) {
               return Column(
                 mainAxisSize: MainAxisSize.min,
                 children: [
                   Container(
                     padding: EdgeInsets.symmetric(horizontal: 10),
                     child: SettingPillSheetView(
-                      pageIndex: index,
+                      pageIndex: pageIndex,
                       pillSheetTypes: pillSheetTypes,
-                      selectedPillNumber: selectedPillNumber,
-                      markSelected: (number) => markSelected(number),
+                      selectedPillNumber: selectedPillNumber(pageIndex),
+                      markSelected: (number) => markSelected(pageIndex, number),
                     ),
                   ),
                   Spacer(),
