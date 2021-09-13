@@ -77,11 +77,11 @@ class InitialSettingStateStore extends StateNotifier<InitialSettingState> {
       MenstruationSetting(
           pillNumberForFromMenstruation: 0, durationMenstruation: 0)
     ]);
-    final todayPillNumber = state.todayPillNumber;
+    final todayPillNumber = state.sequentialTodayPillNumber;
     if (todayPillNumber != null &&
         todayPillNumber > state.pillSheetTypes.first.totalCount) {
       state = state.copyWith(
-          todayPillNumber: state.pillSheetTypes.first.totalCount);
+          sequentialTodayPillNumber: state.pillSheetTypes.first.totalCount);
     }
   }
 
@@ -112,12 +112,13 @@ class InitialSettingStateStore extends StateNotifier<InitialSettingState> {
     state = state.copyWith(reminderTimes: copied);
   }
 
-  void setTodayPillNumber(int todayPillNumber) {
-    state = state.copyWith(todayPillNumber: todayPillNumber);
+  void setTodayPillNumber(int sequentialTodayPillNumber) {
+    state =
+        state.copyWith(sequentialTodayPillNumber: sequentialTodayPillNumber);
   }
 
   void unsetTodayPillNumber() {
-    state = state.copyWith(todayPillNumber: null);
+    state = state.copyWith(sequentialTodayPillNumber: null);
   }
 
   setCurrentMenstruationPageIndex(int pageIndex) {
@@ -172,7 +173,7 @@ class InitialSettingStateStore extends StateNotifier<InitialSettingState> {
 
     _settingService.updateWithBatch(batch, state.buildSetting());
 
-    final sequentialTodayPillNumber = state.todayPillNumber;
+    final sequentialTodayPillNumber = state.sequentialTodayPillNumber;
     if (sequentialTodayPillNumber != null) {
       final Map<String, PillSheet> idAndPillSheet = {};
 

@@ -1,7 +1,6 @@
-import 'package:pilll/domain/menstruation_edit/menstruation_edit_store.dart';
+import 'package:pilll/domain/settings/components/rows/today_pill_number.dart';
 import 'package:pilll/util/datetime/day.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:pilll/entity/pill_mark_type.dart';
 import 'package:pilll/entity/pill_sheet.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/entity/setting.dart';
@@ -14,7 +13,7 @@ abstract class InitialSettingState implements _$InitialSettingState {
   factory InitialSettingState({
     @Default([])
         List<PillSheetType> pillSheetTypes,
-    int? todayPillNumber,
+    int? sequentialTodayPillNumber,
     @Default([])
         List<MenstruationSetting> menstruations,
     @Default([
@@ -94,7 +93,7 @@ abstract class InitialSettingState implements _$InitialSettingState {
     required int sequentialTodayPillNumber,
     required List<PillSheetType> pillSheetTypes,
   }) {
-    if (pageIndex == 0 && todayPillNumber == 1) {
+    if (pageIndex == 0 && sequentialTodayPillNumber == 1) {
       return null;
     }
     final pillSheetType = pillSheetTypes[pageIndex];
@@ -119,22 +118,25 @@ abstract class InitialSettingState implements _$InitialSettingState {
     }
   }
 
-  PillMarkType pillMarkTypeFor(int number, PillSheetType pillSheetType) {
-    if (todayPillNumber == number) {
-      return PillMarkType.selected;
-    }
-    if (pillSheetType.dosingPeriod < number) {
-      return pillSheetType == PillSheetType.pillsheet_21
-          ? PillMarkType.rest
-          : PillMarkType.fake;
-    }
-    return PillMarkType.normal;
-  }
-
   DateTime reminderDateTime(int index) {
     var t = DateTime.now();
     final reminderTime = reminderTimes[index];
     return DateTime(t.year, t.month, t.day, reminderTime.hour,
         reminderTime.minute, t.second, t.millisecond, t.microsecond);
+  }
+
+  int? get todayPillNumberIntoPillSheet {
+    final sequentialTodayPillNumber = this.sequentialTodayPillNumber;
+    if (sequentialTodayPillNumber == null) {
+      return null;
+    }
+    var todayPillNumber = sequentialTodayPillNumber;
+    for (final pillSheetType in pillSheetTypes) {
+      if (todayPillNumber > pillSheetType.totalCount) {
+        todayPillNumber = todayPillNumber - pillSheetType.totalCount;
+        continue;
+      }
+    }
+    return todayPillNumber;
   }
 }

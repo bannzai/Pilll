@@ -12,8 +12,8 @@ import 'package:pilll/entity/weekday.dart';
 class SettingPillSheetView extends StatelessWidget {
   final int pageIndex;
   final List<PillSheetType> pillSheetTypes;
-  final int? selectedPillNumber;
-  final Function(int) markSelected;
+  final int? selectedPillNumberIntoPillSheet;
+  final Function(int pageIndex, int pillNumberIntoPillSheet) markSelected;
 
   PillSheetType get pillSheetType => pillSheetTypes[pageIndex];
 
@@ -21,7 +21,7 @@ class SettingPillSheetView extends StatelessWidget {
     Key? key,
     required this.pageIndex,
     required this.pillSheetTypes,
-    required this.selectedPillNumber,
+    required this.selectedPillNumberIntoPillSheet,
     required this.markSelected,
   }) : super(key: key);
 
@@ -52,13 +52,6 @@ class SettingPillSheetView extends StatelessWidget {
       if (index >= countOfPillMarksInLine) {
         return Container(width: PillSheetViewLayout.componentWidth);
       }
-      final sequentialPillNumber =
-          PillMarkWithNumberLayoutHelper.calcSequentialPillNumber(
-        columnIndex: index,
-        lineIndex: lineIndex,
-        pageIndex: pageIndex,
-        pillSheetTypes: pillSheetTypes,
-      );
       final pillNumberIntoPillSheet =
           PillMarkWithNumberLayoutHelper.calcPillNumberIntoPillSheet(
               index, lineIndex);
@@ -66,7 +59,7 @@ class SettingPillSheetView extends StatelessWidget {
         width: PillSheetViewLayout.componentWidth,
         child: PillMarkWithNumberLayout(
           textOfPillNumber: Text(
-            "$sequentialPillNumber",
+            "$pillNumberIntoPillSheet",
             style: TextStyle(color: PilllColors.weekday),
             textScaleFactor: 1,
           ),
@@ -74,15 +67,16 @@ class SettingPillSheetView extends StatelessWidget {
             hasRippleAnimation: false,
             isDone: false,
             pillSheetType: _pillMarkTypeFor(
-              sequentialPillNumber: sequentialPillNumber,
+              pageIndex: pageIndex,
               pillNumberIntoPillSheet: pillNumberIntoPillSheet,
             ),
           ),
           onTap: () {
             analytics.logEvent(name: "setting_pill_mark_tapped", parameters: {
-              "number": sequentialPillNumber,
+              "number": pillNumberIntoPillSheet,
+              "page": pageIndex,
             });
-            markSelected(sequentialPillNumber);
+            markSelected(pageIndex, pillNumberIntoPillSheet);
           },
         ),
       );
@@ -91,10 +85,12 @@ class SettingPillSheetView extends StatelessWidget {
 
   PillMarkType _pillMarkTypeFor({
     required int pillNumberIntoPillSheet,
-    required int sequentialPillNumber,
+    required int pageIndex,
   }) {
-    if (selectedPillNumber == sequentialPillNumber) {
-      return PillMarkType.selected;
+    if (pageIndex == this.pageIndex) {
+      if (selectedPillNumberIntoPillSheet == pillNumberIntoPillSheet) {
+        return PillMarkType.selected;
+      }
     }
 
     if (pillSheetType.dosingPeriod < pillNumberIntoPillSheet) {
