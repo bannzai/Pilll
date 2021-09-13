@@ -117,9 +117,16 @@ class MenstruationEditStore extends StateNotifier<MenstruationEditState> {
         throw error;
       }
 
+      // 本来は生理予定日から近い日付を割り出す。が正しいかもしれ無いが日付が0の時を考えた時にその条件だと不十分
+      // それよりかは一番多い日付で埋めれば良いか。と考え一旦最大値を取って埋める
+      final durationMenstruations =
+          setting.menstruations.map((e) => e.durationMenstruation).toList();
+      durationMenstruations.sort((a, b) => b.compareTo(a));
+      final maximumDurationMenstruation = durationMenstruations.first;
+
       final begin = date;
       final end =
-          date.add(Duration(days: max(setting.durationMenstruation - 1, 0)));
+          date.add(Duration(days: max(maximumDurationMenstruation - 1, 0)));
       late final Menstruation menstruation;
       final initialMenstruation = this.initialMenstruation;
       if (initialMenstruation != null) {
