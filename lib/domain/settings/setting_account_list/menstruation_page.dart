@@ -25,14 +25,16 @@ class SettingMenstruationPage extends HookWidget {
       title: "生理について",
       pillSheetList: SettingMenstruationPillSheetList(
         pillSheetTypes: setting.pillSheetTypes,
-        selectedPillNumber: setting.pillNumberForFromMenstruation,
+        selectedPillNumber: (pageIndex) =>
+            setting.menstruations[pageIndex].pillNumberForFromMenstruation,
         onPageChanged: (number) {
           currentPage = number;
         },
-        markSelected: (number) {
-          analytics.logEvent(
-              name: "from_menstruation_setting",
-              parameters: {"number": number});
+        markSelected: (pageIndex, number) {
+          analytics.logEvent(name: "from_menstruation_setting", parameters: {
+            "number": number,
+            "page": pageIndex,
+          });
           store.modifyFromMenstruation(number);
         },
       ),

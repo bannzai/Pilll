@@ -25,7 +25,8 @@ class ModifingPillNumberPage extends StatefulWidget {
 }
 
 class _ModifingPillNumberPageState extends State<ModifingPillNumberPage> {
-  int? selectedPillMarkNumber;
+  int? selectedPillMarkNumberIntoPillSheet;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -60,16 +61,19 @@ class _ModifingPillNumberPageState extends State<ModifingPillNumberPage> {
                   pillSheetTypes: widget.pillSheetGroup.pillSheets
                       .map((e) => e.pillSheetType)
                       .toList(),
-                  selectedPillNumberIntoPillSheet: selectedPillMarkNumber,
-                  markSelected: (number) {
-                    setState(() => selectedPillMarkNumber = number);
+                  selectedPillNumberIntoPillSheet:
+                      selectedPillMarkNumberIntoPillSheet,
+                  markSelected: (pageIndex, number) {
+                    setState(
+                        () => selectedPillMarkNumberIntoPillSheet = number);
                   },
                 ),
               ),
               SizedBox(height: 20),
               PrimaryButton(
-                onPressed: selectedPillMarkNumber != null
-                    ? () => widget.markSelected(selectedPillMarkNumber!)
+                onPressed: selectedPillMarkNumberIntoPillSheet != null
+                    ? () => widget
+                        .markSelected(selectedPillMarkNumberIntoPillSheet!)
                     : null,
                 text: "変更する",
               )
