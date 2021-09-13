@@ -73,10 +73,6 @@ class InitialSettingStateStore extends StateNotifier<InitialSettingState> {
 
   void selectedPillSheetType(PillSheetType pillSheetType) {
     state = state.copyWith(pillSheetTypes: [pillSheetType]);
-    state = state.copyWith(menstruations: [
-      MenstruationSetting(
-          pillNumberForFromMenstruation: 0, durationMenstruation: 0)
-    ]);
     final todayPillNumber = state.todayPillNumber;
     if (todayPillNumber != null &&
         todayPillNumber.pillNumberIntoPillSheet >
@@ -105,6 +101,14 @@ class InitialSettingStateStore extends StateNotifier<InitialSettingState> {
     final copied = [...state.pillSheetTypes];
     copied.removeAt(index);
     state = state.copyWith(pillSheetTypes: copied);
+  }
+
+  void handleNextEventOnPillSheetGroup() {
+    state = state.copyWith(
+        menstruations: state.pillSheetTypes
+            .map((e) => MenstruationSetting(
+                pillNumberForFromMenstruation: 0, durationMenstruation: 0))
+            .toList());
   }
 
   void setReminderTime(int index, int hour, int minute) {

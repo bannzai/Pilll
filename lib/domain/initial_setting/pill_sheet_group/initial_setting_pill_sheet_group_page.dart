@@ -65,6 +65,7 @@ class InitialSettingPillSheetGroupPage extends HookWidget {
                       text: "次へ",
                       onPressed: () async {
                         analytics.logEvent(name: "next_pill_sheet_count");
+                        store.handleNextEventOnPillSheetGroup();
                         Navigator.of(context).push(
                             InitialSettingSelectTodayPillNumberPageRoute
                                 .route());
