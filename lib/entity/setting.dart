@@ -73,8 +73,6 @@ abstract class Setting implements _$Setting {
   factory Setting({
     @Default([]) List<PillSheetType> pillSheetTypes,
     required List<MenstruationSetting> menstruations,
-    int? pillNumberForFromMenstruation,
-    int? durationMenstruation,
     @Default([]) List<ReminderTime> reminderTimes,
     @JsonSerializable(explicitToJson: true) required bool isOnReminder,
     @Default(true) bool isOnNotifyInNotTakenDuration,

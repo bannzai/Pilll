@@ -395,8 +395,6 @@ class _$SettingTearOff {
   _Setting call(
       {List<PillSheetType> pillSheetTypes = const [],
       required List<MenstruationSetting> menstruations,
-      int? pillNumberForFromMenstruation,
-      int? durationMenstruation,
       List<ReminderTime> reminderTimes = const [],
       @JsonSerializable(explicitToJson: true) required bool isOnReminder,
       bool isOnNotifyInNotTakenDuration = true,
@@ -406,8 +404,6 @@ class _$SettingTearOff {
     return _Setting(
       pillSheetTypes: pillSheetTypes,
       menstruations: menstruations,
-      pillNumberForFromMenstruation: pillNumberForFromMenstruation,
-      durationMenstruation: durationMenstruation,
       reminderTimes: reminderTimes,
       isOnReminder: isOnReminder,
       isOnNotifyInNotTakenDuration: isOnNotifyInNotTakenDuration,
@@ -429,8 +425,6 @@ mixin _$Setting {
   List<PillSheetType> get pillSheetTypes => throw _privateConstructorUsedError;
   List<MenstruationSetting> get menstruations =>
       throw _privateConstructorUsedError;
-  int? get pillNumberForFromMenstruation => throw _privateConstructorUsedError;
-  int? get durationMenstruation => throw _privateConstructorUsedError;
   List<ReminderTime> get reminderTimes => throw _privateConstructorUsedError;
   @JsonSerializable(explicitToJson: true)
   bool get isOnReminder => throw _privateConstructorUsedError;
@@ -451,8 +445,6 @@ abstract class $SettingCopyWith<$Res> {
   $Res call(
       {List<PillSheetType> pillSheetTypes,
       List<MenstruationSetting> menstruations,
-      int? pillNumberForFromMenstruation,
-      int? durationMenstruation,
       List<ReminderTime> reminderTimes,
       @JsonSerializable(explicitToJson: true) bool isOnReminder,
       bool isOnNotifyInNotTakenDuration,
@@ -472,8 +464,6 @@ class _$SettingCopyWithImpl<$Res> implements $SettingCopyWith<$Res> {
   $Res call({
     Object? pillSheetTypes = freezed,
     Object? menstruations = freezed,
-    Object? pillNumberForFromMenstruation = freezed,
-    Object? durationMenstruation = freezed,
     Object? reminderTimes = freezed,
     Object? isOnReminder = freezed,
     Object? isOnNotifyInNotTakenDuration = freezed,
@@ -489,14 +479,6 @@ class _$SettingCopyWithImpl<$Res> implements $SettingCopyWith<$Res> {
           ? _value.menstruations
           : menstruations // ignore: cast_nullable_to_non_nullable
               as List<MenstruationSetting>,
-      pillNumberForFromMenstruation: pillNumberForFromMenstruation == freezed
-          ? _value.pillNumberForFromMenstruation
-          : pillNumberForFromMenstruation // ignore: cast_nullable_to_non_nullable
-              as int?,
-      durationMenstruation: durationMenstruation == freezed
-          ? _value.durationMenstruation
-          : durationMenstruation // ignore: cast_nullable_to_non_nullable
-              as int?,
       reminderTimes: reminderTimes == freezed
           ? _value.reminderTimes
           : reminderTimes // ignore: cast_nullable_to_non_nullable
@@ -529,8 +511,6 @@ abstract class _$SettingCopyWith<$Res> implements $SettingCopyWith<$Res> {
   $Res call(
       {List<PillSheetType> pillSheetTypes,
       List<MenstruationSetting> menstruations,
-      int? pillNumberForFromMenstruation,
-      int? durationMenstruation,
       List<ReminderTime> reminderTimes,
       @JsonSerializable(explicitToJson: true) bool isOnReminder,
       bool isOnNotifyInNotTakenDuration,
@@ -551,8 +531,6 @@ class __$SettingCopyWithImpl<$Res> extends _$SettingCopyWithImpl<$Res>
   $Res call({
     Object? pillSheetTypes = freezed,
     Object? menstruations = freezed,
-    Object? pillNumberForFromMenstruation = freezed,
-    Object? durationMenstruation = freezed,
     Object? reminderTimes = freezed,
     Object? isOnReminder = freezed,
     Object? isOnNotifyInNotTakenDuration = freezed,
@@ -568,14 +546,6 @@ class __$SettingCopyWithImpl<$Res> extends _$SettingCopyWithImpl<$Res>
           ? _value.menstruations
           : menstruations // ignore: cast_nullable_to_non_nullable
               as List<MenstruationSetting>,
-      pillNumberForFromMenstruation: pillNumberForFromMenstruation == freezed
-          ? _value.pillNumberForFromMenstruation
-          : pillNumberForFromMenstruation // ignore: cast_nullable_to_non_nullable
-              as int?,
-      durationMenstruation: durationMenstruation == freezed
-          ? _value.durationMenstruation
-          : durationMenstruation // ignore: cast_nullable_to_non_nullable
-              as int?,
       reminderTimes: reminderTimes == freezed
           ? _value.reminderTimes
           : reminderTimes // ignore: cast_nullable_to_non_nullable
@@ -607,8 +577,6 @@ class _$_Setting extends _Setting with DiagnosticableTreeMixin {
   _$_Setting(
       {this.pillSheetTypes = const [],
       required this.menstruations,
-      this.pillNumberForFromMenstruation,
-      this.durationMenstruation,
       this.reminderTimes = const [],
       @JsonSerializable(explicitToJson: true) required this.isOnReminder,
       this.isOnNotifyInNotTakenDuration = true,
@@ -624,10 +592,6 @@ class _$_Setting extends _Setting with DiagnosticableTreeMixin {
   final List<PillSheetType> pillSheetTypes;
   @override
   final List<MenstruationSetting> menstruations;
-  @override
-  final int? pillNumberForFromMenstruation;
-  @override
-  final int? durationMenstruation;
   @JsonKey(defaultValue: const [])
   @override
   final List<ReminderTime> reminderTimes;
@@ -646,7 +610,7 @@ class _$_Setting extends _Setting with DiagnosticableTreeMixin {
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'Setting(pillSheetTypes: $pillSheetTypes, menstruations: $menstruations, pillNumberForFromMenstruation: $pillNumberForFromMenstruation, durationMenstruation: $durationMenstruation, reminderTimes: $reminderTimes, isOnReminder: $isOnReminder, isOnNotifyInNotTakenDuration: $isOnNotifyInNotTakenDuration, pillSheetAppearanceMode: $pillSheetAppearanceMode, isAutomaticallyCreatePillSheet: $isAutomaticallyCreatePillSheet)';
+    return 'Setting(pillSheetTypes: $pillSheetTypes, menstruations: $menstruations, reminderTimes: $reminderTimes, isOnReminder: $isOnReminder, isOnNotifyInNotTakenDuration: $isOnNotifyInNotTakenDuration, pillSheetAppearanceMode: $pillSheetAppearanceMode, isAutomaticallyCreatePillSheet: $isAutomaticallyCreatePillSheet)';
   }
 
   @override
@@ -656,9 +620,6 @@ class _$_Setting extends _Setting with DiagnosticableTreeMixin {
       ..add(DiagnosticsProperty('type', 'Setting'))
       ..add(DiagnosticsProperty('pillSheetTypes', pillSheetTypes))
       ..add(DiagnosticsProperty('menstruations', menstruations))
-      ..add(DiagnosticsProperty(
-          'pillNumberForFromMenstruation', pillNumberForFromMenstruation))
-      ..add(DiagnosticsProperty('durationMenstruation', durationMenstruation))
       ..add(DiagnosticsProperty('reminderTimes', reminderTimes))
       ..add(DiagnosticsProperty('isOnReminder', isOnReminder))
       ..add(DiagnosticsProperty(
@@ -679,14 +640,6 @@ class _$_Setting extends _Setting with DiagnosticableTreeMixin {
             (identical(other.menstruations, menstruations) ||
                 const DeepCollectionEquality()
                     .equals(other.menstruations, menstruations)) &&
-            (identical(other.pillNumberForFromMenstruation,
-                    pillNumberForFromMenstruation) ||
-                const DeepCollectionEquality().equals(
-                    other.pillNumberForFromMenstruation,
-                    pillNumberForFromMenstruation)) &&
-            (identical(other.durationMenstruation, durationMenstruation) ||
-                const DeepCollectionEquality().equals(
-                    other.durationMenstruation, durationMenstruation)) &&
             (identical(other.reminderTimes, reminderTimes) ||
                 const DeepCollectionEquality()
                     .equals(other.reminderTimes, reminderTimes)) &&
@@ -698,7 +651,8 @@ class _$_Setting extends _Setting with DiagnosticableTreeMixin {
                 const DeepCollectionEquality().equals(
                     other.isOnNotifyInNotTakenDuration,
                     isOnNotifyInNotTakenDuration)) &&
-            (identical(other.pillSheetAppearanceMode, pillSheetAppearanceMode) ||
+            (identical(
+                    other.pillSheetAppearanceMode, pillSheetAppearanceMode) ||
                 const DeepCollectionEquality().equals(
                     other.pillSheetAppearanceMode, pillSheetAppearanceMode)) &&
             (identical(other.isAutomaticallyCreatePillSheet,
@@ -713,8 +667,6 @@ class _$_Setting extends _Setting with DiagnosticableTreeMixin {
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(pillSheetTypes) ^
       const DeepCollectionEquality().hash(menstruations) ^
-      const DeepCollectionEquality().hash(pillNumberForFromMenstruation) ^
-      const DeepCollectionEquality().hash(durationMenstruation) ^
       const DeepCollectionEquality().hash(reminderTimes) ^
       const DeepCollectionEquality().hash(isOnReminder) ^
       const DeepCollectionEquality().hash(isOnNotifyInNotTakenDuration) ^
@@ -736,8 +688,6 @@ abstract class _Setting extends Setting {
   factory _Setting(
       {List<PillSheetType> pillSheetTypes,
       required List<MenstruationSetting> menstruations,
-      int? pillNumberForFromMenstruation,
-      int? durationMenstruation,
       List<ReminderTime> reminderTimes,
       @JsonSerializable(explicitToJson: true) required bool isOnReminder,
       bool isOnNotifyInNotTakenDuration,
@@ -752,10 +702,6 @@ abstract class _Setting extends Setting {
   @override
   List<MenstruationSetting> get menstruations =>
       throw _privateConstructorUsedError;
-  @override
-  int? get pillNumberForFromMenstruation => throw _privateConstructorUsedError;
-  @override
-  int? get durationMenstruation => throw _privateConstructorUsedError;
   @override
   List<ReminderTime> get reminderTimes => throw _privateConstructorUsedError;
   @override
