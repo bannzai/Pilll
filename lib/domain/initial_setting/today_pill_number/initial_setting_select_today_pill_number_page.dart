@@ -80,7 +80,7 @@ class InitialSettingSelectTodayPillNumberPage extends HookWidget {
                       SizedBox(height: 30),
                       PrimaryButton(
                         text: "次へ",
-                        onPressed: state.sequentialTodayPillNumber == null
+                        onPressed: state.todayPillNumber == null
                             ? null
                             : () {
                                 analytics.logEvent(

@@ -18,7 +18,8 @@ class ExplainPillNumber extends HookWidget {
         crossAxisAlignment: CrossAxisAlignment.baseline,
         textBaseline: TextBaseline.ideographic,
         children: () {
-          if (state.sequentialTodayPillNumber == null) {
+          final todayPillNumber = state.todayPillNumber;
+          if (todayPillNumber == null) {
             return <Widget>[
               Text("", style: FontType.largeNumber.merge(TextColorStyle.main)),
             ];
@@ -26,7 +27,7 @@ class ExplainPillNumber extends HookWidget {
           return <Widget>[
             Text("$todayに飲むピルは",
                 style: FontType.description.merge(TextColorStyle.main)),
-            Text("${state.todayPillNumberIntoPillSheet}",
+            Text("${todayPillNumber.pillNumberIntoPillSheet}",
                 style: FontType.largeNumber.merge(TextColorStyle.main)),
             Text("番", style: FontType.description.merge(TextColorStyle.main)),
           ];

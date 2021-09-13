@@ -77,11 +77,16 @@ class InitialSettingStateStore extends StateNotifier<InitialSettingState> {
       MenstruationSetting(
           pillNumberForFromMenstruation: 0, durationMenstruation: 0)
     ]);
-    final todayPillNumber = state.sequentialTodayPillNumber;
+    final todayPillNumber = state.todayPillNumber;
     if (todayPillNumber != null &&
-        todayPillNumber > state.pillSheetTypes.first.totalCount) {
+        todayPillNumber.pillNumberIntoPillSheet >
+            state.pillSheetTypes.first.totalCount) {
       state = state.copyWith(
-          sequentialTodayPillNumber: state.pillSheetTypes.first.totalCount);
+        todayPillNumber: InitialSettingTodayPillNumber(
+          pillNumberIntoPillSheet: state.pillSheetTypes.first.totalCount,
+          pageIndex: todayPillNumber.pageIndex,
+        ),
+      );
     }
   }
 
@@ -112,13 +117,20 @@ class InitialSettingStateStore extends StateNotifier<InitialSettingState> {
     state = state.copyWith(reminderTimes: copied);
   }
 
-  void setTodayPillNumber(int sequentialTodayPillNumber) {
-    state =
-        state.copyWith(sequentialTodayPillNumber: sequentialTodayPillNumber);
+  void setTodayPillNumber({
+    required int pageIndex,
+    required int pillNumberIntoPillSheet,
+  }) {
+    state = state.copyWith(
+      todayPillNumber: InitialSettingTodayPillNumber(
+        pageIndex: pageIndex,
+        pillNumberIntoPillSheet: pillNumberIntoPillSheet,
+      ),
+    );
   }
 
   void unsetTodayPillNumber() {
-    state = state.copyWith(sequentialTodayPillNumber: null);
+    state = state.copyWith(todayPillNumber: null);
   }
 
   setCurrentMenstruationPageIndex(int pageIndex) {
@@ -173,15 +185,13 @@ class InitialSettingStateStore extends StateNotifier<InitialSettingState> {
 
     _settingService.updateWithBatch(batch, state.buildSetting());
 
-    final sequentialTodayPillNumber = state.sequentialTodayPillNumber;
-    if (sequentialTodayPillNumber != null) {
+    final todayPillNumber = state.todayPillNumber;
+    if (todayPillNumber != null) {
       final Map<String, PillSheet> idAndPillSheet = {};
 
-      var i = 0;
       state.pillSheetTypes.forEach((pillSheetType) {
         final pillSheet = state.buildPillSheet(
-          pageIndex: i,
-          sequentialTodayPillNumber: sequentialTodayPillNumber,
+          todayPillNumber: todayPillNumber,
           pillSheetTypes: state.pillSheetTypes,
         );
         final createdPillSheet = _pillSheetService.register(batch, pillSheet);
@@ -195,8 +205,6 @@ class InitialSettingStateStore extends StateNotifier<InitialSettingState> {
                 pillSheetID: createdPillSheet.id!,
                 after: pillSheet);
         _pillSheetModifiedHistoryService.add(batch, history);
-
-        i += 1;
       });
 
       final pillSheetIDs = idAndPillSheet.keys.toList();
