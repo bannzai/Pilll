@@ -2,11 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/analytics.dart';
-import 'package:pilll/components/organisms/pill_sheet/setting_pill_sheet_view.dart';
 import 'package:pilll/components/template/setting_menstruation/setting_menstruation_dynamic_description.dart';
 import 'package:pilll/components/template/setting_menstruation/setting_menstruation_page_template.dart';
 import 'package:pilll/components/template/setting_menstruation/setting_menstruation_pill_sheet_list.dart';
-import 'package:pilll/domain/settings/setting_page_store.dart';
+import 'package:pilll/domain/settings/menstruation/setting_menstruation_store.dart';
 
 class SettingMenstruationPage extends HookWidget {
   const SettingMenstruationPage({
@@ -14,13 +13,12 @@ class SettingMenstruationPage extends HookWidget {
   }) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    final store = useProvider(settingStoreProvider);
-    final state = useProvider(settingStoreProvider.state);
-    final setting = state.entity;
+    final store = useProvider(settingMenstruationStoreProvider);
+    final state = useProvider(settingMenstruationStoreProvider.state);
+    final setting = store.settingState.entity;
     if (setting == null) {
       throw FormatException("生理設定にはSettingのデータが必要です");
     }
-    int currentPage = 0;
     return SettingMenstruationPageTemplate(
       title: "生理について",
       pillSheetList: SettingMenstruationPillSheetList(
@@ -28,33 +26,38 @@ class SettingMenstruationPage extends HookWidget {
         selectedPillNumber: (pageIndex) =>
             setting.menstruations[pageIndex].pillNumberForFromMenstruation,
         onPageChanged: (number) {
-          currentPage = number;
+          store.setCurrentPageIndex(number);
         },
         markSelected: (pageIndex, number) {
           analytics.logEvent(name: "from_menstruation_setting", parameters: {
             "number": number,
             "page": pageIndex,
           });
-          store.modifyFromMenstruation(number);
+          store.modifyFromMenstruation(
+              pageIndex: pageIndex, fromMenstruation: number);
         },
       ),
       dynamicDescription: SettingMenstruationDynamicDescription(
-        fromMenstruation: setting.pillNumberForFromMenstruation,
+        fromMenstruation: setting.menstruations[state.currentPageIndex]
+            .pillNumberForFromMenstruation,
         fromMenstructionDidDecide: (number) {
           analytics.logEvent(
               name: "from_menstruation_initial_setting",
               parameters: {"number": number});
-          store.modifyFromMenstruation(number);
+          store.modifyFromMenstruation(
+              pageIndex: state.currentPageIndex, fromMenstruation: number);
         },
-        durationMenstruation: setting.durationMenstruation,
+        durationMenstruation:
+            setting.menstruations[state.currentPageIndex].durationMenstruation,
         durationMenstructionDidDecide: (number) {
           analytics.logEvent(
               name: "duration_menstruation_initial_setting",
               parameters: {"number": number});
-          store.modifyDurationMenstruation(number);
+          store.modifyDurationMenstruation(
+              pageIndex: state.currentPageIndex, durationMenstruation: number);
         },
         retrieveFocusedPillSheetType: () {
-          return setting.pillSheetTypes[currentPage];
+          return setting.pillSheetTypes[state.currentPageIndex];
         },
       ),
       doneButton: null,

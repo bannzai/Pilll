@@ -24,6 +24,9 @@ final settingStoreProvider = StateNotifierProvider(
   ),
 );
 
+final settingStateProvider =
+    Provider((ref) => ref.watch(settingStoreProvider.state));
+
 class SettingStateStore extends StateNotifier<SettingState> {
   final BatchFactory _batchFactory;
   final SettingService _service;
@@ -157,27 +160,6 @@ class SettingStateStore extends StateNotifier<SettingState> {
     }
     return _service
         .update(entity.copyWith(isOnNotifyInNotTakenDuration: isOn))
-        .then((entity) => state = state.copyWith(entity: entity));
-  }
-
-  Future<void> modifyFromMenstruation(int fromMenstruation) {
-    final entity = state.entity;
-    if (entity == null) {
-      throw FormatException("setting entity not found");
-    }
-    return _service
-        .update(
-            entity.copyWith(pillNumberForFromMenstruation: fromMenstruation))
-        .then((entity) => state = state.copyWith(entity: entity));
-  }
-
-  Future<void> modifyDurationMenstruation(int durationMenstruation) {
-    final entity = state.entity;
-    if (entity == null) {
-      throw FormatException("setting entity not found");
-    }
-    return _service
-        .update(entity.copyWith(durationMenstruation: durationMenstruation))
         .then((entity) => state = state.copyWith(entity: entity));
   }
 
