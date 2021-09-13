@@ -168,7 +168,9 @@ class InitialSettingStateStore extends StateNotifier<InitialSettingState> {
       state = state.copyWith(
           menstruations: state.menstruations
             ..add(MenstruationSetting(
-                pillNumberForFromMenstruation: 0,
+                pillNumberForFromMenstruation:
+                    state.pillSheetTypes[pageIndex].totalCount -
+                        durationMenstruation,
                 durationMenstruation: durationMenstruation)));
     }
     final copiedMenstruations = [...state.menstruations];
