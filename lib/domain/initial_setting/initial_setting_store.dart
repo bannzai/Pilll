@@ -150,7 +150,7 @@ class InitialSettingStateStore extends StateNotifier<InitialSettingState> {
           menstruations: state.menstruations
             ..add(MenstruationSetting(
                 pillNumberForFromMenstruation: fromMenstruation,
-                durationMenstruation: 0)));
+                durationMenstruation: 4)));
     }
     final copiedMenstruations = [...state.menstruations];
     final menstruation = copiedMenstruations[pageIndex];
