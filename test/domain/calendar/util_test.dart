@@ -62,8 +62,11 @@ void main() {
               PillSheetGroup(pillSheetIDs: ["1"], pillSheets: [pillSheet]);
           var setting = Setting(
             pillSheetTypes: [pillSheetType],
-            pillNumberForFromMenstruation: fromMenstruation,
-            durationMenstruation: durationMenstruation,
+            menstruations: [
+              MenstruationSetting(
+                  pillNumberForFromMenstruation: fromMenstruation,
+                  durationMenstruation: durationMenstruation)
+            ],
             isOnReminder: false,
             reminderTimes: [ReminderTime(hour: 1, minute: 1)],
           );
@@ -109,8 +112,11 @@ void main() {
 
           var setting = Setting(
             pillSheetTypes: [pillSheetType],
-            pillNumberForFromMenstruation: fromMenstruation,
-            durationMenstruation: durationMenstruation,
+            menstruations: [
+              MenstruationSetting(
+                  pillNumberForFromMenstruation: fromMenstruation,
+                  durationMenstruation: durationMenstruation)
+            ],
             isOnReminder: false,
             reminderTimes: [ReminderTime(hour: 1, minute: 1)],
           );
@@ -159,8 +165,11 @@ void main() {
               PillSheetGroup(pillSheetIDs: ["1"], pillSheets: [pillSheet]);
           var setting = Setting(
             pillSheetTypes: [pillSheetType],
-            pillNumberForFromMenstruation: fromMenstruation,
-            durationMenstruation: durationMenstruation,
+            menstruations: [
+              MenstruationSetting(
+                  pillNumberForFromMenstruation: fromMenstruation,
+                  durationMenstruation: durationMenstruation)
+            ],
             isOnReminder: false,
             reminderTimes: [ReminderTime(hour: 1, minute: 1)],
           );
@@ -213,8 +222,11 @@ void main() {
               PillSheetGroup(pillSheetIDs: ["1"], pillSheets: [pillSheet]);
           var setting = Setting(
             pillSheetTypes: [pillSheetType],
-            pillNumberForFromMenstruation: fromMenstruation,
-            durationMenstruation: durationMenstruation,
+            menstruations: [
+              MenstruationSetting(
+                  pillNumberForFromMenstruation: fromMenstruation,
+                  durationMenstruation: durationMenstruation)
+            ],
             isOnReminder: false,
             reminderTimes: [ReminderTime(hour: 1, minute: 1)],
           );
@@ -291,8 +303,11 @@ void main() {
           PillSheetGroup(pillSheetIDs: ["1"], pillSheets: [pillSheet]);
       var setting = Setting(
         pillSheetTypes: [pillSheetType],
-        pillNumberForFromMenstruation: fromMenstruation,
-        durationMenstruation: durationMenstruation,
+        menstruations: [
+          MenstruationSetting(
+              pillNumberForFromMenstruation: fromMenstruation,
+              durationMenstruation: durationMenstruation)
+        ],
         isOnReminder: false,
         reminderTimes: [ReminderTime(hour: 1, minute: 1)],
       );

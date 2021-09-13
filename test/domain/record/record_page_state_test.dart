@@ -63,8 +63,10 @@ void main() {
       );
       final settingEntity = Setting(
         pillSheetTypes: [PillSheetType.pillsheet_21],
-        pillNumberForFromMenstruation: 22,
-        durationMenstruation: 4,
+        menstruations: [
+          MenstruationSetting(
+              pillNumberForFromMenstruation: 22, durationMenstruation: 4)
+        ],
         isOnReminder: true,
       );
       final pillSheetGroup =
@@ -149,8 +151,10 @@ void main() {
       );
       final settingEntity = Setting(
         pillSheetTypes: [PillSheetType.pillsheet_21],
-        pillNumberForFromMenstruation: 22,
-        durationMenstruation: 4,
+        menstruations: [
+          MenstruationSetting(
+              pillNumberForFromMenstruation: 22, durationMenstruation: 4)
+        ],
         isOnReminder: true,
       );
       final pillSheetGroup =
@@ -238,8 +242,10 @@ void main() {
       );
       final settingEntity = Setting(
         pillSheetTypes: [PillSheetType.pillsheet_21],
-        pillNumberForFromMenstruation: 22,
-        durationMenstruation: 4,
+        menstruations: [
+          MenstruationSetting(
+              pillNumberForFromMenstruation: 22, durationMenstruation: 4)
+        ],
         isOnReminder: true,
       );
       final pillSheetGroup =
@@ -310,8 +316,10 @@ void main() {
       );
       final settingEntity = Setting(
         pillSheetTypes: [PillSheetType.pillsheet_21],
-        pillNumberForFromMenstruation: 22,
-        durationMenstruation: 4,
+        menstruations: [
+          MenstruationSetting(
+              pillNumberForFromMenstruation: 22, durationMenstruation: 4)
+        ],
         isOnReminder: true,
       );
       final pillSheetGroup =

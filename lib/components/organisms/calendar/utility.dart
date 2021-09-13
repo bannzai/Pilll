@@ -20,35 +20,42 @@ List<DateRange> scheduledOrInTheMiddleMenstruationDateRanges(
     final offset = pageIndex * pillSheetGroup.totalPillCountIntoGroup;
 
     final DateTime begin;
-    final serializedTodayPillNumber = pillSheetGroup.serializedTodayPillNumber;
-    if (serializedTodayPillNumber != null) {
-      if (serializedTodayPillNumber <= setting.pillNumberForFromMenstruation) {
-        final diff =
-            setting.pillNumberForFromMenstruation - serializedTodayPillNumber;
-        begin = today().add(Duration(days: diff));
-      } else {
-        // Avoid very dirty indent
-        final _left = setting.pillNumberForFromMenstruation;
-        final _target = serializedTodayPillNumber;
-        final _right = setting.pillNumberForFromMenstruation +
-            setting.durationMenstruation;
-
-        if (_left <= _target && _target <= _right) {
+    if (setting.isOnSequenceAppearance) {
+      final serializedTodayPillNumber =
+          pillSheetGroup.serializedTodayPillNumber;
+      if (serializedTodayPillNumber != null) {
+        if (serializedTodayPillNumber <=
+            setting.pillNumberForFromMenstruation) {
+          // Left side todayPillNumber from setting.pillNumberFromMenstruation
           final diff =
-              serializedTodayPillNumber - setting.pillNumberForFromMenstruation;
-          begin = today().subtract(Duration(days: diff));
+              setting.pillNumberForFromMenstruation - serializedTodayPillNumber;
+          begin = today().add(Duration(days: diff));
         } else {
-          begin = today().add(Duration(
-              days: pillSheetGroup.remainPillCount +
-                  setting.pillNumberForFromMenstruation));
+          // Avoid very dirty indent
+          final _left = setting.pillNumberForFromMenstruation;
+          final _target = serializedTodayPillNumber;
+          final _right = setting.pillNumberForFromMenstruation +
+              setting.durationMenstruation;
+
+          if (_left <= _target && _target <= _right) {
+            // In the middle pattern
+            final diff = serializedTodayPillNumber -
+                setting.pillNumberForFromMenstruation;
+            begin = today().subtract(Duration(days: diff));
+          } else {
+            // Right side todayPillNumber from setting.pillNumberFromMenstruation
+            begin = today().add(Duration(
+                days: pillSheetGroup.remainPillCount +
+                    setting.pillNumberForFromMenstruation));
+          }
         }
+      } else {
+        // PillSheetGroup does not have actived pillSheet
+        // The lastTakenPillSheet is always present here as it is checking for empty pillSheets in the function above
+        begin = pillSheetGroup.latestTakenPillSheet!.beginingDate
+            .add(Duration(days: pillSheetGroup.remainPillCount));
       }
-    } else {
-      // PillSheetGroup does not have actived pillSheet
-      // The lastTakenPillSheet is always present here as it is checking for empty pillSheets in the function above
-      begin = pillSheetGroup.latestTakenPillSheet!.beginingDate
-          .add(Duration(days: pillSheetGroup.remainPillCount));
-    }
+    } else {}
 
     final end = begin.add(Duration(days: (setting.durationMenstruation - 1)));
     final isContained = menstruations

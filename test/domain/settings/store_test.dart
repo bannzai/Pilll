@@ -52,8 +52,10 @@ void main() {
           ReminderTime(hour: 1, minute: 0),
           ReminderTime(hour: 2, minute: 0),
         ],
-        durationMenstruation: 1,
-        pillNumberForFromMenstruation: 22,
+        menstruations: [
+          MenstruationSetting(
+              pillNumberForFromMenstruation: 22, durationMenstruation: 1)
+        ],
         isOnReminder: false,
         pillSheetTypes: [PillSheetType.pillsheet_28_4],
       );
@@ -162,8 +164,10 @@ void main() {
           ReminderTime(hour: 1, minute: 0),
           ReminderTime(hour: 2, minute: 0),
         ],
-        durationMenstruation: 1,
-        pillNumberForFromMenstruation: 22,
+        menstruations: [
+          MenstruationSetting(
+              pillNumberForFromMenstruation: 22, durationMenstruation: 1)
+        ],
         isOnReminder: false,
         pillSheetTypes: [PillSheetType.pillsheet_28_4],
       );
