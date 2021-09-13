@@ -403,8 +403,7 @@ class _$SettingTearOff {
       bool isOnNotifyInNotTakenDuration = true,
       PillSheetAppearanceMode pillSheetAppearanceMode =
           PillSheetAppearanceMode.number,
-      bool isAutomaticallyCreatePillSheet = false,
-      dynamic isOnSequenceAppearance = false}) {
+      bool isAutomaticallyCreatePillSheet = false}) {
     return _Setting(
       pillSheetTypeRawPath: pillSheetTypeRawPath,
       pillSheetTypes: pillSheetTypes,
@@ -416,7 +415,6 @@ class _$SettingTearOff {
       isOnNotifyInNotTakenDuration: isOnNotifyInNotTakenDuration,
       pillSheetAppearanceMode: pillSheetAppearanceMode,
       isAutomaticallyCreatePillSheet: isAutomaticallyCreatePillSheet,
-      isOnSequenceAppearance: isOnSequenceAppearance,
     );
   }
 
@@ -443,7 +441,6 @@ mixin _$Setting {
   PillSheetAppearanceMode get pillSheetAppearanceMode =>
       throw _privateConstructorUsedError;
   bool get isAutomaticallyCreatePillSheet => throw _privateConstructorUsedError;
-  dynamic get isOnSequenceAppearance => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -464,8 +461,7 @@ abstract class $SettingCopyWith<$Res> {
       @JsonSerializable(explicitToJson: true) bool isOnReminder,
       bool isOnNotifyInNotTakenDuration,
       PillSheetAppearanceMode pillSheetAppearanceMode,
-      bool isAutomaticallyCreatePillSheet,
-      dynamic isOnSequenceAppearance});
+      bool isAutomaticallyCreatePillSheet});
 }
 
 /// @nodoc
@@ -488,7 +484,6 @@ class _$SettingCopyWithImpl<$Res> implements $SettingCopyWith<$Res> {
     Object? isOnNotifyInNotTakenDuration = freezed,
     Object? pillSheetAppearanceMode = freezed,
     Object? isAutomaticallyCreatePillSheet = freezed,
-    Object? isOnSequenceAppearance = freezed,
   }) {
     return _then(_value.copyWith(
       pillSheetTypeRawPath: pillSheetTypeRawPath == freezed
@@ -531,10 +526,6 @@ class _$SettingCopyWithImpl<$Res> implements $SettingCopyWith<$Res> {
           ? _value.isAutomaticallyCreatePillSheet
           : isAutomaticallyCreatePillSheet // ignore: cast_nullable_to_non_nullable
               as bool,
-      isOnSequenceAppearance: isOnSequenceAppearance == freezed
-          ? _value.isOnSequenceAppearance
-          : isOnSequenceAppearance // ignore: cast_nullable_to_non_nullable
-              as dynamic,
     ));
   }
 }
@@ -554,8 +545,7 @@ abstract class _$SettingCopyWith<$Res> implements $SettingCopyWith<$Res> {
       @JsonSerializable(explicitToJson: true) bool isOnReminder,
       bool isOnNotifyInNotTakenDuration,
       PillSheetAppearanceMode pillSheetAppearanceMode,
-      bool isAutomaticallyCreatePillSheet,
-      dynamic isOnSequenceAppearance});
+      bool isAutomaticallyCreatePillSheet});
 }
 
 /// @nodoc
@@ -579,7 +569,6 @@ class __$SettingCopyWithImpl<$Res> extends _$SettingCopyWithImpl<$Res>
     Object? isOnNotifyInNotTakenDuration = freezed,
     Object? pillSheetAppearanceMode = freezed,
     Object? isAutomaticallyCreatePillSheet = freezed,
-    Object? isOnSequenceAppearance = freezed,
   }) {
     return _then(_Setting(
       pillSheetTypeRawPath: pillSheetTypeRawPath == freezed
@@ -622,9 +611,6 @@ class __$SettingCopyWithImpl<$Res> extends _$SettingCopyWithImpl<$Res>
           ? _value.isAutomaticallyCreatePillSheet
           : isAutomaticallyCreatePillSheet // ignore: cast_nullable_to_non_nullable
               as bool,
-      isOnSequenceAppearance: isOnSequenceAppearance == freezed
-          ? _value.isOnSequenceAppearance
-          : isOnSequenceAppearance,
     ));
   }
 }
@@ -643,8 +629,7 @@ class _$_Setting extends _Setting with DiagnosticableTreeMixin {
       @JsonSerializable(explicitToJson: true) required this.isOnReminder,
       this.isOnNotifyInNotTakenDuration = true,
       this.pillSheetAppearanceMode = PillSheetAppearanceMode.number,
-      this.isAutomaticallyCreatePillSheet = false,
-      this.isOnSequenceAppearance = false})
+      this.isAutomaticallyCreatePillSheet = false})
       : super._();
 
   factory _$_Setting.fromJson(Map<String, dynamic> json) =>
@@ -676,13 +661,10 @@ class _$_Setting extends _Setting with DiagnosticableTreeMixin {
   @JsonKey(defaultValue: false)
   @override
   final bool isAutomaticallyCreatePillSheet;
-  @JsonKey(defaultValue: false)
-  @override
-  final dynamic isOnSequenceAppearance;
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'Setting(pillSheetTypeRawPath: $pillSheetTypeRawPath, pillSheetTypes: $pillSheetTypes, menstruations: $menstruations, pillNumberForFromMenstruation: $pillNumberForFromMenstruation, durationMenstruation: $durationMenstruation, reminderTimes: $reminderTimes, isOnReminder: $isOnReminder, isOnNotifyInNotTakenDuration: $isOnNotifyInNotTakenDuration, pillSheetAppearanceMode: $pillSheetAppearanceMode, isAutomaticallyCreatePillSheet: $isAutomaticallyCreatePillSheet, isOnSequenceAppearance: $isOnSequenceAppearance)';
+    return 'Setting(pillSheetTypeRawPath: $pillSheetTypeRawPath, pillSheetTypes: $pillSheetTypes, menstruations: $menstruations, pillNumberForFromMenstruation: $pillNumberForFromMenstruation, durationMenstruation: $durationMenstruation, reminderTimes: $reminderTimes, isOnReminder: $isOnReminder, isOnNotifyInNotTakenDuration: $isOnNotifyInNotTakenDuration, pillSheetAppearanceMode: $pillSheetAppearanceMode, isAutomaticallyCreatePillSheet: $isAutomaticallyCreatePillSheet)';
   }
 
   @override
@@ -703,9 +685,7 @@ class _$_Setting extends _Setting with DiagnosticableTreeMixin {
       ..add(DiagnosticsProperty(
           'pillSheetAppearanceMode', pillSheetAppearanceMode))
       ..add(DiagnosticsProperty(
-          'isAutomaticallyCreatePillSheet', isAutomaticallyCreatePillSheet))
-      ..add(DiagnosticsProperty(
-          'isOnSequenceAppearance', isOnSequenceAppearance));
+          'isAutomaticallyCreatePillSheet', isAutomaticallyCreatePillSheet));
   }
 
   @override
@@ -721,7 +701,8 @@ class _$_Setting extends _Setting with DiagnosticableTreeMixin {
             (identical(other.menstruations, menstruations) ||
                 const DeepCollectionEquality()
                     .equals(other.menstruations, menstruations)) &&
-            (identical(other.pillNumberForFromMenstruation, pillNumberForFromMenstruation) ||
+            (identical(other.pillNumberForFromMenstruation,
+                    pillNumberForFromMenstruation) ||
                 const DeepCollectionEquality().equals(
                     other.pillNumberForFromMenstruation,
                     pillNumberForFromMenstruation)) &&
@@ -746,10 +727,7 @@ class _$_Setting extends _Setting with DiagnosticableTreeMixin {
                     isAutomaticallyCreatePillSheet) ||
                 const DeepCollectionEquality().equals(
                     other.isAutomaticallyCreatePillSheet,
-                    isAutomaticallyCreatePillSheet)) &&
-            (identical(other.isOnSequenceAppearance, isOnSequenceAppearance) ||
-                const DeepCollectionEquality().equals(
-                    other.isOnSequenceAppearance, isOnSequenceAppearance)));
+                    isAutomaticallyCreatePillSheet)));
   }
 
   @override
@@ -764,8 +742,7 @@ class _$_Setting extends _Setting with DiagnosticableTreeMixin {
       const DeepCollectionEquality().hash(isOnReminder) ^
       const DeepCollectionEquality().hash(isOnNotifyInNotTakenDuration) ^
       const DeepCollectionEquality().hash(pillSheetAppearanceMode) ^
-      const DeepCollectionEquality().hash(isAutomaticallyCreatePillSheet) ^
-      const DeepCollectionEquality().hash(isOnSequenceAppearance);
+      const DeepCollectionEquality().hash(isAutomaticallyCreatePillSheet);
 
   @JsonKey(ignore: true)
   @override
@@ -789,8 +766,7 @@ abstract class _Setting extends Setting {
       @JsonSerializable(explicitToJson: true) required bool isOnReminder,
       bool isOnNotifyInNotTakenDuration,
       PillSheetAppearanceMode pillSheetAppearanceMode,
-      bool isAutomaticallyCreatePillSheet,
-      dynamic isOnSequenceAppearance}) = _$_Setting;
+      bool isAutomaticallyCreatePillSheet}) = _$_Setting;
   _Setting._() : super._();
 
   factory _Setting.fromJson(Map<String, dynamic> json) = _$_Setting.fromJson;
@@ -818,8 +794,6 @@ abstract class _Setting extends Setting {
       throw _privateConstructorUsedError;
   @override
   bool get isAutomaticallyCreatePillSheet => throw _privateConstructorUsedError;
-  @override
-  dynamic get isOnSequenceAppearance => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$SettingCopyWith<_Setting> get copyWith =>

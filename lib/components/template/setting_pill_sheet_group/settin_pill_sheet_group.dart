@@ -12,7 +12,6 @@ class SettingPillSheetGroup extends StatelessWidget {
   const SettingPillSheetGroup({
     Key? key,
     required this.pillSheetTypes,
-    required this.isOnSequenceAppearance,
     required this.onAdd,
     required this.onChange,
     required this.onDelete,
@@ -20,7 +19,6 @@ class SettingPillSheetGroup extends StatelessWidget {
   }) : super(key: key);
 
   final List<PillSheetType> pillSheetTypes;
-  final bool isOnSequenceAppearance;
   final Function(PillSheetType) onAdd;
   final Function(int, PillSheetType) onChange;
   final Function(int) onDelete;
