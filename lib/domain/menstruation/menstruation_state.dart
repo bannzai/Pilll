@@ -52,6 +52,26 @@ abstract class MenstruationState implements _$MenstruationState {
   Menstruation? get latestMenstruation {
     return entities.isEmpty ? null : entities.first;
   }
+
+  bool get canNotShowMenstruationEditPage {
+    final activedPillSheetIndex =
+        latestPillSheetGroup?.activedPillSheet?.groupIndex;
+    if (activedPillSheetIndex == null) {
+      return true;
+    }
+    final setting = this.setting;
+    if (setting == null) {
+      return true;
+    }
+    if (setting.menstruations.length <= activedPillSheetIndex + 1) {
+      return true;
+    }
+    if (setting.menstruations[activedPillSheetIndex].durationMenstruation ==
+        0) {
+      return true;
+    }
+    return false;
+  }
 }
 
 List<List<DateTime>> _calendarDataSource() {
