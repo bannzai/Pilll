@@ -195,11 +195,10 @@ class InitialSettingStateStore extends StateNotifier<InitialSettingState> {
     _settingService.updateWithBatch(batch, state.buildSetting());
 
     final todayPillNumber = state.todayPillNumber;
-    var pageIndex = 0;
     if (todayPillNumber != null) {
       final Map<String, PillSheet> idAndPillSheet = {};
 
-      state.pillSheetTypes.forEach((pillSheetType) {
+      state.pillSheetTypes.asMap().keys.forEach((pageIndex) {
         final pillSheet = state.buildPillSheet(
           pageIndex: pageIndex,
           todayPillNumber: todayPillNumber,
@@ -223,8 +222,6 @@ class InitialSettingStateStore extends StateNotifier<InitialSettingState> {
       final pillSheetGroup =
           PillSheetGroup(pillSheetIDs: pillSheetIDs, pillSheets: pillSheets);
       _pillSheetGroupService.register(batch, pillSheetGroup);
-
-      pageIndex++;
     }
 
     await batch.commit();
