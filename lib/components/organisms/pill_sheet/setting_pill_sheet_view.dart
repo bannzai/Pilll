@@ -21,7 +21,6 @@ class SettingPillSheetView extends StatelessWidget {
     Key? key,
     required this.pageIndex,
     required this.pillSheetTypes,
-    required this.isOnSequenceAppearance,
     required this.selectedPillNumber,
     required this.markSelected,
   }) : super(key: key);

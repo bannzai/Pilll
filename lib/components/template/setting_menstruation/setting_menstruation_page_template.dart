@@ -53,12 +53,7 @@ class SettingMenstruationPageTemplate extends StatelessWidget {
                   textAlign: TextAlign.center,
                 ),
                 SizedBox(height: 59),
-                () {
-                  if (isOnSequenceAppearance)
-                    return pillSheetList;
-                  else
-                    return Center(child: pillSheetView);
-                }(),
+                pillSheetList,
                 SizedBox(height: 24),
                 dynamicDescription,
               ],
