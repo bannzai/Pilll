@@ -39,7 +39,6 @@ class TodayPllNumberRow extends HookWidget {
       ModifingPillNumberPageRoute.route(
         pillSheetGroup: pillSheetGroup,
         activedPillSheet: activedPillSheet,
-        isOnSequenceAppearance: setting.isOnSequenceAppearance,
         markSelected: (number) {
           Navigator.pop(context);
           store.modifyBeginingDate(number);

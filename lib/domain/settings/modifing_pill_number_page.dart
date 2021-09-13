@@ -57,7 +57,6 @@ class _ModifingPillNumberPageState extends State<ModifingPillNumberPage> {
               Center(
                 child: SettingPillSheetView(
                   pageIndex: 0,
-                  isOnSequenceAppearance: widget.isOnSequenceAppearance,
                   pillSheetTypes: widget.pillSheetGroup.pillSheets
                       .map((e) => e.pillSheetType)
                       .toList(),
