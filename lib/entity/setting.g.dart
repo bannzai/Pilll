@@ -43,9 +43,6 @@ _$_Setting _$_$_SettingFromJson(Map<String, dynamic> json) {
     menstruations: (json['menstruations'] as List<dynamic>)
         .map((e) => MenstruationSetting.fromJson(e as Map<String, dynamic>))
         .toList(),
-    pillNumberForFromMenstruation:
-        json['pillNumberForFromMenstruation'] as int?,
-    durationMenstruation: json['durationMenstruation'] as int?,
     reminderTimes: (json['reminderTimes'] as List<dynamic>?)
             ?.map((e) => ReminderTime.fromJson(e as Map<String, dynamic>))
             .toList() ??
@@ -68,8 +65,6 @@ Map<String, dynamic> _$_$_SettingToJson(_$_Setting instance) =>
           .map((e) => _$PillSheetTypeEnumMap[e])
           .toList(),
       'menstruations': instance.menstruations.map((e) => e.toJson()).toList(),
-      'pillNumberForFromMenstruation': instance.pillNumberForFromMenstruation,
-      'durationMenstruation': instance.durationMenstruation,
       'reminderTimes': instance.reminderTimes.map((e) => e.toJson()).toList(),
       'isOnReminder': instance.isOnReminder,
       'isOnNotifyInNotTakenDuration': instance.isOnNotifyInNotTakenDuration,
