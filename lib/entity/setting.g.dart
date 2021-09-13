@@ -36,7 +36,6 @@ Map<String, dynamic> _$_$_MenstruationSettingToJson(
 
 _$_Setting _$_$_SettingFromJson(Map<String, dynamic> json) {
   return _$_Setting(
-    pillSheetTypeRawPath: json['pillSheetTypeRawPath'] as String?,
     pillSheetTypes: (json['pillSheetTypes'] as List<dynamic>?)
             ?.map((e) => _$enumDecode(_$PillSheetTypeEnumMap, e))
             .toList() ??
@@ -65,7 +64,6 @@ _$_Setting _$_$_SettingFromJson(Map<String, dynamic> json) {
 
 Map<String, dynamic> _$_$_SettingToJson(_$_Setting instance) =>
     <String, dynamic>{
-      'pillSheetTypeRawPath': instance.pillSheetTypeRawPath,
       'pillSheetTypes': instance.pillSheetTypes
           .map((e) => _$PillSheetTypeEnumMap[e])
           .toList(),
