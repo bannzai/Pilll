@@ -11,7 +11,6 @@ import 'package:flutter/widgets.dart';
 
 class SettingMenstruationPageTemplate extends StatelessWidget {
   final String title;
-  final bool isOnSequenceAppearance;
   final SettingMenstruationPillSheetList pillSheetList;
   final SettingPillSheetView pillSheetView;
   final SettingMenstruationDynamicDescription dynamicDescription;
@@ -20,7 +19,6 @@ class SettingMenstruationPageTemplate extends StatelessWidget {
   const SettingMenstruationPageTemplate({
     Key? key,
     required this.title,
-    required this.isOnSequenceAppearance,
     required this.pillSheetList,
     required this.pillSheetView,
     required this.dynamicDescription,

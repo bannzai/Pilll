@@ -13,8 +13,6 @@ abstract class InitialSettingState implements _$InitialSettingState {
   factory InitialSettingState({
     @Default([])
         List<PillSheetType> pillSheetTypes,
-    @Default(false)
-        isOnSequenceAppearance,
     int? todayPillNumber,
     @Default(23)
         int fromMenstruation,

@@ -11,14 +11,12 @@ import 'package:flutter/material.dart';
 class ModifingPillNumberPage extends StatefulWidget {
   final PillSheetGroup pillSheetGroup;
   final PillSheet activedPillSheet;
-  final bool isOnSequenceAppearance;
   final Function(int) markSelected;
 
   const ModifingPillNumberPage({
     Key? key,
     required this.pillSheetGroup,
     required this.activedPillSheet,
-    required this.isOnSequenceAppearance,
     required this.markSelected,
   }) : super(key: key);
 
@@ -92,7 +90,6 @@ extension ModifingPillNumberPageRoute on ModifingPillNumberPage {
   static Route<dynamic> route({
     required PillSheetGroup pillSheetGroup,
     required PillSheet activedPillSheet,
-    required bool isOnSequenceAppearance,
     required Function(int) markSelected,
   }) {
     return MaterialPageRoute(
@@ -100,7 +97,6 @@ extension ModifingPillNumberPageRoute on ModifingPillNumberPage {
       builder: (_) => ModifingPillNumberPage(
         pillSheetGroup: pillSheetGroup,
         activedPillSheet: activedPillSheet,
-        isOnSequenceAppearance: isOnSequenceAppearance,
         markSelected: markSelected,
       ),
     );

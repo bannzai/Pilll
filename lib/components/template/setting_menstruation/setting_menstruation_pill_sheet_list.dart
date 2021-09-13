@@ -7,14 +7,12 @@ import 'package:pilll/entity/pill_sheet_type.dart';
 
 class SettingMenstruationPillSheetList extends HookWidget {
   final List<PillSheetType> pillSheetTypes;
-  final bool isOnSequenceAppearance;
   final int? selectedPillNumber;
   final Function(int) onPageChanged;
   final Function(int) markSelected;
 
   SettingMenstruationPillSheetList({
     required this.pillSheetTypes,
-    required this.isOnSequenceAppearance,
     required this.selectedPillNumber,
     required this.onPageChanged,
     required this.markSelected,

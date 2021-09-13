@@ -101,25 +101,6 @@ class InitialSettingStateStore extends StateNotifier<InitialSettingState> {
     state = state.copyWith(pillSheetTypes: copied);
   }
 
-  void setIsOnSequenceAppearance(bool isOnSequenceAppearance) {
-    state = state.copyWith(isOnSequenceAppearance: isOnSequenceAppearance);
-    if (!isOnSequenceAppearance) {
-      if (state.pillSheetTypes.isEmpty) {
-        return;
-      }
-      if (state.fromMenstruation > state.pillSheetTypes.first.totalCount) {
-        state = state.copyWith(
-            fromMenstruation: state.pillSheetTypes.first.totalCount);
-      }
-      final todayPillNumber = state.todayPillNumber;
-      if (todayPillNumber != null &&
-          todayPillNumber > state.pillSheetTypes.first.totalCount) {
-        state = state.copyWith(
-            todayPillNumber: state.pillSheetTypes.first.totalCount);
-      }
-    }
-  }
-
   void setReminderTime(int index, int hour, int minute) {
     final copied = [...state.reminderTimes];
     if (index >= copied.length) {
