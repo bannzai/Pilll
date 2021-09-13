@@ -52,8 +52,10 @@ class SettingMenstruationPillSheetList extends HookWidget {
                     child: SettingPillSheetView(
                       pageIndex: pageIndex,
                       pillSheetTypes: pillSheetTypes,
-                      selectedPillNumber: selectedPillNumber(pageIndex),
-                      markSelected: (number) => markSelected(pageIndex, number),
+                      selectedPillNumberIntoPillSheet:
+                          selectedPillNumber(pageIndex),
+                      markSelected: (pageIndex, number) =>
+                          markSelected(pageIndex, number),
                     ),
                   ),
                   Spacer(),

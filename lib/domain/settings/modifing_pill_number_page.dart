@@ -61,7 +61,7 @@ class _ModifingPillNumberPageState extends State<ModifingPillNumberPage> {
                   pillSheetTypes: widget.pillSheetGroup.pillSheets
                       .map((e) => e.pillSheetType)
                       .toList(),
-                  selectedPillNumber: selectedPillMarkNumber,
+                  selectedPillNumberIntoPillSheet: selectedPillMarkNumber,
                   markSelected: (number) {
                     setState(() => selectedPillMarkNumber = number);
                   },
