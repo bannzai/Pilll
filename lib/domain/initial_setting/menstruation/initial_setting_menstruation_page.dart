@@ -17,34 +17,21 @@ class InitialSettingMenstruationPage extends HookWidget {
     final store = useProvider(initialSettingStoreProvider);
     final state = useProvider(initialSettingStoreProvider.state);
 
-    int currentPage = 0;
     return SettingMenstruationPageTemplate(
       title: "4/5",
-      isOnSequenceAppearance: state.isOnSequenceAppearance,
       pillSheetList: SettingMenstruationPillSheetList(
         pillSheetTypes: state.pillSheetTypes,
-        isOnSequenceAppearance: state.isOnSequenceAppearance,
-        selectedPillNumber: state.fromMenstruation,
-        onPageChanged: (number) {
-          currentPage = number;
+        selectedPillNumber: (pageIndex) =>
+            state.menstruations[pageIndex].pillNumberForFromMenstruation,
+        onPageChanged: (pageIndex) {
+          store.setCurrentMenstruationPageIndex(pageIndex);
         },
-        markSelected: (number) {
+        markSelected: (pageIndex, number) {
           analytics.logEvent(
               name: "from_menstruation_initial_setting",
-              parameters: {"number": number});
-          store.setFromMenstruation(number);
-        },
-      ),
-      pillSheetView: SettingPillSheetView(
-        pageIndex: 0,
-        isOnSequenceAppearance: state.isOnSequenceAppearance,
-        pillSheetTypes: state.pillSheetTypes,
-        selectedPillNumber: state.fromMenstruation,
-        markSelected: (number) {
-          analytics.logEvent(
-              name: "from_menstruation_initial_setting",
-              parameters: {"number": number});
-          store.setFromMenstruation(number);
+              parameters: {"number": number, "page": pageIndex});
+          store.setFromMenstruation(
+              pageIndex: pageIndex, fromMenstruation: number);
         },
       ),
       doneButton: PrimaryButton(
@@ -56,22 +43,31 @@ class InitialSettingMenstruationPage extends HookWidget {
         text: "次へ",
       ),
       dynamicDescription: SettingMenstruationDynamicDescription(
-        fromMenstruation: state.fromMenstruation,
+        fromMenstruation:
+            state.focusedMenstruation.pillNumberForFromMenstruation,
         fromMenstructionDidDecide: (number) {
           analytics.logEvent(
               name: "from_menstruation_initial_setting",
               parameters: {"number": number});
-          store.setFromMenstruation(number);
+          store.setFromMenstruation(
+            pageIndex: state.currentMenstruationPageIndex,
+            fromMenstruation: number,
+          );
         },
-        durationMenstruation: state.durationMenstruation,
+        durationMenstruation: state.focusedMenstruation.durationMenstruation,
         durationMenstructionDidDecide: (number) {
           analytics.logEvent(
               name: "duration_menstruation_initial_setting",
-              parameters: {"number": number});
-          store.setDurationMenstruation(number);
+              parameters: {
+                "number": number,
+                "page": state.currentMenstruationPageIndex
+              });
+          store.setDurationMenstruation(
+              pageIndex: state.currentMenstruationPageIndex,
+              durationMenstruation: number);
         },
         retrieveFocusedPillSheetType: () {
-          return state.pillSheetTypes[currentPage];
+          return state.pillSheetTypes[state.currentMenstruationPageIndex];
         },
       ),
     );

@@ -1,3 +1,4 @@
+import 'package:pilll/domain/menstruation_edit/menstruation_edit_store.dart';
 import 'package:pilll/util/datetime/day.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:pilll/entity/pill_mark_type.dart';
@@ -27,6 +28,8 @@ abstract class InitialSettingState implements _$InitialSettingState {
         bool isLoading,
     @Default(false)
         bool isAccountCooperationDidEnd,
+    @Default(0)
+        currentMenstruationPageIndex,
   }) = _InitialSettingState;
 
   DateTime? reminderTimeOrDefault(int index) {
@@ -42,6 +45,9 @@ abstract class InitialSettingState implements _$InitialSettingState {
     }
     return null;
   }
+
+  MenstruationSetting get focusedMenstruation =>
+      menstruations[currentMenstruationPageIndex];
 
   Setting buildSetting() => Setting(
         menstruations: menstruations,

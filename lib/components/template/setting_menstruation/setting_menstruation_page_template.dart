@@ -2,7 +2,6 @@ import 'package:pilll/components/atoms/buttons.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
-import 'package:pilll/components/organisms/pill_sheet/setting_pill_sheet_view.dart';
 import 'package:pilll/components/template/setting_menstruation/setting_menstruation_dynamic_description.dart';
 import 'package:pilll/components/template/setting_menstruation/setting_menstruation_pill_sheet_list.dart';
 import 'package:flutter/cupertino.dart';
@@ -12,7 +11,6 @@ import 'package:flutter/widgets.dart';
 class SettingMenstruationPageTemplate extends StatelessWidget {
   final String title;
   final SettingMenstruationPillSheetList pillSheetList;
-  final SettingPillSheetView pillSheetView;
   final SettingMenstruationDynamicDescription dynamicDescription;
   final PrimaryButton? doneButton;
 
@@ -20,7 +18,6 @@ class SettingMenstruationPageTemplate extends StatelessWidget {
     Key? key,
     required this.title,
     required this.pillSheetList,
-    required this.pillSheetView,
     required this.dynamicDescription,
     required this.doneButton,
   }) : super(key: key);
