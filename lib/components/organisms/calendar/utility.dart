@@ -18,56 +18,29 @@ List<DateRange> scheduledOrInTheMiddleMenstruationDateRanges(
   assert(maxPageCount > 0);
   return List.generate(maxPageCount, (pageIndex) {
     final offset = pageIndex * pillSheetGroup.totalPillCountIntoGroup;
-
-    final DateTime begin;
-    if (setting.isOnSequenceAppearance) {
-      final serializedTodayPillNumber =
-          pillSheetGroup.serializedTodayPillNumber;
-      if (serializedTodayPillNumber != null) {
-        if (serializedTodayPillNumber <=
-            setting.pillNumberForFromMenstruation) {
-          // Left side todayPillNumber from setting.pillNumberFromMenstruation
-          final diff =
-              setting.pillNumberForFromMenstruation - serializedTodayPillNumber;
-          begin = today().add(Duration(days: diff));
-        } else {
-          // Avoid very dirty indent
-          final _left = setting.pillNumberForFromMenstruation;
-          final _target = serializedTodayPillNumber;
-          final _right = setting.pillNumberForFromMenstruation +
-              setting.durationMenstruation;
-
-          if (_left <= _target && _target <= _right) {
-            // In the middle pattern
-            final diff = serializedTodayPillNumber -
-                setting.pillNumberForFromMenstruation;
-            begin = today().subtract(Duration(days: diff));
-          } else {
-            // Right side todayPillNumber from setting.pillNumberFromMenstruation
-            begin = today().add(Duration(
-                days: pillSheetGroup.remainPillCount +
-                    setting.pillNumberForFromMenstruation));
-          }
-        }
-      } else {
-        // PillSheetGroup does not have actived pillSheet
-        // The lastTakenPillSheet is always present here as it is checking for empty pillSheets in the function above
-        begin = pillSheetGroup.latestTakenPillSheet!.beginingDate
-            .add(Duration(days: pillSheetGroup.remainPillCount));
+    return pillSheetGroup.pillSheets.asMap().keys.map((index) {
+      final pillSheet = pillSheetGroup.pillSheets[index];
+      if (index + 1 < setting.menstruations.length) {
+        return null;
       }
-    } else {}
-
-    final end = begin.add(Duration(days: (setting.durationMenstruation - 1)));
-    final isContained = menstruations
-        .where((element) =>
-            element.dateRange.inRange(begin) || element.dateRange.inRange(end))
-        .isNotEmpty;
-    if (isContained) {
-      return null;
-    }
-    return DateRange(
-        begin.add(Duration(days: offset)), end.add(Duration(days: offset)));
-  }).where((element) => element != null).toList().cast();
+      final menstruationSetting = setting.menstruations[index];
+      final begin = pillSheet.beginingDate.add(Duration(
+          days: (menstruationSetting.pillNumberForFromMenstruation - 1) +
+              offset));
+      final end = begin
+          .add(Duration(days: (menstruationSetting.durationMenstruation - 1)));
+      final isContained = menstruations
+          .where((element) =>
+              element.dateRange.inRange(begin) ||
+              element.dateRange.inRange(end))
+          .isNotEmpty;
+      if (isContained) {
+        return null;
+      }
+      return DateRange(
+          begin.add(Duration(days: offset)), end.add(Duration(days: offset)));
+    }).where((element) => element != null);
+  }).expand((element) => element).toList().cast();
 }
 
 List<DateRange> nextPillSheetDateRanges(
