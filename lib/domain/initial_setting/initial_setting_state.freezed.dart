@@ -19,8 +19,7 @@ class _$InitialSettingStateTearOff {
   _InitialSettingState call(
       {List<PillSheetType> pillSheetTypes = const [],
       int? todayPillNumber,
-      int fromMenstruation = 23,
-      int durationMenstruation = 4,
+      List<MenstruationSetting> menstruations = const [],
       List<ReminderTime> reminderTimes = const [
         const ReminderTime(hour: 21, minute: 0),
         const ReminderTime(hour: 22, minute: 0)
@@ -31,8 +30,7 @@ class _$InitialSettingStateTearOff {
     return _InitialSettingState(
       pillSheetTypes: pillSheetTypes,
       todayPillNumber: todayPillNumber,
-      fromMenstruation: fromMenstruation,
-      durationMenstruation: durationMenstruation,
+      menstruations: menstruations,
       reminderTimes: reminderTimes,
       isOnReminder: isOnReminder,
       isLoading: isLoading,
@@ -48,8 +46,8 @@ const $InitialSettingState = _$InitialSettingStateTearOff();
 mixin _$InitialSettingState {
   List<PillSheetType> get pillSheetTypes => throw _privateConstructorUsedError;
   int? get todayPillNumber => throw _privateConstructorUsedError;
-  int get fromMenstruation => throw _privateConstructorUsedError;
-  int get durationMenstruation => throw _privateConstructorUsedError;
+  List<MenstruationSetting> get menstruations =>
+      throw _privateConstructorUsedError;
   List<ReminderTime> get reminderTimes => throw _privateConstructorUsedError;
   bool get isOnReminder => throw _privateConstructorUsedError;
   bool get isLoading => throw _privateConstructorUsedError;
@@ -68,8 +66,7 @@ abstract class $InitialSettingStateCopyWith<$Res> {
   $Res call(
       {List<PillSheetType> pillSheetTypes,
       int? todayPillNumber,
-      int fromMenstruation,
-      int durationMenstruation,
+      List<MenstruationSetting> menstruations,
       List<ReminderTime> reminderTimes,
       bool isOnReminder,
       bool isLoading,
@@ -89,8 +86,7 @@ class _$InitialSettingStateCopyWithImpl<$Res>
   $Res call({
     Object? pillSheetTypes = freezed,
     Object? todayPillNumber = freezed,
-    Object? fromMenstruation = freezed,
-    Object? durationMenstruation = freezed,
+    Object? menstruations = freezed,
     Object? reminderTimes = freezed,
     Object? isOnReminder = freezed,
     Object? isLoading = freezed,
@@ -105,14 +101,10 @@ class _$InitialSettingStateCopyWithImpl<$Res>
           ? _value.todayPillNumber
           : todayPillNumber // ignore: cast_nullable_to_non_nullable
               as int?,
-      fromMenstruation: fromMenstruation == freezed
-          ? _value.fromMenstruation
-          : fromMenstruation // ignore: cast_nullable_to_non_nullable
-              as int,
-      durationMenstruation: durationMenstruation == freezed
-          ? _value.durationMenstruation
-          : durationMenstruation // ignore: cast_nullable_to_non_nullable
-              as int,
+      menstruations: menstruations == freezed
+          ? _value.menstruations
+          : menstruations // ignore: cast_nullable_to_non_nullable
+              as List<MenstruationSetting>,
       reminderTimes: reminderTimes == freezed
           ? _value.reminderTimes
           : reminderTimes // ignore: cast_nullable_to_non_nullable
@@ -143,8 +135,7 @@ abstract class _$InitialSettingStateCopyWith<$Res>
   $Res call(
       {List<PillSheetType> pillSheetTypes,
       int? todayPillNumber,
-      int fromMenstruation,
-      int durationMenstruation,
+      List<MenstruationSetting> menstruations,
       List<ReminderTime> reminderTimes,
       bool isOnReminder,
       bool isLoading,
@@ -166,8 +157,7 @@ class __$InitialSettingStateCopyWithImpl<$Res>
   $Res call({
     Object? pillSheetTypes = freezed,
     Object? todayPillNumber = freezed,
-    Object? fromMenstruation = freezed,
-    Object? durationMenstruation = freezed,
+    Object? menstruations = freezed,
     Object? reminderTimes = freezed,
     Object? isOnReminder = freezed,
     Object? isLoading = freezed,
@@ -182,14 +172,10 @@ class __$InitialSettingStateCopyWithImpl<$Res>
           ? _value.todayPillNumber
           : todayPillNumber // ignore: cast_nullable_to_non_nullable
               as int?,
-      fromMenstruation: fromMenstruation == freezed
-          ? _value.fromMenstruation
-          : fromMenstruation // ignore: cast_nullable_to_non_nullable
-              as int,
-      durationMenstruation: durationMenstruation == freezed
-          ? _value.durationMenstruation
-          : durationMenstruation // ignore: cast_nullable_to_non_nullable
-              as int,
+      menstruations: menstruations == freezed
+          ? _value.menstruations
+          : menstruations // ignore: cast_nullable_to_non_nullable
+              as List<MenstruationSetting>,
       reminderTimes: reminderTimes == freezed
           ? _value.reminderTimes
           : reminderTimes // ignore: cast_nullable_to_non_nullable
@@ -216,8 +202,7 @@ class _$_InitialSettingState extends _InitialSettingState {
   _$_InitialSettingState(
       {this.pillSheetTypes = const [],
       this.todayPillNumber,
-      this.fromMenstruation = 23,
-      this.durationMenstruation = 4,
+      this.menstruations = const [],
       this.reminderTimes = const [
         const ReminderTime(hour: 21, minute: 0),
         const ReminderTime(hour: 22, minute: 0)
@@ -232,12 +217,9 @@ class _$_InitialSettingState extends _InitialSettingState {
   final List<PillSheetType> pillSheetTypes;
   @override
   final int? todayPillNumber;
-  @JsonKey(defaultValue: 23)
+  @JsonKey(defaultValue: const [])
   @override
-  final int fromMenstruation;
-  @JsonKey(defaultValue: 4)
-  @override
-  final int durationMenstruation;
+  final List<MenstruationSetting> menstruations;
   @JsonKey(defaultValue: const [
     const ReminderTime(hour: 21, minute: 0),
     const ReminderTime(hour: 22, minute: 0)
@@ -256,7 +238,7 @@ class _$_InitialSettingState extends _InitialSettingState {
 
   @override
   String toString() {
-    return 'InitialSettingState(pillSheetTypes: $pillSheetTypes, todayPillNumber: $todayPillNumber, fromMenstruation: $fromMenstruation, durationMenstruation: $durationMenstruation, reminderTimes: $reminderTimes, isOnReminder: $isOnReminder, isLoading: $isLoading, isAccountCooperationDidEnd: $isAccountCooperationDidEnd)';
+    return 'InitialSettingState(pillSheetTypes: $pillSheetTypes, todayPillNumber: $todayPillNumber, menstruations: $menstruations, reminderTimes: $reminderTimes, isOnReminder: $isOnReminder, isLoading: $isLoading, isAccountCooperationDidEnd: $isAccountCooperationDidEnd)';
   }
 
   @override
@@ -269,12 +251,9 @@ class _$_InitialSettingState extends _InitialSettingState {
             (identical(other.todayPillNumber, todayPillNumber) ||
                 const DeepCollectionEquality()
                     .equals(other.todayPillNumber, todayPillNumber)) &&
-            (identical(other.fromMenstruation, fromMenstruation) ||
+            (identical(other.menstruations, menstruations) ||
                 const DeepCollectionEquality()
-                    .equals(other.fromMenstruation, fromMenstruation)) &&
-            (identical(other.durationMenstruation, durationMenstruation) ||
-                const DeepCollectionEquality().equals(
-                    other.durationMenstruation, durationMenstruation)) &&
+                    .equals(other.menstruations, menstruations)) &&
             (identical(other.reminderTimes, reminderTimes) ||
                 const DeepCollectionEquality()
                     .equals(other.reminderTimes, reminderTimes)) &&
@@ -296,8 +275,7 @@ class _$_InitialSettingState extends _InitialSettingState {
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(pillSheetTypes) ^
       const DeepCollectionEquality().hash(todayPillNumber) ^
-      const DeepCollectionEquality().hash(fromMenstruation) ^
-      const DeepCollectionEquality().hash(durationMenstruation) ^
+      const DeepCollectionEquality().hash(menstruations) ^
       const DeepCollectionEquality().hash(reminderTimes) ^
       const DeepCollectionEquality().hash(isOnReminder) ^
       const DeepCollectionEquality().hash(isLoading) ^
@@ -314,8 +292,7 @@ abstract class _InitialSettingState extends InitialSettingState {
   factory _InitialSettingState(
       {List<PillSheetType> pillSheetTypes,
       int? todayPillNumber,
-      int fromMenstruation,
-      int durationMenstruation,
+      List<MenstruationSetting> menstruations,
       List<ReminderTime> reminderTimes,
       bool isOnReminder,
       bool isLoading,
@@ -327,9 +304,8 @@ abstract class _InitialSettingState extends InitialSettingState {
   @override
   int? get todayPillNumber => throw _privateConstructorUsedError;
   @override
-  int get fromMenstruation => throw _privateConstructorUsedError;
-  @override
-  int get durationMenstruation => throw _privateConstructorUsedError;
+  List<MenstruationSetting> get menstruations =>
+      throw _privateConstructorUsedError;
   @override
   List<ReminderTime> get reminderTimes => throw _privateConstructorUsedError;
   @override

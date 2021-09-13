@@ -14,10 +14,8 @@ abstract class InitialSettingState implements _$InitialSettingState {
     @Default([])
         List<PillSheetType> pillSheetTypes,
     int? todayPillNumber,
-    @Default(23)
-        int fromMenstruation,
-    @Default(4)
-        int durationMenstruation,
+    @Default([])
+        List<MenstruationSetting> menstruations,
     @Default([
       ReminderTime(hour: 21, minute: 0),
       ReminderTime(hour: 22, minute: 0),
@@ -46,8 +44,7 @@ abstract class InitialSettingState implements _$InitialSettingState {
   }
 
   Setting buildSetting() => Setting(
-        pillNumberForFromMenstruation: fromMenstruation,
-        durationMenstruation: durationMenstruation,
+        menstruations: menstruations,
         pillSheetTypes: pillSheetTypes,
         reminderTimes: reminderTimes,
         isOnReminder: isOnReminder,
