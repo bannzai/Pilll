@@ -443,12 +443,9 @@ class MockRecordPageStore extends _i1.Mock implements _i25.RecordPageStore {
           returnValueForMissingStub: Future.value()) as _i17.Future<void>?);
   @override
   _i17.Future<void>? takenWithPillNumber(
-          {int? sequentialPillNumber,
-          int? pillNumberIntoPillSheet,
-          _i2.PillSheet? pillSheet}) =>
+          {int? pillNumberIntoPillSheet, _i2.PillSheet? pillSheet}) =>
       (super.noSuchMethod(
           Invocation.method(#takenWithPillNumber, [], {
-            #sequentialPillNumber: sequentialPillNumber,
             #pillNumberIntoPillSheet: pillNumberIntoPillSheet,
             #pillSheet: pillSheet
           }),
@@ -464,37 +461,27 @@ class MockRecordPageStore extends _i1.Mock implements _i25.RecordPageStore {
           returnValue: Future<void>.value(),
           returnValueForMissingStub: Future.value()) as _i17.Future<void>);
   @override
-  bool isDone(
-          {int? sequentialPillNumber,
-          int? pillNumberIntoPillSheet,
-          _i2.PillSheet? pillSheet}) =>
+  bool isDone({int? pillNumberIntoPillSheet, _i2.PillSheet? pillSheet}) =>
       (super.noSuchMethod(
           Invocation.method(#isDone, [], {
-            #sequentialPillNumber: sequentialPillNumber,
             #pillNumberIntoPillSheet: pillNumberIntoPillSheet,
             #pillSheet: pillSheet
           }),
           returnValue: false) as bool);
   @override
   _i27.PillMarkType markFor(
-          {int? sequentialPillNumber,
-          int? pillNumberIntoPillSheet,
-          _i2.PillSheet? pillSheet}) =>
+          {int? pillNumberIntoPillSheet, _i2.PillSheet? pillSheet}) =>
       (super.noSuchMethod(
           Invocation.method(#markFor, [], {
-            #sequentialPillNumber: sequentialPillNumber,
             #pillNumberIntoPillSheet: pillNumberIntoPillSheet,
             #pillSheet: pillSheet
           }),
           returnValue: _i27.PillMarkType.normal) as _i27.PillMarkType);
   @override
   bool shouldPillMarkAnimation(
-          {int? sequentialPillNumber,
-          int? pillNumberIntoPillSheet,
-          _i2.PillSheet? pillSheet}) =>
+          {int? pillNumberIntoPillSheet, _i2.PillSheet? pillSheet}) =>
       (super.noSuchMethod(
           Invocation.method(#shouldPillMarkAnimation, [], {
-            #sequentialPillNumber: sequentialPillNumber,
             #pillNumberIntoPillSheet: pillNumberIntoPillSheet,
             #pillSheet: pillSheet
           }),
@@ -515,10 +502,6 @@ class MockRecordPageStore extends _i1.Mock implements _i25.RecordPageStore {
   @override
   dynamic removePillSheetType(int? index, _i3.Setting? setting) => super
       .noSuchMethod(Invocation.method(#removePillSheetType, [index, setting]));
-  @override
-  dynamic setIsOnSequenceAppearance(bool? isOn, _i3.Setting? setting) =>
-      super.noSuchMethod(
-          Invocation.method(#setIsOnSequenceAppearance, [isOn, setting]));
   @override
   _i26.RemoveListener addListener(_i26.Listener<_i7.RecordPageState>? listener,
           {bool? fireImmediately = true}) =>
