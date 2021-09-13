@@ -145,6 +145,15 @@ class InitialSettingStateStore extends StateNotifier<InitialSettingState> {
     required int pageIndex,
     required int fromMenstruation,
   }) {
+    if (state.menstruations[pageIndex].durationMenstruation == 0) {
+      final copied = [...state.menstruations];
+      final updatedMenstruation = state.menstruations[pageIndex].copyWith(
+        pillNumberForFromMenstruation: fromMenstruation,
+        durationMenstruation: 4,
+      );
+      copied[pageIndex] = updatedMenstruation;
+      state = state.copyWith(menstruations: copied);
+    }
     final copiedMenstruations = [...state.menstruations];
     final menstruation = copiedMenstruations[pageIndex];
     final updatedMenstruation =
@@ -157,6 +166,16 @@ class InitialSettingStateStore extends StateNotifier<InitialSettingState> {
     required int pageIndex,
     required int durationMenstruation,
   }) {
+    if (state.menstruations[pageIndex].pillNumberForFromMenstruation == 0) {
+      final copied = [...state.menstruations];
+      final updatedMenstruation = state.menstruations[pageIndex].copyWith(
+        pillNumberForFromMenstruation:
+            state.pillSheetTypes[pageIndex].totalCount - durationMenstruation,
+        durationMenstruation: durationMenstruation,
+      );
+      copied[pageIndex] = updatedMenstruation;
+      state = state.copyWith(menstruations: copied);
+    }
     final copiedMenstruations = [...state.menstruations];
     final menstruation = copiedMenstruations[pageIndex];
     final updatedMenstruation =
