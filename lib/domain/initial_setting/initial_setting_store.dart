@@ -145,13 +145,6 @@ class InitialSettingStateStore extends StateNotifier<InitialSettingState> {
     required int pageIndex,
     required int fromMenstruation,
   }) {
-    if (state.menstruations.length < pageIndex) {
-      state = state.copyWith(
-          menstruations: state.menstruations
-            ..add(MenstruationSetting(
-                pillNumberForFromMenstruation: fromMenstruation,
-                durationMenstruation: 4)));
-    }
     final copiedMenstruations = [...state.menstruations];
     final menstruation = copiedMenstruations[pageIndex];
     final updatedMenstruation =
@@ -164,15 +157,6 @@ class InitialSettingStateStore extends StateNotifier<InitialSettingState> {
     required int pageIndex,
     required int durationMenstruation,
   }) {
-    if (state.menstruations.length < pageIndex) {
-      state = state.copyWith(
-          menstruations: state.menstruations
-            ..add(MenstruationSetting(
-                pillNumberForFromMenstruation:
-                    state.pillSheetTypes[pageIndex].totalCount -
-                        durationMenstruation,
-                durationMenstruation: durationMenstruation)));
-    }
     final copiedMenstruations = [...state.menstruations];
     final menstruation = copiedMenstruations[pageIndex];
     final updatedMenstruation =
