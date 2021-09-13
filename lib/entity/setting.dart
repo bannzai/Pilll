@@ -86,9 +86,4 @@ abstract class Setting implements _$Setting {
   factory Setting.fromJson(Map<String, dynamic> json) =>
       _$SettingFromJson(json);
   Map<String, dynamic> toJson() => _$_$_SettingToJson(this as _$_Setting);
-
-  PillSheetType? get legacyPropertyForPillSheetType =>
-      pillSheetTypeRawPath != null
-          ? PillSheetTypeFunctions.fromRawPath(pillSheetTypeRawPath!)
-          : null;
 }
