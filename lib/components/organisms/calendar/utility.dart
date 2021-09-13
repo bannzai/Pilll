@@ -2,6 +2,7 @@ import 'package:pilll/components/organisms/calendar/band/calendar_band_model.dar
 import 'package:pilll/domain/calendar/date_range.dart';
 import 'package:pilll/entity/menstruation.dart';
 import 'package:pilll/entity/pill_sheet_group.dart';
+import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/entity/setting.dart';
 import 'package:pilll/entity/weekday.dart';
 import 'package:pilll/util/datetime/day.dart';
@@ -18,17 +19,28 @@ List<DateRange> scheduledOrInTheMiddleMenstruationDateRanges(
   assert(maxPageCount > 0);
   return List.generate(maxPageCount, (pageIndex) {
     final offset = pageIndex * pillSheetGroup.totalPillCountIntoGroup;
-    return pillSheetGroup.pillSheets.asMap().keys.map((index) {
+
+    final pillSheetTypes =
+        pillSheetGroup.pillSheets.map((e) => e.pillSheetType).toList();
+    return pillSheetTypes.asMap().keys.map((index) {
       final pillSheet = pillSheetGroup.pillSheets[index];
-      if (index + 1 < setting.menstruations.length) {
+      if (index + 1 > setting.menstruations.length) {
         return null;
       }
+
       final menstruationSetting = setting.menstruations[index];
-      final begin = pillSheet.beginingDate.add(Duration(
-          days: (menstruationSetting.pillNumberForFromMenstruation - 1) +
-              offset));
+      final pastedCount =
+          pastedTotalCount(pillSheetTypes: pillSheetTypes, pageIndex: index);
+      final begin = pillSheet.beginingDate.add(
+        Duration(
+          days: pastedCount +
+              (menstruationSetting.pillNumberForFromMenstruation - 1) +
+              offset,
+        ),
+      );
       final end = begin
           .add(Duration(days: (menstruationSetting.durationMenstruation - 1)));
+
       final isContained = menstruations
           .where((element) =>
               element.dateRange.inRange(begin) ||
@@ -37,10 +49,10 @@ List<DateRange> scheduledOrInTheMiddleMenstruationDateRanges(
       if (isContained) {
         return null;
       }
-      return DateRange(
-          begin.add(Duration(days: offset)), end.add(Duration(days: offset)));
+
+      return DateRange(begin, end);
     }).where((element) => element != null);
-  }).expand((element) => element).toList().cast();
+  }).expand((element) => element).toList().sublist(0, maxPageCount).cast();
 }
 
 List<DateRange> nextPillSheetDateRanges(
