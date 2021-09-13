@@ -64,17 +64,20 @@ abstract class InitialSettingState implements _$InitialSettingState {
       );
 
   PillSheet buildPillSheet({
+    required int pageIndex,
     required InitialSettingTodayPillNumber todayPillNumber,
     required List<PillSheetType> pillSheetTypes,
   }) {
-    final pillSheetType = pillSheetTypes[todayPillNumber.pageIndex];
+    final pillSheetType = pillSheetTypes[pageIndex];
     return PillSheet(
-      groupIndex: todayPillNumber.pageIndex,
+      groupIndex: pageIndex,
       beginingDate: _beginingDate(
+        pageIndex: pageIndex,
         todayPillNumber: todayPillNumber,
         pillSheetTypes: pillSheetTypes,
       ),
       lastTakenDate: _lastTakenDate(
+        pageIndex: pageIndex,
         todayPillNumber: todayPillNumber,
         pillSheetTypes: pillSheetTypes,
       ),
@@ -83,30 +86,35 @@ abstract class InitialSettingState implements _$InitialSettingState {
   }
 
   DateTime _beginingDate({
+    required int pageIndex,
     required InitialSettingTodayPillNumber todayPillNumber,
     required List<PillSheetType> pillSheetTypes,
   }) {
-    final pageOffset = pastedTotalCount(
-        pillSheetTypes: pillSheetTypes, pageIndex: todayPillNumber.pageIndex);
-    return today().subtract(Duration(
-        days: todayPillNumber.pillNumberIntoPillSheet - 1 - pageOffset));
+    final pageOffset =
+        pastedTotalCount(pillSheetTypes: pillSheetTypes, pageIndex: pageIndex);
+    if (pageIndex == todayPillNumber.pageIndex) {
+      return today().subtract(Duration(
+          days: todayPillNumber.pillNumberIntoPillSheet - 1 - pageOffset));
+    } else {
+      return today().subtract(Duration(days: pageOffset));
+    }
   }
 
   DateTime? _lastTakenDate({
+    required int pageIndex,
     required InitialSettingTodayPillNumber todayPillNumber,
     required List<PillSheetType> pillSheetTypes,
   }) {
-    if (todayPillNumber.pageIndex == 0 &&
+    if (pageIndex == 0 &&
+        todayPillNumber.pageIndex == 0 &&
         todayPillNumber.pillNumberIntoPillSheet == 1) {
       return null;
     }
-    final pillSheetType = pillSheetTypes[todayPillNumber.pageIndex];
-    final pillSheetBeginPillNumber =
-        todayPillNumber.pageIndex * pillSheetType.totalCount + 1;
-    final pillSheetEndPillNumber = pastedTotalCount(
-            pillSheetTypes: pillSheetTypes,
-            pageIndex: todayPillNumber.pageIndex) +
-        pillSheetType.totalCount;
+    final pillSheetType = pillSheetTypes[pageIndex];
+    final pillSheetBeginPillNumber = pageIndex * pillSheetType.totalCount + 1;
+    final pillSheetEndPillNumber =
+        pastedTotalCount(pillSheetTypes: pillSheetTypes, pageIndex: pageIndex) +
+            pillSheetType.totalCount;
     if (pillSheetBeginPillNumber <= todayPillNumber.pillNumberIntoPillSheet &&
         todayPillNumber.pillNumberIntoPillSheet <= pillSheetEndPillNumber) {
       // Between current PillSheet
@@ -118,6 +126,7 @@ abstract class InitialSettingState implements _$InitialSettingState {
     } else {
       // Left side PillSheet
       return _beginingDate(
+        pageIndex: pageIndex,
         todayPillNumber: todayPillNumber,
         pillSheetTypes: pillSheetTypes,
       ).add(Duration(days: pillSheetType.totalCount - 1));
