@@ -23,6 +23,7 @@ class SettingMenstruationPage extends HookWidget {
       title: "生理について",
       pillSheetList: SettingMenstruationPillSheetList(
         pillSheetTypes: setting.pillSheetTypes,
+        selectedPillSheetPageIndex: state.currentPageIndex,
         selectedPillNumber: (pageIndex) =>
             setting.menstruations[pageIndex].pillNumberForFromMenstruation,
         onPageChanged: (number) {

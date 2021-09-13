@@ -25,6 +25,7 @@ class ModifingPillNumberPage extends StatefulWidget {
 }
 
 class _ModifingPillNumberPageState extends State<ModifingPillNumberPage> {
+  int? selectedPillSheetPageIndex;
   int? selectedPillMarkNumberIntoPillSheet;
 
   @override
@@ -58,14 +59,18 @@ class _ModifingPillNumberPageState extends State<ModifingPillNumberPage> {
               Center(
                 child: SettingPillSheetView(
                   pageIndex: 0,
+                  selectedPillNumberPageIndex:
+                      selectedPillMarkNumberIntoPillSheet,
                   pillSheetTypes: widget.pillSheetGroup.pillSheets
                       .map((e) => e.pillSheetType)
                       .toList(),
                   selectedPillNumberIntoPillSheet:
                       selectedPillMarkNumberIntoPillSheet,
                   markSelected: (pageIndex, number) {
-                    setState(
-                        () => selectedPillMarkNumberIntoPillSheet = number);
+                    setState(() {
+                      selectedPillSheetPageIndex = pageIndex;
+                      selectedPillMarkNumberIntoPillSheet = number;
+                    });
                   },
                 ),
               ),
