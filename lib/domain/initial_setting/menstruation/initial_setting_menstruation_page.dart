@@ -21,7 +21,8 @@ class InitialSettingMenstruationPage extends HookWidget {
       pillSheetList: SettingMenstruationPillSheetList(
         pillSheetTypes: state.pillSheetTypes,
         selectedPillSheetPageIndex: state.currentMenstruationPageIndex,
-        selectedPillNumber: (pageIndex) => state.fromMenstruation,
+        selectedPillNumber: (pageIndex) =>
+            store.retrieveMenstruationSelectedPillNumber(pageIndex),
         onPageChanged: (pageIndex) {
           store.setCurrentMenstruationPageIndex(pageIndex);
         },
