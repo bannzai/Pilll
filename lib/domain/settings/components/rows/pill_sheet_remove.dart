@@ -13,7 +13,7 @@ class PillSheetRemoveRow extends HookWidget {
   Widget build(BuildContext context) {
     final store = useProvider(settingStoreProvider);
     return ListTile(
-      title: Text("ピルシートの破棄", style: FontType.listRow),
+      title: Text("${store.pillSheetWord}の破棄", style: FontType.listRow),
       onTap: () {
         analytics.logEvent(
           name: "did_select_removing_pill_sheet",
