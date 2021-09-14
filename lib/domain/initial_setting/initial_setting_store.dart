@@ -103,14 +103,6 @@ class InitialSettingStateStore extends StateNotifier<InitialSettingState> {
     state = state.copyWith(pillSheetTypes: copied);
   }
 
-  void handleNextEventOnPillSheetGroup() {
-    state = state.copyWith(
-        menstruations: state.pillSheetTypes
-            .map((e) => MenstruationSetting(
-                pillNumberForFromMenstruation: 0, durationMenstruation: 0))
-            .toList());
-  }
-
   void setReminderTime(int index, int hour, int minute) {
     final copied = [...state.reminderTimes];
     if (index >= copied.length) {
