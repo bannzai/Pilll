@@ -1,8 +1,8 @@
 import 'dart:io' show Platform;
 import 'dart:async';
 
-import 'package:flutter_app_badger/flutter_app_badger.dart';
 import 'package:pilll/database/batch.dart';
+import 'package:pilll/domain/record/util/take.dart';
 import 'package:pilll/entity/pill_mark_type.dart';
 import 'package:pilll/entity/pill_sheet.dart';
 import 'package:pilll/entity/pill_sheet_group.dart';
@@ -203,44 +203,18 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
         activedPillSheet.lastTakenPillNumber) {
       return null;
     }
-
-    FlutterAppBadger.removeBadge();
-
-    final batch = _batchFactory.batch();
-
-    final List<PillSheet> updatedPillSheets = pillSheetGroup.pillSheets;
-    pillSheetGroup.pillSheets.asMap().keys.forEach((index) {
-      final pillSheet = pillSheetGroup.pillSheets[index];
-      if (pillSheet.groupIndex > activedPillSheet.groupIndex) {
-        return;
-      }
-      if (pillSheet.isFill) {
-        return;
-      }
-
-      final scheduledLastTakenDate = pillSheet.beginingDate
-          .add(Duration(days: pillSheet.pillSheetType.totalCount - 1));
-      final PillSheet updatedPillSheet;
-      if (takenDate.isAfter(scheduledLastTakenDate)) {
-        updatedPillSheet =
-            pillSheet.copyWith(lastTakenDate: scheduledLastTakenDate);
-      } else {
-        updatedPillSheet = pillSheet.copyWith(lastTakenDate: takenDate);
-      }
-      _pillSheetService.update(batch, updatedPillSheet);
-      updatedPillSheets[index] = updatedPillSheet;
-
-      final history =
-          PillSheetModifiedHistoryServiceActionFactory.createTakenPillAction(
-              before: activedPillSheet, after: updatedPillSheet);
-      _pillSheetModifiedHistoryService.add(batch, history);
-    });
-
-    final updatedPillSheetGroup =
-        pillSheetGroup.copyWith(pillSheets: updatedPillSheets);
-    _pillSheetGroupService.update(batch, updatedPillSheetGroup);
-
-    await batch.commit();
+    final updatedPillSheetGroup = await take(
+      takenDate: takenDate,
+      pillSheetGroup: pillSheetGroup,
+      activedPillSheet: activedPillSheet,
+      batchFactory: _batchFactory,
+      pillSheetService: _pillSheetService,
+      pillSheetModifiedHistoryService: _pillSheetModifiedHistoryService,
+      pillSheetGroupService: _pillSheetGroupService,
+    );
+    if (updatedPillSheetGroup == null) {
+      return null;
+    }
     state = state.copyWith(pillSheetGroup: updatedPillSheetGroup);
   }
 
