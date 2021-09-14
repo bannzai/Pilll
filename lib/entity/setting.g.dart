@@ -19,30 +19,14 @@ Map<String, dynamic> _$_$_ReminderTimeToJson(_$_ReminderTime instance) =>
       'minute': instance.minute,
     };
 
-_$_MenstruationSetting _$_$_MenstruationSettingFromJson(
-    Map<String, dynamic> json) {
-  return _$_MenstruationSetting(
-    pillNumberForFromMenstruation: json['pillNumberForFromMenstruation'] as int,
-    durationMenstruation: json['durationMenstruation'] as int,
-  );
-}
-
-Map<String, dynamic> _$_$_MenstruationSettingToJson(
-        _$_MenstruationSetting instance) =>
-    <String, dynamic>{
-      'pillNumberForFromMenstruation': instance.pillNumberForFromMenstruation,
-      'durationMenstruation': instance.durationMenstruation,
-    };
-
 _$_Setting _$_$_SettingFromJson(Map<String, dynamic> json) {
   return _$_Setting(
     pillSheetTypes: (json['pillSheetTypes'] as List<dynamic>?)
             ?.map((e) => _$enumDecode(_$PillSheetTypeEnumMap, e))
             .toList() ??
         [],
-    menstruations: (json['menstruations'] as List<dynamic>)
-        .map((e) => MenstruationSetting.fromJson(e as Map<String, dynamic>))
-        .toList(),
+    pillNumberForFromMenstruation: json['pillNumberForFromMenstruation'] as int,
+    durationMenstruation: json['durationMenstruation'] as int,
     reminderTimes: (json['reminderTimes'] as List<dynamic>?)
             ?.map((e) => ReminderTime.fromJson(e as Map<String, dynamic>))
             .toList() ??
@@ -64,7 +48,8 @@ Map<String, dynamic> _$_$_SettingToJson(_$_Setting instance) =>
       'pillSheetTypes': instance.pillSheetTypes
           .map((e) => _$PillSheetTypeEnumMap[e])
           .toList(),
-      'menstruations': instance.menstruations.map((e) => e.toJson()).toList(),
+      'pillNumberForFromMenstruation': instance.pillNumberForFromMenstruation,
+      'durationMenstruation': instance.durationMenstruation,
       'reminderTimes': instance.reminderTimes.map((e) => e.toJson()).toList(),
       'isOnReminder': instance.isOnReminder,
       'isOnNotifyInNotTakenDuration': instance.isOnNotifyInNotTakenDuration,
