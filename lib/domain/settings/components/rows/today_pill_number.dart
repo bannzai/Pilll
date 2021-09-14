@@ -3,7 +3,7 @@ import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/analytics.dart';
 import 'package:pilll/components/atoms/font.dart';
-import 'package:pilll/domain/settings/modifing_pill_number_page.dart';
+import 'package:pilll/domain/settings/today_pill_number/modifing_pill_number_page.dart';
 import 'package:pilll/domain/settings/setting_page_store.dart';
 import 'package:pilll/entity/pill_sheet.dart';
 import 'package:pilll/entity/pill_sheet_group.dart';
@@ -39,10 +39,7 @@ class TodayPllNumberRow extends HookWidget {
       ModifingPillNumberPageRoute.route(
         pillSheetGroup: pillSheetGroup,
         activedPillSheet: activedPillSheet,
-        markSelected: (number) {
-          Navigator.pop(context);
-          store.modifyBeginingDate(number);
-        },
+        store: store,
       ),
     );
   }
