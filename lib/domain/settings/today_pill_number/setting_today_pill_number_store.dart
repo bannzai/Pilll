@@ -10,7 +10,7 @@ import 'package:pilll/service/pill_sheet_group.dart';
 import 'package:pilll/service/pill_sheet_modified_history.dart';
 import 'package:riverpod/riverpod.dart';
 
-final settingTodayPillNumberStoreProvider = StateNotifierProvider(
+final settingTodayPillNumberStoreProvider = StateNotifierProvider.autoDispose(
   (ref) => SettingTodayPillNumberStateStore(
     ref.watch(batchFactoryProvider),
     ref.watch(pillSheetServiceProvider),
@@ -37,11 +37,13 @@ class SettingTodayPillNumberStateStore
     required PillSheetGroup pillSheetGroup,
     required PillSheet activedPillSheet,
   }) {
-    state = state.copyWith(
-      selectedPillMarkNumberIntoPillSheet: activedPillSheet.groupIndex,
-      selectedPillSheetPageIndex: _pillNumberIntoPillSheet(
-          activedPillSheet: activedPillSheet, pillSheetGroup: pillSheetGroup),
-    );
+    Future(() {
+      state = state.copyWith(
+        selectedPillSheetPageIndex: activedPillSheet.groupIndex,
+        selectedPillMarkNumberIntoPillSheet: _pillNumberIntoPillSheet(
+            activedPillSheet: activedPillSheet, pillSheetGroup: pillSheetGroup),
+      );
+    });
   }
 
   markSelected({

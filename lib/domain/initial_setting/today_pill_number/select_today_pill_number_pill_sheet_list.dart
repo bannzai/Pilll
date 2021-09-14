@@ -55,8 +55,9 @@ class SelectTodayPillNumberPillSheetList extends HookWidget {
                               "page": pageIndex,
                             });
                         store.setTodayPillNumber(
-                            pageIndex: pageIndex,
-                            pillNumberIntoPillSheet: number);
+                          pageIndex: pageIndex,
+                          pillNumberIntoPillSheet: number,
+                        );
                       },
                     ),
                   ),
