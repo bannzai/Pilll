@@ -214,14 +214,19 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
       if (pillSheet.groupIndex > activedPillSheet.groupIndex) {
         return;
       }
-      var filledDuration = takenDate.difference(pillSheet.beginingDate).inDays;
-      if (filledDuration > pillSheet.pillSheetType.totalCount) {
-        filledDuration = pillSheet.pillSheetType.totalCount;
+      if (pillSheet.isFill) {
+        return;
       }
-      final scheduledLastTakenDate =
-          pillSheet.beginingDate.add(Duration(days: filledDuration));
-      final updatedPillSheet =
-          pillSheet.copyWith(lastTakenDate: scheduledLastTakenDate);
+
+      final scheduledLastTakenDate = pillSheet.beginingDate
+          .add(Duration(days: pillSheet.pillSheetType.totalCount - 1));
+      final PillSheet updatedPillSheet;
+      if (takenDate.isAfter(scheduledLastTakenDate)) {
+        updatedPillSheet =
+            pillSheet.copyWith(lastTakenDate: scheduledLastTakenDate);
+      } else {
+        updatedPillSheet = pillSheet.copyWith(lastTakenDate: takenDate);
+      }
       _pillSheetService.update(batch, updatedPillSheet);
       updatedPillSheets[index] = updatedPillSheet;
 
