@@ -208,4 +208,12 @@ class SettingStateStore extends StateNotifier<SettingState> {
         .update(entity.copyWith(isAutomaticallyCreatePillSheet: isOn))
         .then((entity) => state = state.copyWith(entity: entity));
   }
+
+  String get pillSheetWord {
+    final setting = state.entity;
+    if (setting == null) {
+      return "ピルシート";
+    }
+    return setting.pillSheetTypes.length > 1 ? "ピルシートグループ" : "ピルシート";
+  }
 }
