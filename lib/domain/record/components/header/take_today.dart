@@ -39,16 +39,18 @@ class TakeToday extends StatelessWidget {
 
   Widget _content() {
     final pillSheetGroup = this.pillSheetGroup;
-    final pillSheet = this.pillSheetGroup?.activedPillSheet;
-    if (pillSheetGroup == null || pillSheet == null || pillSheet.isInvalid) {
+    final activedPillSheet = this.pillSheetGroup?.activedPillSheet;
+    if (pillSheetGroup == null ||
+        activedPillSheet == null ||
+        activedPillSheet.isInvalid) {
       return Padding(
           padding: EdgeInsets.only(top: 8),
           child: Text("-",
               style: FontType.assisting.merge(TextColorStyle.noshime)));
     }
-    if (pillSheet.inNotTakenDuration) {
+    if (activedPillSheet.inNotTakenDuration) {
       return Text(
-        "${pillSheet.pillSheetType.notTakenWord}${pillSheet.todayPillNumber - pillSheet.typeInfo.dosingPeriod}日目",
+        "${activedPillSheet.pillSheetType.notTakenWord}${activedPillSheet.todayPillNumber - activedPillSheet.typeInfo.dosingPeriod}日目",
         style: FontType.assistingBold.merge(TextColorStyle.main),
       );
     }
@@ -57,7 +59,7 @@ class TakeToday extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.baseline,
       textBaseline: TextBaseline.ideographic,
       children: <Widget>[
-        Text("${pillSheetGroup.serializedTodayPillNumber}",
+        Text("${activedPillSheet.todayPillNumber}",
             style: FontType.xHugeNumber.merge(TextColorStyle.main)),
         Text("番", style: FontType.assistingBold.merge(TextColorStyle.noshime)),
       ],
