@@ -5,10 +5,10 @@ import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/domain/record/components/header/take_today.dart';
 import 'package:pilll/domain/record/record_page_store.dart';
+import 'package:pilll/domain/settings/today_pill_number/modifing_pill_number_page.dart';
 import 'package:pilll/entity/pill_sheet_group.dart';
 import 'package:pilll/util/formatter/date_time_formatter.dart';
 import 'package:flutter/material.dart';
-import 'package:pilll/util/toolbar/picker_toolbar.dart';
 
 abstract class RecordPageHeaderrmationConst {
   static final double height = 130;
@@ -30,7 +30,8 @@ class RecordPageHeaderrmation extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final pillSheet = pillSheetGroup?.activedPillSheet;
+    final pillSheetGroup = this.pillSheetGroup;
+    final activedPillSheet = pillSheetGroup?.activedPillSheet;
 
     return Container(
       height: RecordPageHeaderrmationConst.height,
@@ -55,8 +56,13 @@ class RecordPageHeaderrmation extends StatelessWidget {
                   onPressed: () {
                     analytics.logEvent(
                         name: "tapped_record_information_header");
-                    if (pillSheet != null) {
-                      _showBeginDatePicker(context, pillSheetGroup, store);
+                    if (activedPillSheet != null && pillSheetGroup != null) {
+                      Navigator.of(context).push(
+                        ModifingPillNumberPageRoute.route(
+                          pillSheetGroup: pillSheetGroup,
+                          activedPillSheet: activedPillSheet,
+                        ),
+                      );
                     }
                   }),
             ],
@@ -72,65 +78,6 @@ class RecordPageHeaderrmation extends StatelessWidget {
         "${_formattedToday()} (${_todayWeekday()})",
         style: FontType.xBigNumber.merge(TextColorStyle.gray),
       ),
-    );
-  }
-
-  _showBeginDatePicker(BuildContext context, PillSheetGroup? pillSheetGroup,
-      RecordPageStore store) {
-    if (pillSheetGroup == null) {
-      return;
-    }
-    var selectedTodayPillNumber = pillSheetGroup.serializedTodayPillNumber;
-    showModalBottomSheet(
-      context: context,
-      builder: (BuildContext context) {
-        return Column(
-          mainAxisAlignment: MainAxisAlignment.end,
-          mainAxisSize: MainAxisSize.min,
-          children: <Widget>[
-            PickerToolbar(
-              done: (() {
-                final _selectedTodayPillNumber = selectedTodayPillNumber;
-                if (_selectedTodayPillNumber == null) {
-                  Navigator.pop(context);
-                  return;
-                }
-                store.modifyBeginingDate(_selectedTodayPillNumber);
-                Navigator.pop(context);
-              }),
-              cancel: (() {
-                Navigator.pop(context);
-              }),
-            ),
-            Container(
-              height: 200,
-              child: GestureDetector(
-                onTap: () {
-                  Navigator.pop(context);
-                },
-                child: CupertinoPicker(
-                  itemExtent: 40,
-                  children: List.generate(
-                      pillSheetGroup.totalPillCountIntoGroup,
-                      (index) => Text("${index + 1}")),
-                  onSelectedItemChanged: (index) {
-                    selectedTodayPillNumber = index + 1;
-                  },
-                  scrollController: FixedExtentScrollController(
-                    initialItem: () {
-                      final _selectedTodayPillNumber = selectedTodayPillNumber;
-                      if (_selectedTodayPillNumber == null) {
-                        return 0;
-                      }
-                      return _selectedTodayPillNumber - 1;
-                    }(),
-                  ),
-                ),
-              ),
-            ),
-          ],
-        );
-      },
     );
   }
 }

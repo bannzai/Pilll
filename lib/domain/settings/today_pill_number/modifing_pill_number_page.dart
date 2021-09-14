@@ -5,26 +5,20 @@ import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/domain/initial_setting/today_pill_number/setting_today_pill_number_store.dart';
-import 'package:pilll/domain/settings/setting_page_store.dart';
 import 'package:pilll/domain/settings/today_pill_number/setting_today_pill_number_pill_sheet_list.dart';
 import 'package:pilll/entity/pill_sheet.dart';
 import 'package:pilll/entity/pill_sheet_group.dart';
-import 'package:pilll/entity/setting.dart';
 import 'package:pilll/util/formatter/date_time_formatter.dart';
 import 'package:flutter/material.dart';
 
 class ModifingPillNumberPage extends HookWidget {
   final PillSheetGroup pillSheetGroup;
   final PillSheet activedPillSheet;
-  final Setting setting;
-  final SettingStateStore store;
 
   const ModifingPillNumberPage({
     Key? key,
     required this.pillSheetGroup,
     required this.activedPillSheet,
-    required this.setting,
-    required this.store,
   }) : super(key: key);
 
   @override
@@ -86,7 +80,6 @@ class ModifingPillNumberPage extends HookWidget {
                           store.modifyBeginingDate(
                             pillSheetGroup: pillSheetGroup,
                             activedPillSheet: activedPillSheet,
-                            setting: setting,
                           );
                           Navigator.of(context).pop();
                         },
@@ -113,16 +106,12 @@ extension ModifingPillNumberPageRoute on ModifingPillNumberPage {
   static Route<dynamic> route({
     required PillSheetGroup pillSheetGroup,
     required PillSheet activedPillSheet,
-    required Setting setting,
-    required SettingStateStore store,
   }) {
     return MaterialPageRoute(
       settings: RouteSettings(name: "ModifingPillNumberPage"),
       builder: (_) => ModifingPillNumberPage(
         pillSheetGroup: pillSheetGroup,
         activedPillSheet: activedPillSheet,
-        setting: setting,
-        store: store,
       ),
     );
   }
