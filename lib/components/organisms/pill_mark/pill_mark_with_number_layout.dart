@@ -1,11 +1,9 @@
-import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/organisms/pill_mark/pill_mark.dart';
 import 'package:flutter/material.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
-import 'package:pilll/entity/setting.dart';
 
 class PillMarkWithNumberLayout extends StatelessWidget {
-  final Text textOfPillNumber;
+  final Widget textOfPillNumber;
   final PillMark pillMark;
   final VoidCallback onTap;
 
@@ -51,30 +49,5 @@ extension PillMarkWithNumberLayoutHelper on PillMarkWithNumberLayout {
 
   static int calcPillNumberIntoPillSheet(int columnIndex, int lineIndex) {
     return columnIndex + 1 + (lineIndex) * 7;
-  }
-
-  static TextStyle upperTextColor({
-    required bool isPremium,
-    required bool isTrial,
-    required PillSheetAppearanceMode pillSheetAppearanceMode,
-    required int pillNumberForMenstruationBegin,
-    required int menstruationDuration,
-    required int maxPillNumber,
-    required int pillMarkNumber,
-  }) {
-    if (!isPremium &&
-        !isTrial &&
-        pillSheetAppearanceMode != PillSheetAppearanceMode.date) {
-      return TextStyle(color: PilllColors.weekday);
-    }
-    final begin = pillNumberForMenstruationBegin;
-    final duration = menstruationDuration;
-    final menstruationNumbers = List.generate(duration, (index) {
-      final number = (begin + index) % maxPillNumber;
-      return number == 0 ? maxPillNumber : number;
-    });
-    return menstruationNumbers.contains(pillMarkNumber)
-        ? TextStyle(color: PilllColors.primary)
-        : TextStyle(color: PilllColors.weekday);
   }
 }
