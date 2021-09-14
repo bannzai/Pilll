@@ -55,11 +55,9 @@ abstract class InitialSettingState implements _$InitialSettingState {
     return null;
   }
 
-  MenstruationSetting get focusedMenstruation =>
-      menstruations[currentMenstruationPageIndex];
-
   Setting buildSetting() => Setting(
-        menstruations: menstruations,
+        pillNumberForFromMenstruation: fromMenstruation,
+        durationMenstruation: durationMenstruation,
         pillSheetTypes: pillSheetTypes,
         reminderTimes: reminderTimes,
         isOnReminder: isOnReminder,
