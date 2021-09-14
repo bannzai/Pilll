@@ -4,7 +4,7 @@ import 'package:pilll/entity/setting.dart';
 import 'package:pilll/service/setting.dart';
 import 'package:riverpod/riverpod.dart';
 
-final settingMenstruationStoreProvider = StateNotifierProvider(
+final settingMenstruationStoreProvider = StateNotifierProvider.autoDispose(
   (ref) => SettingMenstruationStateStore(
     ref.watch(settingServiceProvider),
   ),
