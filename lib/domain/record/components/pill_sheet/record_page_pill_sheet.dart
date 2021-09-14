@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:pilll/analytics.dart';
+import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/organisms/pill_mark/pill_mark.dart';
 import 'package:pilll/components/organisms/pill_mark/pill_mark_line.dart';
@@ -81,6 +82,7 @@ class RecordPagePillSheet extends StatelessWidget {
         child: PillMarkWithNumberLayout(
           textOfPillNumber: _textOfPillNumber(
             state: state,
+            pillSheetGroup: pillSheetGroup,
             pillNumberIntoPillSheet: pillNumberIntoPillSheet,
             pageIndex: pageIndex,
           ),
@@ -118,8 +120,9 @@ class RecordPagePillSheet extends StatelessWidget {
     });
   }
 
-  Text _textOfPillNumber({
+  Widget _textOfPillNumber({
     required RecordPageState state,
+    required PillSheetGroup pillSheetGroup,
     required int pillNumberIntoPillSheet,
     required int pageIndex,
   }) {
@@ -135,20 +138,87 @@ class RecordPagePillSheet extends StatelessWidget {
       return true;
     }();
 
+    final pillSheetTypes =
+        pillSheetGroup.pillSheets.map((e) => e.pillSheetType).toList();
+    final pastedCount =
+        pastedTotalCount(pillSheetTypes: pillSheetTypes, pageIndex: pageIndex);
+    final menstruationNumbers =
+        List.generate(setting.durationMenstruation, (index) {
+      final number =
+          (setting.pillNumberForFromMenstruation + index) % pastedCount;
+      return number == 0 ? pastedCount : number;
+    });
+    final isContainedMenstruationDuration =
+        menstruationNumbers.contains(pillNumberIntoPillSheet);
+
+    if (isDateMode) {
+      if (isContainedMenstruationDuration) {
+        return MenstruationPillDate(date: date);
+      } else {
+        return PlainPillDate(date: date);
+      }
+    } else {
+      if (isContainedMenstruationDuration) {
+        return MenstruationPillNumber(pillNumber: pillNumberIntoPillSheet);
+      } else {
+        return PlainPillNumber(pillNumber: pillNumberIntoPillSheet);
+      }
+    }
+  }
+}
+
+class PlainPillNumber extends StatelessWidget {
+  final int pillNumber;
+
+  const PlainPillNumber({Key? key, required this.pillNumber}) : super(key: key);
+  @override
+  Widget build(BuildContext context) {
     return Text(
-      isDateMode
-          ? DateTimeFormatter.monthAndDay(date)
-          : "$pillNumberIntoPillSheet",
-      style: FontType.smallTitle.merge(
-          PillMarkWithNumberLayoutHelper.upperTextColor(
-              isPremium: state.isPremium,
-              isTrial: state.isTrial,
-              pillSheetAppearanceMode: state.appearanceMode,
-              pillNumberForMenstruationBegin:
-                  setting.pillNumberForFromMenstruation,
-              menstruationDuration: setting.durationMenstruation,
-              maxPillNumber: pillSheet.pillSheetType.totalCount,
-              pillMarkNumber: pillNumberIntoPillSheet)),
+      "$pillNumber",
+      style: FontType.smallTitle.merge(TextStyle(color: PilllColors.weekday)),
+      textScaleFactor: 1,
+    );
+  }
+}
+
+class PlainPillDate extends StatelessWidget {
+  final DateTime date;
+
+  const PlainPillDate({Key? key, required this.date}) : super(key: key);
+  @override
+  Widget build(BuildContext context) {
+    return Text(
+      DateTimeFormatter.monthAndDay(date),
+      style: FontType.smallTitle.merge(TextStyle(color: PilllColors.weekday)),
+      textScaleFactor: 1,
+    );
+  }
+}
+
+class MenstruationPillNumber extends StatelessWidget {
+  final int pillNumber;
+
+  const MenstruationPillNumber({Key? key, required this.pillNumber})
+      : super(key: key);
+  @override
+  Widget build(BuildContext context) {
+    return Text(
+      "$pillNumber",
+      style: FontType.smallTitle.merge(TextStyle(color: PilllColors.primary)),
+      textScaleFactor: 1,
+    );
+  }
+}
+
+class MenstruationPillDate extends StatelessWidget {
+  final DateTime date;
+  const MenstruationPillDate({Key? key, required this.date}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return Text(
+      DateTimeFormatter.monthAndDay(date),
+      style: FontType.smallTitle.merge(TextStyle(color: PilllColors.primary)),
       textScaleFactor: 1,
     );
   }
