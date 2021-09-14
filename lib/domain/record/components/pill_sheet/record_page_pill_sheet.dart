@@ -1,12 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:pilll/analytics.dart';
-import 'package:pilll/components/atoms/color.dart';
-import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/organisms/pill_mark/pill_mark.dart';
 import 'package:pilll/components/organisms/pill_mark/pill_mark_line.dart';
 import 'package:pilll/components/organisms/pill_mark/pill_mark_with_number_layout.dart';
 import 'package:pilll/components/organisms/pill_sheet/pill_sheet_view_layout.dart';
 import 'package:pilll/components/organisms/pill_sheet/pill_sheet_view_weekday_line.dart';
+import 'package:pilll/domain/record/components/pill_sheet/components/pill_number.dart';
 import 'package:pilll/domain/record/record_page_state.dart';
 import 'package:pilll/domain/record/record_page_store.dart';
 import 'package:pilll/domain/record/util/take.dart';
@@ -15,7 +14,6 @@ import 'package:pilll/entity/pill_sheet_group.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/entity/setting.dart';
 import 'package:pilll/entity/weekday.dart';
-import 'package:pilll/util/formatter/date_time_formatter.dart';
 
 class RecordPagePillSheet extends StatelessWidget {
   final PillSheetGroup pillSheetGroup;
@@ -164,62 +162,5 @@ class RecordPagePillSheet extends StatelessWidget {
         return PlainPillNumber(pillNumber: pillNumberIntoPillSheet);
       }
     }
-  }
-}
-
-class PlainPillNumber extends StatelessWidget {
-  final int pillNumber;
-
-  const PlainPillNumber({Key? key, required this.pillNumber}) : super(key: key);
-  @override
-  Widget build(BuildContext context) {
-    return Text(
-      "$pillNumber",
-      style: FontType.smallTitle.merge(TextStyle(color: PilllColors.weekday)),
-      textScaleFactor: 1,
-    );
-  }
-}
-
-class PlainPillDate extends StatelessWidget {
-  final DateTime date;
-
-  const PlainPillDate({Key? key, required this.date}) : super(key: key);
-  @override
-  Widget build(BuildContext context) {
-    return Text(
-      DateTimeFormatter.monthAndDay(date),
-      style: FontType.smallTitle.merge(TextStyle(color: PilllColors.weekday)),
-      textScaleFactor: 1,
-    );
-  }
-}
-
-class MenstruationPillNumber extends StatelessWidget {
-  final int pillNumber;
-
-  const MenstruationPillNumber({Key? key, required this.pillNumber})
-      : super(key: key);
-  @override
-  Widget build(BuildContext context) {
-    return Text(
-      "$pillNumber",
-      style: FontType.smallTitle.merge(TextStyle(color: PilllColors.primary)),
-      textScaleFactor: 1,
-    );
-  }
-}
-
-class MenstruationPillDate extends StatelessWidget {
-  final DateTime date;
-  const MenstruationPillDate({Key? key, required this.date}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Text(
-      DateTimeFormatter.monthAndDay(date),
-      style: FontType.smallTitle.merge(TextStyle(color: PilllColors.primary)),
-      textScaleFactor: 1,
-    );
   }
 }
