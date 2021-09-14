@@ -13,13 +13,13 @@ abstract class PillMarkConst {
 }
 
 class PillMark extends StatefulWidget {
-  final PillMarkType pillSheetType;
+  final PillMarkType pillMarkType;
   final bool isDone;
   final bool hasRippleAnimation;
   const PillMark({
     Key? key,
     this.hasRippleAnimation = false,
-    required this.pillSheetType,
+    required this.pillMarkType,
     required this.isDone,
   }) : super(key: key);
 
@@ -56,7 +56,7 @@ class _PillMarkState extends State<PillMark> with TickerProviderStateMixin {
     return Stack(
       clipBehavior: Clip.none,
       children: [
-        _mark(widget.isDone, widget.pillSheetType),
+        _mark(widget.isDone, widget.pillMarkType),
         if (widget.hasRippleAnimation)
           // NOTE: pill mark size is 20px. Ripple view final size is 80px.
           // Positined ripple animation equal to (80px - 20px) / 2(to center) = 30;
