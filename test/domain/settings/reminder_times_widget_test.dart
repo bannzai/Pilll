@@ -52,10 +52,8 @@ void main() {
 
       final service = MockSettingService();
       final entity = Setting(
-        menstruations: [
-          MenstruationSetting(
-              pillNumberForFromMenstruation: 22, durationMenstruation: 2)
-        ],
+        pillNumberForFromMenstruation: 22,
+        durationMenstruation: 2,
         isOnReminder: false,
         pillSheetTypes: [PillSheetType.pillsheet_21],
         reminderTimes: [
@@ -118,10 +116,8 @@ void main() {
 
       final service = MockSettingService();
       final entity = Setting(
-        menstruations: [
-          MenstruationSetting(
-              pillNumberForFromMenstruation: 22, durationMenstruation: 2)
-        ],
+        pillNumberForFromMenstruation: 22,
+        durationMenstruation: 2,
         isOnReminder: false,
         pillSheetTypes: [PillSheetType.pillsheet_21],
         reminderTimes: [
