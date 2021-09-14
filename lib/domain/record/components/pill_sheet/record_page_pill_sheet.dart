@@ -142,6 +142,9 @@ class RecordPagePillSheet extends StatelessWidget {
         pastedTotalCount(pillSheetTypes: pillSheetTypes, pageIndex: pageIndex);
     final menstruationNumbers =
         List.generate(setting.durationMenstruation, (index) {
+      if (pastedCount == 0) {
+        return setting.pillNumberForFromMenstruation + index;
+      }
       final number =
           (setting.pillNumberForFromMenstruation + index) % pastedCount;
       return number == 0 ? pastedCount : number;
