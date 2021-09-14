@@ -4,18 +4,18 @@ import 'package:pilll/components/atoms/buttons.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
-import 'package:pilll/domain/initial_setting/today_pill_number/setting_today_pill_number_store.dart';
+import 'package:pilll/domain/settings/today_pill_number/setting_today_pill_number_store.dart';
 import 'package:pilll/domain/settings/today_pill_number/setting_today_pill_number_pill_sheet_list.dart';
 import 'package:pilll/entity/pill_sheet.dart';
 import 'package:pilll/entity/pill_sheet_group.dart';
 import 'package:pilll/util/formatter/date_time_formatter.dart';
 import 'package:flutter/material.dart';
 
-class ModifingPillNumberPage extends HookWidget {
+class SettingTodayPillNumberPage extends HookWidget {
   final PillSheetGroup pillSheetGroup;
   final PillSheet activedPillSheet;
 
-  const ModifingPillNumberPage({
+  const SettingTodayPillNumberPage({
     Key? key,
     required this.pillSheetGroup,
     required this.activedPillSheet,
@@ -102,14 +102,14 @@ class ModifingPillNumberPage extends HookWidget {
   }
 }
 
-extension ModifingPillNumberPageRoute on ModifingPillNumberPage {
+extension SettingTodayPillNumberPageRoute on SettingTodayPillNumberPage {
   static Route<dynamic> route({
     required PillSheetGroup pillSheetGroup,
     required PillSheet activedPillSheet,
   }) {
     return MaterialPageRoute(
-      settings: RouteSettings(name: "ModifingPillNumberPage"),
-      builder: (_) => ModifingPillNumberPage(
+      settings: RouteSettings(name: "SettingTodayPillNumberPage"),
+      builder: (_) => SettingTodayPillNumberPage(
         pillSheetGroup: pillSheetGroup,
         activedPillSheet: activedPillSheet,
       ),

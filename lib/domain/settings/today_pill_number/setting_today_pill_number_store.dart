@@ -1,7 +1,7 @@
 import 'dart:async';
 
 import 'package:pilll/database/batch.dart';
-import 'package:pilll/domain/initial_setting/today_pill_number/setting_today_pill_number_state.dart';
+import 'package:pilll/domain/settings/today_pill_number/setting_today_pill_number_state.dart';
 import 'package:pilll/entity/pill_sheet.dart';
 import 'package:pilll/entity/pill_sheet_group.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
