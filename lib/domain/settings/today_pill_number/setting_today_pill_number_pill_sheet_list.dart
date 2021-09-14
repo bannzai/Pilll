@@ -9,7 +9,7 @@ import 'package:pilll/entity/pill_sheet.dart';
 import 'package:pilll/entity/pill_sheet_group.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 
-class SettingTodayPillNumberPillSheetList extends StatelessWidget {
+class SettingTodayPillNumberPillSheetList extends HookWidget {
   final PillSheetGroup pillSheetGroup;
   final PillSheet activedPillSheet;
   final SettingStateStore store;
