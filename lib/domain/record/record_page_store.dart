@@ -208,16 +208,31 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
 
     final batch = _batchFactory.batch();
 
-    final updatedPillSheet =
-        activedPillSheet.copyWith(lastTakenDate: takenDate);
-    _pillSheetService.update(batch, updatedPillSheet);
+    final List<PillSheet> updatedPillSheets = pillSheetGroup.pillSheets;
+    pillSheetGroup.pillSheets.asMap().keys.forEach((index) {
+      final pillSheet = pillSheetGroup.pillSheets[index];
+      if (pillSheet.groupIndex > activedPillSheet.groupIndex) {
+        return;
+      }
+      var filledDuration = takenDate.difference(pillSheet.beginingDate).inDays;
+      if (filledDuration > pillSheet.pillSheetType.totalCount) {
+        filledDuration = pillSheet.pillSheetType.totalCount;
+      }
+      final scheduledLastTakenDate =
+          pillSheet.beginingDate.add(Duration(days: filledDuration));
+      final updatedPillSheet =
+          pillSheet.copyWith(lastTakenDate: scheduledLastTakenDate);
+      _pillSheetService.update(batch, updatedPillSheet);
+      updatedPillSheets[index] = updatedPillSheet;
 
-    final history =
-        PillSheetModifiedHistoryServiceActionFactory.createTakenPillAction(
-            before: activedPillSheet, after: updatedPillSheet);
-    _pillSheetModifiedHistoryService.add(batch, history);
+      final history =
+          PillSheetModifiedHistoryServiceActionFactory.createTakenPillAction(
+              before: activedPillSheet, after: updatedPillSheet);
+      _pillSheetModifiedHistoryService.add(batch, history);
+    });
 
-    final updatedPillSheetGroup = pillSheetGroup.replaced(updatedPillSheet);
+    final updatedPillSheetGroup =
+        pillSheetGroup.copyWith(pillSheets: updatedPillSheets);
     _pillSheetGroupService.update(batch, updatedPillSheetGroup);
 
     await batch.commit();
