@@ -44,6 +44,20 @@ abstract class PillSheetGroup implements _$PillSheetGroup {
     return filtered.isEmpty ? null : filtered.first;
   }
 
+  PillSheetGroup replaced(PillSheet pillSheet) {
+    if (pillSheet.id == null) {
+      throw FormatException("ピルシートの置き換えによる更新できませんでした");
+    }
+    final index =
+        pillSheets.indexWhere((element) => element.id == pillSheet.id);
+    if (index == -1) {
+      throw FormatException("ピルシートの置き換えによる更新できませんでした。id: ${pillSheet.id}");
+    }
+    final copied = [...pillSheets];
+    copied[index] = pillSheet;
+    return copyWith(pillSheets: copied);
+  }
+
   int get totalPillCountIntoGroup {
     return pillSheets
         .map((pillSheet) => pillSheet.pillSheetType.totalCount)
