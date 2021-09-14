@@ -97,6 +97,7 @@ abstract class PillSheet implements _$PillSheet {
       pillSheetType.totalCount;
   bool get isDeleted => deletedAt != null;
   bool get inNotTakenDuration => todayPillNumber > typeInfo.dosingPeriod;
+  bool get isFill => lastTakenPillNumber >= pillSheetType.totalCount;
   bool get isInvalid => isDeleted || isOutOfRange;
   bool get hasRestDuration => !pillSheetType.isNotExistsNotTakenDuration;
 
