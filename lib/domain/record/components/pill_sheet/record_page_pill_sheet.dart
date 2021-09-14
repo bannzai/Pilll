@@ -144,10 +144,9 @@ class RecordPagePillSheet extends StatelessWidget {
               isPremium: state.isPremium,
               isTrial: state.isTrial,
               pillSheetAppearanceMode: state.appearanceMode,
-              pillNumberForMenstruationBegin: setting
-                  .menstruations[pageIndex].pillNumberForFromMenstruation,
-              menstruationDuration:
-                  setting.menstruations[pageIndex].durationMenstruation,
+              pillNumberForMenstruationBegin:
+                  setting.pillNumberForFromMenstruation,
+              menstruationDuration: setting.durationMenstruation,
               maxPillNumber: pillSheet.pillSheetType.totalCount,
               pillMarkNumber: pillNumberIntoPillSheet)),
       textScaleFactor: 1,
