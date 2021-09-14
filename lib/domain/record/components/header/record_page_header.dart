@@ -5,7 +5,7 @@ import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/domain/record/components/header/take_today.dart';
 import 'package:pilll/domain/record/record_page_store.dart';
-import 'package:pilll/domain/settings/today_pill_number/modifing_pill_number_page.dart';
+import 'package:pilll/domain/settings/today_pill_number/setting_today_pill_number_page.dart';
 import 'package:pilll/entity/pill_sheet_group.dart';
 import 'package:pilll/util/formatter/date_time_formatter.dart';
 import 'package:flutter/material.dart';
@@ -58,7 +58,7 @@ class RecordPageHeaderrmation extends StatelessWidget {
                         name: "tapped_record_information_header");
                     if (activedPillSheet != null && pillSheetGroup != null) {
                       Navigator.of(context).push(
-                        ModifingPillNumberPageRoute.route(
+                        SettingTodayPillNumberPageRoute.route(
                           pillSheetGroup: pillSheetGroup,
                           activedPillSheet: activedPillSheet,
                         ),
