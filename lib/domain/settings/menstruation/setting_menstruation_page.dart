@@ -25,7 +25,7 @@ class SettingMenstruationPage extends HookWidget {
         pillSheetTypes: setting.pillSheetTypes,
         selectedPillSheetPageIndex: state.currentPageIndex,
         selectedPillNumber: (pageIndex) =>
-            setting.menstruations[pageIndex].pillNumberForFromMenstruation,
+            setting.pillNumberForFromMenstruation,
         onPageChanged: (number) {
           store.setCurrentPageIndex(number);
         },
@@ -39,8 +39,7 @@ class SettingMenstruationPage extends HookWidget {
         },
       ),
       dynamicDescription: SettingMenstruationDynamicDescription(
-        fromMenstruation: setting.menstruations[state.currentPageIndex]
-            .pillNumberForFromMenstruation,
+        fromMenstruation: setting.pillNumberForFromMenstruation,
         fromMenstructionDidDecide: (number) {
           analytics.logEvent(
               name: "from_menstruation_initial_setting",
@@ -48,8 +47,7 @@ class SettingMenstruationPage extends HookWidget {
           store.modifyFromMenstruation(
               pageIndex: state.currentPageIndex, fromMenstruation: number);
         },
-        durationMenstruation:
-            setting.menstruations[state.currentPageIndex].durationMenstruation,
+        durationMenstruation: setting.durationMenstruation,
         durationMenstructionDidDecide: (number) {
           analytics.logEvent(
               name: "duration_menstruation_initial_setting",
