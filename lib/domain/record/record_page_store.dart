@@ -1,7 +1,6 @@
 import 'dart:io' show Platform;
 import 'dart:async';
 
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter_app_badger/flutter_app_badger.dart';
 import 'package:pilll/database/batch.dart';
 import 'package:pilll/entity/pill_mark_type.dart';
@@ -408,42 +407,6 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
     final updatedSetting = setting.copyWith(pillSheetTypes: copied);
     state = state.copyWith(setting: updatedSetting);
   }
-}
-
-PillSheetGroup modifyBeginingDateFunction({
-  required WriteBatch batch,
-  required PillSheetService pillSheetService,
-  required PillSheetModifiedHistoryService pillSheetModifiedHistoryService,
-  required PillSheetGroupService pillSheetGroupService,
-  required PillSheetGroup pillSheetGroup,
-  required int pillNumberIntoGroup,
-}) {
-  final serializedTodayPillNumber = pillSheetGroup.serializedTodayPillNumber;
-  final activedPillSheet = pillSheetGroup.activedPillSheet;
-  if (serializedTodayPillNumber == null || activedPillSheet == null) {
-    throw FormatException("有効なピルシートのデータが見つかりませんでした");
-  }
-
-  if (pillNumberIntoGroup == serializedTodayPillNumber) {
-    return pillSheetGroup;
-  }
-
-  final distance = pillNumberIntoGroup - serializedTodayPillNumber;
-  final updatedPillSheet = activedPillSheet.copyWith(
-    beginingDate:
-        activedPillSheet.beginingDate.subtract(Duration(days: distance)),
-  );
-  pillSheetService.update(batch, updatedPillSheet);
-
-  final history = PillSheetModifiedHistoryServiceActionFactory
-      .createChangedPillNumberAction(
-          before: activedPillSheet, after: activedPillSheet);
-  pillSheetModifiedHistoryService.add(batch, history);
-
-  final updatedPillSheetGroup = pillSheetGroup.replaced(updatedPillSheet);
-  pillSheetGroupService.update(batch, updatedPillSheetGroup);
-
-  return updatedPillSheetGroup;
 }
 
 DateTime calcBeginingDateFromNextTodayPillNumberFunction(

@@ -39,6 +39,7 @@ class TodayPllNumberRow extends HookWidget {
       ModifingPillNumberPageRoute.route(
         pillSheetGroup: pillSheetGroup,
         activedPillSheet: activedPillSheet,
+        setting: setting,
         store: store,
       ),
     );

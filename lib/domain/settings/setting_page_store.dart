@@ -1,8 +1,6 @@
 import 'dart:async';
 
 import 'package:pilll/database/batch.dart';
-import 'package:pilll/domain/record/record_page_store.dart';
-import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/entity/setting.dart';
 import 'package:pilll/service/pill_sheet.dart';
 import 'package:pilll/service/pill_sheet_group.dart';
@@ -166,39 +164,6 @@ class SettingStateStore extends StateNotifier<SettingState> {
 
   void update(Setting? entity) {
     state = state.copyWith(entity: entity);
-  }
-
-  Future<void> modifyBeginingDate({
-    required int pageIndex,
-    required int pillNumberIntoPillSheet,
-  }) async {
-    final pillSheetGroup = state.latestPillSheetGroup;
-    if (pillSheetGroup == null) {
-      throw FormatException("pill sheet group not found");
-    }
-    final activedPillSheet = pillSheetGroup.activedPillSheet;
-    if (activedPillSheet == null) {
-      throw FormatException("actived pill sheet not found");
-    }
-    final setting = state.entity;
-    if (setting == null) {
-      throw FormatException("setting entity not found");
-    }
-
-    final pillNumberIntoGroup = pastedTotalCount(
-        pillSheetTypes: setting.pillSheetTypes, pageIndex: pageIndex) + pillNumberIntoPillSheet;
-    final batch = _batchFactory.batch();
-    final updated = modifyBeginingDateFunction(
-      batch: batch,
-      pillSheetService: _pillSheetService,
-      pillSheetModifiedHistoryService: _pillSheetModifiedHistoryService,
-      pillSheetGroupService: _pillSheetGroupService,
-      pillSheetGroup: pillSheetGroup,
-      pillNumberIntoGroup: pillNumberIntoGroup,
-    );
-    await batch.commit();
-
-    state = state.copyWith(latestPillSheetGroup: updated);
   }
 
   Future<void> deletePillSheet() {
