@@ -17,42 +17,22 @@ List<DateRange> scheduledOrInTheMiddleMenstruationDateRanges(
     return [];
   }
   assert(maxPageCount > 0);
+
+  final firstPillSheet = pillSheetGroup.pillSheets.first;
   return List.generate(maxPageCount, (pageIndex) {
-    final offset = pageIndex * pillSheetGroup.totalPillCountIntoGroup;
-
-    final pillSheetTypes =
-        pillSheetGroup.pillSheets.map((e) => e.pillSheetType).toList();
-    return pillSheetTypes.asMap().keys.map((index) {
-      final pillSheet = pillSheetGroup.pillSheets[index];
-      if (index + 1 > setting.menstruations.length) {
-        return null;
-      }
-
-      final menstruationSetting = setting.menstruations[index];
-      final pastedCount =
-          pastedTotalCount(pillSheetTypes: pillSheetTypes, pageIndex: index);
-      final begin = pillSheet.beginingDate.add(
-        Duration(
-          days: pastedCount +
-              (menstruationSetting.pillNumberForFromMenstruation - 1) +
-              offset,
-        ),
-      );
-      final end = begin
-          .add(Duration(days: (menstruationSetting.durationMenstruation - 1)));
-
-      final isContained = menstruations
-          .where((element) =>
-              element.dateRange.inRange(begin) ||
-              element.dateRange.inRange(end))
-          .isNotEmpty;
-      if (isContained) {
-        return null;
-      }
-
-      return DateRange(begin, end);
-    }).where((element) => element != null);
-  }).expand((element) => element).toList().sublist(0, maxPageCount).cast();
+    final offset = pageIndex * firstPillSheet.pillSheetType.totalCount;
+    final begin = firstPillSheet.beginingDate.add(
+        Duration(days: (setting.pillNumberForFromMenstruation - 1) + offset));
+    final end = begin.add(Duration(days: (setting.durationMenstruation - 1)));
+    final isContained = menstruations
+        .where((element) =>
+            element.dateRange.inRange(begin) || element.dateRange.inRange(end))
+        .isNotEmpty;
+    if (isContained) {
+      return null;
+    }
+    return DateRange(begin, end);
+  }).where((element) => element != null).toList().cast();
 }
 
 List<DateRange> nextPillSheetDateRanges(
