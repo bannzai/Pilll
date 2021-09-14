@@ -68,7 +68,7 @@ class SettingPillSheetView extends StatelessWidget {
           pillMark: PillMark(
             hasRippleAnimation: false,
             isDone: false,
-            pillSheetType: _pillMarkTypeFor(
+            pillMarkType: _pillMarkTypeFor(
               pillNumberIntoPillSheet: pillNumberIntoPillSheet,
             ),
           ),
