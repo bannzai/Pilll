@@ -1,5 +1,7 @@
 import 'package:pilll/analytics.dart';
+import 'package:pilll/database/batch.dart';
 import 'package:pilll/database/database.dart';
+import 'package:pilll/domain/record/util/take.dart';
 import 'package:pilll/entity/pill_sheet.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/service/pill_sheet.dart';
@@ -41,37 +43,17 @@ Future<void> recordPill() async {
     return Future.value();
   }
 
-  final batch = database.batch();
-
-  final n = now();
-  final List<PillSheet> updatedPillSheets = pillSheetGroup.pillSheets;
-  pillSheetGroup.pillSheets.asMap().keys.forEach((index) {
-    final pillSheet = pillSheetGroup.pillSheets[index];
-    if (pillSheet.groupIndex > activedPillSheet.groupIndex) {
-      return;
-    }
-    var filledDuration = n.difference(pillSheet.beginingDate).inDays;
-    if (filledDuration > pillSheet.pillSheetType.totalCount) {
-      filledDuration = pillSheet.pillSheetType.totalCount;
-    }
-    final scheduledLastTakenDate =
-        pillSheet.beginingDate.add(Duration(days: filledDuration));
-    final updatedPillSheet =
-        pillSheet.copyWith(lastTakenDate: scheduledLastTakenDate);
-    pillSheetService.update(batch, updatedPillSheet);
-    updatedPillSheets[index] = updatedPillSheet;
-
-    final history =
-        PillSheetModifiedHistoryServiceActionFactory.createTakenPillAction(
-            before: activedPillSheet, after: updatedPillSheet);
-    pillSheetModifiedHistoryService.add(batch, history);
-  });
-
-  final updatedPillSheetGroup =
-      pillSheetGroup.copyWith(pillSheets: updatedPillSheets);
-  pillSheetGroupService.update(batch, updatedPillSheetGroup);
-
-  await batch.commit();
+  final takenDate = now();
+  final batchFactory = BatchFactory(database);
+  await take(
+    takenDate: takenDate,
+    pillSheetGroup: pillSheetGroup,
+    activedPillSheet: activedPillSheet,
+    batchFactory: batchFactory,
+    pillSheetService: pillSheetService,
+    pillSheetModifiedHistoryService: pillSheetModifiedHistoryService,
+    pillSheetGroupService: pillSheetGroupService,
+  );
   // NOTE: Firebase initializeが成功しているかが定かでは無いので一番最後にログを送る
   analytics.logEvent(name: "quick_recorded");
 }
