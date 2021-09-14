@@ -22,8 +22,10 @@ abstract class InitialSettingState implements _$InitialSettingState {
     @Default([])
         List<PillSheetType> pillSheetTypes,
     InitialSettingTodayPillNumber? todayPillNumber,
-    @Default([])
-        List<MenstruationSetting> menstruations,
+    @Default(23)
+        int fromMenstruation,
+    @Default(4)
+        int durationMenstruation,
     @Default([
       ReminderTime(hour: 21, minute: 0),
       ReminderTime(hour: 22, minute: 0),
