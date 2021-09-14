@@ -43,18 +43,10 @@ class MenstruationRow extends HookWidget {
     if (setting.pillSheetTypes.isEmpty) {
       return false;
     }
-    if (setting.menstruations.length != setting.pillSheetTypes.length) {
-      return true;
-    }
-    final isExistsInValidCase = setting.pillSheetTypes
-        .asMap()
-        .keys
-        .map((index) {
-          return setting.menstruations[index].pillNumberForFromMenstruation >
-              setting.pillSheetTypes[index].totalCount;
-        })
-        .where((element) => element)
-        .isNotEmpty;
-    return isExistsInValidCase;
+
+    final totalCount = setting.pillSheetTypes
+        .map((e) => e.totalCount)
+        .reduce((value, element) => value + element);
+    return totalCount < setting.pillNumberForFromMenstruation;
   }
 }
