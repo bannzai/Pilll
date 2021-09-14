@@ -1,6 +1,7 @@
 import 'package:pilll/domain/settings/menstruation/setting_menstruation_state.dart';
 import 'package:pilll/domain/settings/setting_page_state.dart';
 import 'package:pilll/domain/settings/setting_page_store.dart';
+import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/service/setting.dart';
 import 'package:riverpod/riverpod.dart';
 
@@ -46,5 +47,18 @@ class SettingMenstruationStateStore
 
   setCurrentPageIndex(int pageIndex) {
     state = state.copyWith(currentPageIndex: pageIndex);
+  }
+
+  int? retrieveMenstruationSelectedPillNumber(int pageIndex) {
+    final setting = settingState.entity;
+    if (setting == null) {
+      throw FormatException("setting entity not found");
+    }
+    final _pastedTotalCount = pastedTotalCount(
+        pillSheetTypes: setting.pillSheetTypes, pageIndex: pageIndex);
+    if (_pastedTotalCount >= setting.pillNumberForFromMenstruation) {
+      return setting.pillNumberForFromMenstruation;
+    }
+    return setting.pillNumberForFromMenstruation - _pastedTotalCount;
   }
 }
