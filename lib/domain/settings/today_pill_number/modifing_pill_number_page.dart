@@ -49,37 +49,51 @@ class _ModifingPillNumberPageState extends State<ModifingPillNumberPage> {
       ),
       body: SafeArea(
         child: Container(
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.center,
-            children: <Widget>[
-              SizedBox(height: 20),
-              ConstrainedBox(
-                constraints: BoxConstraints(
-                    maxWidth: MediaQuery.of(context).size.width - 32),
-                child: Text("今日${_today()}に飲む・飲んだピル番号をタップ",
-                    style: FontType.sBigTitle.merge(TextColorStyle.main)),
-              ),
-              SizedBox(height: 56),
-              Center(
-                child: SettingTodayPillNumberPillSheetList(
-                  pillSheetGroup: widget.pillSheetGroup,
-                  activedPillSheet: widget.activedPillSheet,
-                  store: widget.store,
+          child: Center(
+            child: Stack(
+              children: [
+                ListView(
+                  children: [
+                    SizedBox(height: 20),
+                    Text(
+                      "今日(${_today()})\n飲む・飲んだピルの番号をタップ",
+                      style: FontType.sBigTitle.merge(TextColorStyle.main),
+                      textAlign: TextAlign.center,
+                    ),
+                    SizedBox(height: 56),
+                    Center(
+                      child: SettingTodayPillNumberPillSheetList(
+                        pillSheetGroup: widget.pillSheetGroup,
+                        activedPillSheet: widget.activedPillSheet,
+                        store: widget.store,
+                      ),
+                    ),
+                    SizedBox(height: 20),
+                  ],
                 ),
-              ),
-              SizedBox(height: 20),
-              PrimaryButton(
-                onPressed: selectedPillMarkNumberIntoPillSheet != null &&
-                        selectedPillSheetPageIndex != null
-                    ? () => widget.store.modifyBeginingDate(
-                          pageIndex: selectedPillSheetPageIndex,
-                          pillNumberIntoPillSheet:
-                              selectedPillMarkNumberIntoPillSheet,
-                        )
-                    : null,
-                text: "変更する",
-              )
-            ],
+                Align(
+                  alignment: Alignment.bottomCenter,
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.end,
+                    children: [
+                      PrimaryButton(
+                        onPressed:
+                            selectedPillMarkNumberIntoPillSheet != null &&
+                                    selectedPillSheetPageIndex != null
+                                ? () => widget.store.modifyBeginingDate(
+                                      pageIndex: selectedPillSheetPageIndex,
+                                      pillNumberIntoPillSheet:
+                                          selectedPillMarkNumberIntoPillSheet,
+                                    )
+                                : null,
+                        text: "変更する",
+                      ),
+                      SizedBox(height: 35),
+                    ],
+                  ),
+                )
+              ],
+            ),
           ),
         ),
       ),
