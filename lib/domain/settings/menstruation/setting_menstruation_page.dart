@@ -6,6 +6,7 @@ import 'package:pilll/components/template/setting_menstruation/setting_menstruat
 import 'package:pilll/components/template/setting_menstruation/setting_menstruation_page_template.dart';
 import 'package:pilll/components/template/setting_menstruation/setting_menstruation_pill_sheet_list.dart';
 import 'package:pilll/domain/settings/menstruation/setting_menstruation_store.dart';
+import 'package:pilll/domain/settings/setting_page_store.dart';
 
 class SettingMenstruationPage extends HookWidget {
   const SettingMenstruationPage({
@@ -15,7 +16,8 @@ class SettingMenstruationPage extends HookWidget {
   Widget build(BuildContext context) {
     final store = useProvider(settingMenstruationStoreProvider);
     final state = useProvider(settingMenstruationStoreProvider.state);
-    final setting = store.settingState.entity;
+    final settingState = useProvider(settingStateProvider);
+    final setting = settingState.entity;
     if (setting == null) {
       throw FormatException("生理設定にはSettingのデータが必要です");
     }
@@ -25,7 +27,7 @@ class SettingMenstruationPage extends HookWidget {
         pillSheetTypes: setting.pillSheetTypes,
         selectedPillSheetPageIndex: state.currentPageIndex,
         selectedPillNumber: (pageIndex) =>
-            store.retrieveMenstruationSelectedPillNumber(pageIndex),
+            store.retrieveMenstruationSelectedPillNumber(setting, pageIndex),
         onPageChanged: (number) {
           store.setCurrentPageIndex(number);
         },
@@ -35,7 +37,10 @@ class SettingMenstruationPage extends HookWidget {
             "page": pageIndex,
           });
           store.modifyFromMenstruation(
-              pageIndex: pageIndex, fromMenstruation: number);
+            setting: setting,
+            pageIndex: pageIndex,
+            fromMenstruation: number,
+          );
         },
       ),
       dynamicDescription: SettingMenstruationDynamicDescription(
@@ -45,7 +50,10 @@ class SettingMenstruationPage extends HookWidget {
               name: "from_menstruation_initial_setting",
               parameters: {"number": number});
           store.modifyFromMenstruation(
-              pageIndex: state.currentPageIndex, fromMenstruation: number);
+            setting: setting,
+            pageIndex: state.currentPageIndex,
+            fromMenstruation: number,
+          );
         },
         durationMenstruation: setting.durationMenstruation,
         durationMenstructionDidDecide: (number) {
@@ -53,7 +61,10 @@ class SettingMenstruationPage extends HookWidget {
               name: "duration_menstruation_initial_setting",
               parameters: {"number": number});
           store.modifyDurationMenstruation(
-              pageIndex: state.currentPageIndex, durationMenstruation: number);
+            setting: setting,
+            pageIndex: state.currentPageIndex,
+            durationMenstruation: number,
+          );
         },
         retrieveFocusedPillSheetType: () {
           return setting.pillSheetTypes[state.currentPageIndex];
