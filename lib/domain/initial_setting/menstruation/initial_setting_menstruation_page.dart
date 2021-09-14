@@ -21,8 +21,7 @@ class InitialSettingMenstruationPage extends HookWidget {
       pillSheetList: SettingMenstruationPillSheetList(
         pillSheetTypes: state.pillSheetTypes,
         selectedPillSheetPageIndex: state.currentMenstruationPageIndex,
-        selectedPillNumber: (pageIndex) =>
-            state.menstruations[pageIndex].pillNumberForFromMenstruation,
+        selectedPillNumber: (pageIndex) => state.fromMenstruation,
         onPageChanged: (pageIndex) {
           store.setCurrentMenstruationPageIndex(pageIndex);
         },
@@ -43,8 +42,7 @@ class InitialSettingMenstruationPage extends HookWidget {
         text: "次へ",
       ),
       dynamicDescription: SettingMenstruationDynamicDescription(
-        fromMenstruation:
-            state.focusedMenstruation.pillNumberForFromMenstruation,
+        fromMenstruation: state.fromMenstruation,
         fromMenstructionDidDecide: (number) {
           analytics.logEvent(
               name: "from_menstruation_initial_setting",
@@ -54,7 +52,7 @@ class InitialSettingMenstruationPage extends HookWidget {
             fromMenstruation: number,
           );
         },
-        durationMenstruation: state.focusedMenstruation.durationMenstruation,
+        durationMenstruation: state.durationMenstruation,
         durationMenstructionDidDecide: (number) {
           analytics.logEvent(
               name: "duration_menstruation_initial_setting",
