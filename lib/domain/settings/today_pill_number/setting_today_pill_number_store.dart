@@ -33,9 +33,10 @@ class SettingTodayPillNumberStateStore
     this._pillSheetModifiedHistoryService,
   ) : super(SettingTodayPillNumberState());
 
-  initialize(
-      {required PillSheetGroup pillSheetGroup,
-      required PillSheet activedPillSheet}) {
+  initialize({
+    required PillSheetGroup pillSheetGroup,
+    required PillSheet activedPillSheet,
+  }) {
     state = state.copyWith(
       selectedPillMarkNumberIntoPillSheet: activedPillSheet.groupIndex,
       selectedPillSheetPageIndex: _pillNumberIntoPillSheet(
@@ -75,8 +76,7 @@ class SettingTodayPillNumberStateStore
     final List<PillSheet> updatedPillSheets = [];
     pillSheetGroup.pillSheets.forEach((pillSheet) {
       final updatedPillSheet = pillSheet.copyWith(
-        beginingDate:
-            activedPillSheet.beginingDate.subtract(Duration(days: distance)),
+        beginingDate: pillSheet.beginingDate.subtract(Duration(days: distance)),
       );
       _pillSheetService.update(batch, updatedPillSheet);
       updatedPillSheets.add(updatedPillSheet);
