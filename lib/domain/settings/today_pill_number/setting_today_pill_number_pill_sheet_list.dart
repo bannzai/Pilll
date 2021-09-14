@@ -4,24 +4,20 @@ import 'package:pilll/analytics.dart';
 import 'package:pilll/components/molecules/dots_page_indicator.dart';
 import 'package:pilll/components/organisms/pill_sheet/pill_sheet_view_layout.dart';
 import 'package:pilll/components/organisms/pill_sheet/setting_pill_sheet_view.dart';
-import 'package:pilll/domain/settings/setting_page_store.dart';
-import 'package:pilll/entity/pill_sheet.dart';
-import 'package:pilll/entity/pill_sheet_group.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 
 class SettingTodayPillNumberPillSheetList extends HookWidget {
-  final PillSheetGroup pillSheetGroup;
-  final PillSheet activedPillSheet;
-  final SettingStateStore store;
-
-  List<PillSheetType> get pillSheetTypes =>
-      pillSheetGroup.pillSheets.map((e) => e.pillSheetType).toList();
+  final List<PillSheetType> pillSheetTypes;
+  final int selectedPageIndex;
+  final int selectedTodayPillNumberIntoPillSheet;
+  final Function(int pageIndex, int pillNumberIntoPillSheet) markSelected;
 
   const SettingTodayPillNumberPillSheetList({
     Key? key,
-    required this.pillSheetGroup,
-    required this.activedPillSheet,
-    required this.store,
+    required this.pillSheetTypes,
+    required this.selectedPageIndex,
+    required this.selectedTodayPillNumberIntoPillSheet,
+    required this.markSelected,
   }) : super(key: key);
   @override
   Widget build(BuildContext context) {
@@ -50,9 +46,9 @@ class SettingTodayPillNumberPillSheetList extends HookWidget {
                     child: SettingPillSheetView(
                       pageIndex: pageIndex,
                       pillSheetTypes: pillSheetTypes,
-                      selectedPillNumberPageIndex: activedPillSheet.groupIndex,
+                      selectedPillNumberPageIndex: selectedPageIndex,
                       selectedPillNumberIntoPillSheet:
-                          _pillNumberIntoPillSheet(pageIndex),
+                          selectedTodayPillNumberIntoPillSheet,
                       markSelected: (pageIndex, number) {
                         analytics.logEvent(
                             name: "selected_today_number_initial_setting",
@@ -60,9 +56,7 @@ class SettingTodayPillNumberPillSheetList extends HookWidget {
                               "pill_number": number,
                               "page": pageIndex,
                             });
-                        store.modifyBeginingDate(
-                            pageIndex: pageIndex,
-                            pillNumberIntoPillSheet: number);
+                        markSelected(pageIndex, number);
                       },
                     ),
                   ),
@@ -88,14 +82,5 @@ class SettingTodayPillNumberPillSheetList extends HookWidget {
         ]
       ],
     );
-  }
-
-  int _pillNumberIntoPillSheet(int pageIndex) {
-    final _pastedTotalCount =
-        pastedTotalCount(pillSheetTypes: pillSheetTypes, pageIndex: pageIndex);
-    if (_pastedTotalCount >= activedPillSheet.todayPillNumber) {
-      return activedPillSheet.todayPillNumber;
-    }
-    return activedPillSheet.todayPillNumber - _pastedTotalCount;
   }
 }

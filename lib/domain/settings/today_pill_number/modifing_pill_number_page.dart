@@ -6,6 +6,7 @@ import 'package:pilll/domain/settings/setting_page_store.dart';
 import 'package:pilll/domain/settings/today_pill_number/setting_today_pill_number_pill_sheet_list.dart';
 import 'package:pilll/entity/pill_sheet.dart';
 import 'package:pilll/entity/pill_sheet_group.dart';
+import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/util/formatter/date_time_formatter.dart';
 import 'package:flutter/material.dart';
 
@@ -26,8 +27,16 @@ class ModifingPillNumberPage extends StatefulWidget {
 }
 
 class _ModifingPillNumberPageState extends State<ModifingPillNumberPage> {
-  int? selectedPillSheetPageIndex;
-  int? selectedPillMarkNumberIntoPillSheet;
+  late int selectedPillSheetPageIndex;
+  late int selectedPillMarkNumberIntoPillSheet;
+
+  @override
+  void initState() {
+    super.initState();
+    selectedPillSheetPageIndex = widget.activedPillSheet.groupIndex;
+    selectedPillMarkNumberIntoPillSheet =
+        _pillNumberIntoPillSheet(widget.activedPillSheet.groupIndex);
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -63,9 +72,19 @@ class _ModifingPillNumberPageState extends State<ModifingPillNumberPage> {
                     SizedBox(height: 56),
                     Center(
                       child: SettingTodayPillNumberPillSheetList(
-                        pillSheetGroup: widget.pillSheetGroup,
-                        activedPillSheet: widget.activedPillSheet,
-                        store: widget.store,
+                        pillSheetTypes: widget.pillSheetGroup.pillSheets
+                            .map((e) => e.pillSheetType)
+                            .toList(),
+                        selectedPageIndex: selectedPillSheetPageIndex,
+                        selectedTodayPillNumberIntoPillSheet:
+                            selectedPillMarkNumberIntoPillSheet,
+                        markSelected: (pageIndex, pillNumberIntoPillSheet) {
+                          setState(() {
+                            this.selectedPillSheetPageIndex = pageIndex;
+                            this.selectedPillMarkNumberIntoPillSheet =
+                                pillNumberIntoPillSheet;
+                          });
+                        },
                       ),
                     ),
                     SizedBox(height: 20),
@@ -77,15 +96,14 @@ class _ModifingPillNumberPageState extends State<ModifingPillNumberPage> {
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: [
                       PrimaryButton(
-                        onPressed:
-                            selectedPillMarkNumberIntoPillSheet != null &&
-                                    selectedPillSheetPageIndex != null
-                                ? () => widget.store.modifyBeginingDate(
-                                      pageIndex: selectedPillSheetPageIndex,
-                                      pillNumberIntoPillSheet:
-                                          selectedPillMarkNumberIntoPillSheet,
-                                    )
-                                : null,
+                        onPressed: () {
+                          widget.store.modifyBeginingDate(
+                            pageIndex: selectedPillSheetPageIndex,
+                            pillNumberIntoPillSheet:
+                                selectedPillMarkNumberIntoPillSheet,
+                          );
+                          Navigator.of(context).pop();
+                        },
                         text: "変更する",
                       ),
                       SizedBox(height: 35),
@@ -102,6 +120,17 @@ class _ModifingPillNumberPageState extends State<ModifingPillNumberPage> {
 
   String _today() {
     return "${DateTimeFormatter.slashYearAndMonthAndDay(DateTime.now())}(${DateTimeFormatter.weekday(DateTime.now())})";
+  }
+
+  int _pillNumberIntoPillSheet(int pageIndex) {
+    final pillSheetTypes =
+        widget.pillSheetGroup.pillSheets.map((e) => e.pillSheetType).toList();
+    final _pastedTotalCount =
+        pastedTotalCount(pillSheetTypes: pillSheetTypes, pageIndex: pageIndex);
+    if (_pastedTotalCount >= widget.activedPillSheet.todayPillNumber) {
+      return widget.activedPillSheet.todayPillNumber;
+    }
+    return widget.activedPillSheet.todayPillNumber - _pastedTotalCount;
   }
 }
 
