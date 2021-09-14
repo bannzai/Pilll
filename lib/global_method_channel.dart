@@ -1,5 +1,7 @@
 import 'package:pilll/analytics.dart';
 import 'package:pilll/database/database.dart';
+import 'package:pilll/entity/pill_sheet.dart';
+import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/service/pill_sheet.dart';
 import 'package:pilll/service/pill_sheet_group.dart';
 import 'package:pilll/service/pill_sheet_modified_history.dart';
@@ -34,24 +36,39 @@ Future<void> recordPill() async {
   if (pillSheetGroup == null) {
     return Future.value();
   }
-  final activatedPillSheet = pillSheetGroup.activedPillSheet;
-  if (activatedPillSheet == null) {
+  final activedPillSheet = pillSheetGroup.activedPillSheet;
+  if (activedPillSheet == null) {
     return Future.value();
   }
 
   final batch = database.batch();
 
-  final updatedPillSheet = activatedPillSheet.copyWith(lastTakenDate: now());
-  pillSheetService.update(batch, updatedPillSheet);
+  final n = now();
+  final List<PillSheet> updatedPillSheets = pillSheetGroup.pillSheets;
+  pillSheetGroup.pillSheets.asMap().keys.forEach((index) {
+    final pillSheet = pillSheetGroup.pillSheets[index];
+    if (pillSheet.groupIndex > activedPillSheet.groupIndex) {
+      return;
+    }
+    var filledDuration = n.difference(pillSheet.beginingDate).inDays;
+    if (filledDuration > pillSheet.pillSheetType.totalCount) {
+      filledDuration = pillSheet.pillSheetType.totalCount;
+    }
+    final scheduledLastTakenDate =
+        pillSheet.beginingDate.add(Duration(days: filledDuration));
+    final updatedPillSheet =
+        pillSheet.copyWith(lastTakenDate: scheduledLastTakenDate);
+    pillSheetService.update(batch, updatedPillSheet);
+    updatedPillSheets[index] = updatedPillSheet;
 
-  final history =
-      PillSheetModifiedHistoryServiceActionFactory.createTakenPillAction(
-    before: activatedPillSheet,
-    after: updatedPillSheet,
-  );
-  pillSheetModifiedHistoryService.add(batch, history);
+    final history =
+        PillSheetModifiedHistoryServiceActionFactory.createTakenPillAction(
+            before: activedPillSheet, after: updatedPillSheet);
+    pillSheetModifiedHistoryService.add(batch, history);
+  });
 
-  final updatedPillSheetGroup = pillSheetGroup.replaced(updatedPillSheet);
+  final updatedPillSheetGroup =
+      pillSheetGroup.copyWith(pillSheets: updatedPillSheets);
   pillSheetGroupService.update(batch, updatedPillSheetGroup);
 
   await batch.commit();
