@@ -48,20 +48,6 @@ extension PillSheetAppearanceModeFunctions on PillSheetAppearanceMode {
   }
 }
 
-@freezed
-abstract class MenstruationSetting implements _$MenstruationSetting {
-  @JsonSerializable(explicitToJson: true)
-  factory MenstruationSetting({
-    required int pillNumberForFromMenstruation,
-    required int durationMenstruation,
-  }) = _MenstruationSetting;
-
-  factory MenstruationSetting.fromJson(Map<String, dynamic> json) =>
-      _$MenstruationSettingFromJson(json);
-  Map<String, dynamic> toJson() =>
-      _$_$_MenstruationSettingToJson(this as _$_MenstruationSetting);
-}
-
 abstract class SettingFirestoreFieldKeys {
   static final pillSheetAppearanceMode = "pillSheetAppearanceMode";
 }
@@ -72,7 +58,8 @@ abstract class Setting implements _$Setting {
   @JsonSerializable(explicitToJson: true)
   factory Setting({
     @Default([]) List<PillSheetType> pillSheetTypes,
-    required List<MenstruationSetting> menstruations,
+    required int pillNumberForFromMenstruation,
+    required int durationMenstruation,
     @Default([]) List<ReminderTime> reminderTimes,
     @JsonSerializable(explicitToJson: true) required bool isOnReminder,
     @Default(true) bool isOnNotifyInNotTakenDuration,
