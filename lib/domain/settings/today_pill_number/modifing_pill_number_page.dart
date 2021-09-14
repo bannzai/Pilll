@@ -1,48 +1,36 @@
+import 'package:flutter_hooks/flutter_hooks.dart';
+import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/components/atoms/buttons.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
+import 'package:pilll/domain/initial_setting/today_pill_number/setting_today_pill_number_store.dart';
 import 'package:pilll/domain/settings/setting_page_store.dart';
 import 'package:pilll/domain/settings/today_pill_number/setting_today_pill_number_pill_sheet_list.dart';
 import 'package:pilll/entity/pill_sheet.dart';
 import 'package:pilll/entity/pill_sheet_group.dart';
-import 'package:pilll/entity/pill_sheet_type.dart';
+import 'package:pilll/entity/setting.dart';
 import 'package:pilll/util/formatter/date_time_formatter.dart';
 import 'package:flutter/material.dart';
 
-class ModifingPillNumberPage extends StatefulWidget {
+class ModifingPillNumberPage extends HookWidget {
   final PillSheetGroup pillSheetGroup;
   final PillSheet activedPillSheet;
+  final Setting setting;
   final SettingStateStore store;
 
   const ModifingPillNumberPage({
     Key? key,
     required this.pillSheetGroup,
     required this.activedPillSheet,
+    required this.setting,
     required this.store,
   }) : super(key: key);
 
   @override
-  _ModifingPillNumberPageState createState() => _ModifingPillNumberPageState();
-}
-
-class _ModifingPillNumberPageState extends State<ModifingPillNumberPage> {
-  late int selectedPillSheetPageIndex;
-  late int selectedPillMarkNumberIntoPillSheet;
-
-  @override
-  void initState() {
-    super.initState();
-    selectedPillSheetPageIndex = widget.activedPillSheet.groupIndex;
-    selectedPillMarkNumberIntoPillSheet =
-        _pillNumberIntoPillSheet(widget.activedPillSheet.groupIndex);
-  }
-
-  @override
   Widget build(BuildContext context) {
-    final selectedPillSheetPageIndex = this.selectedPillSheetPageIndex;
-    final selectedPillMarkNumberIntoPillSheet =
-        this.selectedPillMarkNumberIntoPillSheet;
+    final state = useProvider(settingTodayPillNumberStoreProvider.state);
+    final store = useProvider(settingTodayPillNumberStoreProvider);
     return Scaffold(
       backgroundColor: PilllColors.background,
       appBar: AppBar(
@@ -72,19 +60,17 @@ class _ModifingPillNumberPageState extends State<ModifingPillNumberPage> {
                     SizedBox(height: 56),
                     Center(
                       child: SettingTodayPillNumberPillSheetList(
-                        pillSheetTypes: widget.pillSheetGroup.pillSheets
+                        pillSheetTypes: pillSheetGroup.pillSheets
                             .map((e) => e.pillSheetType)
                             .toList(),
-                        selectedPageIndex: selectedPillSheetPageIndex,
+                        selectedPageIndex: state.selectedPillSheetPageIndex,
                         selectedTodayPillNumberIntoPillSheet:
-                            selectedPillMarkNumberIntoPillSheet,
-                        markSelected: (pageIndex, pillNumberIntoPillSheet) {
-                          setState(() {
-                            this.selectedPillSheetPageIndex = pageIndex;
-                            this.selectedPillMarkNumberIntoPillSheet =
-                                pillNumberIntoPillSheet;
-                          });
-                        },
+                            state.selectedPillMarkNumberIntoPillSheet,
+                        markSelected: (pageIndex, pillNumberIntoPillSheet) =>
+                            store.markSelected(
+                                pageIndex: pageIndex,
+                                pillNumberIntoPillSheet:
+                                    pillNumberIntoPillSheet),
                       ),
                     ),
                     SizedBox(height: 20),
@@ -97,10 +83,10 @@ class _ModifingPillNumberPageState extends State<ModifingPillNumberPage> {
                     children: [
                       PrimaryButton(
                         onPressed: () {
-                          widget.store.modifyBeginingDate(
-                            pageIndex: selectedPillSheetPageIndex,
-                            pillNumberIntoPillSheet:
-                                selectedPillMarkNumberIntoPillSheet,
+                          store.modifyBeginingDate(
+                            pillSheetGroup: pillSheetGroup,
+                            activedPillSheet: activedPillSheet,
+                            setting: setting,
                           );
                           Navigator.of(context).pop();
                         },
@@ -121,23 +107,13 @@ class _ModifingPillNumberPageState extends State<ModifingPillNumberPage> {
   String _today() {
     return "${DateTimeFormatter.slashYearAndMonthAndDay(DateTime.now())}(${DateTimeFormatter.weekday(DateTime.now())})";
   }
-
-  int _pillNumberIntoPillSheet(int pageIndex) {
-    final pillSheetTypes =
-        widget.pillSheetGroup.pillSheets.map((e) => e.pillSheetType).toList();
-    final _pastedTotalCount =
-        pastedTotalCount(pillSheetTypes: pillSheetTypes, pageIndex: pageIndex);
-    if (_pastedTotalCount >= widget.activedPillSheet.todayPillNumber) {
-      return widget.activedPillSheet.todayPillNumber;
-    }
-    return widget.activedPillSheet.todayPillNumber - _pastedTotalCount;
-  }
 }
 
 extension ModifingPillNumberPageRoute on ModifingPillNumberPage {
   static Route<dynamic> route({
     required PillSheetGroup pillSheetGroup,
     required PillSheet activedPillSheet,
+    required Setting setting,
     required SettingStateStore store,
   }) {
     return MaterialPageRoute(
@@ -145,6 +121,7 @@ extension ModifingPillNumberPageRoute on ModifingPillNumberPage {
       builder: (_) => ModifingPillNumberPage(
         pillSheetGroup: pillSheetGroup,
         activedPillSheet: activedPillSheet,
+        setting: setting,
         store: store,
       ),
     );
