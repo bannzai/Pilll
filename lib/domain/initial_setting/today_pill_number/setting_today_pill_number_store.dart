@@ -5,7 +5,6 @@ import 'package:pilll/domain/initial_setting/today_pill_number/setting_today_pil
 import 'package:pilll/entity/pill_sheet.dart';
 import 'package:pilll/entity/pill_sheet_group.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
-import 'package:pilll/entity/setting.dart';
 import 'package:pilll/service/pill_sheet.dart';
 import 'package:pilll/service/pill_sheet_group.dart';
 import 'package:pilll/service/pill_sheet_modified_history.dart';
@@ -57,7 +56,6 @@ class SettingTodayPillNumberStateStore
   Future<void> modifyBeginingDate({
     required PillSheetGroup pillSheetGroup,
     required PillSheet activedPillSheet,
-    required Setting setting,
   }) async {
     final batch = _batchFactory.batch();
 

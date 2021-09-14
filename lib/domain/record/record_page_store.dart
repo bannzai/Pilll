@@ -287,30 +287,6 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
     state = state.copyWith(pillSheetGroup: updatedPillSheetGroup);
   }
 
-  Future<void> modifyBeginingDate(int pillNumber) async {
-    final pillSheetGroup = state.pillSheetGroup;
-    if (pillSheetGroup == null) {
-      throw FormatException("pill sheet group not found");
-    }
-    final activedPillSheet = pillSheetGroup.activedPillSheet;
-    if (activedPillSheet == null) {
-      throw FormatException("active pill sheet not found");
-    }
-
-    final batch = _batchFactory.batch();
-    final updated = modifyBeginingDateFunction(
-      batch: batch,
-      pillSheetService: _pillSheetService,
-      pillSheetModifiedHistoryService: _pillSheetModifiedHistoryService,
-      pillSheetGroupService: _pillSheetGroupService,
-      pillSheetGroup: pillSheetGroup,
-      pillNumberIntoGroup: pillNumber,
-    );
-    await batch.commit();
-
-    state = state.copyWith(pillSheetGroup: updated);
-  }
-
   bool isDone({
     required int pillNumberIntoPillSheet,
     required PillSheet pillSheet,
