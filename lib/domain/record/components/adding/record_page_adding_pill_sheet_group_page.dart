@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 import 'package:pilll/analytics.dart';
-import 'package:pilll/components/template/setting_pill_sheet_group/settin_pill_sheet_group.dart';
+import 'package:pilll/components/template/setting_pill_sheet_group/setting_pill_sheet_group.dart';
 import 'package:pilll/components/atoms/buttons.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/text_color.dart';
