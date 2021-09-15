@@ -56,8 +56,14 @@ class _PillMarkState extends State<PillMark> with TickerProviderStateMixin {
     return Stack(
       clipBehavior: Clip.none,
       children: [
-        _mark(widget.pillMarkType),
-        if (widget.isDone) PillMarkDoneMark(),
+        Stack(
+          alignment: Alignment.center,
+          children: [
+            _mark(widget.pillMarkType),
+            if (widget.isDone)
+              Align(alignment: Alignment.center, child: PillMarkDoneMark()),
+          ],
+        ),
         if (widget.hasRippleAnimation)
           // NOTE: pill mark size is 20px. Ripple view final size is 80px.
           // Positined ripple animation equal to (80px - 20px) / 2(to center) = 30;
