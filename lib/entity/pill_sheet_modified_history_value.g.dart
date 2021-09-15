@@ -63,6 +63,7 @@ _$_CreatedPillSheetValue _$_$_CreatedPillSheetValueFromJson(
   return _$_CreatedPillSheetValue(
     pillSheetCreatedAt: NonNullTimestampConverter.timestampToDateTime(
         json['pillSheetCreatedAt'] as Timestamp),
+    pillSheetCount: json['pillSheetCount'] as int? ?? 1,
   );
 }
 
@@ -71,6 +72,7 @@ Map<String, dynamic> _$_$_CreatedPillSheetValueToJson(
     <String, dynamic>{
       'pillSheetCreatedAt': NonNullTimestampConverter.dateTimeToTimestamp(
           instance.pillSheetCreatedAt),
+      'pillSheetCount': instance.pillSheetCount,
     };
 
 _$_AutomaticallyRecordedLastTakenDateValue
@@ -102,6 +104,7 @@ _$_DeletedPillSheetValue _$_$_DeletedPillSheetValueFromJson(
   return _$_DeletedPillSheetValue(
     pillSheetDeletedAt: NonNullTimestampConverter.timestampToDateTime(
         json['pillSheetDeletedAt'] as Timestamp),
+    pillSheetCount: json['pillSheetCount'] as int? ?? 1,
   );
 }
 
@@ -110,6 +113,7 @@ Map<String, dynamic> _$_$_DeletedPillSheetValueToJson(
     <String, dynamic>{
       'pillSheetDeletedAt': NonNullTimestampConverter.dateTimeToTimestamp(
           instance.pillSheetDeletedAt),
+      'pillSheetCount': instance.pillSheetCount,
     };
 
 _$_TakenPillValue _$_$_TakenPillValueFromJson(Map<String, dynamic> json) {
@@ -165,6 +169,8 @@ _$_ChangedPillNumberValue _$_$_ChangedPillNumberValueFromJson(
         json['afterBeginingDate'] as Timestamp),
     beforeTodayPillNumber: json['beforeTodayPillNumber'] as int,
     afterTodayPillNumber: json['afterTodayPillNumber'] as int,
+    beforeGroupIndex: json['beforeGroupIndex'] as int? ?? 1,
+    afterGroupIndex: json['afterGroupIndex'] as int? ?? 1,
   );
 }
 
@@ -177,6 +183,8 @@ Map<String, dynamic> _$_$_ChangedPillNumberValueToJson(
           instance.afterBeginingDate),
       'beforeTodayPillNumber': instance.beforeTodayPillNumber,
       'afterTodayPillNumber': instance.afterTodayPillNumber,
+      'beforeGroupIndex': instance.beforeGroupIndex,
+      'afterGroupIndex': instance.afterGroupIndex,
     };
 
 _$_EndedPillSheetValue _$_$_EndedPillSheetValueFromJson(

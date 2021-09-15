@@ -13,7 +13,10 @@ _$_PillSheetModifiedHistory _$_$_PillSheetModifiedHistoryFromJson(
     actionType: json['actionType'] as String,
     value: PillSheetModifiedHistoryValue.fromJson(
         json['value'] as Map<String, dynamic>),
-    pillSheetID: json['pillSheetID'] as String,
+    pillSheetID: json['pillSheetID'] as String?,
+    pillSheetGroupID: json['pillSheetGroupID'] as String?,
+    beforePillSheetID: json['beforePillSheetID'] as String?,
+    afterPillSheetID: json['afterPillSheetID'] as String?,
     before: json['before'] == null
         ? null
         : PillSheet.fromJson(json['before'] as Map<String, dynamic>),
@@ -39,6 +42,9 @@ Map<String, dynamic> _$_$_PillSheetModifiedHistoryToJson(
   val['actionType'] = instance.actionType;
   val['value'] = instance.value.toJson();
   val['pillSheetID'] = instance.pillSheetID;
+  val['pillSheetGroupID'] = instance.pillSheetGroupID;
+  val['beforePillSheetID'] = instance.beforePillSheetID;
+  val['afterPillSheetID'] = instance.afterPillSheetID;
   val['before'] = instance.before?.toJson();
   val['after'] = instance.after.toJson();
   val['estimatedEventCausingDate'] =
