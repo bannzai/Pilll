@@ -180,7 +180,9 @@ class SettingStateStore extends StateNotifier<SettingState> {
     final updatedPillSheet = _pillSheetService.delete(batch, activedPillSheet);
     final history = PillSheetModifiedHistoryServiceActionFactory
         .createDeletedPillSheetAction(
-            before: activedPillSheet, after: updatedPillSheet);
+      pillSheetGroupID: pillSheetGroup.id,
+      pillSheetIDs: pillSheetGroup.pillSheetIDs,
+    );
     _pillSheetModifiedHistoryService.add(batch, history);
     _pillSheetGroupService.delete(
         batch, pillSheetGroup.replaced(updatedPillSheet));

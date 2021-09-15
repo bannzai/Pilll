@@ -88,7 +88,10 @@ class SettingTodayPillNumberStateStore
         pillSheetGroup.pillSheets[state.selectedPillSheetPageIndex];
     final history = PillSheetModifiedHistoryServiceActionFactory
         .createChangedPillNumberAction(
-            before: activedPillSheet, after: nextActivedPillSheet);
+      pillSheetGroupID: pillSheetGroup.id,
+      before: activedPillSheet,
+      after: nextActivedPillSheet,
+    );
     _pillSheetModifiedHistoryService.add(batch, history);
 
     _pillSheetGroupService.update(

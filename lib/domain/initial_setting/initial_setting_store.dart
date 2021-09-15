@@ -168,8 +168,6 @@ class InitialSettingStateStore extends StateNotifier<InitialSettingState> {
 
     final batch = _batchFactory.batch();
 
-    _settingService.updateWithBatch(batch, state.buildSetting());
-
     final todayPillNumber = state.todayPillNumber;
     if (todayPillNumber != null) {
       final Map<String, PillSheet> idAndPillSheet = {};
@@ -184,13 +182,6 @@ class InitialSettingStateStore extends StateNotifier<InitialSettingState> {
 
         final pillSheetID = createdPillSheet.id!;
         idAndPillSheet[pillSheetID] = createdPillSheet;
-
-        final history = PillSheetModifiedHistoryServiceActionFactory
-            .createCreatedPillSheetAction(
-          pillSheetCount: state.pillSheetTypes.length,
-          pillSheetGroupID: 
-        );
-        _pillSheetModifiedHistoryService.add(batch, history);
       });
 
       final pillSheetIDs = idAndPillSheet.keys.toList();
@@ -198,7 +189,16 @@ class InitialSettingStateStore extends StateNotifier<InitialSettingState> {
       final pillSheetGroup =
           PillSheetGroup(pillSheetIDs: pillSheetIDs, pillSheets: pillSheets);
       _pillSheetGroupService.register(batch, pillSheetGroup);
+
+      final history = PillSheetModifiedHistoryServiceActionFactory
+          .createCreatedPillSheetAction(
+        pillSheetIDs: pillSheetIDs,
+        pillSheetGroupID: pillSheetGroup.id,
+      );
+      _pillSheetModifiedHistoryService.add(batch, history);
     }
+
+    _settingService.updateWithBatch(batch, state.buildSetting());
 
     await batch.commit();
   }

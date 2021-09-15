@@ -40,18 +40,19 @@ class InitialSettingService {
       }
       final batch = batchFactory.batch();
       final updatedPillSheet = pillSheetService.register(batch, pillSheet);
-      final history = PillSheetModifiedHistoryServiceActionFactory
-          .createCreatedPillSheetAction(
-              before: null,
-              pillSheetID: updatedPillSheet.id!,
-              after: pillSheet);
-      pillSheetModifiedHistoryService.add(batch, history);
 
       final pillSheetGroup = PillSheetGroup(
         pillSheetIDs: [updatedPillSheet.id!],
         pillSheets: [updatedPillSheet],
       );
       pillSheetGroupService.register(batch, pillSheetGroup);
+
+      final history = PillSheetModifiedHistoryServiceActionFactory
+          .createCreatedPillSheetAction(
+        pillSheetGroupID: pillSheetGroup.id,
+        pillSheetIDs: pillSheetGroup.pillSheetIDs,
+      );
+      pillSheetModifiedHistoryService.add(batch, history);
 
       return batch.commit();
     });

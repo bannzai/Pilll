@@ -50,7 +50,7 @@ class PillSheetGroupService {
     final copied = pillSheetGroup.copyWith(createdAt: DateTime.now());
     final newDocument = _database.pillSheetGroupsReference().doc();
     batch.set(newDocument, copied.toJson(), SetOptions(merge: true));
-    return copied;
+    return copied.copyWith(id: newDocument.id);
   }
 
   PillSheetGroup delete(WriteBatch batch, PillSheetGroup pillSheetGroup) {
