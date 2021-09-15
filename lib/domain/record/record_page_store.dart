@@ -167,7 +167,7 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
       final pillSheetID = createdPillSheet.id;
       if (pillSheetID == null) {
         throw FormatException(
-            "ピルシートのIDの登録に失敗しました。設定 > お問い合わせからご報告していただけると幸いです");
+            "ピルシートのIDの登録に失敗しました。しばらく時間をおいてお試しください。解決し無い場合は設定 > お問い合わせからご報告してください");
       }
       idAndPillSheet[pillSheetID] = createdPillSheet;
 
