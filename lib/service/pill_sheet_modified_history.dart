@@ -1,7 +1,6 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:pilll/database/database.dart';
 import 'package:pilll/entity/pill_sheet.dart';
-import 'package:pilll/entity/pill_sheet_group.dart';
 import 'package:pilll/entity/pill_sheet_modified_history.dart';
 import 'package:pilll/entity/pill_sheet_modified_history_value.dart';
 import 'package:riverpod/riverpod.dart';
@@ -77,10 +76,10 @@ extension PillSheetModifiedHistoryServiceActionFactory
     on PillSheetModifiedHistoryService {
   static PillSheetModifiedHistory _create({
     required PillSheet? before,
-    required PillSheet after,
+    required PillSheet? after,
     required String? pillSheetGroupID,
     required String? beforePillSheetID,
-    required String afterPillSheetID,
+    required String? afterPillSheetID,
     required PillSheetModifiedActionType actionType,
     required PillSheetModifiedHistoryValue value,
   }) {
@@ -168,31 +167,24 @@ extension PillSheetModifiedHistoryServiceActionFactory
   }
 
   static PillSheetModifiedHistory createCreatedPillSheetAction({
-    required PillSheetGroup pillSheetGroup,
-    required PillSheet? before,
-    required PillSheet after,
+    required String? pillSheetGroupID,
+    required List<String> pillSheetIDs,
   }) {
-    final pillSheetGroupID = pillSheetGroup.id;
     assert(pillSheetGroupID != null);
 
-    final afterID = after.id;
-    if (afterID == null) {
-      throw FormatException(
-          "unexpected afterPillSheetID: $afterID  is null for createdPillSheet action");
-    }
     return _create(
       actionType: PillSheetModifiedActionType.createdPillSheet,
       value: PillSheetModifiedHistoryValue(
         createdPillSheet: CreatedPillSheetValue(
           pillSheetCreatedAt: DateTime.now(),
-          pillSheetCount: pillSheetGroup.pillSheets.length,
+          pillSheetIDs: pillSheetIDs,
         ),
       ),
-      after: after,
       pillSheetGroupID: pillSheetGroupID,
-      beforePillSheetID: before?.id,
-      afterPillSheetID: afterID,
-      before: before,
+      before: null,
+      beforePillSheetID: null,
+      after: null,
+      afterPillSheetID: null,
     );
   }
 
@@ -230,32 +222,24 @@ extension PillSheetModifiedHistoryServiceActionFactory
   }
 
   static PillSheetModifiedHistory createDeletedPillSheetAction({
-    required PillSheetGroup pillSheetGroup,
-    required PillSheet before,
-    required PillSheet after,
+    required String? pillSheetGroupID,
+    required List<String> pillSheetIDs,
   }) {
-    final pillSheetGroupID = pillSheetGroup.id;
     assert(pillSheetGroupID != null);
-
-    final afterID = after.id;
-    if (afterID == null) {
-      throw FormatException(
-          "unexpected afterPillSheetID: $afterID  is null for deletedPillSheet action");
-    }
 
     return _create(
       actionType: PillSheetModifiedActionType.deletedPillSheet,
       value: PillSheetModifiedHistoryValue(
         deletedPillSheet: DeletedPillSheetValue(
           pillSheetDeletedAt: DateTime.now(),
-          pillSheetCount: pillSheetGroup.pillSheets.length,
+          pillSheetIDs: pillSheetIDs,
         ),
       ),
-      after: after,
       pillSheetGroupID: pillSheetGroupID,
-      beforePillSheetID: before.id,
-      afterPillSheetID: afterID,
-      before: before,
+      beforePillSheetID: null,
+      afterPillSheetID: null,
+      before: null,
+      after: null,
     );
   }
 }

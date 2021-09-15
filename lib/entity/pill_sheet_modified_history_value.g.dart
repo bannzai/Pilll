@@ -63,7 +63,10 @@ _$_CreatedPillSheetValue _$_$_CreatedPillSheetValueFromJson(
   return _$_CreatedPillSheetValue(
     pillSheetCreatedAt: NonNullTimestampConverter.timestampToDateTime(
         json['pillSheetCreatedAt'] as Timestamp),
-    pillSheetCount: json['pillSheetCount'] as int? ?? 1,
+    pillSheetIDs: (json['pillSheetIDs'] as List<dynamic>?)
+            ?.map((e) => e as String)
+            .toList() ??
+        1,
   );
 }
 
@@ -72,7 +75,7 @@ Map<String, dynamic> _$_$_CreatedPillSheetValueToJson(
     <String, dynamic>{
       'pillSheetCreatedAt': NonNullTimestampConverter.dateTimeToTimestamp(
           instance.pillSheetCreatedAt),
-      'pillSheetCount': instance.pillSheetCount,
+      'pillSheetIDs': instance.pillSheetIDs,
     };
 
 _$_AutomaticallyRecordedLastTakenDateValue
@@ -104,7 +107,10 @@ _$_DeletedPillSheetValue _$_$_DeletedPillSheetValueFromJson(
   return _$_DeletedPillSheetValue(
     pillSheetDeletedAt: NonNullTimestampConverter.timestampToDateTime(
         json['pillSheetDeletedAt'] as Timestamp),
-    pillSheetCount: json['pillSheetCount'] as int? ?? 1,
+    pillSheetIDs: (json['pillSheetIDs'] as List<dynamic>?)
+            ?.map((e) => e as String)
+            .toList() ??
+        1,
   );
 }
 
@@ -113,7 +119,7 @@ Map<String, dynamic> _$_$_DeletedPillSheetValueToJson(
     <String, dynamic>{
       'pillSheetDeletedAt': NonNullTimestampConverter.dateTimeToTimestamp(
           instance.pillSheetDeletedAt),
-      'pillSheetCount': instance.pillSheetCount,
+      'pillSheetIDs': instance.pillSheetIDs,
     };
 
 _$_TakenPillValue _$_$_TakenPillValueFromJson(Map<String, dynamic> json) {

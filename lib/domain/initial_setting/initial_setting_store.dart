@@ -187,9 +187,9 @@ class InitialSettingStateStore extends StateNotifier<InitialSettingState> {
 
         final history = PillSheetModifiedHistoryServiceActionFactory
             .createCreatedPillSheetAction(
-                before: null,
-                pillSheetID: createdPillSheet.id!,
-                after: pillSheet);
+          pillSheetCount: state.pillSheetTypes.length,
+          pillSheetGroupID: 
+        );
         _pillSheetModifiedHistoryService.add(batch, history);
       });
 
