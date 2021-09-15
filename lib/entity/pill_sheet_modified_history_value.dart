@@ -40,7 +40,7 @@ abstract class CreatedPillSheetValue implements _$CreatedPillSheetValue {
     )
         required DateTime pillSheetCreatedAt,
     @Default(1)
-        int pillSheetCount,
+        List<String> pillSheetIDs,
   }) = _CreatedPillSheetValue;
 
   factory CreatedPillSheetValue.fromJson(Map<String, dynamic> json) =>
@@ -88,7 +88,7 @@ abstract class DeletedPillSheetValue implements _$DeletedPillSheetValue {
     )
         required DateTime pillSheetDeletedAt,
     @Default(1)
-        int pillSheetCount,
+        List<String> pillSheetIDs,
   }) = _DeletedPillSheetValue;
 
   factory DeletedPillSheetValue.fromJson(Map<String, dynamic> json) =>

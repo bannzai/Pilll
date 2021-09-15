@@ -50,10 +50,10 @@ abstract class PillSheetModifiedHistory with _$PillSheetModifiedHistory {
     required String? pillSheetGroupID,
     required String? beforePillSheetID,
     required String? afterPillSheetID,
-    //
-    @Default(null)
-        PillSheet? before,
-    required PillSheet after,
+    // before and after is non required
+    // Because, actions for createdPillSheet and deletedPillSheet are not exists target single pill sheet
+    required PillSheet? before,
+    required PillSheet? after,
     @JsonKey(
       fromJson: NonNullTimestampConverter.timestampToDateTime,
       toJson: NonNullTimestampConverter.dateTimeToTimestamp,

@@ -502,10 +502,10 @@ class _$CreatedPillSheetValueTearOff {
   _CreatedPillSheetValue call(
       {@JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
           required DateTime pillSheetCreatedAt,
-      int pillSheetCount = 1}) {
+      List<String> pillSheetIDs = 1}) {
     return _CreatedPillSheetValue(
       pillSheetCreatedAt: pillSheetCreatedAt,
-      pillSheetCount: pillSheetCount,
+      pillSheetIDs: pillSheetIDs,
     );
   }
 
@@ -523,7 +523,7 @@ mixin _$CreatedPillSheetValue {
       fromJson: NonNullTimestampConverter.timestampToDateTime,
       toJson: NonNullTimestampConverter.dateTimeToTimestamp)
   DateTime get pillSheetCreatedAt => throw _privateConstructorUsedError;
-  int get pillSheetCount => throw _privateConstructorUsedError;
+  List<String> get pillSheetIDs => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -539,7 +539,7 @@ abstract class $CreatedPillSheetValueCopyWith<$Res> {
   $Res call(
       {@JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
           DateTime pillSheetCreatedAt,
-      int pillSheetCount});
+      List<String> pillSheetIDs});
 }
 
 /// @nodoc
@@ -554,17 +554,17 @@ class _$CreatedPillSheetValueCopyWithImpl<$Res>
   @override
   $Res call({
     Object? pillSheetCreatedAt = freezed,
-    Object? pillSheetCount = freezed,
+    Object? pillSheetIDs = freezed,
   }) {
     return _then(_value.copyWith(
       pillSheetCreatedAt: pillSheetCreatedAt == freezed
           ? _value.pillSheetCreatedAt
           : pillSheetCreatedAt // ignore: cast_nullable_to_non_nullable
               as DateTime,
-      pillSheetCount: pillSheetCount == freezed
-          ? _value.pillSheetCount
-          : pillSheetCount // ignore: cast_nullable_to_non_nullable
-              as int,
+      pillSheetIDs: pillSheetIDs == freezed
+          ? _value.pillSheetIDs
+          : pillSheetIDs // ignore: cast_nullable_to_non_nullable
+              as List<String>,
     ));
   }
 }
@@ -579,7 +579,7 @@ abstract class _$CreatedPillSheetValueCopyWith<$Res>
   $Res call(
       {@JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
           DateTime pillSheetCreatedAt,
-      int pillSheetCount});
+      List<String> pillSheetIDs});
 }
 
 /// @nodoc
@@ -596,17 +596,17 @@ class __$CreatedPillSheetValueCopyWithImpl<$Res>
   @override
   $Res call({
     Object? pillSheetCreatedAt = freezed,
-    Object? pillSheetCount = freezed,
+    Object? pillSheetIDs = freezed,
   }) {
     return _then(_CreatedPillSheetValue(
       pillSheetCreatedAt: pillSheetCreatedAt == freezed
           ? _value.pillSheetCreatedAt
           : pillSheetCreatedAt // ignore: cast_nullable_to_non_nullable
               as DateTime,
-      pillSheetCount: pillSheetCount == freezed
-          ? _value.pillSheetCount
-          : pillSheetCount // ignore: cast_nullable_to_non_nullable
-              as int,
+      pillSheetIDs: pillSheetIDs == freezed
+          ? _value.pillSheetIDs
+          : pillSheetIDs // ignore: cast_nullable_to_non_nullable
+              as List<String>,
     ));
   }
 }
@@ -618,7 +618,7 @@ class _$_CreatedPillSheetValue extends _CreatedPillSheetValue {
   _$_CreatedPillSheetValue(
       {@JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
           required this.pillSheetCreatedAt,
-      this.pillSheetCount = 1})
+      this.pillSheetIDs = 1})
       : super._();
 
   factory _$_CreatedPillSheetValue.fromJson(Map<String, dynamic> json) =>
@@ -631,11 +631,11 @@ class _$_CreatedPillSheetValue extends _CreatedPillSheetValue {
   final DateTime pillSheetCreatedAt;
   @JsonKey(defaultValue: 1)
   @override
-  final int pillSheetCount;
+  final List<String> pillSheetIDs;
 
   @override
   String toString() {
-    return 'CreatedPillSheetValue(pillSheetCreatedAt: $pillSheetCreatedAt, pillSheetCount: $pillSheetCount)';
+    return 'CreatedPillSheetValue(pillSheetCreatedAt: $pillSheetCreatedAt, pillSheetIDs: $pillSheetIDs)';
   }
 
   @override
@@ -645,16 +645,16 @@ class _$_CreatedPillSheetValue extends _CreatedPillSheetValue {
             (identical(other.pillSheetCreatedAt, pillSheetCreatedAt) ||
                 const DeepCollectionEquality()
                     .equals(other.pillSheetCreatedAt, pillSheetCreatedAt)) &&
-            (identical(other.pillSheetCount, pillSheetCount) ||
+            (identical(other.pillSheetIDs, pillSheetIDs) ||
                 const DeepCollectionEquality()
-                    .equals(other.pillSheetCount, pillSheetCount)));
+                    .equals(other.pillSheetIDs, pillSheetIDs)));
   }
 
   @override
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(pillSheetCreatedAt) ^
-      const DeepCollectionEquality().hash(pillSheetCount);
+      const DeepCollectionEquality().hash(pillSheetIDs);
 
   @JsonKey(ignore: true)
   @override
@@ -672,7 +672,7 @@ abstract class _CreatedPillSheetValue extends CreatedPillSheetValue {
   factory _CreatedPillSheetValue(
       {@JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
           required DateTime pillSheetCreatedAt,
-      int pillSheetCount}) = _$_CreatedPillSheetValue;
+      List<String> pillSheetIDs}) = _$_CreatedPillSheetValue;
   _CreatedPillSheetValue._() : super._();
 
   factory _CreatedPillSheetValue.fromJson(Map<String, dynamic> json) =
@@ -684,7 +684,7 @@ abstract class _CreatedPillSheetValue extends CreatedPillSheetValue {
       toJson: NonNullTimestampConverter.dateTimeToTimestamp)
   DateTime get pillSheetCreatedAt => throw _privateConstructorUsedError;
   @override
-  int get pillSheetCount => throw _privateConstructorUsedError;
+  List<String> get pillSheetIDs => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$CreatedPillSheetValueCopyWith<_CreatedPillSheetValue> get copyWith =>
@@ -985,10 +985,10 @@ class _$DeletedPillSheetValueTearOff {
   _DeletedPillSheetValue call(
       {@JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
           required DateTime pillSheetDeletedAt,
-      int pillSheetCount = 1}) {
+      List<String> pillSheetIDs = 1}) {
     return _DeletedPillSheetValue(
       pillSheetDeletedAt: pillSheetDeletedAt,
-      pillSheetCount: pillSheetCount,
+      pillSheetIDs: pillSheetIDs,
     );
   }
 
@@ -1006,7 +1006,7 @@ mixin _$DeletedPillSheetValue {
       fromJson: NonNullTimestampConverter.timestampToDateTime,
       toJson: NonNullTimestampConverter.dateTimeToTimestamp)
   DateTime get pillSheetDeletedAt => throw _privateConstructorUsedError;
-  int get pillSheetCount => throw _privateConstructorUsedError;
+  List<String> get pillSheetIDs => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -1022,7 +1022,7 @@ abstract class $DeletedPillSheetValueCopyWith<$Res> {
   $Res call(
       {@JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
           DateTime pillSheetDeletedAt,
-      int pillSheetCount});
+      List<String> pillSheetIDs});
 }
 
 /// @nodoc
@@ -1037,17 +1037,17 @@ class _$DeletedPillSheetValueCopyWithImpl<$Res>
   @override
   $Res call({
     Object? pillSheetDeletedAt = freezed,
-    Object? pillSheetCount = freezed,
+    Object? pillSheetIDs = freezed,
   }) {
     return _then(_value.copyWith(
       pillSheetDeletedAt: pillSheetDeletedAt == freezed
           ? _value.pillSheetDeletedAt
           : pillSheetDeletedAt // ignore: cast_nullable_to_non_nullable
               as DateTime,
-      pillSheetCount: pillSheetCount == freezed
-          ? _value.pillSheetCount
-          : pillSheetCount // ignore: cast_nullable_to_non_nullable
-              as int,
+      pillSheetIDs: pillSheetIDs == freezed
+          ? _value.pillSheetIDs
+          : pillSheetIDs // ignore: cast_nullable_to_non_nullable
+              as List<String>,
     ));
   }
 }
@@ -1062,7 +1062,7 @@ abstract class _$DeletedPillSheetValueCopyWith<$Res>
   $Res call(
       {@JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
           DateTime pillSheetDeletedAt,
-      int pillSheetCount});
+      List<String> pillSheetIDs});
 }
 
 /// @nodoc
@@ -1079,17 +1079,17 @@ class __$DeletedPillSheetValueCopyWithImpl<$Res>
   @override
   $Res call({
     Object? pillSheetDeletedAt = freezed,
-    Object? pillSheetCount = freezed,
+    Object? pillSheetIDs = freezed,
   }) {
     return _then(_DeletedPillSheetValue(
       pillSheetDeletedAt: pillSheetDeletedAt == freezed
           ? _value.pillSheetDeletedAt
           : pillSheetDeletedAt // ignore: cast_nullable_to_non_nullable
               as DateTime,
-      pillSheetCount: pillSheetCount == freezed
-          ? _value.pillSheetCount
-          : pillSheetCount // ignore: cast_nullable_to_non_nullable
-              as int,
+      pillSheetIDs: pillSheetIDs == freezed
+          ? _value.pillSheetIDs
+          : pillSheetIDs // ignore: cast_nullable_to_non_nullable
+              as List<String>,
     ));
   }
 }
@@ -1101,7 +1101,7 @@ class _$_DeletedPillSheetValue extends _DeletedPillSheetValue {
   _$_DeletedPillSheetValue(
       {@JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
           required this.pillSheetDeletedAt,
-      this.pillSheetCount = 1})
+      this.pillSheetIDs = 1})
       : super._();
 
   factory _$_DeletedPillSheetValue.fromJson(Map<String, dynamic> json) =>
@@ -1114,11 +1114,11 @@ class _$_DeletedPillSheetValue extends _DeletedPillSheetValue {
   final DateTime pillSheetDeletedAt;
   @JsonKey(defaultValue: 1)
   @override
-  final int pillSheetCount;
+  final List<String> pillSheetIDs;
 
   @override
   String toString() {
-    return 'DeletedPillSheetValue(pillSheetDeletedAt: $pillSheetDeletedAt, pillSheetCount: $pillSheetCount)';
+    return 'DeletedPillSheetValue(pillSheetDeletedAt: $pillSheetDeletedAt, pillSheetIDs: $pillSheetIDs)';
   }
 
   @override
@@ -1128,16 +1128,16 @@ class _$_DeletedPillSheetValue extends _DeletedPillSheetValue {
             (identical(other.pillSheetDeletedAt, pillSheetDeletedAt) ||
                 const DeepCollectionEquality()
                     .equals(other.pillSheetDeletedAt, pillSheetDeletedAt)) &&
-            (identical(other.pillSheetCount, pillSheetCount) ||
+            (identical(other.pillSheetIDs, pillSheetIDs) ||
                 const DeepCollectionEquality()
-                    .equals(other.pillSheetCount, pillSheetCount)));
+                    .equals(other.pillSheetIDs, pillSheetIDs)));
   }
 
   @override
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(pillSheetDeletedAt) ^
-      const DeepCollectionEquality().hash(pillSheetCount);
+      const DeepCollectionEquality().hash(pillSheetIDs);
 
   @JsonKey(ignore: true)
   @override
@@ -1155,7 +1155,7 @@ abstract class _DeletedPillSheetValue extends DeletedPillSheetValue {
   factory _DeletedPillSheetValue(
       {@JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
           required DateTime pillSheetDeletedAt,
-      int pillSheetCount}) = _$_DeletedPillSheetValue;
+      List<String> pillSheetIDs}) = _$_DeletedPillSheetValue;
   _DeletedPillSheetValue._() : super._();
 
   factory _DeletedPillSheetValue.fromJson(Map<String, dynamic> json) =
@@ -1167,7 +1167,7 @@ abstract class _DeletedPillSheetValue extends DeletedPillSheetValue {
       toJson: NonNullTimestampConverter.dateTimeToTimestamp)
   DateTime get pillSheetDeletedAt => throw _privateConstructorUsedError;
   @override
-  int get pillSheetCount => throw _privateConstructorUsedError;
+  List<String> get pillSheetIDs => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$DeletedPillSheetValueCopyWith<_DeletedPillSheetValue> get copyWith =>
