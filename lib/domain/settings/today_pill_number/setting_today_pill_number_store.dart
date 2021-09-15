@@ -60,6 +60,11 @@ class SettingTodayPillNumberStateStore
     required PillSheetGroup pillSheetGroup,
     required PillSheet activedPillSheet,
   }) async {
+    final currentPillNumberIntoGroup = pillSheetGroup.serializedTodayPillNumber;
+    if (currentPillNumberIntoGroup == null) {
+      throw FormatException("有効なピルシートのデータが見つかりませんでした");
+    }
+
     final batch = _batchFactory.batch();
 
     final pillSheetTypes =
@@ -69,10 +74,6 @@ class SettingTodayPillNumberStateStore
           pageIndex: state.selectedPillSheetPageIndex,
         ) +
         state.selectedPillMarkNumberIntoPillSheet;
-    final currentPillNumberIntoGroup = pillSheetGroup.serializedTodayPillNumber;
-    if (currentPillNumberIntoGroup == null) {
-      throw FormatException("有効なピルシートのデータが見つかりませんでした");
-    }
 
     final distance = nextSerializedPillNumber - currentPillNumberIntoGroup;
     final List<PillSheet> updatedPillSheets = [];
@@ -85,7 +86,7 @@ class SettingTodayPillNumberStateStore
     });
 
     final nextActivedPillSheet =
-        pillSheetGroup.pillSheets[state.selectedPillSheetPageIndex];
+        updatedPillSheets[state.selectedPillSheetPageIndex];
     final history = PillSheetModifiedHistoryServiceActionFactory
         .createChangedPillNumberAction(
       pillSheetGroupID: pillSheetGroup.id,
