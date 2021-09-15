@@ -173,7 +173,7 @@ class InitialSettingStateStore extends StateNotifier<InitialSettingState> {
       final Map<String, PillSheet> idAndPillSheet = {};
 
       state.pillSheetTypes.asMap().keys.forEach((pageIndex) {
-        final pillSheet = state.buildPillSheet(
+        final pillSheet = InitialSettingState.buildPillSheet(
           pageIndex: pageIndex,
           todayPillNumber: todayPillNumber,
           pillSheetTypes: state.pillSheetTypes,
