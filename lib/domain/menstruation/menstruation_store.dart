@@ -148,9 +148,11 @@ class MenstruationStore extends StateNotifier<MenstruationState> {
         latestMenstruation.dateRange.inRange(today())) {
       return MenstruationCardState.record(menstruation: latestMenstruation);
     }
-    final activedPillSheet = state.latestPillSheetGroup?.activedPillSheet;
+    final latestPillSheetGroup = state.latestPillSheetGroup;
     final setting = state.setting;
-    if (activedPillSheet == null || setting == null) {
+    if (latestPillSheetGroup == null ||
+        latestPillSheetGroup.pillSheets.isEmpty ||
+        setting == null) {
       return null;
     }
     if (setting.pillNumberForFromMenstruation == 0 ||
@@ -158,8 +160,12 @@ class MenstruationStore extends StateNotifier<MenstruationState> {
       return null;
     }
 
-    final menstruationDateRanges = scheduledMenstruationDateRanges(
-        activedPillSheet, setting, state.entities, 12);
+    final menstruationDateRanges = scheduledOrInTheMiddleMenstruationDateRanges(
+      latestPillSheetGroup,
+      setting,
+      state.entities,
+      12,
+    );
     final inTheMiddleDateRanges =
         menstruationDateRanges.where((element) => element.inRange(today()));
 

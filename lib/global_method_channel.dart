@@ -1,5 +1,7 @@
 import 'package:pilll/analytics.dart';
+import 'package:pilll/database/batch.dart';
 import 'package:pilll/database/database.dart';
+import 'package:pilll/domain/record/util/take.dart';
 import 'package:pilll/service/pill_sheet.dart';
 import 'package:pilll/service/pill_sheet_group.dart';
 import 'package:pilll/service/pill_sheet_modified_history.dart';
@@ -34,27 +36,22 @@ Future<void> recordPill() async {
   if (pillSheetGroup == null) {
     return Future.value();
   }
-  final activatedPillSheet = pillSheetGroup.activedPillSheet;
-  if (activatedPillSheet == null) {
+  final activedPillSheet = pillSheetGroup.activedPillSheet;
+  if (activedPillSheet == null) {
     return Future.value();
   }
 
-  final batch = database.batch();
-
-  final updatedPillSheet = activatedPillSheet.copyWith(lastTakenDate: now());
-  pillSheetService.update(batch, updatedPillSheet);
-
-  final history =
-      PillSheetModifiedHistoryServiceActionFactory.createTakenPillAction(
-    before: activatedPillSheet,
-    after: updatedPillSheet,
+  final takenDate = now();
+  final batchFactory = BatchFactory(database);
+  await take(
+    takenDate: takenDate,
+    pillSheetGroup: pillSheetGroup,
+    activedPillSheet: activedPillSheet,
+    batchFactory: batchFactory,
+    pillSheetService: pillSheetService,
+    pillSheetModifiedHistoryService: pillSheetModifiedHistoryService,
+    pillSheetGroupService: pillSheetGroupService,
   );
-  pillSheetModifiedHistoryService.add(batch, history);
-
-  final updatedPillSheetGroup = pillSheetGroup.replaced(updatedPillSheet);
-  pillSheetGroupService.update(batch, updatedPillSheetGroup);
-
-  await batch.commit();
   // NOTE: Firebase initializeが成功しているかが定かでは無いので一番最後にログを送る
   analytics.logEvent(name: "quick_recorded");
 }

@@ -1,5 +1,4 @@
 import 'package:pilll/domain/calendar/date_range.dart';
-import 'package:pilll/entity/firestore_document_id_escaping_to_json.dart';
 import 'package:pilll/entity/firestore_timestamp_converter.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/util/datetime/day.dart';
@@ -68,7 +67,7 @@ abstract class PillSheet implements _$PillSheet {
     )
         DateTime? deletedAt,
     @Default(0)
-        int gropuIndex,
+        int groupIndex,
   }) = _PillSheet;
   factory PillSheet.create(PillSheetType type) => PillSheet(
         typeInfo: type.typeInfo,
@@ -93,12 +92,13 @@ abstract class PillSheet implements _$PillSheet {
       : lastTakenDate!.date().difference(beginingDate.date()).inDays + 1;
 
   bool get allTaken => todayPillNumber == lastTakenPillNumber;
-  bool get isEnded =>
+  bool get isOutOfRange =>
       today().difference(beginingDate.date()).inDays + 1 >
       pillSheetType.totalCount;
   bool get isDeleted => deletedAt != null;
   bool get inNotTakenDuration => todayPillNumber > typeInfo.dosingPeriod;
-  bool get isInvalid => isDeleted || isEnded;
+  bool get isFill => lastTakenPillNumber >= pillSheetType.totalCount;
+  bool get isInvalid => isDeleted || isOutOfRange;
   bool get hasRestDuration => !pillSheetType.isNotExistsNotTakenDuration;
 
   bool get isActive {

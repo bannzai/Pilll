@@ -21,7 +21,10 @@ Map<String, dynamic> _$_$_ReminderTimeToJson(_$_ReminderTime instance) =>
 
 _$_Setting _$_$_SettingFromJson(Map<String, dynamic> json) {
   return _$_Setting(
-    pillSheetTypeRawPath: json['pillSheetTypeRawPath'] as String,
+    pillSheetTypes: (json['pillSheetTypes'] as List<dynamic>?)
+            ?.map((e) => _$enumDecode(_$PillSheetTypeEnumMap, e))
+            .toList() ??
+        [],
     pillNumberForFromMenstruation: json['pillNumberForFromMenstruation'] as int,
     durationMenstruation: json['durationMenstruation'] as int,
     reminderTimes: (json['reminderTimes'] as List<dynamic>?)
@@ -42,7 +45,9 @@ _$_Setting _$_$_SettingFromJson(Map<String, dynamic> json) {
 
 Map<String, dynamic> _$_$_SettingToJson(_$_Setting instance) =>
     <String, dynamic>{
-      'pillSheetTypeRawPath': instance.pillSheetTypeRawPath,
+      'pillSheetTypes': instance.pillSheetTypes
+          .map((e) => _$PillSheetTypeEnumMap[e])
+          .toList(),
       'pillNumberForFromMenstruation': instance.pillNumberForFromMenstruation,
       'durationMenstruation': instance.durationMenstruation,
       'reminderTimes': instance.reminderTimes.map((e) => e.toJson()).toList(),
@@ -78,6 +83,15 @@ K _$enumDecode<K, V>(
     },
   ).key;
 }
+
+const _$PillSheetTypeEnumMap = {
+  PillSheetType.pillsheet_21: 'pillsheet_21',
+  PillSheetType.pillsheet_28_4: 'pillsheet_28_4',
+  PillSheetType.pillsheet_28_7: 'pillsheet_28_7',
+  PillSheetType.pillsheet_28_0: 'pillsheet_28_0',
+  PillSheetType.pillsheet_24_0: 'pillsheet_24_0',
+  PillSheetType.pillsheet_21_0: 'pillsheet_21_0',
+};
 
 K? _$enumDecodeNullable<K, V>(
   Map<K, V> enumValues,

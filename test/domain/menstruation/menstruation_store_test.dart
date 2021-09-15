@@ -94,13 +94,16 @@ void main() {
         when(diaryService.subscribe())
             .thenAnswer((realInvocation) => Stream.empty());
         final settingService = MockSettingService();
-        when(settingService.fetch()).thenAnswer((realInvocation) =>
-            Future.value(Setting(
-                pillSheetTypeRawPath: PillSheetType.pillsheet_21.rawPath,
-                pillNumberForFromMenstruation: 22,
-                durationMenstruation: 3,
-                reminderTimes: [],
-                isOnReminder: true)));
+        when(settingService.fetch())
+            .thenAnswer((realInvocation) => Future.value(
+                  Setting(
+                    pillSheetTypes: [PillSheetType.pillsheet_21],
+                    pillNumberForFromMenstruation: 22,
+                    durationMenstruation: 3,
+                    reminderTimes: [],
+                    isOnReminder: true,
+                  ),
+                ));
         when(settingService.subscribe())
             .thenAnswer((realInvocation) => Stream.empty());
         final userService = MockUserService();
@@ -174,13 +177,14 @@ void main() {
         when(diaryService.subscribe())
             .thenAnswer((realInvocation) => Stream.empty());
         final settingService = MockSettingService();
-        when(settingService.fetch()).thenAnswer((realInvocation) =>
-            Future.value(Setting(
-                pillSheetTypeRawPath: PillSheetType.pillsheet_21.rawPath,
-                pillNumberForFromMenstruation: 22,
-                durationMenstruation: 3,
-                reminderTimes: [],
-                isOnReminder: true)));
+        when(settingService.fetch())
+            .thenAnswer((realInvocation) => Future.value(Setting(
+                  pillSheetTypes: [PillSheetType.pillsheet_21],
+                  pillNumberForFromMenstruation: 22,
+                  durationMenstruation: 3,
+                  reminderTimes: [],
+                  isOnReminder: true,
+                )));
         when(settingService.subscribe())
             .thenAnswer((realInvocation) => Stream.empty());
         final userService = MockUserService();
@@ -214,7 +218,7 @@ void main() {
     );
 
     test(
-      "if latest pillsheet.beginingDate < today, when return schedueld card state",
+      "if latest pillsheet.beginingDate + totalCount < today, when return schedueld card state",
       () async {
         final originalTodayRepository = todayRepository;
         final mockTodayRepository = MockTodayService();
@@ -240,13 +244,17 @@ void main() {
         when(diaryService.subscribe())
             .thenAnswer((realInvocation) => Stream.empty());
         final settingService = MockSettingService();
-        when(settingService.fetch()).thenAnswer((realInvocation) =>
-            Future.value(Setting(
-                pillSheetTypeRawPath: PillSheetType.pillsheet_21.rawPath,
-                pillNumberForFromMenstruation: 22,
-                durationMenstruation: 3,
-                reminderTimes: [],
-                isOnReminder: true)));
+        when(settingService.fetch()).thenAnswer(
+          (realInvocation) => Future.value(
+            Setting(
+              pillSheetTypes: [PillSheetType.pillsheet_21],
+              pillNumberForFromMenstruation: 22,
+              durationMenstruation: 3,
+              reminderTimes: [],
+              isOnReminder: true,
+            ),
+          ),
+        );
         when(settingService.subscribe())
             .thenAnswer((realInvocation) => Stream.empty());
         final userService = MockUserService();
@@ -291,7 +299,7 @@ void main() {
       },
     );
     test(
-      "if latest pillsheet.beginingDate >= today, when return card state of into duration for schedueld menstruation",
+      "if todayPillNumber > setting.pillNumberForFromMenstruation, when return card state of into duration for schedueld menstruation",
       () async {
         final originalTodayRepository = todayRepository;
         final mockTodayRepository = MockTodayService();
@@ -317,13 +325,17 @@ void main() {
         when(diaryService.subscribe())
             .thenAnswer((realInvocation) => Stream.empty());
         final settingService = MockSettingService();
-        when(settingService.fetch()).thenAnswer((realInvocation) =>
-            Future.value(Setting(
-                pillSheetTypeRawPath: PillSheetType.pillsheet_21.rawPath,
-                pillNumberForFromMenstruation: 22,
-                durationMenstruation: 3,
-                reminderTimes: [],
-                isOnReminder: true)));
+        when(settingService.fetch()).thenAnswer(
+          (realInvocation) => Future.value(
+            Setting(
+              pillSheetTypes: [PillSheetType.pillsheet_21],
+              pillNumberForFromMenstruation: 22,
+              durationMenstruation: 3,
+              reminderTimes: [],
+              isOnReminder: true,
+            ),
+          ),
+        );
         when(settingService.subscribe())
             .thenAnswer((realInvocation) => Stream.empty());
         final userService = MockUserService();

@@ -12,7 +12,7 @@ import 'package:pilll/util/formatter/date_time_formatter.dart';
 class PillSheetModifiedHistoryTakenPillAction extends StatelessWidget {
   final DateTime estimatedEventCausingDate;
   final TakenPillValue? value;
-  final PillSheet afterPillSheet;
+  final PillSheet? afterPillSheet;
 
   const PillSheetModifiedHistoryTakenPillAction({
     Key? key,
@@ -24,7 +24,8 @@ class PillSheetModifiedHistoryTakenPillAction extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final value = this.value;
-    if (value == null) {
+    final afterPillSheet = this.afterPillSheet;
+    if (value == null || afterPillSheet == null) {
       return Container();
     }
     final time = DateTimeFormatter.hourAndMinute(value.afterLastTakenDate);

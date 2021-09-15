@@ -104,7 +104,6 @@ class CalendarPillSheetModifiedHistoryList extends StatelessWidget {
                       return PillSheetModifiedHistoryAutomaticallyRecordedLastTakenDateAction(
                         estimatedEventCausingDate:
                             history.estimatedEventCausingDate,
-                        pillSheetType: history.after.pillSheetType,
                         value: history.value.automaticallyRecordedLastTakenDate,
                       );
                     case PillSheetModifiedActionType.deletedPillSheet:

@@ -1,7 +1,6 @@
 import 'dart:async';
 
 import 'package:pilll/database/batch.dart';
-import 'package:pilll/domain/record/record_page_store.dart';
 import 'package:pilll/entity/setting.dart';
 import 'package:pilll/service/pill_sheet.dart';
 import 'package:pilll/service/pill_sheet_group.dart';
@@ -23,6 +22,9 @@ final settingStoreProvider = StateNotifierProvider(
     ref.watch(pillSheetGroupServiceProvider),
   ),
 );
+
+final settingStateProvider =
+    Provider((ref) => ref.watch(settingStoreProvider.state));
 
 class SettingStateStore extends StateNotifier<SettingState> {
   final BatchFactory _batchFactory;
@@ -160,54 +162,8 @@ class SettingStateStore extends StateNotifier<SettingState> {
         .then((entity) => state = state.copyWith(entity: entity));
   }
 
-  Future<void> modifyFromMenstruation(int fromMenstruation) {
-    final entity = state.entity;
-    if (entity == null) {
-      throw FormatException("setting entity not found");
-    }
-    return _service
-        .update(
-            entity.copyWith(pillNumberForFromMenstruation: fromMenstruation))
-        .then((entity) => state = state.copyWith(entity: entity));
-  }
-
-  Future<void> modifyDurationMenstruation(int durationMenstruation) {
-    final entity = state.entity;
-    if (entity == null) {
-      throw FormatException("setting entity not found");
-    }
-    return _service
-        .update(entity.copyWith(durationMenstruation: durationMenstruation))
-        .then((entity) => state = state.copyWith(entity: entity));
-  }
-
   void update(Setting? entity) {
     state = state.copyWith(entity: entity);
-  }
-
-  Future<void> modifyBeginingDate(int pillNumber) async {
-    final pillSheetGroup = state.latestPillSheetGroup;
-    if (pillSheetGroup == null) {
-      throw FormatException("pill sheet group not found");
-    }
-    final activedPillSheet = pillSheetGroup.activedPillSheet;
-    if (activedPillSheet == null) {
-      throw FormatException("actived pill sheet not found");
-    }
-
-    final batch = _batchFactory.batch();
-    final updated = modifyBeginingDateFunction(
-      batch,
-      _pillSheetService,
-      _pillSheetModifiedHistoryService,
-      _pillSheetGroupService,
-      activedPillSheet,
-      pillSheetGroup,
-      pillNumber,
-    );
-    await batch.commit();
-
-    state = state.copyWith(latestPillSheetGroup: updated);
   }
 
   Future<void> deletePillSheet() {
@@ -224,7 +180,9 @@ class SettingStateStore extends StateNotifier<SettingState> {
     final updatedPillSheet = _pillSheetService.delete(batch, activedPillSheet);
     final history = PillSheetModifiedHistoryServiceActionFactory
         .createDeletedPillSheetAction(
-            before: activedPillSheet, after: updatedPillSheet);
+      pillSheetGroupID: pillSheetGroup.id,
+      pillSheetIDs: pillSheetGroup.pillSheetIDs,
+    );
     _pillSheetModifiedHistoryService.add(batch, history);
     _pillSheetGroupService.delete(
         batch, pillSheetGroup.replaced(updatedPillSheet));
@@ -251,5 +209,13 @@ class SettingStateStore extends StateNotifier<SettingState> {
     return _service
         .update(entity.copyWith(isAutomaticallyCreatePillSheet: isOn))
         .then((entity) => state = state.copyWith(entity: entity));
+  }
+
+  String get pillSheetWord {
+    final setting = state.entity;
+    if (setting == null) {
+      return "ピルシート";
+    }
+    return setting.pillSheetTypes.length > 1 ? "ピルシートグループ" : "ピルシート";
   }
 }

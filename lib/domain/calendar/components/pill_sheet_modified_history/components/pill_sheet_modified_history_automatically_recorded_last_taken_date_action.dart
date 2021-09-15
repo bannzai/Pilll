@@ -3,19 +3,16 @@ import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/domain/calendar/components/pill_sheet_modified_history/components/pill_sheet_modified_history_date_component.dart';
 import 'package:pilll/entity/pill_sheet_modified_history_value.dart';
-import 'package:pilll/entity/pill_sheet_type.dart';
 
 class PillSheetModifiedHistoryAutomaticallyRecordedLastTakenDateAction
     extends StatelessWidget {
   final DateTime estimatedEventCausingDate;
-  final PillSheetType pillSheetType;
   final AutomaticallyRecordedLastTakenDateValue? value;
 
   const PillSheetModifiedHistoryAutomaticallyRecordedLastTakenDateAction({
     Key? key,
     required this.estimatedEventCausingDate,
     required this.value,
-    required this.pillSheetType,
   }) : super(key: key);
   @override
   Widget build(BuildContext context) {

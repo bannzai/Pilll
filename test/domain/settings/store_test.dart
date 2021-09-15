@@ -52,10 +52,10 @@ void main() {
           ReminderTime(hour: 1, minute: 0),
           ReminderTime(hour: 2, minute: 0),
         ],
-        durationMenstruation: 1,
         pillNumberForFromMenstruation: 22,
+        durationMenstruation: 1,
         isOnReminder: false,
-        pillSheetTypeRawPath: PillSheetType.pillsheet_28_4.rawPath,
+        pillSheetTypes: [PillSheetType.pillsheet_28_4],
       );
 
       when(service.fetch())
@@ -162,10 +162,10 @@ void main() {
           ReminderTime(hour: 1, minute: 0),
           ReminderTime(hour: 2, minute: 0),
         ],
-        durationMenstruation: 1,
         pillNumberForFromMenstruation: 22,
+        durationMenstruation: 1,
         isOnReminder: false,
-        pillSheetTypeRawPath: PillSheetType.pillsheet_28_4.rawPath,
+        pillSheetTypes: [PillSheetType.pillsheet_28_4],
       );
       when(service.fetch())
           .thenAnswer((realInvocation) => Future.value(setting));
