@@ -78,7 +78,7 @@ extension PillSheetModifiedHistoryServiceActionFactory
   static PillSheetModifiedHistory _create({
     required PillSheet? before,
     required PillSheet after,
-    required String pillSheetGroupID,
+    required String? pillSheetGroupID,
     required String? beforePillSheetID,
     required String afterPillSheetID,
     required PillSheetModifiedActionType actionType,
@@ -100,18 +100,17 @@ extension PillSheetModifiedHistoryServiceActionFactory
   }
 
   static PillSheetModifiedHistory createTakenPillAction({
-    required PillSheetGroup pillSheetGroup,
+    required String? pillSheetGroupID,
     required PillSheet before,
     required PillSheet after,
   }) {
-    final pillSheetGroupID = pillSheetGroup.id;
+    assert(pillSheetGroupID != null);
+
     final afterID = after.id;
     final afterLastTakenDate = after.lastTakenDate;
-    if (afterID == null ||
-        afterLastTakenDate == null ||
-        pillSheetGroupID == null) {
+    if (afterID == null || afterLastTakenDate == null) {
       throw FormatException(
-          "unexpected pillSheetGroupID: $pillSheetGroupID, or afterPillSheetID: $afterID or lastTakenDate:${after.lastTakenDate} is null for takenPill action");
+          "unexpected afterPillSheetID: $afterID or lastTakenDate:${after.lastTakenDate} is null for takenPill action");
     }
     return _create(
       actionType: PillSheetModifiedActionType.takenPill,
@@ -132,18 +131,17 @@ extension PillSheetModifiedHistoryServiceActionFactory
   }
 
   static PillSheetModifiedHistory createRevertTakenPillAction({
-    required PillSheetGroup pillSheetGroup,
+    required String? pillSheetGroupID,
     required PillSheet before,
     required PillSheet after,
   }) {
-    final pillSheetGroupID = pillSheetGroup.id;
+    assert(pillSheetGroupID != null);
+
     final afterID = after.id;
     final afterLastTakenDate = after.lastTakenDate;
-    if (afterID == null ||
-        afterLastTakenDate == null ||
-        pillSheetGroupID == null) {
+    if (afterID == null || afterLastTakenDate == null) {
       throw FormatException(
-          "unexpected pillSheetGroupID: $pillSheetGroupID, or afterPillSheetID: $afterID or lastTakenDate:${after.lastTakenDate} is null for revertTakenPill action");
+          "unexpected afterPillSheetID: $afterID or lastTakenDate:${after.lastTakenDate} is null for revertTakenPill action");
     }
     final beforeID = before.id;
     final beforeLastTakenDate = before.lastTakenDate;
@@ -175,10 +173,12 @@ extension PillSheetModifiedHistoryServiceActionFactory
     required PillSheet after,
   }) {
     final pillSheetGroupID = pillSheetGroup.id;
+    assert(pillSheetGroupID != null);
+
     final afterID = after.id;
-    if (afterID == null || pillSheetGroupID == null) {
+    if (afterID == null) {
       throw FormatException(
-          "unexpected pillSheetGroupID: $pillSheetGroupID, or afterPillSheetID: $afterID  is null for createdPillSheet action");
+          "unexpected afterPillSheetID: $afterID  is null for createdPillSheet action");
     }
     return _create(
       actionType: PillSheetModifiedActionType.createdPillSheet,
@@ -197,11 +197,12 @@ extension PillSheetModifiedHistoryServiceActionFactory
   }
 
   static PillSheetModifiedHistory createChangedPillNumberAction({
-    required PillSheetGroup pillSheetGroup,
+    required String? pillSheetGroupID,
     required PillSheet before,
     required PillSheet after,
   }) {
-    final pillSheetGroupID = pillSheetGroup.id;
+    assert(pillSheetGroupID != null);
+
     final afterID = after.id;
     if (afterID == null || pillSheetGroupID == null) {
       throw FormatException(
@@ -234,10 +235,12 @@ extension PillSheetModifiedHistoryServiceActionFactory
     required PillSheet after,
   }) {
     final pillSheetGroupID = pillSheetGroup.id;
+    assert(pillSheetGroupID != null);
+
     final afterID = after.id;
-    if (afterID == null || pillSheetGroupID == null) {
+    if (afterID == null) {
       throw FormatException(
-          "unexpected pillSheetGroupID: $pillSheetGroupID, or afterPillSheetID: $afterID  is null for deletedPillSheet action");
+          "unexpected afterPillSheetID: $afterID  is null for deletedPillSheet action");
     }
 
     return _create(
