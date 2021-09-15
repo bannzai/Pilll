@@ -171,11 +171,6 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
       }
       idAndPillSheet[pillSheetID] = createdPillSheet;
 
-      final history = PillSheetModifiedHistoryServiceActionFactory
-          .createCreatedPillSheetAction(
-              before: null, pillSheetID: pillSheetID, after: createdPillSheet);
-      _pillSheetModifiedHistoryService.add(batch, history);
-
       i++;
     });
 
@@ -184,6 +179,13 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
     final pillSheetGroup =
         PillSheetGroup(pillSheetIDs: pillSheetIDs, pillSheets: pillSheets);
     _pillSheetGroupService.register(batch, pillSheetGroup);
+
+    final history = PillSheetModifiedHistoryServiceActionFactory
+        .createCreatedPillSheetAction(
+      pillSheetIDs: pillSheetIDs,
+      pillSheetGroupID: pillSheetGroup.id,
+    );
+    _pillSheetModifiedHistoryService.add(batch, history);
 
     _settingService.updateWithBatch(batch, setting);
 
@@ -271,7 +273,10 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
 
     final history = PillSheetModifiedHistoryServiceActionFactory
         .createRevertTakenPillAction(
-            before: activedPillSheet, after: updatedPillSheet);
+      pillSheetGroupID: pillSheetGroup.id,
+      before: activedPillSheet,
+      after: updatedPillSheet,
+    );
     _pillSheetModifiedHistoryService.add(batch, history);
 
     final updatedPillSheetGroup = pillSheetGroup.replaced(updatedPillSheet);
