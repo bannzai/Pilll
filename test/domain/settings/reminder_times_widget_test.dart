@@ -107,7 +107,7 @@ void main() {
       await tester.pumpAndSettle(Duration(milliseconds: 500));
 
       expect(find.text("通知時間の追加"), findsOneWidget);
-      expect(find.byWidgetPredicate((widget) => Widget is Dismissible),
+      expect(find.byWidgetPredicate((widget) => widget is Dismissible),
           findsNothing);
     });
     testWidgets('when setting has maximum count reminder times︎',
