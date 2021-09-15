@@ -39,6 +39,8 @@ abstract class CreatedPillSheetValue implements _$CreatedPillSheetValue {
       toJson: NonNullTimestampConverter.dateTimeToTimestamp,
     )
         required DateTime pillSheetCreatedAt,
+    @Default(1)
+        int pillSheetCount,
   }) = _CreatedPillSheetValue;
 
   factory CreatedPillSheetValue.fromJson(Map<String, dynamic> json) =>
@@ -85,6 +87,8 @@ abstract class DeletedPillSheetValue implements _$DeletedPillSheetValue {
       toJson: NonNullTimestampConverter.dateTimeToTimestamp,
     )
         required DateTime pillSheetDeletedAt,
+    @Default(1)
+        int pillSheetCount,
   }) = _DeletedPillSheetValue;
 
   factory DeletedPillSheetValue.fromJson(Map<String, dynamic> json) =>
@@ -160,6 +164,10 @@ abstract class ChangedPillNumberValue implements _$ChangedPillNumberValue {
         required DateTime afterBeginingDate,
     required int beforeTodayPillNumber,
     required int afterTodayPillNumber,
+    @Default(1)
+        int beforeGroupIndex,
+    @Default(1)
+        int afterGroupIndex,
   }) = _ChangedPillNumberValue;
 
   factory ChangedPillNumberValue.fromJson(Map<String, dynamic> json) =>

@@ -43,7 +43,14 @@ abstract class PillSheetModifiedHistory with _$PillSheetModifiedHistory {
         required String? id,
     required String actionType,
     required PillSheetModifiedHistoryValue value,
-    required String pillSheetID,
+    // This is deprecated property.
+    // Instead of beforePillSheetID and afterPillSheetID
+    required String? pillSheetID,
+    // There are new properties for pill_sheet grouping. So it's all optional
+    required String? pillSheetGroupID,
+    required String? beforePillSheetID,
+    required String? afterPillSheetID,
+    //
     @Default(null)
         PillSheet? before,
     required PillSheet after,
