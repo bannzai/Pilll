@@ -23,7 +23,8 @@ class PillSheetModifiedHistoryCreatePillSheetAction extends StatelessWidget {
             PillSheetModifiedHistoryDate(
               estimatedEventCausingDate: estimatedEventCausingDate,
               effectivePillNumber:
-                  PillSheetModifiedHistoryDateEffectivePillNumber.hyphen(),
+                  PillSheetModifiedHistoryDateEffectivePillNumber
+                      .pillSheetCount(value?.pillSheetIDs ?? []),
             ),
             Spacer(),
             Container(

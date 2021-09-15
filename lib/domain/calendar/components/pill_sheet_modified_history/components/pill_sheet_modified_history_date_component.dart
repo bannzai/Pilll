@@ -119,4 +119,7 @@ extension PillSheetModifiedHistoryDateEffectivePillNumber
 
   static String changed(ChangedPillNumberValue value) =>
       "${value.beforeTodayPillNumber}→${value.afterTodayPillNumber}番";
+
+  static String pillSheetCount(List<String> pillSheetIDs) =>
+      pillSheetIDs.isNotEmpty ? "${pillSheetIDs.length}枚" : hyphen();
 }

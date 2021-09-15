@@ -39,7 +39,7 @@ abstract class CreatedPillSheetValue implements _$CreatedPillSheetValue {
       toJson: NonNullTimestampConverter.dateTimeToTimestamp,
     )
         required DateTime pillSheetCreatedAt,
-    @Default(1)
+    @Default([])
         List<String> pillSheetIDs,
   }) = _CreatedPillSheetValue;
 
@@ -87,7 +87,7 @@ abstract class DeletedPillSheetValue implements _$DeletedPillSheetValue {
       toJson: NonNullTimestampConverter.dateTimeToTimestamp,
     )
         required DateTime pillSheetDeletedAt,
-    @Default(1)
+    @Default([])
         List<String> pillSheetIDs,
   }) = _DeletedPillSheetValue;
 
