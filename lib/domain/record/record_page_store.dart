@@ -176,14 +176,13 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
 
     final pillSheetIDs = idAndPillSheet.keys.toList();
     final pillSheets = idAndPillSheet.values.toList();
-    final pillSheetGroup =
-        PillSheetGroup(pillSheetIDs: pillSheetIDs, pillSheets: pillSheets);
-    _pillSheetGroupService.register(batch, pillSheetGroup);
+    final createdPillSheetGroup = _pillSheetGroupService.register(batch,
+        PillSheetGroup(pillSheetIDs: pillSheetIDs, pillSheets: pillSheets));
 
     final history = PillSheetModifiedHistoryServiceActionFactory
         .createCreatedPillSheetAction(
       pillSheetIDs: pillSheetIDs,
-      pillSheetGroupID: pillSheetGroup.id,
+      pillSheetGroupID: createdPillSheetGroup.id,
     );
     _pillSheetModifiedHistoryService.add(batch, history);
 
