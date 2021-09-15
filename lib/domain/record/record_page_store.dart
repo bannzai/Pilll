@@ -153,14 +153,16 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
     final Map<String, PillSheet> idAndPillSheet = {};
     final n = now();
 
-    var i = 0;
-    setting.pillSheetTypes.forEach((pillSheetType) {
+    setting.pillSheetTypes.asMap().keys.forEach((pageIndex) {
+      final pillSheetType = setting.pillSheetTypes[pageIndex];
+      final offset = pastedTotalCount(
+          pillSheetTypes: setting.pillSheetTypes, pageIndex: pageIndex);
       final pillSheet = PillSheet(
         typeInfo: pillSheetType.typeInfo,
         beginingDate: n.add(
-          Duration(days: pillSheetType.totalCount * i),
+          Duration(days: offset),
         ),
-        groupIndex: i,
+        groupIndex: pageIndex,
       );
 
       final createdPillSheet = _pillSheetService.register(batch, pillSheet);
@@ -170,8 +172,6 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
             "ピルシートのIDの登録に失敗しました。しばらく時間をおいてお試しください。解決し無い場合は設定 > お問い合わせからご報告してください");
       }
       idAndPillSheet[pillSheetID] = createdPillSheet;
-
-      i++;
     });
 
     final pillSheetIDs = idAndPillSheet.keys.toList();
