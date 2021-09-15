@@ -12,7 +12,7 @@ import 'package:pilll/entity/weekday.dart';
 class SettingPillSheetView extends StatelessWidget {
   final int pageIndex;
   final List<PillSheetType> pillSheetTypes;
-  final int? selectedPillNumberPageIndex;
+  final int selectedPillNumberPageIndex;
   final int? selectedPillNumberIntoPillSheet;
   final Function(int pageIndex, int pillNumberIntoPillSheet) markSelected;
 
