@@ -66,7 +66,7 @@ _$_CreatedPillSheetValue _$_$_CreatedPillSheetValueFromJson(
     pillSheetIDs: (json['pillSheetIDs'] as List<dynamic>?)
             ?.map((e) => e as String)
             .toList() ??
-        1,
+        [],
   );
 }
 
@@ -110,7 +110,7 @@ _$_DeletedPillSheetValue _$_$_DeletedPillSheetValueFromJson(
     pillSheetIDs: (json['pillSheetIDs'] as List<dynamic>?)
             ?.map((e) => e as String)
             .toList() ??
-        1,
+        [],
   );
 }
 

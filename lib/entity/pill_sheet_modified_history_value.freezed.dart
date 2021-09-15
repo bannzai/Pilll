@@ -502,7 +502,7 @@ class _$CreatedPillSheetValueTearOff {
   _CreatedPillSheetValue call(
       {@JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
           required DateTime pillSheetCreatedAt,
-      List<String> pillSheetIDs = 1}) {
+      List<String> pillSheetIDs = const []}) {
     return _CreatedPillSheetValue(
       pillSheetCreatedAt: pillSheetCreatedAt,
       pillSheetIDs: pillSheetIDs,
@@ -618,7 +618,7 @@ class _$_CreatedPillSheetValue extends _CreatedPillSheetValue {
   _$_CreatedPillSheetValue(
       {@JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
           required this.pillSheetCreatedAt,
-      this.pillSheetIDs = 1})
+      this.pillSheetIDs = const []})
       : super._();
 
   factory _$_CreatedPillSheetValue.fromJson(Map<String, dynamic> json) =>
@@ -629,7 +629,7 @@ class _$_CreatedPillSheetValue extends _CreatedPillSheetValue {
       fromJson: NonNullTimestampConverter.timestampToDateTime,
       toJson: NonNullTimestampConverter.dateTimeToTimestamp)
   final DateTime pillSheetCreatedAt;
-  @JsonKey(defaultValue: 1)
+  @JsonKey(defaultValue: const [])
   @override
   final List<String> pillSheetIDs;
 
@@ -985,7 +985,7 @@ class _$DeletedPillSheetValueTearOff {
   _DeletedPillSheetValue call(
       {@JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
           required DateTime pillSheetDeletedAt,
-      List<String> pillSheetIDs = 1}) {
+      List<String> pillSheetIDs = const []}) {
     return _DeletedPillSheetValue(
       pillSheetDeletedAt: pillSheetDeletedAt,
       pillSheetIDs: pillSheetIDs,
@@ -1101,7 +1101,7 @@ class _$_DeletedPillSheetValue extends _DeletedPillSheetValue {
   _$_DeletedPillSheetValue(
       {@JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
           required this.pillSheetDeletedAt,
-      this.pillSheetIDs = 1})
+      this.pillSheetIDs = const []})
       : super._();
 
   factory _$_DeletedPillSheetValue.fromJson(Map<String, dynamic> json) =>
@@ -1112,7 +1112,7 @@ class _$_DeletedPillSheetValue extends _DeletedPillSheetValue {
       fromJson: NonNullTimestampConverter.timestampToDateTime,
       toJson: NonNullTimestampConverter.dateTimeToTimestamp)
   final DateTime pillSheetDeletedAt;
-  @JsonKey(defaultValue: 1)
+  @JsonKey(defaultValue: const [])
   @override
   final List<String> pillSheetIDs;
 
