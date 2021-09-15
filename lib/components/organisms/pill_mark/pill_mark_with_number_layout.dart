@@ -1,6 +1,5 @@
 import 'package:pilll/components/organisms/pill_mark/pill_mark.dart';
 import 'package:flutter/material.dart';
-import 'package:pilll/entity/pill_sheet_type.dart';
 
 class PillMarkWithNumberLayout extends StatelessWidget {
   final Widget textOfPillNumber;
@@ -29,24 +28,6 @@ class PillMarkWithNumberLayout extends StatelessWidget {
 }
 
 extension PillMarkWithNumberLayoutHelper on PillMarkWithNumberLayout {
-  static int calcSequentialPillNumber({
-    required int columnIndex,
-    required int lineIndex,
-    required int pageIndex,
-    required List<PillSheetType> pillSheetTypes,
-  }) {
-    if (pillSheetTypes.isEmpty) {
-      return 0;
-    }
-    return columnIndex +
-        1 +
-        (lineIndex) * 7 +
-        pastedTotalCount(
-          pillSheetTypes: pillSheetTypes,
-          pageIndex: pageIndex,
-        );
-  }
-
   static int calcPillNumberIntoPillSheet(int columnIndex, int lineIndex) {
     return columnIndex + 1 + (lineIndex) * 7;
   }
