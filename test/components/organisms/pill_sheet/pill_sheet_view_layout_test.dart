@@ -54,4 +54,31 @@ void main() {
           findsNWidgets(3));
     });
   });
+  testWidgets('when selected 4 line pill sheet type',
+      (WidgetTester tester) async {
+    SupportedDeviceType.iPhone5SE2nd.binding(tester.binding.window);
+
+    final weekdayLines = PillSheetViewWeekdayLine(firstWeekday: Weekday.Sunday);
+    final pillSheetType = PillSheetType.pillsheet_28_0;
+    final widget = PillSheetViewLayout(
+      weekdayLines: weekdayLines,
+      pillMarkLines: List.generate(
+        pillSheetType.numberOfLineInPillSheet,
+        (index) => _TestWidget(),
+      ),
+    );
+    await tester.pumpWidget(
+      MaterialApp(
+        home: Container(
+          child: widget,
+          height: PillSheetViewLayout.calcHeight(
+              pillSheetType.numberOfLineInPillSheet, false),
+        ),
+      ),
+    );
+    await tester.pumpAndSettle(Duration(milliseconds: 500));
+
+    expect(find.byWidgetPredicate((widget) => widget is _TestWidget),
+        findsNWidgets(4));
+  });
 }
