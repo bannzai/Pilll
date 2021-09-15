@@ -1,11 +1,11 @@
 import 'package:pilll/components/molecules/ripple.dart';
+import 'package:pilll/components/organisms/pill_mark/done_mark.dart';
+import 'package:pilll/components/organisms/pill_mark/pill_marks.dart';
 import 'package:pilll/entity/pill_mark_type.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/util/environment.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
-import 'package:dotted_border/dotted_border.dart';
-import 'package:flutter_svg/svg.dart';
 
 abstract class PillMarkConst {
   static final double edge = 20;
@@ -56,7 +56,8 @@ class _PillMarkState extends State<PillMark> with TickerProviderStateMixin {
     return Stack(
       clipBehavior: Clip.none,
       children: [
-        _mark(widget.isDone, widget.pillMarkType),
+        _mark(widget.pillMarkType),
+        if (widget.isDone) PillMarkDoneMark(),
         if (widget.hasRippleAnimation)
           // NOTE: pill mark size is 20px. Ripple view final size is 80px.
           // Positined ripple animation equal to (80px - 20px) / 2(to center) = 30;
@@ -78,53 +79,18 @@ class _PillMarkState extends State<PillMark> with TickerProviderStateMixin {
     );
   }
 
-  SvgPicture _checkImage() {
-    return SvgPicture.asset(
-      "images/checkmark.svg",
-      color: PilllColors.potti,
-      width: 11,
-      height: 8.5,
-    );
-  }
-
-  Widget _mark(bool isDone, PillMarkType type) {
-    return DottedBorder(
-      borderType: BorderType.RRect,
-      radius: Radius.circular(10),
-      padding: EdgeInsets.zero,
-      color: type == PillMarkType.rest ? PilllColors.gray : Colors.transparent,
-      strokeWidth: type == PillMarkType.rest ? 1 : 0,
-      child: Container(
-        width: PillMarkConst.edge,
-        height: PillMarkConst.edge,
-        child: Center(
-          child: () {
-            if (isDone) {
-              return _checkImage();
-            }
-            return null;
-          }(),
-        ),
-        decoration: BoxDecoration(
-          color: () {
-            switch (type) {
-              case PillMarkType.normal:
-                return PilllColors.potti;
-              case PillMarkType.rest:
-                return PilllColors.blank;
-              case PillMarkType.fake:
-                return PilllColors.blank;
-              case PillMarkType.selected:
-                return PilllColors.enable;
-              case PillMarkType.done:
-                return PilllColors.lightGray;
-              default:
-                throw ArgumentError.notNull("");
-            }
-          }(),
-          shape: BoxShape.circle,
-        ),
-      ),
-    );
+  Widget _mark(PillMarkType type) {
+    switch (type) {
+      case PillMarkType.normal:
+        return NormalPillMark();
+      case PillMarkType.rest:
+        return RestPillMark();
+      case PillMarkType.fake:
+        return FakePillMark();
+      case PillMarkType.selected:
+        return SelectedPillMark();
+      case PillMarkType.done:
+        return LightGrayPillMark();
+    }
   }
 }
