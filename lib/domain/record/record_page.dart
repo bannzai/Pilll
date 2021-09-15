@@ -52,8 +52,8 @@ class RecordPage extends HookWidget {
         appBar: AppBar(
           titleSpacing: 0,
           backgroundColor: PilllColors.white,
-          toolbarHeight: RecordPageHeaderrmationConst.height,
-          title: RecordPageHeaderrmation(
+          toolbarHeight: RecordPageInformationHeaderConst.height,
+          title: RecordPageInformationHeader(
             today: DateTime.now(),
             pillSheetGroup: state.pillSheetGroup,
             store: store,

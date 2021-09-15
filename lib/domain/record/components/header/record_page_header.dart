@@ -10,15 +10,15 @@ import 'package:pilll/entity/pill_sheet_group.dart';
 import 'package:pilll/util/formatter/date_time_formatter.dart';
 import 'package:flutter/material.dart';
 
-abstract class RecordPageHeaderrmationConst {
+abstract class RecordPageInformationHeaderConst {
   static final double height = 130;
 }
 
-class RecordPageHeaderrmation extends StatelessWidget {
+class RecordPageInformationHeader extends StatelessWidget {
   final DateTime today;
   final PillSheetGroup? pillSheetGroup;
   final RecordPageStore store;
-  const RecordPageHeaderrmation({
+  const RecordPageInformationHeader({
     Key? key,
     required this.today,
     required this.pillSheetGroup,
@@ -34,7 +34,7 @@ class RecordPageHeaderrmation extends StatelessWidget {
     final activedPillSheet = pillSheetGroup?.activedPillSheet;
 
     return Container(
-      height: RecordPageHeaderrmationConst.height,
+      height: RecordPageInformationHeaderConst.height,
       child: Column(
         children: <Widget>[
           SizedBox(height: 34),
