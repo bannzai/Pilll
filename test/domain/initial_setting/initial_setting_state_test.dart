@@ -63,5 +63,32 @@ void main() {
 
       expect(expected, pillSheet);
     });
+    test("it is builded pillSheet.gropuIndex < todayPillNumber.pageIndex ",
+        () async {
+      final mockTodayRepository = MockTodayService();
+      final today = DateTime.parse("2020-11-23");
+      todayRepository = mockTodayRepository;
+      when(mockTodayRepository.now()).thenReturn(today);
+      when(mockTodayRepository.today()).thenReturn(today);
+
+      final pillSheet = InitialSettingState.buildPillSheet(
+        pageIndex: 0,
+        todayPillNumber: InitialSettingTodayPillNumber(
+            pageIndex: 1, pillNumberIntoPillSheet: 1),
+        pillSheetTypes: [
+          PillSheetType.pillsheet_21,
+          PillSheetType.pillsheet_24_0,
+        ],
+      );
+
+      final expected = PillSheet(
+        groupIndex: 0,
+        typeInfo: PillSheetType.pillsheet_21.typeInfo,
+        beginingDate: DateTime.parse("2020-10-26"),
+        lastTakenDate: DateTime.parse("2020-11-22"),
+      );
+
+      expect(expected, pillSheet);
+    });
   });
 }
