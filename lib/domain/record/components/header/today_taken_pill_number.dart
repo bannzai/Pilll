@@ -5,11 +5,11 @@ import 'package:pilll/entity/pill_sheet_group.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:flutter/material.dart';
 
-class TakeToday extends StatelessWidget {
+class TodayTakenPillNumber extends StatelessWidget {
   final PillSheetGroup? pillSheetGroup;
   final VoidCallback onPressed;
 
-  const TakeToday({
+  const TodayTakenPillNumber({
     Key? key,
     required this.pillSheetGroup,
     required this.onPressed,
