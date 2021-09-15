@@ -63,7 +63,7 @@ abstract class InitialSettingState implements _$InitialSettingState {
         isOnReminder: isOnReminder,
       );
 
-  PillSheet buildPillSheet({
+  static PillSheet buildPillSheet({
     required int pageIndex,
     required InitialSettingTodayPillNumber todayPillNumber,
     required List<PillSheetType> pillSheetTypes,
@@ -85,7 +85,7 @@ abstract class InitialSettingState implements _$InitialSettingState {
     );
   }
 
-  DateTime _beginingDate({
+  static DateTime _beginingDate({
     required int pageIndex,
     required InitialSettingTodayPillNumber todayPillNumber,
     required List<PillSheetType> pillSheetTypes,
@@ -118,7 +118,7 @@ abstract class InitialSettingState implements _$InitialSettingState {
     }
   }
 
-  DateTime? _lastTakenDate({
+  static DateTime? _lastTakenDate({
     required int pageIndex,
     required InitialSettingTodayPillNumber todayPillNumber,
     required List<PillSheetType> pillSheetTypes,
