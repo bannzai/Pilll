@@ -12,7 +12,6 @@ import 'package:pilll/entity/weekday.dart';
 class SettingPillSheetView extends StatelessWidget {
   final int pageIndex;
   final List<PillSheetType> pillSheetTypes;
-  final int selectedPillNumberPageIndex;
   final int? selectedPillNumberIntoPillSheet;
   final Function(int pageIndex, int pillNumberIntoPillSheet) markSelected;
 
@@ -22,7 +21,6 @@ class SettingPillSheetView extends StatelessWidget {
     Key? key,
     required this.pageIndex,
     required this.pillSheetTypes,
-    required this.selectedPillNumberPageIndex,
     required this.selectedPillNumberIntoPillSheet,
     required this.markSelected,
   }) : super(key: key);
@@ -87,10 +85,8 @@ class SettingPillSheetView extends StatelessWidget {
   PillMarkType _pillMarkTypeFor({
     required int pillNumberIntoPillSheet,
   }) {
-    if (selectedPillNumberPageIndex == pageIndex) {
-      if (selectedPillNumberIntoPillSheet == pillNumberIntoPillSheet) {
-        return PillMarkType.selected;
-      }
+    if (selectedPillNumberIntoPillSheet == pillNumberIntoPillSheet) {
+      return PillMarkType.selected;
     }
 
     if (pillSheetType.dosingPeriod < pillNumberIntoPillSheet) {
