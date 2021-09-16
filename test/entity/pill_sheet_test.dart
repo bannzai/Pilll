@@ -151,5 +151,47 @@ void main() {
       );
       expect(model.isActive, false);
     });
+    test(
+        "It is active pattern. Boundary testing. now: 2020-09-28 23:59:59, begin: 2020-09-01, end: 2020-09-28",
+        () {
+      var mockTodayRepository = MockTodayService();
+      todayRepository = mockTodayRepository;
+      when(mockTodayRepository.now())
+          .thenReturn(DateTime(2020, 9, 28, 23, 59, 59));
+
+      var sheetType = PillSheetType.pillsheet_21;
+      var model = PillSheet(
+        beginingDate: DateTime.parse("2020-09-01"),
+        lastTakenDate: DateTime.parse("2020-09-28"),
+        typeInfo: PillSheetTypeInfo(
+          dosingPeriod: sheetType.dosingPeriod,
+          name: sheetType.fullName,
+          totalCount: sheetType.totalCount,
+          pillSheetTypeReferencePath: sheetType.rawPath,
+        ),
+      );
+      expect(model.isActive, true);
+    });
+    test(
+        "It is deactive pattern. Boundary testing. now: 2020-09-29 23:59:59, begin: 2020-09-01, end: 2020-09-28",
+        () {
+      var mockTodayRepository = MockTodayService();
+      todayRepository = mockTodayRepository;
+      when(mockTodayRepository.now())
+          .thenReturn(DateTime(2020, 9, 29, 23, 59, 59));
+
+      var sheetType = PillSheetType.pillsheet_21;
+      var model = PillSheet(
+        beginingDate: DateTime.parse("2020-09-01"),
+        lastTakenDate: DateTime.parse("2020-09-28"),
+        typeInfo: PillSheetTypeInfo(
+          dosingPeriod: sheetType.dosingPeriod,
+          name: sheetType.fullName,
+          totalCount: sheetType.totalCount,
+          pillSheetTypeReferencePath: sheetType.rawPath,
+        ),
+      );
+      expect(model.isActive, false);
+    });
   });
 }
