@@ -25,7 +25,7 @@ class _$MenstruationStateTearOff {
       bool isTrial = false,
       DateTime? trialDeadlineDate,
       Setting? setting,
-      PillSheet? latestPillSheet}) {
+      PillSheetGroup? latestPillSheetGroup}) {
     return _MenstruationState(
       isNotYetLoaded: isNotYetLoaded,
       currentCalendarIndex: currentCalendarIndex,
@@ -35,7 +35,7 @@ class _$MenstruationStateTearOff {
       isTrial: isTrial,
       trialDeadlineDate: trialDeadlineDate,
       setting: setting,
-      latestPillSheet: latestPillSheet,
+      latestPillSheetGroup: latestPillSheetGroup,
     );
   }
 }
@@ -53,7 +53,8 @@ mixin _$MenstruationState {
   bool get isTrial => throw _privateConstructorUsedError;
   DateTime? get trialDeadlineDate => throw _privateConstructorUsedError;
   Setting? get setting => throw _privateConstructorUsedError;
-  PillSheet? get latestPillSheet => throw _privateConstructorUsedError;
+  PillSheetGroup? get latestPillSheetGroup =>
+      throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $MenstruationStateCopyWith<MenstruationState> get copyWith =>
@@ -74,10 +75,10 @@ abstract class $MenstruationStateCopyWith<$Res> {
       bool isTrial,
       DateTime? trialDeadlineDate,
       Setting? setting,
-      PillSheet? latestPillSheet});
+      PillSheetGroup? latestPillSheetGroup});
 
   $SettingCopyWith<$Res>? get setting;
-  $PillSheetCopyWith<$Res>? get latestPillSheet;
+  $PillSheetGroupCopyWith<$Res>? get latestPillSheetGroup;
 }
 
 /// @nodoc
@@ -99,7 +100,7 @@ class _$MenstruationStateCopyWithImpl<$Res>
     Object? isTrial = freezed,
     Object? trialDeadlineDate = freezed,
     Object? setting = freezed,
-    Object? latestPillSheet = freezed,
+    Object? latestPillSheetGroup = freezed,
   }) {
     return _then(_value.copyWith(
       isNotYetLoaded: isNotYetLoaded == freezed
@@ -134,10 +135,10 @@ class _$MenstruationStateCopyWithImpl<$Res>
           ? _value.setting
           : setting // ignore: cast_nullable_to_non_nullable
               as Setting?,
-      latestPillSheet: latestPillSheet == freezed
-          ? _value.latestPillSheet
-          : latestPillSheet // ignore: cast_nullable_to_non_nullable
-              as PillSheet?,
+      latestPillSheetGroup: latestPillSheetGroup == freezed
+          ? _value.latestPillSheetGroup
+          : latestPillSheetGroup // ignore: cast_nullable_to_non_nullable
+              as PillSheetGroup?,
     ));
   }
 
@@ -153,13 +154,13 @@ class _$MenstruationStateCopyWithImpl<$Res>
   }
 
   @override
-  $PillSheetCopyWith<$Res>? get latestPillSheet {
-    if (_value.latestPillSheet == null) {
+  $PillSheetGroupCopyWith<$Res>? get latestPillSheetGroup {
+    if (_value.latestPillSheetGroup == null) {
       return null;
     }
 
-    return $PillSheetCopyWith<$Res>(_value.latestPillSheet!, (value) {
-      return _then(_value.copyWith(latestPillSheet: value));
+    return $PillSheetGroupCopyWith<$Res>(_value.latestPillSheetGroup!, (value) {
+      return _then(_value.copyWith(latestPillSheetGroup: value));
     });
   }
 }
@@ -180,12 +181,12 @@ abstract class _$MenstruationStateCopyWith<$Res>
       bool isTrial,
       DateTime? trialDeadlineDate,
       Setting? setting,
-      PillSheet? latestPillSheet});
+      PillSheetGroup? latestPillSheetGroup});
 
   @override
   $SettingCopyWith<$Res>? get setting;
   @override
-  $PillSheetCopyWith<$Res>? get latestPillSheet;
+  $PillSheetGroupCopyWith<$Res>? get latestPillSheetGroup;
 }
 
 /// @nodoc
@@ -209,7 +210,7 @@ class __$MenstruationStateCopyWithImpl<$Res>
     Object? isTrial = freezed,
     Object? trialDeadlineDate = freezed,
     Object? setting = freezed,
-    Object? latestPillSheet = freezed,
+    Object? latestPillSheetGroup = freezed,
   }) {
     return _then(_MenstruationState(
       isNotYetLoaded: isNotYetLoaded == freezed
@@ -244,10 +245,10 @@ class __$MenstruationStateCopyWithImpl<$Res>
           ? _value.setting
           : setting // ignore: cast_nullable_to_non_nullable
               as Setting?,
-      latestPillSheet: latestPillSheet == freezed
-          ? _value.latestPillSheet
-          : latestPillSheet // ignore: cast_nullable_to_non_nullable
-              as PillSheet?,
+      latestPillSheetGroup: latestPillSheetGroup == freezed
+          ? _value.latestPillSheetGroup
+          : latestPillSheetGroup // ignore: cast_nullable_to_non_nullable
+              as PillSheetGroup?,
     ));
   }
 }
@@ -264,7 +265,7 @@ class _$_MenstruationState extends _MenstruationState {
       this.isTrial = false,
       this.trialDeadlineDate,
       this.setting,
-      this.latestPillSheet})
+      this.latestPillSheetGroup})
       : super._();
 
   @JsonKey(defaultValue: true)
@@ -290,11 +291,11 @@ class _$_MenstruationState extends _MenstruationState {
   @override
   final Setting? setting;
   @override
-  final PillSheet? latestPillSheet;
+  final PillSheetGroup? latestPillSheetGroup;
 
   @override
   String toString() {
-    return 'MenstruationState(isNotYetLoaded: $isNotYetLoaded, currentCalendarIndex: $currentCalendarIndex, diariesForMonth: $diariesForMonth, entities: $entities, isPremium: $isPremium, isTrial: $isTrial, trialDeadlineDate: $trialDeadlineDate, setting: $setting, latestPillSheet: $latestPillSheet)';
+    return 'MenstruationState(isNotYetLoaded: $isNotYetLoaded, currentCalendarIndex: $currentCalendarIndex, diariesForMonth: $diariesForMonth, entities: $entities, isPremium: $isPremium, isTrial: $isTrial, trialDeadlineDate: $trialDeadlineDate, setting: $setting, latestPillSheetGroup: $latestPillSheetGroup)';
   }
 
   @override
@@ -325,9 +326,9 @@ class _$_MenstruationState extends _MenstruationState {
             (identical(other.setting, setting) ||
                 const DeepCollectionEquality()
                     .equals(other.setting, setting)) &&
-            (identical(other.latestPillSheet, latestPillSheet) ||
+            (identical(other.latestPillSheetGroup, latestPillSheetGroup) ||
                 const DeepCollectionEquality()
-                    .equals(other.latestPillSheet, latestPillSheet)));
+                    .equals(other.latestPillSheetGroup, latestPillSheetGroup)));
   }
 
   @override
@@ -341,7 +342,7 @@ class _$_MenstruationState extends _MenstruationState {
       const DeepCollectionEquality().hash(isTrial) ^
       const DeepCollectionEquality().hash(trialDeadlineDate) ^
       const DeepCollectionEquality().hash(setting) ^
-      const DeepCollectionEquality().hash(latestPillSheet);
+      const DeepCollectionEquality().hash(latestPillSheetGroup);
 
   @JsonKey(ignore: true)
   @override
@@ -359,7 +360,7 @@ abstract class _MenstruationState extends MenstruationState {
       bool isTrial,
       DateTime? trialDeadlineDate,
       Setting? setting,
-      PillSheet? latestPillSheet}) = _$_MenstruationState;
+      PillSheetGroup? latestPillSheetGroup}) = _$_MenstruationState;
   _MenstruationState._() : super._();
 
   @override
@@ -379,7 +380,8 @@ abstract class _MenstruationState extends MenstruationState {
   @override
   Setting? get setting => throw _privateConstructorUsedError;
   @override
-  PillSheet? get latestPillSheet => throw _privateConstructorUsedError;
+  PillSheetGroup? get latestPillSheetGroup =>
+      throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$MenstruationStateCopyWith<_MenstruationState> get copyWith =>

@@ -16,6 +16,8 @@ final databaseProvider = Provider<DatabaseConnection>((ref) {
 abstract class _CollectionPath {
   static final String users = "users";
   static String pillSheets(String userID) => "$users/$userID/pill_sheets";
+  static String pillSheetGroups(String userID) =>
+      "$users/$userID/pill_sheet_groups";
   static String diaries(String userID) => "$users/$userID/diaries";
   static String userPrivates(String userID) => "$users/$userID/privates";
   static String menstruations(String userID) => "$users/$userID/menstruations";
@@ -65,6 +67,14 @@ class DatabaseConnection {
   Future<T> transaction<T>(TransactionHandler<T> transactionHandler) {
     return FirebaseFirestore.instance.runTransaction(transactionHandler);
   }
+
+  CollectionReference pillSheetGroupsReference() => FirebaseFirestore.instance
+      .collection(_CollectionPath.pillSheetGroups(_userID));
+
+  DocumentReference pillSheetGroupReference(String pillSheetGroupID) =>
+      FirebaseFirestore.instance
+          .collection(_CollectionPath.pillSheetGroups(_userID))
+          .doc(pillSheetGroupID);
 
   WriteBatch batch() {
     return FirebaseFirestore.instance.batch();

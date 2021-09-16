@@ -9,7 +9,6 @@ import 'package:pilll/domain/settings/components/rows/notification_in_rest_durat
 import 'package:pilll/domain/settings/components/rows/notification_time.dart';
 import 'package:pilll/domain/settings/components/rows/pill_sheet_appearance_mode.dart';
 import 'package:pilll/domain/settings/components/rows/pill_sheet_remove.dart';
-import 'package:pilll/domain/settings/components/rows/pill_sheet_type.dart';
 import 'package:pilll/domain/settings/components/rows/premium_introduction.dart';
 import 'package:pilll/domain/settings/components/rows/quick_record.dart';
 import 'package:pilll/domain/settings/components/rows/taking_pill_notification.dart';
@@ -51,12 +50,14 @@ class SettingPage extends HookWidget {
   }
 
   Widget _body(BuildContext context) {
+    final store = useProvider(settingStoreProvider);
     final state = useProvider(settingStoreProvider.state);
     final setting = state.entity;
     if (setting == null) {
       return Container();
     }
-    final pillSheet = state.latestPillSheet;
+    final pillSheetGroup = state.latestPillSheetGroup;
+    final activedPillSheet = pillSheetGroup?.activedPillSheet;
     return Container(
       child: ListView.builder(
         itemBuilder: (BuildContext context, int index) {
@@ -99,8 +100,6 @@ class SettingPage extends HookWidget {
                   return SettingSectionTitle(
                     text: "ピルシート",
                     children: [
-                      PillSheetTypeRow(settingState: state),
-                      _separator(),
                       PillSheetAppearanceModeRow(
                         setting: setting,
                         isPremium: state.isPremium,
@@ -108,19 +107,27 @@ class SettingPage extends HookWidget {
                         trialDeadlineDate: state.trialDeadlineDate,
                       ),
                       _separator(),
-                      if (pillSheet != null && !pillSheet.isInvalid) ...[
-                        TodayPllNumberRow(setting: setting),
+                      if (activedPillSheet != null &&
+                          pillSheetGroup != null &&
+                          !pillSheetGroup.isDeleted) ...[
+                        TodayPllNumberRow(
+                          setting: setting,
+                          pillSheetGroup: pillSheetGroup,
+                          activedPillSheet: activedPillSheet,
+                        ),
                         _separator(),
                         PillSheetRemoveRow(),
                         _separator(),
                       ],
-                      CreatingNewPillSheetRow(
-                        setting: setting,
-                        isPremium: state.isPremium,
-                        isTrial: state.isTrial,
-                        trialDeadlineDate: state.trialDeadlineDate,
-                      ),
-                      _separator(),
+                      if (setting.pillSheetTypes.length == 1) ...[
+                        CreatingNewPillSheetRow(
+                          setting: setting,
+                          isPremium: state.isPremium,
+                          isTrial: state.isTrial,
+                          trialDeadlineDate: state.trialDeadlineDate,
+                        ),
+                        _separator(),
+                      ],
                     ],
                   );
                 case SettingSection.notification:
@@ -131,9 +138,10 @@ class SettingPage extends HookWidget {
                       _separator(),
                       NotificationTimeRow(setting: setting),
                       _separator(),
-                      if (pillSheet != null && pillSheet.hasRestDuration) ...[
+                      if (activedPillSheet != null &&
+                          activedPillSheet.hasRestDuration) ...[
                         NotificationInRestDuration(
-                            setting: setting, pillSheet: pillSheet),
+                            setting: setting, pillSheet: activedPillSheet),
                         _separator(),
                       ],
                       if (!state.isPremium) ...[
@@ -149,8 +157,10 @@ class SettingPage extends HookWidget {
                   return SettingSectionTitle(
                     text: "生理",
                     children: [
-                      MenstruationRow(setting),
-                      _separator(),
+                      if (pillSheetGroup != null) ...[
+                        MenstruationRow(store, setting, pillSheetGroup),
+                        _separator(),
+                      ],
                     ],
                   );
                 case SettingSection.other:

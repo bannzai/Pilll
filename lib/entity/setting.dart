@@ -57,7 +57,7 @@ abstract class Setting implements _$Setting {
   Setting._();
   @JsonSerializable(explicitToJson: true)
   factory Setting({
-    required String pillSheetTypeRawPath,
+    @Default([]) List<PillSheetType> pillSheetTypes,
     required int pillNumberForFromMenstruation,
     required int durationMenstruation,
     @Default([]) List<ReminderTime> reminderTimes,
@@ -71,7 +71,4 @@ abstract class Setting implements _$Setting {
   factory Setting.fromJson(Map<String, dynamic> json) =>
       _$SettingFromJson(json);
   Map<String, dynamic> toJson() => _$_$_SettingToJson(this as _$_Setting);
-
-  PillSheetType get pillSheetType =>
-      PillSheetTypeFunctions.fromRawPath(pillSheetTypeRawPath);
 }

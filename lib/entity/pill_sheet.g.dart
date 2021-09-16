@@ -37,6 +37,7 @@ _$_PillSheet _$_$_PillSheetFromJson(Map<String, dynamic> json) {
         TimestampConverter.timestampToDateTime(json['createdAt'] as Timestamp?),
     deletedAt:
         TimestampConverter.timestampToDateTime(json['deletedAt'] as Timestamp?),
+    groupIndex: json['groupIndex'] as int? ?? 0,
   );
 }
 
@@ -49,7 +50,7 @@ Map<String, dynamic> _$_$_PillSheetToJson(_$_PillSheet instance) {
     }
   }
 
-  writeNotNull('id', toNull(instance.id));
+  writeNotNull('id', instance.id);
   val['typeInfo'] = instance.typeInfo.toJson();
   val['beginingDate'] =
       NonNullTimestampConverter.dateTimeToTimestamp(instance.beginingDate);
@@ -57,5 +58,6 @@ Map<String, dynamic> _$_$_PillSheetToJson(_$_PillSheet instance) {
       TimestampConverter.dateTimeToTimestamp(instance.lastTakenDate);
   val['createdAt'] = TimestampConverter.dateTimeToTimestamp(instance.createdAt);
   val['deletedAt'] = TimestampConverter.dateTimeToTimestamp(instance.deletedAt);
+  val['groupIndex'] = instance.groupIndex;
   return val;
 }

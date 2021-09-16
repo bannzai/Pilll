@@ -5,7 +5,7 @@ import 'package:pilll/domain/calendar/calendar_card_state.dart';
 import 'package:pilll/domain/calendar/components/pill_sheet_modified_history/pill_sheet_modified_history_card.dart';
 import 'package:pilll/service/diary.dart';
 import 'package:pilll/service/menstruation.dart';
-import 'package:pilll/service/pill_sheet.dart';
+import 'package:pilll/service/pill_sheet_group.dart';
 import 'package:pilll/service/pill_sheet_modified_history.dart';
 import 'package:pilll/service/setting.dart';
 import 'package:pilll/domain/calendar/calendar_state.dart';
@@ -16,28 +16,28 @@ final calendarPageStateProvider = StateNotifierProvider<CalendarPageStateStore>(
   (ref) => CalendarPageStateStore(
     ref.watch(menstruationServiceProvider),
     ref.watch(settingServiceProvider),
-    ref.watch(pillSheetServiceProvider),
     ref.watch(diaryServiceProvider),
     ref.watch(pillSheetModifiedHistoryServiceProvider),
     ref.watch(userServiceProvider),
+    ref.watch(pillSheetGroupServiceProvider),
   ),
 );
 
 class CalendarPageStateStore extends StateNotifier<CalendarPageState> {
   final MenstruationService _menstruationService;
   final SettingService _settingService;
-  final PillSheetService _pillSheetService;
   final DiaryService _diaryService;
   final PillSheetModifiedHistoryService _pillSheetModifiedHistoryService;
   final UserService _userService;
+  final PillSheetGroupService _pillSheetGroupService;
 
   CalendarPageStateStore(
     this._menstruationService,
     this._settingService,
-    this._pillSheetService,
     this._diaryService,
     this._pillSheetModifiedHistoryService,
     this._userService,
+    this._pillSheetGroupService,
   ) : super(CalendarPageState(menstruations: [])) {
     _reset();
   }
@@ -47,7 +47,7 @@ class CalendarPageStateStore extends StateNotifier<CalendarPageState> {
     Future(() async {
       final menstruations = await _menstruationService.fetchAll();
       final setting = await _settingService.fetch();
-      final latestPillSheet = await _pillSheetService.fetchLast();
+      final latestPillSheetGroup = await _pillSheetGroupService.fetchLatest();
       final diaries = await _diaryService.fetchListForMonth(
           state.calendarDataSource[state.todayCalendarIndex]);
       final pillSheetModifiedHistories =
@@ -60,7 +60,7 @@ class CalendarPageStateStore extends StateNotifier<CalendarPageState> {
       state = state.copyWith(
         menstruations: menstruations,
         setting: setting,
-        latestPillSheet: latestPillSheet,
+        latestPillSheetGroup: latestPillSheetGroup,
         diariesForMonth: diaries,
         allPillSheetModifiedHistories: pillSheetModifiedHistories,
         isNotYetLoaded: false,
@@ -74,7 +74,7 @@ class CalendarPageStateStore extends StateNotifier<CalendarPageState> {
 
   StreamSubscription? _menstruationCanceller;
   StreamSubscription? _settingCanceller;
-  StreamSubscription? _latestPillSheetCanceller;
+  StreamSubscription? _latestPillSheetGroupCanceller;
   StreamSubscription? _diariesCanceller;
   StreamSubscription? _pillSheetModifiedHistoryCanceller;
   StreamSubscription? _userCanceller;
@@ -88,10 +88,10 @@ class CalendarPageStateStore extends StateNotifier<CalendarPageState> {
     _settingCanceller = _settingService.subscribe().listen((entity) {
       state = state.copyWith(setting: entity);
     });
-    _latestPillSheetCanceller?.cancel();
-    _latestPillSheetCanceller =
-        _pillSheetService.subscribeForLatestPillSheet().listen((entity) {
-      state = state.copyWith(latestPillSheet: entity);
+    _latestPillSheetGroupCanceller?.cancel();
+    _latestPillSheetGroupCanceller =
+        _pillSheetGroupService.subscribeForLatest().listen((entity) {
+      state = state.copyWith(latestPillSheetGroup: entity);
     });
     _diariesCanceller?.cancel();
     _diariesCanceller = _diaryService.subscribe().listen((entities) {
@@ -119,7 +119,7 @@ class CalendarPageStateStore extends StateNotifier<CalendarPageState> {
   void dispose() {
     _menstruationCanceller?.cancel();
     _settingCanceller?.cancel();
-    _latestPillSheetCanceller?.cancel();
+    _latestPillSheetGroupCanceller?.cancel();
     _diariesCanceller?.cancel();
     _pillSheetModifiedHistoryCanceller?.cancel();
     _userCanceller?.cancel();

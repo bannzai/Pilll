@@ -21,7 +21,7 @@ class _$CalendarPageStateTearOff {
       bool isNotYetLoaded = true,
       List<Menstruation> menstruations = const [],
       Setting? setting,
-      PillSheet? latestPillSheet,
+      PillSheetGroup? latestPillSheetGroup,
       List<Diary> diariesForMonth = const [],
       List<PillSheetModifiedHistory> allPillSheetModifiedHistories = const [],
       bool isPremium = false,
@@ -32,7 +32,7 @@ class _$CalendarPageStateTearOff {
       isNotYetLoaded: isNotYetLoaded,
       menstruations: menstruations,
       setting: setting,
-      latestPillSheet: latestPillSheet,
+      latestPillSheetGroup: latestPillSheetGroup,
       diariesForMonth: diariesForMonth,
       allPillSheetModifiedHistories: allPillSheetModifiedHistories,
       isPremium: isPremium,
@@ -51,7 +51,8 @@ mixin _$CalendarPageState {
   bool get isNotYetLoaded => throw _privateConstructorUsedError;
   List<Menstruation> get menstruations => throw _privateConstructorUsedError;
   Setting? get setting => throw _privateConstructorUsedError;
-  PillSheet? get latestPillSheet => throw _privateConstructorUsedError;
+  PillSheetGroup? get latestPillSheetGroup =>
+      throw _privateConstructorUsedError;
   List<Diary> get diariesForMonth => throw _privateConstructorUsedError;
   List<PillSheetModifiedHistory> get allPillSheetModifiedHistories =>
       throw _privateConstructorUsedError;
@@ -74,7 +75,7 @@ abstract class $CalendarPageStateCopyWith<$Res> {
       bool isNotYetLoaded,
       List<Menstruation> menstruations,
       Setting? setting,
-      PillSheet? latestPillSheet,
+      PillSheetGroup? latestPillSheetGroup,
       List<Diary> diariesForMonth,
       List<PillSheetModifiedHistory> allPillSheetModifiedHistories,
       bool isPremium,
@@ -82,7 +83,7 @@ abstract class $CalendarPageStateCopyWith<$Res> {
       DateTime? trialDeadlineDate});
 
   $SettingCopyWith<$Res>? get setting;
-  $PillSheetCopyWith<$Res>? get latestPillSheet;
+  $PillSheetGroupCopyWith<$Res>? get latestPillSheetGroup;
 }
 
 /// @nodoc
@@ -100,7 +101,7 @@ class _$CalendarPageStateCopyWithImpl<$Res>
     Object? isNotYetLoaded = freezed,
     Object? menstruations = freezed,
     Object? setting = freezed,
-    Object? latestPillSheet = freezed,
+    Object? latestPillSheetGroup = freezed,
     Object? diariesForMonth = freezed,
     Object? allPillSheetModifiedHistories = freezed,
     Object? isPremium = freezed,
@@ -124,10 +125,10 @@ class _$CalendarPageStateCopyWithImpl<$Res>
           ? _value.setting
           : setting // ignore: cast_nullable_to_non_nullable
               as Setting?,
-      latestPillSheet: latestPillSheet == freezed
-          ? _value.latestPillSheet
-          : latestPillSheet // ignore: cast_nullable_to_non_nullable
-              as PillSheet?,
+      latestPillSheetGroup: latestPillSheetGroup == freezed
+          ? _value.latestPillSheetGroup
+          : latestPillSheetGroup // ignore: cast_nullable_to_non_nullable
+              as PillSheetGroup?,
       diariesForMonth: diariesForMonth == freezed
           ? _value.diariesForMonth
           : diariesForMonth // ignore: cast_nullable_to_non_nullable
@@ -163,13 +164,13 @@ class _$CalendarPageStateCopyWithImpl<$Res>
   }
 
   @override
-  $PillSheetCopyWith<$Res>? get latestPillSheet {
-    if (_value.latestPillSheet == null) {
+  $PillSheetGroupCopyWith<$Res>? get latestPillSheetGroup {
+    if (_value.latestPillSheetGroup == null) {
       return null;
     }
 
-    return $PillSheetCopyWith<$Res>(_value.latestPillSheet!, (value) {
-      return _then(_value.copyWith(latestPillSheet: value));
+    return $PillSheetGroupCopyWith<$Res>(_value.latestPillSheetGroup!, (value) {
+      return _then(_value.copyWith(latestPillSheetGroup: value));
     });
   }
 }
@@ -186,7 +187,7 @@ abstract class _$CalendarPageStateCopyWith<$Res>
       bool isNotYetLoaded,
       List<Menstruation> menstruations,
       Setting? setting,
-      PillSheet? latestPillSheet,
+      PillSheetGroup? latestPillSheetGroup,
       List<Diary> diariesForMonth,
       List<PillSheetModifiedHistory> allPillSheetModifiedHistories,
       bool isPremium,
@@ -196,7 +197,7 @@ abstract class _$CalendarPageStateCopyWith<$Res>
   @override
   $SettingCopyWith<$Res>? get setting;
   @override
-  $PillSheetCopyWith<$Res>? get latestPillSheet;
+  $PillSheetGroupCopyWith<$Res>? get latestPillSheetGroup;
 }
 
 /// @nodoc
@@ -216,7 +217,7 @@ class __$CalendarPageStateCopyWithImpl<$Res>
     Object? isNotYetLoaded = freezed,
     Object? menstruations = freezed,
     Object? setting = freezed,
-    Object? latestPillSheet = freezed,
+    Object? latestPillSheetGroup = freezed,
     Object? diariesForMonth = freezed,
     Object? allPillSheetModifiedHistories = freezed,
     Object? isPremium = freezed,
@@ -240,10 +241,10 @@ class __$CalendarPageStateCopyWithImpl<$Res>
           ? _value.setting
           : setting // ignore: cast_nullable_to_non_nullable
               as Setting?,
-      latestPillSheet: latestPillSheet == freezed
-          ? _value.latestPillSheet
-          : latestPillSheet // ignore: cast_nullable_to_non_nullable
-              as PillSheet?,
+      latestPillSheetGroup: latestPillSheetGroup == freezed
+          ? _value.latestPillSheetGroup
+          : latestPillSheetGroup // ignore: cast_nullable_to_non_nullable
+              as PillSheetGroup?,
       diariesForMonth: diariesForMonth == freezed
           ? _value.diariesForMonth
           : diariesForMonth // ignore: cast_nullable_to_non_nullable
@@ -276,7 +277,7 @@ class _$_CalendarPageState extends _CalendarPageState {
       this.isNotYetLoaded = true,
       this.menstruations = const [],
       this.setting,
-      this.latestPillSheet,
+      this.latestPillSheetGroup,
       this.diariesForMonth = const [],
       this.allPillSheetModifiedHistories = const [],
       this.isPremium = false,
@@ -296,7 +297,7 @@ class _$_CalendarPageState extends _CalendarPageState {
   @override
   final Setting? setting;
   @override
-  final PillSheet? latestPillSheet;
+  final PillSheetGroup? latestPillSheetGroup;
   @JsonKey(defaultValue: const [])
   @override
   final List<Diary> diariesForMonth;
@@ -314,7 +315,7 @@ class _$_CalendarPageState extends _CalendarPageState {
 
   @override
   String toString() {
-    return 'CalendarPageState(currentCalendarIndex: $currentCalendarIndex, isNotYetLoaded: $isNotYetLoaded, menstruations: $menstruations, setting: $setting, latestPillSheet: $latestPillSheet, diariesForMonth: $diariesForMonth, allPillSheetModifiedHistories: $allPillSheetModifiedHistories, isPremium: $isPremium, isTrial: $isTrial, trialDeadlineDate: $trialDeadlineDate)';
+    return 'CalendarPageState(currentCalendarIndex: $currentCalendarIndex, isNotYetLoaded: $isNotYetLoaded, menstruations: $menstruations, setting: $setting, latestPillSheetGroup: $latestPillSheetGroup, diariesForMonth: $diariesForMonth, allPillSheetModifiedHistories: $allPillSheetModifiedHistories, isPremium: $isPremium, isTrial: $isTrial, trialDeadlineDate: $trialDeadlineDate)';
   }
 
   @override
@@ -333,9 +334,9 @@ class _$_CalendarPageState extends _CalendarPageState {
             (identical(other.setting, setting) ||
                 const DeepCollectionEquality()
                     .equals(other.setting, setting)) &&
-            (identical(other.latestPillSheet, latestPillSheet) ||
-                const DeepCollectionEquality()
-                    .equals(other.latestPillSheet, latestPillSheet)) &&
+            (identical(other.latestPillSheetGroup, latestPillSheetGroup) ||
+                const DeepCollectionEquality().equals(
+                    other.latestPillSheetGroup, latestPillSheetGroup)) &&
             (identical(other.diariesForMonth, diariesForMonth) ||
                 const DeepCollectionEquality()
                     .equals(other.diariesForMonth, diariesForMonth)) &&
@@ -362,7 +363,7 @@ class _$_CalendarPageState extends _CalendarPageState {
       const DeepCollectionEquality().hash(isNotYetLoaded) ^
       const DeepCollectionEquality().hash(menstruations) ^
       const DeepCollectionEquality().hash(setting) ^
-      const DeepCollectionEquality().hash(latestPillSheet) ^
+      const DeepCollectionEquality().hash(latestPillSheetGroup) ^
       const DeepCollectionEquality().hash(diariesForMonth) ^
       const DeepCollectionEquality().hash(allPillSheetModifiedHistories) ^
       const DeepCollectionEquality().hash(isPremium) ^
@@ -381,7 +382,7 @@ abstract class _CalendarPageState extends CalendarPageState {
       bool isNotYetLoaded,
       List<Menstruation> menstruations,
       Setting? setting,
-      PillSheet? latestPillSheet,
+      PillSheetGroup? latestPillSheetGroup,
       List<Diary> diariesForMonth,
       List<PillSheetModifiedHistory> allPillSheetModifiedHistories,
       bool isPremium,
@@ -398,7 +399,8 @@ abstract class _CalendarPageState extends CalendarPageState {
   @override
   Setting? get setting => throw _privateConstructorUsedError;
   @override
-  PillSheet? get latestPillSheet => throw _privateConstructorUsedError;
+  PillSheetGroup? get latestPillSheetGroup =>
+      throw _privateConstructorUsedError;
   @override
   List<Diary> get diariesForMonth => throw _privateConstructorUsedError;
   @override

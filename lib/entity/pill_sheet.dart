@@ -1,4 +1,4 @@
-import 'package:pilll/entity/firestore_document_id_escaping_to_json.dart';
+import 'package:pilll/domain/calendar/date_range.dart';
 import 'package:pilll/entity/firestore_timestamp_converter.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/util/datetime/day.dart';
@@ -42,7 +42,7 @@ abstract class PillSheet implements _$PillSheet {
   PillSheet._();
   @JsonSerializable(explicitToJson: true)
   factory PillSheet({
-    @JsonKey(includeIfNull: false, toJson: toNull)
+    @JsonKey(includeIfNull: false)
         String? id,
     @JsonKey()
         required PillSheetTypeInfo typeInfo,
@@ -66,6 +66,8 @@ abstract class PillSheet implements _$PillSheet {
       toJson: TimestampConverter.dateTimeToTimestamp,
     )
         DateTime? deletedAt,
+    @Default(0)
+        int groupIndex,
   }) = _PillSheet;
   factory PillSheet.create(PillSheetType type) => PillSheet(
         typeInfo: type.typeInfo,
@@ -90,11 +92,18 @@ abstract class PillSheet implements _$PillSheet {
       : lastTakenDate!.date().difference(beginingDate.date()).inDays + 1;
 
   bool get allTaken => todayPillNumber == lastTakenPillNumber;
-  bool get isEnded =>
-      today().difference(beginingDate.date()).inDays + 1 >
-      pillSheetType.totalCount;
-  bool get isDeleted => deletedAt != null;
+  bool get isReached =>
+      beginingDate.date().toUtc().millisecondsSinceEpoch <
+      now().toUtc().millisecondsSinceEpoch;
   bool get inNotTakenDuration => todayPillNumber > typeInfo.dosingPeriod;
-  bool get isInvalid => isDeleted || isEnded;
+  bool get isFill => lastTakenPillNumber >= pillSheetType.totalCount;
   bool get hasRestDuration => !pillSheetType.isNotExistsNotTakenDuration;
+
+  bool get isActive {
+    final n = now();
+    final begin = beginingDate.date();
+    final totalCount = typeInfo.totalCount;
+    final end = begin.add(Duration(days: totalCount - 1));
+    return DateRange(begin, end).inRange(n);
+  }
 }

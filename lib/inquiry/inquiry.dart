@@ -1,10 +1,9 @@
 import 'package:pilll/service/auth.dart';
 import 'package:pilll/database/database.dart';
 import 'package:pilll/entity/menstruation.dart';
-import 'package:pilll/entity/pill_sheet.dart';
 import 'package:pilll/entity/setting.dart';
 import 'package:pilll/service/menstruation.dart';
-import 'package:pilll/service/pill_sheet.dart';
+import 'package:pilll/service/pill_sheet_group.dart';
 import 'package:pilll/service/setting.dart';
 import 'package:pilll/util/environment.dart';
 import 'package:package_info/package_info.dart';
@@ -22,7 +21,8 @@ inquiry() {
 Future<String> debugInfo(String separator) async {
   String userID = (await cacheOrAuth()).uid;
   DatabaseConnection databaseConnection = DatabaseConnection(userID);
-  PillSheet? pillSheet = await PillSheetService(databaseConnection).fetchLast();
+  final pillSheetGroup =
+      await PillSheetGroupService(databaseConnection).fetchLatest();
   Setting setting = await SettingService(databaseConnection).fetch();
   final menstruations =
       await MenstruationService(databaseConnection).fetchAll();
@@ -40,8 +40,8 @@ Future<String> debugInfo(String separator) async {
     "env: ${Environment.isProduction ? "production" : "development"}",
     "user id: $userID",
     "latestMenstruation: ${menstruation?.toJson()}",
-    "pillSheet.entity.id: ${pillSheet?.id}",
-    "pillSheetState.entity: ${pillSheet?.toJson()}",
+    "pillSheetGroupID: ${pillSheetGroup?.id}",
+    "activedPillSheet: ${pillSheetGroup?.activedPillSheet?.toJson()}",
     "settingState.entity: ${setting.toJson()}",
   ];
   return contents.join(separator);

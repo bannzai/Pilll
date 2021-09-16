@@ -9,60 +9,23 @@ final pillSheetServiceProvider = Provider<PillSheetService>(
 class PillSheetService {
   final DatabaseConnection _database;
 
-  PillSheet? _filterForLatestPillSheet(QuerySnapshot snapshot) {
-    if (snapshot.docs.isEmpty) return null;
-    if (!snapshot.docs.last.exists) return null;
-    var document = snapshot.docs.last;
-
-    return _mapToEntity(document);
-  }
-
-  PillSheet _mapToEntity(QueryDocumentSnapshot snapshot) {
-    var data = snapshot.data() as Map<String, dynamic>;
-    data["id"] = snapshot.id;
-    return PillSheet.fromJson(data);
-  }
-
-  Query _queryOfFetchLastPillSheet() {
-    return _database
-        .pillSheetsReference()
-        .orderBy(PillSheetFirestoreKey.createdAt)
-        .limitToLast(1);
-  }
-
   PillSheetService(this._database);
-  Future<PillSheet?> fetchLast() {
-    return _queryOfFetchLastPillSheet()
-        .get()
-        .then((event) => _filterForLatestPillSheet(event));
-  }
-
-  Future<List<PillSheet>> fetchListWithMax(int number) {
-    return _database
-        .pillSheetsReference()
-        .limit(number)
-        .get()
-        .then((event) => event.docs.map((e) => _mapToEntity(e)).toList());
-  }
-
-  Future<List<PillSheet>> fetchAll() {
-    return _database
-        .pillSheetsReference()
-        .get()
-        .then((event) => event.docs.map((e) => _mapToEntity(e)).toList());
-  }
 
   // Return new PillSheet document id
-  String register(WriteBatch batch, PillSheet model) {
-    if (model.createdAt != null) throw PillSheetAlreadyExists();
-    if (model.deletedAt != null) throw PillSheetAlreadyDeleted();
-    final copied = model.copyWith(createdAt: DateTime.now());
+  List<PillSheet> register(WriteBatch batch, List<PillSheet> pillSheets) {
+    final List<PillSheet> newPillSheets = [];
+    pillSheets.forEach((pillSheet) {
+      if (pillSheet.createdAt != null) throw PillSheetAlreadyExists();
+      if (pillSheet.deletedAt != null) throw PillSheetAlreadyDeleted();
+      final copied = pillSheet.copyWith(createdAt: DateTime.now());
 
-    final document = _database.pillSheetsReference().doc();
-    var json = copied.toJson();
-    json.remove("id");
-    batch.set(document, json, SetOptions(merge: true));
-    return document.id;
+      final document = _database.pillSheetsReference().doc();
+      var json = copied.toJson();
+      batch.set(document, json, SetOptions(merge: true));
+
+      newPillSheets.add(copied.copyWith(id: document.id));
+    });
+    return newPillSheets;
   }
 
   PillSheet delete(WriteBatch batch, PillSheet pillSheet) {
@@ -74,16 +37,7 @@ class PillSheetService {
 
   update(WriteBatch batch, PillSheet pillSheet) {
     var json = pillSheet.toJson();
-    json.remove("id");
     batch.update(_database.pillSheetReference(pillSheet.documentID!), json);
-  }
-
-  Stream<PillSheet> subscribeForLatestPillSheet() {
-    return _queryOfFetchLastPillSheet()
-        .snapshots()
-        .map(((event) => _filterForLatestPillSheet(event)))
-        .skipWhile((element) => element == null)
-        .cast();
   }
 }
 

@@ -1,4 +1,5 @@
 import 'package:pilll/entity/pill_sheet.dart';
+import 'package:pilll/entity/pill_sheet_group.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/entity/setting.dart';
 import 'package:pilll/domain/settings/setting_page_state.dart';
@@ -6,6 +7,7 @@ import 'package:pilll/domain/settings/setting_page_store.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
 import 'package:pilll/entity/user.dart';
+import 'package:pilll/util/datetime/day.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import '../../helper/mock.mocks.dart';
@@ -51,10 +53,10 @@ void main() {
           ReminderTime(hour: 1, minute: 0),
           ReminderTime(hour: 2, minute: 0),
         ],
-        durationMenstruation: 1,
         pillNumberForFromMenstruation: 22,
+        durationMenstruation: 1,
         isOnReminder: false,
-        pillSheetTypeRawPath: PillSheetType.pillsheet_28_4.rawPath,
+        pillSheetTypes: [PillSheetType.pillsheet_28_4],
       );
 
       when(service.fetch())
@@ -65,16 +67,20 @@ void main() {
       final batchFactory = MockBatchFactory();
       final pillSheet = PillSheet.create(PillSheetType.pillsheet_21);
       final pillSheetService = MockPillSheetService();
-      when(pillSheetService.fetchLast())
-          .thenAnswer((_) => Future.value(pillSheet));
-      when(pillSheetService.subscribeForLatestPillSheet())
-          .thenAnswer((realInvocation) => Stream.empty());
+      final pillSheetGroup = PillSheetGroup(
+          pillSheetIDs: ["1"], pillSheets: [pillSheet], createdAt: now());
+
       final userService = MockUserService();
       when(userService.fetch())
           .thenAnswer((realInvocation) => Future.value(_FakeUser()));
       when(userService.subscribe())
           .thenAnswer((realInvocation) => Stream.empty());
       final pillSheetModifiedService = MockPillSheetModifiedHistoryService();
+      final pillSheetGroupService = MockPillSheetGroupService();
+      when(pillSheetGroupService.fetchLatest())
+          .thenAnswer((realInvocation) => Future.value(pillSheetGroup));
+      when(pillSheetGroupService.subscribeForLatest())
+          .thenAnswer((realInvocation) => Stream.empty());
 
       final store = SettingStateStore(
         batchFactory,
@@ -82,6 +88,7 @@ void main() {
         pillSheetService,
         userService,
         pillSheetModifiedService,
+        pillSheetGroupService,
       );
 
       // ignore: invalid_use_of_protected_member
@@ -116,17 +123,21 @@ void main() {
 
       final batchFactory = MockBatchFactory();
       final pillSheet = PillSheet.create(PillSheetType.pillsheet_21);
+      final pillSheetGroup = PillSheetGroup(
+          pillSheetIDs: ["1"], pillSheets: [pillSheet], createdAt: now());
+
       final pillSheetService = MockPillSheetService();
-      when(pillSheetService.fetchLast())
-          .thenAnswer((_) => Future.value(pillSheet));
-      when(pillSheetService.subscribeForLatestPillSheet())
-          .thenAnswer((realInvocation) => Stream.empty());
       final userService = MockUserService();
       when(userService.fetch())
           .thenAnswer((realInvocation) => Future.value(_FakeUser()));
       when(userService.subscribe())
           .thenAnswer((realInvocation) => Stream.empty());
       final pillSheetModifiedService = MockPillSheetModifiedHistoryService();
+      final pillSheetGroupService = MockPillSheetGroupService();
+      when(pillSheetGroupService.fetchLatest())
+          .thenAnswer((realInvocation) => Future.value(pillSheetGroup));
+      when(pillSheetGroupService.subscribeForLatest())
+          .thenAnswer((realInvocation) => Stream.empty());
 
       final store = SettingStateStore(
         batchFactory,
@@ -134,6 +145,7 @@ void main() {
         pillSheetService,
         userService,
         pillSheetModifiedService,
+        pillSheetGroupService,
       );
 
       // ignore: invalid_use_of_protected_member
@@ -151,29 +163,33 @@ void main() {
           ReminderTime(hour: 1, minute: 0),
           ReminderTime(hour: 2, minute: 0),
         ],
-        durationMenstruation: 1,
         pillNumberForFromMenstruation: 22,
+        durationMenstruation: 1,
         isOnReminder: false,
-        pillSheetTypeRawPath: PillSheetType.pillsheet_28_4.rawPath,
+        pillSheetTypes: [PillSheetType.pillsheet_28_4],
       );
       when(service.fetch())
           .thenAnswer((realInvocation) => Future.value(setting));
       when(service.subscribe())
           .thenAnswer((realInvocation) => Stream.value(setting));
 
-      final batchFactory = MockBatchFactory();
       final pillSheet = PillSheet.create(PillSheetType.pillsheet_21);
+      final pillSheetGroup = PillSheetGroup(
+          pillSheetIDs: ["1"], pillSheets: [pillSheet], createdAt: now());
+
+      final batchFactory = MockBatchFactory();
       final pillSheetService = MockPillSheetService();
-      when(pillSheetService.fetchLast())
-          .thenAnswer((_) => Future.value(pillSheet));
-      when(pillSheetService.subscribeForLatestPillSheet())
-          .thenAnswer((realInvocation) => Stream.empty());
       final userService = MockUserService();
       when(userService.fetch())
           .thenAnswer((realInvocation) => Future.value(_FakeUser()));
       when(userService.subscribe())
           .thenAnswer((realInvocation) => Stream.empty());
       final pillSheetModifiedService = MockPillSheetModifiedHistoryService();
+      final pillSheetGroupService = MockPillSheetGroupService();
+      when(pillSheetGroupService.fetchLatest())
+          .thenAnswer((realInvocation) => Future.value(pillSheetGroup));
+      when(pillSheetGroupService.subscribeForLatest())
+          .thenAnswer((realInvocation) => Stream.empty());
 
       final store = SettingStateStore(
         batchFactory,
@@ -181,6 +197,7 @@ void main() {
         pillSheetService,
         userService,
         pillSheetModifiedService,
+        pillSheetGroupService,
       );
 
       // ignore: invalid_use_of_protected_member
@@ -209,17 +226,22 @@ void main() {
 
       final batchFactory = MockBatchFactory();
       final pillSheet = PillSheet.create(PillSheetType.pillsheet_21);
+      final pillSheetGroup = PillSheetGroup(
+          pillSheetIDs: ["1"], pillSheets: [pillSheet], createdAt: now());
+
       final pillSheetService = MockPillSheetService();
-      when(pillSheetService.fetchLast())
-          .thenAnswer((_) => Future.value(pillSheet));
-      when(pillSheetService.subscribeForLatestPillSheet())
-          .thenAnswer((realInvocation) => Stream.empty());
+
       final userService = MockUserService();
       when(userService.fetch())
           .thenAnswer((realInvocation) => Future.value(_FakeUser()));
       when(userService.subscribe())
           .thenAnswer((realInvocation) => Stream.empty());
       final pillSheetModifiedService = MockPillSheetModifiedHistoryService();
+      final pillSheetGroupService = MockPillSheetGroupService();
+      when(pillSheetGroupService.fetchLatest())
+          .thenAnswer((realInvocation) => Future.value(pillSheetGroup));
+      when(pillSheetGroupService.subscribeForLatest())
+          .thenAnswer((realInvocation) => Stream.empty());
 
       final store = SettingStateStore(
         batchFactory,
@@ -227,6 +249,7 @@ void main() {
         pillSheetService,
         userService,
         pillSheetModifiedService,
+        pillSheetGroupService,
       );
 
       // ignore: invalid_use_of_protected_member

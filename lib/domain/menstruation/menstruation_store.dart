@@ -8,6 +8,7 @@ import 'package:pilll/entity/menstruation.dart';
 import 'package:pilll/service/diary.dart';
 import 'package:pilll/service/menstruation.dart';
 import 'package:pilll/service/pill_sheet.dart';
+import 'package:pilll/service/pill_sheet_group.dart';
 import 'package:pilll/service/setting.dart';
 import 'package:pilll/domain/menstruation/menstruation_state.dart';
 import 'package:pilll/service/user.dart';
@@ -20,6 +21,7 @@ final menstruationsStoreProvider = StateNotifierProvider(
     settingService: ref.watch(settingServiceProvider),
     pillSheetService: ref.watch(pillSheetServiceProvider),
     userService: ref.watch(userServiceProvider),
+    pillSheetGroupService: ref.watch(pillSheetGroupServiceProvider),
   ),
 );
 
@@ -29,12 +31,14 @@ class MenstruationStore extends StateNotifier<MenstruationState> {
   final SettingService settingService;
   final PillSheetService pillSheetService;
   final UserService userService;
+  final PillSheetGroupService pillSheetGroupService;
   MenstruationStore({
     required this.menstruationService,
     required this.diaryService,
     required this.settingService,
     required this.pillSheetService,
     required this.userService,
+    required this.pillSheetGroupService,
   }) : super(MenstruationState()) {
     _reset();
   }
@@ -45,14 +49,14 @@ class MenstruationStore extends StateNotifier<MenstruationState> {
       final menstruations = await menstruationService.fetchAll();
       final diaries = await diaryService.fetchListAround90Days(today());
       final setting = await settingService.fetch();
-      final latestPillSheet = await pillSheetService.fetchLast();
+      final latestPillSheetGroup = await pillSheetGroupService.fetchLatest();
       final user = await userService.fetch();
       state = state.copyWith(
         entities: menstruations,
         diariesForMonth: diaries,
         isNotYetLoaded: false,
         setting: setting,
-        latestPillSheet: latestPillSheet,
+        latestPillSheetGroup: latestPillSheetGroup,
         isPremium: user.isPremium,
         isTrial: user.isTrial,
         trialDeadlineDate: user.trialDeadlineDate,
@@ -64,7 +68,7 @@ class MenstruationStore extends StateNotifier<MenstruationState> {
   StreamSubscription? _menstruationCanceller;
   StreamSubscription? _diaryCanceller;
   StreamSubscription? _settingCanceller;
-  StreamSubscription? _pillSheetCanceller;
+  StreamSubscription? _pillSheetGroupCanceller;
   StreamSubscription? _userCanceller;
   void _subscribe() {
     _menstruationCanceller?.cancel();
@@ -80,10 +84,10 @@ class MenstruationStore extends StateNotifier<MenstruationState> {
     _settingCanceller = settingService.subscribe().listen((setting) {
       state = state.copyWith(setting: setting);
     });
-    _pillSheetCanceller?.cancel();
-    _pillSheetCanceller =
-        pillSheetService.subscribeForLatestPillSheet().listen((pillSheet) {
-      state = state.copyWith(latestPillSheet: pillSheet);
+    _pillSheetGroupCanceller?.cancel();
+    _pillSheetGroupCanceller =
+        pillSheetGroupService.subscribeForLatest().listen((pillSheet) {
+      state = state.copyWith(latestPillSheetGroup: pillSheet);
     });
     _userCanceller?.cancel();
     _userCanceller = userService.subscribe().listen((user) {
@@ -100,7 +104,7 @@ class MenstruationStore extends StateNotifier<MenstruationState> {
     _menstruationCanceller?.cancel();
     _diaryCanceller?.cancel();
     _settingCanceller?.cancel();
-    _pillSheetCanceller?.cancel();
+    _pillSheetGroupCanceller?.cancel();
     _userCanceller?.cancel();
     super.dispose();
   }
@@ -144,9 +148,11 @@ class MenstruationStore extends StateNotifier<MenstruationState> {
         latestMenstruation.dateRange.inRange(today())) {
       return MenstruationCardState.record(menstruation: latestMenstruation);
     }
-    final latestPillSheet = state.latestPillSheet;
+    final latestPillSheetGroup = state.latestPillSheetGroup;
     final setting = state.setting;
-    if (latestPillSheet == null || setting == null) {
+    if (latestPillSheetGroup == null ||
+        latestPillSheetGroup.pillSheets.isEmpty ||
+        setting == null) {
       return null;
     }
     if (setting.pillNumberForFromMenstruation == 0 ||
@@ -154,8 +160,12 @@ class MenstruationStore extends StateNotifier<MenstruationState> {
       return null;
     }
 
-    final menstruationDateRanges = scheduledMenstruationDateRanges(
-        latestPillSheet, setting, state.entities, 12);
+    final menstruationDateRanges = scheduledOrInTheMiddleMenstruationDateRanges(
+      latestPillSheetGroup,
+      setting,
+      state.entities,
+      12,
+    );
     final inTheMiddleDateRanges =
         menstruationDateRanges.where((element) => element.inRange(today()));
 

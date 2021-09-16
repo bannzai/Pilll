@@ -9,7 +9,7 @@ part 'notification_bar_state.freezed.dart';
 abstract class NotificationBarState implements _$NotificationBarState {
   NotificationBarState._();
   factory NotificationBarState({
-    required PillSheet? pillSheet,
+    required PillSheet? activedPillSheet,
     required int totalCountOfActionForTakenPill,
     required bool isPremium,
     required bool isTrial,
@@ -32,22 +32,24 @@ abstract class NotificationBarState implements _$NotificationBarState {
   }
 
   String? get restDurationNotification {
-    final pillSheet = this.pillSheet;
-    if (pillSheet == null || pillSheet.isInvalid) {
+    final activedPillSheet = this.activedPillSheet;
+    if (activedPillSheet == null) {
       return null;
     }
-    if (pillSheet.pillSheetType.isNotExistsNotTakenDuration) {
+    if (activedPillSheet.pillSheetType.isNotExistsNotTakenDuration) {
       return null;
     }
-    if (pillSheet.typeInfo.dosingPeriod < pillSheet.todayPillNumber) {
-      return "${pillSheet.pillSheetType.notTakenWord}期間中";
+    if (activedPillSheet.typeInfo.dosingPeriod <
+        activedPillSheet.todayPillNumber) {
+      return "${activedPillSheet.pillSheetType.notTakenWord}期間中";
     }
 
     final threshold = 4;
-    if (pillSheet.typeInfo.dosingPeriod - threshold + 1 <
-        pillSheet.todayPillNumber) {
-      final diff = pillSheet.typeInfo.dosingPeriod - pillSheet.todayPillNumber;
-      return "あと${diff + 1}日で${pillSheet.pillSheetType.notTakenWord}期間です";
+    if (activedPillSheet.typeInfo.dosingPeriod - threshold + 1 <
+        activedPillSheet.todayPillNumber) {
+      final diff = activedPillSheet.typeInfo.dosingPeriod -
+          activedPillSheet.todayPillNumber;
+      return "あと${diff + 1}日で${activedPillSheet.pillSheetType.notTakenWord}期間です";
     }
 
     return null;

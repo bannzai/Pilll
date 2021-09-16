@@ -1,4 +1,4 @@
-import 'package:pilll/entity/pill_sheet.dart';
+import 'package:pilll/entity/pill_sheet_group.dart';
 import 'package:pilll/entity/setting.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
@@ -9,7 +9,7 @@ abstract class SettingState implements _$SettingState {
   SettingState._();
   factory SettingState({
     required Setting? entity,
-    PillSheet? latestPillSheet,
+    PillSheetGroup? latestPillSheetGroup,
     @Default(false) bool userIsUpdatedFrom132,
     @Default(false) bool isPremium,
     @Default(false) bool isTrial,

@@ -19,7 +19,7 @@ class _$PurchaseButtonsStateTearOff {
   _PurchaseButtonsState call(
       {required Offerings offerings,
       required bool hasDiscountEntitlement,
-      required bool? isOverDiscountDeadline}) {
+      required bool isOverDiscountDeadline}) {
     return _PurchaseButtonsState(
       offerings: offerings,
       hasDiscountEntitlement: hasDiscountEntitlement,
@@ -35,7 +35,7 @@ const $PurchaseButtonsState = _$PurchaseButtonsStateTearOff();
 mixin _$PurchaseButtonsState {
   Offerings get offerings => throw _privateConstructorUsedError;
   bool get hasDiscountEntitlement => throw _privateConstructorUsedError;
-  bool? get isOverDiscountDeadline => throw _privateConstructorUsedError;
+  bool get isOverDiscountDeadline => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $PurchaseButtonsStateCopyWith<PurchaseButtonsState> get copyWith =>
@@ -50,7 +50,7 @@ abstract class $PurchaseButtonsStateCopyWith<$Res> {
   $Res call(
       {Offerings offerings,
       bool hasDiscountEntitlement,
-      bool? isOverDiscountDeadline});
+      bool isOverDiscountDeadline});
 }
 
 /// @nodoc
@@ -80,7 +80,7 @@ class _$PurchaseButtonsStateCopyWithImpl<$Res>
       isOverDiscountDeadline: isOverDiscountDeadline == freezed
           ? _value.isOverDiscountDeadline
           : isOverDiscountDeadline // ignore: cast_nullable_to_non_nullable
-              as bool?,
+              as bool,
     ));
   }
 }
@@ -95,7 +95,7 @@ abstract class _$PurchaseButtonsStateCopyWith<$Res>
   $Res call(
       {Offerings offerings,
       bool hasDiscountEntitlement,
-      bool? isOverDiscountDeadline});
+      bool isOverDiscountDeadline});
 }
 
 /// @nodoc
@@ -127,7 +127,7 @@ class __$PurchaseButtonsStateCopyWithImpl<$Res>
       isOverDiscountDeadline: isOverDiscountDeadline == freezed
           ? _value.isOverDiscountDeadline
           : isOverDiscountDeadline // ignore: cast_nullable_to_non_nullable
-              as bool?,
+              as bool,
     ));
   }
 }
@@ -146,7 +146,7 @@ class _$_PurchaseButtonsState extends _PurchaseButtonsState {
   @override
   final bool hasDiscountEntitlement;
   @override
-  final bool? isOverDiscountDeadline;
+  final bool isOverDiscountDeadline;
 
   @override
   String toString() {
@@ -186,7 +186,7 @@ abstract class _PurchaseButtonsState extends PurchaseButtonsState {
   factory _PurchaseButtonsState(
       {required Offerings offerings,
       required bool hasDiscountEntitlement,
-      required bool? isOverDiscountDeadline}) = _$_PurchaseButtonsState;
+      required bool isOverDiscountDeadline}) = _$_PurchaseButtonsState;
   _PurchaseButtonsState._() : super._();
 
   @override
@@ -194,7 +194,7 @@ abstract class _PurchaseButtonsState extends PurchaseButtonsState {
   @override
   bool get hasDiscountEntitlement => throw _privateConstructorUsedError;
   @override
-  bool? get isOverDiscountDeadline => throw _privateConstructorUsedError;
+  bool get isOverDiscountDeadline => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$PurchaseButtonsStateCopyWith<_PurchaseButtonsState> get copyWith =>
