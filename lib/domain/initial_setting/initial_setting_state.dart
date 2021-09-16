@@ -155,4 +155,11 @@ abstract class InitialSettingState implements _$InitialSettingState {
     return DateTime(t.year, t.month, t.day, reminderTime.hour,
         reminderTime.minute, t.second, t.millisecond, t.microsecond);
   }
+
+  int? selectedTodayPillNumberIntoPillSheet({required int pageIndex}) {
+    if (todayPillNumber?.pageIndex != pageIndex) {
+      return null;
+    }
+    return todayPillNumber?.pillNumberIntoPillSheet;
+  }
 }
