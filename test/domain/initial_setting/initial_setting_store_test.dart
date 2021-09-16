@@ -1,15 +1,19 @@
 import 'package:pilll/database/batch.dart';
 import 'package:pilll/domain/initial_setting/initial_setting_state.dart';
 import 'package:pilll/domain/initial_setting/initial_setting_store.dart';
+import 'package:pilll/entity/pill_sheet.dart';
+import 'package:pilll/entity/pill_sheet_group.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
 import 'package:pilll/entity/setting.dart';
 import 'package:pilll/service/auth.dart';
+import 'package:pilll/service/day.dart';
 import 'package:pilll/service/pill_sheet.dart';
 import 'package:pilll/service/pill_sheet_group.dart';
 import 'package:pilll/service/pill_sheet_modified_history.dart';
 import 'package:pilll/service/setting.dart';
+import 'package:pilll/util/datetime/day.dart';
 import 'package:riverpod/riverpod.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -451,6 +455,76 @@ void main() {
 
       final result = store.retrieveMenstruationSelectedPillNumber(0);
       expect(result, null);
+    });
+  });
+  group("#register", () {
+    test("state.pillSheetTypes has one pillSheetType", () {
+      var mockTodayRepository = MockTodayService();
+      final _today = DateTime.parse("2020-09-19");
+      todayRepository = mockTodayRepository;
+      when(mockTodayRepository.today()).thenReturn(_today);
+
+      final batchFactory = MockBatchFactory();
+      final batch = MockWriteBatch();
+      when(batchFactory.batch()).thenReturn(batch);
+      final authService = MockAuthService();
+      when(authService.subscribe())
+          .thenAnswer((realInvocation) => Stream.empty());
+
+      final pillSheet = PillSheet(
+          typeInfo: PillSheetType.pillsheet_21.typeInfo, beginingDate: _today);
+      final pillSheetService = MockPillSheetService();
+      when(pillSheetService.register(batch, pillSheet))
+          .thenReturn(pillSheet.copyWith(id: "sheet_id"));
+
+      final pillSheetGroup = PillSheetGroup(
+          pillSheetIDs: ["sheet_id"],
+          pillSheets: [pillSheet],
+          createdAt: now());
+      final pillSheetGroupService = MockPillSheetGroupService();
+      when(pillSheetGroupService.register(batch, pillSheetGroup))
+          .thenReturn(pillSheetGroup.copyWith(id: "group_id"));
+
+      final history = PillSheetModifiedHistoryServiceActionFactory
+          .createCreatedPillSheetAction(
+              pillSheetGroupID: "group_id", pillSheetIDs: ["sheet_id"]);
+      final pillSheetModifiedHistoryService =
+          MockPillSheetModifiedHistoryService();
+      pillSheetModifiedHistoryService.add(batch, history);
+
+      final setting = Setting(
+        pillNumberForFromMenstruation: 22,
+        durationMenstruation: 3,
+        isOnReminder: true,
+        reminderTimes: [
+          ReminderTime(hour: 21, minute: 20),
+          ReminderTime(hour: 22, minute: 0)
+        ],
+      );
+      final settingService = MockSettingService();
+      when(settingService.updateWithBatch(batch, setting));
+
+      final container = ProviderContainer(
+        overrides: [
+          batchFactoryProvider.overrideWithValue(batchFactory),
+          authServiceProvider.overrideWithValue(authService),
+          settingServiceProvider.overrideWithValue(settingService),
+          pillSheetServiceProvider.overrideWithValue(pillSheetService),
+          pillSheetModifiedHistoryServiceProvider
+              .overrideWithValue(pillSheetModifiedHistoryService),
+          pillSheetGroupServiceProvider
+              .overrideWithValue(pillSheetGroupService),
+        ],
+      );
+      final store = container.read(initialSettingStoreProvider);
+
+      store.selectedPillSheetType(PillSheetType.pillsheet_21);
+      store.setFromMenstruation(pageIndex: 0, fromMenstruation: 22);
+      store.setDurationMenstruation(durationMenstruation: 3);
+      store.setTodayPillNumber(pageIndex: 0, pillNumberIntoPillSheet: 1);
+      store.setReminderTime(index: 0, hour: 21, minute: 20);
+
+      verify(store.register());
     });
   });
 }
