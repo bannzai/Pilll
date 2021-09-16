@@ -106,7 +106,11 @@ class InitialSettingStateStore extends StateNotifier<InitialSettingState> {
     state = state.copyWith(pillSheetTypes: copied);
   }
 
-  void setReminderTime(int index, int hour, int minute) {
+  void setReminderTime({
+    required int index,
+    required int hour,
+    required int minute,
+  }) {
     final copied = [...state.reminderTimes];
     if (index >= copied.length) {
       copied.add(ReminderTime(hour: hour, minute: minute));

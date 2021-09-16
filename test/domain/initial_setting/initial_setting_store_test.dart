@@ -251,7 +251,7 @@ void main() {
       );
       final store = container.read(initialSettingStoreProvider);
 
-      store.setReminderTime(0, 22, 10);
+      store.setReminderTime(index: 0, hour: 22, minute: 10);
       expect(container.read(initialSettingStateProvider).reminderTimes, [
         ReminderTime(hour: 22, minute: 10),
         ReminderTime(hour: 22, minute: 0)
@@ -282,7 +282,7 @@ void main() {
       );
       final store = container.read(initialSettingStoreProvider);
 
-      store.setReminderTime(2, 22, 10);
+      store.setReminderTime(index: 2, hour: 22, minute: 10);
       expect(container.read(initialSettingStateProvider).reminderTimes, [
         ReminderTime(hour: 21, minute: 0),
         ReminderTime(hour: 22, minute: 0),
