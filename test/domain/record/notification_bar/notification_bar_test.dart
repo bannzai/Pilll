@@ -48,6 +48,7 @@ void main() {
         final today = DateTime(2021, 04, 29);
 
         when(mockTodayRepository.today()).thenReturn(today);
+        when(mockTodayRepository.now()).thenReturn(today);
         todayRepository = mockTodayRepository;
 
         var pillSheet = PillSheet.create(PillSheetType.pillsheet_21);
@@ -106,6 +107,7 @@ void main() {
         final today = DateTime(2021, 04, 29);
 
         when(mockTodayRepository.today()).thenReturn(today);
+        when(mockTodayRepository.now()).thenReturn(today);
         todayRepository = mockTodayRepository;
 
         var pillSheet = PillSheet.create(PillSheetType.pillsheet_21);
@@ -163,6 +165,7 @@ void main() {
         final today = DateTime(2021, 04, 29);
 
         when(mockTodayRepository.today()).thenReturn(today);
+        when(mockTodayRepository.now()).thenReturn(today);
         todayRepository = mockTodayRepository;
 
         var pillSheet = PillSheet.create(PillSheetType.pillsheet_21);
@@ -219,6 +222,7 @@ void main() {
         final today = DateTime(2021, 04, 29);
 
         when(mockTodayRepository.today()).thenReturn(today);
+        when(mockTodayRepository.now()).thenReturn(today);
         todayRepository = mockTodayRepository;
 
         var pillSheet = PillSheet.create(PillSheetType.pillsheet_21);
@@ -336,6 +340,7 @@ void main() {
         final today = DateTime(2021, 04, 29);
 
         when(mockTodayRepository.today()).thenReturn(today);
+        when(mockTodayRepository.now()).thenReturn(today);
         todayRepository = mockTodayRepository;
 
         var pillSheet = PillSheet.create(PillSheetType.pillsheet_21);
@@ -392,6 +397,7 @@ void main() {
         final today = DateTime(2021, 04, 29);
 
         when(mockTodayRepository.today()).thenReturn(today);
+        when(mockTodayRepository.now()).thenReturn(today);
         todayRepository = mockTodayRepository;
 
         var pillSheet = PillSheet.create(PillSheetType.pillsheet_21);
