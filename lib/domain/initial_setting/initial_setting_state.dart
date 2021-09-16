@@ -127,25 +127,23 @@ abstract class InitialSettingState implements _$InitialSettingState {
       return null;
     }
     final pillSheetType = pillSheetTypes[pageIndex];
-    final pillSheetBeginPillNumber = pageIndex * pillSheetType.totalCount + 1;
-    final pillSheetEndPillNumber =
-        pastedTotalCount(pillSheetTypes: pillSheetTypes, pageIndex: pageIndex) +
-            pillSheetType.totalCount;
-    if (pillSheetBeginPillNumber <= todayPillNumber.pillNumberIntoPillSheet &&
-        todayPillNumber.pillNumberIntoPillSheet <= pillSheetEndPillNumber) {
-      // Between current PillSheet
-      return today().subtract(Duration(days: 1));
-    } else if (todayPillNumber.pillNumberIntoPillSheet <
-        pillSheetEndPillNumber) {
+    if (todayPillNumber.pageIndex < pageIndex) {
       // Right side PillSheet
       return null;
-    } else {
+    } else if (todayPillNumber.pageIndex > pageIndex) {
       // Left side PillSheet
       return _beginingDate(
         pageIndex: pageIndex,
         todayPillNumber: todayPillNumber,
         pillSheetTypes: pillSheetTypes,
       ).add(Duration(days: pillSheetType.totalCount - 1));
+    } else {
+      // Current PillSheet
+      return _beginingDate(
+        pageIndex: pageIndex,
+        todayPillNumber: todayPillNumber,
+        pillSheetTypes: pillSheetTypes,
+      ).add(Duration(days: todayPillNumber.pillNumberIntoPillSheet - 2));
     }
   }
 
