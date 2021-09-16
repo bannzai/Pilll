@@ -150,12 +150,9 @@ class InitialSettingStateStore extends StateNotifier<InitialSettingState> {
   }
 
   void setDurationMenstruation({
-    required int pageIndex,
     required int durationMenstruation,
   }) {
-    final offset = pastedTotalCount(
-        pillSheetTypes: state.pillSheetTypes, pageIndex: pageIndex);
-    state = state.copyWith(durationMenstruation: durationMenstruation + offset);
+    state = state.copyWith(durationMenstruation: durationMenstruation);
   }
 
   int? retrieveMenstruationSelectedPillNumber(int pageIndex) {
