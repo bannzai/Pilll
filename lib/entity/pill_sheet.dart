@@ -105,7 +105,7 @@ abstract class PillSheet implements _$PillSheet {
     final n = now();
     final begin = beginingDate.date();
     final totalCount = typeInfo.totalCount;
-    final end = begin.add(Duration(days: totalCount));
+    final end = begin.add(Duration(days: totalCount - 1));
     return DateRange(begin, end).inRange(n);
   }
 }
