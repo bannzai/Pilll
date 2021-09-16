@@ -475,8 +475,8 @@ void main() {
       final pillSheet = PillSheet(
           typeInfo: PillSheetType.pillsheet_21.typeInfo, beginingDate: _today);
       final pillSheetService = MockPillSheetService();
-      when(pillSheetService.register(batch, pillSheet))
-          .thenReturn(pillSheet.copyWith(id: "sheet_id"));
+      when(pillSheetService.register(batch, [pillSheet]))
+          .thenReturn([pillSheet.copyWith(id: "sheet_id")]);
 
       final pillSheetGroup = PillSheetGroup(
           pillSheetIDs: ["sheet_id"],
@@ -525,6 +525,101 @@ void main() {
       store.setFromMenstruation(pageIndex: 0, fromMenstruation: 22);
       store.setDurationMenstruation(durationMenstruation: 3);
       store.setTodayPillNumber(pageIndex: 0, pillNumberIntoPillSheet: 1);
+      store.setReminderTime(index: 0, hour: 21, minute: 20);
+
+      store.register();
+    });
+    test("state.pillSheetTypes has two pillSheetType", () {
+      var mockTodayRepository = MockTodayService();
+      final _today = DateTime.parse("2020-09-19");
+      todayRepository = mockTodayRepository;
+      when(mockTodayRepository.today()).thenReturn(_today);
+      when(mockTodayRepository.now()).thenReturn(_today);
+
+      final batchFactory = MockBatchFactory();
+      final batch = MockWriteBatch();
+      when(batchFactory.batch()).thenReturn(batch);
+      final authService = MockAuthService();
+      when(authService.subscribe())
+          .thenAnswer((realInvocation) => Stream.empty());
+
+      final pillSheet = PillSheet(
+        typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
+        beginingDate: _today.subtract(
+          Duration(days: 28),
+        ),
+        groupIndex: 0,
+        lastTakenDate: DateTime.parse("2020-09-18"),
+      );
+      final pillSheet2 = PillSheet(
+        typeInfo: PillSheetType.pillsheet_21.typeInfo,
+        beginingDate: _today,
+        groupIndex: 1,
+      );
+      final pillSheetService = MockPillSheetService();
+
+      when(pillSheetService.register(batch, [pillSheet, pillSheet2]))
+          .thenReturn([
+        pillSheet.copyWith(id: "sheet_id"),
+        pillSheet2.copyWith(id: "sheet_id2")
+      ]);
+
+      final pillSheetGroup = PillSheetGroup(
+        pillSheetIDs: ["sheet_id", "sheet_id2"],
+        pillSheets: [
+          pillSheet.copyWith(id: "sheet_id"),
+          pillSheet2.copyWith(id: "sheet_id2"),
+        ],
+        createdAt: now(),
+      );
+      final pillSheetGroupService = MockPillSheetGroupService();
+      when(pillSheetGroupService.register(batch, pillSheetGroup))
+          .thenReturn(pillSheetGroup.copyWith(id: "group_id"));
+
+      final history = PillSheetModifiedHistoryServiceActionFactory
+          .createCreatedPillSheetAction(
+              pillSheetGroupID: "group_id",
+              pillSheetIDs: ["sheet_id", "sheet_id2"]);
+      final pillSheetModifiedHistoryService =
+          MockPillSheetModifiedHistoryService();
+      when(pillSheetModifiedHistoryService.add(batch, history))
+          .thenReturn(null);
+
+      final setting = Setting(
+        pillNumberForFromMenstruation: 22,
+        durationMenstruation: 3,
+        isOnReminder: true,
+        reminderTimes: [
+          ReminderTime(hour: 21, minute: 20),
+          ReminderTime(hour: 22, minute: 0)
+        ],
+        pillSheetTypes: [
+          PillSheetType.pillsheet_28_0,
+          PillSheetType.pillsheet_21
+        ],
+      );
+      final settingService = MockSettingService();
+      when(settingService.updateWithBatch(batch, setting)).thenReturn(null);
+
+      final container = ProviderContainer(
+        overrides: [
+          batchFactoryProvider.overrideWithValue(batchFactory),
+          authServiceProvider.overrideWithValue(authService),
+          settingServiceProvider.overrideWithValue(settingService),
+          pillSheetServiceProvider.overrideWithValue(pillSheetService),
+          pillSheetModifiedHistoryServiceProvider
+              .overrideWithValue(pillSheetModifiedHistoryService),
+          pillSheetGroupServiceProvider
+              .overrideWithValue(pillSheetGroupService),
+        ],
+      );
+      final store = container.read(initialSettingStoreProvider);
+
+      store.selectedPillSheetType(PillSheetType.pillsheet_28_0);
+      store.addPillSheetType(PillSheetType.pillsheet_21);
+      store.setFromMenstruation(pageIndex: 0, fromMenstruation: 22);
+      store.setDurationMenstruation(durationMenstruation: 3);
+      store.setTodayPillNumber(pageIndex: 1, pillNumberIntoPillSheet: 1);
       store.setReminderTime(index: 0, hour: 21, minute: 20);
 
       store.register();
