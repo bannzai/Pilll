@@ -15,8 +15,8 @@ _$_PillSheetGroup _$_$_PillSheetGroupFromJson(Map<String, dynamic> json) {
     pillSheets: (json['pillSheets'] as List<dynamic>)
         .map((e) => PillSheet.fromJson(e as Map<String, dynamic>))
         .toList(),
-    createdAt:
-        TimestampConverter.timestampToDateTime(json['createdAt'] as Timestamp?),
+    createdAt: NonNullTimestampConverter.timestampToDateTime(
+        json['createdAt'] as Timestamp),
     deletedAt:
         TimestampConverter.timestampToDateTime(json['deletedAt'] as Timestamp?),
   );
@@ -34,7 +34,8 @@ Map<String, dynamic> _$_$_PillSheetGroupToJson(_$_PillSheetGroup instance) {
   writeNotNull('id', toNull(instance.id));
   val['pillSheetIDs'] = instance.pillSheetIDs;
   val['pillSheets'] = instance.pillSheets.map((e) => e.toJson()).toList();
-  val['createdAt'] = TimestampConverter.dateTimeToTimestamp(instance.createdAt);
+  val['createdAt'] =
+      NonNullTimestampConverter.dateTimeToTimestamp(instance.createdAt);
   val['deletedAt'] = TimestampConverter.dateTimeToTimestamp(instance.deletedAt);
   return val;
 }

@@ -14,6 +14,7 @@ import 'package:pilll/entity/pill_sheet.dart';
 import 'package:pilll/entity/pill_sheet_group.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/service/day.dart';
+import 'package:pilll/util/datetime/day.dart';
 import 'package:pilll/util/environment.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
@@ -72,8 +73,10 @@ void main() {
         );
 
         final recordPageState = RecordPageState(
-            pillSheetGroup:
-                PillSheetGroup(pillSheets: [pillSheet], pillSheetIDs: ["1"]));
+            pillSheetGroup: PillSheetGroup(
+                pillSheets: [pillSheet],
+                pillSheetIDs: ["1"],
+                createdAt: now()));
         await tester.pumpWidget(
           ProviderScope(
             overrides: [
@@ -128,8 +131,10 @@ void main() {
         );
 
         final recordPageState = RecordPageState(
-            pillSheetGroup:
-                PillSheetGroup(pillSheets: [pillSheet], pillSheetIDs: ["1"]));
+            pillSheetGroup: PillSheetGroup(
+                pillSheets: [pillSheet],
+                pillSheetIDs: ["1"],
+                createdAt: now()));
         await tester.pumpWidget(
           ProviderScope(
             overrides: [
@@ -183,8 +188,10 @@ void main() {
         );
 
         final recordPageState = RecordPageState(
-            pillSheetGroup:
-                PillSheetGroup(pillSheets: [pillSheet], pillSheetIDs: ["1"]));
+            pillSheetGroup: PillSheetGroup(
+                pillSheets: [pillSheet],
+                pillSheetIDs: ["1"],
+                createdAt: now()));
         await tester.pumpWidget(
           ProviderScope(
             overrides: [
@@ -237,8 +244,10 @@ void main() {
         );
 
         final recordPageState = RecordPageState(
-            pillSheetGroup:
-                PillSheetGroup(pillSheets: [pillSheet], pillSheetIDs: ["1"]));
+            pillSheetGroup: PillSheetGroup(
+                pillSheets: [pillSheet],
+                pillSheetIDs: ["1"],
+                createdAt: now()));
         await tester.pumpWidget(
           ProviderScope(
             overrides: [
@@ -264,10 +273,10 @@ void main() {
           (WidgetTester tester) async {
         final mockTodayRepository = MockTodayService();
         final today = DateTime(2021, 04, 29);
-        final now = today;
+        final n = today;
 
         when(mockTodayRepository.today()).thenReturn(today);
-        when(mockTodayRepository.now()).thenReturn(now);
+        when(mockTodayRepository.now()).thenReturn(n);
         todayRepository = mockTodayRepository;
 
         var pillSheet = PillSheet.create(PillSheetType.pillsheet_21);
@@ -293,8 +302,10 @@ void main() {
         );
 
         final recordPageState = RecordPageState(
-            pillSheetGroup:
-                PillSheetGroup(pillSheets: [pillSheet], pillSheetIDs: ["1"]));
+            pillSheetGroup: PillSheetGroup(
+                pillSheets: [pillSheet],
+                pillSheetIDs: ["1"],
+                createdAt: now()));
         await tester.pumpWidget(
           ProviderScope(
             overrides: [
@@ -350,8 +361,10 @@ void main() {
         );
 
         final recordPageState = RecordPageState(
-            pillSheetGroup:
-                PillSheetGroup(pillSheets: [pillSheet], pillSheetIDs: ["1"]));
+            pillSheetGroup: PillSheetGroup(
+                pillSheets: [pillSheet],
+                pillSheetIDs: ["1"],
+                createdAt: now()));
         await tester.pumpWidget(
           ProviderScope(
             overrides: [
@@ -404,8 +417,10 @@ void main() {
         );
 
         final recordPageState = RecordPageState(
-            pillSheetGroup:
-                PillSheetGroup(pillSheets: [pillSheet], pillSheetIDs: ["1"]));
+            pillSheetGroup: PillSheetGroup(
+                pillSheets: [pillSheet],
+                pillSheetIDs: ["1"],
+                createdAt: now()));
         await tester.pumpWidget(
           ProviderScope(
             overrides: [

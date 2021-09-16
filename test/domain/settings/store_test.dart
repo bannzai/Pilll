@@ -7,6 +7,7 @@ import 'package:pilll/domain/settings/setting_page_store.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
 import 'package:pilll/entity/user.dart';
+import 'package:pilll/util/datetime/day.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import '../../helper/mock.mocks.dart';
@@ -66,8 +67,8 @@ void main() {
       final batchFactory = MockBatchFactory();
       final pillSheet = PillSheet.create(PillSheetType.pillsheet_21);
       final pillSheetService = MockPillSheetService();
-      final pillSheetGroup =
-          PillSheetGroup(pillSheetIDs: ["1"], pillSheets: [pillSheet]);
+      final pillSheetGroup = PillSheetGroup(
+          pillSheetIDs: ["1"], pillSheets: [pillSheet], createdAt: now());
 
       final userService = MockUserService();
       when(userService.fetch())
@@ -122,8 +123,8 @@ void main() {
 
       final batchFactory = MockBatchFactory();
       final pillSheet = PillSheet.create(PillSheetType.pillsheet_21);
-      final pillSheetGroup =
-          PillSheetGroup(pillSheetIDs: ["1"], pillSheets: [pillSheet]);
+      final pillSheetGroup = PillSheetGroup(
+          pillSheetIDs: ["1"], pillSheets: [pillSheet], createdAt: now());
 
       final pillSheetService = MockPillSheetService();
       final userService = MockUserService();
@@ -173,8 +174,8 @@ void main() {
           .thenAnswer((realInvocation) => Stream.value(setting));
 
       final pillSheet = PillSheet.create(PillSheetType.pillsheet_21);
-      final pillSheetGroup =
-          PillSheetGroup(pillSheetIDs: ["1"], pillSheets: [pillSheet]);
+      final pillSheetGroup = PillSheetGroup(
+          pillSheetIDs: ["1"], pillSheets: [pillSheet], createdAt: now());
 
       final batchFactory = MockBatchFactory();
       final pillSheetService = MockPillSheetService();
@@ -225,8 +226,8 @@ void main() {
 
       final batchFactory = MockBatchFactory();
       final pillSheet = PillSheet.create(PillSheetType.pillsheet_21);
-      final pillSheetGroup =
-          PillSheetGroup(pillSheetIDs: ["1"], pillSheets: [pillSheet]);
+      final pillSheetGroup = PillSheetGroup(
+          pillSheetIDs: ["1"], pillSheets: [pillSheet], createdAt: now());
 
       final pillSheetService = MockPillSheetService();
 

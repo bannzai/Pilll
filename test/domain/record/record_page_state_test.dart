@@ -10,6 +10,7 @@ import 'package:pilll/entity/user.dart';
 import 'package:pilll/service/day.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
+import 'package:pilll/util/datetime/day.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import '../../helper/delay.dart';
@@ -67,8 +68,8 @@ void main() {
         durationMenstruation: 4,
         isOnReminder: true,
       );
-      final pillSheetGroup =
-          PillSheetGroup(pillSheetIDs: ["1"], pillSheets: [pillSheetEntity]);
+      final pillSheetGroup = PillSheetGroup(
+          pillSheetIDs: ["1"], pillSheets: [pillSheetEntity], createdAt: now());
       final state = RecordPageState(
           pillSheetGroup: pillSheetGroup, setting: settingEntity);
 
@@ -141,8 +142,8 @@ void main() {
         durationMenstruation: 4,
         isOnReminder: true,
       );
-      final pillSheetGroup =
-          PillSheetGroup(pillSheetIDs: ["1"], pillSheets: [pillSheetEntity]);
+      final pillSheetGroup = PillSheetGroup(
+          pillSheetIDs: ["1"], pillSheets: [pillSheetEntity], createdAt: now());
       final state = RecordPageState(
           pillSheetGroup: pillSheetGroup, setting: settingEntity);
 
@@ -218,8 +219,8 @@ void main() {
         durationMenstruation: 4,
         isOnReminder: true,
       );
-      final pillSheetGroup =
-          PillSheetGroup(pillSheetIDs: ["1"], pillSheets: [pillSheetEntity]);
+      final pillSheetGroup = PillSheetGroup(
+          pillSheetIDs: ["1"], pillSheets: [pillSheetEntity], createdAt: now());
       final state = RecordPageState(
           pillSheetGroup: pillSheetGroup, setting: settingEntity);
 
@@ -289,8 +290,8 @@ void main() {
         durationMenstruation: 4,
         isOnReminder: true,
       );
-      final pillSheetGroup =
-          PillSheetGroup(pillSheetIDs: ["1"], pillSheets: [pillSheetEntity]);
+      final pillSheetGroup = PillSheetGroup(
+          pillSheetIDs: ["1"], pillSheets: [pillSheetEntity], createdAt: now());
 
       final state = RecordPageState(
           pillSheetGroup: pillSheetGroup, setting: settingEntity);

@@ -8,6 +8,7 @@ import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/entity/setting.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:pilll/service/day.dart';
+import 'package:pilll/util/datetime/day.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import '../../helper/mock.mocks.dart';
@@ -58,8 +59,8 @@ void main() {
             beginingDate: beginingDate,
             lastTakenDate: null,
           );
-          final pillSheetGroup =
-              PillSheetGroup(pillSheetIDs: ["1"], pillSheets: [pillSheet]);
+          final pillSheetGroup = PillSheetGroup(
+              pillSheetIDs: ["1"], pillSheets: [pillSheet], createdAt: now());
           var setting = Setting(
             pillSheetTypes: [pillSheetType],
             pillNumberForFromMenstruation: fromMenstruation,
@@ -104,8 +105,8 @@ void main() {
             beginingDate: beginingDate,
             lastTakenDate: null,
           );
-          final pillSheetGroup =
-              PillSheetGroup(pillSheetIDs: ["1"], pillSheets: [pillSheet]);
+          final pillSheetGroup = PillSheetGroup(
+              pillSheetIDs: ["1"], pillSheets: [pillSheet], createdAt: now());
 
           var setting = Setting(
             pillSheetTypes: [pillSheetType],
@@ -155,8 +156,8 @@ void main() {
             beginingDate: beginingDate,
             lastTakenDate: null,
           );
-          final pillSheetGroup =
-              PillSheetGroup(pillSheetIDs: ["1"], pillSheets: [pillSheet]);
+          final pillSheetGroup = PillSheetGroup(
+              pillSheetIDs: ["1"], pillSheets: [pillSheet], createdAt: now());
           var setting = Setting(
             pillSheetTypes: [pillSheetType],
             pillNumberForFromMenstruation: fromMenstruation,
@@ -209,8 +210,8 @@ void main() {
             beginingDate: beginingDate,
             lastTakenDate: null,
           );
-          final pillSheetGroup =
-              PillSheetGroup(pillSheetIDs: ["1"], pillSheets: [pillSheet]);
+          final pillSheetGroup = PillSheetGroup(
+              pillSheetIDs: ["1"], pillSheets: [pillSheet], createdAt: now());
           var setting = Setting(
             pillSheetTypes: [pillSheetType],
             pillNumberForFromMenstruation: fromMenstruation,
@@ -275,8 +276,8 @@ void main() {
             beginingDate: beginingDate,
             lastTakenDate: null,
           );
-          final pillSheetGroup =
-              PillSheetGroup(pillSheetIDs: ["1"], pillSheets: [pillSheet]);
+          final pillSheetGroup = PillSheetGroup(
+              pillSheetIDs: ["1"], pillSheets: [pillSheet], createdAt: now());
           expect(
             nextPillSheetDateRanges(pillSheetGroup, 1),
             [
@@ -309,8 +310,8 @@ void main() {
             beginingDate: beginingDate,
             lastTakenDate: null,
           );
-          final pillSheetGroup =
-              PillSheetGroup(pillSheetIDs: ["1"], pillSheets: [pillSheet]);
+          final pillSheetGroup = PillSheetGroup(
+              pillSheetIDs: ["1"], pillSheets: [pillSheet], createdAt: now());
           expect(
             nextPillSheetDateRanges(pillSheetGroup, 2),
             [
@@ -347,8 +348,8 @@ void main() {
             beginingDate: beginingDate,
             lastTakenDate: null,
           );
-          final pillSheetGroup =
-              PillSheetGroup(pillSheetIDs: ["1"], pillSheets: [pillSheet]);
+          final pillSheetGroup = PillSheetGroup(
+              pillSheetIDs: ["1"], pillSheets: [pillSheet], createdAt: now());
           expect(
             nextPillSheetDateRanges(pillSheetGroup, 3),
             [
@@ -406,8 +407,8 @@ void main() {
             beginingDate: beginingDate,
             lastTakenDate: null,
           );
-          final pillSheetGroup =
-              PillSheetGroup(pillSheetIDs: ["1"], pillSheets: [pillSheet]);
+          final pillSheetGroup = PillSheetGroup(
+              pillSheetIDs: ["1"], pillSheets: [pillSheet], createdAt: now());
           expect(
             nextPillSheetDateRanges(pillSheetGroup, 1),
             [

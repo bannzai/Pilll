@@ -5,6 +5,7 @@ import 'package:pilll/entity/setting.dart';
 import 'package:pilll/domain/settings/reminder_times_page.dart';
 import 'package:pilll/domain/settings/setting_page_store.dart';
 import 'package:pilll/entity/user.dart';
+import 'package:pilll/util/datetime/day.dart';
 import 'package:pilll/util/environment.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
@@ -67,8 +68,8 @@ void main() {
 
       final batchFactory = MockBatchFactory();
       final pillSheet = PillSheet.create(PillSheetType.pillsheet_21);
-      final pillSheetGroup =
-          PillSheetGroup(pillSheetIDs: ["1"], pillSheets: [pillSheet]);
+      final pillSheetGroup = PillSheetGroup(
+          pillSheetIDs: ["1"], pillSheets: [pillSheet], createdAt: now());
 
       final pillSheetService = MockPillSheetService();
       final userService = MockUserService();
@@ -133,8 +134,8 @@ void main() {
 
       final batchFactory = MockBatchFactory();
       final pillSheet = PillSheet.create(PillSheetType.pillsheet_21);
-      final pillSheetGroup =
-          PillSheetGroup(pillSheetIDs: ["1"], pillSheets: [pillSheet]);
+      final pillSheetGroup = PillSheetGroup(
+          pillSheetIDs: ["1"], pillSheets: [pillSheet], createdAt: now());
 
       final pillSheetService = MockPillSheetService();
       final userService = MockUserService();

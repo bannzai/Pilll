@@ -15,6 +15,7 @@ import 'package:pilll/service/pill_sheet_group.dart';
 import 'package:pilll/service/pill_sheet_modified_history.dart';
 import 'package:pilll/service/setting.dart';
 import 'package:pilll/service/user.dart';
+import 'package:pilll/util/datetime/day.dart';
 import 'package:purchases_flutter/purchases_flutter.dart';
 import 'package:riverpod/riverpod.dart';
 
@@ -194,8 +195,8 @@ class InitialSettingStateStore extends StateNotifier<InitialSettingState> {
 
       final pillSheetIDs = idAndPillSheet.keys.toList();
       final pillSheets = idAndPillSheet.values.toList();
-      final pillSheetGroup =
-          PillSheetGroup(pillSheetIDs: pillSheetIDs, pillSheets: pillSheets);
+      final pillSheetGroup = PillSheetGroup(
+          pillSheetIDs: pillSheetIDs, pillSheets: pillSheets, createdAt: now());
       _pillSheetGroupService.register(batch, pillSheetGroup);
 
       final history = PillSheetModifiedHistoryServiceActionFactory
