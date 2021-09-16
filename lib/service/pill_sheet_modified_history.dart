@@ -3,6 +3,7 @@ import 'package:pilll/database/database.dart';
 import 'package:pilll/entity/pill_sheet.dart';
 import 'package:pilll/entity/pill_sheet_modified_history.dart';
 import 'package:pilll/entity/pill_sheet_modified_history_value.dart';
+import 'package:pilll/util/datetime/day.dart';
 import 'package:riverpod/riverpod.dart';
 
 final pillSheetModifiedHistoryServiceProvider =
@@ -93,8 +94,8 @@ extension PillSheetModifiedHistoryServiceActionFactory
       beforePillSheetID: beforePillSheetID,
       before: before,
       after: after,
-      estimatedEventCausingDate: DateTime.now(),
-      createdAt: DateTime.now(),
+      estimatedEventCausingDate: now(),
+      createdAt: now(),
     );
   }
 
@@ -176,7 +177,7 @@ extension PillSheetModifiedHistoryServiceActionFactory
       actionType: PillSheetModifiedActionType.createdPillSheet,
       value: PillSheetModifiedHistoryValue(
         createdPillSheet: CreatedPillSheetValue(
-          pillSheetCreatedAt: DateTime.now(),
+          pillSheetCreatedAt: now(),
           pillSheetIDs: pillSheetIDs,
         ),
       ),
@@ -231,7 +232,7 @@ extension PillSheetModifiedHistoryServiceActionFactory
       actionType: PillSheetModifiedActionType.deletedPillSheet,
       value: PillSheetModifiedHistoryValue(
         deletedPillSheet: DeletedPillSheetValue(
-          pillSheetDeletedAt: DateTime.now(),
+          pillSheetDeletedAt: now(),
           pillSheetIDs: pillSheetIDs,
         ),
       ),
