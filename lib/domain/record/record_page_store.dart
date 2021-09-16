@@ -297,7 +297,7 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
       return false;
     }
     if (activedPillSheet.id != pillSheet.id) {
-      if (pillSheet.isEnded) {
+      if (pillSheet.isReached) {
         if (pillNumberIntoPillSheet > pillSheet.lastTakenPillNumber) {
           return false;
         }
@@ -338,7 +338,7 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
       return false;
     }
     if (activedPillSheet.id != pillSheet.id) {
-      if (pillSheet.isEnded) {
+      if (pillSheet.isReached) {
         if (pillNumberIntoPillSheet > pillSheet.lastTakenPillNumber) {
           return true;
         }

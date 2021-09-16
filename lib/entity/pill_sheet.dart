@@ -92,13 +92,13 @@ abstract class PillSheet implements _$PillSheet {
       : lastTakenDate!.date().difference(beginingDate.date()).inDays + 1;
 
   bool get allTaken => todayPillNumber == lastTakenPillNumber;
-  bool get isEnded =>
-      today().difference(beginingDate.date()).inDays + 1 >
-      pillSheetType.totalCount;
+  bool get isReached =>
+      beginingDate.date().toUtc().millisecondsSinceEpoch <
+      now().toUtc().millisecondsSinceEpoch;
   bool get isDeleted => deletedAt != null;
   bool get inNotTakenDuration => todayPillNumber > typeInfo.dosingPeriod;
   bool get isFill => lastTakenPillNumber >= pillSheetType.totalCount;
-  bool get isInvalid => isDeleted || isEnded;
+  bool get isInvalid => isDeleted || isReached;
   bool get hasRestDuration => !pillSheetType.isNotExistsNotTakenDuration;
 
   bool get isActive {
