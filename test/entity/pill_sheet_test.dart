@@ -214,7 +214,7 @@ void main() {
       expect(model.isActive, false);
     });
   });
-  group("#isOutOfRange", () {
+  group("#isEnded", () {
     test(
         "it is not out of range pattern. today: 2020-09-19, begin: 2020-09-14, end: 2020-09-18",
         () {
@@ -234,7 +234,7 @@ void main() {
           pillSheetTypeReferencePath: sheetType.rawPath,
         ),
       );
-      expect(model.isOutOfRange, false);
+      expect(model.isEnded, false);
     });
     test(
         "it is not out of range pattern. Boundary testing. today: 2020-09-28, begin: 2020-09-01, end: 2020-09-28",
@@ -255,7 +255,7 @@ void main() {
           pillSheetTypeReferencePath: sheetType.rawPath,
         ),
       );
-      expect(model.isOutOfRange, false);
+      expect(model.isEnded, false);
     });
     test(
         "it is out of range pattern. Boundary testing. today: 2020-09-29, begin: 2020-09-01, end: 2020-09-28",
@@ -276,7 +276,7 @@ void main() {
           pillSheetTypeReferencePath: sheetType.rawPath,
         ),
       );
-      expect(model.isOutOfRange, true);
+      expect(model.isEnded, true);
     });
   });
 }
