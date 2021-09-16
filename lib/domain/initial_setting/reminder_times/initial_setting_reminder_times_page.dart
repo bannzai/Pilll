@@ -39,7 +39,8 @@ class InitialSettingReminderTimesPage extends HookWidget {
             analytics.logEvent(
                 name: "selected_times_initial_setting",
                 parameters: {"hour": dateTime.hour, "minute": dateTime.minute});
-            store.setReminderTime(index, dateTime.hour, dateTime.minute);
+            store.setReminderTime(
+                index: index, hour: dateTime.hour, minute: dateTime.minute);
             Navigator.pop(context);
           },
         );
