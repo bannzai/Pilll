@@ -49,6 +49,10 @@ class SettingMenstruationStateStore
     if (_pastedTotalCount >= setting.pillNumberForFromMenstruation) {
       return setting.pillNumberForFromMenstruation;
     }
-    return setting.pillNumberForFromMenstruation - _pastedTotalCount;
+    final diff = setting.pillNumberForFromMenstruation - _pastedTotalCount;
+    if (diff > setting.pillSheetTypes[pageIndex].totalCount) {
+      return null;
+    }
+    return diff;
   }
 }

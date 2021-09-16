@@ -161,7 +161,11 @@ class InitialSettingStateStore extends StateNotifier<InitialSettingState> {
     if (_pastedTotalCount >= state.fromMenstruation) {
       return state.fromMenstruation;
     }
-    return state.fromMenstruation - _pastedTotalCount;
+    final diff = state.fromMenstruation - _pastedTotalCount;
+    if (diff > state.pillSheetTypes[pageIndex].totalCount) {
+      return null;
+    }
+    return diff;
   }
 
   Future<void> register() async {
