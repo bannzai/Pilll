@@ -91,9 +91,7 @@ void main() {
     });
   });
   group("#isActive", () {
-    test(
-        "it is active pattern. today: 2020-09-19, begin: 2020-09-14, end: 2020-09-18",
-        () {
+    test("it is active pattern. today: 2020-09-19, begin: 2020-09-14", () {
       var mockTodayRepository = MockTodayService();
       todayRepository = mockTodayRepository;
       when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-19"));
@@ -101,7 +99,6 @@ void main() {
       var sheetType = PillSheetType.pillsheet_21;
       var model = PillSheet(
         beginingDate: DateTime.parse("2020-09-14"),
-        lastTakenDate: DateTime.parse("2020-09-18"),
         typeInfo: PillSheetTypeInfo(
           dosingPeriod: sheetType.dosingPeriod,
           name: sheetType.fullName,
@@ -112,7 +109,7 @@ void main() {
       expect(model.isActive, true);
     });
     test(
-        "it is active pattern. Boundary testing. today: 2020-09-28, begin: 2020-09-01, end: 2020-09-28",
+        "it is active pattern. Boundary testing. today: 2020-09-28, begin: 2020-09-01",
         () {
       var mockTodayRepository = MockTodayService();
       todayRepository = mockTodayRepository;
@@ -121,7 +118,6 @@ void main() {
       var sheetType = PillSheetType.pillsheet_21;
       var model = PillSheet(
         beginingDate: DateTime.parse("2020-09-01"),
-        lastTakenDate: DateTime.parse("2020-09-28"),
         typeInfo: PillSheetTypeInfo(
           dosingPeriod: sheetType.dosingPeriod,
           name: sheetType.fullName,
@@ -132,7 +128,7 @@ void main() {
       expect(model.isActive, true);
     });
     test(
-        "it is deactive pattern. Boundary testing. today: 2020-09-29, begin: 2020-09-01, end: 2020-09-28",
+        "it is deactive pattern. Boundary testing. today: 2020-09-29, begin: 2020-09-01",
         () {
       var mockTodayRepository = MockTodayService();
       todayRepository = mockTodayRepository;
@@ -141,7 +137,6 @@ void main() {
       var sheetType = PillSheetType.pillsheet_21;
       var model = PillSheet(
         beginingDate: DateTime.parse("2020-09-01"),
-        lastTakenDate: DateTime.parse("2020-09-28"),
         typeInfo: PillSheetTypeInfo(
           dosingPeriod: sheetType.dosingPeriod,
           name: sheetType.fullName,
@@ -152,7 +147,7 @@ void main() {
       expect(model.isActive, false);
     });
     test(
-        "it is active pattern. Boundary testing. now: 2020-09-28 23:59:59, begin: 2020-09-01, end: 2020-09-28",
+        "it is active pattern. Boundary testing. now: 2020-09-28 23:59:59, begin: 2020-09-01",
         () {
       var mockTodayRepository = MockTodayService();
       todayRepository = mockTodayRepository;
@@ -162,7 +157,6 @@ void main() {
       var sheetType = PillSheetType.pillsheet_21;
       var model = PillSheet(
         beginingDate: DateTime.parse("2020-09-01"),
-        lastTakenDate: DateTime.parse("2020-09-28"),
         typeInfo: PillSheetTypeInfo(
           dosingPeriod: sheetType.dosingPeriod,
           name: sheetType.fullName,
@@ -173,7 +167,7 @@ void main() {
       expect(model.isActive, true);
     });
     test(
-        "it is deactive pattern. Boundary testing. now: 2020-09-29 23:59:59, begin: 2020-09-01, end: 2020-09-28",
+        "it is deactive pattern. Boundary testing. now: 2020-09-29 23:59:59, begin: 2020-09-01",
         () {
       var mockTodayRepository = MockTodayService();
       todayRepository = mockTodayRepository;
@@ -183,7 +177,6 @@ void main() {
       var sheetType = PillSheetType.pillsheet_21;
       var model = PillSheet(
         beginingDate: DateTime.parse("2020-09-01"),
-        lastTakenDate: DateTime.parse("2020-09-28"),
         typeInfo: PillSheetTypeInfo(
           dosingPeriod: sheetType.dosingPeriod,
           name: sheetType.fullName,
@@ -193,9 +186,7 @@ void main() {
       );
       expect(model.isActive, false);
     });
-    test(
-        "it is deactive pattern.  now: 2020-06-29 begin: 2020-09-01, end: 2020-09-28",
-        () {
+    test("it is deactive pattern.  now: 2020-06-29 begin: 2020-09-01", () {
       var mockTodayRepository = MockTodayService();
       todayRepository = mockTodayRepository;
       when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-06-29"));
@@ -203,7 +194,6 @@ void main() {
       var sheetType = PillSheetType.pillsheet_21;
       var model = PillSheet(
         beginingDate: DateTime.parse("2020-09-01"),
-        lastTakenDate: DateTime.parse("2020-09-28"),
         typeInfo: PillSheetTypeInfo(
           dosingPeriod: sheetType.dosingPeriod,
           name: sheetType.fullName,
@@ -215,8 +205,7 @@ void main() {
     });
   });
   group("#isReached", () {
-    test(
-        "it is not out of range pattern. today: 2020-09-19, begin: 2020-09-14, end: 2020-09-18",
+    test("it is not out of range pattern. today: 2020-09-19, begin: 2020-09-14",
         () {
       var mockTodayRepository = MockTodayService();
       todayRepository = mockTodayRepository;
@@ -225,7 +214,6 @@ void main() {
       var sheetType = PillSheetType.pillsheet_21;
       var model = PillSheet(
         beginingDate: DateTime.parse("2020-09-14"),
-        lastTakenDate: DateTime.parse("2020-09-18"),
         typeInfo: PillSheetTypeInfo(
           dosingPeriod: sheetType.dosingPeriod,
           name: sheetType.fullName,
@@ -236,7 +224,7 @@ void main() {
       expect(model.isReached, true);
     });
     test(
-        "it is not out of range pattern. Boundary testing. now: 2020-09-28, begin: 2020-09-01, end: 2020-09-28",
+        "it is not out of range pattern. Boundary testing. now: 2020-09-28, begin: 2020-09-01",
         () {
       var mockTodayRepository = MockTodayService();
       todayRepository = mockTodayRepository;
@@ -245,7 +233,6 @@ void main() {
       var sheetType = PillSheetType.pillsheet_21;
       var model = PillSheet(
         beginingDate: DateTime.parse("2020-09-01"),
-        lastTakenDate: DateTime.parse("2020-09-28"),
         typeInfo: PillSheetTypeInfo(
           dosingPeriod: sheetType.dosingPeriod,
           name: sheetType.fullName,
@@ -256,7 +243,7 @@ void main() {
       expect(model.isReached, true);
     });
     test(
-        "it is out of range pattern. Boundary testing. now: 2020-09-29, begin: 2020-09-01, end: 2020-09-28",
+        "it is out of range pattern. Boundary testing. now: 2020-09-29, begin: 2020-09-01",
         () {
       var mockTodayRepository = MockTodayService();
       todayRepository = mockTodayRepository;
@@ -265,7 +252,6 @@ void main() {
       var sheetType = PillSheetType.pillsheet_21;
       var model = PillSheet(
         beginingDate: DateTime.parse("2020-09-01"),
-        lastTakenDate: DateTime.parse("2020-09-28"),
         typeInfo: PillSheetTypeInfo(
           dosingPeriod: sheetType.dosingPeriod,
           name: sheetType.fullName,
@@ -275,9 +261,7 @@ void main() {
       );
       expect(model.isReached, true);
     });
-    test(
-        "it is out of range pattern. now: 2020-06-29, begin: 2020-09-01, end: 2020-09-28",
-        () {
+    test("it is out of range pattern. now: 2020-06-29, begin: 2020-09-01", () {
       var mockTodayRepository = MockTodayService();
       todayRepository = mockTodayRepository;
       when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-06-29"));
@@ -285,7 +269,6 @@ void main() {
       var sheetType = PillSheetType.pillsheet_21;
       var model = PillSheet(
         beginingDate: DateTime.parse("2020-09-01"),
-        lastTakenDate: DateTime.parse("2020-09-28"),
         typeInfo: PillSheetTypeInfo(
           dosingPeriod: sheetType.dosingPeriod,
           name: sheetType.fullName,
