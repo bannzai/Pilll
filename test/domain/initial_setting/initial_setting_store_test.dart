@@ -463,6 +463,7 @@ void main() {
       final _today = DateTime.parse("2020-09-19");
       todayRepository = mockTodayRepository;
       when(mockTodayRepository.today()).thenReturn(_today);
+      when(mockTodayRepository.now()).thenReturn(_today);
 
       final batchFactory = MockBatchFactory();
       final batch = MockWriteBatch();
@@ -479,7 +480,7 @@ void main() {
 
       final pillSheetGroup = PillSheetGroup(
           pillSheetIDs: ["sheet_id"],
-          pillSheets: [pillSheet],
+          pillSheets: [pillSheet.copyWith(id: "sheet_id")],
           createdAt: now());
       final pillSheetGroupService = MockPillSheetGroupService();
       when(pillSheetGroupService.register(batch, pillSheetGroup))
@@ -490,7 +491,8 @@ void main() {
               pillSheetGroupID: "group_id", pillSheetIDs: ["sheet_id"]);
       final pillSheetModifiedHistoryService =
           MockPillSheetModifiedHistoryService();
-      pillSheetModifiedHistoryService.add(batch, history);
+      when(pillSheetModifiedHistoryService.add(batch, history))
+          .thenReturn(null);
 
       final setting = Setting(
         pillNumberForFromMenstruation: 22,
@@ -500,9 +502,10 @@ void main() {
           ReminderTime(hour: 21, minute: 20),
           ReminderTime(hour: 22, minute: 0)
         ],
+        pillSheetTypes: [PillSheetType.pillsheet_21],
       );
       final settingService = MockSettingService();
-      when(settingService.updateWithBatch(batch, setting));
+      when(settingService.updateWithBatch(batch, setting)).thenReturn(null);
 
       final container = ProviderContainer(
         overrides: [
@@ -524,7 +527,7 @@ void main() {
       store.setTodayPillNumber(pageIndex: 0, pillNumberIntoPillSheet: 1);
       store.setReminderTime(index: 0, hour: 21, minute: 20);
 
-      verify(store.register());
+      store.register();
     });
   });
 }
