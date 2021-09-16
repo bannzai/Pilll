@@ -43,8 +43,6 @@ class SelectTodayPillNumberPillSheetList extends HookWidget {
                     child: SettingPillSheetView(
                       pageIndex: index,
                       pillSheetTypes: state.pillSheetTypes,
-                      selectedPillNumberPageIndex:
-                          state.todayPillNumber?.pageIndex,
                       selectedPillNumberIntoPillSheet:
                           state.todayPillNumber?.pillNumberIntoPillSheet,
                       markSelected: (pageIndex, number) {

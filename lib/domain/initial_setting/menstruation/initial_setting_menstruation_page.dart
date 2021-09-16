@@ -20,12 +20,8 @@ class InitialSettingMenstruationPage extends HookWidget {
       title: "4/5",
       pillSheetList: SettingMenstruationPillSheetList(
         pillSheetTypes: state.pillSheetTypes,
-        selectedPillSheetPageIndex: state.currentMenstruationPageIndex,
         selectedPillNumber: (pageIndex) =>
             store.retrieveMenstruationSelectedPillNumber(pageIndex),
-        onPageChanged: (pageIndex) {
-          store.setCurrentMenstruationPageIndex(pageIndex);
-        },
         markSelected: (pageIndex, number) {
           analytics.logEvent(
               name: "from_menstruation_initial_setting",
@@ -43,15 +39,13 @@ class InitialSettingMenstruationPage extends HookWidget {
         text: "次へ",
       ),
       dynamicDescription: SettingMenstruationDynamicDescription(
+        pillSheetTypes: state.pillSheetTypes,
         fromMenstruation: state.fromMenstruation,
         fromMenstructionDidDecide: (number) {
           analytics.logEvent(
               name: "from_menstruation_initial_setting",
               parameters: {"number": number});
-          store.setFromMenstruation(
-            pageIndex: state.currentMenstruationPageIndex,
-            fromMenstruation: number,
-          );
+          store.pickFromMenstruation(serializedPillNumberIntoGroup: number);
         },
         durationMenstruation: state.durationMenstruation,
         durationMenstructionDidDecide: (number) {
@@ -59,12 +53,8 @@ class InitialSettingMenstruationPage extends HookWidget {
               name: "duration_menstruation_initial_setting",
               parameters: {
                 "number": number,
-                "page": state.currentMenstruationPageIndex
               });
           store.setDurationMenstruation(durationMenstruation: number);
-        },
-        retrieveFocusedPillSheetType: () {
-          return state.pillSheetTypes[state.currentMenstruationPageIndex];
         },
       ),
     );

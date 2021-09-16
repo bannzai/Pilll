@@ -28,16 +28,20 @@ class SettingMenstruationStateStore
         pillNumberForFromMenstruation: fromMenstruation + offset));
   }
 
+  Future<void> modifyFromMenstruationFromPicker({
+    required Setting setting,
+    required int serializedPillNumberIntoGroup,
+  }) {
+    return _settingService.update(setting.copyWith(
+        pillNumberForFromMenstruation: serializedPillNumberIntoGroup));
+  }
+
   Future<void> modifyDurationMenstruation({
     required Setting setting,
     required int durationMenstruation,
   }) {
     return _settingService
         .update(setting.copyWith(durationMenstruation: durationMenstruation));
-  }
-
-  setCurrentPageIndex(int pageIndex) {
-    state = state.copyWith(currentPageIndex: pageIndex);
   }
 
   int? retrieveMenstruationSelectedPillNumber(
