@@ -190,4 +190,38 @@ void main() {
           [PillSheetType.pillsheet_21, PillSheetType.pillsheet_24_0]);
     });
   });
+  group("#removePillSheetType", () {
+    test("remove with index", () {
+      final batchFactory = MockBatchFactory();
+      final authService = MockAuthService();
+      when(authService.subscribe())
+          .thenAnswer((realInvocation) => Stream.empty());
+      final settingService = MockSettingService();
+      final pillSheetService = MockPillSheetService();
+      final pillSheetModifiedHistoryService =
+          MockPillSheetModifiedHistoryService();
+      final pillSheetGroupService = MockPillSheetGroupService();
+
+      final container = ProviderContainer(
+        overrides: [
+          batchFactoryProvider.overrideWithValue(batchFactory),
+          authServiceProvider.overrideWithValue(authService),
+          settingServiceProvider.overrideWithValue(settingService),
+          pillSheetServiceProvider.overrideWithValue(pillSheetService),
+          pillSheetModifiedHistoryServiceProvider
+              .overrideWithValue(pillSheetModifiedHistoryService),
+          pillSheetGroupServiceProvider
+              .overrideWithValue(pillSheetGroupService),
+        ],
+      );
+      final store = container.read(initialSettingStoreProvider);
+
+      store.selectedPillSheetType(PillSheetType.pillsheet_21);
+      store.addPillSheetType(PillSheetType.pillsheet_28_0);
+      store.changePillSheetType(1, PillSheetType.pillsheet_24_0);
+      store.removePillSheetType(0);
+      expect(container.read(initialSettingStateProvider).pillSheetTypes,
+          [PillSheetType.pillsheet_24_0]);
+    });
+  });
 }
