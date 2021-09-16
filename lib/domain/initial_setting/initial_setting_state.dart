@@ -37,8 +37,6 @@ abstract class InitialSettingState implements _$InitialSettingState {
         bool isLoading,
     @Default(false)
         bool isAccountCooperationDidEnd,
-    @Default(0)
-        currentMenstruationPageIndex,
   }) = _InitialSettingState;
 
   DateTime? reminderTimeOrDefault(int index) {
