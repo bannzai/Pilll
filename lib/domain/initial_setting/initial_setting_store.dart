@@ -29,6 +29,9 @@ final initialSettingStoreProvider = StateNotifierProvider(
   ),
 );
 
+final initialSettingStateProvider =
+    Provider((ref) => ref.watch(initialSettingStoreProvider.state));
+
 class InitialSettingStateStore extends StateNotifier<InitialSettingState> {
   final BatchFactory _batchFactory;
   final AuthService _authService;
