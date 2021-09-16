@@ -30,13 +30,10 @@ class SettingMenstruationStateStore
 
   Future<void> modifyDurationMenstruation({
     required Setting setting,
-    required int pageIndex,
     required int durationMenstruation,
   }) {
-    final offset = pastedTotalCount(
-        pillSheetTypes: setting.pillSheetTypes, pageIndex: pageIndex);
-    return _settingService.update(
-        setting.copyWith(durationMenstruation: durationMenstruation + offset));
+    return _settingService
+        .update(setting.copyWith(durationMenstruation: durationMenstruation));
   }
 
   setCurrentPageIndex(int pageIndex) {

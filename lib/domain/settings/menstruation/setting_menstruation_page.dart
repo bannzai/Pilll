@@ -62,7 +62,6 @@ class SettingMenstruationPage extends HookWidget {
               parameters: {"number": number});
           store.modifyDurationMenstruation(
             setting: setting,
-            pageIndex: state.currentPageIndex,
             durationMenstruation: number,
           );
         },
