@@ -4,6 +4,7 @@ import 'package:pilll/domain/initial_setting/initial_setting_store.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
+import 'package:pilll/entity/setting.dart';
 import 'package:pilll/service/auth.dart';
 import 'package:pilll/service/pill_sheet.dart';
 import 'package:pilll/service/pill_sheet_group.dart';
@@ -222,6 +223,71 @@ void main() {
       store.removePillSheetType(0);
       expect(container.read(initialSettingStateProvider).pillSheetTypes,
           [PillSheetType.pillsheet_24_0]);
+    });
+  });
+  group("#setReminderTime", () {
+    test("replace default reminderTime", () {
+      final batchFactory = MockBatchFactory();
+      final authService = MockAuthService();
+      when(authService.subscribe())
+          .thenAnswer((realInvocation) => Stream.empty());
+      final settingService = MockSettingService();
+      final pillSheetService = MockPillSheetService();
+      final pillSheetModifiedHistoryService =
+          MockPillSheetModifiedHistoryService();
+      final pillSheetGroupService = MockPillSheetGroupService();
+
+      final container = ProviderContainer(
+        overrides: [
+          batchFactoryProvider.overrideWithValue(batchFactory),
+          authServiceProvider.overrideWithValue(authService),
+          settingServiceProvider.overrideWithValue(settingService),
+          pillSheetServiceProvider.overrideWithValue(pillSheetService),
+          pillSheetModifiedHistoryServiceProvider
+              .overrideWithValue(pillSheetModifiedHistoryService),
+          pillSheetGroupServiceProvider
+              .overrideWithValue(pillSheetGroupService),
+        ],
+      );
+      final store = container.read(initialSettingStoreProvider);
+
+      store.setReminderTime(0, 22, 10);
+      expect(container.read(initialSettingStateProvider).reminderTimes, [
+        ReminderTime(hour: 22, minute: 10),
+        ReminderTime(hour: 22, minute: 0)
+      ]);
+    });
+    test("add reminderTime", () {
+      final batchFactory = MockBatchFactory();
+      final authService = MockAuthService();
+      when(authService.subscribe())
+          .thenAnswer((realInvocation) => Stream.empty());
+      final settingService = MockSettingService();
+      final pillSheetService = MockPillSheetService();
+      final pillSheetModifiedHistoryService =
+          MockPillSheetModifiedHistoryService();
+      final pillSheetGroupService = MockPillSheetGroupService();
+
+      final container = ProviderContainer(
+        overrides: [
+          batchFactoryProvider.overrideWithValue(batchFactory),
+          authServiceProvider.overrideWithValue(authService),
+          settingServiceProvider.overrideWithValue(settingService),
+          pillSheetServiceProvider.overrideWithValue(pillSheetService),
+          pillSheetModifiedHistoryServiceProvider
+              .overrideWithValue(pillSheetModifiedHistoryService),
+          pillSheetGroupServiceProvider
+              .overrideWithValue(pillSheetGroupService),
+        ],
+      );
+      final store = container.read(initialSettingStoreProvider);
+
+      store.setReminderTime(2, 22, 10);
+      expect(container.read(initialSettingStateProvider).reminderTimes, [
+        ReminderTime(hour: 21, minute: 0),
+        ReminderTime(hour: 22, minute: 0),
+        ReminderTime(hour: 22, minute: 10)
+      ]);
     });
   });
 }
