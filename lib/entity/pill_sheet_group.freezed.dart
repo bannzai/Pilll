@@ -25,8 +25,8 @@ class _$PillSheetGroupTearOff {
           String? id,
       required List<String> pillSheetIDs,
       required List<PillSheet> pillSheets,
-      @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
-          DateTime? createdAt,
+      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+          required DateTime createdAt,
       @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
           DateTime? deletedAt}) {
     return _PillSheetGroup(
@@ -53,9 +53,9 @@ mixin _$PillSheetGroup {
   List<String> get pillSheetIDs => throw _privateConstructorUsedError;
   List<PillSheet> get pillSheets => throw _privateConstructorUsedError;
   @JsonKey(
-      fromJson: TimestampConverter.timestampToDateTime,
-      toJson: TimestampConverter.dateTimeToTimestamp)
-  DateTime? get createdAt => throw _privateConstructorUsedError;
+      fromJson: NonNullTimestampConverter.timestampToDateTime,
+      toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+  DateTime get createdAt => throw _privateConstructorUsedError;
   @JsonKey(
       fromJson: TimestampConverter.timestampToDateTime,
       toJson: TimestampConverter.dateTimeToTimestamp)
@@ -77,8 +77,8 @@ abstract class $PillSheetGroupCopyWith<$Res> {
           String? id,
       List<String> pillSheetIDs,
       List<PillSheet> pillSheets,
-      @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
-          DateTime? createdAt,
+      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+          DateTime createdAt,
       @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
           DateTime? deletedAt});
 }
@@ -116,7 +116,7 @@ class _$PillSheetGroupCopyWithImpl<$Res>
       createdAt: createdAt == freezed
           ? _value.createdAt
           : createdAt // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as DateTime,
       deletedAt: deletedAt == freezed
           ? _value.deletedAt
           : deletedAt // ignore: cast_nullable_to_non_nullable
@@ -137,8 +137,8 @@ abstract class _$PillSheetGroupCopyWith<$Res>
           String? id,
       List<String> pillSheetIDs,
       List<PillSheet> pillSheets,
-      @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
-          DateTime? createdAt,
+      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+          DateTime createdAt,
       @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
           DateTime? deletedAt});
 }
@@ -178,7 +178,7 @@ class __$PillSheetGroupCopyWithImpl<$Res>
       createdAt: createdAt == freezed
           ? _value.createdAt
           : createdAt // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
+              as DateTime,
       deletedAt: deletedAt == freezed
           ? _value.deletedAt
           : deletedAt // ignore: cast_nullable_to_non_nullable
@@ -196,8 +196,8 @@ class _$_PillSheetGroup extends _PillSheetGroup {
           this.id,
       required this.pillSheetIDs,
       required this.pillSheets,
-      @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
-          this.createdAt,
+      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+          required this.createdAt,
       @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
           this.deletedAt})
       : super._();
@@ -214,9 +214,9 @@ class _$_PillSheetGroup extends _PillSheetGroup {
   final List<PillSheet> pillSheets;
   @override
   @JsonKey(
-      fromJson: TimestampConverter.timestampToDateTime,
-      toJson: TimestampConverter.dateTimeToTimestamp)
-  final DateTime? createdAt;
+      fromJson: NonNullTimestampConverter.timestampToDateTime,
+      toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+  final DateTime createdAt;
   @override
   @JsonKey(
       fromJson: TimestampConverter.timestampToDateTime,
@@ -274,8 +274,8 @@ abstract class _PillSheetGroup extends PillSheetGroup {
           String? id,
       required List<String> pillSheetIDs,
       required List<PillSheet> pillSheets,
-      @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
-          DateTime? createdAt,
+      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+          required DateTime createdAt,
       @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
           DateTime? deletedAt}) = _$_PillSheetGroup;
   _PillSheetGroup._() : super._();
@@ -292,9 +292,9 @@ abstract class _PillSheetGroup extends PillSheetGroup {
   List<PillSheet> get pillSheets => throw _privateConstructorUsedError;
   @override
   @JsonKey(
-      fromJson: TimestampConverter.timestampToDateTime,
-      toJson: TimestampConverter.dateTimeToTimestamp)
-  DateTime? get createdAt => throw _privateConstructorUsedError;
+      fromJson: NonNullTimestampConverter.timestampToDateTime,
+      toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+  DateTime get createdAt => throw _privateConstructorUsedError;
   @override
   @JsonKey(
       fromJson: TimestampConverter.timestampToDateTime,

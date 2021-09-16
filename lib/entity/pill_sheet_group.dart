@@ -23,10 +23,10 @@ abstract class PillSheetGroup implements _$PillSheetGroup {
     required List<String> pillSheetIDs,
     required List<PillSheet> pillSheets,
     @JsonKey(
-      fromJson: TimestampConverter.timestampToDateTime,
-      toJson: TimestampConverter.dateTimeToTimestamp,
+      fromJson: NonNullTimestampConverter.timestampToDateTime,
+      toJson: NonNullTimestampConverter.dateTimeToTimestamp,
     )
-        DateTime? createdAt,
+        required DateTime createdAt,
     @JsonKey(
       fromJson: TimestampConverter.timestampToDateTime,
       toJson: TimestampConverter.dateTimeToTimestamp,

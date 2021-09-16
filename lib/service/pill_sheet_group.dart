@@ -44,7 +44,6 @@ class PillSheetGroupService {
 
   // Return new PillSheet document id
   PillSheetGroup register(WriteBatch batch, PillSheetGroup pillSheetGroup) {
-    if (pillSheetGroup.createdAt != null) throw PillSheetGroupAlreadyExists();
     if (pillSheetGroup.deletedAt != null) throw PillSheetGroupAlreadyDeleted();
 
     final copied = pillSheetGroup.copyWith(createdAt: DateTime.now());

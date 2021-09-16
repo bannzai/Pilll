@@ -9,6 +9,7 @@ import 'package:pilll/entity/setting.dart';
 import 'package:pilll/entity/user.dart';
 import 'package:pilll/service/day.dart';
 import 'package:pilll/domain/menstruation/menstruation_store.dart';
+import 'package:pilll/util/datetime/day.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import '../../helper/delay.dart';
@@ -111,7 +112,8 @@ void main() {
             .thenAnswer((reaInvocation) => Future.value(_FakeUser()));
         when(userService.subscribe())
             .thenAnswer((realInvocation) => Stream.empty());
-        final pillSheetGroup = PillSheetGroup(pillSheetIDs: [], pillSheets: []);
+        final pillSheetGroup =
+            PillSheetGroup(pillSheetIDs: [], pillSheets: [], createdAt: now());
 
         final pillSheetGroupService = MockPillSheetGroupService();
         when(pillSheetGroupService.fetchLatest())
@@ -193,7 +195,8 @@ void main() {
         when(userService.subscribe())
             .thenAnswer((realInvocation) => Stream.empty());
 
-        final pillSheetGroup = PillSheetGroup(pillSheetIDs: [], pillSheets: []);
+        final pillSheetGroup =
+            PillSheetGroup(pillSheetIDs: [], pillSheets: [], createdAt: now());
 
         final pillSheetGroupService = MockPillSheetGroupService();
         when(pillSheetGroupService.fetchLatest())
@@ -263,14 +266,16 @@ void main() {
         when(userService.subscribe())
             .thenAnswer((realInvocation) => Stream.empty());
 
-        final pillSheetGroup = PillSheetGroup(pillSheetIDs: [
-          "1"
-        ], pillSheets: [
-          PillSheet(
-            typeInfo: PillSheetType.pillsheet_21.typeInfo,
-            beginingDate: DateTime(2021, 04, 22),
-          ),
-        ]);
+        final pillSheetGroup = PillSheetGroup(
+          pillSheetIDs: ["1"],
+          pillSheets: [
+            PillSheet(
+              typeInfo: PillSheetType.pillsheet_21.typeInfo,
+              beginingDate: DateTime(2021, 04, 22),
+            ),
+          ],
+          createdAt: now(),
+        );
 
         final pillSheetGroupService = MockPillSheetGroupService();
         when(pillSheetGroupService.fetchLatest())
@@ -351,7 +356,7 @@ void main() {
             typeInfo: PillSheetType.pillsheet_21.typeInfo,
             beginingDate: DateTime(2021, 04, 07),
           ),
-        ]);
+        ], createdAt: now());
         final pillSheetGroupService = MockPillSheetGroupService();
         when(pillSheetGroupService.fetchLatest())
             .thenAnswer((realInvocation) => Future.value(pillSheetGroup));
