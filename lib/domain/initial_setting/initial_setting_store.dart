@@ -136,10 +136,6 @@ class InitialSettingStateStore extends StateNotifier<InitialSettingState> {
     state = state.copyWith(todayPillNumber: null);
   }
 
-  setCurrentMenstruationPageIndex(int pageIndex) {
-    state = state.copyWith(currentMenstruationPageIndex: pageIndex);
-  }
-
   void setFromMenstruation({
     required int pageIndex,
     required int fromMenstruation,
@@ -147,6 +143,12 @@ class InitialSettingStateStore extends StateNotifier<InitialSettingState> {
     final offset = pastedTotalCount(
         pillSheetTypes: state.pillSheetTypes, pageIndex: pageIndex);
     state = state.copyWith(fromMenstruation: fromMenstruation + offset);
+  }
+
+  void pickFromMenstruation({
+    required int serializedPillNumberIntoGroup,
+  }) {
+    state = state.copyWith(fromMenstruation: serializedPillNumberIntoGroup);
   }
 
   void setDurationMenstruation({

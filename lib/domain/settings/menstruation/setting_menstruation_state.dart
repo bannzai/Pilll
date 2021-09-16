@@ -5,7 +5,5 @@ part 'setting_menstruation_state.freezed.dart';
 @freezed
 abstract class SettingMenstruationState implements _$SettingMenstruationState {
   SettingMenstruationState._();
-  factory SettingMenstruationState({
-    @Default(0) currentPageIndex,
-  }) = _SettingMenstruationState;
+  factory SettingMenstruationState() = _SettingMenstruationState;
 }

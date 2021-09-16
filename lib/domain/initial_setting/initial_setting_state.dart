@@ -37,8 +37,6 @@ abstract class InitialSettingState implements _$InitialSettingState {
         bool isLoading,
     @Default(false)
         bool isAccountCooperationDidEnd,
-    @Default(0)
-        currentMenstruationPageIndex,
   }) = _InitialSettingState;
 
   DateTime? reminderTimeOrDefault(int index) {
@@ -129,25 +127,23 @@ abstract class InitialSettingState implements _$InitialSettingState {
       return null;
     }
     final pillSheetType = pillSheetTypes[pageIndex];
-    final pillSheetBeginPillNumber = pageIndex * pillSheetType.totalCount + 1;
-    final pillSheetEndPillNumber =
-        pastedTotalCount(pillSheetTypes: pillSheetTypes, pageIndex: pageIndex) +
-            pillSheetType.totalCount;
-    if (pillSheetBeginPillNumber <= todayPillNumber.pillNumberIntoPillSheet &&
-        todayPillNumber.pillNumberIntoPillSheet <= pillSheetEndPillNumber) {
-      // Between current PillSheet
-      return today().subtract(Duration(days: 1));
-    } else if (todayPillNumber.pillNumberIntoPillSheet <
-        pillSheetEndPillNumber) {
+    if (todayPillNumber.pageIndex < pageIndex) {
       // Right side PillSheet
       return null;
-    } else {
+    } else if (todayPillNumber.pageIndex > pageIndex) {
       // Left side PillSheet
       return _beginingDate(
         pageIndex: pageIndex,
         todayPillNumber: todayPillNumber,
         pillSheetTypes: pillSheetTypes,
       ).add(Duration(days: pillSheetType.totalCount - 1));
+    } else {
+      // Current PillSheet
+      return _beginingDate(
+        pageIndex: pageIndex,
+        todayPillNumber: todayPillNumber,
+        pillSheetTypes: pillSheetTypes,
+      ).add(Duration(days: todayPillNumber.pillNumberIntoPillSheet - 2));
     }
   }
 
@@ -156,5 +152,12 @@ abstract class InitialSettingState implements _$InitialSettingState {
     final reminderTime = reminderTimes[index];
     return DateTime(t.year, t.month, t.day, reminderTime.hour,
         reminderTime.minute, t.second, t.millisecond, t.microsecond);
+  }
+
+  int? selectedTodayPillNumberIntoPillSheet({required int pageIndex}) {
+    if (todayPillNumber?.pageIndex != pageIndex) {
+      return null;
+    }
+    return todayPillNumber?.pillNumberIntoPillSheet;
   }
 }

@@ -22,8 +22,8 @@ class PillSheetRemoveRow extends HookWidget {
           context: context,
           builder: (_) {
             return DiscardDialog(
-                title: "ピルシートを破棄しますか？",
-                message: "現在、服用記録をしているピルシートを削除します。",
+                title: "${store.pillSheetWord}を破棄しますか？",
+                message: "現在、服用記録をしている${store.pillSheetWord}を削除します。",
                 doneButtonText: "破棄する",
                 done: () {
                   store.deletePillSheet().catchError((error) {
