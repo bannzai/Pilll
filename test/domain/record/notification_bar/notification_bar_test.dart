@@ -58,7 +58,7 @@ void main() {
           ),
         );
         var state = NotificationBarState(
-          pillSheet: pillSheet,
+          activedPillSheet: pillSheet,
           totalCountOfActionForTakenPill:
               totalCountOfActionForTakenPillForLongTimeUser,
           isPremium: false,
@@ -114,7 +114,7 @@ void main() {
           ),
         );
         var state = NotificationBarState(
-          pillSheet: pillSheet,
+          activedPillSheet: pillSheet,
           totalCountOfActionForTakenPill:
               totalCountOfActionForTakenPillForLongTimeUser,
           isPremium: false,
@@ -169,7 +169,7 @@ void main() {
           ),
         );
         var state = NotificationBarState(
-          pillSheet: pillSheet,
+          activedPillSheet: pillSheet,
           totalCountOfActionForTakenPill:
               totalCountOfActionForTakenPillForLongTimeUser,
           isPremium: false,
@@ -223,7 +223,7 @@ void main() {
           ),
         );
         var state = NotificationBarState(
-          pillSheet: pillSheet,
+          activedPillSheet: pillSheet,
           totalCountOfActionForTakenPill:
               totalCountOfActionForTakenPillForLongTimeUser,
           isPremium: false,
@@ -279,7 +279,7 @@ void main() {
           ),
         );
         var state = NotificationBarState(
-          pillSheet: pillSheet,
+          activedPillSheet: pillSheet,
           totalCountOfActionForTakenPill:
               totalCountOfActionForTakenPillForLongTimeUser,
           isPremium: false,
@@ -336,7 +336,7 @@ void main() {
           ),
         );
         var state = NotificationBarState(
-          pillSheet: pillSheet,
+          activedPillSheet: pillSheet,
           totalCountOfActionForTakenPill:
               totalCountOfActionForTakenPillForLongTimeUser,
           isPremium: true,
@@ -390,7 +390,7 @@ void main() {
           ),
         );
         var state = NotificationBarState(
-          pillSheet: pillSheet,
+          activedPillSheet: pillSheet,
           totalCountOfActionForTakenPill:
               totalCountOfActionForTakenPillForLongTimeUser,
           isPremium: true,

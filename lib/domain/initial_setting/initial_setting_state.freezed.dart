@@ -183,8 +183,8 @@ class _$InitialSettingStateTearOff {
       int fromMenstruation = 23,
       int durationMenstruation = 4,
       List<ReminderTime> reminderTimes = const [
-        const ReminderTime(hour: 21, minute: 0),
-        const ReminderTime(hour: 22, minute: 0)
+        ReminderTime(hour: 21, minute: 0),
+        ReminderTime(hour: 22, minute: 0)
       ],
       bool isOnReminder = true,
       bool isLoading = false,
@@ -413,8 +413,8 @@ class _$_InitialSettingState extends _InitialSettingState {
       this.fromMenstruation = 23,
       this.durationMenstruation = 4,
       this.reminderTimes = const [
-        const ReminderTime(hour: 21, minute: 0),
-        const ReminderTime(hour: 22, minute: 0)
+        ReminderTime(hour: 21, minute: 0),
+        ReminderTime(hour: 22, minute: 0)
       ],
       this.isOnReminder = true,
       this.isLoading = false,
@@ -434,8 +434,8 @@ class _$_InitialSettingState extends _InitialSettingState {
   @override
   final int durationMenstruation;
   @JsonKey(defaultValue: const [
-    const ReminderTime(hour: 21, minute: 0),
-    const ReminderTime(hour: 22, minute: 0)
+    ReminderTime(hour: 21, minute: 0),
+    ReminderTime(hour: 22, minute: 0)
   ])
   @override
   final List<ReminderTime> reminderTimes;
