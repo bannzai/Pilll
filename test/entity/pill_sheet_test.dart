@@ -3,6 +3,7 @@ import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/service/day.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
+import 'package:pilll/util/datetime/day.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 import '../helper/mock.mocks.dart';
@@ -214,14 +215,13 @@ void main() {
       expect(model.isActive, false);
     });
   });
-  group("#isEnded", () {
+  group("#isReached", () {
     test(
         "it is not out of range pattern. today: 2020-09-19, begin: 2020-09-14, end: 2020-09-18",
         () {
       var mockTodayRepository = MockTodayService();
       todayRepository = mockTodayRepository;
-      when(mockTodayRepository.today())
-          .thenReturn(DateTime.parse("2020-09-19"));
+      when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-19"));
 
       var sheetType = PillSheetType.pillsheet_21;
       var model = PillSheet(
@@ -234,15 +234,14 @@ void main() {
           pillSheetTypeReferencePath: sheetType.rawPath,
         ),
       );
-      expect(model.isEnded, false);
+      expect(model.isReached, true);
     });
     test(
-        "it is not out of range pattern. Boundary testing. today: 2020-09-28, begin: 2020-09-01, end: 2020-09-28",
+        "it is not out of range pattern. Boundary testing. now: 2020-09-28, begin: 2020-09-01, end: 2020-09-28",
         () {
       var mockTodayRepository = MockTodayService();
       todayRepository = mockTodayRepository;
-      when(mockTodayRepository.today())
-          .thenReturn(DateTime.parse("2020-09-28"));
+      when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-28"));
 
       var sheetType = PillSheetType.pillsheet_21;
       var model = PillSheet(
@@ -255,15 +254,14 @@ void main() {
           pillSheetTypeReferencePath: sheetType.rawPath,
         ),
       );
-      expect(model.isEnded, false);
+      expect(model.isReached, true);
     });
     test(
-        "it is out of range pattern. Boundary testing. today: 2020-09-29, begin: 2020-09-01, end: 2020-09-28",
+        "it is out of range pattern. Boundary testing. now: 2020-09-29, begin: 2020-09-01, end: 2020-09-28",
         () {
       var mockTodayRepository = MockTodayService();
       todayRepository = mockTodayRepository;
-      when(mockTodayRepository.today())
-          .thenReturn(DateTime.parse("2020-09-29"));
+      when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-29"));
 
       var sheetType = PillSheetType.pillsheet_21;
       var model = PillSheet(
@@ -276,7 +274,27 @@ void main() {
           pillSheetTypeReferencePath: sheetType.rawPath,
         ),
       );
-      expect(model.isEnded, true);
+      expect(model.isReached, true);
+    });
+    test(
+        "it is out of range pattern. now: 2020-06-29, begin: 2020-09-01, end: 2020-09-28",
+        () {
+      var mockTodayRepository = MockTodayService();
+      todayRepository = mockTodayRepository;
+      when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-06-29"));
+
+      var sheetType = PillSheetType.pillsheet_21;
+      var model = PillSheet(
+        beginingDate: DateTime.parse("2020-09-01"),
+        lastTakenDate: DateTime.parse("2020-09-28"),
+        typeInfo: PillSheetTypeInfo(
+          dosingPeriod: sheetType.dosingPeriod,
+          name: sheetType.fullName,
+          totalCount: sheetType.totalCount,
+          pillSheetTypeReferencePath: sheetType.rawPath,
+        ),
+      );
+      expect(model.isReached, false);
     });
   });
 }
