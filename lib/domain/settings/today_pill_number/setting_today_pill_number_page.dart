@@ -61,9 +61,8 @@ class SettingTodayPillNumberPage extends HookWidget {
                         pillSheetTypes: pillSheetGroup.pillSheets
                             .map((e) => e.pillSheetType)
                             .toList(),
-                        selectedPageIndex: state.selectedPillSheetPageIndex,
                         selectedTodayPillNumberIntoPillSheet:
-                            state.selectedPillMarkNumberIntoPillSheet,
+                            state.selectedTodayPillNumberIntoPillSheet,
                         markSelected: (pageIndex, pillNumberIntoPillSheet) =>
                             store.markSelected(
                                 pageIndex: pageIndex,

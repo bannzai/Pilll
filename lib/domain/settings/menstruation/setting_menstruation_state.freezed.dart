@@ -16,10 +16,8 @@ final _privateConstructorUsedError = UnsupportedError(
 class _$SettingMenstruationStateTearOff {
   const _$SettingMenstruationStateTearOff();
 
-  _SettingMenstruationState call({dynamic currentPageIndex = 0}) {
-    return _SettingMenstruationState(
-      currentPageIndex: currentPageIndex,
-    );
+  _SettingMenstruationState call() {
+    return _SettingMenstruationState();
   }
 }
 
@@ -27,20 +25,13 @@ class _$SettingMenstruationStateTearOff {
 const $SettingMenstruationState = _$SettingMenstruationStateTearOff();
 
 /// @nodoc
-mixin _$SettingMenstruationState {
-  dynamic get currentPageIndex => throw _privateConstructorUsedError;
-
-  @JsonKey(ignore: true)
-  $SettingMenstruationStateCopyWith<SettingMenstruationState> get copyWith =>
-      throw _privateConstructorUsedError;
-}
+mixin _$SettingMenstruationState {}
 
 /// @nodoc
 abstract class $SettingMenstruationStateCopyWith<$Res> {
   factory $SettingMenstruationStateCopyWith(SettingMenstruationState value,
           $Res Function(SettingMenstruationState) then) =
       _$SettingMenstruationStateCopyWithImpl<$Res>;
-  $Res call({dynamic currentPageIndex});
 }
 
 /// @nodoc
@@ -51,28 +42,13 @@ class _$SettingMenstruationStateCopyWithImpl<$Res>
   final SettingMenstruationState _value;
   // ignore: unused_field
   final $Res Function(SettingMenstruationState) _then;
-
-  @override
-  $Res call({
-    Object? currentPageIndex = freezed,
-  }) {
-    return _then(_value.copyWith(
-      currentPageIndex: currentPageIndex == freezed
-          ? _value.currentPageIndex
-          : currentPageIndex // ignore: cast_nullable_to_non_nullable
-              as dynamic,
-    ));
-  }
 }
 
 /// @nodoc
-abstract class _$SettingMenstruationStateCopyWith<$Res>
-    implements $SettingMenstruationStateCopyWith<$Res> {
+abstract class _$SettingMenstruationStateCopyWith<$Res> {
   factory _$SettingMenstruationStateCopyWith(_SettingMenstruationState value,
           $Res Function(_SettingMenstruationState) then) =
       __$SettingMenstruationStateCopyWithImpl<$Res>;
-  @override
-  $Res call({dynamic currentPageIndex});
 }
 
 /// @nodoc
@@ -86,63 +62,28 @@ class __$SettingMenstruationStateCopyWithImpl<$Res>
   @override
   _SettingMenstruationState get _value =>
       super._value as _SettingMenstruationState;
-
-  @override
-  $Res call({
-    Object? currentPageIndex = freezed,
-  }) {
-    return _then(_SettingMenstruationState(
-      currentPageIndex: currentPageIndex == freezed
-          ? _value.currentPageIndex
-          : currentPageIndex,
-    ));
-  }
 }
 
 /// @nodoc
 
 class _$_SettingMenstruationState extends _SettingMenstruationState {
-  _$_SettingMenstruationState({this.currentPageIndex = 0}) : super._();
-
-  @JsonKey(defaultValue: 0)
-  @override
-  final dynamic currentPageIndex;
+  _$_SettingMenstruationState() : super._();
 
   @override
   String toString() {
-    return 'SettingMenstruationState(currentPageIndex: $currentPageIndex)';
+    return 'SettingMenstruationState()';
   }
 
   @override
   bool operator ==(dynamic other) {
-    return identical(this, other) ||
-        (other is _SettingMenstruationState &&
-            (identical(other.currentPageIndex, currentPageIndex) ||
-                const DeepCollectionEquality()
-                    .equals(other.currentPageIndex, currentPageIndex)));
+    return identical(this, other) || (other is _SettingMenstruationState);
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(currentPageIndex);
-
-  @JsonKey(ignore: true)
-  @override
-  _$SettingMenstruationStateCopyWith<_SettingMenstruationState> get copyWith =>
-      __$SettingMenstruationStateCopyWithImpl<_SettingMenstruationState>(
-          this, _$identity);
+  int get hashCode => runtimeType.hashCode;
 }
 
 abstract class _SettingMenstruationState extends SettingMenstruationState {
-  factory _SettingMenstruationState({dynamic currentPageIndex}) =
-      _$_SettingMenstruationState;
+  factory _SettingMenstruationState() = _$_SettingMenstruationState;
   _SettingMenstruationState._() : super._();
-
-  @override
-  dynamic get currentPageIndex => throw _privateConstructorUsedError;
-  @override
-  @JsonKey(ignore: true)
-  _$SettingMenstruationStateCopyWith<_SettingMenstruationState> get copyWith =>
-      throw _privateConstructorUsedError;
 }

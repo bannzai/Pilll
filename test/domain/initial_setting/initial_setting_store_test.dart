@@ -554,6 +554,7 @@ void main() {
       final pillSheet2 = PillSheet(
         typeInfo: PillSheetType.pillsheet_21.typeInfo,
         beginingDate: _today,
+        lastTakenDate: _today.subtract(Duration(days: 1)),
         groupIndex: 1,
       );
       final pillSheetService = MockPillSheetService();

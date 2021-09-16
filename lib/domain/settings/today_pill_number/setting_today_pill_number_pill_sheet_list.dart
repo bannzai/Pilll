@@ -8,14 +8,12 @@ import 'package:pilll/entity/pill_sheet_type.dart';
 
 class SettingTodayPillNumberPillSheetList extends HookWidget {
   final List<PillSheetType> pillSheetTypes;
-  final int selectedPageIndex;
-  final int selectedTodayPillNumberIntoPillSheet;
+  final int? Function(int pageIndex) selectedTodayPillNumberIntoPillSheet;
   final Function(int pageIndex, int pillNumberIntoPillSheet) markSelected;
 
   const SettingTodayPillNumberPillSheetList({
     Key? key,
     required this.pillSheetTypes,
-    required this.selectedPageIndex,
     required this.selectedTodayPillNumberIntoPillSheet,
     required this.markSelected,
   }) : super(key: key);
@@ -46,9 +44,8 @@ class SettingTodayPillNumberPillSheetList extends HookWidget {
                     child: SettingPillSheetView(
                       pageIndex: pageIndex,
                       pillSheetTypes: pillSheetTypes,
-                      selectedPillNumberPageIndex: selectedPageIndex,
                       selectedPillNumberIntoPillSheet:
-                          selectedTodayPillNumberIntoPillSheet,
+                          selectedTodayPillNumberIntoPillSheet(pageIndex),
                       markSelected: (pageIndex, number) {
                         analytics.logEvent(
                             name: "selected_today_number_initial_setting",

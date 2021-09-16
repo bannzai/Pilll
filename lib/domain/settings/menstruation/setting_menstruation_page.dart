@@ -15,7 +15,6 @@ class SettingMenstruationPage extends HookWidget {
   @override
   Widget build(BuildContext context) {
     final store = useProvider(settingMenstruationStoreProvider);
-    final state = useProvider(settingMenstruationStoreProvider.state);
     final settingState = useProvider(settingStateProvider);
     final setting = settingState.entity;
     if (setting == null) {
@@ -25,12 +24,8 @@ class SettingMenstruationPage extends HookWidget {
       title: "生理について",
       pillSheetList: SettingMenstruationPillSheetList(
         pillSheetTypes: setting.pillSheetTypes,
-        selectedPillSheetPageIndex: state.currentPageIndex,
         selectedPillNumber: (pageIndex) =>
             store.retrieveMenstruationSelectedPillNumber(setting, pageIndex),
-        onPageChanged: (number) {
-          store.setCurrentPageIndex(number);
-        },
         markSelected: (pageIndex, number) {
           analytics.logEvent(name: "from_menstruation_setting", parameters: {
             "number": number,
@@ -44,15 +39,15 @@ class SettingMenstruationPage extends HookWidget {
         },
       ),
       dynamicDescription: SettingMenstruationDynamicDescription(
+        pillSheetTypes: setting.pillSheetTypes,
         fromMenstruation: setting.pillNumberForFromMenstruation,
         fromMenstructionDidDecide: (number) {
           analytics.logEvent(
               name: "from_menstruation_initial_setting",
               parameters: {"number": number});
-          store.modifyFromMenstruation(
+          store.modifyFromMenstruationFromPicker(
             setting: setting,
-            pageIndex: state.currentPageIndex,
-            fromMenstruation: number,
+            serializedPillNumberIntoGroup: number,
           );
         },
         durationMenstruation: setting.durationMenstruation,
@@ -64,9 +59,6 @@ class SettingMenstruationPage extends HookWidget {
             setting: setting,
             durationMenstruation: number,
           );
-        },
-        retrieveFocusedPillSheetType: () {
-          return setting.pillSheetTypes[state.currentPageIndex];
         },
       ),
       doneButton: null,

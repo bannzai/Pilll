@@ -10,4 +10,11 @@ abstract class SettingTodayPillNumberState
     @Default(0) int selectedPillSheetPageIndex,
     @Default(0) int selectedPillMarkNumberIntoPillSheet,
   }) = _SettingTodayPillNumberState;
+
+  int? selectedTodayPillNumberIntoPillSheet(int pageIndex) {
+    if (selectedPillSheetPageIndex != pageIndex) {
+      return null;
+    }
+    return selectedPillMarkNumberIntoPillSheet;
+  }
 }
