@@ -25,7 +25,6 @@ void main() {
       final widget = SettingPillSheetView(
         pageIndex: 0,
         pillSheetTypes: [pillSheetType],
-        selectedPillNumberPageIndex: 0,
         selectedPillNumberIntoPillSheet: null,
         markSelected: (p, i) => {},
       );
@@ -52,7 +51,6 @@ void main() {
       final widget = SettingPillSheetView(
         pageIndex: 0,
         pillSheetTypes: [pillSheetType],
-        selectedPillNumberPageIndex: 0,
         selectedPillNumberIntoPillSheet: null,
         markSelected: (p, i) => {},
       );
@@ -79,7 +77,6 @@ void main() {
       final widget = SettingPillSheetView(
         pageIndex: 0,
         pillSheetTypes: [pillSheetType],
-        selectedPillNumberPageIndex: 0,
         selectedPillNumberIntoPillSheet: 10,
         markSelected: (p, i) => {},
       );
@@ -105,7 +102,6 @@ void main() {
       final widget = SettingPillSheetView(
         pageIndex: 0,
         pillSheetTypes: [pillSheetType],
-        selectedPillNumberPageIndex: 0,
         selectedPillNumberIntoPillSheet: null,
         markSelected: (p, i) => {},
       );
