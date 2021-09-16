@@ -61,9 +61,7 @@ class InitialSettingMenstruationPage extends HookWidget {
                 "number": number,
                 "page": state.currentMenstruationPageIndex
               });
-          store.setDurationMenstruation(
-              pageIndex: state.currentMenstruationPageIndex,
-              durationMenstruation: number);
+          store.setDurationMenstruation(durationMenstruation: number);
         },
         retrieveFocusedPillSheetType: () {
           return state.pillSheetTypes[state.currentMenstruationPageIndex];
