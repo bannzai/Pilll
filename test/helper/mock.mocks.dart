@@ -96,9 +96,10 @@ class MockPillSheetService extends _i1.Mock implements _i14.PillSheetService {
   }
 
   @override
-  _i2.PillSheet register(_i13.WriteBatch? batch, _i2.PillSheet? model) =>
-      (super.noSuchMethod(Invocation.method(#register, [batch, model]),
-          returnValue: _FakePillSheet()) as _i2.PillSheet);
+  List<_i2.PillSheet> register(
+          _i13.WriteBatch? batch, List<_i2.PillSheet>? pillSheets) =>
+      (super.noSuchMethod(Invocation.method(#register, [batch, pillSheets]),
+          returnValue: <_i2.PillSheet>[]) as List<_i2.PillSheet>);
   @override
   _i2.PillSheet delete(_i13.WriteBatch? batch, _i2.PillSheet? pillSheet) =>
       (super.noSuchMethod(Invocation.method(#delete, [batch, pillSheet]),

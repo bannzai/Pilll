@@ -150,38 +150,32 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
   Future<void> register(Setting setting) async {
     final batch = _batchFactory.batch();
 
-    final Map<String, PillSheet> idAndPillSheet = {};
     final n = now();
+    final createdPillSheets = _pillSheetService.register(
+      batch,
+      setting.pillSheetTypes.asMap().keys.map((pageIndex) {
+        final pillSheetType = setting.pillSheetTypes[pageIndex];
+        final offset = pastedTotalCount(
+            pillSheetTypes: setting.pillSheetTypes, pageIndex: pageIndex);
+        return PillSheet(
+          typeInfo: pillSheetType.typeInfo,
+          beginingDate: n.add(
+            Duration(days: offset),
+          ),
+          groupIndex: pageIndex,
+        );
+      }).toList(),
+    );
 
-    setting.pillSheetTypes.asMap().keys.forEach((pageIndex) {
-      final pillSheetType = setting.pillSheetTypes[pageIndex];
-      final offset = pastedTotalCount(
-          pillSheetTypes: setting.pillSheetTypes, pageIndex: pageIndex);
-      final pillSheet = PillSheet(
-        typeInfo: pillSheetType.typeInfo,
-        beginingDate: n.add(
-          Duration(days: offset),
-        ),
-        groupIndex: pageIndex,
-      );
-
-      final createdPillSheet = _pillSheetService.register(batch, pillSheet);
-      final pillSheetID = createdPillSheet.id;
-      if (pillSheetID == null) {
-        throw FormatException(
-            "ピルシートのIDの登録に失敗しました。しばらく時間をおいてお試しください。解決し無い場合は設定 > お問い合わせからご報告してください");
-      }
-      idAndPillSheet[pillSheetID] = createdPillSheet;
-    });
-
-    final pillSheetIDs = idAndPillSheet.keys.toList();
-    final pillSheets = idAndPillSheet.values.toList();
+    final pillSheetIDs = createdPillSheets.map((e) => e.id!).toList();
     final createdPillSheetGroup = _pillSheetGroupService.register(
-        batch,
-        PillSheetGroup(
-            pillSheetIDs: pillSheetIDs,
-            pillSheets: pillSheets,
-            createdAt: now()));
+      batch,
+      PillSheetGroup(
+        pillSheetIDs: pillSheetIDs,
+        pillSheets: createdPillSheets,
+        createdAt: now(),
+      ),
+    );
 
     final history = PillSheetModifiedHistoryServiceActionFactory
         .createCreatedPillSheetAction(

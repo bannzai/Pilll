@@ -4,7 +4,6 @@ import 'package:pilll/analytics.dart';
 import 'package:pilll/database/batch.dart';
 import 'package:pilll/database/database.dart';
 import 'package:pilll/domain/initial_setting/initial_setting_state.dart';
-import 'package:pilll/entity/pill_sheet.dart';
 import 'package:pilll/entity/pill_sheet_group.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/entity/setting.dart';
@@ -179,27 +178,23 @@ class InitialSettingStateStore extends StateNotifier<InitialSettingState> {
 
     final todayPillNumber = state.todayPillNumber;
     if (todayPillNumber != null) {
-      final Map<String, PillSheet> idAndPillSheet = {};
+      final createdPillSheets = _pillSheetService.register(
+        batch,
+        state.pillSheetTypes.asMap().keys.map((pageIndex) {
+          return InitialSettingState.buildPillSheet(
+            pageIndex: pageIndex,
+            todayPillNumber: todayPillNumber,
+            pillSheetTypes: state.pillSheetTypes,
+          );
+        }).toList(),
+      );
 
-      state.pillSheetTypes.asMap().keys.forEach((pageIndex) {
-        final pillSheet = InitialSettingState.buildPillSheet(
-          pageIndex: pageIndex,
-          todayPillNumber: todayPillNumber,
-          pillSheetTypes: state.pillSheetTypes,
-        );
-        final createdPillSheet = _pillSheetService.register(batch, pillSheet);
-
-        final pillSheetID = createdPillSheet.id!;
-        idAndPillSheet[pillSheetID] = createdPillSheet;
-      });
-
-      final pillSheetIDs = idAndPillSheet.keys.toList();
-      final pillSheets = idAndPillSheet.values.toList();
+      final pillSheetIDs = createdPillSheets.map((e) => e.id!).toList();
       final createdPillSheetGroup = _pillSheetGroupService.register(
         batch,
         PillSheetGroup(
           pillSheetIDs: pillSheetIDs,
-          pillSheets: pillSheets,
+          pillSheets: createdPillSheets,
           createdAt: now(),
         ),
       );

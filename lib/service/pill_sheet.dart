@@ -12,16 +12,20 @@ class PillSheetService {
   PillSheetService(this._database);
 
   // Return new PillSheet document id
-  PillSheet register(WriteBatch batch, PillSheet model) {
-    if (model.createdAt != null) throw PillSheetAlreadyExists();
-    if (model.deletedAt != null) throw PillSheetAlreadyDeleted();
-    final copied = model.copyWith(createdAt: DateTime.now());
+  List<PillSheet> register(WriteBatch batch, List<PillSheet> pillSheets) {
+    final List<PillSheet> newPillSheets = [];
+    pillSheets.forEach((pillSheet) {
+      if (pillSheet.createdAt != null) throw PillSheetAlreadyExists();
+      if (pillSheet.deletedAt != null) throw PillSheetAlreadyDeleted();
+      final copied = pillSheet.copyWith(createdAt: DateTime.now());
 
-    final document = _database.pillSheetsReference().doc();
-    var json = copied.toJson();
-    batch.set(document, json, SetOptions(merge: true));
+      final document = _database.pillSheetsReference().doc();
+      var json = copied.toJson();
+      batch.set(document, json, SetOptions(merge: true));
 
-    return copied.copyWith(id: document.id);
+      newPillSheets.add(copied.copyWith(id: document.id));
+    });
+    return newPillSheets;
   }
 
   PillSheet delete(WriteBatch batch, PillSheet pillSheet) {
