@@ -35,9 +35,11 @@ class PillSheetService {
     return updated;
   }
 
-  update(WriteBatch batch, PillSheet pillSheet) {
-    var json = pillSheet.toJson();
-    batch.update(_database.pillSheetReference(pillSheet.documentID!), json);
+  update(WriteBatch batch, List<PillSheet> pillSheets) {
+    pillSheets.forEach((pillSheet) {
+      final json = pillSheet.toJson();
+      batch.update(_database.pillSheetReference(pillSheet.documentID!), json);
+    });
   }
 }
 

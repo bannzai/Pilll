@@ -68,36 +68,34 @@ Future<PillSheetGroup?> take({
 
   final batch = batchFactory.batch();
 
-  final List<PillSheet> updatedPillSheets = pillSheetGroup.pillSheets;
-  pillSheetGroup.pillSheets.asMap().keys.forEach((index) {
-    final pillSheet = pillSheetGroup.pillSheets[index];
+  final updatedPillSheets = pillSheetGroup.pillSheets.where((pillSheet) {
     if (pillSheet.groupIndex > activedPillSheet.groupIndex) {
-      return;
+      return false;
     }
     if (pillSheet.isFill) {
-      return;
+      return false;
     }
-
+    return true;
+  }).map((pillSheet) {
     final scheduledLastTakenDate = pillSheet.beginingDate
         .add(Duration(days: pillSheet.pillSheetType.totalCount - 1));
-    final PillSheet updatedPillSheet;
     if (takenDate.isAfter(scheduledLastTakenDate)) {
-      updatedPillSheet =
-          pillSheet.copyWith(lastTakenDate: scheduledLastTakenDate);
+      return pillSheet.copyWith(lastTakenDate: scheduledLastTakenDate);
     } else {
-      updatedPillSheet = pillSheet.copyWith(lastTakenDate: takenDate);
+      return pillSheet.copyWith(lastTakenDate: takenDate);
     }
-    pillSheetService.update(batch, updatedPillSheet);
-    updatedPillSheets[index] = updatedPillSheet;
+  }).toList();
+  if (updatedPillSheets.isEmpty) {
+    return null;
+  }
 
-    final history =
-        PillSheetModifiedHistoryServiceActionFactory.createTakenPillAction(
-      pillSheetGroupID: pillSheetGroup.id,
-      before: activedPillSheet,
-      after: updatedPillSheet,
-    );
-    pillSheetModifiedHistoryService.add(batch, history);
-  });
+  final history =
+      PillSheetModifiedHistoryServiceActionFactory.createTakenPillAction(
+    pillSheetGroupID: pillSheetGroup.id,
+    before: updatedPillSheets.first,
+    after: updatedPillSheets.last,
+  );
+  pillSheetModifiedHistoryService.add(batch, history);
 
   final updatedPillSheetGroup =
       pillSheetGroup.copyWith(pillSheets: updatedPillSheets);

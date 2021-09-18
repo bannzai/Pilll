@@ -81,7 +81,7 @@ class SettingTodayPillNumberStateStore
       final updatedPillSheet = pillSheet.copyWith(
         beginingDate: pillSheet.beginingDate.subtract(Duration(days: distance)),
       );
-      _pillSheetService.update(batch, updatedPillSheet);
+      _pillSheetService.update(batch, [updatedPillSheet]);
       updatedPillSheets.add(updatedPillSheet);
     });
 
