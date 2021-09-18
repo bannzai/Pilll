@@ -25,6 +25,7 @@ Future<void> effectAfterTaken({
   }
   try {
     await _taken;
+    FlutterAppBadger.removeBadge();
     _requestInAppReview();
     await showReleaseNotePreDialog(context);
   } catch (exception, stack) {
@@ -64,8 +65,6 @@ Future<PillSheetGroup?> take({
       activedPillSheet.lastTakenPillNumber) {
     return null;
   }
-
-  FlutterAppBadger.removeBadge();
 
   final batch = batchFactory.batch();
 

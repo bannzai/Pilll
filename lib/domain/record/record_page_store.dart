@@ -1,6 +1,7 @@
 import 'dart:io' show Platform;
 import 'dart:async';
 
+import 'package:flutter_app_badger/flutter_app_badger.dart';
 import 'package:pilll/database/batch.dart';
 import 'package:pilll/domain/record/util/take.dart';
 import 'package:pilll/entity/pill_mark_type.dart';
