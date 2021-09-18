@@ -1,6 +1,4 @@
 import 'package:pilll/database/batch.dart';
-import 'package:pilll/domain/initial_setting/initial_setting_state.dart';
-import 'package:pilll/domain/initial_setting/initial_setting_store.dart';
 import 'package:pilll/domain/record/record_page_store.dart';
 import 'package:pilll/entity/pill_sheet.dart';
 import 'package:pilll/entity/pill_sheet_group.dart';
@@ -28,6 +26,88 @@ void main() {
     SharedPreferences.setMockInitialValues({});
   });
   group("#register", () {
+    test("group has only one pill sheet", () {
+      var mockTodayRepository = MockTodayService();
+      final _today = DateTime.parse("2020-09-19");
+      todayRepository = mockTodayRepository;
+      when(mockTodayRepository.today()).thenReturn(_today);
+      when(mockTodayRepository.now()).thenReturn(_today);
+
+      final batchFactory = MockBatchFactory();
+      final batch = MockWriteBatch();
+      when(batchFactory.batch()).thenReturn(batch);
+      final authService = MockAuthService();
+      when(authService.subscribe())
+          .thenAnswer((realInvocation) => Stream.empty());
+
+      final pillSheet = PillSheet(
+        typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
+        beginingDate: _today,
+        groupIndex: 0,
+        lastTakenDate: null,
+      );
+      final pillSheetService = MockPillSheetService();
+      when(pillSheetService.register(batch, [pillSheet])).thenReturn([
+        pillSheet.copyWith(id: "sheet_id"),
+      ]);
+
+      final pillSheetGroup = PillSheetGroup(
+        pillSheetIDs: ["sheet_id"],
+        pillSheets: [
+          pillSheet.copyWith(id: "sheet_id"),
+        ],
+        createdAt: now(),
+      );
+      final pillSheetGroupService = MockPillSheetGroupService();
+      when(pillSheetGroupService.register(batch, pillSheetGroup))
+          .thenReturn(pillSheetGroup.copyWith(id: "group_id"));
+
+      final history = PillSheetModifiedHistoryServiceActionFactory
+          .createCreatedPillSheetAction(
+              pillSheetGroupID: "group_id", pillSheetIDs: ["sheet_id"]);
+      final pillSheetModifiedHistoryService =
+          MockPillSheetModifiedHistoryService();
+      when(pillSheetModifiedHistoryService.add(batch, history))
+          .thenReturn(null);
+
+      final setting = Setting(
+        pillNumberForFromMenstruation: 22,
+        durationMenstruation: 3,
+        isOnReminder: true,
+        reminderTimes: [
+          ReminderTime(hour: 21, minute: 20),
+          ReminderTime(hour: 22, minute: 0)
+        ],
+        pillSheetTypes: [
+          PillSheetType.pillsheet_28_0,
+        ],
+      );
+      final settingService = MockSettingService();
+      when(settingService.fetch())
+          .thenAnswer((realInvocation) async => setting);
+      when(settingService.updateWithBatch(batch, setting)).thenReturn(null);
+
+      final user = User();
+      final userService = MockUserService();
+      when(userService.fetch()).thenAnswer((realInvocation) async => user);
+
+      final container = ProviderContainer(
+        overrides: [
+          batchFactoryProvider.overrideWithValue(batchFactory),
+          authServiceProvider.overrideWithValue(authService),
+          settingServiceProvider.overrideWithValue(settingService),
+          pillSheetServiceProvider.overrideWithValue(pillSheetService),
+          pillSheetModifiedHistoryServiceProvider
+              .overrideWithValue(pillSheetModifiedHistoryService),
+          pillSheetGroupServiceProvider
+              .overrideWithValue(pillSheetGroupService),
+          userServiceProvider.overrideWithValue(userService),
+        ],
+      );
+      final store = container.read(recordPageStoreProvider);
+
+      store.register(setting);
+    });
     test("group has two pill sheet", () {
       var mockTodayRepository = MockTodayService();
       final _today = DateTime.parse("2020-09-19");
