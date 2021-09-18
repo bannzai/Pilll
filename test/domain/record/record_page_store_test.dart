@@ -1,3 +1,4 @@
+import 'dart:async';
 import 'package:pilll/database/batch.dart';
 import 'package:pilll/domain/record/record_page_store.dart';
 import 'package:pilll/entity/pill_sheet.dart';
@@ -200,6 +201,109 @@ void main() {
       final store = container.read(recordPageStoreProvider);
 
       store.register(setting);
+    });
+  });
+  group("#take", () {
+    test("group has only one pill sheet", () async {
+      var mockTodayRepository = MockTodayService();
+      final _today = DateTime.parse("2020-09-19");
+      todayRepository = mockTodayRepository;
+      when(mockTodayRepository.today()).thenReturn(_today);
+      when(mockTodayRepository.now()).thenReturn(_today);
+
+      final batchFactory = MockBatchFactory();
+      final batch = MockWriteBatch();
+      when(batchFactory.batch()).thenReturn(batch);
+      final authService = MockAuthService();
+      when(authService.isLinkedApple()).thenReturn(false);
+      when(authService.isLinkedGoogle()).thenReturn(false);
+      when(authService.subscribe())
+          .thenAnswer((realInvocation) => Stream.empty());
+
+      final pillSheet = PillSheet(
+        id: "sheet_id",
+        typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
+        beginingDate: _today,
+        groupIndex: 0,
+        lastTakenDate: null,
+      );
+      final pillSheetService = MockPillSheetService();
+      when(pillSheetService.update(
+          batch, [pillSheet.copyWith(lastTakenDate: _today)])).thenReturn([
+        pillSheet,
+      ]);
+
+      final pillSheetGroup = PillSheetGroup(
+        id: "group_id",
+        pillSheetIDs: ["sheet_id"],
+        pillSheets: [
+          pillSheet.copyWith(lastTakenDate: _today),
+        ],
+        createdAt: now(),
+      );
+      final pillSheetGroupService = MockPillSheetGroupService();
+      when(pillSheetGroupService.fetchLatest())
+          .thenAnswer((realInvocation) async => pillSheetGroup);
+      when(pillSheetGroupService.subscribeForLatest())
+          .thenAnswer((realInvocation) => Stream.empty());
+      when(pillSheetGroupService.update(batch, pillSheetGroup))
+          .thenReturn(pillSheetGroup);
+
+      final history =
+          PillSheetModifiedHistoryServiceActionFactory.createTakenPillAction(
+        pillSheetGroupID: "group_id",
+        before: pillSheet,
+        after: pillSheet.copyWith(
+          lastTakenDate: _today,
+        ),
+      );
+      final pillSheetModifiedHistoryService =
+          MockPillSheetModifiedHistoryService();
+      when(pillSheetModifiedHistoryService.add(batch, history))
+          .thenReturn(null);
+
+      final setting = Setting(
+        pillNumberForFromMenstruation: 22,
+        durationMenstruation: 3,
+        isOnReminder: true,
+        reminderTimes: [
+          ReminderTime(hour: 21, minute: 20),
+          ReminderTime(hour: 22, minute: 0)
+        ],
+        pillSheetTypes: [
+          PillSheetType.pillsheet_28_0,
+        ],
+      );
+      final settingService = MockSettingService();
+      when(settingService.fetch())
+          .thenAnswer((realInvocation) async => setting);
+      when(settingService.subscribe())
+          .thenAnswer((realInvocation) => Stream.empty());
+      when(settingService.updateWithBatch(batch, setting)).thenReturn(null);
+
+      final user = User();
+      final userService = MockUserService();
+      when(userService.subscribe())
+          .thenAnswer((realInvocation) => Stream.empty());
+      when(userService.fetch()).thenAnswer((realInvocation) async => user);
+
+      final container = ProviderContainer(
+        overrides: [
+          batchFactoryProvider.overrideWithValue(batchFactory),
+          authServiceProvider.overrideWithValue(authService),
+          settingServiceProvider.overrideWithValue(settingService),
+          pillSheetServiceProvider.overrideWithValue(pillSheetService),
+          pillSheetModifiedHistoryServiceProvider
+              .overrideWithValue(pillSheetModifiedHistoryService),
+          pillSheetGroupServiceProvider
+              .overrideWithValue(pillSheetGroupService),
+          userServiceProvider.overrideWithValue(userService),
+        ],
+      );
+      final store = container.read(recordPageStoreProvider);
+
+      await Future.delayed(Duration(seconds: 1));
+      await Future.microtask(() => store.taken());
     });
   });
 }

@@ -92,7 +92,7 @@ Future<PillSheetGroup?> take({
   final history =
       PillSheetModifiedHistoryServiceActionFactory.createTakenPillAction(
     pillSheetGroupID: pillSheetGroup.id,
-    before: updatedPillSheets.first,
+    before: activedPillSheet,
     after: updatedPillSheets.last,
   );
   pillSheetModifiedHistoryService.add(batch, history);
