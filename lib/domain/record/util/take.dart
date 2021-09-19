@@ -68,15 +68,13 @@ Future<PillSheetGroup?> take({
 
   final batch = batchFactory.batch();
 
-  final updatedPillSheets = pillSheetGroup.pillSheets.where((pillSheet) {
+  final updatedPillSheets = pillSheetGroup.pillSheets.map((pillSheet) {
     if (pillSheet.groupIndex > activedPillSheet.groupIndex) {
-      return false;
+      return pillSheet;
     }
     if (pillSheet.isFill) {
-      return false;
+      return pillSheet;
     }
-    return true;
-  }).map((pillSheet) {
     final scheduledLastTakenDate = pillSheet.beginingDate
         .add(Duration(days: pillSheet.pillSheetType.totalCount - 1));
     if (takenDate.isAfter(scheduledLastTakenDate)) {
@@ -85,9 +83,6 @@ Future<PillSheetGroup?> take({
       return pillSheet.copyWith(lastTakenDate: takenDate);
     }
   }).toList();
-  if (updatedPillSheets.isEmpty) {
-    return null;
-  }
 
   pillSheetService.update(
     batch,
@@ -126,4 +121,6 @@ Future<PillSheetGroup?> take({
   pillSheetGroupService.update(batch, updatedPillSheetGroup);
 
   await batch.commit();
+
+  return updatedPillSheetGroup;
 }

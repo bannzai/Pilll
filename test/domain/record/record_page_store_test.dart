@@ -257,6 +257,14 @@ void main() {
         id: "group_id",
         pillSheetIDs: ["sheet_id"],
         pillSheets: [
+          pillSheet,
+        ],
+        createdAt: now(),
+      );
+      final updatedPillSheetGroup = PillSheetGroup(
+        id: "group_id",
+        pillSheetIDs: ["sheet_id"],
+        pillSheets: [
           pillSheet.copyWith(lastTakenDate: _today),
         ],
         createdAt: now(),
@@ -266,8 +274,8 @@ void main() {
           .thenAnswer((realInvocation) async => pillSheetGroup);
       when(pillSheetGroupService.subscribeForLatest())
           .thenAnswer((realInvocation) => Stream.empty());
-      when(pillSheetGroupService.update(batch, pillSheetGroup))
-          .thenReturn(pillSheetGroup);
+      when(pillSheetGroupService.update(batch, updatedPillSheetGroup))
+          .thenReturn(null);
 
       final history =
           PillSheetModifiedHistoryServiceActionFactory.createTakenPillAction(
@@ -357,11 +365,21 @@ void main() {
         lastTakenDate: null,
       );
       final pillSheetService = MockPillSheetService();
-      when(pillSheetService.update(
-              batch, [pillSheet.copyWith(lastTakenDate: _today), pillSheet2]))
-          .thenReturn(null);
+      when(pillSheetService.update(batch, [
+        pillSheet.copyWith(lastTakenDate: _today),
+        pillSheet2,
+      ])).thenReturn(null);
 
       final pillSheetGroup = PillSheetGroup(
+        id: "group_id",
+        pillSheetIDs: ["sheet_id", "sheet_id_2"],
+        pillSheets: [
+          pillSheet,
+          pillSheet2,
+        ],
+        createdAt: now(),
+      );
+      final updatedPillSheetGroup = PillSheetGroup(
         id: "group_id",
         pillSheetIDs: ["sheet_id", "sheet_id_2"],
         pillSheets: [
@@ -375,8 +393,8 @@ void main() {
           .thenAnswer((realInvocation) async => pillSheetGroup);
       when(pillSheetGroupService.subscribeForLatest())
           .thenAnswer((realInvocation) => Stream.empty());
-      when(pillSheetGroupService.update(batch, pillSheetGroup))
-          .thenReturn(pillSheetGroup);
+      when(pillSheetGroupService.update(batch, updatedPillSheetGroup))
+          .thenReturn(null);
 
       final history =
           PillSheetModifiedHistoryServiceActionFactory.createTakenPillAction(
@@ -477,6 +495,15 @@ void main() {
         pillSheetIDs: ["sheet_id", "sheet_id_2"],
         pillSheets: [
           pillSheet,
+          pillSheet2,
+        ],
+        createdAt: now(),
+      );
+      final updatedPillSheetGroup = PillSheetGroup(
+        id: "group_id",
+        pillSheetIDs: ["sheet_id", "sheet_id_2"],
+        pillSheets: [
+          pillSheet,
           pillSheet2.copyWith(lastTakenDate: _today),
         ],
         createdAt: now(),
@@ -486,8 +513,8 @@ void main() {
           .thenAnswer((realInvocation) async => pillSheetGroup);
       when(pillSheetGroupService.subscribeForLatest())
           .thenAnswer((realInvocation) => Stream.empty());
-      when(pillSheetGroupService.update(batch, pillSheetGroup))
-          .thenReturn(pillSheetGroup);
+      when(pillSheetGroupService.update(batch, updatedPillSheetGroup))
+          .thenReturn(null);
 
       final history =
           PillSheetModifiedHistoryServiceActionFactory.createTakenPillAction(
@@ -588,19 +615,29 @@ void main() {
         id: "group_id",
         pillSheetIDs: ["sheet_id", "sheet_id_2"],
         pillSheets: [
+          pillSheet,
+          pillSheet2,
+        ],
+        createdAt: now(),
+      );
+      final updatedPillSheetGroup = PillSheetGroup(
+        id: "group_id",
+        pillSheetIDs: ["sheet_id", "sheet_id_2"],
+        pillSheets: [
           pillSheet.copyWith(
               lastTakenDate: _today.subtract(Duration(days: 28))),
           pillSheet2.copyWith(lastTakenDate: _today),
         ],
         createdAt: now(),
       );
+
       final pillSheetGroupService = MockPillSheetGroupService();
       when(pillSheetGroupService.fetchLatest())
           .thenAnswer((realInvocation) async => pillSheetGroup);
       when(pillSheetGroupService.subscribeForLatest())
           .thenAnswer((realInvocation) => Stream.empty());
-      when(pillSheetGroupService.update(batch, pillSheetGroup))
-          .thenReturn(pillSheetGroup);
+      when(pillSheetGroupService.update(batch, updatedPillSheetGroup))
+          .thenReturn(null);
 
       final history =
           PillSheetModifiedHistoryServiceActionFactory.createTakenPillAction(
