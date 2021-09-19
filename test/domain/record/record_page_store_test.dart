@@ -27,7 +27,7 @@ void main() {
     SharedPreferences.setMockInitialValues({});
   });
   group("#register", () {
-    test("group has only one pill sheet", () {
+    test("group has only one pill sheet", () async {
       var mockTodayRepository = MockTodayService();
       final _today = DateTime.parse("2020-09-19");
       todayRepository = mockTodayRepository;
@@ -38,6 +38,8 @@ void main() {
       final batch = MockWriteBatch();
       when(batchFactory.batch()).thenReturn(batch);
       final authService = MockAuthService();
+      when(authService.isLinkedApple()).thenReturn(false);
+      when(authService.isLinkedGoogle()).thenReturn(false);
       when(authService.subscribe())
           .thenAnswer((realInvocation) => Stream.empty());
 
@@ -60,6 +62,10 @@ void main() {
         createdAt: now(),
       );
       final pillSheetGroupService = MockPillSheetGroupService();
+      when(pillSheetGroupService.fetchLatest())
+          .thenAnswer((realInvocation) async => pillSheetGroup);
+      when(pillSheetGroupService.subscribeForLatest())
+          .thenAnswer((realInvocation) => Stream.empty());
       when(pillSheetGroupService.register(batch, pillSheetGroup))
           .thenReturn(pillSheetGroup.copyWith(id: "group_id"));
 
@@ -86,10 +92,14 @@ void main() {
       final settingService = MockSettingService();
       when(settingService.fetch())
           .thenAnswer((realInvocation) async => setting);
+      when(settingService.subscribe())
+          .thenAnswer((realInvocation) => Stream.empty());
       when(settingService.updateWithBatch(batch, setting)).thenReturn(null);
 
       final user = User();
       final userService = MockUserService();
+      when(userService.subscribe())
+          .thenAnswer((realInvocation) => Stream.empty());
       when(userService.fetch()).thenAnswer((realInvocation) async => user);
 
       final container = ProviderContainer(
@@ -107,9 +117,10 @@ void main() {
       );
       final store = container.read(recordPageStoreProvider);
 
+      await Future.delayed(Duration(seconds: 1));
       store.register(setting);
     });
-    test("group has two pill sheet", () {
+    test("group has two pill sheet", () async {
       var mockTodayRepository = MockTodayService();
       final _today = DateTime.parse("2020-09-19");
       todayRepository = mockTodayRepository;
@@ -120,6 +131,8 @@ void main() {
       final batch = MockWriteBatch();
       when(batchFactory.batch()).thenReturn(batch);
       final authService = MockAuthService();
+      when(authService.isLinkedApple()).thenReturn(false);
+      when(authService.isLinkedGoogle()).thenReturn(false);
       when(authService.subscribe())
           .thenAnswer((realInvocation) => Stream.empty());
 
@@ -151,6 +164,10 @@ void main() {
         createdAt: now(),
       );
       final pillSheetGroupService = MockPillSheetGroupService();
+      when(pillSheetGroupService.fetchLatest())
+          .thenAnswer((realInvocation) async => pillSheetGroup);
+      when(pillSheetGroupService.subscribeForLatest())
+          .thenAnswer((realInvocation) => Stream.empty());
       when(pillSheetGroupService.register(batch, pillSheetGroup))
           .thenReturn(pillSheetGroup.copyWith(id: "group_id"));
 
@@ -179,10 +196,14 @@ void main() {
       final settingService = MockSettingService();
       when(settingService.fetch())
           .thenAnswer((realInvocation) async => setting);
+      when(settingService.subscribe())
+          .thenAnswer((realInvocation) => Stream.empty());
       when(settingService.updateWithBatch(batch, setting)).thenReturn(null);
 
       final user = User();
       final userService = MockUserService();
+      when(userService.subscribe())
+          .thenAnswer((realInvocation) => Stream.empty());
       when(userService.fetch()).thenAnswer((realInvocation) async => user);
 
       final container = ProviderContainer(
@@ -200,6 +221,7 @@ void main() {
       );
       final store = container.read(recordPageStoreProvider);
 
+      await Future.delayed(Duration(seconds: 1));
       store.register(setting);
     });
   });
@@ -303,7 +325,7 @@ void main() {
       final store = container.read(recordPageStoreProvider);
 
       await Future.delayed(Duration(seconds: 1));
-      await Future.microtask(() => store.taken());
+      store.taken();
     });
   });
 }
