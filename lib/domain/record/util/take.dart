@@ -84,41 +84,34 @@ Future<PillSheetGroup?> take({
     }
   }).toList();
 
+  final updatedPillSheetGroup =
+      pillSheetGroup.copyWith(pillSheets: updatedPillSheets);
+  pillSheetGroupService.update(batch, updatedPillSheetGroup);
+
+  final updatedIndexses = pillSheetGroup.pillSheets.asMap().keys.where(
+        (index) =>
+            pillSheetGroup.pillSheets[index] !=
+            updatedPillSheetGroup.pillSheets[index],
+      );
+
+  if (updatedIndexses.isEmpty) {
+    return null;
+  }
+
   pillSheetService.update(
     batch,
     updatedPillSheets,
   );
 
-  final notFillInPastPillSheets = pillSheetGroup.pillSheets.where((pillSheet) {
-    if (!pillSheet.isReached) {
-      return false;
-    }
-    if (pillSheet.isFill) {
-      return false;
-    }
-    if (pillSheet.groupIndex < activedPillSheet.groupIndex) {
-      return true;
-    }
-    return false;
-  });
-  final PillSheet before;
-  if (notFillInPastPillSheets.isEmpty) {
-    before = activedPillSheet;
-  } else {
-    before = notFillInPastPillSheets.first;
-  }
-
+  final before = pillSheetGroup.pillSheets[updatedIndexses.first];
+  final after = updatedPillSheetGroup.pillSheets[updatedIndexses.last];
   final history =
       PillSheetModifiedHistoryServiceActionFactory.createTakenPillAction(
     pillSheetGroupID: pillSheetGroup.id,
     before: before,
-    after: updatedPillSheets.last,
+    after: after,
   );
   pillSheetModifiedHistoryService.add(batch, history);
-
-  final updatedPillSheetGroup =
-      pillSheetGroup.copyWith(pillSheets: updatedPillSheets);
-  pillSheetGroupService.update(batch, updatedPillSheetGroup);
 
   await batch.commit();
 
