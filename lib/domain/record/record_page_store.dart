@@ -189,7 +189,7 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
     return batch.commit();
   }
 
-  Future<dynamic>? _take(DateTime takenDate) async {
+  Future<bool> _take(DateTime takenDate) async {
     final pillSheetGroup = state.pillSheetGroup;
     if (pillSheetGroup == null) {
       throw FormatException("pill sheet group not found");
@@ -200,7 +200,7 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
     }
     if (activedPillSheet.todayPillNumber ==
         activedPillSheet.lastTakenPillNumber) {
-      return null;
+      return false;
     }
     final updatedPillSheetGroup = await take(
       takenDate: takenDate,
@@ -212,33 +212,34 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
       pillSheetGroupService: _pillSheetGroupService,
     );
     if (updatedPillSheetGroup == null) {
-      return null;
+      return false;
     }
     state = state.copyWith(pillSheetGroup: updatedPillSheetGroup);
+    return true;
   }
 
-  Future<void>? taken() {
+  Future<bool> taken() {
     return _take(now());
   }
 
-  Future<void>? takenWithPillNumber({
+  Future<bool> takenWithPillNumber({
     required int pillNumberIntoPillSheet,
     required PillSheet pillSheet,
   }) async {
     final activedPillSheet = state.pillSheetGroup?.activedPillSheet;
     if (activedPillSheet == null) {
-      return null;
+      return false;
     }
     if (activedPillSheet.id != pillSheet.id) {
-      return null;
+      return false;
     }
     if (pillNumberIntoPillSheet <= activedPillSheet.lastTakenPillNumber) {
-      return null;
+      return false;
     }
     var diff = activedPillSheet.todayPillNumber - pillNumberIntoPillSheet;
     if (diff < 0) {
       // This is in the future pill number.
-      return null;
+      return false;
     }
     var takenDate = now().subtract(Duration(days: diff));
     return _take(takenDate);
@@ -266,7 +267,7 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
 
     final updatedPillSheet = activedPillSheet.copyWith(
         lastTakenDate: lastTakenDate.subtract(Duration(days: 1)));
-    _pillSheetService.update(batch, updatedPillSheet);
+    _pillSheetService.update(batch, [updatedPillSheet]);
 
     final history = PillSheetModifiedHistoryServiceActionFactory
         .createRevertTakenPillAction(

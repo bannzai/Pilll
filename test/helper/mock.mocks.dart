@@ -105,8 +105,8 @@ class MockPillSheetService extends _i1.Mock implements _i14.PillSheetService {
       (super.noSuchMethod(Invocation.method(#delete, [batch, pillSheet]),
           returnValue: _FakePillSheet()) as _i2.PillSheet);
   @override
-  dynamic update(_i13.WriteBatch? batch, _i2.PillSheet? pillSheet) =>
-      super.noSuchMethod(Invocation.method(#update, [batch, pillSheet]));
+  dynamic update(_i13.WriteBatch? batch, List<_i2.PillSheet>? pillSheets) =>
+      super.noSuchMethod(Invocation.method(#update, [batch, pillSheets]));
 }
 
 /// A class which mocks [TodayService].
@@ -439,18 +439,18 @@ class MockRecordPageStore extends _i1.Mock implements _i25.RecordPageStore {
           returnValue: Future<void>.value(),
           returnValueForMissingStub: Future.value()) as _i17.Future<void>);
   @override
-  _i17.Future<void>? taken() =>
+  _i17.Future<bool> taken() =>
       (super.noSuchMethod(Invocation.method(#taken, []),
-          returnValueForMissingStub: Future.value()) as _i17.Future<void>?);
+          returnValue: Future<bool>.value(false)) as _i17.Future<bool>);
   @override
-  _i17.Future<void>? takenWithPillNumber(
+  _i17.Future<bool> takenWithPillNumber(
           {int? pillNumberIntoPillSheet, _i2.PillSheet? pillSheet}) =>
       (super.noSuchMethod(
           Invocation.method(#takenWithPillNumber, [], {
             #pillNumberIntoPillSheet: pillNumberIntoPillSheet,
             #pillSheet: pillSheet
           }),
-          returnValueForMissingStub: Future.value()) as _i17.Future<void>?);
+          returnValue: Future<bool>.value(false)) as _i17.Future<bool>);
   @override
   _i17.Future<void> cancelTaken() =>
       (super.noSuchMethod(Invocation.method(#cancelTaken, []),

@@ -104,8 +104,8 @@ class RootState extends State<Root> {
         Future(() {
           userService.recordUserIDs();
           userService.saveLaunchInfo();
-          userService.saveStats();
         });
+        await userService.saveStats();
 
         final user = await userService.fetch();
         await userService.temporarySyncronizeDiscountEntitlement(user);

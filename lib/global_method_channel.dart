@@ -1,3 +1,4 @@
+import 'package:flutter_app_badger/flutter_app_badger.dart';
 import 'package:pilll/analytics.dart';
 import 'package:pilll/database/batch.dart';
 import 'package:pilll/database/database.dart';
@@ -52,6 +53,8 @@ Future<void> recordPill() async {
     pillSheetModifiedHistoryService: pillSheetModifiedHistoryService,
     pillSheetGroupService: pillSheetGroupService,
   );
+
+  FlutterAppBadger.removeBadge();
   // NOTE: Firebase initializeが成功しているかが定かでは無いので一番最後にログを送る
   analytics.logEvent(name: "quick_recorded");
 }

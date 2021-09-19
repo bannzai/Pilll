@@ -25,6 +25,7 @@ Future<void> effectAfterTaken({
   }
   try {
     await _taken;
+    FlutterAppBadger.removeBadge();
     _requestInAppReview();
     await showReleaseNotePreDialog(context);
   } catch (exception, stack) {
@@ -65,44 +66,53 @@ Future<PillSheetGroup?> take({
     return null;
   }
 
-  FlutterAppBadger.removeBadge();
-
   final batch = batchFactory.batch();
 
-  final List<PillSheet> updatedPillSheets = pillSheetGroup.pillSheets;
-  pillSheetGroup.pillSheets.asMap().keys.forEach((index) {
-    final pillSheet = pillSheetGroup.pillSheets[index];
+  final updatedPillSheets = pillSheetGroup.pillSheets.map((pillSheet) {
     if (pillSheet.groupIndex > activedPillSheet.groupIndex) {
-      return;
+      return pillSheet;
     }
-    if (pillSheet.isFill) {
-      return;
+    if (pillSheet.allTaken) {
+      return pillSheet;
     }
-
     final scheduledLastTakenDate = pillSheet.beginingDate
         .add(Duration(days: pillSheet.pillSheetType.totalCount - 1));
-    final PillSheet updatedPillSheet;
     if (takenDate.isAfter(scheduledLastTakenDate)) {
-      updatedPillSheet =
-          pillSheet.copyWith(lastTakenDate: scheduledLastTakenDate);
+      return pillSheet.copyWith(lastTakenDate: scheduledLastTakenDate);
     } else {
-      updatedPillSheet = pillSheet.copyWith(lastTakenDate: takenDate);
+      return pillSheet.copyWith(lastTakenDate: takenDate);
     }
-    pillSheetService.update(batch, updatedPillSheet);
-    updatedPillSheets[index] = updatedPillSheet;
-
-    final history =
-        PillSheetModifiedHistoryServiceActionFactory.createTakenPillAction(
-      pillSheetGroupID: pillSheetGroup.id,
-      before: activedPillSheet,
-      after: updatedPillSheet,
-    );
-    pillSheetModifiedHistoryService.add(batch, history);
-  });
+  }).toList();
 
   final updatedPillSheetGroup =
       pillSheetGroup.copyWith(pillSheets: updatedPillSheets);
+  final updatedIndexses = pillSheetGroup.pillSheets.asMap().keys.where(
+        (index) =>
+            pillSheetGroup.pillSheets[index] !=
+            updatedPillSheetGroup.pillSheets[index],
+      );
+
+  if (updatedIndexses.isEmpty) {
+    return null;
+  }
+
+  pillSheetService.update(
+    batch,
+    updatedPillSheets,
+  );
   pillSheetGroupService.update(batch, updatedPillSheetGroup);
 
+  final before = pillSheetGroup.pillSheets[updatedIndexses.first];
+  final after = updatedPillSheetGroup.pillSheets[updatedIndexses.last];
+  final history =
+      PillSheetModifiedHistoryServiceActionFactory.createTakenPillAction(
+    pillSheetGroupID: pillSheetGroup.id,
+    before: before,
+    after: after,
+  );
+  pillSheetModifiedHistoryService.add(batch, history);
+
   await batch.commit();
+
+  return updatedPillSheetGroup;
 }
