@@ -187,9 +187,12 @@ class UserService {
 
   Future<void> saveStats() async {
     final store = await SharedPreferences.getInstance();
+
+    final lastLoginVersion =
+        await PackageInfo.fromPlatform().then((value) => value.version);
     String? beginingVersion = store.getString(StringKey.beginingVersionKey);
     if (beginingVersion == null) {
-      final v = await PackageInfo.fromPlatform().then((value) => value.version);
+      final v = lastLoginVersion;
       await store.setString(StringKey.beginingVersionKey, v);
       beginingVersion = v;
     }
@@ -202,6 +205,7 @@ class UserService {
       "stats": {
         "lastLoginAt": now,
         "beginingVersion": beginingVersion,
+        "lastLoginVersion": lastLoginVersion,
         "timeZoneName": timeZoneName,
         "timeZoneOffset":
             "${timeZoneOffset.isNegative ? "-" : "+"}${timeZoneOffset.inHours}",
