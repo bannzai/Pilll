@@ -68,31 +68,52 @@ Future<PillSheetGroup?> take({
 
   final batch = batchFactory.batch();
 
-  final updatedPillSheets = pillSheetGroup.pillSheets.where((pillSheet) {
-    if (pillSheet.groupIndex > activedPillSheet.groupIndex) {
+  final updatedPillSheets = pillSheetService.update(
+      batch,
+      pillSheetGroup.pillSheets.where((pillSheet) {
+        if (pillSheet.groupIndex > activedPillSheet.groupIndex) {
+          return false;
+        }
+        if (pillSheet.isFill) {
+          return false;
+        }
+        return true;
+      }).map((pillSheet) {
+        final scheduledLastTakenDate = pillSheet.beginingDate
+            .add(Duration(days: pillSheet.pillSheetType.totalCount - 1));
+        if (takenDate.isAfter(scheduledLastTakenDate)) {
+          return pillSheet.copyWith(lastTakenDate: scheduledLastTakenDate);
+        } else {
+          return pillSheet.copyWith(lastTakenDate: takenDate);
+        }
+      }).toList());
+  if (updatedPillSheets.isEmpty) {
+    return null;
+  }
+
+  final notFillInPastPillSheets = pillSheetGroup.pillSheets.where((pillSheet) {
+    if (!pillSheet.isReached) {
       return false;
     }
     if (pillSheet.isFill) {
       return false;
     }
-    return true;
-  }).map((pillSheet) {
-    final scheduledLastTakenDate = pillSheet.beginingDate
-        .add(Duration(days: pillSheet.pillSheetType.totalCount - 1));
-    if (takenDate.isAfter(scheduledLastTakenDate)) {
-      return pillSheet.copyWith(lastTakenDate: scheduledLastTakenDate);
-    } else {
-      return pillSheet.copyWith(lastTakenDate: takenDate);
+    if (pillSheet.groupIndex < activedPillSheet.groupIndex) {
+      return true;
     }
-  }).toList();
-  if (updatedPillSheets.isEmpty) {
-    return null;
+    return false;
+  });
+  final PillSheet before;
+  if (notFillInPastPillSheets.isEmpty) {
+    before = activedPillSheet;
+  } else {
+    before = notFillInPastPillSheets.first;
   }
 
   final history =
       PillSheetModifiedHistoryServiceActionFactory.createTakenPillAction(
     pillSheetGroupID: pillSheetGroup.id,
-    before: activedPillSheet,
+    before: before,
     after: updatedPillSheets.last,
   );
   pillSheetModifiedHistoryService.add(batch, history);
