@@ -323,7 +323,8 @@ void main() {
       final store = container.read(recordPageStoreProvider);
 
       await Future.delayed(Duration(seconds: 1));
-      await store.taken();
+      final result = await store.taken();
+      expect(result, isTrue);
     });
     test("group has two pill sheet contains future pill sheet", () async {
       var mockTodayRepository = MockTodayService();
@@ -382,7 +383,7 @@ void main() {
         pillSheetGroupID: "group_id",
         before: pillSheet,
         after: pillSheet.copyWith(
-          lastTakenDate: _today,
+          lastTakenDate: _today.add(Duration(days: 1000)),
         ),
       );
       final pillSheetModifiedHistoryService =
@@ -432,7 +433,8 @@ void main() {
       final store = container.read(recordPageStoreProvider);
 
       await Future.delayed(Duration(seconds: 1));
-      await store.taken();
+      final result = await store.taken();
+      expect(result, isTrue);
     });
     test("group has two pill sheet for first pillSheet.isFill pattern",
         () async {
@@ -542,7 +544,8 @@ void main() {
       final store = container.read(recordPageStoreProvider);
 
       await Future.delayed(Duration(seconds: 1));
-      await store.taken();
+      final result = await store.taken();
+      expect(result, isTrue);
     });
     test("group has two pill sheet contains past pill sheet but not yet filled",
         () async {
@@ -654,7 +657,8 @@ void main() {
       final store = container.read(recordPageStoreProvider);
 
       await Future.delayed(Duration(seconds: 1));
-      await store.taken();
+      final result = await store.taken();
+      expect(result, isTrue);
     });
   });
 }

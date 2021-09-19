@@ -439,18 +439,18 @@ class MockRecordPageStore extends _i1.Mock implements _i25.RecordPageStore {
           returnValue: Future<void>.value(),
           returnValueForMissingStub: Future.value()) as _i17.Future<void>);
   @override
-  _i17.Future<void>? taken() =>
+  _i17.Future<bool> taken() =>
       (super.noSuchMethod(Invocation.method(#taken, []),
-          returnValueForMissingStub: Future.value()) as _i17.Future<void>?);
+          returnValue: Future<bool>.value(false)) as _i17.Future<bool>);
   @override
-  _i17.Future<void>? takenWithPillNumber(
+  _i17.Future<bool> takenWithPillNumber(
           {int? pillNumberIntoPillSheet, _i2.PillSheet? pillSheet}) =>
       (super.noSuchMethod(
           Invocation.method(#takenWithPillNumber, [], {
             #pillNumberIntoPillSheet: pillNumberIntoPillSheet,
             #pillSheet: pillSheet
           }),
-          returnValueForMissingStub: Future.value()) as _i17.Future<void>?);
+          returnValue: Future<bool>.value(false)) as _i17.Future<bool>);
   @override
   _i17.Future<void> cancelTaken() =>
       (super.noSuchMethod(Invocation.method(#cancelTaken, []),
