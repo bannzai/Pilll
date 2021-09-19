@@ -118,7 +118,7 @@ void main() {
       final store = container.read(recordPageStoreProvider);
 
       await Future.delayed(Duration(seconds: 1));
-      store.register(setting);
+      await store.register(setting);
     });
     test("group has two pill sheet", () async {
       var mockTodayRepository = MockTodayService();
@@ -222,7 +222,7 @@ void main() {
       final store = container.read(recordPageStoreProvider);
 
       await Future.delayed(Duration(seconds: 1));
-      store.register(setting);
+      await store.register(setting);
     });
   });
   group("#take", () {
@@ -325,7 +325,7 @@ void main() {
       final store = container.read(recordPageStoreProvider);
 
       await Future.delayed(Duration(seconds: 1));
-      store.taken();
+      await store.taken();
     });
     test("group has two pill sheet contains future pill sheet", () async {
       var mockTodayRepository = MockTodayService();
@@ -436,7 +436,7 @@ void main() {
       final store = container.read(recordPageStoreProvider);
 
       await Future.delayed(Duration(seconds: 1));
-      store.taken();
+      await store.taken();
     });
     test("group has two pill sheet for first pillSheet.isFill pattern",
         () async {
