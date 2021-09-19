@@ -486,9 +486,10 @@ void main() {
         lastTakenDate: null,
       );
       final pillSheetService = MockPillSheetService();
-      when(pillSheetService.update(
-              batch, [pillSheet, pillSheet2.copyWith(lastTakenDate: now())]))
-          .thenReturn(null);
+      when(pillSheetService.update(batch, [
+        pillSheet,
+        pillSheet2.copyWith(lastTakenDate: _today),
+      ])).thenReturn(null);
 
       final pillSheetGroup = PillSheetGroup(
         id: "group_id",
@@ -608,7 +609,7 @@ void main() {
       final pillSheetService = MockPillSheetService();
       when(pillSheetService.update(batch, [
         pillSheet.copyWith(lastTakenDate: _today.subtract(Duration(days: 28))),
-        pillSheet2.copyWith(lastTakenDate: now())
+        pillSheet2.copyWith(lastTakenDate: _today)
       ])).thenReturn(null);
 
       final pillSheetGroup = PillSheetGroup(
