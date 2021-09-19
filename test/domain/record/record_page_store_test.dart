@@ -401,7 +401,7 @@ void main() {
         pillSheetGroupID: "group_id",
         before: pillSheet,
         after: pillSheet.copyWith(
-          lastTakenDate: _today.add(Duration(days: 1000)),
+          lastTakenDate: _today,
         ),
       );
       final pillSheetModifiedHistoryService =
