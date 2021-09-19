@@ -68,28 +68,31 @@ Future<PillSheetGroup?> take({
 
   final batch = batchFactory.batch();
 
-  final updatedPillSheets = pillSheetService.update(
-      batch,
-      pillSheetGroup.pillSheets.where((pillSheet) {
-        if (pillSheet.groupIndex > activedPillSheet.groupIndex) {
-          return false;
-        }
-        if (pillSheet.isFill) {
-          return false;
-        }
-        return true;
-      }).map((pillSheet) {
-        final scheduledLastTakenDate = pillSheet.beginingDate
-            .add(Duration(days: pillSheet.pillSheetType.totalCount - 1));
-        if (takenDate.isAfter(scheduledLastTakenDate)) {
-          return pillSheet.copyWith(lastTakenDate: scheduledLastTakenDate);
-        } else {
-          return pillSheet.copyWith(lastTakenDate: takenDate);
-        }
-      }).toList());
+  final updatedPillSheets = pillSheetGroup.pillSheets.where((pillSheet) {
+    if (pillSheet.groupIndex > activedPillSheet.groupIndex) {
+      return false;
+    }
+    if (pillSheet.isFill) {
+      return false;
+    }
+    return true;
+  }).map((pillSheet) {
+    final scheduledLastTakenDate = pillSheet.beginingDate
+        .add(Duration(days: pillSheet.pillSheetType.totalCount - 1));
+    if (takenDate.isAfter(scheduledLastTakenDate)) {
+      return pillSheet.copyWith(lastTakenDate: scheduledLastTakenDate);
+    } else {
+      return pillSheet.copyWith(lastTakenDate: takenDate);
+    }
+  }).toList();
   if (updatedPillSheets.isEmpty) {
     return null;
   }
+
+  pillSheetService.update(
+    batch,
+    updatedPillSheets,
+  );
 
   final notFillInPastPillSheets = pillSheetGroup.pillSheets.where((pillSheet) {
     if (!pillSheet.isReached) {
