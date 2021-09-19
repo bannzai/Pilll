@@ -475,14 +475,14 @@ void main() {
         id: "sheet_id",
         typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
         beginingDate: _today.subtract(Duration(days: 28)),
-        groupIndex: 1,
-        lastTakenDate: _today.subtract(Duration(days: 28)),
+        groupIndex: 0,
+        lastTakenDate: _today.subtract(Duration(days: 1)),
       );
       final pillSheet2 = PillSheet(
         id: "sheet_id_2",
         typeInfo: PillSheetType.pillsheet_21.typeInfo,
         beginingDate: _today,
-        groupIndex: 0,
+        groupIndex: 1,
         lastTakenDate: null,
       );
       final pillSheetService = MockPillSheetService();
@@ -596,19 +596,19 @@ void main() {
         id: "sheet_id",
         typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
         beginingDate: _today.subtract(Duration(days: 28)),
-        groupIndex: 1,
-        lastTakenDate: _today.subtract(Duration(days: 27)),
+        groupIndex: 0,
+        lastTakenDate: _today.subtract(Duration(days: 2)),
       );
       final pillSheet2 = PillSheet(
         id: "sheet_id_2",
         typeInfo: PillSheetType.pillsheet_21.typeInfo,
         beginingDate: _today,
-        groupIndex: 0,
+        groupIndex: 1,
         lastTakenDate: null,
       );
       final pillSheetService = MockPillSheetService();
       when(pillSheetService.update(batch, [
-        pillSheet.copyWith(lastTakenDate: _today.subtract(Duration(days: 28))),
+        pillSheet.copyWith(lastTakenDate: DateTime.parse("2020-09-18")),
         pillSheet2.copyWith(lastTakenDate: _today)
       ])).thenReturn(null);
 
@@ -619,17 +619,16 @@ void main() {
           pillSheet,
           pillSheet2,
         ],
-        createdAt: now(),
+        createdAt: _today,
       );
       final updatedPillSheetGroup = PillSheetGroup(
         id: "group_id",
         pillSheetIDs: ["sheet_id", "sheet_id_2"],
         pillSheets: [
-          pillSheet.copyWith(
-              lastTakenDate: _today.subtract(Duration(days: 28))),
+          pillSheet.copyWith(lastTakenDate: DateTime.parse("2020-09-18")),
           pillSheet2.copyWith(lastTakenDate: _today),
         ],
-        createdAt: now(),
+        createdAt: _today,
       );
 
       final pillSheetGroupService = MockPillSheetGroupService();

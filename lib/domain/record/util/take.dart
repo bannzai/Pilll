@@ -72,7 +72,7 @@ Future<PillSheetGroup?> take({
     if (pillSheet.groupIndex > activedPillSheet.groupIndex) {
       return pillSheet;
     }
-    if (pillSheet.isFill) {
+    if (pillSheet.allTaken) {
       return pillSheet;
     }
     final scheduledLastTakenDate = pillSheet.beginingDate
@@ -86,8 +86,6 @@ Future<PillSheetGroup?> take({
 
   final updatedPillSheetGroup =
       pillSheetGroup.copyWith(pillSheets: updatedPillSheets);
-  pillSheetGroupService.update(batch, updatedPillSheetGroup);
-
   final updatedIndexses = pillSheetGroup.pillSheets.asMap().keys.where(
         (index) =>
             pillSheetGroup.pillSheets[index] !=
@@ -102,6 +100,7 @@ Future<PillSheetGroup?> take({
     batch,
     updatedPillSheets,
   );
+  pillSheetGroupService.update(batch, updatedPillSheetGroup);
 
   final before = pillSheetGroup.pillSheets[updatedIndexses.first];
   final after = updatedPillSheetGroup.pillSheets[updatedIndexses.last];
