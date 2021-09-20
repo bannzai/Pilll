@@ -94,19 +94,19 @@ abstract class InitialSettingState implements _$InitialSettingState {
     if (pageIndex <= todayPillNumber.pageIndex) {
       // Left side from todayPillNumber.pageIndex
       // Or current pageIndex == todayPillNumber.pageIndex
-      final pastedTotalCountElement = pillSheetTypes
+      final passedTotalCountElement = pillSheetTypes
           .sublist(0, todayPillNumber.pageIndex - pageIndex)
           .map((e) => e.totalCount);
-      final int pastedTotalCount;
-      if (pastedTotalCountElement.isEmpty) {
-        pastedTotalCount = 0;
+      final int passedTotalCount;
+      if (passedTotalCountElement.isEmpty) {
+        passedTotalCount = 0;
       } else {
-        pastedTotalCount =
-            pastedTotalCountElement.reduce((value, element) => value + element);
+        passedTotalCount =
+            passedTotalCountElement.reduce((value, element) => value + element);
       }
 
       return today().subtract(
-          Duration(days: pastedTotalCount + (pillNumberIntoPillSheet - 1)));
+          Duration(days: passedTotalCount + (pillNumberIntoPillSheet - 1)));
     } else {
       // Right Side from todayPillNumber.pageIndex
       final beforePillSheetType = pillSheetTypes[pageIndex - 1];

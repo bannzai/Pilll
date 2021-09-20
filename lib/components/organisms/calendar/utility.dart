@@ -29,14 +29,14 @@ List<DateRange> scheduledOrInTheMiddleMenstruationDateRanges(
       final pillSheet = pillSheetGroup.pillSheets[pageIndex];
       final pillSheetTypes =
           pillSheetGroup.pillSheets.map((e) => e.pillSheetType).toList();
-      final pastedCount = pastedTotalCount(
+      final passedCount = passedTotalCount(
           pillSheetTypes: pillSheetTypes, pageIndex: pageIndex);
-      final serializedPillNumber = pastedCount + pillSheet.typeInfo.totalCount;
+      final serializedPillNumber = passedCount + pillSheet.typeInfo.totalCount;
       if (serializedPillNumber < setting.pillNumberForFromMenstruation) {
         continue;
       }
 
-      final diff = setting.pillNumberForFromMenstruation - pastedCount;
+      final diff = setting.pillNumberForFromMenstruation - passedCount;
       final begin =
           pillSheet.beginingDate.add(Duration(days: (diff - 1) + offset));
       final end = begin.add(Duration(days: (setting.durationMenstruation - 1)));

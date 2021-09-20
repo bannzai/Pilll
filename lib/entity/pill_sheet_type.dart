@@ -165,14 +165,14 @@ extension PillSheetTypeFunctions on PillSheetType {
       (totalCount / Weekday.values.length).ceil();
 }
 
-int pastedTotalCount(
+int passedTotalCount(
     {required List<PillSheetType> pillSheetTypes, required int pageIndex}) {
   if (pageIndex == 0) {
     return 0;
   }
-  final pasted = pillSheetTypes.sublist(0, pageIndex);
-  final pastedTotalCount = pasted
+  final passed = pillSheetTypes.sublist(0, pageIndex);
+  final passedTotalCount = passed
       .map((e) => e.totalCount)
       .reduce((value, element) => value + element);
-  return pastedTotalCount;
+  return passedTotalCount;
 }

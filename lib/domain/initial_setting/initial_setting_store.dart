@@ -140,7 +140,7 @@ class InitialSettingStateStore extends StateNotifier<InitialSettingState> {
     required int pageIndex,
     required int fromMenstruation,
   }) {
-    final offset = pastedTotalCount(
+    final offset = passedTotalCount(
         pillSheetTypes: state.pillSheetTypes, pageIndex: pageIndex);
     state = state.copyWith(fromMenstruation: fromMenstruation + offset);
   }
@@ -158,12 +158,12 @@ class InitialSettingStateStore extends StateNotifier<InitialSettingState> {
   }
 
   int? retrieveMenstruationSelectedPillNumber(int pageIndex) {
-    final _pastedTotalCount = pastedTotalCount(
+    final _passedTotalCount = passedTotalCount(
         pillSheetTypes: state.pillSheetTypes, pageIndex: pageIndex);
-    if (_pastedTotalCount >= state.fromMenstruation) {
+    if (_passedTotalCount >= state.fromMenstruation) {
       return state.fromMenstruation;
     }
-    final diff = state.fromMenstruation - _pastedTotalCount;
+    final diff = state.fromMenstruation - _passedTotalCount;
     if (diff > state.pillSheetTypes[pageIndex].totalCount) {
       return null;
     }

@@ -138,9 +138,9 @@ class RecordPagePillSheet extends StatelessWidget {
 
     final pillSheetTypes =
         pillSheetGroup.pillSheets.map((e) => e.pillSheetType).toList();
-    final pastedCount =
-        pastedTotalCount(pillSheetTypes: pillSheetTypes, pageIndex: pageIndex);
-    final serializedPillNumberIntoGroup = pastedCount + pillNumberIntoPillSheet;
+    final passedCount =
+        passedTotalCount(pillSheetTypes: pillSheetTypes, pageIndex: pageIndex);
+    final serializedPillNumberIntoGroup = passedCount + pillNumberIntoPillSheet;
     final menstruationNumbers =
         List.generate(setting.durationMenstruation, (index) {
       return setting.pillNumberForFromMenstruation + index;
