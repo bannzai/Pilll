@@ -39,7 +39,7 @@ class InitialSettingPillSheetGroupPage extends HookWidget {
                   children: [
                     SizedBox(height: 24),
                     Text(
-                      "処方されるピルシートについて\n教えてください",
+                      "処方されるピルについて\n教えてください",
                       style: FontType.sBigTitle.merge(TextColorStyle.main),
                       textAlign: TextAlign.center,
                     ),
