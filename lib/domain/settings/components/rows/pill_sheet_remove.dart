@@ -24,8 +24,26 @@ class PillSheetRemoveRow extends HookWidget {
           builder: (_) {
             return DiscardDialog(
                 title: "ピルシートをすべて破棄しますか？",
-                message: Text("現在表示されているすべてのピルシートが破棄されます",
-                    style: FontType.assisting.merge(TextColorStyle.main)),
+                message: RichText(
+                  textAlign: TextAlign.start,
+                  text: TextSpan(
+                    children: [
+                      TextSpan(
+                        text: "現在表示されている",
+                        style: FontType.assisting.merge(TextColorStyle.main),
+                      ),
+                      TextSpan(
+                        text: "すべてのピルシート",
+                        style:
+                            FontType.assistingBold.merge(TextColorStyle.main),
+                      ),
+                      TextSpan(
+                        text: "が破棄されます",
+                        style: FontType.assisting.merge(TextColorStyle.main),
+                      ),
+                    ],
+                  ),
+                ),
                 doneButtonText: "破棄する",
                 done: () {
                   store.deletePillSheet().catchError((error) {
