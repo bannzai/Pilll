@@ -41,7 +41,7 @@ class SettingPillSheetGroup extends StatelessWidget {
             .values
             .expand((element) => element)
             .toList(),
-        if (pillSheetTypes.length >= 6) ...[
+        if (pillSheetTypes.length < 6) ...[
           SizedBox(height: 24),
           PillSheetTypeAddButton(
               onAdd: (pillSheetType) => onAdd(pillSheetType)),
