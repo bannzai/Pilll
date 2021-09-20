@@ -17,9 +17,12 @@ List<DateRange> scheduledOrInTheMiddleMenstruationDateRanges(
   }
   assert(maxPageCount > 0);
 
-  final count = maxPageCount / pillSheetGroup.pillSheets.length;
-  return List.generate(count.toInt(), (groupPageIndex) {
-    return pillSheetGroup.pillSheets.asMap().keys.map((pageIndex) {
+  final List<DateRange> dateRanges = [];
+  for (int i = 0; i < maxPageCount; i++) {
+    final offset = pillSheetGroup.totalPillCountIntoGroup * i;
+    for (int pageIndex = 0;
+        pageIndex < pillSheetGroup.pillSheets.length;
+        pageIndex++) {
       final pillSheet = pillSheetGroup.pillSheets[pageIndex];
       final pillSheetTypes =
           pillSheetGroup.pillSheets.map((e) => e.pillSheetType).toList();
@@ -27,11 +30,12 @@ List<DateRange> scheduledOrInTheMiddleMenstruationDateRanges(
           pillSheetTypes: pillSheetTypes, pageIndex: pageIndex);
       final serializedPillNumber = pastedCount + pillSheet.typeInfo.totalCount;
       if (serializedPillNumber < setting.pillNumberForFromMenstruation) {
-        return null;
+        continue;
       }
 
       final diff = setting.pillNumberForFromMenstruation - pastedCount;
-      final begin = pillSheet.beginingDate.add(Duration(days: (diff - 1)));
+      final begin =
+          pillSheet.beginingDate.add(Duration(days: (diff - 1) + offset));
       final end = begin.add(Duration(days: (setting.durationMenstruation - 1)));
       final isContained = menstruations
           .where((element) =>
@@ -39,11 +43,16 @@ List<DateRange> scheduledOrInTheMiddleMenstruationDateRanges(
               element.dateRange.inRange(end))
           .isNotEmpty;
       if (isContained) {
-        return null;
+        continue;
       }
-      return DateRange(begin, end);
-    }).whereType<DateRange>();
-  }).expand((element) => element).toList();
+
+      dateRanges.add(DateRange(begin, end));
+      if (dateRanges.length >= maxPageCount) {
+        return dateRanges;
+      }
+    }
+  }
+  return dateRanges;
 }
 
 List<DateRange> nextPillSheetDateRanges(
