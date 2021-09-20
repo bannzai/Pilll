@@ -107,10 +107,14 @@ abstract class InitialSettingState implements _$InitialSettingState {
               (todayPillNumber.pillNumberIntoPillSheet - 1)));
     } else {
       // Right Side from todayPillNumber.pageIndex
+      final beforePillSheetBeginingDate = _beginingDate(
+        pageIndex: pageIndex - 1,
+        todayPillNumber: todayPillNumber,
+        pillSheetTypes: pillSheetTypes,
+      );
       final beforePillSheetType = pillSheetTypes[pageIndex - 1];
-      return today().add(Duration(
-          days: beforePillSheetType.totalCount -
-              (todayPillNumber.pillNumberIntoPillSheet - 1)));
+      return beforePillSheetBeginingDate
+          .add(Duration(days: beforePillSheetType.totalCount));
     }
   }
 
