@@ -18,8 +18,8 @@ List<DateRange> scheduledOrInTheMiddleMenstruationDateRanges(
   assert(maxPageCount > 0);
 
   final firstPillSheet = pillSheetGroup.pillSheets.first;
-  return List.generate(maxPageCount, (pageIndex) {
-    final offset = pageIndex * firstPillSheet.pillSheetType.totalCount;
+  return List.generate(maxPageCount, (groupPageIndex) {
+    final offset = groupPageIndex * firstPillSheet.pillSheetType.totalCount;
     final begin = firstPillSheet.beginingDate.add(
         Duration(days: (setting.pillNumberForFromMenstruation - 1) + offset));
     final end = begin.add(Duration(days: (setting.durationMenstruation - 1)));
