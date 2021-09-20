@@ -138,28 +138,26 @@ class RecordPagePillSheet extends StatelessWidget {
 
     final pillSheetTypes =
         pillSheetGroup.pillSheets.map((e) => e.pillSheetType).toList();
-    final pastedCount =
-        pastedTotalCount(pillSheetTypes: pillSheetTypes, pageIndex: pageIndex);
+    final passedCount =
+        passedTotalCount(pillSheetTypes: pillSheetTypes, pageIndex: pageIndex);
+    final serializedPillNumberIntoGroup = passedCount + pillNumberIntoPillSheet;
     final menstruationNumbers =
         List.generate(setting.durationMenstruation, (index) {
-      if (pastedCount == 0) {
-        return setting.pillNumberForFromMenstruation + index;
-      }
-      final number =
-          (setting.pillNumberForFromMenstruation + index) % pastedCount;
-      return number == 0 ? pastedCount : number;
+      return setting.pillNumberForFromMenstruation + index;
     });
     final isContainedMenstruationDuration =
-        menstruationNumbers.contains(pillNumberIntoPillSheet);
+        menstruationNumbers.contains(serializedPillNumberIntoGroup);
 
     if (isDateMode) {
-      if (isContainedMenstruationDuration) {
+      if (isContainedMenstruationDuration &&
+          setting.pillNumberForFromMenstruation != 0) {
         return MenstruationPillDate(date: date);
       } else {
         return PlainPillDate(date: date);
       }
     } else {
-      if (isContainedMenstruationDuration) {
+      if (isContainedMenstruationDuration &&
+          setting.pillNumberForFromMenstruation != 0) {
         return MenstruationPillNumber(pillNumber: pillNumberIntoPillSheet);
       } else {
         return PlainPillNumber(pillNumber: pillNumberIntoPillSheet);

@@ -10,8 +10,8 @@ part 'initial_setting_state.freezed.dart';
 abstract class InitialSettingTodayPillNumber
     implements _$InitialSettingTodayPillNumber {
   factory InitialSettingTodayPillNumber({
-    @Default(0) pageIndex,
-    @Default(0) pillNumberIntoPillSheet,
+    @Default(0) int pageIndex,
+    @Default(0) int pillNumberIntoPillSheet,
   }) = _InitialSettingTodayPillNumber;
 }
 
@@ -22,7 +22,7 @@ abstract class InitialSettingState implements _$InitialSettingState {
     @Default([])
         List<PillSheetType> pillSheetTypes,
     InitialSettingTodayPillNumber? todayPillNumber,
-    @Default(23)
+    @Default(0)
         int fromMenstruation,
     @Default(4)
         int durationMenstruation,
@@ -88,31 +88,33 @@ abstract class InitialSettingState implements _$InitialSettingState {
     required InitialSettingTodayPillNumber todayPillNumber,
     required List<PillSheetType> pillSheetTypes,
   }) {
-    // Avoid broken type inherence
-    // todayPillNumber.pillNumberIntoPillSheet interpreted as dynamic
-    final int pillNumberIntoPillSheet = todayPillNumber.pillNumberIntoPillSheet;
     if (pageIndex <= todayPillNumber.pageIndex) {
       // Left side from todayPillNumber.pageIndex
       // Or current pageIndex == todayPillNumber.pageIndex
-      final pastedTotalCountElement = pillSheetTypes
+      final passedTotalCountElement = pillSheetTypes
           .sublist(0, todayPillNumber.pageIndex - pageIndex)
           .map((e) => e.totalCount);
-      final int pastedTotalCount;
-      if (pastedTotalCountElement.isEmpty) {
-        pastedTotalCount = 0;
+      final int passedTotalCount;
+      if (passedTotalCountElement.isEmpty) {
+        passedTotalCount = 0;
       } else {
-        pastedTotalCount =
-            pastedTotalCountElement.reduce((value, element) => value + element);
+        passedTotalCount =
+            passedTotalCountElement.reduce((value, element) => value + element);
       }
 
-      return today().subtract(
-          Duration(days: pastedTotalCount + (pillNumberIntoPillSheet - 1)));
+      return today().subtract(Duration(
+          days: passedTotalCount +
+              (todayPillNumber.pillNumberIntoPillSheet - 1)));
     } else {
       // Right Side from todayPillNumber.pageIndex
+      final beforePillSheetBeginingDate = _beginingDate(
+        pageIndex: pageIndex - 1,
+        todayPillNumber: todayPillNumber,
+        pillSheetTypes: pillSheetTypes,
+      );
       final beforePillSheetType = pillSheetTypes[pageIndex - 1];
-      return today().add(Duration(
-          days:
-              beforePillSheetType.totalCount - (pillNumberIntoPillSheet - 1)));
+      return beforePillSheetBeginingDate
+          .add(Duration(days: beforePillSheetType.totalCount));
     }
   }
 

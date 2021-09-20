@@ -49,7 +49,7 @@ class SettingMenstruationDynamicDescription extends StatelessWidget {
                 onTap: () => _showFromModalSheet(context),
                 child: _from(),
               ),
-              Text(" 番目ごとに",
+              Text(" 番ごとに",
                   style: FontType.assisting.merge(TextColorStyle.main)),
             ],
           ),

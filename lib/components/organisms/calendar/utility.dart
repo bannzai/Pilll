@@ -2,6 +2,7 @@ import 'package:pilll/components/organisms/calendar/band/calendar_band_model.dar
 import 'package:pilll/domain/calendar/date_range.dart';
 import 'package:pilll/entity/menstruation.dart';
 import 'package:pilll/entity/pill_sheet_group.dart';
+import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/entity/setting.dart';
 import 'package:pilll/entity/weekday.dart';
 
@@ -14,17 +15,30 @@ List<DateRange> scheduledOrInTheMiddleMenstruationDateRanges(
   if (pillSheetGroup.pillSheets.isEmpty) {
     return [];
   }
+  if (setting.pillNumberForFromMenstruation == 0) {
+    return [];
+  }
   assert(maxPageCount > 0);
 
-  return List.generate(maxPageCount, (groupPageIndex) {
-    final offset = groupPageIndex * pillSheetGroup.totalPillCountIntoGroup;
-    return pillSheetGroup.pillSheets.map((pillSheet) {
-      if (pillSheet.typeInfo.totalCount <
-          setting.pillNumberForFromMenstruation) {
-        return null;
+  final List<DateRange> dateRanges = [];
+  for (int i = 0; i < maxPageCount; i++) {
+    final offset = pillSheetGroup.totalPillCountIntoGroup * i;
+    for (int pageIndex = 0;
+        pageIndex < pillSheetGroup.pillSheets.length;
+        pageIndex++) {
+      final pillSheet = pillSheetGroup.pillSheets[pageIndex];
+      final pillSheetTypes =
+          pillSheetGroup.pillSheets.map((e) => e.pillSheetType).toList();
+      final passedCount = passedTotalCount(
+          pillSheetTypes: pillSheetTypes, pageIndex: pageIndex);
+      final serializedPillNumber = passedCount + pillSheet.typeInfo.totalCount;
+      if (serializedPillNumber < setting.pillNumberForFromMenstruation) {
+        continue;
       }
-      final begin = pillSheet.beginingDate.add(
-          Duration(days: (setting.pillNumberForFromMenstruation - 1) + offset));
+
+      final diff = setting.pillNumberForFromMenstruation - passedCount;
+      final begin =
+          pillSheet.beginingDate.add(Duration(days: (diff - 1) + offset));
       final end = begin.add(Duration(days: (setting.durationMenstruation - 1)));
       final isContained = menstruations
           .where((element) =>
@@ -32,11 +46,16 @@ List<DateRange> scheduledOrInTheMiddleMenstruationDateRanges(
               element.dateRange.inRange(end))
           .isNotEmpty;
       if (isContained) {
-        return null;
+        continue;
       }
-      return DateRange(begin, end);
-    }).whereType<DateRange>();
-  }).expand((element) => element).toList();
+
+      dateRanges.add(DateRange(begin, end));
+      if (dateRanges.length >= maxPageCount) {
+        return dateRanges;
+      }
+    }
+  }
+  return dateRanges;
 }
 
 List<DateRange> nextPillSheetDateRanges(
@@ -47,7 +66,9 @@ List<DateRange> nextPillSheetDateRanges(
     return [];
   }
   assert(maxPageCount > 0);
-  return List.generate(maxPageCount, (groupPageIndex) {
+
+  final count = maxPageCount / pillSheetGroup.pillSheets.length;
+  return List.generate(count.toInt(), (groupPageIndex) {
     return pillSheetGroup.pillSheets.map((pillSheet) {
       final offset = groupPageIndex * pillSheetGroup.totalPillCountIntoGroup;
       final begin = pillSheet.scheduledLastTakenDate.add(Duration(days: 1));
