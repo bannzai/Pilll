@@ -17,7 +17,8 @@ List<DateRange> scheduledOrInTheMiddleMenstruationDateRanges(
   }
   assert(maxPageCount > 0);
 
-  return List.generate(maxPageCount, (groupPageIndex) {
+  final count = maxPageCount / pillSheetGroup.pillSheets.length;
+  return List.generate(count.toInt(), (groupPageIndex) {
     return pillSheetGroup.pillSheets.asMap().keys.map((pageIndex) {
       final pillSheet = pillSheetGroup.pillSheets[pageIndex];
       final pillSheetTypes =
@@ -53,7 +54,9 @@ List<DateRange> nextPillSheetDateRanges(
     return [];
   }
   assert(maxPageCount > 0);
-  return List.generate(maxPageCount, (groupPageIndex) {
+
+  final count = maxPageCount / pillSheetGroup.pillSheets.length;
+  return List.generate(count.toInt(), (groupPageIndex) {
     return pillSheetGroup.pillSheets.map((pillSheet) {
       final offset = groupPageIndex * pillSheetGroup.totalPillCountIntoGroup;
       final begin = pillSheet.scheduledLastTakenDate.add(Duration(days: 1));
