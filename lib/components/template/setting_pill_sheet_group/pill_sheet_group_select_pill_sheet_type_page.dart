@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:pilll/analytics.dart';
+import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/components/template/pill_sheet_type_setting/pill_sheet_type_select_body_template.dart';
@@ -16,15 +17,23 @@ class PillSheetGroupSelectPillSheetTypePage extends HookWidget {
   @override
   Widget build(BuildContext context) {
     return DraggableScrollableSheet(
-      initialChildSize: 1,
-      maxChildSize: 1,
+      initialChildSize: 0.8,
+      maxChildSize: 0.8,
       builder: (context, scrollController) {
         return Container(
-          child: ListView(
-            controller: scrollController,
+          width: MediaQuery.of(context).size.width,
+          decoration: BoxDecoration(
+            color: PilllColors.background,
+            borderRadius: BorderRadius.only(
+              topLeft: const Radius.circular(20.0),
+              topRight: const Radius.circular(20.0),
+            ),
+          ),
+          child: Column(
             children: [
-              SizedBox(height: 15),
+              SizedBox(height: 25),
               Row(
+                mainAxisAlignment: MainAxisAlignment.start,
                 children: [
                   SizedBox(width: 16),
                   Text(
@@ -38,15 +47,22 @@ class PillSheetGroupSelectPillSheetTypePage extends HookWidget {
                   ),
                 ],
               ),
-              SizedBox(height: 24),
-              PillSheetTypeSelectBodyTemplate(
-                onSelect: (e) {
-                  Navigator.of(context).pop();
-                  onSelect(e);
-                },
-                selectedPillSheetType: pillSheetType,
+              SingleChildScrollView(
+                controller: scrollController,
+                child: Column(
+                  children: [
+                    SizedBox(height: 24),
+                    PillSheetTypeSelectBodyTemplate(
+                      onSelect: (e) {
+                        Navigator.of(context).pop();
+                        onSelect(e);
+                      },
+                      selectedPillSheetType: pillSheetType,
+                    ),
+                    SizedBox(height: 100),
+                  ],
+                ),
               ),
-              SizedBox(height: 100),
             ],
           ),
         );
@@ -64,7 +80,9 @@ void showSettingPillSheetGroupSelectPillSheetTypePage({
       screenName: "PillSheetGroupSelectPillSheetTypePage");
   showModalBottomSheet(
     context: context,
-    builder: (context) => PillSheetGroupSelectPillSheetTypePage(
+    isScrollControlled: true,
+    backgroundColor: Colors.transparent,
+    builder: (_) => PillSheetGroupSelectPillSheetTypePage(
       pillSheetType: pillSheetType,
       onSelect: onSelect,
     ),

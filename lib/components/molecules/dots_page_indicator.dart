@@ -26,7 +26,7 @@ class DotsIndicator extends AnimatedWidget {
       width: 25,
       child: Center(
         child: Material(
-          color: isSelected ? PilllColors.secondary : PilllColors.white,
+          color: isSelected ? PilllColors.secondary : PilllColors.unselect,
           type: MaterialType.circle,
           child: Container(
             width: 8,

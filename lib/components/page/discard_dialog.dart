@@ -6,7 +6,7 @@ import 'package:pilll/components/atoms/text_color.dart';
 
 class DiscardDialog extends StatelessWidget {
   final String title;
-  final String message;
+  final Widget message;
   final String doneButtonText;
   final Function() done;
   final Function()? cancel;
@@ -34,7 +34,7 @@ class DiscardDialog extends StatelessWidget {
               height: 15,
             ),
           ],
-          Text(message, style: FontType.assisting.merge(TextColorStyle.main)),
+          message,
         ],
       ),
       actions: <Widget>[
@@ -70,7 +70,8 @@ showDiscardDialog(
     context: context,
     builder: (context) => DiscardDialog(
         title: title,
-        message: message,
+        message:
+            Text(message, style: FontType.assisting.merge(TextColorStyle.main)),
         doneButtonText: doneText,
         done: done,
         cancel: cancel),
