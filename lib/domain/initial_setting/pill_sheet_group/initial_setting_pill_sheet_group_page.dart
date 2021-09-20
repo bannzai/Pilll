@@ -10,6 +10,10 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:pilll/router/router.dart';
+import 'package:pilll/signin/signin_sheet.dart';
+import 'package:pilll/signin/signin_sheet_state.dart';
+import 'package:pilll/entity/link_account_type.dart';
 
 class InitialSettingPillSheetGroupPage extends HookWidget {
   @override
@@ -24,7 +28,7 @@ class InitialSettingPillSheetGroupPage extends HookWidget {
           onPressed: () => Navigator.of(context).pop(),
         ),
         title: Text(
-          "2/5",
+          "1/4",
           style: TextStyle(color: TextColor.black),
         ),
         backgroundColor: PilllColors.white,
@@ -61,14 +65,45 @@ class InitialSettingPillSheetGroupPage extends HookWidget {
                   padding: const EdgeInsets.only(bottom: 35),
                   child: Container(
                     color: PilllColors.background,
-                    child: PrimaryButton(
-                      text: "次へ",
-                      onPressed: () async {
-                        analytics.logEvent(name: "next_pill_sheet_count");
-                        Navigator.of(context).push(
-                            InitialSettingSelectTodayPillNumberPageRoute
-                                .route());
-                      },
+                    child: Column(
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        PrimaryButton(
+                          text: "次へ",
+                          onPressed: () async {
+                            analytics.logEvent(name: "next_pill_sheet_count");
+                            Navigator.of(context).push(
+                                InitialSettingSelectTodayPillNumberPageRoute
+                                    .route());
+                          },
+                        ),
+                        if (!state.isAccountCooperationDidEnd) ...[
+                          SizedBox(height: 20),
+                          SecondaryButton(
+                            text: "すでにアカウントをお持ちの方はこちら",
+                            onPressed: () {
+                              showSigninSheet(
+                                context,
+                                SigninSheetStateContext.initialSetting,
+                                (accountType) async {
+                                  store.showHUD();
+                                  if (await store.canEndInitialSetting()) {
+                                    AppRouter.signinAccount(context);
+                                  } else {
+                                    ScaffoldMessenger.of(context).showSnackBar(
+                                      SnackBar(
+                                        duration: Duration(seconds: 2),
+                                        content: Text(
+                                            "${accountType.providerName}でログインしました"),
+                                      ),
+                                    );
+                                  }
+                                },
+                              );
+                            },
+                          ),
+                        ],
+                      ],
                     ),
                   ),
                 ),

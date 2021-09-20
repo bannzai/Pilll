@@ -1,4 +1,5 @@
 import 'package:flutter_svg/svg.dart';
+import 'package:pilll/analytics.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
@@ -97,10 +98,8 @@ class InitialSettingPillSheetGroupPillSheetTypeSelectRow
 
 extension InitialSettingPillSheetCountPageRoute
     on InitialSettingPillSheetGroupPage {
-  static Route<dynamic> route() {
-    return MaterialPageRoute(
-      settings: RouteSettings(name: "InitialSettingPillSheetCountPage"),
-      builder: (_) => InitialSettingPillSheetGroupPage(),
-    );
+  static InitialSettingPillSheetGroupPage screen() {
+    analytics.setCurrentScreen(screenName: "InitialSettingPillSheetGroupPage");
+    return InitialSettingPillSheetGroupPage();
   }
 }

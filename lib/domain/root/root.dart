@@ -1,9 +1,9 @@
 import 'package:pilll/analytics.dart';
+import 'package:pilll/domain/initial_setting/pill_sheet_group/initial_setting_pill_sheet_group_pill_sheet_type_select_row.dart';
 import 'package:pilll/entrypoint.dart';
 import 'package:pilll/service/auth.dart';
 import 'package:pilll/database/database.dart';
 import 'package:pilll/domain/home/home_page.dart';
-import 'package:pilll/domain/initial_setting/pill_sheet_type/initial_setting_select_pill_sheet_type_page.dart';
 import 'package:pilll/entity/user_error.dart';
 import 'package:pilll/components/molecules/indicator.dart';
 import 'package:pilll/error/template.dart';
@@ -64,7 +64,7 @@ class RootState extends State<Root> {
             case ScreenType.home:
               return HomePage(key: homeKey);
             case ScreenType.initialSetting:
-              return InitialSettingSelectPillSheetType.screen();
+              return InitialSettingPillSheetCountPageRoute.screen();
             default:
               return ScaffoldIndicator();
           }
