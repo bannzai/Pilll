@@ -22,7 +22,7 @@ abstract class InitialSettingState implements _$InitialSettingState {
     @Default([])
         List<PillSheetType> pillSheetTypes,
     InitialSettingTodayPillNumber? todayPillNumber,
-    @Default(23)
+    @Default(0)
         int fromMenstruation,
     @Default(4)
         int durationMenstruation,
