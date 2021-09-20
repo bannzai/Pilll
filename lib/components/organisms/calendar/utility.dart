@@ -5,7 +5,6 @@ import 'package:pilll/entity/pill_sheet_group.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/entity/setting.dart';
 import 'package:pilll/entity/weekday.dart';
-import 'package:pilll/util/datetime/day.dart';
 
 List<DateRange> scheduledOrInTheMiddleMenstruationDateRanges(
   PillSheetGroup pillSheetGroup,
@@ -39,15 +38,19 @@ List<DateRange> nextPillSheetDateRanges(
   PillSheetGroup pillSheetGroup,
   int maxPageCount,
 ) {
+  if (pillSheetGroup.pillSheets.isEmpty) {
+    return [];
+  }
   assert(maxPageCount > 0);
-  return List.generate(maxPageCount, (pageIndex) {
-    final remainPillCount = pillSheetGroup.remainPillCount;
-    final offset = pageIndex * pillSheetGroup.totalPillCountIntoGroup;
-    final begin = today().add(Duration(days: remainPillCount));
-    final end = begin.add(Duration(days: Weekday.values.length - 1));
-    return DateRange(
-        begin.add(Duration(days: offset)), end.add(Duration(days: offset)));
-  });
+  return List.generate(maxPageCount, (groupPageIndex) {
+    return pillSheetGroup.pillSheets.map((pillSheet) {
+      final offset = groupPageIndex * pillSheetGroup.totalPillCountIntoGroup;
+      final begin = pillSheet.scheduledLastTakenDate.add(Duration(days: 1));
+      final end = begin.add(Duration(days: Weekday.values.length - 1));
+      return DateRange(
+          begin.add(Duration(days: offset)), end.add(Duration(days: offset)));
+    });
+  }).expand((element) => element).toList();
 }
 
 int bandLength(
