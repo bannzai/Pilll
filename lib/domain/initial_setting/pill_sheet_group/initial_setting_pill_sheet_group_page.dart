@@ -28,7 +28,7 @@ class InitialSettingPillSheetGroupPage extends HookWidget {
           onPressed: () => Navigator.of(context).pop(),
         ),
         title: Text(
-          "2/5",
+          "1/4",
           style: TextStyle(color: TextColor.black),
         ),
         backgroundColor: PilllColors.white,

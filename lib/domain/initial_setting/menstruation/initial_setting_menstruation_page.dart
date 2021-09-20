@@ -17,7 +17,7 @@ class InitialSettingMenstruationPage extends HookWidget {
     final state = useProvider(initialSettingStoreProvider.state);
 
     return SettingMenstruationPageTemplate(
-      title: "4/5",
+      title: "3/4",
       pillSheetList: SettingMenstruationPillSheetList(
         pillSheetTypes: state.pillSheetTypes,
         selectedPillNumber: (pageIndex) =>
