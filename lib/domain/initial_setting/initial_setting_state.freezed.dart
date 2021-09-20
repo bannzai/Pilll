@@ -17,7 +17,7 @@ class _$InitialSettingTodayPillNumberTearOff {
   const _$InitialSettingTodayPillNumberTearOff();
 
   _InitialSettingTodayPillNumber call(
-      {dynamic pageIndex = 0, dynamic pillNumberIntoPillSheet = 0}) {
+      {int pageIndex = 0, int pillNumberIntoPillSheet = 0}) {
     return _InitialSettingTodayPillNumber(
       pageIndex: pageIndex,
       pillNumberIntoPillSheet: pillNumberIntoPillSheet,
@@ -30,8 +30,8 @@ const $InitialSettingTodayPillNumber = _$InitialSettingTodayPillNumberTearOff();
 
 /// @nodoc
 mixin _$InitialSettingTodayPillNumber {
-  dynamic get pageIndex => throw _privateConstructorUsedError;
-  dynamic get pillNumberIntoPillSheet => throw _privateConstructorUsedError;
+  int get pageIndex => throw _privateConstructorUsedError;
+  int get pillNumberIntoPillSheet => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $InitialSettingTodayPillNumberCopyWith<InitialSettingTodayPillNumber>
@@ -44,7 +44,7 @@ abstract class $InitialSettingTodayPillNumberCopyWith<$Res> {
           InitialSettingTodayPillNumber value,
           $Res Function(InitialSettingTodayPillNumber) then) =
       _$InitialSettingTodayPillNumberCopyWithImpl<$Res>;
-  $Res call({dynamic pageIndex, dynamic pillNumberIntoPillSheet});
+  $Res call({int pageIndex, int pillNumberIntoPillSheet});
 }
 
 /// @nodoc
@@ -65,11 +65,11 @@ class _$InitialSettingTodayPillNumberCopyWithImpl<$Res>
       pageIndex: pageIndex == freezed
           ? _value.pageIndex
           : pageIndex // ignore: cast_nullable_to_non_nullable
-              as dynamic,
+              as int,
       pillNumberIntoPillSheet: pillNumberIntoPillSheet == freezed
           ? _value.pillNumberIntoPillSheet
           : pillNumberIntoPillSheet // ignore: cast_nullable_to_non_nullable
-              as dynamic,
+              as int,
     ));
   }
 }
@@ -82,7 +82,7 @@ abstract class _$InitialSettingTodayPillNumberCopyWith<$Res>
           $Res Function(_InitialSettingTodayPillNumber) then) =
       __$InitialSettingTodayPillNumberCopyWithImpl<$Res>;
   @override
-  $Res call({dynamic pageIndex, dynamic pillNumberIntoPillSheet});
+  $Res call({int pageIndex, int pillNumberIntoPillSheet});
 }
 
 /// @nodoc
@@ -104,10 +104,14 @@ class __$InitialSettingTodayPillNumberCopyWithImpl<$Res>
     Object? pillNumberIntoPillSheet = freezed,
   }) {
     return _then(_InitialSettingTodayPillNumber(
-      pageIndex: pageIndex == freezed ? _value.pageIndex : pageIndex,
+      pageIndex: pageIndex == freezed
+          ? _value.pageIndex
+          : pageIndex // ignore: cast_nullable_to_non_nullable
+              as int,
       pillNumberIntoPillSheet: pillNumberIntoPillSheet == freezed
           ? _value.pillNumberIntoPillSheet
-          : pillNumberIntoPillSheet,
+          : pillNumberIntoPillSheet // ignore: cast_nullable_to_non_nullable
+              as int,
     ));
   }
 }
@@ -121,10 +125,10 @@ class _$_InitialSettingTodayPillNumber
 
   @JsonKey(defaultValue: 0)
   @override
-  final dynamic pageIndex;
+  final int pageIndex;
   @JsonKey(defaultValue: 0)
   @override
-  final dynamic pillNumberIntoPillSheet;
+  final int pillNumberIntoPillSheet;
 
   @override
   String toString() {
@@ -160,13 +164,13 @@ class _$_InitialSettingTodayPillNumber
 abstract class _InitialSettingTodayPillNumber
     implements InitialSettingTodayPillNumber {
   factory _InitialSettingTodayPillNumber(
-      {dynamic pageIndex,
-      dynamic pillNumberIntoPillSheet}) = _$_InitialSettingTodayPillNumber;
+      {int pageIndex,
+      int pillNumberIntoPillSheet}) = _$_InitialSettingTodayPillNumber;
 
   @override
-  dynamic get pageIndex => throw _privateConstructorUsedError;
+  int get pageIndex => throw _privateConstructorUsedError;
   @override
-  dynamic get pillNumberIntoPillSheet => throw _privateConstructorUsedError;
+  int get pillNumberIntoPillSheet => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$InitialSettingTodayPillNumberCopyWith<_InitialSettingTodayPillNumber>

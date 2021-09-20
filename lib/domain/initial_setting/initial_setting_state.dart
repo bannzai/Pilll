@@ -10,8 +10,8 @@ part 'initial_setting_state.freezed.dart';
 abstract class InitialSettingTodayPillNumber
     implements _$InitialSettingTodayPillNumber {
   factory InitialSettingTodayPillNumber({
-    @Default(0) pageIndex,
-    @Default(0) pillNumberIntoPillSheet,
+    @Default(0) int pageIndex,
+    @Default(0) int pillNumberIntoPillSheet,
   }) = _InitialSettingTodayPillNumber;
 }
 
