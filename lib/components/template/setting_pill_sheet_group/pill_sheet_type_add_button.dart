@@ -8,18 +8,26 @@ import 'package:pilll/entity/pill_sheet_type.dart';
 
 class PillSheetTypeAddButton extends StatelessWidget {
   final Function(PillSheetType) onAdd;
-  const PillSheetTypeAddButton({Key? key, required this.onAdd})
-      : super(key: key);
+  final List<PillSheetType> pillSheetTypes;
+  const PillSheetTypeAddButton({
+    Key? key,
+    required this.pillSheetTypes,
+    required this.onAdd,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        showSettingPillSheetGroupSelectPillSheetTypePage(
-          context: context,
-          pillSheetType: null,
-          onSelect: (pillSheetType) => onAdd(pillSheetType),
-        );
+        if (pillSheetTypes.isEmpty) {
+          showSettingPillSheetGroupSelectPillSheetTypePage(
+            context: context,
+            pillSheetType: null,
+            onSelect: (pillSheetType) => onAdd(pillSheetType),
+          );
+        } else {
+          onAdd(pillSheetTypes.last);
+        }
       },
       child: Container(
         width: double.infinity,
