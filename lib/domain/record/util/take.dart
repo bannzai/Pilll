@@ -6,7 +6,6 @@ import 'package:pilll/domain/modal/release_note.dart';
 import 'package:pilll/domain/record/record_page_store.dart';
 import 'package:pilll/entity/pill_sheet.dart';
 import 'package:pilll/entity/pill_sheet_group.dart';
-import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/error_log.dart';
 import 'package:pilll/service/pill_sheet.dart';
 import 'package:pilll/service/pill_sheet_group.dart';
@@ -75,10 +74,9 @@ Future<PillSheetGroup?> take({
     if (pillSheet.allTaken) {
       return pillSheet;
     }
-    final scheduledLastTakenDate = pillSheet.beginingDate
-        .add(Duration(days: pillSheet.pillSheetType.totalCount - 1));
-    if (takenDate.isAfter(scheduledLastTakenDate)) {
-      return pillSheet.copyWith(lastTakenDate: scheduledLastTakenDate);
+    if (takenDate.isAfter(pillSheet.scheduledLastTakenDate)) {
+      return pillSheet.copyWith(
+          lastTakenDate: pillSheet.scheduledLastTakenDate);
     } else {
       return pillSheet.copyWith(lastTakenDate: takenDate);
     }
