@@ -180,7 +180,7 @@ class _$InitialSettingStateTearOff {
   _InitialSettingState call(
       {List<PillSheetType> pillSheetTypes = const [],
       InitialSettingTodayPillNumber? todayPillNumber,
-      int fromMenstruation = 23,
+      int fromMenstruation = 0,
       int durationMenstruation = 4,
       List<ReminderTime> reminderTimes = const [
         const ReminderTime(hour: 21, minute: 0),
@@ -395,7 +395,7 @@ class _$_InitialSettingState extends _InitialSettingState {
   _$_InitialSettingState(
       {this.pillSheetTypes = const [],
       this.todayPillNumber,
-      this.fromMenstruation = 23,
+      this.fromMenstruation = 0,
       this.durationMenstruation = 4,
       this.reminderTimes = const [
         const ReminderTime(hour: 21, minute: 0),
@@ -411,7 +411,7 @@ class _$_InitialSettingState extends _InitialSettingState {
   final List<PillSheetType> pillSheetTypes;
   @override
   final InitialSettingTodayPillNumber? todayPillNumber;
-  @JsonKey(defaultValue: 23)
+  @JsonKey(defaultValue: 0)
   @override
   final int fromMenstruation;
   @JsonKey(defaultValue: 4)
