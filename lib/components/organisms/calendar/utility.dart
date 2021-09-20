@@ -18,7 +18,7 @@ List<DateRange> scheduledOrInTheMiddleMenstruationDateRanges(
 
   return List.generate(maxPageCount, (groupPageIndex) {
     final offset = groupPageIndex * pillSheetGroup.totalPillCountIntoGroup;
-    pillSheetGroup.pillSheets.map((pillSheet) {
+    return pillSheetGroup.pillSheets.map((pillSheet) {
       if (pillSheet.typeInfo.totalCount <
           setting.pillNumberForFromMenstruation) {
         return null;
@@ -35,8 +35,8 @@ List<DateRange> scheduledOrInTheMiddleMenstruationDateRanges(
         return null;
       }
       return DateRange(begin, end);
-    });
-  }).where((element) => element != null).toList().cast();
+    }).whereType<DateRange>();
+  }).expand((element) => element).toList();
 }
 
 List<DateRange> nextPillSheetDateRanges(
