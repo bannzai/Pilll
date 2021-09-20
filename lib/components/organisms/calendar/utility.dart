@@ -15,6 +15,9 @@ List<DateRange> scheduledOrInTheMiddleMenstruationDateRanges(
   if (pillSheetGroup.pillSheets.isEmpty) {
     return [];
   }
+  if (setting.pillNumberForFromMenstruation == 0) {
+    return [];
+  }
   assert(maxPageCount > 0);
 
   final List<DateRange> dateRanges = [];

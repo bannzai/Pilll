@@ -149,13 +149,15 @@ class RecordPagePillSheet extends StatelessWidget {
         menstruationNumbers.contains(serializedPillNumberIntoGroup);
 
     if (isDateMode) {
-      if (isContainedMenstruationDuration) {
+      if (isContainedMenstruationDuration &&
+          setting.pillNumberForFromMenstruation != 0) {
         return MenstruationPillDate(date: date);
       } else {
         return PlainPillDate(date: date);
       }
     } else {
-      if (isContainedMenstruationDuration) {
+      if (isContainedMenstruationDuration &&
+          setting.pillNumberForFromMenstruation != 0) {
         return MenstruationPillNumber(pillNumber: pillNumberIntoPillSheet);
       } else {
         return PlainPillNumber(pillNumber: pillNumberIntoPillSheet);
