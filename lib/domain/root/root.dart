@@ -1,5 +1,4 @@
 import 'package:pilll/analytics.dart';
-import 'package:pilll/domain/initial_setting/pill_sheet_group/initial_setting_pill_sheet_group_page.dart';
 import 'package:pilll/domain/initial_setting/pill_sheet_group/initial_setting_pill_sheet_group_pill_sheet_type_select_row.dart';
 import 'package:pilll/entrypoint.dart';
 import 'package:pilll/service/auth.dart';
