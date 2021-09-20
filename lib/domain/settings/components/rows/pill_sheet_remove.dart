@@ -3,6 +3,7 @@ import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/analytics.dart';
 import 'package:pilll/components/atoms/font.dart';
+import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/components/page/discard_dialog.dart';
 import 'package:pilll/domain/settings/setting_page_store.dart';
 import 'package:pilll/error/error_alert.dart';
@@ -22,8 +23,9 @@ class PillSheetRemoveRow extends HookWidget {
           context: context,
           builder: (_) {
             return DiscardDialog(
-                title: "${store.pillSheetWord}を破棄しますか？",
-                message: "現在、服用記録をしている${store.pillSheetWord}を削除します。",
+                title: "ピルシートをすべて破棄しますか？",
+                message: Text("現在表示されているすべてのピルシートが破棄されます",
+                    style: FontType.assisting.merge(TextColorStyle.main)),
                 doneButtonText: "破棄する",
                 done: () {
                   store.deletePillSheet().catchError((error) {

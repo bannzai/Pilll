@@ -79,7 +79,7 @@ class MenstruationEditPage extends HookWidget {
                                 context: context,
                                 builder: (context) => DiscardDialog(
                                   title: "生理期間を削除しますか？",
-                                  message: "",
+                                  message: Text(""),
                                   doneButtonText: "削除する",
                                   done: () => store
                                       .delete()

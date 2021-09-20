@@ -82,7 +82,8 @@ class ConfirmDiarySheet extends HookWidget {
                 builder: (context) {
                   return DiscardDialog(
                       title: "日記を削除します",
-                      message: "削除された日記は復元ができません",
+                      message: Text("削除された日記は復元ができません",
+                          style: FontType.assisting.merge(TextColorStyle.main)),
                       doneButtonText: "削除する",
                       done: () {
                         int counter = 0;
