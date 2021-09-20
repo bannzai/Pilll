@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:pilll/analytics.dart';
+import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/components/template/pill_sheet_type_setting/pill_sheet_type_select_body_template.dart';
@@ -19,40 +20,50 @@ class PillSheetGroupSelectPillSheetTypePage extends HookWidget {
       initialChildSize: 0.8,
       maxChildSize: 0.8,
       builder: (context, scrollController) {
-        return Scaffold(
-          body: Container(
-            width: MediaQuery.of(context).size.width,
-            child: SingleChildScrollView(
-              controller: scrollController,
-              child: Column(
+        return Container(
+          width: MediaQuery.of(context).size.width,
+          decoration: BoxDecoration(
+            color: PilllColors.background,
+            borderRadius: BorderRadius.only(
+              topLeft: const Radius.circular(20.0),
+              topRight: const Radius.circular(20.0),
+            ),
+          ),
+          child: Column(
+            children: [
+              SizedBox(height: 25),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.start,
                 children: [
-                  SizedBox(height: 15),
-                  Row(
-                    children: [
-                      SizedBox(width: 16),
-                      Text(
-                        "ピルの種類を選択",
-                        style: TextStyle(
-                          color: TextColor.main,
-                          fontSize: 20,
-                          fontFamily: FontFamily.japanese,
-                          fontWeight: FontWeight.w600,
-                        ),
-                      ),
-                    ],
+                  SizedBox(width: 16),
+                  Text(
+                    "ピルの種類を選択",
+                    style: TextStyle(
+                      color: TextColor.main,
+                      fontSize: 20,
+                      fontFamily: FontFamily.japanese,
+                      fontWeight: FontWeight.w600,
+                    ),
                   ),
-                  SizedBox(height: 24),
-                  PillSheetTypeSelectBodyTemplate(
-                    onSelect: (e) {
-                      Navigator.of(context).pop();
-                      onSelect(e);
-                    },
-                    selectedPillSheetType: pillSheetType,
-                  ),
-                  SizedBox(height: 100),
                 ],
               ),
-            ),
+              SingleChildScrollView(
+                controller: scrollController,
+                child: Column(
+                  children: [
+                    SizedBox(height: 24),
+                    PillSheetTypeSelectBodyTemplate(
+                      onSelect: (e) {
+                        Navigator.of(context).pop();
+                        onSelect(e);
+                      },
+                      selectedPillSheetType: pillSheetType,
+                    ),
+                    SizedBox(height: 100),
+                  ],
+                ),
+              ),
+            ],
           ),
         );
       },
