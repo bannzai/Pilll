@@ -2,6 +2,7 @@ import 'package:pilll/components/organisms/calendar/band/calendar_band_model.dar
 import 'package:pilll/domain/calendar/date_range.dart';
 import 'package:pilll/entity/menstruation.dart';
 import 'package:pilll/entity/pill_sheet_group.dart';
+import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/entity/setting.dart';
 import 'package:pilll/entity/weekday.dart';
 
@@ -17,14 +18,19 @@ List<DateRange> scheduledOrInTheMiddleMenstruationDateRanges(
   assert(maxPageCount > 0);
 
   return List.generate(maxPageCount, (groupPageIndex) {
-    final offset = groupPageIndex * pillSheetGroup.totalPillCountIntoGroup;
-    return pillSheetGroup.pillSheets.map((pillSheet) {
-      if (pillSheet.typeInfo.totalCount <
-          setting.pillNumberForFromMenstruation) {
+    return pillSheetGroup.pillSheets.asMap().keys.map((pageIndex) {
+      final pillSheet = pillSheetGroup.pillSheets[pageIndex];
+      final pillSheetTypes =
+          pillSheetGroup.pillSheets.map((e) => e.pillSheetType).toList();
+      final pastedCount = pastedTotalCount(
+          pillSheetTypes: pillSheetTypes, pageIndex: pageIndex);
+      final serializedPillNumber = pastedCount + pillSheet.typeInfo.totalCount;
+      if (serializedPillNumber < setting.pillNumberForFromMenstruation) {
         return null;
       }
-      final begin = pillSheet.beginingDate.add(
-          Duration(days: (setting.pillNumberForFromMenstruation - 1) + offset));
+
+      final diff = setting.pillNumberForFromMenstruation - pastedCount;
+      final begin = pillSheet.beginingDate.add(Duration(days: (diff - 1)));
       final end = begin.add(Duration(days: (setting.durationMenstruation - 1)));
       final isContained = menstruations
           .where((element) =>
