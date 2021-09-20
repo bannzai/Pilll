@@ -2,7 +2,6 @@ import 'package:pilll/components/organisms/calendar/band/calendar_band_model.dar
 import 'package:pilll/domain/calendar/date_range.dart';
 import 'package:pilll/entity/menstruation.dart';
 import 'package:pilll/entity/pill_sheet_group.dart';
-import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/entity/setting.dart';
 import 'package:pilll/entity/weekday.dart';
 
@@ -17,20 +16,22 @@ List<DateRange> scheduledOrInTheMiddleMenstruationDateRanges(
   }
   assert(maxPageCount > 0);
 
-  final firstPillSheet = pillSheetGroup.pillSheets.first;
   return List.generate(maxPageCount, (groupPageIndex) {
-    final offset = groupPageIndex * firstPillSheet.pillSheetType.totalCount;
-    final begin = firstPillSheet.beginingDate.add(
-        Duration(days: (setting.pillNumberForFromMenstruation - 1) + offset));
-    final end = begin.add(Duration(days: (setting.durationMenstruation - 1)));
-    final isContained = menstruations
-        .where((element) =>
-            element.dateRange.inRange(begin) || element.dateRange.inRange(end))
-        .isNotEmpty;
-    if (isContained) {
-      return null;
-    }
-    return DateRange(begin, end);
+    final offset = groupPageIndex * pillSheetGroup.totalPillCountIntoGroup;
+    pillSheetGroup.pillSheets.map((pillSheet) {
+      final begin = pillSheet.beginingDate.add(
+          Duration(days: (setting.pillNumberForFromMenstruation - 1) + offset));
+      final end = begin.add(Duration(days: (setting.durationMenstruation - 1)));
+      final isContained = menstruations
+          .where((element) =>
+              element.dateRange.inRange(begin) ||
+              element.dateRange.inRange(end))
+          .isNotEmpty;
+      if (isContained) {
+        return null;
+      }
+      return DateRange(begin, end);
+    });
   }).where((element) => element != null).toList().cast();
 }
 
