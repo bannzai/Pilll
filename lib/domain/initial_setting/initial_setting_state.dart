@@ -88,9 +88,6 @@ abstract class InitialSettingState implements _$InitialSettingState {
     required InitialSettingTodayPillNumber todayPillNumber,
     required List<PillSheetType> pillSheetTypes,
   }) {
-    // Avoid broken type inherence
-    // todayPillNumber.pillNumberIntoPillSheet interpreted as dynamic
-    final int pillNumberIntoPillSheet = todayPillNumber.pillNumberIntoPillSheet;
     if (pageIndex <= todayPillNumber.pageIndex) {
       // Left side from todayPillNumber.pageIndex
       // Or current pageIndex == todayPillNumber.pageIndex
@@ -105,14 +102,15 @@ abstract class InitialSettingState implements _$InitialSettingState {
             passedTotalCountElement.reduce((value, element) => value + element);
       }
 
-      return today().subtract(
-          Duration(days: passedTotalCount + (pillNumberIntoPillSheet - 1)));
+      return today().subtract(Duration(
+          days: passedTotalCount +
+              (todayPillNumber.pillNumberIntoPillSheet - 1)));
     } else {
       // Right Side from todayPillNumber.pageIndex
       final beforePillSheetType = pillSheetTypes[pageIndex - 1];
       return today().add(Duration(
-          days:
-              beforePillSheetType.totalCount - (pillNumberIntoPillSheet - 1)));
+          days: beforePillSheetType.totalCount -
+              (todayPillNumber.pillNumberIntoPillSheet - 1)));
     }
   }
 
