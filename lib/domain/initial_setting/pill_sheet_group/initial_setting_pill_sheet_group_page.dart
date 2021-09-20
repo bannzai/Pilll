@@ -66,6 +66,7 @@ class InitialSettingPillSheetGroupPage extends HookWidget {
                   child: Container(
                     color: PilllColors.background,
                     child: Column(
+                      mainAxisSize: MainAxisSize.min,
                       children: [
                         PrimaryButton(
                           text: "次へ",
