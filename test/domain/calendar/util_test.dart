@@ -236,6 +236,53 @@ void main() {
     });
   });
   group("#nextPillSheetDateRanges", () {
+    group("multiple pillSheet pattern", () {
+      test(
+        "First page with pillSheetTypes: [pillsheet_28_7, pillsheet_21_0], beginingDate: [2020-09-01, 2020-09-29]",
+        () {
+          final originalTodayRepository = todayRepository;
+          final mockTodayRepository = MockTodayService();
+          todayRepository = mockTodayRepository;
+          when(mockTodayRepository.now())
+              .thenReturn(DateTime.parse("2020-09-01"));
+          when(mockTodayRepository.today())
+              .thenReturn(DateTime.parse("2020-09-01"));
+          addTearDown(() {
+            todayRepository = originalTodayRepository;
+          });
+
+          var beginingDate = DateTime.parse("2020-09-01");
+          var pillSheet = PillSheet(
+            typeInfo: PillSheetType.pillsheet_28_7.typeInfo,
+            beginingDate: beginingDate,
+            lastTakenDate: null,
+          );
+          var pillSheet2 = PillSheet(
+            typeInfo: PillSheetType.pillsheet_21_0.typeInfo,
+            beginingDate: beginingDate.add(Duration(days: 28)),
+            lastTakenDate: null,
+          );
+          final pillSheetGroup = PillSheetGroup(
+            pillSheetIDs: ["1", "2"],
+            pillSheets: [pillSheet, pillSheet2],
+            createdAt: now(),
+          );
+          expect(
+            nextPillSheetDateRanges(pillSheetGroup, 2),
+            [
+              DateRange(
+                DateTime.parse("2020-09-29"),
+                DateTime.parse("2020-10-05"),
+              ),
+              DateRange(
+                DateTime.parse("2020-10-20"),
+                DateTime.parse("2020-10-26"),
+              ),
+            ],
+          );
+        },
+      );
+    });
     group("only one pillSheet", () {
       test(
         "First page with pillSheetType: pillsheet_28_7, beginingDate: 2020-09-01",
