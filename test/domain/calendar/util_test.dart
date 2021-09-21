@@ -421,43 +421,43 @@ void main() {
         },
       );
     });
-    group("#bandLength", () {
-      test(
-        "range: DateRange(2021-02-07, 2021-02-13), bandMode: (2021-02-10, 2021-02-13), isLineBreaked: false",
-        () {
-          expect(
-              bandLength(
-                DateRange(
-                  DateTime.parse("2021-02-07"),
-                  DateTime.parse("2021-02-13"),
-                ),
-                CalendarScheduledMenstruationBandModel(
-                  DateTime.parse("2021-02-10"),
-                  DateTime.parse("2021-02-13"),
-                ),
-                false,
+  });
+  group("#bandLength", () {
+    test(
+      "range: DateRange(2021-02-07, 2021-02-13), bandMode: (2021-02-10, 2021-02-13), isLineBreaked: false",
+      () {
+        expect(
+            bandLength(
+              DateRange(
+                DateTime.parse("2021-02-07"),
+                DateTime.parse("2021-02-13"),
               ),
-              4);
-        },
-      );
-      test(
-        "range: DateRange(2021-02-14, 2021-02-20), bandMode: (2021-02-08, 2021-02-14), isLineBreaked: false",
-        () {
-          expect(
-              bandLength(
-                DateRange(
-                  DateTime.parse("2021-02-14"),
-                  DateTime.parse("2021-02-20"),
-                ),
-                CalendarScheduledMenstruationBandModel(
-                  DateTime.parse("2021-02-08"),
-                  DateTime.parse("2021-02-14"),
-                ),
-                true,
+              CalendarScheduledMenstruationBandModel(
+                DateTime.parse("2021-02-10"),
+                DateTime.parse("2021-02-13"),
               ),
-              1);
-        },
-      );
-    });
+              false,
+            ),
+            4);
+      },
+    );
+    test(
+      "range: DateRange(2021-02-14, 2021-02-20), bandMode: (2021-02-08, 2021-02-14), isLineBreaked: false",
+      () {
+        expect(
+            bandLength(
+              DateRange(
+                DateTime.parse("2021-02-14"),
+                DateTime.parse("2021-02-20"),
+              ),
+              CalendarScheduledMenstruationBandModel(
+                DateTime.parse("2021-02-08"),
+                DateTime.parse("2021-02-14"),
+              ),
+              true,
+            ),
+            1);
+      },
+    );
   });
 }
