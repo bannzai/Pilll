@@ -19,6 +19,60 @@ void main() {
     SharedPreferences.setMockInitialValues({});
   });
   group("#scheduledOrInTheMiddleMenstruationDateRanges", () {
+    group("multiple pill sheet pattern", () {
+      test(
+        "it check to ignore date range for pillSheetType.totalCount > setting.pillNumberFromMenstruation. pillSheetType: [pillsheet_28_7, pillsheet_21_0], beginingDate: [2020-09-01, 2020-09-29], fromMenstruation: 23, durationMenstruation: 3",
+        () {
+          final originalTodayRepository = todayRepository;
+          final mockTodayRepository = MockTodayService();
+          todayRepository = mockTodayRepository;
+          when(mockTodayRepository.now())
+              .thenReturn(DateTime.parse("2020-09-01"));
+          when(mockTodayRepository.today())
+              .thenReturn(DateTime.parse("2020-09-01"));
+          addTearDown(() {
+            todayRepository = originalTodayRepository;
+          });
+
+          var beginingDate = DateTime.parse("2020-09-01");
+          var pillSheet = PillSheet(
+            typeInfo: PillSheetType.pillsheet_28_7.typeInfo,
+            beginingDate: beginingDate,
+            lastTakenDate: null,
+          );
+          var pillSheet2 = PillSheet(
+            typeInfo: PillSheetType.pillsheet_21_0.typeInfo,
+            beginingDate: beginingDate.add(Duration(days: 28)),
+            lastTakenDate: null,
+          );
+          final pillSheetGroup = PillSheetGroup(
+            pillSheetIDs: ["1", "2"],
+            pillSheets: [pillSheet, pillSheet2],
+            createdAt: now(),
+          );
+          var setting = Setting(
+            pillSheetTypes: [
+              PillSheetType.pillsheet_28_7,
+              PillSheetType.pillsheet_21_0
+            ],
+            pillNumberForFromMenstruation: 23,
+            durationMenstruation: 3,
+            isOnReminder: false,
+            reminderTimes: [ReminderTime(hour: 1, minute: 1)],
+          );
+          expect(
+            scheduledOrInTheMiddleMenstruationDateRanges(
+                pillSheetGroup, setting, [], 2),
+            [
+              DateRange(
+                DateTime.parse("2020-09-23"),
+                DateTime.parse("2020-09-25"),
+              )
+            ],
+          );
+        },
+      );
+    });
     group("only one pillSheet", () {
       test(
         "First page with pillSheetType: pillsheet_28_7, beginingDate: 2020-09-01, fromMenstruation: 23, durationMenstruation: 3",

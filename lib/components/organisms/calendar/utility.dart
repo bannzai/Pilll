@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:pilll/components/organisms/calendar/band/calendar_band_model.dart';
 import 'package:pilll/domain/calendar/date_range.dart';
 import 'package:pilll/entity/menstruation.dart';
@@ -21,7 +23,10 @@ List<DateRange> scheduledOrInTheMiddleMenstruationDateRanges(
   assert(maxPageCount > 0);
 
   final List<DateRange> dateRanges = [];
-  for (int i = 0; i < maxPageCount; i++) {
+  // 大体の数を計算
+  final count = max(maxPageCount, pillSheetGroup.pillSheets.length) /
+      pillSheetGroup.pillSheets.length;
+  for (int i = 0; i < count; i++) {
     final offset = pillSheetGroup.totalPillCountIntoGroup * i;
     for (int pageIndex = 0;
         pageIndex < pillSheetGroup.pillSheets.length;
@@ -50,7 +55,7 @@ List<DateRange> scheduledOrInTheMiddleMenstruationDateRanges(
       }
 
       dateRanges.add(DateRange(begin, end));
-      if (dateRanges.length >= maxPageCount) {
+      if (dateRanges.length >= count) {
         return dateRanges;
       }
     }
@@ -67,7 +72,9 @@ List<DateRange> nextPillSheetDateRanges(
   }
   assert(maxPageCount > 0);
 
-  final count = maxPageCount / pillSheetGroup.pillSheets.length;
+  // 大体の数を計算
+  final count = max(maxPageCount, pillSheetGroup.pillSheets.length) /
+      pillSheetGroup.pillSheets.length;
   return List.generate(count.toInt(), (groupPageIndex) {
     return pillSheetGroup.pillSheets.map((pillSheet) {
       final offset = groupPageIndex * pillSheetGroup.totalPillCountIntoGroup;
