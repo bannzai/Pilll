@@ -132,6 +132,70 @@ void main() {
           );
         },
       );
+      test(
+        "over 1 pill sheet group period",
+        () {
+          final originalTodayRepository = todayRepository;
+          final mockTodayRepository = MockTodayService();
+          todayRepository = mockTodayRepository;
+          when(mockTodayRepository.now())
+              .thenReturn(DateTime.parse("2020-09-01"));
+          when(mockTodayRepository.today())
+              .thenReturn(DateTime.parse("2020-09-01"));
+          addTearDown(() {
+            todayRepository = originalTodayRepository;
+          });
+
+          var beginingDate = DateTime.parse("2020-09-01");
+          var pillSheet = PillSheet(
+            typeInfo: PillSheetType.pillsheet_28_7.typeInfo,
+            beginingDate: beginingDate,
+            lastTakenDate: null,
+          );
+          var pillSheet2 = PillSheet(
+            typeInfo: PillSheetType.pillsheet_24_0.typeInfo,
+            beginingDate: beginingDate.add(Duration(days: 28)),
+            lastTakenDate: null,
+          );
+          final pillSheetGroup = PillSheetGroup(
+            pillSheetIDs: ["1", "2"],
+            pillSheets: [pillSheet, pillSheet2],
+            createdAt: now(),
+          );
+          var setting = Setting(
+            pillSheetTypes: [
+              PillSheetType.pillsheet_28_7,
+              PillSheetType.pillsheet_24_0
+            ],
+            pillNumberForFromMenstruation: 23,
+            durationMenstruation: 3,
+            isOnReminder: false,
+            reminderTimes: [ReminderTime(hour: 1, minute: 1)],
+          );
+          expect(
+            scheduledOrInTheMiddleMenstruationDateRanges(
+                pillSheetGroup, setting, [], 4),
+            [
+              DateRange(
+                DateTime.parse("2020-09-23"),
+                DateTime.parse("2020-09-25"),
+              ),
+              DateRange(
+                DateTime.parse("2020-10-21"),
+                DateTime.parse("2020-10-23"),
+              ),
+              DateRange(
+                DateTime.parse("2020-11-14"),
+                DateTime.parse("2020-11-16"),
+              ),
+              DateRange(
+                DateTime.parse("2020-12-12"),
+                DateTime.parse("2020-12-14"),
+              ),
+            ],
+          );
+        },
+      );
     });
     group("only one pillSheet", () {
       test(
