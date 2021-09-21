@@ -348,6 +348,56 @@ void main() {
         },
       );
       test(
+        "over 1 pill sheet gropu period",
+        () {
+          final originalTodayRepository = todayRepository;
+          final mockTodayRepository = MockTodayService();
+          todayRepository = mockTodayRepository;
+          when(mockTodayRepository.now())
+              .thenReturn(DateTime.parse("2021-01-01"));
+          when(mockTodayRepository.today())
+              .thenReturn(DateTime.parse("2021-01-01"));
+          addTearDown(() {
+            todayRepository = originalTodayRepository;
+          });
+
+          var pillSheetType = PillSheetType.pillsheet_28_0;
+          var beginingDate = DateTime.parse("2021-01-01");
+          var pillSheet = PillSheet(
+            typeInfo: pillSheetType.typeInfo,
+            beginingDate: beginingDate,
+            lastTakenDate: null,
+          );
+          final pillSheetGroup = PillSheetGroup(
+              pillSheetIDs: ["1"], pillSheets: [pillSheet], createdAt: now());
+          var setting = Setting(
+            pillSheetTypes: [pillSheetType],
+            pillNumberForFromMenstruation: 23,
+            durationMenstruation: 3,
+            isOnReminder: false,
+            reminderTimes: [ReminderTime(hour: 1, minute: 1)],
+          );
+          expect(
+            scheduledOrInTheMiddleMenstruationDateRanges(
+                pillSheetGroup, setting, [], 3),
+            [
+              DateRange(
+                DateTime.parse("2021-01-23"),
+                DateTime.parse("2021-01-25"),
+              ),
+              DateRange(
+                DateTime.parse("2021-02-20"),
+                DateTime.parse("2021-02-22"),
+              ),
+              DateRange(
+                DateTime.parse("2021-03-20"),
+                DateTime.parse("2021-03-22"),
+              ),
+            ],
+          );
+        },
+      );
+      test(
         "setting.pillNumberForFromMenstruation is zero",
         () {
           final originalTodayRepository = todayRepository;
