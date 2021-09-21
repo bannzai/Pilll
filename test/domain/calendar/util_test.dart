@@ -123,6 +123,10 @@ void main() {
               DateRange(
                 DateTime.parse("2020-09-23"),
                 DateTime.parse("2020-09-25"),
+              ),
+              DateRange(
+                DateTime.parse("2020-11-11"),
+                DateTime.parse("2020-11-13"),
               )
             ],
           );

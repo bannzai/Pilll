@@ -7,6 +7,7 @@ import 'package:pilll/entity/pill_sheet_group.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/entity/setting.dart';
 import 'package:pilll/entity/weekday.dart';
+import 'package:pilll/util/datetime/date_compare.dart';
 
 List<DateRange> scheduledOrInTheMiddleMenstruationDateRanges(
   PillSheetGroup pillSheetGroup,
@@ -24,9 +25,7 @@ List<DateRange> scheduledOrInTheMiddleMenstruationDateRanges(
 
   final List<DateRange> dateRanges = [];
   // 大体の数を計算
-  final count = max(maxPageCount, pillSheetGroup.pillSheets.length) /
-      pillSheetGroup.pillSheets.length;
-  for (int i = 0; i < count; i++) {
+  for (int i = 0; i < maxPageCount; i++) {
     final offset = pillSheetGroup.totalPillCountIntoGroup * i;
     for (int pageIndex = 0;
         pageIndex < pillSheetGroup.pillSheets.length;
@@ -36,21 +35,40 @@ List<DateRange> scheduledOrInTheMiddleMenstruationDateRanges(
           pillSheetGroup.pillSheets.map((e) => e.pillSheetType).toList();
       final passedCount = passedTotalCount(
           pillSheetTypes: pillSheetTypes, pageIndex: pageIndex);
-      final serializedPillNumber = passedCount + pillSheet.typeInfo.totalCount;
-      if (serializedPillNumber < setting.pillNumberForFromMenstruation) {
+      final serializedTotalPillNumber =
+          passedCount + pillSheet.typeInfo.totalCount;
+      if (serializedTotalPillNumber < setting.pillNumberForFromMenstruation) {
         continue;
       }
 
-      final diff = setting.pillNumberForFromMenstruation - passedCount;
-      final begin =
-          pillSheet.beginingDate.add(Duration(days: (diff - 1) + offset));
+      final int menstruationNumber;
+      if (passedCount == 0) {
+        menstruationNumber = setting.pillNumberForFromMenstruation;
+      } else {
+        menstruationNumber =
+            setting.pillNumberForFromMenstruation % passedCount;
+      }
+
+      if (menstruationNumber > pillSheet.pillSheetType.totalCount) {
+        continue;
+      }
+
+      final begin = pillSheet.beginingDate
+          .add(Duration(days: (menstruationNumber - 1) + offset));
       final end = begin.add(Duration(days: (setting.durationMenstruation - 1)));
-      final isContained = menstruations
+      final isRealMenstruationDurationContained = menstruations
           .where((element) =>
               element.dateRange.inRange(begin) ||
               element.dateRange.inRange(end))
           .isNotEmpty;
-      if (isContained) {
+      if (isRealMenstruationDurationContained) {
+        continue;
+      }
+      final isAlreadyContained = dateRanges
+          .where((element) =>
+              isSameDay(element.begin, begin) || isSameDay(element.end, end))
+          .isNotEmpty;
+      if (isAlreadyContained) {
         continue;
       }
 
