@@ -19,6 +19,184 @@ void main() {
     SharedPreferences.setMockInitialValues({});
   });
   group("#scheduledOrInTheMiddleMenstruationDateRanges", () {
+    group("multiple pill sheet pattern", () {
+      test(
+        "pillSheetType: [pillsheet_28_7, pillsheet_24_0], beginingDate: [2020-09-01, 2020-09-29], fromMenstruation: 23, durationMenstruation: 3",
+        () {
+          final originalTodayRepository = todayRepository;
+          final mockTodayRepository = MockTodayService();
+          todayRepository = mockTodayRepository;
+          when(mockTodayRepository.now())
+              .thenReturn(DateTime.parse("2020-09-01"));
+          when(mockTodayRepository.today())
+              .thenReturn(DateTime.parse("2020-09-01"));
+          addTearDown(() {
+            todayRepository = originalTodayRepository;
+          });
+
+          var beginingDate = DateTime.parse("2020-09-01");
+          var pillSheet = PillSheet(
+            typeInfo: PillSheetType.pillsheet_28_7.typeInfo,
+            beginingDate: beginingDate,
+            lastTakenDate: null,
+          );
+          var pillSheet2 = PillSheet(
+            typeInfo: PillSheetType.pillsheet_24_0.typeInfo,
+            beginingDate: beginingDate.add(Duration(days: 28)),
+            lastTakenDate: null,
+          );
+          final pillSheetGroup = PillSheetGroup(
+            pillSheetIDs: ["1", "2"],
+            pillSheets: [pillSheet, pillSheet2],
+            createdAt: now(),
+          );
+          var setting = Setting(
+            pillSheetTypes: [
+              PillSheetType.pillsheet_28_7,
+              PillSheetType.pillsheet_24_0
+            ],
+            pillNumberForFromMenstruation: 23,
+            durationMenstruation: 3,
+            isOnReminder: false,
+            reminderTimes: [ReminderTime(hour: 1, minute: 1)],
+          );
+          expect(
+            scheduledOrInTheMiddleMenstruationDateRanges(
+                pillSheetGroup, setting, [], 2),
+            [
+              DateRange(
+                DateTime.parse("2020-09-23"),
+                DateTime.parse("2020-09-25"),
+              ),
+              DateRange(
+                DateTime.parse("2020-10-21"),
+                DateTime.parse("2020-10-23"),
+              )
+            ],
+          );
+        },
+      );
+      test(
+        "it check to ignore date range for pillSheetType.totalCount > setting.pillNumberFromMenstruation. pillSheetType: [pillsheet_28_7, pillsheet_21_0], beginingDate: [2020-09-01, 2020-09-29], fromMenstruation: 23, durationMenstruation: 3",
+        () {
+          final originalTodayRepository = todayRepository;
+          final mockTodayRepository = MockTodayService();
+          todayRepository = mockTodayRepository;
+          when(mockTodayRepository.now())
+              .thenReturn(DateTime.parse("2020-09-01"));
+          when(mockTodayRepository.today())
+              .thenReturn(DateTime.parse("2020-09-01"));
+          addTearDown(() {
+            todayRepository = originalTodayRepository;
+          });
+
+          var beginingDate = DateTime.parse("2020-09-01");
+          var pillSheet = PillSheet(
+            typeInfo: PillSheetType.pillsheet_28_7.typeInfo,
+            beginingDate: beginingDate,
+            lastTakenDate: null,
+          );
+          var pillSheet2 = PillSheet(
+            typeInfo: PillSheetType.pillsheet_21_0.typeInfo,
+            beginingDate: beginingDate.add(Duration(days: 28)),
+            lastTakenDate: null,
+          );
+          final pillSheetGroup = PillSheetGroup(
+            pillSheetIDs: ["1", "2"],
+            pillSheets: [pillSheet, pillSheet2],
+            createdAt: now(),
+          );
+          var setting = Setting(
+            pillSheetTypes: [
+              PillSheetType.pillsheet_28_7,
+              PillSheetType.pillsheet_21_0
+            ],
+            pillNumberForFromMenstruation: 23,
+            durationMenstruation: 3,
+            isOnReminder: false,
+            reminderTimes: [ReminderTime(hour: 1, minute: 1)],
+          );
+          expect(
+            scheduledOrInTheMiddleMenstruationDateRanges(
+                pillSheetGroup, setting, [], 2),
+            [
+              DateRange(
+                DateTime.parse("2020-09-23"),
+                DateTime.parse("2020-09-25"),
+              ),
+              DateRange(
+                DateTime.parse("2020-11-11"),
+                DateTime.parse("2020-11-13"),
+              )
+            ],
+          );
+        },
+      );
+      test(
+        "over 1 pill sheet group period",
+        () {
+          final originalTodayRepository = todayRepository;
+          final mockTodayRepository = MockTodayService();
+          todayRepository = mockTodayRepository;
+          when(mockTodayRepository.now())
+              .thenReturn(DateTime.parse("2020-09-01"));
+          when(mockTodayRepository.today())
+              .thenReturn(DateTime.parse("2020-09-01"));
+          addTearDown(() {
+            todayRepository = originalTodayRepository;
+          });
+
+          var beginingDate = DateTime.parse("2020-09-01");
+          var pillSheet = PillSheet(
+            typeInfo: PillSheetType.pillsheet_28_7.typeInfo,
+            beginingDate: beginingDate,
+            lastTakenDate: null,
+          );
+          var pillSheet2 = PillSheet(
+            typeInfo: PillSheetType.pillsheet_24_0.typeInfo,
+            beginingDate: beginingDate.add(Duration(days: 28)),
+            lastTakenDate: null,
+          );
+          final pillSheetGroup = PillSheetGroup(
+            pillSheetIDs: ["1", "2"],
+            pillSheets: [pillSheet, pillSheet2],
+            createdAt: now(),
+          );
+          var setting = Setting(
+            pillSheetTypes: [
+              PillSheetType.pillsheet_28_7,
+              PillSheetType.pillsheet_24_0
+            ],
+            pillNumberForFromMenstruation: 23,
+            durationMenstruation: 3,
+            isOnReminder: false,
+            reminderTimes: [ReminderTime(hour: 1, minute: 1)],
+          );
+          expect(
+            scheduledOrInTheMiddleMenstruationDateRanges(
+                pillSheetGroup, setting, [], 4),
+            [
+              DateRange(
+                DateTime.parse("2020-09-23"),
+                DateTime.parse("2020-09-25"),
+              ),
+              DateRange(
+                DateTime.parse("2020-10-21"),
+                DateTime.parse("2020-10-23"),
+              ),
+              DateRange(
+                DateTime.parse("2020-11-14"),
+                DateTime.parse("2020-11-16"),
+              ),
+              DateRange(
+                DateTime.parse("2020-12-12"),
+                DateTime.parse("2020-12-14"),
+              ),
+            ],
+          );
+        },
+      );
+    });
     group("only one pillSheet", () {
       test(
         "First page with pillSheetType: pillsheet_28_7, beginingDate: 2020-09-01, fromMenstruation: 23, durationMenstruation: 3",
@@ -233,9 +411,146 @@ void main() {
           );
         },
       );
+      test(
+        "over 1 pill sheet gropu period",
+        () {
+          final originalTodayRepository = todayRepository;
+          final mockTodayRepository = MockTodayService();
+          todayRepository = mockTodayRepository;
+          when(mockTodayRepository.now())
+              .thenReturn(DateTime.parse("2021-01-01"));
+          when(mockTodayRepository.today())
+              .thenReturn(DateTime.parse("2021-01-01"));
+          addTearDown(() {
+            todayRepository = originalTodayRepository;
+          });
+
+          var pillSheetType = PillSheetType.pillsheet_28_0;
+          var beginingDate = DateTime.parse("2021-01-01");
+          var pillSheet = PillSheet(
+            typeInfo: pillSheetType.typeInfo,
+            beginingDate: beginingDate,
+            lastTakenDate: null,
+          );
+          final pillSheetGroup = PillSheetGroup(
+              pillSheetIDs: ["1"], pillSheets: [pillSheet], createdAt: now());
+          var setting = Setting(
+            pillSheetTypes: [pillSheetType],
+            pillNumberForFromMenstruation: 23,
+            durationMenstruation: 3,
+            isOnReminder: false,
+            reminderTimes: [ReminderTime(hour: 1, minute: 1)],
+          );
+          expect(
+            scheduledOrInTheMiddleMenstruationDateRanges(
+                pillSheetGroup, setting, [], 3),
+            [
+              DateRange(
+                DateTime.parse("2021-01-23"),
+                DateTime.parse("2021-01-25"),
+              ),
+              DateRange(
+                DateTime.parse("2021-02-20"),
+                DateTime.parse("2021-02-22"),
+              ),
+              DateRange(
+                DateTime.parse("2021-03-20"),
+                DateTime.parse("2021-03-22"),
+              ),
+            ],
+          );
+        },
+      );
+      test(
+        "setting.pillNumberForFromMenstruation is zero",
+        () {
+          final originalTodayRepository = todayRepository;
+          final mockTodayRepository = MockTodayService();
+          todayRepository = mockTodayRepository;
+          when(mockTodayRepository.now())
+              .thenReturn(DateTime.parse("2021-01-18"));
+          when(mockTodayRepository.today())
+              .thenReturn(DateTime.parse("2021-01-18"));
+          addTearDown(() {
+            todayRepository = originalTodayRepository;
+          });
+
+          var pillSheetType = PillSheetType.pillsheet_28_0;
+          var beginingDate = DateTime.parse("2021-01-18");
+          var durationMenstruation = 3;
+          var pillSheet = PillSheet(
+            typeInfo: pillSheetType.typeInfo,
+            beginingDate: beginingDate,
+            lastTakenDate: null,
+          );
+          final pillSheetGroup = PillSheetGroup(
+              pillSheetIDs: ["1"], pillSheets: [pillSheet], createdAt: now());
+          var setting = Setting(
+            pillSheetTypes: [pillSheetType],
+            pillNumberForFromMenstruation: 0,
+            durationMenstruation: durationMenstruation,
+            isOnReminder: false,
+            reminderTimes: [ReminderTime(hour: 1, minute: 1)],
+          );
+          assert(pillSheetType.dosingPeriod == 28,
+              "scheduledMenstruationDateRange adding value with dosingPeriod when it will create DateRange. pillsheet_28_7 type has 24 dosingPeriod");
+          expect(
+            scheduledOrInTheMiddleMenstruationDateRanges(
+                pillSheetGroup, setting, [], 1),
+            [],
+          );
+        },
+      );
     });
   });
   group("#nextPillSheetDateRanges", () {
+    group("multiple pillSheet pattern", () {
+      test(
+        "First page with pillSheetTypes: [pillsheet_28_7, pillsheet_21_0], beginingDate: [2020-09-01, 2020-09-29]",
+        () {
+          final originalTodayRepository = todayRepository;
+          final mockTodayRepository = MockTodayService();
+          todayRepository = mockTodayRepository;
+          when(mockTodayRepository.now())
+              .thenReturn(DateTime.parse("2020-09-01"));
+          when(mockTodayRepository.today())
+              .thenReturn(DateTime.parse("2020-09-01"));
+          addTearDown(() {
+            todayRepository = originalTodayRepository;
+          });
+
+          var beginingDate = DateTime.parse("2020-09-01");
+          var pillSheet = PillSheet(
+            typeInfo: PillSheetType.pillsheet_28_7.typeInfo,
+            beginingDate: beginingDate,
+            lastTakenDate: null,
+          );
+          var pillSheet2 = PillSheet(
+            typeInfo: PillSheetType.pillsheet_21_0.typeInfo,
+            beginingDate: beginingDate.add(Duration(days: 28)),
+            lastTakenDate: null,
+          );
+          final pillSheetGroup = PillSheetGroup(
+            pillSheetIDs: ["1", "2"],
+            pillSheets: [pillSheet, pillSheet2],
+            createdAt: now(),
+          );
+          expect(
+            nextPillSheetDateRanges(pillSheetGroup, 2),
+            [
+              DateRange(
+                DateTime.parse("2020-09-29"),
+                DateTime.parse("2020-10-05"),
+              ),
+              DateRange(
+                DateTime.parse("2020-10-20"),
+                DateTime.parse("2020-10-26"),
+              ),
+            ],
+          );
+        },
+      );
+    });
     group("only one pillSheet", () {
       test(
         "First page with pillSheetType: pillsheet_28_7, beginingDate: 2020-09-01",
@@ -421,43 +736,43 @@ void main() {
         },
       );
     });
-    group("#bandLength", () {
-      test(
-        "range: DateRange(2021-02-07, 2021-02-13), bandMode: (2021-02-10, 2021-02-13), isLineBreaked: false",
-        () {
-          expect(
-              bandLength(
-                DateRange(
-                  DateTime.parse("2021-02-07"),
-                  DateTime.parse("2021-02-13"),
-                ),
-                CalendarScheduledMenstruationBandModel(
-                  DateTime.parse("2021-02-10"),
-                  DateTime.parse("2021-02-13"),
-                ),
-                false,
+  });
+  group("#bandLength", () {
+    test(
+      "range: DateRange(2021-02-07, 2021-02-13), bandMode: (2021-02-10, 2021-02-13), isLineBreaked: false",
+      () {
+        expect(
+            bandLength(
+              DateRange(
+                DateTime.parse("2021-02-07"),
+                DateTime.parse("2021-02-13"),
               ),
-              4);
-        },
-      );
-      test(
-        "range: DateRange(2021-02-14, 2021-02-20), bandMode: (2021-02-08, 2021-02-14), isLineBreaked: false",
-        () {
-          expect(
-              bandLength(
-                DateRange(
-                  DateTime.parse("2021-02-14"),
-                  DateTime.parse("2021-02-20"),
-                ),
-                CalendarScheduledMenstruationBandModel(
-                  DateTime.parse("2021-02-08"),
-                  DateTime.parse("2021-02-14"),
-                ),
-                true,
+              CalendarScheduledMenstruationBandModel(
+                DateTime.parse("2021-02-10"),
+                DateTime.parse("2021-02-13"),
               ),
-              1);
-        },
-      );
-    });
+              false,
+            ),
+            4);
+      },
+    );
+    test(
+      "range: DateRange(2021-02-14, 2021-02-20), bandMode: (2021-02-08, 2021-02-14), isLineBreaked: false",
+      () {
+        expect(
+            bandLength(
+              DateRange(
+                DateTime.parse("2021-02-14"),
+                DateTime.parse("2021-02-20"),
+              ),
+              CalendarScheduledMenstruationBandModel(
+                DateTime.parse("2021-02-08"),
+                DateTime.parse("2021-02-14"),
+              ),
+              true,
+            ),
+            1);
+      },
+    );
   });
 }
