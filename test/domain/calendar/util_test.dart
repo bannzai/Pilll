@@ -347,47 +347,47 @@ void main() {
           );
         },
       );
-    });
-    test(
-      "setting.pillNumberForFromMenstruation is zero",
-      () {
-        final originalTodayRepository = todayRepository;
-        final mockTodayRepository = MockTodayService();
-        todayRepository = mockTodayRepository;
-        when(mockTodayRepository.now())
-            .thenReturn(DateTime.parse("2021-01-18"));
-        when(mockTodayRepository.today())
-            .thenReturn(DateTime.parse("2021-01-18"));
-        addTearDown(() {
-          todayRepository = originalTodayRepository;
-        });
+      test(
+        "setting.pillNumberForFromMenstruation is zero",
+        () {
+          final originalTodayRepository = todayRepository;
+          final mockTodayRepository = MockTodayService();
+          todayRepository = mockTodayRepository;
+          when(mockTodayRepository.now())
+              .thenReturn(DateTime.parse("2021-01-18"));
+          when(mockTodayRepository.today())
+              .thenReturn(DateTime.parse("2021-01-18"));
+          addTearDown(() {
+            todayRepository = originalTodayRepository;
+          });
 
-        var pillSheetType = PillSheetType.pillsheet_28_0;
-        var beginingDate = DateTime.parse("2021-01-18");
-        var durationMenstruation = 3;
-        var pillSheet = PillSheet(
-          typeInfo: pillSheetType.typeInfo,
-          beginingDate: beginingDate,
-          lastTakenDate: null,
-        );
-        final pillSheetGroup = PillSheetGroup(
-            pillSheetIDs: ["1"], pillSheets: [pillSheet], createdAt: now());
-        var setting = Setting(
-          pillSheetTypes: [pillSheetType],
-          pillNumberForFromMenstruation: 0,
-          durationMenstruation: durationMenstruation,
-          isOnReminder: false,
-          reminderTimes: [ReminderTime(hour: 1, minute: 1)],
-        );
-        assert(pillSheetType.dosingPeriod == 28,
-            "scheduledMenstruationDateRange adding value with dosingPeriod when it will create DateRange. pillsheet_28_7 type has 24 dosingPeriod");
-        expect(
-          scheduledOrInTheMiddleMenstruationDateRanges(
-              pillSheetGroup, setting, [], 1),
-          [],
-        );
-      },
-    );
+          var pillSheetType = PillSheetType.pillsheet_28_0;
+          var beginingDate = DateTime.parse("2021-01-18");
+          var durationMenstruation = 3;
+          var pillSheet = PillSheet(
+            typeInfo: pillSheetType.typeInfo,
+            beginingDate: beginingDate,
+            lastTakenDate: null,
+          );
+          final pillSheetGroup = PillSheetGroup(
+              pillSheetIDs: ["1"], pillSheets: [pillSheet], createdAt: now());
+          var setting = Setting(
+            pillSheetTypes: [pillSheetType],
+            pillNumberForFromMenstruation: 0,
+            durationMenstruation: durationMenstruation,
+            isOnReminder: false,
+            reminderTimes: [ReminderTime(hour: 1, minute: 1)],
+          );
+          assert(pillSheetType.dosingPeriod == 28,
+              "scheduledMenstruationDateRange adding value with dosingPeriod when it will create DateRange. pillsheet_28_7 type has 24 dosingPeriod");
+          expect(
+            scheduledOrInTheMiddleMenstruationDateRanges(
+                pillSheetGroup, setting, [], 1),
+            [],
+          );
+        },
+      );
+    });
   });
   group("#nextPillSheetDateRanges", () {
     group("multiple pillSheet pattern", () {
