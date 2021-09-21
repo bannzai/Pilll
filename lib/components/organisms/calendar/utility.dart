@@ -55,7 +55,7 @@ List<DateRange> scheduledOrInTheMiddleMenstruationDateRanges(
       }
 
       dateRanges.add(DateRange(begin, end));
-      if (dateRanges.length >= count) {
+      if (dateRanges.length >= maxPageCount) {
         return dateRanges;
       }
     }
