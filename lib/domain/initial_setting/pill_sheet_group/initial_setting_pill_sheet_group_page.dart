@@ -1,6 +1,7 @@
 import 'package:pilll/analytics.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/template/setting_pill_sheet_group/setting_pill_sheet_group.dart';
+import 'package:pilll/domain/initial_setting/initial_setting_state.dart';
 import 'package:pilll/domain/initial_setting/today_pill_number/initial_setting_select_today_pill_number_page.dart';
 import 'package:pilll/domain/initial_setting/initial_setting_store.dart';
 import 'package:pilll/components/atoms/buttons.dart';
@@ -48,14 +49,8 @@ class InitialSettingPillSheetGroupPage extends HookWidget {
                       textAlign: TextAlign.center,
                     ),
                     SizedBox(height: 6),
-                    SettingPillSheetGroup(
-                      pillSheetTypes: state.pillSheetTypes,
-                      onAdd: (pillSheetType) =>
-                          store.addPillSheetType(pillSheetType),
-                      onChange: (index, pillSheetType) =>
-                          store.changePillSheetType(index, pillSheetType),
-                      onDelete: (index) => store.removePillSheetType(index),
-                    ),
+                    InitialSettingPillSheetGroupPageBody(
+                        state: state, store: store),
                   ],
                 ),
               ),
@@ -114,5 +109,31 @@ class InitialSettingPillSheetGroupPage extends HookWidget {
         ),
       ),
     );
+  }
+}
+
+class InitialSettingPillSheetGroupPageBody extends StatelessWidget {
+  const InitialSettingPillSheetGroupPageBody({
+    Key? key,
+    required this.state,
+    required this.store,
+  }) : super(key: key);
+
+  final InitialSettingState state;
+  final InitialSettingStateStore store;
+
+  @override
+  Widget build(BuildContext context) {
+    if (state.pillSheetTypes.isEmpty) {
+      return Container();
+    } else {
+      return SettingPillSheetGroup(
+        pillSheetTypes: state.pillSheetTypes,
+        onAdd: (pillSheetType) => store.addPillSheetType(pillSheetType),
+        onChange: (index, pillSheetType) =>
+            store.changePillSheetType(index, pillSheetType),
+        onDelete: (index) => store.removePillSheetType(index),
+      );
+    }
   }
 }
