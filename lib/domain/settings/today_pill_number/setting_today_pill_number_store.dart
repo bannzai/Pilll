@@ -77,21 +77,35 @@ class SettingTodayPillNumberStateStore
 
     final distance = nextSerializedPillNumber - currentPillNumberIntoGroup;
     final List<PillSheet> updatedPillSheets = [];
-    pillSheetGroup.pillSheets.forEach((pillSheet) {
+    pillSheetGroup.pillSheets.asMap().keys.forEach((index) {
+      final pillSheet = pillSheetGroup.pillSheets[index];
+      final beginingDate =
+          pillSheet.beginingDate.subtract(Duration(days: distance));
+      final DateTime? lastTakenDate;
+      if (state.selectedPillSheetPageIndex == index) {
+        lastTakenDate = beginingDate
+            .add(Duration(days: state.selectedPillMarkNumberIntoPillSheet - 2));
+      } else if (state.selectedPillSheetPageIndex > index) {
+        lastTakenDate = beginingDate
+            .add(Duration(days: pillSheet.pillSheetType.totalCount - 1));
+      } else {
+        // state.selectedPillMarkNumberIntoPillSheet < index
+        lastTakenDate = null;
+      }
       final updatedPillSheet = pillSheet.copyWith(
-        beginingDate: pillSheet.beginingDate.subtract(Duration(days: distance)),
+        beginingDate: beginingDate,
+        lastTakenDate: lastTakenDate,
       );
-      _pillSheetService.update(batch, [updatedPillSheet]);
       updatedPillSheets.add(updatedPillSheet);
     });
 
-    final nextActivedPillSheet =
-        updatedPillSheets[state.selectedPillSheetPageIndex];
+    _pillSheetService.update(batch, updatedPillSheets);
+
     final history = PillSheetModifiedHistoryServiceActionFactory
         .createChangedPillNumberAction(
       pillSheetGroupID: pillSheetGroup.id,
       before: activedPillSheet,
-      after: nextActivedPillSheet,
+      after: updatedPillSheets[state.selectedPillSheetPageIndex],
     );
     _pillSheetModifiedHistoryService.add(batch, history);
 

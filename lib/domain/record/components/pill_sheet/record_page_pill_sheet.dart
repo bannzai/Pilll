@@ -136,28 +136,43 @@ class RecordPagePillSheet extends StatelessWidget {
       return true;
     }();
 
+    if (setting.pillNumberForFromMenstruation == 0 ||
+        setting.durationMenstruation == 0) {
+      if (isDateMode) {
+        return PlainPillDate(date: date);
+      } else {
+        return PlainPillNumber(pillNumber: pillNumberIntoPillSheet);
+      }
+    }
+
     final pillSheetTypes =
         pillSheetGroup.pillSheets.map((e) => e.pillSheetType).toList();
     final passedCount =
         passedTotalCount(pillSheetTypes: pillSheetTypes, pageIndex: pageIndex);
-    final serializedPillNumberIntoGroup = passedCount + pillNumberIntoPillSheet;
+
+    final int pillNumberForFromMenstruationIntoPillSheet;
+    if (passedCount == 0) {
+      pillNumberForFromMenstruationIntoPillSheet =
+          setting.pillNumberForFromMenstruation;
+    } else {
+      pillNumberForFromMenstruationIntoPillSheet =
+          setting.pillNumberForFromMenstruation % passedCount;
+    }
     final menstruationNumbers =
         List.generate(setting.durationMenstruation, (index) {
-      return setting.pillNumberForFromMenstruation + index;
+      return pillNumberForFromMenstruationIntoPillSheet + index;
     });
     final isContainedMenstruationDuration =
-        menstruationNumbers.contains(serializedPillNumberIntoGroup);
+        menstruationNumbers.contains(pillNumberIntoPillSheet);
 
     if (isDateMode) {
-      if (isContainedMenstruationDuration &&
-          setting.pillNumberForFromMenstruation != 0) {
+      if (isContainedMenstruationDuration) {
         return MenstruationPillDate(date: date);
       } else {
         return PlainPillDate(date: date);
       }
     } else {
-      if (isContainedMenstruationDuration &&
-          setting.pillNumberForFromMenstruation != 0) {
+      if (isContainedMenstruationDuration) {
         return MenstruationPillNumber(pillNumber: pillNumberIntoPillSheet);
       } else {
         return PlainPillNumber(pillNumber: pillNumberIntoPillSheet);
