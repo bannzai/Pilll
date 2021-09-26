@@ -385,12 +385,3 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
     state = state.copyWith(setting: updatedSetting);
   }
 }
-
-DateTime calcBeginingDateFromNextTodayPillNumberFunction(
-  PillSheet pillSheet,
-  int pillNumber,
-) {
-  if (pillNumber == pillSheet.todayPillNumber) return pillSheet.beginingDate;
-  final diff = pillNumber - pillSheet.todayPillNumber;
-  return pillSheet.beginingDate.subtract(Duration(days: diff));
-}
