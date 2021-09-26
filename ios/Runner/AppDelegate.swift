@@ -65,17 +65,15 @@ extension AppDelegate {
         UNUserNotificationCenter.current().setNotificationCategories([category])
     }
 
-    override func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
-        super.userNotificationCenter(center, didReceive: response, withCompletionHandler: completionHandler)
+    @objc func userNotificationCenter_methodSwizzling(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
         func end() {
             var isCompleted: Bool = false
             let completionHandlerWrapper = {
                 isCompleted = true
                 completionHandler()
             }
-
             UIApplication.shared.applicationIconBadgeNumber = 0
-            self.userNotificationCenter_methodSwizzling(center, didReceive: response, withCompletionHandler: completionHandlerWrapper)
+            userNotificationCenter_methodSwizzling(center, didReceive: response, withCompletionHandler: completionHandlerWrapper)
             if !isCompleted {
                 completionHandlerWrapper()
             }
@@ -89,39 +87,6 @@ extension AppDelegate {
             case "RECORD_PILL":
                 call(method: "recordPill", arguments: nil)
                 end()
-            default:
-                end()
-            }
-        }
-    }
-    @objc func userNotificationCenter_methodSwizzling(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
-        func end(delay: TimeInterval = 0) {
-            var isCompleted: Bool = false
-            let completionHandlerWrapper = {
-                isCompleted = true
-                completionHandler()
-            }
-            // NOTE: すぐにcallbackした場合、Flutterからfirestoreにリクエストを送っている途中でプロセスが終了している疑惑がある。
-            // それで、雑だけど10秒くらいあとにcompletionHandlerを呼ぶことにした
-            // ちなみにリミットは30秒以内にcompletionを呼ぶ:  https://developer.apple.com/documentation/usernotifications/setting_up_a_remote_notification_server/pushing_background_updates_to_your_app
-            // なおバッジはすぐに消しても良いと判断して消した
-            UIApplication.shared.applicationIconBadgeNumber = 0
-            DispatchQueue.main.asyncAfter(deadline: .now() + delay) {
-                self.userNotificationCenter_methodSwizzling(center, didReceive: response, withCompletionHandler: completionHandlerWrapper)
-                if !isCompleted {
-                    completionHandlerWrapper()
-                }
-            }
-        }
-
-        switch extractCategory(userInfo: response.notification.request.content.userInfo) {
-        case nil:
-            return
-        case .pillReminder:
-            switch response.actionIdentifier {
-            case "RECORD_PILL":
-                call(method: "recordPill", arguments: nil)
-                end(delay: 10)
             default:
                 end()
             }
