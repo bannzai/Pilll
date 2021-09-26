@@ -65,6 +65,35 @@ extension AppDelegate {
         UNUserNotificationCenter.current().setNotificationCategories([category])
     }
 
+    override func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
+        super.userNotificationCenter(center, didReceive: response, withCompletionHandler: completionHandler)
+        func end() {
+            var isCompleted: Bool = false
+            let completionHandlerWrapper = {
+                isCompleted = true
+                completionHandler()
+            }
+
+            UIApplication.shared.applicationIconBadgeNumber = 0
+            self.userNotificationCenter_methodSwizzling(center, didReceive: response, withCompletionHandler: completionHandlerWrapper)
+            if !isCompleted {
+                completionHandlerWrapper()
+            }
+        }
+
+        switch extractCategory(userInfo: response.notification.request.content.userInfo) {
+        case nil:
+            return
+        case .pillReminder:
+            switch response.actionIdentifier {
+            case "RECORD_PILL":
+                call(method: "recordPill", arguments: nil)
+                end()
+            default:
+                end()
+            }
+        }
+    }
     @objc func userNotificationCenter_methodSwizzling(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
         func end(delay: TimeInterval = 0) {
             var isCompleted: Bool = false
