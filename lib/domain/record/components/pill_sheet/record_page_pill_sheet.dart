@@ -145,38 +145,59 @@ class RecordPagePillSheet extends StatelessWidget {
       }
     }
 
-    final pillSheetTypes =
-        pillSheetGroup.pillSheets.map((e) => e.pillSheetType).toList();
-    final passedCount =
-        passedTotalCount(pillSheetTypes: pillSheetTypes, pageIndex: pageIndex);
-
-    final int pillNumberForFromMenstruationIntoPillSheet;
-    if (passedCount == 0) {
-      pillNumberForFromMenstruationIntoPillSheet =
-          setting.pillNumberForFromMenstruation;
-    } else {
-      pillNumberForFromMenstruationIntoPillSheet =
-          setting.pillNumberForFromMenstruation % passedCount;
-    }
-    final menstruationNumbers =
-        List.generate(setting.durationMenstruation, (index) {
-      return pillNumberForFromMenstruationIntoPillSheet + index;
-    });
-    final isContainedMenstruationDuration =
-        menstruationNumbers.contains(pillNumberIntoPillSheet);
+    final containedMenstruationDuration = isContainedMenstruationDuration(
+      pillNumberIntoPillSheet: pillNumberIntoPillSheet,
+      pillSheetGroup: pillSheetGroup,
+      setting: setting,
+      pageIndex: pageIndex,
+    );
 
     if (isDateMode) {
-      if (isContainedMenstruationDuration) {
+      if (containedMenstruationDuration) {
         return MenstruationPillDate(date: date);
       } else {
         return PlainPillDate(date: date);
       }
     } else {
-      if (isContainedMenstruationDuration) {
+      if (containedMenstruationDuration) {
         return MenstruationPillNumber(pillNumber: pillNumberIntoPillSheet);
       } else {
         return PlainPillNumber(pillNumber: pillNumberIntoPillSheet);
       }
     }
   }
+
+  static bool isContainedMenstruationDuration({
+    required int pillNumberIntoPillSheet,
+    required PillSheetGroup pillSheetGroup,
+    required int pageIndex,
+    required Setting setting,
+  }) {
+    final pillSheetTypes =
+        pillSheetGroup.pillSheets.map((e) => e.pillSheetType).toList();
+    final passedCount =
+        passedTotalCount(pillSheetTypes: pillSheetTypes, pageIndex: pageIndex);
+    final serialiedPillNumber = passedCount + pillNumberIntoPillSheet;
+
+    final menstruationRangeList =
+        List.generate(pillSheetGroup.pillSheets.length, (index) {
+      final begin = setting.pillNumberForFromMenstruation * (index + 1);
+      final end = begin + setting.durationMenstruation - 1;
+      return _MenstruationRange(begin, end);
+    });
+
+    final isContainedMenstruationDuration = menstruationRangeList
+        .where((element) => element.contains(serialiedPillNumber))
+        .isNotEmpty;
+    return isContainedMenstruationDuration;
+  }
+}
+
+class _MenstruationRange {
+  final int begin;
+  final int end;
+
+  _MenstruationRange(this.begin, this.end);
+
+  bool contains(int pillNumber) => begin <= pillNumber && pillNumber <= end;
 }
