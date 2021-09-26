@@ -48,60 +48,59 @@ class InitialSettingPillSheetGroupPage extends HookWidget {
                     ),
                     InitialSettingPillSheetGroupPageBody(
                         state: state, store: store),
+                    SizedBox(height: 100),
                   ],
                 ),
               ),
               Align(
                 alignment: Alignment.bottomCenter,
-                child: Padding(
-                  padding: const EdgeInsets.only(bottom: 35),
-                  child: Container(
-                    color: PilllColors.background,
-                    child: Column(
-                      mainAxisSize: MainAxisSize.min,
-                      children: [
-                        if (state.pillSheetTypes.isNotEmpty)
-                          PrimaryButton(
-                            text: "次へ",
-                            onPressed: () async {
-                              analytics.logEvent(name: "next_pill_sheet_count");
-                              Navigator.of(context).push(
-                                  InitialSettingSelectTodayPillNumberPageRoute
-                                      .route());
-                            },
-                          ),
-                        if (!state.isAccountCooperationDidEnd) ...[
-                          SizedBox(height: 20),
-                          SecondaryButton(
-                            text: "すでにアカウントをお持ちの方はこちら",
-                            onPressed: () {
-                              showSigninSheet(
-                                context,
-                                SigninSheetStateContext.initialSetting,
-                                (accountType) async {
-                                  store.showHUD();
-                                  if (await store.canEndInitialSetting()) {
-                                    AppRouter.signinAccount(context);
-                                  } else {
-                                    ScaffoldMessenger.of(context).showSnackBar(
-                                      SnackBar(
-                                        duration: Duration(seconds: 2),
-                                        content: Text(
-                                            "${accountType.providerName}でログインしました"),
-                                      ),
-                                    );
-                                  }
-                                },
-                              );
-                            },
-                          ),
-                        ],
+                child: Container(
+                  width: MediaQuery.of(context).size.width,
+                  color: PilllColors.background,
+                  child: Column(
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      if (state.pillSheetTypes.isNotEmpty)
+                        PrimaryButton(
+                          text: "次へ",
+                          onPressed: () async {
+                            analytics.logEvent(name: "next_pill_sheet_count");
+                            Navigator.of(context).push(
+                                InitialSettingSelectTodayPillNumberPageRoute
+                                    .route());
+                          },
+                        ),
+                      if (!state.isAccountCooperationDidEnd) ...[
+                        SizedBox(height: 20),
+                        SecondaryButton(
+                          text: "すでにアカウントをお持ちの方はこちら",
+                          onPressed: () {
+                            showSigninSheet(
+                              context,
+                              SigninSheetStateContext.initialSetting,
+                              (accountType) async {
+                                store.showHUD();
+                                if (await store.canEndInitialSetting()) {
+                                  AppRouter.signinAccount(context);
+                                } else {
+                                  ScaffoldMessenger.of(context).showSnackBar(
+                                    SnackBar(
+                                      duration: Duration(seconds: 2),
+                                      content: Text(
+                                          "${accountType.providerName}でログインしました"),
+                                    ),
+                                  );
+                                }
+                              },
+                            );
+                          },
+                        ),
                       ],
-                    ),
+                      SizedBox(height: 35),
+                    ],
                   ),
                 ),
               ),
-              SizedBox(height: 35),
             ],
           ),
         ),
