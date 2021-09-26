@@ -77,23 +77,29 @@ void main() {
         durationMenstruation: 3,
         isOnReminder: true,
       );
-      final pageIndex = 0;
-
-      final totalCount = [
+      final pillSheetTypes = [
         PillSheetType.pillsheet_28_0,
         PillSheetType.pillsheet_28_0,
         PillSheetType.pillsheet_28_0
-      ].map((e) => e.totalCount).reduce((value, element) => value + element);
+      ];
 
-      for (int i = 1; i <= totalCount; i++) {
-        expect(
-            RecordPagePillSheet.isContainedMenstruationDuration(
-                pillNumberIntoPillSheet: i,
+      for (int pageIndex = 0; pageIndex < pillSheetTypes.length; pageIndex++) {
+        for (int pillNumberIntoPillSheet = 1;
+            pillNumberIntoPillSheet <= pillSheetTypes[pageIndex].totalCount;
+            pillNumberIntoPillSheet++) {
+          expect(
+              RecordPagePillSheet.isContainedMenstruationDuration(
+                pillNumberIntoPillSheet: pillNumberIntoPillSheet,
                 pillSheetGroup: pillSheetGroup,
                 pageIndex: pageIndex,
-                setting: setting),
-            46 <= i && i <= 48,
-            reason: "print debug informations pillNumberIntoPillSheet is $i");
+                setting: setting,
+              ),
+              (pageIndex == 1 &&
+                  18 <= pillNumberIntoPillSheet &&
+                  pillNumberIntoPillSheet <= 20),
+              reason:
+                  "print debug informations pillNumberIntoPillSheet is $pillNumberIntoPillSheet, pageIndex: $pageIndex");
+        }
       }
     });
   });
