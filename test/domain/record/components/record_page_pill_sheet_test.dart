@@ -159,7 +159,7 @@ void main() {
         }
       }
     });
-    // It is spec. But unknown about this case is correct
+    // 仕様的にはこの内容になるけど、ユーザーの入力としては想定されていない。なので仕様がおかしいとなったらこのテストは守らなくて良い
     test(
         "group has five pill sheet and scheduled menstruation begin No.2 pillSheet",
         () async {
