@@ -2,6 +2,7 @@ import 'dart:async';
 
 import 'package:pilll/database/batch.dart';
 import 'package:pilll/domain/settings/today_pill_number/setting_today_pill_number_state.dart';
+import 'package:pilll/domain/settings/today_pill_number/setting_today_pill_number_store_parameter.dart';
 import 'package:pilll/entity/pill_sheet.dart';
 import 'package:pilll/entity/pill_sheet_group.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
@@ -10,8 +11,11 @@ import 'package:pilll/service/pill_sheet_group.dart';
 import 'package:pilll/service/pill_sheet_modified_history.dart';
 import 'package:riverpod/riverpod.dart';
 
-final settingTodayPillNumberStoreProvider = StateNotifierProvider.autoDispose(
-  (ref) => SettingTodayPillNumberStateStore(
+final settingTodayPillNumberStoreProvider =
+    StateNotifierProvider.autoDispose.family(
+  (ref, SettingTodayPillNumberStoreParameter parameter) =>
+      SettingTodayPillNumberStateStore(
+    parameter,
     ref.watch(batchFactoryProvider),
     ref.watch(pillSheetServiceProvider),
     ref.watch(pillSheetGroupServiceProvider),
@@ -27,24 +31,20 @@ class SettingTodayPillNumberStateStore
   final PillSheetModifiedHistoryService _pillSheetModifiedHistoryService;
 
   SettingTodayPillNumberStateStore(
+    SettingTodayPillNumberStoreParameter _parameter,
     this._batchFactory,
     this._pillSheetService,
     this._pillSheetGroupService,
     this._pillSheetModifiedHistoryService,
-  ) : super(SettingTodayPillNumberState());
-
-  initialize({
-    required PillSheetGroup pillSheetGroup,
-    required PillSheet activedPillSheet,
-  }) {
-    Future(() {
-      state = state.copyWith(
-        selectedPillSheetPageIndex: activedPillSheet.groupIndex,
-        selectedPillMarkNumberIntoPillSheet: _pillNumberIntoPillSheet(
-            activedPillSheet: activedPillSheet, pillSheetGroup: pillSheetGroup),
-      );
-    });
-  }
+  ) : super(
+          SettingTodayPillNumberState(
+            selectedPillSheetPageIndex: _parameter.activedPillSheet.groupIndex,
+            selectedPillMarkNumberIntoPillSheet: _pillNumberIntoPillSheet(
+              activedPillSheet: _parameter.activedPillSheet,
+              pillSheetGroup: _parameter.pillSheetGroup,
+            ),
+          ),
+        );
 
   markSelected({
     required int pageIndex,
@@ -56,7 +56,7 @@ class SettingTodayPillNumberStateStore
     );
   }
 
-  Future<void> modifyBeginingDate({
+  Future<void> modifiyTodayPillNumber({
     required PillSheetGroup pillSheetGroup,
     required PillSheet activedPillSheet,
   }) async {
@@ -114,18 +114,18 @@ class SettingTodayPillNumberStateStore
 
     await batch.commit();
   }
+}
 
-  int _pillNumberIntoPillSheet({
-    required PillSheet activedPillSheet,
-    required PillSheetGroup pillSheetGroup,
-  }) {
-    final pillSheetTypes =
-        pillSheetGroup.pillSheets.map((e) => e.pillSheetType).toList();
-    final _passedTotalCount = passedTotalCount(
-        pillSheetTypes: pillSheetTypes, pageIndex: activedPillSheet.groupIndex);
-    if (_passedTotalCount >= activedPillSheet.todayPillNumber) {
-      return activedPillSheet.todayPillNumber;
-    }
-    return activedPillSheet.todayPillNumber - _passedTotalCount;
+int _pillNumberIntoPillSheet({
+  required PillSheet activedPillSheet,
+  required PillSheetGroup pillSheetGroup,
+}) {
+  final pillSheetTypes =
+      pillSheetGroup.pillSheets.map((e) => e.pillSheetType).toList();
+  final _passedTotalCount = passedTotalCount(
+      pillSheetTypes: pillSheetTypes, pageIndex: activedPillSheet.groupIndex);
+  if (_passedTotalCount >= activedPillSheet.todayPillNumber) {
+    return activedPillSheet.todayPillNumber;
   }
+  return activedPillSheet.todayPillNumber - _passedTotalCount;
 }

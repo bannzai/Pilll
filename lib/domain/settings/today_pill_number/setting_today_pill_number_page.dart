@@ -6,6 +6,7 @@ import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/domain/settings/today_pill_number/setting_today_pill_number_store.dart';
 import 'package:pilll/domain/settings/today_pill_number/setting_today_pill_number_pill_sheet_list.dart';
+import 'package:pilll/domain/settings/today_pill_number/setting_today_pill_number_store_parameter.dart';
 import 'package:pilll/entity/pill_sheet.dart';
 import 'package:pilll/entity/pill_sheet_group.dart';
 import 'package:pilll/util/formatter/date_time_formatter.dart';
@@ -23,12 +24,12 @@ class SettingTodayPillNumberPage extends HookWidget {
 
   @override
   Widget build(BuildContext context) {
-    final state = useProvider(settingTodayPillNumberStoreProvider.state);
-    final store = useProvider(settingTodayPillNumberStoreProvider);
-    useEffect(
-        () => store.initialize(
-            pillSheetGroup: pillSheetGroup, activedPillSheet: activedPillSheet),
-        ["SettingTodayPillNumberPage"]);
+    final parameter = SettingTodayPillNumberStoreParameter(
+        pillSheetGroup: pillSheetGroup, activedPillSheet: activedPillSheet);
+    final state =
+        useProvider(settingTodayPillNumberStoreProvider(parameter).state);
+    final store = useProvider(settingTodayPillNumberStoreProvider(parameter));
+
     return Scaffold(
       backgroundColor: PilllColors.background,
       appBar: AppBar(
@@ -80,7 +81,7 @@ class SettingTodayPillNumberPage extends HookWidget {
                     children: [
                       PrimaryButton(
                         onPressed: () {
-                          store.modifyBeginingDate(
+                          store.modifiyTodayPillNumber(
                             pillSheetGroup: pillSheetGroup,
                             activedPillSheet: activedPillSheet,
                           );
