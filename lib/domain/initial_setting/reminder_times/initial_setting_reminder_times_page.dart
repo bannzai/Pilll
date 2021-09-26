@@ -1,5 +1,6 @@
 import 'package:pilll/analytics.dart';
 import 'package:pilll/domain/initial_setting/initial_setting_state.dart';
+import 'package:pilll/error/error_alert.dart';
 import 'package:pilll/router/router.dart';
 import 'package:pilll/domain/initial_setting/initial_setting_store.dart';
 import 'package:pilll/components/atoms/buttons.dart';
@@ -184,7 +185,11 @@ class InitialSettingReminderTimesPage extends HookWidget {
                       onPressed: () async {
                         analytics.logEvent(
                             name: "next_initial_setting_reminder_times");
-                        await store.register();
+                        try {
+                          await store.register();
+                        } catch (error) {
+                          showErrorAlert(context, message: error.toString());
+                        }
                         AppRouter.endInitialSetting(context);
                       },
                     ),
