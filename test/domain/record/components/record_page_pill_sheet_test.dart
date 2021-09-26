@@ -102,5 +102,87 @@ void main() {
         }
       }
     });
+    // It is spec. But unknown about this case is correct
+    test(
+        "group has five pill sheet and scheduled menstruation begin No.2 pillSheet",
+        () async {
+      final anyDate = DateTime.parse("2020-09-19");
+      final one = PillSheet(
+        typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
+        beginingDate: anyDate,
+        groupIndex: 0,
+      );
+      final two = PillSheet(
+        typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
+        beginingDate: anyDate,
+        groupIndex: 1,
+      );
+      final three = PillSheet(
+        typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
+        beginingDate: anyDate,
+        groupIndex: 2,
+      );
+      final four = PillSheet(
+        typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
+        beginingDate: anyDate,
+        groupIndex: 3,
+      );
+      final five = PillSheet(
+        typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
+        beginingDate: anyDate,
+        groupIndex: 4,
+      );
+      final pillSheetGroup = PillSheetGroup(
+        pillSheetIDs: ["1", "2", "3", "4", "5"],
+        pillSheets: [one, two, three, four, five],
+        createdAt: anyDate,
+      );
+      final setting = Setting(
+        pillSheetTypes: [
+          PillSheetType.pillsheet_28_0,
+          PillSheetType.pillsheet_28_0,
+          PillSheetType.pillsheet_28_0,
+          PillSheetType.pillsheet_28_0,
+          PillSheetType.pillsheet_28_0
+        ],
+        pillNumberForFromMenstruation: 46,
+        durationMenstruation: 3,
+        isOnReminder: true,
+      );
+
+      final pillSheetTypes = [
+        PillSheetType.pillsheet_28_0,
+        PillSheetType.pillsheet_28_0,
+        PillSheetType.pillsheet_28_0,
+        PillSheetType.pillsheet_28_0,
+        PillSheetType.pillsheet_28_0,
+      ];
+
+      for (int pageIndex = 0; pageIndex < pillSheetTypes.length; pageIndex++) {
+        for (int pillNumberIntoPillSheet = 1;
+            pillNumberIntoPillSheet <= pillSheetTypes[pageIndex].totalCount;
+            pillNumberIntoPillSheet++) {
+          final firstMatched = pageIndex == 1 &&
+              18 <= pillNumberIntoPillSheet &&
+              pillNumberIntoPillSheet <= 20;
+          final secondMatched = pageIndex == 3 &&
+              8 <= pillNumberIntoPillSheet &&
+              pillNumberIntoPillSheet <= 10;
+          final thirdPatched = pageIndex == 4 &&
+              26 <= pillNumberIntoPillSheet &&
+              pillNumberIntoPillSheet <= 28;
+          expect(
+              RecordPagePillSheet.isContainedMenstruationDuration(
+                pillNumberIntoPillSheet: pillNumberIntoPillSheet,
+                pillSheetGroup: pillSheetGroup,
+                pageIndex: pageIndex,
+                setting: setting,
+              ),
+              firstMatched || secondMatched || thirdPatched,
+              reason:
+                  "print debug informations pillNumberIntoPillSheet is $pillNumberIntoPillSheet, pageIndex: $pageIndex");
+        }
+      }
+    });
   });
 }
