@@ -25,6 +25,10 @@ class SettingTodayPillNumberPage extends HookWidget {
   Widget build(BuildContext context) {
     final state = useProvider(settingTodayPillNumberStoreProvider.state);
     final store = useProvider(settingTodayPillNumberStoreProvider);
+    useEffect(
+        () => store.initialize(
+            pillSheetGroup: pillSheetGroup, activedPillSheet: activedPillSheet),
+        ["SettingTodayPillNumberPage"]);
     return Scaffold(
       backgroundColor: PilllColors.background,
       appBar: AppBar(

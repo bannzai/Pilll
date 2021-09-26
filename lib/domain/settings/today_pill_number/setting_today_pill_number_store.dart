@@ -1,6 +1,5 @@
 import 'dart:async';
 
-import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:pilll/database/batch.dart';
 import 'package:pilll/domain/settings/today_pill_number/setting_today_pill_number_state.dart';
 import 'package:pilll/entity/pill_sheet.dart';
@@ -33,6 +32,19 @@ class SettingTodayPillNumberStateStore
     this._pillSheetGroupService,
     this._pillSheetModifiedHistoryService,
   ) : super(SettingTodayPillNumberState());
+
+  initialize({
+    required PillSheetGroup pillSheetGroup,
+    required PillSheet activedPillSheet,
+  }) {
+    Future(() {
+      state = state.copyWith(
+        selectedPillSheetPageIndex: activedPillSheet.groupIndex,
+        selectedPillMarkNumberIntoPillSheet: _pillNumberIntoPillSheet(
+            activedPillSheet: activedPillSheet, pillSheetGroup: pillSheetGroup),
+      );
+    });
+  }
 
   markSelected({
     required int pageIndex,
