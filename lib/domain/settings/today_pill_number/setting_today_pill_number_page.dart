@@ -81,7 +81,7 @@ class SettingTodayPillNumberPage extends HookWidget {
                     children: [
                       PrimaryButton(
                         onPressed: () {
-                          store.modifyBeginingDate(
+                          store.modifiyTodayPillNumber(
                             pillSheetGroup: pillSheetGroup,
                             activedPillSheet: activedPillSheet,
                           );

@@ -56,7 +56,7 @@ class SettingTodayPillNumberStateStore
     );
   }
 
-  Future<void> modifyBeginingDate({
+  Future<void> modifiyTodayPillNumber({
     required PillSheetGroup pillSheetGroup,
     required PillSheet activedPillSheet,
   }) async {

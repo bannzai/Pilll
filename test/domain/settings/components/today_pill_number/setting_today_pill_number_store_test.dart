@@ -102,7 +102,7 @@ void main() {
         pageIndex: 0,
         pillNumberIntoPillSheet: 2,
       );
-      await store.modifyBeginingDate(
+      await store.modifiyTodayPillNumber(
         pillSheetGroup: pillSheetGroup,
         activedPillSheet: pillSheetGroup.activedPillSheet!,
       );
