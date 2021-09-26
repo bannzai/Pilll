@@ -1,5 +1,6 @@
 import 'dart:io' show Platform;
 import 'dart:async';
+import 'dart:math';
 
 import 'package:pilll/database/batch.dart';
 import 'package:pilll/domain/record/util/take.dart';
@@ -226,22 +227,25 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
     required int pillNumberIntoPillSheet,
     required PillSheet pillSheet,
   }) async {
+    if (pillNumberIntoPillSheet <= pillSheet.lastTakenPillNumber) {
+      return false;
+    }
     final activedPillSheet = state.pillSheetGroup?.activedPillSheet;
     if (activedPillSheet == null) {
       return false;
     }
-    if (activedPillSheet.id != pillSheet.id) {
+    if (activedPillSheet.groupIndex < pillSheet.groupIndex) {
       return false;
     }
-    if (pillNumberIntoPillSheet <= activedPillSheet.lastTakenPillNumber) {
-      return false;
-    }
-    var diff = activedPillSheet.todayPillNumber - pillNumberIntoPillSheet;
+    var diff = min(pillSheet.todayPillNumber, pillSheet.typeInfo.totalCount) -
+        pillNumberIntoPillSheet;
     if (diff < 0) {
-      // This is in the future pill number.
+      // User tapped future pill number
       return false;
     }
-    var takenDate = now().subtract(Duration(days: diff));
+
+    var takenDate =
+        pillSheet.beginingDate.add(Duration(days: pillNumberIntoPillSheet - 1));
     return _take(takenDate);
   }
 
