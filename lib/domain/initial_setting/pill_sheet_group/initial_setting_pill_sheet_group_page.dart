@@ -1,6 +1,7 @@
 import 'package:flutter_svg/svg.dart';
 import 'package:pilll/analytics.dart';
 import 'package:pilll/components/atoms/font.dart';
+import 'package:pilll/components/page/hud.dart';
 import 'package:pilll/components/template/setting_pill_sheet_group/pill_sheet_group_select_pill_sheet_type_page.dart';
 import 'package:pilll/components/template/setting_pill_sheet_group/setting_pill_sheet_group.dart';
 import 'package:pilll/domain/initial_setting/initial_setting_state.dart';
@@ -23,85 +24,96 @@ class InitialSettingPillSheetGroupPage extends HookWidget {
   Widget build(BuildContext context) {
     final store = useProvider(initialSettingStoreProvider);
     final state = useProvider(initialSettingStoreProvider.state);
-    return Scaffold(
-      backgroundColor: PilllColors.background,
-      appBar: AppBar(
-        title: Text(
-          "1/4",
-          style: TextStyle(color: TextColor.black),
+    if (state.isAccountCooperationDidEnd) {
+      Future(() async {
+        if (await store.canEndInitialSetting()) {
+          AppRouter.signinAccount(context);
+        }
+        store.hideHUD();
+      });
+    }
+    return HUD(
+      shown: state.isLoading,
+      child: Scaffold(
+        backgroundColor: PilllColors.background,
+        appBar: AppBar(
+          title: Text(
+            "1/4",
+            style: TextStyle(color: TextColor.black),
+          ),
+          backgroundColor: PilllColors.white,
         ),
-        backgroundColor: PilllColors.white,
-      ),
-      body: SafeArea(
-        child: Container(
-          padding: EdgeInsets.symmetric(horizontal: 40),
-          child: Stack(
-            children: [
-              SingleChildScrollView(
-                child: Column(
-                  children: [
-                    SizedBox(height: 24),
-                    Text(
-                      "処方されるピルについて\n教えてください",
-                      style: FontType.sBigTitle.merge(TextColorStyle.main),
-                      textAlign: TextAlign.center,
-                    ),
-                    InitialSettingPillSheetGroupPageBody(
-                        state: state, store: store),
-                    SizedBox(height: 100),
-                  ],
-                ),
-              ),
-              Align(
-                alignment: Alignment.bottomCenter,
-                child: Container(
-                  width: MediaQuery.of(context).size.width,
-                  color: PilllColors.background,
+        body: SafeArea(
+          child: Container(
+            padding: EdgeInsets.symmetric(horizontal: 40),
+            child: Stack(
+              children: [
+                SingleChildScrollView(
                   child: Column(
-                    mainAxisSize: MainAxisSize.min,
                     children: [
-                      if (state.pillSheetTypes.isNotEmpty)
-                        PrimaryButton(
-                          text: "次へ",
-                          onPressed: () async {
-                            analytics.logEvent(name: "next_pill_sheet_count");
-                            Navigator.of(context).push(
-                                InitialSettingSelectTodayPillNumberPageRoute
-                                    .route());
-                          },
-                        ),
-                      if (!state.isAccountCooperationDidEnd) ...[
-                        SizedBox(height: 20),
-                        SecondaryButton(
-                          text: "すでにアカウントをお持ちの方はこちら",
-                          onPressed: () {
-                            showSigninSheet(
-                              context,
-                              SigninSheetStateContext.initialSetting,
-                              (accountType) async {
-                                store.showHUD();
-                                if (await store.canEndInitialSetting()) {
-                                  AppRouter.signinAccount(context);
-                                } else {
-                                  ScaffoldMessenger.of(context).showSnackBar(
-                                    SnackBar(
-                                      duration: Duration(seconds: 2),
-                                      content: Text(
-                                          "${accountType.providerName}でログインしました"),
-                                    ),
-                                  );
-                                }
-                              },
-                            );
-                          },
-                        ),
-                      ],
-                      SizedBox(height: 35),
+                      SizedBox(height: 24),
+                      Text(
+                        "処方されるピルについて\n教えてください",
+                        style: FontType.sBigTitle.merge(TextColorStyle.main),
+                        textAlign: TextAlign.center,
+                      ),
+                      InitialSettingPillSheetGroupPageBody(
+                          state: state, store: store),
+                      SizedBox(height: 100),
                     ],
                   ),
                 ),
-              ),
-            ],
+                Align(
+                  alignment: Alignment.bottomCenter,
+                  child: Container(
+                    width: MediaQuery.of(context).size.width,
+                    color: PilllColors.background,
+                    child: Column(
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        if (state.pillSheetTypes.isNotEmpty)
+                          PrimaryButton(
+                            text: "次へ",
+                            onPressed: () async {
+                              analytics.logEvent(name: "next_pill_sheet_count");
+                              Navigator.of(context).push(
+                                  InitialSettingSelectTodayPillNumberPageRoute
+                                      .route());
+                            },
+                          ),
+                        if (!state.isAccountCooperationDidEnd) ...[
+                          SizedBox(height: 20),
+                          SecondaryButton(
+                            text: "すでにアカウントをお持ちの方はこちら",
+                            onPressed: () {
+                              showSigninSheet(
+                                context,
+                                SigninSheetStateContext.initialSetting,
+                                (accountType) async {
+                                  store.showHUD();
+                                  if (await store.canEndInitialSetting()) {
+                                    AppRouter.signinAccount(context);
+                                  } else {
+                                    ScaffoldMessenger.of(context).showSnackBar(
+                                      SnackBar(
+                                        duration: Duration(seconds: 2),
+                                        content: Text(
+                                            "${accountType.providerName}でログインしました"),
+                                      ),
+                                    );
+                                  }
+                                },
+                              );
+                            },
+                          ),
+                        ],
+                        SizedBox(height: 35),
+                      ],
+                    ),
+                  ),
+                ),
+              ],
+            ),
           ),
         ),
       ),
