@@ -26,10 +26,6 @@ class InitialSettingPillSheetGroupPage extends HookWidget {
     return Scaffold(
       backgroundColor: PilllColors.background,
       appBar: AppBar(
-        leading: IconButton(
-          icon: Icon(Icons.arrow_back, color: Colors.black),
-          onPressed: () => Navigator.of(context).pop(),
-        ),
         title: Text(
           "1/4",
           style: TextStyle(color: TextColor.black),
