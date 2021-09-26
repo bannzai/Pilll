@@ -145,7 +145,8 @@ class RecordPagePillSheet extends StatelessWidget {
       }
     }
 
-    final containedMenstruationDuration = isContainedMenstruationDuration(
+    final containedMenstruationDuration =
+        RecordPagePillSheet.isContainedMenstruationDuration(
       pillNumberIntoPillSheet: pillNumberIntoPillSheet,
       pillSheetGroup: pillSheetGroup,
       setting: setting,
