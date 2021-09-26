@@ -51,44 +51,6 @@ void main() {
       );
       expect(model.todayPillNumber, 28);
     });
-    test("today: 2020-09-29, begin: 2020-09-01, end: 2020-09-28", () {
-      var mockTodayRepository = MockTodayService();
-      todayRepository = mockTodayRepository;
-      when(mockTodayRepository.today())
-          .thenReturn(DateTime.parse("2020-09-29"));
-
-      var sheetType = PillSheetType.pillsheet_21;
-      var model = PillSheet(
-        beginingDate: DateTime.parse("2020-09-01"),
-        lastTakenDate: DateTime.parse("2020-09-28"),
-        typeInfo: PillSheetTypeInfo(
-          dosingPeriod: sheetType.dosingPeriod,
-          name: sheetType.fullName,
-          totalCount: sheetType.totalCount,
-          pillSheetTypeReferencePath: sheetType.rawPath,
-        ),
-      );
-      expect(model.todayPillNumber, 1);
-    });
-    test("today: 2020-10-27, begin: 2020-09-01, end: 2020-09-28", () {
-      var mockTodayRepository = MockTodayService();
-      todayRepository = mockTodayRepository;
-      when(mockTodayRepository.today())
-          .thenReturn(DateTime.parse("2020-10-27"));
-
-      var sheetType = PillSheetType.pillsheet_21;
-      var model = PillSheet(
-        beginingDate: DateTime.parse("2020-09-01"),
-        lastTakenDate: DateTime.parse("2020-09-28"),
-        typeInfo: PillSheetTypeInfo(
-          dosingPeriod: sheetType.dosingPeriod,
-          name: sheetType.fullName,
-          totalCount: sheetType.totalCount,
-          pillSheetTypeReferencePath: sheetType.rawPath,
-        ),
-      );
-      expect(model.todayPillNumber, 1);
-    });
   });
   group("#isActive", () {
     test("it is active pattern. today: 2020-09-19, begin: 2020-09-14", () {
