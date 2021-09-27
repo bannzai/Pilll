@@ -241,5 +241,77 @@ void main() {
         }
       }
     });
+    test("for ヤーズフレックス", () async {
+      final anyDate = DateTime.parse("2020-09-19");
+      final one = PillSheet(
+        typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
+        beginingDate: anyDate,
+        groupIndex: 0,
+      );
+      final two = PillSheet(
+        typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
+        beginingDate: anyDate,
+        groupIndex: 1,
+      );
+      final three = PillSheet(
+        typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
+        beginingDate: anyDate,
+        groupIndex: 2,
+      );
+      final four = PillSheet(
+        typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
+        beginingDate: anyDate,
+        groupIndex: 3,
+      );
+      final five = PillSheet(
+        typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
+        beginingDate: anyDate,
+        groupIndex: 4,
+      );
+      final pillSheetGroup = PillSheetGroup(
+        pillSheetIDs: ["1", "2", "3", "4", "5"],
+        pillSheets: [one, two, three, four, five],
+        createdAt: anyDate,
+      );
+      final setting = Setting(
+        pillSheetTypes: [
+          PillSheetType.pillsheet_28_0,
+          PillSheetType.pillsheet_28_0,
+          PillSheetType.pillsheet_28_0,
+          PillSheetType.pillsheet_28_0,
+          PillSheetType.pillsheet_28_0
+        ],
+        pillNumberForFromMenstruation: 120,
+        durationMenstruation: 3,
+        isOnReminder: true,
+      );
+
+      final pillSheetTypes = [
+        PillSheetType.pillsheet_28_0,
+        PillSheetType.pillsheet_28_0,
+        PillSheetType.pillsheet_28_0,
+        PillSheetType.pillsheet_28_0,
+        PillSheetType.pillsheet_28_0,
+      ];
+
+      for (int pageIndex = 0; pageIndex < pillSheetTypes.length; pageIndex++) {
+        for (int pillNumberIntoPillSheet = 1;
+            pillNumberIntoPillSheet <= pillSheetTypes[pageIndex].totalCount;
+            pillNumberIntoPillSheet++) {
+          expect(
+              RecordPagePillSheet.isContainedMenstruationDuration(
+                pillNumberIntoPillSheet: pillNumberIntoPillSheet,
+                pillSheetGroup: pillSheetGroup,
+                pageIndex: pageIndex,
+                setting: setting,
+              ),
+              pageIndex == 4 &&
+                  8 <= pillNumberIntoPillSheet &&
+                  pillNumberIntoPillSheet <= 10,
+              reason:
+                  "print debug informations pillNumberIntoPillSheet is $pillNumberIntoPillSheet, pageIndex: $pageIndex");
+        }
+      }
+    });
   });
 }
