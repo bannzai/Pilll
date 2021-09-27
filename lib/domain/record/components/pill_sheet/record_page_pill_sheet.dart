@@ -145,38 +145,88 @@ class RecordPagePillSheet extends StatelessWidget {
       }
     }
 
-    final pillSheetTypes =
-        pillSheetGroup.pillSheets.map((e) => e.pillSheetType).toList();
-    final passedCount =
-        passedTotalCount(pillSheetTypes: pillSheetTypes, pageIndex: pageIndex);
-
-    final int pillNumberForFromMenstruationIntoPillSheet;
-    if (passedCount == 0) {
-      pillNumberForFromMenstruationIntoPillSheet =
-          setting.pillNumberForFromMenstruation;
-    } else {
-      pillNumberForFromMenstruationIntoPillSheet =
-          setting.pillNumberForFromMenstruation % passedCount;
-    }
-    final menstruationNumbers =
-        List.generate(setting.durationMenstruation, (index) {
-      return pillNumberForFromMenstruationIntoPillSheet + index;
-    });
-    final isContainedMenstruationDuration =
-        menstruationNumbers.contains(pillNumberIntoPillSheet);
+    final containedMenstruationDuration =
+        RecordPagePillSheet.isContainedMenstruationDuration(
+      pillNumberIntoPillSheet: pillNumberIntoPillSheet,
+      pillSheetGroup: pillSheetGroup,
+      setting: setting,
+      pageIndex: pageIndex,
+    );
 
     if (isDateMode) {
-      if (isContainedMenstruationDuration) {
+      if (containedMenstruationDuration) {
         return MenstruationPillDate(date: date);
       } else {
         return PlainPillDate(date: date);
       }
     } else {
-      if (isContainedMenstruationDuration) {
+      if (containedMenstruationDuration) {
         return MenstruationPillNumber(pillNumber: pillNumberIntoPillSheet);
       } else {
         return PlainPillNumber(pillNumber: pillNumberIntoPillSheet);
       }
     }
   }
+
+  /*
+    pillNumberIntoPillSheet の値によって二つの動きをする
+    setting.pillNumberForFromMenstruation < pillSheet.typeInfo.totalCount の場合は単純にこの式の結果を用いる
+    setting.pillNumberForFromMenstruation > pillSheet.typeInfo.totalCount の場合はページ数も考慮して
+      pillSheet.begin < pillNumberForFromMenstruation < pillSheet.typeInfo.totalCount の場合の結果を用いる
+
+    - 想定される使い方は各ピルシートごとに同じ生理の期間開始を設定したい(1つ目の仕様)
+    - ヤーズフレックスのようにどこか1枚だけ生理の開始期間を設定したい(2つ目の仕様)
+
+    なので後者の計算式で下のようになっても許容をすることにする
+
+    28錠タイプが4枚ある場合で46番ごとに生理期間がくる設定をしていると生理期間の始まりが
+      1枚目: なし
+      2枚目: 18番から
+      3枚目: なし
+      4枚目: 8番から
+  */
+  static bool isContainedMenstruationDuration({
+    required int pillNumberIntoPillSheet,
+    required PillSheetGroup pillSheetGroup,
+    required int pageIndex,
+    required Setting setting,
+  }) {
+    final pillSheetTotalCount =
+        pillSheetGroup.pillSheets[pageIndex].typeInfo.totalCount;
+    if (setting.pillNumberForFromMenstruation < pillSheetTotalCount) {
+      final left = setting.pillNumberForFromMenstruation;
+      final right = setting.pillNumberForFromMenstruation +
+          setting.durationMenstruation -
+          1;
+      return left <= pillNumberIntoPillSheet &&
+          pillNumberIntoPillSheet <= right;
+    }
+
+    final pillSheetTypes =
+        pillSheetGroup.pillSheets.map((e) => e.pillSheetType).toList();
+    final passedCount =
+        passedTotalCount(pillSheetTypes: pillSheetTypes, pageIndex: pageIndex);
+    final serialiedPillNumber = passedCount + pillNumberIntoPillSheet;
+
+    final menstruationRangeList =
+        List.generate(pillSheetGroup.pillSheets.length, (index) {
+      final begin = setting.pillNumberForFromMenstruation * (index + 1);
+      final end = begin + setting.durationMenstruation - 1;
+      return _MenstruationRange(begin, end);
+    });
+
+    final isContainedMenstruationDuration = menstruationRangeList
+        .where((element) => element.contains(serialiedPillNumber))
+        .isNotEmpty;
+    return isContainedMenstruationDuration;
+  }
+}
+
+class _MenstruationRange {
+  final int begin;
+  final int end;
+
+  _MenstruationRange(this.begin, this.end);
+
+  bool contains(int pillNumber) => begin <= pillNumber && pillNumber <= end;
 }
