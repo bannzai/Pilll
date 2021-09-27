@@ -154,13 +154,13 @@ class RecordPagePillSheet extends StatelessWidget {
     );
 
     if (isDateMode) {
-      if (containedMenstruationDuration) {
+      if (containedMenstruationDuration && (state.isPremium || state.isTrial)) {
         return MenstruationPillDate(date: date);
       } else {
         return PlainPillDate(date: date);
       }
     } else {
-      if (containedMenstruationDuration) {
+      if (containedMenstruationDuration && (state.isPremium || state.isTrial)) {
         return MenstruationPillNumber(pillNumber: pillNumberIntoPillSheet);
       } else {
         return PlainPillNumber(pillNumber: pillNumberIntoPillSheet);
