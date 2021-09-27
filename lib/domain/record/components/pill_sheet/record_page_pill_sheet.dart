@@ -191,6 +191,17 @@ class RecordPagePillSheet extends StatelessWidget {
     required int pageIndex,
     required Setting setting,
   }) {
+    final pillSheetTotalCount =
+        pillSheetGroup.pillSheets[pageIndex].typeInfo.totalCount;
+    if (setting.pillNumberForFromMenstruation < pillSheetTotalCount) {
+      final left = setting.pillNumberForFromMenstruation;
+      final right = setting.pillNumberForFromMenstruation +
+          setting.durationMenstruation -
+          1;
+      return left <= pillNumberIntoPillSheet &&
+          pillNumberIntoPillSheet <= right;
+    }
+
     final pillSheetTypes =
         pillSheetGroup.pillSheets.map((e) => e.pillSheetType).toList();
     final passedCount =
