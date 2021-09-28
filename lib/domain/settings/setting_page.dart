@@ -84,7 +84,7 @@ class SettingPage extends HookWidget {
                           analytics.logEvent(
                               name: "did_select_about_trial", parameters: {});
                           launch(
-                              "https://pilll.anotion.so/3abd690f501549c48f813fd310b5f242",
+                              "https://pilll.wraptas.site/3abd690f501549c48f813fd310b5f242",
                               forceSafariVC: true);
                         },
                       ),
@@ -197,7 +197,7 @@ class SettingPage extends HookWidget {
                             analytics.logEvent(
                                 name: "did_select_faq", parameters: {});
                             launch(
-                                "https://pilll.anotion.so/bb1f49eeded64b57929b7a13e9224d69",
+                                "https://pilll.wraptas.site/bb1f49eeded64b57929b7a13e9224d69",
                                 forceSafariVC: true);
                           }),
                       _separator(),

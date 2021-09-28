@@ -104,7 +104,7 @@ openReleaseNote() async {
   final ChromeSafariBrowser browser = new ChromeSafariBrowser();
   await browser.open(
       url: Uri.parse(
-          "https://pilll.anotion.so/5dcbbb397703462ba8021412a3ff1b50"),
+          "https://pilll.wraptas.site/5dcbbb397703462ba8021412a3ff1b50"),
       options: ChromeSafariBrowserClassOptions(
           android:
               AndroidChromeCustomTabsOptions(addDefaultShareMenuItem: false),
