@@ -18,6 +18,7 @@ import 'package:pilll/router/router.dart';
 import 'package:pilll/signin/signin_sheet.dart';
 import 'package:pilll/signin/signin_sheet_state.dart';
 import 'package:pilll/entity/link_account_type.dart';
+import 'package:pilll/entity/pill_sheet_type.dart';
 
 class InitialSettingPillSheetGroupPage extends HookWidget {
   @override
@@ -75,7 +76,8 @@ class InitialSettingPillSheetGroupPage extends HookWidget {
                           PrimaryButton(
                             text: "次へ",
                             onPressed: () async {
-                              analytics.logEvent(name: "next_pill_sheet_count");
+                              analytics.logEvent(
+                                  name: "next_to_pill_sheet_count");
                               Navigator.of(context).push(
                                   InitialSettingSelectTodayPillNumberPageRoute
                                       .route());
@@ -159,12 +161,28 @@ class InitialSettingPillSheetGroupPageBody extends StatelessWidget {
         children: [
           SizedBox(height: 6),
           SettingPillSheetGroup(
-            pillSheetTypes: state.pillSheetTypes,
-            onAdd: (pillSheetType) => store.addPillSheetType(pillSheetType),
-            onChange: (index, pillSheetType) =>
-                store.changePillSheetType(index, pillSheetType),
-            onDelete: (index) => store.removePillSheetType(index),
-          ),
+              pillSheetTypes: state.pillSheetTypes,
+              onAdd: (pillSheetType) {
+                analytics.logEvent(
+                    name: "initial_setting_add_pill_sheet_group",
+                    parameters: {"pill_sheet_type": pillSheetType.fullName});
+                store.addPillSheetType(pillSheetType);
+              },
+              onChange: (index, pillSheetType) {
+                analytics.logEvent(
+                    name: "initial_setting_change_pill_sheet_group",
+                    parameters: {
+                      "index": index,
+                      "pill_sheet_type": pillSheetType.fullName
+                    });
+                store.changePillSheetType(index, pillSheetType);
+              },
+              onDelete: (index) {
+                analytics.logEvent(
+                    name: "initial_setting_delete_pill_sheet_group",
+                    parameters: {"index": index});
+                store.removePillSheetType(index);
+              }),
         ],
       );
     }
