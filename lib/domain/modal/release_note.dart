@@ -42,7 +42,7 @@ class ReleaseNote extends StatelessWidget {
                       child: Container(
                         padding: EdgeInsets.only(top: 40, left: 40, right: 40),
                         child: Text(
-                          "服用履歴で\nいつ服用したかが分かる",
+                          "ピルシートを複数枚\n追加できるように！",
                           style: FontType.subTitle.merge(TextColorStyle.black),
                           textAlign: TextAlign.center,
                         ),
@@ -57,8 +57,7 @@ class ReleaseNote extends StatelessWidget {
                     children: [
                       Text(
                         '''
-服用時刻やまとめて服用した日が分かるようになりました。
-その他にも新機能が続々登場！
+ヤーズフレックス等で連続服用している場合、何枚目の何番を飲んでいるか把握できるように！
                         ''',
                         style: FontType.assisting.merge(TextColorStyle.main),
                       ),
