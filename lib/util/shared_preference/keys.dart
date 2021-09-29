@@ -26,6 +26,7 @@ extension ReleaseNoteKey on String {
   static final String version3_0_0 = "release_notes_shown_3.0.0";
   static final String version3_1_0 = "release_notes_shown_3.1.0";
   static final String version3_2_0 = "release_notes_shown_3.2.0";
+  static final String version3_3_0 = "release_notes_shown_3.3.0";
 }
 
 extension IntKey on String {
