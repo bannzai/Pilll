@@ -1,4 +1,5 @@
 import 'package:flutter/cupertino.dart';
+import 'package:pilll/analytics.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/entity/pill_sheet_group.dart';
@@ -29,6 +30,7 @@ class TodayTakenPillNumber extends StatelessWidget {
         ],
       ),
       onTap: () {
+        analytics.logEvent(name: "tapped_record_page_today_pill");
         if (pillSheetGroup?.activedPillSheet == null) {
           return;
         }

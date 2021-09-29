@@ -88,6 +88,8 @@ class InitialSettingPillSheetGroupPage extends HookWidget {
                           SecondaryButton(
                             text: "すでにアカウントをお持ちの方はこちら",
                             onPressed: () {
+                              analytics.logEvent(
+                                  name: "pressed_initial_setting_signin");
                               showSigninSheet(
                                 context,
                                 SigninSheetStateContext.initialSetting,
