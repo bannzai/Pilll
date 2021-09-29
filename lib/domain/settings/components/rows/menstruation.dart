@@ -5,16 +5,14 @@ import 'package:pilll/analytics.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/domain/settings/menstruation/setting_menstruation_page.dart';
 import 'package:pilll/domain/settings/setting_page_store.dart';
-import 'package:pilll/entity/pill_sheet_group.dart';
 import 'package:pilll/entity/setting.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 
 class MenstruationRow extends HookWidget {
   final SettingStateStore store;
   final Setting setting;
-  final PillSheetGroup pillSheetGroup;
 
-  MenstruationRow(this.store, this.setting, this.pillSheetGroup);
+  MenstruationRow(this.store, this.setting);
 
   @override
   Widget build(BuildContext context) {

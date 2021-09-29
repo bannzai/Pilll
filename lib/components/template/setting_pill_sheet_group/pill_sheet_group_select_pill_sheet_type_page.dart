@@ -54,6 +54,10 @@ class PillSheetGroupSelectPillSheetTypePage extends HookWidget {
                     SizedBox(height: 24),
                     PillSheetTypeSelectBodyTemplate(
                       onSelect: (e) {
+                        analytics.logEvent(
+                          name: "initial_setting_selected_pill_sheet_type",
+                          parameters: {"pill_sheet_type": e.fullName},
+                        );
                         Navigator.of(context).pop();
                         onSelect(e);
                       },

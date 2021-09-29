@@ -42,7 +42,7 @@ class ReleaseNote extends StatelessWidget {
                       child: Container(
                         padding: EdgeInsets.only(top: 40, left: 40, right: 40),
                         child: Text(
-                          "服用履歴で\nいつ服用したかが分かる",
+                          "ピルシートを複数枚\n追加できるように！",
                           style: FontType.subTitle.merge(TextColorStyle.black),
                           textAlign: TextAlign.center,
                         ),
@@ -57,8 +57,7 @@ class ReleaseNote extends StatelessWidget {
                     children: [
                       Text(
                         '''
-服用時刻やまとめて服用した日が分かるようになりました。
-その他にも新機能が続々登場！
+ヤーズフレックス等で連続服用している場合、何枚目の何番を飲んでいるか把握できるように！
                         ''',
                         style: FontType.assisting.merge(TextColorStyle.main),
                       ),
@@ -86,7 +85,7 @@ class ReleaseNote extends StatelessWidget {
 }
 
 showReleaseNotePreDialog(BuildContext context) async {
-  final key = ReleaseNoteKey.version3_2_0;
+  final key = ReleaseNoteKey.version3_3_0;
   final storage = await SharedPreferences.getInstance();
   if (storage.getBool(key) ?? false) {
     return;
@@ -104,7 +103,7 @@ openReleaseNote() async {
   final ChromeSafariBrowser browser = new ChromeSafariBrowser();
   await browser.open(
       url: Uri.parse(
-          "https://pilll.wraptas.site/5dcbbb397703462ba8021412a3ff1b50"),
+          "https://pilll.wraptas.site/465d5d9c8fc44077a0da481114b45367"),
       options: ChromeSafariBrowserClassOptions(
           android:
               AndroidChromeCustomTabsOptions(addDefaultShareMenuItem: false),
