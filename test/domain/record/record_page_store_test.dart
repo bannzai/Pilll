@@ -457,7 +457,7 @@ void main() {
     test("group has two pill sheet for first pillSheet.isFill pattern",
         () async {
       var mockTodayRepository = MockTodayService();
-      final _today = DateTime.parse("2020-09-19");
+      final _today = DateTime.parse("2022-05-29");
       todayRepository = mockTodayRepository;
       when(mockTodayRepository.today()).thenReturn(_today);
       when(mockTodayRepository.now()).thenReturn(_today);
@@ -474,9 +474,9 @@ void main() {
       final pillSheet = PillSheet(
         id: "sheet_id",
         typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-        beginingDate: _today.subtract(Duration(days: 28)),
+        beginingDate: DateTime.parse("2022-05-01"),
         groupIndex: 0,
-        lastTakenDate: _today.subtract(Duration(days: 1)),
+        lastTakenDate: DateTime.parse("2022-05-28"),
       );
       final pillSheet2 = PillSheet(
         id: "sheet_id_2",
@@ -608,7 +608,8 @@ void main() {
       );
       final pillSheetService = MockPillSheetService();
       when(pillSheetService.update(batch, [
-        pillSheet.copyWith(lastTakenDate: DateTime.parse("2020-09-18")),
+        pillSheet.copyWith(
+            lastTakenDate: DateTime.parse("2020-09-18 23:59:59")),
         pillSheet2.copyWith(lastTakenDate: _today)
       ])).thenReturn(null);
 
@@ -625,7 +626,8 @@ void main() {
         id: "group_id",
         pillSheetIDs: ["sheet_id", "sheet_id_2"],
         pillSheets: [
-          pillSheet.copyWith(lastTakenDate: DateTime.parse("2020-09-18")),
+          pillSheet.copyWith(
+              lastTakenDate: DateTime.parse("2020-09-18 23:59:59")),
           pillSheet2.copyWith(lastTakenDate: _today),
         ],
         createdAt: _today,
