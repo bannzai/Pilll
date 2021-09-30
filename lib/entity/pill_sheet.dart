@@ -90,7 +90,8 @@ abstract class PillSheet implements _$PillSheet {
       ? 0
       : lastTakenDate!.date().difference(beginingDate.date()).inDays + 1;
 
-  bool get allTaken => todayPillNumber == lastTakenPillNumber;
+  bool get isAllTaken => todayPillNumber == lastTakenPillNumber;
+  bool get isEnded => typeInfo.totalCount == lastTakenPillNumber;
   bool get isReached =>
       beginingDate.date().toUtc().millisecondsSinceEpoch <
       now().toUtc().millisecondsSinceEpoch;
@@ -104,6 +105,9 @@ abstract class PillSheet implements _$PillSheet {
     return DateRange(begin, end).inRange(n);
   }
 
-  DateTime get scheduledLastTakenDate =>
-      beginingDate.add(Duration(days: pillSheetType.totalCount - 1));
+  DateTime get estimatedLastTakenDate => beginingDate
+      .add(Duration(days: pillSheetType.totalCount - 1))
+      .date()
+      .add(Duration(days: 1))
+      .subtract(Duration(seconds: 1));
 }

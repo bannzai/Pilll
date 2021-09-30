@@ -241,4 +241,20 @@ void main() {
       expect(model.isReached, false);
     });
   });
+  group("#estimatedLastTakenDate", () {
+    test("spec", () {
+      var sheetType = PillSheetType.pillsheet_21;
+      var pillSheet = PillSheet(
+        beginingDate: DateTime.parse("2022-05-01"),
+        typeInfo: PillSheetTypeInfo(
+          dosingPeriod: sheetType.dosingPeriod,
+          name: sheetType.fullName,
+          totalCount: sheetType.totalCount,
+          pillSheetTypeReferencePath: sheetType.rawPath,
+        ),
+      );
+      expect(pillSheet.estimatedLastTakenDate,
+          DateTime.parse("2022-05-29").subtract(Duration(seconds: 1)));
+    });
+  });
 }

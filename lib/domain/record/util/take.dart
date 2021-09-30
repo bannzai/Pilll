@@ -71,12 +71,15 @@ Future<PillSheetGroup?> take({
     if (pillSheet.groupIndex > activedPillSheet.groupIndex) {
       return pillSheet;
     }
-    if (pillSheet.allTaken) {
+    if (pillSheet.isEnded) {
       return pillSheet;
     }
-    if (takenDate.isAfter(pillSheet.scheduledLastTakenDate)) {
+
+    // takenDateよりも予測するピルシートが大きい場合はactivedPillSheetじゃないPillSheetと判断。
+    // そのピルシートの最終日で予測する最終服用日を記録する
+    if (takenDate.isAfter(pillSheet.estimatedLastTakenDate)) {
       return pillSheet.copyWith(
-          lastTakenDate: pillSheet.scheduledLastTakenDate);
+          lastTakenDate: pillSheet.estimatedLastTakenDate);
     } else {
       return pillSheet.copyWith(lastTakenDate: takenDate);
     }
