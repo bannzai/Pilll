@@ -90,7 +90,7 @@ abstract class PillSheet implements _$PillSheet {
       ? 0
       : lastTakenDate!.date().difference(beginingDate.date()).inDays + 1;
 
-  bool get allTaken => todayPillNumber == lastTakenPillNumber;
+  bool get allTaken => typeInfo.totalCount == lastTakenPillNumber;
   bool get isReached =>
       beginingDate.date().toUtc().millisecondsSinceEpoch <
       now().toUtc().millisecondsSinceEpoch;
