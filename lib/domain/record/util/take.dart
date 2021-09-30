@@ -74,9 +74,9 @@ Future<PillSheetGroup?> take({
     if (pillSheet.allTaken) {
       return pillSheet;
     }
-    if (takenDate.isAfter(pillSheet.scheduledLastTakenDate)) {
+    if (takenDate.isAfter(pillSheet.estimatedLastTakenDate)) {
       return pillSheet.copyWith(
-          lastTakenDate: pillSheet.scheduledLastTakenDate);
+          lastTakenDate: pillSheet.estimatedLastTakenDate);
     } else {
       return pillSheet.copyWith(lastTakenDate: takenDate);
     }
