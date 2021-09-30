@@ -12,7 +12,7 @@ class RecordPageButton extends StatelessWidget {
   }) : super(key: key);
 
   Widget build(BuildContext context) {
-    if (currentPillSheet.allTaken)
+    if (currentPillSheet.isAllTaken)
       return CancelButton(currentPillSheet);
     else
       return TakenButton(
