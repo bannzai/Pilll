@@ -105,7 +105,7 @@ abstract class PillSheet implements _$PillSheet {
   }
 
   DateTime get scheduledLastTakenDate => beginingDate
-      .add(Duration(days: pillSheetType.totalCount))
+      .add(Duration(days: pillSheetType.totalCount - 1))
       .date()
       .add(Duration(days: 1))
       .subtract(Duration(seconds: 1));
