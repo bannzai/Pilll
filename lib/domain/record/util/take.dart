@@ -71,7 +71,7 @@ Future<PillSheetGroup?> take({
     if (pillSheet.groupIndex > activedPillSheet.groupIndex) {
       return pillSheet;
     }
-    if (pillSheet.isAllTaken) {
+    if (pillSheet.isEnded) {
       return pillSheet;
     }
 
