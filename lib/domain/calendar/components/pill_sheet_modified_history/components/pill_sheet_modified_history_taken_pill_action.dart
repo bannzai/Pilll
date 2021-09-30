@@ -28,7 +28,7 @@ class PillSheetModifiedHistoryTakenPillAction extends StatelessWidget {
     if (value == null || afterPillSheet == null) {
       return Container();
     }
-    final time = DateTimeFormatter.hourAndMinute(value.afterLastTakenDate);
+    final time = DateTimeFormatter.hourAndMinute(estimatedEventCausingDate);
     return GestureDetector(
       onTap: () {
         analytics.logEvent(name: "tapped_history_taken_action");
