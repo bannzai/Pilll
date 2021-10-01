@@ -17,7 +17,7 @@ class _$NotificationBarStateTearOff {
   const _$NotificationBarStateTearOff();
 
   _NotificationBarState call(
-      {required PillSheetGroup? pillSheetGroup,
+      {required PillSheetGroup? latestPillSheetGroup,
       required int totalCountOfActionForTakenPill,
       required bool isPremium,
       required bool isTrial,
@@ -28,7 +28,7 @@ class _$NotificationBarStateTearOff {
       required bool premiumTrialGuideNotificationIsClosed,
       required bool isLinkedLoginProvider}) {
     return _NotificationBarState(
-      pillSheetGroup: pillSheetGroup,
+      latestPillSheetGroup: latestPillSheetGroup,
       totalCountOfActionForTakenPill: totalCountOfActionForTakenPill,
       isPremium: isPremium,
       isTrial: isTrial,
@@ -49,7 +49,8 @@ const $NotificationBarState = _$NotificationBarStateTearOff();
 
 /// @nodoc
 mixin _$NotificationBarState {
-  PillSheetGroup? get pillSheetGroup => throw _privateConstructorUsedError;
+  PillSheetGroup? get latestPillSheetGroup =>
+      throw _privateConstructorUsedError;
   int get totalCountOfActionForTakenPill => throw _privateConstructorUsedError;
   bool get isPremium => throw _privateConstructorUsedError;
   bool get isTrial => throw _privateConstructorUsedError;
@@ -74,7 +75,7 @@ abstract class $NotificationBarStateCopyWith<$Res> {
           $Res Function(NotificationBarState) then) =
       _$NotificationBarStateCopyWithImpl<$Res>;
   $Res call(
-      {PillSheetGroup? pillSheetGroup,
+      {PillSheetGroup? latestPillSheetGroup,
       int totalCountOfActionForTakenPill,
       bool isPremium,
       bool isTrial,
@@ -85,7 +86,7 @@ abstract class $NotificationBarStateCopyWith<$Res> {
       bool premiumTrialGuideNotificationIsClosed,
       bool isLinkedLoginProvider});
 
-  $PillSheetGroupCopyWith<$Res>? get pillSheetGroup;
+  $PillSheetGroupCopyWith<$Res>? get latestPillSheetGroup;
 }
 
 /// @nodoc
@@ -99,7 +100,7 @@ class _$NotificationBarStateCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object? pillSheetGroup = freezed,
+    Object? latestPillSheetGroup = freezed,
     Object? totalCountOfActionForTakenPill = freezed,
     Object? isPremium = freezed,
     Object? isTrial = freezed,
@@ -111,9 +112,9 @@ class _$NotificationBarStateCopyWithImpl<$Res>
     Object? isLinkedLoginProvider = freezed,
   }) {
     return _then(_value.copyWith(
-      pillSheetGroup: pillSheetGroup == freezed
-          ? _value.pillSheetGroup
-          : pillSheetGroup // ignore: cast_nullable_to_non_nullable
+      latestPillSheetGroup: latestPillSheetGroup == freezed
+          ? _value.latestPillSheetGroup
+          : latestPillSheetGroup // ignore: cast_nullable_to_non_nullable
               as PillSheetGroup?,
       totalCountOfActionForTakenPill: totalCountOfActionForTakenPill == freezed
           ? _value.totalCountOfActionForTakenPill
@@ -158,13 +159,13 @@ class _$NotificationBarStateCopyWithImpl<$Res>
   }
 
   @override
-  $PillSheetGroupCopyWith<$Res>? get pillSheetGroup {
-    if (_value.pillSheetGroup == null) {
+  $PillSheetGroupCopyWith<$Res>? get latestPillSheetGroup {
+    if (_value.latestPillSheetGroup == null) {
       return null;
     }
 
-    return $PillSheetGroupCopyWith<$Res>(_value.pillSheetGroup!, (value) {
-      return _then(_value.copyWith(pillSheetGroup: value));
+    return $PillSheetGroupCopyWith<$Res>(_value.latestPillSheetGroup!, (value) {
+      return _then(_value.copyWith(latestPillSheetGroup: value));
     });
   }
 }
@@ -177,7 +178,7 @@ abstract class _$NotificationBarStateCopyWith<$Res>
       __$NotificationBarStateCopyWithImpl<$Res>;
   @override
   $Res call(
-      {PillSheetGroup? pillSheetGroup,
+      {PillSheetGroup? latestPillSheetGroup,
       int totalCountOfActionForTakenPill,
       bool isPremium,
       bool isTrial,
@@ -189,7 +190,7 @@ abstract class _$NotificationBarStateCopyWith<$Res>
       bool isLinkedLoginProvider});
 
   @override
-  $PillSheetGroupCopyWith<$Res>? get pillSheetGroup;
+  $PillSheetGroupCopyWith<$Res>? get latestPillSheetGroup;
 }
 
 /// @nodoc
@@ -205,7 +206,7 @@ class __$NotificationBarStateCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object? pillSheetGroup = freezed,
+    Object? latestPillSheetGroup = freezed,
     Object? totalCountOfActionForTakenPill = freezed,
     Object? isPremium = freezed,
     Object? isTrial = freezed,
@@ -217,9 +218,9 @@ class __$NotificationBarStateCopyWithImpl<$Res>
     Object? isLinkedLoginProvider = freezed,
   }) {
     return _then(_NotificationBarState(
-      pillSheetGroup: pillSheetGroup == freezed
-          ? _value.pillSheetGroup
-          : pillSheetGroup // ignore: cast_nullable_to_non_nullable
+      latestPillSheetGroup: latestPillSheetGroup == freezed
+          ? _value.latestPillSheetGroup
+          : latestPillSheetGroup // ignore: cast_nullable_to_non_nullable
               as PillSheetGroup?,
       totalCountOfActionForTakenPill: totalCountOfActionForTakenPill == freezed
           ? _value.totalCountOfActionForTakenPill
@@ -268,7 +269,7 @@ class __$NotificationBarStateCopyWithImpl<$Res>
 
 class _$_NotificationBarState extends _NotificationBarState {
   _$_NotificationBarState(
-      {required this.pillSheetGroup,
+      {required this.latestPillSheetGroup,
       required this.totalCountOfActionForTakenPill,
       required this.isPremium,
       required this.isTrial,
@@ -281,7 +282,7 @@ class _$_NotificationBarState extends _NotificationBarState {
       : super._();
 
   @override
-  final PillSheetGroup? pillSheetGroup;
+  final PillSheetGroup? latestPillSheetGroup;
   @override
   final int totalCountOfActionForTakenPill;
   @override
@@ -303,16 +304,16 @@ class _$_NotificationBarState extends _NotificationBarState {
 
   @override
   String toString() {
-    return 'NotificationBarState(pillSheetGroup: $pillSheetGroup, totalCountOfActionForTakenPill: $totalCountOfActionForTakenPill, isPremium: $isPremium, isTrial: $isTrial, hasDiscountEntitlement: $hasDiscountEntitlement, trialDeadlineDate: $trialDeadlineDate, discountEntitlementDeadlineDate: $discountEntitlementDeadlineDate, recommendedSignupNotificationIsAlreadyShow: $recommendedSignupNotificationIsAlreadyShow, premiumTrialGuideNotificationIsClosed: $premiumTrialGuideNotificationIsClosed, isLinkedLoginProvider: $isLinkedLoginProvider)';
+    return 'NotificationBarState(latestPillSheetGroup: $latestPillSheetGroup, totalCountOfActionForTakenPill: $totalCountOfActionForTakenPill, isPremium: $isPremium, isTrial: $isTrial, hasDiscountEntitlement: $hasDiscountEntitlement, trialDeadlineDate: $trialDeadlineDate, discountEntitlementDeadlineDate: $discountEntitlementDeadlineDate, recommendedSignupNotificationIsAlreadyShow: $recommendedSignupNotificationIsAlreadyShow, premiumTrialGuideNotificationIsClosed: $premiumTrialGuideNotificationIsClosed, isLinkedLoginProvider: $isLinkedLoginProvider)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other is _NotificationBarState &&
-            (identical(other.pillSheetGroup, pillSheetGroup) ||
-                const DeepCollectionEquality()
-                    .equals(other.pillSheetGroup, pillSheetGroup)) &&
+            (identical(other.latestPillSheetGroup, latestPillSheetGroup) ||
+                const DeepCollectionEquality().equals(
+                    other.latestPillSheetGroup, latestPillSheetGroup)) &&
             (identical(other.totalCountOfActionForTakenPill, totalCountOfActionForTakenPill) ||
                 const DeepCollectionEquality().equals(
                     other.totalCountOfActionForTakenPill,
@@ -344,14 +345,13 @@ class _$_NotificationBarState extends _NotificationBarState {
                     other.premiumTrialGuideNotificationIsClosed,
                     premiumTrialGuideNotificationIsClosed)) &&
             (identical(other.isLinkedLoginProvider, isLinkedLoginProvider) ||
-                const DeepCollectionEquality()
-                    .equals(other.isLinkedLoginProvider, isLinkedLoginProvider)));
+                const DeepCollectionEquality().equals(other.isLinkedLoginProvider, isLinkedLoginProvider)));
   }
 
   @override
   int get hashCode =>
       runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(pillSheetGroup) ^
+      const DeepCollectionEquality().hash(latestPillSheetGroup) ^
       const DeepCollectionEquality().hash(totalCountOfActionForTakenPill) ^
       const DeepCollectionEquality().hash(isPremium) ^
       const DeepCollectionEquality().hash(isTrial) ^
@@ -373,7 +373,7 @@ class _$_NotificationBarState extends _NotificationBarState {
 
 abstract class _NotificationBarState extends NotificationBarState {
   factory _NotificationBarState(
-      {required PillSheetGroup? pillSheetGroup,
+      {required PillSheetGroup? latestPillSheetGroup,
       required int totalCountOfActionForTakenPill,
       required bool isPremium,
       required bool isTrial,
@@ -386,7 +386,8 @@ abstract class _NotificationBarState extends NotificationBarState {
   _NotificationBarState._() : super._();
 
   @override
-  PillSheetGroup? get pillSheetGroup => throw _privateConstructorUsedError;
+  PillSheetGroup? get latestPillSheetGroup =>
+      throw _privateConstructorUsedError;
   @override
   int get totalCountOfActionForTakenPill => throw _privateConstructorUsedError;
   @override
