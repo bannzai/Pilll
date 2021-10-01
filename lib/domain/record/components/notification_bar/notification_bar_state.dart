@@ -1,5 +1,6 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:pilll/entity/pill_sheet.dart';
+import 'package:pilll/entity/pill_sheet_group.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/util/datetime/day.dart';
 
@@ -9,6 +10,7 @@ part 'notification_bar_state.freezed.dart';
 abstract class NotificationBarState implements _$NotificationBarState {
   NotificationBarState._();
   factory NotificationBarState({
+    required PillSheetGroup? pillSheetGroup,
     required PillSheet? activedPillSheet,
     required int totalCountOfActionForTakenPill,
     required bool isPremium,
