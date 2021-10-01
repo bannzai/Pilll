@@ -12,7 +12,6 @@ import Flutter
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
             self.migrateFrom_1_3_2()
         }
-        swizzleNotificationCenterDelegateMethod()
         configureNotificationActionableButtons()
         UNUserNotificationCenter.current().removeDeliveredNotifications(withIdentifiers: ["repeat_notification_for_taken_pill", "remind_notification_for_taken_pill"])
         UNUserNotificationCenter.current().removePendingNotificationRequests(withIdentifiers: ["repeat_notification_for_taken_pill", "remind_notification_for_taken_pill"])
@@ -42,16 +41,6 @@ extension AppDelegate {
             call(method: "salvagedOldStartTakenDate", arguments: ["salvagedOldStartTakenDate": salvagedValue, "salvagedOldLastTakenDate": lastTakenDate])
         }
     }
-    func swizzleNotificationCenterDelegateMethod() {
-        guard let fromMethod = class_getInstanceMethod(type(of: self), #selector(AppDelegate.userNotificationCenter(_:didReceive:withCompletionHandler:))) else {
-            fatalError()
-        }
-        guard let toMethod = class_getInstanceMethod(type(of: self), #selector(AppDelegate.userNotificationCenter_methodSwizzling(_:didReceive:withCompletionHandler:))) else {
-            fatalError()
-        }
-        
-        method_exchangeImplementations(fromMethod, toMethod)
-    }
 
     func configureNotificationActionableButtons() {
         let recordAction = UNNotificationAction(identifier: "RECORD_PILL",
@@ -65,15 +54,19 @@ extension AppDelegate {
         UNUserNotificationCenter.current().setNotificationCategories([category])
     }
 
-    @objc func userNotificationCenter_methodSwizzling(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
+
+    override func userNotificationCenter(_ center: UNUserNotificationCenter, didReceive response: UNNotificationResponse, withCompletionHandler completionHandler: @escaping () -> Void) {
         func end() {
             var isCompleted: Bool = false
             let completionHandlerWrapper = {
                 isCompleted = true
                 completionHandler()
             }
+
             UIApplication.shared.applicationIconBadgeNumber = 0
-            userNotificationCenter_methodSwizzling(center, didReceive: response, withCompletionHandler: completionHandlerWrapper)
+
+            super.userNotificationCenter(center, didReceive: response, withCompletionHandler: completionHandlerWrapper)
+
             if !isCompleted {
                 completionHandlerWrapper()
             }
@@ -92,7 +85,7 @@ extension AppDelegate {
             }
         }
     }
-   
+
     enum Category: String {
         case pillReminder = "PILL_REMINDER"
     }
