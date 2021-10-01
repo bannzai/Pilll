@@ -1,14 +1,15 @@
 import 'package:pilll/analytics.dart';
 import 'package:pilll/domain/premium_introduction/util/discount_deadline.dart';
-import 'package:pilll/domain/record/components/notification_bar/discount_price_deadline.dart';
+import 'package:pilll/domain/record/components/notification_bar/components/discount_price_deadline.dart';
+import 'package:pilll/domain/record/components/notification_bar/components/ended_pill_sheet.dart';
 import 'package:pilll/domain/record/components/notification_bar/notification_bar.dart';
 import 'package:pilll/domain/record/components/notification_bar/notification_bar_state.dart';
 import 'package:pilll/domain/record/components/notification_bar/notification_bar_store.dart';
-import 'package:pilll/domain/record/components/notification_bar/premium_trial_guide.dart';
-import 'package:pilll/domain/record/components/notification_bar/premium_trial_limit.dart';
-import 'package:pilll/domain/record/components/notification_bar/recommend_signup.dart';
-import 'package:pilll/domain/record/components/notification_bar/recommend_signup_premium.dart';
-import 'package:pilll/domain/record/components/notification_bar/rest_duration.dart';
+import 'package:pilll/domain/record/components/notification_bar/components/premium_trial_guide.dart';
+import 'package:pilll/domain/record/components/notification_bar/components/premium_trial_limit.dart';
+import 'package:pilll/domain/record/components/notification_bar/components/recommend_signup.dart';
+import 'package:pilll/domain/record/components/notification_bar/components/recommend_signup_premium.dart';
+import 'package:pilll/domain/record/components/notification_bar/components/rest_duration.dart';
 import 'package:pilll/domain/record/record_page_state.dart';
 import 'package:pilll/entity/pill_sheet.dart';
 import 'package:pilll/entity/pill_sheet_group.dart';
@@ -59,8 +60,10 @@ void main() {
             Duration(days: 25),
           ),
         );
-        var state = NotificationBarState(
-          activedPillSheet: pillSheet,
+        final pillSheetGroup = PillSheetGroup(
+            pillSheetIDs: ["1"], pillSheets: [pillSheet], createdAt: now());
+        final state = NotificationBarState(
+          latestPillSheetGroup: pillSheetGroup,
           totalCountOfActionForTakenPill:
               totalCountOfActionForTakenPillForLongTimeUser,
           isPremium: false,
@@ -118,8 +121,10 @@ void main() {
             Duration(days: 25),
           ),
         );
-        var state = NotificationBarState(
-          activedPillSheet: pillSheet,
+        final pillSheetGroup = PillSheetGroup(
+            pillSheetIDs: ["1"], pillSheets: [pillSheet], createdAt: now());
+        final state = NotificationBarState(
+          latestPillSheetGroup: pillSheetGroup,
           totalCountOfActionForTakenPill:
               totalCountOfActionForTakenPillForLongTimeUser,
           isPremium: false,
@@ -176,8 +181,10 @@ void main() {
             Duration(days: 10),
           ),
         );
-        var state = NotificationBarState(
-          activedPillSheet: pillSheet,
+        final pillSheetGroup = PillSheetGroup(
+            pillSheetIDs: ["1"], pillSheets: [pillSheet], createdAt: now());
+        final state = NotificationBarState(
+          latestPillSheetGroup: pillSheetGroup,
           totalCountOfActionForTakenPill:
               totalCountOfActionForTakenPillForLongTimeUser,
           isPremium: false,
@@ -233,8 +240,10 @@ void main() {
             Duration(days: 10),
           ),
         );
-        var state = NotificationBarState(
-          activedPillSheet: pillSheet,
+        final pillSheetGroup = PillSheetGroup(
+            pillSheetIDs: ["1"], pillSheets: [pillSheet], createdAt: now());
+        final state = NotificationBarState(
+          latestPillSheetGroup: pillSheetGroup,
           totalCountOfActionForTakenPill:
               totalCountOfActionForTakenPillForLongTimeUser,
           isPremium: false,
@@ -291,8 +300,10 @@ void main() {
             Duration(days: 10),
           ),
         );
-        var state = NotificationBarState(
-          activedPillSheet: pillSheet,
+        final pillSheetGroup = PillSheetGroup(
+            pillSheetIDs: ["1"], pillSheets: [pillSheet], createdAt: now());
+        final state = NotificationBarState(
+          latestPillSheetGroup: pillSheetGroup,
           totalCountOfActionForTakenPill:
               totalCountOfActionForTakenPillForLongTimeUser,
           isPremium: false,
@@ -331,6 +342,64 @@ void main() {
           findsOneWidget,
         );
       });
+      testWidgets('#EndedPillSheet', (WidgetTester tester) async {
+        final mockTodayRepository = MockTodayService();
+        final today = DateTime(2021, 04, 29);
+        final n = today;
+
+        when(mockTodayRepository.today()).thenReturn(today);
+        when(mockTodayRepository.now()).thenReturn(n);
+        todayRepository = mockTodayRepository;
+
+        var pillSheet = PillSheet.create(PillSheetType.pillsheet_21);
+        pillSheet = pillSheet.copyWith(
+          lastTakenDate: today.subtract(Duration(days: 1)),
+          beginingDate: today.subtract(
+// NOTE: To deactive pill sheet
+            Duration(days: 30),
+          ),
+        );
+        final pillSheetGroup = PillSheetGroup(
+            pillSheetIDs: ["1"], pillSheets: [pillSheet], createdAt: now());
+        final state = NotificationBarState(
+          latestPillSheetGroup: pillSheetGroup,
+          totalCountOfActionForTakenPill:
+              totalCountOfActionForTakenPillForLongTimeUser,
+          isPremium: false,
+          isTrial: true,
+          hasDiscountEntitlement: true,
+          isLinkedLoginProvider: true,
+          premiumTrialGuideNotificationIsClosed: false,
+          recommendedSignupNotificationIsAlreadyShow: false,
+          trialDeadlineDate: null,
+          discountEntitlementDeadlineDate: null,
+        );
+
+        final recordPageState = RecordPageState(
+            pillSheetGroup: PillSheetGroup(
+                pillSheets: [pillSheet],
+                pillSheetIDs: ["1"],
+                createdAt: now()));
+        await tester.pumpWidget(
+          ProviderScope(
+            overrides: [
+              notificationBarStateProvider
+                  .overrideWithProvider((ref, param) => state),
+              notificationBarStoreProvider.overrideWithProvider(
+                  (ref, param) => MockNotificationBarStateStore()),
+            ],
+            child: MaterialApp(
+              home: Material(child: NotificationBar(recordPageState)),
+            ),
+          ),
+        );
+        await tester.pump();
+
+        expect(
+          find.byWidgetPredicate((widget) => widget is EndedPillSheet),
+          findsOneWidget,
+        );
+      });
     });
 
     group('for it is premium user', () {
@@ -351,8 +420,10 @@ void main() {
             Duration(days: 10),
           ),
         );
-        var state = NotificationBarState(
-          activedPillSheet: pillSheet,
+        final pillSheetGroup = PillSheetGroup(
+            pillSheetIDs: ["1"], pillSheets: [pillSheet], createdAt: now());
+        final state = NotificationBarState(
+          latestPillSheetGroup: pillSheetGroup,
           totalCountOfActionForTakenPill:
               totalCountOfActionForTakenPillForLongTimeUser,
           isPremium: true,
@@ -408,8 +479,10 @@ void main() {
             Duration(days: 25),
           ),
         );
-        var state = NotificationBarState(
-          activedPillSheet: pillSheet,
+        final pillSheetGroup = PillSheetGroup(
+            pillSheetIDs: ["1"], pillSheets: [pillSheet], createdAt: now());
+        final state = NotificationBarState(
+          latestPillSheetGroup: pillSheetGroup,
           totalCountOfActionForTakenPill:
               totalCountOfActionForTakenPillForLongTimeUser,
           isPremium: true,
@@ -445,6 +518,64 @@ void main() {
         expect(
           find.byWidgetPredicate(
               (widget) => widget is RestDurationNotificationBar),
+          findsOneWidget,
+        );
+      });
+      testWidgets('#EndedPillSheet', (WidgetTester tester) async {
+        final mockTodayRepository = MockTodayService();
+        final today = DateTime(2021, 04, 29);
+        final n = today;
+
+        when(mockTodayRepository.today()).thenReturn(today);
+        when(mockTodayRepository.now()).thenReturn(n);
+        todayRepository = mockTodayRepository;
+
+        var pillSheet = PillSheet.create(PillSheetType.pillsheet_21);
+        pillSheet = pillSheet.copyWith(
+          lastTakenDate: today.subtract(Duration(days: 1)),
+          beginingDate: today.subtract(
+// NOTE: To deactive pill sheet
+            Duration(days: 30),
+          ),
+        );
+        final pillSheetGroup = PillSheetGroup(
+            pillSheetIDs: ["1"], pillSheets: [pillSheet], createdAt: now());
+        final state = NotificationBarState(
+          latestPillSheetGroup: pillSheetGroup,
+          totalCountOfActionForTakenPill:
+              totalCountOfActionForTakenPillForLongTimeUser,
+          isPremium: true,
+          isTrial: true,
+          hasDiscountEntitlement: true,
+          isLinkedLoginProvider: true,
+          premiumTrialGuideNotificationIsClosed: false,
+          recommendedSignupNotificationIsAlreadyShow: false,
+          trialDeadlineDate: null,
+          discountEntitlementDeadlineDate: null,
+        );
+
+        final recordPageState = RecordPageState(
+            pillSheetGroup: PillSheetGroup(
+                pillSheets: [pillSheet],
+                pillSheetIDs: ["1"],
+                createdAt: now()));
+        await tester.pumpWidget(
+          ProviderScope(
+            overrides: [
+              notificationBarStateProvider
+                  .overrideWithProvider((ref, param) => state),
+              notificationBarStoreProvider.overrideWithProvider(
+                  (ref, param) => MockNotificationBarStateStore()),
+            ],
+            child: MaterialApp(
+              home: Material(child: NotificationBar(recordPageState)),
+            ),
+          ),
+        );
+        await tester.pump();
+
+        expect(
+          find.byWidgetPredicate((widget) => widget is EndedPillSheet),
           findsOneWidget,
         );
       });

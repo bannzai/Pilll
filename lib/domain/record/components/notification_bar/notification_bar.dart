@@ -8,13 +8,14 @@ import 'package:pilll/domain/premium_introduction/premium_introduction_sheet.dar
 import 'package:pilll/domain/premium_introduction/util/discount_deadline.dart';
 import 'package:pilll/domain/premium_trial/premium_trial_complete_modal.dart';
 import 'package:pilll/domain/premium_trial/premium_trial_modal.dart';
-import 'package:pilll/domain/record/components/notification_bar/discount_price_deadline.dart';
+import 'package:pilll/domain/record/components/notification_bar/components/discount_price_deadline.dart';
+import 'package:pilll/domain/record/components/notification_bar/components/ended_pill_sheet.dart';
 import 'package:pilll/domain/record/components/notification_bar/notification_bar_store.dart';
-import 'package:pilll/domain/record/components/notification_bar/premium_trial_guide.dart';
-import 'package:pilll/domain/record/components/notification_bar/premium_trial_limit.dart';
-import 'package:pilll/domain/record/components/notification_bar/recommend_signup.dart';
-import 'package:pilll/domain/record/components/notification_bar/recommend_signup_premium.dart';
-import 'package:pilll/domain/record/components/notification_bar/rest_duration.dart';
+import 'package:pilll/domain/record/components/notification_bar/components/premium_trial_guide.dart';
+import 'package:pilll/domain/record/components/notification_bar/components/premium_trial_limit.dart';
+import 'package:pilll/domain/record/components/notification_bar/components/recommend_signup.dart';
+import 'package:pilll/domain/record/components/notification_bar/components/recommend_signup_premium.dart';
+import 'package:pilll/domain/record/components/notification_bar/components/rest_duration.dart';
 import 'package:pilll/domain/record/record_page_state.dart';
 import 'package:pilll/signin/signin_sheet.dart';
 import 'package:pilll/signin/signin_sheet_state.dart';
@@ -122,6 +123,11 @@ class NotificationBar extends HookWidget {
           }
         }
       }
+      if (state.latestPillSheetGroup != null &&
+          state.latestPillSheetGroup?.activedPillSheet == null) {
+        // ピルシートグループが存在していてactivedPillSheetが無い場合はピルシート終了が何かしらの理由がなくなったと見なし終了表示にする
+        return EndedPillSheet();
+      }
     } else {
       if (state.shownRecommendSignupNotificationForPremium) {
         return RecommendSignupForPremiumNotificationBar();
@@ -131,6 +137,12 @@ class NotificationBar extends HookWidget {
       if (restDurationNotification != null) {
         return RestDurationNotificationBar(
             restDurationNotification: restDurationNotification);
+      }
+
+      if (state.latestPillSheetGroup != null &&
+          state.latestPillSheetGroup?.activedPillSheet == null) {
+        // ピルシートグループが存在していてactivedPillSheetが無い場合はピルシート終了が何かしらの理由がなくなったと見なし終了表示にする
+        return EndedPillSheet();
       }
     }
   }

@@ -21,7 +21,7 @@ class NotificationBarStateStore extends StateNotifier<NotificationBarState> {
   NotificationBarStateStore(this.parameter)
       : super(
           NotificationBarState(
-            activedPillSheet: parameter.pillSheetGroup?.activedPillSheet,
+            latestPillSheetGroup: parameter.pillSheetGroup,
             totalCountOfActionForTakenPill:
                 parameter.totalCountOfActionForTakenPill,
             isPremium: parameter.isPremium,
