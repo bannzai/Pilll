@@ -63,7 +63,6 @@ extension AppDelegate {
                 completionHandler()
             }
             UIApplication.shared.applicationIconBadgeNumber = 0
-            userNotificationCenter_methodSwizzling(center, didReceive: response, withCompletionHandler: completionHandlerWrapper)
             if !isCompleted {
                 completionHandlerWrapper()
             }
