@@ -63,6 +63,8 @@ extension AppDelegate {
                 completionHandler()
             }
             UIApplication.shared.applicationIconBadgeNumber = 0
+
+            super.userNotificationCenter(center, didReceive: response, withCompletionHandler: completionHandlerWrapper)
             if !isCompleted {
                 completionHandlerWrapper()
             }
