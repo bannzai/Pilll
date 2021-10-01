@@ -9,7 +9,7 @@ import 'package:pilll/domain/premium_introduction/util/discount_deadline.dart';
 import 'package:pilll/domain/premium_trial/premium_trial_complete_modal.dart';
 import 'package:pilll/domain/premium_trial/premium_trial_modal.dart';
 import 'package:pilll/domain/record/components/notification_bar/components/discount_price_deadline.dart';
-import 'package:pilll/domain/record/components/notification_bar/components/promote_adding_pill_sheet.dart';
+import 'package:pilll/domain/record/components/notification_bar/components/ended_pill_sheet.dart';
 import 'package:pilll/domain/record/components/notification_bar/notification_bar_store.dart';
 import 'package:pilll/domain/record/components/notification_bar/components/premium_trial_guide.dart';
 import 'package:pilll/domain/record/components/notification_bar/components/premium_trial_limit.dart';
@@ -126,7 +126,7 @@ class NotificationBar extends HookWidget {
       if (state.latestPillSheetGroup != null &&
           state.latestPillSheetGroup?.activedPillSheet == null) {
         // ピルシートグループが存在していてactivedPillSheetが無い場合はピルシート終了が何かしらの理由がなくなったと見なし終了表示にする
-        return PromoteAddingPillSheet();
+        return EndedPillSheet();
       }
     } else {
       if (state.shownRecommendSignupNotificationForPremium) {
@@ -142,7 +142,7 @@ class NotificationBar extends HookWidget {
       if (state.latestPillSheetGroup != null &&
           state.latestPillSheetGroup?.activedPillSheet == null) {
         // ピルシートグループが存在していてactivedPillSheetが無い場合はピルシート終了が何かしらの理由がなくなったと見なし終了表示にする
-        return PromoteAddingPillSheet();
+        return EndedPillSheet();
       }
     }
   }
