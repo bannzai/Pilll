@@ -9,7 +9,7 @@ part 'notification_bar_state.freezed.dart';
 abstract class NotificationBarState implements _$NotificationBarState {
   NotificationBarState._();
   factory NotificationBarState({
-    required PillSheetGroup? pillSheetGroup,
+    required PillSheetGroup? latestPillSheetGroup,
     required int totalCountOfActionForTakenPill,
     required bool isPremium,
     required bool isTrial,

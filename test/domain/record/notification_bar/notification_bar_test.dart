@@ -62,7 +62,7 @@ void main() {
         final pillSheetGroup = PillSheetGroup(
             pillSheetIDs: ["1"], pillSheets: [pillSheet], createdAt: now());
         final state = NotificationBarState(
-          pillSheetGroup: pillSheetGroup,
+          latestPillSheetGroup: pillSheetGroup,
           totalCountOfActionForTakenPill:
               totalCountOfActionForTakenPillForLongTimeUser,
           isPremium: false,
@@ -123,7 +123,7 @@ void main() {
         final pillSheetGroup = PillSheetGroup(
             pillSheetIDs: ["1"], pillSheets: [pillSheet], createdAt: now());
         final state = NotificationBarState(
-          pillSheetGroup: pillSheetGroup,
+          latestPillSheetGroup: pillSheetGroup,
           totalCountOfActionForTakenPill:
               totalCountOfActionForTakenPillForLongTimeUser,
           isPremium: false,
@@ -183,7 +183,7 @@ void main() {
         final pillSheetGroup = PillSheetGroup(
             pillSheetIDs: ["1"], pillSheets: [pillSheet], createdAt: now());
         final state = NotificationBarState(
-          pillSheetGroup: pillSheetGroup,
+          latestPillSheetGroup: pillSheetGroup,
           totalCountOfActionForTakenPill:
               totalCountOfActionForTakenPillForLongTimeUser,
           isPremium: false,
@@ -242,7 +242,7 @@ void main() {
         final pillSheetGroup = PillSheetGroup(
             pillSheetIDs: ["1"], pillSheets: [pillSheet], createdAt: now());
         final state = NotificationBarState(
-          pillSheetGroup: pillSheetGroup,
+          latestPillSheetGroup: pillSheetGroup,
           totalCountOfActionForTakenPill:
               totalCountOfActionForTakenPillForLongTimeUser,
           isPremium: false,
@@ -302,7 +302,7 @@ void main() {
         final pillSheetGroup = PillSheetGroup(
             pillSheetIDs: ["1"], pillSheets: [pillSheet], createdAt: now());
         final state = NotificationBarState(
-          pillSheetGroup: pillSheetGroup,
+          latestPillSheetGroup: pillSheetGroup,
           totalCountOfActionForTakenPill:
               totalCountOfActionForTakenPillForLongTimeUser,
           isPremium: false,
@@ -364,7 +364,7 @@ void main() {
         final pillSheetGroup = PillSheetGroup(
             pillSheetIDs: ["1"], pillSheets: [pillSheet], createdAt: now());
         final state = NotificationBarState(
-          pillSheetGroup: pillSheetGroup,
+          latestPillSheetGroup: pillSheetGroup,
           totalCountOfActionForTakenPill:
               totalCountOfActionForTakenPillForLongTimeUser,
           isPremium: true,
@@ -423,7 +423,7 @@ void main() {
         final pillSheetGroup = PillSheetGroup(
             pillSheetIDs: ["1"], pillSheets: [pillSheet], createdAt: now());
         final state = NotificationBarState(
-          pillSheetGroup: pillSheetGroup,
+          latestPillSheetGroup: pillSheetGroup,
           totalCountOfActionForTakenPill:
               totalCountOfActionForTakenPillForLongTimeUser,
           isPremium: true,
