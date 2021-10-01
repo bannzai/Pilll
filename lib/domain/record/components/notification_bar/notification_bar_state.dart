@@ -11,7 +11,6 @@ abstract class NotificationBarState implements _$NotificationBarState {
   NotificationBarState._();
   factory NotificationBarState({
     required PillSheetGroup? pillSheetGroup,
-    required PillSheet? activedPillSheet,
     required int totalCountOfActionForTakenPill,
     required bool isPremium,
     required bool isTrial,
