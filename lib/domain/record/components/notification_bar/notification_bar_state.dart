@@ -32,7 +32,7 @@ abstract class NotificationBarState implements _$NotificationBarState {
   }
 
   String? get restDurationNotification {
-    final activedPillSheet = this.pillSheetGroup?.activedPillSheet;
+    final activedPillSheet = this.latestPillSheetGroup?.activedPillSheet;
     if (activedPillSheet == null) {
       return null;
     }
