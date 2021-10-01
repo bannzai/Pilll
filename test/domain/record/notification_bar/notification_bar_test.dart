@@ -59,8 +59,10 @@ void main() {
             Duration(days: 25),
           ),
         );
-        var state = NotificationBarState(
-          activedPillSheet: pillSheet,
+        final pillSheetGroup = PillSheetGroup(
+            pillSheetIDs: ["1"], pillSheets: [pillSheet], createdAt: now());
+        final state = NotificationBarState(
+          pillSheetGroup: pillSheetGroup,
           totalCountOfActionForTakenPill:
               totalCountOfActionForTakenPillForLongTimeUser,
           isPremium: false,
@@ -118,8 +120,10 @@ void main() {
             Duration(days: 25),
           ),
         );
-        var state = NotificationBarState(
-          activedPillSheet: pillSheet,
+        final pillSheetGroup = PillSheetGroup(
+            pillSheetIDs: ["1"], pillSheets: [pillSheet], createdAt: now());
+        final state = NotificationBarState(
+          pillSheetGroup: pillSheetGroup,
           totalCountOfActionForTakenPill:
               totalCountOfActionForTakenPillForLongTimeUser,
           isPremium: false,
@@ -176,8 +180,10 @@ void main() {
             Duration(days: 10),
           ),
         );
-        var state = NotificationBarState(
-          activedPillSheet: pillSheet,
+        final pillSheetGroup = PillSheetGroup(
+            pillSheetIDs: ["1"], pillSheets: [pillSheet], createdAt: now());
+        final state = NotificationBarState(
+          pillSheetGroup: pillSheetGroup,
           totalCountOfActionForTakenPill:
               totalCountOfActionForTakenPillForLongTimeUser,
           isPremium: false,
@@ -233,8 +239,10 @@ void main() {
             Duration(days: 10),
           ),
         );
-        var state = NotificationBarState(
-          activedPillSheet: pillSheet,
+        final pillSheetGroup = PillSheetGroup(
+            pillSheetIDs: ["1"], pillSheets: [pillSheet], createdAt: now());
+        final state = NotificationBarState(
+          pillSheetGroup: pillSheetGroup,
           totalCountOfActionForTakenPill:
               totalCountOfActionForTakenPillForLongTimeUser,
           isPremium: false,
@@ -291,8 +299,10 @@ void main() {
             Duration(days: 10),
           ),
         );
-        var state = NotificationBarState(
-          activedPillSheet: pillSheet,
+        final pillSheetGroup = PillSheetGroup(
+            pillSheetIDs: ["1"], pillSheets: [pillSheet], createdAt: now());
+        final state = NotificationBarState(
+          pillSheetGroup: pillSheetGroup,
           totalCountOfActionForTakenPill:
               totalCountOfActionForTakenPillForLongTimeUser,
           isPremium: false,
@@ -351,8 +361,10 @@ void main() {
             Duration(days: 10),
           ),
         );
-        var state = NotificationBarState(
-          activedPillSheet: pillSheet,
+        final pillSheetGroup = PillSheetGroup(
+            pillSheetIDs: ["1"], pillSheets: [pillSheet], createdAt: now());
+        final state = NotificationBarState(
+          pillSheetGroup: pillSheetGroup,
           totalCountOfActionForTakenPill:
               totalCountOfActionForTakenPillForLongTimeUser,
           isPremium: true,
@@ -408,8 +420,10 @@ void main() {
             Duration(days: 25),
           ),
         );
-        var state = NotificationBarState(
-          activedPillSheet: pillSheet,
+        final pillSheetGroup = PillSheetGroup(
+            pillSheetIDs: ["1"], pillSheets: [pillSheet], createdAt: now());
+        final state = NotificationBarState(
+          pillSheetGroup: pillSheetGroup,
           totalCountOfActionForTakenPill:
               totalCountOfActionForTakenPillForLongTimeUser,
           isPremium: true,

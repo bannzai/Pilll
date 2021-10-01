@@ -1,5 +1,4 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:pilll/entity/pill_sheet.dart';
 import 'package:pilll/entity/pill_sheet_group.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/util/datetime/day.dart';
@@ -33,7 +32,7 @@ abstract class NotificationBarState implements _$NotificationBarState {
   }
 
   String? get restDurationNotification {
-    final activedPillSheet = this.activedPillSheet;
+    final activedPillSheet = this.pillSheetGroup?.activedPillSheet;
     if (activedPillSheet == null) {
       return null;
     }
