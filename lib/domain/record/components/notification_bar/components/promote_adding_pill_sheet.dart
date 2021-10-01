@@ -3,13 +3,6 @@ import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 
 class PromoteAddingPillSheet extends StatelessWidget {
-  const PromoteAddingPillSheet({
-    Key? key,
-    required this.premiumTrialLimit,
-  }) : super(key: key);
-
-  final String premiumTrialLimit;
-
   @override
   Widget build(BuildContext context) {
     return Container(
