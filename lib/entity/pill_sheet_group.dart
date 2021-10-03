@@ -124,6 +124,6 @@ abstract class PillSheetGroup implements _$PillSheetGroup {
     return passedPillCount + latestTakenPillSheet.lastTakenPillNumber;
   }
 
-  bool get isDeleted => deletedAt != null;
-  bool get isDeactived => activedPillSheet == null || isDeleted;
+  bool get _isDeleted => deletedAt != null;
+  bool get isDeactived => activedPillSheet == null || _isDeleted;
 }
