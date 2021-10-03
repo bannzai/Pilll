@@ -44,8 +44,7 @@ class TodayTakenPillNumber extends StatelessWidget {
     final activedPillSheet = this.pillSheetGroup?.activedPillSheet;
     if (pillSheetGroup == null ||
         activedPillSheet == null ||
-        pillSheetGroup.isDeactived ||
-        pillSheetGroup.isDeleted) {
+        pillSheetGroup.isDeactived) {
       return Padding(
           padding: EdgeInsets.only(top: 8),
           child: Text("-",

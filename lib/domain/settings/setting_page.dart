@@ -109,7 +109,7 @@ class SettingPage extends HookWidget {
                       _separator(),
                       if (activedPillSheet != null &&
                           pillSheetGroup != null &&
-                          !pillSheetGroup.isDeleted) ...[
+                          !pillSheetGroup.isDeactived) ...[
                         TodayPllNumberRow(
                           setting: setting,
                           pillSheetGroup: pillSheetGroup,

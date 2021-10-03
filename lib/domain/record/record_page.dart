@@ -74,7 +74,7 @@ class RecordPage extends HookWidget {
                 ),
               ),
             ),
-            if (currentPillSheet != null)
+            if (currentPillSheet != null && !state.isDeactived)
               Positioned(
                 bottom: 20,
                 child: RecordPageButton(currentPillSheet: currentPillSheet),
@@ -91,13 +91,13 @@ class RecordPage extends HookWidget {
     RecordPageState state,
     RecordPageStore store,
   ) {
-    if (state.pillSheetGroupIsHidden)
+    if (state.isDeactived)
       return RecordPageAddingPillSheet(
         context: context,
         store: store,
         setting: settingEntity,
       );
-    if (!state.pillSheetGroupIsHidden)
+    if (!state.isDeactived)
       return RecordPagePillSheetList(
         state: state,
         store: store,
