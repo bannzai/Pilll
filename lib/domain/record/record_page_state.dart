@@ -30,7 +30,7 @@ abstract class RecordPageState implements _$RecordPageState {
     return pillSheetGroup?.activedPillSheet?.groupIndex ?? 0;
   }
 
-  bool get pillSheetGroupIsHidden {
+  bool get isDeactived {
     final pillSheetGroup = this.pillSheetGroup;
     return pillSheetGroup == null ||
         pillSheetGroup.isDeactived ||
