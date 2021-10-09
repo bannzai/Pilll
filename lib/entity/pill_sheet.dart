@@ -43,7 +43,7 @@ abstract class RestDuration with _$RestDuration {
   }) = _RestDuration;
 
   factory RestDuration.fromJson(Map<String, dynamic> json) =>
-      _$RestDurationInfoFromJson(json);
+      _$RestDurationFromJson(json);
   Map<String, dynamic> toJson() =>
       _$_$_RestDurationToJson(this as _$_RestDuration);
 }
