@@ -58,9 +58,10 @@ _$_PillSheet _$_$_PillSheetFromJson(Map<String, dynamic> json) {
     deletedAt:
         TimestampConverter.timestampToDateTime(json['deletedAt'] as Timestamp?),
     groupIndex: json['groupIndex'] as int? ?? 0,
-    restDuration: json['restDuration'] == null
-        ? null
-        : RestDuration.fromJson(json['restDuration'] as Map<String, dynamic>),
+    restDurations: (json['restDurations'] as List<dynamic>?)
+            ?.map((e) => RestDuration.fromJson(e as Map<String, dynamic>))
+            .toList() ??
+        [],
   );
 }
 
@@ -82,6 +83,6 @@ Map<String, dynamic> _$_$_PillSheetToJson(_$_PillSheet instance) {
   val['createdAt'] = TimestampConverter.dateTimeToTimestamp(instance.createdAt);
   val['deletedAt'] = TimestampConverter.dateTimeToTimestamp(instance.deletedAt);
   val['groupIndex'] = instance.groupIndex;
-  val['restDuration'] = instance.restDuration?.toJson();
+  val['restDurations'] = instance.restDurations.map((e) => e.toJson()).toList();
   return val;
 }

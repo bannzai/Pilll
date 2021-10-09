@@ -514,7 +514,7 @@ class _$PillSheetTearOff {
       @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
           DateTime? deletedAt,
       int groupIndex = 0,
-      RestDuration? restDuration}) {
+      List<RestDuration> restDurations = const []}) {
     return _PillSheet(
       id: id,
       typeInfo: typeInfo,
@@ -523,7 +523,7 @@ class _$PillSheetTearOff {
       createdAt: createdAt,
       deletedAt: deletedAt,
       groupIndex: groupIndex,
-      restDuration: restDuration,
+      restDurations: restDurations,
     );
   }
 
@@ -558,7 +558,7 @@ mixin _$PillSheet {
       toJson: TimestampConverter.dateTimeToTimestamp)
   DateTime? get deletedAt => throw _privateConstructorUsedError;
   int get groupIndex => throw _privateConstructorUsedError;
-  RestDuration? get restDuration => throw _privateConstructorUsedError;
+  List<RestDuration> get restDurations => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -584,10 +584,9 @@ abstract class $PillSheetCopyWith<$Res> {
       @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
           DateTime? deletedAt,
       int groupIndex,
-      RestDuration? restDuration});
+      List<RestDuration> restDurations});
 
   $PillSheetTypeInfoCopyWith<$Res> get typeInfo;
-  $RestDurationCopyWith<$Res>? get restDuration;
 }
 
 /// @nodoc
@@ -607,7 +606,7 @@ class _$PillSheetCopyWithImpl<$Res> implements $PillSheetCopyWith<$Res> {
     Object? createdAt = freezed,
     Object? deletedAt = freezed,
     Object? groupIndex = freezed,
-    Object? restDuration = freezed,
+    Object? restDurations = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed
@@ -638,10 +637,10 @@ class _$PillSheetCopyWithImpl<$Res> implements $PillSheetCopyWith<$Res> {
           ? _value.groupIndex
           : groupIndex // ignore: cast_nullable_to_non_nullable
               as int,
-      restDuration: restDuration == freezed
-          ? _value.restDuration
-          : restDuration // ignore: cast_nullable_to_non_nullable
-              as RestDuration?,
+      restDurations: restDurations == freezed
+          ? _value.restDurations
+          : restDurations // ignore: cast_nullable_to_non_nullable
+              as List<RestDuration>,
     ));
   }
 
@@ -649,17 +648,6 @@ class _$PillSheetCopyWithImpl<$Res> implements $PillSheetCopyWith<$Res> {
   $PillSheetTypeInfoCopyWith<$Res> get typeInfo {
     return $PillSheetTypeInfoCopyWith<$Res>(_value.typeInfo, (value) {
       return _then(_value.copyWith(typeInfo: value));
-    });
-  }
-
-  @override
-  $RestDurationCopyWith<$Res>? get restDuration {
-    if (_value.restDuration == null) {
-      return null;
-    }
-
-    return $RestDurationCopyWith<$Res>(_value.restDuration!, (value) {
-      return _then(_value.copyWith(restDuration: value));
     });
   }
 }
@@ -684,12 +672,10 @@ abstract class _$PillSheetCopyWith<$Res> implements $PillSheetCopyWith<$Res> {
       @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
           DateTime? deletedAt,
       int groupIndex,
-      RestDuration? restDuration});
+      List<RestDuration> restDurations});
 
   @override
   $PillSheetTypeInfoCopyWith<$Res> get typeInfo;
-  @override
-  $RestDurationCopyWith<$Res>? get restDuration;
 }
 
 /// @nodoc
@@ -710,7 +696,7 @@ class __$PillSheetCopyWithImpl<$Res> extends _$PillSheetCopyWithImpl<$Res>
     Object? createdAt = freezed,
     Object? deletedAt = freezed,
     Object? groupIndex = freezed,
-    Object? restDuration = freezed,
+    Object? restDurations = freezed,
   }) {
     return _then(_PillSheet(
       id: id == freezed
@@ -741,10 +727,10 @@ class __$PillSheetCopyWithImpl<$Res> extends _$PillSheetCopyWithImpl<$Res>
           ? _value.groupIndex
           : groupIndex // ignore: cast_nullable_to_non_nullable
               as int,
-      restDuration: restDuration == freezed
-          ? _value.restDuration
-          : restDuration // ignore: cast_nullable_to_non_nullable
-              as RestDuration?,
+      restDurations: restDurations == freezed
+          ? _value.restDurations
+          : restDurations // ignore: cast_nullable_to_non_nullable
+              as List<RestDuration>,
     ));
   }
 }
@@ -767,7 +753,7 @@ class _$_PillSheet extends _PillSheet {
       @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
           this.deletedAt,
       this.groupIndex = 0,
-      this.restDuration})
+      this.restDurations = const []})
       : super._();
 
   factory _$_PillSheet.fromJson(Map<String, dynamic> json) =>
@@ -802,12 +788,13 @@ class _$_PillSheet extends _PillSheet {
   @JsonKey(defaultValue: 0)
   @override
   final int groupIndex;
+  @JsonKey(defaultValue: const [])
   @override
-  final RestDuration? restDuration;
+  final List<RestDuration> restDurations;
 
   @override
   String toString() {
-    return 'PillSheet(id: $id, typeInfo: $typeInfo, beginingDate: $beginingDate, lastTakenDate: $lastTakenDate, createdAt: $createdAt, deletedAt: $deletedAt, groupIndex: $groupIndex, restDuration: $restDuration)';
+    return 'PillSheet(id: $id, typeInfo: $typeInfo, beginingDate: $beginingDate, lastTakenDate: $lastTakenDate, createdAt: $createdAt, deletedAt: $deletedAt, groupIndex: $groupIndex, restDurations: $restDurations)';
   }
 
   @override
@@ -834,9 +821,9 @@ class _$_PillSheet extends _PillSheet {
             (identical(other.groupIndex, groupIndex) ||
                 const DeepCollectionEquality()
                     .equals(other.groupIndex, groupIndex)) &&
-            (identical(other.restDuration, restDuration) ||
+            (identical(other.restDurations, restDurations) ||
                 const DeepCollectionEquality()
-                    .equals(other.restDuration, restDuration)));
+                    .equals(other.restDurations, restDurations)));
   }
 
   @override
@@ -849,7 +836,7 @@ class _$_PillSheet extends _PillSheet {
       const DeepCollectionEquality().hash(createdAt) ^
       const DeepCollectionEquality().hash(deletedAt) ^
       const DeepCollectionEquality().hash(groupIndex) ^
-      const DeepCollectionEquality().hash(restDuration);
+      const DeepCollectionEquality().hash(restDurations);
 
   @JsonKey(ignore: true)
   @override
@@ -877,7 +864,7 @@ abstract class _PillSheet extends PillSheet {
       @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
           DateTime? deletedAt,
       int groupIndex,
-      RestDuration? restDuration}) = _$_PillSheet;
+      List<RestDuration> restDurations}) = _$_PillSheet;
   _PillSheet._() : super._();
 
   factory _PillSheet.fromJson(Map<String, dynamic> json) =
@@ -912,7 +899,7 @@ abstract class _PillSheet extends PillSheet {
   @override
   int get groupIndex => throw _privateConstructorUsedError;
   @override
-  RestDuration? get restDuration => throw _privateConstructorUsedError;
+  List<RestDuration> get restDurations => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$PillSheetCopyWith<_PillSheet> get copyWith =>
