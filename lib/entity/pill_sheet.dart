@@ -95,7 +95,8 @@ abstract class PillSheet implements _$PillSheet {
         DateTime? deletedAt,
     @Default(0)
         int groupIndex,
-    RestDuration? restDuration,
+    @Default([])
+        List<RestDuration> restDurations,
   }) = _PillSheet;
   factory PillSheet.create(PillSheetType type) => PillSheet(
         typeInfo: type.typeInfo,
