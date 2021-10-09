@@ -34,6 +34,8 @@ extension AppDelegate {
     }
 }
 
+// MARK: - Avoid bug for flutter app badger
+// ref: https://github.com/g123k/flutter_app_badger/pull/52
 extension UNUserNotificationCenter {
     func swizzle() {
         guard let fromMethod = class_getInstanceMethod(type(of: self), #selector(UNUserNotificationCenter.setNotificationCategories(_:))) else {
