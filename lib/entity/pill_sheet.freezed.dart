@@ -254,15 +254,16 @@ class _$RestDurationTearOff {
   const _$RestDurationTearOff();
 
   _RestDuration call(
-      {required String pillSheetTypeReferencePath,
-      required String name,
-      required int totalCount,
-      required int dosingPeriod}) {
+      {@JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+          required DateTime beginDate,
+      @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
+          DateTime? endDate,
+      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+          required DateTime createdDate}) {
     return _RestDuration(
-      pillSheetTypeReferencePath: pillSheetTypeReferencePath,
-      name: name,
-      totalCount: totalCount,
-      dosingPeriod: dosingPeriod,
+      beginDate: beginDate,
+      endDate: endDate,
+      createdDate: createdDate,
     );
   }
 
@@ -276,10 +277,18 @@ const $RestDuration = _$RestDurationTearOff();
 
 /// @nodoc
 mixin _$RestDuration {
-  String get pillSheetTypeReferencePath => throw _privateConstructorUsedError;
-  String get name => throw _privateConstructorUsedError;
-  int get totalCount => throw _privateConstructorUsedError;
-  int get dosingPeriod => throw _privateConstructorUsedError;
+  @JsonKey(
+      fromJson: NonNullTimestampConverter.timestampToDateTime,
+      toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+  DateTime get beginDate => throw _privateConstructorUsedError;
+  @JsonKey(
+      fromJson: TimestampConverter.timestampToDateTime,
+      toJson: TimestampConverter.dateTimeToTimestamp)
+  DateTime? get endDate => throw _privateConstructorUsedError;
+  @JsonKey(
+      fromJson: NonNullTimestampConverter.timestampToDateTime,
+      toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+  DateTime get createdDate => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -293,10 +302,12 @@ abstract class $RestDurationCopyWith<$Res> {
           RestDuration value, $Res Function(RestDuration) then) =
       _$RestDurationCopyWithImpl<$Res>;
   $Res call(
-      {String pillSheetTypeReferencePath,
-      String name,
-      int totalCount,
-      int dosingPeriod});
+      {@JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+          DateTime beginDate,
+      @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
+          DateTime? endDate,
+      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+          DateTime createdDate});
 }
 
 /// @nodoc
@@ -309,28 +320,23 @@ class _$RestDurationCopyWithImpl<$Res> implements $RestDurationCopyWith<$Res> {
 
   @override
   $Res call({
-    Object? pillSheetTypeReferencePath = freezed,
-    Object? name = freezed,
-    Object? totalCount = freezed,
-    Object? dosingPeriod = freezed,
+    Object? beginDate = freezed,
+    Object? endDate = freezed,
+    Object? createdDate = freezed,
   }) {
     return _then(_value.copyWith(
-      pillSheetTypeReferencePath: pillSheetTypeReferencePath == freezed
-          ? _value.pillSheetTypeReferencePath
-          : pillSheetTypeReferencePath // ignore: cast_nullable_to_non_nullable
-              as String,
-      name: name == freezed
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String,
-      totalCount: totalCount == freezed
-          ? _value.totalCount
-          : totalCount // ignore: cast_nullable_to_non_nullable
-              as int,
-      dosingPeriod: dosingPeriod == freezed
-          ? _value.dosingPeriod
-          : dosingPeriod // ignore: cast_nullable_to_non_nullable
-              as int,
+      beginDate: beginDate == freezed
+          ? _value.beginDate
+          : beginDate // ignore: cast_nullable_to_non_nullable
+              as DateTime,
+      endDate: endDate == freezed
+          ? _value.endDate
+          : endDate // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
+      createdDate: createdDate == freezed
+          ? _value.createdDate
+          : createdDate // ignore: cast_nullable_to_non_nullable
+              as DateTime,
     ));
   }
 }
@@ -343,10 +349,12 @@ abstract class _$RestDurationCopyWith<$Res>
       __$RestDurationCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String pillSheetTypeReferencePath,
-      String name,
-      int totalCount,
-      int dosingPeriod});
+      {@JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+          DateTime beginDate,
+      @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
+          DateTime? endDate,
+      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+          DateTime createdDate});
 }
 
 /// @nodoc
@@ -361,28 +369,23 @@ class __$RestDurationCopyWithImpl<$Res> extends _$RestDurationCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object? pillSheetTypeReferencePath = freezed,
-    Object? name = freezed,
-    Object? totalCount = freezed,
-    Object? dosingPeriod = freezed,
+    Object? beginDate = freezed,
+    Object? endDate = freezed,
+    Object? createdDate = freezed,
   }) {
     return _then(_RestDuration(
-      pillSheetTypeReferencePath: pillSheetTypeReferencePath == freezed
-          ? _value.pillSheetTypeReferencePath
-          : pillSheetTypeReferencePath // ignore: cast_nullable_to_non_nullable
-              as String,
-      name: name == freezed
-          ? _value.name
-          : name // ignore: cast_nullable_to_non_nullable
-              as String,
-      totalCount: totalCount == freezed
-          ? _value.totalCount
-          : totalCount // ignore: cast_nullable_to_non_nullable
-              as int,
-      dosingPeriod: dosingPeriod == freezed
-          ? _value.dosingPeriod
-          : dosingPeriod // ignore: cast_nullable_to_non_nullable
-              as int,
+      beginDate: beginDate == freezed
+          ? _value.beginDate
+          : beginDate // ignore: cast_nullable_to_non_nullable
+              as DateTime,
+      endDate: endDate == freezed
+          ? _value.endDate
+          : endDate // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
+      createdDate: createdDate == freezed
+          ? _value.createdDate
+          : createdDate // ignore: cast_nullable_to_non_nullable
+              as DateTime,
     ));
   }
 }
@@ -392,54 +395,58 @@ class __$RestDurationCopyWithImpl<$Res> extends _$RestDurationCopyWithImpl<$Res>
 @JsonSerializable(explicitToJson: true)
 class _$_RestDuration implements _RestDuration {
   _$_RestDuration(
-      {required this.pillSheetTypeReferencePath,
-      required this.name,
-      required this.totalCount,
-      required this.dosingPeriod});
+      {@JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+          required this.beginDate,
+      @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
+          this.endDate,
+      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+          required this.createdDate});
 
   factory _$_RestDuration.fromJson(Map<String, dynamic> json) =>
       _$_$_RestDurationFromJson(json);
 
   @override
-  final String pillSheetTypeReferencePath;
+  @JsonKey(
+      fromJson: NonNullTimestampConverter.timestampToDateTime,
+      toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+  final DateTime beginDate;
   @override
-  final String name;
+  @JsonKey(
+      fromJson: TimestampConverter.timestampToDateTime,
+      toJson: TimestampConverter.dateTimeToTimestamp)
+  final DateTime? endDate;
   @override
-  final int totalCount;
-  @override
-  final int dosingPeriod;
+  @JsonKey(
+      fromJson: NonNullTimestampConverter.timestampToDateTime,
+      toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+  final DateTime createdDate;
 
   @override
   String toString() {
-    return 'RestDuration(pillSheetTypeReferencePath: $pillSheetTypeReferencePath, name: $name, totalCount: $totalCount, dosingPeriod: $dosingPeriod)';
+    return 'RestDuration(beginDate: $beginDate, endDate: $endDate, createdDate: $createdDate)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other is _RestDuration &&
-            (identical(other.pillSheetTypeReferencePath,
-                    pillSheetTypeReferencePath) ||
-                const DeepCollectionEquality().equals(
-                    other.pillSheetTypeReferencePath,
-                    pillSheetTypeReferencePath)) &&
-            (identical(other.name, name) ||
-                const DeepCollectionEquality().equals(other.name, name)) &&
-            (identical(other.totalCount, totalCount) ||
+            (identical(other.beginDate, beginDate) ||
                 const DeepCollectionEquality()
-                    .equals(other.totalCount, totalCount)) &&
-            (identical(other.dosingPeriod, dosingPeriod) ||
+                    .equals(other.beginDate, beginDate)) &&
+            (identical(other.endDate, endDate) ||
                 const DeepCollectionEquality()
-                    .equals(other.dosingPeriod, dosingPeriod)));
+                    .equals(other.endDate, endDate)) &&
+            (identical(other.createdDate, createdDate) ||
+                const DeepCollectionEquality()
+                    .equals(other.createdDate, createdDate)));
   }
 
   @override
   int get hashCode =>
       runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(pillSheetTypeReferencePath) ^
-      const DeepCollectionEquality().hash(name) ^
-      const DeepCollectionEquality().hash(totalCount) ^
-      const DeepCollectionEquality().hash(dosingPeriod);
+      const DeepCollectionEquality().hash(beginDate) ^
+      const DeepCollectionEquality().hash(endDate) ^
+      const DeepCollectionEquality().hash(createdDate);
 
   @JsonKey(ignore: true)
   @override
@@ -454,22 +461,31 @@ class _$_RestDuration implements _RestDuration {
 
 abstract class _RestDuration implements RestDuration {
   factory _RestDuration(
-      {required String pillSheetTypeReferencePath,
-      required String name,
-      required int totalCount,
-      required int dosingPeriod}) = _$_RestDuration;
+      {@JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+          required DateTime beginDate,
+      @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
+          DateTime? endDate,
+      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+          required DateTime createdDate}) = _$_RestDuration;
 
   factory _RestDuration.fromJson(Map<String, dynamic> json) =
       _$_RestDuration.fromJson;
 
   @override
-  String get pillSheetTypeReferencePath => throw _privateConstructorUsedError;
+  @JsonKey(
+      fromJson: NonNullTimestampConverter.timestampToDateTime,
+      toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+  DateTime get beginDate => throw _privateConstructorUsedError;
   @override
-  String get name => throw _privateConstructorUsedError;
+  @JsonKey(
+      fromJson: TimestampConverter.timestampToDateTime,
+      toJson: TimestampConverter.dateTimeToTimestamp)
+  DateTime? get endDate => throw _privateConstructorUsedError;
   @override
-  int get totalCount => throw _privateConstructorUsedError;
-  @override
-  int get dosingPeriod => throw _privateConstructorUsedError;
+  @JsonKey(
+      fromJson: NonNullTimestampConverter.timestampToDateTime,
+      toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+  DateTime get createdDate => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$RestDurationCopyWith<_RestDuration> get copyWith =>

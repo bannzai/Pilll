@@ -26,19 +26,22 @@ Map<String, dynamic> _$_$_PillSheetTypeInfoToJson(
 
 _$_RestDuration _$_$_RestDurationFromJson(Map<String, dynamic> json) {
   return _$_RestDuration(
-    pillSheetTypeReferencePath: json['pillSheetTypeReferencePath'] as String,
-    name: json['name'] as String,
-    totalCount: json['totalCount'] as int,
-    dosingPeriod: json['dosingPeriod'] as int,
+    beginDate: NonNullTimestampConverter.timestampToDateTime(
+        json['beginDate'] as Timestamp),
+    endDate:
+        TimestampConverter.timestampToDateTime(json['endDate'] as Timestamp?),
+    createdDate: NonNullTimestampConverter.timestampToDateTime(
+        json['createdDate'] as Timestamp),
   );
 }
 
 Map<String, dynamic> _$_$_RestDurationToJson(_$_RestDuration instance) =>
     <String, dynamic>{
-      'pillSheetTypeReferencePath': instance.pillSheetTypeReferencePath,
-      'name': instance.name,
-      'totalCount': instance.totalCount,
-      'dosingPeriod': instance.dosingPeriod,
+      'beginDate':
+          NonNullTimestampConverter.dateTimeToTimestamp(instance.beginDate),
+      'endDate': TimestampConverter.dateTimeToTimestamp(instance.endDate),
+      'createdDate':
+          NonNullTimestampConverter.dateTimeToTimestamp(instance.createdDate),
     };
 
 _$_PillSheet _$_$_PillSheetFromJson(Map<String, dynamic> json) {

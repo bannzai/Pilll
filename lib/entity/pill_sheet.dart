@@ -36,10 +36,21 @@ abstract class PillSheetTypeInfo with _$PillSheetTypeInfo {
 abstract class RestDuration with _$RestDuration {
   @JsonSerializable(explicitToJson: true)
   factory RestDuration({
-    required String pillSheetTypeReferencePath,
-    required String name,
-    required int totalCount,
-    required int dosingPeriod,
+    @JsonKey(
+      fromJson: NonNullTimestampConverter.timestampToDateTime,
+      toJson: NonNullTimestampConverter.dateTimeToTimestamp,
+    )
+        required DateTime beginDate,
+    @JsonKey(
+      fromJson: TimestampConverter.timestampToDateTime,
+      toJson: TimestampConverter.dateTimeToTimestamp,
+    )
+        DateTime? endDate,
+    @JsonKey(
+      fromJson: NonNullTimestampConverter.timestampToDateTime,
+      toJson: NonNullTimestampConverter.dateTimeToTimestamp,
+    )
+        required DateTime createdDate,
   }) = _RestDuration;
 
   factory RestDuration.fromJson(Map<String, dynamic> json) =>
