@@ -36,12 +36,12 @@ class RecordPagePillSheetList extends HookWidget {
       children: [
         Container(
           height: PillSheetViewLayout.calcHeight(
-              PillSheetViewLayout.mostLargePillSheetType(pillSheetGroup
-                      .pillSheets
-                      .map((e) => e.pillSheetType)
-                      .toList())
-                  .numberOfLineInPillSheet,
-              false),
+            PillSheetViewLayout.mostLargePillSheetType(pillSheetGroup.pillSheets
+                    .map((e) => e.pillSheetType)
+                    .toList())
+                .numberOfLineInPillSheet,
+            false,
+          ),
           child: PageView(
             clipBehavior: Clip.none,
             controller: pageController,
