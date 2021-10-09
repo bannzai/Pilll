@@ -21,13 +21,14 @@ class RecordPagePillOption extends StatelessWidget {
     return Row(children: [
       Spacer(),
       PrimaryOutlinedButton(
-          onPressed: () {
-            store.beginResting(
-              pillSheetGroup: pillSheetGroup,
-              activedPillSheet: activedPillSheet,
-            );
-          },
-          text: "休薬する"),
+        onPressed: () {
+          store.beginResting(
+            pillSheetGroup: pillSheetGroup,
+            activedPillSheet: activedPillSheet,
+          );
+        },
+        text: "休薬する",
+      ),
     ]);
   }
 }
