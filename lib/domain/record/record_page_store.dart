@@ -401,4 +401,18 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
     final updatedSetting = setting.copyWith(pillSheetTypes: copied);
     state = state.copyWith(setting: updatedSetting);
   }
+
+  Future<void> beginResting({
+    required PillSheetGroup pillSheetGroup,
+    required PillSheet activedPillSheet,
+  }) async {
+    final updatedPillSheet = activedPillSheet.copyWith(
+        restDuration: RestDuration(beginDate: now(), createdDate: now()));
+    final updatedPillSheetGroup = pillSheetGroup.replaced(updatedPillSheet);
+
+    final batch = _batchFactory.batch();
+    _pillSheetService.update(batch, updatedPillSheetGroup.pillSheets);
+    _pillSheetGroupService.update(batch, updatedPillSheetGroup);
+    await batch.commit();
+  }
 }
