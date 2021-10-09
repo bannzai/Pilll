@@ -20,7 +20,19 @@ class RecordPagePillOption extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final restDuration = activedPillSheet.restDuration;
+    final RestDuration? restDuration;
+    if (activedPillSheet.restDurations.isEmpty) {
+      restDuration = null;
+    } else {
+      final restDurations = activedPillSheet.restDurations;
+      if (restDurations.last.endDate == null &&
+          restDurations.last.beginDate.isBefore(today())) {
+        restDuration = restDurations.last;
+      } else {
+        restDuration = null;
+      }
+    }
+
     final isResting = restDuration != null &&
         restDuration.endDate == null &&
         restDuration.beginDate.isBefore(today());
