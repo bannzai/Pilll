@@ -99,25 +99,26 @@ class InconspicuousButton extends StatelessWidget {
 
 class PrimaryOutlinedButton extends StatelessWidget {
   final String text;
+  final double fontSize;
   final VoidCallback? onPressed;
 
   const PrimaryOutlinedButton({
     Key? key,
     required this.onPressed,
+    required this.fontSize,
     required this.text,
   }) : super(key: key);
 
   Widget build(BuildContext context) {
     return OutlinedButton(
       child: Container(
-        width: 204,
         padding: EdgeInsets.only(top: 12, bottom: 12),
         child: Center(
           child: Text(
             text,
             style: TextStyle(
               color: TextColor.main,
-              fontSize: 16,
+              fontSize: fontSize,
               fontFamily: FontFamily.japanese,
               fontWeight: FontWeight.w700,
             ),
