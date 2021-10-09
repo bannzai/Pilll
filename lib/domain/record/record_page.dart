@@ -70,7 +70,7 @@ class RecordPage extends HookWidget {
                 child: Column(
                   children: [
                     NotificationBar(state),
-                    SizedBox(height: 64),
+                    SizedBox(height: 37),
                     _content(context, settingEntity, state, store),
                   ],
                 ),
@@ -107,12 +107,14 @@ class RecordPage extends HookWidget {
       );
     else
       return Column(
+        mainAxisAlignment: MainAxisAlignment.start,
         children: [
           RecordPagePillOption(
             store: store,
             pillSheetGroup: pillSheetGroup,
             activedPillSheet: activedPillSheet,
           ),
+          SizedBox(height: 16),
           RecordPagePillSheetList(
             state: state,
             store: store,
