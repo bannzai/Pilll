@@ -13,6 +13,7 @@ import Flutter
             self.migrateFrom_1_3_2()
         }
         configureNotificationActionableButtons()
+        UNUserNotificationCenter.current().swizzle()
         UNUserNotificationCenter.current().removeDeliveredNotifications(withIdentifiers: ["repeat_notification_for_taken_pill", "remind_notification_for_taken_pill"])
         UNUserNotificationCenter.current().removePendingNotificationRequests(withIdentifiers: ["repeat_notification_for_taken_pill", "remind_notification_for_taken_pill"])
         UNUserNotificationCenter.current().delegate = self as UNUserNotificationCenterDelegate
@@ -33,6 +34,26 @@ extension AppDelegate {
     }
 }
 
+extension UNUserNotificationCenter {
+    func swizzle() {
+        guard let fromMethod = class_getInstanceMethod(type(of: self), #selector(UNUserNotificationCenter.setNotificationCategories(_:))) else {
+            fatalError()
+        }
+        guard let toMethod = class_getInstanceMethod(type(of: self), #selector(UNUserNotificationCenter.setNotificationCategories_methodSwizzle(_:))) else {
+            fatalError()
+        }
+
+        method_exchangeImplementations(fromMethod, toMethod)
+    }
+
+    @objc func setNotificationCategories_methodSwizzle(_ categories: Set<UNNotificationCategory>) {
+        if categories.isEmpty {
+            return
+        }
+        setNotificationCategories_methodSwizzle(categories)
+    }
+
+}
 
 // MARK: - Notification
 extension AppDelegate {
