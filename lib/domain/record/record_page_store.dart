@@ -415,4 +415,19 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
     _pillSheetGroupService.update(batch, updatedPillSheetGroup);
     await batch.commit();
   }
+
+  Future<void> endResting({
+    required PillSheetGroup pillSheetGroup,
+    required PillSheet activedPillSheet,
+    required RestDuration restDuration,
+  }) async {
+    final updatedPillSheet = activedPillSheet.copyWith(
+        restDuration: restDuration.copyWith(endDate: now()));
+    final updatedPillSheetGroup = pillSheetGroup.replaced(updatedPillSheet);
+
+    final batch = _batchFactory.batch();
+    _pillSheetService.update(batch, updatedPillSheetGroup.pillSheets);
+    _pillSheetGroupService.update(batch, updatedPillSheetGroup);
+    await batch.commit();
+  }
 }
