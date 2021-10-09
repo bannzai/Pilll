@@ -4,6 +4,7 @@ import 'package:pilll/domain/premium_trial/premium_trial_complete_modal.dart';
 import 'package:pilll/domain/record/components/adding/record_page_adding_pill_sheet.dart';
 import 'package:pilll/domain/record/components/button/record_page_button.dart';
 import 'package:pilll/domain/record/components/notification_bar/notification_bar.dart';
+import 'package:pilll/domain/record/components/pill_sheet/components/record_page_pill_option.dart';
 import 'package:pilll/domain/record/components/pill_sheet/record_page_pill_sheet_list.dart';
 import 'package:pilll/domain/record/record_page_state.dart';
 import 'package:pilll/domain/record/record_page_store.dart';
@@ -38,7 +39,8 @@ class RecordPage extends HookWidget {
       });
     });
 
-    final currentPillSheet = state.pillSheetGroup?.activedPillSheet;
+    final pillSheetGroup = state.pillSheetGroup;
+    final activedPillSheet = pillSheetGroup?.activedPillSheet;
     final settingEntity = state.setting;
     if (settingEntity == null || !state.firstLoadIsEnded) {
       return Indicator();
@@ -74,10 +76,12 @@ class RecordPage extends HookWidget {
                 ),
               ),
             ),
-            if (currentPillSheet != null && !state.isDeactived)
+            if (activedPillSheet != null &&
+                pillSheetGroup != null &&
+                !pillSheetGroup.isDeactived)
               Positioned(
                 bottom: 20,
-                child: RecordPageButton(currentPillSheet: currentPillSheet),
+                child: RecordPageButton(currentPillSheet: activedPillSheet),
               ),
           ],
         ),
@@ -91,17 +95,30 @@ class RecordPage extends HookWidget {
     RecordPageState state,
     RecordPageStore store,
   ) {
-    if (state.isDeactived)
+    final pillSheetGroup = state.pillSheetGroup;
+    final activedPillSheet = pillSheetGroup?.activedPillSheet;
+    if (activedPillSheet == null ||
+        pillSheetGroup == null ||
+        pillSheetGroup.isDeactived)
       return RecordPageAddingPillSheet(
         context: context,
         store: store,
         setting: settingEntity,
       );
     else
-      return RecordPagePillSheetList(
-        state: state,
-        store: store,
-        setting: settingEntity,
+      return Column(
+        children: [
+          RecordPagePillOption(
+            store: store,
+            pillSheetGroup: pillSheetGroup,
+            activedPillSheet: activedPillSheet,
+          ),
+          RecordPagePillSheetList(
+            state: state,
+            store: store,
+            setting: settingEntity,
+          ),
+        ],
       );
   }
 
