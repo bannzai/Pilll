@@ -97,13 +97,12 @@ class RecordPage extends HookWidget {
         store: store,
         setting: settingEntity,
       );
-    if (!state.isDeactived)
+    else
       return RecordPagePillSheetList(
         state: state,
         store: store,
         setting: settingEntity,
       );
-    return Container();
   }
 
   Future<void> _showMigrateInfoDialog(
