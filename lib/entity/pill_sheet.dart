@@ -33,6 +33,22 @@ abstract class PillSheetTypeInfo with _$PillSheetTypeInfo {
 }
 
 @freezed
+abstract class RestDuration with _$RestDuration {
+  @JsonSerializable(explicitToJson: true)
+  factory RestDuration({
+    required String pillSheetTypeReferencePath,
+    required String name,
+    required int totalCount,
+    required int dosingPeriod,
+  }) = _RestDuration;
+
+  factory RestDuration.fromJson(Map<String, dynamic> json) =>
+      _$RestDurationInfoFromJson(json);
+  Map<String, dynamic> toJson() =>
+      _$_$_RestDurationToJson(this as _$_RestDuration);
+}
+
+@freezed
 abstract class PillSheet implements _$PillSheet {
   String? get documentID => id;
 
@@ -68,6 +84,7 @@ abstract class PillSheet implements _$PillSheet {
         DateTime? deletedAt,
     @Default(0)
         int groupIndex,
+    RestDuration? restDuration,
   }) = _PillSheet;
   factory PillSheet.create(PillSheetType type) => PillSheet(
         typeInfo: type.typeInfo,
