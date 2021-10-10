@@ -32,7 +32,6 @@ class _$RecordPageStateTearOff {
       DateTime? discountEntitlementDeadlineDate,
       bool recommendedSignupNotificationIsAlreadyShow = true,
       bool premiumTrialGuideNotificationIsClosed = true,
-      int currentPillSheetPageIndex = 0,
       Object? exception}) {
     return _RecordPageState(
       pillSheetGroup: pillSheetGroup,
@@ -52,7 +51,6 @@ class _$RecordPageStateTearOff {
           recommendedSignupNotificationIsAlreadyShow,
       premiumTrialGuideNotificationIsClosed:
           premiumTrialGuideNotificationIsClosed,
-      currentPillSheetPageIndex: currentPillSheetPageIndex,
       exception: exception,
     );
   }
@@ -81,7 +79,6 @@ mixin _$RecordPageState {
       throw _privateConstructorUsedError;
   bool get premiumTrialGuideNotificationIsClosed =>
       throw _privateConstructorUsedError;
-  int get currentPillSheetPageIndex => throw _privateConstructorUsedError;
   Object? get exception => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
@@ -110,7 +107,6 @@ abstract class $RecordPageStateCopyWith<$Res> {
       DateTime? discountEntitlementDeadlineDate,
       bool recommendedSignupNotificationIsAlreadyShow,
       bool premiumTrialGuideNotificationIsClosed,
-      int currentPillSheetPageIndex,
       Object? exception});
 
   $PillSheetGroupCopyWith<$Res>? get pillSheetGroup;
@@ -143,7 +139,6 @@ class _$RecordPageStateCopyWithImpl<$Res>
     Object? discountEntitlementDeadlineDate = freezed,
     Object? recommendedSignupNotificationIsAlreadyShow = freezed,
     Object? premiumTrialGuideNotificationIsClosed = freezed,
-    Object? currentPillSheetPageIndex = freezed,
     Object? exception = freezed,
   }) {
     return _then(_value.copyWith(
@@ -210,10 +205,6 @@ class _$RecordPageStateCopyWithImpl<$Res>
               ? _value.premiumTrialGuideNotificationIsClosed
               : premiumTrialGuideNotificationIsClosed // ignore: cast_nullable_to_non_nullable
                   as bool,
-      currentPillSheetPageIndex: currentPillSheetPageIndex == freezed
-          ? _value.currentPillSheetPageIndex
-          : currentPillSheetPageIndex // ignore: cast_nullable_to_non_nullable
-              as int,
       exception: exception == freezed ? _value.exception : exception,
     ));
   }
@@ -264,7 +255,6 @@ abstract class _$RecordPageStateCopyWith<$Res>
       DateTime? discountEntitlementDeadlineDate,
       bool recommendedSignupNotificationIsAlreadyShow,
       bool premiumTrialGuideNotificationIsClosed,
-      int currentPillSheetPageIndex,
       Object? exception});
 
   @override
@@ -301,7 +291,6 @@ class __$RecordPageStateCopyWithImpl<$Res>
     Object? discountEntitlementDeadlineDate = freezed,
     Object? recommendedSignupNotificationIsAlreadyShow = freezed,
     Object? premiumTrialGuideNotificationIsClosed = freezed,
-    Object? currentPillSheetPageIndex = freezed,
     Object? exception = freezed,
   }) {
     return _then(_RecordPageState(
@@ -368,10 +357,6 @@ class __$RecordPageStateCopyWithImpl<$Res>
               ? _value.premiumTrialGuideNotificationIsClosed
               : premiumTrialGuideNotificationIsClosed // ignore: cast_nullable_to_non_nullable
                   as bool,
-      currentPillSheetPageIndex: currentPillSheetPageIndex == freezed
-          ? _value.currentPillSheetPageIndex
-          : currentPillSheetPageIndex // ignore: cast_nullable_to_non_nullable
-              as int,
       exception: exception == freezed ? _value.exception : exception,
     ));
   }
@@ -396,7 +381,6 @@ class _$_RecordPageState extends _RecordPageState {
       this.discountEntitlementDeadlineDate,
       this.recommendedSignupNotificationIsAlreadyShow = true,
       this.premiumTrialGuideNotificationIsClosed = true,
-      this.currentPillSheetPageIndex = 0,
       this.exception})
       : super._();
 
@@ -440,15 +424,12 @@ class _$_RecordPageState extends _RecordPageState {
   @JsonKey(defaultValue: true)
   @override
   final bool premiumTrialGuideNotificationIsClosed;
-  @JsonKey(defaultValue: 0)
-  @override
-  final int currentPillSheetPageIndex;
   @override
   final Object? exception;
 
   @override
   String toString() {
-    return 'RecordPageState(pillSheetGroup: $pillSheetGroup, setting: $setting, totalCountOfActionForTakenPill: $totalCountOfActionForTakenPill, firstLoadIsEnded: $firstLoadIsEnded, isPremium: $isPremium, isTrial: $isTrial, hasDiscountEntitlement: $hasDiscountEntitlement, isAlreadyShowTiral: $isAlreadyShowTiral, shouldShowMigrateInfo: $shouldShowMigrateInfo, isLinkedLoginProvider: $isLinkedLoginProvider, beginTrialDate: $beginTrialDate, trialDeadlineDate: $trialDeadlineDate, discountEntitlementDeadlineDate: $discountEntitlementDeadlineDate, recommendedSignupNotificationIsAlreadyShow: $recommendedSignupNotificationIsAlreadyShow, premiumTrialGuideNotificationIsClosed: $premiumTrialGuideNotificationIsClosed, currentPillSheetPageIndex: $currentPillSheetPageIndex, exception: $exception)';
+    return 'RecordPageState(pillSheetGroup: $pillSheetGroup, setting: $setting, totalCountOfActionForTakenPill: $totalCountOfActionForTakenPill, firstLoadIsEnded: $firstLoadIsEnded, isPremium: $isPremium, isTrial: $isTrial, hasDiscountEntitlement: $hasDiscountEntitlement, isAlreadyShowTiral: $isAlreadyShowTiral, shouldShowMigrateInfo: $shouldShowMigrateInfo, isLinkedLoginProvider: $isLinkedLoginProvider, beginTrialDate: $beginTrialDate, trialDeadlineDate: $trialDeadlineDate, discountEntitlementDeadlineDate: $discountEntitlementDeadlineDate, recommendedSignupNotificationIsAlreadyShow: $recommendedSignupNotificationIsAlreadyShow, premiumTrialGuideNotificationIsClosed: $premiumTrialGuideNotificationIsClosed, exception: $exception)';
   }
 
   @override
@@ -502,7 +483,6 @@ class _$_RecordPageState extends _RecordPageState {
                     recommendedSignupNotificationIsAlreadyShow)) &&
             (identical(other.premiumTrialGuideNotificationIsClosed, premiumTrialGuideNotificationIsClosed) ||
                 const DeepCollectionEquality().equals(other.premiumTrialGuideNotificationIsClosed, premiumTrialGuideNotificationIsClosed)) &&
-            (identical(other.currentPillSheetPageIndex, currentPillSheetPageIndex) || const DeepCollectionEquality().equals(other.currentPillSheetPageIndex, currentPillSheetPageIndex)) &&
             (identical(other.exception, exception) || const DeepCollectionEquality().equals(other.exception, exception)));
   }
 
@@ -526,7 +506,6 @@ class _$_RecordPageState extends _RecordPageState {
           .hash(recommendedSignupNotificationIsAlreadyShow) ^
       const DeepCollectionEquality()
           .hash(premiumTrialGuideNotificationIsClosed) ^
-      const DeepCollectionEquality().hash(currentPillSheetPageIndex) ^
       const DeepCollectionEquality().hash(exception);
 
   @JsonKey(ignore: true)
@@ -552,7 +531,6 @@ abstract class _RecordPageState extends RecordPageState {
       DateTime? discountEntitlementDeadlineDate,
       bool recommendedSignupNotificationIsAlreadyShow,
       bool premiumTrialGuideNotificationIsClosed,
-      int currentPillSheetPageIndex,
       Object? exception}) = _$_RecordPageState;
   _RecordPageState._() : super._();
 
@@ -589,8 +567,6 @@ abstract class _RecordPageState extends RecordPageState {
   @override
   bool get premiumTrialGuideNotificationIsClosed =>
       throw _privateConstructorUsedError;
-  @override
-  int get currentPillSheetPageIndex => throw _privateConstructorUsedError;
   @override
   Object? get exception => throw _privateConstructorUsedError;
   @override
