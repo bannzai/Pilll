@@ -94,21 +94,19 @@ class RootState extends State<Root> {
     // No UI thread blocking
     final user = await callSignin();
     if (user != null) {
-      await errorLogger.setUserIdentifier(user.uid);
-      await firebaseAnalytics.setUserId(user.uid);
-      await initializePurchase(user.uid);
+      errorLogger.setUserIdentifier(user.uid);
+      firebaseAnalytics.setUserId(user.uid);
+      initializePurchase(user.uid);
     }
     cacheOrAuth().then((authInfo) {
       final userService = UserService(DatabaseConnection(authInfo.uid));
       return userService.prepare(authInfo.uid).then((_) async {
-        Future(() {
-          userService.recordUserIDs();
-          userService.saveLaunchInfo();
-        });
-        await userService.saveStats();
+        userService.recordUserIDs();
+        userService.saveLaunchInfo();
+        userService.saveStats();
 
         final user = await userService.fetch();
-        await userService.temporarySyncronizeDiscountEntitlement(user);
+        userService.temporarySyncronizeDiscountEntitlement(user);
         if (!user.migratedFlutter) {
           await userService.deleteSettings();
           await userService.setFlutterMigrationFlag();
