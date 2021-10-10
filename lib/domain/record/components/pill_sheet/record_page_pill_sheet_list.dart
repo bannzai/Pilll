@@ -15,13 +15,11 @@ class RecordPagePillSheetList extends HookWidget {
     required this.state,
     required this.store,
     required this.setting,
-    required this.pageController,
   }) : super(key: key);
 
   final RecordPageState state;
   final RecordPageStore store;
   final Setting setting;
-  final PageController pageController;
 
   @override
   Widget build(BuildContext context) {
@@ -30,6 +28,10 @@ class RecordPagePillSheetList extends HookWidget {
       return Container();
     }
 
+    final pageController = usePageController(
+        initialPage: state.initialPageIndex,
+        viewportFraction: (PillSheetViewLayout.width + 20) /
+            MediaQuery.of(context).size.width);
     return Column(
       children: [
         Container(
