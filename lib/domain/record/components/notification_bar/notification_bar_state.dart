@@ -41,7 +41,9 @@ abstract class NotificationBarState implements _$NotificationBarState {
     }
     if (activedPillSheet.typeInfo.dosingPeriod <
         activedPillSheet.todayPillNumber) {
-      return "${activedPillSheet.pillSheetType.notTakenWord}期間中";
+      final day = activedPillSheet.todayPillNumber -
+          activedPillSheet.typeInfo.dosingPeriod;
+      return "${activedPillSheet.pillSheetType.notTakenWord}$day日目";
     }
 
     final threshold = 4;
