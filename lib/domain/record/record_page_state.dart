@@ -1,4 +1,5 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:pilll/entity/pill_sheet.dart';
 import 'package:pilll/entity/pill_sheet_group.dart';
 import 'package:pilll/entity/setting.dart';
 
@@ -52,5 +53,16 @@ abstract class RecordPageState implements _$RecordPageState {
 
   PillSheetAppearanceMode get appearanceMode {
     return setting?.pillSheetAppearanceMode ?? PillSheetAppearanceMode.number;
+  }
+
+  PillSheet? get focusedPillSheet {
+    final pillSheetGroup = this.pillSheetGroup;
+    if (pillSheetGroup == null || pillSheetGroup.isDeactived) {
+      return null;
+    }
+    if (pillSheetGroup.pillSheets.length < currentPillSheetPageIndex) {
+      return null;
+    }
+    return pillSheetGroup.pillSheets[currentPillSheetPageIndex];
   }
 }
