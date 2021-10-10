@@ -417,7 +417,7 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
     );
     final updatedPillSheetGroup = pillSheetGroup.replaced(updatedPillSheet);
 
-    final batch = _batchFactory.batch();
+  final batch = _batchFactory.batch();
     _pillSheetService.update(batch, updatedPillSheetGroup.pillSheets);
     _pillSheetGroupService.update(batch, updatedPillSheetGroup);
     await batch.commit();
