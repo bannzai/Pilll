@@ -51,12 +51,28 @@ class RecordPagePillOption extends StatelessWidget {
                     pillSheetGroup: pillSheetGroup,
                     activedPillSheet: activedPillSheet,
                   );
+                  ScaffoldMessenger.of(context).showSnackBar(
+                    SnackBar(
+                      duration: Duration(
+                        seconds: 2,
+                      ),
+                      content: Text("休薬期間が始まりました"),
+                    ),
+                  );
                 });
               } else {
                 await store.endResting(
                   pillSheetGroup: pillSheetGroup,
                   activedPillSheet: activedPillSheet,
                   restDuration: restDuration,
+                );
+                ScaffoldMessenger.of(context).showSnackBar(
+                  SnackBar(
+                    duration: Duration(
+                      seconds: 2,
+                    ),
+                    content: Text("休薬期間が終了しました"),
+                  ),
                 );
               }
             },
