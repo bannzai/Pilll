@@ -138,12 +138,18 @@ class CalendarPillSheetModifiedHistoryList extends StatelessWidget {
                       return PillSheetModifiedHistoryEndedPillSheetAction(
                         value: history.value.endedPillSheet,
                       );
-                    case PillSheetModifiedActionType
-                        .beganPillSheetManualRestDuration:
-                      return PillSheetModifiedHistoryBeganManualRestDuration();
-                    case PillSheetModifiedActionType
-                        .endedPillSheetManualRestDuration:
-                      return PillSheetModifiedHistoryEndedManualRestDuration();
+                    case PillSheetModifiedActionType.beganRestDuration:
+                      return PillSheetModifiedHistoryBeganManualRestDuration(
+                        estimatedEventCausingDate:
+                            history.estimatedEventCausingDate,
+                        value: history.value.beganRestDurationValue,
+                      );
+                    case PillSheetModifiedActionType.endedRestDuration:
+                      return PillSheetModifiedHistoryEndedManualRestDuration(
+                        estimatedEventCausingDate:
+                            history.estimatedEventCausingDate,
+                        value: history.value.endedRestDurationValue,
+                      );
                   }
                 };
 
