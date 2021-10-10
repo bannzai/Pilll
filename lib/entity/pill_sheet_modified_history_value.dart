@@ -22,6 +22,8 @@ abstract class PillSheetModifiedHistoryValue
     @Default(null) RevertTakenPillValue? revertTakenPill,
     @Default(null) ChangedPillNumberValue? changedPillNumber,
     @Default(null) EndedPillSheetValue? endedPillSheet,
+    @Default(null) BeganRestDurationValue? beganRestDurationValue,
+    @Default(null) EndedRestDurationValue? endedRestDurationValue,
   }) = _PillSheetModifiedHistoryValue;
 
   factory PillSheetModifiedHistoryValue.fromJson(Map<String, dynamic> json) =>

@@ -41,6 +41,14 @@ _$_PillSheetModifiedHistoryValue _$_$_PillSheetModifiedHistoryValueFromJson(
         ? null
         : EndedPillSheetValue.fromJson(
             json['endedPillSheet'] as Map<String, dynamic>),
+    beganRestDurationValue: json['beganRestDurationValue'] == null
+        ? null
+        : BeganRestDurationValue.fromJson(
+            json['beganRestDurationValue'] as Map<String, dynamic>),
+    endedRestDurationValue: json['endedRestDurationValue'] == null
+        ? null
+        : EndedRestDurationValue.fromJson(
+            json['endedRestDurationValue'] as Map<String, dynamic>),
   );
 }
 
@@ -56,6 +64,8 @@ Map<String, dynamic> _$_$_PillSheetModifiedHistoryValueToJson(
       'revertTakenPill': instance.revertTakenPill?.toJson(),
       'changedPillNumber': instance.changedPillNumber?.toJson(),
       'endedPillSheet': instance.endedPillSheet?.toJson(),
+      'beganRestDurationValue': instance.beganRestDurationValue?.toJson(),
+      'endedRestDurationValue': instance.endedRestDurationValue?.toJson(),
     };
 
 _$_CreatedPillSheetValue _$_$_CreatedPillSheetValueFromJson(
