@@ -101,11 +101,9 @@ class RootState extends State<Root> {
     cacheOrAuth().then((authInfo) {
       final userService = UserService(DatabaseConnection(authInfo.uid));
       return userService.prepare(authInfo.uid).then((_) async {
-        Future(() {
-          userService.recordUserIDs();
-          userService.saveLaunchInfo();
-        });
-        await userService.saveStats();
+        userService.recordUserIDs();
+        userService.saveLaunchInfo();
+        userService.saveStats();
 
         final user = await userService.fetch();
         await userService.temporarySyncronizeDiscountEntitlement(user);
