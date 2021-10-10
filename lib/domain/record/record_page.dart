@@ -1,5 +1,4 @@
 import 'package:pilll/components/molecules/indicator.dart';
-import 'package:pilll/components/organisms/pill_sheet/pill_sheet_view_layout.dart';
 import 'package:pilll/domain/initial_setting/migrate_info.dart';
 import 'package:pilll/domain/premium_trial/premium_trial_complete_modal.dart';
 import 'package:pilll/domain/record/components/adding/record_page_adding_pill_sheet.dart';
@@ -47,21 +46,6 @@ class RecordPage extends HookWidget {
       return Indicator();
     }
 
-    final pageController = usePageController(
-        initialPage: state.initialPageIndex,
-        viewportFraction: (PillSheetViewLayout.width + 20) /
-            MediaQuery.of(context).size.width);
-    pageController.addListener(() {
-      final page = pageController.page;
-      if (page == null) {
-        return;
-      }
-      if (state.currentPillSheetPageIndex == page.round()) {
-        return;
-      }
-      store.setCurrentPillSheetPageIndex(page.round());
-    });
-
     return UniversalErrorPage(
       error: state.exception,
       reload: () => store.reset(),
@@ -87,8 +71,7 @@ class RecordPage extends HookWidget {
                   children: [
                     NotificationBar(state),
                     SizedBox(height: 37),
-                    _content(
-                        context, settingEntity, state, store, pageController),
+                    _content(context, settingEntity, state, store),
                   ],
                 ),
               ),
@@ -107,11 +90,11 @@ class RecordPage extends HookWidget {
   }
 
   Widget _content(
-      BuildContext context,
-      Setting settingEntity,
-      RecordPageState state,
-      RecordPageStore store,
-      PageController pageController) {
+    BuildContext context,
+    Setting settingEntity,
+    RecordPageState state,
+    RecordPageStore store,
+  ) {
     final pillSheetGroup = state.pillSheetGroup;
     final activedPillSheet = pillSheetGroup?.activedPillSheet;
     if (activedPillSheet == null ||
@@ -122,25 +105,23 @@ class RecordPage extends HookWidget {
         store: store,
         setting: settingEntity,
       );
-    else {
+    else
       return Column(
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
           RecordPagePillOption(
             store: store,
             pillSheetGroup: pillSheetGroup,
-            focusedPillSheet: state.focusedPillSheet,
+            activedPillSheet: activedPillSheet,
           ),
           SizedBox(height: 16),
           RecordPagePillSheetList(
             state: state,
             store: store,
             setting: settingEntity,
-            pageController: pageController,
           ),
         ],
       );
-    }
   }
 
   Future<void> _showMigrateInfoDialog(
