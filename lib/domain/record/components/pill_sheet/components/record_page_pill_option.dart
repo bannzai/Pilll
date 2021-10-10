@@ -9,18 +9,23 @@ import 'package:pilll/entity/pill_sheet_group.dart';
 class RecordPagePillOption extends StatelessWidget {
   final RecordPageStore store;
   final PillSheetGroup pillSheetGroup;
-  final PillSheet activedPillSheet;
+  final PillSheet? focusedPillSheet;
 
   const RecordPagePillOption({
     Key? key,
     required this.store,
     required this.pillSheetGroup,
-    required this.activedPillSheet,
+    required this.focusedPillSheet,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    final RestDuration? restDuration = activedPillSheet.activeRestDuration;
+    final focusedPillSheet = this.focusedPillSheet;
+    final RestDuration? restDuration = focusedPillSheet?.activeRestDuration;
+
+    if (focusedPillSheet == null) {
+      return Container();
+    }
 
     return Container(
       width: PillSheetViewLayout.width,
@@ -37,7 +42,7 @@ class RecordPagePillOption extends StatelessWidget {
                   Navigator.of(context).pop();
                   await store.beginResting(
                     pillSheetGroup: pillSheetGroup,
-                    activedPillSheet: activedPillSheet,
+                    focusedPillSheet: focusedPillSheet,
                   );
                   ScaffoldMessenger.of(context).showSnackBar(
                     SnackBar(
@@ -51,7 +56,7 @@ class RecordPagePillOption extends StatelessWidget {
               } else {
                 await store.endResting(
                   pillSheetGroup: pillSheetGroup,
-                  activedPillSheet: activedPillSheet,
+                  focusedPillSheet: focusedPillSheet,
                   restDuration: restDuration,
                 );
                 ScaffoldMessenger.of(context).showSnackBar(
