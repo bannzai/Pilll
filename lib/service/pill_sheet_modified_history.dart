@@ -253,7 +253,7 @@ extension PillSheetModifiedHistoryServiceActionFactory
     assert(pillSheetGroupID != null);
 
     return _create(
-      actionType: PillSheetModifiedActionType.deletedPillSheet,
+      actionType: PillSheetModifiedActionType.beganRestDuration,
       value: PillSheetModifiedHistoryValue(
         beganRestDurationValue: BeganRestDurationValue(
           restDuration: restDuration,
@@ -276,7 +276,7 @@ extension PillSheetModifiedHistoryServiceActionFactory
     assert(pillSheetGroupID != null);
 
     return _create(
-      actionType: PillSheetModifiedActionType.deletedPillSheet,
+      actionType: PillSheetModifiedActionType.endedPillSheet,
       value: PillSheetModifiedHistoryValue(
         endedRestDurationValue: EndedRestDurationValue(
           restDuration: restDuration,
