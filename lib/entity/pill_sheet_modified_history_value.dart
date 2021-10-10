@@ -1,6 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:pilll/entity/firestore_timestamp_converter.dart';
+import 'package:pilll/entity/pill_sheet.dart';
 
 part 'pill_sheet_modified_history_value.g.dart';
 part 'pill_sheet_modified_history_value.freezed.dart';
@@ -197,4 +198,38 @@ abstract class EndedPillSheetValue implements _$EndedPillSheetValue {
       _$EndedPillSheetValueFromJson(json);
   Map<String, dynamic> toJson() =>
       _$_$_EndedPillSheetValueToJson(this as _$_EndedPillSheetValue);
+}
+
+@freezed
+abstract class BeganPillSheetManualRestDurationValue
+    implements _$BeganPillSheetManualRestDurationValue {
+  BeganPillSheetManualRestDurationValue._();
+  @JsonSerializable(explicitToJson: true)
+  factory BeganPillSheetManualRestDurationValue({
+    required RestDuration restDuration,
+  }) = _BeganPillSheetManualRestDurationValue;
+
+  factory BeganPillSheetManualRestDurationValue.fromJson(
+          Map<String, dynamic> json) =>
+      _$BeganPillSheetManualRestDurationValueFromJson(json);
+  Map<String, dynamic> toJson() =>
+      _$_$_BeganPillSheetManualRestDurationValueToJson(
+          this as _$_BeganPillSheetManualRestDurationValue);
+}
+
+@freezed
+abstract class EndedPillSheetManualRestDurationValue
+    implements _$EndedPillSheetManualRestDurationValue {
+  EndedPillSheetManualRestDurationValue._();
+  @JsonSerializable(explicitToJson: true)
+  factory EndedPillSheetManualRestDurationValue({
+    required RestDuration restDuration,
+  }) = _EndedPillSheetManualRestDurationValue;
+
+  factory EndedPillSheetManualRestDurationValue.fromJson(
+          Map<String, dynamic> json) =>
+      _$EndedPillSheetManualRestDurationValueFromJson(json);
+  Map<String, dynamic> toJson() =>
+      _$_$_EndedPillSheetManualRestDurationValueToJson(
+          this as _$_EndedPillSheetManualRestDurationValue);
 }
