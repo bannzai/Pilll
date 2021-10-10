@@ -2234,61 +2234,57 @@ abstract class _EndedPillSheetValue extends EndedPillSheetValue {
       throw _privateConstructorUsedError;
 }
 
-BeganPillSheetManualRestDurationValue
-    _$BeganPillSheetManualRestDurationValueFromJson(Map<String, dynamic> json) {
-  return _BeganPillSheetManualRestDurationValue.fromJson(json);
+BeganRestDurationValue _$BeganRestDurationValueFromJson(
+    Map<String, dynamic> json) {
+  return _BeganRestDurationValue.fromJson(json);
 }
 
 /// @nodoc
-class _$BeganPillSheetManualRestDurationValueTearOff {
-  const _$BeganPillSheetManualRestDurationValueTearOff();
+class _$BeganRestDurationValueTearOff {
+  const _$BeganRestDurationValueTearOff();
 
-  _BeganPillSheetManualRestDurationValue call(
-      {required RestDuration restDuration}) {
-    return _BeganPillSheetManualRestDurationValue(
+  _BeganRestDurationValue call({required RestDuration restDuration}) {
+    return _BeganRestDurationValue(
       restDuration: restDuration,
     );
   }
 
-  BeganPillSheetManualRestDurationValue fromJson(Map<String, Object> json) {
-    return BeganPillSheetManualRestDurationValue.fromJson(json);
+  BeganRestDurationValue fromJson(Map<String, Object> json) {
+    return BeganRestDurationValue.fromJson(json);
   }
 }
 
 /// @nodoc
-const $BeganPillSheetManualRestDurationValue =
-    _$BeganPillSheetManualRestDurationValueTearOff();
+const $BeganRestDurationValue = _$BeganRestDurationValueTearOff();
 
 /// @nodoc
-mixin _$BeganPillSheetManualRestDurationValue {
+mixin _$BeganRestDurationValue {
   RestDuration get restDuration => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $BeganPillSheetManualRestDurationValueCopyWith<
-          BeganPillSheetManualRestDurationValue>
-      get copyWith => throw _privateConstructorUsedError;
+  $BeganRestDurationValueCopyWith<BeganRestDurationValue> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $BeganPillSheetManualRestDurationValueCopyWith<$Res> {
-  factory $BeganPillSheetManualRestDurationValueCopyWith(
-          BeganPillSheetManualRestDurationValue value,
-          $Res Function(BeganPillSheetManualRestDurationValue) then) =
-      _$BeganPillSheetManualRestDurationValueCopyWithImpl<$Res>;
+abstract class $BeganRestDurationValueCopyWith<$Res> {
+  factory $BeganRestDurationValueCopyWith(BeganRestDurationValue value,
+          $Res Function(BeganRestDurationValue) then) =
+      _$BeganRestDurationValueCopyWithImpl<$Res>;
   $Res call({RestDuration restDuration});
 
   $RestDurationCopyWith<$Res> get restDuration;
 }
 
 /// @nodoc
-class _$BeganPillSheetManualRestDurationValueCopyWithImpl<$Res>
-    implements $BeganPillSheetManualRestDurationValueCopyWith<$Res> {
-  _$BeganPillSheetManualRestDurationValueCopyWithImpl(this._value, this._then);
+class _$BeganRestDurationValueCopyWithImpl<$Res>
+    implements $BeganRestDurationValueCopyWith<$Res> {
+  _$BeganRestDurationValueCopyWithImpl(this._value, this._then);
 
-  final BeganPillSheetManualRestDurationValue _value;
+  final BeganRestDurationValue _value;
   // ignore: unused_field
-  final $Res Function(BeganPillSheetManualRestDurationValue) _then;
+  final $Res Function(BeganRestDurationValue) _then;
 
   @override
   $Res call({
@@ -2311,12 +2307,11 @@ class _$BeganPillSheetManualRestDurationValueCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$BeganPillSheetManualRestDurationValueCopyWith<$Res>
-    implements $BeganPillSheetManualRestDurationValueCopyWith<$Res> {
-  factory _$BeganPillSheetManualRestDurationValueCopyWith(
-          _BeganPillSheetManualRestDurationValue value,
-          $Res Function(_BeganPillSheetManualRestDurationValue) then) =
-      __$BeganPillSheetManualRestDurationValueCopyWithImpl<$Res>;
+abstract class _$BeganRestDurationValueCopyWith<$Res>
+    implements $BeganRestDurationValueCopyWith<$Res> {
+  factory _$BeganRestDurationValueCopyWith(_BeganRestDurationValue value,
+          $Res Function(_BeganRestDurationValue) then) =
+      __$BeganRestDurationValueCopyWithImpl<$Res>;
   @override
   $Res call({RestDuration restDuration});
 
@@ -2325,24 +2320,21 @@ abstract class _$BeganPillSheetManualRestDurationValueCopyWith<$Res>
 }
 
 /// @nodoc
-class __$BeganPillSheetManualRestDurationValueCopyWithImpl<$Res>
-    extends _$BeganPillSheetManualRestDurationValueCopyWithImpl<$Res>
-    implements _$BeganPillSheetManualRestDurationValueCopyWith<$Res> {
-  __$BeganPillSheetManualRestDurationValueCopyWithImpl(
-      _BeganPillSheetManualRestDurationValue _value,
-      $Res Function(_BeganPillSheetManualRestDurationValue) _then)
-      : super(
-            _value, (v) => _then(v as _BeganPillSheetManualRestDurationValue));
+class __$BeganRestDurationValueCopyWithImpl<$Res>
+    extends _$BeganRestDurationValueCopyWithImpl<$Res>
+    implements _$BeganRestDurationValueCopyWith<$Res> {
+  __$BeganRestDurationValueCopyWithImpl(_BeganRestDurationValue _value,
+      $Res Function(_BeganRestDurationValue) _then)
+      : super(_value, (v) => _then(v as _BeganRestDurationValue));
 
   @override
-  _BeganPillSheetManualRestDurationValue get _value =>
-      super._value as _BeganPillSheetManualRestDurationValue;
+  _BeganRestDurationValue get _value => super._value as _BeganRestDurationValue;
 
   @override
   $Res call({
     Object? restDuration = freezed,
   }) {
-    return _then(_BeganPillSheetManualRestDurationValue(
+    return _then(_BeganRestDurationValue(
       restDuration: restDuration == freezed
           ? _value.restDuration
           : restDuration // ignore: cast_nullable_to_non_nullable
@@ -2354,27 +2346,24 @@ class __$BeganPillSheetManualRestDurationValueCopyWithImpl<$Res>
 /// @nodoc
 
 @JsonSerializable(explicitToJson: true)
-class _$_BeganPillSheetManualRestDurationValue
-    extends _BeganPillSheetManualRestDurationValue {
-  _$_BeganPillSheetManualRestDurationValue({required this.restDuration})
-      : super._();
+class _$_BeganRestDurationValue extends _BeganRestDurationValue {
+  _$_BeganRestDurationValue({required this.restDuration}) : super._();
 
-  factory _$_BeganPillSheetManualRestDurationValue.fromJson(
-          Map<String, dynamic> json) =>
-      _$_$_BeganPillSheetManualRestDurationValueFromJson(json);
+  factory _$_BeganRestDurationValue.fromJson(Map<String, dynamic> json) =>
+      _$_$_BeganRestDurationValueFromJson(json);
 
   @override
   final RestDuration restDuration;
 
   @override
   String toString() {
-    return 'BeganPillSheetManualRestDurationValue(restDuration: $restDuration)';
+    return 'BeganRestDurationValue(restDuration: $restDuration)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _BeganPillSheetManualRestDurationValue &&
+        (other is _BeganRestDurationValue &&
             (identical(other.restDuration, restDuration) ||
                 const DeepCollectionEquality()
                     .equals(other.restDuration, restDuration)));
@@ -2386,92 +2375,83 @@ class _$_BeganPillSheetManualRestDurationValue
 
   @JsonKey(ignore: true)
   @override
-  _$BeganPillSheetManualRestDurationValueCopyWith<
-          _BeganPillSheetManualRestDurationValue>
-      get copyWith => __$BeganPillSheetManualRestDurationValueCopyWithImpl<
-          _BeganPillSheetManualRestDurationValue>(this, _$identity);
+  _$BeganRestDurationValueCopyWith<_BeganRestDurationValue> get copyWith =>
+      __$BeganRestDurationValueCopyWithImpl<_BeganRestDurationValue>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_BeganPillSheetManualRestDurationValueToJson(this);
+    return _$_$_BeganRestDurationValueToJson(this);
   }
 }
 
-abstract class _BeganPillSheetManualRestDurationValue
-    extends BeganPillSheetManualRestDurationValue {
-  factory _BeganPillSheetManualRestDurationValue(
-          {required RestDuration restDuration}) =
-      _$_BeganPillSheetManualRestDurationValue;
-  _BeganPillSheetManualRestDurationValue._() : super._();
+abstract class _BeganRestDurationValue extends BeganRestDurationValue {
+  factory _BeganRestDurationValue({required RestDuration restDuration}) =
+      _$_BeganRestDurationValue;
+  _BeganRestDurationValue._() : super._();
 
-  factory _BeganPillSheetManualRestDurationValue.fromJson(
-          Map<String, dynamic> json) =
-      _$_BeganPillSheetManualRestDurationValue.fromJson;
+  factory _BeganRestDurationValue.fromJson(Map<String, dynamic> json) =
+      _$_BeganRestDurationValue.fromJson;
 
   @override
   RestDuration get restDuration => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$BeganPillSheetManualRestDurationValueCopyWith<
-          _BeganPillSheetManualRestDurationValue>
-      get copyWith => throw _privateConstructorUsedError;
+  _$BeganRestDurationValueCopyWith<_BeganRestDurationValue> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
-EndedPillSheetManualRestDurationValue
-    _$EndedPillSheetManualRestDurationValueFromJson(Map<String, dynamic> json) {
-  return _EndedPillSheetManualRestDurationValue.fromJson(json);
+EndedRestDurationValue _$EndedRestDurationValueFromJson(
+    Map<String, dynamic> json) {
+  return _EndedRestDurationValue.fromJson(json);
 }
 
 /// @nodoc
-class _$EndedPillSheetManualRestDurationValueTearOff {
-  const _$EndedPillSheetManualRestDurationValueTearOff();
+class _$EndedRestDurationValueTearOff {
+  const _$EndedRestDurationValueTearOff();
 
-  _EndedPillSheetManualRestDurationValue call(
-      {required RestDuration restDuration}) {
-    return _EndedPillSheetManualRestDurationValue(
+  _EndedRestDurationValue call({required RestDuration restDuration}) {
+    return _EndedRestDurationValue(
       restDuration: restDuration,
     );
   }
 
-  EndedPillSheetManualRestDurationValue fromJson(Map<String, Object> json) {
-    return EndedPillSheetManualRestDurationValue.fromJson(json);
+  EndedRestDurationValue fromJson(Map<String, Object> json) {
+    return EndedRestDurationValue.fromJson(json);
   }
 }
 
 /// @nodoc
-const $EndedPillSheetManualRestDurationValue =
-    _$EndedPillSheetManualRestDurationValueTearOff();
+const $EndedRestDurationValue = _$EndedRestDurationValueTearOff();
 
 /// @nodoc
-mixin _$EndedPillSheetManualRestDurationValue {
+mixin _$EndedRestDurationValue {
   RestDuration get restDuration => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
-  $EndedPillSheetManualRestDurationValueCopyWith<
-          EndedPillSheetManualRestDurationValue>
-      get copyWith => throw _privateConstructorUsedError;
+  $EndedRestDurationValueCopyWith<EndedRestDurationValue> get copyWith =>
+      throw _privateConstructorUsedError;
 }
 
 /// @nodoc
-abstract class $EndedPillSheetManualRestDurationValueCopyWith<$Res> {
-  factory $EndedPillSheetManualRestDurationValueCopyWith(
-          EndedPillSheetManualRestDurationValue value,
-          $Res Function(EndedPillSheetManualRestDurationValue) then) =
-      _$EndedPillSheetManualRestDurationValueCopyWithImpl<$Res>;
+abstract class $EndedRestDurationValueCopyWith<$Res> {
+  factory $EndedRestDurationValueCopyWith(EndedRestDurationValue value,
+          $Res Function(EndedRestDurationValue) then) =
+      _$EndedRestDurationValueCopyWithImpl<$Res>;
   $Res call({RestDuration restDuration});
 
   $RestDurationCopyWith<$Res> get restDuration;
 }
 
 /// @nodoc
-class _$EndedPillSheetManualRestDurationValueCopyWithImpl<$Res>
-    implements $EndedPillSheetManualRestDurationValueCopyWith<$Res> {
-  _$EndedPillSheetManualRestDurationValueCopyWithImpl(this._value, this._then);
+class _$EndedRestDurationValueCopyWithImpl<$Res>
+    implements $EndedRestDurationValueCopyWith<$Res> {
+  _$EndedRestDurationValueCopyWithImpl(this._value, this._then);
 
-  final EndedPillSheetManualRestDurationValue _value;
+  final EndedRestDurationValue _value;
   // ignore: unused_field
-  final $Res Function(EndedPillSheetManualRestDurationValue) _then;
+  final $Res Function(EndedRestDurationValue) _then;
 
   @override
   $Res call({
@@ -2494,12 +2474,11 @@ class _$EndedPillSheetManualRestDurationValueCopyWithImpl<$Res>
 }
 
 /// @nodoc
-abstract class _$EndedPillSheetManualRestDurationValueCopyWith<$Res>
-    implements $EndedPillSheetManualRestDurationValueCopyWith<$Res> {
-  factory _$EndedPillSheetManualRestDurationValueCopyWith(
-          _EndedPillSheetManualRestDurationValue value,
-          $Res Function(_EndedPillSheetManualRestDurationValue) then) =
-      __$EndedPillSheetManualRestDurationValueCopyWithImpl<$Res>;
+abstract class _$EndedRestDurationValueCopyWith<$Res>
+    implements $EndedRestDurationValueCopyWith<$Res> {
+  factory _$EndedRestDurationValueCopyWith(_EndedRestDurationValue value,
+          $Res Function(_EndedRestDurationValue) then) =
+      __$EndedRestDurationValueCopyWithImpl<$Res>;
   @override
   $Res call({RestDuration restDuration});
 
@@ -2508,24 +2487,21 @@ abstract class _$EndedPillSheetManualRestDurationValueCopyWith<$Res>
 }
 
 /// @nodoc
-class __$EndedPillSheetManualRestDurationValueCopyWithImpl<$Res>
-    extends _$EndedPillSheetManualRestDurationValueCopyWithImpl<$Res>
-    implements _$EndedPillSheetManualRestDurationValueCopyWith<$Res> {
-  __$EndedPillSheetManualRestDurationValueCopyWithImpl(
-      _EndedPillSheetManualRestDurationValue _value,
-      $Res Function(_EndedPillSheetManualRestDurationValue) _then)
-      : super(
-            _value, (v) => _then(v as _EndedPillSheetManualRestDurationValue));
+class __$EndedRestDurationValueCopyWithImpl<$Res>
+    extends _$EndedRestDurationValueCopyWithImpl<$Res>
+    implements _$EndedRestDurationValueCopyWith<$Res> {
+  __$EndedRestDurationValueCopyWithImpl(_EndedRestDurationValue _value,
+      $Res Function(_EndedRestDurationValue) _then)
+      : super(_value, (v) => _then(v as _EndedRestDurationValue));
 
   @override
-  _EndedPillSheetManualRestDurationValue get _value =>
-      super._value as _EndedPillSheetManualRestDurationValue;
+  _EndedRestDurationValue get _value => super._value as _EndedRestDurationValue;
 
   @override
   $Res call({
     Object? restDuration = freezed,
   }) {
-    return _then(_EndedPillSheetManualRestDurationValue(
+    return _then(_EndedRestDurationValue(
       restDuration: restDuration == freezed
           ? _value.restDuration
           : restDuration // ignore: cast_nullable_to_non_nullable
@@ -2537,27 +2513,24 @@ class __$EndedPillSheetManualRestDurationValueCopyWithImpl<$Res>
 /// @nodoc
 
 @JsonSerializable(explicitToJson: true)
-class _$_EndedPillSheetManualRestDurationValue
-    extends _EndedPillSheetManualRestDurationValue {
-  _$_EndedPillSheetManualRestDurationValue({required this.restDuration})
-      : super._();
+class _$_EndedRestDurationValue extends _EndedRestDurationValue {
+  _$_EndedRestDurationValue({required this.restDuration}) : super._();
 
-  factory _$_EndedPillSheetManualRestDurationValue.fromJson(
-          Map<String, dynamic> json) =>
-      _$_$_EndedPillSheetManualRestDurationValueFromJson(json);
+  factory _$_EndedRestDurationValue.fromJson(Map<String, dynamic> json) =>
+      _$_$_EndedRestDurationValueFromJson(json);
 
   @override
   final RestDuration restDuration;
 
   @override
   String toString() {
-    return 'EndedPillSheetManualRestDurationValue(restDuration: $restDuration)';
+    return 'EndedRestDurationValue(restDuration: $restDuration)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _EndedPillSheetManualRestDurationValue &&
+        (other is _EndedRestDurationValue &&
             (identical(other.restDuration, restDuration) ||
                 const DeepCollectionEquality()
                     .equals(other.restDuration, restDuration)));
@@ -2569,33 +2542,28 @@ class _$_EndedPillSheetManualRestDurationValue
 
   @JsonKey(ignore: true)
   @override
-  _$EndedPillSheetManualRestDurationValueCopyWith<
-          _EndedPillSheetManualRestDurationValue>
-      get copyWith => __$EndedPillSheetManualRestDurationValueCopyWithImpl<
-          _EndedPillSheetManualRestDurationValue>(this, _$identity);
+  _$EndedRestDurationValueCopyWith<_EndedRestDurationValue> get copyWith =>
+      __$EndedRestDurationValueCopyWithImpl<_EndedRestDurationValue>(
+          this, _$identity);
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_EndedPillSheetManualRestDurationValueToJson(this);
+    return _$_$_EndedRestDurationValueToJson(this);
   }
 }
 
-abstract class _EndedPillSheetManualRestDurationValue
-    extends EndedPillSheetManualRestDurationValue {
-  factory _EndedPillSheetManualRestDurationValue(
-          {required RestDuration restDuration}) =
-      _$_EndedPillSheetManualRestDurationValue;
-  _EndedPillSheetManualRestDurationValue._() : super._();
+abstract class _EndedRestDurationValue extends EndedRestDurationValue {
+  factory _EndedRestDurationValue({required RestDuration restDuration}) =
+      _$_EndedRestDurationValue;
+  _EndedRestDurationValue._() : super._();
 
-  factory _EndedPillSheetManualRestDurationValue.fromJson(
-          Map<String, dynamic> json) =
-      _$_EndedPillSheetManualRestDurationValue.fromJson;
+  factory _EndedRestDurationValue.fromJson(Map<String, dynamic> json) =
+      _$_EndedRestDurationValue.fromJson;
 
   @override
   RestDuration get restDuration => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
-  _$EndedPillSheetManualRestDurationValueCopyWith<
-          _EndedPillSheetManualRestDurationValue>
-      get copyWith => throw _privateConstructorUsedError;
+  _$EndedRestDurationValueCopyWith<_EndedRestDurationValue> get copyWith =>
+      throw _privateConstructorUsedError;
 }
