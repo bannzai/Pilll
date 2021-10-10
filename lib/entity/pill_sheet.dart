@@ -125,7 +125,8 @@ abstract class PillSheet implements _$PillSheet {
       beginingDate.date().toUtc().millisecondsSinceEpoch <
       now().toUtc().millisecondsSinceEpoch;
   bool get inNotTakenDuration => todayPillNumber > typeInfo.dosingPeriod;
-  bool get pillSheetHasRestDuration => !pillSheetType.isNotExistsNotTakenDuration;
+  bool get pillSheetHasRestDuration =>
+      !pillSheetType.isNotExistsNotTakenDuration;
   bool get isActive {
     final n = now();
     final begin = beginingDate.date();
@@ -139,4 +140,17 @@ abstract class PillSheet implements _$PillSheet {
       .date()
       .add(Duration(days: 1))
       .subtract(Duration(seconds: 1));
+
+  RestDuration? get activeRestDuration {
+    if (restDurations.isEmpty) {
+      return null;
+    } else {
+      if (restDurations.last.endDate == null &&
+          restDurations.last.beginDate.isBefore(now())) {
+        return restDurations.last;
+      } else {
+        return null;
+      }
+    }
+  }
 }
