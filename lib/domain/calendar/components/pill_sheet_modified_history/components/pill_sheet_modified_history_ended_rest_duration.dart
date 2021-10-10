@@ -4,14 +4,14 @@ import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/domain/calendar/components/pill_sheet_modified_history/components/pill_sheet_modified_history_date_component.dart';
 import 'package:pilll/entity/pill_sheet_modified_history_value.dart';
 
-class PillSheetModifiedHistoryBeganManualRestDuration extends StatelessWidget {
+class PillSheetModifiedHistoryEndedRestDuration extends StatelessWidget {
   final DateTime estimatedEventCausingDate;
-  final BeganRestDurationValue? value;
+  final EndedRestDurationValue? value;
 
-  const PillSheetModifiedHistoryBeganManualRestDuration({
+  const PillSheetModifiedHistoryEndedRestDuration({
     Key? key,
-    required this.value,
     required this.estimatedEventCausingDate,
+    required this.value,
   }) : super(key: key);
 
   @override
@@ -36,7 +36,7 @@ class PillSheetModifiedHistoryBeganManualRestDuration extends StatelessWidget {
                 children: [
                   Container(
                     child: Text(
-                      "休薬開始",
+                      "休薬終了",
                       style: TextStyle(
                         color: TextColor.main,
                         fontSize: 12,
