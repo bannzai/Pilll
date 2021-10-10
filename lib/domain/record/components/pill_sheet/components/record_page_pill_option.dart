@@ -26,8 +26,7 @@ class RecordPagePillOption extends StatelessWidget {
 
     if (focusedPillSheet == null ||
         focusedPillSheet.pillSheetType.isNotExistsNotTakenDuration) {
-      // extract from dev tool
-      return Container(height: 48);
+      return Container();
     }
 
     return Container(
