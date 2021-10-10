@@ -23,6 +23,7 @@ abstract class RecordPageState implements _$RecordPageState {
     DateTime? discountEntitlementDeadlineDate,
     @Default(true) bool recommendedSignupNotificationIsAlreadyShow,
     @Default(true) bool premiumTrialGuideNotificationIsClosed,
+    @Default(0) int currentPillSheetPageIndex,
     Object? exception,
   }) = _RecordPageState;
 
