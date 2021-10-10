@@ -33,9 +33,6 @@ class RecordPagePillOption extends StatelessWidget {
       }
     }
 
-    final isResting = restDuration != null &&
-        restDuration.endDate == null &&
-        restDuration.beginDate.isBefore(today());
     return Container(
       width: PillSheetViewLayout.width,
       child: Row(children: [
@@ -43,7 +40,7 @@ class RecordPagePillOption extends StatelessWidget {
         SizedBox(
           width: 80,
           child: PrimaryOutlinedButton(
-            text: isResting ? "休薬する" : "休薬終了",
+            text: restDuration == null ? "休薬する" : "休薬終了",
             fontSize: 12,
             onPressed: () async {
               if (restDuration == null) {
