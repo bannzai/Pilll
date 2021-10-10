@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:pilll/domain/calendar/components/pill_sheet_modified_history/components/pill_sheet_modified_history_automatically_recorded_last_taken_date_action.dart';
+import 'package:pilll/domain/calendar/components/pill_sheet_modified_history/components/pill_sheet_modified_history_began_manual_rest_duration.dart';
 import 'package:pilll/domain/calendar/components/pill_sheet_modified_history/components/pill_sheet_modified_history_changed_pill_number_action.dart';
 import 'package:pilll/domain/calendar/components/pill_sheet_modified_history/components/pill_sheet_modified_history_created_pill_sheet_action.dart';
 import 'package:pilll/domain/calendar/components/pill_sheet_modified_history/components/pill_sheet_modified_history_deleted_pill_sheet_action.dart';
+import 'package:pilll/domain/calendar/components/pill_sheet_modified_history/components/pill_sheet_modified_history_ended_manual_rest_duration.dart';
 import 'package:pilll/domain/calendar/components/pill_sheet_modified_history/components/pill_sheet_modified_history_ended_pill_sheet_action.dart';
 import 'package:pilll/domain/calendar/components/pill_sheet_modified_history/components/pill_sheet_modified_history_monthly_header.dart';
 import 'package:pilll/domain/calendar/components/pill_sheet_modified_history/components/pill_sheet_modified_history_revert_taken_pill_action.dart';
@@ -136,6 +138,12 @@ class CalendarPillSheetModifiedHistoryList extends StatelessWidget {
                       return PillSheetModifiedHistoryEndedPillSheetAction(
                         value: history.value.endedPillSheet,
                       );
+                    case PillSheetModifiedActionType
+                        .beganPillSheetManualRestDuration:
+                      return PillSheetModifiedHistoryBeganManualRestDuration();
+                    case PillSheetModifiedActionType
+                        .endedPillSheetManualRestDuration:
+                      return PillSheetModifiedHistoryEndedManualRestDuration();
                   }
                 };
 
