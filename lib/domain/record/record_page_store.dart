@@ -407,7 +407,14 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
     required PillSheet activedPillSheet,
   }) async {
     final updatedPillSheet = activedPillSheet.copyWith(
-        restDuration: RestDuration(beginDate: now(), createdDate: now()));
+      restDurations: activedPillSheet.restDurations
+        ..add(
+          RestDuration(
+            beginDate: now(),
+            createdDate: now(),
+          ),
+        ),
+    );
     final updatedPillSheetGroup = pillSheetGroup.replaced(updatedPillSheet);
 
     final batch = _batchFactory.batch();
@@ -421,8 +428,15 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
     required PillSheet activedPillSheet,
     required RestDuration restDuration,
   }) async {
+    final updatedRestDuration = restDuration.copyWith(endDate: now());
     final updatedPillSheet = activedPillSheet.copyWith(
-        restDuration: restDuration.copyWith(endDate: now()));
+      restDurations: activedPillSheet.restDurations
+        ..replaceRange(
+          activedPillSheet.restDurations.length - 1,
+          activedPillSheet.restDurations.length,
+          [updatedRestDuration],
+        ),
+    );
     final updatedPillSheetGroup = pillSheetGroup.replaced(updatedPillSheet);
 
     final batch = _batchFactory.batch();
