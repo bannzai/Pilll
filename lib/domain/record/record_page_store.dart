@@ -404,14 +404,14 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
 
   Future<void> beginResting({
     required PillSheetGroup pillSheetGroup,
-    required PillSheet activedPillSheet,
+    required PillSheet focusedPillSheet,
   }) async {
     final restDuration = RestDuration(
       beginDate: now(),
       createdDate: now(),
     );
-    final updatedPillSheet = activedPillSheet.copyWith(
-      restDurations: activedPillSheet.restDurations..add(restDuration),
+    final updatedPillSheet = focusedPillSheet.copyWith(
+      restDurations: focusedPillSheet.restDurations..add(restDuration),
     );
     final updatedPillSheetGroup = pillSheetGroup.replaced(updatedPillSheet);
 
@@ -423,7 +423,7 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
       PillSheetModifiedHistoryServiceActionFactory
           .createBeganRestDurationAction(
         pillSheetGroupID: pillSheetGroup.id,
-        before: activedPillSheet,
+        before: focusedPillSheet,
         after: updatedPillSheet,
         restDuration: restDuration,
       ),
@@ -434,15 +434,15 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
 
   Future<void> endResting({
     required PillSheetGroup pillSheetGroup,
-    required PillSheet activedPillSheet,
+    required PillSheet focusedPillSheet,
     required RestDuration restDuration,
   }) async {
     final updatedRestDuration = restDuration.copyWith(endDate: now());
-    final updatedPillSheet = activedPillSheet.copyWith(
-      restDurations: activedPillSheet.restDurations
+    final updatedPillSheet = focusedPillSheet.copyWith(
+      restDurations: focusedPillSheet.restDurations
         ..replaceRange(
-          activedPillSheet.restDurations.length - 1,
-          activedPillSheet.restDurations.length,
+          focusedPillSheet.restDurations.length - 1,
+          focusedPillSheet.restDurations.length,
           [updatedRestDuration],
         ),
     );
@@ -456,11 +456,15 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
       PillSheetModifiedHistoryServiceActionFactory
           .createEndedRestDurationAction(
         pillSheetGroupID: pillSheetGroup.id,
-        before: activedPillSheet,
+        before: focusedPillSheet,
         after: updatedPillSheet,
         restDuration: updatedRestDuration,
       ),
     );
     await batch.commit();
+  }
+
+  setCurrentPillSheetPageIndex(int index) {
+    state = state.copyWith(currentPillSheetPageIndex: index);
   }
 }
