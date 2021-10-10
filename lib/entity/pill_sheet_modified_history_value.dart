@@ -201,35 +201,29 @@ abstract class EndedPillSheetValue implements _$EndedPillSheetValue {
 }
 
 @freezed
-abstract class BeganPillSheetManualRestDurationValue
-    implements _$BeganPillSheetManualRestDurationValue {
-  BeganPillSheetManualRestDurationValue._();
+abstract class BeganRestDurationValue implements _$BeganRestDurationValue {
+  BeganRestDurationValue._();
   @JsonSerializable(explicitToJson: true)
-  factory BeganPillSheetManualRestDurationValue({
+  factory BeganRestDurationValue({
     required RestDuration restDuration,
-  }) = _BeganPillSheetManualRestDurationValue;
+  }) = _BeganRestDurationValue;
 
-  factory BeganPillSheetManualRestDurationValue.fromJson(
-          Map<String, dynamic> json) =>
-      _$BeganPillSheetManualRestDurationValueFromJson(json);
+  factory BeganRestDurationValue.fromJson(Map<String, dynamic> json) =>
+      _$BeganRestDurationValueFromJson(json);
   Map<String, dynamic> toJson() =>
-      _$_$_BeganPillSheetManualRestDurationValueToJson(
-          this as _$_BeganPillSheetManualRestDurationValue);
+      _$_$_BeganRestDurationValueToJson(this as _$_BeganRestDurationValue);
 }
 
 @freezed
-abstract class EndedPillSheetManualRestDurationValue
-    implements _$EndedPillSheetManualRestDurationValue {
-  EndedPillSheetManualRestDurationValue._();
+abstract class EndedRestDurationValue implements _$EndedRestDurationValue {
+  EndedRestDurationValue._();
   @JsonSerializable(explicitToJson: true)
-  factory EndedPillSheetManualRestDurationValue({
+  factory EndedRestDurationValue({
     required RestDuration restDuration,
-  }) = _EndedPillSheetManualRestDurationValue;
+  }) = _EndedRestDurationValue;
 
-  factory EndedPillSheetManualRestDurationValue.fromJson(
-          Map<String, dynamic> json) =>
-      _$EndedPillSheetManualRestDurationValueFromJson(json);
+  factory EndedRestDurationValue.fromJson(Map<String, dynamic> json) =>
+      _$EndedRestDurationValueFromJson(json);
   Map<String, dynamic> toJson() =>
-      _$_$_EndedPillSheetManualRestDurationValueToJson(
-          this as _$_EndedPillSheetManualRestDurationValue);
+      _$_$_EndedRestDurationValueToJson(this as _$_EndedRestDurationValue);
 }

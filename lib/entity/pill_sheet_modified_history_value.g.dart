@@ -212,32 +212,30 @@ Map<String, dynamic> _$_$_EndedPillSheetValueToJson(
           NonNullTimestampConverter.dateTimeToTimestamp(instance.lastTakenDate),
     };
 
-_$_BeganPillSheetManualRestDurationValue
-    _$_$_BeganPillSheetManualRestDurationValueFromJson(
-        Map<String, dynamic> json) {
-  return _$_BeganPillSheetManualRestDurationValue(
+_$_BeganRestDurationValue _$_$_BeganRestDurationValueFromJson(
+    Map<String, dynamic> json) {
+  return _$_BeganRestDurationValue(
     restDuration:
         RestDuration.fromJson(json['restDuration'] as Map<String, dynamic>),
   );
 }
 
-Map<String, dynamic> _$_$_BeganPillSheetManualRestDurationValueToJson(
-        _$_BeganPillSheetManualRestDurationValue instance) =>
+Map<String, dynamic> _$_$_BeganRestDurationValueToJson(
+        _$_BeganRestDurationValue instance) =>
     <String, dynamic>{
       'restDuration': instance.restDuration.toJson(),
     };
 
-_$_EndedPillSheetManualRestDurationValue
-    _$_$_EndedPillSheetManualRestDurationValueFromJson(
-        Map<String, dynamic> json) {
-  return _$_EndedPillSheetManualRestDurationValue(
+_$_EndedRestDurationValue _$_$_EndedRestDurationValueFromJson(
+    Map<String, dynamic> json) {
+  return _$_EndedRestDurationValue(
     restDuration:
         RestDuration.fromJson(json['restDuration'] as Map<String, dynamic>),
   );
 }
 
-Map<String, dynamic> _$_$_EndedPillSheetManualRestDurationValueToJson(
-        _$_EndedPillSheetManualRestDurationValue instance) =>
+Map<String, dynamic> _$_$_EndedRestDurationValueToJson(
+        _$_EndedRestDurationValue instance) =>
     <String, dynamic>{
       'restDuration': instance.restDuration.toJson(),
     };
