@@ -94,9 +94,9 @@ class RootState extends State<Root> {
     // No UI thread blocking
     final user = await callSignin();
     if (user != null) {
-      await errorLogger.setUserIdentifier(user.uid);
-      await firebaseAnalytics.setUserId(user.uid);
-      await initializePurchase(user.uid);
+      errorLogger.setUserIdentifier(user.uid);
+      firebaseAnalytics.setUserId(user.uid);
+      initializePurchase(user.uid);
     }
     cacheOrAuth().then((authInfo) {
       final userService = UserService(DatabaseConnection(authInfo.uid));
