@@ -30,7 +30,7 @@ class PilllColors {
   static final Color saturday = HexColor.fromHex("7FB9E1");
   static final Color weekday = HexColor.fromHex("7E7E7E");
   static final Color enable = HexColor.fromHex('E56A45');
-  static final Color disable = HexColor.fromHex("F2F2F2");
+  static final Color disable = HexColor.fromHex("EAEAEA");
   static final Color divider = HexColor.fromHex("9DAFBD");
 
   static final Color bottomBar = HexColor.fromHex("FAFAFA");
