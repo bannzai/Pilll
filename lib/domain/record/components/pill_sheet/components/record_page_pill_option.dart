@@ -4,7 +4,6 @@ import 'package:pilll/components/organisms/pill_sheet/pill_sheet_view_layout.dar
 import 'package:pilll/domain/record/components/pill_sheet/components/record_page_rest_duration_dialog.dart';
 import 'package:pilll/domain/record/record_page_store.dart';
 import 'package:pilll/entity/pill_sheet.dart';
-import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/entity/pill_sheet_group.dart';
 
 class RecordPagePillOption extends StatelessWidget {
@@ -24,8 +23,7 @@ class RecordPagePillOption extends StatelessWidget {
     final focusedPillSheet = this.focusedPillSheet;
     final RestDuration? restDuration = focusedPillSheet?.activeRestDuration;
 
-    if (focusedPillSheet == null ||
-        focusedPillSheet.pillSheetType.isNotExistsNotTakenDuration) {
+    if (focusedPillSheet == null) {
       return Container();
     }
 
