@@ -26,7 +26,7 @@ class RecordPagePillOption extends StatelessWidget {
     } else {
       final restDurations = activedPillSheet.restDurations;
       if (restDurations.last.endDate == null &&
-          restDurations.last.beginDate.isBefore(today())) {
+          restDurations.last.beginDate.isBefore(now())) {
         restDuration = restDurations.last;
       } else {
         restDuration = null;
