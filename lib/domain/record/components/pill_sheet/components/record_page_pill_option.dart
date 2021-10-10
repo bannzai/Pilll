@@ -5,7 +5,6 @@ import 'package:pilll/domain/record/components/pill_sheet/components/record_page
 import 'package:pilll/domain/record/record_page_store.dart';
 import 'package:pilll/entity/pill_sheet.dart';
 import 'package:pilll/entity/pill_sheet_group.dart';
-import 'package:pilll/util/datetime/day.dart';
 
 class RecordPagePillOption extends StatelessWidget {
   final RecordPageStore store;
@@ -21,18 +20,7 @@ class RecordPagePillOption extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final RestDuration? restDuration;
-    if (activedPillSheet.restDurations.isEmpty) {
-      restDuration = null;
-    } else {
-      final restDurations = activedPillSheet.restDurations;
-      if (restDurations.last.endDate == null &&
-          restDurations.last.beginDate.isBefore(now())) {
-        restDuration = restDurations.last;
-      } else {
-        restDuration = null;
-      }
-    }
+    final RestDuration? restDuration = activedPillSheet.activeRestDuration;
 
     return Container(
       width: PillSheetViewLayout.width,
