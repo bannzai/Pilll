@@ -243,4 +243,50 @@ extension PillSheetModifiedHistoryServiceActionFactory
       after: null,
     );
   }
+
+  static PillSheetModifiedHistory createBeganRestDurationAction({
+    required String? pillSheetGroupID,
+    required PillSheet before,
+    required PillSheet after,
+    required RestDuration restDuration,
+  }) {
+    assert(pillSheetGroupID != null);
+
+    return _create(
+      actionType: PillSheetModifiedActionType.deletedPillSheet,
+      value: PillSheetModifiedHistoryValue(
+        beganRestDurationValue: BeganRestDurationValue(
+          restDuration: restDuration,
+        ),
+      ),
+      pillSheetGroupID: pillSheetGroupID,
+      beforePillSheetID: before.id,
+      afterPillSheetID: after.id,
+      before: before,
+      after: after,
+    );
+  }
+
+  static PillSheetModifiedHistory createEndedRestDurationAction({
+    required String? pillSheetGroupID,
+    required PillSheet before,
+    required PillSheet after,
+    required RestDuration restDuration,
+  }) {
+    assert(pillSheetGroupID != null);
+
+    return _create(
+      actionType: PillSheetModifiedActionType.deletedPillSheet,
+      value: PillSheetModifiedHistoryValue(
+        endedRestDurationValue: EndedRestDurationValue(
+          restDuration: restDuration,
+        ),
+      ),
+      pillSheetGroupID: pillSheetGroupID,
+      beforePillSheetID: before.id,
+      afterPillSheetID: after.id,
+      before: before,
+      after: after,
+    );
+  }
 }
