@@ -17,7 +17,6 @@ import 'package:firebase_crashlytics/firebase_crashlytics.dart';
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:intl/date_symbol_data_local.dart';
-import 'package:pilll/service/auth.dart';
 import 'package:pilll/app/secret.dart';
 import 'package:purchases_flutter/purchases_flutter.dart';
 
@@ -42,7 +41,6 @@ Future<void> entrypoint() async {
   FlutterError.onError = FirebaseCrashlytics.instance.recordFlutterError;
   definedChannel();
   runZonedGuarded(() async {
-    callSignin();
     runApp(ProviderScope(child: App()));
   }, (error, stack) => FirebaseCrashlytics.instance.recordError(error, stack));
 }
