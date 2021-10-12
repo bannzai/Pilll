@@ -586,6 +586,8 @@ void main() {
         todayRepository = mockTodayRepository;
         when(mockTodayRepository.now())
             .thenReturn(DateTime.parse("2022-05-10"));
+        when(mockTodayRepository.today())
+            .thenReturn(DateTime.parse("2022-05-10"));
 
         final sheetType = PillSheetType.pillsheet_21;
         final pillSheet = PillSheet(
@@ -639,6 +641,8 @@ void main() {
           todayRepository = mockTodayRepository;
           when(mockTodayRepository.now())
               .thenReturn(DateTime.parse("2022-05-10"));
+          when(mockTodayRepository.today())
+              .thenReturn(DateTime.parse("2022-05-10"));
 
           final sheetType = PillSheetType.pillsheet_21;
           final pillSheet = PillSheet(
@@ -668,6 +672,8 @@ void main() {
           final mockTodayRepository = MockTodayService();
           todayRepository = mockTodayRepository;
           when(mockTodayRepository.now())
+              .thenReturn(DateTime.parse("2022-05-10"));
+          when(mockTodayRepository.today())
               .thenReturn(DateTime.parse("2022-05-10"));
 
           final sheetType = PillSheetType.pillsheet_21;
