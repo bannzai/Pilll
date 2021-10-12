@@ -1,3 +1,5 @@
+import 'dart:js';
+
 import 'package:pilll/entity/pill_sheet.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/service/day.dart';
@@ -14,13 +16,13 @@ void main() {
   });
   group("#todayPillNumber", () {
     test("today: 2020-09-19, begin: 2020-09-14, end: 2020-09-18", () {
-      var mockTodayRepository = MockTodayService();
+      final mockTodayRepository = MockTodayService();
       todayRepository = mockTodayRepository;
       when(mockTodayRepository.today())
           .thenReturn(DateTime.parse("2020-09-19"));
 
-      var sheetType = PillSheetType.pillsheet_21;
-      var model = PillSheet(
+      final sheetType = PillSheetType.pillsheet_21;
+      final model = PillSheet(
         beginingDate: DateTime.parse("2020-09-14"),
         lastTakenDate: DateTime.parse("2020-09-18"),
         typeInfo: PillSheetTypeInfo(
@@ -33,13 +35,13 @@ void main() {
       expect(model.todayPillNumber, 6);
     });
     test("today: 2020-09-28, begin: 2020-09-01, end: 2020-09-28", () {
-      var mockTodayRepository = MockTodayService();
+      final mockTodayRepository = MockTodayService();
       todayRepository = mockTodayRepository;
       when(mockTodayRepository.today())
           .thenReturn(DateTime.parse("2020-09-28"));
 
-      var sheetType = PillSheetType.pillsheet_21;
-      var model = PillSheet(
+      final sheetType = PillSheetType.pillsheet_21;
+      final model = PillSheet(
         beginingDate: DateTime.parse("2020-09-01"),
         lastTakenDate: DateTime.parse("2020-09-28"),
         typeInfo: PillSheetTypeInfo(
@@ -54,12 +56,12 @@ void main() {
   });
   group("#isActive", () {
     test("it is active pattern. today: 2020-09-19, begin: 2020-09-14", () {
-      var mockTodayRepository = MockTodayService();
+      final mockTodayRepository = MockTodayService();
       todayRepository = mockTodayRepository;
       when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-19"));
 
-      var sheetType = PillSheetType.pillsheet_21;
-      var model = PillSheet(
+      final sheetType = PillSheetType.pillsheet_21;
+      final model = PillSheet(
         beginingDate: DateTime.parse("2020-09-14"),
         typeInfo: PillSheetTypeInfo(
           dosingPeriod: sheetType.dosingPeriod,
@@ -73,12 +75,12 @@ void main() {
     test(
         "it is active pattern. Boundary testing. today: 2020-09-28, begin: 2020-09-01",
         () {
-      var mockTodayRepository = MockTodayService();
+      final mockTodayRepository = MockTodayService();
       todayRepository = mockTodayRepository;
       when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-28"));
 
-      var sheetType = PillSheetType.pillsheet_21;
-      var model = PillSheet(
+      final sheetType = PillSheetType.pillsheet_21;
+      final model = PillSheet(
         beginingDate: DateTime.parse("2020-09-01"),
         typeInfo: PillSheetTypeInfo(
           dosingPeriod: sheetType.dosingPeriod,
@@ -92,12 +94,12 @@ void main() {
     test(
         "it is deactive pattern. Boundary testing. today: 2020-09-29, begin: 2020-09-01",
         () {
-      var mockTodayRepository = MockTodayService();
+      final mockTodayRepository = MockTodayService();
       todayRepository = mockTodayRepository;
       when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-29"));
 
-      var sheetType = PillSheetType.pillsheet_21;
-      var model = PillSheet(
+      final sheetType = PillSheetType.pillsheet_21;
+      final model = PillSheet(
         beginingDate: DateTime.parse("2020-09-01"),
         typeInfo: PillSheetTypeInfo(
           dosingPeriod: sheetType.dosingPeriod,
@@ -111,13 +113,13 @@ void main() {
     test(
         "it is active pattern. Boundary testing. now: 2020-09-28 23:59:59, begin: 2020-09-01",
         () {
-      var mockTodayRepository = MockTodayService();
+      final mockTodayRepository = MockTodayService();
       todayRepository = mockTodayRepository;
       when(mockTodayRepository.now())
           .thenReturn(DateTime(2020, 9, 28, 23, 59, 59));
 
-      var sheetType = PillSheetType.pillsheet_21;
-      var model = PillSheet(
+      final sheetType = PillSheetType.pillsheet_21;
+      final model = PillSheet(
         beginingDate: DateTime.parse("2020-09-01"),
         typeInfo: PillSheetTypeInfo(
           dosingPeriod: sheetType.dosingPeriod,
@@ -131,13 +133,13 @@ void main() {
     test(
         "it is deactive pattern. Boundary testing. now: 2020-09-29 23:59:59, begin: 2020-09-01",
         () {
-      var mockTodayRepository = MockTodayService();
+      final mockTodayRepository = MockTodayService();
       todayRepository = mockTodayRepository;
       when(mockTodayRepository.now())
           .thenReturn(DateTime(2020, 9, 29, 23, 59, 59));
 
-      var sheetType = PillSheetType.pillsheet_21;
-      var model = PillSheet(
+      final sheetType = PillSheetType.pillsheet_21;
+      final model = PillSheet(
         beginingDate: DateTime.parse("2020-09-01"),
         typeInfo: PillSheetTypeInfo(
           dosingPeriod: sheetType.dosingPeriod,
@@ -149,12 +151,12 @@ void main() {
       expect(model.isActive, false);
     });
     test("it is deactive pattern.  now: 2020-06-29 begin: 2020-09-01", () {
-      var mockTodayRepository = MockTodayService();
+      final mockTodayRepository = MockTodayService();
       todayRepository = mockTodayRepository;
       when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-06-29"));
 
-      var sheetType = PillSheetType.pillsheet_21;
-      var model = PillSheet(
+      final sheetType = PillSheetType.pillsheet_21;
+      final model = PillSheet(
         beginingDate: DateTime.parse("2020-09-01"),
         typeInfo: PillSheetTypeInfo(
           dosingPeriod: sheetType.dosingPeriod,
@@ -169,12 +171,12 @@ void main() {
   group("#isReached", () {
     test("it is not out of range pattern. today: 2020-09-19, begin: 2020-09-14",
         () {
-      var mockTodayRepository = MockTodayService();
+      final mockTodayRepository = MockTodayService();
       todayRepository = mockTodayRepository;
       when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-19"));
 
-      var sheetType = PillSheetType.pillsheet_21;
-      var model = PillSheet(
+      final sheetType = PillSheetType.pillsheet_21;
+      final model = PillSheet(
         beginingDate: DateTime.parse("2020-09-14"),
         typeInfo: PillSheetTypeInfo(
           dosingPeriod: sheetType.dosingPeriod,
@@ -188,12 +190,12 @@ void main() {
     test(
         "it is not out of range pattern. Boundary testing. now: 2020-09-28, begin: 2020-09-01",
         () {
-      var mockTodayRepository = MockTodayService();
+      final mockTodayRepository = MockTodayService();
       todayRepository = mockTodayRepository;
       when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-28"));
 
-      var sheetType = PillSheetType.pillsheet_21;
-      var model = PillSheet(
+      final sheetType = PillSheetType.pillsheet_21;
+      final model = PillSheet(
         beginingDate: DateTime.parse("2020-09-01"),
         typeInfo: PillSheetTypeInfo(
           dosingPeriod: sheetType.dosingPeriod,
@@ -207,12 +209,12 @@ void main() {
     test(
         "it is out of range pattern. Boundary testing. now: 2020-09-29, begin: 2020-09-01",
         () {
-      var mockTodayRepository = MockTodayService();
+      final mockTodayRepository = MockTodayService();
       todayRepository = mockTodayRepository;
       when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-29"));
 
-      var sheetType = PillSheetType.pillsheet_21;
-      var model = PillSheet(
+      final sheetType = PillSheetType.pillsheet_21;
+      final model = PillSheet(
         beginingDate: DateTime.parse("2020-09-01"),
         typeInfo: PillSheetTypeInfo(
           dosingPeriod: sheetType.dosingPeriod,
@@ -224,12 +226,12 @@ void main() {
       expect(model.isReached, true);
     });
     test("it is out of range pattern. now: 2020-06-29, begin: 2020-09-01", () {
-      var mockTodayRepository = MockTodayService();
+      final mockTodayRepository = MockTodayService();
       todayRepository = mockTodayRepository;
       when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-06-29"));
 
-      var sheetType = PillSheetType.pillsheet_21;
-      var model = PillSheet(
+      final sheetType = PillSheetType.pillsheet_21;
+      final model = PillSheet(
         beginingDate: DateTime.parse("2020-09-01"),
         typeInfo: PillSheetTypeInfo(
           dosingPeriod: sheetType.dosingPeriod,
@@ -243,8 +245,8 @@ void main() {
   });
   group("#estimatedLastTakenDate", () {
     test("spec", () {
-      var sheetType = PillSheetType.pillsheet_21;
-      var pillSheet = PillSheet(
+      final sheetType = PillSheetType.pillsheet_21;
+      final pillSheet = PillSheet(
         beginingDate: DateTime.parse("2022-05-01"),
         typeInfo: PillSheetTypeInfo(
           dosingPeriod: sheetType.dosingPeriod,
