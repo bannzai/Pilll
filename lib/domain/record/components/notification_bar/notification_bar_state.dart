@@ -36,14 +36,10 @@ abstract class NotificationBarState implements _$NotificationBarState {
     if (activedPillSheet == null) {
       return null;
     }
-    if (activedPillSheet.pillSheetType.isNotExistsNotTakenDuration) {
-      final restDuration = activedPillSheet.activeRestDuration;
-      if (restDuration != null) {
-        final day = daysBetween(restDuration.beginDate.date(), today());
-        return "休薬${activedPillSheet.pillSheetType.notTakenWord}$day日目";
-      } else {
-        return null;
-      }
+    final restDuration = activedPillSheet.activeRestDuration;
+    if (restDuration != null) {
+      final day = daysBetween(restDuration.beginDate.date(), today()) + 1;
+      return "休薬${activedPillSheet.pillSheetType.notTakenWord}$day日目";
     }
 
     if (activedPillSheet.typeInfo.dosingPeriod <
