@@ -555,7 +555,7 @@ void main() {
               pillSheetTypeReferencePath: sheetType.rawPath,
             ),
           );
-          expect(model.lastTakenPillNumber, 19);
+          expect(model.lastTakenPillNumber, 18);
         });
       });
     });
