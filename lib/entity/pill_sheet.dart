@@ -142,7 +142,7 @@ abstract class PillSheet implements _$PillSheet {
       beginingDate.date().toUtc().millisecondsSinceEpoch <
       now().toUtc().millisecondsSinceEpoch;
   bool get inNotTakenDuration => todayPillNumber > typeInfo.dosingPeriod;
-  bool get pillSheetHasRestDuration =>
+  bool get pillSheetHasRestOrFakeDuration =>
       !pillSheetType.isNotExistsNotTakenDuration;
   bool get isActive {
     final n = now();
