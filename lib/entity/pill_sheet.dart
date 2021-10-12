@@ -117,11 +117,24 @@ abstract class PillSheet implements _$PillSheet {
         1;
   }
 
-  int get lastTakenPillNumber => lastTakenDate == null
-      ? 0
-      : daysBetween(beginingDate.date(), lastTakenDate!.date()) -
-          summarizedRestDuration +
-          1;
+  int get lastTakenPillNumber {
+    final lastTakenDate = this.lastTakenDate;
+    if (lastTakenDate == null) {
+      return 0;
+    }
+
+    final lastTakenNumber =
+        daysBetween(beginingDate.date(), lastTakenDate.date()) - 1;
+    if (restDurations.isEmpty) {
+      return lastTakenNumber;
+    }
+    final endedRestDurations =
+        restDurations.where((element) => element.endDate != null).toList();
+    if (endedRestDurations.isEmpty) {
+      return lastTakenNumber;
+    }
+    return lastTakenPillNumber - summarizedRestDuration(endedRestDurations);
+  }
 
   bool get isAllTaken => todayPillNumber == lastTakenPillNumber;
   bool get isEnded => typeInfo.totalCount == lastTakenPillNumber;
