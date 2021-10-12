@@ -112,12 +112,16 @@ abstract class PillSheet implements _$PillSheet {
       PillSheetTypeFunctions.fromRawPath(typeInfo.pillSheetTypeReferencePath);
 
   int get todayPillNumber {
-    return today().difference(beginingDate.date()).inDays + 1;
+    return today().difference(beginingDate.date()).inDays -
+        summarizedRestDuration +
+        1;
   }
 
   int get lastTakenPillNumber => lastTakenDate == null
       ? 0
-      : lastTakenDate!.date().difference(beginingDate.date()).inDays + 1;
+      : lastTakenDate!.date().difference(beginingDate.date()).inDays -
+          summarizedRestDuration +
+          1;
 
   bool get isAllTaken => todayPillNumber == lastTakenPillNumber;
   bool get isEnded => typeInfo.totalCount == lastTakenPillNumber;
@@ -137,6 +141,7 @@ abstract class PillSheet implements _$PillSheet {
 
   DateTime get estimatedLastTakenDate => beginingDate
       .add(Duration(days: pillSheetType.totalCount - 1))
+      .subtract(Duration(days: summarizedRestDuration))
       .date()
       .add(Duration(days: 1))
       .subtract(Duration(seconds: 1));
