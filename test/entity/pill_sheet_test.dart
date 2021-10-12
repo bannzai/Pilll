@@ -77,6 +77,7 @@ void main() {
         );
         expect(model.todayPillNumber, 22);
       });
+      
       test("rest duration is ended", () {
         final mockTodayRepository = MockTodayService();
         todayRepository = mockTodayRepository;
