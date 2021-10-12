@@ -77,7 +77,7 @@ void main() {
         );
         expect(model.todayPillNumber, 22);
       });
-      
+
       test("rest duration is ended", () {
         final mockTodayRepository = MockTodayService();
         todayRepository = mockTodayRepository;
@@ -716,7 +716,7 @@ void main() {
       test("last restDuration is not ended", () {
         final mockTodayRepository = MockTodayService();
         todayRepository = mockTodayRepository;
-        when(mockTodayRepository.now())
+        when(mockTodayRepository.today())
             .thenReturn(DateTime.parse("2022-05-10"));
 
         final sheetType = PillSheetType.pillsheet_21;
