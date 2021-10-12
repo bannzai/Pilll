@@ -39,7 +39,7 @@ abstract class NotificationBarState implements _$NotificationBarState {
     if (activedPillSheet.pillSheetType.isNotExistsNotTakenDuration) {
       final restDuration = activedPillSheet.activeRestDuration;
       if (restDuration != null) {
-        final day = today().difference(restDuration.beginDate.date()).inDays;
+        final day = daysBetween(restDuration.beginDate.date(), today());
         return "休薬${activedPillSheet.pillSheetType.notTakenWord}$day日目";
       } else {
         return null;
@@ -78,7 +78,7 @@ abstract class NotificationBarState implements _$NotificationBarState {
       return null;
     }
 
-    final diff = trialDeadlineDate.difference(now()).inDays + 1;
+    final diff = daysBetween(now(), trialDeadlineDate) + 1;
     if (diff < 0) {
       return null;
     }
