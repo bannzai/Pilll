@@ -113,7 +113,7 @@ abstract class PillSheet implements _$PillSheet {
 
   int get todayPillNumber {
     return daysBetween(beginingDate.date(), today()) -
-        summarizedRestDuration +
+        summarizedRestDuration(restDurations) +
         1;
   }
 
@@ -141,7 +141,7 @@ abstract class PillSheet implements _$PillSheet {
 
   DateTime get estimatedLastTakenDate => beginingDate
       .add(Duration(days: pillSheetType.totalCount - 1))
-      .subtract(Duration(days: summarizedRestDuration))
+      .subtract(Duration(days: summarizedRestDuration(restDurations)))
       .date()
       .add(Duration(days: 1))
       .subtract(Duration(seconds: 1));
@@ -158,18 +158,18 @@ abstract class PillSheet implements _$PillSheet {
       }
     }
   }
+}
 
-  int get summarizedRestDuration {
-    if (restDurations.isEmpty) {
-      return 0;
-    }
-    return restDurations.map((e) {
-      final endDate = e.endDate;
-      if (endDate == null) {
-        return daysBetween(e.beginDate, today());
-      } else {
-        return daysBetween(e.beginDate, endDate);
-      }
-    }).reduce((value, element) => value + element);
+int summarizedRestDuration(List<RestDuration> restDurations) {
+  if (restDurations.isEmpty) {
+    return 0;
   }
+  return restDurations.map((e) {
+    final endDate = e.endDate;
+    if (endDate == null) {
+      return daysBetween(e.beginDate, today());
+    } else {
+      return daysBetween(e.beginDate, endDate);
+    }
+  }).reduce((value, element) => value + element);
 }
