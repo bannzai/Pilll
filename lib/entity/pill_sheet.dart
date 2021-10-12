@@ -154,7 +154,7 @@ abstract class PillSheet implements _$PillSheet {
 
   DateTime get estimatedLastTakenDate => beginingDate
       .add(Duration(days: pillSheetType.totalCount - 1))
-      .subtract(Duration(days: summarizedRestDuration(restDurations)))
+      .add(Duration(days: summarizedRestDuration(restDurations)))
       .date()
       .add(Duration(days: 1))
       .subtract(Duration(seconds: 1));
