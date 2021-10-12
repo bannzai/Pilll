@@ -139,7 +139,7 @@ class SettingPage extends HookWidget {
                       NotificationTimeRow(setting: setting),
                       _separator(),
                       if (activedPillSheet != null &&
-                          activedPillSheet.pillSheetHasRestDuration) ...[
+                          activedPillSheet.pillSheetHasRestOrFakeDuration) ...[
                         NotificationInRestDuration(
                             setting: setting, pillSheet: activedPillSheet),
                         _separator(),
