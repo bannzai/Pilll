@@ -38,7 +38,7 @@ extension WeeklyCalendarStateCompoutedProperties on WeeklyCalendarState {
   int offsetForStartPositionAtLine(DateTime begin) {
     return isNecessaryLineBreak(begin)
         ? 0
-        : daysBetween(dateRange.begin.date(), begin.date());
+        : begin.date().difference(dateRange.begin.date()).inDays;
   }
 
   DateTime buildDate(Weekday weekday) {

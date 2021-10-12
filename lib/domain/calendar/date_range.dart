@@ -5,7 +5,7 @@ class DateRange {
   final DateTime _end;
   DateTime get begin => _begin.date();
   DateTime get end => _end.date();
-  int get days => daysBetween(begin, end);
+  int get days => end.difference(begin).inDays;
 
   DateRange(this._begin, this._end);
 
