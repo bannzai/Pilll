@@ -16,7 +16,7 @@ abstract class MenstruationCardState implements _$MenstruationCardState {
   factory MenstruationCardState.future({
     required DateTime nextSchedule,
   }) {
-    final diff = daysBetween(today(), nextSchedule);
+    final diff = nextSchedule.difference(today()).inDays;
     return MenstruationCardState(
       title: "生理予定日",
       scheduleDate: nextSchedule,
@@ -27,7 +27,7 @@ abstract class MenstruationCardState implements _$MenstruationCardState {
   factory MenstruationCardState.inTheMiddle({
     required DateTime scheduledDate,
   }) {
-    final diff = daysBetween(scheduledDate, today());
+    final diff = today().difference(scheduledDate).inDays;
     return MenstruationCardState(
       title: "生理予定日",
       scheduleDate: scheduledDate,
@@ -42,6 +42,6 @@ abstract class MenstruationCardState implements _$MenstruationCardState {
         title: "生理開始日",
         scheduleDate: menstruation.beginDate,
         countdownString:
-            "${daysBetween(menstruation.beginDate, today()) + 1}日目",
+            "${today().difference(menstruation.beginDate).inDays + 1}日目",
       );
 }

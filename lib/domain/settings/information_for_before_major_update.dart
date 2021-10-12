@@ -17,12 +17,12 @@ class InformationForBeforeMigrate132 extends StatelessWidget {
   int _latestPillNumber() {
     final last = DateTime.parse(this.salvagedOldLastTakenDate);
     final start = DateTime.parse(this.salvagedOldStartTakenDate);
-    return daysBetween(start, last) % 28 + 1;
+    return last.difference(start).inDays % 28 + 1;
   }
 
   int _todayPillNumber() {
     final start = DateTime.parse(this.salvagedOldStartTakenDate);
-    return daysBetween(start, today()) % 28 + 1;
+    return today().difference(start).inDays % 28 + 1;
   }
 
   @override
