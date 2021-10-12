@@ -153,4 +153,18 @@ abstract class PillSheet implements _$PillSheet {
       }
     }
   }
+
+  int get summarizedRestDuration {
+    if (restDurations.isEmpty) {
+      return 0;
+    }
+    return restDurations.map((e) {
+      final endDate = e.endDate;
+      if (endDate == null) {
+        return now().difference(e.beginDate).inDays;
+      } else {
+        return endDate.difference(e.beginDate).inDays;
+      }
+    }).reduce((value, element) => value + element);
+  }
 }
