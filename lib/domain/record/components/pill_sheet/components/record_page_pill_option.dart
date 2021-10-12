@@ -26,46 +26,47 @@ class RecordPagePillOption extends StatelessWidget {
       width: PillSheetViewLayout.width,
       child: Row(children: [
         Spacer(),
-        SizedBox(
-          width: 80,
-          child: PrimaryOutlinedButton(
-            text: restDuration == null ? "休薬する" : "休薬終了",
-            fontSize: 12,
-            onPressed: () async {
-              if (restDuration == null) {
-                showRecordPageRestDurationDialog(context, () async {
-                  Navigator.of(context).pop();
-                  await store.beginResting(
+        if (!pillSheetGroup.hasPillSheetRestDuration)
+          SizedBox(
+            width: 80,
+            child: PrimaryOutlinedButton(
+              text: restDuration == null ? "休薬する" : "休薬終了",
+              fontSize: 12,
+              onPressed: () async {
+                if (restDuration == null) {
+                  showRecordPageRestDurationDialog(context, () async {
+                    Navigator.of(context).pop();
+                    await store.beginResting(
+                      pillSheetGroup: pillSheetGroup,
+                      activedPillSheet: activedPillSheet,
+                    );
+                    ScaffoldMessenger.of(context).showSnackBar(
+                      SnackBar(
+                        duration: Duration(
+                          seconds: 2,
+                        ),
+                        content: Text("休薬期間が始まりました"),
+                      ),
+                    );
+                  });
+                } else {
+                  await store.endResting(
                     pillSheetGroup: pillSheetGroup,
                     activedPillSheet: activedPillSheet,
+                    restDuration: restDuration,
                   );
                   ScaffoldMessenger.of(context).showSnackBar(
                     SnackBar(
                       duration: Duration(
                         seconds: 2,
                       ),
-                      content: Text("休薬期間が始まりました"),
+                      content: Text("休薬期間が終了しました"),
                     ),
                   );
-                });
-              } else {
-                await store.endResting(
-                  pillSheetGroup: pillSheetGroup,
-                  activedPillSheet: activedPillSheet,
-                  restDuration: restDuration,
-                );
-                ScaffoldMessenger.of(context).showSnackBar(
-                  SnackBar(
-                    duration: Duration(
-                      seconds: 2,
-                    ),
-                    content: Text("休薬期間が終了しました"),
-                  ),
-                );
-              }
-            },
+                }
+              },
+            ),
           ),
-        ),
       ]),
     );
   }
