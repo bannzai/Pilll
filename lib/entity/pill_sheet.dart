@@ -124,7 +124,7 @@ abstract class PillSheet implements _$PillSheet {
     }
 
     final lastTakenNumber =
-        daysBetween(beginingDate.date(), lastTakenDate.date()) - 1;
+        daysBetween(beginingDate.date(), lastTakenDate.date()) + 1;
     if (restDurations.isEmpty) {
       return lastTakenNumber;
     }
