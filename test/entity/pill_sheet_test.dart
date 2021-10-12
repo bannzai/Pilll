@@ -533,6 +533,10 @@ void main() {
   });
   group("#estimatedLastTakenDate", () {
     test("spec", () {
+      final mockTodayRepository = MockTodayService();
+      todayRepository = mockTodayRepository;
+      when(mockTodayRepository.now()).thenReturn(DateTime.parse("2022-05-10"));
+
       final sheetType = PillSheetType.pillsheet_21;
       final pillSheet = PillSheet(
         beginingDate: DateTime.parse("2022-05-01"),
@@ -545,6 +549,124 @@ void main() {
       );
       expect(pillSheet.estimatedLastTakenDate,
           DateTime.parse("2022-05-29").subtract(Duration(seconds: 1)));
+    });
+
+    group("pillsheet has rest durations", () {
+      test("rest duration is not ended", () {
+        final mockTodayRepository = MockTodayService();
+        todayRepository = mockTodayRepository;
+        when(mockTodayRepository.now())
+            .thenReturn(DateTime.parse("2022-05-10"));
+
+        final sheetType = PillSheetType.pillsheet_21;
+        final pillSheet = PillSheet(
+          beginingDate: DateTime.parse("2022-05-01"),
+          restDurations: [
+            RestDuration(
+              beginDate: DateTime.parse("2022-05-03"),
+              createdDate: DateTime.parse("2022-05-03"),
+            ),
+          ],
+          typeInfo: PillSheetTypeInfo(
+            dosingPeriod: sheetType.dosingPeriod,
+            name: sheetType.fullName,
+            totalCount: sheetType.totalCount,
+            pillSheetTypeReferencePath: sheetType.rawPath,
+          ),
+        );
+        expect(pillSheet.estimatedLastTakenDate,
+            DateTime.parse("2022-06-05").subtract(Duration(seconds: 1)));
+      });
+      test("rest duration is ended", () {
+        final mockTodayRepository = MockTodayService();
+        todayRepository = mockTodayRepository;
+        when(mockTodayRepository.now())
+            .thenReturn(DateTime.parse("2022-05-10"));
+
+        final sheetType = PillSheetType.pillsheet_21;
+        final pillSheet = PillSheet(
+          beginingDate: DateTime.parse("2022-05-01"),
+          restDurations: [
+            RestDuration(
+              beginDate: DateTime.parse("2022-05-03"),
+              createdDate: DateTime.parse("2022-05-03"),
+              endDate: DateTime.parse("2022-05-05"),
+            ),
+          ],
+          typeInfo: PillSheetTypeInfo(
+            dosingPeriod: sheetType.dosingPeriod,
+            name: sheetType.fullName,
+            totalCount: sheetType.totalCount,
+            pillSheetTypeReferencePath: sheetType.rawPath,
+          ),
+        );
+        expect(pillSheet.estimatedLastTakenDate,
+            DateTime.parse("2022-05-31").subtract(Duration(seconds: 1)));
+      });
+
+      group("pillsheet has plural rest duration", () {
+        test("last rest duration is not ended", () {
+          final mockTodayRepository = MockTodayService();
+          todayRepository = mockTodayRepository;
+          when(mockTodayRepository.now())
+              .thenReturn(DateTime.parse("2022-05-10"));
+
+          final sheetType = PillSheetType.pillsheet_21;
+          final pillSheet = PillSheet(
+            beginingDate: DateTime.parse("2022-05-01"),
+            restDurations: [
+              RestDuration(
+                beginDate: DateTime.parse("2022-05-03"),
+                createdDate: DateTime.parse("2022-05-03"),
+                endDate: DateTime.parse("2022-05-05"),
+              ),
+              RestDuration(
+                beginDate: DateTime.parse("2022-05-07"),
+                createdDate: DateTime.parse("2022-05-07"),
+              ),
+            ],
+            typeInfo: PillSheetTypeInfo(
+              dosingPeriod: sheetType.dosingPeriod,
+              name: sheetType.fullName,
+              totalCount: sheetType.totalCount,
+              pillSheetTypeReferencePath: sheetType.rawPath,
+            ),
+          );
+          expect(pillSheet.estimatedLastTakenDate,
+              DateTime.parse("2022-06-03").subtract(Duration(seconds: 1)));
+        });
+        test("last rest duration is ended", () {
+          final mockTodayRepository = MockTodayService();
+          todayRepository = mockTodayRepository;
+          when(mockTodayRepository.now())
+              .thenReturn(DateTime.parse("2022-05-10"));
+
+          final sheetType = PillSheetType.pillsheet_21;
+          final pillSheet = PillSheet(
+            beginingDate: DateTime.parse("2022-05-01"),
+            restDurations: [
+              RestDuration(
+                beginDate: DateTime.parse("2022-05-03"),
+                createdDate: DateTime.parse("2022-05-03"),
+                endDate: DateTime.parse("2022-05-05"),
+              ),
+              RestDuration(
+                beginDate: DateTime.parse("2022-05-07"),
+                createdDate: DateTime.parse("2022-05-07"),
+                endDate: DateTime.parse("2022-05-08"),
+              ),
+            ],
+            typeInfo: PillSheetTypeInfo(
+              dosingPeriod: sheetType.dosingPeriod,
+              name: sheetType.fullName,
+              totalCount: sheetType.totalCount,
+              pillSheetTypeReferencePath: sheetType.rawPath,
+            ),
+          );
+          expect(pillSheet.estimatedLastTakenDate,
+              DateTime.parse("2022-06-01").subtract(Duration(seconds: 1)));
+        });
+      });
     });
   });
 }
