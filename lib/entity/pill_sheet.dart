@@ -112,14 +112,14 @@ abstract class PillSheet implements _$PillSheet {
       PillSheetTypeFunctions.fromRawPath(typeInfo.pillSheetTypeReferencePath);
 
   int get todayPillNumber {
-    return today().difference(beginingDate.date()).inDays -
+    return daysBetween(beginingDate.date(), today()) -
         summarizedRestDuration +
         1;
   }
 
   int get lastTakenPillNumber => lastTakenDate == null
       ? 0
-      : lastTakenDate!.date().difference(beginingDate.date()).inDays -
+      : daysBetween(beginingDate.date(), lastTakenDate!.date()) -
           summarizedRestDuration +
           1;
 
@@ -166,9 +166,9 @@ abstract class PillSheet implements _$PillSheet {
     return restDurations.map((e) {
       final endDate = e.endDate;
       if (endDate == null) {
-        return now().difference(e.beginDate).inDays;
+        return daysBetween(e.beginDate, now());
       } else {
-        return endDate.difference(e.beginDate).inDays;
+        return daysBetween(e.beginDate, endDate);
       }
     }).reduce((value, element) => value + element);
   }
