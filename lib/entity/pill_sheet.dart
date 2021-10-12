@@ -123,15 +123,15 @@ abstract class PillSheet implements _$PillSheet {
       return 0;
     }
 
-    final lastTakenNumber =
+    final lastTakenPillNumber =
         daysBetween(beginingDate.date(), lastTakenDate.date()) + 1;
     if (restDurations.isEmpty) {
-      return lastTakenNumber;
+      return lastTakenPillNumber;
     }
     final endedRestDurations =
         restDurations.where((element) => element.endDate != null).toList();
     if (endedRestDurations.isEmpty) {
-      return lastTakenNumber;
+      return lastTakenPillNumber;
     }
     return lastTakenPillNumber - summarizedRestDuration(endedRestDurations);
   }
