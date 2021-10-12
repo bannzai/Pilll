@@ -463,6 +463,32 @@ void main() {
         );
         expect(model.lastTakenPillNumber, 25);
       });
+      test("rest duration is ended and not yet taken pill", () {
+        final mockTodayRepository = MockTodayService();
+        todayRepository = mockTodayRepository;
+        when(mockTodayRepository.now())
+            .thenReturn(DateTime.parse("2020-09-28"));
+
+        final sheetType = PillSheetType.pillsheet_21;
+        final model = PillSheet(
+          beginingDate: DateTime.parse("2020-09-01"),
+          lastTakenDate: null,
+          restDurations: [
+            RestDuration(
+              beginDate: DateTime.parse("2020-09-23"),
+              createdDate: DateTime.parse("2020-09-23"),
+              endDate: DateTime.parse("2020-09-25"),
+            ),
+          ],
+          typeInfo: PillSheetTypeInfo(
+            dosingPeriod: sheetType.dosingPeriod,
+            name: sheetType.fullName,
+            totalCount: sheetType.totalCount,
+            pillSheetTypeReferencePath: sheetType.rawPath,
+          ),
+        );
+        expect(model.lastTakenPillNumber, 0);
+      });
 
       group("pillsheet has plural rest durations", () {
         test("last rest duration is not ended", () {
