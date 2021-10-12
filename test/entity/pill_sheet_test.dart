@@ -666,5 +666,75 @@ void main() {
         });
       });
     });
+    group("#summarizedRestDuration", () {
+      test("restDurations isEmpty", () {
+        final mockTodayRepository = MockTodayService();
+        todayRepository = mockTodayRepository;
+        when(mockTodayRepository.now())
+            .thenReturn(DateTime.parse("2022-05-10"));
+
+        final sheetType = PillSheetType.pillsheet_21;
+        final pillSheet = PillSheet(
+          beginingDate: DateTime.parse("2022-05-01"),
+          restDurations: [],
+          typeInfo: PillSheetTypeInfo(
+            dosingPeriod: sheetType.dosingPeriod,
+            name: sheetType.fullName,
+            totalCount: sheetType.totalCount,
+            pillSheetTypeReferencePath: sheetType.rawPath,
+          ),
+        );
+        expect(pillSheet.summarizedRestDuration, 0);
+      });
+      test("last restDuration is not ended", () {
+        final mockTodayRepository = MockTodayService();
+        todayRepository = mockTodayRepository;
+        when(mockTodayRepository.now())
+            .thenReturn(DateTime.parse("2022-05-10"));
+
+        final sheetType = PillSheetType.pillsheet_21;
+        final pillSheet = PillSheet(
+          beginingDate: DateTime.parse("2022-05-01"),
+          restDurations: [
+            RestDuration(
+              beginDate: DateTime.parse("2022-05-07"),
+              createdDate: DateTime.parse("2022-05-07"),
+            ),
+          ],
+          typeInfo: PillSheetTypeInfo(
+            dosingPeriod: sheetType.dosingPeriod,
+            name: sheetType.fullName,
+            totalCount: sheetType.totalCount,
+            pillSheetTypeReferencePath: sheetType.rawPath,
+          ),
+        );
+        expect(pillSheet.summarizedRestDuration, 3);
+      });
+      test("last restDuration is ended", () {
+        final mockTodayRepository = MockTodayService();
+        todayRepository = mockTodayRepository;
+        when(mockTodayRepository.now())
+            .thenReturn(DateTime.parse("2022-05-10"));
+
+        final sheetType = PillSheetType.pillsheet_21;
+        final pillSheet = PillSheet(
+          beginingDate: DateTime.parse("2022-05-01"),
+          restDurations: [
+            RestDuration(
+              beginDate: DateTime.parse("2022-05-07"),
+              createdDate: DateTime.parse("2022-05-07"),
+              endDate: DateTime.parse("2022-05-08"),
+            ),
+          ],
+          typeInfo: PillSheetTypeInfo(
+            dosingPeriod: sheetType.dosingPeriod,
+            name: sheetType.fullName,
+            totalCount: sheetType.totalCount,
+            pillSheetTypeReferencePath: sheetType.rawPath,
+          ),
+        );
+        expect(pillSheet.summarizedRestDuration, 1);
+      });
+    });
   });
 }
