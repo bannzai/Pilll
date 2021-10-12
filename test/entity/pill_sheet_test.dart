@@ -77,7 +77,7 @@ void main() {
             pillSheetTypeReferencePath: sheetType.rawPath,
           ),
         );
-        expect(model.todayPillNumber, 23);
+        expect(model.todayPillNumber, 22);
       });
       test("rest duration is ended", () {
         final mockTodayRepository = MockTodayService();
@@ -103,7 +103,7 @@ void main() {
             pillSheetTypeReferencePath: sheetType.rawPath,
           ),
         );
-        expect(model.todayPillNumber, 24);
+        expect(model.todayPillNumber, 25);
       });
       group("rest duration has plural rest duration. ", () {
         test("last rest duration is not ended", () {
@@ -134,7 +134,7 @@ void main() {
               pillSheetTypeReferencePath: sheetType.rawPath,
             ),
           );
-          expect(model.todayPillNumber, 24);
+          expect(model.todayPillNumber, 25);
         });
         test("last rest duration is ended", () {
           final mockTodayRepository = MockTodayService();
@@ -165,7 +165,7 @@ void main() {
               pillSheetTypeReferencePath: sheetType.rawPath,
             ),
           );
-          expect(model.todayPillNumber, 20);
+          expect(model.todayPillNumber, 22);
         });
       });
     });
