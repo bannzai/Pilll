@@ -8,18 +8,29 @@ import 'package:pilll/entity/pill_sheet_modified_history_value.dart';
 
 class TakenPillActionOList extends StatelessWidget {
   final TakenPillValue value;
+  final PillSheet beforePillSheet;
   final PillSheet afterPillSheet;
 
   const TakenPillActionOList({
     Key? key,
     required this.value,
+    required this.beforePillSheet,
     required this.afterPillSheet,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    final count = max(
-        value.afterLastTakenPillNumber - (value.beforeLastTakenPillNumber), 1);
+    final before = value.before ?? beforePillSheet;
+    final after = value.after ?? afterPillSheet;
+
+    final int count;
+    if (after.groupIndex == before.groupIndex) {
+      count = max(after.lastTakenPillNumber - (before.lastTakenPillNumber), 1);
+    } else {
+      // expect after.groupIndex > before.groupIndex
+      assert(after.groupIndex < before.groupIndex);
+      count = max(after.lastTakenPillNumber - (before.lastTakenPillNumber), 1);
+    }
     return Container(
       child: Row(
           mainAxisSize: MainAxisSize.min,

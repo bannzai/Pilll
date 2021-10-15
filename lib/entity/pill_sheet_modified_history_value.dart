@@ -1,6 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:pilll/entity/firestore_timestamp_converter.dart';
+import 'package:pilll/entity/pill_sheet.dart';
 
 part 'pill_sheet_modified_history_value.g.dart';
 part 'pill_sheet_modified_history_value.freezed.dart';
@@ -114,6 +115,8 @@ abstract class TakenPillValue implements _$TakenPillValue {
         required DateTime afterLastTakenDate,
     required int beforeLastTakenPillNumber,
     required int afterLastTakenPillNumber,
+    required PillSheet? before,
+    required PillSheet? after,
   }) = _TakenPillValue;
 
   factory TakenPillValue.fromJson(Map<String, dynamic> json) =>
