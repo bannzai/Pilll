@@ -48,5 +48,40 @@ void main() {
       expect(history.value.takenPill, isNotNull);
       expect(history.value.takenPill?.differencePillCount, 2);
     });
+    test("group has only one pill sheet and it is increment pattern", () async {
+      final _today = DateTime.parse("2020-09-19");
+
+      final before = PillSheet(
+        id: "sheet_id",
+        typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
+        beginingDate: _today,
+        groupIndex: 0,
+        lastTakenDate: DateTime.parse("2020-09-19"),
+      );
+      final after = before.copyWith(
+        lastTakenDate: DateTime.parse("2020-09-20"),
+      );
+
+      final pillSheetGroup = PillSheetGroup(
+        id: "group_id",
+        pillSheetIDs: ["sheet_id"],
+        pillSheets: [
+          after,
+        ],
+        createdAt: now(),
+      );
+
+      final history =
+          PillSheetModifiedHistoryServiceActionFactory.createTakenPillAction(
+        pillSheetGroupID: "group_id",
+        before: before,
+        after: after,
+        pillSheetGroup: pillSheetGroup,
+      );
+
+      expect(history.enumActionType, PillSheetModifiedActionType.takenPill);
+      expect(history.value.takenPill, isNotNull);
+      expect(history.value.takenPill?.differencePillCount, 1);
+    });
   });
 }
