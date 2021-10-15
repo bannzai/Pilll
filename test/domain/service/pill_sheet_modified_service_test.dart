@@ -47,6 +47,8 @@ void main() {
       expect(history.enumActionType, PillSheetModifiedActionType.takenPill);
       expect(history.value.takenPill, isNotNull);
       expect(history.value.takenPill?.differencePillCount, 2);
+      expect(history.value.takenPill?.beforeLastTakenPillNumber, null);
+      expect(history.value.takenPill?.afterLastTakenPillNumber, 2);
     });
     test("group has only one pill sheet and it is increment pattern", () async {
       final _today = DateTime.parse("2020-09-19");
