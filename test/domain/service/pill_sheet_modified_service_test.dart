@@ -31,6 +31,7 @@ void main() {
         id: "group_id",
         pillSheetIDs: ["sheet_id"],
         pillSheets: [
+          before,
           after,
         ],
         createdAt: now(),
@@ -41,7 +42,7 @@ void main() {
         pillSheetGroupID: "group_id",
         before: before,
         after: after,
-        pillSheetGroup: pillSheetGroup,
+        updatedPillSheetGroup: pillSheetGroup,
       );
 
       expect(history.enumActionType, PillSheetModifiedActionType.takenPill);
@@ -78,7 +79,7 @@ void main() {
         pillSheetGroupID: "group_id",
         before: before,
         after: after,
-        pillSheetGroup: pillSheetGroup,
+        updatedPillSheetGroup: pillSheetGroup,
       );
 
       expect(history.enumActionType, PillSheetModifiedActionType.takenPill);
@@ -98,7 +99,7 @@ void main() {
         lastTakenDate: DateTime.parse("2020-09-24"),
       );
       final after = PillSheet(
-        id: "sheet_id",
+        id: "sheet_id2",
         typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
         beginingDate: DateTime.parse("2020-09-29"),
         groupIndex: 1,
@@ -107,8 +108,9 @@ void main() {
 
       final pillSheetGroup = PillSheetGroup(
         id: "group_id",
-        pillSheetIDs: ["sheet_id"],
+        pillSheetIDs: ["sheet_id", "sheet_id2"],
         pillSheets: [
+          before,
           after,
         ],
         createdAt: now(),
@@ -119,14 +121,64 @@ void main() {
         pillSheetGroupID: "group_id",
         before: before,
         after: after,
-        pillSheetGroup: pillSheetGroup,
+        updatedPillSheetGroup: pillSheetGroup,
       );
 
       expect(history.enumActionType, PillSheetModifiedActionType.takenPill);
       expect(history.value.takenPill, isNotNull);
-      expect(history.value.takenPill?.differencePillCount, 7);
+      expect(history.value.takenPill?.differencePillCount, 6);
       expect(history.value.takenPill?.beforeLastTakenPillNumber, 24);
       expect(history.value.takenPill?.afterLastTakenPillNumber, 2);
+    });
+    test("group has three pill sheets", () async {
+      final _today = DateTime.parse("2020-09-01");
+
+      final before = PillSheet(
+        id: "sheet_id",
+        typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
+        beginingDate: _today,
+        groupIndex: 0,
+        lastTakenDate: DateTime.parse("2020-09-24"),
+      );
+      final margin = PillSheet(
+        id: "sheet_id2",
+        typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
+        beginingDate: DateTime.parse("2020-09-29"),
+        groupIndex: 1,
+        lastTakenDate: DateTime.parse("2020-10-26"),
+      );
+      final after = PillSheet(
+        id: "sheet_id3",
+        typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
+        beginingDate: DateTime.parse("2020-10-27"),
+        groupIndex: 2,
+        lastTakenDate: DateTime.parse("2020-10-29"),
+      );
+
+      final pillSheetGroup = PillSheetGroup(
+        id: "group_id",
+        pillSheetIDs: ["sheet_id", "sheet_id2", "sheet_id3"],
+        pillSheets: [
+          before,
+          margin,
+          after,
+        ],
+        createdAt: now(),
+      );
+
+      final history =
+          PillSheetModifiedHistoryServiceActionFactory.createTakenPillAction(
+        pillSheetGroupID: "group_id",
+        before: before,
+        after: after,
+        updatedPillSheetGroup: pillSheetGroup,
+      );
+
+      expect(history.enumActionType, PillSheetModifiedActionType.takenPill);
+      expect(history.value.takenPill, isNotNull);
+      expect(history.value.takenPill?.differencePillCount, 35);
+      expect(history.value.takenPill?.beforeLastTakenPillNumber, 24);
+      expect(history.value.takenPill?.afterLastTakenPillNumber, 3);
     });
   });
 }
