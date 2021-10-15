@@ -24,7 +24,7 @@ void main() {
         lastTakenDate: null,
       );
       final after = before.copyWith(
-        lastTakenDate: DateTime.parse("2020-09-11"),
+        lastTakenDate: DateTime.parse("2020-09-20"),
       );
 
       final pillSheetGroup = PillSheetGroup(
@@ -46,7 +46,7 @@ void main() {
 
       expect(history.enumActionType, PillSheetModifiedActionType.takenPill);
       expect(history.value.takenPill, isNotNull);
-      expect(history.value.takenPill?.differencePillCount, 1);
+      expect(history.value.takenPill?.differencePillCount, 2);
     });
   });
 }
