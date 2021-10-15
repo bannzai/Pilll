@@ -104,7 +104,7 @@ extension PillSheetModifiedHistoryServiceActionFactory
     required String? pillSheetGroupID,
     required PillSheet before,
     required PillSheet after,
-    required PillSheetGroup pillSheetGroup,
+    required PillSheetGroup updatedPillSheetGroup,
   }) {
     assert(pillSheetGroupID != null);
 
@@ -119,15 +119,21 @@ extension PillSheetModifiedHistoryServiceActionFactory
       differencePillCount =
           after.lastTakenPillNumber - before.lastTakenPillNumber;
     } else {
-      final effectedPillSheets = pillSheetGroup.pillSheets
+      final effectedPillSheets = updatedPillSheetGroup.pillSheets
           .sublist(before.groupIndex, after.groupIndex + 1);
       int pastedCount = 0;
       effectedPillSheets.forEach((pillSheet) {
-        if (after.groupIndex != pillSheet.groupIndex) {
+        if (after.groupIndex != pillSheet.groupIndex &&
+            before.groupIndex != pillSheet.groupIndex) {
           pastedCount += pillSheet.typeInfo.totalCount;
         }
       });
-      differencePillCount = pastedCount;
+
+      final filledBeforePillSheetPillCount =
+          before.typeInfo.totalCount - before.lastTakenPillNumber;
+      differencePillCount = filledBeforePillSheetPillCount +
+          pastedCount +
+          after.lastTakenPillNumber;
     }
 
     return _create(
