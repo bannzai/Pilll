@@ -117,7 +117,6 @@ class CalendarPillSheetModifiedHistoryList extends StatelessWidget {
                         estimatedEventCausingDate:
                             history.estimatedEventCausingDate,
                         value: history.value.takenPill,
-                        beforePillSheet: history.before,
                         afterPillSheet: history.after,
                       );
                     case PillSheetModifiedActionType.revertTakenPill:

@@ -120,8 +120,6 @@ extension PillSheetModifiedHistoryServiceActionFactory
           afterLastTakenPillNumber: after.lastTakenPillNumber,
           beforeLastTakenDate: before.lastTakenDate,
           beforeLastTakenPillNumber: before.lastTakenPillNumber,
-          before: before,
-          after: after,
         ),
       ),
       after: after,
