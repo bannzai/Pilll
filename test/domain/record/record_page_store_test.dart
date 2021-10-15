@@ -284,6 +284,7 @@ void main() {
         after: pillSheet.copyWith(
           lastTakenDate: _today,
         ),
+        pillSheetGroup: pillSheetGroup,
       );
       final pillSheetModifiedHistoryService =
           MockPillSheetModifiedHistoryService();
@@ -403,6 +404,7 @@ void main() {
         after: pillSheet.copyWith(
           lastTakenDate: _today,
         ),
+        pillSheetGroup: pillSheetGroup,
       );
       final pillSheetModifiedHistoryService =
           MockPillSheetModifiedHistoryService();
@@ -524,6 +526,7 @@ void main() {
         after: pillSheet2.copyWith(
           lastTakenDate: _today,
         ),
+        pillSheetGroup: pillSheetGroup,
       );
       final pillSheetModifiedHistoryService =
           MockPillSheetModifiedHistoryService();
@@ -648,6 +651,7 @@ void main() {
         after: pillSheet2.copyWith(
           lastTakenDate: _today,
         ),
+        pillSheetGroup: pillSheetGroup,
       );
       final pillSheetModifiedHistoryService =
           MockPillSheetModifiedHistoryService();
