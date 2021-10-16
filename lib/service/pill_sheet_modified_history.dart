@@ -1,6 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:pilll/database/database.dart';
 import 'package:pilll/entity/pill_sheet.dart';
+import 'package:pilll/entity/pill_sheet_group.dart';
 import 'package:pilll/entity/pill_sheet_modified_history.dart';
 import 'package:pilll/entity/pill_sheet_modified_history_value.dart';
 import 'package:pilll/util/datetime/day.dart';
@@ -103,6 +104,7 @@ extension PillSheetModifiedHistoryServiceActionFactory
     required String? pillSheetGroupID,
     required PillSheet before,
     required PillSheet after,
+    required PillSheetGroup updatedPillSheetGroup,
   }) {
     assert(pillSheetGroupID != null);
 
@@ -112,6 +114,28 @@ extension PillSheetModifiedHistoryServiceActionFactory
       throw FormatException(
           "unexpected afterPillSheetID: $afterID or lastTakenDate:${after.lastTakenDate} is null for takenPill action");
     }
+    final int differencePillCount;
+    if (before.groupIndex == after.groupIndex) {
+      differencePillCount =
+          after.lastTakenPillNumber - before.lastTakenPillNumber;
+    } else {
+      final effectedPillSheets = updatedPillSheetGroup.pillSheets
+          .sublist(before.groupIndex, after.groupIndex + 1);
+      int pastedCount = 0;
+      effectedPillSheets.forEach((pillSheet) {
+        if (after.groupIndex != pillSheet.groupIndex &&
+            before.groupIndex != pillSheet.groupIndex) {
+          pastedCount += pillSheet.typeInfo.totalCount;
+        }
+      });
+
+      final filledBeforePillSheetPillCount =
+          before.typeInfo.totalCount - before.lastTakenPillNumber;
+      differencePillCount = filledBeforePillSheetPillCount +
+          pastedCount +
+          after.lastTakenPillNumber;
+    }
+
     return _create(
       actionType: PillSheetModifiedActionType.takenPill,
       value: PillSheetModifiedHistoryValue(
@@ -120,6 +144,7 @@ extension PillSheetModifiedHistoryServiceActionFactory
           afterLastTakenPillNumber: after.lastTakenPillNumber,
           beforeLastTakenDate: before.lastTakenDate,
           beforeLastTakenPillNumber: before.lastTakenPillNumber,
+          differencePillCount: differencePillCount,
         ),
       ),
       after: after,
