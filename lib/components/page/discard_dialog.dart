@@ -1,27 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:pilll/components/atoms/buttons.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 
 class DiscardDialog extends StatelessWidget {
   final String title;
   final Widget message;
-  final String doneButtonText;
-  final Function() done;
-  final Function()? cancel;
+  final List<Widget> actions;
 
   const DiscardDialog({
     Key? key,
     required this.title,
     required this.message,
-    required this.doneButtonText,
-    required this.done,
-    this.cancel,
+    required this.actions,
   }) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    final cancel = this.cancel;
     return AlertDialog(
       title: SvgPicture.asset("images/alert_24.svg", width: 24, height: 24),
       content: Column(
@@ -29,7 +23,11 @@ class DiscardDialog extends StatelessWidget {
         mainAxisSize: MainAxisSize.min,
         children: <Widget>[
           if (title.isNotEmpty) ...[
-            Text(title, style: FontType.subTitle.merge(TextColorStyle.main)),
+            Text(
+              title,
+              style: FontType.subTitle.merge(TextColorStyle.main),
+              textAlign: TextAlign.center,
+            ),
             SizedBox(
               height: 15,
             ),
@@ -37,23 +35,7 @@ class DiscardDialog extends StatelessWidget {
           message,
         ],
       ),
-      actions: <Widget>[
-        SecondaryButton(
-          text: "キャンセル",
-          onPressed: cancel != null
-              ? () => cancel()
-              : () {
-                  Navigator.of(context).pop();
-                },
-        ),
-        SecondaryButton(
-          text: doneButtonText,
-          onPressed: () {
-            done();
-            Navigator.of(context).pop();
-          },
-        ),
-      ],
+      actions: actions,
     );
   }
 }
@@ -62,18 +44,15 @@ showDiscardDialog(
   BuildContext context, {
   required String title,
   required String message,
-  required VoidCallback done,
-  required String doneText,
-  VoidCallback? cancel,
+  required List<Widget> actions,
 }) {
   showDialog(
     context: context,
     builder: (context) => DiscardDialog(
-        title: title,
-        message:
-            Text(message, style: FontType.assisting.merge(TextColorStyle.main)),
-        doneButtonText: doneText,
-        done: done,
-        cancel: cancel),
+      title: title,
+      message:
+          Text(message, style: FontType.assisting.merge(TextColorStyle.main)),
+      actions: actions,
+    ),
   );
 }
