@@ -114,7 +114,6 @@ abstract class TakenPillValue implements _$TakenPillValue {
         required DateTime afterLastTakenDate,
     required int beforeLastTakenPillNumber,
     required int afterLastTakenPillNumber,
-    required int? differencePillCount,
   }) = _TakenPillValue;
 
   factory TakenPillValue.fromJson(Map<String, dynamic> json) =>
