@@ -8,16 +8,21 @@ import 'package:pilll/entity/pill_sheet_modified_history_value.dart';
 
 class TakenPillActionOList extends StatelessWidget {
   final TakenPillValue value;
+  final PillSheet beforePillSheet;
   final PillSheet afterPillSheet;
 
   const TakenPillActionOList({
     Key? key,
     required this.value,
+    required this.beforePillSheet,
     required this.afterPillSheet,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
+    if (beforePillSheet.groupIndex != afterPillSheet.groupIndex) {
+      return SvgPicture.asset("images/dots.svg");
+    }
     final count = max(
         value.afterLastTakenPillNumber - (value.beforeLastTakenPillNumber), 1);
     return Container(
