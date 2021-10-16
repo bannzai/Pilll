@@ -110,6 +110,7 @@ Future<PillSheetGroup?> take({
     pillSheetGroupID: pillSheetGroup.id,
     before: before,
     after: after,
+    updatedPillSheetGroup: updatedPillSheetGroup,
   );
   pillSheetModifiedHistoryService.add(batch, history);
 
