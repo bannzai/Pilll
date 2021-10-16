@@ -80,17 +80,29 @@ class MenstruationEditPage extends HookWidget {
                                 builder: (context) => DiscardDialog(
                                   title: "生理期間を削除しますか？",
                                   message: Text(""),
-                                  doneButtonText: "削除する",
-                                  done: () => store
-                                      .delete()
-                                      .then((_) => didEndDelete())
-                                      .then((_) => analytics.logEvent(
-                                          name: "pressed_delete_menstruation")),
-                                  cancel: () {
-                                    analytics.logEvent(
-                                        name: "cancelled_delete_menstruation");
-                                    Navigator.of(context).pop();
-                                  },
+                                  actions: [
+                                    SecondaryButton(
+                                      text: "キャンセル",
+                                      onPressed: () {
+                                        analytics.logEvent(
+                                            name:
+                                                "cancelled_delete_menstruation");
+                                        Navigator.of(context).pop();
+                                      },
+                                    ),
+                                    SecondaryButton(
+                                      text: "削除する",
+                                      onPressed: () {
+                                        store
+                                            .delete()
+                                            .then((_) => didEndDelete())
+                                            .then((_) => analytics.logEvent(
+                                                name:
+                                                    "pressed_delete_menstruation"));
+                                        Navigator.of(context).pop();
+                                      },
+                                    ),
+                                  ],
                                 ),
                               );
                             } else if (store.isDismissWhenSaveButtonPressed()) {

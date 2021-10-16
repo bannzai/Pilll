@@ -23,10 +23,21 @@ class DeleteUserButton extends StatelessWidget {
             context,
             title: "ユーザー情報が削除されます",
             message: "退会をするとすべてデータが削除され、二度と同じアカウントでログインができなくなります。",
-            doneText: "退会する",
-            done: () async {
-              await _delete(context);
-            },
+            actions: [
+              SecondaryButton(
+                text: "キャンセル",
+                onPressed: () {
+                  Navigator.of(context).pop();
+                },
+              ),
+              SecondaryButton(
+                text: "退会する",
+                onPressed: () async {
+                  await _delete(context);
+                  Navigator.of(context).pop();
+                },
+              ),
+            ],
           );
         },
         text: "退会する",
@@ -53,18 +64,29 @@ class DeleteUserButton extends StatelessWidget {
           context,
           title: "再ログインしてください",
           message: "退会前に本人確認のために再ログインをしてください。再ログイン後、自動的に退会処理が始まります",
-          done: () async {
-            if (isLinkedApple()) {
-              await appleReauthentification();
-            } else if (isLinkedGoogle()) {
-              await googleReauthentification();
-            } else {
-              errorLogger.log("it is not cooperate account");
-              exit(1);
-            }
-            await _delete(context);
-          },
-          doneText: "再ログイン",
+          actions: [
+            SecondaryButton(
+              text: "キャンセル",
+              onPressed: () {
+                Navigator.of(context).pop();
+              },
+            ),
+            SecondaryButton(
+              text: "再ログイン",
+              onPressed: () async {
+                if (isLinkedApple()) {
+                  await appleReauthentification();
+                } else if (isLinkedGoogle()) {
+                  await googleReauthentification();
+                } else {
+                  errorLogger.log("it is not cooperate account");
+                  exit(1);
+                }
+                await _delete(context);
+                Navigator.of(context).pop();
+              },
+            ),
+          ],
         );
       } else {
         errorLogger.recordError(error, stackTrace);

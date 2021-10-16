@@ -1,3 +1,4 @@
+import 'package:pilll/components/atoms/buttons.dart';
 import 'package:pilll/components/page/discard_dialog.dart';
 import 'package:pilll/domain/diary/post_diary_page.dart';
 import 'package:pilll/entity/diary.dart';
@@ -81,15 +82,27 @@ class ConfirmDiarySheet extends HookWidget {
                 context: context,
                 builder: (context) {
                   return DiscardDialog(
-                      title: "日記を削除します",
-                      message: Text("削除された日記は復元ができません",
-                          style: FontType.assisting.merge(TextColorStyle.main)),
-                      doneButtonText: "削除する",
-                      done: () {
-                        int counter = 0;
-                        store.delete().then((value) => Navigator.popUntil(
-                            context, (route) => counter++ >= 1));
-                      });
+                    title: "日記を削除します",
+                    message: Text("削除された日記は復元ができません",
+                        style: FontType.assisting.merge(TextColorStyle.main)),
+                    actions: [
+                      SecondaryButton(
+                        text: "キャンセル",
+                        onPressed: () {
+                          Navigator.of(context).pop();
+                        },
+                      ),
+                      SecondaryButton(
+                        text: "削除する",
+                        onPressed: () {
+                          int counter = 0;
+                          store.delete().then((value) => Navigator.popUntil(
+                              context, (route) => counter++ >= 1));
+                          Navigator.of(context).pop();
+                        },
+                      ),
+                    ],
+                  );
                 });
           },
         ),
