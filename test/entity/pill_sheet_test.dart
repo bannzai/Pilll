@@ -252,6 +252,8 @@ void main() {
       todayRepository = mockTodayRepository;
       when(mockTodayRepository.now())
           .thenReturn(DateTime(2020, 9, 29, 23, 59, 59));
+      when(mockTodayRepository.today())
+          .thenReturn(DateTime.parse("2020-09-29"));
 
       final sheetType = PillSheetType.pillsheet_21;
       final model = PillSheet(
