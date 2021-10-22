@@ -338,6 +338,33 @@ void main() {
       );
       expect(model.isActive, false);
     });
+    test("it is deactive pattern. for contains ended rest duration", () {
+      final mockTodayRepository = MockTodayService();
+      todayRepository = mockTodayRepository;
+      when(mockTodayRepository.now())
+          .thenReturn(DateTime(2020, 9, 30, 23, 59, 59));
+      when(mockTodayRepository.today())
+          .thenReturn(DateTime.parse("2020-09-30"));
+
+      final sheetType = PillSheetType.pillsheet_21;
+      final model = PillSheet(
+        beginingDate: DateTime.parse("2020-09-01"),
+        typeInfo: PillSheetTypeInfo(
+          dosingPeriod: sheetType.dosingPeriod,
+          name: sheetType.fullName,
+          totalCount: sheetType.totalCount,
+          pillSheetTypeReferencePath: sheetType.rawPath,
+        ),
+        restDurations: [
+          RestDuration(
+            beginDate: DateTime.parse("2020-09-20"),
+            createdDate: DateTime.parse("2020-09-20"),
+            endDate: DateTime.parse("2020-09-21"),
+          ),
+        ],
+      );
+      expect(model.isActive, false);
+    });
   });
   group("#isReached", () {
     test("it is not out of range pattern. today: 2020-09-19, begin: 2020-09-14",
