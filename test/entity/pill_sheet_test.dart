@@ -246,6 +246,32 @@ void main() {
       expect(model.isActive, true);
     });
     test(
+        "it is active pattern. for avoid out of active duration when during rest duration",
+        () {
+      final mockTodayRepository = MockTodayService();
+      todayRepository = mockTodayRepository;
+      when(mockTodayRepository.now())
+          .thenReturn(DateTime(2020, 9, 29, 23, 59, 59));
+
+      final sheetType = PillSheetType.pillsheet_21;
+      final model = PillSheet(
+        beginingDate: DateTime.parse("2020-09-01"),
+        typeInfo: PillSheetTypeInfo(
+          dosingPeriod: sheetType.dosingPeriod,
+          name: sheetType.fullName,
+          totalCount: sheetType.totalCount,
+          pillSheetTypeReferencePath: sheetType.rawPath,
+        ),
+        restDurations: [
+          RestDuration(
+              beginDate: DateTime.parse("2020-09-20"),
+              createdDate: DateTime.parse("2020-09-20"),
+              endDate: null),
+        ],
+      );
+      expect(model.isActive, true);
+    });
+    test(
         "it is deactive pattern. Boundary testing. now: 2020-09-29 23:59:59, begin: 2020-09-01",
         () {
       final mockTodayRepository = MockTodayService();
