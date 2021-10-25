@@ -60,18 +60,6 @@ class SettingTodayPillNumberStateStore
     required PillSheetGroup pillSheetGroup,
     required PillSheet activedPillSheet,
   }) async {
-    final int currentPillNumberIntoGroup;
-    if (pillSheetGroup.endedPillSheets.isNotEmpty) {
-      currentPillNumberIntoGroup = pillSheetGroup.endedPillSheets
-              .map((pillSheet) =>
-                  pillSheet.pillSheetType.totalCount +
-                  summarizedRestDuration(pillSheet.restDurations))
-              .reduce((value, element) => value + element) +
-          activedPillSheet.todayPillNumber;
-    } else {
-      currentPillNumberIntoGroup = activedPillSheet.todayPillNumber;
-    }
-
     final batch = _batchFactory.batch();
 
     final pillSheetTypes =
@@ -83,7 +71,8 @@ class SettingTodayPillNumberStateStore
             ) +
             state.selectedPillMarkNumberIntoPillSheet;
 
-    final distance = nextSerializedPillNumber - currentPillNumberIntoGroup;
+    final distance =
+        nextSerializedPillNumber - pillSheetGroup.serializedTodayPillNumber;
     final List<PillSheet> updatedPillSheets = [];
     pillSheetGroup.pillSheets.asMap().keys.forEach((index) {
       final pillSheet =
