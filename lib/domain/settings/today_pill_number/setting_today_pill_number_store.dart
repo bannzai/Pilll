@@ -99,6 +99,7 @@ class SettingTodayPillNumberStateStore
         // state.selectedPillMarkNumberIntoPillSheet < index
         lastTakenDate = null;
       }
+
       final updatedPillSheet = pillSheet.copyWith(
           beginingDate: beginDate,
           lastTakenDate: lastTakenDate,
