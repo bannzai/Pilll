@@ -514,7 +514,7 @@ void main() {
         "group has three pill sheet and it is changed direction middle to left",
         () async {
       var mockTodayRepository = MockTodayService();
-      final _today = DateTime.parse("2022-05-01");
+      final _today = DateTime.parse("2022-05-02");
       todayRepository = mockTodayRepository;
       when(mockTodayRepository.today()).thenReturn(_today);
       when(mockTodayRepository.now()).thenReturn(_today);
@@ -532,13 +532,14 @@ void main() {
           RestDuration(
             beginDate: DateTime.parse("2022-04-03"),
             createdDate: DateTime.parse("2022-04-03"),
+            endDate: DateTime.parse("2022-04-04"),
           ),
         ],
       );
       final middle = PillSheet(
         id: "sheet_id_middle",
         typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
-        beginingDate: DateTime.parse("2022-05-01"),
+        beginingDate: DateTime.parse("2022-05-02"),
         groupIndex: 1,
         lastTakenDate: null,
       );
@@ -550,15 +551,15 @@ void main() {
         lastTakenDate: null,
       );
       final updatedLeft = left.copyWith(
-        beginingDate: DateTime.parse("2022-04-04"),
-        lastTakenDate: DateTime.parse("2022-04-30"), // todayPillNumber - 1
+        beginingDate: DateTime.parse("2022-04-05"),
+        lastTakenDate: DateTime.parse("2022-05-01"), // todayPillNumber - 1
         restDurations: [],
       );
       final updatedMiddle = middle.copyWith(
-        beginingDate: DateTime.parse("2022-05-02"),
+        beginingDate: DateTime.parse("2022-05-03"),
       );
       final updatedRight = right.copyWith(
-        beginingDate: DateTime.parse("2022-05-30"),
+        beginingDate: DateTime.parse("2022-05-31"),
       );
       final pillSheetService = MockPillSheetService();
       when(pillSheetService.update(batch, [
