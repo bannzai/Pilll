@@ -187,3 +187,8 @@ int summarizedRestDuration(List<RestDuration> restDurations) {
     }
   }).reduce((value, element) => value + element);
 }
+
+int countOfPillSheetTotalDay(PillSheet pillSheet) {
+  return pillSheet.typeInfo.totalCount +
+      summarizedRestDuration(pillSheet.restDurations);
+}
