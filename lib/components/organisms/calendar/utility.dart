@@ -23,10 +23,9 @@ List<DateRange> scheduledOrInTheMiddleMenstruationDateRanges(
   }
   assert(maxPageCount > 0);
 
-  final totalPillCount = summarizedPillSheetTypeTotalCountToPageIndex(
-      pillSheetTypes:
-          pillSheetGroup.pillSheets.map((e) => e.pillSheetType).toList(),
-      pageIndex: pillSheetGroup.pillSheets.length - 1);
+  final totalPillCount = pillSheetGroup.pillSheets
+      .map((e) => e.pillSheetType.totalCount)
+      .reduce((value, element) => value + element);
   final List<DateRange> dateRanges = [];
   // 大体の数を計算
   for (int i = 0; i < maxPageCount; i++) {
@@ -95,10 +94,9 @@ List<DateRange> nextPillSheetDateRanges(
   assert(maxPageCount > 0);
 
   // 大体の数を計算
-  final totalPillCount = summarizedPillSheetTypeTotalCountToPageIndex(
-      pillSheetTypes:
-          pillSheetGroup.pillSheets.map((e) => e.pillSheetType).toList(),
-      pageIndex: pillSheetGroup.pillSheets.length - 1);
+  final totalPillCount = pillSheetGroup.pillSheets
+      .map((e) => e.pillSheetType.totalCount)
+      .reduce((value, element) => value + element);
   final count = max(maxPageCount, pillSheetGroup.pillSheets.length) /
       pillSheetGroup.pillSheets.length;
   return List.generate(count.toInt(), (groupPageIndex) {
