@@ -58,12 +58,6 @@ abstract class PillSheetGroup implements _$PillSheetGroup {
     return copyWith(pillSheets: copied);
   }
 
-  int get totalPillCountIntoGroup {
-    return pillSheets
-        .map((pillSheet) => pillSheet.pillSheetType.totalCount)
-        .reduce((value, element) => value + element);
-  }
-
   bool get _isDeleted => deletedAt != null;
   bool get isDeactived => activedPillSheet == null || _isDeleted;
   bool get hasPillSheetRestDuration =>
