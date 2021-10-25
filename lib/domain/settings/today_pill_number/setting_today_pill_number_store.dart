@@ -60,20 +60,26 @@ class SettingTodayPillNumberStateStore
     required PillSheetGroup pillSheetGroup,
     required PillSheet activedPillSheet,
   }) async {
-    final currentPillNumberIntoGroup = pillSheetGroup.serializedTodayPillNumber;
-    if (currentPillNumberIntoGroup == null) {
-      throw FormatException("有効なピルシートのデータが見つかりませんでした");
+    final int currentPillNumberIntoGroup;
+    if (pillSheetGroup.endedPillSheets.isNotEmpty) {
+      currentPillNumberIntoGroup = pillSheetGroup.endedPillSheets
+              .map((pillSheet) => pillSheet.pillSheetType.totalCount)
+              .reduce((value, element) => value + element) +
+          activedPillSheet.todayPillNumber;
+    } else {
+      currentPillNumberIntoGroup = activedPillSheet.todayPillNumber;
     }
 
     final batch = _batchFactory.batch();
 
     final pillSheetTypes =
         pillSheetGroup.pillSheets.map((e) => e.pillSheetType).toList();
-    final nextSerializedPillNumber = summarizedPillSheetTypeTotalCountToPageIndex(
-          pillSheetTypes: pillSheetTypes,
-          pageIndex: state.selectedPillSheetPageIndex,
-        ) +
-        state.selectedPillMarkNumberIntoPillSheet;
+    final nextSerializedPillNumber =
+        summarizedPillSheetTypeTotalCountToPageIndex(
+              pillSheetTypes: pillSheetTypes,
+              pageIndex: state.selectedPillSheetPageIndex,
+            ) +
+            state.selectedPillMarkNumberIntoPillSheet;
 
     final distance = nextSerializedPillNumber - currentPillNumberIntoGroup;
     final List<PillSheet> updatedPillSheets = [];

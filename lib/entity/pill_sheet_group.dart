@@ -74,24 +74,6 @@ abstract class PillSheetGroup implements _$PillSheetGroup {
     return endedPillSheets;
   }
 
-  // Return null means invalid data or activedPillSheet is not found
-  int? get serializedTodayPillNumber {
-    final activedPillSheet = this.activedPillSheet;
-    if (activedPillSheet == null) {
-      return null;
-    }
-
-    if (endedPillSheets.isNotEmpty) {
-      final passedPillCount = endedPillSheets
-          .map((pillSheet) => pillSheet.pillSheetType.totalCount)
-          .reduce((value, element) => value + element);
-      return passedPillCount + activedPillSheet.todayPillNumber;
-    } else {
-      // Group has only one PillSheet
-      return activedPillSheet.todayPillNumber;
-    }
-  }
-
   // Return 0 means pillSheets is empty
   int get remainPillCount {
     if (pillSheets.isEmpty) {
