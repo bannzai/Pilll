@@ -78,7 +78,8 @@ class SettingTodayPillNumberStateStore
     final distance = nextSerializedPillNumber - currentPillNumberIntoGroup;
     final List<PillSheet> updatedPillSheets = [];
     pillSheetGroup.pillSheets.asMap().keys.forEach((index) {
-      final pillSheet = pillSheetGroup.pillSheets[index];
+      final pillSheet =
+          pillSheetGroup.pillSheets[index].copyWith(restDurations: []);
       final beginingDate =
           pillSheet.beginingDate.subtract(Duration(days: distance));
       final DateTime? lastTakenDate;
