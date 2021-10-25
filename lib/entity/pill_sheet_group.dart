@@ -64,7 +64,7 @@ abstract class PillSheetGroup implements _$PillSheetGroup {
         .reduce((value, element) => value + element);
   }
 
-  List<PillSheet> get passedPillSheet {
+  List<PillSheet> get endedPillSheets {
     final activedPillSheet = this.activedPillSheet;
     if (activedPillSheet == null) {
       return pillSheets;
@@ -81,8 +81,8 @@ abstract class PillSheetGroup implements _$PillSheetGroup {
       return null;
     }
 
-    if (passedPillSheet.isNotEmpty) {
-      final passedPillCount = passedPillSheet
+    if (endedPillSheets.isNotEmpty) {
+      final passedPillCount = endedPillSheets
           .map((pillSheet) => pillSheet.pillSheetType.totalCount)
           .reduce((value, element) => value + element);
       return passedPillCount + activedPillSheet.todayPillNumber;
@@ -115,10 +115,10 @@ abstract class PillSheetGroup implements _$PillSheetGroup {
     if (latestTakenPillSheet == null) {
       return 0;
     }
-    if (passedPillSheet.isEmpty) {
+    if (endedPillSheets.isEmpty) {
       return 0;
     }
-    final passedPillCount = passedPillSheet
+    final passedPillCount = endedPillSheets
         .map((pillSheet) => pillSheet.pillSheetType.totalCount)
         .reduce((value, element) => value + element);
     return passedPillCount + latestTakenPillSheet.lastTakenPillNumber;
