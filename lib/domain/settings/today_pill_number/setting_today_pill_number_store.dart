@@ -63,7 +63,9 @@ class SettingTodayPillNumberStateStore
     final int currentPillNumberIntoGroup;
     if (pillSheetGroup.endedPillSheets.isNotEmpty) {
       currentPillNumberIntoGroup = pillSheetGroup.endedPillSheets
-              .map((pillSheet) => pillSheet.pillSheetType.totalCount)
+              .map((pillSheet) =>
+                  pillSheet.pillSheetType.totalCount +
+                  summarizedRestDuration(pillSheet.restDurations))
               .reduce((value, element) => value + element) +
           activedPillSheet.todayPillNumber;
     } else {
