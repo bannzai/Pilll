@@ -83,21 +83,6 @@ abstract class PillSheetGroup implements _$PillSheetGroup {
         element.pillSheetType.totalCount != element.lastTakenPillNumber);
   }
 
-  // Return 0 means pillSheets is empty
-  int get latestTakenSerializedPillNumber {
-    final latestTakenPillSheet = this.latestTakenPillSheet;
-    if (latestTakenPillSheet == null) {
-      return 0;
-    }
-    if (endedPillSheets.isEmpty) {
-      return 0;
-    }
-    final passedPillCount = endedPillSheets
-        .map((pillSheet) => pillSheet.pillSheetType.totalCount)
-        .reduce((value, element) => value + element);
-    return passedPillCount + latestTakenPillSheet.lastTakenPillNumber;
-  }
-
   bool get _isDeleted => deletedAt != null;
   bool get isDeactived => activedPillSheet == null || _isDeleted;
   bool get hasPillSheetRestDuration =>
