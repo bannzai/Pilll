@@ -74,14 +74,6 @@ abstract class PillSheetGroup implements _$PillSheetGroup {
     return endedPillSheets;
   }
 
-  // Return 0 means pillSheets is empty
-  int get remainPillCount {
-    if (pillSheets.isEmpty) {
-      return 0;
-    }
-    return totalPillCountIntoGroup - latestTakenSerializedPillNumber;
-  }
-
   // Return null means pillSheets is empty
   PillSheet? get latestTakenPillSheet {
     if (pillSheets.isEmpty) {
