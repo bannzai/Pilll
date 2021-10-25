@@ -71,9 +71,9 @@ class SettingTodayPillNumberStateStore
               pageIndex: state.selectedPillSheetPageIndex,
             ) +
             state.selectedPillMarkNumberIntoPillSheet;
-
     final firstPilSheetBeginDate =
         today().subtract(Duration(days: nextSerializedPillNumber));
+
     final List<PillSheet> updatedPillSheets = [];
     pillSheetGroup.pillSheets.asMap().keys.forEach((index) {
       final pillSheet = pillSheetGroup.pillSheets[index];
