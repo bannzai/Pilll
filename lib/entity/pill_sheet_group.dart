@@ -64,16 +64,6 @@ abstract class PillSheetGroup implements _$PillSheetGroup {
         .reduce((value, element) => value + element);
   }
 
-  List<PillSheet> get endedPillSheets {
-    final activedPillSheet = this.activedPillSheet;
-    if (activedPillSheet == null) {
-      return pillSheets;
-    }
-    final index = pillSheets.indexOf(activedPillSheet);
-    final endedPillSheets = pillSheets.sublist(0, index);
-    return endedPillSheets;
-  }
-
   bool get _isDeleted => deletedAt != null;
   bool get isDeactived => activedPillSheet == null || _isDeleted;
   bool get hasPillSheetRestDuration =>
