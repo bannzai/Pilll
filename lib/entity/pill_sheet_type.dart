@@ -182,7 +182,7 @@ extension PillSheetTypeFunctions on PillSheetType {
       (totalCount / Weekday.values.length).ceil();
 }
 
-int passedTotalCount(
+int summarizedPillSheetTypeTotalCountToPageIndex(
     {required List<PillSheetType> pillSheetTypes, required int pageIndex}) {
   if (pageIndex == 0) {
     return 0;

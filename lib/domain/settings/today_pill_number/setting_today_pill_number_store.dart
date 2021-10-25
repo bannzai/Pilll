@@ -69,7 +69,7 @@ class SettingTodayPillNumberStateStore
 
     final pillSheetTypes =
         pillSheetGroup.pillSheets.map((e) => e.pillSheetType).toList();
-    final nextSerializedPillNumber = passedTotalCount(
+    final nextSerializedPillNumber = summarizedPillSheetTypeTotalCountToPageIndex(
           pillSheetTypes: pillSheetTypes,
           pageIndex: state.selectedPillSheetPageIndex,
         ) +
@@ -123,7 +123,7 @@ int _pillNumberIntoPillSheet({
 }) {
   final pillSheetTypes =
       pillSheetGroup.pillSheets.map((e) => e.pillSheetType).toList();
-  final _passedTotalCount = passedTotalCount(
+  final _passedTotalCount = summarizedPillSheetTypeTotalCountToPageIndex(
       pillSheetTypes: pillSheetTypes, pageIndex: activedPillSheet.groupIndex);
   if (_passedTotalCount >= activedPillSheet.todayPillNumber) {
     return activedPillSheet.todayPillNumber;
