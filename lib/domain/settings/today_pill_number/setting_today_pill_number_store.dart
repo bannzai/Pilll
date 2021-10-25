@@ -9,6 +9,7 @@ import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/service/pill_sheet.dart';
 import 'package:pilll/service/pill_sheet_group.dart';
 import 'package:pilll/service/pill_sheet_modified_history.dart';
+import 'package:pilll/util/datetime/day.dart';
 import 'package:riverpod/riverpod.dart';
 
 final settingTodayPillNumberStoreProvider =
@@ -71,29 +72,37 @@ class SettingTodayPillNumberStateStore
             ) +
             state.selectedPillMarkNumberIntoPillSheet;
 
-    final distance =
-        nextSerializedPillNumber - pillSheetGroup.serializedTodayPillNumber;
+    final firstPilSheetBeginDate =
+        today().subtract(Duration(days: nextSerializedPillNumber));
     final List<PillSheet> updatedPillSheets = [];
     pillSheetGroup.pillSheets.asMap().keys.forEach((index) {
-      final pillSheet =
-          pillSheetGroup.pillSheets[index].copyWith(restDurations: []);
-      final beginingDate =
-          pillSheet.beginingDate.subtract(Duration(days: distance));
+      final pillSheet = pillSheetGroup.pillSheets[index];
+
+      final DateTime beginDate;
+      if (index == 0) {
+        beginDate = firstPilSheetBeginDate;
+      } else {
+        final passedTotalCount = summarizedPillSheetTypeTotalCountToPageIndex(
+            pillSheetTypes: pillSheetTypes, pageIndex: index);
+        beginDate =
+            firstPilSheetBeginDate.add(Duration(days: passedTotalCount));
+      }
+
       final DateTime? lastTakenDate;
       if (state.selectedPillSheetPageIndex == index) {
-        lastTakenDate = beginingDate
+        lastTakenDate = beginDate
             .add(Duration(days: state.selectedPillMarkNumberIntoPillSheet - 2));
       } else if (state.selectedPillSheetPageIndex > index) {
-        lastTakenDate = beginingDate
+        lastTakenDate = beginDate
             .add(Duration(days: pillSheet.pillSheetType.totalCount - 1));
       } else {
         // state.selectedPillMarkNumberIntoPillSheet < index
         lastTakenDate = null;
       }
       final updatedPillSheet = pillSheet.copyWith(
-        beginingDate: beginingDate,
-        lastTakenDate: lastTakenDate,
-      );
+          beginingDate: beginDate,
+          lastTakenDate: lastTakenDate,
+          restDurations: []);
       updatedPillSheets.add(updatedPillSheet);
     });
 
