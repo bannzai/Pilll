@@ -74,15 +74,6 @@ abstract class PillSheetGroup implements _$PillSheetGroup {
     return endedPillSheets;
   }
 
-  // Return null means pillSheets is empty
-  PillSheet? get latestTakenPillSheet {
-    if (pillSheets.isEmpty) {
-      return null;
-    }
-    return pillSheets.firstWhere((element) =>
-        element.pillSheetType.totalCount != element.lastTakenPillNumber);
-  }
-
   bool get _isDeleted => deletedAt != null;
   bool get isDeactived => activedPillSheet == null || _isDeleted;
   bool get hasPillSheetRestDuration =>
