@@ -173,7 +173,7 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
       batch,
       setting.pillSheetTypes.asMap().keys.map((pageIndex) {
         final pillSheetType = setting.pillSheetTypes[pageIndex];
-        final offset = passedTotalCount(
+        final offset = summarizedPillSheetTypeTotalCountToPageIndex(
             pillSheetTypes: setting.pillSheetTypes, pageIndex: pageIndex);
         return PillSheet(
           typeInfo: pillSheetType.typeInfo,
