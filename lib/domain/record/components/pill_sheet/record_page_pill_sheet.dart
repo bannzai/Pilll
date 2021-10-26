@@ -14,6 +14,7 @@ import 'package:pilll/entity/pill_sheet_group.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/entity/setting.dart';
 import 'package:pilll/entity/weekday.dart';
+import 'package:pilll/util/datetime/day.dart';
 
 class RecordPagePillSheet extends StatelessWidget {
   final PillSheetGroup pillSheetGroup;
@@ -124,8 +125,19 @@ class RecordPagePillSheet extends StatelessWidget {
     required int pillNumberIntoPillSheet,
     required int pageIndex,
   }) {
-    final date =
-        pillSheet.beginingDate.add(Duration(days: pillNumberIntoPillSheet - 1));
+    final DateTime date = () {
+      final d = pillSheet.beginingDate
+          .add(Duration(days: pillNumberIntoPillSheet - 1))
+          .date();
+      final activedRestDuration = pillSheet.activeRestDuration;
+      if (activedRestDuration != null &&
+          d.isAfter(activedRestDuration.beginDate.date())) {
+        final diff = daysBetween(activedRestDuration.beginDate.date(), today());
+        return d.add(Duration(days: diff));
+      } else {
+        return d;
+      }
+    }();
     final isDateMode = () {
       if (!(state.isPremium || state.isTrial)) {
         return false;
