@@ -1,15 +1,57 @@
+import 'package:mockito/mockito.dart';
 import 'package:pilll/domain/record/components/pill_sheet/record_page_pill_sheet.dart';
 import 'package:pilll/entity/pill_sheet.dart';
 import 'package:pilll/entity/pill_sheet_group.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:pilll/entity/setting.dart';
+import 'package:pilll/service/day.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+
+import '../../../helper/mock.mocks.dart';
 
 void main() {
   setUp(() {
     TestWidgetsFlutterBinding.ensureInitialized();
     SharedPreferences.setMockInitialValues({});
+  });
+  group("#RecordPagePillSheet.calculatedDateOfAppearancePill", () {
+    test("it is not have rest duration", () {
+      final originalTodayRepository = todayRepository;
+      final mockTodayRepository = MockTodayService();
+      todayRepository = mockTodayRepository;
+      when(mockTodayRepository.now()).thenReturn(DateTime.parse("2020-09-01"));
+      when(mockTodayRepository.today())
+          .thenReturn(DateTime.parse("2020-09-01"));
+      addTearDown(() {
+        todayRepository = originalTodayRepository;
+      });
+
+      final PillSheet pillSheet = PillSheet(
+          typeInfo: PillSheetType.pillsheet_21_0.typeInfo,
+          beginingDate: DateTime.parse("2020-09-01"));
+
+      expect(RecordPagePillSheet.calculatedDateOfAppearancePill(pillSheet, 1),
+          DateTime.parse("2020-09-01"));
+      expect(RecordPagePillSheet.calculatedDateOfAppearancePill(pillSheet, 2),
+          DateTime.parse("2020-09-02"));
+      expect(RecordPagePillSheet.calculatedDateOfAppearancePill(pillSheet, 3),
+          DateTime.parse("2020-09-03"));
+
+      expect(RecordPagePillSheet.calculatedDateOfAppearancePill(pillSheet, 10),
+          DateTime.parse("2020-09-10"));
+      expect(RecordPagePillSheet.calculatedDateOfAppearancePill(pillSheet, 11),
+          DateTime.parse("2020-09-11"));
+      expect(RecordPagePillSheet.calculatedDateOfAppearancePill(pillSheet, 12),
+          DateTime.parse("2020-09-12"));
+
+      expect(RecordPagePillSheet.calculatedDateOfAppearancePill(pillSheet, 26),
+          DateTime.parse("2020-09-26"));
+      expect(RecordPagePillSheet.calculatedDateOfAppearancePill(pillSheet, 27),
+          DateTime.parse("2020-09-27"));
+      expect(RecordPagePillSheet.calculatedDateOfAppearancePill(pillSheet, 28),
+          DateTime.parse("2020-09-28"));
+    });
   });
   group("#RecordPagePillSheet.isContainedMenstruationDuration", () {
     test("group has only one pill sheet", () async {
