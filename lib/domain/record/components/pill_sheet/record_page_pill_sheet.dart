@@ -125,19 +125,8 @@ class RecordPagePillSheet extends StatelessWidget {
     required int pillNumberIntoPillSheet,
     required int pageIndex,
   }) {
-    final DateTime date = () {
-      final d = pillSheet.beginingDate
-          .add(Duration(days: pillNumberIntoPillSheet - 1))
-          .date();
-      final activedRestDuration = pillSheet.activeRestDuration;
-      if (activedRestDuration != null &&
-          d.isAfter(activedRestDuration.beginDate.date())) {
-        final diff = daysBetween(activedRestDuration.beginDate.date(), today());
-        return d.add(Duration(days: diff));
-      } else {
-        return d;
-      }
-    }();
+    final DateTime date =
+        calculatedDateOfAppearancePill(pillSheet, pillNumberIntoPillSheet);
     final isDateMode = () {
       if (!(state.isPremium || state.isTrial)) {
         return false;
@@ -231,6 +220,21 @@ class RecordPagePillSheet extends StatelessWidget {
         .where((element) => element.contains(serialiedPillNumber))
         .isNotEmpty;
     return isContainedMenstruationDuration;
+  }
+
+  static DateTime calculatedDateOfAppearancePill(
+      PillSheet pillSheet, int pillNumberIntoPillSheet) {
+    final date = pillSheet.beginingDate
+        .add(Duration(days: pillNumberIntoPillSheet - 1))
+        .date();
+    final activedRestDuration = pillSheet.activeRestDuration;
+    if (activedRestDuration != null &&
+        date.isAfter(activedRestDuration.beginDate.date())) {
+      final diff = daysBetween(activedRestDuration.beginDate.date(), today());
+      return date.add(Duration(days: diff));
+    } else {
+      return date;
+    }
   }
 }
 
