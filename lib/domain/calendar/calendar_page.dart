@@ -1,14 +1,12 @@
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:pilll/analytics.dart';
-import 'package:pilll/components/atoms/buttons.dart';
 import 'package:pilll/components/molecules/indicator.dart';
 import 'package:pilll/domain/calendar/calendar_state.dart';
 import 'package:pilll/domain/calendar/components/calendar_card.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
-import 'package:pilll/domain/calendar/components/calendar_help.dart';
 import 'package:pilll/domain/calendar/components/pill_sheet_modified_history/pill_sheet_modified_history_card.dart';
 import 'package:pilll/domain/home/home_page.dart';
 import 'package:pilll/domain/calendar/calendar_store.dart';
@@ -38,19 +36,7 @@ class CalendarPage extends HookWidget {
         backgroundColor: PilllColors.background,
         appBar: AppBar(
           leading: Container(),
-          actions: [
-            IconButton(
-              icon: SvgPicture.asset("images/help.svg"),
-              onPressed: () {
-                analytics.logEvent(name: "pressed_calendar_help");
-                showDialog(
-                    context: context,
-                    builder: (_) {
-                      return CalendarHelpPage();
-                    });
-              },
-            ),
-          ],
+          actions: [],
           title: CalendarModifyMonth(
               state: state,
               itemScrollController: itemScrollController,
