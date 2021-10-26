@@ -52,17 +52,6 @@ class MenstruationPage extends HookWidget {
     return Scaffold(
       backgroundColor: PilllColors.background,
       appBar: AppBar(
-        actions: [
-          AppBarTextActionButton(
-              onPressed: () {
-                analytics.logEvent(name: "menstruation_to_today_pressed");
-                store.updateCurrentCalendarIndex(state.todayCalendarIndex);
-                itemScrollController.scrollTo(
-                    index: state.todayCalendarIndex,
-                    duration: Duration(milliseconds: 300));
-              },
-              text: "今日"),
-        ],
         title: SizedBox(
           child: Text(
             state.displayMonth,

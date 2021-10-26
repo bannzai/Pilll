@@ -37,15 +37,7 @@ class CalendarPage extends HookWidget {
       return Scaffold(
         backgroundColor: PilllColors.background,
         appBar: AppBar(
-          leading: AppBarTextActionButton(
-              onPressed: () {
-                analytics.logEvent(name: "calendar_to_today_pressed");
-                store.updateCurrentCalendarIndex(state.todayCalendarIndex);
-                itemScrollController.scrollTo(
-                    index: state.todayCalendarIndex,
-                    duration: Duration(milliseconds: 300));
-              },
-              text: "今日"),
+          leading: Container(),
           actions: [
             IconButton(
               icon: SvgPicture.asset("images/help.svg"),
