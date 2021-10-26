@@ -35,8 +35,6 @@ class CalendarPage extends HookWidget {
       return Scaffold(
         backgroundColor: PilllColors.background,
         appBar: AppBar(
-          leading: Container(),
-          actions: [],
           title: CalendarModifyMonth(
               state: state,
               itemScrollController: itemScrollController,
