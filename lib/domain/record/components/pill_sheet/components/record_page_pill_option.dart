@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:pilll/components/atoms/buttons.dart';
 import 'package:pilll/components/organisms/pill_sheet/pill_sheet_view_layout.dart';
 import 'package:pilll/components/page/discard_dialog.dart';
+import 'package:pilll/domain/record/components/appearance_mode/pill_sheet_appearance_mode_switch.dart';
 import 'package:pilll/domain/record/components/pill_sheet/components/record_page_rest_duration_dialog.dart';
 import 'package:pilll/domain/record/record_page_store.dart';
 import 'package:pilll/entity/pill_sheet.dart';
@@ -26,6 +27,7 @@ class RecordPagePillOption extends StatelessWidget {
     return Container(
       width: PillSheetViewLayout.width,
       child: Row(children: [
+        PillSheetAppearanceModeSwitch(),
         Spacer(),
         if (!pillSheetGroup.hasPillSheetRestDuration)
           SizedBox(
