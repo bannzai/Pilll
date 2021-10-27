@@ -53,105 +53,348 @@ void main() {
           DateTime.parse("2020-09-28"));
     });
     group("it is have rest duration", () {
-      test("restDuration.beginDate is same day to today", () {
-        final originalTodayRepository = todayRepository;
-        final mockTodayRepository = MockTodayService();
-        todayRepository = mockTodayRepository;
-        when(mockTodayRepository.now())
-            .thenReturn(DateTime.parse("2020-09-10"));
-        when(mockTodayRepository.today())
-            .thenReturn(DateTime.parse("2020-09-10"));
-        addTearDown(() {
-          todayRepository = originalTodayRepository;
+      group("it is not ended rest duration", () {
+        test(
+            "pillSheet.lastTakenDate is today and restDuration.beginDate is today",
+            () {
+          final originalTodayRepository = todayRepository;
+          final mockTodayRepository = MockTodayService();
+          todayRepository = mockTodayRepository;
+          when(mockTodayRepository.now())
+              .thenReturn(DateTime.parse("2020-09-10"));
+          when(mockTodayRepository.today())
+              .thenReturn(DateTime.parse("2020-09-10"));
+          addTearDown(() {
+            todayRepository = originalTodayRepository;
+          });
+
+          final PillSheet pillSheet = PillSheet(
+            typeInfo: PillSheetType.pillsheet_21_0.typeInfo,
+            beginingDate: DateTime.parse("2020-09-01"),
+            lastTakenDate: DateTime.parse("2020-09-10"),
+            restDurations: [
+              RestDuration(
+                beginDate: DateTime.parse("2020-09-10"),
+                createdDate: DateTime.parse("2020-09-10"),
+              ),
+            ],
+          );
+
+          expect(
+              RecordPagePillSheet.calculatedDateOfAppearancePill(pillSheet, 1),
+              DateTime.parse("2020-09-01"));
+          expect(
+              RecordPagePillSheet.calculatedDateOfAppearancePill(pillSheet, 2),
+              DateTime.parse("2020-09-02"));
+          expect(
+              RecordPagePillSheet.calculatedDateOfAppearancePill(pillSheet, 3),
+              DateTime.parse("2020-09-03"));
+
+          expect(
+              RecordPagePillSheet.calculatedDateOfAppearancePill(pillSheet, 10),
+              DateTime.parse("2020-09-10"));
+          expect(
+              RecordPagePillSheet.calculatedDateOfAppearancePill(pillSheet, 11),
+              DateTime.parse("2020-09-11"));
+          expect(
+              RecordPagePillSheet.calculatedDateOfAppearancePill(pillSheet, 12),
+              DateTime.parse("2020-09-12"));
+
+          expect(
+              RecordPagePillSheet.calculatedDateOfAppearancePill(pillSheet, 26),
+              DateTime.parse("2020-09-26"));
+          expect(
+              RecordPagePillSheet.calculatedDateOfAppearancePill(pillSheet, 27),
+              DateTime.parse("2020-09-27"));
+          expect(
+              RecordPagePillSheet.calculatedDateOfAppearancePill(pillSheet, 28),
+              DateTime.parse("2020-09-28"));
         });
+        test(
+            "pillSheet.lastTakenDate is today and restDuration.beginDate is today",
+            () {
+          final originalTodayRepository = todayRepository;
+          final mockTodayRepository = MockTodayService();
+          todayRepository = mockTodayRepository;
+          when(mockTodayRepository.now())
+              .thenReturn(DateTime.parse("2020-09-10"));
+          when(mockTodayRepository.today())
+              .thenReturn(DateTime.parse("2020-09-10"));
+          addTearDown(() {
+            todayRepository = originalTodayRepository;
+          });
 
-        final PillSheet pillSheet = PillSheet(
-          typeInfo: PillSheetType.pillsheet_21_0.typeInfo,
-          beginingDate: DateTime.parse("2020-09-01"),
-          restDurations: [
-            RestDuration(
-              beginDate: DateTime.parse("2020-09-10"),
-              createdDate: DateTime.parse("2020-09-10"),
-            ),
-          ],
-        );
+          final PillSheet pillSheet = PillSheet(
+            typeInfo: PillSheetType.pillsheet_21_0.typeInfo,
+            beginingDate: DateTime.parse("2020-09-01"),
+            lastTakenDate: DateTime.parse("2020-09-10"),
+            restDurations: [
+              RestDuration(
+                beginDate: DateTime.parse("2020-09-10"),
+                createdDate: DateTime.parse("2020-09-10"),
+              ),
+            ],
+          );
 
-        expect(RecordPagePillSheet.calculatedDateOfAppearancePill(pillSheet, 1),
-            DateTime.parse("2020-09-01"));
-        expect(RecordPagePillSheet.calculatedDateOfAppearancePill(pillSheet, 2),
-            DateTime.parse("2020-09-02"));
-        expect(RecordPagePillSheet.calculatedDateOfAppearancePill(pillSheet, 3),
-            DateTime.parse("2020-09-03"));
+          expect(
+              RecordPagePillSheet.calculatedDateOfAppearancePill(pillSheet, 1),
+              DateTime.parse("2020-09-01"));
+          expect(
+              RecordPagePillSheet.calculatedDateOfAppearancePill(pillSheet, 2),
+              DateTime.parse("2020-09-02"));
+          expect(
+              RecordPagePillSheet.calculatedDateOfAppearancePill(pillSheet, 3),
+              DateTime.parse("2020-09-03"));
 
-        expect(
-            RecordPagePillSheet.calculatedDateOfAppearancePill(pillSheet, 10),
-            DateTime.parse("2020-09-10"));
-        expect(
-            RecordPagePillSheet.calculatedDateOfAppearancePill(pillSheet, 11),
-            DateTime.parse("2020-09-11"));
-        expect(
-            RecordPagePillSheet.calculatedDateOfAppearancePill(pillSheet, 12),
-            DateTime.parse("2020-09-12"));
+          expect(
+              RecordPagePillSheet.calculatedDateOfAppearancePill(pillSheet, 10),
+              DateTime.parse("2020-09-10"));
+          expect(
+              RecordPagePillSheet.calculatedDateOfAppearancePill(pillSheet, 11),
+              DateTime.parse("2020-09-11"));
+          expect(
+              RecordPagePillSheet.calculatedDateOfAppearancePill(pillSheet, 12),
+              DateTime.parse("2020-09-12"));
 
-        expect(
-            RecordPagePillSheet.calculatedDateOfAppearancePill(pillSheet, 26),
-            DateTime.parse("2020-09-26"));
-        expect(
-            RecordPagePillSheet.calculatedDateOfAppearancePill(pillSheet, 27),
-            DateTime.parse("2020-09-27"));
-        expect(
-            RecordPagePillSheet.calculatedDateOfAppearancePill(pillSheet, 28),
-            DateTime.parse("2020-09-28"));
+          expect(
+              RecordPagePillSheet.calculatedDateOfAppearancePill(pillSheet, 26),
+              DateTime.parse("2020-09-26"));
+          expect(
+              RecordPagePillSheet.calculatedDateOfAppearancePill(pillSheet, 27),
+              DateTime.parse("2020-09-27"));
+          expect(
+              RecordPagePillSheet.calculatedDateOfAppearancePill(pillSheet, 28),
+              DateTime.parse("2020-09-28"));
+        });
+        test(
+            "pillSheet.lastTakenDate is yesterday and restDuration.beginDate is yesterday",
+            () {
+          final originalTodayRepository = todayRepository;
+          final mockTodayRepository = MockTodayService();
+          todayRepository = mockTodayRepository;
+          when(mockTodayRepository.now())
+              .thenReturn(DateTime.parse("2020-09-11"));
+          when(mockTodayRepository.today())
+              .thenReturn(DateTime.parse("2020-09-11"));
+          addTearDown(() {
+            todayRepository = originalTodayRepository;
+          });
+
+          final PillSheet pillSheet = PillSheet(
+            typeInfo: PillSheetType.pillsheet_21_0.typeInfo,
+            beginingDate: DateTime.parse("2020-09-01"),
+            lastTakenDate: DateTime.parse("2020-09-10"),
+            restDurations: [
+              RestDuration(
+                beginDate: DateTime.parse("2020-09-10"),
+                createdDate: DateTime.parse("2020-09-10"),
+              ),
+            ],
+          );
+
+          expect(
+              RecordPagePillSheet.calculatedDateOfAppearancePill(pillSheet, 1),
+              DateTime.parse("2020-09-01"));
+          expect(
+              RecordPagePillSheet.calculatedDateOfAppearancePill(pillSheet, 2),
+              DateTime.parse("2020-09-02"));
+          expect(
+              RecordPagePillSheet.calculatedDateOfAppearancePill(pillSheet, 3),
+              DateTime.parse("2020-09-03"));
+
+          expect(
+              RecordPagePillSheet.calculatedDateOfAppearancePill(pillSheet, 10),
+              DateTime.parse("2020-09-10"));
+          expect(
+              RecordPagePillSheet.calculatedDateOfAppearancePill(pillSheet, 11),
+              DateTime.parse("2020-09-11"));
+          expect(
+              RecordPagePillSheet.calculatedDateOfAppearancePill(pillSheet, 12),
+              DateTime.parse("2020-09-12"));
+
+          expect(
+              RecordPagePillSheet.calculatedDateOfAppearancePill(pillSheet, 26),
+              DateTime.parse("2020-09-26"));
+          expect(
+              RecordPagePillSheet.calculatedDateOfAppearancePill(pillSheet, 27),
+              DateTime.parse("2020-09-27"));
+          expect(
+              RecordPagePillSheet.calculatedDateOfAppearancePill(pillSheet, 28),
+              DateTime.parse("2020-09-28"));
+        });
+        test(
+            "pillSheet.lastTakenDate is two days ago and restDuration.beginDate is two days ago",
+            () {
+          final originalTodayRepository = todayRepository;
+          final mockTodayRepository = MockTodayService();
+          todayRepository = mockTodayRepository;
+          when(mockTodayRepository.now())
+              .thenReturn(DateTime.parse("2020-09-12"));
+          when(mockTodayRepository.today())
+              .thenReturn(DateTime.parse("2020-09-12"));
+          addTearDown(() {
+            todayRepository = originalTodayRepository;
+          });
+
+          final PillSheet pillSheet = PillSheet(
+            typeInfo: PillSheetType.pillsheet_21_0.typeInfo,
+            beginingDate: DateTime.parse("2020-09-01"),
+            lastTakenDate: DateTime.parse("2020-09-10"),
+            restDurations: [
+              RestDuration(
+                beginDate: DateTime.parse("2020-09-10"),
+                createdDate: DateTime.parse("2020-09-10"),
+              ),
+            ],
+          );
+
+          expect(
+              RecordPagePillSheet.calculatedDateOfAppearancePill(pillSheet, 1),
+              DateTime.parse("2020-09-01"));
+          expect(
+              RecordPagePillSheet.calculatedDateOfAppearancePill(pillSheet, 2),
+              DateTime.parse("2020-09-02"));
+          expect(
+              RecordPagePillSheet.calculatedDateOfAppearancePill(pillSheet, 3),
+              DateTime.parse("2020-09-03"));
+
+          expect(
+              RecordPagePillSheet.calculatedDateOfAppearancePill(pillSheet, 10),
+              DateTime.parse("2020-09-10"));
+          expect(
+              RecordPagePillSheet.calculatedDateOfAppearancePill(pillSheet, 11),
+              DateTime.parse("2020-09-12"));
+          expect(
+              RecordPagePillSheet.calculatedDateOfAppearancePill(pillSheet, 12),
+              DateTime.parse("2020-09-13"));
+
+          expect(
+              RecordPagePillSheet.calculatedDateOfAppearancePill(pillSheet, 26),
+              DateTime.parse("2020-09-27"));
+          expect(
+              RecordPagePillSheet.calculatedDateOfAppearancePill(pillSheet, 27),
+              DateTime.parse("2020-09-28"));
+          expect(
+              RecordPagePillSheet.calculatedDateOfAppearancePill(pillSheet, 28),
+              DateTime.parse("2020-09-29"));
+        });
       });
-      test("restDuration.beginDate + 1.day is today", () {
-        final originalTodayRepository = todayRepository;
-        final mockTodayRepository = MockTodayService();
-        todayRepository = mockTodayRepository;
-        when(mockTodayRepository.now())
-            .thenReturn(DateTime.parse("2020-09-11"));
-        when(mockTodayRepository.today())
-            .thenReturn(DateTime.parse("2020-09-11"));
-        addTearDown(() {
-          todayRepository = originalTodayRepository;
+      group("it is not ended rest duration", () {
+        test(
+            "pillSheet.lastTakenDate is yesterday and restDuration.endDate is today",
+            () {
+          final originalTodayRepository = todayRepository;
+          final mockTodayRepository = MockTodayService();
+          todayRepository = mockTodayRepository;
+          when(mockTodayRepository.now())
+              .thenReturn(DateTime.parse("2020-09-11"));
+          when(mockTodayRepository.today())
+              .thenReturn(DateTime.parse("2020-09-11"));
+          addTearDown(() {
+            todayRepository = originalTodayRepository;
+          });
+
+          final PillSheet pillSheet = PillSheet(
+            typeInfo: PillSheetType.pillsheet_21_0.typeInfo,
+            beginingDate: DateTime.parse("2020-09-01"),
+            lastTakenDate: DateTime.parse("2020-09-10"),
+            restDurations: [
+              RestDuration(
+                beginDate: DateTime.parse("2020-09-10"),
+                createdDate: DateTime.parse("2020-09-10"),
+                endDate: DateTime.parse("2020-09-11"),
+              ),
+            ],
+          );
+
+          expect(
+              RecordPagePillSheet.calculatedDateOfAppearancePill(pillSheet, 1),
+              DateTime.parse("2020-09-01"));
+          expect(
+              RecordPagePillSheet.calculatedDateOfAppearancePill(pillSheet, 2),
+              DateTime.parse("2020-09-02"));
+          expect(
+              RecordPagePillSheet.calculatedDateOfAppearancePill(pillSheet, 3),
+              DateTime.parse("2020-09-03"));
+
+          expect(
+              RecordPagePillSheet.calculatedDateOfAppearancePill(pillSheet, 10),
+              DateTime.parse("2020-09-10"));
+          expect(
+              RecordPagePillSheet.calculatedDateOfAppearancePill(pillSheet, 11),
+              DateTime.parse("2020-09-11"));
+          expect(
+              RecordPagePillSheet.calculatedDateOfAppearancePill(pillSheet, 12),
+              DateTime.parse("2020-09-12"));
+
+          expect(
+              RecordPagePillSheet.calculatedDateOfAppearancePill(pillSheet, 26),
+              DateTime.parse("2020-09-26"));
+          expect(
+              RecordPagePillSheet.calculatedDateOfAppearancePill(pillSheet, 27),
+              DateTime.parse("2020-09-27"));
+          expect(
+              RecordPagePillSheet.calculatedDateOfAppearancePill(pillSheet, 28),
+              DateTime.parse("2020-09-28"));
         });
 
-        final PillSheet pillSheet = PillSheet(
-          typeInfo: PillSheetType.pillsheet_21_0.typeInfo,
-          beginingDate: DateTime.parse("2020-09-01"),
-          restDurations: [
-            RestDuration(
-              beginDate: DateTime.parse("2020-09-10"),
-              createdDate: DateTime.parse("2020-09-10"),
-            ),
-          ],
-        );
+        test(
+            "pillSheet.lastTakenDate is two days ago and restDuration.endDate is today",
+            () {
+          final originalTodayRepository = todayRepository;
+          final mockTodayRepository = MockTodayService();
+          todayRepository = mockTodayRepository;
+          when(mockTodayRepository.now())
+              .thenReturn(DateTime.parse("2020-09-12"));
+          when(mockTodayRepository.today())
+              .thenReturn(DateTime.parse("2020-09-12"));
+          addTearDown(() {
+            todayRepository = originalTodayRepository;
+          });
 
-        expect(RecordPagePillSheet.calculatedDateOfAppearancePill(pillSheet, 1),
-            DateTime.parse("2020-09-01"));
-        expect(RecordPagePillSheet.calculatedDateOfAppearancePill(pillSheet, 2),
-            DateTime.parse("2020-09-02"));
-        expect(RecordPagePillSheet.calculatedDateOfAppearancePill(pillSheet, 3),
-            DateTime.parse("2020-09-03"));
+          final PillSheet pillSheet = PillSheet(
+            typeInfo: PillSheetType.pillsheet_21_0.typeInfo,
+            beginingDate: DateTime.parse("2020-09-01"),
+            lastTakenDate: DateTime.parse("2020-09-10"),
+            restDurations: [
+              RestDuration(
+                beginDate: DateTime.parse("2020-09-10"),
+                createdDate: DateTime.parse("2020-09-10"),
+                endDate: DateTime.parse("2020-09-11"),
+              ),
+            ],
+          );
 
-        expect(
-            RecordPagePillSheet.calculatedDateOfAppearancePill(pillSheet, 10),
-            DateTime.parse("2020-09-10"));
-        expect(
-            RecordPagePillSheet.calculatedDateOfAppearancePill(pillSheet, 11),
-            DateTime.parse("2020-09-12"));
-        expect(
-            RecordPagePillSheet.calculatedDateOfAppearancePill(pillSheet, 12),
-            DateTime.parse("2020-09-13"));
+          expect(
+              RecordPagePillSheet.calculatedDateOfAppearancePill(pillSheet, 1),
+              DateTime.parse("2020-09-01"));
+          expect(
+              RecordPagePillSheet.calculatedDateOfAppearancePill(pillSheet, 2),
+              DateTime.parse("2020-09-02"));
+          expect(
+              RecordPagePillSheet.calculatedDateOfAppearancePill(pillSheet, 3),
+              DateTime.parse("2020-09-03"));
 
-        expect(
-            RecordPagePillSheet.calculatedDateOfAppearancePill(pillSheet, 26),
-            DateTime.parse("2020-09-27"));
-        expect(
-            RecordPagePillSheet.calculatedDateOfAppearancePill(pillSheet, 27),
-            DateTime.parse("2020-09-28"));
-        expect(
-            RecordPagePillSheet.calculatedDateOfAppearancePill(pillSheet, 28),
-            DateTime.parse("2020-09-29"));
+          expect(
+              RecordPagePillSheet.calculatedDateOfAppearancePill(pillSheet, 10),
+              DateTime.parse("2020-09-10"));
+          expect(
+              RecordPagePillSheet.calculatedDateOfAppearancePill(pillSheet, 11),
+              DateTime.parse("2020-09-12"));
+          expect(
+              RecordPagePillSheet.calculatedDateOfAppearancePill(pillSheet, 12),
+              DateTime.parse("2020-09-13"));
+
+          expect(
+              RecordPagePillSheet.calculatedDateOfAppearancePill(pillSheet, 26),
+              DateTime.parse("2020-09-27"));
+          expect(
+              RecordPagePillSheet.calculatedDateOfAppearancePill(pillSheet, 27),
+              DateTime.parse("2020-09-28"));
+          expect(
+              RecordPagePillSheet.calculatedDateOfAppearancePill(pillSheet, 28),
+              DateTime.parse("2020-09-29"));
+        });
       });
     });
   });
