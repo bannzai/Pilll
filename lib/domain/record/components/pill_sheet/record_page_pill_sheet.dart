@@ -5,6 +5,7 @@ import 'package:pilll/components/organisms/pill_mark/pill_mark_line.dart';
 import 'package:pilll/components/organisms/pill_mark/pill_mark_with_number_layout.dart';
 import 'package:pilll/components/organisms/pill_sheet/pill_sheet_view_layout.dart';
 import 'package:pilll/components/organisms/pill_sheet/pill_sheet_view_weekday_line.dart';
+import 'package:pilll/domain/calendar/date_range.dart';
 import 'package:pilll/domain/record/components/pill_sheet/components/pill_number.dart';
 import 'package:pilll/domain/record/record_page_state.dart';
 import 'package:pilll/domain/record/record_page_store.dart';
@@ -14,6 +15,7 @@ import 'package:pilll/entity/pill_sheet_group.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/entity/setting.dart';
 import 'package:pilll/entity/weekday.dart';
+import 'package:pilll/util/datetime/date_compare.dart';
 import 'package:pilll/util/datetime/day.dart';
 
 class RecordPagePillSheet extends StatelessWidget {
@@ -227,13 +229,40 @@ class RecordPagePillSheet extends StatelessWidget {
     final date = pillSheet.beginingDate
         .add(Duration(days: pillNumberIntoPillSheet - 1))
         .date();
-    final activedRestDuration = pillSheet.activeRestDuration;
-    if (activedRestDuration != null &&
-        date.isAfter(activedRestDuration.beginDate.date())) {
-      final diff = daysBetween(activedRestDuration.beginDate.date(), today());
-      return date.add(Duration(days: diff));
-    } else {
+    if (pillSheet.restDurations.isEmpty) {
       return date;
+    }
+
+    final activedRestDurationBeginDate =
+        pillSheet.activeRestDuration?.beginDate.date();
+    if (activedRestDurationBeginDate != null) {
+      if (!date.isAfter(activedRestDurationBeginDate)) {
+        return date;
+      }
+    }
+
+    final restDurationsBetweenTargetDate =
+        pillSheet.restDurations.where((element) {
+      final endDate = element.endDate;
+      if (endDate == null) {
+        return element.beginDate.isBefore(date) ||
+            isSameDay(element.beginDate, date);
+      } else if (endDate.isAfter(date)) {
+        return true;
+      } else {
+        return DateRange(element.beginDate, endDate).inRange(date);
+      }
+    }).toList();
+    final restDuration = summarizedRestDuration(restDurationsBetweenTargetDate);
+    if (restDuration <= 1) {
+      return date;
+    }
+
+    final lastTakenDate = pillSheet.lastTakenDate?.date();
+    if (lastTakenDate != null && !date.isAfter(lastTakenDate)) {
+      return date;
+    } else {
+      return date.add(Duration(days: restDuration - 1));
     }
   }
 }
