@@ -12,7 +12,7 @@ class DateRange {
   static bool isSameDay(DateTime a, DateTime b) =>
       a.year == b.year && a.month == b.month && a.day == b.day;
   bool inRange(DateTime date) =>
-      date.isAfter(begin) && date.isBefore(end) ||
+      (date.isAfter(begin) && date.isBefore(end)) ||
       DateRange.isSameDay(date, begin) ||
       DateRange.isSameDay(date, end);
   DateRange union(DateRange range) {
