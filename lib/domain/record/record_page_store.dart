@@ -350,6 +350,9 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
     required int pillNumberIntoPillSheet,
     required PillSheet pillSheet,
   }) {
+    if (state.pillSheetGroup?.activedPillSheet?.activeRestDuration != null) {
+      return false;
+    }
     final activedPillSheet = state.pillSheetGroup?.activedPillSheet;
     if (activedPillSheet == null) {
       throw FormatException("pill sheet not found");
