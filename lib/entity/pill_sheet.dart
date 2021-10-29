@@ -133,7 +133,19 @@ abstract class PillSheet implements _$PillSheet {
     if (endedRestDurations.isEmpty) {
       return lastTakenPillNumber;
     }
-    return lastTakenPillNumber - summarizedRestDuration(endedRestDurations);
+
+    final summarizedRestDuration = restDurations.map((e) {
+      final endDate = e.endDate;
+      if (endDate == null) {
+        return daysBetween(e.beginDate, today());
+      } else if (lastTakenDate.isAfter(e.beginDate)) {
+        return daysBetween(e.beginDate, endDate);
+      } else {
+        return 0;
+      }
+    }).reduce((value, element) => value + element);
+
+    return lastTakenPillNumber - summarizedRestDuration;
   }
 
   bool get isAllTaken => todayPillNumber == lastTakenPillNumber;
