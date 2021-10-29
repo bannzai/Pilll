@@ -5,7 +5,6 @@ import 'package:pilll/components/organisms/pill_mark/pill_mark_line.dart';
 import 'package:pilll/components/organisms/pill_mark/pill_mark_with_number_layout.dart';
 import 'package:pilll/components/organisms/pill_sheet/pill_sheet_view_layout.dart';
 import 'package:pilll/components/organisms/pill_sheet/pill_sheet_view_weekday_line.dart';
-import 'package:pilll/domain/calendar/date_range.dart';
 import 'package:pilll/domain/record/components/pill_sheet/components/pill_number.dart';
 import 'package:pilll/domain/record/record_page_state.dart';
 import 'package:pilll/domain/record/record_page_store.dart';
@@ -231,49 +230,20 @@ class RecordPagePillSheet extends StatelessWidget {
     if (pillSheet.restDurations.isEmpty) {
       return date;
     }
-    final lastTakenDate = pillSheet.lastTakenDate?.date();
-    if (lastTakenDate != null && !date.isAfter(lastTakenDate)) {
-      return date;
-    }
-
-    final passedOrDuringRestDurationFilter = (RestDuration element) {
-      final endDate = element.endDate;
-      if (endDate == null) {
-        return true;
+    int distance = 0;
+    pillSheet.restDurations.forEach((restDuration) {
+      if (date.isBefore(restDuration.beginDate)) {
+        return;
+      }
+      final endDate = restDuration.endDate;
+      if (endDate != null && date.isAfter(endDate)) {
+        distance += daysBetween(restDuration.beginDate, endDate);
       } else {
-        return endDate.isBefore(date);
+        distance += daysBetween(restDuration.beginDate, date);
       }
-    };
+    });
 
-    final lastRestDuration = pillSheet.restDurations.last;
-    final lastRestDurationEndDate = lastRestDuration.endDate;
-    if (lastRestDurationEndDate == null) {
-      final restDurations = pillSheet.restDurations
-          .where(passedOrDuringRestDurationFilter)
-          .toList();
-      final restDuration = summarizedRestDuration(restDurations);
-      if (restDuration <= 1) {
-        return date;
-      }
-      return date.add(Duration(days: restDuration - 1));
-    } else if (DateRange(lastRestDuration.beginDate, lastRestDurationEndDate)
-        .inRange(date.subtract(Duration(seconds: 1)))) {
-      final restDurationsWithoutLast = [...pillSheet.restDurations]
-        ..removeLast();
-      final restDurations = restDurationsWithoutLast
-          .where(passedOrDuringRestDurationFilter)
-          .toList();
-      final restDuration = summarizedRestDuration(restDurations);
-      final diff =
-          daysBetween(lastRestDuration.beginDate, lastRestDurationEndDate);
-      return date.add(Duration(days: restDuration + diff - 1));
-    } else {
-      final restDurations = pillSheet.restDurations
-          .where(passedOrDuringRestDurationFilter)
-          .toList();
-      final restDuration = summarizedRestDuration(restDurations);
-      return date.add(Duration(days: restDuration - 1));
-    }
+    return date.add(Duration(days: distance));
   }
 }
 
