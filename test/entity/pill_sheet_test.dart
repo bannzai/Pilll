@@ -607,7 +607,7 @@ void main() {
               pillSheetTypeReferencePath: sheetType.rawPath,
             ),
           );
-          expect(model.lastTakenPillNumber, 19);
+          expect(model.lastTakenPillNumber, 17);
         });
         test("last rest duration is ended", () {
           final mockTodayRepository = MockTodayService();
@@ -638,7 +638,7 @@ void main() {
               pillSheetTypeReferencePath: sheetType.rawPath,
             ),
           );
-          expect(model.lastTakenPillNumber, 18);
+          expect(model.lastTakenPillNumber, 19);
         });
       });
     });
