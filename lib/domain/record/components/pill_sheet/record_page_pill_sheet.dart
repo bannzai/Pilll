@@ -231,16 +231,17 @@ class RecordPagePillSheet extends StatelessWidget {
       return date;
     }
 
-    int distance = 0;
-    pillSheet.restDurations.forEach((restDuration) {
+    final distance =
+        pillSheet.restDurations.fold(0, (int result, restDuration) {
       if (date.isBefore(restDuration.beginDate.date())) {
-        return;
+        return result;
       }
+
       final endDate = restDuration.endDate?.date();
       if (endDate != null && date.isAfter(endDate)) {
-        distance += daysBetween(restDuration.beginDate.date(), endDate);
+        return result + daysBetween(restDuration.beginDate.date(), endDate);
       } else {
-        distance += daysBetween(restDuration.beginDate.date(), today());
+        return result + daysBetween(restDuration.beginDate.date(), today());
       }
     });
 
