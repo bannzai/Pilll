@@ -34,38 +34,40 @@ class RecordPagePillOption extends StatelessWidget {
               text: restDuration == null ? "休薬する" : "休薬終了",
               fontSize: 12,
               onPressed: () async {
-                if (activedPillSheet.todayPillNumber - 1 <=
-                    activedPillSheet.lastTakenPillNumber) {
-                  showDiscardDialog(
-                    context,
-                    title: "未服用のピルがある場合\n休薬できません",
-                    message:
-                        "ピル番号をタップして昨日までのピルを服用済みにしてから「休薬する」を押してください。前日以前から休薬したい場合は、「今日飲むピル番号」を調整してください。",
-                    actions: [
-                      SecondaryButton(
-                        text: "閉じる",
-                        onPressed: () {
-                          Navigator.of(context).pop();
-                        },
-                      ),
-                    ],
-                  );
-                } else if (restDuration == null) {
-                  showRecordPageRestDurationDialog(context, () async {
-                    Navigator.of(context).pop();
-                    await store.beginResting(
-                      pillSheetGroup: pillSheetGroup,
-                      activedPillSheet: activedPillSheet,
-                    );
-                    ScaffoldMessenger.of(context).showSnackBar(
-                      SnackBar(
-                        duration: Duration(
-                          seconds: 2,
+                if (restDuration == null) {
+                  if (activedPillSheet.todayPillNumber - 1 >=
+                      activedPillSheet.lastTakenPillNumber) {
+                    showDiscardDialog(
+                      context,
+                      title: "未服用のピルがある場合\n休薬できません",
+                      message:
+                          "ピル番号をタップして昨日までのピルを服用済みにしてから「休薬する」を押してください。それよりも前から休薬したい場合は、「今日飲むピル番号」を調整してください。",
+                      actions: [
+                        SecondaryButton(
+                          text: "閉じる",
+                          onPressed: () {
+                            Navigator.of(context).pop();
+                          },
                         ),
-                        content: Text("休薬期間が始まりました"),
-                      ),
+                      ],
                     );
-                  });
+                  } else {
+                    showRecordPageRestDurationDialog(context, () async {
+                      Navigator.of(context).pop();
+                      await store.beginResting(
+                        pillSheetGroup: pillSheetGroup,
+                        activedPillSheet: activedPillSheet,
+                      );
+                      ScaffoldMessenger.of(context).showSnackBar(
+                        SnackBar(
+                          duration: Duration(
+                            seconds: 2,
+                          ),
+                          content: Text("休薬期間が始まりました"),
+                        ),
+                      );
+                    });
+                  }
                 } else {
                   await store.endResting(
                     pillSheetGroup: pillSheetGroup,
