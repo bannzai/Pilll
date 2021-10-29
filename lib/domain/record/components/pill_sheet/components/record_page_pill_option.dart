@@ -35,7 +35,7 @@ class RecordPagePillOption extends StatelessWidget {
               fontSize: 12,
               onPressed: () async {
                 if (restDuration == null) {
-                  if (activedPillSheet.todayPillNumber - 1 >=
+                  if (activedPillSheet.todayPillNumber - 1 >
                       activedPillSheet.lastTakenPillNumber) {
                     showDiscardDialog(
                       context,
