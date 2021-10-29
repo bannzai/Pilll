@@ -34,12 +34,13 @@ class RecordPagePillOption extends StatelessWidget {
               text: restDuration == null ? "休薬する" : "休薬終了",
               fontSize: 12,
               onPressed: () async {
-                if (!activedPillSheet.isAllTaken) {
+                if (activedPillSheet.todayPillNumber - 1 <=
+                    activedPillSheet.lastTakenPillNumber) {
                   showDiscardDialog(
                     context,
                     title: "未服用のピルがある場合\n休薬できません",
                     message:
-                        "服用済みにしてから「休薬する」を押してください。前日以前から休薬したい場合は、「今日飲むピル番号」を調整してください。",
+                        "ピル番号をタップして昨日までのピルを服用済みにしてから「休薬する」を押してください。前日以前から休薬したい場合は、「今日飲むピル番号」を調整してください。",
                     actions: [
                       SecondaryButton(
                         text: "閉じる",
