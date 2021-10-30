@@ -128,11 +128,6 @@ abstract class PillSheet implements _$PillSheet {
     if (restDurations.isEmpty) {
       return lastTakenPillNumber;
     }
-    final endedRestDurations =
-        restDurations.where((element) => element.endDate != null).toList();
-    if (endedRestDurations.isEmpty) {
-      return lastTakenPillNumber;
-    }
 
     final summarizedRestDuration = restDurations.map((e) {
       final endDate = e.endDate;
