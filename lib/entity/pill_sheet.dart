@@ -130,6 +130,9 @@ abstract class PillSheet implements _$PillSheet {
     }
 
     final summarizedRestDuration = restDurations.map((e) {
+      if (!e.beginDate.isBefore(lastTakenDate)) {
+        return 0;
+      }
       final endDate = e.endDate;
       if (endDate == null) {
         return daysBetween(e.beginDate, today());

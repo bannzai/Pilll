@@ -607,7 +607,7 @@ void main() {
               pillSheetTypeReferencePath: sheetType.rawPath,
             ),
           );
-          expect(model.lastTakenPillNumber, 17);
+          expect(model.lastTakenPillNumber, 19);
         });
         test("last rest duration is ended", () {
           final mockTodayRepository = MockTodayService();
