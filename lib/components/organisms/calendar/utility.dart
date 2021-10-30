@@ -23,17 +23,20 @@ List<DateRange> scheduledOrInTheMiddleMenstruationDateRanges(
   }
   assert(maxPageCount > 0);
 
+  final totalPillCount = pillSheetGroup.pillSheets
+      .map((e) => e.pillSheetType.totalCount)
+      .reduce((value, element) => value + element);
   final List<DateRange> dateRanges = [];
   // 大体の数を計算
   for (int i = 0; i < maxPageCount; i++) {
-    final offset = pillSheetGroup.totalPillCountIntoGroup * i;
+    final offset = totalPillCount * i;
     for (int pageIndex = 0;
         pageIndex < pillSheetGroup.pillSheets.length;
         pageIndex++) {
       final pillSheet = pillSheetGroup.pillSheets[pageIndex];
       final pillSheetTypes =
           pillSheetGroup.pillSheets.map((e) => e.pillSheetType).toList();
-      final passedCount = passedTotalCount(
+      final passedCount = summarizedPillSheetTypeTotalCountToPageIndex(
           pillSheetTypes: pillSheetTypes, pageIndex: pageIndex);
       final serializedTotalPillNumber =
           passedCount + pillSheet.typeInfo.totalCount;
@@ -91,11 +94,14 @@ List<DateRange> nextPillSheetDateRanges(
   assert(maxPageCount > 0);
 
   // 大体の数を計算
+  final totalPillCount = pillSheetGroup.pillSheets
+      .map((e) => e.pillSheetType.totalCount)
+      .reduce((value, element) => value + element);
   final count = max(maxPageCount, pillSheetGroup.pillSheets.length) /
       pillSheetGroup.pillSheets.length;
   return List.generate(count.toInt(), (groupPageIndex) {
     return pillSheetGroup.pillSheets.map((pillSheet) {
-      final offset = groupPageIndex * pillSheetGroup.totalPillCountIntoGroup;
+      final offset = groupPageIndex * totalPillCount;
       final begin = pillSheet.estimatedLastTakenDate.add(Duration(days: 1));
       final end = begin.add(Duration(days: Weekday.values.length - 1));
       return DateRange(

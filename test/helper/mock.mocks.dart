@@ -499,6 +499,30 @@ class MockRecordPageStore extends _i1.Mock implements _i25.RecordPageStore {
   dynamic removePillSheetType(int? index, _i3.Setting? setting) => super
       .noSuchMethod(Invocation.method(#removePillSheetType, [index, setting]));
   @override
+  _i17.Future<void> beginResting(
+          {_i11.PillSheetGroup? pillSheetGroup,
+          _i2.PillSheet? activedPillSheet}) =>
+      (super.noSuchMethod(
+          Invocation.method(#beginResting, [], {
+            #pillSheetGroup: pillSheetGroup,
+            #activedPillSheet: activedPillSheet
+          }),
+          returnValue: Future<void>.value(),
+          returnValueForMissingStub: Future.value()) as _i17.Future<void>);
+  @override
+  _i17.Future<void> endResting(
+          {_i11.PillSheetGroup? pillSheetGroup,
+          _i2.PillSheet? activedPillSheet,
+          _i2.RestDuration? restDuration}) =>
+      (super.noSuchMethod(
+          Invocation.method(#endResting, [], {
+            #pillSheetGroup: pillSheetGroup,
+            #activedPillSheet: activedPillSheet,
+            #restDuration: restDuration
+          }),
+          returnValue: Future<void>.value(),
+          returnValueForMissingStub: Future.value()) as _i17.Future<void>);
+  @override
   _i26.RemoveListener addListener(_i26.Listener<_i7.RecordPageState>? listener,
           {bool? fireImmediately = true}) =>
       (super.noSuchMethod(

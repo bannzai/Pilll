@@ -144,18 +144,23 @@ class CalendarPillSheetModifiedHistoryCard extends StatelessWidget {
                                       ),
                                     ),
                                     SizedBox(height: 15),
-                                    PrimaryOutlinedButton(
-                                      text: "くわしくみる",
-                                      onPressed: () {
-                                        if (state.trialDeadlineDate == null) {
-                                          showPremiumTrialModal(context, () {
-                                            showPremiumTrialCompleteModalPreDialog(
+                                    SizedBox(
+                                      width: 204,
+                                      child: PrimaryOutlinedButton(
+                                        text: "くわしくみる",
+                                        fontSize: 16,
+                                        onPressed: () {
+                                          if (state.trialDeadlineDate == null) {
+                                            showPremiumTrialModal(context, () {
+                                              showPremiumTrialCompleteModalPreDialog(
+                                                  context);
+                                            });
+                                          } else {
+                                            showPremiumIntroductionSheet(
                                                 context);
-                                          });
-                                        } else {
-                                          showPremiumIntroductionSheet(context);
-                                        }
-                                      },
+                                          }
+                                        },
+                                      ),
                                     ),
                                   ],
                                 ),

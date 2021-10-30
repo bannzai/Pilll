@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/analytics.dart';
+import 'package:pilll/components/atoms/buttons.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/components/page/discard_dialog.dart';
@@ -23,35 +24,46 @@ class PillSheetRemoveRow extends HookWidget {
           context: context,
           builder: (_) {
             return DiscardDialog(
-                title: "ピルシートをすべて破棄しますか？",
-                message: RichText(
-                  textAlign: TextAlign.start,
-                  text: TextSpan(
-                    children: [
-                      TextSpan(
-                        text: "現在表示されている",
-                        style: FontType.assisting.merge(TextColorStyle.main),
-                      ),
-                      TextSpan(
-                        text: "すべてのピルシート",
-                        style:
-                            FontType.assistingBold.merge(TextColorStyle.main),
-                      ),
-                      TextSpan(
-                        text: "が破棄されます",
-                        style: FontType.assisting.merge(TextColorStyle.main),
-                      ),
-                    ],
-                  ),
+              title: "ピルシートをすべて破棄しますか？",
+              message: RichText(
+                textAlign: TextAlign.start,
+                text: TextSpan(
+                  children: [
+                    TextSpan(
+                      text: "現在表示されている",
+                      style: FontType.assisting.merge(TextColorStyle.main),
+                    ),
+                    TextSpan(
+                      text: "すべてのピルシート",
+                      style: FontType.assistingBold.merge(TextColorStyle.main),
+                    ),
+                    TextSpan(
+                      text: "が破棄されます",
+                      style: FontType.assisting.merge(TextColorStyle.main),
+                    ),
+                  ],
                 ),
-                doneButtonText: "破棄する",
-                done: () {
-                  store.deletePillSheet().catchError((error) {
-                    showErrorAlert(context,
-                        message:
-                            "ピルシートがすでに削除されています。表示等に問題がある場合は設定タブから「お問い合わせ」ください");
-                  }, test: (error) => error is PillSheetIsNotExists);
-                });
+              ),
+              actions: [
+                SecondaryButton(
+                  text: "キャンセル",
+                  onPressed: () {
+                    Navigator.of(context).pop();
+                  },
+                ),
+                SecondaryButton(
+                  text: "破棄する",
+                  onPressed: () {
+                    store.deletePillSheet().catchError((error) {
+                      showErrorAlert(context,
+                          message:
+                              "ピルシートがすでに削除されています。表示等に問題がある場合は設定タブから「お問い合わせ」ください");
+                    }, test: (error) => error is PillSheetIsNotExists);
+                    Navigator.of(context).pop();
+                  },
+                ),
+              ],
+            );
           },
         );
       },

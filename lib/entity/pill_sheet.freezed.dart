@@ -245,6 +245,253 @@ abstract class _PillSheetTypeInfo implements PillSheetTypeInfo {
       throw _privateConstructorUsedError;
 }
 
+RestDuration _$RestDurationFromJson(Map<String, dynamic> json) {
+  return _RestDuration.fromJson(json);
+}
+
+/// @nodoc
+class _$RestDurationTearOff {
+  const _$RestDurationTearOff();
+
+  _RestDuration call(
+      {@JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+          required DateTime beginDate,
+      @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
+          DateTime? endDate,
+      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+          required DateTime createdDate}) {
+    return _RestDuration(
+      beginDate: beginDate,
+      endDate: endDate,
+      createdDate: createdDate,
+    );
+  }
+
+  RestDuration fromJson(Map<String, Object> json) {
+    return RestDuration.fromJson(json);
+  }
+}
+
+/// @nodoc
+const $RestDuration = _$RestDurationTearOff();
+
+/// @nodoc
+mixin _$RestDuration {
+  @JsonKey(
+      fromJson: NonNullTimestampConverter.timestampToDateTime,
+      toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+  DateTime get beginDate => throw _privateConstructorUsedError;
+  @JsonKey(
+      fromJson: TimestampConverter.timestampToDateTime,
+      toJson: TimestampConverter.dateTimeToTimestamp)
+  DateTime? get endDate => throw _privateConstructorUsedError;
+  @JsonKey(
+      fromJson: NonNullTimestampConverter.timestampToDateTime,
+      toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+  DateTime get createdDate => throw _privateConstructorUsedError;
+
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
+  @JsonKey(ignore: true)
+  $RestDurationCopyWith<RestDuration> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
+/// @nodoc
+abstract class $RestDurationCopyWith<$Res> {
+  factory $RestDurationCopyWith(
+          RestDuration value, $Res Function(RestDuration) then) =
+      _$RestDurationCopyWithImpl<$Res>;
+  $Res call(
+      {@JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+          DateTime beginDate,
+      @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
+          DateTime? endDate,
+      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+          DateTime createdDate});
+}
+
+/// @nodoc
+class _$RestDurationCopyWithImpl<$Res> implements $RestDurationCopyWith<$Res> {
+  _$RestDurationCopyWithImpl(this._value, this._then);
+
+  final RestDuration _value;
+  // ignore: unused_field
+  final $Res Function(RestDuration) _then;
+
+  @override
+  $Res call({
+    Object? beginDate = freezed,
+    Object? endDate = freezed,
+    Object? createdDate = freezed,
+  }) {
+    return _then(_value.copyWith(
+      beginDate: beginDate == freezed
+          ? _value.beginDate
+          : beginDate // ignore: cast_nullable_to_non_nullable
+              as DateTime,
+      endDate: endDate == freezed
+          ? _value.endDate
+          : endDate // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
+      createdDate: createdDate == freezed
+          ? _value.createdDate
+          : createdDate // ignore: cast_nullable_to_non_nullable
+              as DateTime,
+    ));
+  }
+}
+
+/// @nodoc
+abstract class _$RestDurationCopyWith<$Res>
+    implements $RestDurationCopyWith<$Res> {
+  factory _$RestDurationCopyWith(
+          _RestDuration value, $Res Function(_RestDuration) then) =
+      __$RestDurationCopyWithImpl<$Res>;
+  @override
+  $Res call(
+      {@JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+          DateTime beginDate,
+      @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
+          DateTime? endDate,
+      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+          DateTime createdDate});
+}
+
+/// @nodoc
+class __$RestDurationCopyWithImpl<$Res> extends _$RestDurationCopyWithImpl<$Res>
+    implements _$RestDurationCopyWith<$Res> {
+  __$RestDurationCopyWithImpl(
+      _RestDuration _value, $Res Function(_RestDuration) _then)
+      : super(_value, (v) => _then(v as _RestDuration));
+
+  @override
+  _RestDuration get _value => super._value as _RestDuration;
+
+  @override
+  $Res call({
+    Object? beginDate = freezed,
+    Object? endDate = freezed,
+    Object? createdDate = freezed,
+  }) {
+    return _then(_RestDuration(
+      beginDate: beginDate == freezed
+          ? _value.beginDate
+          : beginDate // ignore: cast_nullable_to_non_nullable
+              as DateTime,
+      endDate: endDate == freezed
+          ? _value.endDate
+          : endDate // ignore: cast_nullable_to_non_nullable
+              as DateTime?,
+      createdDate: createdDate == freezed
+          ? _value.createdDate
+          : createdDate // ignore: cast_nullable_to_non_nullable
+              as DateTime,
+    ));
+  }
+}
+
+/// @nodoc
+
+@JsonSerializable(explicitToJson: true)
+class _$_RestDuration implements _RestDuration {
+  _$_RestDuration(
+      {@JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+          required this.beginDate,
+      @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
+          this.endDate,
+      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+          required this.createdDate});
+
+  factory _$_RestDuration.fromJson(Map<String, dynamic> json) =>
+      _$_$_RestDurationFromJson(json);
+
+  @override
+  @JsonKey(
+      fromJson: NonNullTimestampConverter.timestampToDateTime,
+      toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+  final DateTime beginDate;
+  @override
+  @JsonKey(
+      fromJson: TimestampConverter.timestampToDateTime,
+      toJson: TimestampConverter.dateTimeToTimestamp)
+  final DateTime? endDate;
+  @override
+  @JsonKey(
+      fromJson: NonNullTimestampConverter.timestampToDateTime,
+      toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+  final DateTime createdDate;
+
+  @override
+  String toString() {
+    return 'RestDuration(beginDate: $beginDate, endDate: $endDate, createdDate: $createdDate)';
+  }
+
+  @override
+  bool operator ==(dynamic other) {
+    return identical(this, other) ||
+        (other is _RestDuration &&
+            (identical(other.beginDate, beginDate) ||
+                const DeepCollectionEquality()
+                    .equals(other.beginDate, beginDate)) &&
+            (identical(other.endDate, endDate) ||
+                const DeepCollectionEquality()
+                    .equals(other.endDate, endDate)) &&
+            (identical(other.createdDate, createdDate) ||
+                const DeepCollectionEquality()
+                    .equals(other.createdDate, createdDate)));
+  }
+
+  @override
+  int get hashCode =>
+      runtimeType.hashCode ^
+      const DeepCollectionEquality().hash(beginDate) ^
+      const DeepCollectionEquality().hash(endDate) ^
+      const DeepCollectionEquality().hash(createdDate);
+
+  @JsonKey(ignore: true)
+  @override
+  _$RestDurationCopyWith<_RestDuration> get copyWith =>
+      __$RestDurationCopyWithImpl<_RestDuration>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$_$_RestDurationToJson(this);
+  }
+}
+
+abstract class _RestDuration implements RestDuration {
+  factory _RestDuration(
+      {@JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+          required DateTime beginDate,
+      @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
+          DateTime? endDate,
+      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+          required DateTime createdDate}) = _$_RestDuration;
+
+  factory _RestDuration.fromJson(Map<String, dynamic> json) =
+      _$_RestDuration.fromJson;
+
+  @override
+  @JsonKey(
+      fromJson: NonNullTimestampConverter.timestampToDateTime,
+      toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+  DateTime get beginDate => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(
+      fromJson: TimestampConverter.timestampToDateTime,
+      toJson: TimestampConverter.dateTimeToTimestamp)
+  DateTime? get endDate => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(
+      fromJson: NonNullTimestampConverter.timestampToDateTime,
+      toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+  DateTime get createdDate => throw _privateConstructorUsedError;
+  @override
+  @JsonKey(ignore: true)
+  _$RestDurationCopyWith<_RestDuration> get copyWith =>
+      throw _privateConstructorUsedError;
+}
+
 PillSheet _$PillSheetFromJson(Map<String, dynamic> json) {
   return _PillSheet.fromJson(json);
 }
@@ -266,7 +513,8 @@ class _$PillSheetTearOff {
           DateTime? createdAt,
       @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
           DateTime? deletedAt,
-      int groupIndex = 0}) {
+      int groupIndex = 0,
+      List<RestDuration> restDurations = const []}) {
     return _PillSheet(
       id: id,
       typeInfo: typeInfo,
@@ -275,6 +523,7 @@ class _$PillSheetTearOff {
       createdAt: createdAt,
       deletedAt: deletedAt,
       groupIndex: groupIndex,
+      restDurations: restDurations,
     );
   }
 
@@ -309,6 +558,7 @@ mixin _$PillSheet {
       toJson: TimestampConverter.dateTimeToTimestamp)
   DateTime? get deletedAt => throw _privateConstructorUsedError;
   int get groupIndex => throw _privateConstructorUsedError;
+  List<RestDuration> get restDurations => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -333,7 +583,8 @@ abstract class $PillSheetCopyWith<$Res> {
           DateTime? createdAt,
       @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
           DateTime? deletedAt,
-      int groupIndex});
+      int groupIndex,
+      List<RestDuration> restDurations});
 
   $PillSheetTypeInfoCopyWith<$Res> get typeInfo;
 }
@@ -355,6 +606,7 @@ class _$PillSheetCopyWithImpl<$Res> implements $PillSheetCopyWith<$Res> {
     Object? createdAt = freezed,
     Object? deletedAt = freezed,
     Object? groupIndex = freezed,
+    Object? restDurations = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed
@@ -385,6 +637,10 @@ class _$PillSheetCopyWithImpl<$Res> implements $PillSheetCopyWith<$Res> {
           ? _value.groupIndex
           : groupIndex // ignore: cast_nullable_to_non_nullable
               as int,
+      restDurations: restDurations == freezed
+          ? _value.restDurations
+          : restDurations // ignore: cast_nullable_to_non_nullable
+              as List<RestDuration>,
     ));
   }
 
@@ -415,7 +671,8 @@ abstract class _$PillSheetCopyWith<$Res> implements $PillSheetCopyWith<$Res> {
           DateTime? createdAt,
       @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
           DateTime? deletedAt,
-      int groupIndex});
+      int groupIndex,
+      List<RestDuration> restDurations});
 
   @override
   $PillSheetTypeInfoCopyWith<$Res> get typeInfo;
@@ -439,6 +696,7 @@ class __$PillSheetCopyWithImpl<$Res> extends _$PillSheetCopyWithImpl<$Res>
     Object? createdAt = freezed,
     Object? deletedAt = freezed,
     Object? groupIndex = freezed,
+    Object? restDurations = freezed,
   }) {
     return _then(_PillSheet(
       id: id == freezed
@@ -469,6 +727,10 @@ class __$PillSheetCopyWithImpl<$Res> extends _$PillSheetCopyWithImpl<$Res>
           ? _value.groupIndex
           : groupIndex // ignore: cast_nullable_to_non_nullable
               as int,
+      restDurations: restDurations == freezed
+          ? _value.restDurations
+          : restDurations // ignore: cast_nullable_to_non_nullable
+              as List<RestDuration>,
     ));
   }
 }
@@ -490,7 +752,8 @@ class _$_PillSheet extends _PillSheet {
           this.createdAt,
       @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
           this.deletedAt,
-      this.groupIndex = 0})
+      this.groupIndex = 0,
+      this.restDurations = const []})
       : super._();
 
   factory _$_PillSheet.fromJson(Map<String, dynamic> json) =>
@@ -525,10 +788,13 @@ class _$_PillSheet extends _PillSheet {
   @JsonKey(defaultValue: 0)
   @override
   final int groupIndex;
+  @JsonKey(defaultValue: const [])
+  @override
+  final List<RestDuration> restDurations;
 
   @override
   String toString() {
-    return 'PillSheet(id: $id, typeInfo: $typeInfo, beginingDate: $beginingDate, lastTakenDate: $lastTakenDate, createdAt: $createdAt, deletedAt: $deletedAt, groupIndex: $groupIndex)';
+    return 'PillSheet(id: $id, typeInfo: $typeInfo, beginingDate: $beginingDate, lastTakenDate: $lastTakenDate, createdAt: $createdAt, deletedAt: $deletedAt, groupIndex: $groupIndex, restDurations: $restDurations)';
   }
 
   @override
@@ -554,7 +820,10 @@ class _$_PillSheet extends _PillSheet {
                     .equals(other.deletedAt, deletedAt)) &&
             (identical(other.groupIndex, groupIndex) ||
                 const DeepCollectionEquality()
-                    .equals(other.groupIndex, groupIndex)));
+                    .equals(other.groupIndex, groupIndex)) &&
+            (identical(other.restDurations, restDurations) ||
+                const DeepCollectionEquality()
+                    .equals(other.restDurations, restDurations)));
   }
 
   @override
@@ -566,7 +835,8 @@ class _$_PillSheet extends _PillSheet {
       const DeepCollectionEquality().hash(lastTakenDate) ^
       const DeepCollectionEquality().hash(createdAt) ^
       const DeepCollectionEquality().hash(deletedAt) ^
-      const DeepCollectionEquality().hash(groupIndex);
+      const DeepCollectionEquality().hash(groupIndex) ^
+      const DeepCollectionEquality().hash(restDurations);
 
   @JsonKey(ignore: true)
   @override
@@ -593,7 +863,8 @@ abstract class _PillSheet extends PillSheet {
           DateTime? createdAt,
       @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
           DateTime? deletedAt,
-      int groupIndex}) = _$_PillSheet;
+      int groupIndex,
+      List<RestDuration> restDurations}) = _$_PillSheet;
   _PillSheet._() : super._();
 
   factory _PillSheet.fromJson(Map<String, dynamic> json) =
@@ -627,6 +898,8 @@ abstract class _PillSheet extends PillSheet {
   DateTime? get deletedAt => throw _privateConstructorUsedError;
   @override
   int get groupIndex => throw _privateConstructorUsedError;
+  @override
+  List<RestDuration> get restDurations => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$PillSheetCopyWith<_PillSheet> get copyWith =>

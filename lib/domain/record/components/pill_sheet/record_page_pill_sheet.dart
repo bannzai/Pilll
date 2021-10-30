@@ -14,6 +14,7 @@ import 'package:pilll/entity/pill_sheet_group.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/entity/setting.dart';
 import 'package:pilll/entity/weekday.dart';
+import 'package:pilll/util/datetime/day.dart';
 
 class RecordPagePillSheet extends StatelessWidget {
   final PillSheetGroup pillSheetGroup;
@@ -124,8 +125,8 @@ class RecordPagePillSheet extends StatelessWidget {
     required int pillNumberIntoPillSheet,
     required int pageIndex,
   }) {
-    final date =
-        pillSheet.beginingDate.add(Duration(days: pillNumberIntoPillSheet - 1));
+    final DateTime date =
+        calculatedDateOfAppearancePill(pillSheet, pillNumberIntoPillSheet);
     final isDateMode = () {
       if (!(state.isPremium || state.isTrial)) {
         return false;
@@ -204,8 +205,8 @@ class RecordPagePillSheet extends StatelessWidget {
 
     final pillSheetTypes =
         pillSheetGroup.pillSheets.map((e) => e.pillSheetType).toList();
-    final passedCount =
-        passedTotalCount(pillSheetTypes: pillSheetTypes, pageIndex: pageIndex);
+    final passedCount = summarizedPillSheetTypeTotalCountToPageIndex(
+        pillSheetTypes: pillSheetTypes, pageIndex: pageIndex);
     final serialiedPillNumber = passedCount + pillNumberIntoPillSheet;
 
     final menstruationRangeList =
@@ -219,6 +220,32 @@ class RecordPagePillSheet extends StatelessWidget {
         .where((element) => element.contains(serialiedPillNumber))
         .isNotEmpty;
     return isContainedMenstruationDuration;
+  }
+
+  static DateTime calculatedDateOfAppearancePill(
+      PillSheet pillSheet, int pillNumberIntoPillSheet) {
+    final date = pillSheet.beginingDate
+        .add(Duration(days: pillNumberIntoPillSheet - 1))
+        .date();
+    if (pillSheet.restDurations.isEmpty) {
+      return date;
+    }
+
+    final distance =
+        pillSheet.restDurations.fold(0, (int result, restDuration) {
+      if (date.isBefore(restDuration.beginDate.date())) {
+        return result;
+      }
+
+      final endDate = restDuration.endDate?.date();
+      if (endDate != null && date.isAfter(endDate)) {
+        return result + daysBetween(restDuration.beginDate.date(), endDate);
+      } else {
+        return result + daysBetween(restDuration.beginDate.date(), today());
+      }
+    });
+
+    return date.add(Duration(days: distance));
   }
 }
 

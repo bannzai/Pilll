@@ -161,11 +161,28 @@ extension PillSheetTypeFunctions on PillSheetType {
     }
   }
 
+  bool get hasRestDurationType {
+    switch (this) {
+      case PillSheetType.pillsheet_21:
+        return true;
+      case PillSheetType.pillsheet_28_4:
+        return false;
+      case PillSheetType.pillsheet_28_7:
+        return false;
+      case PillSheetType.pillsheet_28_0:
+        return false;
+      case PillSheetType.pillsheet_24_0:
+        return false;
+      case PillSheetType.pillsheet_21_0:
+        return false;
+    }
+  }
+
   int get numberOfLineInPillSheet =>
       (totalCount / Weekday.values.length).ceil();
 }
 
-int passedTotalCount(
+int summarizedPillSheetTypeTotalCountToPageIndex(
     {required List<PillSheetType> pillSheetTypes, required int pageIndex}) {
   if (pageIndex == 0) {
     return 0;

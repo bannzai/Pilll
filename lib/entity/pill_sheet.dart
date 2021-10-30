@@ -33,6 +33,33 @@ abstract class PillSheetTypeInfo with _$PillSheetTypeInfo {
 }
 
 @freezed
+abstract class RestDuration with _$RestDuration {
+  @JsonSerializable(explicitToJson: true)
+  factory RestDuration({
+    @JsonKey(
+      fromJson: NonNullTimestampConverter.timestampToDateTime,
+      toJson: NonNullTimestampConverter.dateTimeToTimestamp,
+    )
+        required DateTime beginDate,
+    @JsonKey(
+      fromJson: TimestampConverter.timestampToDateTime,
+      toJson: TimestampConverter.dateTimeToTimestamp,
+    )
+        DateTime? endDate,
+    @JsonKey(
+      fromJson: NonNullTimestampConverter.timestampToDateTime,
+      toJson: NonNullTimestampConverter.dateTimeToTimestamp,
+    )
+        required DateTime createdDate,
+  }) = _RestDuration;
+
+  factory RestDuration.fromJson(Map<String, dynamic> json) =>
+      _$RestDurationFromJson(json);
+  Map<String, dynamic> toJson() =>
+      _$_$_RestDurationToJson(this as _$_RestDuration);
+}
+
+@freezed
 abstract class PillSheet implements _$PillSheet {
   String? get documentID => id;
 
@@ -68,6 +95,8 @@ abstract class PillSheet implements _$PillSheet {
         DateTime? deletedAt,
     @Default(0)
         int groupIndex,
+    @Default([])
+        List<RestDuration> restDurations,
   }) = _PillSheet;
   factory PillSheet.create(PillSheetType type) => PillSheet(
         typeInfo: type.typeInfo,
@@ -83,12 +112,39 @@ abstract class PillSheet implements _$PillSheet {
       PillSheetTypeFunctions.fromRawPath(typeInfo.pillSheetTypeReferencePath);
 
   int get todayPillNumber {
-    return today().difference(beginingDate.date()).inDays + 1;
+    return daysBetween(beginingDate.date(), today()) -
+        summarizedRestDuration(restDurations) +
+        1;
   }
 
-  int get lastTakenPillNumber => lastTakenDate == null
-      ? 0
-      : lastTakenDate!.date().difference(beginingDate.date()).inDays + 1;
+  int get lastTakenPillNumber {
+    final lastTakenDate = this.lastTakenDate;
+    if (lastTakenDate == null) {
+      return 0;
+    }
+
+    final lastTakenPillNumber =
+        daysBetween(beginingDate.date(), lastTakenDate.date()) + 1;
+    if (restDurations.isEmpty) {
+      return lastTakenPillNumber;
+    }
+
+    final summarizedRestDuration = restDurations.map((e) {
+      if (!e.beginDate.isBefore(lastTakenDate)) {
+        return 0;
+      }
+      final endDate = e.endDate;
+      if (endDate == null) {
+        return daysBetween(e.beginDate, today());
+      } else if (lastTakenDate.isAfter(e.beginDate)) {
+        return daysBetween(e.beginDate, endDate);
+      } else {
+        return 0;
+      }
+    }).reduce((value, element) => value + element);
+
+    return lastTakenPillNumber - summarizedRestDuration;
+  }
 
   bool get isAllTaken => todayPillNumber == lastTakenPillNumber;
   bool get isEnded => typeInfo.totalCount == lastTakenPillNumber;
@@ -96,18 +152,48 @@ abstract class PillSheet implements _$PillSheet {
       beginingDate.date().toUtc().millisecondsSinceEpoch <
       now().toUtc().millisecondsSinceEpoch;
   bool get inNotTakenDuration => todayPillNumber > typeInfo.dosingPeriod;
-  bool get hasRestDuration => !pillSheetType.isNotExistsNotTakenDuration;
+  bool get pillSheetHasRestOrFakeDuration =>
+      !pillSheetType.isNotExistsNotTakenDuration;
   bool get isActive {
     final n = now();
     final begin = beginingDate.date();
     final totalCount = typeInfo.totalCount;
-    final end = begin.add(Duration(days: totalCount - 1));
+    final end = begin.add(
+        Duration(days: totalCount + summarizedRestDuration(restDurations) - 1));
     return DateRange(begin, end).inRange(n);
   }
 
   DateTime get estimatedLastTakenDate => beginingDate
       .add(Duration(days: pillSheetType.totalCount - 1))
+      .add(Duration(days: summarizedRestDuration(restDurations)))
       .date()
       .add(Duration(days: 1))
       .subtract(Duration(seconds: 1));
+
+  RestDuration? get activeRestDuration {
+    if (restDurations.isEmpty) {
+      return null;
+    } else {
+      if (restDurations.last.endDate == null &&
+          restDurations.last.beginDate.isBefore(now())) {
+        return restDurations.last;
+      } else {
+        return null;
+      }
+    }
+  }
+}
+
+int summarizedRestDuration(List<RestDuration> restDurations) {
+  if (restDurations.isEmpty) {
+    return 0;
+  }
+  return restDurations.map((e) {
+    final endDate = e.endDate;
+    if (endDate == null) {
+      return daysBetween(e.beginDate, today());
+    } else {
+      return daysBetween(e.beginDate, endDate);
+    }
+  }).reduce((value, element) => value + element);
 }

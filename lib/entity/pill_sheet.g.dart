@@ -24,6 +24,26 @@ Map<String, dynamic> _$_$_PillSheetTypeInfoToJson(
       'dosingPeriod': instance.dosingPeriod,
     };
 
+_$_RestDuration _$_$_RestDurationFromJson(Map<String, dynamic> json) {
+  return _$_RestDuration(
+    beginDate: NonNullTimestampConverter.timestampToDateTime(
+        json['beginDate'] as Timestamp),
+    endDate:
+        TimestampConverter.timestampToDateTime(json['endDate'] as Timestamp?),
+    createdDate: NonNullTimestampConverter.timestampToDateTime(
+        json['createdDate'] as Timestamp),
+  );
+}
+
+Map<String, dynamic> _$_$_RestDurationToJson(_$_RestDuration instance) =>
+    <String, dynamic>{
+      'beginDate':
+          NonNullTimestampConverter.dateTimeToTimestamp(instance.beginDate),
+      'endDate': TimestampConverter.dateTimeToTimestamp(instance.endDate),
+      'createdDate':
+          NonNullTimestampConverter.dateTimeToTimestamp(instance.createdDate),
+    };
+
 _$_PillSheet _$_$_PillSheetFromJson(Map<String, dynamic> json) {
   return _$_PillSheet(
     id: json['id'] as String?,
@@ -38,6 +58,10 @@ _$_PillSheet _$_$_PillSheetFromJson(Map<String, dynamic> json) {
     deletedAt:
         TimestampConverter.timestampToDateTime(json['deletedAt'] as Timestamp?),
     groupIndex: json['groupIndex'] as int? ?? 0,
+    restDurations: (json['restDurations'] as List<dynamic>?)
+            ?.map((e) => RestDuration.fromJson(e as Map<String, dynamic>))
+            .toList() ??
+        [],
   );
 }
 
@@ -59,5 +83,6 @@ Map<String, dynamic> _$_$_PillSheetToJson(_$_PillSheet instance) {
   val['createdAt'] = TimestampConverter.dateTimeToTimestamp(instance.createdAt);
   val['deletedAt'] = TimestampConverter.dateTimeToTimestamp(instance.deletedAt);
   val['groupIndex'] = instance.groupIndex;
+  val['restDurations'] = instance.restDurations.map((e) => e.toJson()).toList();
   return val;
 }

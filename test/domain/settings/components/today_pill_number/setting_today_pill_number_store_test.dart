@@ -509,4 +509,121 @@ void main() {
       );
     });
   });
+  group("pill sheet has rest durations", () {
+    test(
+        "group has three pill sheet and it is changed direction middle to left",
+        () async {
+      var mockTodayRepository = MockTodayService();
+      final _today = DateTime.parse("2022-05-02");
+      todayRepository = mockTodayRepository;
+      when(mockTodayRepository.today()).thenReturn(_today);
+      when(mockTodayRepository.now()).thenReturn(_today);
+
+      final batchFactory = MockBatchFactory();
+      final batch = MockWriteBatch();
+      when(batchFactory.batch()).thenReturn(batch);
+      final left = PillSheet(
+        id: "sheet_id_left",
+        typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
+        beginingDate: DateTime.parse("2022-04-03"),
+        groupIndex: 0,
+        lastTakenDate: DateTime.parse("2022-04-30"),
+        restDurations: [
+          RestDuration(
+            beginDate: DateTime.parse("2022-04-03"),
+            createdDate: DateTime.parse("2022-04-03"),
+            endDate: DateTime.parse("2022-04-04"),
+          ),
+        ],
+      );
+      final middle = PillSheet(
+        id: "sheet_id_middle",
+        typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
+        beginingDate: DateTime.parse("2022-05-02"),
+        groupIndex: 1,
+        lastTakenDate: null,
+      );
+      final right = PillSheet(
+        id: "sheet_id_right",
+        typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
+        beginingDate: DateTime.parse("2022-05-29"),
+        groupIndex: 2,
+        lastTakenDate: null,
+      );
+      final updatedLeft = left.copyWith(
+        beginingDate: DateTime.parse("2022-04-05"),
+        lastTakenDate: DateTime.parse("2022-05-01"), // todayPillNumber - 1
+        restDurations: [],
+      );
+      final updatedMiddle = middle.copyWith(
+        beginingDate: DateTime.parse("2022-05-03"),
+      );
+      final updatedRight = right.copyWith(
+        beginingDate: DateTime.parse("2022-05-31"),
+      );
+      final pillSheetService = MockPillSheetService();
+      when(pillSheetService.update(batch, [
+        updatedLeft,
+        updatedMiddle,
+        updatedRight,
+      ])).thenReturn(null);
+
+      final pillSheetGroup = PillSheetGroup(
+        id: "group_id",
+        pillSheetIDs: ["sheet_id_left", "sheet_id_middle", "sheet_id_right"],
+        pillSheets: [
+          left,
+          middle,
+          right,
+        ],
+        createdAt: now(),
+      );
+      final updatedPillSheetGroup = pillSheetGroup.copyWith(pillSheets: [
+        updatedLeft,
+        updatedMiddle,
+        updatedRight,
+      ]);
+      final pillSheetGroupService = MockPillSheetGroupService();
+      when(pillSheetGroupService.update(batch, updatedPillSheetGroup))
+          .thenReturn(updatedPillSheetGroup);
+
+      final history = PillSheetModifiedHistoryServiceActionFactory
+          .createChangedPillNumberAction(
+        pillSheetGroupID: "group_id",
+        before: middle,
+        after: updatedLeft,
+      );
+
+      final pillSheetModifiedHistoryService =
+          MockPillSheetModifiedHistoryService();
+      when(pillSheetModifiedHistoryService.add(batch, history))
+          .thenReturn(null);
+
+      final container = ProviderContainer(
+        overrides: [
+          batchFactoryProvider.overrideWithValue(batchFactory),
+          pillSheetServiceProvider.overrideWithValue(pillSheetService),
+          pillSheetModifiedHistoryServiceProvider
+              .overrideWithValue(pillSheetModifiedHistoryService),
+          pillSheetGroupServiceProvider
+              .overrideWithValue(pillSheetGroupService),
+        ],
+      );
+      final parameter = SettingTodayPillNumberStoreParameter(
+          pillSheetGroup: pillSheetGroup, activedPillSheet: middle);
+      final store =
+          container.read(settingTodayPillNumberStoreProvider(parameter));
+
+      expect(middle.todayPillNumber, 1);
+
+      store.markSelected(
+        pageIndex: 0,
+        pillNumberIntoPillSheet: 28,
+      );
+      await store.modifiyTodayPillNumber(
+        pillSheetGroup: pillSheetGroup,
+        activedPillSheet: pillSheetGroup.activedPillSheet!,
+      );
+    });
+  });
 }

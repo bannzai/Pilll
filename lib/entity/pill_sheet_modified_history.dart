@@ -26,7 +26,11 @@ enum PillSheetModifiedActionType {
   @JsonValue("changedPillNumber")
   changedPillNumber,
   @JsonValue("endedPillSheet")
-  endedPillSheet
+  endedPillSheet,
+  @JsonValue("beganRestDuration")
+  beganRestDuration,
+  @JsonValue("endedRestDuration")
+  endedRestDuration
 }
 
 extension PillSheetModifiedActionTypeFunctions on PillSheetModifiedActionType {

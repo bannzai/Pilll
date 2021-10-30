@@ -1,4 +1,5 @@
 import 'package:pilll/analytics.dart';
+import 'package:pilll/components/atoms/buttons.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/page/discard_dialog.dart';
 import 'package:pilll/domain/settings/components/rows/creating_new_pillsheet.dart';
@@ -139,7 +140,7 @@ class SettingPage extends HookWidget {
                       NotificationTimeRow(setting: setting),
                       _separator(),
                       if (activedPillSheet != null &&
-                          activedPillSheet.hasRestDuration) ...[
+                          activedPillSheet.pillSheetHasRestOrFakeDuration) ...[
                         NotificationInRestDuration(
                             setting: setting, pillSheet: activedPillSheet),
                         _separator(),
@@ -237,17 +238,23 @@ class SettingPage extends HookWidget {
           if (signOut == null) {
             return;
           }
-          showDiscardDialog(
-            context,
-            title: "サインアウトします",
-            message: '''
+          showDiscardDialog(context, title: "サインアウトします", message: '''
 これは開発用のオプションです。サインアウトあとはアプリを再起動してお試しください。初期設定から始まります
-''',
-            done: () async {
-              await signOut();
-            },
-            doneText: "サインアウト",
-          );
+''', actions: [
+            SecondaryButton(
+              text: "キャンセル",
+              onPressed: () {
+                Navigator.of(context).pop();
+              },
+            ),
+            SecondaryButton(
+              text: "サインアウト",
+              onPressed: () async {
+                await signOut();
+                Navigator.of(context).pop();
+              },
+            ),
+          ]);
         },
         onLongPress: () {
           final deleteUser = Environment.deleteUser;
@@ -260,10 +267,21 @@ class SettingPage extends HookWidget {
             message: '''
 これは開発用のオプションです。ユーザーを削除したあとはアプリを再起動してからやり直してください。初期設定から始まります
 ''',
-            done: () async {
-              await deleteUser();
-            },
-            doneText: "削除",
+            actions: [
+              SecondaryButton(
+                text: "キャンセル",
+                onPressed: () {
+                  Navigator.of(context).pop();
+                },
+              ),
+              SecondaryButton(
+                text: "削除",
+                onPressed: () async {
+                  await deleteUser();
+                  Navigator.of(context).pop();
+                },
+              ),
+            ],
           );
         },
       ),

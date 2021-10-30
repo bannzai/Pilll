@@ -41,6 +41,14 @@ _$_PillSheetModifiedHistoryValue _$_$_PillSheetModifiedHistoryValueFromJson(
         ? null
         : EndedPillSheetValue.fromJson(
             json['endedPillSheet'] as Map<String, dynamic>),
+    beganRestDurationValue: json['beganRestDurationValue'] == null
+        ? null
+        : BeganRestDurationValue.fromJson(
+            json['beganRestDurationValue'] as Map<String, dynamic>),
+    endedRestDurationValue: json['endedRestDurationValue'] == null
+        ? null
+        : EndedRestDurationValue.fromJson(
+            json['endedRestDurationValue'] as Map<String, dynamic>),
   );
 }
 
@@ -56,6 +64,8 @@ Map<String, dynamic> _$_$_PillSheetModifiedHistoryValueToJson(
       'revertTakenPill': instance.revertTakenPill?.toJson(),
       'changedPillNumber': instance.changedPillNumber?.toJson(),
       'endedPillSheet': instance.endedPillSheet?.toJson(),
+      'beganRestDurationValue': instance.beganRestDurationValue?.toJson(),
+      'endedRestDurationValue': instance.endedRestDurationValue?.toJson(),
     };
 
 _$_CreatedPillSheetValue _$_$_CreatedPillSheetValueFromJson(
@@ -210,4 +220,32 @@ Map<String, dynamic> _$_$_EndedPillSheetValueToJson(
           NonNullTimestampConverter.dateTimeToTimestamp(instance.endRecordDate),
       'lastTakenDate':
           NonNullTimestampConverter.dateTimeToTimestamp(instance.lastTakenDate),
+    };
+
+_$_BeganRestDurationValue _$_$_BeganRestDurationValueFromJson(
+    Map<String, dynamic> json) {
+  return _$_BeganRestDurationValue(
+    restDuration:
+        RestDuration.fromJson(json['restDuration'] as Map<String, dynamic>),
+  );
+}
+
+Map<String, dynamic> _$_$_BeganRestDurationValueToJson(
+        _$_BeganRestDurationValue instance) =>
+    <String, dynamic>{
+      'restDuration': instance.restDuration.toJson(),
+    };
+
+_$_EndedRestDurationValue _$_$_EndedRestDurationValueFromJson(
+    Map<String, dynamic> json) {
+  return _$_EndedRestDurationValue(
+    restDuration:
+        RestDuration.fromJson(json['restDuration'] as Map<String, dynamic>),
+  );
+}
+
+Map<String, dynamic> _$_$_EndedRestDurationValueToJson(
+        _$_EndedRestDurationValue instance) =>
+    <String, dynamic>{
+      'restDuration': instance.restDuration.toJson(),
     };

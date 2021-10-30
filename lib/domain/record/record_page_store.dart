@@ -173,7 +173,7 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
       batch,
       setting.pillSheetTypes.asMap().keys.map((pageIndex) {
         final pillSheetType = setting.pillSheetTypes[pageIndex];
-        final offset = passedTotalCount(
+        final offset = summarizedPillSheetTypeTotalCountToPageIndex(
             pillSheetTypes: setting.pillSheetTypes, pageIndex: pageIndex);
         return PillSheet(
           typeInfo: pillSheetType.typeInfo,
@@ -350,6 +350,9 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
     required int pillNumberIntoPillSheet,
     required PillSheet pillSheet,
   }) {
+    if (state.pillSheetGroup?.activedPillSheet?.activeRestDuration != null) {
+      return false;
+    }
     final activedPillSheet = state.pillSheetGroup?.activedPillSheet;
     if (activedPillSheet == null) {
       throw FormatException("pill sheet not found");
@@ -400,5 +403,67 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
 
     final updatedSetting = setting.copyWith(pillSheetTypes: copied);
     state = state.copyWith(setting: updatedSetting);
+  }
+
+  Future<void> beginResting({
+    required PillSheetGroup pillSheetGroup,
+    required PillSheet activedPillSheet,
+  }) async {
+    final restDuration = RestDuration(
+      beginDate: now(),
+      createdDate: now(),
+    );
+    final updatedPillSheet = activedPillSheet.copyWith(
+      restDurations: activedPillSheet.restDurations..add(restDuration),
+    );
+    final updatedPillSheetGroup = pillSheetGroup.replaced(updatedPillSheet);
+
+    final batch = _batchFactory.batch();
+    _pillSheetService.update(batch, updatedPillSheetGroup.pillSheets);
+    _pillSheetGroupService.update(batch, updatedPillSheetGroup);
+    _pillSheetModifiedHistoryService.add(
+      batch,
+      PillSheetModifiedHistoryServiceActionFactory
+          .createBeganRestDurationAction(
+        pillSheetGroupID: pillSheetGroup.id,
+        before: activedPillSheet,
+        after: updatedPillSheet,
+        restDuration: restDuration,
+      ),
+    );
+
+    await batch.commit();
+  }
+
+  Future<void> endResting({
+    required PillSheetGroup pillSheetGroup,
+    required PillSheet activedPillSheet,
+    required RestDuration restDuration,
+  }) async {
+    final updatedRestDuration = restDuration.copyWith(endDate: now());
+    final updatedPillSheet = activedPillSheet.copyWith(
+      restDurations: activedPillSheet.restDurations
+        ..replaceRange(
+          activedPillSheet.restDurations.length - 1,
+          activedPillSheet.restDurations.length,
+          [updatedRestDuration],
+        ),
+    );
+    final updatedPillSheetGroup = pillSheetGroup.replaced(updatedPillSheet);
+
+    final batch = _batchFactory.batch();
+    _pillSheetService.update(batch, updatedPillSheetGroup.pillSheets);
+    _pillSheetGroupService.update(batch, updatedPillSheetGroup);
+    _pillSheetModifiedHistoryService.add(
+      batch,
+      PillSheetModifiedHistoryServiceActionFactory
+          .createEndedRestDurationAction(
+        pillSheetGroupID: pillSheetGroup.id,
+        before: activedPillSheet,
+        after: updatedPillSheet,
+        restDuration: updatedRestDuration,
+      ),
+    );
+    await batch.commit();
   }
 }

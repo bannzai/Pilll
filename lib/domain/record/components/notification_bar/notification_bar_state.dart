@@ -36,12 +36,17 @@ abstract class NotificationBarState implements _$NotificationBarState {
     if (activedPillSheet == null) {
       return null;
     }
-    if (activedPillSheet.pillSheetType.isNotExistsNotTakenDuration) {
-      return null;
+    final restDuration = activedPillSheet.activeRestDuration;
+    if (restDuration != null) {
+      final day = daysBetween(restDuration.beginDate.date(), today()) + 1;
+      return "休薬${activedPillSheet.pillSheetType.notTakenWord}$day日目";
     }
+
     if (activedPillSheet.typeInfo.dosingPeriod <
         activedPillSheet.todayPillNumber) {
-      return "${activedPillSheet.pillSheetType.notTakenWord}期間中";
+      final day = activedPillSheet.todayPillNumber -
+          activedPillSheet.typeInfo.dosingPeriod;
+      return "${activedPillSheet.pillSheetType.notTakenWord}$day日目";
     }
 
     final threshold = 4;
@@ -69,7 +74,7 @@ abstract class NotificationBarState implements _$NotificationBarState {
       return null;
     }
 
-    final diff = trialDeadlineDate.difference(now()).inDays + 1;
+    final diff = daysBetween(now(), trialDeadlineDate) + 1;
     if (diff < 0) {
       return null;
     }

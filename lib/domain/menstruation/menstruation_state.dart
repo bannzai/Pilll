@@ -5,7 +5,6 @@ import 'package:pilll/entity/pill_sheet_group.dart';
 import 'package:pilll/entity/setting.dart';
 import 'package:pilll/util/datetime/date_compare.dart';
 import 'package:pilll/util/formatter/date_time_formatter.dart';
-import 'package:flutter/material.dart';
 import 'package:pilll/entity/weekday.dart';
 import 'package:pilll/util/datetime/day.dart';
 
@@ -65,7 +64,7 @@ List<List<DateTime>> _calendarDataSource() {
       Weekday.values.last.index - WeekdayFunctions.weekdayFromDate(end).index;
   end = end.add(Duration(days: endWeekdayOffset));
 
-  var diffDay = DateTimeRange(start: begin, end: end).duration.inDays;
+  var diffDay = daysBetween(begin, end);
   diffDay += Weekday.values.length - diffDay % Weekday.values.length;
   List<DateTime> days = [];
   for (int i = 0; i < diffDay; i++) {

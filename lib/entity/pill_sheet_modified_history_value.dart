@@ -1,6 +1,7 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:pilll/entity/firestore_timestamp_converter.dart';
+import 'package:pilll/entity/pill_sheet.dart';
 
 part 'pill_sheet_modified_history_value.g.dart';
 part 'pill_sheet_modified_history_value.freezed.dart';
@@ -21,6 +22,8 @@ abstract class PillSheetModifiedHistoryValue
     @Default(null) RevertTakenPillValue? revertTakenPill,
     @Default(null) ChangedPillNumberValue? changedPillNumber,
     @Default(null) EndedPillSheetValue? endedPillSheet,
+    @Default(null) BeganRestDurationValue? beganRestDurationValue,
+    @Default(null) EndedRestDurationValue? endedRestDurationValue,
   }) = _PillSheetModifiedHistoryValue;
 
   factory PillSheetModifiedHistoryValue.fromJson(Map<String, dynamic> json) =>
@@ -197,4 +200,32 @@ abstract class EndedPillSheetValue implements _$EndedPillSheetValue {
       _$EndedPillSheetValueFromJson(json);
   Map<String, dynamic> toJson() =>
       _$_$_EndedPillSheetValueToJson(this as _$_EndedPillSheetValue);
+}
+
+@freezed
+abstract class BeganRestDurationValue implements _$BeganRestDurationValue {
+  BeganRestDurationValue._();
+  @JsonSerializable(explicitToJson: true)
+  factory BeganRestDurationValue({
+    required RestDuration restDuration,
+  }) = _BeganRestDurationValue;
+
+  factory BeganRestDurationValue.fromJson(Map<String, dynamic> json) =>
+      _$BeganRestDurationValueFromJson(json);
+  Map<String, dynamic> toJson() =>
+      _$_$_BeganRestDurationValueToJson(this as _$_BeganRestDurationValue);
+}
+
+@freezed
+abstract class EndedRestDurationValue implements _$EndedRestDurationValue {
+  EndedRestDurationValue._();
+  @JsonSerializable(explicitToJson: true)
+  factory EndedRestDurationValue({
+    required RestDuration restDuration,
+  }) = _EndedRestDurationValue;
+
+  factory EndedRestDurationValue.fromJson(Map<String, dynamic> json) =>
+      _$EndedRestDurationValueFromJson(json);
+  Map<String, dynamic> toJson() =>
+      _$_$_EndedRestDurationValueToJson(this as _$_EndedRestDurationValue);
 }

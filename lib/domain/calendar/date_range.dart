@@ -5,14 +5,14 @@ class DateRange {
   final DateTime _end;
   DateTime get begin => _begin.date();
   DateTime get end => _end.date();
-  int get days => end.difference(begin).inDays;
+  int get days => daysBetween(begin, end);
 
   DateRange(this._begin, this._end);
 
   static bool isSameDay(DateTime a, DateTime b) =>
       a.year == b.year && a.month == b.month && a.day == b.day;
   bool inRange(DateTime date) =>
-      date.isAfter(begin) && date.isBefore(end) ||
+      (date.isAfter(begin) && date.isBefore(end)) ||
       DateRange.isSameDay(date, begin) ||
       DateRange.isSameDay(date, end);
   DateRange union(DateRange range) {

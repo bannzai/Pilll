@@ -8,7 +8,7 @@ class TextColor {
   static final Color white = Colors.white;
   static final Color darkGray = HexColor.fromHex("000000").withAlpha(153);
   static final Color gray = HexColor.fromHex("7E7E7E");
-  static final Color lightGray = HexColor.fromHex("CDCFD1");
+  static final Color lightGray = HexColor.fromHex("B1B1B1");
   static final Color lightGray2 = HexColor.fromHex("666666");
   static final Color noshime = HexColor.fromHex("3D4662");
   static final Color primary = PilllColors.primary;
