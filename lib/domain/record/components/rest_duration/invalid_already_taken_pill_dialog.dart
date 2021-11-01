@@ -31,8 +31,9 @@ class InvalidAlreadyTakenPillDialog extends StatelessWidget {
             height: 15,
           ),
           RichText(
-            textAlign: TextAlign.start,
+            textAlign: TextAlign.center,
             text: TextSpan(
+              style: TextStyle(height: 1.7),
               children: [
                 TextSpan(
                   text: "今日飲むピルを未服用にしてから",
