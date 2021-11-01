@@ -3,6 +3,7 @@ import 'package:pilll/components/atoms/buttons.dart';
 import 'package:pilll/components/page/discard_dialog.dart';
 import 'package:pilll/domain/record/components/pill_sheet/components/record_page_rest_duration_dialog.dart';
 import 'package:pilll/domain/record/components/rest_duration/invalid_already_taken_pill_dialog.dart';
+import 'package:pilll/domain/record/components/rest_duration/invalid_insufficient_rest_duration_dialog.dart';
 import 'package:pilll/domain/record/record_page_store.dart';
 import 'package:pilll/entity/pill_sheet.dart';
 import 'package:pilll/entity/pill_sheet_group.dart';
@@ -36,20 +37,7 @@ class ManualRestDurationButton extends StatelessWidget {
               showInvalidAlreadyTakenPillDialog(context);
             } else if (activedPillSheet.todayPillNumber - 1 >
                 activedPillSheet.lastTakenPillNumber) {
-              showDiscardDialog(
-                context,
-                title: "未服用のピルがある場合\n休薬できません",
-                message:
-                    "ピル番号をタップして昨日までのピルを服用済みにしてから「休薬する」を押してください。それよりも前から休薬したい場合は、「今日飲むピル番号」を調整してください。",
-                actions: [
-                  SecondaryButton(
-                    text: "閉じる",
-                    onPressed: () {
-                      Navigator.of(context).pop();
-                    },
-                  ),
-                ],
-              );
+              showInvalidInsufficientRestDurationDialog(context);
             } else {
               showRecordPageRestDurationDialog(context, () async {
                 Navigator.of(context).pop();
