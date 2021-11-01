@@ -10,7 +10,12 @@ class InvalidAlreadyTakenPillDialog extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AlertDialog(
+      contentPadding: EdgeInsets.only(left: 24, right: 24, top: 4, bottom: 24),
+      actionsPadding: EdgeInsets.only(left: 24, right: 24, bottom: 32),
+      titlePadding: EdgeInsets.only(top: 32),
       title: SvgPicture.asset("images/alert_24.svg", width: 24, height: 24),
+      shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.all(Radius.circular(20))),
       content: Column(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         mainAxisSize: MainAxisSize.min,
@@ -65,11 +70,8 @@ class InvalidAlreadyTakenPillDialog extends StatelessWidget {
 }
 
 showInvalidAlreadyTakenPillDialog(
-  BuildContext context, {
-  required String title,
-  required String message,
-  required List<Widget> actions,
-}) {
+  BuildContext context,
+) {
   analytics.setCurrentScreen(screenName: "InvalidAlreadyTakenPillDialog");
   showDialog(
     context: context,
