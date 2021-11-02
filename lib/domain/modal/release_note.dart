@@ -42,7 +42,7 @@ class ReleaseNote extends StatelessWidget {
                       child: Container(
                         padding: EdgeInsets.only(top: 40, left: 40, right: 40),
                         child: Text(
-                          "ピルシートを複数枚\n追加できるように！",
+                          "好きなタイミングで\n休薬できるようになりました",
                           style: FontType.subTitle.merge(TextColorStyle.black),
                           textAlign: TextAlign.center,
                         ),
@@ -57,7 +57,7 @@ class ReleaseNote extends StatelessWidget {
                     children: [
                       Text(
                         '''
-ヤーズフレックス等で連続服用している場合、何枚目の何番を飲んでいるか把握できるように！
+ヤーズフレックスで連続服用している方、生理移動をしたい時等にお使いください。
                         ''',
                         style: FontType.assisting.merge(TextColorStyle.main),
                       ),
