@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:pilll/components/atoms/buttons.dart';
-import 'package:pilll/components/page/discard_dialog.dart';
 import 'package:pilll/domain/record/components/pill_sheet/components/record_page_rest_duration_dialog.dart';
 import 'package:pilll/domain/record/components/rest_duration/invalid_already_taken_pill_dialog.dart';
 import 'package:pilll/domain/record/components/rest_duration/invalid_insufficient_rest_duration_dialog.dart';
