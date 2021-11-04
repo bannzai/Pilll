@@ -120,15 +120,13 @@ class SettingPage extends HookWidget {
                         PillSheetRemoveRow(),
                         _separator(),
                       ],
-                      if (setting.pillSheetTypes.length == 1) ...[
-                        CreatingNewPillSheetRow(
-                          setting: setting,
-                          isPremium: state.isPremium,
-                          isTrial: state.isTrial,
-                          trialDeadlineDate: state.trialDeadlineDate,
-                        ),
-                        _separator(),
-                      ],
+                      CreatingNewPillSheetRow(
+                        setting: setting,
+                        isPremium: state.isPremium,
+                        isTrial: state.isTrial,
+                        trialDeadlineDate: state.trialDeadlineDate,
+                      ),
+                      _separator(),
                     ],
                   );
                 case SettingSection.notification:
