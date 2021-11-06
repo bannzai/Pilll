@@ -251,6 +251,9 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
     if (activedPillSheet == null) {
       return false;
     }
+    if (activedPillSheet.activeRestDuration != null) {
+      return false;
+    }
     if (activedPillSheet.groupIndex < pillSheet.groupIndex) {
       return false;
     }
