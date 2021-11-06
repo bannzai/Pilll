@@ -42,6 +42,7 @@ class ManualRestDurationButton extends StatelessWidget {
               showInvalidInsufficientRestDurationDialog(context);
             } else {
               showRecordPageRestDurationDialog(context, () async {
+                analytics.logEvent(name: "done_rest_duration");
                 Navigator.of(context).pop();
                 await store.beginResting(
                   pillSheetGroup: pillSheetGroup,
