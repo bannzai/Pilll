@@ -31,7 +31,7 @@ class CreatingNewPillSheetRow extends HookWidget {
     return SwitchListTile(
       title: Row(
         children: [
-          Text("ピルシートの自動追加", style: FontType.listRow),
+          Text("ピルシートグループの自動追加", style: FontType.listRow),
           if (!isPremium) ...[
             SizedBox(width: 8),
             PremiumBadge(),
@@ -39,7 +39,7 @@ class CreatingNewPillSheetRow extends HookWidget {
         ],
       ),
       subtitle:
-          Text("1シートすべて服用済みの場合、新しいシートを自動で追加します", style: FontType.assisting),
+          Text("ピルをすべて服用済みの場合、新しいシートを自動で追加します", style: FontType.assisting),
       activeColor: PilllColors.primary,
       onChanged: (bool value) {
         analytics.logEvent(
@@ -59,7 +59,7 @@ class CreatingNewPillSheetRow extends HookWidget {
               SnackBar(
                 duration: Duration(seconds: 2),
                 content: Text(
-                  "ピルシートの自動追加を${setting.isAutomaticallyCreatePillSheet ? "ON" : "OFF"}にしました",
+                  "ピルシートグループの自動追加を${setting.isAutomaticallyCreatePillSheet ? "ON" : "OFF"}にしました",
                 ),
               ),
             );
