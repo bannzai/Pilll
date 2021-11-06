@@ -49,7 +49,7 @@ class InvalidInsufficientRestDurationDialog extends StatelessWidget {
         ],
       ),
       actions: [
-        PrimaryOutlinedButton(
+        AppOutlinedButton(
           onPressed: () {
             launch(
                 "https://pilll.wraptas.site/467128e667ae4d6cbff4d61ee370cce5");

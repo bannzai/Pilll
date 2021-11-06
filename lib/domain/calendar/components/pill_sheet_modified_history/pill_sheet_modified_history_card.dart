@@ -146,7 +146,7 @@ class CalendarPillSheetModifiedHistoryCard extends StatelessWidget {
                                     SizedBox(height: 15),
                                     SizedBox(
                                       width: 204,
-                                      child: PrimaryOutlinedButton(
+                                      child: AppOutlinedButton(
                                         text: "くわしくみる",
                                         fontSize: 16,
                                         onPressed: () {

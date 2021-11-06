@@ -97,12 +97,12 @@ class InconspicuousButton extends StatelessWidget {
   }
 }
 
-class PrimaryOutlinedButton extends StatelessWidget {
+class AppOutlinedButton extends StatelessWidget {
   final String text;
   final double fontSize;
   final VoidCallback? onPressed;
 
-  const PrimaryOutlinedButton({
+  const AppOutlinedButton({
     Key? key,
     required this.onPressed,
     required this.fontSize,
