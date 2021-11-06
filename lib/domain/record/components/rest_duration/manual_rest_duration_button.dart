@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pilll/analytics.dart';
 import 'package:pilll/components/atoms/buttons.dart';
 import 'package:pilll/domain/record/components/pill_sheet/components/record_page_rest_duration_dialog.dart';
 import 'package:pilll/domain/record/components/rest_duration/invalid_already_taken_pill_dialog.dart';
@@ -30,6 +31,9 @@ class ManualRestDurationButton extends StatelessWidget {
       child: SmallAppOutlinedButton(
         text: restDuration == null ? "休薬する" : "休薬終了",
         onPressed: () async {
+          analytics.logEvent(
+              name: "manual_rest_duration_pressed",
+              parameters: {"is_begin": restDuration == null});
           if (restDuration == null) {
             if (activedPillSheet.isAllTaken) {
               showInvalidAlreadyTakenPillDialog(context);
