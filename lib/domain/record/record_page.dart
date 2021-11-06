@@ -70,7 +70,7 @@ class RecordPage extends HookWidget {
                 child: Column(
                   children: [
                     NotificationBar(state),
-                    SizedBox(height: 37),
+                    SizedBox(height: 12),
                     _content(context, settingEntity, state, store),
                   ],
                 ),
