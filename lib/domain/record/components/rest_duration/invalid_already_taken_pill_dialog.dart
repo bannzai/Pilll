@@ -51,6 +51,7 @@ class InvalidAlreadyTakenPillDialog extends StatelessWidget {
       actions: [
         AppOutlinedButton(
           onPressed: () {
+            analytics.logEvent(name: "invalid_already_taken_pill_faq");
             launch(
                 "https://pilll.wraptas.site/467128e667ae4d6cbff4d61ee370cce5");
           },
@@ -60,6 +61,7 @@ class InvalidAlreadyTakenPillDialog extends StatelessWidget {
           child: SecondaryButton(
             text: "閉じる",
             onPressed: () {
+              analytics.logEvent(name: "invalid_already_taken_pill_close");
               Navigator.of(context).pop();
             },
           ),
