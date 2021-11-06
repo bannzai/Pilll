@@ -49,12 +49,11 @@ class InvalidAlreadyTakenPillDialog extends StatelessWidget {
         ],
       ),
       actions: [
-        PrimaryOutlinedButton(
+        AppOutlinedButton(
           onPressed: () {
             launch(
                 "https://pilll.wraptas.site/467128e667ae4d6cbff4d61ee370cce5");
           },
-          fontSize: 16,
           text: "休薬機能の使い方を見る",
         ),
         Center(

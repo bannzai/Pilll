@@ -97,15 +97,51 @@ class InconspicuousButton extends StatelessWidget {
   }
 }
 
-class PrimaryOutlinedButton extends StatelessWidget {
+class SmallAppOutlinedButton extends StatelessWidget {
   final String text;
-  final double fontSize;
   final VoidCallback? onPressed;
 
-  const PrimaryOutlinedButton({
+  const SmallAppOutlinedButton({
     Key? key,
     required this.onPressed,
-    required this.fontSize,
+    required this.text,
+  }) : super(key: key);
+
+  Widget build(BuildContext context) {
+    return OutlinedButton(
+      child: Container(
+        padding: EdgeInsets.only(top: 8.5, bottom: 8.5),
+        child: Center(
+          child: Text(
+            text,
+            style: TextStyle(
+              color: TextColor.main,
+              fontSize: 12,
+              fontFamily: FontFamily.japanese,
+              fontWeight: FontWeight.w700,
+            ),
+          ),
+        ),
+      ),
+      style: OutlinedButton.styleFrom(
+        primary: PilllColors.secondary,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(6),
+        ),
+        side: BorderSide(color: PilllColors.secondary),
+      ),
+      onPressed: onPressed,
+    );
+  }
+}
+
+class AppOutlinedButton extends StatelessWidget {
+  final String text;
+  final VoidCallback? onPressed;
+
+  const AppOutlinedButton({
+    Key? key,
+    required this.onPressed,
     required this.text,
   }) : super(key: key);
 
@@ -118,7 +154,7 @@ class PrimaryOutlinedButton extends StatelessWidget {
             text,
             style: TextStyle(
               color: TextColor.main,
-              fontSize: fontSize,
+              fontSize: 16,
               fontFamily: FontFamily.japanese,
               fontWeight: FontWeight.w700,
             ),

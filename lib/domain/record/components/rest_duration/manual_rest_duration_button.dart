@@ -27,9 +27,8 @@ class ManualRestDurationButton extends StatelessWidget {
 
     return SizedBox(
       width: 80,
-      child: PrimaryOutlinedButton(
+      child: SmallAppOutlinedButton(
         text: restDuration == null ? "休薬する" : "休薬終了",
-        fontSize: 12,
         onPressed: () async {
           if (restDuration == null) {
             if (activedPillSheet.isAllTaken) {
