@@ -137,13 +137,11 @@ class SmallAppOutlinedButton extends StatelessWidget {
 
 class AppOutlinedButton extends StatelessWidget {
   final String text;
-  final double fontSize;
   final VoidCallback? onPressed;
 
   const AppOutlinedButton({
     Key? key,
     required this.onPressed,
-    required this.fontSize,
     required this.text,
   }) : super(key: key);
 
@@ -156,7 +154,7 @@ class AppOutlinedButton extends StatelessWidget {
             text,
             style: TextStyle(
               color: TextColor.main,
-              fontSize: fontSize,
+              fontSize: 16,
               fontFamily: FontFamily.japanese,
               fontWeight: FontWeight.w700,
             ),

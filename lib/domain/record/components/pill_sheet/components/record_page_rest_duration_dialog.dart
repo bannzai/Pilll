@@ -35,7 +35,6 @@ class RecordPageRestDurationDialog extends StatelessWidget {
       actions: <Widget>[
         AppOutlinedButton(
           onPressed: () => onDone(),
-          fontSize: 16,
           text: "休薬する",
         ),
         Center(
