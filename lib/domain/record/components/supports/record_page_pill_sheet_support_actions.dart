@@ -25,7 +25,7 @@ class RecordPagePillSheetSupportActions extends StatelessWidget {
     return Container(
       width: PillSheetViewLayout.width,
       child: Row(children: [
-        SwitchingAppearanceMode(),
+        SwitchingAppearanceMode(store: store),
         Spacer(),
         if (!pillSheetGroup.hasPillSheetRestDuration)
           ManualRestDurationButton(

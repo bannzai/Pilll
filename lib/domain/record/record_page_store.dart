@@ -471,4 +471,15 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
     );
     await batch.commit();
   }
+
+  switchingAppearanceMode(PillSheetAppearanceMode mode) {
+    final setting = state.setting;
+    if (setting == null) {
+      throw FormatException("setting entity not found");
+    }
+    final updated = setting.copyWith(pillSheetAppearanceMode: mode);
+    return _settingService
+        .update(updated)
+        .then((value) => state = state.copyWith(setting: value));
+  }
 }
