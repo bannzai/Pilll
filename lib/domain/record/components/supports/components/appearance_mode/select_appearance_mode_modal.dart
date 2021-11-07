@@ -6,27 +6,13 @@ import 'package:pilll/components/molecules/select_circle.dart';
 import 'package:pilll/domain/record/record_page_store.dart';
 import 'package:pilll/entity/setting.dart';
 
-class SelectAppearanceModeModal extends StatefulWidget {
+class SelectAppearanceModeModal extends StatelessWidget {
   final RecordPageStore store;
   final PillSheetAppearanceMode mode;
 
   const SelectAppearanceModeModal(
       {Key? key, required this.store, required this.mode})
       : super(key: key);
-
-  @override
-  _SelectAppearanceModeModalState createState() =>
-      _SelectAppearanceModeModalState();
-}
-
-class _SelectAppearanceModeModalState extends State<SelectAppearanceModeModal> {
-  late PillSheetAppearanceMode mode;
-
-  @override
-  void initState() {
-    mode = widget.mode;
-    super.initState();
-  }
 
   @override
   Widget build(BuildContext context) {
@@ -82,9 +68,7 @@ class _SelectAppearanceModeModalState extends State<SelectAppearanceModeModal> {
       required bool showsPremiumBadge}) {
     return GestureDetector(
       onTap: () {
-        setState(() {
-          this.mode = mode;
-        });
+        store.switchingAppearanceMode(mode);
       },
       child: Container(
         height: 48,
