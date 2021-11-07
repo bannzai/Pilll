@@ -6,7 +6,7 @@ import 'package:pilll/components/molecules/select_circle.dart';
 import 'package:pilll/domain/record/record_page_store.dart';
 import 'package:pilll/entity/setting.dart';
 
-class SelectAppearanceModeModal extends StatelessWidget {
+class SelectAppearanceModeModal extends StatefulWidget {
   final RecordPageStore store;
   final PillSheetAppearanceMode mode;
 
@@ -15,11 +15,24 @@ class SelectAppearanceModeModal extends StatelessWidget {
       : super(key: key);
 
   @override
+  _SelectAppearanceModeModalState createState() =>
+      _SelectAppearanceModeModalState();
+}
+
+class _SelectAppearanceModeModalState extends State<SelectAppearanceModeModal> {
+  late PillSheetAppearanceMode mode;
+
+  @override
+  void initState() {
+    mode = widget.mode;
+    super.initState();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Container(
       color: Colors.white,
-      padding:
-          const EdgeInsets.only(bottom: 20, top: 24, left: 16, right: 16),
+      padding: const EdgeInsets.only(bottom: 20, top: 24, left: 16, right: 16),
       child: SafeArea(
         child: Column(
           mainAxisSize: MainAxisSize.min,
@@ -37,61 +50,60 @@ class SelectAppearanceModeModal extends StatelessWidget {
             SizedBox(height: 24),
             Column(
               children: [
-                Container(
-                  height: 48,
-                  child: Row(
-                    children: [
-                      SelectCircle(isSelected: false),
-                      SizedBox(width: 34),
-                      Text(
-                        "日付表示",
-                        style: TextStyle(
-                          color: TextColor.main,
-                          fontWeight: FontWeight.w500,
-                          fontSize: 14,
-                        ),
-                      ),
-                      SizedBox(width: 12),
-                      PremiumBadge(),
-                    ],
-                  ),
+                _row(
+                  context,
+                  mode: PillSheetAppearanceMode.date,
+                  text: "日付表示",
+                  showsPremiumBadge: true,
                 ),
-                Container(
-                  height: 48,
-                  child: Row(
-                    children: [
-                      SelectCircle(isSelected: false),
-                      SizedBox(width: 34),
-                      Text(
-                        "ピル番号",
-                        style: TextStyle(
-                          color: TextColor.main,
-                          fontWeight: FontWeight.w500,
-                          fontSize: 14,
-                        ),
-                      ),
-                    ],
-                  ),
+                _row(
+                  context,
+                  mode: PillSheetAppearanceMode.number,
+                  text: "ピル番号",
+                  showsPremiumBadge: false,
                 ),
-                Container(
-                  height: 48,
-                  child: Row(
-                    children: [
-                      SelectCircle(isSelected: false),
-                      SizedBox(width: 34),
-                      Text(
-                        "服用日数",
-                        style: TextStyle(
-                          color: TextColor.main,
-                          fontWeight: FontWeight.w500,
-                          fontSize: 14,
-                        ),
-                      ),
-                    ],
-                  ),
-                )
+                _row(
+                  context,
+                  mode: PillSheetAppearanceMode.number,
+                  text: "服用日数",
+                  showsPremiumBadge: false,
+                ),
               ],
             ),
+          ],
+        ),
+      ),
+    );
+  }
+
+  Widget _row(BuildContext context,
+      {required PillSheetAppearanceMode mode,
+      required String text,
+      required bool showsPremiumBadge}) {
+    return GestureDetector(
+      onTap: () {
+        setState(() {
+          this.mode = mode;
+        });
+      },
+      child: Container(
+        height: 48,
+        child: Row(
+          children: [
+            SelectCircle(isSelected: mode == this.mode),
+            SizedBox(width: 34),
+            Text(
+              text,
+              style: TextStyle(
+                color: TextColor.main,
+                fontWeight: FontWeight.w500,
+                fontSize: 14,
+              ),
+            ),
+            if (showsPremiumBadge) ...[
+              SizedBox(width: 12),
+              PremiumBadge(),
+            ]
           ],
         ),
       ),
