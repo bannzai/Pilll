@@ -16,11 +16,11 @@ class SelectAppearanceModeModal extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Container(
-        color: Colors.white,
-        padding:
-            const EdgeInsets.only(bottom: 20, top: 24, left: 16, right: 16),
+    return Container(
+      color: Colors.white,
+      padding:
+          const EdgeInsets.only(bottom: 20, top: 24, left: 16, right: 16),
+      child: SafeArea(
         child: Column(
           mainAxisSize: MainAxisSize.min,
           crossAxisAlignment: CrossAxisAlignment.start,
