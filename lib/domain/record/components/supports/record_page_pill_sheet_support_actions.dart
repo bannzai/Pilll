@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
-import 'package:pilll/components/atoms/font.dart';
-import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/components/organisms/pill_sheet/pill_sheet_view_layout.dart';
+import 'package:pilll/domain/record/components/supports/components/appearance_mode/switching_appearance_mode.dart';
 import 'package:pilll/domain/record/components/supports/components/rest_duration/manual_rest_duration_button.dart';
 import 'package:pilll/domain/record/record_page_store.dart';
 import 'package:pilll/entity/pill_sheet.dart';
@@ -27,18 +25,7 @@ class RecordPagePillSheetSupportActions extends StatelessWidget {
     return Container(
       width: PillSheetViewLayout.width,
       child: Row(children: [
-        Row(children: [
-          SvgPicture.asset("images/switching_appearance_mode.svg"),
-          Text(
-            "表示モード",
-            style: TextStyle(
-              color: TextColor.main,
-              fontSize: 12,
-              fontFamily: FontFamily.japanese,
-              fontWeight: FontWeight.w700,
-            ),
-          ),
-        ]),
+        SwitchingAppearanceMode(),
         Spacer(),
         if (!pillSheetGroup.hasPillSheetRestDuration)
           ManualRestDurationButton(
