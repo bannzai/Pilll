@@ -3,7 +3,7 @@ import 'package:flutter_svg/svg.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/components/organisms/pill_sheet/pill_sheet_view_layout.dart';
-import 'package:pilll/domain/record/components/rest_duration/manual_rest_duration_button.dart';
+import 'package:pilll/domain/record/components/supports/components/rest_duration/manual_rest_duration_button.dart';
 import 'package:pilll/domain/record/record_page_store.dart';
 import 'package:pilll/entity/pill_sheet.dart';
 import 'package:pilll/entity/pill_sheet_group.dart';
