@@ -4,7 +4,7 @@ import 'package:pilll/domain/premium_trial/premium_trial_complete_modal.dart';
 import 'package:pilll/domain/record/components/adding/record_page_adding_pill_sheet.dart';
 import 'package:pilll/domain/record/components/button/record_page_button.dart';
 import 'package:pilll/domain/record/components/notification_bar/notification_bar.dart';
-import 'package:pilll/domain/record/components/pill_sheet/components/record_page_pill_option.dart';
+import 'package:pilll/domain/record/components/supports/record_page_pill_option.dart';
 import 'package:pilll/domain/record/components/pill_sheet/record_page_pill_sheet_list.dart';
 import 'package:pilll/domain/record/record_page_state.dart';
 import 'package:pilll/domain/record/record_page_store.dart';
