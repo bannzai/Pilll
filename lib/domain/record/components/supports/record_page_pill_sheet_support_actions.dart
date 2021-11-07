@@ -8,12 +8,12 @@ import 'package:pilll/domain/record/record_page_store.dart';
 import 'package:pilll/entity/pill_sheet.dart';
 import 'package:pilll/entity/pill_sheet_group.dart';
 
-class RecordPagePillOption extends StatelessWidget {
+class RecordPagePillSheetSupportActions extends StatelessWidget {
   final RecordPageStore store;
   final PillSheetGroup pillSheetGroup;
   final PillSheet activedPillSheet;
 
-  const RecordPagePillOption({
+  const RecordPagePillSheetSupportActions({
     Key? key,
     required this.store,
     required this.pillSheetGroup,
