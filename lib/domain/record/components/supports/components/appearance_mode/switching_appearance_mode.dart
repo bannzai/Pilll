@@ -31,7 +31,7 @@ class SwitchingAppearanceMode extends StatelessWidget {
         ),
       ]),
       onTap: () {
-        showSelectAppearanceModeModal(context, store: store, mode: mode);
+        showSelectAppearanceModeModal(context);
       },
     );
   }

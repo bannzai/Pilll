@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_hooks/flutter_hooks.dart';
+import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/components/molecules/premium_badge.dart';
@@ -6,16 +8,15 @@ import 'package:pilll/components/molecules/select_circle.dart';
 import 'package:pilll/domain/record/record_page_store.dart';
 import 'package:pilll/entity/setting.dart';
 
-class SelectAppearanceModeModal extends StatelessWidget {
-  final RecordPageStore store;
-  final PillSheetAppearanceMode mode;
-
-  const SelectAppearanceModeModal(
-      {Key? key, required this.store, required this.mode})
-      : super(key: key);
-
+class SelectAppearanceModeModal extends HookWidget {
   @override
   Widget build(BuildContext context) {
+    final store = useProvider(recordPageStoreProvider);
+    final state = useProvider(recordPageStoreProvider.state);
+    final setting = state.setting;
+    if (setting == null) {
+      return Container();
+    }
     return Container(
       color: Colors.white,
       padding: const EdgeInsets.only(bottom: 20, top: 24, left: 16, right: 16),
@@ -38,18 +39,24 @@ class SelectAppearanceModeModal extends StatelessWidget {
               children: [
                 _row(
                   context,
+                  store: store,
+                  setting: setting,
                   mode: PillSheetAppearanceMode.date,
                   text: "日付表示",
                   showsPremiumBadge: true,
                 ),
                 _row(
                   context,
+                  store: store,
+                  setting: setting,
                   mode: PillSheetAppearanceMode.number,
                   text: "ピル番号",
                   showsPremiumBadge: false,
                 ),
                 _row(
                   context,
+                  store: store,
+                  setting: setting,
                   mode: PillSheetAppearanceMode.sequential,
                   text: "服用日数",
                   showsPremiumBadge: false,
@@ -62,10 +69,14 @@ class SelectAppearanceModeModal extends StatelessWidget {
     );
   }
 
-  Widget _row(BuildContext context,
-      {required PillSheetAppearanceMode mode,
-      required String text,
-      required bool showsPremiumBadge}) {
+  Widget _row(
+    BuildContext context, {
+    required RecordPageStore store,
+    required Setting setting,
+    required PillSheetAppearanceMode mode,
+    required String text,
+    required bool showsPremiumBadge,
+  }) {
     return GestureDetector(
       onTap: () {
         store.switchingAppearanceMode(mode);
@@ -74,7 +85,7 @@ class SelectAppearanceModeModal extends StatelessWidget {
         height: 48,
         child: Row(
           children: [
-            SelectCircle(isSelected: mode == this.mode),
+            SelectCircle(isSelected: mode == setting.pillSheetAppearanceMode),
             SizedBox(width: 34),
             Text(
               text,
@@ -96,13 +107,11 @@ class SelectAppearanceModeModal extends StatelessWidget {
 }
 
 void showSelectAppearanceModeModal(
-  BuildContext context, {
-  required RecordPageStore store,
-  required PillSheetAppearanceMode mode,
-}) {
+  BuildContext context,
+) {
   showModalBottomSheet(
     context: context,
-    builder: (context) => SelectAppearanceModeModal(store: store, mode: mode),
+    builder: (context) => SelectAppearanceModeModal(),
     backgroundColor: Colors.transparent,
   );
 }
