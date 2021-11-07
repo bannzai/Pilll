@@ -35,17 +35,8 @@ enum PillSheetAppearanceMode {
   number,
   @JsonValue("date")
   date,
-}
-
-extension PillSheetAppearanceModeFunctions on PillSheetAppearanceMode {
-  String get itemName {
-    switch (this) {
-      case PillSheetAppearanceMode.number:
-        return "ピル番号";
-      case PillSheetAppearanceMode.date:
-        return "日付";
-    }
-  }
+  @JsonValue("sequential")
+  sequential,
 }
 
 abstract class SettingFirestoreFieldKeys {

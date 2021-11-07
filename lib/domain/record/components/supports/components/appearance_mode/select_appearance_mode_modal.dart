@@ -64,7 +64,7 @@ class _SelectAppearanceModeModalState extends State<SelectAppearanceModeModal> {
                 ),
                 _row(
                   context,
-                  mode: PillSheetAppearanceMode.number,
+                  mode: PillSheetAppearanceMode.sequential,
                   text: "服用日数",
                   showsPremiumBadge: false,
                 ),
