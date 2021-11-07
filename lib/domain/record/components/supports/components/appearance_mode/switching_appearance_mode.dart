@@ -2,13 +2,17 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
+import 'package:pilll/domain/record/components/supports/components/appearance_mode/select_appearance_mode_modal.dart';
 import 'package:pilll/domain/record/record_page_store.dart';
+import 'package:pilll/entity/setting.dart';
 
 class SwitchingAppearanceMode extends StatelessWidget {
   final RecordPageStore store;
+  final PillSheetAppearanceMode mode;
   const SwitchingAppearanceMode({
     Key? key,
     required this.store,
+    required this.mode,
   }) : super(key: key);
 
   @override
@@ -27,7 +31,7 @@ class SwitchingAppearanceMode extends StatelessWidget {
         ),
       ]),
       onTap: () {
-        // TODO:
+        showSelectAppearanceModeModal(context, store: store, mode: mode);
       },
     );
   }

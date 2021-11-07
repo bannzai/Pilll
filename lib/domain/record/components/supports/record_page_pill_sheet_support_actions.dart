@@ -5,17 +5,20 @@ import 'package:pilll/domain/record/components/supports/components/rest_duration
 import 'package:pilll/domain/record/record_page_store.dart';
 import 'package:pilll/entity/pill_sheet.dart';
 import 'package:pilll/entity/pill_sheet_group.dart';
+import 'package:pilll/entity/setting.dart';
 
 class RecordPagePillSheetSupportActions extends StatelessWidget {
   final RecordPageStore store;
   final PillSheetGroup pillSheetGroup;
   final PillSheet activedPillSheet;
+  final Setting setting;
 
   const RecordPagePillSheetSupportActions({
     Key? key,
     required this.store,
     required this.pillSheetGroup,
     required this.activedPillSheet,
+    required this.setting,
   }) : super(key: key);
 
   @override
@@ -25,7 +28,8 @@ class RecordPagePillSheetSupportActions extends StatelessWidget {
     return Container(
       width: PillSheetViewLayout.width,
       child: Row(children: [
-        SwitchingAppearanceMode(store: store),
+        SwitchingAppearanceMode(
+            store: store, mode: setting.pillSheetAppearanceMode),
         Spacer(),
         if (!pillSheetGroup.hasPillSheetRestDuration)
           ManualRestDurationButton(

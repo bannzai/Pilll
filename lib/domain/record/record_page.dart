@@ -113,6 +113,7 @@ class RecordPage extends HookWidget {
             store: store,
             pillSheetGroup: pillSheetGroup,
             activedPillSheet: activedPillSheet,
+            setting: settingEntity,
           ),
           SizedBox(height: 16),
           RecordPagePillSheetList(
