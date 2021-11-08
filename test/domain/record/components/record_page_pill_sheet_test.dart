@@ -278,7 +278,7 @@ void main() {
         }
       });
       test(
-          "setting.pillNumberForFromMenstruation == 0 || setting.durationMenstruation == 0",
+          "isPremium == true && (setting.pillNumberForFromMenstruation == 0 || setting.durationMenstruation == 0)",
           () {
         final originalTodayRepository = todayRepository;
         final mockTodayRepository = MockTodayService();
@@ -290,7 +290,7 @@ void main() {
           todayRepository = originalTodayRepository;
         });
 
-        final state = RecordPageState(isPremium: false, isTrial: false);
+        final state = RecordPageState(isPremium: true, isTrial: false);
         final pillSheet = PillSheet(
             typeInfo: PillSheetType.pillsheet_21.typeInfo, beginingDate: today);
         final pillSheetGroup = PillSheetGroup(
@@ -317,14 +317,14 @@ void main() {
               setting: setting);
 
           if (pillNumberIntoPillSheet < pillNumberForFromMenstruation) {
-            expect(widget, isA<PlainPillNumber>(),
+            expect(widget, isA<PlainPillDate>(),
                 reason: "pillNumberIntoPillSheet: $pillNumberIntoPillSheet");
           } else if (pillNumberIntoPillSheet <
               pillNumberForFromMenstruation + durationMenstruation) {
-            expect(widget, isA<PlainPillNumber>(),
+            expect(widget, isA<PlainPillDate>(),
                 reason: "pillNumberIntoPillSheet: $pillNumberIntoPillSheet");
           } else {
-            expect(widget, isA<PlainPillNumber>(),
+            expect(widget, isA<PlainPillDate>(),
                 reason: "pillNumberIntoPillSheet: $pillNumberIntoPillSheet");
           }
         }
