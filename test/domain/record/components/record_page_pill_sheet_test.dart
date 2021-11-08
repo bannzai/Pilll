@@ -60,7 +60,8 @@ void main() {
           if (pillNumberIntoPillSheet < pillNumberForFromMenstruation) {
             expect(widget, isA<PlainPillNumber>(),
                 reason: "pillNumberIntoPillSheet: $pillNumberIntoPillSheet");
-          } else if (i < pillNumberForFromMenstruation + durationMenstruation) {
+          } else if (pillNumberIntoPillSheet <
+              pillNumberForFromMenstruation + durationMenstruation) {
             expect(widget, isA<PlainPillNumber>(),
                 reason: "pillNumberIntoPillSheet: $pillNumberIntoPillSheet");
           } else {
@@ -111,7 +112,8 @@ void main() {
           if (pillNumberIntoPillSheet < pillNumberForFromMenstruation) {
             expect(widget, isA<PlainPillNumber>(),
                 reason: "pillNumberIntoPillSheet: $pillNumberIntoPillSheet");
-          } else if (i < pillNumberForFromMenstruation + durationMenstruation) {
+          } else if (pillNumberIntoPillSheet <
+              pillNumberForFromMenstruation + durationMenstruation) {
             expect(widget, isA<PlainPillNumber>(),
                 reason: "pillNumberIntoPillSheet: $pillNumberIntoPillSheet");
           } else {
@@ -165,7 +167,8 @@ void main() {
           if (pillNumberIntoPillSheet < pillNumberForFromMenstruation) {
             expect(widget, isA<PlainPillNumber>(),
                 reason: "pillNumberIntoPillSheet: $pillNumberIntoPillSheet");
-          } else if (i < pillNumberForFromMenstruation + durationMenstruation) {
+          } else if (pillNumberIntoPillSheet <
+              pillNumberForFromMenstruation + durationMenstruation) {
             expect(widget, isA<PlainPillNumber>(),
                 reason: "pillNumberIntoPillSheet: $pillNumberIntoPillSheet");
           } else {
@@ -216,7 +219,8 @@ void main() {
           if (pillNumberIntoPillSheet < pillNumberForFromMenstruation) {
             expect(widget, isA<PlainPillNumber>(),
                 reason: "pillNumberIntoPillSheet: $pillNumberIntoPillSheet");
-          } else if (i < pillNumberForFromMenstruation + durationMenstruation) {
+          } else if (pillNumberIntoPillSheet <
+              pillNumberForFromMenstruation + durationMenstruation) {
             expect(widget, isA<PlainPillNumber>(),
                 reason: "pillNumberIntoPillSheet: $pillNumberIntoPillSheet");
           } else {
