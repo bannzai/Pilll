@@ -93,8 +93,8 @@ void main() {
           pillSheetAppearanceMode: pillSheetAppearanceMode,
         );
         final state = RecordPageState(
-          isPremium: true,
-          isTrial: true,
+          isPremium: false,
+          isTrial: false,
           setting: setting,
         );
         final pillSheet = PillSheet(
