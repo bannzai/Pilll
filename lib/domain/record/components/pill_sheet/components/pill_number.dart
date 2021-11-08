@@ -4,13 +4,14 @@ import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/util/formatter/date_time_formatter.dart';
 
 class PlainPillNumber extends StatelessWidget {
-  final int pillNumber;
+  final int pillNumberIntoPillSheet;
 
-  const PlainPillNumber({Key? key, required this.pillNumber}) : super(key: key);
+  const PlainPillNumber({Key? key, required this.pillNumberIntoPillSheet})
+      : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Text(
-      "$pillNumber",
+      "$pillNumberIntoPillSheet",
       style: FontType.smallTitle.merge(TextStyle(color: PilllColors.weekday)),
       textScaleFactor: 1,
     );
@@ -32,14 +33,15 @@ class PlainPillDate extends StatelessWidget {
 }
 
 class MenstruationPillNumber extends StatelessWidget {
-  final int pillNumber;
+  final int pillNumberIntoPillSheet;
 
-  const MenstruationPillNumber({Key? key, required this.pillNumber})
+  const MenstruationPillNumber(
+      {Key? key, required this.pillNumberIntoPillSheet})
       : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Text(
-      "$pillNumber",
+      "$pillNumberIntoPillSheet",
       style: FontType.smallTitle.merge(TextStyle(color: PilllColors.primary)),
       textScaleFactor: 1,
     );

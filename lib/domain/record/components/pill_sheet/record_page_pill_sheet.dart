@@ -146,7 +146,7 @@ class RecordPagePillSheet extends StatelessWidget {
       if (isDateMode) {
         return PlainPillDate(date: date);
       } else {
-        return PlainPillNumber(pillNumber: pillNumberIntoPillSheet);
+        return PlainPillNumber(pillNumberIntoPillSheet: pillNumberIntoPillSheet);
       }
     }
 
@@ -166,9 +166,10 @@ class RecordPagePillSheet extends StatelessWidget {
       }
     } else {
       if (containedMenstruationDuration && (state.isPremium || state.isTrial)) {
-        return MenstruationPillNumber(pillNumber: pillNumberIntoPillSheet);
+        return MenstruationPillNumber(
+            pillNumberIntoPillSheet: pillNumberIntoPillSheet);
       } else {
-        return PlainPillNumber(pillNumber: pillNumberIntoPillSheet);
+        return PlainPillNumber(pillNumberIntoPillSheet: pillNumberIntoPillSheet);
       }
     }
   }
