@@ -18,10 +18,9 @@ void main() {
     SharedPreferences.setMockInitialValues({});
   });
   group("#RecordPagePillSheet.textOfPillNumber", () {
-    group("it is not premium or trial pattern", () {
-      final isPremium = false;
-      final isTrial = false;
-      test("pillSheetAppearanceMode is number", () {
+    group("pillSheetAppearanceMode is number", () {
+      final pillSheetAppearanceMode = PillSheetAppearanceMode.number;
+      test("it is not isPremium and isTrial", () {
         final originalTodayRepository = todayRepository;
         final mockTodayRepository = MockTodayService();
         final today = DateTime.parse("2020-09-01");
@@ -32,7 +31,7 @@ void main() {
           todayRepository = originalTodayRepository;
         });
 
-        final state = RecordPageState(isPremium: isPremium, isTrial: isTrial);
+        final state = RecordPageState(isPremium: false, isTrial: false);
         final pillSheet = PillSheet(
             typeInfo: PillSheetType.pillsheet_21.typeInfo, beginingDate: today);
         final pillSheetGroup = PillSheetGroup(
@@ -42,9 +41,62 @@ void main() {
         final pillNumberForFromMenstruation = 22;
         final durationMenstruation = 4;
         final setting = Setting(
-            pillNumberForFromMenstruation: pillNumberForFromMenstruation,
-            durationMenstruation: durationMenstruation,
-            isOnReminder: true);
+          pillNumberForFromMenstruation: pillNumberForFromMenstruation,
+          durationMenstruation: durationMenstruation,
+          isOnReminder: true,
+          pillSheetAppearanceMode: pillSheetAppearanceMode,
+        );
+
+        for (int i = 0; i < 28; i++) {
+          final pillNumberIntoPillSheet = i + 1;
+          final widget = RecordPagePillSheet.textOfPillNumber(
+              state: state,
+              pillSheetGroup: pillSheetGroup,
+              pillSheet: pillSheet,
+              pillNumberIntoPillSheet: pillNumberIntoPillSheet,
+              pageIndex: 0,
+              setting: setting);
+
+          if (pillNumberIntoPillSheet < pillNumberForFromMenstruation) {
+            expect(widget, isA<PlainPillNumber>());
+          } else if (i < pillNumberForFromMenstruation + durationMenstruation) {
+            expect(widget, isA<PlainPillNumber>());
+          } else {
+            expect(widget, isA<PlainPillNumber>());
+          }
+        }
+      });
+    });
+    group("pillSheetAppearanceMode is date", () {
+      final pillSheetAppearanceMode = PillSheetAppearanceMode.date;
+      test(
+          "it is not isPremium and isTrial. it is means expired trial or premium user",
+          () {
+        final originalTodayRepository = todayRepository;
+        final mockTodayRepository = MockTodayService();
+        final today = DateTime.parse("2020-09-01");
+        todayRepository = mockTodayRepository;
+        when(mockTodayRepository.now()).thenReturn(today);
+        when(mockTodayRepository.today()).thenReturn(today);
+        addTearDown(() {
+          todayRepository = originalTodayRepository;
+        });
+
+        final state = RecordPageState(isPremium: false, isTrial: false);
+        final pillSheet = PillSheet(
+            typeInfo: PillSheetType.pillsheet_21.typeInfo, beginingDate: today);
+        final pillSheetGroup = PillSheetGroup(
+            pillSheetIDs: ["pill_sheet_id"],
+            pillSheets: [pillSheet],
+            createdAt: today);
+        final pillNumberForFromMenstruation = 22;
+        final durationMenstruation = 4;
+        final setting = Setting(
+          pillNumberForFromMenstruation: pillNumberForFromMenstruation,
+          durationMenstruation: durationMenstruation,
+          isOnReminder: true,
+          pillSheetAppearanceMode: pillSheetAppearanceMode,
+        );
 
         for (int i = 0; i < 28; i++) {
           final pillNumberIntoPillSheet = i + 1;
