@@ -79,9 +79,11 @@ class RecordPagePillSheet extends StatelessWidget {
       return Container(
         width: PillSheetViewLayout.componentWidth,
         child: PillMarkWithNumberLayout(
-          textOfPillNumber: _textOfPillNumber(
+          textOfPillNumber: textOfPillNumber(
             state: state,
             pillSheetGroup: pillSheetGroup,
+            pillSheet: pillSheet,
+            setting: setting,
             pillNumberIntoPillSheet: pillNumberIntoPillSheet,
             pageIndex: pageIndex,
           ),
@@ -119,11 +121,13 @@ class RecordPagePillSheet extends StatelessWidget {
     });
   }
 
-  Widget _textOfPillNumber({
+  static Widget textOfPillNumber({
     required RecordPageState state,
     required PillSheetGroup pillSheetGroup,
+    required PillSheet pillSheet,
     required int pillNumberIntoPillSheet,
     required int pageIndex,
+    required Setting setting,
   }) {
     final DateTime date =
         calculatedDateOfAppearancePill(pillSheet, pillNumberIntoPillSheet);
