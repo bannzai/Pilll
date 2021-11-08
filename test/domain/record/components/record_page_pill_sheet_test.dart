@@ -31,13 +31,6 @@ void main() {
           todayRepository = originalTodayRepository;
         });
 
-        final state = RecordPageState(isPremium: true, isTrial: true);
-        final pillSheet = PillSheet(
-            typeInfo: PillSheetType.pillsheet_21.typeInfo, beginingDate: today);
-        final pillSheetGroup = PillSheetGroup(
-            pillSheetIDs: ["pill_sheet_id"],
-            pillSheets: [pillSheet],
-            createdAt: today);
         final pillNumberForFromMenstruation = 22;
         final durationMenstruation = 4;
         final setting = Setting(
@@ -46,7 +39,17 @@ void main() {
           isOnReminder: true,
           pillSheetAppearanceMode: pillSheetAppearanceMode,
         );
-
+        final state = RecordPageState(
+          isPremium: true,
+          isTrial: true,
+          setting: setting,
+        );
+        final pillSheet = PillSheet(
+            typeInfo: PillSheetType.pillsheet_21.typeInfo, beginingDate: today);
+        final pillSheetGroup = PillSheetGroup(
+            pillSheetIDs: ["pill_sheet_id"],
+            pillSheets: [pillSheet],
+            createdAt: today);
         for (int i = 0; i < 28; i++) {
           final pillNumberIntoPillSheet = i + 1;
           final widget = RecordPagePillSheet.textOfPillNumber(
@@ -81,13 +84,6 @@ void main() {
           todayRepository = originalTodayRepository;
         });
 
-        final state = RecordPageState(isPremium: false, isTrial: false);
-        final pillSheet = PillSheet(
-            typeInfo: PillSheetType.pillsheet_21.typeInfo, beginingDate: today);
-        final pillSheetGroup = PillSheetGroup(
-            pillSheetIDs: ["pill_sheet_id"],
-            pillSheets: [pillSheet],
-            createdAt: today);
         final pillNumberForFromMenstruation = 22;
         final durationMenstruation = 4;
         final setting = Setting(
@@ -96,6 +92,17 @@ void main() {
           isOnReminder: true,
           pillSheetAppearanceMode: pillSheetAppearanceMode,
         );
+        final state = RecordPageState(
+          isPremium: true,
+          isTrial: true,
+          setting: setting,
+        );
+        final pillSheet = PillSheet(
+            typeInfo: PillSheetType.pillsheet_21.typeInfo, beginingDate: today);
+        final pillSheetGroup = PillSheetGroup(
+            pillSheetIDs: ["pill_sheet_id"],
+            pillSheets: [pillSheet],
+            createdAt: today);
 
         for (int i = 0; i < 28; i++) {
           final pillNumberIntoPillSheet = i + 1;
@@ -133,13 +140,6 @@ void main() {
           todayRepository = originalTodayRepository;
         });
 
-        final state = RecordPageState(isPremium: false, isTrial: false);
-        final pillSheet = PillSheet(
-            typeInfo: PillSheetType.pillsheet_21.typeInfo, beginingDate: today);
-        final pillSheetGroup = PillSheetGroup(
-            pillSheetIDs: ["pill_sheet_id"],
-            pillSheets: [pillSheet],
-            createdAt: today);
         final pillNumberForFromMenstruation = 22;
         final durationMenstruation = 4;
         final setting = Setting(
@@ -148,6 +148,17 @@ void main() {
           isOnReminder: true,
           pillSheetAppearanceMode: pillSheetAppearanceMode,
         );
+        final state = RecordPageState(
+          isPremium: true,
+          isTrial: true,
+          setting: setting,
+        );
+        final pillSheet = PillSheet(
+            typeInfo: PillSheetType.pillsheet_21.typeInfo, beginingDate: today);
+        final pillSheetGroup = PillSheetGroup(
+            pillSheetIDs: ["pill_sheet_id"],
+            pillSheets: [pillSheet],
+            createdAt: today);
 
         for (int i = 0; i < 28; i++) {
           final pillNumberIntoPillSheet = i + 1;
@@ -186,13 +197,6 @@ void main() {
           todayRepository = originalTodayRepository;
         });
 
-        final state = RecordPageState(isPremium: true, isTrial: true);
-        final pillSheet = PillSheet(
-            typeInfo: PillSheetType.pillsheet_21.typeInfo, beginingDate: today);
-        final pillSheetGroup = PillSheetGroup(
-            pillSheetIDs: ["pill_sheet_id"],
-            pillSheets: [pillSheet],
-            createdAt: today);
         final pillNumberForFromMenstruation = 22;
         final durationMenstruation = 4;
         final setting = Setting(
@@ -201,6 +205,17 @@ void main() {
           isOnReminder: true,
           pillSheetAppearanceMode: pillSheetAppearanceMode,
         );
+        final state = RecordPageState(
+          isPremium: true,
+          isTrial: true,
+          setting: setting,
+        );
+        final pillSheet = PillSheet(
+            typeInfo: PillSheetType.pillsheet_21.typeInfo, beginingDate: today);
+        final pillSheetGroup = PillSheetGroup(
+            pillSheetIDs: ["pill_sheet_id"],
+            pillSheets: [pillSheet],
+            createdAt: today);
 
         for (int i = 0; i < 28; i++) {
           final pillNumberIntoPillSheet = i + 1;
@@ -238,13 +253,6 @@ void main() {
           todayRepository = originalTodayRepository;
         });
 
-        final state = RecordPageState(isPremium: false, isTrial: false);
-        final pillSheet = PillSheet(
-            typeInfo: PillSheetType.pillsheet_21.typeInfo, beginingDate: today);
-        final pillSheetGroup = PillSheetGroup(
-            pillSheetIDs: ["pill_sheet_id"],
-            pillSheets: [pillSheet],
-            createdAt: today);
         final pillNumberForFromMenstruation = 22;
         final durationMenstruation = 4;
         final setting = Setting(
@@ -253,6 +261,17 @@ void main() {
           isOnReminder: true,
           pillSheetAppearanceMode: pillSheetAppearanceMode,
         );
+        final state = RecordPageState(
+          isPremium: true,
+          isTrial: true,
+          setting: setting,
+        );
+        final pillSheet = PillSheet(
+            typeInfo: PillSheetType.pillsheet_21.typeInfo, beginingDate: today);
+        final pillSheetGroup = PillSheetGroup(
+            pillSheetIDs: ["pill_sheet_id"],
+            pillSheets: [pillSheet],
+            createdAt: today);
 
         for (int i = 0; i < 28; i++) {
           final pillNumberIntoPillSheet = i + 1;
@@ -290,13 +309,6 @@ void main() {
           todayRepository = originalTodayRepository;
         });
 
-        final state = RecordPageState(isPremium: true, isTrial: false);
-        final pillSheet = PillSheet(
-            typeInfo: PillSheetType.pillsheet_21.typeInfo, beginingDate: today);
-        final pillSheetGroup = PillSheetGroup(
-            pillSheetIDs: ["pill_sheet_id"],
-            pillSheets: [pillSheet],
-            createdAt: today);
         final pillNumberForFromMenstruation = 22;
         final durationMenstruation = 4;
         final setting = Setting(
@@ -305,6 +317,17 @@ void main() {
           isOnReminder: true,
           pillSheetAppearanceMode: pillSheetAppearanceMode,
         );
+        final state = RecordPageState(
+          isPremium: true,
+          isTrial: true,
+          setting: setting,
+        );
+        final pillSheet = PillSheet(
+            typeInfo: PillSheetType.pillsheet_21.typeInfo, beginingDate: today);
+        final pillSheetGroup = PillSheetGroup(
+            pillSheetIDs: ["pill_sheet_id"],
+            pillSheets: [pillSheet],
+            createdAt: today);
 
         for (int i = 0; i < 28; i++) {
           final pillNumberIntoPillSheet = i + 1;
