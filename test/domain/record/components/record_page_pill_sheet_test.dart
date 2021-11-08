@@ -309,8 +309,8 @@ void main() {
           todayRepository = originalTodayRepository;
         });
 
-        final pillNumberForFromMenstruation = 22;
-        final durationMenstruation = 4;
+        final pillNumberForFromMenstruation = 0;
+        final durationMenstruation = 0;
         final setting = Setting(
           pillNumberForFromMenstruation: pillNumberForFromMenstruation,
           durationMenstruation: durationMenstruation,
