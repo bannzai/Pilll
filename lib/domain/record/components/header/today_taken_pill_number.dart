@@ -74,14 +74,24 @@ class TodayTakenPillNumber extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.baseline,
       textBaseline: TextBaseline.ideographic,
       children: <Widget>[
-        Text("${activedPillSheet.todayPillNumber}",
-            style: FontType.xHugeNumber.merge(TextColorStyle.main)),
-        if (_appearanceMode == PillSheetAppearanceMode.sequential)
-          Text("日目",
-              style: FontType.assistingBold.merge(TextColorStyle.noshime)),
-        if (_appearanceMode != PillSheetAppearanceMode.sequential)
+        if (_appearanceMode == PillSheetAppearanceMode.number) ...[
+          Text("${activedPillSheet.todayPillNumber}",
+              style: FontType.xHugeNumber.merge(TextColorStyle.main)),
           Text("番",
               style: FontType.assistingBold.merge(TextColorStyle.noshime)),
+        ],
+        if (_appearanceMode == PillSheetAppearanceMode.date) ...[
+          Text("${activedPillSheet.todayPillNumber}",
+              style: FontType.xHugeNumber.merge(TextColorStyle.main)),
+          Text("番",
+              style: FontType.assistingBold.merge(TextColorStyle.noshime)),
+        ],
+        if (_appearanceMode == PillSheetAppearanceMode.sequential) ...[
+          Text("${pillSheetGroup.sequentialTodayPillNumber}",
+              style: FontType.xHugeNumber.merge(TextColorStyle.main)),
+          Text("日目",
+              style: FontType.assistingBold.merge(TextColorStyle.noshime)),
+        ],
       ],
     );
   }
