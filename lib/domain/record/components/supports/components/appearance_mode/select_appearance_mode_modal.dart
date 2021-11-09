@@ -99,6 +99,7 @@ class SelectAppearanceModeModal extends HookWidget {
             showPremiumIntroductionSheet(context);
           }
         } else {
+          // User selected non premium function mode
           store.switchingAppearanceMode(mode);
         }
       },
