@@ -5,6 +5,10 @@ import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/components/molecules/premium_badge.dart';
 import 'package:pilll/components/molecules/select_circle.dart';
+import 'package:pilll/domain/premium_introduction/premium_introduction_sheet.dart';
+import 'package:pilll/domain/premium_trial/premium_trial_complete_modal.dart';
+import 'package:pilll/domain/premium_trial/premium_trial_modal.dart';
+import 'package:pilll/domain/record/record_page_state.dart';
 import 'package:pilll/domain/record/record_page_store.dart';
 import 'package:pilll/entity/setting.dart';
 
@@ -13,10 +17,6 @@ class SelectAppearanceModeModal extends HookWidget {
   Widget build(BuildContext context) {
     final store = useProvider(recordPageStoreProvider);
     final state = useProvider(recordPageStoreProvider.state);
-    final setting = state.setting;
-    if (setting == null) {
-      return Container();
-    }
     return Container(
       color: Colors.white,
       padding: const EdgeInsets.only(bottom: 20, top: 24, left: 16, right: 16),
@@ -40,26 +40,26 @@ class SelectAppearanceModeModal extends HookWidget {
                 _row(
                   context,
                   store: store,
-                  setting: setting,
+                  state: state,
                   mode: PillSheetAppearanceMode.date,
                   text: "日付表示",
-                  showsPremiumBadge: true,
+                  isPremiumFunction: true,
                 ),
                 _row(
                   context,
                   store: store,
-                  setting: setting,
+                  state: state,
                   mode: PillSheetAppearanceMode.number,
                   text: "ピル番号",
-                  showsPremiumBadge: false,
+                  isPremiumFunction: false,
                 ),
                 _row(
                   context,
                   store: store,
-                  setting: setting,
+                  state: state,
                   mode: PillSheetAppearanceMode.sequential,
                   text: "服用日数",
-                  showsPremiumBadge: false,
+                  isPremiumFunction: false,
                 ),
               ],
             ),
@@ -72,20 +72,32 @@ class SelectAppearanceModeModal extends HookWidget {
   Widget _row(
     BuildContext context, {
     required RecordPageStore store,
-    required Setting setting,
+    required RecordPageState state,
     required PillSheetAppearanceMode mode,
     required String text,
-    required bool showsPremiumBadge,
+    required bool isPremiumFunction,
   }) {
     return GestureDetector(
       onTap: () {
-        store.switchingAppearanceMode(mode);
+        if (state.isPremium || state.isTrial) {
+          store.switchingAppearanceMode(mode);
+        } else if (isPremiumFunction) {
+          if (state.trialDeadlineDate == null) {
+            showPremiumTrialModal(context, () {
+              showPremiumTrialCompleteModalPreDialog(context);
+            });
+          } else {
+            showPremiumIntroductionSheet(context);
+          }
+        } else {
+          store.switchingAppearanceMode(mode);
+        }
       },
       child: Container(
         height: 48,
         child: Row(
           children: [
-            SelectCircle(isSelected: mode == setting.pillSheetAppearanceMode),
+            SelectCircle(isSelected: mode == state.appearanceMode),
             SizedBox(width: 34),
             Text(
               text,
@@ -95,7 +107,7 @@ class SelectAppearanceModeModal extends HookWidget {
                 fontSize: 14,
               ),
             ),
-            if (showsPremiumBadge) ...[
+            if (isPremiumFunction) ...[
               SizedBox(width: 12),
               PremiumBadge(),
             ]
