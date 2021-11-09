@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:pilll/analytics.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/components/molecules/premium_badge.dart';
@@ -79,6 +80,10 @@ class SelectAppearanceModeModal extends HookWidget {
   }) {
     return GestureDetector(
       onTap: () {
+        analytics.logEvent(
+          name: "did_select_pill_sheet_appearance",
+          parameters: {"mode": mode, "isPremiumFunction": isPremiumFunction},
+        );
         if (state.isPremium || state.isTrial) {
           store.switchingAppearanceMode(mode);
         } else if (isPremiumFunction) {
