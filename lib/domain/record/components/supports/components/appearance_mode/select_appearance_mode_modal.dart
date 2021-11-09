@@ -84,6 +84,7 @@ class SelectAppearanceModeModal extends HookWidget {
           name: "did_select_pill_sheet_appearance",
           parameters: {"mode": mode, "isPremiumFunction": isPremiumFunction},
         );
+
         if (state.isPremium || state.isTrial) {
           store.switchingAppearanceMode(mode);
         } else if (isPremiumFunction) {
