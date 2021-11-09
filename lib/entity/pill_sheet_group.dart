@@ -62,4 +62,28 @@ abstract class PillSheetGroup implements _$PillSheetGroup {
   bool get isDeactived => activedPillSheet == null || _isDeleted;
   bool get hasPillSheetRestDuration =>
       pillSheets.map((e) => e.pillSheetType.hasRestDurationType).contains(true);
+
+  int get sequentialTodayPillNumber {
+    if (pillSheets.isEmpty) {
+      return 0;
+    }
+    final activedPillSheet = this.activedPillSheet;
+    if (activedPillSheet == null) {
+      return 0;
+    }
+    if (activedPillSheet.groupIndex == 0) {
+      return activedPillSheet.todayPillNumber;
+    }
+    final passedPillSheets = pillSheets.sublist(0, activedPillSheet.groupIndex);
+    if (passedPillSheets.isEmpty) {
+      return activedPillSheet.todayPillNumber;
+    }
+
+    final passedPillCountForPillSheetTypes =
+        summarizedPillSheetTypeTotalCountToPageIndex(
+            pillSheetTypes:
+                passedPillSheets.map((e) => e.pillSheetType).toList(),
+            pageIndex: activedPillSheet.groupIndex);
+    return passedPillCountForPillSheetTypes + activedPillSheet.todayPillNumber;
+  }
 }
