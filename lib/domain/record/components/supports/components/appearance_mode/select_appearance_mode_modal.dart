@@ -82,7 +82,10 @@ class SelectAppearanceModeModal extends HookWidget {
       onTap: () {
         analytics.logEvent(
           name: "did_select_pill_sheet_appearance",
-          parameters: {"mode": mode, "isPremiumFunction": isPremiumFunction},
+          parameters: {
+            "mode": mode.toString(),
+            "isPremiumFunction": isPremiumFunction
+          },
         );
 
         if (state.isPremium || state.isTrial) {
