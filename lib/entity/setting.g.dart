@@ -107,4 +107,5 @@ K? _$enumDecodeNullable<K, V>(
 const _$PillSheetAppearanceModeEnumMap = {
   PillSheetAppearanceMode.number: 'number',
   PillSheetAppearanceMode.date: 'date',
+  PillSheetAppearanceMode.sequential: 'sequential',
 };
