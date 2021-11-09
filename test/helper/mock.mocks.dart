@@ -523,6 +523,9 @@ class MockRecordPageStore extends _i1.Mock implements _i25.RecordPageStore {
           returnValue: Future<void>.value(),
           returnValueForMissingStub: Future.value()) as _i17.Future<void>);
   @override
+  dynamic switchingAppearanceMode(_i3.PillSheetAppearanceMode? mode) =>
+      super.noSuchMethod(Invocation.method(#switchingAppearanceMode, [mode]));
+  @override
   _i26.RemoveListener addListener(_i26.Listener<_i7.RecordPageState>? listener,
           {bool? fireImmediately = true}) =>
       (super.noSuchMethod(
