@@ -127,6 +127,7 @@ class SelectAppearanceModeModal extends HookWidget {
 void showSelectAppearanceModeModal(
   BuildContext context,
 ) {
+  analytics.setCurrentScreen(screenName: "SelectAppearanceModeModal");
   showModalBottomSheet(
     context: context,
     builder: (context) => SelectAppearanceModeModal(),
