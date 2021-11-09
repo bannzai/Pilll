@@ -58,6 +58,7 @@ class RecordPage extends HookWidget {
           title: RecordPageInformationHeader(
             today: DateTime.now(),
             pillSheetGroup: state.pillSheetGroup,
+            setting: settingEntity,
             store: store,
           ),
         ),
