@@ -79,9 +79,11 @@ class RecordPagePillSheet extends StatelessWidget {
       return Container(
         width: PillSheetViewLayout.componentWidth,
         child: PillMarkWithNumberLayout(
-          textOfPillNumber: _textOfPillNumber(
+          textOfPillNumber: textOfPillNumber(
             state: state,
             pillSheetGroup: pillSheetGroup,
+            pillSheet: pillSheet,
+            setting: setting,
             pillNumberIntoPillSheet: pillNumberIntoPillSheet,
             pageIndex: pageIndex,
           ),
@@ -119,33 +121,15 @@ class RecordPagePillSheet extends StatelessWidget {
     });
   }
 
-  Widget _textOfPillNumber({
+  static Widget textOfPillNumber({
     required RecordPageState state,
     required PillSheetGroup pillSheetGroup,
+    required PillSheet pillSheet,
     required int pillNumberIntoPillSheet,
     required int pageIndex,
+    required Setting setting,
   }) {
-    final DateTime date =
-        calculatedDateOfAppearancePill(pillSheet, pillNumberIntoPillSheet);
-    final isDateMode = () {
-      if (!(state.isPremium || state.isTrial)) {
-        return false;
-      }
-      if (state.appearanceMode != PillSheetAppearanceMode.date) {
-        return false;
-      }
-      return true;
-    }();
-
-    if (setting.pillNumberForFromMenstruation == 0 ||
-        setting.durationMenstruation == 0) {
-      if (isDateMode) {
-        return PlainPillDate(date: date);
-      } else {
-        return PlainPillNumber(pillNumber: pillNumberIntoPillSheet);
-      }
-    }
-
+    final isPremiumOrTrial = state.isPremium || state.isTrial;
     final containedMenstruationDuration =
         RecordPagePillSheet.isContainedMenstruationDuration(
       pillNumberIntoPillSheet: pillNumberIntoPillSheet,
@@ -153,19 +137,55 @@ class RecordPagePillSheet extends StatelessWidget {
       setting: setting,
       pageIndex: pageIndex,
     );
+    if (isPremiumOrTrial &&
+        state.appearanceMode == PillSheetAppearanceMode.date) {
+      final DateTime date =
+          calculatedDateOfAppearancePill(pillSheet, pillNumberIntoPillSheet);
 
-    if (isDateMode) {
-      if (containedMenstruationDuration && (state.isPremium || state.isTrial)) {
+      if (setting.pillNumberForFromMenstruation == 0 ||
+          setting.durationMenstruation == 0) {
+        return PlainPillDate(date: date);
+      }
+
+      if (containedMenstruationDuration) {
         return MenstruationPillDate(date: date);
       } else {
         return PlainPillDate(date: date);
       }
-    } else {
-      if (containedMenstruationDuration && (state.isPremium || state.isTrial)) {
-        return MenstruationPillNumber(pillNumber: pillNumberIntoPillSheet);
-      } else {
-        return PlainPillNumber(pillNumber: pillNumberIntoPillSheet);
+    } else if (state.appearanceMode == PillSheetAppearanceMode.sequential) {
+      final offset = summarizedPillSheetTypeTotalCountToPageIndex(
+        pillSheetTypes:
+            pillSheetGroup.pillSheets.map((e) => e.pillSheetType).toList(),
+        pageIndex: pageIndex,
+      );
+      if (setting.pillNumberForFromMenstruation == 0 ||
+          setting.durationMenstruation == 0) {
+        return SequentialPillNumber(
+            offset: offset, pillNumberIntoPillSheet: pillNumberIntoPillSheet);
       }
+
+      if (isPremiumOrTrial) {
+        if (containedMenstruationDuration) {
+          return MenstruationSequentialPillNumber(
+              offset: offset, pillNumberIntoPillSheet: pillNumberIntoPillSheet);
+        }
+      }
+      return SequentialPillNumber(
+          offset: offset, pillNumberIntoPillSheet: pillNumberIntoPillSheet);
+    } else {
+      if (setting.pillNumberForFromMenstruation == 0 ||
+          setting.durationMenstruation == 0) {
+        return PlainPillNumber(
+            pillNumberIntoPillSheet: pillNumberIntoPillSheet);
+      }
+
+      if (isPremiumOrTrial) {
+        if (containedMenstruationDuration) {
+          return MenstruationPillNumber(
+              pillNumberIntoPillSheet: pillNumberIntoPillSheet);
+        }
+      }
+      return PlainPillNumber(pillNumberIntoPillSheet: pillNumberIntoPillSheet);
     }
   }
 
@@ -202,7 +222,6 @@ class RecordPagePillSheet extends StatelessWidget {
       return left <= pillNumberIntoPillSheet &&
           pillNumberIntoPillSheet <= right;
     }
-
     final pillSheetTypes =
         pillSheetGroup.pillSheets.map((e) => e.pillSheetType).toList();
     final passedCount = summarizedPillSheetTypeTotalCountToPageIndex(

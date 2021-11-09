@@ -5,16 +5,22 @@ import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/entity/pill_sheet_group.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:flutter/material.dart';
+import 'package:pilll/entity/setting.dart';
 
 class TodayTakenPillNumber extends StatelessWidget {
   final PillSheetGroup? pillSheetGroup;
   final VoidCallback onPressed;
+  final Setting setting;
 
   const TodayTakenPillNumber({
     Key? key,
     required this.pillSheetGroup,
     required this.onPressed,
+    required this.setting,
   }) : super(key: key);
+
+  PillSheetAppearanceMode get _appearanceMode =>
+      setting.pillSheetAppearanceMode;
 
   @override
   Widget build(BuildContext context) {
@@ -22,10 +28,16 @@ class TodayTakenPillNumber extends StatelessWidget {
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         children: <Widget>[
-          Text(
-            "💊 今日飲むピル",
-            style: FontType.assisting.merge(TextColorStyle.noshime),
-          ),
+          if (_appearanceMode == PillSheetAppearanceMode.sequential)
+            Text(
+              "💊 今日は服用",
+              style: FontType.assisting.merge(TextColorStyle.noshime),
+            ),
+          if (_appearanceMode != PillSheetAppearanceMode.sequential)
+            Text(
+              "💊 今日飲むピル",
+              style: FontType.assisting.merge(TextColorStyle.noshime),
+            ),
           _content(),
         ],
       ),
@@ -64,7 +76,12 @@ class TodayTakenPillNumber extends StatelessWidget {
       children: <Widget>[
         Text("${activedPillSheet.todayPillNumber}",
             style: FontType.xHugeNumber.merge(TextColorStyle.main)),
-        Text("番", style: FontType.assistingBold.merge(TextColorStyle.noshime)),
+        if (_appearanceMode == PillSheetAppearanceMode.sequential)
+          Text("日目",
+              style: FontType.assistingBold.merge(TextColorStyle.noshime)),
+        if (_appearanceMode != PillSheetAppearanceMode.sequential)
+          Text("番",
+              style: FontType.assistingBold.merge(TextColorStyle.noshime)),
       ],
     );
   }

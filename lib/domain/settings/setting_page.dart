@@ -8,7 +8,6 @@ import 'package:pilll/domain/settings/components/rows/account_link.dart';
 import 'package:pilll/domain/settings/components/rows/list_explain.dart';
 import 'package:pilll/domain/settings/components/rows/notification_in_rest_duration.dart';
 import 'package:pilll/domain/settings/components/rows/notification_time.dart';
-import 'package:pilll/domain/settings/components/rows/pill_sheet_appearance_mode.dart';
 import 'package:pilll/domain/settings/components/rows/pill_sheet_remove.dart';
 import 'package:pilll/domain/settings/components/rows/premium_introduction.dart';
 import 'package:pilll/domain/settings/components/rows/quick_record.dart';
@@ -101,13 +100,6 @@ class SettingPage extends HookWidget {
                   return SettingSectionTitle(
                     text: "ピルシート",
                     children: [
-                      PillSheetAppearanceModeRow(
-                        setting: setting,
-                        isPremium: state.isPremium,
-                        isTrial: state.isTrial,
-                        trialDeadlineDate: state.trialDeadlineDate,
-                      ),
-                      _separator(),
                       if (activedPillSheet != null &&
                           pillSheetGroup != null &&
                           !pillSheetGroup.isDeactived) ...[
