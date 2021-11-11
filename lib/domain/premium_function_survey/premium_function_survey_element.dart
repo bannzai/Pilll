@@ -10,13 +10,13 @@ import 'package:pilll/domain/premium_function_survey/premium_function_survey_sto
 class PremiumFunctionSurveyElement extends StatelessWidget {
   final PremiumFunctionSurveyStateStore store;
   final PremiumFunctionSurveyState state;
-  final PremiumFunctionSurveyElementType elementType;
+  final PremiumFunctionSurveyElementType element;
 
   const PremiumFunctionSurveyElement({
     Key? key,
     required this.store,
     required this.state,
-    required this.elementType,
+    required this.element,
   }) : super(key: key);
 
   @override
@@ -28,12 +28,12 @@ class PremiumFunctionSurveyElement extends StatelessWidget {
             width: 34,
             height: 34,
             child: Checkbox(
-              value: state.selectedElements.contains(elementType),
+              value: state.selectedElements.contains(element),
               onChanged: (isOn) {
                 analytics.logEvent(
                     name: "toggle_premium_survey_check_box",
-                    parameters: {"isOn": isOn, "element": elementType});
-                store.handleCheckEvent(elementType);
+                    parameters: {"isOn": isOn, "element": element});
+                store.handleCheckEvent(element);
               },
               checkColor: PilllColors.white,
               activeColor: PilllColors.secondary,
@@ -54,7 +54,7 @@ class PremiumFunctionSurveyElement extends StatelessWidget {
   }
 
   String get _word {
-    switch (elementType) {
+    switch (element) {
       case PremiumFunctionSurveyElementType.quickRecord:
         return "通知から服用記録できる";
       case PremiumFunctionSurveyElementType.pillNumberOnPushNotification:

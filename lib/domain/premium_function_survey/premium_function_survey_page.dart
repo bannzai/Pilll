@@ -68,7 +68,7 @@ class PremiumFunctionSurveyPage extends HookWidget {
                         (e) => PremiumFunctionSurveyElement(
                           store: store,
                           state: state,
-                          elementType: e,
+                          element: e,
                         ),
                       ),
                     ],
