@@ -489,5 +489,6 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
   setTrueIsAlreadyShowPremiumFunctionSurvey() async {
     final sharedPreferences = await SharedPreferences.getInstance();
     sharedPreferences.setBool(BoolKey.isAlreadyShowPremiumSurvey, true);
+    state = state.copyWith(isAlreadyShowPremiumSurvey: true);
   }
 }
