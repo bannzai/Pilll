@@ -9,5 +9,6 @@ abstract class PremiumFunctionSurveyState
   PremiumFunctionSurveyState._();
   factory PremiumFunctionSurveyState({
     @Default([]) List<PremiumFunctionSurveyElementType> selectedElements,
+    @Default("") String message,
   }) = _PremiumFunctionSurveyState;
 }
