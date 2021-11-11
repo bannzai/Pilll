@@ -42,7 +42,7 @@ class PremiumFunctionSurveyPage extends StatelessWidget {
                       fontSize: 14,
                     ),
                   ),
-                  AppBarTextActionButton(
+                  SecondaryButton(
                       onPressed: () {}, text: "プレミアム機能の詳細はこちら"),
                 ],
               ),

@@ -32,6 +32,28 @@ class PrimaryButton extends StatelessWidget {
   }
 }
 
+class SecondaryButton extends StatelessWidget {
+  final String text;
+  final Function() onPressed;
+
+  const SecondaryButton({
+    Key? key,
+    required this.onPressed,
+    required this.text,
+  }) : super(key: key);
+
+  Widget build(BuildContext context) {
+    return SizedBox(
+      height: 44,
+      child: TextButton(
+        style: TextButton.styleFrom(backgroundColor: Colors.transparent),
+        child: Text(text, style: TextColorStyle.primary),
+        onPressed: onPressed,
+      ),
+    );
+  }
+}
+
 class TertiaryButton extends StatelessWidget {
   final String text;
   final Function() onPressed;
@@ -151,28 +173,6 @@ class AppOutlinedButton extends StatelessWidget {
         side: BorderSide(color: PilllColors.secondary),
       ),
       onPressed: onPressed,
-    );
-  }
-}
-
-class AppBarTextActionButton extends StatelessWidget {
-  final String text;
-  final Function() onPressed;
-
-  const AppBarTextActionButton({
-    Key? key,
-    required this.onPressed,
-    required this.text,
-  }) : super(key: key);
-
-  Widget build(BuildContext context) {
-    return SizedBox(
-      height: 44,
-      child: TextButton(
-        style: TextButton.styleFrom(backgroundColor: Colors.transparent),
-        child: Text(text, style: TextColorStyle.primary),
-        onPressed: onPressed,
-      ),
     );
   }
 }
