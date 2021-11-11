@@ -23,4 +23,6 @@ class PremiumFunctionSurveyStateStore
   inputMessage(String message) {
     state = state.copyWith(message: message);
   }
+
+  send() async {}
 }
