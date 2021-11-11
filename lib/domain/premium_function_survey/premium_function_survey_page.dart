@@ -42,8 +42,8 @@ class PremiumFunctionSurveyPage extends StatelessWidget {
                       fontSize: 14,
                     ),
                   ),
-                  SecondaryButton(
-                      onPressed: () {}, text: "プレミアム機能の詳細はこちら"),
+                  SizedBox(height: 8),
+                  SecondaryButton(onPressed: () {}, text: "プレミアム機能の詳細はこちら"),
                 ],
               ),
             ),
