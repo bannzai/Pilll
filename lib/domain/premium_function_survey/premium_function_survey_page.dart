@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:pilll/components/atoms/buttons.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
@@ -22,8 +21,10 @@ class PremiumFunctionSurveyPage extends StatelessWidget {
       body: SafeArea(
         child: SingleChildScrollView(
           child: Container(
+            padding: EdgeInsets.symmetric(horizontal: 46.5),
             child: Center(
               child: Column(
+                crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   Text(
                     "プレミアム体験が終了しました",
@@ -39,18 +40,61 @@ class PremiumFunctionSurveyPage extends StatelessWidget {
                     "もしよければ、便利だと感じた機能を教えて下さい！ぜひ、あなたのご意見をお聞かせください。",
                     style: TextStyle(
                       color: TextColor.main,
-                      fontFamily: FontFamily.japanese,
+                      fontFamily: FontFamily.roboto,
                       fontWeight: FontWeight.w400,
                       fontSize: 14,
                     ),
                   ),
                   SizedBox(height: 8),
-                  SecondaryButton(onPressed: () {}, text: "プレミアム機能の詳細はこちら"),
-                  ...PremiumFunctionSurveyElementType.values.map(
-                    (e) => PremiumFunctionSurveyElement(
-                      isChecked: false,
-                      elementType: e,
-                    ),
+                  GestureDetector(
+                    child: Text("プレミアム機能の詳細はこちら",
+                        style: TextStyle(
+                            fontSize: 12,
+                            fontFamily: FontFamily.japanese,
+                            fontWeight: FontWeight.w400,
+                            color: TextColor.primary)),
+                  ),
+                  SizedBox(height: 24),
+                  Column(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    children: [
+                      ...PremiumFunctionSurveyElementType.values.map(
+                        (e) => PremiumFunctionSurveyElement(
+                          isChecked: false,
+                          elementType: e,
+                        ),
+                      ),
+                    ],
+                  ),
+                  SizedBox(height: 22),
+                  Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      Text(
+                        "その他ご意見等あれば教えて下さい",
+                        style: TextStyle(
+                            color: TextColor.main,
+                            fontFamily: FontFamily.japanese,
+                            fontSize: 12,
+                            fontWeight: FontWeight.w500),
+                      ),
+                      SizedBox(height: 10),
+                      TextField(
+                        decoration: const InputDecoration(
+                          border: OutlineInputBorder(
+                            borderRadius: BorderRadius.all(Radius.circular(4)),
+                            borderSide: BorderSide(width: 1),
+                          ),
+                          contentPadding: EdgeInsets.all(16),
+                          hintText: 'ご意見、ご要望、開発者へ伝えたい事等',
+                          hintStyle: TextStyle(
+                            fontSize: 12,
+                            fontWeight: FontWeight.w400,
+                          ),
+                        ),
+                        onChanged: (text) {},
+                      ),
+                    ],
                   ),
                 ],
               ),

@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:pilll/components/atoms/color.dart';
+import 'package:pilll/components/atoms/font.dart';
+import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/domain/premium_function_survey/premium_function_survey_element_type.dart';
 
 class PremiumFunctionSurveyElement extends StatelessWidget {
@@ -14,20 +16,31 @@ class PremiumFunctionSurveyElement extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(children: [
-      Theme(
-        child: Checkbox(
-          value: isChecked,
-          onChanged: (value) {},
-          checkColor: PilllColors.white,
-          activeColor: PilllColors.secondary,
+    return Row(
+      children: [
+        Theme(
+          child: SizedBox(
+            width: 34,
+            height: 34,
+            child: Checkbox(
+              value: isChecked,
+              onChanged: (value) {},
+              checkColor: PilllColors.white,
+              activeColor: PilllColors.secondary,
+            ),
+          ),
+          data: ThemeData(
+              primaryColor: PilllColors.thinSecondary,
+              unselectedWidgetColor: PilllColors.secondary),
         ),
-        data: ThemeData(
-            primaryColor: PilllColors.thinSecondary,
-            unselectedWidgetColor: PilllColors.secondary),
-      ),
-      Text(_word),
-    ]);
+        Text(_word,
+            style: TextStyle(
+                fontFamily: FontFamily.japanese,
+                fontSize: 14,
+                fontWeight: FontWeight.w400,
+                color: TextColor.main)),
+      ],
+    );
   }
 
   String get _word {
