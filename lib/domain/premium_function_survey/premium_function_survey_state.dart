@@ -8,6 +8,6 @@ abstract class PremiumFunctionSurveyState
     implements _$PremiumFunctionSurveyState {
   PremiumFunctionSurveyState._();
   factory PremiumFunctionSurveyState({
-    @Default([]) List<PremiumFunctionSurveyElement> elements,
+    @Default([]) List<PremiumFunctionSurveyElement> selectedElements,
   }) = _PremiumFunctionSurveyState;
 }

@@ -17,9 +17,9 @@ class _$PremiumFunctionSurveyStateTearOff {
   const _$PremiumFunctionSurveyStateTearOff();
 
   _PremiumFunctionSurveyState call(
-      {List<PremiumFunctionSurveyElement> elements = const []}) {
+      {List<PremiumFunctionSurveyElement> selectedElements = const []}) {
     return _PremiumFunctionSurveyState(
-      elements: elements,
+      selectedElements: selectedElements,
     );
   }
 }
@@ -29,7 +29,7 @@ const $PremiumFunctionSurveyState = _$PremiumFunctionSurveyStateTearOff();
 
 /// @nodoc
 mixin _$PremiumFunctionSurveyState {
-  List<PremiumFunctionSurveyElement> get elements =>
+  List<PremiumFunctionSurveyElement> get selectedElements =>
       throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
@@ -42,7 +42,7 @@ abstract class $PremiumFunctionSurveyStateCopyWith<$Res> {
   factory $PremiumFunctionSurveyStateCopyWith(PremiumFunctionSurveyState value,
           $Res Function(PremiumFunctionSurveyState) then) =
       _$PremiumFunctionSurveyStateCopyWithImpl<$Res>;
-  $Res call({List<PremiumFunctionSurveyElement> elements});
+  $Res call({List<PremiumFunctionSurveyElement> selectedElements});
 }
 
 /// @nodoc
@@ -56,12 +56,12 @@ class _$PremiumFunctionSurveyStateCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object? elements = freezed,
+    Object? selectedElements = freezed,
   }) {
     return _then(_value.copyWith(
-      elements: elements == freezed
-          ? _value.elements
-          : elements // ignore: cast_nullable_to_non_nullable
+      selectedElements: selectedElements == freezed
+          ? _value.selectedElements
+          : selectedElements // ignore: cast_nullable_to_non_nullable
               as List<PremiumFunctionSurveyElement>,
     ));
   }
@@ -75,7 +75,7 @@ abstract class _$PremiumFunctionSurveyStateCopyWith<$Res>
           $Res Function(_PremiumFunctionSurveyState) then) =
       __$PremiumFunctionSurveyStateCopyWithImpl<$Res>;
   @override
-  $Res call({List<PremiumFunctionSurveyElement> elements});
+  $Res call({List<PremiumFunctionSurveyElement> selectedElements});
 }
 
 /// @nodoc
@@ -92,12 +92,12 @@ class __$PremiumFunctionSurveyStateCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object? elements = freezed,
+    Object? selectedElements = freezed,
   }) {
     return _then(_PremiumFunctionSurveyState(
-      elements: elements == freezed
-          ? _value.elements
-          : elements // ignore: cast_nullable_to_non_nullable
+      selectedElements: selectedElements == freezed
+          ? _value.selectedElements
+          : selectedElements // ignore: cast_nullable_to_non_nullable
               as List<PremiumFunctionSurveyElement>,
     ));
   }
@@ -106,29 +106,30 @@ class __$PremiumFunctionSurveyStateCopyWithImpl<$Res>
 /// @nodoc
 
 class _$_PremiumFunctionSurveyState extends _PremiumFunctionSurveyState {
-  _$_PremiumFunctionSurveyState({this.elements = const []}) : super._();
+  _$_PremiumFunctionSurveyState({this.selectedElements = const []}) : super._();
 
   @JsonKey(defaultValue: const [])
   @override
-  final List<PremiumFunctionSurveyElement> elements;
+  final List<PremiumFunctionSurveyElement> selectedElements;
 
   @override
   String toString() {
-    return 'PremiumFunctionSurveyState(elements: $elements)';
+    return 'PremiumFunctionSurveyState(selectedElements: $selectedElements)';
   }
 
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
         (other is _PremiumFunctionSurveyState &&
-            (identical(other.elements, elements) ||
+            (identical(other.selectedElements, selectedElements) ||
                 const DeepCollectionEquality()
-                    .equals(other.elements, elements)));
+                    .equals(other.selectedElements, selectedElements)));
   }
 
   @override
   int get hashCode =>
-      runtimeType.hashCode ^ const DeepCollectionEquality().hash(elements);
+      runtimeType.hashCode ^
+      const DeepCollectionEquality().hash(selectedElements);
 
   @JsonKey(ignore: true)
   @override
@@ -139,12 +140,12 @@ class _$_PremiumFunctionSurveyState extends _PremiumFunctionSurveyState {
 
 abstract class _PremiumFunctionSurveyState extends PremiumFunctionSurveyState {
   factory _PremiumFunctionSurveyState(
-          {List<PremiumFunctionSurveyElement> elements}) =
+          {List<PremiumFunctionSurveyElement> selectedElements}) =
       _$_PremiumFunctionSurveyState;
   _PremiumFunctionSurveyState._() : super._();
 
   @override
-  List<PremiumFunctionSurveyElement> get elements =>
+  List<PremiumFunctionSurveyElement> get selectedElements =>
       throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
