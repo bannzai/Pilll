@@ -5,6 +5,7 @@ import 'package:pilll/database/database.dart';
 import 'package:pilll/domain/premium_function_survey/premium_function_survey_element_type.dart';
 import 'package:pilll/entity/demographic.dart';
 import 'package:pilll/entity/package.dart';
+import 'package:pilll/entity/premium_function_survey.dart';
 import 'package:pilll/entity/setting.dart';
 import 'package:pilll/entity/user.dart';
 import 'package:pilll/util/datetime/day.dart';
@@ -268,10 +269,10 @@ class UserService {
 
   Future<void> sendPremiumFunctionSurvey(
       List<PremiumFunctionSurveyElementType> elements, String message) async {
-    final premiumFunctionSurvey = {
-      "elements": elements,
-      "message": message,
-    };
+    final PremiumFunctionSurvey premiumFunctionSurvey = PremiumFunctionSurvey(
+      elements: elements,
+      message: message,
+    );
     return _database.userPrivateReference().set({
       UserPrivateFirestoreFieldKeys.premiumFunctionSurvey: premiumFunctionSurvey
     }, SetOptions(merge: true));
