@@ -123,10 +123,10 @@ class PremiumFunctionSurveyPage extends HookWidget {
                             name: "send_premium_function_survey");
                         try {
                           await store.send();
+                          Navigator.of(context).pop();
                         } catch (error) {
                           showErrorAlert(context, message: error.toString());
                         }
-                        Navigator.of(context).pop();
                       },
                       text: "この内容で送る",
                     ),

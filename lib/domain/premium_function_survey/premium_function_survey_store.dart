@@ -27,7 +27,7 @@ class PremiumFunctionSurveyStateStore
     state = state.copyWith(message: message);
   }
 
-  send() async {
+  Future<void> send() async {
     await _userService.sendPremiumFunctionSurvey(
         state.selectedElements, state.message);
   }
