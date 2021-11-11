@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pilll/analytics.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
@@ -28,7 +29,12 @@ class PremiumFunctionSurveyElement extends StatelessWidget {
             height: 34,
             child: Checkbox(
               value: state.selectedElements.contains(elementType),
-              onChanged: (_) => store.handleCheckEvent(elementType),
+              onChanged: (isOn) {
+                analytics.logEvent(
+                    name: "toggle_premium_survey_check_box",
+                    parameters: {"isOn": isOn, "element": elementType});
+                store.handleCheckEvent(elementType);
+              },
               checkColor: PilllColors.white,
               activeColor: PilllColors.secondary,
             ),
