@@ -40,11 +40,12 @@ class RecordPage extends HookWidget {
       });
     });
 
-    Future.delayed(Duration(seconds: 1)).then((_) {
+    Future.delayed(Duration(seconds: 1)).then((_) async {
       if (!state.shouldShowPremiumFunctionSurvey) {
         return;
       }
-      showPremiumFunctionSurveyPage(context);
+      Navigator.of(context).push(PremiumFunctionSurveyPageRoutes.route());
+      await store.setTrueIsAlreadyShowPremiumFunctionSurvey();
     });
 
     final pillSheetGroup = state.pillSheetGroup;
