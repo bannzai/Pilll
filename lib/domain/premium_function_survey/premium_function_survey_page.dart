@@ -9,6 +9,7 @@ import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/domain/premium_function_survey/premium_function_survey_element.dart';
 import 'package:pilll/domain/premium_function_survey/premium_function_survey_element_type.dart';
 import 'package:pilll/domain/premium_function_survey/premium_function_survey_store.dart';
+import 'package:pilll/error/error_alert.dart';
 
 class PremiumFunctionSurveyPage extends HookWidget {
   @override
@@ -114,7 +115,11 @@ class PremiumFunctionSurveyPage extends HookWidget {
                       onPressed: () async {
                         analytics.logEvent(
                             name: "send_premium_function_survey");
-                        await store.send();
+                        try {
+                          await store.send();
+                        } catch (error) {
+                          showErrorAlert(context, message: error.toString());
+                        }
                         Navigator.of(context).pop();
                       },
                       text: "この内容で送る",
