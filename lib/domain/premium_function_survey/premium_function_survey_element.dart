@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/domain/premium_function_survey/premium_function_survey_element_type.dart';
 
 class PremiumFunctionSurveyElement extends StatelessWidget {
@@ -14,7 +15,17 @@ class PremiumFunctionSurveyElement extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(children: [
-      Checkbox(value: isChecked, onChanged: (value) {}),
+      Theme(
+        child: Checkbox(
+          value: isChecked,
+          onChanged: (value) {},
+          checkColor: PilllColors.white,
+          activeColor: PilllColors.secondary,
+        ),
+        data: ThemeData(
+            primaryColor: PilllColors.thinSecondary,
+            unselectedWidgetColor: PilllColors.secondary),
+      ),
       Text(_word),
     ]);
   }
