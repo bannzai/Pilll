@@ -135,20 +135,20 @@ class DemographyPage extends HookWidget {
     );
   }
 
-  double _columnWidht(BuildContext context) =>
+  double _columnWidth(BuildContext context) =>
       MediaQuery.of(context).size.width - 39 * 2;
 
   Widget _layout(BuildContext context, String title, Widget form) {
     return Center(
       child: Container(
-        width: _columnWidht(context),
+        width: _columnWidth(context),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(title, style: FontType.assisting.merge(TextColorStyle.black)),
             SizedBox(height: 10),
             Container(
-              width: _columnWidht(context),
+              width: _columnWidth(context),
               padding: EdgeInsets.only(top: 16, bottom: 16, left: 16),
               decoration: BoxDecoration(
                   border: Border.all(color: PilllColors.border),
