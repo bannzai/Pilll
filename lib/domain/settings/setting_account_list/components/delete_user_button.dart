@@ -17,20 +17,20 @@ class DeleteUserButton extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       padding: EdgeInsets.only(top: 54),
-      child: SecondaryButton(
+      child: AlertButton(
         onPressed: () {
           showDiscardDialog(
             context,
             title: "ユーザー情報が削除されます",
             message: "退会をするとすべてデータが削除され、二度と同じアカウントでログインができなくなります。",
             actions: [
-              SecondaryButton(
+              AlertButton(
                 text: "キャンセル",
                 onPressed: () {
                   Navigator.of(context).pop();
                 },
               ),
-              SecondaryButton(
+              AlertButton(
                 text: "退会する",
                 onPressed: () async {
                   await _delete(context);
@@ -65,13 +65,13 @@ class DeleteUserButton extends StatelessWidget {
           title: "再ログインしてください",
           message: "退会前に本人確認のために再ログインをしてください。再ログイン後、自動的に退会処理が始まります",
           actions: [
-            SecondaryButton(
+            AlertButton(
               text: "キャンセル",
               onPressed: () {
                 Navigator.of(context).pop();
               },
             ),
-            SecondaryButton(
+            AlertButton(
               text: "再ログイン",
               onPressed: () async {
                 if (isLinkedApple()) {

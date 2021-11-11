@@ -38,7 +38,7 @@ class RecordPageRestDurationDialog extends StatelessWidget {
           text: "休薬する",
         ),
         Center(
-          child: SecondaryButton(
+          child: AlertButton(
             text: "閉じる",
             onPressed: () {
               Navigator.of(context).pop();

@@ -90,7 +90,7 @@ class PremiumIntroductionSheet extends HookWidget {
                             ],
                           ],
                           SizedBox(height: 24),
-                          SecondaryButton(
+                          AlertButton(
                               onPressed: () async {
                                 analytics.logEvent(
                                     name: "pressed_premium_functions_on_sheet");

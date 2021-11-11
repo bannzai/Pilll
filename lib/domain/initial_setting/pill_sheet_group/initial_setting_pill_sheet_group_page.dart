@@ -85,7 +85,7 @@ class InitialSettingPillSheetGroupPage extends HookWidget {
                           ),
                         if (!state.isAccountCooperationDidEnd) ...[
                           SizedBox(height: 20),
-                          SecondaryButton(
+                          AlertButton(
                             text: "すでにアカウントをお持ちの方はこちら",
                             onPressed: () {
                               analytics.logEvent(

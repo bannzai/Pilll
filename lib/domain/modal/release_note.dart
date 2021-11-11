@@ -66,7 +66,7 @@ class ReleaseNote extends StatelessWidget {
                 ),
                 Container(
                   width: 230,
-                  child: SecondaryButton(
+                  child: AlertButton(
                       onPressed: () async {
                         analytics.logEvent(name: "pressed_show_release_note");
                         Navigator.of(context).pop();

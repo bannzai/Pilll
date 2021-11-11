@@ -32,24 +32,6 @@ class PrimaryButton extends StatelessWidget {
   }
 }
 
-class SecondaryButton extends StatelessWidget {
-  final String text;
-  final VoidCallback? onPressed;
-
-  const SecondaryButton({
-    Key? key,
-    required this.onPressed,
-    required this.text,
-  }) : super(key: key);
-
-  Widget build(BuildContext context) {
-    return TextButton(
-      child: Text(text, style: ButtonTextStyle.alert),
-      onPressed: onPressed,
-    );
-  }
-}
-
 class TertiaryButton extends StatelessWidget {
   final String text;
   final Function() onPressed;
@@ -191,6 +173,24 @@ class AppBarTextActionButton extends StatelessWidget {
         child: Text(text, style: TextColorStyle.primary),
         onPressed: onPressed,
       ),
+    );
+  }
+}
+
+class AlertButton extends StatelessWidget {
+  final String text;
+  final VoidCallback? onPressed;
+
+  const AlertButton({
+    Key? key,
+    required this.onPressed,
+    required this.text,
+  }) : super(key: key);
+
+  Widget build(BuildContext context) {
+    return TextButton(
+      child: Text(text, style: ButtonTextStyle.alert),
+      onPressed: onPressed,
     );
   }
 }

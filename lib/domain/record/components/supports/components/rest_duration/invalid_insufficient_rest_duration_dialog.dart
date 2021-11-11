@@ -58,7 +58,7 @@ class InvalidInsufficientRestDurationDialog extends StatelessWidget {
           text: "休薬機能の使い方を見る",
         ),
         Center(
-          child: SecondaryButton(
+          child: AlertButton(
             text: "閉じる",
             onPressed: () {
               analytics.logEvent(
