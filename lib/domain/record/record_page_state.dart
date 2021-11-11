@@ -62,6 +62,10 @@ abstract class RecordPageState implements _$RecordPageState {
     if (isPremium || isTrial) {
       return false;
     }
+    final isNotYetStartTrial = trialDeadlineDate == null;
+    if (isNotYetStartTrial) {
+      return false;
+    }
     return !isAlreadyShowPremiumSurvey;
   }
 
