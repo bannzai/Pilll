@@ -44,8 +44,8 @@ class RecordPage extends HookWidget {
       if (!state.shouldShowPremiumFunctionSurvey) {
         return;
       }
-      await Navigator.of(context).push(PremiumFunctionSurveyPageRoutes.route());
       await store.setTrueIsAlreadyShowPremiumFunctionSurvey();
+      Navigator.of(context).push(PremiumFunctionSurveyPageRoutes.route());
     });
 
     final pillSheetGroup = state.pillSheetGroup;
