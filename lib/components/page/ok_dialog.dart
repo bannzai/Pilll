@@ -34,7 +34,7 @@ class OKDialog extends StatelessWidget {
         ],
       ),
       actions: <Widget>[
-        SecondaryButton(
+        AlertButton(
           text: "OK",
           onPressed: () {
             Navigator.of(context).pop();

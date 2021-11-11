@@ -71,7 +71,7 @@ class MenstruationHistoryCardMoreButton extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.end,
       children: [
         if (!state.moreButtonIsHidden)
-          SecondaryButton(
+          AlertButton(
               text: "もっと見る",
               onPressed: () {
                 analytics.logEvent(name: "menstruation_more_button_pressed");

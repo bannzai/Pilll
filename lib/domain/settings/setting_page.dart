@@ -231,13 +231,13 @@ class SettingPage extends HookWidget {
           showDiscardDialog(context, title: "サインアウトします", message: '''
 これは開発用のオプションです。サインアウトあとはアプリを再起動してお試しください。初期設定から始まります
 ''', actions: [
-            SecondaryButton(
+            AlertButton(
               text: "キャンセル",
               onPressed: () {
                 Navigator.of(context).pop();
               },
             ),
-            SecondaryButton(
+            AlertButton(
               text: "サインアウト",
               onPressed: () async {
                 await signOut();
@@ -258,13 +258,13 @@ class SettingPage extends HookWidget {
 これは開発用のオプションです。ユーザーを削除したあとはアプリを再起動してからやり直してください。初期設定から始まります
 ''',
             actions: [
-              SecondaryButton(
+              AlertButton(
                 text: "キャンセル",
                 onPressed: () {
                   Navigator.of(context).pop();
                 },
               ),
-              SecondaryButton(
+              AlertButton(
                 text: "削除",
                 onPressed: () async {
                   await deleteUser();

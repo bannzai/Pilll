@@ -86,13 +86,13 @@ class ConfirmDiarySheet extends HookWidget {
                     message: Text("削除された日記は復元ができません",
                         style: FontType.assisting.merge(TextColorStyle.main)),
                     actions: [
-                      SecondaryButton(
+                      AlertButton(
                         text: "キャンセル",
                         onPressed: () {
                           Navigator.of(context).pop();
                         },
                       ),
-                      SecondaryButton(
+                      AlertButton(
                         text: "削除する",
                         onPressed: () {
                           int counter = 0;

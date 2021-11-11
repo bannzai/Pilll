@@ -26,13 +26,13 @@ class ErrorAlert extends StatelessWidget {
           style: FontType.assisting.merge(TextColorStyle.black)),
       actions: <Widget>[
         if (faq != null)
-          SecondaryButton(
+          AlertButton(
             text: "FAQを見る",
             onPressed: () {
               launch(faq);
             },
           ),
-        SecondaryButton(
+        AlertButton(
           text: "閉じる",
           onPressed: () {
             Navigator.of(context).pop();

@@ -78,7 +78,7 @@ class PostDiaryPage extends HookWidget {
           onPressed: () => Navigator.of(context).pop(),
         ),
         actions: [
-          SecondaryButton(
+          AlertButton(
             text: "保存",
             onPressed: () => store.register().then((value) {
               Navigator.of(context).pop();
@@ -269,7 +269,7 @@ class PostDiaryPage extends HookWidget {
         child: Row(
           children: [
             Spacer(),
-            SecondaryButton(
+            AlertButton(
               text: '完了',
               onPressed: () {
                 analytics.logEvent(name: "post_diary_done_button_pressed");

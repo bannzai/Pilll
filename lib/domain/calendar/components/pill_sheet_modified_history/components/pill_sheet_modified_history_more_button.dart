@@ -20,7 +20,7 @@ class PillSheetModifiedHistoryMoreButton extends StatelessWidget {
     return Row(
       mainAxisAlignment: MainAxisAlignment.end,
       children: [
-        SecondaryButton(
+        AlertButton(
             text: "もっと見る",
             onPressed: () {
               analytics.logEvent(name: "pill_sheet_modified_history_more");

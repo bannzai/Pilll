@@ -105,6 +105,9 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
           isAlreadyShowTiral: sharedPreferences
                   .getBool(BoolKey.isAlreadyShowPremiumTrialModal) ??
               false,
+          isAlreadyShowPremiumSurvey:
+              sharedPreferences.getBool(BoolKey.isAlreadyShowPremiumSurvey) ??
+                  false,
           recommendedSignupNotificationIsAlreadyShow:
               recommendedSignupNotificationIsAlreadyShow,
           premiumTrialGuideNotificationIsClosed:
@@ -481,5 +484,11 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
     return _settingService
         .update(updated)
         .then((value) => state = state.copyWith(setting: value));
+  }
+
+  setTrueIsAlreadyShowPremiumFunctionSurvey() async {
+    final sharedPreferences = await SharedPreferences.getInstance();
+    sharedPreferences.setBool(BoolKey.isAlreadyShowPremiumSurvey, true);
+    state = state.copyWith(isAlreadyShowPremiumSurvey: true);
   }
 }

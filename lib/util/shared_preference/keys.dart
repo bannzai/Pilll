@@ -8,6 +8,7 @@ extension BoolKey on String {
   static final isAlreadyDoneDemography = "isAlreadyDoneDemography";
   static final isAlreadyShowPremiumTrialModal =
       "isAlreadyShowPremiumTrialModal";
+  static final isAlreadyShowPremiumSurvey = "isAlreadyShowPremiumSurvey";
   static final migrateFrom132IsShown = "migrate_from_132_is_shown_9";
 }
 

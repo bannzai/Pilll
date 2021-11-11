@@ -1,5 +1,6 @@
 import 'package:pilll/components/molecules/indicator.dart';
 import 'package:pilll/domain/initial_setting/migrate_info.dart';
+import 'package:pilll/domain/premium_function_survey/premium_function_survey_page.dart';
 import 'package:pilll/domain/premium_trial/premium_trial_complete_modal.dart';
 import 'package:pilll/domain/record/components/adding/record_page_adding_pill_sheet.dart';
 import 'package:pilll/domain/record/components/button/record_page_button.dart';
@@ -37,6 +38,14 @@ class RecordPage extends HookWidget {
       showPremiumTrialModalWhenLaunchApp(context, () {
         showPremiumTrialCompleteModalPreDialog(context);
       });
+    });
+
+    Future.delayed(Duration(seconds: 1)).then((_) async {
+      if (!state.shouldShowPremiumFunctionSurvey) {
+        return;
+      }
+      await store.setTrueIsAlreadyShowPremiumFunctionSurvey();
+      Navigator.of(context).push(PremiumFunctionSurveyPageRoutes.route());
     });
 
     final pillSheetGroup = state.pillSheetGroup;

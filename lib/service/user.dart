@@ -2,8 +2,10 @@ import 'dart:io';
 
 import 'package:firebase_auth/firebase_auth.dart' as firebaseAuth;
 import 'package:pilll/database/database.dart';
+import 'package:pilll/domain/premium_function_survey/premium_function_survey_element_type.dart';
 import 'package:pilll/entity/demographic.dart';
 import 'package:pilll/entity/package.dart';
+import 'package:pilll/entity/premium_function_survey.dart';
 import 'package:pilll/entity/setting.dart';
 import 'package:pilll/entity/user.dart';
 import 'package:pilll/util/datetime/day.dart';
@@ -262,6 +264,18 @@ class UserService {
     }
     return _database.userReference().set({
       UserFirestoreFieldKeys.hasDiscountEntitlement: hasDiscountEntitlement,
+    }, SetOptions(merge: true));
+  }
+
+  Future<void> sendPremiumFunctionSurvey(
+      List<PremiumFunctionSurveyElementType> elements, String message) async {
+    final PremiumFunctionSurvey premiumFunctionSurvey = PremiumFunctionSurvey(
+      elements: elements,
+      message: message,
+    );
+    return _database.userPrivateReference().set({
+      UserPrivateFirestoreFieldKeys.premiumFunctionSurvey:
+          premiumFunctionSurvey.toJson()
     }, SetOptions(merge: true));
   }
 }

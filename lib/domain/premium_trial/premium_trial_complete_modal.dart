@@ -72,7 +72,7 @@ class PremiumTrialCompleteModal extends StatelessWidget {
               ),
               Container(
                 width: 230,
-                child: SecondaryButton(
+                child: AlertButton(
                     onPressed: () async {
                       analytics.logEvent(
                           name: "pressed_show_premium_for_trial");

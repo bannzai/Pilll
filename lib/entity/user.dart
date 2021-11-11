@@ -29,6 +29,7 @@ extension UserPrivateFirestoreFieldKeys on String {
   static final originalPurchaseDate = "originalPurchaseDate";
   static final activeSubscriptions = "activeSubscriptions";
   static final entitlementIdentifier = "entitlementIdentifier";
+  static final premiumFunctionSurvey = "premiumFunctionSurvey";
 }
 
 @freezed

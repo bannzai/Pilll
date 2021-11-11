@@ -45,13 +45,13 @@ class PillSheetRemoveRow extends HookWidget {
                 ),
               ),
               actions: [
-                SecondaryButton(
+                AlertButton(
                   text: "キャンセル",
                   onPressed: () {
                     Navigator.of(context).pop();
                   },
                 ),
-                SecondaryButton(
+                AlertButton(
                   text: "破棄する",
                   onPressed: () {
                     store.deletePillSheet().catchError((error) {

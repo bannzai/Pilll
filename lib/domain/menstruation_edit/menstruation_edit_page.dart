@@ -70,7 +70,7 @@ class MenstruationEditPage extends HookWidget {
                             style:
                                 FontType.sBigTitle.merge(TextColorStyle.main)),
                         Spacer(),
-                        SecondaryButton(
+                        AlertButton(
                           onPressed: () {
                             analytics.logEvent(
                                 name: "pressed_saving_menstruation_edit");
@@ -81,7 +81,7 @@ class MenstruationEditPage extends HookWidget {
                                   title: "生理期間を削除しますか？",
                                   message: Text(""),
                                   actions: [
-                                    SecondaryButton(
+                                    AlertButton(
                                       text: "キャンセル",
                                       onPressed: () {
                                         analytics.logEvent(
@@ -90,7 +90,7 @@ class MenstruationEditPage extends HookWidget {
                                         Navigator.of(context).pop();
                                       },
                                     ),
-                                    SecondaryButton(
+                                    AlertButton(
                                       text: "削除する",
                                       onPressed: () {
                                         store
