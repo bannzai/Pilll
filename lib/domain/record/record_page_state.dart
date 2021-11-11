@@ -52,10 +52,6 @@ abstract class RecordPageState implements _$RecordPageState {
   }
 
   bool get shouldShowPremiumFunctionSurvey {
-    if (Environment.isDevelopment) {
-      return true;
-    }
-
     if (shouldShowTrial) {
       return false;
     }
