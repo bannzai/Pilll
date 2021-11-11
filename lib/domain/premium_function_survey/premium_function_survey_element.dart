@@ -32,7 +32,7 @@ class PremiumFunctionSurveyElement extends StatelessWidget {
               onChanged: (isOn) {
                 analytics.logEvent(
                     name: "toggle_premium_survey_check_box",
-                    parameters: {"isOn": isOn, "element": element});
+                    parameters: {"isOn": isOn, "element": element.toString()});
                 store.handleCheckEvent(element);
               },
               checkColor: PilllColors.white,
