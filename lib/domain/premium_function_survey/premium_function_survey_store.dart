@@ -28,7 +28,7 @@ class PremiumFunctionSurveyStateStore
   }
 
   send() async {
-    _userService.sendPremiumFunctionSurvey(
+    await _userService.sendPremiumFunctionSurvey(
         state.selectedElements, state.message);
   }
 }
