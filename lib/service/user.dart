@@ -274,7 +274,8 @@ class UserService {
       message: message,
     );
     return _database.userPrivateReference().set({
-      UserPrivateFirestoreFieldKeys.premiumFunctionSurvey: premiumFunctionSurvey
+      UserPrivateFirestoreFieldKeys.premiumFunctionSurvey:
+          premiumFunctionSurvey.toJson()
     }, SetOptions(merge: true));
   }
 }
