@@ -19,4 +19,8 @@ class PremiumFunctionSurveyStateStore
       state = state.copyWith(selectedElements: copied..add(element));
     }
   }
+
+  inputMessage(String message) {
+    state = state.copyWith(message: message);
+  }
 }
