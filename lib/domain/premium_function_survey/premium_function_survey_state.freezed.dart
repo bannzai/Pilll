@@ -17,7 +17,7 @@ class _$PremiumFunctionSurveyStateTearOff {
   const _$PremiumFunctionSurveyStateTearOff();
 
   _PremiumFunctionSurveyState call(
-      {List<PremiumFunctionSurveyElement> selectedElements = const []}) {
+      {List<PremiumFunctionSurveyElementType> selectedElements = const []}) {
     return _PremiumFunctionSurveyState(
       selectedElements: selectedElements,
     );
@@ -29,7 +29,7 @@ const $PremiumFunctionSurveyState = _$PremiumFunctionSurveyStateTearOff();
 
 /// @nodoc
 mixin _$PremiumFunctionSurveyState {
-  List<PremiumFunctionSurveyElement> get selectedElements =>
+  List<PremiumFunctionSurveyElementType> get selectedElements =>
       throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
@@ -42,7 +42,7 @@ abstract class $PremiumFunctionSurveyStateCopyWith<$Res> {
   factory $PremiumFunctionSurveyStateCopyWith(PremiumFunctionSurveyState value,
           $Res Function(PremiumFunctionSurveyState) then) =
       _$PremiumFunctionSurveyStateCopyWithImpl<$Res>;
-  $Res call({List<PremiumFunctionSurveyElement> selectedElements});
+  $Res call({List<PremiumFunctionSurveyElementType> selectedElements});
 }
 
 /// @nodoc
@@ -62,7 +62,7 @@ class _$PremiumFunctionSurveyStateCopyWithImpl<$Res>
       selectedElements: selectedElements == freezed
           ? _value.selectedElements
           : selectedElements // ignore: cast_nullable_to_non_nullable
-              as List<PremiumFunctionSurveyElement>,
+              as List<PremiumFunctionSurveyElementType>,
     ));
   }
 }
@@ -75,7 +75,7 @@ abstract class _$PremiumFunctionSurveyStateCopyWith<$Res>
           $Res Function(_PremiumFunctionSurveyState) then) =
       __$PremiumFunctionSurveyStateCopyWithImpl<$Res>;
   @override
-  $Res call({List<PremiumFunctionSurveyElement> selectedElements});
+  $Res call({List<PremiumFunctionSurveyElementType> selectedElements});
 }
 
 /// @nodoc
@@ -98,7 +98,7 @@ class __$PremiumFunctionSurveyStateCopyWithImpl<$Res>
       selectedElements: selectedElements == freezed
           ? _value.selectedElements
           : selectedElements // ignore: cast_nullable_to_non_nullable
-              as List<PremiumFunctionSurveyElement>,
+              as List<PremiumFunctionSurveyElementType>,
     ));
   }
 }
@@ -110,7 +110,7 @@ class _$_PremiumFunctionSurveyState extends _PremiumFunctionSurveyState {
 
   @JsonKey(defaultValue: const [])
   @override
-  final List<PremiumFunctionSurveyElement> selectedElements;
+  final List<PremiumFunctionSurveyElementType> selectedElements;
 
   @override
   String toString() {
@@ -140,12 +140,12 @@ class _$_PremiumFunctionSurveyState extends _PremiumFunctionSurveyState {
 
 abstract class _PremiumFunctionSurveyState extends PremiumFunctionSurveyState {
   factory _PremiumFunctionSurveyState(
-          {List<PremiumFunctionSurveyElement> selectedElements}) =
+          {List<PremiumFunctionSurveyElementType> selectedElements}) =
       _$_PremiumFunctionSurveyState;
   _PremiumFunctionSurveyState._() : super._();
 
   @override
-  List<PremiumFunctionSurveyElement> get selectedElements =>
+  List<PremiumFunctionSurveyElementType> get selectedElements =>
       throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
