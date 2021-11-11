@@ -44,7 +44,7 @@ class RecordPage extends HookWidget {
       if (!state.shouldShowPremiumFunctionSurvey) {
         return;
       }
-      Navigator.of(context).push(PremiumFunctionSurveyPageRoutes.route());
+      await Navigator.of(context).push(PremiumFunctionSurveyPageRoutes.route());
       await store.setTrueIsAlreadyShowPremiumFunctionSurvey();
     });
 
