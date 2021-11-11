@@ -16,6 +16,7 @@ abstract class RecordPageState implements _$RecordPageState {
     @Default(false) bool isTrial,
     @Default(false) bool hasDiscountEntitlement,
     @Default(false) bool isAlreadyShowTiral,
+    @Default(false) bool isAlreadyShowPremiumSurvey,
     @Default(false) bool shouldShowMigrateInfo,
     @Default(false) bool isLinkedLoginProvider,
     DateTime? beginTrialDate,
@@ -47,6 +48,13 @@ abstract class RecordPageState implements _$RecordPageState {
       return false;
     }
     return true;
+  }
+
+  bool get shouldShowPremiumFunctionSurvey {
+    if (shouldShowTrial) {
+      return false;
+    }
+    return !isAlreadyShowPremiumSurvey;
   }
 
   PillSheetAppearanceMode get appearanceMode {

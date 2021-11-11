@@ -105,6 +105,9 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
           isAlreadyShowTiral: sharedPreferences
                   .getBool(BoolKey.isAlreadyShowPremiumTrialModal) ??
               false,
+          isAlreadyShowPremiumSurvey:
+              sharedPreferences.getBool(BoolKey.isAlreadyShowPremiumSurvey) ??
+                  false,
           recommendedSignupNotificationIsAlreadyShow:
               recommendedSignupNotificationIsAlreadyShow,
           premiumTrialGuideNotificationIsClosed:
