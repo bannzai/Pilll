@@ -10,6 +10,8 @@ import 'package:pilll/domain/premium_function_survey/premium_function_survey_ele
 import 'package:pilll/domain/premium_function_survey/premium_function_survey_element_type.dart';
 import 'package:pilll/domain/premium_function_survey/premium_function_survey_store.dart';
 import 'package:pilll/error/error_alert.dart';
+import 'package:pilll/util/links.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class PremiumFunctionSurveyPage extends HookWidget {
   @override
@@ -56,6 +58,10 @@ class PremiumFunctionSurveyPage extends HookWidget {
                   ),
                   SizedBox(height: 8),
                   GestureDetector(
+                    onTap: () async {
+                      analytics.logEvent(name: "premium_link_tapped_on_survey");
+                      await launch(preimumLink);
+                    },
                     child: Text("プレミアム機能の詳細はこちら",
                         style: TextStyle(
                             fontSize: 12,
