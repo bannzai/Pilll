@@ -1,6 +1,7 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:pilll/entity/pill_sheet_group.dart';
 import 'package:pilll/entity/setting.dart';
+import 'package:pilll/util/environment.dart';
 
 part 'record_page_state.freezed.dart';
 
@@ -51,6 +52,10 @@ abstract class RecordPageState implements _$RecordPageState {
   }
 
   bool get shouldShowPremiumFunctionSurvey {
+    if (Environment.isDevelopment) {
+      return true;
+    }
+
     if (shouldShowTrial) {
       return false;
     }
