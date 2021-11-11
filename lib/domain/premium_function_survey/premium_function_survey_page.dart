@@ -99,7 +99,9 @@ class PremiumFunctionSurveyPage extends HookWidget {
                             fontWeight: FontWeight.w400,
                           ),
                         ),
-                        onChanged: (text) {},
+                        onChanged: (text) {
+                          store.inputMessage(text);
+                        },
                       ),
                     ],
                   ),
