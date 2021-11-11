@@ -1,13 +1,19 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_hooks/flutter_hooks.dart';
+import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/domain/premium_function_survey/premium_function_survey_element.dart';
 import 'package:pilll/domain/premium_function_survey/premium_function_survey_element_type.dart';
+import 'package:pilll/domain/premium_function_survey/premium_function_survey_store.dart';
 
-class PremiumFunctionSurveyPage extends StatelessWidget {
+class PremiumFunctionSurveyPage extends HookWidget {
   @override
   Widget build(BuildContext context) {
+    final store = useProvider(premiumFunctionSurveyStoreProvider);
+    final state = useProvider(premiumFunctionSurveyStoreProvider.state);
+
     return Scaffold(
       backgroundColor: PilllColors.background,
       appBar: AppBar(
@@ -60,7 +66,8 @@ class PremiumFunctionSurveyPage extends StatelessWidget {
                     children: [
                       ...PremiumFunctionSurveyElementType.values.map(
                         (e) => PremiumFunctionSurveyElement(
-                          isChecked: false,
+                          store: store,
+                          state: state,
                           elementType: e,
                         ),
                       ),

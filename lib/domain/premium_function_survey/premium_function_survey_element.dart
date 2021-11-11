@@ -3,14 +3,18 @@ import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/domain/premium_function_survey/premium_function_survey_element_type.dart';
+import 'package:pilll/domain/premium_function_survey/premium_function_survey_state.dart';
+import 'package:pilll/domain/premium_function_survey/premium_function_survey_store.dart';
 
 class PremiumFunctionSurveyElement extends StatelessWidget {
-  final bool isChecked;
+  final PremiumFunctionSurveyStateStore store;
+  final PremiumFunctionSurveyState state;
   final PremiumFunctionSurveyElementType elementType;
 
   const PremiumFunctionSurveyElement({
     Key? key,
-    required this.isChecked,
+    required this.store,
+    required this.state,
     required this.elementType,
   }) : super(key: key);
 
@@ -23,8 +27,8 @@ class PremiumFunctionSurveyElement extends StatelessWidget {
             width: 34,
             height: 34,
             child: Checkbox(
-              value: isChecked,
-              onChanged: (value) {},
+              value: state.selectedElements.contains(elementType),
+              onChanged: (_) => store.handleCheckEvent(elementType),
               checkColor: PilllColors.white,
               activeColor: PilllColors.secondary,
             ),
