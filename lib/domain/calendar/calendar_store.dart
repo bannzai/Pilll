@@ -81,32 +81,32 @@ class CalendarPageStateStore extends StateNotifier<CalendarPageState> {
   void _subscribe() {
     _menstruationCanceller?.cancel();
     _menstruationCanceller =
-        _menstruationService.subscribeAll().listen((entities) {
+        _menstruationService.streamAll().listen((entities) {
       state = state.copyWith(menstruations: entities);
     });
     _settingCanceller?.cancel();
-    _settingCanceller = _settingService.subscribe().listen((entity) {
+    _settingCanceller = _settingService.stream().listen((entity) {
       state = state.copyWith(setting: entity);
     });
     _latestPillSheetGroupCanceller?.cancel();
     _latestPillSheetGroupCanceller =
-        _pillSheetGroupService.subscribeForLatest().listen((entity) {
+        _pillSheetGroupService.streamForLatest().listen((entity) {
       state = state.copyWith(latestPillSheetGroup: entity);
     });
     _diariesCanceller?.cancel();
-    _diariesCanceller = _diaryService.subscribe().listen((entities) {
+    _diariesCanceller = _diaryService.stream().listen((entities) {
       state = state.copyWith(diariesForMonth: entities);
     });
     _pillSheetModifiedHistoryCanceller?.cancel();
     _pillSheetModifiedHistoryCanceller = _pillSheetModifiedHistoryService
-        .subscribe(CalendarPillSheetModifiedHistoryCardState
+        .stream(CalendarPillSheetModifiedHistoryCardState
                 .pillSheetModifiedHistoriesThreshold +
             1)
         .listen((event) {
       state = state.copyWith(allPillSheetModifiedHistories: event);
     });
     _userCanceller?.cancel();
-    _userCanceller = _userService.subscribe().listen((event) {
+    _userCanceller = _userService.stream().listen((event) {
       state = state.copyWith(
         isPremium: event.isPremium,
         isTrial: event.isTrial,

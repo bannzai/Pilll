@@ -61,7 +61,7 @@ void main() {
 
       when(service.fetch())
           .thenAnswer((realInvocation) => Future.value(setting));
-      when(service.subscribe())
+      when(service.stream())
           .thenAnswer((realInvocation) => Stream.value(setting));
 
       final batchFactory = MockBatchFactory();
@@ -73,13 +73,13 @@ void main() {
       final userService = MockUserService();
       when(userService.fetch())
           .thenAnswer((realInvocation) => Future.value(_FakeUser()));
-      when(userService.subscribe())
+      when(userService.stream())
           .thenAnswer((realInvocation) => Stream.empty());
       final pillSheetModifiedService = MockPillSheetModifiedHistoryService();
       final pillSheetGroupService = MockPillSheetGroupService();
       when(pillSheetGroupService.fetchLatest())
           .thenAnswer((realInvocation) => Future.value(pillSheetGroup));
-      when(pillSheetGroupService.subscribeForLatest())
+      when(pillSheetGroupService.streamForLatest())
           .thenAnswer((realInvocation) => Stream.empty());
 
       final store = SettingStateStore(
@@ -118,7 +118,7 @@ void main() {
       ]);
       when(service.fetch())
           .thenAnswer((realInvocation) => Future.value(setting));
-      when(service.subscribe())
+      when(service.stream())
           .thenAnswer((realInvocation) => Stream.value(setting));
 
       final batchFactory = MockBatchFactory();
@@ -130,13 +130,13 @@ void main() {
       final userService = MockUserService();
       when(userService.fetch())
           .thenAnswer((realInvocation) => Future.value(_FakeUser()));
-      when(userService.subscribe())
+      when(userService.stream())
           .thenAnswer((realInvocation) => Stream.empty());
       final pillSheetModifiedService = MockPillSheetModifiedHistoryService();
       final pillSheetGroupService = MockPillSheetGroupService();
       when(pillSheetGroupService.fetchLatest())
           .thenAnswer((realInvocation) => Future.value(pillSheetGroup));
-      when(pillSheetGroupService.subscribeForLatest())
+      when(pillSheetGroupService.streamForLatest())
           .thenAnswer((realInvocation) => Stream.empty());
 
       final store = SettingStateStore(
@@ -170,7 +170,7 @@ void main() {
       );
       when(service.fetch())
           .thenAnswer((realInvocation) => Future.value(setting));
-      when(service.subscribe())
+      when(service.stream())
           .thenAnswer((realInvocation) => Stream.value(setting));
 
       final pillSheet = PillSheet.create(PillSheetType.pillsheet_21);
@@ -182,13 +182,13 @@ void main() {
       final userService = MockUserService();
       when(userService.fetch())
           .thenAnswer((realInvocation) => Future.value(_FakeUser()));
-      when(userService.subscribe())
+      when(userService.stream())
           .thenAnswer((realInvocation) => Stream.empty());
       final pillSheetModifiedService = MockPillSheetModifiedHistoryService();
       final pillSheetGroupService = MockPillSheetGroupService();
       when(pillSheetGroupService.fetchLatest())
           .thenAnswer((realInvocation) => Future.value(pillSheetGroup));
-      when(pillSheetGroupService.subscribeForLatest())
+      when(pillSheetGroupService.streamForLatest())
           .thenAnswer((realInvocation) => Stream.empty());
 
       final store = SettingStateStore(
@@ -221,7 +221,7 @@ void main() {
       ]);
       when(service.fetch())
           .thenAnswer((realInvocation) => Future.value(setting));
-      when(service.subscribe())
+      when(service.stream())
           .thenAnswer((realInvocation) => Stream.value(setting));
 
       final batchFactory = MockBatchFactory();
@@ -234,13 +234,13 @@ void main() {
       final userService = MockUserService();
       when(userService.fetch())
           .thenAnswer((realInvocation) => Future.value(_FakeUser()));
-      when(userService.subscribe())
+      when(userService.stream())
           .thenAnswer((realInvocation) => Stream.empty());
       final pillSheetModifiedService = MockPillSheetModifiedHistoryService();
       final pillSheetGroupService = MockPillSheetGroupService();
       when(pillSheetGroupService.fetchLatest())
           .thenAnswer((realInvocation) => Future.value(pillSheetGroup));
-      when(pillSheetGroupService.subscribeForLatest())
+      when(pillSheetGroupService.streamForLatest())
           .thenAnswer((realInvocation) => Stream.empty());
 
       final store = SettingStateStore(

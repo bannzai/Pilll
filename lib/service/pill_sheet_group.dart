@@ -34,7 +34,7 @@ class PillSheetGroupService {
     return _map(snapshot);
   }
 
-  Stream<PillSheetGroup> subscribeForLatest() {
+  Stream<PillSheetGroup> streamForLatest() {
     return _fetchLatestQuery()
         .snapshots()
         .map(((event) => _map(event)))

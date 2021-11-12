@@ -57,7 +57,7 @@ class InitialSettingStateStore extends StateNotifier<InitialSettingState> {
   StreamSubscription? _authCanceller;
   _subscribe() {
     _authCanceller?.cancel();
-    _authCanceller = _authService.subscribe().listen((user) async {
+    _authCanceller = _authService.stream().listen((user) async {
       print("watch sign state user: $user");
       if (user == null) {
         return;

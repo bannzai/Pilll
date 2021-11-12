@@ -70,16 +70,16 @@ class SettingStateStore extends StateNotifier<SettingState> {
   StreamSubscription? _userSubscribeCanceller;
   void _subscribe() {
     _canceller?.cancel();
-    _canceller = _service.subscribe().listen((event) {
+    _canceller = _service.stream().listen((event) {
       state = state.copyWith(entity: event);
     });
     _pillSheetGroupCanceller?.cancel();
     _pillSheetGroupCanceller =
-        _pillSheetGroupService.subscribeForLatest().listen((event) {
+        _pillSheetGroupService.streamForLatest().listen((event) {
       state = state.copyWith(latestPillSheetGroup: event);
     });
     _userSubscribeCanceller?.cancel();
-    _userSubscribeCanceller = _userService.subscribe().listen((event) {
+    _userSubscribeCanceller = _userService.stream().listen((event) {
       state = state.copyWith(
         isPremium: event.isPremium,
         isTrial: event.isTrial,

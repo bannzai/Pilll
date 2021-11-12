@@ -37,7 +37,7 @@ class PremiumTrialModalStateStore
   StreamSubscription? _userSubscribeCanceller;
   void _subscribe() {
     _userSubscribeCanceller?.cancel();
-    _userSubscribeCanceller = _userService.subscribe().listen((event) {
+    _userSubscribeCanceller = _userService.stream().listen((event) {
       state = state.copyWith(isTrial: event.isTrial, setting: event.setting);
     });
   }

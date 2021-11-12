@@ -14,7 +14,7 @@ class ConfirmDiary extends StateNotifier<DiaryState> {
   StreamSubscription? canceller;
   void _subscribe() {
     canceller?.cancel();
-    canceller = _service.subscribe().listen((entities) {
+    canceller = _service.stream().listen((entities) {
       entities
           .where((element) => isSameDay(element.date, state.entity.date))
           .forEach((element) {

@@ -73,24 +73,24 @@ class MenstruationStore extends StateNotifier<MenstruationState> {
   void _subscribe() {
     _menstruationCanceller?.cancel();
     _menstruationCanceller =
-        menstruationService.subscribeAll().listen((entities) {
+        menstruationService.streamAll().listen((entities) {
       state = state.copyWith(entities: entities);
     });
     _diaryCanceller?.cancel();
-    _diaryCanceller = diaryService.subscribe().listen((entities) {
+    _diaryCanceller = diaryService.stream().listen((entities) {
       state = state.copyWith(diariesForMonth: entities);
     });
     _settingCanceller?.cancel();
-    _settingCanceller = settingService.subscribe().listen((setting) {
+    _settingCanceller = settingService.stream().listen((setting) {
       state = state.copyWith(setting: setting);
     });
     _pillSheetGroupCanceller?.cancel();
     _pillSheetGroupCanceller =
-        pillSheetGroupService.subscribeForLatest().listen((pillSheet) {
+        pillSheetGroupService.streamForLatest().listen((pillSheet) {
       state = state.copyWith(latestPillSheetGroup: pillSheet);
     });
     _userCanceller?.cancel();
-    _userCanceller = userService.subscribe().listen((user) {
+    _userCanceller = userService.stream().listen((user) {
       state = state.copyWith(
         isPremium: user.isPremium,
         isTrial: user.isTrial,

@@ -40,7 +40,7 @@ void main() {
       final authService = MockAuthService();
       when(authService.isLinkedApple()).thenReturn(false);
       when(authService.isLinkedGoogle()).thenReturn(false);
-      when(authService.subscribe())
+      when(authService.stream())
           .thenAnswer((realInvocation) => Stream.empty());
 
       final pillSheet = PillSheet(
@@ -64,7 +64,7 @@ void main() {
       final pillSheetGroupService = MockPillSheetGroupService();
       when(pillSheetGroupService.fetchLatest())
           .thenAnswer((realInvocation) async => pillSheetGroup);
-      when(pillSheetGroupService.subscribeForLatest())
+      when(pillSheetGroupService.streamForLatest())
           .thenAnswer((realInvocation) => Stream.empty());
       when(pillSheetGroupService.register(batch, pillSheetGroup))
           .thenReturn(pillSheetGroup.copyWith(id: "group_id"));
@@ -92,13 +92,13 @@ void main() {
       final settingService = MockSettingService();
       when(settingService.fetch())
           .thenAnswer((realInvocation) async => setting);
-      when(settingService.subscribe())
+      when(settingService.stream())
           .thenAnswer((realInvocation) => Stream.empty());
       when(settingService.updateWithBatch(batch, setting)).thenReturn(null);
 
       final user = User();
       final userService = MockUserService();
-      when(userService.subscribe())
+      when(userService.stream())
           .thenAnswer((realInvocation) => Stream.empty());
       when(userService.fetch()).thenAnswer((realInvocation) async => user);
 
@@ -133,7 +133,7 @@ void main() {
       final authService = MockAuthService();
       when(authService.isLinkedApple()).thenReturn(false);
       when(authService.isLinkedGoogle()).thenReturn(false);
-      when(authService.subscribe())
+      when(authService.stream())
           .thenAnswer((realInvocation) => Stream.empty());
 
       final pillSheet = PillSheet(
@@ -166,7 +166,7 @@ void main() {
       final pillSheetGroupService = MockPillSheetGroupService();
       when(pillSheetGroupService.fetchLatest())
           .thenAnswer((realInvocation) async => pillSheetGroup);
-      when(pillSheetGroupService.subscribeForLatest())
+      when(pillSheetGroupService.streamForLatest())
           .thenAnswer((realInvocation) => Stream.empty());
       when(pillSheetGroupService.register(batch, pillSheetGroup))
           .thenReturn(pillSheetGroup.copyWith(id: "group_id"));
@@ -196,13 +196,13 @@ void main() {
       final settingService = MockSettingService();
       when(settingService.fetch())
           .thenAnswer((realInvocation) async => setting);
-      when(settingService.subscribe())
+      when(settingService.stream())
           .thenAnswer((realInvocation) => Stream.empty());
       when(settingService.updateWithBatch(batch, setting)).thenReturn(null);
 
       final user = User();
       final userService = MockUserService();
-      when(userService.subscribe())
+      when(userService.stream())
           .thenAnswer((realInvocation) => Stream.empty());
       when(userService.fetch()).thenAnswer((realInvocation) async => user);
 
@@ -239,7 +239,7 @@ void main() {
       final authService = MockAuthService();
       when(authService.isLinkedApple()).thenReturn(false);
       when(authService.isLinkedGoogle()).thenReturn(false);
-      when(authService.subscribe())
+      when(authService.stream())
           .thenAnswer((realInvocation) => Stream.empty());
 
       final pillSheet = PillSheet(
@@ -272,7 +272,7 @@ void main() {
       final pillSheetGroupService = MockPillSheetGroupService();
       when(pillSheetGroupService.fetchLatest())
           .thenAnswer((realInvocation) async => pillSheetGroup);
-      when(pillSheetGroupService.subscribeForLatest())
+      when(pillSheetGroupService.streamForLatest())
           .thenAnswer((realInvocation) => Stream.empty());
       when(pillSheetGroupService.update(batch, updatedPillSheetGroup))
           .thenReturn(null);
@@ -305,13 +305,13 @@ void main() {
       final settingService = MockSettingService();
       when(settingService.fetch())
           .thenAnswer((realInvocation) async => setting);
-      when(settingService.subscribe())
+      when(settingService.stream())
           .thenAnswer((realInvocation) => Stream.empty());
       when(settingService.updateWithBatch(batch, setting)).thenReturn(null);
 
       final user = User();
       final userService = MockUserService();
-      when(userService.subscribe())
+      when(userService.stream())
           .thenAnswer((realInvocation) => Stream.empty());
       when(userService.fetch()).thenAnswer((realInvocation) async => user);
 
@@ -347,7 +347,7 @@ void main() {
       final authService = MockAuthService();
       when(authService.isLinkedApple()).thenReturn(false);
       when(authService.isLinkedGoogle()).thenReturn(false);
-      when(authService.subscribe())
+      when(authService.stream())
           .thenAnswer((realInvocation) => Stream.empty());
 
       final pillSheet = PillSheet(
@@ -391,7 +391,7 @@ void main() {
       final pillSheetGroupService = MockPillSheetGroupService();
       when(pillSheetGroupService.fetchLatest())
           .thenAnswer((realInvocation) async => pillSheetGroup);
-      when(pillSheetGroupService.subscribeForLatest())
+      when(pillSheetGroupService.streamForLatest())
           .thenAnswer((realInvocation) => Stream.empty());
       when(pillSheetGroupService.update(batch, updatedPillSheetGroup))
           .thenReturn(null);
@@ -425,13 +425,13 @@ void main() {
       final settingService = MockSettingService();
       when(settingService.fetch())
           .thenAnswer((realInvocation) async => setting);
-      when(settingService.subscribe())
+      when(settingService.stream())
           .thenAnswer((realInvocation) => Stream.empty());
       when(settingService.updateWithBatch(batch, setting)).thenReturn(null);
 
       final user = User();
       final userService = MockUserService();
-      when(userService.subscribe())
+      when(userService.stream())
           .thenAnswer((realInvocation) => Stream.empty());
       when(userService.fetch()).thenAnswer((realInvocation) async => user);
 
@@ -468,7 +468,7 @@ void main() {
       final authService = MockAuthService();
       when(authService.isLinkedApple()).thenReturn(false);
       when(authService.isLinkedGoogle()).thenReturn(false);
-      when(authService.subscribe())
+      when(authService.stream())
           .thenAnswer((realInvocation) => Stream.empty());
 
       final pillSheet = PillSheet(
@@ -512,7 +512,7 @@ void main() {
       final pillSheetGroupService = MockPillSheetGroupService();
       when(pillSheetGroupService.fetchLatest())
           .thenAnswer((realInvocation) async => pillSheetGroup);
-      when(pillSheetGroupService.subscribeForLatest())
+      when(pillSheetGroupService.streamForLatest())
           .thenAnswer((realInvocation) => Stream.empty());
       when(pillSheetGroupService.update(batch, updatedPillSheetGroup))
           .thenReturn(null);
@@ -546,13 +546,13 @@ void main() {
       final settingService = MockSettingService();
       when(settingService.fetch())
           .thenAnswer((realInvocation) async => setting);
-      when(settingService.subscribe())
+      when(settingService.stream())
           .thenAnswer((realInvocation) => Stream.empty());
       when(settingService.updateWithBatch(batch, setting)).thenReturn(null);
 
       final user = User();
       final userService = MockUserService();
-      when(userService.subscribe())
+      when(userService.stream())
           .thenAnswer((realInvocation) => Stream.empty());
       when(userService.fetch()).thenAnswer((realInvocation) async => user);
 
@@ -589,7 +589,7 @@ void main() {
       final authService = MockAuthService();
       when(authService.isLinkedApple()).thenReturn(false);
       when(authService.isLinkedGoogle()).thenReturn(false);
-      when(authService.subscribe())
+      when(authService.stream())
           .thenAnswer((realInvocation) => Stream.empty());
 
       final pillSheet = PillSheet(
@@ -636,7 +636,7 @@ void main() {
       final pillSheetGroupService = MockPillSheetGroupService();
       when(pillSheetGroupService.fetchLatest())
           .thenAnswer((realInvocation) async => pillSheetGroup);
-      when(pillSheetGroupService.subscribeForLatest())
+      when(pillSheetGroupService.streamForLatest())
           .thenAnswer((realInvocation) => Stream.empty());
       when(pillSheetGroupService.update(batch, updatedPillSheetGroup))
           .thenReturn(null);
@@ -670,13 +670,13 @@ void main() {
       final settingService = MockSettingService();
       when(settingService.fetch())
           .thenAnswer((realInvocation) async => setting);
-      when(settingService.subscribe())
+      when(settingService.stream())
           .thenAnswer((realInvocation) => Stream.empty());
       when(settingService.updateWithBatch(batch, setting)).thenReturn(null);
 
       final user = User();
       final userService = MockUserService();
-      when(userService.subscribe())
+      when(userService.stream())
           .thenAnswer((realInvocation) => Stream.empty());
       when(userService.fetch()).thenAnswer((realInvocation) async => user);
 

@@ -67,7 +67,7 @@ class DiaryService {
     return _database.diaryReference(diary).delete().then((_) => diary);
   }
 
-  Stream<List<Diary>> subscribe() {
+  Stream<List<Diary>> stream() {
     return _database
         .diariesReference()
         .snapshots()

@@ -141,7 +141,7 @@ class MockSettingService extends _i1.Mock implements _i16.SettingService {
               returnValue: Future<_i3.Setting>.value(_FakeSetting()))
           as _i17.Future<_i3.Setting>);
   @override
-  _i17.Stream<_i3.Setting> subscribe() => (super.noSuchMethod(
+  _i17.Stream<_i3.Setting> stream() => (super.noSuchMethod(
       Invocation.method(#subscribe, []),
       returnValue: Stream<_i3.Setting>.empty()) as _i17.Stream<_i3.Setting>);
   @override
@@ -220,7 +220,7 @@ class MockDiaryService extends _i1.Mock implements _i19.DiaryService {
               returnValue: Future<_i4.Diary>.value(_FakeDiary()))
           as _i17.Future<_i4.Diary>);
   @override
-  _i17.Stream<List<_i4.Diary>> subscribe() =>
+  _i17.Stream<List<_i4.Diary>> stream() =>
       (super.noSuchMethod(Invocation.method(#subscribe, []),
               returnValue: Stream<List<_i4.Diary>>.empty())
           as _i17.Stream<List<_i4.Diary>>);
@@ -258,7 +258,7 @@ class MockMenstruationService extends _i1.Mock
               returnValue: Future<_i5.Menstruation>.value(_FakeMenstruation()))
           as _i17.Future<_i5.Menstruation>);
   @override
-  _i17.Stream<List<_i5.Menstruation>> subscribeAll() =>
+  _i17.Stream<List<_i5.Menstruation>> streamAll() =>
       (super.noSuchMethod(Invocation.method(#subscribeAll, []),
               returnValue: Stream<List<_i5.Menstruation>>.empty())
           as _i17.Stream<List<_i5.Menstruation>>);
@@ -273,7 +273,7 @@ class MockAuthService extends _i1.Mock implements _i21.AuthService {
   }
 
   @override
-  _i17.Stream<_i22.User> subscribe() =>
+  _i17.Stream<_i22.User> stream() =>
       (super.noSuchMethod(Invocation.method(#subscribe, []),
           returnValue: Stream<_i22.User>.empty()) as _i17.Stream<_i22.User>);
   @override
@@ -310,7 +310,7 @@ class MockUserService extends _i1.Mock implements _i23.UserService {
           returnValue: Future<void>.value(),
           returnValueForMissingStub: Future.value()) as _i17.Future<void>);
   @override
-  _i17.Stream<_i6.User> subscribe() =>
+  _i17.Stream<_i6.User> stream() =>
       (super.noSuchMethod(Invocation.method(#subscribe, []),
           returnValue: Stream<_i6.User>.empty()) as _i17.Stream<_i6.User>);
   @override
@@ -755,7 +755,7 @@ class MockPillSheetModifiedHistoryService extends _i1.Mock
           returnValue: Future<void>.value(),
           returnValueForMissingStub: Future.value()) as _i17.Future<void>);
   @override
-  _i17.Stream<List<_i35.PillSheetModifiedHistory>> subscribe(int? limit) =>
+  _i17.Stream<List<_i35.PillSheetModifiedHistory>> stream(int? limit) =>
       (super.noSuchMethod(Invocation.method(#subscribe, [limit]),
               returnValue: Stream<List<_i35.PillSheetModifiedHistory>>.empty())
           as _i17.Stream<List<_i35.PillSheetModifiedHistory>>);
@@ -779,7 +779,7 @@ class MockPillSheetGroupService extends _i1.Mock
               returnValue: Future<_i11.PillSheetGroup?>.value())
           as _i17.Future<_i11.PillSheetGroup?>);
   @override
-  _i17.Stream<_i11.PillSheetGroup> subscribeForLatest() =>
+  _i17.Stream<_i11.PillSheetGroup> streamForLatest() =>
       (super.noSuchMethod(Invocation.method(#subscribeForLatest, []),
               returnValue: Stream<_i11.PillSheetGroup>.empty())
           as _i17.Stream<_i11.PillSheetGroup>);

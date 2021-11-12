@@ -51,7 +51,7 @@ class PillSheetModifiedHistoryService {
     return;
   }
 
-  Stream<List<PillSheetModifiedHistory>> subscribe(int limit) {
+  Stream<List<PillSheetModifiedHistory>> stream(int limit) {
     return _database
         .pillSheetModifiedHistoriesReference()
         .orderBy(PillSheetModifiedHistoryFirestoreKeys.createdAt,

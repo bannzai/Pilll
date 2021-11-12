@@ -78,25 +78,25 @@ void main() {
       final settingService = MockSettingService();
       when(settingService.fetch())
           .thenAnswer((realInvocation) => Future.value(settingEntity));
-      when(settingService.subscribe())
+      when(settingService.stream())
           .thenAnswer((realInvocation) => Stream.empty());
 
       final authService = MockAuthService();
       when(authService.isLinkedApple()).thenReturn(false);
       when(authService.isLinkedGoogle()).thenReturn(false);
-      when(authService.subscribe())
+      when(authService.stream())
           .thenAnswer((realInvocation) => Stream.empty());
       final userService = MockUserService();
       when(userService.fetch())
           .thenAnswer((reaInvocation) => Future.value(_FakeUser()));
-      when(userService.subscribe())
+      when(userService.stream())
           .thenAnswer((realInvocation) => Stream.empty());
       final pillSheetModifedHistoryService =
           MockPillSheetModifiedHistoryService();
       final pillSheetGroupService = MockPillSheetGroupService();
       when(pillSheetGroupService.fetchLatest())
           .thenAnswer((realInvocation) => Future.value(pillSheetGroup));
-      when(pillSheetGroupService.subscribeForLatest())
+      when(pillSheetGroupService.streamForLatest())
           .thenAnswer((realInvocation) => Stream.empty());
       final store = RecordPageStore(
         batch,
@@ -152,25 +152,25 @@ void main() {
       final settingService = MockSettingService();
       when(settingService.fetch())
           .thenAnswer((realInvocation) => Future.value(settingEntity));
-      when(settingService.subscribe())
+      when(settingService.stream())
           .thenAnswer((realInvocation) => Stream.empty());
 
       final authService = MockAuthService();
       when(authService.isLinkedApple()).thenReturn(false);
       when(authService.isLinkedGoogle()).thenReturn(false);
-      when(authService.subscribe())
+      when(authService.stream())
           .thenAnswer((realInvocation) => Stream.empty());
       final userService = MockUserService();
       when(userService.fetch())
           .thenAnswer((reaInvocation) => Future.value(_FakeUser()));
-      when(userService.subscribe())
+      when(userService.stream())
           .thenAnswer((realInvocation) => Stream.empty());
       final pillSheetModifedHistoryService =
           MockPillSheetModifiedHistoryService();
       final pillSheetGroupService = MockPillSheetGroupService();
       when(pillSheetGroupService.fetchLatest())
           .thenAnswer((realInvocation) => Future.value(pillSheetGroup));
-      when(pillSheetGroupService.subscribeForLatest())
+      when(pillSheetGroupService.streamForLatest())
           .thenAnswer((realInvocation) => Stream.empty());
 
       final store = RecordPageStore(
@@ -229,25 +229,25 @@ void main() {
       final settingService = MockSettingService();
       when(settingService.fetch())
           .thenAnswer((realInvocation) => Future.value(settingEntity));
-      when(settingService.subscribe())
+      when(settingService.stream())
           .thenAnswer((realInvocation) => Stream.empty());
 
       final authService = MockAuthService();
       when(authService.isLinkedApple()).thenReturn(false);
       when(authService.isLinkedGoogle()).thenReturn(false);
-      when(authService.subscribe())
+      when(authService.stream())
           .thenAnswer((realInvocation) => Stream.empty());
       final userService = MockUserService();
       when(userService.fetch())
           .thenAnswer((reaInvocation) => Future.value(_FakeUser()));
-      when(userService.subscribe())
+      when(userService.stream())
           .thenAnswer((realInvocation) => Stream.empty());
       final pillSheetModifedHistoryService =
           MockPillSheetModifiedHistoryService();
       final pillSheetGroupService = MockPillSheetGroupService();
       when(pillSheetGroupService.fetchLatest())
           .thenAnswer((realInvocation) => Future.value(pillSheetGroup));
-      when(pillSheetGroupService.subscribeForLatest())
+      when(pillSheetGroupService.streamForLatest())
           .thenAnswer((realInvocation) => Stream.empty());
 
       final store = RecordPageStore(
@@ -301,25 +301,25 @@ void main() {
       final settingService = MockSettingService();
       when(settingService.fetch())
           .thenAnswer((realInvocation) => Future.value(settingEntity));
-      when(settingService.subscribe())
+      when(settingService.stream())
           .thenAnswer((realInvocation) => Stream.empty());
 
       final authService = MockAuthService();
       when(authService.isLinkedApple()).thenReturn(false);
       when(authService.isLinkedGoogle()).thenReturn(false);
-      when(authService.subscribe())
+      when(authService.stream())
           .thenAnswer((realInvocation) => Stream.empty());
       final userService = MockUserService();
       when(userService.fetch())
           .thenAnswer((reaInvocation) => Future.value(_FakeUser()));
-      when(userService.subscribe())
+      when(userService.stream())
           .thenAnswer((realInvocation) => Stream.empty());
       final pillSheetModifedHistoryService =
           MockPillSheetModifiedHistoryService();
       final pillSheetGroupService = MockPillSheetGroupService();
       when(pillSheetGroupService.fetchLatest())
           .thenAnswer((realInvocation) => Future.value(pillSheetGroup));
-      when(pillSheetGroupService.subscribeForLatest())
+      when(pillSheetGroupService.streamForLatest())
           .thenAnswer((realInvocation) => Stream.empty());
 
       final store = RecordPageStore(

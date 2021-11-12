@@ -28,7 +28,7 @@ void main() {
     test("when first selected", () {
       final batchFactory = MockBatchFactory();
       final authService = MockAuthService();
-      when(authService.subscribe())
+      when(authService.stream())
           .thenAnswer((realInvocation) => Stream.empty());
       final settingService = MockSettingService();
       final pillSheetService = MockPillSheetService();
@@ -57,7 +57,7 @@ void main() {
     test("overwrite pill sheet type", () {
       final batchFactory = MockBatchFactory();
       final authService = MockAuthService();
-      when(authService.subscribe())
+      when(authService.stream())
           .thenAnswer((realInvocation) => Stream.empty());
       final settingService = MockSettingService();
       final pillSheetService = MockPillSheetService();
@@ -91,7 +91,7 @@ void main() {
     test("reset todayPillNumber", () {
       final batchFactory = MockBatchFactory();
       final authService = MockAuthService();
-      when(authService.subscribe())
+      when(authService.stream())
           .thenAnswer((realInvocation) => Stream.empty());
       final settingService = MockSettingService();
       final pillSheetService = MockPillSheetService();
@@ -134,7 +134,7 @@ void main() {
     test("add new one", () {
       final batchFactory = MockBatchFactory();
       final authService = MockAuthService();
-      when(authService.subscribe())
+      when(authService.stream())
           .thenAnswer((realInvocation) => Stream.empty());
       final settingService = MockSettingService();
       final pillSheetService = MockPillSheetService();
@@ -166,7 +166,7 @@ void main() {
     test("replace with index", () {
       final batchFactory = MockBatchFactory();
       final authService = MockAuthService();
-      when(authService.subscribe())
+      when(authService.stream())
           .thenAnswer((realInvocation) => Stream.empty());
       final settingService = MockSettingService();
       final pillSheetService = MockPillSheetService();
@@ -199,7 +199,7 @@ void main() {
     test("remove with index", () {
       final batchFactory = MockBatchFactory();
       final authService = MockAuthService();
-      when(authService.subscribe())
+      when(authService.stream())
           .thenAnswer((realInvocation) => Stream.empty());
       final settingService = MockSettingService();
       final pillSheetService = MockPillSheetService();
@@ -233,7 +233,7 @@ void main() {
     test("replace default reminderTime", () {
       final batchFactory = MockBatchFactory();
       final authService = MockAuthService();
-      when(authService.subscribe())
+      when(authService.stream())
           .thenAnswer((realInvocation) => Stream.empty());
       final settingService = MockSettingService();
       final pillSheetService = MockPillSheetService();
@@ -264,7 +264,7 @@ void main() {
     test("add reminderTime", () {
       final batchFactory = MockBatchFactory();
       final authService = MockAuthService();
-      when(authService.subscribe())
+      when(authService.stream())
           .thenAnswer((realInvocation) => Stream.empty());
       final settingService = MockSettingService();
       final pillSheetService = MockPillSheetService();
@@ -298,7 +298,7 @@ void main() {
     test("when selected on first page", () {
       final batchFactory = MockBatchFactory();
       final authService = MockAuthService();
-      when(authService.subscribe())
+      when(authService.stream())
           .thenAnswer((realInvocation) => Stream.empty());
       final settingService = MockSettingService();
       final pillSheetService = MockPillSheetService();
@@ -329,7 +329,7 @@ void main() {
     test("when selected on second page", () {
       final batchFactory = MockBatchFactory();
       final authService = MockAuthService();
-      when(authService.subscribe())
+      when(authService.stream())
           .thenAnswer((realInvocation) => Stream.empty());
       final settingService = MockSettingService();
       final pillSheetService = MockPillSheetService();
@@ -362,7 +362,7 @@ void main() {
     test("when selected first page", () {
       final batchFactory = MockBatchFactory();
       final authService = MockAuthService();
-      when(authService.subscribe())
+      when(authService.stream())
           .thenAnswer((realInvocation) => Stream.empty());
       final settingService = MockSettingService();
       final pillSheetService = MockPillSheetService();
@@ -394,7 +394,7 @@ void main() {
     test("when selected second page", () {
       final batchFactory = MockBatchFactory();
       final authService = MockAuthService();
-      when(authService.subscribe())
+      when(authService.stream())
           .thenAnswer((realInvocation) => Stream.empty());
       final settingService = MockSettingService();
       final pillSheetService = MockPillSheetService();
@@ -427,7 +427,7 @@ void main() {
         () {
       final batchFactory = MockBatchFactory();
       final authService = MockAuthService();
-      when(authService.subscribe())
+      when(authService.stream())
           .thenAnswer((realInvocation) => Stream.empty());
       final settingService = MockSettingService();
       final pillSheetService = MockPillSheetService();
@@ -469,7 +469,7 @@ void main() {
       final batch = MockWriteBatch();
       when(batchFactory.batch()).thenReturn(batch);
       final authService = MockAuthService();
-      when(authService.subscribe())
+      when(authService.stream())
           .thenAnswer((realInvocation) => Stream.empty());
 
       final pillSheet = PillSheet(
@@ -540,7 +540,7 @@ void main() {
       final batch = MockWriteBatch();
       when(batchFactory.batch()).thenReturn(batch);
       final authService = MockAuthService();
-      when(authService.subscribe())
+      when(authService.stream())
           .thenAnswer((realInvocation) => Stream.empty());
 
       final pillSheet = PillSheet(
