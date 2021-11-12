@@ -7,6 +7,7 @@ import 'package:pilll/components/template/setting_menstruation/setting_menstruat
 import 'package:pilll/components/template/setting_menstruation/setting_menstruation_pill_sheet_list.dart';
 import 'package:pilll/domain/settings/menstruation/setting_menstruation_store.dart';
 import 'package:pilll/domain/settings/setting_page_store.dart';
+import 'package:pilll/entity/setting.dart';
 
 class SettingMenstruationPage extends HookWidget {
   const SettingMenstruationPage({
@@ -24,7 +25,7 @@ class SettingMenstruationPage extends HookWidget {
       title: "生理について",
       pillSheetList: SettingMenstruationPillSheetList(
         pillSheetTypes: setting.pillSheetTypes,
-        appearanceMode: setting.pillSheetAppearanceMode,
+        appearanceMode: PillSheetAppearanceMode.sequential,
         selectedPillNumber: (pageIndex) =>
             store.retrieveMenstruationSelectedPillNumber(setting, pageIndex),
         markSelected: (pageIndex, number) {
