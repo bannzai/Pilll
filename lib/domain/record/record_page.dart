@@ -24,28 +24,18 @@ class RecordPage extends HookWidget {
   Widget build(BuildContext context) {
     final state = useProvider(recordPageStoreProvider.state);
     final store = useProvider(recordPageStoreProvider);
-    Future.delayed(Duration(seconds: 1)).then((_) {
-      if (!state.shouldShowMigrateInfo) {
-        return;
-      }
-      _showMigrateInfoDialog(context, store);
-    });
-
-    Future.delayed(Duration(seconds: 1)).then((_) {
-      if (!state.shouldShowTrial) {
-        return;
-      }
-      showPremiumTrialModalWhenLaunchApp(context, () {
-        showPremiumTrialCompleteModalPreDialog(context);
-      });
-    });
 
     Future.microtask(() async {
-      if (!state.shouldShowPremiumFunctionSurvey) {
-        return;
+      if (state.shouldShowMigrateInfo) {
+        _showMigrateInfoDialog(context, store);
+      } else if (state.shouldShowPremiumFunctionSurvey) {
+        await store.setTrueIsAlreadyShowPremiumFunctionSurvey();
+        Navigator.of(context).push(PremiumFunctionSurveyPageRoutes.route());
+      } else if (state.shouldShowTrial) {
+        showPremiumTrialModalWhenLaunchApp(context, () {
+          showPremiumTrialCompleteModalPreDialog(context);
+        });
       }
-      await store.setTrueIsAlreadyShowPremiumFunctionSurvey();
-      Navigator.of(context).push(PremiumFunctionSurveyPageRoutes.route());
     });
 
     final pillSheetGroup = state.pillSheetGroup;
