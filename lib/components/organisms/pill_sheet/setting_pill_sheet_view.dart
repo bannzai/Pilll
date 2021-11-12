@@ -55,11 +55,13 @@ class SettingPillSheetView extends StatelessWidget {
       final pillNumberIntoPillSheet =
           PillMarkWithNumberLayoutHelper.calcPillNumberIntoPillSheet(
               index, lineIndex);
+      final offset = summarizedPillSheetTypeTotalCountToPageIndex(
+          pillSheetTypes: pillSheetTypes, pageIndex: pageIndex);
       return Container(
         width: PillSheetViewLayout.componentWidth,
         child: PillMarkWithNumberLayout(
           textOfPillNumber: Text(
-            "$pillNumberIntoPillSheet",
+            "${offset + pillNumberIntoPillSheet}",
             style: TextStyle(color: PilllColors.weekday),
             textScaleFactor: 1,
           ),
