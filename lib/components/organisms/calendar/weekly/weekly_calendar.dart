@@ -1,3 +1,5 @@
+import 'package:collection/collection.dart';
+
 import 'package:pilll/components/organisms/calendar/band/calendar_band.dart';
 import 'package:pilll/components/organisms/calendar/band/calendar_band_model.dart';
 import 'package:pilll/components/organisms/calendar/day/calendar_day_tile.dart';
@@ -105,9 +107,8 @@ class CalendarWeekdayLine extends StatelessWidget {
             ),
           );
         })
-        .where((element) => element != null)
-        .toList()
-        .cast();
+        .whereNotNull()
+        .toList();
   }
 }
 

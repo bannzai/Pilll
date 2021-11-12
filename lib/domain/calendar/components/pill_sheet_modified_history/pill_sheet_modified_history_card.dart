@@ -38,14 +38,14 @@ class CalendarPillSheetModifiedHistoryCardState {
     if (_allPillSheetModifiedHistories.length >
         CalendarPillSheetModifiedHistoryCardState
             .pillSheetModifiedHistoriesThreshold) {
-      final copied = List.from(_allPillSheetModifiedHistories);
+      final copied = [..._allPillSheetModifiedHistories];
       copied.removeRange(
         CalendarPillSheetModifiedHistoryCardState
                 .pillSheetModifiedHistoriesThreshold -
             1,
         copied.length,
       );
-      return copied.cast();
+      return copied;
     } else {
       return _allPillSheetModifiedHistories;
     }
