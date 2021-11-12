@@ -66,7 +66,13 @@ class SettingPillSheetView extends StatelessWidget {
         width: PillSheetViewLayout.componentWidth,
         child: PillMarkWithNumberLayout(
           textOfPillNumber: Text(
-            "${offset + pillNumberIntoPillSheet}",
+            () {
+              if (appearanceMode == PillSheetAppearanceMode.sequential) {
+                return "${offset + pillNumberIntoPillSheet}";
+              } else {
+                return "$pillNumberIntoPillSheet";
+              }
+            }(),
             style: TextStyle(color: PilllColors.weekday),
             textScaleFactor: 1,
           ),
