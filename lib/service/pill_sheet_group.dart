@@ -11,7 +11,7 @@ class PillSheetGroupService {
 
   PillSheetGroupService(this._database);
 
-  Query _fetchLatestQuery() {
+  Query _latestQuery() {
     return _database
         .pillSheetGroupsReference()
         .orderBy(PillSheetGroupFirestoreKeys.createdAt)
@@ -30,12 +30,12 @@ class PillSheetGroupService {
   }
 
   Future<PillSheetGroup?> fetchLatest() async {
-    final snapshot = await _fetchLatestQuery().get();
+    final snapshot = await _latestQuery().get();
     return _map(snapshot);
   }
 
   Stream<PillSheetGroup> streamForLatest() {
-    return _fetchLatestQuery()
+    return _latestQuery()
         .snapshots()
         .map(((event) => _map(event)))
         .skipWhile((element) => element == null)
