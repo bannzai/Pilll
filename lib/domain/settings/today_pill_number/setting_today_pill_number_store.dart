@@ -39,6 +39,7 @@ class SettingTodayPillNumberStateStore
     this._pillSheetModifiedHistoryService,
   ) : super(
           SettingTodayPillNumberState(
+            appearanceMode: _parameter.appearanceMode,
             selectedPillSheetPageIndex: _parameter.activedPillSheet.groupIndex,
             selectedPillMarkNumberIntoPillSheet: _pillNumberIntoPillSheet(
               activedPillSheet: _parameter.activedPillSheet,

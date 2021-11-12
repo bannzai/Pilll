@@ -18,9 +18,11 @@ class _$SettingTodayPillNumberStoreParameterTearOff {
 
   _SettingTodayPillNumberStoreParameter call(
       {required PillSheetGroup pillSheetGroup,
+      required PillSheetAppearanceMode appearanceMode,
       required PillSheet activedPillSheet}) {
     return _SettingTodayPillNumberStoreParameter(
       pillSheetGroup: pillSheetGroup,
+      appearanceMode: appearanceMode,
       activedPillSheet: activedPillSheet,
     );
   }
@@ -33,6 +35,8 @@ const $SettingTodayPillNumberStoreParameter =
 /// @nodoc
 mixin _$SettingTodayPillNumberStoreParameter {
   PillSheetGroup get pillSheetGroup => throw _privateConstructorUsedError;
+  PillSheetAppearanceMode get appearanceMode =>
+      throw _privateConstructorUsedError;
   PillSheet get activedPillSheet => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
@@ -47,7 +51,10 @@ abstract class $SettingTodayPillNumberStoreParameterCopyWith<$Res> {
           SettingTodayPillNumberStoreParameter value,
           $Res Function(SettingTodayPillNumberStoreParameter) then) =
       _$SettingTodayPillNumberStoreParameterCopyWithImpl<$Res>;
-  $Res call({PillSheetGroup pillSheetGroup, PillSheet activedPillSheet});
+  $Res call(
+      {PillSheetGroup pillSheetGroup,
+      PillSheetAppearanceMode appearanceMode,
+      PillSheet activedPillSheet});
 
   $PillSheetGroupCopyWith<$Res> get pillSheetGroup;
   $PillSheetCopyWith<$Res> get activedPillSheet;
@@ -65,6 +72,7 @@ class _$SettingTodayPillNumberStoreParameterCopyWithImpl<$Res>
   @override
   $Res call({
     Object? pillSheetGroup = freezed,
+    Object? appearanceMode = freezed,
     Object? activedPillSheet = freezed,
   }) {
     return _then(_value.copyWith(
@@ -72,6 +80,10 @@ class _$SettingTodayPillNumberStoreParameterCopyWithImpl<$Res>
           ? _value.pillSheetGroup
           : pillSheetGroup // ignore: cast_nullable_to_non_nullable
               as PillSheetGroup,
+      appearanceMode: appearanceMode == freezed
+          ? _value.appearanceMode
+          : appearanceMode // ignore: cast_nullable_to_non_nullable
+              as PillSheetAppearanceMode,
       activedPillSheet: activedPillSheet == freezed
           ? _value.activedPillSheet
           : activedPillSheet // ignore: cast_nullable_to_non_nullable
@@ -102,7 +114,10 @@ abstract class _$SettingTodayPillNumberStoreParameterCopyWith<$Res>
           $Res Function(_SettingTodayPillNumberStoreParameter) then) =
       __$SettingTodayPillNumberStoreParameterCopyWithImpl<$Res>;
   @override
-  $Res call({PillSheetGroup pillSheetGroup, PillSheet activedPillSheet});
+  $Res call(
+      {PillSheetGroup pillSheetGroup,
+      PillSheetAppearanceMode appearanceMode,
+      PillSheet activedPillSheet});
 
   @override
   $PillSheetGroupCopyWith<$Res> get pillSheetGroup;
@@ -126,6 +141,7 @@ class __$SettingTodayPillNumberStoreParameterCopyWithImpl<$Res>
   @override
   $Res call({
     Object? pillSheetGroup = freezed,
+    Object? appearanceMode = freezed,
     Object? activedPillSheet = freezed,
   }) {
     return _then(_SettingTodayPillNumberStoreParameter(
@@ -133,6 +149,10 @@ class __$SettingTodayPillNumberStoreParameterCopyWithImpl<$Res>
           ? _value.pillSheetGroup
           : pillSheetGroup // ignore: cast_nullable_to_non_nullable
               as PillSheetGroup,
+      appearanceMode: appearanceMode == freezed
+          ? _value.appearanceMode
+          : appearanceMode // ignore: cast_nullable_to_non_nullable
+              as PillSheetAppearanceMode,
       activedPillSheet: activedPillSheet == freezed
           ? _value.activedPillSheet
           : activedPillSheet // ignore: cast_nullable_to_non_nullable
@@ -146,16 +166,20 @@ class __$SettingTodayPillNumberStoreParameterCopyWithImpl<$Res>
 class _$_SettingTodayPillNumberStoreParameter
     implements _SettingTodayPillNumberStoreParameter {
   _$_SettingTodayPillNumberStoreParameter(
-      {required this.pillSheetGroup, required this.activedPillSheet});
+      {required this.pillSheetGroup,
+      required this.appearanceMode,
+      required this.activedPillSheet});
 
   @override
   final PillSheetGroup pillSheetGroup;
+  @override
+  final PillSheetAppearanceMode appearanceMode;
   @override
   final PillSheet activedPillSheet;
 
   @override
   String toString() {
-    return 'SettingTodayPillNumberStoreParameter(pillSheetGroup: $pillSheetGroup, activedPillSheet: $activedPillSheet)';
+    return 'SettingTodayPillNumberStoreParameter(pillSheetGroup: $pillSheetGroup, appearanceMode: $appearanceMode, activedPillSheet: $activedPillSheet)';
   }
 
   @override
@@ -165,6 +189,9 @@ class _$_SettingTodayPillNumberStoreParameter
             (identical(other.pillSheetGroup, pillSheetGroup) ||
                 const DeepCollectionEquality()
                     .equals(other.pillSheetGroup, pillSheetGroup)) &&
+            (identical(other.appearanceMode, appearanceMode) ||
+                const DeepCollectionEquality()
+                    .equals(other.appearanceMode, appearanceMode)) &&
             (identical(other.activedPillSheet, activedPillSheet) ||
                 const DeepCollectionEquality()
                     .equals(other.activedPillSheet, activedPillSheet)));
@@ -174,6 +201,7 @@ class _$_SettingTodayPillNumberStoreParameter
   int get hashCode =>
       runtimeType.hashCode ^
       const DeepCollectionEquality().hash(pillSheetGroup) ^
+      const DeepCollectionEquality().hash(appearanceMode) ^
       const DeepCollectionEquality().hash(activedPillSheet);
 
   @JsonKey(ignore: true)
@@ -188,11 +216,15 @@ abstract class _SettingTodayPillNumberStoreParameter
     implements SettingTodayPillNumberStoreParameter {
   factory _SettingTodayPillNumberStoreParameter(
           {required PillSheetGroup pillSheetGroup,
+          required PillSheetAppearanceMode appearanceMode,
           required PillSheet activedPillSheet}) =
       _$_SettingTodayPillNumberStoreParameter;
 
   @override
   PillSheetGroup get pillSheetGroup => throw _privateConstructorUsedError;
+  @override
+  PillSheetAppearanceMode get appearanceMode =>
+      throw _privateConstructorUsedError;
   @override
   PillSheet get activedPillSheet => throw _privateConstructorUsedError;
   @override

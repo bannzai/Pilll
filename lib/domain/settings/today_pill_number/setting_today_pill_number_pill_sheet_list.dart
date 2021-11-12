@@ -5,15 +5,18 @@ import 'package:pilll/components/molecules/dots_page_indicator.dart';
 import 'package:pilll/components/organisms/pill_sheet/pill_sheet_view_layout.dart';
 import 'package:pilll/components/organisms/pill_sheet/setting_pill_sheet_view.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
+import 'package:pilll/entity/setting.dart';
 
 class SettingTodayPillNumberPillSheetList extends HookWidget {
   final List<PillSheetType> pillSheetTypes;
+  final PillSheetAppearanceMode appearanceMode;
   final int? Function(int pageIndex) selectedTodayPillNumberIntoPillSheet;
   final Function(int pageIndex, int pillNumberIntoPillSheet) markSelected;
 
   const SettingTodayPillNumberPillSheetList({
     Key? key,
     required this.pillSheetTypes,
+    required this.appearanceMode,
     required this.selectedTodayPillNumberIntoPillSheet,
     required this.markSelected,
   }) : super(key: key);
@@ -43,6 +46,7 @@ class SettingTodayPillNumberPillSheetList extends HookWidget {
                     padding: EdgeInsets.symmetric(horizontal: 10),
                     child: SettingPillSheetView(
                       pageIndex: pageIndex,
+                      appearanceMode: appearanceMode,
                       pillSheetTypes: pillSheetTypes,
                       selectedPillNumberIntoPillSheet:
                           selectedTodayPillNumberIntoPillSheet(pageIndex),

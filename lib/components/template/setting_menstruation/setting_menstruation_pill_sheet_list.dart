@@ -4,15 +4,18 @@ import 'package:pilll/components/molecules/dots_page_indicator.dart';
 import 'package:pilll/components/organisms/pill_sheet/pill_sheet_view_layout.dart';
 import 'package:pilll/components/organisms/pill_sheet/setting_pill_sheet_view.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
+import 'package:pilll/entity/setting.dart';
 
 class SettingMenstruationPillSheetList extends HookWidget {
   final List<PillSheetType> pillSheetTypes;
   final int? Function(int pageIndex) selectedPillNumber;
+  final PillSheetAppearanceMode appearanceMode;
   final Function(int pageIndex, int pillNumber) markSelected;
 
   SettingMenstruationPillSheetList({
     required this.pillSheetTypes,
     required this.selectedPillNumber,
+    required this.appearanceMode,
     required this.markSelected,
   });
 
@@ -43,6 +46,7 @@ class SettingMenstruationPillSheetList extends HookWidget {
                     padding: EdgeInsets.symmetric(horizontal: 10),
                     child: SettingPillSheetView(
                       pageIndex: pageIndex,
+                      appearanceMode: appearanceMode,
                       pillSheetTypes: pillSheetTypes,
                       selectedPillNumberIntoPillSheet:
                           selectedPillNumber(pageIndex),
