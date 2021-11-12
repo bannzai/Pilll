@@ -25,6 +25,13 @@ class RecordPage extends HookWidget {
     final state = useProvider(recordPageStoreProvider.state);
     final store = useProvider(recordPageStoreProvider);
 
+    final pillSheetGroup = state.pillSheetGroup;
+    final activedPillSheet = pillSheetGroup?.activedPillSheet;
+    final settingEntity = state.setting;
+    if (settingEntity == null || !state.firstLoadIsEnded) {
+      return Indicator();
+    }
+
     Future.microtask(() async {
       if (state.shouldShowMigrateInfo) {
         _showMigrateInfoDialog(context, store);
@@ -37,13 +44,6 @@ class RecordPage extends HookWidget {
         });
       }
     });
-
-    final pillSheetGroup = state.pillSheetGroup;
-    final activedPillSheet = pillSheetGroup?.activedPillSheet;
-    final settingEntity = state.setting;
-    if (settingEntity == null || !state.firstLoadIsEnded) {
-      return Indicator();
-    }
 
     return UniversalErrorPage(
       error: state.exception,
