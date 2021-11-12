@@ -1,6 +1,7 @@
 import 'package:pilll/components/organisms/pill_mark/pill_marks.dart';
 import 'package:pilll/components/organisms/pill_sheet/setting_pill_sheet_view.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
+import 'package:pilll/entity/setting.dart';
 import 'package:pilll/util/environment.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_test/flutter_test.dart';
@@ -24,6 +25,7 @@ void main() {
       final pillSheetType = PillSheetType.pillsheet_21;
       final widget = SettingPillSheetView(
         pageIndex: 0,
+        appearanceMode: PillSheetAppearanceMode.number,
         pillSheetTypes: [pillSheetType],
         selectedPillNumberIntoPillSheet: null,
         markSelected: (p, i) => {},
@@ -50,6 +52,7 @@ void main() {
       final pillSheetType = PillSheetType.pillsheet_28_4;
       final widget = SettingPillSheetView(
         pageIndex: 0,
+        appearanceMode: PillSheetAppearanceMode.number,
         pillSheetTypes: [pillSheetType],
         selectedPillNumberIntoPillSheet: null,
         markSelected: (p, i) => {},
@@ -76,6 +79,7 @@ void main() {
       final pillSheetType = PillSheetType.pillsheet_28_0;
       final widget = SettingPillSheetView(
         pageIndex: 0,
+        appearanceMode: PillSheetAppearanceMode.number,
         pillSheetTypes: [pillSheetType],
         selectedPillNumberIntoPillSheet: 10,
         markSelected: (p, i) => {},
@@ -101,6 +105,7 @@ void main() {
       final pillSheetType = PillSheetType.pillsheet_28_0;
       final widget = SettingPillSheetView(
         pageIndex: 0,
+        appearanceMode: PillSheetAppearanceMode.number,
         pillSheetTypes: [pillSheetType],
         selectedPillNumberIntoPillSheet: null,
         markSelected: (p, i) => {},

@@ -9,6 +9,7 @@ import 'package:pilll/domain/settings/today_pill_number/setting_today_pill_numbe
 import 'package:pilll/domain/settings/today_pill_number/setting_today_pill_number_store_parameter.dart';
 import 'package:pilll/entity/pill_sheet.dart';
 import 'package:pilll/entity/pill_sheet_group.dart';
+import 'package:pilll/entity/setting.dart';
 import 'package:pilll/util/formatter/date_time_formatter.dart';
 import 'package:flutter/material.dart';
 
@@ -25,7 +26,10 @@ class SettingTodayPillNumberPage extends HookWidget {
   @override
   Widget build(BuildContext context) {
     final parameter = SettingTodayPillNumberStoreParameter(
-        pillSheetGroup: pillSheetGroup, activedPillSheet: activedPillSheet);
+      appearanceMode: PillSheetAppearanceMode.number,
+      pillSheetGroup: pillSheetGroup,
+      activedPillSheet: activedPillSheet,
+    );
     final state =
         useProvider(settingTodayPillNumberStoreProvider(parameter).state);
     final store = useProvider(settingTodayPillNumberStoreProvider(parameter));
@@ -62,6 +66,7 @@ class SettingTodayPillNumberPage extends HookWidget {
                         pillSheetTypes: pillSheetGroup.pillSheets
                             .map((e) => e.pillSheetType)
                             .toList(),
+                        appearanceMode: state.appearanceMode,
                         selectedTodayPillNumberIntoPillSheet:
                             state.selectedTodayPillNumberIntoPillSheet,
                         markSelected: (pageIndex, pillNumberIntoPillSheet) =>

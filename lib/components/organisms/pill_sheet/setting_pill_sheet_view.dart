@@ -7,10 +7,12 @@ import 'package:pilll/components/organisms/pill_mark/pill_mark_with_number_layou
 import 'package:pilll/components/organisms/pill_sheet/pill_sheet_view_layout.dart';
 import 'package:pilll/entity/pill_mark_type.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
+import 'package:pilll/entity/setting.dart';
 import 'package:pilll/entity/weekday.dart';
 
 class SettingPillSheetView extends StatelessWidget {
   final int pageIndex;
+  final PillSheetAppearanceMode appearanceMode;
   final List<PillSheetType> pillSheetTypes;
   final int? selectedPillNumberIntoPillSheet;
   final Function(int pageIndex, int pillNumberIntoPillSheet) markSelected;
@@ -21,6 +23,7 @@ class SettingPillSheetView extends StatelessWidget {
     Key? key,
     required this.pageIndex,
     required this.pillSheetTypes,
+    required this.appearanceMode,
     required this.selectedPillNumberIntoPillSheet,
     required this.markSelected,
   }) : super(key: key);

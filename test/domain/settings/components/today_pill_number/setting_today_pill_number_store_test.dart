@@ -6,6 +6,7 @@ import 'package:pilll/entity/pill_sheet_group.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:mockito/mockito.dart';
+import 'package:pilll/entity/setting.dart';
 import 'package:pilll/service/day.dart';
 import 'package:pilll/service/pill_sheet.dart';
 import 'package:pilll/service/pill_sheet_group.dart';
@@ -87,7 +88,10 @@ void main() {
         ],
       );
       final parameter = SettingTodayPillNumberStoreParameter(
-          pillSheetGroup: pillSheetGroup, activedPillSheet: pillSheet);
+        appearanceMode: PillSheetAppearanceMode.number,
+        pillSheetGroup: pillSheetGroup,
+        activedPillSheet: pillSheet,
+      );
       final store =
           container.read(settingTodayPillNumberStoreProvider(parameter));
 
@@ -168,7 +172,10 @@ void main() {
         ],
       );
       final parameter = SettingTodayPillNumberStoreParameter(
-          pillSheetGroup: pillSheetGroup, activedPillSheet: pillSheet);
+        appearanceMode: PillSheetAppearanceMode.number,
+        pillSheetGroup: pillSheetGroup,
+        activedPillSheet: pillSheet,
+      );
       final store =
           container.read(settingTodayPillNumberStoreProvider(parameter));
 
@@ -276,7 +283,10 @@ void main() {
         ],
       );
       final parameter = SettingTodayPillNumberStoreParameter(
-          pillSheetGroup: pillSheetGroup, activedPillSheet: middle);
+        appearanceMode: PillSheetAppearanceMode.number,
+        pillSheetGroup: pillSheetGroup,
+        activedPillSheet: middle,
+      );
       final store =
           container.read(settingTodayPillNumberStoreProvider(parameter));
 
@@ -384,7 +394,10 @@ void main() {
         ],
       );
       final parameter = SettingTodayPillNumberStoreParameter(
-          pillSheetGroup: pillSheetGroup, activedPillSheet: middle);
+        appearanceMode: PillSheetAppearanceMode.number,
+        pillSheetGroup: pillSheetGroup,
+        activedPillSheet: middle,
+      );
       final store =
           container.read(settingTodayPillNumberStoreProvider(parameter));
 
@@ -493,7 +506,10 @@ void main() {
         ],
       );
       final parameter = SettingTodayPillNumberStoreParameter(
-          pillSheetGroup: pillSheetGroup, activedPillSheet: middle);
+        appearanceMode: PillSheetAppearanceMode.number,
+        pillSheetGroup: pillSheetGroup,
+        activedPillSheet: middle,
+      );
       final store =
           container.read(settingTodayPillNumberStoreProvider(parameter));
 
@@ -610,7 +626,10 @@ void main() {
         ],
       );
       final parameter = SettingTodayPillNumberStoreParameter(
-          pillSheetGroup: pillSheetGroup, activedPillSheet: middle);
+        appearanceMode: PillSheetAppearanceMode.number,
+        pillSheetGroup: pillSheetGroup,
+        activedPillSheet: middle,
+      );
       final store =
           container.read(settingTodayPillNumberStoreProvider(parameter));
 

@@ -7,6 +7,7 @@ import 'package:pilll/components/organisms/pill_sheet/setting_pill_sheet_view.da
 import 'package:pilll/domain/initial_setting/initial_setting_state.dart';
 import 'package:pilll/domain/initial_setting/initial_setting_store.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
+import 'package:pilll/entity/setting.dart';
 
 class SelectTodayPillNumberPillSheetList extends HookWidget {
   final InitialSettingState state;
@@ -42,6 +43,7 @@ class SelectTodayPillNumberPillSheetList extends HookWidget {
                     padding: EdgeInsets.symmetric(horizontal: 10),
                     child: SettingPillSheetView(
                       pageIndex: index,
+                      appearanceMode: PillSheetAppearanceMode.number,
                       pillSheetTypes: state.pillSheetTypes,
                       selectedPillNumberIntoPillSheet:
                           state.selectedTodayPillNumberIntoPillSheet(

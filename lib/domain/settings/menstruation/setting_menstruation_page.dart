@@ -24,6 +24,7 @@ class SettingMenstruationPage extends HookWidget {
       title: "生理について",
       pillSheetList: SettingMenstruationPillSheetList(
         pillSheetTypes: setting.pillSheetTypes,
+        appearanceMode: setting.pillSheetAppearanceMode,
         selectedPillNumber: (pageIndex) =>
             store.retrieveMenstruationSelectedPillNumber(setting, pageIndex),
         markSelected: (pageIndex, number) {
