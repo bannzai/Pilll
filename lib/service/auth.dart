@@ -43,7 +43,7 @@ Stream<User> _subscribe() {
       _cacheOrAuth().asStream(),
       FirebaseAuth.instance.userChanges(),
     ],
-  ).skipWhile((element) => element == null).cast();
+  ).where((element) => element == null).cast();
 }
 
 Future<User?> callSignin() async {
