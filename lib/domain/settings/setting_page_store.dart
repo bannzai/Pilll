@@ -65,12 +65,12 @@ class SettingStateStore extends StateNotifier<SettingState> {
     });
   }
 
-  StreamSubscription? _canceller;
+  StreamSubscription? _settingCanceller;
   StreamSubscription? _pillSheetGroupCanceller;
   StreamSubscription? _userSubscribeCanceller;
   void _subscribe() {
-    _canceller?.cancel();
-    _canceller = _settingService.stream().listen((event) {
+    _settingCanceller?.cancel();
+    _settingCanceller = _settingService.stream().listen((event) {
       state = state.copyWith(entity: event);
     });
     _pillSheetGroupCanceller?.cancel();
@@ -90,7 +90,7 @@ class SettingStateStore extends StateNotifier<SettingState> {
 
   @override
   void dispose() {
-    _canceller?.cancel();
+    _settingCanceller?.cancel();
     _pillSheetGroupCanceller?.cancel();
     _userSubscribeCanceller?.cancel();
     super.dispose();
