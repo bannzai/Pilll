@@ -17,7 +17,7 @@ class SettingMenstruationPage extends HookWidget {
   Widget build(BuildContext context) {
     final store = useProvider(settingMenstruationStoreProvider);
     final settingState = useProvider(settingStateProvider);
-    final setting = settingState.entity;
+    final setting = settingState.setting;
     if (setting == null) {
       throw FormatException("生理設定にはSettingのデータが必要です");
     }

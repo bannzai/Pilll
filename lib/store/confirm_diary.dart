@@ -16,9 +16,9 @@ class ConfirmDiary extends StateNotifier<DiaryState> {
     canceller?.cancel();
     canceller = _diaryService.stream().listen((entities) {
       entities
-          .where((element) => isSameDay(element.date, state.entity.date))
+          .where((element) => isSameDay(element.date, state.diary.date))
           .forEach((element) {
-        state = state.copyWith(entity: element);
+        state = state.copyWith(diary: element);
       });
     });
   }
@@ -30,6 +30,6 @@ class ConfirmDiary extends StateNotifier<DiaryState> {
   }
 
   Future<void> delete() {
-    return _diaryService.delete(state.entity);
+    return _diaryService.delete(state.diary);
   }
 }

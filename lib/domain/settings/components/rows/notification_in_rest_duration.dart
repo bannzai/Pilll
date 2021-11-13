@@ -42,7 +42,7 @@ class NotificationInRestDuration extends HookWidget {
             SnackBar(
               duration: Duration(seconds: 2),
               content: Text(
-                "${pillSheet.pillSheetType.notTakenWord}期間の通知を${state.entity!.isOnNotifyInNotTakenDuration ? "ON" : "OFF"}にしました",
+                "${pillSheet.pillSheetType.notTakenWord}期間の通知を${state.setting!.isOnNotifyInNotTakenDuration ? "ON" : "OFF"}にしました",
               ),
             ),
           );

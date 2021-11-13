@@ -100,8 +100,7 @@ void main() {
       ]))).thenAnswer((realInvocation) => Future.value(setting));
 
       store.addReminderTimes(ReminderTime(hour: 3, minute: 0));
-      verify(
-          settingServicsettingService.update(setting.copyWith(reminderTimes: [
+      verify(settingService.update(setting.copyWith(reminderTimes: [
         ReminderTime(hour: 1, minute: 0),
         ReminderTime(hour: 2, minute: 0),
         ReminderTime(hour: 3, minute: 0),

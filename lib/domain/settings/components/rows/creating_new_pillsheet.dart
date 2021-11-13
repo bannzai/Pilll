@@ -51,7 +51,7 @@ class CreatingNewPillSheetRow extends HookWidget {
               .modifiyIsAutomaticallyCreatePillSheet(
                   !setting.isAutomaticallyCreatePillSheet)
               .then((state) {
-            final setting = state.entity;
+            final setting = state.setting;
             if (setting == null) {
               return null;
             }

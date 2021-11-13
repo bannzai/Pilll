@@ -9,42 +9,42 @@ class PostDiaryStore extends StateNotifier<DiaryState> {
 
   void removePhysicalCondition(String physicalCondition) {
     state = state.copyWith(
-        entity: state.entity.copyWith(
-            physicalConditions: state.entity.physicalConditions
+        diary: state.diary.copyWith(
+            physicalConditions: state.diary.physicalConditions
               ..remove(physicalCondition)));
   }
 
   void addPhysicalCondition(String physicalCondition) {
     state = state.copyWith(
-        entity: state.entity.copyWith(
-            physicalConditions: state.entity.physicalConditions
+        diary: state.diary.copyWith(
+            physicalConditions: state.diary.physicalConditions
               ..add(physicalCondition)));
   }
 
   void switchingPhysicalCondition(PhysicalConditionStatus status) {
     if (state.hasPhysicalConditionStatusFor(status)) {
       state = state.copyWith(
-          entity: state.entity.copyWith(physicalConditionStatus: null));
+          diary: state.diary.copyWith(physicalConditionStatus: null));
       return;
     }
     state = state.copyWith(
-        entity: state.entity.copyWith(physicalConditionStatus: status));
+        diary: state.diary.copyWith(physicalConditionStatus: status));
   }
 
   void toggleHasSex() {
     state = state.copyWith(
-        entity: state.entity.copyWith(hasSex: !state.entity.hasSex));
+        diary: state.diary.copyWith(hasSex: !state.diary.hasSex));
   }
 
   void editedMemo(String text) {
-    state = state.copyWith(entity: state.entity.copyWith(memo: text));
+    state = state.copyWith(diary: state.diary.copyWith(memo: text));
   }
 
   Future<Diary> register() {
-    return _diaryService.register(state.entity);
+    return _diaryService.register(state.diary);
   }
 
   Future<void> delete() {
-    return _diaryService.delete(state.entity);
+    return _diaryService.delete(state.diary);
   }
 }

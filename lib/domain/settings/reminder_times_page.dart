@@ -17,7 +17,7 @@ class ReminderTimesPage extends HookWidget {
   Widget build(BuildContext context) {
     final store = useProvider(settingStoreProvider);
     final state = useProvider(settingStoreProvider.state);
-    final settingEntity = state.entity;
+    final settingEntity = state.setting;
     if (settingEntity == null) {
       return Indicator();
     }
@@ -120,7 +120,7 @@ class ReminderTimesPage extends HookWidget {
 
   Widget _footer(BuildContext context) {
     final state = useProvider(settingStoreProvider.state);
-    final settingEntity = state.entity;
+    final settingEntity = state.setting;
     if (settingEntity == null) {
       return Container();
     }
