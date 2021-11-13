@@ -38,7 +38,7 @@ class PillSheetModifiedHistoryStateStore
   void _subscribe() {
     _pillSheetModifiedHistoryCanceller?.cancel();
     _pillSheetModifiedHistoryCanceller = _pillSheetModifiedHistoryService
-        .subscribe(max(state.pillSheetModifiedHistories.length, 20))
+        .stream(max(state.pillSheetModifiedHistories.length, 20))
         .listen((event) {
       state = state.copyWith(pillSheetModifiedHistories: event);
     });

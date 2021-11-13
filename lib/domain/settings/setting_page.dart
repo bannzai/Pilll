@@ -52,7 +52,7 @@ class SettingPage extends HookWidget {
   Widget _body(BuildContext context) {
     final store = useProvider(settingStoreProvider);
     final state = useProvider(settingStoreProvider.state);
-    final setting = state.entity;
+    final setting = state.setting;
     if (setting == null) {
       return Container();
     }

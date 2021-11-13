@@ -23,9 +23,9 @@ final _postDiaryStoreProvider = StateNotifierProvider.autoDispose
   final diary = family.diary;
   if (diary == null) {
     return PostDiaryStore(
-        service, DiaryState(entity: Diary.fromDate(family.date)));
+        service, DiaryState(diary: Diary.fromDate(family.date)));
   }
-  return PostDiaryStore(service, DiaryState(entity: diary.copyWith()));
+  return PostDiaryStore(service, DiaryState(diary: diary.copyWith()));
 });
 
 abstract class PostDiaryPageConst {
@@ -47,7 +47,7 @@ class PostDiaryPage extends HookWidget {
     final store = useProvider(_postDiaryStoreProvider(_family()));
     final state = useProvider(_postDiaryStoreProvider(_family()).state);
     final TextEditingController? textEditingController =
-        useTextEditingController(text: state.entity.memo);
+        useTextEditingController(text: state.diary.memo);
     final focusNode = useFocusNode();
     final scrollController = useScrollController();
 
@@ -213,14 +213,14 @@ class PostDiaryPage extends HookWidget {
               .map((e) => ChoiceChip(
                     label: Text(e),
                     labelStyle: FontType.assisting.merge(
-                        state.entity.physicalConditions.contains(e)
+                        state.diary.physicalConditions.contains(e)
                             ? TextColorStyle.white
                             : TextColorStyle.darkGray),
                     disabledColor: PilllColors.disabledSheet,
                     selectedColor: PilllColors.secondary,
-                    selected: state.entity.physicalConditions.contains(e),
+                    selected: state.diary.physicalConditions.contains(e),
                     onSelected: (selected) {
-                      state.entity.physicalConditions.contains(e)
+                      state.diary.physicalConditions.contains(e)
                           ? store.removePhysicalCondition(e)
                           : store.addPhysicalCondition(e);
                     },
@@ -247,11 +247,11 @@ class PostDiaryPage extends HookWidget {
               height: 32,
               decoration: BoxDecoration(
                   shape: BoxShape.circle,
-                  color: state.entity.hasSex
+                  color: state.diary.hasSex
                       ? PilllColors.thinSecondary
                       : PilllColors.disabledSheet),
               child: SvgPicture.asset("images/heart.svg",
-                  color: state.entity.hasSex
+                  color: state.diary.hasSex
                       ? PilllColors.secondary
                       : TextColor.darkGray)),
         ),

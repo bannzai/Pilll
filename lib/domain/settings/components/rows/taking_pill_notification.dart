@@ -27,15 +27,15 @@ class TakingPillNotification extends HookWidget {
         );
         ScaffoldMessenger.of(context).hideCurrentSnackBar();
         store.modifyIsOnReminder(!setting.isOnReminder).then((state) {
-          final settingEntity = state.entity;
-          if (settingEntity == null) {
+          final setting = state.setting;
+          if (setting == null) {
             return;
           }
           ScaffoldMessenger.of(context).showSnackBar(
             SnackBar(
               duration: Duration(seconds: 2),
               content: Text(
-                "服用通知を${settingEntity.isOnReminder ? "ON" : "OFF"}にしました",
+                "服用通知を${setting.isOnReminder ? "ON" : "OFF"}にしました",
               ),
             ),
           );

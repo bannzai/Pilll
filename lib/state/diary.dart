@@ -7,11 +7,11 @@ part 'diary.freezed.dart';
 abstract class DiaryState implements _$DiaryState {
   DiaryState._();
   factory DiaryState({
-    required Diary entity,
+    required Diary diary,
   }) = _DiaryState;
 
   bool hasPhysicalConditionStatusFor(PhysicalConditionStatus status) =>
-      entity.physicalConditionStatus == status;
+      diary.physicalConditionStatus == status;
 
-  bool hasPhysicalConditionStatus() => entity.hasPhysicalConditionStatus;
+  bool hasPhysicalConditionStatus() => diary.hasPhysicalConditionStatus;
 }

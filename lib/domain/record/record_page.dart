@@ -27,8 +27,8 @@ class RecordPage extends HookWidget {
 
     final pillSheetGroup = state.pillSheetGroup;
     final activedPillSheet = pillSheetGroup?.activedPillSheet;
-    final settingEntity = state.setting;
-    if (settingEntity == null || !state.firstLoadIsEnded) {
+    final setting = state.setting;
+    if (setting == null || !state.firstLoadIsEnded) {
       return Indicator();
     }
 
@@ -57,7 +57,7 @@ class RecordPage extends HookWidget {
           title: RecordPageInformationHeader(
             today: DateTime.now(),
             pillSheetGroup: state.pillSheetGroup,
-            setting: settingEntity,
+            setting: setting,
             store: store,
           ),
         ),
@@ -71,7 +71,7 @@ class RecordPage extends HookWidget {
                   children: [
                     NotificationBar(state),
                     SizedBox(height: 12),
-                    _content(context, settingEntity, state, store),
+                    _content(context, setting, state, store),
                   ],
                 ),
               ),
@@ -91,7 +91,7 @@ class RecordPage extends HookWidget {
 
   Widget _content(
     BuildContext context,
-    Setting settingEntity,
+    Setting setting,
     RecordPageState state,
     RecordPageStore store,
   ) {
@@ -103,7 +103,7 @@ class RecordPage extends HookWidget {
       return RecordPageAddingPillSheet(
         context: context,
         store: store,
-        setting: settingEntity,
+        setting: setting,
       );
     else
       return Column(
@@ -113,13 +113,13 @@ class RecordPage extends HookWidget {
             store: store,
             pillSheetGroup: pillSheetGroup,
             activedPillSheet: activedPillSheet,
-            setting: settingEntity,
+            setting: setting,
           ),
           SizedBox(height: 16),
           RecordPagePillSheetList(
             state: state,
             store: store,
-            setting: settingEntity,
+            setting: setting,
           ),
         ],
       );

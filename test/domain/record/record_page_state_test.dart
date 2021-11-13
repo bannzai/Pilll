@@ -62,7 +62,7 @@ void main() {
         lastTakenDate: DateTime.parse("2020-11-23"),
         createdAt: DateTime.parse("2020-11-21"),
       );
-      final settingEntity = Setting(
+      final setting = Setting(
         pillSheetTypes: [PillSheetType.pillsheet_21],
         pillNumberForFromMenstruation: 22,
         durationMenstruation: 4,
@@ -70,33 +70,31 @@ void main() {
       );
       final pillSheetGroup = PillSheetGroup(
           pillSheetIDs: ["1"], pillSheets: [pillSheetEntity], createdAt: now());
-      final state = RecordPageState(
-          pillSheetGroup: pillSheetGroup, setting: settingEntity);
+      final state =
+          RecordPageState(pillSheetGroup: pillSheetGroup, setting: setting);
 
       final service = MockPillSheetService();
       final batch = MockBatchFactory();
       final settingService = MockSettingService();
       when(settingService.fetch())
-          .thenAnswer((realInvocation) => Future.value(settingEntity));
-      when(settingService.subscribe())
+          .thenAnswer((realInvocation) => Future.value(setting));
+      when(settingService.stream())
           .thenAnswer((realInvocation) => Stream.empty());
 
       final authService = MockAuthService();
       when(authService.isLinkedApple()).thenReturn(false);
       when(authService.isLinkedGoogle()).thenReturn(false);
-      when(authService.subscribe())
-          .thenAnswer((realInvocation) => Stream.empty());
+      when(authService.stream()).thenAnswer((realInvocation) => Stream.empty());
       final userService = MockUserService();
       when(userService.fetch())
           .thenAnswer((reaInvocation) => Future.value(_FakeUser()));
-      when(userService.subscribe())
-          .thenAnswer((realInvocation) => Stream.empty());
+      when(userService.stream()).thenAnswer((realInvocation) => Stream.empty());
       final pillSheetModifedHistoryService =
           MockPillSheetModifiedHistoryService();
       final pillSheetGroupService = MockPillSheetGroupService();
       when(pillSheetGroupService.fetchLatest())
           .thenAnswer((realInvocation) => Future.value(pillSheetGroup));
-      when(pillSheetGroupService.subscribeForLatest())
+      when(pillSheetGroupService.streamForLatest())
           .thenAnswer((realInvocation) => Stream.empty());
       final store = RecordPageStore(
         batch,
@@ -136,7 +134,7 @@ void main() {
         lastTakenDate: DateTime.parse("2020-11-22"),
         createdAt: DateTime.parse("2020-11-21"),
       );
-      final settingEntity = Setting(
+      final setting = Setting(
         pillSheetTypes: [PillSheetType.pillsheet_21],
         pillNumberForFromMenstruation: 22,
         durationMenstruation: 4,
@@ -144,33 +142,31 @@ void main() {
       );
       final pillSheetGroup = PillSheetGroup(
           pillSheetIDs: ["1"], pillSheets: [pillSheetEntity], createdAt: now());
-      final state = RecordPageState(
-          pillSheetGroup: pillSheetGroup, setting: settingEntity);
+      final state =
+          RecordPageState(pillSheetGroup: pillSheetGroup, setting: setting);
 
       final service = MockPillSheetService();
       final batch = MockBatchFactory();
       final settingService = MockSettingService();
       when(settingService.fetch())
-          .thenAnswer((realInvocation) => Future.value(settingEntity));
-      when(settingService.subscribe())
+          .thenAnswer((realInvocation) => Future.value(setting));
+      when(settingService.stream())
           .thenAnswer((realInvocation) => Stream.empty());
 
       final authService = MockAuthService();
       when(authService.isLinkedApple()).thenReturn(false);
       when(authService.isLinkedGoogle()).thenReturn(false);
-      when(authService.subscribe())
-          .thenAnswer((realInvocation) => Stream.empty());
+      when(authService.stream()).thenAnswer((realInvocation) => Stream.empty());
       final userService = MockUserService();
       when(userService.fetch())
           .thenAnswer((reaInvocation) => Future.value(_FakeUser()));
-      when(userService.subscribe())
-          .thenAnswer((realInvocation) => Stream.empty());
+      when(userService.stream()).thenAnswer((realInvocation) => Stream.empty());
       final pillSheetModifedHistoryService =
           MockPillSheetModifiedHistoryService();
       final pillSheetGroupService = MockPillSheetGroupService();
       when(pillSheetGroupService.fetchLatest())
           .thenAnswer((realInvocation) => Future.value(pillSheetGroup));
-      when(pillSheetGroupService.subscribeForLatest())
+      when(pillSheetGroupService.streamForLatest())
           .thenAnswer((realInvocation) => Stream.empty());
 
       final store = RecordPageStore(
@@ -213,7 +209,7 @@ void main() {
         lastTakenDate: DateTime.parse("2020-11-23"),
         createdAt: DateTime.parse("2020-11-21"),
       );
-      final settingEntity = Setting(
+      final setting = Setting(
         pillSheetTypes: [PillSheetType.pillsheet_21],
         pillNumberForFromMenstruation: 22,
         durationMenstruation: 4,
@@ -221,33 +217,31 @@ void main() {
       );
       final pillSheetGroup = PillSheetGroup(
           pillSheetIDs: ["1"], pillSheets: [pillSheetEntity], createdAt: now());
-      final state = RecordPageState(
-          pillSheetGroup: pillSheetGroup, setting: settingEntity);
+      final state =
+          RecordPageState(pillSheetGroup: pillSheetGroup, setting: setting);
 
       final service = MockPillSheetService();
       final batch = MockBatchFactory();
       final settingService = MockSettingService();
       when(settingService.fetch())
-          .thenAnswer((realInvocation) => Future.value(settingEntity));
-      when(settingService.subscribe())
+          .thenAnswer((realInvocation) => Future.value(setting));
+      when(settingService.stream())
           .thenAnswer((realInvocation) => Stream.empty());
 
       final authService = MockAuthService();
       when(authService.isLinkedApple()).thenReturn(false);
       when(authService.isLinkedGoogle()).thenReturn(false);
-      when(authService.subscribe())
-          .thenAnswer((realInvocation) => Stream.empty());
+      when(authService.stream()).thenAnswer((realInvocation) => Stream.empty());
       final userService = MockUserService();
       when(userService.fetch())
           .thenAnswer((reaInvocation) => Future.value(_FakeUser()));
-      when(userService.subscribe())
-          .thenAnswer((realInvocation) => Stream.empty());
+      when(userService.stream()).thenAnswer((realInvocation) => Stream.empty());
       final pillSheetModifedHistoryService =
           MockPillSheetModifiedHistoryService();
       final pillSheetGroupService = MockPillSheetGroupService();
       when(pillSheetGroupService.fetchLatest())
           .thenAnswer((realInvocation) => Future.value(pillSheetGroup));
-      when(pillSheetGroupService.subscribeForLatest())
+      when(pillSheetGroupService.streamForLatest())
           .thenAnswer((realInvocation) => Stream.empty());
 
       final store = RecordPageStore(
@@ -284,7 +278,7 @@ void main() {
         lastTakenDate: DateTime.parse("2020-11-22"),
         createdAt: DateTime.parse("2020-11-21"),
       );
-      final settingEntity = Setting(
+      final setting = Setting(
         pillSheetTypes: [PillSheetType.pillsheet_21],
         pillNumberForFromMenstruation: 22,
         durationMenstruation: 4,
@@ -293,33 +287,31 @@ void main() {
       final pillSheetGroup = PillSheetGroup(
           pillSheetIDs: ["1"], pillSheets: [pillSheetEntity], createdAt: now());
 
-      final state = RecordPageState(
-          pillSheetGroup: pillSheetGroup, setting: settingEntity);
+      final state =
+          RecordPageState(pillSheetGroup: pillSheetGroup, setting: setting);
 
       final service = MockPillSheetService();
       final batch = MockBatchFactory();
       final settingService = MockSettingService();
       when(settingService.fetch())
-          .thenAnswer((realInvocation) => Future.value(settingEntity));
-      when(settingService.subscribe())
+          .thenAnswer((realInvocation) => Future.value(setting));
+      when(settingService.stream())
           .thenAnswer((realInvocation) => Stream.empty());
 
       final authService = MockAuthService();
       when(authService.isLinkedApple()).thenReturn(false);
       when(authService.isLinkedGoogle()).thenReturn(false);
-      when(authService.subscribe())
-          .thenAnswer((realInvocation) => Stream.empty());
+      when(authService.stream()).thenAnswer((realInvocation) => Stream.empty());
       final userService = MockUserService();
       when(userService.fetch())
           .thenAnswer((reaInvocation) => Future.value(_FakeUser()));
-      when(userService.subscribe())
-          .thenAnswer((realInvocation) => Stream.empty());
+      when(userService.stream()).thenAnswer((realInvocation) => Stream.empty());
       final pillSheetModifedHistoryService =
           MockPillSheetModifiedHistoryService();
       final pillSheetGroupService = MockPillSheetGroupService();
       when(pillSheetGroupService.fetchLatest())
           .thenAnswer((realInvocation) => Future.value(pillSheetGroup));
-      when(pillSheetGroupService.subscribeForLatest())
+      when(pillSheetGroupService.streamForLatest())
           .thenAnswer((realInvocation) => Stream.empty());
 
       final store = RecordPageStore(

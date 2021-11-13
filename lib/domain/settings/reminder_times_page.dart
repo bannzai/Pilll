@@ -17,8 +17,8 @@ class ReminderTimesPage extends HookWidget {
   Widget build(BuildContext context) {
     final store = useProvider(settingStoreProvider);
     final state = useProvider(settingStoreProvider.state);
-    final settingEntity = state.entity;
-    if (settingEntity == null) {
+    final setting = state.setting;
+    if (setting == null) {
       return Indicator();
     }
     return Scaffold(
@@ -38,7 +38,7 @@ class ReminderTimesPage extends HookWidget {
         child: Container(
           child: ListView(
             children: [
-              ..._components(context, store, settingEntity).map((e) {
+              ..._components(context, store, setting).map((e) {
                 return [e, _separator()];
               }).expand((element) => element),
               _footer(context),
@@ -120,17 +120,17 @@ class ReminderTimesPage extends HookWidget {
 
   Widget _footer(BuildContext context) {
     final state = useProvider(settingStoreProvider.state);
-    final settingEntity = state.entity;
-    if (settingEntity == null) {
+    final setting = state.setting;
+    if (setting == null) {
       return Container();
     }
-    if (settingEntity.reminderTimes.length >= ReminderTime.maximumCount) {
+    if (setting.reminderTimes.length >= ReminderTime.maximumCount) {
       return Container();
     }
     final store = useProvider(settingStoreProvider);
     return GestureDetector(
       onTap: () {
-        _showPicker(context, store, settingEntity, null);
+        _showPicker(context, store, setting, null);
       },
       child: Container(
         height: 64,

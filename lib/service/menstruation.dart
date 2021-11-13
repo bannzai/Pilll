@@ -47,7 +47,7 @@ class MenstruationService {
         .then((event) => menstruation);
   }
 
-  Stream<List<Menstruation>> subscribeAll() {
+  Stream<List<Menstruation>> streamAll() {
     return _database
         .menstruationsReference()
         .where(MenstruationFirestoreKey.deletedAt, isEqualTo: null)

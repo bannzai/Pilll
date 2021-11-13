@@ -135,15 +135,15 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
   void _subscribe() {
     _pillSheetGroupCanceller?.cancel();
     _pillSheetGroupCanceller =
-        _pillSheetGroupService.subscribeForLatest().listen((event) {
+        _pillSheetGroupService.streamForLatest().listen((event) {
       state = state.copyWith(pillSheetGroup: event);
     });
     _settingCanceller?.cancel();
-    _settingCanceller = _settingService.subscribe().listen((setting) {
+    _settingCanceller = _settingService.stream().listen((setting) {
       state = state.copyWith(setting: setting);
     });
     _userSubscribeCanceller?.cancel();
-    _userSubscribeCanceller = _userService.subscribe().listen((event) {
+    _userSubscribeCanceller = _userService.stream().listen((event) {
       state = state.copyWith(
         isPremium: event.isPremium,
         isTrial: event.isTrial,
@@ -153,7 +153,7 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
       );
     });
     _authServiceCanceller?.cancel();
-    _authServiceCanceller = _authService.subscribe().listen((event) {
+    _authServiceCanceller = _authService.stream().listen((event) {
       state = state.copyWith(
           isLinkedLoginProvider:
               _authService.isLinkedApple() || _authService.isLinkedGoogle());

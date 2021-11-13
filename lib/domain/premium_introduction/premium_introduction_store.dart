@@ -56,7 +56,7 @@ class PremiumIntroductionStore extends StateNotifier<PremiumIntroductionState> {
   StreamSubscription? _authStreamCanceller;
   _subscribe() {
     _userStreamCanceller?.cancel();
-    _userStreamCanceller = _userService.subscribe().listen((event) {
+    _userStreamCanceller = _userService.stream().listen((event) {
       state = state.copyWith(
         isPremium: event.isPremium,
         isTrial: event.isTrial,
@@ -64,7 +64,7 @@ class PremiumIntroductionStore extends StateNotifier<PremiumIntroductionState> {
       );
     });
     _authStreamCanceller?.cancel();
-    _authStreamCanceller = _authService.subscribe().listen((_) {
+    _authStreamCanceller = _authService.stream().listen((_) {
       state = state.copyWith(
           hasLoginProvider:
               _authService.isLinkedApple() || _authService.isLinkedGoogle());

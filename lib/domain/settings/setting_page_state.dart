@@ -8,7 +8,7 @@ part 'setting_page_state.freezed.dart';
 abstract class SettingState implements _$SettingState {
   SettingState._();
   factory SettingState({
-    required Setting? entity,
+    required Setting? setting,
     PillSheetGroup? latestPillSheetGroup,
     @Default(false) bool userIsUpdatedFrom132,
     @Default(false) bool isPremium,

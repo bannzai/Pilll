@@ -90,7 +90,7 @@ class UserService {
     }
   }
 
-  Stream<User> subscribe() {
+  Stream<User> stream() {
     return _database
         .userReference()
         .snapshots(includeMetadataChanges: true)

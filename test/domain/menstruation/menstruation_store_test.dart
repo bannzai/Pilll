@@ -75,7 +75,7 @@ void main() {
             ),
           ]),
         );
-        when(menstruationService.subscribeAll()).thenAnswer(
+        when(menstruationService.streamAll()).thenAnswer(
           (realInvocation) => Stream.value([
             Menstruation(
               beginDate: DateTime(2021, 04, 28),
@@ -93,7 +93,7 @@ void main() {
         final diaryService = MockDiaryService();
         when(diaryService.fetchListAround90Days(today))
             .thenAnswer((realInvocation) => Future.value([]));
-        when(diaryService.subscribe())
+        when(diaryService.stream())
             .thenAnswer((realInvocation) => Stream.empty());
         final settingService = MockSettingService();
         when(settingService.fetch())
@@ -106,12 +106,12 @@ void main() {
                     isOnReminder: true,
                   ),
                 ));
-        when(settingService.subscribe())
+        when(settingService.stream())
             .thenAnswer((realInvocation) => Stream.empty());
         final userService = MockUserService();
         when(userService.fetch())
             .thenAnswer((reaInvocation) => Future.value(_FakeUser()));
-        when(userService.subscribe())
+        when(userService.stream())
             .thenAnswer((realInvocation) => Stream.empty());
         final pillSheetGroup =
             PillSheetGroup(pillSheetIDs: [], pillSheets: [], createdAt: now());
@@ -119,7 +119,7 @@ void main() {
         final pillSheetGroupService = MockPillSheetGroupService();
         when(pillSheetGroupService.fetchLatest())
             .thenAnswer((realInvocation) => Future.value(pillSheetGroup));
-        when(pillSheetGroupService.subscribeForLatest())
+        when(pillSheetGroupService.streamForLatest())
             .thenAnswer((realInvocation) => Stream.empty());
 
         final store = MenstruationStore(
@@ -165,7 +165,7 @@ void main() {
             ),
           ]),
         );
-        when(menstruationService.subscribeAll()).thenAnswer(
+        when(menstruationService.streamAll()).thenAnswer(
           (realInvocation) => Stream.value([
             Menstruation(
               beginDate: DateTime(2021, 03, 28),
@@ -178,7 +178,7 @@ void main() {
         final diaryService = MockDiaryService();
         when(diaryService.fetchListAround90Days(today))
             .thenAnswer((realInvocation) => Future.value([]));
-        when(diaryService.subscribe())
+        when(diaryService.stream())
             .thenAnswer((realInvocation) => Stream.empty());
         final settingService = MockSettingService();
         when(settingService.fetch())
@@ -189,12 +189,12 @@ void main() {
                   reminderTimes: [],
                   isOnReminder: true,
                 )));
-        when(settingService.subscribe())
+        when(settingService.stream())
             .thenAnswer((realInvocation) => Stream.empty());
         final userService = MockUserService();
         when(userService.fetch())
             .thenAnswer((reaInvocation) => Future.value(_FakeUser()));
-        when(userService.subscribe())
+        when(userService.stream())
             .thenAnswer((realInvocation) => Stream.empty());
 
         final pillSheetGroup =
@@ -203,7 +203,7 @@ void main() {
         final pillSheetGroupService = MockPillSheetGroupService();
         when(pillSheetGroupService.fetchLatest())
             .thenAnswer((realInvocation) => Future.value(pillSheetGroup));
-        when(pillSheetGroupService.subscribeForLatest())
+        when(pillSheetGroupService.streamForLatest())
             .thenAnswer((realInvocation) => Stream.empty());
 
         final store = MenstruationStore(
@@ -239,14 +239,14 @@ void main() {
         when(menstruationService.fetchAll()).thenAnswer(
           (realInvocation) => Future.value([]),
         );
-        when(menstruationService.subscribeAll()).thenAnswer(
+        when(menstruationService.streamAll()).thenAnswer(
           (realInvocation) => Stream.value([]),
         );
         final pillSheetService = MockPillSheetService();
         final diaryService = MockDiaryService();
         when(diaryService.fetchListAround90Days(today))
             .thenAnswer((realInvocation) => Future.value([]));
-        when(diaryService.subscribe())
+        when(diaryService.stream())
             .thenAnswer((realInvocation) => Stream.empty());
         final settingService = MockSettingService();
         when(settingService.fetch()).thenAnswer(
@@ -260,12 +260,12 @@ void main() {
             ),
           ),
         );
-        when(settingService.subscribe())
+        when(settingService.stream())
             .thenAnswer((realInvocation) => Stream.empty());
         final userService = MockUserService();
         when(userService.fetch())
             .thenAnswer((reaInvocation) => Future.value(_FakeUser()));
-        when(userService.subscribe())
+        when(userService.stream())
             .thenAnswer((realInvocation) => Stream.empty());
 
         final pillSheetGroup = PillSheetGroup(
@@ -282,7 +282,7 @@ void main() {
         final pillSheetGroupService = MockPillSheetGroupService();
         when(pillSheetGroupService.fetchLatest())
             .thenAnswer((realInvocation) => Future.value(pillSheetGroup));
-        when(pillSheetGroupService.subscribeForLatest())
+        when(pillSheetGroupService.streamForLatest())
             .thenAnswer((realInvocation) => Stream.empty());
 
         final store = MenstruationStore(
@@ -322,14 +322,14 @@ void main() {
         when(menstruationService.fetchAll()).thenAnswer(
           (realInvocation) => Future.value([]),
         );
-        when(menstruationService.subscribeAll()).thenAnswer(
+        when(menstruationService.streamAll()).thenAnswer(
           (realInvocation) => Stream.value([]),
         );
         final pillSheetService = MockPillSheetService();
         final diaryService = MockDiaryService();
         when(diaryService.fetchListAround90Days(today))
             .thenAnswer((realInvocation) => Future.value([]));
-        when(diaryService.subscribe())
+        when(diaryService.stream())
             .thenAnswer((realInvocation) => Stream.empty());
         final settingService = MockSettingService();
         when(settingService.fetch()).thenAnswer(
@@ -343,12 +343,12 @@ void main() {
             ),
           ),
         );
-        when(settingService.subscribe())
+        when(settingService.stream())
             .thenAnswer((realInvocation) => Stream.empty());
         final userService = MockUserService();
         when(userService.fetch())
             .thenAnswer((reaInvocation) => Future.value(_FakeUser()));
-        when(userService.subscribe())
+        when(userService.stream())
             .thenAnswer((realInvocation) => Stream.empty());
 
         final pillSheetGroup = PillSheetGroup(pillSheetIDs: [
@@ -362,7 +362,7 @@ void main() {
         final pillSheetGroupService = MockPillSheetGroupService();
         when(pillSheetGroupService.fetchLatest())
             .thenAnswer((realInvocation) => Future.value(pillSheetGroup));
-        when(pillSheetGroupService.subscribeForLatest())
+        when(pillSheetGroupService.streamForLatest())
             .thenAnswer((realInvocation) => Stream.empty());
 
         final store = MenstruationStore(

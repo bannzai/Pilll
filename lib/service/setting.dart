@@ -19,7 +19,7 @@ class SettingService {
             as Map<String, dynamic>)[UserFirestoreFieldKeys.settings]));
   }
 
-  Stream<Setting> subscribe() {
+  Stream<Setting> stream() {
     return _database
         .userReference()
         .snapshots()

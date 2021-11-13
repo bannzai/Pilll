@@ -51,7 +51,7 @@ void main() {
         (WidgetTester tester) async {
       SupportedDeviceType.iPhone5SE2nd.binding(tester.binding.window);
 
-      final service = MockSettingService();
+      final settingService = MockSettingService();
       final entity = Setting(
         pillNumberForFromMenstruation: 22,
         durationMenstruation: 2,
@@ -61,9 +61,9 @@ void main() {
           ReminderTime(hour: 10, minute: 0),
         ],
       );
-      when(service.fetch())
+      when(settingService.fetch())
           .thenAnswer((realInvocation) => Future.value(entity));
-      when(service.subscribe())
+      when(settingService.stream())
           .thenAnswer((realInvocation) => Stream.value(entity));
 
       final batchFactory = MockBatchFactory();
@@ -75,18 +75,17 @@ void main() {
       final userService = MockUserService();
       when(userService.fetch())
           .thenAnswer((realInvocation) => Future.value(_FakeUser()));
-      when(userService.subscribe())
-          .thenAnswer((realInvocation) => Stream.empty());
+      when(userService.stream()).thenAnswer((realInvocation) => Stream.empty());
       final pillSheetModifiedService = MockPillSheetModifiedHistoryService();
       final pillSheetGroupService = MockPillSheetGroupService();
       when(pillSheetGroupService.fetchLatest())
           .thenAnswer((realInvocation) => Future.value(pillSheetGroup));
-      when(pillSheetGroupService.subscribeForLatest())
+      when(pillSheetGroupService.streamForLatest())
           .thenAnswer((realInvocation) => Stream.empty());
 
       final store = SettingStateStore(
         batchFactory,
-        service,
+        settingService,
         pillSheetService,
         userService,
         pillSheetModifiedService,
@@ -115,7 +114,7 @@ void main() {
         (WidgetTester tester) async {
       SupportedDeviceType.iPhone5SE2nd.binding(tester.binding.window);
 
-      final service = MockSettingService();
+      final settingService = MockSettingService();
       final entity = Setting(
         pillNumberForFromMenstruation: 22,
         durationMenstruation: 2,
@@ -127,9 +126,9 @@ void main() {
           ReminderTime(hour: 12, minute: 0)
         ],
       );
-      when(service.fetch())
+      when(settingService.fetch())
           .thenAnswer((realInvocation) => Future.value(entity));
-      when(service.subscribe())
+      when(settingService.stream())
           .thenAnswer((realInvocation) => Stream.value(entity));
 
       final batchFactory = MockBatchFactory();
@@ -141,18 +140,17 @@ void main() {
       final userService = MockUserService();
       when(userService.fetch())
           .thenAnswer((realInvocation) => Future.value(_FakeUser()));
-      when(userService.subscribe())
-          .thenAnswer((realInvocation) => Stream.empty());
+      when(userService.stream()).thenAnswer((realInvocation) => Stream.empty());
       final pillSheetModifiedService = MockPillSheetModifiedHistoryService();
       final pillSheetGroupService = MockPillSheetGroupService();
       when(pillSheetGroupService.fetchLatest())
           .thenAnswer((realInvocation) => Future.value(pillSheetGroup));
-      when(pillSheetGroupService.subscribeForLatest())
+      when(pillSheetGroupService.streamForLatest())
           .thenAnswer((realInvocation) => Stream.empty());
 
       final store = SettingStateStore(
         batchFactory,
-        service,
+        settingService,
         pillSheetService,
         userService,
         pillSheetModifiedService,
