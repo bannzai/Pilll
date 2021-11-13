@@ -34,7 +34,6 @@ class DeleteUserButton extends StatelessWidget {
                 text: "退会する",
                 onPressed: () async {
                   await _delete(context);
-                  Navigator.of(context).pop();
                 },
               ),
             ],
