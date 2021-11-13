@@ -6,15 +6,15 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/util/datetime/date_compare.dart';
 
 class ConfirmDiary extends StateNotifier<DiaryState> {
-  final DiaryService _service;
-  ConfirmDiary(this._service, DiaryState state) : super(state) {
+  final DiaryService _diaryService;
+  ConfirmDiary(this._diaryService, DiaryState state) : super(state) {
     _subscribe();
   }
 
   StreamSubscription? canceller;
   void _subscribe() {
     canceller?.cancel();
-    canceller = _service.stream().listen((entities) {
+    canceller = _diaryService.stream().listen((entities) {
       entities
           .where((element) => isSameDay(element.date, state.entity.date))
           .forEach((element) {
@@ -30,6 +30,6 @@ class ConfirmDiary extends StateNotifier<DiaryState> {
   }
 
   Future<void> delete() {
-    return _service.delete(state.entity);
+    return _diaryService.delete(state.entity);
   }
 }

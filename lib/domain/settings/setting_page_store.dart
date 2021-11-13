@@ -28,14 +28,14 @@ final settingStateProvider =
 
 class SettingStateStore extends StateNotifier<SettingState> {
   final BatchFactory _batchFactory;
-  final SettingService _service;
+  final SettingService _settingService;
   final PillSheetService _pillSheetService;
   final UserService _userService;
   final PillSheetModifiedHistoryService _pillSheetModifiedHistoryService;
   final PillSheetGroupService _pillSheetGroupService;
   SettingStateStore(
     this._batchFactory,
-    this._service,
+    this._settingService,
     this._pillSheetService,
     this._userService,
     this._pillSheetModifiedHistoryService,
@@ -50,7 +50,7 @@ class SettingStateStore extends StateNotifier<SettingState> {
       final userIsMigratedFrom132 =
           storage.containsKey(StringKey.salvagedOldStartTakenDate) &&
               storage.containsKey(StringKey.salvagedOldLastTakenDate);
-      final entity = await _service.fetch();
+      final entity = await _settingService.fetch();
       final pillSheetGroup = await _pillSheetGroupService.fetchLatest();
       final user = await _userService.fetch();
       this.state = SettingState(
@@ -70,7 +70,7 @@ class SettingStateStore extends StateNotifier<SettingState> {
   StreamSubscription? _userSubscribeCanceller;
   void _subscribe() {
     _canceller?.cancel();
-    _canceller = _service.stream().listen((event) {
+    _canceller = _settingService.stream().listen((event) {
       state = state.copyWith(entity: event);
     });
     _pillSheetGroupCanceller?.cancel();
@@ -107,7 +107,7 @@ class SettingStateStore extends StateNotifier<SettingState> {
     if (reminderTimes.length < ReminderTime.minimumCount) {
       throw Exception("通知時刻は最低${ReminderTime.minimumCount}件必要です");
     }
-    _service
+    _settingService
         .update(entity.copyWith(reminderTimes: reminderTimes))
         .then((entity) => state = state.copyWith(entity: entity));
   }
@@ -147,7 +147,7 @@ class SettingStateStore extends StateNotifier<SettingState> {
     if (entity == null) {
       throw FormatException("setting entity not found");
     }
-    return _service
+    return _settingService
         .update(entity.copyWith(isOnReminder: isOnReminder))
         .then((entity) => state = state.copyWith(entity: entity));
   }
@@ -157,7 +157,7 @@ class SettingStateStore extends StateNotifier<SettingState> {
     if (entity == null) {
       throw FormatException("setting entity not found");
     }
-    return _service
+    return _settingService
         .update(entity.copyWith(isOnNotifyInNotTakenDuration: isOn))
         .then((entity) => state = state.copyWith(entity: entity));
   }
@@ -195,7 +195,7 @@ class SettingStateStore extends StateNotifier<SettingState> {
     if (entity == null) {
       throw FormatException("setting entity not found");
     }
-    return _service
+    return _settingService
         .update(entity.copyWith(isAutomaticallyCreatePillSheet: isOn))
         .then((entity) => state = state.copyWith(entity: entity));
   }

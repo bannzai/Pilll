@@ -4,8 +4,8 @@ import 'package:pilll/state/diary.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 class PostDiaryStore extends StateNotifier<DiaryState> {
-  final DiaryService _service;
-  PostDiaryStore(this._service, DiaryState state) : super(state);
+  final DiaryService _diaryService;
+  PostDiaryStore(this._diaryService, DiaryState state) : super(state);
 
   void removePhysicalCondition(String physicalCondition) {
     state = state.copyWith(
@@ -41,10 +41,10 @@ class PostDiaryStore extends StateNotifier<DiaryState> {
   }
 
   Future<Diary> register() {
-    return _service.register(state.entity);
+    return _diaryService.register(state.entity);
   }
 
   Future<void> delete() {
-    return _service.delete(state.entity);
+    return _diaryService.delete(state.entity);
   }
 }
