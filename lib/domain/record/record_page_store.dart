@@ -68,6 +68,7 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
           isTrial: user.isTrial,
           hasDiscountEntitlement: user.hasDiscountEntitlement,
           discountEntitlementDeadlineDate: user.discountEntitlementDeadlineDate,
+          trialDeadlineDate: user.trialDeadlineDate,
         );
       }),
       Future(() async {
