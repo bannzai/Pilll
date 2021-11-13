@@ -2,6 +2,7 @@ import 'dart:async';
 import 'dart:io';
 
 import 'package:flutter/cupertino.dart';
+import 'package:flutter/services.dart';
 import 'package:pilll/analytics.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
@@ -67,14 +68,13 @@ class App extends StatelessWidget {
       ],
       theme: ThemeData(
         appBarTheme: AppBarTheme(
-          brightness: Brightness.light,
+          systemOverlayStyle: SystemUiOverlayStyle.light,
           centerTitle: true,
           color: PilllColors.white,
           elevation: 3,
         ),
         primaryColor: PilllColors.primary,
         visualDensity: VisualDensity.adaptivePlatformDensity,
-        accentColor: PilllColors.accent,
         toggleableActiveColor: PilllColors.primary,
         cupertinoOverrideTheme: NoDefaultCupertinoThemeData(
             textTheme: CupertinoTextThemeData(textStyle: FontType.xBigTitle)),
@@ -84,6 +84,7 @@ class App extends StatelessWidget {
           textTheme: ButtonTextTheme.primary,
           colorScheme: ColorScheme.light(
             primary: PilllColors.primary,
+            secondary: PilllColors.accent,
           ),
         ),
       ),
