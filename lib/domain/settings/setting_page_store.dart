@@ -50,11 +50,11 @@ class SettingStateStore extends StateNotifier<SettingState> {
       final userIsMigratedFrom132 =
           storage.containsKey(StringKey.salvagedOldStartTakenDate) &&
               storage.containsKey(StringKey.salvagedOldLastTakenDate);
-      final entity = await _settingService.fetch();
+      final setting = await _settingService.fetch();
       final pillSheetGroup = await _pillSheetGroupService.fetchLatest();
       final user = await _userService.fetch();
       this.state = SettingState(
-        setting: entity,
+        setting: setting,
         userIsUpdatedFrom132: userIsMigratedFrom132,
         latestPillSheetGroup: pillSheetGroup,
         isPremium: user.isPremium,
@@ -71,7 +71,7 @@ class SettingStateStore extends StateNotifier<SettingState> {
   void _subscribe() {
     _settingCanceller?.cancel();
     _settingCanceller = _settingService.stream().listen((event) {
-      state = state.copyWith(entity: event);
+      state = state.copyWith(setting: event);
     });
     _pillSheetGroupCanceller?.cancel();
     _pillSheetGroupCanceller =
@@ -97,8 +97,8 @@ class SettingStateStore extends StateNotifier<SettingState> {
   }
 
   void _modifyReminderTimes(List<ReminderTime> reminderTimes) {
-    final entity = state.setting;
-    if (entity == null) {
+    final setting = state.setting;
+    if (setting == null) {
       throw FormatException("setting entity not found");
     }
     if (reminderTimes.length > ReminderTime.maximumCount) {
@@ -108,62 +108,62 @@ class SettingStateStore extends StateNotifier<SettingState> {
       throw Exception("通知時刻は最低${ReminderTime.minimumCount}件必要です");
     }
     _settingService
-        .update(entity.copyWith(reminderTimes: reminderTimes))
-        .then((entity) => state = state.copyWith(entity: entity));
+        .update(setting.copyWith(reminderTimes: reminderTimes))
+        .then((entity) => state = state.copyWith(setting: entity));
   }
 
   void addReminderTimes(ReminderTime reminderTime) {
-    final entity = state.setting;
-    if (entity == null) {
+    final setting = state.setting;
+    if (setting == null) {
       throw FormatException("setting entity not found");
     }
-    List<ReminderTime> copied = [...entity.reminderTimes];
+    List<ReminderTime> copied = [...setting.reminderTimes];
     copied.add(reminderTime);
     _modifyReminderTimes(copied);
   }
 
   void editReminderTime(int index, ReminderTime reminderTime) {
-    final entity = state.setting;
-    if (entity == null) {
+    final setting = state.setting;
+    if (setting == null) {
       throw FormatException("setting entity not found");
     }
-    List<ReminderTime> copied = [...entity.reminderTimes];
+    List<ReminderTime> copied = [...setting.reminderTimes];
     copied[index] = reminderTime;
     _modifyReminderTimes(copied);
   }
 
   void deleteReminderTimes(int index) {
-    final entity = state.setting;
-    if (entity == null) {
+    final setting = state.setting;
+    if (setting == null) {
       throw FormatException("setting entity not found");
     }
-    List<ReminderTime> copied = [...entity.reminderTimes];
+    List<ReminderTime> copied = [...setting.reminderTimes];
     copied.removeAt(index);
     _modifyReminderTimes(copied);
   }
 
   Future<SettingState> modifyIsOnReminder(bool isOnReminder) {
-    final entity = state.setting;
-    if (entity == null) {
+    final setting = state.setting;
+    if (setting == null) {
       throw FormatException("setting entity not found");
     }
     return _settingService
-        .update(entity.copyWith(isOnReminder: isOnReminder))
-        .then((entity) => state = state.copyWith(entity: entity));
+        .update(setting.copyWith(isOnReminder: isOnReminder))
+        .then((setting) => state = state.copyWith(setting: setting));
   }
 
   Future<SettingState> modifyIsOnNotifyInNotTakenDuration(bool isOn) {
-    final entity = state.setting;
-    if (entity == null) {
+    final setting = state.setting;
+    if (setting == null) {
       throw FormatException("setting entity not found");
     }
     return _settingService
-        .update(entity.copyWith(isOnNotifyInNotTakenDuration: isOn))
-        .then((entity) => state = state.copyWith(entity: entity));
+        .update(setting.copyWith(isOnNotifyInNotTakenDuration: isOn))
+        .then((setting) => state = state.copyWith(setting: setting));
   }
 
-  void update(Setting? entity) {
-    state = state.copyWith(entity: entity);
+  void update(Setting? setting) {
+    state = state.copyWith(setting: setting);
   }
 
   Future<void> deletePillSheet() {
@@ -191,12 +191,12 @@ class SettingStateStore extends StateNotifier<SettingState> {
   }
 
   Future<SettingState> modifiyIsAutomaticallyCreatePillSheet(bool isOn) {
-    final entity = state.setting;
-    if (entity == null) {
+    final setting = state.setting;
+    if (setting == null) {
       throw FormatException("setting entity not found");
     }
     return _settingService
-        .update(entity.copyWith(isAutomaticallyCreatePillSheet: isOn))
-        .then((entity) => state = state.copyWith(entity: entity));
+        .update(setting.copyWith(isAutomaticallyCreatePillSheet: isOn))
+        .then((setting) => state = state.copyWith(setting: setting));
   }
 }
