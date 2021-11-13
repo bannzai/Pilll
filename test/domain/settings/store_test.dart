@@ -91,7 +91,7 @@ void main() {
       );
 
       // ignore: invalid_use_of_protected_member
-      store.state = SettingState(entity: setting);
+      store.state = SettingState(setting: setting);
 
       when(settingService.update(setting.copyWith(reminderTimes: [
         ReminderTime(hour: 1, minute: 0),
@@ -148,7 +148,7 @@ void main() {
       );
 
       // ignore: invalid_use_of_protected_member
-      store.state = SettingState(entity: setting);
+      store.state = SettingState(setting: setting);
 
       expect(() => store.addReminderTimes(ReminderTime(hour: 4, minute: 0)),
           throwsException);
@@ -199,7 +199,7 @@ void main() {
       );
 
       // ignore: invalid_use_of_protected_member
-      store.state = SettingState(entity: setting);
+      store.state = SettingState(setting: setting);
 
       when(settingService.update(setting.copyWith(reminderTimes: [
         ReminderTime(hour: 1, minute: 0),
@@ -250,7 +250,7 @@ void main() {
       );
 
       // ignore: invalid_use_of_protected_member
-      store.state = SettingState(entity: setting);
+      store.state = SettingState(setting: setting);
       expect(() => store.deleteReminderTimes(0), throwsException);
     });
   });
