@@ -36,9 +36,8 @@ class RecordPage extends HookWidget {
       if (state.shouldShowMigrateInfo) {
         _showMigrateInfoDialog(context, store);
       } else if (state.shouldShowPremiumFunctionSurvey) {
-        await Navigator.of(context)
-            .push(PremiumFunctionSurveyPageRoutes.route());
         await store.setTrueIsAlreadyShowPremiumFunctionSurvey();
+        Navigator.of(context).push(PremiumFunctionSurveyPageRoutes.route());
       } else if (state.shouldShowTrial) {
         showPremiumTrialModalWhenLaunchApp(context, () {
           showPremiumTrialCompleteModalPreDialog(context);
