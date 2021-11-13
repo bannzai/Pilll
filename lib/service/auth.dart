@@ -18,7 +18,7 @@ final authStateStreamProvider = StreamProvider(
 );
 
 class AuthService {
-  Stream<User> subscribe() {
+  Stream<User?> subscribe() {
     return _subscribe();
   }
 
@@ -37,13 +37,13 @@ class AuthInfo {
   AuthInfo(this.uid);
 }
 
-Stream<User> _subscribe() {
+Stream<User?> _subscribe() {
   return StreamGroup.merge(
     [
       _cacheOrAuth().asStream(),
       FirebaseAuth.instance.userChanges(),
     ],
-  ).where((element) => element == null).cast();
+  );
 }
 
 Future<User?> callSignin() async {

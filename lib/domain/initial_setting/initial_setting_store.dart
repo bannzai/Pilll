@@ -58,8 +58,13 @@ class InitialSettingStateStore extends StateNotifier<InitialSettingState> {
   _subscribe() {
     _authCanceller?.cancel();
     _authCanceller = _authService.subscribe().listen((user) async {
+      print("watch sign state user: $user");
+      if (user == null) {
+        return;
+      }
       print(
           "watch sign state uid: ${user.uid}, isAnonymous: ${user.isAnonymous}");
+
       final isAccountCooperationDidEnd = !user.isAnonymous;
       if (isAccountCooperationDidEnd) {
         final userService = UserService(DatabaseConnection(user.uid));

@@ -39,7 +39,7 @@ class SettingAccountCooperationListPageStore
     _authCanceller?.cancel();
     _authCanceller = _authService.subscribe().listen((user) {
       print(
-          "watch sign state uid: ${user.uid}, isAnonymous: ${user.isAnonymous}");
+          "watch sign state uid: ${user?.uid}, isAnonymous: ${user?.isAnonymous}");
       state = state.copyWith(user: user);
     });
   }
