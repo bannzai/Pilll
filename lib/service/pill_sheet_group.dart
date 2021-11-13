@@ -38,7 +38,7 @@ class PillSheetGroupService {
     return _fetchLatestQuery()
         .snapshots()
         .map(((event) => _map(event)))
-        .skipWhile((element) => element == null)
+        .where((element) => element == null)
         .cast();
   }
 
