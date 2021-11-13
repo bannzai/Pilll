@@ -13,7 +13,7 @@ final menstruationEditProvider = StateNotifierProvider.family
     .autoDispose<MenstruationEditStore, Menstruation?>(
   (ref, menstruation) => MenstruationEditStore(
     menstruation: menstruation,
-    service: ref.watch(menstruationServiceProvider),
+    menstruationService: ref.watch(menstruationServiceProvider),
     settingService: ref.watch(settingServiceProvider),
   ),
 );
@@ -39,13 +39,13 @@ List<DateTime> displaedDates(Menstruation? menstruation) {
 
 class MenstruationEditStore extends StateNotifier<MenstruationEditState> {
   late Menstruation? initialMenstruation;
-  final MenstruationService service;
+  final MenstruationService menstruationService;
   final SettingService settingService;
   List<Menstruation> _allMenstruation = [];
   bool get isExistsDB => initialMenstruation != null;
   MenstruationEditStore({
     Menstruation? menstruation,
-    required this.service,
+    required this.menstruationService,
     required this.settingService,
   }) : super(MenstruationEditState(
             menstruation: menstruation,
@@ -56,7 +56,7 @@ class MenstruationEditStore extends StateNotifier<MenstruationEditState> {
 
   void _reset() {
     Future(() async {
-      _allMenstruation = await service.fetchAll();
+      _allMenstruation = await menstruationService.fetchAll();
       _allMenstruation = _allMenstruation
           .where((element) => element.id != initialMenstruation?.id)
           .toList();
@@ -84,7 +84,7 @@ class MenstruationEditStore extends StateNotifier<MenstruationEditState> {
       throw FormatException(
           "missing condition about state.menstruation is exists when delete. state.menstruation should flushed on edit page");
     }
-    return service.update(
+    return menstruationService.update(
         documentID, initialMenstruation.copyWith(deletedAt: now()));
   }
 
@@ -95,9 +95,9 @@ class MenstruationEditStore extends StateNotifier<MenstruationEditState> {
     }
     final documentID = initialMenstruation?.documentID;
     if (documentID == null) {
-      return service.create(menstruation);
+      return menstruationService.create(menstruation);
     } else {
-      return service.update(documentID, menstruation);
+      return menstruationService.update(documentID, menstruation);
     }
   }
 
