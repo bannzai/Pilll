@@ -23,9 +23,9 @@ final _postDiaryStoreProvider = StateNotifierProvider.autoDispose
   final diary = family.diary;
   if (diary == null) {
     return PostDiaryStore(
-        service, DiaryState(entity: Diary.fromDate(family.date)));
+        service, DiaryState(diary: Diary.fromDate(family.date)));
   }
-  return PostDiaryStore(service, DiaryState(entity: diary.copyWith()));
+  return PostDiaryStore(service, DiaryState(diary: diary.copyWith()));
 });
 
 abstract class PostDiaryPageConst {

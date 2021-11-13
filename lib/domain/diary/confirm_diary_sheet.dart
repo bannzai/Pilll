@@ -17,7 +17,7 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 final _confirmDiaryProvider =
     StateNotifierProvider.autoDispose.family<ConfirmDiary, Diary>((ref, diary) {
   final service = ref.watch(diaryServiceProvider);
-  return ConfirmDiary(service, DiaryState(entity: diary.copyWith()));
+  return ConfirmDiary(service, DiaryState(diary: diary.copyWith()));
 });
 
 class ConfirmDiarySheet extends HookWidget {
@@ -44,7 +44,7 @@ class ConfirmDiarySheet extends HookWidget {
             ...[
               if (state.hasPhysicalConditionStatus()) _physicalCondition(),
               _physicalConditionDetails(),
-              if (state.entity.hasSex) _sex(),
+              if (state.diary.hasSex) _sex(),
               _memo(),
             ].map((e) => _withContentSpacer(e)),
           ]),
@@ -64,14 +64,14 @@ class ConfirmDiarySheet extends HookWidget {
     return Row(
       mainAxisSize: MainAxisSize.max,
       children: [
-        Text(DateTimeFormatter.yearAndMonthAndDay(state.entity.date),
+        Text(DateTimeFormatter.yearAndMonthAndDay(state.diary.date),
             style: FontType.sBigTitle.merge(TextColorStyle.main)),
         Spacer(),
         IconButton(
           icon: SvgPicture.asset("images/edit.svg"),
           onPressed: () {
             Navigator.of(context).push(
-                PostDiaryPageRoute.route(state.entity.date, state.entity));
+                PostDiaryPageRoute.route(state.diary.date, state.diary));
           },
         ),
         SizedBox(width: 12),
@@ -129,7 +129,7 @@ class ConfirmDiarySheet extends HookWidget {
       children: [
         Text("体調", style: FontType.componentTitle.merge(TextColorStyle.black)),
         SizedBox(width: 16),
-        _physicalConditionImage(state.entity.physicalConditionStatus),
+        _physicalConditionImage(state.diary.physicalConditionStatus),
       ],
     );
   }
@@ -141,7 +141,7 @@ class ConfirmDiarySheet extends HookWidget {
       children: [
         Wrap(
           spacing: 10,
-          children: state.entity.physicalConditions
+          children: state.diary.physicalConditions
               .map((e) => ChoiceChip(
                     label: Text(e),
                     labelStyle: FontType.assisting.merge(TextColorStyle.white),
@@ -169,7 +169,7 @@ class ConfirmDiarySheet extends HookWidget {
   Widget _memo() {
     final state = useProvider(_confirmDiaryProvider(_diary).state);
     return Text(
-      state.entity.memo,
+      state.diary.memo,
       maxLines: 2,
     );
   }
