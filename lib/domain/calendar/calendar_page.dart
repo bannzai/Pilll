@@ -23,6 +23,10 @@ class CalendarPage extends HookWidget {
 
     final pageController =
         usePageController(initialPage: state.currentCalendarIndex);
+    pageController.addListener(() {
+      final index = (pageController.page ?? pageController.initialPage).round();
+      store.updateCurrentCalendarIndex(index);
+    });
 
     if (state.shouldShowIndicator) {
       return ScaffoldIndicator();
