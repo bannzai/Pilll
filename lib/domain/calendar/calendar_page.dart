@@ -13,74 +13,68 @@ import 'package:pilll/domain/calendar/calendar_store.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:scrollable_positioned_list/scrollable_positioned_list.dart';
 
 class CalendarPage extends HookWidget {
   @override
   Widget build(BuildContext context) {
-    return Consumer(builder: (context, watch, child) {
-      final store = watch(calendarPageStateProvider);
-      final state = watch(calendarPageStateProvider.state);
-      homeKey.currentState?.diaries = state.diariesForMonth;
-      if (state.shouldShowIndicator) {
-        return ScaffoldIndicator();
-      }
-      final ItemScrollController itemScrollController = ItemScrollController();
-      final ItemPositionsListener itemPositionsListener =
-          ItemPositionsListener.create();
-      itemPositionsListener.itemPositions.addListener(() {
-        final index = itemPositionsListener.itemPositions.value.last.index;
-        store.updateCurrentCalendarIndex(index);
-      });
-      return Scaffold(
-        backgroundColor: PilllColors.background,
-        appBar: AppBar(
-          title: CalendarModifyMonth(
-              state: state,
-              itemScrollController: itemScrollController,
-              store: store),
-          centerTitle: true,
-          elevation: 0,
-          backgroundColor: PilllColors.white,
+    final store = useProvider(calendarPageStateProvider);
+    final state = useProvider(calendarPageStateProvider.state);
+    homeKey.currentState?.diaries = state.diariesForMonth;
+
+    final pageController =
+        usePageController(initialPage: state.currentCalendarIndex);
+
+    if (state.shouldShowIndicator) {
+      return ScaffoldIndicator();
+    }
+
+    return Scaffold(
+      backgroundColor: PilllColors.background,
+      appBar: AppBar(
+        title: CalendarModifyMonth(
+          state: state,
+          pageController: pageController,
+          store: store,
         ),
-        extendBodyBehindAppBar: true,
-        body: SafeArea(
-          child: ListView(
-            children: <Widget>[
-              SizedBox(
-                width: MediaQuery.of(context).size.width,
-                height: 444,
-                child: ScrollablePositionedList.builder(
-                  itemScrollController: itemScrollController,
-                  initialScrollIndex: state.currentCalendarIndex,
-                  scrollDirection: Axis.horizontal,
-                  physics: PageScrollPhysics(),
-                  itemCount: state.calendarDataSource.length,
-                  itemPositionsListener: itemPositionsListener,
-                  itemBuilder: (context, index) {
-                    return CalendarContainer(store: store, state: state);
-                  },
+        centerTitle: true,
+        elevation: 0,
+        backgroundColor: PilllColors.white,
+      ),
+      extendBodyBehindAppBar: true,
+      body: SafeArea(
+        child: ListView(
+          children: <Widget>[
+            SizedBox(
+              width: MediaQuery.of(context).size.width,
+              height: 444,
+              child: PageView(
+                controller: pageController,
+                scrollDirection: Axis.horizontal,
+                physics: PageScrollPhysics(),
+                children:
+                    List.generate(state.calendarDataSource.length, (index) {
+                  return CalendarContainer(store: store, state: state);
+                }),
+              ),
+            ),
+            SizedBox(height: 30),
+            Padding(
+              padding: const EdgeInsets.only(left: 16, right: 16),
+              child: CalendarPillSheetModifiedHistoryCard(
+                store: store,
+                state: CalendarPillSheetModifiedHistoryCardState(
+                  state.allPillSheetModifiedHistories,
+                  isPremium: state.isPremium,
+                  isTrial: state.isTrial,
+                  trialDeadlineDate: state.trialDeadlineDate,
                 ),
               ),
-              SizedBox(height: 30),
-              Padding(
-                padding: const EdgeInsets.only(left: 16, right: 16),
-                child: CalendarPillSheetModifiedHistoryCard(
-                  store: store,
-                  state: CalendarPillSheetModifiedHistoryCardState(
-                    state.allPillSheetModifiedHistories,
-                    isPremium: state.isPremium,
-                    isTrial: state.isTrial,
-                    trialDeadlineDate: state.trialDeadlineDate,
-                  ),
-                ),
-              ),
-              SizedBox(height: 120),
-            ],
-          ),
+            ),
+            SizedBox(height: 120),
+          ],
         ),
-      );
-    });
+      ),
+    );
   }
 }
 
@@ -112,12 +106,12 @@ class CalendarModifyMonth extends StatelessWidget {
   const CalendarModifyMonth({
     Key? key,
     required this.state,
-    required this.itemScrollController,
+    required this.pageController,
     required this.store,
   }) : super(key: key);
 
   final CalendarPageState state;
-  final ItemScrollController itemScrollController;
+  final PageController pageController;
   final CalendarPageStateStore store;
 
   @override
@@ -129,9 +123,7 @@ class CalendarModifyMonth extends StatelessWidget {
           icon: SvgPicture.asset("images/arrow_left.svg"),
           onPressed: () {
             final previousMonthIndex = state.currentCalendarIndex - 1;
-            itemScrollController.scrollTo(
-                index: previousMonthIndex,
-                duration: Duration(milliseconds: 300));
+            pageController.jumpToPage(previousMonthIndex);
             store.updateCurrentCalendarIndex(previousMonthIndex);
             analytics.logEvent(name: "pressed_previous_month", parameters: {
               "current_index": state.currentCalendarIndex,
@@ -147,8 +139,7 @@ class CalendarModifyMonth extends StatelessWidget {
           icon: SvgPicture.asset("images/arrow_right.svg"),
           onPressed: () {
             final nextMonthIndex = state.currentCalendarIndex + 1;
-            itemScrollController.scrollTo(
-                index: nextMonthIndex, duration: Duration(milliseconds: 300));
+            pageController.jumpToPage(nextMonthIndex);
             store.updateCurrentCalendarIndex(nextMonthIndex);
             analytics.logEvent(name: "pressed_next_month", parameters: {
               "current_index": state.currentCalendarIndex,
