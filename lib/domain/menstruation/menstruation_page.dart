@@ -7,6 +7,7 @@ import 'package:pilll/analytics.dart';
 import 'package:pilll/components/atoms/buttons.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/text_color.dart';
+import 'package:pilll/components/molecules/indicator.dart';
 import 'package:pilll/components/molecules/shadow_container.dart';
 import 'package:pilll/components/organisms/calendar/monthly/monthly_calendar_layout.dart';
 import 'package:pilll/components/organisms/calendar/band/calendar_band_model.dart';
@@ -37,9 +38,13 @@ abstract class MenstruationPageConst {
 
 class MenstruationPage extends HookWidget {
   @override
-  Scaffold build(BuildContext context) {
+  Widget build(BuildContext context) {
     final store = useProvider(menstruationsStoreProvider);
     final state = useProvider(menstruationsStoreProvider.state);
+
+    if (state.isNotYetLoaded) {
+      return ScaffoldIndicator();
+    }
 
     final pageController =
         usePageController(initialPage: state.currentCalendarIndex);
@@ -220,6 +225,7 @@ class MenstruationCalendarHeader extends StatelessWidget {
             LimitedBox(
               maxHeight: MenstruationPageConst.tileHeight,
               child: PageView.builder(
+                controller: pageController,
                 physics: PageScrollPhysics(),
                 scrollDirection: Axis.horizontal,
                 itemBuilder: (context, index) {
