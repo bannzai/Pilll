@@ -7,6 +7,7 @@ import 'package:pilll/analytics.dart';
 import 'package:pilll/components/atoms/buttons.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/text_color.dart';
+import 'package:pilll/components/molecules/indicator.dart';
 import 'package:pilll/components/molecules/shadow_container.dart';
 import 'package:pilll/components/organisms/calendar/monthly/monthly_calendar_layout.dart';
 import 'package:pilll/components/organisms/calendar/band/calendar_band_model.dart';
@@ -24,7 +25,6 @@ import 'package:pilll/entity/weekday.dart';
 import 'package:pilll/domain/menstruation/menstruation_store.dart';
 import 'package:pilll/util/datetime/day.dart';
 import 'package:pilll/util/formatter/date_time_formatter.dart';
-import 'package:scrollable_positioned_list/scrollable_positioned_list.dart';
 
 const double _horizontalPadding = 10;
 
@@ -38,16 +38,20 @@ abstract class MenstruationPageConst {
 
 class MenstruationPage extends HookWidget {
   @override
-  Scaffold build(BuildContext context) {
+  Widget build(BuildContext context) {
     final store = useProvider(menstruationsStoreProvider);
     final state = useProvider(menstruationsStoreProvider.state);
-    final ItemPositionsListener itemPositionsListener =
-        ItemPositionsListener.create();
-    itemPositionsListener.itemPositions.addListener(() {
-      final index = itemPositionsListener.itemPositions.value.last.index;
+
+    if (state.isNotYetLoaded) {
+      return ScaffoldIndicator();
+    }
+
+    final pageController =
+        usePageController(initialPage: state.currentCalendarIndex);
+    pageController.addListener(() {
+      final index = (pageController.page ?? pageController.initialPage).round();
       store.updateCurrentCalendarIndex(index);
     });
-    final ItemScrollController itemScrollController = ItemScrollController();
 
     return Scaffold(
       backgroundColor: PilllColors.background,
@@ -68,9 +72,9 @@ class MenstruationPage extends HookWidget {
               Column(
                 children: [
                   MenstruationCalendarHeader(
-                      itemScrollController: itemScrollController,
-                      state: state,
-                      itemPositionsListener: itemPositionsListener),
+                    pageController: pageController,
+                    state: state,
+                  ),
                   Expanded(
                     child: MenstruationCardList(store: store),
                   ),
@@ -198,14 +202,12 @@ class MenstruationCardList extends StatelessWidget {
 class MenstruationCalendarHeader extends StatelessWidget {
   const MenstruationCalendarHeader({
     Key? key,
-    required this.itemScrollController,
     required this.state,
-    required this.itemPositionsListener,
+    required this.pageController,
   }) : super(key: key);
 
-  final ItemScrollController itemScrollController;
   final MenstruationState state;
-  final ItemPositionsListener itemPositionsListener;
+  final PageController pageController;
 
   @override
   Widget build(BuildContext context) {
@@ -222,12 +224,10 @@ class MenstruationCalendarHeader extends StatelessWidget {
             _WeekdayLine(),
             LimitedBox(
               maxHeight: MenstruationPageConst.tileHeight,
-              child: ScrollablePositionedList.builder(
-                itemScrollController: itemScrollController,
-                initialScrollIndex: state.currentCalendarIndex,
+              child: PageView.builder(
+                controller: pageController,
                 physics: PageScrollPhysics(),
                 scrollDirection: Axis.horizontal,
-                itemPositionsListener: itemPositionsListener,
                 itemBuilder: (context, index) {
                   final days = state.calendarDataSource[index];
                   return Container(
@@ -257,7 +257,6 @@ class MenstruationCalendarHeader extends StatelessWidget {
                     ),
                   );
                 },
-                itemCount: state.calendarDataSource.length,
               ),
             ),
           ],

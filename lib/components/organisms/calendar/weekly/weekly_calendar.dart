@@ -27,41 +27,44 @@ class CalendarWeekdayLine extends StatelessWidget {
   }) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    return Stack(
-      children: [
-        Row(
-          children: Weekday.values.map((weekday) {
-            final date = calendarState.buildDate(weekday);
-            final isOutOfBoundsInLine = !calendarState.dateRange.inRange(date);
-            if (isOutOfBoundsInLine) {
-              return Expanded(child: Container());
-            }
+    return Container(
+      child: Stack(
+        children: [
+          Row(
+            children: Weekday.values.map((weekday) {
+              final date = calendarState.buildDate(weekday);
+              final isOutOfBoundsInLine =
+                  !calendarState.dateRange.inRange(date);
+              if (isOutOfBoundsInLine) {
+                return Expanded(child: Container());
+              }
 
-            if (calendarState.isGrayoutTile(date)) {
-              return CalendarDayTile.grayout(
+              if (calendarState.isGrayoutTile(date)) {
+                return CalendarDayTile.grayout(
+                  weekday: weekday,
+                  shouldShowMenstruationMark:
+                      calendarState.hasMenstruationMark(date),
+                  contentAlignment: calendarState.contentAlignment,
+                  date: date,
+                );
+              }
+              return CalendarDayTile(
+                isToday: isSameDay(today(), date),
                 weekday: weekday,
+                date: date,
+                shouldShowDiaryMark: calendarState.hasDiaryMark(
+                    calendarState.diariesForMonth, date),
                 shouldShowMenstruationMark:
                     calendarState.hasMenstruationMark(date),
                 contentAlignment: calendarState.contentAlignment,
-                date: date,
+                onTap: (date) => onTap(calendarState, date),
               );
-            }
-            return CalendarDayTile(
-              isToday: isSameDay(today(), date),
-              weekday: weekday,
-              date: date,
-              shouldShowDiaryMark: calendarState.hasDiaryMark(
-                  calendarState.diariesForMonth, date),
-              shouldShowMenstruationMark:
-                  calendarState.hasMenstruationMark(date),
-              contentAlignment: calendarState.contentAlignment,
-              onTap: (date) => onTap(calendarState, date),
-            );
-          }).toList(),
-        ),
-        ..._bands(context, calendarState.allBandModels, calendarState,
-            horizontalPadding)
-      ],
+            }).toList(),
+          ),
+          ..._bands(context, calendarState.allBandModels, calendarState,
+              horizontalPadding)
+        ],
+      ),
     );
   }
 

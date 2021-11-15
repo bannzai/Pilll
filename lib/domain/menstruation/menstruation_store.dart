@@ -72,8 +72,7 @@ class MenstruationStore extends StateNotifier<MenstruationState> {
   StreamSubscription? _userCanceller;
   void _subscribe() {
     _menstruationCanceller?.cancel();
-    _menstruationCanceller =
-        menstruationService.streamAll().listen((entities) {
+    _menstruationCanceller = menstruationService.streamAll().listen((entities) {
       state = state.copyWith(entities: entities);
     });
     _diaryCanceller?.cancel();
