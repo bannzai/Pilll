@@ -55,6 +55,7 @@ abstract class MenstruationState implements _$MenstruationState {
 
 List<List<DateTime>> _calendarDataSource() {
   final base = today();
+
   var begin = base.subtract(Duration(days: 90));
   final beginWeekdayOffset = WeekdayFunctions.weekdayFromDate(begin).index;
   begin = begin.subtract(Duration(days: beginWeekdayOffset));
