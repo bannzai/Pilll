@@ -187,10 +187,10 @@ class InitialSettingReminderTimesPage extends HookWidget {
                             name: "next_initial_setting_reminder_times");
                         try {
                           await store.register();
+                          AppRouter.endInitialSetting(context);
                         } catch (error) {
                           showErrorAlert(context, message: error.toString());
                         }
-                        AppRouter.endInitialSetting(context);
                       },
                     ),
                   ],
