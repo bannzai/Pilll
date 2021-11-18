@@ -7,6 +7,7 @@ import 'package:pilll/service/pill_sheet_group.dart';
 import 'package:pilll/service/setting.dart';
 import 'package:pilll/util/environment.dart';
 import 'package:package_info/package_info.dart';
+import 'package:purchases_flutter/purchases_flutter.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 inquiry() {
@@ -32,6 +33,7 @@ Future<String> debugInfo(String separator) async {
   final appName = package.appName;
   final buildNumber = package.buildNumber;
   final packageName = package.packageName;
+  final offerings = await Purchases.getOfferings();
   final contents = [
     "DEBUG INFO",
     "appName: $appName",
@@ -43,6 +45,7 @@ Future<String> debugInfo(String separator) async {
     "pillSheetGroupID: ${pillSheetGroup?.id}",
     "activedPillSheet: ${pillSheetGroup?.activedPillSheet?.toJson()}",
     "settingState.entity: ${setting.toJson()}",
+    "offerings: ${offerings.toString()}",
   ];
   return contents.join(separator);
 }
