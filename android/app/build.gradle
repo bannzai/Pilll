@@ -65,7 +65,7 @@ android {
     productFlavors {
         development {
             dimension "flavor-type"
-            applicationIdSuffix ".dev"
+            applicationIdSuffix ".development"
             versionNameSuffix ".dev"
         }
         production {
