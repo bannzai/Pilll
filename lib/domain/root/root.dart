@@ -1,3 +1,6 @@
+import 'dart:async';
+
+import 'package:firebase_crashlytics/firebase_crashlytics.dart';
 import 'package:pilll/analytics.dart';
 import 'package:pilll/domain/initial_setting/pill_sheet_group/initial_setting_pill_sheet_group_pill_sheet_type_select_row.dart';
 import 'package:pilll/entrypoint.dart';
@@ -94,9 +97,9 @@ class RootState extends State<Root> {
     // No UI thread blocking
     final user = await callSignin();
     if (user != null) {
-      errorLogger.setUserIdentifier(user.uid);
-      firebaseAnalytics.setUserId(user.uid);
-      initializePurchase(user.uid);
+      unawaited(FirebaseCrashlytics.instance.setUserIdentifier(user.uid));
+      unawaited(firebaseAnalytics.setUserId(user.uid));
+      unawaited(initializePurchase(user.uid));
     }
     cacheOrAuth().then((authInfo) {
       final userService = UserService(DatabaseConnection(authInfo.uid));
