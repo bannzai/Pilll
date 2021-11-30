@@ -8,7 +8,7 @@ import 'package:pilll/service/menstruation.dart';
 import 'package:pilll/service/pill_sheet_group.dart';
 import 'package:pilll/service/pill_sheet_modified_history.dart';
 import 'package:pilll/service/setting.dart';
-import 'package:pilll/domain/calendar/calendar_state.dart';
+import 'package:pilll/domain/calendar/calendar_page_state.dart';
 import 'package:pilll/service/user.dart';
 import 'package:pilll/util/datetime/date_compare.dart';
 
@@ -44,32 +44,36 @@ class CalendarPageStateStore extends StateNotifier<CalendarPageState> {
 
   void _reset() {
     state = state.copyWith(currentCalendarIndex: state.todayCalendarIndex);
-    Future(() async {
-      final menstruations = await _menstruationService.fetchAll();
-      final setting = await _settingService.fetch();
-      final latestPillSheetGroup = await _pillSheetGroupService.fetchLatest();
-      final diaries = await _diaryService.fetchListForMonth(
-          state.calendarDataSource[state.todayCalendarIndex]);
-      final pillSheetModifiedHistories =
-          await _pillSheetModifiedHistoryService.fetchList(
-              null,
-              CalendarPillSheetModifiedHistoryCardState
-                      .pillSheetModifiedHistoriesThreshold +
-                  1);
-      final user = await _userService.fetch();
-      state = state.copyWith(
-        menstruations: menstruations,
-        setting: setting,
-        latestPillSheetGroup: latestPillSheetGroup,
-        diariesForMonth: diaries,
-        allPillSheetModifiedHistories: pillSheetModifiedHistories,
-        isNotYetLoaded: false,
-        isPremium: user.isPremium,
-        isTrial: user.isTrial,
-        trialDeadlineDate: user.trialDeadlineDate,
-      );
-      _subscribe();
-    });
+    try {
+      Future(() async {
+        final menstruations = await _menstruationService.fetchAll();
+        final setting = await _settingService.fetch();
+        final latestPillSheetGroup = await _pillSheetGroupService.fetchLatest();
+        final diaries = await _diaryService.fetchListForMonth(
+            state.calendarDataSource[state.todayCalendarIndex]);
+        final pillSheetModifiedHistories =
+            await _pillSheetModifiedHistoryService.fetchList(
+                null,
+                CalendarPillSheetModifiedHistoryCardState
+                        .pillSheetModifiedHistoriesThreshold +
+                    1);
+        final user = await _userService.fetch();
+        state = state.copyWith(
+          menstruations: menstruations,
+          setting: setting,
+          latestPillSheetGroup: latestPillSheetGroup,
+          diariesForMonth: diaries,
+          allPillSheetModifiedHistories: pillSheetModifiedHistories,
+          isNotYetLoaded: false,
+          isPremium: user.isPremium,
+          isTrial: user.isTrial,
+          trialDeadlineDate: user.trialDeadlineDate,
+        );
+        _subscribe();
+      });
+    } catch (exception) {
+      state = state.copyWith(exception: exception);
+    }
   }
 
   StreamSubscription? _menstruationCanceller;

@@ -10,7 +10,7 @@ import 'package:pilll/util/datetime/date_compare.dart';
 import 'package:pilll/util/datetime/day.dart';
 import 'package:pilll/util/formatter/date_time_formatter.dart';
 
-part 'calendar_state.freezed.dart';
+part 'calendar_page_state.freezed.dart';
 
 @freezed
 abstract class CalendarPageState implements _$CalendarPageState {
@@ -26,6 +26,7 @@ abstract class CalendarPageState implements _$CalendarPageState {
     @Default(false) bool isPremium,
     @Default(false) bool isTrial,
     DateTime? trialDeadlineDate,
+    Object? exception,
   }) = _CalendarPageState;
 
   bool get shouldShowIndicator => isNotYetLoaded || setting == null;
