@@ -39,13 +39,13 @@ class CalendarPageStateStore extends StateNotifier<CalendarPageState> {
     this._userService,
     this._pillSheetGroupService,
   ) : super(CalendarPageState(menstruations: [])) {
-    _reset();
+    reset();
   }
 
-  void _reset() {
+  void reset() async {
     state = state.copyWith(currentCalendarIndex: state.todayCalendarIndex);
     try {
-      Future(() async {
+      await Future(() async {
         final menstruations = await _menstruationService.fetchAll();
         final setting = await _settingService.fetch();
         final latestPillSheetGroup = await _pillSheetGroupService.fetchLatest();

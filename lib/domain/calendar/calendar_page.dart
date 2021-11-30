@@ -13,6 +13,7 @@ import 'package:pilll/domain/calendar/calendar_page_store.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:pilll/error/universal_error_page.dart';
 
 class CalendarPage extends HookWidget {
   @override
@@ -20,6 +21,15 @@ class CalendarPage extends HookWidget {
     final store = useProvider(calendarPageStateProvider);
     final state = useProvider(calendarPageStateProvider.state);
     homeKey.currentState?.diaries = state.diariesForMonth;
+
+    final exception = state.exception;
+    if (exception != null) {
+      return UniversalErrorPage(
+        error: exception,
+        child: null,
+        reload: () => store.reset(),
+      );
+    }
 
     if (state.shouldShowIndicator) {
       return ScaffoldIndicator();
