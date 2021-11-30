@@ -6,13 +6,13 @@ class TextColor {
   static Color get standard => black;
   static final Color black = Colors.black;
   static final Color white = Colors.white;
-  static final Color darkGray = HexColor.fromHex("000000").withAlpha(153);
-  static final Color gray = HexColor.fromHex("7E7E7E");
-  static final Color lightGray = HexColor.fromHex("B1B1B1");
-  static final Color lightGray2 = HexColor.fromHex("666666");
-  static final Color noshime = HexColor.fromHex("3D4662");
+  static final Color darkGray = Color(0xFF000000).withAlpha(153);
+  static final Color gray = Color(0xFF7E7E7E);
+  static final Color lightGray = Color(0xFFB1B1B1);
+  static final Color lightGray2 = Color(0xFF666666);
+  static final Color noshime = Color(0xFF3D4662);
   static final Color primary = PilllColors.primary;
-  static final Color main = HexColor.fromHex("29304D");
+  static final Color main = Color(0xFF29304D);
   static final Color link = primary;
   static final Color danger = PilllColors.red;
 }
