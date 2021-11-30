@@ -25,6 +25,15 @@ class RecordPage extends HookWidget {
     final state = useProvider(recordPageStoreProvider.state);
     final store = useProvider(recordPageStoreProvider);
 
+    final exception = state.exception;
+    if (exception != null) {
+      return UniversalErrorPage(
+        error: exception,
+        reload: () => store.reset(),
+        child: null,
+      );
+    }
+
     final pillSheetGroup = state.pillSheetGroup;
     final activedPillSheet = pillSheetGroup?.activedPillSheet;
     final setting = state.setting;
