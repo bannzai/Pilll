@@ -101,7 +101,8 @@ class RootState extends State<Root> {
       unawaited(firebaseAnalytics.setUserId(user.uid));
       unawaited(initializePurchase(user.uid));
     }
-    await cacheOrAuth().then((authInfo) {
+    // ignore: unawaited_futures
+    cacheOrAuth().then((authInfo) {
       final userService = UserService(DatabaseConnection(authInfo.uid));
       return userService.prepare(authInfo.uid).then((_) async {
         unawaited(userService.recordUserIDs());

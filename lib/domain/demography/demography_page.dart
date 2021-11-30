@@ -120,7 +120,7 @@ class DemographyPage extends HookWidget {
                             name: "demographic_done_button_pressed");
                         final sharedPreferences =
                             await SharedPreferences.getInstance();
-                        sharedPreferences.setBool(
+                        await sharedPreferences.setBool(
                             BoolKey.isAlreadyDoneDemography, true);
                         await store.register(demographic);
                         Navigator.of(context).pop();
@@ -494,7 +494,7 @@ showDemographyPageIfNeeded(BuildContext context) async {
   if (isAlreadyShowDemography == true) {
     return;
   }
-  sharedPreference.setBool(BoolKey.isAlreadyShowDemography, true);
+  await sharedPreference.setBool(BoolKey.isAlreadyShowDemography, true);
 
   Navigator.of(context).push(_DemographyPageRoute.route(() {
     showDemographyCompletedDialog(context);

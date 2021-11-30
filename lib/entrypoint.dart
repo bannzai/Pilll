@@ -23,7 +23,7 @@ import 'package:purchases_flutter/purchases_flutter.dart';
 
 Future<void> entrypoint() async {
   WidgetsFlutterBinding.ensureInitialized();
-  initializeDateFormatting('ja_JP');
+  unawaited(initializeDateFormatting('ja_JP'));
   await Firebase.initializeApp();
 
   if (Environment.isLocal) {

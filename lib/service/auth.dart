@@ -95,7 +95,8 @@ Future<User?> _cacheOrAuth() async {
   if (existsUID == null || existsUID.isEmpty) {
     final user = value.user;
     if (user != null) {
-      sharedPreferences.setString(StringKey.lastSigninAnonymousUID, user.uid);
+      await sharedPreferences.setString(
+          StringKey.lastSigninAnonymousUID, user.uid);
     }
   }
 

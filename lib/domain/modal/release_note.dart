@@ -90,7 +90,7 @@ showReleaseNotePreDialog(BuildContext context) async {
   if (storage.getBool(key) ?? false) {
     return;
   }
-  storage.setBool(key, true);
+  await storage.setBool(key, true);
 
   showDialog(
       context: context,
