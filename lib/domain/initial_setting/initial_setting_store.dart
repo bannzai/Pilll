@@ -1,5 +1,6 @@
 import 'dart:async';
 
+import 'package:firebase_crashlytics/firebase_crashlytics.dart';
 import 'package:pilll/analytics.dart';
 import 'package:pilll/database/batch.dart';
 import 'package:pilll/database/database.dart';
@@ -7,7 +8,6 @@ import 'package:pilll/domain/initial_setting/initial_setting_state.dart';
 import 'package:pilll/entity/pill_sheet_group.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/entity/setting.dart';
-import 'package:pilll/error_log.dart';
 import 'package:pilll/service/auth.dart';
 import 'package:pilll/service/pill_sheet.dart';
 import 'package:pilll/service/pill_sheet_group.dart';
@@ -70,8 +70,8 @@ class InitialSettingStateStore extends StateNotifier<InitialSettingState> {
         final userService = UserService(DatabaseConnection(user.uid));
         await userService.prepare(user.uid);
         await userService.recordUserIDs();
-        errorLogger.setUserIdentifier(user.uid);
-        firebaseAnalytics.setUserId(user.uid);
+        unawaited(FirebaseCrashlytics.instance.setUserIdentifier(user.uid));
+        unawaited(firebaseAnalytics.setUserId(user.uid));
         await Purchases.identify(user.uid);
       }
       state = state.copyWith(

@@ -1,3 +1,6 @@
+import 'dart:async';
+
+import 'package:firebase_crashlytics/firebase_crashlytics.dart';
 import 'package:pilll/analytics.dart';
 import 'package:pilll/domain/initial_setting/pill_sheet_group/initial_setting_pill_sheet_group_pill_sheet_type_select_row.dart';
 import 'package:pilll/entrypoint.dart';
@@ -94,19 +97,20 @@ class RootState extends State<Root> {
     // No UI thread blocking
     final user = await callSignin();
     if (user != null) {
-      errorLogger.setUserIdentifier(user.uid);
-      firebaseAnalytics.setUserId(user.uid);
-      initializePurchase(user.uid);
+      unawaited(FirebaseCrashlytics.instance.setUserIdentifier(user.uid));
+      unawaited(firebaseAnalytics.setUserId(user.uid));
+      unawaited(initializePurchase(user.uid));
     }
+    // ignore: unawaited_futures
     cacheOrAuth().then((authInfo) {
       final userService = UserService(DatabaseConnection(authInfo.uid));
       return userService.prepare(authInfo.uid).then((_) async {
-        userService.recordUserIDs();
-        userService.saveLaunchInfo();
-        userService.saveStats();
+        unawaited(userService.recordUserIDs());
+        unawaited(userService.saveLaunchInfo());
+        unawaited(userService.saveStats());
 
         final user = await userService.fetch();
-        userService.temporarySyncronizeDiscountEntitlement(user);
+        unawaited(userService.temporarySyncronizeDiscountEntitlement(user));
         if (!user.migratedFlutter) {
           await userService.deleteSettings();
           await userService.setFlutterMigrationFlag();
@@ -117,7 +121,8 @@ class RootState extends State<Root> {
         }
         final storage = await SharedPreferences.getInstance();
         if (!storage.getKeys().contains(StringKey.firebaseAnonymousUserID)) {
-          storage.setString(StringKey.firebaseAnonymousUserID, authInfo.uid);
+          await storage.setString(
+              StringKey.firebaseAnonymousUserID, authInfo.uid);
         }
         bool? didEndInitialSetting =
             storage.getBool(BoolKey.didEndInitialSetting);

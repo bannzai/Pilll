@@ -1,3 +1,4 @@
+import 'dart:async';
 import 'dart:io';
 
 import 'package:pilll/analytics.dart';
@@ -14,6 +15,7 @@ Future<void> requestNotificationPermissions() async {
             alert: true, badge: true, sound: true);
   }
   callRegisterRemoteNotification();
+  // ignore: unawaited_futures
   cacheOrAuth().then((auth) {
     final userService = UserService(DatabaseConnection(auth.uid));
     userService.fetch().then((_) async {

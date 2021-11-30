@@ -56,7 +56,7 @@ class SettingAccountCooperationListPage extends HookWidget {
                         if (state.isLinkedApple) {
                           return;
                         }
-                        _linkApple(context, store);
+                        await _linkApple(context, store);
                       },
                     ),
                     Divider(indent: 16),
@@ -67,7 +67,7 @@ class SettingAccountCooperationListPage extends HookWidget {
                         if (state.isLinkedGoogle) {
                           return;
                         }
-                        _linkGoogle(context, store);
+                        await _linkGoogle(context, store);
                       },
                     ),
                     Divider(indent: 16),
@@ -91,7 +91,7 @@ class SettingAccountCooperationListPage extends HookWidget {
     }
   }
 
-  _linkApple(
+  Future<void> _linkApple(
     BuildContext context,
     SettingAccountCooperationListPageStore store,
   ) async {
