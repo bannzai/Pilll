@@ -1,3 +1,5 @@
+import 'dart:async';
+
 import 'package:firebase_analytics/firebase_analytics.dart';
 
 final firebaseAnalytics = FirebaseAnalytics();
@@ -14,7 +16,7 @@ class Analytics {
   Future<void> setCurrentScreen(
       {required String screenName,
       String screenClassOverride = 'Flutter'}) async {
-    firebaseAnalytics.logEvent(name: "screen_$screenName");
+    unawaited(firebaseAnalytics.logEvent(name: "screen_$screenName"));
     return firebaseAnalytics.setCurrentScreen(
         screenName: screenName, screenClassOverride: screenClassOverride);
   }
