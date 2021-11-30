@@ -41,11 +41,12 @@ class SettingStateStore extends StateNotifier<SettingState> {
     this._pillSheetModifiedHistoryService,
     this._pillSheetGroupService,
   ) : super(SettingState(setting: null)) {
-    _reset();
+    reset();
   }
 
-  void _reset() {
-    Future(() async {
+  void reset() async {
+    try {
+      state = state.copyWith(exception: null);
       final storage = await SharedPreferences.getInstance();
       final userIsMigratedFrom132 =
           storage.containsKey(StringKey.salvagedOldStartTakenDate) &&
@@ -62,7 +63,9 @@ class SettingStateStore extends StateNotifier<SettingState> {
         trialDeadlineDate: user.trialDeadlineDate,
       );
       _subscribe();
-    });
+    } catch (exception) {
+      state = state.copyWith(exception: exception);
+    }
   }
 
   StreamSubscription? _settingCanceller;

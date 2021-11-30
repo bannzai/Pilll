@@ -14,5 +14,6 @@ abstract class SettingState implements _$SettingState {
     @Default(false) bool isPremium,
     @Default(false) bool isTrial,
     DateTime? trialDeadlineDate,
+    Object? exception,
   }) = _SettingState;
 }
