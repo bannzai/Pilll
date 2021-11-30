@@ -17,6 +17,7 @@ import 'package:pilll/domain/menstruation/menstruation_history_card.dart';
 import 'package:pilll/domain/menstruation/menstruation_select_modify_type_sheet.dart';
 import 'package:pilll/domain/record/weekday_badge.dart';
 import 'package:pilll/domain/menstruation/menstruation_store.dart';
+import 'package:pilll/error/universal_error_page.dart';
 import 'package:pilll/util/datetime/day.dart';
 import 'package:pilll/util/formatter/date_time_formatter.dart';
 
@@ -34,6 +35,13 @@ class MenstruationPage extends HookWidget {
     final store = useProvider(menstruationsStoreProvider);
     final state = useProvider(menstruationsStoreProvider.state);
 
+    if (state.exception != null) {
+      return UniversalErrorPage(
+        error: state.exception,
+        child: null,
+        reload: () => store.reset(),
+      );
+    }
     if (state.isNotYetLoaded) {
       return ScaffoldIndicator();
     }

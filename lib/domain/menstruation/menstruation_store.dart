@@ -40,12 +40,13 @@ class MenstruationStore extends StateNotifier<MenstruationState> {
     required this.userService,
     required this.pillSheetGroupService,
   }) : super(MenstruationState()) {
-    _reset();
+    reset();
   }
 
-  void _reset() {
+  void reset() async {
+    state = state.copyWith(exception: null);
     state = state.copyWith(currentCalendarIndex: state.todayCalendarIndex);
-    Future(() async {
+    try {
       final menstruations = await menstruationService.fetchAll();
       final diaries = await diaryService.fetchListAround90Days(today());
       final setting = await settingService.fetch();
@@ -62,7 +63,9 @@ class MenstruationStore extends StateNotifier<MenstruationState> {
         trialDeadlineDate: user.trialDeadlineDate,
       );
       _subscribe();
-    });
+    } catch (exception) {
+      state = state.copyWith(exception: exception);
+    }
   }
 
   StreamSubscription? _menstruationCanceller;

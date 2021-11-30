@@ -163,23 +163,16 @@ class MockAnalytics extends _i1.Mock implements _i18.Analytics {
   }
 
   @override
-  _i17.Future<void> logEvent(
-          {String? name, Map<String, dynamic>? parameters}) =>
-      (super.noSuchMethod(
-          Invocation.method(
-              #logEvent, [], {#name: name, #parameters: parameters}),
-          returnValue: Future<void>.value(),
-          returnValueForMissingStub: Future.value()) as _i17.Future<void>);
+  dynamic logEvent({String? name, Map<String, dynamic>? parameters}) =>
+      super.noSuchMethod(Invocation.method(
+          #logEvent, [], {#name: name, #parameters: parameters}));
   @override
-  _i17.Future<void> setCurrentScreen(
+  dynamic setCurrentScreen(
           {String? screenName, String? screenClassOverride = r'Flutter'}) =>
-      (super.noSuchMethod(
-          Invocation.method(#setCurrentScreen, [], {
-            #screenName: screenName,
-            #screenClassOverride: screenClassOverride
-          }),
-          returnValue: Future<void>.value(),
-          returnValueForMissingStub: Future.value()) as _i17.Future<void>);
+      super.noSuchMethod(Invocation.method(#setCurrentScreen, [], {
+        #screenName: screenName,
+        #screenClassOverride: screenClassOverride
+      }));
   @override
   dynamic setUserProperties(String? name, dynamic value) =>
       super.noSuchMethod(Invocation.method(#setUserProperties, [name, value]));

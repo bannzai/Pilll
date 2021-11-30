@@ -23,6 +23,7 @@ abstract class MenstruationState implements _$MenstruationState {
     DateTime? trialDeadlineDate,
     Setting? setting,
     PillSheetGroup? latestPillSheetGroup,
+    Object? exception,
   }) = _MenstruationState;
 
   late final List<List<DateTime>> calendarDataSource = _calendarDataSource();

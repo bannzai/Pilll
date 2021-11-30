@@ -52,80 +52,87 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
   }
 
   void reset() async {
-    await Future.wait([
-      Future(() async {
-        final pillSheetGroup = await _pillSheetGroupService.fetchLatest();
-        state = state.copyWith(pillSheetGroup: pillSheetGroup);
-      }),
-      Future(() async {
-        final setting = await _settingService.fetch();
-        state = state.copyWith(setting: setting);
-      }),
-      Future(() async {
-        final user = await _userService.fetch();
-        state = state.copyWith(
-          isPremium: user.isPremium,
-          isTrial: user.isTrial,
-          hasDiscountEntitlement: user.hasDiscountEntitlement,
-          discountEntitlementDeadlineDate: user.discountEntitlementDeadlineDate,
-          trialDeadlineDate: user.trialDeadlineDate,
-        );
-      }),
-      Future(() async {
-        final sharedPreferences = await SharedPreferences.getInstance();
-        final totalCountOfActionForTakenPill =
-            sharedPreferences.getInt(IntKey.totalCountOfActionForTakenPill) ??
-                0;
-        final shouldShowMigrateInfo = () {
-          if (!Platform.isIOS) {
-            return false;
-          }
-          if (sharedPreferences.getBool(BoolKey.migrateFrom132IsShown) ??
-              false) {
-            return false;
-          }
-          if (!sharedPreferences
-              .containsKey(StringKey.salvagedOldStartTakenDate)) {
-            return false;
-          }
-          if (!sharedPreferences
-              .containsKey(StringKey.salvagedOldLastTakenDate)) {
-            return false;
-          }
-          return true;
-        }();
-        final recommendedSignupNotificationIsAlreadyShow = sharedPreferences
-                .getBool(BoolKey.recommendedSignupNotificationIsAlreadyShow) ??
-            false;
-        final premiumTrialGuideNotificationIsClosed = sharedPreferences
-                .getBool(BoolKey.premiumTrialGuideNotificationIsClosed) ??
-            false;
-        state = state.copyWith(
-          totalCountOfActionForTakenPill: totalCountOfActionForTakenPill,
-          shouldShowMigrateInfo: shouldShowMigrateInfo,
-          isAlreadyShowTiral: sharedPreferences
-                  .getBool(BoolKey.isAlreadyShowPremiumTrialModal) ??
-              false,
-          isAlreadyShowPremiumSurvey:
-              sharedPreferences.getBool(BoolKey.isAlreadyShowPremiumSurvey) ??
-                  false,
-          recommendedSignupNotificationIsAlreadyShow:
-              recommendedSignupNotificationIsAlreadyShow,
-          premiumTrialGuideNotificationIsClosed:
-              premiumTrialGuideNotificationIsClosed,
-        );
-      }),
-      Future(() async {
-        state = state.copyWith(
-          isLinkedLoginProvider:
-              _authService.isLinkedApple() || _authService.isLinkedGoogle(),
-        );
-      }),
-    ]);
-    state = state.copyWith(
-      firstLoadIsEnded: true,
-    );
-    _subscribe();
+    try {
+      state = state.copyWith(exception: null);
+      await Future.wait([
+        Future(() async {
+          final pillSheetGroup = await _pillSheetGroupService.fetchLatest();
+          state = state.copyWith(pillSheetGroup: pillSheetGroup);
+        }),
+        Future(() async {
+          final setting = await _settingService.fetch();
+          state = state.copyWith(setting: setting);
+        }),
+        Future(() async {
+          final user = await _userService.fetch();
+          state = state.copyWith(
+            isPremium: user.isPremium,
+            isTrial: user.isTrial,
+            hasDiscountEntitlement: user.hasDiscountEntitlement,
+            discountEntitlementDeadlineDate:
+                user.discountEntitlementDeadlineDate,
+            trialDeadlineDate: user.trialDeadlineDate,
+          );
+        }),
+        Future(() async {
+          final sharedPreferences = await SharedPreferences.getInstance();
+          final totalCountOfActionForTakenPill =
+              sharedPreferences.getInt(IntKey.totalCountOfActionForTakenPill) ??
+                  0;
+          final shouldShowMigrateInfo = () {
+            if (!Platform.isIOS) {
+              return false;
+            }
+            if (sharedPreferences.getBool(BoolKey.migrateFrom132IsShown) ??
+                false) {
+              return false;
+            }
+            if (!sharedPreferences
+                .containsKey(StringKey.salvagedOldStartTakenDate)) {
+              return false;
+            }
+            if (!sharedPreferences
+                .containsKey(StringKey.salvagedOldLastTakenDate)) {
+              return false;
+            }
+            return true;
+          }();
+          final recommendedSignupNotificationIsAlreadyShow =
+              sharedPreferences.getBool(
+                      BoolKey.recommendedSignupNotificationIsAlreadyShow) ??
+                  false;
+          final premiumTrialGuideNotificationIsClosed = sharedPreferences
+                  .getBool(BoolKey.premiumTrialGuideNotificationIsClosed) ??
+              false;
+          state = state.copyWith(
+            totalCountOfActionForTakenPill: totalCountOfActionForTakenPill,
+            shouldShowMigrateInfo: shouldShowMigrateInfo,
+            isAlreadyShowTiral: sharedPreferences
+                    .getBool(BoolKey.isAlreadyShowPremiumTrialModal) ??
+                false,
+            isAlreadyShowPremiumSurvey:
+                sharedPreferences.getBool(BoolKey.isAlreadyShowPremiumSurvey) ??
+                    false,
+            recommendedSignupNotificationIsAlreadyShow:
+                recommendedSignupNotificationIsAlreadyShow,
+            premiumTrialGuideNotificationIsClosed:
+                premiumTrialGuideNotificationIsClosed,
+          );
+        }),
+        Future(() async {
+          state = state.copyWith(
+            isLinkedLoginProvider:
+                _authService.isLinkedApple() || _authService.isLinkedGoogle(),
+          );
+        }),
+      ]);
+      state = state.copyWith(
+        firstLoadIsEnded: true,
+      );
+      _subscribe();
+    } catch (exception) {
+      state = state.copyWith(exception: exception);
+    }
   }
 
   StreamSubscription? _pillSheetGroupCanceller;

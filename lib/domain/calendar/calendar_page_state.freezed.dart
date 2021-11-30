@@ -1,7 +1,7 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
 
-part of 'calendar_state.dart';
+part of 'calendar_page_state.dart';
 
 // **************************************************************************
 // FreezedGenerator
@@ -26,7 +26,8 @@ class _$CalendarPageStateTearOff {
       List<PillSheetModifiedHistory> allPillSheetModifiedHistories = const [],
       bool isPremium = false,
       bool isTrial = false,
-      DateTime? trialDeadlineDate}) {
+      DateTime? trialDeadlineDate,
+      Object? exception}) {
     return _CalendarPageState(
       currentCalendarIndex: currentCalendarIndex,
       isNotYetLoaded: isNotYetLoaded,
@@ -38,6 +39,7 @@ class _$CalendarPageStateTearOff {
       isPremium: isPremium,
       isTrial: isTrial,
       trialDeadlineDate: trialDeadlineDate,
+      exception: exception,
     );
   }
 }
@@ -59,6 +61,7 @@ mixin _$CalendarPageState {
   bool get isPremium => throw _privateConstructorUsedError;
   bool get isTrial => throw _privateConstructorUsedError;
   DateTime? get trialDeadlineDate => throw _privateConstructorUsedError;
+  Object? get exception => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $CalendarPageStateCopyWith<CalendarPageState> get copyWith =>
@@ -80,7 +83,8 @@ abstract class $CalendarPageStateCopyWith<$Res> {
       List<PillSheetModifiedHistory> allPillSheetModifiedHistories,
       bool isPremium,
       bool isTrial,
-      DateTime? trialDeadlineDate});
+      DateTime? trialDeadlineDate,
+      Object? exception});
 
   $SettingCopyWith<$Res>? get setting;
   $PillSheetGroupCopyWith<$Res>? get latestPillSheetGroup;
@@ -107,6 +111,7 @@ class _$CalendarPageStateCopyWithImpl<$Res>
     Object? isPremium = freezed,
     Object? isTrial = freezed,
     Object? trialDeadlineDate = freezed,
+    Object? exception = freezed,
   }) {
     return _then(_value.copyWith(
       currentCalendarIndex: currentCalendarIndex == freezed
@@ -149,6 +154,7 @@ class _$CalendarPageStateCopyWithImpl<$Res>
           ? _value.trialDeadlineDate
           : trialDeadlineDate // ignore: cast_nullable_to_non_nullable
               as DateTime?,
+      exception: exception == freezed ? _value.exception : exception,
     ));
   }
 
@@ -192,7 +198,8 @@ abstract class _$CalendarPageStateCopyWith<$Res>
       List<PillSheetModifiedHistory> allPillSheetModifiedHistories,
       bool isPremium,
       bool isTrial,
-      DateTime? trialDeadlineDate});
+      DateTime? trialDeadlineDate,
+      Object? exception});
 
   @override
   $SettingCopyWith<$Res>? get setting;
@@ -223,6 +230,7 @@ class __$CalendarPageStateCopyWithImpl<$Res>
     Object? isPremium = freezed,
     Object? isTrial = freezed,
     Object? trialDeadlineDate = freezed,
+    Object? exception = freezed,
   }) {
     return _then(_CalendarPageState(
       currentCalendarIndex: currentCalendarIndex == freezed
@@ -265,6 +273,7 @@ class __$CalendarPageStateCopyWithImpl<$Res>
           ? _value.trialDeadlineDate
           : trialDeadlineDate // ignore: cast_nullable_to_non_nullable
               as DateTime?,
+      exception: exception == freezed ? _value.exception : exception,
     ));
   }
 }
@@ -282,7 +291,8 @@ class _$_CalendarPageState extends _CalendarPageState {
       this.allPillSheetModifiedHistories = const [],
       this.isPremium = false,
       this.isTrial = false,
-      this.trialDeadlineDate})
+      this.trialDeadlineDate,
+      this.exception})
       : super._();
 
   @JsonKey(defaultValue: 0)
@@ -312,10 +322,12 @@ class _$_CalendarPageState extends _CalendarPageState {
   final bool isTrial;
   @override
   final DateTime? trialDeadlineDate;
+  @override
+  final Object? exception;
 
   @override
   String toString() {
-    return 'CalendarPageState(currentCalendarIndex: $currentCalendarIndex, isNotYetLoaded: $isNotYetLoaded, menstruations: $menstruations, setting: $setting, latestPillSheetGroup: $latestPillSheetGroup, diariesForMonth: $diariesForMonth, allPillSheetModifiedHistories: $allPillSheetModifiedHistories, isPremium: $isPremium, isTrial: $isTrial, trialDeadlineDate: $trialDeadlineDate)';
+    return 'CalendarPageState(currentCalendarIndex: $currentCalendarIndex, isNotYetLoaded: $isNotYetLoaded, menstruations: $menstruations, setting: $setting, latestPillSheetGroup: $latestPillSheetGroup, diariesForMonth: $diariesForMonth, allPillSheetModifiedHistories: $allPillSheetModifiedHistories, isPremium: $isPremium, isTrial: $isTrial, trialDeadlineDate: $trialDeadlineDate, exception: $exception)';
   }
 
   @override
@@ -353,7 +365,10 @@ class _$_CalendarPageState extends _CalendarPageState {
                     .equals(other.isTrial, isTrial)) &&
             (identical(other.trialDeadlineDate, trialDeadlineDate) ||
                 const DeepCollectionEquality()
-                    .equals(other.trialDeadlineDate, trialDeadlineDate)));
+                    .equals(other.trialDeadlineDate, trialDeadlineDate)) &&
+            (identical(other.exception, exception) ||
+                const DeepCollectionEquality()
+                    .equals(other.exception, exception)));
   }
 
   @override
@@ -368,7 +383,8 @@ class _$_CalendarPageState extends _CalendarPageState {
       const DeepCollectionEquality().hash(allPillSheetModifiedHistories) ^
       const DeepCollectionEquality().hash(isPremium) ^
       const DeepCollectionEquality().hash(isTrial) ^
-      const DeepCollectionEquality().hash(trialDeadlineDate);
+      const DeepCollectionEquality().hash(trialDeadlineDate) ^
+      const DeepCollectionEquality().hash(exception);
 
   @JsonKey(ignore: true)
   @override
@@ -387,7 +403,8 @@ abstract class _CalendarPageState extends CalendarPageState {
       List<PillSheetModifiedHistory> allPillSheetModifiedHistories,
       bool isPremium,
       bool isTrial,
-      DateTime? trialDeadlineDate}) = _$_CalendarPageState;
+      DateTime? trialDeadlineDate,
+      Object? exception}) = _$_CalendarPageState;
   _CalendarPageState._() : super._();
 
   @override
@@ -412,6 +429,8 @@ abstract class _CalendarPageState extends CalendarPageState {
   bool get isTrial => throw _privateConstructorUsedError;
   @override
   DateTime? get trialDeadlineDate => throw _privateConstructorUsedError;
+  @override
+  Object? get exception => throw _privateConstructorUsedError;
   @override
   @JsonKey(ignore: true)
   _$CalendarPageStateCopyWith<_CalendarPageState> get copyWith =>

@@ -15,6 +15,7 @@ import 'package:pilll/domain/settings/components/rows/taking_pill_notification.d
 import 'package:pilll/domain/settings/components/rows/today_pill_number.dart';
 import 'package:pilll/domain/settings/components/rows/update_from_132.dart';
 import 'package:pilll/domain/settings/components/setting_section_title.dart';
+import 'package:pilll/error/universal_error_page.dart';
 import 'package:pilll/inquiry/inquiry.dart';
 import 'package:pilll/domain/settings/setting_page_store.dart';
 import 'package:pilll/components/atoms/color.dart';
@@ -52,6 +53,15 @@ class SettingPage extends HookWidget {
   Widget _body(BuildContext context) {
     final store = useProvider(settingStoreProvider);
     final state = useProvider(settingStoreProvider.state);
+
+    if (state.exception != null) {
+      return UniversalErrorPage(
+        error: state.exception,
+        child: null,
+        reload: () => store.reset(),
+      );
+    }
+
     final setting = state.setting;
     if (setting == null) {
       return Container();
