@@ -11,4 +11,8 @@ class ErrorLogger {
   ) {
     unawaited(FirebaseCrashlytics.instance.recordError(exception, stack));
   }
+
+  log(String message) {
+    unawaited(FirebaseCrashlytics.instance.log(message));
+  }
 }
