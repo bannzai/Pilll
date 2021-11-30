@@ -101,15 +101,15 @@ class RootState extends State<Root> {
       unawaited(firebaseAnalytics.setUserId(user.uid));
       unawaited(initializePurchase(user.uid));
     }
-    cacheOrAuth().then((authInfo) {
+    await cacheOrAuth().then((authInfo) {
       final userService = UserService(DatabaseConnection(authInfo.uid));
       return userService.prepare(authInfo.uid).then((_) async {
-        userService.recordUserIDs();
-        userService.saveLaunchInfo();
-        userService.saveStats();
+        unawaited(userService.recordUserIDs());
+        unawaited(userService.saveLaunchInfo());
+        unawaited(userService.saveStats());
 
         final user = await userService.fetch();
-        userService.temporarySyncronizeDiscountEntitlement(user);
+        unawaited(userService.temporarySyncronizeDiscountEntitlement(user));
         if (!user.migratedFlutter) {
           await userService.deleteSettings();
           await userService.setFlutterMigrationFlag();
@@ -120,7 +120,8 @@ class RootState extends State<Root> {
         }
         final storage = await SharedPreferences.getInstance();
         if (!storage.getKeys().contains(StringKey.firebaseAnonymousUserID)) {
-          storage.setString(StringKey.firebaseAnonymousUserID, authInfo.uid);
+          await storage.setString(
+              StringKey.firebaseAnonymousUserID, authInfo.uid);
         }
         bool? didEndInitialSetting =
             storage.getBool(BoolKey.didEndInitialSetting);
