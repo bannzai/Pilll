@@ -43,6 +43,7 @@ class CalendarPageStateStore extends StateNotifier<CalendarPageState> {
   }
 
   void reset() async {
+    state = state.copyWith(exception: null);
     state = state.copyWith(currentCalendarIndex: state.todayCalendarIndex);
     try {
       await Future(() async {

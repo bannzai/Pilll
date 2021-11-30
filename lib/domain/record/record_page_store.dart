@@ -53,6 +53,7 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
 
   void reset() async {
     try {
+      state = state.copyWith(exception: null);
       await Future.wait([
         Future(() async {
           final pillSheetGroup = await _pillSheetGroupService.fetchLatest();

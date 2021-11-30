@@ -44,6 +44,7 @@ class MenstruationStore extends StateNotifier<MenstruationState> {
   }
 
   void reset() async {
+    state = state.copyWith(exception: null);
     state = state.copyWith(currentCalendarIndex: state.todayCalendarIndex);
     try {
       final menstruations = await menstruationService.fetchAll();
