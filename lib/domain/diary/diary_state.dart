@@ -1,7 +1,7 @@
 import 'package:pilll/entity/diary.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 
-part 'diary.freezed.dart';
+part 'diary_state.freezed.dart';
 
 @freezed
 abstract class DiaryState implements _$DiaryState {

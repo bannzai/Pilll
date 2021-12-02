@@ -1,10 +1,10 @@
 import 'package:pilll/components/atoms/buttons.dart';
 import 'package:pilll/components/page/discard_dialog.dart';
+import 'package:pilll/domain/diary/confirm_diary_store.dart';
+import 'package:pilll/domain/diary/diary_state.dart';
 import 'package:pilll/domain/diary/post_diary_page.dart';
 import 'package:pilll/entity/diary.dart';
 import 'package:pilll/service/diary.dart';
-import 'package:pilll/state/diary.dart';
-import 'package:pilll/store/confirm_diary.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
@@ -14,10 +14,10 @@ import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
-final _confirmDiaryProvider =
-    StateNotifierProvider.autoDispose.family<ConfirmDiary, Diary>((ref, diary) {
+final _confirmDiaryStoreProvider =
+    StateNotifierProvider.autoDispose.family<ConfirmDiaryStore, Diary>((ref, diary) {
   final service = ref.watch(diaryServiceProvider);
-  return ConfirmDiary(service, DiaryState(diary: diary.copyWith()));
+  return ConfirmDiaryStore(service, DiaryState(diary: diary.copyWith()));
 });
 
 class ConfirmDiarySheet extends HookWidget {
@@ -26,7 +26,7 @@ class ConfirmDiarySheet extends HookWidget {
   ConfirmDiarySheet(this._diary);
   @override
   Widget build(BuildContext context) {
-    final state = useProvider(_confirmDiaryProvider(_diary).state);
+    final state = useProvider(_confirmDiaryStoreProvider(_diary).state);
     return Container(
       decoration: BoxDecoration(
         borderRadius: BorderRadius.only(
@@ -59,8 +59,8 @@ class ConfirmDiarySheet extends HookWidget {
   }
 
   Widget _title(BuildContext context) {
-    final store = useProvider(_confirmDiaryProvider(_diary));
-    final state = useProvider(_confirmDiaryProvider(_diary).state);
+    final store = useProvider(_confirmDiaryStoreProvider(_diary));
+    final state = useProvider(_confirmDiaryStoreProvider(_diary).state);
     return Row(
       mainAxisSize: MainAxisSize.max,
       children: [
@@ -70,8 +70,8 @@ class ConfirmDiarySheet extends HookWidget {
         IconButton(
           icon: SvgPicture.asset("images/edit.svg"),
           onPressed: () {
-            Navigator.of(context).push(
-                PostDiaryPageRoute.route(state.diary.date, state.diary));
+            Navigator.of(context)
+                .push(PostDiaryPageRoute.route(state.diary.date, state.diary));
           },
         ),
         SizedBox(width: 12),
@@ -124,7 +124,7 @@ class ConfirmDiarySheet extends HookWidget {
   }
 
   Widget _physicalCondition() {
-    final state = useProvider(_confirmDiaryProvider(_diary).state);
+    final state = useProvider(_confirmDiaryStoreProvider(_diary).state);
     return Row(
       children: [
         Text("体調", style: FontType.componentTitle.merge(TextColorStyle.black)),
@@ -135,7 +135,7 @@ class ConfirmDiarySheet extends HookWidget {
   }
 
   Widget _physicalConditionDetails() {
-    final state = useProvider(_confirmDiaryProvider(_diary).state);
+    final state = useProvider(_confirmDiaryStoreProvider(_diary).state);
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -167,7 +167,7 @@ class ConfirmDiarySheet extends HookWidget {
   }
 
   Widget _memo() {
-    final state = useProvider(_confirmDiaryProvider(_diary).state);
+    final state = useProvider(_confirmDiaryStoreProvider(_diary).state);
     return Text(
       state.diary.memo,
       maxLines: 2,
