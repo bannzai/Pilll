@@ -79,11 +79,19 @@ class PremiumIntroductionStore extends StateNotifier<PremiumIntroductionState> {
 
   @override
   void dispose() {
+    stopStream();
+    super.dispose();
+  }
+
+  startStream() {
+    _subscribe();
+  }
+
+  stopStream() {
     _userStreamCanceller?.cancel();
     _userStreamCanceller = null;
     _authStreamCanceller?.cancel();
     _authStreamCanceller = null;
-    super.dispose();
   }
 
   String annualPriceString(Package package) {
