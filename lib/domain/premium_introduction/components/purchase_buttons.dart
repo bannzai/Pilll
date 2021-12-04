@@ -57,6 +57,9 @@ class PurchaseButtons extends HookWidget {
 
   _purchase(BuildContext context, Package package) async {
     try {
+      // NOTE: Revenuecatからの更新により非同期にUIが変わる。その場合PurchaseButtons自体が隠れてしまい、
+      // ShowDialog が 表示されない場合がある。諸々の処理が完了するまでstreamを一回破棄しておく
+      store.stopStream();
       HUD.of(context).show();
       final shouldShowCompleteDialog = await store.purchase(package);
       if (shouldShowCompleteDialog) {
@@ -77,6 +80,9 @@ class PurchaseButtons extends HookWidget {
       }
     } finally {
       HUD.of(context).hide();
+      // NOTE: Revenuecatからの更新により非同期にUIが変わる。その場合PurchaseButtons自体が隠れてしまい、
+      // ShowDialog が 表示されない場合がある。諸々の処理が完了するまでstreamを一回破棄しておく
+      store.startStream();
     }
   }
 }
