@@ -50,13 +50,14 @@ abstract class NotificationBarState implements _$NotificationBarState {
     }
 
     final threshold = 4;
-    if (activedPillSheet.typeInfo.dosingPeriod - threshold + 1 <
-        activedPillSheet.todayPillNumber) {
-      final diff = activedPillSheet.typeInfo.dosingPeriod -
-          activedPillSheet.todayPillNumber;
-      return "あと${diff + 1}日で${activedPillSheet.pillSheetType.notTakenWord}期間です";
+    if (activedPillSheet.pillSheetType.notTakenWord.isNotEmpty) {
+      if (activedPillSheet.typeInfo.dosingPeriod - threshold + 1 <
+          activedPillSheet.todayPillNumber) {
+        final diff = activedPillSheet.typeInfo.dosingPeriod -
+            activedPillSheet.todayPillNumber;
+        return "あと${diff + 1}日で${activedPillSheet.pillSheetType.notTakenWord}期間です";
+      }
     }
-
     return null;
   }
 
