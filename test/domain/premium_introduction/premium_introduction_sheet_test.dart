@@ -2,7 +2,6 @@ import 'package:pilll/analytics.dart';
 import 'package:pilll/domain/premium_introduction/components/premium_introduction_discount.dart';
 import 'package:pilll/domain/premium_introduction/components/premium_user_thanks.dart';
 import 'package:pilll/domain/premium_introduction/components/purchase_buttons_state.dart';
-import 'package:pilll/domain/premium_introduction/components/purchase_buttons_store.dart';
 import 'package:pilll/domain/premium_introduction/premium_introduction_sheet.dart';
 import 'package:pilll/domain/premium_introduction/premium_introduction_state.dart';
 import 'package:pilll/domain/premium_introduction/premium_introduction_store.dart';
@@ -98,9 +97,7 @@ void main() {
                   .overrideWithProvider((ref, param) => true),
               durationToDiscountPriceDeadline.overrideWithProvider(
                   (ref, param) => Duration(seconds: 1000)),
-              purchaseButtonsStoreProvider.overrideWithProvider(
-                  (ref, param) => MockPurchaseButtonsStore()),
-              purchaseButtonStateProvider.overrideWithProvider(
+              purchaseButtonsStateProvider.overrideWithProvider(
                   (ref, param) => _FakePurchaseButtonState()),
             ],
             child: MaterialApp(
@@ -145,9 +142,7 @@ void main() {
                   .overrideWithProvider((ref, param) => isOverDiscountDeadline),
               durationToDiscountPriceDeadline.overrideWithProvider(
                   (ref, param) => Duration(seconds: 1000)),
-              purchaseButtonsStoreProvider.overrideWithProvider(
-                  (ref, param) => MockPurchaseButtonsStore()),
-              purchaseButtonStateProvider.overrideWithProvider(
+              purchaseButtonsStateProvider.overrideWithProvider(
                   (ref, param) => _FakePurchaseButtonState()),
             ],
             child: MaterialApp(
@@ -193,9 +188,7 @@ void main() {
                   .overrideWithProvider((ref, param) => false),
               durationToDiscountPriceDeadline.overrideWithProvider(
                   (ref, param) => Duration(seconds: 1000)),
-              purchaseButtonsStoreProvider.overrideWithProvider(
-                  (ref, param) => MockPurchaseButtonsStore()),
-              purchaseButtonStateProvider.overrideWithProvider(
+              purchaseButtonsStateProvider.overrideWithProvider(
                   (ref, param) => _FakePurchaseButtonState()),
             ],
             child: MaterialApp(
@@ -241,9 +234,7 @@ void main() {
                   .overrideWithProvider((ref, param) => isOverDiscountDeadline),
               durationToDiscountPriceDeadline.overrideWithProvider(
                   (ref, param) => Duration(seconds: 1000)),
-              purchaseButtonsStoreProvider.overrideWithProvider(
-                  (ref, param) => MockPurchaseButtonsStore()),
-              purchaseButtonStateProvider.overrideWithProvider(
+              purchaseButtonsStateProvider.overrideWithProvider(
                   (ref, param) => _FakePurchaseButtonState()),
             ],
             child: MaterialApp(
@@ -288,9 +279,7 @@ void main() {
                   .overrideWithProvider((ref, param) => false),
               durationToDiscountPriceDeadline.overrideWithProvider(
                   (ref, param) => Duration(seconds: 1000)),
-              purchaseButtonsStoreProvider.overrideWithProvider(
-                  (ref, param) => MockPurchaseButtonsStore()),
-              purchaseButtonStateProvider.overrideWithProvider(
+              purchaseButtonsStateProvider.overrideWithProvider(
                   (ref, param) => _FakePurchaseButtonState()),
             ],
             child: MaterialApp(
