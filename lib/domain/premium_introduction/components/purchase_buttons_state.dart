@@ -1,5 +1,8 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:pilll/domain/premium_introduction/premium_introduction_store.dart';
+import 'package:pilll/domain/premium_introduction/util/discount_deadline.dart';
 import 'package:purchases_flutter/object_wrappers.dart';
+import 'package:riverpod/riverpod.dart';
 
 part 'purchase_buttons_state.freezed.dart';
 
@@ -15,6 +18,17 @@ extension OfferingTypeFunction on OfferingType {
     }
   }
 }
+
+final purchaseButtonsStateProvider =
+    Provider.family.autoDispose((ref, Offerings offerings) {
+  final premiumIntroductionState = ref.watch(premiumIntroductionStateProvider);
+  final isOverDiscountDeadline = ref.watch(isOverDiscountDeadlineProvider(
+      premiumIntroductionState.discountEntitlementDeadlineDate));
+  return PurchaseButtonsState(
+      offerings: offerings,
+      hasDiscountEntitlement: premiumIntroductionState.hasDiscountEntitlement,
+      isOverDiscountDeadline: isOverDiscountDeadline);
+});
 
 @freezed
 abstract class PurchaseButtonsState implements _$PurchaseButtonsState {

@@ -82,10 +82,7 @@ class PremiumIntroductionSheet extends HookWidget {
                               SizedBox(height: 32),
                               PurchaseButtons(
                                 offerings: offerings,
-                                discountEntitlementDeadlineDate:
-                                    discountEntitlementDeadlineDate,
-                                hasDiscountEntitlement:
-                                    state.hasDiscountEntitlement,
+                                store: store,
                               ),
                             ],
                           ],

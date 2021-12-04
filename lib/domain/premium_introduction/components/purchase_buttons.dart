@@ -6,30 +6,26 @@ import 'package:pilll/components/page/hud.dart';
 import 'package:pilll/domain/premium_introduction/components/annual_purchase_button.dart';
 import 'package:pilll/domain/premium_introduction/components/monthly_purchase_button.dart';
 import 'package:pilll/domain/premium_introduction/components/purchase_buttons_state.dart';
-import 'package:pilll/domain/premium_introduction/components/purchase_buttons_store.dart';
 import 'package:pilll/domain/premium_introduction/premium_complete_dialog.dart';
-import 'package:pilll/domain/premium_introduction/util/discount_deadline.dart';
+import 'package:pilll/domain/premium_introduction/premium_introduction_store.dart';
 import 'package:pilll/entity/user_error.dart';
 import 'package:pilll/error/error_alert.dart';
 import 'package:pilll/error/universal_error_page.dart';
 import 'package:purchases_flutter/purchases_flutter.dart';
 
 class PurchaseButtons extends HookWidget {
+  final PremiumIntroductionStore store;
   final Offerings offerings;
-  final DateTime? discountEntitlementDeadlineDate;
-  final bool hasDiscountEntitlement;
 
   const PurchaseButtons({
     Key? key,
+    required this.store,
     required this.offerings,
-    required this.discountEntitlementDeadlineDate,
-    required this.hasDiscountEntitlement,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    final store = useProvider(purchaseButtonsStoreProvider(_buildState()));
-    final state = useProvider(purchaseButtonStateProvider(_buildState()));
+    final state = useProvider(purchaseButtonsStateProvider(offerings));
     final monthlyPackage = state.monthlyPackage;
     final annualPackage = state.annualPackage;
 
@@ -41,7 +37,7 @@ class PurchaseButtons extends HookWidget {
             monthlyPackage: monthlyPackage,
             onTap: (monthlyPackage) async {
               analytics.logEvent(name: "pressed_monthly_purchase_button");
-              await _purchase(context, store, monthlyPackage);
+              await _purchase(context, monthlyPackage);
             },
           ),
         SizedBox(width: 16),
@@ -51,7 +47,7 @@ class PurchaseButtons extends HookWidget {
             offeringType: state.offeringType,
             onTap: (annualPackage) async {
               analytics.logEvent(name: "pressed_annual_purchase_button");
-              await _purchase(context, store, annualPackage);
+              await _purchase(context, annualPackage);
             },
           ),
         Spacer(),
@@ -59,9 +55,11 @@ class PurchaseButtons extends HookWidget {
     );
   }
 
-  _purchase(
-      BuildContext context, PurchaseButtonsStore store, Package package) async {
+  _purchase(BuildContext context, Package package) async {
     try {
+      // NOTE: Revenuecatからの更新により非同期にUIが変わる。その場合PurchaseButtons自体が隠れてしまい、
+      // ShowDialog が 表示されない場合がある。諸々の処理が完了するまでstreamを一回破棄しておく
+      store.stopStream();
       HUD.of(context).show();
       final shouldShowCompleteDialog = await store.purchase(package);
       if (shouldShowCompleteDialog) {
@@ -82,16 +80,9 @@ class PurchaseButtons extends HookWidget {
       }
     } finally {
       HUD.of(context).hide();
+      // NOTE: Revenuecatからの更新により非同期にUIが変わる。その場合PurchaseButtons自体が隠れてしまい、
+      // ShowDialog が 表示されない場合がある。諸々の処理が完了するまでstreamを一回破棄しておく
+      store.startStream();
     }
-  }
-
-  PurchaseButtonsState _buildState() {
-    final discountEntitlementDeadlineDate =
-        this.discountEntitlementDeadlineDate;
-    return PurchaseButtonsState(
-        offerings: offerings,
-        hasDiscountEntitlement: hasDiscountEntitlement,
-        isOverDiscountDeadline: useProvider(
-            isOverDiscountDeadlineProvider(discountEntitlementDeadlineDate)));
   }
 }
