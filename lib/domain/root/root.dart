@@ -104,13 +104,12 @@ class RootState extends State<Root> {
     // ignore: unawaited_futures
     cacheOrAuth().then((authInfo) {
       final userService = UserService(DatabaseConnection(authInfo.uid));
-      return userService.prepare(authInfo.uid).then((_) async {
+      return userService.prepare(authInfo.uid).then((user) async {
         unawaited(userService.recordUserIDs());
         unawaited(userService.saveLaunchInfo());
         unawaited(userService.saveStats());
-
-        final user = await userService.fetch();
         unawaited(userService.temporarySyncronizeDiscountEntitlement(user));
+
         if (!user.migratedFlutter) {
           await userService.deleteSettings();
           await userService.setFlutterMigrationFlag();
