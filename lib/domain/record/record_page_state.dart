@@ -15,6 +15,7 @@ abstract class RecordPageState implements _$RecordPageState {
     @Default(false) bool isPremium,
     @Default(false) bool isTrial,
     @Default(false) bool hasDiscountEntitlement,
+    @Default(false) bool isAlreadyShowAnnouncementSupportedMultilplePillSheet,
     @Default(false) bool isAlreadyShowTiral,
     @Default(false) bool isAlreadyShowPremiumSurvey,
     @Default(false) bool shouldShowMigrateInfo,

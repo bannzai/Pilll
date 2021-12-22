@@ -21,6 +21,7 @@ class _$NotificationBarStateTearOff {
       required int totalCountOfActionForTakenPill,
       required bool isPremium,
       required bool isTrial,
+      required bool isAlreadyShowAnnouncementSupportedMultilplePillSheet,
       required bool hasDiscountEntitlement,
       required DateTime? trialDeadlineDate,
       required DateTime? discountEntitlementDeadlineDate,
@@ -32,6 +33,8 @@ class _$NotificationBarStateTearOff {
       totalCountOfActionForTakenPill: totalCountOfActionForTakenPill,
       isPremium: isPremium,
       isTrial: isTrial,
+      isAlreadyShowAnnouncementSupportedMultilplePillSheet:
+          isAlreadyShowAnnouncementSupportedMultilplePillSheet,
       hasDiscountEntitlement: hasDiscountEntitlement,
       trialDeadlineDate: trialDeadlineDate,
       discountEntitlementDeadlineDate: discountEntitlementDeadlineDate,
@@ -54,6 +57,8 @@ mixin _$NotificationBarState {
   int get totalCountOfActionForTakenPill => throw _privateConstructorUsedError;
   bool get isPremium => throw _privateConstructorUsedError;
   bool get isTrial => throw _privateConstructorUsedError;
+  bool get isAlreadyShowAnnouncementSupportedMultilplePillSheet =>
+      throw _privateConstructorUsedError;
   bool get hasDiscountEntitlement => throw _privateConstructorUsedError;
   DateTime? get trialDeadlineDate => throw _privateConstructorUsedError;
   DateTime? get discountEntitlementDeadlineDate =>
@@ -79,6 +84,7 @@ abstract class $NotificationBarStateCopyWith<$Res> {
       int totalCountOfActionForTakenPill,
       bool isPremium,
       bool isTrial,
+      bool isAlreadyShowAnnouncementSupportedMultilplePillSheet,
       bool hasDiscountEntitlement,
       DateTime? trialDeadlineDate,
       DateTime? discountEntitlementDeadlineDate,
@@ -104,6 +110,7 @@ class _$NotificationBarStateCopyWithImpl<$Res>
     Object? totalCountOfActionForTakenPill = freezed,
     Object? isPremium = freezed,
     Object? isTrial = freezed,
+    Object? isAlreadyShowAnnouncementSupportedMultilplePillSheet = freezed,
     Object? hasDiscountEntitlement = freezed,
     Object? trialDeadlineDate = freezed,
     Object? discountEntitlementDeadlineDate = freezed,
@@ -128,6 +135,11 @@ class _$NotificationBarStateCopyWithImpl<$Res>
           ? _value.isTrial
           : isTrial // ignore: cast_nullable_to_non_nullable
               as bool,
+      isAlreadyShowAnnouncementSupportedMultilplePillSheet:
+          isAlreadyShowAnnouncementSupportedMultilplePillSheet == freezed
+              ? _value.isAlreadyShowAnnouncementSupportedMultilplePillSheet
+              : isAlreadyShowAnnouncementSupportedMultilplePillSheet // ignore: cast_nullable_to_non_nullable
+                  as bool,
       hasDiscountEntitlement: hasDiscountEntitlement == freezed
           ? _value.hasDiscountEntitlement
           : hasDiscountEntitlement // ignore: cast_nullable_to_non_nullable
@@ -182,6 +194,7 @@ abstract class _$NotificationBarStateCopyWith<$Res>
       int totalCountOfActionForTakenPill,
       bool isPremium,
       bool isTrial,
+      bool isAlreadyShowAnnouncementSupportedMultilplePillSheet,
       bool hasDiscountEntitlement,
       DateTime? trialDeadlineDate,
       DateTime? discountEntitlementDeadlineDate,
@@ -210,6 +223,7 @@ class __$NotificationBarStateCopyWithImpl<$Res>
     Object? totalCountOfActionForTakenPill = freezed,
     Object? isPremium = freezed,
     Object? isTrial = freezed,
+    Object? isAlreadyShowAnnouncementSupportedMultilplePillSheet = freezed,
     Object? hasDiscountEntitlement = freezed,
     Object? trialDeadlineDate = freezed,
     Object? discountEntitlementDeadlineDate = freezed,
@@ -234,6 +248,11 @@ class __$NotificationBarStateCopyWithImpl<$Res>
           ? _value.isTrial
           : isTrial // ignore: cast_nullable_to_non_nullable
               as bool,
+      isAlreadyShowAnnouncementSupportedMultilplePillSheet:
+          isAlreadyShowAnnouncementSupportedMultilplePillSheet == freezed
+              ? _value.isAlreadyShowAnnouncementSupportedMultilplePillSheet
+              : isAlreadyShowAnnouncementSupportedMultilplePillSheet // ignore: cast_nullable_to_non_nullable
+                  as bool,
       hasDiscountEntitlement: hasDiscountEntitlement == freezed
           ? _value.hasDiscountEntitlement
           : hasDiscountEntitlement // ignore: cast_nullable_to_non_nullable
@@ -273,6 +292,7 @@ class _$_NotificationBarState extends _NotificationBarState {
       required this.totalCountOfActionForTakenPill,
       required this.isPremium,
       required this.isTrial,
+      required this.isAlreadyShowAnnouncementSupportedMultilplePillSheet,
       required this.hasDiscountEntitlement,
       required this.trialDeadlineDate,
       required this.discountEntitlementDeadlineDate,
@@ -290,6 +310,8 @@ class _$_NotificationBarState extends _NotificationBarState {
   @override
   final bool isTrial;
   @override
+  final bool isAlreadyShowAnnouncementSupportedMultilplePillSheet;
+  @override
   final bool hasDiscountEntitlement;
   @override
   final DateTime? trialDeadlineDate;
@@ -304,7 +326,7 @@ class _$_NotificationBarState extends _NotificationBarState {
 
   @override
   String toString() {
-    return 'NotificationBarState(latestPillSheetGroup: $latestPillSheetGroup, totalCountOfActionForTakenPill: $totalCountOfActionForTakenPill, isPremium: $isPremium, isTrial: $isTrial, hasDiscountEntitlement: $hasDiscountEntitlement, trialDeadlineDate: $trialDeadlineDate, discountEntitlementDeadlineDate: $discountEntitlementDeadlineDate, recommendedSignupNotificationIsAlreadyShow: $recommendedSignupNotificationIsAlreadyShow, premiumTrialGuideNotificationIsClosed: $premiumTrialGuideNotificationIsClosed, isLinkedLoginProvider: $isLinkedLoginProvider)';
+    return 'NotificationBarState(latestPillSheetGroup: $latestPillSheetGroup, totalCountOfActionForTakenPill: $totalCountOfActionForTakenPill, isPremium: $isPremium, isTrial: $isTrial, isAlreadyShowAnnouncementSupportedMultilplePillSheet: $isAlreadyShowAnnouncementSupportedMultilplePillSheet, hasDiscountEntitlement: $hasDiscountEntitlement, trialDeadlineDate: $trialDeadlineDate, discountEntitlementDeadlineDate: $discountEntitlementDeadlineDate, recommendedSignupNotificationIsAlreadyShow: $recommendedSignupNotificationIsAlreadyShow, premiumTrialGuideNotificationIsClosed: $premiumTrialGuideNotificationIsClosed, isLinkedLoginProvider: $isLinkedLoginProvider)';
   }
 
   @override
@@ -324,6 +346,10 @@ class _$_NotificationBarState extends _NotificationBarState {
             (identical(other.isTrial, isTrial) ||
                 const DeepCollectionEquality()
                     .equals(other.isTrial, isTrial)) &&
+            (identical(other.isAlreadyShowAnnouncementSupportedMultilplePillSheet, isAlreadyShowAnnouncementSupportedMultilplePillSheet) ||
+                const DeepCollectionEquality().equals(
+                    other.isAlreadyShowAnnouncementSupportedMultilplePillSheet,
+                    isAlreadyShowAnnouncementSupportedMultilplePillSheet)) &&
             (identical(other.hasDiscountEntitlement, hasDiscountEntitlement) ||
                 const DeepCollectionEquality().equals(
                     other.hasDiscountEntitlement, hasDiscountEntitlement)) &&
@@ -334,18 +360,14 @@ class _$_NotificationBarState extends _NotificationBarState {
                 const DeepCollectionEquality().equals(
                     other.discountEntitlementDeadlineDate,
                     discountEntitlementDeadlineDate)) &&
-            (identical(other.recommendedSignupNotificationIsAlreadyShow,
-                    recommendedSignupNotificationIsAlreadyShow) ||
+            (identical(other.recommendedSignupNotificationIsAlreadyShow, recommendedSignupNotificationIsAlreadyShow) ||
                 const DeepCollectionEquality().equals(
                     other.recommendedSignupNotificationIsAlreadyShow,
                     recommendedSignupNotificationIsAlreadyShow)) &&
-            (identical(other.premiumTrialGuideNotificationIsClosed,
-                    premiumTrialGuideNotificationIsClosed) ||
+            (identical(other.premiumTrialGuideNotificationIsClosed, premiumTrialGuideNotificationIsClosed) ||
                 const DeepCollectionEquality().equals(
-                    other.premiumTrialGuideNotificationIsClosed,
-                    premiumTrialGuideNotificationIsClosed)) &&
-            (identical(other.isLinkedLoginProvider, isLinkedLoginProvider) ||
-                const DeepCollectionEquality().equals(other.isLinkedLoginProvider, isLinkedLoginProvider)));
+                    other.premiumTrialGuideNotificationIsClosed, premiumTrialGuideNotificationIsClosed)) &&
+            (identical(other.isLinkedLoginProvider, isLinkedLoginProvider) || const DeepCollectionEquality().equals(other.isLinkedLoginProvider, isLinkedLoginProvider)));
   }
 
   @override
@@ -355,6 +377,8 @@ class _$_NotificationBarState extends _NotificationBarState {
       const DeepCollectionEquality().hash(totalCountOfActionForTakenPill) ^
       const DeepCollectionEquality().hash(isPremium) ^
       const DeepCollectionEquality().hash(isTrial) ^
+      const DeepCollectionEquality()
+          .hash(isAlreadyShowAnnouncementSupportedMultilplePillSheet) ^
       const DeepCollectionEquality().hash(hasDiscountEntitlement) ^
       const DeepCollectionEquality().hash(trialDeadlineDate) ^
       const DeepCollectionEquality().hash(discountEntitlementDeadlineDate) ^
@@ -377,6 +401,7 @@ abstract class _NotificationBarState extends NotificationBarState {
       required int totalCountOfActionForTakenPill,
       required bool isPremium,
       required bool isTrial,
+      required bool isAlreadyShowAnnouncementSupportedMultilplePillSheet,
       required bool hasDiscountEntitlement,
       required DateTime? trialDeadlineDate,
       required DateTime? discountEntitlementDeadlineDate,
@@ -394,6 +419,9 @@ abstract class _NotificationBarState extends NotificationBarState {
   bool get isPremium => throw _privateConstructorUsedError;
   @override
   bool get isTrial => throw _privateConstructorUsedError;
+  @override
+  bool get isAlreadyShowAnnouncementSupportedMultilplePillSheet =>
+      throw _privateConstructorUsedError;
   @override
   bool get hasDiscountEntitlement => throw _privateConstructorUsedError;
   @override
