@@ -4,6 +4,7 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/analytics.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/domain/demography/demography_page.dart';
+import 'package:pilll/domain/modal/announcement_multiple_pillsheet.dart';
 import 'package:pilll/domain/premium_introduction/premium_introduction_sheet.dart';
 import 'package:pilll/domain/premium_introduction/util/discount_deadline.dart';
 import 'package:pilll/domain/premium_trial/premium_trial_complete_modal.dart';
@@ -150,7 +151,7 @@ class NotificationBar extends HookWidget {
     if (!state.isAlreadyShowAnnouncementSupportedMultilplePillSheet) {
       return AnnouncementSupportedMultiplePillSheet(
         onTap: () {
-          // TODO:
+          showAnnouncementMultiplePillSheet(context);
         },
         onClose: () {
           store.closeAnnouncementMultiplePillSheet();
