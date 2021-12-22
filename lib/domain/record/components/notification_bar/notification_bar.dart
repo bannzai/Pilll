@@ -8,6 +8,7 @@ import 'package:pilll/domain/premium_introduction/premium_introduction_sheet.dar
 import 'package:pilll/domain/premium_introduction/util/discount_deadline.dart';
 import 'package:pilll/domain/premium_trial/premium_trial_complete_modal.dart';
 import 'package:pilll/domain/premium_trial/premium_trial_modal.dart';
+import 'package:pilll/domain/record/components/notification_bar/components/announce_supported_multiple_pill_sheet.dart';
 import 'package:pilll/domain/record/components/notification_bar/components/discount_price_deadline.dart';
 import 'package:pilll/domain/record/components/notification_bar/components/ended_pill_sheet.dart';
 import 'package:pilll/domain/record/components/notification_bar/notification_bar_store.dart';
@@ -144,6 +145,17 @@ class NotificationBar extends HookWidget {
         // ピルシートグループが存在していてactivedPillSheetが無い場合はピルシート終了が何かしらの理由がなくなったと見なし終了表示にする
         return EndedPillSheet();
       }
+    }
+
+    if (!state.isAlreadyShowAnnouncementSupportedMultilplePillSheet) {
+      return AnnouncementSupportedMultiplePillSheet(
+        onTap: () {
+          // TODO:
+        },
+        onClose: () {
+          store.closeAnnouncementMultiplePillSheet();
+        },
+      );
     }
   }
 }
