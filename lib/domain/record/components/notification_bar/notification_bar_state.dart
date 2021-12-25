@@ -13,6 +13,7 @@ abstract class NotificationBarState implements _$NotificationBarState {
     required int totalCountOfActionForTakenPill,
     required bool isPremium,
     required bool isTrial,
+    required bool isAlreadyShowAnnouncementSupportedMultilplePillSheet,
     required bool hasDiscountEntitlement,
     required DateTime? trialDeadlineDate,
     required DateTime? discountEntitlementDeadlineDate,
