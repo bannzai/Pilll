@@ -11,32 +11,42 @@ class AnnouncementMultiplePillSheet extends StatelessWidget {
     return AlertDialog(
       shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.all(Radius.circular(20.0))),
-      contentPadding: EdgeInsets.only(left: 24, right: 24, top: 32),
-      actionsPadding: EdgeInsets.only(left: 24, right: 24),
+      contentPadding: EdgeInsets.only(left: 24, right: 24, top: 16),
       content: Column(
         mainAxisSize: MainAxisSize.min,
-        children: <Widget>[
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
           Row(children: [
             IconButton(
               icon: Icon(Icons.close, color: Colors.black),
               onPressed: () => Navigator.of(context).pop(),
+              padding: EdgeInsets.only(left: 0, right: 8, top: 0, bottom: 8),
             ),
             Spacer(),
           ]),
-          Text("ピルシートを\n服用日数表示にできます",
-              style: FontType.subTitle.merge(TextColorStyle.main)),
+          Text(
+            "ピルシートを\n服用日数表示にできます",
+            style: TextStyle(
+                color: TextColor.main,
+                fontWeight: FontWeight.w700,
+                fontSize: 16,
+                fontFamily: FontFamily.japanese),
+            textAlign: TextAlign.center,
+          ),
           SizedBox(height: 24),
           Image.asset(
             "images/announcement_multiple_pill_sheet.png",
           ),
           SizedBox(height: 24),
           Text(
-            "ヤーズフレックスなど連続服用する方に\nおすすめです。",
+            "ヤーズフレックスなど連続服用する方におすすめです。",
             style: TextStyle(
               color: TextColor.main,
               fontFamily: FontFamily.japanese,
               fontWeight: FontWeight.w400,
+              fontSize: 14,
             ),
+            textAlign: TextAlign.center,
           ),
           SizedBox(height: 24),
           Row(children: [
