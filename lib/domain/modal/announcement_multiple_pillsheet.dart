@@ -71,11 +71,11 @@ class AnnouncementMultiplePillSheet extends StatelessWidget {
 
 showAnnouncementMultiplePillSheet(BuildContext context) async {
   final sharedPreferences = await SharedPreferences.getInstance();
-//  if (sharedPreferences.getBool(
-//          BoolKey.isAlreadyShowAnnouncementSupportedMultilplePillSheet) ??
-//      false) {
-//    return;
-//  }
+  if (sharedPreferences.getBool(
+          BoolKey.isAlreadyShowAnnouncementSupportedMultilplePillSheet) ??
+      false) {
+    return;
+  }
   sharedPreferences.setBool(
       BoolKey.isAlreadyShowAnnouncementSupportedMultilplePillSheet, true);
   showDialog(
