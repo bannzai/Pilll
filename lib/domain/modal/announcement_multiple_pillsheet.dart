@@ -23,7 +23,7 @@ class AnnouncementMultiplePillSheet extends StatelessWidget {
             ),
             Spacer(),
           ]),
-          Text("ピルシートを連番表示にできます",
+          Text("ピルシートを\n服用日数表示にできます",
               style: FontType.subTitle.merge(TextColorStyle.main)),
           SizedBox(height: 24),
           Image.asset(
