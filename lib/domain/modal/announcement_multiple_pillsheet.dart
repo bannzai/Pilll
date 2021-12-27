@@ -49,19 +49,28 @@ class AnnouncementMultiplePillSheet extends StatelessWidget {
             textAlign: TextAlign.center,
           ),
           SizedBox(height: 24),
-          Row(children: [
-            Text(
-              "表示モード",
-              style: TextStyle(
-                color: TextColor.main,
-                fontSize: 12,
-                fontFamily: FontFamily.japanese,
-                fontWeight: FontWeight.w700,
+          Row(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Text(
+                "表示モード",
+                style: TextStyle(
+                  color: TextColor.main,
+                  fontSize: 12,
+                  fontFamily: FontFamily.japanese,
+                  fontWeight: FontWeight.w700,
+                ),
               ),
-            ),
-            SizedBox(width: 6),
-            SvgPicture.asset("images/switching_appearance_mode.svg"),
-          ]),
+              SizedBox(width: 6),
+              SvgPicture.asset("images/switching_appearance_mode.svg"),
+              Text("から設定できます",
+                  style: TextStyle(
+                      color: TextColor.main,
+                      fontSize: 14,
+                      fontFamily: FontFamily.japanese,
+                      fontWeight: FontWeight.w400)),
+            ],
+          ),
         ],
       ),
       actions: [],
