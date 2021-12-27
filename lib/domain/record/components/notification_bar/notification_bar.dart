@@ -21,6 +21,8 @@ import 'package:pilll/domain/record/components/notification_bar/components/rest_
 import 'package:pilll/domain/record/record_page_state.dart';
 import 'package:pilll/signin/signin_sheet.dart';
 import 'package:pilll/signin/signin_sheet_state.dart';
+import 'package:pilll/util/shared_preference/keys.dart';
+import 'package:shared_preferences/shared_preferences.dart';
 
 class NotificationBar extends HookWidget {
   final RecordPageState parameter;
@@ -150,11 +152,19 @@ class NotificationBar extends HookWidget {
 
     if (!state.isAlreadyShowAnnouncementSupportedMultilplePillSheet) {
       return AnnouncementSupportedMultiplePillSheet(
-        onTap: () {
+        onTap: () async {
+          final sharedPreferences = await SharedPreferences.getInstance();
+          if (sharedPreferences.getBool(BoolKey
+                  .isAlreadyShowAnnouncementSupportedMultilplePillSheet) ??
+              false) {
+            return;
+          }
+
+          store.setTrueIsAlreadyShowAnnouncementSupportedMultilplePillSheet();
           showAnnouncementMultiplePillSheet(context);
         },
         onClose: () {
-          store.closeAnnouncementMultiplePillSheet();
+          store.setTrueIsAlreadyShowAnnouncementSupportedMultilplePillSheet();
         },
       );
     }
