@@ -76,7 +76,7 @@ showAnnouncementMultiplePillSheet(BuildContext context) async {
       false) {
     return;
   }
-  sharedPreferences.setBool(
+  await sharedPreferences.setBool(
       BoolKey.isAlreadyShowAnnouncementSupportedMultilplePillSheet, true);
   showDialog(
     context: context,
