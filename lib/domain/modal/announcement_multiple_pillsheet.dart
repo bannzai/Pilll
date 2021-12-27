@@ -2,8 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
-import 'package:pilll/util/shared_preference/keys.dart';
-import 'package:shared_preferences/shared_preferences.dart';
 
 class AnnouncementMultiplePillSheet extends StatelessWidget {
   @override
@@ -79,14 +77,6 @@ class AnnouncementMultiplePillSheet extends StatelessWidget {
 }
 
 showAnnouncementMultiplePillSheet(BuildContext context) async {
-  final sharedPreferences = await SharedPreferences.getInstance();
-  if (sharedPreferences.getBool(
-          BoolKey.isAlreadyShowAnnouncementSupportedMultilplePillSheet) ??
-      false) {
-    return;
-  }
-  await sharedPreferences.setBool(
-      BoolKey.isAlreadyShowAnnouncementSupportedMultilplePillSheet, true);
   showDialog(
     context: context,
     builder: (context) => AnnouncementMultiplePillSheet(),
