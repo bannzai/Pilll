@@ -110,7 +110,7 @@ extension PillSheetModifiedHistoryDateEffectivePillNumber
     if (before == (after - 1)) {
       return "$after番";
     }
-    return "$before-$after番";
+    return "${before + 1}-$after番";
   }
 
   static String revert(RevertTakenPillValue value) {
