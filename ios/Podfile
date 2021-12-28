@@ -33,7 +33,8 @@ target 'Runner' do
   use_frameworks!
   use_modular_headers!
 
-  pod 'FirebaseFirestore', :git => 'https://github.com/invertase/firestore-ios-sdk-frameworks.git', :tag => '8.0.0'
+  # Ref: https://github.dev/FirebaseExtended/flutterfire/tree/master/packages/firebase_core/firebase_core/ios/firebase_sdk_version.rb#L1-L2
+  pod 'FirebaseFirestore', :git => 'https://github.com/invertase/firestore-ios-sdk-frameworks.git', :tag => '8.9.0'
 
   flutter_install_all_ios_pods File.dirname(File.realpath(__FILE__))
 end
