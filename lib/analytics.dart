@@ -2,7 +2,7 @@ import 'dart:async';
 
 import 'package:firebase_analytics/firebase_analytics.dart';
 
-final firebaseAnalytics = FirebaseAnalytics();
+final firebaseAnalytics = FirebaseAnalytics.instance;
 
 class Analytics {
   logEvent({required String name, Map<String, dynamic>? parameters}) async {
