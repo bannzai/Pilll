@@ -72,7 +72,7 @@ class InitialSettingStateStore extends StateNotifier<InitialSettingState> {
         await userService.recordUserIDs();
         unawaited(FirebaseCrashlytics.instance.setUserIdentifier(user.uid));
         unawaited(firebaseAnalytics.setUserId(user.uid));
-        await Purchases.identify(user.uid);
+        await Purchases.logIn(user.uid);
       }
       state = state.copyWith(
           isAccountCooperationDidEnd: isAccountCooperationDidEnd);
