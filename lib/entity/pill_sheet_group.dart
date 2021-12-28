@@ -14,9 +14,9 @@ abstract class PillSheetGroupFirestoreKeys {
 }
 
 @freezed
+@JsonSerializable(explicitToJson: true)
 abstract class PillSheetGroup implements _$PillSheetGroup {
   PillSheetGroup._();
-  @JsonSerializable(explicitToJson: true)
   factory PillSheetGroup({
     @JsonKey(includeIfNull: false, toJson: toNull)
         String? id,

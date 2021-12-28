@@ -19,6 +19,7 @@ enum PhysicalConditionStatus {
 }
 
 @freezed
+@JsonSerializable(explicitToJson: true)
 abstract class Diary with _$Diary {
   static final List<String> allPhysicalConditions = [
     "頭痛",
@@ -39,7 +40,6 @@ abstract class Diary with _$Diary {
 
   String get id => "Diary_${DateTimeFormatter.diaryIdentifier(date)}";
 
-  @JsonSerializable(explicitToJson: true)
   factory Diary({
     @JsonKey(
       fromJson: NonNullTimestampConverter.timestampToDateTime,

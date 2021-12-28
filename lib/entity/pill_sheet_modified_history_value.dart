@@ -7,10 +7,10 @@ part 'pill_sheet_modified_history_value.g.dart';
 part 'pill_sheet_modified_history_value.freezed.dart';
 
 @freezed
+@JsonSerializable(explicitToJson: true)
 abstract class PillSheetModifiedHistoryValue
     implements _$PillSheetModifiedHistoryValue {
   PillSheetModifiedHistoryValue._();
-  @JsonSerializable(explicitToJson: true)
   factory PillSheetModifiedHistoryValue({
     DateTime? beginTrialDate,
     @Default(null) CreatedPillSheetValue? createdPillSheet,
@@ -33,9 +33,9 @@ abstract class PillSheetModifiedHistoryValue
 }
 
 @freezed
+@JsonSerializable(explicitToJson: true)
 abstract class CreatedPillSheetValue implements _$CreatedPillSheetValue {
   CreatedPillSheetValue._();
-  @JsonSerializable(explicitToJson: true)
   factory CreatedPillSheetValue({
     @JsonKey(
       fromJson: NonNullTimestampConverter.timestampToDateTime,
@@ -53,10 +53,10 @@ abstract class CreatedPillSheetValue implements _$CreatedPillSheetValue {
 }
 
 @freezed
+@JsonSerializable(explicitToJson: true)
 abstract class AutomaticallyRecordedLastTakenDateValue
     implements _$AutomaticallyRecordedLastTakenDateValue {
   AutomaticallyRecordedLastTakenDateValue._();
-  @JsonSerializable(explicitToJson: true)
   factory AutomaticallyRecordedLastTakenDateValue({
     @JsonKey(
       fromJson: TimestampConverter.timestampToDateTime,
@@ -81,9 +81,9 @@ abstract class AutomaticallyRecordedLastTakenDateValue
 }
 
 @freezed
+@JsonSerializable(explicitToJson: true)
 abstract class DeletedPillSheetValue implements _$DeletedPillSheetValue {
   DeletedPillSheetValue._();
-  @JsonSerializable(explicitToJson: true)
   factory DeletedPillSheetValue({
     @JsonKey(
       fromJson: NonNullTimestampConverter.timestampToDateTime,
@@ -101,9 +101,9 @@ abstract class DeletedPillSheetValue implements _$DeletedPillSheetValue {
 }
 
 @freezed
+@JsonSerializable(explicitToJson: true)
 abstract class TakenPillValue implements _$TakenPillValue {
   TakenPillValue._();
-  @JsonSerializable(explicitToJson: true)
   factory TakenPillValue({
     @JsonKey(
       fromJson: TimestampConverter.timestampToDateTime,
@@ -126,9 +126,9 @@ abstract class TakenPillValue implements _$TakenPillValue {
 }
 
 @freezed
+@JsonSerializable(explicitToJson: true)
 abstract class RevertTakenPillValue implements _$RevertTakenPillValue {
   RevertTakenPillValue._();
-  @JsonSerializable(explicitToJson: true)
   factory RevertTakenPillValue({
     @JsonKey(
       fromJson: TimestampConverter.timestampToDateTime,
@@ -151,9 +151,9 @@ abstract class RevertTakenPillValue implements _$RevertTakenPillValue {
 }
 
 @freezed
+@JsonSerializable(explicitToJson: true)
 abstract class ChangedPillNumberValue implements _$ChangedPillNumberValue {
   ChangedPillNumberValue._();
-  @JsonSerializable(explicitToJson: true)
   factory ChangedPillNumberValue({
     @JsonKey(
       fromJson: NonNullTimestampConverter.timestampToDateTime,
@@ -180,9 +180,9 @@ abstract class ChangedPillNumberValue implements _$ChangedPillNumberValue {
 }
 
 @freezed
+@JsonSerializable(explicitToJson: true)
 abstract class EndedPillSheetValue implements _$EndedPillSheetValue {
   EndedPillSheetValue._();
-  @JsonSerializable(explicitToJson: true)
   factory EndedPillSheetValue({
     @JsonKey(
       fromJson: NonNullTimestampConverter.timestampToDateTime,
@@ -203,9 +203,9 @@ abstract class EndedPillSheetValue implements _$EndedPillSheetValue {
 }
 
 @freezed
+@JsonSerializable(explicitToJson: true)
 abstract class BeganRestDurationValue implements _$BeganRestDurationValue {
   BeganRestDurationValue._();
-  @JsonSerializable(explicitToJson: true)
   factory BeganRestDurationValue({
     required RestDuration restDuration,
   }) = _BeganRestDurationValue;
@@ -217,9 +217,9 @@ abstract class BeganRestDurationValue implements _$BeganRestDurationValue {
 }
 
 @freezed
+@JsonSerializable(explicitToJson: true)
 abstract class EndedRestDurationValue implements _$EndedRestDurationValue {
   EndedRestDurationValue._();
-  @JsonSerializable(explicitToJson: true)
   factory EndedRestDurationValue({
     required RestDuration restDuration,
   }) = _EndedRestDurationValue;

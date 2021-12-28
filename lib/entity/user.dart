@@ -64,9 +64,9 @@ extension UserFirestoreFieldKeys on String {
 }
 
 @freezed
+@JsonSerializable(explicitToJson: true)
 abstract class User implements _$User {
   User._();
-  @JsonSerializable(explicitToJson: true)
   factory User({
     @JsonKey(name: "settings")
         Setting? setting,
