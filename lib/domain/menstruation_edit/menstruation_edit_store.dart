@@ -9,9 +9,8 @@ import 'package:pilll/domain/menstruation_edit/menstruation_edit_state.dart';
 import 'package:pilll/util/datetime/date_compare.dart';
 import 'package:pilll/util/datetime/day.dart';
 
-final menstruationEditProvider = StateNotifierProvider.family
-    .autoDispose<MenstruationEditStore, Menstruation?>(
-  (ref, menstruation) => MenstruationEditStore(
+final menstruationEditProvider = StateNotifierProvider.family.autoDispose(
+  (ref, Menstruation? menstruation) => MenstruationEditStore(
     menstruation: menstruation,
     menstruationService: ref.watch(menstruationServiceProvider),
     settingService: ref.watch(settingServiceProvider),

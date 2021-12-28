@@ -14,8 +14,8 @@ import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
-final _confirmDiaryStoreProvider =
-    StateNotifierProvider.autoDispose.family<ConfirmDiaryStore, Diary>((ref, diary) {
+final _confirmDiaryStoreProvider = StateNotifierProvider.autoDispose
+    .family<ConfirmDiaryStore, DiaryState, Diary>((ref, diary) {
   final service = ref.watch(diaryServiceProvider);
   return ConfirmDiaryStore(service, DiaryState(diary: diary.copyWith()));
 });

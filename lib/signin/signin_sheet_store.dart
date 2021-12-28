@@ -6,9 +6,9 @@ import 'package:pilll/service/user.dart';
 import 'package:pilll/signin/signin_sheet_state.dart';
 import 'package:riverpod/riverpod.dart';
 
-final signinSheetStoreProvider = StateNotifierProvider.autoDispose
-    .family<SigninSheetStore, SigninSheetStateContext>(
-  (ref, context) => SigninSheetStore(context, ref.watch(userServiceProvider)),
+final signinSheetStoreProvider = StateNotifierProvider.autoDispose.family(
+  (ref, SigninSheetStateContext context) =>
+      SigninSheetStore(context, ref.watch(userServiceProvider)),
 );
 
 class SigninSheetStore extends StateNotifier<SigninSheetState> {
