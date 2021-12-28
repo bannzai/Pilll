@@ -96,7 +96,7 @@ void main() {
         ProviderScope(
           overrides: [
             settingStoreProvider.overrideWithProvider(
-              Provider(
+              StateNotifierProvider(
                 (ref) => store,
               ),
             )
@@ -161,7 +161,7 @@ void main() {
         ProviderScope(
           overrides: [
             settingStoreProvider.overrideWithProvider(
-              Provider(
+              StateNotifierProvider(
                 (ref) => store,
               ),
             )

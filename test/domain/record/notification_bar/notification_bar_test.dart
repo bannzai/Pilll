@@ -86,14 +86,15 @@ void main() {
         await tester.pumpWidget(
           ProviderScope(
             overrides: [
-              notificationBarStoreProvider.overrideWithProvider(
-                  (ref, param) => MockNotificationBarStateStore()),
-              notificationBarStateProvider
-                  .overrideWithProvider((ref, param) => state),
-              isOverDiscountDeadlineProvider
-                  .overrideWithProvider((ref, param) => false),
-              durationToDiscountPriceDeadline.overrideWithProvider(
-                  (ref, param) => Duration(seconds: 1000)),
+              notificationBarStoreProvider.overrideWithProvider((param) =>
+                  StateNotifierProvider.autoDispose(
+                      (_) => MockNotificationBarStateStore())),
+              notificationBarStateProvider.overrideWithProvider(
+                  (param) => Provider.autoDispose((_) => state)),
+              isOverDiscountDeadlineProvider.overrideWithProvider(
+                  (param) => Provider.autoDispose((_) => false)),
+              durationToDiscountPriceDeadline.overrideWithProvider((param) =>
+                  Provider.autoDispose((_) => Duration(seconds: 1000))),
             ],
             child: MaterialApp(
               home: Material(child: NotificationBar(recordPageState)),
@@ -148,10 +149,11 @@ void main() {
         await tester.pumpWidget(
           ProviderScope(
             overrides: [
-              notificationBarStoreProvider.overrideWithProvider(
-                  (ref, param) => MockNotificationBarStateStore()),
-              notificationBarStateProvider
-                  .overrideWithProvider((ref, param) => state),
+              notificationBarStoreProvider.overrideWithProvider((param) =>
+                  StateNotifierProvider.autoDispose(
+                      (_) => MockNotificationBarStateStore())),
+              notificationBarStateProvider.overrideWithProvider(
+                  (param) => Provider.autoDispose((_) => state)),
             ],
             child: MaterialApp(
               home: Material(child: NotificationBar(recordPageState)),
@@ -209,10 +211,11 @@ void main() {
         await tester.pumpWidget(
           ProviderScope(
             overrides: [
-              notificationBarStoreProvider.overrideWithProvider(
-                  (ref, param) => MockNotificationBarStateStore()),
-              notificationBarStateProvider
-                  .overrideWithProvider((ref, param) => state),
+              notificationBarStoreProvider.overrideWithProvider((param) =>
+                  StateNotifierProvider.autoDispose(
+                      (_) => MockNotificationBarStateStore())),
+              notificationBarStateProvider.overrideWithProvider(
+                  (param) => Provider.autoDispose((_) => state)),
             ],
             child: MaterialApp(
               home: Material(child: NotificationBar(recordPageState)),
@@ -269,10 +272,11 @@ void main() {
         await tester.pumpWidget(
           ProviderScope(
             overrides: [
-              notificationBarStateProvider
-                  .overrideWithProvider((ref, param) => state),
-              notificationBarStoreProvider.overrideWithProvider(
-                  (ref, param) => MockNotificationBarStateStore()),
+              notificationBarStoreProvider.overrideWithProvider((param) =>
+                  StateNotifierProvider.autoDispose(
+                      (_) => MockNotificationBarStateStore())),
+              notificationBarStateProvider.overrideWithProvider(
+                  (param) => Provider.autoDispose((_) => state)),
             ],
             child: MaterialApp(
               home: Material(child: NotificationBar(recordPageState)),
@@ -330,10 +334,11 @@ void main() {
         await tester.pumpWidget(
           ProviderScope(
             overrides: [
-              notificationBarStateProvider
-                  .overrideWithProvider((ref, param) => state),
-              notificationBarStoreProvider.overrideWithProvider(
-                  (ref, param) => MockNotificationBarStateStore()),
+              notificationBarStoreProvider.overrideWithProvider((param) =>
+                  StateNotifierProvider.autoDispose(
+                      (_) => MockNotificationBarStateStore())),
+              notificationBarStateProvider.overrideWithProvider(
+                  (param) => Provider.autoDispose((_) => state)),
             ],
             child: MaterialApp(
               home: Material(child: NotificationBar(recordPageState)),
@@ -390,10 +395,11 @@ void main() {
         await tester.pumpWidget(
           ProviderScope(
             overrides: [
-              notificationBarStateProvider
-                  .overrideWithProvider((ref, param) => state),
-              notificationBarStoreProvider.overrideWithProvider(
-                  (ref, param) => MockNotificationBarStateStore()),
+              notificationBarStoreProvider.overrideWithProvider((param) =>
+                  StateNotifierProvider.autoDispose(
+                      (_) => MockNotificationBarStateStore())),
+              notificationBarStateProvider.overrideWithProvider(
+                  (param) => Provider.autoDispose((_) => state)),
             ],
             child: MaterialApp(
               home: Material(child: NotificationBar(recordPageState)),
@@ -452,10 +458,11 @@ void main() {
         await tester.pumpWidget(
           ProviderScope(
             overrides: [
-              notificationBarStoreProvider.overrideWithProvider(
-                  (ref, param) => MockNotificationBarStateStore()),
-              notificationBarStateProvider
-                  .overrideWithProvider((ref, param) => state),
+              notificationBarStoreProvider.overrideWithProvider((param) =>
+                  StateNotifierProvider.autoDispose(
+                      (_) => MockNotificationBarStateStore())),
+              notificationBarStateProvider.overrideWithProvider(
+                  (param) => Provider.autoDispose((_) => state)),
             ],
             child: MaterialApp(
               home: Material(child: NotificationBar(recordPageState)),
@@ -512,10 +519,11 @@ void main() {
         await tester.pumpWidget(
           ProviderScope(
             overrides: [
-              notificationBarStoreProvider.overrideWithProvider(
-                  (ref, param) => MockNotificationBarStateStore()),
-              notificationBarStateProvider
-                  .overrideWithProvider((ref, param) => state),
+              notificationBarStoreProvider.overrideWithProvider((param) =>
+                  StateNotifierProvider.autoDispose(
+                      (_) => MockNotificationBarStateStore())),
+              notificationBarStateProvider.overrideWithProvider(
+                  (param) => Provider.autoDispose((_) => state)),
             ],
             child: MaterialApp(
               home: Material(child: NotificationBar(recordPageState)),
@@ -572,10 +580,11 @@ void main() {
         await tester.pumpWidget(
           ProviderScope(
             overrides: [
-              notificationBarStateProvider
-                  .overrideWithProvider((ref, param) => state),
-              notificationBarStoreProvider.overrideWithProvider(
-                  (ref, param) => MockNotificationBarStateStore()),
+              notificationBarStoreProvider.overrideWithProvider((param) =>
+                  StateNotifierProvider.autoDispose(
+                      (_) => MockNotificationBarStateStore())),
+              notificationBarStateProvider.overrideWithProvider(
+                  (param) => Provider.autoDispose((_) => state)),
             ],
             child: MaterialApp(
               home: Material(child: NotificationBar(recordPageState)),
@@ -632,10 +641,11 @@ void main() {
       await tester.pumpWidget(
         ProviderScope(
           overrides: [
-            notificationBarStateProvider
-                .overrideWithProvider((ref, param) => state),
-            notificationBarStoreProvider.overrideWithProvider(
-                (ref, param) => MockNotificationBarStateStore()),
+            notificationBarStoreProvider.overrideWithProvider((param) =>
+                StateNotifierProvider.autoDispose(
+                    (_) => MockNotificationBarStateStore())),
+            notificationBarStateProvider.overrideWithProvider(
+                (param) => Provider.autoDispose((_) => state)),
           ],
           child: MaterialApp(
             home: Material(child: NotificationBar(recordPageState)),

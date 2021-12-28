@@ -93,12 +93,12 @@ void main() {
               premiumIntroductionStoreProvider.overrideWithProvider(
                   StateNotifierProvider.autoDispose(
                       (ref) => MockPremiumIntroductionStore())),
-              isOverDiscountDeadlineProvider
-                  .overrideWithProvider((ref, param) => true),
-              durationToDiscountPriceDeadline.overrideWithProvider(
-                  (ref, param) => Duration(seconds: 1000)),
-              purchaseButtonsStateProvider.overrideWithProvider(
-                  (ref, param) => _FakePurchaseButtonState()),
+              isOverDiscountDeadlineProvider.overrideWithProvider(
+                  (param) => Provider.autoDispose((_) => true)),
+              durationToDiscountPriceDeadline.overrideWithProvider((param) =>
+                  Provider.autoDispose((_) => Duration(seconds: 1000))),
+              purchaseButtonsStateProvider.overrideWithProvider((param) =>
+                  Provider.autoDispose((_) => _FakePurchaseButtonState())),
             ],
             child: MaterialApp(
               home: sheet,
@@ -138,12 +138,12 @@ void main() {
               premiumIntroductionStoreProvider.overrideWithProvider(
                   StateNotifierProvider.autoDispose(
                       (ref) => MockPremiumIntroductionStore())),
-              isOverDiscountDeadlineProvider
-                  .overrideWithProvider((ref, param) => isOverDiscountDeadline),
-              durationToDiscountPriceDeadline.overrideWithProvider(
-                  (ref, param) => Duration(seconds: 1000)),
-              purchaseButtonsStateProvider.overrideWithProvider(
-                  (ref, param) => _FakePurchaseButtonState()),
+              isOverDiscountDeadlineProvider.overrideWithProvider((param) =>
+                  Provider.autoDispose((_) => isOverDiscountDeadline)),
+              durationToDiscountPriceDeadline.overrideWithProvider((param) =>
+                  Provider.autoDispose((_) => Duration(seconds: 1000))),
+              purchaseButtonsStateProvider.overrideWithProvider((param) =>
+                  Provider.autoDispose((_) => _FakePurchaseButtonState())),
             ],
             child: MaterialApp(
               home: sheet,
@@ -184,12 +184,12 @@ void main() {
               premiumIntroductionStoreProvider.overrideWithProvider(
                   StateNotifierProvider.autoDispose(
                       (ref) => MockPremiumIntroductionStore())),
-              isOverDiscountDeadlineProvider
-                  .overrideWithProvider((ref, param) => false),
-              durationToDiscountPriceDeadline.overrideWithProvider(
-                  (ref, param) => Duration(seconds: 1000)),
-              purchaseButtonsStateProvider.overrideWithProvider(
-                  (ref, param) => _FakePurchaseButtonState()),
+              isOverDiscountDeadlineProvider.overrideWithProvider(
+                  (param) => Provider.autoDispose((_) => false)),
+              durationToDiscountPriceDeadline.overrideWithProvider((param) =>
+                  Provider.autoDispose((_) => Duration(seconds: 1000))),
+              purchaseButtonsStateProvider.overrideWithProvider((param) =>
+                  Provider.autoDispose((_) => _FakePurchaseButtonState())),
             ],
             child: MaterialApp(
               home: sheet,
@@ -230,12 +230,12 @@ void main() {
               premiumIntroductionStoreProvider.overrideWithProvider(
                   StateNotifierProvider.autoDispose(
                       (ref) => MockPremiumIntroductionStore())),
-              isOverDiscountDeadlineProvider
-                  .overrideWithProvider((ref, param) => isOverDiscountDeadline),
-              durationToDiscountPriceDeadline.overrideWithProvider(
-                  (ref, param) => Duration(seconds: 1000)),
-              purchaseButtonsStateProvider.overrideWithProvider(
-                  (ref, param) => _FakePurchaseButtonState()),
+              isOverDiscountDeadlineProvider.overrideWithProvider((param) =>
+                  Provider.autoDispose((_) => isOverDiscountDeadline)),
+              durationToDiscountPriceDeadline.overrideWithProvider((param) =>
+                  Provider.autoDispose((_) => Duration(seconds: 1000))),
+              purchaseButtonsStateProvider.overrideWithProvider((param) =>
+                  Provider.autoDispose((_) => _FakePurchaseButtonState())),
             ],
             child: MaterialApp(
               home: sheet,
@@ -275,12 +275,12 @@ void main() {
               premiumIntroductionStoreProvider.overrideWithProvider(
                   StateNotifierProvider.autoDispose(
                       (ref) => MockPremiumIntroductionStore())),
-              isOverDiscountDeadlineProvider
-                  .overrideWithProvider((ref, param) => false),
-              durationToDiscountPriceDeadline.overrideWithProvider(
-                  (ref, param) => Duration(seconds: 1000)),
-              purchaseButtonsStateProvider.overrideWithProvider(
-                  (ref, param) => _FakePurchaseButtonState()),
+              isOverDiscountDeadlineProvider.overrideWithProvider(
+                  (param) => Provider.autoDispose((_) => false)),
+              durationToDiscountPriceDeadline.overrideWithProvider((param) =>
+                  Provider.autoDispose((_) => Duration(seconds: 1000))),
+              purchaseButtonsStateProvider.overrideWithProvider((param) =>
+                  Provider.autoDispose((_) => _FakePurchaseButtonState())),
             ],
             child: MaterialApp(
               home: sheet,
