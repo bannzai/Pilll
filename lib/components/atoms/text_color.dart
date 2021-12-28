@@ -1,6 +1,5 @@
 import 'package:pilll/components/atoms/color.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 class TextColor {
   static Color get standard => black;

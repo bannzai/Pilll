@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:pilll/components/molecules/indicator.dart';
 import 'package:pilll/entity/setting.dart';
 import 'package:pilll/domain/settings/setting_page_store.dart';

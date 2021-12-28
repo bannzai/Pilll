@@ -1,16 +1,15 @@
 import 'package:flutter/material.dart';
 import 'dart:math' as math;
-import 'package:flutter/animation.dart';
 
 class Ripple extends CustomPainter {
   Ripple(
     this._animation, {
     required this.color,
   }) : super(repaint: _animation);
-  
+
   final Color color;
   final Animation<double>? _animation;
-  
+
   void circle(Canvas canvas, Rect rect, double value) {
     final double opacity = (1.0 - (value / 2.0)).clamp(0.0, 1.0);
     final Color _color = color.withOpacity(opacity);
