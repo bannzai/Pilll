@@ -9,13 +9,13 @@ part 'setting.freezed.dart';
 @freezed
 @JsonSerializable(explicitToJson: true)
 class ReminderTime implements _$ReminderTime {
-const ReminderTime._();
+  const ReminderTime._();
   const factory ReminderTime({
     required int hour,
     required int minute,
   }) = _ReminderTime;
 
-const factory ReminderTime.fromJson(Map<String, dynamic> json) =>
+  factory ReminderTime.fromJson(Map<String, dynamic> json) =>
       _$ReminderTimeFromJson(json);
   Map<String, dynamic> toJson() =>
       _$_$_ReminderTimeToJson(this as _$_ReminderTime);
@@ -46,8 +46,8 @@ class SettingFirestoreFieldKeys {
 @freezed
 @JsonSerializable(explicitToJson: true)
 class Setting implements _$Setting {
-const Setting._();
-const factory Setting({
+  const Setting._();
+  const factory Setting({
     @Default([]) List<PillSheetType> pillSheetTypes,
     required int pillNumberForFromMenstruation,
     required int durationMenstruation,
@@ -59,7 +59,7 @@ const factory Setting({
     @Default(false) bool isAutomaticallyCreatePillSheet,
   }) = _Setting;
 
-const factory Setting.fromJson(Map<String, dynamic> json) =>
+  factory Setting.fromJson(Map<String, dynamic> json) =>
       _$SettingFromJson(json);
   Map<String, dynamic> toJson() => _$_$_SettingToJson(this as _$_Setting);
 }

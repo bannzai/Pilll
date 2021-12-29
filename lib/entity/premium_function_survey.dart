@@ -12,7 +12,7 @@ const factory PremiumFunctionSurvey({
     required String message,
   }) = _PremiumFunctionSurvey;
   Preconst PremiumFunctionSurvey._();
-const factory PremiumFunctionSurvey.fromJson(Map<String, dynamic> json) =>
+factory PremiumFunctionSurvey.fromJson(Map<String, dynamic> json) =>
       _$PremiumFunctionSurveyFromJson(json);
   Map<String, dynamic> toJson() =>
       _$_$_PremiumFunctionSurveyToJson(this as _$_PremiumFunctionSurvey);

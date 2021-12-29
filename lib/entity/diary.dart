@@ -35,7 +35,7 @@ class Diary with _$Diary {
 
   String get id => "Diary_${DateTimeFormatter.diaryIdentifier(date)}";
 
-const factory Diary({
+  const factory Diary({
     @JsonKey(
       fromJson: NonNullTimestampConverter.timestampToDateTime,
       toJson: NonNullTimestampConverter.dateTimeToTimestamp,
@@ -52,15 +52,15 @@ const factory Diary({
     required bool hasSex,
     required String memo,
   }) = _Diary;
-const Diary._();
+  const Diary._();
 
-factory Diary.fromDate(DateTime date) => Diary(
+  factory Diary.fromDate(DateTime date) => Diary(
       date: date,
       memo: "",
       createdAt: now(),
       physicalConditions: [],
       hasSex: false);
-const factory Diary.fromJson(Map<String, dynamic> json) => _$DiaryFromJson(json);
+  factory Diary.fromJson(Map<String, dynamic> json) => _$DiaryFromJson(json);
   Map<String, dynamic> toJson() => _$_$_DiaryToJson(this as _$_Diary);
   bool get hasPhysicalConditionStatus => physicalConditionStatus != null;
 }

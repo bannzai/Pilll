@@ -16,7 +16,7 @@ class MenstruationFirestoreKey {
 class Menstruation with _$Menstruation {
   String? get documentID => id;
 
-const factory Menstruation.fromJson(Map<String, dynamic> json) =>
+factory Menstruation.fromJson(Map<String, dynamic> json) =>
       _$MenstruationFromJson(json);
   Map<String, dynamic> toJson() =>
       _$_$_MenstruationToJson(this as _$_Menstruation);
