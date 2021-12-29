@@ -36,7 +36,7 @@ enum SettingSection {
   other
 }
 
-class SettingPage extends HookWidget {
+class SettingPage extends HookConsumerWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(

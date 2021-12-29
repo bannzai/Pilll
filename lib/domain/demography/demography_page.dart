@@ -16,7 +16,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 String _unknown = "該当なし";
 
-class DemographyPage extends HookWidget {
+class DemographyPage extends HookConsumerWidget {
   final VoidCallback done;
 
   DemographyPage(this.done);

@@ -9,7 +9,7 @@ import 'package:pilll/domain/settings/menstruation/setting_menstruation_store.da
 import 'package:pilll/domain/settings/setting_page_store.dart';
 import 'package:pilll/entity/setting.dart';
 
-class SettingMenstruationPage extends HookWidget {
+class SettingMenstruationPage extends HookConsumerWidget {
   const SettingMenstruationPage({
     Key? key,
   }) : super(key: key);

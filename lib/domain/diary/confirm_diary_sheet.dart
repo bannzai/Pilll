@@ -20,7 +20,7 @@ final _confirmDiaryStoreProvider = StateNotifierProvider.autoDispose
   return ConfirmDiaryStore(service, DiaryState(diary: diary.copyWith()));
 });
 
-class ConfirmDiarySheet extends HookWidget {
+class ConfirmDiarySheet extends HookConsumerWidget {
   final Diary _diary;
 
   ConfirmDiarySheet(this._diary);

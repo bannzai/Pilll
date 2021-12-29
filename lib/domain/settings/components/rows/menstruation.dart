@@ -8,7 +8,7 @@ import 'package:pilll/domain/settings/setting_page_store.dart';
 import 'package:pilll/entity/setting.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 
-class MenstruationRow extends HookWidget {
+class MenstruationRow extends HookConsumerWidget {
   final SettingStateStore store;
   final Setting setting;
 

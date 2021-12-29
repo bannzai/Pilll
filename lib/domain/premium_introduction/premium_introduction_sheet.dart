@@ -18,7 +18,7 @@ import 'package:pilll/error/universal_error_page.dart';
 import 'package:pilll/util/links.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-class PremiumIntroductionSheet extends HookWidget {
+class PremiumIntroductionSheet extends HookConsumerWidget {
   @override
   Widget build(BuildContext context) {
     final store = useProvider(premiumIntroductionStoreProvider);

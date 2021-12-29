@@ -9,7 +9,7 @@ import 'package:pilll/domain/initial_setting/initial_setting_store.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/entity/setting.dart';
 
-class SelectTodayPillNumberPillSheetList extends HookWidget {
+class SelectTodayPillNumberPillSheetList extends HookConsumerWidget {
   final InitialSettingState state;
   final InitialSettingStateStore store;
 

@@ -9,7 +9,7 @@ import 'package:pilll/entity/pill_sheet.dart';
 import 'package:pilll/entity/pill_sheet_group.dart';
 import 'package:pilll/entity/setting.dart';
 
-class TodayPllNumberRow extends HookWidget {
+class TodayPllNumberRow extends HookConsumerWidget {
   final Setting setting;
   final PillSheetGroup pillSheetGroup;
   final PillSheet activedPillSheet;

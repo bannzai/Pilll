@@ -6,7 +6,7 @@ import 'package:pilll/components/organisms/pill_sheet/setting_pill_sheet_view.da
 import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/entity/setting.dart';
 
-class SettingMenstruationPillSheetList extends HookWidget {
+class SettingMenstruationPillSheetList extends HookConsumerWidget {
   final List<PillSheetType> pillSheetTypes;
   final int? Function(int pageIndex) selectedPillNumber;
   final PillSheetAppearanceMode appearanceMode;

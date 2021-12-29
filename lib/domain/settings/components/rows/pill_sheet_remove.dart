@@ -10,7 +10,7 @@ import 'package:pilll/domain/settings/setting_page_store.dart';
 import 'package:pilll/error/error_alert.dart';
 import 'package:pilll/service/pill_sheet.dart';
 
-class PillSheetRemoveRow extends HookWidget {
+class PillSheetRemoveRow extends HookConsumerWidget {
   @override
   Widget build(BuildContext context) {
     final store = useProvider(settingStoreProvider);

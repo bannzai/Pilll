@@ -8,7 +8,7 @@ import 'package:pilll/domain/calendar/components/pill_sheet_modified_history/pil
 import 'package:pilll/domain/calendar/components/pill_sheet_modified_history/pill_sheet_modified_history_list_header.dart';
 import 'package:pilll/domain/pill_sheet_modified_history/pill_sheet_modified_history_store.dart';
 
-class PillSheetModifiedHistoriesPage extends HookWidget {
+class PillSheetModifiedHistoriesPage extends HookConsumerWidget {
   @override
   Widget build(BuildContext context) {
     final store = useProvider(pillSheetModifiedHistoryStoreProvider);

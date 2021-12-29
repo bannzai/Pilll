@@ -10,7 +10,7 @@ import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/entity/setting.dart';
 
-class InitialSettingMenstruationPage extends HookWidget {
+class InitialSettingMenstruationPage extends HookConsumerWidget {
   @override
   Widget build(BuildContext context) {
     final store = useProvider(initialSettingStoreProvider);

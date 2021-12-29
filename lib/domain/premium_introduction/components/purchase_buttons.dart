@@ -13,7 +13,7 @@ import 'package:pilll/error/error_alert.dart';
 import 'package:pilll/error/universal_error_page.dart';
 import 'package:purchases_flutter/purchases_flutter.dart';
 
-class PurchaseButtons extends HookWidget {
+class PurchaseButtons extends HookConsumerWidget {
   final PremiumIntroductionStore store;
   final Offerings offerings;
 

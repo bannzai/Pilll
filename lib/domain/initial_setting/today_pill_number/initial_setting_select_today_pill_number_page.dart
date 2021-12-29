@@ -13,7 +13,7 @@ import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:intl/intl.dart';
 
-class InitialSettingSelectTodayPillNumberPage extends HookWidget {
+class InitialSettingSelectTodayPillNumberPage extends HookConsumerWidget {
   const InitialSettingSelectTodayPillNumberPage({Key? key}) : super(key: key);
 
   String todayString() {

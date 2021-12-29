@@ -9,7 +9,7 @@ import 'package:pilll/entity/setting.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
-class RecordPagePillSheetList extends HookWidget {
+class RecordPagePillSheetList extends HookConsumerWidget {
   const RecordPagePillSheetList({
     Key? key,
     required this.state,

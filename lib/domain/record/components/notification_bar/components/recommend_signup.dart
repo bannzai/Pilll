@@ -4,7 +4,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 
-class RecommendSignupNotificationBar extends HookWidget {
+class RecommendSignupNotificationBar extends HookConsumerWidget {
   final VoidCallback onTap;
   final VoidCallback onClose;
   const RecommendSignupNotificationBar({

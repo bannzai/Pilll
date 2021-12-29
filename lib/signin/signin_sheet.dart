@@ -20,7 +20,7 @@ abstract class SigninSheetConst {
   static final double height = 340;
 }
 
-class SigninSheet extends HookWidget {
+class SigninSheet extends HookConsumerWidget {
   final SigninSheetStateContext stateContext;
   final Function(LinkAccountType) callback;
 

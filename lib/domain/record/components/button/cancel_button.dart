@@ -6,7 +6,7 @@ import 'package:pilll/components/atoms/buttons.dart';
 import 'package:pilll/domain/record/record_page_store.dart';
 import 'package:pilll/entity/pill_sheet.dart';
 
-class CancelButton extends HookWidget {
+class CancelButton extends HookConsumerWidget {
   final PillSheet pillSheet;
 
   CancelButton(this.pillSheet);

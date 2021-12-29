@@ -13,7 +13,7 @@ import 'package:pilll/error/error_alert.dart';
 import 'package:pilll/util/links.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-class PremiumFunctionSurveyPage extends HookWidget {
+class PremiumFunctionSurveyPage extends HookConsumerWidget {
   @override
   Widget build(BuildContext context) {
     final store = useProvider(premiumFunctionSurveyStoreProvider);

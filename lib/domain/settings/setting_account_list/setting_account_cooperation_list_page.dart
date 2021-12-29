@@ -17,7 +17,7 @@ import 'package:pilll/entity/user_error.dart';
 import 'package:pilll/error/error_alert.dart';
 import 'package:pilll/error/universal_error_page.dart';
 
-class SettingAccountCooperationListPage extends HookWidget {
+class SettingAccountCooperationListPage extends HookConsumerWidget {
   @override
   Widget build(BuildContext context) {
     final store = useProvider(settingAccountCooperationListProvider);

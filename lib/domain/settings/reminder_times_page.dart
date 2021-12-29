@@ -11,7 +11,7 @@ import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
-class ReminderTimesPage extends HookWidget {
+class ReminderTimesPage extends HookConsumerWidget {
   @override
   Widget build(BuildContext context) {
     final store = useProvider(settingStoreProvider);

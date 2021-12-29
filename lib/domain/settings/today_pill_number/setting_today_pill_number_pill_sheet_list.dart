@@ -7,7 +7,7 @@ import 'package:pilll/components/organisms/pill_sheet/setting_pill_sheet_view.da
 import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/entity/setting.dart';
 
-class SettingTodayPillNumberPillSheetList extends HookWidget {
+class SettingTodayPillNumberPillSheetList extends HookConsumerWidget {
   final List<PillSheetType> pillSheetTypes;
   final PillSheetAppearanceMode appearanceMode;
   final int? Function(int pageIndex) selectedTodayPillNumberIntoPillSheet;

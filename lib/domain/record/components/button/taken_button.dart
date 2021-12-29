@@ -7,7 +7,7 @@ import 'package:pilll/domain/record/record_page_store.dart';
 import 'package:pilll/domain/record/util/take.dart';
 import 'package:pilll/entity/pill_sheet.dart';
 
-class TakenButton extends HookWidget {
+class TakenButton extends HookConsumerWidget {
   final BuildContext parentContext;
   final PillSheet pillSheet;
 

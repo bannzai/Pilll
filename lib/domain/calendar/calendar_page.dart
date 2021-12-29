@@ -14,7 +14,7 @@ import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/error/universal_error_page.dart';
 
-class CalendarPage extends HookWidget {
+class CalendarPage extends HookConsumerWidget {
   @override
   Widget build(BuildContext context) {
     final store = useProvider(calendarPageStateProvider);

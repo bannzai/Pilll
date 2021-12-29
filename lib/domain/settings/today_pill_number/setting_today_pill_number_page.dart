@@ -13,7 +13,7 @@ import 'package:pilll/entity/setting.dart';
 import 'package:pilll/util/formatter/date_time_formatter.dart';
 import 'package:flutter/material.dart';
 
-class SettingTodayPillNumberPage extends HookWidget {
+class SettingTodayPillNumberPage extends HookConsumerWidget {
   final PillSheetGroup pillSheetGroup;
   final PillSheet activedPillSheet;
 

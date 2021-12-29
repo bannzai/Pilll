@@ -30,7 +30,7 @@ abstract class PostDiaryPageConst {
   static double keyboardToobarHeight = 44;
 }
 
-class PostDiaryPage extends HookWidget {
+class PostDiaryPage extends HookConsumerWidget {
   final DateTime date;
   final Diary? diary;
 

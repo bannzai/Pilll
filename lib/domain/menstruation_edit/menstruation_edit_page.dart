@@ -16,7 +16,7 @@ import 'package:pilll/entity/menstruation.dart';
 import 'package:pilll/domain/menstruation_edit/menstruation_edit_store.dart';
 import 'package:pilll/util/formatter/date_time_formatter.dart';
 
-class MenstruationEditPage extends HookWidget {
+class MenstruationEditPage extends HookConsumerWidget {
   final String title;
   final Menstruation? menstruation;
   final Function(Menstruation) didEndSave;

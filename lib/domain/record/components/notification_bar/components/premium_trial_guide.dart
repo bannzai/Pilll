@@ -5,7 +5,7 @@ import 'package:pilll/analytics.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 
-class PremiumTrialGuideNotificationBar extends HookWidget {
+class PremiumTrialGuideNotificationBar extends HookConsumerWidget {
   final VoidCallback onClose;
   final VoidCallback onTap;
   const PremiumTrialGuideNotificationBar({

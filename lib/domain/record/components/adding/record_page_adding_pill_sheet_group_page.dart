@@ -10,7 +10,7 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/domain/record/record_page_store.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 
-class RecordPageAddingPillSheetGroupPage extends HookWidget {
+class RecordPageAddingPillSheetGroupPage extends HookConsumerWidget {
   @override
   Widget build(BuildContext context) {
     final store = useProvider(recordPageStoreProvider);

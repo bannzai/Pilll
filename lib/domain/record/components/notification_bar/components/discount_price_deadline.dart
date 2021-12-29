@@ -6,7 +6,7 @@ import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/domain/premium_introduction/util/discount_deadline.dart';
 
-class DiscountPriceDeadline extends HookWidget {
+class DiscountPriceDeadline extends HookConsumerWidget {
   final DateTime discountEntitlementDeadlineDate;
   final VoidCallback onTap;
 

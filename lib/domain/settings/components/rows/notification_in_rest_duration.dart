@@ -9,7 +9,7 @@ import 'package:pilll/entity/pill_sheet.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/entity/setting.dart';
 
-class NotificationInRestDuration extends HookWidget {
+class NotificationInRestDuration extends HookConsumerWidget {
   final PillSheet pillSheet;
   final Setting setting;
 

@@ -17,7 +17,7 @@ import 'package:flutter_svg/svg.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-class InitialSettingReminderTimesPage extends HookWidget {
+class InitialSettingReminderTimesPage extends HookConsumerWidget {
   void _showDurationModalSheet(
     BuildContext context,
     int index,

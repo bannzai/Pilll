@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 
-class ExplainPillNumber extends HookWidget {
+class ExplainPillNumber extends HookConsumerWidget {
   final String today;
 
   const ExplainPillNumber({Key? key, required this.today}) : super(key: key);

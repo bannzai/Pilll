@@ -13,7 +13,7 @@ import 'package:pilll/domain/record/record_page_state.dart';
 import 'package:pilll/domain/record/record_page_store.dart';
 import 'package:pilll/entity/setting.dart';
 
-class SelectAppearanceModeModal extends HookWidget {
+class SelectAppearanceModeModal extends HookConsumerWidget {
   @override
   Widget build(BuildContext context) {
     final store = useProvider(recordPageStoreProvider);

@@ -24,7 +24,7 @@ import 'package:pilll/signin/signin_sheet_state.dart';
 import 'package:pilll/util/shared_preference/keys.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-class NotificationBar extends HookWidget {
+class NotificationBar extends HookConsumerWidget {
   final RecordPageState parameter;
 
   NotificationBar(this.parameter);

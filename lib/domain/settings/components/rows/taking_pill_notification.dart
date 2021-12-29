@@ -7,7 +7,7 @@ import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/domain/settings/setting_page_store.dart';
 import 'package:pilll/entity/setting.dart';
 
-class TakingPillNotification extends HookWidget {
+class TakingPillNotification extends HookConsumerWidget {
   final Setting setting;
 
   const TakingPillNotification({

@@ -8,7 +8,7 @@ import 'package:pilll/components/molecules/indicator.dart';
 import 'package:pilll/domain/menstruation_list/menstruation_list_row.dart';
 import 'package:pilll/domain/menstruation_list/menstruation_list_store.dart';
 
-class MenstruationListPage extends HookWidget {
+class MenstruationListPage extends HookConsumerWidget {
   @override
   Widget build(BuildContext context) {
     final state = useProvider(menstruationListStoreProvider.state);

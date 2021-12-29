@@ -11,7 +11,7 @@ import 'package:pilll/domain/premium_trial/premium_trial_modal.dart';
 import 'package:pilll/domain/settings/setting_page_store.dart';
 import 'package:pilll/entity/setting.dart';
 
-class CreatingNewPillSheetRow extends HookWidget {
+class CreatingNewPillSheetRow extends HookConsumerWidget {
   final Setting setting;
   final bool isTrial;
   final bool isPremium;

@@ -27,7 +27,7 @@ abstract class MenstruationPageConst {
       WeekdayBadgeConst.height + tileHeight;
 }
 
-class MenstruationPage extends HookWidget {
+class MenstruationPage extends HookConsumerWidget {
   @override
   Widget build(BuildContext context) {
     final store = useProvider(menstruationsStoreProvider);
