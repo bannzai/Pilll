@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/analytics.dart';
 import 'package:pilll/components/atoms/buttons.dart';
 import 'package:pilll/domain/record/record_page_store.dart';
@@ -17,7 +16,7 @@ class TakenButton extends HookConsumerWidget {
     required this.pillSheet,
   }) : super(key: key);
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     final store = ref.watch(recordPageStoreProvider.notifier);
     return PrimaryButton(
       text: "飲んだ",
