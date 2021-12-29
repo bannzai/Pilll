@@ -13,6 +13,7 @@ class MenstruationFirestoreKey {
 }
 
 @freezed
+@JsonSerializable(explicitToJson: true)
 class Menstruation with _$Menstruation {
   String? get documentID => id;
 

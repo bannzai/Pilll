@@ -8,6 +8,7 @@ class PackageFirestoreKey {
 }
 
 @freezed
+@JsonSerializable(explicitToJson: true)
 class Package with _$Package {
   const factory Package({
     required String latestOS,
