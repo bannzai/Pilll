@@ -42,7 +42,7 @@ class ConfirmDiarySheet extends HookConsumerWidget {
           children: [
             _title(context, store, state),
             ...[
-              if (state.hasPhysicalConditionStatus()) _physicalCondition(),
+              if (state.hasPhysicalConditionStatus()) _physicalCondition(state),
               _physicalConditionDetails(state),
               if (state.diary.hasSex) _sex(),
               _memo(state),
@@ -122,8 +122,7 @@ class ConfirmDiarySheet extends HookConsumerWidget {
     }
   }
 
-  Widget _physicalCondition() {
-    final state = ref.watch(_confirmDiaryStoreProvider(_diary));
+  Widget _physicalCondition(DiaryState state) {
     return Row(
       children: [
         Text("体調", style: FontType.componentTitle.merge(TextColorStyle.black)),
