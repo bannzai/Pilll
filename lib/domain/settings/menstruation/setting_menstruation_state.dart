@@ -4,6 +4,6 @@ part 'setting_menstruation_state.freezed.dart';
 
 @freezed
 class SettingMenstruationState with _$SettingMenstruationState {
-  const SettingMenstruationState._();
+  SettingMenstruationState._();
   const factory SettingMenstruationState() = _SettingMenstruationState;
 }

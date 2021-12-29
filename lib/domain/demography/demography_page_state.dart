@@ -6,7 +6,7 @@ part 'demography_page_state.freezed.dart';
 
 @freezed
 class DemographyPageState with _$DemographyPageState {
-  const DemographyPageState._();
+  DemographyPageState._();
   const factory DemographyPageState({
     String? purpose1,
     required String purpose2,

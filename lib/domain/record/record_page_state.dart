@@ -6,7 +6,7 @@ part 'record_page_state.freezed.dart';
 
 @freezed
 class RecordPageState with _$RecordPageState {
-  const RecordPageState._();
+  RecordPageState._();
   const factory RecordPageState({
     PillSheetGroup? pillSheetGroup,
     Setting? setting,

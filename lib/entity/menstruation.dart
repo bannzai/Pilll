@@ -20,7 +20,7 @@ class Menstruation with _$Menstruation {
       _$MenstruationFromJson(json);
   Map<String, dynamic> toJson() =>
       _$_$_MenstruationToJson(this as _$_Menstruation);
-  const Menstruation._();
+  Menstruation._();
 
   @JsonSerializable(explicitToJson: true)
   const factory Menstruation({

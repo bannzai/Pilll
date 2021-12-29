@@ -5,7 +5,7 @@ part 'pill_sheet_modified_history_state.freezed.dart';
 
 @freezed
 class PillSheetModifiedHistoryState with _$PillSheetModifiedHistoryState {
-  const PillSheetModifiedHistoryState._();
+  PillSheetModifiedHistoryState._();
   const factory PillSheetModifiedHistoryState({
     @Default(false) bool isFirstLoadEnded,
     @Default(false) bool isLoading,

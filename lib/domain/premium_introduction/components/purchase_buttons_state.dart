@@ -32,7 +32,7 @@ final purchaseButtonsStateProvider =
 
 @freezed
 class PurchaseButtonsState with _$PurchaseButtonsState {
-  const PurchaseButtonsState._();
+  PurchaseButtonsState._();
   const factory PurchaseButtonsState({
     required Offerings offerings,
     required bool hasDiscountEntitlement,

@@ -7,7 +7,7 @@ enum SigninSheetStateContext { initialSetting, recordPage, premium }
 
 @freezed
 class SigninSheetState with _$SigninSheetState {
-  const SigninSheetState._();
+  SigninSheetState._();
   const factory SigninSheetState({
     @Default(false) bool isLoading,
     required SigninSheetStateContext context,

@@ -69,7 +69,7 @@ class PillSheetModifiedHistory with _$PillSheetModifiedHistory {
     )
         required DateTime createdAt,
   }) = _PillSheetModifiedHistory;
-  const PillSheetModifiedHistory._();
+  PillSheetModifiedHistory._();
 
   factory PillSheetModifiedHistory.fromJson(Map<String, dynamic> json) =>
       _$PillSheetModifiedHistoryFromJson(json);

@@ -7,7 +7,7 @@ part 'notification_bar_state.freezed.dart';
 
 @freezed
 class NotificationBarState with _$NotificationBarState {
-  const NotificationBarState._();
+  NotificationBarState._();
   const factory NotificationBarState({
     required PillSheetGroup? latestPillSheetGroup,
     required int totalCountOfActionForTakenPill,

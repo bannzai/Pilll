@@ -5,7 +5,7 @@ part 'menstruation_edit_state.freezed.dart';
 
 @freezed
 class MenstruationEditState with _$MenstruationEditState {
-  const MenstruationEditState._();
+  MenstruationEditState._();
   const factory MenstruationEditState({
     @Default(false) bool isAlreadyAdjsutScrollOffset,
     required Menstruation? menstruation,

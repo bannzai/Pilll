@@ -6,7 +6,7 @@ part 'setting_page_state.freezed.dart';
 
 @freezed
 class SettingState with _$SettingState {
-  const SettingState._();
+  SettingState._();
   const factory SettingState({
     required Setting? setting,
     PillSheetGroup? latestPillSheetGroup,

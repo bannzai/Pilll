@@ -5,7 +5,7 @@ part 'premium_introduction_state.freezed.dart';
 
 @freezed
 class PremiumIntroductionState with _$PremiumIntroductionState {
-  const PremiumIntroductionState._();
+  PremiumIntroductionState._();
   const factory PremiumIntroductionState({
     Offerings? offerings,
     @Default(false) bool isCompletedRestore,
