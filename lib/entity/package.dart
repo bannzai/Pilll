@@ -10,10 +10,10 @@ class PackageFirestoreKey {
 @freezed
 class Package with _$Package {
   const factory Package({
-    String latestOS,
-    String appName,
-    String appVersion,
-    String buildNumber,
+    required String latestOS,
+    required String appName,
+    required String appVersion,
+    required String buildNumber,
   }) = _Package;
 
   factory Package.fromJson(Map<String, dynamic> json) =>
