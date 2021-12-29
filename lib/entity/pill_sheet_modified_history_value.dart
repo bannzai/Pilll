@@ -8,8 +8,7 @@ part 'pill_sheet_modified_history_value.freezed.dart';
 
 @freezed
 @JsonSerializable(explicitToJson: true)
-abstract class PillSheetModifiedHistoryValue
-    implements _$PillSheetModifiedHistoryValue {
+class PillSheetModifiedHistoryValue implements _$PillSheetModifiedHistoryValue {
   PillSheetModifiedHistoryValue._();
   factory PillSheetModifiedHistoryValue({
     DateTime? beginTrialDate,
@@ -34,7 +33,7 @@ abstract class PillSheetModifiedHistoryValue
 
 @freezed
 @JsonSerializable(explicitToJson: true)
-abstract class CreatedPillSheetValue implements _$CreatedPillSheetValue {
+class CreatedPillSheetValue implements _$CreatedPillSheetValue {
   CreatedPillSheetValue._();
   factory CreatedPillSheetValue({
     @JsonKey(
@@ -54,7 +53,7 @@ abstract class CreatedPillSheetValue implements _$CreatedPillSheetValue {
 
 @freezed
 @JsonSerializable(explicitToJson: true)
-abstract class AutomaticallyRecordedLastTakenDateValue
+class AutomaticallyRecordedLastTakenDateValue
     implements _$AutomaticallyRecordedLastTakenDateValue {
   AutomaticallyRecordedLastTakenDateValue._();
   factory AutomaticallyRecordedLastTakenDateValue({
@@ -82,7 +81,7 @@ abstract class AutomaticallyRecordedLastTakenDateValue
 
 @freezed
 @JsonSerializable(explicitToJson: true)
-abstract class DeletedPillSheetValue implements _$DeletedPillSheetValue {
+class DeletedPillSheetValue implements _$DeletedPillSheetValue {
   DeletedPillSheetValue._();
   factory DeletedPillSheetValue({
     @JsonKey(
@@ -102,7 +101,7 @@ abstract class DeletedPillSheetValue implements _$DeletedPillSheetValue {
 
 @freezed
 @JsonSerializable(explicitToJson: true)
-abstract class TakenPillValue implements _$TakenPillValue {
+class TakenPillValue implements _$TakenPillValue {
   TakenPillValue._();
   factory TakenPillValue({
     @JsonKey(
@@ -127,7 +126,7 @@ abstract class TakenPillValue implements _$TakenPillValue {
 
 @freezed
 @JsonSerializable(explicitToJson: true)
-abstract class RevertTakenPillValue implements _$RevertTakenPillValue {
+class RevertTakenPillValue implements _$RevertTakenPillValue {
   RevertTakenPillValue._();
   factory RevertTakenPillValue({
     @JsonKey(
@@ -152,7 +151,7 @@ abstract class RevertTakenPillValue implements _$RevertTakenPillValue {
 
 @freezed
 @JsonSerializable(explicitToJson: true)
-abstract class ChangedPillNumberValue implements _$ChangedPillNumberValue {
+class ChangedPillNumberValue implements _$ChangedPillNumberValue {
   ChangedPillNumberValue._();
   factory ChangedPillNumberValue({
     @JsonKey(
@@ -181,7 +180,7 @@ abstract class ChangedPillNumberValue implements _$ChangedPillNumberValue {
 
 @freezed
 @JsonSerializable(explicitToJson: true)
-abstract class EndedPillSheetValue implements _$EndedPillSheetValue {
+class EndedPillSheetValue implements _$EndedPillSheetValue {
   EndedPillSheetValue._();
   factory EndedPillSheetValue({
     @JsonKey(
@@ -204,7 +203,7 @@ abstract class EndedPillSheetValue implements _$EndedPillSheetValue {
 
 @freezed
 @JsonSerializable(explicitToJson: true)
-abstract class BeganRestDurationValue implements _$BeganRestDurationValue {
+class BeganRestDurationValue implements _$BeganRestDurationValue {
   BeganRestDurationValue._();
   factory BeganRestDurationValue({
     required RestDuration restDuration,
@@ -218,7 +217,7 @@ abstract class BeganRestDurationValue implements _$BeganRestDurationValue {
 
 @freezed
 @JsonSerializable(explicitToJson: true)
-abstract class EndedRestDurationValue implements _$EndedRestDurationValue {
+class EndedRestDurationValue implements _$EndedRestDurationValue {
   EndedRestDurationValue._();
   factory EndedRestDurationValue({
     required RestDuration restDuration,

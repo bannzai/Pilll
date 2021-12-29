@@ -6,7 +6,7 @@ part 'premium_function_survey.freezed.dart';
 
 @freezed
 @JsonSerializable(explicitToJson: true)
-abstract class PremiumFunctionSurvey with _$PremiumFunctionSurvey {
+class PremiumFunctionSurvey with _$PremiumFunctionSurvey {
   factory PremiumFunctionSurvey({
     required List<PremiumFunctionSurveyElementType> elements,
     required String message,

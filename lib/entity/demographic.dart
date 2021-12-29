@@ -5,7 +5,7 @@ part 'demographic.freezed.dart';
 
 @freezed
 @JsonSerializable(explicitToJson: true)
-abstract class Demographic with _$Demographic {
+class Demographic with _$Demographic {
   factory Demographic({
     required String purpose1,
     required String purpose2,

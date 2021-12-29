@@ -8,7 +8,7 @@ import 'package:json_annotation/json_annotation.dart';
 part 'pill_sheet.g.dart';
 part 'pill_sheet.freezed.dart';
 
-abstract class PillSheetFirestoreKey {
+class PillSheetFirestoreKey {
   static final String typeInfo = "typeInfo";
   static final String createdAt = "createdAt";
   static final String deletedAt = "deletedAt";
@@ -18,7 +18,7 @@ abstract class PillSheetFirestoreKey {
 
 @freezed
 @JsonSerializable(explicitToJson: true)
-abstract class PillSheetTypeInfo with _$PillSheetTypeInfo {
+class PillSheetTypeInfo with _$PillSheetTypeInfo {
   factory PillSheetTypeInfo({
     required String pillSheetTypeReferencePath,
     required String name,
@@ -34,7 +34,7 @@ abstract class PillSheetTypeInfo with _$PillSheetTypeInfo {
 
 @freezed
 @JsonSerializable(explicitToJson: true)
-abstract class RestDuration with _$RestDuration {
+class RestDuration with _$RestDuration {
   factory RestDuration({
     @JsonKey(
       fromJson: NonNullTimestampConverter.timestampToDateTime,
@@ -61,7 +61,7 @@ abstract class RestDuration with _$RestDuration {
 
 @freezed
 @JsonSerializable(explicitToJson: true)
-abstract class PillSheet implements _$PillSheet {
+class PillSheet implements _$PillSheet {
   String? get documentID => id;
 
   PillSheetType get sheetType =>

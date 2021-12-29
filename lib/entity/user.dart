@@ -33,7 +33,7 @@ extension UserPrivateFirestoreFieldKeys on String {
 }
 
 @freezed
-abstract class UserPrivate implements _$UserPrivate {
+class UserPrivate implements _$UserPrivate {
   UserPrivate._();
   factory UserPrivate({String? fcmToken}) = _UserPrivate;
   factory UserPrivate.create({required String fcmToken}) =>
@@ -65,7 +65,7 @@ extension UserFirestoreFieldKeys on String {
 
 @freezed
 @JsonSerializable(explicitToJson: true)
-abstract class User implements _$User {
+class User implements _$User {
   User._();
   factory User({
     @JsonKey(name: "settings")

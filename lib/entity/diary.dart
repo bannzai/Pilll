@@ -7,7 +7,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 part 'diary.g.dart';
 part 'diary.freezed.dart';
 
-abstract class DiaryFirestoreKey {
+class DiaryFirestoreKey {
   static final String date = "date";
 }
 
@@ -15,7 +15,7 @@ enum PhysicalConditionStatus { fine, bad }
 
 @freezed
 @JsonSerializable(explicitToJson: true)
-abstract class Diary with _$Diary {
+class Diary with _$Diary {
   static final List<String> allPhysicalConditions = [
     "頭痛",
     "腹痛",

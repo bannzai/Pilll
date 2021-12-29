@@ -7,13 +7,13 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 part 'menstruation.g.dart';
 part 'menstruation.freezed.dart';
 
-abstract class MenstruationFirestoreKey {
+class MenstruationFirestoreKey {
   static final String beginDate = "beginDate";
   static final String deletedAt = "deletedAt";
 }
 
 @freezed
-abstract class Menstruation with _$Menstruation {
+class Menstruation with _$Menstruation {
   String? get documentID => id;
 
   factory Menstruation.fromJson(Map<String, dynamic> json) =>

@@ -9,13 +9,13 @@ import 'package:json_annotation/json_annotation.dart';
 part 'pill_sheet_group.g.dart';
 part 'pill_sheet_group.freezed.dart';
 
-abstract class PillSheetGroupFirestoreKeys {
+class PillSheetGroupFirestoreKeys {
   static final createdAt = "createdAt";
 }
 
 @freezed
 @JsonSerializable(explicitToJson: true)
-abstract class PillSheetGroup implements _$PillSheetGroup {
+class PillSheetGroup implements _$PillSheetGroup {
   PillSheetGroup._();
   factory PillSheetGroup({
     @JsonKey(includeIfNull: false, toJson: toNull)
