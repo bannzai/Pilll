@@ -7,14 +7,13 @@ import 'package:pilll/domain/initial_setting/reminder_times/initial_setting_remi
 import 'package:pilll/domain/initial_setting/initial_setting_store.dart';
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/entity/setting.dart';
 
 class InitialSettingMenstruationPage extends HookConsumerWidget {
   @override
-  Widget build(BuildContext context) {
-    final store = useProvider(initialSettingStoreProvider);
-    final state = useProvider(initialSettingStoreProvider.state);
+  Widget build(BuildContext context, WidgetRef ref) {
+    final store = ref.watch(initialSettingStoreProvider.notifier);
+    final state = ref.watch(initialSettingStoreProvider);
 
     return SettingMenstruationPageTemplate(
       title: "3/4",

@@ -18,7 +18,8 @@ import 'package:pilll/util/datetime/day.dart';
 import 'package:purchases_flutter/purchases_flutter.dart';
 import 'package:riverpod/riverpod.dart';
 
-final initialSettingStoreProvider = StateNotifierProvider(
+final initialSettingStoreProvider =
+    StateNotifierProvider<InitialSettingStateStore, InitialSettingState>(
   (ref) => InitialSettingStateStore(
     ref.watch(batchFactoryProvider),
     ref.watch(authServiceProvider),
