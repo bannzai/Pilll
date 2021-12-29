@@ -21,15 +21,17 @@ import 'package:pilll/util/shared_preference/keys.dart';
 import 'package:riverpod/riverpod.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-final recordPageStoreProvider = StateNotifierProvider((ref) => RecordPageStore(
-      ref.watch(batchFactoryProvider),
-      ref.watch(pillSheetServiceProvider),
-      ref.watch(settingServiceProvider),
-      ref.watch(userServiceProvider),
-      ref.watch(authServiceProvider),
-      ref.watch(pillSheetModifiedHistoryServiceProvider),
-      ref.watch(pillSheetGroupServiceProvider),
-    ));
+final recordPageStoreProvider =
+    StateNotifierProvider<RecordPageStore, RecordPageState>(
+        (ref) => RecordPageStore(
+              ref.watch(batchFactoryProvider),
+              ref.watch(pillSheetServiceProvider),
+              ref.watch(settingServiceProvider),
+              ref.watch(userServiceProvider),
+              ref.watch(authServiceProvider),
+              ref.watch(pillSheetModifiedHistoryServiceProvider),
+              ref.watch(pillSheetGroupServiceProvider),
+            ));
 
 class RecordPageStore extends StateNotifier<RecordPageState> {
   final BatchFactory _batchFactory;
