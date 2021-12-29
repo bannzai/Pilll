@@ -15,7 +15,7 @@ const ReminderTime._();
     required int minute,
   }) = _ReminderTime;
 
-const factory ReminderTime.fromJson(Map<String, dynamic> json) =>
+factory. ReminderTime.fromJson(Map<String, dynamic> json) =>
       _$ReminderTimeFromJson(json);
   Map<String, dynamic> toJson() =>
       _$_$_ReminderTimeToJson(this as _$_ReminderTime);
@@ -59,7 +59,7 @@ const factory Setting({
     @Default(false) bool isAutomaticallyCreatePillSheet,
   }) = _Setting;
 
-const factory Setting.fromJson(Map<String, dynamic> json) =>
+factory. Setting.fromJson(Map<String, dynamic> json) =>
       _$SettingFromJson(json);
   Map<String, dynamic> toJson() => _$_$_SettingToJson(this as _$_Setting);
 }

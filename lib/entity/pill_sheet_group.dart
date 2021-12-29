@@ -34,7 +34,7 @@ const factory PillSheetGroup({
         DateTime? deletedAt,
   }) = _PillSheetGroup;
 
-const factory PillSheetGroup.fromJson(Map<String, dynamic> json) =>
+factory. PillSheetGroup.fromJson(Map<String, dynamic> json) =>
       _$PillSheetGroupFromJson(json);
   Map<String, dynamic> toJson() =>
       _$_$_PillSheetGroupToJson(this as _$_PillSheetGroup);

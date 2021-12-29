@@ -60,7 +60,7 @@ const factory Diary.fromDate(DateTime date) => Diary(
       createdAt: now(),
       physicalConditions: [],
       hasSex: false);
-const factory Diary.fromJson(Map<String, dynamic> json) => _$DiaryFromJson(json);
+factory. Diary.fromJson(Map<String, dynamic> json) => _$DiaryFromJson(json);
   Map<String, dynamic> toJson() => _$_$_DiaryToJson(this as _$_Diary);
   bool get hasPhysicalConditionStatus => physicalConditionStatus != null;
 }

@@ -71,7 +71,7 @@ const factory PillSheetModifiedHistory({
   }) = _PillSheetModifiedHistory;
 const PillSheetModifiedHistory._();
 
-const factory PillSheetModifiedHistory.fromJson(Map<String, dynamic> json) =>
+factory. PillSheetModifiedHistory.fromJson(Map<String, dynamic> json) =>
       _$PillSheetModifiedHistoryFromJson(json);
   Map<String, dynamic> toJson() =>
       _$_$_PillSheetModifiedHistoryToJson(this as _$_PillSheetModifiedHistory);
