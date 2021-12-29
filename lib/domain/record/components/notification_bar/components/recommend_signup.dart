@@ -14,7 +14,7 @@ class RecommendSignupNotificationBar extends HookConsumerWidget {
   }) : super(key: key);
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     return Container(
       padding: EdgeInsets.only(top: 8, bottom: 8),
       child: GestureDetector(
