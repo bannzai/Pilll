@@ -72,7 +72,7 @@ class InitialSettingStateStore extends StateNotifier<InitialSettingState> {
         await userService.prepare(user.uid);
         await userService.recordUserIDs();
         unawaited(FirebaseCrashlytics.instance.setUserIdentifier(user.uid));
-        unawaited(firebaseAnalytics.setUserId(user.uid));
+        unawaited(firebaseAnalytics.setUserId(id: user.uid));
         await Purchases.logIn(user.uid);
       }
       state = state.copyWith(
