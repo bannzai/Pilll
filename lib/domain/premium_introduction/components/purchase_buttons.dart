@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/analytics.dart';
 import 'package:pilll/components/page/hud.dart';
 import 'package:pilll/domain/premium_introduction/components/annual_purchase_button.dart';
@@ -24,8 +23,8 @@ class PurchaseButtons extends HookConsumerWidget {
   }) : super(key: key);
 
   @override
-  Widget build(BuildContext context) {
-    final state = ref.watch(purchaseButtonsStateProvider(offerings).notifier);
+  Widget build(BuildContext context, WidgetRef ref) {
+    final state = ref.watch(purchaseButtonsStateProvider(offerings));
     final monthlyPackage = state.monthlyPackage;
     final annualPackage = state.annualPackage;
 
