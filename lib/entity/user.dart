@@ -33,7 +33,7 @@ extension UserPrivateFirestoreFieldKeys on String {
 }
 
 @freezed
-class UserPrivate implements _$UserPrivate {
+class UserPrivate with _$UserPrivate {
   UserPrivate._();
   factory UserPrivate({String? fcmToken}) = _UserPrivate;
   factory UserPrivate.create({required String fcmToken}) =>

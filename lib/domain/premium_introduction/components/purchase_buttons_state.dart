@@ -31,7 +31,7 @@ final purchaseButtonsStateProvider =
 });
 
 @freezed
-class PurchaseButtonsState implements _$PurchaseButtonsState {
+class PurchaseButtonsState with _$PurchaseButtonsState {
   PurchaseButtonsState._();
   factory PurchaseButtonsState({
     required Offerings offerings,

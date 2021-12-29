@@ -5,7 +5,7 @@ import 'package:pilll/entity/setting.dart';
 part 'record_page_state.freezed.dart';
 
 @freezed
-class RecordPageState implements _$RecordPageState {
+class RecordPageState with _$RecordPageState {
   RecordPageState._();
   factory RecordPageState({
     PillSheetGroup? pillSheetGroup,

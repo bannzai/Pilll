@@ -4,7 +4,7 @@ import 'package:purchases_flutter/purchases_flutter.dart';
 part 'premium_introduction_state.freezed.dart';
 
 @freezed
-class PremiumIntroductionState implements _$PremiumIntroductionState {
+class PremiumIntroductionState with _$PremiumIntroductionState {
   PremiumIntroductionState._();
   factory PremiumIntroductionState({
     Offerings? offerings,

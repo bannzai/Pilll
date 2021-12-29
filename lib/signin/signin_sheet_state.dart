@@ -6,7 +6,7 @@ part 'signin_sheet_state.freezed.dart';
 enum SigninSheetStateContext { initialSetting, recordPage, premium }
 
 @freezed
-class SigninSheetState implements _$SigninSheetState {
+class SigninSheetState with _$SigninSheetState {
   SigninSheetState._();
   factory SigninSheetState({
     @Default(false) bool isLoading,

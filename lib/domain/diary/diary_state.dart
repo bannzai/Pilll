@@ -4,7 +4,7 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 part 'diary_state.freezed.dart';
 
 @freezed
-class DiaryState implements _$DiaryState {
+class DiaryState with _$DiaryState {
   DiaryState._();
   factory DiaryState({
     required Diary diary,

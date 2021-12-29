@@ -4,7 +4,7 @@ import 'package:pilll/entity/setting.dart';
 part 'setting_today_pill_number_state.freezed.dart';
 
 @freezed
-class SettingTodayPillNumberState implements _$SettingTodayPillNumberState {
+class SettingTodayPillNumberState with _$SettingTodayPillNumberState {
   SettingTodayPillNumberState._();
   factory SettingTodayPillNumberState({
     @Default(0) int selectedPillSheetPageIndex,

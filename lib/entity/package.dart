@@ -8,7 +8,7 @@ class PackageFirestoreKey {
 }
 
 @freezed
-class Package implements _$Package {
+class Package with _$Package {
   factory Package({
     required String latestOS,
     required String appName,

@@ -4,7 +4,7 @@ import 'package:pilll/entity/menstruation.dart';
 part 'menstruation_edit_state.freezed.dart';
 
 @freezed
-class MenstruationEditState implements _$MenstruationEditState {
+class MenstruationEditState with _$MenstruationEditState {
   MenstruationEditState._();
   factory MenstruationEditState({
     @Default(false) bool isAlreadyAdjsutScrollOffset,

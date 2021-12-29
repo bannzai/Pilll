@@ -5,7 +5,7 @@ import 'package:pilll/util/datetime/day.dart';
 part 'menstruation_card_state.freezed.dart';
 
 @freezed
-class MenstruationCardState implements _$MenstruationCardState {
+class MenstruationCardState with _$MenstruationCardState {
   MenstruationCardState._();
   factory MenstruationCardState({
     required String title,
