@@ -39,7 +39,7 @@ const factory UserPrivate({String? fcmToken}) = _UserPrivate;
 const factory UserPrivate.create({required String fcmToken}) =>
       UserPrivate(fcmToken: fcmToken);
 
-factory. UserPrivate.fromJson(Map<String, dynamic> json) =>
+const factory UserPrivate.fromJson(Map<String, dynamic> json) =>
       _$UserPrivateFromJson(json);
 }
 
@@ -103,5 +103,5 @@ const factory User({
         DateTime? discountEntitlementDeadlineDate,
   }) = _User;
 
-factory. User.fromJson(Map<String, dynamic> json) => _$UserFromJson(json);
+const factory User.fromJson(Map<String, dynamic> json) => _$UserFromJson(json);
 }

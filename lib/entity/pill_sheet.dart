@@ -26,7 +26,7 @@ const factory PillSheetTypeInfo({
     required int dosingPeriod,
   }) = _PillSheetTypeInfo;
 
-factory. PillSheetTypeInfo.fromJson(Map<String, dynamic> json) =>
+const factory PillSheetTypeInfo.fromJson(Map<String, dynamic> json) =>
       _$PillSheetTypeInfoFromJson(json);
   Map<String, dynamic> toJson() =>
       _$_$_PillSheetTypeInfoToJson(this as _$_PillSheetTypeInfo);
@@ -53,7 +53,7 @@ const factory RestDuration({
         required DateTime createdDate,
   }) = _RestDuration;
 
-factory. RestDuration.fromJson(Map<String, dynamic> json) =>
+const factory RestDuration.fromJson(Map<String, dynamic> json) =>
       _$RestDurationFromJson(json);
   Map<String, dynamic> toJson() =>
       _$_$_RestDurationToJson(this as _$_RestDuration);
@@ -104,7 +104,7 @@ const factory PillSheet.create(PillSheetType type) => PillSheet(
         lastTakenDate: null,
       );
 
-factory. PillSheet.fromJson(Map<String, dynamic> json) =>
+const factory PillSheet.fromJson(Map<String, dynamic> json) =>
       _$PillSheetFromJson(json);
   Map<String, dynamic> toJson() => _$_$_PillSheetToJson(this as _$_PillSheet);
 

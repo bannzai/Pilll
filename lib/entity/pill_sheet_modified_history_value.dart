@@ -25,7 +25,7 @@ const factory PillSheetModifiedHistoryValue({
     @Default(null) EndedRestDurationValue? endedRestDurationValue,
   }) = _PillSheetModifiedHistoryValue;
 
-factory. PillSheetModifiedHistoryValue.fromJson(Map<String, dynamic> json) =>
+const factory PillSheetModifiedHistoryValue.fromJson(Map<String, dynamic> json) =>
       _$PillSheetModifiedHistoryValueFromJson(json);
   Map<String, dynamic> toJson() => _$_$_PillSheetModifiedHistoryValueToJson(
       this as _$_PillSheetModifiedHistoryValue);
@@ -45,7 +45,7 @@ const factory CreatedPillSheetValue({
         List<String> pillSheetIDs,
   }) = _CreatedPillSheetValue;
 
-factory. CreatedPillSheetValue.fromJson(Map<String, dynamic> json) =>
+const factory CreatedPillSheetValue.fromJson(Map<String, dynamic> json) =>
       _$CreatedPillSheetValueFromJson(json);
   Map<String, dynamic> toJson() =>
       _$_$_CreatedPillSheetValueToJson(this as _$_CreatedPillSheetValue);
@@ -71,7 +71,7 @@ const factory AutomaticallyRecordedLastTakenDateValue({
     required int afterLastTakenPillNumber,
   }) = _AutomaticallyRecordedLastTakenDateValue;
 
-factory. AutomaticallyRecordedLastTakenDateValue.fromJson(
+const factory AutomaticallyRecordedLastTakenDateValue.fromJson(
           Map<String, dynamic> json) =>
       _$AutomaticallyRecordedLastTakenDateValueFromJson(json);
   Map<String, dynamic> toJson() =>
@@ -93,7 +93,7 @@ const factory DeletedPillSheetValue({
         List<String> pillSheetIDs,
   }) = _DeletedPillSheetValue;
 
-factory. DeletedPillSheetValue.fromJson(Map<String, dynamic> json) =>
+const factory DeletedPillSheetValue.fromJson(Map<String, dynamic> json) =>
       _$DeletedPillSheetValueFromJson(json);
   Map<String, dynamic> toJson() =>
       _$_$_DeletedPillSheetValueToJson(this as _$_DeletedPillSheetValue);
@@ -118,7 +118,7 @@ const factory TakenPillValue({
     required int afterLastTakenPillNumber,
   }) = _TakenPillValue;
 
-factory. TakenPillValue.fromJson(Map<String, dynamic> json) =>
+const factory TakenPillValue.fromJson(Map<String, dynamic> json) =>
       _$TakenPillValueFromJson(json);
   Map<String, dynamic> toJson() =>
       _$_$_TakenPillValueToJson(this as _$_TakenPillValue);
@@ -143,7 +143,7 @@ const factory RevertTakenPillValue({
     required int afterLastTakenPillNumber,
   }) = _RevertTakenPillValue;
 
-factory. RevertTakenPillValue.fromJson(Map<String, dynamic> json) =>
+const factory RevertTakenPillValue.fromJson(Map<String, dynamic> json) =>
       _$RevertTakenPillValueFromJson(json);
   Map<String, dynamic> toJson() =>
       _$_$_RevertTakenPillValueToJson(this as _$_RevertTakenPillValue);
@@ -172,7 +172,7 @@ const factory ChangedPillNumberValue({
         int afterGroupIndex,
   }) = _ChangedPillNumberValue;
 
-factory. ChangedPillNumberValue.fromJson(Map<String, dynamic> json) =>
+const factory ChangedPillNumberValue.fromJson(Map<String, dynamic> json) =>
       _$ChangedPillNumberValueFromJson(json);
   Map<String, dynamic> toJson() =>
       _$_$_ChangedPillNumberValueToJson(this as _$_ChangedPillNumberValue);
@@ -195,7 +195,7 @@ const factory EndedPillSheetValue({
         required DateTime lastTakenDate,
   }) = _EndedPillSheetValue;
 
-factory. EndedPillSheetValue.fromJson(Map<String, dynamic> json) =>
+const factory EndedPillSheetValue.fromJson(Map<String, dynamic> json) =>
       _$EndedPillSheetValueFromJson(json);
   Map<String, dynamic> toJson() =>
       _$_$_EndedPillSheetValueToJson(this as _$_EndedPillSheetValue);
@@ -209,7 +209,7 @@ const factory BeganRestDurationValue({
     required RestDuration restDuration,
   }) = _BeganRestDurationValue;
 
-factory. BeganRestDurationValue.fromJson(Map<String, dynamic> json) =>
+const factory BeganRestDurationValue.fromJson(Map<String, dynamic> json) =>
       _$BeganRestDurationValueFromJson(json);
   Map<String, dynamic> toJson() =>
       _$_$_BeganRestDurationValueToJson(this as _$_BeganRestDurationValue);
@@ -223,7 +223,7 @@ const factory EndedRestDurationValue({
     required RestDuration restDuration,
   }) = _EndedRestDurationValue;
 
-factory. EndedRestDurationValue.fromJson(Map<String, dynamic> json) =>
+const factory EndedRestDurationValue.fromJson(Map<String, dynamic> json) =>
       _$EndedRestDurationValueFromJson(json);
   Map<String, dynamic> toJson() =>
       _$_$_EndedRestDurationValueToJson(this as _$_EndedRestDurationValue);
