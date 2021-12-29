@@ -3,14 +3,13 @@ import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 class ExplainPillNumber extends HookConsumerWidget {
   final String today;
 
   const ExplainPillNumber({Key? key, required this.today}) : super(key: key);
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     final state = ref.watch(initialSettingStoreProvider);
     return Center(
       child: Row(
