@@ -16,9 +16,9 @@ import 'package:pilll/error/universal_error_page.dart';
 
 class CalendarPage extends HookConsumerWidget {
   @override
-  Widget build(BuildContext context) {
-    final store = useProvider(calendarPageStateProvider);
-    final state = useProvider(calendarPageStateProvider.state);
+  Widget build(BuildContext context, WidgetRef ref) {
+    final store = ref.watch(calendarPageStateStoreProvider);
+    final state = ref.watch(calendarPageStateStoreProvider.notifier);
     homeKey.currentState?.diaries = state.diariesForMonth;
 
     final exception = state.exception;
