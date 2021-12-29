@@ -12,7 +12,6 @@ import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/router/router.dart';
 import 'package:pilll/signin/signin_sheet.dart';
 import 'package:pilll/signin/signin_sheet_state.dart';
@@ -21,7 +20,7 @@ import 'package:pilll/entity/pill_sheet_type.dart';
 
 class InitialSettingPillSheetGroupPage extends HookConsumerWidget {
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     final store = ref.watch(initialSettingStoreProvider.notifier);
     final state = ref.watch(initialSettingStoreProvider);
     if (state.isAccountCooperationDidEnd) {
