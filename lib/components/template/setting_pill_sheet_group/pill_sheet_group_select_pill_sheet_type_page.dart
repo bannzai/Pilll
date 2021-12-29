@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/analytics.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
@@ -7,7 +6,7 @@ import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/components/template/pill_sheet_type_setting/pill_sheet_type_select_body_template.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 
-class PillSheetGroupSelectPillSheetTypePage extends HookConsumerWidget {
+class PillSheetGroupSelectPillSheetTypePage extends StatelessWidget {
   final PillSheetType? pillSheetType;
   final Function(PillSheetType) onSelect;
 
