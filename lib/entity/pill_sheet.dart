@@ -61,7 +61,7 @@ class RestDuration with _$RestDuration {
 
 @freezed
 @JsonSerializable(explicitToJson: true)
-class PillSheet implements _$PillSheet {
+class PillSheet with _$PillSheet {
   String? get documentID => id;
 
   PillSheetType get sheetType =>

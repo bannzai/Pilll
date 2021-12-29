@@ -8,7 +8,7 @@ part 'setting.freezed.dart';
 
 @freezed
 @JsonSerializable(explicitToJson: true)
-class ReminderTime implements _$ReminderTime {
+class ReminderTime with _$ReminderTime {
   const ReminderTime._();
   const factory ReminderTime({
     int hour,
@@ -45,7 +45,7 @@ class SettingFirestoreFieldKeys {
 
 @freezed
 @JsonSerializable(explicitToJson: true)
-class Setting implements _$Setting {
+class Setting with _$Setting {
   const Setting._();
   const factory Setting({
     @Default([]) List<PillSheetType> pillSheetTypes,

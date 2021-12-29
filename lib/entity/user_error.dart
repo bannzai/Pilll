@@ -1,4 +1,4 @@
-class UserDisplayedError implements Exception {
+class UserDisplayedError with Exception {
   final String? title;
   final String displayedMessage;
   final String? faqLinkURL;
