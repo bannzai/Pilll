@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/components/molecules/indicator.dart';
@@ -10,10 +9,9 @@ import 'package:pilll/domain/pill_sheet_modified_history/pill_sheet_modified_his
 
 class PillSheetModifiedHistoriesPage extends HookConsumerWidget {
   @override
-  Widget build(BuildContext context) {
-    final store =
-        ref.watch(pillSheetModifiedHistoryStoreProvider.notifier.notifier);
-    final state = ref.watch(pillSheetModifiedHistoryStoreProvider.notifier);
+  Widget build(BuildContext context, WidgetRef ref) {
+    final store = ref.watch(pillSheetModifiedHistoryStoreProvider.notifier);
+    final state = ref.watch(pillSheetModifiedHistoryStoreProvider);
     if (!state.isFirstLoadEnded) {
       return ScaffoldIndicator();
     }
