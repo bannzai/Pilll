@@ -12,7 +12,7 @@ import 'package:pilll/util/shared_preference/keys.dart';
 import 'package:riverpod/riverpod.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-final settingStoreProvider = StateNotifierProvider(
+final settingStoreProvider = StateNotifierProvider<SettingStateStore, SettingState>(
   (ref) => SettingStateStore(
     ref.watch(batchFactoryProvider),
     ref.watch(settingServiceProvider),
@@ -24,7 +24,7 @@ final settingStoreProvider = StateNotifierProvider(
 );
 
 final settingStateProvider =
-    Provider((ref) => ref.watch(settingStoreProvider.state));
+    Provider((ref) => ref.watch(settingStoreProvider));
 
 class SettingStateStore extends StateNotifier<SettingState> {
   final BatchFactory _batchFactory;

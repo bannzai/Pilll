@@ -15,7 +15,7 @@ class SettingMenstruationPage extends HookConsumerWidget {
   }) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    final store = useProvider(settingMenstruationStoreProvider);
+    final store = useProvider(settingMenstruationStoreProvider.notifier);
     final settingState = useProvider(settingStateProvider);
     final setting = settingState.setting;
     if (setting == null) {

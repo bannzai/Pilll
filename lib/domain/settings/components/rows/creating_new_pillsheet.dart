@@ -27,7 +27,7 @@ class CreatingNewPillSheetRow extends HookConsumerWidget {
 
   @override
   Widget build(BuildContext context) {
-    final store = useProvider(settingStoreProvider);
+    final store = useProvider(settingStoreProvider.notifier);
     return SwitchListTile(
       title: Row(
         children: [

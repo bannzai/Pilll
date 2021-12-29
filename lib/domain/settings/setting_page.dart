@@ -50,8 +50,8 @@ class SettingPage extends HookConsumerWidget {
   }
 
   Widget _body(BuildContext context) {
-    final store = useProvider(settingStoreProvider);
-    final state = useProvider(settingStoreProvider.state);
+    final store = useProvider(settingStoreProvider.notifier);
+    final state = useProvider(settingStoreProvider);
 
     if (state.exception != null) {
       return UniversalErrorPage(

@@ -5,7 +5,7 @@ import 'package:pilll/domain/pill_sheet_modified_history/pill_sheet_modified_his
 import 'package:pilll/service/pill_sheet_modified_history.dart';
 import 'package:riverpod/riverpod.dart';
 
-final pillSheetModifiedHistoryStoreProvider = StateNotifierProvider.autoDispose(
+final pillSheetModifiedHistoryStoreProvider = StateNotifierProvider.autoDispose<PillSheetModifiedHistoryStateStore, PillSheetModifiedHistoryState>(
   (ref) => PillSheetModifiedHistoryStateStore(
     ref.watch(pillSheetModifiedHistoryServiceProvider),
   ),

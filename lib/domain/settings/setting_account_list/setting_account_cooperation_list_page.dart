@@ -20,8 +20,8 @@ import 'package:pilll/error/universal_error_page.dart';
 class SettingAccountCooperationListPage extends HookConsumerWidget {
   @override
   Widget build(BuildContext context) {
-    final store = useProvider(settingAccountCooperationListProvider);
-    final state = useProvider(settingAccountCooperationListProvider.state);
+    final store = useProvider(settingAccountCooperationListProvider.notifier);
+    final state = useProvider(settingAccountCooperationListProvider);
     return HUD(
       shown: state.isLoading,
       child: UniversalErrorPage(
