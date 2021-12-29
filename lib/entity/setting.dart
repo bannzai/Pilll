@@ -18,7 +18,7 @@ class ReminderTime with _$ReminderTime {
   factory ReminderTime.fromJson(Map<String, dynamic> json) =>
       _$ReminderTimeFromJson(json);
   Map<String, dynamic> toJson() =>
-      _$_$_ReminderTimeToJson(this as _$_ReminderTime);
+      _$ReminderTimeToJson(this as _$_ReminderTime);
 
   DateTime dateTime() {
     var t = DateTime.now().toLocal();
@@ -61,5 +61,5 @@ class Setting with _$Setting {
 
   factory Setting.fromJson(Map<String, dynamic> json) =>
       _$SettingFromJson(json);
-  Map<String, dynamic> toJson() => _$_$_SettingToJson(this as _$_Setting);
+  Map<String, dynamic> toJson() => _$SettingToJson(this as _$_Setting);
 }

@@ -15,5 +15,5 @@ class PremiumFunctionSurvey with _$PremiumFunctionSurvey {
   factory PremiumFunctionSurvey.fromJson(Map<String, dynamic> json) =>
       _$PremiumFunctionSurveyFromJson(json);
   Map<String, dynamic> toJson() =>
-      _$_$_PremiumFunctionSurveyToJson(this as _$_PremiumFunctionSurvey);
+      _$PremiumFunctionSurveyToJson(this as _$_PremiumFunctionSurvey);
 }

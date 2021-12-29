@@ -27,7 +27,7 @@ class PillSheetModifiedHistoryValue with _$PillSheetModifiedHistoryValue {
 
   factory PillSheetModifiedHistoryValue.fromJson(Map<String, dynamic> json) =>
       _$PillSheetModifiedHistoryValueFromJson(json);
-  Map<String, dynamic> toJson() => _$_$_PillSheetModifiedHistoryValueToJson(
+  Map<String, dynamic> toJson() => _$PillSheetModifiedHistoryValueToJson(
       this as _$_PillSheetModifiedHistoryValue);
 }
 
@@ -48,7 +48,7 @@ class CreatedPillSheetValue with _$CreatedPillSheetValue {
   factory CreatedPillSheetValue.fromJson(Map<String, dynamic> json) =>
       _$CreatedPillSheetValueFromJson(json);
   Map<String, dynamic> toJson() =>
-      _$_$_CreatedPillSheetValueToJson(this as _$_CreatedPillSheetValue);
+      _$CreatedPillSheetValueToJson(this as _$_CreatedPillSheetValue);
 }
 
 @freezed
@@ -75,7 +75,7 @@ class AutomaticallyRecordedLastTakenDateValue
           Map<String, dynamic> json) =>
       _$AutomaticallyRecordedLastTakenDateValueFromJson(json);
   Map<String, dynamic> toJson() =>
-      _$_$_AutomaticallyRecordedLastTakenDateValueToJson(
+      _$AutomaticallyRecordedLastTakenDateValueToJson(
           this as _$_AutomaticallyRecordedLastTakenDateValue);
 }
 
@@ -96,7 +96,7 @@ class DeletedPillSheetValue with _$DeletedPillSheetValue {
   factory DeletedPillSheetValue.fromJson(Map<String, dynamic> json) =>
       _$DeletedPillSheetValueFromJson(json);
   Map<String, dynamic> toJson() =>
-      _$_$_DeletedPillSheetValueToJson(this as _$_DeletedPillSheetValue);
+      _$DeletedPillSheetValueToJson(this as _$_DeletedPillSheetValue);
 }
 
 @freezed
@@ -121,7 +121,7 @@ class TakenPillValue with _$TakenPillValue {
   factory TakenPillValue.fromJson(Map<String, dynamic> json) =>
       _$TakenPillValueFromJson(json);
   Map<String, dynamic> toJson() =>
-      _$_$_TakenPillValueToJson(this as _$_TakenPillValue);
+      _$TakenPillValueToJson(this as _$_TakenPillValue);
 }
 
 @freezed
@@ -146,7 +146,7 @@ class RevertTakenPillValue with _$RevertTakenPillValue {
   factory RevertTakenPillValue.fromJson(Map<String, dynamic> json) =>
       _$RevertTakenPillValueFromJson(json);
   Map<String, dynamic> toJson() =>
-      _$_$_RevertTakenPillValueToJson(this as _$_RevertTakenPillValue);
+      _$RevertTakenPillValueToJson(this as _$_RevertTakenPillValue);
 }
 
 @freezed
@@ -175,7 +175,7 @@ class ChangedPillNumberValue with _$ChangedPillNumberValue {
   factory ChangedPillNumberValue.fromJson(Map<String, dynamic> json) =>
       _$ChangedPillNumberValueFromJson(json);
   Map<String, dynamic> toJson() =>
-      _$_$_ChangedPillNumberValueToJson(this as _$_ChangedPillNumberValue);
+      _$ChangedPillNumberValueToJson(this as _$_ChangedPillNumberValue);
 }
 
 @freezed
@@ -198,7 +198,7 @@ class EndedPillSheetValue with _$EndedPillSheetValue {
   factory EndedPillSheetValue.fromJson(Map<String, dynamic> json) =>
       _$EndedPillSheetValueFromJson(json);
   Map<String, dynamic> toJson() =>
-      _$_$_EndedPillSheetValueToJson(this as _$_EndedPillSheetValue);
+      _$EndedPillSheetValueToJson(this as _$_EndedPillSheetValue);
 }
 
 @freezed
@@ -212,7 +212,7 @@ class BeganRestDurationValue with _$BeganRestDurationValue {
   factory BeganRestDurationValue.fromJson(Map<String, dynamic> json) =>
       _$BeganRestDurationValueFromJson(json);
   Map<String, dynamic> toJson() =>
-      _$_$_BeganRestDurationValueToJson(this as _$_BeganRestDurationValue);
+      _$BeganRestDurationValueToJson(this as _$_BeganRestDurationValue);
 }
 
 @freezed
@@ -226,5 +226,5 @@ class EndedRestDurationValue with _$EndedRestDurationValue {
   factory EndedRestDurationValue.fromJson(Map<String, dynamic> json) =>
       _$EndedRestDurationValueFromJson(json);
   Map<String, dynamic> toJson() =>
-      _$_$_EndedRestDurationValueToJson(this as _$_EndedRestDurationValue);
+      _$EndedRestDurationValueToJson(this as _$_EndedRestDurationValue);
 }

@@ -18,5 +18,5 @@ class Package with _$Package {
 
   factory Package.fromJson(Map<String, dynamic> json) =>
       _$PackageFromJson(json);
-  Map<String, dynamic> toJson() => _$_$_PackageToJson(this as _$_Package);
+  Map<String, dynamic> toJson() => _$PackageToJson(this as _$_Package);
 }
