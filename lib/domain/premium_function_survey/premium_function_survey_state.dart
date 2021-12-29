@@ -4,8 +4,7 @@ import 'package:pilll/domain/premium_function_survey/premium_function_survey_ele
 part 'premium_function_survey_state.freezed.dart';
 
 @freezed
-abstract class PremiumFunctionSurveyState
-    implements _$PremiumFunctionSurveyState {
+class PremiumFunctionSurveyState implements _$PremiumFunctionSurveyState {
   PremiumFunctionSurveyState._();
   factory PremiumFunctionSurveyState({
     @Default([]) List<PremiumFunctionSurveyElementType> selectedElements,

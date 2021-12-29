@@ -13,7 +13,7 @@ import 'package:pilll/util/formatter/date_time_formatter.dart';
 part 'calendar_page_state.freezed.dart';
 
 @freezed
-abstract class CalendarPageState implements _$CalendarPageState {
+class CalendarPageState implements _$CalendarPageState {
   CalendarPageState._();
   factory CalendarPageState({
     @Default(0) int currentCalendarIndex,

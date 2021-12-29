@@ -7,8 +7,7 @@ import 'package:pilll/entity/setting.dart';
 part 'initial_setting_state.freezed.dart';
 
 @freezed
-abstract class InitialSettingTodayPillNumber
-    implements _$InitialSettingTodayPillNumber {
+class InitialSettingTodayPillNumber implements _$InitialSettingTodayPillNumber {
   factory InitialSettingTodayPillNumber({
     @Default(0) int pageIndex,
     @Default(0) int pillNumberIntoPillSheet,
@@ -16,7 +15,7 @@ abstract class InitialSettingTodayPillNumber
 }
 
 @freezed
-abstract class InitialSettingState implements _$InitialSettingState {
+class InitialSettingState implements _$InitialSettingState {
   InitialSettingState._();
   factory InitialSettingState({
     @Default([])

@@ -6,7 +6,7 @@ import 'package:pilll/entity/setting.dart';
 part 'setting_today_pill_number_store_parameter.freezed.dart';
 
 @freezed
-abstract class SettingTodayPillNumberStoreParameter
+class SettingTodayPillNumberStoreParameter
     with _$SettingTodayPillNumberStoreParameter {
   factory SettingTodayPillNumberStoreParameter({
     required PillSheetGroup pillSheetGroup,

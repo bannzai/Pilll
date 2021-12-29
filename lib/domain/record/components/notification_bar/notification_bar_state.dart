@@ -6,7 +6,7 @@ import 'package:pilll/util/datetime/day.dart';
 part 'notification_bar_state.freezed.dart';
 
 @freezed
-abstract class NotificationBarState implements _$NotificationBarState {
+class NotificationBarState implements _$NotificationBarState {
   NotificationBarState._();
   factory NotificationBarState({
     required PillSheetGroup? latestPillSheetGroup,

@@ -4,7 +4,7 @@ import 'package:pilll/entity/setting.dart';
 part 'premium_trial_modal_state.freezed.dart';
 
 @freezed
-abstract class PremiumTrialModalState implements _$PremiumTrialModalState {
+class PremiumTrialModalState implements _$PremiumTrialModalState {
   PremiumTrialModalState._();
   factory PremiumTrialModalState({
     DateTime? beginTrialDate,
