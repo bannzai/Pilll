@@ -11,8 +11,8 @@ part 'setting.freezed.dart';
 class ReminderTime implements _$ReminderTime {
   const ReminderTime._();
   const factory ReminderTime({
-    int hour,
-    int minute,
+    required int hour,
+    required int minute,
   }) = _ReminderTime;
 
   factory ReminderTime.fromJson(Map<String, dynamic> json) =>
@@ -49,10 +49,10 @@ class Setting implements _$Setting {
   Setting._();
   factory Setting({
     @Default([]) List<PillSheetType> pillSheetTypes,
-    int pillNumberForFromMenstruation,
-    int durationMenstruation,
+    required int pillNumberForFromMenstruation,
+    required int durationMenstruation,
     @Default([]) List<ReminderTime> reminderTimes,
-    bool isOnReminder,
+    required bool isOnReminder,
     @Default(true) bool isOnNotifyInNotTakenDuration,
     @Default(PillSheetAppearanceMode.number)
         PillSheetAppearanceMode pillSheetAppearanceMode,

@@ -7,11 +7,11 @@ part 'demographic.freezed.dart';
 @JsonSerializable(explicitToJson: true)
 class Demographic with _$Demographic {
   factory Demographic({
-    String purpose1,
-    String purpose2,
-    String prescription,
-    String birthYear,
-    String lifeTime,
+    required String purpose1,
+    required String purpose2,
+    required String prescription,
+    required String birthYear,
+    required String lifeTime,
   }) = _Demographic;
   Demographic._();
   factory Demographic.fromJson(Map<String, dynamic> json) =>

@@ -44,30 +44,30 @@ extension PillSheetModifiedActionTypeFunctions on PillSheetModifiedActionType {
 class PillSheetModifiedHistory with _$PillSheetModifiedHistory {
   factory PillSheetModifiedHistory({
     @JsonKey(includeIfNull: false, toJson: toNull)
-        String? id,
-    String actionType,
-    PillSheetModifiedHistoryValue value,
+        required String? id,
+    required String actionType,
+    required PillSheetModifiedHistoryValue value,
     // This is deprecated property.
     // Instead of beforePillSheetID and afterPillSheetID
-    String? pillSheetID,
+    required String? pillSheetID,
     // There are new properties for pill_sheet grouping. So it's all optional
-    String? pillSheetGroupID,
-    String? beforePillSheetID,
-    String? afterPillSheetID,
-    // before and after is non
+    required String? pillSheetGroupID,
+    required String? beforePillSheetID,
+    required String? afterPillSheetID,
+    // before and after is non required
     // Because, actions for createdPillSheet and deletedPillSheet are not exists target single pill sheet
-    PillSheet? before,
-    PillSheet? after,
+    required PillSheet? before,
+    required PillSheet? after,
     @JsonKey(
       fromJson: NonNullTimestampConverter.timestampToDateTime,
       toJson: NonNullTimestampConverter.dateTimeToTimestamp,
     )
-        DateTime estimatedEventCausingDate,
+        required DateTime estimatedEventCausingDate,
     @JsonKey(
       fromJson: NonNullTimestampConverter.timestampToDateTime,
       toJson: NonNullTimestampConverter.dateTimeToTimestamp,
     )
-        DateTime createdAt,
+        required DateTime createdAt,
   }) = _PillSheetModifiedHistory;
   const PillSheetModifiedHistory._();
 

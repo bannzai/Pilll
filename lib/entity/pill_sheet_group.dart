@@ -20,13 +20,13 @@ class PillSheetGroup implements _$PillSheetGroup {
   factory PillSheetGroup({
     @JsonKey(includeIfNull: false, toJson: toNull)
         String? id,
-    List<String> pillSheetIDs,
-    List<PillSheet> pillSheets,
+    required List<String> pillSheetIDs,
+    required List<PillSheet> pillSheets,
     @JsonKey(
       fromJson: NonNullTimestampConverter.timestampToDateTime,
       toJson: NonNullTimestampConverter.dateTimeToTimestamp,
     )
-        DateTime createdAt,
+        required DateTime createdAt,
     @JsonKey(
       fromJson: TimestampConverter.timestampToDateTime,
       toJson: TimestampConverter.dateTimeToTimestamp,

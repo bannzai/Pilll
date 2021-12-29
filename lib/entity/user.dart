@@ -36,7 +36,7 @@ extension UserPrivateFirestoreFieldKeys on String {
 class UserPrivate with _$UserPrivate {
   UserPrivate._();
   factory UserPrivate({String? fcmToken}) = _UserPrivate;
-  factory UserPrivate.create({String fcmToken}) =>
+  factory UserPrivate.create({required String fcmToken}) =>
       UserPrivate(fcmToken: fcmToken);
 
   factory UserPrivate.fromJson(Map<String, dynamic> json) =>
