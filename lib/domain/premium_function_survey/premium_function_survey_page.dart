@@ -15,9 +15,9 @@ import 'package:url_launcher/url_launcher.dart';
 
 class PremiumFunctionSurveyPage extends HookConsumerWidget {
   @override
-  Widget build(BuildContext context) {
-    final store = useProvider(premiumFunctionSurveyStoreProvider);
-    final state = useProvider(premiumFunctionSurveyStoreProvider.state);
+  Widget build(BuildContext context, WidgetRef ref) {
+    final store = ref.watch(premiumFunctionSurveyStoreProvider.notifier);
+    final state = ref.watch(premiumFunctionSurveyStoreProvider);
 
     return Scaffold(
       backgroundColor: PilllColors.background,
