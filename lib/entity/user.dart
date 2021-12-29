@@ -34,7 +34,7 @@ extension UserPrivateFirestoreFieldKeys on String {
 
 @freezed
 class UserPrivate with _$UserPrivate {
-  Useconst UserPrivate._();
+  const UserPrivate._();
 const factory UserPrivate({String? fcmToken}) = _UserPrivate;
 const factory UserPrivate.create({required String fcmToken}) =>
       UserPrivate(fcmToken: fcmToken);
@@ -66,7 +66,7 @@ extension UserFirestoreFieldKeys on String {
 @freezed
 @JsonSerializable(explicitToJson: true)
 class User implements _$User {
-  Useconst User._();
+  const User._();
 const factory User({
     @JsonKey(name: "settings")
         Setting? setting,
