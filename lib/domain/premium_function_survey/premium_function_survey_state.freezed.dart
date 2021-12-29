@@ -1,5 +1,6 @@
+// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'premium_function_survey_state.dart';
 
@@ -123,14 +124,14 @@ class __$PremiumFunctionSurveyStateCopyWithImpl<$Res>
 /// @nodoc
 
 class _$_PremiumFunctionSurveyState extends _PremiumFunctionSurveyState {
-  _$_PremiumFunctionSurveyState(
+  const _$_PremiumFunctionSurveyState(
       {this.selectedElements = const [], this.message = ""})
       : super._();
 
-  @JsonKey(defaultValue: const [])
+  @JsonKey()
   @override
   final List<PremiumFunctionSurveyElementType> selectedElements;
-  @JsonKey(defaultValue: "")
+  @JsonKey()
   @override
   final String message;
 
@@ -142,19 +143,18 @@ class _$_PremiumFunctionSurveyState extends _PremiumFunctionSurveyState {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _PremiumFunctionSurveyState &&
-            (identical(other.selectedElements, selectedElements) ||
-                const DeepCollectionEquality()
-                    .equals(other.selectedElements, selectedElements)) &&
-            (identical(other.message, message) ||
-                const DeepCollectionEquality().equals(other.message, message)));
+        (other.runtimeType == runtimeType &&
+            other is _PremiumFunctionSurveyState &&
+            const DeepCollectionEquality()
+                .equals(other.selectedElements, selectedElements) &&
+            const DeepCollectionEquality().equals(other.message, message));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(selectedElements) ^
-      const DeepCollectionEquality().hash(message);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(selectedElements),
+      const DeepCollectionEquality().hash(message));
 
   @JsonKey(ignore: true)
   @override
@@ -164,16 +164,15 @@ class _$_PremiumFunctionSurveyState extends _PremiumFunctionSurveyState {
 }
 
 abstract class _PremiumFunctionSurveyState extends PremiumFunctionSurveyState {
-  factory _PremiumFunctionSurveyState(
+  const factory _PremiumFunctionSurveyState(
       {List<PremiumFunctionSurveyElementType> selectedElements,
       String message}) = _$_PremiumFunctionSurveyState;
-  _PremiumFunctionSurveyState._() : super._();
+  const _PremiumFunctionSurveyState._() : super._();
 
   @override
-  List<PremiumFunctionSurveyElementType> get selectedElements =>
-      throw _privateConstructorUsedError;
+  List<PremiumFunctionSurveyElementType> get selectedElements;
   @override
-  String get message => throw _privateConstructorUsedError;
+  String get message;
   @override
   @JsonKey(ignore: true)
   _$PremiumFunctionSurveyStateCopyWith<_PremiumFunctionSurveyState>
