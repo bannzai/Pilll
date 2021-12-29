@@ -30,8 +30,7 @@ class SettingTodayPillNumberPage extends HookConsumerWidget {
       pillSheetGroup: pillSheetGroup,
       activedPillSheet: activedPillSheet,
     );
-    final state =
-        useProvider(settingTodayPillNumberStoreProvider(parameter).state);
+    final state = ref.watch(settingTodayPillNumberStoreProvider(parameter));
     final store = useProvider(settingTodayPillNumberStoreProvider(parameter));
 
     return Scaffold(

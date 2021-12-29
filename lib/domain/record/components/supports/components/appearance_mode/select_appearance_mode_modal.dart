@@ -17,7 +17,7 @@ class SelectAppearanceModeModal extends HookConsumerWidget {
   @override
   Widget build(BuildContext context) {
     final store = useProvider(recordPageStoreProvider);
-    final state = useProvider(recordPageStoreProvider.state);
+    final state = ref.watch(recordPageStoreProvider);
     return Container(
       color: Colors.white,
       padding: const EdgeInsets.only(bottom: 20, top: 24, left: 16, right: 16),

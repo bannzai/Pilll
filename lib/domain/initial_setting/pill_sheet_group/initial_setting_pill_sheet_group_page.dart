@@ -23,7 +23,7 @@ class InitialSettingPillSheetGroupPage extends HookConsumerWidget {
   @override
   Widget build(BuildContext context) {
     final store = useProvider(initialSettingStoreProvider);
-    final state = useProvider(initialSettingStoreProvider.state);
+    final state = ref.watch(initialSettingStoreProvider);
     if (state.isAccountCooperationDidEnd) {
       Future(() async {
         if (await store.canEndInitialSetting()) {

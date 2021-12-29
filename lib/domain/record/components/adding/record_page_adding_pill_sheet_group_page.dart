@@ -14,7 +14,7 @@ class RecordPageAddingPillSheetGroupPage extends HookConsumerWidget {
   @override
   Widget build(BuildContext context) {
     final store = useProvider(recordPageStoreProvider);
-    final state = useProvider(recordPageStoreProvider.state);
+    final state = ref.watch(recordPageStoreProvider);
     final setting = state.setting;
     if (setting == null) {
       throw FormatException("ピルシートグループの設定が読み込めませんでした");

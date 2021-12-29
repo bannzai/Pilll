@@ -21,7 +21,7 @@ class PremiumTrialModal extends HookConsumerWidget {
   @override
   Widget build(BuildContext context) {
     final store = useProvider(premiumTrialStoreProvider);
-    final state = useProvider(premiumTrialStoreProvider.state);
+    final state = ref.watch(premiumTrialStoreProvider);
     return HUD(
       shown: state.isLoading,
       child: UniversalErrorPage(

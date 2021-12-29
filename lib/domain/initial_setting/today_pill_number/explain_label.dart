@@ -11,7 +11,7 @@ class ExplainPillNumber extends HookConsumerWidget {
   const ExplainPillNumber({Key? key, required this.today}) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    final state = useProvider(initialSettingStoreProvider.state);
+    final state = ref.watch(initialSettingStoreProvider);
     return Center(
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,

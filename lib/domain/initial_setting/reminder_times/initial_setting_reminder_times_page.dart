@@ -97,7 +97,7 @@ class InitialSettingReminderTimesPage extends HookConsumerWidget {
   @override
   Widget build(BuildContext context) {
     final store = useProvider(initialSettingStoreProvider);
-    final state = useProvider(initialSettingStoreProvider.state);
+    final state = ref.watch(initialSettingStoreProvider);
     return Scaffold(
       backgroundColor: PilllColors.background,
       appBar: AppBar(

@@ -43,7 +43,7 @@ class PostDiaryPage extends HookConsumerWidget {
   @override
   Widget build(BuildContext context) {
     final store = useProvider(_postDiaryStoreProvider(_family()));
-    final state = useProvider(_postDiaryStoreProvider(_family()).state);
+    final state = ref.watch(_postDiaryStoreProvider(_family()));
     final TextEditingController? textEditingController =
         useTextEditingController(text: state.diary.memo);
     final focusNode = useFocusNode();

@@ -21,7 +21,7 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 class RecordPage extends HookConsumerWidget {
   @override
   Widget build(BuildContext context) {
-    final state = useProvider(recordPageStoreProvider.state);
+    final state = ref.watch(recordPageStoreProvider);
     final store = useProvider(recordPageStoreProvider);
 
     final exception = state.exception;

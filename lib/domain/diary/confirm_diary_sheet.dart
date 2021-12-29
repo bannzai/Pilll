@@ -123,7 +123,7 @@ class ConfirmDiarySheet extends HookConsumerWidget {
   }
 
   Widget _physicalCondition() {
-    final state = useProvider(_confirmDiaryStoreProvider(_diary).state);
+    final state = ref.watch(_confirmDiaryStoreProvider(_diary));
     return Row(
       children: [
         Text("体調", style: FontType.componentTitle.merge(TextColorStyle.black)),
