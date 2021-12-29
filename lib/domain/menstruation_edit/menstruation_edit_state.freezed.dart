@@ -1,5 +1,6 @@
+// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'menstruation_edit_state.dart';
 
@@ -166,14 +167,14 @@ class __$MenstruationEditStateCopyWithImpl<$Res>
 /// @nodoc
 
 class _$_MenstruationEditState extends _MenstruationEditState {
-  _$_MenstruationEditState(
+  const _$_MenstruationEditState(
       {this.isAlreadyAdjsutScrollOffset = false,
       required this.menstruation,
       required this.displayedDates,
       this.invalidMessage})
       : super._();
 
-  @JsonKey(defaultValue: false)
+  @JsonKey()
   @override
   final bool isAlreadyAdjsutScrollOffset;
   @override
@@ -191,30 +192,26 @@ class _$_MenstruationEditState extends _MenstruationEditState {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _MenstruationEditState &&
-            (identical(other.isAlreadyAdjsutScrollOffset,
-                    isAlreadyAdjsutScrollOffset) ||
-                const DeepCollectionEquality().equals(
-                    other.isAlreadyAdjsutScrollOffset,
-                    isAlreadyAdjsutScrollOffset)) &&
-            (identical(other.menstruation, menstruation) ||
-                const DeepCollectionEquality()
-                    .equals(other.menstruation, menstruation)) &&
-            (identical(other.displayedDates, displayedDates) ||
-                const DeepCollectionEquality()
-                    .equals(other.displayedDates, displayedDates)) &&
-            (identical(other.invalidMessage, invalidMessage) ||
-                const DeepCollectionEquality()
-                    .equals(other.invalidMessage, invalidMessage)));
+        (other.runtimeType == runtimeType &&
+            other is _MenstruationEditState &&
+            const DeepCollectionEquality().equals(
+                other.isAlreadyAdjsutScrollOffset,
+                isAlreadyAdjsutScrollOffset) &&
+            const DeepCollectionEquality()
+                .equals(other.menstruation, menstruation) &&
+            const DeepCollectionEquality()
+                .equals(other.displayedDates, displayedDates) &&
+            const DeepCollectionEquality()
+                .equals(other.invalidMessage, invalidMessage));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(isAlreadyAdjsutScrollOffset) ^
-      const DeepCollectionEquality().hash(menstruation) ^
-      const DeepCollectionEquality().hash(displayedDates) ^
-      const DeepCollectionEquality().hash(invalidMessage);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(isAlreadyAdjsutScrollOffset),
+      const DeepCollectionEquality().hash(menstruation),
+      const DeepCollectionEquality().hash(displayedDates),
+      const DeepCollectionEquality().hash(invalidMessage));
 
   @JsonKey(ignore: true)
   @override
@@ -224,21 +221,21 @@ class _$_MenstruationEditState extends _MenstruationEditState {
 }
 
 abstract class _MenstruationEditState extends MenstruationEditState {
-  factory _MenstruationEditState(
+  const factory _MenstruationEditState(
       {bool isAlreadyAdjsutScrollOffset,
       required Menstruation? menstruation,
       required List<DateTime> displayedDates,
       String? invalidMessage}) = _$_MenstruationEditState;
-  _MenstruationEditState._() : super._();
+  const _MenstruationEditState._() : super._();
 
   @override
-  bool get isAlreadyAdjsutScrollOffset => throw _privateConstructorUsedError;
+  bool get isAlreadyAdjsutScrollOffset;
   @override
-  Menstruation? get menstruation => throw _privateConstructorUsedError;
+  Menstruation? get menstruation;
   @override
-  List<DateTime> get displayedDates => throw _privateConstructorUsedError;
+  List<DateTime> get displayedDates;
   @override
-  String? get invalidMessage => throw _privateConstructorUsedError;
+  String? get invalidMessage;
   @override
   @JsonKey(ignore: true)
   _$MenstruationEditStateCopyWith<_MenstruationEditState> get copyWith =>

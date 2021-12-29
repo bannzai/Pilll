@@ -1,5 +1,6 @@
+// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'initial_setting_state.dart';
 
@@ -120,13 +121,13 @@ class __$InitialSettingTodayPillNumberCopyWithImpl<$Res>
 
 class _$_InitialSettingTodayPillNumber
     implements _InitialSettingTodayPillNumber {
-  _$_InitialSettingTodayPillNumber(
+  const _$_InitialSettingTodayPillNumber(
       {this.pageIndex = 0, this.pillNumberIntoPillSheet = 0});
 
-  @JsonKey(defaultValue: 0)
+  @JsonKey()
   @override
   final int pageIndex;
-  @JsonKey(defaultValue: 0)
+  @JsonKey()
   @override
   final int pillNumberIntoPillSheet;
 
@@ -138,21 +139,18 @@ class _$_InitialSettingTodayPillNumber
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _InitialSettingTodayPillNumber &&
-            (identical(other.pageIndex, pageIndex) ||
-                const DeepCollectionEquality()
-                    .equals(other.pageIndex, pageIndex)) &&
-            (identical(
-                    other.pillNumberIntoPillSheet, pillNumberIntoPillSheet) ||
-                const DeepCollectionEquality().equals(
-                    other.pillNumberIntoPillSheet, pillNumberIntoPillSheet)));
+        (other.runtimeType == runtimeType &&
+            other is _InitialSettingTodayPillNumber &&
+            const DeepCollectionEquality().equals(other.pageIndex, pageIndex) &&
+            const DeepCollectionEquality().equals(
+                other.pillNumberIntoPillSheet, pillNumberIntoPillSheet));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(pageIndex) ^
-      const DeepCollectionEquality().hash(pillNumberIntoPillSheet);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(pageIndex),
+      const DeepCollectionEquality().hash(pillNumberIntoPillSheet));
 
   @JsonKey(ignore: true)
   @override
@@ -163,14 +161,14 @@ class _$_InitialSettingTodayPillNumber
 
 abstract class _InitialSettingTodayPillNumber
     implements InitialSettingTodayPillNumber {
-  factory _InitialSettingTodayPillNumber(
+  const factory _InitialSettingTodayPillNumber(
       {int pageIndex,
       int pillNumberIntoPillSheet}) = _$_InitialSettingTodayPillNumber;
 
   @override
-  int get pageIndex => throw _privateConstructorUsedError;
+  int get pageIndex;
   @override
-  int get pillNumberIntoPillSheet => throw _privateConstructorUsedError;
+  int get pillNumberIntoPillSheet;
   @override
   @JsonKey(ignore: true)
   _$InitialSettingTodayPillNumberCopyWith<_InitialSettingTodayPillNumber>
@@ -187,8 +185,8 @@ class _$InitialSettingStateTearOff {
       int fromMenstruation = 0,
       int durationMenstruation = 4,
       List<ReminderTime> reminderTimes = const [
-        const ReminderTime(hour: 21, minute: 0),
-        const ReminderTime(hour: 22, minute: 0)
+        ReminderTime(hour: 21, minute: 0),
+        ReminderTime(hour: 22, minute: 0)
       ],
       bool isOnReminder = true,
       bool isLoading = false,
@@ -396,44 +394,41 @@ class __$InitialSettingStateCopyWithImpl<$Res>
 /// @nodoc
 
 class _$_InitialSettingState extends _InitialSettingState {
-  _$_InitialSettingState(
+  const _$_InitialSettingState(
       {this.pillSheetTypes = const [],
       this.todayPillNumber,
       this.fromMenstruation = 0,
       this.durationMenstruation = 4,
       this.reminderTimes = const [
-        const ReminderTime(hour: 21, minute: 0),
-        const ReminderTime(hour: 22, minute: 0)
+        ReminderTime(hour: 21, minute: 0),
+        ReminderTime(hour: 22, minute: 0)
       ],
       this.isOnReminder = true,
       this.isLoading = false,
       this.isAccountCooperationDidEnd = false})
       : super._();
 
-  @JsonKey(defaultValue: const [])
+  @JsonKey()
   @override
   final List<PillSheetType> pillSheetTypes;
   @override
   final InitialSettingTodayPillNumber? todayPillNumber;
-  @JsonKey(defaultValue: 0)
+  @JsonKey()
   @override
   final int fromMenstruation;
-  @JsonKey(defaultValue: 4)
+  @JsonKey()
   @override
   final int durationMenstruation;
-  @JsonKey(defaultValue: const [
-    const ReminderTime(hour: 21, minute: 0),
-    const ReminderTime(hour: 22, minute: 0)
-  ])
+  @JsonKey()
   @override
   final List<ReminderTime> reminderTimes;
-  @JsonKey(defaultValue: true)
+  @JsonKey()
   @override
   final bool isOnReminder;
-  @JsonKey(defaultValue: false)
+  @JsonKey()
   @override
   final bool isLoading;
-  @JsonKey(defaultValue: false)
+  @JsonKey()
   @override
   final bool isAccountCooperationDidEnd;
 
@@ -445,46 +440,36 @@ class _$_InitialSettingState extends _InitialSettingState {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _InitialSettingState &&
-            (identical(other.pillSheetTypes, pillSheetTypes) ||
-                const DeepCollectionEquality()
-                    .equals(other.pillSheetTypes, pillSheetTypes)) &&
-            (identical(other.todayPillNumber, todayPillNumber) ||
-                const DeepCollectionEquality()
-                    .equals(other.todayPillNumber, todayPillNumber)) &&
-            (identical(other.fromMenstruation, fromMenstruation) ||
-                const DeepCollectionEquality()
-                    .equals(other.fromMenstruation, fromMenstruation)) &&
-            (identical(other.durationMenstruation, durationMenstruation) ||
-                const DeepCollectionEquality().equals(
-                    other.durationMenstruation, durationMenstruation)) &&
-            (identical(other.reminderTimes, reminderTimes) ||
-                const DeepCollectionEquality()
-                    .equals(other.reminderTimes, reminderTimes)) &&
-            (identical(other.isOnReminder, isOnReminder) ||
-                const DeepCollectionEquality()
-                    .equals(other.isOnReminder, isOnReminder)) &&
-            (identical(other.isLoading, isLoading) ||
-                const DeepCollectionEquality()
-                    .equals(other.isLoading, isLoading)) &&
-            (identical(other.isAccountCooperationDidEnd,
-                    isAccountCooperationDidEnd) ||
-                const DeepCollectionEquality().equals(
-                    other.isAccountCooperationDidEnd,
-                    isAccountCooperationDidEnd)));
+        (other.runtimeType == runtimeType &&
+            other is _InitialSettingState &&
+            const DeepCollectionEquality()
+                .equals(other.pillSheetTypes, pillSheetTypes) &&
+            const DeepCollectionEquality()
+                .equals(other.todayPillNumber, todayPillNumber) &&
+            const DeepCollectionEquality()
+                .equals(other.fromMenstruation, fromMenstruation) &&
+            const DeepCollectionEquality()
+                .equals(other.durationMenstruation, durationMenstruation) &&
+            const DeepCollectionEquality()
+                .equals(other.reminderTimes, reminderTimes) &&
+            const DeepCollectionEquality()
+                .equals(other.isOnReminder, isOnReminder) &&
+            const DeepCollectionEquality().equals(other.isLoading, isLoading) &&
+            const DeepCollectionEquality().equals(
+                other.isAccountCooperationDidEnd, isAccountCooperationDidEnd));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(pillSheetTypes) ^
-      const DeepCollectionEquality().hash(todayPillNumber) ^
-      const DeepCollectionEquality().hash(fromMenstruation) ^
-      const DeepCollectionEquality().hash(durationMenstruation) ^
-      const DeepCollectionEquality().hash(reminderTimes) ^
-      const DeepCollectionEquality().hash(isOnReminder) ^
-      const DeepCollectionEquality().hash(isLoading) ^
-      const DeepCollectionEquality().hash(isAccountCooperationDidEnd);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(pillSheetTypes),
+      const DeepCollectionEquality().hash(todayPillNumber),
+      const DeepCollectionEquality().hash(fromMenstruation),
+      const DeepCollectionEquality().hash(durationMenstruation),
+      const DeepCollectionEquality().hash(reminderTimes),
+      const DeepCollectionEquality().hash(isOnReminder),
+      const DeepCollectionEquality().hash(isLoading),
+      const DeepCollectionEquality().hash(isAccountCooperationDidEnd));
 
   @JsonKey(ignore: true)
   @override
@@ -494,7 +479,7 @@ class _$_InitialSettingState extends _InitialSettingState {
 }
 
 abstract class _InitialSettingState extends InitialSettingState {
-  factory _InitialSettingState(
+  const factory _InitialSettingState(
       {List<PillSheetType> pillSheetTypes,
       InitialSettingTodayPillNumber? todayPillNumber,
       int fromMenstruation,
@@ -503,25 +488,24 @@ abstract class _InitialSettingState extends InitialSettingState {
       bool isOnReminder,
       bool isLoading,
       bool isAccountCooperationDidEnd}) = _$_InitialSettingState;
-  _InitialSettingState._() : super._();
+  const _InitialSettingState._() : super._();
 
   @override
-  List<PillSheetType> get pillSheetTypes => throw _privateConstructorUsedError;
+  List<PillSheetType> get pillSheetTypes;
   @override
-  InitialSettingTodayPillNumber? get todayPillNumber =>
-      throw _privateConstructorUsedError;
+  InitialSettingTodayPillNumber? get todayPillNumber;
   @override
-  int get fromMenstruation => throw _privateConstructorUsedError;
+  int get fromMenstruation;
   @override
-  int get durationMenstruation => throw _privateConstructorUsedError;
+  int get durationMenstruation;
   @override
-  List<ReminderTime> get reminderTimes => throw _privateConstructorUsedError;
+  List<ReminderTime> get reminderTimes;
   @override
-  bool get isOnReminder => throw _privateConstructorUsedError;
+  bool get isOnReminder;
   @override
-  bool get isLoading => throw _privateConstructorUsedError;
+  bool get isLoading;
   @override
-  bool get isAccountCooperationDidEnd => throw _privateConstructorUsedError;
+  bool get isAccountCooperationDidEnd;
   @override
   @JsonKey(ignore: true)
   _$InitialSettingStateCopyWith<_InitialSettingState> get copyWith =>

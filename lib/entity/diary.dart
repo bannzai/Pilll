@@ -54,7 +54,7 @@ const factory Diary({
   }) = _Diary;
 const Diary._();
 
-const factory Diary.fromDate(DateTime date) => Diary(
+factory Diary.fromDate(DateTime date) => Diary(
       date: date,
       memo: "",
       createdAt: now(),

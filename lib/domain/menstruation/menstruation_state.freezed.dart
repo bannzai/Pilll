@@ -1,5 +1,6 @@
+// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'menstruation_state.dart';
 
@@ -265,7 +266,7 @@ class __$MenstruationStateCopyWithImpl<$Res>
 /// @nodoc
 
 class _$_MenstruationState extends _MenstruationState {
-  _$_MenstruationState(
+  const _$_MenstruationState(
       {this.isNotYetLoaded = true,
       this.currentCalendarIndex = 0,
       this.diariesForMonth = const [],
@@ -278,22 +279,22 @@ class _$_MenstruationState extends _MenstruationState {
       this.exception})
       : super._();
 
-  @JsonKey(defaultValue: true)
+  @JsonKey()
   @override
   final bool isNotYetLoaded;
-  @JsonKey(defaultValue: 0)
+  @JsonKey()
   @override
   final int currentCalendarIndex;
-  @JsonKey(defaultValue: const [])
+  @JsonKey()
   @override
   final List<Diary> diariesForMonth;
-  @JsonKey(defaultValue: const [])
+  @JsonKey()
   @override
   final List<Menstruation> entities;
-  @JsonKey(defaultValue: false)
+  @JsonKey()
   @override
   final bool isPremium;
-  @JsonKey(defaultValue: false)
+  @JsonKey()
   @override
   final bool isTrial;
   @override
@@ -313,52 +314,38 @@ class _$_MenstruationState extends _MenstruationState {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _MenstruationState &&
-            (identical(other.isNotYetLoaded, isNotYetLoaded) ||
-                const DeepCollectionEquality()
-                    .equals(other.isNotYetLoaded, isNotYetLoaded)) &&
-            (identical(other.currentCalendarIndex, currentCalendarIndex) ||
-                const DeepCollectionEquality().equals(
-                    other.currentCalendarIndex, currentCalendarIndex)) &&
-            (identical(other.diariesForMonth, diariesForMonth) ||
-                const DeepCollectionEquality()
-                    .equals(other.diariesForMonth, diariesForMonth)) &&
-            (identical(other.entities, entities) ||
-                const DeepCollectionEquality()
-                    .equals(other.entities, entities)) &&
-            (identical(other.isPremium, isPremium) ||
-                const DeepCollectionEquality()
-                    .equals(other.isPremium, isPremium)) &&
-            (identical(other.isTrial, isTrial) ||
-                const DeepCollectionEquality()
-                    .equals(other.isTrial, isTrial)) &&
-            (identical(other.trialDeadlineDate, trialDeadlineDate) ||
-                const DeepCollectionEquality()
-                    .equals(other.trialDeadlineDate, trialDeadlineDate)) &&
-            (identical(other.setting, setting) ||
-                const DeepCollectionEquality()
-                    .equals(other.setting, setting)) &&
-            (identical(other.latestPillSheetGroup, latestPillSheetGroup) ||
-                const DeepCollectionEquality().equals(
-                    other.latestPillSheetGroup, latestPillSheetGroup)) &&
-            (identical(other.exception, exception) ||
-                const DeepCollectionEquality()
-                    .equals(other.exception, exception)));
+        (other.runtimeType == runtimeType &&
+            other is _MenstruationState &&
+            const DeepCollectionEquality()
+                .equals(other.isNotYetLoaded, isNotYetLoaded) &&
+            const DeepCollectionEquality()
+                .equals(other.currentCalendarIndex, currentCalendarIndex) &&
+            const DeepCollectionEquality()
+                .equals(other.diariesForMonth, diariesForMonth) &&
+            const DeepCollectionEquality().equals(other.entities, entities) &&
+            const DeepCollectionEquality().equals(other.isPremium, isPremium) &&
+            const DeepCollectionEquality().equals(other.isTrial, isTrial) &&
+            const DeepCollectionEquality()
+                .equals(other.trialDeadlineDate, trialDeadlineDate) &&
+            const DeepCollectionEquality().equals(other.setting, setting) &&
+            const DeepCollectionEquality()
+                .equals(other.latestPillSheetGroup, latestPillSheetGroup) &&
+            const DeepCollectionEquality().equals(other.exception, exception));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(isNotYetLoaded) ^
-      const DeepCollectionEquality().hash(currentCalendarIndex) ^
-      const DeepCollectionEquality().hash(diariesForMonth) ^
-      const DeepCollectionEquality().hash(entities) ^
-      const DeepCollectionEquality().hash(isPremium) ^
-      const DeepCollectionEquality().hash(isTrial) ^
-      const DeepCollectionEquality().hash(trialDeadlineDate) ^
-      const DeepCollectionEquality().hash(setting) ^
-      const DeepCollectionEquality().hash(latestPillSheetGroup) ^
-      const DeepCollectionEquality().hash(exception);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(isNotYetLoaded),
+      const DeepCollectionEquality().hash(currentCalendarIndex),
+      const DeepCollectionEquality().hash(diariesForMonth),
+      const DeepCollectionEquality().hash(entities),
+      const DeepCollectionEquality().hash(isPremium),
+      const DeepCollectionEquality().hash(isTrial),
+      const DeepCollectionEquality().hash(trialDeadlineDate),
+      const DeepCollectionEquality().hash(setting),
+      const DeepCollectionEquality().hash(latestPillSheetGroup),
+      const DeepCollectionEquality().hash(exception));
 
   @JsonKey(ignore: true)
   @override
@@ -367,7 +354,7 @@ class _$_MenstruationState extends _MenstruationState {
 }
 
 abstract class _MenstruationState extends MenstruationState {
-  factory _MenstruationState(
+  const factory _MenstruationState(
       {bool isNotYetLoaded,
       int currentCalendarIndex,
       List<Diary> diariesForMonth,
@@ -378,29 +365,28 @@ abstract class _MenstruationState extends MenstruationState {
       Setting? setting,
       PillSheetGroup? latestPillSheetGroup,
       Object? exception}) = _$_MenstruationState;
-  _MenstruationState._() : super._();
+  const _MenstruationState._() : super._();
 
   @override
-  bool get isNotYetLoaded => throw _privateConstructorUsedError;
+  bool get isNotYetLoaded;
   @override
-  int get currentCalendarIndex => throw _privateConstructorUsedError;
+  int get currentCalendarIndex;
   @override
-  List<Diary> get diariesForMonth => throw _privateConstructorUsedError;
+  List<Diary> get diariesForMonth;
   @override
-  List<Menstruation> get entities => throw _privateConstructorUsedError;
+  List<Menstruation> get entities;
   @override
-  bool get isPremium => throw _privateConstructorUsedError;
+  bool get isPremium;
   @override
-  bool get isTrial => throw _privateConstructorUsedError;
+  bool get isTrial;
   @override
-  DateTime? get trialDeadlineDate => throw _privateConstructorUsedError;
+  DateTime? get trialDeadlineDate;
   @override
-  Setting? get setting => throw _privateConstructorUsedError;
+  Setting? get setting;
   @override
-  PillSheetGroup? get latestPillSheetGroup =>
-      throw _privateConstructorUsedError;
+  PillSheetGroup? get latestPillSheetGroup;
   @override
-  Object? get exception => throw _privateConstructorUsedError;
+  Object? get exception;
   @override
   @JsonKey(ignore: true)
   _$MenstruationStateCopyWith<_MenstruationState> get copyWith =>

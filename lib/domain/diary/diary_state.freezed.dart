@@ -1,5 +1,6 @@
+// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'diary_state.dart';
 
@@ -111,7 +112,7 @@ class __$DiaryStateCopyWithImpl<$Res> extends _$DiaryStateCopyWithImpl<$Res>
 /// @nodoc
 
 class _$_DiaryState extends _DiaryState {
-  _$_DiaryState({required this.diary}) : super._();
+  const _$_DiaryState({required this.diary}) : super._();
 
   @override
   final Diary diary;
@@ -124,14 +125,14 @@ class _$_DiaryState extends _DiaryState {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _DiaryState &&
-            (identical(other.diary, diary) ||
-                const DeepCollectionEquality().equals(other.diary, diary)));
+        (other.runtimeType == runtimeType &&
+            other is _DiaryState &&
+            const DeepCollectionEquality().equals(other.diary, diary));
   }
 
   @override
   int get hashCode =>
-      runtimeType.hashCode ^ const DeepCollectionEquality().hash(diary);
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(diary));
 
   @JsonKey(ignore: true)
   @override
@@ -140,11 +141,11 @@ class _$_DiaryState extends _DiaryState {
 }
 
 abstract class _DiaryState extends DiaryState {
-  factory _DiaryState({required Diary diary}) = _$_DiaryState;
-  _DiaryState._() : super._();
+  const factory _DiaryState({required Diary diary}) = _$_DiaryState;
+  const _DiaryState._() : super._();
 
   @override
-  Diary get diary => throw _privateConstructorUsedError;
+  Diary get diary;
   @override
   @JsonKey(ignore: true)
   _$DiaryStateCopyWith<_DiaryState> get copyWith =>

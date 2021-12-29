@@ -1,5 +1,6 @@
+// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'menstruation_list_state.dart';
 
@@ -117,14 +118,14 @@ class __$MenstruationListStateCopyWithImpl<$Res>
 /// @nodoc
 
 class _$_MenstruationListState extends _MenstruationListState {
-  _$_MenstruationListState(
+  const _$_MenstruationListState(
       {this.isNotYetLoaded = true, this.allRows = const []})
       : super._();
 
-  @JsonKey(defaultValue: true)
+  @JsonKey()
   @override
   final bool isNotYetLoaded;
-  @JsonKey(defaultValue: const [])
+  @JsonKey()
   @override
   final List<MenstruationListRowState> allRows;
 
@@ -136,19 +137,18 @@ class _$_MenstruationListState extends _MenstruationListState {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _MenstruationListState &&
-            (identical(other.isNotYetLoaded, isNotYetLoaded) ||
-                const DeepCollectionEquality()
-                    .equals(other.isNotYetLoaded, isNotYetLoaded)) &&
-            (identical(other.allRows, allRows) ||
-                const DeepCollectionEquality().equals(other.allRows, allRows)));
+        (other.runtimeType == runtimeType &&
+            other is _MenstruationListState &&
+            const DeepCollectionEquality()
+                .equals(other.isNotYetLoaded, isNotYetLoaded) &&
+            const DeepCollectionEquality().equals(other.allRows, allRows));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(isNotYetLoaded) ^
-      const DeepCollectionEquality().hash(allRows);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(isNotYetLoaded),
+      const DeepCollectionEquality().hash(allRows));
 
   @JsonKey(ignore: true)
   @override
@@ -158,16 +158,15 @@ class _$_MenstruationListState extends _MenstruationListState {
 }
 
 abstract class _MenstruationListState extends MenstruationListState {
-  factory _MenstruationListState(
+  const factory _MenstruationListState(
       {bool isNotYetLoaded,
       List<MenstruationListRowState> allRows}) = _$_MenstruationListState;
-  _MenstruationListState._() : super._();
+  const _MenstruationListState._() : super._();
 
   @override
-  bool get isNotYetLoaded => throw _privateConstructorUsedError;
+  bool get isNotYetLoaded;
   @override
-  List<MenstruationListRowState> get allRows =>
-      throw _privateConstructorUsedError;
+  List<MenstruationListRowState> get allRows;
   @override
   @JsonKey(ignore: true)
   _$MenstruationListStateCopyWith<_MenstruationListState> get copyWith =>
