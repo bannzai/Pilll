@@ -40,17 +40,17 @@ class Diary with _$Diary {
       fromJson: NonNullTimestampConverter.timestampToDateTime,
       toJson: NonNullTimestampConverter.dateTimeToTimestamp,
     )
-        required DateTime date,
+        DateTime date,
     // NOTE: OLD data does't have createdAt
     @JsonKey(
       fromJson: TimestampConverter.timestampToDateTime,
       toJson: TimestampConverter.dateTimeToTimestamp,
     )
-        required DateTime? createdAt,
+        DateTime? createdAt,
     PhysicalConditionStatus? physicalConditionStatus,
-    required List<String> physicalConditions,
-    required bool hasSex,
-    required String memo,
+    List<String> physicalConditions,
+    bool hasSex,
+    String memo,
   }) = _Diary;
   const Diary._();
 

@@ -30,12 +30,12 @@ class Menstruation with _$Menstruation {
       fromJson: NonNullTimestampConverter.timestampToDateTime,
       toJson: NonNullTimestampConverter.dateTimeToTimestamp,
     )
-        required DateTime beginDate,
+        DateTime beginDate,
     @JsonKey(
       fromJson: NonNullTimestampConverter.timestampToDateTime,
       toJson: NonNullTimestampConverter.dateTimeToTimestamp,
     )
-        required DateTime endDate,
+        DateTime endDate,
     @JsonKey(
       fromJson: TimestampConverter.timestampToDateTime,
       toJson: TimestampConverter.dateTimeToTimestamp,
@@ -45,7 +45,7 @@ class Menstruation with _$Menstruation {
       fromJson: NonNullTimestampConverter.timestampToDateTime,
       toJson: NonNullTimestampConverter.dateTimeToTimestamp,
     )
-        required DateTime createdAt,
+        DateTime createdAt,
   }) = _Menstruation;
 
   DateRange get dateRange => DateRange(beginDate, endDate);
