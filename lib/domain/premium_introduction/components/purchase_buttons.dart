@@ -25,7 +25,7 @@ class PurchaseButtons extends HookConsumerWidget {
 
   @override
   Widget build(BuildContext context) {
-    final state = useProvider(purchaseButtonsStateProvider(offerings));
+    final state = ref.watch(purchaseButtonsStateProvider(offerings).notifier);
     final monthlyPackage = state.monthlyPackage;
     final annualPackage = state.annualPackage;
 

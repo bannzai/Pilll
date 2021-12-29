@@ -31,7 +31,8 @@ class SettingTodayPillNumberPage extends HookConsumerWidget {
       activedPillSheet: activedPillSheet,
     );
     final state = ref.watch(settingTodayPillNumberStoreProvider(parameter));
-    final store = useProvider(settingTodayPillNumberStoreProvider(parameter));
+    final store =
+        ref.watch(settingTodayPillNumberStoreProvider(parameter).notifier);
 
     return Scaffold(
       backgroundColor: PilllColors.background,

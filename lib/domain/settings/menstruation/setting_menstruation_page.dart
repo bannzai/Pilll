@@ -15,8 +15,8 @@ class SettingMenstruationPage extends HookConsumerWidget {
   }) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    final store = useProvider(settingMenstruationStoreProvider.notifier);
-    final settingState = useProvider(settingStateProvider);
+    final store = ref.watch(settingMenstruationStoreProvider.notifier.notifier);
+    final settingState = ref.watch(settingStateProvider.notifier);
     final setting = settingState.setting;
     if (setting == null) {
       throw FormatException("生理設定にはSettingのデータが必要です");

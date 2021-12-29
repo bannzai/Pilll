@@ -11,8 +11,9 @@ import 'package:pilll/domain/pill_sheet_modified_history/pill_sheet_modified_his
 class PillSheetModifiedHistoriesPage extends HookConsumerWidget {
   @override
   Widget build(BuildContext context) {
-    final store = useProvider(pillSheetModifiedHistoryStoreProvider.notifier);
-    final state = useProvider(pillSheetModifiedHistoryStoreProvider);
+    final store =
+        ref.watch(pillSheetModifiedHistoryStoreProvider.notifier.notifier);
+    final state = ref.watch(pillSheetModifiedHistoryStoreProvider.notifier);
     if (!state.isFirstLoadEnded) {
       return ScaffoldIndicator();
     }

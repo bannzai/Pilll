@@ -13,7 +13,7 @@ import 'package:pilll/entity/pill_sheet_type.dart';
 class RecordPageAddingPillSheetGroupPage extends HookConsumerWidget {
   @override
   Widget build(BuildContext context) {
-    final store = useProvider(recordPageStoreProvider);
+    final store = ref.watch(recordPageStoreProvider.notifier);
     final state = ref.watch(recordPageStoreProvider);
     final setting = state.setting;
     if (setting == null) {

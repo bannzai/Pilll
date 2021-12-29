@@ -30,8 +30,9 @@ class SigninSheet extends HookConsumerWidget {
   });
   @override
   Widget build(BuildContext context) {
-    final store = useProvider(signinSheetStoreProvider(stateContext).notifier);
-    final state = useProvider(signinSheetStoreProvider(stateContext));
+    final store =
+        ref.watch(signinSheetStoreProvider(stateContext).notifier.notifier);
+    final state = ref.watch(signinSheetStoreProvider(stateContext).notifier);
     return HUD(
       shown: state.isLoading,
       child: UniversalErrorPage(

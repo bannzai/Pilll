@@ -22,7 +22,7 @@ class RecordPage extends HookConsumerWidget {
   @override
   Widget build(BuildContext context) {
     final state = ref.watch(recordPageStoreProvider);
-    final store = useProvider(recordPageStoreProvider);
+    final store = ref.watch(recordPageStoreProvider.notifier);
 
     final exception = state.exception;
     if (exception != null) {

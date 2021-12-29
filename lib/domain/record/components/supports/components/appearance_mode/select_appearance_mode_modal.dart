@@ -16,7 +16,7 @@ import 'package:pilll/entity/setting.dart';
 class SelectAppearanceModeModal extends HookConsumerWidget {
   @override
   Widget build(BuildContext context) {
-    final store = useProvider(recordPageStoreProvider);
+    final store = ref.watch(recordPageStoreProvider.notifier);
     final state = ref.watch(recordPageStoreProvider);
     return Container(
       color: Colors.white,

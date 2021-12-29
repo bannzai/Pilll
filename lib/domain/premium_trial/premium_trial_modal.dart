@@ -20,7 +20,7 @@ class PremiumTrialModal extends HookConsumerWidget {
   const PremiumTrialModal(this.didEndTrial, {Key? key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    final store = useProvider(premiumTrialStoreProvider);
+    final store = ref.watch(premiumTrialStoreProvider.notifier);
     final state = ref.watch(premiumTrialStoreProvider);
     return HUD(
       shown: state.isLoading,

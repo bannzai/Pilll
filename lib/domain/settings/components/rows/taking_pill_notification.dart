@@ -17,7 +17,7 @@ class TakingPillNotification extends HookConsumerWidget {
 
   @override
   Widget build(BuildContext context) {
-    final store = useProvider(settingStoreProvider.notifier);
+    final store = ref.watch(settingStoreProvider.notifier.notifier);
     return SwitchListTile(
       title: Text("ピルの服用通知", style: FontType.listRow),
       activeColor: PilllColors.primary,

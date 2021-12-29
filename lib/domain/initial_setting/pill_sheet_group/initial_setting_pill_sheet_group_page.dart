@@ -22,7 +22,7 @@ import 'package:pilll/entity/pill_sheet_type.dart';
 class InitialSettingPillSheetGroupPage extends HookConsumerWidget {
   @override
   Widget build(BuildContext context) {
-    final store = useProvider(initialSettingStoreProvider);
+    final store = ref.watch(initialSettingStoreProvider.notifier);
     final state = ref.watch(initialSettingStoreProvider);
     if (state.isAccountCooperationDidEnd) {
       Future(() async {

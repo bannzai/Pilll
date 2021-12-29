@@ -21,8 +21,8 @@ import 'package:url_launcher/url_launcher.dart';
 class PremiumIntroductionSheet extends HookConsumerWidget {
   @override
   Widget build(BuildContext context) {
-    final store = useProvider(premiumIntroductionStoreProvider);
-    final state = useProvider(premiumIntroductionStateProvider);
+    final store = ref.watch(premiumIntroductionStoreProvider.notifier);
+    final state = ref.watch(premiumIntroductionStateProvider.notifier);
     final offerings = state.offerings;
     final discountEntitlementDeadlineDate =
         state.discountEntitlementDeadlineDate;

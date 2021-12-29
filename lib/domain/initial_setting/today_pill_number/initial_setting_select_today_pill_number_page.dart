@@ -22,7 +22,7 @@ class InitialSettingSelectTodayPillNumberPage extends HookConsumerWidget {
 
   @override
   Widget build(BuildContext context) {
-    final store = useProvider(initialSettingStoreProvider);
+    final store = ref.watch(initialSettingStoreProvider.notifier);
     final state = ref.watch(initialSettingStoreProvider);
     return Scaffold(
       backgroundColor: PilllColors.background,
