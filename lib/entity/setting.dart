@@ -9,7 +9,7 @@ part 'setting.freezed.dart';
 @freezed
 @JsonSerializable(explicitToJson: true)
 class ReminderTime implements _$ReminderTime {
-const const ReminderTime._();
+const ReminderTime._();
   const factory ReminderTime({
     required int hour,
     required int minute,

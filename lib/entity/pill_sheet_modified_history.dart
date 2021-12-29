@@ -69,7 +69,7 @@ const factory PillSheetModifiedHistory({
     )
         required DateTime createdAt,
   }) = _PillSheetModifiedHistory;
-const const PillSheetModifiedHistory._();
+const PillSheetModifiedHistory._();
 
 const factory PillSheetModifiedHistory.fromJson(Map<String, dynamic> json) =>
       _$PillSheetModifiedHistoryFromJson(json);
