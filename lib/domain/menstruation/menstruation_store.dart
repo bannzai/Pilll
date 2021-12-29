@@ -14,7 +14,8 @@ import 'package:pilll/domain/menstruation/menstruation_state.dart';
 import 'package:pilll/service/user.dart';
 import 'package:pilll/util/datetime/day.dart';
 
-final menstruationsStoreProvider = StateNotifierProvider(
+final menstruationsStoreProvider =
+    StateNotifierProvider<MenstruationStore, MenstruationState>(
   (ref) => MenstruationStore(
     menstruationService: ref.watch(menstruationServiceProvider),
     diaryService: ref.watch(diaryServiceProvider),
