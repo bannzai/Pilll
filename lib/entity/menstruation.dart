@@ -23,7 +23,6 @@ class Menstruation with _$Menstruation {
       _$MenstruationToJson(this as _$_Menstruation);
   Menstruation._();
 
-  @JsonSerializable(explicitToJson: true)
   const factory Menstruation({
     @JsonKey(includeIfNull: false, toJson: toNull)
         String? id,

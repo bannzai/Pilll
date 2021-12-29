@@ -6,6 +6,38 @@ part of 'menstruation.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
+Menstruation _$MenstruationFromJson(Map<String, dynamic> json) => Menstruation(
+      id: json['id'] as String?,
+      beginDate: NonNullTimestampConverter.timestampToDateTime(
+          json['beginDate'] as Timestamp),
+      endDate: NonNullTimestampConverter.timestampToDateTime(
+          json['endDate'] as Timestamp),
+      deletedAt: TimestampConverter.timestampToDateTime(
+          json['deletedAt'] as Timestamp?),
+      createdAt: NonNullTimestampConverter.timestampToDateTime(
+          json['createdAt'] as Timestamp),
+    );
+
+Map<String, dynamic> _$MenstruationToJson(Menstruation instance) {
+  final val = <String, dynamic>{};
+
+  void writeNotNull(String key, dynamic value) {
+    if (value != null) {
+      val[key] = value;
+    }
+  }
+
+  writeNotNull('id', toNull(instance.id));
+  val['beginDate'] =
+      NonNullTimestampConverter.dateTimeToTimestamp(instance.beginDate);
+  val['endDate'] =
+      NonNullTimestampConverter.dateTimeToTimestamp(instance.endDate);
+  val['deletedAt'] = TimestampConverter.dateTimeToTimestamp(instance.deletedAt);
+  val['createdAt'] =
+      NonNullTimestampConverter.dateTimeToTimestamp(instance.createdAt);
+  return val;
+}
+
 _$_Menstruation _$$_MenstruationFromJson(Map<String, dynamic> json) =>
     _$_Menstruation(
       id: json['id'] as String?,

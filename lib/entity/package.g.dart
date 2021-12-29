@@ -6,6 +6,20 @@ part of 'package.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
+Package _$PackageFromJson(Map<String, dynamic> json) => Package(
+      latestOS: json['latestOS'] as String,
+      appName: json['appName'] as String,
+      appVersion: json['appVersion'] as String,
+      buildNumber: json['buildNumber'] as String,
+    );
+
+Map<String, dynamic> _$PackageToJson(Package instance) => <String, dynamic>{
+      'latestOS': instance.latestOS,
+      'appName': instance.appName,
+      'appVersion': instance.appVersion,
+      'buildNumber': instance.buildNumber,
+    };
+
 _$_Package _$$_PackageFromJson(Map<String, dynamic> json) => _$_Package(
       latestOS: json['latestOS'] as String,
       appName: json['appName'] as String,
