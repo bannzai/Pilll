@@ -42,7 +42,7 @@ extension PillSheetModifiedActionTypeFunctions on PillSheetModifiedActionType {
 @freezed
 @JsonSerializable(explicitToJson: true)
 class PillSheetModifiedHistory with _$PillSheetModifiedHistory {
-  factory PillSheetModifiedHistory({
+const factory PillSheetModifiedHistory({
     @JsonKey(includeIfNull: false, toJson: toNull)
         required String? id,
     required String actionType,
@@ -71,7 +71,7 @@ class PillSheetModifiedHistory with _$PillSheetModifiedHistory {
   }) = _PillSheetModifiedHistory;
   const PillSheetModifiedHistory._();
 
-  factory PillSheetModifiedHistory.fromJson(Map<String, dynamic> json) =>
+const factory PillSheetModifiedHistory.fromJson(Map<String, dynamic> json) =>
       _$PillSheetModifiedHistoryFromJson(json);
   Map<String, dynamic> toJson() =>
       _$_$_PillSheetModifiedHistoryToJson(this as _$_PillSheetModifiedHistory);

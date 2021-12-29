@@ -15,7 +15,7 @@ class ReminderTime implements _$ReminderTime {
     required int minute,
   }) = _ReminderTime;
 
-  factory ReminderTime.fromJson(Map<String, dynamic> json) =>
+const factory ReminderTime.fromJson(Map<String, dynamic> json) =>
       _$ReminderTimeFromJson(json);
   Map<String, dynamic> toJson() =>
       _$_$_ReminderTimeToJson(this as _$_ReminderTime);
@@ -47,7 +47,7 @@ class SettingFirestoreFieldKeys {
 @JsonSerializable(explicitToJson: true)
 class Setting implements _$Setting {
   Setting._();
-  factory Setting({
+const factory Setting({
     @Default([]) List<PillSheetType> pillSheetTypes,
     required int pillNumberForFromMenstruation,
     required int durationMenstruation,
@@ -59,7 +59,7 @@ class Setting implements _$Setting {
     @Default(false) bool isAutomaticallyCreatePillSheet,
   }) = _Setting;
 
-  factory Setting.fromJson(Map<String, dynamic> json) =>
+const factory Setting.fromJson(Map<String, dynamic> json) =>
       _$SettingFromJson(json);
   Map<String, dynamic> toJson() => _$_$_SettingToJson(this as _$_Setting);
 }

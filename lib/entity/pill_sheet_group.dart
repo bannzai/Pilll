@@ -17,7 +17,7 @@ class PillSheetGroupFirestoreKeys {
 @JsonSerializable(explicitToJson: true)
 class PillSheetGroup implements _$PillSheetGroup {
   PillSheetGroup._();
-  factory PillSheetGroup({
+const factory PillSheetGroup({
     @JsonKey(includeIfNull: false, toJson: toNull)
         String? id,
     required List<String> pillSheetIDs,
@@ -34,7 +34,7 @@ class PillSheetGroup implements _$PillSheetGroup {
         DateTime? deletedAt,
   }) = _PillSheetGroup;
 
-  factory PillSheetGroup.fromJson(Map<String, dynamic> json) =>
+const factory PillSheetGroup.fromJson(Map<String, dynamic> json) =>
       _$PillSheetGroupFromJson(json);
   Map<String, dynamic> toJson() =>
       _$_$_PillSheetGroupToJson(this as _$_PillSheetGroup);

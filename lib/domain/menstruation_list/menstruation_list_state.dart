@@ -6,7 +6,7 @@ part 'menstruation_list_state.freezed.dart';
 @freezed
 class MenstruationListState with _$MenstruationListState {
   MenstruationListState._();
-  factory MenstruationListState({
+  const factory MenstruationListState({
     @Default(true) bool isNotYetLoaded,
     @Default([]) List<MenstruationListRowState> allRows,
   }) = _MenstruationListState;

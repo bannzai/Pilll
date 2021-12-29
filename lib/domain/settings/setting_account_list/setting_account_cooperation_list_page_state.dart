@@ -9,7 +9,7 @@ part 'setting_account_cooperation_list_page_state.freezed.dart';
 class SettingAccountCooperationListState
     implements _$SettingAccountCooperationListState {
   SettingAccountCooperationListState._();
-  factory SettingAccountCooperationListState({
+  const factory SettingAccountCooperationListState({
     required User? user,
     @Default(false) bool isLoading,
     Object? exception,

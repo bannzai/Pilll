@@ -8,7 +8,7 @@ part 'setting_today_pill_number_store_parameter.freezed.dart';
 @freezed
 class SettingTodayPillNumberStoreParameter
     with _$SettingTodayPillNumberStoreParameter {
-  factory SettingTodayPillNumberStoreParameter({
+  const factory SettingTodayPillNumberStoreParameter({
     required PillSheetGroup pillSheetGroup,
     required PillSheetAppearanceMode appearanceMode,
     required PillSheet activedPillSheet,

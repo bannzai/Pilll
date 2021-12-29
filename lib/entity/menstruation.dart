@@ -16,14 +16,14 @@ class MenstruationFirestoreKey {
 class Menstruation with _$Menstruation {
   String? get documentID => id;
 
-  factory Menstruation.fromJson(Map<String, dynamic> json) =>
+const factory Menstruation.fromJson(Map<String, dynamic> json) =>
       _$MenstruationFromJson(json);
   Map<String, dynamic> toJson() =>
       _$_$_MenstruationToJson(this as _$_Menstruation);
   Menstruation._();
 
   @JsonSerializable(explicitToJson: true)
-  factory Menstruation({
+const factory Menstruation({
     @JsonKey(includeIfNull: false, toJson: toNull)
         String? id,
     @JsonKey(

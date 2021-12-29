@@ -6,7 +6,7 @@ part 'premium_function_survey_state.freezed.dart';
 @freezed
 class PremiumFunctionSurveyState with _$PremiumFunctionSurveyState {
   PremiumFunctionSurveyState._();
-  factory PremiumFunctionSurveyState({
+  const factory PremiumFunctionSurveyState({
     @Default([]) List<PremiumFunctionSurveyElementType> selectedElements,
     @Default("") String message,
   }) = _PremiumFunctionSurveyState;

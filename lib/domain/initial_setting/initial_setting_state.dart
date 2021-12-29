@@ -8,7 +8,7 @@ part 'initial_setting_state.freezed.dart';
 
 @freezed
 class InitialSettingTodayPillNumber with _$InitialSettingTodayPillNumber {
-  factory InitialSettingTodayPillNumber({
+  const factory InitialSettingTodayPillNumber({
     @Default(0) int pageIndex,
     @Default(0) int pillNumberIntoPillSheet,
   }) = _InitialSettingTodayPillNumber;
@@ -17,7 +17,7 @@ class InitialSettingTodayPillNumber with _$InitialSettingTodayPillNumber {
 @freezed
 class InitialSettingState with _$InitialSettingState {
   InitialSettingState._();
-  factory InitialSettingState({
+  const factory InitialSettingState({
     @Default([])
         List<PillSheetType> pillSheetTypes,
     InitialSettingTodayPillNumber? todayPillNumber,

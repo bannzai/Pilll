@@ -19,14 +19,14 @@ class PillSheetFirestoreKey {
 @freezed
 @JsonSerializable(explicitToJson: true)
 class PillSheetTypeInfo with _$PillSheetTypeInfo {
-  factory PillSheetTypeInfo({
+const factory PillSheetTypeInfo({
     required String pillSheetTypeReferencePath,
     required String name,
     required int totalCount,
     required int dosingPeriod,
   }) = _PillSheetTypeInfo;
 
-  factory PillSheetTypeInfo.fromJson(Map<String, dynamic> json) =>
+const factory PillSheetTypeInfo.fromJson(Map<String, dynamic> json) =>
       _$PillSheetTypeInfoFromJson(json);
   Map<String, dynamic> toJson() =>
       _$_$_PillSheetTypeInfoToJson(this as _$_PillSheetTypeInfo);
@@ -35,7 +35,7 @@ class PillSheetTypeInfo with _$PillSheetTypeInfo {
 @freezed
 @JsonSerializable(explicitToJson: true)
 class RestDuration with _$RestDuration {
-  factory RestDuration({
+const factory RestDuration({
     @JsonKey(
       fromJson: NonNullTimestampConverter.timestampToDateTime,
       toJson: NonNullTimestampConverter.dateTimeToTimestamp,
@@ -53,7 +53,7 @@ class RestDuration with _$RestDuration {
         required DateTime createdDate,
   }) = _RestDuration;
 
-  factory RestDuration.fromJson(Map<String, dynamic> json) =>
+const factory RestDuration.fromJson(Map<String, dynamic> json) =>
       _$RestDurationFromJson(json);
   Map<String, dynamic> toJson() =>
       _$_$_RestDurationToJson(this as _$_RestDuration);
@@ -68,7 +68,7 @@ class PillSheet implements _$PillSheet {
       PillSheetTypeFunctions.fromRawPath(typeInfo.pillSheetTypeReferencePath);
 
   PillSheet._();
-  factory PillSheet({
+const factory PillSheet({
     @JsonKey(includeIfNull: false)
         String? id,
     @JsonKey()
@@ -98,13 +98,13 @@ class PillSheet implements _$PillSheet {
     @Default([])
         List<RestDuration> restDurations,
   }) = _PillSheet;
-  factory PillSheet.create(PillSheetType type) => PillSheet(
+const factory PillSheet.create(PillSheetType type) => PillSheet(
         typeInfo: type.typeInfo,
         beginingDate: today(),
         lastTakenDate: null,
       );
 
-  factory PillSheet.fromJson(Map<String, dynamic> json) =>
+const factory PillSheet.fromJson(Map<String, dynamic> json) =>
       _$PillSheetFromJson(json);
   Map<String, dynamic> toJson() => _$_$_PillSheetToJson(this as _$_PillSheet);
 

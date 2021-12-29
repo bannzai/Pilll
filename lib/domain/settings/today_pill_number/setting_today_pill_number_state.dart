@@ -6,7 +6,7 @@ part 'setting_today_pill_number_state.freezed.dart';
 @freezed
 class SettingTodayPillNumberState with _$SettingTodayPillNumberState {
   SettingTodayPillNumberState._();
-  factory SettingTodayPillNumberState({
+  const factory SettingTodayPillNumberState({
     @Default(0) int selectedPillSheetPageIndex,
     @Default(0) int selectedPillMarkNumberIntoPillSheet,
     required PillSheetAppearanceMode appearanceMode,

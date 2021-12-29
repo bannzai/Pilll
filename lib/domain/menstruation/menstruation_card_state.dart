@@ -7,13 +7,13 @@ part 'menstruation_card_state.freezed.dart';
 @freezed
 class MenstruationCardState with _$MenstruationCardState {
   MenstruationCardState._();
-  factory MenstruationCardState({
+const factory MenstruationCardState({
     required String title,
     required DateTime scheduleDate,
     required String countdownString,
   }) = _MenstruationCardState;
 
-  factory MenstruationCardState.future({
+const factory MenstruationCardState.future({
     required DateTime nextSchedule,
   }) {
     final diff = daysBetween(today(), nextSchedule);
@@ -24,7 +24,7 @@ class MenstruationCardState with _$MenstruationCardState {
     );
   }
 
-  factory MenstruationCardState.inTheMiddle({
+const factory MenstruationCardState.inTheMiddle({
     required DateTime scheduledDate,
   }) {
     final diff = daysBetween(scheduledDate, today());
@@ -35,7 +35,7 @@ class MenstruationCardState with _$MenstruationCardState {
     );
   }
 
-  factory MenstruationCardState.record({
+const factory MenstruationCardState.record({
     required Menstruation menstruation,
   }) =>
       MenstruationCardState(
