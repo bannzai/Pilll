@@ -1,5 +1,6 @@
+// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'demographic.dart';
 
@@ -35,7 +36,7 @@ class _$DemographicTearOff {
     );
   }
 
-  Demographic fromJson(Map<String, Object> json) {
+  Demographic fromJson(Map<String, Object?> json) {
     return Demographic.fromJson(json);
   }
 }
@@ -170,10 +171,9 @@ class __$DemographicCopyWithImpl<$Res> extends _$DemographicCopyWithImpl<$Res>
 }
 
 /// @nodoc
-
-@JsonSerializable(explicitToJson: true)
+@JsonSerializable()
 class _$_Demographic extends _Demographic {
-  _$_Demographic(
+  const _$_Demographic(
       {required this.purpose1,
       required this.purpose2,
       required this.prescription,
@@ -182,7 +182,7 @@ class _$_Demographic extends _Demographic {
       : super._();
 
   factory _$_Demographic.fromJson(Map<String, dynamic> json) =>
-      _$_$_DemographicFromJson(json);
+      _$$_DemographicFromJson(json);
 
   @override
   final String purpose1;
@@ -203,32 +203,24 @@ class _$_Demographic extends _Demographic {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _Demographic &&
-            (identical(other.purpose1, purpose1) ||
-                const DeepCollectionEquality()
-                    .equals(other.purpose1, purpose1)) &&
-            (identical(other.purpose2, purpose2) ||
-                const DeepCollectionEquality()
-                    .equals(other.purpose2, purpose2)) &&
-            (identical(other.prescription, prescription) ||
-                const DeepCollectionEquality()
-                    .equals(other.prescription, prescription)) &&
-            (identical(other.birthYear, birthYear) ||
-                const DeepCollectionEquality()
-                    .equals(other.birthYear, birthYear)) &&
-            (identical(other.lifeTime, lifeTime) ||
-                const DeepCollectionEquality()
-                    .equals(other.lifeTime, lifeTime)));
+        (other.runtimeType == runtimeType &&
+            other is _Demographic &&
+            const DeepCollectionEquality().equals(other.purpose1, purpose1) &&
+            const DeepCollectionEquality().equals(other.purpose2, purpose2) &&
+            const DeepCollectionEquality()
+                .equals(other.prescription, prescription) &&
+            const DeepCollectionEquality().equals(other.birthYear, birthYear) &&
+            const DeepCollectionEquality().equals(other.lifeTime, lifeTime));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(purpose1) ^
-      const DeepCollectionEquality().hash(purpose2) ^
-      const DeepCollectionEquality().hash(prescription) ^
-      const DeepCollectionEquality().hash(birthYear) ^
-      const DeepCollectionEquality().hash(lifeTime);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(purpose1),
+      const DeepCollectionEquality().hash(purpose2),
+      const DeepCollectionEquality().hash(prescription),
+      const DeepCollectionEquality().hash(birthYear),
+      const DeepCollectionEquality().hash(lifeTime));
 
   @JsonKey(ignore: true)
   @override
@@ -237,32 +229,32 @@ class _$_Demographic extends _Demographic {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_DemographicToJson(this);
+    return _$$_DemographicToJson(this);
   }
 }
 
 abstract class _Demographic extends Demographic {
-  factory _Demographic(
+  const factory _Demographic(
       {required String purpose1,
       required String purpose2,
       required String prescription,
       required String birthYear,
       required String lifeTime}) = _$_Demographic;
-  _Demographic._() : super._();
+  const _Demographic._() : super._();
 
   factory _Demographic.fromJson(Map<String, dynamic> json) =
       _$_Demographic.fromJson;
 
   @override
-  String get purpose1 => throw _privateConstructorUsedError;
+  String get purpose1;
   @override
-  String get purpose2 => throw _privateConstructorUsedError;
+  String get purpose2;
   @override
-  String get prescription => throw _privateConstructorUsedError;
+  String get prescription;
   @override
-  String get birthYear => throw _privateConstructorUsedError;
+  String get birthYear;
   @override
-  String get lifeTime => throw _privateConstructorUsedError;
+  String get lifeTime;
   @override
   @JsonKey(ignore: true)
   _$DemographicCopyWith<_Demographic> get copyWith =>

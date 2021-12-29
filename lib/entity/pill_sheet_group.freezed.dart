@@ -1,5 +1,6 @@
+// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'pill_sheet_group.dart';
 
@@ -38,7 +39,7 @@ class _$PillSheetGroupTearOff {
     );
   }
 
-  PillSheetGroup fromJson(Map<String, Object> json) {
+  PillSheetGroup fromJson(Map<String, Object?> json) {
     return PillSheetGroup.fromJson(json);
   }
 }
@@ -188,10 +189,9 @@ class __$PillSheetGroupCopyWithImpl<$Res>
 }
 
 /// @nodoc
-
-@JsonSerializable(explicitToJson: true)
+@JsonSerializable()
 class _$_PillSheetGroup extends _PillSheetGroup {
-  _$_PillSheetGroup(
+  const _$_PillSheetGroup(
       {@JsonKey(includeIfNull: false, toJson: toNull)
           this.id,
       required this.pillSheetIDs,
@@ -203,7 +203,7 @@ class _$_PillSheetGroup extends _PillSheetGroup {
       : super._();
 
   factory _$_PillSheetGroup.fromJson(Map<String, dynamic> json) =>
-      _$_$_PillSheetGroupFromJson(json);
+      _$$_PillSheetGroupFromJson(json);
 
   @override
   @JsonKey(includeIfNull: false, toJson: toNull)
@@ -231,31 +231,25 @@ class _$_PillSheetGroup extends _PillSheetGroup {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _PillSheetGroup &&
-            (identical(other.id, id) ||
-                const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.pillSheetIDs, pillSheetIDs) ||
-                const DeepCollectionEquality()
-                    .equals(other.pillSheetIDs, pillSheetIDs)) &&
-            (identical(other.pillSheets, pillSheets) ||
-                const DeepCollectionEquality()
-                    .equals(other.pillSheets, pillSheets)) &&
-            (identical(other.createdAt, createdAt) ||
-                const DeepCollectionEquality()
-                    .equals(other.createdAt, createdAt)) &&
-            (identical(other.deletedAt, deletedAt) ||
-                const DeepCollectionEquality()
-                    .equals(other.deletedAt, deletedAt)));
+        (other.runtimeType == runtimeType &&
+            other is _PillSheetGroup &&
+            const DeepCollectionEquality().equals(other.id, id) &&
+            const DeepCollectionEquality()
+                .equals(other.pillSheetIDs, pillSheetIDs) &&
+            const DeepCollectionEquality()
+                .equals(other.pillSheets, pillSheets) &&
+            const DeepCollectionEquality().equals(other.createdAt, createdAt) &&
+            const DeepCollectionEquality().equals(other.deletedAt, deletedAt));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(pillSheetIDs) ^
-      const DeepCollectionEquality().hash(pillSheets) ^
-      const DeepCollectionEquality().hash(createdAt) ^
-      const DeepCollectionEquality().hash(deletedAt);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(id),
+      const DeepCollectionEquality().hash(pillSheetIDs),
+      const DeepCollectionEquality().hash(pillSheets),
+      const DeepCollectionEquality().hash(createdAt),
+      const DeepCollectionEquality().hash(deletedAt));
 
   @JsonKey(ignore: true)
   @override
@@ -264,12 +258,12 @@ class _$_PillSheetGroup extends _PillSheetGroup {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_PillSheetGroupToJson(this);
+    return _$$_PillSheetGroupToJson(this);
   }
 }
 
 abstract class _PillSheetGroup extends PillSheetGroup {
-  factory _PillSheetGroup(
+  const factory _PillSheetGroup(
       {@JsonKey(includeIfNull: false, toJson: toNull)
           String? id,
       required List<String> pillSheetIDs,
@@ -278,28 +272,28 @@ abstract class _PillSheetGroup extends PillSheetGroup {
           required DateTime createdAt,
       @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
           DateTime? deletedAt}) = _$_PillSheetGroup;
-  _PillSheetGroup._() : super._();
+  const _PillSheetGroup._() : super._();
 
   factory _PillSheetGroup.fromJson(Map<String, dynamic> json) =
       _$_PillSheetGroup.fromJson;
 
   @override
   @JsonKey(includeIfNull: false, toJson: toNull)
-  String? get id => throw _privateConstructorUsedError;
+  String? get id;
   @override
-  List<String> get pillSheetIDs => throw _privateConstructorUsedError;
+  List<String> get pillSheetIDs;
   @override
-  List<PillSheet> get pillSheets => throw _privateConstructorUsedError;
+  List<PillSheet> get pillSheets;
   @override
   @JsonKey(
       fromJson: NonNullTimestampConverter.timestampToDateTime,
       toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-  DateTime get createdAt => throw _privateConstructorUsedError;
+  DateTime get createdAt;
   @override
   @JsonKey(
       fromJson: TimestampConverter.timestampToDateTime,
       toJson: TimestampConverter.dateTimeToTimestamp)
-  DateTime? get deletedAt => throw _privateConstructorUsedError;
+  DateTime? get deletedAt;
   @override
   @JsonKey(ignore: true)
   _$PillSheetGroupCopyWith<_PillSheetGroup> get copyWith =>

@@ -1,5 +1,6 @@
+// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'menstruation_card_state.dart';
 
@@ -129,7 +130,7 @@ class __$MenstruationCardStateCopyWithImpl<$Res>
 /// @nodoc
 
 class _$_MenstruationCardState extends _MenstruationCardState {
-  _$_MenstruationCardState(
+  const _$_MenstruationCardState(
       {required this.title,
       required this.scheduleDate,
       required this.countdownString})
@@ -150,23 +151,21 @@ class _$_MenstruationCardState extends _MenstruationCardState {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _MenstruationCardState &&
-            (identical(other.title, title) ||
-                const DeepCollectionEquality().equals(other.title, title)) &&
-            (identical(other.scheduleDate, scheduleDate) ||
-                const DeepCollectionEquality()
-                    .equals(other.scheduleDate, scheduleDate)) &&
-            (identical(other.countdownString, countdownString) ||
-                const DeepCollectionEquality()
-                    .equals(other.countdownString, countdownString)));
+        (other.runtimeType == runtimeType &&
+            other is _MenstruationCardState &&
+            const DeepCollectionEquality().equals(other.title, title) &&
+            const DeepCollectionEquality()
+                .equals(other.scheduleDate, scheduleDate) &&
+            const DeepCollectionEquality()
+                .equals(other.countdownString, countdownString));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(title) ^
-      const DeepCollectionEquality().hash(scheduleDate) ^
-      const DeepCollectionEquality().hash(countdownString);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(title),
+      const DeepCollectionEquality().hash(scheduleDate),
+      const DeepCollectionEquality().hash(countdownString));
 
   @JsonKey(ignore: true)
   @override
@@ -176,18 +175,18 @@ class _$_MenstruationCardState extends _MenstruationCardState {
 }
 
 abstract class _MenstruationCardState extends MenstruationCardState {
-  factory _MenstruationCardState(
+  const factory _MenstruationCardState(
       {required String title,
       required DateTime scheduleDate,
       required String countdownString}) = _$_MenstruationCardState;
-  _MenstruationCardState._() : super._();
+  const _MenstruationCardState._() : super._();
 
   @override
-  String get title => throw _privateConstructorUsedError;
+  String get title;
   @override
-  DateTime get scheduleDate => throw _privateConstructorUsedError;
+  DateTime get scheduleDate;
   @override
-  String get countdownString => throw _privateConstructorUsedError;
+  String get countdownString;
   @override
   @JsonKey(ignore: true)
   _$MenstruationCardStateCopyWith<_MenstruationCardState> get copyWith =>

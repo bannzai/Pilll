@@ -1,5 +1,6 @@
+// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'package.dart';
 
@@ -33,7 +34,7 @@ class _$PackageTearOff {
     );
   }
 
-  Package fromJson(Map<String, Object> json) {
+  Package fromJson(Map<String, Object?> json) {
     return Package.fromJson(json);
   }
 }
@@ -146,14 +147,14 @@ class __$PackageCopyWithImpl<$Res> extends _$PackageCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_Package implements _Package {
-  _$_Package(
+  const _$_Package(
       {required this.latestOS,
       required this.appName,
       required this.appVersion,
       required this.buildNumber});
 
   factory _$_Package.fromJson(Map<String, dynamic> json) =>
-      _$_$_PackageFromJson(json);
+      _$$_PackageFromJson(json);
 
   @override
   final String latestOS;
@@ -172,28 +173,23 @@ class _$_Package implements _Package {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _Package &&
-            (identical(other.latestOS, latestOS) ||
-                const DeepCollectionEquality()
-                    .equals(other.latestOS, latestOS)) &&
-            (identical(other.appName, appName) ||
-                const DeepCollectionEquality()
-                    .equals(other.appName, appName)) &&
-            (identical(other.appVersion, appVersion) ||
-                const DeepCollectionEquality()
-                    .equals(other.appVersion, appVersion)) &&
-            (identical(other.buildNumber, buildNumber) ||
-                const DeepCollectionEquality()
-                    .equals(other.buildNumber, buildNumber)));
+        (other.runtimeType == runtimeType &&
+            other is _Package &&
+            const DeepCollectionEquality().equals(other.latestOS, latestOS) &&
+            const DeepCollectionEquality().equals(other.appName, appName) &&
+            const DeepCollectionEquality()
+                .equals(other.appVersion, appVersion) &&
+            const DeepCollectionEquality()
+                .equals(other.buildNumber, buildNumber));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(latestOS) ^
-      const DeepCollectionEquality().hash(appName) ^
-      const DeepCollectionEquality().hash(appVersion) ^
-      const DeepCollectionEquality().hash(buildNumber);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(latestOS),
+      const DeepCollectionEquality().hash(appName),
+      const DeepCollectionEquality().hash(appVersion),
+      const DeepCollectionEquality().hash(buildNumber));
 
   @JsonKey(ignore: true)
   @override
@@ -202,12 +198,12 @@ class _$_Package implements _Package {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_PackageToJson(this);
+    return _$$_PackageToJson(this);
   }
 }
 
 abstract class _Package implements Package {
-  factory _Package(
+  const factory _Package(
       {required String latestOS,
       required String appName,
       required String appVersion,
@@ -216,13 +212,13 @@ abstract class _Package implements Package {
   factory _Package.fromJson(Map<String, dynamic> json) = _$_Package.fromJson;
 
   @override
-  String get latestOS => throw _privateConstructorUsedError;
+  String get latestOS;
   @override
-  String get appName => throw _privateConstructorUsedError;
+  String get appName;
   @override
-  String get appVersion => throw _privateConstructorUsedError;
+  String get appVersion;
   @override
-  String get buildNumber => throw _privateConstructorUsedError;
+  String get buildNumber;
   @override
   @JsonKey(ignore: true)
   _$PackageCopyWith<_Package> get copyWith =>

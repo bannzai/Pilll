@@ -1,5 +1,6 @@
+// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'menstruation.dart';
 
@@ -40,7 +41,7 @@ class _$MenstruationTearOff {
     );
   }
 
-  Menstruation fromJson(Map<String, Object> json) {
+  Menstruation fromJson(Map<String, Object?> json) {
     return Menstruation.fromJson(json);
   }
 }
@@ -201,7 +202,7 @@ class __$MenstruationCopyWithImpl<$Res> extends _$MenstruationCopyWithImpl<$Res>
 
 @JsonSerializable(explicitToJson: true)
 class _$_Menstruation extends _Menstruation {
-  _$_Menstruation(
+  const _$_Menstruation(
       {@JsonKey(includeIfNull: false, toJson: toNull)
           this.id,
       @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
@@ -215,7 +216,7 @@ class _$_Menstruation extends _Menstruation {
       : super._();
 
   factory _$_Menstruation.fromJson(Map<String, dynamic> json) =>
-      _$_$_MenstruationFromJson(json);
+      _$$_MenstruationFromJson(json);
 
   @override
   @JsonKey(includeIfNull: false, toJson: toNull)
@@ -249,31 +250,23 @@ class _$_Menstruation extends _Menstruation {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _Menstruation &&
-            (identical(other.id, id) ||
-                const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.beginDate, beginDate) ||
-                const DeepCollectionEquality()
-                    .equals(other.beginDate, beginDate)) &&
-            (identical(other.endDate, endDate) ||
-                const DeepCollectionEquality()
-                    .equals(other.endDate, endDate)) &&
-            (identical(other.deletedAt, deletedAt) ||
-                const DeepCollectionEquality()
-                    .equals(other.deletedAt, deletedAt)) &&
-            (identical(other.createdAt, createdAt) ||
-                const DeepCollectionEquality()
-                    .equals(other.createdAt, createdAt)));
+        (other.runtimeType == runtimeType &&
+            other is _Menstruation &&
+            const DeepCollectionEquality().equals(other.id, id) &&
+            const DeepCollectionEquality().equals(other.beginDate, beginDate) &&
+            const DeepCollectionEquality().equals(other.endDate, endDate) &&
+            const DeepCollectionEquality().equals(other.deletedAt, deletedAt) &&
+            const DeepCollectionEquality().equals(other.createdAt, createdAt));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(beginDate) ^
-      const DeepCollectionEquality().hash(endDate) ^
-      const DeepCollectionEquality().hash(deletedAt) ^
-      const DeepCollectionEquality().hash(createdAt);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(id),
+      const DeepCollectionEquality().hash(beginDate),
+      const DeepCollectionEquality().hash(endDate),
+      const DeepCollectionEquality().hash(deletedAt),
+      const DeepCollectionEquality().hash(createdAt));
 
   @JsonKey(ignore: true)
   @override
@@ -282,12 +275,12 @@ class _$_Menstruation extends _Menstruation {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_MenstruationToJson(this);
+    return _$$_MenstruationToJson(this);
   }
 }
 
 abstract class _Menstruation extends Menstruation {
-  factory _Menstruation(
+  const factory _Menstruation(
       {@JsonKey(includeIfNull: false, toJson: toNull)
           String? id,
       @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
@@ -298,34 +291,34 @@ abstract class _Menstruation extends Menstruation {
           DateTime? deletedAt,
       @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
           required DateTime createdAt}) = _$_Menstruation;
-  _Menstruation._() : super._();
+  const _Menstruation._() : super._();
 
   factory _Menstruation.fromJson(Map<String, dynamic> json) =
       _$_Menstruation.fromJson;
 
   @override
   @JsonKey(includeIfNull: false, toJson: toNull)
-  String? get id => throw _privateConstructorUsedError;
+  String? get id;
   @override
   @JsonKey(
       fromJson: NonNullTimestampConverter.timestampToDateTime,
       toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-  DateTime get beginDate => throw _privateConstructorUsedError;
+  DateTime get beginDate;
   @override
   @JsonKey(
       fromJson: NonNullTimestampConverter.timestampToDateTime,
       toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-  DateTime get endDate => throw _privateConstructorUsedError;
+  DateTime get endDate;
   @override
   @JsonKey(
       fromJson: TimestampConverter.timestampToDateTime,
       toJson: TimestampConverter.dateTimeToTimestamp)
-  DateTime? get deletedAt => throw _privateConstructorUsedError;
+  DateTime? get deletedAt;
   @override
   @JsonKey(
       fromJson: NonNullTimestampConverter.timestampToDateTime,
       toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-  DateTime get createdAt => throw _privateConstructorUsedError;
+  DateTime get createdAt;
   @override
   @JsonKey(ignore: true)
   _$MenstruationCopyWith<_Menstruation> get copyWith =>
