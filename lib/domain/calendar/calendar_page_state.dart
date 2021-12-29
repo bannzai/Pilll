@@ -14,7 +14,7 @@ part 'calendar_page_state.freezed.dart';
 
 @freezed
 class CalendarPageState with _$CalendarPageState {
-  CalendarPageState._();
+  const CalendarPageState._();
   const factory CalendarPageState({
     @Default(0) int currentCalendarIndex,
     @Default(true) bool isNotYetLoaded,

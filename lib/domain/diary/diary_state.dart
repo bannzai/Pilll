@@ -5,7 +5,7 @@ part 'diary_state.freezed.dart';
 
 @freezed
 class DiaryState with _$DiaryState {
-  DiaryState._();
+  const DiaryState._();
   const factory DiaryState({
     required Diary diary,
   }) = _DiaryState;

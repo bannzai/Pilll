@@ -11,7 +11,7 @@ const factory PremiumFunctionSurvey({
     required List<PremiumFunctionSurveyElementType> elements,
     required String message,
   }) = _PremiumFunctionSurvey;
-  PremiumFunctionSurvey._();
+  Preconst PremiumFunctionSurvey._();
 const factory PremiumFunctionSurvey.fromJson(Map<String, dynamic> json) =>
       _$PremiumFunctionSurveyFromJson(json);
   Map<String, dynamic> toJson() =>

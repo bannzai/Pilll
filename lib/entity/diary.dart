@@ -52,7 +52,7 @@ const factory Diary({
     required bool hasSex,
     required String memo,
   }) = _Diary;
-  Diary._();
+const Diary._();
 
 const factory Diary.fromDate(DateTime date) => Diary(
       date: date,
