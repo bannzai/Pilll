@@ -30,8 +30,8 @@ class SigninSheet extends HookWidget {
   });
   @override
   Widget build(BuildContext context) {
-    final store = useProvider(signinSheetStoreProvider(stateContext));
-    final state = useProvider(signinSheetStoreProvider(stateContext).state);
+    final store = useProvider(signinSheetStoreProvider(stateContext).notifier);
+    final state = useProvider(signinSheetStoreProvider(stateContext));
     return HUD(
       shown: state.isLoading,
       child: UniversalErrorPage(

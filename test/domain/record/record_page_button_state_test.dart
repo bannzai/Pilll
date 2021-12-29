@@ -41,7 +41,7 @@ void main() {
         ProviderScope(
           overrides: [
             recordPageStoreProvider.overrideWithProvider(
-                StateNotifierProvider((ref) => MockRecordPageStore())),
+                StateNotifierProvider<RecordPageStore, RecordPageState>((ref) => MockRecordPageStore())),
           ],
           child: MaterialApp(
             home: RecordPageButton(
@@ -66,7 +66,7 @@ void main() {
       ProviderScope(
         overrides: [
           recordPageStoreProvider.overrideWithProvider(
-              StateNotifierProvider((ref) => MockRecordPageStore())),
+              StateNotifierProvider<RecordPageStore, RecordPageState>((ref) => MockRecordPageStore())),
         ],
         child: MaterialApp(
           home: RecordPageButton(

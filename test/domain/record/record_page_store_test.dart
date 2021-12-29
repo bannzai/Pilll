@@ -115,7 +115,7 @@ void main() {
           userServiceProvider.overrideWithValue(userService),
         ],
       );
-      final store = container.read(recordPageStoreProvider);
+      final store = container.read(recordPageStoreProvider.notifier);
 
       await Future.delayed(Duration(seconds: 1));
       await store.register(setting);
@@ -219,7 +219,7 @@ void main() {
           userServiceProvider.overrideWithValue(userService),
         ],
       );
-      final store = container.read(recordPageStoreProvider);
+      final store = container.read(recordPageStoreProvider.notifier);
 
       await Future.delayed(Duration(seconds: 1));
       await store.register(setting);
@@ -328,7 +328,7 @@ void main() {
           userServiceProvider.overrideWithValue(userService),
         ],
       );
-      final store = container.read(recordPageStoreProvider);
+      final store = container.read(recordPageStoreProvider.notifier);
 
       await Future.delayed(Duration(seconds: 1));
       final result = await store.taken();
@@ -448,7 +448,7 @@ void main() {
           userServiceProvider.overrideWithValue(userService),
         ],
       );
-      final store = container.read(recordPageStoreProvider);
+      final store = container.read(recordPageStoreProvider.notifier);
 
       await Future.delayed(Duration(seconds: 1));
       final result = await store.taken();
@@ -569,7 +569,7 @@ void main() {
           userServiceProvider.overrideWithValue(userService),
         ],
       );
-      final store = container.read(recordPageStoreProvider);
+      final store = container.read(recordPageStoreProvider.notifier);
 
       await Future.delayed(Duration(seconds: 1));
       final result = await store.taken();
@@ -693,7 +693,7 @@ void main() {
           userServiceProvider.overrideWithValue(userService),
         ],
       );
-      final store = container.read(recordPageStoreProvider);
+      final store = container.read(recordPageStoreProvider.notifier);
 
       await Future.delayed(Duration(seconds: 1));
       final result = await store.taken();

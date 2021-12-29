@@ -4,11 +4,11 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/util/datetime/day.dart';
 import 'package:riverpod/riverpod.dart';
 
-final timerStoreProvider = StateNotifierProvider(
+final timerStoreProvider = StateNotifierProvider<TimerStateStore, DateTime>(
   (ref) => TimerStateStore(),
 );
 final timerStateProvider = Provider.autoDispose(
-  (ref) => ref.watch(timerStoreProvider.state),
+  (ref) => ref.watch(timerStoreProvider),
 );
 
 class TimerStateStore extends StateNotifier<DateTime> {
