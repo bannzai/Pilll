@@ -7,7 +7,8 @@ import 'package:pilll/error_log.dart';
 import 'package:pilll/service/user.dart';
 import 'package:riverpod/riverpod.dart';
 
-final premiumTrialStoreProvider = StateNotifierProvider(
+final premiumTrialStoreProvider =
+    StateNotifierProvider<PremiumTrialModalStateStore, PremiumTrialModalState>(
   (ref) => PremiumTrialModalStateStore(
     ref.watch(userServiceProvider),
   ),

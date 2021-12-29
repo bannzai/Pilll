@@ -1,6 +1,5 @@
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/analytics.dart';
 import 'package:pilll/components/atoms/buttons.dart';
 import 'package:pilll/components/atoms/color.dart';
@@ -19,7 +18,7 @@ class PremiumTrialModal extends HookConsumerWidget {
   final VoidCallback didEndTrial;
   const PremiumTrialModal(this.didEndTrial, {Key? key}) : super(key: key);
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     final store = ref.watch(premiumTrialStoreProvider.notifier);
     final state = ref.watch(premiumTrialStoreProvider);
     return HUD(
