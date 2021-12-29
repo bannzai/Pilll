@@ -8,8 +8,8 @@ part 'premium_function_survey.freezed.dart';
 @JsonSerializable(explicitToJson: true)
 class PremiumFunctionSurvey with _$PremiumFunctionSurvey {
   factory PremiumFunctionSurvey({
-    required List<PremiumFunctionSurveyElementType> elements,
-    required String message,
+    List<PremiumFunctionSurveyElementType> elements,
+    String message,
   }) = _PremiumFunctionSurvey;
   PremiumFunctionSurvey._();
   factory PremiumFunctionSurvey.fromJson(Map<String, dynamic> json) =>

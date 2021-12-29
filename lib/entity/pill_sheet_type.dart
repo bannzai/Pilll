@@ -183,7 +183,7 @@ extension PillSheetTypeFunctions on PillSheetType {
 }
 
 int summarizedPillSheetTypeTotalCountToPageIndex(
-    {required List<PillSheetType> pillSheetTypes, required int pageIndex}) {
+    {List<PillSheetType> pillSheetTypes, int pageIndex}) {
   if (pageIndex == 0) {
     return 0;
   }

@@ -20,10 +20,10 @@ class PillSheetFirestoreKey {
 @JsonSerializable(explicitToJson: true)
 class PillSheetTypeInfo with _$PillSheetTypeInfo {
   factory PillSheetTypeInfo({
-    required String pillSheetTypeReferencePath,
-    required String name,
-    required int totalCount,
-    required int dosingPeriod,
+    String pillSheetTypeReferencePath,
+    String name,
+    int totalCount,
+    int dosingPeriod,
   }) = _PillSheetTypeInfo;
 
   factory PillSheetTypeInfo.fromJson(Map<String, dynamic> json) =>
@@ -40,7 +40,7 @@ class RestDuration with _$RestDuration {
       fromJson: NonNullTimestampConverter.timestampToDateTime,
       toJson: NonNullTimestampConverter.dateTimeToTimestamp,
     )
-        required DateTime beginDate,
+        DateTime beginDate,
     @JsonKey(
       fromJson: TimestampConverter.timestampToDateTime,
       toJson: TimestampConverter.dateTimeToTimestamp,
@@ -50,7 +50,7 @@ class RestDuration with _$RestDuration {
       fromJson: NonNullTimestampConverter.timestampToDateTime,
       toJson: NonNullTimestampConverter.dateTimeToTimestamp,
     )
-        required DateTime createdDate,
+        DateTime createdDate,
   }) = _RestDuration;
 
   factory RestDuration.fromJson(Map<String, dynamic> json) =>
@@ -72,12 +72,12 @@ class PillSheet implements _$PillSheet {
     @JsonKey(includeIfNull: false)
         String? id,
     @JsonKey()
-        required PillSheetTypeInfo typeInfo,
+        PillSheetTypeInfo typeInfo,
     @JsonKey(
       fromJson: NonNullTimestampConverter.timestampToDateTime,
       toJson: NonNullTimestampConverter.dateTimeToTimestamp,
     )
-        required DateTime beginingDate,
+        DateTime beginingDate,
     @JsonKey(
       fromJson: TimestampConverter.timestampToDateTime,
       toJson: TimestampConverter.dateTimeToTimestamp,

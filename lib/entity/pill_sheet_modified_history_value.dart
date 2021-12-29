@@ -40,7 +40,7 @@ class CreatedPillSheetValue implements _$CreatedPillSheetValue {
       fromJson: NonNullTimestampConverter.timestampToDateTime,
       toJson: NonNullTimestampConverter.dateTimeToTimestamp,
     )
-        required DateTime pillSheetCreatedAt,
+        DateTime pillSheetCreatedAt,
     @Default([])
         List<String> pillSheetIDs,
   }) = _CreatedPillSheetValue;
@@ -66,9 +66,9 @@ class AutomaticallyRecordedLastTakenDateValue
       fromJson: NonNullTimestampConverter.timestampToDateTime,
       toJson: NonNullTimestampConverter.dateTimeToTimestamp,
     )
-        required DateTime afterLastTakenDate,
-    required int beforeLastTakenPillNumber,
-    required int afterLastTakenPillNumber,
+        DateTime afterLastTakenDate,
+    int beforeLastTakenPillNumber,
+    int afterLastTakenPillNumber,
   }) = _AutomaticallyRecordedLastTakenDateValue;
 
   factory AutomaticallyRecordedLastTakenDateValue.fromJson(
@@ -88,7 +88,7 @@ class DeletedPillSheetValue implements _$DeletedPillSheetValue {
       fromJson: NonNullTimestampConverter.timestampToDateTime,
       toJson: NonNullTimestampConverter.dateTimeToTimestamp,
     )
-        required DateTime pillSheetDeletedAt,
+        DateTime pillSheetDeletedAt,
     @Default([])
         List<String> pillSheetIDs,
   }) = _DeletedPillSheetValue;
@@ -113,9 +113,9 @@ class TakenPillValue implements _$TakenPillValue {
       fromJson: NonNullTimestampConverter.timestampToDateTime,
       toJson: NonNullTimestampConverter.dateTimeToTimestamp,
     )
-        required DateTime afterLastTakenDate,
-    required int beforeLastTakenPillNumber,
-    required int afterLastTakenPillNumber,
+        DateTime afterLastTakenDate,
+    int beforeLastTakenPillNumber,
+    int afterLastTakenPillNumber,
   }) = _TakenPillValue;
 
   factory TakenPillValue.fromJson(Map<String, dynamic> json) =>
@@ -138,9 +138,9 @@ class RevertTakenPillValue implements _$RevertTakenPillValue {
       fromJson: NonNullTimestampConverter.timestampToDateTime,
       toJson: NonNullTimestampConverter.dateTimeToTimestamp,
     )
-        required DateTime afterLastTakenDate,
-    required int beforeLastTakenPillNumber,
-    required int afterLastTakenPillNumber,
+        DateTime afterLastTakenDate,
+    int beforeLastTakenPillNumber,
+    int afterLastTakenPillNumber,
   }) = _RevertTakenPillValue;
 
   factory RevertTakenPillValue.fromJson(Map<String, dynamic> json) =>
@@ -158,14 +158,14 @@ class ChangedPillNumberValue implements _$ChangedPillNumberValue {
       fromJson: NonNullTimestampConverter.timestampToDateTime,
       toJson: NonNullTimestampConverter.dateTimeToTimestamp,
     )
-        required DateTime beforeBeginingDate,
+        DateTime beforeBeginingDate,
     @JsonKey(
       fromJson: NonNullTimestampConverter.timestampToDateTime,
       toJson: NonNullTimestampConverter.dateTimeToTimestamp,
     )
-        required DateTime afterBeginingDate,
-    required int beforeTodayPillNumber,
-    required int afterTodayPillNumber,
+        DateTime afterBeginingDate,
+    int beforeTodayPillNumber,
+    int afterTodayPillNumber,
     @Default(1)
         int beforeGroupIndex,
     @Default(1)
@@ -187,12 +187,12 @@ class EndedPillSheetValue implements _$EndedPillSheetValue {
       fromJson: NonNullTimestampConverter.timestampToDateTime,
       toJson: NonNullTimestampConverter.dateTimeToTimestamp,
     )
-        required DateTime endRecordDate,
+        DateTime endRecordDate,
     @JsonKey(
       fromJson: NonNullTimestampConverter.timestampToDateTime,
       toJson: NonNullTimestampConverter.dateTimeToTimestamp,
     )
-        required DateTime lastTakenDate,
+        DateTime lastTakenDate,
   }) = _EndedPillSheetValue;
 
   factory EndedPillSheetValue.fromJson(Map<String, dynamic> json) =>
@@ -206,7 +206,7 @@ class EndedPillSheetValue implements _$EndedPillSheetValue {
 class BeganRestDurationValue implements _$BeganRestDurationValue {
   BeganRestDurationValue._();
   factory BeganRestDurationValue({
-    required RestDuration restDuration,
+    RestDuration restDuration,
   }) = _BeganRestDurationValue;
 
   factory BeganRestDurationValue.fromJson(Map<String, dynamic> json) =>
@@ -220,7 +220,7 @@ class BeganRestDurationValue implements _$BeganRestDurationValue {
 class EndedRestDurationValue implements _$EndedRestDurationValue {
   EndedRestDurationValue._();
   factory EndedRestDurationValue({
-    required RestDuration restDuration,
+    RestDuration restDuration,
   }) = _EndedRestDurationValue;
 
   factory EndedRestDurationValue.fromJson(Map<String, dynamic> json) =>
