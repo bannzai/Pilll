@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/analytics.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/domain/demography/demography_page.dart';
@@ -29,8 +28,8 @@ class NotificationBar extends HookConsumerWidget {
 
   NotificationBar(this.parameter);
   @override
-  Widget build(BuildContext context) {
-    final body = _body(context);
+  Widget build(BuildContext context, WidgetRef ref) {
+    final body = _body(context, ref);
     if (body != null) {
       return Container(
         padding: const EdgeInsets.fromLTRB(8, 0, 8, 0),
@@ -42,8 +41,8 @@ class NotificationBar extends HookConsumerWidget {
     return Container();
   }
 
-  Widget? _body(BuildContext context) {
-    final state = ref.watch(notificationBarStateProvider(parameter).notifier);
+  Widget? _body(BuildContext context, WidgetRef ref) {
+    final state = ref.watch(notificationBarStateProvider(parameter));
     final store = ref.watch(notificationBarStoreProvider(parameter).notifier);
     if (!state.isPremium) {
       final premiumTrialLimit = state.premiumTrialLimit;
@@ -58,7 +57,7 @@ class NotificationBar extends HookConsumerWidget {
               state.discountEntitlementDeadlineDate;
           if (discountEntitlementDeadlineDate != null) {
             // NOTE: watch state
-            final isOverDiscountDeadline = useProvider(
+            final isOverDiscountDeadline = ref.watch(
                 isOverDiscountDeadlineProvider(
                     discountEntitlementDeadlineDate));
             if (!isOverDiscountDeadline) {
