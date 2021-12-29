@@ -19,14 +19,14 @@ class PillSheetFirestoreKey {
 @freezed
 @JsonSerializable(explicitToJson: true)
 class PillSheetTypeInfo with _$PillSheetTypeInfo {
-const factory PillSheetTypeInfo({
+  const factory PillSheetTypeInfo({
     required String pillSheetTypeReferencePath,
     required String name,
     required int totalCount,
     required int dosingPeriod,
   }) = _PillSheetTypeInfo;
 
-factory PillSheetTypeInfo.fromJson(Map<String, dynamic> json) =>
+  factory PillSheetTypeInfo.fromJson(Map<String, dynamic> json) =>
       _$PillSheetTypeInfoFromJson(json);
   Map<String, dynamic> toJson() =>
       _$_$_PillSheetTypeInfoToJson(this as _$_PillSheetTypeInfo);
@@ -35,7 +35,7 @@ factory PillSheetTypeInfo.fromJson(Map<String, dynamic> json) =>
 @freezed
 @JsonSerializable(explicitToJson: true)
 class RestDuration with _$RestDuration {
-const factory RestDuration({
+  const factory RestDuration({
     @JsonKey(
       fromJson: NonNullTimestampConverter.timestampToDateTime,
       toJson: NonNullTimestampConverter.dateTimeToTimestamp,
@@ -53,7 +53,7 @@ const factory RestDuration({
         required DateTime createdDate,
   }) = _RestDuration;
 
-factory RestDuration.fromJson(Map<String, dynamic> json) =>
+  factory RestDuration.fromJson(Map<String, dynamic> json) =>
       _$RestDurationFromJson(json);
   Map<String, dynamic> toJson() =>
       _$_$_RestDurationToJson(this as _$_RestDuration);
@@ -67,8 +67,8 @@ class PillSheet implements _$PillSheet {
   PillSheetType get sheetType =>
       PillSheetTypeFunctions.fromRawPath(typeInfo.pillSheetTypeReferencePath);
 
-const PillSheet._();
-const factory PillSheet({
+  const PillSheet._();
+  const factory PillSheet({
     @JsonKey(includeIfNull: false)
         String? id,
     @JsonKey()
@@ -98,13 +98,13 @@ const factory PillSheet({
     @Default([])
         List<RestDuration> restDurations,
   }) = _PillSheet;
-const factory PillSheet.create(PillSheetType type) => PillSheet(
+  factory PillSheet.create(PillSheetType type) => PillSheet(
         typeInfo: type.typeInfo,
         beginingDate: today(),
         lastTakenDate: null,
       );
 
-factory PillSheet.fromJson(Map<String, dynamic> json) =>
+  factory PillSheet.fromJson(Map<String, dynamic> json) =>
       _$PillSheetFromJson(json);
   Map<String, dynamic> toJson() => _$_$_PillSheetToJson(this as _$_PillSheet);
 

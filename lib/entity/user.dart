@@ -35,11 +35,11 @@ extension UserPrivateFirestoreFieldKeys on String {
 @freezed
 class UserPrivate with _$UserPrivate {
   const UserPrivate._();
-const factory UserPrivate({String? fcmToken}) = _UserPrivate;
-const factory UserPrivate.create({required String fcmToken}) =>
+  const factory UserPrivate({String? fcmToken}) = _UserPrivate;
+  factory UserPrivate.create({required String fcmToken}) =>
       UserPrivate(fcmToken: fcmToken);
 
-factory UserPrivate.fromJson(Map<String, dynamic> json) =>
+  factory UserPrivate.fromJson(Map<String, dynamic> json) =>
       _$UserPrivateFromJson(json);
 }
 
@@ -67,7 +67,7 @@ extension UserFirestoreFieldKeys on String {
 @JsonSerializable(explicitToJson: true)
 class User implements _$User {
   const User._();
-const factory User({
+  const factory User({
     @JsonKey(name: "settings")
         Setting? setting,
     @Default(false)
@@ -103,5 +103,5 @@ const factory User({
         DateTime? discountEntitlementDeadlineDate,
   }) = _User;
 
-factory User.fromJson(Map<String, dynamic> json) => _$UserFromJson(json);
+  factory User.fromJson(Map<String, dynamic> json) => _$UserFromJson(json);
 }
