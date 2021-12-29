@@ -29,9 +29,9 @@ class MenstruationEditPage extends HookConsumerWidget {
   });
 
   @override
-  Widget build(BuildContext context) {
-    final store = useProvider(menstruationEditProvider(menstruation));
-    final state = useProvider(menstruationEditProvider(menstruation).state);
+  Widget build(BuildContext context, WidgetRef ref) {
+    final store = ref.watch(menstruationEditProvider(menstruation).notifier);
+    final state = ref.watch(menstruationEditProvider(menstruation));
     final invalidMessage = state.invalidMessage;
     return DraggableScrollableSheet(
       initialChildSize: 0.7,
