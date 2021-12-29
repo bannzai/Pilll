@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/analytics.dart';
 import 'package:pilll/components/molecules/dots_page_indicator.dart';
@@ -19,7 +20,7 @@ class SelectTodayPillNumberPillSheetList extends HookConsumerWidget {
   });
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     final pageController = usePageController(
         viewportFraction: (PillSheetViewLayout.width + 20) /
             MediaQuery.of(context).size.width);
