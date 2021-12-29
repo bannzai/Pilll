@@ -6,14 +6,15 @@ import 'package:pilll/util/shared_preference/keys.dart';
 import 'package:riverpod/riverpod.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-final notificationBarStoreProvider = StateNotifierProvider.autoDispose.family(
-  (ref, RecordPageState parameter) => NotificationBarStateStore(
+final notificationBarStoreProvider = StateNotifierProvider.autoDispose
+    .family<NotificationBarStateStore, NotificationBarState, RecordPageState>(
+  (ref, parameter) => NotificationBarStateStore(
     parameter,
   ),
 );
 final notificationBarStateProvider = Provider.autoDispose.family(
   (ref, RecordPageState parameter) =>
-      ref.watch(notificationBarStoreProvider(parameter).state),
+      ref.watch(notificationBarStoreProvider(parameter)),
 );
 
 class NotificationBarStateStore extends StateNotifier<NotificationBarState> {
