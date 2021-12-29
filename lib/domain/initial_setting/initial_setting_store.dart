@@ -30,7 +30,7 @@ final initialSettingStoreProvider = StateNotifierProvider(
 );
 
 final initialSettingStateProvider =
-    Provider((ref) => ref.watch(initialSettingStoreProvider.state));
+    StateProvider((ref) => ref.watch(initialSettingStoreProvider));
 
 class InitialSettingStateStore extends StateNotifier<InitialSettingState> {
   final BatchFactory _batchFactory;
