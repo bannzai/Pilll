@@ -11,12 +11,7 @@ abstract class DiaryFirestoreKey {
   static final String date = "date";
 }
 
-enum PhysicalConditionStatus {
-  @JsonKey(name: "Fine")
-  fine,
-  @JsonKey(name: "Bad")
-  bad
-}
+enum PhysicalConditionStatus { fine, bad }
 
 @freezed
 @JsonSerializable(explicitToJson: true)
