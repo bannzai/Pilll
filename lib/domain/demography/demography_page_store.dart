@@ -3,8 +3,9 @@ import 'package:pilll/entity/demographic.dart';
 import 'package:pilll/service/user.dart';
 import 'package:riverpod/riverpod.dart';
 
-final demographyPageStoreProvider = StateNotifierProvider(
-    (ref) => DemographyPageStore(ref.watch(userServiceProvider)));
+final demographyPageStoreProvider =
+    StateNotifierProvider<DemographyPageStore, DemographyPageState>(
+        (ref) => DemographyPageStore(ref.watch(userServiceProvider)));
 
 class DemographyPageStore extends StateNotifier<DemographyPageState> {
   final UserService _userService;

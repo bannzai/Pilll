@@ -21,9 +21,9 @@ class DemographyPage extends HookConsumerWidget {
 
   DemographyPage(this.done);
   @override
-  Widget build(BuildContext context) {
-    final store = useProvider(demographyPageStoreProvider);
-    final state = useProvider(demographyPageStoreProvider.state);
+  Widget build(BuildContext context, WidgetRef ref) {
+    final store = ref.watch(demographyPageStoreProvider.notifier);
+    final state = ref.watch(demographyPageStoreProvider);
     final purpose1 = state.purpose1;
     final prescription = state.prescription;
     final birthYear = state.birthYear;
