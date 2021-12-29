@@ -9,7 +9,7 @@ import 'package:pilll/domain/initial_setting/today_pill_number/explain_label.dar
 import 'package:pilll/domain/initial_setting/today_pill_number/select_today_pill_number_pill_sheet_list.dart';
 import 'package:pilll/util/datetime/day.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_hooks/flutter_hooks.dart';
+import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:intl/intl.dart';
 
