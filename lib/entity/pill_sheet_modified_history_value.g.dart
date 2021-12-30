@@ -6,106 +6,6 @@ part of 'pill_sheet_modified_history_value.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-PillSheetModifiedHistoryValue _$PillSheetModifiedHistoryValueFromJson(
-        Map<String, dynamic> json) =>
-    PillSheetModifiedHistoryValue(
-      beginTrialDate: json['beginTrialDate'] == null
-          ? null
-          : DateTime.parse(json['beginTrialDate'] as String),
-      createdPillSheet: json['createdPillSheet'] == null
-          ? null
-          : CreatedPillSheetValue.fromJson(
-              json['createdPillSheet'] as Map<String, dynamic>),
-      automaticallyRecordedLastTakenDate:
-          json['automaticallyRecordedLastTakenDate'] == null
-              ? null
-              : AutomaticallyRecordedLastTakenDateValue.fromJson(
-                  json['automaticallyRecordedLastTakenDate']
-                      as Map<String, dynamic>),
-      deletedPillSheet: json['deletedPillSheet'] == null
-          ? null
-          : DeletedPillSheetValue.fromJson(
-              json['deletedPillSheet'] as Map<String, dynamic>),
-      takenPill: json['takenPill'] == null
-          ? null
-          : TakenPillValue.fromJson(json['takenPill'] as Map<String, dynamic>),
-      revertTakenPill: json['revertTakenPill'] == null
-          ? null
-          : RevertTakenPillValue.fromJson(
-              json['revertTakenPill'] as Map<String, dynamic>),
-      changedPillNumber: json['changedPillNumber'] == null
-          ? null
-          : ChangedPillNumberValue.fromJson(
-              json['changedPillNumber'] as Map<String, dynamic>),
-      endedPillSheet: json['endedPillSheet'] == null
-          ? null
-          : EndedPillSheetValue.fromJson(
-              json['endedPillSheet'] as Map<String, dynamic>),
-      beganRestDurationValue: json['beganRestDurationValue'] == null
-          ? null
-          : BeganRestDurationValue.fromJson(
-              json['beganRestDurationValue'] as Map<String, dynamic>),
-      endedRestDurationValue: json['endedRestDurationValue'] == null
-          ? null
-          : EndedRestDurationValue.fromJson(
-              json['endedRestDurationValue'] as Map<String, dynamic>),
-    );
-
-Map<String, dynamic> _$PillSheetModifiedHistoryValueToJson(
-        PillSheetModifiedHistoryValue instance) =>
-    <String, dynamic>{
-      'beginTrialDate': instance.beginTrialDate?.toIso8601String(),
-      'createdPillSheet': instance.createdPillSheet?.toJson(),
-      'automaticallyRecordedLastTakenDate':
-          instance.automaticallyRecordedLastTakenDate?.toJson(),
-      'deletedPillSheet': instance.deletedPillSheet?.toJson(),
-      'takenPill': instance.takenPill?.toJson(),
-      'revertTakenPill': instance.revertTakenPill?.toJson(),
-      'changedPillNumber': instance.changedPillNumber?.toJson(),
-      'endedPillSheet': instance.endedPillSheet?.toJson(),
-      'beganRestDurationValue': instance.beganRestDurationValue?.toJson(),
-      'endedRestDurationValue': instance.endedRestDurationValue?.toJson(),
-    };
-
-ChangedPillNumberValue _$ChangedPillNumberValueFromJson(
-        Map<String, dynamic> json) =>
-    ChangedPillNumberValue(
-      beforeBeginingDate: NonNullTimestampConverter.timestampToDateTime(
-          json['beforeBeginingDate'] as Timestamp),
-      afterBeginingDate: NonNullTimestampConverter.timestampToDateTime(
-          json['afterBeginingDate'] as Timestamp),
-      beforeTodayPillNumber: json['beforeTodayPillNumber'] as int,
-      afterTodayPillNumber: json['afterTodayPillNumber'] as int,
-      beforeGroupIndex: json['beforeGroupIndex'] as int,
-      afterGroupIndex: json['afterGroupIndex'] as int,
-    );
-
-Map<String, dynamic> _$ChangedPillNumberValueToJson(
-        ChangedPillNumberValue instance) =>
-    <String, dynamic>{
-      'beforeBeginingDate': NonNullTimestampConverter.dateTimeToTimestamp(
-          instance.beforeBeginingDate),
-      'afterBeginingDate': NonNullTimestampConverter.dateTimeToTimestamp(
-          instance.afterBeginingDate),
-      'beforeTodayPillNumber': instance.beforeTodayPillNumber,
-      'afterTodayPillNumber': instance.afterTodayPillNumber,
-      'beforeGroupIndex': instance.beforeGroupIndex,
-      'afterGroupIndex': instance.afterGroupIndex,
-    };
-
-EndedRestDurationValue _$EndedRestDurationValueFromJson(
-        Map<String, dynamic> json) =>
-    EndedRestDurationValue(
-      restDuration:
-          RestDuration.fromJson(json['restDuration'] as Map<String, dynamic>),
-    );
-
-Map<String, dynamic> _$EndedRestDurationValueToJson(
-        EndedRestDurationValue instance) =>
-    <String, dynamic>{
-      'restDuration': instance.restDuration.toJson(),
-    };
-
 _$_PillSheetModifiedHistoryValue _$$_PillSheetModifiedHistoryValueFromJson(
         Map<String, dynamic> json) =>
     _$_PillSheetModifiedHistoryValue(
@@ -155,16 +55,16 @@ Map<String, dynamic> _$$_PillSheetModifiedHistoryValueToJson(
         _$_PillSheetModifiedHistoryValue instance) =>
     <String, dynamic>{
       'beginTrialDate': instance.beginTrialDate?.toIso8601String(),
-      'createdPillSheet': instance.createdPillSheet,
+      'createdPillSheet': instance.createdPillSheet?.toJson(),
       'automaticallyRecordedLastTakenDate':
-          instance.automaticallyRecordedLastTakenDate,
-      'deletedPillSheet': instance.deletedPillSheet,
-      'takenPill': instance.takenPill,
-      'revertTakenPill': instance.revertTakenPill,
-      'changedPillNumber': instance.changedPillNumber,
-      'endedPillSheet': instance.endedPillSheet,
-      'beganRestDurationValue': instance.beganRestDurationValue,
-      'endedRestDurationValue': instance.endedRestDurationValue,
+          instance.automaticallyRecordedLastTakenDate?.toJson(),
+      'deletedPillSheet': instance.deletedPillSheet?.toJson(),
+      'takenPill': instance.takenPill?.toJson(),
+      'revertTakenPill': instance.revertTakenPill?.toJson(),
+      'changedPillNumber': instance.changedPillNumber?.toJson(),
+      'endedPillSheet': instance.endedPillSheet?.toJson(),
+      'beganRestDurationValue': instance.beganRestDurationValue?.toJson(),
+      'endedRestDurationValue': instance.endedRestDurationValue?.toJson(),
     };
 
 _$_CreatedPillSheetValue _$$_CreatedPillSheetValueFromJson(

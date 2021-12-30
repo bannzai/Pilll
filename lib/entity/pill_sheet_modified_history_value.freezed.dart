@@ -404,7 +404,8 @@ class __$PillSheetModifiedHistoryValueCopyWithImpl<$Res>
 }
 
 /// @nodoc
-@JsonSerializable()
+
+@JsonSerializable(explicitToJson: true)
 class _$_PillSheetModifiedHistoryValue extends _PillSheetModifiedHistoryValue {
   const _$_PillSheetModifiedHistoryValue(
       {this.beginTrialDate,

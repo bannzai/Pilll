@@ -120,7 +120,8 @@ class __$ReminderTimeCopyWithImpl<$Res> extends _$ReminderTimeCopyWithImpl<$Res>
 }
 
 /// @nodoc
-@JsonSerializable()
+
+@JsonSerializable(explicitToJson: true)
 class _$_ReminderTime extends _ReminderTime with DiagnosticableTreeMixin {
   const _$_ReminderTime({required this.hour, required this.minute}) : super._();
 

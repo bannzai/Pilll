@@ -126,7 +126,8 @@ class __$PremiumFunctionSurveyCopyWithImpl<$Res>
 }
 
 /// @nodoc
-@JsonSerializable()
+
+@JsonSerializable(explicitToJson: true)
 class _$_PremiumFunctionSurvey extends _PremiumFunctionSurvey {
   const _$_PremiumFunctionSurvey(
       {required this.elements, required this.message})
