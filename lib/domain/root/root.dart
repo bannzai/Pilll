@@ -61,8 +61,8 @@ class RootState extends State<Root> {
     return UniversalErrorPage(
       error: _error,
       reload: () => reload(),
-      child: Consumer(builder: (context, watch, child) {
-        return watch(authStateStreamProvider).when(data: (snapshot) {
+      child: Consumer(builder: (context, ref, child) {
+        return ref.watch(authStateStreamProvider).when(data: (snapshot) {
           switch (screenType) {
             case ScreenType.home:
               return HomePage(key: homeKey);
