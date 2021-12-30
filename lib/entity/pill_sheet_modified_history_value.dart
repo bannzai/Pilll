@@ -7,9 +7,9 @@ part 'pill_sheet_modified_history_value.g.dart';
 part 'pill_sheet_modified_history_value.freezed.dart';
 
 @freezed
-@JsonSerializable(explicitToJson: true)
 class PillSheetModifiedHistoryValue with _$PillSheetModifiedHistoryValue {
   const PillSheetModifiedHistoryValue._();
+  @JsonSerializable(explicitToJson: true)
   const factory PillSheetModifiedHistoryValue({
     DateTime? beginTrialDate,
     @Default(null) CreatedPillSheetValue? createdPillSheet,
@@ -145,12 +145,9 @@ class RevertTakenPillValue with _$RevertTakenPillValue {
 
   factory RevertTakenPillValue.fromJson(Map<String, dynamic> json) =>
       _$RevertTakenPillValueFromJson(json);
-  Map<String, dynamic> toJson() =>
-      _$RevertTakenPillValueToJson(this as _$_RevertTakenPillValue);
 }
 
 @freezed
-@JsonSerializable(explicitToJson: true)
 class ChangedPillNumberValue with _$ChangedPillNumberValue {
   const ChangedPillNumberValue._();
   @JsonSerializable(explicitToJson: true)
@@ -212,12 +209,9 @@ class BeganRestDurationValue with _$BeganRestDurationValue {
 
   factory BeganRestDurationValue.fromJson(Map<String, dynamic> json) =>
       _$BeganRestDurationValueFromJson(json);
-  Map<String, dynamic> toJson() =>
-      _$BeganRestDurationValueToJson(this as _$_BeganRestDurationValue);
 }
 
 @freezed
-@JsonSerializable(explicitToJson: true)
 class EndedRestDurationValue with _$EndedRestDurationValue {
   const EndedRestDurationValue._();
   @JsonSerializable(explicitToJson: true)
