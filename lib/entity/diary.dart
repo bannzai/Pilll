@@ -14,7 +14,6 @@ class DiaryFirestoreKey {
 enum PhysicalConditionStatus { fine, bad }
 
 @freezed
-@JsonSerializable(explicitToJson: true)
 class Diary with _$Diary {
   static final List<String> allPhysicalConditions = [
     "頭痛",
@@ -35,6 +34,7 @@ class Diary with _$Diary {
 
   String get id => "Diary_${DateTimeFormatter.diaryIdentifier(date)}";
 
+  @JsonSerializable(explicitToJson: true)
   const factory Diary({
     @JsonKey(
       fromJson: NonNullTimestampConverter.timestampToDateTime,

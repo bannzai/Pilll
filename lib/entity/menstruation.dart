@@ -13,7 +13,6 @@ class MenstruationFirestoreKey {
 }
 
 @freezed
-@JsonSerializable(explicitToJson: true)
 class Menstruation with _$Menstruation {
   String? get documentID => id;
 
@@ -23,6 +22,7 @@ class Menstruation with _$Menstruation {
       _$MenstruationToJson(this as _$_Menstruation);
   const Menstruation._();
 
+  @JsonSerializable(explicitToJson: true)
   const factory Menstruation({
     @JsonKey(includeIfNull: false, toJson: toNull)
         String? id,

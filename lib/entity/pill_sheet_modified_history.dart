@@ -40,8 +40,8 @@ extension PillSheetModifiedActionTypeFunctions on PillSheetModifiedActionType {
 // PillSheetModifiedHistory only create on backend
 // If you want to make it from the client side, please match it with the property of backend
 @freezed
-@JsonSerializable(explicitToJson: true)
 class PillSheetModifiedHistory with _$PillSheetModifiedHistory {
+  @JsonSerializable(explicitToJson: true)
   const factory PillSheetModifiedHistory({
     @JsonKey(includeIfNull: false, toJson: toNull)
         required String? id,

@@ -13,9 +13,9 @@ class PillSheetGroupFirestoreKeys {
 }
 
 @freezed
-@JsonSerializable(explicitToJson: true)
 class PillSheetGroup with _$PillSheetGroup {
   const PillSheetGroup._();
+  @JsonSerializable(explicitToJson: true)
   const factory PillSheetGroup({
     @JsonKey(includeIfNull: false, toJson: toNull)
         String? id,

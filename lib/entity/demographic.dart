@@ -4,8 +4,8 @@ part 'demographic.g.dart';
 part 'demographic.freezed.dart';
 
 @freezed
-@JsonSerializable(explicitToJson: true)
 class Demographic with _$Demographic {
+  @JsonSerializable(explicitToJson: true)
   const factory Demographic({
     required String purpose1,
     required String purpose2,

@@ -32,9 +32,9 @@ class PillSheetModifiedHistoryValue with _$PillSheetModifiedHistoryValue {
 }
 
 @freezed
-@JsonSerializable(explicitToJson: true)
 class CreatedPillSheetValue with _$CreatedPillSheetValue {
   const CreatedPillSheetValue._();
+  @JsonSerializable(explicitToJson: true)
   const factory CreatedPillSheetValue({
     @JsonKey(
       fromJson: NonNullTimestampConverter.timestampToDateTime,
@@ -52,10 +52,10 @@ class CreatedPillSheetValue with _$CreatedPillSheetValue {
 }
 
 @freezed
-@JsonSerializable(explicitToJson: true)
 class AutomaticallyRecordedLastTakenDateValue
     with _$AutomaticallyRecordedLastTakenDateValue {
   const AutomaticallyRecordedLastTakenDateValue._();
+  @JsonSerializable(explicitToJson: true)
   const factory AutomaticallyRecordedLastTakenDateValue({
     @JsonKey(
       fromJson: TimestampConverter.timestampToDateTime,
@@ -80,9 +80,9 @@ class AutomaticallyRecordedLastTakenDateValue
 }
 
 @freezed
-@JsonSerializable(explicitToJson: true)
 class DeletedPillSheetValue with _$DeletedPillSheetValue {
   const DeletedPillSheetValue._();
+  @JsonSerializable(explicitToJson: true)
   const factory DeletedPillSheetValue({
     @JsonKey(
       fromJson: NonNullTimestampConverter.timestampToDateTime,
@@ -100,9 +100,9 @@ class DeletedPillSheetValue with _$DeletedPillSheetValue {
 }
 
 @freezed
-@JsonSerializable(explicitToJson: true)
 class TakenPillValue with _$TakenPillValue {
   const TakenPillValue._();
+  @JsonSerializable(explicitToJson: true)
   const factory TakenPillValue({
     @JsonKey(
       fromJson: TimestampConverter.timestampToDateTime,
@@ -125,9 +125,9 @@ class TakenPillValue with _$TakenPillValue {
 }
 
 @freezed
-@JsonSerializable(explicitToJson: true)
 class RevertTakenPillValue with _$RevertTakenPillValue {
   const RevertTakenPillValue._();
+  @JsonSerializable(explicitToJson: true)
   const factory RevertTakenPillValue({
     @JsonKey(
       fromJson: TimestampConverter.timestampToDateTime,
@@ -153,6 +153,7 @@ class RevertTakenPillValue with _$RevertTakenPillValue {
 @JsonSerializable(explicitToJson: true)
 class ChangedPillNumberValue with _$ChangedPillNumberValue {
   const ChangedPillNumberValue._();
+  @JsonSerializable(explicitToJson: true)
   const factory ChangedPillNumberValue({
     @JsonKey(
       fromJson: NonNullTimestampConverter.timestampToDateTime,
@@ -179,9 +180,9 @@ class ChangedPillNumberValue with _$ChangedPillNumberValue {
 }
 
 @freezed
-@JsonSerializable(explicitToJson: true)
 class EndedPillSheetValue with _$EndedPillSheetValue {
   const EndedPillSheetValue._();
+  @JsonSerializable(explicitToJson: true)
   const factory EndedPillSheetValue({
     @JsonKey(
       fromJson: NonNullTimestampConverter.timestampToDateTime,
@@ -202,9 +203,9 @@ class EndedPillSheetValue with _$EndedPillSheetValue {
 }
 
 @freezed
-@JsonSerializable(explicitToJson: true)
 class BeganRestDurationValue with _$BeganRestDurationValue {
   const BeganRestDurationValue._();
+  @JsonSerializable(explicitToJson: true)
   const factory BeganRestDurationValue({
     required RestDuration restDuration,
   }) = _BeganRestDurationValue;
@@ -219,6 +220,7 @@ class BeganRestDurationValue with _$BeganRestDurationValue {
 @JsonSerializable(explicitToJson: true)
 class EndedRestDurationValue with _$EndedRestDurationValue {
   const EndedRestDurationValue._();
+  @JsonSerializable(explicitToJson: true)
   const factory EndedRestDurationValue({
     required RestDuration restDuration,
   }) = _EndedRestDurationValue;
