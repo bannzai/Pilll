@@ -21,7 +21,7 @@ class Menstruation with _$Menstruation {
       _$MenstruationFromJson(json);
   Map<String, dynamic> toJson() =>
       _$MenstruationToJson(this as _$_Menstruation);
-  Menstruation._();
+  const Menstruation._();
 
   const factory Menstruation({
     @JsonKey(includeIfNull: false, toJson: toNull)

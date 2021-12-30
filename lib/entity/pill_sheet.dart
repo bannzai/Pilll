@@ -66,7 +66,7 @@ class PillSheet with _$PillSheet {
   PillSheetType get sheetType =>
       PillSheetTypeFunctions.fromRawPath(typeInfo.pillSheetTypeReferencePath);
 
-  PillSheet._();
+  const PillSheet._();
   const factory PillSheet({
     @JsonKey(includeIfNull: false)
         String? id,

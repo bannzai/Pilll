@@ -6,7 +6,7 @@ part 'menstruation_card_state.freezed.dart';
 
 @freezed
 class MenstruationCardState with _$MenstruationCardState {
-  MenstruationCardState._();
+  const MenstruationCardState._();
   const factory MenstruationCardState({
     required String title,
     required DateTime scheduleDate,

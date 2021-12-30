@@ -16,7 +16,7 @@ class InitialSettingTodayPillNumber with _$InitialSettingTodayPillNumber {
 
 @freezed
 class InitialSettingState with _$InitialSettingState {
-  InitialSettingState._();
+  const InitialSettingState._();
   const factory InitialSettingState({
     @Default([])
         List<PillSheetType> pillSheetTypes,
