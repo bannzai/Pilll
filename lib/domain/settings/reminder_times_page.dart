@@ -14,7 +14,7 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 class ReminderTimesPage extends HookConsumerWidget {
   @override
   Widget build(BuildContext context) {
-    final store = ref.watch(settingStoreProvider.notifier.notifier);
+    final store = ref.watch(settingStoreProvider.notifier);
     final state = ref.watch(settingStoreProvider.notifier);
     final setting = state.setting;
     if (setting == null) {
@@ -126,7 +126,7 @@ class ReminderTimesPage extends HookConsumerWidget {
     if (setting.reminderTimes.length >= ReminderTime.maximumCount) {
       return Container();
     }
-    final store = ref.watch(settingStoreProvider.notifier.notifier);
+    final store = ref.watch(settingStoreProvider.notifier);
     return GestureDetector(
       onTap: () {
         _showPicker(context, store, setting, null);

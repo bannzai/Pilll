@@ -30,8 +30,7 @@ class SigninSheet extends HookConsumerWidget {
   });
   @override
   Widget build(BuildContext context) {
-    final store =
-        ref.watch(signinSheetStoreProvider(stateContext).notifier.notifier);
+    final store = ref.watch(signinSheetStoreProvider(stateContext).notifier);
     final state = ref.watch(signinSheetStoreProvider(stateContext).notifier);
     return HUD(
       shown: state.isLoading,

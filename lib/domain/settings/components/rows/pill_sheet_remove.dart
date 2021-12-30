@@ -13,7 +13,7 @@ import 'package:pilll/service/pill_sheet.dart';
 class PillSheetRemoveRow extends HookConsumerWidget {
   @override
   Widget build(BuildContext context) {
-    final store = ref.watch(settingStoreProvider.notifier.notifier);
+    final store = ref.watch(settingStoreProvider.notifier);
     return ListTile(
       title: Text("ピルシートをすべて破棄", style: FontType.listRow),
       onTap: () {

@@ -50,7 +50,7 @@ class SettingPage extends HookConsumerWidget {
   }
 
   Widget _body(BuildContext context) {
-    final store = ref.watch(settingStoreProvider.notifier.notifier);
+    final store = ref.watch(settingStoreProvider.notifier);
     final state = ref.watch(settingStoreProvider.notifier);
 
     if (state.exception != null) {
