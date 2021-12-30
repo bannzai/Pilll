@@ -53,6 +53,7 @@ dependencies:
   sign_in_with_apple: ^3.0.0
   google_sign_in: ^5.0.4
   purchases_flutter: ^3.2.2
+  firebase_remote_config: ^1.0.3
 
 dev_dependencies:
   flutter_test:
