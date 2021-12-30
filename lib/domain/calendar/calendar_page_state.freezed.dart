@@ -282,7 +282,7 @@ class __$CalendarPageStateCopyWithImpl<$Res>
 /// @nodoc
 
 class _$_CalendarPageState extends _CalendarPageState {
-  const _$_CalendarPageState(
+  _$_CalendarPageState(
       {this.currentCalendarIndex = 0,
       this.isNotYetLoaded = true,
       this.menstruations = const [],
@@ -379,7 +379,7 @@ class _$_CalendarPageState extends _CalendarPageState {
 }
 
 abstract class _CalendarPageState extends CalendarPageState {
-  const factory _CalendarPageState(
+  factory _CalendarPageState(
       {int currentCalendarIndex,
       bool isNotYetLoaded,
       List<Menstruation> menstruations,
@@ -391,7 +391,7 @@ abstract class _CalendarPageState extends CalendarPageState {
       bool isTrial,
       DateTime? trialDeadlineDate,
       Object? exception}) = _$_CalendarPageState;
-  const _CalendarPageState._() : super._();
+  _CalendarPageState._() : super._();
 
   @override
   int get currentCalendarIndex;
