@@ -35,8 +35,6 @@ class PillSheetGroup with _$PillSheetGroup {
 
   factory PillSheetGroup.fromJson(Map<String, dynamic> json) =>
       _$PillSheetGroupFromJson(json);
-  Map<String, dynamic> toJson() =>
-      _$PillSheetGroupToJson(this as _$_PillSheetGroup);
 
   PillSheet? get activedPillSheet {
     final filtered = pillSheets.where((element) => element.isActive);

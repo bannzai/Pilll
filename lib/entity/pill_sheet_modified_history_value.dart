@@ -27,8 +27,6 @@ class PillSheetModifiedHistoryValue with _$PillSheetModifiedHistoryValue {
 
   factory PillSheetModifiedHistoryValue.fromJson(Map<String, dynamic> json) =>
       _$PillSheetModifiedHistoryValueFromJson(json);
-  Map<String, dynamic> toJson() => _$PillSheetModifiedHistoryValueToJson(
-      this as _$_PillSheetModifiedHistoryValue);
 }
 
 @freezed
@@ -47,8 +45,6 @@ class CreatedPillSheetValue with _$CreatedPillSheetValue {
 
   factory CreatedPillSheetValue.fromJson(Map<String, dynamic> json) =>
       _$CreatedPillSheetValueFromJson(json);
-  Map<String, dynamic> toJson() =>
-      _$CreatedPillSheetValueToJson(this as _$_CreatedPillSheetValue);
 }
 
 @freezed
@@ -74,9 +70,6 @@ class AutomaticallyRecordedLastTakenDateValue
   factory AutomaticallyRecordedLastTakenDateValue.fromJson(
           Map<String, dynamic> json) =>
       _$AutomaticallyRecordedLastTakenDateValueFromJson(json);
-  Map<String, dynamic> toJson() =>
-      _$AutomaticallyRecordedLastTakenDateValueToJson(
-          this as _$_AutomaticallyRecordedLastTakenDateValue);
 }
 
 @freezed
@@ -95,8 +88,6 @@ class DeletedPillSheetValue with _$DeletedPillSheetValue {
 
   factory DeletedPillSheetValue.fromJson(Map<String, dynamic> json) =>
       _$DeletedPillSheetValueFromJson(json);
-  Map<String, dynamic> toJson() =>
-      _$DeletedPillSheetValueToJson(this as _$_DeletedPillSheetValue);
 }
 
 @freezed
@@ -120,8 +111,6 @@ class TakenPillValue with _$TakenPillValue {
 
   factory TakenPillValue.fromJson(Map<String, dynamic> json) =>
       _$TakenPillValueFromJson(json);
-  Map<String, dynamic> toJson() =>
-      _$TakenPillValueToJson(this as _$_TakenPillValue);
 }
 
 @freezed
@@ -172,8 +161,6 @@ class ChangedPillNumberValue with _$ChangedPillNumberValue {
 
   factory ChangedPillNumberValue.fromJson(Map<String, dynamic> json) =>
       _$ChangedPillNumberValueFromJson(json);
-  Map<String, dynamic> toJson() =>
-      _$ChangedPillNumberValueToJson(this as _$_ChangedPillNumberValue);
 }
 
 @freezed
@@ -195,8 +182,6 @@ class EndedPillSheetValue with _$EndedPillSheetValue {
 
   factory EndedPillSheetValue.fromJson(Map<String, dynamic> json) =>
       _$EndedPillSheetValueFromJson(json);
-  Map<String, dynamic> toJson() =>
-      _$EndedPillSheetValueToJson(this as _$_EndedPillSheetValue);
 }
 
 @freezed
@@ -221,6 +206,4 @@ class EndedRestDurationValue with _$EndedRestDurationValue {
 
   factory EndedRestDurationValue.fromJson(Map<String, dynamic> json) =>
       _$EndedRestDurationValueFromJson(json);
-  Map<String, dynamic> toJson() =>
-      _$EndedRestDurationValueToJson(this as _$_EndedRestDurationValue);
 }

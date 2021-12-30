@@ -73,8 +73,6 @@ class PillSheetModifiedHistory with _$PillSheetModifiedHistory {
 
   factory PillSheetModifiedHistory.fromJson(Map<String, dynamic> json) =>
       _$PillSheetModifiedHistoryFromJson(json);
-  Map<String, dynamic> toJson() =>
-      _$PillSheetModifiedHistoryToJson(this as _$_PillSheetModifiedHistory);
 
   PillSheetModifiedActionType? get enumActionType =>
       PillSheetModifiedActionType.values

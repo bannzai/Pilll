@@ -27,8 +27,6 @@ class PillSheetTypeInfo with _$PillSheetTypeInfo {
 
   factory PillSheetTypeInfo.fromJson(Map<String, dynamic> json) =>
       _$PillSheetTypeInfoFromJson(json);
-  Map<String, dynamic> toJson() =>
-      _$PillSheetTypeInfoToJson(this as _$_PillSheetTypeInfo);
 }
 
 @freezed
@@ -54,8 +52,6 @@ class RestDuration with _$RestDuration {
 
   factory RestDuration.fromJson(Map<String, dynamic> json) =>
       _$RestDurationFromJson(json);
-  Map<String, dynamic> toJson() =>
-      _$RestDurationToJson(this as _$_RestDuration);
 }
 
 @freezed
@@ -105,7 +101,6 @@ class PillSheet with _$PillSheet {
 
   factory PillSheet.fromJson(Map<String, dynamic> json) =>
       _$PillSheetFromJson(json);
-  Map<String, dynamic> toJson() => _$PillSheetToJson(this as _$_PillSheet);
 
   PillSheetType get pillSheetType =>
       PillSheetTypeFunctions.fromRawPath(typeInfo.pillSheetTypeReferencePath);
