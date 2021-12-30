@@ -5,13 +5,13 @@ part 'premium_function_survey.g.dart';
 part 'premium_function_survey.freezed.dart';
 
 @freezed
-@JsonSerializable(explicitToJson: true)
 class PremiumFunctionSurvey with _$PremiumFunctionSurvey {
   const factory PremiumFunctionSurvey({
     required List<PremiumFunctionSurveyElementType> elements,
     required String message,
   }) = _PremiumFunctionSurvey;
   const PremiumFunctionSurvey._();
+  @JsonSerializable(explicitToJson: true)
   factory PremiumFunctionSurvey.fromJson(Map<String, dynamic> json) =>
       _$PremiumFunctionSurveyFromJson(json);
   Map<String, dynamic> toJson() =>

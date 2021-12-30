@@ -16,8 +16,8 @@ class PillSheetFirestoreKey {
 }
 
 @freezed
-@JsonSerializable(explicitToJson: true)
 class PillSheetTypeInfo with _$PillSheetTypeInfo {
+  @JsonSerializable(explicitToJson: true)
   const factory PillSheetTypeInfo({
     required String pillSheetTypeReferencePath,
     required String name,
@@ -32,8 +32,8 @@ class PillSheetTypeInfo with _$PillSheetTypeInfo {
 }
 
 @freezed
-@JsonSerializable(explicitToJson: true)
 class RestDuration with _$RestDuration {
+  @JsonSerializable(explicitToJson: true)
   const factory RestDuration({
     @JsonKey(
       fromJson: NonNullTimestampConverter.timestampToDateTime,
@@ -59,7 +59,6 @@ class RestDuration with _$RestDuration {
 }
 
 @freezed
-@JsonSerializable(explicitToJson: true)
 class PillSheet with _$PillSheet {
   String? get documentID => id;
 
@@ -67,6 +66,7 @@ class PillSheet with _$PillSheet {
       PillSheetTypeFunctions.fromRawPath(typeInfo.pillSheetTypeReferencePath);
 
   const PillSheet._();
+  @JsonSerializable(explicitToJson: true)
   const factory PillSheet({
     @JsonKey(includeIfNull: false)
         String? id,

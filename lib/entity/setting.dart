@@ -43,9 +43,9 @@ class SettingFirestoreFieldKeys {
 }
 
 @freezed
-@JsonSerializable(explicitToJson: true)
 class Setting with _$Setting {
   const Setting._();
+  @JsonSerializable(explicitToJson: true)
   const factory Setting({
     @Default([]) List<PillSheetType> pillSheetTypes,
     required int pillNumberForFromMenstruation,

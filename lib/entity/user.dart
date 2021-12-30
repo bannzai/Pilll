@@ -64,9 +64,9 @@ extension UserFirestoreFieldKeys on String {
 }
 
 @freezed
-@JsonSerializable(explicitToJson: true)
 class User with _$User {
   const User._();
+  @JsonSerializable(explicitToJson: true)
   const factory User({
     @JsonKey(name: "settings")
         Setting? setting,
