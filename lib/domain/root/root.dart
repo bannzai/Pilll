@@ -27,7 +27,7 @@ class Root extends StatefulWidget {
   RootState createState() => RootState();
 }
 
-enum ScreenType { home, initialSetting }
+enum ScreenType { home, initialSetting, forceUpdate }
 
 class RootState extends State<Root> {
   dynamic _error;
