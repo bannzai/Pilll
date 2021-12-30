@@ -43,13 +43,13 @@ class RootState extends State<Root> {
     setState(() {
       screenType = null;
       _error = null;
-      _auth();
+      _decideScreenType();
     });
   }
 
   @override
   void initState() {
-    _auth();
+    _decideScreenType();
     super.initState();
   }
 
