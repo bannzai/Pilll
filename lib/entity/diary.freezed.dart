@@ -195,7 +195,8 @@ class __$DiaryCopyWithImpl<$Res> extends _$DiaryCopyWithImpl<$Res>
 }
 
 /// @nodoc
-@JsonSerializable()
+
+@JsonSerializable(explicitToJson: true)
 class _$_Diary extends _Diary {
   const _$_Diary(
       {@JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)

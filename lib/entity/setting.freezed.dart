@@ -390,7 +390,8 @@ class __$SettingCopyWithImpl<$Res> extends _$SettingCopyWithImpl<$Res>
 }
 
 /// @nodoc
-@JsonSerializable()
+
+@JsonSerializable(explicitToJson: true)
 class _$_Setting extends _Setting with DiagnosticableTreeMixin {
   const _$_Setting(
       {this.pillSheetTypes = const [],

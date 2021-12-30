@@ -171,7 +171,8 @@ class __$DemographicCopyWithImpl<$Res> extends _$DemographicCopyWithImpl<$Res>
 }
 
 /// @nodoc
-@JsonSerializable()
+
+@JsonSerializable(explicitToJson: true)
 class _$_Demographic extends _Demographic {
   const _$_Demographic(
       {required this.purpose1,

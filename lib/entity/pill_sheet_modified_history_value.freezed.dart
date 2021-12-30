@@ -681,7 +681,8 @@ class __$CreatedPillSheetValueCopyWithImpl<$Res>
 }
 
 /// @nodoc
-@JsonSerializable()
+
+@JsonSerializable(explicitToJson: true)
 class _$_CreatedPillSheetValue extends _CreatedPillSheetValue {
   const _$_CreatedPillSheetValue(
       {@JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
@@ -925,7 +926,8 @@ class __$AutomaticallyRecordedLastTakenDateValueCopyWithImpl<$Res>
 }
 
 /// @nodoc
-@JsonSerializable()
+
+@JsonSerializable(explicitToJson: true)
 class _$_AutomaticallyRecordedLastTakenDateValue
     extends _AutomaticallyRecordedLastTakenDateValue {
   const _$_AutomaticallyRecordedLastTakenDateValue(
@@ -1155,7 +1157,8 @@ class __$DeletedPillSheetValueCopyWithImpl<$Res>
 }
 
 /// @nodoc
-@JsonSerializable()
+
+@JsonSerializable(explicitToJson: true)
 class _$_DeletedPillSheetValue extends _DeletedPillSheetValue {
   const _$_DeletedPillSheetValue(
       {@JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
@@ -1389,7 +1392,8 @@ class __$TakenPillValueCopyWithImpl<$Res>
 }
 
 /// @nodoc
-@JsonSerializable()
+
+@JsonSerializable(explicitToJson: true)
 class _$_TakenPillValue extends _TakenPillValue {
   const _$_TakenPillValue(
       {@JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
@@ -1647,7 +1651,8 @@ class __$RevertTakenPillValueCopyWithImpl<$Res>
 }
 
 /// @nodoc
-@JsonSerializable()
+
+@JsonSerializable(explicitToJson: true)
 class _$_RevertTakenPillValue extends _RevertTakenPillValue {
   const _$_RevertTakenPillValue(
       {@JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
@@ -1937,7 +1942,8 @@ class __$ChangedPillNumberValueCopyWithImpl<$Res>
 }
 
 /// @nodoc
-@JsonSerializable()
+
+@JsonSerializable(explicitToJson: true)
 class _$_ChangedPillNumberValue extends _ChangedPillNumberValue {
   const _$_ChangedPillNumberValue(
       {@JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
@@ -2186,7 +2192,8 @@ class __$EndedPillSheetValueCopyWithImpl<$Res>
 }
 
 /// @nodoc
-@JsonSerializable()
+
+@JsonSerializable(explicitToJson: true)
 class _$_EndedPillSheetValue extends _EndedPillSheetValue {
   const _$_EndedPillSheetValue(
       {@JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
@@ -2380,7 +2387,8 @@ class __$BeganRestDurationValueCopyWithImpl<$Res>
 }
 
 /// @nodoc
-@JsonSerializable()
+
+@JsonSerializable(explicitToJson: true)
 class _$_BeganRestDurationValue extends _BeganRestDurationValue {
   const _$_BeganRestDurationValue({required this.restDuration}) : super._();
 
@@ -2546,7 +2554,8 @@ class __$EndedRestDurationValueCopyWithImpl<$Res>
 }
 
 /// @nodoc
-@JsonSerializable()
+
+@JsonSerializable(explicitToJson: true)
 class _$_EndedRestDurationValue extends _EndedRestDurationValue {
   const _$_EndedRestDurationValue({required this.restDuration}) : super._();
 

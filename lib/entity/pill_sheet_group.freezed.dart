@@ -189,7 +189,8 @@ class __$PillSheetGroupCopyWithImpl<$Res>
 }
 
 /// @nodoc
-@JsonSerializable()
+
+@JsonSerializable(explicitToJson: true)
 class _$_PillSheetGroup extends _PillSheetGroup {
   const _$_PillSheetGroup(
       {@JsonKey(includeIfNull: false, toJson: toNull)

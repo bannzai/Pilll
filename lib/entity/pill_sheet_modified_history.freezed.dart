@@ -326,7 +326,8 @@ class __$PillSheetModifiedHistoryCopyWithImpl<$Res>
 }
 
 /// @nodoc
-@JsonSerializable()
+
+@JsonSerializable(explicitToJson: true)
 class _$_PillSheetModifiedHistory extends _PillSheetModifiedHistory {
   const _$_PillSheetModifiedHistory(
       {@JsonKey(includeIfNull: false, toJson: toNull)

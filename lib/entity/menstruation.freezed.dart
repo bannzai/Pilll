@@ -199,7 +199,8 @@ class __$MenstruationCopyWithImpl<$Res> extends _$MenstruationCopyWithImpl<$Res>
 }
 
 /// @nodoc
-@JsonSerializable()
+
+@JsonSerializable(explicitToJson: true)
 class _$_Menstruation extends _Menstruation {
   const _$_Menstruation(
       {@JsonKey(includeIfNull: false, toJson: toNull)

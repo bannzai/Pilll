@@ -476,7 +476,8 @@ class __$UserCopyWithImpl<$Res> extends _$UserCopyWithImpl<$Res>
 }
 
 /// @nodoc
-@JsonSerializable()
+
+@JsonSerializable(explicitToJson: true)
 class _$_User extends _User {
   const _$_User(
       {@JsonKey(name: "settings")

@@ -158,7 +158,8 @@ class __$PillSheetTypeInfoCopyWithImpl<$Res>
 }
 
 /// @nodoc
-@JsonSerializable()
+
+@JsonSerializable(explicitToJson: true)
 class _$_PillSheetTypeInfo implements _PillSheetTypeInfo {
   const _$_PillSheetTypeInfo(
       {required this.pillSheetTypeReferencePath,
@@ -386,7 +387,8 @@ class __$RestDurationCopyWithImpl<$Res> extends _$RestDurationCopyWithImpl<$Res>
 }
 
 /// @nodoc
-@JsonSerializable()
+
+@JsonSerializable(explicitToJson: true)
 class _$_RestDuration implements _RestDuration {
   const _$_RestDuration(
       {@JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
@@ -726,7 +728,8 @@ class __$PillSheetCopyWithImpl<$Res> extends _$PillSheetCopyWithImpl<$Res>
 }
 
 /// @nodoc
-@JsonSerializable()
+
+@JsonSerializable(explicitToJson: true)
 class _$_PillSheet extends _PillSheet {
   const _$_PillSheet(
       {@JsonKey(includeIfNull: false)
