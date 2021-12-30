@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/analytics.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
@@ -15,7 +14,7 @@ import 'package:pilll/entity/setting.dart';
 
 class SelectAppearanceModeModal extends HookConsumerWidget {
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     final store = ref.watch(recordPageStoreProvider.notifier);
     final state = ref.watch(recordPageStoreProvider);
     return Container(
