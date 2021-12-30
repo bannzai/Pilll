@@ -1,5 +1,6 @@
+// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'premium_trial_modal_state.dart';
 
@@ -175,7 +176,7 @@ class __$PremiumTrialModalStateCopyWithImpl<$Res>
 /// @nodoc
 
 class _$_PremiumTrialModalState extends _PremiumTrialModalState {
-  _$_PremiumTrialModalState(
+  const _$_PremiumTrialModalState(
       {this.beginTrialDate,
       this.isLoading = false,
       this.isTrial = false,
@@ -185,10 +186,10 @@ class _$_PremiumTrialModalState extends _PremiumTrialModalState {
 
   @override
   final DateTime? beginTrialDate;
-  @JsonKey(defaultValue: false)
+  @JsonKey()
   @override
   final bool isLoading;
-  @JsonKey(defaultValue: false)
+  @JsonKey()
   @override
   final bool isTrial;
   @override
@@ -204,32 +205,24 @@ class _$_PremiumTrialModalState extends _PremiumTrialModalState {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _PremiumTrialModalState &&
-            (identical(other.beginTrialDate, beginTrialDate) ||
-                const DeepCollectionEquality()
-                    .equals(other.beginTrialDate, beginTrialDate)) &&
-            (identical(other.isLoading, isLoading) ||
-                const DeepCollectionEquality()
-                    .equals(other.isLoading, isLoading)) &&
-            (identical(other.isTrial, isTrial) ||
-                const DeepCollectionEquality()
-                    .equals(other.isTrial, isTrial)) &&
-            (identical(other.setting, setting) ||
-                const DeepCollectionEquality()
-                    .equals(other.setting, setting)) &&
-            (identical(other.exception, exception) ||
-                const DeepCollectionEquality()
-                    .equals(other.exception, exception)));
+        (other.runtimeType == runtimeType &&
+            other is _PremiumTrialModalState &&
+            const DeepCollectionEquality()
+                .equals(other.beginTrialDate, beginTrialDate) &&
+            const DeepCollectionEquality().equals(other.isLoading, isLoading) &&
+            const DeepCollectionEquality().equals(other.isTrial, isTrial) &&
+            const DeepCollectionEquality().equals(other.setting, setting) &&
+            const DeepCollectionEquality().equals(other.exception, exception));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(beginTrialDate) ^
-      const DeepCollectionEquality().hash(isLoading) ^
-      const DeepCollectionEquality().hash(isTrial) ^
-      const DeepCollectionEquality().hash(setting) ^
-      const DeepCollectionEquality().hash(exception);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(beginTrialDate),
+      const DeepCollectionEquality().hash(isLoading),
+      const DeepCollectionEquality().hash(isTrial),
+      const DeepCollectionEquality().hash(setting),
+      const DeepCollectionEquality().hash(exception));
 
   @JsonKey(ignore: true)
   @override
@@ -239,24 +232,24 @@ class _$_PremiumTrialModalState extends _PremiumTrialModalState {
 }
 
 abstract class _PremiumTrialModalState extends PremiumTrialModalState {
-  factory _PremiumTrialModalState(
+  const factory _PremiumTrialModalState(
       {DateTime? beginTrialDate,
       bool isLoading,
       bool isTrial,
       Setting? setting,
       Object? exception}) = _$_PremiumTrialModalState;
-  _PremiumTrialModalState._() : super._();
+  const _PremiumTrialModalState._() : super._();
 
   @override
-  DateTime? get beginTrialDate => throw _privateConstructorUsedError;
+  DateTime? get beginTrialDate;
   @override
-  bool get isLoading => throw _privateConstructorUsedError;
+  bool get isLoading;
   @override
-  bool get isTrial => throw _privateConstructorUsedError;
+  bool get isTrial;
   @override
-  Setting? get setting => throw _privateConstructorUsedError;
+  Setting? get setting;
   @override
-  Object? get exception => throw _privateConstructorUsedError;
+  Object? get exception;
   @override
   @JsonKey(ignore: true)
   _$PremiumTrialModalStateCopyWith<_PremiumTrialModalState> get copyWith =>

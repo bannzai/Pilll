@@ -10,23 +10,23 @@ import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/util/formatter/date_time_formatter.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_hooks/flutter_hooks.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:flutter_svg/svg.dart';
 
-final _confirmDiaryStoreProvider =
-    StateNotifierProvider.autoDispose.family<ConfirmDiaryStore, Diary>((ref, diary) {
+final _confirmDiaryStoreProvider = StateNotifierProvider.autoDispose
+    .family<ConfirmDiaryStore, DiaryState, Diary>((ref, diary) {
   final service = ref.watch(diaryServiceProvider);
   return ConfirmDiaryStore(service, DiaryState(diary: diary.copyWith()));
 });
 
-class ConfirmDiarySheet extends HookWidget {
+class ConfirmDiarySheet extends HookConsumerWidget {
   final Diary _diary;
 
   ConfirmDiarySheet(this._diary);
   @override
-  Widget build(BuildContext context) {
-    final state = useProvider(_confirmDiaryStoreProvider(_diary).state);
+  Widget build(BuildContext context, WidgetRef ref) {
+    final state = ref.watch(_confirmDiaryStoreProvider(_diary));
+    final store = ref.watch(_confirmDiaryStoreProvider(_diary).notifier);
     return Container(
       decoration: BoxDecoration(
         borderRadius: BorderRadius.only(
@@ -40,12 +40,12 @@ class ConfirmDiarySheet extends HookWidget {
           mainAxisSize: MainAxisSize.min,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            _title(context),
+            _title(context, store, state),
             ...[
-              if (state.hasPhysicalConditionStatus()) _physicalCondition(),
-              _physicalConditionDetails(),
+              if (state.hasPhysicalConditionStatus()) _physicalCondition(state),
+              _physicalConditionDetails(state),
               if (state.diary.hasSex) _sex(),
-              _memo(),
+              _memo(state),
             ].map((e) => _withContentSpacer(e)),
           ]),
     );
@@ -58,9 +58,8 @@ class ConfirmDiarySheet extends HookWidget {
     );
   }
 
-  Widget _title(BuildContext context) {
-    final store = useProvider(_confirmDiaryStoreProvider(_diary));
-    final state = useProvider(_confirmDiaryStoreProvider(_diary).state);
+  Widget _title(
+      BuildContext context, ConfirmDiaryStore store, DiaryState state) {
     return Row(
       mainAxisSize: MainAxisSize.max,
       children: [
@@ -123,8 +122,7 @@ class ConfirmDiarySheet extends HookWidget {
     }
   }
 
-  Widget _physicalCondition() {
-    final state = useProvider(_confirmDiaryStoreProvider(_diary).state);
+  Widget _physicalCondition(DiaryState state) {
     return Row(
       children: [
         Text("体調", style: FontType.componentTitle.merge(TextColorStyle.black)),
@@ -134,8 +132,7 @@ class ConfirmDiarySheet extends HookWidget {
     );
   }
 
-  Widget _physicalConditionDetails() {
-    final state = useProvider(_confirmDiaryStoreProvider(_diary).state);
+  Widget _physicalConditionDetails(DiaryState state) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
@@ -166,8 +163,7 @@ class ConfirmDiarySheet extends HookWidget {
     );
   }
 
-  Widget _memo() {
-    final state = useProvider(_confirmDiaryStoreProvider(_diary).state);
+  Widget _memo(DiaryState state) {
     return Text(
       state.diary.memo,
       maxLines: 2,

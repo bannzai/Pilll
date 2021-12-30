@@ -4,9 +4,9 @@ import 'package:purchases_flutter/purchases_flutter.dart';
 part 'premium_introduction_state.freezed.dart';
 
 @freezed
-abstract class PremiumIntroductionState implements _$PremiumIntroductionState {
-  PremiumIntroductionState._();
-  factory PremiumIntroductionState({
+class PremiumIntroductionState with _$PremiumIntroductionState {
+  const PremiumIntroductionState._();
+  const factory PremiumIntroductionState({
     Offerings? offerings,
     @Default(false) bool isCompletedRestore,
     @Default(false) bool isLoading,

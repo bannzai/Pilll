@@ -6,7 +6,8 @@ import 'package:pilll/domain/menstruation_list/menstruation_list_state.dart';
 import 'package:pilll/service/menstruation.dart';
 import 'package:pilll/domain/menstruation/menstruation_store.dart';
 
-final menstruationListStoreProvider = StateNotifierProvider(
+final menstruationListStoreProvider =
+    StateNotifierProvider<MenstruationListStore, MenstruationListState>(
   (ref) => MenstruationListStore(
     menstruationService: ref.watch(menstruationServiceProvider),
   ),
@@ -35,8 +36,7 @@ class MenstruationListStore extends StateNotifier<MenstruationListState> {
   StreamSubscription? _menstruationCanceller;
   void _subscribe() {
     _menstruationCanceller?.cancel();
-    _menstruationCanceller =
-        menstruationService.streamAll().listen((entities) {
+    _menstruationCanceller = menstruationService.streamAll().listen((entities) {
       state = state.copyWith(
           allRows: MenstruationListRowState.rows(
               dropInTheMiddleMenstruation(entities)));

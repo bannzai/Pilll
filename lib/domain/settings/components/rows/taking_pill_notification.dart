@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/analytics.dart';
 import 'package:pilll/components/atoms/color.dart';
@@ -7,7 +6,7 @@ import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/domain/settings/setting_page_store.dart';
 import 'package:pilll/entity/setting.dart';
 
-class TakingPillNotification extends HookWidget {
+class TakingPillNotification extends HookConsumerWidget {
   final Setting setting;
 
   const TakingPillNotification({
@@ -16,8 +15,8 @@ class TakingPillNotification extends HookWidget {
   }) : super(key: key);
 
   @override
-  Widget build(BuildContext context) {
-    final store = useProvider(settingStoreProvider);
+  Widget build(BuildContext context, WidgetRef ref) {
+    final store = ref.watch(settingStoreProvider.notifier);
     return SwitchListTile(
       title: Text("ピルの服用通知", style: FontType.listRow),
       activeColor: PilllColors.primary,

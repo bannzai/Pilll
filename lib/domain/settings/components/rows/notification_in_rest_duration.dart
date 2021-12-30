@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/analytics.dart';
 import 'package:pilll/components/atoms/color.dart';
@@ -9,7 +8,7 @@ import 'package:pilll/entity/pill_sheet.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/entity/setting.dart';
 
-class NotificationInRestDuration extends HookWidget {
+class NotificationInRestDuration extends HookConsumerWidget {
   final PillSheet pillSheet;
   final Setting setting;
 
@@ -20,8 +19,8 @@ class NotificationInRestDuration extends HookWidget {
   }) : super(key: key);
 
   @override
-  Widget build(BuildContext context) {
-    final store = useProvider(settingStoreProvider);
+  Widget build(BuildContext context, WidgetRef ref) {
+    final store = ref.watch(settingStoreProvider.notifier);
     return SwitchListTile(
       title: Text("${pillSheet.pillSheetType.notTakenWord}期間の通知",
           style: FontType.listRow),

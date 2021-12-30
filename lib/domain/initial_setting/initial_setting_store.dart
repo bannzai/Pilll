@@ -18,7 +18,8 @@ import 'package:pilll/util/datetime/day.dart';
 import 'package:purchases_flutter/purchases_flutter.dart';
 import 'package:riverpod/riverpod.dart';
 
-final initialSettingStoreProvider = StateNotifierProvider(
+final initialSettingStoreProvider =
+    StateNotifierProvider<InitialSettingStateStore, InitialSettingState>(
   (ref) => InitialSettingStateStore(
     ref.watch(batchFactoryProvider),
     ref.watch(authServiceProvider),
@@ -30,7 +31,7 @@ final initialSettingStoreProvider = StateNotifierProvider(
 );
 
 final initialSettingStateProvider =
-    Provider((ref) => ref.watch(initialSettingStoreProvider.state));
+    StateProvider((ref) => ref.watch(initialSettingStoreProvider));
 
 class InitialSettingStateStore extends StateNotifier<InitialSettingState> {
   final BatchFactory _batchFactory;
@@ -71,8 +72,8 @@ class InitialSettingStateStore extends StateNotifier<InitialSettingState> {
         await userService.prepare(user.uid);
         await userService.recordUserIDs();
         unawaited(FirebaseCrashlytics.instance.setUserIdentifier(user.uid));
-        unawaited(firebaseAnalytics.setUserId(user.uid));
-        await Purchases.identify(user.uid);
+        unawaited(firebaseAnalytics.setUserId(id: user.uid));
+        await Purchases.logIn(user.uid);
       }
       state = state.copyWith(
           isAccountCooperationDidEnd: isAccountCooperationDidEnd);

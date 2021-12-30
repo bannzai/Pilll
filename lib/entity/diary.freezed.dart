@@ -1,5 +1,6 @@
+// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'diary.dart';
 
@@ -39,7 +40,7 @@ class _$DiaryTearOff {
     );
   }
 
-  Diary fromJson(Map<String, Object> json) {
+  Diary fromJson(Map<String, Object?> json) {
     return Diary.fromJson(json);
   }
 }
@@ -197,7 +198,7 @@ class __$DiaryCopyWithImpl<$Res> extends _$DiaryCopyWithImpl<$Res>
 
 @JsonSerializable(explicitToJson: true)
 class _$_Diary extends _Diary {
-  _$_Diary(
+  const _$_Diary(
       {@JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
           required this.date,
       @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
@@ -209,7 +210,7 @@ class _$_Diary extends _Diary {
       : super._();
 
   factory _$_Diary.fromJson(Map<String, dynamic> json) =>
-      _$_$_DiaryFromJson(json);
+      _$$_DiaryFromJson(json);
 
   @override
   @JsonKey(
@@ -238,34 +239,27 @@ class _$_Diary extends _Diary {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _Diary &&
-            (identical(other.date, date) ||
-                const DeepCollectionEquality().equals(other.date, date)) &&
-            (identical(other.createdAt, createdAt) ||
-                const DeepCollectionEquality()
-                    .equals(other.createdAt, createdAt)) &&
-            (identical(
-                    other.physicalConditionStatus, physicalConditionStatus) ||
-                const DeepCollectionEquality().equals(
-                    other.physicalConditionStatus, physicalConditionStatus)) &&
-            (identical(other.physicalConditions, physicalConditions) ||
-                const DeepCollectionEquality()
-                    .equals(other.physicalConditions, physicalConditions)) &&
-            (identical(other.hasSex, hasSex) ||
-                const DeepCollectionEquality().equals(other.hasSex, hasSex)) &&
-            (identical(other.memo, memo) ||
-                const DeepCollectionEquality().equals(other.memo, memo)));
+        (other.runtimeType == runtimeType &&
+            other is _Diary &&
+            const DeepCollectionEquality().equals(other.date, date) &&
+            const DeepCollectionEquality().equals(other.createdAt, createdAt) &&
+            const DeepCollectionEquality().equals(
+                other.physicalConditionStatus, physicalConditionStatus) &&
+            const DeepCollectionEquality()
+                .equals(other.physicalConditions, physicalConditions) &&
+            const DeepCollectionEquality().equals(other.hasSex, hasSex) &&
+            const DeepCollectionEquality().equals(other.memo, memo));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(date) ^
-      const DeepCollectionEquality().hash(createdAt) ^
-      const DeepCollectionEquality().hash(physicalConditionStatus) ^
-      const DeepCollectionEquality().hash(physicalConditions) ^
-      const DeepCollectionEquality().hash(hasSex) ^
-      const DeepCollectionEquality().hash(memo);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(date),
+      const DeepCollectionEquality().hash(createdAt),
+      const DeepCollectionEquality().hash(physicalConditionStatus),
+      const DeepCollectionEquality().hash(physicalConditions),
+      const DeepCollectionEquality().hash(hasSex),
+      const DeepCollectionEquality().hash(memo));
 
   @JsonKey(ignore: true)
   @override
@@ -274,12 +268,12 @@ class _$_Diary extends _Diary {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_DiaryToJson(this);
+    return _$$_DiaryToJson(this);
   }
 }
 
 abstract class _Diary extends Diary {
-  factory _Diary(
+  const factory _Diary(
       {@JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
           required DateTime date,
       @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
@@ -288,7 +282,7 @@ abstract class _Diary extends Diary {
       required List<String> physicalConditions,
       required bool hasSex,
       required String memo}) = _$_Diary;
-  _Diary._() : super._();
+  const _Diary._() : super._();
 
   factory _Diary.fromJson(Map<String, dynamic> json) = _$_Diary.fromJson;
 
@@ -296,21 +290,20 @@ abstract class _Diary extends Diary {
   @JsonKey(
       fromJson: NonNullTimestampConverter.timestampToDateTime,
       toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-  DateTime get date => throw _privateConstructorUsedError;
+  DateTime get date;
   @override // NOTE: OLD data does't have createdAt
   @JsonKey(
       fromJson: TimestampConverter.timestampToDateTime,
       toJson: TimestampConverter.dateTimeToTimestamp)
-  DateTime? get createdAt => throw _privateConstructorUsedError;
+  DateTime? get createdAt;
   @override
-  PhysicalConditionStatus? get physicalConditionStatus =>
-      throw _privateConstructorUsedError;
+  PhysicalConditionStatus? get physicalConditionStatus;
   @override
-  List<String> get physicalConditions => throw _privateConstructorUsedError;
+  List<String> get physicalConditions;
   @override
-  bool get hasSex => throw _privateConstructorUsedError;
+  bool get hasSex;
   @override
-  String get memo => throw _privateConstructorUsedError;
+  String get memo;
   @override
   @JsonKey(ignore: true)
   _$DiaryCopyWith<_Diary> get copyWith => throw _privateConstructorUsedError;

@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/analytics.dart';
 import 'package:pilll/components/atoms/color.dart';
@@ -24,13 +23,13 @@ import 'package:pilll/signin/signin_sheet_state.dart';
 import 'package:pilll/util/shared_preference/keys.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-class NotificationBar extends HookWidget {
+class NotificationBar extends HookConsumerWidget {
   final RecordPageState parameter;
 
   NotificationBar(this.parameter);
   @override
-  Widget build(BuildContext context) {
-    final body = _body(context);
+  Widget build(BuildContext context, WidgetRef ref) {
+    final body = _body(context, ref);
     if (body != null) {
       return Container(
         padding: const EdgeInsets.fromLTRB(8, 0, 8, 0),
@@ -42,9 +41,9 @@ class NotificationBar extends HookWidget {
     return Container();
   }
 
-  Widget? _body(BuildContext context) {
-    final state = useProvider(notificationBarStateProvider(parameter));
-    final store = useProvider(notificationBarStoreProvider(parameter));
+  Widget? _body(BuildContext context, WidgetRef ref) {
+    final state = ref.watch(notificationBarStateProvider(parameter));
+    final store = ref.watch(notificationBarStoreProvider(parameter).notifier);
     if (!state.isPremium) {
       final premiumTrialLimit = state.premiumTrialLimit;
       if (premiumTrialLimit != null) {
@@ -58,7 +57,7 @@ class NotificationBar extends HookWidget {
               state.discountEntitlementDeadlineDate;
           if (discountEntitlementDeadlineDate != null) {
             // NOTE: watch state
-            final isOverDiscountDeadline = useProvider(
+            final isOverDiscountDeadline = ref.watch(
                 isOverDiscountDeadlineProvider(
                     discountEntitlementDeadlineDate));
             if (!isOverDiscountDeadline) {

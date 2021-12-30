@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_hooks/flutter_hooks.dart';
+import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 
-class RecommendSignupNotificationBar extends HookWidget {
+class RecommendSignupNotificationBar extends HookConsumerWidget {
   final VoidCallback onTap;
   final VoidCallback onClose;
   const RecommendSignupNotificationBar({
@@ -14,7 +14,7 @@ class RecommendSignupNotificationBar extends HookWidget {
   }) : super(key: key);
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     return Container(
       padding: EdgeInsets.only(top: 8, bottom: 8),
       child: GestureDetector(

@@ -1,5 +1,6 @@
+// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'user.dart';
 
@@ -26,7 +27,7 @@ class _$UserPrivateTearOff {
     );
   }
 
-  UserPrivate fromJson(Map<String, Object> json) {
+  UserPrivate fromJson(Map<String, Object?> json) {
     return UserPrivate.fromJson(json);
   }
 }
@@ -109,10 +110,10 @@ class __$UserPrivateCopyWithImpl<$Res> extends _$UserPrivateCopyWithImpl<$Res>
 /// @nodoc
 @JsonSerializable()
 class _$_UserPrivate extends _UserPrivate {
-  _$_UserPrivate({this.fcmToken}) : super._();
+  const _$_UserPrivate({this.fcmToken}) : super._();
 
   factory _$_UserPrivate.fromJson(Map<String, dynamic> json) =>
-      _$_$_UserPrivateFromJson(json);
+      _$$_UserPrivateFromJson(json);
 
   @override
   final String? fcmToken;
@@ -125,15 +126,14 @@ class _$_UserPrivate extends _UserPrivate {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _UserPrivate &&
-            (identical(other.fcmToken, fcmToken) ||
-                const DeepCollectionEquality()
-                    .equals(other.fcmToken, fcmToken)));
+        (other.runtimeType == runtimeType &&
+            other is _UserPrivate &&
+            const DeepCollectionEquality().equals(other.fcmToken, fcmToken));
   }
 
   @override
   int get hashCode =>
-      runtimeType.hashCode ^ const DeepCollectionEquality().hash(fcmToken);
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(fcmToken));
 
   @JsonKey(ignore: true)
   @override
@@ -142,19 +142,19 @@ class _$_UserPrivate extends _UserPrivate {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_UserPrivateToJson(this);
+    return _$$_UserPrivateToJson(this);
   }
 }
 
 abstract class _UserPrivate extends UserPrivate {
-  factory _UserPrivate({String? fcmToken}) = _$_UserPrivate;
-  _UserPrivate._() : super._();
+  const factory _UserPrivate({String? fcmToken}) = _$_UserPrivate;
+  const _UserPrivate._() : super._();
 
   factory _UserPrivate.fromJson(Map<String, dynamic> json) =
       _$_UserPrivate.fromJson;
 
   @override
-  String? get fcmToken => throw _privateConstructorUsedError;
+  String? get fcmToken;
   @override
   @JsonKey(ignore: true)
   _$UserPrivateCopyWith<_UserPrivate> get copyWith =>
@@ -204,7 +204,7 @@ class _$UserTearOff {
     );
   }
 
-  User fromJson(Map<String, Object> json) {
+  User fromJson(Map<String, Object?> json) {
     return User.fromJson(json);
   }
 }
@@ -479,7 +479,7 @@ class __$UserCopyWithImpl<$Res> extends _$UserCopyWithImpl<$Res>
 
 @JsonSerializable(explicitToJson: true)
 class _$_User extends _User {
-  _$_User(
+  const _$_User(
       {@JsonKey(name: "settings")
           this.setting,
       this.migratedFlutter = false,
@@ -499,35 +499,34 @@ class _$_User extends _User {
           this.discountEntitlementDeadlineDate})
       : super._();
 
-  factory _$_User.fromJson(Map<String, dynamic> json) =>
-      _$_$_UserFromJson(json);
+  factory _$_User.fromJson(Map<String, dynamic> json) => _$$_UserFromJson(json);
 
   @override
   @JsonKey(name: "settings")
   final Setting? setting;
-  @JsonKey(defaultValue: false)
+  @JsonKey()
   @override
   final bool migratedFlutter;
   @override
   final String? userIDWhenCreateUser;
   @override
   final String? anonymousUserID;
-  @JsonKey(defaultValue: const [])
+  @JsonKey()
   @override
   final List<String> userDocumentIDSets;
-  @JsonKey(defaultValue: const [])
+  @JsonKey()
   @override
   final List<String> anonymousUserIDSets;
-  @JsonKey(defaultValue: const [])
+  @JsonKey()
   @override
   final List<String> firebaseCurrentUserIDSets;
-  @JsonKey(defaultValue: false)
+  @JsonKey()
   @override
   final bool isPremium;
-  @JsonKey(defaultValue: false)
+  @JsonKey()
   @override
   final bool isTrial;
-  @JsonKey(defaultValue: false)
+  @JsonKey()
   @override
   final bool hasDiscountEntitlement;
   @override
@@ -554,68 +553,50 @@ class _$_User extends _User {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _User &&
-            (identical(other.setting, setting) ||
-                const DeepCollectionEquality()
-                    .equals(other.setting, setting)) &&
-            (identical(other.migratedFlutter, migratedFlutter) ||
-                const DeepCollectionEquality()
-                    .equals(other.migratedFlutter, migratedFlutter)) &&
-            (identical(other.userIDWhenCreateUser, userIDWhenCreateUser) ||
-                const DeepCollectionEquality().equals(
-                    other.userIDWhenCreateUser, userIDWhenCreateUser)) &&
-            (identical(other.anonymousUserID, anonymousUserID) ||
-                const DeepCollectionEquality()
-                    .equals(other.anonymousUserID, anonymousUserID)) &&
-            (identical(other.userDocumentIDSets, userDocumentIDSets) ||
-                const DeepCollectionEquality()
-                    .equals(other.userDocumentIDSets, userDocumentIDSets)) &&
-            (identical(other.anonymousUserIDSets, anonymousUserIDSets) ||
-                const DeepCollectionEquality()
-                    .equals(other.anonymousUserIDSets, anonymousUserIDSets)) &&
-            (identical(other.firebaseCurrentUserIDSets,
-                    firebaseCurrentUserIDSets) ||
-                const DeepCollectionEquality().equals(
-                    other.firebaseCurrentUserIDSets,
-                    firebaseCurrentUserIDSets)) &&
-            (identical(other.isPremium, isPremium) ||
-                const DeepCollectionEquality()
-                    .equals(other.isPremium, isPremium)) &&
-            (identical(other.isTrial, isTrial) ||
-                const DeepCollectionEquality()
-                    .equals(other.isTrial, isTrial)) &&
-            (identical(other.hasDiscountEntitlement, hasDiscountEntitlement) ||
-                const DeepCollectionEquality().equals(
-                    other.hasDiscountEntitlement, hasDiscountEntitlement)) &&
-            (identical(other.beginTrialDate, beginTrialDate) ||
-                const DeepCollectionEquality()
-                    .equals(other.beginTrialDate, beginTrialDate)) &&
-            (identical(other.trialDeadlineDate, trialDeadlineDate) ||
-                const DeepCollectionEquality()
-                    .equals(other.trialDeadlineDate, trialDeadlineDate)) &&
-            (identical(other.discountEntitlementDeadlineDate,
-                    discountEntitlementDeadlineDate) ||
-                const DeepCollectionEquality().equals(
-                    other.discountEntitlementDeadlineDate,
-                    discountEntitlementDeadlineDate)));
+        (other.runtimeType == runtimeType &&
+            other is _User &&
+            const DeepCollectionEquality().equals(other.setting, setting) &&
+            const DeepCollectionEquality()
+                .equals(other.migratedFlutter, migratedFlutter) &&
+            const DeepCollectionEquality()
+                .equals(other.userIDWhenCreateUser, userIDWhenCreateUser) &&
+            const DeepCollectionEquality()
+                .equals(other.anonymousUserID, anonymousUserID) &&
+            const DeepCollectionEquality()
+                .equals(other.userDocumentIDSets, userDocumentIDSets) &&
+            const DeepCollectionEquality()
+                .equals(other.anonymousUserIDSets, anonymousUserIDSets) &&
+            const DeepCollectionEquality().equals(
+                other.firebaseCurrentUserIDSets, firebaseCurrentUserIDSets) &&
+            const DeepCollectionEquality().equals(other.isPremium, isPremium) &&
+            const DeepCollectionEquality().equals(other.isTrial, isTrial) &&
+            const DeepCollectionEquality()
+                .equals(other.hasDiscountEntitlement, hasDiscountEntitlement) &&
+            const DeepCollectionEquality()
+                .equals(other.beginTrialDate, beginTrialDate) &&
+            const DeepCollectionEquality()
+                .equals(other.trialDeadlineDate, trialDeadlineDate) &&
+            const DeepCollectionEquality().equals(
+                other.discountEntitlementDeadlineDate,
+                discountEntitlementDeadlineDate));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(setting) ^
-      const DeepCollectionEquality().hash(migratedFlutter) ^
-      const DeepCollectionEquality().hash(userIDWhenCreateUser) ^
-      const DeepCollectionEquality().hash(anonymousUserID) ^
-      const DeepCollectionEquality().hash(userDocumentIDSets) ^
-      const DeepCollectionEquality().hash(anonymousUserIDSets) ^
-      const DeepCollectionEquality().hash(firebaseCurrentUserIDSets) ^
-      const DeepCollectionEquality().hash(isPremium) ^
-      const DeepCollectionEquality().hash(isTrial) ^
-      const DeepCollectionEquality().hash(hasDiscountEntitlement) ^
-      const DeepCollectionEquality().hash(beginTrialDate) ^
-      const DeepCollectionEquality().hash(trialDeadlineDate) ^
-      const DeepCollectionEquality().hash(discountEntitlementDeadlineDate);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(setting),
+      const DeepCollectionEquality().hash(migratedFlutter),
+      const DeepCollectionEquality().hash(userIDWhenCreateUser),
+      const DeepCollectionEquality().hash(anonymousUserID),
+      const DeepCollectionEquality().hash(userDocumentIDSets),
+      const DeepCollectionEquality().hash(anonymousUserIDSets),
+      const DeepCollectionEquality().hash(firebaseCurrentUserIDSets),
+      const DeepCollectionEquality().hash(isPremium),
+      const DeepCollectionEquality().hash(isTrial),
+      const DeepCollectionEquality().hash(hasDiscountEntitlement),
+      const DeepCollectionEquality().hash(beginTrialDate),
+      const DeepCollectionEquality().hash(trialDeadlineDate),
+      const DeepCollectionEquality().hash(discountEntitlementDeadlineDate));
 
   @JsonKey(ignore: true)
   @override
@@ -624,12 +605,12 @@ class _$_User extends _User {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_UserToJson(this);
+    return _$$_UserToJson(this);
   }
 }
 
 abstract class _User extends User {
-  factory _User(
+  const factory _User(
       {@JsonKey(name: "settings")
           Setting? setting,
       bool migratedFlutter,
@@ -647,48 +628,46 @@ abstract class _User extends User {
           DateTime? trialDeadlineDate,
       @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
           DateTime? discountEntitlementDeadlineDate}) = _$_User;
-  _User._() : super._();
+  const _User._() : super._();
 
   factory _User.fromJson(Map<String, dynamic> json) = _$_User.fromJson;
 
   @override
   @JsonKey(name: "settings")
-  Setting? get setting => throw _privateConstructorUsedError;
+  Setting? get setting;
   @override
-  bool get migratedFlutter => throw _privateConstructorUsedError;
+  bool get migratedFlutter;
   @override
-  String? get userIDWhenCreateUser => throw _privateConstructorUsedError;
+  String? get userIDWhenCreateUser;
   @override
-  String? get anonymousUserID => throw _privateConstructorUsedError;
+  String? get anonymousUserID;
   @override
-  List<String> get userDocumentIDSets => throw _privateConstructorUsedError;
+  List<String> get userDocumentIDSets;
   @override
-  List<String> get anonymousUserIDSets => throw _privateConstructorUsedError;
+  List<String> get anonymousUserIDSets;
   @override
-  List<String> get firebaseCurrentUserIDSets =>
-      throw _privateConstructorUsedError;
+  List<String> get firebaseCurrentUserIDSets;
   @override
-  bool get isPremium => throw _privateConstructorUsedError;
+  bool get isPremium;
   @override
-  bool get isTrial => throw _privateConstructorUsedError;
+  bool get isTrial;
   @override
-  bool get hasDiscountEntitlement => throw _privateConstructorUsedError;
-  @override
-  @JsonKey(
-      fromJson: TimestampConverter.timestampToDateTime,
-      toJson: TimestampConverter.dateTimeToTimestamp)
-  DateTime? get beginTrialDate => throw _privateConstructorUsedError;
+  bool get hasDiscountEntitlement;
   @override
   @JsonKey(
       fromJson: TimestampConverter.timestampToDateTime,
       toJson: TimestampConverter.dateTimeToTimestamp)
-  DateTime? get trialDeadlineDate => throw _privateConstructorUsedError;
+  DateTime? get beginTrialDate;
   @override
   @JsonKey(
       fromJson: TimestampConverter.timestampToDateTime,
       toJson: TimestampConverter.dateTimeToTimestamp)
-  DateTime? get discountEntitlementDeadlineDate =>
-      throw _privateConstructorUsedError;
+  DateTime? get trialDeadlineDate;
+  @override
+  @JsonKey(
+      fromJson: TimestampConverter.timestampToDateTime,
+      toJson: TimestampConverter.dateTimeToTimestamp)
+  DateTime? get discountEntitlementDeadlineDate;
   @override
   @JsonKey(ignore: true)
   _$UserCopyWith<_User> get copyWith => throw _privateConstructorUsedError;

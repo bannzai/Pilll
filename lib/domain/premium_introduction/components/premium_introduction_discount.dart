@@ -1,24 +1,23 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_hooks/flutter_hooks.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/domain/premium_introduction/util/discount_deadline.dart';
 
-class PremiumIntroductionDiscountRow extends HookWidget {
+class PremiumIntroductionDiscountRow extends HookConsumerWidget {
   final DateTime? discountEntitlementDeadlineDate;
 
   const PremiumIntroductionDiscountRow(
       {Key? key, required this.discountEntitlementDeadlineDate})
       : super(key: key);
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     final discountEntitlementDeadlineDate =
         this.discountEntitlementDeadlineDate;
     final Duration? diff;
     final String? countdown;
     if (discountEntitlementDeadlineDate != null) {
-      final _diff = useProvider(
+      final _diff = ref.watch(
           durationToDiscountPriceDeadline(discountEntitlementDeadlineDate));
       countdown = discountPriceDeadlineCountdownString(_diff);
       diff = _diff;

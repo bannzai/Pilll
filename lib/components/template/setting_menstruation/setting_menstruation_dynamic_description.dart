@@ -7,7 +7,6 @@ import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/util/toolbar/picker_toolbar.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 abstract class SettingMenstruationDynamicDescriptionConstants {
   static final List<String> durationList = [

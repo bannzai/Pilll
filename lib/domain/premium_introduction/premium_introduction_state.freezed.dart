@@ -1,5 +1,6 @@
+// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'premium_introduction_state.dart';
 
@@ -229,7 +230,7 @@ class __$PremiumIntroductionStateCopyWithImpl<$Res>
 /// @nodoc
 
 class _$_PremiumIntroductionState extends _PremiumIntroductionState {
-  _$_PremiumIntroductionState(
+  const _$_PremiumIntroductionState(
       {this.offerings,
       this.isCompletedRestore = false,
       this.isLoading = false,
@@ -243,22 +244,22 @@ class _$_PremiumIntroductionState extends _PremiumIntroductionState {
 
   @override
   final Offerings? offerings;
-  @JsonKey(defaultValue: false)
+  @JsonKey()
   @override
   final bool isCompletedRestore;
-  @JsonKey(defaultValue: false)
+  @JsonKey()
   @override
   final bool isLoading;
-  @JsonKey(defaultValue: false)
+  @JsonKey()
   @override
   final bool isPremium;
-  @JsonKey(defaultValue: false)
+  @JsonKey()
   @override
   final bool hasLoginProvider;
-  @JsonKey(defaultValue: false)
+  @JsonKey()
   @override
   final bool isTrial;
-  @JsonKey(defaultValue: false)
+  @JsonKey()
   @override
   final bool hasDiscountEntitlement;
   @override
@@ -274,50 +275,37 @@ class _$_PremiumIntroductionState extends _PremiumIntroductionState {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _PremiumIntroductionState &&
-            (identical(other.offerings, offerings) ||
-                const DeepCollectionEquality()
-                    .equals(other.offerings, offerings)) &&
-            (identical(other.isCompletedRestore, isCompletedRestore) ||
-                const DeepCollectionEquality()
-                    .equals(other.isCompletedRestore, isCompletedRestore)) &&
-            (identical(other.isLoading, isLoading) ||
-                const DeepCollectionEquality()
-                    .equals(other.isLoading, isLoading)) &&
-            (identical(other.isPremium, isPremium) ||
-                const DeepCollectionEquality()
-                    .equals(other.isPremium, isPremium)) &&
-            (identical(other.hasLoginProvider, hasLoginProvider) ||
-                const DeepCollectionEquality()
-                    .equals(other.hasLoginProvider, hasLoginProvider)) &&
-            (identical(other.isTrial, isTrial) ||
-                const DeepCollectionEquality()
-                    .equals(other.isTrial, isTrial)) &&
-            (identical(other.hasDiscountEntitlement, hasDiscountEntitlement) ||
-                const DeepCollectionEquality().equals(
-                    other.hasDiscountEntitlement, hasDiscountEntitlement)) &&
-            (identical(other.beginTrialDate, beginTrialDate) ||
-                const DeepCollectionEquality()
-                    .equals(other.beginTrialDate, beginTrialDate)) &&
-            (identical(other.discountEntitlementDeadlineDate,
-                    discountEntitlementDeadlineDate) ||
-                const DeepCollectionEquality().equals(
-                    other.discountEntitlementDeadlineDate,
-                    discountEntitlementDeadlineDate)));
+        (other.runtimeType == runtimeType &&
+            other is _PremiumIntroductionState &&
+            const DeepCollectionEquality().equals(other.offerings, offerings) &&
+            const DeepCollectionEquality()
+                .equals(other.isCompletedRestore, isCompletedRestore) &&
+            const DeepCollectionEquality().equals(other.isLoading, isLoading) &&
+            const DeepCollectionEquality().equals(other.isPremium, isPremium) &&
+            const DeepCollectionEquality()
+                .equals(other.hasLoginProvider, hasLoginProvider) &&
+            const DeepCollectionEquality().equals(other.isTrial, isTrial) &&
+            const DeepCollectionEquality()
+                .equals(other.hasDiscountEntitlement, hasDiscountEntitlement) &&
+            const DeepCollectionEquality()
+                .equals(other.beginTrialDate, beginTrialDate) &&
+            const DeepCollectionEquality().equals(
+                other.discountEntitlementDeadlineDate,
+                discountEntitlementDeadlineDate));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(offerings) ^
-      const DeepCollectionEquality().hash(isCompletedRestore) ^
-      const DeepCollectionEquality().hash(isLoading) ^
-      const DeepCollectionEquality().hash(isPremium) ^
-      const DeepCollectionEquality().hash(hasLoginProvider) ^
-      const DeepCollectionEquality().hash(isTrial) ^
-      const DeepCollectionEquality().hash(hasDiscountEntitlement) ^
-      const DeepCollectionEquality().hash(beginTrialDate) ^
-      const DeepCollectionEquality().hash(discountEntitlementDeadlineDate);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(offerings),
+      const DeepCollectionEquality().hash(isCompletedRestore),
+      const DeepCollectionEquality().hash(isLoading),
+      const DeepCollectionEquality().hash(isPremium),
+      const DeepCollectionEquality().hash(hasLoginProvider),
+      const DeepCollectionEquality().hash(isTrial),
+      const DeepCollectionEquality().hash(hasDiscountEntitlement),
+      const DeepCollectionEquality().hash(beginTrialDate),
+      const DeepCollectionEquality().hash(discountEntitlementDeadlineDate));
 
   @JsonKey(ignore: true)
   @override
@@ -327,7 +315,7 @@ class _$_PremiumIntroductionState extends _PremiumIntroductionState {
 }
 
 abstract class _PremiumIntroductionState extends PremiumIntroductionState {
-  factory _PremiumIntroductionState(
+  const factory _PremiumIntroductionState(
       {Offerings? offerings,
       bool isCompletedRestore,
       bool isLoading,
@@ -337,27 +325,26 @@ abstract class _PremiumIntroductionState extends PremiumIntroductionState {
       bool hasDiscountEntitlement,
       DateTime? beginTrialDate,
       DateTime? discountEntitlementDeadlineDate}) = _$_PremiumIntroductionState;
-  _PremiumIntroductionState._() : super._();
+  const _PremiumIntroductionState._() : super._();
 
   @override
-  Offerings? get offerings => throw _privateConstructorUsedError;
+  Offerings? get offerings;
   @override
-  bool get isCompletedRestore => throw _privateConstructorUsedError;
+  bool get isCompletedRestore;
   @override
-  bool get isLoading => throw _privateConstructorUsedError;
+  bool get isLoading;
   @override
-  bool get isPremium => throw _privateConstructorUsedError;
+  bool get isPremium;
   @override
-  bool get hasLoginProvider => throw _privateConstructorUsedError;
+  bool get hasLoginProvider;
   @override
-  bool get isTrial => throw _privateConstructorUsedError;
+  bool get isTrial;
   @override
-  bool get hasDiscountEntitlement => throw _privateConstructorUsedError;
+  bool get hasDiscountEntitlement;
   @override
-  DateTime? get beginTrialDate => throw _privateConstructorUsedError;
+  DateTime? get beginTrialDate;
   @override
-  DateTime? get discountEntitlementDeadlineDate =>
-      throw _privateConstructorUsedError;
+  DateTime? get discountEntitlementDeadlineDate;
   @override
   @JsonKey(ignore: true)
   _$PremiumIntroductionStateCopyWith<_PremiumIntroductionState> get copyWith =>

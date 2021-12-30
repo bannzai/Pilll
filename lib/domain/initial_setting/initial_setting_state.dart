@@ -7,18 +7,17 @@ import 'package:pilll/entity/setting.dart';
 part 'initial_setting_state.freezed.dart';
 
 @freezed
-abstract class InitialSettingTodayPillNumber
-    implements _$InitialSettingTodayPillNumber {
-  factory InitialSettingTodayPillNumber({
+class InitialSettingTodayPillNumber with _$InitialSettingTodayPillNumber {
+  const factory InitialSettingTodayPillNumber({
     @Default(0) int pageIndex,
     @Default(0) int pillNumberIntoPillSheet,
   }) = _InitialSettingTodayPillNumber;
 }
 
 @freezed
-abstract class InitialSettingState implements _$InitialSettingState {
-  InitialSettingState._();
-  factory InitialSettingState({
+class InitialSettingState with _$InitialSettingState {
+  const InitialSettingState._();
+  const factory InitialSettingState({
     @Default([])
         List<PillSheetType> pillSheetTypes,
     InitialSettingTodayPillNumber? todayPillNumber,

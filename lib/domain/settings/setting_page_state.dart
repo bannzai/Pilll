@@ -5,9 +5,9 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 part 'setting_page_state.freezed.dart';
 
 @freezed
-abstract class SettingState implements _$SettingState {
-  SettingState._();
-  factory SettingState({
+class SettingState with _$SettingState {
+  const SettingState._();
+  const factory SettingState({
     required Setting? setting,
     PillSheetGroup? latestPillSheetGroup,
     @Default(false) bool userIsUpdatedFrom132,

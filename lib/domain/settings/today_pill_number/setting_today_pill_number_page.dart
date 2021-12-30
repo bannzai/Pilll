@@ -1,4 +1,3 @@
-import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/components/atoms/buttons.dart';
 import 'package:pilll/components/atoms/color.dart';
@@ -13,7 +12,7 @@ import 'package:pilll/entity/setting.dart';
 import 'package:pilll/util/formatter/date_time_formatter.dart';
 import 'package:flutter/material.dart';
 
-class SettingTodayPillNumberPage extends HookWidget {
+class SettingTodayPillNumberPage extends HookConsumerWidget {
   final PillSheetGroup pillSheetGroup;
   final PillSheet activedPillSheet;
 
@@ -24,15 +23,15 @@ class SettingTodayPillNumberPage extends HookWidget {
   }) : super(key: key);
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     final parameter = SettingTodayPillNumberStoreParameter(
       appearanceMode: PillSheetAppearanceMode.number,
       pillSheetGroup: pillSheetGroup,
       activedPillSheet: activedPillSheet,
     );
-    final state =
-        useProvider(settingTodayPillNumberStoreProvider(parameter).state);
-    final store = useProvider(settingTodayPillNumberStoreProvider(parameter));
+    final state = ref.watch(settingTodayPillNumberStoreProvider(parameter));
+    final store =
+        ref.watch(settingTodayPillNumberStoreProvider(parameter).notifier);
 
     return Scaffold(
       backgroundColor: PilllColors.background,

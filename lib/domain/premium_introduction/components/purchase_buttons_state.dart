@@ -31,9 +31,9 @@ final purchaseButtonsStateProvider =
 });
 
 @freezed
-abstract class PurchaseButtonsState implements _$PurchaseButtonsState {
-  PurchaseButtonsState._();
-  factory PurchaseButtonsState({
+class PurchaseButtonsState with _$PurchaseButtonsState {
+  const PurchaseButtonsState._();
+  const factory PurchaseButtonsState({
     required Offerings offerings,
     required bool hasDiscountEntitlement,
     required bool isOverDiscountDeadline,

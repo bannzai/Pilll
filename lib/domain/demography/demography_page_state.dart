@@ -5,9 +5,9 @@ import 'package:pilll/util/datetime/day.dart';
 part 'demography_page_state.freezed.dart';
 
 @freezed
-abstract class DemographyPageState implements _$DemographyPageState {
-  DemographyPageState._();
-  factory DemographyPageState({
+class DemographyPageState with _$DemographyPageState {
+  const DemographyPageState._();
+  const factory DemographyPageState({
     String? purpose1,
     required String purpose2,
     String? prescription,

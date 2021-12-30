@@ -7,11 +7,10 @@ part 'pill_sheet_modified_history_value.g.dart';
 part 'pill_sheet_modified_history_value.freezed.dart';
 
 @freezed
-abstract class PillSheetModifiedHistoryValue
-    implements _$PillSheetModifiedHistoryValue {
-  PillSheetModifiedHistoryValue._();
+class PillSheetModifiedHistoryValue with _$PillSheetModifiedHistoryValue {
+  const PillSheetModifiedHistoryValue._();
   @JsonSerializable(explicitToJson: true)
-  factory PillSheetModifiedHistoryValue({
+  const factory PillSheetModifiedHistoryValue({
     DateTime? beginTrialDate,
     @Default(null) CreatedPillSheetValue? createdPillSheet,
     @Default(null)
@@ -28,15 +27,13 @@ abstract class PillSheetModifiedHistoryValue
 
   factory PillSheetModifiedHistoryValue.fromJson(Map<String, dynamic> json) =>
       _$PillSheetModifiedHistoryValueFromJson(json);
-  Map<String, dynamic> toJson() => _$_$_PillSheetModifiedHistoryValueToJson(
-      this as _$_PillSheetModifiedHistoryValue);
 }
 
 @freezed
-abstract class CreatedPillSheetValue implements _$CreatedPillSheetValue {
-  CreatedPillSheetValue._();
+class CreatedPillSheetValue with _$CreatedPillSheetValue {
+  const CreatedPillSheetValue._();
   @JsonSerializable(explicitToJson: true)
-  factory CreatedPillSheetValue({
+  const factory CreatedPillSheetValue({
     @JsonKey(
       fromJson: NonNullTimestampConverter.timestampToDateTime,
       toJson: NonNullTimestampConverter.dateTimeToTimestamp,
@@ -48,16 +45,14 @@ abstract class CreatedPillSheetValue implements _$CreatedPillSheetValue {
 
   factory CreatedPillSheetValue.fromJson(Map<String, dynamic> json) =>
       _$CreatedPillSheetValueFromJson(json);
-  Map<String, dynamic> toJson() =>
-      _$_$_CreatedPillSheetValueToJson(this as _$_CreatedPillSheetValue);
 }
 
 @freezed
-abstract class AutomaticallyRecordedLastTakenDateValue
-    implements _$AutomaticallyRecordedLastTakenDateValue {
-  AutomaticallyRecordedLastTakenDateValue._();
+class AutomaticallyRecordedLastTakenDateValue
+    with _$AutomaticallyRecordedLastTakenDateValue {
+  const AutomaticallyRecordedLastTakenDateValue._();
   @JsonSerializable(explicitToJson: true)
-  factory AutomaticallyRecordedLastTakenDateValue({
+  const factory AutomaticallyRecordedLastTakenDateValue({
     @JsonKey(
       fromJson: TimestampConverter.timestampToDateTime,
       toJson: TimestampConverter.dateTimeToTimestamp,
@@ -75,16 +70,13 @@ abstract class AutomaticallyRecordedLastTakenDateValue
   factory AutomaticallyRecordedLastTakenDateValue.fromJson(
           Map<String, dynamic> json) =>
       _$AutomaticallyRecordedLastTakenDateValueFromJson(json);
-  Map<String, dynamic> toJson() =>
-      _$_$_AutomaticallyRecordedLastTakenDateValueToJson(
-          this as _$_AutomaticallyRecordedLastTakenDateValue);
 }
 
 @freezed
-abstract class DeletedPillSheetValue implements _$DeletedPillSheetValue {
-  DeletedPillSheetValue._();
+class DeletedPillSheetValue with _$DeletedPillSheetValue {
+  const DeletedPillSheetValue._();
   @JsonSerializable(explicitToJson: true)
-  factory DeletedPillSheetValue({
+  const factory DeletedPillSheetValue({
     @JsonKey(
       fromJson: NonNullTimestampConverter.timestampToDateTime,
       toJson: NonNullTimestampConverter.dateTimeToTimestamp,
@@ -96,15 +88,13 @@ abstract class DeletedPillSheetValue implements _$DeletedPillSheetValue {
 
   factory DeletedPillSheetValue.fromJson(Map<String, dynamic> json) =>
       _$DeletedPillSheetValueFromJson(json);
-  Map<String, dynamic> toJson() =>
-      _$_$_DeletedPillSheetValueToJson(this as _$_DeletedPillSheetValue);
 }
 
 @freezed
-abstract class TakenPillValue implements _$TakenPillValue {
-  TakenPillValue._();
+class TakenPillValue with _$TakenPillValue {
+  const TakenPillValue._();
   @JsonSerializable(explicitToJson: true)
-  factory TakenPillValue({
+  const factory TakenPillValue({
     @JsonKey(
       fromJson: TimestampConverter.timestampToDateTime,
       toJson: TimestampConverter.dateTimeToTimestamp,
@@ -121,15 +111,13 @@ abstract class TakenPillValue implements _$TakenPillValue {
 
   factory TakenPillValue.fromJson(Map<String, dynamic> json) =>
       _$TakenPillValueFromJson(json);
-  Map<String, dynamic> toJson() =>
-      _$_$_TakenPillValueToJson(this as _$_TakenPillValue);
 }
 
 @freezed
-abstract class RevertTakenPillValue implements _$RevertTakenPillValue {
-  RevertTakenPillValue._();
+class RevertTakenPillValue with _$RevertTakenPillValue {
+  const RevertTakenPillValue._();
   @JsonSerializable(explicitToJson: true)
-  factory RevertTakenPillValue({
+  const factory RevertTakenPillValue({
     @JsonKey(
       fromJson: TimestampConverter.timestampToDateTime,
       toJson: TimestampConverter.dateTimeToTimestamp,
@@ -146,15 +134,13 @@ abstract class RevertTakenPillValue implements _$RevertTakenPillValue {
 
   factory RevertTakenPillValue.fromJson(Map<String, dynamic> json) =>
       _$RevertTakenPillValueFromJson(json);
-  Map<String, dynamic> toJson() =>
-      _$_$_RevertTakenPillValueToJson(this as _$_RevertTakenPillValue);
 }
 
 @freezed
-abstract class ChangedPillNumberValue implements _$ChangedPillNumberValue {
-  ChangedPillNumberValue._();
+class ChangedPillNumberValue with _$ChangedPillNumberValue {
+  const ChangedPillNumberValue._();
   @JsonSerializable(explicitToJson: true)
-  factory ChangedPillNumberValue({
+  const factory ChangedPillNumberValue({
     @JsonKey(
       fromJson: NonNullTimestampConverter.timestampToDateTime,
       toJson: NonNullTimestampConverter.dateTimeToTimestamp,
@@ -175,15 +161,13 @@ abstract class ChangedPillNumberValue implements _$ChangedPillNumberValue {
 
   factory ChangedPillNumberValue.fromJson(Map<String, dynamic> json) =>
       _$ChangedPillNumberValueFromJson(json);
-  Map<String, dynamic> toJson() =>
-      _$_$_ChangedPillNumberValueToJson(this as _$_ChangedPillNumberValue);
 }
 
 @freezed
-abstract class EndedPillSheetValue implements _$EndedPillSheetValue {
-  EndedPillSheetValue._();
+class EndedPillSheetValue with _$EndedPillSheetValue {
+  const EndedPillSheetValue._();
   @JsonSerializable(explicitToJson: true)
-  factory EndedPillSheetValue({
+  const factory EndedPillSheetValue({
     @JsonKey(
       fromJson: NonNullTimestampConverter.timestampToDateTime,
       toJson: NonNullTimestampConverter.dateTimeToTimestamp,
@@ -198,34 +182,28 @@ abstract class EndedPillSheetValue implements _$EndedPillSheetValue {
 
   factory EndedPillSheetValue.fromJson(Map<String, dynamic> json) =>
       _$EndedPillSheetValueFromJson(json);
-  Map<String, dynamic> toJson() =>
-      _$_$_EndedPillSheetValueToJson(this as _$_EndedPillSheetValue);
 }
 
 @freezed
-abstract class BeganRestDurationValue implements _$BeganRestDurationValue {
-  BeganRestDurationValue._();
+class BeganRestDurationValue with _$BeganRestDurationValue {
+  const BeganRestDurationValue._();
   @JsonSerializable(explicitToJson: true)
-  factory BeganRestDurationValue({
+  const factory BeganRestDurationValue({
     required RestDuration restDuration,
   }) = _BeganRestDurationValue;
 
   factory BeganRestDurationValue.fromJson(Map<String, dynamic> json) =>
       _$BeganRestDurationValueFromJson(json);
-  Map<String, dynamic> toJson() =>
-      _$_$_BeganRestDurationValueToJson(this as _$_BeganRestDurationValue);
 }
 
 @freezed
-abstract class EndedRestDurationValue implements _$EndedRestDurationValue {
-  EndedRestDurationValue._();
+class EndedRestDurationValue with _$EndedRestDurationValue {
+  const EndedRestDurationValue._();
   @JsonSerializable(explicitToJson: true)
-  factory EndedRestDurationValue({
+  const factory EndedRestDurationValue({
     required RestDuration restDuration,
   }) = _EndedRestDurationValue;
 
   factory EndedRestDurationValue.fromJson(Map<String, dynamic> json) =>
       _$EndedRestDurationValueFromJson(json);
-  Map<String, dynamic> toJson() =>
-      _$_$_EndedRestDurationValueToJson(this as _$_EndedRestDurationValue);
 }

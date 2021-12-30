@@ -7,19 +7,14 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 part 'diary.g.dart';
 part 'diary.freezed.dart';
 
-abstract class DiaryFirestoreKey {
+class DiaryFirestoreKey {
   static final String date = "date";
 }
 
-enum PhysicalConditionStatus {
-  @JsonKey(name: "Fine")
-  fine,
-  @JsonKey(name: "Bad")
-  bad
-}
+enum PhysicalConditionStatus { fine, bad }
 
 @freezed
-abstract class Diary with _$Diary {
+class Diary with _$Diary {
   static final List<String> allPhysicalConditions = [
     "頭痛",
     "腹痛",
@@ -40,7 +35,7 @@ abstract class Diary with _$Diary {
   String get id => "Diary_${DateTimeFormatter.diaryIdentifier(date)}";
 
   @JsonSerializable(explicitToJson: true)
-  factory Diary({
+  const factory Diary({
     @JsonKey(
       fromJson: NonNullTimestampConverter.timestampToDateTime,
       toJson: NonNullTimestampConverter.dateTimeToTimestamp,
@@ -57,7 +52,7 @@ abstract class Diary with _$Diary {
     required bool hasSex,
     required String memo,
   }) = _Diary;
-  Diary._();
+  const Diary._();
 
   factory Diary.fromDate(DateTime date) => Diary(
       date: date,
@@ -66,6 +61,5 @@ abstract class Diary with _$Diary {
       physicalConditions: [],
       hasSex: false);
   factory Diary.fromJson(Map<String, dynamic> json) => _$DiaryFromJson(json);
-  Map<String, dynamic> toJson() => _$_$_DiaryToJson(this as _$_Diary);
   bool get hasPhysicalConditionStatus => physicalConditionStatus != null;
 }

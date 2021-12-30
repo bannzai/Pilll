@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/analytics.dart';
@@ -29,11 +27,11 @@ abstract class MenstruationPageConst {
       WeekdayBadgeConst.height + tileHeight;
 }
 
-class MenstruationPage extends HookWidget {
+class MenstruationPage extends HookConsumerWidget {
   @override
-  Widget build(BuildContext context) {
-    final store = useProvider(menstruationsStoreProvider);
-    final state = useProvider(menstruationsStoreProvider.state);
+  Widget build(BuildContext context, WidgetRef ref) {
+    final store = ref.watch(menstruationsStoreProvider.notifier);
+    final state = ref.watch(menstruationsStoreProvider);
 
     if (state.exception != null) {
       return UniversalErrorPage(

@@ -5,17 +5,15 @@ import 'package:pilll/components/template/setting_pill_sheet_group/setting_pill_
 import 'package:pilll/components/atoms/buttons.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/text_color.dart';
-import 'package:flutter/cupertino.dart';
-import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/domain/record/record_page_store.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 
-class RecordPageAddingPillSheetGroupPage extends HookWidget {
+class RecordPageAddingPillSheetGroupPage extends HookConsumerWidget {
   @override
-  Widget build(BuildContext context) {
-    final store = useProvider(recordPageStoreProvider);
-    final state = useProvider(recordPageStoreProvider.state);
+  Widget build(BuildContext context, WidgetRef ref) {
+    final store = ref.watch(recordPageStoreProvider.notifier);
+    final state = ref.watch(recordPageStoreProvider);
     final setting = state.setting;
     if (setting == null) {
       throw FormatException("ピルシートグループの設定が読み込めませんでした");

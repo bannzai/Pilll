@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/analytics.dart';
 import 'package:pilll/components/atoms/font.dart';
@@ -13,11 +12,11 @@ import 'package:pilll/domain/record/record_page_state.dart';
 import 'package:pilll/domain/record/record_page_store.dart';
 import 'package:pilll/entity/setting.dart';
 
-class SelectAppearanceModeModal extends HookWidget {
+class SelectAppearanceModeModal extends HookConsumerWidget {
   @override
-  Widget build(BuildContext context) {
-    final store = useProvider(recordPageStoreProvider);
-    final state = useProvider(recordPageStoreProvider.state);
+  Widget build(BuildContext context, WidgetRef ref) {
+    final store = ref.watch(recordPageStoreProvider.notifier);
+    final state = ref.watch(recordPageStoreProvider);
     return Container(
       color: Colors.white,
       padding: const EdgeInsets.only(bottom: 20, top: 24, left: 16, right: 16),

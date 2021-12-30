@@ -11,7 +11,7 @@ import 'package:pilll/util/datetime/day.dart';
 part 'menstruation_state.freezed.dart';
 
 @freezed
-abstract class MenstruationState implements _$MenstruationState {
+class MenstruationState with _$MenstruationState {
   MenstruationState._();
   factory MenstruationState({
     @Default(true) bool isNotYetLoaded,

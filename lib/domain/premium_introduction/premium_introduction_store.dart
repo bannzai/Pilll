@@ -14,15 +14,16 @@ import 'package:flutter/services.dart';
 import 'package:pilll/analytics.dart';
 import 'package:riverpod/riverpod.dart';
 
-final premiumIntroductionStoreProvider = StateNotifierProvider.autoDispose(
+final premiumIntroductionStoreProvider = StateNotifierProvider.autoDispose<
+    PremiumIntroductionStore, PremiumIntroductionState>(
   (ref) => PremiumIntroductionStore(
     ref.watch(userServiceProvider),
     ref.watch(authServiceProvider),
     ref.watch(purchaseServiceProvider),
   ),
 );
-final premiumIntroductionStateProvider = Provider.autoDispose(
-    (ref) => ref.watch(premiumIntroductionStoreProvider.state));
+final premiumIntroductionStateProvider =
+    Provider.autoDispose((ref) => ref.watch(premiumIntroductionStoreProvider));
 
 class PremiumIntroductionStore extends StateNotifier<PremiumIntroductionState> {
   final UserService _userService;

@@ -61,8 +61,8 @@ class RootState extends State<Root> {
     return UniversalErrorPage(
       error: _error,
       reload: () => reload(),
-      child: Consumer(builder: (context, watch, child) {
-        return watch(authStateStreamProvider).when(data: (snapshot) {
+      child: Consumer(builder: (context, ref, child) {
+        return ref.watch(authStateStreamProvider).when(data: (snapshot) {
           switch (screenType) {
             case ScreenType.home:
               return HomePage(key: homeKey);
@@ -98,7 +98,7 @@ class RootState extends State<Root> {
     final user = await callSignin();
     if (user != null) {
       unawaited(FirebaseCrashlytics.instance.setUserIdentifier(user.uid));
-      unawaited(firebaseAnalytics.setUserId(user.uid));
+      unawaited(firebaseAnalytics.setUserId(id: user.uid));
       unawaited(initializePurchase(user.uid));
     }
     // ignore: unawaited_futures

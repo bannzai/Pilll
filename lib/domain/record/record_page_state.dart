@@ -5,9 +5,9 @@ import 'package:pilll/entity/setting.dart';
 part 'record_page_state.freezed.dart';
 
 @freezed
-abstract class RecordPageState implements _$RecordPageState {
-  RecordPageState._();
-  factory RecordPageState({
+class RecordPageState with _$RecordPageState {
+  const RecordPageState._();
+  const factory RecordPageState({
     PillSheetGroup? pillSheetGroup,
     Setting? setting,
     @Default(0) int totalCountOfActionForTakenPill,

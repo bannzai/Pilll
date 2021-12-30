@@ -1,5 +1,6 @@
+// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'pill_sheet_modified_history.dart';
 
@@ -51,7 +52,7 @@ class _$PillSheetModifiedHistoryTearOff {
     );
   }
 
-  PillSheetModifiedHistory fromJson(Map<String, Object> json) {
+  PillSheetModifiedHistory fromJson(Map<String, Object?> json) {
     return PillSheetModifiedHistory.fromJson(json);
   }
 }
@@ -328,7 +329,7 @@ class __$PillSheetModifiedHistoryCopyWithImpl<$Res>
 
 @JsonSerializable(explicitToJson: true)
 class _$_PillSheetModifiedHistory extends _PillSheetModifiedHistory {
-  _$_PillSheetModifiedHistory(
+  const _$_PillSheetModifiedHistory(
       {@JsonKey(includeIfNull: false, toJson: toNull)
           required this.id,
       required this.actionType,
@@ -346,7 +347,7 @@ class _$_PillSheetModifiedHistory extends _PillSheetModifiedHistory {
       : super._();
 
   factory _$_PillSheetModifiedHistory.fromJson(Map<String, dynamic> json) =>
-      _$_$_PillSheetModifiedHistoryFromJson(json);
+      _$$_PillSheetModifiedHistoryFromJson(json);
 
   @override
   @JsonKey(includeIfNull: false, toJson: toNull)
@@ -388,54 +389,41 @@ class _$_PillSheetModifiedHistory extends _PillSheetModifiedHistory {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _PillSheetModifiedHistory &&
-            (identical(other.id, id) ||
-                const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.actionType, actionType) ||
-                const DeepCollectionEquality()
-                    .equals(other.actionType, actionType)) &&
-            (identical(other.value, value) ||
-                const DeepCollectionEquality().equals(other.value, value)) &&
-            (identical(other.pillSheetID, pillSheetID) ||
-                const DeepCollectionEquality()
-                    .equals(other.pillSheetID, pillSheetID)) &&
-            (identical(other.pillSheetGroupID, pillSheetGroupID) ||
-                const DeepCollectionEquality()
-                    .equals(other.pillSheetGroupID, pillSheetGroupID)) &&
-            (identical(other.beforePillSheetID, beforePillSheetID) ||
-                const DeepCollectionEquality()
-                    .equals(other.beforePillSheetID, beforePillSheetID)) &&
-            (identical(other.afterPillSheetID, afterPillSheetID) ||
-                const DeepCollectionEquality()
-                    .equals(other.afterPillSheetID, afterPillSheetID)) &&
-            (identical(other.before, before) ||
-                const DeepCollectionEquality().equals(other.before, before)) &&
-            (identical(other.after, after) ||
-                const DeepCollectionEquality().equals(other.after, after)) &&
-            (identical(other.estimatedEventCausingDate,
-                    estimatedEventCausingDate) ||
-                const DeepCollectionEquality().equals(
-                    other.estimatedEventCausingDate,
-                    estimatedEventCausingDate)) &&
-            (identical(other.createdAt, createdAt) ||
-                const DeepCollectionEquality()
-                    .equals(other.createdAt, createdAt)));
+        (other.runtimeType == runtimeType &&
+            other is _PillSheetModifiedHistory &&
+            const DeepCollectionEquality().equals(other.id, id) &&
+            const DeepCollectionEquality()
+                .equals(other.actionType, actionType) &&
+            const DeepCollectionEquality().equals(other.value, value) &&
+            const DeepCollectionEquality()
+                .equals(other.pillSheetID, pillSheetID) &&
+            const DeepCollectionEquality()
+                .equals(other.pillSheetGroupID, pillSheetGroupID) &&
+            const DeepCollectionEquality()
+                .equals(other.beforePillSheetID, beforePillSheetID) &&
+            const DeepCollectionEquality()
+                .equals(other.afterPillSheetID, afterPillSheetID) &&
+            const DeepCollectionEquality().equals(other.before, before) &&
+            const DeepCollectionEquality().equals(other.after, after) &&
+            const DeepCollectionEquality().equals(
+                other.estimatedEventCausingDate, estimatedEventCausingDate) &&
+            const DeepCollectionEquality().equals(other.createdAt, createdAt));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(actionType) ^
-      const DeepCollectionEquality().hash(value) ^
-      const DeepCollectionEquality().hash(pillSheetID) ^
-      const DeepCollectionEquality().hash(pillSheetGroupID) ^
-      const DeepCollectionEquality().hash(beforePillSheetID) ^
-      const DeepCollectionEquality().hash(afterPillSheetID) ^
-      const DeepCollectionEquality().hash(before) ^
-      const DeepCollectionEquality().hash(after) ^
-      const DeepCollectionEquality().hash(estimatedEventCausingDate) ^
-      const DeepCollectionEquality().hash(createdAt);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(id),
+      const DeepCollectionEquality().hash(actionType),
+      const DeepCollectionEquality().hash(value),
+      const DeepCollectionEquality().hash(pillSheetID),
+      const DeepCollectionEquality().hash(pillSheetGroupID),
+      const DeepCollectionEquality().hash(beforePillSheetID),
+      const DeepCollectionEquality().hash(afterPillSheetID),
+      const DeepCollectionEquality().hash(before),
+      const DeepCollectionEquality().hash(after),
+      const DeepCollectionEquality().hash(estimatedEventCausingDate),
+      const DeepCollectionEquality().hash(createdAt));
 
   @JsonKey(ignore: true)
   @override
@@ -445,12 +433,12 @@ class _$_PillSheetModifiedHistory extends _PillSheetModifiedHistory {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_PillSheetModifiedHistoryToJson(this);
+    return _$$_PillSheetModifiedHistoryToJson(this);
   }
 }
 
 abstract class _PillSheetModifiedHistory extends PillSheetModifiedHistory {
-  factory _PillSheetModifiedHistory(
+  const factory _PillSheetModifiedHistory(
       {@JsonKey(includeIfNull: false, toJson: toNull)
           required String? id,
       required String actionType,
@@ -465,42 +453,42 @@ abstract class _PillSheetModifiedHistory extends PillSheetModifiedHistory {
           required DateTime estimatedEventCausingDate,
       @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
           required DateTime createdAt}) = _$_PillSheetModifiedHistory;
-  _PillSheetModifiedHistory._() : super._();
+  const _PillSheetModifiedHistory._() : super._();
 
   factory _PillSheetModifiedHistory.fromJson(Map<String, dynamic> json) =
       _$_PillSheetModifiedHistory.fromJson;
 
   @override
   @JsonKey(includeIfNull: false, toJson: toNull)
-  String? get id => throw _privateConstructorUsedError;
+  String? get id;
   @override
-  String get actionType => throw _privateConstructorUsedError;
+  String get actionType;
   @override
-  PillSheetModifiedHistoryValue get value => throw _privateConstructorUsedError;
+  PillSheetModifiedHistoryValue get value;
   @override // This is deprecated property.
 // Instead of beforePillSheetID and afterPillSheetID
-  String? get pillSheetID => throw _privateConstructorUsedError;
+  String? get pillSheetID;
   @override // There are new properties for pill_sheet grouping. So it's all optional
-  String? get pillSheetGroupID => throw _privateConstructorUsedError;
+  String? get pillSheetGroupID;
   @override
-  String? get beforePillSheetID => throw _privateConstructorUsedError;
+  String? get beforePillSheetID;
   @override
-  String? get afterPillSheetID => throw _privateConstructorUsedError;
+  String? get afterPillSheetID;
   @override // before and after is non required
 // Because, actions for createdPillSheet and deletedPillSheet are not exists target single pill sheet
-  PillSheet? get before => throw _privateConstructorUsedError;
+  PillSheet? get before;
   @override
-  PillSheet? get after => throw _privateConstructorUsedError;
-  @override
-  @JsonKey(
-      fromJson: NonNullTimestampConverter.timestampToDateTime,
-      toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-  DateTime get estimatedEventCausingDate => throw _privateConstructorUsedError;
+  PillSheet? get after;
   @override
   @JsonKey(
       fromJson: NonNullTimestampConverter.timestampToDateTime,
       toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-  DateTime get createdAt => throw _privateConstructorUsedError;
+  DateTime get estimatedEventCausingDate;
+  @override
+  @JsonKey(
+      fromJson: NonNullTimestampConverter.timestampToDateTime,
+      toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+  DateTime get createdAt;
   @override
   @JsonKey(ignore: true)
   _$PillSheetModifiedHistoryCopyWith<_PillSheetModifiedHistory> get copyWith =>

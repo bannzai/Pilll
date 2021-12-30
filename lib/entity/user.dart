@@ -6,13 +6,13 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 part 'user.g.dart';
 part 'user.freezed.dart';
 
-class UserNotFound implements Exception {
+class UserNotFound with Exception {
   toString() {
     return "user not found";
   }
 }
 
-class UserAlreadyExists implements Exception {
+class UserAlreadyExists with Exception {
   toString() {
     return "user already exists";
   }
@@ -33,9 +33,9 @@ extension UserPrivateFirestoreFieldKeys on String {
 }
 
 @freezed
-abstract class UserPrivate implements _$UserPrivate {
-  UserPrivate._();
-  factory UserPrivate({String? fcmToken}) = _UserPrivate;
+class UserPrivate with _$UserPrivate {
+  const UserPrivate._();
+  const factory UserPrivate({String? fcmToken}) = _UserPrivate;
   factory UserPrivate.create({required String fcmToken}) =>
       UserPrivate(fcmToken: fcmToken);
 
@@ -64,10 +64,10 @@ extension UserFirestoreFieldKeys on String {
 }
 
 @freezed
-abstract class User implements _$User {
-  User._();
+class User with _$User {
+  const User._();
   @JsonSerializable(explicitToJson: true)
-  factory User({
+  const factory User({
     @JsonKey(name: "settings")
         Setting? setting,
     @Default(false)

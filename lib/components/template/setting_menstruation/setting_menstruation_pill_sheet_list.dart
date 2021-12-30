@@ -1,12 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
+import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/components/molecules/dots_page_indicator.dart';
 import 'package:pilll/components/organisms/pill_sheet/pill_sheet_view_layout.dart';
 import 'package:pilll/components/organisms/pill_sheet/setting_pill_sheet_view.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/entity/setting.dart';
 
-class SettingMenstruationPillSheetList extends HookWidget {
+class SettingMenstruationPillSheetList extends HookConsumerWidget {
   final List<PillSheetType> pillSheetTypes;
   final int? Function(int pageIndex) selectedPillNumber;
   final PillSheetAppearanceMode appearanceMode;
@@ -20,7 +21,7 @@ class SettingMenstruationPillSheetList extends HookWidget {
   });
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     final pageController = usePageController(
         viewportFraction: (PillSheetViewLayout.width + 20) /
             MediaQuery.of(context).size.width);

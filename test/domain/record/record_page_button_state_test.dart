@@ -8,7 +8,6 @@ import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/util/datetime/day.dart';
 import 'package:pilll/util/environment.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_test/flutter_test.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:intl/date_symbol_data_local.dart';
@@ -40,8 +39,8 @@ void main() {
       await tester.pumpWidget(
         ProviderScope(
           overrides: [
-            recordPageStoreProvider
-                .overrideWithProvider(Provider((ref) => MockRecordPageStore())),
+            recordPageStoreProvider.overrideWithProvider(
+                StateNotifierProvider((ref) => MockRecordPageStore())),
           ],
           child: MaterialApp(
             home: RecordPageButton(
@@ -65,8 +64,8 @@ void main() {
     await tester.pumpWidget(
       ProviderScope(
         overrides: [
-          recordPageStoreProvider
-              .overrideWithProvider(Provider((ref) => MockRecordPageStore())),
+          recordPageStoreProvider.overrideWithProvider(
+              StateNotifierProvider((ref) => MockRecordPageStore())),
         ],
         child: MaterialApp(
           home: RecordPageButton(

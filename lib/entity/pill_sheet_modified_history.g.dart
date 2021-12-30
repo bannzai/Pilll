@@ -6,31 +6,30 @@ part of 'pill_sheet_modified_history.dart';
 // JsonSerializableGenerator
 // **************************************************************************
 
-_$_PillSheetModifiedHistory _$_$_PillSheetModifiedHistoryFromJson(
-    Map<String, dynamic> json) {
-  return _$_PillSheetModifiedHistory(
-    id: json['id'] as String?,
-    actionType: json['actionType'] as String,
-    value: PillSheetModifiedHistoryValue.fromJson(
-        json['value'] as Map<String, dynamic>),
-    pillSheetID: json['pillSheetID'] as String?,
-    pillSheetGroupID: json['pillSheetGroupID'] as String?,
-    beforePillSheetID: json['beforePillSheetID'] as String?,
-    afterPillSheetID: json['afterPillSheetID'] as String?,
-    before: json['before'] == null
-        ? null
-        : PillSheet.fromJson(json['before'] as Map<String, dynamic>),
-    after: json['after'] == null
-        ? null
-        : PillSheet.fromJson(json['after'] as Map<String, dynamic>),
-    estimatedEventCausingDate: NonNullTimestampConverter.timestampToDateTime(
-        json['estimatedEventCausingDate'] as Timestamp),
-    createdAt: NonNullTimestampConverter.timestampToDateTime(
-        json['createdAt'] as Timestamp),
-  );
-}
+_$_PillSheetModifiedHistory _$$_PillSheetModifiedHistoryFromJson(
+        Map<String, dynamic> json) =>
+    _$_PillSheetModifiedHistory(
+      id: json['id'] as String?,
+      actionType: json['actionType'] as String,
+      value: PillSheetModifiedHistoryValue.fromJson(
+          json['value'] as Map<String, dynamic>),
+      pillSheetID: json['pillSheetID'] as String?,
+      pillSheetGroupID: json['pillSheetGroupID'] as String?,
+      beforePillSheetID: json['beforePillSheetID'] as String?,
+      afterPillSheetID: json['afterPillSheetID'] as String?,
+      before: json['before'] == null
+          ? null
+          : PillSheet.fromJson(json['before'] as Map<String, dynamic>),
+      after: json['after'] == null
+          ? null
+          : PillSheet.fromJson(json['after'] as Map<String, dynamic>),
+      estimatedEventCausingDate: NonNullTimestampConverter.timestampToDateTime(
+          json['estimatedEventCausingDate'] as Timestamp),
+      createdAt: NonNullTimestampConverter.timestampToDateTime(
+          json['createdAt'] as Timestamp),
+    );
 
-Map<String, dynamic> _$_$_PillSheetModifiedHistoryToJson(
+Map<String, dynamic> _$$_PillSheetModifiedHistoryToJson(
     _$_PillSheetModifiedHistory instance) {
   final val = <String, dynamic>{};
 

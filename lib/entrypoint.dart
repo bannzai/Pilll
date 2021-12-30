@@ -1,6 +1,7 @@
 import 'dart:async';
 import 'dart:io';
 
+import 'package:firebase_analytics/firebase_analytics.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/services.dart';
 import 'package:pilll/analytics.dart';
@@ -12,7 +13,6 @@ import 'package:pilll/global_method_channel.dart';
 import 'package:pilll/service/purchase.dart';
 import 'package:pilll/util/environment.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:firebase_analytics/observer.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_crashlytics/firebase_crashlytics.dart';
 import 'package:flutter/material.dart';
@@ -64,7 +64,7 @@ class App extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       navigatorObservers: [
-        FirebaseAnalyticsObserver(analytics: firebaseAnalytics),
+        FirebaseAnalyticsObserver(analytics: firebaseAnalytics)
       ],
       theme: ThemeData(
         appBarTheme: AppBarTheme(

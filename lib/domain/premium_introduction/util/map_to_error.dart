@@ -93,5 +93,14 @@ Exception? mapToDisplayedException(PlatformException exception) {
       // See more details: https://docs.revenuecat.com/docs/errors#-invalid_subscriber_attributes
       return FormatException(
           "購入に失敗しました。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: ${exception.message}:${exception.details}");
+    case PurchasesErrorCode.logOutWithAnonymousUserError:
+      return FormatException(
+          "ユーザー情報を取得失敗しました。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: ${exception.message}:${exception.details}");
+    case PurchasesErrorCode.configurationError:
+      return FormatException(
+          "購入情報取得に失敗しました。時間をおいて再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: ${exception.message}:${exception.details}");
+    case PurchasesErrorCode.unsupportedError:
+      return FormatException(
+          "原因不明のエラーです。最新版にアップデートして再度お試しください。解決しない場合は 設定 > 問い合わせ よりお問い合わせください。詳細: ${exception.message}:${exception.details}");
   }
 }

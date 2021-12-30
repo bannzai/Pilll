@@ -1,5 +1,6 @@
+// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'setting_today_pill_number_state.dart';
 
@@ -143,16 +144,16 @@ class __$SettingTodayPillNumberStateCopyWithImpl<$Res>
 /// @nodoc
 
 class _$_SettingTodayPillNumberState extends _SettingTodayPillNumberState {
-  _$_SettingTodayPillNumberState(
+  const _$_SettingTodayPillNumberState(
       {this.selectedPillSheetPageIndex = 0,
       this.selectedPillMarkNumberIntoPillSheet = 0,
       required this.appearanceMode})
       : super._();
 
-  @JsonKey(defaultValue: 0)
+  @JsonKey()
   @override
   final int selectedPillSheetPageIndex;
-  @JsonKey(defaultValue: 0)
+  @JsonKey()
   @override
   final int selectedPillMarkNumberIntoPillSheet;
   @override
@@ -166,28 +167,23 @@ class _$_SettingTodayPillNumberState extends _SettingTodayPillNumberState {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _SettingTodayPillNumberState &&
-            (identical(other.selectedPillSheetPageIndex,
-                    selectedPillSheetPageIndex) ||
-                const DeepCollectionEquality().equals(
-                    other.selectedPillSheetPageIndex,
-                    selectedPillSheetPageIndex)) &&
-            (identical(other.selectedPillMarkNumberIntoPillSheet,
-                    selectedPillMarkNumberIntoPillSheet) ||
-                const DeepCollectionEquality().equals(
-                    other.selectedPillMarkNumberIntoPillSheet,
-                    selectedPillMarkNumberIntoPillSheet)) &&
-            (identical(other.appearanceMode, appearanceMode) ||
-                const DeepCollectionEquality()
-                    .equals(other.appearanceMode, appearanceMode)));
+        (other.runtimeType == runtimeType &&
+            other is _SettingTodayPillNumberState &&
+            const DeepCollectionEquality().equals(
+                other.selectedPillSheetPageIndex, selectedPillSheetPageIndex) &&
+            const DeepCollectionEquality().equals(
+                other.selectedPillMarkNumberIntoPillSheet,
+                selectedPillMarkNumberIntoPillSheet) &&
+            const DeepCollectionEquality()
+                .equals(other.appearanceMode, appearanceMode));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(selectedPillSheetPageIndex) ^
-      const DeepCollectionEquality().hash(selectedPillMarkNumberIntoPillSheet) ^
-      const DeepCollectionEquality().hash(appearanceMode);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(selectedPillSheetPageIndex),
+      const DeepCollectionEquality().hash(selectedPillMarkNumberIntoPillSheet),
+      const DeepCollectionEquality().hash(appearanceMode));
 
   @JsonKey(ignore: true)
   @override
@@ -198,21 +194,19 @@ class _$_SettingTodayPillNumberState extends _SettingTodayPillNumberState {
 
 abstract class _SettingTodayPillNumberState
     extends SettingTodayPillNumberState {
-  factory _SettingTodayPillNumberState(
+  const factory _SettingTodayPillNumberState(
           {int selectedPillSheetPageIndex,
           int selectedPillMarkNumberIntoPillSheet,
           required PillSheetAppearanceMode appearanceMode}) =
       _$_SettingTodayPillNumberState;
-  _SettingTodayPillNumberState._() : super._();
+  const _SettingTodayPillNumberState._() : super._();
 
   @override
-  int get selectedPillSheetPageIndex => throw _privateConstructorUsedError;
+  int get selectedPillSheetPageIndex;
   @override
-  int get selectedPillMarkNumberIntoPillSheet =>
-      throw _privateConstructorUsedError;
+  int get selectedPillMarkNumberIntoPillSheet;
   @override
-  PillSheetAppearanceMode get appearanceMode =>
-      throw _privateConstructorUsedError;
+  PillSheetAppearanceMode get appearanceMode;
   @override
   @JsonKey(ignore: true)
   _$SettingTodayPillNumberStateCopyWith<_SettingTodayPillNumberState>

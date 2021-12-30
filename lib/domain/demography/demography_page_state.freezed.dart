@@ -1,5 +1,6 @@
+// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'demography_page_state.dart';
 
@@ -165,7 +166,7 @@ class __$DemographyPageStateCopyWithImpl<$Res>
 /// @nodoc
 
 class _$_DemographyPageState extends _DemographyPageState {
-  _$_DemographyPageState(
+  const _$_DemographyPageState(
       {this.purpose1,
       required this.purpose2,
       this.prescription,
@@ -192,32 +193,24 @@ class _$_DemographyPageState extends _DemographyPageState {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _DemographyPageState &&
-            (identical(other.purpose1, purpose1) ||
-                const DeepCollectionEquality()
-                    .equals(other.purpose1, purpose1)) &&
-            (identical(other.purpose2, purpose2) ||
-                const DeepCollectionEquality()
-                    .equals(other.purpose2, purpose2)) &&
-            (identical(other.prescription, prescription) ||
-                const DeepCollectionEquality()
-                    .equals(other.prescription, prescription)) &&
-            (identical(other.birthYear, birthYear) ||
-                const DeepCollectionEquality()
-                    .equals(other.birthYear, birthYear)) &&
-            (identical(other.lifeTime, lifeTime) ||
-                const DeepCollectionEquality()
-                    .equals(other.lifeTime, lifeTime)));
+        (other.runtimeType == runtimeType &&
+            other is _DemographyPageState &&
+            const DeepCollectionEquality().equals(other.purpose1, purpose1) &&
+            const DeepCollectionEquality().equals(other.purpose2, purpose2) &&
+            const DeepCollectionEquality()
+                .equals(other.prescription, prescription) &&
+            const DeepCollectionEquality().equals(other.birthYear, birthYear) &&
+            const DeepCollectionEquality().equals(other.lifeTime, lifeTime));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(purpose1) ^
-      const DeepCollectionEquality().hash(purpose2) ^
-      const DeepCollectionEquality().hash(prescription) ^
-      const DeepCollectionEquality().hash(birthYear) ^
-      const DeepCollectionEquality().hash(lifeTime);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(purpose1),
+      const DeepCollectionEquality().hash(purpose2),
+      const DeepCollectionEquality().hash(prescription),
+      const DeepCollectionEquality().hash(birthYear),
+      const DeepCollectionEquality().hash(lifeTime));
 
   @JsonKey(ignore: true)
   @override
@@ -227,24 +220,24 @@ class _$_DemographyPageState extends _DemographyPageState {
 }
 
 abstract class _DemographyPageState extends DemographyPageState {
-  factory _DemographyPageState(
+  const factory _DemographyPageState(
       {String? purpose1,
       required String purpose2,
       String? prescription,
       String? birthYear,
       String? lifeTime}) = _$_DemographyPageState;
-  _DemographyPageState._() : super._();
+  const _DemographyPageState._() : super._();
 
   @override
-  String? get purpose1 => throw _privateConstructorUsedError;
+  String? get purpose1;
   @override
-  String get purpose2 => throw _privateConstructorUsedError;
+  String get purpose2;
   @override
-  String? get prescription => throw _privateConstructorUsedError;
+  String? get prescription;
   @override
-  String? get birthYear => throw _privateConstructorUsedError;
+  String? get birthYear;
   @override
-  String? get lifeTime => throw _privateConstructorUsedError;
+  String? get lifeTime;
   @override
   @JsonKey(ignore: true)
   _$DemographyPageStateCopyWith<_DemographyPageState> get copyWith =>

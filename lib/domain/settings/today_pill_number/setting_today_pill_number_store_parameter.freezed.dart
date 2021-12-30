@@ -1,5 +1,6 @@
+// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'setting_today_pill_number_store_parameter.dart';
 
@@ -165,7 +166,7 @@ class __$SettingTodayPillNumberStoreParameterCopyWithImpl<$Res>
 
 class _$_SettingTodayPillNumberStoreParameter
     implements _SettingTodayPillNumberStoreParameter {
-  _$_SettingTodayPillNumberStoreParameter(
+  const _$_SettingTodayPillNumberStoreParameter(
       {required this.pillSheetGroup,
       required this.appearanceMode,
       required this.activedPillSheet});
@@ -185,24 +186,22 @@ class _$_SettingTodayPillNumberStoreParameter
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _SettingTodayPillNumberStoreParameter &&
-            (identical(other.pillSheetGroup, pillSheetGroup) ||
-                const DeepCollectionEquality()
-                    .equals(other.pillSheetGroup, pillSheetGroup)) &&
-            (identical(other.appearanceMode, appearanceMode) ||
-                const DeepCollectionEquality()
-                    .equals(other.appearanceMode, appearanceMode)) &&
-            (identical(other.activedPillSheet, activedPillSheet) ||
-                const DeepCollectionEquality()
-                    .equals(other.activedPillSheet, activedPillSheet)));
+        (other.runtimeType == runtimeType &&
+            other is _SettingTodayPillNumberStoreParameter &&
+            const DeepCollectionEquality()
+                .equals(other.pillSheetGroup, pillSheetGroup) &&
+            const DeepCollectionEquality()
+                .equals(other.appearanceMode, appearanceMode) &&
+            const DeepCollectionEquality()
+                .equals(other.activedPillSheet, activedPillSheet));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(pillSheetGroup) ^
-      const DeepCollectionEquality().hash(appearanceMode) ^
-      const DeepCollectionEquality().hash(activedPillSheet);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(pillSheetGroup),
+      const DeepCollectionEquality().hash(appearanceMode),
+      const DeepCollectionEquality().hash(activedPillSheet));
 
   @JsonKey(ignore: true)
   @override
@@ -214,19 +213,18 @@ class _$_SettingTodayPillNumberStoreParameter
 
 abstract class _SettingTodayPillNumberStoreParameter
     implements SettingTodayPillNumberStoreParameter {
-  factory _SettingTodayPillNumberStoreParameter(
+  const factory _SettingTodayPillNumberStoreParameter(
           {required PillSheetGroup pillSheetGroup,
           required PillSheetAppearanceMode appearanceMode,
           required PillSheet activedPillSheet}) =
       _$_SettingTodayPillNumberStoreParameter;
 
   @override
-  PillSheetGroup get pillSheetGroup => throw _privateConstructorUsedError;
+  PillSheetGroup get pillSheetGroup;
   @override
-  PillSheetAppearanceMode get appearanceMode =>
-      throw _privateConstructorUsedError;
+  PillSheetAppearanceMode get appearanceMode;
   @override
-  PillSheet get activedPillSheet => throw _privateConstructorUsedError;
+  PillSheet get activedPillSheet;
   @override
   @JsonKey(ignore: true)
   _$SettingTodayPillNumberStoreParameterCopyWith<

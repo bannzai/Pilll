@@ -10,9 +10,7 @@ import 'package:pilll/domain/initial_setting/initial_setting_store.dart';
 import 'package:pilll/components/atoms/buttons.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/text_color.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/router/router.dart';
 import 'package:pilll/signin/signin_sheet.dart';
@@ -20,11 +18,11 @@ import 'package:pilll/signin/signin_sheet_state.dart';
 import 'package:pilll/entity/link_account_type.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 
-class InitialSettingPillSheetGroupPage extends HookWidget {
+class InitialSettingPillSheetGroupPage extends HookConsumerWidget {
   @override
-  Widget build(BuildContext context) {
-    final store = useProvider(initialSettingStoreProvider);
-    final state = useProvider(initialSettingStoreProvider.state);
+  Widget build(BuildContext context, WidgetRef ref) {
+    final store = ref.watch(initialSettingStoreProvider.notifier);
+    final state = ref.watch(initialSettingStoreProvider);
     if (state.isAccountCooperationDidEnd) {
       Future(() async {
         if (await store.canEndInitialSetting()) {

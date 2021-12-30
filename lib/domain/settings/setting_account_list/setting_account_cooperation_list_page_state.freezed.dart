@@ -1,5 +1,6 @@
+// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'setting_account_cooperation_list_page_state.dart';
 
@@ -128,13 +129,13 @@ class __$SettingAccountCooperationListStateCopyWithImpl<$Res>
 
 class _$_SettingAccountCooperationListState
     extends _SettingAccountCooperationListState {
-  _$_SettingAccountCooperationListState(
+  const _$_SettingAccountCooperationListState(
       {required this.user, this.isLoading = false, this.exception})
       : super._();
 
   @override
   final User? user;
-  @JsonKey(defaultValue: false)
+  @JsonKey()
   @override
   final bool isLoading;
   @override
@@ -148,23 +149,19 @@ class _$_SettingAccountCooperationListState
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _SettingAccountCooperationListState &&
-            (identical(other.user, user) ||
-                const DeepCollectionEquality().equals(other.user, user)) &&
-            (identical(other.isLoading, isLoading) ||
-                const DeepCollectionEquality()
-                    .equals(other.isLoading, isLoading)) &&
-            (identical(other.exception, exception) ||
-                const DeepCollectionEquality()
-                    .equals(other.exception, exception)));
+        (other.runtimeType == runtimeType &&
+            other is _SettingAccountCooperationListState &&
+            const DeepCollectionEquality().equals(other.user, user) &&
+            const DeepCollectionEquality().equals(other.isLoading, isLoading) &&
+            const DeepCollectionEquality().equals(other.exception, exception));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(user) ^
-      const DeepCollectionEquality().hash(isLoading) ^
-      const DeepCollectionEquality().hash(exception);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(user),
+      const DeepCollectionEquality().hash(isLoading),
+      const DeepCollectionEquality().hash(exception));
 
   @JsonKey(ignore: true)
   @override
@@ -176,18 +173,18 @@ class _$_SettingAccountCooperationListState
 
 abstract class _SettingAccountCooperationListState
     extends SettingAccountCooperationListState {
-  factory _SettingAccountCooperationListState(
+  const factory _SettingAccountCooperationListState(
       {required User? user,
       bool isLoading,
       Object? exception}) = _$_SettingAccountCooperationListState;
-  _SettingAccountCooperationListState._() : super._();
+  const _SettingAccountCooperationListState._() : super._();
 
   @override
-  User? get user => throw _privateConstructorUsedError;
+  User? get user;
   @override
-  bool get isLoading => throw _privateConstructorUsedError;
+  bool get isLoading;
   @override
-  Object? get exception => throw _privateConstructorUsedError;
+  Object? get exception;
   @override
   @JsonKey(ignore: true)
   _$SettingAccountCooperationListStateCopyWith<

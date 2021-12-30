@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/analytics.dart';
 import 'package:pilll/components/atoms/color.dart';
@@ -11,7 +10,7 @@ import 'package:pilll/domain/premium_trial/premium_trial_modal.dart';
 import 'package:pilll/domain/settings/setting_page_store.dart';
 import 'package:pilll/entity/setting.dart';
 
-class CreatingNewPillSheetRow extends HookWidget {
+class CreatingNewPillSheetRow extends HookConsumerWidget {
   final Setting setting;
   final bool isTrial;
   final bool isPremium;
@@ -26,8 +25,8 @@ class CreatingNewPillSheetRow extends HookWidget {
   }) : super(key: key);
 
   @override
-  Widget build(BuildContext context) {
-    final store = useProvider(settingStoreProvider);
+  Widget build(BuildContext context, WidgetRef ref) {
+    final store = ref.watch(settingStoreProvider.notifier);
     return SwitchListTile(
       title: Row(
         children: [

@@ -1,5 +1,5 @@
-import 'package:flutter/cupertino.dart';
 import 'package:pilll/components/molecules/indicator.dart';
+import 'package:pilll/domain/settings/setting_page_state.dart';
 import 'package:pilll/entity/setting.dart';
 import 'package:pilll/domain/settings/setting_page_store.dart';
 import 'package:pilll/components/atoms/color.dart';
@@ -8,15 +8,14 @@ import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/util/formatter/date_time_formatter.dart';
 import 'package:pilll/util/toolbar/time_picker.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_hooks/flutter_hooks.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:flutter_svg/svg.dart';
 
-class ReminderTimesPage extends HookWidget {
+class ReminderTimesPage extends HookConsumerWidget {
   @override
-  Widget build(BuildContext context) {
-    final store = useProvider(settingStoreProvider);
-    final state = useProvider(settingStoreProvider.state);
+  Widget build(BuildContext context, WidgetRef ref) {
+    final store = ref.watch(settingStoreProvider.notifier);
+    final state = ref.watch(settingStoreProvider);
     final setting = state.setting;
     if (setting == null) {
       return Indicator();
@@ -41,7 +40,7 @@ class ReminderTimesPage extends HookWidget {
               ..._components(context, store, setting).map((e) {
                 return [e, _separator()];
               }).expand((element) => element),
-              _footer(context),
+              _footer(context, state, store),
               _separator(),
             ],
           ),
@@ -118,8 +117,8 @@ class ReminderTimesPage extends HookWidget {
     );
   }
 
-  Widget _footer(BuildContext context) {
-    final state = useProvider(settingStoreProvider.state);
+  Widget _footer(
+      BuildContext context, SettingState state, SettingStateStore store) {
     final setting = state.setting;
     if (setting == null) {
       return Container();
@@ -127,7 +126,6 @@ class ReminderTimesPage extends HookWidget {
     if (setting.reminderTimes.length >= ReminderTime.maximumCount) {
       return Container();
     }
-    final store = useProvider(settingStoreProvider);
     return GestureDetector(
       onTap: () {
         _showPicker(context, store, setting, null);

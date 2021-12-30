@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/analytics.dart';
 import 'package:pilll/components/atoms/buttons.dart';
@@ -13,11 +12,11 @@ import 'package:pilll/error/error_alert.dart';
 import 'package:pilll/util/links.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-class PremiumFunctionSurveyPage extends HookWidget {
+class PremiumFunctionSurveyPage extends HookConsumerWidget {
   @override
-  Widget build(BuildContext context) {
-    final store = useProvider(premiumFunctionSurveyStoreProvider);
-    final state = useProvider(premiumFunctionSurveyStoreProvider.state);
+  Widget build(BuildContext context, WidgetRef ref) {
+    final store = ref.watch(premiumFunctionSurveyStoreProvider.notifier);
+    final state = ref.watch(premiumFunctionSurveyStoreProvider);
 
     return Scaffold(
       backgroundColor: PilllColors.background,

@@ -1,3 +1,4 @@
+import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:pilll/analytics.dart';
 import 'package:pilll/domain/diary/diary_state.dart';
 import 'package:pilll/domain/diary/post_diary_store.dart';
@@ -9,16 +10,13 @@ import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/util/formatter/date_time_formatter.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/services.dart';
-import 'package:flutter_hooks/flutter_hooks.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:riverpod/riverpod.dart';
+import 'package:flutter_svg/svg.dart';
 
 final _postDiaryStoreProvider = StateNotifierProvider.autoDispose
-    .family<PostDiaryStore, PostDiaryStoreProviderFamily>((ref, family) {
+    .family<PostDiaryStore, DiaryState, PostDiaryStoreProviderFamily>(
+        (ref, family) {
   final service = ref.watch(diaryServiceProvider);
   final diary = family.diary;
   if (diary == null) {
@@ -32,7 +30,7 @@ abstract class PostDiaryPageConst {
   static double keyboardToobarHeight = 44;
 }
 
-class PostDiaryPage extends HookWidget {
+class PostDiaryPage extends HookConsumerWidget {
   final DateTime date;
   final Diary? diary;
 
@@ -43,9 +41,9 @@ class PostDiaryPage extends HookWidget {
   }
 
   @override
-  Widget build(BuildContext context) {
-    final store = useProvider(_postDiaryStoreProvider(_family()));
-    final state = useProvider(_postDiaryStoreProvider(_family()).state);
+  Widget build(BuildContext context, WidgetRef ref) {
+    final store = ref.watch(_postDiaryStoreProvider(_family()).notifier);
+    final state = ref.watch(_postDiaryStoreProvider(_family()));
     final TextEditingController? textEditingController =
         useTextEditingController(text: state.diary.memo);
     final focusNode = useFocusNode();

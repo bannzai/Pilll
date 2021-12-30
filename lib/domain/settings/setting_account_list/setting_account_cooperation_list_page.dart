@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_hooks/flutter_hooks.dart';
-import 'package:flutter_svg/flutter_svg.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:pilll/analytics.dart';
 import 'package:pilll/auth/apple.dart';
 import 'package:pilll/auth/google.dart';
@@ -17,11 +16,11 @@ import 'package:pilll/entity/user_error.dart';
 import 'package:pilll/error/error_alert.dart';
 import 'package:pilll/error/universal_error_page.dart';
 
-class SettingAccountCooperationListPage extends HookWidget {
+class SettingAccountCooperationListPage extends HookConsumerWidget {
   @override
-  Widget build(BuildContext context) {
-    final store = useProvider(settingAccountCooperationListProvider);
-    final state = useProvider(settingAccountCooperationListProvider.state);
+  Widget build(BuildContext context, WidgetRef ref) {
+    final store = ref.watch(settingAccountCooperationListProvider.notifier);
+    final state = ref.watch(settingAccountCooperationListProvider);
     return HUD(
       shown: state.isLoading,
       child: UniversalErrorPage(

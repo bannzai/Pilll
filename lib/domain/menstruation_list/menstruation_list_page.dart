@@ -1,7 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
-import 'package:flutter/widgets.dart';
-import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
@@ -10,10 +7,10 @@ import 'package:pilll/components/molecules/indicator.dart';
 import 'package:pilll/domain/menstruation_list/menstruation_list_row.dart';
 import 'package:pilll/domain/menstruation_list/menstruation_list_store.dart';
 
-class MenstruationListPage extends HookWidget {
+class MenstruationListPage extends HookConsumerWidget {
   @override
-  Widget build(BuildContext context) {
-    final state = useProvider(menstruationListStoreProvider.state);
+  Widget build(BuildContext context, WidgetRef ref) {
+    final state = ref.watch(menstruationListStoreProvider);
 
     if (state.isNotYetLoaded) {
       return ScaffoldIndicator();

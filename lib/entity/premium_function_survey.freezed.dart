@@ -1,5 +1,6 @@
+// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'premium_function_survey.dart';
 
@@ -30,7 +31,7 @@ class _$PremiumFunctionSurveyTearOff {
     );
   }
 
-  PremiumFunctionSurvey fromJson(Map<String, Object> json) {
+  PremiumFunctionSurvey fromJson(Map<String, Object?> json) {
     return PremiumFunctionSurvey.fromJson(json);
   }
 }
@@ -128,11 +129,12 @@ class __$PremiumFunctionSurveyCopyWithImpl<$Res>
 
 @JsonSerializable(explicitToJson: true)
 class _$_PremiumFunctionSurvey extends _PremiumFunctionSurvey {
-  _$_PremiumFunctionSurvey({required this.elements, required this.message})
+  const _$_PremiumFunctionSurvey(
+      {required this.elements, required this.message})
       : super._();
 
   factory _$_PremiumFunctionSurvey.fromJson(Map<String, dynamic> json) =>
-      _$_$_PremiumFunctionSurveyFromJson(json);
+      _$$_PremiumFunctionSurveyFromJson(json);
 
   @override
   final List<PremiumFunctionSurveyElementType> elements;
@@ -147,19 +149,17 @@ class _$_PremiumFunctionSurvey extends _PremiumFunctionSurvey {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _PremiumFunctionSurvey &&
-            (identical(other.elements, elements) ||
-                const DeepCollectionEquality()
-                    .equals(other.elements, elements)) &&
-            (identical(other.message, message) ||
-                const DeepCollectionEquality().equals(other.message, message)));
+        (other.runtimeType == runtimeType &&
+            other is _PremiumFunctionSurvey &&
+            const DeepCollectionEquality().equals(other.elements, elements) &&
+            const DeepCollectionEquality().equals(other.message, message));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(elements) ^
-      const DeepCollectionEquality().hash(message);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(elements),
+      const DeepCollectionEquality().hash(message));
 
   @JsonKey(ignore: true)
   @override
@@ -169,24 +169,23 @@ class _$_PremiumFunctionSurvey extends _PremiumFunctionSurvey {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_PremiumFunctionSurveyToJson(this);
+    return _$$_PremiumFunctionSurveyToJson(this);
   }
 }
 
 abstract class _PremiumFunctionSurvey extends PremiumFunctionSurvey {
-  factory _PremiumFunctionSurvey(
+  const factory _PremiumFunctionSurvey(
       {required List<PremiumFunctionSurveyElementType> elements,
       required String message}) = _$_PremiumFunctionSurvey;
-  _PremiumFunctionSurvey._() : super._();
+  const _PremiumFunctionSurvey._() : super._();
 
   factory _PremiumFunctionSurvey.fromJson(Map<String, dynamic> json) =
       _$_PremiumFunctionSurvey.fromJson;
 
   @override
-  List<PremiumFunctionSurveyElementType> get elements =>
-      throw _privateConstructorUsedError;
+  List<PremiumFunctionSurveyElementType> get elements;
   @override
-  String get message => throw _privateConstructorUsedError;
+  String get message;
   @override
   @JsonKey(ignore: true)
   _$PremiumFunctionSurveyCopyWith<_PremiumFunctionSurvey> get copyWith =>

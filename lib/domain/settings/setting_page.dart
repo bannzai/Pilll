@@ -1,3 +1,4 @@
+import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:pilll/analytics.dart';
 import 'package:pilll/components/atoms/buttons.dart';
 import 'package:pilll/components/atoms/font.dart';
@@ -15,16 +16,15 @@ import 'package:pilll/domain/settings/components/rows/taking_pill_notification.d
 import 'package:pilll/domain/settings/components/rows/today_pill_number.dart';
 import 'package:pilll/domain/settings/components/rows/update_from_132.dart';
 import 'package:pilll/domain/settings/components/setting_section_title.dart';
+import 'package:pilll/domain/settings/setting_page_state.dart';
 import 'package:pilll/error/universal_error_page.dart';
 import 'package:pilll/inquiry/inquiry.dart';
 import 'package:pilll/domain/settings/setting_page_store.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/util/environment.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -37,23 +37,24 @@ enum SettingSection {
   other
 }
 
-class SettingPage extends HookWidget {
+class SettingPage extends HookConsumerWidget {
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
+    final store = ref.watch(settingStoreProvider.notifier);
+    final state = ref.watch(settingStoreProvider);
+
     return Scaffold(
       backgroundColor: PilllColors.background,
       appBar: AppBar(
         title: Text('設定', style: TextColorStyle.main),
         backgroundColor: PilllColors.white,
       ),
-      body: Container(child: _body(context)),
+      body: Container(child: _body(context, state, store)),
     );
   }
 
-  Widget _body(BuildContext context) {
-    final store = useProvider(settingStoreProvider);
-    final state = useProvider(settingStoreProvider.state);
-
+  Widget _body(
+      BuildContext context, SettingState state, SettingStateStore store) {
     if (state.exception != null) {
       return UniversalErrorPage(
         error: state.exception,

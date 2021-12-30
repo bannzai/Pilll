@@ -1,5 +1,6 @@
+// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'pill_sheet_modified_history_state.dart';
 
@@ -140,19 +141,19 @@ class __$PillSheetModifiedHistoryStateCopyWithImpl<$Res>
 /// @nodoc
 
 class _$_PillSheetModifiedHistoryState extends _PillSheetModifiedHistoryState {
-  _$_PillSheetModifiedHistoryState(
+  const _$_PillSheetModifiedHistoryState(
       {this.isFirstLoadEnded = false,
       this.isLoading = false,
       this.pillSheetModifiedHistories = const []})
       : super._();
 
-  @JsonKey(defaultValue: false)
+  @JsonKey()
   @override
   final bool isFirstLoadEnded;
-  @JsonKey(defaultValue: false)
+  @JsonKey()
   @override
   final bool isLoading;
-  @JsonKey(defaultValue: const [])
+  @JsonKey()
   @override
   final List<PillSheetModifiedHistory> pillSheetModifiedHistories;
 
@@ -164,26 +165,21 @@ class _$_PillSheetModifiedHistoryState extends _PillSheetModifiedHistoryState {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _PillSheetModifiedHistoryState &&
-            (identical(other.isFirstLoadEnded, isFirstLoadEnded) ||
-                const DeepCollectionEquality()
-                    .equals(other.isFirstLoadEnded, isFirstLoadEnded)) &&
-            (identical(other.isLoading, isLoading) ||
-                const DeepCollectionEquality()
-                    .equals(other.isLoading, isLoading)) &&
-            (identical(other.pillSheetModifiedHistories,
-                    pillSheetModifiedHistories) ||
-                const DeepCollectionEquality().equals(
-                    other.pillSheetModifiedHistories,
-                    pillSheetModifiedHistories)));
+        (other.runtimeType == runtimeType &&
+            other is _PillSheetModifiedHistoryState &&
+            const DeepCollectionEquality()
+                .equals(other.isFirstLoadEnded, isFirstLoadEnded) &&
+            const DeepCollectionEquality().equals(other.isLoading, isLoading) &&
+            const DeepCollectionEquality().equals(
+                other.pillSheetModifiedHistories, pillSheetModifiedHistories));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(isFirstLoadEnded) ^
-      const DeepCollectionEquality().hash(isLoading) ^
-      const DeepCollectionEquality().hash(pillSheetModifiedHistories);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(isFirstLoadEnded),
+      const DeepCollectionEquality().hash(isLoading),
+      const DeepCollectionEquality().hash(pillSheetModifiedHistories));
 
   @JsonKey(ignore: true)
   @override
@@ -194,20 +190,19 @@ class _$_PillSheetModifiedHistoryState extends _PillSheetModifiedHistoryState {
 
 abstract class _PillSheetModifiedHistoryState
     extends PillSheetModifiedHistoryState {
-  factory _PillSheetModifiedHistoryState(
+  const factory _PillSheetModifiedHistoryState(
           {bool isFirstLoadEnded,
           bool isLoading,
           List<PillSheetModifiedHistory> pillSheetModifiedHistories}) =
       _$_PillSheetModifiedHistoryState;
-  _PillSheetModifiedHistoryState._() : super._();
+  const _PillSheetModifiedHistoryState._() : super._();
 
   @override
-  bool get isFirstLoadEnded => throw _privateConstructorUsedError;
+  bool get isFirstLoadEnded;
   @override
-  bool get isLoading => throw _privateConstructorUsedError;
+  bool get isLoading;
   @override
-  List<PillSheetModifiedHistory> get pillSheetModifiedHistories =>
-      throw _privateConstructorUsedError;
+  List<PillSheetModifiedHistory> get pillSheetModifiedHistories;
   @override
   @JsonKey(ignore: true)
   _$PillSheetModifiedHistoryStateCopyWith<_PillSheetModifiedHistoryState>

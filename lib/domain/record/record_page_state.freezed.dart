@@ -1,5 +1,6 @@
+// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'record_page_state.dart';
 
@@ -399,7 +400,7 @@ class __$RecordPageStateCopyWithImpl<$Res>
 /// @nodoc
 
 class _$_RecordPageState extends _RecordPageState {
-  _$_RecordPageState(
+  const _$_RecordPageState(
       {this.pillSheetGroup,
       this.setting,
       this.totalCountOfActionForTakenPill = 0,
@@ -424,34 +425,34 @@ class _$_RecordPageState extends _RecordPageState {
   final PillSheetGroup? pillSheetGroup;
   @override
   final Setting? setting;
-  @JsonKey(defaultValue: 0)
+  @JsonKey()
   @override
   final int totalCountOfActionForTakenPill;
-  @JsonKey(defaultValue: false)
+  @JsonKey()
   @override
   final bool firstLoadIsEnded;
-  @JsonKey(defaultValue: false)
+  @JsonKey()
   @override
   final bool isPremium;
-  @JsonKey(defaultValue: false)
+  @JsonKey()
   @override
   final bool isTrial;
-  @JsonKey(defaultValue: false)
+  @JsonKey()
   @override
   final bool hasDiscountEntitlement;
-  @JsonKey(defaultValue: false)
+  @JsonKey()
   @override
   final bool isAlreadyShowAnnouncementSupportedMultilplePillSheet;
-  @JsonKey(defaultValue: false)
+  @JsonKey()
   @override
   final bool isAlreadyShowTiral;
-  @JsonKey(defaultValue: false)
+  @JsonKey()
   @override
   final bool isAlreadyShowPremiumSurvey;
-  @JsonKey(defaultValue: false)
+  @JsonKey()
   @override
   final bool shouldShowMigrateInfo;
-  @JsonKey(defaultValue: false)
+  @JsonKey()
   @override
   final bool isLinkedLoginProvider;
   @override
@@ -460,10 +461,10 @@ class _$_RecordPageState extends _RecordPageState {
   final DateTime? trialDeadlineDate;
   @override
   final DateTime? discountEntitlementDeadlineDate;
-  @JsonKey(defaultValue: true)
+  @JsonKey()
   @override
   final bool recommendedSignupNotificationIsAlreadyShow;
-  @JsonKey(defaultValue: true)
+  @JsonKey()
   @override
   final bool premiumTrialGuideNotificationIsClosed;
   @override
@@ -477,79 +478,71 @@ class _$_RecordPageState extends _RecordPageState {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _RecordPageState &&
-            (identical(other.pillSheetGroup, pillSheetGroup) ||
-                const DeepCollectionEquality()
-                    .equals(other.pillSheetGroup, pillSheetGroup)) &&
-            (identical(other.setting, setting) ||
-                const DeepCollectionEquality()
-                    .equals(other.setting, setting)) &&
-            (identical(other.totalCountOfActionForTakenPill, totalCountOfActionForTakenPill) ||
-                const DeepCollectionEquality().equals(
-                    other.totalCountOfActionForTakenPill,
-                    totalCountOfActionForTakenPill)) &&
-            (identical(other.firstLoadIsEnded, firstLoadIsEnded) ||
-                const DeepCollectionEquality()
-                    .equals(other.firstLoadIsEnded, firstLoadIsEnded)) &&
-            (identical(other.isPremium, isPremium) ||
-                const DeepCollectionEquality()
-                    .equals(other.isPremium, isPremium)) &&
-            (identical(other.isTrial, isTrial) ||
-                const DeepCollectionEquality()
-                    .equals(other.isTrial, isTrial)) &&
-            (identical(other.hasDiscountEntitlement, hasDiscountEntitlement) ||
-                const DeepCollectionEquality().equals(
-                    other.hasDiscountEntitlement, hasDiscountEntitlement)) &&
-            (identical(other.isAlreadyShowAnnouncementSupportedMultilplePillSheet, isAlreadyShowAnnouncementSupportedMultilplePillSheet) ||
-                const DeepCollectionEquality().equals(
-                    other.isAlreadyShowAnnouncementSupportedMultilplePillSheet,
-                    isAlreadyShowAnnouncementSupportedMultilplePillSheet)) &&
-            (identical(other.isAlreadyShowTiral, isAlreadyShowTiral) ||
-                const DeepCollectionEquality()
-                    .equals(other.isAlreadyShowTiral, isAlreadyShowTiral)) &&
-            (identical(other.isAlreadyShowPremiumSurvey, isAlreadyShowPremiumSurvey) ||
-                const DeepCollectionEquality().equals(
-                    other.isAlreadyShowPremiumSurvey,
-                    isAlreadyShowPremiumSurvey)) &&
-            (identical(other.shouldShowMigrateInfo, shouldShowMigrateInfo) ||
-                const DeepCollectionEquality().equals(
-                    other.shouldShowMigrateInfo, shouldShowMigrateInfo)) &&
-            (identical(other.isLinkedLoginProvider, isLinkedLoginProvider) ||
-                const DeepCollectionEquality().equals(
-                    other.isLinkedLoginProvider, isLinkedLoginProvider)) &&
-            (identical(other.beginTrialDate, beginTrialDate) ||
-                const DeepCollectionEquality().equals(other.beginTrialDate, beginTrialDate)) &&
-            (identical(other.trialDeadlineDate, trialDeadlineDate) || const DeepCollectionEquality().equals(other.trialDeadlineDate, trialDeadlineDate)) &&
-            (identical(other.discountEntitlementDeadlineDate, discountEntitlementDeadlineDate) || const DeepCollectionEquality().equals(other.discountEntitlementDeadlineDate, discountEntitlementDeadlineDate)) &&
-            (identical(other.recommendedSignupNotificationIsAlreadyShow, recommendedSignupNotificationIsAlreadyShow) || const DeepCollectionEquality().equals(other.recommendedSignupNotificationIsAlreadyShow, recommendedSignupNotificationIsAlreadyShow)) &&
-            (identical(other.premiumTrialGuideNotificationIsClosed, premiumTrialGuideNotificationIsClosed) || const DeepCollectionEquality().equals(other.premiumTrialGuideNotificationIsClosed, premiumTrialGuideNotificationIsClosed)) &&
-            (identical(other.exception, exception) || const DeepCollectionEquality().equals(other.exception, exception)));
+        (other.runtimeType == runtimeType &&
+            other is _RecordPageState &&
+            const DeepCollectionEquality()
+                .equals(other.pillSheetGroup, pillSheetGroup) &&
+            const DeepCollectionEquality().equals(other.setting, setting) &&
+            const DeepCollectionEquality().equals(
+                other.totalCountOfActionForTakenPill,
+                totalCountOfActionForTakenPill) &&
+            const DeepCollectionEquality()
+                .equals(other.firstLoadIsEnded, firstLoadIsEnded) &&
+            const DeepCollectionEquality().equals(other.isPremium, isPremium) &&
+            const DeepCollectionEquality().equals(other.isTrial, isTrial) &&
+            const DeepCollectionEquality()
+                .equals(other.hasDiscountEntitlement, hasDiscountEntitlement) &&
+            const DeepCollectionEquality().equals(
+                other.isAlreadyShowAnnouncementSupportedMultilplePillSheet,
+                isAlreadyShowAnnouncementSupportedMultilplePillSheet) &&
+            const DeepCollectionEquality()
+                .equals(other.isAlreadyShowTiral, isAlreadyShowTiral) &&
+            const DeepCollectionEquality().equals(
+                other.isAlreadyShowPremiumSurvey, isAlreadyShowPremiumSurvey) &&
+            const DeepCollectionEquality()
+                .equals(other.shouldShowMigrateInfo, shouldShowMigrateInfo) &&
+            const DeepCollectionEquality()
+                .equals(other.isLinkedLoginProvider, isLinkedLoginProvider) &&
+            const DeepCollectionEquality()
+                .equals(other.beginTrialDate, beginTrialDate) &&
+            const DeepCollectionEquality()
+                .equals(other.trialDeadlineDate, trialDeadlineDate) &&
+            const DeepCollectionEquality().equals(
+                other.discountEntitlementDeadlineDate,
+                discountEntitlementDeadlineDate) &&
+            const DeepCollectionEquality().equals(
+                other.recommendedSignupNotificationIsAlreadyShow,
+                recommendedSignupNotificationIsAlreadyShow) &&
+            const DeepCollectionEquality().equals(
+                other.premiumTrialGuideNotificationIsClosed,
+                premiumTrialGuideNotificationIsClosed) &&
+            const DeepCollectionEquality().equals(other.exception, exception));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(pillSheetGroup) ^
-      const DeepCollectionEquality().hash(setting) ^
-      const DeepCollectionEquality().hash(totalCountOfActionForTakenPill) ^
-      const DeepCollectionEquality().hash(firstLoadIsEnded) ^
-      const DeepCollectionEquality().hash(isPremium) ^
-      const DeepCollectionEquality().hash(isTrial) ^
-      const DeepCollectionEquality().hash(hasDiscountEntitlement) ^
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(pillSheetGroup),
+      const DeepCollectionEquality().hash(setting),
+      const DeepCollectionEquality().hash(totalCountOfActionForTakenPill),
+      const DeepCollectionEquality().hash(firstLoadIsEnded),
+      const DeepCollectionEquality().hash(isPremium),
+      const DeepCollectionEquality().hash(isTrial),
+      const DeepCollectionEquality().hash(hasDiscountEntitlement),
       const DeepCollectionEquality()
-          .hash(isAlreadyShowAnnouncementSupportedMultilplePillSheet) ^
-      const DeepCollectionEquality().hash(isAlreadyShowTiral) ^
-      const DeepCollectionEquality().hash(isAlreadyShowPremiumSurvey) ^
-      const DeepCollectionEquality().hash(shouldShowMigrateInfo) ^
-      const DeepCollectionEquality().hash(isLinkedLoginProvider) ^
-      const DeepCollectionEquality().hash(beginTrialDate) ^
-      const DeepCollectionEquality().hash(trialDeadlineDate) ^
-      const DeepCollectionEquality().hash(discountEntitlementDeadlineDate) ^
+          .hash(isAlreadyShowAnnouncementSupportedMultilplePillSheet),
+      const DeepCollectionEquality().hash(isAlreadyShowTiral),
+      const DeepCollectionEquality().hash(isAlreadyShowPremiumSurvey),
+      const DeepCollectionEquality().hash(shouldShowMigrateInfo),
+      const DeepCollectionEquality().hash(isLinkedLoginProvider),
+      const DeepCollectionEquality().hash(beginTrialDate),
+      const DeepCollectionEquality().hash(trialDeadlineDate),
+      const DeepCollectionEquality().hash(discountEntitlementDeadlineDate),
       const DeepCollectionEquality()
-          .hash(recommendedSignupNotificationIsAlreadyShow) ^
+          .hash(recommendedSignupNotificationIsAlreadyShow),
       const DeepCollectionEquality()
-          .hash(premiumTrialGuideNotificationIsClosed) ^
-      const DeepCollectionEquality().hash(exception);
+          .hash(premiumTrialGuideNotificationIsClosed),
+      const DeepCollectionEquality().hash(exception));
 
   @JsonKey(ignore: true)
   @override
@@ -558,7 +551,7 @@ class _$_RecordPageState extends _RecordPageState {
 }
 
 abstract class _RecordPageState extends RecordPageState {
-  factory _RecordPageState(
+  const factory _RecordPageState(
       {PillSheetGroup? pillSheetGroup,
       Setting? setting,
       int totalCountOfActionForTakenPill,
@@ -577,48 +570,44 @@ abstract class _RecordPageState extends RecordPageState {
       bool recommendedSignupNotificationIsAlreadyShow,
       bool premiumTrialGuideNotificationIsClosed,
       Object? exception}) = _$_RecordPageState;
-  _RecordPageState._() : super._();
+  const _RecordPageState._() : super._();
 
   @override
-  PillSheetGroup? get pillSheetGroup => throw _privateConstructorUsedError;
+  PillSheetGroup? get pillSheetGroup;
   @override
-  Setting? get setting => throw _privateConstructorUsedError;
+  Setting? get setting;
   @override
-  int get totalCountOfActionForTakenPill => throw _privateConstructorUsedError;
+  int get totalCountOfActionForTakenPill;
   @override
-  bool get firstLoadIsEnded => throw _privateConstructorUsedError;
+  bool get firstLoadIsEnded;
   @override
-  bool get isPremium => throw _privateConstructorUsedError;
+  bool get isPremium;
   @override
-  bool get isTrial => throw _privateConstructorUsedError;
+  bool get isTrial;
   @override
-  bool get hasDiscountEntitlement => throw _privateConstructorUsedError;
+  bool get hasDiscountEntitlement;
   @override
-  bool get isAlreadyShowAnnouncementSupportedMultilplePillSheet =>
-      throw _privateConstructorUsedError;
+  bool get isAlreadyShowAnnouncementSupportedMultilplePillSheet;
   @override
-  bool get isAlreadyShowTiral => throw _privateConstructorUsedError;
+  bool get isAlreadyShowTiral;
   @override
-  bool get isAlreadyShowPremiumSurvey => throw _privateConstructorUsedError;
+  bool get isAlreadyShowPremiumSurvey;
   @override
-  bool get shouldShowMigrateInfo => throw _privateConstructorUsedError;
+  bool get shouldShowMigrateInfo;
   @override
-  bool get isLinkedLoginProvider => throw _privateConstructorUsedError;
+  bool get isLinkedLoginProvider;
   @override
-  DateTime? get beginTrialDate => throw _privateConstructorUsedError;
+  DateTime? get beginTrialDate;
   @override
-  DateTime? get trialDeadlineDate => throw _privateConstructorUsedError;
+  DateTime? get trialDeadlineDate;
   @override
-  DateTime? get discountEntitlementDeadlineDate =>
-      throw _privateConstructorUsedError;
+  DateTime? get discountEntitlementDeadlineDate;
   @override
-  bool get recommendedSignupNotificationIsAlreadyShow =>
-      throw _privateConstructorUsedError;
+  bool get recommendedSignupNotificationIsAlreadyShow;
   @override
-  bool get premiumTrialGuideNotificationIsClosed =>
-      throw _privateConstructorUsedError;
+  bool get premiumTrialGuideNotificationIsClosed;
   @override
-  Object? get exception => throw _privateConstructorUsedError;
+  Object? get exception;
   @override
   @JsonKey(ignore: true)
   _$RecordPageStateCopyWith<_RecordPageState> get copyWith =>

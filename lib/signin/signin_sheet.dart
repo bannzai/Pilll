@@ -1,7 +1,6 @@
-import 'package:flutter_hooks/flutter_hooks.dart';
+import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:flutter/material.dart';
-import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/analytics.dart';
 import 'package:pilll/auth/apple.dart';
 import 'package:pilll/auth/google.dart';
@@ -20,7 +19,7 @@ abstract class SigninSheetConst {
   static final double height = 340;
 }
 
-class SigninSheet extends HookWidget {
+class SigninSheet extends HookConsumerWidget {
   final SigninSheetStateContext stateContext;
   final Function(LinkAccountType) callback;
 
@@ -29,9 +28,9 @@ class SigninSheet extends HookWidget {
     required this.callback,
   });
   @override
-  Widget build(BuildContext context) {
-    final store = useProvider(signinSheetStoreProvider(stateContext));
-    final state = useProvider(signinSheetStoreProvider(stateContext).state);
+  Widget build(BuildContext context, WidgetRef ref) {
+    final store = ref.watch(signinSheetStoreProvider(stateContext).notifier);
+    final state = ref.watch(signinSheetStoreProvider(stateContext));
     return HUD(
       shown: state.isLoading,
       child: UniversalErrorPage(

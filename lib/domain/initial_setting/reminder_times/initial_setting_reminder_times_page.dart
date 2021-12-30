@@ -10,15 +10,13 @@ import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/util/datetime/day.dart';
 import 'package:pilll/util/formatter/date_time_formatter.dart';
 import 'package:pilll/util/toolbar/time_picker.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_hooks/flutter_hooks.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-class InitialSettingReminderTimesPage extends HookWidget {
+class InitialSettingReminderTimesPage extends HookConsumerWidget {
   void _showDurationModalSheet(
     BuildContext context,
     int index,
@@ -96,9 +94,9 @@ class InitialSettingReminderTimesPage extends HookWidget {
   }
 
   @override
-  Widget build(BuildContext context) {
-    final store = useProvider(initialSettingStoreProvider);
-    final state = useProvider(initialSettingStoreProvider.state);
+  Widget build(BuildContext context, WidgetRef ref) {
+    final store = ref.watch(initialSettingStoreProvider.notifier);
+    final state = ref.watch(initialSettingStoreProvider);
     return Scaffold(
       backgroundColor: PilllColors.background,
       appBar: AppBar(

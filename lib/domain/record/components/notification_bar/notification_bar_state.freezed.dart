@@ -1,5 +1,6 @@
+// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'notification_bar_state.dart';
 
@@ -287,7 +288,7 @@ class __$NotificationBarStateCopyWithImpl<$Res>
 /// @nodoc
 
 class _$_NotificationBarState extends _NotificationBarState {
-  _$_NotificationBarState(
+  const _$_NotificationBarState(
       {required this.latestPillSheetGroup,
       required this.totalCountOfActionForTakenPill,
       required this.isPremium,
@@ -332,61 +333,52 @@ class _$_NotificationBarState extends _NotificationBarState {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _NotificationBarState &&
-            (identical(other.latestPillSheetGroup, latestPillSheetGroup) ||
-                const DeepCollectionEquality().equals(
-                    other.latestPillSheetGroup, latestPillSheetGroup)) &&
-            (identical(other.totalCountOfActionForTakenPill, totalCountOfActionForTakenPill) ||
-                const DeepCollectionEquality().equals(
-                    other.totalCountOfActionForTakenPill,
-                    totalCountOfActionForTakenPill)) &&
-            (identical(other.isPremium, isPremium) ||
-                const DeepCollectionEquality()
-                    .equals(other.isPremium, isPremium)) &&
-            (identical(other.isTrial, isTrial) ||
-                const DeepCollectionEquality()
-                    .equals(other.isTrial, isTrial)) &&
-            (identical(other.isAlreadyShowAnnouncementSupportedMultilplePillSheet, isAlreadyShowAnnouncementSupportedMultilplePillSheet) ||
-                const DeepCollectionEquality().equals(
-                    other.isAlreadyShowAnnouncementSupportedMultilplePillSheet,
-                    isAlreadyShowAnnouncementSupportedMultilplePillSheet)) &&
-            (identical(other.hasDiscountEntitlement, hasDiscountEntitlement) ||
-                const DeepCollectionEquality().equals(
-                    other.hasDiscountEntitlement, hasDiscountEntitlement)) &&
-            (identical(other.trialDeadlineDate, trialDeadlineDate) ||
-                const DeepCollectionEquality()
-                    .equals(other.trialDeadlineDate, trialDeadlineDate)) &&
-            (identical(other.discountEntitlementDeadlineDate, discountEntitlementDeadlineDate) ||
-                const DeepCollectionEquality().equals(
-                    other.discountEntitlementDeadlineDate,
-                    discountEntitlementDeadlineDate)) &&
-            (identical(other.recommendedSignupNotificationIsAlreadyShow, recommendedSignupNotificationIsAlreadyShow) ||
-                const DeepCollectionEquality().equals(
-                    other.recommendedSignupNotificationIsAlreadyShow,
-                    recommendedSignupNotificationIsAlreadyShow)) &&
-            (identical(other.premiumTrialGuideNotificationIsClosed, premiumTrialGuideNotificationIsClosed) ||
-                const DeepCollectionEquality().equals(
-                    other.premiumTrialGuideNotificationIsClosed, premiumTrialGuideNotificationIsClosed)) &&
-            (identical(other.isLinkedLoginProvider, isLinkedLoginProvider) || const DeepCollectionEquality().equals(other.isLinkedLoginProvider, isLinkedLoginProvider)));
+        (other.runtimeType == runtimeType &&
+            other is _NotificationBarState &&
+            const DeepCollectionEquality()
+                .equals(other.latestPillSheetGroup, latestPillSheetGroup) &&
+            const DeepCollectionEquality().equals(
+                other.totalCountOfActionForTakenPill,
+                totalCountOfActionForTakenPill) &&
+            const DeepCollectionEquality().equals(other.isPremium, isPremium) &&
+            const DeepCollectionEquality().equals(other.isTrial, isTrial) &&
+            const DeepCollectionEquality().equals(
+                other.isAlreadyShowAnnouncementSupportedMultilplePillSheet,
+                isAlreadyShowAnnouncementSupportedMultilplePillSheet) &&
+            const DeepCollectionEquality()
+                .equals(other.hasDiscountEntitlement, hasDiscountEntitlement) &&
+            const DeepCollectionEquality()
+                .equals(other.trialDeadlineDate, trialDeadlineDate) &&
+            const DeepCollectionEquality().equals(
+                other.discountEntitlementDeadlineDate,
+                discountEntitlementDeadlineDate) &&
+            const DeepCollectionEquality().equals(
+                other.recommendedSignupNotificationIsAlreadyShow,
+                recommendedSignupNotificationIsAlreadyShow) &&
+            const DeepCollectionEquality().equals(
+                other.premiumTrialGuideNotificationIsClosed,
+                premiumTrialGuideNotificationIsClosed) &&
+            const DeepCollectionEquality()
+                .equals(other.isLinkedLoginProvider, isLinkedLoginProvider));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(latestPillSheetGroup) ^
-      const DeepCollectionEquality().hash(totalCountOfActionForTakenPill) ^
-      const DeepCollectionEquality().hash(isPremium) ^
-      const DeepCollectionEquality().hash(isTrial) ^
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(latestPillSheetGroup),
+      const DeepCollectionEquality().hash(totalCountOfActionForTakenPill),
+      const DeepCollectionEquality().hash(isPremium),
+      const DeepCollectionEquality().hash(isTrial),
       const DeepCollectionEquality()
-          .hash(isAlreadyShowAnnouncementSupportedMultilplePillSheet) ^
-      const DeepCollectionEquality().hash(hasDiscountEntitlement) ^
-      const DeepCollectionEquality().hash(trialDeadlineDate) ^
-      const DeepCollectionEquality().hash(discountEntitlementDeadlineDate) ^
+          .hash(isAlreadyShowAnnouncementSupportedMultilplePillSheet),
+      const DeepCollectionEquality().hash(hasDiscountEntitlement),
+      const DeepCollectionEquality().hash(trialDeadlineDate),
+      const DeepCollectionEquality().hash(discountEntitlementDeadlineDate),
       const DeepCollectionEquality()
-          .hash(recommendedSignupNotificationIsAlreadyShow) ^
+          .hash(recommendedSignupNotificationIsAlreadyShow),
       const DeepCollectionEquality()
-          .hash(premiumTrialGuideNotificationIsClosed) ^
-      const DeepCollectionEquality().hash(isLinkedLoginProvider);
+          .hash(premiumTrialGuideNotificationIsClosed),
+      const DeepCollectionEquality().hash(isLinkedLoginProvider));
 
   @JsonKey(ignore: true)
   @override
@@ -396,7 +388,7 @@ class _$_NotificationBarState extends _NotificationBarState {
 }
 
 abstract class _NotificationBarState extends NotificationBarState {
-  factory _NotificationBarState(
+  const factory _NotificationBarState(
       {required PillSheetGroup? latestPillSheetGroup,
       required int totalCountOfActionForTakenPill,
       required bool isPremium,
@@ -408,35 +400,30 @@ abstract class _NotificationBarState extends NotificationBarState {
       required bool recommendedSignupNotificationIsAlreadyShow,
       required bool premiumTrialGuideNotificationIsClosed,
       required bool isLinkedLoginProvider}) = _$_NotificationBarState;
-  _NotificationBarState._() : super._();
+  const _NotificationBarState._() : super._();
 
   @override
-  PillSheetGroup? get latestPillSheetGroup =>
-      throw _privateConstructorUsedError;
+  PillSheetGroup? get latestPillSheetGroup;
   @override
-  int get totalCountOfActionForTakenPill => throw _privateConstructorUsedError;
+  int get totalCountOfActionForTakenPill;
   @override
-  bool get isPremium => throw _privateConstructorUsedError;
+  bool get isPremium;
   @override
-  bool get isTrial => throw _privateConstructorUsedError;
+  bool get isTrial;
   @override
-  bool get isAlreadyShowAnnouncementSupportedMultilplePillSheet =>
-      throw _privateConstructorUsedError;
+  bool get isAlreadyShowAnnouncementSupportedMultilplePillSheet;
   @override
-  bool get hasDiscountEntitlement => throw _privateConstructorUsedError;
+  bool get hasDiscountEntitlement;
   @override
-  DateTime? get trialDeadlineDate => throw _privateConstructorUsedError;
+  DateTime? get trialDeadlineDate;
   @override
-  DateTime? get discountEntitlementDeadlineDate =>
-      throw _privateConstructorUsedError;
+  DateTime? get discountEntitlementDeadlineDate;
   @override
-  bool get recommendedSignupNotificationIsAlreadyShow =>
-      throw _privateConstructorUsedError;
+  bool get recommendedSignupNotificationIsAlreadyShow;
   @override
-  bool get premiumTrialGuideNotificationIsClosed =>
-      throw _privateConstructorUsedError;
+  bool get premiumTrialGuideNotificationIsClosed;
   @override
-  bool get isLinkedLoginProvider => throw _privateConstructorUsedError;
+  bool get isLinkedLoginProvider;
   @override
   @JsonKey(ignore: true)
   _$NotificationBarStateCopyWith<_NotificationBarState> get copyWith =>

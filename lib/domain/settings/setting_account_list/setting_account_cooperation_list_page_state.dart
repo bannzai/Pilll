@@ -6,10 +6,10 @@ import 'package:freezed_annotation/freezed_annotation.dart';
 part 'setting_account_cooperation_list_page_state.freezed.dart';
 
 @freezed
-abstract class SettingAccountCooperationListState
-    implements _$SettingAccountCooperationListState {
-  SettingAccountCooperationListState._();
-  factory SettingAccountCooperationListState({
+class SettingAccountCooperationListState
+    with _$SettingAccountCooperationListState {
+  const SettingAccountCooperationListState._();
+  const factory SettingAccountCooperationListState({
     required User? user,
     @Default(false) bool isLoading,
     Object? exception,

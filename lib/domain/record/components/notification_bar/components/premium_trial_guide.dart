@@ -1,11 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_hooks/flutter_hooks.dart';
+import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:pilll/analytics.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 
-class PremiumTrialGuideNotificationBar extends HookWidget {
+class PremiumTrialGuideNotificationBar extends HookConsumerWidget {
   final VoidCallback onClose;
   final VoidCallback onTap;
   const PremiumTrialGuideNotificationBar({
@@ -15,7 +15,7 @@ class PremiumTrialGuideNotificationBar extends HookWidget {
   }) : super(key: key);
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     final double _closeButtonIconWidth = 24;
 
     return GestureDetector(

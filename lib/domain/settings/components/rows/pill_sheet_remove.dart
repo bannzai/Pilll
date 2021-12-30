@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/analytics.dart';
 import 'package:pilll/components/atoms/buttons.dart';
@@ -10,10 +9,10 @@ import 'package:pilll/domain/settings/setting_page_store.dart';
 import 'package:pilll/error/error_alert.dart';
 import 'package:pilll/service/pill_sheet.dart';
 
-class PillSheetRemoveRow extends HookWidget {
+class PillSheetRemoveRow extends HookConsumerWidget {
   @override
-  Widget build(BuildContext context) {
-    final store = useProvider(settingStoreProvider);
+  Widget build(BuildContext context, WidgetRef ref) {
+    final store = ref.watch(settingStoreProvider.notifier);
     return ListTile(
       title: Text("ピルシートをすべて破棄", style: FontType.listRow),
       onTap: () {

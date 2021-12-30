@@ -5,15 +5,13 @@ part 'premium_function_survey.g.dart';
 part 'premium_function_survey.freezed.dart';
 
 @freezed
-abstract class PremiumFunctionSurvey with _$PremiumFunctionSurvey {
+class PremiumFunctionSurvey with _$PremiumFunctionSurvey {
   @JsonSerializable(explicitToJson: true)
-  factory PremiumFunctionSurvey({
+  const factory PremiumFunctionSurvey({
     required List<PremiumFunctionSurveyElementType> elements,
     required String message,
   }) = _PremiumFunctionSurvey;
-  PremiumFunctionSurvey._();
+  const PremiumFunctionSurvey._();
   factory PremiumFunctionSurvey.fromJson(Map<String, dynamic> json) =>
       _$PremiumFunctionSurveyFromJson(json);
-  Map<String, dynamic> toJson() =>
-      _$_$_PremiumFunctionSurveyToJson(this as _$_PremiumFunctionSurvey);
 }

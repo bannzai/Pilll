@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
-import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/analytics.dart';
 import 'package:pilll/components/atoms/buttons.dart';
@@ -17,7 +15,7 @@ import 'package:pilll/entity/menstruation.dart';
 import 'package:pilll/domain/menstruation_edit/menstruation_edit_store.dart';
 import 'package:pilll/util/formatter/date_time_formatter.dart';
 
-class MenstruationEditPage extends HookWidget {
+class MenstruationEditPage extends HookConsumerWidget {
   final String title;
   final Menstruation? menstruation;
   final Function(Menstruation) didEndSave;
@@ -30,9 +28,9 @@ class MenstruationEditPage extends HookWidget {
   });
 
   @override
-  Widget build(BuildContext context) {
-    final store = useProvider(menstruationEditProvider(menstruation));
-    final state = useProvider(menstruationEditProvider(menstruation).state);
+  Widget build(BuildContext context, WidgetRef ref) {
+    final store = ref.watch(menstruationEditProvider(menstruation).notifier);
+    final state = ref.watch(menstruationEditProvider(menstruation));
     final invalidMessage = state.invalidMessage;
     return DraggableScrollableSheet(
       initialChildSize: 0.7,

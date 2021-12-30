@@ -1,5 +1,6 @@
+// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'purchase_buttons_state.dart';
 
@@ -135,7 +136,7 @@ class __$PurchaseButtonsStateCopyWithImpl<$Res>
 /// @nodoc
 
 class _$_PurchaseButtonsState extends _PurchaseButtonsState {
-  _$_PurchaseButtonsState(
+  const _$_PurchaseButtonsState(
       {required this.offerings,
       required this.hasDiscountEntitlement,
       required this.isOverDiscountDeadline})
@@ -156,24 +157,21 @@ class _$_PurchaseButtonsState extends _PurchaseButtonsState {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _PurchaseButtonsState &&
-            (identical(other.offerings, offerings) ||
-                const DeepCollectionEquality()
-                    .equals(other.offerings, offerings)) &&
-            (identical(other.hasDiscountEntitlement, hasDiscountEntitlement) ||
-                const DeepCollectionEquality().equals(
-                    other.hasDiscountEntitlement, hasDiscountEntitlement)) &&
-            (identical(other.isOverDiscountDeadline, isOverDiscountDeadline) ||
-                const DeepCollectionEquality().equals(
-                    other.isOverDiscountDeadline, isOverDiscountDeadline)));
+        (other.runtimeType == runtimeType &&
+            other is _PurchaseButtonsState &&
+            const DeepCollectionEquality().equals(other.offerings, offerings) &&
+            const DeepCollectionEquality()
+                .equals(other.hasDiscountEntitlement, hasDiscountEntitlement) &&
+            const DeepCollectionEquality()
+                .equals(other.isOverDiscountDeadline, isOverDiscountDeadline));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(offerings) ^
-      const DeepCollectionEquality().hash(hasDiscountEntitlement) ^
-      const DeepCollectionEquality().hash(isOverDiscountDeadline);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(offerings),
+      const DeepCollectionEquality().hash(hasDiscountEntitlement),
+      const DeepCollectionEquality().hash(isOverDiscountDeadline));
 
   @JsonKey(ignore: true)
   @override
@@ -183,18 +181,18 @@ class _$_PurchaseButtonsState extends _PurchaseButtonsState {
 }
 
 abstract class _PurchaseButtonsState extends PurchaseButtonsState {
-  factory _PurchaseButtonsState(
+  const factory _PurchaseButtonsState(
       {required Offerings offerings,
       required bool hasDiscountEntitlement,
       required bool isOverDiscountDeadline}) = _$_PurchaseButtonsState;
-  _PurchaseButtonsState._() : super._();
+  const _PurchaseButtonsState._() : super._();
 
   @override
-  Offerings get offerings => throw _privateConstructorUsedError;
+  Offerings get offerings;
   @override
-  bool get hasDiscountEntitlement => throw _privateConstructorUsedError;
+  bool get hasDiscountEntitlement;
   @override
-  bool get isOverDiscountDeadline => throw _privateConstructorUsedError;
+  bool get isOverDiscountDeadline;
   @override
   @JsonKey(ignore: true)
   _$PurchaseButtonsStateCopyWith<_PurchaseButtonsState> get copyWith =>

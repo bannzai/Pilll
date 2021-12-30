@@ -8,7 +8,7 @@ import 'package:pilll/entity/pill_sheet_modified_history_value.dart';
 part 'pill_sheet_modified_history.g.dart';
 part 'pill_sheet_modified_history.freezed.dart';
 
-abstract class PillSheetModifiedHistoryFirestoreKeys {
+class PillSheetModifiedHistoryFirestoreKeys {
   static final createdAt = "createdAt";
 }
 
@@ -40,9 +40,9 @@ extension PillSheetModifiedActionTypeFunctions on PillSheetModifiedActionType {
 // PillSheetModifiedHistory only create on backend
 // If you want to make it from the client side, please match it with the property of backend
 @freezed
-abstract class PillSheetModifiedHistory with _$PillSheetModifiedHistory {
+class PillSheetModifiedHistory with _$PillSheetModifiedHistory {
   @JsonSerializable(explicitToJson: true)
-  factory PillSheetModifiedHistory({
+  const factory PillSheetModifiedHistory({
     @JsonKey(includeIfNull: false, toJson: toNull)
         required String? id,
     required String actionType,
@@ -73,8 +73,6 @@ abstract class PillSheetModifiedHistory with _$PillSheetModifiedHistory {
 
   factory PillSheetModifiedHistory.fromJson(Map<String, dynamic> json) =>
       _$PillSheetModifiedHistoryFromJson(json);
-  Map<String, dynamic> toJson() =>
-      _$_$_PillSheetModifiedHistoryToJson(this as _$_PillSheetModifiedHistory);
 
   PillSheetModifiedActionType? get enumActionType =>
       PillSheetModifiedActionType.values

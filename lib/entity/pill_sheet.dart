@@ -4,11 +4,10 @@ import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/util/datetime/day.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:json_annotation/json_annotation.dart';
 part 'pill_sheet.g.dart';
 part 'pill_sheet.freezed.dart';
 
-abstract class PillSheetFirestoreKey {
+class PillSheetFirestoreKey {
   static final String typeInfo = "typeInfo";
   static final String createdAt = "createdAt";
   static final String deletedAt = "deletedAt";
@@ -17,9 +16,9 @@ abstract class PillSheetFirestoreKey {
 }
 
 @freezed
-abstract class PillSheetTypeInfo with _$PillSheetTypeInfo {
+class PillSheetTypeInfo with _$PillSheetTypeInfo {
   @JsonSerializable(explicitToJson: true)
-  factory PillSheetTypeInfo({
+  const factory PillSheetTypeInfo({
     required String pillSheetTypeReferencePath,
     required String name,
     required int totalCount,
@@ -28,14 +27,12 @@ abstract class PillSheetTypeInfo with _$PillSheetTypeInfo {
 
   factory PillSheetTypeInfo.fromJson(Map<String, dynamic> json) =>
       _$PillSheetTypeInfoFromJson(json);
-  Map<String, dynamic> toJson() =>
-      _$_$_PillSheetTypeInfoToJson(this as _$_PillSheetTypeInfo);
 }
 
 @freezed
-abstract class RestDuration with _$RestDuration {
+class RestDuration with _$RestDuration {
   @JsonSerializable(explicitToJson: true)
-  factory RestDuration({
+  const factory RestDuration({
     @JsonKey(
       fromJson: NonNullTimestampConverter.timestampToDateTime,
       toJson: NonNullTimestampConverter.dateTimeToTimestamp,
@@ -55,20 +52,18 @@ abstract class RestDuration with _$RestDuration {
 
   factory RestDuration.fromJson(Map<String, dynamic> json) =>
       _$RestDurationFromJson(json);
-  Map<String, dynamic> toJson() =>
-      _$_$_RestDurationToJson(this as _$_RestDuration);
 }
 
 @freezed
-abstract class PillSheet implements _$PillSheet {
+class PillSheet with _$PillSheet {
   String? get documentID => id;
 
   PillSheetType get sheetType =>
       PillSheetTypeFunctions.fromRawPath(typeInfo.pillSheetTypeReferencePath);
 
-  PillSheet._();
+  const PillSheet._();
   @JsonSerializable(explicitToJson: true)
-  factory PillSheet({
+  const factory PillSheet({
     @JsonKey(includeIfNull: false)
         String? id,
     @JsonKey()
@@ -106,7 +101,6 @@ abstract class PillSheet implements _$PillSheet {
 
   factory PillSheet.fromJson(Map<String, dynamic> json) =>
       _$PillSheetFromJson(json);
-  Map<String, dynamic> toJson() => _$_$_PillSheetToJson(this as _$_PillSheet);
 
   PillSheetType get pillSheetType =>
       PillSheetTypeFunctions.fromRawPath(typeInfo.pillSheetTypeReferencePath);

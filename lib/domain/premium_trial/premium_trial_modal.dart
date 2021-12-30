@@ -1,6 +1,5 @@
-import 'package:flutter_hooks/flutter_hooks.dart';
-import 'package:flutter_svg/svg.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:flutter_svg/svg.dart';
 import 'package:pilll/analytics.dart';
 import 'package:pilll/components/atoms/buttons.dart';
 import 'package:pilll/components/atoms/color.dart';
@@ -15,13 +14,13 @@ import 'package:pilll/error/universal_error_page.dart';
 import 'package:pilll/util/shared_preference/keys.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-class PremiumTrialModal extends HookWidget {
+class PremiumTrialModal extends HookConsumerWidget {
   final VoidCallback didEndTrial;
   const PremiumTrialModal(this.didEndTrial, {Key? key}) : super(key: key);
   @override
-  Widget build(BuildContext context) {
-    final store = useProvider(premiumTrialStoreProvider);
-    final state = useProvider(premiumTrialStoreProvider.state);
+  Widget build(BuildContext context, WidgetRef ref) {
+    final store = ref.watch(premiumTrialStoreProvider.notifier);
+    final state = ref.watch(premiumTrialStoreProvider);
     return HUD(
       shown: state.isLoading,
       child: UniversalErrorPage(

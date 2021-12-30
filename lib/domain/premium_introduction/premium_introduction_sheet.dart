@@ -1,8 +1,6 @@
-import 'package:flutter_hooks/flutter_hooks.dart';
-
-import 'package:flutter/cupertino.dart';
-import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+
+import 'package:flutter/material.dart';
 import 'package:pilll/analytics.dart';
 import 'package:pilll/components/atoms/buttons.dart';
 import 'package:pilll/components/atoms/color.dart';
@@ -19,16 +17,16 @@ import 'package:pilll/error/universal_error_page.dart';
 import 'package:pilll/util/links.dart';
 import 'package:url_launcher/url_launcher.dart';
 
-class PremiumIntroductionSheet extends HookWidget {
+class PremiumIntroductionSheet extends HookConsumerWidget {
   @override
-  Widget build(BuildContext context) {
-    final store = useProvider(premiumIntroductionStoreProvider);
-    final state = useProvider(premiumIntroductionStateProvider);
+  Widget build(BuildContext context, WidgetRef ref) {
+    final store = ref.watch(premiumIntroductionStoreProvider.notifier);
+    final state = ref.watch(premiumIntroductionStateProvider);
     final offerings = state.offerings;
     final discountEntitlementDeadlineDate =
         state.discountEntitlementDeadlineDate;
-    final isOverDiscountDeadline = useProvider(
-        isOverDiscountDeadlineProvider(discountEntitlementDeadlineDate));
+    final isOverDiscountDeadline = ref
+        .watch(isOverDiscountDeadlineProvider(discountEntitlementDeadlineDate));
     if (state.isNotYetLoad) {
       return Indicator();
     }

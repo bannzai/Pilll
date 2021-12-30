@@ -93,7 +93,7 @@ void main() {
         activedPillSheet: pillSheet,
       );
       final store =
-          container.read(settingTodayPillNumberStoreProvider(parameter));
+          container.read(settingTodayPillNumberStoreProvider(parameter).notifier);
 
       expect(pillSheet.todayPillNumber, 1);
 
@@ -177,7 +177,7 @@ void main() {
         activedPillSheet: pillSheet,
       );
       final store =
-          container.read(settingTodayPillNumberStoreProvider(parameter));
+          container.read(settingTodayPillNumberStoreProvider(parameter).notifier);
 
       expect(pillSheet.todayPillNumber, 1);
 
@@ -288,7 +288,7 @@ void main() {
         activedPillSheet: middle,
       );
       final store =
-          container.read(settingTodayPillNumberStoreProvider(parameter));
+          container.read(settingTodayPillNumberStoreProvider(parameter).notifier);
 
       expect(middle.todayPillNumber, 1);
 
@@ -399,7 +399,7 @@ void main() {
         activedPillSheet: middle,
       );
       final store =
-          container.read(settingTodayPillNumberStoreProvider(parameter));
+          container.read(settingTodayPillNumberStoreProvider(parameter).notifier);
 
       expect(middle.todayPillNumber, 1);
 
@@ -511,7 +511,7 @@ void main() {
         activedPillSheet: middle,
       );
       final store =
-          container.read(settingTodayPillNumberStoreProvider(parameter));
+          container.read(settingTodayPillNumberStoreProvider(parameter).notifier);
 
       expect(middle.todayPillNumber, 1);
 
@@ -631,7 +631,7 @@ void main() {
         activedPillSheet: middle,
       );
       final store =
-          container.read(settingTodayPillNumberStoreProvider(parameter));
+          container.read(settingTodayPillNumberStoreProvider(parameter).notifier);
 
       expect(middle.todayPillNumber, 1);
 

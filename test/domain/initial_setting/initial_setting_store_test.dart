@@ -48,7 +48,7 @@ void main() {
               .overrideWithValue(pillSheetGroupService),
         ],
       );
-      final store = container.read(initialSettingStoreProvider);
+      final store = container.read(initialSettingStoreProvider.notifier);
 
       store.selectedPillSheetType(PillSheetType.pillsheet_28_0);
       expect(container.read(initialSettingStateProvider).pillSheetTypes,
@@ -77,7 +77,7 @@ void main() {
               .overrideWithValue(pillSheetGroupService),
         ],
       );
-      final store = container.read(initialSettingStoreProvider);
+      final store = container.read(initialSettingStoreProvider.notifier);
 
       store.selectedPillSheetType(PillSheetType.pillsheet_21);
       expect(container.read(initialSettingStateProvider).pillSheetTypes,
@@ -111,7 +111,7 @@ void main() {
               .overrideWithValue(pillSheetGroupService),
         ],
       );
-      final store = container.read(initialSettingStoreProvider);
+      final store = container.read(initialSettingStoreProvider.notifier);
       // ignore: invalid_use_of_protected_member
       store.state = store.state.copyWith(
           todayPillNumber: InitialSettingTodayPillNumber(
@@ -154,7 +154,7 @@ void main() {
               .overrideWithValue(pillSheetGroupService),
         ],
       );
-      final store = container.read(initialSettingStoreProvider);
+      final store = container.read(initialSettingStoreProvider.notifier);
 
       store.selectedPillSheetType(PillSheetType.pillsheet_21);
       store.addPillSheetType(PillSheetType.pillsheet_28_0);
@@ -186,7 +186,7 @@ void main() {
               .overrideWithValue(pillSheetGroupService),
         ],
       );
-      final store = container.read(initialSettingStoreProvider);
+      final store = container.read(initialSettingStoreProvider.notifier);
 
       store.selectedPillSheetType(PillSheetType.pillsheet_21);
       store.addPillSheetType(PillSheetType.pillsheet_28_0);
@@ -219,7 +219,7 @@ void main() {
               .overrideWithValue(pillSheetGroupService),
         ],
       );
-      final store = container.read(initialSettingStoreProvider);
+      final store = container.read(initialSettingStoreProvider.notifier);
 
       store.selectedPillSheetType(PillSheetType.pillsheet_21);
       store.addPillSheetType(PillSheetType.pillsheet_28_0);
@@ -253,7 +253,7 @@ void main() {
               .overrideWithValue(pillSheetGroupService),
         ],
       );
-      final store = container.read(initialSettingStoreProvider);
+      final store = container.read(initialSettingStoreProvider.notifier);
 
       store.setReminderTime(index: 0, hour: 22, minute: 10);
       expect(container.read(initialSettingStateProvider).reminderTimes, [
@@ -284,7 +284,7 @@ void main() {
               .overrideWithValue(pillSheetGroupService),
         ],
       );
-      final store = container.read(initialSettingStoreProvider);
+      final store = container.read(initialSettingStoreProvider.notifier);
 
       store.setReminderTime(index: 2, hour: 22, minute: 10);
       expect(container.read(initialSettingStateProvider).reminderTimes, [
@@ -318,7 +318,7 @@ void main() {
               .overrideWithValue(pillSheetGroupService),
         ],
       );
-      final store = container.read(initialSettingStoreProvider);
+      final store = container.read(initialSettingStoreProvider.notifier);
 
       store.selectedPillSheetType(PillSheetType.pillsheet_21);
       store.addPillSheetType(PillSheetType.pillsheet_28_0);
@@ -349,7 +349,7 @@ void main() {
               .overrideWithValue(pillSheetGroupService),
         ],
       );
-      final store = container.read(initialSettingStoreProvider);
+      final store = container.read(initialSettingStoreProvider.notifier);
 
       store.selectedPillSheetType(PillSheetType.pillsheet_21);
       store.addPillSheetType(PillSheetType.pillsheet_28_0);
@@ -382,7 +382,7 @@ void main() {
               .overrideWithValue(pillSheetGroupService),
         ],
       );
-      final store = container.read(initialSettingStoreProvider);
+      final store = container.read(initialSettingStoreProvider.notifier);
 
       store.selectedPillSheetType(PillSheetType.pillsheet_21);
       store.addPillSheetType(PillSheetType.pillsheet_28_0);
@@ -414,7 +414,7 @@ void main() {
               .overrideWithValue(pillSheetGroupService),
         ],
       );
-      final store = container.read(initialSettingStoreProvider);
+      final store = container.read(initialSettingStoreProvider.notifier);
 
       store.selectedPillSheetType(PillSheetType.pillsheet_21);
       store.addPillSheetType(PillSheetType.pillsheet_28_0);
@@ -447,7 +447,7 @@ void main() {
               .overrideWithValue(pillSheetGroupService),
         ],
       );
-      final store = container.read(initialSettingStoreProvider);
+      final store = container.read(initialSettingStoreProvider.notifier);
 
       store.selectedPillSheetType(PillSheetType.pillsheet_21);
       store.addPillSheetType(PillSheetType.pillsheet_28_0);
@@ -519,7 +519,7 @@ void main() {
               .overrideWithValue(pillSheetGroupService),
         ],
       );
-      final store = container.read(initialSettingStoreProvider);
+      final store = container.read(initialSettingStoreProvider.notifier);
 
       store.selectedPillSheetType(PillSheetType.pillsheet_21);
       store.setFromMenstruation(pageIndex: 0, fromMenstruation: 22);
@@ -614,7 +614,7 @@ void main() {
               .overrideWithValue(pillSheetGroupService),
         ],
       );
-      final store = container.read(initialSettingStoreProvider);
+      final store = container.read(initialSettingStoreProvider.notifier);
 
       store.selectedPillSheetType(PillSheetType.pillsheet_28_0);
       store.addPillSheetType(PillSheetType.pillsheet_21);

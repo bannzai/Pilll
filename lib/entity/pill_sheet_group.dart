@@ -4,20 +4,19 @@ import 'package:pilll/entity/pill_sheet.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:json_annotation/json_annotation.dart';
 
 part 'pill_sheet_group.g.dart';
 part 'pill_sheet_group.freezed.dart';
 
-abstract class PillSheetGroupFirestoreKeys {
+class PillSheetGroupFirestoreKeys {
   static final createdAt = "createdAt";
 }
 
 @freezed
-abstract class PillSheetGroup implements _$PillSheetGroup {
-  PillSheetGroup._();
+class PillSheetGroup with _$PillSheetGroup {
+  const PillSheetGroup._();
   @JsonSerializable(explicitToJson: true)
-  factory PillSheetGroup({
+  const factory PillSheetGroup({
     @JsonKey(includeIfNull: false, toJson: toNull)
         String? id,
     required List<String> pillSheetIDs,
@@ -36,8 +35,6 @@ abstract class PillSheetGroup implements _$PillSheetGroup {
 
   factory PillSheetGroup.fromJson(Map<String, dynamic> json) =>
       _$PillSheetGroupFromJson(json);
-  Map<String, dynamic> toJson() =>
-      _$_$_PillSheetGroupToJson(this as _$_PillSheetGroup);
 
   PillSheet? get activedPillSheet {
     final filtered = pillSheets.where((element) => element.isActive);

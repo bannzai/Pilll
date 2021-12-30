@@ -1,4 +1,5 @@
 import 'package:flutter_hooks/flutter_hooks.dart';
+import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:pilll/analytics.dart';
 import 'package:pilll/components/molecules/indicator.dart';
@@ -10,16 +11,14 @@ import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/domain/calendar/components/pill_sheet_modified_history/pill_sheet_modified_history_card.dart';
 import 'package:pilll/domain/home/home_page.dart';
 import 'package:pilll/domain/calendar/calendar_page_store.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/error/universal_error_page.dart';
 
-class CalendarPage extends HookWidget {
+class CalendarPage extends HookConsumerWidget {
   @override
-  Widget build(BuildContext context) {
-    final store = useProvider(calendarPageStateProvider);
-    final state = useProvider(calendarPageStateProvider.state);
+  Widget build(BuildContext context, WidgetRef ref) {
+    final store = ref.watch(calendarPageStateStoreProvider.notifier);
+    final state = ref.watch(calendarPageStateStoreProvider);
     homeKey.currentState?.diaries = state.diariesForMonth;
 
     final exception = state.exception;

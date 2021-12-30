@@ -1,5 +1,6 @@
+// coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
-// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides
+// ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'pill_sheet.dart';
 
@@ -33,7 +34,7 @@ class _$PillSheetTypeInfoTearOff {
     );
   }
 
-  PillSheetTypeInfo fromJson(Map<String, Object> json) {
+  PillSheetTypeInfo fromJson(Map<String, Object?> json) {
     return PillSheetTypeInfo.fromJson(json);
   }
 }
@@ -160,14 +161,14 @@ class __$PillSheetTypeInfoCopyWithImpl<$Res>
 
 @JsonSerializable(explicitToJson: true)
 class _$_PillSheetTypeInfo implements _PillSheetTypeInfo {
-  _$_PillSheetTypeInfo(
+  const _$_PillSheetTypeInfo(
       {required this.pillSheetTypeReferencePath,
       required this.name,
       required this.totalCount,
       required this.dosingPeriod});
 
   factory _$_PillSheetTypeInfo.fromJson(Map<String, dynamic> json) =>
-      _$_$_PillSheetTypeInfoFromJson(json);
+      _$$_PillSheetTypeInfoFromJson(json);
 
   @override
   final String pillSheetTypeReferencePath;
@@ -186,29 +187,24 @@ class _$_PillSheetTypeInfo implements _PillSheetTypeInfo {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _PillSheetTypeInfo &&
-            (identical(other.pillSheetTypeReferencePath,
-                    pillSheetTypeReferencePath) ||
-                const DeepCollectionEquality().equals(
-                    other.pillSheetTypeReferencePath,
-                    pillSheetTypeReferencePath)) &&
-            (identical(other.name, name) ||
-                const DeepCollectionEquality().equals(other.name, name)) &&
-            (identical(other.totalCount, totalCount) ||
-                const DeepCollectionEquality()
-                    .equals(other.totalCount, totalCount)) &&
-            (identical(other.dosingPeriod, dosingPeriod) ||
-                const DeepCollectionEquality()
-                    .equals(other.dosingPeriod, dosingPeriod)));
+        (other.runtimeType == runtimeType &&
+            other is _PillSheetTypeInfo &&
+            const DeepCollectionEquality().equals(
+                other.pillSheetTypeReferencePath, pillSheetTypeReferencePath) &&
+            const DeepCollectionEquality().equals(other.name, name) &&
+            const DeepCollectionEquality()
+                .equals(other.totalCount, totalCount) &&
+            const DeepCollectionEquality()
+                .equals(other.dosingPeriod, dosingPeriod));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(pillSheetTypeReferencePath) ^
-      const DeepCollectionEquality().hash(name) ^
-      const DeepCollectionEquality().hash(totalCount) ^
-      const DeepCollectionEquality().hash(dosingPeriod);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(pillSheetTypeReferencePath),
+      const DeepCollectionEquality().hash(name),
+      const DeepCollectionEquality().hash(totalCount),
+      const DeepCollectionEquality().hash(dosingPeriod));
 
   @JsonKey(ignore: true)
   @override
@@ -217,12 +213,12 @@ class _$_PillSheetTypeInfo implements _PillSheetTypeInfo {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_PillSheetTypeInfoToJson(this);
+    return _$$_PillSheetTypeInfoToJson(this);
   }
 }
 
 abstract class _PillSheetTypeInfo implements PillSheetTypeInfo {
-  factory _PillSheetTypeInfo(
+  const factory _PillSheetTypeInfo(
       {required String pillSheetTypeReferencePath,
       required String name,
       required int totalCount,
@@ -232,13 +228,13 @@ abstract class _PillSheetTypeInfo implements PillSheetTypeInfo {
       _$_PillSheetTypeInfo.fromJson;
 
   @override
-  String get pillSheetTypeReferencePath => throw _privateConstructorUsedError;
+  String get pillSheetTypeReferencePath;
   @override
-  String get name => throw _privateConstructorUsedError;
+  String get name;
   @override
-  int get totalCount => throw _privateConstructorUsedError;
+  int get totalCount;
   @override
-  int get dosingPeriod => throw _privateConstructorUsedError;
+  int get dosingPeriod;
   @override
   @JsonKey(ignore: true)
   _$PillSheetTypeInfoCopyWith<_PillSheetTypeInfo> get copyWith =>
@@ -267,7 +263,7 @@ class _$RestDurationTearOff {
     );
   }
 
-  RestDuration fromJson(Map<String, Object> json) {
+  RestDuration fromJson(Map<String, Object?> json) {
     return RestDuration.fromJson(json);
   }
 }
@@ -394,7 +390,7 @@ class __$RestDurationCopyWithImpl<$Res> extends _$RestDurationCopyWithImpl<$Res>
 
 @JsonSerializable(explicitToJson: true)
 class _$_RestDuration implements _RestDuration {
-  _$_RestDuration(
+  const _$_RestDuration(
       {@JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
           required this.beginDate,
       @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
@@ -403,7 +399,7 @@ class _$_RestDuration implements _RestDuration {
           required this.createdDate});
 
   factory _$_RestDuration.fromJson(Map<String, dynamic> json) =>
-      _$_$_RestDurationFromJson(json);
+      _$$_RestDurationFromJson(json);
 
   @override
   @JsonKey(
@@ -429,24 +425,20 @@ class _$_RestDuration implements _RestDuration {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _RestDuration &&
-            (identical(other.beginDate, beginDate) ||
-                const DeepCollectionEquality()
-                    .equals(other.beginDate, beginDate)) &&
-            (identical(other.endDate, endDate) ||
-                const DeepCollectionEquality()
-                    .equals(other.endDate, endDate)) &&
-            (identical(other.createdDate, createdDate) ||
-                const DeepCollectionEquality()
-                    .equals(other.createdDate, createdDate)));
+        (other.runtimeType == runtimeType &&
+            other is _RestDuration &&
+            const DeepCollectionEquality().equals(other.beginDate, beginDate) &&
+            const DeepCollectionEquality().equals(other.endDate, endDate) &&
+            const DeepCollectionEquality()
+                .equals(other.createdDate, createdDate));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(beginDate) ^
-      const DeepCollectionEquality().hash(endDate) ^
-      const DeepCollectionEquality().hash(createdDate);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(beginDate),
+      const DeepCollectionEquality().hash(endDate),
+      const DeepCollectionEquality().hash(createdDate));
 
   @JsonKey(ignore: true)
   @override
@@ -455,12 +447,12 @@ class _$_RestDuration implements _RestDuration {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_RestDurationToJson(this);
+    return _$$_RestDurationToJson(this);
   }
 }
 
 abstract class _RestDuration implements RestDuration {
-  factory _RestDuration(
+  const factory _RestDuration(
       {@JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
           required DateTime beginDate,
       @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
@@ -475,17 +467,17 @@ abstract class _RestDuration implements RestDuration {
   @JsonKey(
       fromJson: NonNullTimestampConverter.timestampToDateTime,
       toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-  DateTime get beginDate => throw _privateConstructorUsedError;
+  DateTime get beginDate;
   @override
   @JsonKey(
       fromJson: TimestampConverter.timestampToDateTime,
       toJson: TimestampConverter.dateTimeToTimestamp)
-  DateTime? get endDate => throw _privateConstructorUsedError;
+  DateTime? get endDate;
   @override
   @JsonKey(
       fromJson: NonNullTimestampConverter.timestampToDateTime,
       toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-  DateTime get createdDate => throw _privateConstructorUsedError;
+  DateTime get createdDate;
   @override
   @JsonKey(ignore: true)
   _$RestDurationCopyWith<_RestDuration> get copyWith =>
@@ -527,7 +519,7 @@ class _$PillSheetTearOff {
     );
   }
 
-  PillSheet fromJson(Map<String, Object> json) {
+  PillSheet fromJson(Map<String, Object?> json) {
     return PillSheet.fromJson(json);
   }
 }
@@ -739,7 +731,7 @@ class __$PillSheetCopyWithImpl<$Res> extends _$PillSheetCopyWithImpl<$Res>
 
 @JsonSerializable(explicitToJson: true)
 class _$_PillSheet extends _PillSheet {
-  _$_PillSheet(
+  const _$_PillSheet(
       {@JsonKey(includeIfNull: false)
           this.id,
       @JsonKey()
@@ -757,7 +749,7 @@ class _$_PillSheet extends _PillSheet {
       : super._();
 
   factory _$_PillSheet.fromJson(Map<String, dynamic> json) =>
-      _$_$_PillSheetFromJson(json);
+      _$$_PillSheetFromJson(json);
 
   @override
   @JsonKey(includeIfNull: false)
@@ -785,10 +777,10 @@ class _$_PillSheet extends _PillSheet {
       fromJson: TimestampConverter.timestampToDateTime,
       toJson: TimestampConverter.dateTimeToTimestamp)
   final DateTime? deletedAt;
-  @JsonKey(defaultValue: 0)
+  @JsonKey()
   @override
   final int groupIndex;
-  @JsonKey(defaultValue: const [])
+  @JsonKey()
   @override
   final List<RestDuration> restDurations;
 
@@ -800,43 +792,33 @@ class _$_PillSheet extends _PillSheet {
   @override
   bool operator ==(dynamic other) {
     return identical(this, other) ||
-        (other is _PillSheet &&
-            (identical(other.id, id) ||
-                const DeepCollectionEquality().equals(other.id, id)) &&
-            (identical(other.typeInfo, typeInfo) ||
-                const DeepCollectionEquality()
-                    .equals(other.typeInfo, typeInfo)) &&
-            (identical(other.beginingDate, beginingDate) ||
-                const DeepCollectionEquality()
-                    .equals(other.beginingDate, beginingDate)) &&
-            (identical(other.lastTakenDate, lastTakenDate) ||
-                const DeepCollectionEquality()
-                    .equals(other.lastTakenDate, lastTakenDate)) &&
-            (identical(other.createdAt, createdAt) ||
-                const DeepCollectionEquality()
-                    .equals(other.createdAt, createdAt)) &&
-            (identical(other.deletedAt, deletedAt) ||
-                const DeepCollectionEquality()
-                    .equals(other.deletedAt, deletedAt)) &&
-            (identical(other.groupIndex, groupIndex) ||
-                const DeepCollectionEquality()
-                    .equals(other.groupIndex, groupIndex)) &&
-            (identical(other.restDurations, restDurations) ||
-                const DeepCollectionEquality()
-                    .equals(other.restDurations, restDurations)));
+        (other.runtimeType == runtimeType &&
+            other is _PillSheet &&
+            const DeepCollectionEquality().equals(other.id, id) &&
+            const DeepCollectionEquality().equals(other.typeInfo, typeInfo) &&
+            const DeepCollectionEquality()
+                .equals(other.beginingDate, beginingDate) &&
+            const DeepCollectionEquality()
+                .equals(other.lastTakenDate, lastTakenDate) &&
+            const DeepCollectionEquality().equals(other.createdAt, createdAt) &&
+            const DeepCollectionEquality().equals(other.deletedAt, deletedAt) &&
+            const DeepCollectionEquality()
+                .equals(other.groupIndex, groupIndex) &&
+            const DeepCollectionEquality()
+                .equals(other.restDurations, restDurations));
   }
 
   @override
-  int get hashCode =>
-      runtimeType.hashCode ^
-      const DeepCollectionEquality().hash(id) ^
-      const DeepCollectionEquality().hash(typeInfo) ^
-      const DeepCollectionEquality().hash(beginingDate) ^
-      const DeepCollectionEquality().hash(lastTakenDate) ^
-      const DeepCollectionEquality().hash(createdAt) ^
-      const DeepCollectionEquality().hash(deletedAt) ^
-      const DeepCollectionEquality().hash(groupIndex) ^
-      const DeepCollectionEquality().hash(restDurations);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(id),
+      const DeepCollectionEquality().hash(typeInfo),
+      const DeepCollectionEquality().hash(beginingDate),
+      const DeepCollectionEquality().hash(lastTakenDate),
+      const DeepCollectionEquality().hash(createdAt),
+      const DeepCollectionEquality().hash(deletedAt),
+      const DeepCollectionEquality().hash(groupIndex),
+      const DeepCollectionEquality().hash(restDurations));
 
   @JsonKey(ignore: true)
   @override
@@ -845,12 +827,12 @@ class _$_PillSheet extends _PillSheet {
 
   @override
   Map<String, dynamic> toJson() {
-    return _$_$_PillSheetToJson(this);
+    return _$$_PillSheetToJson(this);
   }
 }
 
 abstract class _PillSheet extends PillSheet {
-  factory _PillSheet(
+  const factory _PillSheet(
       {@JsonKey(includeIfNull: false)
           String? id,
       @JsonKey()
@@ -865,41 +847,41 @@ abstract class _PillSheet extends PillSheet {
           DateTime? deletedAt,
       int groupIndex,
       List<RestDuration> restDurations}) = _$_PillSheet;
-  _PillSheet._() : super._();
+  const _PillSheet._() : super._();
 
   factory _PillSheet.fromJson(Map<String, dynamic> json) =
       _$_PillSheet.fromJson;
 
   @override
   @JsonKey(includeIfNull: false)
-  String? get id => throw _privateConstructorUsedError;
+  String? get id;
   @override
   @JsonKey()
-  PillSheetTypeInfo get typeInfo => throw _privateConstructorUsedError;
+  PillSheetTypeInfo get typeInfo;
   @override
   @JsonKey(
       fromJson: NonNullTimestampConverter.timestampToDateTime,
       toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-  DateTime get beginingDate => throw _privateConstructorUsedError;
+  DateTime get beginingDate;
   @override
   @JsonKey(
       fromJson: TimestampConverter.timestampToDateTime,
       toJson: TimestampConverter.dateTimeToTimestamp)
-  DateTime? get lastTakenDate => throw _privateConstructorUsedError;
+  DateTime? get lastTakenDate;
   @override
   @JsonKey(
       fromJson: TimestampConverter.timestampToDateTime,
       toJson: TimestampConverter.dateTimeToTimestamp)
-  DateTime? get createdAt => throw _privateConstructorUsedError;
+  DateTime? get createdAt;
   @override
   @JsonKey(
       fromJson: TimestampConverter.timestampToDateTime,
       toJson: TimestampConverter.dateTimeToTimestamp)
-  DateTime? get deletedAt => throw _privateConstructorUsedError;
+  DateTime? get deletedAt;
   @override
-  int get groupIndex => throw _privateConstructorUsedError;
+  int get groupIndex;
   @override
-  List<RestDuration> get restDurations => throw _privateConstructorUsedError;
+  List<RestDuration> get restDurations;
   @override
   @JsonKey(ignore: true)
   _$PillSheetCopyWith<_PillSheet> get copyWith =>
