@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/analytics.dart';
 import 'package:pilll/components/template/setting_menstruation/setting_menstruation_dynamic_description.dart';
 import 'package:pilll/components/template/setting_menstruation/setting_menstruation_page_template.dart';
@@ -14,9 +13,9 @@ class SettingMenstruationPage extends HookConsumerWidget {
     Key? key,
   }) : super(key: key);
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     final store = ref.watch(settingMenstruationStoreProvider.notifier);
-    final settingState = ref.watch(settingStateProvider.notifier);
+    final settingState = ref.watch(settingStateProvider);
     final setting = settingState.setting;
     if (setting == null) {
       throw FormatException("生理設定にはSettingのデータが必要です");

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/analytics.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/domain/settings/today_pill_number/setting_today_pill_number_page.dart';
@@ -22,7 +21,7 @@ class TodayPllNumberRow extends HookConsumerWidget {
   }) : super(key: key);
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     final store = ref.watch(settingStoreProvider.notifier);
     return ListTile(
       title: Text("今日飲むピル番号の変更", style: FontType.listRow),
