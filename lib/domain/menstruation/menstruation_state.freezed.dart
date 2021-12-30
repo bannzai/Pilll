@@ -266,7 +266,7 @@ class __$MenstruationStateCopyWithImpl<$Res>
 /// @nodoc
 
 class _$_MenstruationState extends _MenstruationState {
-  const _$_MenstruationState(
+  _$_MenstruationState(
       {this.isNotYetLoaded = true,
       this.currentCalendarIndex = 0,
       this.diariesForMonth = const [],
@@ -354,7 +354,7 @@ class _$_MenstruationState extends _MenstruationState {
 }
 
 abstract class _MenstruationState extends MenstruationState {
-  const factory _MenstruationState(
+  factory _MenstruationState(
       {bool isNotYetLoaded,
       int currentCalendarIndex,
       List<Diary> diariesForMonth,
@@ -365,7 +365,7 @@ abstract class _MenstruationState extends MenstruationState {
       Setting? setting,
       PillSheetGroup? latestPillSheetGroup,
       Object? exception}) = _$_MenstruationState;
-  const _MenstruationState._() : super._();
+  _MenstruationState._() : super._();
 
   @override
   bool get isNotYetLoaded;

@@ -13,7 +13,7 @@ part 'menstruation_state.freezed.dart';
 @freezed
 class MenstruationState with _$MenstruationState {
   MenstruationState._();
-  const factory MenstruationState({
+  factory MenstruationState({
     @Default(true) bool isNotYetLoaded,
     @Default(0) int currentCalendarIndex,
     @Default([]) List<Diary> diariesForMonth,
