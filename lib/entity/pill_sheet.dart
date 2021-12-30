@@ -4,7 +4,6 @@ import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/util/datetime/day.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:json_annotation/json_annotation.dart';
 part 'pill_sheet.g.dart';
 part 'pill_sheet.freezed.dart';
 
