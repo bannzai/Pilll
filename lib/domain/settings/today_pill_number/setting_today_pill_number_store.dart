@@ -12,10 +12,10 @@ import 'package:pilll/service/pill_sheet_modified_history.dart';
 import 'package:pilll/util/datetime/day.dart';
 import 'package:riverpod/riverpod.dart';
 
-final settingTodayPillNumberStoreProvider =
-    StateNotifierProvider.autoDispose.family(
-  (ref, SettingTodayPillNumberStoreParameter parameter) =>
-      SettingTodayPillNumberStateStore(
+final settingTodayPillNumberStoreProvider = StateNotifierProvider.autoDispose
+    .family<SettingTodayPillNumberStateStore, SettingTodayPillNumberState,
+        SettingTodayPillNumberStoreParameter>(
+  (ref, parameter) => SettingTodayPillNumberStateStore(
     parameter,
     ref.watch(batchFactoryProvider),
     ref.watch(pillSheetServiceProvider),

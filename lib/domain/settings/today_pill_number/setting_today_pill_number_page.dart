@@ -1,5 +1,4 @@
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/components/atoms/buttons.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
@@ -24,7 +23,7 @@ class SettingTodayPillNumberPage extends HookConsumerWidget {
   }) : super(key: key);
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     final parameter = SettingTodayPillNumberStoreParameter(
       appearanceMode: PillSheetAppearanceMode.number,
       pillSheetGroup: pillSheetGroup,
