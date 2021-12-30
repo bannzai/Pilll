@@ -1,4 +1,5 @@
 import 'package:pilll/components/molecules/indicator.dart';
+import 'package:pilll/domain/settings/setting_page_state.dart';
 import 'package:pilll/entity/setting.dart';
 import 'package:pilll/domain/settings/setting_page_store.dart';
 import 'package:pilll/components/atoms/color.dart';
@@ -9,13 +10,12 @@ import 'package:pilll/util/toolbar/time_picker.dart';
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:flutter_svg/svg.dart';
-import 'package:hooks_riverpod/hooks_riverpod.dart';
 
 class ReminderTimesPage extends HookConsumerWidget {
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     final store = ref.watch(settingStoreProvider.notifier);
-    final state = ref.watch(settingStoreProvider.notifier);
+    final state = ref.watch(settingStoreProvider);
     final setting = state.setting;
     if (setting == null) {
       return Indicator();
@@ -40,7 +40,7 @@ class ReminderTimesPage extends HookConsumerWidget {
               ..._components(context, store, setting).map((e) {
                 return [e, _separator()];
               }).expand((element) => element),
-              _footer(context),
+              _footer(context, state, store),
               _separator(),
             ],
           ),
@@ -117,8 +117,8 @@ class ReminderTimesPage extends HookConsumerWidget {
     );
   }
 
-  Widget _footer(BuildContext context) {
-    final state = ref.watch(settingStoreProvider.notifier);
+  Widget _footer(
+      BuildContext context, SettingState state, SettingStateStore store) {
     final setting = state.setting;
     if (setting == null) {
       return Container();
@@ -126,7 +126,6 @@ class ReminderTimesPage extends HookConsumerWidget {
     if (setting.reminderTimes.length >= ReminderTime.maximumCount) {
       return Container();
     }
-    final store = ref.watch(settingStoreProvider.notifier);
     return GestureDetector(
       onTap: () {
         _showPicker(context, store, setting, null);
