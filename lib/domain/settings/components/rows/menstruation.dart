@@ -15,7 +15,7 @@ class MenstruationRow extends HookConsumerWidget {
   MenstruationRow(this.store, this.setting);
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context, WidgetRef ref) {
     return ListTile(
       title: Row(
         children: [
