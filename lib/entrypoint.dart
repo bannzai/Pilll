@@ -68,7 +68,7 @@ class App extends StatelessWidget {
       ],
       theme: ThemeData(
         appBarTheme: AppBarTheme(
-          systemOverlayStyle: SystemUiOverlayStyle.light,
+          systemOverlayStyle: SystemUiOverlayStyle.dark,
           centerTitle: true,
           color: PilllColors.white,
           elevation: 3,
