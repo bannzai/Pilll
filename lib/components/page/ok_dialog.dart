@@ -52,13 +52,13 @@ class OKDialog extends StatelessWidget {
   }
 }
 
-showOKDialog(
+Future<void> showOKDialog(
   BuildContext context, {
   required String title,
   required String message,
   VoidCallback? ok,
-}) {
-  showDialog(
+}) async {
+  return showDialog(
     context: context,
     builder: (context) => OKDialog(
       title: title,
