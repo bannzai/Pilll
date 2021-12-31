@@ -64,8 +64,8 @@ class RootState extends State<Root> {
       return ScaffoldIndicator();
     }
     if (screenType == ScreenType.forceUpdate) {
-      Future.microtask(() {
-        showOKDialog(context,
+      Future.microtask(() async {
+        await showOKDialog(context,
             title: "アプリをアップデートしてください",
             message: "お使いのアプリのバージョンが古いため$storeNameから最新バージョンにアップデートしてください",
             ok: () async {
