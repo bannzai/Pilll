@@ -126,7 +126,9 @@ class RootState extends State<Root> {
         remoteConfig.getString(minimumSupportedAppVersionKey);
     final packageVersion = await Version.fromPackage();
     if (packageVersion.isLessThan(Version.parse(minimumSupportedAppVersion))) {
-      screenType = ScreenType.forceUpdate;
+      setState(() {
+        screenType = ScreenType.forceUpdate;
+      });
     } else {
       final user = await callSignin();
 
