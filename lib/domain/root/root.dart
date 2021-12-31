@@ -112,6 +112,12 @@ class RootState extends State<Root> {
   _decideScreenType() async {
     const minimumSupportedAppVersionKey = "minimum_supported_app_version";
     final remoteConfig = RemoteConfig.instance;
+    await remoteConfig.setConfigSettings(
+      RemoteConfigSettings(
+        minimumFetchInterval: Duration(seconds: 0),
+        fetchTimeout: Duration(seconds: 10),
+      ),
+    );
     remoteConfig.setDefaults({
       minimumSupportedAppVersionKey: "3.4.0",
     });
