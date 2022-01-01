@@ -110,26 +110,6 @@ class SettingAccountCooperationListPage extends HookConsumerWidget {
         return "google";
     }
   }
-
-  Future<bool> _handleApple(
-      SettingAccountCooperationListPageStore store) async {
-    switch (await store.linkApple()) {
-      case SigninWithAppleState.cancel:
-        return false;
-      case SigninWithAppleState.determined:
-        return true;
-    }
-  }
-
-  Future<bool> _handleGoogle(
-      SettingAccountCooperationListPageStore store) async {
-    switch (await store.linkGoogle()) {
-      case SigninWithGoogleState.cancel:
-        return false;
-      case SigninWithGoogleState.determined:
-        return true;
-    }
-  }
 }
 
 extension SettingAccountCooperationListPageRoute
