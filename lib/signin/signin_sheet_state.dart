@@ -3,7 +3,7 @@ import 'package:pilll/entity/link_account_type.dart';
 
 part 'signin_sheet_state.freezed.dart';
 
-enum SigninSheetStateContext { initialSetting, recordPage, premium }
+enum SigninSheetStateContext { initialSetting, recordPage, premium, setting }
 
 @freezed
 class SigninSheetState with _$SigninSheetState {
@@ -22,6 +22,8 @@ class SigninSheetState with _$SigninSheetState {
         return false;
       case SigninSheetStateContext.premium:
         return false;
+      case SigninSheetStateContext.setting:
+        return false;
     }
   }
 
@@ -33,6 +35,8 @@ class SigninSheetState with _$SigninSheetState {
         return "アカウント登録";
       case SigninSheetStateContext.premium:
         return "プレミアム登録の前に…";
+      case SigninSheetStateContext.setting:
+        return "アカウント登録";
     }
   }
 
@@ -44,6 +48,8 @@ class SigninSheetState with _$SigninSheetState {
         return "アカウント登録するとデータの引き継ぎが可能になります";
       case SigninSheetStateContext.premium:
         return "アカウント情報を保持するため、アカウント登録をお願いします";
+      case SigninSheetStateContext.setting:
+        return "アカウント登録するとデータの引き継ぎが可能になります";
     }
   }
 
@@ -55,6 +61,8 @@ class SigninSheetState with _$SigninSheetState {
         return LinkAccountType.apple.providerName + "で登録";
       case SigninSheetStateContext.premium:
         return LinkAccountType.apple.providerName + "で登録";
+      case SigninSheetStateContext.setting:
+        return LinkAccountType.apple.providerName + "で登録";
     }
   }
 
@@ -65,6 +73,8 @@ class SigninSheetState with _$SigninSheetState {
       case SigninSheetStateContext.recordPage:
         return LinkAccountType.google.providerName + "で登録";
       case SigninSheetStateContext.premium:
+        return LinkAccountType.google.providerName + "で登録";
+      case SigninSheetStateContext.setting:
         return LinkAccountType.google.providerName + "で登録";
     }
   }
