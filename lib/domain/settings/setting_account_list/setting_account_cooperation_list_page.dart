@@ -111,58 +111,6 @@ class SettingAccountCooperationListPage extends HookConsumerWidget {
     }
   }
 
-  Future<void> _link(
-    BuildContext context,
-    SettingAccountCooperationListPageStore store,
-    LinkAccountType accountType,
-  ) async {
-    final String eventSuffix = _logEventSuffix(accountType);
-    analytics.logEvent(
-      name: "link_event_$eventSuffix",
-    );
-    HUD.of(context).show();
-    try {
-      final bool isDetermined;
-      switch (accountType) {
-        case LinkAccountType.apple:
-          isDetermined = await _handleApple(store);
-          break;
-        case LinkAccountType.google:
-          isDetermined = await _handleGoogle(store);
-          break;
-      }
-      HUD.of(context).hide();
-      analytics.logEvent(
-        name: "did_end_link_event_$eventSuffix",
-      );
-      if (!isDetermined) {
-        return;
-      }
-    } catch (error) {
-      analytics.logEvent(
-          name: "did_failure_link_event_$eventSuffix",
-          parameters: {"errot_type": error.runtimeType.toString()});
-
-      HUD.of(context).hide();
-      if (error is UserDisplayedError) {
-        showErrorAlertWithError(context, error);
-      } else {
-        UniversalErrorPage.of(context).showError(error);
-      }
-      return;
-    }
-
-    final snackBarDuration = Duration(seconds: 1);
-    ScaffoldMessenger.of(context).showSnackBar(
-      SnackBar(
-        duration: snackBarDuration,
-        content: Text("${accountType.providerName}で登録しました"),
-      ),
-    );
-    await Future.delayed(snackBarDuration);
-    showDemographyPageIfNeeded(context);
-  }
-
   Future<bool> _handleApple(
       SettingAccountCooperationListPageStore store) async {
     switch (await store.linkApple()) {
