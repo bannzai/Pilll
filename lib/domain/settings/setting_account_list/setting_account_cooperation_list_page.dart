@@ -1,9 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:pilll/analytics.dart';
-import 'package:pilll/auth/apple.dart';
-import 'package:pilll/auth/google.dart';
+import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:pilll/components/atoms/buttons.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
@@ -12,9 +10,9 @@ import 'package:pilll/domain/demography/demography_page.dart';
 import 'package:pilll/domain/settings/setting_account_list/components/delete_user_button.dart';
 import 'package:pilll/domain/settings/setting_account_list/setting_account_cooperation_list_page_store.dart';
 import 'package:pilll/entity/link_account_type.dart';
-import 'package:pilll/entity/user_error.dart';
-import 'package:pilll/error/error_alert.dart';
 import 'package:pilll/error/universal_error_page.dart';
+import 'package:pilll/signin/signin_sheet.dart';
+import 'package:pilll/signin/signin_sheet_state.dart';
 
 class SettingAccountCooperationListPage extends HookConsumerWidget {
   @override
@@ -51,22 +49,22 @@ class SettingAccountCooperationListPage extends HookConsumerWidget {
                     SettingAccountCooperationRow(
                       accountType: LinkAccountType.apple,
                       isLinked: () => state.isLinkedApple,
-                      onTap: () async {
+                      onTap: () {
                         if (state.isLinkedApple) {
                           return;
                         }
-                        await _linkApple(context, store);
+                        _showSigninSheet(context);
                       },
                     ),
                     Divider(indent: 16),
                     SettingAccountCooperationRow(
                       accountType: LinkAccountType.google,
                       isLinked: () => state.isLinkedGoogle,
-                      onTap: () async {
+                      onTap: () {
                         if (state.isLinkedGoogle) {
                           return;
                         }
-                        await _linkGoogle(context, store);
+                        _showSigninSheet(context);
                       },
                     ),
                     Divider(indent: 16),
@@ -81,99 +79,22 @@ class SettingAccountCooperationListPage extends HookConsumerWidget {
     );
   }
 
-  String _logEventSuffix(LinkAccountType accountType) {
-    switch (accountType) {
-      case LinkAccountType.apple:
-        return "apple";
-      case LinkAccountType.google:
-        return "google";
-    }
-  }
-
-  Future<void> _linkApple(
-    BuildContext context,
-    SettingAccountCooperationListPageStore store,
-  ) async {
-    return _link(context, store, LinkAccountType.apple);
-  }
-
-  Future<void> _linkGoogle(
-    BuildContext context,
-    SettingAccountCooperationListPageStore store,
-  ) async {
-    return _link(context, store, LinkAccountType.google);
-  }
-
-  Future<void> _link(
-    BuildContext context,
-    SettingAccountCooperationListPageStore store,
-    LinkAccountType accountType,
-  ) async {
-    final String eventSuffix = _logEventSuffix(accountType);
-    analytics.logEvent(
-      name: "link_event_$eventSuffix",
+  _showSigninSheet(BuildContext context) {
+    showSigninSheet(
+      context,
+      SigninSheetStateContext.setting,
+      (accountType) async {
+        final snackBarDuration = Duration(seconds: 1);
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(
+            duration: snackBarDuration,
+            content: Text("${accountType.providerName}で登録しました"),
+          ),
+        );
+        await Future.delayed(snackBarDuration);
+        showDemographyPageIfNeeded(context);
+      },
     );
-    HUD.of(context).show();
-    try {
-      final bool isDetermined;
-      switch (accountType) {
-        case LinkAccountType.apple:
-          isDetermined = await _handleApple(store);
-          break;
-        case LinkAccountType.google:
-          isDetermined = await _handleGoogle(store);
-          break;
-      }
-      HUD.of(context).hide();
-      analytics.logEvent(
-        name: "did_end_link_event_$eventSuffix",
-      );
-      if (!isDetermined) {
-        return;
-      }
-    } catch (error) {
-      analytics.logEvent(
-          name: "did_failure_link_event_$eventSuffix",
-          parameters: {"errot_type": error.runtimeType.toString()});
-
-      HUD.of(context).hide();
-      if (error is UserDisplayedError) {
-        showErrorAlertWithError(context, error);
-      } else {
-        UniversalErrorPage.of(context).showError(error);
-      }
-      return;
-    }
-
-    final snackBarDuration = Duration(seconds: 1);
-    ScaffoldMessenger.of(context).showSnackBar(
-      SnackBar(
-        duration: snackBarDuration,
-        content: Text("${accountType.providerName}で登録しました"),
-      ),
-    );
-    await Future.delayed(snackBarDuration);
-    showDemographyPageIfNeeded(context);
-  }
-
-  Future<bool> _handleApple(
-      SettingAccountCooperationListPageStore store) async {
-    switch (await store.linkApple()) {
-      case SigninWithAppleState.cancel:
-        return false;
-      case SigninWithAppleState.determined:
-        return true;
-    }
-  }
-
-  Future<bool> _handleGoogle(
-      SettingAccountCooperationListPageStore store) async {
-    switch (await store.linkGoogle()) {
-      case SigninWithGoogleState.cancel:
-        return false;
-      case SigninWithGoogleState.determined:
-        return true;
-    }
   }
 }
 
@@ -201,46 +122,39 @@ class SettingAccountCooperationRow extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListTile(
-      leading: _icon(),
-      title: Text(_title, style: FontType.listRow),
-      horizontalTitleGap: 4,
-      onTap: () => onTap(),
-    );
+        title: Text(accountType.providerName, style: FontType.listRow),
+        trailing: _trailing(),
+        horizontalTitleGap: 4,
+        onTap: () {
+          if (isLinked()) {
+            return;
+          }
+          onTap();
+        });
   }
 
-  Widget _icon() {
-    switch (accountType) {
-      case LinkAccountType.apple:
-        return Container(
-          padding: EdgeInsets.all(6),
-          decoration: BoxDecoration(
-            color: PilllColors.appleBlack,
-            borderRadius: BorderRadius.circular(12),
-          ),
-          width: 24,
-          height: 24,
-          child: SvgPicture.asset("images/apple_icon.svg"),
-        );
-      case LinkAccountType.google:
-        return Container(
-          padding: EdgeInsets.all(6),
-          child: SvgPicture.asset("images/google_icon.svg"),
-          width: 24,
-          height: 24,
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(12),
-            border: Border.all(color: PilllColors.shadow, width: 0.5),
-          ),
-        );
+  Widget _trailing() {
+    if (isLinked()) {
+      return Row(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          SvgPicture.asset("images/checkmark_green.svg"),
+          SizedBox(width: 6),
+          Text("連携済み",
+              style: FontType.assisting.merge(TextColorStyle.darkGray)),
+        ],
+      );
+    } else {
+      return SizedBox(
+        height: 40,
+        width: 88,
+        child: SmallAppOutlinedButton(
+          onPressed: () {
+            onTap();
+          },
+          text: "連携する",
+        ),
+      );
     }
-  }
-
-  String get _title {
-    final linked = isLinked();
-    final providerName = accountType.providerName;
-    if (!linked) {
-      return providerName;
-    }
-    return "$providerName で登録済み";
   }
 }

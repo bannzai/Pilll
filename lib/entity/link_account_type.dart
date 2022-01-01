@@ -4,7 +4,7 @@ extension LinkAccountTypeExtension on LinkAccountType {
   String get providerName {
     switch (this) {
       case LinkAccountType.apple:
-        return "Apple";
+        return "Apple ID";
       case LinkAccountType.google:
         return "Google アカウント";
     }
