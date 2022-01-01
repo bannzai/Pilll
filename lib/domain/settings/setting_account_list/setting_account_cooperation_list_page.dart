@@ -101,15 +101,6 @@ class SettingAccountCooperationListPage extends HookConsumerWidget {
       },
     );
   }
-
-  String _logEventSuffix(LinkAccountType accountType) {
-    switch (accountType) {
-      case LinkAccountType.apple:
-        return "apple";
-      case LinkAccountType.google:
-        return "google";
-    }
-  }
 }
 
 extension SettingAccountCooperationListPageRoute
