@@ -1,9 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:pilll/analytics.dart';
-import 'package:pilll/auth/apple.dart';
-import 'package:pilll/auth/google.dart';
 import 'package:pilll/components/atoms/buttons.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
@@ -13,8 +10,6 @@ import 'package:pilll/domain/demography/demography_page.dart';
 import 'package:pilll/domain/settings/setting_account_list/components/delete_user_button.dart';
 import 'package:pilll/domain/settings/setting_account_list/setting_account_cooperation_list_page_store.dart';
 import 'package:pilll/entity/link_account_type.dart';
-import 'package:pilll/entity/user_error.dart';
-import 'package:pilll/error/error_alert.dart';
 import 'package:pilll/error/universal_error_page.dart';
 import 'package:pilll/signin/signin_sheet.dart';
 import 'package:pilll/signin/signin_sheet_state.dart';
