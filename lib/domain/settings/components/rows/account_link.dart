@@ -29,7 +29,7 @@ class AccountLinkRow extends StatelessWidget {
         children: [
           SvgPicture.asset("images/checkmark_green.svg"),
           SizedBox(width: 6),
-          Text("登録済み",
+          Text("連携済み",
               style: FontType.assisting.merge(TextColorStyle.darkGray)),
         ],
       );
