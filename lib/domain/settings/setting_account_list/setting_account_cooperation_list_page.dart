@@ -16,6 +16,8 @@ import 'package:pilll/entity/link_account_type.dart';
 import 'package:pilll/entity/user_error.dart';
 import 'package:pilll/error/error_alert.dart';
 import 'package:pilll/error/universal_error_page.dart';
+import 'package:pilll/signin/signin_sheet.dart';
+import 'package:pilll/signin/signin_sheet_state.dart';
 
 class SettingAccountCooperationListPage extends HookConsumerWidget {
   @override
@@ -52,22 +54,22 @@ class SettingAccountCooperationListPage extends HookConsumerWidget {
                     SettingAccountCooperationRow(
                       accountType: LinkAccountType.apple,
                       isLinked: () => state.isLinkedApple,
-                      onTap: () async {
+                      onTap: () {
                         if (state.isLinkedApple) {
                           return;
                         }
-                        await _linkApple(context, store);
+                        _showSigninSheet(context);
                       },
                     ),
                     Divider(indent: 16),
                     SettingAccountCooperationRow(
                       accountType: LinkAccountType.google,
                       isLinked: () => state.isLinkedGoogle,
-                      onTap: () async {
+                      onTap: () {
                         if (state.isLinkedGoogle) {
                           return;
                         }
-                        await _linkGoogle(context, store);
+                        _showSigninSheet(context);
                       },
                     ),
                     Divider(indent: 16),
@@ -79,6 +81,24 @@ class SettingAccountCooperationListPage extends HookConsumerWidget {
           },
         ),
       ),
+    );
+  }
+
+  _showSigninSheet(BuildContext context) {
+    showSigninSheet(
+      context,
+      SigninSheetStateContext.setting,
+      (accountType) async {
+        final snackBarDuration = Duration(seconds: 1);
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(
+            duration: snackBarDuration,
+            content: Text("${accountType.providerName}で登録しました"),
+          ),
+        );
+        await Future.delayed(snackBarDuration);
+        showDemographyPageIfNeeded(context);
+      },
     );
   }
 
