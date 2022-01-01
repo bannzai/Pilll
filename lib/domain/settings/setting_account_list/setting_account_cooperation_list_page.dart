@@ -200,18 +200,9 @@ class SettingAccountCooperationRow extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListTile(
-      title: Text(_title, style: FontType.listRow),
+      title: Text(accountType.providerName, style: FontType.listRow),
       horizontalTitleGap: 4,
       onTap: () => onTap(),
     );
-  }
-
-  String get _title {
-    final linked = isLinked();
-    final providerName = accountType.providerName;
-    if (!linked) {
-      return providerName;
-    }
-    return "$providerName で登録済み";
   }
 }
