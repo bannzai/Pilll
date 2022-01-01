@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/analytics.dart';
 import 'package:pilll/auth/apple.dart';
 import 'package:pilll/auth/google.dart';
+import 'package:pilll/components/atoms/buttons.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
@@ -201,8 +203,34 @@ class SettingAccountCooperationRow extends StatelessWidget {
   Widget build(BuildContext context) {
     return ListTile(
       title: Text(accountType.providerName, style: FontType.listRow),
+      trailing: _trailing(),
       horizontalTitleGap: 4,
       onTap: () => onTap(),
     );
+  }
+
+  Widget _trailing() {
+    if (isLinked()) {
+      return Row(
+        mainAxisSize: MainAxisSize.min,
+        children: [
+          SvgPicture.asset("images/checkmark_green.svg"),
+          SizedBox(width: 6),
+          Text("連携済み",
+              style: FontType.assisting.merge(TextColorStyle.darkGray)),
+        ],
+      );
+    } else {
+      return SizedBox(
+        height: 40,
+        width: 88,
+        child: SmallAppOutlinedButton(
+          onPressed: () {
+            // TODO:
+          },
+          text: "連携する",
+        ),
+      );
+    }
   }
 }
