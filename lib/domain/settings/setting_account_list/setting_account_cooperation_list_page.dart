@@ -111,20 +111,6 @@ class SettingAccountCooperationListPage extends HookConsumerWidget {
     }
   }
 
-  Future<void> _linkApple(
-    BuildContext context,
-    SettingAccountCooperationListPageStore store,
-  ) async {
-    return _link(context, store, LinkAccountType.apple);
-  }
-
-  Future<void> _linkGoogle(
-    BuildContext context,
-    SettingAccountCooperationListPageStore store,
-  ) async {
-    return _link(context, store, LinkAccountType.google);
-  }
-
   Future<void> _link(
     BuildContext context,
     SettingAccountCooperationListPageStore store,
