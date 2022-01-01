@@ -201,38 +201,10 @@ class SettingAccountCooperationRow extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListTile(
-      leading: _icon(),
       title: Text(_title, style: FontType.listRow),
       horizontalTitleGap: 4,
       onTap: () => onTap(),
     );
-  }
-
-  Widget _icon() {
-    switch (accountType) {
-      case LinkAccountType.apple:
-        return Container(
-          padding: EdgeInsets.all(6),
-          decoration: BoxDecoration(
-            color: PilllColors.appleBlack,
-            borderRadius: BorderRadius.circular(12),
-          ),
-          width: 24,
-          height: 24,
-          child: SvgPicture.asset("images/apple_icon.svg"),
-        );
-      case LinkAccountType.google:
-        return Container(
-          padding: EdgeInsets.all(6),
-          child: SvgPicture.asset("images/google_icon.svg"),
-          width: 24,
-          height: 24,
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(12),
-            border: Border.all(color: PilllColors.shadow, width: 0.5),
-          ),
-        );
-    }
   }
 
   String get _title {
