@@ -122,11 +122,15 @@ class SettingAccountCooperationRow extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListTile(
-      title: Text(accountType.providerName, style: FontType.listRow),
-      trailing: _trailing(),
-      horizontalTitleGap: 4,
-      onTap: () => onTap(),
-    );
+        title: Text(accountType.providerName, style: FontType.listRow),
+        trailing: _trailing(),
+        horizontalTitleGap: 4,
+        onTap: () {
+          if (isLinked()) {
+            return;
+          }
+          onTap();
+        });
   }
 
   Widget _trailing() {
@@ -146,7 +150,7 @@ class SettingAccountCooperationRow extends StatelessWidget {
         width: 88,
         child: SmallAppOutlinedButton(
           onPressed: () {
-            // TODO:
+            onTap();
           },
           text: "連携する",
         ),
