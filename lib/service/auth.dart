@@ -13,10 +13,6 @@ final authServiceProvider = Provider(
   (ref) => AuthService(),
 );
 
-final optionalAuthStateStreamProvider = StreamProvider(
-  (ref) => _subscribe(),
-);
-
 final authStateStreamProvider = StreamProvider<User>(
   (ref) => _subscribe().where((event) => event != null).cast(),
 );
