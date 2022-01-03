@@ -23,7 +23,7 @@ class InitialSettingPillSheetGroupPage extends HookConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final store = ref.watch(initialSettingStoreProvider.notifier);
     final state = ref.watch(initialSettingStoreProvider);
-    if (state.isAccountCooperationDidEnd) {
+    if (state.userIsNotAnonymous) {
       Future(() async {
         if (await store.canEndInitialSetting()) {
           AppRouter.signinAccount(context);
@@ -81,7 +81,7 @@ class InitialSettingPillSheetGroupPage extends HookConsumerWidget {
                                       .route());
                             },
                           ),
-                        if (!state.isAccountCooperationDidEnd) ...[
+                        if (!state.userIsNotAnonymous) ...[
                           SizedBox(height: 20),
                           AlertButton(
                             text: "すでにアカウントをお持ちの方はこちら",

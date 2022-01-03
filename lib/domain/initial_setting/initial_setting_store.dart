@@ -66,8 +66,8 @@ class InitialSettingStateStore extends StateNotifier<InitialSettingState> {
       print(
           "watch sign state uid: ${user.uid}, isAnonymous: ${user.isAnonymous}");
 
-      final isAccountCooperationDidEnd = !user.isAnonymous;
-      if (isAccountCooperationDidEnd) {
+      final userIsNotAnonymous = !user.isAnonymous;
+      if (userIsNotAnonymous) {
         final userService = UserService(DatabaseConnection(user.uid));
         await userService.prepare(user.uid);
         await userService.recordUserIDs();
@@ -75,8 +75,7 @@ class InitialSettingStateStore extends StateNotifier<InitialSettingState> {
         unawaited(firebaseAnalytics.setUserId(id: user.uid));
         await Purchases.logIn(user.uid);
       }
-      state = state.copyWith(
-          isAccountCooperationDidEnd: isAccountCooperationDidEnd);
+      state = state.copyWith(userIsNotAnonymous: userIsNotAnonymous);
     });
   }
 
