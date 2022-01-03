@@ -155,11 +155,13 @@ class RootState extends State<Root> {
           if (user.setting == null) {
             return ScreenType.initialSetting;
           }
+
           final storage = await SharedPreferences.getInstance();
           if (!storage.getKeys().contains(StringKey.firebaseAnonymousUserID)) {
             await storage.setString(
                 StringKey.firebaseAnonymousUserID, authInfo.uid);
           }
+
           bool? didEndInitialSetting =
               storage.getBool(BoolKey.didEndInitialSetting);
           if (didEndInitialSetting == null) {
@@ -168,6 +170,7 @@ class RootState extends State<Root> {
           if (!didEndInitialSetting) {
             return ScreenType.initialSetting;
           }
+
           return ScreenType.home;
         });
       }).then((screenType) {
