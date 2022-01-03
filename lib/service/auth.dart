@@ -13,7 +13,7 @@ final authServiceProvider = Provider(
   (ref) => AuthService(),
 );
 
-final authStateStreamProvider = StreamProvider(
+final optionalAuthStateStreamProvider = StreamProvider(
   (ref) => _subscribe(),
 );
 

@@ -4,7 +4,7 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/service/auth.dart';
 
 final databaseProvider = Provider<DatabaseConnection>((ref) {
-  final stream = ref.watch(authStateStreamProvider);
+  final stream = ref.watch(optionalAuthStateStreamProvider);
   final uid = stream.asData?.value?.uid;
   print("database uid is $uid");
   if (uid == null) {

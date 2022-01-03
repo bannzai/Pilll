@@ -25,7 +25,7 @@ class InitialSettingPillSheetGroupPage extends HookConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final store = ref.watch(initialSettingStoreProvider.notifier);
     final state = ref.watch(initialSettingStoreProvider);
-    final authStream = ref.watch(authStateStreamProvider);
+    final authStream = ref.watch(optionalAuthStateStreamProvider);
 
     useEffect(() {
       store.fetch();
