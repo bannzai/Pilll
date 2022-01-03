@@ -226,15 +226,6 @@ class InitialSettingStateStore extends StateNotifier<InitialSettingState> {
     state = state.copyWith(accountType: accountType);
   }
 
-  Future<bool> canEndInitialSetting() async {
-    try {
-      await _settingService.fetch();
-      return true;
-    } catch (error) {
-      return false;
-    }
-  }
-
   showHUD() {
     state = state.copyWith(isLoading: true);
   }
