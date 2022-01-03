@@ -84,7 +84,7 @@ void main() {
       final authService = MockAuthService();
       when(authService.isLinkedApple()).thenReturn(false);
       when(authService.isLinkedGoogle()).thenReturn(false);
-      when(authService.optionalStream()).thenAnswer((realInvocation) => Stream.empty());
+      when(authService.stream()).thenAnswer((realInvocation) => Stream.empty());
       final userService = MockUserService();
       when(userService.fetch())
           .thenAnswer((reaInvocation) => Future.value(_FakeUser()));
@@ -156,7 +156,7 @@ void main() {
       final authService = MockAuthService();
       when(authService.isLinkedApple()).thenReturn(false);
       when(authService.isLinkedGoogle()).thenReturn(false);
-      when(authService.optionalStream()).thenAnswer((realInvocation) => Stream.empty());
+      when(authService.stream()).thenAnswer((realInvocation) => Stream.empty());
       final userService = MockUserService();
       when(userService.fetch())
           .thenAnswer((reaInvocation) => Future.value(_FakeUser()));
@@ -231,7 +231,7 @@ void main() {
       final authService = MockAuthService();
       when(authService.isLinkedApple()).thenReturn(false);
       when(authService.isLinkedGoogle()).thenReturn(false);
-      when(authService.optionalStream()).thenAnswer((realInvocation) => Stream.empty());
+      when(authService.stream()).thenAnswer((realInvocation) => Stream.empty());
       final userService = MockUserService();
       when(userService.fetch())
           .thenAnswer((reaInvocation) => Future.value(_FakeUser()));
@@ -301,7 +301,7 @@ void main() {
       final authService = MockAuthService();
       when(authService.isLinkedApple()).thenReturn(false);
       when(authService.isLinkedGoogle()).thenReturn(false);
-      when(authService.optionalStream()).thenAnswer((realInvocation) => Stream.empty());
+      when(authService.stream()).thenAnswer((realInvocation) => Stream.empty());
       final userService = MockUserService();
       when(userService.fetch())
           .thenAnswer((reaInvocation) => Future.value(_FakeUser()));

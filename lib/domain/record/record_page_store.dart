@@ -166,7 +166,7 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
       );
     });
     _authServiceCanceller?.cancel();
-    _authServiceCanceller = _authService.optionalStream().listen((event) {
+    _authServiceCanceller = _authService.stream().listen((event) {
       state = state.copyWith(
           isLinkedLoginProvider:
               _authService.isLinkedApple() || _authService.isLinkedGoogle());

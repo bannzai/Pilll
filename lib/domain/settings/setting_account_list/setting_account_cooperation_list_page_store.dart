@@ -9,7 +9,8 @@ import 'package:pilll/service/auth.dart';
 import 'package:pilll/service/user.dart';
 import 'package:riverpod/riverpod.dart';
 
-final settingAccountCooperationListProvider = StateNotifierProvider.autoDispose<SettingAccountCooperationListPageStore, SettingAccountCooperationListState>(
+final settingAccountCooperationListProvider = StateNotifierProvider.autoDispose<
+    SettingAccountCooperationListPageStore, SettingAccountCooperationListState>(
   (ref) => SettingAccountCooperationListPageStore(
     ref.watch(userServiceProvider),
     ref.watch(authServiceProvider),

@@ -261,8 +261,12 @@ class MockAuthService extends _i1.Mock implements _i20.AuthService {
 
   @override
   _i16.Stream<_i21.User?> optionalStream() =>
-      (super.noSuchMethod(Invocation.method(#stream, []),
+      (super.noSuchMethod(Invocation.method(#optionalStream, []),
           returnValue: Stream<_i21.User?>.empty()) as _i16.Stream<_i21.User?>);
+  @override
+  _i16.Stream<_i21.User> stream() =>
+      (super.noSuchMethod(Invocation.method(#stream, []),
+          returnValue: Stream<_i21.User>.empty()) as _i16.Stream<_i21.User>);
   @override
   bool isLinkedApple() =>
       (super.noSuchMethod(Invocation.method(#isLinkedApple, []),
