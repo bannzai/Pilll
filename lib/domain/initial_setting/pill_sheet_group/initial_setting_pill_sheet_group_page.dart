@@ -14,27 +14,35 @@ import 'package:pilll/components/atoms/text_color.dart';
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/router/router.dart';
+import 'package:pilll/service/auth.dart';
 import 'package:pilll/signin/signin_sheet.dart';
 import 'package:pilll/signin/signin_sheet_state.dart';
-import 'package:pilll/entity/link_account_type.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
+import 'package:pilll/entity/link_account_type.dart';
 
 class InitialSettingPillSheetGroupPage extends HookConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final store = ref.watch(initialSettingStoreProvider.notifier);
     final state = ref.watch(initialSettingStoreProvider);
+    final authStream = ref.watch(authStateStreamProvider);
+
+    useEffect(() {
+      store.fetch();
+    }, [authStream]);
 
     useEffect(() {
       if (state.userIsNotAnonymous) {
         final accountType = state.accountType;
         if (accountType != null) {
-          ScaffoldMessenger.of(context).showSnackBar(
-            SnackBar(
-              duration: Duration(seconds: 2),
-              content: Text("${accountType.providerName}でログインしました"),
-            ),
-          );
+          Future.microtask(() {
+            ScaffoldMessenger.of(context).showSnackBar(
+              SnackBar(
+                duration: Duration(seconds: 2),
+                content: Text("${accountType.providerName}でログインしました"),
+              ),
+            );
+          });
         }
 
         if (state.settingIsExist) {
@@ -105,7 +113,6 @@ class InitialSettingPillSheetGroupPage extends HookConsumerWidget {
                                 SigninSheetStateContext.initialSetting,
                                 (accountType) async {
                                   store.showHUD();
-                                  store.setAccountType(accountType);
                                 },
                               );
                             },
