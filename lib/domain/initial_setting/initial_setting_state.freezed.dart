@@ -1,5 +1,6 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'initial_setting_state.dart';
@@ -190,7 +191,7 @@ class _$InitialSettingStateTearOff {
       ],
       bool isOnReminder = true,
       bool isLoading = false,
-      bool isAccountCooperationDidEnd = false}) {
+      bool userIsNotAnonymous = false}) {
     return _InitialSettingState(
       pillSheetTypes: pillSheetTypes,
       todayPillNumber: todayPillNumber,
@@ -199,7 +200,7 @@ class _$InitialSettingStateTearOff {
       reminderTimes: reminderTimes,
       isOnReminder: isOnReminder,
       isLoading: isLoading,
-      isAccountCooperationDidEnd: isAccountCooperationDidEnd,
+      userIsNotAnonymous: userIsNotAnonymous,
     );
   }
 }
@@ -217,7 +218,7 @@ mixin _$InitialSettingState {
   List<ReminderTime> get reminderTimes => throw _privateConstructorUsedError;
   bool get isOnReminder => throw _privateConstructorUsedError;
   bool get isLoading => throw _privateConstructorUsedError;
-  bool get isAccountCooperationDidEnd => throw _privateConstructorUsedError;
+  bool get userIsNotAnonymous => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $InitialSettingStateCopyWith<InitialSettingState> get copyWith =>
@@ -237,7 +238,7 @@ abstract class $InitialSettingStateCopyWith<$Res> {
       List<ReminderTime> reminderTimes,
       bool isOnReminder,
       bool isLoading,
-      bool isAccountCooperationDidEnd});
+      bool userIsNotAnonymous});
 
   $InitialSettingTodayPillNumberCopyWith<$Res>? get todayPillNumber;
 }
@@ -260,7 +261,7 @@ class _$InitialSettingStateCopyWithImpl<$Res>
     Object? reminderTimes = freezed,
     Object? isOnReminder = freezed,
     Object? isLoading = freezed,
-    Object? isAccountCooperationDidEnd = freezed,
+    Object? userIsNotAnonymous = freezed,
   }) {
     return _then(_value.copyWith(
       pillSheetTypes: pillSheetTypes == freezed
@@ -291,9 +292,9 @@ class _$InitialSettingStateCopyWithImpl<$Res>
           ? _value.isLoading
           : isLoading // ignore: cast_nullable_to_non_nullable
               as bool,
-      isAccountCooperationDidEnd: isAccountCooperationDidEnd == freezed
-          ? _value.isAccountCooperationDidEnd
-          : isAccountCooperationDidEnd // ignore: cast_nullable_to_non_nullable
+      userIsNotAnonymous: userIsNotAnonymous == freezed
+          ? _value.userIsNotAnonymous
+          : userIsNotAnonymous // ignore: cast_nullable_to_non_nullable
               as bool,
     ));
   }
@@ -326,7 +327,7 @@ abstract class _$InitialSettingStateCopyWith<$Res>
       List<ReminderTime> reminderTimes,
       bool isOnReminder,
       bool isLoading,
-      bool isAccountCooperationDidEnd});
+      bool userIsNotAnonymous});
 
   @override
   $InitialSettingTodayPillNumberCopyWith<$Res>? get todayPillNumber;
@@ -352,7 +353,7 @@ class __$InitialSettingStateCopyWithImpl<$Res>
     Object? reminderTimes = freezed,
     Object? isOnReminder = freezed,
     Object? isLoading = freezed,
-    Object? isAccountCooperationDidEnd = freezed,
+    Object? userIsNotAnonymous = freezed,
   }) {
     return _then(_InitialSettingState(
       pillSheetTypes: pillSheetTypes == freezed
@@ -383,9 +384,9 @@ class __$InitialSettingStateCopyWithImpl<$Res>
           ? _value.isLoading
           : isLoading // ignore: cast_nullable_to_non_nullable
               as bool,
-      isAccountCooperationDidEnd: isAccountCooperationDidEnd == freezed
-          ? _value.isAccountCooperationDidEnd
-          : isAccountCooperationDidEnd // ignore: cast_nullable_to_non_nullable
+      userIsNotAnonymous: userIsNotAnonymous == freezed
+          ? _value.userIsNotAnonymous
+          : userIsNotAnonymous // ignore: cast_nullable_to_non_nullable
               as bool,
     ));
   }
@@ -405,7 +406,7 @@ class _$_InitialSettingState extends _InitialSettingState {
       ],
       this.isOnReminder = true,
       this.isLoading = false,
-      this.isAccountCooperationDidEnd = false})
+      this.userIsNotAnonymous = false})
       : super._();
 
   @JsonKey()
@@ -430,11 +431,11 @@ class _$_InitialSettingState extends _InitialSettingState {
   final bool isLoading;
   @JsonKey()
   @override
-  final bool isAccountCooperationDidEnd;
+  final bool userIsNotAnonymous;
 
   @override
   String toString() {
-    return 'InitialSettingState(pillSheetTypes: $pillSheetTypes, todayPillNumber: $todayPillNumber, fromMenstruation: $fromMenstruation, durationMenstruation: $durationMenstruation, reminderTimes: $reminderTimes, isOnReminder: $isOnReminder, isLoading: $isLoading, isAccountCooperationDidEnd: $isAccountCooperationDidEnd)';
+    return 'InitialSettingState(pillSheetTypes: $pillSheetTypes, todayPillNumber: $todayPillNumber, fromMenstruation: $fromMenstruation, durationMenstruation: $durationMenstruation, reminderTimes: $reminderTimes, isOnReminder: $isOnReminder, isLoading: $isLoading, userIsNotAnonymous: $userIsNotAnonymous)';
   }
 
   @override
@@ -455,8 +456,8 @@ class _$_InitialSettingState extends _InitialSettingState {
             const DeepCollectionEquality()
                 .equals(other.isOnReminder, isOnReminder) &&
             const DeepCollectionEquality().equals(other.isLoading, isLoading) &&
-            const DeepCollectionEquality().equals(
-                other.isAccountCooperationDidEnd, isAccountCooperationDidEnd));
+            const DeepCollectionEquality()
+                .equals(other.userIsNotAnonymous, userIsNotAnonymous));
   }
 
   @override
@@ -469,7 +470,7 @@ class _$_InitialSettingState extends _InitialSettingState {
       const DeepCollectionEquality().hash(reminderTimes),
       const DeepCollectionEquality().hash(isOnReminder),
       const DeepCollectionEquality().hash(isLoading),
-      const DeepCollectionEquality().hash(isAccountCooperationDidEnd));
+      const DeepCollectionEquality().hash(userIsNotAnonymous));
 
   @JsonKey(ignore: true)
   @override
@@ -487,7 +488,7 @@ abstract class _InitialSettingState extends InitialSettingState {
       List<ReminderTime> reminderTimes,
       bool isOnReminder,
       bool isLoading,
-      bool isAccountCooperationDidEnd}) = _$_InitialSettingState;
+      bool userIsNotAnonymous}) = _$_InitialSettingState;
   const _InitialSettingState._() : super._();
 
   @override
@@ -505,7 +506,7 @@ abstract class _InitialSettingState extends InitialSettingState {
   @override
   bool get isLoading;
   @override
-  bool get isAccountCooperationDidEnd;
+  bool get userIsNotAnonymous;
   @override
   @JsonKey(ignore: true)
   _$InitialSettingStateCopyWith<_InitialSettingState> get copyWith =>

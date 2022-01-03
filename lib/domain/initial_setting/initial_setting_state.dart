@@ -35,7 +35,7 @@ class InitialSettingState with _$InitialSettingState {
     @Default(false)
         bool isLoading,
     @Default(false)
-        bool isAccountCooperationDidEnd,
+        bool userIsNotAnonymous,
   }) = _InitialSettingState;
 
   DateTime? reminderTimeOrDefault(int index) {
