@@ -5,6 +5,7 @@ import 'package:pilll/analytics.dart';
 import 'package:pilll/database/batch.dart';
 import 'package:pilll/database/database.dart';
 import 'package:pilll/domain/initial_setting/initial_setting_state.dart';
+import 'package:pilll/entity/link_account_type.dart';
 import 'package:pilll/entity/pill_sheet_group.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/entity/setting.dart';
@@ -69,14 +70,14 @@ class InitialSettingStateStore extends StateNotifier<InitialSettingState> {
       final userIsNotAnonymous = !user.isAnonymous;
       if (userIsNotAnonymous) {
         final userService = UserService(DatabaseConnection(user.uid));
-        await userService.prepare(user.uid);
+        final dbUser = await userService.prepare(user.uid);
         await userService.recordUserIDs();
         unawaited(FirebaseCrashlytics.instance.setUserIdentifier(user.uid));
         unawaited(firebaseAnalytics.setUserId(id: user.uid));
         await Purchases.logIn(user.uid);
 
         state = state.copyWith(userIsNotAnonymous: userIsNotAnonymous);
-        state = state.copyWith(settingIsExist: await settingIsExist());
+        state = state.copyWith(settingIsExist: dbUser.setting != null);
       }
     });
   }
@@ -221,7 +222,11 @@ class InitialSettingStateStore extends StateNotifier<InitialSettingState> {
     await batch.commit();
   }
 
-  Future<bool> settingIsExist() async {
+  setAccountType(LinkAccountType accountType) {
+    state = state.copyWith(accountType: accountType);
+  }
+
+  Future<bool> canEndInitialSetting() async {
     try {
       await _settingService.fetch();
       return true;

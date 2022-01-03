@@ -192,7 +192,8 @@ class _$InitialSettingStateTearOff {
       bool isOnReminder = true,
       bool isLoading = false,
       bool userIsNotAnonymous = false,
-      bool settingIsExist = false}) {
+      bool settingIsExist = false,
+      LinkAccountType? accountType}) {
     return _InitialSettingState(
       pillSheetTypes: pillSheetTypes,
       todayPillNumber: todayPillNumber,
@@ -203,6 +204,7 @@ class _$InitialSettingStateTearOff {
       isLoading: isLoading,
       userIsNotAnonymous: userIsNotAnonymous,
       settingIsExist: settingIsExist,
+      accountType: accountType,
     );
   }
 }
@@ -222,6 +224,7 @@ mixin _$InitialSettingState {
   bool get isLoading => throw _privateConstructorUsedError;
   bool get userIsNotAnonymous => throw _privateConstructorUsedError;
   bool get settingIsExist => throw _privateConstructorUsedError;
+  LinkAccountType? get accountType => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $InitialSettingStateCopyWith<InitialSettingState> get copyWith =>
@@ -242,7 +245,8 @@ abstract class $InitialSettingStateCopyWith<$Res> {
       bool isOnReminder,
       bool isLoading,
       bool userIsNotAnonymous,
-      bool settingIsExist});
+      bool settingIsExist,
+      LinkAccountType? accountType});
 
   $InitialSettingTodayPillNumberCopyWith<$Res>? get todayPillNumber;
 }
@@ -267,6 +271,7 @@ class _$InitialSettingStateCopyWithImpl<$Res>
     Object? isLoading = freezed,
     Object? userIsNotAnonymous = freezed,
     Object? settingIsExist = freezed,
+    Object? accountType = freezed,
   }) {
     return _then(_value.copyWith(
       pillSheetTypes: pillSheetTypes == freezed
@@ -305,6 +310,10 @@ class _$InitialSettingStateCopyWithImpl<$Res>
           ? _value.settingIsExist
           : settingIsExist // ignore: cast_nullable_to_non_nullable
               as bool,
+      accountType: accountType == freezed
+          ? _value.accountType
+          : accountType // ignore: cast_nullable_to_non_nullable
+              as LinkAccountType?,
     ));
   }
 
@@ -337,7 +346,8 @@ abstract class _$InitialSettingStateCopyWith<$Res>
       bool isOnReminder,
       bool isLoading,
       bool userIsNotAnonymous,
-      bool settingIsExist});
+      bool settingIsExist,
+      LinkAccountType? accountType});
 
   @override
   $InitialSettingTodayPillNumberCopyWith<$Res>? get todayPillNumber;
@@ -365,6 +375,7 @@ class __$InitialSettingStateCopyWithImpl<$Res>
     Object? isLoading = freezed,
     Object? userIsNotAnonymous = freezed,
     Object? settingIsExist = freezed,
+    Object? accountType = freezed,
   }) {
     return _then(_InitialSettingState(
       pillSheetTypes: pillSheetTypes == freezed
@@ -403,6 +414,10 @@ class __$InitialSettingStateCopyWithImpl<$Res>
           ? _value.settingIsExist
           : settingIsExist // ignore: cast_nullable_to_non_nullable
               as bool,
+      accountType: accountType == freezed
+          ? _value.accountType
+          : accountType // ignore: cast_nullable_to_non_nullable
+              as LinkAccountType?,
     ));
   }
 }
@@ -422,7 +437,8 @@ class _$_InitialSettingState extends _InitialSettingState {
       this.isOnReminder = true,
       this.isLoading = false,
       this.userIsNotAnonymous = false,
-      this.settingIsExist = false})
+      this.settingIsExist = false,
+      this.accountType})
       : super._();
 
   @JsonKey()
@@ -451,10 +467,12 @@ class _$_InitialSettingState extends _InitialSettingState {
   @JsonKey()
   @override
   final bool settingIsExist;
+  @override
+  final LinkAccountType? accountType;
 
   @override
   String toString() {
-    return 'InitialSettingState(pillSheetTypes: $pillSheetTypes, todayPillNumber: $todayPillNumber, fromMenstruation: $fromMenstruation, durationMenstruation: $durationMenstruation, reminderTimes: $reminderTimes, isOnReminder: $isOnReminder, isLoading: $isLoading, userIsNotAnonymous: $userIsNotAnonymous, settingIsExist: $settingIsExist)';
+    return 'InitialSettingState(pillSheetTypes: $pillSheetTypes, todayPillNumber: $todayPillNumber, fromMenstruation: $fromMenstruation, durationMenstruation: $durationMenstruation, reminderTimes: $reminderTimes, isOnReminder: $isOnReminder, isLoading: $isLoading, userIsNotAnonymous: $userIsNotAnonymous, settingIsExist: $settingIsExist, accountType: $accountType)';
   }
 
   @override
@@ -478,7 +496,9 @@ class _$_InitialSettingState extends _InitialSettingState {
             const DeepCollectionEquality()
                 .equals(other.userIsNotAnonymous, userIsNotAnonymous) &&
             const DeepCollectionEquality()
-                .equals(other.settingIsExist, settingIsExist));
+                .equals(other.settingIsExist, settingIsExist) &&
+            const DeepCollectionEquality()
+                .equals(other.accountType, accountType));
   }
 
   @override
@@ -492,7 +512,8 @@ class _$_InitialSettingState extends _InitialSettingState {
       const DeepCollectionEquality().hash(isOnReminder),
       const DeepCollectionEquality().hash(isLoading),
       const DeepCollectionEquality().hash(userIsNotAnonymous),
-      const DeepCollectionEquality().hash(settingIsExist));
+      const DeepCollectionEquality().hash(settingIsExist),
+      const DeepCollectionEquality().hash(accountType));
 
   @JsonKey(ignore: true)
   @override
@@ -511,7 +532,8 @@ abstract class _InitialSettingState extends InitialSettingState {
       bool isOnReminder,
       bool isLoading,
       bool userIsNotAnonymous,
-      bool settingIsExist}) = _$_InitialSettingState;
+      bool settingIsExist,
+      LinkAccountType? accountType}) = _$_InitialSettingState;
   const _InitialSettingState._() : super._();
 
   @override
@@ -532,6 +554,8 @@ abstract class _InitialSettingState extends InitialSettingState {
   bool get userIsNotAnonymous;
   @override
   bool get settingIsExist;
+  @override
+  LinkAccountType? get accountType;
   @override
   @JsonKey(ignore: true)
   _$InitialSettingStateCopyWith<_InitialSettingState> get copyWith =>
