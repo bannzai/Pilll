@@ -74,6 +74,7 @@ class RootState extends State<Root> {
       });
       return ScaffoldIndicator();
     }
+
     return UniversalErrorPage(
       error: _error,
       reload: () => reload(),
