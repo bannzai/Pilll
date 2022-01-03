@@ -1,7 +1,10 @@
 import 'dart:async';
 
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_crashlytics/firebase_crashlytics.dart';
 import 'package:pilll/analytics.dart';
+import 'package:pilll/auth/apple.dart';
+import 'package:pilll/auth/google.dart';
 import 'package:pilll/database/batch.dart';
 import 'package:pilll/database/database.dart';
 import 'package:pilll/domain/initial_setting/initial_setting_state.dart';
@@ -9,7 +12,6 @@ import 'package:pilll/entity/link_account_type.dart';
 import 'package:pilll/entity/pill_sheet_group.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/entity/setting.dart';
-import 'package:pilll/service/auth.dart';
 import 'package:pilll/service/pill_sheet.dart';
 import 'package:pilll/service/pill_sheet_group.dart';
 import 'package:pilll/service/pill_sheet_modified_history.dart';
@@ -19,11 +21,10 @@ import 'package:pilll/util/datetime/day.dart';
 import 'package:purchases_flutter/purchases_flutter.dart';
 import 'package:riverpod/riverpod.dart';
 
-final initialSettingStoreProvider =
-    StateNotifierProvider<InitialSettingStateStore, InitialSettingState>(
+final initialSettingStoreProvider = StateNotifierProvider.autoDispose<
+    InitialSettingStateStore, InitialSettingState>(
   (ref) => InitialSettingStateStore(
     ref.watch(batchFactoryProvider),
-    ref.watch(authServiceProvider),
     ref.watch(settingServiceProvider),
     ref.watch(pillSheetServiceProvider),
     ref.watch(pillSheetModifiedHistoryServiceProvider),
@@ -32,54 +33,49 @@ final initialSettingStoreProvider =
 );
 
 final initialSettingStateProvider =
-    StateProvider((ref) => ref.watch(initialSettingStoreProvider));
+    StateProvider.autoDispose((ref) => ref.watch(initialSettingStoreProvider));
 
 class InitialSettingStateStore extends StateNotifier<InitialSettingState> {
   final BatchFactory _batchFactory;
-  final AuthService _authService;
   final SettingService _settingService;
   final PillSheetService _pillSheetService;
   final PillSheetModifiedHistoryService _pillSheetModifiedHistoryService;
   final PillSheetGroupService _pillSheetGroupService;
   InitialSettingStateStore(
     this._batchFactory,
-    this._authService,
     this._settingService,
     this._pillSheetService,
     this._pillSheetModifiedHistoryService,
     this._pillSheetGroupService,
-  ) : super(InitialSettingState()) {
-    _reset();
-  }
+  ) : super(InitialSettingState());
 
-  _reset() {
-    _subscribe();
-  }
+  fetch() async {
+    final user = FirebaseAuth.instance.currentUser;
 
-  StreamSubscription? _authCanceller;
-  _subscribe() {
-    _authCanceller?.cancel();
-    _authCanceller = _authService.stream().listen((user) async {
-      print("watch sign state user: $user");
-      if (user == null) {
-        return;
+    print("watch sign state user: $user");
+    if (user == null) {
+      return;
+    }
+    print(
+        "watch sign state uid: ${user.uid}, isAnonymous: ${user.isAnonymous}");
+
+    final userIsNotAnonymous = !user.isAnonymous;
+    if (userIsNotAnonymous) {
+      final userService = UserService(DatabaseConnection(user.uid));
+      final dbUser = await userService.prepare(user.uid);
+      await userService.recordUserIDs();
+      unawaited(FirebaseCrashlytics.instance.setUserIdentifier(user.uid));
+      unawaited(firebaseAnalytics.setUserId(id: user.uid));
+      await Purchases.logIn(user.uid);
+
+      state = state.copyWith(userIsNotAnonymous: userIsNotAnonymous);
+      state = state.copyWith(settingIsExist: dbUser.setting != null);
+      if (isLinkedApple()) {
+        state = state.copyWith(accountType: LinkAccountType.apple);
+      } else if (isLinkedGoogle()) {
+        state = state.copyWith(accountType: LinkAccountType.google);
       }
-      print(
-          "watch sign state uid: ${user.uid}, isAnonymous: ${user.isAnonymous}");
-
-      final userIsNotAnonymous = !user.isAnonymous;
-      if (userIsNotAnonymous) {
-        final userService = UserService(DatabaseConnection(user.uid));
-        final dbUser = await userService.prepare(user.uid);
-        await userService.recordUserIDs();
-        unawaited(FirebaseCrashlytics.instance.setUserIdentifier(user.uid));
-        unawaited(firebaseAnalytics.setUserId(id: user.uid));
-        await Purchases.logIn(user.uid);
-
-        state = state.copyWith(userIsNotAnonymous: userIsNotAnonymous);
-        state = state.copyWith(settingIsExist: dbUser.setting != null);
-      }
-    });
+    }
   }
 
   void selectedPillSheetType(PillSheetType pillSheetType) {
@@ -220,10 +216,6 @@ class InitialSettingStateStore extends StateNotifier<InitialSettingState> {
     _settingService.updateWithBatch(batch, state.buildSetting());
 
     await batch.commit();
-  }
-
-  setAccountType(LinkAccountType accountType) {
-    state = state.copyWith(accountType: accountType);
   }
 
   showHUD() {
