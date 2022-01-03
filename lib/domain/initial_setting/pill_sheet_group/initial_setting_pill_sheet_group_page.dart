@@ -24,11 +24,25 @@ class InitialSettingPillSheetGroupPage extends HookConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final store = ref.watch(initialSettingStoreProvider.notifier);
     final state = ref.watch(initialSettingStoreProvider);
+
     useEffect(() {
-      if (state.settingIsExist) {
-        AppRouter.signinAccount(context);
+      if (state.userIsNotAnonymous) {
+        final accountType = state.accountType;
+        if (accountType != null) {
+          ScaffoldMessenger.of(context).showSnackBar(
+            SnackBar(
+              duration: Duration(seconds: 2),
+              content: Text("${accountType.providerName}でログインしました"),
+            ),
+          );
+        }
+
+        if (state.settingIsExist) {
+          AppRouter.signinAccount(context);
+        }
       }
-    }, [state.userIsNotAnonymous]);
+    }, [state.userIsNotAnonymous, state.accountType, state.settingIsExist]);
+
     return HUD(
       shown: state.isLoading,
       child: Scaffold(
@@ -91,17 +105,7 @@ class InitialSettingPillSheetGroupPage extends HookConsumerWidget {
                                 SigninSheetStateContext.initialSetting,
                                 (accountType) async {
                                   store.showHUD();
-                                  if (await store.settingIsExist()) {
-                                    AppRouter.signinAccount(context);
-                                  } else {
-                                    ScaffoldMessenger.of(context).showSnackBar(
-                                      SnackBar(
-                                        duration: Duration(seconds: 2),
-                                        content: Text(
-                                            "${accountType.providerName}でログインしました"),
-                                      ),
-                                    );
-                                  }
+                                  store.setAccountType(accountType);
                                 },
                               );
                             },
