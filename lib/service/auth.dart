@@ -22,8 +22,13 @@ final authStateStreamProvider = StreamProvider<User>(
 );
 
 class AuthService {
+  // 退会時は一時的にnullになる。なのでOptional型のこのstreamを使う
   Stream<User?> optionalStream() {
     return _subscribe();
+  }
+
+  Stream<User> stream() {
+    return optionalStream().where((event) => event != null).cast();
   }
 
   bool isLinkedApple() {

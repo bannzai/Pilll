@@ -71,7 +71,7 @@ class PremiumIntroductionStore extends StateNotifier<PremiumIntroductionState> {
       );
     });
     _authStreamCanceller?.cancel();
-    _authStreamCanceller = _authService.optionalStream().listen((_) {
+    _authStreamCanceller = _authService.stream().listen((_) {
       state = state.copyWith(
           hasLoginProvider:
               _authService.isLinkedApple() || _authService.isLinkedGoogle());
