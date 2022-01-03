@@ -1,3 +1,4 @@
+import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:pilll/analytics.dart';
 import 'package:pilll/components/atoms/font.dart';
@@ -23,14 +24,11 @@ class InitialSettingPillSheetGroupPage extends HookConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final store = ref.watch(initialSettingStoreProvider.notifier);
     final state = ref.watch(initialSettingStoreProvider);
-    if (state.userIsNotAnonymous) {
-      Future(() async {
-        if (await store.canEndInitialSetting()) {
-          AppRouter.signinAccount(context);
-        }
-        store.hideHUD();
-      });
-    }
+    useEffect(() {
+      if (state.settingIsExist) {
+        AppRouter.signinAccount(context);
+      }
+    }, [state.userIsNotAnonymous]);
     return HUD(
       shown: state.isLoading,
       child: Scaffold(
@@ -93,7 +91,7 @@ class InitialSettingPillSheetGroupPage extends HookConsumerWidget {
                                 SigninSheetStateContext.initialSetting,
                                 (accountType) async {
                                   store.showHUD();
-                                  if (await store.canEndInitialSetting()) {
+                                  if (await store.settingIsExist()) {
                                     AppRouter.signinAccount(context);
                                   } else {
                                     ScaffoldMessenger.of(context).showSnackBar(

@@ -74,8 +74,10 @@ class InitialSettingStateStore extends StateNotifier<InitialSettingState> {
         unawaited(FirebaseCrashlytics.instance.setUserIdentifier(user.uid));
         unawaited(firebaseAnalytics.setUserId(id: user.uid));
         await Purchases.logIn(user.uid);
+
+        state = state.copyWith(userIsNotAnonymous: userIsNotAnonymous);
+        state = state.copyWith(settingIsExist: await settingIsExist());
       }
-      state = state.copyWith(userIsNotAnonymous: userIsNotAnonymous);
     });
   }
 
@@ -219,7 +221,7 @@ class InitialSettingStateStore extends StateNotifier<InitialSettingState> {
     await batch.commit();
   }
 
-  Future<bool> canEndInitialSetting() async {
+  Future<bool> settingIsExist() async {
     try {
       await _settingService.fetch();
       return true;
