@@ -79,7 +79,7 @@ class RootState extends State<Root> {
       error: _error,
       reload: () => reload(),
       child: Consumer(builder: (context, ref, child) {
-        return ref.watch(optionalAuthStateStreamProvider).when(data: (snapshot) {
+        return ref.watch(authStateStreamProvider).when(data: (snapshot) {
           switch (screenType) {
             case ScreenType.home:
               return HomePage(key: homeKey);
