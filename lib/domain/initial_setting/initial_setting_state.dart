@@ -36,6 +36,8 @@ class InitialSettingState with _$InitialSettingState {
         bool isLoading,
     @Default(false)
         bool userIsNotAnonymous,
+    @Default(false)
+        bool settingIsExist,
   }) = _InitialSettingState;
 
   DateTime? reminderTimeOrDefault(int index) {
