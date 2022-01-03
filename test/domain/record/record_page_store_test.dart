@@ -40,7 +40,7 @@ void main() {
       final authService = MockAuthService();
       when(authService.isLinkedApple()).thenReturn(false);
       when(authService.isLinkedGoogle()).thenReturn(false);
-      when(authService.stream())
+      when(authService.optionalStream())
           .thenAnswer((realInvocation) => Stream.empty());
 
       final pillSheet = PillSheet(
@@ -133,7 +133,7 @@ void main() {
       final authService = MockAuthService();
       when(authService.isLinkedApple()).thenReturn(false);
       when(authService.isLinkedGoogle()).thenReturn(false);
-      when(authService.stream())
+      when(authService.optionalStream())
           .thenAnswer((realInvocation) => Stream.empty());
 
       final pillSheet = PillSheet(
@@ -239,7 +239,7 @@ void main() {
       final authService = MockAuthService();
       when(authService.isLinkedApple()).thenReturn(false);
       when(authService.isLinkedGoogle()).thenReturn(false);
-      when(authService.stream())
+      when(authService.optionalStream())
           .thenAnswer((realInvocation) => Stream.empty());
 
       final pillSheet = PillSheet(
@@ -347,7 +347,7 @@ void main() {
       final authService = MockAuthService();
       when(authService.isLinkedApple()).thenReturn(false);
       when(authService.isLinkedGoogle()).thenReturn(false);
-      when(authService.stream())
+      when(authService.optionalStream())
           .thenAnswer((realInvocation) => Stream.empty());
 
       final pillSheet = PillSheet(
@@ -468,7 +468,7 @@ void main() {
       final authService = MockAuthService();
       when(authService.isLinkedApple()).thenReturn(false);
       when(authService.isLinkedGoogle()).thenReturn(false);
-      when(authService.stream())
+      when(authService.optionalStream())
           .thenAnswer((realInvocation) => Stream.empty());
 
       final pillSheet = PillSheet(
@@ -589,7 +589,7 @@ void main() {
       final authService = MockAuthService();
       when(authService.isLinkedApple()).thenReturn(false);
       when(authService.isLinkedGoogle()).thenReturn(false);
-      when(authService.stream())
+      when(authService.optionalStream())
           .thenAnswer((realInvocation) => Stream.empty());
 
       final pillSheet = PillSheet(

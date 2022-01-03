@@ -22,7 +22,7 @@ final authStateStreamProvider = StreamProvider<User>(
 );
 
 class AuthService {
-  Stream<User?> stream() {
+  Stream<User?> optionalStream() {
     return _subscribe();
   }
 

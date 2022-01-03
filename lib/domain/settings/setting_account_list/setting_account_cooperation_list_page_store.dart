@@ -37,7 +37,7 @@ class SettingAccountCooperationListPageStore
   StreamSubscription? _authCanceller;
   _subscribe() {
     _authCanceller?.cancel();
-    _authCanceller = _authService.stream().listen((user) {
+    _authCanceller = _authService.optionalStream().listen((user) {
       print(
           "watch sign state uid: ${user?.uid}, isAnonymous: ${user?.isAnonymous}");
       state = state.copyWith(user: user);
