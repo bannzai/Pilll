@@ -17,6 +17,10 @@ final optionalAuthStateStreamProvider = StreamProvider(
   (ref) => _subscribe(),
 );
 
+final authStateStreamProvider = StreamProvider<User>(
+  (ref) => _subscribe().where((event) => event != null).cast(),
+);
+
 class AuthService {
   Stream<User?> stream() {
     return _subscribe();
