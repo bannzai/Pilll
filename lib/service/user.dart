@@ -36,12 +36,13 @@ class UserService {
   }
 
   Future<User> fetch() {
-    print("call fetch");
+    print("call fetch for ${_database.userID}");
     return _database.userReference().get().then((document) {
       if (!document.exists) {
+        print("user does not exists ${_database.userID}");
         throw UserNotFound();
       }
-      print("fetched user ${document.data()}");
+      print("fetched user ${document.data()}, id: ${_database.userID}");
       return User.fromJson(document.data() as Map<String, dynamic>);
     });
   }

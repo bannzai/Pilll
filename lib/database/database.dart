@@ -27,6 +27,7 @@ abstract class _CollectionPath {
 
 class DatabaseConnection {
   DatabaseConnection(this._userID);
+  String get userID => _userID;
   final String _userID;
 
   DocumentReference userReference() {

@@ -1,4 +1,7 @@
+import 'dart:async';
+
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:pilll/analytics.dart';
 import 'package:pilll/auth/apple.dart';
 import 'package:pilll/auth/google.dart';
@@ -43,9 +46,7 @@ Stream<User?> _userAuthStateChanges() {
 // If it is not exists, return result of signin anonymous;
 Future<User> signIn() async {
   analytics.logEvent(name: "call_sign_in");
-
-  final currentUser =
-      (await _userAuthStateChanges().last) ?? FirebaseAuth.instance.currentUser;
+  final currentUser = FirebaseAuth.instance.currentUser;
 
   analytics.logEvent(
     name: "current_user_fetched",
@@ -83,10 +84,20 @@ Future<User> signIn() async {
     }
 
     // keep until FirebaseAuth.instance user state updated
-    final User signedUser = await _userAuthStateChanges()
-        .where((event) => event != null)
-        .cast()
-        .last;
+    final obtainLatestChangedUserState = Future<User>(() {
+      final completer = Completer<User>();
+      final Stream<User> nonOptionalStream =
+          _userAuthStateChanges().where((event) => event != null).cast();
+
+      StreamSubscription<User>? subscription;
+      subscription = nonOptionalStream.listen((firebaseUser) {
+        completer.complete(firebaseUser);
+        subscription?.cancel();
+      });
+      return completer.future;
+    });
+
+    final User signedUser = await obtainLatestChangedUserState;
     assert(anonymousUser.user?.uid == signedUser.uid);
     return signedUser;
   }
