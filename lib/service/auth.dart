@@ -67,7 +67,8 @@ Map<String, dynamic> _logginParameters(User? currentUser) {
 }
 
 Future<User?> _cacheOrAuth() async {
-  final currentUser = FirebaseAuth.instance.currentUser;
+  final currentUser = await FirebaseAuth.instance.userChanges().last;
+
   analytics.logEvent(
     name: "current_user_fetched",
     parameters: _logginParameters(currentUser),
