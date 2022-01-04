@@ -42,7 +42,8 @@ Stream<User?> _userAuthStateChanges() {
 // Obtain the latest users form FirebaseAuth.
 // If it is not exists, return result of signin anonymous;
 Future<User> signIn() async {
-  final currentUser = await FirebaseAuth.instance.userChanges().last;
+  final currentUser =
+      (await _userAuthStateChanges().last) ?? FirebaseAuth.instance.currentUser;
 
   analytics.logEvent(
     name: "current_user_fetched",
@@ -80,8 +81,7 @@ Future<User> signIn() async {
     }
 
     // keep until FirebaseAuth.instance user state updated
-    final User signedUser = await FirebaseAuth.instance
-        .userChanges()
+    final User signedUser = await _userAuthStateChanges()
         .where((event) => event != null)
         .cast()
         .last;
