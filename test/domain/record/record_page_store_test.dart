@@ -40,8 +40,7 @@ void main() {
       final authService = MockAuthService();
       when(authService.isLinkedApple()).thenReturn(false);
       when(authService.isLinkedGoogle()).thenReturn(false);
-      when(authService.stream())
-          .thenAnswer((realInvocation) => Stream.empty());
+      when(authService.stream()).thenAnswer((realInvocation) => Stream.empty());
 
       final pillSheet = PillSheet(
         typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
@@ -98,8 +97,7 @@ void main() {
 
       final user = User();
       final userService = MockUserService();
-      when(userService.stream())
-          .thenAnswer((realInvocation) => Stream.empty());
+      when(userService.stream()).thenAnswer((realInvocation) => Stream.empty());
       when(userService.fetch()).thenAnswer((realInvocation) async => user);
 
       final container = ProviderContainer(
@@ -133,8 +131,7 @@ void main() {
       final authService = MockAuthService();
       when(authService.isLinkedApple()).thenReturn(false);
       when(authService.isLinkedGoogle()).thenReturn(false);
-      when(authService.stream())
-          .thenAnswer((realInvocation) => Stream.empty());
+      when(authService.stream()).thenAnswer((realInvocation) => Stream.empty());
 
       final pillSheet = PillSheet(
         typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
@@ -202,8 +199,7 @@ void main() {
 
       final user = User();
       final userService = MockUserService();
-      when(userService.stream())
-          .thenAnswer((realInvocation) => Stream.empty());
+      when(userService.stream()).thenAnswer((realInvocation) => Stream.empty());
       when(userService.fetch()).thenAnswer((realInvocation) async => user);
 
       final container = ProviderContainer(
@@ -239,8 +235,7 @@ void main() {
       final authService = MockAuthService();
       when(authService.isLinkedApple()).thenReturn(false);
       when(authService.isLinkedGoogle()).thenReturn(false);
-      when(authService.stream())
-          .thenAnswer((realInvocation) => Stream.empty());
+      when(authService.stream()).thenAnswer((realInvocation) => Stream.empty());
 
       final pillSheet = PillSheet(
         id: "sheet_id",
@@ -311,8 +306,7 @@ void main() {
 
       final user = User();
       final userService = MockUserService();
-      when(userService.stream())
-          .thenAnswer((realInvocation) => Stream.empty());
+      when(userService.stream()).thenAnswer((realInvocation) => Stream.empty());
       when(userService.fetch()).thenAnswer((realInvocation) async => user);
 
       final container = ProviderContainer(
@@ -347,8 +341,7 @@ void main() {
       final authService = MockAuthService();
       when(authService.isLinkedApple()).thenReturn(false);
       when(authService.isLinkedGoogle()).thenReturn(false);
-      when(authService.stream())
-          .thenAnswer((realInvocation) => Stream.empty());
+      when(authService.stream()).thenAnswer((realInvocation) => Stream.empty());
 
       final pillSheet = PillSheet(
         id: "sheet_id",
@@ -431,8 +424,7 @@ void main() {
 
       final user = User();
       final userService = MockUserService();
-      when(userService.stream())
-          .thenAnswer((realInvocation) => Stream.empty());
+      when(userService.stream()).thenAnswer((realInvocation) => Stream.empty());
       when(userService.fetch()).thenAnswer((realInvocation) async => user);
 
       final container = ProviderContainer(
@@ -468,8 +460,7 @@ void main() {
       final authService = MockAuthService();
       when(authService.isLinkedApple()).thenReturn(false);
       when(authService.isLinkedGoogle()).thenReturn(false);
-      when(authService.stream())
-          .thenAnswer((realInvocation) => Stream.empty());
+      when(authService.stream()).thenAnswer((realInvocation) => Stream.empty());
 
       final pillSheet = PillSheet(
         id: "sheet_id",
@@ -552,8 +543,7 @@ void main() {
 
       final user = User();
       final userService = MockUserService();
-      when(userService.stream())
-          .thenAnswer((realInvocation) => Stream.empty());
+      when(userService.stream()).thenAnswer((realInvocation) => Stream.empty());
       when(userService.fetch()).thenAnswer((realInvocation) async => user);
 
       final container = ProviderContainer(
@@ -589,8 +579,7 @@ void main() {
       final authService = MockAuthService();
       when(authService.isLinkedApple()).thenReturn(false);
       when(authService.isLinkedGoogle()).thenReturn(false);
-      when(authService.stream())
-          .thenAnswer((realInvocation) => Stream.empty());
+      when(authService.stream()).thenAnswer((realInvocation) => Stream.empty());
 
       final pillSheet = PillSheet(
         id: "sheet_id",
@@ -676,8 +665,7 @@ void main() {
 
       final user = User();
       final userService = MockUserService();
-      when(userService.stream())
-          .thenAnswer((realInvocation) => Stream.empty());
+      when(userService.stream()).thenAnswer((realInvocation) => Stream.empty());
       when(userService.fetch()).thenAnswer((realInvocation) async => user);
 
       final container = ProviderContainer(

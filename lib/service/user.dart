@@ -1,3 +1,4 @@
+import 'dart:async';
 import 'dart:io';
 
 import 'package:firebase_auth/firebase_auth.dart' as firebaseAuth;
@@ -35,59 +36,15 @@ class UserService {
   }
 
   Future<User> fetch() {
-    print("call fetch");
+    print("call fetch for ${_database.userID}");
     return _database.userReference().get().then((document) {
       if (!document.exists) {
+        print("user does not exists ${_database.userID}");
         throw UserNotFound();
       }
-      print("fetched user ${document.data()}");
+      print("fetched user ${document.data()}, id: ${_database.userID}");
       return User.fromJson(document.data() as Map<String, dynamic>);
     });
-  }
-
-  Future<DocumentSnapshot> _fetchRawDocumentSnapshot() {
-    return _database.userReference().get();
-  }
-
-  Future<void> recordUserIDs() async {
-    try {
-      final document = await _fetchRawDocumentSnapshot();
-      final user = User.fromJson(document.data() as Map<String, dynamic>);
-      final documentID = document.id;
-      final sharedPreferences = await SharedPreferences.getInstance();
-
-      List<String> userDocumentIDSets = user.userDocumentIDSets;
-      if (!userDocumentIDSets.contains(documentID)) {
-        userDocumentIDSets.add(documentID);
-      }
-
-      final lastSigninAnonymousUID =
-          sharedPreferences.getString(StringKey.lastSigninAnonymousUID);
-      List<String> anonymousUserIDSets = user.anonymousUserIDSets;
-      if (lastSigninAnonymousUID != null &&
-          !anonymousUserIDSets.contains(lastSigninAnonymousUID)) {
-        anonymousUserIDSets.add(lastSigninAnonymousUID);
-      }
-      final firebaseCurrentUserID =
-          firebaseAuth.FirebaseAuth.instance.currentUser?.uid;
-      List<String> firebaseCurrentUserIDSets = user.firebaseCurrentUserIDSets;
-      if (firebaseCurrentUserID != null &&
-          !firebaseCurrentUserIDSets.contains(firebaseCurrentUserID)) {
-        firebaseCurrentUserIDSets.add(firebaseCurrentUserID);
-      }
-
-      await _database.userReference().set(
-        {
-          UserFirestoreFieldKeys.userDocumentIDSets: userDocumentIDSets,
-          UserFirestoreFieldKeys.firebaseCurrentUserIDSets:
-              firebaseCurrentUserIDSets,
-          UserFirestoreFieldKeys.anonymousUserIDSets: anonymousUserIDSets,
-        },
-        SetOptions(merge: true),
-      );
-    } catch (error) {
-      print(error);
-    }
   }
 
   Stream<User> stream() {
@@ -173,48 +130,6 @@ class UserService {
     );
   }
 
-  Future<void> saveLaunchInfo() {
-    final os = Platform.operatingSystem;
-    return PackageInfo.fromPlatform().then((info) {
-      final packageInfo = Package(
-          latestOS: os,
-          appName: info.appName,
-          buildNumber: info.buildNumber,
-          appVersion: info.version);
-      return _database.userReference().set(
-          {UserFirestoreFieldKeys.packageInfo: packageInfo.toJson()},
-          SetOptions(merge: true));
-    });
-  }
-
-  Future<void> saveStats() async {
-    final store = await SharedPreferences.getInstance();
-
-    final lastLoginVersion =
-        await PackageInfo.fromPlatform().then((value) => value.version);
-    String? beginingVersion = store.getString(StringKey.beginingVersionKey);
-    if (beginingVersion == null) {
-      final v = lastLoginVersion;
-      await store.setString(StringKey.beginingVersionKey, v);
-      beginingVersion = v;
-    }
-
-    final now = DateTime.now();
-    final timeZoneName = now.timeZoneName;
-    final timeZoneOffset = now.timeZoneOffset;
-
-    return _database.userReference().set({
-      "stats": {
-        "lastLoginAt": now,
-        "beginingVersion": beginingVersion,
-        "lastLoginVersion": lastLoginVersion,
-        "timeZoneName": timeZoneName,
-        "timeZoneOffset":
-            "${timeZoneOffset.isNegative ? "-" : "+"}${timeZoneOffset.inHours}",
-      }
-    }, SetOptions(merge: true));
-  }
-
   Future<void> linkApple(String? email) async {
     await _database.userReference().set({
       UserFirestoreFieldKeys.isAnonymous: false,
@@ -251,6 +166,22 @@ class UserService {
     }, SetOptions(merge: true));
   }
 
+  Future<void> sendPremiumFunctionSurvey(
+      List<PremiumFunctionSurveyElementType> elements, String message) async {
+    final PremiumFunctionSurvey premiumFunctionSurvey = PremiumFunctionSurvey(
+      elements: elements,
+      message: message,
+    );
+    return _database.userPrivateReference().set({
+      UserPrivateFirestoreFieldKeys.premiumFunctionSurvey:
+          premiumFunctionSurvey.toJson()
+    }, SetOptions(merge: true));
+  }
+
+  Future<DocumentSnapshot> _fetchRawDocumentSnapshot() {
+    return _database.userReference().get();
+  }
+
   // NOTE: 下位互換のために一時的にhasDiscountEntitlementをtrueにしていくスクリプト。
   // サーバー側での制御が無駄になるけど、理屈ではこれで生合成が取れる
   Future<void> temporarySyncronizeDiscountEntitlement(User user) async {
@@ -266,16 +197,95 @@ class UserService {
       UserFirestoreFieldKeys.hasDiscountEntitlement: hasDiscountEntitlement,
     }, SetOptions(merge: true));
   }
+}
 
-  Future<void> sendPremiumFunctionSurvey(
-      List<PremiumFunctionSurveyElementType> elements, String message) async {
-    final PremiumFunctionSurvey premiumFunctionSurvey = PremiumFunctionSurvey(
-      elements: elements,
-      message: message,
-    );
-    return _database.userPrivateReference().set({
-      UserPrivateFirestoreFieldKeys.premiumFunctionSurvey:
-          premiumFunctionSurvey.toJson()
+extension SaveUserLaunchInfo on UserService {
+  saveUserLaunchInfo() {
+    unawaited(_recordUserIDs());
+    unawaited(_saveLaunchInfo());
+    unawaited(_saveStats());
+  }
+
+  Future<void> _recordUserIDs() async {
+    try {
+      final document = await _fetchRawDocumentSnapshot();
+      final user = User.fromJson(document.data() as Map<String, dynamic>);
+      final documentID = document.id;
+      final sharedPreferences = await SharedPreferences.getInstance();
+
+      List<String> userDocumentIDSets = user.userDocumentIDSets;
+      if (!userDocumentIDSets.contains(documentID)) {
+        userDocumentIDSets.add(documentID);
+      }
+
+      final lastSigninAnonymousUID =
+          sharedPreferences.getString(StringKey.lastSigninAnonymousUID);
+      List<String> anonymousUserIDSets = user.anonymousUserIDSets;
+      if (lastSigninAnonymousUID != null &&
+          !anonymousUserIDSets.contains(lastSigninAnonymousUID)) {
+        anonymousUserIDSets.add(lastSigninAnonymousUID);
+      }
+      final firebaseCurrentUserID =
+          firebaseAuth.FirebaseAuth.instance.currentUser?.uid;
+      List<String> firebaseCurrentUserIDSets = user.firebaseCurrentUserIDSets;
+      if (firebaseCurrentUserID != null &&
+          !firebaseCurrentUserIDSets.contains(firebaseCurrentUserID)) {
+        firebaseCurrentUserIDSets.add(firebaseCurrentUserID);
+      }
+
+      await _database.userReference().set(
+        {
+          UserFirestoreFieldKeys.userDocumentIDSets: userDocumentIDSets,
+          UserFirestoreFieldKeys.firebaseCurrentUserIDSets:
+              firebaseCurrentUserIDSets,
+          UserFirestoreFieldKeys.anonymousUserIDSets: anonymousUserIDSets,
+        },
+        SetOptions(merge: true),
+      );
+    } catch (error) {
+      print(error);
+    }
+  }
+
+  Future<void> _saveLaunchInfo() {
+    final os = Platform.operatingSystem;
+    return PackageInfo.fromPlatform().then((info) {
+      final packageInfo = Package(
+          latestOS: os,
+          appName: info.appName,
+          buildNumber: info.buildNumber,
+          appVersion: info.version);
+      return _database.userReference().set(
+          {UserFirestoreFieldKeys.packageInfo: packageInfo.toJson()},
+          SetOptions(merge: true));
+    });
+  }
+
+  Future<void> _saveStats() async {
+    final store = await SharedPreferences.getInstance();
+
+    final lastLoginVersion =
+        await PackageInfo.fromPlatform().then((value) => value.version);
+    String? beginingVersion = store.getString(StringKey.beginingVersionKey);
+    if (beginingVersion == null) {
+      final v = lastLoginVersion;
+      await store.setString(StringKey.beginingVersionKey, v);
+      beginingVersion = v;
+    }
+
+    final now = DateTime.now();
+    final timeZoneName = now.timeZoneName;
+    final timeZoneOffset = now.timeZoneOffset;
+
+    return _database.userReference().set({
+      "stats": {
+        "lastLoginAt": now,
+        "beginingVersion": beginingVersion,
+        "lastLoginVersion": lastLoginVersion,
+        "timeZoneName": timeZoneName,
+        "timeZoneOffset":
+            "${timeZoneOffset.isNegative ? "-" : "+"}${timeZoneOffset.inHours}",
+      }
     }, SetOptions(merge: true));
   }
 }

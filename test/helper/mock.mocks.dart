@@ -260,9 +260,13 @@ class MockAuthService extends _i1.Mock implements _i20.AuthService {
   }
 
   @override
-  _i16.Stream<_i21.User?> stream() =>
-      (super.noSuchMethod(Invocation.method(#stream, []),
+  _i16.Stream<_i21.User?> optionalStream() =>
+      (super.noSuchMethod(Invocation.method(#optionalStream, []),
           returnValue: Stream<_i21.User?>.empty()) as _i16.Stream<_i21.User?>);
+  @override
+  _i16.Stream<_i21.User> stream() =>
+      (super.noSuchMethod(Invocation.method(#stream, []),
+          returnValue: Stream<_i21.User>.empty()) as _i16.Stream<_i21.User>);
   @override
   bool isLinkedApple() =>
       (super.noSuchMethod(Invocation.method(#isLinkedApple, []),
@@ -291,11 +295,6 @@ class MockUserService extends _i1.Mock implements _i22.UserService {
       (super.noSuchMethod(Invocation.method(#fetch, []),
               returnValue: Future<_i6.User>.value(_FakeUser_5()))
           as _i16.Future<_i6.User>);
-  @override
-  _i16.Future<void> recordUserIDs() => (super.noSuchMethod(
-      Invocation.method(#recordUserIDs, []),
-      returnValue: Future<void>.value(),
-      returnValueForMissingStub: Future<void>.value()) as _i16.Future<void>);
   @override
   _i16.Stream<_i6.User> stream() =>
       (super.noSuchMethod(Invocation.method(#stream, []),
@@ -345,16 +344,6 @@ class MockUserService extends _i1.Mock implements _i22.UserService {
               returnValueForMissingStub: Future<void>.value())
           as _i16.Future<void>);
   @override
-  _i16.Future<void> saveLaunchInfo() => (super.noSuchMethod(
-      Invocation.method(#saveLaunchInfo, []),
-      returnValue: Future<void>.value(),
-      returnValueForMissingStub: Future<void>.value()) as _i16.Future<void>);
-  @override
-  _i16.Future<void> saveStats() => (super.noSuchMethod(
-      Invocation.method(#saveStats, []),
-      returnValue: Future<void>.value(),
-      returnValueForMissingStub: Future<void>.value()) as _i16.Future<void>);
-  @override
   _i16.Future<void> linkApple(String? email) => (super.noSuchMethod(
       Invocation.method(#linkApple, [email]),
       returnValue: Future<void>.value(),
@@ -376,18 +365,18 @@ class MockUserService extends _i1.Mock implements _i22.UserService {
       returnValue: Future<void>.value(),
       returnValueForMissingStub: Future<void>.value()) as _i16.Future<void>);
   @override
-  _i16.Future<void> temporarySyncronizeDiscountEntitlement(_i6.User? user) =>
-      (super.noSuchMethod(
-          Invocation.method(#temporarySyncronizeDiscountEntitlement, [user]),
-          returnValue: Future<void>.value(),
-          returnValueForMissingStub:
-              Future<void>.value()) as _i16.Future<void>);
-  @override
   _i16.Future<void> sendPremiumFunctionSurvey(
           List<_i24.PremiumFunctionSurveyElementType>? elements,
           String? message) =>
       (super.noSuchMethod(
           Invocation.method(#sendPremiumFunctionSurvey, [elements, message]),
+          returnValue: Future<void>.value(),
+          returnValueForMissingStub:
+              Future<void>.value()) as _i16.Future<void>);
+  @override
+  _i16.Future<void> temporarySyncronizeDiscountEntitlement(_i6.User? user) =>
+      (super.noSuchMethod(
+          Invocation.method(#temporarySyncronizeDiscountEntitlement, [user]),
           returnValue: Future<void>.value(),
           returnValueForMissingStub:
               Future<void>.value()) as _i16.Future<void>);

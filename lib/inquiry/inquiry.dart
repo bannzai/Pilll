@@ -1,3 +1,4 @@
+import 'package:pilll/entity/pill_sheet_group.dart';
 import 'package:pilll/service/auth.dart';
 import 'package:pilll/database/database.dart';
 import 'package:pilll/entity/menstruation.dart';
@@ -19,19 +20,41 @@ inquiry() {
 }
 
 Future<String> debugInfo(String separator) async {
-  String userID = (await cacheOrAuth()).uid;
+  String userID;
+  try {
+    userID = (await signIn()).uid;
+  } catch (error) {
+    return Future.value("DEBUG INFO user is not found");
+  }
   DatabaseConnection databaseConnection = DatabaseConnection(userID);
-  final pillSheetGroup =
-      await PillSheetGroupService(databaseConnection).fetchLatest();
-  Setting setting = await SettingService(databaseConnection).fetch();
-  final menstruations =
-      await MenstruationService(databaseConnection).fetchAll();
+
+  PillSheetGroup? pillSheetGroup;
+  try {
+    pillSheetGroup =
+        await PillSheetGroupService(databaseConnection).fetchLatest();
+  } catch (_) {}
+
+  Setting? setting;
+  try {
+    setting = await SettingService(databaseConnection).fetch();
+  } catch (_) {}
+
+  List<Menstruation> menstruations = [];
+  try {
+    menstruations = await MenstruationService(databaseConnection).fetchAll();
+  } catch (_) {}
+
   Menstruation? menstruation =
       menstruations.isNotEmpty ? menstruations.first : null;
-  final package = await PackageInfo.fromPlatform();
-  final appName = package.appName;
-  final buildNumber = package.buildNumber;
-  final packageName = package.packageName;
+
+  PackageInfo? package;
+  try {
+    package = await PackageInfo.fromPlatform();
+  } catch (_) {}
+  final appName = package?.appName;
+  final buildNumber = package?.buildNumber;
+  final packageName = package?.packageName;
+
   final contents = [
     "DEBUG INFO",
     "appName: $appName",
@@ -42,7 +65,7 @@ Future<String> debugInfo(String separator) async {
     "latestMenstruation: ${menstruation?.toJson()}",
     "pillSheetGroupID: ${pillSheetGroup?.id}",
     "activedPillSheet: ${pillSheetGroup?.activedPillSheet?.toJson()}",
-    "settingState.entity: ${setting.toJson()}",
+    "settingState.entity: ${setting?.toJson()}",
   ];
   return contents.join(separator);
 }

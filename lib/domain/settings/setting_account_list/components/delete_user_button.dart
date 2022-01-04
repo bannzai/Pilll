@@ -81,8 +81,8 @@ class DeleteUserButton extends StatelessWidget {
                   errorLogger.log("it is not cooperate account");
                   exit(1);
                 }
-                await _delete(context);
                 Navigator.of(context).pop();
+                await _delete(context);
               },
             ),
           ],

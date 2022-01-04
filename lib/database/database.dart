@@ -5,7 +5,7 @@ import 'package:pilll/service/auth.dart';
 
 final databaseProvider = Provider<DatabaseConnection>((ref) {
   final stream = ref.watch(authStateStreamProvider);
-  final uid = stream.asData?.value?.uid;
+  final uid = stream.asData?.value.uid;
   print("database uid is $uid");
   if (uid == null) {
     throw UnimplementedError("Must be called service/auth.dart callSignin");
@@ -27,6 +27,7 @@ abstract class _CollectionPath {
 
 class DatabaseConnection {
   DatabaseConnection(this._userID);
+  String get userID => _userID;
   final String _userID;
 
   DocumentReference userReference() {

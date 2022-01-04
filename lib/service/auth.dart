@@ -1,5 +1,7 @@
-import 'package:async/async.dart';
+import 'dart:async';
+
 import 'package:firebase_auth/firebase_auth.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:pilll/analytics.dart';
 import 'package:pilll/auth/apple.dart';
 import 'package:pilll/auth/google.dart';
@@ -13,13 +15,18 @@ final authServiceProvider = Provider(
   (ref) => AuthService(),
 );
 
-final authStateStreamProvider = StreamProvider(
-  (ref) => _subscribe(),
+final authStateStreamProvider = StreamProvider<User>(
+  (ref) => _userAuthStateChanges().where((event) => event != null).cast(),
 );
 
 class AuthService {
-  Stream<User?> stream() {
-    return _subscribe();
+  // 退会時は一時的にnullになる。なのでOptional型のこのstreamを使う
+  Stream<User?> optionalStream() {
+    return _userAuthStateChanges();
+  }
+
+  Stream<User> stream() {
+    return _userAuthStateChanges().where((event) => event != null).cast();
   }
 
   bool isLinkedApple() {
@@ -31,27 +38,69 @@ class AuthService {
   }
 }
 
-class AuthInfo {
-  final String uid;
-
-  AuthInfo(this.uid);
+Stream<User?> _userAuthStateChanges() {
+  return FirebaseAuth.instance.userChanges();
 }
 
-Stream<User?> _subscribe() {
-  return StreamGroup.merge(
-    [
-      _cacheOrAuth().asStream(),
-      FirebaseAuth.instance.userChanges(),
-    ],
+// Obtain the latest users form FirebaseAuth.
+// If it is not exists, return result of signin anonymous;
+Future<User> signIn() async {
+  analytics.logEvent(name: "call_sign_in");
+  final currentUser = FirebaseAuth.instance.currentUser;
+
+  analytics.logEvent(
+    name: "current_user_fetched",
+    parameters: _logginParameters(currentUser),
   );
-}
 
-Future<User?> callSignin() async {
-  return _cacheOrAuth();
-}
+  if (currentUser != null) {
+    analytics.logEvent(
+        name: "current_user_exists",
+        parameters: _logginParameters(currentUser));
 
-Future<AuthInfo> cacheOrAuth() async {
-  return _cacheOrAuth().then((value) => AuthInfo(value!.uid));
+    final sharedPreferences = await SharedPreferences.getInstance();
+    final existsUID = sharedPreferences.getString(StringKey.currentUserUID);
+    if (existsUID == null || existsUID.isEmpty) {
+      sharedPreferences.setString(StringKey.currentUserUID, currentUser.uid);
+    }
+
+    return currentUser;
+  } else {
+    final anonymousUser = await FirebaseAuth.instance.signInAnonymously();
+
+    analytics.logEvent(
+        name: "signin_anonymously",
+        parameters: _logginParameters(anonymousUser.user));
+
+    final sharedPreferences = await SharedPreferences.getInstance();
+    final existsUID =
+        sharedPreferences.getString(StringKey.lastSigninAnonymousUID);
+    if (existsUID == null || existsUID.isEmpty) {
+      final user = anonymousUser.user;
+      if (user != null) {
+        await sharedPreferences.setString(
+            StringKey.lastSigninAnonymousUID, user.uid);
+      }
+    }
+
+    // keep until FirebaseAuth.instance user state updated
+    final obtainLatestChangedUserState = Future<User>(() {
+      final completer = Completer<User>();
+      final Stream<User> nonOptionalStream =
+          _userAuthStateChanges().where((event) => event != null).cast();
+
+      StreamSubscription<User>? subscription;
+      subscription = nonOptionalStream.listen((firebaseUser) {
+        completer.complete(firebaseUser);
+        subscription?.cancel();
+      });
+      return completer.future;
+    });
+
+    final User signedUser = await obtainLatestChangedUserState;
+    assert(anonymousUser.user?.uid == signedUser.uid);
+    return signedUser;
+  }
 }
 
 Map<String, dynamic> _logginParameters(User? currentUser) {
@@ -65,40 +114,4 @@ Map<String, dynamic> _logginParameters(User? currentUser) {
         .where((element) => element.providerId == appleProviderID)
         .isNotEmpty,
   };
-}
-
-Future<User?> _cacheOrAuth() async {
-  final currentUser = FirebaseAuth.instance.currentUser;
-  analytics.logEvent(
-    name: "current_user_fetched",
-    parameters: _logginParameters(currentUser),
-  );
-  if (currentUser != null) {
-    analytics.logEvent(
-        name: "current_user_exists",
-        parameters: _logginParameters(currentUser));
-    final sharedPreferences = await SharedPreferences.getInstance();
-    final existsUID = sharedPreferences.getString(StringKey.currentUserUID);
-    if (existsUID == null || existsUID.isEmpty) {
-      sharedPreferences.setString(StringKey.currentUserUID, currentUser.uid);
-    }
-
-    return currentUser;
-  }
-
-  final value = await FirebaseAuth.instance.signInAnonymously();
-  analytics.logEvent(
-      name: "signin_anonymously", parameters: _logginParameters(value.user));
-  final sharedPreferences = await SharedPreferences.getInstance();
-  final existsUID =
-      sharedPreferences.getString(StringKey.lastSigninAnonymousUID);
-  if (existsUID == null || existsUID.isEmpty) {
-    final user = value.user;
-    if (user != null) {
-      await sharedPreferences.setString(
-          StringKey.lastSigninAnonymousUID, user.uid);
-    }
-  }
-
-  return value.user;
 }

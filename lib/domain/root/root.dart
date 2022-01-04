@@ -74,6 +74,7 @@ class RootState extends State<Root> {
       });
       return ScaffoldIndicator();
     }
+
     return UniversalErrorPage(
       error: _error,
       reload: () => reload(),
@@ -130,21 +131,15 @@ class RootState extends State<Root> {
         screenType = ScreenType.forceUpdate;
       });
     } else {
-      final user = await callSignin();
+      signIn().then((firebaseUser) {
+        unawaited(
+            FirebaseCrashlytics.instance.setUserIdentifier(firebaseUser.uid));
+        unawaited(firebaseAnalytics.setUserId(id: firebaseUser.uid));
+        unawaited(initializePurchase(firebaseUser.uid));
 
-      // No UI thread blocking
-      if (user != null) {
-        unawaited(FirebaseCrashlytics.instance.setUserIdentifier(user.uid));
-        unawaited(firebaseAnalytics.setUserId(id: user.uid));
-        unawaited(initializePurchase(user.uid));
-      }
-      // ignore: unawaited_futures
-      cacheOrAuth().then((authInfo) {
-        final userService = UserService(DatabaseConnection(authInfo.uid));
-        return userService.prepare(authInfo.uid).then((user) async {
-          unawaited(userService.recordUserIDs());
-          unawaited(userService.saveLaunchInfo());
-          unawaited(userService.saveStats());
+        final userService = UserService(DatabaseConnection(firebaseUser.uid));
+        return userService.prepare(firebaseUser.uid).then((user) async {
+          userService.saveUserLaunchInfo();
           unawaited(userService.temporarySyncronizeDiscountEntitlement(user));
 
           if (!user.migratedFlutter) {
@@ -155,11 +150,13 @@ class RootState extends State<Root> {
           if (user.setting == null) {
             return ScreenType.initialSetting;
           }
+
           final storage = await SharedPreferences.getInstance();
           if (!storage.getKeys().contains(StringKey.firebaseAnonymousUserID)) {
             await storage.setString(
-                StringKey.firebaseAnonymousUserID, authInfo.uid);
+                StringKey.firebaseAnonymousUserID, firebaseUser.uid);
           }
+
           bool? didEndInitialSetting =
               storage.getBool(BoolKey.didEndInitialSetting);
           if (didEndInitialSetting == null) {
@@ -168,6 +165,7 @@ class RootState extends State<Root> {
           if (!didEndInitialSetting) {
             return ScreenType.initialSetting;
           }
+
           return ScreenType.home;
         });
       }).then((screenType) {

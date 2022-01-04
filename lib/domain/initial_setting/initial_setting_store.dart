@@ -2,9 +2,12 @@ import 'dart:async';
 
 import 'package:firebase_crashlytics/firebase_crashlytics.dart';
 import 'package:pilll/analytics.dart';
+import 'package:pilll/auth/apple.dart';
+import 'package:pilll/auth/google.dart';
 import 'package:pilll/database/batch.dart';
 import 'package:pilll/database/database.dart';
 import 'package:pilll/domain/initial_setting/initial_setting_state.dart';
+import 'package:pilll/entity/link_account_type.dart';
 import 'package:pilll/entity/pill_sheet_group.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/entity/setting.dart';
@@ -18,65 +21,63 @@ import 'package:pilll/util/datetime/day.dart';
 import 'package:purchases_flutter/purchases_flutter.dart';
 import 'package:riverpod/riverpod.dart';
 
-final initialSettingStoreProvider =
-    StateNotifierProvider<InitialSettingStateStore, InitialSettingState>(
+final initialSettingStoreProvider = StateNotifierProvider.autoDispose<
+    InitialSettingStateStore, InitialSettingState>(
   (ref) => InitialSettingStateStore(
     ref.watch(batchFactoryProvider),
-    ref.watch(authServiceProvider),
     ref.watch(settingServiceProvider),
     ref.watch(pillSheetServiceProvider),
     ref.watch(pillSheetModifiedHistoryServiceProvider),
     ref.watch(pillSheetGroupServiceProvider),
+    ref.watch(authServiceProvider),
   ),
 );
 
 final initialSettingStateProvider =
-    StateProvider((ref) => ref.watch(initialSettingStoreProvider));
+    StateProvider.autoDispose((ref) => ref.watch(initialSettingStoreProvider));
 
 class InitialSettingStateStore extends StateNotifier<InitialSettingState> {
   final BatchFactory _batchFactory;
-  final AuthService _authService;
   final SettingService _settingService;
   final PillSheetService _pillSheetService;
   final PillSheetModifiedHistoryService _pillSheetModifiedHistoryService;
   final PillSheetGroupService _pillSheetGroupService;
+  final AuthService _authService;
+
   InitialSettingStateStore(
     this._batchFactory,
-    this._authService,
     this._settingService,
     this._pillSheetService,
     this._pillSheetModifiedHistoryService,
     this._pillSheetGroupService,
-  ) : super(InitialSettingState()) {
-    _reset();
-  }
+    this._authService,
+  ) : super(InitialSettingState());
 
-  _reset() {
-    _subscribe();
-  }
-
-  StreamSubscription? _authCanceller;
-  _subscribe() {
-    _authCanceller?.cancel();
-    _authCanceller = _authService.stream().listen((user) async {
+  StreamSubscription? _authServiceCanceller;
+  fetch() {
+    _authServiceCanceller = _authService.stream().listen((user) async {
       print("watch sign state user: $user");
-      if (user == null) {
-        return;
-      }
-      print(
-          "watch sign state uid: ${user.uid}, isAnonymous: ${user.isAnonymous}");
 
-      final isAccountCooperationDidEnd = !user.isAnonymous;
-      if (isAccountCooperationDidEnd) {
+      final userIsNotAnonymous = !user.isAnonymous;
+      if (userIsNotAnonymous) {
         final userService = UserService(DatabaseConnection(user.uid));
-        await userService.prepare(user.uid);
-        await userService.recordUserIDs();
+        final dbUser = await userService.prepare(user.uid);
+        userService.saveUserLaunchInfo();
+
         unawaited(FirebaseCrashlytics.instance.setUserIdentifier(user.uid));
         unawaited(firebaseAnalytics.setUserId(id: user.uid));
         await Purchases.logIn(user.uid);
+
+        state = state.copyWith(userIsNotAnonymous: userIsNotAnonymous);
+        state = state.copyWith(settingIsExist: dbUser.setting != null);
+        if (isLinkedApple()) {
+          state = state.copyWith(accountType: LinkAccountType.apple);
+        } else if (isLinkedGoogle()) {
+          state = state.copyWith(accountType: LinkAccountType.google);
+        }
       }
-      state = state.copyWith(
-          isAccountCooperationDidEnd: isAccountCooperationDidEnd);
+
+      _authServiceCanceller?.cancel();
     });
   }
 
@@ -218,15 +219,6 @@ class InitialSettingStateStore extends StateNotifier<InitialSettingState> {
     _settingService.updateWithBatch(batch, state.buildSetting());
 
     await batch.commit();
-  }
-
-  Future<bool> canEndInitialSetting() async {
-    try {
-      await _settingService.fetch();
-      return true;
-    } catch (error) {
-      return false;
-    }
   }
 
   showHUD() {

@@ -9,7 +9,8 @@ import 'package:pilll/service/auth.dart';
 import 'package:pilll/service/user.dart';
 import 'package:riverpod/riverpod.dart';
 
-final settingAccountCooperationListProvider = StateNotifierProvider.autoDispose<SettingAccountCooperationListPageStore, SettingAccountCooperationListState>(
+final settingAccountCooperationListProvider = StateNotifierProvider.autoDispose<
+    SettingAccountCooperationListPageStore, SettingAccountCooperationListState>(
   (ref) => SettingAccountCooperationListPageStore(
     ref.watch(userServiceProvider),
     ref.watch(authServiceProvider),
@@ -37,7 +38,7 @@ class SettingAccountCooperationListPageStore
   StreamSubscription? _authCanceller;
   _subscribe() {
     _authCanceller?.cancel();
-    _authCanceller = _authService.stream().listen((user) {
+    _authCanceller = _authService.optionalStream().listen((user) {
       print(
           "watch sign state uid: ${user?.uid}, isAnonymous: ${user?.isAnonymous}");
       state = state.copyWith(user: user);

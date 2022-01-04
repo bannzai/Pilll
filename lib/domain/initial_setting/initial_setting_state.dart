@@ -1,3 +1,4 @@
+import 'package:pilll/entity/link_account_type.dart';
 import 'package:pilll/util/datetime/day.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:pilll/entity/pill_sheet.dart';
@@ -35,7 +36,10 @@ class InitialSettingState with _$InitialSettingState {
     @Default(false)
         bool isLoading,
     @Default(false)
-        bool isAccountCooperationDidEnd,
+        bool userIsNotAnonymous,
+    @Default(false)
+        bool settingIsExist,
+    LinkAccountType? accountType,
   }) = _InitialSettingState;
 
   DateTime? reminderTimeOrDefault(int index) {

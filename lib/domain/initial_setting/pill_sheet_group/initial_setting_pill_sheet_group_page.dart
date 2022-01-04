@@ -1,3 +1,4 @@
+import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:pilll/analytics.dart';
 import 'package:pilll/components/atoms/font.dart';
@@ -13,24 +14,43 @@ import 'package:pilll/components/atoms/text_color.dart';
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/router/router.dart';
+import 'package:pilll/service/auth.dart';
 import 'package:pilll/signin/signin_sheet.dart';
 import 'package:pilll/signin/signin_sheet_state.dart';
-import 'package:pilll/entity/link_account_type.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
+import 'package:pilll/entity/link_account_type.dart';
 
 class InitialSettingPillSheetGroupPage extends HookConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final store = ref.watch(initialSettingStoreProvider.notifier);
     final state = ref.watch(initialSettingStoreProvider);
-    if (state.isAccountCooperationDidEnd) {
-      Future(() async {
-        if (await store.canEndInitialSetting()) {
+    final authStream = ref.watch(authStateStreamProvider);
+
+    useEffect(() {
+      store.fetch();
+    }, [authStream]);
+
+    useEffect(() {
+      if (state.userIsNotAnonymous) {
+        final accountType = state.accountType;
+        if (accountType != null) {
+          Future.microtask(() {
+            ScaffoldMessenger.of(context).showSnackBar(
+              SnackBar(
+                duration: Duration(seconds: 2),
+                content: Text("${accountType.providerName}でログインしました"),
+              ),
+            );
+          });
+        }
+
+        if (state.settingIsExist) {
           AppRouter.signinAccount(context);
         }
-        store.hideHUD();
-      });
-    }
+      }
+    }, [state.userIsNotAnonymous, state.accountType, state.settingIsExist]);
+
     return HUD(
       shown: state.isLoading,
       child: Scaffold(
@@ -81,7 +101,7 @@ class InitialSettingPillSheetGroupPage extends HookConsumerWidget {
                                       .route());
                             },
                           ),
-                        if (!state.isAccountCooperationDidEnd) ...[
+                        if (!state.userIsNotAnonymous) ...[
                           SizedBox(height: 20),
                           AlertButton(
                             text: "すでにアカウントをお持ちの方はこちら",
@@ -93,17 +113,6 @@ class InitialSettingPillSheetGroupPage extends HookConsumerWidget {
                                 SigninSheetStateContext.initialSetting,
                                 (accountType) async {
                                   store.showHUD();
-                                  if (await store.canEndInitialSetting()) {
-                                    AppRouter.signinAccount(context);
-                                  } else {
-                                    ScaffoldMessenger.of(context).showSnackBar(
-                                      SnackBar(
-                                        duration: Duration(seconds: 2),
-                                        content: Text(
-                                            "${accountType.providerName}でログインしました"),
-                                      ),
-                                    );
-                                  }
                                 },
                               );
                             },
