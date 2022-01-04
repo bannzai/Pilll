@@ -39,7 +39,7 @@ Stream<User?> _subscribe() {
   return FirebaseAuth.instance.userChanges();
 }
 
-Future<User?> signIn() async {
+Future<User> signIn() async {
   return _cacheOrAuth();
 }
 
@@ -56,7 +56,7 @@ Map<String, dynamic> _logginParameters(User? currentUser) {
   };
 }
 
-Future<User?> _cacheOrAuth() async {
+Future<User> _cacheOrAuth() async {
   final currentUser = await FirebaseAuth.instance.userChanges().last;
 
   analytics.logEvent(
