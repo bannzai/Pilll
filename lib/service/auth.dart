@@ -35,22 +35,12 @@ class AuthService {
   }
 }
 
-class AuthInfo {
-  final String uid;
-
-  AuthInfo(this.uid);
-}
-
 Stream<User?> _subscribe() {
   return FirebaseAuth.instance.userChanges();
 }
 
 Future<User?> signIn() async {
   return _cacheOrAuth();
-}
-
-Future<AuthInfo> cacheOrAuth() async {
-  return _cacheOrAuth().then((value) => AuthInfo(value!.uid));
 }
 
 Map<String, dynamic> _logginParameters(User? currentUser) {
