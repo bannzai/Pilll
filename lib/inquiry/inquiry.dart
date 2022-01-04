@@ -22,7 +22,7 @@ inquiry() {
 Future<String> debugInfo(String separator) async {
   String userID;
   try {
-    userID = (await cacheOrAuth()).uid;
+    userID = (await signIn()).uid;
   } catch (error) {
     return Future.value("DEBUG INFO user is not found");
   }

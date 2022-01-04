@@ -16,8 +16,8 @@ Future<void> requestNotificationPermissions() async {
   }
   callRegisterRemoteNotification();
   // ignore: unawaited_futures
-  cacheOrAuth().then((auth) {
-    final userService = UserService(DatabaseConnection(auth.uid));
+  signIn().then((firebaseUser) {
+    final userService = UserService(DatabaseConnection(firebaseUser.uid));
     userService.fetch().then((_) async {
       final token = await FirebaseMessaging.instance.getToken();
       await userService.registerRemoteNotificationToken(token);
