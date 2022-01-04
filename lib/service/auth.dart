@@ -63,10 +63,12 @@ Future<User?> _cacheOrAuth() async {
     name: "current_user_fetched",
     parameters: _logginParameters(currentUser),
   );
+
   if (currentUser != null) {
     analytics.logEvent(
         name: "current_user_exists",
         parameters: _logginParameters(currentUser));
+
     final sharedPreferences = await SharedPreferences.getInstance();
     final existsUID = sharedPreferences.getString(StringKey.currentUserUID);
     if (existsUID == null || existsUID.isEmpty) {
@@ -74,21 +76,23 @@ Future<User?> _cacheOrAuth() async {
     }
 
     return currentUser;
-  }
+  } else {
+    final value = await FirebaseAuth.instance.signInAnonymously();
 
-  final value = await FirebaseAuth.instance.signInAnonymously();
-  analytics.logEvent(
-      name: "signin_anonymously", parameters: _logginParameters(value.user));
-  final sharedPreferences = await SharedPreferences.getInstance();
-  final existsUID =
-      sharedPreferences.getString(StringKey.lastSigninAnonymousUID);
-  if (existsUID == null || existsUID.isEmpty) {
-    final user = value.user;
-    if (user != null) {
-      await sharedPreferences.setString(
-          StringKey.lastSigninAnonymousUID, user.uid);
+    analytics.logEvent(
+        name: "signin_anonymously", parameters: _logginParameters(value.user));
+
+    final sharedPreferences = await SharedPreferences.getInstance();
+    final existsUID =
+        sharedPreferences.getString(StringKey.lastSigninAnonymousUID);
+    if (existsUID == null || existsUID.isEmpty) {
+      final user = value.user;
+      if (user != null) {
+        await sharedPreferences.setString(
+            StringKey.lastSigninAnonymousUID, user.uid);
+      }
     }
-  }
 
-  return value.user;
+    return value.user;
+  }
 }
