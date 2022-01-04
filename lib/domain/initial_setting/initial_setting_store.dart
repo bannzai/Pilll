@@ -1,6 +1,5 @@
 import 'dart:async';
 
-import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_crashlytics/firebase_crashlytics.dart';
 import 'package:pilll/analytics.dart';
 import 'package:pilll/auth/apple.dart';
@@ -12,6 +11,7 @@ import 'package:pilll/entity/link_account_type.dart';
 import 'package:pilll/entity/pill_sheet_group.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/entity/setting.dart';
+import 'package:pilll/service/auth.dart';
 import 'package:pilll/service/pill_sheet.dart';
 import 'package:pilll/service/pill_sheet_group.dart';
 import 'package:pilll/service/pill_sheet_modified_history.dart';
@@ -29,6 +29,7 @@ final initialSettingStoreProvider = StateNotifierProvider.autoDispose<
     ref.watch(pillSheetServiceProvider),
     ref.watch(pillSheetModifiedHistoryServiceProvider),
     ref.watch(pillSheetGroupServiceProvider),
+    ref.watch(authServiceProvider),
   ),
 );
 
@@ -41,41 +42,42 @@ class InitialSettingStateStore extends StateNotifier<InitialSettingState> {
   final PillSheetService _pillSheetService;
   final PillSheetModifiedHistoryService _pillSheetModifiedHistoryService;
   final PillSheetGroupService _pillSheetGroupService;
+  final AuthService _authService;
+
   InitialSettingStateStore(
     this._batchFactory,
     this._settingService,
     this._pillSheetService,
     this._pillSheetModifiedHistoryService,
     this._pillSheetGroupService,
+    this._authService,
   ) : super(InitialSettingState());
 
-  fetch() async {
-    final user = FirebaseAuth.instance.currentUser;
+  StreamSubscription? _authServiceCanceller;
+  fetch() {
+    _authServiceCanceller = _authService.stream().listen((user) async {
+      print("watch sign state user: $user");
 
-    print("watch sign state user: $user");
-    if (user == null) {
-      return;
-    }
-    print(
-        "watch sign state uid: ${user.uid}, isAnonymous: ${user.isAnonymous}");
+      final userIsNotAnonymous = !user.isAnonymous;
+      if (userIsNotAnonymous) {
+        final userService = UserService(DatabaseConnection(user.uid));
+        final dbUser = await userService.prepare(user.uid);
+        await userService.recordUserIDs();
+        unawaited(FirebaseCrashlytics.instance.setUserIdentifier(user.uid));
+        unawaited(firebaseAnalytics.setUserId(id: user.uid));
+        await Purchases.logIn(user.uid);
 
-    final userIsNotAnonymous = !user.isAnonymous;
-    if (userIsNotAnonymous) {
-      final userService = UserService(DatabaseConnection(user.uid));
-      final dbUser = await userService.prepare(user.uid);
-      await userService.recordUserIDs();
-      unawaited(FirebaseCrashlytics.instance.setUserIdentifier(user.uid));
-      unawaited(firebaseAnalytics.setUserId(id: user.uid));
-      await Purchases.logIn(user.uid);
-
-      state = state.copyWith(userIsNotAnonymous: userIsNotAnonymous);
-      state = state.copyWith(settingIsExist: dbUser.setting != null);
-      if (isLinkedApple()) {
-        state = state.copyWith(accountType: LinkAccountType.apple);
-      } else if (isLinkedGoogle()) {
-        state = state.copyWith(accountType: LinkAccountType.google);
+        state = state.copyWith(userIsNotAnonymous: userIsNotAnonymous);
+        state = state.copyWith(settingIsExist: dbUser.setting != null);
+        if (isLinkedApple()) {
+          state = state.copyWith(accountType: LinkAccountType.apple);
+        } else if (isLinkedGoogle()) {
+          state = state.copyWith(accountType: LinkAccountType.google);
+        }
       }
-    }
+
+      _authServiceCanceller?.cancel();
+    });
   }
 
   void selectedPillSheetType(PillSheetType pillSheetType) {
