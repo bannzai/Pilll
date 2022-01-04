@@ -45,7 +45,6 @@ class AuthInfo {
 Stream<User?> _subscribe() {
   return StreamGroup.merge(
     [
-      _cacheOrAuth().asStream(),
       FirebaseAuth.instance.userChanges(),
     ],
   );
