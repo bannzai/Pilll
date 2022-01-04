@@ -23,7 +23,7 @@ class AuthService {
   }
 
   Stream<User> stream() {
-    return optionalStream().where((event) => event != null).cast();
+    return _userAuthStateChanges().where((event) => event != null).cast();
   }
 
   bool isLinkedApple() {
