@@ -39,24 +39,9 @@ Stream<User?> _subscribe() {
   return FirebaseAuth.instance.userChanges();
 }
 
+// Obtain the latest users form FirebaseAuth.
+// If it is not exists, return result of signin anonymous;
 Future<User> signIn() async {
-  return _cacheOrAuth();
-}
-
-Map<String, dynamic> _logginParameters(User? currentUser) {
-  return {
-    "uid": currentUser?.uid,
-    "isAnonymous": currentUser?.isAnonymous,
-    "hasGoogleProviderData": currentUser?.providerData
-        .where((element) => element.providerId == googleProviderID)
-        .isNotEmpty,
-    "hasAppleProviderData": currentUser?.providerData
-        .where((element) => element.providerId == appleProviderID)
-        .isNotEmpty,
-  };
-}
-
-Future<User> _cacheOrAuth() async {
   final currentUser = await FirebaseAuth.instance.userChanges().last;
 
   analytics.logEvent(
@@ -103,4 +88,17 @@ Future<User> _cacheOrAuth() async {
     assert(anonymousUser.user?.uid == signedUser.uid);
     return signedUser;
   }
+}
+
+Map<String, dynamic> _logginParameters(User? currentUser) {
+  return {
+    "uid": currentUser?.uid,
+    "isAnonymous": currentUser?.isAnonymous,
+    "hasGoogleProviderData": currentUser?.providerData
+        .where((element) => element.providerId == googleProviderID)
+        .isNotEmpty,
+    "hasAppleProviderData": currentUser?.providerData
+        .where((element) => element.providerId == appleProviderID)
+        .isNotEmpty,
+  };
 }
