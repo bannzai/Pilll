@@ -13,13 +13,13 @@ final authServiceProvider = Provider(
 );
 
 final authStateStreamProvider = StreamProvider<User>(
-  (ref) => _subscribe().where((event) => event != null).cast(),
+  (ref) => _userAuthStateChanges().where((event) => event != null).cast(),
 );
 
 class AuthService {
   // 退会時は一時的にnullになる。なのでOptional型のこのstreamを使う
   Stream<User?> optionalStream() {
-    return _subscribe();
+    return _userAuthStateChanges();
   }
 
   Stream<User> stream() {
@@ -35,7 +35,7 @@ class AuthService {
   }
 }
 
-Stream<User?> _subscribe() {
+Stream<User?> _userAuthStateChanges() {
   return FirebaseAuth.instance.userChanges();
 }
 
