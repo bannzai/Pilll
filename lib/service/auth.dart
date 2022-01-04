@@ -1,4 +1,3 @@
-import 'package:async/async.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:pilll/analytics.dart';
 import 'package:pilll/auth/apple.dart';
@@ -43,11 +42,7 @@ class AuthInfo {
 }
 
 Stream<User?> _subscribe() {
-  return StreamGroup.merge(
-    [
-      FirebaseAuth.instance.userChanges(),
-    ],
-  );
+  return FirebaseAuth.instance.userChanges();
 }
 
 Future<User?> signIn() async {
