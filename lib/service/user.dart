@@ -45,51 +45,6 @@ class UserService {
     });
   }
 
-  Future<DocumentSnapshot> _fetchRawDocumentSnapshot() {
-    return _database.userReference().get();
-  }
-
-  Future<void> recordUserIDs() async {
-    try {
-      final document = await _fetchRawDocumentSnapshot();
-      final user = User.fromJson(document.data() as Map<String, dynamic>);
-      final documentID = document.id;
-      final sharedPreferences = await SharedPreferences.getInstance();
-
-      List<String> userDocumentIDSets = user.userDocumentIDSets;
-      if (!userDocumentIDSets.contains(documentID)) {
-        userDocumentIDSets.add(documentID);
-      }
-
-      final lastSigninAnonymousUID =
-          sharedPreferences.getString(StringKey.lastSigninAnonymousUID);
-      List<String> anonymousUserIDSets = user.anonymousUserIDSets;
-      if (lastSigninAnonymousUID != null &&
-          !anonymousUserIDSets.contains(lastSigninAnonymousUID)) {
-        anonymousUserIDSets.add(lastSigninAnonymousUID);
-      }
-      final firebaseCurrentUserID =
-          firebaseAuth.FirebaseAuth.instance.currentUser?.uid;
-      List<String> firebaseCurrentUserIDSets = user.firebaseCurrentUserIDSets;
-      if (firebaseCurrentUserID != null &&
-          !firebaseCurrentUserIDSets.contains(firebaseCurrentUserID)) {
-        firebaseCurrentUserIDSets.add(firebaseCurrentUserID);
-      }
-
-      await _database.userReference().set(
-        {
-          UserFirestoreFieldKeys.userDocumentIDSets: userDocumentIDSets,
-          UserFirestoreFieldKeys.firebaseCurrentUserIDSets:
-              firebaseCurrentUserIDSets,
-          UserFirestoreFieldKeys.anonymousUserIDSets: anonymousUserIDSets,
-        },
-        SetOptions(merge: true),
-      );
-    } catch (error) {
-      print(error);
-    }
-  }
-
   Stream<User> stream() {
     return _database
         .userReference()
@@ -173,6 +128,99 @@ class UserService {
     );
   }
 
+  Future<void> linkApple(String? email) async {
+    await _database.userReference().set({
+      UserFirestoreFieldKeys.isAnonymous: false,
+    }, SetOptions(merge: true));
+    return _database.userPrivateReference().set({
+      if (email != null) UserPrivateFirestoreFieldKeys.appleEmail: email,
+      UserPrivateFirestoreFieldKeys.isLinkedApple: true,
+    }, SetOptions(merge: true));
+  }
+
+  Future<void> linkGoogle(String? email) async {
+    await _database.userReference().set({
+      UserFirestoreFieldKeys.isAnonymous: false,
+    }, SetOptions(merge: true));
+    return _database.userPrivateReference().set({
+      if (email != null) UserPrivateFirestoreFieldKeys.googleEmail: email,
+      UserPrivateFirestoreFieldKeys.isLinkedGoogle: true,
+    }, SetOptions(merge: true));
+  }
+
+  Future<void> postDemographic(Demographic demographic) {
+    return _database.userPrivateReference().set(
+        {UserPrivateFirestoreFieldKeys.demographic: demographic.toJson()},
+        SetOptions(merge: true));
+  }
+
+  Future<void> trial(Setting setting) {
+    return _database.userReference().set({
+      UserFirestoreFieldKeys.isTrial: true,
+      UserFirestoreFieldKeys.beginTrialDate: now(),
+      UserFirestoreFieldKeys.trialDeadlineDate: now().add(Duration(days: 30)),
+      UserFirestoreFieldKeys.settings: setting.toJson(),
+      UserFirestoreFieldKeys.hasDiscountEntitlement: true,
+    }, SetOptions(merge: true));
+  }
+
+  Future<void> sendPremiumFunctionSurvey(
+      List<PremiumFunctionSurveyElementType> elements, String message) async {
+    final PremiumFunctionSurvey premiumFunctionSurvey = PremiumFunctionSurvey(
+      elements: elements,
+      message: message,
+    );
+    return _database.userPrivateReference().set({
+      UserPrivateFirestoreFieldKeys.premiumFunctionSurvey:
+          premiumFunctionSurvey.toJson()
+    }, SetOptions(merge: true));
+  }
+
+  Future<DocumentSnapshot> _fetchRawDocumentSnapshot() {
+    return _database.userReference().get();
+  }
+
+  Future<void> recordUserIDs() async {
+    try {
+      final document = await _fetchRawDocumentSnapshot();
+      final user = User.fromJson(document.data() as Map<String, dynamic>);
+      final documentID = document.id;
+      final sharedPreferences = await SharedPreferences.getInstance();
+
+      List<String> userDocumentIDSets = user.userDocumentIDSets;
+      if (!userDocumentIDSets.contains(documentID)) {
+        userDocumentIDSets.add(documentID);
+      }
+
+      final lastSigninAnonymousUID =
+          sharedPreferences.getString(StringKey.lastSigninAnonymousUID);
+      List<String> anonymousUserIDSets = user.anonymousUserIDSets;
+      if (lastSigninAnonymousUID != null &&
+          !anonymousUserIDSets.contains(lastSigninAnonymousUID)) {
+        anonymousUserIDSets.add(lastSigninAnonymousUID);
+      }
+      final firebaseCurrentUserID =
+          firebaseAuth.FirebaseAuth.instance.currentUser?.uid;
+      List<String> firebaseCurrentUserIDSets = user.firebaseCurrentUserIDSets;
+      if (firebaseCurrentUserID != null &&
+          !firebaseCurrentUserIDSets.contains(firebaseCurrentUserID)) {
+        firebaseCurrentUserIDSets.add(firebaseCurrentUserID);
+      }
+
+      await _database.userReference().set(
+        {
+          UserFirestoreFieldKeys.userDocumentIDSets: userDocumentIDSets,
+          UserFirestoreFieldKeys.firebaseCurrentUserIDSets:
+              firebaseCurrentUserIDSets,
+          UserFirestoreFieldKeys.anonymousUserIDSets: anonymousUserIDSets,
+        },
+        SetOptions(merge: true),
+      );
+    } catch (error) {
+      print(error);
+    }
+  }
+
   Future<void> saveLaunchInfo() {
     final os = Platform.operatingSystem;
     return PackageInfo.fromPlatform().then((info) {
@@ -215,42 +263,6 @@ class UserService {
     }, SetOptions(merge: true));
   }
 
-  Future<void> linkApple(String? email) async {
-    await _database.userReference().set({
-      UserFirestoreFieldKeys.isAnonymous: false,
-    }, SetOptions(merge: true));
-    return _database.userPrivateReference().set({
-      if (email != null) UserPrivateFirestoreFieldKeys.appleEmail: email,
-      UserPrivateFirestoreFieldKeys.isLinkedApple: true,
-    }, SetOptions(merge: true));
-  }
-
-  Future<void> linkGoogle(String? email) async {
-    await _database.userReference().set({
-      UserFirestoreFieldKeys.isAnonymous: false,
-    }, SetOptions(merge: true));
-    return _database.userPrivateReference().set({
-      if (email != null) UserPrivateFirestoreFieldKeys.googleEmail: email,
-      UserPrivateFirestoreFieldKeys.isLinkedGoogle: true,
-    }, SetOptions(merge: true));
-  }
-
-  Future<void> postDemographic(Demographic demographic) {
-    return _database.userPrivateReference().set(
-        {UserPrivateFirestoreFieldKeys.demographic: demographic.toJson()},
-        SetOptions(merge: true));
-  }
-
-  Future<void> trial(Setting setting) {
-    return _database.userReference().set({
-      UserFirestoreFieldKeys.isTrial: true,
-      UserFirestoreFieldKeys.beginTrialDate: now(),
-      UserFirestoreFieldKeys.trialDeadlineDate: now().add(Duration(days: 30)),
-      UserFirestoreFieldKeys.settings: setting.toJson(),
-      UserFirestoreFieldKeys.hasDiscountEntitlement: true,
-    }, SetOptions(merge: true));
-  }
-
   // NOTE: 下位互換のために一時的にhasDiscountEntitlementをtrueにしていくスクリプト。
   // サーバー側での制御が無駄になるけど、理屈ではこれで生合成が取れる
   Future<void> temporarySyncronizeDiscountEntitlement(User user) async {
@@ -264,18 +276,6 @@ class UserService {
     }
     return _database.userReference().set({
       UserFirestoreFieldKeys.hasDiscountEntitlement: hasDiscountEntitlement,
-    }, SetOptions(merge: true));
-  }
-
-  Future<void> sendPremiumFunctionSurvey(
-      List<PremiumFunctionSurveyElementType> elements, String message) async {
-    final PremiumFunctionSurvey premiumFunctionSurvey = PremiumFunctionSurvey(
-      elements: elements,
-      message: message,
-    );
-    return _database.userPrivateReference().set({
-      UserPrivateFirestoreFieldKeys.premiumFunctionSurvey:
-          premiumFunctionSurvey.toJson()
     }, SetOptions(merge: true));
   }
 }
