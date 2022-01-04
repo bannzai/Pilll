@@ -15,7 +15,7 @@ import 'package:pilll/service/user.dart';
 import 'package:pilll/util/datetime/day.dart';
 
 final menstruationsStoreProvider =
-    StateNotifierProvider.autoDispose<MenstruationStore, MenstruationState>(
+    StateNotifierProvider<MenstruationStore, MenstruationState>(
   (ref) => MenstruationStore(
     menstruationService: ref.watch(menstruationServiceProvider),
     diaryService: ref.watch(diaryServiceProvider),

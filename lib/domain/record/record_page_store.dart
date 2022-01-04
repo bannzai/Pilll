@@ -22,7 +22,7 @@ import 'package:riverpod/riverpod.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 final recordPageStoreProvider =
-    StateNotifierProvider.autoDispose<RecordPageStore, RecordPageState>(
+    StateNotifierProvider<RecordPageStore, RecordPageState>(
         (ref) => RecordPageStore(
               ref.watch(batchFactoryProvider),
               ref.watch(pillSheetServiceProvider),
