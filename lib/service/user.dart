@@ -1,3 +1,4 @@
+import 'dart:async';
 import 'dart:io';
 
 import 'package:firebase_auth/firebase_auth.dart' as firebaseAuth;
@@ -180,7 +181,31 @@ class UserService {
     return _database.userReference().get();
   }
 
-  Future<void> recordUserIDs() async {
+  // NOTE: 下位互換のために一時的にhasDiscountEntitlementをtrueにしていくスクリプト。
+  // サーバー側での制御が無駄になるけど、理屈ではこれで生合成が取れる
+  Future<void> temporarySyncronizeDiscountEntitlement(User user) async {
+    final discountEntitlementDeadlineDate =
+        user.discountEntitlementDeadlineDate;
+    final bool hasDiscountEntitlement;
+    if (discountEntitlementDeadlineDate == null) {
+      hasDiscountEntitlement = true;
+    } else {
+      hasDiscountEntitlement = !now().isAfter(discountEntitlementDeadlineDate);
+    }
+    return _database.userReference().set({
+      UserFirestoreFieldKeys.hasDiscountEntitlement: hasDiscountEntitlement,
+    }, SetOptions(merge: true));
+  }
+}
+
+extension SaveUserLaunchInfo on UserService {
+  saveUserLaunchInfo() {
+    unawaited(_recordUserIDs());
+    unawaited(_saveLaunchInfo());
+    unawaited(_saveStats());
+  }
+
+  Future<void> _recordUserIDs() async {
     try {
       final document = await _fetchRawDocumentSnapshot();
       final user = User.fromJson(document.data() as Map<String, dynamic>);
@@ -221,7 +246,7 @@ class UserService {
     }
   }
 
-  Future<void> saveLaunchInfo() {
+  Future<void> _saveLaunchInfo() {
     final os = Platform.operatingSystem;
     return PackageInfo.fromPlatform().then((info) {
       final packageInfo = Package(
@@ -235,7 +260,7 @@ class UserService {
     });
   }
 
-  Future<void> saveStats() async {
+  Future<void> _saveStats() async {
     final store = await SharedPreferences.getInstance();
 
     final lastLoginVersion =
@@ -260,22 +285,6 @@ class UserService {
         "timeZoneOffset":
             "${timeZoneOffset.isNegative ? "-" : "+"}${timeZoneOffset.inHours}",
       }
-    }, SetOptions(merge: true));
-  }
-
-  // NOTE: 下位互換のために一時的にhasDiscountEntitlementをtrueにしていくスクリプト。
-  // サーバー側での制御が無駄になるけど、理屈ではこれで生合成が取れる
-  Future<void> temporarySyncronizeDiscountEntitlement(User user) async {
-    final discountEntitlementDeadlineDate =
-        user.discountEntitlementDeadlineDate;
-    final bool hasDiscountEntitlement;
-    if (discountEntitlementDeadlineDate == null) {
-      hasDiscountEntitlement = true;
-    } else {
-      hasDiscountEntitlement = !now().isAfter(discountEntitlementDeadlineDate);
-    }
-    return _database.userReference().set({
-      UserFirestoreFieldKeys.hasDiscountEntitlement: hasDiscountEntitlement,
     }, SetOptions(merge: true));
   }
 }

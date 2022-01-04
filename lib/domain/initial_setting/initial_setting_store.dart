@@ -62,7 +62,8 @@ class InitialSettingStateStore extends StateNotifier<InitialSettingState> {
       if (userIsNotAnonymous) {
         final userService = UserService(DatabaseConnection(user.uid));
         final dbUser = await userService.prepare(user.uid);
-        await userService.recordUserIDs();
+        userService.saveUserLaunchInfo();
+
         unawaited(FirebaseCrashlytics.instance.setUserIdentifier(user.uid));
         unawaited(firebaseAnalytics.setUserId(id: user.uid));
         await Purchases.logIn(user.uid);
