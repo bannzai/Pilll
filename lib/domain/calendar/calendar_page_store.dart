@@ -12,8 +12,8 @@ import 'package:pilll/domain/calendar/calendar_page_state.dart';
 import 'package:pilll/service/user.dart';
 import 'package:pilll/util/datetime/date_compare.dart';
 
-final calendarPageStateStoreProvider =
-    StateNotifierProvider<CalendarPageStateStore, CalendarPageState>(
+final calendarPageStateStoreProvider = StateNotifierProvider.autoDispose<
+    CalendarPageStateStore, CalendarPageState>(
   (ref) => CalendarPageStateStore(
     ref.watch(menstruationServiceProvider),
     ref.watch(settingServiceProvider),

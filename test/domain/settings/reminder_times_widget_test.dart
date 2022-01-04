@@ -96,7 +96,7 @@ void main() {
         ProviderScope(
           overrides: [
             settingStoreProvider.overrideWithProvider(
-              StateNotifierProvider(
+              StateNotifierProvider.autoDispose(
                 (ref) => store,
               ),
             )
@@ -161,7 +161,7 @@ void main() {
         ProviderScope(
           overrides: [
             settingStoreProvider.overrideWithProvider(
-              StateNotifierProvider(
+              StateNotifierProvider.autoDispose(
                 (ref) => store,
               ),
             )

@@ -3,7 +3,7 @@ import 'package:pilll/domain/premium_function_survey/premium_function_survey_sta
 import 'package:pilll/service/user.dart';
 import 'package:riverpod/riverpod.dart';
 
-final premiumFunctionSurveyStoreProvider = StateNotifierProvider<
+final premiumFunctionSurveyStoreProvider = StateNotifierProvider.autoDispose<
     PremiumFunctionSurveyStateStore, PremiumFunctionSurveyState>(
   (ref) => PremiumFunctionSurveyStateStore(ref.watch(userServiceProvider)),
 );
