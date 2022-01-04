@@ -77,22 +77,30 @@ Future<User?> _cacheOrAuth() async {
 
     return currentUser;
   } else {
-    final value = await FirebaseAuth.instance.signInAnonymously();
+    final anonymousUser = await FirebaseAuth.instance.signInAnonymously();
 
     analytics.logEvent(
-        name: "signin_anonymously", parameters: _logginParameters(value.user));
+        name: "signin_anonymously",
+        parameters: _logginParameters(anonymousUser.user));
 
     final sharedPreferences = await SharedPreferences.getInstance();
     final existsUID =
         sharedPreferences.getString(StringKey.lastSigninAnonymousUID);
     if (existsUID == null || existsUID.isEmpty) {
-      final user = value.user;
+      final user = anonymousUser.user;
       if (user != null) {
         await sharedPreferences.setString(
             StringKey.lastSigninAnonymousUID, user.uid);
       }
     }
 
-    return value.user;
+    // keep until FirebaseAuth.instance user state updated
+    final User signedUser = await FirebaseAuth.instance
+        .userChanges()
+        .where((event) => event != null)
+        .cast()
+        .last;
+    assert(anonymousUser.user?.uid == signedUser.uid);
+    return signedUser;
   }
 }

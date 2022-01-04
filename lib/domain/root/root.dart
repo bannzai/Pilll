@@ -140,7 +140,9 @@ class RootState extends State<Root> {
         unawaited(initializePurchase(user.uid));
       }
       // ignore: unawaited_futures
-      cacheOrAuth().then((authInfo) {
+      signIn().then((user) {
+        final uid = user?.uid;
+
         final userService = UserService(DatabaseConnection(authInfo.uid));
         return userService.prepare(authInfo.uid).then((user) async {
           userService.saveUserLaunchInfo();
