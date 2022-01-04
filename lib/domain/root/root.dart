@@ -131,7 +131,7 @@ class RootState extends State<Root> {
         screenType = ScreenType.forceUpdate;
       });
     } else {
-      final user = await callSignin();
+      final user = await signIn();
 
       // No UI thread blocking
       if (user != null) {

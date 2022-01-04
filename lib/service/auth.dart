@@ -50,7 +50,7 @@ Stream<User?> _subscribe() {
   );
 }
 
-Future<User?> callSignin() async {
+Future<User?> signIn() async {
   return _cacheOrAuth();
 }
 
