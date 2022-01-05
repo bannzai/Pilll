@@ -23,10 +23,8 @@ ReminderNotificationCustomization _$ReminderNotificationCustomizationFromJson(
 class _$ReminderNotificationCustomizationTearOff {
   const _$ReminderNotificationCustomizationTearOff();
 
-  _ReminderNotificationCustomization call(
-      {DateTime? beginTrialDate, String word = pill}) {
+  _ReminderNotificationCustomization call({String word = pill}) {
     return _ReminderNotificationCustomization(
-      beginTrialDate: beginTrialDate,
       word: word,
     );
   }
@@ -42,7 +40,6 @@ const $ReminderNotificationCustomization =
 
 /// @nodoc
 mixin _$ReminderNotificationCustomization {
-  DateTime? get beginTrialDate => throw _privateConstructorUsedError;
   String get word => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -57,7 +54,7 @@ abstract class $ReminderNotificationCustomizationCopyWith<$Res> {
           ReminderNotificationCustomization value,
           $Res Function(ReminderNotificationCustomization) then) =
       _$ReminderNotificationCustomizationCopyWithImpl<$Res>;
-  $Res call({DateTime? beginTrialDate, String word});
+  $Res call({String word});
 }
 
 /// @nodoc
@@ -71,14 +68,9 @@ class _$ReminderNotificationCustomizationCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object? beginTrialDate = freezed,
     Object? word = freezed,
   }) {
     return _then(_value.copyWith(
-      beginTrialDate: beginTrialDate == freezed
-          ? _value.beginTrialDate
-          : beginTrialDate // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
       word: word == freezed
           ? _value.word
           : word // ignore: cast_nullable_to_non_nullable
@@ -95,7 +87,7 @@ abstract class _$ReminderNotificationCustomizationCopyWith<$Res>
           $Res Function(_ReminderNotificationCustomization) then) =
       __$ReminderNotificationCustomizationCopyWithImpl<$Res>;
   @override
-  $Res call({DateTime? beginTrialDate, String word});
+  $Res call({String word});
 }
 
 /// @nodoc
@@ -113,14 +105,9 @@ class __$ReminderNotificationCustomizationCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object? beginTrialDate = freezed,
     Object? word = freezed,
   }) {
     return _then(_ReminderNotificationCustomization(
-      beginTrialDate: beginTrialDate == freezed
-          ? _value.beginTrialDate
-          : beginTrialDate // ignore: cast_nullable_to_non_nullable
-              as DateTime?,
       word: word == freezed
           ? _value.word
           : word // ignore: cast_nullable_to_non_nullable
@@ -134,23 +121,19 @@ class __$ReminderNotificationCustomizationCopyWithImpl<$Res>
 @JsonSerializable(explicitToJson: true)
 class _$_ReminderNotificationCustomization
     extends _ReminderNotificationCustomization {
-  const _$_ReminderNotificationCustomization(
-      {this.beginTrialDate, this.word = pill})
-      : super._();
+  const _$_ReminderNotificationCustomization({this.word = pill}) : super._();
 
   factory _$_ReminderNotificationCustomization.fromJson(
           Map<String, dynamic> json) =>
       _$$_ReminderNotificationCustomizationFromJson(json);
 
-  @override
-  final DateTime? beginTrialDate;
   @JsonKey()
   @override
   final String word;
 
   @override
   String toString() {
-    return 'ReminderNotificationCustomization(beginTrialDate: $beginTrialDate, word: $word)';
+    return 'ReminderNotificationCustomization(word: $word)';
   }
 
   @override
@@ -158,16 +141,12 @@ class _$_ReminderNotificationCustomization
     return identical(this, other) ||
         (other.runtimeType == runtimeType &&
             other is _ReminderNotificationCustomization &&
-            const DeepCollectionEquality()
-                .equals(other.beginTrialDate, beginTrialDate) &&
             const DeepCollectionEquality().equals(other.word, word));
   }
 
   @override
-  int get hashCode => Object.hash(
-      runtimeType,
-      const DeepCollectionEquality().hash(beginTrialDate),
-      const DeepCollectionEquality().hash(word));
+  int get hashCode =>
+      Object.hash(runtimeType, const DeepCollectionEquality().hash(word));
 
   @JsonKey(ignore: true)
   @override
@@ -184,17 +163,14 @@ class _$_ReminderNotificationCustomization
 
 abstract class _ReminderNotificationCustomization
     extends ReminderNotificationCustomization {
-  const factory _ReminderNotificationCustomization(
-      {DateTime? beginTrialDate,
-      String word}) = _$_ReminderNotificationCustomization;
+  const factory _ReminderNotificationCustomization({String word}) =
+      _$_ReminderNotificationCustomization;
   const _ReminderNotificationCustomization._() : super._();
 
   factory _ReminderNotificationCustomization.fromJson(
           Map<String, dynamic> json) =
       _$_ReminderNotificationCustomization.fromJson;
 
-  @override
-  DateTime? get beginTrialDate;
   @override
   String get word;
   @override
