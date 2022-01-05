@@ -1,3 +1,4 @@
+import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:pilll/components/molecules/indicator.dart';
 import 'package:pilll/entity/setting.dart';
 import 'package:pilll/domain/settings/setting_page_store.dart';
@@ -5,6 +6,7 @@ import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:pilll/error/error_alert.dart';
 
 class ReminderNotificationCustomizeWordPage extends HookConsumerWidget {
   @override
@@ -16,6 +18,9 @@ class ReminderNotificationCustomizeWordPage extends HookConsumerWidget {
     if (setting == null) {
       return Indicator();
     }
+
+    final textFieldControlelr = useTextEditingController(
+        text: setting.reminderNotificationCustomization.word);
 
     return Scaffold(
       backgroundColor: PilllColors.background,
@@ -34,17 +39,24 @@ class ReminderNotificationCustomizeWordPage extends HookConsumerWidget {
         child: Container(
           child: ListView(
             children: [
-              _textField(context, store, setting),
+              TextField(
+                autofocus: true,
+                onSubmitted: (word) async {
+                  try {
+                    await store.reminderNotificationWordSubmit(word);
+                    Navigator.of(context).pop();
+                  } catch (error) {
+                    showErrorAlert(context, message: error.toString());
+                  }
+                },
+                controller: textFieldControlelr,
+                maxLength: 20,
+              ),
             ],
           ),
         ),
       ),
     );
-  }
-
-  Widget _textField(
-      BuildContext context, SettingStateStore store, Setting setting) {
-    return TextField();
   }
 }
 
