@@ -1,6 +1,7 @@
 import 'dart:async';
 
 import 'package:pilll/database/batch.dart';
+import 'package:pilll/entity/reminder_notification_customization.dart';
 import 'package:pilll/entity/setting.dart';
 import 'package:pilll/service/pill_sheet.dart';
 import 'package:pilll/service/pill_sheet_group.dart';
@@ -200,6 +201,24 @@ class SettingStateStore extends StateNotifier<SettingState> {
     }
     return _settingService
         .update(setting.copyWith(isAutomaticallyCreatePillSheet: isOn))
+        .then((setting) => state = state.copyWith(setting: setting));
+  }
+
+  Future<void> reminderNotificationWordSubmit(String word) {
+    final setting = state.setting;
+    if (setting == null) {
+      throw FormatException("setting entity not found");
+    }
+
+    var reminderNotificationCustomization =
+        setting.reminderNotificationCustomization;
+    reminderNotificationCustomization =
+        reminderNotificationCustomization.copyWith(word: word);
+
+    return _settingService
+        .update(setting.copyWith(
+            reminderNotificationCustomization:
+                reminderNotificationCustomization))
         .then((setting) => state = state.copyWith(setting: setting));
   }
 }
