@@ -6,16 +6,16 @@ import 'package:pilll/components/molecules/premium_badge.dart';
 import 'package:pilll/domain/premium_introduction/premium_introduction_sheet.dart';
 import 'package:pilll/domain/premium_trial/premium_trial_complete_modal.dart';
 import 'package:pilll/domain/premium_trial/premium_trial_modal.dart';
-import 'package:pilll/domain/settings/notification_customize_word_page.dart';
+import 'package:pilll/domain/settings/reminder_notification_customize_word_page.dart';
 import 'package:pilll/entity/setting.dart';
 
-class NotificationCustomizeWord extends HookConsumerWidget {
+class ReminderNotificationCustomizeWord extends HookConsumerWidget {
   final Setting setting;
   final bool isTrial;
   final bool isPremium;
   final DateTime? trialDeadlineDate;
 
-  const NotificationCustomizeWord({
+  const ReminderNotificationCustomizeWord({
     Key? key,
     required this.setting,
     required this.isTrial,
