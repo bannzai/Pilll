@@ -17,9 +17,11 @@ class ReminderTimesPage extends HookConsumerWidget {
     final store = ref.watch(settingStoreProvider.notifier);
     final state = ref.watch(settingStoreProvider);
     final setting = state.setting;
+
     if (setting == null) {
       return Indicator();
     }
+
     return Scaffold(
       backgroundColor: PilllColors.background,
       appBar: AppBar(
