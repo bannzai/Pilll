@@ -39,6 +39,12 @@ _$_Setting _$$_SettingFromJson(Map<String, dynamic> json) => _$_Setting(
           PillSheetAppearanceMode.number,
       isAutomaticallyCreatePillSheet:
           json['isAutomaticallyCreatePillSheet'] as bool? ?? false,
+      reminderNotificationCustomization:
+          json['reminderNotificationCustomization'] == null
+              ? const ReminderNotificationCustomization()
+              : ReminderNotificationCustomization.fromJson(
+                  json['reminderNotificationCustomization']
+                      as Map<String, dynamic>),
     );
 
 Map<String, dynamic> _$$_SettingToJson(_$_Setting instance) =>
@@ -54,6 +60,8 @@ Map<String, dynamic> _$$_SettingToJson(_$_Setting instance) =>
       'pillSheetAppearanceMode':
           _$PillSheetAppearanceModeEnumMap[instance.pillSheetAppearanceMode],
       'isAutomaticallyCreatePillSheet': instance.isAutomaticallyCreatePillSheet,
+      'reminderNotificationCustomization':
+          instance.reminderNotificationCustomization.toJson(),
     };
 
 const _$PillSheetTypeEnumMap = {
