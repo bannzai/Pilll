@@ -9,7 +9,6 @@ class ReminderNotificationCustomization
     with _$ReminderNotificationCustomization {
   @JsonSerializable(explicitToJson: true)
   const factory ReminderNotificationCustomization({
-    DateTime? beginTrialDate,
     @Default(pill) String word,
   }) = _ReminderNotificationCustomization;
   const ReminderNotificationCustomization._();
