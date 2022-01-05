@@ -16,5 +16,5 @@ class ReminderNotificationCustomization
 
   factory ReminderNotificationCustomization.fromJson(
           Map<String, dynamic> json) =>
-      _$ReminderNotificationCustomization(json);
+      _$ReminderNotificationCustomizationFromJson(json);
 }
