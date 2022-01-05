@@ -39,6 +39,8 @@ _$_Setting _$$_SettingFromJson(Map<String, dynamic> json) => _$_Setting(
           PillSheetAppearanceMode.number,
       isAutomaticallyCreatePillSheet:
           json['isAutomaticallyCreatePillSheet'] as bool? ?? false,
+      userCustomizedNotificationWord:
+          json['userCustomizedNotificationWord'] as String?,
     );
 
 Map<String, dynamic> _$$_SettingToJson(_$_Setting instance) =>
@@ -54,6 +56,7 @@ Map<String, dynamic> _$$_SettingToJson(_$_Setting instance) =>
       'pillSheetAppearanceMode':
           _$PillSheetAppearanceModeEnumMap[instance.pillSheetAppearanceMode],
       'isAutomaticallyCreatePillSheet': instance.isAutomaticallyCreatePillSheet,
+      'userCustomizedNotificationWord': instance.userCustomizedNotificationWord,
     };
 
 const _$PillSheetTypeEnumMap = {
