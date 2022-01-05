@@ -1,6 +1,7 @@
 import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:flutter/foundation.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:pilll/entity/reminder_notification_customization.dart';
 
 part 'setting.g.dart';
 part 'setting.freezed.dart';
@@ -44,17 +45,23 @@ class SettingFirestoreFieldKeys {
 class Setting with _$Setting {
   const Setting._();
   @JsonSerializable(explicitToJson: true)
-  const factory Setting({
-    @Default([]) List<PillSheetType> pillSheetTypes,
-    required int pillNumberForFromMenstruation,
-    required int durationMenstruation,
-    @Default([]) List<ReminderTime> reminderTimes,
-    required bool isOnReminder,
-    @Default(true) bool isOnNotifyInNotTakenDuration,
-    @Default(PillSheetAppearanceMode.number)
-        PillSheetAppearanceMode pillSheetAppearanceMode,
-    @Default(false) bool isAutomaticallyCreatePillSheet,
-  }) = _Setting;
+  const factory Setting(
+      {@Default([])
+          List<PillSheetType> pillSheetTypes,
+      required int pillNumberForFromMenstruation,
+      required int durationMenstruation,
+      @Default([])
+          List<ReminderTime> reminderTimes,
+      required bool isOnReminder,
+      @Default(true)
+          bool isOnNotifyInNotTakenDuration,
+      @Default(PillSheetAppearanceMode.number)
+          PillSheetAppearanceMode pillSheetAppearanceMode,
+      @Default(false)
+          bool isAutomaticallyCreatePillSheet,
+      @Default(ReminderNotificationCustomization())
+          ReminderNotificationCustomization
+              reminderNotificationCustomization}) = _Setting;
 
   factory Setting.fromJson(Map<String, dynamic> json) =>
       _$SettingFromJson(json);
