@@ -12,5 +12,9 @@ class ReminderNotificationCustomization
     DateTime? beginTrialDate,
     @Default(pill) String word,
   }) = _ReminderNotificationCustomization;
-  ReminderNotificationCustomization._();
+  const ReminderNotificationCustomization._();
+
+  factory ReminderNotificationCustomization.fromJson(
+          Map<String, dynamic> json) =>
+      _$ReminderNotificationCustomization(json);
 }

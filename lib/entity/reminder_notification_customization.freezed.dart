@@ -14,6 +14,11 @@ T _$identity<T>(T value) => value;
 final _privateConstructorUsedError = UnsupportedError(
     'It seems like you constructed your class using `MyClass._()`. This constructor is only meant to be used by freezed and you are not supposed to need it nor use it.\nPlease check the documentation here for more informations: https://github.com/rrousselGit/freezed#custom-getters-and-methods');
 
+ReminderNotificationCustomization _$ReminderNotificationCustomizationFromJson(
+    Map<String, dynamic> json) {
+  return _ReminderNotificationCustomization.fromJson(json);
+}
+
 /// @nodoc
 class _$ReminderNotificationCustomizationTearOff {
   const _$ReminderNotificationCustomizationTearOff();
@@ -24,6 +29,10 @@ class _$ReminderNotificationCustomizationTearOff {
       beginTrialDate: beginTrialDate,
       word: word,
     );
+  }
+
+  ReminderNotificationCustomization fromJson(Map<String, Object?> json) {
+    return ReminderNotificationCustomization.fromJson(json);
   }
 }
 
@@ -36,6 +45,7 @@ mixin _$ReminderNotificationCustomization {
   DateTime? get beginTrialDate => throw _privateConstructorUsedError;
   String get word => throw _privateConstructorUsedError;
 
+  Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
   $ReminderNotificationCustomizationCopyWith<ReminderNotificationCustomization>
       get copyWith => throw _privateConstructorUsedError;
@@ -128,6 +138,10 @@ class _$_ReminderNotificationCustomization
       {this.beginTrialDate, this.word = pill})
       : super._();
 
+  factory _$_ReminderNotificationCustomization.fromJson(
+          Map<String, dynamic> json) =>
+      _$$_ReminderNotificationCustomizationFromJson(json);
+
   @override
   final DateTime? beginTrialDate;
   @JsonKey()
@@ -161,6 +175,11 @@ class _$_ReminderNotificationCustomization
           _ReminderNotificationCustomization>
       get copyWith => __$ReminderNotificationCustomizationCopyWithImpl<
           _ReminderNotificationCustomization>(this, _$identity);
+
+  @override
+  Map<String, dynamic> toJson() {
+    return _$$_ReminderNotificationCustomizationToJson(this);
+  }
 }
 
 abstract class _ReminderNotificationCustomization
@@ -169,6 +188,10 @@ abstract class _ReminderNotificationCustomization
       {DateTime? beginTrialDate,
       String word}) = _$_ReminderNotificationCustomization;
   const _ReminderNotificationCustomization._() : super._();
+
+  factory _ReminderNotificationCustomization.fromJson(
+          Map<String, dynamic> json) =
+      _$_ReminderNotificationCustomization.fromJson;
 
   @override
   DateTime? get beginTrialDate;
