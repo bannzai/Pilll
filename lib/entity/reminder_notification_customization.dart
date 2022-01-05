@@ -1,0 +1,16 @@
+import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:pilll/emoji/emoji.dart';
+
+part 'reminder_notification_customization.g.dart';
+part 'reminder_notification_customization.freezed.dart';
+
+@freezed
+class ReminderNotificationCustomization
+    with _$ReminderNotificationCustomization {
+  @JsonSerializable(explicitToJson: true)
+  const factory ReminderNotificationCustomization({
+    DateTime? beginTrialDate,
+    @Default(pill) String word,
+  }) = _ReminderNotificationCustomization;
+  ReminderNotificationCustomization._();
+}
