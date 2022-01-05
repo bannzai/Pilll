@@ -54,6 +54,7 @@ class Setting with _$Setting {
     @Default(PillSheetAppearanceMode.number)
         PillSheetAppearanceMode pillSheetAppearanceMode,
     @Default(false) bool isAutomaticallyCreatePillSheet,
+    String? userCustomizedNotificationWord,
   }) = _Setting;
 
   factory Setting.fromJson(Map<String, dynamic> json) =>
