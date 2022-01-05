@@ -57,8 +57,6 @@ class PillSheetGroup with _$PillSheetGroup {
 
   bool get _isDeleted => deletedAt != null;
   bool get isDeactived => activedPillSheet == null || _isDeleted;
-  bool get hasPillSheetRestDuration =>
-      pillSheets.map((e) => e.pillSheetType.hasRestDurationType).contains(true);
 
   int get sequentialTodayPillNumber {
     if (pillSheets.isEmpty) {

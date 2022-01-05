@@ -31,12 +31,11 @@ class RecordPagePillSheetSupportActions extends StatelessWidget {
         SwitchingAppearanceMode(
             store: store, mode: setting.pillSheetAppearanceMode),
         Spacer(),
-        if (!pillSheetGroup.hasPillSheetRestDuration)
-          ManualRestDurationButton(
-              restDuration: restDuration,
-              activedPillSheet: activedPillSheet,
-              store: store,
-              pillSheetGroup: pillSheetGroup),
+        ManualRestDurationButton(
+            restDuration: restDuration,
+            activedPillSheet: activedPillSheet,
+            store: store,
+            pillSheetGroup: pillSheetGroup),
       ]),
     );
   }
