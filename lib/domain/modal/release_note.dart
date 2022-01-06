@@ -85,7 +85,7 @@ Pilllからの通知と悟られたくない方にオススメ！※こちらの
 }
 
 showReleaseNotePreDialog(BuildContext context) async {
-  final key = ReleaseNoteKey.version3_4_0;
+  final key = ReleaseNoteKey.version3_5_0;
   final storage = await SharedPreferences.getInstance();
   if (storage.getBool(key) ?? false) {
     return;
