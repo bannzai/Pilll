@@ -7,6 +7,7 @@ import 'package:pilll/domain/settings/components/rows/creating_new_pillsheet.dar
 import 'package:pilll/domain/settings/components/rows/menstruation.dart';
 import 'package:pilll/domain/settings/components/rows/account_link.dart';
 import 'package:pilll/domain/settings/components/rows/list_explain.dart';
+import 'package:pilll/domain/settings/components/rows/reminder_notification_customize_word.dart';
 import 'package:pilll/domain/settings/components/rows/notification_in_rest_duration.dart';
 import 'package:pilll/domain/settings/components/rows/notification_time.dart';
 import 'package:pilll/domain/settings/components/rows/pill_sheet_remove.dart';
@@ -152,7 +153,13 @@ class SettingPage extends HookConsumerWidget {
                           trialDeadlineDate: state.trialDeadlineDate,
                         ),
                         _separator(),
-                      ]
+                      ],
+                      ReminderNotificationCustomizeWord(
+                          setting: setting,
+                          isTrial: state.isTrial,
+                          isPremium: state.isPremium,
+                          trialDeadlineDate: state.trialDeadlineDate),
+                      _separator(),
                     ],
                   );
                 case SettingSection.menstruation:

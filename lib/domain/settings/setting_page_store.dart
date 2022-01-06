@@ -12,7 +12,8 @@ import 'package:pilll/util/shared_preference/keys.dart';
 import 'package:riverpod/riverpod.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-final settingStoreProvider = StateNotifierProvider<SettingStateStore, SettingState>(
+final settingStoreProvider =
+    StateNotifierProvider<SettingStateStore, SettingState>(
   (ref) => SettingStateStore(
     ref.watch(batchFactoryProvider),
     ref.watch(settingServiceProvider),
@@ -23,8 +24,7 @@ final settingStoreProvider = StateNotifierProvider<SettingStateStore, SettingSta
   ),
 );
 
-final settingStateProvider =
-    Provider((ref) => ref.watch(settingStoreProvider));
+final settingStateProvider = Provider((ref) => ref.watch(settingStoreProvider));
 
 class SettingStateStore extends StateNotifier<SettingState> {
   final BatchFactory _batchFactory;
@@ -200,6 +200,24 @@ class SettingStateStore extends StateNotifier<SettingState> {
     }
     return _settingService
         .update(setting.copyWith(isAutomaticallyCreatePillSheet: isOn))
+        .then((setting) => state = state.copyWith(setting: setting));
+  }
+
+  Future<void> reminderNotificationWordSubmit(String word) {
+    final setting = state.setting;
+    if (setting == null) {
+      throw FormatException("setting entity not found");
+    }
+
+    var reminderNotificationCustomization =
+        setting.reminderNotificationCustomization;
+    reminderNotificationCustomization =
+        reminderNotificationCustomization.copyWith(word: word);
+
+    return _settingService
+        .update(setting.copyWith(
+            reminderNotificationCustomization:
+                reminderNotificationCustomization))
         .then((setting) => state = state.copyWith(setting: setting));
   }
 }

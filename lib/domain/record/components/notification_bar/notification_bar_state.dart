@@ -71,7 +71,6 @@ class NotificationBarState with _$NotificationBarState {
       return null;
     }
 
-    assert(trialDeadlineDate.isAfter(now()), "It is end of trial period.");
     if (trialDeadlineDate.isBefore(now())) {
       return null;
     }

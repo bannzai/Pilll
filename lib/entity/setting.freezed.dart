@@ -1,5 +1,6 @@
 // coverage:ignore-file
 // GENERATED CODE - DO NOT MODIFY BY HAND
+// ignore_for_file: type=lint
 // ignore_for_file: unused_element, deprecated_member_use, deprecated_member_use_from_same_package, use_function_type_syntax_for_parameters, unnecessary_const, avoid_init_to_null, invalid_override_different_default_values_named, prefer_expression_function_bodies, annotate_overrides, invalid_annotation_target
 
 part of 'setting.dart';
@@ -208,7 +209,9 @@ class _$SettingTearOff {
       bool isOnNotifyInNotTakenDuration = true,
       PillSheetAppearanceMode pillSheetAppearanceMode =
           PillSheetAppearanceMode.number,
-      bool isAutomaticallyCreatePillSheet = false}) {
+      bool isAutomaticallyCreatePillSheet = false,
+      ReminderNotificationCustomization reminderNotificationCustomization =
+          const ReminderNotificationCustomization()}) {
     return _Setting(
       pillSheetTypes: pillSheetTypes,
       pillNumberForFromMenstruation: pillNumberForFromMenstruation,
@@ -218,6 +221,7 @@ class _$SettingTearOff {
       isOnNotifyInNotTakenDuration: isOnNotifyInNotTakenDuration,
       pillSheetAppearanceMode: pillSheetAppearanceMode,
       isAutomaticallyCreatePillSheet: isAutomaticallyCreatePillSheet,
+      reminderNotificationCustomization: reminderNotificationCustomization,
     );
   }
 
@@ -240,6 +244,8 @@ mixin _$Setting {
   PillSheetAppearanceMode get pillSheetAppearanceMode =>
       throw _privateConstructorUsedError;
   bool get isAutomaticallyCreatePillSheet => throw _privateConstructorUsedError;
+  ReminderNotificationCustomization get reminderNotificationCustomization =>
+      throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -258,7 +264,11 @@ abstract class $SettingCopyWith<$Res> {
       bool isOnReminder,
       bool isOnNotifyInNotTakenDuration,
       PillSheetAppearanceMode pillSheetAppearanceMode,
-      bool isAutomaticallyCreatePillSheet});
+      bool isAutomaticallyCreatePillSheet,
+      ReminderNotificationCustomization reminderNotificationCustomization});
+
+  $ReminderNotificationCustomizationCopyWith<$Res>
+      get reminderNotificationCustomization;
 }
 
 /// @nodoc
@@ -279,6 +289,7 @@ class _$SettingCopyWithImpl<$Res> implements $SettingCopyWith<$Res> {
     Object? isOnNotifyInNotTakenDuration = freezed,
     Object? pillSheetAppearanceMode = freezed,
     Object? isAutomaticallyCreatePillSheet = freezed,
+    Object? reminderNotificationCustomization = freezed,
   }) {
     return _then(_value.copyWith(
       pillSheetTypes: pillSheetTypes == freezed
@@ -313,7 +324,21 @@ class _$SettingCopyWithImpl<$Res> implements $SettingCopyWith<$Res> {
           ? _value.isAutomaticallyCreatePillSheet
           : isAutomaticallyCreatePillSheet // ignore: cast_nullable_to_non_nullable
               as bool,
+      reminderNotificationCustomization: reminderNotificationCustomization ==
+              freezed
+          ? _value.reminderNotificationCustomization
+          : reminderNotificationCustomization // ignore: cast_nullable_to_non_nullable
+              as ReminderNotificationCustomization,
     ));
+  }
+
+  @override
+  $ReminderNotificationCustomizationCopyWith<$Res>
+      get reminderNotificationCustomization {
+    return $ReminderNotificationCustomizationCopyWith<$Res>(
+        _value.reminderNotificationCustomization, (value) {
+      return _then(_value.copyWith(reminderNotificationCustomization: value));
+    });
   }
 }
 
@@ -330,7 +355,12 @@ abstract class _$SettingCopyWith<$Res> implements $SettingCopyWith<$Res> {
       bool isOnReminder,
       bool isOnNotifyInNotTakenDuration,
       PillSheetAppearanceMode pillSheetAppearanceMode,
-      bool isAutomaticallyCreatePillSheet});
+      bool isAutomaticallyCreatePillSheet,
+      ReminderNotificationCustomization reminderNotificationCustomization});
+
+  @override
+  $ReminderNotificationCustomizationCopyWith<$Res>
+      get reminderNotificationCustomization;
 }
 
 /// @nodoc
@@ -352,6 +382,7 @@ class __$SettingCopyWithImpl<$Res> extends _$SettingCopyWithImpl<$Res>
     Object? isOnNotifyInNotTakenDuration = freezed,
     Object? pillSheetAppearanceMode = freezed,
     Object? isAutomaticallyCreatePillSheet = freezed,
+    Object? reminderNotificationCustomization = freezed,
   }) {
     return _then(_Setting(
       pillSheetTypes: pillSheetTypes == freezed
@@ -386,6 +417,11 @@ class __$SettingCopyWithImpl<$Res> extends _$SettingCopyWithImpl<$Res>
           ? _value.isAutomaticallyCreatePillSheet
           : isAutomaticallyCreatePillSheet // ignore: cast_nullable_to_non_nullable
               as bool,
+      reminderNotificationCustomization: reminderNotificationCustomization ==
+              freezed
+          ? _value.reminderNotificationCustomization
+          : reminderNotificationCustomization // ignore: cast_nullable_to_non_nullable
+              as ReminderNotificationCustomization,
     ));
   }
 }
@@ -402,7 +438,9 @@ class _$_Setting extends _Setting with DiagnosticableTreeMixin {
       required this.isOnReminder,
       this.isOnNotifyInNotTakenDuration = true,
       this.pillSheetAppearanceMode = PillSheetAppearanceMode.number,
-      this.isAutomaticallyCreatePillSheet = false})
+      this.isAutomaticallyCreatePillSheet = false,
+      this.reminderNotificationCustomization =
+          const ReminderNotificationCustomization()})
       : super._();
 
   factory _$_Setting.fromJson(Map<String, dynamic> json) =>
@@ -429,10 +467,13 @@ class _$_Setting extends _Setting with DiagnosticableTreeMixin {
   @JsonKey()
   @override
   final bool isAutomaticallyCreatePillSheet;
+  @JsonKey()
+  @override
+  final ReminderNotificationCustomization reminderNotificationCustomization;
 
   @override
   String toString({DiagnosticLevel minLevel = DiagnosticLevel.info}) {
-    return 'Setting(pillSheetTypes: $pillSheetTypes, pillNumberForFromMenstruation: $pillNumberForFromMenstruation, durationMenstruation: $durationMenstruation, reminderTimes: $reminderTimes, isOnReminder: $isOnReminder, isOnNotifyInNotTakenDuration: $isOnNotifyInNotTakenDuration, pillSheetAppearanceMode: $pillSheetAppearanceMode, isAutomaticallyCreatePillSheet: $isAutomaticallyCreatePillSheet)';
+    return 'Setting(pillSheetTypes: $pillSheetTypes, pillNumberForFromMenstruation: $pillNumberForFromMenstruation, durationMenstruation: $durationMenstruation, reminderTimes: $reminderTimes, isOnReminder: $isOnReminder, isOnNotifyInNotTakenDuration: $isOnNotifyInNotTakenDuration, pillSheetAppearanceMode: $pillSheetAppearanceMode, isAutomaticallyCreatePillSheet: $isAutomaticallyCreatePillSheet, reminderNotificationCustomization: $reminderNotificationCustomization)';
   }
 
   @override
@@ -451,7 +492,9 @@ class _$_Setting extends _Setting with DiagnosticableTreeMixin {
       ..add(DiagnosticsProperty(
           'pillSheetAppearanceMode', pillSheetAppearanceMode))
       ..add(DiagnosticsProperty(
-          'isAutomaticallyCreatePillSheet', isAutomaticallyCreatePillSheet));
+          'isAutomaticallyCreatePillSheet', isAutomaticallyCreatePillSheet))
+      ..add(DiagnosticsProperty('reminderNotificationCustomization',
+          reminderNotificationCustomization));
   }
 
   @override
@@ -477,7 +520,10 @@ class _$_Setting extends _Setting with DiagnosticableTreeMixin {
                 other.pillSheetAppearanceMode, pillSheetAppearanceMode) &&
             const DeepCollectionEquality().equals(
                 other.isAutomaticallyCreatePillSheet,
-                isAutomaticallyCreatePillSheet));
+                isAutomaticallyCreatePillSheet) &&
+            const DeepCollectionEquality().equals(
+                other.reminderNotificationCustomization,
+                reminderNotificationCustomization));
   }
 
   @override
@@ -490,7 +536,8 @@ class _$_Setting extends _Setting with DiagnosticableTreeMixin {
       const DeepCollectionEquality().hash(isOnReminder),
       const DeepCollectionEquality().hash(isOnNotifyInNotTakenDuration),
       const DeepCollectionEquality().hash(pillSheetAppearanceMode),
-      const DeepCollectionEquality().hash(isAutomaticallyCreatePillSheet));
+      const DeepCollectionEquality().hash(isAutomaticallyCreatePillSheet),
+      const DeepCollectionEquality().hash(reminderNotificationCustomization));
 
   @JsonKey(ignore: true)
   @override
@@ -512,7 +559,9 @@ abstract class _Setting extends Setting {
       required bool isOnReminder,
       bool isOnNotifyInNotTakenDuration,
       PillSheetAppearanceMode pillSheetAppearanceMode,
-      bool isAutomaticallyCreatePillSheet}) = _$_Setting;
+      bool isAutomaticallyCreatePillSheet,
+      ReminderNotificationCustomization
+          reminderNotificationCustomization}) = _$_Setting;
   const _Setting._() : super._();
 
   factory _Setting.fromJson(Map<String, dynamic> json) = _$_Setting.fromJson;
@@ -533,6 +582,8 @@ abstract class _Setting extends Setting {
   PillSheetAppearanceMode get pillSheetAppearanceMode;
   @override
   bool get isAutomaticallyCreatePillSheet;
+  @override
+  ReminderNotificationCustomization get reminderNotificationCustomization;
   @override
   @JsonKey(ignore: true)
   _$SettingCopyWith<_Setting> get copyWith =>
