@@ -73,6 +73,9 @@ class App extends StatelessWidget {
           color: PilllColors.white,
           elevation: 3,
         ),
+        textSelectionTheme: TextSelectionThemeData(
+          cursorColor: PilllColors.primary,
+        ),
         primaryColor: PilllColors.primary,
         visualDensity: VisualDensity.adaptivePlatformDensity,
         toggleableActiveColor: PilllColors.primary,
