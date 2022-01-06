@@ -57,7 +57,7 @@ class ReleaseNote extends StatelessWidget {
                     children: [
                       Text(
                         '''
-Pilllからの通知と悟られたくない方にオススメ！※こちらの機能はプレミアムメンバー限定になります
+ピルを飲んでいると知られたくない方にオススメ！※こちらの機能はプレミアムメンバー限定になります
                         ''',
                         style: FontType.assisting.merge(TextColorStyle.main),
                       ),
