@@ -62,7 +62,7 @@ class ReminderNotificationCustomizeWordPage extends HookConsumerWidget {
                           ),
                           Spacer(),
                           Text(
-                            "${word.value.characters.length}/20",
+                            "${word.value.characters.length}/8",
                             style: TextStyle(
                                 fontFamily: FontFamily.japanese,
                                 fontSize: 12,
@@ -84,7 +84,7 @@ class ReminderNotificationCustomizeWordPage extends HookConsumerWidget {
                         }
                       },
                       controller: textFieldControlelr,
-                      maxLength: 20,
+                      maxLength: 8,
                     ),
                   ],
                 ),
