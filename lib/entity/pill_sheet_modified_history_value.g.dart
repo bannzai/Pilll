@@ -156,15 +156,23 @@ Map<String, dynamic> _$$_TakenPillValueToJson(_$_TakenPillValue instance) =>
 _$_TakenPillEditedValue _$$_TakenPillEditedValueFromJson(
         Map<String, dynamic> json) =>
     _$_TakenPillEditedValue(
-      takenDateTime: NonNullTimestampConverter.timestampToDateTime(
-          json['takenDateTime'] as Timestamp),
+      createdDate: NonNullTimestampConverter.timestampToDateTime(
+          json['createdDate'] as Timestamp),
+      actualTakenDate: NonNullTimestampConverter.timestampToDateTime(
+          json['actualTakenDate'] as Timestamp),
+      historyRecordedDate: NonNullTimestampConverter.timestampToDateTime(
+          json['historyRecordedDate'] as Timestamp),
     );
 
 Map<String, dynamic> _$$_TakenPillEditedValueToJson(
         _$_TakenPillEditedValue instance) =>
     <String, dynamic>{
-      'takenDateTime':
-          NonNullTimestampConverter.dateTimeToTimestamp(instance.takenDateTime),
+      'createdDate':
+          NonNullTimestampConverter.dateTimeToTimestamp(instance.createdDate),
+      'actualTakenDate': NonNullTimestampConverter.dateTimeToTimestamp(
+          instance.actualTakenDate),
+      'historyRecordedDate': NonNullTimestampConverter.dateTimeToTimestamp(
+          instance.historyRecordedDate),
     };
 
 _$_RevertTakenPillValue _$$_RevertTakenPillValueFromJson(

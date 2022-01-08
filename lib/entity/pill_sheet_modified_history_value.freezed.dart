@@ -1545,9 +1545,15 @@ class _$TakenPillEditedValueTearOff {
 
   _TakenPillEditedValue call(
       {@JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-          required DateTime takenDateTime}) {
+          required DateTime createdDate,
+      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+          required DateTime actualTakenDate,
+      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+          required DateTime historyRecordedDate}) {
     return _TakenPillEditedValue(
-      takenDateTime: takenDateTime,
+      createdDate: createdDate,
+      actualTakenDate: actualTakenDate,
+      historyRecordedDate: historyRecordedDate,
     );
   }
 
@@ -1564,7 +1570,15 @@ mixin _$TakenPillEditedValue {
   @JsonKey(
       fromJson: NonNullTimestampConverter.timestampToDateTime,
       toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-  DateTime get takenDateTime => throw _privateConstructorUsedError;
+  DateTime get createdDate => throw _privateConstructorUsedError;
+  @JsonKey(
+      fromJson: NonNullTimestampConverter.timestampToDateTime,
+      toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+  DateTime get actualTakenDate => throw _privateConstructorUsedError; //
+  @JsonKey(
+      fromJson: NonNullTimestampConverter.timestampToDateTime,
+      toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+  DateTime get historyRecordedDate => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -1579,7 +1593,11 @@ abstract class $TakenPillEditedValueCopyWith<$Res> {
       _$TakenPillEditedValueCopyWithImpl<$Res>;
   $Res call(
       {@JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-          DateTime takenDateTime});
+          DateTime createdDate,
+      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+          DateTime actualTakenDate,
+      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+          DateTime historyRecordedDate});
 }
 
 /// @nodoc
@@ -1593,12 +1611,22 @@ class _$TakenPillEditedValueCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object? takenDateTime = freezed,
+    Object? createdDate = freezed,
+    Object? actualTakenDate = freezed,
+    Object? historyRecordedDate = freezed,
   }) {
     return _then(_value.copyWith(
-      takenDateTime: takenDateTime == freezed
-          ? _value.takenDateTime
-          : takenDateTime // ignore: cast_nullable_to_non_nullable
+      createdDate: createdDate == freezed
+          ? _value.createdDate
+          : createdDate // ignore: cast_nullable_to_non_nullable
+              as DateTime,
+      actualTakenDate: actualTakenDate == freezed
+          ? _value.actualTakenDate
+          : actualTakenDate // ignore: cast_nullable_to_non_nullable
+              as DateTime,
+      historyRecordedDate: historyRecordedDate == freezed
+          ? _value.historyRecordedDate
+          : historyRecordedDate // ignore: cast_nullable_to_non_nullable
               as DateTime,
     ));
   }
@@ -1613,7 +1641,11 @@ abstract class _$TakenPillEditedValueCopyWith<$Res>
   @override
   $Res call(
       {@JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-          DateTime takenDateTime});
+          DateTime createdDate,
+      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+          DateTime actualTakenDate,
+      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+          DateTime historyRecordedDate});
 }
 
 /// @nodoc
@@ -1629,12 +1661,22 @@ class __$TakenPillEditedValueCopyWithImpl<$Res>
 
   @override
   $Res call({
-    Object? takenDateTime = freezed,
+    Object? createdDate = freezed,
+    Object? actualTakenDate = freezed,
+    Object? historyRecordedDate = freezed,
   }) {
     return _then(_TakenPillEditedValue(
-      takenDateTime: takenDateTime == freezed
-          ? _value.takenDateTime
-          : takenDateTime // ignore: cast_nullable_to_non_nullable
+      createdDate: createdDate == freezed
+          ? _value.createdDate
+          : createdDate // ignore: cast_nullable_to_non_nullable
+              as DateTime,
+      actualTakenDate: actualTakenDate == freezed
+          ? _value.actualTakenDate
+          : actualTakenDate // ignore: cast_nullable_to_non_nullable
+              as DateTime,
+      historyRecordedDate: historyRecordedDate == freezed
+          ? _value.historyRecordedDate
+          : historyRecordedDate // ignore: cast_nullable_to_non_nullable
               as DateTime,
     ));
   }
@@ -1646,7 +1688,11 @@ class __$TakenPillEditedValueCopyWithImpl<$Res>
 class _$_TakenPillEditedValue extends _TakenPillEditedValue {
   const _$_TakenPillEditedValue(
       {@JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-          required this.takenDateTime})
+          required this.createdDate,
+      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+          required this.actualTakenDate,
+      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+          required this.historyRecordedDate})
       : super._();
 
   factory _$_TakenPillEditedValue.fromJson(Map<String, dynamic> json) =>
@@ -1656,11 +1702,21 @@ class _$_TakenPillEditedValue extends _TakenPillEditedValue {
   @JsonKey(
       fromJson: NonNullTimestampConverter.timestampToDateTime,
       toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-  final DateTime takenDateTime;
+  final DateTime createdDate;
+  @override
+  @JsonKey(
+      fromJson: NonNullTimestampConverter.timestampToDateTime,
+      toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+  final DateTime actualTakenDate;
+  @override //
+  @JsonKey(
+      fromJson: NonNullTimestampConverter.timestampToDateTime,
+      toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+  final DateTime historyRecordedDate;
 
   @override
   String toString() {
-    return 'TakenPillEditedValue(takenDateTime: $takenDateTime)';
+    return 'TakenPillEditedValue(createdDate: $createdDate, actualTakenDate: $actualTakenDate, historyRecordedDate: $historyRecordedDate)';
   }
 
   @override
@@ -1669,12 +1725,19 @@ class _$_TakenPillEditedValue extends _TakenPillEditedValue {
         (other.runtimeType == runtimeType &&
             other is _TakenPillEditedValue &&
             const DeepCollectionEquality()
-                .equals(other.takenDateTime, takenDateTime));
+                .equals(other.createdDate, createdDate) &&
+            const DeepCollectionEquality()
+                .equals(other.actualTakenDate, actualTakenDate) &&
+            const DeepCollectionEquality()
+                .equals(other.historyRecordedDate, historyRecordedDate));
   }
 
   @override
   int get hashCode => Object.hash(
-      runtimeType, const DeepCollectionEquality().hash(takenDateTime));
+      runtimeType,
+      const DeepCollectionEquality().hash(createdDate),
+      const DeepCollectionEquality().hash(actualTakenDate),
+      const DeepCollectionEquality().hash(historyRecordedDate));
 
   @JsonKey(ignore: true)
   @override
@@ -1691,7 +1754,11 @@ class _$_TakenPillEditedValue extends _TakenPillEditedValue {
 abstract class _TakenPillEditedValue extends TakenPillEditedValue {
   const factory _TakenPillEditedValue(
       {@JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-          required DateTime takenDateTime}) = _$_TakenPillEditedValue;
+          required DateTime createdDate,
+      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+          required DateTime actualTakenDate,
+      @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+          required DateTime historyRecordedDate}) = _$_TakenPillEditedValue;
   const _TakenPillEditedValue._() : super._();
 
   factory _TakenPillEditedValue.fromJson(Map<String, dynamic> json) =
@@ -1701,7 +1768,17 @@ abstract class _TakenPillEditedValue extends TakenPillEditedValue {
   @JsonKey(
       fromJson: NonNullTimestampConverter.timestampToDateTime,
       toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-  DateTime get takenDateTime;
+  DateTime get createdDate;
+  @override
+  @JsonKey(
+      fromJson: NonNullTimestampConverter.timestampToDateTime,
+      toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+  DateTime get actualTakenDate;
+  @override //
+  @JsonKey(
+      fromJson: NonNullTimestampConverter.timestampToDateTime,
+      toJson: NonNullTimestampConverter.dateTimeToTimestamp)
+  DateTime get historyRecordedDate;
   @override
   @JsonKey(ignore: true)
   _$TakenPillEditedValueCopyWith<_TakenPillEditedValue> get copyWith =>

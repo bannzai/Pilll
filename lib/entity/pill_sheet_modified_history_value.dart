@@ -122,7 +122,18 @@ class TakenPillEditedValue with _$TakenPillEditedValue {
       fromJson: NonNullTimestampConverter.timestampToDateTime,
       toJson: NonNullTimestampConverter.dateTimeToTimestamp,
     )
-        required DateTime takenDateTime,
+        required DateTime createdDate,
+    @JsonKey(
+      fromJson: NonNullTimestampConverter.timestampToDateTime,
+      toJson: NonNullTimestampConverter.dateTimeToTimestamp,
+    )
+        required DateTime actualTakenDate,
+    //
+    @JsonKey(
+      fromJson: NonNullTimestampConverter.timestampToDateTime,
+      toJson: NonNullTimestampConverter.dateTimeToTimestamp,
+    )
+        required DateTime historyRecordedDate,
   }) = _TakenPillEditedValue;
   const TakenPillEditedValue._();
 
