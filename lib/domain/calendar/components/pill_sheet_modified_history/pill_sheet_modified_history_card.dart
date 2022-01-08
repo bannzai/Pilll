@@ -99,6 +99,7 @@ class CalendarPillSheetModifiedHistoryCard extends StatelessWidget {
                       scrollPhysics: NeverScrollableScrollPhysics(),
                       pillSheetModifiedHistories:
                           state.pillSheetModifiedHistories,
+                      onEditTakenPillAction: store.editTakenValue,
                     ),
                   ),
                   if (state.moreButtonIsShown)
@@ -115,6 +116,7 @@ class CalendarPillSheetModifiedHistoryCard extends StatelessWidget {
                           scrollPhysics: NeverScrollableScrollPhysics(),
                           pillSheetModifiedHistories:
                               state.pillSheetModifiedHistories,
+                          onEditTakenPillAction: null,
                         ),
                       ),
                       Positioned.fill(

@@ -55,6 +55,7 @@ class PillSheetModifiedHistoriesPage extends HookConsumerWidget {
                     scrollPhysics: AlwaysScrollableScrollPhysics(),
                     pillSheetModifiedHistories:
                         state.pillSheetModifiedHistories,
+                    onEditTakenPillAction: store.editTakenValue,
                   ),
                 ),
               ],
