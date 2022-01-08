@@ -50,7 +50,7 @@ class PillSheetModifiedHistoryTakenPillAction extends StatelessWidget {
             builder: (BuildContext context) {
               return DateAndTimePicker(
                 initialDateTime: estimatedEventCausingDate,
-                done: (dateTime) {
+                done: (dateTime) async {
                   analytics.logEvent(
                       name: "selected_date_taken_history",
                       parameters: {
@@ -58,7 +58,7 @@ class PillSheetModifiedHistoryTakenPillAction extends StatelessWidget {
                         "minute": dateTime.minute
                       });
 
-                  onEdit(dateTime, value);
+                  await onEdit(dateTime, value);
                   Navigator.pop(context);
                 },
               );
