@@ -77,16 +77,12 @@ class PillSheetModifiedHistoryStateStore
     PillSheetModifiedHistoryValue value,
     TakenPillValue takenPillValue,
   ) {
-    final editedTakenPillValue = takenPillValue.copyWith(
-      edited: TakenPillEditedValue(
-        createdDate: DateTime.now(),
-        actualTakenDate: actualTakenDate,
-        historyRecordedDate: history.estimatedEventCausingDate,
-      ),
+    return updateForEditTakenValue(
+      service: _pillSheetModifiedHistoryService,
+      actualTakenDate: actualTakenDate,
+      history: history,
+      value: value,
+      takenPillValue: takenPillValue,
     );
-    final editedHistory = history.copyWith(
-        value: value.copyWith(takenPill: editedTakenPillValue));
-
-    return _pillSheetModifiedHistoryService.update(editedHistory);
   }
 }

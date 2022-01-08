@@ -148,4 +148,19 @@ class CalendarPageStateStore extends StateNotifier<CalendarPageState> {
   }
 
   CalendarCardState cardState(DateTime date) => CalendarCardState(date);
+
+  Future<void> editTakenValue(
+    DateTime actualTakenDate,
+    PillSheetModifiedHistory history,
+    PillSheetModifiedHistoryValue value,
+    TakenPillValue takenPillValue,
+  ) {
+    return updateForEditTakenValue(
+      service: _pillSheetModifiedHistoryService,
+      actualTakenDate: actualTakenDate,
+      history: history,
+      value: value,
+      takenPillValue: takenPillValue,
+    );
+  }
 }
