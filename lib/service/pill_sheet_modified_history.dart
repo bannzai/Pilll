@@ -18,7 +18,8 @@ class PillSheetModifiedHistoryService {
   Future<List<PillSheetModifiedHistory>> fetchList(DateTime? after, int limit) {
     return _database
         .pillSheetModifiedHistoriesReference()
-        .orderBy(PillSheetModifiedHistoryFirestoreKeys.createdAt,
+        .orderBy(
+            PillSheetModifiedHistoryFirestoreKeys.estimatedEventCausingDate,
             descending: true)
         .startAfter([after])
         .limit(limit)
@@ -53,7 +54,8 @@ class PillSheetModifiedHistoryService {
   Stream<List<PillSheetModifiedHistory>> stream(int limit) {
     return _database
         .pillSheetModifiedHistoriesReference()
-        .orderBy(PillSheetModifiedHistoryFirestoreKeys.createdAt,
+        .orderBy(
+            PillSheetModifiedHistoryFirestoreKeys.estimatedEventCausingDate,
             descending: true)
         .limit(limit)
         .snapshots()
