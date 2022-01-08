@@ -9,7 +9,7 @@ part 'pill_sheet_modified_history.g.dart';
 part 'pill_sheet_modified_history.freezed.dart';
 
 class PillSheetModifiedHistoryFirestoreKeys {
-  static final createdAt = "createdAt";
+  static final estimatedEventCausingDate = "estimatedEventCausingDate";
 }
 
 enum PillSheetModifiedActionType {

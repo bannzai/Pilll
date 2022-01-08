@@ -18,7 +18,8 @@ class PillSheetModifiedHistoryService {
   Future<List<PillSheetModifiedHistory>> fetchList(DateTime? after, int limit) {
     return _database
         .pillSheetModifiedHistoriesReference()
-        .orderBy(PillSheetModifiedHistoryFirestoreKeys.createdAt,
+        .orderBy(
+            PillSheetModifiedHistoryFirestoreKeys.estimatedEventCausingDate,
             descending: true)
         .startAfter([after])
         .limit(limit)
@@ -47,14 +48,14 @@ class PillSheetModifiedHistoryService {
     await _database
         .pillSheetModifiedHistoriesReference()
         .doc(pillSheetModifiedHistory.id)
-        .set(pillSheetModifiedHistory, SetOptions(merge: true));
-    return;
+        .set(pillSheetModifiedHistory.toJson(), SetOptions(merge: true));
   }
 
   Stream<List<PillSheetModifiedHistory>> stream(int limit) {
     return _database
         .pillSheetModifiedHistoriesReference()
-        .orderBy(PillSheetModifiedHistoryFirestoreKeys.createdAt,
+        .orderBy(
+            PillSheetModifiedHistoryFirestoreKeys.estimatedEventCausingDate,
             descending: true)
         .limit(limit)
         .snapshots()
@@ -289,4 +290,28 @@ extension PillSheetModifiedHistoryServiceActionFactory
       after: after,
     );
   }
+}
+
+Future<void> updateForEditTakenValue({
+  required PillSheetModifiedHistoryService service,
+  required DateTime actualTakenDate,
+  required PillSheetModifiedHistory history,
+  required PillSheetModifiedHistoryValue value,
+  required TakenPillValue takenPillValue,
+}) {
+  final editedTakenPillValue = takenPillValue.copyWith(
+    edited: TakenPillEditedValue(
+      createdDate: DateTime.now(),
+      actualTakenDate: actualTakenDate,
+      historyRecordedDate: history.estimatedEventCausingDate,
+    ),
+  );
+  final editedHistory = history.copyWith(
+    estimatedEventCausingDate: actualTakenDate,
+    value: value.copyWith(
+      takenPill: editedTakenPillValue,
+    ),
+  );
+
+  return service.update(editedHistory);
 }

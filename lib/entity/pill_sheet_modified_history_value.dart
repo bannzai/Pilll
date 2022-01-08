@@ -107,10 +107,38 @@ class TakenPillValue with _$TakenPillValue {
         required DateTime afterLastTakenDate,
     required int beforeLastTakenPillNumber,
     required int afterLastTakenPillNumber,
+    TakenPillEditedValue? edited,
   }) = _TakenPillValue;
 
   factory TakenPillValue.fromJson(Map<String, dynamic> json) =>
       _$TakenPillValueFromJson(json);
+}
+
+@freezed
+class TakenPillEditedValue with _$TakenPillEditedValue {
+  @JsonSerializable(explicitToJson: true)
+  const factory TakenPillEditedValue({
+    @JsonKey(
+      fromJson: NonNullTimestampConverter.timestampToDateTime,
+      toJson: NonNullTimestampConverter.dateTimeToTimestamp,
+    )
+        required DateTime createdDate,
+    @JsonKey(
+      fromJson: NonNullTimestampConverter.timestampToDateTime,
+      toJson: NonNullTimestampConverter.dateTimeToTimestamp,
+    )
+        required DateTime actualTakenDate,
+    //
+    @JsonKey(
+      fromJson: NonNullTimestampConverter.timestampToDateTime,
+      toJson: NonNullTimestampConverter.dateTimeToTimestamp,
+    )
+        required DateTime historyRecordedDate,
+  }) = _TakenPillEditedValue;
+  const TakenPillEditedValue._();
+
+  factory TakenPillEditedValue.fromJson(Map<String, dynamic> json) =>
+      _$TakenPillEditedValueFromJson(json);
 }
 
 @freezed

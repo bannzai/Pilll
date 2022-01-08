@@ -11,6 +11,7 @@ import 'package:pilll/domain/calendar/components/pill_sheet_modified_history/com
 import 'package:pilll/domain/calendar/components/pill_sheet_modified_history/components/pill_sheet_modified_history_revert_taken_pill_action.dart';
 import 'package:pilll/domain/calendar/components/pill_sheet_modified_history/components/pill_sheet_modified_history_taken_pill_action.dart';
 import 'package:pilll/entity/pill_sheet_modified_history.dart';
+import 'package:pilll/entity/pill_sheet_modified_history_value.dart';
 import 'package:pilll/util/datetime/date_compare.dart';
 
 class CalendarPillSheetModifiedHistoryListModel {
@@ -27,11 +28,19 @@ class CalendarPillSheetModifiedHistoryList extends StatelessWidget {
   final ScrollPhysics scrollPhysics;
   final List<PillSheetModifiedHistory> pillSheetModifiedHistories;
 
+  final Future<void> Function(
+    DateTime actualTakenDate,
+    PillSheetModifiedHistory history,
+    PillSheetModifiedHistoryValue value,
+    TakenPillValue takenPillValue,
+  )? onEditTakenPillAction;
+
   const CalendarPillSheetModifiedHistoryList({
     Key? key,
     required this.padding,
     required this.scrollPhysics,
     required this.pillSheetModifiedHistories,
+    required this.onEditTakenPillAction,
   }) : super(key: key);
 
   List<CalendarPillSheetModifiedHistoryListModel> get models {
@@ -116,6 +125,12 @@ class CalendarPillSheetModifiedHistoryList extends StatelessWidget {
                       );
                     case PillSheetModifiedActionType.takenPill:
                       return PillSheetModifiedHistoryTakenPillAction(
+                        onEdit: onEditTakenPillAction == null
+                            ? null
+                            : (actualDateTime, takenPillValue) {
+                                return onEditTakenPillAction!(actualDateTime,
+                                    history, history.value, takenPillValue);
+                              },
                         estimatedEventCausingDate:
                             history.estimatedEventCausingDate,
                         value: history.value.takenPill,

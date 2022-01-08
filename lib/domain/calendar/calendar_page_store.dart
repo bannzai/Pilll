@@ -3,6 +3,8 @@ import 'dart:async';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/domain/calendar/calendar_card_state.dart';
 import 'package:pilll/domain/calendar/components/pill_sheet_modified_history/pill_sheet_modified_history_card.dart';
+import 'package:pilll/entity/pill_sheet_modified_history.dart';
+import 'package:pilll/entity/pill_sheet_modified_history_value.dart';
 import 'package:pilll/service/diary.dart';
 import 'package:pilll/service/menstruation.dart';
 import 'package:pilll/service/pill_sheet_group.dart';
@@ -148,4 +150,19 @@ class CalendarPageStateStore extends StateNotifier<CalendarPageState> {
   }
 
   CalendarCardState cardState(DateTime date) => CalendarCardState(date);
+
+  Future<void> editTakenValue(
+    DateTime actualTakenDate,
+    PillSheetModifiedHistory history,
+    PillSheetModifiedHistoryValue value,
+    TakenPillValue takenPillValue,
+  ) {
+    return updateForEditTakenValue(
+      service: _pillSheetModifiedHistoryService,
+      actualTakenDate: actualTakenDate,
+      history: history,
+      value: value,
+      takenPillValue: takenPillValue,
+    );
+  }
 }

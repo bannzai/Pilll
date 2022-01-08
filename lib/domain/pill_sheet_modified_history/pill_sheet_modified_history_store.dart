@@ -2,10 +2,13 @@ import 'dart:async';
 import 'dart:math';
 
 import 'package:pilll/domain/pill_sheet_modified_history/pill_sheet_modified_history_state.dart';
+import 'package:pilll/entity/pill_sheet_modified_history.dart';
+import 'package:pilll/entity/pill_sheet_modified_history_value.dart';
 import 'package:pilll/service/pill_sheet_modified_history.dart';
 import 'package:riverpod/riverpod.dart';
 
-final pillSheetModifiedHistoryStoreProvider = StateNotifierProvider.autoDispose<PillSheetModifiedHistoryStateStore, PillSheetModifiedHistoryState>(
+final pillSheetModifiedHistoryStoreProvider = StateNotifierProvider.autoDispose<
+    PillSheetModifiedHistoryStateStore, PillSheetModifiedHistoryState>(
   (ref) => PillSheetModifiedHistoryStateStore(
     ref.watch(pillSheetModifiedHistoryServiceProvider),
   ),
@@ -64,5 +67,20 @@ class PillSheetModifiedHistoryStateStore
             state.pillSheetModifiedHistories + pillSheetModifiedHistories,
         isLoading: false);
     _subscribe();
+  }
+
+  Future<void> editTakenValue(
+    DateTime actualTakenDate,
+    PillSheetModifiedHistory history,
+    PillSheetModifiedHistoryValue value,
+    TakenPillValue takenPillValue,
+  ) {
+    return updateForEditTakenValue(
+      service: _pillSheetModifiedHistoryService,
+      actualTakenDate: actualTakenDate,
+      history: history,
+      value: value,
+      takenPillValue: takenPillValue,
+    );
   }
 }
