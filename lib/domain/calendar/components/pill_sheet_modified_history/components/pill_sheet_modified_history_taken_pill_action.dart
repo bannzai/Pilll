@@ -1,4 +1,3 @@
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:pilll/analytics.dart';
 import 'package:pilll/components/atoms/font.dart';
@@ -8,8 +7,14 @@ import 'package:pilll/domain/calendar/components/pill_sheet_modified_history/com
 import 'package:pilll/entity/pill_sheet.dart';
 import 'package:pilll/entity/pill_sheet_modified_history_value.dart';
 import 'package:pilll/util/formatter/date_time_formatter.dart';
+import 'package:pilll/util/toolbar/date_and_time_picker.dart';
 
 class PillSheetModifiedHistoryTakenPillAction extends StatelessWidget {
+  final Function(
+    DateTime actualTakenDate,
+    TakenPillValue value,
+  )? onEdit;
+
   final DateTime estimatedEventCausingDate;
   final TakenPillValue? value;
   final PillSheet? beforePillSheet;
@@ -17,6 +22,7 @@ class PillSheetModifiedHistoryTakenPillAction extends StatelessWidget {
 
   const PillSheetModifiedHistoryTakenPillAction({
     Key? key,
+    required this.onEdit,
     required this.estimatedEventCausingDate,
     required this.value,
     required this.beforePillSheet,
@@ -31,10 +37,34 @@ class PillSheetModifiedHistoryTakenPillAction extends StatelessWidget {
     if (value == null || afterPillSheet == null || beforePillSheet == null) {
       return Container();
     }
+
     final time = DateTimeFormatter.hourAndMinute(estimatedEventCausingDate);
     return GestureDetector(
       onTap: () {
         analytics.logEvent(name: "tapped_history_taken_action");
+
+        final onEdit = this.onEdit;
+        if (onEdit != null) {
+          showModalBottomSheet(
+            context: context,
+            builder: (BuildContext context) {
+              return DateAndTimePicker(
+                initialDateTime: estimatedEventCausingDate,
+                done: (dateTime) {
+                  analytics.logEvent(
+                      name: "selected_date_taken_history",
+                      parameters: {
+                        "hour": dateTime.hour,
+                        "minute": dateTime.minute
+                      });
+
+                  onEdit(dateTime, value);
+                  Navigator.pop(context);
+                },
+              );
+            },
+          );
+        }
       },
       child: Container(
         child: Padding(
