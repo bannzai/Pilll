@@ -48,7 +48,7 @@ class PillSheetModifiedHistoryService {
     await _database
         .pillSheetModifiedHistoriesReference()
         .doc(pillSheetModifiedHistory.id)
-        .set(pillSheetModifiedHistory, SetOptions(merge: true));
+        .set(pillSheetModifiedHistory.toJson(), SetOptions(merge: true));
   }
 
   Stream<List<PillSheetModifiedHistory>> stream(int limit) {
