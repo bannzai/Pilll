@@ -10,7 +10,7 @@ import 'package:pilll/util/formatter/date_time_formatter.dart';
 import 'package:pilll/util/toolbar/date_and_time_picker.dart';
 
 class PillSheetModifiedHistoryTakenPillAction extends StatelessWidget {
-  final Function(
+  final Future<void> Function(
     DateTime actualTakenDate,
     TakenPillValue value,
   )? onEdit;

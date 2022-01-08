@@ -28,7 +28,7 @@ class CalendarPillSheetModifiedHistoryList extends StatelessWidget {
   final ScrollPhysics scrollPhysics;
   final List<PillSheetModifiedHistory> pillSheetModifiedHistories;
 
-  final Function(
+  final Future<void> Function(
     DateTime actualTakenDate,
     PillSheetModifiedHistory history,
     PillSheetModifiedHistoryValue value,
@@ -125,14 +125,12 @@ class CalendarPillSheetModifiedHistoryList extends StatelessWidget {
                       );
                     case PillSheetModifiedActionType.takenPill:
                       return PillSheetModifiedHistoryTakenPillAction(
-                        onEdit: (actualDateTime, takenPillValue) {
-                          final callback = onEditTakenPillAction;
-                          if (callback == null) {
-                            return null;
-                          }
-                          callback(actualDateTime, history, history.value,
-                              takenPillValue);
-                        },
+                        onEdit: onEditTakenPillAction == null
+                            ? null
+                            : (actualDateTime, takenPillValue) {
+                                return onEditTakenPillAction!(actualDateTime,
+                                    history, history.value, takenPillValue);
+                              },
                         estimatedEventCausingDate:
                             history.estimatedEventCausingDate,
                         value: history.value.takenPill,
