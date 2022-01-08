@@ -48,7 +48,6 @@ class PillSheetModifiedHistoryService {
         .pillSheetModifiedHistoriesReference()
         .doc(pillSheetModifiedHistory.id)
         .set(pillSheetModifiedHistory, SetOptions(merge: true));
-    return;
   }
 
   Stream<List<PillSheetModifiedHistory>> stream(int limit) {
