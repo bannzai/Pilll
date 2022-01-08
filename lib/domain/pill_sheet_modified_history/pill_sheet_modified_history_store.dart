@@ -1,11 +1,16 @@
 import 'dart:async';
 import 'dart:math';
 
+import 'package:pilll/domain/calendar/components/pill_sheet_modified_history/components/pill_sheet_modified_history_date_component.dart';
+import 'package:pilll/domain/calendar/components/pill_sheet_modified_history/components/pill_sheet_modified_history_taken_pill_action.dart';
 import 'package:pilll/domain/pill_sheet_modified_history/pill_sheet_modified_history_state.dart';
+import 'package:pilll/entity/pill_sheet_modified_history.dart';
+import 'package:pilll/entity/pill_sheet_modified_history_value.dart';
 import 'package:pilll/service/pill_sheet_modified_history.dart';
 import 'package:riverpod/riverpod.dart';
 
-final pillSheetModifiedHistoryStoreProvider = StateNotifierProvider.autoDispose<PillSheetModifiedHistoryStateStore, PillSheetModifiedHistoryState>(
+final pillSheetModifiedHistoryStoreProvider = StateNotifierProvider.autoDispose<
+    PillSheetModifiedHistoryStateStore, PillSheetModifiedHistoryState>(
   (ref) => PillSheetModifiedHistoryStateStore(
     ref.watch(pillSheetModifiedHistoryServiceProvider),
   ),
@@ -64,5 +69,24 @@ class PillSheetModifiedHistoryStateStore
             state.pillSheetModifiedHistories + pillSheetModifiedHistories,
         isLoading: false);
     _subscribe();
+  }
+
+  Future<void> editTakenValue(
+    DateTime actualTakenDate,
+    PillSheetModifiedHistory history,
+    PillSheetModifiedHistoryValue value,
+    TakenPillValue takenPillValue,
+  ) {
+    final editedTakenPillValue = takenPillValue.copyWith(
+      edited: TakenPillEditedValue(
+        createdDate: DateTime.now(),
+        actualTakenDate: actualTakenDate,
+        historyRecordedDate: history.estimatedEventCausingDate,
+      ),
+    );
+    final editedHistory = history.copyWith(
+        value: value.copyWith(takenPill: editedTakenPillValue));
+
+    return _pillSheetModifiedHistoryService.update(editedHistory);
   }
 }
