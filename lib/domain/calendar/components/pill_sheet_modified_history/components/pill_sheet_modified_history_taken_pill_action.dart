@@ -6,6 +6,7 @@ import 'package:pilll/domain/calendar/components/pill_sheet_modified_history/com
 import 'package:pilll/domain/calendar/components/pill_sheet_modified_history/components/taken_pill_action_o_list.dart';
 import 'package:pilll/entity/pill_sheet.dart';
 import 'package:pilll/entity/pill_sheet_modified_history_value.dart';
+import 'package:pilll/error/error_alert.dart';
 import 'package:pilll/util/formatter/date_time_formatter.dart';
 import 'package:pilll/util/toolbar/date_and_time_picker.dart';
 
@@ -58,8 +59,19 @@ class PillSheetModifiedHistoryTakenPillAction extends StatelessWidget {
                         "minute": dateTime.minute
                       });
 
-                  await onEdit(dateTime, value);
-                  Navigator.pop(context);
+                  try {
+                    await onEdit(dateTime, value);
+                    ScaffoldMessenger.of(context).showSnackBar(
+                      SnackBar(
+                        duration: Duration(seconds: 2),
+                        content: Text("変更しました"),
+                      ),
+                    );
+                    Navigator.pop(context);
+                  } catch (error) {
+                    showErrorAlert(context,
+                        message: '更新に失敗しました。通信環境をお確かめの上、再度変更してください');
+                  }
                 },
               );
             },
