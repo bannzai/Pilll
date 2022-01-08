@@ -306,8 +306,12 @@ Future<void> updateForEditTakenValue({
       historyRecordedDate: history.estimatedEventCausingDate,
     ),
   );
-  final editedHistory =
-      history.copyWith(value: value.copyWith(takenPill: editedTakenPillValue));
+  final editedHistory = history.copyWith(
+    estimatedEventCausingDate: actualTakenDate,
+    value: value.copyWith(
+      takenPill: editedTakenPillValue,
+    ),
+  );
 
   return service.update(editedHistory);
 }
