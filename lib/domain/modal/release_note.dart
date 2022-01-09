@@ -42,7 +42,7 @@ class ReleaseNote extends StatelessWidget {
                       child: Container(
                         padding: EdgeInsets.only(top: 40, left: 40, right: 40),
                         child: Text(
-                          "服用通知を\nカスタマイズできるように",
+                          "服用履歴を\n編集できるように",
                           style: FontType.subTitle.merge(TextColorStyle.black),
                           textAlign: TextAlign.center,
                         ),
@@ -57,7 +57,8 @@ class ReleaseNote extends StatelessWidget {
                     children: [
                       Text(
                         '''
-ピルを飲んでいると知られたくない方にオススメ！※こちらの機能はプレミアムメンバー限定になります
+服用記録を忘れた時などに便利です。
+※こちらの機能はプレミアムメンバー限定になります
                         ''',
                         style: FontType.assisting.merge(TextColorStyle.main),
                       ),
@@ -72,7 +73,7 @@ class ReleaseNote extends StatelessWidget {
                         Navigator.of(context).pop();
                         await openReleaseNote();
                       },
-                      text: "設定を見る"),
+                      text: "詳細を見る"),
                 ),
                 SizedBox(height: 20),
               ],
@@ -85,7 +86,7 @@ class ReleaseNote extends StatelessWidget {
 }
 
 showReleaseNotePreDialog(BuildContext context) async {
-  final key = ReleaseNoteKey.version3_5_0;
+  final key = ReleaseNoteKey.version3_6_0;
   final storage = await SharedPreferences.getInstance();
   if (storage.getBool(key) ?? false) {
     return;
@@ -103,7 +104,7 @@ openReleaseNote() async {
   final ChromeSafariBrowser browser = new ChromeSafariBrowser();
   await browser.open(
       url: Uri.parse(
-          "https://pilll.wraptas.site/721b7ae08aa2422e901cae27ffbbbf04"),
+          "https://pilll.wraptas.site/11e2c70cb56d48e7918514f5797f45e0"),
       options: ChromeSafariBrowserClassOptions(
           android:
               AndroidChromeCustomTabsOptions(addDefaultShareMenuItem: false),
