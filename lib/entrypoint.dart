@@ -4,6 +4,7 @@ import 'dart:io';
 import 'package:firebase_analytics/firebase_analytics.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:pilll/analytics.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
@@ -63,6 +64,16 @@ class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      localizationsDelegates: [
+        GlobalMaterialLocalizations.delegate,
+        GlobalWidgetsLocalizations.delegate,
+        DefaultCupertinoLocalizations.delegate,
+      ],
+      supportedLocales: [
+        const Locale('en', 'US'),
+        const Locale('ja', 'JP'),
+      ],
+      locale: const Locale('ja', 'JP'),
       navigatorObservers: [
         FirebaseAnalyticsObserver(analytics: firebaseAnalytics)
       ],
