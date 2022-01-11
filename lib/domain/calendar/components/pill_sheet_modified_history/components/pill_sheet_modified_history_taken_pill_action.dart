@@ -5,7 +5,7 @@ import 'package:pilll/domain/calendar/components/pill_sheet_modified_history/com
 import 'package:pilll/domain/calendar/components/pill_sheet_modified_history/components/core/row_layout.dart';
 import 'package:pilll/domain/calendar/components/pill_sheet_modified_history/components/core/time.dart';
 import 'package:pilll/domain/calendar/components/pill_sheet_modified_history/components/pill_sheet_modified_history_date_component.dart';
-import 'package:pilll/domain/calendar/components/pill_sheet_modified_history/components/taken_pill_action_o_list.dart';
+import 'package:pilll/domain/calendar/components/pill_sheet_modified_history/components/core/taken_pill_action_o_list.dart';
 import 'package:pilll/entity/pill_sheet.dart';
 import 'package:pilll/entity/pill_sheet_modified_history_value.dart';
 import 'package:pilll/error/error_alert.dart';
