@@ -19,7 +19,7 @@ class RowLayout extends StatelessWidget {
   Widget build(BuildContext context) {
     final takenPillActionOList = this.takenPillActionOList;
     return Container(
-      padding: EdgeInsets.only(left: 4),
+      padding: EdgeInsets.only(left: 8),
       child: Row(
         children: [
           day,
