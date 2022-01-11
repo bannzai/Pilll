@@ -83,18 +83,16 @@ class PillSheetModifiedHistoryTakenPillAction extends StatelessWidget {
           );
         }
       },
-      child: Container(
-        child: RowLayout(
-          day: Day(estimatedEventCausingDate: estimatedEventCausingDate),
-          effectiveNumbersOrHyphen: EffectivePillNumber(
-              effectivePillNumber:
-                  PillSheetModifiedHistoryDateEffectivePillNumber.taken(value)),
-          detail: Time(time: time),
-          takenPillActionOList: TakenPillActionOList(
-            value: value,
-            beforePillSheet: beforePillSheet,
-            afterPillSheet: afterPillSheet,
-          ),
+      child: RowLayout(
+        day: Day(estimatedEventCausingDate: estimatedEventCausingDate),
+        effectiveNumbersOrHyphen: EffectivePillNumber(
+            effectivePillNumber:
+                PillSheetModifiedHistoryDateEffectivePillNumber.taken(value)),
+        detail: Time(time: time),
+        takenPillActionOList: TakenPillActionOList(
+          value: value,
+          beforePillSheet: beforePillSheet,
+          afterPillSheet: afterPillSheet,
         ),
       ),
     );
