@@ -26,7 +26,7 @@ class PillSheetModifiedHistoryEndedRestDuration extends StatelessWidget {
     return Container(
       child: RowLayout(
         day: Day(estimatedEventCausingDate: estimatedEventCausingDate),
-        effectiveNumbers: EffectivePillNumber(
+        effectiveNumbersOrHyphen: EffectivePillNumber(
             effectivePillNumber:
                 PillSheetModifiedHistoryDateEffectivePillNumber.hyphen()),
         detail: Text(

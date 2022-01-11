@@ -86,7 +86,7 @@ class PillSheetModifiedHistoryTakenPillAction extends StatelessWidget {
       child: Container(
         child: RowLayout(
           day: Day(estimatedEventCausingDate: estimatedEventCausingDate),
-          effectiveNumbers: EffectivePillNumber(
+          effectiveNumbersOrHyphen: EffectivePillNumber(
               effectivePillNumber:
                   PillSheetModifiedHistoryDateEffectivePillNumber.taken(value)),
           detail: Time(time: time),

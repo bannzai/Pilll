@@ -25,7 +25,7 @@ class PillSheetModifiedHistoryAutomaticallyRecordedLastTakenDateAction
     }
     return RowLayout(
       day: Day(estimatedEventCausingDate: estimatedEventCausingDate),
-      effectiveNumbers: EffectivePillNumber(
+      effectiveNumbersOrHyphen: EffectivePillNumber(
           effectivePillNumber:
               PillSheetModifiedHistoryDateEffectivePillNumber.autoTaken(value)),
       detail: Text(

@@ -20,7 +20,7 @@ class PillSheetModifiedHistoryCreatePillSheetAction extends StatelessWidget {
   Widget build(BuildContext context) {
     return RowLayout(
       day: Day(estimatedEventCausingDate: estimatedEventCausingDate),
-      effectiveNumbers: EffectivePillNumber(
+      effectiveNumbersOrHyphen: EffectivePillNumber(
           effectivePillNumber:
               PillSheetModifiedHistoryDateEffectivePillNumber.pillSheetCount(
                   value?.pillSheetIDs ?? [])),
