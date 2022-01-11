@@ -23,22 +23,20 @@ class PillSheetModifiedHistoryEndedRestDuration extends StatelessWidget {
     if (value == null) {
       return Container();
     }
-    return Container(
-      child: RowLayout(
-        day: Day(estimatedEventCausingDate: estimatedEventCausingDate),
-        effectiveNumbersOrHyphen: EffectivePillNumber(
-            effectivePillNumber:
-                PillSheetModifiedHistoryDateEffectivePillNumber.hyphen()),
-        detail: Text(
-          "休薬終了",
-          style: TextStyle(
-            color: TextColor.main,
-            fontSize: 12,
-            fontFamily: FontFamily.japanese,
-            fontWeight: FontWeight.w400,
-          ),
-          textAlign: TextAlign.start,
+    return RowLayout(
+      day: Day(estimatedEventCausingDate: estimatedEventCausingDate),
+      effectiveNumbersOrHyphen: EffectivePillNumber(
+          effectivePillNumber:
+              PillSheetModifiedHistoryDateEffectivePillNumber.hyphen()),
+      detail: Text(
+        "休薬終了",
+        style: TextStyle(
+          color: TextColor.main,
+          fontSize: 12,
+          fontFamily: FontFamily.japanese,
+          fontWeight: FontWeight.w400,
         ),
+        textAlign: TextAlign.start,
       ),
     );
   }
