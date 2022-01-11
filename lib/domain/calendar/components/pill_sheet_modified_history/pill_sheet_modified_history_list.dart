@@ -43,33 +43,6 @@ class CalendarPillSheetModifiedHistoryList extends StatelessWidget {
     required this.onEditTakenPillAction,
   }) : super(key: key);
 
-  List<CalendarPillSheetModifiedHistoryListModel> get summarizedForEachMonth {
-    final List<CalendarPillSheetModifiedHistoryListModel> models = [];
-    pillSheetModifiedHistories.forEach((history) {
-      CalendarPillSheetModifiedHistoryListModel? model;
-
-      models.forEach((m) {
-        if (isSameMonth(m.dateTimeOfMonth, history.estimatedEventCausingDate)) {
-          model = m;
-          return;
-        }
-      });
-
-      final m = model;
-      if (m != null) {
-        m.pillSheetModifiedHistories.add(history);
-      } else {
-        models.add(
-          CalendarPillSheetModifiedHistoryListModel(
-            dateTimeOfMonth: history.estimatedEventCausingDate,
-            pillSheetModifiedHistories: [history],
-          ),
-        );
-      }
-    });
-    return models;
-  }
-
   @override
   Widget build(BuildContext context) {
     return ListView(
@@ -77,7 +50,7 @@ class CalendarPillSheetModifiedHistoryList extends StatelessWidget {
       shrinkWrap: true,
       physics: scrollPhysics,
       scrollDirection: Axis.vertical,
-      children: summarizedForEachMonth
+      children: _summarizedForEachMonth
           .map((model) {
             var dirtyIndex = 0;
             return [
@@ -188,5 +161,32 @@ class CalendarPillSheetModifiedHistoryList extends StatelessWidget {
           .expand((element) => element)
           .toList(),
     );
+  }
+
+  List<CalendarPillSheetModifiedHistoryListModel> get _summarizedForEachMonth {
+    final List<CalendarPillSheetModifiedHistoryListModel> models = [];
+    pillSheetModifiedHistories.forEach((history) {
+      CalendarPillSheetModifiedHistoryListModel? model;
+
+      models.forEach((m) {
+        if (isSameMonth(m.dateTimeOfMonth, history.estimatedEventCausingDate)) {
+          model = m;
+          return;
+        }
+      });
+
+      final m = model;
+      if (m != null) {
+        m.pillSheetModifiedHistories.add(history);
+      } else {
+        models.add(
+          CalendarPillSheetModifiedHistoryListModel(
+            dateTimeOfMonth: history.estimatedEventCausingDate,
+            pillSheetModifiedHistories: [history],
+          ),
+        );
+      }
+    });
+    return models;
   }
 }
