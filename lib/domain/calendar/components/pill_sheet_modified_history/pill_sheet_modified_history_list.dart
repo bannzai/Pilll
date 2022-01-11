@@ -53,6 +53,7 @@ class CalendarPillSheetModifiedHistoryList extends StatelessWidget {
       children: _summarizedForEachMonth
           .map((model) {
             var dirtyIndex = 0;
+
             return [
               CalendarPillSheetModifiedHistoryMonthlyHeader(
                 dateTimeOfMonth: model.dateTimeOfMonth,
