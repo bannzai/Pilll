@@ -18,34 +18,37 @@ class RowLayout extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final takenPillActionOList = this.takenPillActionOList;
-    return Row(
-      children: [
-        day,
-        SizedBox(width: 8),
-        Container(
-          height: 26,
-          child: VerticalDivider(
-            color: PilllColors.divider,
-            width: 0.5,
-          ),
-        ),
-        SizedBox(width: 8),
-        Container(
-          width: 79,
-          child: effectiveNumbers,
-        ),
-        SizedBox(width: 8),
-        Expanded(
-          child: time,
-        ),
-        SizedBox(width: 8),
-        if (takenPillActionOList != null) ...[
+    return Container(
+      padding: EdgeInsets.only(left: 4),
+      child: Row(
+        children: [
+          day,
+          SizedBox(width: 8),
           Container(
-            width: 57,
-            child: takenPillActionOList,
+            height: 26,
+            child: VerticalDivider(
+              color: PilllColors.divider,
+              width: 0.5,
+            ),
           ),
+          SizedBox(width: 8),
+          Container(
+            width: 79,
+            child: effectiveNumbers,
+          ),
+          SizedBox(width: 8),
+          Expanded(
+            child: time,
+          ),
+          SizedBox(width: 8),
+          if (takenPillActionOList != null) ...[
+            Container(
+              width: 57,
+              child: takenPillActionOList,
+            ),
+          ],
         ],
-      ],
+      ),
     );
   }
 }
