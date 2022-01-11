@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pilll/components/atoms/color.dart';
 
 class RowLayout extends StatelessWidget {
   final Widget day;
@@ -20,6 +21,14 @@ class RowLayout extends StatelessWidget {
     return Row(
       children: [
         day,
+        SizedBox(width: 8),
+        Container(
+          height: 26,
+          child: VerticalDivider(
+            color: PilllColors.divider,
+            width: 0.5,
+          ),
+        ),
         SizedBox(width: 8),
         Expanded(
           child: effectiveNumbers,

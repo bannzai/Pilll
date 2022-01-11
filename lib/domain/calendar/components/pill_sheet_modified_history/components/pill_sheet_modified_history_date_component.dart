@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:pilll/components/atoms/color.dart';
-import 'package:pilll/components/atoms/font.dart';
-import 'package:pilll/components/atoms/text_color.dart';
+import 'package:pilll/domain/calendar/components/pill_sheet_modified_history/components/core/day.dart';
+import 'package:pilll/domain/calendar/components/pill_sheet_modified_history/components/core/effective_pill_number.dart';
 import 'package:pilll/entity/pill_sheet_modified_history_value.dart';
-import 'package:pilll/entity/weekday.dart';
 
 abstract class PillSheetModifiedHistoryTakenActionLayoutWidths {
   static final double leading = 150;
@@ -22,10 +21,6 @@ class PillSheetModifiedHistoryDate extends StatelessWidget {
     required this.effectivePillNumber,
   }) : super(key: key);
 
-  int get _day => estimatedEventCausingDate.day;
-  Weekday get _weekday =>
-      WeekdayFunctions.weekdayFromDate(estimatedEventCausingDate);
-
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -37,29 +32,8 @@ class PillSheetModifiedHistoryDate extends StatelessWidget {
         children: [
           Container(
             width: 56,
-            child: Row(
-              mainAxisAlignment: MainAxisAlignment.end,
-              children: [
-                Text(
-                  "$_day",
-                  style: TextStyle(
-                    color: TextColor.main,
-                    fontFamily: FontFamily.number,
-                    fontSize: 23,
-                    fontWeight: FontWeight.w500,
-                  ),
-                ),
-                SizedBox(width: 4),
-                Text(
-                  "(${_weekday.weekdayString()})",
-                  style: TextStyle(
-                    color: TextColor.main,
-                    fontFamily: FontFamily.japanese,
-                    fontSize: 12,
-                    fontWeight: FontWeight.w400,
-                  ),
-                ),
-              ],
+            child: Day(
+              estimatedEventCausingDate: estimatedEventCausingDate,
             ),
           ),
           SizedBox(width: 16),
@@ -73,16 +47,8 @@ class PillSheetModifiedHistoryDate extends StatelessWidget {
           SizedBox(width: 16),
           Container(
             width: 53,
-            child: Text(
-              "$effectivePillNumber",
-              style: TextStyle(
-                color: TextColor.main,
-                fontFamily: FontFamily.japanese,
-                fontSize: 12,
-                fontWeight: FontWeight.w400,
-              ),
-              textAlign: TextAlign.start,
-            ),
+            child:
+                EffectivePillNumber(effectivePillNumber: effectivePillNumber),
           ),
         ],
       ),
