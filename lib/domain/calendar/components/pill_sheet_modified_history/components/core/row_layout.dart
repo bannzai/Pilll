@@ -12,7 +12,7 @@ class RowLayout extends StatelessWidget {
     required this.day,
     required this.effectiveNumbers,
     required this.time,
-    required this.takenPillActionOList,
+    this.takenPillActionOList,
   }) : super(key: key);
 
   @override
