@@ -43,7 +43,7 @@ class CalendarPillSheetModifiedHistoryList extends StatelessWidget {
     required this.onEditTakenPillAction,
   }) : super(key: key);
 
-  List<CalendarPillSheetModifiedHistoryListModel> get models {
+  List<CalendarPillSheetModifiedHistoryListModel> get summarizedForEachMonth {
     final List<CalendarPillSheetModifiedHistoryListModel> models = [];
     pillSheetModifiedHistories.forEach((history) {
       CalendarPillSheetModifiedHistoryListModel? model;
@@ -77,7 +77,7 @@ class CalendarPillSheetModifiedHistoryList extends StatelessWidget {
       shrinkWrap: true,
       physics: scrollPhysics,
       scrollDirection: Axis.vertical,
-      children: models
+      children: summarizedForEachMonth
           .map((model) {
             var dirtyIndex = 0;
             return [
