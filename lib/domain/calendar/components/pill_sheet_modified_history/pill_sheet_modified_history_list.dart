@@ -51,117 +51,111 @@ class CalendarPillSheetModifiedHistoryList extends StatelessWidget {
       physics: scrollPhysics,
       scrollDirection: Axis.vertical,
       children: _summarizedForEachMonth
-          .map((model) {
-            var dirtyIndex = 0;
-
-            return [
-              CalendarPillSheetModifiedHistoryMonthlyHeader(
-                dateTimeOfMonth: model.dateTimeOfMonth,
-              ),
-              ...model.pillSheetModifiedHistories.map((history) {
-                final actionType = history.enumActionType;
-                if (actionType == null) {
-                  return Container();
-                }
-
-                var isNecessaryDots = false;
-                if (dirtyIndex != 0) {
-                  final oneBeforeHistory =
-                      model.pillSheetModifiedHistories[dirtyIndex - 1];
-                  final diff = oneBeforeHistory.estimatedEventCausingDate.day -
-                      history.estimatedEventCausingDate.day;
-                  if (diff > 1) {
-                    isNecessaryDots = true;
-                  }
-                }
-
-                dirtyIndex += 1;
-                final body = () {
-                  switch (actionType) {
-                    case PillSheetModifiedActionType.createdPillSheet:
-                      return PillSheetModifiedHistoryCreatePillSheetAction(
-                        estimatedEventCausingDate:
-                            history.estimatedEventCausingDate,
-                        value: history.value.createdPillSheet,
-                      );
-                    case PillSheetModifiedActionType
-                        .automaticallyRecordedLastTakenDate:
-                      return PillSheetModifiedHistoryAutomaticallyRecordedLastTakenDateAction(
-                        estimatedEventCausingDate:
-                            history.estimatedEventCausingDate,
-                        value: history.value.automaticallyRecordedLastTakenDate,
-                      );
-                    case PillSheetModifiedActionType.deletedPillSheet:
-                      return PillSheetModifiedHistoryDeletedPillSheetAction(
-                        estimatedEventCausingDate:
-                            history.estimatedEventCausingDate,
-                        value: history.value.deletedPillSheet,
-                      );
-                    case PillSheetModifiedActionType.takenPill:
-                      return PillSheetModifiedHistoryTakenPillAction(
-                        onEdit: onEditTakenPillAction == null
-                            ? null
-                            : (actualDateTime, takenPillValue) {
-                                return onEditTakenPillAction!(actualDateTime,
-                                    history, history.value, takenPillValue);
-                              },
-                        estimatedEventCausingDate:
-                            history.estimatedEventCausingDate,
-                        value: history.value.takenPill,
-                        beforePillSheet: history.before,
-                        afterPillSheet: history.after,
-                      );
-                    case PillSheetModifiedActionType.revertTakenPill:
-                      return PillSheetModifiedHistoryRevertTakenPillAction(
-                        estimatedEventCausingDate:
-                            history.estimatedEventCausingDate,
-                        value: history.value.revertTakenPill,
-                      );
-                    case PillSheetModifiedActionType.changedPillNumber:
-                      return PillSheetModifiedHistoryChangedPillNumberAction(
-                        estimatedEventCausingDate:
-                            history.estimatedEventCausingDate,
-                        value: history.value.changedPillNumber,
-                      );
-                    case PillSheetModifiedActionType.endedPillSheet:
-                      return PillSheetModifiedHistoryEndedPillSheetAction(
-                        value: history.value.endedPillSheet,
-                      );
-                    case PillSheetModifiedActionType.beganRestDuration:
-                      return PillSheetModifiedHistoryBeganRestDuration(
-                        estimatedEventCausingDate:
-                            history.estimatedEventCausingDate,
-                        value: history.value.beganRestDurationValue,
-                      );
-                    case PillSheetModifiedActionType.endedRestDuration:
-                      return PillSheetModifiedHistoryEndedRestDuration(
-                        estimatedEventCausingDate:
-                            history.estimatedEventCausingDate,
-                        value: history.value.endedRestDurationValue,
-                      );
-                  }
-                };
-
-                if (isNecessaryDots) {
-                  return Column(children: [
-                    Row(
-                      children: [
-                        SizedBox(width: 32),
-                        SvgPicture.asset("images/vertical_dash_line.svg"),
-                        Spacer(),
-                      ],
-                    ),
-                    body(),
-                  ]);
-                } else {
-                  return body();
-                }
-              }).toList()
-            ];
-          })
+          .map((model) => _monthlyHeaderAndRelationaHistories(model))
           .expand((element) => element)
           .toList(),
     );
+  }
+
+  List<Widget> _monthlyHeaderAndRelationaHistories(
+      CalendarPillSheetModifiedHistoryListModel model) {
+    var dirtyIndex = 0;
+
+    return [
+      CalendarPillSheetModifiedHistoryMonthlyHeader(
+        dateTimeOfMonth: model.dateTimeOfMonth,
+      ),
+      ...model.pillSheetModifiedHistories.map((history) {
+        final actionType = history.enumActionType;
+        if (actionType == null) {
+          return Container();
+        }
+
+        var isNecessaryDots = false;
+        if (dirtyIndex != 0) {
+          final oneBeforeHistory =
+              model.pillSheetModifiedHistories[dirtyIndex - 1];
+          final diff = oneBeforeHistory.estimatedEventCausingDate.day -
+              history.estimatedEventCausingDate.day;
+          if (diff > 1) {
+            isNecessaryDots = true;
+          }
+        }
+
+        dirtyIndex += 1;
+        final body = () {
+          switch (actionType) {
+            case PillSheetModifiedActionType.createdPillSheet:
+              return PillSheetModifiedHistoryCreatePillSheetAction(
+                estimatedEventCausingDate: history.estimatedEventCausingDate,
+                value: history.value.createdPillSheet,
+              );
+            case PillSheetModifiedActionType.automaticallyRecordedLastTakenDate:
+              return PillSheetModifiedHistoryAutomaticallyRecordedLastTakenDateAction(
+                estimatedEventCausingDate: history.estimatedEventCausingDate,
+                value: history.value.automaticallyRecordedLastTakenDate,
+              );
+            case PillSheetModifiedActionType.deletedPillSheet:
+              return PillSheetModifiedHistoryDeletedPillSheetAction(
+                estimatedEventCausingDate: history.estimatedEventCausingDate,
+                value: history.value.deletedPillSheet,
+              );
+            case PillSheetModifiedActionType.takenPill:
+              return PillSheetModifiedHistoryTakenPillAction(
+                onEdit: onEditTakenPillAction == null
+                    ? null
+                    : (actualDateTime, takenPillValue) {
+                        return onEditTakenPillAction!(actualDateTime, history,
+                            history.value, takenPillValue);
+                      },
+                estimatedEventCausingDate: history.estimatedEventCausingDate,
+                value: history.value.takenPill,
+                beforePillSheet: history.before,
+                afterPillSheet: history.after,
+              );
+            case PillSheetModifiedActionType.revertTakenPill:
+              return PillSheetModifiedHistoryRevertTakenPillAction(
+                estimatedEventCausingDate: history.estimatedEventCausingDate,
+                value: history.value.revertTakenPill,
+              );
+            case PillSheetModifiedActionType.changedPillNumber:
+              return PillSheetModifiedHistoryChangedPillNumberAction(
+                estimatedEventCausingDate: history.estimatedEventCausingDate,
+                value: history.value.changedPillNumber,
+              );
+            case PillSheetModifiedActionType.endedPillSheet:
+              return PillSheetModifiedHistoryEndedPillSheetAction(
+                value: history.value.endedPillSheet,
+              );
+            case PillSheetModifiedActionType.beganRestDuration:
+              return PillSheetModifiedHistoryBeganRestDuration(
+                estimatedEventCausingDate: history.estimatedEventCausingDate,
+                value: history.value.beganRestDurationValue,
+              );
+            case PillSheetModifiedActionType.endedRestDuration:
+              return PillSheetModifiedHistoryEndedRestDuration(
+                estimatedEventCausingDate: history.estimatedEventCausingDate,
+                value: history.value.endedRestDurationValue,
+              );
+          }
+        };
+
+        if (isNecessaryDots) {
+          return Column(children: [
+            Row(
+              children: [
+                SizedBox(width: 32),
+                SvgPicture.asset("images/vertical_dash_line.svg"),
+                Spacer(),
+              ],
+            ),
+            body(),
+          ]);
+        } else {
+          return body();
+        }
+      }).toList()
+    ];
   }
 
   List<CalendarPillSheetModifiedHistoryListModel> get _summarizedForEachMonth {
