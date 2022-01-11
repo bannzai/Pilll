@@ -16,14 +16,19 @@ class Day extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(
+      mainAxisAlignment: MainAxisAlignment.end,
       children: [
-        Text(
-          "$_day",
-          style: TextStyle(
-            color: TextColor.main,
-            fontFamily: FontFamily.number,
-            fontSize: 23,
-            fontWeight: FontWeight.w500,
+        Container(
+          width: 28,
+          child: Text(
+            "$_day",
+            style: TextStyle(
+              color: TextColor.main,
+              fontFamily: FontFamily.number,
+              fontSize: 23,
+              fontWeight: FontWeight.w500,
+            ),
+            textAlign: TextAlign.end,
           ),
         ),
         SizedBox(width: 4),

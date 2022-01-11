@@ -53,7 +53,6 @@ class _HeaderLayout extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final takenPillActionOList = this.takenPillActionOList;
     return Container(
       padding: EdgeInsets.only(left: 4),
       child: Row(
@@ -73,13 +72,11 @@ class _HeaderLayout extends StatelessWidget {
           Expanded(
             child: detail,
           ),
-          if (takenPillActionOList != null) ...[
-            SizedBox(width: 8),
-            Container(
-              width: 57,
-              child: takenPillActionOList,
-            ),
-          ],
+          SizedBox(width: 8),
+          Container(
+            width: 57,
+            child: takenPillActionOList,
+          ),
         ],
       ),
     );
