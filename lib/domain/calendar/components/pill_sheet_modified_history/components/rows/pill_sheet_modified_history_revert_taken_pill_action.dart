@@ -22,22 +22,20 @@ class PillSheetModifiedHistoryRevertTakenPillAction extends StatelessWidget {
     if (value == null) {
       return Container();
     }
-    return Container(
-      child: RowLayout(
-        day: Day(estimatedEventCausingDate: estimatedEventCausingDate),
-        effectiveNumbersOrHyphen: EffectivePillNumber(
-            effectivePillNumber:
-                PillSheetModifiedHistoryDateEffectivePillNumber.revert(value)),
-        detail: Text(
-          "服用取り消し",
-          style: TextStyle(
-            color: TextColor.main,
-            fontSize: 12,
-            fontFamily: FontFamily.japanese,
-            fontWeight: FontWeight.w400,
-          ),
-          textAlign: TextAlign.start,
+    return RowLayout(
+      day: Day(estimatedEventCausingDate: estimatedEventCausingDate),
+      effectiveNumbersOrHyphen: EffectivePillNumber(
+          effectivePillNumber:
+              PillSheetModifiedHistoryDateEffectivePillNumber.revert(value)),
+      detail: Text(
+        "服用取り消し",
+        style: TextStyle(
+          color: TextColor.main,
+          fontSize: 12,
+          fontFamily: FontFamily.japanese,
+          fontWeight: FontWeight.w400,
         ),
+        textAlign: TextAlign.start,
       ),
     );
   }
