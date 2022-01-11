@@ -30,7 +30,8 @@ class RowLayout extends StatelessWidget {
           ),
         ),
         SizedBox(width: 8),
-        Expanded(
+        Container(
+          width: 79,
           child: effectiveNumbers,
         ),
         SizedBox(width: 8),
@@ -39,7 +40,10 @@ class RowLayout extends StatelessWidget {
         ),
         SizedBox(width: 8),
         if (takenPillActionOList != null) ...[
-          takenPillActionOList,
+          Container(
+            width: 57,
+            child: takenPillActionOList,
+          ),
         ],
       ],
     );

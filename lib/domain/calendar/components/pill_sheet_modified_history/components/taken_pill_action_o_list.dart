@@ -25,29 +25,27 @@ class TakenPillActionOList extends StatelessWidget {
     }
     final count = max(
         value.afterLastTakenPillNumber - (value.beforeLastTakenPillNumber), 1);
-    return Container(
-      child: Row(
-          mainAxisSize: MainAxisSize.min,
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: List.generate(min(count, 4), (index) {
-            final inRestDuration = _inRestDuration(
-                afterPillSheet, value.afterLastTakenPillNumber, index);
-            if (index == 0) {
-              return inRestDuration
-                  ? SvgPicture.asset("images/dash_o.svg")
-                  : SvgPicture.asset("images/o.svg");
-            } else if (index < 3) {
-              return _halfOWidgetWithTransform(
-                  inRestDuration
-                      ? SvgPicture.asset("images/dash_half_o.svg")
-                      : SvgPicture.asset("images/half_o.svg"),
-                  index);
-            } else {
-              return _dotsWidgetWithTransform(
-                  SvgPicture.asset("images/dots.svg"));
-            }
-          }).toList()),
-    );
+    return Row(
+        mainAxisSize: MainAxisSize.min,
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: List.generate(min(count, 4), (index) {
+          final inRestDuration = _inRestDuration(
+              afterPillSheet, value.afterLastTakenPillNumber, index);
+          if (index == 0) {
+            return inRestDuration
+                ? SvgPicture.asset("images/dash_o.svg")
+                : SvgPicture.asset("images/o.svg");
+          } else if (index < 3) {
+            return _halfOWidgetWithTransform(
+                inRestDuration
+                    ? SvgPicture.asset("images/dash_half_o.svg")
+                    : SvgPicture.asset("images/half_o.svg"),
+                index);
+          } else {
+            return _dotsWidgetWithTransform(
+                SvgPicture.asset("images/dots.svg"));
+          }
+        }).toList());
   }
 
   Widget _halfOWidgetWithTransform(Widget picture, int index) {
