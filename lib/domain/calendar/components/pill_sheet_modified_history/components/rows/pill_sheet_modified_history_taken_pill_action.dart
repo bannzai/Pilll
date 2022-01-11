@@ -89,7 +89,7 @@ class PillSheetModifiedHistoryTakenPillAction extends StatelessWidget {
           effectiveNumbers: EffectivePillNumber(
               effectivePillNumber:
                   PillSheetModifiedHistoryDateEffectivePillNumber.taken(value)),
-          time: Time(time: time),
+          detail: Time(time: time),
           takenPillActionOList: TakenPillActionOList(
             value: value,
             beforePillSheet: beforePillSheet,

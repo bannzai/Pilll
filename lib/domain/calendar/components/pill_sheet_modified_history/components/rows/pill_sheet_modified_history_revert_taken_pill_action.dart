@@ -28,7 +28,7 @@ class PillSheetModifiedHistoryRevertTakenPillAction extends StatelessWidget {
         effectiveNumbers: EffectivePillNumber(
             effectivePillNumber:
                 PillSheetModifiedHistoryDateEffectivePillNumber.revert(value)),
-        time: Text(
+        detail: Text(
           "服用取り消し",
           style: TextStyle(
             color: TextColor.main,

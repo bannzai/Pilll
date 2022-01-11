@@ -28,7 +28,7 @@ class PillSheetModifiedHistoryAutomaticallyRecordedLastTakenDateAction
       effectiveNumbers: EffectivePillNumber(
           effectivePillNumber:
               PillSheetModifiedHistoryDateEffectivePillNumber.autoTaken(value)),
-      time: Text(
+      detail: Text(
         "-",
         style: TextStyle(
           color: TextColor.main,

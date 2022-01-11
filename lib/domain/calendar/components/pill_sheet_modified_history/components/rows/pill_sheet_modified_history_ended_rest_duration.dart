@@ -29,7 +29,7 @@ class PillSheetModifiedHistoryEndedRestDuration extends StatelessWidget {
         effectiveNumbers: EffectivePillNumber(
             effectivePillNumber:
                 PillSheetModifiedHistoryDateEffectivePillNumber.hyphen()),
-        time: Text(
+        detail: Text(
           "休薬終了",
           style: TextStyle(
             color: TextColor.main,

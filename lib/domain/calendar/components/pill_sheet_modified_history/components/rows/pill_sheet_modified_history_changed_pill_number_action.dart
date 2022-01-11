@@ -27,7 +27,7 @@ class PillSheetModifiedHistoryChangedPillNumberAction extends StatelessWidget {
       effectiveNumbers: EffectivePillNumber(
           effectivePillNumber:
               PillSheetModifiedHistoryDateEffectivePillNumber.changed(value)),
-      time: Text(
+      detail: Text(
         "ピル番号変更",
         style: TextStyle(
           color: TextColor.main,

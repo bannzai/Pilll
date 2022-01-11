@@ -4,14 +4,14 @@ import 'package:pilll/components/atoms/color.dart';
 class RowLayout extends StatelessWidget {
   final Widget day;
   final Widget effectiveNumbers;
-  final Widget time;
+  final Widget detail;
   final Widget? takenPillActionOList;
 
   const RowLayout({
     Key? key,
     required this.day,
     required this.effectiveNumbers,
-    required this.time,
+    required this.detail,
     this.takenPillActionOList,
   }) : super(key: key);
 
@@ -38,7 +38,7 @@ class RowLayout extends StatelessWidget {
           ),
           SizedBox(width: 8),
           Expanded(
-            child: time,
+            child: detail,
           ),
           if (takenPillActionOList != null) ...[
             SizedBox(width: 8),
