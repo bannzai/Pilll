@@ -179,9 +179,9 @@ class CalendarPillSheetModifiedHistoryList extends StatelessWidget {
                     ),
                     body(),
                   ]);
+                } else {
+                  return body();
                 }
-
-                return body();
               }).toList()
             ];
           })
