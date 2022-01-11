@@ -40,8 +40,8 @@ class RowLayout extends StatelessWidget {
           Expanded(
             child: time,
           ),
-          SizedBox(width: 8),
           if (takenPillActionOList != null) ...[
+            SizedBox(width: 8),
             Container(
               width: 57,
               child: takenPillActionOList,

@@ -28,22 +28,15 @@ class PillSheetModifiedHistoryRevertTakenPillAction extends StatelessWidget {
         effectiveNumbers: EffectivePillNumber(
             effectivePillNumber:
                 PillSheetModifiedHistoryDateEffectivePillNumber.revert(value)),
-        time: Row(
-          children: [
-            Container(
-              child: Text(
-                "服用取り消し",
-                style: TextStyle(
-                  color: TextColor.main,
-                  fontSize: 12,
-                  fontFamily: FontFamily.japanese,
-                  fontWeight: FontWeight.w400,
-                ),
-                textAlign: TextAlign.start,
-              ),
-            ),
-            Spacer(),
-          ],
+        time: Text(
+          "服用取り消し",
+          style: TextStyle(
+            color: TextColor.main,
+            fontSize: 12,
+            fontFamily: FontFamily.japanese,
+            fontWeight: FontWeight.w400,
+          ),
+          textAlign: TextAlign.start,
         ),
       ),
     );
