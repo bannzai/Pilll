@@ -90,14 +90,14 @@ class CalendarPillSheetModifiedHistoryList extends StatelessWidget {
                   return Container();
                 }
 
-                var isDotNecessary = false;
+                var isNecessaryDots = false;
                 if (dirtyIndex != 0) {
                   final oneNewlyHistory =
                       model.pillSheetModifiedHistories[dirtyIndex - 1];
                   final diff = oneNewlyHistory.estimatedEventCausingDate.day -
                       history.estimatedEventCausingDate.day;
                   if (diff > 1) {
-                    isDotNecessary = true;
+                    isNecessaryDots = true;
                   }
                 }
 
@@ -168,7 +168,7 @@ class CalendarPillSheetModifiedHistoryList extends StatelessWidget {
                   }
                 };
 
-                if (isDotNecessary) {
+                if (isNecessaryDots) {
                   return Column(children: [
                     Row(
                       children: [
