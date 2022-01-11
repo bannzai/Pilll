@@ -21,6 +21,7 @@ class RowLayout extends StatelessWidget {
     return Container(
       padding: EdgeInsets.only(left: 8),
       child: Row(
+        mainAxisAlignment: MainAxisAlignment.start,
         children: [
           day,
           SizedBox(width: 8),

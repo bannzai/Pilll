@@ -54,17 +54,13 @@ class _HeaderLayout extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      padding: EdgeInsets.only(left: 4),
+      padding: EdgeInsets.only(left: 8),
       child: Row(
+        mainAxisAlignment: MainAxisAlignment.end,
         children: [
           day,
           SizedBox(width: 8),
-          Container(
-            height: 26,
-            width: 0.5,
-          ),
-          SizedBox(width: 8),
-          Container(
+          SizedBox(
             width: 79,
             child: effectiveNumbersOrHyphen,
           ),
