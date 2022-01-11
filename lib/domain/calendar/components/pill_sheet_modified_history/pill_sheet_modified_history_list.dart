@@ -14,16 +14,16 @@ import 'package:pilll/entity/pill_sheet_modified_history.dart';
 import 'package:pilll/entity/pill_sheet_modified_history_value.dart';
 import 'package:pilll/util/datetime/date_compare.dart';
 
-class CalendarPillSheetModifiedHistoryListModel {
+class PillSheetModifiedHistoryListModel {
   final DateTime dateTimeOfMonth;
   final List<PillSheetModifiedHistory> pillSheetModifiedHistories;
-  CalendarPillSheetModifiedHistoryListModel({
+  PillSheetModifiedHistoryListModel({
     required this.dateTimeOfMonth,
     required this.pillSheetModifiedHistories,
   });
 }
 
-class CalendarPillSheetModifiedHistoryList extends StatelessWidget {
+class PillSheetModifiedHistoryList extends StatelessWidget {
   final EdgeInsets? padding;
   final ScrollPhysics scrollPhysics;
   final List<PillSheetModifiedHistory> pillSheetModifiedHistories;
@@ -35,7 +35,7 @@ class CalendarPillSheetModifiedHistoryList extends StatelessWidget {
     TakenPillValue takenPillValue,
   )? onEditTakenPillAction;
 
-  const CalendarPillSheetModifiedHistoryList({
+  const PillSheetModifiedHistoryList({
     Key? key,
     required this.padding,
     required this.scrollPhysics,
@@ -58,7 +58,7 @@ class CalendarPillSheetModifiedHistoryList extends StatelessWidget {
   }
 
   List<Widget> _monthlyHeaderAndRelationaHistories(
-      CalendarPillSheetModifiedHistoryListModel model) {
+      PillSheetModifiedHistoryListModel model) {
     var dirtyIndex = 0;
 
     return [
@@ -171,10 +171,10 @@ class CalendarPillSheetModifiedHistoryList extends StatelessWidget {
     ];
   }
 
-  List<CalendarPillSheetModifiedHistoryListModel> get _summarizedForEachMonth {
-    final List<CalendarPillSheetModifiedHistoryListModel> models = [];
+  List<PillSheetModifiedHistoryListModel> get _summarizedForEachMonth {
+    final List<PillSheetModifiedHistoryListModel> models = [];
     pillSheetModifiedHistories.forEach((history) {
-      CalendarPillSheetModifiedHistoryListModel? model;
+      PillSheetModifiedHistoryListModel? model;
 
       models.forEach((m) {
         if (isSameMonth(m.dateTimeOfMonth, history.estimatedEventCausingDate)) {
@@ -188,7 +188,7 @@ class CalendarPillSheetModifiedHistoryList extends StatelessWidget {
         m.pillSheetModifiedHistories.add(history);
       } else {
         models.add(
-          CalendarPillSheetModifiedHistoryListModel(
+          PillSheetModifiedHistoryListModel(
             dateTimeOfMonth: history.estimatedEventCausingDate,
             pillSheetModifiedHistories: [history],
           ),

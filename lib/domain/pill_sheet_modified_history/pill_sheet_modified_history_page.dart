@@ -50,7 +50,7 @@ class PillSheetModifiedHistoriesPage extends HookConsumerWidget {
                 PillSheetModifiedHisotiryListHeader(),
                 SizedBox(height: 4),
                 Expanded(
-                  child: CalendarPillSheetModifiedHistoryList(
+                  child: PillSheetModifiedHistoryList(
                     padding: EdgeInsets.only(bottom: 20),
                     scrollPhysics: AlwaysScrollableScrollPhysics(),
                     pillSheetModifiedHistories:
