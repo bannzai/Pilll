@@ -155,11 +155,14 @@ class PillSheetModifiedHistoryList extends StatelessWidget {
               return Column(children: [
                 Row(
                   children: [
-                    SizedBox(width: 32),
-                    SvgPicture.asset("images/vertical_dash_line.svg"),
+                    SizedBox(
+                      width: 56,
+                      child: SvgPicture.asset("images/vertical_dash_line.svg"),
+                    ),
                     Spacer(),
                   ],
                 ),
+                SizedBox(height: 16),
                 body(),
               ]);
             } else {
