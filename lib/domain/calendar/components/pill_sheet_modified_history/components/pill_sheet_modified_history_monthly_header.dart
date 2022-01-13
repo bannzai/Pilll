@@ -3,10 +3,10 @@ import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/util/formatter/date_time_formatter.dart';
 
-class CalendarPillSheetModifiedHistoryMonthlyHeader extends StatelessWidget {
+class PillSheetModifiedHistoryMonthlyHeader extends StatelessWidget {
   final DateTime dateTimeOfMonth;
 
-  const CalendarPillSheetModifiedHistoryMonthlyHeader(
+  const PillSheetModifiedHistoryMonthlyHeader(
       {Key? key, required this.dateTimeOfMonth})
       : super(key: key);
 

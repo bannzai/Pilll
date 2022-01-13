@@ -93,8 +93,7 @@ class CalendarPillSheetModifiedHistoryCard extends StatelessWidget {
               if (state.isPremium || state.isTrial) {
                 return [
                   Container(
-                    padding: const EdgeInsets.only(left: 8, right: 8),
-                    child: CalendarPillSheetModifiedHistoryList(
+                    child: PillSheetModifiedHistoryList(
                       padding: null,
                       scrollPhysics: NeverScrollableScrollPhysics(),
                       pillSheetModifiedHistories:
@@ -110,8 +109,7 @@ class CalendarPillSheetModifiedHistoryCard extends StatelessWidget {
                   Stack(
                     children: [
                       Container(
-                        padding: const EdgeInsets.only(left: 8, right: 8),
-                        child: CalendarPillSheetModifiedHistoryList(
+                        child: PillSheetModifiedHistoryList(
                           padding: null,
                           scrollPhysics: NeverScrollableScrollPhysics(),
                           pillSheetModifiedHistories:
