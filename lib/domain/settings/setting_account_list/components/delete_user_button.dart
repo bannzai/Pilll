@@ -98,7 +98,7 @@ class DeleteUserButton extends StatelessWidget {
 }
 
 class _CompletedDialog extends StatelessWidget {
-  final VoidCallback onClose;
+  final Future<void> Function() onClose;
 
   const _CompletedDialog({Key? key, required this.onClose}) : super(key: key);
   @override
@@ -133,9 +133,9 @@ class _CompletedDialog extends StatelessWidget {
             ),
             SizedBox(height: 24),
             PrimaryButton(
-              onPressed: () {
+              onPressed: () async {
                 Navigator.of(context).pop();
-                onClose();
+                await onClose();
               },
               text: "OK",
             ),

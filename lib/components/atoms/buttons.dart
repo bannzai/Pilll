@@ -1,3 +1,5 @@
+import 'dart:io';
+
 import 'package:pilll/components/atoms/button.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
@@ -6,7 +8,7 @@ import 'package:flutter/material.dart';
 
 class PrimaryButton extends StatelessWidget {
   final String text;
-  final Function()? onPressed;
+  final Future<void> Function()? onPressed;
 
   const PrimaryButton({
     Key? key,
@@ -15,6 +17,7 @@ class PrimaryButton extends StatelessWidget {
   }) : super(key: key);
 
   Widget build(BuildContext context) {
+    var isProcessing = false;
     return ConstrainedBox(
       constraints: BoxConstraints(maxHeight: 44, minHeight: 44, minWidth: 180),
       child: ElevatedButton(
@@ -26,7 +29,14 @@ class PrimaryButton extends StatelessWidget {
           }
           return PilllColors.secondary;
         })),
-        onPressed: onPressed,
+        onPressed: () async {
+          if (isProcessing) {
+            return;
+          }
+          isProcessing = true;
+          await onPressed?.call();
+          isProcessing = false;
+        },
       ),
     );
   }

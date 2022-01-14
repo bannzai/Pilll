@@ -152,7 +152,7 @@ class InitialSettingPillSheetGroupPageBody extends StatelessWidget {
             SvgPicture.asset("images/empty_pill_sheet_type.svg"),
             SizedBox(height: 24),
             PrimaryButton(
-                onPressed: () {
+                onPressed: () async {
                   showSettingPillSheetGroupSelectPillSheetTypePage(
                     context: context,
                     pillSheetType: null,

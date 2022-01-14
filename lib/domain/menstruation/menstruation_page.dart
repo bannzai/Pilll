@@ -107,7 +107,7 @@ class MenstruationRecordButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return PrimaryButton(
-      onPressed: () {
+      onPressed: () async {
         analytics.logEvent(name: "pressed_menstruation_record");
         final latestMenstruation = state.latestMenstruation;
         if (latestMenstruation != null &&

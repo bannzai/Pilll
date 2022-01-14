@@ -84,8 +84,8 @@ class SettingTodayPillNumberPage extends HookConsumerWidget {
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: [
                       PrimaryButton(
-                        onPressed: () {
-                          store.modifiyTodayPillNumber(
+                        onPressed: () async {
+                          await store.modifiyTodayPillNumber(
                             pillSheetGroup: pillSheetGroup,
                             activedPillSheet: activedPillSheet,
                           );

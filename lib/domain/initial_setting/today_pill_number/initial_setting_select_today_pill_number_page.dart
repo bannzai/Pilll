@@ -81,7 +81,7 @@ class InitialSettingSelectTodayPillNumberPage extends HookConsumerWidget {
                         text: "次へ",
                         onPressed: state.todayPillNumber == null
                             ? null
-                            : () {
+                            : () async {
                                 analytics.logEvent(
                                     name: "done_today_number_initial_setting");
                                 Navigator.of(context).push(
