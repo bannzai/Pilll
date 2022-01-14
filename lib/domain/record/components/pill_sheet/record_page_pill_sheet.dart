@@ -265,11 +265,9 @@ class RecordPagePillSheet extends StatelessWidget {
       }
 
       if (endDate != null) {
-        final offset = daysBetween(beginDate, endDate);
-        return result + offset;
+        return result + daysBetween(beginDate, endDate);
       } else {
-        final offset = daysBetween(beginDate, today());
-        return result + offset;
+        return result + daysBetween(beginDate, today();
       }
     });
 
