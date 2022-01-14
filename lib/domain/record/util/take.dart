@@ -13,7 +13,7 @@ import 'package:pilll/service/pill_sheet_modified_history.dart';
 import 'package:pilll/util/shared_preference/keys.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-Future<void> effectAfterTaken({
+Future<void> effectAfterTakenPillAction({
   required BuildContext context,
   required Future<void>? taken,
   required RecordPageStore store,

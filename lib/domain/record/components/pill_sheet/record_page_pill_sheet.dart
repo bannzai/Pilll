@@ -108,7 +108,7 @@ class RecordPagePillSheet extends StatelessWidget {
               "today_pill_number": pillSheet.todayPillNumber,
             });
 
-            effectAfterTaken(
+            effectAfterTakenPillAction(
               context: context,
               taken: store.takenWithPillNumber(
                 pillNumberIntoPillSheet: pillNumberIntoPillSheet,
