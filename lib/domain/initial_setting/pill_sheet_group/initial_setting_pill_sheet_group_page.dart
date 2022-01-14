@@ -105,7 +105,7 @@ class InitialSettingPillSheetGroupPage extends HookConsumerWidget {
                           SizedBox(height: 20),
                           AlertButton(
                             text: "すでにアカウントをお持ちの方はこちら",
-                            onPressed: () {
+                            onPressed: () async {
                               analytics.logEvent(
                                   name: "pressed_initial_setting_signin");
                               showSigninSheet(
@@ -152,7 +152,7 @@ class InitialSettingPillSheetGroupPageBody extends StatelessWidget {
             SvgPicture.asset("images/empty_pill_sheet_type.svg"),
             SizedBox(height: 24),
             PrimaryButton(
-                onPressed: () {
+                onPressed: () async {
                   showSettingPillSheetGroupSelectPillSheetTypePage(
                     context: context,
                     pillSheetType: null,

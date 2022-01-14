@@ -73,7 +73,7 @@ class MenstruationHistoryCardMoreButton extends StatelessWidget {
         if (!state.moreButtonIsHidden)
           AlertButton(
               text: "もっと見る",
-              onPressed: () {
+              onPressed: () async {
                 analytics.logEvent(name: "menstruation_more_button_pressed");
                 if (state.isPremium || state.isTrial) {
                   Navigator.of(context).push(MenstruationListPageRoute.route());

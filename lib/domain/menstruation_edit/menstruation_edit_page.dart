@@ -69,7 +69,7 @@ class MenstruationEditPage extends HookConsumerWidget {
                                 FontType.sBigTitle.merge(TextColorStyle.main)),
                         Spacer(),
                         AlertButton(
-                          onPressed: () {
+                          onPressed: () async {
                             analytics.logEvent(
                                 name: "pressed_saving_menstruation_edit");
                             if (store.shouldShowDiscardDialog()) {
@@ -81,7 +81,7 @@ class MenstruationEditPage extends HookConsumerWidget {
                                   actions: [
                                     AlertButton(
                                       text: "キャンセル",
-                                      onPressed: () {
+                                      onPressed: () async {
                                         analytics.logEvent(
                                             name:
                                                 "cancelled_delete_menstruation");
@@ -90,13 +90,13 @@ class MenstruationEditPage extends HookConsumerWidget {
                                     ),
                                     AlertButton(
                                       text: "削除する",
-                                      onPressed: () {
-                                        store
-                                            .delete()
-                                            .then((_) => didEndDelete())
-                                            .then((_) => analytics.logEvent(
-                                                name:
-                                                    "pressed_delete_menstruation"));
+                                      onPressed: () async {
+                                        await store.delete();
+                                        didEndDelete();
+
+                                        analytics.logEvent(
+                                            name:
+                                                "pressed_delete_menstruation");
                                         Navigator.of(context).pop();
                                       },
                                     ),

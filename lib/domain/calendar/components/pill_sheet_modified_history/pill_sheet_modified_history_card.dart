@@ -148,7 +148,7 @@ class CalendarPillSheetModifiedHistoryCard extends StatelessWidget {
                                       width: 204,
                                       child: AppOutlinedButton(
                                         text: "くわしくみる",
-                                        onPressed: () {
+                                        onPressed: () async {
                                           if (state.trialDeadlineDate == null) {
                                             showPremiumTrialModal(context, () {
                                               showPremiumTrialCompleteModalPreDialog(

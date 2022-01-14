@@ -269,7 +269,7 @@ class PostDiaryPage extends HookConsumerWidget {
             Spacer(),
             AlertButton(
               text: '完了',
-              onPressed: () {
+              onPressed: () async {
                 analytics.logEvent(name: "post_diary_done_button_pressed");
                 focusNode.unfocus();
               },

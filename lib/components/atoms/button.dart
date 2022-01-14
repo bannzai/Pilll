@@ -9,10 +9,4 @@ abstract class ButtonTextStyle {
     fontSize: FontSize.sLarge,
     color: PilllColors.white,
   );
-  static final TextStyle alert = TextStyle(
-    fontFamily: FontFamily.japanese,
-    fontWeight: FontWeight.w600,
-    fontSize: FontSize.normal,
-    color: PilllColors.primary,
-  );
 }

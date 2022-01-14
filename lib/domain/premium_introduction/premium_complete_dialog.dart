@@ -43,7 +43,7 @@ class PremiumCompleteDialog extends StatelessWidget {
             ),
             SizedBox(height: 24),
             PrimaryButton(
-              onPressed: () {
+              onPressed: () async {
                 Navigator.of(context).pop();
                 onClose();
               },

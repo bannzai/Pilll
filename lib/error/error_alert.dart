@@ -27,13 +27,13 @@ class ErrorAlert extends StatelessWidget {
         if (faq != null)
           AlertButton(
             text: "FAQを見る",
-            onPressed: () {
+            onPressed: () async {
               launch(faq);
             },
           ),
         AlertButton(
           text: "閉じる",
-          onPressed: () {
+          onPressed: () async {
             Navigator.of(context).pop();
           },
         ),

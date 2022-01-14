@@ -31,7 +31,7 @@ class InitialSettingMenstruationPage extends HookConsumerWidget {
         },
       ),
       doneButton: PrimaryButton(
-        onPressed: () {
+        onPressed: () async {
           analytics.logEvent(name: "done_on_initial_setting_menstruation");
           Navigator.of(context)
               .push(InitialSettingReminderTimesPageRoute.route());
