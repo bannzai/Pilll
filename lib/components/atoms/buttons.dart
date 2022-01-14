@@ -1,5 +1,3 @@
-import 'dart:io';
-
 import 'package:pilll/components/atoms/button.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
@@ -34,8 +32,14 @@ class PrimaryButton extends StatelessWidget {
             return;
           }
           isProcessing = true;
-          await onPressed?.call();
-          isProcessing = false;
+
+          try {
+            await onPressed?.call();
+          } catch (error) {
+            rethrow;
+          } finally {
+            isProcessing = false;
+          }
         },
       ),
     );
@@ -44,7 +48,7 @@ class PrimaryButton extends StatelessWidget {
 
 class SecondaryButton extends StatelessWidget {
   final String text;
-  final Function() onPressed;
+  final Future<void> Function() onPressed;
 
   const SecondaryButton({
     Key? key,
@@ -53,12 +57,26 @@ class SecondaryButton extends StatelessWidget {
   }) : super(key: key);
 
   Widget build(BuildContext context) {
+    var isProcessing = false;
     return SizedBox(
       height: 44,
       child: TextButton(
         style: TextButton.styleFrom(backgroundColor: Colors.transparent),
         child: Text(text, style: TextColorStyle.primary),
-        onPressed: onPressed,
+        onPressed: () async {
+          if (isProcessing) {
+            return;
+          }
+          isProcessing = true;
+
+          try {
+            await onPressed.call();
+          } catch (error) {
+            rethrow;
+          } finally {
+            isProcessing = false;
+          }
+        },
       ),
     );
   }
@@ -75,6 +93,7 @@ class TertiaryButton extends StatelessWidget {
   }) : super(key: key);
 
   Widget build(BuildContext context) {
+    var isProcessing = false;
     return SizedBox(
       width: 180,
       height: 44,
@@ -82,7 +101,19 @@ class TertiaryButton extends StatelessWidget {
         style: TextButton.styleFrom(backgroundColor: PilllColors.gray),
         child:
             Text(text, style: ButtonTextStyle.main.merge(TextColorStyle.white)),
-        onPressed: onPressed,
+        onPressed: () async {
+          if (isProcessing) {
+            return;
+          }
+          isProcessing = true;
+          try {
+            await onPressed.call();
+          } catch (error) {
+            rethrow;
+          } finally {
+            isProcessing = false;
+          }
+        },
       ),
     );
   }
@@ -90,7 +121,7 @@ class TertiaryButton extends StatelessWidget {
 
 class InconspicuousButton extends StatelessWidget {
   final String text;
-  final Function() onPressed;
+  final Future<void> Function() onPressed;
 
   const InconspicuousButton({
     Key? key,
@@ -99,13 +130,26 @@ class InconspicuousButton extends StatelessWidget {
   }) : super(key: key);
 
   Widget build(BuildContext context) {
+    var isProcessing = false;
     return SizedBox(
       width: 180,
       height: 44,
       child: TextButton(
         style: TextButton.styleFrom(backgroundColor: Colors.transparent),
         child: Text(text, style: TextColorStyle.gray),
-        onPressed: onPressed,
+        onPressed: () async {
+          if (isProcessing) {
+            return;
+          }
+          isProcessing = true;
+          try {
+            await onPressed.call();
+          } catch (error) {
+            rethrow;
+          } finally {
+            isProcessing = false;
+          }
+        },
       ),
     );
   }
@@ -113,7 +157,7 @@ class InconspicuousButton extends StatelessWidget {
 
 class SmallAppOutlinedButton extends StatelessWidget {
   final String text;
-  final VoidCallback? onPressed;
+  final Future<void> Function()? onPressed;
 
   const SmallAppOutlinedButton({
     Key? key,
@@ -122,6 +166,7 @@ class SmallAppOutlinedButton extends StatelessWidget {
   }) : super(key: key);
 
   Widget build(BuildContext context) {
+    var isProcessing = false;
     return OutlinedButton(
       child: Container(
         padding: EdgeInsets.only(top: 8.5, bottom: 8.5),
@@ -144,14 +189,26 @@ class SmallAppOutlinedButton extends StatelessWidget {
         ),
         side: BorderSide(color: PilllColors.secondary),
       ),
-      onPressed: onPressed,
+      onPressed: () async {
+        if (isProcessing) {
+          return;
+        }
+        isProcessing = true;
+        try {
+          await onPressed?.call();
+        } catch (error) {
+          rethrow;
+        } finally {
+          isProcessing = false;
+        }
+      },
     );
   }
 }
 
 class AppOutlinedButton extends StatelessWidget {
   final String text;
-  final VoidCallback? onPressed;
+  final Future<void> Function()? onPressed;
 
   const AppOutlinedButton({
     Key? key,
@@ -160,6 +217,7 @@ class AppOutlinedButton extends StatelessWidget {
   }) : super(key: key);
 
   Widget build(BuildContext context) {
+    var isProcessing = false;
     return OutlinedButton(
       child: Container(
         padding: EdgeInsets.only(top: 12, bottom: 12),
@@ -182,14 +240,26 @@ class AppOutlinedButton extends StatelessWidget {
         ),
         side: BorderSide(color: PilllColors.secondary),
       ),
-      onPressed: onPressed,
+      onPressed: () async {
+        if (isProcessing) {
+          return;
+        }
+        isProcessing = true;
+        try {
+          await onPressed?.call();
+        } catch (error) {
+          rethrow;
+        } finally {
+          isProcessing = false;
+        }
+      },
     );
   }
 }
 
 class AlertButton extends StatelessWidget {
   final String text;
-  final VoidCallback? onPressed;
+  final Future<void> Function()? onPressed;
 
   const AlertButton({
     Key? key,

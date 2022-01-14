@@ -34,13 +34,13 @@ class RecordPageRestDurationDialog extends StatelessWidget {
       ),
       actions: <Widget>[
         AppOutlinedButton(
-          onPressed: () => onDone(),
+          onPressed: () async => onDone(),
           text: "休薬する",
         ),
         Center(
           child: AlertButton(
             text: "閉じる",
-            onPressed: () {
+            onPressed: () async {
               Navigator.of(context).pop();
             },
           ),

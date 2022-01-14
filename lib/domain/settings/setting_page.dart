@@ -251,7 +251,7 @@ class SettingPage extends HookConsumerWidget {
 ''', actions: [
             AlertButton(
               text: "キャンセル",
-              onPressed: () {
+              onPressed: () async {
                 Navigator.of(context).pop();
               },
             ),
@@ -278,7 +278,7 @@ class SettingPage extends HookConsumerWidget {
             actions: [
               AlertButton(
                 text: "キャンセル",
-                onPressed: () {
+                onPressed: () async {
                   Navigator.of(context).pop();
                 },
               ),

@@ -18,7 +18,7 @@ class DeleteUserButton extends StatelessWidget {
     return Container(
       padding: EdgeInsets.only(top: 54),
       child: AlertButton(
-        onPressed: () {
+        onPressed: () async {
           showDiscardDialog(
             context,
             title: "ユーザー情報が削除されます",
@@ -26,7 +26,7 @@ class DeleteUserButton extends StatelessWidget {
             actions: [
               AlertButton(
                 text: "キャンセル",
-                onPressed: () {
+                onPressed: () async {
                   Navigator.of(context).pop();
                 },
               ),
@@ -66,7 +66,7 @@ class DeleteUserButton extends StatelessWidget {
           actions: [
             AlertButton(
               text: "キャンセル",
-              onPressed: () {
+              onPressed: () async {
                 Navigator.of(context).pop();
               },
             ),

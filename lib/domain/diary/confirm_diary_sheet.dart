@@ -87,16 +87,18 @@ class ConfirmDiarySheet extends HookConsumerWidget {
                     actions: [
                       AlertButton(
                         text: "キャンセル",
-                        onPressed: () {
+                        onPressed: () async {
                           Navigator.of(context).pop();
                         },
                       ),
                       AlertButton(
                         text: "削除する",
-                        onPressed: () {
+                        onPressed: () async {
                           int counter = 0;
-                          store.delete().then((value) => Navigator.popUntil(
-                              context, (route) => counter++ >= 1));
+                          await store.delete();
+
+                          Navigator.popUntil(
+                              context, (route) => counter++ >= 1);
                           Navigator.of(context).pop();
                         },
                       ),

@@ -67,7 +67,7 @@ class InitialSettingSelectTodayPillNumberPage extends HookConsumerWidget {
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: [
                       InconspicuousButton(
-                        onPressed: () {
+                        onPressed: () async {
                           store.unsetTodayPillNumber();
                           analytics.logEvent(
                               name: "unknown_number_initial_setting");

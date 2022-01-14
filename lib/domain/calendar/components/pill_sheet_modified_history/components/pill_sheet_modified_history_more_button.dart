@@ -22,7 +22,7 @@ class PillSheetModifiedHistoryMoreButton extends StatelessWidget {
       children: [
         AlertButton(
             text: "もっと見る",
-            onPressed: () {
+            onPressed: () async {
               analytics.logEvent(name: "pill_sheet_modified_history_more");
               if (state.isPremium || state.isTrial) {
                 Navigator.of(context)

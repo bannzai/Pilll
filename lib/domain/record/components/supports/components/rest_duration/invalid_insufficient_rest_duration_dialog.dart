@@ -50,7 +50,7 @@ class InvalidInsufficientRestDurationDialog extends StatelessWidget {
       ),
       actions: [
         AppOutlinedButton(
-          onPressed: () {
+          onPressed: () async {
             analytics.logEvent(name: "invalid_insufficient_rest_duration_faq");
             launch(
                 "https://pilll.wraptas.site/467128e667ae4d6cbff4d61ee370cce5");
@@ -60,7 +60,7 @@ class InvalidInsufficientRestDurationDialog extends StatelessWidget {
         Center(
           child: AlertButton(
             text: "閉じる",
-            onPressed: () {
+            onPressed: () async {
               analytics.logEvent(
                   name: "invalid_insufficient_rest_duration_close");
               Navigator.of(context).pop();

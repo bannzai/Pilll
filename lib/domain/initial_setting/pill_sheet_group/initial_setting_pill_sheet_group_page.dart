@@ -105,7 +105,7 @@ class InitialSettingPillSheetGroupPage extends HookConsumerWidget {
                           SizedBox(height: 20),
                           AlertButton(
                             text: "すでにアカウントをお持ちの方はこちら",
-                            onPressed: () {
+                            onPressed: () async {
                               analytics.logEvent(
                                   name: "pressed_initial_setting_signin");
                               showSigninSheet(

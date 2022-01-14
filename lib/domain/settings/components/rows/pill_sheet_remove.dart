@@ -46,13 +46,13 @@ class PillSheetRemoveRow extends HookConsumerWidget {
               actions: [
                 AlertButton(
                   text: "キャンセル",
-                  onPressed: () {
+                  onPressed: () async {
                     Navigator.of(context).pop();
                   },
                 ),
                 AlertButton(
                   text: "破棄する",
-                  onPressed: () {
+                  onPressed: () async {
                     store.deletePillSheet().catchError((error) {
                       showErrorAlert(context,
                           message:

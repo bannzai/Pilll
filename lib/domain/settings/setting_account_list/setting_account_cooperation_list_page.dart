@@ -49,7 +49,7 @@ class SettingAccountCooperationListPage extends HookConsumerWidget {
                     SettingAccountCooperationRow(
                       accountType: LinkAccountType.apple,
                       isLinked: () => state.isLinkedApple,
-                      onTap: () {
+                      onTap: () async {
                         if (state.isLinkedApple) {
                           return;
                         }
@@ -60,7 +60,7 @@ class SettingAccountCooperationListPage extends HookConsumerWidget {
                     SettingAccountCooperationRow(
                       accountType: LinkAccountType.google,
                       isLinked: () => state.isLinkedGoogle,
-                      onTap: () {
+                      onTap: () async {
                         if (state.isLinkedGoogle) {
                           return;
                         }
@@ -111,7 +111,7 @@ extension SettingAccountCooperationListPageRoute
 class SettingAccountCooperationRow extends StatelessWidget {
   final LinkAccountType accountType;
   final bool Function() isLinked;
-  final Function() onTap;
+  final Future<void> Function() onTap;
 
   SettingAccountCooperationRow({
     required this.accountType,
@@ -125,11 +125,11 @@ class SettingAccountCooperationRow extends StatelessWidget {
         title: Text(accountType.providerName, style: FontType.listRow),
         trailing: _trailing(),
         horizontalTitleGap: 4,
-        onTap: () {
+        onTap: () async {
           if (isLinked()) {
             return;
           }
-          onTap();
+          await onTap();
         });
   }
 
@@ -149,7 +149,7 @@ class SettingAccountCooperationRow extends StatelessWidget {
         height: 40,
         width: 88,
         child: SmallAppOutlinedButton(
-          onPressed: () {
+          onPressed: () async {
             onTap();
           },
           text: "連携する",
