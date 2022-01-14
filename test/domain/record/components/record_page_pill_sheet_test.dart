@@ -832,9 +832,18 @@ void main() {
           expect(
               RecordPagePillSheet.calculatedDateOfAppearancePill(pillSheet, 24),
               DateTime.parse("2022-01-09"));
+
+          // Bug: Got 2022-01-18
           expect(
               RecordPagePillSheet.calculatedDateOfAppearancePill(pillSheet, 25),
               DateTime.parse("2022-01-14"));
+
+          expect(
+              RecordPagePillSheet.calculatedDateOfAppearancePill(pillSheet, 26),
+              DateTime.parse("2022-01-15"));
+          expect(
+              RecordPagePillSheet.calculatedDateOfAppearancePill(pillSheet, 28),
+              DateTime.parse("2022-01-17"));
         });
       });
     });
