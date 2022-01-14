@@ -795,6 +795,47 @@ void main() {
               RecordPagePillSheet.calculatedDateOfAppearancePill(pillSheet, 28),
               DateTime.parse("2020-09-29"));
         });
+
+        test("Real bug case ", () {
+          final originalTodayRepository = todayRepository;
+          final mockTodayRepository = MockTodayService();
+          todayRepository = mockTodayRepository;
+          when(mockTodayRepository.now())
+              .thenReturn(DateTime.parse("2022-01-14"));
+          when(mockTodayRepository.today())
+              .thenReturn(DateTime.parse("2022-01-14"));
+          addTearDown(() {
+            todayRepository = originalTodayRepository;
+          });
+
+          final PillSheet pillSheet = PillSheet(
+            typeInfo: PillSheetType.pillsheet_28_4.typeInfo,
+            beginingDate: DateTime.parse("2021-12-17"),
+            lastTakenDate: DateTime.parse("2022-01-19"),
+            restDurations: [
+              RestDuration(
+                beginDate: DateTime.parse("2022-01-10"),
+                createdDate: DateTime.parse("2022-01-10"),
+                endDate: DateTime.parse("2022-01-10"),
+              ),
+              RestDuration(
+                beginDate: DateTime.parse("2022-01-10"),
+                createdDate: DateTime.parse("2022-01-10"),
+                endDate: DateTime.parse("2022-01-14"),
+              ),
+            ],
+          );
+
+          expect(
+              RecordPagePillSheet.calculatedDateOfAppearancePill(pillSheet, 1),
+              DateTime.parse("2021-12-17"));
+          expect(
+              RecordPagePillSheet.calculatedDateOfAppearancePill(pillSheet, 24),
+              DateTime.parse("2022-01-09"));
+          expect(
+              RecordPagePillSheet.calculatedDateOfAppearancePill(pillSheet, 25),
+              DateTime.parse("2022-01-14"));
+        });
       });
     });
   });
