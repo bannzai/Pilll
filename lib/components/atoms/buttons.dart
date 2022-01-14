@@ -189,7 +189,15 @@ class AlertButton extends StatelessWidget {
 
   Widget build(BuildContext context) {
     return TextButton(
-      child: Text(text, style: ButtonTextStyle.alert),
+      child: Text(
+        text,
+        style: TextStyle(
+          fontFamily: FontFamily.japanese,
+          fontWeight: FontWeight.w600,
+          fontSize: FontSize.normal,
+          color: PilllColors.primary,
+        ),
+      ),
       onPressed: onPressed,
     );
   }
