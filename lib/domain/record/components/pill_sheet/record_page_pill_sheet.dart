@@ -14,6 +14,7 @@ import 'package:pilll/entity/pill_sheet_group.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/entity/setting.dart';
 import 'package:pilll/entity/weekday.dart';
+import 'package:pilll/util/datetime/date_compare.dart';
 import 'package:pilll/util/datetime/day.dart';
 
 class RecordPagePillSheet extends StatelessWidget {
@@ -243,28 +244,34 @@ class RecordPagePillSheet extends StatelessWidget {
 
   static DateTime calculatedDateOfAppearancePill(
       PillSheet pillSheet, int pillNumberIntoPillSheet) {
-    final date = pillSheet.beginingDate
+    final originDate = pillSheet.beginingDate
         .add(Duration(days: pillNumberIntoPillSheet - 1))
         .date();
+
     if (pillSheet.restDurations.isEmpty) {
-      return date;
+      return originDate;
     }
 
     final distance =
         pillSheet.restDurations.fold(0, (int result, restDuration) {
-      if (date.isBefore(restDuration.beginDate.date())) {
+      final beginDate = restDuration.beginDate.date();
+      final endDate = restDuration.endDate?.date();
+
+      if (endDate != null && isSameDay(beginDate, endDate)) {
+        return result;
+      }
+      if (originDate.isBefore(beginDate)) {
         return result;
       }
 
-      final endDate = restDuration.endDate?.date();
-      if (endDate != null && date.isAfter(endDate)) {
-        return result + daysBetween(restDuration.beginDate.date(), endDate);
+      if (endDate != null) {
+        return result + daysBetween(beginDate, endDate);
       } else {
-        return result + daysBetween(restDuration.beginDate.date(), today());
+        return result + daysBetween(beginDate, today());
       }
     });
 
-    return date.add(Duration(days: distance));
+    return originDate.add(Duration(days: distance));
   }
 }
 
