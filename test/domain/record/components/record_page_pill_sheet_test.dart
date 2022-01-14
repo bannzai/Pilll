@@ -779,6 +779,13 @@ void main() {
               DateTime.parse("2020-09-13"));
 
           expect(
+              RecordPagePillSheet.calculatedDateOfAppearancePill(pillSheet, 13),
+              DateTime.parse("2020-09-14"));
+          expect(
+              RecordPagePillSheet.calculatedDateOfAppearancePill(pillSheet, 14),
+              DateTime.parse("2020-09-15"));
+
+          expect(
               RecordPagePillSheet.calculatedDateOfAppearancePill(pillSheet, 26),
               DateTime.parse("2020-09-27"));
           expect(
