@@ -15,15 +15,11 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 Future<void> effectAfterTakenPillAction({
   required BuildContext context,
-  required Future<void>? taken,
+  required Future<void> taken,
   required RecordPageStore store,
 }) async {
-  final _taken = taken;
-  if (_taken == null) {
-    return;
-  }
   try {
-    await _taken;
+    await taken;
     FlutterAppBadger.removeBadge();
     _requestInAppReview();
     await showReleaseNotePreDialog(context);
