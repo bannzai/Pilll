@@ -52,7 +52,7 @@ abstract class PillSheetModifiedHistoryDateEffectivePillNumber {
     if (before == (after + 1)) {
       return "$before番";
     }
-    return "${before}-${after + 1}番";
+    return "$before-${after + 1}番";
   }
 
   static String changed(ChangedPillNumberValue value) =>
