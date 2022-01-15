@@ -141,7 +141,7 @@ class RecordPagePillSheet extends StatelessWidget {
     if (isPremiumOrTrial &&
         state.appearanceMode == PillSheetAppearanceMode.date) {
       final DateTime date =
-          calculatedDateOfAppearancePill(pillSheet, pillNumberIntoPillSheet);
+          displayPillTakeDate(pillSheet, pillNumberIntoPillSheet);
 
       if (setting.pillNumberForFromMenstruation == 0 ||
           setting.durationMenstruation == 0) {
@@ -242,7 +242,7 @@ class RecordPagePillSheet extends StatelessWidget {
     return isContainedMenstruationDuration;
   }
 
-  static DateTime calculatedDateOfAppearancePill(
+  static DateTime displayPillTakeDate(
       PillSheet pillSheet, int pillNumberIntoPillSheet) {
     final originDate = pillSheet.beginingDate
         .add(Duration(days: pillNumberIntoPillSheet - 1))
