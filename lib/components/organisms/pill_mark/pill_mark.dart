@@ -19,9 +19,9 @@ class PillMark extends StatefulWidget {
 
   const PillMark({
     Key? key,
-    required this.showsRippleAnimation,
     required this.pillMarkType,
     required this.showsCheckmark,
+    required this.showsRippleAnimation,
   }) : super(key: key);
 
   @override
