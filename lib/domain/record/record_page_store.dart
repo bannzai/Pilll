@@ -296,68 +296,82 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
     if (activedPillSheet == null) {
       throw FormatException("active pill sheet not found");
     }
-    if (!activedPillSheet.todayPillIsAlreadyTaken) {
+    // キャンセルの場合は今日の服用のundo機能なので、服用済みじゃない場合はreturnする
+    if (!activedPillSheet.todayPillIsAlreadyTaken ||
+        activedPillSheet.lastTakenDate == null) {
       return;
     }
-    final lastTakenDate = activedPillSheet.lastTakenDate;
-    if (lastTakenDate == null) {
-      return;
-    }
 
-    final batch = _batchFactory.batch();
-
-    final updatedPillSheet = activedPillSheet.copyWith(
-        lastTakenDate: lastTakenDate.subtract(Duration(days: 1)));
-    _pillSheetService.update(batch, [updatedPillSheet]);
-
-    final history = PillSheetModifiedHistoryServiceActionFactory
-        .createRevertTakenPillAction(
-      pillSheetGroupID: pillSheetGroup.id,
-      before: activedPillSheet,
-      after: updatedPillSheet,
-    );
-    _pillSheetModifiedHistoryService.add(batch, history);
-
-    final updatedPillSheetGroup = pillSheetGroup.replaced(updatedPillSheet);
-    _pillSheetGroupService.update(batch, updatedPillSheetGroup);
-
-    await batch.commit();
-    state = state.copyWith(pillSheetGroup: updatedPillSheetGroup);
+    await revertTaken(
+        pillSheetGroup: pillSheetGroup,
+        pageIndex: activedPillSheet.groupIndex,
+        pillNumberIntoPillSheet: activedPillSheet.lastTakenPillNumber - 1);
   }
 
   Future<void> revertTaken(
       {required PillSheetGroup pillSheetGroup,
       required int pageIndex,
       required int pillNumberIntoPillSheet}) async {
-    final pillSheet = pillSheetGroup.pillSheets[pageIndex];
-    if (!pillSheet.todayPillIsAlreadyTaken) {
-      return;
+    final activedPillSheet = pillSheetGroup.activedPillSheet;
+    if (activedPillSheet == null) {
+      throw FormatException("active pill sheet not found");
     }
-    final lastTakenDate = pillSheet.lastTakenDate;
+
+    final targetPillSheet = pillSheetGroup.pillSheets[pageIndex];
+    final lastTakenDate = targetPillSheet.lastTakenDate;
     if (lastTakenDate == null) {
-      return;
+      return null;
     }
-    final lastTakenPillNumber = pillSheet.lastTakenPillNumber;
+
+    final DateTime takenDate = () {
+      final difference =
+          targetPillSheet.lastTakenPillNumber - pillNumberIntoPillSheet;
+      return lastTakenDate.subtract(Duration(days: difference));
+    }();
 
     final batch = _batchFactory.batch();
+    final updatedPillSheets = pillSheetGroup.pillSheets.map((pillSheet) {
+      if (pillSheet.groupIndex > activedPillSheet.groupIndex) {
+        return pillSheet;
+      }
+      if (pillSheet.groupIndex < pageIndex) {
+        return pillSheet;
+      }
+      final lastTakenDate = pillSheet.lastTakenDate;
+      if (lastTakenDate == null) {
+        return pillSheet;
+      }
+      if (takenDate.isAfter(lastTakenDate)) {
+        return pillSheet;
+      }
 
-    // TODO:
-    final updatedPillSheet = pillSheet.copyWith(
-        lastTakenDate: lastTakenDate.subtract(Duration(days: 1)));
-    _pillSheetService.update(batch, [updatedPillSheet]);
+      return pillSheet.copyWith(lastTakenDate: takenDate);
+    }).toList();
 
+    final updatedPillSheetGroup =
+        pillSheetGroup.copyWith(pillSheets: updatedPillSheets);
+    final updatedIndexses = pillSheetGroup.pillSheets.asMap().keys.where(
+          (index) =>
+              pillSheetGroup.pillSheets[index] !=
+              updatedPillSheetGroup.pillSheets[index],
+        );
+
+    if (updatedIndexses.isEmpty) {
+      return null;
+    }
+
+    final before = pillSheetGroup.pillSheets[updatedIndexses.first];
+    final after = updatedPillSheetGroup.pillSheets[updatedIndexses.last];
     final history = PillSheetModifiedHistoryServiceActionFactory
         .createRevertTakenPillAction(
       pillSheetGroupID: pillSheetGroup.id,
-      before: pillSheet,
-      after: updatedPillSheet,
+      before: before,
+      after: after,
     );
     _pillSheetModifiedHistoryService.add(batch, history);
 
-    final updatedPillSheetGroup = pillSheetGroup.replaced(updatedPillSheet);
-    _pillSheetGroupService.update(batch, updatedPillSheetGroup);
-
     await batch.commit();
+
     state = state.copyWith(pillSheetGroup: updatedPillSheetGroup);
   }
 
