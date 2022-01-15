@@ -111,10 +111,13 @@ class PillSheet with _$PillSheet {
         1;
   }
 
-  int? get lastTakenPillNumber {
+  // NOTE: if pill sheet is not yet taken, lastTakenNumber return 0;
+  // Because if lastTakenPillNumber is nullable, ! = null, making it difficult to compare.
+  // lastTakenNumber is often compare todayPillNumber
+  int get lastTakenPillNumber {
     final lastTakenDate = this.lastTakenDate;
     if (lastTakenDate == null) {
-      return null;
+      return 0;
     }
 
     final lastTakenPillNumber =
