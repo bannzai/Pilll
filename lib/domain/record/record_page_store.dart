@@ -305,7 +305,7 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
     await revertTaken(
         pillSheetGroup: pillSheetGroup,
         pageIndex: activedPillSheet.groupIndex,
-        pillNumberIntoPillSheet: activedPillSheet.lastTakenPillNumber - 1);
+        pillNumberIntoPillSheet: activedPillSheet.lastTakenPillNumber);
   }
 
   Future<void> revertTaken(
