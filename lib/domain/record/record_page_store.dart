@@ -325,7 +325,6 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
         .displayPillTakeDate(pillNumberIntoPillSheet)
         .subtract(Duration(days: 1));
 
-    final batch = _batchFactory.batch();
     final updatedPillSheets = pillSheetGroup.pillSheets.map((pillSheet) {
       final lastTakenDate = pillSheet.lastTakenDate;
       if (lastTakenDate == null) {
@@ -361,6 +360,13 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
     if (updatedIndexses.isEmpty) {
       return null;
     }
+
+    final batch = _batchFactory.batch();
+    _pillSheetService.update(
+      batch,
+      updatedPillSheets,
+    );
+    _pillSheetGroupService.update(batch, updatedPillSheetGroup);
 
     final before = pillSheetGroup.pillSheets[updatedIndexses.first];
     final after = updatedPillSheetGroup.pillSheets[updatedIndexses.last];
