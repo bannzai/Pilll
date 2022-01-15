@@ -321,16 +321,8 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
     }
 
     final targetPillSheet = pillSheetGroup.pillSheets[pageIndex];
-    final lastTakenDate = targetPillSheet.lastTakenDate;
-    if (lastTakenDate == null) {
-      return;
-    }
-
-    final DateTime takenDate = () {
-      final difference =
-          targetPillSheet.lastTakenPillNumber - pillNumberIntoPillSheet;
-      return lastTakenDate.subtract(Duration(days: difference));
-    }();
+    final takenDate =
+        targetPillSheet.displayPillTakeDate(pillNumberIntoPillSheet);
 
     final batch = _batchFactory.batch();
     final updatedPillSheets = pillSheetGroup.pillSheets.map((pillSheet) {
