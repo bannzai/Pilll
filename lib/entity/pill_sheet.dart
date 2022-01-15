@@ -111,10 +111,10 @@ class PillSheet with _$PillSheet {
         1;
   }
 
-  int get lastTakenPillNumber {
+  int? get lastTakenPillNumber {
     final lastTakenDate = this.lastTakenDate;
     if (lastTakenDate == null) {
-      return 0;
+      return null;
     }
 
     final lastTakenPillNumber =
