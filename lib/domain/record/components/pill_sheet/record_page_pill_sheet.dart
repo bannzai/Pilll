@@ -100,20 +100,31 @@ class RecordPagePillSheet extends StatelessWidget {
               pillSheet: pillSheet,
             ),
           ),
-          onTap: () {
+          onTap: () async {
             analytics.logEvent(name: "pill_mark_tapped", parameters: {
               "last_taken_pill_number": pillSheet.lastTakenPillNumber,
               "today_pill_number": pillSheet.todayPillNumber,
             });
 
-            effectAfterTakenPillAction(
-              context: context,
-              taken: store.takenWithPillNumber(
-                pillNumberIntoPillSheet: pillNumberIntoPillSheet,
-                pillSheet: pillSheet,
-              ),
-              store: store,
-            );
+            if (pillSheet.todayPillNumber < pillNumberIntoPillSheet) {
+              return;
+            }
+
+            if (pillSheet.lastTakenPillNumber >= pillNumberIntoPillSheet) {
+              await store.revertTaken(
+                  pillSheetGroup: pillSheetGroup,
+                  pageIndex: pageIndex,
+                  pillNumberIntoPillSheet: pillNumberIntoPillSheet);
+            } else {
+              await effectAfterTakenPillAction(
+                context: context,
+                taken: store.takenWithPillNumber(
+                  pillNumberIntoPillSheet: pillNumberIntoPillSheet,
+                  pillSheet: pillSheet,
+                ),
+                store: store,
+              );
+            }
           },
         ),
       );
