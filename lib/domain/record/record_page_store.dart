@@ -327,6 +327,41 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
     state = state.copyWith(pillSheetGroup: updatedPillSheetGroup);
   }
 
+  Future<void> revertTaken(
+      {required PillSheetGroup pillSheetGroup,
+      required int pageIndex,
+      required int pillNumberIntoPillSheet}) async {
+    final pillSheet = pillSheetGroup.pillSheets[pageIndex];
+    if (pillSheet.todayPillNumber != pillSheet.lastTakenPillNumber) {
+      return;
+    }
+    final lastTakenDate = pillSheet.lastTakenDate;
+    final lastTakenPillNumber = pillSheet.lastTakenPillNumber;
+    if (lastTakenDate == null || lastTakenPillNumber == null) {
+      return;
+    }
+
+    final batch = _batchFactory.batch();
+
+    final updatedPillSheet = pillSheet.copyWith(
+        lastTakenDate: lastTakenDate.subtract(Duration(days: 1)));
+    _pillSheetService.update(batch, [updatedPillSheet]);
+
+    final history = PillSheetModifiedHistoryServiceActionFactory
+        .createRevertTakenPillAction(
+      pillSheetGroupID: pillSheetGroup.id,
+      before: pillSheet,
+      after: updatedPillSheet,
+    );
+    _pillSheetModifiedHistoryService.add(batch, history);
+
+    final updatedPillSheetGroup = pillSheetGroup.replaced(updatedPillSheet);
+    _pillSheetGroupService.update(batch, updatedPillSheetGroup);
+
+    await batch.commit();
+    state = state.copyWith(pillSheetGroup: updatedPillSheetGroup);
+  }
+
   bool isDone({
     required int pillNumberIntoPillSheet,
     required PillSheet pillSheet,
