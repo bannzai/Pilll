@@ -233,8 +233,7 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
     if (activedPillSheet == null) {
       throw FormatException("active pill sheet not found");
     }
-    if (activedPillSheet.todayPillNumber ==
-        activedPillSheet.lastTakenPillNumber) {
+    if (activedPillSheet.isAllTaken) {
       return false;
     }
     final updatedPillSheetGroup = await take(
@@ -297,8 +296,7 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
     if (activedPillSheet == null) {
       throw FormatException("active pill sheet not found");
     }
-    if (activedPillSheet.todayPillNumber !=
-        activedPillSheet.lastTakenPillNumber) {
+    if (!activedPillSheet.isAllTaken) {
       return;
     }
     final lastTakenDate = activedPillSheet.lastTakenDate;
@@ -332,7 +330,7 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
       required int pageIndex,
       required int pillNumberIntoPillSheet}) async {
     final pillSheet = pillSheetGroup.pillSheets[pageIndex];
-    if (pillSheet.todayPillNumber != pillSheet.lastTakenPillNumber) {
+    if (!pillSheet.isAllTaken) {
       return;
     }
     final lastTakenDate = pillSheet.lastTakenDate;
