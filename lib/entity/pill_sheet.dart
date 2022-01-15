@@ -1,6 +1,7 @@
 import 'package:pilll/domain/calendar/date_range.dart';
 import 'package:pilll/entity/firestore_timestamp_converter.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
+import 'package:pilll/util/datetime/date_compare.dart';
 import 'package:pilll/util/datetime/day.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
@@ -178,6 +179,35 @@ class PillSheet with _$PillSheet {
         return null;
       }
     }
+  }
+
+  DateTime displayPillTakeDate(int pillNumberIntoPillSheet) {
+    final originDate =
+        beginingDate.add(Duration(days: pillNumberIntoPillSheet - 1)).date();
+
+    if (restDurations.isEmpty) {
+      return originDate;
+    }
+
+    final distance = restDurations.fold(0, (int result, restDuration) {
+      final beginDate = restDuration.beginDate.date();
+      final endDate = restDuration.endDate?.date();
+
+      if (endDate != null && isSameDay(beginDate, endDate)) {
+        return result;
+      }
+      if (originDate.isBefore(beginDate)) {
+        return result;
+      }
+
+      if (endDate != null) {
+        return result + daysBetween(beginDate, endDate);
+      } else {
+        return result + daysBetween(beginDate, today());
+      }
+    });
+
+    return originDate.add(Duration(days: distance));
   }
 }
 

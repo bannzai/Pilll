@@ -350,9 +350,6 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
       }
 
       if (pillSheet.restDurations.isNotEmpty) {
-        final restDurations = pillSheet.restDurations.where((restDuration) {
-          restDuration.beginDate
-        });
         // TODO:
         return pillSheet.copyWith(lastTakenDate: takenDate);
       } else {
