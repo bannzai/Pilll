@@ -14,13 +14,13 @@ abstract class PillMarkConst {
 
 class PillMark extends StatefulWidget {
   final PillMarkType pillMarkType;
-  final bool isDone;
+  final bool showsCheckmark;
   final bool hasRippleAnimation;
   const PillMark({
     Key? key,
     this.hasRippleAnimation = false,
     required this.pillMarkType,
-    required this.isDone,
+    required this.showsCheckmark,
   }) : super(key: key);
 
   @override
@@ -60,7 +60,7 @@ class _PillMarkState extends State<PillMark> with TickerProviderStateMixin {
           alignment: Alignment.center,
           children: [
             _mark(widget.pillMarkType),
-            if (widget.isDone)
+            if (widget.showsCheckmark)
               Align(alignment: Alignment.center, child: PillMarkDoneMark()),
           ],
         ),
