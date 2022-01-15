@@ -341,12 +341,12 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
         return pillSheet;
       }
 
-      if (pillSheet.restDurations.isNotEmpty) {
-        // TODO:
-        return pillSheet.copyWith(lastTakenDate: takenDate);
-      } else {
-        return pillSheet.copyWith(lastTakenDate: takenDate);
-      }
+      // Revert対象の日付よりも後ろにある休薬期間のデータは消す
+      final remainingResetDurations = pillSheet.restDurations
+          .where((pillSheet) => pillSheet.beginDate.isAfter(takenDate))
+          .toList();
+      return pillSheet.copyWith(
+          lastTakenDate: takenDate, restDurations: remainingResetDurations);
     }).toList();
 
     final updatedPillSheetGroup =
