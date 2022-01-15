@@ -71,7 +71,7 @@ Future<PillSheetGroup?> take({
       return pillSheet;
     }
 
-    // takenDateよりも予測するピルシートが大きい場合はactivedPillSheetじゃないPillSheetと判断。
+    // takenDateよりも予測するピルシートの最終服用日よりじも大きい場合はactivedPillSheetじゃないPillSheetと判断。
     // そのピルシートの最終日で予測する最終服用日を記録する
     if (takenDate.isAfter(pillSheet.estimatedLastTakenDate)) {
       return pillSheet.copyWith(
