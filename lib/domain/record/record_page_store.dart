@@ -334,10 +334,10 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
       return;
     }
     final lastTakenDate = pillSheet.lastTakenDate;
-    final lastTakenPillNumber = pillSheet.lastTakenPillNumber;
-    if (lastTakenDate == null || lastTakenPillNumber == null) {
+    if (lastTakenDate == null) {
       return;
     }
+    final lastTakenPillNumber = pillSheet.lastTakenPillNumber;
 
     final batch = _batchFactory.batch();
 
