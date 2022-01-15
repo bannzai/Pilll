@@ -366,7 +366,7 @@ void main() {
       expect(model.isActive, false);
     });
   });
-  group("#isReached", () {
+  group("#isBegining", () {
     test("it is not out of range pattern. today: 2020-09-19, begin: 2020-09-14",
         () {
       final mockTodayRepository = MockTodayService();
