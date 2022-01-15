@@ -89,7 +89,7 @@ class RecordPagePillSheet extends StatelessWidget {
             pageIndex: pageIndex,
           ),
           pillMark: PillMark(
-            hasRippleAnimation: store.shouldPillMarkAnimation(
+            showsRippleAnimation: store.shouldPillMarkAnimation(
               pillNumberIntoPillSheet: pillNumberIntoPillSheet,
               pillSheet: pillSheet,
             ),
