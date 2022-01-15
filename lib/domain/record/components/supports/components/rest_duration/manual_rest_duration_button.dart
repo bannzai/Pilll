@@ -35,7 +35,7 @@ class ManualRestDurationButton extends StatelessWidget {
               name: "manual_rest_duration_pressed",
               parameters: {"is_begin": restDuration == null});
           if (restDuration == null) {
-            if (activedPillSheet.isAllTaken) {
+            if (activedPillSheet.todayPillIsAlreadyTaken) {
               showInvalidAlreadyTakenPillDialog(context);
             } else if (activedPillSheet.todayPillNumber - 1 >
                 activedPillSheet.lastTakenPillNumber) {

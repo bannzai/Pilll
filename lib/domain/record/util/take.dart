@@ -56,7 +56,7 @@ Future<PillSheetGroup?> take({
   required PillSheetModifiedHistoryService pillSheetModifiedHistoryService,
   required PillSheetGroupService pillSheetGroupService,
 }) async {
-  if (activedPillSheet.isAllTaken) {
+  if (activedPillSheet.todayPillIsAlreadyTaken) {
     return null;
   }
 

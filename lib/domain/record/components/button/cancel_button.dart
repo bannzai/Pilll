@@ -24,7 +24,7 @@ class CancelButton extends HookConsumerWidget {
   }
 
   void _cancelTake(PillSheet pillSheet, RecordPageStore store) {
-    if (!pillSheet.isAllTaken) {
+    if (!pillSheet.todayPillIsAlreadyTaken) {
       return;
     }
     final lastTakenDate = pillSheet.lastTakenDate;

@@ -140,7 +140,7 @@ class PillSheet with _$PillSheet {
     return lastTakenPillNumber - summarizedRestDuration;
   }
 
-  bool get isAllTaken => todayPillNumber == lastTakenPillNumber;
+  bool get todayPillIsAlreadyTaken => todayPillNumber == lastTakenPillNumber;
   bool get isEnded => typeInfo.totalCount == lastTakenPillNumber;
   bool get isBegining =>
       beginingDate.date().toUtc().millisecondsSinceEpoch <
