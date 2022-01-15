@@ -321,8 +321,9 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
     }
 
     final targetPillSheet = pillSheetGroup.pillSheets[pageIndex];
-    final takenDate =
-        targetPillSheet.displayPillTakeDate(pillNumberIntoPillSheet);
+    final takenDate = targetPillSheet
+        .displayPillTakeDate(pillNumberIntoPillSheet)
+        .subtract(Duration(days: 1));
 
     final batch = _batchFactory.batch();
     final updatedPillSheets = pillSheetGroup.pillSheets.map((pillSheet) {
