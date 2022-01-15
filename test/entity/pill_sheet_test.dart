@@ -383,7 +383,7 @@ void main() {
           pillSheetTypeReferencePath: sheetType.rawPath,
         ),
       );
-      expect(model.isReached, true);
+      expect(model.isBegining, true);
     });
     test(
         "it is not out of range pattern. Boundary testing. now: 2020-09-28, begin: 2020-09-01",
@@ -402,7 +402,7 @@ void main() {
           pillSheetTypeReferencePath: sheetType.rawPath,
         ),
       );
-      expect(model.isReached, true);
+      expect(model.isBegining, true);
     });
     test(
         "it is out of range pattern. Boundary testing. now: 2020-09-29, begin: 2020-09-01",
@@ -421,7 +421,7 @@ void main() {
           pillSheetTypeReferencePath: sheetType.rawPath,
         ),
       );
-      expect(model.isReached, true);
+      expect(model.isBegining, true);
     });
     test("it is out of range pattern. now: 2020-06-29, begin: 2020-09-01", () {
       final mockTodayRepository = MockTodayService();
@@ -438,7 +438,7 @@ void main() {
           pillSheetTypeReferencePath: sheetType.rawPath,
         ),
       );
-      expect(model.isReached, false);
+      expect(model.isBegining, false);
     });
   });
   group("#lastTakenDate", () {
