@@ -19,10 +19,13 @@ class _$PillMarkStateTearOff {
   const _$PillMarkStateTearOff();
 
   _PillMarkState call(
-      {required int pillNumberIntoPillSheet, required PillSheet pillSheet}) {
+      {required int pillNumberIntoPillSheet,
+      required PillSheet pillSheet,
+      required PillSheetGroup pillSheetGroup}) {
     return _PillMarkState(
       pillNumberIntoPillSheet: pillNumberIntoPillSheet,
       pillSheet: pillSheet,
+      pillSheetGroup: pillSheetGroup,
     );
   }
 }
@@ -34,6 +37,7 @@ const $PillMarkState = _$PillMarkStateTearOff();
 mixin _$PillMarkState {
   int get pillNumberIntoPillSheet => throw _privateConstructorUsedError;
   PillSheet get pillSheet => throw _privateConstructorUsedError;
+  PillSheetGroup get pillSheetGroup => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
   $PillMarkStateCopyWith<PillMarkState> get copyWith =>
@@ -45,9 +49,13 @@ abstract class $PillMarkStateCopyWith<$Res> {
   factory $PillMarkStateCopyWith(
           PillMarkState value, $Res Function(PillMarkState) then) =
       _$PillMarkStateCopyWithImpl<$Res>;
-  $Res call({int pillNumberIntoPillSheet, PillSheet pillSheet});
+  $Res call(
+      {int pillNumberIntoPillSheet,
+      PillSheet pillSheet,
+      PillSheetGroup pillSheetGroup});
 
   $PillSheetCopyWith<$Res> get pillSheet;
+  $PillSheetGroupCopyWith<$Res> get pillSheetGroup;
 }
 
 /// @nodoc
@@ -63,6 +71,7 @@ class _$PillMarkStateCopyWithImpl<$Res>
   $Res call({
     Object? pillNumberIntoPillSheet = freezed,
     Object? pillSheet = freezed,
+    Object? pillSheetGroup = freezed,
   }) {
     return _then(_value.copyWith(
       pillNumberIntoPillSheet: pillNumberIntoPillSheet == freezed
@@ -73,6 +82,10 @@ class _$PillMarkStateCopyWithImpl<$Res>
           ? _value.pillSheet
           : pillSheet // ignore: cast_nullable_to_non_nullable
               as PillSheet,
+      pillSheetGroup: pillSheetGroup == freezed
+          ? _value.pillSheetGroup
+          : pillSheetGroup // ignore: cast_nullable_to_non_nullable
+              as PillSheetGroup,
     ));
   }
 
@@ -80,6 +93,13 @@ class _$PillMarkStateCopyWithImpl<$Res>
   $PillSheetCopyWith<$Res> get pillSheet {
     return $PillSheetCopyWith<$Res>(_value.pillSheet, (value) {
       return _then(_value.copyWith(pillSheet: value));
+    });
+  }
+
+  @override
+  $PillSheetGroupCopyWith<$Res> get pillSheetGroup {
+    return $PillSheetGroupCopyWith<$Res>(_value.pillSheetGroup, (value) {
+      return _then(_value.copyWith(pillSheetGroup: value));
     });
   }
 }
@@ -91,10 +111,15 @@ abstract class _$PillMarkStateCopyWith<$Res>
           _PillMarkState value, $Res Function(_PillMarkState) then) =
       __$PillMarkStateCopyWithImpl<$Res>;
   @override
-  $Res call({int pillNumberIntoPillSheet, PillSheet pillSheet});
+  $Res call(
+      {int pillNumberIntoPillSheet,
+      PillSheet pillSheet,
+      PillSheetGroup pillSheetGroup});
 
   @override
   $PillSheetCopyWith<$Res> get pillSheet;
+  @override
+  $PillSheetGroupCopyWith<$Res> get pillSheetGroup;
 }
 
 /// @nodoc
@@ -112,6 +137,7 @@ class __$PillMarkStateCopyWithImpl<$Res>
   $Res call({
     Object? pillNumberIntoPillSheet = freezed,
     Object? pillSheet = freezed,
+    Object? pillSheetGroup = freezed,
   }) {
     return _then(_PillMarkState(
       pillNumberIntoPillSheet: pillNumberIntoPillSheet == freezed
@@ -122,6 +148,10 @@ class __$PillMarkStateCopyWithImpl<$Res>
           ? _value.pillSheet
           : pillSheet // ignore: cast_nullable_to_non_nullable
               as PillSheet,
+      pillSheetGroup: pillSheetGroup == freezed
+          ? _value.pillSheetGroup
+          : pillSheetGroup // ignore: cast_nullable_to_non_nullable
+              as PillSheetGroup,
     ));
   }
 }
@@ -130,17 +160,21 @@ class __$PillMarkStateCopyWithImpl<$Res>
 
 class _$_PillMarkState extends _PillMarkState {
   _$_PillMarkState(
-      {required this.pillNumberIntoPillSheet, required this.pillSheet})
+      {required this.pillNumberIntoPillSheet,
+      required this.pillSheet,
+      required this.pillSheetGroup})
       : super._();
 
   @override
   final int pillNumberIntoPillSheet;
   @override
   final PillSheet pillSheet;
+  @override
+  final PillSheetGroup pillSheetGroup;
 
   @override
   String toString() {
-    return 'PillMarkState(pillNumberIntoPillSheet: $pillNumberIntoPillSheet, pillSheet: $pillSheet)';
+    return 'PillMarkState(pillNumberIntoPillSheet: $pillNumberIntoPillSheet, pillSheet: $pillSheet, pillSheetGroup: $pillSheetGroup)';
   }
 
   @override
@@ -150,14 +184,17 @@ class _$_PillMarkState extends _PillMarkState {
             other is _PillMarkState &&
             const DeepCollectionEquality().equals(
                 other.pillNumberIntoPillSheet, pillNumberIntoPillSheet) &&
-            const DeepCollectionEquality().equals(other.pillSheet, pillSheet));
+            const DeepCollectionEquality().equals(other.pillSheet, pillSheet) &&
+            const DeepCollectionEquality()
+                .equals(other.pillSheetGroup, pillSheetGroup));
   }
 
   @override
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(pillNumberIntoPillSheet),
-      const DeepCollectionEquality().hash(pillSheet));
+      const DeepCollectionEquality().hash(pillSheet),
+      const DeepCollectionEquality().hash(pillSheetGroup));
 
   @JsonKey(ignore: true)
   @override
@@ -168,13 +205,16 @@ class _$_PillMarkState extends _PillMarkState {
 abstract class _PillMarkState extends PillMarkState {
   factory _PillMarkState(
       {required int pillNumberIntoPillSheet,
-      required PillSheet pillSheet}) = _$_PillMarkState;
+      required PillSheet pillSheet,
+      required PillSheetGroup pillSheetGroup}) = _$_PillMarkState;
   _PillMarkState._() : super._();
 
   @override
   int get pillNumberIntoPillSheet;
   @override
   PillSheet get pillSheet;
+  @override
+  PillSheetGroup get pillSheetGroup;
   @override
   @JsonKey(ignore: true)
   _$PillMarkStateCopyWith<_PillMarkState> get copyWith =>
