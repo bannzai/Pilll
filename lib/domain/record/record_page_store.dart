@@ -279,11 +279,8 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
       // User tapped future pill number
       return false;
     }
-    final totalRestDuration =
-        summarizedRestDuration(activedPillSheet.restDurations);
 
-    final takenDate = pillSheet
-        .displayPillTakeDate(pillNumberIntoPillSheet + totalRestDuration);
+    final takenDate = pillSheet.displayPillTakeDate(pillNumberIntoPillSheet);
     return _take(takenDate);
   }
 
