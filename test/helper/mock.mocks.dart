@@ -449,6 +449,20 @@ class MockRecordPageStore extends _i1.Mock implements _i25.RecordPageStore {
       returnValue: Future<void>.value(),
       returnValueForMissingStub: Future<void>.value()) as _i16.Future<void>);
   @override
+  _i16.Future<void> revertTaken(
+          {_i10.PillSheetGroup? pillSheetGroup,
+          int? pageIndex,
+          int? pillNumberIntoPillSheet}) =>
+      (super.noSuchMethod(
+              Invocation.method(#revertTaken, [], {
+                #pillSheetGroup: pillSheetGroup,
+                #pageIndex: pageIndex,
+                #pillNumberIntoPillSheet: pillNumberIntoPillSheet
+              }),
+              returnValue: Future<void>.value(),
+              returnValueForMissingStub: Future<void>.value())
+          as _i16.Future<void>);
+  @override
   bool isDone({int? pillNumberIntoPillSheet, _i2.PillSheet? pillSheet}) =>
       (super.noSuchMethod(
           Invocation.method(#isDone, [], {
