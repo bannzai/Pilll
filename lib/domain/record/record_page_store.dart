@@ -282,8 +282,8 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
     final totalRestDuration =
         summarizedRestDuration(activedPillSheet.restDurations);
 
-    var takenDate = pillSheet.beginingDate
-        .add(Duration(days: pillNumberIntoPillSheet + totalRestDuration - 1));
+    final takenDate = pillSheet
+        .displayPillTakeDate(pillNumberIntoPillSheet + totalRestDuration);
     return _take(takenDate);
   }
 
@@ -343,7 +343,7 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
 
       // Revert対象の日付よりも後ろにある休薬期間のデータは消す
       final remainingResetDurations = pillSheet.restDurations
-          .where((pillSheet) => pillSheet.beginDate.isAfter(takenDate))
+          .where((pillSheet) => pillSheet.beginDate.date().isAfter(takenDate))
           .toList();
       return pillSheet.copyWith(
           lastTakenDate: takenDate, restDurations: remainingResetDurations);
