@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:pilll/components/organisms/pill_sheet/pill_sheet_view_layout.dart';
 import 'package:pilll/domain/record/components/supports/components/appearance_mode/switching_appearance_mode.dart';
-import 'package:pilll/domain/record/components/supports/components/rest_duration/manual_rest_duration_button.dart';
+import 'package:pilll/domain/record/components/supports/components/rest_duration/begin_manual_rest_duration_button.dart';
+import 'package:pilll/domain/record/components/supports/components/rest_duration/end_manual_rest_duration_button.dart';
 import 'package:pilll/domain/record/record_page_store.dart';
 import 'package:pilll/entity/pill_sheet.dart';
 import 'package:pilll/entity/pill_sheet_group.dart';
