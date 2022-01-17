@@ -939,6 +939,7 @@ void main() {
             .thenAnswer((realInvocation) => Stream.empty());
 
         final pillSheet = PillSheet(
+          id: "1",
           typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
           beginingDate: _today.subtract(Duration(days: 29)),
           groupIndex: 0,
@@ -947,6 +948,7 @@ void main() {
 
         // actived pill sheet
         final pillSheet2 = PillSheet(
+          id: "2",
           typeInfo: PillSheetType.pillsheet_21.typeInfo,
           beginingDate: yesterday,
           lastTakenDate: _today,
@@ -1042,7 +1044,7 @@ void main() {
         await Future.delayed(Duration(seconds: 1));
         await store.revertTaken(
             pillSheetGroup: pillSheetGroup,
-            pageIndex: 0,
+            pageIndex: 1,
             pillNumberIntoPillSheet: 2);
       });
     });
