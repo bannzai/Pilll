@@ -42,7 +42,7 @@ class ReleaseNote extends StatelessWidget {
                       child: Container(
                         padding: EdgeInsets.only(top: 40, left: 40, right: 40),
                         child: Text(
-                          "服用履歴を\n編集できるように",
+                          "服用済みのピルを未服用状態に戻せるように",
                           style: FontType.subTitle.merge(TextColorStyle.black),
                           textAlign: TextAlign.center,
                         ),
@@ -57,8 +57,7 @@ class ReleaseNote extends StatelessWidget {
                     children: [
                       Text(
                         '''
-服用記録を忘れた時などに便利です。
-※こちらの機能はプレミアムメンバー限定になります
+服用済みのピルマークをタップすることで未服用にできます。間違って服用済みにしてしまった時に便利です。
                         ''',
                         style: FontType.assisting.merge(TextColorStyle.main),
                       ),
@@ -86,7 +85,7 @@ class ReleaseNote extends StatelessWidget {
 }
 
 showReleaseNotePreDialog(BuildContext context) async {
-  final key = ReleaseNoteKey.version3_6_0;
+  final key = ReleaseNoteKey.version3_7_0;
   final storage = await SharedPreferences.getInstance();
   if (storage.getBool(key) ?? false) {
     return;
@@ -104,7 +103,7 @@ openReleaseNote() async {
   final ChromeSafariBrowser browser = new ChromeSafariBrowser();
   await browser.open(
       url: Uri.parse(
-          "https://pilll.wraptas.site/11e2c70cb56d48e7918514f5797f45e0"),
+          "https://pilll.wraptas.site/b24b2277dca2464899d575b6c2e70932"),
       options: ChromeSafariBrowserClassOptions(
           android:
               AndroidChromeCustomTabsOptions(addDefaultShareMenuItem: false),
