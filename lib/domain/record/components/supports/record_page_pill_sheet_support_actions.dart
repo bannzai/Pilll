@@ -33,6 +33,7 @@ class RecordPagePillSheetSupportActions extends StatelessWidget {
         Spacer(),
         ManualRestDurationButton(
             restDuration: restDuration,
+            appearanceMode: setting.pillSheetAppearanceMode,
             activedPillSheet: activedPillSheet,
             store: store,
             pillSheetGroup: pillSheetGroup),

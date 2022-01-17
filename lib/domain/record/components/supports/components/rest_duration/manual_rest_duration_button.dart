@@ -6,17 +6,20 @@ import 'package:pilll/domain/record/components/supports/components/rest_duration
 import 'package:pilll/domain/record/record_page_store.dart';
 import 'package:pilll/entity/pill_sheet.dart';
 import 'package:pilll/entity/pill_sheet_group.dart';
+import 'package:pilll/entity/setting.dart';
 
 class ManualRestDurationButton extends StatelessWidget {
   const ManualRestDurationButton({
     Key? key,
     required this.restDuration,
+    required this.appearanceMode,
     required this.activedPillSheet,
     required this.store,
     required this.pillSheetGroup,
   }) : super(key: key);
 
   final RestDuration? restDuration;
+  final PillSheetAppearanceMode appearanceMode;
   final PillSheet activedPillSheet;
   final RecordPageStore store;
   final PillSheetGroup pillSheetGroup;
@@ -37,7 +40,10 @@ class ManualRestDurationButton extends StatelessWidget {
             if (activedPillSheet.todayPillIsAlreadyTaken) {
               showInvalidAlreadyTakenPillDialog(context);
             } else {
-              showRecordPageRestDurationDialog(context, () async {
+              showRecordPageRestDurationDialog(context,
+                  appearanceMode: appearanceMode,
+                  pillSheetGroup: pillSheetGroup,
+                  activedPillSheet: activedPillSheet, onDone: () async {
                 analytics.logEvent(name: "done_rest_duration");
                 Navigator.of(context).pop();
                 await store.beginResting(
