@@ -146,7 +146,7 @@ class PillSheet with _$PillSheet {
 
   bool get todayPillIsAlreadyTaken => todayPillNumber == lastTakenPillNumber;
   bool get isEnded => typeInfo.totalCount == lastTakenPillNumber;
-  bool get isBegining =>
+  bool get isBegan =>
       beginingDate.date().toUtc().millisecondsSinceEpoch <
       now().toUtc().millisecondsSinceEpoch;
   bool get inNotTakenDuration => todayPillNumber > typeInfo.dosingPeriod;
