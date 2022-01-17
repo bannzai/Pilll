@@ -8,73 +8,98 @@ import 'package:pilll/entity/pill_sheet.dart';
 import 'package:pilll/entity/pill_sheet_group.dart';
 import 'package:pilll/entity/setting.dart';
 
-class ManualRestDurationButton extends StatelessWidget {
-  const ManualRestDurationButton({
-    Key? key,
-    required this.restDuration,
-    required this.appearanceMode,
-    required this.activedPillSheet,
-    required this.store,
-    required this.pillSheetGroup,
-  }) : super(key: key);
-
-  final RestDuration? restDuration;
+class BeginManualRestDurationButton extends StatelessWidget {
   final PillSheetAppearanceMode appearanceMode;
   final PillSheet activedPillSheet;
-  final RecordPageStore store;
   final PillSheetGroup pillSheetGroup;
+  final RecordPageStore store;
+
+  const BeginManualRestDurationButton({
+    Key? key,
+    required this.appearanceMode,
+    required this.activedPillSheet,
+    required this.pillSheetGroup,
+    required this.store,
+  }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
-    final restDuration = this.restDuration;
-
     return SizedBox(
       width: 80,
       child: SmallAppOutlinedButton(
-        text: restDuration == null ? "休薬する" : "休薬終了",
+        text: "休薬する",
         onPressed: () async {
           analytics.logEvent(
-              name: "manual_rest_duration_pressed",
-              parameters: {"is_begin": restDuration == null});
-          if (restDuration == null) {
-            if (activedPillSheet.todayPillIsAlreadyTaken) {
-              showInvalidAlreadyTakenPillDialog(context);
-            } else {
-              showRecordPageRestDurationDialog(context,
-                  appearanceMode: appearanceMode,
-                  pillSheetGroup: pillSheetGroup,
-                  activedPillSheet: activedPillSheet, onDone: () async {
-                analytics.logEvent(name: "done_rest_duration");
-                Navigator.of(context).pop();
-                await store.beginResting(
-                  pillSheetGroup: pillSheetGroup,
-                  activedPillSheet: activedPillSheet,
-                );
-                ScaffoldMessenger.of(context).showSnackBar(
-                  SnackBar(
-                    duration: Duration(
-                      seconds: 2,
-                    ),
-                    content: Text("休薬期間が始まりました"),
-                  ),
-                );
-              });
-            }
+              name: "begin_manual_rest_duration_pressed",
+              parameters: {"pill_sheet_id": activedPillSheet.id});
+
+          if (activedPillSheet.todayPillIsAlreadyTaken) {
+            showInvalidAlreadyTakenPillDialog(context);
           } else {
-            await store.endResting(
-              pillSheetGroup: pillSheetGroup,
-              activedPillSheet: activedPillSheet,
-              restDuration: restDuration,
-            );
-            ScaffoldMessenger.of(context).showSnackBar(
-              SnackBar(
-                duration: Duration(
-                  seconds: 2,
+            showRecordPageRestDurationDialog(context,
+                appearanceMode: appearanceMode,
+                pillSheetGroup: pillSheetGroup,
+                activedPillSheet: activedPillSheet, onDone: () async {
+              analytics.logEvent(name: "done_rest_duration");
+              Navigator.of(context).pop();
+              await store.beginResting(
+                pillSheetGroup: pillSheetGroup,
+                activedPillSheet: activedPillSheet,
+              );
+              ScaffoldMessenger.of(context).showSnackBar(
+                SnackBar(
+                  duration: Duration(
+                    seconds: 2,
+                  ),
+                  content: Text("休薬期間が始まりました"),
                 ),
-                content: Text("休薬期間が終了しました"),
-              ),
-            );
+              );
+            });
           }
+        },
+      ),
+    );
+  }
+}
+
+class EndManualRestDurationButton extends StatelessWidget {
+  final RestDuration restDuration;
+  final PillSheet activedPillSheet;
+  final PillSheetGroup pillSheetGroup;
+  final RecordPageStore store;
+
+  const EndManualRestDurationButton({
+    Key? key,
+    required this.restDuration,
+    required this.activedPillSheet,
+    required this.pillSheetGroup,
+    required this.store,
+  }) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return SizedBox(
+      width: 80,
+      child: SmallAppOutlinedButton(
+        text: "休薬終了",
+        onPressed: () async {
+          analytics.logEvent(
+            name: "end_manual_rest_duration_pressed",
+          );
+
+          await store.endResting(
+            pillSheetGroup: pillSheetGroup,
+            activedPillSheet: activedPillSheet,
+            restDuration: restDuration,
+          );
+          ScaffoldMessenger.of(context).showSnackBar(
+            SnackBar(
+              duration: Duration(
+                seconds: 2,
+              ),
+              content: Text("休薬期間が終了しました"),
+            ),
+          );
         },
       ),
     );

@@ -27,17 +27,26 @@ class RecordPagePillSheetSupportActions extends StatelessWidget {
 
     return Container(
       width: PillSheetViewLayout.width,
-      child: Row(children: [
-        SwitchingAppearanceMode(
-            store: store, mode: setting.pillSheetAppearanceMode),
-        Spacer(),
-        ManualRestDurationButton(
-            restDuration: restDuration,
-            appearanceMode: setting.pillSheetAppearanceMode,
-            activedPillSheet: activedPillSheet,
-            store: store,
-            pillSheetGroup: pillSheetGroup),
-      ]),
+      child: Row(
+        children: [
+          SwitchingAppearanceMode(
+              store: store, mode: setting.pillSheetAppearanceMode),
+          Spacer(),
+          if (restDuration != null) ...[
+            EndManualRestDurationButton(
+                restDuration: restDuration,
+                activedPillSheet: activedPillSheet,
+                pillSheetGroup: pillSheetGroup,
+                store: store),
+          ] else ...[
+            BeginManualRestDurationButton(
+                appearanceMode: setting.pillSheetAppearanceMode,
+                activedPillSheet: activedPillSheet,
+                pillSheetGroup: pillSheetGroup,
+                store: store),
+          ],
+        ],
+      ),
     );
   }
 }
