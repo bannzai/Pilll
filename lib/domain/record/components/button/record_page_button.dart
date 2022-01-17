@@ -15,7 +15,7 @@ class RecordPageButton extends StatelessWidget {
   Widget build(BuildContext context) {
     if (currentPillSheet.activeRestDuration != null)
       return RestDurationButton();
-    else if (currentPillSheet.isAllTaken)
+    else if (currentPillSheet.todayPillIsAlreadyTaken)
       return CancelButton(currentPillSheet);
     else
       return TakenButton(

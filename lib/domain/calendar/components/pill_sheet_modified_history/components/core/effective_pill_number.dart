@@ -40,14 +40,19 @@ abstract class PillSheetModifiedHistoryDateEffectivePillNumber {
   static String autoTaken(AutomaticallyRecordedLastTakenDateValue value) {
     final before = value.beforeLastTakenPillNumber;
     final after = value.afterLastTakenPillNumber;
-    if (before == (after - 1)) {
+    if ((before + 1) == after) {
       return "$after番";
     }
     return "${before + 1}-$after番";
   }
 
   static String revert(RevertTakenPillValue value) {
-    return "${value.beforeLastTakenPillNumber}番";
+    final before = value.beforeLastTakenPillNumber;
+    final after = value.afterLastTakenPillNumber;
+    if (before == (after + 1)) {
+      return "$before番";
+    }
+    return "$before-${after + 1}番";
   }
 
   static String changed(ChangedPillNumberValue value) =>

@@ -14,8 +14,6 @@ import 'package:pilll/entity/pill_sheet_group.dart';
 import 'package:pilll/entity/pill_sheet_type.dart';
 import 'package:pilll/entity/setting.dart';
 import 'package:pilll/entity/weekday.dart';
-import 'package:pilll/util/datetime/date_compare.dart';
-import 'package:pilll/util/datetime/day.dart';
 
 class RecordPagePillSheet extends StatelessWidget {
   final PillSheetGroup pillSheetGroup;
@@ -89,11 +87,11 @@ class RecordPagePillSheet extends StatelessWidget {
             pageIndex: pageIndex,
           ),
           pillMark: PillMark(
-            hasRippleAnimation: store.shouldPillMarkAnimation(
+            showsRippleAnimation: store.shouldPillMarkAnimation(
               pillNumberIntoPillSheet: pillNumberIntoPillSheet,
               pillSheet: pillSheet,
             ),
-            isDone: store.isDone(
+            showsCheckmark: store.isDone(
               pillNumberIntoPillSheet: pillNumberIntoPillSheet,
               pillSheet: pillSheet,
             ),
@@ -102,20 +100,31 @@ class RecordPagePillSheet extends StatelessWidget {
               pillSheet: pillSheet,
             ),
           ),
-          onTap: () {
+          onTap: () async {
             analytics.logEvent(name: "pill_mark_tapped", parameters: {
               "last_taken_pill_number": pillSheet.lastTakenPillNumber,
               "today_pill_number": pillSheet.todayPillNumber,
             });
 
-            effectAfterTaken(
-              context: context,
-              taken: store.takenWithPillNumber(
-                pillNumberIntoPillSheet: pillNumberIntoPillSheet,
-                pillSheet: pillSheet,
-              ),
-              store: store,
-            );
+            if (pillSheet.todayPillNumber < pillNumberIntoPillSheet) {
+              return;
+            }
+
+            if (pillSheet.lastTakenPillNumber >= pillNumberIntoPillSheet) {
+              await store.revertTaken(
+                  pillSheetGroup: pillSheetGroup,
+                  pageIndex: pageIndex,
+                  pillNumberIntoPillSheet: pillNumberIntoPillSheet);
+            } else {
+              await effectAfterTakenPillAction(
+                context: context,
+                taken: store.takenWithPillNumber(
+                  pillNumberIntoPillSheet: pillNumberIntoPillSheet,
+                  pillSheet: pillSheet,
+                ),
+                store: store,
+              );
+            }
           },
         ),
       );
@@ -141,7 +150,7 @@ class RecordPagePillSheet extends StatelessWidget {
     if (isPremiumOrTrial &&
         state.appearanceMode == PillSheetAppearanceMode.date) {
       final DateTime date =
-          calculatedDateOfAppearancePill(pillSheet, pillNumberIntoPillSheet);
+          pillSheet.displayPillTakeDate(pillNumberIntoPillSheet);
 
       if (setting.pillNumberForFromMenstruation == 0 ||
           setting.durationMenstruation == 0) {
@@ -240,38 +249,6 @@ class RecordPagePillSheet extends StatelessWidget {
         .where((element) => element.contains(serialiedPillNumber))
         .isNotEmpty;
     return isContainedMenstruationDuration;
-  }
-
-  static DateTime calculatedDateOfAppearancePill(
-      PillSheet pillSheet, int pillNumberIntoPillSheet) {
-    final originDate = pillSheet.beginingDate
-        .add(Duration(days: pillNumberIntoPillSheet - 1))
-        .date();
-
-    if (pillSheet.restDurations.isEmpty) {
-      return originDate;
-    }
-
-    final distance =
-        pillSheet.restDurations.fold(0, (int result, restDuration) {
-      final beginDate = restDuration.beginDate.date();
-      final endDate = restDuration.endDate?.date();
-
-      if (endDate != null && isSameDay(beginDate, endDate)) {
-        return result;
-      }
-      if (originDate.isBefore(beginDate)) {
-        return result;
-      }
-
-      if (endDate != null) {
-        return result + daysBetween(beginDate, endDate);
-      } else {
-        return result + daysBetween(beginDate, today());
-      }
-    });
-
-    return originDate.add(Duration(days: distance));
   }
 }
 

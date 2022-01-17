@@ -688,4 +688,871 @@ void main() {
       expect(result, isTrue);
     });
   });
+
+  group("#revertTaken", () {
+    group("group has only one pill sheet", () {
+      test("Revert to first pill sheet", () async {
+        var mockTodayRepository = MockTodayService();
+        final _today = DateTime.parse("2022-01-17");
+        todayRepository = mockTodayRepository;
+        when(mockTodayRepository.today()).thenReturn(_today);
+        when(mockTodayRepository.now()).thenReturn(_today);
+        final yesterday = DateTime.parse("2022-01-16");
+
+        final batchFactory = MockBatchFactory();
+        final batch = MockWriteBatch();
+        when(batchFactory.batch()).thenReturn(batch);
+        final authService = MockAuthService();
+        when(authService.isLinkedApple()).thenReturn(false);
+        when(authService.isLinkedGoogle()).thenReturn(false);
+        when(authService.stream())
+            .thenAnswer((realInvocation) => Stream.empty());
+
+        final pillSheet = PillSheet(
+          id: "sheet_id",
+          typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
+          beginingDate: yesterday,
+          groupIndex: 0,
+          lastTakenDate: today(),
+        );
+        final pillSheetService = MockPillSheetService();
+        when(pillSheetService.update(batch, [
+          pillSheet.copyWith(
+              lastTakenDate: yesterday.subtract(Duration(days: 1)))
+        ])).thenReturn(null);
+
+        final pillSheetGroup = PillSheetGroup(
+          id: "group_id",
+          pillSheetIDs: ["sheet_id"],
+          pillSheets: [
+            pillSheet,
+          ],
+          createdAt: now(),
+        );
+        final updatedPillSheetGroup = PillSheetGroup(
+          id: "group_id",
+          pillSheetIDs: ["sheet_id"],
+          pillSheets: [
+            pillSheet.copyWith(
+                lastTakenDate: yesterday.subtract(Duration(days: 1))),
+          ],
+          createdAt: now(),
+        );
+        final pillSheetGroupService = MockPillSheetGroupService();
+        when(pillSheetGroupService.fetchLatest())
+            .thenAnswer((realInvocation) async => pillSheetGroup);
+        when(pillSheetGroupService.streamForLatest())
+            .thenAnswer((realInvocation) => Stream.empty());
+        when(pillSheetGroupService.update(batch, updatedPillSheetGroup))
+            .thenReturn(null);
+
+        final history = PillSheetModifiedHistoryServiceActionFactory
+            .createRevertTakenPillAction(
+          pillSheetGroupID: "group_id",
+          before: pillSheet,
+          after: pillSheet.copyWith(
+            lastTakenDate: yesterday.subtract(Duration(days: 1)),
+          ),
+        );
+        final pillSheetModifiedHistoryService =
+            MockPillSheetModifiedHistoryService();
+        when(pillSheetModifiedHistoryService.add(batch, history))
+            .thenReturn(null);
+
+        final setting = Setting(
+          pillNumberForFromMenstruation: 22,
+          durationMenstruation: 3,
+          isOnReminder: true,
+          reminderTimes: [
+            ReminderTime(hour: 21, minute: 20),
+            ReminderTime(hour: 22, minute: 0)
+          ],
+          pillSheetTypes: [
+            PillSheetType.pillsheet_28_0,
+          ],
+        );
+        final settingService = MockSettingService();
+        when(settingService.fetch())
+            .thenAnswer((realInvocation) async => setting);
+        when(settingService.stream())
+            .thenAnswer((realInvocation) => Stream.empty());
+        when(settingService.updateWithBatch(batch, setting)).thenReturn(null);
+
+        final user = User();
+        final userService = MockUserService();
+        when(userService.stream())
+            .thenAnswer((realInvocation) => Stream.empty());
+        when(userService.fetch()).thenAnswer((realInvocation) async => user);
+
+        final container = ProviderContainer(
+          overrides: [
+            batchFactoryProvider.overrideWithValue(batchFactory),
+            authServiceProvider.overrideWithValue(authService),
+            settingServiceProvider.overrideWithValue(settingService),
+            pillSheetServiceProvider.overrideWithValue(pillSheetService),
+            pillSheetModifiedHistoryServiceProvider
+                .overrideWithValue(pillSheetModifiedHistoryService),
+            pillSheetGroupServiceProvider
+                .overrideWithValue(pillSheetGroupService),
+            userServiceProvider.overrideWithValue(userService),
+          ],
+        );
+        final store = container.read(recordPageStoreProvider.notifier);
+
+        await Future.delayed(Duration(seconds: 1));
+        await store.revertTaken(
+            pillSheetGroup: pillSheetGroup,
+            pageIndex: 0,
+            pillNumberIntoPillSheet: 1);
+      });
+
+      test("Revert today pill", () async {
+        var mockTodayRepository = MockTodayService();
+        final _today = DateTime.parse("2022-01-17");
+        todayRepository = mockTodayRepository;
+        when(mockTodayRepository.today()).thenReturn(_today);
+        when(mockTodayRepository.now()).thenReturn(_today);
+        final yesterday = DateTime.parse("2022-01-16");
+
+        final batchFactory = MockBatchFactory();
+        final batch = MockWriteBatch();
+        when(batchFactory.batch()).thenReturn(batch);
+        final authService = MockAuthService();
+        when(authService.isLinkedApple()).thenReturn(false);
+        when(authService.isLinkedGoogle()).thenReturn(false);
+        when(authService.stream())
+            .thenAnswer((realInvocation) => Stream.empty());
+
+        final pillSheet = PillSheet(
+          id: "sheet_id",
+          typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
+          beginingDate: yesterday,
+          groupIndex: 0,
+          lastTakenDate: today(),
+        );
+        final pillSheetService = MockPillSheetService();
+        when(pillSheetService
+                .update(batch, [pillSheet.copyWith(lastTakenDate: yesterday)]))
+            .thenReturn(null);
+
+        final pillSheetGroup = PillSheetGroup(
+          id: "group_id",
+          pillSheetIDs: ["sheet_id"],
+          pillSheets: [
+            pillSheet,
+          ],
+          createdAt: now(),
+        );
+        final updatedPillSheetGroup = PillSheetGroup(
+          id: "group_id",
+          pillSheetIDs: ["sheet_id"],
+          pillSheets: [
+            pillSheet.copyWith(lastTakenDate: yesterday),
+          ],
+          createdAt: now(),
+        );
+        final pillSheetGroupService = MockPillSheetGroupService();
+        when(pillSheetGroupService.fetchLatest())
+            .thenAnswer((realInvocation) async => pillSheetGroup);
+        when(pillSheetGroupService.streamForLatest())
+            .thenAnswer((realInvocation) => Stream.empty());
+        when(pillSheetGroupService.update(batch, updatedPillSheetGroup))
+            .thenReturn(null);
+
+        final history = PillSheetModifiedHistoryServiceActionFactory
+            .createRevertTakenPillAction(
+          pillSheetGroupID: "group_id",
+          before: pillSheet,
+          after: pillSheet.copyWith(
+            lastTakenDate: yesterday,
+          ),
+        );
+        final pillSheetModifiedHistoryService =
+            MockPillSheetModifiedHistoryService();
+        when(pillSheetModifiedHistoryService.add(batch, history))
+            .thenReturn(null);
+
+        final setting = Setting(
+          pillNumberForFromMenstruation: 22,
+          durationMenstruation: 3,
+          isOnReminder: true,
+          reminderTimes: [
+            ReminderTime(hour: 21, minute: 20),
+            ReminderTime(hour: 22, minute: 0)
+          ],
+          pillSheetTypes: [
+            PillSheetType.pillsheet_28_0,
+          ],
+        );
+        final settingService = MockSettingService();
+        when(settingService.fetch())
+            .thenAnswer((realInvocation) async => setting);
+        when(settingService.stream())
+            .thenAnswer((realInvocation) => Stream.empty());
+        when(settingService.updateWithBatch(batch, setting)).thenReturn(null);
+
+        final user = User();
+        final userService = MockUserService();
+        when(userService.stream())
+            .thenAnswer((realInvocation) => Stream.empty());
+        when(userService.fetch()).thenAnswer((realInvocation) async => user);
+
+        final container = ProviderContainer(
+          overrides: [
+            batchFactoryProvider.overrideWithValue(batchFactory),
+            authServiceProvider.overrideWithValue(authService),
+            settingServiceProvider.overrideWithValue(settingService),
+            pillSheetServiceProvider.overrideWithValue(pillSheetService),
+            pillSheetModifiedHistoryServiceProvider
+                .overrideWithValue(pillSheetModifiedHistoryService),
+            pillSheetGroupServiceProvider
+                .overrideWithValue(pillSheetGroupService),
+            userServiceProvider.overrideWithValue(userService),
+          ],
+        );
+        final store = container.read(recordPageStoreProvider.notifier);
+
+        await Future.delayed(Duration(seconds: 1));
+        await store.revertTaken(
+            pillSheetGroup: pillSheetGroup,
+            pageIndex: 0,
+            pillNumberIntoPillSheet: 2);
+      });
+
+      test("revert with rest durations and removed rest duration", () async {
+        var mockTodayRepository = MockTodayService();
+        final _today = DateTime.parse("2022-01-17");
+        todayRepository = mockTodayRepository;
+        when(mockTodayRepository.today()).thenReturn(_today);
+        when(mockTodayRepository.now()).thenReturn(_today);
+        final beginDate = DateTime.parse("2022-01-06");
+
+        final batchFactory = MockBatchFactory();
+        final batch = MockWriteBatch();
+        when(batchFactory.batch()).thenReturn(batch);
+        final authService = MockAuthService();
+        when(authService.isLinkedApple()).thenReturn(false);
+        when(authService.isLinkedGoogle()).thenReturn(false);
+        when(authService.stream())
+            .thenAnswer((realInvocation) => Stream.empty());
+
+        final pillSheet = PillSheet(
+          id: "sheet_id",
+          typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
+          beginingDate: beginDate,
+          groupIndex: 0,
+          lastTakenDate: today(),
+          restDurations: [
+            RestDuration(
+              beginDate: _today.subtract(Duration(days: 2)),
+              createdDate: _today.subtract(Duration(days: 2)),
+              endDate: _today.subtract(Duration(days: 1)),
+            ),
+          ],
+        );
+        final pillSheetService = MockPillSheetService();
+        when(pillSheetService.update(
+          batch,
+          [
+            pillSheet.copyWith(
+                lastTakenDate: beginDate.subtract(Duration(days: 1)),
+                restDurations: [])
+          ],
+        )).thenReturn(null);
+
+        final pillSheetGroup = PillSheetGroup(
+          id: "group_id",
+          pillSheetIDs: ["sheet_id"],
+          pillSheets: [
+            pillSheet,
+          ],
+          createdAt: now(),
+        );
+        final updatedPillSheetGroup = PillSheetGroup(
+          id: "group_id",
+          pillSheetIDs: ["sheet_id"],
+          pillSheets: [
+            pillSheet.copyWith(
+                lastTakenDate: beginDate.subtract(Duration(days: 1)),
+                restDurations: []),
+          ],
+          createdAt: now(),
+        );
+        final pillSheetGroupService = MockPillSheetGroupService();
+        when(pillSheetGroupService.fetchLatest())
+            .thenAnswer((realInvocation) async => pillSheetGroup);
+        when(pillSheetGroupService.streamForLatest())
+            .thenAnswer((realInvocation) => Stream.empty());
+        when(pillSheetGroupService.update(batch, updatedPillSheetGroup))
+            .thenReturn(null);
+
+        final history = PillSheetModifiedHistoryServiceActionFactory
+            .createRevertTakenPillAction(
+          pillSheetGroupID: "group_id",
+          before: pillSheet,
+          after: pillSheet.copyWith(
+            lastTakenDate: beginDate.subtract(Duration(days: 1)),
+            restDurations: [],
+          ),
+        );
+        final pillSheetModifiedHistoryService =
+            MockPillSheetModifiedHistoryService();
+        when(pillSheetModifiedHistoryService.add(batch, history))
+            .thenReturn(null);
+
+        final setting = Setting(
+          pillNumberForFromMenstruation: 22,
+          durationMenstruation: 3,
+          isOnReminder: true,
+          reminderTimes: [
+            ReminderTime(hour: 21, minute: 20),
+            ReminderTime(hour: 22, minute: 0)
+          ],
+          pillSheetTypes: [
+            PillSheetType.pillsheet_28_0,
+          ],
+        );
+        final settingService = MockSettingService();
+        when(settingService.fetch())
+            .thenAnswer((realInvocation) async => setting);
+        when(settingService.stream())
+            .thenAnswer((realInvocation) => Stream.empty());
+        when(settingService.updateWithBatch(batch, setting)).thenReturn(null);
+
+        final user = User();
+        final userService = MockUserService();
+        when(userService.stream())
+            .thenAnswer((realInvocation) => Stream.empty());
+        when(userService.fetch()).thenAnswer((realInvocation) async => user);
+
+        final container = ProviderContainer(
+          overrides: [
+            batchFactoryProvider.overrideWithValue(batchFactory),
+            authServiceProvider.overrideWithValue(authService),
+            settingServiceProvider.overrideWithValue(settingService),
+            pillSheetServiceProvider.overrideWithValue(pillSheetService),
+            pillSheetModifiedHistoryServiceProvider
+                .overrideWithValue(pillSheetModifiedHistoryService),
+            pillSheetGroupServiceProvider
+                .overrideWithValue(pillSheetGroupService),
+            userServiceProvider.overrideWithValue(userService),
+          ],
+        );
+        final store = container.read(recordPageStoreProvider.notifier);
+
+        await Future.delayed(Duration(seconds: 1));
+        await store.revertTaken(
+            pillSheetGroup: pillSheetGroup,
+            pageIndex: 0,
+            pillNumberIntoPillSheet: 1);
+      });
+
+      test("revert with rest durations but no removed rest duration", () async {
+        var mockTodayRepository = MockTodayService();
+        final _today = DateTime.parse("2022-01-17");
+        todayRepository = mockTodayRepository;
+        when(mockTodayRepository.today()).thenReturn(_today);
+        when(mockTodayRepository.now()).thenReturn(_today);
+        final beginDate = DateTime.parse("2022-01-06");
+        final yesterday = DateTime.parse("2022-01-16");
+
+        final batchFactory = MockBatchFactory();
+        final batch = MockWriteBatch();
+        when(batchFactory.batch()).thenReturn(batch);
+        final authService = MockAuthService();
+        when(authService.isLinkedApple()).thenReturn(false);
+        when(authService.isLinkedGoogle()).thenReturn(false);
+        when(authService.stream())
+            .thenAnswer((realInvocation) => Stream.empty());
+
+        final pillSheet = PillSheet(
+          id: "sheet_id",
+          typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
+          beginingDate: beginDate,
+          groupIndex: 0,
+          lastTakenDate: today(),
+          restDurations: [
+            RestDuration(
+              beginDate: _today.subtract(Duration(days: 8)),
+              createdDate: _today.subtract(Duration(days: 8)),
+              endDate: _today.subtract(Duration(days: 7)),
+            ),
+          ],
+        );
+        final pillSheetService = MockPillSheetService();
+        when(pillSheetService.update(
+          batch,
+          [pillSheet.copyWith(lastTakenDate: yesterday)],
+        )).thenReturn(null);
+
+        final pillSheetGroup = PillSheetGroup(
+          id: "group_id",
+          pillSheetIDs: ["sheet_id"],
+          pillSheets: [
+            pillSheet,
+          ],
+          createdAt: now(),
+        );
+        final updatedPillSheetGroup = PillSheetGroup(
+          id: "group_id",
+          pillSheetIDs: ["sheet_id"],
+          pillSheets: [
+            pillSheet.copyWith(lastTakenDate: yesterday),
+          ],
+          createdAt: now(),
+        );
+        final pillSheetGroupService = MockPillSheetGroupService();
+        when(pillSheetGroupService.fetchLatest())
+            .thenAnswer((realInvocation) async => pillSheetGroup);
+        when(pillSheetGroupService.streamForLatest())
+            .thenAnswer((realInvocation) => Stream.empty());
+        when(pillSheetGroupService.update(batch, updatedPillSheetGroup))
+            .thenReturn(null);
+
+        final history = PillSheetModifiedHistoryServiceActionFactory
+            .createRevertTakenPillAction(
+          pillSheetGroupID: "group_id",
+          before: pillSheet,
+          after: pillSheet.copyWith(lastTakenDate: yesterday),
+        );
+        final pillSheetModifiedHistoryService =
+            MockPillSheetModifiedHistoryService();
+        when(pillSheetModifiedHistoryService.add(batch, history))
+            .thenReturn(null);
+
+        final setting = Setting(
+          pillNumberForFromMenstruation: 22,
+          durationMenstruation: 3,
+          isOnReminder: true,
+          reminderTimes: [
+            ReminderTime(hour: 21, minute: 20),
+            ReminderTime(hour: 22, minute: 0)
+          ],
+          pillSheetTypes: [
+            PillSheetType.pillsheet_28_0,
+          ],
+        );
+        final settingService = MockSettingService();
+        when(settingService.fetch())
+            .thenAnswer((realInvocation) async => setting);
+        when(settingService.stream())
+            .thenAnswer((realInvocation) => Stream.empty());
+        when(settingService.updateWithBatch(batch, setting)).thenReturn(null);
+
+        final user = User();
+        final userService = MockUserService();
+        when(userService.stream())
+            .thenAnswer((realInvocation) => Stream.empty());
+        when(userService.fetch()).thenAnswer((realInvocation) async => user);
+
+        final container = ProviderContainer(
+          overrides: [
+            batchFactoryProvider.overrideWithValue(batchFactory),
+            authServiceProvider.overrideWithValue(authService),
+            settingServiceProvider.overrideWithValue(settingService),
+            pillSheetServiceProvider.overrideWithValue(pillSheetService),
+            pillSheetModifiedHistoryServiceProvider
+                .overrideWithValue(pillSheetModifiedHistoryService),
+            pillSheetGroupServiceProvider
+                .overrideWithValue(pillSheetGroupService),
+            userServiceProvider.overrideWithValue(userService),
+          ],
+        );
+        final store = container.read(recordPageStoreProvider.notifier);
+
+        await Future.delayed(Duration(seconds: 1));
+        await store.revertTaken(
+            pillSheetGroup: pillSheetGroup,
+            pageIndex: 0,
+            pillNumberIntoPillSheet: 11);
+      });
+    });
+
+    group("group has two pill sheet", () {
+      test("call revert into actived pill sheet", () async {
+        var mockTodayRepository = MockTodayService();
+        final _today = DateTime.parse("2022-01-17");
+        todayRepository = mockTodayRepository;
+        when(mockTodayRepository.today()).thenReturn(_today);
+        when(mockTodayRepository.now()).thenReturn(_today);
+        final yesterday = DateTime.parse("2022-01-16");
+
+        final batchFactory = MockBatchFactory();
+        final batch = MockWriteBatch();
+        when(batchFactory.batch()).thenReturn(batch);
+        final authService = MockAuthService();
+        when(authService.isLinkedApple()).thenReturn(false);
+        when(authService.isLinkedGoogle()).thenReturn(false);
+        when(authService.stream())
+            .thenAnswer((realInvocation) => Stream.empty());
+
+        final pillSheet = PillSheet(
+          id: "1",
+          typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
+          beginingDate: _today.subtract(Duration(days: 29)),
+          groupIndex: 0,
+          lastTakenDate: _today.subtract(Duration(days: 2)),
+        );
+
+        // actived pill sheet
+        final pillSheet2 = PillSheet(
+          id: "2",
+          typeInfo: PillSheetType.pillsheet_21.typeInfo,
+          beginingDate: yesterday,
+          lastTakenDate: _today,
+          groupIndex: 1,
+        );
+
+        final pillSheetService = MockPillSheetService();
+        when(pillSheetService.update(batch, [
+          pillSheet,
+          pillSheet2.copyWith(lastTakenDate: yesterday),
+        ])).thenReturn(null);
+
+        final pillSheetGroup = PillSheetGroup(
+          id: "group_id",
+          pillSheetIDs: ["1", "2"],
+          pillSheets: [pillSheet, pillSheet2],
+          createdAt: now(),
+        );
+        final updatedPillSheetGroup = PillSheetGroup(
+          id: "group_id",
+          pillSheetIDs: ["1", "2"],
+          pillSheets: [
+            pillSheet,
+            pillSheet2.copyWith(lastTakenDate: yesterday),
+          ],
+          createdAt: now(),
+        );
+        final pillSheetGroupService = MockPillSheetGroupService();
+        when(pillSheetGroupService.fetchLatest())
+            .thenAnswer((realInvocation) async => pillSheetGroup);
+        when(pillSheetGroupService.streamForLatest())
+            .thenAnswer((realInvocation) => Stream.empty());
+        when(pillSheetGroupService.update(batch, updatedPillSheetGroup))
+            .thenReturn(null);
+
+        final history = PillSheetModifiedHistoryServiceActionFactory
+            .createRevertTakenPillAction(
+          pillSheetGroupID: "group_id",
+          before: pillSheet2,
+          after: pillSheet2.copyWith(
+            lastTakenDate: yesterday,
+          ),
+        );
+        final pillSheetModifiedHistoryService =
+            MockPillSheetModifiedHistoryService();
+        when(pillSheetModifiedHistoryService.add(batch, history))
+            .thenReturn(null);
+
+        final setting = Setting(
+          pillNumberForFromMenstruation: 22,
+          durationMenstruation: 3,
+          isOnReminder: true,
+          reminderTimes: [
+            ReminderTime(hour: 21, minute: 20),
+            ReminderTime(hour: 22, minute: 0)
+          ],
+          pillSheetTypes: [
+            PillSheetType.pillsheet_28_0,
+            PillSheetType.pillsheet_21,
+          ],
+        );
+        final settingService = MockSettingService();
+        when(settingService.fetch())
+            .thenAnswer((realInvocation) async => setting);
+        when(settingService.stream())
+            .thenAnswer((realInvocation) => Stream.empty());
+        when(settingService.updateWithBatch(batch, setting)).thenReturn(null);
+
+        final user = User();
+        final userService = MockUserService();
+        when(userService.stream())
+            .thenAnswer((realInvocation) => Stream.empty());
+        when(userService.fetch()).thenAnswer((realInvocation) async => user);
+
+        final container = ProviderContainer(
+          overrides: [
+            batchFactoryProvider.overrideWithValue(batchFactory),
+            authServiceProvider.overrideWithValue(authService),
+            settingServiceProvider.overrideWithValue(settingService),
+            pillSheetServiceProvider.overrideWithValue(pillSheetService),
+            pillSheetModifiedHistoryServiceProvider
+                .overrideWithValue(pillSheetModifiedHistoryService),
+            pillSheetGroupServiceProvider
+                .overrideWithValue(pillSheetGroupService),
+            userServiceProvider.overrideWithValue(userService),
+          ],
+        );
+        final store = container.read(recordPageStoreProvider.notifier);
+
+        await Future.delayed(Duration(seconds: 1));
+        await store.revertTaken(
+            pillSheetGroup: pillSheetGroup,
+            pageIndex: 1,
+            pillNumberIntoPillSheet: 2);
+      });
+
+      test("call revert from actived pill sheet to before pill sheet",
+          () async {
+        var mockTodayRepository = MockTodayService();
+        final _today = DateTime.parse("2022-01-31");
+        todayRepository = mockTodayRepository;
+        when(mockTodayRepository.today()).thenReturn(_today);
+        when(mockTodayRepository.now()).thenReturn(_today);
+        final yesterday = DateTime.parse("2022-01-30");
+
+        final batchFactory = MockBatchFactory();
+        final batch = MockWriteBatch();
+        when(batchFactory.batch()).thenReturn(batch);
+        final authService = MockAuthService();
+        when(authService.isLinkedApple()).thenReturn(false);
+        when(authService.isLinkedGoogle()).thenReturn(false);
+        when(authService.stream())
+            .thenAnswer((realInvocation) => Stream.empty());
+
+        final pillSheet = PillSheet(
+          id: "1",
+          typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
+          beginingDate: _today.subtract(Duration(days: 29)),
+          groupIndex: 0,
+          lastTakenDate: _today.subtract(Duration(days: 2)),
+        );
+
+        // actived pill sheet
+        final pillSheet2 = PillSheet(
+          id: "2",
+          typeInfo: PillSheetType.pillsheet_21.typeInfo,
+          beginingDate: yesterday,
+          lastTakenDate: _today,
+          groupIndex: 1,
+        );
+
+        final pillSheetService = MockPillSheetService();
+        when(pillSheetService.update(batch, [
+          pillSheet.copyWith(lastTakenDate: _today.subtract(Duration(days: 4))),
+          pillSheet2.copyWith(
+              lastTakenDate:
+                  pillSheet2.beginingDate.subtract(Duration(days: 1))),
+        ])).thenReturn(null);
+
+        final pillSheetGroup = PillSheetGroup(
+          id: "group_id",
+          pillSheetIDs: ["1", "2"],
+          pillSheets: [pillSheet, pillSheet2],
+          createdAt: now(),
+        );
+        final updatedPillSheetGroup = PillSheetGroup(
+          id: "group_id",
+          pillSheetIDs: ["1", "2"],
+          pillSheets: [
+            pillSheet.copyWith(
+                lastTakenDate: _today.subtract(Duration(days: 4))),
+            pillSheet2.copyWith(
+                lastTakenDate:
+                    pillSheet2.beginingDate.subtract(Duration(days: 1))),
+          ],
+          createdAt: now(),
+        );
+        final pillSheetGroupService = MockPillSheetGroupService();
+        when(pillSheetGroupService.fetchLatest())
+            .thenAnswer((realInvocation) async => pillSheetGroup);
+        when(pillSheetGroupService.streamForLatest())
+            .thenAnswer((realInvocation) => Stream.empty());
+        when(pillSheetGroupService.update(batch, updatedPillSheetGroup))
+            .thenReturn(null);
+
+        final history = PillSheetModifiedHistoryServiceActionFactory
+            .createRevertTakenPillAction(
+                pillSheetGroupID: "group_id",
+                before: pillSheet2,
+                after: pillSheet.copyWith(
+                    lastTakenDate: _today.subtract(Duration(days: 4))));
+        final pillSheetModifiedHistoryService =
+            MockPillSheetModifiedHistoryService();
+        when(pillSheetModifiedHistoryService.add(batch, history))
+            .thenReturn(null);
+
+        final setting = Setting(
+          pillNumberForFromMenstruation: 22,
+          durationMenstruation: 3,
+          isOnReminder: true,
+          reminderTimes: [
+            ReminderTime(hour: 21, minute: 20),
+            ReminderTime(hour: 22, minute: 0)
+          ],
+          pillSheetTypes: [
+            PillSheetType.pillsheet_28_0,
+            PillSheetType.pillsheet_21,
+          ],
+        );
+        final settingService = MockSettingService();
+        when(settingService.fetch())
+            .thenAnswer((realInvocation) async => setting);
+        when(settingService.stream())
+            .thenAnswer((realInvocation) => Stream.empty());
+        when(settingService.updateWithBatch(batch, setting)).thenReturn(null);
+
+        final user = User();
+        final userService = MockUserService();
+        when(userService.stream())
+            .thenAnswer((realInvocation) => Stream.empty());
+        when(userService.fetch()).thenAnswer((realInvocation) async => user);
+
+        final container = ProviderContainer(
+          overrides: [
+            batchFactoryProvider.overrideWithValue(batchFactory),
+            authServiceProvider.overrideWithValue(authService),
+            settingServiceProvider.overrideWithValue(settingService),
+            pillSheetServiceProvider.overrideWithValue(pillSheetService),
+            pillSheetModifiedHistoryServiceProvider
+                .overrideWithValue(pillSheetModifiedHistoryService),
+            pillSheetGroupServiceProvider
+                .overrideWithValue(pillSheetGroupService),
+            userServiceProvider.overrideWithValue(userService),
+          ],
+        );
+        final store = container.read(recordPageStoreProvider.notifier);
+
+        await Future.delayed(Duration(seconds: 1));
+        await store.revertTaken(
+            pillSheetGroup: pillSheetGroup,
+            pageIndex: 0,
+            pillNumberIntoPillSheet: 27);
+      });
+      test("call revert with rest duration", () async {
+        var mockTodayRepository = MockTodayService();
+        final _today = DateTime.parse("2022-01-31");
+        todayRepository = mockTodayRepository;
+        when(mockTodayRepository.today()).thenReturn(_today);
+        when(mockTodayRepository.now()).thenReturn(_today);
+        final yesterday = DateTime.parse("2022-01-30");
+
+        final batchFactory = MockBatchFactory();
+        final batch = MockWriteBatch();
+        when(batchFactory.batch()).thenReturn(batch);
+        final authService = MockAuthService();
+        when(authService.isLinkedApple()).thenReturn(false);
+        when(authService.isLinkedGoogle()).thenReturn(false);
+        when(authService.stream())
+            .thenAnswer((realInvocation) => Stream.empty());
+
+        final pillSheet = PillSheet(
+          id: "1",
+          typeInfo: PillSheetType.pillsheet_28_0.typeInfo,
+          beginingDate: _today.subtract(Duration(days: 29)),
+          groupIndex: 0,
+          lastTakenDate: _today.subtract(Duration(days: 2)),
+        );
+
+        // actived pill sheet
+        final pillSheet2 = PillSheet(
+          id: "2",
+          typeInfo: PillSheetType.pillsheet_21.typeInfo,
+          beginingDate: yesterday,
+          lastTakenDate: _today,
+          groupIndex: 1,
+          restDurations: [
+            RestDuration(
+                beginDate: yesterday, createdDate: yesterday, endDate: _today),
+          ],
+        );
+
+        final pillSheetService = MockPillSheetService();
+        when(pillSheetService.update(batch, [
+          pillSheet.copyWith(lastTakenDate: _today.subtract(Duration(days: 4))),
+          pillSheet2.copyWith(
+              lastTakenDate:
+                  pillSheet2.beginingDate.subtract(Duration(days: 1)),
+              restDurations: []),
+        ])).thenReturn(null);
+
+        final pillSheetGroup = PillSheetGroup(
+          id: "group_id",
+          pillSheetIDs: ["1", "2"],
+          pillSheets: [pillSheet, pillSheet2],
+          createdAt: now(),
+        );
+        final updatedPillSheetGroup = PillSheetGroup(
+          id: "group_id",
+          pillSheetIDs: ["1", "2"],
+          pillSheets: [
+            pillSheet.copyWith(
+                lastTakenDate: _today.subtract(Duration(days: 4))),
+            pillSheet2.copyWith(
+                lastTakenDate:
+                    pillSheet2.beginingDate.subtract(Duration(days: 1)),
+                restDurations: []),
+          ],
+          createdAt: now(),
+        );
+        final pillSheetGroupService = MockPillSheetGroupService();
+        when(pillSheetGroupService.fetchLatest())
+            .thenAnswer((realInvocation) async => pillSheetGroup);
+        when(pillSheetGroupService.streamForLatest())
+            .thenAnswer((realInvocation) => Stream.empty());
+        when(pillSheetGroupService.update(batch, updatedPillSheetGroup))
+            .thenReturn(null);
+
+        final history = PillSheetModifiedHistoryServiceActionFactory
+            .createRevertTakenPillAction(
+                pillSheetGroupID: "group_id",
+                before: pillSheet2,
+                after: pillSheet.copyWith(
+                    lastTakenDate: _today.subtract(Duration(days: 4)),
+                    restDurations: []));
+        final pillSheetModifiedHistoryService =
+            MockPillSheetModifiedHistoryService();
+        when(pillSheetModifiedHistoryService.add(batch, history))
+            .thenReturn(null);
+
+        final setting = Setting(
+          pillNumberForFromMenstruation: 22,
+          durationMenstruation: 3,
+          isOnReminder: true,
+          reminderTimes: [
+            ReminderTime(hour: 21, minute: 20),
+            ReminderTime(hour: 22, minute: 0)
+          ],
+          pillSheetTypes: [
+            PillSheetType.pillsheet_28_0,
+            PillSheetType.pillsheet_21,
+          ],
+        );
+        final settingService = MockSettingService();
+        when(settingService.fetch())
+            .thenAnswer((realInvocation) async => setting);
+        when(settingService.stream())
+            .thenAnswer((realInvocation) => Stream.empty());
+        when(settingService.updateWithBatch(batch, setting)).thenReturn(null);
+
+        final user = User();
+        final userService = MockUserService();
+        when(userService.stream())
+            .thenAnswer((realInvocation) => Stream.empty());
+        when(userService.fetch()).thenAnswer((realInvocation) async => user);
+
+        final container = ProviderContainer(
+          overrides: [
+            batchFactoryProvider.overrideWithValue(batchFactory),
+            authServiceProvider.overrideWithValue(authService),
+            settingServiceProvider.overrideWithValue(settingService),
+            pillSheetServiceProvider.overrideWithValue(pillSheetService),
+            pillSheetModifiedHistoryServiceProvider
+                .overrideWithValue(pillSheetModifiedHistoryService),
+            pillSheetGroupServiceProvider
+                .overrideWithValue(pillSheetGroupService),
+            userServiceProvider.overrideWithValue(userService),
+          ],
+        );
+        final store = container.read(recordPageStoreProvider.notifier);
+
+        await Future.delayed(Duration(seconds: 1));
+        await store.revertTaken(
+            pillSheetGroup: pillSheetGroup,
+            pageIndex: 0,
+            pillNumberIntoPillSheet: 27);
+      });
+    });
+  });
 }

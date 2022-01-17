@@ -233,8 +233,7 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
     if (activedPillSheet == null) {
       throw FormatException("active pill sheet not found");
     }
-    if (activedPillSheet.todayPillNumber ==
-        activedPillSheet.lastTakenPillNumber) {
+    if (activedPillSheet.todayPillIsAlreadyTaken) {
       return false;
     }
     final updatedPillSheetGroup = await take(
@@ -280,50 +279,114 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
       // User tapped future pill number
       return false;
     }
-    final totalRestDuration =
-        summarizedRestDuration(activedPillSheet.restDurations);
 
-    var takenDate = pillSheet.beginingDate
-        .add(Duration(days: pillNumberIntoPillSheet + totalRestDuration - 1));
+    final takenDate = pillSheet.displayPillTakeDate(pillNumberIntoPillSheet);
     return _take(takenDate);
   }
 
   Future<void> cancelTaken() async {
     final pillSheetGroup = state.pillSheetGroup;
     if (pillSheetGroup == null) {
-      throw FormatException("pill sheet group not found");
+      throw FormatException("現在有効なとなっているピルシートグループが見つかりませんでした");
     }
     final activedPillSheet = pillSheetGroup.activedPillSheet;
     if (activedPillSheet == null) {
-      throw FormatException("active pill sheet not found");
+      throw FormatException("現在対象となっているピルシートが見つかりませんでした");
     }
-    if (activedPillSheet.todayPillNumber !=
-        activedPillSheet.lastTakenPillNumber) {
+    // キャンセルの場合は今日の服用のundo機能なので、服用済みじゃない場合はreturnする
+    if (!activedPillSheet.todayPillIsAlreadyTaken ||
+        activedPillSheet.lastTakenDate == null) {
       return;
     }
-    final lastTakenDate = activedPillSheet.lastTakenDate;
-    if (lastTakenDate == null) {
-      return;
+
+    await revertTaken(
+        pillSheetGroup: pillSheetGroup,
+        pageIndex: activedPillSheet.groupIndex,
+        pillNumberIntoPillSheet: activedPillSheet.lastTakenPillNumber);
+  }
+
+  Future<void> revertTaken(
+      {required PillSheetGroup pillSheetGroup,
+      required int pageIndex,
+      required int pillNumberIntoPillSheet}) async {
+    final activedPillSheet = pillSheetGroup.activedPillSheet;
+    if (activedPillSheet == null) {
+      throw FormatException("現在対象となっているピルシートが見つかりませんでした");
+    }
+    if (activedPillSheet.activeRestDuration != null) {
+      throw FormatException("ピルの服用の取り消し操作は休薬期間中は実行できません");
+    }
+
+    final targetPillSheet = pillSheetGroup.pillSheets[pageIndex];
+    final takenDate = targetPillSheet
+        .displayPillTakeDate(pillNumberIntoPillSheet)
+        .subtract(Duration(days: 1))
+        .date();
+
+    final updatedPillSheets = pillSheetGroup.pillSheets.map((pillSheet) {
+      final lastTakenDate = pillSheet.lastTakenDate;
+      if (lastTakenDate == null) {
+        return pillSheet;
+      }
+      if (takenDate.isAfter(lastTakenDate)) {
+        return pillSheet;
+      }
+
+      if (pillSheet.groupIndex > activedPillSheet.groupIndex) {
+        return pillSheet;
+      }
+      if (pillSheet.groupIndex < pageIndex) {
+        return pillSheet;
+      }
+
+      if (takenDate.isBefore(pillSheet.beginingDate)) {
+        // reset pill sheet when back to one before pill sheet
+        return pillSheet.copyWith(
+            lastTakenDate:
+                pillSheet.beginingDate.subtract(Duration(days: 1)).date(),
+            restDurations: []);
+      } else {
+        // Revert対象の日付よりも後ろにある休薬期間のデータは消す
+        final remainingResetDurations = pillSheet.restDurations
+            .where((restDuration) =>
+                restDuration.beginDate.date().isBefore(takenDate))
+            .toList();
+        return pillSheet.copyWith(
+            lastTakenDate: takenDate, restDurations: remainingResetDurations);
+      }
+    }).toList();
+
+    final updatedPillSheetGroup =
+        pillSheetGroup.copyWith(pillSheets: updatedPillSheets);
+    final updatedIndexses = pillSheetGroup.pillSheets.asMap().keys.where(
+          (index) =>
+              pillSheetGroup.pillSheets[index] !=
+              updatedPillSheetGroup.pillSheets[index],
+        );
+
+    if (updatedIndexses.isEmpty) {
+      return null;
     }
 
     final batch = _batchFactory.batch();
+    _pillSheetService.update(
+      batch,
+      updatedPillSheets,
+    );
+    _pillSheetGroupService.update(batch, updatedPillSheetGroup);
 
-    final updatedPillSheet = activedPillSheet.copyWith(
-        lastTakenDate: lastTakenDate.subtract(Duration(days: 1)));
-    _pillSheetService.update(batch, [updatedPillSheet]);
-
+    final before = pillSheetGroup.pillSheets[updatedIndexses.last];
+    final after = updatedPillSheetGroup.pillSheets[updatedIndexses.first];
     final history = PillSheetModifiedHistoryServiceActionFactory
         .createRevertTakenPillAction(
       pillSheetGroupID: pillSheetGroup.id,
-      before: activedPillSheet,
-      after: updatedPillSheet,
+      before: before,
+      after: after,
     );
     _pillSheetModifiedHistoryService.add(batch, history);
 
-    final updatedPillSheetGroup = pillSheetGroup.replaced(updatedPillSheet);
-    _pillSheetGroupService.update(batch, updatedPillSheetGroup);
-
     await batch.commit();
+
     state = state.copyWith(pillSheetGroup: updatedPillSheetGroup);
   }
 
@@ -339,7 +402,7 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
       return false;
     }
     if (activedPillSheet.id != pillSheet.id) {
-      if (pillSheet.isReached) {
+      if (pillSheet.isBegan) {
         if (pillNumberIntoPillSheet > pillSheet.lastTakenPillNumber) {
           return false;
         }
@@ -383,7 +446,7 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
       return false;
     }
     if (activedPillSheet.id != pillSheet.id) {
-      if (pillSheet.isReached) {
+      if (pillSheet.isBegan) {
         if (pillNumberIntoPillSheet > pillSheet.lastTakenPillNumber) {
           return true;
         }

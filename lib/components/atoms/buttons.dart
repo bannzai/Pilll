@@ -84,7 +84,7 @@ class SecondaryButton extends StatelessWidget {
 
 class TertiaryButton extends StatelessWidget {
   final String text;
-  final Function() onPressed;
+  final Future<void> Function() onPressed;
 
   const TertiaryButton({
     Key? key,

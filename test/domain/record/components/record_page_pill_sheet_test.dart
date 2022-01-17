@@ -520,7 +520,7 @@ void main() {
       });
     });
   });
-  group("#RecordPagePillSheet.calculatedDateOfAppearancePill", () {
+  group("#RecordPagePillSheet.displayPillTakeDate", () {
     test("it is not have rest duration", () {
       final originalTodayRepository = todayRepository;
       final mockTodayRepository = MockTodayService();
@@ -536,26 +536,17 @@ void main() {
           typeInfo: PillSheetType.pillsheet_21_0.typeInfo,
           beginingDate: DateTime.parse("2020-09-01"));
 
-      expect(RecordPagePillSheet.calculatedDateOfAppearancePill(pillSheet, 1),
-          DateTime.parse("2020-09-01"));
-      expect(RecordPagePillSheet.calculatedDateOfAppearancePill(pillSheet, 2),
-          DateTime.parse("2020-09-02"));
-      expect(RecordPagePillSheet.calculatedDateOfAppearancePill(pillSheet, 3),
-          DateTime.parse("2020-09-03"));
+      expect(pillSheet.displayPillTakeDate(1), DateTime.parse("2020-09-01"));
+      expect(pillSheet.displayPillTakeDate(2), DateTime.parse("2020-09-02"));
+      expect(pillSheet.displayPillTakeDate(3), DateTime.parse("2020-09-03"));
 
-      expect(RecordPagePillSheet.calculatedDateOfAppearancePill(pillSheet, 10),
-          DateTime.parse("2020-09-10"));
-      expect(RecordPagePillSheet.calculatedDateOfAppearancePill(pillSheet, 11),
-          DateTime.parse("2020-09-11"));
-      expect(RecordPagePillSheet.calculatedDateOfAppearancePill(pillSheet, 12),
-          DateTime.parse("2020-09-12"));
+      expect(pillSheet.displayPillTakeDate(10), DateTime.parse("2020-09-10"));
+      expect(pillSheet.displayPillTakeDate(11), DateTime.parse("2020-09-11"));
+      expect(pillSheet.displayPillTakeDate(12), DateTime.parse("2020-09-12"));
 
-      expect(RecordPagePillSheet.calculatedDateOfAppearancePill(pillSheet, 26),
-          DateTime.parse("2020-09-26"));
-      expect(RecordPagePillSheet.calculatedDateOfAppearancePill(pillSheet, 27),
-          DateTime.parse("2020-09-27"));
-      expect(RecordPagePillSheet.calculatedDateOfAppearancePill(pillSheet, 28),
-          DateTime.parse("2020-09-28"));
+      expect(pillSheet.displayPillTakeDate(26), DateTime.parse("2020-09-26"));
+      expect(pillSheet.displayPillTakeDate(27), DateTime.parse("2020-09-27"));
+      expect(pillSheet.displayPillTakeDate(28), DateTime.parse("2020-09-28"));
     });
     group("it is have rest duration", () {
       group("it is not ended rest duration", () {
@@ -586,34 +577,25 @@ void main() {
           );
 
           expect(
-              RecordPagePillSheet.calculatedDateOfAppearancePill(pillSheet, 1),
-              DateTime.parse("2020-09-01"));
+              pillSheet.displayPillTakeDate(1), DateTime.parse("2020-09-01"));
           expect(
-              RecordPagePillSheet.calculatedDateOfAppearancePill(pillSheet, 2),
-              DateTime.parse("2020-09-02"));
+              pillSheet.displayPillTakeDate(2), DateTime.parse("2020-09-02"));
           expect(
-              RecordPagePillSheet.calculatedDateOfAppearancePill(pillSheet, 3),
-              DateTime.parse("2020-09-03"));
+              pillSheet.displayPillTakeDate(3), DateTime.parse("2020-09-03"));
 
           expect(
-              RecordPagePillSheet.calculatedDateOfAppearancePill(pillSheet, 10),
-              DateTime.parse("2020-09-10"));
+              pillSheet.displayPillTakeDate(10), DateTime.parse("2020-09-10"));
           expect(
-              RecordPagePillSheet.calculatedDateOfAppearancePill(pillSheet, 11),
-              DateTime.parse("2020-09-11"));
+              pillSheet.displayPillTakeDate(11), DateTime.parse("2020-09-11"));
           expect(
-              RecordPagePillSheet.calculatedDateOfAppearancePill(pillSheet, 12),
-              DateTime.parse("2020-09-12"));
+              pillSheet.displayPillTakeDate(12), DateTime.parse("2020-09-12"));
 
           expect(
-              RecordPagePillSheet.calculatedDateOfAppearancePill(pillSheet, 26),
-              DateTime.parse("2020-09-26"));
+              pillSheet.displayPillTakeDate(26), DateTime.parse("2020-09-26"));
           expect(
-              RecordPagePillSheet.calculatedDateOfAppearancePill(pillSheet, 27),
-              DateTime.parse("2020-09-27"));
+              pillSheet.displayPillTakeDate(27), DateTime.parse("2020-09-27"));
           expect(
-              RecordPagePillSheet.calculatedDateOfAppearancePill(pillSheet, 28),
-              DateTime.parse("2020-09-28"));
+              pillSheet.displayPillTakeDate(28), DateTime.parse("2020-09-28"));
         });
         test(
             "pillSheet.lastTakenDate is two days ago and restDuration.beginDate from yesterday",
@@ -642,34 +624,25 @@ void main() {
           );
 
           expect(
-              RecordPagePillSheet.calculatedDateOfAppearancePill(pillSheet, 1),
-              DateTime.parse("2020-09-01"));
+              pillSheet.displayPillTakeDate(1), DateTime.parse("2020-09-01"));
           expect(
-              RecordPagePillSheet.calculatedDateOfAppearancePill(pillSheet, 2),
-              DateTime.parse("2020-09-02"));
+              pillSheet.displayPillTakeDate(2), DateTime.parse("2020-09-02"));
           expect(
-              RecordPagePillSheet.calculatedDateOfAppearancePill(pillSheet, 3),
-              DateTime.parse("2020-09-03"));
+              pillSheet.displayPillTakeDate(3), DateTime.parse("2020-09-03"));
 
           expect(
-              RecordPagePillSheet.calculatedDateOfAppearancePill(pillSheet, 10),
-              DateTime.parse("2020-09-10"));
+              pillSheet.displayPillTakeDate(10), DateTime.parse("2020-09-10"));
           expect(
-              RecordPagePillSheet.calculatedDateOfAppearancePill(pillSheet, 11),
-              DateTime.parse("2020-09-12"));
+              pillSheet.displayPillTakeDate(11), DateTime.parse("2020-09-12"));
           expect(
-              RecordPagePillSheet.calculatedDateOfAppearancePill(pillSheet, 12),
-              DateTime.parse("2020-09-13"));
+              pillSheet.displayPillTakeDate(12), DateTime.parse("2020-09-13"));
 
           expect(
-              RecordPagePillSheet.calculatedDateOfAppearancePill(pillSheet, 26),
-              DateTime.parse("2020-09-27"));
+              pillSheet.displayPillTakeDate(26), DateTime.parse("2020-09-27"));
           expect(
-              RecordPagePillSheet.calculatedDateOfAppearancePill(pillSheet, 27),
-              DateTime.parse("2020-09-28"));
+              pillSheet.displayPillTakeDate(27), DateTime.parse("2020-09-28"));
           expect(
-              RecordPagePillSheet.calculatedDateOfAppearancePill(pillSheet, 28),
-              DateTime.parse("2020-09-29"));
+              pillSheet.displayPillTakeDate(28), DateTime.parse("2020-09-29"));
         });
       });
       group("it is ended rest duration", () {
@@ -701,34 +674,25 @@ void main() {
           );
 
           expect(
-              RecordPagePillSheet.calculatedDateOfAppearancePill(pillSheet, 1),
-              DateTime.parse("2020-09-01"));
+              pillSheet.displayPillTakeDate(1), DateTime.parse("2020-09-01"));
           expect(
-              RecordPagePillSheet.calculatedDateOfAppearancePill(pillSheet, 2),
-              DateTime.parse("2020-09-02"));
+              pillSheet.displayPillTakeDate(2), DateTime.parse("2020-09-02"));
           expect(
-              RecordPagePillSheet.calculatedDateOfAppearancePill(pillSheet, 3),
-              DateTime.parse("2020-09-03"));
+              pillSheet.displayPillTakeDate(3), DateTime.parse("2020-09-03"));
 
           expect(
-              RecordPagePillSheet.calculatedDateOfAppearancePill(pillSheet, 10),
-              DateTime.parse("2020-09-10"));
+              pillSheet.displayPillTakeDate(10), DateTime.parse("2020-09-10"));
           expect(
-              RecordPagePillSheet.calculatedDateOfAppearancePill(pillSheet, 11),
-              DateTime.parse("2020-09-11"));
+              pillSheet.displayPillTakeDate(11), DateTime.parse("2020-09-11"));
           expect(
-              RecordPagePillSheet.calculatedDateOfAppearancePill(pillSheet, 12),
-              DateTime.parse("2020-09-12"));
+              pillSheet.displayPillTakeDate(12), DateTime.parse("2020-09-12"));
 
           expect(
-              RecordPagePillSheet.calculatedDateOfAppearancePill(pillSheet, 26),
-              DateTime.parse("2020-09-26"));
+              pillSheet.displayPillTakeDate(26), DateTime.parse("2020-09-26"));
           expect(
-              RecordPagePillSheet.calculatedDateOfAppearancePill(pillSheet, 27),
-              DateTime.parse("2020-09-27"));
+              pillSheet.displayPillTakeDate(27), DateTime.parse("2020-09-27"));
           expect(
-              RecordPagePillSheet.calculatedDateOfAppearancePill(pillSheet, 28),
-              DateTime.parse("2020-09-28"));
+              pillSheet.displayPillTakeDate(28), DateTime.parse("2020-09-28"));
         });
 
         test(
@@ -759,41 +723,30 @@ void main() {
           );
 
           expect(
-              RecordPagePillSheet.calculatedDateOfAppearancePill(pillSheet, 1),
-              DateTime.parse("2020-09-01"));
+              pillSheet.displayPillTakeDate(1), DateTime.parse("2020-09-01"));
           expect(
-              RecordPagePillSheet.calculatedDateOfAppearancePill(pillSheet, 2),
-              DateTime.parse("2020-09-02"));
+              pillSheet.displayPillTakeDate(2), DateTime.parse("2020-09-02"));
           expect(
-              RecordPagePillSheet.calculatedDateOfAppearancePill(pillSheet, 3),
-              DateTime.parse("2020-09-03"));
+              pillSheet.displayPillTakeDate(3), DateTime.parse("2020-09-03"));
 
           expect(
-              RecordPagePillSheet.calculatedDateOfAppearancePill(pillSheet, 10),
-              DateTime.parse("2020-09-10"));
+              pillSheet.displayPillTakeDate(10), DateTime.parse("2020-09-10"));
           expect(
-              RecordPagePillSheet.calculatedDateOfAppearancePill(pillSheet, 11),
-              DateTime.parse("2020-09-12"));
+              pillSheet.displayPillTakeDate(11), DateTime.parse("2020-09-12"));
           expect(
-              RecordPagePillSheet.calculatedDateOfAppearancePill(pillSheet, 12),
-              DateTime.parse("2020-09-13"));
+              pillSheet.displayPillTakeDate(12), DateTime.parse("2020-09-13"));
 
           expect(
-              RecordPagePillSheet.calculatedDateOfAppearancePill(pillSheet, 13),
-              DateTime.parse("2020-09-14"));
+              pillSheet.displayPillTakeDate(13), DateTime.parse("2020-09-14"));
           expect(
-              RecordPagePillSheet.calculatedDateOfAppearancePill(pillSheet, 14),
-              DateTime.parse("2020-09-15"));
+              pillSheet.displayPillTakeDate(14), DateTime.parse("2020-09-15"));
 
           expect(
-              RecordPagePillSheet.calculatedDateOfAppearancePill(pillSheet, 26),
-              DateTime.parse("2020-09-27"));
+              pillSheet.displayPillTakeDate(26), DateTime.parse("2020-09-27"));
           expect(
-              RecordPagePillSheet.calculatedDateOfAppearancePill(pillSheet, 27),
-              DateTime.parse("2020-09-28"));
+              pillSheet.displayPillTakeDate(27), DateTime.parse("2020-09-28"));
           expect(
-              RecordPagePillSheet.calculatedDateOfAppearancePill(pillSheet, 28),
-              DateTime.parse("2020-09-29"));
+              pillSheet.displayPillTakeDate(28), DateTime.parse("2020-09-29"));
         });
 
         test("Real bug case ", () {
@@ -827,23 +780,18 @@ void main() {
           );
 
           expect(
-              RecordPagePillSheet.calculatedDateOfAppearancePill(pillSheet, 1),
-              DateTime.parse("2021-12-17"));
+              pillSheet.displayPillTakeDate(1), DateTime.parse("2021-12-17"));
           expect(
-              RecordPagePillSheet.calculatedDateOfAppearancePill(pillSheet, 24),
-              DateTime.parse("2022-01-09"));
+              pillSheet.displayPillTakeDate(24), DateTime.parse("2022-01-09"));
 
           // Bug: Got 2022-01-18
           expect(
-              RecordPagePillSheet.calculatedDateOfAppearancePill(pillSheet, 25),
-              DateTime.parse("2022-01-14"));
+              pillSheet.displayPillTakeDate(25), DateTime.parse("2022-01-14"));
 
           expect(
-              RecordPagePillSheet.calculatedDateOfAppearancePill(pillSheet, 26),
-              DateTime.parse("2022-01-15"));
+              pillSheet.displayPillTakeDate(26), DateTime.parse("2022-01-15"));
           expect(
-              RecordPagePillSheet.calculatedDateOfAppearancePill(pillSheet, 28),
-              DateTime.parse("2022-01-17"));
+              pillSheet.displayPillTakeDate(28), DateTime.parse("2022-01-17"));
         });
       });
     });

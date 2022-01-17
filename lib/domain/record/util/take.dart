@@ -13,17 +13,13 @@ import 'package:pilll/service/pill_sheet_modified_history.dart';
 import 'package:pilll/util/shared_preference/keys.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-Future<void> effectAfterTaken({
+Future<void> effectAfterTakenPillAction({
   required BuildContext context,
-  required Future<void>? taken,
+  required Future<void> taken,
   required RecordPageStore store,
 }) async {
-  final _taken = taken;
-  if (_taken == null) {
-    return;
-  }
   try {
-    await _taken;
+    await taken;
     FlutterAppBadger.removeBadge();
     _requestInAppReview();
     await showReleaseNotePreDialog(context);
@@ -60,8 +56,7 @@ Future<PillSheetGroup?> take({
   required PillSheetModifiedHistoryService pillSheetModifiedHistoryService,
   required PillSheetGroupService pillSheetGroupService,
 }) async {
-  if (activedPillSheet.todayPillNumber ==
-      activedPillSheet.lastTakenPillNumber) {
+  if (activedPillSheet.todayPillIsAlreadyTaken) {
     return null;
   }
 
@@ -75,7 +70,7 @@ Future<PillSheetGroup?> take({
       return pillSheet;
     }
 
-    // takenDateよりも予測するピルシートが大きい場合はactivedPillSheetじゃないPillSheetと判断。
+    // takenDateよりも予測するピルシートの最終服用日よりじも大きい場合はactivedPillSheetじゃないPillSheetと判断。
     // そのピルシートの最終日で予測する最終服用日を記録する
     if (takenDate.isAfter(pillSheet.estimatedLastTakenDate)) {
       return pillSheet.copyWith(

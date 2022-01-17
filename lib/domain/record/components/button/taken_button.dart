@@ -25,7 +25,7 @@ class TakenButton extends HookConsumerWidget {
           "last_taken_pill_number": pillSheet.lastTakenPillNumber,
           "today_pill_number": pillSheet.todayPillNumber,
         });
-        await effectAfterTaken(
+        await effectAfterTakenPillAction(
           context: parentContext,
           taken: store.taken(),
           store: store,

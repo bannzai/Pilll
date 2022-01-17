@@ -13,24 +13,21 @@ class CancelButton extends HookConsumerWidget {
     final store = ref.watch(recordPageStoreProvider.notifier);
     return TertiaryButton(
       text: "飲んでない",
-      onPressed: () {
+      onPressed: () async {
         analytics.logEvent(name: "cancel_taken_button_pressed", parameters: {
           "last_taken_pill_number": pillSheet.lastTakenPillNumber,
           "today_pill_number": pillSheet.todayPillNumber,
         });
-        _cancelTake(pillSheet, store);
+
+        if (!pillSheet.todayPillIsAlreadyTaken) {
+          return;
+        }
+        final lastTakenDate = pillSheet.lastTakenDate;
+        if (lastTakenDate == null) {
+          return;
+        }
+        await store.cancelTaken();
       },
     );
-  }
-
-  void _cancelTake(PillSheet pillSheet, RecordPageStore store) {
-    if (pillSheet.todayPillNumber != pillSheet.lastTakenPillNumber) {
-      return;
-    }
-    final lastTakenDate = pillSheet.lastTakenDate;
-    if (lastTakenDate == null) {
-      return;
-    }
-    store.cancelTaken();
   }
 }
