@@ -692,10 +692,10 @@ void main() {
   group("#revertTaken", () {
     test("group has only one pill sheet", () async {
       var mockTodayRepository = MockTodayService();
+      final _today = DateTime.parse("2022-01-17");
       todayRepository = mockTodayRepository;
-      when(mockTodayRepository.today())
-          .thenReturn(DateTime.parse("2022-01-17"));
-      when(mockTodayRepository.now()).thenReturn(DateTime.parse("2022-01-17"));
+      when(mockTodayRepository.today()).thenReturn(_today);
+      when(mockTodayRepository.now()).thenReturn(_today);
       final yesterday = DateTime.parse("2022-01-16");
 
       final batchFactory = MockBatchFactory();
@@ -714,9 +714,9 @@ void main() {
         lastTakenDate: today(),
       );
       final pillSheetService = MockPillSheetService();
-      when(pillSheetService
-              .update(batch, [pillSheet.copyWith(lastTakenDate: today())]))
-          .thenReturn(null);
+      when(pillSheetService.update(batch, [
+        pillSheet.copyWith(lastTakenDate: yesterday.subtract(Duration(days: 1)))
+      ])).thenReturn(null);
 
       final pillSheetGroup = PillSheetGroup(
         id: "group_id",
@@ -730,7 +730,8 @@ void main() {
         id: "group_id",
         pillSheetIDs: ["sheet_id"],
         pillSheets: [
-          pillSheet.copyWith(lastTakenDate: yesterday),
+          pillSheet.copyWith(
+              lastTakenDate: yesterday.subtract(Duration(days: 1))),
         ],
         createdAt: now(),
       );
@@ -742,12 +743,12 @@ void main() {
       when(pillSheetGroupService.update(batch, updatedPillSheetGroup))
           .thenReturn(null);
 
-      final history =
-          PillSheetModifiedHistoryServiceActionFactory.createTakenPillAction(
+      final history = PillSheetModifiedHistoryServiceActionFactory
+          .createRevertTakenPillAction(
         pillSheetGroupID: "group_id",
         before: pillSheet,
         after: pillSheet.copyWith(
-          lastTakenDate: yesterday,
+          lastTakenDate: yesterday.subtract(Duration(days: 1)),
         ),
       );
       final pillSheetModifiedHistoryService =
@@ -794,6 +795,7 @@ void main() {
       );
       final store = container.read(recordPageStoreProvider.notifier);
 
+      await Future.delayed(Duration(seconds: 1));
       await store.revertTaken(
           pillSheetGroup: pillSheetGroup,
           pageIndex: 0,
