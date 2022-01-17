@@ -339,13 +339,21 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
         return pillSheet;
       }
 
-      // Revert対象の日付よりも後ろにある休薬期間のデータは消す
-      final remainingResetDurations = pillSheet.restDurations
-          .where((restDuration) =>
-              restDuration.beginDate.date().isBefore(takenDate))
-          .toList();
-      return pillSheet.copyWith(
-          lastTakenDate: takenDate, restDurations: remainingResetDurations);
+      if (takenDate.isBefore(pillSheet.beginingDate)) {
+        // reset pill sheet when back to one before pill sheet
+        return pillSheet.copyWith(
+            lastTakenDate:
+                pillSheet.beginingDate.subtract(Duration(days: 1)).date(),
+            restDurations: []);
+      } else {
+        // Revert対象の日付よりも後ろにある休薬期間のデータは消す
+        final remainingResetDurations = pillSheet.restDurations
+            .where((restDuration) =>
+                restDuration.beginDate.date().isBefore(takenDate))
+            .toList();
+        return pillSheet.copyWith(
+            lastTakenDate: takenDate, restDurations: remainingResetDurations);
+      }
     }).toList();
 
     final updatedPillSheetGroup =
@@ -367,8 +375,8 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
     );
     _pillSheetGroupService.update(batch, updatedPillSheetGroup);
 
-    final before = pillSheetGroup.pillSheets[updatedIndexses.first];
-    final after = updatedPillSheetGroup.pillSheets[updatedIndexses.last];
+    final before = pillSheetGroup.pillSheets[updatedIndexses.last];
+    final after = updatedPillSheetGroup.pillSheets[updatedIndexses.first];
     final history = PillSheetModifiedHistoryServiceActionFactory
         .createRevertTakenPillAction(
       pillSheetGroupID: pillSheetGroup.id,
