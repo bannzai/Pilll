@@ -34,6 +34,14 @@ class RecordPageRestDurationDialog extends StatelessWidget {
           SizedBox(height: 24),
           SvgPicture.asset("images/explain_rest_duration.svg"),
           SizedBox(height: 24),
+          Text("※休薬の開始日を変えたい場合希望日まで未服用にする必要があります。服用済みのピルマークをタップすることで未服用にできます",
+              style: TextStyle(
+                color: TextColor.main,
+                fontFamily: FontFamily.japanese,
+                fontSize: 14,
+                fontWeight: FontWeight.w400,
+              )),
+          SizedBox(height: 24),
         ],
       ),
       actions: <Widget>[
