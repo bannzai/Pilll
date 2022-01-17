@@ -87,7 +87,7 @@ class RecordPageRestDurationDialogTitle extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Text(_title,
+    return Text("$_numberから休薬しますか？",
         style: TextStyle(
           color: TextColor.main,
           fontSize: 16,
@@ -96,14 +96,14 @@ class RecordPageRestDurationDialogTitle extends StatelessWidget {
         ));
   }
 
-  String get _title {
+  String get _number {
     switch (appearanceMode) {
       case PillSheetAppearanceMode.number:
-        return "${activedPillSheet.todayPillNumber}";
+        return "${activedPillSheet.todayPillNumber}番";
       case PillSheetAppearanceMode.date:
-        return "${activedPillSheet.todayPillNumber}";
+        return "${activedPillSheet.todayPillNumber}日";
       case PillSheetAppearanceMode.sequential:
-        return "${pillSheetGroup.sequentialTodayPillNumber}";
+        return "${pillSheetGroup.sequentialTodayPillNumber}番";
     }
   }
 }
