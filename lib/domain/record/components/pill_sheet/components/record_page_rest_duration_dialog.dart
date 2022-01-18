@@ -107,11 +107,11 @@ class RecordPageRestDurationDialogTitle extends StatelessWidget {
   String get _number {
     switch (appearanceMode) {
       case PillSheetAppearanceMode.number:
-        return "${activedPillSheet.todayPillNumber}番";
+        return "${activedPillSheet.lastTakenPillNumber}番";
       case PillSheetAppearanceMode.date:
-        return "${activedPillSheet.todayPillNumber}日";
+        return "${activedPillSheet.lastTakenPillNumber}日";
       case PillSheetAppearanceMode.sequential:
-        return "${pillSheetGroup.sequentialTodayPillNumber}番";
+        return "${activedPillSheet.lastTakenPillNumber}番";
     }
   }
 }
