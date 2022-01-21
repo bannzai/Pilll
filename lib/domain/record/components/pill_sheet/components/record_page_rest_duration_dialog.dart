@@ -6,6 +6,7 @@ import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/entity/pill_sheet.dart';
 import 'package:pilll/entity/pill_sheet_group.dart';
 import 'package:pilll/entity/setting.dart';
+import 'package:pilll/util/formatter/date_time_formatter.dart';
 
 class RecordPageRestDurationDialog extends StatelessWidget {
   final RecordPageRestDurationDialogTitle title;
@@ -109,7 +110,10 @@ class RecordPageRestDurationDialogTitle extends StatelessWidget {
       case PillSheetAppearanceMode.number:
         return "${activedPillSheet.lastTakenPillNumber - 1}番";
       case PillSheetAppearanceMode.date:
-        return "${activedPillSheet.lastTakenPillNumber - 1}日";
+        final date = activedPillSheet
+            .displayPillTakeDate(activedPillSheet.lastTakenPillNumber);
+        final dateString = DateTimeFormatter.monthAndDay(date);
+        return "$dateString日";
       case PillSheetAppearanceMode.sequential:
         return "${activedPillSheet.lastTakenPillNumber - 1}番";
     }
