@@ -122,14 +122,14 @@ class RecordPageRestDurationDialogTitle extends StatelessWidget {
   String get _number {
     switch (appearanceMode) {
       case PillSheetAppearanceMode.number:
-        return "${activedPillSheet.lastTakenPillNumber - 1}番";
+        return "${activedPillSheet.lastTakenPillNumber + 1}番";
       case PillSheetAppearanceMode.date:
         final date = activedPillSheet
-            .displayPillTakeDate(activedPillSheet.lastTakenPillNumber);
+            .displayPillTakeDate(activedPillSheet.lastTakenPillNumber + 1);
         final dateString = DateTimeFormatter.monthAndDay(date);
         return "$dateString";
       case PillSheetAppearanceMode.sequential:
-        return "${pillSheetGroup.sequentialLastTakenPillNumber - 1}日目";
+        return "${pillSheetGroup.sequentialLastTakenPillNumber + 1}日目";
     }
   }
 }
