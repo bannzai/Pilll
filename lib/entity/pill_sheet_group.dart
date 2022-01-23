@@ -81,4 +81,29 @@ class PillSheetGroup with _$PillSheetGroup {
             pageIndex: activedPillSheet.groupIndex);
     return passedPillCountForPillSheetTypes + activedPillSheet.todayPillNumber;
   }
+
+  int get sequentialLastTakenPillNumber {
+    if (pillSheets.isEmpty) {
+      return 0;
+    }
+    final activedPillSheet = this.activedPillSheet;
+    if (activedPillSheet == null) {
+      return 0;
+    }
+    if (activedPillSheet.groupIndex == 0) {
+      return activedPillSheet.lastTakenPillNumber;
+    }
+    final passedPillSheets = pillSheets.sublist(0, activedPillSheet.groupIndex);
+    if (passedPillSheets.isEmpty) {
+      return activedPillSheet.lastTakenPillNumber;
+    }
+
+    final passedPillCountForPillSheetTypes =
+        summarizedPillSheetTypeTotalCountToPageIndex(
+            pillSheetTypes:
+                passedPillSheets.map((e) => e.pillSheetType).toList(),
+            pageIndex: activedPillSheet.groupIndex);
+    return passedPillCountForPillSheetTypes +
+        activedPillSheet.lastTakenPillNumber;
+  }
 }
