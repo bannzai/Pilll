@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app_badger/flutter_app_badger.dart';
 import 'package:pilll/analytics.dart';
 import 'package:pilll/components/atoms/buttons.dart';
 import 'package:pilll/domain/record/components/pill_sheet/components/record_page_rest_duration_dialog.dart';
@@ -36,25 +37,30 @@ class BeginManualRestDurationButton extends StatelessWidget {
           if (activedPillSheet.todayPillIsAlreadyTaken) {
             showInvalidAlreadyTakenPillDialog(context);
           } else {
-            showRecordPageRestDurationDialog(context,
-                appearanceMode: appearanceMode,
-                pillSheetGroup: pillSheetGroup,
-                activedPillSheet: activedPillSheet, onDone: () async {
-              analytics.logEvent(name: "done_rest_duration");
-              Navigator.of(context).pop();
-              await store.beginResting(
-                pillSheetGroup: pillSheetGroup,
-                activedPillSheet: activedPillSheet,
-              );
-              ScaffoldMessenger.of(context).showSnackBar(
-                SnackBar(
-                  duration: Duration(
-                    seconds: 2,
+            showRecordPageRestDurationDialog(
+              context,
+              appearanceMode: appearanceMode,
+              pillSheetGroup: pillSheetGroup,
+              activedPillSheet: activedPillSheet,
+              onDone: () async {
+                analytics.logEvent(name: "done_rest_duration");
+                FlutterAppBadger.removeBadge();
+
+                Navigator.of(context).pop();
+                await store.beginResting(
+                  pillSheetGroup: pillSheetGroup,
+                  activedPillSheet: activedPillSheet,
+                );
+                ScaffoldMessenger.of(context).showSnackBar(
+                  SnackBar(
+                    duration: Duration(
+                      seconds: 2,
+                    ),
+                    content: Text("休薬期間が始まりました"),
                   ),
-                  content: Text("休薬期間が始まりました"),
-                ),
-              );
-            });
+                );
+              },
+            );
           }
         },
       ),
