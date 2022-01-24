@@ -11,7 +11,7 @@ class ReminderNotificationCustomization
   const factory ReminderNotificationCustomization({
     @Default(pill) String word,
     @Default(false) bool isInVisibleReminderDate,
-    @Default(false) bool isInVisiblePillTakeDate,
+    @Default(false) bool isInVisiblePillNumber,
   }) = _ReminderNotificationCustomization;
   const ReminderNotificationCustomization._();
 

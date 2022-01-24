@@ -26,11 +26,11 @@ class _$ReminderNotificationCustomizationTearOff {
   _ReminderNotificationCustomization call(
       {String word = pill,
       bool isInVisibleReminderDate = false,
-      bool isInVisiblePillTakeDate = false}) {
+      bool isInVisiblePillNumber = false}) {
     return _ReminderNotificationCustomization(
       word: word,
       isInVisibleReminderDate: isInVisibleReminderDate,
-      isInVisiblePillTakeDate: isInVisiblePillTakeDate,
+      isInVisiblePillNumber: isInVisiblePillNumber,
     );
   }
 
@@ -47,7 +47,7 @@ const $ReminderNotificationCustomization =
 mixin _$ReminderNotificationCustomization {
   String get word => throw _privateConstructorUsedError;
   bool get isInVisibleReminderDate => throw _privateConstructorUsedError;
-  bool get isInVisiblePillTakeDate => throw _privateConstructorUsedError;
+  bool get isInVisiblePillNumber => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -62,9 +62,7 @@ abstract class $ReminderNotificationCustomizationCopyWith<$Res> {
           $Res Function(ReminderNotificationCustomization) then) =
       _$ReminderNotificationCustomizationCopyWithImpl<$Res>;
   $Res call(
-      {String word,
-      bool isInVisibleReminderDate,
-      bool isInVisiblePillTakeDate});
+      {String word, bool isInVisibleReminderDate, bool isInVisiblePillNumber});
 }
 
 /// @nodoc
@@ -80,7 +78,7 @@ class _$ReminderNotificationCustomizationCopyWithImpl<$Res>
   $Res call({
     Object? word = freezed,
     Object? isInVisibleReminderDate = freezed,
-    Object? isInVisiblePillTakeDate = freezed,
+    Object? isInVisiblePillNumber = freezed,
   }) {
     return _then(_value.copyWith(
       word: word == freezed
@@ -91,9 +89,9 @@ class _$ReminderNotificationCustomizationCopyWithImpl<$Res>
           ? _value.isInVisibleReminderDate
           : isInVisibleReminderDate // ignore: cast_nullable_to_non_nullable
               as bool,
-      isInVisiblePillTakeDate: isInVisiblePillTakeDate == freezed
-          ? _value.isInVisiblePillTakeDate
-          : isInVisiblePillTakeDate // ignore: cast_nullable_to_non_nullable
+      isInVisiblePillNumber: isInVisiblePillNumber == freezed
+          ? _value.isInVisiblePillNumber
+          : isInVisiblePillNumber // ignore: cast_nullable_to_non_nullable
               as bool,
     ));
   }
@@ -108,9 +106,7 @@ abstract class _$ReminderNotificationCustomizationCopyWith<$Res>
       __$ReminderNotificationCustomizationCopyWithImpl<$Res>;
   @override
   $Res call(
-      {String word,
-      bool isInVisibleReminderDate,
-      bool isInVisiblePillTakeDate});
+      {String word, bool isInVisibleReminderDate, bool isInVisiblePillNumber});
 }
 
 /// @nodoc
@@ -130,7 +126,7 @@ class __$ReminderNotificationCustomizationCopyWithImpl<$Res>
   $Res call({
     Object? word = freezed,
     Object? isInVisibleReminderDate = freezed,
-    Object? isInVisiblePillTakeDate = freezed,
+    Object? isInVisiblePillNumber = freezed,
   }) {
     return _then(_ReminderNotificationCustomization(
       word: word == freezed
@@ -141,9 +137,9 @@ class __$ReminderNotificationCustomizationCopyWithImpl<$Res>
           ? _value.isInVisibleReminderDate
           : isInVisibleReminderDate // ignore: cast_nullable_to_non_nullable
               as bool,
-      isInVisiblePillTakeDate: isInVisiblePillTakeDate == freezed
-          ? _value.isInVisiblePillTakeDate
-          : isInVisiblePillTakeDate // ignore: cast_nullable_to_non_nullable
+      isInVisiblePillNumber: isInVisiblePillNumber == freezed
+          ? _value.isInVisiblePillNumber
+          : isInVisiblePillNumber // ignore: cast_nullable_to_non_nullable
               as bool,
     ));
   }
@@ -157,7 +153,7 @@ class _$_ReminderNotificationCustomization
   const _$_ReminderNotificationCustomization(
       {this.word = pill,
       this.isInVisibleReminderDate = false,
-      this.isInVisiblePillTakeDate = false})
+      this.isInVisiblePillNumber = false})
       : super._();
 
   factory _$_ReminderNotificationCustomization.fromJson(
@@ -172,11 +168,11 @@ class _$_ReminderNotificationCustomization
   final bool isInVisibleReminderDate;
   @JsonKey()
   @override
-  final bool isInVisiblePillTakeDate;
+  final bool isInVisiblePillNumber;
 
   @override
   String toString() {
-    return 'ReminderNotificationCustomization(word: $word, isInVisibleReminderDate: $isInVisibleReminderDate, isInVisiblePillTakeDate: $isInVisiblePillTakeDate)';
+    return 'ReminderNotificationCustomization(word: $word, isInVisibleReminderDate: $isInVisibleReminderDate, isInVisiblePillNumber: $isInVisiblePillNumber)';
   }
 
   @override
@@ -187,8 +183,8 @@ class _$_ReminderNotificationCustomization
             const DeepCollectionEquality().equals(other.word, word) &&
             const DeepCollectionEquality().equals(
                 other.isInVisibleReminderDate, isInVisibleReminderDate) &&
-            const DeepCollectionEquality().equals(
-                other.isInVisiblePillTakeDate, isInVisiblePillTakeDate));
+            const DeepCollectionEquality()
+                .equals(other.isInVisiblePillNumber, isInVisiblePillNumber));
   }
 
   @override
@@ -196,7 +192,7 @@ class _$_ReminderNotificationCustomization
       runtimeType,
       const DeepCollectionEquality().hash(word),
       const DeepCollectionEquality().hash(isInVisibleReminderDate),
-      const DeepCollectionEquality().hash(isInVisiblePillTakeDate));
+      const DeepCollectionEquality().hash(isInVisiblePillNumber));
 
   @JsonKey(ignore: true)
   @override
@@ -216,7 +212,7 @@ abstract class _ReminderNotificationCustomization
   const factory _ReminderNotificationCustomization(
       {String word,
       bool isInVisibleReminderDate,
-      bool isInVisiblePillTakeDate}) = _$_ReminderNotificationCustomization;
+      bool isInVisiblePillNumber}) = _$_ReminderNotificationCustomization;
   const _ReminderNotificationCustomization._() : super._();
 
   factory _ReminderNotificationCustomization.fromJson(
@@ -228,7 +224,7 @@ abstract class _ReminderNotificationCustomization
   @override
   bool get isInVisibleReminderDate;
   @override
-  bool get isInVisiblePillTakeDate;
+  bool get isInVisiblePillNumber;
   @override
   @JsonKey(ignore: true)
   _$ReminderNotificationCustomizationCopyWith<
