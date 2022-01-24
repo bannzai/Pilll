@@ -94,6 +94,47 @@ class ReminderNotificationCustomizeWordPage extends HookConsumerWidget {
                       controller: textFieldControlelr,
                       maxLength: 8,
                     ),
+                    SizedBox(height: 20),
+                    Row(
+                      children: [
+                        Text(
+                          "日付を非表示にする",
+                          style: TextStyle(
+                            color: TextColor.main,
+                            fontFamily: FontFamily.japanese,
+                            fontWeight: FontWeight.w400,
+                            fontSize: 12,
+                          ),
+                        ),
+                        SizedBox(width: 6),
+                        Switch(
+                          value: isInVisibleReminderDate.value,
+                          onChanged: (value) {
+                            isInVisibleReminderDate.value = value;
+                          },
+                        ),
+                      ],
+                    ),
+                    Row(
+                      children: [
+                        Text(
+                          "番号を非表示にする",
+                          style: TextStyle(
+                            color: TextColor.main,
+                            fontFamily: FontFamily.japanese,
+                            fontWeight: FontWeight.w400,
+                            fontSize: 12,
+                          ),
+                        ),
+                        SizedBox(width: 6),
+                        Switch(
+                          value: isInVisiblePillNumber.value,
+                          onChanged: (value) {
+                            isInVisiblePillNumber.value = value;
+                          },
+                        ),
+                      ],
+                    ),
                   ],
                 ),
               ),
