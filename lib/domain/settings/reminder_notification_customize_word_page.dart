@@ -19,6 +19,10 @@ class ReminderNotificationCustomizeWordPage extends HookConsumerWidget {
     final textFieldControlelr = useTextEditingController(
         text: setting.reminderNotificationCustomization.word);
     final word = useState(setting.reminderNotificationCustomization.word);
+    final isInvisibleReminderTime = useState(
+        setting.reminderNotificationCustomization.isInVisibleReminderDate);
+    final isInVisiblePillNumber = useState(
+        setting.reminderNotificationCustomization.isInVisiblePillNumber);
 
     return Scaffold(
       backgroundColor: PilllColors.background,
@@ -44,7 +48,11 @@ class ReminderNotificationCustomizeWordPage extends HookConsumerWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    _ReminderPushNotificationPreview(word: word.value),
+                    _ReminderPushNotificationPreview(
+                      word: word.value,
+                      isInvisibleReminderTime: isInvisibleReminderTime.value,
+                      isInvisiblePillNumber: isInVisiblePillNumber.value,
+                    ),
                     SizedBox(height: 20),
                     TextField(
                       decoration: InputDecoration(
@@ -109,9 +117,15 @@ extension ReminderNotificationCustomizeWordPageRoutes
 
 class _ReminderPushNotificationPreview extends StatelessWidget {
   final String word;
+  final bool isInvisibleReminderTime;
+  final bool isInvisiblePillNumber;
 
-  const _ReminderPushNotificationPreview({Key? key, required this.word})
-      : super(key: key);
+  const _ReminderPushNotificationPreview({
+    Key? key,
+    required this.word,
+    required this.isInvisibleReminderTime,
+    required this.isInvisiblePillNumber,
+  }) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -138,7 +152,7 @@ class _ReminderPushNotificationPreview extends StatelessWidget {
         Row(
           children: [
             Text(
-              "$word 1/7 5番",
+              "$word${isInvisibleReminderTime ? "" : " 1/7"}${isInvisiblePillNumber ? "" : "5番"}",
               style: TextStyle(
                 fontSize: 15,
                 fontWeight: FontWeight.w600,
