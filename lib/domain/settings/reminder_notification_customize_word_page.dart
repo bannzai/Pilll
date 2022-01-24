@@ -109,7 +109,8 @@ class ReminderNotificationCustomizeWordPage extends HookConsumerWidget {
                         SizedBox(width: 6),
                         Switch(
                           value: isInVisibleReminderDate.value,
-                          onChanged: (value) {
+                          onChanged: (value) async {
+                            await store.setIsInVisibleReminderDate(value);
                             isInVisibleReminderDate.value = value;
                           },
                         ),
@@ -129,7 +130,8 @@ class ReminderNotificationCustomizeWordPage extends HookConsumerWidget {
                         SizedBox(width: 6),
                         Switch(
                           value: isInVisiblePillNumber.value,
-                          onChanged: (value) {
+                          onChanged: (value) async {
+                            await store.setIsInVisiblePillNumber(value);
                             isInVisiblePillNumber.value = value;
                           },
                         ),
@@ -193,7 +195,7 @@ class _ReminderPushNotificationPreview extends StatelessWidget {
         Row(
           children: [
             Text(
-              "$word${isInVisibleReminderDate ? "" : " 1/7"}${isInvisiblePillNumber ? "" : "5番"}",
+              "$word${isInVisibleReminderDate ? "" : " 1/7"}${isInvisiblePillNumber ? "" : " 5番"}",
               style: TextStyle(
                 fontSize: 15,
                 fontWeight: FontWeight.w600,

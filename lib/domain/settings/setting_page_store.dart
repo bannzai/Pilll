@@ -220,4 +220,40 @@ class SettingStateStore extends StateNotifier<SettingState> {
                 reminderNotificationCustomization))
         .then((setting) => state = state.copyWith(setting: setting));
   }
+
+  Future<void> setIsInVisibleReminderDate(bool isInVisibleReminderDate) {
+    final setting = state.setting;
+    if (setting == null) {
+      throw FormatException("setting entity not found");
+    }
+
+    var reminderNotificationCustomization =
+        setting.reminderNotificationCustomization;
+    reminderNotificationCustomization = reminderNotificationCustomization
+        .copyWith(isInVisibleReminderDate: isInVisibleReminderDate);
+
+    return _settingService
+        .update(setting.copyWith(
+            reminderNotificationCustomization:
+                reminderNotificationCustomization))
+        .then((setting) => state = state.copyWith(setting: setting));
+  }
+
+  Future<void> setIsInVisiblePillNumber(bool isInVisiblePillNumber) {
+    final setting = state.setting;
+    if (setting == null) {
+      throw FormatException("setting entity not found");
+    }
+
+    var reminderNotificationCustomization =
+        setting.reminderNotificationCustomization;
+    reminderNotificationCustomization = reminderNotificationCustomization
+        .copyWith(isInVisiblePillNumber: isInVisiblePillNumber);
+
+    return _settingService
+        .update(setting.copyWith(
+            reminderNotificationCustomization:
+                reminderNotificationCustomization))
+        .then((setting) => state = state.copyWith(setting: setting));
+  }
 }
