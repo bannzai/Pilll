@@ -19,6 +19,10 @@ class ReminderNotificationCustomizeWordPage extends HookConsumerWidget {
     final textFieldControlelr = useTextEditingController(
         text: setting.reminderNotificationCustomization.word);
     final word = useState(setting.reminderNotificationCustomization.word);
+    final isInVisibleReminderDate = useState(
+        setting.reminderNotificationCustomization.isInVisibleReminderDate);
+    final isInVisiblePillNumber = useState(
+        setting.reminderNotificationCustomization.isInVisiblePillNumber);
 
     return Scaffold(
       backgroundColor: PilllColors.background,
@@ -44,7 +48,11 @@ class ReminderNotificationCustomizeWordPage extends HookConsumerWidget {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    _ReminderPushNotificationPreview(word: word.value),
+                    _ReminderPushNotificationPreview(
+                      word: word.value,
+                      isInVisibleReminderDate: isInVisibleReminderDate.value,
+                      isInvisiblePillNumber: isInVisiblePillNumber.value,
+                    ),
                     SizedBox(height: 20),
                     TextField(
                       decoration: InputDecoration(
@@ -86,6 +94,49 @@ class ReminderNotificationCustomizeWordPage extends HookConsumerWidget {
                       controller: textFieldControlelr,
                       maxLength: 8,
                     ),
+                    SizedBox(height: 20),
+                    Row(
+                      children: [
+                        Text(
+                          "日付を非表示にする",
+                          style: TextStyle(
+                            color: TextColor.main,
+                            fontFamily: FontFamily.japanese,
+                            fontWeight: FontWeight.w400,
+                            fontSize: 12,
+                          ),
+                        ),
+                        SizedBox(width: 6),
+                        Switch(
+                          value: isInVisibleReminderDate.value,
+                          onChanged: (value) async {
+                            await store.setIsInVisibleReminderDate(value);
+                            isInVisibleReminderDate.value = value;
+                          },
+                        ),
+                      ],
+                    ),
+                    Row(
+                      children: [
+                        Text(
+                          "番号を非表示にする",
+                          style: TextStyle(
+                            color: TextColor.main,
+                            fontFamily: FontFamily.japanese,
+                            fontWeight: FontWeight.w400,
+                            fontSize: 12,
+                          ),
+                        ),
+                        SizedBox(width: 6),
+                        Switch(
+                          value: isInVisiblePillNumber.value,
+                          onChanged: (value) async {
+                            await store.setIsInVisiblePillNumber(value);
+                            isInVisiblePillNumber.value = value;
+                          },
+                        ),
+                      ],
+                    ),
                   ],
                 ),
               ),
@@ -109,9 +160,15 @@ extension ReminderNotificationCustomizeWordPageRoutes
 
 class _ReminderPushNotificationPreview extends StatelessWidget {
   final String word;
+  final bool isInVisibleReminderDate;
+  final bool isInvisiblePillNumber;
 
-  const _ReminderPushNotificationPreview({Key? key, required this.word})
-      : super(key: key);
+  const _ReminderPushNotificationPreview({
+    Key? key,
+    required this.word,
+    required this.isInVisibleReminderDate,
+    required this.isInvisiblePillNumber,
+  }) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -138,7 +195,7 @@ class _ReminderPushNotificationPreview extends StatelessWidget {
         Row(
           children: [
             Text(
-              "$word 1/7 5番",
+              "$word${isInVisibleReminderDate ? "" : " 1/7"}${isInvisiblePillNumber ? "" : " 5番"}",
               style: TextStyle(
                 fontSize: 15,
                 fontWeight: FontWeight.w600,

@@ -10,6 +10,8 @@ class ReminderNotificationCustomization
   @JsonSerializable(explicitToJson: true)
   const factory ReminderNotificationCustomization({
     @Default(pill) String word,
+    @Default(false) bool isInVisibleReminderDate,
+    @Default(false) bool isInVisiblePillNumber,
   }) = _ReminderNotificationCustomization;
   const ReminderNotificationCustomization._();
 
