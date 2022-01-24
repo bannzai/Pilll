@@ -11,9 +11,9 @@ _$_ReminderNotificationCustomization
         _$_ReminderNotificationCustomization(
           word: json['word'] as String? ?? pill,
           isInVisibleReminderDate:
-              json['isInVisibleReminderDate'] as bool? ?? true,
+              json['isInVisibleReminderDate'] as bool? ?? false,
           isInVisiblePillTakeDate:
-              json['isInVisiblePillTakeDate'] as bool? ?? true,
+              json['isInVisiblePillTakeDate'] as bool? ?? false,
         );
 
 Map<String, dynamic> _$$_ReminderNotificationCustomizationToJson(

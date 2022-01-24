@@ -25,8 +25,8 @@ class _$ReminderNotificationCustomizationTearOff {
 
   _ReminderNotificationCustomization call(
       {String word = pill,
-      bool isInVisibleReminderDate = true,
-      bool isInVisiblePillTakeDate = true}) {
+      bool isInVisibleReminderDate = false,
+      bool isInVisiblePillTakeDate = false}) {
     return _ReminderNotificationCustomization(
       word: word,
       isInVisibleReminderDate: isInVisibleReminderDate,
@@ -156,8 +156,8 @@ class _$_ReminderNotificationCustomization
     extends _ReminderNotificationCustomization {
   const _$_ReminderNotificationCustomization(
       {this.word = pill,
-      this.isInVisibleReminderDate = true,
-      this.isInVisiblePillTakeDate = true})
+      this.isInVisibleReminderDate = false,
+      this.isInVisiblePillTakeDate = false})
       : super._();
 
   factory _$_ReminderNotificationCustomization.fromJson(
