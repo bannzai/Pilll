@@ -19,7 +19,7 @@ class ReminderNotificationCustomizeWordPage extends HookConsumerWidget {
     final textFieldControlelr = useTextEditingController(
         text: setting.reminderNotificationCustomization.word);
     final word = useState(setting.reminderNotificationCustomization.word);
-    final isInvisibleReminderTime = useState(
+    final isInVisibleReminderDate = useState(
         setting.reminderNotificationCustomization.isInVisibleReminderDate);
     final isInVisiblePillNumber = useState(
         setting.reminderNotificationCustomization.isInVisiblePillNumber);
@@ -50,7 +50,7 @@ class ReminderNotificationCustomizeWordPage extends HookConsumerWidget {
                   children: [
                     _ReminderPushNotificationPreview(
                       word: word.value,
-                      isInvisibleReminderTime: isInvisibleReminderTime.value,
+                      isInVisibleReminderDate: isInVisibleReminderDate.value,
                       isInvisiblePillNumber: isInVisiblePillNumber.value,
                     ),
                     SizedBox(height: 20),
@@ -117,13 +117,13 @@ extension ReminderNotificationCustomizeWordPageRoutes
 
 class _ReminderPushNotificationPreview extends StatelessWidget {
   final String word;
-  final bool isInvisibleReminderTime;
+  final bool isInVisibleReminderDate;
   final bool isInvisiblePillNumber;
 
   const _ReminderPushNotificationPreview({
     Key? key,
     required this.word,
-    required this.isInvisibleReminderTime,
+    required this.isInVisibleReminderDate,
     required this.isInvisiblePillNumber,
   }) : super(key: key);
   @override
@@ -152,7 +152,7 @@ class _ReminderPushNotificationPreview extends StatelessWidget {
         Row(
           children: [
             Text(
-              "$word${isInvisibleReminderTime ? "" : " 1/7"}${isInvisiblePillNumber ? "" : "5番"}",
+              "$word${isInVisibleReminderDate ? "" : " 1/7"}${isInvisiblePillNumber ? "" : "5番"}",
               style: TextStyle(
                 fontSize: 15,
                 fontWeight: FontWeight.w600,
