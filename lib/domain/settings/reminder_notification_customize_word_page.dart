@@ -108,79 +108,31 @@ class ReminderNotificationCustomizeWordPage extends HookConsumerWidget {
                           ),
                         ),
                         SizedBox(height: 4),
-                        Container(
-                          padding: EdgeInsets.symmetric(vertical: 2),
-                          child: Row(
-                            children: [
-                              Text(
-                                "日付を非表示にする",
-                                style: TextStyle(
-                                  color: TextColor.main,
-                                  fontFamily: FontFamily.japanese,
-                                  fontWeight: FontWeight.w400,
-                                  fontSize: 16,
-                                ),
-                              ),
-                              Spacer(),
-                              Switch(
-                                value: isInVisibleReminderDate.value,
-                                onChanged: (value) async {
-                                  await store.setIsInVisibleReminderDate(value);
-                                  isInVisibleReminderDate.value = value;
-                                },
-                              ),
-                            ],
-                          ),
+                        _switchRow(
+                          "日付を非表示にする",
+                          isInVisibleReminderDate.value,
+                          (value) async {
+                            await store.setIsInVisibleReminderDate(value);
+                            isInVisibleReminderDate.value = value;
+                          },
                         ),
                         Divider(),
-                        Container(
-                          padding: EdgeInsets.symmetric(vertical: 2),
-                          child: Row(
-                            children: [
-                              Text(
-                                "番号を非表示にする",
-                                style: TextStyle(
-                                  color: TextColor.main,
-                                  fontFamily: FontFamily.japanese,
-                                  fontWeight: FontWeight.w400,
-                                  fontSize: 16,
-                                ),
-                              ),
-                              Spacer(),
-                              Switch(
-                                value: isInVisiblePillNumber.value,
-                                onChanged: (value) async {
-                                  await store.setIsInVisiblePillNumber(value);
-                                  isInVisiblePillNumber.value = value;
-                                },
-                              ),
-                            ],
-                          ),
+                        _switchRow(
+                          "番号を非表示にする",
+                          isInVisiblePillNumber.value,
+                          (value) async {
+                            await store.setIsInVisiblePillNumber(value);
+                            isInVisiblePillNumber.value = value;
+                          },
                         ),
                         Divider(),
-                        Container(
-                          padding: EdgeInsets.symmetric(vertical: 2),
-                          child: Row(
-                            children: [
-                              Text(
-                                "説明文の表示",
-                                style: TextStyle(
-                                  color: TextColor.main,
-                                  fontFamily: FontFamily.japanese,
-                                  fontWeight: FontWeight.w400,
-                                  fontSize: 16,
-                                ),
-                              ),
-                              Spacer(),
-                              Switch(
-                                value: isInVisibleDescription.value,
-                                onChanged: (value) async {
-                                  await store.setIsInVisibleDescription(value);
-                                  isInVisibleDescription.value = value;
-                                },
-                              ),
-                            ],
-                          ),
+                        _switchRow(
+                          "説明文の表示",
+                          isInVisibleDescription.value,
+                          (value) async {
+                            await store.setIsInVisibleDescription(value);
+                            isInVisibleDescription.value = value;
+                          },
                         ),
                         Divider(),
                       ],
@@ -191,6 +143,31 @@ class ReminderNotificationCustomizeWordPage extends HookConsumerWidget {
             ],
           ),
         ),
+      ),
+    );
+  }
+
+  Widget _switchRow(
+      String title, bool initialValue, ValueChanged<bool> onChanged) {
+    return Container(
+      padding: EdgeInsets.symmetric(vertical: 2),
+      child: Row(
+        children: [
+          Text(
+            title,
+            style: TextStyle(
+              color: TextColor.main,
+              fontFamily: FontFamily.japanese,
+              fontWeight: FontWeight.w400,
+              fontSize: 16,
+            ),
+          ),
+          Spacer(),
+          Switch(
+            value: initialValue,
+            onChanged: onChanged,
+          ),
+        ],
       ),
     );
   }
