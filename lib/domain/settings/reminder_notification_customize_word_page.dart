@@ -199,7 +199,7 @@ class _ReminderPushNotificationPreview extends StatelessWidget {
   }) : super(key: key);
   @override
   // avoid broken editor
-  final emoji = "🤔";
+  final thinkingFace = "🤔";
 
   Widget build(BuildContext context) {
     return Container(
@@ -236,7 +236,7 @@ class _ReminderPushNotificationPreview extends StatelessWidget {
           ),
           if (!isInvisibleDescription)
             Text(
-              "飲み忘れていませんか？\n服用記録がない日が複数あります$emoji",
+              "飲み忘れていませんか？\n服用記録がない日が複数あります$thinkingFace",
               style: TextStyle(
                 fontSize: 14,
                 fontWeight: FontWeight.w400,
