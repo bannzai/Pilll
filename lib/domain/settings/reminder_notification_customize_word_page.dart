@@ -1,6 +1,7 @@
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:pilll/components/atoms/font.dart';
+import 'package:pilll/domain/settings/components/setting_section_title.dart';
 import 'package:pilll/domain/settings/setting_page_store.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/text_color.dart';
@@ -95,48 +96,58 @@ class ReminderNotificationCustomizeWordPage extends HookConsumerWidget {
                       maxLength: 8,
                     ),
                     SizedBox(height: 20),
-                    Row(
-                      children: [
-                        Text(
-                          "日付を非表示にする",
-                          style: TextStyle(
-                            color: TextColor.main,
-                            fontFamily: FontFamily.japanese,
-                            fontWeight: FontWeight.w400,
-                            fontSize: 12,
-                          ),
+                    SettingSectionTitle(text: "詳細設定", children: [
+                      Container(
+                        padding:
+                            EdgeInsets.symmetric(vertical: 12, horizontal: 16),
+                        child: Row(
+                          children: [
+                            Text(
+                              "日付を非表示にする",
+                              style: TextStyle(
+                                color: TextColor.main,
+                                fontFamily: FontFamily.japanese,
+                                fontWeight: FontWeight.w400,
+                                fontSize: 16,
+                              ),
+                            ),
+                            Spacer(),
+                            Switch(
+                              value: isInVisibleReminderDate.value,
+                              onChanged: (value) async {
+                                await store.setIsInVisibleReminderDate(value);
+                                isInVisibleReminderDate.value = value;
+                              },
+                            ),
+                          ],
                         ),
-                        SizedBox(width: 6),
-                        Switch(
-                          value: isInVisibleReminderDate.value,
-                          onChanged: (value) async {
-                            await store.setIsInVisibleReminderDate(value);
-                            isInVisibleReminderDate.value = value;
-                          },
+                      ),
+                      Container(
+                        padding:
+                            EdgeInsets.symmetric(vertical: 12, horizontal: 16),
+                        child: Row(
+                          children: [
+                            Text(
+                              "番号を非表示にする",
+                              style: TextStyle(
+                                color: TextColor.main,
+                                fontFamily: FontFamily.japanese,
+                                fontWeight: FontWeight.w400,
+                                fontSize: 16,
+                              ),
+                            ),
+                            Spacer(),
+                            Switch(
+                              value: isInVisiblePillNumber.value,
+                              onChanged: (value) async {
+                                await store.setIsInVisiblePillNumber(value);
+                                isInVisiblePillNumber.value = value;
+                              },
+                            ),
+                          ],
                         ),
-                      ],
-                    ),
-                    Row(
-                      children: [
-                        Text(
-                          "番号を非表示にする",
-                          style: TextStyle(
-                            color: TextColor.main,
-                            fontFamily: FontFamily.japanese,
-                            fontWeight: FontWeight.w400,
-                            fontSize: 12,
-                          ),
-                        ),
-                        SizedBox(width: 6),
-                        Switch(
-                          value: isInVisiblePillNumber.value,
-                          onChanged: (value) async {
-                            await store.setIsInVisiblePillNumber(value);
-                            isInVisiblePillNumber.value = value;
-                          },
-                        ),
-                      ],
-                    ),
+                      ),
+                    ]),
                   ],
                 ),
               ),
