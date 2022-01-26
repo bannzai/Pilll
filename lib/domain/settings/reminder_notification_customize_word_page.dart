@@ -1,5 +1,6 @@
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:pilll/analytics.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/domain/settings/setting_page_store.dart';
 import 'package:pilll/components/atoms/color.dart';
@@ -87,6 +88,8 @@ class ReminderNotificationCustomizeWordPage extends HookConsumerWidget {
                         word.value = _word;
                       },
                       onSubmitted: (word) async {
+                        analytics.logEvent(
+                            name: "submit_reminder_notification_customize");
                         try {
                           await store.reminderNotificationWordSubmit(word);
                           Navigator.of(context).pop();
@@ -113,6 +116,8 @@ class ReminderNotificationCustomizeWordPage extends HookConsumerWidget {
                           "日付を非表示にする",
                           isInVisibleReminderDate.value,
                           (value) async {
+                            analytics.logEvent(
+                                name: "change_reminder_notification_date");
                             await store.setIsInVisibleReminderDate(value);
                             isInVisibleReminderDate.value = value;
                           },
@@ -122,6 +127,8 @@ class ReminderNotificationCustomizeWordPage extends HookConsumerWidget {
                           "番号を非表示にする",
                           isInVisiblePillNumber.value,
                           (value) async {
+                            analytics.logEvent(
+                                name: "change_reminder_notification_number");
                             await store.setIsInVisiblePillNumber(value);
                             isInVisiblePillNumber.value = value;
                           },
@@ -131,6 +138,8 @@ class ReminderNotificationCustomizeWordPage extends HookConsumerWidget {
                           "説明文の表示",
                           isInVisibleDescription.value,
                           (value) async {
+                            analytics.logEvent(
+                                name: "change_reminder_notification_desc");
                             await store.setIsInVisibleDescription(value);
                             isInVisibleDescription.value = value;
                           },
