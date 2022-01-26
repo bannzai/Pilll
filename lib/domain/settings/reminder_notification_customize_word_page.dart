@@ -113,35 +113,35 @@ class ReminderNotificationCustomizeWordPage extends HookConsumerWidget {
                         ),
                         SizedBox(height: 4),
                         _switchRow(
-                          "日付を非表示にする",
-                          isInVisibleReminderDate.value,
+                          "日付を表示",
+                          !isInVisibleReminderDate.value,
                           (value) async {
                             analytics.logEvent(
                                 name: "change_reminder_notification_date");
-                            await store.setIsInVisibleReminderDate(value);
-                            isInVisibleReminderDate.value = value;
+                            await store.setIsInVisibleReminderDate(!value);
+                            isInVisibleReminderDate.value = !value;
                           },
                         ),
                         Divider(),
                         _switchRow(
-                          "番号を非表示にする",
-                          isInVisiblePillNumber.value,
+                          "番号を表示",
+                          !isInVisiblePillNumber.value,
                           (value) async {
                             analytics.logEvent(
                                 name: "change_reminder_notification_number");
-                            await store.setIsInVisiblePillNumber(value);
-                            isInVisiblePillNumber.value = value;
+                            await store.setIsInVisiblePillNumber(!value);
+                            isInVisiblePillNumber.value = !value;
                           },
                         ),
                         Divider(),
                         _switchRow(
                           "説明文の表示",
-                          isInVisibleDescription.value,
+                          !isInVisibleDescription.value,
                           (value) async {
                             analytics.logEvent(
                                 name: "change_reminder_notification_desc");
-                            await store.setIsInVisibleDescription(value);
-                            isInVisibleDescription.value = value;
+                            await store.setIsInVisibleDescription(!value);
+                            isInVisibleDescription.value = !value;
                           },
                         ),
                         Divider(),
