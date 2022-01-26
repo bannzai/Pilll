@@ -54,6 +54,7 @@ class ReminderNotificationCustomizeWordPage extends HookConsumerWidget {
                       word: word.value,
                       isInVisibleReminderDate: isInVisibleReminderDate.value,
                       isInvisiblePillNumber: isInVisiblePillNumber.value,
+                      isInvisibleDescription: isInVisibleDescription.value,
                     ),
                     SizedBox(height: 20),
                     TextField(
@@ -187,12 +188,14 @@ class _ReminderPushNotificationPreview extends StatelessWidget {
   final String word;
   final bool isInVisibleReminderDate;
   final bool isInvisiblePillNumber;
+  final bool isInvisibleDescription;
 
   const _ReminderPushNotificationPreview({
     Key? key,
     required this.word,
     required this.isInVisibleReminderDate,
     required this.isInvisiblePillNumber,
+    required this.isInvisibleDescription,
   }) : super(key: key);
   @override
   // avoid broken editor
@@ -231,15 +234,16 @@ class _ReminderPushNotificationPreview extends StatelessWidget {
               color: TextColor.black,
             ),
           ),
-          Text(
-            "飲み忘れていませんか？\n服用記録がない日が複数あります$emoji",
-            style: TextStyle(
-              fontSize: 14,
-              fontWeight: FontWeight.w400,
-              fontFamily: FontFamily.japanese,
-              color: TextColor.black,
+          if (!isInvisibleDescription)
+            Text(
+              "飲み忘れていませんか？\n服用記録がない日が複数あります$emoji",
+              style: TextStyle(
+                fontSize: 14,
+                fontWeight: FontWeight.w400,
+                fontFamily: FontFamily.japanese,
+                color: TextColor.black,
+              ),
             ),
-          ),
         ],
       ),
     );
