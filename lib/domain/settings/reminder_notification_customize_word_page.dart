@@ -9,9 +9,9 @@ import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/entity/setting.dart';
 import 'package:pilll/error/error_alert.dart';
 
-class ReminderNotificationCustomizePage extends HookConsumerWidget {
+class ReminderNotificationCustomizeWordPage extends HookConsumerWidget {
   final Setting setting;
-  ReminderNotificationCustomizePage(this.setting);
+  ReminderNotificationCustomizeWordPage(this.setting);
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
@@ -149,11 +149,11 @@ class ReminderNotificationCustomizePage extends HookConsumerWidget {
 }
 
 extension ReminderNotificationCustomizeWordPageRoutes
-    on ReminderNotificationCustomizePage {
+    on ReminderNotificationCustomizeWordPage {
   static Route<dynamic> route({required Setting setting}) {
     return MaterialPageRoute(
       settings: RouteSettings(name: "ReminderNotificationCustomizeWordPage"),
-      builder: (_) => ReminderNotificationCustomizePage(setting),
+      builder: (_) => ReminderNotificationCustomizeWordPage(setting),
     );
   }
 }
