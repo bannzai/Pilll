@@ -1,5 +1,6 @@
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:pilll/analytics.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/domain/settings/setting_page_store.dart';
 import 'package:pilll/components/atoms/color.dart';
@@ -23,6 +24,8 @@ class ReminderNotificationCustomizeWordPage extends HookConsumerWidget {
         setting.reminderNotificationCustomization.isInVisibleReminderDate);
     final isInVisiblePillNumber = useState(
         setting.reminderNotificationCustomization.isInVisiblePillNumber);
+    final isInVisibleDescription = useState(
+        setting.reminderNotificationCustomization.isInVisibleDescription);
 
     return Scaffold(
       backgroundColor: PilllColors.background,
@@ -44,7 +47,7 @@ class ReminderNotificationCustomizeWordPage extends HookConsumerWidget {
           child: ListView(
             children: [
               Container(
-                padding: EdgeInsets.all(20),
+                padding: EdgeInsets.symmetric(vertical: 20, horizontal: 16),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
@@ -52,6 +55,7 @@ class ReminderNotificationCustomizeWordPage extends HookConsumerWidget {
                       word: word.value,
                       isInVisibleReminderDate: isInVisibleReminderDate.value,
                       isInvisiblePillNumber: isInVisiblePillNumber.value,
+                      isInvisibleDescription: isInVisibleDescription.value,
                     ),
                     SizedBox(height: 20),
                     TextField(
@@ -84,6 +88,8 @@ class ReminderNotificationCustomizeWordPage extends HookConsumerWidget {
                         word.value = _word;
                       },
                       onSubmitted: (word) async {
+                        analytics.logEvent(
+                            name: "submit_reminder_notification_customize");
                         try {
                           await store.reminderNotificationWordSubmit(word);
                           Navigator.of(context).pop();
@@ -95,46 +101,50 @@ class ReminderNotificationCustomizeWordPage extends HookConsumerWidget {
                       maxLength: 8,
                     ),
                     SizedBox(height: 20),
-                    Row(
+                    Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
                       children: [
-                        Text(
-                          "日付を非表示にする",
-                          style: TextStyle(
-                            color: TextColor.main,
-                            fontFamily: FontFamily.japanese,
-                            fontWeight: FontWeight.w400,
-                            fontSize: 12,
+                        Container(
+                          child: Text(
+                            "詳細設定",
+                            style: FontType.assisting
+                                .merge(TextColorStyle.primary),
                           ),
                         ),
-                        SizedBox(width: 6),
-                        Switch(
-                          value: isInVisibleReminderDate.value,
-                          onChanged: (value) async {
+                        SizedBox(height: 4),
+                        _switchRow(
+                          "日付を非表示にする",
+                          isInVisibleReminderDate.value,
+                          (value) async {
+                            analytics.logEvent(
+                                name: "change_reminder_notification_date");
                             await store.setIsInVisibleReminderDate(value);
                             isInVisibleReminderDate.value = value;
                           },
                         ),
-                      ],
-                    ),
-                    Row(
-                      children: [
-                        Text(
+                        Divider(),
+                        _switchRow(
                           "番号を非表示にする",
-                          style: TextStyle(
-                            color: TextColor.main,
-                            fontFamily: FontFamily.japanese,
-                            fontWeight: FontWeight.w400,
-                            fontSize: 12,
-                          ),
-                        ),
-                        SizedBox(width: 6),
-                        Switch(
-                          value: isInVisiblePillNumber.value,
-                          onChanged: (value) async {
+                          isInVisiblePillNumber.value,
+                          (value) async {
+                            analytics.logEvent(
+                                name: "change_reminder_notification_number");
                             await store.setIsInVisiblePillNumber(value);
                             isInVisiblePillNumber.value = value;
                           },
                         ),
+                        Divider(),
+                        _switchRow(
+                          "説明文の表示",
+                          isInVisibleDescription.value,
+                          (value) async {
+                            analytics.logEvent(
+                                name: "change_reminder_notification_desc");
+                            await store.setIsInVisibleDescription(value);
+                            isInVisibleDescription.value = value;
+                          },
+                        ),
+                        Divider(),
                       ],
                     ),
                   ],
@@ -143,6 +153,31 @@ class ReminderNotificationCustomizeWordPage extends HookConsumerWidget {
             ],
           ),
         ),
+      ),
+    );
+  }
+
+  Widget _switchRow(
+      String title, bool initialValue, ValueChanged<bool> onChanged) {
+    return Container(
+      padding: EdgeInsets.symmetric(vertical: 2),
+      child: Row(
+        children: [
+          Text(
+            title,
+            style: TextStyle(
+              color: TextColor.main,
+              fontFamily: FontFamily.japanese,
+              fontWeight: FontWeight.w400,
+              fontSize: 16,
+            ),
+          ),
+          Spacer(),
+          Switch(
+            value: initialValue,
+            onChanged: onChanged,
+          ),
+        ],
       ),
     );
   }
@@ -162,14 +197,19 @@ class _ReminderPushNotificationPreview extends StatelessWidget {
   final String word;
   final bool isInVisibleReminderDate;
   final bool isInvisiblePillNumber;
+  final bool isInvisibleDescription;
 
   const _ReminderPushNotificationPreview({
     Key? key,
     required this.word,
     required this.isInVisibleReminderDate,
     required this.isInvisiblePillNumber,
+    required this.isInvisibleDescription,
   }) : super(key: key);
-  @override
+
+  // avoid broken editor
+  final thinkingFace = "🤔";
+
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
@@ -177,35 +217,44 @@ class _ReminderPushNotificationPreview extends StatelessWidget {
         borderRadius: BorderRadius.circular(8),
       ),
       padding: EdgeInsets.all(8),
-      child: Column(children: [
-        Row(children: [
-          SvgPicture.asset("images/pilll_icon.svg"),
-          SizedBox(width: 8),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Row(children: [
+            SvgPicture.asset("images/pilll_icon.svg"),
+            SizedBox(width: 8),
+            Text(
+              "Pilll",
+              style: TextStyle(
+                fontFamily: FontFamily.japanese,
+                fontSize: 13,
+                fontWeight: FontWeight.w400,
+                color: TextColor.lightGray2,
+              ),
+            ),
+          ]),
+          SizedBox(height: 16),
           Text(
-            "Pilll",
+            "$word${isInVisibleReminderDate ? "" : " 1/7"}${isInvisiblePillNumber ? "" : " 5番 ~ 8番"}",
             style: TextStyle(
+              fontSize: 15,
+              fontWeight: FontWeight.w600,
               fontFamily: FontFamily.japanese,
-              fontSize: 13,
-              fontWeight: FontWeight.w400,
-              color: TextColor.lightGray2,
+              color: TextColor.black,
             ),
           ),
-        ]),
-        SizedBox(height: 16),
-        Row(
-          children: [
+          if (!isInvisibleDescription)
             Text(
-              "$word${isInVisibleReminderDate ? "" : " 1/7"}${isInvisiblePillNumber ? "" : " 5番"}",
+              "飲み忘れていませんか？\n服用記録がない日が複数あります$thinkingFace",
               style: TextStyle(
-                fontSize: 15,
-                fontWeight: FontWeight.w600,
+                fontSize: 14,
+                fontWeight: FontWeight.w400,
                 fontFamily: FontFamily.japanese,
                 color: TextColor.black,
               ),
             ),
-          ],
-        ),
-      ]),
+        ],
+      ),
     );
   }
 }

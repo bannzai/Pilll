@@ -14,6 +14,8 @@ _$_ReminderNotificationCustomization
               json['isInVisibleReminderDate'] as bool? ?? false,
           isInVisiblePillNumber:
               json['isInVisiblePillNumber'] as bool? ?? false,
+          isInVisibleDescription:
+              json['isInVisibleDescription'] as bool? ?? false,
         );
 
 Map<String, dynamic> _$$_ReminderNotificationCustomizationToJson(
@@ -22,4 +24,5 @@ Map<String, dynamic> _$$_ReminderNotificationCustomizationToJson(
       'word': instance.word,
       'isInVisibleReminderDate': instance.isInVisibleReminderDate,
       'isInVisiblePillNumber': instance.isInVisiblePillNumber,
+      'isInVisibleDescription': instance.isInVisibleDescription,
     };
