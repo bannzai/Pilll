@@ -153,6 +153,7 @@ class InitialSettingPillSheetGroupPageBody extends StatelessWidget {
             SizedBox(height: 24),
             PrimaryButton(
                 onPressed: () async {
+                  analytics.logEvent(name: "empty_pill_sheet_type");
                   showSettingPillSheetGroupSelectPillSheetTypePage(
                     context: context,
                     pillSheetType: null,
