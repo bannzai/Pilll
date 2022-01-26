@@ -197,7 +197,7 @@ class _ReminderPushNotificationPreview extends StatelessWidget {
     required this.isInvisiblePillNumber,
     required this.isInvisibleDescription,
   }) : super(key: key);
-  @override
+
   // avoid broken editor
   final thinkingFace = "🤔";
 
