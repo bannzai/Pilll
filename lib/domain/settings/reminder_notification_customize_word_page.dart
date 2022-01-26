@@ -195,6 +195,9 @@ class _ReminderPushNotificationPreview extends StatelessWidget {
     required this.isInvisiblePillNumber,
   }) : super(key: key);
   @override
+  // avoid broken editor
+  final emoji = "🤔";
+
   Widget build(BuildContext context) {
     return Container(
       decoration: BoxDecoration(
@@ -202,35 +205,43 @@ class _ReminderPushNotificationPreview extends StatelessWidget {
         borderRadius: BorderRadius.circular(8),
       ),
       padding: EdgeInsets.all(8),
-      child: Column(children: [
-        Row(children: [
-          SvgPicture.asset("images/pilll_icon.svg"),
-          SizedBox(width: 8),
-          Text(
-            "Pilll",
-            style: TextStyle(
-              fontFamily: FontFamily.japanese,
-              fontSize: 13,
-              fontWeight: FontWeight.w400,
-              color: TextColor.lightGray2,
-            ),
-          ),
-        ]),
-        SizedBox(height: 16),
-        Row(
-          children: [
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Row(children: [
+            SvgPicture.asset("images/pilll_icon.svg"),
+            SizedBox(width: 8),
             Text(
-              "$word${isInVisibleReminderDate ? "" : " 1/7"}${isInvisiblePillNumber ? "" : " 5番"}",
+              "Pilll",
               style: TextStyle(
-                fontSize: 15,
-                fontWeight: FontWeight.w600,
                 fontFamily: FontFamily.japanese,
-                color: TextColor.black,
+                fontSize: 13,
+                fontWeight: FontWeight.w400,
+                color: TextColor.lightGray2,
               ),
             ),
-          ],
-        ),
-      ]),
+          ]),
+          SizedBox(height: 16),
+          Text(
+            "$word${isInVisibleReminderDate ? "" : " 1/7"}${isInvisiblePillNumber ? "" : " 5番 ~ 8番"}",
+            style: TextStyle(
+              fontSize: 15,
+              fontWeight: FontWeight.w600,
+              fontFamily: FontFamily.japanese,
+              color: TextColor.black,
+            ),
+          ),
+          Text(
+            "飲み忘れていませんか？\n服用記録がない日が複数あります$emoji",
+            style: TextStyle(
+              fontSize: 14,
+              fontWeight: FontWeight.w400,
+              fontFamily: FontFamily.japanese,
+              color: TextColor.black,
+            ),
+          ),
+        ],
+      ),
     );
   }
 }
