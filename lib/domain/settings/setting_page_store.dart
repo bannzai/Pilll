@@ -256,4 +256,22 @@ class SettingStateStore extends StateNotifier<SettingState> {
                 reminderNotificationCustomization))
         .then((setting) => state = state.copyWith(setting: setting));
   }
+
+  Future<void> setIsInVisibleDescription(bool isInVisibleDescription) {
+    final setting = state.setting;
+    if (setting == null) {
+      throw FormatException("setting entity not found");
+    }
+
+    var reminderNotificationCustomization =
+        setting.reminderNotificationCustomization;
+    reminderNotificationCustomization = reminderNotificationCustomization
+        .copyWith(isInVisibleDescription: isInVisibleDescription);
+
+    return _settingService
+        .update(setting.copyWith(
+            reminderNotificationCustomization:
+                reminderNotificationCustomization))
+        .then((setting) => state = state.copyWith(setting: setting));
+  }
 }

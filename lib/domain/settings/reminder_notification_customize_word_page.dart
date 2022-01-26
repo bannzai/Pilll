@@ -23,6 +23,8 @@ class ReminderNotificationCustomizeWordPage extends HookConsumerWidget {
         setting.reminderNotificationCustomization.isInVisibleReminderDate);
     final isInVisiblePillNumber = useState(
         setting.reminderNotificationCustomization.isInVisiblePillNumber);
+    final isInVisibleDescription = useState(
+        setting.reminderNotificationCustomization.isInVisibleDescription);
 
     return Scaffold(
       backgroundColor: PilllColors.background,
@@ -150,6 +152,31 @@ class ReminderNotificationCustomizeWordPage extends HookConsumerWidget {
                                 onChanged: (value) async {
                                   await store.setIsInVisiblePillNumber(value);
                                   isInVisiblePillNumber.value = value;
+                                },
+                              ),
+                            ],
+                          ),
+                        ),
+                        Divider(),
+                        Container(
+                          padding: EdgeInsets.symmetric(vertical: 2),
+                          child: Row(
+                            children: [
+                              Text(
+                                "説明文の表示",
+                                style: TextStyle(
+                                  color: TextColor.main,
+                                  fontFamily: FontFamily.japanese,
+                                  fontWeight: FontWeight.w400,
+                                  fontSize: 16,
+                                ),
+                              ),
+                              Spacer(),
+                              Switch(
+                                value: isInVisibleDescription.value,
+                                onChanged: (value) async {
+                                  await store.setIsInVisibleDescription(value);
+                                  isInVisibleDescription.value = value;
                                 },
                               ),
                             ],
