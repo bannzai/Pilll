@@ -34,7 +34,6 @@ class SettingMenstruationDynamicDescription extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 156,
       child: Column(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: <Widget>[
@@ -54,6 +53,7 @@ class SettingMenstruationDynamicDescription extends StatelessWidget {
           ),
           Text("何日間生理が続く？",
               style: FontType.assistingBold.merge(TextColorStyle.main)),
+          SizedBox(height: 4),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: <Widget>[
