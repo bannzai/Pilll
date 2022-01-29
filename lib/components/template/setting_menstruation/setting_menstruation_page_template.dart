@@ -51,6 +51,7 @@ class SettingMenstruationPageTemplate extends StatelessWidget {
                 pillSheetList,
                 SizedBox(height: 24),
                 dynamicDescription,
+                SizedBox(height: 100),
               ],
             ),
             if (doneButton != null) ...[

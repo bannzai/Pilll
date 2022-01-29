@@ -59,6 +59,16 @@ class InitialSettingSelectTodayPillNumberPage extends HookConsumerWidget {
                     SizedBox(height: 24),
                     ExplainPillNumber(today: todayString()),
                     SizedBox(height: 16),
+                    InconspicuousButton(
+                      onPressed: () async {
+                        store.unsetTodayPillNumber();
+                        analytics.logEvent(
+                            name: "unknown_number_initial_setting");
+                        Navigator.of(context)
+                            .push(InitialSettingMenstruationPageRoute.route());
+                      },
+                      text: "まだ分からない",
+                    ),
                   ],
                 ),
                 Align(
@@ -66,16 +76,6 @@ class InitialSettingSelectTodayPillNumberPage extends HookConsumerWidget {
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.end,
                     children: [
-                      InconspicuousButton(
-                        onPressed: () async {
-                          store.unsetTodayPillNumber();
-                          analytics.logEvent(
-                              name: "unknown_number_initial_setting");
-                          Navigator.of(context).push(
-                              InitialSettingMenstruationPageRoute.route());
-                        },
-                        text: "まだ分からない",
-                      ),
                       SizedBox(height: 30),
                       PrimaryButton(
                         text: "次へ",
