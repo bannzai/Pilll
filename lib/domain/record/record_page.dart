@@ -68,28 +68,25 @@ class RecordPage extends HookConsumerWidget {
             store: store,
           ),
         ),
-        body: Stack(
-          alignment: AlignmentDirectional.center,
+        body: Column(
           children: [
-            Align(
-              alignment: Alignment.topCenter,
+            Expanded(
               child: SingleChildScrollView(
                 child: Column(
                   children: [
                     NotificationBar(state),
                     SizedBox(height: 37),
                     _content(context, setting, state, store),
+                    SizedBox(height: 20),
                   ],
                 ),
               ),
             ),
             if (activedPillSheet != null &&
                 pillSheetGroup != null &&
-                !pillSheetGroup.isDeactived)
-              Positioned(
-                bottom: 20,
-                child: RecordPageButton(currentPillSheet: activedPillSheet),
-              ),
+                !pillSheetGroup.isDeactived) ...[
+              RecordPageButton(currentPillSheet: activedPillSheet),
+            ],
           ],
         ),
       ),
