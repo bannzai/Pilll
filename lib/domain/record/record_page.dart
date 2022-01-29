@@ -71,16 +71,13 @@ class RecordPage extends HookConsumerWidget {
         body: Column(
           children: [
             Expanded(
-              // Reason of children.reversed and ListView.reverse is true.
-              // Alignment from bottom for small size display device(e.g iPhone8) first view that means displaying priority PillSheet > NotificationBar
               child: ListView(
-                reverse: true,
                 children: [
                   NotificationBar(state),
                   SizedBox(height: 37),
                   _content(context, setting, state, store),
                   SizedBox(height: 20),
-                ].reversed.toList(),
+                ],
               ),
             ),
             if (activedPillSheet != null &&
