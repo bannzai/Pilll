@@ -1,6 +1,7 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'package:pilll/analytics.dart';
 import 'package:pilll/components/atoms/buttons.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
@@ -149,6 +150,10 @@ class CalendarPillSheetModifiedHistoryCard extends StatelessWidget {
                                       child: AppOutlinedButton(
                                         text: "くわしくみる",
                                         onPressed: () async {
+                                          analytics.logEvent(
+                                            name:
+                                                "pressed_show_detail_pill_sheet_history",
+                                          );
                                           if (state.trialDeadlineDate == null) {
                                             showPremiumTrialModal(context, () {
                                               showPremiumTrialCompleteModalPreDialog(
