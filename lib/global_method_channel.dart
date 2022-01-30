@@ -10,7 +10,6 @@ import 'package:pilll/service/pill_sheet_modified_history.dart';
 import 'package:pilll/util/datetime/day.dart';
 import 'package:flutter/services.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:pilll/service/auth.dart';
 
 final _channel = MethodChannel("method.channel.MizukiOhashi.Pilll");
 definedChannel() {
