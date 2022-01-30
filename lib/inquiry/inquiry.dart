@@ -61,10 +61,10 @@ Future<String> debugInfo(String separator) async {
     "buildNumber: $buildNumber",
     "env: ${Environment.isProduction ? "production" : "development"}",
     "user id: $userID",
-    "latestMenstruation: ${menstruation?.toJson()}",
+    "latestMenstruation: ${menstruation?.toDebugJSON()}",
     "pillSheetGroupID: ${pillSheetGroup?.id}",
-    "activedPillSheet: ${pillSheetGroup?.activedPillSheet?.toJson()}",
-    "settingState.entity: ${setting?.toJson()}",
+    "activedPillSheet: ${pillSheetGroup?.activedPillSheet?.toDebugJSON()}",
+    "settingState.entity: ${setting?.toDebugJSON()}",
   ];
   return contents.join(separator);
 }
