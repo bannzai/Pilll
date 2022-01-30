@@ -84,6 +84,7 @@ class RecordPage extends HookConsumerWidget {
                 pillSheetGroup != null &&
                 !pillSheetGroup.isDeactived) ...[
               RecordPageButton(currentPillSheet: activedPillSheet),
+              SizedBox(height: 40),
             ],
           ],
         ),
