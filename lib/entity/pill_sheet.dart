@@ -53,17 +53,6 @@ class RestDuration with _$RestDuration {
 
   factory RestDuration.fromJson(Map<String, dynamic> json) =>
       _$RestDurationFromJson(json);
-
-  Map<String, dynamic> toDebugJSON() {
-    final base = toJson();
-    for (final k in base.keys) {
-      final v = base[k];
-      if (v is DateTime) {
-        base[k] = v.toIso8601String();
-      }
-    }
-    return base;
-  }
 }
 
 @freezed
@@ -219,20 +208,6 @@ class PillSheet with _$PillSheet {
     });
 
     return originDate.add(Duration(days: distance));
-  }
-
-  Map<String, dynamic> toDebugJSON() {
-    final base = toJson();
-    for (final k in base.keys) {
-      final v = base[k];
-      if (v is DateTime) {
-        base[k] = v.toIso8601String();
-      }
-      if (v is RestDuration) {
-        base[k] = v.toDebugJSON();
-      }
-    }
-    return base;
   }
 }
 

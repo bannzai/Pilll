@@ -47,15 +47,4 @@ class Menstruation with _$Menstruation {
   }) = _Menstruation;
 
   DateRange get dateRange => DateRange(beginDate, endDate);
-
-  Map<String, dynamic> toDebugJSON() {
-    final base = toJson();
-    for (final k in base.keys) {
-      final v = base[k];
-      if (v is DateTime) {
-        base[k] = v.toIso8601String();
-      }
-    }
-    return base;
-  }
 }
