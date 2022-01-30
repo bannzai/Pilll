@@ -65,4 +65,15 @@ class Setting with _$Setting {
 
   factory Setting.fromJson(Map<String, dynamic> json) =>
       _$SettingFromJson(json);
+
+  Map<String, dynamic> toDebugJSON() {
+    final base = toJson();
+    for (final k in base.keys) {
+      final v = base[k];
+      if (v is DateTime) {
+        base[k] = v.toIso8601String();
+      }
+    }
+    return base;
+  }
 }
