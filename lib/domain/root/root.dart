@@ -131,7 +131,7 @@ class RootState extends State<Root> {
         screenType = ScreenType.forceUpdate;
       });
     } else {
-      signIn().then((firebaseUser) {
+      cachedUserOrSignInAnonymously().then((firebaseUser) {
         unawaited(
             FirebaseCrashlytics.instance.setUserIdentifier(firebaseUser.uid));
         unawaited(firebaseAnalytics.setUserId(id: firebaseUser.uid));

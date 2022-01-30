@@ -27,7 +27,7 @@ definedChannel() {
 }
 
 Future<void> recordPill() async {
-  final firebaseUser = await signIn();
+  final firebaseUser = await cachedUserOrSignInAnonymously();
   final database = DatabaseConnection(firebaseUser.uid);
   final pillSheetService = PillSheetService(database);
   final pillSheetModifiedHistoryService =

@@ -43,7 +43,7 @@ class _HomePageState extends State<HomePage>
         vsync: this,
         initialIndex: _selectedIndex);
     _tabController.addListener(_handleTabSelection);
-    signIn().then((user) {
+    cachedUserOrSignInAnonymously().then((user) {
       requestNotificationPermissions();
     });
   }
