@@ -81,4 +81,21 @@ class PillSheetGroup with _$PillSheetGroup {
             pageIndex: activedPillSheet.groupIndex);
     return passedPillCountForPillSheetTypes + activedPillSheet.todayPillNumber;
   }
+
+  Map<String, dynamic> toDebugJSON() {
+    final base = toJson();
+    for (final k in base.keys) {
+      final v = base[k];
+      if (v is DateTime) {
+        base[k] = v.toIso8601String();
+      }
+      if (v is List<PillSheet>) {
+        base[k] = v.map((e) => e.toDebugJSON()).toList();
+      }
+      if (v is PillSheet) {
+        base[k] = v.toDebugJSON();
+      }
+    }
+    return base;
+  }
 }
