@@ -1,5 +1,5 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:pilll/entity/pill_sheet_group.dart';
-import 'package:pilll/service/auth.dart';
 import 'package:pilll/database/database.dart';
 import 'package:pilll/entity/menstruation.dart';
 import 'package:pilll/entity/setting.dart';
@@ -20,12 +20,11 @@ inquiry() {
 }
 
 Future<String> debugInfo(String separator) async {
-  String userID;
-  try {
-    userID = (await signIn()).uid;
-  } catch (error) {
+  final userID = FirebaseAuth.instance.currentUser?.uid;
+  if (userID == null) {
     return Future.value("DEBUG INFO user is not found");
   }
+
   DatabaseConnection databaseConnection = DatabaseConnection(userID);
 
   PillSheetGroup? pillSheetGroup;
