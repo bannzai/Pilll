@@ -1,3 +1,4 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter_app_badger/flutter_app_badger.dart';
 import 'package:pilll/analytics.dart';
 import 'package:pilll/database/batch.dart';
@@ -27,7 +28,11 @@ definedChannel() {
 }
 
 Future<void> recordPill() async {
-  final firebaseUser = await cachedUserOrSignInAnonymously();
+  final firebaseUser = FirebaseAuth.instance.currentUser;
+  if (firebaseUser == null) {
+    return;
+  }
+
   final database = DatabaseConnection(firebaseUser.uid);
   final pillSheetService = PillSheetService(database);
   final pillSheetModifiedHistoryService =
