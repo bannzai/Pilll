@@ -4,11 +4,17 @@ import Flutter
 
 @UIApplicationMain
 @objc class AppDelegate: FlutterAppDelegate {
-    let channelName = "method.channel.MizukiOhashi.Pilll"
+    var channel: FlutterMethodChannel?
     override func application(
         _ application: UIApplication,
         didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?
     ) -> Bool {
+        let viewController = window?.rootViewController as! FlutterViewController
+        channel = FlutterMethodChannel(
+            name: "method.channel.MizukiOhashi.Pilll",
+            binaryMessenger: viewController.binaryMessenger
+        )
+
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
             self.migrateFrom_1_3_2()
         }
@@ -19,6 +25,13 @@ import Flutter
         UNUserNotificationCenter.current().delegate = self as UNUserNotificationCenterDelegate
         GeneratedPluginRegistrant.register(with: self)
         return super.application(application, didFinishLaunchingWithOptions: launchOptions)
+    }
+}
+
+// MARK: - Syntax Sugar
+extension AppDelegate {
+    func call(method: String, arguments: [String: Any]?) {
+        channel?.invokeMethod(method, arguments: arguments)
     }
 }
 
