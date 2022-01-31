@@ -22,18 +22,6 @@ import Flutter
     }
 }
 
-// MARK: - Internal
-extension AppDelegate {
-    func call(method: String, arguments: [String: Any]?) {
-        let viewController = window?.rootViewController as! FlutterViewController
-        let channel = FlutterMethodChannel(
-            name: "method.channel.MizukiOhashi.Pilll",
-            binaryMessenger: viewController.binaryMessenger
-        )
-        channel.invokeMethod(method, arguments: arguments)
-    }
-}
-
 // MARK: - Avoid bug for flutter app badger
 // ref: https://github.com/g123k/flutter_app_badger/pull/52
 extension UNUserNotificationCenter {
