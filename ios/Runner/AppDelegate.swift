@@ -14,6 +14,13 @@ import Flutter
             name: "method.channel.MizukiOhashi.Pilll",
             binaryMessenger: viewController.binaryMessenger
         )
+        // DO NOT OVERRIDE AGAIN
+        channel?.setMethodCallHandler({ call, completionHandler in
+            if call.method == "writeMenstrualFlowHealthKitData" {
+                writeMenstrualFlowHealthKitData(arguments: call.arguments)
+                completionHandler()
+            }
+        })
 
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
             self.migrateFrom_1_3_2()
