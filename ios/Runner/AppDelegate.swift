@@ -33,7 +33,7 @@ extension AppDelegate {
     static var instance: AppDelegate? {
         UIApplication.shared.delegate as? AppDelegate
     }
-    func call(method: String, arguments: [String: Any]?) {
+    func invokeFlutterMethod(method: String, arguments: [String: Any]?) {
         channel?.invokeMethod(method, arguments: arguments)
     }
 }
@@ -65,7 +65,7 @@ extension UNUserNotificationCenter {
 extension AppDelegate {
     func migrateFrom_1_3_2() {
         if let salvagedValue = UserDefaults.standard.string(forKey: "startSavedDate"), let lastTakenDate = UserDefaults.standard.string(forKey: "savedDate") {
-            call(method: "salvagedOldStartTakenDate", arguments: ["salvagedOldStartTakenDate": salvagedValue, "salvagedOldLastTakenDate": lastTakenDate])
+            invokeFlutterMethod(method: "salvagedOldStartTakenDate", arguments: ["salvagedOldStartTakenDate": salvagedValue, "salvagedOldLastTakenDate": lastTakenDate])
         }
     }
 
@@ -103,7 +103,7 @@ extension AppDelegate {
         case .pillReminder:
             switch response.actionIdentifier {
             case "RECORD_PILL":
-                call(method: "recordPill", arguments: nil)
+                invokeFlutterMethod(method: "recordPill", arguments: nil)
                 end()
             default:
                 end()
