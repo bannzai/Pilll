@@ -39,33 +39,27 @@ class InitialSettingSelectTodayPillNumberPage extends HookConsumerWidget {
       body: SafeArea(
         child: Container(
           child: Center(
-            child: Stack(
+            child: Column(
               children: [
-                ListView(
-                  children: [
-                    SizedBox(height: 24),
-                    Text(
-                      "今日(${todayString()})\n飲む・飲んだピルの番号をタップ",
-                      style: FontType.sBigTitle.merge(TextColorStyle.main),
-                      textAlign: TextAlign.center,
-                    ),
-                    SizedBox(height: 44),
-                    Center(
-                      child: SelectTodayPillNumberPillSheetList(
-                        state: state,
-                        store: store,
-                      ),
-                    ),
-                    SizedBox(height: 24),
-                    ExplainPillNumber(today: todayString()),
-                    SizedBox(height: 16),
-                  ],
-                ),
-                Align(
-                  alignment: Alignment.bottomCenter,
-                  child: Column(
-                    mainAxisAlignment: MainAxisAlignment.end,
+                Expanded(
+                  child: ListView(
                     children: [
+                      SizedBox(height: 24),
+                      Text(
+                        "今日(${todayString()})\n飲む・飲んだピルの番号をタップ",
+                        style: FontType.sBigTitle.merge(TextColorStyle.main),
+                        textAlign: TextAlign.center,
+                      ),
+                      SizedBox(height: 44),
+                      Center(
+                        child: SelectTodayPillNumberPillSheetList(
+                          state: state,
+                          store: store,
+                        ),
+                      ),
+                      SizedBox(height: 24),
+                      ExplainPillNumber(today: todayString()),
+                      SizedBox(height: 16),
                       InconspicuousButton(
                         onPressed: () async {
                           store.unsetTodayPillNumber();
@@ -76,22 +70,26 @@ class InitialSettingSelectTodayPillNumberPage extends HookConsumerWidget {
                         },
                         text: "まだ分からない",
                       ),
-                      SizedBox(height: 30),
-                      PrimaryButton(
-                        text: "次へ",
-                        onPressed: state.todayPillNumber == null
-                            ? null
-                            : () async {
-                                analytics.logEvent(
-                                    name: "done_today_number_initial_setting");
-                                Navigator.of(context).push(
-                                    InitialSettingMenstruationPageRoute
-                                        .route());
-                              },
-                      ),
-                      SizedBox(height: 35),
                     ],
                   ),
+                ),
+                Column(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  children: [
+                    SizedBox(height: 30),
+                    PrimaryButton(
+                      text: "次へ",
+                      onPressed: state.todayPillNumber == null
+                          ? null
+                          : () async {
+                              analytics.logEvent(
+                                  name: "done_today_number_initial_setting");
+                              Navigator.of(context).push(
+                                  InitialSettingMenstruationPageRoute.route());
+                            },
+                    ),
+                    SizedBox(height: 35),
+                  ],
                 ),
               ],
             ),

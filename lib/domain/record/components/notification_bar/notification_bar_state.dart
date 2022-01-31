@@ -37,6 +37,9 @@ class NotificationBarState with _$NotificationBarState {
     if (activedPillSheet == null) {
       return null;
     }
+    if (activedPillSheet.deletedAt != null) {
+      return null;
+    }
     final restDuration = activedPillSheet.activeRestDuration;
     if (restDuration != null) {
       final day = daysBetween(restDuration.beginDate.date(), today()) + 1;

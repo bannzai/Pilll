@@ -1,13 +1,19 @@
 import 'dart:async';
 import 'dart:io';
 
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:pilll/analytics.dart';
-import 'package:pilll/service/auth.dart';
 import 'package:pilll/database/database.dart';
 import 'package:pilll/service/user.dart';
 import 'package:firebase_messaging/firebase_messaging.dart';
 
 Future<void> requestNotificationPermissions() async {
+  final firebaseUser = FirebaseAuth.instance.currentUser;
+  if (firebaseUser == null) {
+    assert(false);
+    return;
+  }
+
   await FirebaseMessaging.instance.requestPermission();
   if (Platform.isIOS) {
     await FirebaseMessaging.instance
@@ -15,13 +21,11 @@ Future<void> requestNotificationPermissions() async {
             alert: true, badge: true, sound: true);
   }
   callRegisterRemoteNotification();
-  // ignore: unawaited_futures
-  signIn().then((firebaseUser) {
-    final userService = UserService(DatabaseConnection(firebaseUser.uid));
-    userService.fetch().then((_) async {
-      final token = await FirebaseMessaging.instance.getToken();
-      await userService.registerRemoteNotificationToken(token);
-    });
+
+  final userService = UserService(DatabaseConnection(firebaseUser.uid));
+  userService.fetch().then((_) async {
+    final token = await FirebaseMessaging.instance.getToken();
+    await userService.registerRemoteNotificationToken(token);
   });
   return Future.value();
 }

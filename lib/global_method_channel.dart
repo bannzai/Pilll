@@ -1,3 +1,4 @@
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter_app_badger/flutter_app_badger.dart';
 import 'package:pilll/analytics.dart';
 import 'package:pilll/database/batch.dart';
@@ -9,7 +10,6 @@ import 'package:pilll/service/pill_sheet_modified_history.dart';
 import 'package:pilll/util/datetime/day.dart';
 import 'package:flutter/services.dart';
 import 'package:shared_preferences/shared_preferences.dart';
-import 'package:pilll/service/auth.dart';
 
 final _channel = MethodChannel("method.channel.MizukiOhashi.Pilll");
 definedChannel() {
@@ -27,7 +27,11 @@ definedChannel() {
 }
 
 Future<void> recordPill() async {
-  final firebaseUser = await signIn();
+  final firebaseUser = FirebaseAuth.instance.currentUser;
+  if (firebaseUser == null) {
+    return;
+  }
+
   final database = DatabaseConnection(firebaseUser.uid);
   final pillSheetService = PillSheetService(database);
   final pillSheetModifiedHistoryService =

@@ -37,32 +37,32 @@ class SettingMenstruationPageTemplate extends StatelessWidget {
         backgroundColor: PilllColors.white,
       ),
       body: SafeArea(
-        child: Stack(
+        child: Column(
           children: [
-            ListView(
-              children: <Widget>[
-                SizedBox(height: 24),
-                Text(
-                  "生理がはじまるピル番号をタップ",
-                  style: FontType.sBigTitle.merge(TextColorStyle.main),
-                  textAlign: TextAlign.center,
-                ),
-                SizedBox(height: 59),
-                pillSheetList,
-                SizedBox(height: 24),
-                dynamicDescription,
-              ],
+            Expanded(
+              child: ListView(
+                children: <Widget>[
+                  SizedBox(height: 24),
+                  Text(
+                    "生理がはじまるピル番号をタップ",
+                    style: FontType.sBigTitle.merge(TextColorStyle.main),
+                    textAlign: TextAlign.center,
+                  ),
+                  SizedBox(height: 59),
+                  pillSheetList,
+                  SizedBox(height: 24),
+                  dynamicDescription,
+                  SizedBox(height: 20),
+                ],
+              ),
             ),
             if (doneButton != null) ...[
-              Align(
-                alignment: Alignment.bottomCenter,
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.end,
-                  children: [
-                    doneButton,
-                    SizedBox(height: 35),
-                  ],
-                ),
+              Column(
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: [
+                  doneButton,
+                  SizedBox(height: 35),
+                ],
               ),
             ]
           ],

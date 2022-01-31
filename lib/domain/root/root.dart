@@ -116,7 +116,7 @@ class RootState extends State<Root> {
     await remoteConfig.setConfigSettings(
       RemoteConfigSettings(
         minimumFetchInterval: Duration(seconds: 0),
-        fetchTimeout: Duration(seconds: 10),
+        fetchTimeout: Duration(seconds: 30),
       ),
     );
     remoteConfig.setDefaults({
@@ -131,7 +131,7 @@ class RootState extends State<Root> {
         screenType = ScreenType.forceUpdate;
       });
     } else {
-      signIn().then((firebaseUser) {
+      cachedUserOrSignInAnonymously().then((firebaseUser) {
         unawaited(
             FirebaseCrashlytics.instance.setUserIdentifier(firebaseUser.uid));
         unawaited(firebaseAnalytics.setUserId(id: firebaseUser.uid));

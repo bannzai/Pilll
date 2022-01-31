@@ -1,6 +1,5 @@
 import 'package:pilll/analytics.dart';
 import 'package:pilll/entity/diary.dart';
-import 'package:pilll/service/auth.dart';
 import 'package:pilll/domain/calendar/calendar_page.dart';
 import 'package:pilll/domain/menstruation/menstruation_page.dart';
 import 'package:pilll/domain/record/record_page.dart';
@@ -43,9 +42,8 @@ class _HomePageState extends State<HomePage>
         vsync: this,
         initialIndex: _selectedIndex);
     _tabController.addListener(_handleTabSelection);
-    signIn().then((user) {
-      requestNotificationPermissions();
-    });
+
+    requestNotificationPermissions();
   }
 
   @override
