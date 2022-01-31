@@ -30,6 +30,9 @@ import Flutter
 
 // MARK: - Syntax Sugar
 extension AppDelegate {
+    static var instance: AppDelegate? {
+        UIApplication.shared.delegate as? AppDelegate
+    }
     func call(method: String, arguments: [String: Any]?) {
         channel?.invokeMethod(method, arguments: arguments)
     }
