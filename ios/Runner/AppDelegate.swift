@@ -17,8 +17,8 @@ import Flutter
         // DO NOT OVERRIDE AGAIN
         channel?.setMethodCallHandler({ call, completionHandler in
             if call.method == "writeMenstrualFlowHealthKitData" {
-                writeMenstrualFlowHealthKitData(arguments: call.arguments)
-                completionHandler()
+                let result = writeMenstrualFlowHealthKitData(arguments: call.arguments)
+                completionHandler(nil)
             }
         })
 
