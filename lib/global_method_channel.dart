@@ -1,9 +1,13 @@
+import 'dart:io';
+
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter_app_badger/flutter_app_badger.dart';
 import 'package:pilll/analytics.dart';
 import 'package:pilll/database/batch.dart';
 import 'package:pilll/database/database.dart';
 import 'package:pilll/domain/record/util/take.dart';
+import 'package:pilll/entity/menstruation.dart';
 import 'package:pilll/service/pill_sheet.dart';
 import 'package:pilll/service/pill_sheet_group.dart';
 import 'package:pilll/service/pill_sheet_modified_history.dart';
@@ -103,4 +107,39 @@ Future<void> salvagedOldStartTakenDate(dynamic arguments) async {
     storage.setString(
         "salvagedOldLastTakenDate", formattedSalvagedOldLastTakenDate);
   });
+}
+
+Future<void> writeMenstrualFlowHealthKitData(Menstruation menstruation) async {
+  if (!Platform.isIOS) {
+    return;
+  }
+  final isHealthDataAvailable =
+      await _channel.invokeMethod("isHealthDataAvailable");
+  if (isHealthDataAvailable != true) {
+    return;
+  }
+
+// Avoid codec error
+// e.g) Unhandled Exception: Invalid argument: Instance of 'Timestamp'
+  var json = menstruation.toJson();
+  for (final key in json.keys) {
+    final value = json[key];
+    if (value is Timestamp) {
+      json[key] = value.toDate().millisecondsSinceEpoch;
+    }
+  }
+
+  dynamic response =
+      await _channel.invokeMethod("writeMenstrualFlowHealthKitData", {
+    "menstruation": json,
+  });
+
+  print("response: $response");
+  if (response["result"] == "success") {
+    return;
+  } else if (response["result"] == "failure") {
+    throw Exception(response["reason"]);
+  } else {
+    throw Exception("unknown error");
+  }
 }
