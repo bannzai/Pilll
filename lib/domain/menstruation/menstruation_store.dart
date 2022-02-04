@@ -5,6 +5,7 @@ import 'package:pilll/components/organisms/calendar/utility.dart';
 import 'package:pilll/domain/menstruation/menstruation_card_state.dart';
 import 'package:pilll/domain/menstruation/menstruation_history_card_state.dart';
 import 'package:pilll/entity/menstruation.dart';
+import 'package:pilll/global_method_channel.dart';
 import 'package:pilll/service/diary.dart';
 import 'package:pilll/service/menstruation.dart';
 import 'package:pilll/service/pill_sheet.dart';
@@ -129,7 +130,10 @@ class MenstruationStore extends StateNotifier<MenstruationState> {
         beginDate: begin,
         endDate: begin.add(Duration(days: duration - 1)),
         createdAt: now());
-    return menstruationService.create(menstruation);
+
+    writeMenstrualFlowHealthKitData(menstruation);
+
+    return Future.value(menstruation);
   }
 
   Future<Menstruation> recordFromYesterday() {
