@@ -45,6 +45,10 @@ class NotificationBar extends HookConsumerWidget {
     final state = ref.watch(notificationBarStateProvider(parameter));
     final store = ref.watch(notificationBarStoreProvider(parameter).notifier);
     if (!state.isPremium) {
+      if (state.isTrial) {
+        // TODO:
+      }
+
       final premiumTrialLimit = state.premiumTrialLimit;
       if (premiumTrialLimit != null) {
         return PremiumTrialLimitNotificationBar(

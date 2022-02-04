@@ -15,6 +15,7 @@ class NotificationBarState with _$NotificationBarState {
     required bool isTrial,
     required bool isAlreadyShowAnnouncementSupportedMultilplePillSheet,
     required bool hasDiscountEntitlement,
+    required DateTime? beginTrialDate,
     required DateTime? trialDeadlineDate,
     required DateTime? discountEntitlementDeadlineDate,
     required bool recommendedSignupNotificationIsAlreadyShow,
