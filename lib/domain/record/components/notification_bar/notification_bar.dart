@@ -51,11 +51,10 @@ class NotificationBar extends HookConsumerWidget {
         if (state.isTrial) {
           final beginTrialDate = state.beginTrialDate;
           if (beginTrialDate != null) {
-            final differenceInHours = now().difference(beginTrialDate).inHours;
-            final hoursOf14Day = Duration(days: 14).inDays * 24;
-            final hoursOf14DayPlus2 = Duration(days: 14 + 2).inDays * 24;
-            if (differenceInHours > hoursOf14Day &&
-                differenceInHours < hoursOf14DayPlus2) {
+            final difference = now().difference(beginTrialDate).inSeconds;
+            final days14 = Duration(days: 14).inSeconds;
+            final days14Plus2 = Duration(days: 14 + 2).inSeconds;
+            if (difference > days14 && difference < days14Plus2) {
               return RecommendPremiumPlainInTrialNotificationBar(
                 onTap: () {
                   showPremiumIntroductionSheet(context);
