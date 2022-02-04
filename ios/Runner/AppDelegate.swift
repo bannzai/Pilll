@@ -1,6 +1,7 @@
 import UIKit
 import ObjectiveC
 import Flutter
+import HealthKit
 
 @UIApplicationMain
 @objc class AppDelegate: FlutterAppDelegate {
@@ -16,35 +17,42 @@ import Flutter
         )
         // DO NOT OVERRIDE AGAIN
         channel?.setMethodCallHandler({ call, completionHandler in
-            if call.method == "writeMenstrualFlowHealthKitData" {
-                let failure = "failure"
-                let success = "success"
-                requestWriteMenstrualFlowHealthKitDataPermission { result in
-                    switch result {
-                    case .success(let granded):
-                        if granded {
-                            writeMenstrualFlowHealthKitData(arguments: call.arguments) { result in
-                                switch result {
-                                case .success(let isSuccess):
-                                    if isSuccess {
-                                        completionHandler(["result": success])
-                                    } else {
-                                        completionHandler(["result": failure, "reason": "write sample is failed"])
+            switch call.method {
+            case "isHealthDataAvailable":
+                completionHandler(HKHealthStore.isHealthDataAvailable())
+            case "writeMenstrualFlowHealthKitData":
+                if call.method == "writeMenstrualFlowHealthKitData" {
+                    let failure = "failure"
+                    let success = "success"
+                    requestWriteMenstrualFlowHealthKitDataPermission { result in
+                        switch result {
+                        case .success(let granded):
+                            if granded {
+                                writeMenstrualFlowHealthKitData(arguments: call.arguments) { result in
+                                    switch result {
+                                    case .success(let isSuccess):
+                                        if isSuccess {
+                                            completionHandler(["result": success])
+                                        } else {
+                                            completionHandler(["result": failure, "reason": "書き込みに失敗しました"])
+                                        }
+                                    case .failure(let error):
+                                        completionHandler(["result": failure, "reason": error.localizedDescription])
                                     }
-                                case .failure(let error):
-                                    completionHandler(["result": failure, "error": error.localizedDescription])
                                 }
+                            } else {
+                                completionHandler(["result": failure, "reason": "アクセスが許可されませんでした"])
                             }
-                        } else {
-                            completionHandler(["result": failure, "reason": "it is not grand"])
+                        case .failure(let error):
+                            completionHandler([
+                                "result": failure,
+                                "reason": error.localizedDescription
+                            ])
                         }
-                    case .failure(let error):
-                        completionHandler([
-                            "result": failure,
-                            "reason": error.localizedDescription
-                        ])
                     }
                 }
+            case _:
+                return
             }
         })
 
