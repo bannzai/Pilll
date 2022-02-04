@@ -99,6 +99,10 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
             }
             return true;
           }();
+          final recommendPremiumPlainInTrialIsAlreadyClose =
+              sharedPreferences.getBool(
+                      BoolKey.recommendPremiumPlainInTrialIsAlreadyClose) ??
+                  false;
           final recommendedSignupNotificationIsAlreadyShow =
               sharedPreferences.getBool(
                       BoolKey.recommendedSignupNotificationIsAlreadyShow) ??
@@ -119,6 +123,8 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
                 sharedPreferences.getBool(BoolKey
                         .isAlreadyShowAnnouncementSupportedMultilplePillSheet) ??
                     false,
+            recommendPremiumPlainInTrialIsAlreadyClose:
+                recommendPremiumPlainInTrialIsAlreadyClose,
             recommendedSignupNotificationIsAlreadyShow:
                 recommendedSignupNotificationIsAlreadyShow,
             premiumTrialGuideNotificationIsClosed:
