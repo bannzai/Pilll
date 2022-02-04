@@ -11,6 +11,7 @@ import 'package:pilll/domain/premium_trial/premium_trial_modal.dart';
 import 'package:pilll/domain/record/components/notification_bar/components/announce_supported_multiple_pill_sheet.dart';
 import 'package:pilll/domain/record/components/notification_bar/components/discount_price_deadline.dart';
 import 'package:pilll/domain/record/components/notification_bar/components/ended_pill_sheet.dart';
+import 'package:pilll/domain/record/components/notification_bar/components/recommend_premium_plan_in_trial.dart';
 import 'package:pilll/domain/record/components/notification_bar/notification_bar_store.dart';
 import 'package:pilll/domain/record/components/notification_bar/components/premium_trial_guide.dart';
 import 'package:pilll/domain/record/components/notification_bar/components/premium_trial_limit.dart';
@@ -20,6 +21,7 @@ import 'package:pilll/domain/record/components/notification_bar/components/rest_
 import 'package:pilll/domain/record/record_page_state.dart';
 import 'package:pilll/signin/signin_sheet.dart';
 import 'package:pilll/signin/signin_sheet_state.dart';
+import 'package:pilll/util/datetime/day.dart';
 import 'package:pilll/util/shared_preference/keys.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -46,7 +48,23 @@ class NotificationBar extends HookConsumerWidget {
     final store = ref.watch(notificationBarStoreProvider(parameter).notifier);
     if (!state.isPremium) {
       if (state.isTrial) {
-        // TODO:
+        final beginTrialDate = state.beginTrialDate;
+        if (beginTrialDate != null) {
+          final differenceInHours = now().difference(beginTrialDate).inHours;
+          final hoursOf14Day = Duration(days: 14).inDays * 24;
+          final hoursOf14DayPlus2 = Duration(days: 14 + 2).inDays * 24;
+          if (differenceInHours > hoursOf14Day &&
+              differenceInHours < hoursOf14DayPlus2) {
+            return RecommendPremiumPlainInTrialNotificationBar(
+              onTap: () {
+                showPremiumIntroductionSheet(context);
+              },
+              onClose: () {
+                store.closeRecommendedPremiumPlainInTrial();
+              },
+            );
+          }
+        }
       }
 
       final premiumTrialLimit = state.premiumTrialLimit;
