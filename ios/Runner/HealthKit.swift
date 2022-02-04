@@ -32,20 +32,21 @@ func requestWriteMenstrualFlowHealthKitDataPermission(
 }
 
 func writeMenstrualFlowHealthKitData(arguments: Any?, completion: @escaping (Result<Bool, Error>) -> Void) {
-    guard let dictionary = arguments as? Dictionary<String, Any>,
-          let startDate = dictionary["startDate"] as? TimeInterval,
-          let endDate = dictionary["endDate"] as? TimeInterval
+    guard let json = arguments as? Dictionary<String, Any>,
+          let menstruation = json["menstruation"] as? Dictionary<String, Any>,
+          let beginDate = menstruation["beginDate"] as? NSNumber,
+          let endDate = menstruation["endDate"] as? NSNumber
     else {
         completion(.failure("argument is invalid \(String(describing: arguments))"))
         return
     }
 
-    let start = Date(timeIntervalSince1970: startDate / 1000)
-    let end = Date(timeIntervalSince1970: endDate / 1000)
+    let begin = Date(timeIntervalSince1970: beginDate.doubleValue / 1000)
+    let end = Date(timeIntervalSince1970: endDate.doubleValue / 1000)
     let sample = HKCategorySample.init(
         type: HKObjectType.categoryType(forIdentifier: .menstrualFlow)!,
         value: HKCategoryValueMenstrualFlow.unspecified.rawValue,
-        start: start,
+        start: begin,
         end: end,
         metadata: [
             HKMetadataKeyMenstrualCycleStart: true
