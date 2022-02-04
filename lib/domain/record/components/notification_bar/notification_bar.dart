@@ -47,22 +47,24 @@ class NotificationBar extends HookConsumerWidget {
     final state = ref.watch(notificationBarStateProvider(parameter));
     final store = ref.watch(notificationBarStoreProvider(parameter).notifier);
     if (!state.isPremium) {
-      if (state.isTrial) {
-        final beginTrialDate = state.beginTrialDate;
-        if (beginTrialDate != null) {
-          final differenceInHours = now().difference(beginTrialDate).inHours;
-          final hoursOf14Day = Duration(days: 14).inDays * 24;
-          final hoursOf14DayPlus2 = Duration(days: 14 + 2).inDays * 24;
-          if (differenceInHours > hoursOf14Day &&
-              differenceInHours < hoursOf14DayPlus2) {
-            return RecommendPremiumPlainInTrialNotificationBar(
-              onTap: () {
-                showPremiumIntroductionSheet(context);
-              },
-              onClose: () {
-                store.closeRecommendedPremiumPlainInTrial();
-              },
-            );
+      if (!state.recommendPremiumPlainInTrialIsAlreadyClose) {
+        if (state.isTrial) {
+          final beginTrialDate = state.beginTrialDate;
+          if (beginTrialDate != null) {
+            final differenceInHours = now().difference(beginTrialDate).inHours;
+            final hoursOf14Day = Duration(days: 14).inDays * 24;
+            final hoursOf14DayPlus2 = Duration(days: 14 + 2).inDays * 24;
+            if (differenceInHours > hoursOf14Day &&
+                differenceInHours < hoursOf14DayPlus2) {
+              return RecommendPremiumPlainInTrialNotificationBar(
+                onTap: () {
+                  showPremiumIntroductionSheet(context);
+                },
+                onClose: () {
+                  store.closeRecommendedPremiumPlainInTrial();
+                },
+              );
+            }
           }
         }
       }
