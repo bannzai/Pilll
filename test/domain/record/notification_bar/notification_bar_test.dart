@@ -72,7 +72,9 @@ void main() {
           isAlreadyShowAnnouncementSupportedMultilplePillSheet: false,
           isLinkedLoginProvider: false,
           premiumTrialGuideNotificationIsClosed: false,
+          recommendPremiumPlainInTrialIsAlreadyClose: false,
           recommendedSignupNotificationIsAlreadyShow: false,
+          beginTrialDate: null,
           trialDeadlineDate: null,
           discountEntitlementDeadlineDate: today.subtract(Duration(days: 1)),
         );
@@ -135,7 +137,9 @@ void main() {
           isAlreadyShowAnnouncementSupportedMultilplePillSheet: false,
           isLinkedLoginProvider: false,
           premiumTrialGuideNotificationIsClosed: false,
+          recommendPremiumPlainInTrialIsAlreadyClose: false,
           recommendedSignupNotificationIsAlreadyShow: false,
+          beginTrialDate: null,
           trialDeadlineDate: null,
           discountEntitlementDeadlineDate: null,
         );
@@ -197,7 +201,9 @@ void main() {
           isAlreadyShowAnnouncementSupportedMultilplePillSheet: false,
           isLinkedLoginProvider: false,
           premiumTrialGuideNotificationIsClosed: false,
+          recommendPremiumPlainInTrialIsAlreadyClose: false,
           recommendedSignupNotificationIsAlreadyShow: false,
+          beginTrialDate: null,
           trialDeadlineDate: null,
           discountEntitlementDeadlineDate: null,
         );
@@ -258,7 +264,9 @@ void main() {
           isAlreadyShowAnnouncementSupportedMultilplePillSheet: false,
           isLinkedLoginProvider: true,
           premiumTrialGuideNotificationIsClosed: false,
+          recommendPremiumPlainInTrialIsAlreadyClose: false,
           recommendedSignupNotificationIsAlreadyShow: false,
+          beginTrialDate: null,
           trialDeadlineDate: null,
           discountEntitlementDeadlineDate: null,
         );
@@ -320,7 +328,9 @@ void main() {
           isAlreadyShowAnnouncementSupportedMultilplePillSheet: false,
           isLinkedLoginProvider: true,
           premiumTrialGuideNotificationIsClosed: false,
+          recommendPremiumPlainInTrialIsAlreadyClose: false,
           recommendedSignupNotificationIsAlreadyShow: false,
+          beginTrialDate: null,
           trialDeadlineDate: today.add(Duration(days: 1)),
           discountEntitlementDeadlineDate: null,
         );
@@ -381,7 +391,9 @@ void main() {
           isAlreadyShowAnnouncementSupportedMultilplePillSheet: false,
           isLinkedLoginProvider: true,
           premiumTrialGuideNotificationIsClosed: false,
+          recommendPremiumPlainInTrialIsAlreadyClose: false,
           recommendedSignupNotificationIsAlreadyShow: false,
+          beginTrialDate: null,
           trialDeadlineDate: null,
           discountEntitlementDeadlineDate: null,
         );
@@ -444,7 +456,9 @@ void main() {
           isAlreadyShowAnnouncementSupportedMultilplePillSheet: false,
           isLinkedLoginProvider: false,
           premiumTrialGuideNotificationIsClosed: false,
+          recommendPremiumPlainInTrialIsAlreadyClose: false,
           recommendedSignupNotificationIsAlreadyShow: false,
+          beginTrialDate: null,
           trialDeadlineDate: null,
           discountEntitlementDeadlineDate: null,
         );
@@ -505,7 +519,9 @@ void main() {
           isAlreadyShowAnnouncementSupportedMultilplePillSheet: false,
           isLinkedLoginProvider: true,
           premiumTrialGuideNotificationIsClosed: false,
+          recommendPremiumPlainInTrialIsAlreadyClose: false,
           recommendedSignupNotificationIsAlreadyShow: false,
+          beginTrialDate: null,
           trialDeadlineDate: null,
           discountEntitlementDeadlineDate: null,
         );
@@ -566,7 +582,9 @@ void main() {
           isAlreadyShowAnnouncementSupportedMultilplePillSheet: false,
           isLinkedLoginProvider: true,
           premiumTrialGuideNotificationIsClosed: false,
+          recommendPremiumPlainInTrialIsAlreadyClose: false,
           recommendedSignupNotificationIsAlreadyShow: false,
+          beginTrialDate: null,
           trialDeadlineDate: null,
           discountEntitlementDeadlineDate: null,
         );
@@ -629,7 +647,9 @@ void main() {
         isAlreadyShowAnnouncementSupportedMultilplePillSheet: false,
         isLinkedLoginProvider: true,
         premiumTrialGuideNotificationIsClosed: false,
+        recommendPremiumPlainInTrialIsAlreadyClose: false,
         recommendedSignupNotificationIsAlreadyShow: false,
+        beginTrialDate: null,
         trialDeadlineDate: null,
         discountEntitlementDeadlineDate: null,
       );
