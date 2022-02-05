@@ -40,28 +40,26 @@ class SettingStateStore extends StateNotifier<SettingState> {
     this._userService,
     this._pillSheetModifiedHistoryService,
     this._pillSheetGroupService,
-  ) : super(SettingState(setting: null)) {
-    reset();
+  ) : super(SettingState());
+
+  void reset() {
+    state = SettingState();
+    setup();
   }
 
-  void reset() async {
+  setup() {
     try {
-      state = state.copyWith(exception: null);
-      final storage = await SharedPreferences.getInstance();
-      final userIsMigratedFrom132 =
-          storage.containsKey(StringKey.salvagedOldStartTakenDate) &&
-              storage.containsKey(StringKey.salvagedOldLastTakenDate);
-      final setting = await _settingService.fetch();
-      final pillSheetGroup = await _pillSheetGroupService.fetchLatest();
-      final user = await _userService.fetch();
-      this.state = SettingState(
-        setting: setting,
-        userIsUpdatedFrom132: userIsMigratedFrom132,
-        latestPillSheetGroup: pillSheetGroup,
-        isPremium: user.isPremium,
-        isTrial: user.isTrial,
-        trialDeadlineDate: user.trialDeadlineDate,
-      );
+      Future(() async {
+        final storage = await SharedPreferences.getInstance();
+        final userIsMigratedFrom132 =
+            storage.containsKey(StringKey.salvagedOldStartTakenDate) &&
+                storage.containsKey(StringKey.salvagedOldLastTakenDate);
+
+        state = SettingState(
+          userIsUpdatedFrom132: userIsMigratedFrom132,
+        );
+      });
+
       _subscribe();
     } catch (exception) {
       state = state.copyWith(exception: exception);
@@ -72,16 +70,15 @@ class SettingStateStore extends StateNotifier<SettingState> {
   StreamSubscription? _pillSheetGroupCanceller;
   StreamSubscription? _userSubscribeCanceller;
   void _subscribe() {
-    _settingCanceller?.cancel();
+    cancel();
+
     _settingCanceller = _settingService.stream().listen((event) {
       state = state.copyWith(setting: event);
     });
-    _pillSheetGroupCanceller?.cancel();
     _pillSheetGroupCanceller =
         _pillSheetGroupService.streamForLatest().listen((event) {
       state = state.copyWith(latestPillSheetGroup: event);
     });
-    _userSubscribeCanceller?.cancel();
     _userSubscribeCanceller = _userService.stream().listen((event) {
       state = state.copyWith(
         isPremium: event.isPremium,
@@ -91,11 +88,15 @@ class SettingStateStore extends StateNotifier<SettingState> {
     });
   }
 
-  @override
-  void dispose() {
+  void cancel() {
     _settingCanceller?.cancel();
     _pillSheetGroupCanceller?.cancel();
     _userSubscribeCanceller?.cancel();
+  }
+
+  @override
+  void dispose() {
+    cancel();
     super.dispose();
   }
 
