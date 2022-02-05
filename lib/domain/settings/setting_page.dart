@@ -44,6 +44,11 @@ class SettingPage extends HookConsumerWidget {
     final store = ref.watch(settingStoreProvider.notifier);
     final state = ref.watch(settingStoreProvider);
 
+    useEffect(() {
+      store.setup();
+      return store.cancel;
+    }, const []);
+
     return Scaffold(
       backgroundColor: PilllColors.background,
       appBar: AppBar(
