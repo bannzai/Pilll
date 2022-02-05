@@ -2,6 +2,8 @@ extension BoolKey on String {
   static final didEndInitialSetting = "isDidEndInitialSettingKey";
   static final recommendedSignupNotificationIsAlreadyShow =
       "recommendedSignupNotificationIsAlreadyShow";
+  static final recommendPremiumPlainInTrialIsAlreadyClose =
+      "recommendPremiumPlainInTrialIsAlreadyClose";
   static final premiumTrialGuideNotificationIsClosed =
       "premiumTrialGuideNotificationIsClosed";
   static final isAlreadyShowAnnouncementSupportedMultilplePillSheet =
