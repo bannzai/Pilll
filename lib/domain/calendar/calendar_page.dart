@@ -15,6 +15,8 @@ import 'package:flutter/material.dart';
 import 'package:pilll/error/universal_error_page.dart';
 
 class CalendarPage extends HookConsumerWidget {
+  const CalendarPage({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final store = ref.watch(calendarPageStateStoreProvider.notifier);

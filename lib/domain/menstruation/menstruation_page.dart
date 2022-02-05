@@ -28,6 +28,8 @@ abstract class MenstruationPageConst {
 }
 
 class MenstruationPage extends HookConsumerWidget {
+  const MenstruationPage({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final store = ref.watch(menstruationsStoreProvider.notifier);

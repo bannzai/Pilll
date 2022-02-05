@@ -14,6 +14,11 @@ import 'package:flutter_svg/svg.dart';
 import '../../components/organisms/calendar/weekly/weekly_calendar.dart';
 
 GlobalKey<_HomePageState> homeKey = GlobalKey();
+PageStorageKey recordPageKey = PageStorageKey(HomePageTabType.record);
+PageStorageKey menstruationPageKey =
+    PageStorageKey(HomePageTabType.menstruation);
+PageStorageKey calendarPageKey = PageStorageKey(HomePageTabType.calendar);
+PageStorageKey settingPageKey = PageStorageKey(HomePageTabType.setting);
 
 class HomePage extends StatefulWidget {
   HomePage({required Key key}) : super(key: key);
@@ -105,10 +110,10 @@ class _HomePageState extends State<HomePage>
           physics: NeverScrollableScrollPhysics(),
           controller: _tabController,
           children: <Widget>[
-            RecordPage(),
-            MenstruationPage(),
-            CalendarPage(),
-            SettingPage(),
+            RecordPage(key: recordPageKey),
+            MenstruationPage(key: menstruationPageKey),
+            CalendarPage(key: calendarPageKey),
+            SettingPage(key: settingPageKey),
             // SettingsPage(),
           ],
         ),

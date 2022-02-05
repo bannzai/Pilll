@@ -39,6 +39,8 @@ enum SettingSection {
 }
 
 class SettingPage extends HookConsumerWidget {
+  const SettingPage({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final store = ref.watch(settingStoreProvider.notifier);
@@ -47,7 +49,7 @@ class SettingPage extends HookConsumerWidget {
     useEffect(() {
       store.setup();
       return store.cancel;
-    }, const []);
+    }, const [true]);
 
     return Scaffold(
       backgroundColor: PilllColors.background,
