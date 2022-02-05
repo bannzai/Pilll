@@ -49,7 +49,7 @@ class SettingPage extends HookConsumerWidget {
     useEffect(() {
       store.setup();
       return store.cancel;
-    }, const [true]);
+    }, const []);
 
     return Scaffold(
       backgroundColor: PilllColors.background,
