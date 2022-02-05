@@ -73,6 +73,7 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
             hasDiscountEntitlement: user.hasDiscountEntitlement,
             discountEntitlementDeadlineDate:
                 user.discountEntitlementDeadlineDate,
+            beginTrialDate: user.beginTrialDate,
             trialDeadlineDate: user.trialDeadlineDate,
           );
         }),
@@ -167,6 +168,7 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
         isPremium: event.isPremium,
         isTrial: event.isTrial,
         hasDiscountEntitlement: event.hasDiscountEntitlement,
+        beginTrialDate: event.beginTrialDate,
         trialDeadlineDate: event.trialDeadlineDate,
         discountEntitlementDeadlineDate: event.discountEntitlementDeadlineDate,
       );
