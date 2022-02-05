@@ -13,6 +13,7 @@ import 'package:pilll/domain/home/home_page.dart';
 import 'package:pilll/domain/calendar/calendar_page_store.dart';
 import 'package:flutter/material.dart';
 import 'package:pilll/error/universal_error_page.dart';
+import 'package:pilll/hooks/automatic_keep_alive_client_mixin.dart';
 
 class CalendarPage extends HookConsumerWidget {
   @override
@@ -20,6 +21,8 @@ class CalendarPage extends HookConsumerWidget {
     final store = ref.watch(calendarPageStateStoreProvider.notifier);
     final state = ref.watch(calendarPageStateStoreProvider);
     homeKey.currentState?.diaries = state.diariesForMonth;
+
+    useAutomaticKeepAlive(wantKeepAlive: true);
 
     final exception = state.exception;
     if (exception != null) {

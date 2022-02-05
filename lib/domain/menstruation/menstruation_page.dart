@@ -16,6 +16,7 @@ import 'package:pilll/domain/menstruation/menstruation_select_modify_type_sheet.
 import 'package:pilll/domain/record/weekday_badge.dart';
 import 'package:pilll/domain/menstruation/menstruation_store.dart';
 import 'package:pilll/error/universal_error_page.dart';
+import 'package:pilll/hooks/automatic_keep_alive_client_mixin.dart';
 import 'package:pilll/util/datetime/day.dart';
 import 'package:pilll/util/formatter/date_time_formatter.dart';
 
@@ -32,6 +33,8 @@ class MenstruationPage extends HookConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final store = ref.watch(menstruationsStoreProvider.notifier);
     final state = ref.watch(menstruationsStoreProvider);
+
+    useAutomaticKeepAlive(wantKeepAlive: true);
 
     if (state.exception != null) {
       return UniversalErrorPage(

@@ -16,12 +16,14 @@ import 'package:pilll/error/universal_error_page.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:pilll/hooks/automatic_keep_alive_client_mixin.dart';
 
 class RecordPage extends HookConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final state = ref.watch(recordPageStoreProvider);
     final store = ref.watch(recordPageStoreProvider.notifier);
+    useAutomaticKeepAlive(wantKeepAlive: true);
 
     final exception = state.exception;
     if (exception != null) {
