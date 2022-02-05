@@ -39,8 +39,6 @@ enum SettingSection {
 }
 
 class SettingPage extends HookConsumerWidget {
-  const SettingPage({Key? key}) : super(key: key);
-
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final store = ref.watch(settingStoreProvider.notifier);
