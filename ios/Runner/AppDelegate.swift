@@ -29,7 +29,7 @@ import HealthKit
                         switch result {
                         case .success(let granded):
                             if granded {
-                                addMenstrualFlowHealthKitData(arguments: call.arguments, sample: nil) { result in
+                                addMenstrualFlowHealthKitData(arguments: call.arguments) { result in
                                     switch result {
                                     case .success((let object, let isSuccess)):
                                         if isSuccess {
