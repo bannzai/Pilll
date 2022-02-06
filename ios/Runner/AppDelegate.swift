@@ -29,6 +29,15 @@ import HealthKit
                         completionHandler(failure.toDictionary())
                     }
                 }
+            case "updateMenstruationFlowHealthKitData":
+                updateMenstruationFlowHealthKitData(arguments: call.arguments) { result in
+                    switch result {
+                    case .success(let success):
+                        completionHandler(success.toDictionary())
+                    case .failure(let failure):
+                        completionHandler(failure.toDictionary())
+                    }
+                }
             case _:
                 return
             }
