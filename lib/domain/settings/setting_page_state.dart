@@ -8,7 +8,7 @@ part 'setting_page_state.freezed.dart';
 class SettingState with _$SettingState {
   const SettingState._();
   const factory SettingState({
-    required Setting? setting,
+    Setting? setting,
     PillSheetGroup? latestPillSheetGroup,
     @Default(false) bool userIsUpdatedFrom132,
     @Default(false) bool isPremium,

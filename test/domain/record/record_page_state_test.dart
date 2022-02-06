@@ -18,10 +18,15 @@ import '../../helper/mock.mocks.dart';
 
 class _FakeUser extends Fake implements User {
   _FakeUser({
+// ignore: unused_element
     this.fakeIsPremium = false,
+// ignore: unused_element
     this.fakeIsTrial = false,
+// ignore: unused_element
     this.fakeTrialDeadlineDate,
+// ignore: unused_element
     this.fakeDiscountEntitlementDeadlineDate,
+// ignore: unused_element
     this.fakeIsExpiredDiscountEntitlements = false,
   });
   final DateTime? fakeTrialDeadlineDate;
@@ -107,7 +112,8 @@ void main() {
       );
 
       await waitForResetStoreState();
-      expect(state.pillSheetGroup?.pillSheets.first.todayPillIsAlreadyTaken, isTrue);
+      expect(state.pillSheetGroup?.pillSheets.first.todayPillIsAlreadyTaken,
+          isTrue);
       expect(
           store.markFor(pillNumberIntoPillSheet: 1, pillSheet: pillSheetEntity),
           PillMarkType.done);
@@ -180,7 +186,8 @@ void main() {
       );
 
       await waitForResetStoreState();
-      expect(state.pillSheetGroup?.pillSheets.first.todayPillIsAlreadyTaken, isFalse);
+      expect(state.pillSheetGroup?.pillSheets.first.todayPillIsAlreadyTaken,
+          isFalse);
       expect(
           store.markFor(pillNumberIntoPillSheet: 1, pillSheet: pillSheetEntity),
           PillMarkType.done);
@@ -255,7 +262,8 @@ void main() {
       );
 
       await waitForResetStoreState();
-      expect(state.pillSheetGroup?.pillSheets.first.todayPillIsAlreadyTaken, isTrue);
+      expect(state.pillSheetGroup?.pillSheets.first.todayPillIsAlreadyTaken,
+          isTrue);
       for (int i = 1; i <= pillSheetEntity.pillSheetType.totalCount; i++) {
         expect(
             store.shouldPillMarkAnimation(
@@ -325,7 +333,8 @@ void main() {
       );
 
       await waitForResetStoreState();
-      expect(state.pillSheetGroup?.pillSheets.first.todayPillIsAlreadyTaken, isFalse);
+      expect(state.pillSheetGroup?.pillSheets.first.todayPillIsAlreadyTaken,
+          isFalse);
       expect(
           store.shouldPillMarkAnimation(
             pillNumberIntoPillSheet: 3,

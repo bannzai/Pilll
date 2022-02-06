@@ -19,7 +19,7 @@ class _$SettingStateTearOff {
   const _$SettingStateTearOff();
 
   _SettingState call(
-      {required Setting? setting,
+      {Setting? setting,
       PillSheetGroup? latestPillSheetGroup,
       bool userIsUpdatedFrom132 = false,
       bool isPremium = false,
@@ -221,7 +221,7 @@ class __$SettingStateCopyWithImpl<$Res> extends _$SettingStateCopyWithImpl<$Res>
 
 class _$_SettingState extends _SettingState {
   const _$_SettingState(
-      {required this.setting,
+      {this.setting,
       this.latestPillSheetGroup,
       this.userIsUpdatedFrom132 = false,
       this.isPremium = false,
@@ -289,7 +289,7 @@ class _$_SettingState extends _SettingState {
 
 abstract class _SettingState extends SettingState {
   const factory _SettingState(
-      {required Setting? setting,
+      {Setting? setting,
       PillSheetGroup? latestPillSheetGroup,
       bool userIsUpdatedFrom132,
       bool isPremium,

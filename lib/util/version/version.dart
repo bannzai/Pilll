@@ -1,4 +1,5 @@
 import 'package:package_info/package_info.dart';
+import 'package:pilll/util/environment.dart';
 
 class Version {
   final int major;
@@ -13,7 +14,12 @@ class Version {
 
   factory Version.parse(String str) {
     final splited = str.split(".");
-    assert(splited.length <= 3, "unexpected version format $str");
+    if (Environment.isDevelopment) {
+      assert(
+          splited.length <= 3 ||
+              (splited.last == "last" && splited.length == 4),
+          "unexpected version format $str");
+    }
 
     final versions = List.filled(3, 0);
     for (int i = 0; i < splited.length; i++) {

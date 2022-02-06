@@ -17,10 +17,15 @@ import '../../helper/mock.mocks.dart';
 
 class _FakeUser extends Fake implements User {
   _FakeUser({
+// ignore: unused_element
     this.fakeIsPremium = false,
+// ignore: unused_element
     this.fakeIsTrial = false,
+// ignore: unused_element
     this.fakeTrialDeadlineDate,
+// ignore: unused_element
     this.fakeDiscountEntitlementDeadlineDate,
+// ignore: unused_element
     this.fakeIsExpiredDiscountEntitlements = false,
   });
   final DateTime? fakeTrialDeadlineDate;

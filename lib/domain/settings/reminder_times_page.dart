@@ -15,7 +15,7 @@ class ReminderTimesPage extends HookConsumerWidget {
   @override
   Widget build(BuildContext context, WidgetRef ref) {
     final store = ref.watch(settingStoreProvider.notifier);
-    final state = ref.watch(settingStoreProvider);
+    final state = ref.watch(settingStateProvider);
     final setting = state.setting;
 
     if (setting == null) {

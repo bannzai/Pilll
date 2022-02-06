@@ -19,6 +19,7 @@ import 'package:pilll/domain/settings/components/rows/update_from_132.dart';
 import 'package:pilll/domain/settings/components/setting_section_title.dart';
 import 'package:pilll/domain/settings/setting_page_state.dart';
 import 'package:pilll/error/universal_error_page.dart';
+import 'package:pilll/hooks/automatic_keep_alive_client_mixin.dart';
 import 'package:pilll/inquiry/inquiry.dart';
 import 'package:pilll/domain/settings/setting_page_store.dart';
 import 'package:pilll/components/atoms/color.dart';
@@ -43,6 +44,12 @@ class SettingPage extends HookConsumerWidget {
   Widget build(BuildContext context, WidgetRef ref) {
     final store = ref.watch(settingStoreProvider.notifier);
     final state = ref.watch(settingStoreProvider);
+
+    useAutomaticKeepAlive(wantKeepAlive: true);
+    useEffect(() {
+      store.setup();
+      return store.cancel;
+    }, const []);
 
     return Scaffold(
       backgroundColor: PilllColors.background,
