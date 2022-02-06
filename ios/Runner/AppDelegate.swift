@@ -20,15 +20,16 @@ import HealthKit
             switch call.method {
             case "isHealthDataAvailable":
                 completionHandler(HKHealthStore.isHealthDataAvailable())
-            case "writeMenstrualFlowHealthKitData":
+            case "addMenstrualFlowHealthKitData":
                 if call.method == "writeMenstrualFlowHealthKitData" {
                     let failure = "failure"
                     let success = "success"
+
                     requestWriteMenstrualFlowHealthKitDataPermission { result in
                         switch result {
                         case .success(let granded):
                             if granded {
-                                writeMenstrualFlowHealthKitData(arguments: call.arguments) { result in
+                                addMenstrualFlowHealthKitData(arguments: call.arguments, sample: nil) { result in
                                     switch result {
                                     case .success((let object, let isSuccess)):
                                         if isSuccess {

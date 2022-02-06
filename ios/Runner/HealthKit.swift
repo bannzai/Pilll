@@ -18,7 +18,7 @@ func requestWriteMenstrualFlowHealthKitDataPermission(
     completion: @escaping (Result<Bool, Error>) -> Void
 )  {
     if !HKHealthStore.isHealthDataAvailable() {
-        completion(.success(false))
+        completion(.failure("HealthKit not available on Device"))
         return
     }
 
@@ -31,7 +31,7 @@ func requestWriteMenstrualFlowHealthKitDataPermission(
     })
 }
 
-func readMenstruationData(arguments: Any?, completion: @escaping (Result<HKObject, Error>) -> Void) {
+func readMenstruationData(arguments: Any?, completion: @escaping (Result<HKSample, Error>) -> Void) {
     guard let json = arguments as? Dictionary<String, Any>, let menstruation = json["menstruation"] as? Dictionary<String, Any> else {
         completion(.failure("argument is invalid \(String(describing: arguments))"))
         return
@@ -72,7 +72,32 @@ func readMenstruationData(arguments: Any?, completion: @escaping (Result<HKObjec
     store.execute(query)
 }
 
-func writeMenstrualFlowHealthKitData(arguments: Any?, completion: @escaping (Result<(object: HKObject, isSuccess: Bool), Error>) -> Void) {
+func addMenstrualFlowHealthKitData(
+    arguments: Any?,
+    completion: @escaping (Result<(object: HKObject, isSuccess: Bool), Error>) -> Void
+) {
+    writeMenstrualFlowHealthKitData(arguments: arguments, sample: nil, completion: completion)
+}
+
+func updateMenstruationFlowHealthKitData(
+    arguments: Any?,
+    completion: @escaping (Result<(object: HKObject, isSuccess: Bool), Error>) -> Void
+) {
+    readMenstruationData(arguments: arguments) { readResult in
+        switch readResult {
+        case .success(let sample):
+            writeMenstrualFlowHealthKitData(arguments: arguments, sample: sample, completion: completion)
+        case .failure(let error):
+            completion(.failure(error))
+        }
+    }
+}
+
+private func writeMenstrualFlowHealthKitData(
+    arguments: Any?,
+    sample: HKSample?,
+    completion: @escaping (Result<(object: HKObject, isSuccess: Bool), Error>) -> Void
+) {
     guard let json = arguments as? Dictionary<String, Any>,
           let menstruation = json["menstruation"] as? Dictionary<String, Any>,
           let beginDate = menstruation["beginDate"] as? NSNumber,
@@ -84,21 +109,27 @@ func writeMenstrualFlowHealthKitData(arguments: Any?, completion: @escaping (Res
 
     let begin = Date(timeIntervalSince1970: beginDate.doubleValue / 1000)
     let end = Date(timeIntervalSince1970: endDate.doubleValue / 1000)
-    let sample = HKCategorySample.init(
-        type: HKObjectType.categoryType(forIdentifier: .menstrualFlow)!,
-        value: HKCategoryValueMenstrualFlow.unspecified.rawValue,
-        start: begin,
-        end: end,
-        metadata: [
-            HKMetadataKeyMenstrualCycleStart: true
-        ]
-    )
 
-    store.save(sample, withCompletion: { (isSuccess, error) in
+    let writeData: HKSample
+    if let sample = sample {
+        writeData = sample
+    } else {
+        writeData = HKCategorySample.init(
+            type: HKObjectType.categoryType(forIdentifier: .menstrualFlow)!,
+            value: HKCategoryValueMenstrualFlow.unspecified.rawValue,
+            start: begin,
+            end: end,
+            metadata: [
+                HKMetadataKeyMenstrualCycleStart: true
+            ]
+        )
+    }
+
+    store.save(writeData, withCompletion: { (isSuccess, error) in
         if let error = error {
             completion(.failure(error))
         } else {
-            completion(.success((sample, isSuccess)))
+            completion(.success((writeData, isSuccess)))
         }
     })
 }
