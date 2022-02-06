@@ -49,7 +49,7 @@ PODS:
     - Firebase/Messaging (= 8.9.0)
     - firebase_core
     - Flutter
-  - firebase_remote_config (2.0.0):
+  - firebase_remote_config (1.0.3):
     - Firebase/RemoteConfig (= 8.9.0)
     - firebase_core
     - Flutter
@@ -311,7 +311,7 @@ SPEC CHECKSUMS:
   firebase_core: c263d7daf1dc92fcd9895e6abdc04872b0ee07ff
   firebase_crashlytics: 9cbd5d9e8560b218f02fce3c7359567ac822d05f
   firebase_messaging: dff5cd08781ee1de988565a83c977e435405cd7e
-  firebase_remote_config: 467ffe569bc5625f8264f9aeefec2b8786fd1399
+  firebase_remote_config: fad608e4093070bc3759f2d2beb566d4259451b2
   FirebaseABTesting: fc7255f7e96d3cf7a1131fd68636c47e312cef76
   FirebaseAnalytics: 4ab446ce08a3fe52e8a4303dd997cf26276bf968
   FirebaseAuth: 2b78b2a32c07b3ecfa4970bdf1d3632b8304099b
