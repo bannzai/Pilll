@@ -35,7 +35,7 @@ import HealthKit
                                         if isSuccess {
                                             completionHandler([
                                                 "result": success,
-                                                "objectID": object.uuid
+                                                "healthKitSampleDataUUID": object.uuid.uuidString
                                             ])
                                         } else {
                                             completionHandler(["result": failure, "reason": "書き込みに失敗しました"])

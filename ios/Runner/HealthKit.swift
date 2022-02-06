@@ -36,12 +36,12 @@ func readMenstruationData(arguments: Any?, completion: @escaping (Result<HKSampl
         completion(.failure("argument is invalid \(String(describing: arguments))"))
         return
     }
-    guard let uuidString = menstruation["healthKitObjectUUID"] as? String else {
-        completion(.failure("healthKitObjectUUID is not found"))
+    guard let uuidString = menstruation["healthKitSampleDataUUID"] as? String else {
+        completion(.failure("healthKitSampleDataUUID is not found"))
         return
     }
     guard let uuid = UUID(uuidString: uuidString) else {
-        completion(.failure("healthKitObjectUUID is invalid: \(uuidString)"))
+        completion(.failure("healthKitSampleDataUUID is invalid: \(uuidString)"))
         return
     }
     guard let menstrualFlowSample = HKSampleType.categoryType(forIdentifier: .menstrualFlow) else {
