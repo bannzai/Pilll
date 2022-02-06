@@ -14,38 +14,47 @@ let readTypes: Set<HKObjectType>? = {
     return [object]
 }()
 
+struct HealthKitGeneralError: Error {
+    let result = "failure"
+    let reason: String
+
+    func toDictionary() -> [String: Any] {
+        ["result": result, "reason": reason]
+    }
+}
+
 func requestWriteMenstrualFlowHealthKitDataPermission(
-    completion: @escaping (Result<Bool, Error>) -> Void
+    completion: @escaping (Result<Bool, HealthKitGeneralError>) -> Void
 )  {
     if !HKHealthStore.isHealthDataAvailable() {
-        completion(.failure("HealthKit not available on Device"))
+        completion(.failure(.init(reason: "ヘルスキットはお使いのデバイスで対応していません")))
         return
     }
 
     store.requestAuthorization(toShare: writeTypes, read: readTypes, completion: { (status, error) in
         if let error = error {
-            completion(.failure(error))
+            completion(.failure(.init(reason: error.localizedDescription)))
         } else {
             completion(.success(status))
         }
     })
 }
 
-func readMenstruationData(arguments: Any?, completion: @escaping (Result<HKSample, Error>) -> Void) {
+func readMenstruationData(arguments: Any?, completion: @escaping (Result<HKSample, HealthKitGeneralError>) -> Void) {
     guard let json = arguments as? Dictionary<String, Any>, let menstruation = json["menstruation"] as? Dictionary<String, Any> else {
         completion(.failure(.init(reason: "生理データの読み込みに失敗しました arguments: \(String(describing: arguments))")))
         return
     }
     guard let uuidString = menstruation["healthKitSampleDataUUID"] as? String else {
-        completion(.failure("ヘルスケアデータのIDが発見できませんでした"))
+        completion(.failure(.init(reason: "ヘルスケアデータのIDが発見できませんでした")))
         return
     }
     guard let uuid = UUID(uuidString: uuidString) else {
-        completion(.failure("ヘルスケアデータのIDのフォーマットに失敗しました: \(uuidString)"))
+        completion(.failure(.init(reason: "ヘルスケアデータのIDのフォーマットに失敗しました: \(uuidString)")))
         return
     }
     guard let menstrualFlowSample = HKSampleType.categoryType(forIdentifier: .menstrualFlow) else {
-        completion(.failure("ヘルスケアが生理データに対応していません"))
+        completion(.failure(.init(reason: "ヘルスケアが生理データに対応していません")))
         return
     }
     
@@ -56,15 +65,15 @@ func readMenstruationData(arguments: Any?, completion: @escaping (Result<HKSampl
         // Dispatch to the main queue before modifying the UI.
         DispatchQueue.main.async {
             if let error = error {
-                completion(.failure(error))
+                completion(.failure(.init(reason: error.localizedDescription)))
             } else if let samples = samples {
                 if let sample = samples.first {
                     completion(.success(sample))
                 } else {
-                    completion(.failure("ヘルスケアからデータが取得できませんでした"))
+                    completion(.failure(.init(reason: "ヘルスケアからデータが取得できませんでした")))
                 }
             } else {
-                completion(.failure("ヘルスケアからのデータ読み込みに失敗しました"))
+                completion(.failure(.init(reason: "ヘルスケアからのデータ読み込みに失敗しました")))
             }
         }
     }
@@ -74,14 +83,8 @@ func readMenstruationData(arguments: Any?, completion: @escaping (Result<HKSampl
 
 // MARK: - Write
 enum HealthKitWriteResult {
-    struct Failure: Error {
-        let result = "failure"
-        let reason: String
+    typealias Failure = HealthKitGeneralError
 
-        func toDictionary() -> [String: Any] {
-            ["result": result, "reason": reason]
-        }
-    }
     struct Success {
         let result = "success"
         let healthKitSampleDataUUID: UUID

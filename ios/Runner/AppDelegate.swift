@@ -20,6 +20,15 @@ import HealthKit
             switch call.method {
             case "isHealthDataAvailable":
                 completionHandler(HKHealthStore.isHealthDataAvailable())
+            case "requestWriteMenstrualFlowHealthKitDataPermission":
+                requestWriteMenstrualFlowHealthKitDataPermission { result in
+                    switch result {
+                    case .success(let isSuccess):
+                        completionHandler(["isSuccess": isSuccess])
+                    case .failure(let error):
+                        completionHandler(error.toDictionary())
+                    }
+                }
             case "addMenstrualFlowHealthKitData":
                 addMenstrualFlowHealthKitData(arguments: call.arguments) { result in
                     switch result {
