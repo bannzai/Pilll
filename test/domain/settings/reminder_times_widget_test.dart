@@ -20,9 +20,13 @@ import '../../helper/supported_device.dart';
 
 class _FakeUser extends Fake implements User {
   _FakeUser({
+// ignore: unused_element
     this.fakeIsPremium = false,
+// ignore: unused_element
     this.fakeIsTrial = false,
+// ignore: unused_element
     this.fakeIsExpiredDiscountEntitlements = false,
+// ignore: unused_element
     this.fakeIsTrialDeadlineDate,
   });
   final bool fakeIsPremium;
