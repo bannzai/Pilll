@@ -31,6 +31,47 @@ func requestWriteMenstrualFlowHealthKitDataPermission(
     })
 }
 
+func readMenstruationData(arguments: Any?, completion: @escaping (Result<HKObject, Error>) -> Void) {
+    guard let json = arguments as? Dictionary<String, Any>, let menstruation = json["menstruation"] as? Dictionary<String, Any> else {
+        completion(.failure("argument is invalid \(String(describing: arguments))"))
+        return
+    }
+    guard let uuidString = menstruation["healthKitObjectUUID"] as? String else {
+        completion(.failure("healthKitObjectUUID is not found"))
+        return
+    }
+    guard let uuid = UUID(uuidString: uuidString) else {
+        completion(.failure("healthKitObjectUUID is invalid: \(uuidString)"))
+        return
+    }
+    guard let menstrualFlowSample = HKSampleType.categoryType(forIdentifier: .menstrualFlow) else {
+        completion(.failure("menstrualFlowSample is not available"))
+        return
+    }
+    
+
+    let predicate = HKQuery.predicateForObject(with: uuid)
+    let query = HKSampleQuery(sampleType: menstrualFlowSample, predicate: predicate, limit: HKObjectQueryNoLimit, sortDescriptors: nil) { sampleQuery, samples, error in
+        // The results come back on an anonymous background queue.
+        // Dispatch to the main queue before modifying the UI.
+        DispatchQueue.main.async {
+            if let error = error {
+                completion(.failure(error))
+            } else if let samples = samples {
+                if let sample = samples.first {
+                    completion(.success(sample))
+                } else {
+                    completion(.failure("retrieved samples is empty"))
+                }
+            } else {
+                completion(.failure("Unexpected query result for samples and error are empty"))
+            }
+        }
+    }
+
+    store.execute(query)
+}
+
 func writeMenstrualFlowHealthKitData(arguments: Any?, completion: @escaping (Result<(object: HKObject, isSuccess: Bool), Error>) -> Void) {
     guard let json = arguments as? Dictionary<String, Any>,
           let menstruation = json["menstruation"] as? Dictionary<String, Any>,
@@ -52,7 +93,6 @@ func writeMenstrualFlowHealthKitData(arguments: Any?, completion: @escaping (Res
             HKMetadataKeyMenstrualCycleStart: true
         ]
     )
-
 
     store.save(sample, withCompletion: { (isSuccess, error) in
         if let error = error {
