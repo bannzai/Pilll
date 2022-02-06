@@ -21,38 +21,12 @@ import HealthKit
             case "isHealthDataAvailable":
                 completionHandler(HKHealthStore.isHealthDataAvailable())
             case "addMenstrualFlowHealthKitData":
-                if call.method == "writeMenstrualFlowHealthKitData" {
-                    let failure = "failure"
-                    let success = "success"
-
-                    requestWriteMenstrualFlowHealthKitDataPermission { result in
-                        switch result {
-                        case .success(let granded):
-                            if granded {
-                                addMenstrualFlowHealthKitData(arguments: call.arguments) { result in
-                                    switch result {
-                                    case .success((let object, let isSuccess)):
-                                        if isSuccess {
-                                            completionHandler([
-                                                "result": success,
-                                                "healthKitSampleDataUUID": object.uuid.uuidString
-                                            ])
-                                        } else {
-                                            completionHandler(["result": failure, "reason": "書き込みに失敗しました"])
-                                        }
-                                    case .failure(let error):
-                                        completionHandler(["result": failure, "reason": error.localizedDescription])
-                                    }
-                                }
-                            } else {
-                                completionHandler(["result": failure, "reason": "アクセスが許可されませんでした"])
-                            }
-                        case .failure(let error):
-                            completionHandler([
-                                "result": failure,
-                                "reason": error.localizedDescription
-                            ])
-                        }
+                addMenstrualFlowHealthKitData(arguments: call.arguments) { result in
+                    switch result {
+                    case .success(let success):
+                        completionHandler(success.toDictionary())
+                    case .failure(let failure):
+                        completionHandler(failure.toDictionary())
                     }
                 }
             case _:

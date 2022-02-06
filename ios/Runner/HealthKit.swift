@@ -33,19 +33,19 @@ func requestWriteMenstrualFlowHealthKitDataPermission(
 
 func readMenstruationData(arguments: Any?, completion: @escaping (Result<HKSample, Error>) -> Void) {
     guard let json = arguments as? Dictionary<String, Any>, let menstruation = json["menstruation"] as? Dictionary<String, Any> else {
-        completion(.failure("argument is invalid \(String(describing: arguments))"))
+        completion(.failure(.init(reason: "生理データの読み込みに失敗しました arguments: \(String(describing: arguments))")))
         return
     }
     guard let uuidString = menstruation["healthKitSampleDataUUID"] as? String else {
-        completion(.failure("healthKitSampleDataUUID is not found"))
+        completion(.failure("ヘルスケアデータのIDが発見できませんでした"))
         return
     }
     guard let uuid = UUID(uuidString: uuidString) else {
-        completion(.failure("healthKitSampleDataUUID is invalid: \(uuidString)"))
+        completion(.failure("ヘルスケアデータのIDのフォーマットに失敗しました: \(uuidString)"))
         return
     }
     guard let menstrualFlowSample = HKSampleType.categoryType(forIdentifier: .menstrualFlow) else {
-        completion(.failure("menstrualFlowSample is not available"))
+        completion(.failure("ヘルスケアが生理データに対応していません"))
         return
     }
     
@@ -61,10 +61,10 @@ func readMenstruationData(arguments: Any?, completion: @escaping (Result<HKSampl
                 if let sample = samples.first {
                     completion(.success(sample))
                 } else {
-                    completion(.failure("retrieved samples is empty"))
+                    completion(.failure("ヘルスケアからデータが取得できませんでした"))
                 }
             } else {
-                completion(.failure("Unexpected query result for samples and error are empty"))
+                completion(.failure("ヘルスケアからのデータ読み込みに失敗しました"))
             }
         }
     }
@@ -72,23 +72,43 @@ func readMenstruationData(arguments: Any?, completion: @escaping (Result<HKSampl
     store.execute(query)
 }
 
+// MARK: - Write
+enum HealthKitWriteResult {
+    struct Failure: Error {
+        let result = "failure"
+        let reason: String
+
+        func toDictionary() -> [String: Any] {
+            ["result": result, "reason": reason]
+        }
+    }
+    struct Success {
+        let result = "success"
+        let healthKitSampleDataUUID: UUID
+
+        func toDictionary() -> [String: Any] {
+            ["result": result, "healthKitSampleDataUUID": healthKitSampleDataUUID.uuidString]
+        }
+    }
+}
+
 func addMenstrualFlowHealthKitData(
     arguments: Any?,
-    completion: @escaping (Result<(object: HKObject, isSuccess: Bool), Error>) -> Void
+    completion: @escaping (Result<HealthKitWriteResult.Success, HealthKitWriteResult.Failure>) -> Void
 ) {
     writeMenstrualFlowHealthKitData(arguments: arguments, sample: nil, completion: completion)
 }
 
 func updateMenstruationFlowHealthKitData(
     arguments: Any?,
-    completion: @escaping (Result<(object: HKObject, isSuccess: Bool), Error>) -> Void
+    completion: @escaping (Result<HealthKitWriteResult.Success, HealthKitWriteResult.Failure>) -> Void
 ) {
     readMenstruationData(arguments: arguments) { readResult in
         switch readResult {
         case .success(let sample):
             writeMenstrualFlowHealthKitData(arguments: arguments, sample: sample, completion: completion)
         case .failure(let error):
-            completion(.failure(error))
+            completion(.failure(.init(reason: error.localizedDescription)))
         }
     }
 }
@@ -96,14 +116,14 @@ func updateMenstruationFlowHealthKitData(
 private func writeMenstrualFlowHealthKitData(
     arguments: Any?,
     sample: HKSample?,
-    completion: @escaping (Result<(object: HKObject, isSuccess: Bool), Error>) -> Void
+    completion: @escaping (Result<HealthKitWriteResult.Success, HealthKitWriteResult.Failure>) -> Void
 ) {
     guard let json = arguments as? Dictionary<String, Any>,
           let menstruation = json["menstruation"] as? Dictionary<String, Any>,
           let beginDate = menstruation["beginDate"] as? NSNumber,
           let endDate = menstruation["endDate"] as? NSNumber
     else {
-        completion(.failure("argument is invalid \(String(describing: arguments))"))
+        completion(.failure(.init(reason: "生理データの書き込みに失敗しました arguments: \(String(describing: arguments))")))
         return
     }
 
@@ -127,9 +147,13 @@ private func writeMenstrualFlowHealthKitData(
 
     store.save(writeData, withCompletion: { (isSuccess, error) in
         if let error = error {
-            completion(.failure(error))
+            completion(.failure(.init(reason: error.localizedDescription)))
         } else {
-            completion(.success((writeData, isSuccess)))
+            if isSuccess {
+                completion(.success(.init(healthKitSampleDataUUID: writeData.uuid)))
+            } else {
+                completion(.failure(.init(reason: "書き込みに失敗しました")))
+            }
         }
     })
 }
