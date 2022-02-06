@@ -16,10 +16,14 @@ import HealthKit
             binaryMessenger: viewController.binaryMessenger
         )
         // DO NOT OVERRIDE AGAIN
-        channel?.setMethodCallHandler({ call, completionHandler in
+        channel?.setMethodCallHandler({ call, _completionHandler in
+            let completionHandler: (Dictionary<String, Any>) -> Void = {
+                _completionHandler($0)
+            }
+
             switch call.method {
             case "isHealthDataAvailable":
-                completionHandler(HKHealthStore.isHealthDataAvailable())
+                completionHandler(["isHealthDataAvailable": HKHealthStore.isHealthDataAvailable()])
             case "requestWriteMenstrualFlowHealthKitDataPermission":
                 requestWriteMenstrualFlowHealthKitDataPermission { result in
                     switch result {
