@@ -29,6 +29,7 @@ class InitialSettingPillSheetGroupPage extends HookConsumerWidget {
 
     useEffect(() {
       store.fetch();
+      return null;
     }, [authStream]);
 
     useEffect(() {
@@ -49,6 +50,8 @@ class InitialSettingPillSheetGroupPage extends HookConsumerWidget {
           AppRouter.signinAccount(context);
         }
       }
+
+      return null;
     }, [state.userIsNotAnonymous, state.accountType, state.settingIsExist]);
 
     return HUD(

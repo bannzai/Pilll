@@ -190,5 +190,6 @@ class NotificationBar extends HookConsumerWidget {
         },
       );
     }
+    return null;
   }
 }
