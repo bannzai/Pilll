@@ -30,9 +30,12 @@ import HealthKit
                             if granded {
                                 writeMenstrualFlowHealthKitData(arguments: call.arguments) { result in
                                     switch result {
-                                    case .success(let isSuccess):
+                                    case .success((let object, let isSuccess)):
                                         if isSuccess {
-                                            completionHandler(["result": success])
+                                            completionHandler([
+                                                "result": success,
+                                                "objectID": object.uuid
+                                            ])
                                         } else {
                                             completionHandler(["result": failure, "reason": "書き込みに失敗しました"])
                                         }

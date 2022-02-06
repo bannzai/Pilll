@@ -31,7 +31,7 @@ func requestWriteMenstrualFlowHealthKitDataPermission(
     })
 }
 
-func writeMenstrualFlowHealthKitData(arguments: Any?, completion: @escaping (Result<Bool, Error>) -> Void) {
+func writeMenstrualFlowHealthKitData(arguments: Any?, completion: @escaping (Result<(object: HKObject, isSuccess: Bool), Error>) -> Void) {
     guard let json = arguments as? Dictionary<String, Any>,
           let menstruation = json["menstruation"] as? Dictionary<String, Any>,
           let beginDate = menstruation["beginDate"] as? NSNumber,
@@ -53,11 +53,12 @@ func writeMenstrualFlowHealthKitData(arguments: Any?, completion: @escaping (Res
         ]
     )
 
+
     store.save(sample, withCompletion: { (isSuccess, error) in
         if let error = error {
             completion(.failure(error))
         } else {
-            completion(.success(isSuccess))
+            completion(.success((sample, isSuccess)))
         }
     })
 }
