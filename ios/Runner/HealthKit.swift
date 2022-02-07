@@ -1,5 +1,6 @@
 import HealthKit
 
+// MARK: - Foundamental
 let store = HKHealthStore()
 let writeTypes: Set<HKSampleType>? = {
     guard let category = HKSampleType.categoryType(forIdentifier: .menstrualFlow) else {
@@ -23,6 +24,8 @@ struct HealthKitGeneralError: Error {
     }
 }
 
+
+// MARK: - Permissions
 func requestWriteMenstrualFlowHealthKitDataPermission(
     completion: @escaping (Result<Bool, HealthKitGeneralError>) -> Void
 )  {
@@ -35,6 +38,7 @@ func requestWriteMenstrualFlowHealthKitDataPermission(
     })
 }
 
+// MARK: - Read
 func readMenstruationData(arguments: Any?, completion: @escaping (Result<HKSample?, HealthKitGeneralError>) -> Void) {
     guard let json = arguments as? Dictionary<String, Any>, let menstruation = json["menstruation"] as? Dictionary<String, Any> else {
         completion(.failure(.init(reason: "生理データの読み込みに失敗しました arguments: \(String(describing: arguments))")))
