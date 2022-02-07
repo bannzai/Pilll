@@ -133,9 +133,7 @@ class MenstruationStore extends StateNotifier<MenstruationState> {
 
     final result = await menstruationService.create(menstruation);
     if (await isHealthDataAvailable()) {
-      if (setting.isOnMenstruationDataWriteToHealthKit) {
-        await addMenstruationFlowHealthKitData(menstruation);
-      }
+      await addMenstruationFlowHealthKitData(menstruation);
     }
 
     return result;
@@ -153,9 +151,7 @@ class MenstruationStore extends StateNotifier<MenstruationState> {
         createdAt: now());
     final result = await menstruationService.create(menstruation);
     if (await isHealthDataAvailable()) {
-      if (setting.isOnMenstruationDataWriteToHealthKit) {
-        await addMenstruationFlowHealthKitData(menstruation);
-      }
+      await addMenstruationFlowHealthKitData(menstruation);
     }
 
     return result;
