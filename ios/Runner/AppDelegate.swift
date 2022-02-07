@@ -33,8 +33,8 @@ import HealthKit
                         completionHandler(error.toDictionary())
                     }
                 }
-            case "addMenstrualFlowHealthKitData":
-                addMenstrualFlowHealthKitData(arguments: call.arguments) { result in
+            case "addMenstruationFlowHealthKitData":
+                addMenstruationFlowHealthKitData(arguments: call.arguments) { result in
                     switch result {
                     case .success(let success):
                         completionHandler(success.toDictionary())

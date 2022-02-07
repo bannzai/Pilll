@@ -86,7 +86,7 @@ enum HealthKitWriteResult {
     }
 }
 
-func addMenstrualFlowHealthKitData(
+func addMenstruationFlowHealthKitData(
     arguments: Any?,
     completion: @escaping (Result<HealthKitWriteResult.Success, HealthKitWriteResult.Failure>) -> Void
 ) {
