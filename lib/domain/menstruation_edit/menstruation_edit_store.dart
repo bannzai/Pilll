@@ -42,7 +42,7 @@ class MenstruationEditStore extends StateNotifier<MenstruationEditState> {
   final MenstruationService menstruationService;
   final SettingService settingService;
   List<Menstruation> _allMenstruation = [];
-  bool get isExistsDB => initialMenstruation != null;
+
   MenstruationEditStore({
     Menstruation? menstruation,
     required this.menstruationService,
@@ -64,7 +64,7 @@ class MenstruationEditStore extends StateNotifier<MenstruationEditState> {
   }
 
   bool shouldShowDiscardDialog() {
-    return (state.menstruation == null && isExistsDB);
+    return (state.menstruation == null && initialMenstruation != null);
   }
 
   bool isDismissWhenSaveButtonPressed() =>
