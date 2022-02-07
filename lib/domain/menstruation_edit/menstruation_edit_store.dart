@@ -18,7 +18,7 @@ final menstruationEditProvider = StateNotifierProvider.family
   ),
 );
 
-List<DateTime> displaedDates(Menstruation? menstruation) {
+List<DateTime> displayedDates(Menstruation? menstruation) {
   if (menstruation != null) {
     return [
       DateTime(
@@ -49,7 +49,7 @@ class MenstruationEditStore extends StateNotifier<MenstruationEditState> {
     required this.settingService,
   }) : super(MenstruationEditState(
             menstruation: menstruation,
-            displayedDates: displaedDates(menstruation))) {
+            displayedDates: displayedDates(menstruation))) {
     initialMenstruation = menstruation;
     _reset();
   }
