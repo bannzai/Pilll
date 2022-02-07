@@ -1,8 +1,10 @@
+import 'dart:io';
 import 'dart:math';
 
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/entity/menstruation.dart';
 import 'package:pilll/entity/setting.dart';
+import 'package:pilll/global_method_channel.dart';
 import 'package:pilll/service/menstruation.dart';
 import 'package:pilll/service/setting.dart';
 import 'package:pilll/domain/menstruation_edit/menstruation_edit_state.dart';
@@ -88,15 +90,26 @@ class MenstruationEditStore extends StateNotifier<MenstruationEditState> {
         documentID, initialMenstruation.copyWith(deletedAt: now()));
   }
 
-  Future<Menstruation> save() {
+  Future<Menstruation> save() async {
     final menstruation = state.menstruation;
     if (menstruation == null) {
       throw FormatException("menstruation is not exists when save");
     }
     final documentID = initialMenstruation?.documentID;
     if (documentID == null) {
-      return menstruationService.create(menstruation);
+      final result = menstruationService.create(menstruation);
+      if (Platform.isIOS) {
+        if (await isHealthDataAvailable()) {
+          await addMenstruationFlowHealthKitData(menstruation);
+        }
+      }
+      return result;
     } else {
+      if (Platform.isIOS) {
+        if (await isHealthDataAvailable()) {
+          await updateOrAddMenstruationFlowHealthKitData(menstruation);
+        }
+      }
       return menstruationService.update(documentID, menstruation);
     }
   }

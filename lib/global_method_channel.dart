@@ -119,12 +119,14 @@ Future<bool> isHealthDataAvailable() async {
   return result["isHealthDataAvailable"] == true;
 }
 
-Future<void> addMenstruationFlowHealthKitData(Menstruation menstruation) async {
+Future<String> addMenstruationFlowHealthKitData(
+  Menstruation menstruation,
+) async {
   if (!Platform.isIOS) {
-    return;
+    throw FormatException("iOSアプリにのみ対応しています");
   }
   if (await isHealthDataAvailable()) {
-    return;
+    throw FormatException("ヘルスケアに対応していない端末ではご利用できません");
   }
 
 // Avoid codec error
@@ -142,9 +144,42 @@ Future<void> addMenstruationFlowHealthKitData(Menstruation menstruation) async {
     "menstruation": json,
   });
 
-  print("response: $response");
   if (response["result"] == "success") {
-    return;
+    return response["healthKitSampleDataUUID"] as String;
+  } else if (response["result"] == "failure") {
+    throw Exception(response["reason"]);
+  } else {
+    throw Exception("unknown error");
+  }
+}
+
+Future<String> updateOrAddMenstruationFlowHealthKitData(
+  Menstruation menstruation,
+) async {
+  if (!Platform.isIOS) {
+    throw FormatException("iOSアプリにのみ対応しています");
+  }
+  if (await isHealthDataAvailable()) {
+    throw FormatException("ヘルスケアに対応していない端末ではご利用できません");
+  }
+
+// Avoid codec error
+// e.g) Unhandled Exception: Invalid argument: Instance of 'Timestamp'
+  var json = menstruation.toJson();
+  for (final key in json.keys) {
+    final value = json[key];
+    if (value is Timestamp) {
+      json[key] = value.toDate().millisecondsSinceEpoch;
+    }
+  }
+
+  dynamic response =
+      await _channel.invokeMethod("updateOrAddMenstruationFlowHealthKitData", {
+    "menstruation": json,
+  });
+
+  if (response["result"] == "success") {
+    return response["healthKitSampleDataUUID"] as String;
   } else if (response["result"] == "failure") {
     throw Exception(response["reason"]);
   } else {

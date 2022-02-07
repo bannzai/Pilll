@@ -1,4 +1,5 @@
 import 'dart:async';
+import 'dart:io';
 
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/components/organisms/calendar/utility.dart';
@@ -132,8 +133,10 @@ class MenstruationStore extends StateNotifier<MenstruationState> {
         createdAt: now());
 
     final result = await menstruationService.create(menstruation);
-    if (await isHealthDataAvailable()) {
-      await addMenstruationFlowHealthKitData(menstruation);
+    if (Platform.isIOS) {
+      if (await isHealthDataAvailable()) {
+        await addMenstruationFlowHealthKitData(menstruation);
+      }
     }
 
     return result;
@@ -150,8 +153,10 @@ class MenstruationStore extends StateNotifier<MenstruationState> {
         endDate: begin.add(Duration(days: setting.durationMenstruation - 1)),
         createdAt: now());
     final result = await menstruationService.create(menstruation);
-    if (await isHealthDataAvailable()) {
-      await addMenstruationFlowHealthKitData(menstruation);
+    if (Platform.isIOS) {
+      if (await isHealthDataAvailable()) {
+        await addMenstruationFlowHealthKitData(menstruation);
+      }
     }
 
     return result;
