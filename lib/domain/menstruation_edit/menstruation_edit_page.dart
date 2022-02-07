@@ -11,26 +11,30 @@ import 'package:pilll/domain/menstruation_edit/components/calendar/calendar_date
 import 'package:pilll/components/organisms/calendar/weekly/weekly_calendar.dart';
 import 'package:pilll/domain/menstruation_edit/components/calendar/weekly_calendar_state.dart';
 import 'package:pilll/domain/menstruation_edit/components/monthly_calendar_state.dart';
+import 'package:pilll/domain/menstruation_edit/menstruation_edit_state_parameter.dart';
 import 'package:pilll/entity/menstruation.dart';
 import 'package:pilll/domain/menstruation_edit/menstruation_edit_store.dart';
+import 'package:pilll/entity/setting.dart';
 import 'package:pilll/util/formatter/date_time_formatter.dart';
 
 class MenstruationEditPage extends HookConsumerWidget {
   final String title;
-  final Menstruation? menstruation;
+  final MenstruationEditStateParameter menstruationEditStateParameter;
   final Function(Menstruation) didEndSave;
   final VoidCallback didEndDelete;
   MenstruationEditPage({
     required this.title,
-    required this.menstruation,
+    required this.menstruationEditStateParameter,
     required this.didEndSave,
     required this.didEndDelete,
   });
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final store = ref.watch(menstruationEditProvider(menstruation).notifier);
-    final state = ref.watch(menstruationEditProvider(menstruation));
+    final store = ref.watch(
+        menstruationEditProvider(menstruationEditStateParameter).notifier);
+    final state =
+        ref.watch(menstruationEditProvider(menstruationEditStateParameter));
     final invalidMessage = state.invalidMessage;
     return DraggableScrollableSheet(
       initialChildSize: 0.7,
@@ -170,14 +174,14 @@ class MenstruationEditPage extends HookConsumerWidget {
 
 void showMenstruationEditPageForUpdate(
   BuildContext context,
-  Menstruation menstruation,
+  MenstruationEditStateParameter parameter,
 ) {
   analytics.setCurrentScreen(screenName: "MenstruationEditPage");
   showModalBottomSheet(
     context: context,
     builder: (context) => MenstruationEditPage(
       title: "生理期間の編集",
-      menstruation: menstruation,
+      menstruationEditStateParameter: parameter,
       didEndSave: (menstruation) {
         Navigator.of(context).pop();
         ScaffoldMessenger.of(context).showSnackBar(
@@ -204,13 +208,17 @@ void showMenstruationEditPageForUpdate(
 
 void showMenstruationEditPageForCreate(
   BuildContext context,
+  Setting? setting,
 ) {
+  final parameter =
+      MenstruationEditStateParameter(menstruation: null, setting: setting);
+
   analytics.setCurrentScreen(screenName: "MenstruationEditPage");
   showModalBottomSheet(
     context: context,
     builder: (context) => MenstruationEditPage(
       title: "生理開始日を選択",
-      menstruation: null,
+      menstruationEditStateParameter: parameter,
       didEndSave: (menstruation) {
         Navigator.of(context).pop();
         ScaffoldMessenger.of(context).showSnackBar(

@@ -8,7 +8,9 @@ import 'package:pilll/components/organisms/calendar/weekly/weekly_calendar_state
 import 'package:pilll/domain/diary/post_diary_page.dart';
 import 'package:flutter/material.dart';
 import 'package:pilll/domain/menstruation_edit/menstruation_edit_page.dart';
+import 'package:pilll/domain/menstruation_edit/menstruation_edit_state_parameter.dart';
 import 'package:pilll/entity/diary.dart';
+import 'package:pilll/entity/setting.dart';
 import 'package:pilll/entity/weekday.dart';
 import 'package:pilll/domain/diary/confirm_diary_sheet.dart';
 import 'package:pilll/util/datetime/date_compare.dart';
@@ -71,6 +73,7 @@ class CalendarWeekdayLine extends StatelessWidget {
   List<Widget> _bands(
     BuildContext context,
     List<CalendarBandModel> bandModels,
+    Setting setting,
     WeeklyCalendarState calendarState,
     double horizontalPadding,
   ) {
@@ -105,7 +108,10 @@ class CalendarWeekdayLine extends StatelessWidget {
                 if (model is! CalendarMenstruationBandModel) {
                   return;
                 }
-                showMenstruationEditPageForUpdate(context, model.menstruation);
+                showMenstruationEditPageForUpdate(
+                    context,
+                    MenstruationEditStateParameter(
+                        menstruation: model.menstruation, setting: setting));
               },
             ),
           );

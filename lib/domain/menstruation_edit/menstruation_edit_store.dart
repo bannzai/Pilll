@@ -1,6 +1,8 @@
 import 'dart:math';
 
 import 'package:hooks_riverpod/hooks_riverpod.dart';
+import 'package:pilll/domain/menstruation/menstruation_state.dart';
+import 'package:pilll/domain/menstruation_edit/menstruation_edit_state_parameter.dart';
 import 'package:pilll/entity/menstruation.dart';
 import 'package:pilll/entity/setting.dart';
 import 'package:pilll/service/menstruation.dart';
@@ -9,10 +11,13 @@ import 'package:pilll/domain/menstruation_edit/menstruation_edit_state.dart';
 import 'package:pilll/util/datetime/date_compare.dart';
 import 'package:pilll/util/datetime/day.dart';
 
-final menstruationEditProvider = StateNotifierProvider.family
-    .autoDispose<MenstruationEditStore, MenstruationEditState, Menstruation?>(
-  (ref, menstruation) => MenstruationEditStore(
-    menstruation: menstruation,
+final menstruationEditProvider = StateNotifierProvider.family.autoDispose<
+    MenstruationEditStore,
+    MenstruationEditState,
+    MenstruationEditStateParameter>(
+  (ref, parameter) => MenstruationEditStore(
+    menstruation: parameter.menstruation,
+    setting: parameter.setting,
     menstruationService: ref.watch(menstruationServiceProvider),
     settingService: ref.watch(settingServiceProvider),
   ),
@@ -41,26 +46,20 @@ class MenstruationEditStore extends StateNotifier<MenstruationEditState> {
   late Menstruation? initialMenstruation;
   final MenstruationService menstruationService;
   final SettingService settingService;
-  List<Menstruation> _allMenstruation = [];
 
   MenstruationEditStore({
     Menstruation? menstruation,
+    required Setting? setting,
     required this.menstruationService,
     required this.settingService,
-  }) : super(MenstruationEditState(
+  }) : super(
+          MenstruationEditState(
             menstruation: menstruation,
-            displayedDates: displayedDates(menstruation))) {
+            setting: setting,
+            displayedDates: displayedDates(menstruation),
+          ),
+        ) {
     initialMenstruation = menstruation;
-    _reset();
-  }
-
-  void _reset() {
-    Future(() async {
-      _allMenstruation = await menstruationService.fetchAll();
-      _allMenstruation = _allMenstruation
-          .where((element) => element.id != initialMenstruation?.id)
-          .toList();
-    });
   }
 
   bool shouldShowDiscardDialog() {
@@ -88,14 +87,15 @@ class MenstruationEditStore extends StateNotifier<MenstruationEditState> {
         documentID, initialMenstruation.copyWith(deletedAt: now()));
   }
 
-  Future<Menstruation> save() {
+  Future<Menstruation> save() async {
     final menstruation = state.menstruation;
     if (menstruation == null) {
       throw FormatException("menstruation is not exists when save");
     }
     final documentID = initialMenstruation?.documentID;
     if (documentID == null) {
-      return menstruationService.create(menstruation);
+      final result = await menstruationService.create(menstruation);
+      return result;
     } else {
       return menstruationService.update(documentID, menstruation);
     }

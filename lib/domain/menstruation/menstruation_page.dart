@@ -13,6 +13,7 @@ import 'package:pilll/domain/menstruation/menstruation_state.dart';
 import 'package:pilll/domain/menstruation_edit/menstruation_edit_page.dart';
 import 'package:pilll/domain/menstruation/menstruation_history_card.dart';
 import 'package:pilll/domain/menstruation/menstruation_select_modify_type_sheet.dart';
+import 'package:pilll/domain/menstruation_edit/menstruation_edit_state_parameter.dart';
 import 'package:pilll/domain/record/weekday_badge.dart';
 import 'package:pilll/domain/menstruation/menstruation_store.dart';
 import 'package:pilll/error/universal_error_page.dart';
@@ -115,7 +116,13 @@ class MenstruationRecordButton extends StatelessWidget {
         final latestMenstruation = state.latestMenstruation;
         if (latestMenstruation != null &&
             latestMenstruation.dateRange.inRange(today())) {
-          showMenstruationEditPageForUpdate(context, latestMenstruation);
+          showMenstruationEditPageForUpdate(
+            context,
+            MenstruationEditStateParameter(
+              menstruation: state.latestMenstruation,
+              setting: state.setting,
+            ),
+          );
           return;
         }
 
@@ -125,7 +132,10 @@ class MenstruationRecordButton extends StatelessWidget {
         }
 
         if (setting.durationMenstruation == 0) {
-          return showMenstruationEditPageForCreate(context);
+          return showMenstruationEditPageForCreate(
+              context,
+              MenstruationEditStateParameter(
+                  menstruation: state.latestMenstruation, setting: setting));
         }
         showModalBottomSheet(
           context: context,
@@ -160,7 +170,13 @@ class MenstruationRecordButton extends StatelessWidget {
               case MenstruationSelectModifyType.begin:
                 analytics.logEvent(name: "tapped_menstruation_record_begin");
                 Navigator.of(context).pop();
-                return showMenstruationEditPageForCreate(context);
+                return showMenstruationEditPageForCreate(
+                  context,
+                  MenstruationEditStateParameter(
+                    menstruation: state.latestMenstruation,
+                    setting: setting,
+                  ),
+                );
             }
           }),
         );
