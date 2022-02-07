@@ -43,7 +43,6 @@ class MenstruationEditStore extends StateNotifier<MenstruationEditState> {
   late Menstruation? initialMenstruation;
   final MenstruationService menstruationService;
   final SettingService settingService;
-  List<Menstruation> _allMenstruation = [];
 
   MenstruationEditStore({
     Menstruation? menstruation,
@@ -53,16 +52,6 @@ class MenstruationEditStore extends StateNotifier<MenstruationEditState> {
             menstruation: menstruation,
             displayedDates: displayedDates(menstruation))) {
     initialMenstruation = menstruation;
-    _reset();
-  }
-
-  void _reset() {
-    Future(() async {
-      _allMenstruation = await menstruationService.fetchAll();
-      _allMenstruation = _allMenstruation
-          .where((element) => element.id != initialMenstruation?.id)
-          .toList();
-    });
   }
 
   bool shouldShowDiscardDialog() {
