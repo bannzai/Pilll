@@ -45,6 +45,8 @@ _$_Setting _$$_SettingFromJson(Map<String, dynamic> json) => _$_Setting(
               : ReminderNotificationCustomization.fromJson(
                   json['reminderNotificationCustomization']
                       as Map<String, dynamic>),
+      isOnMenstruationDataWriteToHealthKit:
+          json['isOnMenstruationDataWriteToHealthKit'] as bool? ?? false,
     );
 
 Map<String, dynamic> _$$_SettingToJson(_$_Setting instance) =>
@@ -62,6 +64,8 @@ Map<String, dynamic> _$$_SettingToJson(_$_Setting instance) =>
       'isAutomaticallyCreatePillSheet': instance.isAutomaticallyCreatePillSheet,
       'reminderNotificationCustomization':
           instance.reminderNotificationCustomization.toJson(),
+      'isOnMenstruationDataWriteToHealthKit':
+          instance.isOnMenstruationDataWriteToHealthKit,
     };
 
 const _$PillSheetTypeEnumMap = {
