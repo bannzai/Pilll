@@ -56,26 +56,26 @@ class SigninSheetState with _$SigninSheetState {
   String get appleButtonText {
     switch (context) {
       case SigninSheetStateContext.initialSetting:
-        return LinkAccountType.apple.providerName + "でサインイン";
+        return LinkAccountType.apple.loginContentName + "でサインイン";
       case SigninSheetStateContext.recordPage:
-        return LinkAccountType.apple.providerName + "で登録";
+        return LinkAccountType.apple.loginContentName + "で登録";
       case SigninSheetStateContext.premium:
-        return LinkAccountType.apple.providerName + "で登録";
+        return LinkAccountType.apple.loginContentName + "で登録";
       case SigninSheetStateContext.setting:
-        return LinkAccountType.apple.providerName + "で登録";
+        return LinkAccountType.apple.loginContentName + "で登録";
     }
   }
 
   String get googleButtonText {
     switch (context) {
       case SigninSheetStateContext.initialSetting:
-        return LinkAccountType.google.providerName + "でサインイン";
+        return LinkAccountType.google.loginContentName + "でサインイン";
       case SigninSheetStateContext.recordPage:
-        return LinkAccountType.google.providerName + "で登録";
+        return LinkAccountType.google.loginContentName + "で登録";
       case SigninSheetStateContext.premium:
-        return LinkAccountType.google.providerName + "で登録";
+        return LinkAccountType.google.loginContentName + "で登録";
       case SigninSheetStateContext.setting:
-        return LinkAccountType.google.providerName + "で登録";
+        return LinkAccountType.google.loginContentName + "で登録";
     }
   }
 }
