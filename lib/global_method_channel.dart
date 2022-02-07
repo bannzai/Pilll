@@ -124,7 +124,7 @@ Future<String> addMenstruationFlowHealthKitData(
   if (!Platform.isIOS) {
     throw FormatException("iOSアプリにのみ対応しています");
   }
-  if (await isHealthDataAvailable()) {
+  if (!await isHealthDataAvailable()) {
     throw FormatException("ヘルスケアに対応していない端末ではご利用できません");
   }
 
@@ -158,7 +158,7 @@ Future<String> updateOrAddMenstruationFlowHealthKitData(
   if (!Platform.isIOS) {
     throw FormatException("iOSアプリにのみ対応しています");
   }
-  if (await isHealthDataAvailable()) {
+  if (!await isHealthDataAvailable()) {
     throw FormatException("ヘルスケアに対応していない端末ではご利用できません");
   }
 
@@ -192,7 +192,7 @@ Future<void> deleteMenstruationFlowHealthKitData(
   if (!Platform.isIOS) {
     throw FormatException("iOSアプリにのみ対応しています");
   }
-  if (await isHealthDataAvailable()) {
+  if (!await isHealthDataAvailable()) {
     throw FormatException("ヘルスケアに対応していない端末ではご利用できません");
   }
 
