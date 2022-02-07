@@ -26,11 +26,6 @@ struct HealthKitGeneralError: Error {
 func requestWriteMenstrualFlowHealthKitDataPermission(
     completion: @escaping (Result<Bool, HealthKitGeneralError>) -> Void
 )  {
-    if !HKHealthStore.isHealthDataAvailable() {
-        completion(.failure(.init(reason: "ヘルスキットはお使いのデバイスで対応していません")))
-        return
-    }
-
     store.requestAuthorization(toShare: writeTypes, read: readTypes, completion: { (status, error) in
         if let error = error {
             completion(.failure(.init(reason: error.localizedDescription)))
