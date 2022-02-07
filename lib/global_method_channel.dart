@@ -109,7 +109,7 @@ Future<void> salvagedOldStartTakenDate(dynamic arguments) async {
   });
 }
 
-Future<void> writeMenstrualFlowHealthKitData(Menstruation menstruation) async {
+Future<void> addMenstruationFlowHealthKitData(Menstruation menstruation) async {
   if (!Platform.isIOS) {
     return;
   }
@@ -130,7 +130,7 @@ Future<void> writeMenstrualFlowHealthKitData(Menstruation menstruation) async {
   }
 
   dynamic response =
-      await _channel.invokeMethod("writeMenstrualFlowHealthKitData", {
+      await _channel.invokeMethod("addMenstruationFlowHealthKitData", {
     "menstruation": json,
   });
 
