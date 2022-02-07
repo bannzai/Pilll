@@ -9,9 +9,6 @@ import 'package:riverpod/riverpod.dart';
 final settingServiceProvider =
     Provider((ref) => SettingService(ref.watch(databaseProvider)));
 
-final settingStreamProvider =
-    StreamProvider((ref) => ref.watch(settingServiceProvider).stream());
-
 class SettingService {
   final DatabaseConnection _database;
   SettingService(this._database);

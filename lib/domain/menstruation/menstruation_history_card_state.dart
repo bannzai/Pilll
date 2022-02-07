@@ -3,13 +3,11 @@ import 'dart:math';
 import 'package:pilll/domain/menstruation_list/menstruation_list_row.dart';
 import 'package:pilll/entity/menstruation.dart';
 import 'package:pilll/domain/menstruation/menstruation_store.dart';
-import 'package:pilll/entity/setting.dart';
 import 'package:pilll/util/datetime/day.dart';
 
 class MenstruationHistoryCardState {
   final List<Menstruation> allMenstruations;
   final Menstruation latestMenstruation;
-  final Setting setting;
   final bool isPremium;
   final bool isTrial;
   final DateTime? trialDeadlineDate;
@@ -17,7 +15,6 @@ class MenstruationHistoryCardState {
   MenstruationHistoryCardState({
     required this.allMenstruations,
     required this.latestMenstruation,
-    required this.setting,
     required this.isPremium,
     required this.isTrial,
     required this.trialDeadlineDate,
@@ -34,7 +31,7 @@ class MenstruationHistoryCardState {
     if (menstruations.isEmpty) {
       return [];
     }
-    final rows = MenstruationListRowState.rows(menstruations, setting);
+    final rows = MenstruationListRowState.rows(menstruations);
     final length = min(2, rows.length);
     return rows.sublist(0, length);
   }
@@ -43,7 +40,7 @@ class MenstruationHistoryCardState {
     if (allMenstruations.length <= 1) {
       return "-";
     }
-    final rows = MenstruationListRowState.rows(allMenstruations, setting);
+    final rows = MenstruationListRowState.rows(allMenstruations);
 
     int count = 0;
     int totalMenstruationDuration = 0;

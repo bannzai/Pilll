@@ -3,9 +3,7 @@ import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/domain/calendar/date_range.dart';
 import 'package:pilll/domain/menstruation_edit/menstruation_edit_page.dart';
-import 'package:pilll/domain/menstruation_edit/menstruation_edit_state_parameter.dart';
 import 'package:pilll/entity/menstruation.dart';
-import 'package:pilll/entity/setting.dart';
 import 'package:pilll/util/formatter/date_time_formatter.dart';
 import 'package:flutter/material.dart';
 
@@ -74,22 +72,14 @@ class MenstruationListRowState {
 
 class MenstruationListRow extends StatelessWidget {
   final MenstruationListRowState state;
-  final Setting setting;
 
-  const MenstruationListRow({
-    Key? key,
-    required this.state,
-    required this.setting,
-  }) : super(key: key);
+  const MenstruationListRow({Key? key, required this.state}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        showMenstruationEditPageForUpdate(
-            context,
-            MenstruationEditStateParameter(
-                menstruation: state.menstruation, setting: setting));
+        showMenstruationEditPageForUpdate(context, state.menstruation);
       },
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
