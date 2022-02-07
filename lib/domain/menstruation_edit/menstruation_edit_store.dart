@@ -72,12 +72,12 @@ class MenstruationEditStore extends StateNotifier<MenstruationEditState> {
   bool isDismissWhenSaveButtonPressed() =>
       !shouldShowDiscardDialog() && state.menstruation == null;
 
-  Future<void> delete() {
-    final initialMenstruation = this.initialMenstruation;
-    if (initialMenstruation == null) {
+  Future<void> delete() async {
+    var menstruation = this.initialMenstruation;
+    if (menstruation == null) {
       throw FormatException("menstruation is not exists from db when delete");
     }
-    final documentID = initialMenstruation.documentID;
+    final documentID = menstruation.documentID;
     if (documentID == null) {
       throw FormatException(
           "menstruation is not exists document id from db when delete");
@@ -86,8 +86,16 @@ class MenstruationEditStore extends StateNotifier<MenstruationEditState> {
       throw FormatException(
           "missing condition about state.menstruation is exists when delete. state.menstruation should flushed on edit page");
     }
-    return menstruationService.update(
-        documentID, initialMenstruation.copyWith(deletedAt: now()));
+
+    if (Platform.isIOS) {
+      if (await isHealthDataAvailable()) {
+        await deleteMenstruationFlowHealthKitData(menstruation);
+        menstruation = menstruation.copyWith(healthKitSampleDataUUID: null);
+      }
+    }
+
+    await menstruationService.update(
+        documentID, menstruation.copyWith(deletedAt: now()));
   }
 
   Future<Menstruation> save() async {
