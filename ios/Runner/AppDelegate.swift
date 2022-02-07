@@ -51,6 +51,15 @@ import HealthKit
                         completionHandler(failure.toDictionary())
                     }
                 }
+            case "deleteMenstrualFlowHealthKitData":
+                deleteMenstrualFlowHealthKitData(arguments: call.arguments) { deleteResult in
+                    switch deleteResult {
+                    case .success(let success):
+                        completionHandler(success.toDictionary())
+                    case .failure(let failure):
+                        completionHandler(failure.toDictionary())
+                    }
+                }
             case _:
                 return
             }

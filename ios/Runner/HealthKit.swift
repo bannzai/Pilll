@@ -151,3 +151,46 @@ private func writeMenstrualFlowHealthKitData(
         }
     })
 }
+
+
+
+// MARK: - Delete
+enum HealthKitDeleteResult {
+    typealias Failure = HealthKitGeneralError
+
+    struct Success {
+        let result = "success"
+
+        func toDictionary() -> [String: Any] {
+            ["result": result]
+        }
+    }
+}
+
+func deleteMenstrualFlowHealthKitData(
+    arguments: Any?,
+    completion: @escaping (Result<HealthKitDeleteResult.Success, HealthKitDeleteResult.Failure>) -> Void
+) {
+    readMenstruationData(arguments: arguments) { readResult in
+        switch readResult {
+        case .success(let sample):
+            if let sample = sample {
+                store.delete(sample) { isSuccess, error in
+                    if let error = error {
+                        completion(.failure(.init(reason: error.localizedDescription)))
+                    } else {
+                        if isSuccess {
+                            completion(.success(.init()))
+                        } else {
+                            completion(.failure(.init(reason: "削除に失敗しました")))
+                        }
+                    }
+                }
+            } else {
+                completion(.failure(.init(reason: "削除するデータの読み込みに失敗しました")))
+            }
+        case .failure(let error):
+            completion(.failure(.init(reason: error.localizedDescription)))
+        }
+    }
+}
