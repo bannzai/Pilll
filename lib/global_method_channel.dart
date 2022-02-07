@@ -109,13 +109,21 @@ Future<void> salvagedOldStartTakenDate(dynamic arguments) async {
   });
 }
 
+Future<bool> isHealthDataAvailable() async {
+  if (!Platform.isIOS) {
+    return false;
+  }
+
+  final Map<String, dynamic> result =
+      await _channel.invokeMethod("isHealthDataAvailable");
+  return result["isHealthDataAvailable"] == true;
+}
+
 Future<void> addMenstruationFlowHealthKitData(Menstruation menstruation) async {
   if (!Platform.isIOS) {
     return;
   }
-  final isHealthDataAvailable =
-      await _channel.invokeMethod("isHealthDataAvailable");
-  if (isHealthDataAvailable != true) {
+  if (await isHealthDataAvailable()) {
     return;
   }
 
