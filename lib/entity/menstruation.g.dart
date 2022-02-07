@@ -17,6 +17,7 @@ _$_Menstruation _$$_MenstruationFromJson(Map<String, dynamic> json) =>
           json['deletedAt'] as Timestamp?),
       createdAt: NonNullTimestampConverter.timestampToDateTime(
           json['createdAt'] as Timestamp),
+      healthKitSampleDataUUID: json['healthKitSampleDataUUID'] as String?,
     );
 
 Map<String, dynamic> _$$_MenstruationToJson(_$_Menstruation instance) {
@@ -36,5 +37,6 @@ Map<String, dynamic> _$$_MenstruationToJson(_$_Menstruation instance) {
   val['deletedAt'] = TimestampConverter.dateTimeToTimestamp(instance.deletedAt);
   val['createdAt'] =
       NonNullTimestampConverter.dateTimeToTimestamp(instance.createdAt);
+  val['healthKitSampleDataUUID'] = instance.healthKitSampleDataUUID;
   return val;
 }
