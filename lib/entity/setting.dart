@@ -45,20 +45,23 @@ class SettingFirestoreFieldKeys {
 class Setting with _$Setting {
   const Setting._();
   @JsonSerializable(explicitToJson: true)
-  const factory Setting({
-    @Default([]) List<PillSheetType> pillSheetTypes,
-    required int pillNumberForFromMenstruation,
-    required int durationMenstruation,
-    @Default([]) List<ReminderTime> reminderTimes,
-    required bool isOnReminder,
-    @Default(true) bool isOnNotifyInNotTakenDuration,
-    @Default(PillSheetAppearanceMode.number)
-        PillSheetAppearanceMode pillSheetAppearanceMode,
-    @Default(false) bool isAutomaticallyCreatePillSheet,
-    @Default(ReminderNotificationCustomization())
-        ReminderNotificationCustomization reminderNotificationCustomization,
-    @Default(false) bool isOnMenstruationDataWriteToHealthKit,
-  }) = _Setting;
+  const factory Setting(
+      {@Default([])
+          List<PillSheetType> pillSheetTypes,
+      required int pillNumberForFromMenstruation,
+      required int durationMenstruation,
+      @Default([])
+          List<ReminderTime> reminderTimes,
+      required bool isOnReminder,
+      @Default(true)
+          bool isOnNotifyInNotTakenDuration,
+      @Default(PillSheetAppearanceMode.number)
+          PillSheetAppearanceMode pillSheetAppearanceMode,
+      @Default(false)
+          bool isAutomaticallyCreatePillSheet,
+      @Default(ReminderNotificationCustomization())
+          ReminderNotificationCustomization
+              reminderNotificationCustomization}) = _Setting;
 
   factory Setting.fromJson(Map<String, dynamic> json) =>
       _$SettingFromJson(json);
