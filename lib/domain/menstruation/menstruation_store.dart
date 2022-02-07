@@ -127,19 +127,21 @@ class MenstruationStore extends StateNotifier<MenstruationState> {
       return Future.error(FormatException("unexpected setting is null"));
     }
     final begin = now();
-    final menstruation = Menstruation(
+    var menstruation = Menstruation(
         beginDate: begin,
         endDate: begin.add(Duration(days: setting.durationMenstruation - 1)),
         createdAt: now());
 
-    final result = await menstruationService.create(menstruation);
     if (Platform.isIOS) {
       if (await isHealthDataAvailable()) {
-        await addMenstruationFlowHealthKitData(menstruation);
+        final healthKitSampleDataUUID =
+            await addMenstruationFlowHealthKitData(menstruation);
+        menstruation = menstruation.copyWith(
+            healthKitSampleDataUUID: healthKitSampleDataUUID);
       }
     }
 
-    return result;
+    return menstruationService.create(menstruation);
   }
 
   Future<Menstruation> recordFromYesterday() async {
@@ -148,18 +150,21 @@ class MenstruationStore extends StateNotifier<MenstruationState> {
       return Future.error(FormatException("unexpected setting is null"));
     }
     final begin = today().subtract(Duration(days: 1));
-    final menstruation = Menstruation(
+    var menstruation = Menstruation(
         beginDate: begin,
         endDate: begin.add(Duration(days: setting.durationMenstruation - 1)),
         createdAt: now());
-    final result = await menstruationService.create(menstruation);
+
     if (Platform.isIOS) {
       if (await isHealthDataAvailable()) {
-        await addMenstruationFlowHealthKitData(menstruation);
+        final healthKitSampleDataUUID =
+            await addMenstruationFlowHealthKitData(menstruation);
+        menstruation = menstruation.copyWith(
+            healthKitSampleDataUUID: healthKitSampleDataUUID);
       }
     }
 
-    return result;
+    return menstruationService.create(menstruation);
   }
 
   MenstruationCardState? cardState() {

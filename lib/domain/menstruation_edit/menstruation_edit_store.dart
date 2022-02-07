@@ -91,23 +91,29 @@ class MenstruationEditStore extends StateNotifier<MenstruationEditState> {
   }
 
   Future<Menstruation> save() async {
-    final menstruation = state.menstruation;
+    var menstruation = state.menstruation;
     if (menstruation == null) {
       throw FormatException("menstruation is not exists when save");
     }
     final documentID = initialMenstruation?.documentID;
     if (documentID == null) {
-      final result = menstruationService.create(menstruation);
       if (Platform.isIOS) {
         if (await isHealthDataAvailable()) {
-          await addMenstruationFlowHealthKitData(menstruation);
+          final healthKitSampleDataUUID =
+              await addMenstruationFlowHealthKitData(menstruation);
+          menstruation = menstruation.copyWith(
+              healthKitSampleDataUUID: healthKitSampleDataUUID);
         }
       }
-      return result;
+
+      return menstruationService.create(menstruation);
     } else {
       if (Platform.isIOS) {
         if (await isHealthDataAvailable()) {
-          await updateOrAddMenstruationFlowHealthKitData(menstruation);
+          final healthKitSampleDataUUID =
+              await updateOrAddMenstruationFlowHealthKitData(menstruation);
+          menstruation = menstruation.copyWith(
+              healthKitSampleDataUUID: healthKitSampleDataUUID);
         }
       }
       return menstruationService.update(documentID, menstruation);
