@@ -5,6 +5,7 @@ import 'package:pilll/components/organisms/calendar/utility.dart';
 import 'package:pilll/domain/menstruation/menstruation_card_state.dart';
 import 'package:pilll/domain/menstruation/menstruation_history_card_state.dart';
 import 'package:pilll/entity/menstruation.dart';
+import 'package:pilll/global_method_channel.dart';
 import 'package:pilll/service/diary.dart';
 import 'package:pilll/service/menstruation.dart';
 import 'package:pilll/service/pill_sheet.dart';
@@ -119,30 +120,45 @@ class MenstruationStore extends StateNotifier<MenstruationState> {
     state = state.copyWith(currentCalendarIndex: index);
   }
 
-  Future<Menstruation> recordFromToday() {
-    final duration = state.setting?.durationMenstruation;
-    if (duration == null) {
+  Future<Menstruation> recordFromToday() async {
+    final setting = state.setting;
+    if (setting == null) {
       return Future.error(FormatException("unexpected setting is null"));
     }
     final begin = now();
     final menstruation = Menstruation(
         beginDate: begin,
-        endDate: begin.add(Duration(days: duration - 1)),
+        endDate: begin.add(Duration(days: setting.durationMenstruation - 1)),
         createdAt: now());
-    return menstruationService.create(menstruation);
+
+    final result = await menstruationService.create(menstruation);
+    if (await isHealthDataAvailable()) {
+      if (setting.isOnMenstruationDataWriteToHealthKit) {
+        await addMenstruationFlowHealthKitData(menstruation);
+      }
+    }
+
+    return result;
   }
 
-  Future<Menstruation> recordFromYesterday() {
-    final duration = state.setting?.durationMenstruation;
-    if (duration == null) {
+  Future<Menstruation> recordFromYesterday() async {
+    final setting = state.setting;
+    if (setting == null) {
       return Future.error(FormatException("unexpected setting is null"));
     }
     final begin = today().subtract(Duration(days: 1));
     final menstruation = Menstruation(
         beginDate: begin,
-        endDate: begin.add(Duration(days: duration - 1)),
+        endDate: begin.add(Duration(days: setting.durationMenstruation - 1)),
         createdAt: now());
-    return menstruationService.create(menstruation);
+    final result = await menstruationService.create(menstruation);
+    if (await isHealthDataAvailable()) {
+      if (setting.isOnMenstruationDataWriteToHealthKit) {
+        await addMenstruationFlowHealthKitData(menstruation);
+      }
+    }
+
+    return result;
   }
 
   MenstruationCardState? cardState() {
