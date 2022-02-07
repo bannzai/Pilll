@@ -114,8 +114,7 @@ Future<bool> isHealthDataAvailable() async {
     return false;
   }
 
-  final Map<String, dynamic> result =
-      await _channel.invokeMethod("isHealthDataAvailable");
+  final result = await _channel.invokeMethod("isHealthDataAvailable");
   return result["isHealthDataAvailable"] == true;
 }
 
