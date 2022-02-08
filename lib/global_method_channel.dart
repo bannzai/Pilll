@@ -8,6 +8,7 @@ import 'package:pilll/database/batch.dart';
 import 'package:pilll/database/database.dart';
 import 'package:pilll/domain/record/util/take.dart';
 import 'package:pilll/entity/menstruation.dart';
+import 'package:pilll/entity/user_error.dart';
 import 'package:pilll/service/pill_sheet.dart';
 import 'package:pilll/service/pill_sheet_group.dart';
 import 'package:pilll/service/pill_sheet_modified_history.dart';
@@ -146,7 +147,7 @@ Future<String> addMenstruationFlowHealthKitData(
   if (response["result"] == "success") {
     return response["healthKitSampleDataUUID"] as String;
   } else if (response["result"] == "failure") {
-    throw Exception(response["reason"]);
+    throw UserDisplayedError(response["reason"]);
   } else {
     throw Exception("unknown error");
   }
@@ -180,7 +181,7 @@ Future<String> updateOrAddMenstruationFlowHealthKitData(
   if (response["result"] == "success") {
     return response["healthKitSampleDataUUID"] as String;
   } else if (response["result"] == "failure") {
-    throw Exception(response["reason"]);
+    throw UserDisplayedError(response["reason"]);
   } else {
     throw Exception("unknown error");
   }
@@ -214,7 +215,7 @@ Future<void> deleteMenstruationFlowHealthKitData(
   if (response["result"] == "success") {
     return;
   } else if (response["result"] == "failure") {
-    throw Exception(response["reason"]);
+    throw UserDisplayedError(response["reason"]);
   } else {
     throw Exception("unknown error");
   }
@@ -235,7 +236,7 @@ Future<bool> shouldRequestForAccessToHealthKitData() async {
   if (response["result"] == "success") {
     return response["shouldRequestForAccessToHealthKitData"] == true;
   } else if (response["result"] == "failure") {
-    throw Exception(response["reason"]);
+    throw UserDisplayedError(response["reason"]);
   } else {
     throw Exception("unknown error");
   }
@@ -256,7 +257,7 @@ Future<bool> requestWriteMenstrualFlowHealthKitDataPermission() async {
   if (response["result"] == "success") {
     return response["isSuccess"] == true;
   } else if (response["result"] == "failure") {
-    throw Exception(response["reason"]);
+    throw UserDisplayedError(response["reason"]);
   } else {
     throw Exception("unknown error");
   }
