@@ -134,10 +134,12 @@ class MenstruationStore extends StateNotifier<MenstruationState> {
 
     if (Platform.isIOS) {
       if (await isHealthDataAvailable()) {
-        final healthKitSampleDataUUID =
-            await addMenstruationFlowHealthKitData(menstruation);
-        menstruation = menstruation.copyWith(
-            healthKitSampleDataUUID: healthKitSampleDataUUID);
+        if (await isAuthorizedReadAndShareToHealthKitData()) {
+          final healthKitSampleDataUUID =
+              await addMenstruationFlowHealthKitData(menstruation);
+          menstruation = menstruation.copyWith(
+              healthKitSampleDataUUID: healthKitSampleDataUUID);
+        }
       }
     }
 
@@ -157,10 +159,12 @@ class MenstruationStore extends StateNotifier<MenstruationState> {
 
     if (Platform.isIOS) {
       if (await isHealthDataAvailable()) {
-        final healthKitSampleDataUUID =
-            await addMenstruationFlowHealthKitData(menstruation);
-        menstruation = menstruation.copyWith(
-            healthKitSampleDataUUID: healthKitSampleDataUUID);
+        if (await isAuthorizedReadAndShareToHealthKitData()) {
+          final healthKitSampleDataUUID =
+              await addMenstruationFlowHealthKitData(menstruation);
+          menstruation = menstruation.copyWith(
+              healthKitSampleDataUUID: healthKitSampleDataUUID);
+        }
       }
     }
 

@@ -78,8 +78,10 @@ class MenstruationEditStore extends StateNotifier<MenstruationEditState> {
 
     if (Platform.isIOS) {
       if (await isHealthDataAvailable()) {
-        await deleteMenstruationFlowHealthKitData(menstruation);
-        menstruation = menstruation.copyWith(healthKitSampleDataUUID: null);
+        if (await isAuthorizedReadAndShareToHealthKitData()) {
+          await deleteMenstruationFlowHealthKitData(menstruation);
+          menstruation = menstruation.copyWith(healthKitSampleDataUUID: null);
+        }
       }
     }
 
@@ -96,10 +98,12 @@ class MenstruationEditStore extends StateNotifier<MenstruationEditState> {
     if (documentID == null) {
       if (Platform.isIOS) {
         if (await isHealthDataAvailable()) {
-          final healthKitSampleDataUUID =
-              await addMenstruationFlowHealthKitData(menstruation);
-          menstruation = menstruation.copyWith(
-              healthKitSampleDataUUID: healthKitSampleDataUUID);
+          if (await isAuthorizedReadAndShareToHealthKitData()) {
+            final healthKitSampleDataUUID =
+                await addMenstruationFlowHealthKitData(menstruation);
+            menstruation = menstruation.copyWith(
+                healthKitSampleDataUUID: healthKitSampleDataUUID);
+          }
         }
       }
 
@@ -107,10 +111,12 @@ class MenstruationEditStore extends StateNotifier<MenstruationEditState> {
     } else {
       if (Platform.isIOS) {
         if (await isHealthDataAvailable()) {
-          final healthKitSampleDataUUID =
-              await updateOrAddMenstruationFlowHealthKitData(menstruation);
-          menstruation = menstruation.copyWith(
-              healthKitSampleDataUUID: healthKitSampleDataUUID);
+          if (await isAuthorizedReadAndShareToHealthKitData()) {
+            final healthKitSampleDataUUID =
+                await updateOrAddMenstruationFlowHealthKitData(menstruation);
+            menstruation = menstruation.copyWith(
+                healthKitSampleDataUUID: healthKitSampleDataUUID);
+          }
         }
       }
       return menstruationService.update(documentID, menstruation);
