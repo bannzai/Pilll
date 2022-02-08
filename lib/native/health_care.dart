@@ -14,6 +14,40 @@ Future<bool> isHealthDataAvailable() async {
   return result["isHealthDataAvailable"] == true;
 }
 
+Future<bool> isAuthorizedReadAndShareToHealthKitData() async {
+  if (!Platform.isIOS) {
+    throw FormatException("iOSアプリにのみ対応しています");
+  }
+  if (!await isHealthDataAvailable()) {
+    throw FormatException("ヘルスケアに対応していない端末ではご利用できません");
+  }
+
+  final result = await methodChannel
+      .invokeMethod("isAuthorizedReadAndShareToHealthKitData");
+  return result["isAuthorizedReadAndShareToHealthKitData"] == true;
+}
+
+Future<bool> shouldRequestForAccessToHealthKitData() async {
+  if (!Platform.isIOS) {
+    return false;
+  }
+  if (!await isHealthDataAvailable()) {
+    return false;
+  }
+
+  dynamic response = await methodChannel.invokeMethod(
+    "shouldRequestForAccessToHealthKitData",
+  );
+
+  if (response["result"] == "success") {
+    return response["shouldRequestForAccessToHealthKitData"] == true;
+  } else if (response["result"] == "failure") {
+    throw UserDisplayedError(response["reason"]);
+  } else {
+    throw Exception("unknown error");
+  }
+}
+
 Future<String> addMenstruationFlowHealthKitData(
   Menstruation menstruation,
 ) async {
@@ -46,19 +80,6 @@ Future<String> addMenstruationFlowHealthKitData(
   } else {
     throw Exception("unknown error");
   }
-}
-
-Future<bool> isAuthorizedReadAndShareToHealthKitData() async {
-  if (!Platform.isIOS) {
-    throw FormatException("iOSアプリにのみ対応しています");
-  }
-  if (!await isHealthDataAvailable()) {
-    throw FormatException("ヘルスケアに対応していない端末ではご利用できません");
-  }
-
-  final result = await methodChannel
-      .invokeMethod("isAuthorizedReadAndShareToHealthKitData");
-  return result["isAuthorizedReadAndShareToHealthKitData"] == true;
 }
 
 Future<String> updateOrAddMenstruationFlowHealthKitData(
@@ -122,27 +143,6 @@ Future<void> deleteMenstruationFlowHealthKitData(
 
   if (response["result"] == "success") {
     return;
-  } else if (response["result"] == "failure") {
-    throw UserDisplayedError(response["reason"]);
-  } else {
-    throw Exception("unknown error");
-  }
-}
-
-Future<bool> shouldRequestForAccessToHealthKitData() async {
-  if (!Platform.isIOS) {
-    return false;
-  }
-  if (!await isHealthDataAvailable()) {
-    return false;
-  }
-
-  dynamic response = await methodChannel.invokeMethod(
-    "shouldRequestForAccessToHealthKitData",
-  );
-
-  if (response["result"] == "success") {
-    return response["shouldRequestForAccessToHealthKitData"] == true;
   } else if (response["result"] == "failure") {
     throw UserDisplayedError(response["reason"]);
   } else {
