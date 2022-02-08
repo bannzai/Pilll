@@ -4,7 +4,7 @@ import 'dart:math';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/entity/menstruation.dart';
 import 'package:pilll/entity/setting.dart';
-import 'package:pilll/native/global_method_channel.dart';
+import 'package:pilll/native/menstruation.dart';
 import 'package:pilll/service/menstruation.dart';
 import 'package:pilll/service/setting.dart';
 import 'package:pilll/domain/menstruation_edit/menstruation_edit_state.dart';
