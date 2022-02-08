@@ -4,7 +4,7 @@ import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/entity/user_error.dart';
 import 'package:pilll/error/error_alert.dart';
 import 'package:pilll/error/universal_error_page.dart';
-import 'package:pilll/global_method_channel.dart';
+import 'package:pilll/native/global_method_channel.dart';
 
 class HealthCareRow extends StatelessWidget {
   @override
