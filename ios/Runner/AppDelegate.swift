@@ -23,7 +23,10 @@ import HealthKit
 
             switch call.method {
             case "isHealthDataAvailable":
-                completionHandler(["isHealthDataAvailable": HKHealthStore.isHealthDataAvailable()])
+                completionHandler([
+                    "result": "success",
+                    "isHealthDataAvailable": HKHealthStore.isHealthDataAvailable()
+                ])
             case "isAuthorizedReadAndShareToHealthKitData":
                 isAuthorizedReadAndShareToHealthKitData { result in
                     switch result {
@@ -52,7 +55,9 @@ import HealthKit
                 requestWriteMenstrualFlowHealthKitDataPermission { result in
                     switch result {
                     case .success(let isSuccess):
-                        completionHandler(["isSuccess": isSuccess])
+                        completionHandler(
+                            ["result": "success", "isSuccess": isSuccess]
+                        )
                     case .failure(let error):
                         completionHandler(error.toDictionary())
                     }
