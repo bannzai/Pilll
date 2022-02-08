@@ -1,20 +1,8 @@
 import 'dart:io';
 
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:firebase_auth/firebase_auth.dart';
-import 'package:flutter_app_badger/flutter_app_badger.dart';
-import 'package:pilll/analytics.dart';
-import 'package:pilll/database/batch.dart';
-import 'package:pilll/database/database.dart';
-import 'package:pilll/domain/record/util/take.dart';
 import 'package:pilll/entity/menstruation.dart';
 import 'package:pilll/entity/user_error.dart';
-import 'package:pilll/service/pill_sheet.dart';
-import 'package:pilll/service/pill_sheet_group.dart';
-import 'package:pilll/service/pill_sheet_modified_history.dart';
-import 'package:pilll/util/datetime/day.dart';
-import 'package:flutter/services.dart';
-import 'package:shared_preferences/shared_preferences.dart';
 
 Future<bool> isHealthDataAvailable() async {
   if (!Platform.isIOS) {
