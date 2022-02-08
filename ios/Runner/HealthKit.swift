@@ -9,10 +9,11 @@ let writeTypes: Set<HKSampleType> = {
     return [category]
 }()
 let readTypes: Set<HKObjectType> = {
-    guard let object = HKObjectType.categoryType(forIdentifier: .menstrualFlow) else {
+    guard let _ = HKObjectType.categoryType(forIdentifier: .menstrualFlow) else {
         return []
     }
-    return [object]
+    // Pilllでは読み込みに対応していないので空配列を返す
+    return []
 }()
 
 struct HealthKitGeneralError: Error {
@@ -28,7 +29,7 @@ struct HealthKitGeneralError: Error {
 func isAuthorizedReadAndShareToHealthKitData(
     completion: @escaping (Result<Bool, HealthKitGeneralError>) -> Void
 ) {
-    if writeTypes.isEmpty || readTypes.isEmpty {
+    if writeTypes.isEmpty {
         completion(.failure(.init(reason: "ヘルスケアが生理情報の操作に対応していません")))
         return
     }
@@ -45,7 +46,7 @@ func isAuthorizedReadAndShareToHealthKitData(
 func shouldRequestForAccessToHealthKitData(
     completion: @escaping (Result<Bool, HealthKitGeneralError>) -> Void
 ) {
-    if writeTypes.isEmpty || readTypes.isEmpty {
+    if writeTypes.isEmpty {
         completion(.failure(.init(reason: "ヘルスケアが生理情報の操作に対応していません")))
         return
     }
