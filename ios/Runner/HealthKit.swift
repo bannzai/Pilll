@@ -2,15 +2,15 @@ import HealthKit
 
 // MARK: - Foundamental
 let store = HKHealthStore()
-let writeTypes: Set<HKSampleType>? = {
+let writeTypes: Set<HKSampleType> = {
     guard let category = HKSampleType.categoryType(forIdentifier: .menstrualFlow) else {
-        return nil
+        return []
     }
     return [category]
 }()
-let readTypes: Set<HKObjectType>? = {
+let readTypes: Set<HKObjectType> = {
     guard let object = HKObjectType.categoryType(forIdentifier: .menstrualFlow) else {
-        return nil
+        return []
     }
     return [object]
 }()
@@ -24,12 +24,48 @@ struct HealthKitGeneralError: Error {
     }
 }
 
-
 // MARK: - Permissions
+func isAuthorizedReadAndShareToHealthKitData(
+    completion: @escaping (Result<Bool, HealthKitGeneralError>) -> Void
+) {
+    if writeTypes.isEmpty || readTypes.isEmpty {
+        completion(.failure(.init(reason: "ヘルスケアが生理情報の操作に対応していません")))
+        return
+    }
+
+    store.getRequestStatusForAuthorization(toShare: writeTypes, read: readTypes) { status, error in
+        if let error = error {
+            completion(.failure(.init(reason: error.localizedDescription)))
+        } else {
+            completion(.success(status == .unnecessary))
+        }
+    }
+}
+
+func shouldRequestForAccessToHealthKitData(
+    completion: @escaping (Result<Bool, HealthKitGeneralError>) -> Void
+) {
+    if writeTypes.isEmpty || readTypes.isEmpty {
+        completion(.failure(.init(reason: "ヘルスケアが生理情報の操作に対応していません")))
+        return
+    }
+
+    store.getRequestStatusForAuthorization(toShare: writeTypes, read: readTypes) { status, error in
+        if let error = error {
+            completion(.failure(.init(reason: error.localizedDescription)))
+        } else {
+            completion(.success(status == .shouldRequest))
+        }
+    }
+}
+
 func requestWriteMenstrualFlowHealthKitDataPermission(
     completion: @escaping (Result<Bool, HealthKitGeneralError>) -> Void
 )  {
-    store.requestAuthorization(toShare: writeTypes, read: readTypes, completion: { (status, error) in
+    func emptyToNil<T>(value: Set<T>) -> Set<T>? {
+        value.isEmpty ? nil : value
+    }
+    store.requestAuthorization(toShare: emptyToNil(value: writeTypes), read: emptyToNil(value: readTypes), completion: { (status, error) in
         if let error = error {
             completion(.failure(.init(reason: error.localizedDescription)))
         } else {
