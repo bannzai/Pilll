@@ -57,6 +57,9 @@ Future<String> addMenstruationFlowHealthKitData(
   if (!await isHealthDataAvailable()) {
     throw FormatException("ヘルスケアに対応していない端末ではご利用できません");
   }
+  if (!await isAuthorizedReadAndShareToHealthKitData()) {
+    throw FormatException("設定アプリよりヘルスケアを有効にしてください");
+  }
 
 // Avoid codec error
 // e.g) Unhandled Exception: Invalid argument: Instance of 'Timestamp'
@@ -91,6 +94,9 @@ Future<String> updateOrAddMenstruationFlowHealthKitData(
   if (!await isHealthDataAvailable()) {
     throw FormatException("ヘルスケアに対応していない端末ではご利用できません");
   }
+  if (!await isAuthorizedReadAndShareToHealthKitData()) {
+    throw FormatException("設定アプリよりヘルスケアを有効にしてください");
+  }
 
 // Avoid codec error
 // e.g) Unhandled Exception: Invalid argument: Instance of 'Timestamp'
@@ -124,6 +130,9 @@ Future<void> deleteMenstruationFlowHealthKitData(
   }
   if (!await isHealthDataAvailable()) {
     throw FormatException("ヘルスケアに対応していない端末ではご利用できません");
+  }
+  if (!await isAuthorizedReadAndShareToHealthKitData()) {
+    throw FormatException("設定アプリよりヘルスケアを有効にしてください");
   }
 
 // Avoid codec error
