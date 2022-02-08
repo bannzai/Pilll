@@ -153,6 +153,19 @@ Future<String> addMenstruationFlowHealthKitData(
   }
 }
 
+Future<bool> isAuthorizedReadAndShareToHealthKitData() async {
+  if (!Platform.isIOS) {
+    throw FormatException("iOSアプリにのみ対応しています");
+  }
+  if (!await isHealthDataAvailable()) {
+    throw FormatException("ヘルスケアに対応していない端末ではご利用できません");
+  }
+
+  final result =
+      await _channel.invokeMethod("isAuthorizedReadAndShareToHealthKitData");
+  return result["isAuthorizedReadAndShareToHealthKitData"] == true;
+}
+
 Future<String> updateOrAddMenstruationFlowHealthKitData(
   Menstruation menstruation,
 ) async {
