@@ -1,7 +1,9 @@
 import 'dart:async';
+import 'dart:io';
 
 import 'package:pilll/database/batch.dart';
 import 'package:pilll/entity/setting.dart';
+import 'package:pilll/global_method_channel.dart';
 import 'package:pilll/service/pill_sheet.dart';
 import 'package:pilll/service/pill_sheet_group.dart';
 import 'package:pilll/service/pill_sheet_modified_history.dart';
@@ -58,6 +60,13 @@ class SettingStateStore extends StateNotifier<SettingState> {
         state = SettingState(
           userIsUpdatedFrom132: userIsMigratedFrom132,
         );
+      });
+
+      Future(() async {
+        if (Platform.isIOS) {
+          state = state.copyWith(
+              isHealthDataAvailable: await isHealthDataAvailable());
+        }
       });
 
       _subscribe();

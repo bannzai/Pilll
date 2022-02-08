@@ -13,6 +13,7 @@ class SettingState with _$SettingState {
     @Default(false) bool userIsUpdatedFrom132,
     @Default(false) bool isPremium,
     @Default(false) bool isTrial,
+    @Default(false) bool isHealthDataAvailable,
     DateTime? trialDeadlineDate,
     Object? exception,
   }) = _SettingState;
