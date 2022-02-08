@@ -1,4 +1,6 @@
 import 'package:flutter/services.dart';
+import 'package:pilll/native/legacy.dart';
+import 'package:pilll/native/pill.dart';
 
 final methodChannel = MethodChannel("method.channel.MizukiOhashi.Pilll");
 definedChannel() {
