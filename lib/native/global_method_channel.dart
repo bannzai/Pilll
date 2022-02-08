@@ -16,9 +16,9 @@ import 'package:pilll/util/datetime/day.dart';
 import 'package:flutter/services.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
-final _channel = MethodChannel("method.channel.MizukiOhashi.Pilll");
+final methodChannel = MethodChannel("method.channel.MizukiOhashi.Pilll");
 definedChannel() {
-  _channel.setMethodCallHandler((MethodCall call) async {
+  methodChannel.setMethodCallHandler((MethodCall call) async {
     switch (call.method) {
       case 'recordPill':
         return recordPill();
@@ -115,7 +115,7 @@ Future<bool> isHealthDataAvailable() async {
     return false;
   }
 
-  final result = await _channel.invokeMethod("isHealthDataAvailable");
+  final result = await methodChannel.invokeMethod("isHealthDataAvailable");
   return result["isHealthDataAvailable"] == true;
 }
 
@@ -140,7 +140,7 @@ Future<String> addMenstruationFlowHealthKitData(
   }
 
   dynamic response =
-      await _channel.invokeMethod("addMenstruationFlowHealthKitData", {
+      await methodChannel.invokeMethod("addMenstruationFlowHealthKitData", {
     "menstruation": json,
   });
 
@@ -161,8 +161,8 @@ Future<bool> isAuthorizedReadAndShareToHealthKitData() async {
     throw FormatException("ヘルスケアに対応していない端末ではご利用できません");
   }
 
-  final result =
-      await _channel.invokeMethod("isAuthorizedReadAndShareToHealthKitData");
+  final result = await methodChannel
+      .invokeMethod("isAuthorizedReadAndShareToHealthKitData");
   return result["isAuthorizedReadAndShareToHealthKitData"] == true;
 }
 
@@ -186,8 +186,8 @@ Future<String> updateOrAddMenstruationFlowHealthKitData(
     }
   }
 
-  dynamic response =
-      await _channel.invokeMethod("updateOrAddMenstruationFlowHealthKitData", {
+  dynamic response = await methodChannel
+      .invokeMethod("updateOrAddMenstruationFlowHealthKitData", {
     "menstruation": json,
   });
 
@@ -221,7 +221,7 @@ Future<void> deleteMenstruationFlowHealthKitData(
   }
 
   dynamic response =
-      await _channel.invokeMethod("deleteMenstrualFlowHealthKitData", {
+      await methodChannel.invokeMethod("deleteMenstrualFlowHealthKitData", {
     "menstruation": json,
   });
 
@@ -242,7 +242,7 @@ Future<bool> shouldRequestForAccessToHealthKitData() async {
     return false;
   }
 
-  dynamic response = await _channel.invokeMethod(
+  dynamic response = await methodChannel.invokeMethod(
     "shouldRequestForAccessToHealthKitData",
   );
 
@@ -263,7 +263,7 @@ Future<bool> requestWriteMenstrualFlowHealthKitDataPermission() async {
     return false;
   }
 
-  dynamic response = await _channel.invokeMethod(
+  dynamic response = await methodChannel.invokeMethod(
     "requestWriteMenstrualFlowHealthKitDataPermission",
   );
 
