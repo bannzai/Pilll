@@ -48,6 +48,27 @@ Future<bool> shouldRequestForAccessToHealthKitData() async {
   }
 }
 
+Future<bool> requestWriteMenstrualFlowHealthKitDataPermission() async {
+  if (!Platform.isIOS) {
+    return false;
+  }
+  if (!await isHealthDataAvailable()) {
+    return false;
+  }
+
+  dynamic response = await methodChannel.invokeMethod(
+    "requestWriteMenstrualFlowHealthKitDataPermission",
+  );
+
+  if (response["result"] == "success") {
+    return response["isSuccess"] == true;
+  } else if (response["result"] == "failure") {
+    throw UserDisplayedError(response["reason"]);
+  } else {
+    throw Exception("unknown error");
+  }
+}
+
 Future<String> addMenstruationFlowHealthKitData(
   Menstruation menstruation,
 ) async {
@@ -152,27 +173,6 @@ Future<void> deleteMenstruationFlowHealthKitData(
 
   if (response["result"] == "success") {
     return;
-  } else if (response["result"] == "failure") {
-    throw UserDisplayedError(response["reason"]);
-  } else {
-    throw Exception("unknown error");
-  }
-}
-
-Future<bool> requestWriteMenstrualFlowHealthKitDataPermission() async {
-  if (!Platform.isIOS) {
-    return false;
-  }
-  if (!await isHealthDataAvailable()) {
-    return false;
-  }
-
-  dynamic response = await methodChannel.invokeMethod(
-    "requestWriteMenstrualFlowHealthKitDataPermission",
-  );
-
-  if (response["result"] == "success") {
-    return response["isSuccess"] == true;
   } else if (response["result"] == "failure") {
     throw UserDisplayedError(response["reason"]);
   } else {
