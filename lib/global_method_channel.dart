@@ -219,3 +219,45 @@ Future<void> deleteMenstruationFlowHealthKitData(
     throw Exception("unknown error");
   }
 }
+
+Future<bool> shouldRequestForAccessToHealthKitData() async {
+  if (!Platform.isIOS) {
+    return false;
+  }
+  if (!await isHealthDataAvailable()) {
+    return false;
+  }
+
+  dynamic response = await _channel.invokeMethod(
+    "shouldRequestForAccessToHealthKitData",
+  );
+
+  if (response["result"] == "success") {
+    return response["shouldRequestForAccessToHealthKitData"] == true;
+  } else if (response["result"] == "failure") {
+    throw Exception(response["reason"]);
+  } else {
+    throw Exception("unknown error");
+  }
+}
+
+Future<bool> requestWriteMenstrualFlowHealthKitDataPermission() async {
+  if (!Platform.isIOS) {
+    return false;
+  }
+  if (!await isHealthDataAvailable()) {
+    return false;
+  }
+
+  dynamic response = await _channel.invokeMethod(
+    "requestWriteMenstrualFlowHealthKitDataPermission",
+  );
+
+  if (response["result"] == "success") {
+    return response["isSuccess"] == true;
+  } else if (response["result"] == "failure") {
+    throw Exception(response["reason"]);
+  } else {
+    throw Exception("unknown error");
+  }
+}
