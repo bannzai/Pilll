@@ -138,30 +138,38 @@ func updateOrAddMenstruationFlowHealthKitData(
     arguments: Any?,
     completion: @escaping (Result<HealthKitWriteResult.Success, HealthKitWriteResult.Failure>) -> Void
 ) {
-    readMenstruationData(arguments: arguments) { readResult in
-        switch readResult {
-        case .success(let sample):
-            if let sample = sample {
-                deleteMenstrualFlowHealthKitData(arguments: arguments) { deleteResult in
-                    switch deleteResult {
-                    case .success:
-                        writeMenstrualFlowHealthKitData(arguments: arguments, sample: sample, completion: completion)
-                    case .failure(let deleteFailure):
-                        completion(.failure(deleteFailure))
+    // HealthKitでuuid指定でHKObjectがアップデートできないので作成と削除を行いそれで編集機能とする
+    // 作成から先にやるのは、仮にdeleteが先に行われてwriteが失敗した場合にただデータが削除されるため、先にwriteをしてからdeleteする
+    writeMenstrualFlowHealthKitData(arguments: arguments) { writeResult in
+        switch writeResult {
+        case .success(let writeSuccess):
+            readMenstruationData(arguments: arguments) { readResult in
+                switch readResult {
+                case .success(let sample):
+                    if let _ = sample {
+                        deleteMenstrualFlowHealthKitData(arguments: arguments) { deleteResult in
+                            switch deleteResult {
+                            case .success:
+                                completion(.success(writeSuccess))
+                            case .failure(let deleteFailure):
+                                completion(.failure(deleteFailure))
+                            }
+                        }
+                    } else {
+                        completion(.success(writeSuccess))
                     }
+                case .failure(let error):
+                    completion(.failure(.init(reason: error.localizedDescription)))
                 }
-            } else {
-                writeMenstrualFlowHealthKitData(arguments: arguments, sample: sample, completion: completion)
             }
-        case .failure(let error):
-            completion(.failure(.init(reason: error.localizedDescription)))
+        case .failure(let writeFailure):
+            completion(.failure(writeFailure))
         }
     }
 }
 
 private func writeMenstrualFlowHealthKitData(
     arguments: Any?,
-    sample: HKSample?,
     completion: @escaping (Result<HealthKitWriteResult.Success, HealthKitWriteResult.Failure>) -> Void
 ) {
     guard let json = arguments as? Dictionary<String, Any>,
@@ -175,29 +183,15 @@ private func writeMenstrualFlowHealthKitData(
 
     let begin = Date(timeIntervalSince1970: beginDate.doubleValue / 1000)
     let end = Date(timeIntervalSince1970: endDate.doubleValue / 1000)
-
-    let writeData: HKSample
-    if let sample = sample {
-        writeData = HKCategorySample(
-            type: <#T##HKCategoryType#>,
-            value: <#T##Int#>,
-            start: <#T##Date#>,
-            end: <#T##Date#>,
-            metadata: <#T##[String : Any]?#>
-        )
-        writeData.startDate = beginDate
-        writeData.endDate = endDate
-    } else {
-        writeData = HKCategorySample(
-            type: HKObjectType.categoryType(forIdentifier: .menstrualFlow)!,
-            value: HKCategoryValueMenstrualFlow.unspecified.rawValue,
-            start: begin,
-            end: end,
-            metadata: [
-                HKMetadataKeyMenstrualCycleStart: true
-            ]
-        )
-    }
+    let writeData = HKCategorySample(
+        type: HKObjectType.categoryType(forIdentifier: .menstrualFlow)!,
+        value: HKCategoryValueMenstrualFlow.unspecified.rawValue,
+        start: begin,
+        end: end,
+        metadata: [
+            HKMetadataKeyMenstrualCycleStart: true
+        ]
+    )
 
     store.save(writeData, withCompletion: { (isSuccess, error) in
         if let error = error {
