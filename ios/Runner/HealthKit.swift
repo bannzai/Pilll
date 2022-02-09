@@ -131,7 +131,7 @@ func addMenstruationFlowHealthKitData(
     arguments: Any?,
     completion: @escaping (Result<HealthKitWriteResult.Success, HealthKitWriteResult.Failure>) -> Void
 ) {
-    writeMenstrualFlowHealthKitData(arguments: arguments, sample: nil, completion: completion)
+    writeMenstrualFlowHealthKitData(arguments: arguments, completion: completion)
 }
 
 func updateOrAddMenstruationFlowHealthKitData(
