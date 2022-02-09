@@ -24,7 +24,8 @@ class HealthCareRow extends StatelessWidget {
 
         try {
           if (await isAuthorizedReadAndShareToHealthKitData()) {
-            launch("x-apple-health://");
+            launch(
+                "https://pilll.wraptas.site/c26580878bb74fdba86f1b71e93c7c02");
           } else {
             if (await shouldRequestForAccessToHealthKitData()) {
               await requestWriteMenstrualFlowHealthKitDataPermission();
