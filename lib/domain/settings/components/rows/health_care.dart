@@ -13,9 +13,10 @@ class HealthCareRow extends StatelessWidget {
     return ListTile(
       title: Row(
         children: [
-          Text("ヘルスケア", style: FontType.listRow),
+          Text("ヘルスケア連携", style: FontType.listRow),
         ],
       ),
+      subtitle: Text("Pilllで記録した生理記録を自動でヘルスケアに記録できます"),
       onTap: () async {
         analytics.logEvent(
           name: "did_select_health_care_row",
