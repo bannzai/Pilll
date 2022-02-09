@@ -5,6 +5,7 @@ import 'package:pilll/entity/user_error.dart';
 import 'package:pilll/error/error_alert.dart';
 import 'package:pilll/error/universal_error_page.dart';
 import 'package:pilll/native/health_care.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 class HealthCareRow extends StatelessWidget {
   @override
@@ -21,8 +22,12 @@ class HealthCareRow extends StatelessWidget {
         );
 
         try {
-          if (await shouldRequestForAccessToHealthKitData()) {
-            await requestWriteMenstrualFlowHealthKitDataPermission();
+          if (await isAuthorizedReadAndShareToHealthKitData()) {
+            launch("x-apple-health://");
+          } else {
+            if (await shouldRequestForAccessToHealthKitData()) {
+              await requestWriteMenstrualFlowHealthKitDataPermission();
+            }
           }
         } catch (error) {
           if (error is UserDisplayedError) {
