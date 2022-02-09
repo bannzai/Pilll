@@ -141,18 +141,7 @@ func updateOrAddMenstruationFlowHealthKitData(
     readMenstruationData(arguments: arguments) { readResult in
         switch readResult {
         case .success(let sample):
-            if let sample = sample {
-                deleteMenstrualFlowHealthKitData(arguments: arguments) { deleteResult in
-                    switch deleteResult {
-                    case .success:
-                        writeMenstrualFlowHealthKitData(arguments: arguments, sample: sample, completion: completion)
-                    case .failure(let deleteFailure):
-                        completion(.failure(deleteFailure))
-                    }
-                }
-            } else {
-                writeMenstrualFlowHealthKitData(arguments: arguments, sample: sample, completion: completion)
-            }
+            writeMenstrualFlowHealthKitData(arguments: arguments, sample: sample, completion: completion)
         case .failure(let error):
             completion(.failure(.init(reason: error.localizedDescription)))
         }
@@ -178,17 +167,9 @@ private func writeMenstrualFlowHealthKitData(
 
     let writeData: HKSample
     if let sample = sample {
-        writeData = HKCategorySample(
-            type: <#T##HKCategoryType#>,
-            value: <#T##Int#>,
-            start: <#T##Date#>,
-            end: <#T##Date#>,
-            metadata: <#T##[String : Any]?#>
-        )
-        writeData.startDate = beginDate
-        writeData.endDate = endDate
+        writeData = sample
     } else {
-        writeData = HKCategorySample(
+        writeData = HKCategorySample.init(
             type: HKObjectType.categoryType(forIdentifier: .menstrualFlow)!,
             value: HKCategoryValueMenstrualFlow.unspecified.rawValue,
             start: begin,
