@@ -2,7 +2,6 @@ import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/analytics.dart';
 import 'package:pilll/components/atoms/color.dart';
-import 'package:pilll/domain/demography/demography_page.dart';
 import 'package:pilll/domain/modal/announcement_multiple_pillsheet.dart';
 import 'package:pilll/domain/premium_introduction/premium_introduction_sheet.dart';
 import 'package:pilll/domain/premium_introduction/util/discount_deadline.dart';
@@ -112,11 +111,7 @@ class NotificationBar extends HookConsumerWidget {
                 showSigninSheet(
                   context,
                   SigninSheetStateContext.recordPage,
-                  (linkAccount) {
-                    analytics.logEvent(
-                        name: "signined_account_from_notification_bar");
-                    showDemographyPageIfNeeded(context);
-                  },
+                  null,
                 );
               },
               onClose: () {

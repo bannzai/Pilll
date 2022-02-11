@@ -24,7 +24,6 @@ extension UserPrivateFirestoreFieldKeys on String {
   static final isLinkedApple = 'isLinkedApple';
   static final googleEmail = 'googleEmail';
   static final isLinkedGoogle = 'isLinkedGoogle';
-  static final demographic = "demographic";
   static final latestPremiumPlanIdentifier = "latestPremiumPlanIdentifier";
   static final originalPurchaseDate = "originalPurchaseDate";
   static final activeSubscriptions = "activeSubscriptions";
