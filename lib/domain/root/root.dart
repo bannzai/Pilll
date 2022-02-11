@@ -114,6 +114,10 @@ class RootState extends State<Root> {
   _decideScreenType() async {
     const minimumSupportedAppVersionKey = "minimum_supported_app_version";
     final remoteConfig = FirebaseRemoteConfig.instance;
+    remoteConfig.setDefaults({
+      minimumSupportedAppVersionKey: "3.4.0",
+    });
+
     if (Environment.isDevelopment) {
       await remoteConfig.setConfigSettings(
         RemoteConfigSettings(
@@ -122,10 +126,8 @@ class RootState extends State<Root> {
         ),
       );
     }
-    remoteConfig.setDefaults({
-      minimumSupportedAppVersionKey: "3.4.0",
-    });
     await remoteConfig.fetchAndActivate();
+
     final minimumSupportedAppVersion =
         remoteConfig.getString(minimumSupportedAppVersionKey);
     final packageVersion = await Version.fromPackage();
