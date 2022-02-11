@@ -3,7 +3,6 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:pilll/analytics.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
-import 'package:pilll/domain/demography/demography_page.dart';
 import 'package:pilll/signin/signin_sheet.dart';
 import 'package:pilll/signin/signin_sheet_state.dart';
 
@@ -17,11 +16,10 @@ class RecommendSignupForPremiumNotificationBar extends StatelessWidget {
     return Container(
       padding: EdgeInsets.only(top: 10, bottom: 8),
       child: GestureDetector(
-        onTap: () => showSigninSheet(
-            context, SigninSheetStateContext.recordPage, (linkAccount) {
+        onTap: () {
           analytics.logEvent(name: "tapped_premium_signup_notification_bar");
-          showDemographyPageIfNeeded(context);
-        }),
+          showSigninSheet(context, SigninSheetStateContext.recordPage, null);
+        },
         child: Stack(
           children: [
             Align(
