@@ -23,8 +23,8 @@ extension StringKey on String {
   static final String beginingVersionKey = "beginingVersion";
   static final String currentUserUID = "currentUserUID";
   static final String lastSigninAnonymousUID = "lastSigninAnonymousUID";
-  static final String lastVersionForCheckedForceUpdate =
-      "lastVersionForCheckedForceUpdate";
+  static final String lastCheckedMinimumSupportedAppVersion =
+      "lastCheckedMinimumSupportedAppVersion";
 }
 
 extension ReleaseNoteKey on String {
