@@ -41,4 +41,8 @@ class Version {
       major < other.major ||
       (major <= other.major && minor < other.minor) ||
       (major <= other.major && minor <= other.minor && patch < other.patch);
+
+  String get version {
+    return "$major.$minor.$patch";
+  }
 }
