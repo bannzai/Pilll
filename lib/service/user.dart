@@ -4,7 +4,6 @@ import 'dart:io';
 import 'package:firebase_auth/firebase_auth.dart' as firebaseAuth;
 import 'package:pilll/database/database.dart';
 import 'package:pilll/domain/premium_function_survey/premium_function_survey_element_type.dart';
-import 'package:pilll/entity/demographic.dart';
 import 'package:pilll/entity/package.dart';
 import 'package:pilll/entity/premium_function_survey.dart';
 import 'package:pilll/entity/setting.dart';
@@ -148,12 +147,6 @@ class UserService {
       if (email != null) UserPrivateFirestoreFieldKeys.googleEmail: email,
       UserPrivateFirestoreFieldKeys.isLinkedGoogle: true,
     }, SetOptions(merge: true));
-  }
-
-  Future<void> postDemographic(Demographic demographic) {
-    return _database.userPrivateReference().set(
-        {UserPrivateFirestoreFieldKeys.demographic: demographic.toJson()},
-        SetOptions(merge: true));
   }
 
   Future<void> trial(Setting setting) {
