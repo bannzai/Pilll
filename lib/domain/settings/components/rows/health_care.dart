@@ -11,6 +11,7 @@ class HealthCareRow extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ListTile(
+      minVerticalPadding: 9,
       title: Row(
         children: [
           Text("ヘルスケア連携", style: FontType.listRow),
