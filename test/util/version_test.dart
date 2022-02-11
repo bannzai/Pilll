@@ -30,5 +30,8 @@ void main() {
     test("lhs: 1.1.0, rhs: 1.0.0", () {
       expect(Version.parse("1.1.0").isLessThan(Version.parse("1.0.0")), false);
     });
+    test("lhs: 2.0.0, rhs: 1.0.0", () {
+      expect(Version.parse("2.0.0").isLessThan(Version.parse("1.0.0")), false);
+    });
   });
 }
