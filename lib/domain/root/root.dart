@@ -14,6 +14,7 @@ import 'package:pilll/error/template.dart';
 import 'package:pilll/error/universal_error_page.dart';
 import 'package:pilll/error_log.dart';
 import 'package:pilll/service/user.dart';
+import 'package:pilll/util/environment.dart';
 import 'package:pilll/util/platform/platform.dart';
 import 'package:pilll/util/shared_preference/keys.dart';
 import 'package:flutter/material.dart';
@@ -113,12 +114,14 @@ class RootState extends State<Root> {
   _decideScreenType() async {
     const minimumSupportedAppVersionKey = "minimum_supported_app_version";
     final remoteConfig = FirebaseRemoteConfig.instance;
-    await remoteConfig.setConfigSettings(
-      RemoteConfigSettings(
-        minimumFetchInterval: Duration(seconds: 0),
-        fetchTimeout: Duration(seconds: 30),
-      ),
-    );
+    if (Environment.isDevelopment) {
+      await remoteConfig.setConfigSettings(
+        RemoteConfigSettings(
+          minimumFetchInterval: Duration(seconds: 0),
+          fetchTimeout: Duration(seconds: 30),
+        ),
+      );
+    }
     remoteConfig.setDefaults({
       minimumSupportedAppVersionKey: "3.4.0",
     });
