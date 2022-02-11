@@ -111,43 +111,6 @@ class RootState extends State<Root> {
     );
   }
 
-  Future<bool> _shouldForceUpdate() async {
-    const minimumSupportedAppVersionKey = "minimum_supported_app_version";
-    final remoteConfig = FirebaseRemoteConfig.instance;
-    remoteConfig.setDefaults({
-      minimumSupportedAppVersionKey: "3.4.0",
-    });
-
-    if (Environment.isDevelopment) {
-      await remoteConfig.setConfigSettings(
-        RemoteConfigSettings(
-          minimumFetchInterval: Duration(seconds: 0),
-          fetchTimeout: Duration(seconds: 30),
-        ),
-      );
-    }
-
-    final packageVersion = await Version.fromPackage();
-    final sharedPreferences = await SharedPreferences.getInstance();
-    final lastCheckedMinimumSupportedAppVersionString = sharedPreferences
-        .getString(StringKey.lastCheckedMinimumSupportedAppVersion);
-    if (lastCheckedMinimumSupportedAppVersionString != null) {
-      final lastCheckedMinimumSupportedAppVersion =
-          Version.parse(lastCheckedMinimumSupportedAppVersionString);
-      if (!packageVersion.isLessThan(lastCheckedMinimumSupportedAppVersion)) {
-        return false;
-      }
-    }
-
-    await remoteConfig.fetchAndActivate();
-    final minimumSupportedAppVersion =
-        remoteConfig.getString(minimumSupportedAppVersionKey);
-    sharedPreferences.setString(StringKey.lastCheckedMinimumSupportedAppVersion,
-        minimumSupportedAppVersion);
-
-    return packageVersion.isLessThan(Version.parse(minimumSupportedAppVersion));
-  }
-
   _decideScreenType() async {
     const minimumSupportedAppVersionKey = "minimum_supported_app_version";
     final remoteConfig = FirebaseRemoteConfig.instance;
@@ -163,20 +126,11 @@ class RootState extends State<Root> {
         ),
       );
     }
-    final packageVersion = await Version.fromPackage();
-    final sharedPreferences = await SharedPreferences.getInstance();
-    final lastCheckedMinimumSupportedAppVersionString = sharedPreferences
-        .getString(StringKey.lastCheckedMinimumSupportedAppVersion);
-    if (lastCheckedMinimumSupportedAppVersionString != null) {
-      if (packageVersion.isEqual(other)) {}
-    }
-
     await remoteConfig.fetchAndActivate();
-    sharedPreferences.setString(StringKey.lastCheckedMinimumSupportedAppVersion,
-        packageVersion.version());
 
     final minimumSupportedAppVersion =
         remoteConfig.getString(minimumSupportedAppVersionKey);
+    final packageVersion = await Version.fromPackage();
     if (packageVersion.isLessThan(Version.parse(minimumSupportedAppVersion))) {
       setState(() {
         screenType = ScreenType.forceUpdate;
