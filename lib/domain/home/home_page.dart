@@ -109,7 +109,6 @@ class _HomePageState extends State<HomePage>
             MenstruationPage(),
             CalendarPage(),
             SettingPage(),
-            // SettingsPage(),
           ],
         ),
         floatingActionButton: Visibility(
