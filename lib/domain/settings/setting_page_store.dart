@@ -44,6 +44,7 @@ class SettingStateStore extends StateNotifier<SettingState> {
 
   void reset() {
     state = SettingState();
+    cancel();
     setup();
   }
 
