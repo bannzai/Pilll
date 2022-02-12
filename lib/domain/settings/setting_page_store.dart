@@ -40,7 +40,9 @@ class SettingStateStore extends StateNotifier<SettingState> {
     this._userService,
     this._pillSheetModifiedHistoryService,
     this._pillSheetGroupService,
-  ) : super(SettingState());
+  ) : super(SettingState()) {
+    setup();
+  }
 
   void reset() {
     state = SettingState();

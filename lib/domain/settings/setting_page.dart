@@ -46,10 +46,6 @@ class SettingPage extends HookConsumerWidget {
     final state = ref.watch(settingStoreProvider);
 
     useAutomaticKeepAlive(wantKeepAlive: true);
-    useEffect(() {
-      store.setup();
-      return store.cancel;
-    }, const []);
 
     return Scaffold(
       backgroundColor: PilllColors.background,
