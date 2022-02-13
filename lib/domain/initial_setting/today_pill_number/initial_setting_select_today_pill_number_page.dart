@@ -2,9 +2,9 @@ import 'package:pilll/analytics.dart';
 import 'package:pilll/domain/initial_setting/initial_setting_store.dart';
 import 'package:pilll/components/atoms/buttons.dart';
 import 'package:pilll/components/atoms/color.dart';
-import 'package:pilll/domain/initial_setting/menstruation/initial_setting_menstruation_page.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
+import 'package:pilll/domain/initial_setting/reminder_times/initial_setting_reminder_times_page.dart';
 import 'package:pilll/domain/initial_setting/today_pill_number/explain_label.dart';
 import 'package:pilll/domain/initial_setting/today_pill_number/select_today_pill_number_pill_sheet_list.dart';
 import 'package:pilll/util/datetime/day.dart';
@@ -31,7 +31,7 @@ class InitialSettingSelectTodayPillNumberPage extends HookConsumerWidget {
           onPressed: () => Navigator.of(context).pop(),
         ),
         title: Text(
-          "2/4",
+          "2/3",
           style: TextStyle(color: TextColor.black),
         ),
         backgroundColor: PilllColors.white,
@@ -66,7 +66,7 @@ class InitialSettingSelectTodayPillNumberPage extends HookConsumerWidget {
                           analytics.logEvent(
                               name: "unknown_number_initial_setting");
                           Navigator.of(context).push(
-                              InitialSettingMenstruationPageRoute.route());
+                              InitialSettingReminderTimesPageRoute.route());
                         },
                         text: "まだ分からない",
                       ),
@@ -85,7 +85,7 @@ class InitialSettingSelectTodayPillNumberPage extends HookConsumerWidget {
                               analytics.logEvent(
                                   name: "done_today_number_initial_setting");
                               Navigator.of(context).push(
-                                  InitialSettingMenstruationPageRoute.route());
+                                  InitialSettingReminderTimesPageRoute.route());
                             },
                     ),
                     SizedBox(height: 35),
