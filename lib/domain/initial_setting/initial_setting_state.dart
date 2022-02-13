@@ -22,10 +22,6 @@ class InitialSettingState with _$InitialSettingState {
     @Default([])
         List<PillSheetType> pillSheetTypes,
     InitialSettingTodayPillNumber? todayPillNumber,
-    @Default(0)
-        int fromMenstruation,
-    @Default(4)
-        int durationMenstruation,
     @Default([
       ReminderTime(hour: 21, minute: 0),
       ReminderTime(hour: 22, minute: 0),
