@@ -323,8 +323,8 @@ void main() {
           .thenReturn(null);
 
       final setting = Setting(
-        pillNumberForFromMenstruation: 22,
-        durationMenstruation: 3,
+        pillNumberForFromMenstruation: 24,
+        durationMenstruation: 4,
         isOnReminder: true,
         reminderTimes: [
           ReminderTime(hour: 21, minute: 20),
@@ -412,8 +412,8 @@ void main() {
           .thenReturn(null);
 
       final setting = Setting(
-        pillNumberForFromMenstruation: 22,
-        durationMenstruation: 3,
+        pillNumberForFromMenstruation: 52,
+        durationMenstruation: 4,
         isOnReminder: true,
         reminderTimes: [
           ReminderTime(hour: 21, minute: 20),
