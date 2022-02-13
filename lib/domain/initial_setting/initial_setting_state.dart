@@ -52,13 +52,22 @@ class InitialSettingState with _$InitialSettingState {
     return null;
   }
 
-  Setting buildSetting() => Setting(
-        pillNumberForFromMenstruation: fromMenstruation,
-        durationMenstruation: durationMenstruation,
-        pillSheetTypes: pillSheetTypes,
-        reminderTimes: reminderTimes,
-        isOnReminder: isOnReminder,
-      );
+  Setting buildSetting() {
+    final menstruationDuration = 4;
+    final maxPillCount = pillSheetTypes
+        .map((e) => e.totalCount)
+        .reduce((value, element) => value + element);
+    final pillNumberForFromMenstruation = maxPillCount - menstruationDuration;
+
+    final setting = Setting(
+      pillNumberForFromMenstruation: pillNumberForFromMenstruation,
+      durationMenstruation: menstruationDuration,
+      pillSheetTypes: pillSheetTypes,
+      reminderTimes: reminderTimes,
+      isOnReminder: isOnReminder,
+    );
+    return setting;
+  }
 
   static PillSheet buildPillSheet({
     required int pageIndex,
