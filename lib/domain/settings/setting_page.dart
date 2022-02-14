@@ -219,6 +219,16 @@ class SettingPage extends HookConsumerWidget {
                             inquiry();
                           }),
                       _separator(),
+                      ListTile(
+                          title: Text("リリースノート", style: FontType.listRow),
+                          onTap: () {
+                            analytics.logEvent(
+                                name: "setting_did_select_release_note",
+                                parameters: {});
+                            launch(
+                                "https://pilll.wraptas.site/172cae6bced04bbabeab1d8acad91a61");
+                          }),
+                      _separator(),
                       if (Environment.isDevelopment) _debug(context),
                     ],
                   );
