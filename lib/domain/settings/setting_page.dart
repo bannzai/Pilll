@@ -220,7 +220,7 @@ class SettingPage extends HookConsumerWidget {
                           }),
                       _separator(),
                       ListTile(
-                          title: Text("リリースノート", style: FontType.listRow),
+                          title: Text("新機能紹介", style: FontType.listRow),
                           onTap: () {
                             analytics.logEvent(
                                 name: "setting_did_select_release_note",
