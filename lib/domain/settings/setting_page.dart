@@ -212,14 +212,6 @@ class SettingPage extends HookConsumerWidget {
                           }),
                       _separator(),
                       ListTile(
-                          title: Text("お問い合わせ", style: FontType.listRow),
-                          onTap: () {
-                            analytics.logEvent(
-                                name: "did_select_inquiry", parameters: {});
-                            inquiry();
-                          }),
-                      _separator(),
-                      ListTile(
                           title: Text("新機能紹介", style: FontType.listRow),
                           onTap: () {
                             analytics.logEvent(
@@ -227,6 +219,14 @@ class SettingPage extends HookConsumerWidget {
                                 parameters: {});
                             launch(
                                 "https://pilll.wraptas.site/172cae6bced04bbabeab1d8acad91a61");
+                          }),
+                      _separator(),
+                      ListTile(
+                          title: Text("お問い合わせ", style: FontType.listRow),
+                          onTap: () {
+                            analytics.logEvent(
+                                name: "did_select_inquiry", parameters: {});
+                            inquiry();
                           }),
                       _separator(),
                       if (Environment.isDevelopment) _debug(context),
