@@ -32,13 +32,15 @@ class _$MenstruationTearOff {
       @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
           DateTime? deletedAt,
       @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-          required DateTime createdAt}) {
+          required DateTime createdAt,
+      String? healthKitSampleDataUUID}) {
     return _Menstruation(
       id: id,
       beginDate: beginDate,
       endDate: endDate,
       deletedAt: deletedAt,
       createdAt: createdAt,
+      healthKitSampleDataUUID: healthKitSampleDataUUID,
     );
   }
 
@@ -70,6 +72,7 @@ mixin _$Menstruation {
       fromJson: NonNullTimestampConverter.timestampToDateTime,
       toJson: NonNullTimestampConverter.dateTimeToTimestamp)
   DateTime get createdAt => throw _privateConstructorUsedError;
+  String? get healthKitSampleDataUUID => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
   @JsonKey(ignore: true)
@@ -92,7 +95,8 @@ abstract class $MenstruationCopyWith<$Res> {
       @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
           DateTime? deletedAt,
       @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-          DateTime createdAt});
+          DateTime createdAt,
+      String? healthKitSampleDataUUID});
 }
 
 /// @nodoc
@@ -110,6 +114,7 @@ class _$MenstruationCopyWithImpl<$Res> implements $MenstruationCopyWith<$Res> {
     Object? endDate = freezed,
     Object? deletedAt = freezed,
     Object? createdAt = freezed,
+    Object? healthKitSampleDataUUID = freezed,
   }) {
     return _then(_value.copyWith(
       id: id == freezed
@@ -132,6 +137,10 @@ class _$MenstruationCopyWithImpl<$Res> implements $MenstruationCopyWith<$Res> {
           ? _value.createdAt
           : createdAt // ignore: cast_nullable_to_non_nullable
               as DateTime,
+      healthKitSampleDataUUID: healthKitSampleDataUUID == freezed
+          ? _value.healthKitSampleDataUUID
+          : healthKitSampleDataUUID // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 }
@@ -153,7 +162,8 @@ abstract class _$MenstruationCopyWith<$Res>
       @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
           DateTime? deletedAt,
       @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-          DateTime createdAt});
+          DateTime createdAt,
+      String? healthKitSampleDataUUID});
 }
 
 /// @nodoc
@@ -173,6 +183,7 @@ class __$MenstruationCopyWithImpl<$Res> extends _$MenstruationCopyWithImpl<$Res>
     Object? endDate = freezed,
     Object? deletedAt = freezed,
     Object? createdAt = freezed,
+    Object? healthKitSampleDataUUID = freezed,
   }) {
     return _then(_Menstruation(
       id: id == freezed
@@ -195,6 +206,10 @@ class __$MenstruationCopyWithImpl<$Res> extends _$MenstruationCopyWithImpl<$Res>
           ? _value.createdAt
           : createdAt // ignore: cast_nullable_to_non_nullable
               as DateTime,
+      healthKitSampleDataUUID: healthKitSampleDataUUID == freezed
+          ? _value.healthKitSampleDataUUID
+          : healthKitSampleDataUUID // ignore: cast_nullable_to_non_nullable
+              as String?,
     ));
   }
 }
@@ -213,7 +228,8 @@ class _$_Menstruation extends _Menstruation {
       @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
           this.deletedAt,
       @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-          required this.createdAt})
+          required this.createdAt,
+      this.healthKitSampleDataUUID})
       : super._();
 
   factory _$_Menstruation.fromJson(Map<String, dynamic> json) =>
@@ -242,10 +258,12 @@ class _$_Menstruation extends _Menstruation {
       fromJson: NonNullTimestampConverter.timestampToDateTime,
       toJson: NonNullTimestampConverter.dateTimeToTimestamp)
   final DateTime createdAt;
+  @override
+  final String? healthKitSampleDataUUID;
 
   @override
   String toString() {
-    return 'Menstruation(id: $id, beginDate: $beginDate, endDate: $endDate, deletedAt: $deletedAt, createdAt: $createdAt)';
+    return 'Menstruation(id: $id, beginDate: $beginDate, endDate: $endDate, deletedAt: $deletedAt, createdAt: $createdAt, healthKitSampleDataUUID: $healthKitSampleDataUUID)';
   }
 
   @override
@@ -257,7 +275,9 @@ class _$_Menstruation extends _Menstruation {
             const DeepCollectionEquality().equals(other.beginDate, beginDate) &&
             const DeepCollectionEquality().equals(other.endDate, endDate) &&
             const DeepCollectionEquality().equals(other.deletedAt, deletedAt) &&
-            const DeepCollectionEquality().equals(other.createdAt, createdAt));
+            const DeepCollectionEquality().equals(other.createdAt, createdAt) &&
+            const DeepCollectionEquality().equals(
+                other.healthKitSampleDataUUID, healthKitSampleDataUUID));
   }
 
   @override
@@ -267,7 +287,8 @@ class _$_Menstruation extends _Menstruation {
       const DeepCollectionEquality().hash(beginDate),
       const DeepCollectionEquality().hash(endDate),
       const DeepCollectionEquality().hash(deletedAt),
-      const DeepCollectionEquality().hash(createdAt));
+      const DeepCollectionEquality().hash(createdAt),
+      const DeepCollectionEquality().hash(healthKitSampleDataUUID));
 
   @JsonKey(ignore: true)
   @override
@@ -291,7 +312,8 @@ abstract class _Menstruation extends Menstruation {
       @JsonKey(fromJson: TimestampConverter.timestampToDateTime, toJson: TimestampConverter.dateTimeToTimestamp)
           DateTime? deletedAt,
       @JsonKey(fromJson: NonNullTimestampConverter.timestampToDateTime, toJson: NonNullTimestampConverter.dateTimeToTimestamp)
-          required DateTime createdAt}) = _$_Menstruation;
+          required DateTime createdAt,
+      String? healthKitSampleDataUUID}) = _$_Menstruation;
   const _Menstruation._() : super._();
 
   factory _Menstruation.fromJson(Map<String, dynamic> json) =
@@ -320,6 +342,8 @@ abstract class _Menstruation extends Menstruation {
       fromJson: NonNullTimestampConverter.timestampToDateTime,
       toJson: NonNullTimestampConverter.dateTimeToTimestamp)
   DateTime get createdAt;
+  @override
+  String? get healthKitSampleDataUUID;
   @override
   @JsonKey(ignore: true)
   _$MenstruationCopyWith<_Menstruation> get copyWith =>

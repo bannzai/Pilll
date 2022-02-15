@@ -9,7 +9,7 @@ import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/domain/root/root.dart';
 import 'package:pilll/error/universal_error_page.dart';
-import 'package:pilll/global_method_channel.dart';
+import 'package:pilll/native/channel.dart';
 import 'package:pilll/service/purchase.dart';
 import 'package:pilll/util/environment.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';

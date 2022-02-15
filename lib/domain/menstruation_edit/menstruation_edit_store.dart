@@ -1,8 +1,10 @@
+import 'dart:io';
 import 'dart:math';
 
 import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:pilll/entity/menstruation.dart';
 import 'package:pilll/entity/setting.dart';
+import 'package:pilll/native/health_care.dart';
 import 'package:pilll/service/menstruation.dart';
 import 'package:pilll/service/setting.dart';
 import 'package:pilll/domain/menstruation_edit/menstruation_edit_state.dart';
@@ -18,7 +20,7 @@ final menstruationEditProvider = StateNotifierProvider.family
   ),
 );
 
-List<DateTime> displaedDates(Menstruation? menstruation) {
+List<DateTime> displayedDates(Menstruation? menstruation) {
   if (menstruation != null) {
     return [
       DateTime(
@@ -41,41 +43,30 @@ class MenstruationEditStore extends StateNotifier<MenstruationEditState> {
   late Menstruation? initialMenstruation;
   final MenstruationService menstruationService;
   final SettingService settingService;
-  List<Menstruation> _allMenstruation = [];
-  bool get isExistsDB => initialMenstruation != null;
+
   MenstruationEditStore({
     Menstruation? menstruation,
     required this.menstruationService,
     required this.settingService,
   }) : super(MenstruationEditState(
             menstruation: menstruation,
-            displayedDates: displaedDates(menstruation))) {
+            displayedDates: displayedDates(menstruation))) {
     initialMenstruation = menstruation;
-    _reset();
-  }
-
-  void _reset() {
-    Future(() async {
-      _allMenstruation = await menstruationService.fetchAll();
-      _allMenstruation = _allMenstruation
-          .where((element) => element.id != initialMenstruation?.id)
-          .toList();
-    });
   }
 
   bool shouldShowDiscardDialog() {
-    return (state.menstruation == null && isExistsDB);
+    return (state.menstruation == null && initialMenstruation != null);
   }
 
   bool isDismissWhenSaveButtonPressed() =>
       !shouldShowDiscardDialog() && state.menstruation == null;
 
-  Future<void> delete() {
-    final initialMenstruation = this.initialMenstruation;
-    if (initialMenstruation == null) {
+  Future<void> delete() async {
+    var menstruation = this.initialMenstruation;
+    if (menstruation == null) {
       throw FormatException("menstruation is not exists from db when delete");
     }
-    final documentID = initialMenstruation.documentID;
+    final documentID = menstruation.documentID;
     if (documentID == null) {
       throw FormatException(
           "menstruation is not exists document id from db when delete");
@@ -84,19 +75,50 @@ class MenstruationEditStore extends StateNotifier<MenstruationEditState> {
       throw FormatException(
           "missing condition about state.menstruation is exists when delete. state.menstruation should flushed on edit page");
     }
-    return menstruationService.update(
-        documentID, initialMenstruation.copyWith(deletedAt: now()));
+
+    if (Platform.isIOS) {
+      if (await isHealthDataAvailable()) {
+        if (await isAuthorizedReadAndShareToHealthKitData()) {
+          await deleteMenstruationFlowHealthKitData(menstruation);
+          menstruation = menstruation.copyWith(healthKitSampleDataUUID: null);
+        }
+      }
+    }
+
+    await menstruationService.update(
+        documentID, menstruation.copyWith(deletedAt: now()));
   }
 
-  Future<Menstruation> save() {
-    final menstruation = state.menstruation;
+  Future<Menstruation> save() async {
+    var menstruation = state.menstruation;
     if (menstruation == null) {
       throw FormatException("menstruation is not exists when save");
     }
     final documentID = initialMenstruation?.documentID;
     if (documentID == null) {
+      if (Platform.isIOS) {
+        if (await isHealthDataAvailable()) {
+          if (await isAuthorizedReadAndShareToHealthKitData()) {
+            final healthKitSampleDataUUID =
+                await addMenstruationFlowHealthKitData(menstruation);
+            menstruation = menstruation.copyWith(
+                healthKitSampleDataUUID: healthKitSampleDataUUID);
+          }
+        }
+      }
+
       return menstruationService.create(menstruation);
     } else {
+      if (Platform.isIOS) {
+        if (await isHealthDataAvailable()) {
+          if (await isAuthorizedReadAndShareToHealthKitData()) {
+            final healthKitSampleDataUUID =
+                await updateOrAddMenstruationFlowHealthKitData(menstruation);
+            menstruation = menstruation.copyWith(
+                healthKitSampleDataUUID: healthKitSampleDataUUID);
+          }
+        }
+      }
       return menstruationService.update(documentID, menstruation);
     }
   }

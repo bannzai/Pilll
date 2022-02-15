@@ -27,7 +27,7 @@ class SettingSectionTitle extends StatelessWidget {
       padding: EdgeInsets.only(top: 32, left: 15, right: 16),
       child: Text(
         text,
-        style: FontType.assisting.merge(TextColorStyle.primary),
+        style: FontType.assisting.merge(TextColorStyle.main),
       ),
     );
   }

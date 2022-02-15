@@ -1,14 +1,99 @@
 import UIKit
 import ObjectiveC
 import Flutter
+import HealthKit
 
 @UIApplicationMain
 @objc class AppDelegate: FlutterAppDelegate {
-    let channelName = "method.channel.MizukiOhashi.Pilll"
+    var channel: FlutterMethodChannel?
     override func application(
         _ application: UIApplication,
         didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?
     ) -> Bool {
+        let viewController = window?.rootViewController as! FlutterViewController
+        channel = FlutterMethodChannel(
+            name: "method.channel.MizukiOhashi.Pilll",
+            binaryMessenger: viewController.binaryMessenger
+        )
+        // DO NOT OVERRIDE AGAIN
+        channel?.setMethodCallHandler({ call, _completionHandler in
+            let completionHandler: (Dictionary<String, Any>) -> Void = {
+                _completionHandler($0)
+            }
+
+            switch call.method {
+            case "isHealthDataAvailable":
+                completionHandler([
+                    "result": "success",
+                    "isHealthDataAvailable": HKHealthStore.isHealthDataAvailable()
+                ])
+            case "isAuthorizedReadAndShareToHealthKitData":
+                isAuthorizedReadAndShareToHealthKitData { result in
+                    switch result {
+                    case .success(let isAuthorized):
+                        completionHandler([
+                            "result": "success",
+                            "isAuthorizedReadAndShareToHealthKitData": isAuthorized
+                        ])
+                    case .failure(let failure):
+                        completionHandler(failure.toDictionary())
+                    }
+                }
+            case "shouldRequestForAccessToHealthKitData":
+                shouldRequestForAccessToHealthKitData { result in
+                    switch result {
+                    case .success(let shouldRequest):
+                        completionHandler([
+                            "result": "success",
+                            "shouldRequestForAccessToHealthKitData": shouldRequest
+                        ])
+                    case .failure(let failure):
+                        completionHandler(failure.toDictionary())
+                    }
+                }
+            case "requestWriteMenstrualFlowHealthKitDataPermission":
+                requestWriteMenstrualFlowHealthKitDataPermission { result in
+                    switch result {
+                    case .success(let isSuccess):
+                        completionHandler(
+                            ["result": "success", "isSuccess": isSuccess]
+                        )
+                    case .failure(let error):
+                        completionHandler(error.toDictionary())
+                    }
+                }
+            case "addMenstruationFlowHealthKitData":
+                addMenstruationFlowHealthKitData(arguments: call.arguments) { result in
+                    switch result {
+                    case .success(let success):
+                        completionHandler(success.toDictionary())
+                    case .failure(let failure):
+                        completionHandler(failure.toDictionary())
+                    }
+                }
+            case "updateOrAddMenstruationFlowHealthKitData":
+                updateOrAddMenstruationFlowHealthKitData(arguments: call.arguments) { result in
+                    switch result {
+                    case .success(let success):
+                        completionHandler(success.toDictionary())
+                    case .failure(let failure):
+                        completionHandler(failure.toDictionary())
+                    }
+                }
+            case "deleteMenstrualFlowHealthKitData":
+                deleteMenstrualFlowHealthKitData(arguments: call.arguments) { deleteResult in
+                    switch deleteResult {
+                    case .success(let success):
+                        completionHandler(success.toDictionary())
+                    case .failure(let failure):
+                        completionHandler(failure.toDictionary())
+                    }
+                }
+            case _:
+                return
+            }
+        })
+
         DispatchQueue.main.asyncAfter(deadline: .now() + 1) {
             self.migrateFrom_1_3_2()
         }
@@ -22,15 +107,13 @@ import Flutter
     }
 }
 
-// MARK: - Internal
+// MARK: - Syntax Sugar
 extension AppDelegate {
-    func call(method: String, arguments: [String: Any]?) {
-        let viewController = window?.rootViewController as! FlutterViewController
-        let channel = FlutterMethodChannel(
-            name: "method.channel.MizukiOhashi.Pilll",
-            binaryMessenger: viewController.binaryMessenger
-        )
-        channel.invokeMethod(method, arguments: arguments)
+    static var instance: AppDelegate? {
+        UIApplication.shared.delegate as? AppDelegate
+    }
+    func invokeFlutterMethod(method: String, arguments: [String: Any]?) {
+        channel?.invokeMethod(method, arguments: arguments)
     }
 }
 
@@ -61,7 +144,7 @@ extension UNUserNotificationCenter {
 extension AppDelegate {
     func migrateFrom_1_3_2() {
         if let salvagedValue = UserDefaults.standard.string(forKey: "startSavedDate"), let lastTakenDate = UserDefaults.standard.string(forKey: "savedDate") {
-            call(method: "salvagedOldStartTakenDate", arguments: ["salvagedOldStartTakenDate": salvagedValue, "salvagedOldLastTakenDate": lastTakenDate])
+            invokeFlutterMethod(method: "salvagedOldStartTakenDate", arguments: ["salvagedOldStartTakenDate": salvagedValue, "salvagedOldLastTakenDate": lastTakenDate])
         }
     }
 
@@ -99,7 +182,7 @@ extension AppDelegate {
         case .pillReminder:
             switch response.actionIdentifier {
             case "RECORD_PILL":
-                call(method: "recordPill", arguments: nil)
+                invokeFlutterMethod(method: "recordPill", arguments: nil)
                 end()
             default:
                 end()

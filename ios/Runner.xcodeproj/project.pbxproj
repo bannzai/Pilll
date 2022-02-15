@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		1498D2341E8E89220040F4C2 /* GeneratedPluginRegistrant.m in Sources */ = {isa = PBXBuildFile; fileRef = 1498D2331E8E89220040F4C2 /* GeneratedPluginRegistrant.m */; };
+		20DBB04427A88BAE0069A9A2 /* HealthKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 20DBB04327A88BAE0069A9A2 /* HealthKit.framework */; };
+		20DBB04627A88D1D0069A9A2 /* HealthKit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20DBB04527A88D1D0069A9A2 /* HealthKit.swift */; };
 		3379DA4E24E3A3D90002DD85 /* Development.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 3379DA4C24E3A3D90002DD85 /* Development.xcconfig */; };
 		3379DA4F24E3A3D90002DD85 /* Production.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 3379DA4D24E3A3D90002DD85 /* Production.xcconfig */; };
 		3379DA5424E3A4DC0002DD85 /* Debug-Production.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = 3379DA5024E3A4DC0002DD85 /* Debug-Production.xcconfig */; };
@@ -49,6 +51,8 @@
 		1015A59A95CAF330520C016C /* Pods-Runner.release-production.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Runner.release-production.xcconfig"; path = "Target Support Files/Pods-Runner/Pods-Runner.release-production.xcconfig"; sourceTree = "<group>"; };
 		1498D2321E8E86230040F4C2 /* GeneratedPluginRegistrant.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GeneratedPluginRegistrant.h; sourceTree = "<group>"; };
 		1498D2331E8E89220040F4C2 /* GeneratedPluginRegistrant.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GeneratedPluginRegistrant.m; sourceTree = "<group>"; };
+		20DBB04327A88BAE0069A9A2 /* HealthKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = HealthKit.framework; path = System/Library/Frameworks/HealthKit.framework; sourceTree = SDKROOT; };
+		20DBB04527A88D1D0069A9A2 /* HealthKit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthKit.swift; sourceTree = "<group>"; };
 		3379DA4C24E3A3D90002DD85 /* Development.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Development.xcconfig; path = Flutter/Development.xcconfig; sourceTree = "<group>"; };
 		3379DA4D24E3A3D90002DD85 /* Production.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = Production.xcconfig; path = Flutter/Production.xcconfig; sourceTree = "<group>"; };
 		3379DA5024E3A4DC0002DD85 /* Debug-Production.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = "Debug-Production.xcconfig"; path = "Flutter/Debug-Production.xcconfig"; sourceTree = "<group>"; };
@@ -89,6 +93,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				20DBB04427A88BAE0069A9A2 /* HealthKit.framework in Frameworks */,
 				CF825C13AD6839621AC01C06 /* Pods_Runner.framework in Frameworks */,
 				BACF001F266831730046E1A2 /* StoreKit.framework in Frameworks */,
 			);
@@ -151,6 +156,7 @@
 				1498D2321E8E86230040F4C2 /* GeneratedPluginRegistrant.h */,
 				1498D2331E8E89220040F4C2 /* GeneratedPluginRegistrant.m */,
 				74858FAE1ED2DC5600515810 /* AppDelegate.swift */,
+				20DBB04527A88D1D0069A9A2 /* HealthKit.swift */,
 				74858FAD1ED2DC5600515810 /* Runner-Bridging-Header.h */,
 			);
 			path = Runner;
@@ -166,6 +172,7 @@
 		AA9F7F9CD8036CFC6638A43E /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				20DBB04327A88BAE0069A9A2 /* HealthKit.framework */,
 				BACF001E266831730046E1A2 /* StoreKit.framework */,
 				D95AD771147BDF4A2457CE90 /* Pods_Runner.framework */,
 			);
@@ -394,6 +401,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				20DBB04627A88D1D0069A9A2 /* HealthKit.swift in Sources */,
 				74858FAF1ED2DC5600515810 /* AppDelegate.swift in Sources */,
 				1498D2341E8E89220040F4C2 /* GeneratedPluginRegistrant.m in Sources */,
 			);

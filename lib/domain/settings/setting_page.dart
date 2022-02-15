@@ -1,9 +1,12 @@
+import 'dart:io';
+
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:pilll/analytics.dart';
 import 'package:pilll/components/atoms/buttons.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/page/discard_dialog.dart';
 import 'package:pilll/domain/settings/components/rows/creating_new_pillsheet.dart';
+import 'package:pilll/domain/settings/components/rows/health_care.dart';
 import 'package:pilll/domain/settings/components/rows/menstruation.dart';
 import 'package:pilll/domain/settings/components/rows/account_link.dart';
 import 'package:pilll/domain/settings/components/rows/list_explain.dart';
@@ -47,18 +50,6 @@ class SettingPage extends HookConsumerWidget {
 
     useAutomaticKeepAlive(wantKeepAlive: true);
 
-    return Scaffold(
-      backgroundColor: PilllColors.background,
-      appBar: AppBar(
-        title: Text('設定', style: TextColorStyle.main),
-        backgroundColor: PilllColors.white,
-      ),
-      body: Container(child: _body(context, state, store)),
-    );
-  }
-
-  Widget _body(
-      BuildContext context, SettingState state, SettingStateStore store) {
     if (state.exception != null) {
       return UniversalErrorPage(
         error: state.exception,
@@ -67,6 +58,22 @@ class SettingPage extends HookConsumerWidget {
       );
     }
 
+    return UniversalErrorPage(
+      error: state.exception,
+      reload: () => store.reset(),
+      child: Scaffold(
+        backgroundColor: PilllColors.background,
+        appBar: AppBar(
+          title: Text('設定', style: TextColorStyle.main),
+          backgroundColor: PilllColors.white,
+        ),
+        body: Container(child: _body(context, state, store)),
+      ),
+    );
+  }
+
+  Widget _body(
+      BuildContext context, SettingState state, SettingStateStore store) {
     final setting = state.setting;
     if (setting == null) {
       return Container();
@@ -171,6 +178,10 @@ class SettingPage extends HookConsumerWidget {
                     children: [
                       MenstruationRow(store, setting),
                       _separator(),
+                      if (Platform.isIOS && state.isHealthDataAvailable) ...[
+                        HealthCareRow(),
+                        _separator(),
+                      ]
                     ],
                   );
                 case SettingSection.other:

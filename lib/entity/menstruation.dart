@@ -44,6 +44,7 @@ class Menstruation with _$Menstruation {
       toJson: NonNullTimestampConverter.dateTimeToTimestamp,
     )
         required DateTime createdAt,
+    String? healthKitSampleDataUUID,
   }) = _Menstruation;
 
   DateRange get dateRange => DateRange(beginDate, endDate);
