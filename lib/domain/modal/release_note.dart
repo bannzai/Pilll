@@ -42,7 +42,7 @@ class ReleaseNote extends StatelessWidget {
                       child: Container(
                         padding: EdgeInsets.only(top: 40, left: 40, right: 40),
                         child: Text(
-                          "今日以外の日から休薬を開始できるように",
+                          "ヘルスケアに生理記録が反映されるようになりました",
                           style: FontType.subTitle.merge(TextColorStyle.black),
                           textAlign: TextAlign.center,
                         ),
@@ -57,7 +57,7 @@ class ReleaseNote extends StatelessWidget {
                     children: [
                       Text(
                         '''
-休薬を開始したい日まで未服用にする事で休薬できます。服用済みのピルマークをタップすることで未服用にできます。
+設定タブ > ヘルスケア から「ヘルスケア」アプリと連携ができます。連携後の生理記録はヘルスケアにも反映されます
                         ''',
                         style: FontType.assisting.merge(TextColorStyle.main),
                       ),
