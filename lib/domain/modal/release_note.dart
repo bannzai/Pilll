@@ -42,7 +42,7 @@ class ReleaseNote extends StatelessWidget {
                       child: Container(
                         padding: EdgeInsets.only(top: 40, left: 40, right: 40),
                         child: Text(
-                          "今日以外の日から休薬を開始できるように",
+                          "ヘルスケアに生理記録が反映されるようになりました",
                           style: FontType.subTitle.merge(TextColorStyle.black),
                           textAlign: TextAlign.center,
                         ),
@@ -57,7 +57,7 @@ class ReleaseNote extends StatelessWidget {
                     children: [
                       Text(
                         '''
-休薬を開始したい日まで未服用にする事で休薬できます。服用済みのピルマークをタップすることで未服用にできます。
+設定タブ > ヘルスケア連携から設定できます。連携後からの生理記録はヘルスケアにも反映されます
                         ''',
                         style: FontType.assisting.merge(TextColorStyle.main),
                       ),
@@ -85,7 +85,7 @@ class ReleaseNote extends StatelessWidget {
 }
 
 showReleaseNotePreDialog(BuildContext context) async {
-  final key = ReleaseNoteKey.version3_8_0;
+  final key = ReleaseNoteKey.version3_9_0;
   final storage = await SharedPreferences.getInstance();
   if (storage.getBool(key) ?? false) {
     return;
@@ -103,7 +103,7 @@ openReleaseNote() async {
   final ChromeSafariBrowser browser = new ChromeSafariBrowser();
   await browser.open(
       url: Uri.parse(
-          "https://pilll.wraptas.site/fcc86789fece40e39c0c03f58e58d883"),
+          "https://pilll.wraptas.site/9f689858e2a34cf6bc7c08ab85a192cf"),
       options: ChromeSafariBrowserClassOptions(
           android:
               AndroidChromeCustomTabsOptions(addDefaultShareMenuItem: false),
