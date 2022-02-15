@@ -57,7 +57,7 @@ class ReleaseNote extends StatelessWidget {
                     children: [
                       Text(
                         '''
-設定タブ > ヘルスケア から「ヘルスケア」アプリと連携ができます。連携後の生理記録はヘルスケアにも反映されます
+設定タブ > ヘルスケア連携から設定できます。連携後からの生理記録はヘルスケアにも反映されます
                         ''',
                         style: FontType.assisting.merge(TextColorStyle.main),
                       ),
