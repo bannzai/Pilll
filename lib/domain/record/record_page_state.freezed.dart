@@ -34,7 +34,6 @@ class _$RecordPageStateTearOff {
       DateTime? beginTrialDate,
       DateTime? trialDeadlineDate,
       DateTime? discountEntitlementDeadlineDate,
-      bool recommendPremiumPlainInTrialIsAlreadyClose = false,
       bool recommendedSignupNotificationIsAlreadyShow = true,
       bool premiumTrialGuideNotificationIsClosed = true,
       Object? exception}) {
@@ -55,8 +54,6 @@ class _$RecordPageStateTearOff {
       beginTrialDate: beginTrialDate,
       trialDeadlineDate: trialDeadlineDate,
       discountEntitlementDeadlineDate: discountEntitlementDeadlineDate,
-      recommendPremiumPlainInTrialIsAlreadyClose:
-          recommendPremiumPlainInTrialIsAlreadyClose,
       recommendedSignupNotificationIsAlreadyShow:
           recommendedSignupNotificationIsAlreadyShow,
       premiumTrialGuideNotificationIsClosed:
@@ -87,8 +84,6 @@ mixin _$RecordPageState {
   DateTime? get beginTrialDate => throw _privateConstructorUsedError;
   DateTime? get trialDeadlineDate => throw _privateConstructorUsedError;
   DateTime? get discountEntitlementDeadlineDate =>
-      throw _privateConstructorUsedError;
-  bool get recommendPremiumPlainInTrialIsAlreadyClose =>
       throw _privateConstructorUsedError;
   bool get recommendedSignupNotificationIsAlreadyShow =>
       throw _privateConstructorUsedError;
@@ -122,7 +117,6 @@ abstract class $RecordPageStateCopyWith<$Res> {
       DateTime? beginTrialDate,
       DateTime? trialDeadlineDate,
       DateTime? discountEntitlementDeadlineDate,
-      bool recommendPremiumPlainInTrialIsAlreadyClose,
       bool recommendedSignupNotificationIsAlreadyShow,
       bool premiumTrialGuideNotificationIsClosed,
       Object? exception});
@@ -157,7 +151,6 @@ class _$RecordPageStateCopyWithImpl<$Res>
     Object? beginTrialDate = freezed,
     Object? trialDeadlineDate = freezed,
     Object? discountEntitlementDeadlineDate = freezed,
-    Object? recommendPremiumPlainInTrialIsAlreadyClose = freezed,
     Object? recommendedSignupNotificationIsAlreadyShow = freezed,
     Object? premiumTrialGuideNotificationIsClosed = freezed,
     Object? exception = freezed,
@@ -225,11 +218,6 @@ class _$RecordPageStateCopyWithImpl<$Res>
           ? _value.discountEntitlementDeadlineDate
           : discountEntitlementDeadlineDate // ignore: cast_nullable_to_non_nullable
               as DateTime?,
-      recommendPremiumPlainInTrialIsAlreadyClose:
-          recommendPremiumPlainInTrialIsAlreadyClose == freezed
-              ? _value.recommendPremiumPlainInTrialIsAlreadyClose
-              : recommendPremiumPlainInTrialIsAlreadyClose // ignore: cast_nullable_to_non_nullable
-                  as bool,
       recommendedSignupNotificationIsAlreadyShow:
           recommendedSignupNotificationIsAlreadyShow == freezed
               ? _value.recommendedSignupNotificationIsAlreadyShow
@@ -290,7 +278,6 @@ abstract class _$RecordPageStateCopyWith<$Res>
       DateTime? beginTrialDate,
       DateTime? trialDeadlineDate,
       DateTime? discountEntitlementDeadlineDate,
-      bool recommendPremiumPlainInTrialIsAlreadyClose,
       bool recommendedSignupNotificationIsAlreadyShow,
       bool premiumTrialGuideNotificationIsClosed,
       Object? exception});
@@ -329,7 +316,6 @@ class __$RecordPageStateCopyWithImpl<$Res>
     Object? beginTrialDate = freezed,
     Object? trialDeadlineDate = freezed,
     Object? discountEntitlementDeadlineDate = freezed,
-    Object? recommendPremiumPlainInTrialIsAlreadyClose = freezed,
     Object? recommendedSignupNotificationIsAlreadyShow = freezed,
     Object? premiumTrialGuideNotificationIsClosed = freezed,
     Object? exception = freezed,
@@ -397,11 +383,6 @@ class __$RecordPageStateCopyWithImpl<$Res>
           ? _value.discountEntitlementDeadlineDate
           : discountEntitlementDeadlineDate // ignore: cast_nullable_to_non_nullable
               as DateTime?,
-      recommendPremiumPlainInTrialIsAlreadyClose:
-          recommendPremiumPlainInTrialIsAlreadyClose == freezed
-              ? _value.recommendPremiumPlainInTrialIsAlreadyClose
-              : recommendPremiumPlainInTrialIsAlreadyClose // ignore: cast_nullable_to_non_nullable
-                  as bool,
       recommendedSignupNotificationIsAlreadyShow:
           recommendedSignupNotificationIsAlreadyShow == freezed
               ? _value.recommendedSignupNotificationIsAlreadyShow
@@ -436,7 +417,6 @@ class _$_RecordPageState extends _RecordPageState {
       this.beginTrialDate,
       this.trialDeadlineDate,
       this.discountEntitlementDeadlineDate,
-      this.recommendPremiumPlainInTrialIsAlreadyClose = false,
       this.recommendedSignupNotificationIsAlreadyShow = true,
       this.premiumTrialGuideNotificationIsClosed = true,
       this.exception})
@@ -484,9 +464,6 @@ class _$_RecordPageState extends _RecordPageState {
   final DateTime? discountEntitlementDeadlineDate;
   @JsonKey()
   @override
-  final bool recommendPremiumPlainInTrialIsAlreadyClose;
-  @JsonKey()
-  @override
   final bool recommendedSignupNotificationIsAlreadyShow;
   @JsonKey()
   @override
@@ -496,7 +473,7 @@ class _$_RecordPageState extends _RecordPageState {
 
   @override
   String toString() {
-    return 'RecordPageState(pillSheetGroup: $pillSheetGroup, setting: $setting, totalCountOfActionForTakenPill: $totalCountOfActionForTakenPill, firstLoadIsEnded: $firstLoadIsEnded, isPremium: $isPremium, isTrial: $isTrial, hasDiscountEntitlement: $hasDiscountEntitlement, isAlreadyShowAnnouncementSupportedMultilplePillSheet: $isAlreadyShowAnnouncementSupportedMultilplePillSheet, isAlreadyShowTiral: $isAlreadyShowTiral, isAlreadyShowPremiumSurvey: $isAlreadyShowPremiumSurvey, shouldShowMigrateInfo: $shouldShowMigrateInfo, isLinkedLoginProvider: $isLinkedLoginProvider, beginTrialDate: $beginTrialDate, trialDeadlineDate: $trialDeadlineDate, discountEntitlementDeadlineDate: $discountEntitlementDeadlineDate, recommendPremiumPlainInTrialIsAlreadyClose: $recommendPremiumPlainInTrialIsAlreadyClose, recommendedSignupNotificationIsAlreadyShow: $recommendedSignupNotificationIsAlreadyShow, premiumTrialGuideNotificationIsClosed: $premiumTrialGuideNotificationIsClosed, exception: $exception)';
+    return 'RecordPageState(pillSheetGroup: $pillSheetGroup, setting: $setting, totalCountOfActionForTakenPill: $totalCountOfActionForTakenPill, firstLoadIsEnded: $firstLoadIsEnded, isPremium: $isPremium, isTrial: $isTrial, hasDiscountEntitlement: $hasDiscountEntitlement, isAlreadyShowAnnouncementSupportedMultilplePillSheet: $isAlreadyShowAnnouncementSupportedMultilplePillSheet, isAlreadyShowTiral: $isAlreadyShowTiral, isAlreadyShowPremiumSurvey: $isAlreadyShowPremiumSurvey, shouldShowMigrateInfo: $shouldShowMigrateInfo, isLinkedLoginProvider: $isLinkedLoginProvider, beginTrialDate: $beginTrialDate, trialDeadlineDate: $trialDeadlineDate, discountEntitlementDeadlineDate: $discountEntitlementDeadlineDate, recommendedSignupNotificationIsAlreadyShow: $recommendedSignupNotificationIsAlreadyShow, premiumTrialGuideNotificationIsClosed: $premiumTrialGuideNotificationIsClosed, exception: $exception)';
   }
 
   @override
@@ -535,9 +512,6 @@ class _$_RecordPageState extends _RecordPageState {
                 other.discountEntitlementDeadlineDate,
                 discountEntitlementDeadlineDate) &&
             const DeepCollectionEquality().equals(
-                other.recommendPremiumPlainInTrialIsAlreadyClose,
-                recommendPremiumPlainInTrialIsAlreadyClose) &&
-            const DeepCollectionEquality().equals(
                 other.recommendedSignupNotificationIsAlreadyShow,
                 recommendedSignupNotificationIsAlreadyShow) &&
             const DeepCollectionEquality().equals(
@@ -547,32 +521,29 @@ class _$_RecordPageState extends _RecordPageState {
   }
 
   @override
-  int get hashCode => Object.hashAll([
-        runtimeType,
-        const DeepCollectionEquality().hash(pillSheetGroup),
-        const DeepCollectionEquality().hash(setting),
-        const DeepCollectionEquality().hash(totalCountOfActionForTakenPill),
-        const DeepCollectionEquality().hash(firstLoadIsEnded),
-        const DeepCollectionEquality().hash(isPremium),
-        const DeepCollectionEquality().hash(isTrial),
-        const DeepCollectionEquality().hash(hasDiscountEntitlement),
-        const DeepCollectionEquality()
-            .hash(isAlreadyShowAnnouncementSupportedMultilplePillSheet),
-        const DeepCollectionEquality().hash(isAlreadyShowTiral),
-        const DeepCollectionEquality().hash(isAlreadyShowPremiumSurvey),
-        const DeepCollectionEquality().hash(shouldShowMigrateInfo),
-        const DeepCollectionEquality().hash(isLinkedLoginProvider),
-        const DeepCollectionEquality().hash(beginTrialDate),
-        const DeepCollectionEquality().hash(trialDeadlineDate),
-        const DeepCollectionEquality().hash(discountEntitlementDeadlineDate),
-        const DeepCollectionEquality()
-            .hash(recommendPremiumPlainInTrialIsAlreadyClose),
-        const DeepCollectionEquality()
-            .hash(recommendedSignupNotificationIsAlreadyShow),
-        const DeepCollectionEquality()
-            .hash(premiumTrialGuideNotificationIsClosed),
-        const DeepCollectionEquality().hash(exception)
-      ]);
+  int get hashCode => Object.hash(
+      runtimeType,
+      const DeepCollectionEquality().hash(pillSheetGroup),
+      const DeepCollectionEquality().hash(setting),
+      const DeepCollectionEquality().hash(totalCountOfActionForTakenPill),
+      const DeepCollectionEquality().hash(firstLoadIsEnded),
+      const DeepCollectionEquality().hash(isPremium),
+      const DeepCollectionEquality().hash(isTrial),
+      const DeepCollectionEquality().hash(hasDiscountEntitlement),
+      const DeepCollectionEquality()
+          .hash(isAlreadyShowAnnouncementSupportedMultilplePillSheet),
+      const DeepCollectionEquality().hash(isAlreadyShowTiral),
+      const DeepCollectionEquality().hash(isAlreadyShowPremiumSurvey),
+      const DeepCollectionEquality().hash(shouldShowMigrateInfo),
+      const DeepCollectionEquality().hash(isLinkedLoginProvider),
+      const DeepCollectionEquality().hash(beginTrialDate),
+      const DeepCollectionEquality().hash(trialDeadlineDate),
+      const DeepCollectionEquality().hash(discountEntitlementDeadlineDate),
+      const DeepCollectionEquality()
+          .hash(recommendedSignupNotificationIsAlreadyShow),
+      const DeepCollectionEquality()
+          .hash(premiumTrialGuideNotificationIsClosed),
+      const DeepCollectionEquality().hash(exception));
 
   @JsonKey(ignore: true)
   @override
@@ -597,7 +568,6 @@ abstract class _RecordPageState extends RecordPageState {
       DateTime? beginTrialDate,
       DateTime? trialDeadlineDate,
       DateTime? discountEntitlementDeadlineDate,
-      bool recommendPremiumPlainInTrialIsAlreadyClose,
       bool recommendedSignupNotificationIsAlreadyShow,
       bool premiumTrialGuideNotificationIsClosed,
       Object? exception}) = _$_RecordPageState;
@@ -633,8 +603,6 @@ abstract class _RecordPageState extends RecordPageState {
   DateTime? get trialDeadlineDate;
   @override
   DateTime? get discountEntitlementDeadlineDate;
-  @override
-  bool get recommendPremiumPlainInTrialIsAlreadyClose;
   @override
   bool get recommendedSignupNotificationIsAlreadyShow;
   @override

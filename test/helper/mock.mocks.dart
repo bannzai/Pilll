@@ -578,12 +578,6 @@ class MockNotificationBarStateStore extends _i1.Mock
       (super.noSuchMethod(Invocation.getter(#hasListeners), returnValue: false)
           as bool);
   @override
-  _i16.Future<void> closeRecommendedPremiumPlainInTrial() => (super
-      .noSuchMethod(Invocation.method(#closeRecommendedPremiumPlainInTrial, []),
-          returnValue: Future<void>.value(),
-          returnValueForMissingStub: Future<void>.value()) as _i16
-      .Future<void>);
-  @override
   _i16.Future<void> closeRecommendedSignupNotification() => (super.noSuchMethod(
       Invocation.method(#closeRecommendedSignupNotification, []),
       returnValue: Future<void>.value(),
