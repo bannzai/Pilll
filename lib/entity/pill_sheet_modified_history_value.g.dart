@@ -136,6 +136,7 @@ _$_TakenPillValue _$$_TakenPillValueFromJson(Map<String, dynamic> json) =>
           json['afterLastTakenDate'] as Timestamp),
       beforeLastTakenPillNumber: json['beforeLastTakenPillNumber'] as int,
       afterLastTakenPillNumber: json['afterLastTakenPillNumber'] as int,
+      isQuickRecord: json['isQuickRecord'] as bool?,
       edited: json['edited'] == null
           ? null
           : TakenPillEditedValue.fromJson(
@@ -150,6 +151,7 @@ Map<String, dynamic> _$$_TakenPillValueToJson(_$_TakenPillValue instance) =>
           instance.afterLastTakenDate),
       'beforeLastTakenPillNumber': instance.beforeLastTakenPillNumber,
       'afterLastTakenPillNumber': instance.afterLastTakenPillNumber,
+      'isQuickRecord': instance.isQuickRecord,
       'edited': instance.edited?.toJson(),
     };
 

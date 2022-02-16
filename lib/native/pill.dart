@@ -39,6 +39,7 @@ Future<void> recordPill() async {
     pillSheetService: pillSheetService,
     pillSheetModifiedHistoryService: pillSheetModifiedHistoryService,
     pillSheetGroupService: pillSheetGroupService,
+    isQuickRecord: true,
   );
 
   FlutterAppBadger.removeBadge();

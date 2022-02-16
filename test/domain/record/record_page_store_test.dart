@@ -279,6 +279,7 @@ void main() {
         after: pillSheet.copyWith(
           lastTakenDate: _today,
         ),
+        isQuickRecord: false,
       );
       final pillSheetModifiedHistoryService =
           MockPillSheetModifiedHistoryService();
@@ -396,6 +397,7 @@ void main() {
         after: pillSheet.copyWith(
           lastTakenDate: _today,
         ),
+        isQuickRecord: false,
       );
       final pillSheetModifiedHistoryService =
           MockPillSheetModifiedHistoryService();
@@ -515,6 +517,7 @@ void main() {
         after: pillSheet2.copyWith(
           lastTakenDate: _today,
         ),
+        isQuickRecord: false,
       );
       final pillSheetModifiedHistoryService =
           MockPillSheetModifiedHistoryService();
@@ -637,6 +640,7 @@ void main() {
         after: pillSheet2.copyWith(
           lastTakenDate: _today,
         ),
+        isQuickRecord: false,
       );
       final pillSheetModifiedHistoryService =
           MockPillSheetModifiedHistoryService();

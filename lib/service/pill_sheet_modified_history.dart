@@ -104,6 +104,7 @@ extension PillSheetModifiedHistoryServiceActionFactory
     required String? pillSheetGroupID,
     required PillSheet before,
     required PillSheet after,
+    required bool isQuickRecord,
   }) {
     assert(pillSheetGroupID != null);
 
@@ -121,6 +122,7 @@ extension PillSheetModifiedHistoryServiceActionFactory
           afterLastTakenPillNumber: after.lastTakenPillNumber,
           beforeLastTakenDate: before.lastTakenDate,
           beforeLastTakenPillNumber: before.lastTakenPillNumber,
+          isQuickRecord: isQuickRecord,
         ),
       ),
       after: after,
