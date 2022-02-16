@@ -106,6 +106,7 @@ Future<PillSheetGroup?> take({
     pillSheetGroupID: pillSheetGroup.id,
     before: before,
     after: after,
+    isQuickRecord: isQuickRecord,
   );
   pillSheetModifiedHistoryService.add(batch, history);
 

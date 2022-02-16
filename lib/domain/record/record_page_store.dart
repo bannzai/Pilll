@@ -252,6 +252,7 @@ class RecordPageStore extends StateNotifier<RecordPageState> {
       pillSheetService: _pillSheetService,
       pillSheetModifiedHistoryService: _pillSheetModifiedHistoryService,
       pillSheetGroupService: _pillSheetGroupService,
+      isQuickRecord: false,
     );
     if (updatedPillSheetGroup == null) {
       return false;
