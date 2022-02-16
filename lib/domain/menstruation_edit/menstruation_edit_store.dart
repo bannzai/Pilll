@@ -112,8 +112,11 @@ class MenstruationEditStore extends StateNotifier<MenstruationEditState> {
       if (Platform.isIOS) {
         if (await isHealthDataAvailable()) {
           if (await isAuthorizedReadAndShareToHealthKitData()) {
-            await deleteMenstruationFlowHealthKitData(menstruation);
-            menstruation = menstruation.copyWith(healthKitSampleDataUUID: null);
+            if (state.menstruation?.healthKitSampleDataUUID != null) {
+              await deleteMenstruationFlowHealthKitData(menstruation);
+              menstruation =
+                  menstruation.copyWith(healthKitSampleDataUUID: null);
+            }
           }
         }
       }
@@ -134,10 +137,12 @@ class MenstruationEditStore extends StateNotifier<MenstruationEditState> {
         if (Platform.isIOS) {
           if (await isHealthDataAvailable()) {
             if (await isAuthorizedReadAndShareToHealthKitData()) {
-              final healthKitSampleDataUUID =
-                  await addMenstruationFlowHealthKitData(menstruation);
-              menstruation = menstruation.copyWith(
-                  healthKitSampleDataUUID: healthKitSampleDataUUID);
+              if (state.menstruation?.healthKitSampleDataUUID != null) {
+                final healthKitSampleDataUUID =
+                    await addMenstruationFlowHealthKitData(menstruation);
+                menstruation = menstruation.copyWith(
+                    healthKitSampleDataUUID: healthKitSampleDataUUID);
+              }
             }
           }
         }
@@ -149,10 +154,13 @@ class MenstruationEditStore extends StateNotifier<MenstruationEditState> {
         if (Platform.isIOS) {
           if (await isHealthDataAvailable()) {
             if (await isAuthorizedReadAndShareToHealthKitData()) {
-              final healthKitSampleDataUUID =
-                  await updateOrAddMenstruationFlowHealthKitData(menstruation);
-              menstruation = menstruation.copyWith(
-                  healthKitSampleDataUUID: healthKitSampleDataUUID);
+              if (state.menstruation?.healthKitSampleDataUUID != null) {
+                final healthKitSampleDataUUID =
+                    await updateOrAddMenstruationFlowHealthKitData(
+                        menstruation);
+                menstruation = menstruation.copyWith(
+                    healthKitSampleDataUUID: healthKitSampleDataUUID);
+              }
             }
           }
         }
