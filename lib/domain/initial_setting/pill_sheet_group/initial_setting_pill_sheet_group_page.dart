@@ -60,7 +60,7 @@ class InitialSettingPillSheetGroupPage extends HookConsumerWidget {
         backgroundColor: PilllColors.background,
         appBar: AppBar(
           title: Text(
-            "1/3",
+            "1/4",
             style: TextStyle(color: TextColor.black),
           ),
           backgroundColor: PilllColors.white,

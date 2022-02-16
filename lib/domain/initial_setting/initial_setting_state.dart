@@ -22,6 +22,10 @@ class InitialSettingState with _$InitialSettingState {
     @Default([])
         List<PillSheetType> pillSheetTypes,
     InitialSettingTodayPillNumber? todayPillNumber,
+    @Default(0)
+        int fromMenstruation,
+    @Default(4)
+        int durationMenstruation,
     @Default([
       ReminderTime(hour: 21, minute: 0),
       ReminderTime(hour: 22, minute: 0),
@@ -52,22 +56,13 @@ class InitialSettingState with _$InitialSettingState {
     return null;
   }
 
-  Setting buildSetting() {
-    final menstruationDuration = 4;
-    final maxPillCount = pillSheetTypes
-        .map((e) => e.totalCount)
-        .reduce((value, element) => value + element);
-    final pillNumberForFromMenstruation = maxPillCount - menstruationDuration;
-
-    final setting = Setting(
-      pillNumberForFromMenstruation: pillNumberForFromMenstruation,
-      durationMenstruation: menstruationDuration,
-      pillSheetTypes: pillSheetTypes,
-      reminderTimes: reminderTimes,
-      isOnReminder: isOnReminder,
-    );
-    return setting;
-  }
+  Setting buildSetting() => Setting(
+        pillNumberForFromMenstruation: fromMenstruation,
+        durationMenstruation: durationMenstruation,
+        pillSheetTypes: pillSheetTypes,
+        reminderTimes: reminderTimes,
+        isOnReminder: isOnReminder,
+      );
 
   static PillSheet buildPillSheet({
     required int pageIndex,

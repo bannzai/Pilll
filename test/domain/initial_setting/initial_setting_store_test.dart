@@ -286,6 +286,164 @@ void main() {
       ]);
     });
   });
+  group("#setFromMenstruation", () {
+    test("when selected on first page", () {
+      final batchFactory = MockBatchFactory();
+      final authService = MockAuthService();
+      when(authService.stream()).thenAnswer((realInvocation) => Stream.empty());
+      final settingService = MockSettingService();
+      final pillSheetService = MockPillSheetService();
+      final pillSheetModifiedHistoryService =
+          MockPillSheetModifiedHistoryService();
+      final pillSheetGroupService = MockPillSheetGroupService();
+
+      final container = ProviderContainer(
+        overrides: [
+          batchFactoryProvider.overrideWithValue(batchFactory),
+          authServiceProvider.overrideWithValue(authService),
+          settingServiceProvider.overrideWithValue(settingService),
+          pillSheetServiceProvider.overrideWithValue(pillSheetService),
+          pillSheetModifiedHistoryServiceProvider
+              .overrideWithValue(pillSheetModifiedHistoryService),
+          pillSheetGroupServiceProvider
+              .overrideWithValue(pillSheetGroupService),
+        ],
+      );
+      final store = container.read(initialSettingStoreProvider.notifier);
+
+      store.selectedPillSheetType(PillSheetType.pillsheet_21);
+      store.addPillSheetType(PillSheetType.pillsheet_28_0);
+
+      store.setFromMenstruation(pageIndex: 0, fromMenstruation: 22);
+      expect(container.read(initialSettingStateProvider).fromMenstruation, 22);
+    });
+    test("when selected on second page", () {
+      final batchFactory = MockBatchFactory();
+      final authService = MockAuthService();
+      when(authService.stream()).thenAnswer((realInvocation) => Stream.empty());
+      final settingService = MockSettingService();
+      final pillSheetService = MockPillSheetService();
+      final pillSheetModifiedHistoryService =
+          MockPillSheetModifiedHistoryService();
+      final pillSheetGroupService = MockPillSheetGroupService();
+
+      final container = ProviderContainer(
+        overrides: [
+          batchFactoryProvider.overrideWithValue(batchFactory),
+          authServiceProvider.overrideWithValue(authService),
+          settingServiceProvider.overrideWithValue(settingService),
+          pillSheetServiceProvider.overrideWithValue(pillSheetService),
+          pillSheetModifiedHistoryServiceProvider
+              .overrideWithValue(pillSheetModifiedHistoryService),
+          pillSheetGroupServiceProvider
+              .overrideWithValue(pillSheetGroupService),
+        ],
+      );
+      final store = container.read(initialSettingStoreProvider.notifier);
+
+      store.selectedPillSheetType(PillSheetType.pillsheet_21);
+      store.addPillSheetType(PillSheetType.pillsheet_28_0);
+
+      store.setFromMenstruation(pageIndex: 1, fromMenstruation: 22);
+      expect(container.read(initialSettingStateProvider).fromMenstruation, 50);
+    });
+  });
+  group("#retrieveMenstruationSelectedPillNumber", () {
+    test("when selected first page", () {
+      final batchFactory = MockBatchFactory();
+      final authService = MockAuthService();
+      when(authService.stream()).thenAnswer((realInvocation) => Stream.empty());
+      final settingService = MockSettingService();
+      final pillSheetService = MockPillSheetService();
+      final pillSheetModifiedHistoryService =
+          MockPillSheetModifiedHistoryService();
+      final pillSheetGroupService = MockPillSheetGroupService();
+
+      final container = ProviderContainer(
+        overrides: [
+          batchFactoryProvider.overrideWithValue(batchFactory),
+          authServiceProvider.overrideWithValue(authService),
+          settingServiceProvider.overrideWithValue(settingService),
+          pillSheetServiceProvider.overrideWithValue(pillSheetService),
+          pillSheetModifiedHistoryServiceProvider
+              .overrideWithValue(pillSheetModifiedHistoryService),
+          pillSheetGroupServiceProvider
+              .overrideWithValue(pillSheetGroupService),
+        ],
+      );
+      final store = container.read(initialSettingStoreProvider.notifier);
+
+      store.selectedPillSheetType(PillSheetType.pillsheet_21);
+      store.addPillSheetType(PillSheetType.pillsheet_28_0);
+      store.setFromMenstruation(pageIndex: 0, fromMenstruation: 22);
+
+      final result = store.retrieveMenstruationSelectedPillNumber(0);
+      expect(result, 22);
+    });
+    test("when selected second page", () {
+      final batchFactory = MockBatchFactory();
+      final authService = MockAuthService();
+      when(authService.stream()).thenAnswer((realInvocation) => Stream.empty());
+      final settingService = MockSettingService();
+      final pillSheetService = MockPillSheetService();
+      final pillSheetModifiedHistoryService =
+          MockPillSheetModifiedHistoryService();
+      final pillSheetGroupService = MockPillSheetGroupService();
+
+      final container = ProviderContainer(
+        overrides: [
+          batchFactoryProvider.overrideWithValue(batchFactory),
+          authServiceProvider.overrideWithValue(authService),
+          settingServiceProvider.overrideWithValue(settingService),
+          pillSheetServiceProvider.overrideWithValue(pillSheetService),
+          pillSheetModifiedHistoryServiceProvider
+              .overrideWithValue(pillSheetModifiedHistoryService),
+          pillSheetGroupServiceProvider
+              .overrideWithValue(pillSheetGroupService),
+        ],
+      );
+      final store = container.read(initialSettingStoreProvider.notifier);
+
+      store.selectedPillSheetType(PillSheetType.pillsheet_21);
+      store.addPillSheetType(PillSheetType.pillsheet_28_0);
+      store.setFromMenstruation(pageIndex: 1, fromMenstruation: 22);
+
+      final result = store.retrieveMenstruationSelectedPillNumber(1);
+      expect(result, 22);
+    });
+    test("state.fromMenstruation > state.pillSheetTypes[pageIdnex].totalCount",
+        () {
+      final batchFactory = MockBatchFactory();
+      final authService = MockAuthService();
+      when(authService.stream()).thenAnswer((realInvocation) => Stream.empty());
+      final settingService = MockSettingService();
+      final pillSheetService = MockPillSheetService();
+      final pillSheetModifiedHistoryService =
+          MockPillSheetModifiedHistoryService();
+      final pillSheetGroupService = MockPillSheetGroupService();
+
+      final container = ProviderContainer(
+        overrides: [
+          batchFactoryProvider.overrideWithValue(batchFactory),
+          authServiceProvider.overrideWithValue(authService),
+          settingServiceProvider.overrideWithValue(settingService),
+          pillSheetServiceProvider.overrideWithValue(pillSheetService),
+          pillSheetModifiedHistoryServiceProvider
+              .overrideWithValue(pillSheetModifiedHistoryService),
+          pillSheetGroupServiceProvider
+              .overrideWithValue(pillSheetGroupService),
+        ],
+      );
+      final store = container.read(initialSettingStoreProvider.notifier);
+
+      store.selectedPillSheetType(PillSheetType.pillsheet_21);
+      store.addPillSheetType(PillSheetType.pillsheet_28_0);
+      store.setFromMenstruation(pageIndex: 1, fromMenstruation: 22);
+
+      final result = store.retrieveMenstruationSelectedPillNumber(0);
+      expect(result, null);
+    });
+  });
   group("#register", () {
     test("state.pillSheetTypes has one pillSheetType", () {
       var mockTodayRepository = MockTodayService();
@@ -323,8 +481,8 @@ void main() {
           .thenReturn(null);
 
       final setting = Setting(
-        pillNumberForFromMenstruation: 24,
-        durationMenstruation: 4,
+        pillNumberForFromMenstruation: 22,
+        durationMenstruation: 3,
         isOnReminder: true,
         reminderTimes: [
           ReminderTime(hour: 21, minute: 20),
@@ -350,6 +508,8 @@ void main() {
       final store = container.read(initialSettingStoreProvider.notifier);
 
       store.selectedPillSheetType(PillSheetType.pillsheet_21);
+      store.setFromMenstruation(pageIndex: 0, fromMenstruation: 22);
+      store.setDurationMenstruation(durationMenstruation: 3);
       store.setTodayPillNumber(pageIndex: 0, pillNumberIntoPillSheet: 1);
       store.setReminderTime(index: 0, hour: 21, minute: 20);
 
@@ -412,8 +572,8 @@ void main() {
           .thenReturn(null);
 
       final setting = Setting(
-        pillNumberForFromMenstruation: 52,
-        durationMenstruation: 4,
+        pillNumberForFromMenstruation: 22,
+        durationMenstruation: 3,
         isOnReminder: true,
         reminderTimes: [
           ReminderTime(hour: 21, minute: 20),
@@ -443,6 +603,8 @@ void main() {
 
       store.selectedPillSheetType(PillSheetType.pillsheet_28_0);
       store.addPillSheetType(PillSheetType.pillsheet_21);
+      store.setFromMenstruation(pageIndex: 0, fromMenstruation: 22);
+      store.setDurationMenstruation(durationMenstruation: 3);
       store.setTodayPillNumber(pageIndex: 1, pillNumberIntoPillSheet: 1);
       store.setReminderTime(index: 0, hour: 21, minute: 20);
 

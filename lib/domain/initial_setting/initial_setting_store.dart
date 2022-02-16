@@ -143,6 +143,40 @@ class InitialSettingStateStore extends StateNotifier<InitialSettingState> {
     state = state.copyWith(todayPillNumber: null);
   }
 
+  void setFromMenstruation({
+    required int pageIndex,
+    required int fromMenstruation,
+  }) {
+    final offset = summarizedPillSheetTypeTotalCountToPageIndex(
+        pillSheetTypes: state.pillSheetTypes, pageIndex: pageIndex);
+    state = state.copyWith(fromMenstruation: fromMenstruation + offset);
+  }
+
+  void pickFromMenstruation({
+    required int serializedPillNumberIntoGroup,
+  }) {
+    state = state.copyWith(fromMenstruation: serializedPillNumberIntoGroup);
+  }
+
+  void setDurationMenstruation({
+    required int durationMenstruation,
+  }) {
+    state = state.copyWith(durationMenstruation: durationMenstruation);
+  }
+
+  int? retrieveMenstruationSelectedPillNumber(int pageIndex) {
+    final _passedTotalCount = summarizedPillSheetTypeTotalCountToPageIndex(
+        pillSheetTypes: state.pillSheetTypes, pageIndex: pageIndex);
+    if (_passedTotalCount >= state.fromMenstruation) {
+      return state.fromMenstruation;
+    }
+    final diff = state.fromMenstruation - _passedTotalCount;
+    if (diff > state.pillSheetTypes[pageIndex].totalCount) {
+      return null;
+    }
+    return diff;
+  }
+
   Future<void> register() async {
     if (state.pillSheetTypes.isEmpty) {
       throw AssertionError(
