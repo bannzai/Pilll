@@ -104,6 +104,7 @@ extension PillSheetModifiedHistoryServiceActionFactory
     required String? pillSheetGroupID,
     required PillSheet before,
     required PillSheet after,
+    required bool isQuickRecord,
   }) {
     assert(pillSheetGroupID != null);
 

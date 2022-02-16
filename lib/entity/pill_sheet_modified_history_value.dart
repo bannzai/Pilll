@@ -107,6 +107,7 @@ class TakenPillValue with _$TakenPillValue {
         required DateTime afterLastTakenDate,
     required int beforeLastTakenPillNumber,
     required int afterLastTakenPillNumber,
+    required bool isQuickRecord,
     TakenPillEditedValue? edited,
   }) = _TakenPillValue;
 

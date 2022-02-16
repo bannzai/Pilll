@@ -1252,12 +1252,14 @@ class _$TakenPillValueTearOff {
           required DateTime afterLastTakenDate,
       required int beforeLastTakenPillNumber,
       required int afterLastTakenPillNumber,
+      required bool isQuickRecord,
       TakenPillEditedValue? edited}) {
     return _TakenPillValue(
       beforeLastTakenDate: beforeLastTakenDate,
       afterLastTakenDate: afterLastTakenDate,
       beforeLastTakenPillNumber: beforeLastTakenPillNumber,
       afterLastTakenPillNumber: afterLastTakenPillNumber,
+      isQuickRecord: isQuickRecord,
       edited: edited,
     );
   }
@@ -1282,6 +1284,7 @@ mixin _$TakenPillValue {
   DateTime get afterLastTakenDate => throw _privateConstructorUsedError;
   int get beforeLastTakenPillNumber => throw _privateConstructorUsedError;
   int get afterLastTakenPillNumber => throw _privateConstructorUsedError;
+  bool get isQuickRecord => throw _privateConstructorUsedError;
   TakenPillEditedValue? get edited => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -1302,6 +1305,7 @@ abstract class $TakenPillValueCopyWith<$Res> {
           DateTime afterLastTakenDate,
       int beforeLastTakenPillNumber,
       int afterLastTakenPillNumber,
+      bool isQuickRecord,
       TakenPillEditedValue? edited});
 
   $TakenPillEditedValueCopyWith<$Res>? get edited;
@@ -1322,6 +1326,7 @@ class _$TakenPillValueCopyWithImpl<$Res>
     Object? afterLastTakenDate = freezed,
     Object? beforeLastTakenPillNumber = freezed,
     Object? afterLastTakenPillNumber = freezed,
+    Object? isQuickRecord = freezed,
     Object? edited = freezed,
   }) {
     return _then(_value.copyWith(
@@ -1341,6 +1346,10 @@ class _$TakenPillValueCopyWithImpl<$Res>
           ? _value.afterLastTakenPillNumber
           : afterLastTakenPillNumber // ignore: cast_nullable_to_non_nullable
               as int,
+      isQuickRecord: isQuickRecord == freezed
+          ? _value.isQuickRecord
+          : isQuickRecord // ignore: cast_nullable_to_non_nullable
+              as bool,
       edited: edited == freezed
           ? _value.edited
           : edited // ignore: cast_nullable_to_non_nullable
@@ -1374,6 +1383,7 @@ abstract class _$TakenPillValueCopyWith<$Res>
           DateTime afterLastTakenDate,
       int beforeLastTakenPillNumber,
       int afterLastTakenPillNumber,
+      bool isQuickRecord,
       TakenPillEditedValue? edited});
 
   @override
@@ -1397,6 +1407,7 @@ class __$TakenPillValueCopyWithImpl<$Res>
     Object? afterLastTakenDate = freezed,
     Object? beforeLastTakenPillNumber = freezed,
     Object? afterLastTakenPillNumber = freezed,
+    Object? isQuickRecord = freezed,
     Object? edited = freezed,
   }) {
     return _then(_TakenPillValue(
@@ -1416,6 +1427,10 @@ class __$TakenPillValueCopyWithImpl<$Res>
           ? _value.afterLastTakenPillNumber
           : afterLastTakenPillNumber // ignore: cast_nullable_to_non_nullable
               as int,
+      isQuickRecord: isQuickRecord == freezed
+          ? _value.isQuickRecord
+          : isQuickRecord // ignore: cast_nullable_to_non_nullable
+              as bool,
       edited: edited == freezed
           ? _value.edited
           : edited // ignore: cast_nullable_to_non_nullable
@@ -1435,6 +1450,7 @@ class _$_TakenPillValue extends _TakenPillValue {
           required this.afterLastTakenDate,
       required this.beforeLastTakenPillNumber,
       required this.afterLastTakenPillNumber,
+      required this.isQuickRecord,
       this.edited})
       : super._();
 
@@ -1456,11 +1472,13 @@ class _$_TakenPillValue extends _TakenPillValue {
   @override
   final int afterLastTakenPillNumber;
   @override
+  final bool isQuickRecord;
+  @override
   final TakenPillEditedValue? edited;
 
   @override
   String toString() {
-    return 'TakenPillValue(beforeLastTakenDate: $beforeLastTakenDate, afterLastTakenDate: $afterLastTakenDate, beforeLastTakenPillNumber: $beforeLastTakenPillNumber, afterLastTakenPillNumber: $afterLastTakenPillNumber, edited: $edited)';
+    return 'TakenPillValue(beforeLastTakenDate: $beforeLastTakenDate, afterLastTakenDate: $afterLastTakenDate, beforeLastTakenPillNumber: $beforeLastTakenPillNumber, afterLastTakenPillNumber: $afterLastTakenPillNumber, isQuickRecord: $isQuickRecord, edited: $edited)';
   }
 
   @override
@@ -1476,6 +1494,8 @@ class _$_TakenPillValue extends _TakenPillValue {
                 other.beforeLastTakenPillNumber, beforeLastTakenPillNumber) &&
             const DeepCollectionEquality().equals(
                 other.afterLastTakenPillNumber, afterLastTakenPillNumber) &&
+            const DeepCollectionEquality()
+                .equals(other.isQuickRecord, isQuickRecord) &&
             const DeepCollectionEquality().equals(other.edited, edited));
   }
 
@@ -1486,6 +1506,7 @@ class _$_TakenPillValue extends _TakenPillValue {
       const DeepCollectionEquality().hash(afterLastTakenDate),
       const DeepCollectionEquality().hash(beforeLastTakenPillNumber),
       const DeepCollectionEquality().hash(afterLastTakenPillNumber),
+      const DeepCollectionEquality().hash(isQuickRecord),
       const DeepCollectionEquality().hash(edited));
 
   @JsonKey(ignore: true)
@@ -1507,6 +1528,7 @@ abstract class _TakenPillValue extends TakenPillValue {
           required DateTime afterLastTakenDate,
       required int beforeLastTakenPillNumber,
       required int afterLastTakenPillNumber,
+      required bool isQuickRecord,
       TakenPillEditedValue? edited}) = _$_TakenPillValue;
   const _TakenPillValue._() : super._();
 
@@ -1527,6 +1549,8 @@ abstract class _TakenPillValue extends TakenPillValue {
   int get beforeLastTakenPillNumber;
   @override
   int get afterLastTakenPillNumber;
+  @override
+  bool get isQuickRecord;
   @override
   TakenPillEditedValue? get edited;
   @override
