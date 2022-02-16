@@ -108,18 +108,9 @@ class MenstruationEditStore extends StateNotifier<MenstruationEditState> {
           "missing condition about state.menstruation is exists when delete. state.menstruation should flushed on edit page");
     }
 
-    if (state.isPremium || state.isTrial) {
-      if (Platform.isIOS) {
-        if (await isHealthDataAvailable()) {
-          if (await isAuthorizedReadAndShareToHealthKitData()) {
-            if (state.menstruation?.healthKitSampleDataUUID != null) {
-              await deleteMenstruationFlowHealthKitData(menstruation);
-              menstruation =
-                  menstruation.copyWith(healthKitSampleDataUUID: null);
-            }
-          }
-        }
-      }
+    if (await _canHealthKitDataSave()) {
+      await deleteMenstruationFlowHealthKitData(menstruation);
+      menstruation = menstruation.copyWith(healthKitSampleDataUUID: null);
     }
 
     await menstruationService.update(
@@ -133,37 +124,20 @@ class MenstruationEditStore extends StateNotifier<MenstruationEditState> {
     }
     final documentID = initialMenstruation?.documentID;
     if (documentID == null) {
-      if (state.isPremium || state.isTrial) {
-        if (Platform.isIOS) {
-          if (await isHealthDataAvailable()) {
-            if (await isAuthorizedReadAndShareToHealthKitData()) {
-              if (state.menstruation?.healthKitSampleDataUUID != null) {
-                final healthKitSampleDataUUID =
-                    await addMenstruationFlowHealthKitData(menstruation);
-                menstruation = menstruation.copyWith(
-                    healthKitSampleDataUUID: healthKitSampleDataUUID);
-              }
-            }
-          }
-        }
+      if (await _canHealthKitDataSave()) {
+        final healthKitSampleDataUUID =
+            await addMenstruationFlowHealthKitData(menstruation);
+        menstruation = menstruation.copyWith(
+            healthKitSampleDataUUID: healthKitSampleDataUUID);
       }
 
       return menstruationService.create(menstruation);
     } else {
-      if (state.isPremium || state.isTrial) {
-        if (Platform.isIOS) {
-          if (await isHealthDataAvailable()) {
-            if (await isAuthorizedReadAndShareToHealthKitData()) {
-              if (state.menstruation?.healthKitSampleDataUUID != null) {
-                final healthKitSampleDataUUID =
-                    await updateOrAddMenstruationFlowHealthKitData(
-                        menstruation);
-                menstruation = menstruation.copyWith(
-                    healthKitSampleDataUUID: healthKitSampleDataUUID);
-              }
-            }
-          }
-        }
+      if (await _canHealthKitDataSave()) {
+        final healthKitSampleDataUUID =
+            await updateOrAddMenstruationFlowHealthKitData(menstruation);
+        menstruation = menstruation.copyWith(
+            healthKitSampleDataUUID: healthKitSampleDataUUID);
       }
       return menstruationService.update(documentID, menstruation);
     }
@@ -241,5 +215,21 @@ class MenstruationEditStore extends StateNotifier<MenstruationEditState> {
 
   void adjustedScrollOffset() {
     state = state.copyWith(isAlreadyAdjsutScrollOffset: true);
+  }
+
+  Future<bool> _canHealthKitDataSave() async {
+    if (state.isPremium || state.isTrial) {
+      if (Platform.isIOS) {
+        if (await isHealthDataAvailable()) {
+          if (await isAuthorizedReadAndShareToHealthKitData()) {
+            if (state.menstruation?.healthKitSampleDataUUID != null) {
+              return true;
+            }
+          }
+        }
+      }
+    }
+
+    return false;
   }
 }
