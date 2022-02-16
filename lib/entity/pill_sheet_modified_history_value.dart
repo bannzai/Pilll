@@ -107,6 +107,7 @@ class TakenPillValue with _$TakenPillValue {
         required DateTime afterLastTakenDate,
     required int beforeLastTakenPillNumber,
     required int afterLastTakenPillNumber,
+    // null => 途中から追加したプロパティなので、どちらか不明
     bool? isQuickRecord,
     TakenPillEditedValue? edited,
   }) = _TakenPillValue;
