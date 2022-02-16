@@ -132,17 +132,11 @@ class MenstruationStore extends StateNotifier<MenstruationState> {
         endDate: begin.add(Duration(days: setting.durationMenstruation - 1)),
         createdAt: now());
 
-    if (state.isPremium || state.isTrial) {
-      if (Platform.isIOS) {
-        if (await isHealthDataAvailable()) {
-          if (await isAuthorizedReadAndShareToHealthKitData()) {
-            final healthKitSampleDataUUID =
-                await addMenstruationFlowHealthKitData(menstruation);
-            menstruation = menstruation.copyWith(
-                healthKitSampleDataUUID: healthKitSampleDataUUID);
-          }
-        }
-      }
+    if (await _canHealthkitDataSave()) {
+      final healthKitSampleDataUUID =
+          await addMenstruationFlowHealthKitData(menstruation);
+      menstruation = menstruation.copyWith(
+          healthKitSampleDataUUID: healthKitSampleDataUUID);
     }
 
     return menstruationService.create(menstruation);
@@ -159,17 +153,11 @@ class MenstruationStore extends StateNotifier<MenstruationState> {
         endDate: begin.add(Duration(days: setting.durationMenstruation - 1)),
         createdAt: now());
 
-    if (state.isPremium || state.isTrial) {
-      if (Platform.isIOS) {
-        if (await isHealthDataAvailable()) {
-          if (await isAuthorizedReadAndShareToHealthKitData()) {
-            final healthKitSampleDataUUID =
-                await addMenstruationFlowHealthKitData(menstruation);
-            menstruation = menstruation.copyWith(
-                healthKitSampleDataUUID: healthKitSampleDataUUID);
-          }
-        }
-      }
+    if (await _canHealthkitDataSave()) {
+      final healthKitSampleDataUUID =
+          await addMenstruationFlowHealthKitData(menstruation);
+      menstruation = menstruation.copyWith(
+          healthKitSampleDataUUID: healthKitSampleDataUUID);
     }
 
     return menstruationService.create(menstruation);
@@ -234,6 +222,19 @@ class MenstruationStore extends StateNotifier<MenstruationState> {
       isTrial: state.isTrial,
       trialDeadlineDate: state.trialDeadlineDate,
     );
+  }
+
+  Future<bool> _canHealthkitDataSave() async {
+    if (state.isPremium || state.isTrial) {
+      if (Platform.isIOS) {
+        if (await isHealthDataAvailable()) {
+          if (await isAuthorizedReadAndShareToHealthKitData()) {
+            return true;
+          }
+        }
+      }
+    }
+    return false;
   }
 }
 
