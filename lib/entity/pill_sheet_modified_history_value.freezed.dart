@@ -1252,7 +1252,7 @@ class _$TakenPillValueTearOff {
           required DateTime afterLastTakenDate,
       required int beforeLastTakenPillNumber,
       required int afterLastTakenPillNumber,
-      required bool isQuickRecord,
+      bool? isQuickRecord,
       TakenPillEditedValue? edited}) {
     return _TakenPillValue(
       beforeLastTakenDate: beforeLastTakenDate,
@@ -1284,7 +1284,7 @@ mixin _$TakenPillValue {
   DateTime get afterLastTakenDate => throw _privateConstructorUsedError;
   int get beforeLastTakenPillNumber => throw _privateConstructorUsedError;
   int get afterLastTakenPillNumber => throw _privateConstructorUsedError;
-  bool get isQuickRecord => throw _privateConstructorUsedError;
+  bool? get isQuickRecord => throw _privateConstructorUsedError;
   TakenPillEditedValue? get edited => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
@@ -1305,7 +1305,7 @@ abstract class $TakenPillValueCopyWith<$Res> {
           DateTime afterLastTakenDate,
       int beforeLastTakenPillNumber,
       int afterLastTakenPillNumber,
-      bool isQuickRecord,
+      bool? isQuickRecord,
       TakenPillEditedValue? edited});
 
   $TakenPillEditedValueCopyWith<$Res>? get edited;
@@ -1349,7 +1349,7 @@ class _$TakenPillValueCopyWithImpl<$Res>
       isQuickRecord: isQuickRecord == freezed
           ? _value.isQuickRecord
           : isQuickRecord // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as bool?,
       edited: edited == freezed
           ? _value.edited
           : edited // ignore: cast_nullable_to_non_nullable
@@ -1383,7 +1383,7 @@ abstract class _$TakenPillValueCopyWith<$Res>
           DateTime afterLastTakenDate,
       int beforeLastTakenPillNumber,
       int afterLastTakenPillNumber,
-      bool isQuickRecord,
+      bool? isQuickRecord,
       TakenPillEditedValue? edited});
 
   @override
@@ -1430,7 +1430,7 @@ class __$TakenPillValueCopyWithImpl<$Res>
       isQuickRecord: isQuickRecord == freezed
           ? _value.isQuickRecord
           : isQuickRecord // ignore: cast_nullable_to_non_nullable
-              as bool,
+              as bool?,
       edited: edited == freezed
           ? _value.edited
           : edited // ignore: cast_nullable_to_non_nullable
@@ -1450,7 +1450,7 @@ class _$_TakenPillValue extends _TakenPillValue {
           required this.afterLastTakenDate,
       required this.beforeLastTakenPillNumber,
       required this.afterLastTakenPillNumber,
-      required this.isQuickRecord,
+      this.isQuickRecord,
       this.edited})
       : super._();
 
@@ -1472,7 +1472,7 @@ class _$_TakenPillValue extends _TakenPillValue {
   @override
   final int afterLastTakenPillNumber;
   @override
-  final bool isQuickRecord;
+  final bool? isQuickRecord;
   @override
   final TakenPillEditedValue? edited;
 
@@ -1528,7 +1528,7 @@ abstract class _TakenPillValue extends TakenPillValue {
           required DateTime afterLastTakenDate,
       required int beforeLastTakenPillNumber,
       required int afterLastTakenPillNumber,
-      required bool isQuickRecord,
+      bool? isQuickRecord,
       TakenPillEditedValue? edited}) = _$_TakenPillValue;
   const _TakenPillValue._() : super._();
 
@@ -1550,7 +1550,7 @@ abstract class _TakenPillValue extends TakenPillValue {
   @override
   int get afterLastTakenPillNumber;
   @override
-  bool get isQuickRecord;
+  bool? get isQuickRecord;
   @override
   TakenPillEditedValue? get edited;
   @override

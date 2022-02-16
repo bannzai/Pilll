@@ -136,7 +136,7 @@ _$_TakenPillValue _$$_TakenPillValueFromJson(Map<String, dynamic> json) =>
           json['afterLastTakenDate'] as Timestamp),
       beforeLastTakenPillNumber: json['beforeLastTakenPillNumber'] as int,
       afterLastTakenPillNumber: json['afterLastTakenPillNumber'] as int,
-      isQuickRecord: json['isQuickRecord'] as bool,
+      isQuickRecord: json['isQuickRecord'] as bool?,
       edited: json['edited'] == null
           ? null
           : TakenPillEditedValue.fromJson(
