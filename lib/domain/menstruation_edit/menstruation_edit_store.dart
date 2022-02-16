@@ -1,3 +1,4 @@
+import 'dart:async';
 import 'dart:io';
 import 'dart:math';
 
@@ -8,6 +9,7 @@ import 'package:pilll/native/health_care.dart';
 import 'package:pilll/service/menstruation.dart';
 import 'package:pilll/service/setting.dart';
 import 'package:pilll/domain/menstruation_edit/menstruation_edit_state.dart';
+import 'package:pilll/service/user.dart';
 import 'package:pilll/util/datetime/date_compare.dart';
 import 'package:pilll/util/datetime/day.dart';
 
@@ -17,6 +19,7 @@ final menstruationEditProvider = StateNotifierProvider.family
     menstruation: menstruation,
     menstruationService: ref.watch(menstruationServiceProvider),
     settingService: ref.watch(settingServiceProvider),
+    userService: ref.watch(userServiceProvider),
   ),
 );
 
@@ -43,15 +46,44 @@ class MenstruationEditStore extends StateNotifier<MenstruationEditState> {
   late Menstruation? initialMenstruation;
   final MenstruationService menstruationService;
   final SettingService settingService;
+  final UserService userService;
 
   MenstruationEditStore({
     Menstruation? menstruation,
     required this.menstruationService,
     required this.settingService,
+    required this.userService,
   }) : super(MenstruationEditState(
             menstruation: menstruation,
             displayedDates: displayedDates(menstruation))) {
     initialMenstruation = menstruation;
+    setup();
+  }
+
+  void setup() {
+    _subscribe();
+  }
+
+  StreamSubscription? _userSubscribeCanceller;
+  void _subscribe() {
+    _cancel();
+
+    _userSubscribeCanceller = userService.stream().listen((event) {
+      state = state.copyWith(
+        isPremium: event.isPremium,
+        isTrial: event.isTrial,
+      );
+    });
+  }
+
+  void _cancel() {
+    _userSubscribeCanceller?.cancel();
+  }
+
+  @override
+  void dispose() {
+    _cancel();
+    super.dispose();
   }
 
   bool shouldShowDiscardDialog() {
