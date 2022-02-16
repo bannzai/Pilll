@@ -179,7 +179,11 @@ class SettingPage extends HookConsumerWidget {
                       MenstruationRow(store, setting),
                       _separator(),
                       if (Platform.isIOS && state.isHealthDataAvailable) ...[
-                        HealthCareRow(),
+                        HealthCareRow(
+                          isPremium: state.isPremium,
+                          isTrial: state.isTrial,
+                          trialDeadlineDate: state.trialDeadlineDate,
+                        ),
                         _separator(),
                       ]
                     ],
