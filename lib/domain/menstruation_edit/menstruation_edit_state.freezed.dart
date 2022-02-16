@@ -22,11 +22,15 @@ class _$MenstruationEditStateTearOff {
       {bool isAlreadyAdjsutScrollOffset = false,
       required Menstruation? menstruation,
       required List<DateTime> displayedDates,
+      dynamic isPremium = false,
+      dynamic isTrial = false,
       String? invalidMessage}) {
     return _MenstruationEditState(
       isAlreadyAdjsutScrollOffset: isAlreadyAdjsutScrollOffset,
       menstruation: menstruation,
       displayedDates: displayedDates,
+      isPremium: isPremium,
+      isTrial: isTrial,
       invalidMessage: invalidMessage,
     );
   }
@@ -40,6 +44,8 @@ mixin _$MenstruationEditState {
   bool get isAlreadyAdjsutScrollOffset => throw _privateConstructorUsedError;
   Menstruation? get menstruation => throw _privateConstructorUsedError;
   List<DateTime> get displayedDates => throw _privateConstructorUsedError;
+  dynamic get isPremium => throw _privateConstructorUsedError;
+  dynamic get isTrial => throw _privateConstructorUsedError;
   String? get invalidMessage => throw _privateConstructorUsedError;
 
   @JsonKey(ignore: true)
@@ -56,6 +62,8 @@ abstract class $MenstruationEditStateCopyWith<$Res> {
       {bool isAlreadyAdjsutScrollOffset,
       Menstruation? menstruation,
       List<DateTime> displayedDates,
+      dynamic isPremium,
+      dynamic isTrial,
       String? invalidMessage});
 
   $MenstruationCopyWith<$Res>? get menstruation;
@@ -75,6 +83,8 @@ class _$MenstruationEditStateCopyWithImpl<$Res>
     Object? isAlreadyAdjsutScrollOffset = freezed,
     Object? menstruation = freezed,
     Object? displayedDates = freezed,
+    Object? isPremium = freezed,
+    Object? isTrial = freezed,
     Object? invalidMessage = freezed,
   }) {
     return _then(_value.copyWith(
@@ -90,6 +100,14 @@ class _$MenstruationEditStateCopyWithImpl<$Res>
           ? _value.displayedDates
           : displayedDates // ignore: cast_nullable_to_non_nullable
               as List<DateTime>,
+      isPremium: isPremium == freezed
+          ? _value.isPremium
+          : isPremium // ignore: cast_nullable_to_non_nullable
+              as dynamic,
+      isTrial: isTrial == freezed
+          ? _value.isTrial
+          : isTrial // ignore: cast_nullable_to_non_nullable
+              as dynamic,
       invalidMessage: invalidMessage == freezed
           ? _value.invalidMessage
           : invalidMessage // ignore: cast_nullable_to_non_nullable
@@ -120,6 +138,8 @@ abstract class _$MenstruationEditStateCopyWith<$Res>
       {bool isAlreadyAdjsutScrollOffset,
       Menstruation? menstruation,
       List<DateTime> displayedDates,
+      dynamic isPremium,
+      dynamic isTrial,
       String? invalidMessage});
 
   @override
@@ -142,6 +162,8 @@ class __$MenstruationEditStateCopyWithImpl<$Res>
     Object? isAlreadyAdjsutScrollOffset = freezed,
     Object? menstruation = freezed,
     Object? displayedDates = freezed,
+    Object? isPremium = freezed,
+    Object? isTrial = freezed,
     Object? invalidMessage = freezed,
   }) {
     return _then(_MenstruationEditState(
@@ -157,6 +179,8 @@ class __$MenstruationEditStateCopyWithImpl<$Res>
           ? _value.displayedDates
           : displayedDates // ignore: cast_nullable_to_non_nullable
               as List<DateTime>,
+      isPremium: isPremium == freezed ? _value.isPremium : isPremium,
+      isTrial: isTrial == freezed ? _value.isTrial : isTrial,
       invalidMessage: invalidMessage == freezed
           ? _value.invalidMessage
           : invalidMessage // ignore: cast_nullable_to_non_nullable
@@ -172,6 +196,8 @@ class _$_MenstruationEditState extends _MenstruationEditState {
       {this.isAlreadyAdjsutScrollOffset = false,
       required this.menstruation,
       required this.displayedDates,
+      this.isPremium = false,
+      this.isTrial = false,
       this.invalidMessage})
       : super._();
 
@@ -182,12 +208,18 @@ class _$_MenstruationEditState extends _MenstruationEditState {
   final Menstruation? menstruation;
   @override
   final List<DateTime> displayedDates;
+  @JsonKey()
+  @override
+  final dynamic isPremium;
+  @JsonKey()
+  @override
+  final dynamic isTrial;
   @override
   final String? invalidMessage;
 
   @override
   String toString() {
-    return 'MenstruationEditState(isAlreadyAdjsutScrollOffset: $isAlreadyAdjsutScrollOffset, menstruation: $menstruation, displayedDates: $displayedDates, invalidMessage: $invalidMessage)';
+    return 'MenstruationEditState(isAlreadyAdjsutScrollOffset: $isAlreadyAdjsutScrollOffset, menstruation: $menstruation, displayedDates: $displayedDates, isPremium: $isPremium, isTrial: $isTrial, invalidMessage: $invalidMessage)';
   }
 
   @override
@@ -202,6 +234,8 @@ class _$_MenstruationEditState extends _MenstruationEditState {
                 .equals(other.menstruation, menstruation) &&
             const DeepCollectionEquality()
                 .equals(other.displayedDates, displayedDates) &&
+            const DeepCollectionEquality().equals(other.isPremium, isPremium) &&
+            const DeepCollectionEquality().equals(other.isTrial, isTrial) &&
             const DeepCollectionEquality()
                 .equals(other.invalidMessage, invalidMessage));
   }
@@ -212,6 +246,8 @@ class _$_MenstruationEditState extends _MenstruationEditState {
       const DeepCollectionEquality().hash(isAlreadyAdjsutScrollOffset),
       const DeepCollectionEquality().hash(menstruation),
       const DeepCollectionEquality().hash(displayedDates),
+      const DeepCollectionEquality().hash(isPremium),
+      const DeepCollectionEquality().hash(isTrial),
       const DeepCollectionEquality().hash(invalidMessage));
 
   @JsonKey(ignore: true)
@@ -226,6 +262,8 @@ abstract class _MenstruationEditState extends MenstruationEditState {
       {bool isAlreadyAdjsutScrollOffset,
       required Menstruation? menstruation,
       required List<DateTime> displayedDates,
+      dynamic isPremium,
+      dynamic isTrial,
       String? invalidMessage}) = _$_MenstruationEditState;
   const _MenstruationEditState._() : super._();
 
@@ -235,6 +273,10 @@ abstract class _MenstruationEditState extends MenstruationEditState {
   Menstruation? get menstruation;
   @override
   List<DateTime> get displayedDates;
+  @override
+  dynamic get isPremium;
+  @override
+  dynamic get isTrial;
   @override
   String? get invalidMessage;
   @override
