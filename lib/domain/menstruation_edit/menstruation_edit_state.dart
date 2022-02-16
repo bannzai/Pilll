@@ -10,6 +10,8 @@ class MenstruationEditState with _$MenstruationEditState {
     @Default(false) bool isAlreadyAdjsutScrollOffset,
     required Menstruation? menstruation,
     required List<DateTime> displayedDates,
+    @Default(false) isPremium,
+    @Default(false) isTrial,
     String? invalidMessage,
   }) = _MenstruationEditState;
 

@@ -1,3 +1,4 @@
+import 'dart:async';
 import 'dart:io';
 import 'dart:math';
 
@@ -8,6 +9,7 @@ import 'package:pilll/native/health_care.dart';
 import 'package:pilll/service/menstruation.dart';
 import 'package:pilll/service/setting.dart';
 import 'package:pilll/domain/menstruation_edit/menstruation_edit_state.dart';
+import 'package:pilll/service/user.dart';
 import 'package:pilll/util/datetime/date_compare.dart';
 import 'package:pilll/util/datetime/day.dart';
 
@@ -17,6 +19,7 @@ final menstruationEditProvider = StateNotifierProvider.family
     menstruation: menstruation,
     menstruationService: ref.watch(menstruationServiceProvider),
     settingService: ref.watch(settingServiceProvider),
+    userService: ref.watch(userServiceProvider),
   ),
 );
 
@@ -43,15 +46,44 @@ class MenstruationEditStore extends StateNotifier<MenstruationEditState> {
   late Menstruation? initialMenstruation;
   final MenstruationService menstruationService;
   final SettingService settingService;
+  final UserService userService;
 
   MenstruationEditStore({
     Menstruation? menstruation,
     required this.menstruationService,
     required this.settingService,
+    required this.userService,
   }) : super(MenstruationEditState(
             menstruation: menstruation,
             displayedDates: displayedDates(menstruation))) {
     initialMenstruation = menstruation;
+    setup();
+  }
+
+  void setup() {
+    _subscribe();
+  }
+
+  StreamSubscription? _userSubscribeCanceller;
+  void _subscribe() {
+    _cancel();
+
+    _userSubscribeCanceller = userService.stream().listen((event) {
+      state = state.copyWith(
+        isPremium: event.isPremium,
+        isTrial: event.isTrial,
+      );
+    });
+  }
+
+  void _cancel() {
+    _userSubscribeCanceller?.cancel();
+  }
+
+  @override
+  void dispose() {
+    _cancel();
+    super.dispose();
   }
 
   bool shouldShowDiscardDialog() {
@@ -76,13 +108,9 @@ class MenstruationEditStore extends StateNotifier<MenstruationEditState> {
           "missing condition about state.menstruation is exists when delete. state.menstruation should flushed on edit page");
     }
 
-    if (Platform.isIOS) {
-      if (await isHealthDataAvailable()) {
-        if (await isAuthorizedReadAndShareToHealthKitData()) {
-          await deleteMenstruationFlowHealthKitData(menstruation);
-          menstruation = menstruation.copyWith(healthKitSampleDataUUID: null);
-        }
-      }
+    if (await _canHealthKitDataSave()) {
+      await deleteMenstruationFlowHealthKitData(menstruation);
+      menstruation = menstruation.copyWith(healthKitSampleDataUUID: null);
     }
 
     await menstruationService.update(
@@ -96,28 +124,20 @@ class MenstruationEditStore extends StateNotifier<MenstruationEditState> {
     }
     final documentID = initialMenstruation?.documentID;
     if (documentID == null) {
-      if (Platform.isIOS) {
-        if (await isHealthDataAvailable()) {
-          if (await isAuthorizedReadAndShareToHealthKitData()) {
-            final healthKitSampleDataUUID =
-                await addMenstruationFlowHealthKitData(menstruation);
-            menstruation = menstruation.copyWith(
-                healthKitSampleDataUUID: healthKitSampleDataUUID);
-          }
-        }
+      if (await _canHealthKitDataSave()) {
+        final healthKitSampleDataUUID =
+            await addMenstruationFlowHealthKitData(menstruation);
+        menstruation = menstruation.copyWith(
+            healthKitSampleDataUUID: healthKitSampleDataUUID);
       }
 
       return menstruationService.create(menstruation);
     } else {
-      if (Platform.isIOS) {
-        if (await isHealthDataAvailable()) {
-          if (await isAuthorizedReadAndShareToHealthKitData()) {
-            final healthKitSampleDataUUID =
-                await updateOrAddMenstruationFlowHealthKitData(menstruation);
-            menstruation = menstruation.copyWith(
-                healthKitSampleDataUUID: healthKitSampleDataUUID);
-          }
-        }
+      if (await _canHealthKitDataSave()) {
+        final healthKitSampleDataUUID =
+            await updateOrAddMenstruationFlowHealthKitData(menstruation);
+        menstruation = menstruation.copyWith(
+            healthKitSampleDataUUID: healthKitSampleDataUUID);
       }
       return menstruationService.update(documentID, menstruation);
     }
@@ -195,5 +215,21 @@ class MenstruationEditStore extends StateNotifier<MenstruationEditState> {
 
   void adjustedScrollOffset() {
     state = state.copyWith(isAlreadyAdjsutScrollOffset: true);
+  }
+
+  Future<bool> _canHealthKitDataSave() async {
+    if (state.isPremium || state.isTrial) {
+      if (Platform.isIOS) {
+        if (await isHealthDataAvailable()) {
+          if (await isAuthorizedReadAndShareToHealthKitData()) {
+            if (state.menstruation?.healthKitSampleDataUUID != null) {
+              return true;
+            }
+          }
+        }
+      }
+    }
+
+    return false;
   }
 }
