@@ -30,26 +30,16 @@ class NotificationBarStateStore extends StateNotifier<NotificationBarState> {
             hasDiscountEntitlement: parameter.hasDiscountEntitlement,
             isAlreadyShowAnnouncementSupportedMultilplePillSheet:
                 parameter.isAlreadyShowAnnouncementSupportedMultilplePillSheet,
-            beginTrialDate: parameter.beginTrialDate,
             trialDeadlineDate: parameter.trialDeadlineDate,
             discountEntitlementDeadlineDate:
                 parameter.discountEntitlementDeadlineDate,
             isLinkedLoginProvider: parameter.isLinkedLoginProvider,
-            recommendPremiumPlainInTrialIsAlreadyClose:
-                parameter.recommendPremiumPlainInTrialIsAlreadyClose,
             premiumTrialGuideNotificationIsClosed:
                 parameter.premiumTrialGuideNotificationIsClosed,
             recommendedSignupNotificationIsAlreadyShow:
                 parameter.recommendedSignupNotificationIsAlreadyShow,
           ),
         );
-  Future<void> closeRecommendedPremiumPlainInTrial() async {
-    final sharedPreferences = await SharedPreferences.getInstance();
-    sharedPreferences.setBool(
-        BoolKey.recommendPremiumPlainInTrialIsAlreadyClose, true);
-    state = state.copyWith(recommendPremiumPlainInTrialIsAlreadyClose: true);
-  }
-
   Future<void> closeRecommendedSignupNotification() async {
     final sharedPreferences = await SharedPreferences.getInstance();
     sharedPreferences.setBool(
