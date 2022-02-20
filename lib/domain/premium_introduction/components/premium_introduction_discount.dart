@@ -86,7 +86,7 @@ class PremiumIntroductionDiscountRow extends HookConsumerWidget {
                 ),
               ),
               Positioned(
-                left: 30,
+                left: 24,
                 child: SvgPicture.asset("images/strikethrough.svg"),
               ),
             ],
