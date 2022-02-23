@@ -21,7 +21,7 @@ void main() {
         hasDiscountEntitlement: false,
         isOverDiscountDeadline: false,
       );
-      expect(state.offeringType, equals(OfferingType.premium));
+      expect(state.currentOfferingType, equals(OfferingType.premium));
     });
     test("when isOverDiscountDeadline = true should return premium", () async {
       final state = PurchaseButtonsState(
@@ -29,7 +29,7 @@ void main() {
         hasDiscountEntitlement: true,
         isOverDiscountDeadline: true,
       );
-      expect(state.offeringType, equals(OfferingType.premium));
+      expect(state.currentOfferingType, equals(OfferingType.premium));
     });
     test("should return limited", () async {
       final state = PurchaseButtonsState(
@@ -37,7 +37,7 @@ void main() {
         hasDiscountEntitlement: true,
         isOverDiscountDeadline: false,
       );
-      expect(state.offeringType, equals(OfferingType.limited));
+      expect(state.currentOfferingType, equals(OfferingType.limited));
     });
   });
 }

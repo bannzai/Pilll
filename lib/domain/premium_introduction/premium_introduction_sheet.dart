@@ -23,10 +23,14 @@ class PremiumIntroductionSheet extends HookConsumerWidget {
     final store = ref.watch(premiumIntroductionStoreProvider.notifier);
     final state = ref.watch(premiumIntroductionStateProvider);
     final offerings = state.offerings;
+    final offeringType = state.currentOfferingType;
+    final monthlyPackage = state.monthlyPackage;
+    final annualPackage = state.annualPackage;
     final discountEntitlementDeadlineDate =
         state.discountEntitlementDeadlineDate;
     final isOverDiscountDeadline = ref
         .watch(isOverDiscountDeadlineProvider(discountEntitlementDeadlineDate));
+    final monthlyPremiumPackage = state.monthlyPremiumPackage;
     if (state.isNotYetLoad) {
       return Indicator();
     }
@@ -72,17 +76,23 @@ class PremiumIntroductionSheet extends HookConsumerWidget {
                           ],
                           if (!state.isPremium) ...[
                             if (state.hasDiscountEntitlement)
-                              PremiumIntroductionDiscountRow(
-                                discountEntitlementDeadlineDate:
-                                    discountEntitlementDeadlineDate,
-                              ),
-                            if (offerings != null) ...[
-                              SizedBox(height: 32),
-                              PurchaseButtons(
-                                offerings: offerings,
-                                store: store,
-                              ),
-                            ],
+                              if (monthlyPremiumPackage != null)
+                                PremiumIntroductionDiscountRow(
+                                  monthlyPremiumPackage: monthlyPremiumPackage,
+                                  discountEntitlementDeadlineDate:
+                                      discountEntitlementDeadlineDate,
+                                ),
+                            if (offerings != null)
+                              if (monthlyPackage != null)
+                                if (annualPackage != null) ...[
+                                  SizedBox(height: 32),
+                                  PurchaseButtons(
+                                    store: store,
+                                    offeringType: offeringType,
+                                    monthlyPackage: monthlyPackage,
+                                    annualPackage: annualPackage,
+                                  ),
+                                ],
                           ],
                           SizedBox(height: 24),
                           AlertButton(

@@ -22,7 +22,7 @@ class PremiumIntroductionState with _$PremiumIntroductionState {
 
   bool get isNotYetLoad => offerings == null;
 
-  OfferingType get offeringType {
+  OfferingType get currentOfferingType {
     if (!hasDiscountEntitlement) {
       print("[DEBUG] user does not hasDiscountEntitlement");
       return OfferingType.premium;
@@ -36,8 +36,8 @@ class PremiumIntroductionState with _$PremiumIntroductionState {
     }
   }
 
-  List<Package> get _packages {
-    final offering = offerings?.all[offeringType.name];
+  List<Package> get _currentOfferingPackages {
+    final offering = offerings?.all[currentOfferingType.name];
     if (offering != null) {
       return offering.availablePackages;
     }
@@ -45,18 +45,28 @@ class PremiumIntroductionState with _$PremiumIntroductionState {
   }
 
   Package? get annualPackage {
-    if (_packages.isEmpty) {
+    if (_currentOfferingPackages.isEmpty) {
       return null;
     }
-    return _packages
+    return _currentOfferingPackages
         .firstWhere((element) => element.packageType == PackageType.annual);
   }
 
   Package? get monthlyPackage {
-    if (_packages.isEmpty) {
+    if (_currentOfferingPackages.isEmpty) {
       return null;
     }
-    return _packages
+    return _currentOfferingPackages
+        .firstWhere((element) => element.packageType == PackageType.monthly);
+  }
+
+  Package? get monthlyPremiumPackage {
+    final premiumPackageOfferingType = OfferingType.premium;
+    final offering = offerings?.all[premiumPackageOfferingType.name];
+    if (offering == null) {
+      return null;
+    }
+    return offering.availablePackages
         .firstWhere((element) => element.packageType == PackageType.monthly);
   }
 }
