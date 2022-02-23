@@ -1,5 +1,6 @@
 import 'package:pilll/analytics.dart';
 import 'package:flutter_test/flutter_test.dart';
+import 'package:pilll/domain/premium_introduction/premium_introduction_state.dart';
 import 'package:purchases_flutter/purchases_flutter.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -15,7 +16,7 @@ void main() {
   });
   group("#offeringType", () {
     test("when hasDiscountEntitlement = false should return premium", () async {
-      final state = PurchaseButtonsState(
+      final state = PremiumIntroductionState(
         offerings: _FakeOfferings(),
         hasDiscountEntitlement: false,
         isOverDiscountDeadline: false,
@@ -23,7 +24,7 @@ void main() {
       expect(state.currentOfferingType, equals(OfferingType.premium));
     });
     test("when isOverDiscountDeadline = true should return premium", () async {
-      final state = PurchaseButtonsState(
+      final state = PremiumIntroductionState(
         offerings: _FakeOfferings(),
         hasDiscountEntitlement: true,
         isOverDiscountDeadline: true,
@@ -31,7 +32,7 @@ void main() {
       expect(state.currentOfferingType, equals(OfferingType.premium));
     });
     test("should return limited", () async {
-      final state = PurchaseButtonsState(
+      final state = PremiumIntroductionState(
         offerings: _FakeOfferings(),
         hasDiscountEntitlement: true,
         isOverDiscountDeadline: false,
