@@ -80,7 +80,7 @@ class PremiumIntroductionDiscountRow extends HookConsumerWidget {
           Stack(
             children: [
               Text(
-                "¥480",
+                "${monthlyPremiumPackage.product.priceString}",
                 textAlign: TextAlign.center,
                 style: TextColorStyle.main.merge(
                   TextStyle(
