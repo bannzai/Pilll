@@ -6,19 +6,6 @@ import 'package:riverpod/riverpod.dart';
 
 part 'purchase_buttons_state.freezed.dart';
 
-enum OfferingType { limited, premium }
-
-extension OfferingTypeFunction on OfferingType {
-  String get name {
-    switch (this) {
-      case OfferingType.limited:
-        return "Limited";
-      case OfferingType.premium:
-        return "Premium";
-    }
-  }
-}
-
 final purchaseButtonsStateProvider =
     Provider.family.autoDispose((ref, Offerings offerings) {
   final premiumIntroductionState = ref.watch(premiumIntroductionStateProvider);

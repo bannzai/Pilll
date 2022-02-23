@@ -4,13 +4,18 @@ import 'package:flutter_svg/svg.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
 import 'package:pilll/domain/premium_introduction/util/discount_deadline.dart';
+import 'package:pilll/entity/package.dart';
 
 class PremiumIntroductionDiscountRow extends HookConsumerWidget {
+  final Package monthlyPremiumPackage;
   final DateTime? discountEntitlementDeadlineDate;
 
-  const PremiumIntroductionDiscountRow(
-      {Key? key, required this.discountEntitlementDeadlineDate})
-      : super(key: key);
+  const PremiumIntroductionDiscountRow({
+    Key? key,
+    required this.discountEntitlementDeadlineDate,
+    required this.monthlyPremiumPackage,
+  }) : super(key: key);
+
   Widget build(BuildContext context, WidgetRef ref) {
     final discountEntitlementDeadlineDate =
         this.discountEntitlementDeadlineDate;

@@ -14,12 +14,14 @@ import 'package:purchases_flutter/purchases_flutter.dart';
 
 class PurchaseButtons extends HookConsumerWidget {
   final PremiumIntroductionStore store;
-  final Offerings offerings;
+  final Package monthlyPackage;
+  final Package annualPackage;
 
   const PurchaseButtons({
     Key? key,
     required this.store,
-    required this.offerings,
+    required this.monthlyPackage,
+    required this.annualPackage,
   }) : super(key: key);
 
   @override
