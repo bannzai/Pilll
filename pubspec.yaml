@@ -70,6 +70,7 @@ dev_dependencies:
 
 # The following section is specific to Flutter.
 flutter:
+  generate: true 
   assets:
     - images/
 
