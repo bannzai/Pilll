@@ -1,7 +1,6 @@
 import 'dart:async';
 
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:intl/intl.dart';
 import 'package:pilll/domain/premium_introduction/premium_introduction_state.dart';
 import 'package:pilll/service/auth.dart';
 import 'package:pilll/service/purchase.dart';
@@ -93,18 +92,6 @@ class PremiumIntroductionStore extends StateNotifier<PremiumIntroductionState> {
     _userStreamCanceller = null;
     _authStreamCanceller?.cancel();
     _authStreamCanceller = null;
-  }
-
-  String annualPriceString(Package package) {
-    final monthlyPrice = package.product.price / 12;
-    final monthlyPriceString =
-        NumberFormat.simpleCurrency(decimalDigits: 0, name: "JPY")
-            .format(monthlyPrice);
-    return "${package.product.priceString} ($monthlyPriceString/月)";
-  }
-
-  String monthlyPriceString(Package package) {
-    return "${package.product.priceString}";
   }
 
   /// Return true indicates end of regularllly pattern.
