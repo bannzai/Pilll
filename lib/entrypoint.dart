@@ -97,7 +97,7 @@ class App extends StatelessWidget {
       ),
       localizationsDelegates: AppLocalizations.localizationsDelegates,
       supportedLocales: AppLocalizations.supportedLocales,
-      locale: Locale('ja', ''),
+      locale: Locale('ja'),
     );
   }
 }
