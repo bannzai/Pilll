@@ -1,5 +1,4 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:pilll/domain/premium_introduction/components/purchase_buttons_state.dart';
 import 'package:purchases_flutter/purchases_flutter.dart';
 
 part 'premium_introduction_state.freezed.dart';
