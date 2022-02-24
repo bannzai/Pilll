@@ -20,6 +20,7 @@ class _$PremiumIntroductionStateTearOff {
 
   _PremiumIntroductionState call(
       {Offerings? offerings,
+      bool isOverDiscountDeadline = false,
       bool isCompletedRestore = false,
       bool isLoading = false,
       bool isPremium = false,
@@ -30,6 +31,7 @@ class _$PremiumIntroductionStateTearOff {
       DateTime? discountEntitlementDeadlineDate}) {
     return _PremiumIntroductionState(
       offerings: offerings,
+      isOverDiscountDeadline: isOverDiscountDeadline,
       isCompletedRestore: isCompletedRestore,
       isLoading: isLoading,
       isPremium: isPremium,
@@ -48,6 +50,7 @@ const $PremiumIntroductionState = _$PremiumIntroductionStateTearOff();
 /// @nodoc
 mixin _$PremiumIntroductionState {
   Offerings? get offerings => throw _privateConstructorUsedError;
+  bool get isOverDiscountDeadline => throw _privateConstructorUsedError;
   bool get isCompletedRestore => throw _privateConstructorUsedError;
   bool get isLoading => throw _privateConstructorUsedError;
   bool get isPremium => throw _privateConstructorUsedError;
@@ -70,6 +73,7 @@ abstract class $PremiumIntroductionStateCopyWith<$Res> {
       _$PremiumIntroductionStateCopyWithImpl<$Res>;
   $Res call(
       {Offerings? offerings,
+      bool isOverDiscountDeadline,
       bool isCompletedRestore,
       bool isLoading,
       bool isPremium,
@@ -78,6 +82,8 @@ abstract class $PremiumIntroductionStateCopyWith<$Res> {
       bool hasDiscountEntitlement,
       DateTime? beginTrialDate,
       DateTime? discountEntitlementDeadlineDate});
+
+  $OfferingsCopyWith<$Res>? get offerings;
 }
 
 /// @nodoc
@@ -92,6 +98,7 @@ class _$PremiumIntroductionStateCopyWithImpl<$Res>
   @override
   $Res call({
     Object? offerings = freezed,
+    Object? isOverDiscountDeadline = freezed,
     Object? isCompletedRestore = freezed,
     Object? isLoading = freezed,
     Object? isPremium = freezed,
@@ -106,6 +113,10 @@ class _$PremiumIntroductionStateCopyWithImpl<$Res>
           ? _value.offerings
           : offerings // ignore: cast_nullable_to_non_nullable
               as Offerings?,
+      isOverDiscountDeadline: isOverDiscountDeadline == freezed
+          ? _value.isOverDiscountDeadline
+          : isOverDiscountDeadline // ignore: cast_nullable_to_non_nullable
+              as bool,
       isCompletedRestore: isCompletedRestore == freezed
           ? _value.isCompletedRestore
           : isCompletedRestore // ignore: cast_nullable_to_non_nullable
@@ -141,6 +152,17 @@ class _$PremiumIntroductionStateCopyWithImpl<$Res>
               as DateTime?,
     ));
   }
+
+  @override
+  $OfferingsCopyWith<$Res>? get offerings {
+    if (_value.offerings == null) {
+      return null;
+    }
+
+    return $OfferingsCopyWith<$Res>(_value.offerings!, (value) {
+      return _then(_value.copyWith(offerings: value));
+    });
+  }
 }
 
 /// @nodoc
@@ -152,6 +174,7 @@ abstract class _$PremiumIntroductionStateCopyWith<$Res>
   @override
   $Res call(
       {Offerings? offerings,
+      bool isOverDiscountDeadline,
       bool isCompletedRestore,
       bool isLoading,
       bool isPremium,
@@ -160,6 +183,9 @@ abstract class _$PremiumIntroductionStateCopyWith<$Res>
       bool hasDiscountEntitlement,
       DateTime? beginTrialDate,
       DateTime? discountEntitlementDeadlineDate});
+
+  @override
+  $OfferingsCopyWith<$Res>? get offerings;
 }
 
 /// @nodoc
@@ -177,6 +203,7 @@ class __$PremiumIntroductionStateCopyWithImpl<$Res>
   @override
   $Res call({
     Object? offerings = freezed,
+    Object? isOverDiscountDeadline = freezed,
     Object? isCompletedRestore = freezed,
     Object? isLoading = freezed,
     Object? isPremium = freezed,
@@ -191,6 +218,10 @@ class __$PremiumIntroductionStateCopyWithImpl<$Res>
           ? _value.offerings
           : offerings // ignore: cast_nullable_to_non_nullable
               as Offerings?,
+      isOverDiscountDeadline: isOverDiscountDeadline == freezed
+          ? _value.isOverDiscountDeadline
+          : isOverDiscountDeadline // ignore: cast_nullable_to_non_nullable
+              as bool,
       isCompletedRestore: isCompletedRestore == freezed
           ? _value.isCompletedRestore
           : isCompletedRestore // ignore: cast_nullable_to_non_nullable
@@ -233,6 +264,7 @@ class __$PremiumIntroductionStateCopyWithImpl<$Res>
 class _$_PremiumIntroductionState extends _PremiumIntroductionState {
   const _$_PremiumIntroductionState(
       {this.offerings,
+      this.isOverDiscountDeadline = false,
       this.isCompletedRestore = false,
       this.isLoading = false,
       this.isPremium = false,
@@ -245,6 +277,9 @@ class _$_PremiumIntroductionState extends _PremiumIntroductionState {
 
   @override
   final Offerings? offerings;
+  @JsonKey()
+  @override
+  final bool isOverDiscountDeadline;
   @JsonKey()
   @override
   final bool isCompletedRestore;
@@ -270,7 +305,7 @@ class _$_PremiumIntroductionState extends _PremiumIntroductionState {
 
   @override
   String toString() {
-    return 'PremiumIntroductionState(offerings: $offerings, isCompletedRestore: $isCompletedRestore, isLoading: $isLoading, isPremium: $isPremium, hasLoginProvider: $hasLoginProvider, isTrial: $isTrial, hasDiscountEntitlement: $hasDiscountEntitlement, beginTrialDate: $beginTrialDate, discountEntitlementDeadlineDate: $discountEntitlementDeadlineDate)';
+    return 'PremiumIntroductionState(offerings: $offerings, isOverDiscountDeadline: $isOverDiscountDeadline, isCompletedRestore: $isCompletedRestore, isLoading: $isLoading, isPremium: $isPremium, hasLoginProvider: $hasLoginProvider, isTrial: $isTrial, hasDiscountEntitlement: $hasDiscountEntitlement, beginTrialDate: $beginTrialDate, discountEntitlementDeadlineDate: $discountEntitlementDeadlineDate)';
   }
 
   @override
@@ -279,6 +314,8 @@ class _$_PremiumIntroductionState extends _PremiumIntroductionState {
         (other.runtimeType == runtimeType &&
             other is _PremiumIntroductionState &&
             const DeepCollectionEquality().equals(other.offerings, offerings) &&
+            const DeepCollectionEquality()
+                .equals(other.isOverDiscountDeadline, isOverDiscountDeadline) &&
             const DeepCollectionEquality()
                 .equals(other.isCompletedRestore, isCompletedRestore) &&
             const DeepCollectionEquality().equals(other.isLoading, isLoading) &&
@@ -299,6 +336,7 @@ class _$_PremiumIntroductionState extends _PremiumIntroductionState {
   int get hashCode => Object.hash(
       runtimeType,
       const DeepCollectionEquality().hash(offerings),
+      const DeepCollectionEquality().hash(isOverDiscountDeadline),
       const DeepCollectionEquality().hash(isCompletedRestore),
       const DeepCollectionEquality().hash(isLoading),
       const DeepCollectionEquality().hash(isPremium),
@@ -318,6 +356,7 @@ class _$_PremiumIntroductionState extends _PremiumIntroductionState {
 abstract class _PremiumIntroductionState extends PremiumIntroductionState {
   const factory _PremiumIntroductionState(
       {Offerings? offerings,
+      bool isOverDiscountDeadline,
       bool isCompletedRestore,
       bool isLoading,
       bool isPremium,
@@ -330,6 +369,8 @@ abstract class _PremiumIntroductionState extends PremiumIntroductionState {
 
   @override
   Offerings? get offerings;
+  @override
+  bool get isOverDiscountDeadline;
   @override
   bool get isCompletedRestore;
   @override

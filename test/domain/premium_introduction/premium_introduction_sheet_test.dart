@@ -1,7 +1,6 @@
 import 'package:pilll/analytics.dart';
 import 'package:pilll/domain/premium_introduction/components/premium_introduction_discount.dart';
 import 'package:pilll/domain/premium_introduction/components/premium_user_thanks.dart';
-import 'package:pilll/domain/premium_introduction/components/purchase_buttons_state.dart';
 import 'package:pilll/domain/premium_introduction/premium_introduction_sheet.dart';
 import 'package:pilll/domain/premium_introduction/premium_introduction_state.dart';
 import 'package:pilll/domain/premium_introduction/premium_introduction_store.dart';
@@ -45,13 +44,38 @@ class _AnnualFakePackage extends Fake implements Package {
   Product get product => _AnnualFakeProduct();
 }
 
-class _FakePurchaseButtonState extends Fake implements PurchaseButtonsState {
+class _FakePremiumIntroductionState extends Fake
+    implements PremiumIntroductionState {
+  _FakePremiumIntroductionState({
+    required this.fakeIsPremium,
+    required this.fakeHasDiscountEntitlement,
+    required this.fakeDiscountEntitlementDeadlineDate,
+  });
+  final bool fakeIsPremium;
+  final bool fakeHasDiscountEntitlement;
+  final DateTime? fakeDiscountEntitlementDeadlineDate;
+
+  @override
+  Offerings get offerings => _FakeOfferings();
   @override
   Package? get monthlyPackage => _MonthlyFakePackage();
   @override
+  Package? get monthlyPremiumPackage => _MonthlyFakePackage();
+  @override
   Package? get annualPackage => _AnnualFakePackage();
   @override
-  OfferingType get offeringType => OfferingType.limited;
+  bool get isPremium => this.fakeIsPremium;
+  @override
+  bool get hasDiscountEntitlement => this.fakeHasDiscountEntitlement;
+  @override
+  DateTime? get discountEntitlementDeadlineDate =>
+      this.fakeDiscountEntitlementDeadlineDate;
+  @override
+  OfferingType get currentOfferingType => OfferingType.premium;
+  @override
+  bool get isNotYetLoad => false;
+  @override
+  bool get isLoading => false;
 }
 
 void main() {
@@ -77,30 +101,29 @@ void main() {
       testWidgets(
           '#PremiumIntroductionDiscountRow is not found and #PremiumUserThanksRow is found',
           (WidgetTester tester) async {
-        var state = PremiumIntroductionState();
-        state = state.copyWith(
-          offerings: _FakeOfferings(),
-          isPremium: true,
-          hasDiscountEntitlement: true, // NOTE: Nasty data
+        final state = _FakePremiumIntroductionState(
+          fakeIsPremium: true,
+          fakeHasDiscountEntitlement: true, // NOTE: Nasty data
+          fakeDiscountEntitlementDeadlineDate: null,
         );
 
         final sheet = PremiumIntroductionSheet();
         await tester.pumpWidget(
-          ProviderScope(
-            overrides: [
-              premiumIntroductionStateProvider.overrideWithValue(state),
-              premiumIntroductionStoreProvider.overrideWithProvider(
-                  StateNotifierProvider.autoDispose(
-                      (ref) => MockPremiumIntroductionStore())),
-              isOverDiscountDeadlineProvider.overrideWithProvider(
-                  (param) => Provider.autoDispose((_) => true)),
-              durationToDiscountPriceDeadline.overrideWithProvider((param) =>
-                  Provider.autoDispose((_) => Duration(seconds: 1000))),
-              purchaseButtonsStateProvider.overrideWithProvider((param) =>
-                  Provider.autoDispose((_) => _FakePurchaseButtonState())),
-            ],
-            child: MaterialApp(
-              home: sheet,
+          MaterialApp(
+            home: ProviderScope(
+              overrides: [
+                premiumIntroductionStateProvider.overrideWithValue(state),
+                premiumIntroductionStoreProvider.overrideWithProvider(
+                    StateNotifierProvider.autoDispose(
+                        (ref) => MockPremiumIntroductionStore())),
+                isOverDiscountDeadlineProvider.overrideWithProvider(
+                    (param) => Provider.autoDispose((_) => true)),
+                durationToDiscountPriceDeadline.overrideWithProvider((param) =>
+                    Provider.autoDispose((_) => Duration(seconds: 1000))),
+              ],
+              child: MaterialApp(
+                home: sheet,
+              ),
             ),
           ),
         );
@@ -122,30 +145,29 @@ void main() {
       final isOverDiscountDeadline = false;
       testWidgets('#PremiumIntroductionDiscountRow is found',
           (WidgetTester tester) async {
-        var state = PremiumIntroductionState();
-        state = state.copyWith(
-          offerings: _FakeOfferings(),
-          hasDiscountEntitlement: hasDiscountEntitlement,
-          discountEntitlementDeadlineDate: discountEntitlementDeadlineDate,
+        var state = _FakePremiumIntroductionState(
+          fakeIsPremium: false,
+          fakeHasDiscountEntitlement: hasDiscountEntitlement,
+          fakeDiscountEntitlementDeadlineDate: discountEntitlementDeadlineDate,
         );
 
         final sheet = PremiumIntroductionSheet();
         await tester.pumpWidget(
-          ProviderScope(
-            overrides: [
-              premiumIntroductionStateProvider.overrideWithValue(state),
-              premiumIntroductionStoreProvider.overrideWithProvider(
-                  StateNotifierProvider.autoDispose(
-                      (ref) => MockPremiumIntroductionStore())),
-              isOverDiscountDeadlineProvider.overrideWithProvider((param) =>
-                  Provider.autoDispose((_) => isOverDiscountDeadline)),
-              durationToDiscountPriceDeadline.overrideWithProvider((param) =>
-                  Provider.autoDispose((_) => Duration(seconds: 1000))),
-              purchaseButtonsStateProvider.overrideWithProvider((param) =>
-                  Provider.autoDispose((_) => _FakePurchaseButtonState())),
-            ],
-            child: MaterialApp(
-              home: sheet,
+          MaterialApp(
+            home: ProviderScope(
+              overrides: [
+                premiumIntroductionStateProvider.overrideWithValue(state),
+                premiumIntroductionStoreProvider.overrideWithProvider(
+                    StateNotifierProvider.autoDispose(
+                        (ref) => MockPremiumIntroductionStore())),
+                isOverDiscountDeadlineProvider.overrideWithProvider((param) =>
+                    Provider.autoDispose((_) => isOverDiscountDeadline)),
+                durationToDiscountPriceDeadline.overrideWithProvider((param) =>
+                    Provider.autoDispose((_) => Duration(seconds: 1000))),
+              ],
+              child: MaterialApp(
+                home: sheet,
+              ),
             ),
           ),
         );
@@ -168,30 +190,30 @@ void main() {
         when(mockTodayRepository.today()).thenReturn(today);
         todayRepository = mockTodayRepository;
 
-        var state = PremiumIntroductionState();
-        state = state.copyWith(
-          offerings: _FakeOfferings(),
-          hasDiscountEntitlement: hasDiscountEntitlement,
-          discountEntitlementDeadlineDate: today.subtract(Duration(days: 1)),
+        final state = _FakePremiumIntroductionState(
+          fakeIsPremium: false,
+          fakeHasDiscountEntitlement: hasDiscountEntitlement,
+          fakeDiscountEntitlementDeadlineDate:
+              today.subtract(Duration(days: 1)),
         );
 
         final sheet = PremiumIntroductionSheet();
         await tester.pumpWidget(
-          ProviderScope(
-            overrides: [
-              premiumIntroductionStateProvider.overrideWithValue(state),
-              premiumIntroductionStoreProvider.overrideWithProvider(
-                  StateNotifierProvider.autoDispose(
-                      (ref) => MockPremiumIntroductionStore())),
-              isOverDiscountDeadlineProvider.overrideWithProvider(
-                  (param) => Provider.autoDispose((_) => false)),
-              durationToDiscountPriceDeadline.overrideWithProvider((param) =>
-                  Provider.autoDispose((_) => Duration(seconds: 1000))),
-              purchaseButtonsStateProvider.overrideWithProvider((param) =>
-                  Provider.autoDispose((_) => _FakePurchaseButtonState())),
-            ],
-            child: MaterialApp(
-              home: sheet,
+          MaterialApp(
+            home: ProviderScope(
+              overrides: [
+                premiumIntroductionStateProvider.overrideWithValue(state),
+                premiumIntroductionStoreProvider.overrideWithProvider(
+                    StateNotifierProvider.autoDispose(
+                        (ref) => MockPremiumIntroductionStore())),
+                isOverDiscountDeadlineProvider.overrideWithProvider(
+                    (param) => Provider.autoDispose((_) => false)),
+                durationToDiscountPriceDeadline.overrideWithProvider((param) =>
+                    Provider.autoDispose((_) => Duration(seconds: 1000))),
+              ],
+              child: MaterialApp(
+                home: sheet,
+              ),
             ),
           ),
         );
@@ -214,30 +236,30 @@ void main() {
         when(mockTodayRepository.today()).thenReturn(today);
         todayRepository = mockTodayRepository;
 
-        var state = PremiumIntroductionState();
-        state = state.copyWith(
-          offerings: _FakeOfferings(),
-          hasDiscountEntitlement: true,
-          discountEntitlementDeadlineDate: today.subtract(Duration(days: 1)),
+        final state = _FakePremiumIntroductionState(
+          fakeIsPremium: false,
+          fakeHasDiscountEntitlement: true,
+          fakeDiscountEntitlementDeadlineDate:
+              today.subtract(Duration(days: 1)),
         );
 
         final sheet = PremiumIntroductionSheet();
         await tester.pumpWidget(
-          ProviderScope(
-            overrides: [
-              premiumIntroductionStateProvider.overrideWithValue(state),
-              premiumIntroductionStoreProvider.overrideWithProvider(
-                  StateNotifierProvider.autoDispose(
-                      (ref) => MockPremiumIntroductionStore())),
-              isOverDiscountDeadlineProvider.overrideWithProvider((param) =>
-                  Provider.autoDispose((_) => isOverDiscountDeadline)),
-              durationToDiscountPriceDeadline.overrideWithProvider((param) =>
-                  Provider.autoDispose((_) => Duration(seconds: 1000))),
-              purchaseButtonsStateProvider.overrideWithProvider((param) =>
-                  Provider.autoDispose((_) => _FakePurchaseButtonState())),
-            ],
-            child: MaterialApp(
-              home: sheet,
+          MaterialApp(
+            home: ProviderScope(
+              overrides: [
+                premiumIntroductionStateProvider.overrideWithValue(state),
+                premiumIntroductionStoreProvider.overrideWithProvider(
+                    StateNotifierProvider.autoDispose(
+                        (ref) => MockPremiumIntroductionStore())),
+                isOverDiscountDeadlineProvider.overrideWithProvider((param) =>
+                    Provider.autoDispose((_) => isOverDiscountDeadline)),
+                durationToDiscountPriceDeadline.overrideWithProvider((param) =>
+                    Provider.autoDispose((_) => Duration(seconds: 1000))),
+              ],
+              child: MaterialApp(
+                home: sheet,
+              ),
             ),
           ),
         );
@@ -259,30 +281,29 @@ void main() {
         when(mockTodayRepository.today()).thenReturn(today);
         todayRepository = mockTodayRepository;
 
-        var state = PremiumIntroductionState();
-        state = state.copyWith(
-          offerings: _FakeOfferings(),
-          hasDiscountEntitlement: true,
-          discountEntitlementDeadlineDate: null,
+        var state = _FakePremiumIntroductionState(
+          fakeIsPremium: false,
+          fakeHasDiscountEntitlement: true,
+          fakeDiscountEntitlementDeadlineDate: null,
         );
 
         final sheet = PremiumIntroductionSheet();
         await tester.pumpWidget(
-          ProviderScope(
-            overrides: [
-              premiumIntroductionStateProvider.overrideWithValue(state),
-              premiumIntroductionStoreProvider.overrideWithProvider(
-                  StateNotifierProvider.autoDispose(
-                      (ref) => MockPremiumIntroductionStore())),
-              isOverDiscountDeadlineProvider.overrideWithProvider(
-                  (param) => Provider.autoDispose((_) => false)),
-              durationToDiscountPriceDeadline.overrideWithProvider((param) =>
-                  Provider.autoDispose((_) => Duration(seconds: 1000))),
-              purchaseButtonsStateProvider.overrideWithProvider((param) =>
-                  Provider.autoDispose((_) => _FakePurchaseButtonState())),
-            ],
-            child: MaterialApp(
-              home: sheet,
+          MaterialApp(
+            home: ProviderScope(
+              overrides: [
+                premiumIntroductionStateProvider.overrideWithValue(state),
+                premiumIntroductionStoreProvider.overrideWithProvider(
+                    StateNotifierProvider.autoDispose(
+                        (ref) => MockPremiumIntroductionStore())),
+                isOverDiscountDeadlineProvider.overrideWithProvider(
+                    (param) => Provider.autoDispose((_) => false)),
+                durationToDiscountPriceDeadline.overrideWithProvider((param) =>
+                    Provider.autoDispose((_) => Duration(seconds: 1000))),
+              ],
+              child: MaterialApp(
+                home: sheet,
+              ),
             ),
           ),
         );

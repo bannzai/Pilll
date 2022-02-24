@@ -23,95 +23,110 @@ class PremiumIntroductionSheet extends HookConsumerWidget {
     final store = ref.watch(premiumIntroductionStoreProvider.notifier);
     final state = ref.watch(premiumIntroductionStateProvider);
     final offerings = state.offerings;
+    final offeringType = state.currentOfferingType;
+    final monthlyPackage = state.monthlyPackage;
+    final annualPackage = state.annualPackage;
     final discountEntitlementDeadlineDate =
         state.discountEntitlementDeadlineDate;
     final isOverDiscountDeadline = ref
         .watch(isOverDiscountDeadlineProvider(discountEntitlementDeadlineDate));
+    final monthlyPremiumPackage = state.monthlyPremiumPackage;
     if (state.isNotYetLoad) {
       return Indicator();
     }
 
-    return DraggableScrollableSheet(
-      initialChildSize: 0.9,
-      maxChildSize: 0.9,
-      builder: (context, scrollController) {
-        return HUD(
-          shown: state.isLoading,
-          child: UniversalErrorPage(
-              error: null,
-              reload: () => store.reset(),
-              child: Container(
-                width: MediaQuery.of(context).size.width,
-                color: PilllColors.white,
-                child: Stack(
-                  children: [
-                    Container(
-                      decoration: BoxDecoration(
-                        color: Colors.transparent,
-                        image: !state.isPremium && !isOverDiscountDeadline
-                            ? DecorationImage(
-                                image:
-                                    AssetImage("images/premium_background.png"),
-                                fit: BoxFit.cover,
-                              )
-                            : null,
-                      ),
-                      padding: EdgeInsets.only(left: 40, right: 40, bottom: 40),
-                      width: MediaQuery.of(context).size.width,
+    return HUD(
+      shown: state.isLoading,
+      child: UniversalErrorPage(
+          error: null,
+          reload: () => store.reset(),
+          child: Scaffold(
+            body: Container(
+              padding: const EdgeInsets.only(top: 20),
+              width: MediaQuery.of(context).size.width,
+              color: PilllColors.white,
+              child: Stack(
+                children: [
+                  Container(
+                    decoration: BoxDecoration(
+                      color: Colors.transparent,
+                      image: !state.isPremium && !isOverDiscountDeadline
+                          ? DecorationImage(
+                              image:
+                                  AssetImage("images/premium_background.png"),
+                              fit: BoxFit.cover,
+                            )
+                          : null,
                     ),
-                    SingleChildScrollView(
-                      controller: scrollController,
-                      padding: EdgeInsets.only(bottom: 100),
-                      child: Column(
-                        mainAxisSize: MainAxisSize.min,
-                        children: [
-                          PremiumIntroductionHeader(),
-                          if (state.isPremium) ...[
-                            SizedBox(height: 32),
-                            PremiumUserThanksRow(),
-                          ],
-                          if (!state.isPremium) ...[
-                            if (state.hasDiscountEntitlement)
+                    padding: EdgeInsets.only(left: 40, right: 40, bottom: 40),
+                    width: MediaQuery.of(context).size.width,
+                  ),
+                  SingleChildScrollView(
+                    padding: EdgeInsets.only(bottom: 100),
+                    child: Column(
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        PremiumIntroductionHeader(),
+                        if (state.isPremium) ...[
+                          SizedBox(height: 32),
+                          PremiumUserThanksRow(),
+                        ],
+                        if (!state.isPremium) ...[
+                          if (state.hasDiscountEntitlement)
+                            if (monthlyPremiumPackage != null)
                               PremiumIntroductionDiscountRow(
+                                monthlyPremiumPackage: monthlyPremiumPackage,
                                 discountEntitlementDeadlineDate:
                                     discountEntitlementDeadlineDate,
                               ),
-                            if (offerings != null) ...[
-                              SizedBox(height: 32),
-                              PurchaseButtons(
-                                offerings: offerings,
-                                store: store,
-                              ),
-                            ],
-                          ],
-                          SizedBox(height: 24),
-                          AlertButton(
-                              onPressed: () async {
-                                analytics.logEvent(
-                                    name: "pressed_premium_functions_on_sheet");
-                                await launch(preimumLink);
-                              },
-                              text: "プレミアム機能を見る"),
-                          SizedBox(height: 24),
-                          PremiumIntroductionFotter(),
+                          if (offerings != null)
+                            if (monthlyPackage != null)
+                              if (annualPackage != null) ...[
+                                SizedBox(height: 32),
+                                PurchaseButtons(
+                                  store: store,
+                                  offeringType: offeringType,
+                                  monthlyPackage: monthlyPackage,
+                                  annualPackage: annualPackage,
+                                ),
+                              ],
                         ],
-                      ),
+                        SizedBox(height: 24),
+                        AlertButton(
+                            onPressed: () async {
+                              analytics.logEvent(
+                                  name: "pressed_premium_functions_on_sheet");
+                              await launch(preimumLink);
+                            },
+                            text: "プレミアム機能を見る"),
+                        SizedBox(height: 24),
+                        PremiumIntroductionFotter(),
+                      ],
                     ),
-                  ],
-                ),
-              )),
-        );
-      },
+                  ),
+                  Positioned(
+                    left: 7,
+                    top: 20,
+                    child: IconButton(
+                      icon: Icon(Icons.close, color: Colors.black),
+                      onPressed: () => Navigator.of(context).pop(),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+          )),
     );
   }
 }
 
 showPremiumIntroductionSheet(BuildContext context) {
   analytics.setCurrentScreen(screenName: "PremiumIntroductionSheet");
+
   showModalBottomSheet(
     context: context,
     builder: (_) => PremiumIntroductionSheet(),
-    isScrollControlled: true,
     backgroundColor: Colors.transparent,
+    isScrollControlled: true,
   );
 }

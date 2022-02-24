@@ -654,14 +654,6 @@ class MockPremiumIntroductionStore extends _i1.Mock
   void dispose() => super.noSuchMethod(Invocation.method(#dispose, []),
       returnValueForMissingStub: null);
   @override
-  String annualPriceString(_i31.Package? package) =>
-      (super.noSuchMethod(Invocation.method(#annualPriceString, [package]),
-          returnValue: '') as String);
-  @override
-  String monthlyPriceString(_i31.Package? package) =>
-      (super.noSuchMethod(Invocation.method(#monthlyPriceString, [package]),
-          returnValue: '') as String);
-  @override
   _i16.Future<bool> purchase(_i31.Package? package) =>
       (super.noSuchMethod(Invocation.method(#purchase, [package]),
           returnValue: Future<bool>.value(false)) as _i16.Future<bool>);

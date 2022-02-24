@@ -3,7 +3,7 @@ import 'package:intl/intl.dart';
 import 'package:pilll/components/atoms/color.dart';
 import 'package:pilll/components/atoms/font.dart';
 import 'package:pilll/components/atoms/text_color.dart';
-import 'package:pilll/domain/premium_introduction/components/purchase_buttons_state.dart';
+import 'package:pilll/domain/premium_introduction/premium_introduction_state.dart';
 import 'package:purchases_flutter/purchases_flutter.dart';
 
 class AnnualPurchaseButton extends StatelessWidget {
@@ -20,9 +20,11 @@ class AnnualPurchaseButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final monthlyPrice = annualPackage.product.price / 12;
+    Locale locale = Localizations.localeOf(context);
     final monthlyPriceString =
-        NumberFormat.simpleCurrency(decimalDigits: 0, name: "JPY")
+        NumberFormat.simpleCurrency(locale: locale.toString(), decimalDigits: 0)
             .format(monthlyPrice);
+
     return GestureDetector(
       onTap: () {
         onTap(annualPackage);

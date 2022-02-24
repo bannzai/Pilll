@@ -1283,7 +1283,8 @@ mixin _$TakenPillValue {
       toJson: NonNullTimestampConverter.dateTimeToTimestamp)
   DateTime get afterLastTakenDate => throw _privateConstructorUsedError;
   int get beforeLastTakenPillNumber => throw _privateConstructorUsedError;
-  int get afterLastTakenPillNumber => throw _privateConstructorUsedError;
+  int get afterLastTakenPillNumber =>
+      throw _privateConstructorUsedError; // null => 途中から追加したプロパティなので、どちらか不明
   bool? get isQuickRecord => throw _privateConstructorUsedError;
   TakenPillEditedValue? get edited => throw _privateConstructorUsedError;
 
@@ -1471,7 +1472,7 @@ class _$_TakenPillValue extends _TakenPillValue {
   final int beforeLastTakenPillNumber;
   @override
   final int afterLastTakenPillNumber;
-  @override
+  @override // null => 途中から追加したプロパティなので、どちらか不明
   final bool? isQuickRecord;
   @override
   final TakenPillEditedValue? edited;
@@ -1549,7 +1550,7 @@ abstract class _TakenPillValue extends TakenPillValue {
   int get beforeLastTakenPillNumber;
   @override
   int get afterLastTakenPillNumber;
-  @override
+  @override // null => 途中から追加したプロパティなので、どちらか不明
   bool? get isQuickRecord;
   @override
   TakenPillEditedValue? get edited;

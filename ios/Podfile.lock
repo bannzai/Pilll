@@ -197,14 +197,14 @@ PODS:
   - package_info (0.0.1):
     - Flutter
   - PromisesObjC (2.0.0)
-  - Purchases (3.13.1):
-    - PurchasesCoreSwift (= 3.13.1)
-  - purchases_flutter (3.8.0):
+  - Purchases (3.13.2):
+    - PurchasesCoreSwift (= 3.13.2)
+  - purchases_flutter (3.9.5):
     - Flutter
-    - PurchasesHybridCommon (= 1.11.1)
-  - PurchasesCoreSwift (3.13.1)
-  - PurchasesHybridCommon (1.11.1):
-    - Purchases (= 3.13.1)
+    - PurchasesHybridCommon (= 1.11.2)
+  - PurchasesCoreSwift (3.13.2)
+  - PurchasesHybridCommon (1.11.2):
+    - Purchases (= 3.13.2)
   - shared_preferences_ios (0.0.1):
     - Flutter
   - sign_in_with_apple (0.0.1):
@@ -337,10 +337,10 @@ SPEC CHECKSUMS:
   OrderedSet: aaeb196f7fef5a9edf55d89760da9176ad40b93c
   package_info: 873975fc26034f0b863a300ad47e7f1ac6c7ec62
   PromisesObjC: 68159ce6952d93e17b2dfe273b8c40907db5ba58
-  Purchases: 2693d6444609de044ab25fcda9561bef038f24da
-  purchases_flutter: 214d452aaf860496aeee822487eafcdd962fab33
-  PurchasesCoreSwift: ca55f9ef671f89abed133775dd9e53f55007828d
-  PurchasesHybridCommon: a0313de4f31fbaf137518b2686ccdca4c91dd2b4
+  Purchases: 03200de9288724e77de435000d1828601e6b8e00
+  purchases_flutter: cf2b742f12b7ffef6f618c7f1ba1961e652825b1
+  PurchasesCoreSwift: 2ea4b33e5cece5c8a0751594ef7c6cbfcbd747a9
+  PurchasesHybridCommon: 56ef42d85c3e930d49aff4ac5fa027373d2e1bb8
   shared_preferences_ios: aef470a42dc4675a1cdd50e3158b42e3d1232b32
   sign_in_with_apple: f3bf75217ea4c2c8b91823f225d70230119b8440
   url_launcher_ios: 02f1989d4e14e998335b02b67a7590fa34f971af

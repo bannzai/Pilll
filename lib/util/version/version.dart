@@ -16,13 +16,15 @@ class Version {
     final splited = str.split(".");
     if (Environment.isDevelopment) {
       assert(
-          splited.length <= 3 ||
-              (splited.last == "last" && splited.length == 4),
+          splited.length <= 3 || (splited.last == "dev" && splited.length == 4),
           "unexpected version format $str");
     }
 
     final versions = List.filled(3, 0);
     for (int i = 0; i < splited.length; i++) {
+      if (splited[i] == "dev") {
+        break;
+      }
       versions[i] = int.parse(splited[i]);
     }
     return Version(

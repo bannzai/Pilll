@@ -4,8 +4,8 @@ import 'package:pilll/analytics.dart';
 import 'package:pilll/components/page/hud.dart';
 import 'package:pilll/domain/premium_introduction/components/annual_purchase_button.dart';
 import 'package:pilll/domain/premium_introduction/components/monthly_purchase_button.dart';
-import 'package:pilll/domain/premium_introduction/components/purchase_buttons_state.dart';
 import 'package:pilll/domain/premium_introduction/premium_complete_dialog.dart';
+import 'package:pilll/domain/premium_introduction/premium_introduction_state.dart';
 import 'package:pilll/domain/premium_introduction/premium_introduction_store.dart';
 import 'package:pilll/entity/user_error.dart';
 import 'package:pilll/error/error_alert.dart';
@@ -14,41 +14,39 @@ import 'package:purchases_flutter/purchases_flutter.dart';
 
 class PurchaseButtons extends HookConsumerWidget {
   final PremiumIntroductionStore store;
-  final Offerings offerings;
+  final OfferingType offeringType;
+  final Package monthlyPackage;
+  final Package annualPackage;
 
   const PurchaseButtons({
     Key? key,
     required this.store,
-    required this.offerings,
+    required this.offeringType,
+    required this.monthlyPackage,
+    required this.annualPackage,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context, WidgetRef ref) {
-    final state = ref.watch(purchaseButtonsStateProvider(offerings));
-    final monthlyPackage = state.monthlyPackage;
-    final annualPackage = state.annualPackage;
-
     return Row(
       children: [
         Spacer(),
-        if (monthlyPackage != null)
-          MonthlyPurchaseButton(
-            monthlyPackage: monthlyPackage,
-            onTap: (monthlyPackage) async {
-              analytics.logEvent(name: "pressed_monthly_purchase_button");
-              await _purchase(context, monthlyPackage);
-            },
-          ),
+        MonthlyPurchaseButton(
+          monthlyPackage: monthlyPackage,
+          onTap: (monthlyPackage) async {
+            analytics.logEvent(name: "pressed_monthly_purchase_button");
+            await _purchase(context, monthlyPackage);
+          },
+        ),
         SizedBox(width: 16),
-        if (annualPackage != null)
-          AnnualPurchaseButton(
-            annualPackage: annualPackage,
-            offeringType: state.offeringType,
-            onTap: (annualPackage) async {
-              analytics.logEvent(name: "pressed_annual_purchase_button");
-              await _purchase(context, annualPackage);
-            },
-          ),
+        AnnualPurchaseButton(
+          annualPackage: annualPackage,
+          offeringType: offeringType,
+          onTap: (annualPackage) async {
+            analytics.logEvent(name: "pressed_annual_purchase_button");
+            await _purchase(context, annualPackage);
+          },
+        ),
         Spacer(),
       ],
     );

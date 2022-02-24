@@ -17,13 +17,12 @@ import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_crashlytics/firebase_crashlytics.dart';
 import 'package:flutter/material.dart';
 import 'package:hooks_riverpod/hooks_riverpod.dart';
-import 'package:intl/date_symbol_data_local.dart';
 import 'package:pilll/app/secret.dart';
 import 'package:purchases_flutter/purchases_flutter.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 Future<void> entrypoint() async {
   WidgetsFlutterBinding.ensureInitialized();
-  unawaited(initializeDateFormatting('ja_JP'));
   await Firebase.initializeApp();
 
   if (Environment.isLocal) {
@@ -96,6 +95,9 @@ class App extends StatelessWidget {
           key: rootKey,
         ),
       ),
+      localizationsDelegates: AppLocalizations.localizationsDelegates,
+      supportedLocales: AppLocalizations.supportedLocales,
+      locale: Locale('ja'),
     );
   }
 }
